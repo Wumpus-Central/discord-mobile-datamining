@@ -1,3 +1,4 @@
+// discord_app/modules/screen_recording/native/ScreenRecordingPip.tsx
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
 import { View } from "PressableBase";

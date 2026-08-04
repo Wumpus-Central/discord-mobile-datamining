@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "t";
 import { View } from "module_38";
@@ -36,9 +37,9 @@ function Item(arg0) {
   _slicedToArray = callback2();
   React = React.useMemo(() => 100 * Math.random() + 50, []);
   const tmp2 = importDefault(38);
-  const match = require(4484) /* t */.match(item);
+  const match = require(4393) /* t */.match(item);
   let obj = { type: tmp3.CHOICE };
-  const str = require(4484) /* t */;
+  const str = require(4393) /* t */;
   obj = { type: tmp3.LABEL };
   const withResult = match.with(obj, (children) => {
     let closure_0 = children;
@@ -122,8 +123,8 @@ function Item(arg0) {
 }
 function AutocompleteFailedEmptyState() {
   const obj = { style: callback2().emptyState, lightSource: null, darkSource: null, title: null };
-  obj[1] = importDefault(11468);
-  obj[2] = importDefault(11468);
+  obj[1] = importDefault(11359);
+  obj[2] = importDefault(11359);
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t.rTAbPn);
   return callback(require(1297) /* Button */.EmptyState, obj);

@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useTrackProductCardImpression.tsx
 import noop from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import { AnalyticEvents } from "ME";

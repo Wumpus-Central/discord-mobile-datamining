@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import getIndexKey from "getIndexKey";

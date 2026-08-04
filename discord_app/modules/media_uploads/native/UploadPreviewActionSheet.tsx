@@ -1,3 +1,4 @@
+// discord_app/modules/media_uploads/native/UploadPreviewActionSheet.tsx
 import getSystemLocale from "getSystemLocale";
 import useCanSetThumbnail from "useCanSetThumbnail";
 import get_ActivityIndicator from "CircleErrorIcon";
@@ -127,9 +128,9 @@ export default function UploadPreviewActionSheet(onAdd) {
       }
     }).catch((code) => {
       if ("E_PICKER_CANCELLED" !== code.code) {
-        let obj = callback2(3986);
+        let obj = callback2(3894);
         obj = { key: "CROP_ERROR", IconComponent: null, content: null };
-        obj[1] = callback(7716).CircleErrorIcon;
+        obj[1] = callback(6733).CircleErrorIcon;
         obj[2] = code.message;
         obj.open(obj);
       }

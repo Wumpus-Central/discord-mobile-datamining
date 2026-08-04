@@ -1,3 +1,4 @@
+// discord_app/modules/experiments/ExperimentManager.tsx
 import getHash from "getHash";
 import { registerExperiment } from "getHash";
 import ExperimentBuckets from "ExperimentBuckets";

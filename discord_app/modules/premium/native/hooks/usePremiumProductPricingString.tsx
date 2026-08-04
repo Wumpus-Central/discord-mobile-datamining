@@ -1,3 +1,4 @@
+// discord_app/modules/premium/native/hooks/usePremiumProductPricingString.tsx
 import updateProduct from "updateProduct";
 import { PRICE_PLACEHOLDER } from "GuildFeatures";
 
@@ -5,10 +6,10 @@ const require = arg1;
 const result = require("getPremiumPlanItem").fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");
 
 export default function usePremiumProductPricingString(closure_0, c3) {
-  const planIdForPremiumType = _require(3931).getPlanIdForPremiumType(closure_0, c3);
-  const obj = _require(3931);
-  _require = _require(5770).getProductIdForGift(planIdForPremiumType);
-  const obj2 = _require(5770);
+  const planIdForPremiumType = _require(3839).getPlanIdForPremiumType(closure_0, c3);
+  const obj = _require(3839);
+  _require = _require(5679).getProductIdForGift(planIdForPremiumType);
+  const obj2 = _require(5679);
   const items = [updateProduct];
   const stateFromStores = _require(589).useStateFromStores(items, () => outer1_2.getProduct(closure_0));
   let priceString;

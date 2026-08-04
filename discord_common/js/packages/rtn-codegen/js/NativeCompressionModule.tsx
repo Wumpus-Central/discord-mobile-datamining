@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeCompressionModule");

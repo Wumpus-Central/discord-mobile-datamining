@@ -1,3 +1,4 @@
+// discord_app/stores/native/AppStateStore.tsx
 import { AppStates } from "ME";
 import { Store } from "initialize";
 import promise from "expandEventProperties";

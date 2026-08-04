@@ -1,3 +1,4 @@
+// discord_app/modules/creator_monetization_eligibility/useCreatorMonetizationAcceptTerms.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -20,9 +21,9 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
   let dependencyMap = tmp2[1];
   [tmp4, mergeGuildAvatar] = isExpeditedOnboardingGuild(React.useState(false), 2);
   let tmp3 = isExpeditedOnboardingGuild(React.useState(false), 2);
-  isExpeditedOnboardingGuild = _require(5790).useIsExpeditedOnboardingGuild(stateFromStores);
+  isExpeditedOnboardingGuild = _require(12642).useIsExpeditedOnboardingGuild(stateFromStores);
   obj = { canSubmitAcceptance: null, error: null, loading: null, submitAcceptTermsRequest: null };
-  let obj2 = _require(5790);
+  let obj2 = _require(12642);
   const items1 = [closure_9];
   const items2 = [stateFromStores];
   obj[0] = _require(589).useStateFromStores(items1, () => {
@@ -72,10 +73,10 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
                 v0 = 4;
                 c5 = 1;
                 const obj1 = { value: null, done: false };
-                obj1[0] = outer1_2(16645).acceptCreatorMonetizationTerms(tmp56, tmp42);
+                obj1[0] = outer1_2(16548).acceptCreatorMonetizationTerms(tmp56, tmp42);
                 return obj1;
               } else {
-                let obj2 = outer1_2(16645);
+                let obj2 = outer1_2(16548);
                 v0 = 3;
                 c5 = 1;
                 obj2 = { value: null, done: false };
@@ -89,7 +90,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
           if (2 === tmp8) {
             dependencyMap = 1;
             closure_0 = closure_2;
-            const tmp25 = new outer1_1(4185)(closure_0);
+            const tmp25 = new outer1_1(4093)(closure_0);
             dependencyMap(tmp25);
           } else {
             if (3 === tmp8) {

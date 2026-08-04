@@ -1,3 +1,4 @@
+// discord_app/modules/activities/ActivityPopoutUtils.native.tsx
 const result = require("set").fileFinishedImporting("modules/activities/ActivityPopoutUtils.native.tsx");
 
 export function shouldOpenActivityInPopoutWindow() {

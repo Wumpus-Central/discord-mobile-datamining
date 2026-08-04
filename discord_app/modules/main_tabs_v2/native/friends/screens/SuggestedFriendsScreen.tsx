@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import ME from "ME";

@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/native/components/AudienceGridRow.tsx
 import { View } from "get ActivityIndicator";
 import { MAX_AUDIENCE_ROW_LIMIT } from "MAX_STAGE_TOPIC_LENGTH";
 import jsxProd from "jsxProd";
@@ -14,7 +15,7 @@ class BlankAudience {
       tmp = jsx;
       tmp2 = closure_0;
       tmp3 = closure_1;
-      arr = items.push(jsx(require("module_10844"), {}, num));
+      arr = items.push(jsx(require("module_10873"), {}, num));
     }
     return items;
   }

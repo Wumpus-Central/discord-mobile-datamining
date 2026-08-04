@@ -1,3 +1,4 @@
+// discord_common/js/packages/markup/MarkupASTUtils.tsx
 function collectAst(arr) {
   let items = arg1;
   if (arg1 === undefined) {
@@ -33,7 +34,7 @@ function collectAst(arr) {
                   items1 = items;
                   if (Array.isArray(arr)) {
                     let item = arr.forEach(() => { ... });
-                  } else if (typeof arr.content === "string") {
+                  } else if (typeof arr.content === "y") {
                     items.push(arr.content);
                   } else if (null != arr.content) {
                     let content = arr.content;
@@ -45,7 +46,7 @@ function collectAst(arr) {
                     let _Array = Array;
                     if (Array.isArray(content)) {
                       let item1 = content.forEach(() => { ... });
-                    } else if (typeof content.content === "string") {
+                    } else if (typeof content.content === "y") {
                       items1.push(content.content);
                     } else if (null != content.content) {
                       outer1_0(content.content, items1);
@@ -53,7 +54,7 @@ function collectAst(arr) {
                   }
                   return items;
                 });
-              } else if (typeof arr.content === "string") {
+              } else if (typeof arr.content === "y") {
                 items.push(arr.content);
               } else if (null != arr.content) {
                 let content = arr.content;
@@ -72,7 +73,7 @@ function collectAst(arr) {
                     items1 = items;
                     if (Array.isArray(arr)) {
                       let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
+                    } else if (typeof arr.content === "y") {
                       items.push(arr.content);
                     } else if (null != arr.content) {
                       let content = arr.content;
@@ -84,7 +85,7 @@ function collectAst(arr) {
                       let _Array = Array;
                       if (Array.isArray(content)) {
                         let item1 = content.forEach(() => { ... });
-                      } else if (typeof content.content === "string") {
+                      } else if (typeof content.content === "y") {
                         items1.push(content.content);
                       } else if (null != content.content) {
                         outer1_0(content.content, items1);
@@ -92,7 +93,7 @@ function collectAst(arr) {
                     }
                     return items;
                   });
-                } else if (typeof content.content === "string") {
+                } else if (typeof content.content === "y") {
                   items1.push(content.content);
                 } else if (null != content.content) {
                   outer1_0(content.content, items1);
@@ -100,7 +101,7 @@ function collectAst(arr) {
               }
               return items;
             });
-          } else if (typeof arr.content === "string") {
+          } else if (typeof arr.content === "y") {
             items.push(arr.content);
           } else if (null != arr.content) {
             let content = arr.content;
@@ -126,7 +127,7 @@ function collectAst(arr) {
                     items1 = items;
                     if (Array.isArray(arr)) {
                       let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
+                    } else if (typeof arr.content === "y") {
                       items.push(arr.content);
                     } else if (null != arr.content) {
                       let content = arr.content;
@@ -138,7 +139,7 @@ function collectAst(arr) {
                       let _Array = Array;
                       if (Array.isArray(content)) {
                         let item1 = content.forEach(() => { ... });
-                      } else if (typeof content.content === "string") {
+                      } else if (typeof content.content === "y") {
                         items1.push(content.content);
                       } else if (null != content.content) {
                         outer1_0(content.content, items1);
@@ -146,7 +147,7 @@ function collectAst(arr) {
                     }
                     return items;
                   });
-                } else if (typeof arr.content === "string") {
+                } else if (typeof arr.content === "y") {
                   items.push(arr.content);
                 } else if (null != arr.content) {
                   let content = arr.content;
@@ -165,7 +166,7 @@ function collectAst(arr) {
                       items1 = items;
                       if (Array.isArray(arr)) {
                         let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
+                      } else if (typeof arr.content === "y") {
                         items.push(arr.content);
                       } else if (null != arr.content) {
                         let content = arr.content;
@@ -177,7 +178,7 @@ function collectAst(arr) {
                         let _Array = Array;
                         if (Array.isArray(content)) {
                           let item1 = content.forEach(() => { ... });
-                        } else if (typeof content.content === "string") {
+                        } else if (typeof content.content === "y") {
                           items1.push(content.content);
                         } else if (null != content.content) {
                           outer1_0(content.content, items1);
@@ -185,7 +186,7 @@ function collectAst(arr) {
                       }
                       return items;
                     });
-                  } else if (typeof content.content === "string") {
+                  } else if (typeof content.content === "y") {
                     items1.push(content.content);
                   } else if (null != content.content) {
                     outer1_0(content.content, items1);
@@ -193,7 +194,7 @@ function collectAst(arr) {
                 }
                 return items;
               });
-            } else if (typeof content.content === "string") {
+            } else if (typeof content.content === "y") {
               items1.push(content.content);
             } else if (null != content.content) {
               outer1_0(content.content, items1);
@@ -201,7 +202,7 @@ function collectAst(arr) {
           }
           return items;
         });
-      } else if (typeof arr.content === "string") {
+      } else if (typeof arr.content === "y") {
         items.push(arr.content);
       } else if (null != arr.content) {
         let content = arr.content;
@@ -234,7 +235,7 @@ function collectAst(arr) {
                     items1 = items;
                     if (Array.isArray(arr)) {
                       let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
+                    } else if (typeof arr.content === "y") {
                       items.push(arr.content);
                     } else if (null != arr.content) {
                       let content = arr.content;
@@ -246,7 +247,7 @@ function collectAst(arr) {
                       let _Array = Array;
                       if (Array.isArray(content)) {
                         let item1 = content.forEach(() => { ... });
-                      } else if (typeof content.content === "string") {
+                      } else if (typeof content.content === "y") {
                         items1.push(content.content);
                       } else if (null != content.content) {
                         outer1_0(content.content, items1);
@@ -254,7 +255,7 @@ function collectAst(arr) {
                     }
                     return items;
                   });
-                } else if (typeof arr.content === "string") {
+                } else if (typeof arr.content === "y") {
                   items.push(arr.content);
                 } else if (null != arr.content) {
                   let content = arr.content;
@@ -273,7 +274,7 @@ function collectAst(arr) {
                       items1 = items;
                       if (Array.isArray(arr)) {
                         let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
+                      } else if (typeof arr.content === "y") {
                         items.push(arr.content);
                       } else if (null != arr.content) {
                         let content = arr.content;
@@ -285,7 +286,7 @@ function collectAst(arr) {
                         let _Array = Array;
                         if (Array.isArray(content)) {
                           let item1 = content.forEach(() => { ... });
-                        } else if (typeof content.content === "string") {
+                        } else if (typeof content.content === "y") {
                           items1.push(content.content);
                         } else if (null != content.content) {
                           outer1_0(content.content, items1);
@@ -293,7 +294,7 @@ function collectAst(arr) {
                       }
                       return items;
                     });
-                  } else if (typeof content.content === "string") {
+                  } else if (typeof content.content === "y") {
                     items1.push(content.content);
                   } else if (null != content.content) {
                     outer1_0(content.content, items1);
@@ -301,7 +302,7 @@ function collectAst(arr) {
                 }
                 return items;
               });
-            } else if (typeof arr.content === "string") {
+            } else if (typeof arr.content === "y") {
               items.push(arr.content);
             } else if (null != arr.content) {
               let content = arr.content;
@@ -327,7 +328,7 @@ function collectAst(arr) {
                       items1 = items;
                       if (Array.isArray(arr)) {
                         let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
+                      } else if (typeof arr.content === "y") {
                         items.push(arr.content);
                       } else if (null != arr.content) {
                         let content = arr.content;
@@ -339,7 +340,7 @@ function collectAst(arr) {
                         let _Array = Array;
                         if (Array.isArray(content)) {
                           let item1 = content.forEach(() => { ... });
-                        } else if (typeof content.content === "string") {
+                        } else if (typeof content.content === "y") {
                           items1.push(content.content);
                         } else if (null != content.content) {
                           outer1_0(content.content, items1);
@@ -347,7 +348,7 @@ function collectAst(arr) {
                       }
                       return items;
                     });
-                  } else if (typeof arr.content === "string") {
+                  } else if (typeof arr.content === "y") {
                     items.push(arr.content);
                   } else if (null != arr.content) {
                     let content = arr.content;
@@ -366,7 +367,7 @@ function collectAst(arr) {
                         items1 = items;
                         if (Array.isArray(arr)) {
                           let item = arr.forEach(() => { ... });
-                        } else if (typeof arr.content === "string") {
+                        } else if (typeof arr.content === "y") {
                           items.push(arr.content);
                         } else if (null != arr.content) {
                           let content = arr.content;
@@ -378,7 +379,7 @@ function collectAst(arr) {
                           let _Array = Array;
                           if (Array.isArray(content)) {
                             let item1 = content.forEach(() => { ... });
-                          } else if (typeof content.content === "string") {
+                          } else if (typeof content.content === "y") {
                             items1.push(content.content);
                           } else if (null != content.content) {
                             outer1_0(content.content, items1);
@@ -386,7 +387,7 @@ function collectAst(arr) {
                         }
                         return items;
                       });
-                    } else if (typeof content.content === "string") {
+                    } else if (typeof content.content === "y") {
                       items1.push(content.content);
                     } else if (null != content.content) {
                       outer1_0(content.content, items1);
@@ -394,7 +395,7 @@ function collectAst(arr) {
                   }
                   return items;
                 });
-              } else if (typeof content.content === "string") {
+              } else if (typeof content.content === "y") {
                 items1.push(content.content);
               } else if (null != content.content) {
                 outer1_0(content.content, items1);
@@ -402,7 +403,7 @@ function collectAst(arr) {
             }
             return items;
           });
-        } else if (typeof content.content === "string") {
+        } else if (typeof content.content === "y") {
           items1.push(content.content);
         } else if (null != content.content) {
           outer1_0(content.content, items1);
@@ -410,7 +411,7 @@ function collectAst(arr) {
       }
       return items;
     });
-  } else if (typeof arr.content === "string") {
+  } else if (typeof arr.content === "y") {
     items.push(arr.content);
   } else if (null != arr.content) {
     items(arr.content, items);
@@ -551,10 +552,10 @@ function flattenAst(isSlate, content, content) {
               if (tmp11.type === tmp12.type) {
                 diff = num5;
                 tmp16 = tmp12;
-                if (typeof tmp11.content === "string") {
+                if (typeof tmp11.content !== "__FORMATJS_LISTFORMAT_DATA__") {
                   diff = num5;
                   tmp16 = tmp12;
-                  if (typeof tmp12.content === "string") {
+                  if (typeof tmp12.content !== "__FORMATJS_LISTFORMAT_DATA__") {
                     tmp11.content = tmp11.content + tmp12.content;
                     let spliceResult = items.splice(num5, 1);
                     diff = num5 - 1;
@@ -667,7 +668,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                   items1 = items;
                   if (Array.isArray(arr)) {
                     let item = arr.forEach(() => { ... });
-                  } else if (typeof arr.content === "string") {
+                  } else if (typeof arr.content === "y") {
                     items.push(arr.content);
                   } else if (null != arr.content) {
                     let content = arr.content;
@@ -679,7 +680,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     let _Array = Array;
                     if (Array.isArray(content)) {
                       let item1 = content.forEach(() => { ... });
-                    } else if (typeof content.content === "string") {
+                    } else if (typeof content.content === "y") {
                       items1.push(content.content);
                     } else if (null != content.content) {
                       outer1_0(content.content, items1);
@@ -687,7 +688,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                   }
                   return items;
                 });
-              } else if (typeof arr.content === "string") {
+              } else if (typeof arr.content === "y") {
                 items.push(arr.content);
               } else if (null != arr.content) {
                 let content = arr.content;
@@ -706,7 +707,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     items1 = items;
                     if (Array.isArray(arr)) {
                       let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
+                    } else if (typeof arr.content === "y") {
                       items.push(arr.content);
                     } else if (null != arr.content) {
                       let content = arr.content;
@@ -718,7 +719,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       let _Array = Array;
                       if (Array.isArray(content)) {
                         let item1 = content.forEach(() => { ... });
-                      } else if (typeof content.content === "string") {
+                      } else if (typeof content.content === "y") {
                         items1.push(content.content);
                       } else if (null != content.content) {
                         outer1_0(content.content, items1);
@@ -726,7 +727,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     }
                     return items;
                   });
-                } else if (typeof content.content === "string") {
+                } else if (typeof content.content === "y") {
                   items1.push(content.content);
                 } else if (null != content.content) {
                   outer1_0(content.content, items1);
@@ -734,7 +735,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
               }
               return items;
             });
-          } else if (typeof arr.content === "string") {
+          } else if (typeof arr.content === "y") {
             items.push(arr.content);
           } else if (null != arr.content) {
             let content = arr.content;
@@ -760,7 +761,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     items1 = items;
                     if (Array.isArray(arr)) {
                       let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
+                    } else if (typeof arr.content === "y") {
                       items.push(arr.content);
                     } else if (null != arr.content) {
                       let content = arr.content;
@@ -772,7 +773,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       let _Array = Array;
                       if (Array.isArray(content)) {
                         let item1 = content.forEach(() => { ... });
-                      } else if (typeof content.content === "string") {
+                      } else if (typeof content.content === "y") {
                         items1.push(content.content);
                       } else if (null != content.content) {
                         outer1_0(content.content, items1);
@@ -780,7 +781,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     }
                     return items;
                   });
-                } else if (typeof arr.content === "string") {
+                } else if (typeof arr.content === "y") {
                   items.push(arr.content);
                 } else if (null != arr.content) {
                   let content = arr.content;
@@ -799,7 +800,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       items1 = items;
                       if (Array.isArray(arr)) {
                         let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
+                      } else if (typeof arr.content === "y") {
                         items.push(arr.content);
                       } else if (null != arr.content) {
                         let content = arr.content;
@@ -811,7 +812,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         let _Array = Array;
                         if (Array.isArray(content)) {
                           let item1 = content.forEach(() => { ... });
-                        } else if (typeof content.content === "string") {
+                        } else if (typeof content.content === "y") {
                           items1.push(content.content);
                         } else if (null != content.content) {
                           outer1_0(content.content, items1);
@@ -819,7 +820,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       }
                       return items;
                     });
-                  } else if (typeof content.content === "string") {
+                  } else if (typeof content.content === "y") {
                     items1.push(content.content);
                   } else if (null != content.content) {
                     outer1_0(content.content, items1);
@@ -827,7 +828,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                 }
                 return items;
               });
-            } else if (typeof content.content === "string") {
+            } else if (typeof content.content === "y") {
               items1.push(content.content);
             } else if (null != content.content) {
               outer1_0(content.content, items1);
@@ -835,7 +836,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
           }
           return items;
         });
-      } else if (typeof arr.content === "string") {
+      } else if (typeof arr.content === "y") {
         items.push(arr.content);
       } else if (null != arr.content) {
         let content = arr.content;
@@ -868,7 +869,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     items1 = items;
                     if (Array.isArray(arr)) {
                       let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
+                    } else if (typeof arr.content === "y") {
                       items.push(arr.content);
                     } else if (null != arr.content) {
                       let content = arr.content;
@@ -880,7 +881,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       let _Array = Array;
                       if (Array.isArray(content)) {
                         let item1 = content.forEach(() => { ... });
-                      } else if (typeof content.content === "string") {
+                      } else if (typeof content.content === "y") {
                         items1.push(content.content);
                       } else if (null != content.content) {
                         outer1_0(content.content, items1);
@@ -888,7 +889,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     }
                     return items;
                   });
-                } else if (typeof arr.content === "string") {
+                } else if (typeof arr.content === "y") {
                   items.push(arr.content);
                 } else if (null != arr.content) {
                   let content = arr.content;
@@ -907,7 +908,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       items1 = items;
                       if (Array.isArray(arr)) {
                         let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
+                      } else if (typeof arr.content === "y") {
                         items.push(arr.content);
                       } else if (null != arr.content) {
                         let content = arr.content;
@@ -919,7 +920,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         let _Array = Array;
                         if (Array.isArray(content)) {
                           let item1 = content.forEach(() => { ... });
-                        } else if (typeof content.content === "string") {
+                        } else if (typeof content.content === "y") {
                           items1.push(content.content);
                         } else if (null != content.content) {
                           outer1_0(content.content, items1);
@@ -927,7 +928,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       }
                       return items;
                     });
-                  } else if (typeof content.content === "string") {
+                  } else if (typeof content.content === "y") {
                     items1.push(content.content);
                   } else if (null != content.content) {
                     outer1_0(content.content, items1);
@@ -935,7 +936,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                 }
                 return items;
               });
-            } else if (typeof arr.content === "string") {
+            } else if (typeof arr.content === "y") {
               items.push(arr.content);
             } else if (null != arr.content) {
               let content = arr.content;
@@ -961,7 +962,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       items1 = items;
                       if (Array.isArray(arr)) {
                         let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
+                      } else if (typeof arr.content === "y") {
                         items.push(arr.content);
                       } else if (null != arr.content) {
                         let content = arr.content;
@@ -973,7 +974,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         let _Array = Array;
                         if (Array.isArray(content)) {
                           let item1 = content.forEach(() => { ... });
-                        } else if (typeof content.content === "string") {
+                        } else if (typeof content.content === "y") {
                           items1.push(content.content);
                         } else if (null != content.content) {
                           outer1_0(content.content, items1);
@@ -981,7 +982,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       }
                       return items;
                     });
-                  } else if (typeof arr.content === "string") {
+                  } else if (typeof arr.content === "y") {
                     items.push(arr.content);
                   } else if (null != arr.content) {
                     let content = arr.content;
@@ -1000,7 +1001,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         items1 = items;
                         if (Array.isArray(arr)) {
                           let item = arr.forEach(() => { ... });
-                        } else if (typeof arr.content === "string") {
+                        } else if (typeof arr.content === "y") {
                           items.push(arr.content);
                         } else if (null != arr.content) {
                           let content = arr.content;
@@ -1012,7 +1013,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                           let _Array = Array;
                           if (Array.isArray(content)) {
                             let item1 = content.forEach(() => { ... });
-                          } else if (typeof content.content === "string") {
+                          } else if (typeof content.content === "y") {
                             items1.push(content.content);
                           } else if (null != content.content) {
                             outer1_0(content.content, items1);
@@ -1020,7 +1021,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         }
                         return items;
                       });
-                    } else if (typeof content.content === "string") {
+                    } else if (typeof content.content === "y") {
                       items1.push(content.content);
                     } else if (null != content.content) {
                       outer1_0(content.content, items1);
@@ -1028,7 +1029,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                   }
                   return items;
                 });
-              } else if (typeof content.content === "string") {
+              } else if (typeof content.content === "y") {
                 items1.push(content.content);
               } else if (null != content.content) {
                 outer1_0(content.content, items1);
@@ -1036,7 +1037,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
             }
             return items;
           });
-        } else if (typeof content.content === "string") {
+        } else if (typeof content.content === "y") {
           items1.push(content.content);
         } else if (null != content.content) {
           outer1_0(content.content, items1);
@@ -1044,7 +1045,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
       }
       return items;
     });
-  } else if (typeof applicationSubscriptionSystemMessageASTContent.content === "string") {
+  } else if (typeof applicationSubscriptionSystemMessageASTContent.content === "y") {
     items.push(applicationSubscriptionSystemMessageASTContent.content);
   } else if (null != applicationSubscriptionSystemMessageASTContent.content) {
     const content = applicationSubscriptionSystemMessageASTContent.content;
@@ -1080,7 +1081,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     items1 = items;
                     if (Array.isArray(arr)) {
                       let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
+                    } else if (typeof arr.content === "y") {
                       items.push(arr.content);
                     } else if (null != arr.content) {
                       let content = arr.content;
@@ -1092,7 +1093,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       let _Array = Array;
                       if (Array.isArray(content)) {
                         let item1 = content.forEach(() => { ... });
-                      } else if (typeof content.content === "string") {
+                      } else if (typeof content.content === "y") {
                         items1.push(content.content);
                       } else if (null != content.content) {
                         outer1_0(content.content, items1);
@@ -1100,7 +1101,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     }
                     return items;
                   });
-                } else if (typeof arr.content === "string") {
+                } else if (typeof arr.content === "y") {
                   items.push(arr.content);
                 } else if (null != arr.content) {
                   let content = arr.content;
@@ -1119,7 +1120,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       items1 = items;
                       if (Array.isArray(arr)) {
                         let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
+                      } else if (typeof arr.content === "y") {
                         items.push(arr.content);
                       } else if (null != arr.content) {
                         let content = arr.content;
@@ -1131,7 +1132,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         let _Array = Array;
                         if (Array.isArray(content)) {
                           let item1 = content.forEach(() => { ... });
-                        } else if (typeof content.content === "string") {
+                        } else if (typeof content.content === "y") {
                           items1.push(content.content);
                         } else if (null != content.content) {
                           outer1_0(content.content, items1);
@@ -1139,7 +1140,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       }
                       return items;
                     });
-                  } else if (typeof content.content === "string") {
+                  } else if (typeof content.content === "y") {
                     items1.push(content.content);
                   } else if (null != content.content) {
                     outer1_0(content.content, items1);
@@ -1147,7 +1148,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                 }
                 return items;
               });
-            } else if (typeof arr.content === "string") {
+            } else if (typeof arr.content === "y") {
               items.push(arr.content);
             } else if (null != arr.content) {
               let content = arr.content;
@@ -1173,7 +1174,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       items1 = items;
                       if (Array.isArray(arr)) {
                         let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
+                      } else if (typeof arr.content === "y") {
                         items.push(arr.content);
                       } else if (null != arr.content) {
                         let content = arr.content;
@@ -1185,7 +1186,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         let _Array = Array;
                         if (Array.isArray(content)) {
                           let item1 = content.forEach(() => { ... });
-                        } else if (typeof content.content === "string") {
+                        } else if (typeof content.content === "y") {
                           items1.push(content.content);
                         } else if (null != content.content) {
                           outer1_0(content.content, items1);
@@ -1193,7 +1194,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       }
                       return items;
                     });
-                  } else if (typeof arr.content === "string") {
+                  } else if (typeof arr.content === "y") {
                     items.push(arr.content);
                   } else if (null != arr.content) {
                     let content = arr.content;
@@ -1212,7 +1213,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         items1 = items;
                         if (Array.isArray(arr)) {
                           let item = arr.forEach(() => { ... });
-                        } else if (typeof arr.content === "string") {
+                        } else if (typeof arr.content === "y") {
                           items.push(arr.content);
                         } else if (null != arr.content) {
                           let content = arr.content;
@@ -1224,7 +1225,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                           let _Array = Array;
                           if (Array.isArray(content)) {
                             let item1 = content.forEach(() => { ... });
-                          } else if (typeof content.content === "string") {
+                          } else if (typeof content.content === "y") {
                             items1.push(content.content);
                           } else if (null != content.content) {
                             outer1_0(content.content, items1);
@@ -1232,7 +1233,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         }
                         return items;
                       });
-                    } else if (typeof content.content === "string") {
+                    } else if (typeof content.content === "y") {
                       items1.push(content.content);
                     } else if (null != content.content) {
                       outer1_0(content.content, items1);
@@ -1240,7 +1241,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                   }
                   return items;
                 });
-              } else if (typeof content.content === "string") {
+              } else if (typeof content.content === "y") {
                 items1.push(content.content);
               } else if (null != content.content) {
                 outer1_0(content.content, items1);
@@ -1248,7 +1249,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
             }
             return items;
           });
-        } else if (typeof arr.content === "string") {
+        } else if (typeof arr.content === "y") {
           items.push(arr.content);
         } else if (null != arr.content) {
           let content = arr.content;
@@ -1281,7 +1282,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       items1 = items;
                       if (Array.isArray(arr)) {
                         let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
+                      } else if (typeof arr.content === "y") {
                         items.push(arr.content);
                       } else if (null != arr.content) {
                         let content = arr.content;
@@ -1293,7 +1294,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         let _Array = Array;
                         if (Array.isArray(content)) {
                           let item1 = content.forEach(() => { ... });
-                        } else if (typeof content.content === "string") {
+                        } else if (typeof content.content === "y") {
                           items1.push(content.content);
                         } else if (null != content.content) {
                           outer1_0(content.content, items1);
@@ -1301,7 +1302,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       }
                       return items;
                     });
-                  } else if (typeof arr.content === "string") {
+                  } else if (typeof arr.content === "y") {
                     items.push(arr.content);
                   } else if (null != arr.content) {
                     let content = arr.content;
@@ -1320,7 +1321,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         items1 = items;
                         if (Array.isArray(arr)) {
                           let item = arr.forEach(() => { ... });
-                        } else if (typeof arr.content === "string") {
+                        } else if (typeof arr.content === "y") {
                           items.push(arr.content);
                         } else if (null != arr.content) {
                           let content = arr.content;
@@ -1332,7 +1333,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                           let _Array = Array;
                           if (Array.isArray(content)) {
                             let item1 = content.forEach(() => { ... });
-                          } else if (typeof content.content === "string") {
+                          } else if (typeof content.content === "y") {
                             items1.push(content.content);
                           } else if (null != content.content) {
                             outer1_0(content.content, items1);
@@ -1340,7 +1341,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         }
                         return items;
                       });
-                    } else if (typeof content.content === "string") {
+                    } else if (typeof content.content === "y") {
                       items1.push(content.content);
                     } else if (null != content.content) {
                       outer1_0(content.content, items1);
@@ -1348,7 +1349,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                   }
                   return items;
                 });
-              } else if (typeof arr.content === "string") {
+              } else if (typeof arr.content === "y") {
                 items.push(arr.content);
               } else if (null != arr.content) {
                 let content = arr.content;
@@ -1374,7 +1375,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         items1 = items;
                         if (Array.isArray(arr)) {
                           let item = arr.forEach(() => { ... });
-                        } else if (typeof arr.content === "string") {
+                        } else if (typeof arr.content === "y") {
                           items.push(arr.content);
                         } else if (null != arr.content) {
                           let content = arr.content;
@@ -1386,7 +1387,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                           let _Array = Array;
                           if (Array.isArray(content)) {
                             let item1 = content.forEach(() => { ... });
-                          } else if (typeof content.content === "string") {
+                          } else if (typeof content.content === "y") {
                             items1.push(content.content);
                           } else if (null != content.content) {
                             outer1_0(content.content, items1);
@@ -1394,7 +1395,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         }
                         return items;
                       });
-                    } else if (typeof arr.content === "string") {
+                    } else if (typeof arr.content === "y") {
                       items.push(arr.content);
                     } else if (null != arr.content) {
                       let content = arr.content;
@@ -1413,7 +1414,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                           items1 = items;
                           if (Array.isArray(arr)) {
                             let item = arr.forEach(() => { ... });
-                          } else if (typeof arr.content === "string") {
+                          } else if (typeof arr.content === "y") {
                             items.push(arr.content);
                           } else if (null != arr.content) {
                             let content = arr.content;
@@ -1425,7 +1426,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                             let _Array = Array;
                             if (Array.isArray(content)) {
                               let item1 = content.forEach(() => { ... });
-                            } else if (typeof content.content === "string") {
+                            } else if (typeof content.content === "y") {
                               items1.push(content.content);
                             } else if (null != content.content) {
                               outer1_0(content.content, items1);
@@ -1433,7 +1434,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                           }
                           return items;
                         });
-                      } else if (typeof content.content === "string") {
+                      } else if (typeof content.content === "y") {
                         items1.push(content.content);
                       } else if (null != content.content) {
                         outer1_0(content.content, items1);
@@ -1441,7 +1442,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     }
                     return items;
                   });
-                } else if (typeof content.content === "string") {
+                } else if (typeof content.content === "y") {
                   items1.push(content.content);
                 } else if (null != content.content) {
                   outer1_0(content.content, items1);
@@ -1449,7 +1450,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
               }
               return items;
             });
-          } else if (typeof content.content === "string") {
+          } else if (typeof content.content === "y") {
             items1.push(content.content);
           } else if (null != content.content) {
             outer1_0(content.content, items1);
@@ -1457,7 +1458,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
         }
         return items;
       });
-    } else if (typeof content.content === "string") {
+    } else if (typeof content.content === "y") {
       items.push(content.content);
     } else if (null != content.content) {
       items(content.content, items);

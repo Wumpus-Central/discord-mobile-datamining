@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/native/StageBoostUpsellManager.tsx
 import setContent from "setContent";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -21,8 +22,8 @@ prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(channe
     tmp = key.getKey() === STAGE_BOOSTING_SHEET_KEY;
   }
   if (tmp) {
-    importDefault(4253).hideActionSheet(STAGE_BOOSTING_SHEET_KEY);
-    const obj = importDefault(4253);
+    importDefault(4161).hideActionSheet(STAGE_BOOSTING_SHEET_KEY);
+    const obj = importDefault(4161);
   }
 };
 prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
@@ -36,18 +37,18 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
         if (isGuildStageVoiceResult) {
-          let obj = require(5102) /* useStageHasMedia */;
+          let obj = require(5011) /* useStageHasMedia */;
           if (obj.getStageHasMedia(channel.id)) {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
               if (getUncachedChannelPermissions.can(tmp5(1380).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 obj = { channel: null };
                 obj[0] = channel;
-                importDefault(4253).openLazy(tmp5(1959)(5114, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+                importDefault(4161).openLazy(tmp5(1959)(5023, tmp6.paths), STAGE_BOOSTING_SHEET_KEY, obj);
                 c8 = true;
-                const obj3 = importDefault(4253);
+                const obj3 = importDefault(4161);
               }
             }
-            tmp5Result = tmp5(9076);
+            tmp5Result = tmp5(8846);
           }
           tmp6 = dependencyMap;
         }

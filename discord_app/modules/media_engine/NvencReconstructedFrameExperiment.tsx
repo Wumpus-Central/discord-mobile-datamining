@@ -1,3 +1,4 @@
+// discord_app/modules/media_engine/NvencReconstructedFrameExperiment.tsx
 let obj = { 1: null };
 obj[1] = { enabled: true };
 let closure_0 = require("getUnitId")({ kind: "user", name: "2026-07-nvenc-reconstructed-frames", defaultConfig: { enabled: false }, variations: obj });

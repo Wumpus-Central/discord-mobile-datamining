@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/nameplates/types.tsx
 const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/types.tsx");
 
 export const PaletteKeys = { None: "none", Crimson: "crimson", Berry: "berry", Sky: "sky", Teal: "teal", Forest: "forest", BubbleGum: "bubble_gum", Violet: "violet", Cobalt: "cobalt", Clover: "clover", Lemon: "lemon", White: "white", Black: "black" };

@@ -1,3 +1,4 @@
+// discord_app/modules/home_drawer/native/subtitles/useSubtitleStyles.tsx
 import createCacheKey from "createCacheKey";
 
 const styles = createCacheKey.createStyles({ subtitleRow: { flexDirection: "row", alignItems: "center" }, subtitleText: { flexShrink: 1 }, channelIcon: { marginRight: 2 }, unreadChannelIcon: { marginLeft: 2, marginRight: 2 } });

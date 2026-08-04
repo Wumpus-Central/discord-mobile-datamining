@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/FamilyCenterV3Experiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-01-family-center-v3", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

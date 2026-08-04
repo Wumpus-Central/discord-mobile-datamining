@@ -1,3 +1,4 @@
+// discord_app/modules/game_console/hooks/useVoiceStateForRemoteSession.tsx
 import fetchFingerprint from "fetchFingerprint";
 import updateVoiceState from "updateVoiceState";
 import set from "set";

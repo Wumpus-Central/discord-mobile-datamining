@@ -1,3 +1,4 @@
+// discord_app/modules/favorites/utils/createFavoritesGuildChannelRecord.tsx
 import { ChannelTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/favorites/utils/createFavoritesGuildChannelRecord.tsx");

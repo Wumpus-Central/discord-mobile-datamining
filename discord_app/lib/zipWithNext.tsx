@@ -1,3 +1,4 @@
+// discord_app/lib/zipWithNext.tsx
 const result = require("set").fileFinishedImporting("lib/zipWithNext.tsx");
 
 export default function zipWithNext(arg0, arg1) {

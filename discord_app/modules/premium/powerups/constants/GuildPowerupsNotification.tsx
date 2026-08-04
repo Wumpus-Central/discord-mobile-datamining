@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/constants/GuildPowerupsNotification.tsx
 const result = require("set").fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");
 
 export const GUILD_POWERUP_NOTIFICATION_COOLDOWN = 21600000;

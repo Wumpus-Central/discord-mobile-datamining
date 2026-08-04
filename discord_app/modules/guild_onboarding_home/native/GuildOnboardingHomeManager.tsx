@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx
 import _slicedToArray from "_slicedToArray";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import initialize from "initialize";
@@ -118,59 +119,105 @@ let prototype = function GuildOnboardingHomeManager() {
     const iter = (function*(arg0) {
       let c0;
       let c1;
-      c1 = tmp2;
-      ({ guildId: c0, channelId: c1 } = c0);
-      yield "ct";
-      if (1 === tmp5) {
+      if (completedActions === 2) {
+        completedActions = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          let completedActions = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          completedActions = 3;
-          const obj1 = { value: null, done: true };
-          obj1[0] = arg1;
-          return obj1;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          if (null != c0) {
-            if (null != c1) {
-              let memberActions = 2;
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          completedActions = 2;
+          if (0 === memberActions) {
+            if (arg0 === 1) {
+              completedActions = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              completedActions = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_2 = tmp5;
+              c1 = tmp2;
+              c0 = undefined;
+              c1 = undefined;
+              ({ guildId: c0, channelId: c1 } = c0);
+              closure_2 = undefined;
+              memberActions = undefined;
+              completedActions = undefined;
+              let found;
+              memberActions = 1;
               completedActions = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = outer1_1._getOrLoadOnboardingMemberActions(c0);
-              return obj2;
+              return { value: "ct", done: "Array" };
             }
+          } else {
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                completedActions = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                completedActions = 3;
+                const obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                if (null != c0) {
+                  if (null != c1) {
+                    memberActions = 2;
+                    completedActions = 1;
+                    const obj2 = { value: null, done: false };
+                    obj2[0] = outer1_1._getOrLoadOnboardingMemberActions(c0);
+                    return obj2;
+                  }
+                }
+                completedActions = 3;
+              }
+            } else if (arg0 === 1) {
+              completedActions = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              closure_2 = arg1;
+              memberActions = closure_2.memberActions;
+              completedActions = closure_2.completedActions;
+              found = undefined;
+              if (memberActions != null) {
+                found = arr.find((channelId) => channelId.channelId === c1);
+              }
+              let tmp10;
+              if (completedActions != null) {
+                tmp10 = tmp9[c1];
+              }
+              let tmp13 = true !== tmp10;
+              if (tmp13) {
+                tmp13 = null != found;
+              }
+              if (tmp13) {
+                tmp13 = found.actionType === callback(outer1_2[16]).NewMemberActionTypes.VIEW;
+              }
+              if (tmp13) {
+                obj = callback(outer1_2[18]);
+                const result = obj.completeNewMemberAction(c0, c1);
+              }
+              arr = memberActions;
+            }
+            completedActions = 3;
+            const obj3 = { value: null, done: true };
+            obj3[0] = arg1;
+            return obj3;
           }
-          completedActions = 3;
+        } catch (tmp38) {
+          completedActions = tmp;
+          throw tmp38;
         }
-      } else if (arg0 === 1) {
-        completedActions = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        let closure_2 = arg1;
-        memberActions = closure_2.memberActions;
-        completedActions = closure_2.completedActions;
-        let found;
-        if (memberActions != null) {
-          found = arr.find((channelId) => channelId.channelId === c1);
-        }
-        let tmp10;
-        if (completedActions != null) {
-          tmp10 = tmp9[c1];
-        }
-        let tmp13 = true !== tmp10;
-        if (tmp13) {
-          tmp13 = null != found;
-        }
-        if (tmp13) {
-          tmp13 = found.actionType === callback(outer1_2[16]).NewMemberActionTypes.VIEW;
-        }
-        if (tmp13) {
-          const obj = callback(outer1_2[18]);
-          const result = obj.completeNewMemberAction(c0, c1);
-        }
-        arr = memberActions;
       }
-      return arg1;
     })();
     iter.next();
     return iter;

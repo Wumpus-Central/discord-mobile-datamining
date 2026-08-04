@@ -1,3 +1,4 @@
+// discord_app/design/void/ShinyButton/native/ShinyButton.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { AppState } from "get ActivityIndicator";

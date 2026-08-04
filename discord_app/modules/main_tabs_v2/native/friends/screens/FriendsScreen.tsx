@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/friends/screens/FriendsScreen.tsx
 import getSystemLocale from "getSystemLocale";
 import { View } from "registerAsset";
 import recountRelationshipTypes from "recountRelationshipTypes";

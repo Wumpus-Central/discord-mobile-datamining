@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/RoleMembersActionSheet.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -55,7 +56,7 @@ export default function RoleMembersActionSheet(guildId) {
   const tmp3 = guildId;
   const tmp9 = roleId;
   const result = roleId(11).castGuildIdAsEveryoneGuildRoleId(guildId);
-  const tmp11 = roleId(5298)(guildId);
+  const tmp11 = roleId(5207)(guildId);
   let tmp12 = null;
   if (roleId !== result) {
     let tmp13;
@@ -80,9 +81,9 @@ export default function RoleMembersActionSheet(guildId) {
     }
     obj[1] = channelId;
     obj[2] = roleId;
-    obj[2] = closure_8(tmp9(10975), obj);
-    tmp16Result = tmp16(tmp3(5338).BottomSheet, obj);
-    let tmp9Result = tmp9(10975);
+    obj[2] = closure_8(tmp9(10921), obj);
+    tmp16Result = tmp16(tmp3(5247).BottomSheet, obj);
+    let tmp9Result = tmp9(10921);
   }
   return tmp16Result;
 };

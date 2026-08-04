@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
 import postMessageToWebView from "postMessageToWebView";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -27,12 +28,12 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
     navigates = true;
   }
   entrypoint = entrypoint.entrypoint;
-  let obj = require(4479) /* collectGuildAnalyticsMetadata */;
+  let obj = require(4388) /* collectGuildAnalyticsMetadata */;
   obj = { location: _location, section: null, application_id: null, section_name: null, query: null, search_results_position: null, source: null };
   if (application.id === BuiltInSectionId.BUILT_IN) {
-    let APP = tmp(6891).ApplicationCommandTriggerSections.BUILT_IN;
+    let APP = tmp(5709).ApplicationCommandTriggerSections.BUILT_IN;
   } else {
-    APP = tmp(6891).ApplicationCommandTriggerSections.APP;
+    APP = tmp(5709).ApplicationCommandTriggerSections.APP;
   }
   obj[1] = APP;
   let id = application.id;
@@ -69,8 +70,8 @@ export const handleViewAllSelected = function handleViewAllSelected(arg0) {
   let title;
   ({ navigation, sectionName, applications, sectionItemType, commands } = arg0);
   ({ location: _location, context, sectionOverallPosition, sectionDescriptors, title, promotedApplicationIds } = arg0);
-  let obj = require(4479) /* collectGuildAnalyticsMetadata */;
-  obj = { section_name: sectionName, num: sectionItemType === require(11351) /* Placeholder */.SectionItemType.APPS ? applications.length : commands.length };
+  let obj = require(4388) /* collectGuildAnalyticsMetadata */;
+  obj = { section_name: sectionName, num: sectionItemType === require(11240) /* Placeholder */.SectionItemType.APPS ? applications.length : commands.length };
   obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_SECTION_VIEW_MORE, obj);
   navigation.navigate(constants.APP_LIST_VIEW, { analyticsLocation: _location, context, sectionName, sectionOverallPosition, applications, sectionItemType, commands, sectionDescriptors, title, promotedApplicationIds });
 };
@@ -90,9 +91,9 @@ export const handleApplicationCommandSelected = function handleApplicationComman
   ({ location: _location, context, command } = arg0);
   ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
   ({ searchResultsPosition, onCommandExecuted } = arg0);
-  let obj = command(6889);
+  let obj = command(5707);
   obj = { command, location: _location, triggerSection: null, queryLength: null, sectionName: null, query: null, searchResultsPosition: null, source: null };
-  obj[2] = command(6889).getCommandTriggerSection(section);
+  obj[2] = command(5707).getCommandTriggerSection(section);
   obj[3] = query.length;
   obj[4] = sectionName;
   obj[5] = query;
@@ -117,7 +118,7 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       }
     }
     if ("channel" === context.type) {
-      const result = importAll(7157).setAppLauncherActiveCommand(context.channel.id, command);
+      const result = importAll(6093).setAppLauncherActiveCommand(context.channel.id, command);
       const obj1 = { command: null, section: null, context: null, installOnDemand: null, sectionName: null, analyticsLocation: null, onCommandExecuted: null };
       obj1[0] = command;
       obj1[1] = tmp5;
@@ -127,7 +128,7 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       obj1[5] = _location;
       obj1[6] = onCommandExecuted;
       navigation.navigate(constants.COMMAND_VIEW, obj1);
-      const obj4 = importAll(7157);
+      const obj4 = importAll(6093);
     }
   }
 };
@@ -186,7 +187,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
             items5 = [{ type: "text", text: "" }];
           } else if (tmp2(1906).ApplicationCommandOptionType.ROLE === type) {
             if (null != found) {
-              if (typeof found.value === "string") {
+              if (typeof found.value !== "__FORMATJS_LISTFORMAT_DATA__") {
                 if (found.value in roles) {
                   const obj2 = { type: "roleMention", roleId: null };
                   obj2[1] = found.value;
@@ -203,7 +204,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
                 const items8 = [{ type: "textMention", text: "@everyone" }];
                 return items8;
               } else {
-                if (typeof found.value === "string") {
+                if (typeof found.value !== "__FORMATJS_LISTFORMAT_DATA__") {
                   if (found.value in roles) {
                     const obj3 = { type: "roleMention", roleId: null };
                     obj3[1] = found.value;
@@ -256,7 +257,7 @@ export const getAppLauncherIconSource = function getAppLauncherIconSource(applic
   if (null == application) {
     let applicationIconSource = importDefault(1855);
   } else {
-    let obj = require(8149) /* getShelfBadgeTypeIfActive */;
+    let obj = require(8019) /* getShelfBadgeTypeIfActive */;
     const obj2 = importDefault(1416);
     if (isRealApplicationResult) {
       obj = { id: null, icon: null, bot: null, botIconFirst: false };
@@ -271,7 +272,7 @@ export const getAppLauncherIconSource = function getAppLauncherIconSource(applic
 };
 export const useLogAppLauncherEmptyStateView = function useLogAppLauncherEmptyStateView(COMMAND_NOT_FOUND, query) {
   const _require = COMMAND_NOT_FOUND;
-  const entrypoint = _require(9466).useAppLauncherContext().entrypoint;
+  const entrypoint = _require(10938).useAppLauncherContext().entrypoint;
   const items = [COMMAND_NOT_FOUND, query, entrypoint];
   const effect = React.useEffect(() => {
     if (null != COMMAND_NOT_FOUND) {

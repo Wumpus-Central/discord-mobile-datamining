@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/LocalImageThumbnailNativeComponent.tsx
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "DCDLocalImageThumbnail", validAttributes: { localImageSource: true } };

@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/renderer/transformUploaderAttachments.tsx
 import { AttachmentType } from "Changeset";
 
 const result = require("getAttachmentObscurityProps").fileFinishedImporting("modules/messages/native/renderer/transformUploaderAttachments.tsx");

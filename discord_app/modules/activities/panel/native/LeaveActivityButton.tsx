@@ -1,3 +1,4 @@
+// discord_app/modules/activities/panel/native/LeaveActivityButton.tsx
 import { ActivityPanelModes } from "ActivityPanelModes";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

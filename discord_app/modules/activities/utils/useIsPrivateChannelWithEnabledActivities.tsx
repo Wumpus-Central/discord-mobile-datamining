@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/useIsPrivateChannelWithEnabledActivities.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

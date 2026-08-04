@@ -1,3 +1,4 @@
+// discord_app/modules/nuf/native/components/RedesignDiscoverabilityModal.tsx
 import getSystemLocale from "getSystemLocale";
 import { View } from "SkipHeaderButton";
 import { useContactSyncModalStore } from "ContactSyncModes";
@@ -79,7 +80,7 @@ function DiscoverabilityNameScene(onComplete) {
     name = "";
   }
   obj[2] = name;
-  obj[1] = jsx(allowPhone(11964), { onNext: callback, loading: false, initialName: null });
+  obj[1] = jsx(allowPhone(11802), { onNext: callback, loading: false, initialName: null });
   return <tmp6 onNext={callback} loading={false} initialName={null} />;
 }
 class RedesignDiscoverabilityModal {

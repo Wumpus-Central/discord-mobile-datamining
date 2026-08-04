@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/AltGatewayTracker.tsx
 let closure_1 = require("getCachedUseAltGateway")();
 const result = require("set").fileFinishedImporting("modules/gateway/AltGatewayTracker.tsx");
 class AltGatewayTracker {

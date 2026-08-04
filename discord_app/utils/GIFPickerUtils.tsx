@@ -1,15 +1,16 @@
+// discord_app/utils/GIFPickerUtils.tsx
 import { SearchTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("utils/GIFPickerUtils.tsx");
 
-export const isKlipyProvider = function isKlipyProvider(arg0) {
-  return arg0 === require(9851) /* GIF_PROVIDER */.GIF_PROVIDER_EMBED_NAME;
-};
-export const shouldUseAnimatedWebPThumbnail = function shouldUseAnimatedWebPThumbnail(arg0) {
-  return arg0 === require(9851) /* GIF_PROVIDER */.GIF_PROVIDER_EMBED_NAME;
-};
+export function isKlipyProvider(arg0) {
+  return "Klipy" === arg0;
+}
+export function shouldUseAnimatedWebPThumbnail(arg0) {
+  return "Klipy" === arg0;
+}
 export const getGIFThumbnailForFavorite = function getGIFThumbnailForFavorite(providerName) {
-  if (providerName.providerName === require(9851) /* GIF_PROVIDER */.GIF_PROVIDER_EMBED_NAME) {
+  if ("Klipy" === providerName.providerName) {
     const thumbnail = providerName.thumbnail;
     if (null != thumbnail) {
       let uri = thumbnail.proxyURL;

@@ -1,3 +1,4 @@
+// discord_app/modules/emoji_picker/native/components/EmojiPickerActionSheet.tsx
 import Background from "Background";
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";
 import { View } from "QUICK_SWITCHER";

@@ -1,3 +1,4 @@
+// discord_app/modules/auth/native/components/RegisterAgeGate.tsx
 import _slicedToArray from "_slicedToArray";
 import module_38 from "module_38";
 import { View } from "useAuthFlowBackHandler";

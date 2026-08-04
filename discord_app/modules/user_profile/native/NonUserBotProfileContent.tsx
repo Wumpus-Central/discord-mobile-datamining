@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/NonUserBotProfileContent.tsx
 import { View } from "UserProfileOverscrollBanner";
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
@@ -27,10 +28,10 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
   ({ user, channel, displayProfile } = scrollPosition);
   let trackUserProfileAction;
   let importDefault;
-  const tmp3 = importDefault(8757)();
-  let obj = trackUserProfileAction(8710);
+  const tmp3 = importDefault(8083)();
+  let obj = trackUserProfileAction(8111);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj1 = importDefault(4474);
+  let obj1 = importDefault(4383);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -40,15 +41,15 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
     id = channel.id;
   }
   const name = obj1.useName(guild_id, id, user);
-  let tmpResult = tmp(4124);
+  let tmpResult = tmp(4032);
   importDefault = tmpResult.useUserTag(user);
-  const tmp9 = importDefault(8747)(ACTION_SHEET_MAX_WIDTH);
-  const tmp8 = importDefault(8758)(displayProfile);
-  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = importDefault(8759)({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 }));
-  const tmp10 = importDefault(8759)({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
-  ({ theme, primaryColor, secondaryColor } = importDefault(8745)({ user, displayProfile }));
-  const tmp11 = importDefault(8745)({ user, displayProfile });
-  const userProfileColors = trackUserProfileAction(8754).useUserProfileColors({ theme, primaryColor, secondaryColor });
+  const tmp9 = importDefault(8377)(ACTION_SHEET_MAX_WIDTH);
+  const tmp8 = importDefault(8099)(displayProfile);
+  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = importDefault(8386)({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 }));
+  const tmp10 = importDefault(8386)({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
+  ({ theme, primaryColor, secondaryColor } = importDefault(8081)({ user, displayProfile }));
+  const tmp11 = importDefault(8081)({ user, displayProfile });
+  const userProfileColors = trackUserProfileAction(8085).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   if (null == user) {
     return null;
@@ -61,7 +62,7 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
     obj[4] = bannerImageAnimatedStyle;
     obj[5] = blurAnimatedProps;
     obj[6] = showBlur;
-    const items = [callback(tmp(8760), obj), ];
+    const items = [callback(tmp(8387), obj), ];
     obj = { style: null, children: null };
     obj[0] = contentAnimatedStyle;
     obj1 = { user: null, guildId: null, backgroundColor: null, disableStatus: true };
@@ -72,7 +73,7 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
     }
     obj1[1] = guildId;
     obj1[2] = tmp13;
-    const items1 = [callback(tmp4(8764).OpenableUserProfileAvatar, obj1), ];
+    const items1 = [callback(tmp4(8108).OpenableUserProfileAvatar, obj1), ];
     const obj2 = { style: null, children: null };
     const items2 = [, , ];
     ({ profileContentWrapper: arr2[0], profileContent: arr2[1] } = tmp3);
@@ -86,7 +87,7 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
     const obj5 = { user: null, guildId: null, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, displayNameAccessibilityHint: null, onPressDisplayName: null, onPressUserTag: null, onPressPronouns: null, showBadgeToastOnPress: true };
     obj5[0] = user;
     let guild_id1;
-    tmpResult = tmp(9387);
+    tmpResult = tmp(8389);
     if (channel != null) {
       guild_id1 = channel.guild_id;
     }
@@ -127,16 +128,16 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
     obj9[0] = containerBackground;
     items4[1] = obj9;
     obj8[3] = items4;
-    obj7[1] = callback(tmp(9448), obj8);
+    obj7[1] = callback(tmp(11970), obj8);
     items3[1] = callback(View, obj7);
     obj2[1] = items3;
     items1[1] = closure_8(View, obj2);
     obj[1] = items1;
-    items[1] = closure_8(tmp(4146).View, obj);
+    items[1] = closure_8(tmp(4054).View, obj);
     obj6[0] = items;
     return closure_8(closure_9, obj6);
   }
-  const tmp4Result = trackUserProfileAction(8754);
+  const tmp4Result = trackUserProfileAction(8085);
 });
 let result = require("ARBITRARY_LARGE_OFFSET").fileFinishedImporting("modules/user_profile/native/NonUserBotProfileContent.tsx");
 

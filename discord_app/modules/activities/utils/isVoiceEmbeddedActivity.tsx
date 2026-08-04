@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/isVoiceEmbeddedActivity.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";

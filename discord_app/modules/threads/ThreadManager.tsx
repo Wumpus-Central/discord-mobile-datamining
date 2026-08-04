@@ -1,3 +1,4 @@
+// discord_app/modules/threads/ThreadManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import "initialize";
@@ -56,8 +57,8 @@ prototype["handleMessageCreate"] = function handleMessageCreate(channelId) {
       const _Date = Date;
       const time = date.getTime();
       if (Date.now() - time < 5000) {
-        importDefault(8217).resort(channel.parent_id);
-        const obj3 = importDefault(8217);
+        importDefault(9144).resort(channel.parent_id);
+        const obj3 = importDefault(9144);
       }
     }
   }

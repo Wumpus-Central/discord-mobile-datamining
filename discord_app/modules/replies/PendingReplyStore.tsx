@@ -1,3 +1,4 @@
+// discord_app/modules/replies/PendingReplyStore.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";
@@ -41,8 +42,8 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["getPendingReply"] = function getPendingReply(id) {
   return dependencyMap[id];
 };
-prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(pendingReplyActionSource) {
-  return table[pendingReplyActionSource];
+prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(message) {
+  return table[message];
 };
 PendingReplyStore.displayName = "PendingReplyStore";
 PendingReplyStore.persistKey = "PendingReplyStore";

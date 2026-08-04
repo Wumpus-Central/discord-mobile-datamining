@@ -1,3 +1,4 @@
+// discord_app/modules/sentry/SentryExperimentFeatureFlagManager.tsx
 import getHash from "getHash";
 import initialize from "initialize";
 import handleConnectionOpen from "handleConnectionOpen";

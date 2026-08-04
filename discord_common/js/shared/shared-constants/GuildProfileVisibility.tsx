@@ -1,3 +1,4 @@
+// discord_common/js/shared/shared-constants/GuildProfileVisibility.tsx
 import set from "set";
 
 const obj = { VISIBLE: null };

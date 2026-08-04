@@ -1,3 +1,4 @@
+// discord_app/utils/PremiumTypeUtils.tsx
 import { PremiumTypeOrder } from "GuildFeatures";
 
 function isPremiumAtLeast(premiumType, TIER_2) {

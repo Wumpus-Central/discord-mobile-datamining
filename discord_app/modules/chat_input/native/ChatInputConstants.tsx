@@ -1,3 +1,4 @@
+// discord_app/modules/chat_input/native/ChatInputConstants.tsx
 let obj = { easing: require("Button").STANDARD_EASING, duration: 250 };
 obj = { easing: require("Button").STANDARD_EASING, duration: 50 };
 obj = { easing: require("Button").STANDARD_EASING, duration: 100 };

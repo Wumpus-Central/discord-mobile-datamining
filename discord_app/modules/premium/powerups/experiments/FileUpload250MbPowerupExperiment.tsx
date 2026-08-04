@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/experiments/FileUpload250MbPowerupExperiment.tsx
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Enable File Upload 250MB Powerup", config: { enabled: true, rollbackEnabled: false } }, { id: 2, label: "Rollback UI for File Upload 250MB Powerup", config: { enabled: true, rollbackEnabled: true } }];

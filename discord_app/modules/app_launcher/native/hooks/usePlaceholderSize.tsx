@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/hooks/usePlaceholderSize.tsx
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/usePlaceholderSize.tsx");

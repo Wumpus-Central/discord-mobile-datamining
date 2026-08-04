@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/components/CutoutableAvatarDecoration.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

@@ -1,3 +1,4 @@
+// discord_app/modules/channel/getFlattedChannelList.tsx
 const result = require("set").fileFinishedImporting("modules/channel/getFlattedChannelList.tsx");
 
 export default function getFlattenedChannelList(arg0, arg1) {

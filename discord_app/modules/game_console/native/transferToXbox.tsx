@@ -1,3 +1,4 @@
+// discord_app/modules/game_console/native/transferToXbox.tsx
 import set from "set";
 import "noop";
 import { Linking } from "get ActivityIndicator";
@@ -45,7 +46,7 @@ function _transferToXbox() {
               dependencyMap = 1;
               c4 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_1(10776).maybeShowPTTAlert(outer1_6.XBOX);
+              obj1[0] = outer1_1(9051).maybeShowPTTAlert(outer1_6.XBOX);
               return obj1;
             }
           } else if (1 === tmp5) {
@@ -61,7 +62,7 @@ function _transferToXbox() {
               dependencyMap = 2;
               c4 = 1;
               let obj3 = { value: null, done: false };
-              obj3[0] = callback2(10773).disconnectRemote();
+              obj3[0] = callback2(9048).disconnectRemote();
               return obj3;
             }
           } else if (2 === tmp5) {
@@ -74,7 +75,7 @@ function _transferToXbox() {
               obj4[0] = arg1;
               return obj4;
             } else {
-              let obj9 = callback2(10773);
+              let obj9 = callback2(9048);
               dependencyMap = 3;
               c4 = 1;
               const obj5 = { value: null, done: false };
@@ -94,7 +95,7 @@ function _transferToXbox() {
               callback = arg1;
               const obj7 = { nonce: null, forQRCode: false };
               obj7[0] = callback;
-              callback2 = callback(10785)(user, obj7);
+              callback2 = callback(9060)(user, obj7);
               dependencyMap = 4;
               c4 = 1;
               const obj8 = { value: null, done: false };
@@ -110,10 +111,10 @@ function _transferToXbox() {
             obj9[0] = arg1;
             return obj9;
           } else if (arg1) {
-            tmp47(10779)(user.id, constants.XBOX);
-            obj3 = callback2(10773);
+            tmp47(9054)(user.id, constants.XBOX);
+            obj3 = callback2(9048);
             obj3.waitForSession(constants.XBOX, user.id, callback);
-            obj4 = callback2(4464);
+            obj4 = callback2(4373);
             obj4.stopOwnStream(false);
             closure_5.openURL(callback2);
             c4 = 3;
@@ -128,7 +129,7 @@ function _transferToXbox() {
             };
             c4 = 3;
             const obj11 = { value: null, done: true };
-            obj11[0] = tmp47(4624).openLazy(obj10);
+            obj11[0] = tmp47(4533).openLazy(obj10);
             return obj11;
           }
         } catch (tmp39) {

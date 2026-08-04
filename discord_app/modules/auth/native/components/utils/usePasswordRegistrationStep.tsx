@@ -1,3 +1,4 @@
+// discord_app/modules/auth/native/components/utils/usePasswordRegistrationStep.tsx
 import PasswordScore from "PasswordScore";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

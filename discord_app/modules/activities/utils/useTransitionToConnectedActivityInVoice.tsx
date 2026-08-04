@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/useTransitionToConnectedActivityInVoice.tsx
 import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";

@@ -1,3 +1,4 @@
+// discord_app/modules/premium_marketing/native/hooks/useBuyNitroPerks.tsx
 import registerAsset from "registerAsset";
 import { Gradients } from "items";
 import GuildFeatures from "GuildFeatures";
@@ -19,7 +20,7 @@ let result = require("GuildFeatures").fileFinishedImporting("modules/premium_mar
 
 export default function useBuyNitroPerks(arg0) {
   let closure_0 = arg0;
-  let tmp = importDefault(6769)({ forceFetch: true }).fractionalState === constants.FP_ONLY;
+  let tmp = importDefault(5851)({ forceFetch: true }).fractionalState === constants.FP_ONLY;
   importDefault = tmp;
   let items = [arg0, tmp];
   return React.useMemo(() => {

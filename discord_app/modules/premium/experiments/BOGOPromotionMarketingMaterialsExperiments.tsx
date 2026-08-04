@@ -1,3 +1,4 @@
+// discord_app/modules/premium/experiments/BOGOPromotionMarketingMaterialsExperiments.tsx
 import ApexExperiment from "ApexExperiment";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-bogo-promotion-marketing-materials-v2", kind: "user", defaultConfig: false, variations: { 1: true } });

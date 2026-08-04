@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/layout/SearchBarActivityIcon.tsx
 import importAllResult from "noop";
 import { ActivityIndicator } from "get ActivityIndicator";
 import handleReaction from "handleReaction";

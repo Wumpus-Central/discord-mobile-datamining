@@ -1,3 +1,4 @@
+// discord_common/js/packages/media-engine/native/ui/DirectVideo.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -171,7 +172,7 @@ export default function DirectVideo(streamId, onContainerResized) {
         ref.info("attaching srcObject for " + current);
         value = store.get(current);
         if (null == value) {
-          if (typeof ref !== "function") {
+          if (typeof ref !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           const obj = Object.create(ref.prototype);

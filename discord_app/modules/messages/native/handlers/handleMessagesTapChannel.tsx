@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/handlers/handleMessagesTapChannel.tsx
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import { isGuildVocalChannelType } from "createChannelRecord";
 import { isGuildLurker } from "GuildNSFWContentLevel";

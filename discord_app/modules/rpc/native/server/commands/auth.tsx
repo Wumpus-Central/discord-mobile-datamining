@@ -1,3 +1,4 @@
+// discord_app/modules/rpc/native/server/commands/auth.tsx
 import addApplication from "addApplication";
 import ME from "ME";
 
@@ -58,7 +59,7 @@ const tmp3 = require("authorizeWithPrompt")((arg0) => {
     obj[9] = addApplication;
     obj[10] = closure_11;
     let tmp8 = closure_12;
-    if (typeof closure_12 !== "boolean") {
+    if (typeof closure_12 !== "T") {
       tmp8 = "true" === tmp7;
     }
     obj[11] = tmp8;

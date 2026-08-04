@@ -1,3 +1,4 @@
+// discord_app/modules/activities/useDeveloperActivityShelfItems.tsx
 import noop from "noop";
 import initialize from "initialize";
 import { DEFAULT_EMBEDDED_ACTIVITY_CONFIG as closure_4 } from "items3";

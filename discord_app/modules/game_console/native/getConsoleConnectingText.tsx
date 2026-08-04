@@ -1,3 +1,4 @@
+// discord_app/modules/game_console/native/getConsoleConnectingText.tsx
 import { PlatformTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/game_console/native/getConsoleConnectingText.tsx");

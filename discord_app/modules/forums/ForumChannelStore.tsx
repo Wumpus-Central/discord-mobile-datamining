@@ -1,3 +1,4 @@
+// discord_app/modules/forums/ForumChannelStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import keys from "keys";
 import set from "set";
@@ -74,7 +75,7 @@ let closure_6 = function ForumChannelStoreState(set, get) {
   return obj;
 }.prototype;
 let closure_7 = keys.create((set, get) => {
-  if (typeof closure_6 !== "function") {
+  if (typeof closure_6 !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let obj = Object.create(closure_6.prototype);

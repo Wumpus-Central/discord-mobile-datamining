@@ -1,3 +1,4 @@
+// discord_app/modules/self_mod/inappropriate_conversation/hooks/useLastChannelMessage.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 
 const require = arg1;

@@ -1,3 +1,4 @@
+// discord_app/modules/video_backgrounds/VideoFilterImageError.tsx
 import { V8APIError } from "sendRequest";
 
 let closure_2 = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };

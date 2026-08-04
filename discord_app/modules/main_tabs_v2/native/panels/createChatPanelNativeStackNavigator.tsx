@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 import Link from "Link";

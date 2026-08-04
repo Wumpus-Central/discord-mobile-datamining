@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/content_and_social/useNSFWAllowed.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

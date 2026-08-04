@@ -1,4 +1,5 @@
-import module_15311 from "module_15311";
+// discord_app/modules/guilds_bar/native/hooks/useGuildsBarProps.tsx
+import module_14992 from "module_14992";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import initialize from "initialize";
 import processChannel from "processChannel";
@@ -13,7 +14,7 @@ import insertUnsortedGuilds from "insertUnsortedGuilds";
 import { GuildsNodeType } from "insertUnsortedGuilds";
 import withEqualityFn from "withEqualityFn";
 import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE";
-import { jsx } from "GuildsBarHomeDrawerSeparator";
+import { jsx } from "module_15022";
 
 let closure_17;
 let closure_18;
@@ -465,11 +466,11 @@ export default function useGuildsBarProps(arg0) {
         const obj = { children: null };
         obj[0] = items1.map((arg0) => {
           if ("unavailable-guilds" === arg0) {
-            return callback2(callback(15344), {}, arg0);
+            return callback2(callback(15027), {}, arg0);
           } else if ("empty-nux" === arg0) {
-            return callback2(callback(15345), {}, arg0);
+            return callback2(callback(15028), {}, arg0);
           } else if ("create-join-guild" === arg0) {
-            return callback2(callback(15347), {}, arg0);
+            return callback2(callback(15030), {}, arg0);
           }
         });
         return memo1(callback(token[24]), obj);

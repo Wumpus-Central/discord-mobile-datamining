@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/SelectivelySyncedUserSettingsStore.tsx
 import { UserSettingsSections } from "ME";
 import { PersistedStore } from "initialize";
 

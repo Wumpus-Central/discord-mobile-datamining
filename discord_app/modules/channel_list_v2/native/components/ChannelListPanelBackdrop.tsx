@@ -1,3 +1,4 @@
+// discord_app/modules/channel_list_v2/native/components/ChannelListPanelBackdrop.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { DM_WIDTH } from "ME";
@@ -27,10 +28,8 @@ export default function ChannelListPanelBackdrop(children) {
   let mobileQuestDockHeight;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = style(15053);
-  const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
-  let obj1 = style(14236);
-  mobileQuestDockHeight = obj1.useMobileQuestDockHeight();
+  let obj = style(14136);
+  mobileQuestDockHeight = obj.useMobileQuestDockHeight();
   let items = [tmp, contentInset, mobileQuestDockHeight, style];
   obj = {
     style: mobileQuestDockHeight.useMemo(() => {
@@ -74,16 +73,8 @@ export default function ChannelListPanelBackdrop(children) {
     }, items),
     children: null
   };
-  if (isHomeDrawerEnabled) {
-    let ScreenAlignedThemedGradientSliding = style(tmp9).ScreenAlignedThemedGradientSliding;
-  } else {
-    ScreenAlignedThemedGradientSliding = contentInset(tmp9);
-  }
-  obj = { offsetX: DM_WIDTH, offsetY: contentInset(1581)().top };
-  const items1 = [closure_6(ScreenAlignedThemedGradientSliding, obj), , ];
-  obj1 = { pointerEvents: "none", style: tmp.panelTint };
-  items1[1] = closure_6(closure_4, obj1);
-  items1[2] = closure_6(closure_4, { style: tmp.listWrapper, children: children.children });
+  obj = { offsetX: DM_WIDTH, offsetY: contentInset(1581)().top, parentSpringTranslateX: mobileQuestDockHeight.useContext(style(14948).HomeDrawerStateContext).panelSpringTranslateX };
+  const items1 = [callback(contentInset(15228), obj), callback(closure_4, { pointerEvents: "none", style: tmp.panelTint }), callback(closure_4, { style: tmp.listWrapper, children: children.children })];
   obj[1] = items1;
-  return closure_7(closure_4, obj);
+  return callback2(closure_4, obj);
 };

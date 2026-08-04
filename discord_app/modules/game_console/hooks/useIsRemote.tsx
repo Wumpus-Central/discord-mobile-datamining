@@ -1,3 +1,4 @@
+// discord_app/modules/game_console/hooks/useIsRemote.tsx
 import set from "set";
 
 const require = arg1;

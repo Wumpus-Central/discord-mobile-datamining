@@ -1,10 +1,11 @@
+// discord_app/modules/gateway/useRequestGatewaySocket.tsx
 import noop from "noop";
 
 const result = require("setRequestedBy").fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
 
 export const useRequestGatewaySocket = function useRequestGatewaySocket(arg0) {
   const importDefault = arg0;
-  const canUIRequestGatewaySocket = importDefault(10384).useCanUIRequestGatewaySocket();
+  const canUIRequestGatewaySocket = importDefault(9488).useCanUIRequestGatewaySocket();
   const items = [arg0, canUIRequestGatewaySocket];
   const effect = React.useEffect(() => {
     if (canUIRequestGatewaySocket) {

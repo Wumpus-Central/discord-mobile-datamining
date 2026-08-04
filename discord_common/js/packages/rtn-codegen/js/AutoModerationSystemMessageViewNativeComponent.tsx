@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/AutoModerationSystemMessageViewNativeComponent.tsx
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "DCDAutoModerationSystemMessageView", validAttributes: { row: true } };

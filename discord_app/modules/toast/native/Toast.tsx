@@ -1,3 +1,4 @@
+// discord_app/modules/toast/native/Toast.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -13,7 +14,7 @@ function ToastIcon(recolorLegacyIcon) {
   let icon;
   let iconColor;
   ({ icon, IconComponent, iconColor } = recolorLegacyIcon);
-  let obj = require(3989) /* map */;
+  let obj = require(3897) /* map */;
   if (iconColor == null) {
     iconColor = "mobile-text-heading-primary";
   }
@@ -28,7 +29,7 @@ function ToastIcon(recolorLegacyIcon) {
     const obj1 = { size: "sm", color: null };
     obj1[1] = token;
     let tmp8 = callback2(IconComponent, obj1);
-  } else if (typeof icon === "function") {
+  } else if (typeof icon === "fileFinishedImporting") {
     const obj2 = { children: null };
     obj2[0] = icon();
     tmp8 = callback2(closure_6, obj2);
@@ -46,7 +47,7 @@ function ToastIcon(recolorLegacyIcon) {
 function ToastContent(content) {
   content = content.content;
   const tmp = createCacheKey();
-  if (typeof content === "function") {
+  if (typeof content === "fileFinishedImporting") {
     let obj = { style: null, children: null };
     obj[0] = tmp.contentContainer;
     obj[1] = content();
@@ -56,7 +57,7 @@ function ToastContent(content) {
     obj[0] = content.onTextLayout;
     obj[1] = tmp.contentContainer;
     obj[5] = content;
-    tmp4 = callback2(require(4281) /* Text */.Text, obj);
+    tmp4 = callback2(require(4189) /* Text */.Text, obj);
   }
   return tmp4;
 }

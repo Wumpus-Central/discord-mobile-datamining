@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding/getDefaultProviderDescription.tsx
 import { PlatformTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/getDefaultProviderDescription.tsx");

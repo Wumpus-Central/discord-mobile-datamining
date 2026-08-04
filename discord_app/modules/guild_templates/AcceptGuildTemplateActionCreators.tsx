@@ -1,3 +1,4 @@
+// discord_app/modules/guild_templates/AcceptGuildTemplateActionCreators.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Endpoints } from "ME";
@@ -35,9 +36,9 @@ export default {
             }
           });
         } else {
-          callback(5866).transitionToGuild(body.id);
+          callback(6693).transitionToGuild(body.id);
           body(body);
-          const obj3 = callback(5866);
+          const obj3 = callback(6693);
         }
       }, (body) => {
         let obj = callback2(709);

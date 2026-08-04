@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/utils/entitlementExpirationDateToString.tsx
 import _getSystemLocale from "_getSystemLocale";
 
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/entitlementExpirationDateToString.tsx");

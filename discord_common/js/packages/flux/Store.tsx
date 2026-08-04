@@ -1,3 +1,4 @@
+// discord_common/js/packages/flux/Store.tsx
 let closure_4 = [];
 let c5 = false;
 const promise = new Promise((arg0) => {
@@ -72,7 +73,7 @@ Store["initialize"] = function initialize() {
   let c5 = true;
   const item = arr.forEach((initializeIfNeeded) => initializeIfNeeded.initializeIfNeeded());
   if (null != closure_3) {
-    if (typeof closure_3 !== "function") {
+    if (typeof closure_3 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     require();

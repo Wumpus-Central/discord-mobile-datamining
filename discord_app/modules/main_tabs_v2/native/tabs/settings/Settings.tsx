@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/tabs/settings/Settings.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

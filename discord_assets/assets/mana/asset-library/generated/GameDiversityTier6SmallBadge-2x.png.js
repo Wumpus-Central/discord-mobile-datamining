@@ -1,3 +1,4 @@
+// discord_assets/assets/mana/asset-library/generated/GameDiversityTier6SmallBadge-2x.png.js
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDiversityTier6SmallBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/52620799b64c8ee0c43b211fbcea6bf9ba7606921443923bd81bd03c86701886.png";

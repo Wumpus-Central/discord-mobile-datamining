@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/native/AssetChooser.tsx
 import closure_3 from "createCacheKey";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { UPLOAD_MEDIUM_SIZE } from "ME";
@@ -61,7 +62,7 @@ class AssetChooser extends PureComponent {
               obj2 = undefined;
               base64 = undefined;
               ({ size, onChooseAsset: obj2 } = outer1_0.props);
-              if (typeof size === "number") {
+              if (typeof size === "Object") {
                 const obj1 = { size: null };
                 obj1[0] = size;
                 let tmp15 = obj1;
@@ -136,7 +137,7 @@ prototype["render"] = function render() {
   obj[4] = disabled;
   let tmp9 = source;
   if (null == source) {
-    tmp9 = importDefault(16487);
+    tmp9 = importDefault(16389);
   }
   obj = { source: tmp9, style: tmp.asset, children: null };
   let tmp5Result = null;
@@ -145,13 +146,13 @@ prototype["render"] = function render() {
     obj[0] = tmp.uploadIconWrapper;
     const obj1 = { style: null, source: null };
     obj1[0] = tmp.uploadIcon;
-    obj1[1] = importDefault(16488);
+    obj1[1] = importDefault(16390);
     obj[1] = tmp5(closure_5, obj1);
     tmp5Result = tmp5(closure_4, obj);
   }
   obj[2] = tmp5Result;
   obj[5] = closure_9(closure_6, obj);
-  const children = [closure_9(require(4812) /* PressableBase */.PressableOpacity, obj), ];
+  const children = [closure_9(require(4721) /* PressableBase */.PressableOpacity, obj), ];
   tmp5Result = null;
   if (null != source) {
     tmp5Result = null;

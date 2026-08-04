@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/UserProfileGameWidgetConstants.native.tsx
 import WidgetGameTagIconRole from "WidgetGameTagIconRole";
 
 const obj = {};

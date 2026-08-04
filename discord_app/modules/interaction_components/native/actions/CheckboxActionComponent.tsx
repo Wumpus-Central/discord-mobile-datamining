@@ -1,3 +1,4 @@
+// discord_app/modules/interaction_components/native/actions/CheckboxActionComponent.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

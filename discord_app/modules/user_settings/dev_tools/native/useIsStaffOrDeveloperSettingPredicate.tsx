@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx
 import init from "init";
 
 const require = arg1;

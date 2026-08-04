@@ -1,3 +1,4 @@
+// discord_app/modules/content_inventory/ContentInventoryActionCreators.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_5 from "handleConnectionOpen";
@@ -32,7 +33,7 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
       }
       showUserProfileResult[1] = id;
       showUserProfileResult[2] = message.id;
-      let items = importDefault(5630);
+      let items = importDefault(5539);
       if (tmp2) {
         items = [];
         items[0] = items.AVATAR;
@@ -41,8 +42,8 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
         items1 = [items.USERNAME];
       }
       showUserProfileResult[3] = items1;
-      showUserProfileResult = importAll(11257).showUserProfile(showUserProfileResult);
-      const obj2 = importAll(11257);
+      showUserProfileResult = importAll(11145).showUserProfile(showUserProfileResult);
+      const obj2 = importAll(11145);
     }
   }
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/application_account_linking/native/AccountLinkManagerNative.tsx
 import { AccountLinkManager } from "_claimIncentivizedAccountLinkingReward";
 
 class AccountLinkManagerNative extends AccountLinkManager {

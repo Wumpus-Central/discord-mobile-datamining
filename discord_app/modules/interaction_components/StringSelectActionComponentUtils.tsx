@@ -1,3 +1,4 @@
+// discord_app/modules/interaction_components/StringSelectActionComponentUtils.tsx
 import getInteractionComponentStates from "getInteractionComponentStates";
 
 const require = arg1;

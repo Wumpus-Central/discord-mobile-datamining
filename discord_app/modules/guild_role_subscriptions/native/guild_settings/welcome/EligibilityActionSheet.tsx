@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx
 import noop from "noop";
 import { UserSettingsSections } from "ME";
 import jsxProd from "jsxProd";
@@ -18,12 +19,12 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   const memo = React.useMemo(() => {
     const actions = {
       onEnableMFAClick() {
-        let obj = callback2(4253);
+        let obj = callback2(4161);
         obj.hideActionSheet(closure_7);
-        callback2(8943).close();
-        const obj2 = callback2(8943);
+        callback2(8308).close();
+        const obj2 = callback2(8308);
         obj = { screen: constants.ACCOUNT };
-        callback(5925).openUserSettings(obj);
+        callback(6614).openUserSettings(obj);
       },
       onRequireModeratorMFAClick() {
         outer1_1(outer1_2[4]).hideActionSheet(outer1_7);
@@ -36,10 +37,10 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   obj = { style: tmp.title, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = onRequireModeratorMFAClick(1236).intl;
   obj[3] = intl.string(onRequireModeratorMFAClick(1236).t["3s47iN"]);
-  const items1 = [callback(onRequireModeratorMFAClick(4281).Heading, obj), ];
-  obj = { style: tmp.container, items: importDefault(16647)(onRequireModeratorMFAClick.eligibility, memo) };
-  items1[1] = callback(importDefault(16651), obj);
+  const items1 = [callback(onRequireModeratorMFAClick(4189).Heading, obj), ];
+  obj = { style: tmp.container, items: importDefault(16550)(onRequireModeratorMFAClick.eligibility, memo) };
+  items1[1] = callback(importDefault(16554), obj);
   obj[1] = items1;
-  return callback2(onRequireModeratorMFAClick(5338).BottomSheet, obj);
+  return callback2(onRequireModeratorMFAClick(5247).BottomSheet, obj);
 };
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

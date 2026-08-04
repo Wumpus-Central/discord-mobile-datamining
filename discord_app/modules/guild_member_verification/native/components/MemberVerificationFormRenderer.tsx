@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/components/MemberVerificationFormRenderer.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

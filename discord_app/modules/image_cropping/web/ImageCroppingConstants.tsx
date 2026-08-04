@@ -1,3 +1,4 @@
+// discord_app/modules/image_cropping/web/ImageCroppingConstants.tsx
 import { BACKGROUND_REPLACEMENT_SIZE } from "VideoFilterType";
 
 const result = BACKGROUND_REPLACEMENT_SIZE.width / BACKGROUND_REPLACEMENT_SIZE.height;

@@ -1,3 +1,4 @@
+// discord_app/modules/instant_invite/native/action_sheet/invite_to_guilds/GuildInviteRow.tsx
 import { View } from "get ActivityIndicator";
 import { useGuildInviteSendStates } from "setSendState";
 import { InviteSendStates } from "InviteSendStates";

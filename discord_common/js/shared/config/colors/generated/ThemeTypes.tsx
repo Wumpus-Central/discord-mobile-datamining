@@ -1,3 +1,4 @@
+// discord_common/js/shared/config/colors/generated/ThemeTypes.tsx
 const obj = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" };
 const items = [, ];
 ({ MIDNIGHT: arr[0], DARK: arr[1] } = obj);

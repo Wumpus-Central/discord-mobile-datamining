@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/notes/NoteStore.tsx
 import isValueEqual from "isValueEqual";
 import { LibdiscoreStore } from "identity";
 import { LibdiscoreBatchStoreRefactorExperiment } from "items";

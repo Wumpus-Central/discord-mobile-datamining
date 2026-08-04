@@ -1,3 +1,4 @@
+// discord_app/design/void/BetaTag/native/BetaTag.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { Gradients } from "items";
@@ -45,9 +46,9 @@ export default function BetaTag(gradient) {
     obj[2] = items1;
     const intl2 = require(1236) /* getSystemLocale */.intl;
     obj[3] = intl2.string(require(1236) /* getSystemLocale */.t.oW0eUd);
-    obj[4] = tmp3(require(4281) /* Text */.Text, obj);
-    let tmp3Result = tmp3(importDefault(4706), obj);
-    const tmp10 = importDefault(4706);
+    obj[4] = tmp3(require(4189) /* Text */.Text, obj);
+    let tmp3Result = tmp3(importDefault(4615), obj);
+    const tmp10 = importDefault(4615);
   } else {
     obj = { style: null, children: null };
     const items2 = [tmp2.container, style];
@@ -58,7 +59,7 @@ export default function BetaTag(gradient) {
     obj1[2] = items3;
     const intl = require(1236) /* getSystemLocale */.intl;
     obj1[3] = intl.string(require(1236) /* getSystemLocale */.t.oW0eUd);
-    obj[1] = tmp3(require(4281) /* Text */.Text, obj1);
+    obj[1] = tmp3(require(4189) /* Text */.Text, obj1);
     tmp3Result = tmp3(View, obj);
   }
   return tmp3Result;

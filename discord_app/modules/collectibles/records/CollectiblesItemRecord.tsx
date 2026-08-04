@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/records/CollectiblesItemRecord.tsx
 import fromServer from "fromServer";
 import closure_3 from "fromServer";
 import closure_4 from "fromServer";

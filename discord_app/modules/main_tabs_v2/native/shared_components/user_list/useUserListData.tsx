@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/shared_components/user_list/useUserListData.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import closure_5 from "set";
@@ -11,33 +12,33 @@ import { RelationshipTypes } from "ME";
 import set from "noop";
 
 const require = arg1;
-function _toPropertyKey(obj) {
-  let StringResult = obj;
-  if (typeof obj === "object") {
-    StringResult = obj;
-    if (obj) {
+function _toPropertyKey(arg0) {
+  let StringResult = arg0;
+  if (typeof arg0 !== "window") {
+    StringResult = arg0;
+    if (arg0) {
       const _Symbol = Symbol;
-      if (undefined !== obj[Symbol.toPrimitive]) {
+      if (undefined !== arg0[Symbol.toPrimitive]) {
         const call = tmp3.call;
         if (typeof call === "unknown") {
           let callResult = tmp3("string");
         } else {
-          callResult = call(obj, "string");
+          callResult = call(arg0, "string");
         }
         StringResult = callResult;
-        if (typeof callResult === "object") {
+        if (typeof callResult !== "window") {
           const _TypeError = TypeError;
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
       } else {
         const _String = String;
-        StringResult = String(obj);
+        StringResult = String(arg0);
       }
     }
   }
   let text = StringResult;
-  if (typeof StringResult !== "symbol") {
+  if (typeof StringResult !== "e") {
     text = `${tmp}`;
   }
   return text;
@@ -437,7 +438,7 @@ prototype["subscribe"] = function subscribe(onUpdate) {
   self.onUpdate = onUpdate;
   let userSearchContext = null;
   if (flag) {
-    userSearchContext = importDefault(7234).getUserSearchContext((results) => {
+    userSearchContext = importDefault(6170).getUserSearchContext((results) => {
       results = results.results;
       let items;
       if (items.currentQuery === results.query) {
@@ -470,7 +471,7 @@ prototype["subscribe"] = function subscribe(onUpdate) {
         }
       }
     }, 20);
-    const obj = importDefault(7234);
+    const obj = importDefault(6170);
   }
   self.userSearchContext = userSearchContext;
   const subscription = importDefault(709).subscribe("POST_CONNECTION_OPEN", self.handlePostConnectionOpen);
@@ -532,7 +533,7 @@ prototype["unsubscribe"] = function unsubscribe() {
 };
 prototype["fetch"] = function fetch(toLocaleLowerCase) {
   const self = this;
-  let obj = require(7042) /* cleanString */;
+  let obj = require(5951) /* cleanString */;
   const cleanStringResult = obj.cleanString(toLocaleLowerCase);
   if ("" === cleanStringResult) {
     const userSearchContext2 = self.userSearchContext;
@@ -541,8 +542,8 @@ prototype["fetch"] = function fetch(toLocaleLowerCase) {
     }
   } else {
     if (arg1) {
-      const members = importDefault(5199).requestMembers(null, cleanStringResult);
-      const obj2 = importDefault(5199);
+      const members = importDefault(5108).requestMembers(null, cleanStringResult);
+      const obj2 = importDefault(5108);
     }
     const userSearchContext = self.userSearchContext;
     if (userSearchContext != null) {
@@ -557,7 +558,7 @@ prototype["filter"] = function filter(toLocaleLowerCase) {
   let self = this;
   self = this;
   let _require = toLocaleLowerCase;
-  let obj = _require(7042);
+  let obj = _require(5951);
   const cleanStringResult = obj.cleanString(toLocaleLowerCase);
   _require = cleanStringResult;
   if (this.currentQuery === cleanStringResult) {
@@ -638,7 +639,7 @@ prototype["initializeUsersFromStores"] = function initializeUsersFromStores() {
 };
 prototype["initializeUsersFromCache"] = function initializeUsersFromCache() {
   const self = this;
-  const all = importDefault(7038).getAll();
+  const all = importDefault(5947).getAll();
   return all.then((arg0) => {
     while (tmp !== undefined) {
       let tmp3 = self;
@@ -648,7 +649,7 @@ prototype["initializeUsersFromCache"] = function initializeUsersFromCache() {
   });
 };
 prototype["updateUser"] = function updateUser(id) {
-  if (importDefault(7038).shouldUseCache) {
+  if (importDefault(5947).shouldUseCache) {
     return false;
   } else {
     const self = this;
@@ -657,7 +658,7 @@ prototype["updateUser"] = function updateUser(id) {
         const indexMap = self.indexMap;
         return indexMap.delete(id);
       }
-      obj = require(7042) /* cleanString */;
+      obj = require(5951) /* cleanString */;
     }
     const value = self.getItem(id);
     if (null == value) {
@@ -678,7 +679,7 @@ prototype["getItem"] = function getItem(closure_0) {
     return null;
   } else {
     const self = this;
-    names = require(7042) /* cleanString */.getNames(user);
+    names = require(5951) /* cleanString */.getNames(user);
     ({ nick, names } = names);
     let obj = { user: null, names: null, affinity: null, firstMatch: null };
     obj[0] = user;
@@ -692,9 +693,9 @@ prototype["getItem"] = function getItem(closure_0) {
       nick = isMatch(names, self.currentQuery, { contains: true });
     }
     obj[3] = nick;
-    const obj4 = require(7042) /* cleanString */;
+    const obj4 = require(5951) /* cleanString */;
     const tmp12 = require;
-    const relationshipType = require(7042) /* cleanString */.getRelationshipType(user.id);
+    const relationshipType = require(5951) /* cleanString */.getRelationshipType(user.id);
     if (relationshipType !== RelationshipTypes.FRIEND) {
       const gameFriendsForUser = authStore.getGameFriendsForUser(closure_0);
       if (gameFriendsForUser.length > 0) {

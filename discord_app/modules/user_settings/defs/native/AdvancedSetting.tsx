@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AdvancedSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.ADVANCED,
   getComponent() {
-    return require(14610).default;
+    return require(14510).default;
   }
 };
 const route = createToggle.createRoute(obj);

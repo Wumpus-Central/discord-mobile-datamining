@@ -1,3 +1,4 @@
+// discord_app/modules/calls/useHideSelfVideo.tsx
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { VideoToggleState } from "ME";

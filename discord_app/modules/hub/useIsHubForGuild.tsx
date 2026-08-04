@@ -1,3 +1,4 @@
+// discord_app/modules/hub/useIsHubForGuild.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 

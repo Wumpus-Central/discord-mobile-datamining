@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/components/LoadingIndicator.tsx
 import "noop";
 import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

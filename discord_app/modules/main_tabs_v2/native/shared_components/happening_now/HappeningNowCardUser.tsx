@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx
 import importAllResult from "noop";
 import { View } from "_isStreaming";
 import sortActivity from "sortActivity";

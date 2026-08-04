@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/components/ChatBeginningRowJoinApplication.tsx
 import "noop";
 import { View } from "set";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

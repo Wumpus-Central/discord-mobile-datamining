@@ -1,3 +1,4 @@
+// discord_app/utils/BrowserUtils.tsx
 import { name as str } from "format";
 
 if (str == null) {

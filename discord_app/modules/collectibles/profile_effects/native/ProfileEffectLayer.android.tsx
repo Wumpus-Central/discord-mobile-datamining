@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx
 import importAllResult from "noop";
 import { StyleSheet } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/distributorStoreUrls.tsx
 const discord7937464 = "discord7937464";
 let c1 = "www.xbox.com";
 const msxbox = "msxbox";

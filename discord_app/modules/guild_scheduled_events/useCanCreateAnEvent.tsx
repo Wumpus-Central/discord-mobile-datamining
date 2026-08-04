@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/useCanCreateAnEvent.tsx
 import _slicedToArray from "_slicedToArray";
 import comparator from "comparator";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";

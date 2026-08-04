@@ -1,3 +1,4 @@
+// discord_app/modules/links/safeTransitionTo.native.tsx
 import transitionTo from "transitionTo";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Routes } from "ME";

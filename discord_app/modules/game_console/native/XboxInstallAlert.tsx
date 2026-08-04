@@ -1,3 +1,4 @@
+// discord_app/modules/game_console/native/XboxInstallAlert.tsx
 import "noop";
 import XBOX_URL_BASE from "XBOX_URL_BASE";
 import { jsx } from "jsxProd";
@@ -35,12 +36,12 @@ export default function XboxInstallAlert(arg0) {
   obj.onConfirm = function onConfirm() {
     const obj = lib(500);
     const isAndroidResult = lib(500).isAndroid();
-    const openURL = callback(3982).openURL;
+    const openURL = callback(3890).openURL;
     if (isAndroidResult) {
       openURL(closure_3);
     } else {
       openURL(closure_4);
     }
   };
-  return jsx(importDefault(4713), {});
+  return jsx(importDefault(4622), {});
 };

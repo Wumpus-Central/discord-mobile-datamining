@@ -1,3 +1,4 @@
+// discord_app/modules/hub/native/components/progress_bar/HubProgressHeader.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import items from "items";

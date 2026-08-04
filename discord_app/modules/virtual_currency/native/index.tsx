@@ -1,3 +1,4 @@
+// discord_app/modules/virtual_currency/native/index.tsx
 const result = require("BalanceWidgetPillButton").fileFinishedImporting("modules/virtual_currency/native/index.tsx");
 
 export const BalanceWidgetPill = require("BalanceWidgetPill").BalanceWidgetPill;

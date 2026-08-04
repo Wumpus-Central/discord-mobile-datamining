@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/ChatSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.TEXT,
   getComponent() {
-    return require(14538) /* VideoUploadQualityNitroUpsell */.default;
+    return require(14438) /* VideoUploadQualityNitroUpsell */.default;
   }
 };
 const route = createToggle.createRoute(obj);

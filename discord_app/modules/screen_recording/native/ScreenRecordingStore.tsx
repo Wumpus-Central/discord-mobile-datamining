@@ -1,3 +1,4 @@
+// discord_app/modules/screen_recording/native/ScreenRecordingStore.tsx
 import keys from "keys";
 
 let obj = keys.create((arg0, arg1) => {
@@ -58,7 +59,7 @@ let obj = keys.create((arg0, arg1) => {
       return callback({ currentStep: 0, stepStartedTime: Date.now(), isCompleted: false });
     },
     completeActionSheet() {
-      callback(14964).handleStopAndSend();
+      callback(14864).handleStopAndSend();
       callback({ currentStep: 0, stepStartedTime: null, isCompleted: false });
     }
   };

@@ -1,3 +1,4 @@
+// discord_app/modules/polls/native/useRenderPollAnswerImage.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { ActivityIndicator } from "get ActivityIndicator";
@@ -27,7 +28,7 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
       status = mediaAttachmentState.status;
     }
   }
-  const tmp7 = status === _require(11503).PollMediaUploadAttachmentStatus.PREPARING;
+  const tmp7 = status === _require(11394).PollMediaUploadAttachmentStatus.PREPARING;
   map = tmp7;
   obj = {
     renderImage: React.useMemo(() => {

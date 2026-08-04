@@ -1,3 +1,4 @@
+// discord_app/modules/experiments/trigger_points/validateTriggerPoint.tsx
 import "getHash";
 
 const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/validateTriggerPoint.tsx");

@@ -1,3 +1,4 @@
+// discord_app/modules/wishlists/WishlistActionCreators.tsx
 import fromServer from "fromServer";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -39,9 +40,9 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     obj[1] = found.map((id) => id.id);
     obj[1] = obj;
     const tmp3Result = importDefault(709);
-    obj[2] = require(5761) /* useSKUPrice */.transformStorefrontPricesServer(storefront_pricing);
+    obj[2] = require(5670) /* useSKUPrice */.transformStorefrontPricesServer(storefront_pricing);
     tmp3Result.dispatch(obj);
-    const tmpResult = require(5761) /* useSKUPrice */;
+    const tmpResult = require(5670) /* useSKUPrice */;
   }
 }
 ({ AnalyticEvents: c10, Endpoints: unpackModuleId, PaymentGateways: closure_12 } = ME);
@@ -53,62 +54,112 @@ export default {
     let closure_1 = stateFromStores;
     let closure_2 = USER_PROFILE;
     return callback(function*() {
-      let closure_2 = tmp3;
-      let obj1 = { type: "WISHLIST_FETCH_START", wishlistId: null };
-      obj1[1] = outer1_0;
-      outer1_1(outer1_2[9]).dispatch(obj1);
-      let c4 = 1;
-      const HTTP = outer1_0(outer1_2[11]).HTTP;
-      const obj2 = { url: null, query: null, rejectWithError: true };
-      obj2[0] = outer1_11.USER_WISHLIST(outer1_0);
-      let USER_PROFILE = outer1_2;
-      if (outer1_2 == null) {
-        USER_PROFILE = outer1_0(outer1_2[12]).WishlistFetchSource.USER_PROFILE;
-      }
-      const obj3 = { source: null };
-      obj3[0] = USER_PROFILE;
-      const merged = Object.assign(outer1_13());
-      obj2[1] = obj3;
-      yield HTTP.get(obj2);
-      if (1 === tmp7) {
-        c4 = 0;
-        const outer1_3 = fromServer;
-        const obj4 = outer1_1(outer1_2[9]);
-        const obj5 = { type: "WISHLIST_FETCH_FAILURE", wishlistId: null, error: null };
-        obj5[1] = USER_PROFILE;
-        const aPIError = new outer1_0(outer1_2[14]).APIError(outer1_3);
-        obj5[2] = aPIError;
-        obj4.dispatch(obj5);
-        let obj6 = outer1_1(outer1_2[13]);
-        obj6.captureException(outer1_3);
-        let c6 = 3;
-      } else if (arg0 === 1) {
+      if (c6 === 2) {
         c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        USER_PROFILE = arg1;
-        let body = USER_PROFILE.body;
-        let wishlist_items;
-        if (body != null) {
-          wishlist_items = body.wishlist_items;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
         }
-        if (null == wishlist_items) {
-          const obj = outer1_1(outer1_2[13]);
-          obj.captureMessage("Wishlist items not found in response");
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_2 = tmp3;
+              let body = tmp7;
+              let USER_PROFILE;
+              body = undefined;
+              closure_2 = undefined;
+              let obj1 = { type: "WISHLIST_FETCH_START", wishlistId: null };
+              obj1[1] = outer1_0;
+              outer1_1(outer1_2[9]).dispatch(obj1);
+              let c4 = 1;
+              const HTTP = outer1_0(outer1_2[11]).HTTP;
+              const obj2 = { url: null, query: null, rejectWithError: true };
+              obj2[0] = outer1_11.USER_WISHLIST(outer1_0);
+              USER_PROFILE = outer1_2;
+              if (outer1_2 == null) {
+                USER_PROFILE = outer1_0(outer1_2[12]).WishlistFetchSource.USER_PROFILE;
+              }
+              const obj3 = { source: null };
+              obj3[0] = USER_PROFILE;
+              const merged = Object.assign(outer1_13());
+              obj2[1] = obj3;
+              c5 = 2;
+              c6 = 1;
+              let obj4 = { value: null, done: false };
+              obj4[0] = HTTP.get(obj2);
+              return obj4;
+            }
+          } else {
+            if (1 === tmp7) {
+              c4 = 0;
+              const outer1_3 = fromServer;
+              obj4 = outer1_1(outer1_2[9]);
+              const obj5 = { type: "WISHLIST_FETCH_FAILURE", wishlistId: null, error: null };
+              obj5[1] = USER_PROFILE;
+              const aPIError = new outer1_0(outer1_2[14]).APIError(outer1_3);
+              obj5[2] = aPIError;
+              obj4.dispatch(obj5);
+              let obj6 = outer1_1(outer1_2[13]);
+              obj6.captureException(outer1_3);
+              c6 = 3;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              USER_PROFILE = arg1;
+              body = USER_PROFILE.body;
+              let wishlist_items;
+              if (body != null) {
+                wishlist_items = body.wishlist_items;
+              }
+              if (null == wishlist_items) {
+                obj = outer1_1(outer1_2[13]);
+                obj.captureMessage("Wishlist items not found in response");
+              }
+              body = USER_PROFILE.body;
+              outer1_14(body);
+              closure_2 = outer1_8.fromServer(body);
+              obj1 = outer1_1(outer1_2[9]);
+              obj6 = { type: "WISHLIST_FETCH_SUCCESS", wishlistId: null, wishlistData: null, updatedAt: null };
+              obj6[1] = USER_PROFILE;
+              obj6[2] = closure_2;
+              obj6[3] = body;
+              obj1.dispatch(obj6);
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            const obj7 = { value: null, done: true };
+            obj7[0] = arg1;
+            return obj7;
+          }
+        } catch (tmp52) {
+          fromServer = tmp52;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp52;
+          } else {
+            c5 = tmp;
+          }
         }
-        body = USER_PROFILE.body;
-        outer1_14(body);
-        closure_2 = outer1_8.fromServer(body);
-        obj1 = outer1_1(outer1_2[9]);
-        obj6 = { type: "WISHLIST_FETCH_SUCCESS", wishlistId: null, wishlistData: null, updatedAt: null };
-        obj6[1] = USER_PROFILE;
-        obj6[2] = closure_2;
-        obj6[3] = body;
-        obj1.dispatch(obj6);
-        c4 = 0;
       }
-      c4 = 0;
-      return arg1;
     })();
   },
   addSkuToWishlist(id, outer1_2) {
@@ -504,71 +555,123 @@ export default {
     let closure_1 = arg1;
     ({ previousSkuId: dependencyMap, nextSkuId: fromServer, newWishlistData: createUserWidgetFromServer, analyticsLocations: mergeGuildAvatar } = arg2);
     return callback(function*() {
-      let closure_1 = tmp3;
-      const obj1 = { type: "WISHLIST_REORDER_START", wishlistId: null, skuId: null, previousSkuId: null, nextSkuId: null, newWishlistData: null };
-      obj1[1] = outer1_0;
-      obj1[2] = outer1_1;
-      obj1[3] = outer1_2;
-      obj1[4] = c3;
-      obj1[5] = c4;
-      outer1_1(outer1_2[9]).dispatch(obj1);
-      c3 = 1;
-      const HTTP = outer1_0(outer1_2[11]).HTTP;
-      const obj2 = { url: null, body: null, rejectWithError: true };
-      obj2[0] = outer1_11.USER_WISHLIST_ITEM(outer1_0, outer1_1);
-      let obj3 = { previous_sku_id: null, next_sku_id: null };
-      obj3[0] = outer1_2;
-      obj3[1] = c3;
-      const merged = Object.assign(outer1_13());
-      obj2[1] = obj3;
-      yield HTTP.patch(obj2);
-      if (1 === tmp7) {
-        c3 = 0;
-        c3 = closure_2;
-        obj3 = outer1_1(outer1_2[9]);
-        let obj5 = { type: "WISHLIST_REORDER_FAILURE", wishlistId: null, skuId: null, error: null };
-        obj5[1] = body;
-        obj5[2] = closure_1;
-        const aPIError = new outer1_0(outer1_2[14]).APIError(c3);
-        obj5[3] = aPIError;
-        obj3.dispatch(obj5);
-        obj5 = outer1_1(outer1_2[13]);
-        obj5.captureException(c3);
-        let c5 = 3;
-      } else {
-        if (2 === tmp7) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            body = arg1.body;
-            outer1_14(body);
-            closure_1 = outer1_8.fromServer(body);
-            const obj6 = { type: "WISHLIST_REORDER_SUCCESS", wishlistId: null, wishlistData: null };
-            obj6[1] = body;
-            obj6[2] = closure_1;
-            outer1_1(outer1_2[9]).dispatch(obj6);
-            if (null != c5) {
-              c3 = 2;
-              closure_2 = outer1_9(closure_1);
-              const obj = outer1_1(outer1_2[15]);
-              const obj7 = { wishlist_id: null, action_type: "REORDER", sku_id: null, sku_ids: null, location_stack: null };
-              obj7[0] = body;
-              obj7[2] = closure_1;
-              obj7[3] = closure_2;
-              obj7[4] = c5;
-              obj.track(outer1_10.WISHLIST_UPDATED, obj7);
-              c3 = 1;
-            }
-            const obj10 = outer1_1(outer1_2[9]);
-          }
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          c3 = 1;
+          return { value: "HermesInternal", done: null };
         }
-        c3 = 0;
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_1 = tmp3;
+              let body = tmp7;
+              body = undefined;
+              closure_1 = undefined;
+              let closure_2;
+              const obj1 = { type: "WISHLIST_REORDER_START", wishlistId: null, skuId: null, previousSkuId: null, nextSkuId: null, newWishlistData: null };
+              obj1[1] = outer1_0;
+              obj1[2] = outer1_1;
+              obj1[3] = outer1_2;
+              obj1[4] = c3;
+              obj1[5] = c4;
+              outer1_1(outer1_2[9]).dispatch(obj1);
+              c3 = 1;
+              const HTTP = outer1_0(outer1_2[11]).HTTP;
+              const obj2 = { url: null, body: null, rejectWithError: true };
+              obj2[0] = outer1_11.USER_WISHLIST_ITEM(outer1_0, outer1_1);
+              let obj3 = { previous_sku_id: null, next_sku_id: null };
+              obj3[0] = outer1_2;
+              obj3[1] = c3;
+              const merged = Object.assign(outer1_13());
+              obj2[1] = obj3;
+              c4 = 2;
+              c5 = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = HTTP.patch(obj2);
+              return obj4;
+            }
+          } else {
+            if (1 === tmp7) {
+              c3 = 0;
+              c3 = closure_2;
+              obj3 = outer1_1(outer1_2[9]);
+              let obj5 = { type: "WISHLIST_REORDER_FAILURE", wishlistId: null, skuId: null, error: null };
+              obj5[1] = body;
+              obj5[2] = closure_1;
+              const aPIError = new outer1_0(outer1_2[14]).APIError(c3);
+              obj5[3] = aPIError;
+              obj3.dispatch(obj5);
+              obj5 = outer1_1(outer1_2[13]);
+              obj5.captureException(c3);
+              c5 = 3;
+            } else {
+              if (2 === tmp7) {
+                if (arg0 === 1) {
+                  c5 = 3;
+                  throw arg1;
+                } else if (arg0 !== 2) {
+                  body = arg1.body;
+                  outer1_14(body);
+                  closure_1 = outer1_8.fromServer(body);
+                  const obj6 = { type: "WISHLIST_REORDER_SUCCESS", wishlistId: null, wishlistData: null };
+                  obj6[1] = body;
+                  obj6[2] = closure_1;
+                  outer1_1(outer1_2[9]).dispatch(obj6);
+                  if (null != c5) {
+                    c3 = 2;
+                    closure_2 = outer1_9(closure_1);
+                    obj = outer1_1(outer1_2[15]);
+                    const obj7 = { wishlist_id: null, action_type: "REORDER", sku_id: null, sku_ids: null, location_stack: null };
+                    obj7[0] = body;
+                    obj7[2] = closure_1;
+                    obj7[3] = closure_2;
+                    obj7[4] = c5;
+                    obj.track(outer1_10.WISHLIST_UPDATED, obj7);
+                    c3 = 1;
+                  }
+                  const obj10 = outer1_1(outer1_2[9]);
+                }
+              } else {
+                c3 = 1;
+              }
+              c3 = 0;
+            }
+            c3 = 0;
+            c5 = 3;
+            const obj8 = { value: null, done: true };
+            obj8[0] = arg1;
+            return obj8;
+          }
+        } catch (tmp41) {
+          closure_2 = tmp41;
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp41;
+          } else if (tmp === tmp43) {
+            c4 = tmp;
+          } else {
+            c4 = tmp2;
+          }
+        }
       }
-      c3 = 0;
-      return arg1;
     })();
   },
   fetchWishlistRecommendations(arg0, arg1, stateFromStores1) {
@@ -583,66 +686,115 @@ export default {
       flag = true;
     }
     return flag(function*() {
-      let closure_1 = tmp3;
-      let obj1 = { type: "WISHLIST_RECOMMENDATIONS_FETCH_START", userIds: null, applicationIds: null };
-      obj1[1] = outer1_1;
-      obj1[2] = outer1_0;
-      outer1_1(outer1_2[9]).dispatch(obj1);
-      let c3 = 1;
-      const HTTP = outer1_0(outer1_2[11]).HTTP;
-      let obj2 = { url: null, query: null, rejectWithError: true };
-      obj2[0] = outer1_11.USER_WISHLIST_RECOMMENDATIONS;
-      const obj3 = { application_ids: null, user_ids: null, max_recommendations: null, localize: null };
-      obj3[0] = outer1_0;
-      obj3[1] = outer1_1;
-      obj3[2] = outer1_2;
-      obj3[3] = c3;
-      const merged = Object.assign(outer1_13());
-      obj2[1] = obj3;
-      yield HTTP.get(obj2);
-      if (1 === tmp7) {
-        c3 = 0;
-        obj1 = outer1_1(outer1_2[13]);
-        obj1.captureException(closure_2);
-        obj2 = outer1_1(outer1_2[9]);
-        let obj5 = { type: "WISHLIST_RECOMMENDATIONS_FETCH_FAILURE", userIds: null, applicationIds: null };
-        obj5[1] = closure_1;
-        obj5[2] = body;
-        obj2.dispatch(obj5);
-        let c5 = 3;
-      } else if (arg0 === 1) {
+      if (c5 === 2) {
         c5 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        body = arg1.body;
-        (function maybeDispatchAdditionalActionsForRecommendation(body) {
-          let skus;
-          let storefront_pricing;
-          let obj = callback(tmp21[9]);
-          obj.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: body.skus });
-          ({ storefront_pricing, skus } = body);
-          if (null != storefront_pricing) {
-            obj = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
-            obj = { type: "skus", skuIds: null };
-            obj[1] = skus.map((id) => id.id);
-            obj[1] = obj;
-            const tmpResult = callback(tmp2[9]);
-            obj[2] = body(tmp2[10]).transformStorefrontPricesServer(storefront_pricing);
-            tmpResult.dispatch(obj);
-            const obj5 = body(tmp2[10]);
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_1 = tmp3;
+              let body = tmp7;
+              body = undefined;
+              closure_1 = undefined;
+              let obj1 = { type: "WISHLIST_RECOMMENDATIONS_FETCH_START", userIds: null, applicationIds: null };
+              obj1[1] = outer1_1;
+              obj1[2] = outer1_0;
+              outer1_1(outer1_2[9]).dispatch(obj1);
+              let c3 = 1;
+              const HTTP = outer1_0(outer1_2[11]).HTTP;
+              let obj2 = { url: null, query: null, rejectWithError: true };
+              obj2[0] = outer1_11.USER_WISHLIST_RECOMMENDATIONS;
+              const obj3 = { application_ids: null, user_ids: null, max_recommendations: null, localize: null };
+              obj3[0] = outer1_0;
+              obj3[1] = outer1_1;
+              obj3[2] = outer1_2;
+              obj3[3] = c3;
+              const merged = Object.assign(outer1_13());
+              obj2[1] = obj3;
+              c4 = 2;
+              c5 = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = HTTP.get(obj2);
+              return obj4;
+            }
+          } else {
+            if (1 === tmp7) {
+              c3 = 0;
+              obj1 = outer1_1(outer1_2[13]);
+              obj1.captureException(closure_2);
+              obj2 = outer1_1(outer1_2[9]);
+              let obj5 = { type: "WISHLIST_RECOMMENDATIONS_FETCH_FAILURE", userIds: null, applicationIds: null };
+              obj5[1] = closure_1;
+              obj5[2] = body;
+              obj2.dispatch(obj5);
+              c5 = 3;
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              body = arg1.body;
+              (function maybeDispatchAdditionalActionsForRecommendation(body) {
+                let skus;
+                let storefront_pricing;
+                let obj = callback(tmp21[9]);
+                obj.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: body.skus });
+                ({ storefront_pricing, skus } = body);
+                if (null != storefront_pricing) {
+                  obj = { type: "SKUS_PRICING_FETCH_SUCCESS", priceId: null, data: null };
+                  obj = { type: "skus", skuIds: null };
+                  obj[1] = skus.map((id) => id.id);
+                  obj[1] = obj;
+                  const tmpResult = callback(tmp2[9]);
+                  obj[2] = body(tmp2[10]).transformStorefrontPricesServer(storefront_pricing);
+                  tmpResult.dispatch(obj);
+                  const obj5 = body(tmp2[10]);
+                }
+              })(body);
+              closure_1 = outer1_7.fromServer(body);
+              const obj6 = { type: "WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS", userIds: null, applicationIds: null, data: null };
+              obj6[1] = closure_1;
+              obj6[2] = body;
+              obj6[3] = closure_1;
+              outer1_1(outer1_2[9]).dispatch(obj6);
+              c3 = 0;
+              const obj8 = outer1_1(outer1_2[9]);
+            }
+            c3 = 0;
+            c5 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
           }
-        })(body);
-        closure_1 = outer1_7.fromServer(body);
-        const obj6 = { type: "WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS", userIds: null, applicationIds: null, data: null };
-        obj6[1] = closure_1;
-        obj6[2] = body;
-        obj6[3] = closure_1;
-        outer1_1(outer1_2[9]).dispatch(obj6);
-        c3 = 0;
-        const obj8 = outer1_1(outer1_2[9]);
+        } catch (tmp21) {
+          closure_2 = tmp21;
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp21;
+          } else {
+            c4 = tmp;
+          }
+        }
       }
-      c3 = 0;
-      return arg1;
     })();
   }
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/guild/native/GuildIcon.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { ExpressionSourceGuildRecord as closure_5 } from "getEmojiSourceData";
@@ -115,7 +116,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     let tmp16 = uri;
   } else if (null != tmp15) {
     uri = tmp15;
-    if (typeof tmp15 !== "number") {
+    if (typeof tmp15 !== "Object") {
       uri = tmp15.uri;
     }
     tmp16 = uri;
@@ -129,7 +130,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     let tmp19 = uri1;
   } else if (null != tmp4) {
     let uri2 = tmp4;
-    if (typeof tmp4 !== "number") {
+    if (typeof tmp4 !== "Object") {
       uri2 = tmp4.uri;
     }
     tmp19 = uri2;
@@ -175,7 +176,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
       let tmp11 = uri;
     } else if (null != tmp4) {
       uri = tmp4;
-      if (typeof tmp4 !== "number") {
+      if (typeof tmp4 !== "Object") {
         uri = tmp4.uri;
       }
       tmp11 = uri;
@@ -183,7 +184,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     if (!c14) {
       if (c13) {
         if (preloadAnimation) {
-          if (typeof tmp11 === "string") {
+          if (typeof tmp11 !== "__FORMATJS_LISTFORMAT_DATA__") {
             const obj3 = icon(flag[10]);
             icon(flag[10]).preload(tmp11).then(() => {
               const timerId = setTimeout(() => {

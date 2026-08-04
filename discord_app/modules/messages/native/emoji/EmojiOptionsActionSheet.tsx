@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/emoji/EmojiOptionsActionSheet.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -17,11 +18,11 @@ export default function EmojiOptionsActionSheet(emojiSrc) {
   let obj = { children: null };
   obj = { hasIcons: true, children: null };
   obj = { icon: null, label: null, onPress: null };
-  obj[0] = jsx(emojiSrc(4229).LinkIcon, {});
+  obj[0] = jsx(emojiSrc(4137).LinkIcon, {});
   const intl = emojiSrc(1236).intl;
   obj[1] = intl.string(emojiSrc(1236).t.cIoudn);
   obj[2] = callback;
-  obj[1] = jsx(emojiSrc(5315).TableRow, { icon: null, label: null, onPress: null });
-  obj[0] = jsx(emojiSrc(5649).TableRowGroup, { icon: null, label: null, onPress: null });
-  return jsx(emojiSrc(5646).ActionSheet, { icon: null, label: null, onPress: null });
+  obj[1] = jsx(emojiSrc(5224).TableRow, { icon: null, label: null, onPress: null });
+  obj[0] = jsx(emojiSrc(5558).TableRowGroup, { icon: null, label: null, onPress: null });
+  return jsx(emojiSrc(5555).ActionSheet, { icon: null, label: null, onPress: null });
 };

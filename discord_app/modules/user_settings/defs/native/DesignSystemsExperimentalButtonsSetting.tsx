@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DesignSystemsExperimentalButtonsSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -10,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_EXPERIMENTAL_BUTTONS,
   getComponent() {
-    return require(14681) /* UserSettingsDesignSystemExperimentalButtons */.default;
+    return require(14581) /* UserSettingsDesignSystemExperimentalButtons */.default;
   }
 };
 const route = createToggle.createRoute(obj);

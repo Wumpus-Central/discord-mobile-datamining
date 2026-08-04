@@ -1,9 +1,10 @@
+// discord_app/modules/user_affinities/maybeSortByProbability.tsx
 const result = require("set").fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
 
 export const maybeSortByProbability = function maybeSortByProbability(reduced, userAffinitiesMap, location) {
   let sort = reduced;
   const _require = userAffinitiesMap;
-  const voiceUserAffinitySortType = _require(7983).getVoiceUserAffinitySortType(location);
+  const voiceUserAffinitySortType = _require(7853).getVoiceUserAffinitySortType(location);
   if (null == voiceUserAffinitySortType) {
     return sort;
   } else if ("vc_probability" === voiceUserAffinitySortType) {

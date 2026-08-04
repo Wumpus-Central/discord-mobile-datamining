@@ -1,3 +1,4 @@
+// discord_app/modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx
 import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID";
 import { Store } from "initialize";
 

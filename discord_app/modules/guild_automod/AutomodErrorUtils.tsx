@@ -1,3 +1,4 @@
+// discord_app/modules/guild_automod/AutomodErrorUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AbortCodes } from "ME";
 import set from "getSystemLocale";

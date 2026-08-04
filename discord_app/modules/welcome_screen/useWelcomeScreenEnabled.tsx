@@ -1,3 +1,4 @@
+// discord_app/modules/welcome_screen/useWelcomeScreenEnabled.tsx
 import { isGuildTextChannelType } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

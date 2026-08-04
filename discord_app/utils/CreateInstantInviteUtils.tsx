@@ -1,3 +1,4 @@
+// discord_app/utils/CreateInstantInviteUtils.tsx
 import comparator from "comparator";
 import closure_2 from "comparator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

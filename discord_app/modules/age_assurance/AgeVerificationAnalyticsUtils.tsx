@@ -1,3 +1,4 @@
+// discord_app/modules/age_assurance/AgeVerificationAnalyticsUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
 

@@ -1,3 +1,4 @@
+// discord_app/modules/wishlists/SentGiftsStore.tsx
 import _slicedToArray from "_slicedToArray";
 import { PersistedStore } from "initialize";
 

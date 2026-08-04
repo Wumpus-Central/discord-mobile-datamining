@@ -1,3 +1,4 @@
+// discord_app/modules/markup/native/Spoiler.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { EMOJI_CHAT_SIZE } from "ME";
@@ -91,7 +92,7 @@ Spoiler.prototype["render"] = function render() {
                 if (Array.isArray(style)) {
                   flattenResult = outer1_4.flatten(style);
                 }
-                const obj = { children: null, style: null, onPress: "disabled" };
+                const obj = { children: null, style: null, onPress: "Array" };
                 ({ Children, cloneElement } = tmp);
                 obj[0] = Children.map(props.props.children, (props) => {
                   let Children;
@@ -103,7 +104,7 @@ Spoiler.prototype["render"] = function render() {
                     if (Array.isArray(style)) {
                       flattenResult = outer1_4.flatten(style);
                     }
-                    const obj = { children: null, style: null, onPress: "disabled" };
+                    const obj = { children: null, style: null, onPress: "Array" };
                     ({ Children, cloneElement } = tmp);
                     obj[0] = Children.map(props.props.children, (props) => {
                       let Children;
@@ -115,7 +116,7 @@ Spoiler.prototype["render"] = function render() {
                         if (Array.isArray(style)) {
                           flattenResult = outer1_4.flatten(style);
                         }
-                        const obj = { children: null, style: null, onPress: "disabled" };
+                        const obj = { children: null, style: null, onPress: "Array" };
                         ({ Children, cloneElement } = tmp);
                         obj[0] = Children.map(props.props.children, () => { ... });
                         const items = [flattenResult, spoiler.spoiler];

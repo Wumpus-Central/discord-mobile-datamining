@@ -1,3 +1,4 @@
+// discord_app/modules/safety_hub/hooks/useSafetyHubInitialized.tsx
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
 
 const require = arg1;

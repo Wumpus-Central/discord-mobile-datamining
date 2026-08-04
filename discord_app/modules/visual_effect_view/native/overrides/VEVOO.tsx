@@ -1,3 +1,4 @@
+// discord_app/modules/visual_effect_view/native/overrides/VEVOO.tsx
 import { ScrollView } from "toggle";
 import getUserAgnosticState from "getUserAgnosticState";
 import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES";

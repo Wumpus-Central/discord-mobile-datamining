@@ -1,3 +1,4 @@
+// discord_app/design/components/TagListInput/native/TagListInput.native.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "BottomSheetModal";
 import get_ActivityIndicator from "useBottomSheetKeyboardHandling";
@@ -27,7 +28,7 @@ let closure_10 = createCacheKey.createStyles(() => {
   obj[5] = { marginHorizontal: importDefault(712).space.PX_4, alignItems: "center", flexDirection: "row", flexWrap: "wrap", flex: 1 };
   obj[6] = { flexWrap: "nowrap" };
   const obj3 = { flex: 1, minHeight: importDefault(712).space.PX_24, minWidth: importDefault(712).space.PX_48, color: importDefault(712).colors.TEXT_DEFAULT };
-  const merged = Object.assign(require(4281) /* Text */.TextStyleSheet["text-sm/medium"]);
+  const merged = Object.assign(require(4189) /* Text */.TextStyleSheet["text-sm/medium"]);
   obj3.paddingVertical = 0;
   obj3.marginVertical = 2;
   obj[7] = obj3;

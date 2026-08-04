@@ -1,9 +1,10 @@
+// discord_app/modules/user_settings/defs/native/DisplayNameStylesRouteSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
     const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2643).ZPMAlX);
+    return intl.string(importDefault(2583).ZPMAlX);
   },
   parent: null,
   unsearchable: true,
@@ -15,7 +16,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DISPLAY_NAME_STYLES,
   getComponent() {
-    return require(14469) /* ApplyButton */.default;
+    return require(14369) /* ApplyButton */.default;
   }
 };
 const route = createToggle.createRoute(obj);

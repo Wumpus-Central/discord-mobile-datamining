@@ -1,3 +1,4 @@
+// discord_app/modules/experiments/apex/ApexExperimentStore.tsx
 import _slicedToArray from "_slicedToArray";
 import "_toPropertyKey";
 import fetchFingerprint from "fetchFingerprint";
@@ -68,7 +69,7 @@ class ApexExperimentStore extends tmp2 {
 const prototype = ApexExperimentStore.prototype;
 prototype["initialize"] = function initialize(version) {
   this.waitFor(fetchFingerprint);
-  const storedState = this.loadStoredState(version, require(4201) /* Version */.getBuildOverrideExperiments());
+  const storedState = this.loadStoredState(version, require(4109) /* Version */.getBuildOverrideExperiments());
 };
 prototype["maybeEmitDebugExperimentEvent"] = function maybeEmitDebugExperimentEvent() {
   const self = this;

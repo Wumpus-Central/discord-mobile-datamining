@@ -1,6 +1,7 @@
+// discord_app/modules/user_settings/premium/native/PremiumMarketingPage.tsx
 import Text from "Text";
 import MarketingComponentType from "MarketingComponentType";
-import get_ActivityIndicator from "module_4146";
+import get_ActivityIndicator from "module_4054";
 import { AnalyticEvents } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
 import { FractionalPremiumStates } from "GuildFeatures";

@@ -1,9 +1,10 @@
+// discord_app/modules/premium/promotions/native/PremiumMarketingMomentActionSheet.tsx
 import preload from "preload";
 import { View } from "items";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { AnalyticsPages } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "module_3982";
+import jsxProd from "module_3890";
 import createCacheKey from "createCacheKey";
 
 let c9;

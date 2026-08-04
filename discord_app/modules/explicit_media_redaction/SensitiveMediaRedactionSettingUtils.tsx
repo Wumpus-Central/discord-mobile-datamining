@@ -1,3 +1,4 @@
+// discord_app/modules/explicit_media_redaction/SensitiveMediaRedactionSettingUtils.tsx
 const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaRedactionSettingUtils.tsx");
 
 export const getShouldObscureForSetting = function getShouldObscureForSetting(tmp10Result) {

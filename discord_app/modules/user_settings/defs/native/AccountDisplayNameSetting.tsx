@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AccountDisplayNameSetting.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createToggle from "createToggle";
 
@@ -24,7 +25,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
-    return require(13802) /* ProfileCustomizationSubsection */.default;
+    return require(13706) /* ProfileCustomizationSubsection */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

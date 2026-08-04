@@ -1,3 +1,4 @@
+// discord_app/modules/auth/native/components/ExternalLink.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

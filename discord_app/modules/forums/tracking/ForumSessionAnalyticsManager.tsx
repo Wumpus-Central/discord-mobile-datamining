@@ -1,3 +1,4 @@
+// discord_app/modules/forums/tracking/ForumSessionAnalyticsManager.tsx
 class ForumSessionAnalyticsManager {
 }
 ForumSessionAnalyticsManager.prototype["getForumChannelSessionId"] = function getForumChannelSessionId(arg0) {

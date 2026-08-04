@@ -1,3 +1,4 @@
+// discord_app/modules/game_profile/hooks/useOpenGameProfileModal.tsx
 const result = require("set").fileFinishedImporting("modules/game_profile/hooks/useOpenGameProfileModal.tsx");
 
 export default function useOpenGameProfileModal(arg0) {

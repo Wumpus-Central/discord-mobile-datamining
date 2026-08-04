@@ -1,3 +1,4 @@
+// discord_app/modules/explicit_media_redaction/SensitiveContentSelfHarmExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

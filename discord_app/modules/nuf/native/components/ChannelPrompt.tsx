@@ -1,6 +1,7 @@
+// discord_app/modules/nuf/native/components/ChannelPrompt.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
-import module_8276 from "module_8276";
+import module_9004 from "module_9004";
 import get_ActivityIndicator from "getAvatarURL";
 import comparator from "comparator";
 import closure_9 from "createGuildRecordFromRust";
@@ -74,36 +75,84 @@ export default function ChannelPrompt(guildId) {
   }, items1);
   const items2 = [guildId, onSuccess, first];
   const callback = first.useCallback(onCancel(function*() {
-    let closure_1 = tmp3;
-    outer1_7(null);
-    outer1_6(true);
-    const defaultChannel = outer1_8.getDefaultChannel(outer1_0);
-    let c3 = 1;
-    const intl = outer1_0(outer1_2[12]).intl;
-    const obj1 = { topic: null };
-    obj1[0] = c5;
-    const formatToPlainStringResult = intl.formatToPlainString(outer1_0(outer1_2[12]).t.V4lepJ, obj1);
-    const obj6 = outer1_1(outer1_2[13]);
-    if (defaultChannel != null) {
-      const parent_id = defaultChannel.parent_id;
-    }
-    yield obj6.createTextChannel(outer1_0, c5, parent_id, formatToPlainStringResult);
-    if (1 === tmp7) {
-      c3 = 0;
-      let closure_0 = closure_2;
-      const aPIError = new outer1_0(outer1_2[14]).APIError(closure_0);
-      callback2(aPIError);
-      callback(false);
+    if (c5 === 2) {
       c5 = 3;
-    } else if (arg0 === 1) {
-      c5 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      v0();
-      c3 = 0;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === v0) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let closure_1 = tmp3;
+            let closure_0 = tmp7;
+            outer1_7(null);
+            outer1_6(true);
+            const defaultChannel = outer1_8.getDefaultChannel(outer1_0);
+            let c3 = 1;
+            const intl = outer1_0(outer1_2[12]).intl;
+            const obj1 = { topic: null };
+            obj1[0] = c5;
+            const formatToPlainStringResult = intl.formatToPlainString(outer1_0(outer1_2[12]).t.V4lepJ, obj1);
+            const obj6 = outer1_1(outer1_2[13]);
+            let parent_id;
+            if (defaultChannel != null) {
+              parent_id = defaultChannel.parent_id;
+            }
+            v0 = 2;
+            c5 = 1;
+            const obj2 = { value: null, done: false };
+            obj2[0] = obj6.createTextChannel(outer1_0, c5, parent_id, formatToPlainStringResult);
+            return obj2;
+          }
+        } else {
+          if (1 === tmp7) {
+            c3 = 0;
+            closure_0 = closure_2;
+            const aPIError = new outer1_0(outer1_2[14]).APIError(closure_0);
+            callback2(aPIError);
+            callback(false);
+            c5 = 3;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            v0();
+            c3 = 0;
+          }
+          c3 = 0;
+          c5 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        }
+      } catch (tmp33) {
+        closure_2 = tmp33;
+        if (tmp4 === c3) {
+          c5 = tmp2;
+          throw tmp33;
+        } else {
+          v0 = tmp;
+        }
+      }
     }
-    c3 = 0;
-    return arg1;
   }), items2);
   let tmp14Result = null;
   if (null != stateFromStores) {

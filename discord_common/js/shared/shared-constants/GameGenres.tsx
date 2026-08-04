@@ -1,3 +1,4 @@
+// discord_common/js/shared/shared-constants/GameGenres.tsx
 import set from "set";
 
 const obj = { ACTION_GENRES: null, ADVENTURE_GENRES: null, DRIVING_RACING_GENRES: null, MASSIVELY_MULTIPLAYER_GENRES: null, ROLE_PLAYING_GENRES: null, SHOOTER_GENRES: null, SIMULATION_GENRES: null, SPORTS_GENRES: null, STRATEGY_GENRES: null, MISCELLANEOUS_GENRES: null, ALL: null };

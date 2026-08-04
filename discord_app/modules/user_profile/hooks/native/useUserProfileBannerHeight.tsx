@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx
 import { BANNER_ASPECT_RATIO } from "ARBITRARY_LARGE_OFFSET";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx");

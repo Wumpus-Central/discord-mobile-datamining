@@ -1,3 +1,4 @@
+// discord_app/modules/self_mod/shared/SafetyWarningUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { AnalyticEvents } from "ME";
 

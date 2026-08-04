@@ -1,3 +1,4 @@
+// discord_app/design/utils/shared/colors.tsx
 const result = require("set").fileFinishedImporting("design/utils/shared/colors.tsx");
 
 export const flattenColorOverOpaqueBackground = function flattenColorOverOpaqueBackground(token, context) {

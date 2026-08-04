@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/experiments/CollectiblesShopCardImpressionMobileExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-shop-card-impression-mobile", kind: "user", defaultConfig: { enableShopCardImpression: false }, variations: { 0: { enableShopCardImpression: false }, 1: { enableShopCardImpression: true } } });

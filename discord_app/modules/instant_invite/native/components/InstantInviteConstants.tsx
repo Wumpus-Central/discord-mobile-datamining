@@ -1,3 +1,4 @@
+// discord_app/modules/instant_invite/native/components/InstantInviteConstants.tsx
 import { Linking } from "set";
 import SHARE_APPS_KEY from "SHARE_APPS_KEY";
 import ME from "ME";
@@ -24,7 +25,7 @@ const SHARE_URLS = SHARE_APPS_KEY.SHARE_URLS;
 let obj = { SHARE: 0, [0]: "SHARE", COPY: 1, [1]: "COPY", QR_CODE: 2, [2]: "QR_CODE", MESSAGES: 3, [3]: "MESSAGES", MAIL: 4, [4]: "MAIL", FB_MESSENGER: 5, [5]: "FB_MESSENGER", GMAIL: 6, [6]: "GMAIL", TELEGRAM: 7, [7]: "TELEGRAM", TWITTER: 8, [8]: "TWITTER", WHATSAPP: 9, [9]: "WHATSAPP", LINE: 10, [10]: "LINE" };
 obj = {
   type: obj.SHARE,
-  icon: require("module_9012"),
+  icon: require("module_10950"),
   isAvailable: Promise.resolve(true),
   IconComponent: require("registerAsset"),
   backgroundColor: require("Themes").unsafe_rawColors.BRAND_500,
@@ -37,7 +38,7 @@ obj = {
     let channel;
     let message;
     ({ channel, message, location: _location } = code);
-    return require(8987) /* showInstantInviteActionSheet */.handleOpenShareSheet(code.code, channel, message, _location);
+    return require(8352) /* showInstantInviteActionSheet */.handleOpenShareSheet(code.code, channel, message, _location);
   }
 };
 const items = [obj, , , , , , , , , , ];
@@ -55,7 +56,7 @@ obj = {
     let channel;
     let code;
     ({ channel, code, location: _location } = arg0);
-    return require(8987) /* showInstantInviteActionSheet */.handleCopy(code, channel, _location);
+    return require(8352) /* showInstantInviteActionSheet */.handleCopy(code, channel, _location);
   }
 };
 items[1] = obj;
@@ -71,13 +72,13 @@ obj1[5] = function onPress(code) {
   let channel;
   code = code.code;
   ({ channel, location: _location } = code);
-  let obj = importDefault(4253);
+  let obj = importDefault(4161);
   obj = { link: null, location: null, channel: null };
   const combined = "InstantInviteQRCodeActionSheet-" + code;
-  obj[0] = importDefault(7138)(code);
+  obj[0] = importDefault(6048)(code);
   obj[1] = _location;
   obj[2] = channel;
-  obj.openLazy(require(1959) /* asyncRequireImpl */(9019, dependencyMap.paths), combined, obj, "stack");
+  obj.openLazy(require(1959) /* asyncRequireImpl */(12261, dependencyMap.paths), combined, obj, "stack");
 };
 items[2] = obj1;
 let obj2 = { type: obj.MESSAGES, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
@@ -102,15 +103,15 @@ obj2[5] = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(8987).trackOptionClicked(code, channel, constants.SMS, _location);
-  let obj = channel(8987);
+  channel(8352).trackOptionClicked(code, channel, constants.SMS, _location);
+  let obj = channel(8352);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(4253).hideActionSheet();
-    const obj3 = code(4253);
+    code(4161).hideActionSheet();
+    const obj3 = code(4161);
   }
   obj2 = channel(500);
-  tmp(4458).sendSMS({ body: message }, (arg0, arg1, arg2) => {
+  tmp(4367).sendSMS({ body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       let obj = code(outer1_2[21]);
       obj = { inviteKey: null, channelId: null, messageId: null, location: "SMS Option", overrideProperties: null };
@@ -160,15 +161,15 @@ obj3[5] = function onPress(channel) {
   channel = channel.channel;
   const code = channel.code;
   ({ message, location: _location } = channel);
-  channel(8987).trackOptionClicked(code, channel, constants.EMAIL, _location);
-  let obj = channel(8987);
+  channel(8352).trackOptionClicked(code, channel, constants.EMAIL, _location);
+  let obj = channel(8352);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(4253).hideActionSheet();
-    const obj3 = code(4253);
+    code(4161).hideActionSheet();
+    const obj3 = code(4161);
   }
   obj2 = channel(500);
-  tmp(4458).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
+  tmp(4367).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       let obj = code(outer1_2[21]);
       obj = { inviteKey: null, channelId: null, messageId: null, location: "Email Option", overrideProperties: null };
@@ -207,8 +208,8 @@ obj4[4] = function onPress(code) {
   let channel;
   code = code.code;
   ({ channel, location: _location } = code);
-  const tmp = importDefault(7138)(code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code, channel, constants.MESSENGER, _location);
+  const tmp = importDefault(6048)(code);
+  require(8352) /* showInstantInviteActionSheet */.trackOptionClicked(code, channel, constants.MESSENGER, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.MESSENGER](tmp));
 };
 items[5] = obj4;
@@ -223,7 +224,7 @@ obj5[4] = function onPress(code) {
   let channel;
   let message;
   ({ channel, message, location: _location } = code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.GMAIL, _location);
+  require(8352) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.GMAIL, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.GMAIL]("", message));
 };
 items[6] = obj5;
@@ -239,8 +240,8 @@ obj6[4] = function onPress(code) {
   let message;
   code = code.code;
   ({ channel, message, location: _location } = code);
-  const tmp = importDefault(7138)(code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code, channel, constants.TELEGRAM, _location);
+  const tmp = importDefault(6048)(code);
+  require(8352) /* showInstantInviteActionSheet */.trackOptionClicked(code, channel, constants.TELEGRAM, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.TELEGRAM](message, tmp));
 };
 items[7] = obj6;
@@ -255,7 +256,7 @@ obj7[4] = function onPress(code) {
   let channel;
   let message;
   ({ channel, message, location: _location } = code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.TWITTER, _location);
+  require(8352) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.TWITTER, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.TWITTER](message));
 };
 items[8] = obj7;
@@ -270,7 +271,7 @@ obj8[4] = function onPress(code) {
   let channel;
   let message;
   ({ channel, message, location: _location } = code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.WHATSAPP, _location);
+  require(8352) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.WHATSAPP, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.WHATSAPP](message));
 };
 items[9] = obj8;
@@ -285,7 +286,7 @@ obj9[4] = function onPress(code) {
   let channel;
   let message;
   ({ channel, message, location: _location } = code);
-  require(8987) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.LINE, _location);
+  require(8352) /* showInstantInviteActionSheet */.trackOptionClicked(code.code, channel, constants.LINE, _location);
   Linking.openURL(SHARE_URLS[SHARE_APPS_KEY.LINE](message));
 };
 items[10] = obj9;

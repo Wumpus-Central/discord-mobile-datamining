@@ -1,3 +1,4 @@
+// discord_app/lib/MessageQueue.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import getUserAgnosticState from "getUserAgnosticState";
 import fetchFingerprint from "fetchFingerprint";
@@ -87,7 +88,6 @@ prototype["drain"] = function drain(type) {
 };
 prototype["cancelRequest"] = function cancelRequest(closure_2) {
   const self = this;
-  let closure_0 = closure_2;
   const logger = this.logger;
   logger.log("Cancel message send: ", closure_2);
   const requests = this.requests;
@@ -98,13 +98,6 @@ prototype["cancelRequest"] = function cancelRequest(closure_2) {
   const requests2 = self.requests;
   requests2.delete(closure_2);
   const result = self.cancelQueueMetricTimers(closure_2);
-  self.remove((type) => {
-    let tmp2 = type.type === outer1_13.SEND || type.type === tmp.SEND_ANNOUNCEMENT || type.type === tmp.COMMAND;
-    if (tmp2) {
-      tmp2 = type.message.nonce === closure_0;
-    }
-    return tmp2;
-  });
 };
 prototype["cancelPendingSendRequests"] = function cancelPendingSendRequests(c0) {
   const self = this;
@@ -190,8 +183,11 @@ prototype["createResponseHandler"] = function createResponseHandler(nonce, arg1)
 prototype["handleSend"] = function handleSend(nonce) {
   let analyticsLocation;
   let channelId;
+  let self = this;
+  self = this;
+  const importDefault = nonce;
   ({ channelId, analyticsLocation } = nonce);
-  let tmp3 = importDefault(7215)();
+  let tmp3 = importDefault(self[10])();
   if (tmp3 == null) {
     tmp3 = analyticsLocation;
   }
@@ -200,7 +196,7 @@ prototype["handleSend"] = function handleSend(nonce) {
     obj[0] = tmp3;
     const tmp4 = obj;
   }
-  let obj1 = handleCommand(6830);
+  let obj1 = abortController(tmp2[11]);
   const signalStrength = obj1.getSignalStrength();
   obj = { mobile_network_type: store2.getType() };
   const merged = Object.assign(callback(nonce, closure_3));
@@ -210,7 +206,6 @@ prototype["handleSend"] = function handleSend(nonce) {
     obj[0] = signalStrength;
     tmp8 = obj;
   }
-  const self = this;
   const merged1 = Object.assign(tmp8);
   if (store.get("send_fail_100")) {
     const logger = self.logger;
@@ -220,13 +215,9 @@ prototype["handleSend"] = function handleSend(nonce) {
     arg1(null, obj1);
   } else {
     const _AbortController = AbortController;
-    const abortController = new AbortController();
-    if (null != nonce.nonce) {
-      const requests = self.requests;
-      const result = requests.set(nonce.nonce, abortController);
-    }
-    const result1 = self.startQueueMetricTimers(nonce.nonce);
-    const HTTP = tmp5(530).HTTP;
+    abortController = new AbortController();
+    let result = self.startQueueMetricTimers(nonce.nonce);
+    const HTTP = tmp5(tmp2[12]).HTTP;
     const obj2 = { url: null, body: null, context: null, oldFormErrors: true };
     obj2[0] = closure_10.MESSAGES(channelId);
     obj2[1] = obj;
@@ -234,16 +225,25 @@ prototype["handleSend"] = function handleSend(nonce) {
     const merged2 = Object.assign(closure_12);
     obj2.signal = abortController.signal;
     obj2.rejectWithError = true;
+    obj2.onRequestCreated = function onRequestCreated() {
+      if (null != nonce.nonce) {
+        const requests = self.requests;
+        const result = requests.set(tmp.nonce, abortController);
+      }
+    };
     HTTP.post(obj2, self.createResponseHandler(nonce.nonce, arg1));
   }
   const tmp = callback(nonce, closure_3);
-  tmp5 = handleCommand;
+  tmp5 = abortController;
 };
 prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, arg1) {
   let analyticsLocation;
   let channelId;
+  let self = this;
+  self = this;
+  const importDefault = message;
   ({ channelId, analyticsLocation } = message);
-  let tmp3 = importDefault(7215)();
+  let tmp3 = importDefault(self[10])();
   if (tmp3 == null) {
     tmp3 = analyticsLocation;
   }
@@ -252,7 +252,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
     obj[0] = tmp3;
     const tmp4 = obj;
   }
-  let obj1 = handleCommand(6830);
+  let obj1 = abortController(tmp2[11]);
   const signalStrength = obj1.getSignalStrength();
   obj = { mobile_network_type: store2.getType() };
   const merged = Object.assign(callback(message, closure_4));
@@ -262,7 +262,6 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
     obj[0] = signalStrength;
     tmp8 = obj;
   }
-  const self = this;
   const merged1 = Object.assign(tmp8);
   if (store.get("send_fail_100")) {
     const logger = self.logger;
@@ -272,13 +271,9 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
     arg1(null, obj1);
   } else {
     const _AbortController = AbortController;
-    const abortController = new AbortController();
-    if (null != message.nonce) {
-      const requests = self.requests;
-      const result = requests.set(message.nonce, abortController);
-    }
-    const result1 = self.startQueueMetricTimers(message.nonce);
-    const HTTP = tmp5(530).HTTP;
+    abortController = new AbortController();
+    let result = self.startQueueMetricTimers(message.nonce);
+    const HTTP = tmp5(tmp2[12]).HTTP;
     const obj2 = { url: null, body: null, context: null, oldFormErrors: true };
     obj2[0] = closure_10.MESSAGES_ANNOUNCEMENT(channelId);
     obj2[1] = obj;
@@ -286,16 +281,23 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
     const merged2 = Object.assign(closure_12);
     obj2.signal = abortController.signal;
     obj2.rejectWithError = true;
+    obj2.onRequestCreated = function onRequestCreated() {
+      if (null != message.nonce) {
+        const requests = self.requests;
+        const result = requests.set(tmp.nonce, abortController);
+      }
+    };
     HTTP.post(obj2, self.createResponseHandler(message.nonce, arg1));
   }
   const tmp = callback(message, closure_4);
-  tmp5 = handleCommand;
+  tmp5 = abortController;
 };
 handleCommand = function handleCommand(message, arg1, arg2, arg3, MessageQueue, handleCommand, arg6, arg7, arg8, dependencyMap, arg10) {
   let analytics_location;
   let applicationId;
   let attachments;
   let channelId;
+  let closure_3;
   let data;
   let sectionName;
   let source;
@@ -303,31 +305,32 @@ handleCommand = function handleCommand(message, arg1, arg2, arg3, MessageQueue, 
   self = this;
   const guildId = message.guildId;
   const nonce = message.nonce;
-  ({ attachments, maxSizeCallback: handleCommand } = message);
-  let obj = { type: handleCommand(nonce[13]).InteractionTypes.APPLICATION_COMMAND, application_id: applicationId, guild_id: guildId, channel_id: channelId, session_id: sessionId.getSessionId(), data, nonce, analytics_location, section_name: sectionName, source };
+  ({ attachments, maxSizeCallback: closure_3 } = message);
+  let abortController;
+  let obj = { type: abortController(nonce[13]).InteractionTypes.APPLICATION_COMMAND, application_id: applicationId, guild_id: guildId, channel_id: channelId, session_id: sessionId.getSessionId(), data, nonce, analytics_location, section_name: sectionName, source };
   ({ applicationId, channelId, data, analytics_location, sectionName, source } = message);
   if (null != attachments) {
     obj.data.attachments = attachments.map((status, closure_1) => {
-      guildId(nonce[14])(status.status === callback(nonce[15]).CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message");
+      guildId(nonce[14])(status.status === abortController(nonce[15]).CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message");
       const tmp = guildId(nonce[14]);
-      return callback(nonce[16]).getAttachmentPayload(status, closure_1);
+      return abortController(nonce[16]).getAttachmentPayload(status, closure_1);
     });
   }
-  const abortController = new AbortController();
-  const requests = self.requests;
-  const result = requests.set(nonce, abortController);
-  const HTTP = handleCommand(nonce[12]).HTTP;
+  abortController = new AbortController();
+  const HTTP = abortController(nonce[12]).HTTP;
   obj = {
     url: closure_10.INTERACTIONS,
     body: obj,
     signal: abortController.signal,
     rejectWithError: true,
     onRequestCreated(on) {
+      const requests = self.requests;
+      const result = requests.set(nonce, abortController);
       on.on("progress", (total) => {
         total = total.total;
         const maxFileSizeResult = outer1_0(outer1_2[17]).maxFileSize(closure_1);
         if (tmp2) {
-          closure_3.cancelRequest(closure_2);
+          closure_4.cancelRequest(closure_2);
           if (callback != null) {
             callback(maxFileSizeResult);
           }

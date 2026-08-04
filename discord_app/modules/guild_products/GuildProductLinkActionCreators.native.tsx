@@ -1,7 +1,8 @@
+// discord_app/modules/guild_products/GuildProductLinkActionCreators.native.tsx
 const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductLinkActionCreators.native.tsx");
 
 export const openGuildProductLink = function openGuildProductLink(closure_0, closure_1) {
-  let obj = importDefault(4624);
+  let obj = importDefault(4533);
   obj = { body: null, confirmText: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t["mYlo/T"]);

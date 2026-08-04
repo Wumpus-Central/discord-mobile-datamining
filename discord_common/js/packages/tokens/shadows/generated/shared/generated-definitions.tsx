@@ -1,3 +1,4 @@
+// discord_common/js/packages/tokens/shadows/generated/shared/generated-definitions.tsx
 const Themes = require("items")._private.Themes;
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/tokens/shadows/generated/shared/generated-definitions.tsx");
 

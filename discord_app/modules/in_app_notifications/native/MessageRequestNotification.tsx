@@ -1,3 +1,4 @@
+// discord_app/modules/in_app_notifications/native/MessageRequestNotification.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -19,23 +20,23 @@ export default function MessageRequestInAppNotification(notification) {
     return obj;
   }, items);
   const callback = React.useCallback(() => {
-    numMutualGuilds(9685).clearNotification();
-    const obj = numMutualGuilds(9685);
-    const rootNavigationRef = author(4137).getRootNavigationRef();
+    numMutualGuilds(10276).clearNotification();
+    const obj = numMutualGuilds(10276);
+    const rootNavigationRef = author(4045).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
   }, []);
   let obj = { icon: null, header: null, children: null, onPress: null, notification: null };
-  obj = { user: author, size: null, guildId: "disabled" };
+  obj = { user: author, size: null, guildId: "Array" };
   obj[1] = author(1297).AvatarSizes.NORMAL;
-  obj[0] = jsx(author(1297).Avatar, { user: author, size: null, guildId: "disabled" });
+  obj[0] = jsx(author(1297).Avatar, { user: author, size: null, guildId: "Array" });
   obj[1] = memo;
   obj = { text: null };
   let intl = author(1236).intl;
   obj[0] = intl.string(author(1236).t["Bx4/Lf"]);
-  obj[2] = jsx(author(9703).SystemMessageText, { text: null });
+  obj[2] = jsx(author(10293).SystemMessageText, { text: null });
   obj[3] = callback;
   obj[4] = notification;
-  return jsx(author(9767).NotificationPressable, { text: null });
+  return jsx(author(10348).NotificationPressable, { text: null });
 };

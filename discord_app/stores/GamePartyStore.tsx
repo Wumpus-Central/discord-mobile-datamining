@@ -1,3 +1,4 @@
+// discord_app/stores/GamePartyStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
 import filterPlayingActivities from "filterPlayingActivities";

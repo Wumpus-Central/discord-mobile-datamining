@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/native/FamilyCenterTopActivity.tsx
 import noop from "noop";
 import { View } from "GuildIconSizes";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -60,7 +61,7 @@ export default function FamilyCenterTopActivity() {
         user = user.getUser(user_id.user_id);
         let tmp2 = null;
         if (null != user) {
-          const obj = { user: null, size: null, guildId: "disabled" };
+          const obj = { user: null, size: null, guildId: "Array" };
           obj[0] = user;
           obj[1] = tmp(stateFromStores1[16]).AvatarSizes.SMALL;
           tmp2 = callback(tmp(stateFromStores1[16]).Avatar, obj, user.id);

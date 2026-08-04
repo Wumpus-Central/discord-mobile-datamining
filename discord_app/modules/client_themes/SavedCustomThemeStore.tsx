@@ -1,3 +1,4 @@
+// discord_app/modules/client_themes/SavedCustomThemeStore.tsx
 import SystemThemeState from "SystemThemeState";
 import { PersistedStore } from "initialize";
 
@@ -7,10 +8,10 @@ function validateSavedTheme(colors) {
   try {
     let tmp5 = colors.colors.length > 0;
     if (tmp5) {
-      tmp5 = typeof colors.gradient_angle === "number";
+      tmp5 = typeof colors.gradient_angle === "Object";
     }
     if (tmp5) {
-      tmp5 = typeof colors.base_mix === "number";
+      tmp5 = typeof colors.base_mix === "Object";
     }
     if (tmp5) {
       tmp5 = null != tmp4;

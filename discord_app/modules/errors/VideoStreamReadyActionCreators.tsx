@@ -1,3 +1,4 @@
+// discord_app/modules/errors/VideoStreamReadyActionCreators.tsx
 const result = require("set").fileFinishedImporting("modules/errors/VideoStreamReadyActionCreators.tsx");
 
 export const videoStreamTimedOut = function videoStreamTimedOut(current, closure_1, closure_6, closure_2) {

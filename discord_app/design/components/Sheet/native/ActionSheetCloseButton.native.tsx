@@ -1,3 +1,4 @@
+// discord_app/design/components/Sheet/native/ActionSheetCloseButton.native.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -21,6 +22,6 @@ export const ActionSheetCloseButton = function ActionSheetCloseButton(arg0) {
   } else {
     ICON_STRONG = importDefault(712).colors.ICON_STRONG;
   }
-  obj[5] = jsx(require(5270) /* XSmallIcon */.XSmallIcon, { color: ICON_STRONG });
-  return jsx(require(4812) /* PressableBase */.PressableOpacity, { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, androidRippleConfig: null, onPress: null, children: null });
+  obj[5] = jsx(require(5179) /* XSmallIcon */.XSmallIcon, { color: ICON_STRONG });
+  return jsx(require(4721) /* PressableBase */.PressableOpacity, { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, androidRippleConfig: null, onPress: null, children: null });
 };

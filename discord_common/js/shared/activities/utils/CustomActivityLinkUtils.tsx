@@ -1,3 +1,4 @@
+// discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx
 import _slicedToArray from "_slicedToArray";
 
 let obj = { MANAGED: 0, [0]: "MANAGED", QUICK: 1, [1]: "QUICK" };

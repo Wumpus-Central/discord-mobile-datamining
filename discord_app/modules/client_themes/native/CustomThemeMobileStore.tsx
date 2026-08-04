@@ -1,3 +1,4 @@
+// discord_app/modules/client_themes/native/CustomThemeMobileStore.tsx
 import initialize from "initialize";
 import handleThemeChange from "handleThemeChange";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
@@ -78,7 +79,7 @@ prototype["getState"] = function getState() {
     obj[0] = closure_2;
     obj[1] = closure_3;
   } else {
-    obj = { theme: "body", customTheme: "useStateFromStores" };
+    obj = { theme: "Array", customTheme: "HermesInternal" };
   }
   return obj;
 };

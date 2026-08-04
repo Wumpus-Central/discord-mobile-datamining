@@ -1,3 +1,4 @@
+// discord_app/modules/user/isStaffFromRawUser.tsx
 import { UserFlags } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/user/isStaffFromRawUser.tsx");

@@ -1,3 +1,4 @@
+// discord_app/modules/changelog/utils/isChangelogChannel.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { SYSTEM_UPDATES_USER_ID } from "CHANGELOG_MODAL_KEY";
 

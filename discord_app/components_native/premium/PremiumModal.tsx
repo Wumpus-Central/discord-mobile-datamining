@@ -1,3 +1,4 @@
+// discord_app/components_native/premium/PremiumModal.tsx
 import "noop";
 import { UserSettingsSections } from "ME";
 import { jsx } from "jsxProd";

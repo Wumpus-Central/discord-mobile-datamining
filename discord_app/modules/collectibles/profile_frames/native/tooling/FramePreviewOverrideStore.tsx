@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideStore.tsx
 import enforcing from "enforcing";
 import { Image } from "get ActivityIndicator";
 import OVERRIDE_DIR from "OVERRIDE_DIR";
@@ -25,15 +26,66 @@ function measure(arg0) {
 function _readManifest() {
   const self = this;
   const tmp = callback(function*() {
-    let closure_0 = tmp2;
-    const _HermesInternal = HermesInternal;
-    closure_0 = yield outer1_0(table[4]).readFile("documents", "" + outer1_6 + "/" + outer1_5, "utf8");
-    let parsed = null;
-    if (null != closure_0) {
-      const _JSON = JSON;
-      parsed = JSON.parse(closure_0);
+    if (table === 2) {
+      table = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        table = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            table = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            table = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let closure_0 = tmp2;
+            closure_0 = undefined;
+            const _HermesInternal = HermesInternal;
+            c1 = 1;
+            table = 1;
+            const obj1 = { value: null, done: false };
+            obj1[0] = outer1_0(table[4]).readFile("documents", "" + outer1_6 + "/" + outer1_5, "utf8");
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          table = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          table = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
+        } else {
+          closure_0 = arg1;
+          let parsed = null;
+          if (null != closure_0) {
+            const _JSON = JSON;
+            parsed = JSON.parse(closure_0);
+          }
+          table = 3;
+          obj = { value: null, done: true };
+          obj[0] = parsed;
+          return obj;
+        }
+      } catch (tmp12) {
+        table = tmp;
+        throw tmp12;
+      }
     }
-    return parsed;
   });
   const _readManifest = tmp;
   const apply = tmp.apply;

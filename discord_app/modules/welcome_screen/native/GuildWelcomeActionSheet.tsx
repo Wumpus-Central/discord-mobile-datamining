@@ -1,3 +1,4 @@
+// discord_app/modules/welcome_screen/native/GuildWelcomeActionSheet.tsx
 import preload from "preload";
 import get_ActivityIndicator from "transitionTo";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -251,8 +252,8 @@ export default function GuildWelcomeActionSheet(guildId) {
       obj1 = { style: null, guild: null, size: null, textScale: 2 };
       obj1[0] = tmp.guildIcon;
       obj1[1] = stateFromStores;
-      obj1[2] = onHide(11928).Sizes.MEDIUM;
-      const items9 = [callback(onHide(11928), obj1), , , , ];
+      obj1[2] = onHide(11767).Sizes.MEDIUM;
+      const items9 = [callback(onHide(11767), obj1), , , , ];
       const obj2 = { style: null, variant: "heading-xl/extrabold", color: "text-default", children: null };
       obj2[0] = tmp.header;
       const intl = tmp2(1236).intl;
@@ -262,17 +263,17 @@ export default function GuildWelcomeActionSheet(guildId) {
         return outer1_17(guildId(_undefined[22]).Text, { style: _undefined.headerGuildName, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children }, arg1);
       };
       obj2[3] = intl.format(tmp2(1236).t["0aydCN"], obj3);
-      items9[1] = callback(tmp2(4281).Text, obj2);
+      items9[1] = callback(tmp2(4189).Text, obj2);
       const obj4 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj4[0] = tmp.guildDescription;
       obj4[3] = welcomeScreen.description;
-      items9[2] = callback(tmp2(4281).Text, obj4);
+      items9[2] = callback(tmp2(4189).Text, obj4);
       const obj5 = { style: null, variant: "eyebrow", color: "text-default", children: null };
       obj5[0] = tmp.channelsTitle;
       const intl2 = tmp2(1236).intl;
-      const tmp17 = onHide(11928);
+      const tmp17 = onHide(11767);
       obj5[3] = intl2.string(tmp2(1236).t["haj5+i"]).toUpperCase();
-      items9[3] = callback(tmp2(4281).Text, obj5);
+      items9[3] = callback(tmp2(4189).Text, obj5);
       let welcome_channels = welcomeScreen.welcome_channels;
       items9[4] = welcome_channels.map((welcomeChannel) => {
         let closure_0 = arg1;
@@ -285,7 +286,7 @@ export default function GuildWelcomeActionSheet(guildId) {
       });
       obj[1] = items9;
       obj[1] = callback2(hasError, obj);
-      tmp12 = callback(tmp2(5646).ActionSheet, obj);
+      tmp12 = callback(tmp2(5555).ActionSheet, obj);
       const str = intl2.string(tmp2(1236).t["haj5+i"]);
     }
   }

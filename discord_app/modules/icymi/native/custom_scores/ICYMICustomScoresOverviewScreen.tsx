@@ -1,3 +1,4 @@
+// discord_app/modules/icymi/native/custom_scores/ICYMICustomScoresOverviewScreen.tsx
 import noop from "noop";
 import { ScrollView } from "get ActivityIndicator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

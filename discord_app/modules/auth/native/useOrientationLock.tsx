@@ -1,10 +1,11 @@
+// discord_app/modules/auth/native/useOrientationLock.tsx
 import noop from "noop";
 
 let require = arg1;
 const result = require("isMetaQuest").fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
 
 export default function usePortraitOrientationOnly() {
-  let tmp = importDefault(8283)();
+  let tmp = importDefault(9202)();
   const require = tmp;
   const items = [tmp];
   const effect = React.useEffect(() => {

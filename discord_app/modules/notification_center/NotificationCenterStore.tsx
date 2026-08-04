@@ -1,3 +1,4 @@
+// discord_app/modules/notification_center/NotificationCenterStore.tsx
 import _slicedToArray from "_slicedToArray";
 import findOrCreateMessageRecord from "findOrCreateMessageRecord";
 import { PersistedStore } from "initialize";
@@ -51,7 +52,7 @@ prototype["getState"] = function getState() {
 prototype["getTab"] = function getTab() {
   let ForYou = closure_6.tab;
   if (ForYou == null) {
-    ForYou = require(7021) /* NotificationCenterScenes */.NotificationCenterTabs.ForYou;
+    ForYou = require(5930) /* NotificationCenterScenes */.NotificationCenterTabs.ForYou;
   }
   return ForYou;
 };

@@ -1,3 +1,4 @@
+// discord_app/lib/SystemResources.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;
@@ -23,7 +24,7 @@ prototype["getStats"] = function getStats() {
   const report = cpuHistogram.getReport();
   const memoryHistogram = this.memoryHistogram;
   const report1 = memoryHistogram.getReport();
-  let obj = importDefault(7055);
+  let obj = importDefault(5964);
   const cumulativeCPUUsage = obj.getCumulativeCPUUsage();
   let result;
   if (null != this.startCPU) {
@@ -46,10 +47,10 @@ prototype["getStats"] = function getStats() {
 };
 prototype["takeSample"] = function takeSample() {
   const self = this;
-  const cumulativeCPUUsage = importDefault(7055).getCumulativeCPUUsage();
-  const obj = importDefault(7055);
+  const cumulativeCPUUsage = importDefault(5964).getCumulativeCPUUsage();
+  const obj = importDefault(5964);
   const tmp = importDefault;
-  const currentMemoryUsageKB = importDefault(7055).getCurrentMemoryUsageKB();
+  const currentMemoryUsageKB = importDefault(5964).getCurrentMemoryUsageKB();
   if (null != cumulativeCPUUsage) {
     let flag = true;
     if (null != self.lastCPU) {
@@ -65,12 +66,12 @@ prototype["takeSample"] = function takeSample() {
       self.lastCPU = cumulativeCPUUsage;
     }
   } else {
-    const currentCPUUsagePercent = tmp(7055).getCurrentCPUUsagePercent();
+    const currentCPUUsagePercent = tmp(5964).getCurrentCPUUsagePercent();
     if (null != currentCPUUsagePercent) {
       const cpuHistogram2 = self.cpuHistogram;
       cpuHistogram2.addSample(currentCPUUsagePercent);
     }
-    const tmpResult = tmp(7055);
+    const tmpResult = tmp(5964);
   }
   if (null != currentMemoryUsageKB) {
     const memoryHistogram = self.memoryHistogram;

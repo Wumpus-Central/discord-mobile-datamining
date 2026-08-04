@@ -1,3 +1,4 @@
+// discord_common/js/packages/analytics-utils/getSuperProperties.tsx
 import { getSystemLocale } from "getSystemLocale";
 
 function getOS() {
@@ -204,7 +205,7 @@ function extendSuperProperties(arg0) {
   let closure_4 = require(662) /* encodeProperties */.encodeProperties(obj);
 }
 let result = extendSuperProperties((function getContextualSuperProperties() {
-  const obj = { client_build_number: parseInt("6151", 10) };
+  const obj = { client_build_number: parseInt("6119", 10) };
   let buildNumber;
   if (DiscordNative != null) {
     const app = DiscordNative.app;
@@ -239,7 +240,7 @@ export const getCampaignParams = function getCampaignParams(arg0) {
       const match = regExp.exec(tmp);
       let str7 = "";
       if (null !== match) {
-        if (typeof match[1] === "string") {
+        if (typeof match[1] === "y") {
           const _decodeURIComponent = decodeURIComponent;
           str7 = decodeURIComponent(match[1]).replace(/\+/g, " ");
           const str8 = decodeURIComponent(match[1]);

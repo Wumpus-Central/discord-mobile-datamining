@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import getParticipants from "getParticipants";
@@ -7,7 +8,7 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function VoiceControlsNuxActionSheetImporter() {
-  return require(1959) /* asyncRequireImpl */(16043, dependencyMap.paths);
+  return require(1959) /* asyncRequireImpl */(15947, dependencyMap.paths);
 }
 let c4 = importAllResult;
 let closure_10 = { code: "function VoicePanelDismissableContentTsx1(){const{mode,VoicePanelModes,focused}=this.__closure;var _focused$get;return mode.get()===VoicePanelModes.PANEL?(_focused$get=focused.get())===null||_focused$get===void 0?void 0:_focused$get.id:undefined;}" };

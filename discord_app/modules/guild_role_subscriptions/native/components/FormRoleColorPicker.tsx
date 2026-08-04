@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/components/FormRoleColorPicker.tsx
 import noop from "noop";
 import { DEFAULT_ROLE_COLOR } from "ME";
 import { jsx } from "jsxProd";
@@ -26,8 +27,8 @@ export default function FormRoleColorPicker(color) {
   let obj = { leading: null, label: null, disabled: null, onPress: null };
   const tmp = callback();
   obj = { color, style: tmp.rowColorBlock, onSelect: callback };
-  obj[0] = jsx(onChange(13812), { color, style: tmp.rowColorBlock, onSelect: callback });
-  const tmp3 = onChange(13150);
+  obj[0] = jsx(onChange(13716), { color, style: tmp.rowColorBlock, onSelect: callback });
+  const tmp3 = onChange(13054);
   obj[1] = color(688).int2hex(color);
   obj[2] = flag;
   obj[3] = callback;

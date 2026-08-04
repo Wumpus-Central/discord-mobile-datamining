@@ -1,3 +1,4 @@
+// discord_app/modules/webauthn/WebAuthnSignalManager.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import fetchFingerprint from "fetchFingerprint";
 import "initialize";

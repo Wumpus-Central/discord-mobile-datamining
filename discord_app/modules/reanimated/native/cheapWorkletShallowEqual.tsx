@@ -1,3 +1,4 @@
+// discord_app/modules/reanimated/native/cheapWorkletShallowEqual.tsx
 function cheapWorkletShallowEqual(safeAreaState, current) {
   if (safeAreaState === current) {
     return true;

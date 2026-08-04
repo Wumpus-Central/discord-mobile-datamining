@@ -1,3 +1,4 @@
+// discord_common/js/packages/id-generator/IdGenerator.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
 class IdGenerator {
   constructor() {

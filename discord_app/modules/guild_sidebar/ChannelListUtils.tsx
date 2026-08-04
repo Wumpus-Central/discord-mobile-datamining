@@ -1,3 +1,4 @@
+// discord_app/modules/guild_sidebar/ChannelListUtils.tsx
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");
 
 export const hasStream = function hasStream(voiceStates) {

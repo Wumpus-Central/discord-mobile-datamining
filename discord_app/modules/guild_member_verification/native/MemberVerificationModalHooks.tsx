@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/MemberVerificationModalHooks.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import map from "map";

@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowData.tsx
 import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel";
 import updateVoiceState from "updateVoiceState";
 import participantFromServer from "participantFromServer";

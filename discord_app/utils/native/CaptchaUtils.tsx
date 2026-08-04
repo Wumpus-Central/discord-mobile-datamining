@@ -1,3 +1,4 @@
+// discord_app/utils/native/CaptchaUtils.tsx
 import noop from "noop";
 import get_ActivityIndicator from "set";
 import _getSystemLocale from "_getSystemLocale";
@@ -246,7 +247,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
   };
   let obj2 = siteKey(514);
   const merged1 = Object.assign(merged);
-  return jsx(importDefault(16227), {
+  return jsx(importDefault(16131), {
     siteKey,
     onMessage(nativeEvent) {
       if (null != nativeEvent.nativeEvent.data) {

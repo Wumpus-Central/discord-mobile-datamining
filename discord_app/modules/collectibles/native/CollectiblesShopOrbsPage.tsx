@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/CollectiblesShopOrbsPage.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

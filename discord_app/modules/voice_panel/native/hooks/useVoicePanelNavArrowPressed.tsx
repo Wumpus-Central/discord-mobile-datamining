@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx
 import noop from "noop";
 import { VoicePanelControlsModes } from "VoicePanelControlsModes";
 

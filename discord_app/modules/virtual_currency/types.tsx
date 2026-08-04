@@ -1,3 +1,4 @@
+// discord_app/modules/virtual_currency/types.tsx
 const result = require("set").fileFinishedImporting("modules/virtual_currency/types.tsx");
 
 export const BalanceWidgetMode = { DEFAULT: "DEFAULT", HIGHLIGHTED: "HIGHLIGHTED", SELECTED: "SELECTED" };

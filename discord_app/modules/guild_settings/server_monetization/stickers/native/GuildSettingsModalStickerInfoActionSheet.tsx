@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsModalStickerInfoActionSheet.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "set";

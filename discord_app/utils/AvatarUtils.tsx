@@ -1,3 +1,4 @@
+// discord_app/utils/AvatarUtils.tsx
 import ME from "ME";
 import { AVATAR_DECORATION_SIZE } from "DECORATION_TO_AVATAR_RATIO";
 import set from "set";
@@ -614,7 +615,7 @@ function getGuildMemberAvatarSource(member, author) {
   }
   if (null != tmp) {
     let tmp5 = tmp;
-    if (typeof tmp !== "number") {
+    if (typeof tmp !== "Object") {
       obj = { uri: null };
       obj[0] = tmp;
       tmp5 = obj;
@@ -874,7 +875,7 @@ function isAnimatedIconHash(storageHash) {
 }
 function makeSource(automodAvatarURL) {
   let tmp = automodAvatarURL;
-  if (typeof automodAvatarURL !== "number") {
+  if (typeof automodAvatarURL !== "Object") {
     const obj = { uri: null };
     obj[0] = automodAvatarURL;
     tmp = obj;
@@ -1024,7 +1025,7 @@ export default {
   getUserAvatarSource(stateFromStores, flag, closure_2) {
     const tmp = getUserAvatarURL(stateFromStores, flag, closure_2);
     let tmp2 = tmp;
-    if (typeof tmp !== "number") {
+    if (typeof tmp !== "Object") {
       const obj = { uri: null };
       obj[0] = tmp;
       tmp2 = obj;
@@ -1041,7 +1042,7 @@ export default {
     ({ id, splash, size } = arg0);
     if (null == splash) {
       let tmp15 = null;
-      if (typeof null !== "number") {
+      if (typeof null !== "Object") {
         let obj = { uri: null };
         obj[0] = null;
         tmp15 = obj;
@@ -1077,7 +1078,7 @@ export default {
     ({ id, splash, size } = arg0);
     if (null == splash) {
       let tmp15 = null;
-      if (typeof null !== "number") {
+      if (typeof null !== "Object") {
         let obj = { uri: null };
         obj[0] = null;
         tmp15 = obj;
@@ -1130,7 +1131,7 @@ export default {
     let obj = { endpoint: closure_3.APPLICATION_ICON, path: "app-icons", id, hash, size, canAnimate: false, keepAspectRatio: flag, format: format.format, canWebP: false };
     const tmp = getAvatarURL(obj);
     let tmp2 = tmp;
-    if (typeof tmp !== "number") {
+    if (typeof tmp !== "Object") {
       obj = { uri: null };
       obj[0] = tmp;
       tmp2 = obj;
@@ -1154,7 +1155,7 @@ export default {
     let obj = { endpoint: closure_3.GUILD_ICON, path: "icons", id, hash: icon, size, canAnimate: flag, lossless: flag2, canWebP: closure_11 };
     const tmp = getAvatarURL(obj);
     let tmp2 = tmp;
-    if (typeof tmp !== "number") {
+    if (typeof tmp !== "Object") {
       obj = { uri: null };
       obj[0] = tmp;
       tmp2 = obj;
@@ -1177,7 +1178,7 @@ export default {
     let obj = { endpoint: closure_3.GUILD_TEMPLATE_ICON, path: "guild-templates", id, hash: icon, size, canAnimate: flag, canWebP: false };
     const tmp = getAvatarURL(obj);
     let tmp2 = tmp;
-    if (typeof tmp !== "number") {
+    if (typeof tmp !== "Object") {
       obj = { uri: null };
       obj[0] = tmp;
       tmp2 = obj;
@@ -1192,7 +1193,7 @@ export default {
     }
     const tmp = getGuildBannerURL(fromInviteGuildResult, flag);
     let tmp2 = tmp;
-    if (typeof tmp !== "number") {
+    if (typeof tmp !== "Object") {
       const obj = { uri: null };
       obj[0] = tmp;
       tmp2 = obj;
@@ -1206,7 +1207,7 @@ export default {
     ({ id, homeHeader } = arg0);
     if (null == homeHeader) {
       let tmp12 = null;
-      if (typeof null !== "number") {
+      if (typeof null !== "Object") {
         let obj = { uri: null };
         obj[0] = null;
         tmp12 = obj;
@@ -1233,7 +1234,7 @@ export default {
   getChannelIconSource(arg0) {
     const tmp = getChannelIconURL(arg0);
     let tmp2 = tmp;
-    if (typeof tmp !== "number") {
+    if (typeof tmp !== "Object") {
       const obj = { uri: null };
       obj[0] = tmp;
       tmp2 = obj;
@@ -1244,7 +1245,7 @@ export default {
   getApplicationIconSource(guildMember) {
     const tmp = getApplicationIconURL(guildMember);
     let tmp2 = tmp;
-    if (typeof tmp !== "number") {
+    if (typeof tmp !== "Object") {
       const obj = { uri: null };
       obj[0] = tmp;
       tmp2 = obj;
@@ -1258,9 +1259,9 @@ export default {
     let obj = require(500) /* set */;
     if (obj.isAndroid()) {
       if (flag) {
-        if (typeof tmp !== "number") {
+        if (typeof tmp === "__REMOTEDEV__") {
           const tmp2 = arg1(false);
-          if (typeof tmp2 === "number") {
+          if (typeof tmp2 === "Object") {
             const items = [tmp, ];
             obj = {};
             const merged = Object.assign(tmp2);

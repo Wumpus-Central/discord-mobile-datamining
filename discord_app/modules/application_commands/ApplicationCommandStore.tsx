@@ -1,3 +1,4 @@
+// discord_app/modules/application_commands/ApplicationCommandStore.tsx
 import _slicedToArray from "_slicedToArray";
 import handlePermissionsChange from "handlePermissionsChange";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -86,8 +87,8 @@ function handleSetActiveCommand(arg0) {
       obj[5] = query;
       obj[6] = searchResultsPosition;
       obj[7] = source;
-      obj(6889).trackCommandSelected(obj);
-      const obj3 = obj(6889);
+      obj(5707).trackCommandSelected(obj);
+      const obj3 = obj(5707);
     }
     return true;
   }

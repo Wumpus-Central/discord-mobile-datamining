@@ -1,3 +1,4 @@
+// discord_app/modules/media_viewer/native/components/MediaViewerItem.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { ScrollView } from "get ActivityIndicator";

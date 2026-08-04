@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/useMessagePreviews.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 
@@ -45,13 +46,13 @@ export default function useMessagePreview(guild_id) {
     return hasUnreadResult;
   });
   if (!disabled) {
-    disabled = importDefault(8213)(guild_id);
+    disabled = importDefault(9141)(guild_id);
   }
   if (!disabled) {
-    disabled = stateFromStores === tmp(3963).MessagePreviewTypes.NONE;
+    disabled = stateFromStores === tmp(3871).MessagePreviewTypes.NONE;
   }
   if (!disabled) {
-    let tmp6 = stateFromStores === tmp(3963).MessagePreviewTypes.UNREADS;
+    let tmp6 = stateFromStores === tmp(3871).MessagePreviewTypes.UNREADS;
     if (tmp6) {
       if (unread == null) {
         unread = stateFromStores1;
@@ -60,7 +61,7 @@ export default function useMessagePreview(guild_id) {
     }
     disabled = tmp6;
   }
-  return importDefault(14454)(guild_id, disabled);
+  return importDefault(14354)(guild_id, disabled);
 };
 export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) {
   const _require = arg0;

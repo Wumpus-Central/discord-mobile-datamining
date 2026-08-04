@@ -1,3 +1,4 @@
+// discord_app/actions/DefaultRouteActionCreators.tsx
 import initialize from "initialize";
 import { Routes } from "ME";
 
@@ -5,9 +6,9 @@ const require = arg1;
 const result = require("matchPath").fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");
 
 export const saveLastRoute = function saveLastRoute(pathname) {
-  let obj = require(4107) /* matchPath */;
+  let obj = require(4015) /* matchPath */;
   obj = { path: null };
-  const RouteParam = require(4120) /* RouteParam */.RouteParam;
+  const RouteParam = require(4028) /* RouteParam */.RouteParam;
   obj[0] = Routes.CHANNEL(RouteParam.guildId());
   const matchPathResult = obj.matchPath(pathname, obj);
   let guildId;
@@ -29,9 +30,9 @@ export const saveLastRoute = function saveLastRoute(pathname) {
   }
 };
 export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
-  let obj = require(4107) /* matchPath */;
+  let obj = require(4015) /* matchPath */;
   obj = { path: null };
-  const RouteParam = require(4120) /* RouteParam */.RouteParam;
+  const RouteParam = require(4028) /* RouteParam */.RouteParam;
   obj[0] = Routes.CHANNEL(RouteParam.guildId());
   const matchPathResult = obj.matchPath(Routes, obj);
   let guildId;

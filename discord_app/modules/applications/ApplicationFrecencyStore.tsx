@@ -1,3 +1,4 @@
+// discord_app/modules/applications/ApplicationFrecencyStore.tsx
 import participantFromServer from "participantFromServer";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { UserSettingsTypes } from "MAX_FAVORITES";

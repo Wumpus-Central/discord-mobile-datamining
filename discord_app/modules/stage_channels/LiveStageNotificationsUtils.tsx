@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/LiveStageNotificationsUtils.tsx
 import handleInviteData from "handleInviteData";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

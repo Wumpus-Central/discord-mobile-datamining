@@ -1,3 +1,4 @@
+// discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx
 import { Component } from "noop";
 
 class RiveErrorBoundary extends Component {

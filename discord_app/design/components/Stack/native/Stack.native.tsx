@@ -1,3 +1,4 @@
+// discord_app/design/components/Stack/native/Stack.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

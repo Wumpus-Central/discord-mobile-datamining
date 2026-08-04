@@ -1,3 +1,4 @@
+// discord_app/modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx
 import noop from "noop";
 
 const require = arg1;

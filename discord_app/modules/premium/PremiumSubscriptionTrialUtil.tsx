@@ -1,3 +1,4 @@
+// discord_app/modules/premium/PremiumSubscriptionTrialUtil.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
 import emitChanges from "emitChanges";

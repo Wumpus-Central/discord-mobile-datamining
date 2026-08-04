@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/NativeTimezoneHermesFixModule.tsx
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeTimezoneHermesFixModule");

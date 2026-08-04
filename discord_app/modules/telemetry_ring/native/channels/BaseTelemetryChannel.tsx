@@ -1,3 +1,4 @@
+// discord_app/modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx
 const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx");
 class BaseTelemetryChannel {
   constructor(arg0, arg1) {

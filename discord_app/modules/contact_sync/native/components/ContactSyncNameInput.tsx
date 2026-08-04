@@ -1,3 +1,4 @@
+// discord_app/modules/contact_sync/native/components/ContactSyncNameInput.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

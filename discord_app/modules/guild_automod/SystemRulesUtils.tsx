@@ -1,3 +1,4 @@
+// discord_app/modules/guild_automod/SystemRulesUtils.tsx
 import set from "set";
 
 let set = new Set(["1030554520465440818"]);

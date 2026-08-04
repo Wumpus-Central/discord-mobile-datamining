@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/GatewaySocketAnalytics.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
@@ -68,7 +69,7 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, 
         startsWithResult = "" !== tmp4[0];
       }
       if (startsWithResult) {
-        startsWithResult = typeof tmp4[0] === "string";
+        startsWithResult = typeof tmp4[0] === "y";
       }
       if (startsWithResult) {
         const first = tmp4[0];
@@ -76,7 +77,7 @@ export const logReadyPayloadReceived = function logReadyPayloadReceived(socket, 
       }
       if (startsWithResult) {
         let num = 0;
-        if (typeof tmp4[1] === "object") {
+        if (typeof tmp4[1] !== "window") {
           num = 0;
           if ("micros" in tmp4[1]) {
             let _Math = Math;

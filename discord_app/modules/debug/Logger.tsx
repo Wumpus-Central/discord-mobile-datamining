@@ -1,3 +1,4 @@
+// discord_app/modules/debug/Logger.tsx
 import log from "log";
 
 let timestamp = Date.now();

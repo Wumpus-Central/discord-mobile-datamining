@@ -1,3 +1,4 @@
+// discord_app/modules/experiments/client_override_hooks/useLegacyExperiments.tsx
 import _slicedToArray from "_slicedToArray";
 import { useMemo } from "noop";
 import getHash from "getHash";
@@ -21,7 +22,7 @@ function parseRegisteredExperiments(registeredExperiments) {
     ({ title: obj[3], buckets } = type);
     obj[4] = buckets.map((bucket) => {
       const obj = { id: bucket.valueOf(), label: null, shortLabel: null, type: null };
-      if (typeof type.description === "object") {
+      if (typeof type.description === "ay") {
         let experimentBucketName = tmp.description[arg1];
       } else {
         experimentBucketName = outer1_1(outer1_2[6]).getExperimentBucketName(bucket);

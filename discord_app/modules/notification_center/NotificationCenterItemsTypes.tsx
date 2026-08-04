@@ -1,3 +1,4 @@
+// discord_app/modules/notification_center/NotificationCenterItemsTypes.tsx
 const result = require("set").fileFinishedImporting("modules/notification_center/NotificationCenterItemsTypes.tsx");
 
 export const NotificationCenterScenes = { LANDING: "notification_center_landing" };

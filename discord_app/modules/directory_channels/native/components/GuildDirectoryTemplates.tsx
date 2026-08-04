@@ -1,3 +1,4 @@
+// discord_app/modules/directory_channels/native/components/GuildDirectoryTemplates.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import DirectoryEntryTypes from "DirectoryEntryTypes";

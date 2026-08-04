@@ -1,3 +1,4 @@
+// discord_app/modules/emoji_picker/hooks/useEmojiHotrail.tsx
 import noop from "noop";
 import { EMOJI_ROW_SIZE } from "EmojiCategoryTypes";
 

@@ -1,3 +1,4 @@
+// discord_app/modules/image/native/ImagePickerUtils.tsx
 const result = require("set").fileFinishedImporting("modules/image/native/ImagePickerUtils.tsx");
 
 export const isActionPickSupported = function isActionPickSupported() {

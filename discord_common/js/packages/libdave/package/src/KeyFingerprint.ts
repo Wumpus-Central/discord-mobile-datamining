@@ -1,3 +1,4 @@
+// discord_common/js/packages/libdave/package/src/KeyFingerprint.ts
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _generateKeyFingerprint() {

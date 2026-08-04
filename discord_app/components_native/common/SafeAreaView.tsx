@@ -1,3 +1,4 @@
+// discord_app/components_native/common/SafeAreaView.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

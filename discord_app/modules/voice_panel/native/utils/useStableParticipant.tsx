@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/utils/useStableParticipant.tsx
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -33,19 +34,19 @@ export default function useStableParticipant(arg0, arg1, arg2) {
       if (null == participant) {
         const user = outer1_6.getUser(tmp);
         if (null != user) {
-          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_16", ringing: null, hasVideo: 0, isSelf: 2 };
+          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_16", ringing: null, hasVideo: 0.436, isSelf: 0.437 };
           obj[0] = outer1_7.USER;
           obj[1] = tmp;
           obj[2] = user;
           const id = outer1_4.getId();
-          obj[5] = callback(4474).getName(dependencyMap, tmp3, user);
-          const obj5 = callback(4474);
-          obj[6] = callback(8735).getAvatarDecoration(user, dependencyMap);
+          obj[5] = callback(4383).getName(dependencyMap, tmp3, user);
+          const obj5 = callback(4383);
+          obj[6] = callback(8373).getAvatarDecoration(user, dependencyMap);
           obj[10] = user.id === id;
           return obj;
         }
       } else {
-        const tmp15 = callback2(10618)(participant);
+        const tmp15 = callback2(10056)(participant);
         const type = participant.type;
         if (outer1_7.ACTIVITY === type) {
           obj = { type: null, id: null, applicationId: null };

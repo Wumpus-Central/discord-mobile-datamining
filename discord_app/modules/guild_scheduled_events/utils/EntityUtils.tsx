@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/utils/EntityUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
 

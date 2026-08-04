@@ -1,3 +1,4 @@
+// discord_app/modules/friend_suggestions/FriendSuggestionStore.tsx
 import createdAt from "createdAt";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Store } from "initialize";
@@ -40,11 +41,11 @@ const friendSuggestionStore = new FriendSuggestionStore(require("dispatcher"), {
       if (flag2) {
         c6 = true;
         c7 = false;
-        const response = importDefault(7044).fetch();
-        const obj = importDefault(7044);
+        const response = importDefault(5953).fetch();
+        const obj = importDefault(5953);
       }
     } else {
-      importDefault(7045)();
+      importDefault(5954)();
     }
   },
   FRIEND_SUGGESTION_CREATE: function handleFriendSuggestionCreate(suggestion) {

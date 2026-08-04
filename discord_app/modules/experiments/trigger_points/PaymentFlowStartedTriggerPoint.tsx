@@ -1,3 +1,4 @@
+// discord_app/modules/experiments/trigger_points/PaymentFlowStartedTriggerPoint.tsx
 import { AnalyticEvents } from "ME";
 
 const commonTriggerPointConfiguration = new require("registeredExperimentIds").CommonTriggerPointConfiguration([], require("ExperimentBuckets").CommonTriggerPoints.PAYMENT_FLOW_STARTED, { location: "payment flow started" });

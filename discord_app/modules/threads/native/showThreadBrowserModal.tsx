@@ -1,12 +1,13 @@
+// discord_app/modules/threads/native/showThreadBrowserModal.tsx
 import { ChannelDetailsNavigatorScreens as closure_2 } from "ChannelDetailsNavigatorScreens";
 
 let result = require("getRootNavigationRef").fileFinishedImporting("modules/threads/native/showThreadBrowserModal.tsx");
 
 export default function showThreadBrowserModal(id) {
-  let obj = require(7160) /* getAccessibilityLabelFormatter */;
+  let obj = require(6096) /* getAccessibilityLabelFormatter */;
   const result = obj.trackThreadBrowserOpened();
-  const rootNavigationRef = require(4137) /* getRootNavigationRef */.getRootNavigationRef();
-  const obj2 = require(4137) /* getRootNavigationRef */;
+  const rootNavigationRef = require(4045) /* getRootNavigationRef */.getRootNavigationRef();
+  const obj2 = require(4045) /* getRootNavigationRef */;
   if (tmp2) {
     obj = { channelId: null, initialRouteName: null };
     obj[0] = id.id;

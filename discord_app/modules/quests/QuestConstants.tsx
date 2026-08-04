@@ -1,3 +1,4 @@
+// discord_app/modules/quests/QuestConstants.tsx
 import sendRequest from "sendRequest";
 import apply from "apply";
 import set from "Quests";

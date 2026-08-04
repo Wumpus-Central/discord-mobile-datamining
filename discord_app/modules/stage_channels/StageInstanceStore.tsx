@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/StageInstanceStore.tsx
 import { GuildScheduledEventPrivacyLevel as closure_0 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { Store } from "initialize";
 

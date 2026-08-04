@@ -1,3 +1,4 @@
+// discord_app/modules/video_backgrounds/isVideoBackgroundSupported.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { Features } from "DesktopSources";
 

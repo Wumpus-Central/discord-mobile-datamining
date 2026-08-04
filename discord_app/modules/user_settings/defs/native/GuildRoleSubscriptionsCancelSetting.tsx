@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/GuildRoleSubscriptionsCancelSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS_CANCEL,
   getComponent() {
-    return require(14361) /* GuildRoleSubscriptionCancelSettingScreen */.default;
+    return require(14261) /* GuildRoleSubscriptionCancelSettingScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

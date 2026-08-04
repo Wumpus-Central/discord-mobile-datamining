@@ -1,3 +1,4 @@
+// discord_app/modules/welcome_screen/WelcomeScreenStore.tsx
 import { Store } from "initialize";
 
 function handleInviteData(invite) {

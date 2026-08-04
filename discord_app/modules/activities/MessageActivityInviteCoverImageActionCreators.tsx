@@ -1,3 +1,4 @@
+// discord_app/modules/activities/MessageActivityInviteCoverImageActionCreators.tsx
 const result = require("set").fileFinishedImporting("modules/activities/MessageActivityInviteCoverImageActionCreators.tsx");
 
 export const setCoverImageURL = function setCoverImageURL(arg0) {

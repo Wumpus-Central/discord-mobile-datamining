@@ -1,3 +1,4 @@
+// discord_app/modules/guild_antiraid/native/GuildIncidentActionsActionSheet.tsx
 import WarningIcon from "WarningIcon";
 import computeAlertSettings from "computeAlertSettings";
 import useGuildIncidentsActionSheetStore from "useGuildIncidentsActionSheetStore";
@@ -23,7 +24,7 @@ function DurationSelectionActionSheet(onClose) {
   obj = { title: null };
   const intl = onClose(1236).intl;
   obj[0] = intl.string(onClose(1236).t.vKYZzc);
-  const items = [callback2(onClose(5337).BottomSheetTitleHeader, obj), ];
+  const items = [callback2(onClose(5246).BottomSheetTitleHeader, obj), ];
   obj = { hasIcons: false, children: null };
   obj[1] = getTimeframes().map((label) => {
     let closure_0 = label;
@@ -35,9 +36,9 @@ function DurationSelectionActionSheet(onClose) {
       }
     }, label.value);
   });
-  items[1] = callback2(onClose(5648).ActionSheetRow.Group, obj);
+  items[1] = callback2(onClose(5557).ActionSheetRow.Group, obj);
   obj[0] = items;
-  return callback3(onClose(5646).ActionSheet, obj);
+  return callback3(onClose(5555).ActionSheet, obj);
 }
 ({ resetGuildIncidentsActionSheetStore: c5, setInitialTime: closure_6, setPauseDms: error, setPauseInvites: metroImportAll, setTime: c9, useGuildIncidentsActionSheetStore: c10 } = useGuildIncidentsActionSheetStore);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = ME);

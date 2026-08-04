@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/hooks/useCanReapplyToRejectedMemberVerificationApplication.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

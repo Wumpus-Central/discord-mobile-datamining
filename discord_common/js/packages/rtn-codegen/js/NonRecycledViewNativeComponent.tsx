@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/NonRecycledViewNativeComponent.tsx
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "DCDNonRecycledView", validAttributes: {} };

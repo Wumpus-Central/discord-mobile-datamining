@@ -1,3 +1,4 @@
+// discord_app/modules/settings/native/renderer/SettingLayout.tsx
 import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
@@ -9,11 +10,11 @@ const memoResult = require("noop").memo(function SettingLayout(node) {
   if (NodeType.LIST === type) {
     let obj = { node: null };
     obj[0] = node;
-    return jsx(require(13794) /* SearchListSectionLabel */.SettingsList, { node: null });
+    return jsx(require(13698) /* SearchListSectionLabel */.SettingsList, { node: null });
   } else if (tmp.SEGMENTED_CONTROL === type) {
     obj = { node: null };
     obj[0] = node;
-    return jsx(importDefault(14831), { node: null });
+    return jsx(importDefault(14731), { node: null });
   }
 });
 const result = require("jsxProd").fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");

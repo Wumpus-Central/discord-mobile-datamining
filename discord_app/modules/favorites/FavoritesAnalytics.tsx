@@ -1,3 +1,4 @@
+// discord_app/modules/favorites/FavoritesAnalytics.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import { AnalyticEvents } from "ME";
 

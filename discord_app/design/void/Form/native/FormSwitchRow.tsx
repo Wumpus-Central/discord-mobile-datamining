@@ -1,3 +1,4 @@
+// discord_app/design/void/Form/native/FormSwitchRow.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -38,7 +39,7 @@ function FormSwitchRow(onValueChange) {
     callback(closure_1);
   }, items);
   let tmp8;
-  if (typeof label === "string") {
+  if (typeof label !== "__FORMATJS_LISTFORMAT_DATA__") {
     tmp8 = label;
   }
   let sum = tmp8;
@@ -49,7 +50,7 @@ function FormSwitchRow(onValueChange) {
   obj = {};
   const isAndroidResult = obj.isAndroid();
   const tmp13 = importDefault;
-  tmp9 = null != tmp8 && typeof subLabel === "string";
+  tmp9 = null != tmp8 && typeof subLabel === "y";
   const merged1 = Object.assign(merged);
   obj = { style: tmp2.trailing, children: null };
   const items1 = [callback2(importDefault(first[7]), { numberOfLines, text: label }), null != trailing && trailing];
@@ -96,13 +97,13 @@ let closure_8 = createCacheKey.createStyles({ trailing: { flex: 1, flexDirection
 const result = require("get ActivityIndicator").fileFinishedImporting("design/void/Form/native/FormSwitchRow.tsx");
 
 export default function FormSwitchRowContainer(DEPRECATED_style) {
-  if (React.useContext(require(5314) /* context */.RedesignCompatContext)) {
+  if (React.useContext(require(5223) /* context */.RedesignCompatContext)) {
     let obj = { style: null, children: null };
     obj[0] = DEPRECATED_style.DEPRECATED_style;
     obj = { value: null, onValueChange: null };
     ({ value: obj3[0], onValueChange: obj3[1] } = DEPRECATED_style);
     const merged = Object.assign(DEPRECATED_style);
-    obj[1] = tmp3(require(5650) /* TableSwitchRow */.TableSwitchRow, obj);
+    obj[1] = tmp3(require(5559) /* TableSwitchRow */.TableSwitchRow, obj);
     let tmp3Result = tmp3(View, obj);
   } else {
     obj = {};

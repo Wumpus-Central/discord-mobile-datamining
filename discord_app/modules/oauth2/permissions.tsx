@@ -1,3 +1,4 @@
+// discord_app/modules/oauth2/permissions.tsx
 import { Permissions } from "ME";
 
 let ADD_REACTIONS;

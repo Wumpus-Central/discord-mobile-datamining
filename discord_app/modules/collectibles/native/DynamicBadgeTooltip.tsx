@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/DynamicBadgeTooltip.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";

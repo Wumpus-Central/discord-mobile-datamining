@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/RequestGatewaySocket.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { AnalyticEvents } from "ME";
 

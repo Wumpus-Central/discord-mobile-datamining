@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/LocalPresenceStateManager.tsx
 import filterPlayingActivities from "filterPlayingActivities";
 import "shouldCommit";
 

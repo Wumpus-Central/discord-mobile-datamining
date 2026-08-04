@@ -1,3 +1,4 @@
+// discord_app/actions/ActivitiesActionCreators.tsx
 import sendRequest from "sendRequest";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
@@ -119,8 +120,8 @@ export default {
     let require;
     const self = this;
     ({ type: importDefault, activity: dependencyMap, content: sendRequest, location: require } = userId);
-    const obj = importDefault(4295);
-    return importDefault(4295).ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: sendRequest, location: closure_0 }));
+    const obj = importDefault(4203);
+    return importDefault(4203).ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: sendRequest, location: closure_0 }));
   },
   getJoinSecret(arg0, arg1, arg2, arg3, arg4) {
     let closure_0 = arg0;
@@ -129,40 +130,140 @@ export default {
     const callback = arg3;
     let ensureGuildLoaded = arg4;
     return callback(function*() {
-      let closure_0 = tmp4;
-      const obj1 = {};
-      if (null != outer1_3) {
-        obj1.channel_id = outer1_3;
+      if (dependencyMap === 2) {
+        dependencyMap = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          dependencyMap = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              dependencyMap = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              dependencyMap = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_0 = tmp4;
+              closure_0 = undefined;
+              const obj1 = {};
+              if (null != outer1_3) {
+                obj1.channel_id = outer1_3;
+              }
+              if (null != outer1_4) {
+                obj1.message_id = outer1_4;
+              }
+              const HTTP = outer1_0(530).HTTP;
+              const obj2 = { url: null, retries: 3, query: null, rejectWithError: null };
+              obj2[0] = outer1_5.USER_ACTIVITY_JOIN(outer1_0, c1, dependencyMap);
+              obj2[2] = obj1;
+              let obj4 = outer1_0(530);
+              obj2[3] = obj4.rejectWithMigratedError();
+              c1 = 1;
+              dependencyMap = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.get(obj2);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            dependencyMap = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            dependencyMap = 3;
+            obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            closure_0 = arg1;
+            obj = { secret: null, joinUrl: null };
+            obj[0] = closure_0.body.secret;
+            obj[1] = closure_0.body.join_url;
+            dependencyMap = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = obj;
+            return obj5;
+          }
+        } catch (tmp14) {
+          dependencyMap = tmp;
+          throw tmp14;
+        }
       }
-      if (null != outer1_4) {
-        obj1.message_id = outer1_4;
-      }
-      const HTTP = outer1_0(530).HTTP;
-      const obj2 = { url: null, retries: 3, query: null, rejectWithError: null };
-      obj2[0] = outer1_5.USER_ACTIVITY_JOIN(outer1_0, c1, dependencyMap);
-      obj2[2] = obj1;
-      const obj4 = outer1_0(530);
-      obj2[3] = obj4.rejectWithMigratedError();
-      closure_0 = yield HTTP.get(obj2);
-      const obj = { secret: null, joinUrl: null };
-      obj[0] = closure_0.body.secret;
-      obj[1] = closure_0.body.join_url;
-      return obj;
     })();
   },
   subscribeActivities(items) {
     let closure_0 = items;
     return callback(function*() {
-      const mapped = v0.map((userId) => ({ user_id: userId.userId, application_id: userId.applicationId, party_id: userId.partyId, message_id: userId.messageId, channel_id: userId.channelId }));
-      const HTTP = v0(outer1_2[5]).HTTP;
-      const obj1 = { url: null, body: null, retries: 1, rejectWithError: null };
-      obj1[0] = outer1_5.USER_ACTIVITY_SUBSCRIBE;
-      const obj2 = { subscriptions: null };
-      obj2[0] = mapped;
-      obj1[1] = obj2;
-      obj1[3] = v0(outer1_2[5]).rejectWithMigratedError();
-      yield HTTP.post(obj1);
-      return arg1.body;
+      if (v0 === 2) {
+        v0 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          v0 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v0 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const mapped = v0.map((userId) => ({ user_id: userId.userId, application_id: userId.applicationId, party_id: userId.partyId, message_id: userId.messageId, channel_id: userId.channelId }));
+              const HTTP = v0(outer1_2[5]).HTTP;
+              const obj1 = { url: null, body: null, retries: 1, rejectWithError: null };
+              obj1[0] = outer1_5.USER_ACTIVITY_SUBSCRIBE;
+              const obj2 = { subscriptions: null };
+              obj2[0] = mapped;
+              obj1[1] = obj2;
+              obj1[3] = v0(outer1_2[5]).rejectWithMigratedError();
+              c1 = 1;
+              v0 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.post(obj1);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            v0 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            v0 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            v0 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1.body;
+            return obj;
+          }
+        } catch (tmp5) {
+          v0 = tmp;
+          throw tmp5;
+        }
+      }
     })();
   }
 };

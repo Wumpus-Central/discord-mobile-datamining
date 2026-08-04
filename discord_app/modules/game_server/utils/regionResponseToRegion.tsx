@@ -1,3 +1,4 @@
+// discord_app/modules/game_server/utils/regionResponseToRegion.tsx
 const result = require("set").fileFinishedImporting("modules/game_server/utils/regionResponseToRegion.tsx");
 
 export default function regionResponseToRegion(id) {

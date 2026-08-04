@@ -1,3 +1,4 @@
+// discord_app/modules/conversations/components/native/ConversationPreviewMessage.tsx
 import noop from "noop";
 import { View } from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -9,7 +10,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function modifyRow(arg0) {
-  arg0.contextType = require(8040) /* MediaGalleryItemType */.MessageContextType.SEARCH;
+  arg0.contextType = require(7910) /* MediaGalleryItemType */.MessageContextType.SEARCH;
   arg0.renderContentOnly = true;
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);

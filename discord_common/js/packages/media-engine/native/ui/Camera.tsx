@@ -1,3 +1,4 @@
+// discord_common/js/packages/media-engine/native/ui/Camera.tsx
 import "noop";
 import { jsx } from "jsxProd";
 

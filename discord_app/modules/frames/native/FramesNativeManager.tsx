@@ -1,3 +1,4 @@
+// discord_app/modules/frames/native/FramesNativeManager.tsx
 import closure_3 from "WebView";
 import map from "map";
 import { ComponentActions } from "ME";
@@ -25,23 +26,70 @@ function _postMessageToWebView() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      const table = tmp3;
-      let c4 = 1;
-      yield outer1_7.injectJavaScript(outer1_1(outer1_2[8])(closure_0));
-      if (1 === tmp7) {
-        c4 = 0;
-        closure_0 = closure_3;
-        const obj1 = callback(table[9]);
-        obj1.captureException(closure_0);
-        let c6 = 3;
-      } else if (arg0 === 1) {
+      if (c6 === 2) {
         c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c4 = 0;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const table = tmp3;
+              const callback = tmp7;
+              let c4 = 1;
+              c5 = 2;
+              c6 = 1;
+              let obj1 = { value: null, done: false };
+              obj1[0] = outer1_7.injectJavaScript(outer1_1(outer1_2[8])(closure_0));
+              return obj1;
+            }
+          } else {
+            if (1 === tmp7) {
+              c4 = 0;
+              closure_0 = closure_3;
+              obj1 = callback(table[9]);
+              obj1.captureException(closure_0);
+              c6 = 3;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp20) {
+          closure_3 = tmp20;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp20;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      c4 = 0;
-      return arg1;
     })();
   });
   const _postMessageToWebView = tmp;
@@ -93,24 +141,17 @@ class FramesNativeManager extends tmp5 {
         if (connectedFrame != null) {
           const url = connectedFrame.url;
         }
-        const iframeId = self.iframeId;
-        let tmp11 = typeof parsed === "object";
-        if (typeof parsed === "object") {
-          tmp11 = null != tmp8;
+        let tmp10 = typeof parsed === "ay";
+        if (typeof parsed !== "window") {
+          tmp10 = null != tmp8;
         }
-        if (tmp11) {
-          tmp11 = null != iframeId;
-        }
-        if (tmp11) {
+        if (tmp10) {
           let obj = outer1_1(outer1_2[11]);
-          obj = { origin: null, iframeId: null };
-          obj[0] = url;
-          obj[1] = iframeId;
-          obj.handleMessage(parsed, obj, outer1_9);
+          obj.handleMessage(parsed, url, outer1_9);
         }
-      } catch (tmp18) {
+      } catch (tmp15) {
         const _SyntaxError = SyntaxError;
-        if (tmp18 instanceof SyntaxError) {
+        if (tmp15 instanceof SyntaxError) {
           if (tmp2.data === outer1_6) {
             const connectedFrame1 = outer1_4.getConnectedFrame();
             let applicationId;
@@ -121,17 +162,17 @@ class FramesNativeManager extends tmp5 {
               obj = { applicationId: null };
               obj[0] = applicationId;
               self.leaveFrame(obj);
-              const obj1 = { body: null, confirmText: null };
+              obj = { body: null, confirmText: null };
               const intl = self(outer1_2[13]).intl;
-              obj1[0] = intl.string(self(outer1_2[13]).t.tYBBWz);
+              obj[0] = intl.string(self(outer1_2[13]).t.tYBBWz);
               const intl2 = self(outer1_2[13]).intl;
-              obj1[1] = intl2.string(self(outer1_2[13]).t.BddRzS);
-              outer1_1(outer1_2[12]).show(obj1);
-              const obj4 = outer1_1(outer1_2[12]);
+              obj[1] = intl2.string(self(outer1_2[13]).t.BddRzS);
+              outer1_1(outer1_2[12]).show(obj);
+              const obj3 = outer1_1(outer1_2[12]);
             }
           }
         } else {
-          throw tmp18;
+          throw tmp15;
         }
       }
     });
@@ -155,7 +196,7 @@ prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason
   let code;
   let message;
   ({ code, message } = reason);
-  let obj = importDefault(4624);
+  let obj = importDefault(4533);
   obj = { title: null, body: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.hbiAO6, { code });
@@ -175,35 +216,35 @@ prototype["leaveFrame"] = function leaveFrame(applicationId) {
 };
 prototype["clearFrameState"] = function clearFrameState(applicationId) {
   applicationId = applicationId.applicationId;
-  importDefault(10510).stopFrame({ applicationId });
-  const obj = importDefault(10510);
+  importDefault(5698).stopFrame({ applicationId });
+  const obj = importDefault(5698);
   importDefault(709).dispatch({ type: "FRAME_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null });
 };
 prototype["releaseWebView"] = function releaseWebView() {
-  const releaseIframeIdResult = this.releaseIframeId();
-  if (null != releaseIframeIdResult) {
+  const releaseFrameIdResult = this.releaseFrameId();
+  if (null != releaseFrameIdResult) {
     const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
     const obj = { id: null };
-    obj[0] = releaseIframeIdResult;
+    obj[0] = releaseFrameIdResult;
     ComponentDispatch.dispatch(ComponentActions.IFRAME_UNMOUNT, obj);
     closure_7.releaseWebView();
   }
-  return releaseIframeIdResult;
+  return releaseFrameIdResult;
 };
-prototype["releaseIframeId"] = function releaseIframeId() {
-  this.iframeId = undefined;
-  return this.iframeId;
+prototype["releaseFrameId"] = function releaseFrameId() {
+  this.frameId = undefined;
+  return this.frameId;
 };
-prototype["hasIframeId"] = function hasIframeId() {
-  return null != this.iframeId;
+prototype["hasFrameId"] = function hasFrameId() {
+  return null != this.frameId;
 };
-prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
-  const iframeId = this.iframeId;
-  if (null != iframeId) {
-    return iframeId;
+prototype["getOrCreateFrameId"] = function getOrCreateFrameId() {
+  const frameId = this.frameId;
+  if (null != frameId) {
+    return frameId;
   } else {
     const v4Result = require(514) /* v1 */.v4();
-    tmp.iframeId = v4Result;
+    tmp.frameId = v4Result;
     return v4Result;
   }
 };

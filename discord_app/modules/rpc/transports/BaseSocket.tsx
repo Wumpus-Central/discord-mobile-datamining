@@ -1,3 +1,4 @@
+// discord_app/modules/rpc/transports/BaseSocket.tsx
 import ME from "ME";
 
 let c3;
@@ -24,7 +25,7 @@ class BaseSocket {
   }
 }
 BaseSocket.prototype["checkRpcVersion"] = function checkRpcVersion(version) {
-  let tmp2 = importDefault(10543);
+  let tmp2 = importDefault(10640);
   tmp2 = new tmp2({ closeCode: constants.INVALID_VERSION }, "Invalid Version: " + version);
   throw tmp2;
 };

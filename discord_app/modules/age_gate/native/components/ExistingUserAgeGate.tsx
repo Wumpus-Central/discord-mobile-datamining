@@ -1,3 +1,4 @@
+// discord_app/modules/age_gate/native/components/ExistingUserAgeGate.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import closure_5 from "t";

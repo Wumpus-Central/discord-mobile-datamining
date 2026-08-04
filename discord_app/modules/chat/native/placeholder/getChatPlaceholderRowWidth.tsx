@@ -1,3 +1,4 @@
+// discord_app/modules/chat/native/placeholder/getChatPlaceholderRowWidth.tsx
 let result = require("set").fileFinishedImporting("modules/chat/native/placeholder/getChatPlaceholderRowWidth.tsx");
 
 export default function getChatPlaceholderRowWidth(arg0) {

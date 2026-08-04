@@ -1,3 +1,4 @@
+// discord_app/modules/media_engine/GoLiveHdrExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 let obj = { Never: "never", Always: "always", PermittedDevicesOnly: "permittedDevicesOnly" };

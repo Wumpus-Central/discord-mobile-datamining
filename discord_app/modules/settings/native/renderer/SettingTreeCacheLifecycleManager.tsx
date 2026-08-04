@@ -1,3 +1,4 @@
+// discord_app/modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx
 import "initialize";
 
 let prototype = function SettingTreeManagerLifecycleManager() {

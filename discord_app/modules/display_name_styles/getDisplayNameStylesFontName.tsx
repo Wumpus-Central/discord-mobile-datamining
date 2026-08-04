@@ -1,3 +1,4 @@
+// discord_app/modules/display_name_styles/getDisplayNameStylesFontName.tsx
 const obj = {};
 obj[require("DisplayNameFont").DisplayNameFont.DEFAULT] = require("messagesProxy").ZEL6mz;
 obj[require("DisplayNameFont").DisplayNameFont.CHERRY_BOMB] = require("messagesProxy").rN7cuX;
@@ -16,7 +17,7 @@ const result = require("set").fileFinishedImporting("modules/display_name_styles
 export default function getDisplayNameStylesFontName(arg0) {
   let ZEL6mz = obj[arg0];
   if (ZEL6mz == null) {
-    ZEL6mz = importDefault(2643).ZEL6mz;
+    ZEL6mz = importDefault(2583).ZEL6mz;
   }
   return ZEL6mz;
 };

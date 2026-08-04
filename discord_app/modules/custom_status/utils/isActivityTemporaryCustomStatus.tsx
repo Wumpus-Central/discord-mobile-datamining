@@ -1,3 +1,4 @@
+// discord_app/modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx
 import { ActivityTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/custom_status/utils/isActivityTemporaryCustomStatus.tsx");

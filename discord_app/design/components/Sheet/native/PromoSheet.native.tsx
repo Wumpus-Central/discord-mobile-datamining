@@ -1,3 +1,4 @@
+// discord_app/design/components/Sheet/native/PromoSheet.native.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { View } from "get ActivityIndicator";
@@ -52,7 +53,7 @@ export const PromoSheet = function PromoSheet(arg0) {
       obj = {};
       const merged1 = Object.assign(graphic);
       obj.style = tmp4.graphic;
-      let tmp6Result = tmp6(tmp7(7656).Graphic, obj);
+      let tmp6Result = tmp6(tmp7(6661).Graphic, obj);
     }
     const items1 = [tmp6Result, , ];
     let str = "heading-xl/bold";
@@ -63,7 +64,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     obj[0] = str;
     obj[2] = tmp4.title;
     obj[3] = title;
-    const items2 = [tmp6(tmp7(4281).Text, obj), ];
+    const items2 = [tmp6(tmp7(4189).Text, obj), ];
     tmp6Result = null;
     if (null != description) {
       let str2 = "text-md/medium";
@@ -79,17 +80,17 @@ export const PromoSheet = function PromoSheet(arg0) {
       obj1[1] = str3;
       obj1[2] = tmp4.description;
       obj1[3] = description;
-      tmp6Result = tmp6(tmp7(4281).Text, obj1);
+      tmp6Result = tmp6(tmp7(4189).Text, obj1);
     }
     const obj2 = { spacing: 24, children: null };
     const obj3 = { children: null };
     items2[1] = tmp6Result;
     obj3[0] = items2;
-    items1[1] = tmp9(tmp7(4693).Stack, obj3);
+    items1[1] = tmp9(tmp7(4602).Stack, obj3);
     items1[2] = actions;
     obj2[1] = items1;
     obj.children = tmp9(tmp10, obj2);
-    return tmp6(gradientColor(5338).BottomSheet, obj);
+    return tmp6(gradientColor(5247).BottomSheet, obj);
   }
   tmp6Result = null;
   if (null != illustration) {

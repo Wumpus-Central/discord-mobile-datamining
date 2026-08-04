@@ -1,3 +1,4 @@
+// discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx
 import noop from "noop";
 import { FAVORITES } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";

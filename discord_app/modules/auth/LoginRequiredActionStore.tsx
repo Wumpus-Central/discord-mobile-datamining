@@ -1,3 +1,4 @@
+// discord_app/modules/auth/LoginRequiredActionStore.tsx
 import { PersistedStore } from "initialize";
 
 function handleUpdateUser(user) {

@@ -1,3 +1,4 @@
+// discord_app/modules/chat/native/placeholder/useChatPlaceholderAnimatedStyles.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 
 const require = arg1;

@@ -1,3 +1,4 @@
+// discord_common/js/packages/markup/native/MarkupParser.tsx
 function saferParse(arg0, arg1, inline) {
   let ast;
   let hasBailedAst;
@@ -13,10 +14,10 @@ function saferParse(arg0, arg1, inline) {
   `;
     }
     const tmp8 = arg0(text, inline);
-    const flattenAstResult = require(7906) /* collectAst */.flattenAst(inline, tmp8);
-    const obj = require(7906) /* collectAst */;
-    const obj2 = require(7906) /* collectAst */;
-    ({ hasBailedAst, ast } = require(7906) /* collectAst */.constrainAst(flattenAstResult));
+    const flattenAstResult = require(7775) /* collectAst */.flattenAst(inline, tmp8);
+    const obj = require(7775) /* collectAst */;
+    const obj2 = require(7775) /* collectAst */;
+    ({ hasBailedAst, ast } = require(7775) /* collectAst */.constrainAst(flattenAstResult));
     if (tmp6) {
       ast = tmp6(ast, inline.inline, hasBailedAst);
     }
@@ -34,7 +35,7 @@ const result = require("set").fileFinishedImporting("../discord_common/js/packag
 
 export default {
   astParserFor(importDefaultResultResult) {
-    let closure_0 = importDefault(3984).parserFor(importDefaultResultResult);
+    let closure_0 = importDefault(3892).parserFor(importDefaultResultResult);
     return (arg0, inline) => {
       let str = arg0;
       if (arg0 === undefined) {
@@ -54,10 +55,10 @@ export default {
     };
   },
   reactParserFor(defaultRules) {
-    let closure_0 = importDefault(3984).parserFor(defaultRules);
-    let obj = importDefault(3984);
-    const obj2 = importDefault(3984);
-    importDefault = obj2.reactFor(importDefault(3984).ruleOutput(defaultRules, "react"));
+    let closure_0 = importDefault(3892).parserFor(defaultRules);
+    let obj = importDefault(3892);
+    const obj2 = importDefault(3892);
+    importDefault = obj2.reactFor(importDefault(3892).ruleOutput(defaultRules, "react"));
     return () => {
       let str = arg0;
       if (arg0 === undefined) {

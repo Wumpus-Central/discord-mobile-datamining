@@ -1,3 +1,4 @@
+// discord_app/modules/creator_monetization_eligibility/CreatorMonetizationEligibilityActionCreators.tsx
 import fetchApplication from "fetchApplication";
 import { Endpoints } from "ME";
 import { ApplicationTypes } from "ApplicationTypes";
@@ -81,13 +82,62 @@ function _getCreatorMonetizationEligibility() {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0, body) {
-      const HTTP = callback(530).HTTP;
-      const obj1 = { url: null, rejectWithError: null };
-      obj1[0] = outer1_4.CREATOR_MONETIZATION_ELIGIBILITY(callback);
-      const obj3 = callback(530);
-      obj1[1] = obj3.rejectWithMigratedError();
-      yield HTTP.get(obj1);
-      return body.body;
+      if (c1 === 2) {
+        c1 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c1 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c1 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c1 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              const HTTP = callback(530).HTTP;
+              const obj1 = { url: null, rejectWithError: null };
+              obj1[0] = outer1_4.CREATOR_MONETIZATION_ELIGIBILITY(callback);
+              let obj3 = callback(530);
+              obj1[1] = obj3.rejectWithMigratedError();
+              dependencyMap = 1;
+              c1 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = HTTP.get(obj1);
+              return obj2;
+            }
+          } else if (arg0 === 1) {
+            c1 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c1 = 3;
+            obj3 = { value: null, done: true };
+            obj3[0] = body;
+            return obj3;
+          } else {
+            c1 = 3;
+            obj = { value: null, done: true };
+            obj[0] = body.body;
+            return obj;
+          }
+        } catch (tmp9) {
+          c1 = tmp;
+          throw tmp9;
+        }
+      }
     })();
   });
   const _getCreatorMonetizationEligibility = tmp;
@@ -249,13 +299,62 @@ function _getCreatorMonetizationOnboardingMarketing() {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0, body) {
-      const HTTP = callback(530).HTTP;
-      const obj1 = { url: null, rejectWithError: null };
-      obj1[0] = outer1_4.CREATOR_MONETIZATION_MARKETING_ONBOARDING(callback);
-      const obj3 = callback(530);
-      obj1[1] = obj3.rejectWithMigratedError();
-      yield HTTP.get(obj1);
-      return body.body;
+      if (c1 === 2) {
+        c1 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c1 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c1 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c1 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              const HTTP = callback(530).HTTP;
+              const obj1 = { url: null, rejectWithError: null };
+              obj1[0] = outer1_4.CREATOR_MONETIZATION_MARKETING_ONBOARDING(callback);
+              let obj3 = callback(530);
+              obj1[1] = obj3.rejectWithMigratedError();
+              dependencyMap = 1;
+              c1 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = HTTP.get(obj1);
+              return obj2;
+            }
+          } else if (arg0 === 1) {
+            c1 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c1 = 3;
+            obj3 = { value: null, done: true };
+            obj3[0] = body;
+            return obj3;
+          } else {
+            c1 = 3;
+            obj = { value: null, done: true };
+            obj[0] = body.body;
+            return obj;
+          }
+        } catch (tmp9) {
+          c1 = tmp;
+          throw tmp9;
+        }
+      }
     })();
   });
   const _getCreatorMonetizationOnboardingMarketing = tmp;
@@ -275,24 +374,74 @@ function _ownershipTransferOnboard() {
     let c4 = 0;
     let c5 = 0;
     return (function*(arg0, body) {
-      let fetchApplication = tmp2;
-      const table = tmp5;
-      const HTTP = callback(outer1_2[3]).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: null };
-      obj1[0] = c4.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(body);
-      const obj2 = { team_id: null };
-      obj2[0] = callback2;
-      obj1[1] = obj2;
-      obj1[2] = callback(outer1_2[3]).rejectWithMigratedError();
-      yield HTTP.post(obj1);
-      body = body.body;
-      if (null != body.application) {
-        const obj = callback2(table[4]);
-        const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
-        obj5[1] = body.application;
-        obj.dispatch(obj5);
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              let fetchApplication = tmp2;
+              const table = tmp5;
+              body = undefined;
+              const HTTP = callback(outer1_2[3]).HTTP;
+              const obj1 = { url: null, body: null, rejectWithError: null };
+              obj1[0] = c4.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(body);
+              const obj2 = { team_id: null };
+              obj2[0] = callback2;
+              obj1[1] = obj2;
+              obj1[2] = callback(outer1_2[3]).rejectWithMigratedError();
+              c4 = 1;
+              c5 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.post(obj1);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = body;
+            return obj4;
+          } else {
+            body = body.body;
+            if (null != body.application) {
+              obj = callback2(table[4]);
+              const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
+              obj5[1] = body.application;
+              obj.dispatch(obj5);
+            }
+            c5 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = body;
+            return obj6;
+          }
+        } catch (tmp13) {
+          c5 = tmp;
+          throw tmp13;
+        }
       }
-      return body;
     })();
   });
   const _ownershipTransferOnboard = tmp;
@@ -383,22 +532,87 @@ function _removeMonetization() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      const callback = tmp2;
-      yield (function requestRemoveMonetization(closure_0) {
-        const self = this;
-        const apply = closure_12.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          applyArgumentsResult = apply(self, arguments);
+          return { value: "HermesInternal", done: null };
         }
-        return applyArgumentsResult;
-      })(closure_0);
-      const obj2 = callback(table[5]);
-      const obj3 = { type: null, includeTeam: true };
-      obj3[0] = constants.GUILD_ROLE_SUBSCRIPTIONS;
-      yield obj2.getApplicationsForGuild(closure_0, obj3);
-      return arg1;
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const table = tmp5;
+              const callback = tmp2;
+              c3 = 1;
+              c4 = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = (function requestRemoveMonetization(closure_0) {
+                const self = this;
+                const apply = closure_12.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(closure_0);
+              return obj1;
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              let obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
+            } else {
+              obj2 = callback(table[5]);
+              const obj3 = { type: null, includeTeam: true };
+              obj3[0] = constants.GUILD_ROLE_SUBSCRIPTIONS;
+              c3 = 2;
+              c4 = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = obj2.getApplicationsForGuild(closure_0, obj3);
+              return obj4;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = arg1;
+            return obj5;
+          } else {
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp13) {
+          c4 = tmp;
+          throw tmp13;
+        }
+      }
     })();
   });
   const _removeMonetization = tmp;

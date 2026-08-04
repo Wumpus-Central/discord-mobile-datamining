@@ -1,3 +1,4 @@
+// discord_app/design/components/Pile/native/PileOverflow.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";
@@ -40,6 +41,6 @@ export const PileOverflow = function PileOverflow(size) {
   const obj1 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: str, children: null };
   const items2 = ["+", require(1851) /* shortenAndLocalizeNumber */.humanizeValue(value, stateFromStores)];
   obj1[3] = items2;
-  obj[1] = closure_4(require(4281) /* Text */.Text, obj1);
+  obj[1] = closure_4(require(4189) /* Text */.Text, obj1);
   return closure_5(View, obj);
 };

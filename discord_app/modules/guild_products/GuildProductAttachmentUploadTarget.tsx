@@ -1,3 +1,4 @@
+// discord_app/modules/guild_products/GuildProductAttachmentUploadTarget.tsx
 import GUILD_PRODUCT_EDIT_MODAL_KEY from "GUILD_PRODUCT_EDIT_MODAL_KEY";
 import { Endpoints } from "ME";
 

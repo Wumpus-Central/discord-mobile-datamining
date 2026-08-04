@@ -1,3 +1,4 @@
+// discord_app/modules/app_database/util/Iterable.tsx
 class Chained {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -26,7 +27,7 @@ const result = require("set").fileFinishedImporting("modules/app_database/util/I
 
 export const chain = function chain() {
   const items = [...arguments];
-  if (typeof Chained !== "function") {
+  if (typeof Chained !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(Chained.prototype);

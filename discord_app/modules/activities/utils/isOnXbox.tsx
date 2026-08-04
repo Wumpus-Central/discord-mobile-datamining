@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/isOnXbox.tsx
 import { XBOX_ACTIVITY_APPLICATION_ID as closure_0 } from "items3";
 import { ActivityGamePlatforms } from "ME";
 

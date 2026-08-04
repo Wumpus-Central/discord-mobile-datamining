@@ -1,3 +1,4 @@
+// discord_app/utils/BasicPermissionUtils.tsx
 const result = require("set").fileFinishedImporting("utils/BasicPermissionUtils.tsx");
 const prototype = function BasicPermissionUtils() {
   return Object.create(new.target.prototype);

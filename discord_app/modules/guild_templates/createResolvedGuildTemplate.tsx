@@ -1,3 +1,4 @@
+// discord_app/modules/guild_templates/createResolvedGuildTemplate.tsx
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
 
 const result = require("set").fileFinishedImporting("modules/guild_templates/createResolvedGuildTemplate.tsx");

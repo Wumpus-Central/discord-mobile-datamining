@@ -1,3 +1,4 @@
+// discord_app/modules/guild_automod/native/ModerateUserActionSheet.tsx
 import importAllResult from "showModerateUserActionSheet";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

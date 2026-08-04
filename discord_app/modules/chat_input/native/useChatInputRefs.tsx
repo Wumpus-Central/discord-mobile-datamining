@@ -1,3 +1,4 @@
+// discord_app/modules/chat_input/native/useChatInputRefs.tsx
 import useKeyboardType from "useKeyboardType";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import { DraftType } from "handleChanged";
@@ -39,7 +40,7 @@ export default function useChatInputRefs(chatInputProps) {
   mergeGuildAvatar = React.useRef(null);
   closure_9 = React.useRef(null);
   closure_10 = React.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(5598)(() => chatInputProps(4144).createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
+  const tmp2 = chatInputTextFieldHeight(5507)(() => chatInputProps(4052).createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex));
   c11 = tmp2;
   closure_12 = React.useRef(chatInputProps);
   closure_13 = React.useRef(chatInputProps);
@@ -65,7 +66,7 @@ export default function useChatInputRefs(chatInputProps) {
       closure_11.handleRef(null, channel.channel.id);
     };
   }, items2);
-  closure_14 = React.useRef(chatInputTextFieldHeight(5598)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
+  closure_14 = React.useRef(chatInputTextFieldHeight(5507)(() => ({ editId: null, focused: false, selectionStart: 0, selectionEnd: 0, text: chatInputProps.defaultValue, textPrev: chatInputProps.defaultValue, textFieldContentSize: 0, textFieldHeight: chatInputTextFieldHeight })));
   closure_15 = React.useRef({ handledHereMention: false, sending: false });
   const items3 = [tmp2];
   const memo = React.useMemo(() => {
@@ -306,7 +307,7 @@ export default function useChatInputRefs(chatInputProps) {
           threadCreationCallback = outer1_13.current.threadCreationCallback;
           if (null != threadCreationCallback) {
             const text = chatInputTextFieldHeight(ref[13]).getText(outer1_8.current, outer1_10.current, (text) => {
-              let obj = chatInputProps(11300);
+              let obj = chatInputProps(11188);
               obj = { text, params: null };
               obj = {};
               const merged = Object.assign(outer2_13.current);
@@ -317,8 +318,8 @@ export default function useChatInputRefs(chatInputProps) {
                 const obj1 = { text: null, threadCreationCallback: null };
                 obj1[0] = result.content;
                 obj1[1] = threadCreationCallback;
-                const result1 = chatInputProps(11300).chatInputCreateThread(obj1);
-                const tmpResult = chatInputProps(11300);
+                const result1 = chatInputProps(11188).chatInputCreateThread(obj1);
+                const tmpResult = chatInputProps(11188);
               }
             });
             tmp.current.sending = false;
@@ -350,7 +351,7 @@ export default function useChatInputRefs(chatInputProps) {
                   }
                 } else {
                   closure_1.cancel();
-                  let obj = threadCreationCallback(11300);
+                  let obj = threadCreationCallback(11188);
                   obj = { text: null, params: null };
                   obj[0] = arg0;
                   obj = {};
@@ -360,7 +361,7 @@ export default function useChatInputRefs(chatInputProps) {
                   obj[1] = obj;
                   const result = obj.chatInputHandleSendText(obj);
                 }
-                const keyboardType = threadCreationCallback(4151).getKeyboardType();
+                const keyboardType = threadCreationCallback(4059).getKeyboardType();
                 if (keyboardType === threadCreationCallback(1579).KeyboardTypes.SYSTEM) {
                   const current2 = tmp8.current;
                   current2.focus();
@@ -401,7 +402,7 @@ export default function useChatInputRefs(chatInputProps) {
           closure_16.current.dismissKeyboard();
         }
       },
-      handleSelectSticker(sticker, tokenStart) {
+      handleSelectSticker(sticker, arg1) {
         let channel;
         let threadCreationCallback;
         const current = outer1_13.current;
@@ -412,8 +413,8 @@ export default function useChatInputRefs(chatInputProps) {
             if (!obj4.isStandardSticker(current2)) {
               const text = outer1_14.current.text;
               let sum = text;
-              if (null != tokenStart) {
-                const substr = text.slice(0, tokenStart);
+              if (null != arg1) {
+                const substr = text.slice(0, arg1);
                 sum = substr + text.slice(tmp6);
               }
               let tmp16Result = tmp16(tmp17[31]);
@@ -473,20 +474,16 @@ export default function useChatInputRefs(chatInputProps) {
       handleTextChanged(text) {
         lib(text);
       },
-      insertText(focused, tokenStart, flag, arg3, arg4) {
-        let selectionStart = tokenStart;
-        if (null == tokenStart) {
+      insertText(autocompleteResultText, arg1, flag, arg3) {
+        let selectionStart = arg1;
+        if (null == arg1) {
           selectionStart = closure_14.current.selectionStart;
         }
-        let selectionEnd = arg4;
-        if (arg4 == null) {
-          selectionEnd = closure_14.current.selectionEnd;
-        }
         const current = closure_16.current;
-        const obj = { location: selectionStart, length: Math.max(0, selectionEnd - selectionStart), text: null, nodes: null, editId: null };
-        let text = focused;
+        const obj = { location: selectionStart, length: closure_14.current.selectionEnd - selectionStart, text: null, nodes: null, editId: null };
+        let text = autocompleteResultText;
         if (flag) {
-          text = `${focused} `;
+          text = `${autocompleteResultText} `;
         }
         obj[2] = text;
         obj[3] = arg3;

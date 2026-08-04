@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx
 import importAllResult from "noop";
 import { NOOP } from "sum";
 import { jsx } from "jsxProd";
@@ -7,7 +8,7 @@ const context = importAllResult.createContext({
   registerDismiss(arg0) {
     return NOOP;
   },
-  handleDismissCoachmarkOnScroll: "a"
+  handleDismissCoachmarkOnScroll: "Array"
 });
 const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/CollectiblesCoachmarkScrollDismissContext.tsx");
 

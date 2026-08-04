@@ -1,5 +1,6 @@
+// discord_app/modules/games/hooks/useGame.tsx
 import noop from "noop";
-import importDefaultResult1 from "handleLoadMessages";
+import importDefaultResult1 from "map";
 import initialize from "initialize";
 import importDefaultResult from "set";
 
@@ -112,7 +113,7 @@ initialize[5] = function getError(gameId) {
   return error;
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult1, initialize);
-const result = require("handleLoadMessages").fileFinishedImporting("modules/games/hooks/useGame.tsx");
+const result = require("map").fileFinishedImporting("modules/games/hooks/useGame.tsx");
 
 export const useGame = fetchStore;
 export const useGames = function useGames(memo) {

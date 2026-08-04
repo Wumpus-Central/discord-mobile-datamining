@@ -1,3 +1,4 @@
+// discord_app/modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { LinkType } from "LinkType";
 

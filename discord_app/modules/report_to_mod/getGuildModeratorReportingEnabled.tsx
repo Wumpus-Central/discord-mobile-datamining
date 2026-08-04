@@ -1,3 +1,4 @@
+// discord_app/modules/report_to_mod/getGuildModeratorReportingEnabled.tsx
 const result = require("set").fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportingEnabled.tsx");
 
 export default function getGuildModeratorReportingEnabled(moderatorReporting) {

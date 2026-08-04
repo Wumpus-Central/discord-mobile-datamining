@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx
 import getSystemLocale from "getSystemLocale";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -134,19 +135,19 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
     return applyArgumentsResult;
   }
   let stringResult3 = dependencyMap;
-  let obj = _require(14348);
+  let obj = _require(14248);
   const subscriptionListing = obj.useSubscriptionListing(editStateId);
-  const removeEditStateId = importAll(14363).useEditStateIds(groupListingId, guildId).removeEditStateId;
-  let obj2 = importAll(14363);
-  const deleteSubscriptionListing = _require(14348).useDeleteSubscriptionListing();
+  const removeEditStateId = importAll(14263).useEditStateIds(groupListingId, guildId).removeEditStateId;
+  let obj2 = importAll(14263);
+  const deleteSubscriptionListing = _require(14248).useDeleteSubscriptionListing();
   ({ error, deleteSubscriptionListing: closure_8, submitting } = deleteSubscriptionListing);
-  let obj3 = _require(14348);
-  const archiveSubscriptionListing = _require(14348).useArchiveSubscriptionListing();
+  let obj3 = _require(14248);
+  const archiveSubscriptionListing = _require(14248).useArchiveSubscriptionListing();
   let closure_9 = archiveSubscriptionListing.archiveSubscriptionListing;
   ({ submitting: submitting2, error: error2 } = archiveSubscriptionListing);
   let closure_10 = removeEditStateId(null);
-  let obj4 = _require(14348);
-  const first = callback(importAll(14363).useName(editStateId), 1)[0];
+  let obj4 = _require(14248);
+  const first = callback(importAll(14263).useName(editStateId), 1)[0];
   let archived;
   if (subscriptionListing != null) {
     archived = subscriptionListing.archived;
@@ -180,8 +181,8 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
         if (null != tmp2) {
           ref.current = tmp2;
           const intl = guildId(1236).intl;
-          editStateId(3985).presentFailedToast(intl.string(guildId(1236).t.R0RpRX));
-          const obj = editStateId(3985);
+          editStateId(3893).presentFailedToast(intl.string(guildId(1236).t.R0RpRX));
+          const obj = editStateId(3893);
         }
       }, items);
       obj = { headerText: null, buttonText: null, descriptionText: null, handleArchiveOrDelete: null, deleting: null, archiving: null };

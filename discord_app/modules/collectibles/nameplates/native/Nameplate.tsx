@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/nameplates/native/Nameplate.tsx
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
@@ -48,7 +49,7 @@ function NameplateInner(isFocused) {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = callback2(flag3, isPressed, flag, flag2, flag5);
-  let obj1 = flag6(4146);
+  let obj1 = flag6(4054);
   let num = 1;
   if (flag6) {
     num = 0;
@@ -64,7 +65,7 @@ function NameplateInner(isFocused) {
       const result = sharedValue.set(obj.withTiming(1, obj));
     }
   }, items1);
-  let tmpResult = tmp(4146);
+  let tmpResult = tmp(4054);
   class A {
     constructor() {
       obj = { opacity: c1.get() };
@@ -76,9 +77,9 @@ function NameplateInner(isFocused) {
   A.__initData = closure_8;
   const animatedStyle = tmpResult.useAnimatedStyle(A);
   tmpResult = tmp(1898);
-  const backgroundGradientColors = tmpResult.getBackgroundGradientColors(nameplate.palette, sharedValue(4221)());
-  const tmp6 = sharedValue(4221)();
-  const nameplateAssets = flag6(9309).getNameplateAssets(nameplate);
+  const backgroundGradientColors = tmpResult.getBackgroundGradientColors(nameplate.palette, sharedValue(4129)());
+  const tmp6 = sharedValue(4129)();
+  const nameplateAssets = flag6(8075).getNameplateAssets(nameplate);
   ({ staticImageUrl, animatedImageUrl } = nameplateAssets);
   if (flag7) {
     flag7 = !stateFromStores;
@@ -106,25 +107,25 @@ function NameplateInner(isFocused) {
     const items3 = [, ];
     ({ left: arr4[0], right: arr4[1] } = backgroundGradientColors);
     obj[3] = items3;
-    tmp14Result = callback(tmp5(4706), obj);
+    tmp14Result = callback(tmp5(4615), obj);
     const tmp14 = callback;
-    const tmp5Result = tmp5(4706);
+    const tmp5Result = tmp5(4615);
   }
   const items4 = [tmp14Result, ];
   const tmp12 = closure_6;
-  const tmpResult1 = flag6(9309);
+  const tmpResult1 = flag6(8075);
   if (tmpResult2.isAndroid()) {
     if (flag7) {
       const obj2 = { url: null, style: null, autoplay: true };
       obj2[0] = staticImageUrl;
       obj2[1] = tmp4.img;
-      let tmp16 = callback(tmp(9304).APNGPlayer, obj2);
+      let tmp16 = callback(tmp(6210).APNGPlayer, obj2);
     }
     items4[1] = tmp16;
     obj[1] = items4;
-    return tmp12(tmp5(4146).View, obj);
+    return tmp12(tmp5(4054).View, obj);
   }
-  tmp16 = callback(tmp5(5236), { source: { uri: staticImageUrl }, style: tmp4.img, accessibilityRole: "image" });
+  tmp16 = callback(tmp5(5145), { source: { uri: staticImageUrl }, style: tmp4.img, accessibilityRole: "image" });
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {

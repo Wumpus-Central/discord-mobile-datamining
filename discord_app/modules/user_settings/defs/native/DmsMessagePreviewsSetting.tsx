@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DmsMessagePreviewsSetting.tsx
 import noop from "noop";
 import createToggle from "createToggle";
 
@@ -9,10 +10,10 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: function useDMsMessagePreviewsValue() {
-    return require(14453) /* useMessagePreview */.useMessagePreviewSetting();
+    return require(14353) /* useMessagePreview */.useMessagePreviewSetting();
   },
   onValueChange: function onDMsMessagePreviewsValueChange(arg0) {
-    const MessagePreviewSetting = require(3958) /* explicitContentFromProto */.MessagePreviewSetting;
+    const MessagePreviewSetting = require(3866) /* explicitContentFromProto */.MessagePreviewSetting;
     MessagePreviewSetting.updateSetting(arg0);
   },
   useOptions: function useDMsMessagePreviewsOptions() {
@@ -20,17 +21,17 @@ createToggle = {
       let obj = { label: null, value: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t["8K53DF"]);
-      obj[1] = callback(3963).MessagePreviewTypes.ALL;
+      obj[1] = callback(3871).MessagePreviewTypes.ALL;
       const items = [obj, , ];
       obj = { label: null, value: null };
       const intl2 = callback(1236).intl;
       obj[0] = intl2.string(callback(1236).t.Gw11zg);
-      obj[1] = callback(3963).MessagePreviewTypes.UNREADS;
+      obj[1] = callback(3871).MessagePreviewTypes.UNREADS;
       items[1] = obj;
       obj = { label: null, value: null };
       const intl3 = callback(1236).intl;
       obj[0] = intl3.string(callback(1236).t.R2Ok7F);
-      obj[1] = callback(3963).MessagePreviewTypes.NONE;
+      obj[1] = callback(3871).MessagePreviewTypes.NONE;
       items[2] = obj;
       return items;
     }, []);

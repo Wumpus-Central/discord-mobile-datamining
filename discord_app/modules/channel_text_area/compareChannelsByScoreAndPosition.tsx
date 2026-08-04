@@ -1,3 +1,4 @@
+// discord_app/modules/channel_text_area/compareChannelsByScoreAndPosition.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChannelTypes } from "ME";
 

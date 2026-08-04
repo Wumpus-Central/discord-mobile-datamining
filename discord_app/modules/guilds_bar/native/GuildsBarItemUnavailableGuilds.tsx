@@ -1,3 +1,4 @@
+// discord_app/modules/guilds_bar/native/GuildsBarItemUnavailableGuilds.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleConnectionOpen from "handleConnectionOpen";
 import { jsx } from "jsxProd";
@@ -39,7 +40,7 @@ const memoResult = require("noop").memo(function GuildsBarItemUnavailableGuilds(
     obj[3] = tmp.unavailableGuilds;
     const obj1 = { style: null, source: null };
     obj1[0] = tmp.unavailableGuildsIcon;
-    obj1[1] = importDefault(15335);
+    obj1[1] = importDefault(15018);
     obj[4] = <closure_3 style={null} source={null} />;
     tmp5 = <closure_4 count={null} />;
   }

@@ -1,3 +1,4 @@
+// discord_app/modules/checkout/CheckoutError.tsx
 import { RevenueError } from "prototype";
 
 const prototype = function CheckoutError(arg0) {

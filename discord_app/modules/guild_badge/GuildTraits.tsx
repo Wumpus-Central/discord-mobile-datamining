@@ -1,3 +1,4 @@
+// discord_app/modules/guild_badge/GuildTraits.tsx
 import ME from "ME";
 
 let c3;

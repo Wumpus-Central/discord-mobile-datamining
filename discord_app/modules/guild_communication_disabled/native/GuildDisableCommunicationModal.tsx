@@ -1,3 +1,4 @@
+// discord_app/modules/guild_communication_disabled/native/GuildDisableCommunicationModal.tsx
 import "noop";
 import { jsx } from "jsxProd";
 

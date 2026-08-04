@@ -1,3 +1,4 @@
+// discord_app/modules/activities/panel/native/ActivityPanelNativeConstants.tsx
 let obj = { top: null };
 obj = { disable: false, override: require("ActivityPanelModes").ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT };
 obj[0] = obj;

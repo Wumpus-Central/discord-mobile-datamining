@@ -1,3 +1,4 @@
+// discord_common/js/shared/utils/Future.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");
 
 export const Future = function Future() {

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_sidebar/SidebarVisibilityMethodStore.tsx
 import keys from "keys";
 
 let obj = keys.create(() => ({}));

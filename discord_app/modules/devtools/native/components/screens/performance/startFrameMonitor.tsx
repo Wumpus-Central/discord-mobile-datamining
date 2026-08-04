@@ -1,3 +1,4 @@
+// discord_app/modules/devtools/native/components/screens/performance/startFrameMonitor.tsx
 let c0 = 16.666666666666668;
 const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/startFrameMonitor.tsx");
 

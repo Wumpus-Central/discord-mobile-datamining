@@ -1,3 +1,4 @@
+// discord_app/modules/game_detection/GameDetectionTypes.tsx
 import "toJS";
 import { createExecutable } from "createExecutable";
 

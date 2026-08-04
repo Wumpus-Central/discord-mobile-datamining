@@ -1,3 +1,4 @@
+// discord_app/modules/payments/OrderActionCreators.tsx
 import _createGatewayCheckoutContext from "_createGatewayCheckoutContext";
 import { Endpoints } from "ME";
 import "set";
@@ -93,7 +94,7 @@ function _signOrder() {
             if (c5 instanceof callback(530).HTTPResponseError) {
               if (400 === c5.status) {
                 if ((function isOrderShape(body) {
-                  let tmp = null != body && typeof body === "object";
+                  let tmp = null != body && typeof body === "ay";
                   if (tmp) {
                     tmp = "id" in body;
                   }

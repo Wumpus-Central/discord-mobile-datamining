@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx
 import importAllResult from "noop";
 import prototype from "prototype";
 import { setIsChannelDetailsSearchActive as closure_5 } from "useChannelDetailsStore";

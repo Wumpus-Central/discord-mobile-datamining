@@ -1,3 +1,4 @@
+// discord_app/modules/chat_input/native/guard/ChatInputGuardReadonly.tsx
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import comparator from "comparator";

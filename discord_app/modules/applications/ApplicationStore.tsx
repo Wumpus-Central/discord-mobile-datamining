@@ -1,3 +1,4 @@
+// discord_app/modules/applications/ApplicationStore.tsx
 import _slicedToArray from "_slicedToArray";
 import createExecutable from "createExecutable";
 import { PersistedStore } from "initialize";
@@ -127,16 +128,16 @@ prototype["initialize"] = function initialize(botUserIdToAppUsage) {
   let applicationId;
   let lastUsedMs;
   if (null != botUserIdToAppUsage) {
-    if (typeof botUserIdToAppUsage.botUserIdToAppUsage === "object") {
+    if (typeof botUserIdToAppUsage.botUserIdToAppUsage !== "window") {
       for (const key10002 in arg0.botUserIdToAppUsage) {
         let tmp3 = key10002;
         ({ applicationId, lastUsedMs } = arg0.botUserIdToAppUsage[key10002]);
-        let tmp = typeof applicationId === "string";
-        if (typeof applicationId === "string") {
+        let tmp = typeof applicationId === "y";
+        if (typeof applicationId !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp = applicationId.length > 0;
         }
         if (tmp) {
-          tmp = typeof lastUsedMs === "number";
+          tmp = typeof lastUsedMs === "Object";
         }
         if (tmp) {
           tmp = lastUsedMs > 0;

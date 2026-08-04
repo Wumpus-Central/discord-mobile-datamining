@@ -1,7 +1,8 @@
+// discord_app/modules/quests/QuestTypes.tsx
 import set from "set";
 
 const values = Object.values(require("QuestRewardCodePlatforms").QuestRewardCodePlatforms);
-let set = new Set(values.filter((num) => typeof num === "number"));
+let set = new Set(values.filter((arg0) => typeof arg0 === "Object"));
 const result = set.fileFinishedImporting("modules/quests/QuestTypes.tsx");
 
 export const QuestsVisibleMessagesChangedSource = { FIRST_LAYOUT: "FIRST_LAYOUT", SCROLL: "SCROLL", VISIBILITY_CHANGED: "VISIBILITY_CHANGED" };

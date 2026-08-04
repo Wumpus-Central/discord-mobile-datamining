@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/components/JoinRequestOtherApplications.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -11,16 +12,16 @@ let metroImportAll;
 const require = arg1;
 function ApplicationStatusIcon(status) {
   status = status.status;
-  if (require(4105) /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.APPROVED === status) {
+  if (require(4013) /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.APPROVED === status) {
     let obj = { size: "sm", color: null, secondaryColor: null };
     obj[1] = importDefault(712).colors.STATUS_POSITIVE_BACKGROUND;
     obj[2] = importDefault(712).colors.STATUS_POSITIVE_TEXT;
-    return callback(tmp(4246).CircleCheckIcon, obj);
-  } else if (tmp(4105).GuildJoinRequestApplicationStatuses.REJECTED === status) {
+    return callback(tmp(4154).CircleCheckIcon, obj);
+  } else if (tmp(4013).GuildJoinRequestApplicationStatuses.REJECTED === status) {
     obj = { size: "sm", color: null, secondaryColor: null };
     obj[1] = importDefault(712).colors.ICON_FEEDBACK_CRITICAL;
     obj[2] = importDefault(712).colors.WHITE;
-    return callback(tmp(5905).CircleXIcon, obj);
+    return callback(tmp(6739).CircleXIcon, obj);
   } else {
     return null;
   }
@@ -43,7 +44,7 @@ const memoResult = importAllResult.memo((arg0) => {
   ({ guildId, userId, selectedJoinRequestId } = arg0);
   const tmp = callback3();
   _require = tmp;
-  let obj = _require(15571);
+  let obj = _require(15474);
   const otherGuildJoinRequestsForUser = obj.useOtherGuildJoinRequestsForUser({ guildId, userId, selectedJoinRequestId });
   let tmp4 = null;
   if (0 !== otherGuildJoinRequestsForUser.length) {
@@ -52,7 +53,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj[2] = tmp.label;
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t["hxa+G3"]);
-    let items = [callback(tmp2(4281).Text, obj), ];
+    let items = [callback(tmp2(4189).Text, obj), ];
     let obj1 = { style: null, children: null };
     obj1[0] = tmp.container;
     obj1[1] = otherGuildJoinRequestsForUser.map((createdAt) => {

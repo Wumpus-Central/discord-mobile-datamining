@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/nameplates/utils.tsx
 import { isNameplateRecord } from "fromServer";
 import { ThemeTypes } from "sum";
 

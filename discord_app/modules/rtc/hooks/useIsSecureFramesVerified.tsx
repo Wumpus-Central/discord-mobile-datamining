@@ -1,3 +1,4 @@
+// discord_app/modules/rtc/hooks/useIsSecureFramesVerified.tsx
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import computeCallVerification from "computeCallVerification";

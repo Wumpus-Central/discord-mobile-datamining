@@ -1,3 +1,4 @@
+// discord_app/modules/reactions/canAddNewReactions.tsx
 import recomputeGuild from "recomputeGuild";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";

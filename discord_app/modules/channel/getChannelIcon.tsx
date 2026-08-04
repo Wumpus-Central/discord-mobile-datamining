@@ -1,3 +1,4 @@
+// discord_app/modules/channel/getChannelIcon.tsx
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ChannelTypes } from "ME";

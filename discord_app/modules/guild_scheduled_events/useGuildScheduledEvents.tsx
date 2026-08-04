@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/useGuildScheduledEvents.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -275,11 +276,11 @@ export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildE
   return React.useMemo(() => stateFromStores.filter((status) => {
     let endTime;
     let startTime;
-    const eventSchedule = callback(8870).getEventSchedule(status);
+    const eventSchedule = callback(8220).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
-    const obj = callback(8870);
+    const obj = callback(8220);
     let toISOStringResult1;
-    const obj2 = callback(8864);
+    const obj2 = callback(8214);
     if (endTime != null) {
       toISOStringResult1 = endTime.toISOString();
     }

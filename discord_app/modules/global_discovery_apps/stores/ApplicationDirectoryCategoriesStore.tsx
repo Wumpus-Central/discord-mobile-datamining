@@ -1,3 +1,4 @@
+// discord_app/modules/global_discovery_apps/stores/ApplicationDirectoryCategoriesStore.tsx
 import { Store } from "initialize";
 
 let closure_0 = [];

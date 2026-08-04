@@ -1,3 +1,4 @@
+// discord_app/modules/games/GameRecord.tsx
 import "toJS";
 import createExecutable from "createExecutable";
 import { createExecutable } from "createExecutable";
@@ -133,7 +134,7 @@ prototype["getIconURL"] = function getIconURL(size, format) {
   if (media != null) {
     icon = media.icon;
   }
-  return importDefault(4315)(this.id, icon, { size, format });
+  return importDefault(4223)(this.id, icon, { size, format });
 };
 prototype["getBannerURL"] = function getBannerURL(size) {
   const media = this.media;
@@ -141,7 +142,7 @@ prototype["getBannerURL"] = function getBannerURL(size) {
   if (media != null) {
     banner = media.banner;
   }
-  return importDefault(4315)(this.id, banner, { keepAspectRatio: true, size });
+  return importDefault(4223)(this.id, banner, { keepAspectRatio: true, size });
 };
 prototype["getCoverURL"] = function getCoverURL(size) {
   const media = this.media;
@@ -153,7 +154,7 @@ prototype["getCoverURL"] = function getCoverURL(size) {
   if (require(1416) /* getAvatarURL */.SUPPORTS_WEBP) {
     str = "webp";
   }
-  return importDefault(4315)(this.id, cover, { keepAspectRatio: true, format: str, size });
+  return importDefault(4223)(this.id, cover, { keepAspectRatio: true, format: str, size });
 };
 prototype["getArtworkURLs"] = function getArtworkURLs() {
   const self = this;

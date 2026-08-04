@@ -1,3 +1,4 @@
+// discord_app/modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 
 const require = arg1;

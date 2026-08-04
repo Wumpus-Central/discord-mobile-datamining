@@ -1,3 +1,4 @@
+// discord_app/stores/IdleStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";
 import { SpeakingFlags } from "DesktopSources";
@@ -22,7 +23,7 @@ function checkIdleAFK() {
         const obj2 = importDefault(709);
       }
     }
-    const AfkTimeout = require(3958) /* explicitContentFromProto */.AfkTimeout;
+    const AfkTimeout = require(3866) /* explicitContentFromProto */.AfkTimeout;
     const setting = AfkTimeout.getSetting();
     if (0 !== setting) {
       if (null == closure_3) {
@@ -77,7 +78,7 @@ if (require("set").isPlatformEmbedded) {
   }
   if (null != powerMonitor) {
     function checkNativeIdle() {
-      const tmp3 = importDefault(3896);
+      const tmp3 = importDefault(3804);
       let getSystemIdleTimeMs;
       if (tmp3 != null) {
         const powerMonitor = tmp3.powerMonitor;
@@ -86,7 +87,7 @@ if (require("set").isPlatformEmbedded) {
         }
       }
       if (null != getSystemIdleTimeMs) {
-        const powerMonitor2 = tmp(3896).powerMonitor;
+        const powerMonitor2 = tmp(3804).powerMonitor;
         const systemIdleTimeMs = powerMonitor2.getSystemIdleTimeMs();
         if (systemIdleTimeMs instanceof Promise) {
           systemIdleTimeMs.then(function handleIdleTime(arg0) {
@@ -132,7 +133,7 @@ if (require("set").isPlatformEmbedded) {
       let c11 = true;
       let closure_3 = Date.now();
       checkIdleAFK();
-      importDefault(5096).disconnect();
+      importDefault(5005).disconnect();
     });
     const powerMonitor3 = require("set").powerMonitor;
     class IdleStore extends r10079 {

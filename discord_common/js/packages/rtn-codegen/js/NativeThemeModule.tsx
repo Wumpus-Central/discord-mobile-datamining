@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/NativeThemeModule.tsx
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const enforcing = TurboModuleRegistry.getEnforcing("NativeThemeModule");

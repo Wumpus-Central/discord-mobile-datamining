@@ -1,3 +1,4 @@
+// discord_app/modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx
 import set from "set";
 import { Endpoints } from "ME";
 
@@ -10,12 +11,61 @@ function _getApplicationSubscriptionGroupListingsForApplication() {
     let c3 = 0;
     let c2 = 0;
     return (function*(arg0, body) {
-      const HTTP = callback(530).HTTP;
-      const obj1 = { url: null, rejectWithError: null };
-      obj1[0] = outer1_4.APPLICATION_SUBSCRIPTION_GROUP_LISTING(callback, closure_1);
-      obj1[1] = callback(530).rejectWithMigratedError();
-      yield HTTP.get(obj1);
-      return body.body;
+      if (dependencyMap === 2) {
+        dependencyMap = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          dependencyMap = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              dependencyMap = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              dependencyMap = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              const HTTP = callback(530).HTTP;
+              const obj1 = { url: null, rejectWithError: null };
+              obj1[0] = outer1_4.APPLICATION_SUBSCRIPTION_GROUP_LISTING(callback, closure_1);
+              obj1[1] = callback(530).rejectWithMigratedError();
+              c3 = 1;
+              dependencyMap = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = HTTP.get(obj1);
+              return obj2;
+            }
+          } else if (arg0 === 1) {
+            dependencyMap = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            dependencyMap = 3;
+            const obj3 = { value: null, done: true };
+            obj3[0] = body;
+            return obj3;
+          } else {
+            dependencyMap = 3;
+            obj = { value: null, done: true };
+            obj[0] = body.body;
+            return obj;
+          }
+        } catch (tmp5) {
+          dependencyMap = tmp;
+          throw tmp5;
+        }
+      }
     })();
   });
   const _getApplicationSubscriptionGroupListingsForApplication = tmp;
@@ -34,13 +84,62 @@ function _getEntitlementsForGuild() {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0, body) {
-      const HTTP = callback(530).HTTP;
-      const obj1 = { url: null, query: null, rejectWithError: null };
-      obj1[0] = outer1_4.GUILD_ENTITLEMENTS(callback);
-      obj1[1] = { with_sku: true, with_application: true };
-      obj1[2] = callback(530).rejectWithMigratedError();
-      yield HTTP.get(obj1);
-      return body.body;
+      if (c1 === 2) {
+        c1 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c1 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c1 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c1 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              const HTTP = callback(530).HTTP;
+              const obj1 = { url: null, query: null, rejectWithError: null };
+              obj1[0] = outer1_4.GUILD_ENTITLEMENTS(callback);
+              obj1[1] = { with_sku: true, with_application: true };
+              obj1[2] = callback(530).rejectWithMigratedError();
+              dependencyMap = 1;
+              c1 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = HTTP.get(obj1);
+              return obj2;
+            }
+          } else if (arg0 === 1) {
+            c1 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c1 = 3;
+            const obj3 = { value: null, done: true };
+            obj3[0] = body;
+            return obj3;
+          } else {
+            c1 = 3;
+            obj = { value: null, done: true };
+            obj[0] = body.body;
+            return obj;
+          }
+        } catch (tmp5) {
+          c1 = tmp;
+          throw tmp5;
+        }
+      }
     })();
   });
   const _getEntitlementsForGuild = tmp;
@@ -59,13 +158,62 @@ function _getSubscriptionGroupForSubscriptionPlan() {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0, body) {
-      const HTTP = callback(530).HTTP;
-      const obj1 = { url: null, rejectWithError: null };
-      obj1[0] = outer1_4.SUBSCRIPTION_PLAN_GROUP_LISTING(callback);
-      const obj3 = callback(530);
-      obj1[1] = obj3.rejectWithMigratedError();
-      yield HTTP.get(obj1);
-      return body.body;
+      if (c1 === 2) {
+        c1 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c1 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
+              c1 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c1 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              const HTTP = callback(530).HTTP;
+              const obj1 = { url: null, rejectWithError: null };
+              obj1[0] = outer1_4.SUBSCRIPTION_PLAN_GROUP_LISTING(callback);
+              let obj3 = callback(530);
+              obj1[1] = obj3.rejectWithMigratedError();
+              dependencyMap = 1;
+              c1 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = HTTP.get(obj1);
+              return obj2;
+            }
+          } else if (arg0 === 1) {
+            c1 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c1 = 3;
+            obj3 = { value: null, done: true };
+            obj3[0] = body;
+            return obj3;
+          } else {
+            c1 = 3;
+            obj = { value: null, done: true };
+            obj[0] = body.body;
+            return obj;
+          }
+        } catch (tmp9) {
+          c1 = tmp;
+          throw tmp9;
+        }
+      }
     })();
   });
   const _getSubscriptionGroupForSubscriptionPlan = tmp;
@@ -85,16 +233,65 @@ function _fetchEligibleApplicationSubscriptionGuilds() {
     let c3 = 0;
     let c2 = 0;
     return (function*(arg0, body) {
-      const HTTP = callback(530).HTTP;
-      const obj1 = { url: null, query: null, rejectWithError: null };
-      obj1[0] = outer1_4.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS;
-      const obj2 = { application_id: null, sku_id: null };
-      obj2[0] = callback;
-      obj2[1] = closure_1;
-      obj1[1] = obj2;
-      obj1[2] = callback(530).rejectWithMigratedError();
-      yield HTTP.get(obj1);
-      return body.body;
+      if (dependencyMap === 2) {
+        dependencyMap = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          dependencyMap = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              dependencyMap = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              dependencyMap = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              const HTTP = callback(530).HTTP;
+              const obj1 = { url: null, query: null, rejectWithError: null };
+              obj1[0] = outer1_4.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS;
+              const obj2 = { application_id: null, sku_id: null };
+              obj2[0] = callback;
+              obj2[1] = closure_1;
+              obj1[1] = obj2;
+              obj1[2] = callback(530).rejectWithMigratedError();
+              c3 = 1;
+              dependencyMap = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.get(obj1);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            dependencyMap = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            dependencyMap = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = body;
+            return obj4;
+          } else {
+            dependencyMap = 3;
+            obj = { value: null, done: true };
+            obj[0] = body.body;
+            return obj;
+          }
+        } catch (tmp5) {
+          dependencyMap = tmp;
+          throw tmp5;
+        }
+      }
     })();
   });
   const _fetchEligibleApplicationSubscriptionGuilds = tmp;

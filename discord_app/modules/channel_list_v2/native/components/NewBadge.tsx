@@ -1,3 +1,4 @@
+// discord_app/modules/channel_list_v2/native/components/NewBadge.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -25,8 +26,8 @@ let closure_5 = createCacheKey.createStyles((arg0, arg1) => {
 const result = require("jsxProd").fileFinishedImporting("modules/channel_list_v2/native/components/NewBadge.tsx");
 
 export default function NewBadge() {
-  const tmp2 = importDefault(8203)();
-  const tmp3 = importDefault(4221)();
+  const tmp2 = importDefault(8834)();
+  const tmp3 = importDefault(4129)();
   const tmp4 = callback(tmp2, tmp3);
   let obj = { style: tmp4.base, children: null };
   obj = { variant: "text-xxs/bold", style: tmp4.text, color: null, children: null };
@@ -38,6 +39,6 @@ export default function NewBadge() {
   obj[2] = str;
   const intl = tmp7(1236).intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t.y2b7CA);
-  obj[1] = jsx(require(4281) /* Text */.Text, { variant: "text-xxs/bold", style: tmp4.text, color: null, children: null });
+  obj[1] = jsx(require(4189) /* Text */.Text, { variant: "text-xxs/bold", style: tmp4.text, color: null, children: null });
   return <View variant="text-xxs/bold" style={tmp4.text} color={null}>{null}</View>;
 };

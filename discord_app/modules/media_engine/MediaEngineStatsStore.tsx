@@ -1,3 +1,4 @@
+// discord_app/modules/media_engine/MediaEngineStatsStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
 import { Store } from "initialize";
@@ -322,7 +323,7 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(require("dispatcher"), {
       if (null == mediaEngineConnectionId) {
         return false;
       } else {
-        const ownerId = require(4348) /* isStreamKey */.decodeStreamKey(streamKey).ownerId;
+        const ownerId = require(4257) /* isStreamKey */.decodeStreamKey(streamKey).ownerId;
         let tmp11;
         if (dependencyMap2[mediaEngineConnectionId] != null) {
           tmp11 = tmp10[ownerId];

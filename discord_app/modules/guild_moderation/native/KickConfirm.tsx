@@ -1,3 +1,4 @@
+// discord_app/modules/guild_moderation/native/KickConfirm.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "Button";

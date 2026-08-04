@@ -1,7 +1,8 @@
+// discord_app/utils/native/FabricUtils.tsx
 const result = require("set").fileFinishedImporting("utils/native/FabricUtils.tsx");
 
 export const isFabric = function isFabric() {
-  const obj = importDefault(4150);
+  const obj = importDefault(4058);
   let flag;
   if (obj != null) {
     flag = obj.isFabric();
@@ -14,7 +15,7 @@ export const isFabric = function isFabric() {
 export const isIosFabric = function isIosFabric() {
   let isIOSResult = require(500) /* set */.isIOS();
   if (isIOSResult) {
-    const obj2 = importDefault(4150);
+    const obj2 = importDefault(4058);
     let flag;
     if (obj2 != null) {
       flag = obj2.isFabric();

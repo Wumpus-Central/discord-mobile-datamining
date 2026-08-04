@@ -1,3 +1,4 @@
+// discord_app/modules/links/getLocalizedLink.tsx
 const result = require("set").fileFinishedImporting("modules/links/getLocalizedLink.tsx");
 
 export default function getLocalizedLink(arg0) {

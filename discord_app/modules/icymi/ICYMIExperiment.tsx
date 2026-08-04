@@ -1,3 +1,4 @@
+// discord_app/modules/icymi/ICYMIExperiment.tsx
 import getUserAgnosticState from "getUserAgnosticState";
 import ApexExperiment from "ApexExperiment";
 import ApexExperiment from "ApexExperiment";
@@ -18,7 +19,7 @@ const result = require("useLabFeature").fileFinishedImporting("modules/icymi/ICY
 export const ICYMI_LAB_FEATURE = "hide_icymi_tab";
 export const ICYMIStaffOnlyExperiment = apexExperiment;
 export const useICYMIEnabled = function useICYMIEnabled(TabsNavigator) {
-  const tmp = importDefault(8839)(hide_icymi_tab);
+  const tmp = importDefault(8193)(hide_icymi_tab);
   let obj = { location: TabsNavigator };
   obj = { location: TabsNavigator };
   const config = apexExperiment2.useConfig(obj);

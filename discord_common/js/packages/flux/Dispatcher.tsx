@@ -1,3 +1,4 @@
+// discord_common/js/packages/flux/Dispatcher.tsx
 import set from "isTracing";
 
 function setDisplayName(arg0, displayName) {
@@ -163,7 +164,7 @@ class Dispatcher {
     obj[1] = {};
     obj[2] = [];
     tmp2 = ActionHandlersGraph;
-    if (typeof ActionHandlersGraph !== "function") {
+    if (typeof ActionHandlersGraph !== "fileFinishedImporting") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }

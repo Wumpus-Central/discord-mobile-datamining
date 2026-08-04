@@ -1,3 +1,4 @@
+// discord_app/modules/activities/ActivitiesInTextUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

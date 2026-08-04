@@ -1,3 +1,4 @@
+// discord_app/modules/messages/ApplicationCommands.tsx
 import _slicedToArray from "_slicedToArray";
 
 const re1 = /<\/([^\s]+):(\d+)>(?:\s?(.*))?/;

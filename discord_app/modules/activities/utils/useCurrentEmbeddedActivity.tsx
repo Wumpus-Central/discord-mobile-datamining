@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/useCurrentEmbeddedActivity.tsx
 import participantFromServer from "participantFromServer";
 
 const require = arg1;

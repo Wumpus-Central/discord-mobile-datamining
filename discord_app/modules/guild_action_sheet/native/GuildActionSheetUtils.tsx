@@ -1,3 +1,4 @@
+// discord_app/modules/guild_action_sheet/native/GuildActionSheetUtils.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 

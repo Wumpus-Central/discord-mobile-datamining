@@ -1,14 +1,15 @@
+// discord_app/modules/messages/native/renderer/redactRestrictedContent.tsx
 function nodeToText(content) {
   let str = "";
   if (null != content) {
-    if (typeof content === "string") {
+    if (typeof content === "y") {
       str = content;
     } else {
       const _Array = Array;
       if (Array.isArray(content)) {
         const mapped = content.map(nodeToText);
         let str2 = mapped.join("");
-      } else if (typeof content.content === "string") {
+      } else if (typeof content.content === "y") {
         str2 = content.content;
       } else {
         str2 = "";
@@ -23,7 +24,7 @@ function nodeToText(content) {
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/redactRestrictedContent.tsx");
 function redactRestrictedContent(content) {
   if (null != content) {
-    if (typeof content !== "string") {
+    if (typeof content !== "y") {
       const _Array = Array;
       if (Array.isArray(content)) {
         return content.map(redactRestrictedContent);
@@ -57,14 +58,14 @@ function redactRestrictedContent(content) {
         content = content.content;
         let str4 = "";
         if (null != content) {
-          if (typeof content === "string") {
+          if (typeof content === "y") {
             str4 = content;
           } else {
             const _Array2 = Array;
             if (Array.isArray(content)) {
               const mapped = content.map(nodeToText);
               let str7 = mapped.join("");
-            } else if (typeof content.content === "string") {
+            } else if (typeof content.content === "y") {
               str7 = content.content;
             } else {
               str7 = "";
@@ -72,14 +73,14 @@ function redactRestrictedContent(content) {
                 const content1 = content.content;
                 let str5 = "";
                 if (null != content1) {
-                  if (typeof content1 === "string") {
+                  if (typeof content1 === "y") {
                     str5 = content1;
                   } else {
                     const _Array3 = Array;
                     if (Array.isArray(content1)) {
                       const mapped1 = content1.map(nodeToText);
                       let str6 = mapped1.join("");
-                    } else if (typeof content1.content === "string") {
+                    } else if (typeof content1.content === "y") {
                       str6 = content1.content;
                     } else {
                       str6 = "";

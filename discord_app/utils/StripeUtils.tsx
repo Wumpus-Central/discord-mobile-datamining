@@ -1,3 +1,4 @@
+// discord_app/utils/StripeUtils.tsx
 import _typeof from "_typeof";
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";
@@ -10,12 +11,12 @@ function getStripe() {
   if (null != closure_2) {
     let resolved = Promise.resolve(closure_2);
   } else {
-    const stripe = require(4611) /* _typeof */.loadStripe(constants.STRIPE.KEY);
+    const stripe = require(4520) /* _typeof */.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((arg0) => {
       let closure_2 = arg0;
       return arg0;
     });
-    const obj = require(4611) /* _typeof */;
+    const obj = require(4520) /* _typeof */;
   }
   return resolved;
 }

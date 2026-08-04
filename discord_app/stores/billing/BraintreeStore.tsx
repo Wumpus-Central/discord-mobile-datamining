@@ -1,3 +1,4 @@
+// discord_app/stores/billing/BraintreeStore.tsx
 import ME from "ME";
 import set from "set";
 import { Store } from "initialize";
@@ -57,7 +58,7 @@ obj = {
     if (paymentSourceType.paymentSourceType === constants2.PAYPAL) {
       if (tmp === closure_2) {
         const _window = window;
-        if (typeof onComplete === "function") {
+        if (typeof onComplete !== "disabledUntil") {
           const obj = { path: null, queryItems: null };
           obj[0] = tmp2;
           obj[1] = tmp3;

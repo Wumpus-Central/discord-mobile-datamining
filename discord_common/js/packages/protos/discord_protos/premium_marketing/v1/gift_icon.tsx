@@ -1,3 +1,4 @@
+// discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_icon.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
 
@@ -56,7 +57,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (4 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let Gradient = require(7280) /* create */.Gradient;
+        let Gradient = require(6279) /* create */.Gradient;
         let tmp24 = Gradient;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -111,7 +112,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(boxAnimationUrl,
     const tagResult2 = tag.tag(3, require(1307).WireType.LengthDelimited);
   }
   if (boxAnimationUrl.gradient) {
-    const Gradient = require(7280) /* create */.Gradient;
+    const Gradient = require(6279) /* create */.Gradient;
     const tagResult3 = tag.tag(4, require(1307).WireType.LengthDelimited);
     const joined = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);

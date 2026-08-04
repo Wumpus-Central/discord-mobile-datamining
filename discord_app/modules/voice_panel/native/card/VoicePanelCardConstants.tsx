@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/card/VoicePanelCardConstants.tsx
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardConstants.tsx");
 
 export const CARD_SIZE = 165;

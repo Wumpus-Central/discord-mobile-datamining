@@ -1,3 +1,4 @@
+// discord_app/modules/icymi/native/info_modal/ICYMIInfoModalTypes.tsx
 const result = require("set").fileFinishedImporting("modules/icymi/native/info_modal/ICYMIInfoModalTypes.tsx");
 
 export const ICYMI_INFO_MODAL_KEY = "icymi-info-modal";

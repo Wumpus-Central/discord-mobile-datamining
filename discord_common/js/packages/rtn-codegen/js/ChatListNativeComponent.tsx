@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/ChatListNativeComponent.tsx
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "DCDChatList", validAttributes: { floatingChatInputEnabled: true } };

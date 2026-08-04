@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/UserSettingDefinitions.tsx
 import initialize from "initialize";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { UserSettingsDelay } from "MAX_FAVORITES";
@@ -7,7 +8,7 @@ const result = require("MAX_FAVORITES").fileFinishedImporting("modules/user_sett
 
 export const defineProtoSetting = function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, set) {
   let getSetting = textAndImages;
-  let f73573 = activityRestrictedGuildIds;
+  let f73299 = activityRestrictedGuildIds;
   let closure_2 = explicitContentFromProto;
   let initialize = explicitContentToProto;
   let obj = set;
@@ -27,25 +28,25 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
   getSetting = function getSetting() {
     let tmp3;
     if (INFREQUENT_USER_ACTION.settings[getSetting] != null) {
-      tmp3 = tmp2[f73573];
+      tmp3 = tmp2[f73299];
     }
     return closure_2(tmp3);
   };
   obj = {
     getSetting,
-    updateSetting: (fn) => {
-      let tmp2 = fn;
-      if (typeof fn === "function") {
-        tmp2 = fn(getSetting());
+    updateSetting: (arg0) => {
+      let tmp2 = arg0;
+      if (typeof arg0 !== "disabledUntil") {
+        tmp2 = arg0(getSetting());
       }
-      return f73580(tmp2);
+      return f73306(tmp2);
     },
     useSetting() {
       const items = [INFREQUENT_USER_ACTION];
       return getSetting(explicitContentFromProto[4]).useStateFromStores(items, getSetting, undefined, fn);
     }
   };
-  f73573 = (favorites) => {
+  f73299 = (favorites) => {
     let closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(explicitContentFromProto[3]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync(closure_0, (arg0) => {
@@ -56,10 +57,10 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
 };
 export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animateEmoji) {
   let getSetting = defineProtoSetting;
-  let f73577 = text;
+  let f73303 = text;
   let closure_2 = animateEmoji;
   getSetting = function getSetting() {
-    const tmp = outer1_3.getState()[f73577];
+    const tmp = outer1_3.getState()[f73303];
     let setting;
     if (tmp != null) {
       setting = tmp.settings[closure_2];
@@ -69,18 +70,18 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
     }
     return setting;
   };
-  f73577 = (arg0) => {
-    if (outer1_3.shouldSync(f73577)) {
+  f73303 = (arg0) => {
+    if (outer1_3.shouldSync(f73303)) {
       let updateSettingResult = getSetting.updateSetting(arg0);
     } else {
-      let obj = f73577(animateEmoji[5]);
+      let obj = f73303(animateEmoji[5]);
       obj = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
       obj = {};
       const obj1 = { settings: null };
       const obj2 = {};
       obj2[animateEmoji] = arg0;
       obj1[0] = obj2;
-      obj[f73577] = obj1;
+      obj[f73303] = obj1;
       obj[1] = obj;
       obj.dispatch(obj);
       updateSettingResult = Promise.resolve();
@@ -105,18 +106,18 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
       }
       return stateFromStores;
     },
-    updateSetting: (fn) => {
-      let tmp2 = fn;
-      if (typeof fn === "function") {
-        tmp2 = fn(getSetting());
+    updateSetting: (arg0) => {
+      let tmp2 = arg0;
+      if (typeof arg0 !== "disabledUntil") {
+        tmp2 = arg0(getSetting());
       }
-      return f73580(tmp2);
+      return f73306(tmp2);
     }
   };
 }
 export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, arg3) {
   let getSetting = defineProtoSetting;
-  let f73580 = animateEmoji;
+  let f73306 = animateEmoji;
   let closure_2 = arg2;
   let initialize = arg3;
   getSetting = function getSetting() {
@@ -126,9 +127,9 @@ export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, 
     }
     return setting;
   };
-  f73580 = (arg0) => {
-    const items = [f73580];
-    f73580(709).dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items });
+  f73306 = (arg0) => {
+    const items = [f73306];
+    f73306(709).dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items });
     return getSetting.updateSetting(arg0);
   };
   return {
@@ -141,12 +142,12 @@ export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, 
       }
       return tmp2;
     },
-    updateSetting: (fn) => {
-      let tmp2 = fn;
-      if (typeof fn === "function") {
-        tmp2 = fn(getSetting());
+    updateSetting: (arg0) => {
+      let tmp2 = arg0;
+      if (typeof arg0 !== "disabledUntil") {
+        tmp2 = arg0(getSetting());
       }
-      return f73580(tmp2);
+      return f73306(tmp2);
     }
   };
 }

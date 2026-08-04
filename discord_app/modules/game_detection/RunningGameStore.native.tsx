@@ -1,4 +1,5 @@
-import handleLoadMessages from "handleLoadMessages";
+// discord_app/modules/game_detection/RunningGameStore.native.tsx
+import map from "map";
 import gameFromServer from "gameFromServer";
 import setLibraryApplications from "setLibraryApplications";
 import { Store } from "initialize";
@@ -125,9 +126,9 @@ export function gameKey() {
 }
 export const getRawOverlayGameStatus = function getRawOverlayGameStatus() {
   if (arg1 === undefined) {
-    const items = [gameFromServer, setLibraryApplications, handleLoadMessages];
+    const items = [gameFromServer, setLibraryApplications, map];
   }
-  return { source: require(4331) /* DevToolsFocusedPidsTrackMode */.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: require(4331) /* DevToolsFocusedPidsTrackMode */.OverlayMethod.Disabled, reason: "Dummy implementation" };
+  return { source: require(4239) /* DevToolsFocusedPidsTrackMode */.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: require(4239) /* DevToolsFocusedPidsTrackMode */.OverlayMethod.Disabled, reason: "Dummy implementation" };
 };
 export function isDetectionEnabled() {
   return false;

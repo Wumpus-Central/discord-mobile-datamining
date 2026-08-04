@@ -1,4 +1,5 @@
-import module_4146 from "module_4146";
+// discord_app/modules/guild_onboarding/native/GuildOnboardingCompleted.tsx
+import module_4054 from "module_4054";
 import get_ActivityIndicator from "isDiscordFrontendDevelopment";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

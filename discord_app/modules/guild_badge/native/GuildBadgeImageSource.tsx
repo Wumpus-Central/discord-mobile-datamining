@@ -1,3 +1,4 @@
+// discord_app/modules/guild_badge/native/GuildBadgeImageSource.tsx
 const require = arg1;
 let obj = {};
 obj = { imageSource: null };
@@ -41,9 +42,9 @@ export const resolveImageSource = function resolveImageSource(premiumImageSource
   imageSource = premiumImageSource.imageSource;
 };
 export const getGuildBadgeImageSource = function getGuildBadgeImageSource(guild, closure_2) {
-  const obj = require(9178) /* GuildVisibility */;
+  const obj = require(8472) /* GuildVisibility */;
   const guildTraits = obj.getGuildTraits(guild);
-  const obj2 = require(9179) /* BadgeCategory */;
+  const obj2 = require(8473) /* BadgeCategory */;
   const tmp4 = obj[obj2.getBadgeCategory(obj2, guildTraits)];
   if (null == tmp4) {
     return null;
@@ -55,7 +56,7 @@ export const getGuildBadgeImageSource = function getGuildBadgeImageSource(guild,
         }
       }
       premiumImageSource = tmp4.imageSource;
-      tmpResult = require(4131) /* AccessibilityAnnouncer */;
+      tmpResult = require(4039) /* AccessibilityAnnouncer */;
     }
     premiumImageSource = tmp4.premiumImageSource;
   }

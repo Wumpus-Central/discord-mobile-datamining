@@ -1,3 +1,4 @@
+// discord_app/modules/channel_text_area/ChatInputContentCallbacks.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getMemberListId from "getMemberListId";
@@ -26,9 +27,9 @@ export const tryUpdateSubscriptionForHereMention = function tryUpdateSubscriptio
     if (!tmp5) {
       let flag = -1 !== arr.indexOf(c6);
       if (flag) {
-        require(5836) /* subscribeMembers */.subscribeChannel(guild_id, id, require(5812) /* reset */.DEFAULT_RANGES);
+        require(6075) /* subscribeMembers */.subscribeChannel(guild_id, id, require(6062) /* reset */.DEFAULT_RANGES);
         flag = true;
-        const obj = require(5836) /* subscribeMembers */;
+        const obj = require(6075) /* subscribeMembers */;
       }
       tmp7 = flag;
     }
@@ -40,7 +41,7 @@ export const useHereMentionCallback = function useHereMentionCallback(arg0, arg1
   let closure_0 = arg0;
   const importDefault = arg1;
   const dependencyMap = arg2;
-  let tmp = importDefault(8164)();
+  let tmp = importDefault(6185)();
   const callback = tmp;
   let tmp2 = callback(first.useState(false), 2);
   first = tmp2[0];

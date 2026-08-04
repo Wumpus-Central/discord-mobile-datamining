@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useIsVariantColorLight.tsx
 import noop from "noop";
 
 const require = arg1;

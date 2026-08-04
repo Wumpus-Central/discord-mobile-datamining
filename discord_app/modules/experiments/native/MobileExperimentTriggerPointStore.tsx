@@ -1,3 +1,4 @@
+// discord_app/modules/experiments/native/MobileExperimentTriggerPointStore.tsx
 import getHash from "getHash";
 import initialize from "initialize";
 import { Store } from "initialize";
@@ -5,7 +6,7 @@ import importDefaultResult from "dispatcher";
 
 const require = arg1;
 function handleConnectionOpen() {
-  const MobileConnectionOpenTriggerPoint = require(12863) /* commonTriggerPointConfiguration */.MobileConnectionOpenTriggerPoint;
+  const MobileConnectionOpenTriggerPoint = require(12767) /* commonTriggerPointConfiguration */.MobileConnectionOpenTriggerPoint;
   MobileConnectionOpenTriggerPoint.trigger();
 }
 class MobileExperimentTriggerPointStore extends Store {

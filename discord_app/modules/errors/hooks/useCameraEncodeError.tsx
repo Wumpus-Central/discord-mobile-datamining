@@ -1,3 +1,4 @@
+// discord_app/modules/errors/hooks/useCameraEncodeError.tsx
 import fetchFingerprint from "fetchFingerprint";
 import isAVErrorContextOfType from "isAVErrorContextOfType";
 

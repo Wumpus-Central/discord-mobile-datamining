@@ -1,3 +1,4 @@
+// discord_app/modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx
 import noop from "noop";
 import { View } from "set";
 import fetchFingerprint from "fetchFingerprint";

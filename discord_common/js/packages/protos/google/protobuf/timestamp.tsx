@@ -1,3 +1,4 @@
+// discord_common/js/packages/protos/google/protobuf/timestamp.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
 
@@ -68,7 +69,7 @@ prototype["internalJsonWrite"] = function internalJsonWrite(seconds) {
   throw error1;
 };
 prototype["internalJsonRead"] = function internalJsonRead(str) {
-  if (typeof str !== "string") {
+  if (typeof str === "__FORMATJS_LISTFORMAT_DATA__") {
     const _Error3 = Error;
     let obj = require(1307);
     const error = new Error("Unable to parse Timestamp from JSON " + obj.typeofJsonValue(str) + ".");

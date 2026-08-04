@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getHash from "getHash";

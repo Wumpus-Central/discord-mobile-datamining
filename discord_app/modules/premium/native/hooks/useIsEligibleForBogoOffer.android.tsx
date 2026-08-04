@@ -1,3 +1,4 @@
+// discord_app/modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx
 import noop from "noop";
 import reset from "reset";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";
@@ -13,13 +14,13 @@ export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
   const items1 = [reset];
   const stateFromStores1 = forceUpdate(589).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const obj2 = forceUpdate(589);
-  const premiumTrialOffer = forceUpdate(6820).usePremiumTrialOffer();
-  const obj4 = forceUpdate(6820);
-  const premiumDiscountOffer = forceUpdate(7262).usePremiumDiscountOffer();
-  const obj5 = forceUpdate(7262);
-  const isPaymentsBlocked = forceUpdate(6790).useIsPaymentsBlocked();
-  const obj6 = forceUpdate(6790);
-  forceUpdate = forceUpdate(6813).useForceUpdate();
+  const premiumTrialOffer = forceUpdate(6245).usePremiumTrialOffer();
+  const obj4 = forceUpdate(6245);
+  const premiumDiscountOffer = forceUpdate(6261).usePremiumDiscountOffer();
+  const obj5 = forceUpdate(6261);
+  const isPaymentsBlocked = forceUpdate(6294).useIsPaymentsBlocked();
+  const obj6 = forceUpdate(6294);
+  forceUpdate = forceUpdate(6238).useForceUpdate();
   let valueOfResult = null;
   if (null != stateFromStores) {
     const endDate = stateFromStores.endDate;

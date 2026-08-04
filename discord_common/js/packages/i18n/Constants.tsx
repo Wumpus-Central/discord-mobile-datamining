@@ -1,3 +1,4 @@
+// discord_common/js/packages/i18n/Constants.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/i18n/Constants.tsx");
 
 export const FORMAT_RE = /\{.+?\}/;

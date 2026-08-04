@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AccountIgnoredUsersSetting.tsx
 import upsertRelationship from "upsertRelationship";
 import createToggle from "createToggle";
 
@@ -22,7 +23,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.IGNORED_USERS,
   getComponent() {
-    return require(13958) /* IgnoredUsersList */.default;
+    return require(13858) /* IgnoredUsersList */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -1,3 +1,4 @@
+// discord_app/lib/guild/GuildMemberRequester.tsx
 class GuildMemberRequestState {
   constructor(arg0, arg1) {
     closure_0 = global;
@@ -119,7 +120,7 @@ prototype2["_getGuildState"] = function _getGuildState(_guildId) {
   const self = this;
   let tmp = this._guildStates[_guildId];
   if (null == tmp) {
-    if (typeof GuildMemberRequestState !== "function") {
+    if (typeof GuildMemberRequestState !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let closure_0 = _guildId;

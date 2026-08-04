@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/native/components/StageSettingsActionSheet.tsx
 import registerAsset from "registerAsset";
 import { View } from "getSystemLocale";
 import getParticipants from "getParticipants";

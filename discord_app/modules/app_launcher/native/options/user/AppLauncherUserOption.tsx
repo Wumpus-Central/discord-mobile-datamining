@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/options/user/AppLauncherUserOption.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -74,7 +75,7 @@ export default function AppLauncherUserOption(option) {
       channel,
       onUserPress(user) {
         user = user.user;
-        if (typeof user === "string") {
+        if (typeof user === "y") {
           callback2(user);
         } else {
           callback2(user.id);
@@ -95,26 +96,26 @@ export default function AppLauncherUserOption(option) {
     let tmp9Result = tmp9(tmp2(1297).Avatar, obj);
   } else {
     const obj1 = { icon: null, wrapperStyle: null };
-    obj1[0] = tmp9(tmp2(9589).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
+    obj1[0] = tmp9(tmp2(9109).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
     obj1[1] = tmp.iconWrapper;
-    tmp9Result = tmp9(tmp10(11479), obj1);
-    const tmp10Result = tmp10(11479);
+    tmp9Result = tmp9(tmp10(11370), obj1);
+    const tmp10Result = tmp10(11370);
   }
   obj[5] = tmp9Result;
   if (null != tmp8) {
     let obj2 = { guildId: null, user: null };
     obj2[0] = guild_id;
     obj2[1] = tmp8;
-    tmp9Result = tmp9(tmp10(11482), obj2);
+    tmp9Result = tmp9(tmp10(11373), obj2);
   } else {
     tmp9Result = null;
     if (null != tmp6) {
       const obj3 = { variant: "text-md/medium", color: "text-default", children: null };
       obj3[2] = tmp6;
-      tmp9Result = tmp9(tmp2(4281).Text, obj3);
+      tmp9Result = tmp9(tmp2(4189).Text, obj3);
     }
   }
   obj[6] = tmp9Result;
   obj[7] = autoFocus;
-  return c6(importDefault(11476), obj);
+  return c6(importDefault(11367), obj);
 };

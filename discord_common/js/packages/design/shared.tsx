@@ -1,3 +1,4 @@
+// discord_common/js/packages/design/shared.tsx
 import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD";
 
 const result = require("context").fileFinishedImporting("../discord_common/js/packages/design/shared.tsx");

@@ -1,3 +1,4 @@
+// discord_app/stores/ChannelSettingsStore.tsx
 import { createChannelRecordFromInvite as closure_9 } from "createChannelRecord";
 import createFromServer from "createFromServer";
 import createdAt from "createdAt";
@@ -47,7 +48,7 @@ function normalizeChannelPropertyForCompare(arg0, arg1, arg2) {
         if ("defaultReactionEmoji" === arg0) {
           let tmp2 = null;
           if (null != str) {
-            let obj = require(3924) /* MAX_REACTIONS */;
+            let obj = require(3832) /* MAX_REACTIONS */;
             if (obj.isCustomReactionEmojiId(str.emojiId)) {
               obj = { emojiId: null };
               obj[0] = str.emojiId;
@@ -59,9 +60,9 @@ function normalizeChannelPropertyForCompare(arg0, arg1, arg2) {
                 tmp5 = null;
                 if ("" !== emojiName) {
                   obj = { emojiName: null };
-                  obj[0] = importDefault(3926).translateInlineEmojiToSurrogates(emojiName);
+                  obj[0] = importDefault(3834).translateInlineEmojiToSurrogates(emojiName);
                   tmp5 = obj;
-                  const obj3 = importDefault(3926);
+                  const obj3 = importDefault(3834);
                 }
               }
               tmp2 = tmp5;
@@ -96,7 +97,7 @@ function _createInvite(code) {
   }
   obj[5] = fromInviteGuildResult;
   ({ uses: obj[6], max_uses: obj[7], max_age: obj[8] } = code);
-  obj[9] = importDefault(3867)(code.created_at);
+  obj[9] = importDefault(3775)(code.created_at);
   ({ type: obj[10], roles: obj[11] } = code);
   tmp = new tmp(obj);
   return tmp;

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_automod/AutomodQuarantineUtils.tsx
 import noop from "noop";
 import zustandStore from "zustandStore";
 import fetchFingerprint from "fetchFingerprint";
@@ -37,7 +38,7 @@ export const useGuildAutomodProfileQuarantineErrors = function useGuildAutomodPr
     if (id == null) {
       guildId = outer1_8.getGuildId();
     }
-    let obj = { nick: "body", bio: "useStateFromStores" };
+    let obj = { nick: "Array", bio: "HermesInternal" };
     let guild = outer1_6.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

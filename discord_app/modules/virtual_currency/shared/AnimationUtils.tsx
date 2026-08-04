@@ -1,3 +1,4 @@
+// discord_app/modules/virtual_currency/shared/AnimationUtils.tsx
 let obj = { EARN: 0.25, SPEND: 0.3 };
 let result = require("set").fileFinishedImporting("modules/virtual_currency/shared/AnimationUtils.tsx");
 

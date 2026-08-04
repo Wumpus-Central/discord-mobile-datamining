@@ -1,3 +1,4 @@
+// discord_app/modules/interaction_components/validateComponent.tsx
 const result = require("getSystemLocale").fileFinishedImporting("modules/interaction_components/validateComponent.tsx");
 
 export default function validateComponent(type, arg1, modal) {
@@ -142,7 +143,7 @@ export default function validateComponent(type, arg1, modal) {
           stringResult4 = intl10.string(tmp4(1236).t.eJEUvD);
         }
         const tmp18 = stringResult4;
-        tmp4Result = tmp4(4506);
+        tmp4Result = tmp4(4415);
       }
       return tmp18;
     } else if (values.type === tmp4(1906).ComponentType.STRING_SELECT) {

@@ -1,8 +1,9 @@
+// discord_app/modules/premium_marketing/native/components/BuyNitroGradient.tsx
 import "noop";
 import { PremiumTypes } from "GuildFeatures";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
-import importDefaultResult from "module_4146";
+import importDefaultResult from "module_4054";
 
 let c4;
 let c5;
@@ -21,7 +22,7 @@ export default function BuyNitroGradient(selectedTier) {
   selectedTier = selectedTier.selectedTier;
   ({ start, end, style } = selectedTier);
   ({ nitroColors, basicColors } = selectedTier);
-  let obj = selectedTier(4146);
+  let obj = selectedTier(4054);
   const fn = function f() {
     let obj = selectedTier(outer1_2[5]);
     let num = 0;
@@ -31,13 +32,13 @@ export default function BuyNitroGradient(selectedTier) {
     obj = { opacity: obj.withTiming(num, selectedTier(outer1_2[6]).timingStandard) };
     return obj;
   };
-  obj = { withTiming: selectedTier(4286).withTiming, selectedTier, PremiumTypes, timingStandard: selectedTier(4289).timingStandard };
+  obj = { withTiming: selectedTier(4194).withTiming, selectedTier, PremiumTypes, timingStandard: selectedTier(4197).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 14014615431537;
   fn.__initData = closure_8;
   obj = { children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const items = [callback(importDefault(4706), { style, colors: nitroColors, start, end }), ];
+  const items = [callback(importDefault(4615), { style, colors: nitroColors, start, end }), ];
   const items1 = [style, animatedStyle];
   items[1] = callback(LinearGradient, { style: items1, colors: basicColors, start, end });
   obj[0] = items;

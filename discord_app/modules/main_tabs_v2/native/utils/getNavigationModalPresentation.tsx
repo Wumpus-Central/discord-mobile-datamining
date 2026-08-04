@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx
 import set from "set";
 import set from "set";
 import set from "DCDDeviceManager";
@@ -40,20 +41,20 @@ export default function getNavigationModalPresentation() {
   obj = { presentation, orientation: null };
   let tmp4;
   if (lockOrientation) {
-    const orientationLock = require(8817) /* handleOrientationChange */.getOrientationLock();
+    const orientationLock = require(8171) /* handleOrientationChange */.getOrientationLock();
     let str2 = "landscape";
     let str4 = "landscape";
     if ("LANDSCAPE" !== orientationLock) {
       if (null != orientationLock) {
         str2 = "portrait";
       } else {
-        const orientation = tmp5(8817).getOrientation();
-        const tmp5Result = tmp5(8817);
+        const orientation = tmp5(8171).getOrientation();
+        const tmp5Result = tmp5(8171);
       }
       str4 = str2;
     }
     tmp4 = str4;
-    const obj2 = require(8817) /* handleOrientationChange */;
+    const obj2 = require(8171) /* handleOrientationChange */;
   }
   obj[1] = tmp4;
   return obj;

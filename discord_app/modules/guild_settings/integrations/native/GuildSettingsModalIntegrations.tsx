@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/integrations/native/GuildSettingsModalIntegrations.tsx
 import "ChannelsFollowedIcon";
 import { Image } from "getSystemLocale";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

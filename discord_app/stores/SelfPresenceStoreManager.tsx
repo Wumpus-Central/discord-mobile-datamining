@@ -1,3 +1,4 @@
+// discord_app/stores/SelfPresenceStoreManager.tsx
 import filterPlayingActivities from "filterPlayingActivities";
 import "initialize";
 

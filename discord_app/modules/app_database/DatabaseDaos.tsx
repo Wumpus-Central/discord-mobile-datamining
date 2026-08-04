@@ -1,3 +1,4 @@
+// discord_app/modules/app_database/DatabaseDaos.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
 
@@ -9,7 +10,7 @@ items1[1] = items2;
 class DatabaseDaos extends Store {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f70899 = applyArgumentsResult;
+    f70716 = applyArgumentsResult;
     applyArgumentsResult.database = function database(arg0) {
       let id = arg0;
       if (arg0 == null) {
@@ -17,8 +18,8 @@ class DatabaseDaos extends Store {
       }
       return callback(1923).database(id);
     };
-    f70899 = (database) => {
-      const guildEntityDao = new f70899(1908).GuildEntityDao("guild_channels", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const guildEntityDao = new f70716(1908).GuildEntityDao("guild_channels", f70716(1908).TableId.KvCache, database);
       return guildEntityDao;
     };
     applyArgumentsResult.channels = (arg0) => {
@@ -29,12 +30,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const guildDao = new f70899(1908).GuildDao("guild_channels_temp", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const guildDao = new f70716(1908).GuildDao("guild_channels_temp", f70716(1908).TableId.KvCache, database);
       return guildDao;
     };
     applyArgumentsResult.channelsTemp = (arg0) => {
@@ -45,12 +46,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const dao = new f70899(1908).Dao("basic_channels", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const dao = new f70716(1908).Dao("basic_channels", f70716(1908).TableId.KvCache, database);
       return dao;
     };
     applyArgumentsResult.basicChannels = (arg0) => {
@@ -61,12 +62,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const dao = new f70899(1908).Dao("basic_channels_synced", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const dao = new f70716(1908).Dao("basic_channels_synced", f70716(1908).TableId.KvCache, database);
       return dao;
     };
     applyArgumentsResult.syncedBasicChannels = (arg0) => {
@@ -77,12 +78,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const dao = new f70899(1908).Dao("cache", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const dao = new f70716(1908).Dao("cache", f70716(1908).TableId.KvCache, database);
       return dao;
     };
     applyArgumentsResult.cache = (arg0) => {
@@ -93,12 +94,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const dao = new f70899(1908).Dao("force_resync_version", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const dao = new f70716(1908).Dao("force_resync_version", f70716(1908).TableId.KvCache, database);
       return dao;
     };
     applyArgumentsResult.forceResyncVersion = (arg0) => {
@@ -109,12 +110,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const guildEntityDao = new f70899(1908).GuildEntityDao("guild_emojis", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const guildEntityDao = new f70716(1908).GuildEntityDao("guild_emojis", f70716(1908).TableId.KvCache, database);
       return guildEntityDao;
     };
     applyArgumentsResult.emojis = (arg0) => {
@@ -125,12 +126,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const entityDao = new f70899(1908).EntityDao("guilds", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const entityDao = new f70716(1908).EntityDao("guilds", f70716(1908).TableId.KvCache, database);
       return entityDao;
     };
     applyArgumentsResult.guilds = (arg0) => {
@@ -141,12 +142,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const entityDao = new f70899(1908).EntityDao("guilds_requiring_deleted_ids_sync", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const entityDao = new f70716(1908).EntityDao("guilds_requiring_deleted_ids_sync", f70716(1908).TableId.KvCache, database);
       return entityDao;
     };
     applyArgumentsResult.guildsRequiringDeletedIdsSync = (arg0) => {
@@ -157,12 +158,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const entityDao = new f70899(1908).EntityDao("guilds_requiring_channel_sync", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const entityDao = new f70716(1908).EntityDao("guilds_requiring_channel_sync", f70716(1908).TableId.KvCache, database);
       return entityDao;
     };
     applyArgumentsResult.guildsRequiringChannelSync = (arg0) => {
@@ -173,12 +174,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const messageDao = new f70899(1908).MessageDao("messages", f70899(1908).TableId.Messages, database);
+    f70716 = (database) => {
+      const messageDao = new f70716(1908).MessageDao("messages", f70716(1908).TableId.Messages, database);
       return messageDao;
     };
     applyArgumentsResult.messages = (arg0) => {
@@ -189,12 +190,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const guildEntityDao = new f70899(1908).GuildEntityDao("guild_stickers", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const guildEntityDao = new f70716(1908).GuildEntityDao("guild_stickers", f70716(1908).TableId.KvCache, database);
       return guildEntityDao;
     };
     applyArgumentsResult.stickers = (arg0) => {
@@ -205,12 +206,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const entityDao = new f70899(1908).EntityDao("guild_versions", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const entityDao = new f70716(1908).EntityDao("guild_versions", f70716(1908).TableId.KvCache, database);
       return entityDao;
     };
     applyArgumentsResult.guildVersions = (arg0) => {
@@ -221,12 +222,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const entityDao = new f70899(1908).EntityDao("non_guild_versions", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const entityDao = new f70716(1908).EntityDao("non_guild_versions", f70716(1908).TableId.KvCache, database);
       return entityDao;
     };
     applyArgumentsResult.nonGuildVersions = (arg0) => {
@@ -237,12 +238,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const entityDao = new f70899(1908).EntityDao("user_settings", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const entityDao = new f70716(1908).EntityDao("user_settings", f70716(1908).TableId.KvCache, database);
       return entityDao;
     };
     applyArgumentsResult.userSettings = (arg0) => {
@@ -253,12 +254,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const dao = new f70899(1908).Dao("read_states", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const dao = new f70716(1908).Dao("read_states", f70716(1908).TableId.KvCache, database);
       return dao;
     };
     applyArgumentsResult.readStates = (arg0) => {
@@ -269,12 +270,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const dao = new f70899(1908).Dao("user_guild_settings", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const dao = new f70716(1908).Dao("user_guild_settings", f70716(1908).TableId.KvCache, database);
       return dao;
     };
     applyArgumentsResult.userGuildSettings = (arg0) => {
@@ -285,12 +286,12 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
-    f70899 = (database) => {
-      const entityDao = new f70899(1908).EntityDao("user_search_items", f70899(1908).TableId.KvCache, database);
+    f70716 = (database) => {
+      const entityDao = new f70716(1908).EntityDao("user_search_items", f70716(1908).TableId.KvCache, database);
       return entityDao;
     };
     applyArgumentsResult.userSearchItems = (arg0) => {
@@ -301,66 +302,66 @@ class DatabaseDaos extends Store {
       }
       let tmp5 = null;
       if (null != databaseResult) {
-        tmp5 = f70899(databaseResult);
+        tmp5 = f70716(databaseResult);
       }
       return tmp5;
     };
     applyArgumentsResult.channelsTransaction = function channelsTransaction(database) {
-      return f70899.channels(database.database).upgradeTransaction(database);
+      return f70716.channels(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.channelsTempTransaction = function channelsTempTransaction(database) {
-      return f70899.channelsTemp(database.database).upgradeTransaction(database);
+      return f70716.channelsTemp(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.basicChannelsTransaction = function basicChannelsTransaction(database) {
-      return f70899.basicChannels(database.database).upgradeTransaction(database);
+      return f70716.basicChannels(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.syncedBasicChannelsTransaction = function syncedBasicChannelsTransaction(database) {
-      return f70899.syncedBasicChannels(database.database).upgradeTransaction(database);
+      return f70716.syncedBasicChannels(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.cacheTransaction = function cacheTransaction(database) {
-      return f70899.cache(database.database).upgradeTransaction(database);
+      return f70716.cache(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.forceResyncVersionTransaction = function forceResyncVersionTransaction(database) {
-      return f70899.forceResyncVersion(database.database).upgradeTransaction(database);
+      return f70716.forceResyncVersion(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.emojisTransaction = function emojisTransaction(database) {
-      return f70899.emojis(database.database).upgradeTransaction(database);
+      return f70716.emojis(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.guildsTransaction = function guildsTransaction(database) {
-      return f70899.guilds(database.database).upgradeTransaction(database);
+      return f70716.guilds(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.messagesTransaction = function messagesTransaction(database) {
-      return f70899.messages(database.database).upgradeTransaction(database);
+      return f70716.messages(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.stickersTransaction = function stickersTransaction(database) {
-      return f70899.stickers(database.database).upgradeTransaction(database);
+      return f70716.stickers(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.guildVersionsTransaction = function guildVersionsTransaction(database) {
-      return f70899.guildVersions(database.database).upgradeTransaction(database);
+      return f70716.guildVersions(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.nonGuildVersionsTransaction = function nonGuildVersionsTransaction(database) {
-      return f70899.nonGuildVersions(database.database).upgradeTransaction(database);
+      return f70716.nonGuildVersions(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.userSettingsTransaction = function userSettingsTransaction(database) {
-      return f70899.userSettings(database.database).upgradeTransaction(database);
+      return f70716.userSettings(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.readStatesTransaction = function readStatesTransaction(database) {
-      const states = f70899.readStates(database.database);
+      const states = f70716.readStates(database.database);
       return states.upgradeTransaction(database);
     };
     applyArgumentsResult.userGuildSettingsTransaction = function userGuildSettingsTransaction(database) {
-      return f70899.userGuildSettings(database.database).upgradeTransaction(database);
+      return f70716.userGuildSettings(database.database).upgradeTransaction(database);
     };
     applyArgumentsResult.guildsRequiringDeletedIdsSyncTransaction = function guildsRequiringDeletedIdsSyncTransaction(database) {
-      const result = f70899.guildsRequiringDeletedIdsSync(database.database);
+      const result = f70716.guildsRequiringDeletedIdsSync(database.database);
       return result.upgradeTransaction(database);
     };
     applyArgumentsResult.guildsRequiringChannelSyncTransaction = function guildsRequiringChannelSyncTransaction(database) {
-      const result = f70899.guildsRequiringChannelSync(database.database);
+      const result = f70716.guildsRequiringChannelSync(database.database);
       return result.upgradeTransaction(database);
     };
     applyArgumentsResult.userSearchItemsTransaction = function userSearchItemsTransaction(database) {
-      return f70899.userSearchItems(database.database).upgradeTransaction(database);
+      return f70716.userSearchItems(database.database).upgradeTransaction(database);
     };
     return applyArgumentsResult;
   }

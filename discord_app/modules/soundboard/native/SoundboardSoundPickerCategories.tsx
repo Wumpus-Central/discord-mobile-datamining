@@ -1,3 +1,4 @@
+// discord_app/modules/soundboard/native/SoundboardSoundPickerCategories.tsx
 import importAllResult from "initialize";
 import get_ActivityIndicator from "HapticFeedbackTypes";
 import { setSearchQuery } from "withEqualityFn";
@@ -26,33 +27,33 @@ function SoundCategoryItem(style) {
   }
   const tmp = callback3();
   const type = category.categoryInfo.type;
-  if (require(4737) /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD === type) {
+  if (require(4646) /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD === type) {
     const guild = category.categoryInfo.guild;
     let name = guild.name;
     let obj = { guild: null, style: null };
     obj[0] = guild;
     obj[1] = tmp.guildItem;
-    let tmp13Result = callback(importDefault(5661), obj);
+    let tmp13Result = callback(importDefault(5570), obj);
     let tmp4 = null;
     let tmp5 = null;
-  } else if (tmp2(4737).SoundboardSoundGridSectionType.FAVORITES === type) {
+  } else if (tmp2(4646).SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl3 = tmp2(1236).intl;
     name = intl3.string(tmp2(1236).t.y3LQCG);
-    tmp4 = importDefault(9876);
+    tmp4 = importDefault(9636);
     tmp5 = null;
     tmp13Result = null;
-  } else if (tmp2(4737).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
+  } else if (tmp2(4646).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
     const intl2 = tmp2(1236).intl;
     name = intl2.string(tmp2(1236).t["+cGVV6"]);
     obj = { style: null };
     obj[0] = tmp.keyboardItem;
-    tmp5 = callback(tmp2(4249).ClockIcon, obj);
+    tmp5 = callback(tmp2(4157).ClockIcon, obj);
     tmp4 = null;
     tmp13Result = null;
-  } else if (tmp2(4737).SoundboardSoundGridSectionType.DEFAULTS === type) {
+  } else if (tmp2(4646).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl = tmp2(1236).intl;
     name = intl.string(tmp2(1236).t.Rtvk9X);
-    tmp4 = importDefault(16021);
+    tmp4 = importDefault(15925);
     tmp5 = null;
     tmp13Result = null;
   } else {
@@ -60,10 +61,10 @@ function SoundCategoryItem(style) {
     tmp5 = null;
     tmp13Result = null;
     name = null;
-    if (tmp2(4737).SoundboardSoundGridSectionType.SEARCH === type) {
+    if (tmp2(4646).SoundboardSoundGridSectionType.SEARCH === type) {
       const intl4 = tmp2(1236).intl;
       name = intl4.string(tmp2(1236).t.sKt3xS);
-      tmp4 = importDefault(16021);
+      tmp4 = importDefault(15925);
       tmp5 = null;
       tmp13Result = null;
     }
@@ -93,13 +94,13 @@ function SoundCategoryItem(style) {
     obj3[0] = tmp.lockContainer;
     const obj4 = { style: null };
     obj4[0] = tmp.lock;
-    obj3[1] = tmp13(tmp2(4804).LockIcon, obj4);
+    obj3[1] = tmp13(tmp2(4713).LockIcon, obj4);
     locked = tmp13(tmp15, obj3);
   }
   items1[1] = locked;
   obj1[1] = items1;
   obj[3] = closure_11(closure_5, obj1);
-  return callback(require(4812) /* PressableBase */.PressableOpacity, obj, name);
+  return callback(require(4721) /* PressableBase */.PressableOpacity, obj, name);
 }
 function getItemLayout(arg0, index) {
   return { length: closure_9, offset: closure_9 * index, index };

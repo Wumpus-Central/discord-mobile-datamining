@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/controls/buttons/VoicePanelDrawerToggleButton.tsx
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -22,23 +23,23 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   let wrapperSpecs;
   ({ props, openTab, wrapperSpecs } = arg0);
   const tmp = createCacheKey();
-  let obj = require(16123) /* useVoicePanelButtonStyles */;
+  let obj = require(16027) /* useVoicePanelButtonStyles */;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
-  ({ isDrawerOpen, handlePress, accessibilityLabel } = importDefault(16110)(openTab));
+  ({ isDrawerOpen, handlePress, accessibilityLabel } = importDefault(16014)(openTab));
   obj = { onPress: handlePress, props, accessibilityLabel, children: null };
-  const tmp5 = importDefault(16110)(openTab);
+  const tmp5 = importDefault(16014)(openTab);
   const tmp6 = closure_4;
   const items = [tmp.circle, { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor }];
-  const items1 = [callback(importDefault(5663), { style: items }), ];
+  const items1 = [callback(importDefault(5572), { style: items }), ];
   obj = { style: tmp.iconContainer, children: null };
-  const tmp7 = importDefault(16124);
+  const tmp7 = importDefault(16028);
   if (isDrawerOpen) {
-    let ChevronSmallUpIcon = tmp2(9396).ChevronSmallDownIcon;
+    let ChevronSmallUpIcon = tmp2(8402).ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = tmp2(12751).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = tmp2(12625).ChevronSmallUpIcon;
   }
   obj[1] = callback(ChevronSmallUpIcon, { color: voicePanelButtonStyles.iconFill.color });
-  items1[1] = callback(importDefault(5663), obj);
+  items1[1] = callback(importDefault(5572), obj);
   obj[3] = items1;
   return tmp6(tmp7, obj);
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;
@@ -33,7 +34,7 @@ export default {
               return obj;
             } else {
               let closure_0 = tmp4;
-              let obj2 = outer1_0(4458);
+              let obj2 = outer1_0(4367);
               dependencyMap = 1;
               c2 = 1;
               const obj1 = { value: null, done: false };
@@ -49,7 +50,7 @@ export default {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = outer1_0(4456);
+            obj = outer1_0(4365);
             if (arg1) {
               obj.ROBLOX_PROTOCOL_URL(closure_0);
             } else {

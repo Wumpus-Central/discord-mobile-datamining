@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding/native/GuildOnboardingPrompts.tsx
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import get from "get";
 import hexToRgba from "hexToRgba";
@@ -30,13 +31,70 @@ function _getBackgroundGradientColor() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      let table = tmp5;
-      let dependencyMap2 = tmp2;
-      const obj2 = dependencyMap(outer1_2[18]);
-      dependencyMap = yield obj2.getPaletteForAvatar(dependencyMap);
-      dependencyMap2 = v0(32, 3);
-      table = 32;
-      return dependencyMap(table[19]).rgbToHex(table, v0, c4);
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === v0) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let table = tmp5;
+              let dependencyMap2 = tmp2;
+              let dependencyMap;
+              dependencyMap2 = undefined;
+              table = undefined;
+              v0 = undefined;
+              c4 = undefined;
+              let obj2 = dependencyMap(outer1_2[18]);
+              v0 = 1;
+              c4 = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = obj2.getPaletteForAvatar(dependencyMap);
+              return obj1;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
+          } else {
+            dependencyMap = arg1;
+            dependencyMap2 = v0(32, 3);
+            table = 32;
+            v0 = 5;
+            c4 = 19;
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = dependencyMap(table[19]).rgbToHex(table, v0, c4);
+            return obj;
+          }
+        } catch (tmp9) {
+          c4 = tmp;
+          throw tmp9;
+        }
+      }
     })();
   });
   const _getBackgroundGradientColor = tmp;
@@ -53,12 +111,12 @@ function BackgroundImageGradient(uri) {
   const tmp = createCacheKey();
   let obj = { children: null };
   const items = [tmp.backgroundImage];
-  const items1 = [callback2(importDefault(5236), { source: { uri: uri.splashUrl }, style: items, resizeMode: "cover" }), ];
+  const items1 = [callback2(importDefault(5145), { source: { uri: uri.splashUrl }, style: items, resizeMode: "cover" }), ];
   obj = { style: tmp.backgroundColorGradient, start: null, end: null, colors: null };
   obj[1] = require(691) /* keys */.VerticalGradient.START;
   obj[2] = require(691) /* keys */.VerticalGradient.END;
-  const tmp2 = importDefault(4706);
-  const items2 = [require(4129) /* hexToRgba */.hexWithOpacity(color, 0.16), color];
+  const tmp2 = importDefault(4615);
+  const items2 = [require(4037) /* hexToRgba */.hexWithOpacity(color, 0.16), color];
   obj[3] = items2;
   items1[1] = callback2(tmp2, obj);
   obj[0] = items1;

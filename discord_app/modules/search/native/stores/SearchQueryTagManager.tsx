@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/stores/SearchQueryTagManager.tsx
 import { SearchQueryTagTypes } from "MessageEmbedTypes";
 import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
 

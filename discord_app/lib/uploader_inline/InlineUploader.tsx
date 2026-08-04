@@ -1,3 +1,4 @@
+// discord_app/lib/uploader_inline/InlineUploader.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;
@@ -13,10 +14,10 @@ class InlineUploader {
 }
 const prototype = InlineUploader.prototype;
 InlineUploader["fromBlob"] = function fromBlob(surface) {
-  let obj = importDefault(4845);
+  let obj = importDefault(4754);
   const fromBlobResult = obj.fromBlob(arg1);
   const tmp = InlineUploader;
-  if (typeof InlineUploader !== "function") {
+  if (typeof InlineUploader !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(tmp.prototype);
@@ -31,7 +32,7 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
   const tmp = (function serializeOriginalMd5Header(originalMd5) {
     if (null == originalMd5) {
       return null;
-    } else if (typeof originalMd5 === "string") {
+    } else if (typeof originalMd5 === "y") {
       let tmp14 = null;
       if (regex.test(originalMd5)) {
         tmp14 = originalMd5;
@@ -92,7 +93,7 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
   if (null != tmp) {
     const obj = {};
     const merged = Object.assign(buildHeadersForMd5);
-    obj[require(8084) /* ORIGINAL_MD5_HEADER */.ORIGINAL_MD5_HEADER] = tmp;
+    obj[require(7954) /* ORIGINAL_MD5_HEADER */.ORIGINAL_MD5_HEADER] = tmp;
     tmp2 = obj;
   }
   return tmp2;
@@ -101,11 +102,60 @@ prototype["buildHeaders"] = function buildHeaders(arg0) {
   let closure_0 = arg0;
   const self = this;
   return callback(function*() {
-    let closure_2 = tmp4;
-    let closure_1 = outer1_5;
-    const buildHeadersForMd5 = outer1_5.buildHeadersForMd5;
-    yield outer1_1.originalMd5Promise;
-    return buildHeadersForMd5(arg1, buildHeadersForMd5);
+    if (c4 === 2) {
+      c4 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let closure_2 = tmp4;
+            let closure_1 = outer1_5;
+            const buildHeadersForMd5 = outer1_5.buildHeadersForMd5;
+            c3 = 1;
+            c4 = 1;
+            const obj1 = { value: null, done: false };
+            obj1[0] = outer1_1.originalMd5Promise;
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
+        } else {
+          c4 = 3;
+          obj = { value: null, done: true };
+          obj[0] = buildHeadersForMd5(arg1, buildHeadersForMd5);
+          return obj;
+        }
+      } catch (tmp11) {
+        c4 = tmp;
+        throw tmp11;
+      }
+    }
   })();
 };
 const result = require("ORIGINAL_MD5_HEADER").fileFinishedImporting("lib/uploader_inline/InlineUploader.tsx");

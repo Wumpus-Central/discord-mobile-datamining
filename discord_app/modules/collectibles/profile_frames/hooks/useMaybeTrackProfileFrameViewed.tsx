@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_frames/hooks/useMaybeTrackProfileFrameViewed.tsx
 import noop from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 

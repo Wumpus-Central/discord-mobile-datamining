@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DesignSystemsContextMenuSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -10,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_CONTEXT_MENU,
   getComponent() {
-    return require(14693) /* DemoContextMenu */.default;
+    return require(14593) /* DemoContextMenu */.default;
   }
 };
 const route = createToggle.createRoute(obj);

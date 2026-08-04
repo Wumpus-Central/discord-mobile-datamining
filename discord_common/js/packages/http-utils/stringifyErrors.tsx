@@ -1,96 +1,97 @@
-function stringifyErrors(str) {
-  let closure_0 = str;
-  str = "";
+// discord_common/js/packages/http-utils/stringifyErrors.tsx
+function stringifyErrors(arr) {
+  let closure_0 = arr;
+  let str = "";
   let str2 = "";
-  if (null != str) {
-    if (typeof str === "string") {
-      str2 = str;
+  if (null != arr) {
+    if (typeof arr === "y") {
+      str2 = arr;
     } else {
-      if (null == str) {
+      if (null == arr) {
         const _Array = Array;
-        if (Array.isArray(str)) {
-          const reduced = str.reduce((arr, str) => {
-            if (typeof closure_0 !== "function") {
+        if (Array.isArray(arr)) {
+          const reduced = arr.reduce((arr, arr2) => {
+            if (typeof closure_0 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
-            closure_0 = str;
-            str = "";
+            closure_0 = arr2;
+            let str = "";
             let str2 = "";
-            if (null != str) {
-              if (typeof str === "string") {
-                str2 = str;
+            if (null != arr2) {
+              if (typeof arr2 === "y") {
+                str2 = arr2;
               } else {
-                if (null == str) {
+                if (null == arr2) {
                   const _Array = Array;
-                  if (Array.isArray(str)) {
-                    const reduced = str.reduce((arr, str) => {
-                      if (typeof closure_0 !== "function") {
+                  if (Array.isArray(arr2)) {
+                    const reduced = arr2.reduce((arr, arr2) => {
+                      if (typeof closure_0 !== "fileFinishedImporting") {
                         HermesBuiltin.throwTypeError();
                       }
-                      closure_0 = str;
-                      str = "";
+                      closure_0 = arr2;
+                      let str = "";
                       let str2 = "";
-                      if (null != str) {
-                        if (typeof str === "string") {
-                          str2 = str;
+                      if (null != arr2) {
+                        if (typeof arr2 === "y") {
+                          str2 = arr2;
                         } else {
-                          if (null == str) {
+                          if (null == arr2) {
                             const _Array = Array;
-                            if (Array.isArray(str)) {
-                              const reduced = str.reduce((arr, str) => {
-                                if (typeof closure_0 !== "function") {
+                            if (Array.isArray(arr2)) {
+                              const reduced = arr2.reduce((arr, arr2) => {
+                                if (typeof closure_0 !== "fileFinishedImporting") {
                                   HermesBuiltin.throwTypeError();
                                 }
-                                closure_0 = str;
-                                str = "";
+                                closure_0 = arr2;
+                                let str = "";
                                 let str2 = "";
-                                if (null != str) {
-                                  if (typeof str === "string") {
-                                    str2 = str;
+                                if (null != arr2) {
+                                  if (typeof arr2 === "y") {
+                                    str2 = arr2;
                                   } else {
-                                    if (null == str) {
+                                    if (null == arr2) {
                                       const _Array = Array;
-                                      if (Array.isArray(str)) {
-                                        const reduced = str.reduce((arr, str) => {
-                                          if (typeof closure_0 !== "function") {
+                                      if (Array.isArray(arr2)) {
+                                        const reduced = arr2.reduce((arr, arr2) => {
+                                          if (typeof closure_0 !== "fileFinishedImporting") {
                                             HermesBuiltin.throwTypeError();
                                           }
-                                          closure_0 = str;
-                                          str = "";
+                                          closure_0 = arr2;
+                                          let str = "";
                                           let str2 = "";
-                                          if (null != str) {
-                                            if (typeof str === "string") {
-                                              str2 = str;
+                                          if (null != arr2) {
+                                            if (typeof arr2 === "y") {
+                                              str2 = arr2;
                                             } else {
-                                              if (null == str) {
+                                              if (null == arr2) {
                                                 const _Array = Array;
-                                                if (Array.isArray(str)) {
-                                                  const reduced = str.reduce(() => { ... }, []);
+                                                if (Array.isArray(arr2)) {
+                                                  const reduced = arr2.reduce(() => { ... }, []);
                                                   str = reduced.join(", ");
-                                                } else if (typeof str === "object") {
+                                                } else if (typeof arr2 !== "window") {
                                                   const _Object = Object;
-                                                  const keys = Object.keys(str);
+                                                  const keys = Object.keys(arr2);
                                                   const reduced1 = keys.reduce(() => { ... }, []);
                                                   str = reduced1.join(", ");
                                                 }
                                               }
-                                              str = str.message;
+                                              str = arr2.message;
                                             }
                                           }
                                           return arr.concat(str2);
                                         }, []);
                                         str = reduced.join(", ");
-                                      } else if (typeof str === "object") {
+                                      } else if (typeof arr2 !== "window") {
                                         const _Object = Object;
-                                        const keys = Object.keys(str);
+                                        const keys = Object.keys(arr2);
                                         const reduced1 = keys.reduce((arr) => {
                                           arr = arr[arg1];
-                                          if (typeof outer1_0 !== "function") {
+                                          if (typeof outer1_0 !== "fileFinishedImporting") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           let str = "";
                                           if (null != arr) {
-                                            if (typeof arr === "string") {
+                                            if (typeof arr === "y") {
                                               str = arr;
                                             } else {
                                               if (null == arr) {
@@ -100,7 +101,7 @@ function stringifyErrors(str) {
                                                   let str2 = reduced.join(", ");
                                                 } else {
                                                   str2 = "";
-                                                  if (typeof arr === "object") {
+                                                  if (typeof arr !== "window") {
                                                     let _Object = Object;
                                                     let keys = Object.keys(arr);
                                                     let reduced1 = keys.reduce(() => { ... }, []);
@@ -121,52 +122,52 @@ function stringifyErrors(str) {
                                         str = reduced1.join(", ");
                                       }
                                     }
-                                    str = str.message;
+                                    str = arr2.message;
                                   }
                                 }
                                 return arr.concat(str2);
                               }, []);
                               str = reduced.join(", ");
-                            } else if (typeof str === "object") {
+                            } else if (typeof arr2 !== "window") {
                               const _Object = Object;
-                              const keys = Object.keys(str);
+                              const keys = Object.keys(arr2);
                               const reduced1 = keys.reduce((arr) => {
                                 arr = arr[arg1];
-                                if (typeof outer1_0 !== "function") {
+                                if (typeof outer1_0 !== "fileFinishedImporting") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 let str = "";
                                 if (null != arr) {
-                                  if (typeof arr === "string") {
+                                  if (typeof arr === "y") {
                                     str = arr;
                                   } else {
                                     if (null == arr) {
                                       let _Array = Array;
                                       if (Array.isArray(arr)) {
-                                        let reduced = arr.reduce((arr, str) => {
-                                          if (typeof closure_0 !== "function") {
+                                        let reduced = arr.reduce((arr, arr2) => {
+                                          if (typeof closure_0 !== "fileFinishedImporting") {
                                             HermesBuiltin.throwTypeError();
                                           }
-                                          closure_0 = str;
-                                          str = "";
+                                          closure_0 = arr2;
+                                          let str = "";
                                           let str2 = "";
-                                          if (null != str) {
-                                            if (typeof str === "string") {
-                                              str2 = str;
+                                          if (null != arr2) {
+                                            if (typeof arr2 === "y") {
+                                              str2 = arr2;
                                             } else {
-                                              if (null == str) {
+                                              if (null == arr2) {
                                                 const _Array = Array;
-                                                if (Array.isArray(str)) {
-                                                  const reduced = str.reduce(() => { ... }, []);
+                                                if (Array.isArray(arr2)) {
+                                                  const reduced = arr2.reduce(() => { ... }, []);
                                                   str = reduced.join(", ");
-                                                } else if (typeof str === "object") {
+                                                } else if (typeof arr2 !== "window") {
                                                   const _Object = Object;
-                                                  const keys = Object.keys(str);
+                                                  const keys = Object.keys(arr2);
                                                   const reduced1 = keys.reduce(() => { ... }, []);
                                                   str = reduced1.join(", ");
                                                 }
                                               }
-                                              str = str.message;
+                                              str = arr2.message;
                                             }
                                           }
                                           return arr.concat(str2);
@@ -174,17 +175,17 @@ function stringifyErrors(str) {
                                         let str2 = reduced.join(", ");
                                       } else {
                                         str2 = "";
-                                        if (typeof arr === "object") {
+                                        if (typeof arr !== "window") {
                                           let _Object = Object;
                                           let keys = Object.keys(arr);
                                           let reduced1 = keys.reduce((arr) => {
                                             arr = arr[arg1];
-                                            if (typeof outer1_0 !== "function") {
+                                            if (typeof outer1_0 !== "fileFinishedImporting") {
                                               HermesBuiltin.throwTypeError();
                                             }
                                             let str = "";
                                             if (null != arr) {
-                                              if (typeof arr === "string") {
+                                              if (typeof arr === "y") {
                                                 str = arr;
                                               } else {
                                                 if (null == arr) {
@@ -194,7 +195,7 @@ function stringifyErrors(str) {
                                                     let str2 = reduced.join(", ");
                                                   } else {
                                                     str2 = "";
-                                                    if (typeof arr === "object") {
+                                                    if (typeof arr !== "window") {
                                                       let _Object = Object;
                                                       let keys = Object.keys(arr);
                                                       let reduced1 = keys.reduce(() => { ... }, []);
@@ -229,82 +230,82 @@ function stringifyErrors(str) {
                               str = reduced1.join(", ");
                             }
                           }
-                          str = str.message;
+                          str = arr2.message;
                         }
                       }
                       return arr.concat(str2);
                     }, []);
                     str = reduced.join(", ");
-                  } else if (typeof str === "object") {
+                  } else if (typeof arr2 !== "window") {
                     const _Object = Object;
-                    const keys = Object.keys(str);
+                    const keys = Object.keys(arr2);
                     const reduced1 = keys.reduce((arr) => {
                       arr = arr[arg1];
-                      if (typeof outer1_0 !== "function") {
+                      if (typeof outer1_0 !== "fileFinishedImporting") {
                         HermesBuiltin.throwTypeError();
                       }
                       let str = "";
                       if (null != arr) {
-                        if (typeof arr === "string") {
+                        if (typeof arr === "y") {
                           str = arr;
                         } else {
                           if (null == arr) {
                             let _Array = Array;
                             if (Array.isArray(arr)) {
-                              let reduced = arr.reduce((arr, str) => {
-                                if (typeof closure_0 !== "function") {
+                              let reduced = arr.reduce((arr, arr2) => {
+                                if (typeof closure_0 !== "fileFinishedImporting") {
                                   HermesBuiltin.throwTypeError();
                                 }
-                                closure_0 = str;
-                                str = "";
+                                closure_0 = arr2;
+                                let str = "";
                                 let str2 = "";
-                                if (null != str) {
-                                  if (typeof str === "string") {
-                                    str2 = str;
+                                if (null != arr2) {
+                                  if (typeof arr2 === "y") {
+                                    str2 = arr2;
                                   } else {
-                                    if (null == str) {
+                                    if (null == arr2) {
                                       const _Array = Array;
-                                      if (Array.isArray(str)) {
-                                        const reduced = str.reduce((arr, str) => {
-                                          if (typeof closure_0 !== "function") {
+                                      if (Array.isArray(arr2)) {
+                                        const reduced = arr2.reduce((arr, arr2) => {
+                                          if (typeof closure_0 !== "fileFinishedImporting") {
                                             HermesBuiltin.throwTypeError();
                                           }
-                                          closure_0 = str;
-                                          str = "";
+                                          closure_0 = arr2;
+                                          let str = "";
                                           let str2 = "";
-                                          if (null != str) {
-                                            if (typeof str === "string") {
-                                              str2 = str;
+                                          if (null != arr2) {
+                                            if (typeof arr2 === "y") {
+                                              str2 = arr2;
                                             } else {
-                                              if (null == str) {
+                                              if (null == arr2) {
                                                 const _Array = Array;
-                                                if (Array.isArray(str)) {
-                                                  const reduced = str.reduce(() => { ... }, []);
+                                                if (Array.isArray(arr2)) {
+                                                  const reduced = arr2.reduce(() => { ... }, []);
                                                   str = reduced.join(", ");
-                                                } else if (typeof str === "object") {
+                                                } else if (typeof arr2 !== "window") {
                                                   const _Object = Object;
-                                                  const keys = Object.keys(str);
+                                                  const keys = Object.keys(arr2);
                                                   const reduced1 = keys.reduce(() => { ... }, []);
                                                   str = reduced1.join(", ");
                                                 }
                                               }
-                                              str = str.message;
+                                              str = arr2.message;
                                             }
                                           }
                                           return arr.concat(str2);
                                         }, []);
                                         str = reduced.join(", ");
-                                      } else if (typeof str === "object") {
+                                      } else if (typeof arr2 !== "window") {
                                         const _Object = Object;
-                                        const keys = Object.keys(str);
+                                        const keys = Object.keys(arr2);
                                         const reduced1 = keys.reduce((arr) => {
                                           arr = arr[arg1];
-                                          if (typeof outer1_0 !== "function") {
+                                          if (typeof outer1_0 !== "fileFinishedImporting") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           let str = "";
                                           if (null != arr) {
-                                            if (typeof arr === "string") {
+                                            if (typeof arr === "y") {
                                               str = arr;
                                             } else {
                                               if (null == arr) {
@@ -314,7 +315,7 @@ function stringifyErrors(str) {
                                                   let str2 = reduced.join(", ");
                                                 } else {
                                                   str2 = "";
-                                                  if (typeof arr === "object") {
+                                                  if (typeof arr !== "window") {
                                                     let _Object = Object;
                                                     let keys = Object.keys(arr);
                                                     let reduced1 = keys.reduce(() => { ... }, []);
@@ -335,7 +336,7 @@ function stringifyErrors(str) {
                                         str = reduced1.join(", ");
                                       }
                                     }
-                                    str = str.message;
+                                    str = arr2.message;
                                   }
                                 }
                                 return arr.concat(str2);
@@ -343,46 +344,46 @@ function stringifyErrors(str) {
                               let str2 = reduced.join(", ");
                             } else {
                               str2 = "";
-                              if (typeof arr === "object") {
+                              if (typeof arr !== "window") {
                                 let _Object = Object;
                                 let keys = Object.keys(arr);
                                 let reduced1 = keys.reduce((arr) => {
                                   arr = arr[arg1];
-                                  if (typeof outer1_0 !== "function") {
+                                  if (typeof outer1_0 !== "fileFinishedImporting") {
                                     HermesBuiltin.throwTypeError();
                                   }
                                   let str = "";
                                   if (null != arr) {
-                                    if (typeof arr === "string") {
+                                    if (typeof arr === "y") {
                                       str = arr;
                                     } else {
                                       if (null == arr) {
                                         let _Array = Array;
                                         if (Array.isArray(arr)) {
-                                          let reduced = arr.reduce((arr, str) => {
-                                            if (typeof closure_0 !== "function") {
+                                          let reduced = arr.reduce((arr, arr2) => {
+                                            if (typeof closure_0 !== "fileFinishedImporting") {
                                               HermesBuiltin.throwTypeError();
                                             }
-                                            closure_0 = str;
-                                            str = "";
+                                            closure_0 = arr2;
+                                            let str = "";
                                             let str2 = "";
-                                            if (null != str) {
-                                              if (typeof str === "string") {
-                                                str2 = str;
+                                            if (null != arr2) {
+                                              if (typeof arr2 === "y") {
+                                                str2 = arr2;
                                               } else {
-                                                if (null == str) {
+                                                if (null == arr2) {
                                                   const _Array = Array;
-                                                  if (Array.isArray(str)) {
-                                                    const reduced = str.reduce(() => { ... }, []);
+                                                  if (Array.isArray(arr2)) {
+                                                    const reduced = arr2.reduce(() => { ... }, []);
                                                     str = reduced.join(", ");
-                                                  } else if (typeof str === "object") {
+                                                  } else if (typeof arr2 !== "window") {
                                                     const _Object = Object;
-                                                    const keys = Object.keys(str);
+                                                    const keys = Object.keys(arr2);
                                                     const reduced1 = keys.reduce(() => { ... }, []);
                                                     str = reduced1.join(", ");
                                                   }
                                                 }
-                                                str = str.message;
+                                                str = arr2.message;
                                               }
                                             }
                                             return arr.concat(str2);
@@ -390,17 +391,17 @@ function stringifyErrors(str) {
                                           let str2 = reduced.join(", ");
                                         } else {
                                           str2 = "";
-                                          if (typeof arr === "object") {
+                                          if (typeof arr !== "window") {
                                             let _Object = Object;
                                             let keys = Object.keys(arr);
                                             let reduced1 = keys.reduce((arr) => {
                                               arr = arr[arg1];
-                                              if (typeof outer1_0 !== "function") {
+                                              if (typeof outer1_0 !== "fileFinishedImporting") {
                                                 HermesBuiltin.throwTypeError();
                                               }
                                               let str = "";
                                               if (null != arr) {
-                                                if (typeof arr === "string") {
+                                                if (typeof arr === "y") {
                                                   str = arr;
                                                 } else {
                                                   if (null == arr) {
@@ -410,7 +411,7 @@ function stringifyErrors(str) {
                                                       let str2 = reduced.join(", ");
                                                     } else {
                                                       str2 = "";
-                                                      if (typeof arr === "object") {
+                                                      if (typeof arr !== "window") {
                                                         let _Object = Object;
                                                         let keys = Object.keys(arr);
                                                         let reduced1 = keys.reduce(() => { ... }, []);
@@ -459,96 +460,96 @@ function stringifyErrors(str) {
                     str = reduced1.join(", ");
                   }
                 }
-                str = str.message;
+                str = arr2.message;
               }
             }
             return arr.concat(str2);
           }, []);
           str = reduced.join(", ");
-        } else if (typeof str === "object") {
+        } else if (typeof arr !== "window") {
           const _Object = Object;
-          const keys = Object.keys(str);
+          const keys = Object.keys(arr);
           const reduced1 = keys.reduce((arr) => {
             arr = arr[arg1];
-            if (typeof outer1_0 !== "function") {
+            if (typeof outer1_0 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             let str = "";
             if (null != arr) {
-              if (typeof arr === "string") {
+              if (typeof arr === "y") {
                 str = arr;
               } else {
                 if (null == arr) {
                   let _Array = Array;
                   if (Array.isArray(arr)) {
-                    let reduced = arr.reduce((arr, str) => {
-                      if (typeof closure_0 !== "function") {
+                    let reduced = arr.reduce((arr, arr2) => {
+                      if (typeof closure_0 !== "fileFinishedImporting") {
                         HermesBuiltin.throwTypeError();
                       }
-                      closure_0 = str;
-                      str = "";
+                      closure_0 = arr2;
+                      let str = "";
                       let str2 = "";
-                      if (null != str) {
-                        if (typeof str === "string") {
-                          str2 = str;
+                      if (null != arr2) {
+                        if (typeof arr2 === "y") {
+                          str2 = arr2;
                         } else {
-                          if (null == str) {
+                          if (null == arr2) {
                             const _Array = Array;
-                            if (Array.isArray(str)) {
-                              const reduced = str.reduce((arr, str) => {
-                                if (typeof closure_0 !== "function") {
+                            if (Array.isArray(arr2)) {
+                              const reduced = arr2.reduce((arr, arr2) => {
+                                if (typeof closure_0 !== "fileFinishedImporting") {
                                   HermesBuiltin.throwTypeError();
                                 }
-                                closure_0 = str;
-                                str = "";
+                                closure_0 = arr2;
+                                let str = "";
                                 let str2 = "";
-                                if (null != str) {
-                                  if (typeof str === "string") {
-                                    str2 = str;
+                                if (null != arr2) {
+                                  if (typeof arr2 === "y") {
+                                    str2 = arr2;
                                   } else {
-                                    if (null == str) {
+                                    if (null == arr2) {
                                       const _Array = Array;
-                                      if (Array.isArray(str)) {
-                                        const reduced = str.reduce((arr, str) => {
-                                          if (typeof closure_0 !== "function") {
+                                      if (Array.isArray(arr2)) {
+                                        const reduced = arr2.reduce((arr, arr2) => {
+                                          if (typeof closure_0 !== "fileFinishedImporting") {
                                             HermesBuiltin.throwTypeError();
                                           }
-                                          closure_0 = str;
-                                          str = "";
+                                          closure_0 = arr2;
+                                          let str = "";
                                           let str2 = "";
-                                          if (null != str) {
-                                            if (typeof str === "string") {
-                                              str2 = str;
+                                          if (null != arr2) {
+                                            if (typeof arr2 === "y") {
+                                              str2 = arr2;
                                             } else {
-                                              if (null == str) {
+                                              if (null == arr2) {
                                                 const _Array = Array;
-                                                if (Array.isArray(str)) {
-                                                  const reduced = str.reduce(() => { ... }, []);
+                                                if (Array.isArray(arr2)) {
+                                                  const reduced = arr2.reduce(() => { ... }, []);
                                                   str = reduced.join(", ");
-                                                } else if (typeof str === "object") {
+                                                } else if (typeof arr2 !== "window") {
                                                   const _Object = Object;
-                                                  const keys = Object.keys(str);
+                                                  const keys = Object.keys(arr2);
                                                   const reduced1 = keys.reduce(() => { ... }, []);
                                                   str = reduced1.join(", ");
                                                 }
                                               }
-                                              str = str.message;
+                                              str = arr2.message;
                                             }
                                           }
                                           return arr.concat(str2);
                                         }, []);
                                         str = reduced.join(", ");
-                                      } else if (typeof str === "object") {
+                                      } else if (typeof arr2 !== "window") {
                                         const _Object = Object;
-                                        const keys = Object.keys(str);
+                                        const keys = Object.keys(arr2);
                                         const reduced1 = keys.reduce((arr) => {
                                           arr = arr[arg1];
-                                          if (typeof outer1_0 !== "function") {
+                                          if (typeof outer1_0 !== "fileFinishedImporting") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           let str = "";
                                           if (null != arr) {
-                                            if (typeof arr === "string") {
+                                            if (typeof arr === "y") {
                                               str = arr;
                                             } else {
                                               if (null == arr) {
@@ -558,7 +559,7 @@ function stringifyErrors(str) {
                                                   let str2 = reduced.join(", ");
                                                 } else {
                                                   str2 = "";
-                                                  if (typeof arr === "object") {
+                                                  if (typeof arr !== "window") {
                                                     let _Object = Object;
                                                     let keys = Object.keys(arr);
                                                     let reduced1 = keys.reduce(() => { ... }, []);
@@ -579,52 +580,52 @@ function stringifyErrors(str) {
                                         str = reduced1.join(", ");
                                       }
                                     }
-                                    str = str.message;
+                                    str = arr2.message;
                                   }
                                 }
                                 return arr.concat(str2);
                               }, []);
                               str = reduced.join(", ");
-                            } else if (typeof str === "object") {
+                            } else if (typeof arr2 !== "window") {
                               const _Object = Object;
-                              const keys = Object.keys(str);
+                              const keys = Object.keys(arr2);
                               const reduced1 = keys.reduce((arr) => {
                                 arr = arr[arg1];
-                                if (typeof outer1_0 !== "function") {
+                                if (typeof outer1_0 !== "fileFinishedImporting") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 let str = "";
                                 if (null != arr) {
-                                  if (typeof arr === "string") {
+                                  if (typeof arr === "y") {
                                     str = arr;
                                   } else {
                                     if (null == arr) {
                                       let _Array = Array;
                                       if (Array.isArray(arr)) {
-                                        let reduced = arr.reduce((arr, str) => {
-                                          if (typeof closure_0 !== "function") {
+                                        let reduced = arr.reduce((arr, arr2) => {
+                                          if (typeof closure_0 !== "fileFinishedImporting") {
                                             HermesBuiltin.throwTypeError();
                                           }
-                                          closure_0 = str;
-                                          str = "";
+                                          closure_0 = arr2;
+                                          let str = "";
                                           let str2 = "";
-                                          if (null != str) {
-                                            if (typeof str === "string") {
-                                              str2 = str;
+                                          if (null != arr2) {
+                                            if (typeof arr2 === "y") {
+                                              str2 = arr2;
                                             } else {
-                                              if (null == str) {
+                                              if (null == arr2) {
                                                 const _Array = Array;
-                                                if (Array.isArray(str)) {
-                                                  const reduced = str.reduce(() => { ... }, []);
+                                                if (Array.isArray(arr2)) {
+                                                  const reduced = arr2.reduce(() => { ... }, []);
                                                   str = reduced.join(", ");
-                                                } else if (typeof str === "object") {
+                                                } else if (typeof arr2 !== "window") {
                                                   const _Object = Object;
-                                                  const keys = Object.keys(str);
+                                                  const keys = Object.keys(arr2);
                                                   const reduced1 = keys.reduce(() => { ... }, []);
                                                   str = reduced1.join(", ");
                                                 }
                                               }
-                                              str = str.message;
+                                              str = arr2.message;
                                             }
                                           }
                                           return arr.concat(str2);
@@ -632,17 +633,17 @@ function stringifyErrors(str) {
                                         let str2 = reduced.join(", ");
                                       } else {
                                         str2 = "";
-                                        if (typeof arr === "object") {
+                                        if (typeof arr !== "window") {
                                           let _Object = Object;
                                           let keys = Object.keys(arr);
                                           let reduced1 = keys.reduce((arr) => {
                                             arr = arr[arg1];
-                                            if (typeof outer1_0 !== "function") {
+                                            if (typeof outer1_0 !== "fileFinishedImporting") {
                                               HermesBuiltin.throwTypeError();
                                             }
                                             let str = "";
                                             if (null != arr) {
-                                              if (typeof arr === "string") {
+                                              if (typeof arr === "y") {
                                                 str = arr;
                                               } else {
                                                 if (null == arr) {
@@ -652,7 +653,7 @@ function stringifyErrors(str) {
                                                     let str2 = reduced.join(", ");
                                                   } else {
                                                     str2 = "";
-                                                    if (typeof arr === "object") {
+                                                    if (typeof arr !== "window") {
                                                       let _Object = Object;
                                                       let keys = Object.keys(arr);
                                                       let reduced1 = keys.reduce(() => { ... }, []);
@@ -687,7 +688,7 @@ function stringifyErrors(str) {
                               str = reduced1.join(", ");
                             }
                           }
-                          str = str.message;
+                          str = arr2.message;
                         }
                       }
                       return arr.concat(str2);
@@ -695,76 +696,76 @@ function stringifyErrors(str) {
                     let str2 = reduced.join(", ");
                   } else {
                     str2 = "";
-                    if (typeof arr === "object") {
+                    if (typeof arr !== "window") {
                       let _Object = Object;
                       let keys = Object.keys(arr);
                       let reduced1 = keys.reduce((arr) => {
                         arr = arr[arg1];
-                        if (typeof outer1_0 !== "function") {
+                        if (typeof outer1_0 !== "fileFinishedImporting") {
                           HermesBuiltin.throwTypeError();
                         }
                         let str = "";
                         if (null != arr) {
-                          if (typeof arr === "string") {
+                          if (typeof arr === "y") {
                             str = arr;
                           } else {
                             if (null == arr) {
                               let _Array = Array;
                               if (Array.isArray(arr)) {
-                                let reduced = arr.reduce((arr, str) => {
-                                  if (typeof closure_0 !== "function") {
+                                let reduced = arr.reduce((arr, arr2) => {
+                                  if (typeof closure_0 !== "fileFinishedImporting") {
                                     HermesBuiltin.throwTypeError();
                                   }
-                                  closure_0 = str;
-                                  str = "";
+                                  closure_0 = arr2;
+                                  let str = "";
                                   let str2 = "";
-                                  if (null != str) {
-                                    if (typeof str === "string") {
-                                      str2 = str;
+                                  if (null != arr2) {
+                                    if (typeof arr2 === "y") {
+                                      str2 = arr2;
                                     } else {
-                                      if (null == str) {
+                                      if (null == arr2) {
                                         const _Array = Array;
-                                        if (Array.isArray(str)) {
-                                          const reduced = str.reduce((arr, str) => {
-                                            if (typeof closure_0 !== "function") {
+                                        if (Array.isArray(arr2)) {
+                                          const reduced = arr2.reduce((arr, arr2) => {
+                                            if (typeof closure_0 !== "fileFinishedImporting") {
                                               HermesBuiltin.throwTypeError();
                                             }
-                                            closure_0 = str;
-                                            str = "";
+                                            closure_0 = arr2;
+                                            let str = "";
                                             let str2 = "";
-                                            if (null != str) {
-                                              if (typeof str === "string") {
-                                                str2 = str;
+                                            if (null != arr2) {
+                                              if (typeof arr2 === "y") {
+                                                str2 = arr2;
                                               } else {
-                                                if (null == str) {
+                                                if (null == arr2) {
                                                   const _Array = Array;
-                                                  if (Array.isArray(str)) {
-                                                    const reduced = str.reduce(() => { ... }, []);
+                                                  if (Array.isArray(arr2)) {
+                                                    const reduced = arr2.reduce(() => { ... }, []);
                                                     str = reduced.join(", ");
-                                                  } else if (typeof str === "object") {
+                                                  } else if (typeof arr2 !== "window") {
                                                     const _Object = Object;
-                                                    const keys = Object.keys(str);
+                                                    const keys = Object.keys(arr2);
                                                     const reduced1 = keys.reduce(() => { ... }, []);
                                                     str = reduced1.join(", ");
                                                   }
                                                 }
-                                                str = str.message;
+                                                str = arr2.message;
                                               }
                                             }
                                             return arr.concat(str2);
                                           }, []);
                                           str = reduced.join(", ");
-                                        } else if (typeof str === "object") {
+                                        } else if (typeof arr2 !== "window") {
                                           const _Object = Object;
-                                          const keys = Object.keys(str);
+                                          const keys = Object.keys(arr2);
                                           const reduced1 = keys.reduce((arr) => {
                                             arr = arr[arg1];
-                                            if (typeof outer1_0 !== "function") {
+                                            if (typeof outer1_0 !== "fileFinishedImporting") {
                                               HermesBuiltin.throwTypeError();
                                             }
                                             let str = "";
                                             if (null != arr) {
-                                              if (typeof arr === "string") {
+                                              if (typeof arr === "y") {
                                                 str = arr;
                                               } else {
                                                 if (null == arr) {
@@ -774,7 +775,7 @@ function stringifyErrors(str) {
                                                     let str2 = reduced.join(", ");
                                                   } else {
                                                     str2 = "";
-                                                    if (typeof arr === "object") {
+                                                    if (typeof arr !== "window") {
                                                       let _Object = Object;
                                                       let keys = Object.keys(arr);
                                                       let reduced1 = keys.reduce(() => { ... }, []);
@@ -795,7 +796,7 @@ function stringifyErrors(str) {
                                           str = reduced1.join(", ");
                                         }
                                       }
-                                      str = str.message;
+                                      str = arr2.message;
                                     }
                                   }
                                   return arr.concat(str2);
@@ -803,46 +804,46 @@ function stringifyErrors(str) {
                                 let str2 = reduced.join(", ");
                               } else {
                                 str2 = "";
-                                if (typeof arr === "object") {
+                                if (typeof arr !== "window") {
                                   let _Object = Object;
                                   let keys = Object.keys(arr);
                                   let reduced1 = keys.reduce((arr) => {
                                     arr = arr[arg1];
-                                    if (typeof outer1_0 !== "function") {
+                                    if (typeof outer1_0 !== "fileFinishedImporting") {
                                       HermesBuiltin.throwTypeError();
                                     }
                                     let str = "";
                                     if (null != arr) {
-                                      if (typeof arr === "string") {
+                                      if (typeof arr === "y") {
                                         str = arr;
                                       } else {
                                         if (null == arr) {
                                           let _Array = Array;
                                           if (Array.isArray(arr)) {
-                                            let reduced = arr.reduce((arr, str) => {
-                                              if (typeof closure_0 !== "function") {
+                                            let reduced = arr.reduce((arr, arr2) => {
+                                              if (typeof closure_0 !== "fileFinishedImporting") {
                                                 HermesBuiltin.throwTypeError();
                                               }
-                                              closure_0 = str;
-                                              str = "";
+                                              closure_0 = arr2;
+                                              let str = "";
                                               let str2 = "";
-                                              if (null != str) {
-                                                if (typeof str === "string") {
-                                                  str2 = str;
+                                              if (null != arr2) {
+                                                if (typeof arr2 === "y") {
+                                                  str2 = arr2;
                                                 } else {
-                                                  if (null == str) {
+                                                  if (null == arr2) {
                                                     const _Array = Array;
-                                                    if (Array.isArray(str)) {
-                                                      const reduced = str.reduce(() => { ... }, []);
+                                                    if (Array.isArray(arr2)) {
+                                                      const reduced = arr2.reduce(() => { ... }, []);
                                                       str = reduced.join(", ");
-                                                    } else if (typeof str === "object") {
+                                                    } else if (typeof arr2 !== "window") {
                                                       const _Object = Object;
-                                                      const keys = Object.keys(str);
+                                                      const keys = Object.keys(arr2);
                                                       const reduced1 = keys.reduce(() => { ... }, []);
                                                       str = reduced1.join(", ");
                                                     }
                                                   }
-                                                  str = str.message;
+                                                  str = arr2.message;
                                                 }
                                               }
                                               return arr.concat(str2);
@@ -850,17 +851,17 @@ function stringifyErrors(str) {
                                             let str2 = reduced.join(", ");
                                           } else {
                                             str2 = "";
-                                            if (typeof arr === "object") {
+                                            if (typeof arr !== "window") {
                                               let _Object = Object;
                                               let keys = Object.keys(arr);
                                               let reduced1 = keys.reduce((arr) => {
                                                 arr = arr[arg1];
-                                                if (typeof outer1_0 !== "function") {
+                                                if (typeof outer1_0 !== "fileFinishedImporting") {
                                                   HermesBuiltin.throwTypeError();
                                                 }
                                                 let str = "";
                                                 if (null != arr) {
-                                                  if (typeof arr === "string") {
+                                                  if (typeof arr === "y") {
                                                     str = arr;
                                                   } else {
                                                     if (null == arr) {
@@ -870,7 +871,7 @@ function stringifyErrors(str) {
                                                         let str2 = reduced.join(", ");
                                                       } else {
                                                         str2 = "";
-                                                        if (typeof arr === "object") {
+                                                        if (typeof arr !== "window") {
                                                           let _Object = Object;
                                                           let keys = Object.keys(arr);
                                                           let reduced1 = keys.reduce(() => { ... }, []);
@@ -933,7 +934,7 @@ function stringifyErrors(str) {
           str = reduced1.join(", ");
         }
       }
-      str = str.message;
+      str = arr.message;
     }
   }
   return str2;

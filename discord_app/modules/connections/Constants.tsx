@@ -1,3 +1,4 @@
+// discord_app/modules/connections/Constants.tsx
 const result = require("set").fileFinishedImporting("modules/connections/Constants.tsx");
 
 export const OperatorTypes = { EQUAL: 1, [1]: "EQUAL", NOT_EQUAL: 2, [2]: "NOT_EQUAL", LESS_THAN: 3, [3]: "LESS_THAN", GREATER_THAN: 4, [4]: "GREATER_THAN" };

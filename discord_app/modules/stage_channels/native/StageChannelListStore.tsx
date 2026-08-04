@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/native/StageChannelListStore.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import identity from "identity";
@@ -25,7 +26,7 @@ export const useActiveSpeakerPillScrollHandler = function useActiveSpeakerPillSc
     const items = [, ];
     ({ listRef: arr[0], setListRef: arr[1] } = arg0);
     return items;
-  }, first(3898).shallow), 2);
+  }, first(3806).shallow), 2);
   first = tmp[0];
   const dependencyMap = tmp3;
   let items = [tmp[1]];
@@ -48,5 +49,5 @@ export const useActiveSpeakerPillState = function useActiveSpeakerPillState() {
     const items = [, ];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, require(3898) /* isIterable */.shallow);
+  }, require(3806) /* isIterable */.shallow);
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/voice/AudioSettingsPending.tsx
 import _slicedToArray from "_slicedToArray";
 
 let closure_1 = {};

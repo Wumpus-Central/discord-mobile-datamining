@@ -1,3 +1,4 @@
+// discord_app/modules/channel_text_area/slate/SlateUtils.tsx
 let obj = { type: "line", children: null };
 let items = [Object.freeze({ text: "" })];
 obj[1] = Object.freeze(items);

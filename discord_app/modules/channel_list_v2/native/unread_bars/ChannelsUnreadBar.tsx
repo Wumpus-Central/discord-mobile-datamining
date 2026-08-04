@@ -1,10 +1,11 @@
+// discord_app/modules/channel_list_v2/native/unread_bars/ChannelsUnreadBar.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "ArrowSmallUpIcon";
 import hairlineWidth from "hairlineWidth";
 import { AnalyticEvents } from "ME";
 import jsxProd from "getSystemLocale";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4146";
+import importDefaultResult from "module_4054";
 
 let c5;
 let c9;
@@ -14,7 +15,7 @@ const require = arg1;
 let c4 = importAllResult;
 ({ getScaledSearchBarHeight: c5, VIEWABILITY_CONFIG: closure_6 } = hairlineWidth);
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
-let closure_10 = require("module_4146").createAnimatedComponent(require("AtIcon").Pressable);
+let closure_10 = require("module_4054").createAnimatedComponent(require("AtIcon").Pressable);
 let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
   let num = 5;
   if (arg0) {

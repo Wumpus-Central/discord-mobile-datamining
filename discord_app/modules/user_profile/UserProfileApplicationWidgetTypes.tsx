@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/UserProfileApplicationWidgetTypes.tsx
 let ApplicationWidget;
 class ApplicationWidget {
   constructor(arg0) {

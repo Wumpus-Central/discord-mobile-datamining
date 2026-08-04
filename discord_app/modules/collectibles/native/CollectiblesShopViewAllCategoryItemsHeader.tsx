@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -22,7 +23,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   let obj = _require(1480);
   _require = obj.useStackNavigation();
   const tmp = callback3();
-  let obj1 = _require(7561);
+  let obj1 = _require(6563);
   obj = { style: null, children: null };
   obj = {};
   const youBarSettingsCustomHeaderPaddingTop = obj1.useYouBarSettingsCustomHeaderPaddingTop();
@@ -31,14 +32,14 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj[0] = obj;
   obj1 = { style: tmp.backButton, children: null };
   const obj2 = { source: null, color: null, accessibilityLabel: null, onPress: null };
-  obj2[0] = importDefault(8197);
+  obj2[0] = importDefault(9131);
   obj2[1] = buttonColor;
   const intl = _require(1236).intl;
   obj2[2] = intl.string(_require(1236).t["13/7kX"]);
   obj2[3] = function onPress() {
     navigation.goBack();
   };
-  obj1[1] = callback(_require(8193).HeaderIconButton, obj2);
+  obj1[1] = callback(_require(9127).HeaderIconButton, obj2);
   const items = [callback(closure_4, obj1), , ];
   const obj3 = { resizeMode: "contain", style: tmp.logo, source: { uri: logoUrl }, accessibilityLabel: null, accessibilityRole: "header" };
   const intl2 = _require(1236).intl;

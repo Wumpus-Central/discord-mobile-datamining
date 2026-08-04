@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -85,7 +86,7 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
     }
     const obj2 = { content: null };
     obj2[0] = str;
-    const merged = Object.assign(importDefault(7882)(message));
+    const merged = Object.assign(importDefault(7751)(message));
     return obj2;
   }
 };

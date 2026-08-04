@@ -1,3 +1,4 @@
+// discord_app/modules/device/native/DeviceMedia.tsx
 import { AnalyticEvents } from "ME";
 import keys from "keys";
 
@@ -89,14 +90,14 @@ export default {
             obj = { page: table, has_reached_end: tmp12 };
             lastAssetIndex(table[2]).track(outer1_3.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj);
           };
-          lastAssetIndex(9934)(obj);
+          lastAssetIndex(9698)(obj);
         }
       }
     }
   },
   refreshAssets(batchSize) {
     batchSize = batchSize.batchSize;
-    importDefault(9934)({
+    importDefault(9698)({
       batchSize,
       extensions: batchSize.extensions,
       onFetched(edges) {

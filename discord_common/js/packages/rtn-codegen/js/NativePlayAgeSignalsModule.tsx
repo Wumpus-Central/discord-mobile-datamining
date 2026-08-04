@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/NativePlayAgeSignalsModule.tsx
 import { TurboModuleRegistry } from "get ActivityIndicator";
 
 const value = TurboModuleRegistry.get("NativePlayAgeSignalsModule");

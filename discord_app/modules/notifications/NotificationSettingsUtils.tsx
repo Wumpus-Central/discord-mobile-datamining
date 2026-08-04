@@ -1,3 +1,4 @@
+// discord_app/modules/notifications/NotificationSettingsUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import items2 from "items2";
 
@@ -19,7 +20,7 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
       let tmp4 = require;
       let tmp5 = dependencyMap;
       let tmp6 = nextResult;
-      let tmp7 = require(13631) /* knownExperimentConfigs */.knownExperimentConfigs[tmp3.experiment];
+      let tmp7 = require(13535) /* knownExperimentConfigs */.knownExperimentConfigs[tmp3.experiment];
       let obj2 = tmp7;
       if (tmp7.definition.name !== tmp3.experiment) {
         let _Error = Error;

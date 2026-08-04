@@ -1,3 +1,4 @@
+// discord_app/modules/custom_status/utils/getRandomCustomStatusPrompt.tsx
 import StatusTypes from "StatusTypes";
 
 let c3;

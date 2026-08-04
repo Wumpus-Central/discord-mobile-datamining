@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { QuestDockMode } from "QuestsExperimentLocations";

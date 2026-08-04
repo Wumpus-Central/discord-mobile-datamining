@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/hooks/useCollectiblesExternalGatewayFacet.android.tsx
 import { useMemo } from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

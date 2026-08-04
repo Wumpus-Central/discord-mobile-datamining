@@ -1,3 +1,4 @@
+// discord_app/modules/telemetry_ring/native/channels/NormalTelemetry.tsx
 import importDefaultResult from "append";
 import importDefaultResult1 from "TelemetryChannel";
 

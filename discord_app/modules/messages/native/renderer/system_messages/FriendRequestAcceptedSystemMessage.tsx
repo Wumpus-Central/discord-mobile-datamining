@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 
@@ -14,7 +15,7 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
       const currentUser = authStore.getCurrentUser();
       if (null != user) {
         if (null != currentUser) {
-          let colorString = require(7879) /* getMessageAuthorWithProcessedColor */.getUserAuthorWithProcessedColor(user, channel);
+          let colorString = require(7748) /* getMessageAuthorWithProcessedColor */.getUserAuthorWithProcessedColor(user, channel);
           let obj = { userId: null, message: null, author: null, roleStyle: null };
           obj[0] = recipientId;
           obj[1] = message;
@@ -22,11 +23,11 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           obj[3] = message.roleStyle;
           obj = { username: null, usernameOnClick: null };
           obj[0] = colorString.nick;
-          obj[1] = importDefault(7881)(obj);
+          obj[1] = importDefault(7750)(obj);
           let content = message.content;
           if (null != content) {
             if ("" !== content) {
-              let tmp15Result = tmp15(4285);
+              let tmp15Result = tmp15(4193);
               const obj1 = { baseTextColor: null };
               obj1[0] = tmp17(712).colors.TEXT_SUBTLE;
               const intl2 = tmp15(1236).intl;
@@ -63,10 +64,10 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           }
           const obj4 = { content: null, iconUrl: null, textColor: null };
           obj4[0] = formatToPartsResult;
-          tmp15Result = tmp15(7865);
-          obj4[1] = tmp15Result.getAssetUriForEmbed(importDefault(7985));
+          tmp15Result = tmp15(7734);
+          obj4[1] = tmp15Result.getAssetUriForEmbed(importDefault(7855));
           obj4[2] = undefined;
-          const merged1 = Object.assign(tmp17(7882)(message));
+          const merged1 = Object.assign(tmp17(7751)(message));
           return obj4;
         }
       }

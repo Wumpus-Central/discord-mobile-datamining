@@ -1,3 +1,4 @@
+// discord_app/modules/guild_antiraid/GuildAntiRaidTypes.tsx
 const result = require("set").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidTypes.tsx");
 
 export const GuildIncidentActionSources = { MESSAGE: "message", NAGBAR: "nagbar", GUILD_SETTINGS: "guild_settings", CONTEXT_MENU: "context_menu", GUILD_PROFILE: "guild_profile", MEMBER_SAFETY_PAGE: "member_safety_page" };

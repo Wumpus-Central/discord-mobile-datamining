@@ -1,3 +1,4 @@
+// discord_app/actions/RTCDebugActionCreators.tsx
 import updateStats from "updateStats";
 
 const result = require("trackVoiceAndVideoDebuggingSettingsUpdated").fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
@@ -20,7 +21,7 @@ export const setSection = function setSection(section) {
   obj.dispatch(obj);
 };
 export const setShouldRecordNextConnection = function setShouldRecordNextConnection(value) {
-  importDefault(9081)("connection_replay_log_enabled", value, updateStats.shouldRecordNextConnection());
+  importDefault(8851)("connection_replay_log_enabled", value, updateStats.shouldRecordNextConnection());
   let obj = importDefault(709);
   obj = { type: "RTC_DEBUG_SET_RECORDING_FLAG", value };
   obj.dispatch(obj);
@@ -31,7 +32,7 @@ export const setSimulcastDebugOverride = function setSimulcastDebugOverride(user
   obj.dispatch(obj);
 };
 export const chooseReplayPath = function chooseReplayPath() {
-  const fileManager = importDefault(3896).fileManager;
+  const fileManager = importDefault(3804).fileManager;
   const items = [{ name: "All Files", extensions: ["*"] }];
   fileManager.showOpenDialog({ filters: items }).then((arg0) => {
     let str = "";

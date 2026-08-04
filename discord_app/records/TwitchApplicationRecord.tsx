@@ -1,3 +1,4 @@
+// discord_app/records/TwitchApplicationRecord.tsx
 import "createExecutable";
 
 const require = arg1;
@@ -14,7 +15,7 @@ class TwitchApplicationRecord extends tmp2 {
   }
 }
 TwitchApplicationRecord.prototype["getIconURL"] = function getIconURL() {
-  return importDefault(4966).get("twitch").icon.lightPNG;
+  return importDefault(4875).get("twitch").icon.lightPNG;
 };
 
 export default TwitchApplicationRecord;

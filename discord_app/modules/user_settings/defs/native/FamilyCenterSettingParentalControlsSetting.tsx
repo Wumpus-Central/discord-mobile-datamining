@@ -1,9 +1,10 @@
+// discord_app/modules/user_settings/defs/native/FamilyCenterSettingParentalControlsSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
   useTitle() {
     const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2285).ahKIJO);
+    return intl.string(importDefault(2225).ahKIJO);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER,
   unsearchable: true,
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS,
   getComponent() {
-    return require(14079) /* FamilyCenterParentalControlsSettings */.default;
+    return require(13979) /* FamilyCenterParentalControlsSettings */.default;
   }
 };
 const route = createToggle.createRoute(obj);

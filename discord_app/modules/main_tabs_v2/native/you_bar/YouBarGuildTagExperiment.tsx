@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/you_bar/YouBarGuildTagExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-you-bar-guild-tag", kind: "user", defaultConfig: { showGuildTag: false }, variations: { 0: { showGuildTag: false }, 1: { showGuildTag: true } } });

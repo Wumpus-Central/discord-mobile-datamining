@@ -1,3 +1,4 @@
+// discord_app/modules/rpc/helpers/validateTransportType.tsx
 import { TransportTypes } from "RPC_SCOPE_CONFIG";
 import { RPCErrors } from "ME";
 
@@ -8,7 +9,7 @@ export const validateTransportType = function validateTransportType(transport) {
     if (TransportTypes.POST_MESSAGE !== transport) {
       const obj = { errorCode: null };
       obj[0] = RPCErrors.INVALID_COMMAND;
-      const tmp7 = new importDefault(10543)(obj, "Invalid transport.");
+      const tmp7 = new importDefault(10640)(obj, "Invalid transport.");
       throw tmp7;
     }
   }

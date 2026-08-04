@@ -1,3 +1,4 @@
+// discord_app/modules/channel_permissions/native/action_sheets/AddMembersActionSheet.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import presentAddedFriendToast from "presentAddedFriendToast";
@@ -20,33 +21,33 @@ let closure_18;
 let closure_19;
 let metroImportAll;
 const require = arg1;
-function _toPropertyKey(obj) {
-  let StringResult = obj;
-  if (typeof obj === "object") {
-    StringResult = obj;
-    if (obj) {
+function _toPropertyKey(arg0) {
+  let StringResult = arg0;
+  if (typeof arg0 !== "window") {
+    StringResult = arg0;
+    if (arg0) {
       const _Symbol = Symbol;
-      if (undefined !== obj[Symbol.toPrimitive]) {
+      if (undefined !== arg0[Symbol.toPrimitive]) {
         const call = tmp3.call;
         if (typeof call === "unknown") {
           let callResult = tmp3("string");
         } else {
-          callResult = call(obj, "string");
+          callResult = call(arg0, "string");
         }
         StringResult = callResult;
-        if (typeof callResult === "object") {
+        if (typeof callResult !== "window") {
           const _TypeError = TypeError;
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
       } else {
         const _String = String;
-        StringResult = String(obj);
+        StringResult = String(arg0);
       }
     }
   }
   let text = StringResult;
-  if (typeof StringResult !== "symbol") {
+  if (typeof StringResult !== "e") {
     text = `${tmp}`;
   }
   return text;
@@ -209,7 +210,7 @@ class AddMembersBody {
     tmp33 = Fragment;
     tmp35 = length;
     obj4 = { accessibilityLabel: null, placeholder: null, tags: null, onChangeText: null, onRemove: null };
-    tmp8Result = require("module_8931");
+    tmp8Result = require("module_8293");
     intl5 = require("getSystemLocale").intl;
     obj4[0] = intl5.string(require("getSystemLocale").t["5h0QOP"]);
     intl6 = require("getSystemLocale").intl;
@@ -279,7 +280,7 @@ class AddMembersBody {
     obj11.renderItem = function renderRow(item) {
       item = item.item;
       const index = item.index;
-      if (typeof item === "string") {
+      if (typeof item === "y") {
         let items = [_undefined.sectionRowWrapper, ];
         let obj = { style: null, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: null };
         items[1] = 0 === index ? { paddingTop: 0 } : {};
@@ -385,47 +386,94 @@ export default function AddMembersActionSheet(channel) {
   function _handleAddPressed() {
     const self = this;
     let tmp = outer1_4(function*() {
-      let c1 = tmp3;
-      const items = [];
-      c1 = 0;
-      let c2 = 0;
-      const _Object = Object;
-      const values = Object.values(outer1_1);
-      const item = values.forEach((row) => {
-        row = row.row;
-        let tmp = null != row.id;
-        if (tmp) {
-          tmp = "" !== row.id;
+      if (c5 === 2) {
+        c5 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
         }
-        if (tmp) {
-          if (row.rowType === outer2_14.ROLE) {
-            closure_2 = closure_2 + 1;
-            items.push(outer2_0(4467).permissionOverwriteForRole(row.id, items.type));
-            const obj = outer2_0(4467);
-          } else if (row.rowType === tmp2.MEMBER) {
-            closure_1 = closure_1 + 1;
-            items.push(outer2_0(4467).permissionOverwriteForUser(row.id, items.type));
-            const obj2 = outer2_0(4467);
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let c1 = tmp3;
+              let items = tmp7;
+              items = [];
+              c1 = 0;
+              let c2 = 0;
+              const _Object = Object;
+              const values = Object.values(outer1_1);
+              const item = values.forEach((row) => {
+                row = row.row;
+                let tmp = null != row.id;
+                if (tmp) {
+                  tmp = "" !== row.id;
+                }
+                if (tmp) {
+                  if (row.rowType === outer2_14.ROLE) {
+                    closure_2 = closure_2 + 1;
+                    items.push(outer2_0(4376).permissionOverwriteForRole(row.id, items.type));
+                    const obj = outer2_0(4376);
+                  } else if (row.rowType === tmp2.MEMBER) {
+                    closure_1 = closure_1 + 1;
+                    items.push(outer2_0(4376).permissionOverwriteForUser(row.id, items.type));
+                    const obj2 = outer2_0(4376);
+                  }
+                }
+              });
+              let dependencyMap = 1;
+              c4 = 2;
+              c5 = 1;
+              let obj1 = { value: null, done: false };
+              obj1[0] = outer1_0(8282).savePermissionUpdates(outer1_0.id, items);
+              return obj1;
+            }
+          } else {
+            if (1 === tmp7) {
+              dependencyMap = 0;
+              c5 = 3;
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              obj = outer1_0(3893);
+              const result = obj.memberOrRoleAddedToast(c2, c1);
+              obj1 = outer1_1(4161);
+              obj1.hideActionSheet();
+              dependencyMap = 0;
+            }
+            dependencyMap = 0;
+            c5 = 3;
+            let obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
+          }
+        } catch (tmp19) {
+          c2 = tmp19;
+          if (tmp4 === dependencyMap) {
+            c5 = tmp2;
+            throw tmp19;
+          } else {
+            c4 = tmp;
           }
         }
-      });
-      let dependencyMap = 1;
-      yield outer1_0(8920).savePermissionUpdates(outer1_0.id, items);
-      if (1 === tmp7) {
-        dependencyMap = 0;
-        let c5 = 3;
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        let obj = outer1_0(3985);
-        const result = obj.memberOrRoleAddedToast(c2, c1);
-        const obj1 = outer1_1(4253);
-        obj1.hideActionSheet();
-        dependencyMap = 0;
       }
-      dependencyMap = 0;
-      return arg1;
     });
     const _handleAddPressed = tmp;
     const apply = tmp.apply;
@@ -447,7 +495,7 @@ export default function AddMembersActionSheet(channel) {
     }
     return outer1_12.getGuild(guildId);
   });
-  let str = first(4475)(channel, true);
+  let str = first(4384)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -472,7 +520,7 @@ export default function AddMembersActionSheet(channel) {
       }
       let obj1 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj[2] = tmp11(tmp12, obj4);
-      obj1[1] = tmp11(tmp4(5337).BottomSheetTitleHeader, obj);
+      obj1[1] = tmp11(tmp4(5246).BottomSheetTitleHeader, obj);
       let obj2 = { style: null, children: null };
       obj2[0] = tmp.container;
       const obj3 = { channel: null, guild: null, permission: null, pendingAdditions: null, setPendingAdditions: null, inActionSheet: true };
@@ -483,7 +531,7 @@ export default function AddMembersActionSheet(channel) {
       obj3[4] = tmp2[1];
       obj2[1] = tmp11(AddMembersBody, obj3);
       obj1[3] = tmp11(closure_8, obj2);
-      return tmp11(tmp4(5338).BottomSheet, obj1);
+      return tmp11(tmp4(5247).BottomSheet, obj1);
     }
     obj4 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
     const intl = tmp4(1236).intl;

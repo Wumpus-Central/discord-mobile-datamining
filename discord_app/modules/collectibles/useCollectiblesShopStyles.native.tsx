@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/useCollectiblesShopStyles.native.tsx
 import importDefaultResult from "tinycolor";
 import saturateResult from "Themes";
 import importDefaultResult1 from "tinycolor";

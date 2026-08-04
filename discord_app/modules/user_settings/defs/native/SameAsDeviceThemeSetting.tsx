@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx
 import handleThemeChange from "handleThemeChange";
 import createToggle from "createToggle";
 
@@ -16,7 +17,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   onValueChange: function onSameAsDeviceThemeValueChange(arg0) {
-    const obj = require(14318) /* handleSaveTheme */;
+    const obj = require(14218) /* handleSaveTheme */;
     if (arg0) {
       const result = obj.enableSameAsDeviceTheme();
     } else {

@@ -1,3 +1,4 @@
+// discord_app/modules/chat/useTypingText.tsx
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

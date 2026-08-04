@@ -1,3 +1,4 @@
+// discord_app/modules/guild_moderation/native/AuditLogActionIcon.tsx
 import "StickerIcon";
 import { View } from "CalendarIcon";
 import getTargetType from "getTargetType";
@@ -44,17 +45,17 @@ function AuditIcons(action) {
   const tmp = createCacheKey();
   const tmp2 = callback(action);
   if (constants.CREATE === tmp2) {
-    let tmp4 = importDefault(16507);
+    let tmp4 = importDefault(16409);
   } else if (tmp3.UPDATE === tmp2) {
-    tmp4 = importDefault(16508);
+    tmp4 = importDefault(16410);
   } else {
     tmp4 = null;
     if (tmp3.DELETE === tmp2) {
-      tmp4 = importDefault(16509);
+      tmp4 = importDefault(16411);
     }
   }
   if (action === constants2.MESSAGE_DELETE) {
-    let RobotIcon = require(4781) /* ChatIcon */.ChatIcon;
+    let RobotIcon = require(4690) /* ChatIcon */.ChatIcon;
   } else {
     if (action !== tmp12.AUTO_MODERATION_BLOCK_MESSAGE) {
       if (action !== tmp12.AUTO_MODERATION_FLAG_TO_CHANNEL) {
@@ -65,7 +66,7 @@ function AuditIcons(action) {
         }
       }
     }
-    RobotIcon = require(10456) /* RobotIcon */.RobotIcon;
+    RobotIcon = require(9035) /* RobotIcon */.RobotIcon;
   }
   let obj = { style: tmp.actionImageContainer, children: null };
   obj = { size: "custom", style: tmp.iconComponent };

@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/GuildThemeSourcePreferenceUtils.tsx
 const result = require("set").fileFinishedImporting("modules/user_settings/GuildThemeSourcePreferenceUtils.tsx");
 
 export const resolveDefaultGuildThemePreference = function resolveDefaultGuildThemePreference(arg0) {

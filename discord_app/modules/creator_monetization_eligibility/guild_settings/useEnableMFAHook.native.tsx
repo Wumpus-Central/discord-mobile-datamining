@@ -1,3 +1,4 @@
+// discord_app/modules/creator_monetization_eligibility/guild_settings/useEnableMFAHook.native.tsx
 function passthrough(arg0) {
   return arg0;
 }

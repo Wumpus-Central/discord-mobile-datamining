@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfileAvatarDecorationEditButton.tsx
 import noop from "noop";
 import get_ActivityIndicator from "registerAsset";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

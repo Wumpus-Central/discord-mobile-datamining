@@ -1,3 +1,4 @@
+// discord_common/js/packages/media-engine/VideoQualityManager.tsx
 import DesktopSources from "DesktopSources";
 
 let VideoQualityMode;
@@ -25,7 +26,7 @@ class WantsVideoQuality {
       capture = global.capture;
       tmp3 = new.target;
       tmp2 = VideoQuality;
-      if (typeof VideoQuality !== "function") {
+      if (typeof VideoQuality !== "fileFinishedImporting") {
         str2 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -41,7 +42,7 @@ class WantsVideoQuality {
       encode = global.encode;
       tmp8 = new.target;
       tmp7 = VideoQuality;
-      if (typeof VideoQuality !== "function") {
+      if (typeof VideoQuality !== "fileFinishedImporting") {
         str3 = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }

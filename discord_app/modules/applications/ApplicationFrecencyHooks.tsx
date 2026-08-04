@@ -1,3 +1,4 @@
+// discord_app/modules/applications/ApplicationFrecencyHooks.tsx
 import noop from "noop";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import { UserSettingsTypes } from "MAX_FAVORITES";

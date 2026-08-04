@@ -1,3 +1,4 @@
+// discord_app/modules/image_proxy/ImageProxyUtils.tsx
 import set from "set";
 
 let parts;

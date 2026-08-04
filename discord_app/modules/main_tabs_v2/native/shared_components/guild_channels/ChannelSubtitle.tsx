@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -12,7 +13,7 @@ function ChannelSubtitle(arg0) {
   let textProps;
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, layout, subtitle } = arg0);
-  let obj = require(15225) /* getChannelSubtitleData */;
+  let obj = require(15211) /* getChannelSubtitleData */;
   const channelSubtitleData = obj.getChannelSubtitleData(subtitle);
   if (null == channelSubtitleData) {
     return null;
@@ -29,8 +30,8 @@ function ChannelSubtitle(arg0) {
     obj[3] = guildId;
     obj[4] = layout;
     obj[6] = !("voice" === channelSubtitleData.type && connected);
-    obj.children = tmp(9708).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4281).Text, { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
+    obj.children = tmp(10296).renderMessagePreviewMarkup(obj);
+    return jsx(tmp(4189).Text, { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
   }
 }
 const result = require("getLayoutStyles").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
@@ -43,12 +44,12 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
     return null;
   } else {
     let obj = { variant: null, color: "text-muted", lineClamp: 1, maxFontSizeMultiplier: 1.75 };
-    obj[0] = require(9711) /* getLayoutStyles */.getLayoutStyles(layout).messagePreview.text.variant;
-    if (typeof subtitle === "string") {
+    obj[0] = require(10299) /* getLayoutStyles */.getLayoutStyles(layout).messagePreview.text.variant;
+    if (typeof subtitle === "y") {
       obj = {};
       const merged = Object.assign(obj);
       obj.children = subtitle;
-      let tmp9 = jsx(require(4281) /* Text */.Text, {});
+      let tmp9 = jsx(require(4189) /* Text */.Text, {});
     } else {
       obj = { channelId: null, guildId: null, layout: null, subtitle: null, muted: null, connected: null, textProps: null };
       obj[0] = tmp2;

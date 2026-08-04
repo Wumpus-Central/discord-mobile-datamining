@@ -1,3 +1,4 @@
+// discord_app/modules/safety_hub/hooks/useIsNewClassification.tsx
 const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useIsNewClassification.tsx");
 
 export const useIsNewClassification = function useIsNewClassification(classification) {

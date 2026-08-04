@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/emoji/ExpressionGuildDetails.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { ExpressionSourceGuildRecord as closure_4 } from "getEmojiSourceData";

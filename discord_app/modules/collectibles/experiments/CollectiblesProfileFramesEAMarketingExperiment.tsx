@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/experiments/CollectiblesProfileFramesEAMarketingExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-profile-frames-ea-marketing", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

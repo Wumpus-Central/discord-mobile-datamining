@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/useWishlistNUXActionSheet.tsx
 import noop from "noop";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import fetchFingerprint from "fetchFingerprint";

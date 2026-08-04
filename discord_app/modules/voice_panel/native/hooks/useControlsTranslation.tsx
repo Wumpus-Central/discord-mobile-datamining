@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/hooks/useControlsTranslation.tsx
 import noop from "noop";
 import { MODE_CHANGE_PHYSICS } from "VoicePanelModes";
 import { CALL_TILE_GUTTER } from "CARD_SIZE";

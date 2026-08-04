@@ -1,3 +1,4 @@
+// discord_app/modules/global_discovery_apps/stores/MyGuildApplicationsStore.tsx
 import { PersistedStore } from "initialize";
 
 function addToApplicationIdToGuildIds(applicationId) {

@@ -1,3 +1,4 @@
+// discord_common/js/packages/media-engine/ConnectionEventFramerateReducer.tsx
 import DesktopSources from "DesktopSources";
 
 let c3;
@@ -60,7 +61,7 @@ prototype["userSpeakingChange"] = function userSpeakingChange(arg0) {
 };
 prototype["destroyFramerateScaleFactorTimers"] = function destroyFramerateScaleFactorTimers() {
   const self = this;
-  if (typeof this.framerateReductionTimeout === "number") {
+  if (typeof this.framerateReductionTimeout !== "__REMOTEDEV__") {
     const _clearTimeout = clearTimeout;
     clearTimeout(self.framerateReductionTimeout);
     self.framerateReductionTimeout = undefined;

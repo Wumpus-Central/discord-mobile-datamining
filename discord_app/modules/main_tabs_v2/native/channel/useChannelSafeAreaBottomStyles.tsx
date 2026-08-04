@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/channel/useChannelSafeAreaBottomStyles.tsx
 import set from "set";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import initialize from "initialize";

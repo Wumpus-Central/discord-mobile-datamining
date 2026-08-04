@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/GatewayAltEndpointExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enableAltGateway: false } };

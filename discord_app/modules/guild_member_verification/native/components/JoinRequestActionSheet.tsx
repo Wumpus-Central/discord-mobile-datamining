@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx
 import importAllResult from "trackMemberApplicationViewed";
 import { View } from "int2hslRaw";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -53,7 +54,7 @@ class JoinRequestActionSheet {
     obj3 = guildId;
     ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
     ref = guildId.useRef(null);
-    tmp2Result1 = require("module_4146");
+    tmp2Result1 = require("module_4054");
     sharedValue = require("noop");
     useSharedValue = sharedValue;
     items2 = [];

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/useHasRoleSubscriptionInGuild.tsx
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

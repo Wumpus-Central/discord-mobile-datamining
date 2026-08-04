@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/CollectiblesMarketingsStore.tsx
 import { Store } from "initialize";
 
 let obj = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };

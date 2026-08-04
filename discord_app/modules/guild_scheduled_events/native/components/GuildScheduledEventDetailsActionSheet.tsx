@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import usePrimaryActionButtonType from "usePrimaryActionButtonType";
 import { View } from "useSafeAreaInsets";
@@ -15,7 +16,7 @@ const require = arg1;
 ({ EventDetailSections: metroImportAll, MAX_RSVP_USER_DISPLAY_COUNT: c9 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { segmentedControl: null, header: null };
-createCacheKey = { paddingTop: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_12 };
+createCacheKey = { paddingHorizontal: require("Themes").space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "column" };
 createCacheKey = createCacheKey.createStyles(createCacheKey);

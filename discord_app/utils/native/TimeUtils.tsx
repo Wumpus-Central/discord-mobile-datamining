@@ -1,3 +1,4 @@
+// discord_app/utils/native/TimeUtils.tsx
 let result = require("set").fileFinishedImporting("utils/native/TimeUtils.tsx");
 
 export const getTimeFormat = function getTimeFormat(playableDuration, padMinutes) {

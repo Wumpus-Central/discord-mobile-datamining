@@ -1,3 +1,4 @@
+// discord_app/modules/guild_automod/AutomodActionUtils.tsx
 import { AutomodActionType } from "AutomodEventType";
 
 const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodActionUtils.tsx");

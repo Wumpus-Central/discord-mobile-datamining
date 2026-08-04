@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/ShowDevWidgetSetting.tsx
 import initialize from "initialize";
 import createToggle from "createToggle";
 
@@ -9,7 +10,7 @@ createToggle = {
   parent: null,
   IconComponent: require("StaffBadgeIcon").StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
-    let obj = require(13753) /* updateDevToolsSettings */;
+    let obj = require(13657) /* updateDevToolsSettings */;
     obj = { showDevWidget };
     const result = obj.updateDevToolsSettings(obj);
   },

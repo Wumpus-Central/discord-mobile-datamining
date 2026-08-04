@@ -1,3 +1,4 @@
+// discord_app/modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import { UserFlags } from "ME";
 
@@ -6,7 +7,7 @@ const result = require("MAX_MESSAGES_ALLOWED_FOR_GREETING").fileFinishedImportin
 
 export default function useShouldBlockDMInputForQuarantinedUser(hasFlag, channel) {
   const _require = channel;
-  const showConvoStarterInDM = _require(11549).useShowConvoStarterInDM(channel);
+  const showConvoStarterInDM = _require(11440).useShowConvoStarterInDM(channel);
   _require(589);
   [][0] = channel;
   let tmp4 = null != hasFlag;

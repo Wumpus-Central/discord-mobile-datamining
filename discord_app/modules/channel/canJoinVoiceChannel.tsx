@@ -1,3 +1,4 @@
+// discord_app/modules/channel/canJoinVoiceChannel.tsx
 import { isPrivate } from "createChannelRecord";
 import { BasicPermissions } from "ME";
 

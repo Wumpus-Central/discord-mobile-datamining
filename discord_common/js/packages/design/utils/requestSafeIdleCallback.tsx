@@ -1,3 +1,4 @@
+// discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx
 import getGlobalObject from "getGlobalObject";
 
 getGlobalObject = getGlobalObject.getGlobalObject();

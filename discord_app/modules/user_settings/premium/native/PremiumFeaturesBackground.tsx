@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import "noop";
 import { Gradients } from "items";
 import { PremiumTypes } from "GuildFeatures";
@@ -39,5 +40,5 @@ export default function PremiumFeaturesBackground(opacity) {
   obj[3] = num(691).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(importDefault(4706), { style: items, colors: mapped, start: null, end: null });
+  return jsx(importDefault(4615), { style: items, colors: mapped, start: null, end: null });
 };

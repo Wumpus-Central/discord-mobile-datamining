@@ -1,3 +1,4 @@
+// discord_app/modules/game_profile/native/components/GameProfileView.tsx
 import GameProfileReportButton from "GameProfileReportButton";
 import { View } from "GameProfileWebsiteButton";
 import jsxProd from "jsxProd";
@@ -38,7 +39,7 @@ export default function GameProfileView(arg0) {
   const tmp = createCacheKey();
   importDefault = React.useRef(null);
   dependencyMap = React.useRef(null);
-  const analyticsLocations = importDefault(5610)(importDefault(5630).GAME_PROFILE).analyticsLocations;
+  const analyticsLocations = importDefault(5519)(importDefault(5539).GAME_PROFILE).analyticsLocations;
   const items = [onStoreLinksMeasured];
   React = React.useCallback(() => {
     const current = ref.current;
@@ -51,7 +52,7 @@ export default function GameProfileView(arg0) {
   }, items);
   let obj = { value: analyticsLocations, children: null };
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(importDefault(9230), { game, scrollY, onHeightMeasured: onHeaderHeightMeasured }), ];
+  const items1 = [callback(importDefault(8526), { game, scrollY, onHeightMeasured: onHeaderHeightMeasured }), ];
   obj = {
     style: tmp.body,
     onLayout(nativeEvent) {
@@ -60,7 +61,7 @@ export default function GameProfileView(arg0) {
     },
     children: null
   };
-  const items2 = [callback(importDefault(9233), { game, viewId, source, trackAction }), , , , , , , , , , ];
+  const items2 = [callback(importDefault(8529), { game, viewId, source, trackAction }), , , , , , , , , , ];
   let tmp5Result = websiteButtons.length > 0;
   if (tmp5Result) {
     const obj1 = { onLayout: null, children: null };
@@ -73,25 +74,25 @@ export default function GameProfileView(arg0) {
     obj2[0] = game;
     obj2[1] = websiteButtons;
     obj2[2] = trackAction;
-    obj1[1] = tmp5(tmp2(9234), obj2);
+    obj1[1] = tmp5(tmp2(8530), obj2);
     tmp5Result = tmp5(tmp7, obj1);
   }
   items2[1] = tmp5Result;
-  items2[2] = callback(importDefault(9235), { game, trackAction });
-  items2[3] = callback(importDefault(9245), { game, viewId, source, trackAction });
-  items2[4] = callback(importDefault(9246), { game, analyticsLocations, trackAction });
-  items2[5] = callback(importDefault(9249), { closeModal, game, onInviteResolved: onGuildInviteResolved, trackAction });
-  items2[6] = callback(importDefault(9252), { gameId: game.id, invite, closeModal, trackAction, scrollOffsetRef });
-  items2[7] = callback(importDefault(9261), { game, closeModal, trackAction });
-  items2[8] = callback(importDefault(12088), { gameId: game.id, trackAction });
-  items2[9] = callback(importDefault(12090), { game, viewId, source, trackAction });
+  items2[2] = callback(importDefault(8531), { game, trackAction });
+  items2[3] = callback(importDefault(8653), { game, viewId, source, trackAction });
+  items2[4] = callback(importDefault(8654), { game, analyticsLocations, trackAction });
+  items2[5] = callback(importDefault(8657), { closeModal, game, onInviteResolved: onGuildInviteResolved, trackAction });
+  items2[6] = callback(importDefault(8660), { gameId: game.id, invite, closeModal, trackAction, scrollOffsetRef });
+  items2[7] = callback(importDefault(8669), { game, closeModal, trackAction });
+  items2[8] = callback(importDefault(11936), { gameId: game.id, trackAction });
+  items2[9] = callback(importDefault(11938), { game, viewId, source, trackAction });
   const obj5 = { style: tmp.buttonsContainer, children: null };
-  const items3 = [callback(importDefault(12107), { game, trackAction }), callback(importDefault(12108), { applicationId: game.id, trackAction })];
+  const items3 = [callback(importDefault(11955), { game, trackAction }), callback(importDefault(11956), { applicationId: game.id, trackAction })];
   obj5[1] = items3;
   items2[10] = closure_6(View, obj5);
   obj[2] = items2;
   items1[1] = closure_6(View, obj);
   obj[1] = items1;
   obj[1] = closure_6(View, obj);
-  return callback(onStoreLinksMeasured(5610).AnalyticsLocationProvider, obj);
+  return callback(onStoreLinksMeasured(5519).AnalyticsLocationProvider, obj);
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/expression_picker/native/categories/ExpressionPickerCategories.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -33,10 +34,10 @@ export default function ExpressionPickerCategories(arg0) {
   items[2] = style;
   let tmp5Result = null;
   if (!tmp4) {
-    tmp5Result = tmp5(importDefault(8695), {});
+    tmp5Result = tmp5(importDefault(9456), {});
   }
   const items1 = [tmp5Result, children];
   obj[1] = items1;
   obj[1] = closure_5(View, obj);
-  return closure_4(require(4156) /* Portal */.Portal, obj);
+  return closure_4(require(4064) /* Portal */.Portal, obj);
 };

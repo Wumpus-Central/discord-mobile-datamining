@@ -1,3 +1,4 @@
+// discord_app/modules/guild_invite/native/AdvancedInstantInvite.tsx
 import Themes from "Themes";
 import { View } from "TableRowIcon";
 import upsertRelationship from "upsertRelationship";

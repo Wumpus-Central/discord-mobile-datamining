@@ -1,3 +1,4 @@
+// discord_app/stores/game_store/TestModeStore.tsx
 import initialize from "initialize";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import setLibraryApplications from "setLibraryApplications";
@@ -49,7 +50,7 @@ prototype["inTestModeForEmbeddedApplication"] = function inTestModeForEmbeddedAp
   return tmp;
 };
 prototype["shouldDisplayTestMode"] = function shouldDisplayTestMode(applicationId) {
-  const DeveloperMode = require(3958) /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = require(3866) /* explicitContentFromProto */.DeveloperMode;
   let setting = DeveloperMode.getSetting();
   if (setting) {
     const self = this;

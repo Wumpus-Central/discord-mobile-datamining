@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/useParentalConsentWarning.tsx
 import initialize from "initialize";
 
 const require = arg1;

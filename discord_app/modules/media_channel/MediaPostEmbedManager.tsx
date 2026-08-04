@@ -1,3 +1,4 @@
+// discord_app/modules/media_channel/MediaPostEmbedManager.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

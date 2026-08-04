@@ -1,3 +1,4 @@
+// discord_app/modules/premium/native/UserOfferManager.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import emitChanges from "emitChanges";
 import { PaymentGateways } from "sum";

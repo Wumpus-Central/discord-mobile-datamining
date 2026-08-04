@@ -1,3 +1,4 @@
+// discord_app/modules/self_mod/ChannelSafetyWarningsActionCreators.tsx
 import { SafetyWarningTypes } from "handleConnectionOpen";
 import { Endpoints } from "ME";
 

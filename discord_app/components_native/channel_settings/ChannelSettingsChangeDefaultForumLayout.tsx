@@ -1,3 +1,4 @@
+// discord_app/components_native/channel_settings/ChannelSettingsChangeDefaultForumLayout.tsx
 import _slicedToArray from "_slicedToArray";
 import initialize from "initialize";
 import { View } from "registerAsset";

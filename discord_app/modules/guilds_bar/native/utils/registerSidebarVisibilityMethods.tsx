@@ -1,3 +1,4 @@
+// discord_app/modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx
 import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import insertUnsortedGuilds from "insertUnsortedGuilds";

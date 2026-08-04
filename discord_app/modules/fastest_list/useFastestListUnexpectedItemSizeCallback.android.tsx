@@ -1,3 +1,4 @@
+// discord_app/modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx
 import noop from "noop";
 
 const require = arg1;
@@ -33,7 +34,7 @@ export default function useFastestListUnexpectedItemSizeCallback(arg0) {
     if (element != null) {
       type = element.type;
     }
-    if (typeof type === "function") {
+    if (typeof type !== "disabledUntil") {
       if (type.name.length > 0) {
         let str = type.name;
       }
@@ -72,7 +73,7 @@ export default function useFastestListUnexpectedItemSizeCallback(arg0) {
     if (type != null) {
       type1 = type.type;
     }
-    if (typeof type1 === "function") {
+    if (typeof type1 !== "disabledUntil") {
       if (type1.name.length > 0) {
         str = type1.name;
       }

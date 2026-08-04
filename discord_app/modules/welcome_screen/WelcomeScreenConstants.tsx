@@ -1,3 +1,4 @@
+// discord_app/modules/welcome_screen/WelcomeScreenConstants.tsx
 const result = require("set").fileFinishedImporting("modules/welcome_screen/WelcomeScreenConstants.tsx");
 
 export const WELCOME_SCREEN_TYPE = "Guild Welcome Screen";

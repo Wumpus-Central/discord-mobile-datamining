@@ -1,3 +1,4 @@
+// discord_app/modules/guild_automod/AutomodPermissionUtils.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { GuildMemberFlags } from "GuildMemberFlags";
 

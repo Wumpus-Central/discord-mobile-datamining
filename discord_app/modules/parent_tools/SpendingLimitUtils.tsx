@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/SpendingLimitUtils.tsx
 const result = require("set").fileFinishedImporting("modules/parent_tools/SpendingLimitUtils.tsx");
 
 export const spendingLimitEqual = function spendingLimitEqual(amount, amount2) {

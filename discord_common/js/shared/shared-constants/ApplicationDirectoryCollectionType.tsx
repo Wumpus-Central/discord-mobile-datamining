@@ -1,3 +1,4 @@
+// discord_common/js/shared/shared-constants/ApplicationDirectoryCollectionType.tsx
 import set from "set";
 
 const obj = { ALL: null, APPLICATION_DIRECTORY: null, APP_LAUNCHER_IN_TEXT: null, APP_LAUNCHER_IN_VOICE_BANNER: null };

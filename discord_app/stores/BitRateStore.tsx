@@ -1,3 +1,4 @@
+// discord_app/stores/BitRateStore.tsx
 import { DEFAULT_VOICE_BITRATE } from "DesktopSources";
 import { Store } from "initialize";
 

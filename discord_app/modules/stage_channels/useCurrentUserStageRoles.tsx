@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/useCurrentUserStageRoles.tsx
 import fetchFingerprint from "fetchFingerprint";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 

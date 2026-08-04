@@ -1,3 +1,4 @@
+// discord_app/stores/VideoQualityModeStore.tsx
 import { Store } from "initialize";
 
 const AUTO = require("ME").VideoQualityMode.AUTO;

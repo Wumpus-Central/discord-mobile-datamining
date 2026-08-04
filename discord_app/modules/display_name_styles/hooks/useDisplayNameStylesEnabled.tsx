@@ -1,3 +1,4 @@
+// discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx
 import { useContext } from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 
@@ -7,7 +8,7 @@ export const useDisplayNameStylesEnabled = function useDisplayNameStylesEnabled(
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   let overrideSettings = require(589) /* initialize */.useStateFromStores(items, () => obj.displayNameStylesEnabled);
   if (!overrideSettings) {
-    overrideSettings = useContext(require(4516) /* context */.DisplayNameStylesContext).overrideSettings;
+    overrideSettings = useContext(require(4425) /* context */.DisplayNameStylesContext).overrideSettings;
   }
   return overrideSettings;
 };

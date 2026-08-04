@@ -1,3 +1,4 @@
+// discord_app/modules/contact_sync/native/components/AddPhoneScreens.tsx
 import ContactSyncModes from "ContactSyncModes";
 import _slicedToArray from "_slicedToArray";
 import VerifyPhone from "VerifyPhone";
@@ -30,20 +31,20 @@ export const AddPhoneScreen = function AddPhoneScreen() {
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = _require(1236).intl;
   obj[4] = intl.string(_require(1236).t.Xgb497);
-  const items = [callback2(_require(4281).Text, obj), ];
+  const items = [callback2(_require(4189).Text, obj), ];
   const obj1 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = _require(1236).intl;
   obj1[3] = intl2.string(_require(1236).t.qFmzyo);
-  items[1] = callback2(_require(4281).Text, obj1);
+  items[1] = callback2(_require(4189).Text, obj1);
   obj[1] = items;
   const obj2 = { style: tmp.container, reason: null, header: null, onComplete: null };
   const tmp2 = callback3(View, obj);
-  obj2[1] = _require(8330).ChangePhoneReason.CONTACT_SYNC;
+  obj2[1] = _require(9244).ChangePhoneReason.CONTACT_SYNC;
   obj2[2] = tmp2;
   obj2[3] = function onComplete(arg0) {
     return callback(outer1_2[15]).submitPhone(arg0, callback);
   };
-  return callback2(importDefault(8329), obj2);
+  return callback2(importDefault(9243), obj2);
 };
 export const VerifyPhoneScreen = function VerifyPhoneScreen() {
   let require;
@@ -55,23 +56,78 @@ export const VerifyPhoneScreen = function VerifyPhoneScreen() {
       let c3 = 0;
       let c4 = 0;
       return (function*(arg0) {
-        let addedPhone = tmp5;
-        let codeIntercepted = tmp2;
-        lib(true);
-        outer1_1(undefined);
-        const obj2 = lib(outer1_2[15]);
-        lib = yield obj2.verifyPhone(lib);
-        codeIntercepted = lib.codeIntercepted;
-        addedPhone = lib.addedPhone;
-        codeIntercepted(error);
-        let tmp7 = addedPhone;
-        if (addedPhone) {
-          tmp7 = codeIntercepted;
+        if (c4 === 2) {
+          c4 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c4 = 2;
+            if (0 === error) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let addedPhone = tmp5;
+                let codeIntercepted = tmp2;
+                let lib;
+                codeIntercepted = undefined;
+                addedPhone = undefined;
+                error = undefined;
+                lib(true);
+                outer1_1(undefined);
+                let obj2 = lib(outer1_2[15]);
+                error = 1;
+                c4 = 1;
+                const obj1 = { value: null, done: false };
+                obj1[0] = obj2.verifyPhone(lib);
+                return obj1;
+              }
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
+            } else {
+              lib = arg1;
+              codeIntercepted = lib.codeIntercepted;
+              addedPhone = lib.addedPhone;
+              error = lib.error;
+              codeIntercepted(error);
+              let tmp7 = addedPhone;
+              if (addedPhone) {
+                tmp7 = codeIntercepted;
+              }
+              if (!tmp7) {
+                lib(false);
+              }
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = codeIntercepted;
+              return obj;
+            }
+          } catch (tmp19) {
+            c4 = tmp;
+            throw tmp19;
+          }
         }
-        if (!tmp7) {
-          lib(false);
-        }
-        return codeIntercepted;
       })();
     });
     const _handleCodeEntered = tmp;

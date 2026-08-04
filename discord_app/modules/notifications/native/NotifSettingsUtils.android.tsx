@@ -1,3 +1,4 @@
+// discord_app/modules/notifications/native/NotifSettingsUtils.android.tsx
 import items2 from "items2";
 
 let c3;
@@ -53,7 +54,7 @@ function formatSetting(item10022, arg1) {
 function buildChannelsAndMapping() {
   let mappings;
   let settings;
-  let obj = map(13630);
+  let obj = map(13534);
   const assignedNotifSettingsAndMappings = obj.getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {
@@ -154,7 +155,7 @@ export default {
   clear() {
     let registerAndroidNotifGroupsAndChannels;
     let registerAndroidNotifTypeMappings;
-    let obj = importDefault(13629);
+    let obj = importDefault(13533);
     if (obj == null) {
       obj = {};
     }
@@ -172,7 +173,7 @@ export default {
     let mapping;
     let registerAndroidNotifGroupsAndChannels;
     let registerAndroidNotifTypeMappings;
-    let obj = importDefault(13629);
+    let obj = importDefault(13533);
     if (obj == null) {
       obj = {};
     }

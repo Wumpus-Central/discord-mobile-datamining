@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -8,13 +9,13 @@ export default function GuildPowerupsSinglePerkCard(badge) {
   let guildId;
   let powerup;
   ({ guildId, powerup } = badge);
-  let str = importDefault(11793)(powerup, true);
-  const tmp = importDefault(11772)(guildId, powerup);
-  let obj = require(11792) /* useCalculatePowerupCardStatus */;
-  const calculatePowerupCardStatus = obj.useCalculatePowerupCardStatus(powerup, tmp, importDefault(11769)(guildId, powerup, "GuildPowerupsSinglePerkCard"));
-  const tmp2 = importDefault(11769)(guildId, powerup, "GuildPowerupsSinglePerkCard");
+  let str = importDefault(11625)(powerup, true);
+  const tmp = importDefault(11604)(guildId, powerup);
+  let obj = require(11624) /* useCalculatePowerupCardStatus */;
+  const calculatePowerupCardStatus = obj.useCalculatePowerupCardStatus(powerup, tmp, importDefault(11601)(guildId, powerup, "GuildPowerupsSinglePerkCard"));
+  const tmp2 = importDefault(11601)(guildId, powerup, "GuildPowerupsSinglePerkCard");
   obj = { title: powerup.title, description: powerup.description, cost: powerup.cost, imageUrl: null, status: null, onPress: null, badge: null };
-  const tmp4 = importDefault(11838)(guildId, powerup);
+  const tmp4 = importDefault(11672)(guildId, powerup);
   const tmp5 = jsx;
   if (str == null) {
     str = "";
@@ -23,5 +24,5 @@ export default function GuildPowerupsSinglePerkCard(badge) {
   obj[4] = calculatePowerupCardStatus;
   obj[5] = tmp4;
   obj[6] = badge.badge;
-  return tmp5(importDefault(11842), obj);
+  return tmp5(importDefault(11676), obj);
 };

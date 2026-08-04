@@ -1,3 +1,4 @@
+// discord_app/modules/guild_tag/badges/getTransformedBadgeColors.tsx
 const result = require("set").fileFinishedImporting("modules/guild_tag/badges/getTransformedBadgeColors.tsx");
 
 export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0) {

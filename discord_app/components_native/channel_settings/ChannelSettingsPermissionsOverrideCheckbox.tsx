@@ -1,3 +1,4 @@
+// discord_app/components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

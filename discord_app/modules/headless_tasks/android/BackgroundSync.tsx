@@ -1,3 +1,4 @@
+// discord_app/modules/headless_tasks/android/BackgroundSync.tsx
 import _handleConnectionOpen from "_handleConnectionOpen";
 import fetchFingerprint from "fetchFingerprint";
 import getState from "getState";

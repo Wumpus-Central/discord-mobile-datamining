@@ -1,3 +1,4 @@
+// discord_app/modules/debug/logAppStart.tsx
 import set from "serialize";
 import set from "serialize";
 

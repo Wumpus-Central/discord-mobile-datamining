@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/BountiesModal/BountyCtaHelpers.tsx
 const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountyCtaHelpers.tsx");
 
 export const getBountyCtaInfo = function getBountyCtaInfo(bounty) {

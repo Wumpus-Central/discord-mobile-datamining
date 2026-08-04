@@ -1,3 +1,4 @@
+// discord_app/modules/messages/parseReactionPermissions.tsx
 const result = require("set").fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");
 
 export default function parseReactionPermissions(arg0) {

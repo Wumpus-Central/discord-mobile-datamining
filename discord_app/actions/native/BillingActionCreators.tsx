@@ -1,3 +1,4 @@
+// discord_app/actions/native/BillingActionCreators.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import closure_8 from "usePremiumPlanPurchasedStore";
 import "set";
@@ -106,24 +107,82 @@ function _getTrialOfferSignature() {
     let c8 = 0;
     let c6 = 0;
     return (function*(arg0, body) {
-      let closure_4 = tmp3;
-      let c6 = 1;
-      const HTTP = callback(outer1_3[16]).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: false };
-      obj1[0] = outer1_19.BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE;
-      let obj2 = { product_id: null, product_offer_id: null, app_account_token: null };
-      obj2[0] = callback;
-      obj2[1] = closure_1;
-      obj2[2] = closure_2;
-      obj1[1] = obj2;
-      yield HTTP.post(obj1);
-      c6 = 0;
-      callback = closure_5;
-      obj2 = callback(table[17]);
-      const result = obj2.captureBillingException(callback);
-      yield "HermesInternal";
-      c6 = 0;
-      return body.body;
+      if (c8 === 2) {
+        c8 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c8 = 2;
+          if (0 === c7) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              let closure_4 = tmp3;
+              const table = tmp7;
+              let c6 = 1;
+              const HTTP = callback(outer1_3[16]).HTTP;
+              const obj1 = { url: null, body: null, rejectWithError: false };
+              obj1[0] = outer1_19.BILLING_GENERATE_APPLE_TRIAL_OFFER_SIGNATURE;
+              let obj2 = { product_id: null, product_offer_id: null, app_account_token: null };
+              obj2[0] = callback;
+              obj2[1] = closure_1;
+              obj2[2] = closure_2;
+              obj1[1] = obj2;
+              c7 = 2;
+              c8 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.post(obj1);
+              return obj3;
+            }
+          } else if (1 === tmp7) {
+            c6 = 0;
+            callback = closure_5;
+            obj2 = callback(table[17]);
+            const result = obj2.captureBillingException(callback);
+            c8 = 3;
+            return { value: "HermesInternal", done: null };
+          } else if (arg0 === 1) {
+            c8 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c6 = 0;
+            c8 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = body;
+            return obj4;
+          } else {
+            c6 = 0;
+            c8 = 3;
+            obj = { value: null, done: true };
+            obj[0] = body.body;
+            return obj;
+          }
+        } catch (tmp16) {
+          closure_5 = tmp16;
+          if (tmp4 === c6) {
+            c8 = tmp2;
+            throw tmp16;
+          } else {
+            c7 = tmp;
+          }
+        }
+      }
     })();
   });
   const _getTrialOfferSignature = tmp;
@@ -144,26 +203,26 @@ function handlePurchaseException(code) {
     flag = true;
   }
   if (!set.has(code.code)) {
-    let obj = require(7258) /* isSpendingLimitError */;
+    let obj = require(6257) /* isSpendingLimitError */;
     let billingError = code;
-    if (!(code instanceof require(4184) /* V6OrEarlierAPIError */.BillingError)) {
-      billingError = new tmp(4184).BillingError(code);
+    if (!(code instanceof require(4092) /* V6OrEarlierAPIError */.BillingError)) {
+      billingError = new tmp(4092).BillingError(code);
     }
     if (obj.isSpendingLimitError(billingError)) {
-      let tmpResult = tmp(7258);
+      let tmpResult = tmp(6257);
       const result = tmpResult.showSpendingLimitReachedAlert();
     } else {
       const message = code.message;
       const _JSON = JSON;
       const json = JSON.stringify(code);
-      let obj1 = importAll(7368);
+      let obj1 = importAll(6364);
       const underlyingIOSError = obj1.getUnderlyingIOSError(code);
       if (null != underlyingIOSError) {
         obj = { title: null, body: null };
         const intl2 = tmp(1236).intl;
         obj[0] = intl2.string(tmp(1236).t.POsVOt);
         obj[1] = underlyingIOSError;
-        importDefault(4624).show(obj);
+        importDefault(4533).show(obj);
         throw code;
       } else {
         const intl3 = tmp(1236).intl;
@@ -187,12 +246,12 @@ function handlePurchaseException(code) {
           }
         }
         let billingError1 = code;
-        if (!(code instanceof tmp(4184).BillingError)) {
-          billingError1 = new tmp(4184).BillingError(code);
+        if (!(code instanceof tmp(4092).BillingError)) {
+          billingError1 = new tmp(4092).BillingError(code);
         }
         let tmp19 = message2 === stringResult && flag;
         if (tmp19) {
-          tmp19 = billingError1.code !== tmp(3953).ErrorCodes.UNKNOWN;
+          tmp19 = billingError1.code !== tmp(3861).ErrorCodes.UNKNOWN;
         }
         if (tmp19) {
           tmp19 = -1 !== billingError1.code;
@@ -203,14 +262,14 @@ function handlePurchaseException(code) {
         if (tmp19) {
           message2 = billingError1.message;
         }
-        let obj2 = importDefault(4624);
+        let obj2 = importDefault(4533);
         obj = { title: null, body: null, isDismissable: true, hideActionSheet: null };
         const intl = tmp(1236).intl;
         obj[0] = intl.string(tmp(1236).t.zrhHH3);
         obj[1] = message2;
         obj[3] = flag;
         obj2.show(obj);
-        tmpResult = tmp(3946);
+        tmpResult = tmp(3854);
         obj1 = { tags: null };
         obj2 = { source: null, purchase_type: null };
         obj2[0] = BILLING;
@@ -228,14 +287,14 @@ function canMakeIAPRequest() {
   const isBusyResult = busy.isBusy();
   let tmp2 = !isBusyResult;
   if (!isBusyResult) {
-    const isPaymentsBlocked = require(6790) /* useBlockedPaymentsConfig */.getIsPaymentsBlocked();
+    const isPaymentsBlocked = require(6294) /* useBlockedPaymentsConfig */.getIsPaymentsBlocked();
     let flag = !isPaymentsBlocked;
     if (isPaymentsBlocked) {
-      importDefault(7366)();
+      importDefault(6359)();
       flag = false;
     }
     tmp2 = flag;
-    const obj = require(6790) /* useBlockedPaymentsConfig */;
+    const obj = require(6294) /* useBlockedPaymentsConfig */;
   }
   return tmp2;
 }
@@ -263,176 +322,151 @@ function _clearAndMakeIAPRequest() {
       if (c11 === 2) {
         c11 = 3;
         HermesBuiltin.throwTypeError();
-      } else {
-        let tmp = arg0;
-        tmp = tmp6;
-        tmp = null;
-        if (tmp7 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          try {
-            c11 = 2;
-            if (0 === c10) {
-              if (arg0 === 1) {
-                c11 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c11 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let _objectWithoutProperties = tmp4;
-                let closure_6 = tmp8;
-                tmp = callback;
-                tmp = callback2;
-                tmp = callback3;
-                tmp = dependencyMap;
-                closure_6 = undefined;
-                _objectWithoutProperties = undefined;
-                let transactionDate;
-                let length;
-                c10 = undefined;
-                let closure_4 = false;
-                obj = null;
-                length = 2;
-                tmp = callback;
-                tmp = dependencyMap;
-                c10 = 3;
-                c11 = 1;
-                let obj1 = { value: null, done: false };
-                obj1[0] = callback(7343).clearTransactionIOS();
-                return obj1;
-              }
-            } else if (1 === tmp8) {
-              length = 0;
-              const obj2 = { request_identifier: null, success: null };
-              obj2[0] = callback;
-              obj2[1] = closure_4;
-              const merged = Object.assign(obj);
-              callback2(698).track(constants.APPLE_PARTNER_IAP_REQUEST_SENT, obj2);
-              throw transactionDate;
-            } else if (2 === tmp8) {
-              length = 1;
-              c11 = transactionDate;
-              length = callback3(7368).getUnderlyingIOSError(c11);
-              if (null != length) {
-                if (length.length > 0) {
-                  let str1 = length;
-                }
-                c10 = str1;
-                let str2 = c11.code;
-                let str;
-                if (str2 != null) {
-                  str = str2.toString();
-                }
-                const obj3 = { error_code: null, error_message: null };
-                obj3[0] = str;
-                obj3[1] = c10;
-                obj = obj3;
-                throw c11;
-              }
-              str = c11.message;
-              if (str != null) {
-                str1 = str.toString();
-              }
-              const obj13 = callback3(7368);
-            } else if (3 === tmp8) {
-              if (arg0 === 1) {
-                c11 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                length = 0;
-                let obj9 = callback2(698);
-                let obj4 = { request_identifier: null, success: null };
-                obj4[0] = callback;
-                obj4[1] = closure_4;
-                const merged1 = Object.assign(obj);
-                obj9.track(constants.APPLE_PARTNER_IAP_REQUEST_SENT, obj4);
-                c11 = 3;
-                const obj5 = { value: null, done: true };
-                obj5[0] = arg1;
-                return obj5;
-              } else {
-                let obj7 = callback(7342);
-                c10 = 4;
-                c11 = 1;
-                const obj6 = { value: null, done: false };
-                obj6[0] = obj7.makeIAPRequest(callback2, callback3, dependencyMap);
-                return obj6;
-              }
-            } else if (arg0 === 1) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c11 = 2;
+          if (0 === c10) {
+            if (arg0 === 1) {
               c11 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              length = 0;
-              obj4 = callback2(698);
-              obj7 = { request_identifier: null, success: null };
-              obj7[0] = callback;
-              obj7[1] = closure_4;
-              const merged2 = Object.assign(obj);
-              obj4.track(constants.APPLE_PARTNER_IAP_REQUEST_SENT, obj7);
               c11 = 3;
-              const obj8 = { value: null, done: true };
-              obj8[0] = arg1;
-              return obj8;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
             } else {
-              tmp = closure_6;
-              closure_6 = arg1;
-              closure_4 = true;
-              tmp = closure_6;
-              _objectWithoutProperties = closure_6.purchaseResponse.transactionIdentifier.toString();
-              tmp = closure_6;
-              transactionDate = closure_6.purchaseResponse.transactionDate;
-              tmp = closure_6;
-              str2 = undefined;
-              if (closure_6.purchaseResponse.originalTransactionIdentifier != null) {
-                str2 = str5.toString();
-              }
-              closure_4 = str2;
-              if (str2 == null) {
-                closure_4 = _objectWithoutProperties;
-              }
-              obj = { original_transaction_id: null, original_transaction_date: null, transaction_id: null, transaction_date: null };
-              obj[0] = closure_4;
-              const originalTransactionDate = closure_6.purchaseResponse.originalTransactionDate;
-              obj = originalTransactionDate;
-              if (originalTransactionDate == null) {
-                obj = transactionDate;
-              }
-              obj[1] = obj;
-              obj[2] = _objectWithoutProperties;
-              obj[3] = transactionDate;
-              length = 0;
-              obj1 = callback2(698);
-              obj9 = { request_identifier: null, success: null };
-              obj9[0] = callback;
-              obj9[1] = closure_4;
-              const merged3 = Object.assign(obj);
-              obj1.track(constants.APPLE_PARTNER_IAP_REQUEST_SENT, obj9);
+              let _objectWithoutProperties = tmp4;
+              let closure_6 = tmp8;
+              let tmp = callback3;
+              tmp = dependencyMap;
+              closure_6 = undefined;
+              _objectWithoutProperties = undefined;
+              let transactionDate;
+              let closure_4 = false;
+              obj = null;
+              let code = 2;
+              tmp = callback;
+              tmp = dependencyMap;
+              c10 = 3;
+              c11 = 1;
+              let obj1 = { value: null, done: false };
+              obj1[0] = callback(6336).clearTransactionIOS();
+              return obj1;
+            }
+          } else if (1 === tmp8) {
+            code = 0;
+            const obj2 = { request_identifier: null, success: null };
+            obj2[0] = callback;
+            obj2[1] = closure_4;
+            const merged = Object.assign(obj);
+            callback2(698).track(constants.APPLE_PARTNER_IAP_REQUEST_SENT, obj2);
+            throw transactionDate;
+          } else if (2 === tmp8) {
+            code = 1;
+            code = transactionDate;
+            let str = code.code;
+            str = undefined;
+            if (str != null) {
+              str = str.toString();
+            }
+            const obj3 = { error_code: null, error_message: null };
+            obj3[0] = str;
+            obj3[1] = callback3(6364).getUnderlyingIOSError(code);
+            obj = obj3;
+            throw code;
+          } else if (3 === tmp8) {
+            if (arg0 === 1) {
               c11 = 3;
-              const obj10 = { value: null, done: true };
-              obj10[0] = closure_6;
-              return obj10;
-            }
-          } catch (tmp94) {
-            transactionDate = tmp94;
-            if (tmp5 === length) {
-              c11 = tmp3;
-              throw tmp94;
-            } else if (tmp2 === tmp96) {
-              c10 = tmp2;
+              throw arg1;
+            } else if (arg0 === 2) {
+              code = 0;
+              let obj9 = callback2(698);
+              let obj4 = { request_identifier: null, success: null };
+              obj4[0] = callback;
+              obj4[1] = closure_4;
+              const merged1 = Object.assign(obj);
+              obj9.track(constants.APPLE_PARTNER_IAP_REQUEST_SENT, obj4);
+              c11 = 3;
+              const obj5 = { value: null, done: true };
+              obj5[0] = arg1;
+              return obj5;
             } else {
-              c10 = tmp;
+              let obj7 = callback(6335);
+              c10 = 4;
+              c11 = 1;
+              const obj6 = { value: null, done: false };
+              obj6[0] = obj7.makeIAPRequest(callback2, callback3, dependencyMap);
+              return obj6;
             }
+          } else if (arg0 === 1) {
+            c11 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            code = 0;
+            obj4 = callback2(698);
+            obj7 = { request_identifier: null, success: null };
+            obj7[0] = callback;
+            obj7[1] = closure_4;
+            const merged2 = Object.assign(obj);
+            obj4.track(constants.APPLE_PARTNER_IAP_REQUEST_SENT, obj7);
+            c11 = 3;
+            const obj8 = { value: null, done: true };
+            obj8[0] = arg1;
+            return obj8;
+          } else {
+            closure_6 = arg1;
+            closure_4 = true;
+            _objectWithoutProperties = closure_6.purchaseResponse.transactionIdentifier.toString();
+            transactionDate = closure_6.purchaseResponse.transactionDate;
+            let str1;
+            if (closure_6.purchaseResponse.originalTransactionIdentifier != null) {
+              str1 = str4.toString();
+            }
+            closure_4 = str1;
+            if (str1 == null) {
+              closure_4 = _objectWithoutProperties;
+            }
+            obj = { original_transaction_id: null, original_transaction_date: null, transaction_id: null, transaction_date: null };
+            obj[0] = closure_4;
+            const originalTransactionDate = closure_6.purchaseResponse.originalTransactionDate;
+            obj = originalTransactionDate;
+            if (originalTransactionDate == null) {
+              obj = transactionDate;
+            }
+            obj[1] = obj;
+            obj[2] = _objectWithoutProperties;
+            obj[3] = transactionDate;
+            code = 0;
+            obj1 = callback2(698);
+            obj9 = { request_identifier: null, success: null };
+            obj9[0] = callback;
+            obj9[1] = closure_4;
+            const merged3 = Object.assign(obj);
+            obj1.track(constants.APPLE_PARTNER_IAP_REQUEST_SENT, obj9);
+            c11 = 3;
+            const obj10 = { value: null, done: true };
+            obj10[0] = closure_6;
+            return obj10;
+          }
+        } catch (tmp85) {
+          transactionDate = tmp85;
+          if (tmp5 === code) {
+            c11 = tmp3;
+            throw tmp85;
+          } else if (tmp2 === tmp87) {
+            c10 = tmp2;
+          } else {
+            c10 = tmp;
           }
         }
       }
@@ -464,73 +498,124 @@ function _getIAPJWTRequestData() {
     let c2 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      let body = tmp2;
-      let obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
-      obj1[0] = outer1_19.BILLING_CREATE_APPLE_IAP_JWT_TOKEN;
-      obj1[1] = callback;
-      let obj2 = { event: null, properties: null };
-      obj2[0] = callback(503).NetworkActionNames.APPLE_JWT_TOKEN_CREATE;
-      obj2[1] = function properties(body) {
-        let country_code;
-        let gift_info_options;
-        let is_gift;
-        let items;
-        if (lib.operation !== lib(table[41]).APBRequestOperations.CREATE) {
-          if (tmp.operation !== tmp2(tmp3[42]).ACRequestOperations.CREATE) {
-            if (tmp.operation === tmp2(tmp3[42]).ACRequestOperations.MODIFY) {
-              let obj = { subscription_items_json_string: null };
-              const _JSON2 = JSON;
-              obj[0] = JSON.stringify(tmp.subscription_items);
-              const merged = Object.assign(outer1_7(tmp, outer1_5));
-              const tmp15 = outer1_7(tmp, outer1_5);
-            } else {
-              if (tmp.operation !== tmp2(tmp3[41]).APBRequestOperations.CHARGE) {
-                if (tmp.operation !== tmp2(tmp3[42]).ACRequestOperations.CHARGE) {
-                  obj = {};
-                  const merged1 = Object.assign(tmp);
-                }
-              }
-              ({ is_gift, gift_info_options } = tmp);
-              obj = { sku_id: null, request_country_code: null };
-              ({ sku_id: obj2[0], country_code: obj2[1] } = tmp);
-              const merged2 = Object.assign(outer1_7(tmp, outer1_6));
-              if (null != gift_info_options) {
-                const _JSON = JSON;
-                obj.gift_info_options = JSON.stringify(gift_info_options);
-              }
-              if (is_gift) {
-                obj.is_gift = is_gift;
-              }
-            }
-          }
-          let str;
-          if (body != null) {
-            body = body.body;
-            if (body != null) {
-              str = body.request_data;
-            }
-          }
-          if (str == null) {
-            str = "";
-          }
-          const obj1 = { jwt_token_exists: null };
-          obj1[0] = str.length > 0;
-          const merged3 = Object.assign(obj);
-          return tmp2(tmp3[43]).exact(obj1);
+      if (dependencyMap === 2) {
+        dependencyMap = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
         }
-        ({ items, country_code } = lib);
-        const obj2 = { subscription_items_json_string: null, request_country_code: null };
-        obj2[0] = JSON.stringify(items);
-        obj2[1] = country_code;
-        const merged4 = Object.assign(outer1_7(lib, outer1_4));
-        obj = obj2;
-      };
-      obj1[3] = obj2;
-      body = yield outer1_1(5094).post(obj1);
-      let obj = { requestJSONString: null };
-      let _JSON = JSON;
-      obj[0] = JSON.stringify(body.body.request_data);
-      return obj;
+      } else {
+        try {
+          dependencyMap = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              dependencyMap = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              dependencyMap = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let body = tmp2;
+              body = undefined;
+              let obj1 = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: true };
+              obj1[0] = outer1_19.BILLING_CREATE_APPLE_IAP_JWT_TOKEN;
+              obj1[1] = callback;
+              let obj2 = { event: null, properties: null };
+              obj2[0] = callback(503).NetworkActionNames.APPLE_JWT_TOKEN_CREATE;
+              obj2[1] = function properties(body) {
+                let country_code;
+                let gift_info_options;
+                let is_gift;
+                let items;
+                if (lib.operation !== lib(table[41]).APBRequestOperations.CREATE) {
+                  if (tmp.operation !== tmp2(tmp3[42]).ACRequestOperations.CREATE) {
+                    if (tmp.operation === tmp2(tmp3[42]).ACRequestOperations.MODIFY) {
+                      let obj = { subscription_items_json_string: null };
+                      const _JSON2 = JSON;
+                      obj[0] = JSON.stringify(tmp.subscription_items);
+                      const merged = Object.assign(outer1_7(tmp, outer1_5));
+                      const tmp15 = outer1_7(tmp, outer1_5);
+                    } else {
+                      if (tmp.operation !== tmp2(tmp3[41]).APBRequestOperations.CHARGE) {
+                        if (tmp.operation !== tmp2(tmp3[42]).ACRequestOperations.CHARGE) {
+                          obj = {};
+                          const merged1 = Object.assign(tmp);
+                        }
+                      }
+                      ({ is_gift, gift_info_options } = tmp);
+                      obj = { sku_id: null, request_country_code: null };
+                      ({ sku_id: obj2[0], country_code: obj2[1] } = tmp);
+                      const merged2 = Object.assign(outer1_7(tmp, outer1_6));
+                      if (null != gift_info_options) {
+                        const _JSON = JSON;
+                        obj.gift_info_options = JSON.stringify(gift_info_options);
+                      }
+                      if (is_gift) {
+                        obj.is_gift = is_gift;
+                      }
+                    }
+                  }
+                  let str;
+                  if (body != null) {
+                    body = body.body;
+                    if (body != null) {
+                      str = body.request_data;
+                    }
+                  }
+                  if (str == null) {
+                    str = "";
+                  }
+                  const obj1 = { jwt_token_exists: null };
+                  obj1[0] = str.length > 0;
+                  const merged3 = Object.assign(obj);
+                  return tmp2(tmp3[43]).exact(obj1);
+                }
+                ({ items, country_code } = lib);
+                const obj2 = { subscription_items_json_string: null, request_country_code: null };
+                obj2[0] = JSON.stringify(items);
+                obj2[1] = country_code;
+                const merged4 = Object.assign(outer1_7(lib, outer1_4));
+                obj = obj2;
+              };
+              obj1[3] = obj2;
+              c2 = 1;
+              dependencyMap = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = outer1_1(5003).post(obj1);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            dependencyMap = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            dependencyMap = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            body = arg1;
+            obj = { requestJSONString: null };
+            let _JSON = JSON;
+            obj[0] = JSON.stringify(body.body.request_data);
+            dependencyMap = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = obj;
+            return obj5;
+          }
+        } catch (tmp9) {
+          dependencyMap = tmp;
+          throw tmp9;
+        }
+      }
     })();
   });
   const _getIAPJWTRequestData = tmp;
@@ -643,19 +728,19 @@ function _updateAppleSubscription() {
   return applyArgumentsResult;
 }
 function determineProductId(arg0) {
-  if (require(7504) /* APBRequestOperations */.APBRequestOperations.CREATE !== arg0) {
-    if (tmp(7504).APBRequestOperations.CANCEL !== arg0) {
-      if (tmp(7504).APBRequestOperations.RESUBSCRIBE !== arg0) {
-        if (tmp(7504).APBRequestOperations.REACTIVATE !== arg0) {
-          if (tmp(7504).APBRequestOperations.CHARGE === arg0) {
-            return tmp(5770).ProductIds.GENERIC_CONSUMABLE;
+  if (require(6500) /* APBRequestOperations */.APBRequestOperations.CREATE !== arg0) {
+    if (tmp(6500).APBRequestOperations.CANCEL !== arg0) {
+      if (tmp(6500).APBRequestOperations.RESUBSCRIBE !== arg0) {
+        if (tmp(6500).APBRequestOperations.REACTIVATE !== arg0) {
+          if (tmp(6500).APBRequestOperations.CHARGE === arg0) {
+            return tmp(5679).ProductIds.GENERIC_CONSUMABLE;
           } else {
-            if (tmp(7505).ACRequestOperations.CREATE !== arg0) {
-              if (tmp(7505).ACRequestOperations.CANCEL !== arg0) {
-                if (tmp(7505).ACRequestOperations.REACTIVATE !== arg0) {
-                  if (tmp(7505).ACRequestOperations.MODIFY !== arg0) {
-                    if (tmp(7505).ACRequestOperations.CHARGE === arg0) {
-                      return tmp(5770).ProductIds.GENERIC_CONSUMABLE;
+            if (tmp(6501).ACRequestOperations.CREATE !== arg0) {
+              if (tmp(6501).ACRequestOperations.CANCEL !== arg0) {
+                if (tmp(6501).ACRequestOperations.REACTIVATE !== arg0) {
+                  if (tmp(6501).ACRequestOperations.MODIFY !== arg0) {
+                    if (tmp(6501).ACRequestOperations.CHARGE === arg0) {
+                      return tmp(5679).ProductIds.GENERIC_CONSUMABLE;
                     } else {
                       const _Error = Error;
                       const error = new Error("Invalid operation");
@@ -665,13 +750,13 @@ function determineProductId(arg0) {
                 }
               }
             }
-            return tmp(5770).ProductIds.GENERIC_SUBSCRIPTION;
+            return tmp(5679).ProductIds.GENERIC_SUBSCRIPTION;
           }
         }
       }
     }
   }
-  return require(5770) /* SubscriptionPlans */.ProductIds.GENERIC_SUBSCRIPTION;
+  return require(5679) /* SubscriptionPlans */.ProductIds.GENERIC_SUBSCRIPTION;
 }
 function _cancelGenericSubscription() {
   const self = this;
@@ -881,7 +966,7 @@ function _createGenericSubscription() {
               return obj1;
             } else if (callback3()) {
               if (callback7(c2)) {
-                c5 = callback6(callback(7505).ACRequestOperations.CREATE);
+                c5 = callback6(callback(6501).ACRequestOperations.CREATE);
                 let obj22 = lib(709);
                 const obj2 = { type: "IAP_PURCHASE_PRODUCT_START", productIdentifier: null };
                 obj2[1] = c5;
@@ -925,7 +1010,7 @@ function _createGenericSubscription() {
               obj9[3] = dependencyMap;
               obj9[4] = c4;
               const obj10 = { operation: null };
-              obj10[0] = callback(7505).ACRequestOperations.CREATE;
+              obj10[0] = callback(6501).ACRequestOperations.CREATE;
               const merged = Object.assign(obj9);
               c5 = 4;
               c6 = 1;
@@ -1012,7 +1097,7 @@ function _createGenericSubscription() {
               obj19[0] = requestJSONString;
               return obj19;
             } else {
-              obj5 = callback(7343);
+              obj5 = callback(6336);
               const obj20 = { purchase: null };
               obj20[0] = originalPurchase;
               c5 = 7;
@@ -1133,7 +1218,7 @@ function _modifyGenericSubscription() {
               obj1[0] = requestJSONString;
               return obj1;
             } else if (callback4()) {
-              GENERIC_SUBSCRIPTION = callback(5770).ProductIds.GENERIC_SUBSCRIPTION;
+              GENERIC_SUBSCRIPTION = callback(5679).ProductIds.GENERIC_SUBSCRIPTION;
               let obj23 = callback2(709);
               const obj2 = { type: "IAP_PURCHASE_PRODUCT_START", productIdentifier: null };
               obj2[1] = GENERIC_SUBSCRIPTION;
@@ -1163,7 +1248,7 @@ function _modifyGenericSubscription() {
               c6 = false;
               v0 = 1;
               const obj7 = { operation: null, request_identifier: null, subscription_id: null, subscription_items: null, order_id: null };
-              obj7[0] = callback(7505).ACRequestOperations.MODIFY;
+              obj7[0] = callback(6501).ACRequestOperations.MODIFY;
               obj7[1] = callback;
               obj7[2] = callback2;
               obj7[3] = c2.map((planId) => ({ plan_id: planId.planId, quantity: planId.quantity }));
@@ -1245,7 +1330,7 @@ function _modifyGenericSubscription() {
             if (6 === tmp8) {
               v0 = 1;
               let closure_11 = dependencyMap;
-              obj10 = callback(3946);
+              obj10 = callback(3854);
               const result = obj10.captureBillingException(closure_11);
               const obj15 = { encodedReceipt: null, retries: 3, jwsRepresentation: null, source: "modifyGenericSubscription", orderId: null };
               obj15[0] = purchaseResponse.transactionReceipt;
@@ -1265,7 +1350,7 @@ function _modifyGenericSubscription() {
                 obj16[0] = requestJSONString;
                 return obj16;
               } else {
-                obj6 = callback(7343);
+                obj6 = callback(6336);
                 const obj17 = { purchase: null };
                 obj17[0] = originalPurchase;
                 GENERIC_SUBSCRIPTION = 9;
@@ -1896,9 +1981,9 @@ function _mobilePurchaseSKU() {
         try {
           let c7 = 0;
           const code = closure_6;
-          if (code.code === callback(3953).ErrorCodes.BILLING_PURCHASE_REQUEST_INVALID) {
-            const result = callback(3946).captureBillingException(code, {});
-            const obj2 = callback(3946);
+          if (code.code === callback(3861).ErrorCodes.BILLING_PURCHASE_REQUEST_INVALID) {
+            const result = callback(3854).captureBillingException(code, {});
+            const obj2 = callback(3854);
           }
           while (true) {
             let tmp14 = closure_4;
@@ -2252,14 +2337,14 @@ let obj = {
                 c4 = 2;
                 c5 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = outer1_0(7343).initConnection();
+                obj2[0] = outer1_0(6336).initConnection();
                 return obj2;
               }
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
             callback2 = closure_2;
-            let obj4 = callback(3946);
+            let obj4 = callback(3854);
             const result = obj4.captureBillingException(callback2);
             let obj5 = callback2(709);
             obj5.dispatch({ type: "GENERIC_IAP_INIT_CONNECTION_FAILED" });
@@ -2663,79 +2748,133 @@ let obj = {
                       let c7 = 0;
                       let c5 = 0;
                       return (function* _loop(arg0) {
-                        let arr2 = tmp3;
-                        purchaseResponse = purchaseResponse.purchaseResponse;
-                        let transactionReceipt = purchaseResponse;
-                        const product = outer2_15.getProduct(purchaseResponse.productIdentifier);
-                        const jwsRepresentation = purchaseResponse.jwsRepresentation;
-                        transactionReceipt = jwsRepresentation;
-                        if (jwsRepresentation == null) {
-                          transactionReceipt = purchaseResponse.transactionReceipt;
-                        }
-                        let obj1 = callback(iter2[13]);
-                        const v3Result = obj1.v3(transactionReceipt);
-                        let arr = v3Result;
-                        giftOptionsForKey = giftOptionsForKey.getGiftOptionsForKey(v3Result);
-                        let c5 = 1;
-                        obj1 = { jwsRepresentation: null, encodedReceipt: null, presentmentCurrency: null, presentmentAmount: null, appStoreRegion: null, giftInfoOptions: null, source: "restoreSubscription", skipDupCheck: null };
-                        ({ jwsRepresentation: obj3[0], transactionReceipt: obj3[1] } = purchaseResponse);
-                        if (product != null) {
-                          const currencyCode = product.currencyCode;
-                        }
-                        obj1[2] = currencyCode;
-                        if (product != null) {
-                          const price = product.price;
-                        }
-                        obj1[3] = price;
-                        if (product != null) {
-                          const countryCode = product.countryCode;
-                        }
-                        obj1[4] = countryCode;
-                        if (giftOptionsForKey != null) {
-                          const gift_style = giftOptionsForKey.gift_style;
-                        }
-                        const obj2 = { gift_style: null, reward_sku_ids: null };
-                        obj2[0] = gift_style;
-                        if (giftOptionsForKey != null) {
-                          const reward_sku_ids = giftOptionsForKey.reward_sku_ids;
-                        }
-                        obj2[1] = reward_sku_ids;
-                        obj1[5] = obj2;
-                        obj1[7] = purchaseResponse;
-                        yield outer2_24(obj1).then((arg0) => {
-                          let obj = callback(table[22]);
-                          obj = { purchase: null };
-                          obj = { productId: transactionReceipt.productIdentifier, transactionDate: transactionReceipt.transactionDate, transactionReceipt: transactionReceipt.transactionReceipt, transactionId: str.toString() };
-                          obj[0] = obj;
-                          obj.finishTransaction(obj);
-                          if (null != arg0) {
-                            const obj1 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION", key: null };
-                            obj1[1] = c2;
-                            transactionReceipt(table[23]).dispatch(obj1);
-                            const obj4 = transactionReceipt(table[23]);
-                          }
-                          let tmp6 = null;
-                          if (null != arg0) {
-                            tmp6 = callback;
-                          }
-                          return tmp6;
-                        });
-                        if (1 === tmp7) {
-                          c5 = 0;
-                          arr2 = closure_4;
-                          arr = arr2.push(arr2);
-                          let c7 = 3;
-                        } else if (arg0 === 1) {
+                        if (c7 === 2) {
                           c7 = 3;
-                          throw arg1;
-                        } else if (arg0 !== 2) {
-                          if (null != arg1) {
-                            arr = arr.push(transactionReceipt);
+                          HermesBuiltin.throwTypeError();
+                        } else if (tmp6 === 3) {
+                          if (arg0 === 1) {
+                            throw arg1;
+                          } else if (arg0 === 2) {
+                            let obj = { value: null, done: true };
+                            obj[0] = arg1;
+                            return obj;
+                          } else {
+                            return { value: "HermesInternal", done: null };
                           }
-                          c5 = 0;
+                        } else {
+                          try {
+                            c7 = 2;
+                            if (0 === c6) {
+                              if (arg0 === 1) {
+                                c7 = 3;
+                                throw arg1;
+                              } else if (arg0 === 2) {
+                                c7 = 3;
+                                obj = { value: null, done: true };
+                                obj[0] = arg1;
+                                return obj;
+                              } else {
+                                let arr2 = tmp3;
+                                let arr = tmp7;
+                                let transactionReceipt;
+                                arr = undefined;
+                                purchaseResponse = purchaseResponse.purchaseResponse;
+                                transactionReceipt = purchaseResponse;
+                                const product = outer2_15.getProduct(purchaseResponse.productIdentifier);
+                                const jwsRepresentation = purchaseResponse.jwsRepresentation;
+                                transactionReceipt = jwsRepresentation;
+                                if (jwsRepresentation == null) {
+                                  transactionReceipt = purchaseResponse.transactionReceipt;
+                                }
+                                let obj1 = callback(iter2[13]);
+                                const v3Result = obj1.v3(transactionReceipt);
+                                arr = v3Result;
+                                giftOptionsForKey = giftOptionsForKey.getGiftOptionsForKey(v3Result);
+                                let c5 = 1;
+                                obj1 = { jwsRepresentation: null, encodedReceipt: null, presentmentCurrency: null, presentmentAmount: null, appStoreRegion: null, giftInfoOptions: null, source: "restoreSubscription", skipDupCheck: null };
+                                ({ jwsRepresentation: obj3[0], transactionReceipt: obj3[1] } = purchaseResponse);
+                                let currencyCode;
+                                if (product != null) {
+                                  currencyCode = product.currencyCode;
+                                }
+                                obj1[2] = currencyCode;
+                                let price;
+                                if (product != null) {
+                                  price = product.price;
+                                }
+                                obj1[3] = price;
+                                let countryCode;
+                                if (product != null) {
+                                  countryCode = product.countryCode;
+                                }
+                                obj1[4] = countryCode;
+                                let gift_style;
+                                if (giftOptionsForKey != null) {
+                                  gift_style = giftOptionsForKey.gift_style;
+                                }
+                                const obj2 = { gift_style: null, reward_sku_ids: null };
+                                obj2[0] = gift_style;
+                                let reward_sku_ids;
+                                if (giftOptionsForKey != null) {
+                                  reward_sku_ids = giftOptionsForKey.reward_sku_ids;
+                                }
+                                obj2[1] = reward_sku_ids;
+                                obj1[5] = obj2;
+                                obj1[7] = purchaseResponse;
+                                c6 = 2;
+                                c7 = 1;
+                                const obj3 = { value: null, done: false };
+                                obj3[0] = outer2_24(obj1).then((arg0) => {
+                                  let obj = callback(table[22]);
+                                  obj = { purchase: null };
+                                  obj = { productId: transactionReceipt.productIdentifier, transactionDate: transactionReceipt.transactionDate, transactionReceipt: transactionReceipt.transactionReceipt, transactionId: str.toString() };
+                                  obj[0] = obj;
+                                  obj.finishTransaction(obj);
+                                  if (null != arg0) {
+                                    const obj1 = { type: "GIFT_PROMOTION_GIFT_OPTIONS_CLEAR_CACHE_ACTION", key: null };
+                                    obj1[1] = c2;
+                                    transactionReceipt(table[23]).dispatch(obj1);
+                                    const obj4 = transactionReceipt(table[23]);
+                                  }
+                                  let tmp6 = null;
+                                  if (null != arg0) {
+                                    tmp6 = callback;
+                                  }
+                                  return tmp6;
+                                });
+                                return obj3;
+                              }
+                            } else {
+                              if (1 === tmp7) {
+                                c5 = 0;
+                                arr2 = closure_4;
+                                arr = arr2.push(arr2);
+                                c7 = 3;
+                              } else if (arg0 === 1) {
+                                c7 = 3;
+                                throw arg1;
+                              } else if (arg0 !== 2) {
+                                if (null != arg1) {
+                                  arr = arr.push(transactionReceipt);
+                                }
+                                c5 = 0;
+                              }
+                              c5 = 0;
+                              c7 = 3;
+                              obj = { value: null, done: true };
+                              obj[0] = arg1;
+                              return obj;
+                            }
+                          } catch (tmp33) {
+                            closure_4 = tmp33;
+                            if (tmp4 === c5) {
+                              c7 = tmp2;
+                              throw tmp33;
+                            } else {
+                              c6 = tmp;
+                            }
+                          }
                         }
-                        c5 = 0;
-                        return arg1;
                       })();
                     };
                     throwTypeErrorResult = outer1_1;
@@ -2908,7 +3047,7 @@ let obj = {
     })();
   }
 };
-let items = [require("module_7343").ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
+let items = [require("module_6336").ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
 let set = new Set(items);
 obj = { NONE: "none", CANNOT_MAKE_REQUEST: "cannot_make_request", INVALID_CURRENCY: "invalid_currency", PURCHASE_INCOMPLETE: "purchase_incomplete", USER_CANCELLED: "user_cancelled", POST_PURCHASE_FAILED: "post_purchase_failed" };
 let result = set.fileFinishedImporting("actions/native/BillingActionCreators.tsx");

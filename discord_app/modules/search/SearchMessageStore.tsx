@@ -1,3 +1,4 @@
+// discord_app/modules/search/SearchMessageStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import upsertRelationship from "upsertRelationship";
 import { Store } from "initialize";
@@ -57,7 +58,7 @@ prototype["handleSearchFailure"] = function handleSearchFailure(arg0) {
   this.isIndexing = false;
   this.isInitialFetchComplete = true;
   this.isHistoricalIndexing = false;
-  const aPIError = new require(4184) /* V6OrEarlierAPIError */.APIError(arg0);
+  const aPIError = new require(4092) /* V6OrEarlierAPIError */.APIError(arg0);
   this.error = aPIError;
   this.analyticsId = null;
   this.documentsIndexed = 0;
@@ -112,7 +113,7 @@ prototype2["getMessage"] = function getMessage(arg0) {
 prototype2["getTotalCount"] = function getTotalCount(searchTabFetchId) {
   let value = map.get(searchTabFetchId);
   if (value == null) {
-    if (typeof SearchState !== "function") {
+    if (typeof SearchState !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SearchState.prototype);
@@ -127,7 +128,7 @@ prototype2["getTotalCount"] = function getTotalCount(searchTabFetchId) {
 prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(arg0) {
   let value = map.get(arg0);
   if (value == null) {
-    if (typeof SearchState !== "function") {
+    if (typeof SearchState !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SearchState.prototype);
@@ -142,7 +143,7 @@ prototype2["getIsInitialFetchComplete"] = function getIsInitialFetchComplete(arg
 prototype2["getIsIndexing"] = function getIsIndexing(searchTabFetchId) {
   let value = map.get(searchTabFetchId);
   if (value == null) {
-    if (typeof SearchState !== "function") {
+    if (typeof SearchState !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SearchState.prototype);
@@ -157,7 +158,7 @@ prototype2["getIsIndexing"] = function getIsIndexing(searchTabFetchId) {
 prototype2["getIsHistoricalIndexing"] = function getIsHistoricalIndexing(searchTabFetchId) {
   let value = map.get(searchTabFetchId);
   if (value == null) {
-    if (typeof SearchState !== "function") {
+    if (typeof SearchState !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SearchState.prototype);
@@ -172,7 +173,7 @@ prototype2["getIsHistoricalIndexing"] = function getIsHistoricalIndexing(searchT
 prototype2["getDocumentsIndexed"] = function getDocumentsIndexed(searchTabFetchId) {
   let value = map.get(searchTabFetchId);
   if (value == null) {
-    if (typeof SearchState !== "function") {
+    if (typeof SearchState !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SearchState.prototype);
@@ -187,7 +188,7 @@ prototype2["getDocumentsIndexed"] = function getDocumentsIndexed(searchTabFetchI
 prototype2["getIsFetching"] = function getIsFetching(arg0) {
   let value = map.get(arg0);
   if (value == null) {
-    if (typeof SearchState !== "function") {
+    if (typeof SearchState !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SearchState.prototype);
@@ -202,7 +203,7 @@ prototype2["getIsFetching"] = function getIsFetching(arg0) {
 prototype2["getError"] = function getError(arg0) {
   let value = map.get(arg0);
   if (value == null) {
-    if (typeof SearchState !== "function") {
+    if (typeof SearchState !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SearchState.prototype);
@@ -217,7 +218,7 @@ prototype2["getError"] = function getError(arg0) {
 prototype2["getMessages"] = function getMessages(arg0) {
   let value = map.get(arg0);
   if (value == null) {
-    if (typeof SearchState !== "function") {
+    if (typeof SearchState !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SearchState.prototype);
@@ -232,7 +233,7 @@ prototype2["getMessages"] = function getMessages(arg0) {
 prototype2["getCursor"] = function getCursor(searchTabFetchId) {
   let value = map.get(searchTabFetchId);
   if (value == null) {
-    if (typeof SearchState !== "function") {
+    if (typeof SearchState !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SearchState.prototype);
@@ -247,7 +248,7 @@ prototype2["getCursor"] = function getCursor(searchTabFetchId) {
 prototype2["getAnalyticsId"] = function getAnalyticsId(arg0) {
   let value = map.get(arg0);
   if (value == null) {
-    if (typeof SearchState !== "function") {
+    if (typeof SearchState !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SearchState.prototype);
@@ -269,7 +270,7 @@ const searchMessageStore = new SearchMessageStore(require("dispatcher"), {
     const item = ids.forEach((arg0) => {
       let value = store.get(arg0);
       if (value == null) {
-        if (typeof closure_4 !== "function") {
+        if (typeof closure_4 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const obj = Object.create(closure_4.prototype);
@@ -289,7 +290,7 @@ const searchMessageStore = new SearchMessageStore(require("dispatcher"), {
       id = id.id;
       let value = store.get(id);
       if (value == null) {
-        if (typeof closure_4 !== "function") {
+        if (typeof closure_4 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const obj = Object.create(closure_4.prototype);
@@ -320,7 +321,7 @@ const searchMessageStore = new SearchMessageStore(require("dispatcher"), {
     const item = ids.forEach((arg0) => {
       let value = store.get(arg0);
       if (value == null) {
-        if (typeof closure_4 !== "function") {
+        if (typeof closure_4 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const obj = Object.create(closure_4.prototype);
@@ -340,7 +341,7 @@ const searchMessageStore = new SearchMessageStore(require("dispatcher"), {
     const item = ids.forEach((arg0) => {
       let value = outer1_5.get(arg0);
       if (value == null) {
-        if (typeof outer1_4 !== "function") {
+        if (typeof outer1_4 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const obj = Object.create(outer1_4.prototype);
@@ -389,7 +390,7 @@ const searchMessageStore = new SearchMessageStore(require("dispatcher"), {
       if (null == value) {
         return false;
       } else {
-        const result = map1.set(id, require(4504) /* createMinimalMessageRecord */.updateMessageRecord(value, message.message));
+        const result = map1.set(id, require(4413) /* createMinimalMessageRecord */.updateMessageRecord(value, message.message));
       }
     }
   },

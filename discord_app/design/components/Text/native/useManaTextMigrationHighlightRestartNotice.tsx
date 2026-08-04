@@ -1,3 +1,4 @@
+// discord_app/design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx
 import noop from "noop";
 import getUserAgnosticState from "getUserAgnosticState";
 

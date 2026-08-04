@@ -1,3 +1,4 @@
+// discord_app/modules/applications/ApplicationAssetsStore.tsx
 import { Store } from "initialize";
 
 function handleFetchEmbeddedActivityShelfSuccess(assets) {

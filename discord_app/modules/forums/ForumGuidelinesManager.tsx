@@ -1,3 +1,4 @@
+// discord_app/modules/forums/ForumGuidelinesManager.tsx
 import "initialize";
 
 const require = arg1;

@@ -1,3 +1,4 @@
+// discord_app/modules/display_name_styles/DisplayNameStylesConstants.tsx
 let items = [require("DisplayNameEffect").DisplayNameEffect.SOLID, require("DisplayNameEffect").DisplayNameEffect.GRADIENT, require("DisplayNameEffect").DisplayNameEffect.NEON, require("DisplayNameEffect").DisplayNameEffect.TOON, require("DisplayNameEffect").DisplayNameEffect.POP];
 const items1 = [require("DisplayNameFont").DisplayNameFont.PLAYPEN_SANS, require("DisplayNameFont").DisplayNameFont.ORBITRON, require("DisplayNameFont").DisplayNameFont.NEW_ROCKER, require("DisplayNameFont").DisplayNameFont.KALAM];
 const items2 = [require("DisplayNameEffect").DisplayNameEffect.GUMMY, require("DisplayNameEffect").DisplayNameEffect.PRISM];

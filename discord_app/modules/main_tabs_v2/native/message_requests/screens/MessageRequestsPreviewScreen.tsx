@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/message_requests/screens/MessageRequestsPreviewScreen.tsx
 import noop from "noop";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import { ME } from "ME";
@@ -8,7 +9,7 @@ const result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/
 
 export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
-  let obj = channelId(11713);
+  let obj = channelId(11545);
   const items = [channelId];
   const isMessageRequestRestrictedViewer = obj.useIsMessageRequestRestrictedViewer("MessageRequestsPreviewScreen");
   const effect = React.useEffect(() => {
@@ -20,14 +21,14 @@ export default function MessageRequestsScreen(route) {
   if (isMessageRequestRestrictedViewer) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp5Result = tmp5(tmp7(15839), obj);
+    let tmp5Result = tmp5(tmp7(15744), obj);
   } else {
     const obj1 = { guildId: null, channelId: null, chatInputRef: null, HACK_fixModalInteraction: true, screenIndex: "message-request" };
     obj1[0] = tmp6;
     obj1[1] = channelId;
     obj1[2] = ref;
-    tmp5Result = tmp5(tmp7(10230), obj1);
+    tmp5Result = tmp5(tmp7(10427), obj1);
   }
   obj[2] = tmp5Result;
-  return jsx(channelId(9664).ChannelContainer, { guildId: ME, channelId, children: null });
+  return jsx(channelId(10255).ChannelContainer, { guildId: ME, channelId, children: null });
 };

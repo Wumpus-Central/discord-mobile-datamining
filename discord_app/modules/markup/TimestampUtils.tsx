@@ -1,53 +1,54 @@
+// discord_app/modules/markup/TimestampUtils.tsx
 let obj = {
   t(date) {
-    return require(3955) /* resetCache */.dateFormat(date, "LT");
+    return require(3863) /* resetCache */.dateFormat(date, "LT");
   },
   T(date) {
-    return require(3955) /* resetCache */.dateFormat(date, "LTS");
+    return require(3863) /* resetCache */.dateFormat(date, "LTS");
   },
   d(date) {
-    return require(3955) /* resetCache */.dateFormat(date, "L");
+    return require(3863) /* resetCache */.dateFormat(date, "L");
   },
   D(date) {
-    return require(3955) /* resetCache */.dateFormat(date, "LL");
+    return require(3863) /* resetCache */.dateFormat(date, "LL");
   },
   f(date) {
-    return require(3955) /* resetCache */.dateFormat(date, "LLL");
+    return require(3863) /* resetCache */.dateFormat(date, "LLL");
   },
   F(date) {
-    return require(3955) /* resetCache */.dateFormat(date, "LLLL");
+    return require(3863) /* resetCache */.dateFormat(date, "LLLL");
   },
   s(date) {
-    return require(3955) /* resetCache */.dateFormat(date, "L LT");
+    return require(3863) /* resetCache */.dateFormat(date, "L LT");
   },
   S(date) {
-    return require(3955) /* resetCache */.dateFormat(date, "L LTS");
+    return require(3863) /* resetCache */.dateFormat(date, "L LTS");
   },
   R(toDate) {
-    const result = importDefault(3867).relativeTimeThreshold("s");
-    const obj = importDefault(3867);
-    const result1 = importDefault(3867).relativeTimeThreshold("s", 60);
-    const obj2 = importDefault(3867);
-    const result2 = importDefault(3867).relativeTimeThreshold("ss");
-    const obj3 = importDefault(3867);
-    const result3 = importDefault(3867).relativeTimeThreshold("ss", -1);
-    const obj4 = importDefault(3867);
-    const result4 = importDefault(3867).relativeTimeThreshold("m");
-    const obj5 = importDefault(3867);
-    const result5 = importDefault(3867).relativeTimeThreshold("m", 60);
+    const result = importDefault(3775).relativeTimeThreshold("s");
+    const obj = importDefault(3775);
+    const result1 = importDefault(3775).relativeTimeThreshold("s", 60);
+    const obj2 = importDefault(3775);
+    const result2 = importDefault(3775).relativeTimeThreshold("ss");
+    const obj3 = importDefault(3775);
+    const result3 = importDefault(3775).relativeTimeThreshold("ss", -1);
+    const obj4 = importDefault(3775);
+    const result4 = importDefault(3775).relativeTimeThreshold("m");
+    const obj5 = importDefault(3775);
+    const result5 = importDefault(3775).relativeTimeThreshold("m", 60);
     try {
-      let tmpResult = tmp(3867);
+      let tmpResult = tmp(3775);
       let fromNowResult = tmpResult(toDate.toDate()).fromNow();
-      tmpResult = tmp(3867);
+      tmpResult = tmp(3775);
       const result6 = tmpResult.relativeTimeThreshold("s", result);
       const tmpResultResult = tmpResult(toDate.toDate());
-      const result7 = tmp(3867).relativeTimeThreshold("ss", result2);
-      const tmpResult1 = tmp(3867);
-      const result8 = tmp(3867).relativeTimeThreshold("m", result4);
+      const result7 = tmp(3775).relativeTimeThreshold("ss", result2);
+      const tmpResult1 = tmp(3775);
+      const result8 = tmp(3775).relativeTimeThreshold("m", result4);
       if (fromNowResult == null) {
-        const tmpResult3 = tmp(3867);
-        fromNowResult = tmp(3867)(toDate.toDate()).fromNow();
-        const tmpResult4Result = tmp(3867)(toDate.toDate());
+        const tmpResult3 = tmp(3775);
+        fromNowResult = tmp(3775)(toDate.toDate()).fromNow();
+        const tmpResult4Result = tmp(3775)(toDate.toDate());
       }
       return fromNowResult;
     } catch (err) {
@@ -66,7 +67,7 @@ export const formatTimestampMention = function formatTimestampMention(arg0) {
   let format;
   let timestamp;
   ({ timestamp, format } = arg0);
-  const tmp = importDefault(3867);
+  const tmp = importDefault(3775);
   const tmpResult = tmp(Number(timestamp) * importDefault(687).Millis.SECOND);
   if (tmpResult.isValid()) {
     let f;
@@ -89,7 +90,7 @@ export const formatTimestampMention = function formatTimestampMention(arg0) {
   const NumberResult = Number(timestamp);
 };
 export const parseTimestamp = function parseTimestamp(arg0, arg1) {
-  const tmp = importDefault(3867);
+  const tmp = importDefault(3775);
   const tmpResult = tmp(Number(arg0) * importDefault(687).Millis.SECOND);
   let tmp3 = null;
   if (tmpResult.isValid()) {

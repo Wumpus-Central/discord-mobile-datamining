@@ -1,3 +1,4 @@
+// discord_app/modules/experiments/apex/ApexTypes.tsx
 const result = require("set").fileFinishedImporting("modules/experiments/apex/ApexTypes.tsx");
 for (const key10018 in require("UnitType")) {
   let tmp3 = key10018;

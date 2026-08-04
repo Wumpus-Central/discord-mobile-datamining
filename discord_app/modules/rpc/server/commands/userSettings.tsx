@@ -1,3 +1,4 @@
+// discord_app/modules/rpc/server/commands/userSettings.tsx
 import _getSystemLocale from "_getSystemLocale";
 
 let obj = {};

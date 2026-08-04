@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DesignSystemsCoachmarkSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -10,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_COACHMARK,
   getComponent() {
-    return require(14703) /* Content */.default;
+    return require(14603) /* Content */.default;
   }
 };
 const route = createToggle.createRoute(obj);

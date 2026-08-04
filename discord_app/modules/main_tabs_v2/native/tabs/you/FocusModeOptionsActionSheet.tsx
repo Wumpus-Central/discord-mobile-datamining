@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx
 import "noop";
 import jsxProd from "jsxProd";
 
@@ -67,7 +68,7 @@ const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native
 
 export default function FocusModeOptionsActionSheet(onSelect) {
   onSelect = onSelect.onSelect;
-  let obj = onSelect(9678);
+  let obj = onSelect(10269);
   const focusModeEnabled = obj.useFocusModeEnabled();
   obj = { title: null, hasIcons: false, children: null };
   const intl = onSelect(1236).intl;
@@ -84,7 +85,7 @@ export default function FocusModeOptionsActionSheet(onSelect) {
     };
     const intl4 = tmp(1236).intl;
     obj[4] = intl4.string(tmp(1236).t.rk35Gm);
-    tmp4Result = tmp4(tmp(5315).TableRow, obj);
+    tmp4Result = tmp4(tmp(5224).TableRow, obj);
   }
   const obj1 = { children: null };
   const items = [tmp4Result, ];
@@ -101,6 +102,6 @@ export default function FocusModeOptionsActionSheet(onSelect) {
     return outer1_2(onSelect(outer1_1[7]).TableRow, obj, "" + duration);
   });
   obj[2] = items;
-  obj1[0] = closure_3(onSelect(5649).TableRowGroup, obj);
-  return closure_2(onSelect(5646).ActionSheet, obj1);
+  obj1[0] = closure_3(onSelect(5558).TableRowGroup, obj);
+  return closure_2(onSelect(5555).ActionSheet, obj1);
 };

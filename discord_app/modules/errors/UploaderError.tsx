@@ -1,3 +1,4 @@
+// discord_app/modules/errors/UploaderError.tsx
 import "prototype";
 
 const prototype = function UploaderError(body) {

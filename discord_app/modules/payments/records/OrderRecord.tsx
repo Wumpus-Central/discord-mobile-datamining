@@ -1,3 +1,4 @@
+// discord_app/modules/payments/records/OrderRecord.tsx
 import "toJS";
 import { BaseInvoiceRecord } from "createFromServer";
 import createFromServer from "createFromServer";
@@ -33,7 +34,7 @@ prototype["createFromOrder"] = function createFromOrder(billing_facet) {
       payment_source_id = null;
     }
     let invoiceFromOrder = BaseInvoiceRecord.createInvoiceFromOrder(billing_facet);
-    if (typeof prototype !== "function") {
+    if (typeof prototype !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const tmp9 = new prototype("Trying to call a non-function", billing_facet, prototype, new.target, payment_gateway, payment_source_id, invoiceFromOrder);

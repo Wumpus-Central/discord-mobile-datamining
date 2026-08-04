@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/CollectiblesShopViewAllCategoryItems.tsx
 import importAllResult from "CollectiblesShopViewAllCategoryItemsHeader";
 import get_ActivityIndicator from "NativePaymentContextProvider";
 import { CollectiblesMobileShopScreen as closure_6 } from "items";

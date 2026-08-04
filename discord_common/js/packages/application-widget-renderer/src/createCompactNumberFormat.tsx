@@ -1,3 +1,4 @@
+// discord_common/js/packages/application-widget-renderer/src/createCompactNumberFormat.tsx
 function toAsciiDigits(arg0, get) {
   let str = "";
   const iter = arg0[Symbol.iterator]();

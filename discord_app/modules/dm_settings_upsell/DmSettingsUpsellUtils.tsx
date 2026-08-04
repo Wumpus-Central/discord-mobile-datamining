@@ -1,3 +1,4 @@
+// discord_app/modules/dm_settings_upsell/DmSettingsUpsellUtils.tsx
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellUtils.tsx");

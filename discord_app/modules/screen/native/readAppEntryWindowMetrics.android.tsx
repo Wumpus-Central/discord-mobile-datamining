@@ -1,3 +1,4 @@
+// discord_app/modules/screen/native/readAppEntryWindowMetrics.android.tsx
 const result = require("set").fileFinishedImporting("modules/screen/native/readAppEntryWindowMetrics.android.tsx");
 
 export const readWindowSizeForAppEntry = function readWindowSizeForAppEntry(appEntryKey) {

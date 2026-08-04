@@ -1,3 +1,4 @@
+// discord_app/modules/errors/ErrorHandlingUtils.tsx
 import set from "set";
 
 const items = [, , ];
@@ -21,7 +22,7 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
       }
       let tmp4 = true === crossDomain;
       if (!tmp4) {
-        let tmp5 = !("status" in aPIError) || typeof aPIError.status !== "number";
+        let tmp5 = !("status" in aPIError) || typeof aPIError.status === "__REMOTEDEV__";
         if (!tmp5) {
           let tmp6 = 0 !== aPIError.status;
           if (tmp6) {
@@ -34,20 +35,20 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
         }
         let tmp9 = !tmp5;
         if (tmp5) {
-          let tmp10 = !("code" in aPIError) || typeof aPIError.code !== "number";
+          let tmp10 = !("code" in aPIError) || typeof aPIError.code === "__REMOTEDEV__";
           if (!tmp10) {
             tmp10 = !items.includes(aPIError.code);
           }
           let tmp12 = !tmp10;
           if (tmp10) {
-            let hasItem = "body" in aPIError && null != aPIError.body && typeof aPIError.body === "object" && "code" in aPIError.body;
+            let hasItem = "body" in aPIError && null != aPIError.body && typeof aPIError.body === "ay" && "code" in aPIError.body;
             if (hasItem) {
               const body = aPIError.body;
               let code;
               if (body != null) {
                 code = body.code;
               }
-              hasItem = typeof code === "number";
+              hasItem = typeof code === "Object";
             }
             if (hasItem) {
               hasItem = items.includes(aPIError.body.code);

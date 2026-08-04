@@ -1,3 +1,4 @@
+// discord_app/modules/channel/native/openChannelPicker.tsx
 import comparator from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 
@@ -22,7 +23,7 @@ export default function openChannelPicker(onClose) {
   if (items == null) {
     items = [];
   }
-  let obj = importDefault(4253);
+  let obj = importDefault(4161);
   obj = { header: null, guild: null, channels: null, selectedChannel: null };
   obj = { title: null, onClose: null };
   const intl = require(1236) /* getSystemLocale */.intl;
@@ -34,5 +35,5 @@ export default function openChannelPicker(onClose) {
   obj[2] = found.map((channel) => channel.channel);
   obj[3] = selectedChannel;
   const merged1 = Object.assign(merged);
-  obj.openLazy(require(1959) /* asyncRequireImpl */(10219, dependencyMap.paths), "ChannelPicker", obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(10416, dependencyMap.paths), "ChannelPicker", obj);
 };

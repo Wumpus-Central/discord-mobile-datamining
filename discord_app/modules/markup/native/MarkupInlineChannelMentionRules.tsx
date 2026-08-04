@@ -1,3 +1,4 @@
+// discord_app/modules/markup/native/MarkupInlineChannelMentionRules.tsx
 import "noop";
 import { jsxs } from "jsxProd";
 
@@ -7,14 +8,14 @@ const result = require("smartOutput").fileFinishedImporting("modules/markup/nati
 
 export const inlineChannelMentionReact = function inlineChannelMentionReact(inContent, output, key) {
   if (null == inContent.inContent) {
-    let smartOutputResult = u1F4AC(9471).smartOutput(inContent, output, key);
-    const obj3 = u1F4AC(9471);
+    let smartOutputResult = u1F4AC(10004).smartOutput(inContent, output, key);
+    const obj3 = u1F4AC(10004);
   } else {
     const obj = { children: null };
-    const items = [output(inContent.inContent, key), " \u203A ", u1F4AC(9471).smartOutput(inContent, output, key)];
+    const items = [output(inContent.inContent, key), " \u203A ", u1F4AC(10004).smartOutput(inContent, output, key)];
     obj[0] = items;
     smartOutputResult = jsxs(u1F4AC(1297).LegacyText, { children: null }, key.key);
-    const obj2 = u1F4AC(9471);
+    const obj2 = u1F4AC(10004);
   }
   return smartOutputResult;
 };

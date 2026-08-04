@@ -1,3 +1,4 @@
+// discord_app/modules/favorites/FavoritesNotificationStore.tsx
 import keys from "keys";
 
 const obj = keys.create((arg0) => {

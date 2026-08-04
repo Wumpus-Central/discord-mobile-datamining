@@ -1,3 +1,4 @@
+// discord_app/modules/auth/makeAuthenticated.tsx
 import "noop";
 import fetchFingerprint from "fetchFingerprint";
 import { LoginStates } from "ME";

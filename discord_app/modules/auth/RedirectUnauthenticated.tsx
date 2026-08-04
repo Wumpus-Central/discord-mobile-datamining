@@ -1,3 +1,4 @@
+// discord_app/modules/auth/RedirectUnauthenticated.tsx
 import "noop";
 import { Routes } from "ME";
 import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED";
@@ -13,7 +14,7 @@ export default function RedirectUnauthenticated() {
     to = require(507) /* getAuthenticationPath */.getLoginPath(tmp4, false);
     const tmp2Result = require(507) /* getAuthenticationPath */;
   }
-  return jsx(require(4113) /* _extends */.Redirect, { to });
+  return jsx(require(4021) /* _extends */.Redirect, { to });
 };
 export const getRedirectPath = function getRedirectPath() {
   if (CONFERENCE_MODE_ENABLED) {

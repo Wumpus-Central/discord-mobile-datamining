@@ -1,3 +1,4 @@
+// discord_app/modules/guild_identity/GuildIdentitySettingsUtils.tsx
 const result = require("set").fileFinishedImporting("modules/guild_identity/GuildIdentitySettingsUtils.tsx");
 
 export const canResetThemeColors = function canResetThemeColors(pendingThemeColors, themeColors) {

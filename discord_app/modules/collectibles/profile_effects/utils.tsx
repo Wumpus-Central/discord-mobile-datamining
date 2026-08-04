@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_effects/utils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

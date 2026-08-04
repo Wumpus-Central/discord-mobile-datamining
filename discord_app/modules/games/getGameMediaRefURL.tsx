@@ -1,3 +1,4 @@
+// discord_app/modules/games/getGameMediaRefURL.tsx
 const result = require("isImageProxyURL").fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
 
 export default function getGameMediaRefURL(arg0, type, size) {
@@ -21,7 +22,7 @@ export default function getGameMediaRefURL(arg0, type, size) {
       }
       return tmp7;
     } else if ("url" === type) {
-      obj = require(4316) /* isImageProxyURL */;
+      obj = require(4224) /* isImageProxyURL */;
       size = undefined;
       if (size != null) {
         size = size.size;

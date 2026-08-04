@@ -1,3 +1,4 @@
+// discord_app/modules/quests/lib/analytics/ContentImpressionTracker.tsx
 import jsxProd from "jsxProd";
 import importAllResult from "trackQuestEvent";
 import initializeState from "initializeState";
@@ -79,11 +80,11 @@ class QuestContentImpression {
               closure_0 = undefined;
               obj3 = undefined;
               obj4 = undefined;
-              const obj10 = outer1_0(7109);
+              const obj10 = outer1_0(6018);
               obj4 = 1;
               c3 = 1;
               let obj1 = { value: null, done: false };
-              obj1[0] = obj10.getAdUser(outer1_0(7107).getQuestContentName(outer1_0.questContent));
+              obj1[0] = obj10.getAdUser(outer1_0(6016).getQuestContentName(outer1_0.questContent));
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -121,8 +122,8 @@ class QuestContentImpression {
               }
             }
             obj4[4] = advertisingId1;
-            let merged = Object.assign(outer1_1(7057)());
-            obj2 = outer1_0(9436);
+            let merged = Object.assign(outer1_1(5966)());
+            obj2 = outer1_0(8457);
             let merged1 = Object.assign(obj2.getBrandSafetyContext(outer1_0.questContent));
             const adContentIds = outer1_0.entity.adContentIds;
             const item = adContentIds.forEach((adCreativeId) => {

@@ -1,3 +1,4 @@
+// discord_app/design/void/LegacyText/native/LegacyText.tsx
 import { Text } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -11,7 +12,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   let style;
   ({ style, children } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require(7810) /* useLegacyTextMigrationHighlight */;
+  let obj = require(7675) /* useLegacyTextMigrationHighlight */;
   obj = { ref };
   const legacyTextMigrationHighlight = obj.useLegacyTextMigrationHighlight();
   const merged1 = Object.assign(merged);

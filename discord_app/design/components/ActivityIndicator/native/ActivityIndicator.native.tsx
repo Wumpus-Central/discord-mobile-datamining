@@ -1,3 +1,4 @@
+// discord_app/design/components/ActivityIndicator/native/ActivityIndicator.native.tsx
 import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 
@@ -13,7 +14,7 @@ export const ActivityIndicator = function ActivityIndicator(size) {
     flag = true;
   }
   const merged = Object.assign(size, Object.create(null));
-  let obj = require(3989) /* map */;
+  let obj = require(3897) /* map */;
   let color = merged.color;
   if (color == null) {
     color = obj.useToken(importDefault(712).colors.BACKGROUND_BRAND);

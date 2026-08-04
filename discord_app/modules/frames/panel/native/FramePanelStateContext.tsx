@@ -1,3 +1,4 @@
+// discord_app/modules/frames/panel/native/FramePanelStateContext.tsx
 import importAllResult from "noop";
 
 const context = require("noop").createContext(require("useActivityWebViewLock").activityPanelStateContextDefault);

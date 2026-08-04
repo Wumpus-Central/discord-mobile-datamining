@@ -1,3 +1,4 @@
+// discord_app/modules/interaction_components/native/actions/TextInputActionComponent.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
@@ -17,7 +18,7 @@ const memoResult = importAllResult.memo((type) => {
   ({ style, label, value } = type);
   const dependencyMap = value;
   ({ placeholder, required, maxLength } = type);
-  let obj = type(8026);
+  let obj = type(7896);
   let tmp3;
   if (null != value) {
     obj = { type: null, value: null };
@@ -29,7 +30,7 @@ const memoResult = importAllResult.memo((type) => {
   ({ state: _slicedToArray, executeStateUpdate } = componentState);
   const error = componentState.error;
   let obj3 = executeStateUpdate;
-  const isFirstTextInputInModal = type(16336).useIsFirstTextInputInModal(type.id);
+  const isFirstTextInputInModal = type(16240).useIsFirstTextInputInModal(type.id);
   obj = { placeholder, maxLength, status: null, defaultValue: null, onChange: null, autoFocus: null, isClearable: true };
   let str = "default";
   const state = executeStateUpdate.useState(() => {
@@ -50,11 +51,11 @@ const memoResult = importAllResult.memo((type) => {
   if (type(1906).TextInputComponentStyle.SMALL === style) {
     const obj1 = {};
     const merged = Object.assign(obj);
-    let tmp7 = jsx(tmp(5902).TextField, {});
+    let tmp7 = jsx(tmp(6736).TextField, {});
   } else if (tmp(1906).TextInputComponentStyle.PARAGRAPH === style) {
     const obj2 = {};
     const merged1 = Object.assign(obj);
-    tmp7 = jsx(tmp(7787).TextAreaField, {});
+    tmp7 = jsx(tmp(7650).TextAreaField, {});
   }
   let tmp16 = tmp7;
   if (null != label) {
@@ -63,7 +64,7 @@ const memoResult = importAllResult.memo((type) => {
     obj3[1] = required;
     obj3[2] = error;
     obj3[3] = tmp7;
-    tmp16 = jsx(tmp(7714).Input, { label: null, required: null, errorMessage: null, children: null });
+    tmp16 = jsx(tmp(6731).Input, { label: null, required: null, errorMessage: null, children: null });
   }
   return tmp16;
 });

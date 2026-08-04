@@ -1,3 +1,4 @@
+// discord_app/modules/safety_flows/SafetyFlowsExperiment.tsx
 const tmp2 = require("getUnitId")({ name: "2026-04-safety-flows", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let c0 = tmp2;
 const result = require("set").fileFinishedImporting("modules/safety_flows/SafetyFlowsExperiment.tsx");

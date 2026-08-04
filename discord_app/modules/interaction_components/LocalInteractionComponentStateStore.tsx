@@ -1,3 +1,4 @@
+// discord_app/modules/interaction_components/LocalInteractionComponentStateStore.tsx
 import { Store } from "initialize";
 
 let c0 = new require("LimitedMap")(196606);

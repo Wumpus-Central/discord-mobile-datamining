@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/navigator/SearchNavigatorPreviewScreen.tsx
 import noop from "noop";
 import { ScrollView } from "get ActivityIndicator";
 import { SearchTypes } from "ME";

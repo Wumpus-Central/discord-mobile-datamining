@@ -1,3 +1,4 @@
+// discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx
 let result = require("_initLibdiscore").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 
 export const isBlockedDomain = function isBlockedDomain(arg0) {

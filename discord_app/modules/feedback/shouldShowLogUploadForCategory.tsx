@@ -1,3 +1,4 @@
+// discord_app/modules/feedback/shouldShowLogUploadForCategory.tsx
 import { FeedbackRating } from "FeedbackRating";
 
 let closure_1 = {};

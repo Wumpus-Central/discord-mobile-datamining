@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/header/calculateVoicePanelHeaderSpecs.tsx
 const fn = function t(top) {
   const bound = Math.max(arg1, top.top);
   return { height: 44 + bound, paddingTop: bound, paddingLeft: Math.max(arg1, top.left), paddingRight: Math.max(arg1, top.right) };

@@ -1,3 +1,4 @@
+// discord_app/modules/premium/promotions/PromotionUtils.tsx
 import closure_3 from "ME";
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import createFromServer from "createFromServer";
@@ -24,35 +25,108 @@ function _claimOutboundPromotion() {
       let c1;
       let c2;
       let c3;
-      c3 = tmp2;
-      ({ promotionId: c0, promotionTitle: c1, partnerId: c2, analyticsLocations: c3 } = callback);
-      yield "ct";
-      const HTTP = callback(530).HTTP;
-      const obj2 = { url: null, rejectWithError: null };
-      obj2[0] = closure_9.CLAIM_OUTBOUND_PROMOTION_CODE(callback);
-      obj2[1] = callback(530).rejectWithMigratedError();
-      let handleConnectionClosedOrResumed = yield HTTP.post(obj2);
-      if (obj9.isIOS()) {
-        let ANDROID = tmp39.IOS;
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
       } else {
-        ANDROID = tmp39.ANDROID;
+        try {
+          c6 = 2;
+          if (0 === body) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let handleConnectionClosedOrResumed = tmp5;
+              c3 = tmp2;
+              let callback;
+              let callback2;
+              let dependencyMap;
+              c3 = undefined;
+              ({ promotionId: c0, promotionTitle: c1, partnerId: c2, analyticsLocations: c3 } = callback);
+              handleConnectionClosedOrResumed = undefined;
+              body = undefined;
+              c6 = undefined;
+              body = 1;
+              c6 = 1;
+              return { value: "ct", done: "Array" };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              const HTTP = callback(530).HTTP;
+              const obj2 = { url: null, rejectWithError: null };
+              obj2[0] = closure_9.CLAIM_OUTBOUND_PROMOTION_CODE(callback);
+              obj2[1] = callback(530).rejectWithMigratedError();
+              body = 2;
+              c6 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.post(obj2);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            handleConnectionClosedOrResumed = arg1;
+            body = handleConnectionClosedOrResumed.body;
+            if (obj9.isIOS()) {
+              let ANDROID = tmp39.IOS;
+            } else {
+              ANDROID = tmp39.ANDROID;
+            }
+            c6 = ANDROID;
+            obj = callback2(698);
+            const obj5 = { platform: null, status: null, location_stack: null, promotion_id: null, name: null, partner: null };
+            obj5[0] = c6;
+            obj5[1] = handleConnectionClosedOrResumed.status;
+            obj5[2] = c3;
+            obj5[3] = callback;
+            if (callback2 == null) {
+              callback2 = null;
+            }
+            obj5[4] = callback2;
+            if (dependencyMap == null) {
+              dependencyMap = null;
+            }
+            obj5[5] = dependencyMap;
+            obj.track(constants.OUTBOUND_PROMOTION_CLAIMED, obj5);
+            c6 = 3;
+            const obj6 = { value: null, done: true };
+            obj6[0] = callback3(body);
+            return obj6;
+          }
+        } catch (tmp27) {
+          c6 = tmp;
+          throw tmp27;
+        }
       }
-      const obj = callback2(698);
-      const obj5 = { platform: null, status: null, location_stack: null, promotion_id: null, name: null, partner: null };
-      obj5[0] = c6;
-      obj5[1] = handleConnectionClosedOrResumed.status;
-      obj5[2] = c3;
-      obj5[3] = callback;
-      if (callback2 == null) {
-        callback2 = null;
-      }
-      obj5[4] = callback2;
-      if (dependencyMap == null) {
-        dependencyMap = null;
-      }
-      obj5[5] = dependencyMap;
-      obj.track(constants.OUTBOUND_PROMOTION_CLAIMED, obj5);
-      return callback3(body);
     })();
     iter.next();
     return iter;
@@ -208,7 +282,7 @@ export const shouldShowOutboundPromotionNotice = function shouldShowOutboundProm
 export const isDedicatedSurfacePromotion = function isDedicatedSurfacePromotion(promotion) {
   let hasItem = null != promotion.partnerId;
   if (hasItem) {
-    const DEDICATED_SURFACE_PARTNER_IDS = require(7268) /* CountryListMode */.DEDICATED_SURFACE_PARTNER_IDS;
+    const DEDICATED_SURFACE_PARTNER_IDS = require(6267) /* CountryListMode */.DEDICATED_SURFACE_PARTNER_IDS;
     hasItem = DEDICATED_SURFACE_PARTNER_IDS.has(promotion.partnerId);
   }
   return hasItem;
@@ -261,5 +335,5 @@ export const getClaimedEndedOutboundPromotions = function getClaimedEndedOutboun
   });
 };
 export const isRecurringPromotion = function isRecurringPromotion(promotionType) {
-  return promotionType.promotionType === require(7268) /* CountryListMode */.PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING;
+  return promotionType.promotionType === require(6267) /* CountryListMode */.PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING;
 };

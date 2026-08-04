@@ -1,11 +1,12 @@
+// discord_app/modules/fastest_list/FastestList.android.tsx
 import "_readOnlyError";
 import importAllResult from "noop";
 import jsxProd from "jsxProd";
 import animatedComponent from "__INTERNAL_VIEW_CONFIG";
-import importDefaultResult1 from "module_4146";
+import importDefaultResult1 from "module_4054";
 import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG";
 import BottomSheetModal from "BottomSheetModal";
-import importDefaultResult2 from "module_4146";
+import importDefaultResult2 from "module_4054";
 
 let c4;
 let c5;

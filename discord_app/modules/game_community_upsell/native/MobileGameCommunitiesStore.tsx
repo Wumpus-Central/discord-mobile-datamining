@@ -1,3 +1,4 @@
+// discord_app/modules/game_community_upsell/native/MobileGameCommunitiesStore.tsx
 import { PersistedStore } from "initialize";
 import set from "dispatcher";
 

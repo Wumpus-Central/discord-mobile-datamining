@@ -1,3 +1,4 @@
+// discord_app/modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { AnalyticEvents } from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";

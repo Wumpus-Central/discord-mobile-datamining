@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/PauseGatewaySocket.tsx
 let c0 = false;
 const result = require("set").fileFinishedImporting("modules/gateway/PauseGatewaySocket.tsx");
 

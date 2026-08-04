@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/CollectiblesShopGiftModal.tsx
 import noop from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import { COLLECTIBLES_APPLICATION_ID as closure_5 } from "ME";

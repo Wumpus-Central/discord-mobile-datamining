@@ -1,10 +1,11 @@
+// discord_app/modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/telemetry_ring/trackZoomedInHttpRequest.android.tsx");
 
 export default function trackZoomedInHttpRequest(arg0) {
   try {
-    let obj = importDefault(13362);
+    let obj = importDefault(13266);
     obj = {};
     const merged = Object.assign(arg0);
     obj.source = "zoomed_in";

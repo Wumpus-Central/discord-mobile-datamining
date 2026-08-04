@@ -1,3 +1,4 @@
+// discord_app/modules/favorites/FavoritesConstants.tsx
 import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields";
 
 const obj = { id: "373", name: "Favorites", description: "The place for all your favorite channels!", joinedAt: null, maxMembers: 500000 };

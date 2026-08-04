@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/AdVideoPlayer.tsx
 import set from "set";
 import importAllResult from "module_1208";
 import get_ActivityIndicator from "initialize";
@@ -29,7 +30,7 @@ hasVideoEnded.__closure = {};
 hasVideoEnded.__workletHash = 8992945176371;
 hasVideoEnded.__initData = { code: "function hasVideoEnded_AdVideoPlayerTsx1(currentTime,videoDuration){return currentTime>=videoDuration-1;}" };
 function canSeekForward(arg0, arg1, arg2, arg3) {
-  if (typeof hasVideoEnded !== "function") {
+  if (typeof hasVideoEnded !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let tmp2 = !tmp;
@@ -248,7 +249,7 @@ const memoResult = importAllResult.memo((initialProgress) => {
   }
   if (tmp15) {
     ({ timestampSec, duration } = first1);
-    if (typeof videoRef !== "function") {
+    if (typeof videoRef !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     tmp15 = timestampSec >= duration - 1;
@@ -530,10 +531,10 @@ const memoResult = importAllResult.memo((initialProgress) => {
   let tmp37 = first2 === tmp8(tmp9[10]).PlayerState.ERRORED;
   if (!tmp37) {
     ({ timestampSec: timestampSec2, maxTimestampSec, duration: duration2 } = first1);
-    if (typeof first !== "function") {
+    if (typeof first !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    if (typeof videoRef !== "function") {
+    if (typeof videoRef !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let tmp41 = !tmp40;

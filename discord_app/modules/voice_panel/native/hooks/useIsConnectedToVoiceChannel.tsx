@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/hooks/useIsConnectedToVoiceChannel.tsx
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import updateVoiceState from "updateVoiceState";

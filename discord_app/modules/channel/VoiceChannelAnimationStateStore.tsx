@@ -1,3 +1,4 @@
+// discord_app/modules/channel/VoiceChannelAnimationStateStore.tsx
 import _slicedToArray from "_slicedToArray";
 import handleConnectionOpen from "handleConnectionOpen";
 import updateVoiceState from "updateVoiceState";

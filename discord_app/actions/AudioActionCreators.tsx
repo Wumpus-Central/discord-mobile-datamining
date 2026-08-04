@@ -1,3 +1,4 @@
+// discord_app/actions/AudioActionCreators.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -89,10 +90,10 @@ obj = {
         flag2 = true;
       }
       const _location = obj.location;
-      if (typeof isNotSupported !== "function") {
+      if (typeof isNotSupported !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof trackToggleSelfMute !== "function") {
+      if (typeof trackToggleSelfMute !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       if (flag2) {
@@ -125,7 +126,7 @@ obj = {
     if (arg2 === undefined) {
       flag = true;
     }
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     if (flag) {
@@ -143,7 +144,7 @@ obj = {
     importDefault(709).dispatch(obj);
   },
   setTemporarySelfMute(mute) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const currentUser = authStore.getCurrentUser();
@@ -172,10 +173,10 @@ obj = {
     }
     if (obj.usedKeybind !== undefined) {
       const _location = obj.location;
-      if (typeof isNotSupported !== "function") {
+      if (typeof isNotSupported !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof trackToggleSelfDeaf !== "function") {
+      if (typeof trackToggleSelfDeaf !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = { type: "AUDIO_TOGGLE_SELF_DEAF", context: null, syncRemote: null };
@@ -189,7 +190,7 @@ obj = {
     if (closure_1 === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);
@@ -217,7 +218,7 @@ obj = {
     if (arg4 === undefined) {
       flag2 = false;
     }
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);
@@ -228,7 +229,7 @@ obj = {
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    let obj = require(9079) /* snapVolumeToDefault */;
+    let obj = require(8849) /* snapVolumeToDefault */;
     const snapVolumeToDefaultResult = obj.snapVolumeToDefault(USER, DEFAULT);
     obj = { type: "AUDIO_SET_LOCAL_VOLUME", context: DEFAULT, userId, volume: snapVolumeToDefaultResult };
     importDefault(709).dispatch(obj);
@@ -244,11 +245,11 @@ obj = {
     obj.dispatch(obj);
   },
   setSpatialAudio(enabled) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const audioMixerSettings = store2.getAudioMixerSettings();
-    importDefault(9081)("spatial_audio_enabled", enabled, audioMixerSettings.enabled, arg1);
+    importDefault(8851)("spatial_audio_enabled", enabled, audioMixerSettings.enabled, arg1);
     let obj = importDefault(709);
     obj = { type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: MediaEngineContextTypes.DEFAULT, settings: null };
     obj = {};
@@ -279,7 +280,7 @@ obj = {
       obj = {};
     }
     const analyticsLocations = obj.analyticsLocations;
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj2 = store2;
@@ -357,7 +358,7 @@ obj = {
     }
   },
   setBypassSystemInputProcessing(bypassEnabled, location) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);
@@ -369,7 +370,7 @@ obj = {
     if (arg1 === undefined) {
       obj = {};
     }
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     obj = { type: "AUDIO_SET_INPUT_VOLUME", volume };
@@ -394,7 +395,7 @@ obj = {
     if (arg1 === undefined) {
       obj = {};
     }
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     obj = { type: "AUDIO_SET_OUTPUT_VOLUME", volume };
@@ -422,7 +423,7 @@ obj = {
       obj = {};
     }
     ({ location: _location, analyticsLocations } = obj);
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const inputDeviceId = store2.getInputDeviceId();
@@ -443,7 +444,7 @@ obj = {
       obj = {};
     }
     ({ location: _location, analyticsLocations } = obj);
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const outputDeviceId = store2.getOutputDeviceId();
@@ -464,7 +465,7 @@ obj = {
       obj = {};
     }
     ({ location: _location, analyticsLocations } = obj);
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const videoDeviceId = store2.getVideoDeviceId();
@@ -482,18 +483,18 @@ obj = {
     if (arg1 === undefined) {
       obj = {};
     }
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const activeInputProfile = store2.getActiveInputProfile();
-    importDefault(9081)("active_input_profile", inputProfile, activeInputProfile, obj.analyticsLocations);
+    importDefault(8851)("active_input_profile", inputProfile, activeInputProfile, obj.analyticsLocations);
     const tmp = importDefault;
-    const tmp3 = importDefault(9081);
+    const tmp3 = importDefault(8851);
     obj = { type: "AUDIO_SET_ACTIVE_INPUT_PROFILE", inputProfile };
     importDefault(709).dispatch(obj);
   },
   setEchoCancellation(enabled, location) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);
@@ -505,11 +506,11 @@ obj = {
     if (arg1 === undefined) {
       obj = {};
     }
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    importDefault(9081)("stream_attenuation_enabled", enabled, store2.getSidechainCompression(), obj.analyticsLocations);
-    const tmp = importDefault(9081);
+    importDefault(8851)("stream_attenuation_enabled", enabled, store2.getSidechainCompression(), obj.analyticsLocations);
+    const tmp = importDefault(8851);
     obj = { type: "AUDIO_SET_SIDECHAIN_COMPRESSION", enabled };
     importDefault(709).dispatch(obj);
   },
@@ -518,16 +519,16 @@ obj = {
     if (arg1 === undefined) {
       obj = {};
     }
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    importDefault(9081)("stream_attenuation_strength", strength, store2.getSidechainCompressionStrength(), obj.analyticsLocations);
-    const tmp = importDefault(9081);
+    importDefault(8851)("stream_attenuation_strength", strength, store2.getSidechainCompressionStrength(), obj.analyticsLocations);
+    const tmp = importDefault(8851);
     obj = { type: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH", strength };
     importDefault(709).dispatch(obj);
   },
   setLoopback(loopbackReason, enabled) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);
@@ -535,7 +536,7 @@ obj = {
     obj.dispatch(obj);
   },
   setNoiseSuppression(enabled, location) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);
@@ -543,7 +544,7 @@ obj = {
     obj.dispatch(obj);
   },
   setNoiseCancellation(enabled, location) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);
@@ -553,7 +554,7 @@ obj = {
     importDefault(709).dispatch(obj);
   },
   setAutomaticGainControl(enabled, location) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);
@@ -561,43 +562,43 @@ obj = {
     obj.dispatch(obj);
   },
   setAttenuation(attenuation, attenuateWhileSpeakingSelf, attenuateWhileSpeakingOthers) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     attenuation = store2.getAttenuation();
     attenuateWhileSpeakingSelf = store2.getAttenuateWhileSpeakingSelf();
     attenuateWhileSpeakingOthers = store2.getAttenuateWhileSpeakingOthers();
     if (attenuation !== attenuation) {
-      importDefault(9081)("global_attenuation_strength", attenuation, attenuation);
+      importDefault(8851)("global_attenuation_strength", attenuation, attenuation);
     } else if (attenuateWhileSpeakingSelf !== attenuateWhileSpeakingSelf) {
-      importDefault(9081)("global_attenuation_for_self_speak_enabled", attenuateWhileSpeakingSelf, attenuateWhileSpeakingSelf);
+      importDefault(8851)("global_attenuation_for_self_speak_enabled", attenuateWhileSpeakingSelf, attenuateWhileSpeakingSelf);
     } else if (attenuateWhileSpeakingOthers !== attenuateWhileSpeakingOthers) {
-      importDefault(9081)("global_attenuation_for_other_speak_enabled", attenuateWhileSpeakingOthers, attenuateWhileSpeakingOthers);
+      importDefault(8851)("global_attenuation_for_other_speak_enabled", attenuateWhileSpeakingOthers, attenuateWhileSpeakingOthers);
     }
     let obj = importDefault(709);
     obj = { type: "AUDIO_SET_ATTENUATION", attenuation, attenuateWhileSpeakingSelf, attenuateWhileSpeakingOthers };
     obj.dispatch(obj);
   },
   setQoS(enabled) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    importDefault(9081)("quality_of_service_packets_enabled", enabled, store2.getQoS());
+    importDefault(8851)("quality_of_service_packets_enabled", enabled, store2.getQoS());
     let obj = importDefault(709);
     obj = { type: "AUDIO_SET_QOS", enabled };
     obj.dispatch(obj);
   },
   reset() {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     importDefault(709).dispatch({ type: "AUDIO_RESET" });
   },
   setSilenceWarning(enabled) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    importDefault(9081)("silence_warning_enabled", enabled, store2.getEnableSilenceWarning());
+    importDefault(8851)("silence_warning_enabled", enabled, store2.getEnableSilenceWarning());
     let obj = importDefault(709);
     obj = { type: "AUDIO_SET_DISPLAY_SILENCE_WARNING", enabled };
     obj.dispatch(obj);
@@ -636,7 +637,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = v0(9081)("debug_logging_enabled", outer1_0, outer1_6.getDebugLogging());
+              obj1[0] = v0(8851)("debug_logging_enabled", outer1_0, outer1_6.getDebugLogging());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -663,28 +664,28 @@ obj = {
     })();
   },
   setVideoHook(enabled) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    importDefault(9081)("video_hook_enabled", enabled, store2.getVideoHook());
+    importDefault(8851)("video_hook_enabled", enabled, store2.getVideoHook());
     let obj = importDefault(709);
     obj = { type: "MEDIA_ENGINE_SET_VIDEO_HOOK", enabled };
     obj.dispatch(obj);
   },
   setExperimentalSoundshare(enabled) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    importDefault(9081)("experimental_soundshare_enabled", enabled, store2.getExperimentalSoundshare());
+    importDefault(8851)("experimental_soundshare_enabled", enabled, store2.getExperimentalSoundshare());
     let obj = importDefault(709);
     obj = { type: "MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE", enabled };
     obj.dispatch(obj);
   },
   setUseSystemScreensharePicker(enabled) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    importDefault(9081)("system_screenshare_picker_enabled", enabled, store2.getUseSystemScreensharePicker());
+    importDefault(8851)("system_screenshare_picker_enabled", enabled, store2.getUseSystemScreensharePicker());
     let obj = importDefault(709);
     obj = { type: "MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER", enabled };
     obj.dispatch(obj);
@@ -723,7 +724,7 @@ obj = {
               v0 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = v0(9081)("audio_subsystem", outer1_0, outer1_6.getAudioSubsystem());
+              obj1[0] = v0(8851)("audio_subsystem", outer1_0, outer1_6.getAudioSubsystem());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -750,7 +751,7 @@ obj = {
     })();
   },
   setVideoEnabled(enabled) {
-    let obj = require(9082) /* _getFilterBlob */;
+    let obj = require(8852) /* _getFilterBlob */;
     const result = obj.applyInitialVideoBackgroundOption();
     obj = { type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled };
     importDefault(709).dispatch(obj);
@@ -761,7 +762,7 @@ obj = {
       qualityOptions = qualityOptions.qualityOptions;
     }
     if (null != qualityOptions) {
-      let obj = require(9090) /* isPremiumResolution */;
+      let obj = require(8860) /* isPremiumResolution */;
       const preset = qualityOptions.qualityOptions.preset;
       const resolution = qualityOptions.qualityOptions.resolution;
       const frameRate = qualityOptions.qualityOptions.frameRate;
@@ -776,22 +777,22 @@ obj = {
     importDefault(709).dispatch(obj);
   },
   setAecDump(enabled) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    importDefault(9081)("diagnostic_audio_recording_enabled", enabled, store2.getAecDump());
+    importDefault(8851)("diagnostic_audio_recording_enabled", enabled, store2.getAecDump());
     let obj = importDefault(709);
     obj = { type: "MEDIA_ENGINE_SET_AEC_DUMP", enabled };
     obj.dispatch(obj);
   },
   interact() {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     importDefault(709).dispatch({ type: "MEDIA_ENGINE_INTERACTION_REQUIRED", required: false });
   },
   setEnableHardwareMuteNotice(enabled) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);
@@ -799,7 +800,7 @@ obj = {
     obj.dispatch(obj);
   },
   setKrispSuppressionLevel(level) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);
@@ -807,7 +808,7 @@ obj = {
     obj.dispatch(obj);
   },
   setKrispModelOverride(model) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);
@@ -820,12 +821,12 @@ obj = {
     }
   },
   setNoiseCancellationEnableStats(arg0) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
   },
   setOpenH264Enabled(enabled) {
-    if (typeof isNotSupported !== "function") {
+    if (typeof isNotSupported !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = importDefault(709);

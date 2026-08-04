@@ -1,3 +1,4 @@
+// discord_app/utils/ColorUtils.tsx
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
@@ -157,13 +158,13 @@ function rawHslToRgb(hue, saturation, lightness) {
   const result = hue / 360;
   if (0 === saturation) {
     const _Math = Math;
-    let tmp23 = importDefault(4130);
-    const rounded = Math.round(255 * lightness);
+    let tmp25 = importDefault(4038);
+    const rounded = Math.round(255 * tmp3);
     const _Math2 = Math;
     const _Math3 = Math;
-    const rounded1 = Math.round(255 * lightness);
-    tmp23 = new tmp23(rounded, rounded1, Math.round(255 * lightness), 1);
-    return tmp23;
+    const rounded1 = Math.round(255 * tmp2);
+    tmp25 = new tmp25(rounded, rounded1, Math.round(255 * lightness), 1);
+    return tmp25;
   } else {
     if (lightness < 0.5) {
       let result1 = lightness * (1 + saturation);
@@ -472,7 +473,7 @@ export const mixColors = function mixColors(mixColorOverride, red) {
   const sum1 = (1 - alpha) * red.green + alpha * mixColorOverride.green;
   const sum2 = (1 - alpha) * red.blue + alpha * mixColorOverride.blue;
   const sum3 = mixColorOverride.alpha + red.alpha * (1 - mixColorOverride.alpha);
-  return new importDefault(4130)(sum, sum1, sum2, sum3);
+  return new importDefault(4038)(sum, sum1, sum2, sum3);
 };
 export { hex2rgb2hsv };
 export const getComplimentaryPaletteForColor = function getComplimentaryPaletteForColor(items, arg1) {

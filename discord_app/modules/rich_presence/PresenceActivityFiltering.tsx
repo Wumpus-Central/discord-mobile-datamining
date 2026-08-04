@@ -1,3 +1,4 @@
+// discord_app/modules/rich_presence/PresenceActivityFiltering.tsx
 import addApplication from "addApplication";
 
 const require = arg1;

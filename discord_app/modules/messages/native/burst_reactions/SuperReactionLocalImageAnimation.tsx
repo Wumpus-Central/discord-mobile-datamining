@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -10,14 +11,14 @@ export default function SuperReactionLocalImageAnimation(arg0) {
   let tmp = null;
   ({ localImageSource, animationSource } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require(7163) /* _generateAnimationSource */;
+  let obj = require(6099) /* _generateAnimationSource */;
   const superReactionAnimationSourceFromLocalImage = obj.useSuperReactionAnimationSourceFromLocalImage({ animationSource, localImageSource });
   if (null != superReactionAnimationSourceFromLocalImage) {
     obj = { loop: true, source: null };
     obj[1] = superReactionAnimationSourceFromLocalImage;
     const merged1 = Object.assign(merged);
-    tmp = jsx(importDefault(7206), { loop: true, source: null });
-    const tmp7 = importDefault(7206);
+    tmp = jsx(importDefault(6142), { loop: true, source: null });
+    const tmp7 = importDefault(6142);
   }
   return tmp;
 };

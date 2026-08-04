@@ -1,3 +1,4 @@
+// discord_app/design/components/Modal/native/ModalFooter.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

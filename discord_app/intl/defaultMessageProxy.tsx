@@ -1,3 +1,4 @@
+// discord_app/intl/defaultMessageProxy.tsx
 import module_1274 from "module_1274";
 import importDefaultResult from "messagesProxy";
 import chainMessagesObjectsResult from "messagesProxy";

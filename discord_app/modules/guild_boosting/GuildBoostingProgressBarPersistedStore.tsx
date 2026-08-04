@@ -1,3 +1,4 @@
+// discord_app/modules/guild_boosting/GuildBoostingProgressBarPersistedStore.tsx
 import { PersistedStore } from "initialize";
 
 let closure_0 = {};

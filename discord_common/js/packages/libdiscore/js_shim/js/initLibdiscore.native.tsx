@@ -1,3 +1,4 @@
+// discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { NativeModules } from "get ActivityIndicator";
 import importAllResult from "setTimeout";

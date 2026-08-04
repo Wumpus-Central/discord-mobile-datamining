@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx
 import set from "set";
 import { Image } from "AnimatedButtonWrapper";
 import ensureGuildLoaded from "ensureGuildLoaded";

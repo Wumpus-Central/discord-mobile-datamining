@@ -1,3 +1,4 @@
+// discord_app/modules/oauth2/native/BotPermissions.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

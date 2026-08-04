@@ -1,3 +1,4 @@
+// discord_app/modules/activate_device/useActivateDeviceStepTracking.tsx
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 
@@ -6,7 +7,7 @@ let result = require("usePrevious").fileFinishedImporting("modules/activate_devi
 
 export const useActivateDeviceStepTracking = function useActivateDeviceStepTracking(first) {
   let closure_0 = first;
-  const tmp = importDefault(8775)(first);
+  const tmp = importDefault(8129)(first);
   importDefault = tmp;
   const items = [tmp, first];
   const effect = React.useEffect(() => {

@@ -1,3 +1,4 @@
+// discord_app/modules/people/strangers/AcceptFriendRequestModalActionCreators.native.tsx
 import { ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL_ID as closure_3 } from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD";
 import { AnalyticEvents } from "ME";
 import { jsx } from "jsxProd";
@@ -31,5 +32,5 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
       });
     }
   };
-  importDefault(4624).openLazy(obj);
+  importDefault(4533).openLazy(obj);
 };

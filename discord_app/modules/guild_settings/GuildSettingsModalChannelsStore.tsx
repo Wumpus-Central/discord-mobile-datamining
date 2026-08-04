@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/GuildSettingsModalChannelsStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import createChannelRecord from "createChannelRecord";
 import comparator from "comparator";
@@ -80,9 +81,9 @@ function buildSortedChannels() {
       }
     }
   });
-  const item2 = importDefault(5223)(_null._categories, _null).forEach(setIndex);
+  const item2 = importDefault(5132)(_null._categories, _null).forEach(setIndex);
   if (null != _null) {
-    const arr4 = importDefault(5223)(_null._categories, _null, (channel) => {
+    const arr4 = importDefault(5132)(_null._categories, _null, (channel) => {
       channel = channel.channel;
       let tmp = channel.type === constants.GUILD_CATEGORY;
       if (!tmp) {
@@ -226,7 +227,7 @@ const guildSettingsModalChannelsStoreClass = new GuildSettingsModalChannelsStore
       const _Set = Set;
       const set = new Set(sortingType);
       if (null != _null) {
-        const arr = importDefault(5223)(_null._categories, _null, (channel) => {
+        const arr = importDefault(5132)(_null._categories, _null, (channel) => {
           channel = channel.channel;
           let tmp = channel.type === constants.GUILD_CATEGORY;
           if (!tmp) {
@@ -245,7 +246,7 @@ const guildSettingsModalChannelsStoreClass = new GuildSettingsModalChannelsStore
   GUILD_SETTINGS_MODAL_CHANNELS_STOP_REORDER: function handleStopReorder() {
     let c16 = null;
     if (null != _null) {
-      const arr = importDefault(5223)(_null._categories, _null, (channel) => {
+      const arr = importDefault(5132)(_null._categories, _null, (channel) => {
         channel = channel.channel;
         let tmp = channel.type === constants.GUILD_CATEGORY;
         if (!tmp) {
@@ -290,7 +291,7 @@ let obj = {
       const _Set = Set;
       const set = new Set(sortingType);
       if (null != _null) {
-        const arr = importDefault(5223)(_null._categories, _null, (channel) => {
+        const arr = importDefault(5132)(_null._categories, _null, (channel) => {
           channel = channel.channel;
           let tmp = channel.type === constants.GUILD_CATEGORY;
           if (!tmp) {
@@ -309,7 +310,7 @@ let obj = {
   GUILD_SETTINGS_MODAL_CHANNELS_STOP_REORDER: function handleStopReorder() {
     let c16 = null;
     if (null != _null) {
-      const arr = importDefault(5223)(_null._categories, _null, (channel) => {
+      const arr = importDefault(5132)(_null._categories, _null, (channel) => {
         channel = channel.channel;
         let tmp = channel.type === constants.GUILD_CATEGORY;
         if (!tmp) {

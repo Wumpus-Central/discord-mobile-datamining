@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/DispatcherWorkConstants.tsx
 let c0 = 2.0833333333333335;
 const result = require("set").fileFinishedImporting("modules/gateway/DispatcherWorkConstants.tsx");
 class WorkIdleDeadline {

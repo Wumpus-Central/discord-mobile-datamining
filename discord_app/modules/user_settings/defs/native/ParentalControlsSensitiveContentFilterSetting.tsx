@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -13,7 +14,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   getComponent() {
-    return require(14800) /* UserSettingsSensitiveContentFilters */.default;
+    return require(14700) /* UserSettingsSensitiveContentFilters */.default;
   }
 };
 const route = createToggle.createRoute(obj);

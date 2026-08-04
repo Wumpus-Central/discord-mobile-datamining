@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/base_components/PlaceholderAppRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -24,9 +25,9 @@ export default function PlaceholderAppRow(isFirstRow) {
     flag2 = false;
   }
   const tmp = createCacheKey();
-  let obj = require(11353) /* usePlaceholderWidth */;
+  let obj = require(11242) /* usePlaceholderWidth */;
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  let obj1 = require(11353) /* usePlaceholderWidth */;
+  let obj1 = require(11242) /* usePlaceholderWidth */;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
   obj = { icon: null, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
   obj = { style: tmp.loadingAppIcon };
@@ -46,5 +47,5 @@ export default function PlaceholderAppRow(isFirstRow) {
   obj[6] = function onPress() {
 
   };
-  return jsx(require(5315) /* TableRowInner */.TableRow, { style: tmp.loadingAppIcon });
+  return jsx(require(5224) /* TableRowInner */.TableRow, { style: tmp.loadingAppIcon });
 };

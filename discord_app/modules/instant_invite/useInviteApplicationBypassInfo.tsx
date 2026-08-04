@@ -1,3 +1,4 @@
+// discord_app/modules/instant_invite/useInviteApplicationBypassInfo.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";
 

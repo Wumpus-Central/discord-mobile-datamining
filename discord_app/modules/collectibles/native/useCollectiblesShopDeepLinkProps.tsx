@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx
 import { useMemo } from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import items from "items";

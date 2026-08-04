@@ -1,3 +1,4 @@
+// discord_app/modules/wishlists/records/WishlistRecommendationRecord.tsx
 import "toJS";
 import createFromServer from "createFromServer";
 import createExecutable from "createExecutable";
@@ -23,7 +24,7 @@ prototype = function WishlistRecommendationRecord(skus) {
 class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(skus) {
-  if (typeof prototype !== "function") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp4 = new prototype("Trying to call a non-function", tmp3, tmp2, tmp);

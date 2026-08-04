@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/UserSettingsProtoManager.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { UserSettingsTypes } from "MAX_FAVORITES";
 
@@ -47,9 +48,9 @@ let result = require("MAX_FAVORITES").fileFinishedImporting("modules/user_settin
 
 export default {
   init() {
-    importDefault(1343)[UserSettingsTypes.PRELOADED_USER_SETTINGS] = importDefault(13634);
+    importDefault(1343)[UserSettingsTypes.PRELOADED_USER_SETTINGS] = importDefault(13538);
     const tmp = importDefault(1343);
-    importDefault(1343)[UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = importDefault(13635);
+    importDefault(1343)[UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = importDefault(13539);
     const tmp2 = importDefault(1343);
     const subscription = importDefault(709).subscribe("CONNECTION_OPEN", handleConnectionOpen);
     const obj = importDefault(709);

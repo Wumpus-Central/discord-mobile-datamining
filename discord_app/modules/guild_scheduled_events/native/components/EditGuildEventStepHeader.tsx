@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/native/components/EditGuildEventStepHeader.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -15,7 +16,7 @@ export default function EditGuildEventStepHeader(children) {
   const tmp = callback2();
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: children.title };
-  const items = [callback(require(4281) /* Text */.Text, obj), ];
+  const items = [callback(require(4189) /* Text */.Text, obj), ];
   let tmp4Result = null;
   if (null != subtitle) {
     tmp4Result = null;
@@ -23,7 +24,7 @@ export default function EditGuildEventStepHeader(children) {
       obj = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj[0] = tmp.headerSubtitle;
       obj[3] = subtitle;
-      tmp4Result = callback(require(4281) /* Text */.Text, obj);
+      tmp4Result = callback(require(4189) /* Text */.Text, obj);
     }
   }
   items[1] = tmp4Result;

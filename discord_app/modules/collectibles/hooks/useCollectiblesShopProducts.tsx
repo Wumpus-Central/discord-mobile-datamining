@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useCollectiblesShopProducts.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getFetchState from "getFetchState";

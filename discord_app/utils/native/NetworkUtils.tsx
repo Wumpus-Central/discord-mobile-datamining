@@ -1,3 +1,4 @@
+// discord_app/utils/native/NetworkUtils.tsx
 import { NetworkConnectionTypes } from "ME";
 import importDefaultResult from "configure";
 

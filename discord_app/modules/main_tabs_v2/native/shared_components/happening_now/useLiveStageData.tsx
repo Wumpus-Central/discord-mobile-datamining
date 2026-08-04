@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx
 import noop from "noop";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 import ensureGuildLoaded from "ensureGuildLoaded";

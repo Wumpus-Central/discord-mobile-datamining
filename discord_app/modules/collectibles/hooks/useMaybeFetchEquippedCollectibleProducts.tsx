@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useMaybeFetchEquippedCollectibleProducts.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

@@ -1,3 +1,4 @@
+// discord_common/js/packages/i18n/markdownRules.tsx
 import t from "t";
 import t from "t";
 
@@ -30,7 +31,7 @@ const obj1 = { order: text.order, match: null, parse: null, react: null };
 obj1[1] = t.inlineRegex(/^!!(\d+?)!!/);
 obj1[2] = function parse(arg0, arg1, arg2) {
   let content = str;
-  if (typeof arg2.unsafeContext[arg0[1]] !== "string") {
+  if (typeof arg2.unsafeContext[arg0[1]] !== "y") {
     let str2 = "";
     if (null != str) {
       str2 = str.toString();

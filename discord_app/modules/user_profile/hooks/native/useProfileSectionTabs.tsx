@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/hooks/native/useProfileSectionTabs.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";

@@ -1,3 +1,4 @@
+// discord_app/utils/UserSettingsUtils.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import ME from "ME";
@@ -12,7 +13,7 @@ let obj = { UNDECIDED: 0, [0]: "UNDECIDED", OPTIN: 1, [1]: "OPTIN", OPTOUT: 2, [
 const result = require("ME").fileFinishedImporting("utils/UserSettingsUtils.tsx");
 
 export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuilds() {
-  const RestrictedGuildIds = require(3958) /* explicitContentFromProto */.RestrictedGuildIds;
+  const RestrictedGuildIds = require(3866) /* explicitContentFromProto */.RestrictedGuildIds;
   const setting = RestrictedGuildIds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -21,7 +22,7 @@ export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuild
   return new Set(found);
 };
 export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedMessageRequestRestrictedGuilds() {
-  const MessageRequestRestrictedGuildIds = require(3958) /* explicitContentFromProto */.MessageRequestRestrictedGuildIds;
+  const MessageRequestRestrictedGuildIds = require(3866) /* explicitContentFromProto */.MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -30,7 +31,7 @@ export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedM
   return new Set(found);
 };
 export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivityRestrictedGuilds() {
-  const ActivityRestrictedGuilds = require(3958) /* explicitContentFromProto */.ActivityRestrictedGuilds;
+  const ActivityRestrictedGuilds = require(3866) /* explicitContentFromProto */.ActivityRestrictedGuilds;
   const setting = ActivityRestrictedGuilds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -39,7 +40,7 @@ export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivit
   return new Set(found);
 };
 export const getSanitizedActivityJoiningRestrictedGuilds = function getSanitizedActivityJoiningRestrictedGuilds() {
-  const ActivityJoiningRestrictedGuilds = require(3958) /* explicitContentFromProto */.ActivityJoiningRestrictedGuilds;
+  const ActivityJoiningRestrictedGuilds = require(3866) /* explicitContentFromProto */.ActivityJoiningRestrictedGuilds;
   const setting = ActivityJoiningRestrictedGuilds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -65,9 +66,9 @@ export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(
   let source;
   let subsection;
   ({ destinationPane, originPane, source, subsection, locationStack, applicationId } = arg0);
-  let obj = importDefault(4479);
+  let obj = importDefault(4388);
   obj = { settings_type: "user", origin_pane: originPane, destination_pane: destinationPane, location_stack: locationStack, source, subsection, application_id: applicationId, search_session_id: null };
-  obj[7] = importDefault(5923).getSearchSessionId();
+  obj[7] = importDefault(6510).getSearchSessionId();
   obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
 };
 export const NonSpamRetrainingOptInOptions = obj;

@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/hooks/useCanConnect.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

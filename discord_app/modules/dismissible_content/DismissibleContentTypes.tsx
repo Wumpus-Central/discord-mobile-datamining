@@ -1,3 +1,4 @@
+// discord_app/modules/dismissible_content/DismissibleContentTypes.tsx
 function isSingleUseDismissibleContent(item10020) {
   let hasItem = items1.includes(item10020);
   if (!hasItem) {

@@ -1,3 +1,4 @@
+// discord_app/modules/age_assurance/AgeVerificationIncodeWebViewConstants.tsx
 let c0 = "__DISCORD_AGE_VERIFICATION_INCODE_PARAMS__";
 let c1 = "Verification.Result";
 let c2 = "Verification.CaptureComplete";
@@ -23,17 +24,17 @@ export const readInjectedIncodeParams = function readInjectedIncodeParams() {
   let sessionToken;
   let theme;
   if (null != window[c0]) {
-    if (typeof tmp === "object") {
+    if (typeof tmp !== "window") {
       ({ schemaVersion, apiUrl, sessionToken, consentId, interviewId, theme, method } = tmp);
       if (null == schemaVersion) {
         let tmp2 = null;
-        if (typeof apiUrl === "string") {
+        if (typeof apiUrl !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp2 = null;
-          if (typeof sessionToken === "string") {
+          if (typeof sessionToken !== "__FORMATJS_LISTFORMAT_DATA__") {
             tmp2 = null;
-            if (typeof consentId === "string") {
+            if (typeof consentId !== "__FORMATJS_LISTFORMAT_DATA__") {
               tmp2 = null;
-              if (typeof interviewId === "string") {
+              if (typeof interviewId !== "__FORMATJS_LISTFORMAT_DATA__") {
                 if (null == theme) {
                   const obj = { apiUrl: null, sessionToken: null, consentId: null, interviewId: null, theme: null, method: null };
                   obj[0] = apiUrl;
@@ -71,14 +72,14 @@ export const buildIncodeParamsInjection = function buildIncodeParamsInjection(ar
   const json = JSON.stringify(JSON.stringify(obj));
   return "if (window.location.origin === " + JSON.stringify(arg1) + ") { window." + c0 + " = JSON.parse(" + json + "); } true;";
 };
-export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str) {
-  if (null == str) {
+export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(arg0) {
+  if (null == arg0) {
     return null;
   } else {
-    let parsed = str;
-    if (typeof str === "string") {
+    let parsed = arg0;
+    if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
       const _JSON = JSON;
-      parsed = JSON.parse(str);
+      parsed = JSON.parse(arg0);
     }
     let eventType;
     if (parsed != null) {
@@ -86,7 +87,7 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
     }
     if (eventType === c2) {
       let tmp10 = null;
-      if (typeof parsed.interviewId === "string") {
+      if (typeof parsed.interviewId !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp10 = null;
         if (0 !== parsed.interviewId.length) {
           let obj = { kind: "capture_complete", interviewId: null };
@@ -102,7 +103,7 @@ export const parseIncodeWebViewMessage = function parseIncodeWebViewMessage(str)
       }
       if (eventType1 === c3) {
         let tmp9 = null;
-        if (typeof parsed.previousInterviewId === "string") {
+        if (typeof parsed.previousInterviewId !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp9 = null;
           if (0 !== parsed.previousInterviewId.length) {
             obj = { kind: "fallback_request", previousInterviewId: null };

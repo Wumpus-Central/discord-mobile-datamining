@@ -1,3 +1,4 @@
+// discord_app/records/SubscriptionRecord.tsx
 import "toJS";
 import createFromServer from "createFromServer";
 import closure_4 from "createFromServer";
@@ -236,8 +237,8 @@ Object.defineProperty(prototype, "isOnPlatformMatchingExternalPaymentGateway", {
     if (!isPurchasedViaApple) {
       let isPurchasedViaGoogle = this.isPurchasedViaGoogle;
       if (isPurchasedViaGoogle) {
-        isPurchasedViaGoogle = require(3944) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
-        const obj2 = require(3944) /* isPremiumGiftingSupported */;
+        isPurchasedViaGoogle = require(3852) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
+        const obj2 = require(3852) /* isPremiumGiftingSupported */;
       }
       isPurchasedViaApple = isPurchasedViaGoogle;
     }

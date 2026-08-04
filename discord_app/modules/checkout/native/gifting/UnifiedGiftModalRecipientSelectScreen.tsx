@@ -1,3 +1,4 @@
+// discord_app/modules/checkout/native/gifting/UnifiedGiftModalRecipientSelectScreen.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { UserRowModes } from "UserRowModes";
@@ -16,7 +17,7 @@ export default function UnifiedGiftModalRecipientSelectScreen(setRecipientUser) 
   let importDefault;
   let obj = setRecipientUser(1480);
   importDefault = obj.useNavigation();
-  obj = { style: createCacheKey().container, children: jsx(importDefault(9540), obj) };
+  obj = { style: createCacheKey().container, children: jsx(importDefault(8823), obj) };
   obj = {
     onSelectUser(user) {
       setRecipientUser(user);

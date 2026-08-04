@@ -1,3 +1,4 @@
+// discord_app/modules/safe_area/useSafeAreaAvoidingInputs.native.tsx
 import getKeyboardDuration from "getKeyboardDuration";
 import noop from "noop";
 

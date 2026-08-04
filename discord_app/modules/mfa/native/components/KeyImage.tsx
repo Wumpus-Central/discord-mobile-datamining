@@ -1,3 +1,4 @@
+// discord_app/modules/mfa/native/components/KeyImage.tsx
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -7,7 +8,7 @@ const result = require("createCacheKey").fileFinishedImporting("modules/mfa/nati
 
 export const KeyImage = function KeyImage() {
   const obj = { source: null, style: null };
-  obj[0] = importDefault(13890);
+  obj[0] = importDefault(13790);
   obj[1] = callback().icon;
   return <Image source={null} style={null} />;
 };

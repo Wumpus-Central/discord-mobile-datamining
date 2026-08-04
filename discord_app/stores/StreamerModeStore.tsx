@@ -1,3 +1,4 @@
+// discord_app/stores/StreamerModeStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { AnalyticEvents } from "ME";
 import { PersistedStore } from "initialize";
@@ -99,7 +100,7 @@ Object.defineProperty(prototype, "enableContentProtection", {
   set: undefined
 });
 prototype["isOverlayWidgetDisabled"] = function isOverlayWidgetDisabled(arg0) {
-  const obj = require(4126) /* apexExperiment */;
+  const obj = require(4034) /* apexExperiment */;
   let enabled = obj.getOverlayStreamerModeConfig("StreamerModeStore").enabled;
   if (enabled) {
     const self = this;
@@ -152,7 +153,7 @@ obj = {
     obj = { [value.key]: value.value };
     const merged1 = Object.assign(obj, obj);
     if ("enabled" === value.key) {
-      if (typeof value.value === "boolean") {
+      if (typeof value.value === "T") {
         obj = { enabled: null, automatic: false };
         obj[0] = value.value;
         importDefault(698).track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);

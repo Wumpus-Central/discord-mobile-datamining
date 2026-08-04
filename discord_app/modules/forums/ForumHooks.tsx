@@ -1,3 +1,4 @@
+// discord_app/modules/forums/ForumHooks.tsx
 import updateState from "updateState";
 import AbortCodes from "AbortCodes";
 import getEmojiToGroupId from "getEmojiToGroupId";
@@ -385,8 +386,8 @@ export const useMessageCount = function useMessageCount(thread) {
     }
     return num;
   });
-  const messageCountText = _require(7864).getMessageCountText(stateFromStores, thread.id);
-  const obj2 = _require(7864);
+  const messageCountText = _require(7731).getMessageCountText(stateFromStores, thread.id);
+  const obj2 = _require(7731);
   const items1 = [generateOldThreadCutoff];
   const dependencyMap = _require(589).useStateFromStores(items1, () => {
     const items = [outer1_13];
@@ -436,7 +437,7 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
   let obj = id(589);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_14.getUser(id));
-  const nullableMessageAuthor = id(4513).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(4422).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = React.useEffect(() => {
     let tmp2 = null != id;
@@ -502,7 +503,7 @@ export const useForumPostAuthor = function useForumPostAuthor(thread) {
   }
   const items2 = [, ];
   ({ guild_id: arr3[0], ownerId: arr3[1] } = thread);
-  author = _require(4513).useNullableUserAuthor(author, thread);
+  author = _require(4422).useNullableUserAuthor(author, thread);
   const effect = React.useEffect(() => {
     if (null != thread.ownerId) {
       const member = outer1_10.requestMember(tmp.guild_id, tmp.ownerId);
@@ -525,7 +526,7 @@ export const getForumPostAuthor = function getForumPostAuthor(ownerId) {
   if (author == null) {
     author = user;
   }
-  obj[1] = require(4513) /* useNullableMessageAuthor */.getUserAuthor(author, ownerId);
+  obj[1] = require(4422) /* useNullableMessageAuthor */.getUserAuthor(author, ownerId);
   return obj;
 };
 export const useForumPostFirstMessageMarkup = function useForumPostFirstMessageMarkup(firstMessage) {
@@ -696,29 +697,74 @@ export const useAutomaticForumSearch = function useAutomaticForumSearch(channel,
               if (!isSearchLoading) {
                 const _setTimeout = setTimeout;
                 user = setTimeout(flag(function*() {
-                  outer1_7.current = outer1_5;
-                  outer1_8.current = c1;
-                  let c2 = 1;
-                  const obj1 = outer2_1(outer2_2[33]);
-                  yield obj1.searchForumPosts(c0.guild_id, c0.id, outer1_5, c1, c2);
-                  if (1 === tmp6) {
-                    c2 = 0;
+                  if (c0 === 2) {
                     c0 = 3;
-                  } else if (arg0 === 1) {
-                    c0 = 3;
-                    throw arg1;
-                  } else if (arg0 !== 2) {
-                    c2 = 0;
+                    HermesBuiltin.throwTypeError();
+                  } else if (tmp5 === 3) {
+                    if (arg0 === 1) {
+                      throw arg1;
+                    } else if (arg0 === 2) {
+                      let obj = { value: null, done: true };
+                      obj[0] = arg1;
+                      return obj;
+                    } else {
+                      return { value: "HermesInternal", done: null };
+                    }
+                  } else {
+                    try {
+                      c0 = 2;
+                      if (0 === c1) {
+                        if (arg0 === 1) {
+                          c0 = 3;
+                          throw arg1;
+                        } else if (arg0 === 2) {
+                          c0 = 3;
+                          obj = { value: null, done: true };
+                          obj[0] = arg1;
+                          return obj;
+                        } else {
+                          outer1_7.current = outer1_5;
+                          outer1_8.current = c1;
+                          let c2 = 1;
+                          let obj1 = outer2_1(outer2_2[33]);
+                          c1 = 2;
+                          c0 = 1;
+                          obj1 = { value: null, done: false };
+                          obj1[0] = obj1.searchForumPosts(c0.guild_id, c0.id, outer1_5, c1, c2);
+                          return obj1;
+                        }
+                      } else {
+                        if (1 === tmp6) {
+                          c2 = 0;
+                          c0 = 3;
+                        } else if (arg0 === 1) {
+                          c0 = 3;
+                          throw arg1;
+                        } else if (arg0 !== 2) {
+                          c2 = 0;
+                        }
+                        c2 = 0;
+                        c0 = 3;
+                        obj = { value: null, done: true };
+                        obj[0] = arg1;
+                        return obj;
+                      }
+                    } catch (tmp18) {
+                      if (tmp3 === c2) {
+                        c0 = tmp2;
+                        throw tmp18;
+                      } else {
+                        c1 = tmp;
+                      }
+                    }
                   }
-                  c2 = 0;
-                  return arg1;
                 }), 350);
                 return () => clearTimeout(closure_0);
               }
             }
           } else {
             tagFilter(tagSetting[33]).clearForumSearch(user.id);
-            const obj = tagFilter(tagSetting[33]);
+            let obj = tagFilter(tagSetting[33]);
           }
         }
       }

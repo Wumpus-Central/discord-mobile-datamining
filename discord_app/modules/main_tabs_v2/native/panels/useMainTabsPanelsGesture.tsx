@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/panels/useMainTabsPanelsGesture.tsx
 import noop from "noop";
 import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
 import set from "set";

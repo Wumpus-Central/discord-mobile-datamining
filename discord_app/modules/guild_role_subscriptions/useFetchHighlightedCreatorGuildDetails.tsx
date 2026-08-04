@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

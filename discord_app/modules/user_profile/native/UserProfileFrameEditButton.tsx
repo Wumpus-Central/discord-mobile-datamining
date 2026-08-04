@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfileFrameEditButton.tsx
 import _slicedToArray from "_slicedToArray";
 import FormControlText from "FormControlText";
 import { View } from "asyncRequireImpl";
@@ -29,13 +30,13 @@ export default function UserProfileFrameEditButton(arg0) {
   let dependencyMap;
   let userProfileFrame;
   const tmp = createCacheKey();
-  let obj = user(9321);
+  let obj = user(8709);
   const canViewProfileFramesInCollectiblesShop = obj.useCanViewProfileFramesInCollectiblesShop("UserProfileFrameEditButton");
-  let obj1 = user(5931);
+  let obj1 = user(8451);
   const items = [user(1358).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE];
   const tmp5 = userProfileFrame(obj1.useSelectedDismissibleContent(items), 2);
   dependencyMap = tmp6;
-  let obj2 = user(8077);
+  let obj2 = user(7947);
   obj = { pendingValue: pendingProfileFrame, userValue: null, guildValue: null, guildId: null };
   let profileFrame;
   if (displayProfile != null) {
@@ -55,7 +56,7 @@ export default function UserProfileFrameEditButton(arg0) {
   obj[2] = profileFrame1;
   obj[3] = guildId;
   const profilePreviewValue = obj2.getProfilePreviewValue(obj);
-  let tmp2Result = tmp2(10029);
+  let tmp2Result = tmp2(8048);
   let skuId;
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
@@ -72,7 +73,7 @@ export default function UserProfileFrameEditButton(arg0) {
   if (type === user(1901).CollectiblesItemType.PROFILE_FRAME) {
     const first1 = product.items[0];
   }
-  tmp2Result = tmp2(8077);
+  tmp2Result = tmp2(7947);
   userProfileFrame = tmp2Result.useUserProfileFrame({ user, guildId });
   if (undefined !== pendingProfileFrame) {
     userProfileFrame = pendingProfileFrame;
@@ -104,7 +105,7 @@ export default function UserProfileFrameEditButton(arg0) {
       const intl6 = tmp2(1236).intl;
       obj1[1] = intl6.string(tmp2(1236).t.MKDeyL);
       obj1[2] = NOOP;
-      obj1[3] = tmp19(tmp2(5732).ActivityIndicator, { animating: true, size: "large" });
+      obj1[3] = tmp19(tmp2(5641).ActivityIndicator, { animating: true, size: "large" });
       obj2 = obj1;
     } else {
       obj2 = { label: null, labelTrailing: null, buttonText: null, accessibilityValue: null, onPress: null, leading: null };
@@ -134,18 +135,18 @@ export default function UserProfileFrameEditButton(arg0) {
         obj7[1] = COLLECTIBLES_PREVIEW_SIZE - 2 * guildId(712).space.PX_8;
         obj7[2] = COLLECTIBLES_PREVIEW_SIZE - 2 * PX_4;
         obj7[3] = guildId(712).colors.BACKGROUND_SURFACE_HIGH;
-        obj6[1] = tmp19(guildId(9313), obj7);
+        obj6[1] = tmp19(guildId(8703), obj7);
         tmp19Result = tmp19(View, obj6);
-        const tmp26 = guildId(9313);
+        const tmp26 = guildId(8703);
       } else {
         const obj8 = { source: null, style: null };
-        obj8[0] = guildId(8098);
+        obj8[0] = guildId(7969);
         obj8[1] = tmp.noneIcon;
         tmp19Result = tmp19(tmp2(1297).Icon, obj8);
       }
       obj2[5] = tmp19Result;
     }
-    return jsx(tmp2(13832).UserProfileEditFormButton, obj2);
+    return jsx(tmp2(13736).UserProfileEditFormButton, obj2);
   } else {
     return null;
   }

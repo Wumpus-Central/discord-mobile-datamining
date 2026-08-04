@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/StageChannelRichPresenceUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

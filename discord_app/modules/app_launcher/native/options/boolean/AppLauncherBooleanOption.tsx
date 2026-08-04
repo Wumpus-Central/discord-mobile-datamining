@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/options/boolean/AppLauncherBooleanOption.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -33,7 +34,7 @@ export default function AppLauncherBooleanOption(arg0) {
   first = tmp2[0];
   React = tmp2[1];
   const items = [createCacheKey().container, style];
-  return jsx(require(7777) /* Form */.FormCheckboxRow, {
+  return jsx(require(7639) /* Form */.FormCheckboxRow, {
     start: true,
     end: true,
     style: items,

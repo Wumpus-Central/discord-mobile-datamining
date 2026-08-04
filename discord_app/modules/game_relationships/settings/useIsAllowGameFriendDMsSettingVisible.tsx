@@ -1,3 +1,4 @@
+// discord_app/modules/game_relationships/settings/useIsAllowGameFriendDMsSettingVisible.tsx
 import recountRelationshipTypes from "recountRelationshipTypes";
 
 const require = arg1;

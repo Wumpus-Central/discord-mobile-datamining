@@ -1,3 +1,4 @@
+// discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayFooter.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "set";
@@ -8,7 +9,7 @@ let closure_6;
 let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { drawerContainer: { overflow: "hidden", backgroundColor: "disabled" }, drawerHeaderTab: null, drawerHeader: null, messagePreviewContainer: null, thumbnailsContainer: null };
+createCacheKey = { drawerContainer: { overflow: "hidden", backgroundColor: "description" }, drawerHeaderTab: null, drawerHeader: null, messagePreviewContainer: null, thumbnailsContainer: null };
 createCacheKey = { width: 40, backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_600 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: "r" };
@@ -293,7 +294,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
       if (translationY > 0) {
         const _Math3 = Math;
         const diff = 1 - translationY / Math.abs(closure_10 - (_slicedToArray + closure_8));
-        if (typeof outer1_10 !== "function") {
+        if (typeof outer1_10 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const _Math4 = Math;
@@ -306,7 +307,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
         }
       } else {
         const result2 = -translationY / 3;
-        if (typeof outer1_10 !== "function") {
+        if (typeof outer1_10 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const _Math = Math;

@@ -1,3 +1,4 @@
+// discord_app/modules/hub/useIsHubRealNamePromptShowing.tsx
 import noop from "noop";
 import initialize from "initialize";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

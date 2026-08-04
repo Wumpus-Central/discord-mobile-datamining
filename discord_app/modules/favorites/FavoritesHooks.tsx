@@ -1,3 +1,4 @@
+// discord_app/modules/favorites/FavoritesHooks.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import initializeFromUserSettings from "initializeFromUserSettings";
@@ -13,7 +14,7 @@ function useFavoritesAccess(FavoritesGuildChannelList) {
   if (FavoritesGuildChannelList === undefined) {
     str = "useFavoritesAccess";
   }
-  let obj = require(9632) /* useFavoritesGuildConfig */;
+  let obj = require(10231) /* useFavoritesGuildConfig */;
   const favoritesGuildConfig = obj.useFavoritesGuildConfig({ location: str });
   ({ enabled, isFreemium } = favoritesGuildConfig);
   let tmp4 = undefined !== isFreemium;
@@ -45,7 +46,7 @@ function useFavoritesAccess(FavoritesGuildChannelList) {
   } else {
     num = 0;
     if (tmp4) {
-      num = tmp(9631).FREE_FAVORITE_LIMIT;
+      num = tmp(10230).FREE_FAVORITE_LIMIT;
     }
   }
 }
@@ -55,7 +56,7 @@ export { useFavoritesAccess };
 export const getFavoritesAccess = function getFavoritesAccess() {
   let enabled;
   let isFreemium;
-  let obj = require(9632) /* useFavoritesGuildConfig */;
+  let obj = require(10231) /* useFavoritesGuildConfig */;
   const favoritesGuildConfig = obj.getFavoritesGuildConfig({ location: "getFavoritesAccess" });
   ({ enabled, isFreemium } = favoritesGuildConfig);
   let tmp4 = undefined !== isFreemium;
@@ -84,7 +85,7 @@ export const getFavoritesAccess = function getFavoritesAccess() {
   } else {
     num = 0;
     if (tmp4) {
-      num = require(9631) /* FREE_FAVORITE_LIMIT */.FREE_FAVORITE_LIMIT;
+      num = require(10230) /* FREE_FAVORITE_LIMIT */.FREE_FAVORITE_LIMIT;
     }
   }
 };

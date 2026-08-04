@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/stores/SearchHistoryStore.tsx
 import MessageEmbedTypes from "MessageEmbedTypes";
 import { PersistedStore } from "initialize";
 
@@ -82,7 +83,7 @@ prototype2["initialize"] = function initialize(searchHistories) {
   }
   if (null != searchHistories) {
     let closure_4 = require(12) /* apply */.mapValues(searchHistories, (arg0) => {
-      if (typeof closure_3 !== "function") {
+      if (typeof closure_3 !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       const obj = Object.create(closure_3.prototype);
@@ -96,7 +97,7 @@ prototype2["initialize"] = function initialize(searchHistories) {
 prototype2["getSearchHistory"] = function getSearchHistory(handleChange) {
   let obj = dependencyMap[handleChange];
   if (obj == null) {
-    if (typeof SearchHistory !== "function") {
+    if (typeof SearchHistory !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(SearchHistory.prototype);
@@ -116,7 +117,7 @@ const searchHistoryStore = new SearchHistoryStore(require("dispatcher"), {
     id = id.id;
     let obj = dependencyMap[id];
     if (obj == null) {
-      if (typeof SearchHistory !== "function") {
+      if (typeof SearchHistory !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchHistory.prototype);
@@ -130,7 +131,7 @@ const searchHistoryStore = new SearchHistoryStore(require("dispatcher"), {
     id = id.id;
     let obj = dependencyMap[id];
     if (obj == null) {
-      if (typeof SearchHistory !== "function") {
+      if (typeof SearchHistory !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchHistory.prototype);

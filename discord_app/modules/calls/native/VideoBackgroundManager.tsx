@@ -1,3 +1,4 @@
+// discord_app/modules/calls/native/VideoBackgroundManager.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import "initialize";
 

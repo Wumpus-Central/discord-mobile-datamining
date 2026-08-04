@@ -1,3 +1,4 @@
+// discord_app/modules/wishlists/native/PremiumWishlistItemCard.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -13,5 +14,5 @@ export default function PremiumWishlistItemCard(size) {
   const items = [size];
   const callback = React.useCallback(() => outer1_4(size(outer1_2[2]).PremiumSKUPreview, { size }), items);
   const merged1 = Object.assign(merged);
-  return jsx(importDefault(9273), { accessibilityLabel: sku.name, renderPreview: callback, source, isOwned: false, size });
+  return jsx(importDefault(8680), { accessibilityLabel: sku.name, renderPreview: callback, source, isOwned: false, size });
 };

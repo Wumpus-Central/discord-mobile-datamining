@@ -1,3 +1,4 @@
+// discord_app/modules/emojis/top_emojis/TopEmojiStore.tsx
 import { PersistedStore } from "initialize";
 
 let obj = { topEmojisByGuildId: {} };

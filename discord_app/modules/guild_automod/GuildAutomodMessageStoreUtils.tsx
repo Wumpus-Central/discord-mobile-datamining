@@ -1,3 +1,4 @@
+// discord_app/modules/guild_automod/GuildAutomodMessageStoreUtils.tsx
 const result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStoreUtils.tsx");
 
 export const isNotAutomodEmbed = function isNotAutomodEmbed(type) {

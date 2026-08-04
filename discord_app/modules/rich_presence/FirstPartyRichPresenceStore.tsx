@@ -1,3 +1,4 @@
+// discord_app/modules/rich_presence/FirstPartyRichPresenceStore.tsx
 import { Store } from "initialize";
 
 function updateActivities() {

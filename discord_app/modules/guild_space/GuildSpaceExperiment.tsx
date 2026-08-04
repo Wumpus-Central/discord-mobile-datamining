@@ -1,3 +1,4 @@
+// discord_app/modules/guild_space/GuildSpaceExperiment.tsx
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Enable Guild Space", config: { enabled: true } }];

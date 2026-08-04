@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/ChangeLogSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CHANGE_LOG,
   getComponent() {
-    return require(14622) /* ChangeLogScreen */.ChangeLogScreen;
+    return require(14522) /* ChangeLogScreen */.ChangeLogScreen;
   }
 };
 const route = createToggle.createRoute(obj);

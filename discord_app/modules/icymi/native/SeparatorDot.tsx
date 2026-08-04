@@ -1,3 +1,4 @@
+// discord_app/modules/icymi/native/SeparatorDot.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

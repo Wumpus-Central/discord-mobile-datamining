@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/ViewDebugLogsSetting.tsx
 import { Suspense } from "explicitContentFromProto";
 import { Keyboard } from "createToggle";
 import jsxProd from "jsxProd";
@@ -10,7 +11,7 @@ function ViewDebugLogsActionSheetRow(icon) {
   let importDefault;
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return callback(title(5648).ActionSheetRow, {
+  return callback(title(5557).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {
@@ -30,36 +31,36 @@ function ViewDebugLogsActionSheet() {
   obj = { title: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.BUOCPi);
-  obj[0] = callback(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  obj[0] = callback(require(5246) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj = { icon: null, title: null, screenKey: "debugLogs", render: null };
-  obj[0] = callback(require(14642) /* WrenchIcon */.WrenchIcon, {});
+  obj[0] = callback(require(14542) /* WrenchIcon */.WrenchIcon, {});
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.XpPGhL);
   obj[3] = function render() {
-    return callback2(callback(14644), {});
+    return callback2(callback(14544), {});
   };
   const items = [callback(ViewDebugLogsActionSheetRow, obj), , ];
-  const obj1 = { icon: callback(require(4249) /* ClockIcon */.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
+  const obj1 = { icon: callback(require(4157) /* ClockIcon */.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj1[1] = intl3.string(require(1236) /* getSystemLocale */.t.b0nJvk);
   obj1[3] = function render() {
-    return callback2(closure_3, { children: callback2(callback(14647), {}) });
+    return callback2(closure_3, { children: callback2(callback(14547), {}) });
   };
   items[1] = callback(ViewDebugLogsActionSheetRow, obj1);
   let tmpResult = null;
   if (obj5.isAndroid()) {
     const obj2 = { icon: null, title: null, screenKey: "pushNotificationLogs", render: null };
-    obj2[0] = tmp(tmp2(9649).ChannelNotificationIcon, {});
+    obj2[0] = tmp(tmp2(10244).ChannelNotificationIcon, {});
     const intl4 = tmp2(1236).intl;
     obj2[1] = intl4.string(tmp2(1236).t.Ljj0ps);
     obj2[3] = function render() {
-      return callback2(callback(14648), {});
+      return callback2(callback(14548), {});
     };
     tmpResult = tmp(ViewDebugLogsActionSheetRow, obj2);
   }
   items[2] = tmpResult;
-  obj[1] = closure_6(require(5648) /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: items });
-  return callback(require(5646) /* ActionSheet */.ActionSheet, obj);
+  obj[1] = closure_6(require(5557) /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: items });
+  return callback(require(5555) /* ActionSheet */.ActionSheet, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 ViewDebugLogsActionSheet = "ViewDebugLogsActionSheet";
@@ -73,7 +74,7 @@ const pressable = createToggle.createPressable({
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting,
   onPress: function handleViewDebugLogsSettingPress() {
     Keyboard.dismiss();
-    let obj = importDefault(4253);
+    let obj = importDefault(4161);
     obj = { default: ViewDebugLogsActionSheet };
     obj.openLazy(Promise.resolve(obj), ViewDebugLogsActionSheet);
   },
@@ -89,7 +90,7 @@ let obj = {
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting,
   onPress: function handleViewDebugLogsSettingPress() {
     Keyboard.dismiss();
-    let obj = importDefault(4253);
+    let obj = importDefault(4161);
     obj = { default: ViewDebugLogsActionSheet };
     obj.openLazy(Promise.resolve(obj), ViewDebugLogsActionSheet);
   },

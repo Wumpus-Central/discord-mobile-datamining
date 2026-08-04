@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/native/GuildOnboardingHomePage.tsx
 import useCanSeeOnboardingHome from "useCanSeeOnboardingHome";
 import getHash from "getHash";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
@@ -15,13 +16,13 @@ function GuildOnboardingHomePage(guildId) {
   let stateFromStores;
   let dependencyMap;
   let tmp = dependencyMap;
-  let obj = guildId(4146);
+  let obj = guildId(4054);
   const sharedValue = obj.useSharedValue(-999);
   let obj1 = guildId(589);
   const items = [handleSettingsLoadSuccess];
   stateFromStores = obj1.useStateFromStores(items, () => outer1_5.getSettings(guildId));
   let tmp4 = stateFromStores;
-  const tmp5 = stateFromStores(5754)(guildId);
+  const tmp5 = stateFromStores(5663)(guildId);
   let tmp6 = !tmp5;
   if (!tmp5) {
     let num;
@@ -94,16 +95,16 @@ function GuildOnboardingHomePage(guildId) {
     obj = { guildId: null, hideDescription: null };
     obj[0] = guildId;
     obj[1] = tmp5;
-    const items3 = [callback(tmp4(15541), obj), ];
+    const items3 = [callback(tmp4(15444), obj), ];
     if (tmp5) {
       obj1 = { children: null };
       let obj2 = { guildId: null };
       obj2[0] = guildId;
-      const items4 = [tmp12(tmp4(15546), obj2), , ];
+      const items4 = [tmp12(tmp4(15449), obj2), , ];
       let obj3 = { guildId: null };
       obj3[0] = guildId;
-      items4[1] = tmp12(tmp4(15550), obj3);
-      tmp4 = tmp4(15551);
+      items4[1] = tmp12(tmp4(15453), obj3);
+      tmp4 = tmp4(15454);
       const obj4 = { guildId: null };
       obj4[0] = guildId;
       tmp = tmp12(tmp4, obj4);
@@ -113,12 +114,12 @@ function GuildOnboardingHomePage(guildId) {
     } else {
       let obj5 = { guildId: null };
       obj5[0] = guildId;
-      tmp12Result = tmp12(tmp4(15554), obj5);
+      tmp12Result = tmp12(tmp4(15457), obj5);
     }
     items3[1] = tmp12Result;
     obj[2] = items3;
-    closure_11(tmp4(15540), obj);
-    const tmp4Result = tmp4(15540);
+    closure_11(tmp4(15443), obj);
+    const tmp4Result = tmp4(15443);
   }
 }
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);

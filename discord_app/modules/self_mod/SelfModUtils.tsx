@@ -1,3 +1,4 @@
+// discord_app/modules/self_mod/SelfModUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const result = require("set").fileFinishedImporting("modules/self_mod/SelfModUtils.tsx");

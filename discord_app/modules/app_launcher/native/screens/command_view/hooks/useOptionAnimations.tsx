@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/screens/command_view/hooks/useOptionAnimations.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
@@ -42,7 +43,7 @@ export const OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION = 300;
 export { LayoutAnimation };
 export { ExitingAnimation };
 export const useOptionEnteringAnimation = function useOptionEnteringAnimation() {
-  let obj = sharedValue(4146);
+  let obj = sharedValue(4054);
   sharedValue = obj.useSharedValue(false);
   const dependencyMap = React.useRef([]);
   let items = [sharedValue];

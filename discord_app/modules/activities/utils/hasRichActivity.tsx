@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/hasRichActivity.tsx
 import { ActivityTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/hasRichActivity.tsx");

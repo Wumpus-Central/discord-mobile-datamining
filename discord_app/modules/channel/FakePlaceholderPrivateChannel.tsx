@@ -1,3 +1,4 @@
+// discord_app/modules/channel/FakePlaceholderPrivateChannel.tsx
 const obj = { id: "131", type: null, name: "Placeholder Channel" };
 obj[1] = require("ME").ChannelTypes.DM;
 const channelRecord = require("createChannelRecord").createChannelRecord(obj);

@@ -1,3 +1,4 @@
+// discord_app/modules/safety_hub/native/SafetyHubPage.tsx
 import expandEventProperties from "expandEventProperties";
 import get_ActivityIndicator from "useMountLayoutEffect";
 import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";

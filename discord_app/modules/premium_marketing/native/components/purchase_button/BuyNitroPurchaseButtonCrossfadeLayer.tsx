@@ -1,3 +1,4 @@
+// discord_app/modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonCrossfadeLayer.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";
@@ -13,7 +14,7 @@ export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
   let snapshot;
   ({ snapshot, onDone } = arg0);
   let sharedValue;
-  let obj = onDone(4146);
+  let obj = onDone(4054);
   sharedValue = obj.useSharedValue(1);
   let fn = function _() {
     return { opacity: sharedValue.get() };
@@ -22,7 +23,7 @@ export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
   fn.__workletHash = 10244393639035;
   fn.__initData = closure_7;
   const items = [sharedValue, onDone];
-  const animatedStyle = onDone(4146).useAnimatedStyle(fn);
+  const animatedStyle = onDone(4054).useAnimatedStyle(fn);
   const effect = React.useEffect(() => {
     let obj = onDone(outer1_2[5]);
     const fn = function t(arg0) {
@@ -42,8 +43,8 @@ export default function BuyNitroPurchaseButtonCrossfadeLayer(arg0) {
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [StyleSheet.absoluteFill, animatedStyle];
   obj = { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "a" };
-  obj[2] = jsx(onDone(4695).Button, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "a" });
-  return jsx(sharedValue(4146).View, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "a" });
+  obj[2] = jsx(onDone(4604).Button, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "a" });
+  return jsx(sharedValue(4054).View, { text: snapshot.ctaText, variant: snapshot.variant, size: "lg", grow: true, onPress: "a" });
 };
 export const useBuyNitroButtonCrossfade = function useBuyNitroButtonCrossfade(variant, stringResult) {
   let obj = React;

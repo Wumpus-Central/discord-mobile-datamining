@@ -1,3 +1,4 @@
+// discord_app/utils/StringUtils.tsx
 const result = require("set").fileFinishedImporting("utils/StringUtils.tsx");
 
 export const isNullOrEmpty = function isNullOrEmpty(application_id) {

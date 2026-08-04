@@ -1,3 +1,4 @@
+// discord_app/design/void/Status/native/getStatusContainerStyle.tsx
 import STATUS_PADDING from "STATUS_PADDING";
 
 STATUS_PADDING = STATUS_PADDING.STATUS_PADDING;

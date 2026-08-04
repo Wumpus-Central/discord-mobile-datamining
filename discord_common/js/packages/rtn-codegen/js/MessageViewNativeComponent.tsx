@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/MessageViewNativeComponent.tsx
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "DCDMessageView", validAttributes: { row: true } };

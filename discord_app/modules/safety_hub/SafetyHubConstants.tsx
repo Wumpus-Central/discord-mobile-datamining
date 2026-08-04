@@ -1,3 +1,4 @@
+// discord_app/modules/safety_hub/SafetyHubConstants.tsx
 import { AnalyticsSections } from "ME";
 
 let obj = { SETTINGS: "SETTINGS", ACCOUNT_STANDING: "ACCOUNT_STANDING", GUILD_SETTINGS: "GUILD_SETTINGS", ENCRYPTION: "ENCRYPTION", CONTENT_AND_SOCIAL: "CONTENT_AND_SOCIAL", DATA_PRIVACY: "DATA_PRIVACY" };

@@ -1,3 +1,4 @@
+// discord_app/stores/GuildAffinitiesStore.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { PersistedStore } from "initialize";
 
@@ -35,8 +36,8 @@ GuildAffinitiesStore.persistKey = "GuildAffinitiesStore";
 const guildAffinitiesStore = new GuildAffinitiesStore(require("dispatcher"), {
   CONNECTION_OPEN: function handleConnectionOpen() {
     if (Date.now() - closure_3.lastFetched > 86400000) {
-      const guildAffinities = require(8831) /* fetchGuildAffinities */.fetchGuildAffinities();
-      const obj = require(8831) /* fetchGuildAffinities */;
+      const guildAffinities = require(8185) /* fetchGuildAffinities */.fetchGuildAffinities();
+      const obj = require(8185) /* fetchGuildAffinities */;
     }
     return false;
   },

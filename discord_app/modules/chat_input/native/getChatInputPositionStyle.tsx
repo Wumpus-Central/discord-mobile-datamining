@@ -1,3 +1,4 @@
+// discord_app/modules/chat_input/native/getChatInputPositionStyle.tsx
 let obj = {};
 const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
 obj.top = undefined;

@@ -1,3 +1,4 @@
+// discord_app/modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx
 import zustandStore from "zustandStore";
 
 const result = require("set").fileFinishedImporting("modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx");

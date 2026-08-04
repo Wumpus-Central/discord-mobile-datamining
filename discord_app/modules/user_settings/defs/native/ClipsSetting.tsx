@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/ClipsSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CLIPS,
   getComponent() {
-    return require(14124) /* ClipsSettingsScreen */.default;
+    return require(14024) /* ClipsSettingsScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

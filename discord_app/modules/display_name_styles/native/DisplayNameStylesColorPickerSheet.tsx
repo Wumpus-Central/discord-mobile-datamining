@@ -1,3 +1,4 @@
+// discord_app/modules/display_name_styles/native/DisplayNameStylesColorPickerSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import apply from "apply";
 import get_ActivityIndicator from "messagesProxy";

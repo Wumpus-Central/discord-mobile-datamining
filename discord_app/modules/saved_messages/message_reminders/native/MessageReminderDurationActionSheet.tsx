@@ -1,3 +1,4 @@
+// discord_app/modules/saved_messages/message_reminders/native/MessageReminderDurationActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import Background from "Background";
 import getTimeSafe from "getTimeSafe";
@@ -25,7 +26,6 @@ export default function MessageReminderDurationActionSheet(createReminder) {
   ({ channelId: dependencyMap, messageId: _slicedToArray, onBack } = createReminder);
   c5 = undefined;
   let dueInText;
-  let isOverdue;
   let obj = createReminder(589);
   const items = [c5];
   const stateFromStores = obj.useStateFromStores(items, () => _undefined.getSavedMessage(closure_2, _slicedToArray));
@@ -44,16 +44,15 @@ export default function MessageReminderDurationActionSheet(createReminder) {
   if (stateFromStores != null) {
     dueAt = stateFromStores.saveData.dueAt;
   }
-  obj = { dueAt, now: tmp7, type: tmp2(10194).DueInStringTypes.SHORT };
-  const dueInString = createReminder(10194).useDueInString(obj);
-  dueInText = dueInString.dueInText;
-  isOverdue = dueInString.isOverdue;
-  const items1 = [onBack, dueInText, isOverdue];
+  obj = { dueAt, now: tmp7, type: tmp2(9955).DueInStringTypes.SHORT };
+  dueInText = createReminder(9955).useDueInString(obj).dueInText;
+  const items1 = [onBack, dueInText];
   const items2 = [createReminder];
   const memo = obj1.useMemo(() => {
+    let obj = { title: null, subtitle: null, leading: null };
     const intl = createReminder(outer1_2[10]).intl;
-    const t = createReminder(outer1_2[10]).t;
-    let obj = { title: intl.string(isOverdue ? t.GtBCnz : t.roMu1H), subtitle: dueInText, leading: null };
+    obj[0] = intl.string(createReminder(outer1_2[10]).t.roMu1H);
+    obj[1] = dueInText;
     let tmpResult = null != onBack;
     if (tmpResult) {
       obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
@@ -97,20 +96,20 @@ export default function MessageReminderDurationActionSheet(createReminder) {
     return mapped;
   }, items2);
   obj = { header: memo, bodyStyles: tmp.body, startExpanded: true, children: null };
-  const items3 = [dueInText(createReminder(5649).TableRowGroup, { hasIcons: false, children: memo1 }), ];
-  let tmp14Result = null != removeReminder;
-  if (tmp14Result) {
+  const items3 = [dueInText(createReminder(5558).TableRowGroup, { hasIcons: false, children: memo1 }), ];
+  let tmp13Result = null != removeReminder;
+  if (tmp13Result) {
     obj1 = { icon: null, label: null, onPress: null, start: true, end: true };
-    obj1[0] = tmp14(tmp2(4237).CheckmarkLargeIcon, {});
+    obj1[0] = tmp13(tmp2(4145).CheckmarkLargeIcon, {});
     let intl = tmp2(1236).intl;
     obj1[1] = intl.string(tmp2(1236).t.yjGtdJ);
     obj1[2] = function onPress() {
       removeReminder(outer1_2[15]).hideActionSheet();
       removeReminder();
     };
-    tmp14Result = tmp14(tmp2(5315).TableRow, obj1, "remove-reminder");
+    tmp13Result = tmp13(tmp2(5224).TableRow, obj1, "remove-reminder");
   }
-  items3[1] = tmp14Result;
+  items3[1] = tmp13Result;
   obj[3] = items3;
-  return isOverdue(createReminder(5338).BottomSheet, obj);
+  return closure_7(createReminder(5247).BottomSheet, obj);
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/utils/useSelfHasVideo.tsx
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

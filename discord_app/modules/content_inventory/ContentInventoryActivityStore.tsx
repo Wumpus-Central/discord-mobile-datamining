@@ -1,3 +1,4 @@
+// discord_app/modules/content_inventory/ContentInventoryActivityStore.tsx
 import sortActivity from "sortActivity";
 import map from "map";
 import { ActivityTypes } from "ME";
@@ -14,7 +15,7 @@ function getMatchingActivity(author_type) {
   if (!obj.isEntryExpired(author_type)) {
     let found;
     if (tmpResult.isEntryActive(author_type)) {
-      if (author_type.author_type === tmp(8840).ContentInventoryAuthorType.USER) {
+      if (author_type.author_type === tmp(8194).ContentInventoryAuthorType.USER) {
         activities = activities.getActivities(author_type.author_id);
         found = activities.find((type) => {
           if (type.type === outer1_5.PLAYING) {
@@ -38,7 +39,7 @@ function getMatchingActivity(author_type) {
       }
     }
     tmp3 = found;
-    tmpResult = tmp(8048);
+    tmpResult = tmp(7918);
   }
   return tmp3;
 }

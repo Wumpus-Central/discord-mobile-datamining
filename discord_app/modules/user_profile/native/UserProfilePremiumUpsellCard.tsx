@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfilePremiumUpsellCard.tsx
 import noop from "noop";
 import ME from "ME";
 import { jsx } from "jsxProd";
@@ -23,11 +24,11 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   navigation = obj.useNavigation();
   const tmp = analyticsLocations;
   const tmp3 = callback(analyticsLocations(1581)().bottom);
-  let nitroTrialCtaOverride = navigation(6819).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
-  const obj2 = navigation(6819);
-  const tmp8 = analyticsLocations(5630);
+  let nitroTrialCtaOverride = navigation(6244).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  const obj2 = navigation(6244);
+  const tmp8 = analyticsLocations(5539);
   const items = [isTryItOut ? tmp8.USER_SETTINGS_TRY_OUT_PREMIUM : tmp8.USER_SETTINGS_USER_PROFILE];
-  analyticsLocations = analyticsLocations(5610)(items).analyticsLocations;
+  analyticsLocations = analyticsLocations(5519)(items).analyticsLocations;
   const items1 = [navigation];
   callback = React.useCallback(() => {
     analyticsLocations(outer1_2[9]).setSection(outer1_7.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
@@ -41,7 +42,7 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     analyticsLocations(outer1_2[10])(obj);
   }, items2);
   obj = { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null };
-  const tmp7 = analyticsLocations(5610);
+  const tmp7 = analyticsLocations(5519);
   if (isTryItOut) {
     if (nitroTrialCtaOverride == null) {
       const intl2 = tmp4(1236).intl;
@@ -65,6 +66,6 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   } else {
     stringResult1 = string(t.Tii53U);
   }
-  obj[4] = jsx(navigation(4281).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
-  return jsx(tmp(13858), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
+  obj[4] = jsx(navigation(4189).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
+  return jsx(tmp(13758), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
 };

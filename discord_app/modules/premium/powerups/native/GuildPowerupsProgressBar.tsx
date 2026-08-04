@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/native/GuildPowerupsProgressBar.tsx
 import ChevronSmallRightIcon from "ChevronSmallRightIcon";
 import get_ActivityIndicator from "TwinButtons";
 import initialize from "initialize";
@@ -5,7 +6,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4146";
+import importDefaultResult from "module_4054";
 
 let StyleSheet;
 let c4;

@@ -1,3 +1,4 @@
+// discord_app/modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -33,5 +34,5 @@ export default function InAppReportsUpsellsTableRow(disabled) {
   obj[3] = icon;
   obj[4] = disabled;
   obj[5] = variant;
-  return jsx(require(5315) /* TableRowInner */.TableRow, { label: tmp2, subLabel: null, onPress: null, icon: null, disabled: null, variant: null });
+  return jsx(require(5224) /* TableRowInner */.TableRow, { label: tmp2, subLabel: null, onPress: null, icon: null, disabled: null, variant: null });
 };

@@ -1,3 +1,4 @@
+// discord_app/records/GuildBoostSlotRecord.tsx
 import "toJS";
 
 let GuildBoostSlotRecord;
@@ -24,7 +25,7 @@ GuildBoostSlotRecord["createFromServer"] = function createFromServer(premium_gui
     tmp2 = obj;
   }
   ({ canceled, cooldown_ends_at } = premium_guild_subscription);
-  if (typeof GuildBoostSlotRecord !== "function") {
+  if (typeof GuildBoostSlotRecord !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp3 = new GuildBoostSlotRecord("Trying to call a non-function", GuildBoostSlotRecord, new.target, id, subscription_id, tmp2, canceled, cooldown_ends_at);

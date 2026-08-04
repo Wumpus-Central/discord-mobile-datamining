@@ -1,3 +1,4 @@
+// discord_app/modules/content_inventory/memberlist/getFallbackHeroColor.native.tsx
 const result = require("set").fileFinishedImporting("modules/content_inventory/memberlist/getFallbackHeroColor.native.tsx");
 
 export const getFallbackHeroColor = function getFallbackHeroColor(stateFromStores1, saturation) {

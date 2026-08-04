@@ -1,3 +1,4 @@
+// discord_app/modules/age_gate/useIsNsfwGated.tsx
 import initialize from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

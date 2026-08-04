@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/tooling/CollectiblesTool.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "set";
@@ -30,28 +31,28 @@ function FramePreviewOverrideSection() {
     obj[0] = tmp.sectionHeader;
     obj = { variant: "heading-md/semibold", style: null, children: "Frame Preview Override" };
     obj[1] = tmp.sectionTitle;
-    obj[1] = callback3(_require(4281).Text, obj);
+    obj[1] = callback3(_require(4189).Text, obj);
     const items = [callback3(closure_6, obj), , , , ];
     const obj1 = { variant: "text-sm/normal", style: null, children: "Overrides every profile-frame preview with a frame pushed to this device. Tap Load after Cap (or pushFrameOverride.mjs) pushes one." };
     obj1[1] = tmp.description;
-    items[1] = callback3(_require(4281).Text, obj1);
+    items[1] = callback3(_require(4189).Text, obj1);
     const obj2 = { variant: "text-xs/normal", style: null, children: null };
     const items1 = [tmp.statusText, statusError];
     obj2[1] = items1;
     obj2[2] = "Loading\u2026";
-    items[2] = callback3(_require(4281).Text, obj2);
+    items[2] = callback3(_require(4189).Text, obj2);
     const obj3 = { pillStyle: null, text: "Load from device", onPress: null };
     obj3[0] = tmp.secondaryButton;
     obj3[2] = function onPress() {
       callback();
     };
-    items[3] = callback3(_require(4696).BaseTextButton, obj3);
+    items[3] = callback3(_require(4605).BaseTextButton, obj3);
     let tmp13Result = null != tmp2;
     if (tmp13Result) {
       const obj4 = { pillStyle: null, text: "Clear override", onPress: null };
       obj4[0] = tmp.secondaryButton;
       obj4[2] = tmp4;
-      tmp13Result = callback3(_require(4696).BaseTextButton, obj4);
+      tmp13Result = callback3(_require(4605).BaseTextButton, obj4);
     }
     items[4] = tmp13Result;
     obj[1] = items;
@@ -132,7 +133,7 @@ function UnpurchasedCollectiblesShopCardV2(arg0) {
   const obj = {};
   const tmp = callback(React.useState(0), 2);
   const merged = Object.assign(arg0);
-  return callback3(importDefault(9262), obj, tmp2);
+  return callback3(importDefault(8670), obj, tmp2);
 }
 const obj17 = { color: require("Themes").colors.TEXT_MUTED, textAlign: "center", fontSize: 14 };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/collectibles/native/tooling/CollectiblesTool.tsx");

@@ -1,3 +1,4 @@
+// discord_app/modules/app_analytics/clickstream/ClickstreamExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

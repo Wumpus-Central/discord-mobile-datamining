@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/components/MemberVerificationApplicationManager.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 import "initialize";

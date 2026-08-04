@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/native/EmojiOverflowActionSheet.tsx
 import ActionSheet from "ActionSheet";
 import "noop";
 import get_ActivityIndicator from "set";
@@ -66,55 +67,103 @@ export default function EmojiOverflowActionSheet(emoji) {
     obj8[1] = intl3.string(tmp3(tmp4[11]).t["+riKdA"]);
     obj7[1] = tmp5(tmp3(tmp4[7]).Text, obj8);
     obj7[2] = callback(function*() {
-      let closure_2 = tmp3;
-      let v0 = 1;
-      yield outer1_2(outer1_0);
-      if (1 === tmp7) {
-        v0 = 0;
-        let closure_1 = ActionSheet;
-        if (closure_1 instanceof outer1_0(outer1_2[14]).APIError) {
-          const anyErrorMessage = outer1_1.getAnyErrorMessage();
-          let id = anyErrorMessage;
-          if (anyErrorMessage == null) {
-            const intl = outer1_0(outer1_2[11]).intl;
-            id = intl.string(outer1_0(outer1_2[11]).t.R0RpRX);
-          }
-          outer1_0(outer1_2[15]).presentError(id);
-          const obj6 = outer1_0(outer1_2[15]);
-        }
-        v0();
-        let c6 = 3;
-      } else if (2 === tmp7) {
+      if (c6 === 2) {
+        c6 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          c6 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          v0 = 0;
-          c6 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
         } else {
-          id = arg1;
-          const obj1 = outer1_0(outer1_2[12]);
-          const obj3 = { guildId: null, emojiId: null, roles: null };
-          obj3[0] = closure_1;
-          obj3[1] = id.id;
-          obj3[2] = id;
-          let c5 = 3;
-          c6 = 1;
-          const obj4 = { value: null, done: false };
-          obj4[0] = obj1.updateEmoji(obj3);
-          return obj4;
+          return { value: "HermesInternal", done: null };
         }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        v0 = 0;
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_2 = tmp3;
+              let closure_1 = tmp7;
+              let id;
+              let v0 = 1;
+              c5 = 2;
+              c6 = 1;
+              let obj1 = { value: null, done: false };
+              obj1[0] = outer1_2(outer1_0);
+              return obj1;
+            }
+          } else {
+            if (1 === tmp7) {
+              v0 = 0;
+              closure_1 = ActionSheet;
+              if (closure_1 instanceof outer1_0(outer1_2[14]).APIError) {
+                const anyErrorMessage = outer1_1.getAnyErrorMessage();
+                id = anyErrorMessage;
+                if (anyErrorMessage == null) {
+                  const intl = outer1_0(outer1_2[11]).intl;
+                  id = intl.string(outer1_0(outer1_2[11]).t.R0RpRX);
+                }
+                outer1_0(outer1_2[15]).presentError(id);
+                const obj6 = outer1_0(outer1_2[15]);
+              }
+              v0();
+              c6 = 3;
+            } else if (2 === tmp7) {
+              if (arg0 === 1) {
+                c6 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                v0 = 0;
+                c6 = 3;
+                const obj2 = { value: null, done: true };
+                obj2[0] = arg1;
+                return obj2;
+              } else {
+                id = arg1;
+                obj1 = outer1_0(outer1_2[12]);
+                const obj3 = { guildId: null, emojiId: null, roles: null };
+                obj3[0] = closure_1;
+                obj3[1] = id.id;
+                obj3[2] = id;
+                c5 = 3;
+                c6 = 1;
+                const obj4 = { value: null, done: false };
+                obj4[0] = obj1.updateEmoji(obj3);
+                return obj4;
+              }
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              v0 = 0;
+            }
+            v0 = 0;
+            c6 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp40) {
+          ActionSheet = tmp40;
+          if (tmp4 === v0) {
+            c6 = tmp2;
+            throw tmp40;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      v0 = 0;
-      return arg1;
     });
     tmp5Result = tmp5(tmp3(tmp4[9]).TableRow, obj7);
   }

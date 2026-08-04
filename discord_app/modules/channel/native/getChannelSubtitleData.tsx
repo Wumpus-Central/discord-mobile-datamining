@@ -1,3 +1,4 @@
+// discord_app/modules/channel/native/getChannelSubtitleData.tsx
 const result = require("set").fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
 
 export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) {

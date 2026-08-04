@@ -1,3 +1,4 @@
+// discord_common/js/shared/shared-constants/Powerups.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/shared-constants/Powerups.tsx");
 
 export const VANITY_URL_POWERUP_SKU_ID = "1387197800336330924";

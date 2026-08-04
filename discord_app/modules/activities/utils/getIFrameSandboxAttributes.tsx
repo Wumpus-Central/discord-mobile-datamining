@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/getIFrameSandboxAttributes.tsx
 let closure_0 = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
 const result = require("set").fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");
 

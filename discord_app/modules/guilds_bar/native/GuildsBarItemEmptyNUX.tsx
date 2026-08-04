@@ -1,3 +1,4 @@
+// discord_app/modules/guilds_bar/native/GuildsBarItemEmptyNUX.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleConnectionOpen from "handleConnectionOpen";

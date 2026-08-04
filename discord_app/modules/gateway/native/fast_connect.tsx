@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/native/fast_connect.tsx
 import module_16 from "module_16";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { VERSION_TO_FORCE_RESYNCING_ALL_DATA as closure_6 } from "HELLO_KEY";
@@ -8,8 +9,8 @@ function createFastConnectSocket() {
   if (null != window.WebSocket) {
     let obj = _require(500);
     if (obj.isAndroid()) {
-      let supportsZstd = obj(12825).getConstants().supportsZstd;
-      const obj2 = obj(12825);
+      let supportsZstd = obj(12729).getConstants().supportsZstd;
+      const obj2 = obj(12729);
     } else {
       supportsZstd = closure_4.DCDCompressionManager.supportsZstd;
     }
@@ -19,7 +20,7 @@ function createFastConnectSocket() {
     }
     const _window = window;
     let GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ALT_ENDPOINT;
-    if (!obj(12814)()) {
+    if (!obj(12718)()) {
       const _window2 = window;
       GATEWAY_ENDPOINT = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
     }
@@ -29,7 +30,7 @@ function createFastConnectSocket() {
     obj.log(`[FAST CONNECT] ${tmp10}`);
     const _Date = Date;
     _require = Date.now();
-    const tmp12 = obj(12810)(combined);
+    const tmp12 = obj(12714)(combined);
     const _parseFloat = parseFloat;
     const parsed = parseFloat(tmp12._socketId);
     const _isNaN = isNaN;
@@ -39,14 +40,14 @@ function createFastConnectSocket() {
       const isAndroidResult = tmp3(500).isAndroid();
       if (supportsZstd) {
         if (isAndroidResult) {
-          let tmp7Result = tmp7(12825);
+          let tmp7Result = tmp7(12729);
           const result = tmp7Result.enableZstdStreamSupport(parsed);
         } else {
           const DCDCompressionManager2 = closure_4.DCDCompressionManager;
           const result1 = DCDCompressionManager2.enableZstdStreamSupport(parsed, 0);
         }
       } else if (isAndroidResult) {
-        tmp7Result = tmp7(12825);
+        tmp7Result = tmp7(12729);
         const result2 = tmp7Result.enableZlibStreamSupport(parsed);
       } else {
         const DCDCompressionManager = closure_4.DCDCompressionManager;

@@ -1,10 +1,11 @@
+// discord_app/modules/parent_tools/native/ParentalConsentWarningModal.tsx
 import addVersionedDismissedContent from "addVersionedDismissedContent";
 import { View } from "expandEventProperties";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import items from "items";
 import ME from "ME";
 import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "module_4490";
+import jsxProd from "module_4399";
 import createCacheKey from "createCacheKey";
 
 let c10;

@@ -1,3 +1,4 @@
+// discord_app/modules/video_calls/native/components/UserTile.tsx
 import Emoji from "Emoji";
 import importAllResult from "getSystemLocale";
 import { View } from "registerAsset";
@@ -150,11 +151,11 @@ let closure_19 = importAllResult.memo((userId) => {
   }, items1), 3);
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = importDefault(7811);
+    let tmp6 = importDefault(7676);
   } else if (deafened) {
-    tmp6 = importDefault(10621);
+    tmp6 = importDefault(10610);
   } else if (muted) {
-    tmp6 = importDefault(10622);
+    tmp6 = importDefault(10611);
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -166,7 +167,7 @@ let closure_19 = importAllResult.memo((userId) => {
       const items2 = [tmp.statusWrapper, style];
       obj[0] = items2;
       obj = { source: null, size: null, disableColor: true };
-      obj[0] = importDefault(10623);
+      obj[0] = importDefault(10612);
       obj[1] = tmp2(1297).Icon.Sizes.SMALL;
       obj[1] = callback2(tmp2(1297).Icon, obj);
       tmp14 = callback2(View, obj);
@@ -186,7 +187,7 @@ let closure_19 = importAllResult.memo((userId) => {
       obj3[0] = tmp6;
       obj3[1] = tmp2(1297).Icon.Sizes.SMALL;
       obj3[2] = importDefault(712).unsafe_rawColors.WHITE;
-      obj3[3] = tmp6 === importDefault(7811);
+      obj3[3] = tmp6 === importDefault(7676);
       obj2[1] = callback2(tmp2(1297).Icon, obj3);
       tmp19Result = tmp19(View, obj2);
       const tmp20 = View;

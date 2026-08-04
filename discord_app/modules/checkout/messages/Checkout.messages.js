@@ -1,3 +1,4 @@
+// discord_app/modules/checkout/messages/Checkout.messages.js
 import module_1274 from "module_1274";
 import module_1274 from "module_1274";
 

@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/TextAndMediaSyncSetting.tsx
 import initialize from "initialize";
 import createToggle from "createToggle";
 

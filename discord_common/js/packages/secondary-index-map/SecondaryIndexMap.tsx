@@ -1,3 +1,4 @@
+// discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx
 import _slicedToArray from "_slicedToArray";
 
 let closure_3 = [];
@@ -130,7 +131,7 @@ prototype["set"] = function set(arg0, value) {
       }
       ({ valueArray, sortBy } = self);
       if (null != value) {
-        let tmp7 = importDefault(3910)(valueArray, value, sortBy);
+        let tmp7 = importDefault(3818)(valueArray, value, sortBy);
         let tmp8 = tmp7;
         if (valueArray[tmp7] !== value) {
           let tmp9 = tmp7;
@@ -150,7 +151,7 @@ prototype["set"] = function set(arg0, value) {
         valueArray.splice(tmp8, 1);
       }
       if (null != value) {
-        valueArray.splice(importDefault(3910)(valueArray, value, sortBy), 0, value);
+        valueArray.splice(importDefault(3818)(valueArray, value, sortBy), 0, value);
       }
       if (null != value) {
         const item = self.indexBy(value).forEach((arg0) => {

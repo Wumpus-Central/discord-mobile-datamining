@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/CollectiblesShopV2.tsx
 import maybeFetchUserProfile from "maybeFetchUserProfile";
 import set from "set";
 import get_ActivityIndicator from "useFetchPurchases";

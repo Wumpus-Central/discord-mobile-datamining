@@ -1,3 +1,4 @@
+// discord_app/modules/chat/native/placeholder/getChatPlaceholderRowHeight.tsx
 const PX_24 = require("Themes").space.PX_24;
 const tmp2 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL];
 let closure_1 = tmp2;

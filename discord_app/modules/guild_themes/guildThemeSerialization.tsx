@@ -1,3 +1,4 @@
+// discord_app/modules/guild_themes/guildThemeSerialization.tsx
 const result = require("set").fileFinishedImporting("modules/guild_themes/guildThemeSerialization.tsx");
 
 export const cloneGuildThemeSettings = function cloneGuildThemeSettings(themeSettings) {

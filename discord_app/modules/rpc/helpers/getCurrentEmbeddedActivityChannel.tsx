@@ -1,3 +1,4 @@
+// discord_app/modules/rpc/helpers/getCurrentEmbeddedActivityChannel.tsx
 import participantFromServer from "participantFromServer";
 import ensureGuildLoaded from "ensureGuildLoaded";
 

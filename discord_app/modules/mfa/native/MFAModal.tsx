@@ -1,4 +1,5 @@
-import module_4490 from "module_4490";
+// discord_app/modules/mfa/native/MFAModal.tsx
+import module_4399 from "module_4399";
 import set from "set";
 import get_ActivityIndicator from "NavigationStack";
 import { jsx } from "jsxProd";
@@ -9,7 +10,7 @@ const require = arg1;
 class MFAModal {
   constructor(arg0) {
     mfaChallenge = global.mfaChallenge;
-    f110664 = mfaChallenge;
+    f110384 = mfaChallenge;
     finish = global.finish;
     cancel = global.cancel;
     handleOnClose = global.handleOnClose;
@@ -20,7 +21,7 @@ class MFAModal {
     c4 = flag;
     merged = Object.assign(global, Object.create(null));
     useMemo = undefined;
-    f110665 = undefined;
+    f110385 = undefined;
     useCallback = undefined;
     items = [];
     items[0] = mfaChallenge;
@@ -36,8 +37,8 @@ class MFAModal {
       return obj;
     }, items);
     useMemo = memo;
-    f110664 = undefined;
-    f110664 = handleOnClose((arg0) => {
+    f110384 = undefined;
+    f110384 = handleOnClose((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -135,7 +136,7 @@ class MFAModal {
       }
       return applyArgumentsResult;
     }, items1);
-    f110665 = callback;
+    f110385 = callback;
     items2 = [, ];
     items2[0] = cancel;
     items2[1] = handleOnClose;
@@ -201,7 +202,7 @@ class MFAModal {
       obj.headerRight = headerRight;
       obj.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14885), {});
+        return callback2(callback(14785), {});
       };
       obj[callback(cancel[7]).MfaScreens.SELECT] = obj;
       const obj1 = {};
@@ -231,7 +232,7 @@ class MFAModal {
       obj1.headerRight = tmp12;
       obj1.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14886), {});
+        return callback2(callback(14786), {});
       };
       obj[callback(cancel[7]).MfaScreens.WEBAUTHN] = obj1;
       const obj2 = {};
@@ -261,7 +262,7 @@ class MFAModal {
       obj2.headerRight = tmp20;
       obj2.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14891), {});
+        return callback2(callback(14791), {});
       };
       obj[callback(cancel[7]).MfaScreens.TOTP] = obj2;
       obj3 = {};
@@ -291,7 +292,7 @@ class MFAModal {
       obj3.headerRight = tmp28;
       obj3.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14894), {});
+        return callback2(callback(14794), {});
       };
       obj[callback(cancel[7]).MfaScreens.BACKUP] = obj3;
       const obj4 = {};
@@ -321,7 +322,7 @@ class MFAModal {
       obj4.headerRight = tmp36;
       obj4.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14895), {});
+        return callback2(callback(14795), {});
       };
       obj[callback(cancel[7]).MfaScreens.SMS] = obj4;
       const obj5 = {};
@@ -351,14 +352,14 @@ class MFAModal {
       obj5.headerRight = tmp44;
       obj5.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback2(callback(14896), {});
+        return callback2(callback(14796), {});
       };
       obj[callback(cancel[7]).MfaScreens.PASSWORD] = obj5;
       return obj;
     }, items4);
     obj = { screens: memo2, initialRouteStack: memo1, onWillFocus: useMemo.dismiss };
     merged1 = Object.assign(merged);
-    return f110665(require("NavigationStack").Navigator, obj);
+    return f110385(require("NavigationStack").Navigator, obj);
   }
 }
 ({ Keyboard: c5, LogBox } = get_ActivityIndicator);
@@ -368,7 +369,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/m
 
 export { MFAModal };
 export const openMFAModal = function openMFAModal(mfaChallenge, finish, cancel) {
-  let arr = importDefault(4490);
+  let arr = importDefault(4399);
   arr = arr.push(MFAModal, { mfaChallenge, finish, cancel }, MFA_MODAL_KEY);
-  importDefault(4624).close();
+  importDefault(4533).close();
 };

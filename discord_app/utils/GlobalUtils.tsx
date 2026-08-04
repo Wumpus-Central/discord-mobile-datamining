@@ -1,3 +1,4 @@
+// discord_app/utils/GlobalUtils.tsx
 let closure_0 = "development" === window.GLOBAL_ENV.PROJECT_ENV;
 const result = require("set").fileFinishedImporting("utils/GlobalUtils.tsx");
 

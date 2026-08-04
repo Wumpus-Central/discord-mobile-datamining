@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/getItemSubtitleForMaxPlayers.tsx
 const result = require("set").fileFinishedImporting("modules/activities/utils/getItemSubtitleForMaxPlayers.tsx");
 
 export default function getItemSubtitleForMaxPlayers(arg0) {

@@ -1,3 +1,4 @@
+// discord_app/modules/storefront/StorefrontCollectionStore.tsx
 import { Store } from "initialize";
 
 let closure_0 = {};

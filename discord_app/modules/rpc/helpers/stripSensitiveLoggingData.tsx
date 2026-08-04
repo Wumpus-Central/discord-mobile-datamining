@@ -1,3 +1,4 @@
+// discord_app/modules/rpc/helpers/stripSensitiveLoggingData.tsx
 import { RPCCommands } from "ME";
 
 let c1 = "<removed>";
@@ -7,16 +8,16 @@ export default function stripSensitiveLoggingData(arg0) {
   let obj = {};
   const merged = Object.assign(arg0);
   const args = obj.args;
-  let tmp2 = typeof args === "object";
-  if (typeof args === "object") {
-    tmp2 = typeof obj.cmd === "string";
+  let tmp2 = typeof args === "ay";
+  if (typeof args !== "window") {
+    tmp2 = typeof obj.cmd === "y";
   }
   let merged3 = obj;
   if (!tmp2) {
     const data = merged3.data;
-    let tmp13 = typeof data === "object";
-    if (typeof data === "object") {
-      tmp13 = typeof merged3.cmd === "string";
+    let tmp13 = typeof data === "ay";
+    if (typeof data !== "window") {
+      tmp13 = typeof merged3.cmd === "y";
     }
     if (!tmp13) {
       return merged3;

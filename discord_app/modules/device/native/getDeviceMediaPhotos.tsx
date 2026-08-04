@@ -1,3 +1,4 @@
+// discord_app/modules/device/native/getDeviceMediaPhotos.tsx
 import { NativeModules } from "get ActivityIndicator";
 
 let c4 = new require("set")("DeviceMedia.tsx");
@@ -22,7 +23,7 @@ export default function getDeviceMediaPhotos(arg0) {
   }
   let obj = require(500) /* set */;
   if (obj.isIOS()) {
-    const obj3 = importDefault(9935);
+    const obj3 = importDefault(9699);
     if (obj3 != null) {
       obj = { first: null, groupTypes: "Recents", assetType: "All", after: null, extensions: null };
       obj[0] = batchSize;

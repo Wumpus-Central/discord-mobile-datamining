@@ -1,3 +1,4 @@
+// discord_common/js/shared/shared-constants/GuildProfileLimits.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx");
 
 export const MAX_TRAITS = 5;

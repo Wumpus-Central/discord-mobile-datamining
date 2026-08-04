@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_frames/hooks/useFramePreviewOverrideFrame.native.tsx
 import noop from "noop";
 import fromServer from "fromServer";
 import { useFramePreviewOverrideStore as closure_4 } from "measure";

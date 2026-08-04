@@ -1,3 +1,4 @@
+// discord_app/modules/device/native/DeviceState.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { NativeModules } from "get ActivityIndicator";
 

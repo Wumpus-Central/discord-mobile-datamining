@@ -1,3 +1,4 @@
+// discord_app/modules/voice_channel_effects/VoiceChannelEffectsPersistedStore.tsx
 import { VoiceChannelEffectAnimationType as closure_1 } from "VoiceChannelEffectAnimationType";
 import { PersistedStore } from "initialize";
 

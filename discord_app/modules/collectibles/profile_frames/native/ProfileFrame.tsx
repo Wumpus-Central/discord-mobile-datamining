@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_frames/native/ProfileFrame.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { useFramePreviewOverrideStore as closure_4 } from "measure";
@@ -192,8 +193,8 @@ export default function ProfileFrame(arg0) {
     let obj = { override: null };
     obj[0] = tmp;
     const merged = Object.assign(arg0);
-    let tmp7 = jsx(importDefault(8743), { override: null });
-    const tmp11 = importDefault(8743);
+    let tmp7 = jsx(importDefault(8104), { override: null });
+    const tmp11 = importDefault(8104);
   } else {
     obj = {};
     const merged1 = Object.assign(arg0);

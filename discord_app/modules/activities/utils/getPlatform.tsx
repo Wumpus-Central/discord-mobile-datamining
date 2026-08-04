@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/getPlatform.tsx
 const result = require("set").fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
 
 export default function getPlatform(arg0) {

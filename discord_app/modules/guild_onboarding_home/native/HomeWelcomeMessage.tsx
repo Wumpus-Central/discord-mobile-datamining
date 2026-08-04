@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/native/HomeWelcomeMessage.tsx
 import Text from "Text";
 import { View } from "Button";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/GuildSettingsConstants.tsx
 const obj = {
   afk_channel_id() {
     const intl = require(1236) /* getSystemLocale */.intl;

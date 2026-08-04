@@ -1,3 +1,4 @@
+// discord_app/modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx
 import { CreatorMonetizationApplicationState as closure_2 } from "CreatorMonetizationApplicationState";
 
 const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");

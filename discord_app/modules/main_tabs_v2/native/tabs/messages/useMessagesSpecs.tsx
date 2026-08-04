@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { DM_WIDTH } from "ME";
@@ -7,7 +8,7 @@ let closure_3 = ["height"];
 const result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesSpecs.tsx");
 
 export default function useMessagesSpecs() {
-  fontScale = fontScale(4701).useFontScale();
+  fontScale = fontScale(4610).useFontScale();
   top = top(1581)().top;
   const tmp2 = top(1348)("MessagesHeader");
   const dependencyMap = tmp2;

@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/hooks/useFileOrLinkImageDimensions.tsx
 import noop from "noop";
 import MessageEmbedTypes from "MessageEmbedTypes";
 

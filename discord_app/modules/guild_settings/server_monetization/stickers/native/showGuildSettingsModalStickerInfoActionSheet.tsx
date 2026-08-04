@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx
 const GuildSettingsModalStickerInfoActionSheet = "GuildSettingsModalStickerInfoActionSheet";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/showGuildSettingsModalStickerInfoActionSheet.tsx");
 
@@ -5,7 +6,7 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
   let guildId;
   let stickerId;
   ({ guildId, stickerId } = arg0);
-  let obj = importDefault(4253);
+  let obj = importDefault(4161);
   obj = {
     guildId,
     stickerId,
@@ -13,5 +14,5 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
       callback(table[0]).hideActionSheet(closure_3);
     }
   };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(16539, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(16441, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
 };

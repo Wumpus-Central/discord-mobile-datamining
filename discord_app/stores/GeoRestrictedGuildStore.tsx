@@ -1,3 +1,4 @@
+// discord_app/stores/GeoRestrictedGuildStore.tsx
 import { Store } from "initialize";
 
 let closure_0 = [];

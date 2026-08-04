@@ -1,3 +1,4 @@
+// discord_app/modules/media/web/utils/DiscordImagePng.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

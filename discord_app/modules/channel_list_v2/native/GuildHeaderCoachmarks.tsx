@@ -1,3 +1,4 @@
+// discord_app/modules/channel_list_v2/native/GuildHeaderCoachmarks.tsx
 import _slicedToArray from "_slicedToArray";
 import GuildPowerupsBoostToUnlockCoachmark from "GuildPowerupsBoostToUnlockCoachmark";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/hooks/useFriendsSinceDate.tsx
 import _getSystemLocale from "_getSystemLocale";
 import upsertRelationship from "upsertRelationship";
 import { RelationshipTypes } from "ME";
@@ -20,5 +21,5 @@ export const useFriendsSinceDate = function useFriendsSinceDate(userId) {
     return since;
   }, items2);
   const obj2 = _require(647);
-  return _require(5091).getCreatedAtDate(stateFromStores1, stateFromStores);
+  return _require(5000).getCreatedAtDate(stateFromStores1, stateFromStores);
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/freeze/native/NativeFreezeScreens.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { StyleSheet } from "get ActivityIndicator";

@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/CollectiblesPreviewConstants.tsx
 const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesPreviewConstants.tsx");
 
 export const SAMPLE_PROFILE_ASPECT_RATIO = 0.5113636363636364;

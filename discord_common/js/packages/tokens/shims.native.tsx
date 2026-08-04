@@ -1,3 +1,4 @@
+// discord_common/js/packages/tokens/shims.native.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/tokens/shims.native.tsx");
 
 export const unsafe_getRawColor = function unsafe_getRawColor(RED_400) {

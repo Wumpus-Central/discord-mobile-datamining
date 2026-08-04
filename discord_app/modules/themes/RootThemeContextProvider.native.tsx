@@ -1,3 +1,4 @@
+// discord_app/modules/themes/RootThemeContextProvider.native.tsx
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import handleThemeChange from "handleThemeChange";

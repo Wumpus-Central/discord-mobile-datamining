@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/QuestDock/QuestDockContentExpanded.tsx
 import importAllResult from "noop";
 import { QuestDockMode } from "QuestsExperimentLocations";
 import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";

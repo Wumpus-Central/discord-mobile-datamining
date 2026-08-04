@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/ClipViewNativeComponent.tsx
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "ClipView", validAttributes: { cutouts: true } };

@@ -1,3 +1,4 @@
+// discord_app/design/components/TableRow/native/TableRadioRow.native.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -21,16 +22,16 @@ export const TableRadioRow = function TableRadioRow(value) {
   ({ legacyCompat_selected, legacyCompat_onPress: dependencyMap } = value);
   const merged = Object.assign(value, Object.create(null));
   let onSelect;
-  const context = onSelect.useContext(require(7795) /* context */.TableRadioGroupContext);
+  const context = onSelect.useContext(require(7660) /* context */.TableRadioGroupContext);
   onSelect = context.onSelect;
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;
   }
-  let tmp2Result = tmp2(3991);
+  let tmp2Result = tmp2(3899);
   const nodeText = tmp2Result.getNodeText(label);
-  tmp2Result = tmp2(3991);
+  tmp2Result = tmp2(3899);
   const nodeText1 = tmp2Result.getNodeText(subLabel);
-  const radioA11yNative = require(4003) /* useCheckboxA11yNative */.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
+  const radioA11yNative = require(3911) /* useCheckboxA11yNative */.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj = {};
   const merged1 = Object.assign(merged);
@@ -53,6 +54,6 @@ export const TableRadioRow = function TableRadioRow(value) {
     }
     onSelect(closure_0);
   };
-  obj.trailing = jsx(require(7796) /* FormRadio */.FormRadio, { selected: legacyCompat_selected });
-  return jsx(require(5315) /* TableRowInner */.TableRow, {});
+  obj.trailing = jsx(require(7661) /* FormRadio */.FormRadio, { selected: legacyCompat_selected });
+  return jsx(require(5224) /* TableRowInner */.TableRow, {});
 };

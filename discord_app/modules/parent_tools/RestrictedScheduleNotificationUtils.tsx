@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/RestrictedScheduleNotificationUtils.tsx
 let Created;
 let Disabled;
 let Enabled;
@@ -253,12 +254,12 @@ export const getRestrictedScheduleNotificationTitle = function getRestrictedSche
 export const getRestrictedScheduleNotificationSubtitle = function getRestrictedScheduleNotificationSubtitle(rule) {
   let result = null;
   if (null != rule) {
-    result = require(9670) /* setsEqual */.formatRestrictedScheduleInAppSubtitle(rule);
-    const obj = require(9670) /* setsEqual */;
+    result = require(10261) /* setsEqual */.formatRestrictedScheduleInAppSubtitle(rule);
+    const obj = require(10261) /* setsEqual */;
   }
   if (result == null) {
     const intl = require(1236) /* getSystemLocale */.intl;
-    result = intl.string(importDefault(2285)["8OlpoY"]);
+    result = intl.string(importDefault(2225)["8OlpoY"]);
   }
   return result;
 };

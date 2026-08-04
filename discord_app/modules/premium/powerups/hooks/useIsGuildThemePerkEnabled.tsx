@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import calculateAppliedBoosts from "calculateAppliedBoosts";
 import { GuildFeatures } from "ME";

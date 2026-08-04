@@ -1,3 +1,4 @@
+// discord_app/modules/virtual_currency/stores/VirtualCurrencyStore.tsx
 import { Store } from "initialize";
 
 let object = importDefault;

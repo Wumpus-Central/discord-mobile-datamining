@@ -1,3 +1,4 @@
+// discord_app/modules/client_themes/native/CustomThemeMobileActionCreators.tsx
 const result = require("set").fileFinishedImporting("modules/client_themes/native/CustomThemeMobileActionCreators.tsx");
 
 export const updateCustomTheme = function updateCustomTheme(customThemeSettings, first1) {

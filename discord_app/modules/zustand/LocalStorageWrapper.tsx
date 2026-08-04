@@ -1,3 +1,4 @@
+// discord_app/modules/zustand/LocalStorageWrapper.tsx
 const frozen = Object.freeze({
   getItem(arg0) {
     const Storage = require(595) /* Storage */.Storage;

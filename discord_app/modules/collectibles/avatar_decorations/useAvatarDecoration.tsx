@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/avatar_decorations/useAvatarDecoration.tsx
 import _slicedToArray from "_slicedToArray";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 

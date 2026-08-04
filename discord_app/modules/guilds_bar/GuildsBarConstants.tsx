@@ -1,3 +1,4 @@
+// discord_app/modules/guilds_bar/GuildsBarConstants.tsx
 import int2hslRaw from "int2hslRaw";
 import unsafe_getRawColor from "unsafe_getRawColor";
 

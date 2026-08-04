@@ -1,3 +1,4 @@
+// discord_app/modules/game_console/activityPlatformToConnectedAccountType.tsx
 import ME from "ME";
 
 let c0;

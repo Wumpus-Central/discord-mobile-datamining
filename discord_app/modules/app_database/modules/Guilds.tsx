@@ -1,3 +1,4 @@
+// discord_app/modules/app_database/modules/Guilds.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { updateJoinedAt } from "GuildNSFWContentLevel";
 import fetchFingerprint from "fetchFingerprint";
@@ -50,24 +51,127 @@ const prototype = Guilds.prototype;
 prototype["getAsync"] = function getAsync(arg0) {
   let closure_0 = arg0;
   return callback(function*() {
-    let length = tmp5;
-    let closure_0 = tmp2;
-    const _performance2 = performance;
-    closure_0 = performance.now();
-    const obj6 = outer1_0(table[7]);
-    length = yield outer1_0(table[7]).guilds(outer1_0).getMany();
-    const _performance = performance;
-    const _HermesInternal = HermesInternal;
-    outer1_9.verbose("loaded in " + closure_2 - closure_0 + "ms (guilds: " + length.length + ")");
-    return length;
+    if (c3 === 2) {
+      c3 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === closure_2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let length = tmp5;
+            let closure_0 = tmp2;
+            closure_0 = undefined;
+            length = undefined;
+            closure_2 = undefined;
+            const _performance2 = performance;
+            closure_0 = performance.now();
+            const obj6 = outer1_0(table[7]);
+            closure_2 = 1;
+            c3 = 1;
+            const obj1 = { value: null, done: false };
+            obj1[0] = outer1_0(table[7]).guilds(outer1_0).getMany();
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
+        } else {
+          length = arg1;
+          const _performance = performance;
+          closure_2 = performance.now();
+          const _HermesInternal = HermesInternal;
+          outer1_9.verbose("loaded in " + closure_2 - closure_0 + "ms (guilds: " + length.length + ")");
+          c3 = 3;
+          obj = { value: null, done: true };
+          obj[0] = length;
+          return obj;
+        }
+      } catch (tmp6) {
+        c3 = tmp;
+        throw tmp6;
+      }
+    }
   })();
 };
 prototype["getOneAsync"] = function getOneAsync(closure_0, closure_2) {
   let closure_1 = closure_2;
   return callback(function*() {
-    const obj2 = v0(outer1_2[7]);
-    yield obj2.guilds(v0).get(c1);
-    return arg1;
+    if (v0 === 2) {
+      v0 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        v0 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            v0 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            v0 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let obj2 = v0(outer1_2[7]);
+            c1 = 1;
+            v0 = 1;
+            const obj1 = { value: null, done: false };
+            obj1[0] = obj2.guilds(v0).get(c1);
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
+        } else {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        }
+      } catch (tmp9) {
+        v0 = tmp;
+        throw tmp9;
+      }
+    }
   })();
 };
 prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {

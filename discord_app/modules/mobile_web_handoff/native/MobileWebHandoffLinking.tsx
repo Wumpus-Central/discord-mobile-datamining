@@ -1,3 +1,4 @@
+// discord_app/modules/mobile_web_handoff/native/MobileWebHandoffLinking.tsx
 import _createHandoffToken from "_createHandoffToken";
 import fetchFingerprint from "fetchFingerprint";
 import ME from "ME";

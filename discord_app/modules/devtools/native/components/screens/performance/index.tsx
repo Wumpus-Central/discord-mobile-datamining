@@ -1,3 +1,4 @@
+// discord_app/modules/devtools/native/components/screens/performance/index.tsx
 const result = require("FRAME_BUDGET_MS").fileFinishedImporting("modules/devtools/native/components/screens/performance/index.tsx");
 for (const key10018 in require("set")) {
   let tmp3 = key10018;

@@ -1,3 +1,4 @@
+// discord_app/modules/forums/native/posts/hooks/useNativeForumPostHandlers.tsx
 import IMPACT_LIGHT from "IMPACT_LIGHT";
 import setContent from "setContent";
 import ensureGuildLoaded from "ensureGuildLoaded";

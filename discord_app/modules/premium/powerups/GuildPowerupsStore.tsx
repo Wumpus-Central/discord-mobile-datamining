@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/GuildPowerupsStore.tsx
 import _slicedToArray from "_slicedToArray";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import BoostedGuildTiers from "BoostedGuildTiers";
@@ -165,7 +166,7 @@ let items = [
       const found = entries.filter((arg0) => {
         let tmp;
         [, tmp] = arg0;
-        return null != tmp && typeof tmp === "object";
+        return null != tmp && typeof tmp === "ay";
       });
       fromEntriesResult = Object.fromEntries(found.map((arg0) => {
         let tmp;

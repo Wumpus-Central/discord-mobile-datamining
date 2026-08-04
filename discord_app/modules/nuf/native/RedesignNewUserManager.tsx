@@ -1,3 +1,4 @@
+// discord_app/modules/nuf/native/RedesignNewUserManager.tsx
 import ContactSyncModes from "ContactSyncModes";
 import initialize from "initialize";
 import "initialize";

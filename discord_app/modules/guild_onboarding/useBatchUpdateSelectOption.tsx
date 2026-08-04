@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding/useBatchUpdateSelectOption.tsx
 import noop from "noop";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import handleUpdate from "handleUpdate";

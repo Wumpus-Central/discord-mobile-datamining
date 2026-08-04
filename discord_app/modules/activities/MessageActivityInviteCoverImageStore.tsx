@@ -1,3 +1,4 @@
+// discord_app/modules/activities/MessageActivityInviteCoverImageStore.tsx
 import { Store } from "initialize";
 
 let c0 = new require("priv")({ max: 500 });

@@ -1,3 +1,4 @@
+// discord_app/stores/AuthenticationStore.tsx
 import initialize from "initialize";
 import clearAll from "clearAll";
 import ME from "ME";
@@ -61,7 +62,7 @@ function fetchFingerprint(arg0) {
           if (null != c23) {
             obj["X-Installation-ID"] = c23;
           }
-          tmpResult = tmp(13358);
+          tmpResult = tmp(13262);
           obj = { withGuildExperiments: null, headers: null, context: null };
           obj[0] = true;
           obj[1] = obj;
@@ -97,7 +98,7 @@ function fetchFingerprint(arg0) {
             callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
             let c33 = null;
             const obj5 = callback2(709);
-            callback(13359).onExperimentsLoaded();
+            callback(13263).onExperimentsLoaded();
           }, () => {
             let c33 = null;
             callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
@@ -239,13 +240,13 @@ prototype["initialize"] = function initialize() {
     }
     if (tmp7) {
       function fireApex() {
-        const installationExperiments = callback(10373).fetchInstallationExperiments(null);
+        const installationExperiments = callback(10504).fetchInstallationExperiments(null);
       }
       promise.then(fireApex, fireApex);
     }
     promise = fetchFingerprint();
   }
-  this.addChangeListener(() => callback(13361).setClientState(closure_17));
+  this.addChangeListener(() => callback(13265).setClientState(closure_17));
 };
 prototype["getLoginStatus"] = function getLoginStatus() {
   return NONE;
@@ -342,7 +343,7 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     const tmp = importAll;
     const tmp3 = null != obj.getToken();
     ({ id, username, email } = user);
-    importDefault(1208).setUser(id, username, email, importDefault(11696)(user));
+    importDefault(1208).setUser(id, username, email, importDefault(11523)(user));
     const obj3 = importDefault(1208);
     tmp(707).setAnalyticsToken(analyticsToken);
     id = user.id;
@@ -358,7 +359,7 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     if (null != installation) {
       installation = apexExperiments.installation;
       if (null == installation) {
-        let tmp6Result = tmp6(13360);
+        let tmp6Result = tmp6(13264);
         if (tmp6Result.canUseInstallationId()) {
           const Storage3 = tmp4(595).Storage;
           const result1 = Storage3.set(analytics_installation, installation);
@@ -387,7 +388,7 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     ({ sessionId, token } = arg0);
     let obj = importDefault(1208);
     ({ id, username, email } = user);
-    obj.setUser(id, username, email, importDefault(11696)(user));
+    obj.setUser(id, username, email, importDefault(11523)(user));
     const id2 = user.id;
     const obj2 = importAll(707);
     const tmp = importDefault;
@@ -703,7 +704,7 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     const obj2 = importDefault(698);
     obj = { withGuildExperiments: withGuildExperiments.withGuildExperiments, headers: obj, context: null };
     obj = { location: null };
-    let obj3 = require(13358) /* fetchExperiments */;
+    let obj3 = require(13262) /* fetchExperiments */;
     obj[0] = require(1222) /* transitionTo */.getFingerprintLocation();
     obj[2] = obj;
     const experiments = obj3.fetchExperiments(obj);
@@ -734,7 +735,7 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
       callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
       let c33 = null;
       const obj5 = callback2(709);
-      callback(13359).onExperimentsLoaded();
+      callback(13263).onExperimentsLoaded();
     }, () => {
       let c33 = null;
       callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
@@ -769,13 +770,13 @@ const authenticationStore = new AuthenticationStore(require("dispatcher"), {
     let c30 = null;
     let c35 = false;
     let c5 = null;
-    if (error instanceof importDefault(4185)) {
+    if (error instanceof importDefault(4093)) {
       if (null != obj.getAuthenticationErrorsFromAPIError(error).date_of_birth) {
         let NONE = LoginStates.LOGIN_AGE_GATE;
       } else {
         NONE = LoginStates.NONE;
       }
-      obj = require(8286) /* getAuthenticationErrorsFromAPIError */;
+      obj = require(9205) /* getAuthenticationErrorsFromAPIError */;
     } else {
       NONE = LoginStates.NONE;
     }
@@ -805,7 +806,7 @@ let obj = {
     const tmp = importAll;
     const tmp3 = null != obj.getToken();
     ({ id, username, email } = user);
-    importDefault(1208).setUser(id, username, email, importDefault(11696)(user));
+    importDefault(1208).setUser(id, username, email, importDefault(11523)(user));
     const obj3 = importDefault(1208);
     tmp(707).setAnalyticsToken(analyticsToken);
     id = user.id;
@@ -821,7 +822,7 @@ let obj = {
     if (null != installation) {
       installation = apexExperiments.installation;
       if (null == installation) {
-        let tmp6Result = tmp6(13360);
+        let tmp6Result = tmp6(13264);
         if (tmp6Result.canUseInstallationId()) {
           const Storage3 = tmp4(595).Storage;
           const result1 = Storage3.set(analytics_installation, installation);
@@ -850,7 +851,7 @@ let obj = {
     ({ sessionId, token } = arg0);
     let obj = importDefault(1208);
     ({ id, username, email } = user);
-    obj.setUser(id, username, email, importDefault(11696)(user));
+    obj.setUser(id, username, email, importDefault(11523)(user));
     const id2 = user.id;
     const obj2 = importAll(707);
     const tmp = importDefault;
@@ -1166,7 +1167,7 @@ let obj = {
     const obj2 = importDefault(698);
     obj = { withGuildExperiments: withGuildExperiments.withGuildExperiments, headers: obj, context: null };
     obj = { location: null };
-    let obj3 = require(13358) /* fetchExperiments */;
+    let obj3 = require(13262) /* fetchExperiments */;
     obj[0] = require(1222) /* transitionTo */.getFingerprintLocation();
     obj[2] = obj;
     const experiments = obj3.fetchExperiments(obj);
@@ -1197,7 +1198,7 @@ let obj = {
       callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
       let c33 = null;
       const obj5 = callback2(709);
-      callback(13359).onExperimentsLoaded();
+      callback(13263).onExperimentsLoaded();
     }, () => {
       let c33 = null;
       callback2(709).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
@@ -1232,13 +1233,13 @@ let obj = {
     let c30 = null;
     let c35 = false;
     let c5 = null;
-    if (error instanceof importDefault(4185)) {
+    if (error instanceof importDefault(4093)) {
       if (null != obj.getAuthenticationErrorsFromAPIError(error).date_of_birth) {
         let NONE = LoginStates.LOGIN_AGE_GATE;
       } else {
         NONE = LoginStates.NONE;
       }
-      obj = require(8286) /* getAuthenticationErrorsFromAPIError */;
+      obj = require(9205) /* getAuthenticationErrorsFromAPIError */;
     } else {
       NONE = LoginStates.NONE;
     }

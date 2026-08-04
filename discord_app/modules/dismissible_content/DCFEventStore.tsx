@@ -1,3 +1,4 @@
+// discord_app/modules/dismissible_content/DCFEventStore.tsx
 import { Store } from "initialize";
 
 let obj = { DC_SHOWN: 0, [0]: "DC_SHOWN", DC_SHOW_REQUEST: 1, [1]: "DC_SHOW_REQUEST", DC_DISMISSED: 2, [2]: "DC_DISMISSED" };

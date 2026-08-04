@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/PrivateChannelHidingExperimentCache.tsx
 const private_channel_obfuscation = "private_channel_obfuscation";
 const result = require("set").fileFinishedImporting("modules/gateway/PrivateChannelHidingExperimentCache.tsx");
 

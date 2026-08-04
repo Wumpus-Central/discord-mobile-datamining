@@ -1,3 +1,4 @@
+// discord_app/modules/guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -27,8 +28,8 @@ function canToggleCommunicationDisableOnUser(id, id2, items) {
         obj[0] = Permissions.ADMINISTRATOR;
         obj[1] = user;
         obj[2] = guild;
-        canResult = importAll(3918).can(obj);
-        const obj5 = importAll(3918);
+        canResult = importAll(3826).can(obj);
+        const obj5 = importAll(3826);
       }
       let canManageUserResult = !canResult;
       if (!canResult) {

@@ -1,8 +1,9 @@
+// discord_app/modules/user_profile/native/UserProfileEditNoteModal.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
 const require = arg1;
-const result = require("module_4490").fileFinishedImporting("modules/user_profile/native/UserProfileEditNoteModal.tsx");
+const result = require("module_4399").fileFinishedImporting("modules/user_profile/native/UserProfileEditNoteModal.tsx");
 
 export default function UserProfileEditNoteModal(arg0) {
   let dependencyMap;
@@ -32,14 +33,14 @@ export default function UserProfileEditNoteModal(arg0) {
     const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
     const intl = callback(1236).intl;
     obj[2] = intl.string(callback(1236).t.sHHsOM);
-    return handleClose(callback(4281).Text, obj);
+    return handleClose(callback(4189).Text, obj);
   };
-  tmp2Result = tmp2(5238);
+  tmp2Result = tmp2(5147);
   obj2[2] = tmp2Result.getHeaderCloseButton(handleClose);
   obj2[3] = function render() {
     return handleClose(outer1_0(outer1_2[8]).default, { userId: closure_0, onSave: closure_1, onClose: handleClose });
   };
   obj1[0] = obj2;
   obj[3] = obj1;
-  return handleClose(require(5665) /* NavigationStack */.Navigator, obj);
+  return handleClose(require(5574) /* NavigationStack */.Navigator, obj);
 };

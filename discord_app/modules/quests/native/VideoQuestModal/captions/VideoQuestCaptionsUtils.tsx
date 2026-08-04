@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx
 const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/captions/VideoQuestCaptionsUtils.tsx");
 
 export const findActiveCaption = function findActiveCaption(arg0, currentTime) {

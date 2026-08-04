@@ -1,3 +1,4 @@
+// discord_app/design/components/mana-assets/native/generated/GiftingTier1LargeBadge.native.tsx
 import { jsx } from "jsxProd";
 
 const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier1LargeBadge.native.tsx");
@@ -9,7 +10,7 @@ export const GiftingTier1LargeBadge = function GiftingTier1LargeBadge(width) {
   let num = width.width;
   ({ accessible, accessibilityLabel, resizeMode } = width);
   if (num === undefined) {
-    num = 94;
+    num = 100;
   }
   let num2 = width.height;
   if (num2 === undefined) {
@@ -21,7 +22,7 @@ export const GiftingTier1LargeBadge = function GiftingTier1LargeBadge(width) {
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6344);
+  obj[0] = importDefault(7198);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -29,5 +30,5 @@ export const GiftingTier1LargeBadge = function GiftingTier1LargeBadge(width) {
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5236), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
 };

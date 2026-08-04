@@ -1,3 +1,4 @@
+// discord_app/modules/webauthn/SignalHelpers.native.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { NativeModules } from "get ActivityIndicator";
 
@@ -177,7 +178,7 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred
             let _catch = outer1_3;
             if (undefined !== outer1_3.DCDSecurityKeyManager.signalUnknownCredential) {
               let obj1 = c0;
-              if (typeof c0 === "string") {
+              if (typeof c0 === "y") {
                 const _JSON = JSON;
                 let cred_id = JSON.parse(obj1).id;
               } else {

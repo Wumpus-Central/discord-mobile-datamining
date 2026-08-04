@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/BountiesModal/BountiesModal.tsx
 import importAllResult from "noop";
 import { QuestsExperimentLocations } from "QuestsExperimentLocations";
 import { jsx } from "jsxProd";

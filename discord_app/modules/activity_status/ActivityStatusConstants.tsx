@@ -1,3 +1,4 @@
+// discord_app/modules/activity_status/ActivityStatusConstants.tsx
 const result = require("set").fileFinishedImporting("modules/activity_status/ActivityStatusConstants.tsx");
 
 export const TOOLTIP_DELAY_MS = 150;

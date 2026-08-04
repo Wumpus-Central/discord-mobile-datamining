@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawerTitle.tsx
 import { StyleSheet } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

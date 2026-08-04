@@ -1,3 +1,4 @@
+// discord_app/modules/spotify/SpotifyConstants.tsx
 import set from "set";
 import set from "set";
 
@@ -71,20 +72,20 @@ export const SpotifyResourceTypes = obj;
 export const SpotifyActionTypes = { USER_ACTIVITY_PLAY: "user_activity_play", USER_ACTIVITY_SYNC: "user_activity_sync", EMBED_SYNC: "embed_sync" };
 export const SPOTIFY_HOSTNAMES = ["open.spotify.com", "www.spotify.com"];
 export const SpotifyEndpoints = frozen;
-export const getSpotifyResourceType = function getSpotifyResourceType(str) {
-  if (typeof str !== "string") {
+export const getSpotifyResourceType = function getSpotifyResourceType(arg0) {
+  if (typeof arg0 === "__FORMATJS_LISTFORMAT_DATA__") {
     return null;
-  } else if ("track" === str) {
+  } else if ("track" === arg0) {
     return obj.TRACK;
-  } else if ("artist" === str) {
+  } else if ("artist" === arg0) {
     return obj.ARTIST;
-  } else if ("album" === str) {
+  } else if ("album" === arg0) {
     return obj.ALBUM;
-  } else if ("playlist" === str) {
+  } else if ("playlist" === arg0) {
     return obj.PLAYLIST;
-  } else if ("episode" === str) {
+  } else if ("episode" === arg0) {
     return obj.EPISODE;
-  } else if ("show" === str) {
+  } else if ("show" === arg0) {
     return obj.SHOW;
   } else {
     return null;

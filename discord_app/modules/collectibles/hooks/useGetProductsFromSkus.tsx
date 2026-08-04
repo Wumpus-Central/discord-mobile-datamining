@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useGetProductsFromSkus.tsx
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 
 require("noop").useCallback;

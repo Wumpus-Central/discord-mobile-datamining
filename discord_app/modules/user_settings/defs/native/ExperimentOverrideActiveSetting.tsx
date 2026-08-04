@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/ExperimentOverrideActiveSetting.tsx
 import getHash from "getHash";
 import initialize from "initialize";
 import { jsx } from "jsxProd";
@@ -18,11 +19,11 @@ createToggle = {
     const obj2 = require(589) /* initialize */;
     obj = { label: "Experiments overridden: ", value: null };
     obj[1] = stateFromStores + require(589) /* initialize */.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length).toString();
-    return jsx(require(13749) /* DevToolsContentSortButtons */.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: null });
+    return jsx(require(13653) /* DevToolsContentSortButtons */.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: null });
   },
   usePredicate: function useHasExperimentOverrideActive() {
-    const staffOrDeveloperSettingPredicate = require(13992) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
-    const obj = require(13992) /* useStaffOrDeveloperSettingPredicate */;
+    const staffOrDeveloperSettingPredicate = require(13892) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
+    const obj = require(13892) /* useStaffOrDeveloperSettingPredicate */;
     const items = [getHash];
     const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
     const obj2 = require(589) /* initialize */;
@@ -31,7 +32,7 @@ createToggle = {
     return stateFromStores + require(589) /* initialize */.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length) > 0 && staffOrDeveloperSettingPredicate;
   },
   onPress: function handleExperimentOverrideActivePress() {
-    require(13748) /* navigateToDevTools */.navigateToDevTools({ screenKey: "experiments" });
+    require(13652) /* navigateToDevTools */.navigateToDevTools({ screenKey: "experiments" });
   },
   withArrow: true
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/channel/usePrivateChannelWaveEligible.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import upsertRelationship from "upsertRelationship";
 import { ChannelFlags } from "set";
@@ -56,10 +57,10 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
   const obj4 = _require(589);
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
-  const obj6 = _require(3955);
-  const tmp9 = recipientId(3867)();
-  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(3867)(), recipientId(3867)(extractTimestampResult), 1814400000);
-  const strangerDangerWarning = _require(10254).useStrangerDangerWarning(isDM.id);
+  const obj6 = _require(3863);
+  const tmp9 = recipientId(3775)();
+  const isWithinIntervalResult = obj6.isWithinInterval(recipientId(3775)(), recipientId(3775)(extractTimestampResult), 1814400000);
+  const strangerDangerWarning = _require(10445).useStrangerDangerWarning(isDM.id);
   if (tmp) {
     tmp = stateFromStores;
   }

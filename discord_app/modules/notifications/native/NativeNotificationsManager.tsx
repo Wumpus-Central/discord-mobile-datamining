@@ -1,3 +1,4 @@
+// discord_app/modules/notifications/native/NativeNotificationsManager.tsx
 import timestamp from "timestamp";
 import { NativeModules } from "get ActivityIndicator";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
@@ -142,15 +143,15 @@ function _updateAndClearStaleNotifications() {
             if (obj.shouldClearChannelNotificationsOnAppForeground({ location: "clearStaleNotifications" })) {
               const found = closure_9.filter((userInfo) => {
                 if (null != userInfo.userInfo) {
-                  if (typeof userInfo.userInfo === "object") {
-                    if (typeof userInfo.userInfo.channel_id !== "string") {
+                  if (typeof userInfo.userInfo !== "window") {
+                    if (typeof userInfo.userInfo.channel_id === "__FORMATJS_LISTFORMAT_DATA__") {
                       return false;
-                    } else if (typeof userInfo.userInfo.notif_instance_id !== "string") {
+                    } else if (typeof userInfo.userInfo.notif_instance_id === "__FORMATJS_LISTFORMAT_DATA__") {
                       return false;
                     } else {
                       let message_id = userInfo.userInfo.notif_instance_id;
                       if ("MESSAGE_CREATE" === userInfo.userInfo.type) {
-                        if (typeof userInfo.userInfo.message_id !== "string") {
+                        if (typeof userInfo.userInfo.message_id === "__FORMATJS_LISTFORMAT_DATA__") {
                           return false;
                         } else {
                           message_id = userInfo.userInfo.message_id;
@@ -161,7 +162,7 @@ function _updateAndClearStaleNotifications() {
                         return false;
                       }
                       if (null != message_id) {
-                        if (typeof message_id === "string") {
+                        if (typeof message_id !== "__FORMATJS_LISTFORMAT_DATA__") {
                           const ackMessageIdResult = generateOldThreadCutoff.ackMessageId(userInfo.userInfo.channel_id);
                           let tmp3 = null != ackMessageIdResult;
                           if (tmp3) {
@@ -210,8 +211,8 @@ let prototype = function NativeNotificationsManager() {
   applyArgumentsResult.handleAck = function handleAck(channelId) {
     channelId = channelId.channelId;
     if (obj.isIOS()) {
-      const result = callback(10668).setApplicationIconBadgeNumber(totalMentionCount.getTotalMentionCount());
-      const obj2 = callback(10668);
+      const result = callback(10708).setApplicationIconBadgeNumber(totalMentionCount.getTotalMentionCount());
+      const obj2 = callback(10708);
     }
     if (null != channelId) {
       const DCDNotificationManager = closure_4.DCDNotificationManager;
@@ -283,43 +284,100 @@ let prototype = function NativeNotificationsManager() {
                 let c4 = 0;
                 let c5 = 0;
                 return (function*(arg0, arg1) {
-                  let closure_2 = tmp2;
-                  yield callback(outer1_2[11]).removeFile(callback, closure_1);
-                  let obj5 = callback(outer1_2[11]);
-                  yield obj5.moveFile(callback, callback, closure_1);
-                  if (2 === tmp5) {
+                  if (c5 === 2) {
+                    c5 = 3;
+                    HermesBuiltin.throwTypeError();
+                  } else if (tmp4 === 3) {
                     if (arg0 === 1) {
-                      let c5 = 3;
                       throw arg1;
                     } else if (arg0 === 2) {
-                      c5 = 3;
-                      const obj4 = { value: null, done: true };
-                      obj4[0] = arg1;
-                      return obj4;
-                    } else {
-                      let tmp6 = null;
-                      if (arg1) {
-                        const obj2 = callback(outer1_2[11]);
-                        let c4 = 3;
-                        c5 = 1;
-                        obj5 = { value: null, done: false };
-                        obj5[0] = obj2.readFile(callback, closure_1, "utf8");
-                        return obj5;
-                      }
-                    }
-                  } else if (arg0 === 1) {
-                    c5 = 3;
-                    throw arg1;
-                  } else {
-                    tmp6 = arg1;
-                    if (arg0 === 2) {
-                      c5 = 3;
-                      const obj = { value: null, done: true };
+                      let obj = { value: null, done: true };
                       obj[0] = arg1;
                       return obj;
+                    } else {
+                      return { value: "HermesInternal", done: null };
+                    }
+                  } else {
+                    try {
+                      c5 = 2;
+                      if (0 === c4) {
+                        if (arg0 === 1) {
+                          c5 = 3;
+                          throw arg1;
+                        } else if (arg0 === 2) {
+                          c5 = 3;
+                          obj = { value: null, done: true };
+                          obj[0] = arg1;
+                          return obj;
+                        } else {
+                          let timestamp = tmp5;
+                          let closure_2 = tmp2;
+                          c4 = 1;
+                          c5 = 1;
+                          const obj1 = { value: null, done: false };
+                          obj1[0] = callback(outer1_2[11]).removeFile(callback, closure_1);
+                          return obj1;
+                        }
+                      } else if (1 === tmp5) {
+                        if (arg0 === 1) {
+                          c5 = 3;
+                          throw arg1;
+                        } else if (arg0 === 2) {
+                          c5 = 3;
+                          let obj2 = { value: null, done: true };
+                          obj2[0] = arg1;
+                          return obj2;
+                        } else {
+                          let obj5 = callback(outer1_2[11]);
+                          c4 = 2;
+                          c5 = 1;
+                          const obj3 = { value: null, done: false };
+                          obj3[0] = obj5.moveFile(callback, callback, closure_1);
+                          return obj3;
+                        }
+                      } else {
+                        if (2 === tmp5) {
+                          if (arg0 === 1) {
+                            c5 = 3;
+                            throw arg1;
+                          } else if (arg0 === 2) {
+                            c5 = 3;
+                            const obj4 = { value: null, done: true };
+                            obj4[0] = arg1;
+                            return obj4;
+                          } else {
+                            let tmp6 = null;
+                            if (arg1) {
+                              obj2 = callback(outer1_2[11]);
+                              c4 = 3;
+                              c5 = 1;
+                              obj5 = { value: null, done: false };
+                              obj5[0] = obj2.readFile(callback, closure_1, "utf8");
+                              return obj5;
+                            }
+                          }
+                        } else if (arg0 === 1) {
+                          c5 = 3;
+                          throw arg1;
+                        } else {
+                          tmp6 = arg1;
+                          if (arg0 === 2) {
+                            c5 = 3;
+                            obj = { value: null, done: true };
+                            obj[0] = arg1;
+                            return obj;
+                          }
+                        }
+                        c5 = 3;
+                        const obj6 = { value: null, done: true };
+                        obj6[0] = tmp6;
+                        return obj6;
+                      }
+                    } catch (tmp25) {
+                      c5 = tmp;
+                      throw tmp25;
                     }
                   }
-                  return tmp6;
                 })();
               });
               const _moveAndReadData = tmp;
@@ -333,10 +391,10 @@ let prototype = function NativeNotificationsManager() {
             }
             function normalizeTimestampToMs(joined) {
               if (null != joined) {
-                if (typeof joined === "number") {
+                if (typeof joined === "Object") {
                   const _Math = Math;
                   let rounded = Math.round(1000 * joined);
-                } else if (typeof joined === "string") {
+                } else if (typeof joined !== "__FORMATJS_LISTFORMAT_DATA__") {
                   const _parseInt = parseInt;
                   rounded = parseInt(joined, 10);
                 }
@@ -386,7 +444,7 @@ let prototype = function NativeNotificationsManager() {
                   if (obj13.isIOS()) {
                     c7 = 3;
                     logger = 1;
-                    const obj3 = { value: null, done: false };
+                    let obj3 = { value: null, done: false };
                     obj3[0] = outer1_9("notification_states_to_track", outer1_2);
                     return obj3;
                   } else {
@@ -453,7 +511,7 @@ let prototype = function NativeNotificationsManager() {
           obj1 = outer1_0(outer1_2[11]);
           c7 = 6;
           logger = 1;
-          const obj6 = { value: null, done: false };
+          let obj6 = { value: null, done: false };
           obj6[0] = obj1.removeFile(outer1_0, outer1_2);
           return obj6;
         }

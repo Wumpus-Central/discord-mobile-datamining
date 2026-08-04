@@ -1,3 +1,4 @@
+// discord_app/stores/AnalyticsTrackingStore.tsx
 import importDefaultResult from "fetchFingerprint";
 import encodeProperties from "encodeProperties";
 
@@ -9,7 +10,7 @@ encodeProperties = {
   waitFor: items,
   getFingerprint: importDefaultResult.getFingerprint,
   getSessionId() {
-    const session = require(6832) /* trackHeartbeat */.getSession();
+    const session = require(5726) /* trackHeartbeat */.getSession();
     return session.then((uuid) => {
       let sessionId;
       if (uuid != null) {
@@ -21,8 +22,7 @@ encodeProperties = {
   getLaunchSignature() {
     return require(698) /* expandEventProperties */.launchSignature;
   },
-  scheduleWhenIdle: require("setOriginWindow").requestSafeIdleCallback,
-  sendUnloadRequest: require("sendUnloadRequest").sendUnloadRequest
+  scheduleWhenIdle: require("setOriginWindow").requestSafeIdleCallback
 };
 encodeProperties = {
   CONNECTION_OPEN(arg0) {

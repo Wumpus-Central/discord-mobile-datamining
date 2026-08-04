@@ -1,3 +1,4 @@
+// discord_app/modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx
 import prototype from "prototype";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

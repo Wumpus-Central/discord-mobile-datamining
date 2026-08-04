@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useTrackPdpClick.tsx
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

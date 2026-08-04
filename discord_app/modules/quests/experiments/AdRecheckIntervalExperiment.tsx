@@ -1,3 +1,4 @@
+// discord_app/modules/quests/experiments/AdRecheckIntervalExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enableFastAdRecheck: false }, 3: { enableFastAdRecheck: true }, 4: { enableFastAdRecheck: true }, 5: { enableFastAdRecheck: true } };

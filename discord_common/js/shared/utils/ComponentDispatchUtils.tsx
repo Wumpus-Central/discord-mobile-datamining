@@ -1,3 +1,4 @@
+// discord_common/js/shared/utils/ComponentDispatchUtils.tsx
 let result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/ComponentDispatchUtils.tsx");
 class ComponentDispatcher {
   constructor() {

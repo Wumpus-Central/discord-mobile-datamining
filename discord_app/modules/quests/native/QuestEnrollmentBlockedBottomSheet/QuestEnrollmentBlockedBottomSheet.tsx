@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/QuestEnrollmentBlockedBottomSheet/QuestEnrollmentBlockedBottomSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import initializeState from "initializeState";
@@ -15,9 +16,9 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
     const _Date = Date;
     date = new Date();
   }
-  const tmp3Result = importDefault(6812)(date);
+  const tmp3Result = importDefault(6237)(date);
   ({ minutes, seconds } = tmp3Result);
-  const tmp3 = importDefault(6812);
+  const tmp3 = importDefault(6237);
   const padStartResult = String(tmp3Result.hours).padStart(2, "0");
   const StringResult = String(tmp3Result.hours);
   const padStartResult1 = String(minutes).padStart(2, "0");
@@ -31,7 +32,7 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
     const obj1 = { variant: "heading-xl/bold", children: null };
     const intl = require(1236) /* getSystemLocale */.intl;
     obj1[1] = intl.string(require(1236) /* getSystemLocale */.t["XEHDT/"]);
-    obj[1] = jsx(require(4281) /* Text */.Text, { variant: "heading-xl/bold", children: null });
+    obj[1] = jsx(require(4189) /* Text */.Text, { variant: "heading-xl/bold", children: null });
     obj[0] = <View style={null}>{null}</View>;
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.container;
@@ -41,9 +42,9 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
     const _HermesInternal = HermesInternal;
     obj4[0] = "" + padStartResult + ":" + padStartResult1 + ":" + padStartResult2;
     obj3[1] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t["+5XVH+"], obj4);
-    obj2[1] = jsx(require(4281) /* Text */.Text, { variant: "text-md/normal", children: null });
+    obj2[1] = jsx(require(4189) /* Text */.Text, { variant: "text-md/normal", children: null });
     obj[3] = <View style={null}>{null}</View>;
-    tmp12 = jsx(require(5338) /* Background */.BottomSheet, { style: null, children: null });
+    tmp12 = jsx(require(5247) /* Background */.BottomSheet, { style: null, children: null });
   }
   return tmp12;
 }

@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/tabs/pages/PeopleScreen.tsx
 import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations";
 import importAllResult from "noop";
 import teardown from "teardown";

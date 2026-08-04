@@ -1,3 +1,4 @@
+// discord_app/modules/contact_sync/native/ContactSyncAnalyticsUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { getIsOnboarding } from "ContactSyncModes";
 import { ContactPermissions } from "ContactSyncLandingPage";
@@ -22,7 +23,7 @@ export const trackFlowStart = function trackFlowStart(arg0) {
     phone = currentUser.phone;
   }
   let closure_1 = null != phone;
-  obj = _require(11947);
+  obj = _require(11785);
   const result = obj.checkContactPermissions();
   result.then((arg0) => {
     let tmp = null;
@@ -69,8 +70,8 @@ export const trackFlowStep = function trackFlowStep(LANDING, skip, back, locatio
   if (tmp) {
     obj = { skip: null };
     obj[0] = skip;
-    require(11950) /* trackNUFStep */.trackNUFStep(closure_8, LANDING, obj);
-    const obj3 = require(11950) /* trackNUFStep */;
+    require(11788) /* trackNUFStep */.trackNUFStep(closure_8, LANDING, obj);
+    const obj3 = require(11788) /* trackNUFStep */;
   }
   closure_8 = LANDING;
 };

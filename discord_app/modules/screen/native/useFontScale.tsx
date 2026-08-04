@@ -1,3 +1,4 @@
+// discord_app/modules/screen/native/useFontScale.tsx
 import noop from "noop";
 import getDimensionsStoreStateForEntry from "getDimensionsStoreStateForEntry";
 

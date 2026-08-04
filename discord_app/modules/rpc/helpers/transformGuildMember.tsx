@@ -1,3 +1,4 @@
+// discord_app/modules/rpc/helpers/transformGuildMember.tsx
 const result = require("set").fileFinishedImporting("modules/rpc/helpers/transformGuildMember.tsx");
 
 export default function transformGuildMember(userId) {

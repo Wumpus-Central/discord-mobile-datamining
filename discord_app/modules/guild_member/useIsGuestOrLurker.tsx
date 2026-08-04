@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member/useIsGuestOrLurker.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";

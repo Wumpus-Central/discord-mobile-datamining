@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/core/native/useAutoSettingsSearchSessionAnalytics.tsx
 import noop from "noop";
 import getState from "getState";
 import zustandStore from "zustandStore";
@@ -11,9 +12,9 @@ export const useAutoSettingsSearchSessionAnalytics = function useAutoSettingsSea
     state = state.getState();
     return state === stateFromStores(table[4]).AppStates.ACTIVE;
   });
-  const tmp2 = importDefault(8775)(stateFromStores);
+  const tmp2 = importDefault(8129)(stateFromStores);
   importDefault = tmp2;
-  importDefault(4711)(() => () => {
+  importDefault(4620)(() => () => {
     callback(table[7]).terminate();
   });
   const items1 = [stateFromStores, tmp2];

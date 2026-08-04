@@ -1,3 +1,4 @@
+// discord_app/modules/game_console/native/getConsoleColor.tsx
 let PLAYSTATION;
 let PLAYSTATION_STAGING;
 let XBOX;

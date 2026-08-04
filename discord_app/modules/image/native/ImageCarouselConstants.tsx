@@ -1,3 +1,4 @@
+// discord_app/modules/image/native/ImageCarouselConstants.tsx
 const result = require("set").fileFinishedImporting("modules/image/native/ImageCarouselConstants.tsx");
 
 export const IMAGE_CAROUSEL_TILE_HEIGHT = 60;

@@ -1,3 +1,4 @@
+// discord_app/modules/favorites/native/onboarding/useCanShowFavoritesGuildCoachmark.tsx
 import setContent from "setContent";
 import handleConnectionOpen from "handleConnectionOpen";
 
@@ -12,7 +13,7 @@ export default function useCanShowFavoritesGuildCoachmark() {
   const stateFromStores1 = require(589) /* initialize */.useStateFromStores(items1, () => open.isOpen());
   const obj2 = require(589) /* initialize */;
   let tmp4 = !stateFromStores;
-  const isModalOpen = require(4136) /* navigationToRootTabHelper */.useIsModalOpen();
+  const isModalOpen = require(4044) /* navigationToRootTabHelper */.useIsModalOpen();
   if (!stateFromStores) {
     tmp4 = !stateFromStores1;
   }

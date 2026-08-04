@@ -1,3 +1,4 @@
+// discord_app/modules/popout-window/PopoutWindowStore.native.tsx
 import { PersistedStore } from "initialize";
 
 let closure_0 = {};

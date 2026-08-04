@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/EnableReducedMotionSetting.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
 
@@ -17,7 +18,7 @@ createToggle = {
     if (arg0) {
       str = "reduce";
     }
-    const result = require(13617) /* setFontSize */.setPrefersReducedMotion(str);
+    const result = require(13521) /* setFontSize */.setPrefersReducedMotion(str);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

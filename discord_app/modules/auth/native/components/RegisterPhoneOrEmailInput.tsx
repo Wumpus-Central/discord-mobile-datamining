@@ -1,3 +1,4 @@
+// discord_app/modules/auth/native/components/RegisterPhoneOrEmailInput.tsx
 import noop from "noop";
 import handleSetLocationMetadata from "handleSetLocationMetadata";
 import useRegistrationUIStore from "useRegistrationUIStore";

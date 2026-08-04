@@ -1,3 +1,4 @@
+// discord_app/modules/autocompleter/sortByMatchScore.tsx
 const result = require("set").fileFinishedImporting("modules/autocompleter/sortByMatchScore.tsx");
 
 export default function sortByMatchScore(score, score2) {

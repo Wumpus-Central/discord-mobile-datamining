@@ -1,3 +1,4 @@
+// discord_app/modules/guild_themes/GuildThemeAnalyticsUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 
 const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemeAnalyticsUtils.tsx");

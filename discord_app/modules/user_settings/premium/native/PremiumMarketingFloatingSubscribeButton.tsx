@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/premium/native/PremiumMarketingFloatingSubscribeButton.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

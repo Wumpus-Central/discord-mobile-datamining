@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 
 const require = arg1;

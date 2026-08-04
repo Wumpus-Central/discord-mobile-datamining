@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/isPartyFull.tsx
 const result = require("set").fileFinishedImporting("modules/activities/utils/isPartyFull.tsx");
 
 export const isPartyFull = function isPartyFull(partySize) {

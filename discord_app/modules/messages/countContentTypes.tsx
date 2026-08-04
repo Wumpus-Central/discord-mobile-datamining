@@ -1,3 +1,4 @@
+// discord_app/modules/messages/countContentTypes.tsx
 const result = require("set").fileFinishedImporting("modules/messages/countContentTypes.tsx");
 
 export default function countContentTypes(content) {

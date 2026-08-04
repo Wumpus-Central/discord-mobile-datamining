@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/getIsInParty.tsx
 const result = require("set").fileFinishedImporting("modules/activities/utils/getIsInParty.tsx");
 
 export const getIsInParty = function getIsInParty(tmp8Result, activity) {

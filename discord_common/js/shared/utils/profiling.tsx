@@ -1,3 +1,4 @@
+// discord_common/js/shared/utils/profiling.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/profiling.tsx");
 
 export function mark(arg0) {

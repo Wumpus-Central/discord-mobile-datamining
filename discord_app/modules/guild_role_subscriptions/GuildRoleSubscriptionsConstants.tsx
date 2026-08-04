@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsConstants.tsx
 import { SubscriptionIntervalTypes } from "GuildFeatures";
 
 const items = [{ interval: SubscriptionIntervalTypes.DAY, interval_count: 1 }, { interval: SubscriptionIntervalTypes.DAY, interval_count: 7 }];

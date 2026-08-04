@@ -1,3 +1,4 @@
+// discord_app/stores/game_store/StoreListingStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import createFromServer from "createFromServer";
 import { Store } from "initialize";

@@ -1,3 +1,4 @@
+// discord_app/modules/guild/GuildPromptsActionCreators.tsx
 function viewPrompt(REAL_NAME_PROMPT, closure_0) {
   const importDefault = REAL_NAME_PROMPT;
   const dependencyMap = closure_0;

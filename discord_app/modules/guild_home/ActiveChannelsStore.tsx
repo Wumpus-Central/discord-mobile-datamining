@@ -1,3 +1,4 @@
+// discord_app/modules/guild_home/ActiveChannelsStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import { isGuildHomeChannel } from "set";

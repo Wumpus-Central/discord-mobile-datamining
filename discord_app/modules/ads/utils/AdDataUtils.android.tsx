@@ -1,3 +1,4 @@
+// discord_app/modules/ads/utils/AdDataUtils.android.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import adUser from "adUser";
@@ -11,8 +12,8 @@ export const getAdUser = function getAdUser(questContentName) {
   if (null == adUser) {
     if (!adUser.hasFetchFailed) {
       if (!adUser.isFetching) {
-        adUser = require(7112) /* _fetchAdUser */.fetchAdUser(questContentName);
-        const obj = require(7112) /* _fetchAdUser */;
+        adUser = require(6021) /* _fetchAdUser */.fetchAdUser(questContentName);
+        const obj = require(6021) /* _fetchAdUser */;
       }
       let resolved = new Promise((arg0) => {
         let closure_0 = arg0;

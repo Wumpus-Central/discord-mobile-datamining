@@ -1,3 +1,4 @@
+// discord_app/modules/calls/native/VideoBackground.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "set";
@@ -22,15 +23,15 @@ function useDominantRGBFromImage(arg0, arg1) {
     first = arg1[0];
     tmp = first;
   }
-  const tmp5 = first(8115)();
+  const tmp5 = first(7985)();
   const dependencyMap = tmp5;
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = tmp3(8116).cachedDominantColors[arg0];
+    hexToRgbResult = tmp3(7986).cachedDominantColors[arg0];
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _require(4129).hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
-    const obj2 = _require(4129);
+    hexToRgbResult = _require(4037).hexToRgb(tmp3(712).unsafe_rawColors.PRIMARY_800);
+    const obj2 = _require(4037);
   }
   const tmp8 = callback(importAllResult.useState(hexToRgbResult), 2);
   callback = tmp8[1];
@@ -42,7 +43,7 @@ function useDominantRGBFromImage(arg0, arg1) {
     }
     if (tmp2) {
       if (null == first(tmp5[8]).cachedDominantColors[closure_0]) {
-        if (typeof tmp === "number") {
+        if (typeof tmp === "Object") {
           const ImageManager = outer1_6.ImageManager;
           let dominantColorsLocalAsset = ImageManager.getDominantColorsLocalAsset(outer1_7.resolveAssetSource(tmp));
         } else {
@@ -87,7 +88,7 @@ class VideoBackground {
     c1 = undefined;
     id = undefined;
     tmp2 = jsxs();
-    tmp3 = f43083(url);
+    tmp3 = f42967(url);
     tmp4 = useDominantRGBFromImage(url, tmp3);
     combined = "rgb(" + tmp4.r + ", " + tmp4.g + ", " + tmp4.b + ")";
     tmp6 = c1;
@@ -233,15 +234,15 @@ let c4 = importAllResult;
 ({ EMPTY_STRING_SNOWFLAKE_ID: metroImportAll, NOOP: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ videoBackground: { alignItems: "center" }, videoDetailsSpacer: { paddingTop: 12 } });
-const memoizeResult = require("useDisplayProfile").memoize((num) => {
+const memoizeResult = require("useDisplayProfile").memoize((arg0) => {
   let tmp = null;
-  if (null != num) {
+  if (null != arg0) {
     tmp = null;
-    if ("" !== num) {
-      let tmp2 = num;
-      if (typeof num !== "number") {
+    if ("" !== arg0) {
+      let tmp2 = arg0;
+      if (typeof arg0 !== "Object") {
         const obj = { uri: null };
-        obj[0] = num;
+        obj[0] = arg0;
         tmp2 = obj;
       }
       tmp = tmp2;

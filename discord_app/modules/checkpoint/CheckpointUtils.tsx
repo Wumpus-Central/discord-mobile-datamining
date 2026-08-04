@@ -1,20 +1,21 @@
+// discord_app/modules/checkpoint/CheckpointUtils.tsx
 const items = [require("sleep").TimeUnits.HOURS, require("sleep").TimeUnits.MINUTES];
 const result = require("getSystemLocale").fileFinishedImporting("modules/checkpoint/CheckpointUtils.tsx");
 
 export const getVoiceDurationString = function getVoiceDurationString(totalVoiceMinutes) {
   let time;
   let unit;
-  let obj = require(4360) /* sleep */;
+  let obj = require(4269) /* sleep */;
   const timeAndUnit = obj.getTimeAndUnit(totalVoiceMinutes, items);
   ({ time, unit } = timeAndUnit);
-  const abbreviatedFormatter = require(7023) /* getDurationString */.getAbbreviatedFormatter();
+  const abbreviatedFormatter = require(5932) /* getDurationString */.getAbbreviatedFormatter();
   if (null == time) {
     const intl3 = tmp(1236).intl;
     return intl3.formatToPlainString(abbreviatedFormatter.minutes, { minutes: 0 });
   } else {
     const _Math = Math;
     const rounded = Math.round(time);
-    if (unit === tmp(4360).TimeUnits.HOURS) {
+    if (unit === tmp(4269).TimeUnits.HOURS) {
       const intl2 = tmp(1236).intl;
       obj = { hours: null };
       obj[0] = rounded;
@@ -27,29 +28,29 @@ export const getVoiceDurationString = function getVoiceDurationString(totalVoice
     }
     return formatToPlainStringResult;
   }
-  const obj2 = require(7023) /* getDurationString */;
+  const obj2 = require(5932) /* getDurationString */;
 };
 export const getCardAssetUrl = function getCardAssetUrl(cardId) {
   if (0 === cardId) {
-    return importDefault(8056);
+    return importDefault(7926);
   } else if (1 === cardId) {
-    return importDefault(8057);
+    return importDefault(7927);
   } else if (2 === cardId) {
-    return importDefault(8058);
+    return importDefault(7928);
   } else if (3 === cardId) {
-    return importDefault(8059);
+    return importDefault(7929);
   } else if (4 === cardId) {
-    return importDefault(8060);
+    return importDefault(7930);
   } else if (5 === cardId) {
-    return importDefault(8061);
+    return importDefault(7931);
   } else if (6 === cardId) {
-    return importDefault(8062);
+    return importDefault(7932);
   } else if (7 === cardId) {
-    return importDefault(8063);
+    return importDefault(7933);
   } else if (8 === cardId) {
-    return importDefault(8064);
+    return importDefault(7934);
   } else {
-    return importDefault(8065);
+    return importDefault(7935);
   }
 };
 export const getCheckpointPowerBarUnits = function getCheckpointPowerBarUnits(arg0) {

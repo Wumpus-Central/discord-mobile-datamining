@@ -1,3 +1,4 @@
+// discord_app/modules/saved_messages/SavedMessagesActions.tsx
 import dispatcher from "dispatcher";
 import getTimeSafe from "getTimeSafe";
 import { Endpoints } from "ME";
@@ -225,11 +226,11 @@ function _fetchAndUpdateSavedMessages() {
             callback = results.map((message) => {
               let messageRecord = null;
               if (null != message.message) {
-                let obj = callback(4504);
+                let obj = callback(4413);
                 messageRecord = obj.createMessageRecord(message.message);
               }
               obj = { message: messageRecord, saveData: null };
-              obj[1] = callback(8192).savedMessageDataToClient(message.save_data);
+              obj[1] = callback(9565).savedMessageDataToClient(message.save_data);
               return obj;
             });
             obj2 = callback(709);

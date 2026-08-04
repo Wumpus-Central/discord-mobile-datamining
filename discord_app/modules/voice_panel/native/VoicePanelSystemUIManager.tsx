@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/VoicePanelSystemUIManager.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import getParticipants from "getParticipants";

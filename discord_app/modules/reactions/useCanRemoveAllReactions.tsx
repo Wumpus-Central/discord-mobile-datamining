@@ -1,3 +1,4 @@
+// discord_app/modules/reactions/useCanRemoveAllReactions.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 

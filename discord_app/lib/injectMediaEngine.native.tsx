@@ -1,3 +1,4 @@
+// discord_app/lib/injectMediaEngine.native.tsx
 import inject from "inject";
 
 inject.inject({
@@ -12,7 +13,7 @@ inject.inject({
 
   },
   getVoiceEngine() {
-    return require(4335) /* logger */.default;
+    return require(4243) /* logger */.default;
   },
   getOpenH264LibraryPath() {
 

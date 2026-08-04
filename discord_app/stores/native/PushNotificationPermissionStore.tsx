@@ -1,3 +1,4 @@
+// discord_app/stores/native/PushNotificationPermissionStore.tsx
 import { DeviceSettingsStore } from "initialize";
 import set from "dispatcher";
 
@@ -37,7 +38,7 @@ prototype["initialize"] = function initialize(promptLastSeen) {
   HermesBuiltin.arraySpread(eligiblePromptTypes, tmp8);
   obj.eligiblePromptTypes = new Set(items.filter((arg0) => arg0 !== constants2.POST_REACTION_BANNER));
   const set = new Set(items.filter((arg0) => arg0 !== constants2.POST_REACTION_BANNER));
-  importDefault(10668).checkPermissions((sound) => {
+  importDefault(10708).checkPermissions((sound) => {
     let _alert;
     let badge;
     ({ alert: _alert, badge } = sound);

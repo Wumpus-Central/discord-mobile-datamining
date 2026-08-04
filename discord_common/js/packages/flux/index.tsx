@@ -1,3 +1,4 @@
+// discord_common/js/packages/flux/index.tsx
 import getClass from "getClass";
 import { Store } from "initialize";
 import areStatesEqual from "areStatesEqual";

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_config_gates/GuildConfigGatesStore.tsx
 import { Store } from "initialize";
 
 let closure_0 = {};

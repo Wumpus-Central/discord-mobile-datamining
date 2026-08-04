@@ -1,3 +1,4 @@
+// discord_app/modules/overlay/OverlaySupported.tsx
 import { isPlatformEmbedded as flag } from "set";
 
 if (flag) {

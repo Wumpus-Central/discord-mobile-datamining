@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx
 import noop from "noop";
 import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY";
 

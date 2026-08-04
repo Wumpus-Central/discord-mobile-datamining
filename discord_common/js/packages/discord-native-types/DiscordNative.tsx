@@ -1,3 +1,4 @@
+// discord_common/js/packages/discord-native-types/DiscordNative.tsx
 class SystemServiceNotAvailableError extends Error {
   constructor() {
     tmp = new tmp("System service not available", new.target);

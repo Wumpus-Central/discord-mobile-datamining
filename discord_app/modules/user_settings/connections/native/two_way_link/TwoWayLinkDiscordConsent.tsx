@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx
 import timestamp from "timestamp";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AndroidNotificationVibrationsSetting.tsx
 import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore";
 import createToggle from "createToggle";
 
@@ -24,8 +25,8 @@ const toggle = createToggle.createToggle({
     const isIOSResult = require(500) /* set */.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
-      tmp5 = !tmp2(14561).hasAndroidNotificationChannels();
-      const tmp2Result = tmp2(14561);
+      tmp5 = !tmp2(14461).hasAndroidNotificationChannels();
+      const tmp2Result = tmp2(14461);
     }
     if (tmp5) {
       tmp5 = null != tmp;
@@ -53,8 +54,8 @@ const obj = {
     const isIOSResult = require(500) /* set */.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
-      tmp5 = !tmp2(14561).hasAndroidNotificationChannels();
-      const tmp2Result = tmp2(14561);
+      tmp5 = !tmp2(14461).hasAndroidNotificationChannels();
+      const tmp2Result = tmp2(14461);
     }
     if (tmp5) {
       tmp5 = null != tmp;

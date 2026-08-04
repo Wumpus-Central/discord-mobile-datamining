@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import getHash from "getHash";
@@ -94,7 +95,7 @@ function useFetchCollectiblesCategoriesAndPurchases(paymentGateway) {
     countryCode = paymentGateway.countryCode;
   }
   obj[3] = countryCode;
-  const tmp2Result = importDefault(8091)(obj, arg1);
+  const tmp2Result = importDefault(7962)(obj, arg1);
   const isFetching = tmp2Result.isFetching;
   let stalePurchasesOK;
   ({ categories, fetchCategoriesError, refreshCategories } = tmp2Result);

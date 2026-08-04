@@ -1,3 +1,4 @@
+// discord_app/design/void/ThumbnailImage/native/ThumbnailImage.tsx
 import "noop";
 import { Image as _default } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

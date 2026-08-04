@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/getRemoteJoinableActivityPlatform.tsx
 import isConnected from "isConnected";
 import handleUpdate from "handleUpdate";
 import ME from "ME";
@@ -22,7 +23,7 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         remoteApplicationActivity = remoteApplicationActivity.getRemoteApplicationActivity(application_id);
         let tmp4 = null;
         if (null != remoteApplicationActivity) {
-          let tmp11Result = tmp11(10355);
+          let tmp11Result = tmp11(10490);
           tmp4 = null;
           if (!tmp11Result.isContextlessEmbeddedActivity(remoteApplicationActivity)) {
             if (null == remoteApplicationActivity.application_id) {

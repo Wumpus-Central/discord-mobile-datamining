@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding/native/GuildOnboardingModal.tsx
 import NavigationStack from "NavigationStack";
 import get from "get";
 import ensureGuildLoaded from "ensureGuildLoaded";

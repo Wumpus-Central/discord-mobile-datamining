@@ -1,3 +1,4 @@
+// discord_app/modules/directory_channels/native/components/GuildDirectoryEditDescriptionTemplate.tsx
 import closure_3 from "DirectoryEntryTypes";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

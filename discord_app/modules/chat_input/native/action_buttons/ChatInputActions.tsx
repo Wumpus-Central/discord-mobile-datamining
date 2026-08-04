@@ -1,3 +1,4 @@
+// discord_app/modules/chat_input/native/action_buttons/ChatInputActions.tsx
 import renderChatInputActionButtonGiftAndThread from "renderChatInputActionButtonGiftAndThread";
 import importAllResult from "ImageIcon";
 import TextAreaCta from "TextAreaCta";

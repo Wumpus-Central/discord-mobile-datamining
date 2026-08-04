@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/screens/home/FrecencySectionStore.tsx
 import { PersistedStore } from "initialize";
 
 let obj = { APPS: "apps", COMMANDS: "commands" };

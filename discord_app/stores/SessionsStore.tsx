@@ -1,3 +1,4 @@
+// discord_app/stores/SessionsStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
 

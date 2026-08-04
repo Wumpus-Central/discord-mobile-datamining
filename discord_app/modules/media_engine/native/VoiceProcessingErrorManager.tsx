@@ -1,3 +1,4 @@
+// discord_app/modules/media_engine/native/VoiceProcessingErrorManager.tsx
 import "initialize";
 
 let require = arg1;
@@ -13,10 +14,10 @@ let prototype = function VoiceProcessingErrorManager() {
     }
   };
   applyArgumentsResult.handleNoiseCancellationError = function handleNoiseCancellationError() {
-    const result = applyArgumentsResult(3985).presentNoiseCancellationError();
+    const result = applyArgumentsResult(3893).presentNoiseCancellationError();
   };
   applyArgumentsResult.handleVoiceActivityDetectionError = function handleVoiceActivityDetectionError() {
-    const result = applyArgumentsResult(3985).presentVoiceActivityDetectionError();
+    const result = applyArgumentsResult(3893).presentVoiceActivityDetectionError();
   };
   return applyArgumentsResult;
 }.prototype;

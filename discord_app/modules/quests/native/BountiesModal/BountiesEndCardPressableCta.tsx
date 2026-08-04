@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/BountiesModal/BountiesEndCardPressableCta.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { END_CARD_IMAGE_SIZE } from "END_CARD_IMAGE_SIZE";

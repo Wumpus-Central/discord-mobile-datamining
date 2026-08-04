@@ -1,3 +1,4 @@
+// discord_app/lib/VideoQualityStats.tsx
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
@@ -56,7 +57,7 @@ RawVideoStats["parseInboundStats"] = function parseInboundStats(found, closure_1
   let framesDecodeErrors;
   let framesDropped;
   let totalDecodeTime;
-  if (typeof RawVideoStats !== "function") {
+  if (typeof RawVideoStats !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(RawVideoStats.prototype);
@@ -176,7 +177,7 @@ RawVideoStats["parseOutboundStats"] = function parseOutboundStats(resolution, cl
   let framesSent;
   let freezeCount;
   let packetsLost;
-  if (typeof RawVideoStats !== "function") {
+  if (typeof RawVideoStats !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let obj = Object.create(RawVideoStats.prototype);
@@ -492,7 +493,7 @@ prototype["appendAndIncrementStats"] = function appendAndIncrementStats(parseInb
     if (self.statsWindow.length < 2) {
       if (!self.hasSeededAggregation) {
         self.hasSeededAggregation = true;
-        if (typeof RawVideoStats !== "function") {
+        if (typeof RawVideoStats !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const obj = Object.create(RawVideoStats.prototype);

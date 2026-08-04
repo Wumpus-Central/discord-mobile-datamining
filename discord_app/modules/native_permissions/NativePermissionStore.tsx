@@ -1,3 +1,4 @@
+// discord_app/modules/native_permissions/NativePermissionStore.tsx
 import { NativePermissionStates } from "NativePermissionStatus";
 import { AnalyticEvents } from "ME";
 import { DeviceSettingsStore } from "initialize";

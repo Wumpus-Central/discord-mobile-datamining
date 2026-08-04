@@ -1,3 +1,4 @@
+// discord_app/modules/opt_in_channels/FavoritesSuggestionStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

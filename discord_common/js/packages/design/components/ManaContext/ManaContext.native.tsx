@@ -1,3 +1,4 @@
+// discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

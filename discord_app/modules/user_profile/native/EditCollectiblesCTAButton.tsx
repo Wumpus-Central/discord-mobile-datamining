@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/EditCollectiblesCTAButton.tsx
 import importAllResult from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { CollectiblesMobileShopScreen as closure_5 } from "items";

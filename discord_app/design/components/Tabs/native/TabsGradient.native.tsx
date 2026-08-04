@@ -1,9 +1,10 @@
+// discord_app/design/components/Tabs/native/TabsGradient.native.tsx
 import noop from "noop";
 import { HorizontalGradient } from "ME";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4146";
+import importDefaultResult from "module_4054";
 
 let c4;
 let c5;

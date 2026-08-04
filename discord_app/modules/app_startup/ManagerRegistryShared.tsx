@@ -1,3 +1,4 @@
+// discord_app/modules/app_startup/ManagerRegistryShared.tsx
 import set from "set";
 
 function populateMap(actions) {

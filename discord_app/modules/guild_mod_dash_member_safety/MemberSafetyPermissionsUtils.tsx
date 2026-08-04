@@ -1,3 +1,4 @@
+// discord_app/modules/guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

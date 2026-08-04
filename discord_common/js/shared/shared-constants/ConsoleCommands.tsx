@@ -1,3 +1,4 @@
+// discord_common/js/shared/shared-constants/ConsoleCommands.tsx
 import set from "set";
 
 const obj = { ALL: null };

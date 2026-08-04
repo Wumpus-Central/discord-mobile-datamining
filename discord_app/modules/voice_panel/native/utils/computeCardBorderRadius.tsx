@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/utils/computeCardBorderRadius.tsx
 import VoicePanelModes from "VoicePanelModes";
 
 VoicePanelModes = VoicePanelModes.VoicePanelModes;

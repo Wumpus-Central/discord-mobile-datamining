@@ -1,3 +1,4 @@
+// discord_app/utils/native/ClientInfoUtils.tsx
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("utils/native/ClientInfoUtils.tsx");
@@ -20,10 +21,10 @@ export const getConstants = function getConstants() {
 };
 export const getBuildNumberLabel = function getBuildNumberLabel() {
   const items = ["0", "123456", "1234567890"];
-  let str = "6151";
-  if (items.includes("6151")) {
+  let str = "6119";
+  if (items.includes("6119")) {
     const _HermesInternal = HermesInternal;
-    str = "dev (" + "6151" + ")";
+    str = "dev (" + "6119" + ")";
   }
   return str;
 };

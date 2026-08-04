@@ -1,3 +1,4 @@
+// discord_app/actions/ConsentActionCreators.tsx
 import { Endpoints } from "ME";
 
 function handleRequestSuccess(body) {

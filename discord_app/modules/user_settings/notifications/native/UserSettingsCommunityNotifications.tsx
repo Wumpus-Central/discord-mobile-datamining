@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/notifications/native/UserSettingsCommunityNotifications.tsx
 import "noop";
 import computeAlertSettings from "computeAlertSettings";
 import jsxProd from "jsxProd";
@@ -47,8 +48,8 @@ export default function UserSettingsCommunityNotifications() {
       obj[2] = items;
       return outer1_5(stateFromStores(outer1_2[8]).TableRowGroup, obj, arg0);
     });
-    obj[0] = callback(tmp2(4693).Stack, obj);
-    tmp5 = callback(tmp2(7777).Form, obj);
+    obj[0] = callback(tmp2(4602).Stack, obj);
+    tmp5 = callback(tmp2(7639).Form, obj);
   }
   return tmp5;
 };

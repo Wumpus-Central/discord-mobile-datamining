@@ -1,3 +1,4 @@
+// discord_app/components_native/warnings/GatedContent.tsx
 import noop from "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

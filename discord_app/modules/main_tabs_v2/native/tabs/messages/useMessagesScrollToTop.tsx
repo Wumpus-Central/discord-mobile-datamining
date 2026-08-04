@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 

@@ -1,3 +1,4 @@
+// discord_app/modules/notifications/NotificationSettingsExperiments.tsx
 import ApexExperiment from "ApexExperiment";
 
 let obj = { "2026-05-noisier-notif-settings-defaults": null };

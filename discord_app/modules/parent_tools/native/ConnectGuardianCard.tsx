@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/native/ConnectGuardianCard.tsx
 import Button from "Button";
 import { View } from "Text";
 import mergeGuildAvatar from "mergeGuildAvatar";

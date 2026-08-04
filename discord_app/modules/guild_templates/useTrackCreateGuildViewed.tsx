@@ -1,3 +1,4 @@
+// discord_app/modules/guild_templates/useTrackCreateGuildViewed.tsx
 import noop from "noop";
 import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
 import { AnalyticEvents } from "ME";

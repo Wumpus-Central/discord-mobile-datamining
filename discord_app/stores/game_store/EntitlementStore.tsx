@@ -1,3 +1,4 @@
+// discord_app/stores/game_store/EntitlementStore.tsx
 import createFromServer from "createFromServer";
 import setLibraryApplications from "setLibraryApplications";
 import addSku from "addSku";
@@ -199,8 +200,8 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationI
     }
     let tmp13 = null == libraryApplication || libraryApplication.sku.id !== arg1;
     if (!tmp13) {
-      tmp13 = !require(4329) /* getComboId */.isUserEntitledToLibraryApplication(libraryApplication);
-      const obj3 = require(4329) /* getComboId */;
+      tmp13 = !require(4237) /* getComboId */.isUserEntitledToLibraryApplication(libraryApplication);
+      const obj3 = require(4237) /* getComboId */;
     }
     let tmp16 = !tmp13;
     if (tmp13) {

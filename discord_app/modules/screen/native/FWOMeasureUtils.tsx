@@ -1,3 +1,4 @@
+// discord_app/modules/screen/native/FWOMeasureUtils.tsx
 import NativeFWOMeasureModule from "NativeFWOMeasureModule";
 
 const __measureInWindowForFWO = global.__measureInWindowForFWO;

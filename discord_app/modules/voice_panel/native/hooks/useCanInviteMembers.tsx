@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/hooks/useCanInviteMembers.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

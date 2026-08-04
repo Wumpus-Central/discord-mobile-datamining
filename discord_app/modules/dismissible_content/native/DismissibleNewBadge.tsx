@@ -1,3 +1,4 @@
+// discord_app/modules/dismissible_content/native/DismissibleNewBadge.tsx
 import "noop";
 import { Gradients } from "items";
 import { jsx } from "jsxProd";
@@ -21,7 +22,7 @@ export default function DismissibleNewTag(dismissibleContent) {
   let closure_6;
   closure_6 = createCacheKey();
   let items = [dismissibleContent];
-  return jsx(importDefault(9916), {
+  return jsx(importDefault(9676), {
     contentTypes: items,
     children(visibleContent) {
       if (visibleContent.visibleContent !== dismissibleContent) {

@@ -1,3 +1,4 @@
+// discord_app/modules/notifications/native/playInAppMessageSound.tsx
 import DesktopNotificationTypes from "DesktopNotificationTypes";
 import { isInAppMessageSoundsEnabled as closure_3 } from "isInAppMessageSoundsEnabled";
 import { InAppNotificationTypes } from "ME";
@@ -15,8 +16,8 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
           const _Date = Date;
           const timestamp = Date.now();
           if (timestamp - timestamp >= 1000) {
-            tmp8(9694).playSound(tmp3, 0.4);
-            const tmp8Result = tmp8(9694);
+            tmp8(10285).playSound(tmp3, 0.4);
+            const tmp8Result = tmp8(10285);
           }
         }
         tmp3 = message1;

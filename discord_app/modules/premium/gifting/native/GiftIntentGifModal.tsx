@@ -1,11 +1,12 @@
+// discord_app/modules/premium/gifting/native/GiftIntentGifModal.tsx
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
-import module_9848 from "module_9848";
+import module_9607 from "module_9607";
 import { View } from "getSystemLocale";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { AnalyticEvents } from "ME";
 import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import jsxProd from "module_4490";
+import jsxProd from "module_4399";
 import createCacheKey from "createCacheKey";
 
 let c10;

@@ -1,3 +1,4 @@
+// discord_app/modules/billing/native/GenericIAPStore.tsx
 import { Store } from "initialize";
 
 const require = arg1;
@@ -16,7 +17,7 @@ prototype["genericProductsLoaded"] = function genericProductsLoaded() {
     tmp = importDefault(12).filter(c3, (identifier) => {
       const GenericProductIds = callback(table[2]).GenericProductIds;
       return GenericProductIds.includes(identifier.identifier);
-    }).length === require(5770) /* SubscriptionPlans */.GenericProductIds.length;
+    }).length === require(5679) /* SubscriptionPlans */.GenericProductIds.length;
     const arr = importDefault(12);
   }
   return tmp;

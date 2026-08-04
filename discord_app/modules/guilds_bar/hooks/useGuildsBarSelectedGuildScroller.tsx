@@ -1,3 +1,4 @@
+// discord_app/modules/guilds_bar/hooks/useGuildsBarSelectedGuildScroller.tsx
 import noop from "noop";
 import handleConnectionOpen from "handleConnectionOpen";
 

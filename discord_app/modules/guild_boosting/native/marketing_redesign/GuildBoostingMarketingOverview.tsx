@@ -1,3 +1,4 @@
+// discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx
 import _slicedToArray from "_slicedToArray";
 import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta";
 import { ScrollView } from "fetchSubscriptionPlansForSKU";
@@ -83,9 +84,9 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items3);
   const effect1 = obj3.useEffect(() => {
     guildBoostSlots(stateFromStores[16]).wait(() => {
-      const premiumSubscriptionPlans = callback(5786).fetchPremiumSubscriptionPlans();
-      const obj = callback(5786);
-      const paymentSources = callback(4604).fetchPaymentSources();
+      const premiumSubscriptionPlans = callback(6304).fetchPremiumSubscriptionPlans();
+      const obj = callback(6304);
+      const paymentSources = callback(4513).fetchPaymentSources();
     });
   }, []);
   let tmp18 = null;

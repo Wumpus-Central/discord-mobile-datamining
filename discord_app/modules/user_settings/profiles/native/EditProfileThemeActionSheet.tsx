@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/profiles/native/EditProfileThemeActionSheet.tsx
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -24,7 +25,7 @@ export default function EditProfileThemeActionSheet(onResetTheme) {
   obj = { style: tmp.nitroWheel };
   obj[1] = callback(onResetTheme(1297).NitroWheel, obj);
   ({ titleWrapper: obj2[2], titleContainer: obj2[3] } = tmp);
-  const items = [callback(onResetTheme(5337).BottomSheetTitleHeader, obj), ];
+  const items = [callback(onResetTheme(5246).BottomSheetTitleHeader, obj), ];
   const obj1 = { hasIcons: false, children: null };
   const obj2 = { label: null, subLabel: null, onPress: null };
   const intl2 = onResetTheme(1236).intl;
@@ -35,8 +36,8 @@ export default function EditProfileThemeActionSheet(onResetTheme) {
     onResetTheme();
     outer1_1(outer1_2[10]).hideActionSheet();
   };
-  obj1[1] = callback(onResetTheme(5315).TableRow, obj2);
-  items[1] = callback(onResetTheme(5649).TableRowGroup, obj1);
+  obj1[1] = callback(onResetTheme(5224).TableRow, obj2);
+  items[1] = callback(onResetTheme(5558).TableRowGroup, obj1);
   obj[0] = items;
-  return callback2(onResetTheme(5646).ActionSheet, obj);
+  return callback2(onResetTheme(5555).ActionSheet, obj);
 };

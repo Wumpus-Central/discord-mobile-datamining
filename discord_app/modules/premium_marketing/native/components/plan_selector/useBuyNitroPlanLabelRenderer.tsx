@@ -1,3 +1,4 @@
+// discord_app/modules/premium_marketing/native/components/plan_selector/useBuyNitroPlanLabelRenderer.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import _getSystemLocale from "_getSystemLocale";

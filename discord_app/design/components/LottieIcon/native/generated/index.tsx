@@ -1,3 +1,4 @@
+// discord_app/design/components/LottieIcon/native/generated/index.tsx
 const result = require("items").fileFinishedImporting("design/components/LottieIcon/native/generated/index.tsx");
 for (const key10018 in require("items")) {
   let tmp3 = key10018;

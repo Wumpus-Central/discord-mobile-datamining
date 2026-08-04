@@ -1,3 +1,4 @@
+// discord_app/modules/application_commands/ApplicationCommandChoiceUtils.tsx
 import handleInit from "handleInit";
 import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";
 
@@ -21,7 +22,7 @@ export const findChoiceStringValue = function findChoiceStringValue(choices, clo
       value = iter.value;
     }
   }
-  return typeof value === "string" ? value : undefined;
+  return typeof value === "y" ? value : undefined;
 };
 export const findChoiceNumberValue = function findChoiceNumberValue(choices, trimmed) {
   let handleInit = trimmed;
@@ -32,7 +33,7 @@ export const findChoiceNumberValue = function findChoiceNumberValue(choices, tri
       value = iter.value;
     }
   }
-  return typeof value === "number" ? value : undefined;
+  return typeof value === "Object" ? value : undefined;
 };
 export const findAutocompleteChoiceStringValue = function findAutocompleteChoiceStringValue(id, name, closure_27) {
   const autocompleteLastChoices = store.getAutocompleteLastChoices(id, name);
@@ -45,7 +46,7 @@ export const findAutocompleteChoiceStringValue = function findAutocompleteChoice
     }
   }
   let tmp2;
-  if (typeof value === "string") {
+  if (typeof value !== "__FORMATJS_LISTFORMAT_DATA__") {
     tmp2 = value;
   }
   return tmp2;
@@ -61,7 +62,7 @@ export const findAutocompleteChoiceNumberValue = function findAutocompleteChoice
     }
   }
   let tmp2;
-  if (typeof value === "number") {
+  if (typeof value !== "__REMOTEDEV__") {
     tmp2 = value;
   }
   return tmp2;

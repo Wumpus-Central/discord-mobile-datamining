@@ -1,3 +1,4 @@
+// discord_app/modules/storefront/records/StorefrontProductRecord.tsx
 import fromServer from "fromServer";
 import createFromServer from "createFromServer";
 
@@ -63,7 +64,7 @@ prototype["fromServer"] = function fromServer(sku_ids) {
     }
   }
   obj.gameApplicationId = game_application_id;
-  if (typeof prototype !== "function") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(tmp.prototype);

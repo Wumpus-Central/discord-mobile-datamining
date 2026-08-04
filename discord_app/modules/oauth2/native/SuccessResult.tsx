@@ -1,3 +1,4 @@
+// discord_app/modules/oauth2/native/SuccessResult.tsx
 import SafeAreaPaddingView from "SafeAreaPaddingView";
 import get_ActivityIndicator from "getBestActiveInput";
 import ensureGuildLoaded from "ensureGuildLoaded";

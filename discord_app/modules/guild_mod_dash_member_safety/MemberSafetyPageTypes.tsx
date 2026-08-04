@@ -1,3 +1,4 @@
+// discord_app/modules/guild_mod_dash_member_safety/MemberSafetyPageTypes.tsx
 const obj = { ALL_MEMBERS: "ALL_MEMBERS" };
 const SUBMITTED = require("MAX_RESULTS_PER_PAGE").GuildJoinRequestApplicationStatuses.SUBMITTED;
 obj.PENDING = SUBMITTED;

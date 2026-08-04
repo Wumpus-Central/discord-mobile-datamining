@@ -1,3 +1,4 @@
+// discord_app/modules/webauthn/WebAuthnTypes.tsx
 const prototype = function IgnorableWebAuthnError() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;

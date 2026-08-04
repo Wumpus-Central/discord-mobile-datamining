@@ -1,3 +1,4 @@
+// discord_app/modules/premium/tiered_tenure_badging/hooks/useNextTenureBadge.tsx
 import GuildFeatures from "GuildFeatures";
 
 let c3;
@@ -6,10 +7,10 @@ let obj1;
 const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useNextTenureBadge.tsx");
 
 export const useNextTenureBadge = function useNextTenureBadge() {
-  const tieredTenureBadgeData = require(9428) /* usePremiumSince */.useTieredTenureBadgeData();
+  const tieredTenureBadgeData = require(8434) /* usePremiumSince */.useTieredTenureBadgeData();
   if (null == tieredTenureBadgeData) {
     return null;
-  } else if (tieredTenureBadgeData.status === tmp(9428).TieredTenureBadgeStatus.UPCOMING) {
+  } else if (tieredTenureBadgeData.status === tmp(8434).TieredTenureBadgeStatus.UPCOMING) {
     return tieredTenureBadgeData;
   } else {
     const index = closure_2.indexOf(tieredTenureBadgeData.id);
@@ -22,6 +23,6 @@ export const useNextTenureBadge = function useNextTenureBadge() {
     }
     return tmp7;
   }
-  const obj = require(9428) /* usePremiumSince */;
+  const obj = require(8434) /* usePremiumSince */;
   tmp = require;
 };

@@ -1,3 +1,4 @@
+// discord_app/design/components/TagListInput/native/TagListInputTag.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -67,7 +68,7 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   const intl = require(1236) /* getSystemLocale */.intl;
   let obj = { text: tag.text };
   const formatToPlainStringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["0Vb9FQ"], obj);
-  ({ onAccessibilityAction, accessibilityActions } = importDefault(8935)(() => callback("remove"), formatToPlainStringResult));
+  ({ onAccessibilityAction, accessibilityActions } = importDefault(8297)(() => callback("remove"), formatToPlainStringResult));
   const items = [tmp2.tagWrapper, , , ];
   let prop;
   if (selected) {
@@ -110,7 +111,7 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   }
   obj1[3] = str;
   obj1[4] = tag.text;
-  items1[1] = callback(require(4281) /* Text */.Text, obj1);
+  items1[1] = callback(require(4189) /* Text */.Text, obj1);
   obj[6] = items1;
-  return closure_5(require(4812) /* PressableBase */.PressableOpacity, obj);
+  return closure_5(require(4721) /* PressableBase */.PressableOpacity, obj);
 };

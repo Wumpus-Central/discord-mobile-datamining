@@ -1,3 +1,4 @@
+// discord_app/modules/instant_invite/native/useInviteSuggestionRows.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -42,7 +43,7 @@ export default function _default(arg0, arg1, arg2, arg3) {
     } else {
       items = isFetchingRows.getMemberIds(lib.guild_id);
     }
-    let obj = lib(9002);
+    let obj = lib(10099);
     obj = { omitUserIds: null, guild: null, channel: null, inviteTargetType: null };
     obj[0] = new Set(items);
     obj[1] = guild.getGuild(lib.guild_id);

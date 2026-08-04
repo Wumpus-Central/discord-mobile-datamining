@@ -1,3 +1,4 @@
+// discord_app/modules/channel/useTextareaPlaceholderAndLabels.tsx
 import ME from "ME";
 
 let c3;
@@ -16,8 +17,8 @@ export default function useTextareaPlaceholderAndLabels(isCreatingThread) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp2 = importDefault(4475)(channel, true);
-  const tmp3 = importDefault(4475)(channel, false);
+  const tmp2 = importDefault(4384)(channel, true);
+  const tmp3 = importDefault(4384)(channel, false);
   if (null != channel) {
     if (null != tmp2) {
       if (flag) {

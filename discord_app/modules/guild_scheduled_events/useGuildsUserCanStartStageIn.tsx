@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx
 import comparator from "comparator";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

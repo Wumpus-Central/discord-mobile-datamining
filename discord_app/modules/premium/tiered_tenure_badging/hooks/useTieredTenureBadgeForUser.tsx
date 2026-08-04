@@ -1,3 +1,4 @@
+// discord_app/modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 
 const require = arg1;

@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/hooks/useShouldShowMutualInfo.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
@@ -11,6 +12,6 @@ export default function useShouldShowMutualInfo(id) {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp2 = importDefault(12180)(id);
-  return id !== id.id && !importDefault(12180)(id);
+  const tmp2 = importDefault(11998)(id);
+  return id !== id.id && !importDefault(11998)(id);
 };

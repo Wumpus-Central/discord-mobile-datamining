@@ -1,3 +1,4 @@
+// discord_app/stores/VoiceChannelSettingsManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import bitrate from "bitrate";
 import ensureGuildLoaded from "ensureGuildLoaded";

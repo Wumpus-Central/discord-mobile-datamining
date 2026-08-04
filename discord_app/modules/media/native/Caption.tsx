@@ -1,3 +1,4 @@
+// discord_app/modules/media/native/Caption.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

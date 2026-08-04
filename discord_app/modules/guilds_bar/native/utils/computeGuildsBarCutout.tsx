@@ -1,3 +1,4 @@
+// discord_app/modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx
 import { PixelRatio } from "get ActivityIndicator";
 import { GUILD_ITEM_SIZE } from "GUILD_ITEM_SIZE";
 
@@ -23,7 +24,7 @@ export default function computeGuildsBarCutout(containerSize) {
   const roundToNearestPixelResult = PixelRatio.roundToNearestPixel(BADGE_SIZE + 2 * BADGE_PADDING);
   const roundToNearestPixelResult1 = PixelRatio.roundToNearestPixel(BADGE_SIZE2 + 2 * BADGE_PADDING);
   const obj = { shape: null, x: 0, y: 0, width: null, height: null, cornerRadius: null };
-  obj[0] = require(8103) /* SolidCutout */.CutoutShape.RoundedRect;
+  obj[0] = require(7974) /* SolidCutout */.CutoutShape.RoundedRect;
   obj[3] = roundToNearestPixelResult;
   obj[4] = roundToNearestPixelResult1;
   obj[5] = PixelRatio.roundToNearestPixel(Math.min(roundToNearestPixelResult, roundToNearestPixelResult1) / 2);

@@ -1,3 +1,4 @@
+// discord_app/modules/voice_calls/native/CallStateHooks.tsx
 import getParticipants from "getParticipants";
 import fetchFingerprint from "fetchFingerprint";
 import callConnect from "callConnect";
@@ -58,7 +59,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(10662)();
+  const tmp3 = id(8938)();
   dependencyMap = tmp3;
   const items2 = [getRTCConnectionId];
   stateFromStores = require(589) /* initialize */.useStateFromStores(items2, getRTCConnectionId.getRTCConnectionId, []);

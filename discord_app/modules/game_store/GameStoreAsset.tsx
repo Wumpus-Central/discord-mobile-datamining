@@ -1,3 +1,4 @@
+// discord_app/modules/game_store/GameStoreAsset.tsx
 const result = require("set").fileFinishedImporting("modules/game_store/GameStoreAsset.tsx");
 
 export const transformStoreAssetFromServer = function transformStoreAssetFromServer(box_art) {

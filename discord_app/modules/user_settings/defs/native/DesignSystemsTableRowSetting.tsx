@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DesignSystemsTableRowSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -10,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TABLE_ROW,
   getComponent() {
-    return require(14683) /* MyTableRow */.default;
+    return require(14583) /* MyTableRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

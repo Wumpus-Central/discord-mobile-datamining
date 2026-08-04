@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/useRequestToSpeakPermission.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -14,8 +15,8 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
   const items1 = [id];
   const stateFromStores = _require(589).useStateFromStores(items, () => outer1_5.getChannel(closure_0), items1);
   let obj = _require(589);
-  const canEveryoneRoleResult = stateFromStores(3918).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
-  const obj2 = stateFromStores(3918);
+  const canEveryoneRoleResult = stateFromStores(3826).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
+  const obj2 = stateFromStores(3826);
   [tmp4, tmp5] = callback(React.useState(canEveryoneRoleResult), 2);
   const dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {

@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx");
 
 export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJoinContentPropsEqual(streamingMembers) {

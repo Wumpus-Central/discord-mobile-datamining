@@ -1,3 +1,4 @@
+// discord_app/hooks/useThrottle.tsx
 import noop from "noop";
 
 const require = arg1;
@@ -37,7 +38,7 @@ export const useThrottledState = (stateFromStores) => {
   }
   let current2;
   let ref1;
-  if (typeof useThrottledFunction !== "function") {
+  if (typeof useThrottledFunction !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   _require = tmp;

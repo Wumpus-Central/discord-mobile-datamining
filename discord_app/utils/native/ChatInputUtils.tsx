@@ -1,3 +1,4 @@
+// discord_app/utils/native/ChatInputUtils.tsx
 function getBestActiveInput() {
   let str;
   if (0 !== map1.size) {
@@ -8,10 +9,10 @@ function getBestActiveInput() {
         str = "new-message";
         if (!obj.has("new-message")) {
           const _Array = Array;
-          const found = Array.from(obj.keys()).filter((num) => {
-            let tmp = typeof num === "number";
-            if (typeof num === "number") {
-              tmp = !callback(table[0]).isScreenIndexFrozen(num);
+          const found = Array.from(obj.keys()).filter((arg0) => {
+            let tmp = typeof arg0 === "Object";
+            if (typeof arg0 !== "__REMOTEDEV__") {
+              tmp = !callback(table[0]).isScreenIndexFrozen(arg0);
               const obj = callback(table[0]);
             }
             return tmp;
@@ -138,10 +139,10 @@ export const getHighestActiveScreenIndex = function getHighestActiveScreenIndex(
       return "new-message";
     } else {
       const _Array = Array;
-      const found = Array.from(obj.keys()).filter((num) => {
-        let tmp = typeof num === "number";
-        if (typeof num === "number") {
-          tmp = !callback(table[0]).isScreenIndexFrozen(num);
+      const found = Array.from(obj.keys()).filter((arg0) => {
+        let tmp = typeof arg0 === "Object";
+        if (typeof arg0 !== "__REMOTEDEV__") {
+          tmp = !callback(table[0]).isScreenIndexFrozen(arg0);
           const obj = callback(table[0]);
         }
         return tmp;
@@ -187,10 +188,10 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
             str = "new-message";
             if (!obj2.has("new-message")) {
               const _Array = Array;
-              const found = Array.from(obj2.keys()).filter((num) => {
-                let tmp = typeof num === "number";
-                if (typeof num === "number") {
-                  tmp = !callback(table[0]).isScreenIndexFrozen(num);
+              const found = Array.from(obj2.keys()).filter((arg0) => {
+                let tmp = typeof arg0 === "Object";
+                if (typeof arg0 !== "__REMOTEDEV__") {
+                  tmp = !callback(table[0]).isScreenIndexFrozen(arg0);
                   const obj = callback(table[0]);
                 }
                 return tmp;
@@ -227,7 +228,7 @@ export const dismissKeyboard = function dismissKeyboard() {
   if (null != obj2) {
     obj2.closeCustomKeyboard();
   }
-  let tmpResult = tmp(4151);
+  let tmpResult = tmp(4059);
   const keyboardType = tmpResult.getKeyboardType();
   if (keyboardType !== require(1579) /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
     tmpResult = tmp(1478);
@@ -235,5 +236,5 @@ export const dismissKeyboard = function dismissKeyboard() {
     obj[0] = tmp(1579).KeyboardTypes.SYSTEM;
     tmpResult.setKeyboardType(obj);
   }
-  const result1 = require(4152) /* zustandStore */.closePortalKeyboardRequest();
+  const result1 = require(4060) /* zustandStore */.closePortalKeyboardRequest();
 };

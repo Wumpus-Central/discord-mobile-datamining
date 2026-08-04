@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/hooks/useSubmittedGuildJoinRequestTotal.tsx
 import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
 
 const require = arg1;

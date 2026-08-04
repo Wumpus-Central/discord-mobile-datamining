@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 import calculateAppliedBoosts from "calculateAppliedBoosts";

@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/base_components/ViewAllRow.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -21,8 +22,8 @@ export default function ViewAllRow(title) {
   const obj1 = { color: "text-brand", variant: "text-md/semibold", children: null };
   const intl2 = tmp3(1236).intl;
   obj1[2] = intl2.format(require(1236) /* getSystemLocale */.t.gVw57p, {});
-  obj[1] = jsx(require(4281) /* Text */.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
+  obj[1] = jsx(require(4189) /* Text */.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
   obj[1] = <View style={callback().expandCTALabelContainer}>{null}</View>;
   obj[2] = title.onPress;
-  return jsx(require(5315) /* TableRowInner */.TableRow, { style: callback().expandCTALabelContainer, children: null });
+  return jsx(require(5224) /* TableRowInner */.TableRow, { style: callback().expandCTALabelContainer, children: null });
 };

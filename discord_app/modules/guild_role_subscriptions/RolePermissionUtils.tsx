@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/RolePermissionUtils.tsx
 import { hasPermission } from "GuildRoleRecordTypeTag";
 import { Permissions } from "ME";
 

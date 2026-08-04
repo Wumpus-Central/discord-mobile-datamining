@@ -1,3 +1,4 @@
+// discord_app/modules/media_viewer/native/useMediaViewerSyncer.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import THUMBNAIL_MARGIN from "THUMBNAIL_MARGIN";

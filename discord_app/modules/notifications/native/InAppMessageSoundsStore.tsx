@@ -1,3 +1,4 @@
+// discord_app/modules/notifications/native/InAppMessageSoundsStore.tsx
 import identity from "identity";
 
 const InAppMessageSoundsEnabled = "InAppMessageSoundsEnabled";
@@ -20,5 +21,5 @@ export const setInAppMessageSoundsEnabled = function setInAppMessageSoundsEnable
   store.setState({ isEnabled });
 };
 export const useInAppMessageSoundsEnabled = function useInAppMessageSoundsEnabled() {
-  return store((isEnabled) => isEnabled.isEnabled, require(3898) /* isIterable */.shallow);
+  return store((isEnabled) => isEnabled.isEnabled, require(3806) /* isIterable */.shallow);
 };

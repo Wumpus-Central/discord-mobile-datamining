@@ -1,3 +1,4 @@
+// discord_app/modules/video-qoe/utils/SessionManager.tsx
 const result = require("set").fileFinishedImporting("modules/video-qoe/utils/SessionManager.tsx");
 const prototype = function SessionManager() {
   return Object.create(new.target.prototype);

@@ -1,3 +1,4 @@
+// discord_app/modules/premium/PremiumSubscriptionInvoice.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import ME from "ME";
@@ -98,7 +99,7 @@ function _createSubscriptionInvoicePreview() {
               return obj1;
             } else {
               obj2 = { items: null, payment_source_id: null, trial_id: null, code: null, apply_entitlements: null, currency: null, renewal: null, metadata: null, load_id: null };
-              const result = callback(3931).coerceExistingItemsToNewItemInterval(callback);
+              const result = callback(3839).coerceExistingItemsToNewItemInterval(callback);
               callback = result;
               obj2[0] = result.map((planId) => {
                 const obj = {};
@@ -128,7 +129,7 @@ function _createSubscriptionInvoicePreview() {
           } else if (2 === tmp7) {
             c4 = 0;
             constants = c3;
-            const billingError = new callback(4184).BillingError(constants);
+            const billingError = new callback(4092).BillingError(constants);
             throw billingError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -273,7 +274,7 @@ function _updateSubscriptionInvoicePreview() {
               return obj1;
             } else {
               if (null != callback2) {
-                let obj4 = callback(3931);
+                let obj4 = callback(3839);
                 callback2 = obj4.coerceExistingItemsToNewItemInterval(callback2);
               }
               let mapped;
@@ -311,7 +312,7 @@ function _updateSubscriptionInvoicePreview() {
           } else if (2 === tmp7) {
             c4 = 0;
             let closure_13 = c3;
-            const billingError = new callback(4184).BillingError(closure_13);
+            const billingError = new callback(4092).BillingError(closure_13);
             throw billingError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -460,7 +461,7 @@ function _createOneTimePurchaseInvoicePreview() {
                 c6.quantity = c5;
               }
               c4 = 1;
-              let obj3 = callback(4522);
+              let obj3 = callback(4431);
               obj3 = { url: null, query: null, oldFormErrors: true, rejectWithError: false };
               obj3[0] = closure_12.STORE_SKU_PURCHASE(callback2);
               obj3[1] = c6;
@@ -473,7 +474,7 @@ function _createOneTimePurchaseInvoicePreview() {
           } else if (2 === tmp7) {
             c4 = 0;
             let closure_8 = c3;
-            const billingError = new callback(4184).BillingError(closure_8);
+            const billingError = new callback(4092).BillingError(closure_8);
             throw billingError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -534,17 +535,84 @@ function _getSubscriptionInvoice() {
     const iter = (function*(arg0) {
       let c0;
       let c1;
-      c1 = tmp2;
-      ({ subscriptionId: c0, preventFetch: c1 } = callback);
-      yield "ct";
-      if (c1) {
-        return null;
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let body = tmp5;
+              c1 = tmp2;
+              let callback;
+              c1 = undefined;
+              ({ subscriptionId: c0, preventFetch: c1 } = callback);
+              body = undefined;
+              c3 = 1;
+              c4 = 1;
+              return { value: "ct", done: "Array" };
+            }
+          } else if (1 === tmp5) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else if (c1) {
+              c4 = 3;
+              return { value: null, done: true };
+            } else {
+              const HTTP = callback(body[7]).HTTP;
+              const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
+              obj2[0] = closure_12.BILLING_SUBSCRIPTION_INVOICE(callback);
+              c3 = 2;
+              c4 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.get(obj2);
+              return obj3;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = arg1;
+            return obj4;
+          } else {
+            body = arg1;
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = createFromServer.createInvoiceFromServer(body.body);
+            return obj;
+          }
+        } catch (tmp16) {
+          c4 = tmp;
+          throw tmp16;
+        }
       }
-      const HTTP = callback(body[7]).HTTP;
-      const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj2[0] = closure_12.BILLING_SUBSCRIPTION_INVOICE(callback);
-      body = yield HTTP.get(obj2);
-      return createFromServer.createInvoiceFromServer(body.body);
     })();
     iter.next();
     return iter;
@@ -584,30 +652,78 @@ export const useFetchGenericInvoicePreview = function useFetchGenericInvoicePrev
     function _loadPreview() {
       const self = this;
       const tmp = outer2_6(function*() {
-        let closure_1 = tmp3;
-        let v0 = 1;
-        v0(null);
-        yield outer1_1();
-        if (1 === tmp7) {
-          v0 = 0;
-          outer1_1 = closure_2;
-          if (!closure_0) {
-            v0(tmp16);
-            outer1_2(null);
-          }
-          let c5 = 3;
-        } else if (arg0 === 1) {
+        if (c5 === 2) {
           c5 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          closure_0 = arg1;
-          if (!closure_0) {
-            outer1_2(closure_0);
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
           }
-          v0 = 0;
+        } else {
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let closure_1 = tmp3;
+                let closure_0 = tmp7;
+                closure_0 = undefined;
+                let v0 = 1;
+                v0(null);
+                c4 = 2;
+                c5 = 1;
+                const obj1 = { value: null, done: false };
+                obj1[0] = outer1_1();
+                return obj1;
+              }
+            } else {
+              if (1 === tmp7) {
+                v0 = 0;
+                outer1_1 = closure_2;
+                if (!closure_0) {
+                  v0(tmp16);
+                  outer1_2(null);
+                }
+                c5 = 3;
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                closure_0 = arg1;
+                if (!closure_0) {
+                  outer1_2(closure_0);
+                }
+                v0 = 0;
+              }
+              v0 = 0;
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+          } catch (tmp26) {
+            closure_2 = tmp26;
+            if (tmp4 === v0) {
+              c5 = tmp2;
+              throw tmp26;
+            } else {
+              c4 = tmp;
+            }
+          }
         }
-        v0 = 0;
-        return arg1;
       });
       const _loadPreview = tmp;
       const apply = tmp.apply;
@@ -677,30 +793,78 @@ export const useFetchSubscriptionGiftInvoicePreview = function useFetchSubscript
     function _loadPreview() {
       const self = this;
       const tmp = outer2_6(function*() {
-        let closure_1 = tmp3;
-        let v0 = 1;
-        v0(null);
-        yield outer1_1();
-        if (1 === tmp7) {
-          v0 = 0;
-          outer1_1 = closure_2;
-          if (!closure_0) {
-            v0(tmp16);
-            outer1_2(null);
-          }
-          let c5 = 3;
-        } else if (arg0 === 1) {
+        if (c5 === 2) {
           c5 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          closure_0 = arg1;
-          if (!closure_0) {
-            outer1_2(closure_0);
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
           }
-          v0 = 0;
+        } else {
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let closure_1 = tmp3;
+                let closure_0 = tmp7;
+                closure_0 = undefined;
+                let v0 = 1;
+                v0(null);
+                c4 = 2;
+                c5 = 1;
+                const obj1 = { value: null, done: false };
+                obj1[0] = outer1_1();
+                return obj1;
+              }
+            } else {
+              if (1 === tmp7) {
+                v0 = 0;
+                outer1_1 = closure_2;
+                if (!closure_0) {
+                  v0(tmp16);
+                  outer1_2(null);
+                }
+                c5 = 3;
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                closure_0 = arg1;
+                if (!closure_0) {
+                  outer1_2(closure_0);
+                }
+                v0 = 0;
+              }
+              v0 = 0;
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+          } catch (tmp26) {
+            closure_2 = tmp26;
+            if (tmp4 === v0) {
+              c5 = tmp2;
+              throw tmp26;
+            } else {
+              c4 = tmp;
+            }
+          }
         }
-        v0 = 0;
-        return arg1;
       });
       const _loadPreview = tmp;
       const apply = tmp.apply;
@@ -849,30 +1013,78 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
     function _loadPreview() {
       const self = this;
       const tmp = outer2_6(function*() {
-        let closure_1 = tmp3;
-        let v0 = 1;
-        v0(null);
-        yield outer1_1();
-        if (1 === tmp7) {
-          v0 = 0;
-          outer1_1 = closure_2;
-          if (!closure_0) {
-            v0(tmp16);
-            outer1_2(null);
-          }
-          let c5 = 3;
-        } else if (arg0 === 1) {
+        if (c5 === 2) {
           c5 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          closure_0 = arg1;
-          if (!closure_0) {
-            outer1_2(closure_0);
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
           }
-          v0 = 0;
+        } else {
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let closure_1 = tmp3;
+                let closure_0 = tmp7;
+                closure_0 = undefined;
+                let v0 = 1;
+                v0(null);
+                c4 = 2;
+                c5 = 1;
+                const obj1 = { value: null, done: false };
+                obj1[0] = outer1_1();
+                return obj1;
+              }
+            } else {
+              if (1 === tmp7) {
+                v0 = 0;
+                outer1_1 = closure_2;
+                if (!closure_0) {
+                  v0(tmp16);
+                  outer1_2(null);
+                }
+                c5 = 3;
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                closure_0 = arg1;
+                if (!closure_0) {
+                  outer1_2(closure_0);
+                }
+                v0 = 0;
+              }
+              v0 = 0;
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+          } catch (tmp26) {
+            closure_2 = tmp26;
+            if (tmp4 === v0) {
+              c5 = tmp2;
+              throw tmp26;
+            } else {
+              c4 = tmp;
+            }
+          }
         }
-        v0 = 0;
-        return arg1;
       });
       const _loadPreview = tmp;
       const apply = tmp.apply;
@@ -930,30 +1142,78 @@ export const useGetSubscriptionInvoice = function useGetSubscriptionInvoice(prev
     function _loadPreview() {
       const self = this;
       const tmp = outer2_6(function*() {
-        let closure_1 = tmp3;
-        let v0 = 1;
-        v0(null);
-        yield outer1_1();
-        if (1 === tmp7) {
-          v0 = 0;
-          outer1_1 = closure_2;
-          if (!closure_0) {
-            v0(tmp16);
-            outer1_2(null);
-          }
-          let c5 = 3;
-        } else if (arg0 === 1) {
+        if (c5 === 2) {
           c5 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          closure_0 = arg1;
-          if (!closure_0) {
-            outer1_2(closure_0);
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
           }
-          v0 = 0;
+        } else {
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let closure_1 = tmp3;
+                let closure_0 = tmp7;
+                closure_0 = undefined;
+                let v0 = 1;
+                v0(null);
+                c4 = 2;
+                c5 = 1;
+                const obj1 = { value: null, done: false };
+                obj1[0] = outer1_1();
+                return obj1;
+              }
+            } else {
+              if (1 === tmp7) {
+                v0 = 0;
+                outer1_1 = closure_2;
+                if (!closure_0) {
+                  v0(tmp16);
+                  outer1_2(null);
+                }
+                c5 = 3;
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                closure_0 = arg1;
+                if (!closure_0) {
+                  outer1_2(closure_0);
+                }
+                v0 = 0;
+              }
+              v0 = 0;
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+          } catch (tmp26) {
+            closure_2 = tmp26;
+            if (tmp4 === v0) {
+              c5 = tmp2;
+              throw tmp26;
+            } else {
+              c4 = tmp;
+            }
+          }
         }
-        v0 = 0;
-        return arg1;
       });
       const _loadPreview = tmp;
       const apply = tmp.apply;

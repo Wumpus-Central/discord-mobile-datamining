@@ -1,3 +1,4 @@
+// discord_app/modules/chat_input/native/ChatInputParser.tsx
 import { processColor } from "get ActivityIndicator";
 
 const result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputParser.tsx");
@@ -23,12 +24,12 @@ prototype["parse"] = function parse(arg0, arg1) {
     let closure_0 = matchFunction;
     return arr.concat(matchFunction.matchFunction(closure_0, closure_1).map((arg0) => {
       let obj = matchFunction;
-      if (typeof matchFunction.deleteNodeOnBackspace === "function") {
+      if (typeof matchFunction.deleteNodeOnBackspace === "fileFinishedImporting") {
         let deleteNodeOnBackspace = obj.deleteNodeOnBackspace(arg0);
       } else {
         deleteNodeOnBackspace = obj.deleteNodeOnBackspace;
       }
-      if (typeof obj.editDisabled === "function") {
+      if (typeof obj.editDisabled === "fileFinishedImporting") {
         let editDisabled = obj.editDisabled(arg0);
       } else {
         editDisabled = obj.editDisabled;

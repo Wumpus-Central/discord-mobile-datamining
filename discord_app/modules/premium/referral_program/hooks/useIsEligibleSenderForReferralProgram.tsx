@@ -1,3 +1,4 @@
+// discord_app/modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx
 import emitChanges from "emitChanges";
 
 const require = arg1;
@@ -8,8 +9,8 @@ export const useIsEligibleSenderForReferralProgram = function useIsEligibleSende
   if (result === undefined) {
     flag = false;
   }
-  const maybeFetchReferralsRemaining = require(7973) /* useMaybeFetchReferralsRemaining */.useMaybeFetchReferralsRemaining(flag);
-  const obj = require(7973) /* useMaybeFetchReferralsRemaining */;
+  const maybeFetchReferralsRemaining = require(7843) /* useMaybeFetchReferralsRemaining */.useMaybeFetchReferralsRemaining(flag);
+  const obj = require(7843) /* useMaybeFetchReferralsRemaining */;
   const items = [emitChanges];
   return require(589) /* initialize */.useStateFromStores(items, () => isEligibleToSendReferrals.getIsEligibleToSendReferrals());
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/records/ProfileFrameRecord.tsx
 import "fromServer";
 
 const require = arg1;
@@ -27,7 +28,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.overflowTop = overflow_top;
   obj.overflowBottom = overflow_bottom;
   obj.overflowHorizontal = overflow_horizontal;
-  if (typeof prototype !== "function") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   tmp3 = new tmp3(obj, merged, obj, this);

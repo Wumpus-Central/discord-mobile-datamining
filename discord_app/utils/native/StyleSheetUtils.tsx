@@ -1,3 +1,4 @@
+// discord_app/utils/native/StyleSheetUtils.tsx
 function getStyleProp(style, borderRadius) {
   if (null != borderRadius) {
     if ("" !== borderRadius) {
@@ -12,7 +13,7 @@ function getStyleProp(style, borderRadius) {
           return tmp5;
         }
       } else if (null != style) {
-        if (typeof style === "object") {
+        if (typeof style !== "window") {
           return style[borderRadius];
         }
       }

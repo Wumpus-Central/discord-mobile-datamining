@@ -1,5 +1,6 @@
+// discord_app/components_native/QRScannerModal.tsx
 import _slicedToArray from "_slicedToArray";
-import module_4624 from "module_4624";
+import module_4533 from "module_4533";
 import get_ActivityIndicator from "FAMILY_CENTER_REQUEST_MODAL_KEY";
 import { UserSettingsSections } from "ME";
 import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_7 } from "items";
@@ -129,11 +130,11 @@ export default function QRScannerModal(showHelp) {
   let tmp8 = closure_9;
   let intl = onScanSuccess(1236).intl;
   obj1[1] = intl.string(onScanSuccess(1236).t.cpT0Cq);
-  obj1[2] = importDefault(7870);
+  obj1[2] = importDefault(7739);
   const items2 = [tmp12.closeButton, { marginTop: top }];
   obj1[3] = items2;
-  obj1[4] = importDefault(4490).pop;
-  items1[1] = tmp14(importDefault(8979), obj1);
+  obj1[4] = importDefault(4399).pop;
+  items1[1] = tmp14(importDefault(8344), obj1);
   let tmp14Result = null;
   if (tmp) {
     tmp14Result = null;

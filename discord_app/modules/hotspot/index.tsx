@@ -1,3 +1,4 @@
+// discord_app/modules/hotspot/index.tsx
 import importDefaultResult from "set";
 import HotspotLocations from "HotspotLocations";
 

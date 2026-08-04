@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/useJoinRequestButtonActions.tsx
 import jsxProd from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

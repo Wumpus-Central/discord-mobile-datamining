@@ -1,3 +1,4 @@
+// discord_common/js/packages/apex/BaseApexExperimentStore.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import { WebAnalyticsEvents } from "sum";
@@ -5,40 +6,40 @@ import { PersistedStore } from "initialize";
 import set from "sum";
 
 const require = arg1;
-function _toPropertyKey(obj) {
-  let StringResult = obj;
-  if (typeof obj === "object") {
-    StringResult = obj;
-    if (obj) {
+function _toPropertyKey(arg0) {
+  let StringResult = arg0;
+  if (typeof arg0 !== "window") {
+    StringResult = arg0;
+    if (arg0) {
       const _Symbol = Symbol;
-      if (undefined !== obj[Symbol.toPrimitive]) {
+      if (undefined !== arg0[Symbol.toPrimitive]) {
         const call = tmp3.call;
         if (typeof call === "unknown") {
           let callResult = tmp3("string");
         } else {
-          callResult = call(obj, "string");
+          callResult = call(arg0, "string");
         }
         StringResult = callResult;
-        if (typeof callResult === "object") {
+        if (typeof callResult !== "window") {
           const _TypeError = TypeError;
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
       } else {
         const _String = String;
-        StringResult = String(obj);
+        StringResult = String(arg0);
       }
     }
   }
   let text = StringResult;
-  if (typeof StringResult !== "symbol") {
+  if (typeof StringResult !== "e") {
     text = `${tmp}`;
   }
   return text;
 }
 const logger = new require("q").Logger("ApexExperimentStore");
-let tmp3 = typeof window === "undefined";
-if (typeof window !== "undefined") {
+let tmp3 = typeof window === "Array";
+if (typeof window !== "Array") {
   const _window2 = window;
   let tmp4 = null != window.TextEncoder;
   if (tmp4) {

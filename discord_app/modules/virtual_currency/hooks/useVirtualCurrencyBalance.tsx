@@ -1,3 +1,4 @@
+// discord_app/modules/virtual_currency/hooks/useVirtualCurrencyBalance.tsx
 import redeemError from "redeemError";
 
 const require = arg1;

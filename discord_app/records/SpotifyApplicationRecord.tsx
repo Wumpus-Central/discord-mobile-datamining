@@ -1,3 +1,4 @@
+// discord_app/records/SpotifyApplicationRecord.tsx
 import "createExecutable";
 import importDefaultResult1 from "getPlatformUserUrl";
 

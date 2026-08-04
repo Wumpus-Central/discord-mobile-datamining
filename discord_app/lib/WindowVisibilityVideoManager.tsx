@@ -1,3 +1,4 @@
+// discord_app/lib/WindowVisibilityVideoManager.tsx
 import "on";
 
 let require = arg1;

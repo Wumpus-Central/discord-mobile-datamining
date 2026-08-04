@@ -1,3 +1,4 @@
+// discord_app/actions/UserSettingsActionCreators.tsx
 import closure_3 from "SystemThemeState";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
 import initialize from "initialize";
@@ -29,19 +30,19 @@ export default {
       obj = {};
     } else {
       obj = { inlineAttachmentMedia: null, inlineEmbedMedia: null, renderEmbeds: null, renderReactions: null, animateEmoji: null, animateStickers: null, gifAutoPlay: null };
-      const InlineAttachmentMedia = require(3958) /* explicitContentFromProto */.InlineAttachmentMedia;
+      const InlineAttachmentMedia = require(3866) /* explicitContentFromProto */.InlineAttachmentMedia;
       obj[0] = InlineAttachmentMedia.getSetting();
-      const InlineEmbedMedia = require(3958) /* explicitContentFromProto */.InlineEmbedMedia;
+      const InlineEmbedMedia = require(3866) /* explicitContentFromProto */.InlineEmbedMedia;
       obj[1] = InlineEmbedMedia.getSetting();
-      const RenderEmbeds = require(3958) /* explicitContentFromProto */.RenderEmbeds;
+      const RenderEmbeds = require(3866) /* explicitContentFromProto */.RenderEmbeds;
       obj[2] = RenderEmbeds.getSetting();
-      const RenderReactions = require(3958) /* explicitContentFromProto */.RenderReactions;
+      const RenderReactions = require(3866) /* explicitContentFromProto */.RenderReactions;
       obj[3] = RenderReactions.getSetting();
-      const AnimateEmoji = require(3958) /* explicitContentFromProto */.AnimateEmoji;
+      const AnimateEmoji = require(3866) /* explicitContentFromProto */.AnimateEmoji;
       obj[4] = AnimateEmoji.getSetting();
-      const AnimateStickers = require(3958) /* explicitContentFromProto */.AnimateStickers;
+      const AnimateStickers = require(3866) /* explicitContentFromProto */.AnimateStickers;
       obj[5] = AnimateStickers.getSetting();
-      const GifAutoPlay = require(3958) /* explicitContentFromProto */.GifAutoPlay;
+      const GifAutoPlay = require(3866) /* explicitContentFromProto */.GifAutoPlay;
       obj[6] = GifAutoPlay.getSetting();
     }
     obj[1] = obj;
@@ -112,7 +113,7 @@ export default {
                   if (gradientPreset != null) {
                     id = gradientPreset.id;
                   }
-                  const ClientThemeSettings = tmp4(3958).ClientThemeSettings;
+                  const ClientThemeSettings = tmp4(3866).ClientThemeSettings;
                   const setting = ClientThemeSettings.getSetting();
                   let prop;
                   if (setting != null) {
@@ -170,7 +171,7 @@ export default {
             const obj4 = { backgroundGradientPresetId: null };
             obj4[0] = id;
             obj3[1] = obj4;
-            const DeveloperMode = outer1_0(3958).DeveloperMode;
+            const DeveloperMode = outer1_0(3866).DeveloperMode;
             obj3[2] = DeveloperMode.getSetting();
           }
           const obj5 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };

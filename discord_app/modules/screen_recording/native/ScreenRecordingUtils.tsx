@@ -1,3 +1,4 @@
+// discord_app/modules/screen_recording/native/ScreenRecordingUtils.tsx
 import SURVEY_CONFIGS from "SURVEY_CONFIGS";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { useScreenRecordingStore } from "useScreenRecordingStore";
@@ -145,7 +146,7 @@ function _checkAndRequestPermissions() {
         } else if (1 === tmp7) {
           c3 = 0;
           callback = dependencyMap;
-          let obj3 = callback(4623);
+          let obj3 = callback(4532);
           const obj2 = { title: "Error", body: null };
           const _HermesInternal = HermesInternal;
           obj2[1] = "Failed to check permissions, error: " + callback;
@@ -166,12 +167,12 @@ function _checkAndRequestPermissions() {
           if (closure_0.photosGranted) {
             let flag2 = closure_0.microphoneGranted;
             if (!flag2) {
-              obj1 = callback(4623);
+              obj1 = callback(4532);
               obj1.show({ title: "Error", body: "Microphone permission is required to record audio" });
               flag2 = false;
             }
           } else {
-            obj = callback(4623);
+            obj = callback(4532);
             obj.show({ title: "Error", body: "Photos permission is required to save recordings" });
           }
           c3 = 0;
@@ -356,7 +357,7 @@ function _stopRecordingProcess() {
         } else if (1 === tmp7) {
           c3 = 0;
           closure_0 = dependencyMap;
-          let obj3 = callback(4623);
+          let obj3 = callback(4532);
           const obj2 = { title: "Error", body: null };
           const _HermesInternal = HermesInternal;
           obj2[1] = "Failed to stop screen recording, error: " + closure_0;
@@ -377,7 +378,7 @@ function _stopRecordingProcess() {
         } else {
           let flag = arg1.success;
           if (!flag) {
-            obj = callback(4623);
+            obj = callback(4532);
             obj.show({ title: "Error", body: "Failed to stop screen recording, but not error" });
             flag = false;
           }
@@ -726,7 +727,7 @@ function _submitBugReportWithScreenRecording() {
                       throwTypeErrorResult = SURVEY_CONFIGS;
                       obj14 = SURVEY_CONFIGS;
                       if (SURVEY_CONFIGS == null) {
-                        obj14 = { name: null, squad: null, asana_inbox_id: "disabled" };
+                        obj14 = { name: null, squad: null, asana_inbox_id: "Array" };
                         obj14[0] = uri.uploadConfig.featureName;
                         obj14[1] = uri.uploadConfig.squadName;
                       }
@@ -951,79 +952,126 @@ function _handleRecordingPhase() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      let callback2 = tmp2;
-      yield (function checkAndRequestPermissions() {
-        const self = this;
-        const apply = closure_8.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      })();
-      if (1 === tmp5) {
-        if (arg0 === 1) {
-          let height = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          height = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = arg1;
-          return obj2;
-        } else {
-          callback2 = arg1;
-          if (callback2) {
-            let obj3 = callback(styles[13]);
-            styles = obj3.getWindowDimensions();
-            let width = styles.width;
-            height = styles.height;
-            let obj4 = callback2(styles[4]);
-            obj3 = { width: null, height: null, bitrate: 50000, frameRate: 15 };
-            obj3[0] = width;
-            obj3[1] = height;
-            width = 2;
-            height = 1;
-            obj4 = { value: null, done: false };
-            obj4[0] = obj4.setRecordingQuality(obj3);
-            return obj4;
-          } else {
-            height = 3;
-          }
-        }
-      } else if (2 === tmp5) {
-        if (arg0 === 1) {
-          height = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          height = 3;
-          const obj5 = { value: null, done: true };
-          obj5[0] = arg1;
-          return obj5;
-        } else {
-          width = 3;
-          height = 1;
-          const obj6 = { value: null, done: false };
-          obj6[0] = (function startRecordingProcess(closure_0) {
-            const self = this;
-            const apply = closure_9.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          })(callback);
-          return obj6;
-        }
-      } else if (arg0 === 1) {
+      if (height === 2) {
         height = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        let success = arg1;
-        success = success.success;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          height = 2;
+          if (0 === width) {
+            if (arg0 === 1) {
+              height = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              height = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let styles = tmp5;
+              let callback2 = tmp2;
+              callback2 = undefined;
+              styles = undefined;
+              width = undefined;
+              height = undefined;
+              let success;
+              width = 1;
+              height = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = (function checkAndRequestPermissions() {
+                const self = this;
+                const apply = closure_8.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })();
+              return obj1;
+            }
+          } else {
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                height = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                height = 3;
+                const obj2 = { value: null, done: true };
+                obj2[0] = arg1;
+                return obj2;
+              } else {
+                callback2 = arg1;
+                if (callback2) {
+                  let obj3 = callback(styles[13]);
+                  styles = obj3.getWindowDimensions();
+                  width = styles.width;
+                  height = styles.height;
+                  let obj4 = callback2(styles[4]);
+                  obj3 = { width: null, height: null, bitrate: 50000, frameRate: 15 };
+                  obj3[0] = width;
+                  obj3[1] = height;
+                  width = 2;
+                  height = 1;
+                  obj4 = { value: null, done: false };
+                  obj4[0] = obj4.setRecordingQuality(obj3);
+                  return obj4;
+                } else {
+                  height = 3;
+                }
+              }
+            } else if (2 === tmp5) {
+              if (arg0 === 1) {
+                height = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                height = 3;
+                const obj5 = { value: null, done: true };
+                obj5[0] = arg1;
+                return obj5;
+              } else {
+                width = 3;
+                height = 1;
+                const obj6 = { value: null, done: false };
+                obj6[0] = (function startRecordingProcess(closure_0) {
+                  const self = this;
+                  const apply = closure_9.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                  } else {
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                })(callback);
+                return obj6;
+              }
+            } else if (arg0 === 1) {
+              height = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              success = arg1;
+              success = success.success;
+            }
+            height = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp19) {
+          height = tmp;
+          throw tmp19;
+        }
       }
-      return arg1;
     })();
   });
   const _handleRecordingPhase = tmp;

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_profile/native/components/GuildProfileHeader.tsx
 import Text from "Text";
 import { View } from "transitionToGuild";
 import _getSystemLocale from "_getSystemLocale";

@@ -1,3 +1,4 @@
+// discord_common/js/packages/i18n/getSystemLocale.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/i18n/getSystemLocale.tsx");
 
 export const getSystemLocale = function getSystemLocale() {

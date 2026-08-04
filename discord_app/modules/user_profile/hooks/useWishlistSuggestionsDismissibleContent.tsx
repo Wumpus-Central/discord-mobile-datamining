@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/hooks/useWishlistSuggestionsDismissibleContent.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import createUserWidgetFromServer from "createUserWidgetFromServer";

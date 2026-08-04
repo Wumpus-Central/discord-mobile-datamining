@@ -1,3 +1,4 @@
+// discord_app/modules/game_profile/native/hooks/useInAppBrowserReturn.tsx
 import noop from "noop";
 import getSimilarGames from "getSimilarGames";
 

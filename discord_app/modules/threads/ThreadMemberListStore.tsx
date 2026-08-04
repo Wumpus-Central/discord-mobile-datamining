@@ -1,3 +1,4 @@
+// discord_app/modules/threads/ThreadMemberListStore.tsx
 import _slicedToArray from "_slicedToArray";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
@@ -274,7 +275,7 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
   }
   let canResult = null != user && null != channel;
   if (canResult) {
-    let obj = importAll(3918);
+    let obj = importAll(3826);
     obj = { permission: null, user: null, context: null };
     obj[0] = constants2.VIEW_CHANNEL;
     obj[1] = user;
@@ -300,8 +301,8 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = importDefault(4124).getName(user);
-    const obj3 = importDefault(4124);
+    nick = importDefault(4032).getName(user);
+    const obj3 = importDefault(4032);
   }
   const items = [str, , ];
   let formatted;
@@ -482,7 +483,7 @@ const threadMemberListStore = new ThreadMemberListStore(require("dispatcher"), {
       parent_id = channel.parent_id;
     }
     if (null != parent_id) {
-      if (typeof MemberList !== "function") {
+      if (typeof MemberList !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       let obj = Object.create(MemberList.prototype);

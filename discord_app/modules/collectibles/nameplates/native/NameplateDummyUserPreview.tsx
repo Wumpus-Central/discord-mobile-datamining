@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/nameplates/native/NameplateDummyUserPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import handleThemeChange from "handleThemeChange";
@@ -65,10 +66,10 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   items1 = [tmp3.container, style];
   const stateFromStores = obj.useStateFromStores(items, () => callback(table[8]).isThemeDark(theme.theme));
   obj = { nameplate, fullOpacity: true, style: tmp3.nameplate, animate };
-  const items2 = [callback(importDefault(9308), obj), , ];
+  const items2 = [callback(importDefault(8074), obj), , ];
   const obj1 = { style: tmp3.avatarContainer, children: null };
   const obj2 = { source: null, size: null, "aria-hidden": true, style: null };
-  obj2[0] = importDefault(stateFromStores ? 9310 : 9311);
+  obj2[0] = importDefault(stateFromStores ? 8076 : 8077);
   obj2[1] = NORMAL;
   obj2[3] = tmp3.avatar;
   obj1[1] = callback(require(1297) /* Button */.Avatar, obj2);

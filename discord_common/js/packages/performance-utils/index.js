@@ -1,3 +1,4 @@
+// discord_common/js/packages/performance-utils/index.js
 import u from "u";
 
 try {

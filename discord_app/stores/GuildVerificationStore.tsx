@@ -1,3 +1,4 @@
+// discord_app/stores/GuildVerificationStore.tsx
 import { isGuildOwner } from "GuildNSFWContentLevel";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

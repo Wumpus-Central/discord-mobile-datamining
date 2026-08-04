@@ -1,3 +1,4 @@
+// discord_app/modules/creator_monetization/CreatorMonetizationStore.tsx
 import { Store } from "initialize";
 
 let map = new Map();

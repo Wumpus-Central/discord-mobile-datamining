@@ -1,3 +1,4 @@
+// discord_app/modules/image_upload/native/AddImageDescriptionModal.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import get_ActivityIndicator from "TextArea";
@@ -110,7 +111,7 @@ createCacheKey = { contentContainer: null, imageContainer: null, image: null, pl
 createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", borderRadius: require("Themes").radii.sm };
-let obj2 = { width: "100%", resizeMode: "contain", height: "Array", borderRadius: 0 };
+let obj2 = { width: "100%", resizeMode: "contain", height: "Array", borderRadius: true };
 obj2[3] = require("Themes").radii.sm;
 createCacheKey[2] = obj2;
 let obj1 = { alignItems: "center", borderRadius: require("Themes").radii.sm };
@@ -130,5 +131,5 @@ export default function AddImageDescriptionModal(arg0) {
   obj[2] = function render() {
     return outer1_10(outer1_13, { source: closure_0, channelId: closure_1, id: closure_2 });
   };
-  return callback(importDefault(9596), obj);
+  return callback(importDefault(9117), obj);
 };

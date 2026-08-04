@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AutomaticGainControlSetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
 

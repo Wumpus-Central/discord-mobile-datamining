@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/premium/native/PremiumPill.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

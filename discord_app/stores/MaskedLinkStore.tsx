@@ -1,3 +1,4 @@
+// discord_app/stores/MaskedLinkStore.tsx
 import { SPOTIFY_HOSTNAMES } from "WEB_OPEN";
 import { Store } from "initialize";
 import set from "isDiscordProxiedAssetUrl";
@@ -48,7 +49,7 @@ prototype["initialize"] = function initialize() {
   }
 };
 prototype["isTrustedDomain"] = function isTrustedDomain(arg0) {
-  const hostname = require(8857) /* getHostname */.getHostname(arg0);
+  const hostname = require(8207) /* getHostname */.getHostname(arg0);
   let flag = true;
   if (window.GLOBAL_ENV.INVITE_HOST !== hostname) {
     const _window2 = window;
@@ -79,13 +80,13 @@ prototype["isTrustedDomain"] = function isTrustedDomain(arg0) {
   return flag;
 };
 prototype["isTrustedProtocol"] = function isTrustedProtocol(url) {
-  return set1.has(require(8857) /* getHostname */.getProtocol(url));
+  return set1.has(require(8207) /* getHostname */.getProtocol(url));
 };
 MaskedLinkStore.displayName = "MaskedLinkStore";
 const maskedLinkStore = new MaskedLinkStore(require("dispatcher"), {
   MASKED_LINK_ADD_TRUSTED_DOMAIN: function handleAddTrustedDomain(url) {
     url = url.url;
-    let obj = require(8857) /* getHostname */;
+    let obj = require(8207) /* getHostname */;
     const hostname = obj.getHostname(url);
     let flag = true;
     if (window.GLOBAL_ENV.INVITE_HOST !== hostname) {
@@ -117,7 +118,7 @@ const maskedLinkStore = new MaskedLinkStore(require("dispatcher"), {
     if (flag) {
       return false;
     } else {
-      set.add(tmp(8857).getHostname(url));
+      set.add(tmp(8207).getHostname(url));
       const Storage = tmp(595).Storage;
       obj = { trustedDomains: null, trustedProtocols: null };
       obj[0] = set;
@@ -127,11 +128,11 @@ const maskedLinkStore = new MaskedLinkStore(require("dispatcher"), {
   },
   MASKED_LINK_ADD_TRUSTED_PROTOCOL: function handleAddTrustedProtocol(url) {
     url = url.url;
-    let obj = require(8857) /* getHostname */;
+    let obj = require(8207) /* getHostname */;
     if (set1.has(obj.getProtocol(url))) {
       return false;
     } else {
-      set1.add(tmp(8857).getProtocol(url));
+      set1.add(tmp(8207).getProtocol(url));
       const Storage = tmp(595).Storage;
       obj = { trustedDomains: null, trustedProtocols: null };
       obj[0] = set;

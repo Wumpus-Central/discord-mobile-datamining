@@ -1,3 +1,4 @@
+// discord_app/utils/QueryStringUtils.tsx
 const result = require("set").fileFinishedImporting("utils/QueryStringUtils.tsx");
 
 export const getFirstQueryStringValue = function getFirstQueryStringValue(arg0) {

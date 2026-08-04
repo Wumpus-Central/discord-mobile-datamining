@@ -1,3 +1,4 @@
+// discord_app/modules/local_app_detection/native/LocalAppDetectionStore.tsx
 import _slicedToArray from "_slicedToArray";
 import hasConsented from "hasConsented";
 import { Consents } from "ME";
@@ -53,7 +54,7 @@ prototype["isAppInstalled"] = function isAppInstalled(nextResult) {
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const self = this;
   const items = [];
-  const iter = object(12878).ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
+  const iter = object(12782).ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
@@ -71,8 +72,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     continue;
   }
   if (items.length > 0) {
-    object(12879).detectLocalApps(items);
-    const obj = object(12879);
+    object(12783).detectLocalApps(items);
+    const obj = object(12783);
   }
 };
 prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionComplete(result) {

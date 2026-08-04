@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/stores/SearchGuildChannelTabStore.tsx
 import comparator from "comparator";
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 import { Store } from "initialize";
@@ -19,9 +20,9 @@ class GuildChannelSearchManager {
 const prototype = GuildChannelSearchManager.prototype;
 prototype["search"] = function search(query, guildId) {
   const self = this;
-  let obj = require(5126) /* NOOP */;
+  let obj = require(5035) /* NOOP */;
   const boosterMap = obj.getBoosterMap(AutocompleterResultTypes.TEXT_CHANNEL);
-  let obj1 = require(5126) /* NOOP */;
+  let obj1 = require(5035) /* NOOP */;
   obj = {
     query,
     guildId,
@@ -38,15 +39,15 @@ prototype["search"] = function search(query, guildId) {
   const merged = Object.assign(obj);
   obj.type = closure_4;
   obj.boosters = boosterMap;
-  const obj4 = importDefault(5126);
-  const queryChannelsResult = importDefault(5126).queryChannels(obj);
+  const obj4 = importDefault(5035);
+  const queryChannelsResult = importDefault(5035).queryChannels(obj);
   obj1 = {};
   const merged1 = Object.assign(obj);
   obj1.type = closure_3;
   obj1.boosters = boosterMap1;
-  const obj6 = importDefault(5126);
-  this.voiceChannels = importDefault(5126).queryChannels(obj1).map((channel) => ({ channel: channel.record }));
-  const queryChannelsResult1 = importDefault(5126).queryChannels(obj1);
+  const obj6 = importDefault(5035);
+  this.voiceChannels = importDefault(5035).queryChannels(obj1).map((channel) => ({ channel: channel.record }));
+  const queryChannelsResult1 = importDefault(5035).queryChannels(obj1);
   const obj8 = require(12) /* apply */;
   const mapped = require(12) /* apply */.chain(queryChannelsResult).map((channel) => {
     const obj = { channel: channel.record, lastMessageId: null };
@@ -124,7 +125,7 @@ const searchGuildChannelTabStore = new SearchGuildChannelTabStore(require("dispa
     ({ guildId, searchQueryString } = id);
     let value = map.get(id);
     if (value == null) {
-      if (typeof GuildChannelSearchManager !== "function") {
+      if (typeof GuildChannelSearchManager !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(GuildChannelSearchManager.prototype);

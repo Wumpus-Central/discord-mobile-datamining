@@ -1,3 +1,4 @@
+// discord_app/modules/favorites/hooks/useFavoritesGuildUnreads.tsx
 import rebuild from "rebuild";
 import storeThread from "storeThread";
 import ensureGuildLoaded from "ensureGuildLoaded";

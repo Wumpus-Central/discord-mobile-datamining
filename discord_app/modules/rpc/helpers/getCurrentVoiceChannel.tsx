@@ -1,3 +1,4 @@
+// discord_app/modules/rpc/helpers/getCurrentVoiceChannel.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateVoiceState from "updateVoiceState";

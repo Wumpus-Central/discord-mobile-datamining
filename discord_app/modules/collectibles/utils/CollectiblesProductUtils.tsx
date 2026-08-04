@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/utils/CollectiblesProductUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import { isProfileEffectRecord } from "fromServer";
 import ME from "ME";

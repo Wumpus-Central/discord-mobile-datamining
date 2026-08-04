@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AcknowledgementsSetting.tsx
 import { MarketingURLs } from "ME";
 import createToggle from "createToggle";
 
@@ -9,7 +10,7 @@ const pressable = createToggle.createPressable({
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    importDefault(3982).openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    importDefault(3890).openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true
 });
@@ -21,7 +22,7 @@ const obj = {
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,
   onPress: function handleAcknowledgementsSettingPress() {
-    importDefault(3982).openURL(MarketingURLs.ACKNOWLEDGEMENTS);
+    importDefault(3890).openURL(MarketingURLs.ACKNOWLEDGEMENTS);
   },
   withArrow: true
 };

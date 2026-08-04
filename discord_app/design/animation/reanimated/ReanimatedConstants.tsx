@@ -1,4 +1,5 @@
-let obj = { duration: 1, reduceMotion: require("module_4146").ReduceMotion.Always };
+// discord_app/design/animation/reanimated/ReanimatedConstants.tsx
+let obj = { duration: 1, reduceMotion: require("module_4054").ReduceMotion.Always };
 obj = {};
 const merged = Object.assign(obj);
 obj.reduceMotion = undefined;

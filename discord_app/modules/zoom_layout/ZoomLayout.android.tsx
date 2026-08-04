@@ -1,3 +1,4 @@
+// discord_app/modules/zoom_layout/ZoomLayout.android.tsx
 import importAllResult from "noop";
 import { PixelRatio } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -45,7 +46,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   let obj = {};
   const merged = Object.assign(arg0);
   obj.ref = ref;
-  return jsx(importDefault(10612), {});
+  return jsx(importDefault(10578), {});
 });
 let result = require("jsxProd").fileFinishedImporting("modules/zoom_layout/ZoomLayout.android.tsx");
 

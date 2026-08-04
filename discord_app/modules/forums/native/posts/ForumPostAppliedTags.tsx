@@ -1,3 +1,4 @@
+// discord_app/modules/forums/native/posts/ForumPostAppliedTags.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -40,7 +41,7 @@ export const ForumPostAppliedTagPills = function ForumPostAppliedTagPills(additi
     obj[0] = obj;
     obj[1] = tmp.tag;
     obj[2] = hasUnreads;
-    tmp4 = callback(hasUnreads(9918).AppliedForumTagPill, obj);
+    tmp4 = callback(hasUnreads(9678).AppliedForumTagPill, obj);
   }
   items1[1] = tmp4;
   obj[1] = items1;

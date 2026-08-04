@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort";

@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AccountEmailSetting.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createToggle from "createToggle";
 
@@ -20,7 +21,7 @@ createToggle = {
     });
   },
   onPress: function onAccountEmailSettingPress() {
-    importDefault(8262).open(true);
+    importDefault(9186).open(true);
   },
   withArrow: true
 };

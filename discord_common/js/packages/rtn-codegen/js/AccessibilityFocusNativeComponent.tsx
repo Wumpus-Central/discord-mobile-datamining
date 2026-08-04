@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/AccessibilityFocusNativeComponent.tsx
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 

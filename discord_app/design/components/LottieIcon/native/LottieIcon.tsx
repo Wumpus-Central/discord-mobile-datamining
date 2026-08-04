@@ -1,3 +1,4 @@
+// discord_app/design/components/LottieIcon/native/LottieIcon.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

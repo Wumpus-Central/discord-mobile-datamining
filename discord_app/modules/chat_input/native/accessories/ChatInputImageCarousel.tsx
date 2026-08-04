@@ -1,3 +1,4 @@
+// discord_app/modules/chat_input/native/accessories/ChatInputImageCarousel.tsx
 import handleInit from "handleInit";
 import { DraftType } from "handleChanged";
 import map from "map";
@@ -35,7 +36,7 @@ const memoResult = require("noop").memo(function ChatInputImageCarousel(canUploa
     obj = { attachments: null, channelId: null };
     obj[0] = stateFromStores;
     obj[1] = channelId;
-    tmp4 = jsx(channelId(9920), { attachments: null, channelId: null });
+    tmp4 = jsx(channelId(9682), { attachments: null, channelId: null });
   }
   return tmp4;
 });

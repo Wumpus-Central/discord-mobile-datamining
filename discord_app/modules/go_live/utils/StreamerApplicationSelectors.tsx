@@ -1,3 +1,4 @@
+// discord_app/modules/go_live/utils/StreamerApplicationSelectors.tsx
 import sortActivity from "sortActivity";
 import { ActivityTypes } from "ME";
 
@@ -5,7 +6,7 @@ const require = arg1;
 function _findPlayingActivity(type) {
   let tmp = type.type === ActivityTypes.PLAYING;
   if (tmp) {
-    tmp = !importDefault(7119)(type);
+    tmp = !importDefault(6028)(type);
   }
   return tmp;
 }

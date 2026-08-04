@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/connections/native/AddConnectionActionSheet.tsx
 import { AnalyticsLocations } from "ME";
 import { getMigratedApplicationIdentityConnectionsScreenApplications as closure_4 } from "items1";
 import jsxProd from "set";
@@ -15,10 +16,10 @@ function AddApplicationIdentityTableRow(application) {
   let _require;
   let analyticsLocations;
   ({ start, end } = application);
-  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5613)(application));
-  const tmp2 = analyticsLocations(5613)(application);
-  analyticsLocations = analyticsLocations(5610)(analyticsLocations(5630).ACTION_SHEET).analyticsLocations;
-  const tmp3 = analyticsLocations(5610);
+  ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(5522)(application));
+  const tmp2 = analyticsLocations(5522)(application);
+  analyticsLocations = analyticsLocations(5519)(analyticsLocations(5539).ACTION_SHEET).analyticsLocations;
+  const tmp3 = analyticsLocations(5519);
   let obj = _require(1297);
   const iconSource = application.getIconSource(obj.getIconSize(_require(1297).IconSizes.LARGE));
   obj = {
@@ -43,9 +44,9 @@ function AddApplicationIdentityTableRow(application) {
     tmp7Result = tmp7(tmp5(1297).Icon, obj);
   }
   obj[4] = tmp7Result;
-  obj[5] = closure_5(_require(5315).TableRow.Arrow, {});
+  obj[5] = closure_5(_require(5224).TableRow.Arrow, {});
   obj[6] = !canStartAuthorization;
-  return closure_5(_require(5315).TableRow, obj, application.id);
+  return closure_5(_require(5224).TableRow, obj, application.id);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { list: { paddingHorizontal: 16 }, icon: null };

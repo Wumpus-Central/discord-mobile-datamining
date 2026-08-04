@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/isActivitySupportedOnClientPlatform.tsx
 const result = require("set").fileFinishedImporting("modules/activities/utils/isActivitySupportedOnClientPlatform.tsx");
 
 export default function isActivitySupportedOnClientPlatform(arr) {

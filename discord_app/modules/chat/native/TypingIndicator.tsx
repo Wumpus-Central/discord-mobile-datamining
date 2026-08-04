@@ -1,3 +1,4 @@
+// discord_app/modules/chat/native/TypingIndicator.tsx
 import importAllResult from "noop";
 import { View } from "useTypingUserIds";
 import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight";

@@ -1,3 +1,4 @@
+// discord_app/modules/app_database/modules/messages/isLimitedChannel.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";
 import { ChannelTypes } from "ME";

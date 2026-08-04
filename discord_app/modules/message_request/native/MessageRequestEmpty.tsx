@@ -1,3 +1,4 @@
+// discord_app/modules/message_request/native/MessageRequestEmpty.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -6,7 +7,7 @@ const result = require("Button").fileFinishedImporting("modules/message_request/
 
 export default function MessageRequestEmpty(bodyText) {
   const obj = { Illustration: null, body: null };
-  obj[0] = require(15831) /* getPendingSource */.Pending;
+  obj[0] = require(15736) /* getPendingSource */.Pending;
   obj[1] = bodyText.bodyText;
   return jsx(require(1297) /* Button */.EmptyState, { Illustration: null, body: null });
 };

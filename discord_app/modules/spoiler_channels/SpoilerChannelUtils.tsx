@@ -1,3 +1,4 @@
+// discord_app/modules/spoiler_channels/SpoilerChannelUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import initialize from "initialize";
 

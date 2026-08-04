@@ -1,3 +1,4 @@
+// discord_app/utils/GuildRoleUtils.tsx
 function compareGuildRoles(guildId, id) {
   guildId = guildId.guildId;
   if (guildId.id === guildId) {

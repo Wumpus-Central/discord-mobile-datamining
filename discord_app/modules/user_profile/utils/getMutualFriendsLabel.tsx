@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/utils/getMutualFriendsLabel.tsx
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/getMutualFriendsLabel.tsx");
 
 export default function getMutualFriendsLabel(arg0) {

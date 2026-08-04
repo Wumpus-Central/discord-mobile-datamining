@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/utils/fitCardsInGrid.tsx
 function isNewLayoutBetter(unusedSpace, unusedSpace2) {
   if (0 !== unusedSpace2.unusedSpace) {
     if (unusedSpace.unusedSpace !== unusedSpace2.unusedSpace) {

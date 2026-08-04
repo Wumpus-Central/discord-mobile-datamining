@@ -1,3 +1,4 @@
+// discord_app/modules/stickers/native/premium/openStickersPremiumUpsellAlert.tsx
 import fetchSubscriptionPlansForSKU from "fetchSubscriptionPlansForSKU";
 import "noop";
 import ME from "ME";

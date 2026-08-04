@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfileBanner.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

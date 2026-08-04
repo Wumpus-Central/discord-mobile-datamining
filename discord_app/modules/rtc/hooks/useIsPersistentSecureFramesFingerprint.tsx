@@ -1,3 +1,4 @@
+// discord_app/modules/rtc/hooks/useIsPersistentSecureFramesFingerprint.tsx
 import initialize from "initialize";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

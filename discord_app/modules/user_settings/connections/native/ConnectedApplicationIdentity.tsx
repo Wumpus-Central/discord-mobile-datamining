@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx
 import createCacheKey from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
 import registerAsset from "registerAsset";
@@ -105,31 +106,76 @@ export default function ConnectedApplicationIdentity(identity) {
     let c4 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      let closure_1 = tmp3;
-      v0(closure_0);
-      let c3 = 1;
-      let obj1 = token(application[16]);
-      obj1 = { connection_visible: null };
-      obj1[0] = closure_0;
-      yield obj1.updateApplicationIdentityConfig(closure_0.application_id, closure_0.provider_issued_user_id, obj1);
-      if (1 === tmp7) {
-        c3 = 0;
-        const profile = closure_0.profile;
-        let connection_visible;
-        if (profile != null) {
-          connection_visible = profile.connection_visible;
+      if (v0 === 2) {
+        v0 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
         }
-        v0(true === connection_visible);
-        v0 = 3;
-        const tmp9 = v0;
-      } else if (arg0 === 1) {
-        v0 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c3 = 0;
+      } else {
+        try {
+          v0 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v0 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_1 = tmp3;
+              v0(closure_0);
+              let c3 = 1;
+              let obj1 = token(application[16]);
+              obj1 = { connection_visible: null };
+              obj1[0] = closure_0;
+              c2 = 2;
+              v0 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = obj1.updateApplicationIdentityConfig(closure_0.application_id, closure_0.provider_issued_user_id, obj1);
+              return obj2;
+            }
+          } else {
+            if (1 === tmp7) {
+              c3 = 0;
+              const profile = closure_0.profile;
+              let connection_visible;
+              if (profile != null) {
+                connection_visible = profile.connection_visible;
+              }
+              v0(true === connection_visible);
+              v0 = 3;
+              const tmp9 = v0;
+            } else if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              c3 = 0;
+            }
+            c3 = 0;
+            v0 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp20) {
+          if (tmp4 === c3) {
+            v0 = tmp2;
+            throw tmp20;
+          } else {
+            c2 = tmp;
+          }
+        }
       }
-      c3 = 0;
-      return arg1;
     })();
   });
   const profile2 = identity.profile;

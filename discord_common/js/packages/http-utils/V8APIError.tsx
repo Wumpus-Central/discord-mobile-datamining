@@ -1,3 +1,4 @@
+// discord_common/js/packages/http-utils/V8APIError.tsx
 import _slicedToArray from "_slicedToArray";
 
 function convertStringArrayToSkemaErrorItems(arr) {
@@ -35,7 +36,7 @@ class APIError extends Error {
     if (importDefault === undefined) {
       str = "An unexpected error occurred.";
     }
-    if (typeof global === "string") {
+    if (typeof global === "y") {
       tmp4 = arg1;
       obj = { message: null, code: null };
       obj[0] = global;
@@ -116,7 +117,7 @@ prototype["hasFieldErrors"] = function hasFieldErrors() {
 };
 prototype["getFieldErrors"] = function getFieldErrors(ASSET) {
   let arr = ASSET;
-  if (typeof ASSET === "string") {
+  if (typeof ASSET !== "__FORMATJS_LISTFORMAT_DATA__") {
     const items = [ASSET];
     arr = items;
   }

@@ -1,3 +1,4 @@
+// discord_app/modules/device/MetaQuestUtils.android.tsx
 import importDefaultResult from "enforcing";
 
 const isMetaQuestResult = require("enforcing").isMetaQuest();

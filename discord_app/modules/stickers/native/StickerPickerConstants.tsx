@@ -1,3 +1,4 @@
+// discord_app/modules/stickers/native/StickerPickerConstants.tsx
 import ExpressionPickerViewType from "ExpressionPickerViewType";
 
 let MIN_MARGIN;

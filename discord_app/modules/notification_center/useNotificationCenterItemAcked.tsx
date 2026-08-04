@@ -1,3 +1,4 @@
+// discord_app/modules/notification_center/useNotificationCenterItemAcked.tsx
 import handleLoadFinished from "handleLoadFinished";
 
 const require = arg1;
@@ -11,8 +12,8 @@ export const useNotificationCenterItemAcked = function useNotificationCenterItem
   let tmp4 = !forceUnacked;
   if (!forceUnacked) {
     if (!stateFromStores) {
-      stateFromStores = _require(7022).isRemoteAcked(item, ackedBeforeId);
-      const tmpResult = _require(7022);
+      stateFromStores = _require(5931).isRemoteAcked(item, ackedBeforeId);
+      const tmpResult = _require(5931);
     }
     tmp4 = stateFromStores;
   }

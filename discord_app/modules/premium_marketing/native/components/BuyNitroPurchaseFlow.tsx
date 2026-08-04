@@ -1,3 +1,4 @@
+// discord_app/modules/premium_marketing/native/components/BuyNitroPurchaseFlow.tsx
 import sum from "sum";
 import _deletePaymentSource from "_deletePaymentSource";
 import { useNativeCheckoutStore } from "context";
@@ -41,76 +42,123 @@ function BuyNitroPurchaseRunner(item) {
     function _runPurchase() {
       const self = this;
       const tmp = hasEmittedPaymentFlowStartedRef(function*() {
-        let closure_1 = tmp3;
-        if (outer1_12) {
-          let priceString;
-          if (outer1_11 != null) {
-            const checkoutContextRecord = outer1_11.checkoutContextRecord;
-            if (checkoutContextRecord != null) {
-              const obj4 = outer2_0(6780);
-              const availablePlanForItems = checkoutContextRecord.getAvailablePlanForItems(obj4.getSubscriptionItemsForProduct(outer1_0.productId));
-              if (availablePlanForItems != null) {
-                priceString = availablePlanForItems.getPriceString();
-              }
-            }
+        if (c5 === 2) {
+          c5 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
           }
-          let c0 = priceString;
-          if (priceString == null) {
-            c0 = null;
-          }
-          if (null != c5) {
-            if (null != tmp35) {
-              if (tmp35 !== c5) {
-                outer1_7(tmp35);
+        } else {
+          try {
+            c5 = 2;
+            if (0 === c2) {
+              if (arg0 === 1) {
                 c5 = 3;
-                let obj1 = { value: null, done: true };
-                obj1[0] = undefined;
-                return obj1;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let closure_1 = tmp3;
+                if (outer1_12) {
+                  let priceString;
+                  if (outer1_11 != null) {
+                    const checkoutContextRecord = outer1_11.checkoutContextRecord;
+                    if (checkoutContextRecord != null) {
+                      let obj4 = outer2_0(6253);
+                      const availablePlanForItems = checkoutContextRecord.getAvailablePlanForItems(obj4.getSubscriptionItemsForProduct(outer1_0.productId));
+                      if (availablePlanForItems != null) {
+                        priceString = availablePlanForItems.getPriceString();
+                      }
+                    }
+                  }
+                  let c0 = priceString;
+                  if (priceString == null) {
+                    c0 = null;
+                  }
+                  if (null != c5) {
+                    if (null != tmp35) {
+                      if (tmp35 !== c5) {
+                        outer1_7(tmp35);
+                        c5 = 3;
+                        let obj1 = { value: null, done: true };
+                        obj1[0] = undefined;
+                        return obj1;
+                      }
+                    }
+                  }
+                }
+                const obj7 = outer2_1(698);
+                let obj2 = { from_step: null, to_step: null, subscription_plan_gateway_plan_id: null, sku_id: null };
+                obj2[0] = outer2_0(6298).PaymentFlowStep.PLAN_SELECT;
+                obj2[1] = outer2_0(6298).PaymentFlowStep.EXTERNAL_PAYMENT;
+                obj2[2] = outer1_0.productId;
+                obj2[3] = outer1_0;
+                obj7.track(outer2_8.PAYMENT_FLOW_STEP, outer2_0(6298).getPaymentFlowStepAnalyticsFields(outer1_1, obj2));
+                let c4 = 1;
+                const obj3 = { productId: null, analyticsLocation: null, analyticsLoadId: null, analyticsLocations: null, orderId: null };
+                obj3[0] = outer1_0.productId;
+                obj3[1] = outer1_1.location;
+                obj3[2] = c2;
+                obj3[3] = outer1_1;
+                let id;
+                if (outer1_11 != null) {
+                  id = outer1_11.id;
+                }
+                obj3[4] = id;
+                c2 = 2;
+                c5 = 1;
+                obj4 = { value: null, done: false };
+                obj4[0] = outer1_13(obj3);
+                return obj4;
               }
+            } else {
+              if (1 === tmp7) {
+                c4 = 0;
+                if (sum instanceof outer2_1(6256)) {
+                  obj1 = outer2_0(4513);
+                  const subscriptions = obj1.fetchSubscriptions();
+                  obj2 = outer2_1(4533);
+                  const obj5 = { title: null, body: null, hideActionSheet: true };
+                  const intl = outer2_0(1236).intl;
+                  obj5[0] = intl.string(outer2_0(1236).t["U+H+kd"]);
+                  const intl2 = outer2_0(1236).intl;
+                  obj5[1] = intl2.string(outer2_0(1236).t.F9ktNa);
+                  obj2.show(obj5);
+                }
+                outer1_6();
+                c5 = 3;
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                c4 = 0;
+              }
+              c4 = 0;
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+          } catch (tmp55) {
+            sum = tmp55;
+            if (tmp4 === c4) {
+              c5 = tmp2;
+              throw tmp55;
+            } else {
+              c2 = tmp;
             }
           }
         }
-        const obj7 = outer2_1(698);
-        let obj2 = { from_step: null, to_step: null, subscription_plan_gateway_plan_id: null, sku_id: null };
-        obj2[0] = outer2_0(7295).PaymentFlowStep.PLAN_SELECT;
-        obj2[1] = outer2_0(7295).PaymentFlowStep.EXTERNAL_PAYMENT;
-        obj2[2] = outer1_0.productId;
-        obj2[3] = outer1_0;
-        obj7.track(outer2_8.PAYMENT_FLOW_STEP, outer2_0(7295).getPaymentFlowStepAnalyticsFields(outer1_1, obj2));
-        let c4 = 1;
-        const obj3 = { productId: null, analyticsLocation: null, analyticsLoadId: null, analyticsLocations: null, orderId: null };
-        obj3[0] = outer1_0.productId;
-        obj3[1] = outer1_1.location;
-        obj3[2] = c2;
-        obj3[3] = outer1_1;
-        if (outer1_11 != null) {
-          const id = outer1_11.id;
-        }
-        obj3[4] = id;
-        yield outer1_13(obj3);
-        if (1 === tmp7) {
-          c4 = 0;
-          if (sum instanceof outer2_1(7257)) {
-            obj1 = outer2_0(4604);
-            const subscriptions = obj1.fetchSubscriptions();
-            obj2 = outer2_1(4624);
-            const obj5 = { title: null, body: null, hideActionSheet: true };
-            const intl = outer2_0(1236).intl;
-            obj5[0] = intl.string(outer2_0(1236).t["U+H+kd"]);
-            const intl2 = outer2_0(1236).intl;
-            obj5[1] = intl2.string(outer2_0(1236).t.F9ktNa);
-            obj2.show(obj5);
-          }
-          outer1_6();
-          c5 = 3;
-        } else if (arg0 === 1) {
-          c5 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          c4 = 0;
-        }
-        c4 = 0;
-        return arg1;
       });
       const _runPurchase = tmp;
       const apply = tmp.apply;
@@ -225,7 +273,7 @@ export default function BuyNitroPurchaseFlow(item) {
   item = item.item;
   const onExit = item.onExit;
   ({ analyticsLocations, analyticsLoadId, hasEmittedPaymentFlowStartedRef, applicationId, expectedPriceString, onOrderPriceMismatch, onHostSheetClose, onPaymentSuccess, onPaymentDismiss } = item);
-  const NitroACOMSubscriptionExperiment = item(7333).NitroACOMSubscriptionExperiment;
+  const NitroACOMSubscriptionExperiment = item(6505).NitroACOMSubscriptionExperiment;
   const enabled = NitroACOMSubscriptionExperiment.useConfig({ location: "PremiumPlanSelectionActionSheetWithOrderCTX" }).enabled;
   let obj = item(500);
   if (obj.isIOS()) {
@@ -239,7 +287,7 @@ export default function BuyNitroPurchaseFlow(item) {
   } else {
     const GOOGLE = tmp3.GOOGLE;
     let tmpResult = tmp(500);
-    tmpResult = tmp(6820);
+    tmpResult = tmp(6245);
     const premiumTrialOffer = tmpResult.usePremiumTrialOffer();
     let tmp10;
     if (!tmp8) {
@@ -262,8 +310,8 @@ export default function BuyNitroPurchaseFlow(item) {
       const subscriptionItemsForProduct = item(outer1_2[16]).getSubscriptionItemsForProduct(item.productId);
       return subscriptionItemsForProduct.map((planId) => {
         const obj = { subscriptionPlanId: planId.planId, skuId: null, quantity: null };
-        const obj2 = callback(3931);
-        obj[1] = obj2.castPremiumSubscriptionAsSkuId(callback2(3931).getSkuIdForPlan(planId.planId));
+        const obj2 = callback(3839);
+        obj[1] = obj2.castPremiumSubscriptionAsSkuId(callback2(3839).getSkuIdForPlan(planId.planId));
         obj[2] = planId.quantity;
         return obj;
       });
@@ -289,6 +337,6 @@ export default function BuyNitroPurchaseFlow(item) {
     obj2[10] = onPaymentDismiss;
     tmp8 = tmpResult.isIOS() && enabled;
     obj1[8] = <BuyNitroPurchaseRunner item={null} analyticsLocations={null} analyticsLoadId={null} hasEmittedPaymentFlowStartedRef={null} applicationId={null} expectedPriceString={null} onExit={null} onOrderPriceMismatch={null} onHostSheetClose={null} onPaymentSuccess={null} onPaymentDismiss={null} />;
-    return jsx(importDefault(7334), { paymentGateway: null, orderRequired: null, skuIds: null, defaultPlans: null, isGift: false, activeSubscription: null, initialSubscriptionFacet: null, onOrderRetryCancellation: null, children: null });
+    return jsx(importDefault(6668), { paymentGateway: null, orderRequired: null, skuIds: null, defaultPlans: null, isGift: false, activeSubscription: null, initialSubscriptionFacet: null, onOrderRetryCancellation: null, children: null });
   }
 };

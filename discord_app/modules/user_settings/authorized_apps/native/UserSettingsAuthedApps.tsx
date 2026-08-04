@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedApps.tsx
 import getAvatarURL from "getAvatarURL";
 import get_ActivityIndicator from "getSystemLocale";
 import recomputeFromAppTokens from "recomputeFromAppTokens";

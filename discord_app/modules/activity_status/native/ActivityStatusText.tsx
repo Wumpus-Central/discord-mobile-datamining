@@ -1,3 +1,4 @@
+// discord_app/modules/activity_status/native/ActivityStatusText.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -19,5 +20,5 @@ export default function ActivityStatusText(variant) {
   items = [callback().text, style];
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(require(4281) /* Text */.Text, { variant: str, color: "text-muted", style: items, lineClamp: 1 });
+  return jsx(require(4189) /* Text */.Text, { variant: str, color: "text-muted", style: items, lineClamp: 1 });
 };

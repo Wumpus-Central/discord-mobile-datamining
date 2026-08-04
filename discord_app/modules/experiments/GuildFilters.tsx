@@ -1,3 +1,4 @@
+// discord_app/modules/experiments/GuildFilters.tsx
 import _slicedToArray from "_slicedToArray";
 import getGuild from "getGuild";
 import handleInviteData from "handleInviteData";
@@ -132,7 +133,7 @@ obj[require("MurmurHashV3").v3("guild_hub_types")] = (arg0) => {
     if (guild == null) {
       guild = outer1_3.getGuild(arg0);
     }
-    let someResult = null != guild && typeof guild.hubType === "number";
+    let someResult = null != guild && typeof guild.hubType === "Object";
     if (someResult) {
       someResult = guild.some((arg0) => guild.hubType === arg0);
     }

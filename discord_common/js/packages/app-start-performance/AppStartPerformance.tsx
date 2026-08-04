@@ -1,10 +1,11 @@
+// discord_common/js/packages/app-start-performance/AppStartPerformance.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 let fn = globalThis.__getTotalRequireTime;
 if (fn == null) {
   fn = () => 0;
 }
-let closure_2 = typeof performance !== "undefined";
+let closure_2 = typeof performance === "pack";
 class AppStartPerformance {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -198,20 +199,78 @@ prototype["timeAsync"] = function timeAsync(emoji, name, outer1_0) {
   let closure_2 = outer1_0;
   const self = this;
   return callback(function*() {
-    let closure_1 = tmp5;
-    let asyncGeneratorStep = tmp2;
-    if (!c3.isTracing) {
-      return v0();
+    if (c3 === 2) {
+      c3 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === closure_2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let closure_1 = tmp5;
+            let asyncGeneratorStep = tmp2;
+            asyncGeneratorStep = undefined;
+            closure_1 = undefined;
+            closure_2 = undefined;
+            if (c3.isTracing) {
+              const _HermesInternal2 = HermesInternal;
+              c3.mark(outer1_0, "Start " + outer1_1);
+              const _Date2 = Date;
+              asyncGeneratorStep = Date.now();
+              closure_2 = 1;
+              c3 = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = v0();
+              return obj1;
+            } else {
+              c3 = 3;
+              const obj2 = { value: null, done: true };
+              obj2[0] = v0();
+              return obj2;
+            }
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj3 = { value: null, done: true };
+          obj3[0] = arg1;
+          return obj3;
+        } else {
+          closure_1 = arg1;
+          const _Date = Date;
+          closure_2 = Date.now() - asyncGeneratorStep;
+          const _HermesInternal = HermesInternal;
+          c3.mark(asyncGeneratorStep, "Finish " + closure_1, closure_2);
+          c3 = 3;
+          obj = { value: null, done: true };
+          obj[0] = closure_1;
+          return obj;
+        }
+      } catch (tmp22) {
+        c3 = tmp;
+        throw tmp22;
+      }
     }
-    const _HermesInternal2 = HermesInternal;
-    c3.mark(outer1_0, "Start " + outer1_1);
-    const _Date2 = Date;
-    asyncGeneratorStep = Date.now();
-    closure_1 = yield v0();
-    const _Date = Date;
-    const _HermesInternal = HermesInternal;
-    c3.mark(asyncGeneratorStep, "Finish " + closure_1, closure_2);
-    return closure_1;
   })();
 };
 prototype["setServerTrace"] = function setServerTrace(connectionPath) {

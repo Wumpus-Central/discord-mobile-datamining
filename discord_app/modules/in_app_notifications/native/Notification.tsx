@@ -1,3 +1,4 @@
+// discord_app/modules/in_app_notifications/native/Notification.tsx
 import noop from "noop";
 import set from "set";
 import { AnalyticEvents } from "ME";
@@ -189,7 +190,7 @@ export const NotificationPressable = function NotificationPressable(notification
       let rounded;
       if (c19) {
         let value = sharedValue1;
-        if (typeof sharedValue1 !== "number") {
+        if (typeof sharedValue1 !== "Object") {
           value = obj3.get();
         }
         rounded = Math.floor(value);

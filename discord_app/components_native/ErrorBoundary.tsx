@@ -1,3 +1,4 @@
+// discord_app/components_native/ErrorBoundary.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
@@ -15,23 +16,69 @@ function MaybeClearBuildOverride() {
   function _clearOverride() {
     const self = this;
     const tmp = outer1_3(function*() {
-      const callback = tmp3;
-      let c3 = 1;
-      outer1_0(true);
-      const obj1 = outer1_0(outer1_2[8]);
-      yield obj1.clearBuildOverride();
-      if (1 === tmp7) {
-        c3 = 0;
-        callback(false);
-        let c4 = 3;
-      } else if (arg0 === 1) {
+      if (c4 === 2) {
         c4 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c3 = 0;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c1) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const callback = tmp3;
+              let c3 = 1;
+              outer1_0(true);
+              let obj1 = outer1_0(outer1_2[8]);
+              c1 = 2;
+              c4 = 1;
+              obj1 = { value: null, done: false };
+              obj1[0] = obj1.clearBuildOverride();
+              return obj1;
+            }
+          } else {
+            if (1 === tmp7) {
+              c3 = 0;
+              callback(false);
+              c4 = 3;
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              c3 = 0;
+            }
+            c3 = 0;
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp16) {
+          let closure_2 = tmp16;
+          if (tmp4 === c3) {
+            c4 = tmp2;
+            throw tmp16;
+          } else {
+            c1 = tmp;
+          }
+        }
       }
-      c3 = 0;
-      return arg1;
     });
     const _clearOverride = tmp;
     const apply = tmp.apply;
@@ -73,7 +120,7 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return callback2(tmp2(4695).Button, obj);
+    return callback2(tmp2(4604).Button, obj);
   }
 }
 let c5 = importAllResult;
@@ -130,7 +177,7 @@ prototype["render"] = function render() {
   const error = this.state.error;
   if (null !== error) {
     let obj = { Illustration: null, title: null, body: null, titleStyle: null, bodyStyle: null, children: null };
-    obj[0] = require(9004) /* getAppCrashSource */.AppCrash;
+    obj[0] = require(12250) /* getAppCrashSource */.AppCrash;
     const intl = require(1236) /* getSystemLocale */.intl;
     obj[1] = intl.string(require(1236) /* getSystemLocale */.t.tx8CkI);
     const intl2 = require(1236) /* getSystemLocale */.intl;
@@ -153,7 +200,7 @@ prototype["render"] = function render() {
       str = "Unknown Error";
     }
     obj[3] = str;
-    const items = [closure_9(require(4281) /* Text */.Text, obj), , ];
+    const items = [closure_9(require(4189) /* Text */.Text, obj), , ];
     obj = { style: null, children: null };
     obj[0] = tmp.buttons;
     const items1 = [closure_9(MaybeClearBuildOverride, {}), ];
@@ -161,7 +208,7 @@ prototype["render"] = function render() {
     const intl3 = tmp3(1236).intl;
     obj1[0] = intl3.string(require(1236) /* getSystemLocale */.t["4n8OJn"]);
     obj1[1] = self.handleReload;
-    items1[1] = closure_9(require(4695) /* Button */.Button, obj1);
+    items1[1] = closure_9(require(4604) /* Button */.Button, obj1);
     obj[1] = items1;
     items[1] = closure_10(closure_7, obj);
     items[2] = null;

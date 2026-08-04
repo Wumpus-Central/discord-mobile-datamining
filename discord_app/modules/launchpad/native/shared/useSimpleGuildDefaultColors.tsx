@@ -1,3 +1,4 @@
+// discord_app/modules/launchpad/native/shared/useSimpleGuildDefaultColors.tsx
 import createCacheKey from "createCacheKey";
 
 let obj = { iconBackground: null, iconBackgroundBrand: null, iconStroke: null };

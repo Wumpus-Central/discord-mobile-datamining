@@ -1,3 +1,4 @@
+// discord_app/modules/guild_templates/GuildTemplateTooltipActionCreators.tsx
 import set from "set";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";

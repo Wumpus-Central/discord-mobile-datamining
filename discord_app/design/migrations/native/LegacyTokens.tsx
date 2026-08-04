@@ -1,3 +1,4 @@
+// discord_app/design/migrations/native/LegacyTokens.tsx
 import { Platform } from "get ActivityIndicator";
 import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
@@ -61,64 +62,64 @@ import createCacheKey from "createCacheKey";
 import createCacheKey from "createCacheKey";
 
 const result = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_230;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_230;
 });
 const result1 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_660;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_660;
 });
 const result2 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.BLACK : unsafe_rawColors.PRIMARY_100;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.BLACK : unsafe_rawColors.PRIMARY_100;
 });
 const result3 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_400;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_400;
 });
 const result4 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_600;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_600;
 });
 const result5 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_100;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_100;
 });
 const result6 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.BLACK;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.BLACK;
 });
 const result7 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_100;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_100;
 });
 const result8 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_500;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_500;
 });
 const result9 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
 });
 const result10 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_100;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_100;
 });
 const result11 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_430;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_430;
 });
 const result12 = createCacheKey.experimental_createToken((primaryColor) => {
   if (null == primaryColor.primaryColor) {
@@ -129,186 +130,186 @@ const result12 = createCacheKey.experimental_createToken((primaryColor) => {
   return PROFILE_GRADIENT_ROLE_PILL_BORDER;
 });
 const result13 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_260 : unsafe_rawColors.BRAND_200;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_260 : unsafe_rawColors.BRAND_200;
 });
 const result14 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_260;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_260;
 });
 const result15 = createCacheKey.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
-    let PRIMARY_160 = require(4129) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.WHITE, 0.25);
-    const tmpResult = require(4129) /* hexToRgba */;
+    let PRIMARY_160 = require(4037) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.WHITE, 0.25);
+    const tmpResult = require(4037) /* hexToRgba */;
   } else {
     PRIMARY_160 = importDefault(712).unsafe_rawColors.PRIMARY_160;
   }
   return PRIMARY_160;
 });
 const result16 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
 });
 const result17 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_360 : unsafe_rawColors.PRIMARY_400;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_360 : unsafe_rawColors.PRIMARY_400;
 });
 const result18 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.WHITE;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.WHITE;
 });
 const result19 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
 const result20 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_400 : unsafe_rawColors.PRIMARY_360;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_400 : unsafe_rawColors.PRIMARY_360;
 });
 const result21 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_330 : unsafe_rawColors.BRAND_530;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_330 : unsafe_rawColors.BRAND_530;
 });
 const result22 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.BLACK : unsafe_rawColors.PRIMARY_400;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.BLACK : unsafe_rawColors.PRIMARY_400;
 });
 const result23 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.WHITE;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.WHITE;
 });
 const result24 = createCacheKey.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
-    let BACKGROUND_BASE_LOW = require(4129) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.WHITE, 0.24);
-    const tmpResult = require(4129) /* hexToRgba */;
+    let BACKGROUND_BASE_LOW = require(4037) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.WHITE, 0.24);
+    const tmpResult = require(4037) /* hexToRgba */;
   } else {
     BACKGROUND_BASE_LOW = importDefault(712).colors.BACKGROUND_BASE_LOW;
   }
   return BACKGROUND_BASE_LOW;
 });
 const result25 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.WHITE;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.WHITE;
 });
 const result26 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PLATFORM_PLAYSTATION;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PLATFORM_PLAYSTATION;
 });
 const result27 = createCacheKey.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
-    let WHITE = require(4129) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.WHITE, 0.24);
-    const tmpResult = require(4129) /* hexToRgba */;
+    let WHITE = require(4037) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.WHITE, 0.24);
+    const tmpResult = require(4037) /* hexToRgba */;
   } else {
     WHITE = importDefault(712).unsafe_rawColors.WHITE;
   }
   return WHITE;
 });
 const result28 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.RED_500 : unsafe_rawColors.RED_400;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.RED_500 : unsafe_rawColors.RED_400;
 });
 const result29 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.RED_400 : unsafe_rawColors.RED_360;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.RED_400 : unsafe_rawColors.RED_360;
 });
 const result30 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_230;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_700 : unsafe_rawColors.PRIMARY_230;
 });
 const result31 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_200;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_200;
 });
 const result32 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.YELLOW_460 : unsafe_rawColors.YELLOW_200;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.YELLOW_460 : unsafe_rawColors.YELLOW_200;
 });
 const result33 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_400 : unsafe_rawColors.PRIMARY_300;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_400 : unsafe_rawColors.PRIMARY_300;
 });
 const result34 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300;
 });
 const result35 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_200 : unsafe_rawColors.PRIMARY_400;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_200 : unsafe_rawColors.PRIMARY_400;
 });
 const result36 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
 });
 const result37 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_330 : unsafe_rawColors.PRIMARY_460;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_330 : unsafe_rawColors.PRIMARY_460;
 });
 const result38 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_200;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_200;
 });
 const result39 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_230;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_230;
 });
 const result40 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.PRIMARY_130;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.PRIMARY_130;
 });
 const result41 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_130;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_130;
 });
 const result42 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_300;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_300;
 });
 const result43 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_300;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_300;
 });
 const result44 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.TRANSPARENT;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.TRANSPARENT;
 });
 const result45 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.TRANSPARENT : unsafe_rawColors.WHITE;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.TRANSPARENT : unsafe_rawColors.WHITE;
 });
 const result46 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  return require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_160;
+  return require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_630 : unsafe_rawColors.PRIMARY_160;
 });
 const result47 = createCacheKey.experimental_createToken((theme) => {
   let str = "#dee0e4";
@@ -353,7 +354,7 @@ const result52 = createCacheKey.experimental_createToken((theme) => {
   return num;
 });
 const result53 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
   if (isThemeDarkResult) {
     const PRIMARY_200 = unsafe_rawColors.PRIMARY_200;
@@ -384,9 +385,9 @@ const result56 = createCacheKey.experimental_createToken((theme) => {
   return str;
 });
 const result57 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
-  const isThemeDarkResult = require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme);
-  const hexWithOpacity = require(4129) /* hexToRgba */.hexWithOpacity;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
+  const isThemeDarkResult = require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme);
+  const hexWithOpacity = require(4037) /* hexToRgba */.hexWithOpacity;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
   if (isThemeDarkResult) {
     let hexWithOpacityResult = hexWithOpacity(unsafe_rawColors.PRIMARY_100, c3);
@@ -396,9 +397,9 @@ const result57 = createCacheKey.experimental_createToken((theme) => {
   return hexWithOpacityResult;
 });
 const result58 = createCacheKey.experimental_createToken((theme) => {
-  const obj = require(4131) /* AccessibilityAnnouncer */;
-  const isThemeDarkResult = require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme.theme);
-  const hexWithOpacity = require(4129) /* hexToRgba */.hexWithOpacity;
+  const obj = require(4039) /* AccessibilityAnnouncer */;
+  const isThemeDarkResult = require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme.theme);
+  const hexWithOpacity = require(4037) /* hexToRgba */.hexWithOpacity;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
   if (isThemeDarkResult) {
     let hexWithOpacityResult = hexWithOpacity(unsafe_rawColors.PRIMARY_500, c3);
@@ -411,8 +412,8 @@ const result59 = createCacheKey.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
     let PRIMARY_500 = importDefault(712).unsafe_rawColors.PRIMARY_500;
   } else {
-    PRIMARY_500 = require(4129) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.PRIMARY_500, 0.3);
-    const tmpResult = require(4129) /* hexToRgba */;
+    PRIMARY_500 = require(4037) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.PRIMARY_500, 0.3);
+    const tmpResult = require(4037) /* hexToRgba */;
   }
   return PRIMARY_500;
 });

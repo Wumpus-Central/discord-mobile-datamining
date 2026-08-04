@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/pendingFrameLaunch.tsx
 let closure_0 = {};
 const result = require("set").fileFinishedImporting("modules/activities/utils/pendingFrameLaunch.tsx");
 

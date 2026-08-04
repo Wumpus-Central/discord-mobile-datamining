@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx
 import noop from "noop";
 import { hasPermission } from "GuildRoleRecordTypeTag";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";

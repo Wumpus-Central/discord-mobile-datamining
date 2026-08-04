@@ -1,3 +1,4 @@
+// discord_app/modules/media_uploads/native/VideoUploadUtils.tsx
 import { VideoCompressionQuality } from "CHANNEL_SIDEBAR_WIDTH";
 
 let closure_1 = new require("timestamp")("VideoUploadUtils.tsx");

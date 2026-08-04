@@ -1,3 +1,4 @@
+// discord_app/design/components/Modal/native/ModalStepIndicator.native.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/FamilyCenterUtils.tsx
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
 import items from "items";
 
@@ -16,37 +17,37 @@ let result = require("getSystemLocale").fileFinishedImporting("modules/parent_to
 export const getEmptyActivityFormatter = function getEmptyActivityFormatter() {
   const obj = { today: null, yesterday: null, days: null };
   const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(importDefault(2285).VjIAQQ);
+  obj[0] = intl.string(importDefault(2225).VjIAQQ);
   const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(importDefault(2285)["2a8xHY"]);
-  obj[2] = importDefault(2285).Xt6oND;
+  obj[1] = intl2.string(importDefault(2225)["2a8xHY"]);
+  obj[2] = importDefault(2225).Xt6oND;
   return obj;
 };
 export const getActivityWindowTimestampFormatter = function getActivityWindowTimestampFormatter(arg0) {
   const obj = { today: null, yesterday: null, days: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   const string = intl.string;
-  const tmp4 = importDefault(2285);
+  const tmp4 = importDefault(2225);
   if (arg0) {
     obj[0] = string(tmp4["2AtcIs"]);
     const intl3 = tmp(1236).intl;
-    obj[1] = intl3.string(tmp3(2285).stOECr);
-    obj[2] = tmp3(2285).n8n5Ba;
+    obj[1] = intl3.string(tmp3(2225).stOECr);
+    obj[2] = tmp3(2225).n8n5Ba;
     let tmp5 = obj;
   } else {
     obj[0] = string(tmp4.g1ZX6m);
     const intl2 = tmp(1236).intl;
-    obj[1] = intl2.string(tmp3(2285).s3qSVt);
-    obj[2] = tmp3(2285).f1UJiC;
+    obj[1] = intl2.string(tmp3(2225).s3qSVt);
+    obj[2] = tmp3(2225).f1UJiC;
     tmp5 = obj;
   }
   return tmp5;
 };
 export const formatUserActivityTimestamp = function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
-  let obj = importDefault(3867)();
-  const diffResult = obj.diff(importDefault(3867)(time), "s");
+  let obj = importDefault(3775)();
+  const diffResult = obj.diff(importDefault(3775)(time), "s");
   const tmp3 = timestampFormatter();
-  importDefault(3867)(time).format("LL");
+  importDefault(3775)(time).format("LL");
   if (diffResult < c10) {
     let yesterday = tmp3.today;
   } else if (diffResult < c11) {
@@ -66,10 +67,10 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
   return yesterday;
 };
 export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
-  let obj = importDefault(3867)();
-  const diffResult = obj.diff(importDefault(3867)(arg0), "s");
+  let obj = importDefault(3775)();
+  const diffResult = obj.diff(importDefault(3775)(arg0), "s");
   const tmp3 = SENT_TIMESTAMP_FORMATTER();
-  importDefault(3867)(arg0);
+  importDefault(3775)(arg0);
   if (diffResult < 60) {
     let yesterday = tmp3.seconds;
   } else if (diffResult < 3600) {
@@ -160,7 +161,7 @@ export const getOrFetchLinkedUsers = function getOrFetchLinkedUsers() {
   if (authStore.getAreLinkedUsersProcessed()) {
     return obj.getLinkedUsers();
   } else {
-    const linkedUsers = importDefault(6907).fetchLinkedUsers();
+    const linkedUsers = importDefault(5800).fetchLinkedUsers();
   }
   obj = authStore;
 };
@@ -190,7 +191,7 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
       const intl3 = require(1236) /* getSystemLocale */.intl;
       let obj = { callCount: null };
       obj[0] = call_count;
-      let formatToPlainStringResult = intl3.formatToPlainString(importDefault(2285)["L/Cj7S"], obj);
+      let formatToPlainStringResult = intl3.formatToPlainString(importDefault(2225)["L/Cj7S"], obj);
     }
     return formatToPlainStringResult;
   }
@@ -199,10 +200,10 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
       const intl2 = require(1236) /* getSystemLocale */.intl;
       obj = { messageCount: null };
       obj[0] = dms_sent;
-      formatToPlainStringResult = intl2.formatToPlainString(importDefault(2285)["6X1F0i"], obj);
+      formatToPlainStringResult = intl2.formatToPlainString(importDefault(2225)["6X1F0i"], obj);
     }
   }
   const intl = require(1236) /* getSystemLocale */.intl;
   obj = { messageCount: dms_sent, callCount: call_count };
-  formatToPlainStringResult = intl.formatToPlainString(importDefault(2285).IYqGMG, obj);
+  formatToPlainStringResult = intl.formatToPlainString(importDefault(2225).IYqGMG, obj);
 };

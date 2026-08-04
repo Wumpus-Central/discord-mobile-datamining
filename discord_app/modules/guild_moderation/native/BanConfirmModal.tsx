@@ -1,3 +1,4 @@
+// discord_app/modules/guild_moderation/native/BanConfirmModal.tsx
 import "noop";
 import { jsx } from "jsxProd";
 

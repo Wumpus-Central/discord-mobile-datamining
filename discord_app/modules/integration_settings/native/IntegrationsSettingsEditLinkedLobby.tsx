@@ -1,3 +1,4 @@
+// discord_app/modules/integration_settings/native/IntegrationsSettingsEditLinkedLobby.tsx
 import Button from "Button";
 import { View } from "Form";
 import mergeGuildAvatar from "mergeGuildAvatar";

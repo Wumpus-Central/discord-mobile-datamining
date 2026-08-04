@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/ActionBatcher.tsx
 let ActionBatcher;
 class ActionBatcher {
   constructor(arg0, arg1, arg2) {

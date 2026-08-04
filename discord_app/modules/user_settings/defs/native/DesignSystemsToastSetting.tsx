@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DesignSystemsToastSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -10,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TOAST,
   getComponent() {
-    return require(14697) /* UserSettingsDesignSystemToast */.default;
+    return require(14597) /* UserSettingsDesignSystemToast */.default;
   }
 };
 const route = createToggle.createRoute(obj);

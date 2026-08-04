@@ -1,8 +1,9 @@
+// discord_app/modules/user_settings/account/native/showUserSettingsInputAlert.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
 const require = arg1;
-const result = require("module_4624").fileFinishedImporting("modules/user_settings/account/native/showUserSettingsInputAlert.tsx");
+const result = require("module_4533").fileFinishedImporting("modules/user_settings/account/native/showUserSettingsInputAlert.tsx");
 
 export default function showUserSettingsInputAlert(arg0) {
   let dependencyMap;
@@ -10,7 +11,7 @@ export default function showUserSettingsInputAlert(arg0) {
   let require;
   ({ onSubmit: require, onSuccess: importDefault, onError: dependencyMap } = arg0);
   let closure_3 = Object.assign(arg0, Object.create(null));
-  let obj = importDefault(4624);
+  let obj = importDefault(4533);
   obj = {
     importer() {
       return outer1_0(outer1_2[4])(outer1_2[3], outer1_2.paths).then((arg0) => {

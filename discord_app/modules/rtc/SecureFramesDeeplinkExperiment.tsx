@@ -1,3 +1,4 @@
+// discord_app/modules/rtc/SecureFramesDeeplinkExperiment.tsx
 const items = [{ id: 1, label: "Enabled.", config: { enabled: true } }];
 let closure_0 = require("createExperiment")({ kind: "user", id: "2024-09_secure_frames_deeplink", label: "Secure Frames Deeplinks", defaultConfig: { enabled: false }, treatments: items });
 const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesDeeplinkExperiment.tsx");

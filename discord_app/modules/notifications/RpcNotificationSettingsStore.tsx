@@ -1,3 +1,4 @@
+// discord_app/modules/notifications/RpcNotificationSettingsStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
 

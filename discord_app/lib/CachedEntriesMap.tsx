@@ -1,3 +1,4 @@
+// discord_app/lib/CachedEntriesMap.tsx
 let result = require("set").fileFinishedImporting("lib/CachedEntriesMap.tsx");
 class CachedEntriesMap {
   constructor() {

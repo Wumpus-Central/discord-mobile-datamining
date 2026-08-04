@@ -1,3 +1,4 @@
+// discord_app/modules/stickers/StickersPersistedStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import loadSavedGuildStickers from "loadSavedGuildStickers";
 import { UserSettingsTypes } from "MAX_FAVORITES";

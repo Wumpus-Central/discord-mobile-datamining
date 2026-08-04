@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx
 import reset from "reset";
 import fetchFingerprint from "fetchFingerprint";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -47,10 +48,10 @@ createToggle = {
       }
     }
     importDefault(38)(null != tmp2, "Can not set stream volume without active stream");
-    importDefault(9077).setLocalVolume(tmp2.ownerId, arg0, require(4381) /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM);
+    importDefault(8847).setLocalVolume(tmp2.ownerId, arg0, require(4290) /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM);
   },
   usePredicate: function useHasStreamVolumeSetting() {
-    const obj = importDefault(10743);
+    const obj = importDefault(10782);
     let items = [reset, fetchFingerprint];
     const obj2 = require(589) /* initialize */;
     return require(589) /* initialize */.useStateFromStores(items, () => {

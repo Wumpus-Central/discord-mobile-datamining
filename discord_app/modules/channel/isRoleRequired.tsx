@@ -1,3 +1,4 @@
+// discord_app/modules/channel/isRoleRequired.tsx
 import { GUILD_NON_CATEGORY_CHANNEL_TYPES as closure_2 } from "createChannelRecord";
 import { Permissions } from "sum";
 
@@ -13,7 +14,7 @@ export default function isRoleRequired(guild_id) {
           if (!obj.canEveryoneRole(Permissions.CONNECT, guild_id)) {
             return true;
           }
-          obj = importAll(3918);
+          obj = importAll(3826);
         }
         let hasItem = null != tmp4;
         if (hasItem) {

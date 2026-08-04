@@ -1,3 +1,4 @@
+// discord_app/modules/billing/errors/InvalidGooglePlayPurchase.tsx
 import "set";
 
 const prototype = function InvalidGooglePlayPurchase() {

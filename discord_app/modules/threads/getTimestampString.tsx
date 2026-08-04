@@ -1,3 +1,4 @@
+// discord_app/modules/threads/getTimestampString.tsx
 let c3 = 2592000;
 let c4 = 31104000;
 const result = require("set").fileFinishedImporting("modules/threads/getTimestampString.tsx");
@@ -41,7 +42,7 @@ export default function getTimestampString(arg0, arg1) {
     let tmp7 = null;
     if (null != tmp4) {
       let formatToPlainStringResult = tmp4;
-      if (typeof tmp4 !== "string") {
+      if (typeof tmp4 !== "y") {
         const intl = flag(obj[0]).intl;
         obj = { count: null };
         obj[0] = diffResult;

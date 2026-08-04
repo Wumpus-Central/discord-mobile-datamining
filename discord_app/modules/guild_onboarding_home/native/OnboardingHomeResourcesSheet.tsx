@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx
 import "noop";
 import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_3 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY";
 import { jsx } from "jsxProd";
@@ -8,11 +9,11 @@ const result = require("jsxProd").fileFinishedImporting("modules/guild_onboardin
 export default function OnboardingHomeResourcesSheet(guildId) {
   guildId = guildId.guildId;
   let importDefault;
-  let obj = guildId(3989);
+  let obj = guildId(3897);
   importDefault = obj.useToken(importDefault(712).modules.mobile.TABLE_ROW_ICON_SIZE);
   obj = { children: null };
   obj = { hasIcons: true, children: null };
-  obj[1] = importDefault(15548)(guildId).map((label) => {
+  obj[1] = importDefault(15451)(guildId).map((label) => {
     let closure_0 = label;
     let obj = callback(outer1_2[10]);
     const resourceChannelIconURL = obj.getResourceChannelIconURL(label);
@@ -37,6 +38,6 @@ export default function OnboardingHomeResourcesSheet(guildId) {
     };
     return outer1_4(guildId(outer1_2[9]).ActionSheetRow, obj, label.channelId);
   });
-  obj[0] = jsx(guildId(5648).ActionSheetRow.Group, { hasIcons: true, children: null });
-  return jsx(guildId(5646).ActionSheet, { hasIcons: true, children: null });
+  obj[0] = jsx(guildId(5557).ActionSheetRow.Group, { hasIcons: true, children: null });
+  return jsx(guildId(5555).ActionSheet, { hasIcons: true, children: null });
 };

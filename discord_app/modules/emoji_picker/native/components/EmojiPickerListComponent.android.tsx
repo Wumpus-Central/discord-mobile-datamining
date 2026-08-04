@@ -1,3 +1,4 @@
+// discord_app/modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx
 import importAllResult from "noop";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import { EmojiCategoryTypes } from "EmojiCategoryTypes";
@@ -8,7 +9,7 @@ import createCacheKey from "createCacheKey";
 import animatedComponent from "__INTERNAL_VIEW_CONFIG";
 import BottomSheetModal from "BottomSheetModal";
 import isMetaQuest from "isMetaQuest";
-import importDefaultResult from "module_4146";
+import importDefaultResult from "module_4054";
 
 let c10;
 let c9;
@@ -74,7 +75,7 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
         tmp = analyticsLocations < 0;
       }
       if (!tmp) {
-        tmp = f81146;
+        tmp = f82601;
       }
       if (!tmp) {
         num2 = 0;

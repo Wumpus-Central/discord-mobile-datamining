@@ -1,3 +1,4 @@
+// discord_app/modules/connections/GuildRoleConnectionEligibilityStore.tsx
 import { Store } from "initialize";
 
 const map = new Map();

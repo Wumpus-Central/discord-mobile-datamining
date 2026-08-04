@@ -1,3 +1,4 @@
+// discord_app/modules/age_assurance/native/AgeVerificationRetryScreen.tsx
 import closure_3 from "jsxProd";
 import set from "set";
 import get_ActivityIndicator from "TableRowInner";

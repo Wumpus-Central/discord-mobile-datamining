@@ -1,3 +1,4 @@
+// discord_app/modules/guild_themes/useGuildThemeNuxTrigger.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { DismissibleContentGroupName as closure_4 } from "ContentDismissActionType";

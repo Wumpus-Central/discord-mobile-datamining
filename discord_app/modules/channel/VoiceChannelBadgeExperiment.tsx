@@ -1,3 +1,4 @@
+// discord_app/modules/channel/VoiceChannelBadgeExperiment.tsx
 import createExperiment from "createExperiment";
 
 const items = [{ id: 0, label: "Control", config: { enabled: false } }, { id: 1, label: "Show voice badges", config: { enabled: true } }];

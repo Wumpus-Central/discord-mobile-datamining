@@ -1,3 +1,4 @@
+// discord_app/modules/forwarding/ForwardPreviewUtils.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 
 const require = arg1;

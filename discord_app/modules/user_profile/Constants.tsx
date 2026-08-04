@@ -1,10 +1,11 @@
+// discord_app/modules/user_profile/Constants.tsx
 import { Endpoints } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/Constants.tsx");
 
 export const USER_PROFILE_TOOLTIP_DELAY = 300;
 export const getBadgeName = function getBadgeName(arg0) {
-  return require(8708) /* BadgeId */.BadgeId[arg0].toLowerCase();
+  return require(8110) /* BadgeId */.BadgeId[arg0].toLowerCase();
 };
 export const USER_PROFILE_POPOUT_KEY = "user-profile-popout";
 export const UserProfileSections = { FEATURED: "FEATURED", USER_INFO: "USER_INFO", BOT_INFO: "BOT_INFO", ACTIVITY: "ACTIVITY", MUTUALS: "MUTUALS", MUTUAL_GUILDS: "MUTUAL_GUILDS", MUTUAL_FRIENDS: "MUTUAL_FRIENDS", BOT_DATA_ACCESS: "BOT_DATA_ACCESS", WIDGETS: "WIDGETS", WISHLIST: "WISHLIST", MAIN: "MAIN" };

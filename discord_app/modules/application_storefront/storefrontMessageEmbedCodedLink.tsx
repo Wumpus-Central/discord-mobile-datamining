@@ -1,3 +1,4 @@
+// discord_app/modules/application_storefront/storefrontMessageEmbedCodedLink.tsx
 import _slicedToArray from "_slicedToArray";
 
 const result = require("set").fileFinishedImporting("modules/application_storefront/storefrontMessageEmbedCodedLink.tsx");

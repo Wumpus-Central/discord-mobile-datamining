@@ -1,3 +1,4 @@
+// discord_app/actions/GuildAffinitiesActionCreators.tsx
 import { Endpoints } from "ME";
 
 const result = require("dispatcher").fileFinishedImporting("actions/GuildAffinitiesActionCreators.tsx");

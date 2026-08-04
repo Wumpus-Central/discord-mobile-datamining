@@ -1,3 +1,4 @@
+// discord_app/modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx
 import jsxProd from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -9,7 +10,7 @@ import HeaderBackImage from "HeaderBackImage";
 
 const require = arg1;
 function onClose() {
-  let arr = importDefault(4490);
+  let arr = importDefault(4399);
   arr = arr.pop();
 }
 function ContactSyncNameInputScreen() {
@@ -31,30 +32,75 @@ function ContactSyncNameInputScreen() {
       let c4 = 0;
       let c3 = 0;
       return (function*(arg0) {
-        let closure_1 = tmp3;
-        callback(true);
-        let c3 = 1;
-        yield outer1_1(11951).updateName(callback);
-        if (1 === tmp7) {
-          c3 = 0;
-          const obj1 = outer1_1(3986);
-          const obj2 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
-          const intl = callback(1236).intl;
-          obj2[1] = intl.string(callback(1236).t.R0RpRX);
-          obj2[2] = outer1_1(8256);
-          obj1.open(obj2);
-          callback(false);
-          let c4 = 3;
-        } else if (arg0 === 1) {
+        if (c4 === 2) {
           c4 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          callback(false);
-          outer1_9();
-          c3 = 0;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c4 = 2;
+            if (0 === dependencyMap) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let closure_1 = tmp3;
+                callback(true);
+                let c3 = 1;
+                dependencyMap = 2;
+                c4 = 1;
+                let obj1 = { value: null, done: false };
+                obj1[0] = outer1_1(11789).updateName(callback);
+                return obj1;
+              }
+            } else {
+              if (1 === tmp7) {
+                c3 = 0;
+                obj1 = outer1_1(3894);
+                const obj2 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
+                const intl = callback(1236).intl;
+                obj2[1] = intl.string(callback(1236).t.R0RpRX);
+                obj2[2] = outer1_1(9181);
+                obj1.open(obj2);
+                callback(false);
+                c4 = 3;
+              } else if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                callback(false);
+                outer1_9();
+                c3 = 0;
+              }
+              c3 = 0;
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+          } catch (tmp29) {
+            if (tmp4 === c3) {
+              c4 = tmp2;
+              throw tmp29;
+            } else {
+              dependencyMap = tmp;
+            }
+          }
         }
-        c3 = 0;
-        return arg1;
       })();
     });
     const _onNext = tmp;
@@ -120,5 +166,5 @@ obj1[ContactSyncScenes.NAME_INPUT] = obj2;
 const result = require("noop").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");
 
 export default function ContactSyncNameUpdateModal() {
-  return jsx(require(5665) /* NavigationStack */.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj1 });
+  return jsx(require(5574) /* NavigationStack */.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj1 });
 };

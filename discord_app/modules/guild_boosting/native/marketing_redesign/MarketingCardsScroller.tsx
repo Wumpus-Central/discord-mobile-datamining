@@ -1,3 +1,4 @@
+// discord_app/modules/guild_boosting/native/marketing_redesign/MarketingCardsScroller.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

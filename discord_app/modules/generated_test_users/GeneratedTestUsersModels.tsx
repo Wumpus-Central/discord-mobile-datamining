@@ -1,3 +1,4 @@
+// discord_app/modules/generated_test_users/GeneratedTestUsersModels.tsx
 import "toJS";
 
 let GeneratedTestPoolRecord;
@@ -10,7 +11,7 @@ class GeneratedTestPoolRecord extends tmp2 {
   }
 }
 GeneratedTestPoolRecord["fromServer"] = function fromServer(arg0) {
-  if (typeof GeneratedTestPoolRecord !== "function") {
+  if (typeof GeneratedTestPoolRecord !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new GeneratedTestPoolRecord("Trying to call a non-function", GeneratedTestPoolRecord);

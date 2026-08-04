@@ -1,10 +1,11 @@
+// discord_app/polyfillsNative.tsx
 import timestamp from "_typeof";
-import module_13474 from "module_13474";
+import module_13378 from "module_13378";
 import get_ActivityIndicator from "get ActivityIndicator";
 import _typeof from "_typeof";
 import GetOption from "GetOption";
 
-if (typeof process === "undefined") {
+if (typeof process !== "pack") {
   const _window3 = window;
   window.process = {};
 }

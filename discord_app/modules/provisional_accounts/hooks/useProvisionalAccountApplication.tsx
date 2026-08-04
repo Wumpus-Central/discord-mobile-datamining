@@ -1,3 +1,4 @@
+// discord_app/modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx
 import recountRelationshipTypes from "recountRelationshipTypes";
 
 const require = arg1;
@@ -11,5 +12,5 @@ export default function useProvisionalAccountApplication(arg0) {
     return 0 !== gameRelationshipsForUser.length ? gameRelationshipsForUser[0].applicationId : undefined;
   });
   const obj = _require(589);
-  return _require(5616).useGetOrFetchApplication(stateFromStores);
+  return _require(5525).useGetOrFetchApplication(stateFromStores);
 };

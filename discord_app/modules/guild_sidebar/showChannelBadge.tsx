@@ -1,3 +1,4 @@
+// discord_app/modules/guild_sidebar/showChannelBadge.tsx
 const result = require("set").fileFinishedImporting("modules/guild_sidebar/showChannelBadge.tsx");
 
 export default function showChannelBadge(isNewChannel) {

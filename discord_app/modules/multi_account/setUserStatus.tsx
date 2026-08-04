@@ -1,3 +1,4 @@
+// discord_app/modules/multi_account/setUserStatus.tsx
 import getSystemLocale from "getSystemLocale";
 import initialize from "initialize";
 import filterPlayingActivities from "filterPlayingActivities";
@@ -138,7 +139,7 @@ function _setUserStatus() {
                 return formatToPlainStringResult;
               }
             })(callback, str);
-            const AccessibilityAnnouncer = callback(4100).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = callback(4008).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(constants);
             if (!globalStats) {
               obj = { next_status: null, prev_status: null };

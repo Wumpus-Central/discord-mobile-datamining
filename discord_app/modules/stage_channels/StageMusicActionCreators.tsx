@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/StageMusicActionCreators.tsx
 const result = require("set").fileFinishedImporting("modules/stage_channels/StageMusicActionCreators.tsx");
 
 export const updateStageMusicMuted = function updateStageMusicMuted(muted) {

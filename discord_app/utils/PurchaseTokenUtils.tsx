@@ -1,3 +1,4 @@
+// discord_app/utils/PurchaseTokenUtils.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;
@@ -20,21 +21,72 @@ function getPurchaseToken() {
 function _getPurchaseTokenHash() {
   const self = this;
   const tmp = callback(function*() {
-    let closure_1 = tmp2;
-    const _Uint8Array2 = Uint8Array;
-    const parts = outer1_5().split("");
-    const uint8Array = new Uint8Array(parts.map((str) => str.charCodeAt(0)));
-    const _window = window;
-    let closure_0 = yield subtle.digest({ name: "SHA-256" }, uint8Array);
-    const _btoa = btoa;
-    const _String = String;
-    closure_0 = 0;
-    const _Uint8Array = Uint8Array;
-    const uint8Array1 = new Uint8Array(closure_0);
-    const items = [];
-    closure_0 = HermesBuiltin.arraySpread(uint8Array1, closure_0);
-    const _String2 = String;
-    return btoa(HermesBuiltin.apply(items, String));
+    if (c3 === 2) {
+      c3 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let closure_1 = tmp2;
+            let closure_0;
+            const _Uint8Array2 = Uint8Array;
+            const parts = outer1_5().split("");
+            const uint8Array = new Uint8Array(parts.map((str) => str.charCodeAt(0)));
+            const _window = window;
+            c2 = 1;
+            c3 = 1;
+            const obj1 = { value: null, done: false };
+            obj1[0] = subtle.digest({ name: "SHA-256" }, uint8Array);
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
+        } else {
+          closure_0 = arg1;
+          const _btoa = btoa;
+          const _String = String;
+          closure_0 = 0;
+          const _Uint8Array = Uint8Array;
+          const uint8Array1 = new Uint8Array(closure_0);
+          const items = [];
+          closure_0 = HermesBuiltin.arraySpread(uint8Array1, closure_0);
+          const _String2 = String;
+          c3 = 3;
+          obj = { value: null, done: true };
+          obj[0] = btoa(HermesBuiltin.apply(items, String));
+          return obj;
+        }
+      } catch (tmp17) {
+        c3 = tmp;
+        throw tmp17;
+      }
+    }
   });
   const _getPurchaseTokenHash = tmp;
   const apply = tmp.apply;

@@ -1,3 +1,4 @@
+// discord_common/js/packages/apex/ApexTypes.tsx
 const obj = { User: 1, [1]: "User", Installation: 2, [2]: "Installation", Guild: 3, [3]: "Guild" };
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/apex/ApexTypes.tsx");
 

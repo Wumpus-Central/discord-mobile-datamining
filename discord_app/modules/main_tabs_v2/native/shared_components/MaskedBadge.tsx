@@ -1,9 +1,10 @@
+// discord_app/modules/main_tabs_v2/native/shared_components/MaskedBadge.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 
 const require = arg1;
-createCacheKey = { maskStyle: { position: "relative", right: "alignItems" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };
+createCacheKey = { maskStyle: { position: "relative", right: "HermesInternal" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };
 createCacheKey = { backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_400 };
 createCacheKey[4] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);
@@ -44,7 +45,7 @@ export default function MaskedBadge(backgroundColor) {
       obj[0] = size;
       obj[1] = backgroundColor;
       obj[2] = tmp.unreadBadge;
-      tmp7Result = jsx(importDefault(8199), { size: null, maskColor: null, style: null });
+      tmp7Result = jsx(importDefault(9133), { size: null, maskColor: null, style: null });
     }
   }
   return tmp7Result;

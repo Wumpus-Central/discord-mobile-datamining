@@ -1,3 +1,4 @@
+// discord_assets/assets/mana/asset-library/generated/GameDepthTier2SmallBadge-2x.png.js
 const result = require("set").fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GameDepthTier2SmallBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/015c2f30d6feb7848c2eaa8e974ebc7528a0dcfc8bff009f5623baf0a50cfb60.png";

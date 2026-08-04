@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/PrivateChannelHidingExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enableObfuscation: true, enableIntegrityCheck: false }, 3: { enableObfuscation: true, enableIntegrityCheck: true } };

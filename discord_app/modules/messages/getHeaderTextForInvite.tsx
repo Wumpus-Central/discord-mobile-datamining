@@ -1,3 +1,4 @@
+// discord_app/modules/messages/getHeaderTextForInvite.tsx
 const result = require("set").fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
 export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {

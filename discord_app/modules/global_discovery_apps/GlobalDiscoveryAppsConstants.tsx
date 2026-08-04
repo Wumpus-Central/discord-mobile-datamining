@@ -1,3 +1,4 @@
+// discord_app/modules/global_discovery_apps/GlobalDiscoveryAppsConstants.tsx
 const result = require("set").fileFinishedImporting("modules/global_discovery_apps/GlobalDiscoveryAppsConstants.tsx");
 
 export const GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID = 0;

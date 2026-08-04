@@ -1,3 +1,4 @@
+// discord_app/modules/markup/MarkupTextRule.tsx
 import t from "t";
 
 const tmp2 = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/;

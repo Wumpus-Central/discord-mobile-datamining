@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/InternalBuildUpdateSetting.tsx
 import checkForNewerBuild from "checkForNewerBuild";
 import { jsx } from "jsxProd";
 import createToggle from "createToggle";
@@ -11,9 +12,9 @@ createToggle = {
   IconComponent: function InstallNativeUpdateIcon() {
     const items = [checkForNewerBuild];
     if (obj.useStateFromStores(items, () => null !== checkForNewerBuild.latestFetchedBuild().newBuild)) {
-      let RefreshIcon = tmp(4235).DownloadIcon;
+      let RefreshIcon = tmp(4143).DownloadIcon;
     } else {
-      RefreshIcon = tmp(13754).RefreshIcon;
+      RefreshIcon = tmp(13658).RefreshIcon;
     }
     return <RefreshIcon />;
   },
@@ -37,21 +38,21 @@ createToggle = {
       str = "Never refreshed";
       if (null != stateFromStores1) {
         const _HermesInternal = HermesInternal;
-        str = "Last refreshed " + importDefault(3867)(stateFromStores1).fromNow();
-        const obj3 = importDefault(3867)(stateFromStores1);
+        str = "Last refreshed " + importDefault(3775)(stateFromStores1).fromNow();
+        const obj3 = importDefault(3775)(stateFromStores1);
       }
     }
     return str;
   },
   usePredicate: function useHasInternalBuildUpdateSetting() {
-    const obj = require(13992) /* useStaffOrDeveloperSettingPredicate */;
-    return checkForNewerBuild.hasUpdatesConfigured && require(13992) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
+    const obj = require(13892) /* useStaffOrDeveloperSettingPredicate */;
+    return checkForNewerBuild.hasUpdatesConfigured && require(13892) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
   },
   onPress: function handleInstallNativeUpdateSettingPress() {
     const newBuild = checkForNewerBuild.latestFetchedBuild().newBuild;
     if (null !== newBuild) {
-      importAll(13160).openBuildInstaller(newBuild);
-      const obj2 = importAll(13160);
+      importAll(13064).openBuildInstaller(newBuild);
+      const obj2 = importAll(13064);
     } else {
       checkForNewerBuild.checkForNewerBuild();
     }

@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -29,7 +30,7 @@ export default function FadeOutLottieAnimation(onComplete) {
   const effect = React.useEffect(() => {
     dependencyMap(false);
   }, []);
-  onComplete(4146);
+  onComplete(4054);
   class T {
     constructor() {
       if (c1) {
@@ -69,7 +70,7 @@ export default function FadeOutLottieAnimation(onComplete) {
       return;
     }
   }
-  obj = { isAnimationComplete: first, isFadeOut: first1, withTiming: onComplete(4286).withTiming, runOnJS: onComplete(4146).runOnJS, setIsFadeOut: tmp7 };
+  obj = { isAnimationComplete: first, isFadeOut: first1, withTiming: onComplete(4194).withTiming, runOnJS: onComplete(4054).runOnJS, setIsFadeOut: tmp7 };
   T.__closure = obj;
   T.__workletHash = 1137618554665;
   T.__initData = closure_8;
@@ -90,9 +91,9 @@ export default function FadeOutLottieAnimation(onComplete) {
       dependencyMap(true);
     };
     const merged1 = Object.assign(merged);
-    obj[1] = jsx(first(5601), { style: null, speed: null, onAnimationFinish: null });
-    let tmp14Result = tmp14(first(4146).View, obj);
-    const tmp16 = first(5601);
+    obj[1] = jsx(first(5510), { style: null, speed: null, onAnimationFinish: null });
+    let tmp14Result = tmp14(first(4054).View, obj);
+    const tmp16 = first(5510);
   } else {
     tmp14Result = null;
   }

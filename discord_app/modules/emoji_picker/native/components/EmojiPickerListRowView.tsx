@@ -1,3 +1,4 @@
+// discord_app/modules/emoji_picker/native/components/EmojiPickerListRowView.tsx
 import { View } from "get ActivityIndicator";
 import set from "set";
 import set from "__INTERNAL_VIEW_CONFIG";

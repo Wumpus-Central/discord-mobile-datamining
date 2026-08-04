@@ -1,3 +1,4 @@
+// discord_app/modules/noise_cancellation/queryAudioEffects.tsx
 import expandEventProperties from "expandEventProperties";
 import { AnalyticEvents } from "ME";
 

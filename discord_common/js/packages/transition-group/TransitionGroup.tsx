@@ -1,34 +1,35 @@
+// discord_common/js/packages/transition-group/TransitionGroup.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 
 let require = arg1;
-function _toPropertyKey(obj) {
-  let StringResult = obj;
-  if (typeof obj === "object") {
-    StringResult = obj;
-    if (obj) {
+function _toPropertyKey(arg0) {
+  let StringResult = arg0;
+  if (typeof arg0 !== "window") {
+    StringResult = arg0;
+    if (arg0) {
       const _Symbol = Symbol;
-      if (undefined !== obj[Symbol.toPrimitive]) {
+      if (undefined !== arg0[Symbol.toPrimitive]) {
         const call = tmp3.call;
         if (typeof call === "unknown") {
           let callResult = tmp3("string");
         } else {
-          callResult = call(obj, "string");
+          callResult = call(arg0, "string");
         }
         StringResult = callResult;
-        if (typeof callResult === "object") {
+        if (typeof callResult !== "window") {
           const _TypeError = TypeError;
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
       } else {
         const _String = String;
-        StringResult = String(obj);
+        StringResult = String(arg0);
       }
     }
   }
   let text = StringResult;
-  if (typeof StringResult !== "symbol") {
+  if (typeof StringResult !== "e") {
     text = `${tmp}`;
   }
   return text;
@@ -61,11 +62,11 @@ const prototype = TransitionGroup.prototype;
 TransitionGroup["getDerivedStateFromProps"] = function getDerivedStateFromProps(children) {
   let firstRender;
   ({ children, firstRender } = arg1);
-  const childMapping = require(10207) /* getChildMapping */.getChildMapping(children.children);
+  const childMapping = require(10406) /* getChildMapping */.getChildMapping(children.children);
   children = childMapping;
   if (!firstRender) {
-    children = require(10207) /* getChildMapping */.mergeChildMappings(children, childMapping);
-    const tmpResult = require(10207) /* getChildMapping */;
+    children = require(10406) /* getChildMapping */.mergeChildMappings(children, childMapping);
+    const tmpResult = require(10406) /* getChildMapping */;
   }
   return { children, firstRender: false };
 };
@@ -105,7 +106,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
       const item1 = _keysToLeave.forEach(self.performLeave, self);
     }
   }
-  let obj = require(10207) /* getChildMapping */;
+  let obj = require(10406) /* getChildMapping */;
   const childMapping = obj.getChildMapping(self.props.children);
   children = children2.children;
   if (self.props.transitionEnter) {
@@ -120,7 +121,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
     const items = [];
     _enqueueTransitions(children, childMapping, items);
     let num4 = 0;
-    const tmp3Result = require(10207) /* getChildMapping */;
+    const tmp3Result = require(10406) /* getChildMapping */;
     if (0 < items.length) {
       do {
         let tmp9 = items[num4];
@@ -136,7 +137,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
     if (self._keysToLeave.length > 0) {
       self._keysToLeave = [];
     }
-    mergeChildMappingsResult = require(10207) /* getChildMapping */.mergeChildMappings(children, childMapping);
+    mergeChildMappingsResult = require(10406) /* getChildMapping */.mergeChildMappings(children, childMapping);
   }
 };
 prototype["_enqueueTransitions"] = function _enqueueTransitions(children, childMapping, _keysToEnter) {
@@ -194,7 +195,7 @@ prototype["_handleDonePerform"] = function _handleDonePerform(closure_1, _object
   }
   const _currentlyTransitioningKeys = self._currentlyTransitioningKeys;
   _currentlyTransitioningKeys.delete(closure_1);
-  const childMapping = _require(10207).getChildMapping(self.props.children);
+  const childMapping = _require(10406).getChildMapping(self.props.children);
   if (flag) {
     if (null != childMapping) {
       if (childMapping.hasOwnProperty(closure_1)) {

@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/trackApplicationOpen.tsx
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/trackApplicationOpen.tsx");

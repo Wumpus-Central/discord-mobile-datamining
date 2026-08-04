@@ -1,3 +1,4 @@
+// discord_app/utils/AuthenticationUtils.tsx
 const result = require("set").fileFinishedImporting("utils/AuthenticationUtils.tsx");
 
 export const getToken = function getToken() {

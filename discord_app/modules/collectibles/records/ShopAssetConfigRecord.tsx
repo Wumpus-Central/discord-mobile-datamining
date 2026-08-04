@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/records/ShopAssetConfigRecord.tsx
 let AssetDisplayConfigRecord;
 class AssetDisplayConfigRecord {
   constructor(arg0) {
@@ -8,7 +9,7 @@ class AssetDisplayConfigRecord {
 }
 const prototype = AssetDisplayConfigRecord.prototype;
 AssetDisplayConfigRecord["fromServer"] = function fromServer(arg0) {
-  if (typeof AssetDisplayConfigRecord !== "function") {
+  if (typeof AssetDisplayConfigRecord !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   ({ desktop_max_height: tmp2.desktopMaxHeight, mobile_max_height: tmp2.mobileMaxHeight, responsive: tmp2.responsive, background_style: tmp2.backgroundStyle } = arg0);

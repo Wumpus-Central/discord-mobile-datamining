@@ -1,3 +1,4 @@
+// discord_app/modules/guilds_bar/useGuildMediaState.tsx
 import participantFromServer from "participantFromServer";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import { isVoiceChannel } from "createChannelRecord";

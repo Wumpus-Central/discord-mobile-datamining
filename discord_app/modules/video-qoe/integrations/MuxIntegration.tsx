@@ -1,3 +1,4 @@
+// discord_app/modules/video-qoe/integrations/MuxIntegration.tsx
 let result = require("set").fileFinishedImporting("modules/video-qoe/integrations/MuxIntegration.tsx");
 const prototype = function MuxIntegration() {
   return Object.create(new.target.prototype);
@@ -39,7 +40,7 @@ prototype["mapDiscordToMuxMetadata"] = function mapDiscordToMuxMetadata(config, 
   return obj;
 };
 prototype["getAppVersion"] = function getAppVersion() {
-  return "6151";
+  return "6119";
 };
 prototype["getBuildChannel"] = function getBuildChannel() {
   try {

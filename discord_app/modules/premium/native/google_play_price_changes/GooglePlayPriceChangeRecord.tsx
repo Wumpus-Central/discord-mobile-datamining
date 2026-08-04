@@ -1,3 +1,4 @@
+// discord_app/modules/premium/native/google_play_price_changes/GooglePlayPriceChangeRecord.tsx
 import "toJS";
 
 const obj = { PRICE_CHANGE_MODE_UNSPECIFIED: "PRICE_CHANGE_MODE_UNSPECIFIED", PRICE_DECREASE: "PRICE_DECREASE", PRICE_INCREASE: "PRICE_INCREASE", OPT_OUT_PRICE_INCREASE: "OPT_OUT_PRICE_INCREASE" };
@@ -23,7 +24,7 @@ GooglePlayPriceChangeRecord["createFromServer"] = function createFromServer(arg0
   let user_id;
   ({ user_id, subscription_id, old_currency, old_price, new_currency, new_price, price_change_mode } = arg0);
   ({ expected_charge_time, price_change_id } = arg0);
-  if (typeof GooglePlayPriceChangeRecord !== "function") {
+  if (typeof GooglePlayPriceChangeRecord !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new GooglePlayPriceChangeRecord("Trying to call a non-function", GooglePlayPriceChangeRecord, new.target, user_id, subscription_id, old_currency, old_price, new_currency, new_price, price_change_mode);

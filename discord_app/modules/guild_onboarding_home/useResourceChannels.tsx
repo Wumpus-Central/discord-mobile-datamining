@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/useResourceChannels.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
 

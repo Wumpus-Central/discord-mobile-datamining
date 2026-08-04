@@ -1,3 +1,4 @@
+// discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx
 import { ExperimentFlags } from "DesktopSources";
 
 let items = [{ name: "H264", encode: true, decode: true }, { name: "VP8", encode: true, decode: true }];

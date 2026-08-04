@@ -1,3 +1,4 @@
+// discord_app/modules/hangout_window/HangoutWindowExperiment.tsx
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Enable Hangout Window", config: { enableHangoutWindow: true } }];

@@ -1,3 +1,4 @@
+// discord_app/modules/premium/sounds/soundmoji/utils/getSoundmojiASTFromString.tsx
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
 import reinjectEphemerals from "reinjectEphemerals";
 import { MessageStates } from "ME";
@@ -10,14 +11,14 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
   let messageId;
   let soundboardSounds;
   ({ channelId, messageId, soundboardSounds } = guildId);
-  let obj = require(4734) /* getSoundmojiRenderingExperiment */;
+  let obj = require(4643) /* getSoundmojiRenderingExperiment */;
   let tmp5;
   if (obj.getSoundmojiRenderingExperiment({ location: "getSoundmojiASTFromString" })) {
     const soundById = store.getSoundById(tmp2);
-    const tmp9 = importDefault(4735)(soundById, guildId.guildId, channelId);
+    const tmp9 = importDefault(4644)(soundById, guildId.guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
-        const tmp16 = tmp8(4736)(channelId, messageId, tmp2, soundboardSounds);
+        const tmp16 = tmp8(4645)(channelId, messageId, tmp2, soundboardSounds);
         tmp5 = tmp16;
         if (tmp9) {
           tmp5 = tmp16;
@@ -46,7 +47,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
   }
   if (null == tmp5) {
     obj = { type: "text", content: null };
-    obj[1] = importDefault(4738)(tmp, tmp2);
+    obj[1] = importDefault(4647)(tmp, tmp2);
     return obj;
   } else {
     let name;
@@ -95,10 +96,10 @@ export const soundmojiRawFormatRegex = /^<sound:(\d+):(\d+)>/;
 export const getSoundmojiFromMessage = function getSoundmojiFromMessage(guildId, channelId, messageId, soundId, arg4) {
   if (obj.getSoundmojiRenderingExperiment({ location: "getSoundmojiASTFromString" })) {
     const soundById = store.getSoundById(soundId);
-    const tmp9 = importDefault(4735)(soundById, guildId, channelId);
+    const tmp9 = importDefault(4644)(soundById, guildId, channelId);
     if (null != messageId) {
       if (null != channelId) {
-        const tmp16 = tmp8(4736)(channelId, messageId, soundId, arg4);
+        const tmp16 = tmp8(4645)(channelId, messageId, soundId, arg4);
         if (tmp9) {
           if (null == tmp16) {
             const message = store2.getMessage(channelId, messageId);

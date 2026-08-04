@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/creator_monetization/canUserSeeMonetizationOnboarding.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;
@@ -9,12 +10,12 @@ export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationO
   if (currentUser != null) {
     id = currentUser.id;
   }
-  let obj = require(5789) /* computeGuildRoleSubscriptionSettingsVisibility */;
+  let obj = require(12641) /* computeGuildRoleSubscriptionSettingsVisibility */;
   obj = { guild: mergeGuildAvatar, isOwner: mergeGuildAvatar.ownerId === id, canManageGuildRoleSubscriptions: null, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
-  obj[2] = require(5789) /* computeGuildRoleSubscriptionSettingsVisibility */.canManageGuildRoleSubscriptions(mergeGuildAvatar);
-  const obj3 = require(5789) /* computeGuildRoleSubscriptionSettingsVisibility */;
-  obj[3] = require(5790) /* set */.isUserInCreatorMonetizationEligibleCountry();
-  const obj4 = require(5790) /* set */;
-  obj[4] = require(3906) /* isRestrictedFromShowingGuildPurchaseEntryPoints */.shouldRestrictUpdatingCreatorMonetizationSettings(mergeGuildAvatar.id);
+  obj[2] = require(12641) /* computeGuildRoleSubscriptionSettingsVisibility */.canManageGuildRoleSubscriptions(mergeGuildAvatar);
+  const obj3 = require(12641) /* computeGuildRoleSubscriptionSettingsVisibility */;
+  obj[3] = require(12642) /* set */.isUserInCreatorMonetizationEligibleCountry();
+  const obj4 = require(12642) /* set */;
+  obj[4] = require(3814) /* isRestrictedFromShowingGuildPurchaseEntryPoints */.shouldRestrictUpdatingCreatorMonetizationSettings(mergeGuildAvatar.id);
   return obj.canSeeGuildRoleSubscriptionSettings(obj);
 };

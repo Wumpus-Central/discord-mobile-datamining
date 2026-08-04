@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/tabs/guilds/empty_states/GuildsEmpty.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "encodeProperties";
 import get_ActivityIndicator from "defaultAreStatesEqual";
@@ -17,10 +18,10 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function handleJoinGuild() {
-  const result = importDefault(11975).openGuildJoinServerScreen();
+  const result = importDefault(11813).openGuildJoinServerScreen();
 }
 function handleCreateGuild() {
-  importDefault(11975).openCreateGuildModal();
+  importDefault(11813).openCreateGuildModal();
 }
 class GuildsEmptyContent {
   constructor(arg0) {
@@ -121,7 +122,7 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   obj = { type: null, name: null };
   obj[0] = navigation(503).ImpressionTypes.VIEW;
   obj[1] = navigation(503).ImpressionNames.GUILDS_EMPTY_NUX;
-  importDefault(9267)(obj);
+  importDefault(8436)(obj);
   const items1 = [tmp6, navigation];
   const effect = importAllResult.useEffect(() => {
     if (null != c1) {
@@ -158,9 +159,9 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
       obj2 = closure_0;
     }
   }, items1);
-  let tmp2Result = tmp2(4815);
+  let tmp2Result = tmp2(4724);
   const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  tmp2Result = tmp2(14245);
+  tmp2Result = tmp2(14145);
   let tmp14Result = null;
   if (stateFromStores) {
     obj = { style: null, children: null };
@@ -173,7 +174,7 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
     let obj3 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: null };
     const intl = tmp2(1236).intl;
     obj3[4] = intl.string(tmp2(1236).t["7hB4kg"]);
-    obj2[1] = callback(tmp2(4281).Text, obj3);
+    obj2[1] = callback(tmp2(4189).Text, obj3);
     obj1[1] = callback(closure_6, obj2);
     const items3 = [callback(closure_6, obj1), ];
     let tmp18;

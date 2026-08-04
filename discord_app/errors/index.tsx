@@ -1,3 +1,4 @@
+// discord_app/errors/index.tsx
 const result = require("prototype").fileFinishedImporting("errors/index.tsx");
 
 export const V6OrEarlierAPIError = require("prototype");

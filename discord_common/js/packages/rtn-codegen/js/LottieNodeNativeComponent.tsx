@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 let obj = { uiViewClassName: "NativeLottieNode", validAttributes: {} };

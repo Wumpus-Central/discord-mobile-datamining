@@ -1,3 +1,4 @@
+// discord_app/modules/debug/native/ReactotronConfig.tsx
 import importDefaultResult from "reactNativeCorePlugins";
 
 const reactNative = require("reactNativeCorePlugins").configure({}).useReactNative();

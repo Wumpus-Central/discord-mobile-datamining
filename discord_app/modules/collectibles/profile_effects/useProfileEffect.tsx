@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_effects/useProfileEffect.tsx
 import noop from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import map from "map";

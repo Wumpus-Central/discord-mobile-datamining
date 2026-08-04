@@ -1,3 +1,4 @@
+// discord_app/modules/favorites/FavoritesGuildExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enabled: true, hasHigherPrivileges: true }, 3: { enabled: true, hasHigherPrivileges: false } };

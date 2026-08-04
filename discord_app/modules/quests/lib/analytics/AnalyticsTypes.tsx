@@ -1,3 +1,4 @@
+// discord_app/modules/quests/lib/analytics/AnalyticsTypes.tsx
 let closure_2 = Object.keys(require("QuestsVisibleMessagesChangedSource").QuestContent);
 const result = require("set").fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");
 

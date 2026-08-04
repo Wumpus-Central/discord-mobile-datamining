@@ -1,3 +1,4 @@
+// discord_app/modules/guild_home/useActiveChannels.tsx
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

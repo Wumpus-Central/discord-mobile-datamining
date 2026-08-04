@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/native/GuildPowerupsModal.tsx
 import messagesProxy from "messagesProxy";
 import get_ActivityIndicator from "Background";
 import BoostedGuildTiers from "BoostedGuildTiers";

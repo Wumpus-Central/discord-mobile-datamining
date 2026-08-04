@@ -1,3 +1,4 @@
+// discord_app/modules/stickers/StickersStore.tsx
 import items from "items";
 import allGuildIds from "allGuildIds";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

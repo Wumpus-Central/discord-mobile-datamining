@@ -1,3 +1,4 @@
+// discord_app/modules/media_uploads/native/ImageConversionDecision.tsx
 const result = require("set").fileFinishedImporting("modules/media_uploads/native/ImageConversionDecision.tsx");
 
 export const isPhotoKitAsset = function isPhotoKitAsset(closure_0, outer1_1) {
@@ -81,15 +82,15 @@ export const shouldConvertToJPG = function shouldConvertToJPG(closure_0, outer1_
             if (obj2.isExtensionAnimated(formatted)) {
               return false;
             } else {
-              const supportedExtensions = tmp14(4848).getSupportedExtensions();
+              const supportedExtensions = tmp14(4757).getSupportedExtensions();
               if (null !== supportedExtensions) {
                 if (supportedExtensions.has(formatted)) {
                   return true;
                 }
               }
-              const tmp14Result = tmp14(4848);
+              const tmp14Result = tmp14(4757);
             }
-            obj2 = importDefault(4848);
+            obj2 = importDefault(4757);
             tmp14 = importDefault;
           }
           return false;

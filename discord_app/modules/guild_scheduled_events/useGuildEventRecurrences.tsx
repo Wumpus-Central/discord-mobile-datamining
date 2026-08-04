@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/useGuildEventRecurrences.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import scheduledEventSort from "scheduledEventSort";
@@ -12,12 +13,12 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   let obj = _require(589);
   let items = [first];
   const stateFromStores = obj.useStateFromStores(items, () => first.getGuildScheduledEvent(closure_0));
-  const tmp4 = importDefault(8971)(byWeekday);
+  const tmp4 = importDefault(8336)(byWeekday);
   let noop = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
-      let tmpResult = tmp(8864);
-      tmpResult = tmp(8864);
+      let tmpResult = tmp(8214);
+      tmpResult = tmp(8214);
       let _Date = Date;
       let rRule = tmpResult.getRRule(byWeekday);
       let date = new Date(stateFromStores.scheduled_start_time);

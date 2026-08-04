@@ -1,3 +1,4 @@
+// discord_app/modules/relationships/native/RestrictionConfirmationConstants.tsx
 const result = require("set").fileFinishedImporting("modules/relationships/native/RestrictionConfirmationConstants.tsx");
 
 export const IGNORE_CONFIRMATION_ACTION_SHEET_KEY = "IgnoreConfirmationActionSheet";

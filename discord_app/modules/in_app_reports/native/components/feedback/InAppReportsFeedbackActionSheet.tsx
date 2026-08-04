@@ -1,3 +1,4 @@
+// discord_app/modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx
 import "noop";
 import { AnalyticEvents } from "ME";
 import { FeedbackType } from "FeedbackRating";
@@ -10,10 +11,10 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
   let importDefault;
   let require;
   ({ reportId: require, reportType: importDefault } = arg0);
-  let obj = require(16300) /* newGetEnglishMessageText */;
+  let obj = require(16204) /* newGetEnglishMessageText */;
   const result = obj.improperGetEnglishIntlMessageText("CALL_FEEDBACK_OPTION_OTHER");
   obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
-  const tmp = importDefault(16299)();
+  const tmp = importDefault(16203)();
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.MP5lDj);
   const intl2 = require(1236) /* getSystemLocale */.intl;
@@ -63,5 +64,5 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
       const obj4 = outer1_0(tmp2[11]);
     }
   };
-  return jsx(importDefault(11022), { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
+  return jsx(importDefault(9553), { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
 };

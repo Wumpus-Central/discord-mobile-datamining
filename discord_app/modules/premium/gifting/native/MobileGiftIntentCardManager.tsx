@@ -1,3 +1,4 @@
+// discord_app/modules/premium/gifting/native/MobileGiftIntentCardManager.tsx
 import recomputeAffinities from "recomputeAffinities";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";
@@ -79,8 +80,8 @@ prototype["sendCardInSelectedChannelIfEligible"] = function sendCardInSelectedCh
 };
 prototype["maybeFetchUserAffinities"] = function maybeFetchUserAffinities() {
   if (obj.getConfig({ location: "MobileGiftIntentCardManager" }).enabled) {
-    const userAffinitiesV2 = require(9003) /* fetchUserAffinitiesV2 */.fetchUserAffinitiesV2();
-    const obj2 = require(9003) /* fetchUserAffinitiesV2 */;
+    const userAffinitiesV2 = require(8825) /* fetchUserAffinitiesV2 */.fetchUserAffinitiesV2();
+    const obj2 = require(8825) /* fetchUserAffinitiesV2 */;
   }
 };
 prototype["onChannelSelect"] = function onChannelSelect(channelId) {

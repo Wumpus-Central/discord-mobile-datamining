@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/WidgetStore.tsx
 import _slicedToArray from "_slicedToArray";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";

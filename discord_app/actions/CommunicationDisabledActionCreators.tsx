@@ -1,3 +1,4 @@
+// discord_app/actions/CommunicationDisabledActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const result = require("showTooManyUserGuildsAlert").fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");
@@ -39,7 +40,7 @@ export default {
             } else {
               let toISOStringResult = null;
               if (null != outer1_2) {
-                let obj1 = v0(3867)();
+                let obj1 = v0(3775)();
                 toISOStringResult = obj1.add(tmp21, "s").toISOString();
                 const addResult = obj1.add(tmp21, "s");
               }
@@ -54,7 +55,7 @@ export default {
               dependencyMap = 1;
               v0 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = v0(5200).setCommunicationDisabledUntil(obj1);
+              obj2[0] = v0(5109).setCommunicationDisabledUntil(obj1);
               return obj2;
             }
           } else if (arg0 === 1) {

@@ -1,3 +1,4 @@
+// discord_app/lib/guild/GuildThreadSubscriptions.tsx
 let result = require("set").fileFinishedImporting("lib/guild/GuildThreadSubscriptions.tsx");
 class GuildThreadSubscriptions {
   constructor(arg0) {

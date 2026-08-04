@@ -1,3 +1,4 @@
+// discord_app/modules/game_console/GameConsoleStore.tsx
 import handleUpdate from "handleUpdate";
 import updateVoiceState from "updateVoiceState";
 import { DeviceSettingsStore } from "initialize";

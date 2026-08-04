@@ -1,3 +1,4 @@
+// discord_app/utils/EmojiUtils.tsx
 import closure_3 from "set";
 import createChannelRecord from "createChannelRecord";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -27,7 +28,7 @@ function getEmojiUnavailableReason(intention) {
     }
   }
   intention = intention.intention;
-  let tmp5 = emoji.type === require(3929) /* EmojiTypes */.EmojiTypes.GUILD;
+  let tmp5 = emoji.type === require(3837) /* EmojiTypes */.EmojiTypes.GUILD;
   if (!tmp5) {
     tmp5 = null != emoji.guildId;
   }
@@ -44,7 +45,7 @@ function getEmojiUnavailableReason(intention) {
         }
         let tmp13 = null != emoji && null != guildId;
         if (tmp13) {
-          const tmp14 = emoji.type === tmp3(3929).EmojiTypes.GUILD || null != emoji.guildId;
+          const tmp14 = emoji.type === tmp3(3837).EmojiTypes.GUILD || null != emoji.guildId;
           let tmp15 = !tmp14;
           if (tmp14) {
             tmp15 = guildId === emoji.guildId;
@@ -63,7 +64,7 @@ function getEmojiUnavailableReason(intention) {
           if (!callback4(intention)) {
             let tmp19 = null != emoji && null != guildId;
             if (tmp19) {
-              const tmp20 = emoji.type === tmp3(3929).EmojiTypes.GUILD || null != emoji.guildId;
+              const tmp20 = emoji.type === tmp3(3837).EmojiTypes.GUILD || null != emoji.guildId;
               let tmp21 = !tmp20;
               if (tmp20) {
                 tmp21 = guildId === emoji.guildId;
@@ -98,9 +99,9 @@ function getEmojiUnavailableReason(intention) {
               }
             }
           }
-          let tmp3Result = tmp3(5148);
+          let tmp3Result = tmp3(5057);
           if (tmp3Result.isUnusableRoleSubscriptionEmoji(emoji, guildId)) {
-            tmp3Result = tmp3(3906);
+            tmp3Result = tmp3(3814);
             tmp3Result.shouldHideGuildPurchaseEntryPoints(emoji.guildId) ? EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE : EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED;
           } else {
             let PREMIUM_LOCKED = null;
@@ -111,13 +112,13 @@ function getEmojiUnavailableReason(intention) {
                 if (!tmp3Result1.isPurchasableRoleSubscriptionEmoji(emoji)) {
                   PREMIUM_LOCKED = EmojiDisabledReasons.PREMIUM_LOCKED;
                 }
-                tmp3Result1 = tmp3(5148);
+                tmp3Result1 = tmp3(5057);
               }
-              tmp27Result = tmp27(3931);
+              tmp27Result = tmp27(3839);
             }
             return PREMIUM_LOCKED;
           }
-          obj = importDefault(3931);
+          obj = importDefault(3839);
           tmp27 = importDefault;
         }
       }
@@ -134,9 +135,58 @@ function _getEmojiColors() {
     let c2 = 0;
     let c1 = 0;
     return (function*(arg0) {
-      const obj2 = v0(table[10]);
-      yield obj2.getEmojiColors(closure_0);
-      return arg1;
+      if (v0 === 2) {
+        v0 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp3 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          v0 = 2;
+          if (0 === table) {
+            if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v0 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let obj2 = v0(table[10]);
+              table = 1;
+              v0 = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = obj2.getEmojiColors(closure_0);
+              return obj1;
+            }
+          } else if (arg0 === 1) {
+            v0 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            v0 = 3;
+            obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
+          } else {
+            v0 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp8) {
+          v0 = tmp;
+          throw tmp8;
+        }
+      }
     })();
   });
   const _getEmojiColors = tmp;
@@ -183,7 +233,7 @@ export default {
   isInternalEmojiForGuildId(type) {
     let tmp = null != type && null != arg1;
     if (tmp) {
-      const tmp4 = type.type === require(3929) /* EmojiTypes */.EmojiTypes.GUILD || null != type.guildId;
+      const tmp4 = type.type === require(3837) /* EmojiTypes */.EmojiTypes.GUILD || null != type.guildId;
       let tmp5 = !tmp4;
       if (tmp4) {
         tmp5 = arg1 === type.guildId;
@@ -194,7 +244,7 @@ export default {
   },
   getEmojiUnavailableReason,
   isCustomEmoji(emoji) {
-    let tmp = emoji.type === require(3929) /* EmojiTypes */.EmojiTypes.GUILD;
+    let tmp = emoji.type === require(3837) /* EmojiTypes */.EmojiTypes.GUILD;
     if (!tmp) {
       tmp = null != emoji.guildId;
     }
@@ -375,7 +425,7 @@ export const getEmojiUrl = function getEmojiUrl(arg0, arg1) {
     let emojiURL = importDefault(1416).getEmojiURL(obj);
     const obj2 = importDefault(1416);
   } else {
-    obj = importDefault(7162);
+    obj = importDefault(6098);
     emojiURL = obj.getURL(tmp);
   }
   return emojiURL;

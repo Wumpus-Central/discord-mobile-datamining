@@ -1,3 +1,4 @@
+// discord_app/modules/media_viewer/native/useMediaViewerPanGesture.tsx
 import noop from "noop";
 
 const require = arg1;
@@ -13,17 +14,17 @@ export const useMediaViewerPanGestureConfig = function useMediaViewerPanGestureC
   const _require = arg0;
   let closure_1 = swipeVelocityThreshold;
   const dependencyMap = onClose;
-  const sharedValue = _require(4146).useSharedValue(false);
-  let obj = _require(4146);
-  const sharedValue1 = _require(4146).useSharedValue(false);
-  const obj2 = _require(4146);
-  const sharedValue2 = _require(4146).useSharedValue(0);
-  const obj3 = _require(4146);
-  const sharedValue3 = _require(4146).useSharedValue(0);
-  const obj4 = _require(4146);
-  const sharedValue4 = _require(4146).useSharedValue({ y: 0, x: 0 });
-  const obj5 = _require(4146);
-  const sharedValue5 = _require(4146).useSharedValue(true);
+  const sharedValue = _require(4054).useSharedValue(false);
+  let obj = _require(4054);
+  const sharedValue1 = _require(4054).useSharedValue(false);
+  const obj2 = _require(4054);
+  const sharedValue2 = _require(4054).useSharedValue(0);
+  const obj3 = _require(4054);
+  const sharedValue3 = _require(4054).useSharedValue(0);
+  const obj4 = _require(4054);
+  const sharedValue4 = _require(4054).useSharedValue({ y: 0, x: 0 });
+  const obj5 = _require(4054);
+  const sharedValue5 = _require(4054).useSharedValue(true);
   const items = [onClose];
   const callback = sharedValue.useCallback(() => {
     callback(onClose[2]).tryPauseCurrentVideo();

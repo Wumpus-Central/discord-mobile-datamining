@@ -1,3 +1,4 @@
+// discord_app/actions/SurveyActionCreators.tsx
 import fetchSurveyIfNeeded from "fetchSurveyIfNeeded";
 import { SURVEY_REFETCH_INTERVAL } from "fetchSurveyIfNeeded";
 import ME from "ME";
@@ -58,7 +59,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
     }
   };
   obj[2] = obj;
-  const obj2 = importDefault(5094);
+  const obj2 = importDefault(5003);
   obj[3] = require(530) /* sendRequest */.rejectWithMigratedError();
   const value = obj2.get(obj);
   return value.then((body) => {
@@ -94,7 +95,7 @@ export const surveySeen = function surveySeen(key) {
   obj = { type: "SURVEY_SEEN", key };
   obj.dispatch(obj);
   obj = { url: closure_7.USER_SURVEY_SEEN(key), trackedActionData: null, rejectWithError: null };
-  const obj3 = importDefault(5094);
+  const obj3 = importDefault(5003);
   obj[1] = {
     event: _require(503).NetworkActionNames.USER_SURVEY_SEEN,
     properties() {

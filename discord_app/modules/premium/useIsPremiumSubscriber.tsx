@@ -1,3 +1,4 @@
+// discord_app/modules/premium/useIsPremiumSubscriber.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
 

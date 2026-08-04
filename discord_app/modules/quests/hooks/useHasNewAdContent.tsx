@@ -1,3 +1,4 @@
+// discord_app/modules/quests/hooks/useHasNewAdContent.tsx
 import _slicedToArray from "_slicedToArray";
 import getOrCreateSet from "getOrCreateSet";
 import initializeState from "initializeState";

@@ -1,3 +1,4 @@
+// discord_app/modules/nuf/native/NotificationPermissionManager.tsx
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { NativeModules } from "expandEventProperties";
 import storeThread from "storeThread";
@@ -23,8 +24,8 @@ function haveNotSeenPromptSince(arg0, arg1) {
   if (!tmp2) {
     let tmp4;
     if (items.includes(arg0)) {
-      tmp4 = importDefault(3867)().diff(tmp, "days") >= 1;
-      const obj = importDefault(3867)();
+      tmp4 = importDefault(3775)().diff(tmp, "days") >= 1;
+      const obj = importDefault(3775)();
     }
     tmp2 = tmp4;
   }
@@ -47,18 +48,69 @@ function _shouldShowPrompt() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      let closure_2 = tmp2;
-      let closure_1 = tmp3;
-      const NativePermissionManager = obj.NativePermissionManager;
-      closure_1 = yield NativePermissionManager.getNotificationAuthorizationStatus();
-      let tmp11 = closure_1 === constants.UNDETERMINED;
-      if (!tmp11) {
-        tmp11 = closure_1 === constants.PROVISIONAL;
+      if (obj === 2) {
+        obj = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          obj = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              obj = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              obj = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_2 = tmp2;
+              let closure_1 = tmp3;
+              closure_1 = undefined;
+              const NativePermissionManager = obj.NativePermissionManager;
+              c3 = 1;
+              obj = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = NativePermissionManager.getNotificationAuthorizationStatus();
+              return obj1;
+            }
+          } else if (arg0 === 1) {
+            obj = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            obj = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
+          } else {
+            closure_1 = arg1;
+            let tmp11 = closure_1 === constants.UNDETERMINED;
+            if (!tmp11) {
+              tmp11 = closure_1 === constants.PROVISIONAL;
+            }
+            if (tmp11) {
+              tmp11 = callback(closure_0, 1);
+            }
+            obj = 3;
+            obj = { value: null, done: true };
+            obj[0] = tmp11;
+            return obj;
+          }
+        } catch (tmp22) {
+          obj = tmp;
+          throw tmp22;
+        }
       }
-      if (tmp11) {
-        tmp11 = callback(closure_0, 1);
-      }
-      return tmp11;
     })();
   });
   const _shouldShowPrompt = tmp;
@@ -87,15 +139,64 @@ function _shouldShowReactivationPrompt() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      let closure_2 = tmp2;
-      let closure_1 = tmp3;
-      const NativePermissionManager = obj.NativePermissionManager;
-      yield NativePermissionManager.getNotificationAuthorizationStatus();
-      let tmp9 = arg1 === constants.DENIED;
-      if (tmp9) {
-        tmp9 = callback(closure_0, 1);
+      if (obj === 2) {
+        obj = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp5 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          obj = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              obj = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              obj = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_2 = tmp2;
+              let closure_1 = tmp3;
+              const NativePermissionManager = obj.NativePermissionManager;
+              c3 = 1;
+              obj = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = NativePermissionManager.getNotificationAuthorizationStatus();
+              return obj1;
+            }
+          } else if (arg0 === 1) {
+            obj = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            obj = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
+          } else {
+            let tmp9 = arg1 === constants.DENIED;
+            if (tmp9) {
+              tmp9 = callback(closure_0, 1);
+            }
+            obj = 3;
+            obj = { value: null, done: true };
+            obj[0] = tmp9;
+            return obj;
+          }
+        } catch (tmp16) {
+          obj = tmp;
+          throw tmp16;
+        }
       }
-      return tmp9;
     })();
   });
   const _shouldShowReactivationPrompt = tmp;
@@ -185,8 +286,8 @@ function _logNotificationPermissionStatus2() {
           return obj;
         } else {
           callback = arg1;
-          callback2 = callback(9672).allowInAppNotifications();
-          const obj5 = callback(9672);
+          callback2 = callback(10263).allowInAppNotifications();
+          const obj5 = callback(10263);
           const obj2 = { os_enabled: null, foreground_app_enabled: null, background_app_enabled: null, notification_authorization_status: null };
           obj2[0] = callback === constants2.AUTHORIZED;
           obj2[1] = callback2;
@@ -224,7 +325,7 @@ let c23 = null;
 class NotificationPermissionManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f113240 = applyArgumentsResult;
+    f112962 = applyArgumentsResult;
     applyArgumentsResult.previousAppState = null;
     applyArgumentsResult.actions = {
       MESSAGE_CREATE(message) {
@@ -247,7 +348,7 @@ class NotificationPermissionManager extends tmp4 {
             closure_0.handleAppStateUpdate(arg0);
           }
     };
-    f113240 = applyArgumentsResult;
+    f112962 = applyArgumentsResult;
     applyArgumentsResult.handleConnectionOpen = _logNotificationPermissionStatus2(function*() {
       if (c2 === 2) {
         c2 = 3;
@@ -316,7 +417,7 @@ class NotificationPermissionManager extends tmp4 {
         }
       }
     });
-    f113240 = _logNotificationPermissionStatus2((arg0) => {
+    f112962 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -433,7 +534,7 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f113240 = _logNotificationPermissionStatus2((arg0) => {
+    f112962 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -557,107 +658,71 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f113240 = _logNotificationPermissionStatus2((arg0) => {
+    f112962 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
       const iter = (function*(arg0) {
-        if (c4 === 2) {
-          c4 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
+        let relationship;
+        relationship = relationship.relationship;
+        let c3 = 1;
+        let c4 = 1;
+        yield "ct";
+        if (1 === tmp5) {
           if (arg0 === 1) {
+            c4 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
+            c4 = 3;
+            const obj1 = { value: null, done: true };
+            obj1[0] = arg1;
+            return obj1;
+          } else {
+            let tmp6 = relationship.type === outer1_13.PENDING_OUTGOING;
+            if (tmp6) {
+              c3 = 2;
+              c4 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = outer1_19(outer1_10.FRIEND_REQUEST_SENT);
+              return obj2;
+            }
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value: null, done: true };
+            obj3[0] = arg1;
+            return obj3;
+          } else {
+            tmp6 = arg1;
+            if (!arg1) {
+              c3 = 3;
+              c4 = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = outer1_21(outer1_10.FRIEND_REQUEST_SENT);
+              return obj4;
+            }
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw arg1;
+        } else {
+          tmp6 = arg1;
+          if (arg0 === 2) {
+            c4 = 3;
+            const obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c4 = 2;
-            if (0 === c3) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let closure_2 = tmp5;
-                let closure_1 = tmp2;
-                let relationship;
-                relationship = relationship.relationship;
-                c3 = 1;
-                c4 = 1;
-                return { value: "ct", done: "Array" };
-              }
-            } else {
-              if (1 === tmp5) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj1 = { value: null, done: true };
-                  obj1[0] = arg1;
-                  return obj1;
-                } else {
-                  let tmp6 = relationship.type === outer1_13.PENDING_OUTGOING;
-                  if (tmp6) {
-                    c3 = 2;
-                    c4 = 1;
-                    const obj2 = { value: null, done: false };
-                    obj2[0] = outer1_19(outer1_10.FRIEND_REQUEST_SENT);
-                    return obj2;
-                  }
-                }
-              } else if (2 === tmp5) {
-                if (arg0 === 1) {
-                  c4 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c4 = 3;
-                  const obj3 = { value: null, done: true };
-                  obj3[0] = arg1;
-                  return obj3;
-                } else {
-                  tmp6 = arg1;
-                  if (!arg1) {
-                    c3 = 3;
-                    c4 = 1;
-                    const obj4 = { value: null, done: false };
-                    obj4[0] = outer1_21(outer1_10.FRIEND_REQUEST_SENT);
-                    return obj4;
-                  }
-                }
-              } else if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else {
-                tmp6 = arg1;
-                if (arg0 === 2) {
-                  c4 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                }
-              }
-              if (tmp6) {
-                outer1_24(outer1_10.FRIEND_REQUEST_SENT, outer1_12.FRIEND_REQUEST_SENT, 100);
-              }
-              c4 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } catch (tmp19) {
-            c4 = tmp;
-            throw tmp19;
           }
         }
+        if (tmp6) {
+          outer1_24(outer1_10.FRIEND_REQUEST_SENT, outer1_12.FRIEND_REQUEST_SENT, 100);
+        }
+        c4 = 3;
+        yield "HermesInternal";
       })();
       iter.next();
       return iter;
@@ -672,9 +737,9 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f113240 = undefined;
+    f112962 = undefined;
     closure_1 = applyArgumentsResult;
-    f113240 = _logNotificationPermissionStatus2((arg0) => {
+    f112962 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -875,8 +940,8 @@ prototype["handleMessageCreateForNudge"] = function handleMessageCreateForNudge(
               isMutedResult = closure_8.isChannelMuted(guildId, channel.id);
             }
             if (!isMutedResult) {
-              const result = require(11693) /* getOrRefreshPushSyncToken */.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.CHANNEL_BANNER);
-              const obj = require(11693) /* getOrRefreshPushSyncToken */;
+              const result = require(11520) /* getOrRefreshPushSyncToken */.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.CHANNEL_BANNER);
+              const obj = require(11520) /* getOrRefreshPushSyncToken */;
             }
           }
         }
@@ -896,8 +961,8 @@ prototype["handleReactionAddForNudge"] = function handleReactionAddForNudge(opti
           isMutedResult = closure_8.isChannelMuted(guildId, channel.id);
         }
         if (!isMutedResult) {
-          const result = require(11693) /* getOrRefreshPushSyncToken */.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.POST_REACTION_BANNER);
-          const obj = require(11693) /* getOrRefreshPushSyncToken */;
+          const result = require(11520) /* getOrRefreshPushSyncToken */.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.POST_REACTION_BANNER);
+          const obj = require(11520) /* getOrRefreshPushSyncToken */;
         }
       }
     }

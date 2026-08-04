@@ -1,3 +1,4 @@
+// discord_common/js/packages/flux/Emitter.tsx
 import set from "set";
 
 const logger = new require("log").Logger("Flux");

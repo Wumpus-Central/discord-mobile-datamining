@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkSuccess.tsx
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
 import get_ActivityIndicator from "registerAsset";

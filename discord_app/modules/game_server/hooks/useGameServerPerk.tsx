@@ -1,3 +1,4 @@
+// discord_app/modules/game_server/hooks/useGameServerPerk.tsx
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 import { GAME_SERVER_POWERUP_SKU_ID as closure_5 } from "str11";

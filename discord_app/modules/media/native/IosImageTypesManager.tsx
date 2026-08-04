@@ -1,3 +1,4 @@
+// discord_app/modules/media/native/IosImageTypesManager.tsx
 import _slicedToArray from "_slicedToArray";
 import { NativeModules } from "get ActivityIndicator";
 import "initialize";

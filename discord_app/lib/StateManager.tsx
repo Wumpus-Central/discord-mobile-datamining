@@ -1,3 +1,4 @@
+// discord_app/lib/StateManager.tsx
 const result = require("set").fileFinishedImporting("lib/StateManager.tsx");
 class StateManager {
   constructor() {

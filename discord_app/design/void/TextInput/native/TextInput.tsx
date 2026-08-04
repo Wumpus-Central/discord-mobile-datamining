@@ -1,3 +1,4 @@
+// discord_app/design/void/TextInput/native/TextInput.tsx
 import { TextInput } from "get ActivityIndicator";
 import ME from "ME";
 import { jsx } from "jsxProd";
@@ -17,21 +18,21 @@ let closure_6 = createCacheKey.createStyles(obj);
 const forwardRefResult = require("noop").forwardRef((style, ref) => {
   const merged = Object.assign(style, Object.create(null));
   const tmp2 = callback();
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require(4039) /* AccessibilityAnnouncer */;
   const theme = obj.useThemeContext().theme;
-  const obj2 = require(4131) /* AccessibilityAnnouncer */;
+  const obj2 = require(4039) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  const tmp6 = require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
+  const tmp6 = require(4039) /* AccessibilityAnnouncer */.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
   obj = { ref, style: items, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
   items = [tmp2.input, style.style];
-  let tmp3Result = tmp3(4131);
+  let tmp3Result = tmp3(4039);
   obj[2] = tmp3Result.isThemeDark(theme) ? closure_4.DARK : closure_4.LIGHT;
   obj[3] = tmp2.placeholderTextColor.color;
   tmp3Result = tmp3(500);
   let hexWithOpacityResult = tmp6;
   if (tmp3Result.isAndroid()) {
-    hexWithOpacityResult = tmp3(4129).hexWithOpacity(tmp6, 0.5);
-    const tmp3Result1 = tmp3(4129);
+    hexWithOpacityResult = tmp3(4037).hexWithOpacity(tmp6, 0.5);
+    const tmp3Result1 = tmp3(4037);
   }
   obj[4] = hexWithOpacityResult;
   const merged1 = Object.assign(merged);

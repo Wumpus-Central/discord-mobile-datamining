@@ -1,3 +1,4 @@
+// discord_common/js/packages/kv-storage/js/api/GuildDao.tsx
 let GuildDao;
 class GuildDao {
   constructor(arg0, arg1, arg2) {
@@ -23,7 +24,7 @@ Object.defineProperty(prototype, "prefix", {
 });
 prototype["withoutLogging"] = function withoutLogging() {
   const originalPrefix = this.originalPrefix;
-  if (typeof GuildDao !== "function") {
+  if (typeof GuildDao !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(GuildDao.prototype);
@@ -111,7 +112,7 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   let closure_0 = arg0;
   const table = this.table;
   return table.transaction((state) => {
-    if (typeof outer1_2 !== "function") {
+    if (typeof outer1_2 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(outer1_2.prototype);
@@ -121,7 +122,7 @@ prototype["transaction"] = function transaction(arg0, arg1) {
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
   const table = this.table;
-  if (typeof GuildDaoTransaction !== "function") {
+  if (typeof GuildDaoTransaction !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(GuildDaoTransaction.prototype);
@@ -148,7 +149,7 @@ class GuildDaoTransaction {
 const prototype2 = GuildDaoTransaction.prototype;
 GuildDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
   const tableTransaction = new require(1912) /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
-  if (typeof GuildDaoTransaction !== "function") {
+  if (typeof GuildDaoTransaction !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(GuildDaoTransaction.prototype);

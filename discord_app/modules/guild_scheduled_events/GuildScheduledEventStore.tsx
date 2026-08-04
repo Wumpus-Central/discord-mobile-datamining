@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/GuildScheduledEventStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";

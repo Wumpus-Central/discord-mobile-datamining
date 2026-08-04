@@ -1,3 +1,4 @@
+// discord_app/modules/auth/getAuthenticationErrorsFromAPIError.tsx
 const result = require("set").fileFinishedImporting("modules/auth/getAuthenticationErrorsFromAPIError.tsx");
 
 export const getAuthenticationErrorsFromAPIError = function getAuthenticationErrorsFromAPIError(c6) {

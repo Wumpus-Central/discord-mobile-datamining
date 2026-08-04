@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx
 import closure_4 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import Content from "Content";
@@ -216,5 +217,5 @@ export default function GuildSettingsRoleSubscriptionsGroupEdit(guildId) {
   guildId = guildId.guildId;
   const obj = { guildId, children: null };
   obj[1] = callback2(GuildSettingsRoleSubscriptionsGroupEditInner, { guildId });
-  return callback2(importDefault(16694), obj);
+  return callback2(importDefault(16597), obj);
 };

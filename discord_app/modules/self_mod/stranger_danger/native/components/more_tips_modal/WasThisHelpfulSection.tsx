@@ -1,3 +1,4 @@
+// discord_app/modules/self_mod/stranger_danger/native/components/more_tips_modal/WasThisHelpfulSection.tsx
 import noop from "noop";
 import get_ActivityIndicator from "registerAsset";
 import handleConnectionOpen from "handleConnectionOpen";

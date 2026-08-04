@@ -1,3 +1,4 @@
+// discord_app/modules/safe_area/useSafeAreaInsets.native.tsx
 const result = require("set").fileFinishedImporting("modules/safe_area/useSafeAreaInsets.native.tsx");
 
 export default function useSafeAreaInsets() {

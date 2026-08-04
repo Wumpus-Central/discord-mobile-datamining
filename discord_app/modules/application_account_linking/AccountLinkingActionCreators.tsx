@@ -1,3 +1,4 @@
+// discord_app/modules/application_account_linking/AccountLinkingActionCreators.tsx
 const result = require("set").fileFinishedImporting("modules/application_account_linking/AccountLinkingActionCreators.tsx");
 
 export const accountLinkAuthorizationStarted = function accountLinkAuthorizationStarted(id, accountLinkCallbacks) {

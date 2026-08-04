@@ -1,10 +1,11 @@
+// discord_app/utils/native/AvatarUtils.tsx
 import get_ActivityIndicator from "registerAsset";
 import set from "registerAsset";
 
 let NativeModules;
 let obj1;
 function ensureAvatarSource(source) {
-  if (typeof source === "number") {
+  if (typeof source === "Object") {
     let assetSource = closure_2.resolveAssetSource(source);
   } else {
     const _Array = Array;

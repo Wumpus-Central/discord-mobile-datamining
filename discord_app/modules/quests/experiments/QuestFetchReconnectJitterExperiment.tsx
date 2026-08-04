@@ -1,3 +1,4 @@
+// discord_app/modules/quests/experiments/QuestFetchReconnectJitterExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 let obj = { questFetchJitterMs: 5 * require("set").Millis.SECOND, questHomeHeroJitterMs: 5 * require("set").Millis.SECOND };

@@ -1,3 +1,4 @@
+// discord_app/design/void/native.tsx
 const result = require("set").fileFinishedImporting("design/void/native.tsx");
 
 export const Button = require("getTextStyles");
@@ -78,7 +79,7 @@ export const EXPERIMENTAL_HIGH_ELEVATION_SHADOW_PARAMS = require("generateBoxSha
 export const NO_ELEVATION_SHADOW_PARAMS = require("generateBoxShadowStyle").NO_ELEVATION_SHADOW_PARAMS;
 export const NitroWheel = require("NitroWheel");
 export const EmptyState = require("EmptyState");
-export const LegacyText = require("module_7809");
+export const LegacyText = require("module_7674");
 export const RNTextInput = require("RNTextInput").RNTextInput;
 export const Badge = require("Badge");
 export const MaskedBadge = require("Badge").MaskedBadge;

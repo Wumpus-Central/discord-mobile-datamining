@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/roles/native/GuildSettingsRoleItem.tsx
 import closure_3 from "createCacheKey";
 import importAllResult from "isDiscordFrontendDevelopment";
 import get_ActivityIndicator from "VerifiedRoleIcon";

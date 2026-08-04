@@ -1,3 +1,4 @@
+// discord_app/design/void/Shadows/native/Shadows.tsx
 const result = require("set").fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
 
 export const generateBoxShadowStyle = (arg0) => {

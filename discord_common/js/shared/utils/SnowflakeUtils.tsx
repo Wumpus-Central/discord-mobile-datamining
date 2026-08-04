@@ -1,3 +1,4 @@
+// discord_common/js/shared/utils/SnowflakeUtils.tsx
 function extractTimestamp(arg0) {
   return Math.floor(Number(arg0) / 4194304) + c2;
 }

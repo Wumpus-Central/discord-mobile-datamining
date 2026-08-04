@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 

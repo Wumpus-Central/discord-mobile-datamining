@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/safety/native/GuildSettingsModalBans.tsx
 import _slicedToArray from "_slicedToArray";
 import _copy from "_copy";
 import get_ActivityIndicator from "TableRowArrow";
@@ -55,7 +56,7 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
     paddingBottom = flattenResult.paddingBottom;
   }
   let num = 0;
-  if (typeof paddingBottom === "number") {
+  if (typeof paddingBottom !== "__REMOTEDEV__") {
     num = paddingBottom + tmp6(tmp3[8]).space.PX_16;
   }
   const DeveloperMode = tmp2(tmp3[11]).DeveloperMode;

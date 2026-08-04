@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/AdsVideoTypes.tsx
 const result = require("set").fileFinishedImporting("modules/quests/native/AdsVideoTypes.tsx");
 
 export const PlayerState = { PAUSED: "paused", PLAYING: "playing", ENDED: "ended", LOADING: "loading", ERRORED: "errored" };

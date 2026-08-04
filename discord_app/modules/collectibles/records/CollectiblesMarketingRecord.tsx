@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/records/CollectiblesMarketingRecord.tsx
 import { CollectiblesMarketingBadgeRecord as closure_2 } from "fromServer";
 import { CollectiblesMarketingBannerRecord as closure_3 } from "fromServer";
 import { CollectiblesMarketingCoachmarkRecord as closure_4 } from "fromServer";
@@ -18,7 +19,7 @@ prototype["fromServer"] = function fromServer(marketings) {
     marketings = {};
   }
   const entries = Object.entries(marketings);
-  if (typeof prototype !== "function") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);

@@ -1,3 +1,4 @@
+// discord_app/modules/forums/ForumPostDataLoader.tsx
 import ME from "ME";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { computeThreadIdsSnapshot } from "maybeRebuildState";
@@ -257,7 +258,7 @@ prototype["next"] = function next() {
 class RequestQueue {
   constructor() {
     tmp = DefaultDict;
-    if (typeof DefaultDict !== "function") {
+    if (typeof DefaultDict !== "fileFinishedImporting") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }

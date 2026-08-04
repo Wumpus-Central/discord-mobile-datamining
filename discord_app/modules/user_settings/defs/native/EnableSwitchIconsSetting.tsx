@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createToggle from "createToggle";
 

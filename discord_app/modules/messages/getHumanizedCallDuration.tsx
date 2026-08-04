@@ -1,3 +1,4 @@
+// discord_app/modules/messages/getHumanizedCallDuration.tsx
 const result = require("set").fileFinishedImporting("modules/messages/getHumanizedCallDuration.tsx");
 
 export default function getHumanizedCallDuration(call) {

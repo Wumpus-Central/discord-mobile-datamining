@@ -1,3 +1,4 @@
+// discord_app/modules/native_on_demand/native/NativeOnDemandResourceManager.android.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import getState from "getState";
 import { AppStates } from "ME";

@@ -1,3 +1,4 @@
+// discord_app/modules/activity_privacy/native/ActivityPrivacyUpsellActionSheet.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -11,11 +12,11 @@ export default function ActivityPrivacyUpsellActionSheet(direction) {
   let toastContent;
   direction = direction.direction;
   const affectedGuildIds = direction.affectedGuildIds;
-  const upsellStrings = direction(14001).getUpsellStrings(direction === direction(14001).ChangeDirection.RESTRICTING, direction.settingName);
+  const upsellStrings = direction(13901).getUpsellStrings(direction === direction(13901).ChangeDirection.RESTRICTING, direction.settingName);
   const items = [direction, affectedGuildIds];
   ({ title, subtitle, confirmText, toastContent } = upsellStrings);
   const onConfirm = React.useCallback(() => {
     const result = direction(outer1_2[2]).applyBulkGuildRestrictionChange(direction, affectedGuildIds);
   }, items);
-  return jsx(affectedGuildIds(14003), { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm });
+  return jsx(affectedGuildIds(13903), { direction, affectedGuildIds, title, subtitle, confirmText, toastContent, onConfirm });
 };

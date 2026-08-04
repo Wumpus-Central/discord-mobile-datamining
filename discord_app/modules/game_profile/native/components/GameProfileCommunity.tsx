@@ -1,3 +1,4 @@
+// discord_app/modules/game_profile/native/components/GameProfileCommunity.tsx
 import closure_3 from "jsxProd";
 import _slicedToArray from "_slicedToArray";
 import preload from "preload";

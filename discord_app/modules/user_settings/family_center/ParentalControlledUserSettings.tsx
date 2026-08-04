@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/family_center/ParentalControlledUserSettings.tsx
 import { ExplicitContentFilterTypes as closure_2 } from "items";
 import { AllFriendSourceFlags } from "ME";
 import defineParentalControlledSetting from "defineParentalControlledSetting";

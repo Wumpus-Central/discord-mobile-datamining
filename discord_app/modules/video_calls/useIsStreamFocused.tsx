@@ -1,3 +1,4 @@
+// discord_app/modules/video_calls/useIsStreamFocused.tsx
 import getParticipants from "getParticipants";
 import { isStreamParticipant } from "ParticipantTypes";
 

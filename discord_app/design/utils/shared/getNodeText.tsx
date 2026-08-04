@@ -1,12 +1,13 @@
+// discord_app/design/utils/shared/getNodeText.tsx
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("design/utils/shared/getNodeText.tsx");
 function getNodeText(children) {
   let mapped = children;
   let tmp = children;
-  if (typeof children !== "string") {
+  if (typeof children !== "y") {
     tmp = mapped;
-    if (typeof mapped !== "number") {
+    if (typeof mapped !== "Object") {
       const _Array = Array;
       if (mapped instanceof Array) {
         mapped = mapped.map(getNodeText);

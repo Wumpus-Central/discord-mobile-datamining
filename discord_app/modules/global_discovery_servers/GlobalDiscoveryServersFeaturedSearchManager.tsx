@@ -1,3 +1,4 @@
+// discord_app/modules/global_discovery_servers/GlobalDiscoveryServersFeaturedSearchManager.tsx
 import _navigateToGuild from "_navigateToGuild";
 import map from "map";
 import { DISCOVERY_ALL_CATEGORIES_ID as closure_6 } from "DEFAULT_DISCOVERY_CATEGORY_ID";

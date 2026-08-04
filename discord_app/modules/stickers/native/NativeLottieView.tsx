@@ -1,3 +1,4 @@
+// discord_app/modules/stickers/native/NativeLottieView.tsx
 import noop from "noop";
 import closure_2 from "noop";
 import { jsx } from "jsxProd";

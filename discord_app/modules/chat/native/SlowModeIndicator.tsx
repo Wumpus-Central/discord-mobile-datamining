@@ -1,3 +1,4 @@
+// discord_app/modules/chat/native/SlowModeIndicator.tsx
 import importAllResult from "noop";
 import setCooldown from "setCooldown";
 import jsxProd from "jsxProd";

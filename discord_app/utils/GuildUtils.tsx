@@ -1,3 +1,4 @@
+// discord_app/utils/GuildUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import importDefaultResult from "priv";
@@ -5,7 +6,7 @@ import importDefaultResult from "priv";
 const require = arg1;
 function getGuildNameSuggestion(truncateUsername) {
   currentUser = currentUser.getCurrentUser();
-  let obj = importAll(4124);
+  let obj = importAll(4032);
   const name = obj.getName(currentUser);
   let str = "";
   if (null != name) {

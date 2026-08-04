@@ -1,3 +1,4 @@
+// discord_app/modules/debug/serializeAppStartLogs.tsx
 function getDisplayName(tag) {
   if (null == tag.tag) {
     let str3 = tag.label;

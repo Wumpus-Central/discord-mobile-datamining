@@ -1,3 +1,4 @@
+// discord_app/modules/storefront/SKUPricesStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import { Store } from "initialize";
 

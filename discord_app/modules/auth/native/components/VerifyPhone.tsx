@@ -1,3 +1,4 @@
+// discord_app/modules/auth/native/components/VerifyPhone.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -40,9 +41,9 @@ export default function VerifyPhone(phone) {
   let tmp2 = callback(React.useState(null), 2);
   [tmp5, c6] = callback(React.useState(false), 2);
   callback2 = React.useRef(false);
-  context = React.useContext(_require(14975).TrackRegistrationContext);
+  context = React.useContext(_require(14875).TrackRegistrationContext);
   const tmp4 = callback(React.useState(false), 2);
-  onPhoneTokenReceived(14993)(callback2(sourceState));
+  onPhoneTokenReceived(14893)(callback2(sourceState));
   const items = [context];
   const effect = React.useEffect(() => {
     if (_undefined()) {
@@ -52,7 +53,7 @@ export default function VerifyPhone(phone) {
       context(obj);
     }
   }, items);
-  onPhoneTokenReceived(4711)(() => () => {
+  onPhoneTokenReceived(4620)(() => () => {
     let tmpResult;
     if (closure_2 != null) {
       tmpResult = tmp(ref.current);
@@ -66,53 +67,101 @@ export default function VerifyPhone(phone) {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0, token) {
-      let closure_2 = tmp3;
-      v0(true);
-      v0 = 1;
-      if (v02()) {
-        const obj1 = { step: null, actionType: null };
-        obj1[0] = context.PHONE_VERIFICATION;
-        obj1[1] = callback.SUBMITTED;
-        outer1_8(obj1);
-      }
-      let obj4 = onPhoneTokenReceived(outer2_2[10]);
-      yield obj4.verifyPhone(callback, token, false);
-      if (1 === tmp7) {
-        v0 = 0;
-        let closure_1 = ME;
-        v0(false);
-        if (v02()) {
-          const obj3 = { step: null, actionType: null, details: null };
-          obj3[0] = context.PHONE_VERIFICATION;
-          obj3[1] = callback.RESPONSE_ERROR;
-          obj3[2] = ["code"];
-          outer1_8(obj3);
-        }
-        const body = outer1_1.body;
-        let message;
-        if (body != null) {
-          message = body.message;
-        }
-        if (!message) {
-          const intl = callback(outer2_2[11]).intl;
-          obj4 = { statusPageURL: null };
-          obj4[0] = outer2_10.STATUS;
-          message = intl.format(callback(outer2_2[11]).t.aTVNes, obj4);
-        }
-        c5(message);
+      if (v02 === 2) {
         v02 = 3;
-        const tmp28 = c5;
-      } else if (arg0 === 1) {
-        v02 = 3;
-        throw token;
-      } else if (arg0 !== 2) {
-        token = token.token;
-        outer1_7.current = true;
-        outer1_1(token);
-        v0 = 0;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw token;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = token;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          v02 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              v02 = 3;
+              throw token;
+            } else if (arg0 === 2) {
+              v02 = 3;
+              obj = { value: null, done: true };
+              obj[0] = token;
+              return obj;
+            } else {
+              let closure_2 = tmp3;
+              let closure_1 = tmp7;
+              token = undefined;
+              v0(true);
+              v0 = 1;
+              if (v02()) {
+                const obj1 = { step: null, actionType: null };
+                obj1[0] = context.PHONE_VERIFICATION;
+                obj1[1] = callback.SUBMITTED;
+                outer1_8(obj1);
+              }
+              let obj4 = onPhoneTokenReceived(outer2_2[10]);
+              c5 = 2;
+              v02 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = obj4.verifyPhone(callback, token, false);
+              return obj2;
+            }
+          } else {
+            if (1 === tmp7) {
+              v0 = 0;
+              closure_1 = ME;
+              v0(false);
+              if (v02()) {
+                const obj3 = { step: null, actionType: null, details: null };
+                obj3[0] = context.PHONE_VERIFICATION;
+                obj3[1] = callback.RESPONSE_ERROR;
+                obj3[2] = ["code"];
+                outer1_8(obj3);
+              }
+              const body = outer1_1.body;
+              let message;
+              if (body != null) {
+                message = body.message;
+              }
+              if (!message) {
+                const intl = callback(outer2_2[11]).intl;
+                obj4 = { statusPageURL: null };
+                obj4[0] = outer2_10.STATUS;
+                message = intl.format(callback(outer2_2[11]).t.aTVNes, obj4);
+              }
+              c5(message);
+              v02 = 3;
+              const tmp28 = c5;
+            } else if (arg0 === 1) {
+              v02 = 3;
+              throw token;
+            } else if (arg0 !== 2) {
+              token = token.token;
+              outer1_7.current = true;
+              outer1_1(token);
+              v0 = 0;
+            }
+            v0 = 0;
+            v02 = 3;
+            obj = { value: null, done: true };
+            obj[0] = token;
+            return obj;
+          }
+        } catch (tmp44) {
+          ME = tmp44;
+          if (tmp4 === v0) {
+            v02 = tmp2;
+            throw tmp44;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      v0 = 0;
-      return token;
     })();
   });
   const items1 = [phone, onPhoneTokenReceived, context];
@@ -197,7 +246,7 @@ export default function VerifyPhone(phone) {
     }
     return applyArgumentsResult;
   }, items2);
-  onPhoneTokenReceived(8357)(callback1);
+  onPhoneTokenReceived(9269)(callback1);
   const items3 = [onBail];
   const memo = React.useMemo(() => {
     let tmp2 = null;
@@ -209,10 +258,10 @@ export default function VerifyPhone(phone) {
     return tmp2;
   }, items3);
   let obj = { title, description, error: tmp3, onCodeEntered: callback, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true };
-  const tmp7 = onPhoneTokenReceived(14993);
-  obj[4] = _require(8358).CodeType.NUMERIC;
+  const tmp7 = onPhoneTokenReceived(14893);
+  obj[4] = _require(9270).CodeType.NUMERIC;
   obj[5] = memo;
   obj[6] = tmp5;
   obj[7] = tmp[0];
-  return jsx(onPhoneTokenReceived(8358), { title, description, error: tmp3, onCodeEntered: callback, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true });
+  return jsx(onPhoneTokenReceived(9270), { title, description, error: tmp3, onCodeEntered: callback, codeType: null, footer: null, disabled: null, loading: null, disableKeyboardAvoidingView: true });
 };

@@ -1,3 +1,4 @@
+// discord_app/records/GuildRecord.tsx
 import isValueEqual from "isValueEqual";
 import ME from "ME";
 import set from "getAvatarURL";
@@ -53,7 +54,7 @@ export const getGuildAcronym = function getGuildAcronym(guild) {
 };
 export const isGuildOwner = function isGuildOwner(guild, currentUser) {
   let tmp = currentUser;
-  if (typeof currentUser !== "string") {
+  if (typeof currentUser !== "y") {
     let id = null;
     if (null != currentUser) {
       id = currentUser.id;
@@ -71,7 +72,7 @@ export const isGuildOwnerWithRequiredMfaLevel = function isGuildOwnerWithRequire
   let tmp3 = !tmp;
   if (!tmp) {
     let tmp4 = mfaEnabled;
-    if (typeof mfaEnabled !== "string") {
+    if (typeof mfaEnabled !== "y") {
       let id = null;
       if (null != mfaEnabled) {
         id = mfaEnabled.id;
@@ -90,7 +91,7 @@ export const getGuildEveryoneRoleId = function getGuildEveryoneRoleId(closure_7)
 };
 export const updateJoinedAt = function updateJoinedAt(guild, joinedAt) {
   let date = joinedAt;
-  if (typeof joinedAt === "string") {
+  if (typeof joinedAt !== "__FORMATJS_LISTFORMAT_DATA__") {
     const _Date = Date;
     date = new Date(joinedAt);
   }

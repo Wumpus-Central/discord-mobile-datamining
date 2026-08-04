@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/native/components/EditGuildEventModal.tsx
 import closure_4 from "createCacheKey";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "NavigationStack";
@@ -173,7 +174,7 @@ const memoResult = importAllResult.memo((guild) => {
   obj = {};
   obj = { title: "", customNavbar: null, headerLeft: null, render: null, fullscreen: true };
   PREVIEW = PREVIEW(first[7]).EditGuildEventScreens.CHANNEL_SELECTOR;
-  obj[1] = () => jsx(importDefault(8886), { screen: PREVIEW, onClose: outer1_1 });
+  obj[1] = () => jsx(importDefault(8236), { screen: PREVIEW, onClose: outer1_1 });
   obj[2] = function headerLeft() {
     return null;
   };
@@ -190,7 +191,7 @@ const memoResult = importAllResult.memo((guild) => {
   obj[PREVIEW(first[7]).EditGuildEventScreens.CHANNEL_SELECTOR] = obj;
   obj1 = { title: "", customNavbar: null, render: null, fullscreen: true };
   PREVIEW = PREVIEW(first[7]).EditGuildEventScreens.DETAILS;
-  obj1[1] = () => jsx(importDefault(8886), { screen: PREVIEW, onClose: outer1_1 });
+  obj1[1] = () => jsx(importDefault(8236), { screen: PREVIEW, onClose: outer1_1 });
   obj1[2] = function render() {
     const merged = Object.assign(callback2);
     return callback2(outer1_1(first[17]), {});
@@ -198,7 +199,7 @@ const memoResult = importAllResult.memo((guild) => {
   obj[PREVIEW(first[7]).EditGuildEventScreens.DETAILS] = obj1;
   let obj2 = { title: "", customNavbar: null, render: null, fullscreen: true };
   PREVIEW = PREVIEW(first[7]).EditGuildEventScreens.PREVIEW;
-  obj2[1] = () => jsx(importDefault(8886), { screen: PREVIEW, onClose: outer1_1 });
+  obj2[1] = () => jsx(importDefault(8236), { screen: PREVIEW, onClose: outer1_1 });
   obj2[2] = function render() {
     const merged = Object.assign(callback2);
     return callback2(outer1_1(first[18]), {});

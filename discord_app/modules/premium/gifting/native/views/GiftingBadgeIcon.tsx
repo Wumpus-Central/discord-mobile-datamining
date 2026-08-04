@@ -1,3 +1,4 @@
+// discord_app/modules/premium/gifting/native/views/GiftingBadgeIcon.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx
 const result = require("set").fileFinishedImporting("modules/activities/utils/getChannelCopyForEmbeddedActivity.tsx");
 
 export default function getChannelCopyForEmbeddedActivity(arg0) {

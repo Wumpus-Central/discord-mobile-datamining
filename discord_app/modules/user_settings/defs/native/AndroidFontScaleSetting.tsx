@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AndroidFontScaleSetting.tsx
 import noop from "noop";
 import { useFontScaleStore } from "DEFAULT_FONT_SCALE_STORE_STATE";
 import { FontScales } from "MAX_FAVORITES";

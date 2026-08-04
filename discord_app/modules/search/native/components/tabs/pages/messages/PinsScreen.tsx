@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/tabs/pages/messages/PinsScreen.tsx
 import importAllResult from "noop";
 import handleChannelDelete from "handleChannelDelete";
 import { FetchState } from "handleChannelDelete";
@@ -166,7 +167,7 @@ const memoResult = importAllResult.memo(function PinsScreen(searchContext) {
     obj[0] = searchContext;
     obj[1] = tab;
     obj[2] = isFocused;
-    let tmp5 = jsx(importDefault(15663), { searchContext: null, tab: null, isFocused: null });
+    let tmp5 = jsx(importDefault(15566), { searchContext: null, tab: null, isFocused: null });
   } else {
     obj = { searchContext: null, tab: null, isFocused: null };
     obj[0] = searchContext;

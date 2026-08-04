@@ -1,17 +1,18 @@
+// discord_app/modules/stage_channels/native/components/BlankAudienceTile.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
 
 const require = arg1;
 const memoResult = require("noop").memo(() => {
-  let obj = require(10845) /* RaisedHandIcon */;
+  let obj = require(10874) /* RaisedHandIcon */;
   const audienceTileStyles = obj.useAudienceTileStyles();
   obj = { style: null };
   const items = [audienceTileStyles.container, ];
-  obj = { width: require(10845) /* RaisedHandIcon */.getTileWidthStyle(importDefault(1474)().width) };
+  obj = { width: require(10874) /* RaisedHandIcon */.getTileWidthStyle(importDefault(1474)().width) };
   items[1] = obj;
   obj[0] = items;
-  return <View width={require(10845) /* RaisedHandIcon */.getTileWidthStyle(importDefault(1474)().width)} />;
+  return <View width={require(10874) /* RaisedHandIcon */.getTileWidthStyle(importDefault(1474)().width)} />;
 });
 const result = require("jsxProd").fileFinishedImporting("modules/stage_channels/native/components/BlankAudienceTile.tsx");
 

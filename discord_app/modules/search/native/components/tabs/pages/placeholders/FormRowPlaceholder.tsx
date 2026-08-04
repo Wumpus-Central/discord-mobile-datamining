@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/tabs/pages/placeholders/FormRowPlaceholder.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -20,7 +21,7 @@ const result = require("MessageEmbedTypes").fileFinishedImporting("modules/searc
 
 export default function FormRowPlaceholderItem(style) {
   const tmp = createCacheKey();
-  let obj = require(15603) /* useFullscreenPlaceholderCount */;
+  let obj = require(15506) /* useFullscreenPlaceholderCount */;
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   obj = { style: items, pointerEvents: "none", children: null };
   items = [placeholderAnimatedStyle, tmp.itemContainer, style.style];
@@ -31,5 +32,5 @@ export default function FormRowPlaceholderItem(style) {
   obj1[1] = items2;
   items1[1] = callback2(View, obj1);
   obj[2] = items1;
-  return callback2(importDefault(4146).View, obj);
+  return callback2(importDefault(4054).View, obj);
 };

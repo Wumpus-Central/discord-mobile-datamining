@@ -1,3 +1,4 @@
+// discord_app/modules/action_sheet/native/PanGestureAnimations.tsx
 let obj = { damping: 30, mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001 };
 obj = { duration: 500, easing: require("Button").STANDARD_EASING };
 let closure_4 = { code: "function getSortedByMeasure_PanGestureAnimationsTsx2(array,measure){const sorted=new Array(...array).sort(function(left,right){const al=Math.abs(left-measure);const ar=Math.abs(right-measure);return al<ar?-1:al>ar?1:0;});return sorted;}" };
@@ -80,7 +81,7 @@ getNearestValue.__workletHash = 4186929947751;
 getNearestValue.__initData = { code: "function getNearestValue_PanGestureAnimationsTsx1(array,measure,velocity=0){const unitVector=velocity<0?-1:velocity>0?1:0;function getSortedByMeasure(array,measure){'worklet';const sorted=new Array(...array).sort(function(left,right){const al=Math.abs(left-measure);const ar=Math.abs(right-measure);return al<ar?-1:al>ar?1:0;});return sorted;}if(array.length===0){return measure;}const sorted=getSortedByMeasure(array,measure);if(unitVector!==0){var _sorted$find;return(_sorted$find=sorted.find(function(value){const result=unitVector<0?measure>value:measure<value;return result;}))!==null&&_sorted$find!==void 0?_sorted$find:sorted[0];}return sorted[0];}" };
 function withPanGestureSpring(value, velocity) {
   let tmp = arg2;
-  let obj = require(4694) /* CONFIG_NEVER_ANIMATE */;
+  let obj = require(4603) /* CONFIG_NEVER_ANIMATE */;
   if (arg2 == null) {
     tmp = obj;
   }
@@ -95,7 +96,7 @@ withPanGestureSpring.__workletHash = 12189464558811;
 withPanGestureSpring.__initData = { code: "function withPanGestureSpring_PanGestureAnimationsTsx3(destination,velocity,config){const{SPRING_CONFIG,withSpring}=this.__closure;const springConfig=config!==null&&config!==void 0?config:SPRING_CONFIG;return withSpring(destination,{...springConfig,velocity:velocity});}" };
 function withPanGestureTiming(value, timingStandard) {
   let tmp = timingStandard;
-  const obj = require(4286) /* CONFIG_NEVER_ANIMATE_TIMING */;
+  const obj = require(4194) /* CONFIG_NEVER_ANIMATE_TIMING */;
   if (timingStandard == null) {
     tmp = obj;
   }
@@ -221,7 +222,7 @@ export default function usePanGesture(lowerBounds) {
         if (0 !== num) {
           tmp10 = onChange;
           value1 = obj8.get();
-          if (typeof onChange !== "function") {
+          if (typeof onChange !== "fileFinishedImporting") {
             str2 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -237,7 +238,7 @@ export default function usePanGesture(lowerBounds) {
           result1 = obj2.set(obj5.withSpring(tmp4, obj));
         } else {
           tmp5 = onEnd;
-          if (typeof onEnd !== "function") {
+          if (typeof onEnd !== "fileFinishedImporting") {
             str = "Trying to call a non-function";
             throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
           }

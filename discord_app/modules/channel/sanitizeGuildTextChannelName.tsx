@@ -1,3 +1,4 @@
+// discord_app/modules/channel/sanitizeGuildTextChannelName.tsx
 const result = require("set").fileFinishedImporting("modules/channel/sanitizeGuildTextChannelName.tsx");
 
 export default function sanitizeGuildTextChannelName(str) {

@@ -1,3 +1,4 @@
+// discord_app/components_native/premium/GiftPurchaseButton.tsx
 import jsxProd from "jsxProd";
 import set from "set";
 import { View } from "CollapsingText";
@@ -94,7 +95,7 @@ export default function GiftPurchaseButton(style) {
           }
         } else if (1 === tmp7) {
           premiumType = 0;
-          obj1 = outer1_1(4624);
+          obj1 = outer1_1(4533);
           const obj3 = { title: null, body: null };
           const intl = outer1_0(1236).intl;
           obj3[0] = intl.string(outer1_0(1236).t.R0RpRX);
@@ -117,10 +118,10 @@ export default function GiftPurchaseButton(style) {
         } else {
           closure_0 = arg1;
           premiumType = 0;
-          premiumTypeFromPlanId = outer1_0(3931).getPremiumTypeFromPlanId(closure_0);
+          premiumTypeFromPlanId = outer1_0(3839).getPremiumTypeFromPlanId(closure_0);
           premiumType = premiumTypeFromPlanId.premiumType;
           planInterval = premiumTypeFromPlanId.planInterval;
-          const obj9 = outer1_0(3931);
+          const obj9 = outer1_0(3839);
           const obj5 = { recipientUserId: null, premiumType: null, planInterval: null, analyticsLocation: null, analyticsLocations: null, order: null };
           obj5[0] = premiumType;
           obj5[1] = premiumType;
@@ -128,7 +129,7 @@ export default function GiftPurchaseButton(style) {
           obj5[3] = premiumTypeFromPlanId;
           obj5[4] = c4;
           obj5[5] = closure_0;
-          outer1_0(9949).openGiftModal(obj5);
+          outer1_0(9713).openGiftModal(obj5);
           c4 = 3;
           return { value: "HermesInternal", done: null };
         }

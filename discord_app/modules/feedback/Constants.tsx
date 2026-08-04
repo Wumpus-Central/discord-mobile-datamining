@@ -1,3 +1,4 @@
+// discord_app/modules/feedback/Constants.tsx
 let obj = { BAD: "bad", NEUTRAL: "neutral", GOOD: "good" };
 const items = [require("create").InAppFeedbackType.VIDEO_BACKGROUND, require("create").InAppFeedbackType.STREAM, require("create").InAppFeedbackType.ACTIVITY, require("create").InAppFeedbackType.VOICE, require("create").InAppFeedbackType.IN_APP_REPORTS, require("create").InAppFeedbackType.SEARCH_RESULTS, require("create").InAppFeedbackType.VIBEGRATIONS];
 const items1 = [, , ];

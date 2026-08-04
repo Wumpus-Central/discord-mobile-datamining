@@ -1,3 +1,4 @@
+// discord_app/modules/public_guilds/native/components/EnableCommunityModal/EnableCommunitySharedNavigation.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import handleFormInit from "handleFormInit";

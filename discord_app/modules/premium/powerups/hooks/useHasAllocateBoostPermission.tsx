@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

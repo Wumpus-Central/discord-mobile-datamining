@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx
 import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
 
 const require = arg1;

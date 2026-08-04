@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/utils/getPowerupEntitlementPrice.tsx
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/getPowerupEntitlementPrice.tsx");
 
 export default function getPowerupEntitlementPrice(tenant_metadata) {

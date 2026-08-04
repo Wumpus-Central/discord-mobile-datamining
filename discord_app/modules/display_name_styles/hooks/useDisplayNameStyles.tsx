@@ -1,3 +1,4 @@
+// discord_app/modules/display_name_styles/hooks/useDisplayNameStyles.tsx
 import { useContext } from "noop";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";

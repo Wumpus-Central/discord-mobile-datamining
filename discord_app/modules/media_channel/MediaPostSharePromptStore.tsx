@@ -1,3 +1,4 @@
+// discord_app/modules/media_channel/MediaPostSharePromptStore.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -41,7 +42,7 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(require("dispatc
             }
           }
         }
-        obj2 = require(7861) /* useIsFirstMessageInMediaPost */;
+        obj2 = require(7728) /* useIsFirstMessageInMediaPost */;
       }
     }
   },

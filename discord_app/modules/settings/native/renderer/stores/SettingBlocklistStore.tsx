@@ -1,3 +1,4 @@
+// discord_app/modules/settings/native/renderer/stores/SettingBlocklistStore.tsx
 const zustandStore = require("defaultStatesAreEqual").createZustandStore(() => {
   const obj = { blocklist: null };
   obj[0] = new Set();

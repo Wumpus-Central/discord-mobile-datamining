@@ -1,3 +1,4 @@
+// discord_app/utils/checkEnv.tsx
 if (null == window.GLOBAL_ENV) {
   const _window = window;
   window.GLOBAL_ENV = {};

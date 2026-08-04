@@ -1,3 +1,4 @@
+// discord_app/modules/go_live/utils/canSpectate.tsx
 import { Features } from "DesktopSources";
 
 const result = require("set").fileFinishedImporting("modules/go_live/utils/canSpectate.tsx");

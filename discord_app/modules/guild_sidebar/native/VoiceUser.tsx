@@ -1,3 +1,4 @@
+// discord_app/modules/guild_sidebar/native/VoiceUser.tsx
 import "noop";
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";

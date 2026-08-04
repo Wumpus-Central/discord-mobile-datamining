@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/hooks/useUserIsConsideredAdult.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

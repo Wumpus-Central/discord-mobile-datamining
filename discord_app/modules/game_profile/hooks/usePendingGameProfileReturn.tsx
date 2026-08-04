@@ -1,5 +1,6 @@
+// discord_app/modules/game_profile/hooks/usePendingGameProfileReturn.tsx
 import noop from "noop";
-import handleLoadMessages from "handleLoadMessages";
+import map from "map";
 import getSimilarGames from "getSimilarGames";
 import { AVATAR_SIZE } from "ME";
 
@@ -34,7 +35,7 @@ export default function usePendingGameProfileReturn(channelId) {
       obj.returnToGameProfile(obj);
     }
   }, items1);
-  const items2 = [handleLoadMessages];
+  const items2 = [map];
   stateFromStores1 = channelId(stateFromStores1[4]).useStateFromStores(items2, () => {
     let gameId;
     if (stateFromStores != null) {

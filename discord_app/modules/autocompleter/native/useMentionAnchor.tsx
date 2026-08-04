@@ -1,3 +1,4 @@
+// discord_app/modules/autocompleter/native/useMentionAnchor.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
@@ -32,7 +33,7 @@ export default function useMentionAnchor(c22) {
       startsWithResult = arg1 >= anchor + arg3.length;
     }
     if (startsWithResult) {
-      let obj1 = _require(9831);
+      let obj1 = _require(9590);
       startsWithResult = obj1.isUnbrokenRun(c22, anchor + arg3.length, arg1);
     }
     tmp5 = startsWithResult;
@@ -61,8 +62,8 @@ export default function useMentionAnchor(c22) {
             startsWithResult1 = arg1 >= lastIndexOfResult + arg3.length;
           }
           if (startsWithResult1) {
-            startsWithResult1 = tmp25(9831).isUnbrokenRun(c22, lastIndexOfResult + arg3.length, arg1);
-            const tmp25Result = tmp25(9831);
+            startsWithResult1 = tmp25(9590).isUnbrokenRun(c22, lastIndexOfResult + arg3.length, arg1);
+            const tmp25Result = tmp25(9590);
           }
           tmp18 = null;
           if (startsWithResult1) {
@@ -70,7 +71,7 @@ export default function useMentionAnchor(c22) {
           }
         }
         tmp16 = tmp18;
-        obj9 = _require(9831);
+        obj9 = _require(9590);
         tmp25 = _require;
       }
       if (null != tmp16) {

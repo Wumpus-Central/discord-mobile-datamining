@@ -1,11 +1,12 @@
+// discord_app/modules/gateway/GatewayZstdUtils.native.tsx
 import { NativeModules } from "get ActivityIndicator";
 
 const result = require("enforcing").fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
 
 export const supportsZstd = function supportsZstd() {
   if (obj.isAndroid()) {
-    let flag = importDefault(12825).getConstants().supportsZstd;
-    const obj2 = importDefault(12825);
+    let flag = importDefault(12729).getConstants().supportsZstd;
+    const obj2 = importDefault(12729);
   } else {
     const DCDCompressionManager = NativeModules.DCDCompressionManager;
     flag = undefined;

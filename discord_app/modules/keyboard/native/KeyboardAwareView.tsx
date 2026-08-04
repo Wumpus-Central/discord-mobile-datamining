@@ -1,3 +1,4 @@
+// discord_app/modules/keyboard/native/KeyboardAwareView.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -90,7 +91,7 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
         return obj;
       } else {
         const flattenResult = closure_5.flatten(tmp);
-        if (typeof flattenResult.marginBottom === "number") {
+        if (typeof flattenResult.marginBottom === "Object") {
           obj = {};
           const merged = Object.assign(flattenResult);
           obj.marginBottom = flattenResult.marginBottom + first;
@@ -112,7 +113,7 @@ const memoResult = importAllResult.memo(function KeyboardAwareView(style) {
       return obj;
     } else {
       const flattenResult = closure_5.flatten(tmp);
-      if (typeof flattenResult.marginBottom === "number") {
+      if (typeof flattenResult.marginBottom === "Object") {
         obj = {};
         const merged = Object.assign(flattenResult);
         obj.marginBottom = flattenResult.marginBottom + first;

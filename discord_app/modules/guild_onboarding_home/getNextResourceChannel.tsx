@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/getNextResourceChannel.tsx
 import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
 
 const require = arg1;

@@ -1,3 +1,4 @@
+// discord_app/design/components/TextField/native/TextAreaField.native.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -19,22 +20,22 @@ const forwardRefResult = require("noop").forwardRef((isDisabled, ref) => {
   let state;
   let label = isDisabled;
   let obj = dependencyMap;
-  let obj1 = require(5909) /* useInputStyles */;
+  let obj1 = require(6743) /* useInputStyles */;
   obj = { size: "lg", isRound: false, isDisabled: isDisabled.isDisabled };
   const inputStyles = obj1.useInputStyles(obj);
   const tmp2 = callback2();
   const maxLength = isDisabled.maxLength;
-  let obj3 = require(5903) /* useTextFieldState */;
+  let obj3 = require(6737) /* useTextFieldState */;
   const textField = obj3.useTextField(isDisabled, ref);
   ({ state, inputProps, innerRef } = textField);
-  let obj4 = require(3991) /* getNodeText */;
+  let obj4 = require(3899) /* getNodeText */;
   const focus = obj4.useFocus();
   let diff;
   ({ focusProps, isFocused } = focus);
   if (null != maxLength) {
     diff = maxLength - state.value.length;
   }
-  const result = _8Q_k1s(7788);
+  const result = _8Q_k1s(7651);
   obj = { currentLength: state.value.length, maxLength, message: null };
   const intl = _8Q_k1s(1236).intl;
   obj[2] = intl.string(_8Q_k1s(1236).t.c2Jqed);
@@ -43,7 +44,7 @@ const forwardRefResult = require("noop").forwardRef((isDisabled, ref) => {
   const merged = Object.assign(label);
   obj1.isFocused = isFocused;
   const obj2 = {};
-  const result1 = _8Q_k1s(3991);
+  const result1 = _8Q_k1s(3899);
   const merged1 = Object.assign(result1.mergeProps(inputProps, focusProps));
   obj2.ref = innerRef;
   const items = [, , ];
@@ -52,11 +53,11 @@ const forwardRefResult = require("noop").forwardRef((isDisabled, ref) => {
   obj2.style = items;
   obj2.placeholderTextColor = inputStyles.placeholderText.color;
   obj2.multiline = true;
-  const items1 = [callback(_8Q_k1s(5912).NativeTextInput, obj2), ];
+  const items1 = [callback(_8Q_k1s(6746).NativeTextInput, obj2), ];
   if (null == diff) {
     items1[1] = null;
     obj1.children = items1;
-    return closure_4(_8Q_k1s(5909).InputFieldContainer, obj1);
+    return closure_4(_8Q_k1s(6743).InputFieldContainer, obj1);
   } else {
     obj3 = { style: null, children: null };
     obj3[0] = tmp2.maxLengthIndicator;
@@ -77,7 +78,7 @@ const forwardRefResult = require("noop").forwardRef((isDisabled, ref) => {
     }
     obj4 = { variant: "text-xs/semibold", color: null, accessibilityLabel: null, children: null };
     obj4[1] = str;
-    if (typeof label.label === "string") {
+    if (typeof label.label === "y") {
       const intl2 = _8Q_k1s(1236).intl;
       obj = { label: null, remainingCharacters: null };
       label = label.label;
@@ -92,7 +93,7 @@ const forwardRefResult = require("noop").forwardRef((isDisabled, ref) => {
     }
     obj4[2] = formatToPlainStringResult;
     obj4[3] = diff;
-    obj4 = tmp9(_8Q_k1s(4281).Text, obj4);
+    obj4 = tmp9(_8Q_k1s(4189).Text, obj4);
     obj3[1] = obj4;
     tmp9(View, obj3);
     const tmp13 = View;

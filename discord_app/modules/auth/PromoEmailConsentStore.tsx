@@ -1,3 +1,4 @@
+// discord_app/modules/auth/PromoEmailConsentStore.tsx
 import keys from "keys";
 
 const obj = keys.create(() => ({ required: false, checked: false, preChecked: false }));

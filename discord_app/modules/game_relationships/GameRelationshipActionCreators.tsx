@@ -1,3 +1,4 @@
+// discord_app/modules/game_relationships/GameRelationshipActionCreators.tsx
 import sendRequest from "sendRequest";
 import ME from "ME";
 
@@ -5,7 +6,7 @@ let c4;
 let c5;
 const require = arg1;
 function showRequestFailedAlert(arg0) {
-  const aPIError = new require(4184) /* V6OrEarlierAPIError */.APIError(arg0);
+  const aPIError = new require(4092) /* V6OrEarlierAPIError */.APIError(arg0);
   let anyErrorMessage = aPIError.getAnyErrorMessage();
   const obj = { title: null, body: null };
   const intl = require(1236) /* getSystemLocale */.intl;
@@ -15,7 +16,7 @@ function showRequestFailedAlert(arg0) {
     anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);
   }
   obj[1] = anyErrorMessage;
-  importDefault(4623).show(obj);
+  importDefault(4532).show(obj);
 }
 function deleteGameRelationship() {
   const self = this;
@@ -38,28 +39,90 @@ function _deleteGameRelationship() {
       let c0;
       let c1;
       let c2;
-      const dependencyMap = tmp3;
-      c1 = tmp5;
-      ({ userId: c0, applicationId: c1, onSuccess: c2 } = callback);
-      yield "ct";
-      let c4 = 1;
-      const HTTP = callback(530).HTTP;
-      const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj2[0] = c4.USER_GAME_RELATIONSHIP(callback, c1);
-      yield HTTP.del(obj2);
-      if (2 === tmp8) {
-        c4 = 0;
-        v0(sendRequest);
+      if (v0 === 2) {
         v0 = 3;
-      } else if (arg0 === 1) {
-        v0 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        dependencyMap();
-        c4 = 0;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          v0 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v0 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let dependencyMap = tmp3;
+              c1 = tmp5;
+              let callback;
+              c1 = undefined;
+              dependencyMap = undefined;
+              ({ userId: c0, applicationId: c1, onSuccess: c2 } = callback);
+              c5 = 1;
+              v0 = 1;
+              return { value: "ct", done: "Array" };
+            }
+          } else if (1 === tmp8) {
+            if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              v0 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              let c4 = 1;
+              const HTTP = callback(530).HTTP;
+              const obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
+              obj2[0] = c4.USER_GAME_RELATIONSHIP(callback, c1);
+              c5 = 3;
+              v0 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.del(obj2);
+              return obj3;
+            }
+          } else {
+            if (2 === tmp8) {
+              c4 = 0;
+              v0(sendRequest);
+              v0 = 3;
+            } else if (arg0 === 1) {
+              v0 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              dependencyMap();
+              c4 = 0;
+            }
+            c4 = 0;
+            v0 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp25) {
+          sendRequest = tmp25;
+          if (tmp4 === c4) {
+            v0 = tmp2;
+            throw tmp25;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      c4 = 0;
-      return arg1;
     })();
     iter.next();
     return iter;
@@ -298,7 +361,7 @@ export default {
       const intl = onSuccess(outer1_2[4]).intl;
       AccessibilityAnnouncer.announce(intl.string(onSuccess(outer1_2[4]).t.taJiuc));
     }).catch((arg0) => {
-      const aPIError = new onSuccess(4184).APIError(arg0);
+      const aPIError = new onSuccess(4092).APIError(arg0);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
       const intl = onSuccess(1236).intl;
@@ -308,7 +371,7 @@ export default {
         anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);
       }
       obj[1] = anyErrorMessage;
-      callback(4623).show(obj);
+      callback(4532).show(obj);
       return Promise.reject(arg0);
     });
   },

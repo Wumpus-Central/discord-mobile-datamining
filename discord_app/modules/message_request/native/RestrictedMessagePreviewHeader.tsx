@@ -1,3 +1,4 @@
+// discord_app/modules/message_request/native/RestrictedMessagePreviewHeader.tsx
 import Button from "Button";
 import { View } from "PressableBase";
 import { MOBILE_MESSAGE_REQUESTS_MODAL_KEY as closure_5 } from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL";
@@ -44,13 +45,13 @@ export default function RestrictedMessagePreviewHeader(channel) {
     obj = {
       user,
       onPressMutualGuild(arg0) {
-        const result = callback(8711).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
-        const obj = callback(8711);
-        callback(5866).transitionToGuild(arg0);
-        const obj2 = callback(5866);
-        callback2(4253).hideActionSheet();
-        const obj3 = callback2(4253);
-        callback2(4490).popWithKey(closure_5);
+        const result = callback(8112).trackUserProfileAction({ action: "PRESS_MUTUAL_GUILD" });
+        const obj = callback(8112);
+        callback(6693).transitionToGuild(arg0);
+        const obj2 = callback(6693);
+        callback2(4161).hideActionSheet();
+        const obj3 = callback2(4161);
+        callback2(4399).popWithKey(closure_5);
       }
     };
     obj.openLazy(channel(analyticsLocations[13])(analyticsLocations[12], analyticsLocations.paths), "MutualGuildsActionSheet", obj);

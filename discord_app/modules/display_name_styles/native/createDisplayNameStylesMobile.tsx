@@ -1,3 +1,4 @@
+// discord_app/modules/display_name_styles/native/createDisplayNameStylesMobile.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

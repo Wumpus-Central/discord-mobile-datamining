@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/subscriptionUtils.tsx
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/subscriptionUtils.tsx");
 
 export const getRoleSubscriptionPlanId = function getRoleSubscriptionPlanId(items) {

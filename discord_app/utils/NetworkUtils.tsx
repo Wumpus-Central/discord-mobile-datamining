@@ -1,3 +1,4 @@
+// discord_app/utils/NetworkUtils.tsx
 let closure_2 = [];
 let c3 = false;
 const obj = {};

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_antiraid/GuildAntiRaidConstants.tsx
 import { Permissions } from "sum";
 import importAllResult from "fromString";
 

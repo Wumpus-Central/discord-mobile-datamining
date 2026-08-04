@@ -1,3 +1,4 @@
+// discord_app/modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx
 const result = require("set").fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");
 
 export const getApplicationSubscriptionSystemMessageASTContent = function getApplicationSubscriptionSystemMessageASTContent(arg0) {

@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/panels/MainTabsChannelScreenStack.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "Link";
 import get_ActivityIndicator from "Suspender";

@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/you_bar/hooks/useYouBarCoachmark.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import handleConnectionOpen from "handleConnectionOpen";

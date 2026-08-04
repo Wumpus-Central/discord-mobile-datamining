@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/StageChannelModalActionCreators.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -15,38 +16,38 @@ function connectToStage(channel, flag) {
     const canResult = getUncachedChannelPermissions.can(_require(1380).JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     let tmp6 = !canResult;
     if (canResult) {
-      let num = importAll(7697).shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
+      let num = importAll(6714).shouldShowBlockedUsers(channel.id) && tmp !== channel.id;
       if (num) {
-        const result = tmp7(7697).openStageBlockedUsersSheet(channel, () => {
+        const result = tmp7(6714).openStageBlockedUsersSheet(channel, () => {
           outer1_11(closure_0, true);
         });
         num = 1;
-        const tmp7Result = tmp7(7697);
+        const tmp7Result = tmp7(6714);
       }
       tmp6 = num;
-      const obj2 = importAll(7697);
+      const obj2 = importAll(6714);
       tmp7 = importAll;
     }
     if (tmp6) {
       return false;
     }
   }
-  importDefault(12569).initialize();
+  importDefault(12438).initialize();
   const obj = closure_9;
-  const obj4 = importDefault(12569);
-  const voiceChannel = importDefault(5096).selectVoiceChannel(channel.id);
+  const obj4 = importDefault(12438);
+  const voiceChannel = importDefault(5005).selectVoiceChannel(channel.id);
   if (obj.getVoiceChannelId() !== channel.id) {
     return false;
   } else {
     allApplicationStreamsForChannel = allApplicationStreamsForChannel.getAllApplicationStreamsForChannel(channel.id);
     const found = allApplicationStreamsForChannel.find((currentUserActiveStream) => !streamMarkedFull.isStreamMarkedFull(channel(table[13]).encodeStreamKey(currentUserActiveStream)));
     if (null != found) {
-      _require(4464).watchStream(found, { noFocus: true });
-      const obj6 = _require(4464);
+      _require(4373).watchStream(found, { noFocus: true });
+      const obj6 = _require(4373);
     }
     return true;
   }
-  const obj5 = importDefault(5096);
+  const obj5 = importDefault(5005);
 }
 function connectAndOpen(channel, flag) {
   const _require = channel;
@@ -67,19 +68,19 @@ function connectAndOpen(channel, flag) {
     result = voiceChannelId !== channel.id;
   }
   if (result) {
-    result = _require(12571).shouldShowVoiceChannelChangeConfirmation(channel);
-    const obj = _require(12571);
+    result = _require(12440).shouldShowVoiceChannelChangeConfirmation(channel);
+    const obj = _require(12440);
   }
   if (result) {
-    result = flag2(7697).showChannelChangeConfirmationAlert(channel, () => {
+    result = flag2(6714).showChannelChangeConfirmationAlert(channel, () => {
       outer1_11(closure_0, flag, flag2, true);
     });
-    const obj2 = flag2(7697);
+    const obj2 = flag2(6714);
   }
   if (!result) {
     if (connectToStage(channel, flag)) {
-      flag2(7697).navigateToStage(channel, voiceChannelId);
-      const obj3 = flag2(7697);
+      flag2(6714).navigateToStage(channel, voiceChannelId);
+      const obj3 = flag2(6714);
     }
   }
 }
@@ -204,8 +205,8 @@ export const connectOrLurkStage = function connectOrLurkStage(closure_0, closure
 export { connectToStage };
 export { connectAndOpen };
 export const navigateToStage = function navigateToStage(arg0, arg1) {
-  importAll(7697).navigateToStage(arg0, arg1);
+  importAll(6714).navigateToStage(arg0, arg1);
 };
 export const showUserProfile = function showUserProfile(arg0) {
-  const result = importAll(7697).showPlatformUserProfile(arg0);
+  const result = importAll(6714).showPlatformUserProfile(arg0);
 };

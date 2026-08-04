@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/native/components/StageActionBar.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

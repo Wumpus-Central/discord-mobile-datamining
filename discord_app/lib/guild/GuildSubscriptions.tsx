@@ -1,3 +1,4 @@
+// discord_app/lib/guild/GuildSubscriptions.tsx
 import { ME } from "ME";
 
 const result = require("reset").fileFinishedImporting("lib/guild/GuildSubscriptions.tsx");

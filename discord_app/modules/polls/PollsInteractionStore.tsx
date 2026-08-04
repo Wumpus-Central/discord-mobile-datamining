@@ -1,3 +1,4 @@
+// discord_app/modules/polls/PollsInteractionStore.tsx
 import identity from "identity";
 
 let closure_3 = {};

@@ -1,3 +1,4 @@
+// discord_app/modules/keyboard/native/KeyboardUIStore.native.tsx
 import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
 import { ExpressionPickerViewType } from "ExpressionPickerViewType";
 import { MediaKeyboardTarget } from "DRAG_HANDLE";
@@ -92,8 +93,8 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
           if (context == null) {
             context = tmp17;
           }
-          if (typeof tmp.keyboardContexts[type] === "object") {
-            if (typeof context === "object") {
+          if (typeof tmp.keyboardContexts[type] !== "window") {
+            if (typeof context === "ay") {
               let tmp19 = !importDefault(643)(tmp17, context);
             }
             if (tmp2Result4.isAndroid()) {

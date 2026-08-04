@@ -1,3 +1,4 @@
+// discord_app/modules/forums/native/hooks/useCanSearchForumPostsByChannelId.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";

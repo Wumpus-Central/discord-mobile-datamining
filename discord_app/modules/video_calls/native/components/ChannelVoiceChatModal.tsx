@@ -1,3 +1,4 @@
+// discord_app/modules/video_calls/native/components/ChannelVoiceChatModal.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -6,7 +7,7 @@ const result = require("computeChannelName").fileFinishedImporting("modules/vide
 
 export default function ChannelVoiceChatModal(channel) {
   channel = channel.channel;
-  const tmp2 = importDefault(4475)(channel);
+  const tmp2 = importDefault(4384)(channel);
   const items = [channel.id];
   const effect = React.useEffect(() => {
     outer1_1(outer1_2[3]).updateChatOpen(channel.id, true);
@@ -18,8 +19,8 @@ export default function ChannelVoiceChatModal(channel) {
   if (tmp2 == null) {
     str = "";
   }
-  const tmp5 = importDefault(9596);
-  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(4806).StageIcon, { size: "sm" })} render={function render() {
+  const tmp5 = importDefault(9117);
+  return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(4715).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;

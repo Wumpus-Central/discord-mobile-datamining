@@ -1,3 +1,4 @@
+// discord_app/modules/age_gate/AgeGateStore.tsx
 import { AGE_GATE_REGISTER_TIMEOUT_MS } from "result";
 import { Store } from "initialize";
 

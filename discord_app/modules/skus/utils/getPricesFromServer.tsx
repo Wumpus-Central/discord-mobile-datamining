@@ -1,3 +1,4 @@
+// discord_app/modules/skus/utils/getPricesFromServer.tsx
 import { getPriceFromServer } from "createFromServer";
 
 const result = require("set").fileFinishedImporting("modules/skus/utils/getPricesFromServer.tsx");

@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DeviceInfoSetting.tsx
 import createToggle from "createToggle";
 
 let obj = {
@@ -8,11 +9,11 @@ let obj = {
   parent: null,
   IconComponent: require("MobilePhoneSettingsIcon").MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
-    const obj = require(14637) /* getClientInfo */;
-    const clientInfoString = obj.getClientInfoString(require(4265) /* DCDDeviceManager */.getDeviceInfo());
-    const obj2 = require(4265) /* DCDDeviceManager */;
-    const obj3 = require(14637) /* getClientInfo */;
-    return "" + clientInfoString + " (" + obj3.getClientInfoString(require(4265) /* DCDDeviceManager */.getSystemVersion()) + ")";
+    const obj = require(14537) /* getClientInfo */;
+    const clientInfoString = obj.getClientInfoString(require(4173) /* DCDDeviceManager */.getDeviceInfo());
+    const obj2 = require(4173) /* DCDDeviceManager */;
+    const obj3 = require(14537) /* getClientInfo */;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(require(4173) /* DCDDeviceManager */.getSystemVersion()) + ")";
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
 };
@@ -24,11 +25,11 @@ const createStaticResult = createToggle.createStatic({
   parent: null,
   IconComponent: require("MobilePhoneSettingsIcon").MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
-    const obj = require(14637) /* getClientInfo */;
-    const clientInfoString = obj.getClientInfoString(require(4265) /* DCDDeviceManager */.getDeviceInfo());
-    const obj2 = require(4265) /* DCDDeviceManager */;
-    const obj3 = require(14637) /* getClientInfo */;
-    return "" + clientInfoString + " (" + obj3.getClientInfoString(require(4265) /* DCDDeviceManager */.getSystemVersion()) + ")";
+    const obj = require(14537) /* getClientInfo */;
+    const clientInfoString = obj.getClientInfoString(require(4173) /* DCDDeviceManager */.getDeviceInfo());
+    const obj2 = require(4173) /* DCDDeviceManager */;
+    const obj3 = require(14537) /* getClientInfo */;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(require(4173) /* DCDDeviceManager */.getSystemVersion()) + ")";
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
 });

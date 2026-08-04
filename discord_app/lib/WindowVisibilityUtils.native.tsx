@@ -1,3 +1,4 @@
+// discord_app/lib/WindowVisibilityUtils.native.tsx
 import getState from "getState";
 import { AppStates } from "ME";
 

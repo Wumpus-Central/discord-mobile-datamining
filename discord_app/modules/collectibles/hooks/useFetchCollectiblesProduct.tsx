@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useFetchCollectiblesProduct.tsx
 import _slicedToArray from "_slicedToArray";
 import { useEffect } from "noop";
 import addSku from "addSku";

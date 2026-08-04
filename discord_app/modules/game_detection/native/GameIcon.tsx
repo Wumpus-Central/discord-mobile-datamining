@@ -1,3 +1,4 @@
+// discord_app/modules/game_detection/native/GameIcon.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { PremiumSubscriptionSKUs } from "GuildFeatures";

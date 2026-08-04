@@ -1,3 +1,4 @@
+// discord_app/modules/favorites/hooks/useIsFavoritesGuildEnabled.tsx
 import initializeFromUserSettings from "initializeFromUserSettings";
 
 const require = arg1;
@@ -20,8 +21,8 @@ export const getIsFavoritesGuildEnabled = function getIsFavoritesGuildEnabled() 
   return favoriteGuildEnabled;
 };
 export const useIsFavoritesGuildEnabled = function useIsFavoritesGuildEnabled() {
-  isFreemium = isFreemium(9629).useFavoritesAccess("useIsFavoritesGuildEnabled").isFreemium;
-  const obj = isFreemium(9629);
+  isFreemium = isFreemium(10228).useFavoritesAccess("useIsFavoritesGuildEnabled").isFreemium;
+  const obj = isFreemium(10228);
   const items = [initializeFromUserSettings];
   return isFreemium(589).useStateFromStores(items, () => {
     if (isFreemium) {

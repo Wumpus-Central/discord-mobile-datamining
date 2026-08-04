@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx
 const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/PlaceholderUtils.tsx");
 
 export const getAdjustedPlaceholderCount = function getAdjustedPlaceholderCount(numResults) {

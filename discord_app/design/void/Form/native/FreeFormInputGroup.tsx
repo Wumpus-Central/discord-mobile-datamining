@@ -1,3 +1,4 @@
+// discord_app/design/void/Form/native/FreeFormInputGroup.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -43,7 +44,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
     let obj1 = require(500) /* set */;
     str = "visible-password";
   }
-  const context = importAllResult.useContext(require(5314) /* context */.RedesignCompatContext);
+  const context = importAllResult.useContext(require(5223) /* context */.RedesignCompatContext);
   const id = importAllResult.useId();
   if (context) {
     ({ placeholder, onChangeText, clearButtonVisibility } = merged);
@@ -59,7 +60,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
     obj[8] = str;
     obj[9] = isAndroidResult;
     obj[10] = merged.autoCapitalize;
-    return callback(tmp8(7713).TextInput, obj);
+    return callback(tmp8(6730).TextInput, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = style;
@@ -69,7 +70,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
       obj1[0] = tmp2.label;
       obj1[1] = id;
       obj1[2] = label;
-      tmp14 = callback(importDefault(8277), obj1);
+      tmp14 = callback(importDefault(9005), obj1);
     }
     const items = [tmp14, , , ];
     const obj2 = {};
@@ -91,13 +92,13 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
     obj2.keyboardType = str;
     const items1 = [tmp2.input, accessibilityLabel.textStyle];
     obj2.style = items1;
-    items[1] = callback(importDefault(8278), obj2);
+    items[1] = callback(importDefault(9006), obj2);
     let tmp17Result = null;
     if (null != error) {
       const obj3 = { style: null, children: null };
       obj3[0] = tmp2.error;
       obj3[1] = error;
-      tmp17Result = tmp17(importDefault(8280), obj3);
+      tmp17Result = tmp17(importDefault(9008), obj3);
     }
     items[2] = tmp17Result;
     tmp17Result = null;
@@ -105,7 +106,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
       const obj4 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
       obj4[0] = tmp2.hint;
       obj4[3] = hint;
-      tmp17Result = tmp17(tmp8(4281).Text, obj4);
+      tmp17Result = tmp17(tmp8(4189).Text, obj4);
     }
     items[3] = tmp17Result;
     obj[1] = items;

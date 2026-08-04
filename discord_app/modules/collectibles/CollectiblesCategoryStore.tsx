@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/CollectiblesCategoryStore.tsx
 import _getSystemLocale from "_getSystemLocale";
 import fromServer from "fromServer";
 import { Store } from "initialize";
@@ -9,7 +10,7 @@ function updateCategoriesAndProducts(map) {
     const items = [storeListingId.storeListingId, storeListingId];
     return items;
   }));
-  const productsFromCategories = map1(6922).getProductsFromCategories(map, true);
+  const productsFromCategories = map1(5815).getProductsFromCategories(map, true);
   map1 = new Map(productsFromCategories.map((skuId) => {
     const items = [skuId.skuId, skuId];
     return items;
@@ -19,8 +20,8 @@ function updateCategoriesAndProducts(map) {
       const result = map1.set(skuId.skuId, skuId);
     }
   });
-  const obj = map1(6922);
-  const productsFromCategories1 = map1(6922).getProductsFromCategories(map, false);
+  const obj = map1(5815);
+  const productsFromCategories1 = map1(5815).getProductsFromCategories(map, false);
   const map2 = new Map(productsFromCategories1.map((storeListingId) => {
     const items = [storeListingId.storeListingId, storeListingId];
     return items;

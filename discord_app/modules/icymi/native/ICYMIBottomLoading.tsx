@@ -1,3 +1,4 @@
+// discord_app/modules/icymi/native/ICYMIBottomLoading.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

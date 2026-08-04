@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/formatDurationFromDays.tsx
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/formatDurationFromDays.tsx");
 
 export default function formatDurationFromDays(days) {

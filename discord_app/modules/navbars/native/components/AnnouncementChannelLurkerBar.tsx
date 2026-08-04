@@ -1,3 +1,4 @@
+// discord_app/modules/navbars/native/components/AnnouncementChannelLurkerBar.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/hooks/native/useUserProfileColors.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { ThemeTypes } from "sum";
 
@@ -12,28 +13,28 @@ export const useUserProfileColors = function useUserProfileColors(arg0) {
   let sectionBox;
   let theme;
   ({ theme, primaryColor, secondaryColor } = arg0);
-  const tmp3 = importDefault(4221)();
-  let obj = require(5632) /* useProfileThemeValues */;
+  const tmp3 = importDefault(4129)();
+  let obj = require(5541) /* useProfileThemeValues */;
   const profileThemeValues = obj.useProfileThemeValues(theme);
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
   const tmp7 = importDefault(1348)("useUserProfileColors");
   obj = { gradientFallbackBackground: null, gradientSecondaryBackground: null, containerBackground: null, containerBorderColor: null, avatarBackground: null, statusBackground: null };
   const obj2 = require(589) /* initialize */;
-  obj[0] = require(3989) /* map */.useToken(importDefault(712).colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp3);
-  const obj4 = require(3989) /* map */;
-  obj[1] = require(3989) /* map */.useToken(importDefault(712).colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp3);
-  const obj5 = require(3989) /* map */;
+  obj[0] = require(3897) /* map */.useToken(importDefault(712).colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp3);
+  const obj4 = require(3897) /* map */;
+  obj[1] = require(3897) /* map */.useToken(importDefault(712).colors.USER_PROFILE_GRADIENT_BACKGROUND, tmp3);
+  const obj5 = require(3897) /* map */;
   const colors = importDefault(712).colors;
-  obj[2] = require(3989) /* map */.useToken(tmp7 ? colors.CARD_MUTED_BG : colors.USER_PROFILE_CONTAINER_BACKGROUND, tmp3);
-  let tmp4Result = tmp4(3989);
+  obj[2] = require(3897) /* map */.useToken(tmp7 ? colors.CARD_MUTED_BG : colors.USER_PROFILE_CONTAINER_BACKGROUND, tmp3);
+  let tmp4Result = tmp4(3897);
   obj[3] = tmp4Result.useToken(importDefault(712).colors.BORDER_MUTED, tmp3);
-  tmp4Result = tmp4(3989);
+  tmp4Result = tmp4(3897);
   obj[4] = tmp4Result.useToken(importDefault(712).colors.BACKGROUND_BASE_LOWER, tmp3);
-  const obj6 = require(3989) /* map */;
-  obj[5] = require(3989) /* map */.useToken(importDefault(712).colors.BACKGROUND_SURFACE_HIGH, tmp3);
-  const tmp4Result1 = require(3989) /* map */;
-  let containerBackground = require(3989) /* map */.useToken(tmp(712).colors.BACKGROUND_MOD_NORMAL, theme);
+  const obj6 = require(3897) /* map */;
+  obj[5] = require(3897) /* map */.useToken(importDefault(712).colors.BACKGROUND_SURFACE_HIGH, tmp3);
+  const tmp4Result1 = require(3897) /* map */;
+  let containerBackground = require(3897) /* map */.useToken(tmp(712).colors.BACKGROUND_MOD_NORMAL, theme);
   let containerBackground2 = tmp(712).unsafe_rawColors.OPACITY_WHITE_24;
   if (theme === ThemeTypes.LIGHT) {
     if (tmp7) {
@@ -51,18 +52,18 @@ export const useUserProfileColors = function useUserProfileColors(arg0) {
         if (stateFromStores) {
           tmp8 = overlaySyncedWithUserTheme;
         }
-        const result = tmp4(8123).calculateOverlayedColor(primaryColor, tmp8);
+        const result = tmp4(7993).calculateOverlayedColor(primaryColor, tmp8);
         obj = {};
         const merged = Object.assign(obj);
         obj.containerBackground = containerBackground;
-        const tmp4Result3 = tmp4(8123);
+        const tmp4Result3 = tmp4(7993);
         const tmp4Result4 = tmp4(688);
-        obj.gradientSecondaryBackground = tmp4Result4.int2hex(tmp4(8123).calculateOverlayedColor(secondaryColor, overlay));
-        const tmp4Result5 = tmp4(8123);
+        obj.gradientSecondaryBackground = tmp4Result4.int2hex(tmp4(7993).calculateOverlayedColor(secondaryColor, overlay));
+        const tmp4Result5 = tmp4(7993);
         obj.avatarBackground = tmp4(688).int2hex(result);
         const tmp4Result6 = tmp4(688);
         const tmp4Result7 = tmp4(688);
-        obj.statusBackground = tmp4Result7.int2hex(tmp4(8123).calculateOverlayedColor(result, sectionBox));
+        obj.statusBackground = tmp4Result7.int2hex(tmp4(7993).calculateOverlayedColor(result, sectionBox));
         return obj;
       }
     }

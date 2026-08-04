@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useProductDisableState.tsx
 import reset from "reset";
 
 const require = arg1;

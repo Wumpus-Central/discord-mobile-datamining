@@ -1,3 +1,4 @@
+// discord_app/modules/verification/native/components/Overview.tsx
 import _emailSupport from "_emailSupport";
 import { View } from "saveProfileAndAccountRequest";
 import handleRequiredAction from "handleRequiredAction";

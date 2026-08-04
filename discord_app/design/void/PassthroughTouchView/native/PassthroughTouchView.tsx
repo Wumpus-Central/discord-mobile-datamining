@@ -1,3 +1,4 @@
+// discord_app/design/void/PassthroughTouchView/native/PassthroughTouchView.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -9,5 +10,5 @@ export default function PassthroughTouchView(onTouchDown) {
   const merged1 = Object.assign(merged);
   obj.onTouchDown = onTouchDown.onTouchDown;
   obj.pointerEvents = "box-none";
-  return jsx(importDefault(13277), {});
+  return jsx(importDefault(13181), {});
 };

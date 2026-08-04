@@ -1,3 +1,4 @@
+// discord_app/modules/core/CodeSplittingUtils.tsx
 import loaderMaker from "loaderMaker";
 
 loaderMaker.setAwaitOnline(require("awaitOnline").awaitOnline);

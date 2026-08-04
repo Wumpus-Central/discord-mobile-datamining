@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/useIsNewMember.tsx
 import initialize from "initialize";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { GuildMemberFlags } from "GuildMemberFlags";

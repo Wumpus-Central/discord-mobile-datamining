@@ -1,3 +1,4 @@
+// discord_app/modules/header_bar/FrictionlessGDMsExperiment.tsx
 const obj = { 1: null };
 obj[1] = { enabled: true };
 const tmp2 = require("getUnitId")({ kind: "user", name: "2026-05-frictionless-gdms", defaultConfig: { enabled: false }, variations: obj });

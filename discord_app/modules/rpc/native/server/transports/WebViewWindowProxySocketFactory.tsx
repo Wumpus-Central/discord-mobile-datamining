@@ -1,16 +1,19 @@
+// discord_app/modules/rpc/native/server/transports/WebViewWindowProxySocketFactory.tsx
 const result = require("set").fileFinishedImporting("modules/rpc/native/server/transports/WebViewWindowProxySocketFactory.tsx");
 
 export default function _default(logger) {
   let encoding;
+  let frameId;
+  let origin;
   let postClose;
   let postMessageToRPCClient;
-  let source;
   let version;
   logger = logger.logger;
-  ({ source, postMessageToRPCClient, version, encoding, postClose } = logger);
-  return new logger(10552)({
-    source,
+  ({ origin, postMessageToRPCClient, frameId, version, encoding, postClose } = logger);
+  return new logger(10649)({
+    origin,
     postMessageToRPCClient,
+    frameId,
     version,
     encoding,
     logger,

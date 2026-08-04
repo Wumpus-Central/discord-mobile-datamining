@@ -1,3 +1,4 @@
+// discord_app/modules/shared_space_warnings/native/BlockedUserInVoiceChannelActionSheet.tsx
 import "UserIcon";
 import get_ActivityIndicator from "TableRowInner";
 import ensureGuildLoaded from "ensureGuildLoaded";

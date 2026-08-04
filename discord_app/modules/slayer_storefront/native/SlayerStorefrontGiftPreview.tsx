@@ -1,3 +1,4 @@
+// discord_app/modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -20,11 +21,11 @@ function WarningBox(application) {
     let name = importDefault;
     let BMMo2K = dependencyMap;
     let obj = { look: null, style: null, children: null };
-    obj[0] = require(10340) /* InfoBox */.InfoBoxLooks.WARNING;
+    obj[0] = require(8058) /* InfoBox */.InfoBoxLooks.WARNING;
     obj[1] = tmp.warningBox;
     const intl = require(1236) /* getSystemLocale */.intl;
     if (mobileAccountLinkingDisabled) {
-      BMMo2K = name(3223).BMMo2K;
+      BMMo2K = name(3163).BMMo2K;
       tmp2 = application == tmp2;
       name = undefined;
       if (!tmp2) {
@@ -49,9 +50,9 @@ function WarningBox(application) {
       obj[2] = intl.format(tmp6(1236).t["3T0cpx"], {});
       tmp7 = obj;
     }
-    closure_4(importDefault(10340), tmp7);
+    closure_4(importDefault(8058), tmp7);
     const tmp3 = closure_4;
-    const tmp5 = importDefault(10340);
+    const tmp5 = importDefault(8058);
   }
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -77,7 +78,7 @@ export default function SlayerStorefrontGiftPreview(arg0) {
     obj[0] = tmp.container;
     obj = { sku: null };
     obj[0] = sku;
-    const items = [callback(importDefault(9316), obj), , ];
+    const items = [callback(importDefault(8056), obj), , ];
     obj = { variant: "heading-md/normal", color: "mobile-text-heading-primary", style: null, children: null };
     obj[2] = tmp.text;
     const intl = require(1236) /* getSystemLocale */.intl;
@@ -90,7 +91,7 @@ export default function SlayerStorefrontGiftPreview(arg0) {
     }
     obj1[2] = name;
     obj[3] = intl.formatToPlainString(require(1236) /* getSystemLocale */.t["2tBYtA"], obj1);
-    items[1] = callback(require(4281) /* Text */.Text, obj);
+    items[1] = callback(require(4189) /* Text */.Text, obj);
     const obj2 = { canStartAuthorization: null, hasAccountLinked: null, mobileAccountLinkingDisabled: null, sku: null, application: null };
     obj2[0] = canStartAuthorization;
     obj2[1] = hasAccountLinked;

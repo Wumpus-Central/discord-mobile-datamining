@@ -1,3 +1,4 @@
+// discord_app/modules/notifications/settings/utils/notificationSettingsFlagUtils.tsx
 import MAX_FAVORITES from "MAX_FAVORITES";
 
 let c3;

@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx
 import initialize from "initialize";
 import fetchFingerprint from "fetchFingerprint";
 import createToggle from "createToggle";

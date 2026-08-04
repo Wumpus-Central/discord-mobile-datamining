@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/ConnectionsSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CONNECTIONS,
   getComponent() {
-    return require(14106) /* onPress */.default;
+    return require(14006) /* onPress */.default;
   }
 };
 const route = createToggle.createRoute(obj);

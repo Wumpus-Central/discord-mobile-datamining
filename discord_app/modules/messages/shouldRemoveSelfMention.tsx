@@ -1,3 +1,4 @@
+// discord_app/modules/messages/shouldRemoveSelfMention.tsx
 import { MessageTypesSets } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/messages/shouldRemoveSelfMention.tsx");

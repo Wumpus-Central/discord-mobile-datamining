@@ -1,17 +1,18 @@
-import module_4146 from "module_4146";
+// discord_app/modules/screen/useWindowDimensionsSharedValue.native.tsx
+import module_4054 from "module_4054";
 import useWindowDimensions from "useWindowDimensions";
-import module_4146 from "module_4146";
+import module_4054 from "module_4054";
 import useWindowDimensions from "useWindowDimensions";
 
 let obj = {};
 const merged = Object.assign(useWindowDimensions.getWindowDimensions());
-const mutable = module_4146.makeMutable(obj);
+const mutable = module_4054.makeMutable(obj);
 obj = {};
 const merged1 = Object.assign(useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }));
-const mutable1 = module_4146.makeMutable(obj);
+const mutable1 = module_4054.makeMutable(obj);
 require("subscribeToWindowDimensions")((arg0, arg1) => {
-  importDefault(10245)(mutable, arg0);
-  importDefault(10245)(mutable1, arg1);
+  importDefault(10055)(mutable, arg0);
+  importDefault(10055)(mutable1, arg1);
 });
 function getWindowDimensionsWorklet(arg0) {
   let ignoreKeyboard;

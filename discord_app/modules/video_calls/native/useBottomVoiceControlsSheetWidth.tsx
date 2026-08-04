@@ -1,3 +1,4 @@
+// discord_app/modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx
 import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH";
 
 let c3;

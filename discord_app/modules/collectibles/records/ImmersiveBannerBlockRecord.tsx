@@ -1,7 +1,8 @@
+// discord_app/modules/collectibles/records/ImmersiveBannerBlockRecord.tsx
 let prototype;
 prototype = function ImmersiveBannerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);
-  obj.type = require(6941) /* ShopBlockType */.ShopBlockType.IMMERSIVE_BANNER;
+  obj.type = require(5834) /* ShopBlockType */.ShopBlockType.IMMERSIVE_BANNER;
   ({ title: tmp.title, body: tmp.body, help_center_url: tmp.helpCenterUrl, text_color: tmp.textColor } = end_time);
   let date;
   if (null != end_time.end_time) {
@@ -13,11 +14,11 @@ prototype = function ImmersiveBannerBlockRecord(end_time) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(end_time) {
-  if (typeof prototype !== "function") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.type = require(6941) /* ShopBlockType */.ShopBlockType.IMMERSIVE_BANNER;
+  obj.type = require(5834) /* ShopBlockType */.ShopBlockType.IMMERSIVE_BANNER;
   ({ title: tmp2.title, body: tmp2.body, help_center_url: tmp2.helpCenterUrl, text_color: tmp2.textColor } = end_time);
   let date;
   if (null != end_time.end_time) {

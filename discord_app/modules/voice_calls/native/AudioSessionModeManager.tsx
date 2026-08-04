@@ -1,3 +1,4 @@
+// discord_app/modules/voice_calls/native/AudioSessionModeManager.tsx
 import participantFromServer from "participantFromServer";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";
 import reset from "reset";
@@ -36,7 +37,7 @@ function handleAVAudioSessionMode() {
           VIDEO = AVAudioSessionMode.LISTEN;
           obj2 = tmp9;
         }
-        obj = require(16254) /* handleVoiceChannelSelect */;
+        obj = require(16158) /* handleVoiceChannelSelect */;
       }
     }
     VIDEO = VoiceEngine.AVAudioSessionMode.VIDEO;

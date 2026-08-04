@@ -1,3 +1,4 @@
+// discord_app/modules/safety_common/SafetySettingsUtils.tsx
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/safety_common/SafetySettingsUtils.tsx");

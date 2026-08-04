@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/getEmbeddedActivityKey.tsx
 const result = require("set").fileFinishedImporting("modules/messages/native/getEmbeddedActivityKey.tsx");
 
 export default function getEmbeddedActivityKey(location) {

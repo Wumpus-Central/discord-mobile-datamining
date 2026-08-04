@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/InputModeSetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import { InputModes } from "DesktopSources";
 import createToggle from "createToggle";

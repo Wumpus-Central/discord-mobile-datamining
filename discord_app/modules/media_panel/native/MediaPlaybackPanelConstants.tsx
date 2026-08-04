@@ -1,3 +1,4 @@
+// discord_app/modules/media_panel/native/MediaPlaybackPanelConstants.tsx
 const result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelConstants.tsx");
 
 export const MediaPlaybackPanelModes = { DISMISSED: "dismissed", PIP: "pip" };

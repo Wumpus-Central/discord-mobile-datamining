@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/GuildOnboardingHomeTypes.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import ME from "ME";
 
@@ -276,7 +277,7 @@ export const isSettingsValid = function isSettingsValid(welcomeMessage) {
                     if (null != channel) {
                       let tmp8 = importAll;
                       let tmp9 = dependencyMap;
-                      let obj2 = importAll(3918);
+                      let obj2 = importAll(3826);
                       let tmp10 = constants2;
                       let tmp11 = channel;
                     }
@@ -301,12 +302,12 @@ export const isSettingsValid = function isSettingsValid(welcomeMessage) {
 export const isChannelValidForResourceChannel = function isChannelValidForResourceChannel(type) {
   let canEveryoneRoleResult = type.type === constants.GUILD_TEXT;
   if (canEveryoneRoleResult) {
-    canEveryoneRoleResult = !importAll(3918).canEveryoneRole(constants2.SEND_MESSAGES, type);
-    const obj = importAll(3918);
+    canEveryoneRoleResult = !importAll(3826).canEveryoneRole(constants2.SEND_MESSAGES, type);
+    const obj = importAll(3826);
   }
   if (canEveryoneRoleResult) {
-    canEveryoneRoleResult = importAll(3918).canEveryoneRole(constants2.VIEW_CHANNEL, type);
-    const obj2 = importAll(3918);
+    canEveryoneRoleResult = importAll(3826).canEveryoneRole(constants2.VIEW_CHANNEL, type);
+    const obj2 = importAll(3826);
   }
   return canEveryoneRoleResult;
 };
@@ -321,6 +322,6 @@ export const isChannelValidForNewMemberAction = function isChannelValidForNewMem
       }
     }
   }
-  return importAll(3918).canEveryoneRole(constants2.VIEW_CHANNEL, type);
+  return importAll(3826).canEveryoneRole(constants2.VIEW_CHANNEL, type);
 };
 export const ChannelEditBlockTypes = { DEFAULT: 0, [0]: "DEFAULT", TODO: 1, [1]: "TODO", RESOURCE: 2, [2]: "RESOURCE", RULES: 3, [3]: "RULES", UPDATES: 4, [4]: "UPDATES" };

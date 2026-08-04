@@ -1,3 +1,4 @@
+// discord_app/modules/network/networkAwareRetry.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import fetchFingerprint from "fetchFingerprint";
 
@@ -73,7 +74,7 @@ function _networkAwareRetry() {
               if (asyncGeneratorStep + 1 >= num14) {
                 throw store;
               } else {
-                let obj6 = callback(4170);
+                let obj6 = callback(4078);
                 c6 = 4;
                 c7 = 1;
                 const obj2 = { value: null, done: false };

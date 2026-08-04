@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/getActivityChannelId.tsx
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateVoiceState from "updateVoiceState";

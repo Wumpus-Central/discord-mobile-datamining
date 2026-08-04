@@ -1,3 +1,4 @@
+// discord_app/modules/impersonate/ImpersonateStore.tsx
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildSettingsSections } from "ME";

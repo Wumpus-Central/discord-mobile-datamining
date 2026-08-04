@@ -1,3 +1,4 @@
+// discord_common/js/shared/utils/ColorUtils.tsx
 function int2hslRaw(initialColor) {
   const result = (initialColor >> 16 & 255) / 255;
   let result1 = (initialColor >> 8 & 255) / 255;

@@ -1,3 +1,4 @@
+// discord_app/records/GuildRoleRecord.tsx
 import { TypeTag } from "isValueEqual";
 
 const result = require("apply").fileFinishedImporting("records/GuildRoleRecord.tsx");

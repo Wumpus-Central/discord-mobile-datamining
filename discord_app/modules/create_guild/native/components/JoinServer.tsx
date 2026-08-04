@@ -1,3 +1,4 @@
+// discord_app/modules/create_guild/native/components/JoinServer.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics";

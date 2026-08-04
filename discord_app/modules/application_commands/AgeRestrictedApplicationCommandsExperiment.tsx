@@ -1,3 +1,4 @@
+// discord_app/modules/application_commands/AgeRestrictedApplicationCommandsExperiment.tsx
 const obj = { 1: null };
 obj[1] = { enabled: true };
 const tmp2 = require("getUnitId")({ kind: "user", name: "2026-05-age-restricted-application-commands", defaultConfig: { enabled: false }, variations: obj });

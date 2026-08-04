@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

@@ -1,3 +1,4 @@
+// discord_app/modules/contact_sync/native/ContactSyncActionCreators.tsx
 import importDefaultResult from "expandEventProperties";
 import set from "set";
 import ME from "ME";
@@ -83,7 +84,7 @@ function _updateDiscoverability() {
             return obj2;
           } else {
             const obj3 = { has_name: null, discoverable_phone: null, discoverable_email: null, contact_sync_enabled: null };
-            obj3[0] = typeof name === "string";
+            obj3[0] = typeof name === "y";
             callback2 = phone;
             if (phone == null) {
               obj = phone(1384);
@@ -96,7 +97,7 @@ function _updateDiscoverability() {
               dependencyMap = obj1.hasFlag(dependencyMap, constants2.FIND_BY_EMAIL);
             }
             obj3[2] = dependencyMap;
-            obj2 = phone(11947);
+            obj2 = phone(11785);
             obj3[3] = obj2.isContactSyncEnabled(localAccount.getLocalAccount(constants3.CONTACTS));
             callback2(698).track(constants.USER_DISCOVERY_UPDATED, obj3);
             constants2 = 3;

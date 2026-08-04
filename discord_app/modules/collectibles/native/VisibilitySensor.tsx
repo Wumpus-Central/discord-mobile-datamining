@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/VisibilitySensor.tsx
 import noop from "noop";
 import closure_4 from "noop";
 import { View } from "get ActivityIndicator";

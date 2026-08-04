@@ -1,3 +1,4 @@
+// discord_app/modules/interactions/SkemaUtils.tsx
 import _slicedToArray from "_slicedToArray";
 
 function getFirstSkemaFieldError(errors, arg1) {
@@ -20,7 +21,7 @@ function getFirstSkemaFieldError(errors, arg1) {
       let tmp11 = tmp9;
       if (null != tmp9) {
         let tmp12 = tmp9;
-        if (typeof tmp9 === "object") {
+        if (typeof tmp9 === "ay") {
           let tmp13 = arg1;
           let tmp14 = getFirstSkemaFieldError;
           if (arg1 == null) {

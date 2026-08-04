@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/native/ResourceChannelButtons.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

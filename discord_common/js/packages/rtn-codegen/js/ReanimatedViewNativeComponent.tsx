@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/ReanimatedViewNativeComponent.tsx
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "ReanimatedView", validAttributes: { hasEnteringAnimation: true } };

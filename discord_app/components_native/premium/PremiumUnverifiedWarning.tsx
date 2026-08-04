@@ -1,3 +1,4 @@
+// discord_app/components_native/premium/PremiumUnverifiedWarning.tsx
 import importDefaultResult from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

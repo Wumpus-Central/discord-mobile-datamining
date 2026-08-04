@@ -1,3 +1,4 @@
+// discord_app/modules/action_sheet/native/ActionSheetStore.tsx
 import { Store } from "initialize";
 
 let array = new Array();
@@ -79,7 +80,7 @@ const actionSheetStore = new ActionSheetStore(require("dispatcher"), {
     let impressionName;
     let impressionProperties;
     let key;
-    if (typeof setContent !== "function") {
+    if (typeof setContent !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let str = stackingBehavior.stackingBehavior;
@@ -115,7 +116,7 @@ const actionSheetStore = new ActionSheetStore(require("dispatcher"), {
     let key;
     let obj = { key: QuickSwitcher };
     const merged = Object.assign(arg0);
-    if (typeof setContent !== "function") {
+    if (typeof setContent !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let str = obj.stackingBehavior;

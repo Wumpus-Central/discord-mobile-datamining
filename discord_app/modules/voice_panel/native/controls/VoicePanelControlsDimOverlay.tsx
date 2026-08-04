@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/controls/VoicePanelControlsDimOverlay.tsx
 import importAllResult from "noop";
 import { BACKDROP_OPAQUE_MAX_OPACITY as closure_4 } from "BACKDROP_OPAQUE_MAX_OPACITY";
 import VoicePanelModes from "VoicePanelModes";

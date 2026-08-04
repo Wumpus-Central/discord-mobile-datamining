@@ -1,3 +1,4 @@
+// discord_app/modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx
 import Button from "Button";
 import { View } from "Button";
 import { isAvatarDecorationRecord } from "fromServer";

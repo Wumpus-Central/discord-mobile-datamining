@@ -1,3 +1,4 @@
+// discord_common/js/shared/shared-constants/CountryCodes.tsx
 import set from "set";
 
 let obj = { NON_STANDARD_CODES: null, ALL: null, US_TERRITORIES: null, FRENCH_REGIONS: null, FRANCE_AND_FRENCH_REGION: null, VAT_EU_COUNTRIES: null, VAT_COUNTRIES: null, TAX_DOMESTIC: null, EU_COUNTRIES: null, EEA_COUNTRIES: null, EUROZONE_COUNTRIES: null, EURO_CURRENCY_COUNTRIES: null, DSA_COUNTRIES: null, FIVE_EYES_COUNTRIES: null, WITHOUT_POSTAL_CODES: null, COUNTRY_STATES: null, EMBARGOED_BILLING_ADDRESS_COUNTRIES: null, ALLOWED_BILLING_ADDRESS_COUNTRIES: null, NON_AD_SERVING_COUNTRIES: null, TAX_EXCLUSIVE: null, TAX_ADDRESS_REQUIRE_POSTAL_CODE: null, QUESTS_1P_DATA_OPT_OUT_U18_REGIONS: null, QUESTS_3P_DATA_OPT_OUT_U16_REGIONS: null, QUESTS_3P_DATA_OPT_OUT_U18_REGIONS: null, QUESTS_3P_DATA_OPT_OUT_COUNTRIES: null, STRIPE_CONNECT_SUPPORTED_COUNTRIES: null };
@@ -49,8 +50,8 @@ obj[21] = new Set(["AR", "NY"]);
 const set21 = new Set(["AR", "NY"]);
 obj[22] = new Set(["CA", "MN", "NH", "OR"]);
 const set22 = new Set(["CA", "MN", "NH", "OR"]);
-obj[23] = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "NY", "TX"]);
-const set23 = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "NY", "TX"]);
+obj[23] = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "NY"]);
+const set23 = new Set(["CO", "CT", "DE", "MD", "MT", "NJ", "NY"]);
 obj[24] = new Set(["BR", "KR"]);
 const set24 = new Set(["BR", "KR"]);
 obj[25] = new Set(["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "EL", "ES", "FI", "FR", "GB", "GR", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK", "US"]);

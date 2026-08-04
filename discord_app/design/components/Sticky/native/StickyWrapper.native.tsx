@@ -1,3 +1,4 @@
+// discord_app/design/components/Sticky/native/StickyWrapper.native.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/pip/VoicePanelSecondaryPIPContent.tsx
 import FrameView from "FrameView";
 import participantFromServer from "participantFromServer";
 import map from "map";

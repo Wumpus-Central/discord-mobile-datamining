@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetTaskSelect.tsx
 import "noop";
 import { QuestTaskPlatform } from "QuestsExperimentLocations";
 import jsxProd from "jsxProd";
@@ -12,7 +13,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
   let obj = { hasIcons: true, children: null };
   obj = { arrow: true, icon: null, label: null, onPress: null };
-  obj[1] = callback(onTaskSelect(12092).ScreenIcon, {});
+  obj[1] = callback(onTaskSelect(11940).ScreenIcon, {});
   const intl = onTaskSelect(1236).intl;
   obj[2] = intl.string(onTaskSelect(1236).t["QXc01+"]);
   obj[3] = function onPress() {
@@ -22,9 +23,9 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  const items = [callback(onTaskSelect(5315).TableRow, obj), ];
+  const items = [callback(onTaskSelect(5224).TableRow, obj), ];
   obj = { arrow: true, icon: null, label: null, onPress: null };
-  obj[1] = callback(onTaskSelect(8684).GameControllerIcon, {});
+  obj[1] = callback(onTaskSelect(8944).GameControllerIcon, {});
   const intl2 = onTaskSelect(1236).intl;
   obj[2] = intl2.string(onTaskSelect(1236).t["8lAfuB"]);
   obj[3] = function onPress() {
@@ -34,7 +35,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     }
     return tmpResult;
   };
-  items[1] = callback(onTaskSelect(5315).TableRow, obj);
+  items[1] = callback(onTaskSelect(5224).TableRow, obj);
   obj[1] = items;
-  return callback2(onTaskSelect(5649).TableRowGroup, obj);
+  return callback2(onTaskSelect(5558).TableRowGroup, obj);
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/native/components/StageChannelBackground.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

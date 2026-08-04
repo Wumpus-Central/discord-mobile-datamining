@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfileActivityVoiceChannel.tsx
 import { View } from "dispatcher";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";

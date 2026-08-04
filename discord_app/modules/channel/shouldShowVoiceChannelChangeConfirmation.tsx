@@ -1,3 +1,4 @@
+// discord_app/modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx
 import set from "set";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import fetchFingerprint from "fetchFingerprint";

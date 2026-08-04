@@ -1,3 +1,4 @@
+// discord_app/modules/premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx
 const result = require("set").fileFinishedImporting("modules/premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx");
 
 export default function getNumSubscriptionsPurchasedFromSystemMessage(content) {

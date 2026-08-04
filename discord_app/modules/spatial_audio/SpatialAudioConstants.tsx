@@ -1,3 +1,4 @@
+// discord_app/modules/spatial_audio/SpatialAudioConstants.tsx
 const result = require("set").fileFinishedImporting("modules/spatial_audio/SpatialAudioConstants.tsx");
 
 export const DEFAULT_ROOM_SIZE = 25;

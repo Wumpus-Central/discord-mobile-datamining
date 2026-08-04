@@ -1,3 +1,4 @@
+// discord_app/modules/content_inventory/ContentInventoryStore.tsx
 import { Store } from "initialize";
 
 const require = arg1;
@@ -53,7 +54,7 @@ prototype["getMatchingInboxEntry"] = function getMatchingInboxEntry(feedId) {
         }
         return items1;
       }, []);
-      return require(8822) /* isMatchingListeningActivity */.findMatchingEntry(reduced, activity);
+      return require(8176) /* isMatchingListeningActivity */.findMatchingEntry(reduced, activity);
     }
   }
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/recent_channels/RecentChannelsActionCreators.tsx
 import expandEventProperties from "expandEventProperties";
 import { AnalyticEvents } from "ME";
 

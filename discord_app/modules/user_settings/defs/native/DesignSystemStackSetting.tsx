@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DesignSystemStackSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -10,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_STACK,
   getComponent() {
-    return require(14705) /* StackBlock */.default;
+    return require(14605) /* StackBlock */.default;
   }
 };
 const route = createToggle.createRoute(obj);

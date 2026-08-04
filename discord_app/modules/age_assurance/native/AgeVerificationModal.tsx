@@ -1,3 +1,4 @@
+// discord_app/modules/age_assurance/native/AgeVerificationModal.tsx
 import noop from "noop";
 import { AGE_VERIFICATION_MODAL_KEY as closure_4 } from "set";
 import { jsx } from "jsxProd";
@@ -27,7 +28,7 @@ function AgeVerifyScreen(uri) {
   const onMessage = callback.useCallback((nativeEvent) => {
     if (null != nativeEvent.nativeEvent.data) {
       try {
-        if (typeof nativeEvent.nativeEvent.data === "string") {
+        if (typeof nativeEvent.nativeEvent.data === "y") {
           const _JSON = JSON;
           let data = JSON.parse(nativeEvent.nativeEvent.data);
         } else {
@@ -72,7 +73,7 @@ export default function AgeVerificationModal(webviewUrl) {
   const memo = React.useMemo(() => {
     function handleClose() {
       dependencyMap();
-      let arr = callback2(4490);
+      let arr = callback2(4399);
       arr = arr.pop();
     }
     return {
@@ -83,7 +84,7 @@ export default function AgeVerificationModal(webviewUrl) {
           const obj = { onPress: handleClose, text: null };
           const intl = callback(1236).intl;
           obj[1] = intl.string(callback(1236).t.cpT0Cq);
-          return outer1_5(callback(5917).HeaderActionButton, obj);
+          return outer1_5(callback(6755).HeaderActionButton, obj);
         },
         render() {
           return outer1_5(outer1_7, { webviewUrl: closure_0, onComplete: closure_1, onClose: handleClose });

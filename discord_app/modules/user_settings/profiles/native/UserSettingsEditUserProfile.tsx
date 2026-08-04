@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/profiles/native/UserSettingsEditUserProfile.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { jsx } from "jsxProd";
@@ -19,13 +20,13 @@ export default function UserSettingsEditUserProfile(arg0) {
   let tmp7 = null;
   if (null != stateFromStores) {
     obj = { value: null, children: null };
-    obj[0] = tmp3(importDefault(5630).USER_SETTINGS_USER_PROFILE).analyticsLocations;
+    obj[0] = tmp3(importDefault(5539).USER_SETTINGS_USER_PROFILE).analyticsLocations;
     obj = { currentUser: null };
     obj[0] = stateFromStores;
     const merged = Object.assign(arg0);
-    obj[1] = jsx(importDefault(13804), { currentUser: null });
-    tmp7 = jsx(stateFromStores(5610).AnalyticsLocationProvider, { currentUser: null });
-    const tmpResult = importDefault(13804);
+    obj[1] = jsx(importDefault(13708), { currentUser: null });
+    tmp7 = jsx(stateFromStores(5519).AnalyticsLocationProvider, { currentUser: null });
+    const tmpResult = importDefault(13708);
   }
   return tmp7;
 };

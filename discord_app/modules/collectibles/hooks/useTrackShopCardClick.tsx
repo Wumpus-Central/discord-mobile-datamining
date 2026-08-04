@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useTrackShopCardClick.tsx
 import noop from "noop";
 import { useSelectedVariantIndex } from "useSelectedVariantIndex";
 import { AnalyticEvents } from "ME";

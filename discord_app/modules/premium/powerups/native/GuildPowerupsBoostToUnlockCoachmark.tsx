@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/native/GuildPowerupsBoostToUnlockCoachmark.tsx
 import noop from "noop";
 
 const require = arg1;
@@ -11,6 +12,6 @@ export default function GuildPowerupsBoostToUnlockCoachmark(powerup) {
   const items = [powerup, markAsDismissed];
   ({ guildId, targetRef } = powerup);
   const memo = React.useMemo(() => ({ type: powerup(outer1_2[1]).GuildPowerupNotificationPopoutType.BOOST_TO_UNLOCK, powerup, markAsDismissed }), items);
-  markAsDismissed(15178)(targetRef, guildId, memo);
+  markAsDismissed(15165)(targetRef, guildId, memo);
   return null;
 };

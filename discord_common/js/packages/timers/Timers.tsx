@@ -1,3 +1,4 @@
+// discord_common/js/packages/timers/Timers.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 class Timeout {
@@ -37,7 +38,7 @@ class DelayedCall {
     obj._delay = global;
     obj._handler = arg1;
     tmp2 = Timeout;
-    if (typeof Timeout !== "function") {
+    if (typeof Timeout !== "fileFinishedImporting") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -111,7 +112,7 @@ class BatchInvocationManager {
     if (num == null) {
       num = 32;
     }
-    if (typeof tmp4 !== "function") {
+    if (typeof tmp4 !== "fileFinishedImporting") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -120,7 +121,7 @@ class BatchInvocationManager {
     obj1._delay = num;
     obj1._handler = fn;
     tmp6 = Timeout;
-    if (typeof Timeout !== "function") {
+    if (typeof Timeout !== "fileFinishedImporting") {
       str2 = "Trying to call a non-function";
       throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
     }

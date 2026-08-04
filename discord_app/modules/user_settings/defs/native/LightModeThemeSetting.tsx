@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/LightModeThemeSetting.tsx
 import handleThemeChange from "handleThemeChange";
 import { SystemTheme } from "SystemThemeState";
 import createToggle from "createToggle";
@@ -18,14 +19,14 @@ createToggle = {
     return stateFromStores;
   },
   useTrailing() {
-    return require(14440) /* useSyncedModeThemeName */.useSyncedModeThemeName(SystemTheme.LIGHT);
+    return require(14340) /* useSyncedModeThemeName */.useSyncedModeThemeName(SystemTheme.LIGHT);
   },
   screen: createToggle
 };
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_LIGHT_MODE_THEME_PICKER,
   getComponent() {
-    return require(14441) /* SettingsAppearanceLightModeThemePickerScreen */.default;
+    return require(14341) /* SettingsAppearanceLightModeThemePickerScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

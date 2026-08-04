@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/native/GuildOnboardingNewMemberActions.tsx
 import preload from "preload";
 import { View } from "getAvatarURL";
 import getEmojiToGroupId from "getEmojiToGroupId";

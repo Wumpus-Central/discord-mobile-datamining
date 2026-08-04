@@ -1,3 +1,4 @@
+// discord_app/stores/ConsentStore.tsx
 import { Store } from "initialize";
 
 let c0 = false;

@@ -1,3 +1,4 @@
+// discord_app/modules/chat_input/native/useChatBottomManagerUIStore.tsx
 import keys from "keys";
 
 let chatInputContainerHeight = "chatInputContainerHeight";
@@ -15,10 +16,10 @@ let obj = keys.create(() => {
 let result = require("getBestActiveInput").fileFinishedImporting("modules/chat_input/native/useChatBottomManagerUIStore.tsx");
 
 export default obj;
-export const updateChatInputContainerHeight = function updateChatInputContainerHeight(num) {
-  const _require = num;
+export const updateChatInputContainerHeight = function updateChatInputContainerHeight(arg0, arg1) {
+  const _require = arg0;
   const dependencyMap = arg1;
-  if (typeof num === "number") {
+  if (typeof arg0 !== "__REMOTEDEV__") {
     const Storage = _require(595).Storage;
     let result = Storage.set(chatInputContainerHeight, arg1);
   }

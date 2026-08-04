@@ -1,3 +1,4 @@
+// discord_app/modules/color_picker/native/HSVColorPicker.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -25,15 +26,15 @@ export default function HSVColorPicker(arg0) {
   let value;
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
   ({ saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle } = arg0);
-  let obj = require(4146);
+  let obj = require(4054);
   const sharedValue = obj.useSharedValue(0);
   const tmp = callback();
-  const sharedValue1 = require(4146).useSharedValue(1);
-  const obj2 = require(4146);
+  const sharedValue1 = require(4054).useSharedValue(1);
+  const obj2 = require(4054);
   obj = { style: tmp.hsvColorPicker, children: null };
-  const sharedValue2 = require(4146).useSharedValue(1);
+  const sharedValue2 = require(4054).useSharedValue(1);
   let tmp11 = hue;
-  const obj3 = require(4146);
+  const obj3 = require(4054);
   const tmp6 = closure_5;
   const tmp7 = View;
   const tmp9 = importDefault;
@@ -55,12 +56,12 @@ export default function HSVColorPicker(arg0) {
   obj[6] = saturationValueSelectorStyle;
   obj[7] = onPanUpdate;
   obj[8] = onPanFinalize;
-  const items = [closure_4(importDefault(13815), obj), ];
-  const tmp10 = importDefault(13815);
+  const items = [closure_4(importDefault(13719), obj), ];
+  const tmp10 = importDefault(13719);
   if (hue == null) {
     hue = sharedValue;
   }
-  items[1] = closure_4(tmp9(13816), { hue, style: huePickerStyle, colorBarInnerStyle: hueColorBarInnerStyle, sliderStyle: hueSliderStyle, onPanUpdate, onPanFinalize });
+  items[1] = closure_4(tmp9(13720), { hue, style: huePickerStyle, colorBarInnerStyle: hueColorBarInnerStyle, sliderStyle: hueSliderStyle, onPanUpdate, onPanFinalize });
   obj[1] = items;
   return tmp6(tmp7, obj);
 };

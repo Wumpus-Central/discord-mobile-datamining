@@ -1,3 +1,4 @@
+// discord_app/stores/UserStore.tsx
 import setPremiumTypeActual from "setPremiumTypeActual";
 import createdAt from "createdAt";
 import fetchFingerprint from "fetchFingerprint";

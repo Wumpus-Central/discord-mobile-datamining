@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/EventBannerStore.tsx
 import { GuildScheduledEventStatus } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import { PersistedStore } from "initialize";
 

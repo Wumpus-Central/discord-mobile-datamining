@@ -1,3 +1,4 @@
+// discord_app/modules/message_request/native/MessageRequestList.tsx
 import useSafeAreaInsets from "useSafeAreaInsets";
 import get_ActivityIndicator from "registerAsset";
 import { AnalyticEvents } from "ME";
@@ -228,7 +229,7 @@ export default function MessageRequestList(goToMessageRequestPreview) {
     obj[2] = obj2;
     obj[3] = function renderItem(item) {
       item = item.item;
-      if (typeof item === "string") {
+      if (typeof item === "y") {
         let obj = { style: null, children: null };
         obj[0] = _undefined.sectionContainer;
         obj = { variant: "eyebrow", color: "text-default", children: null };

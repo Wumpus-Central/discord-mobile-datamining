@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

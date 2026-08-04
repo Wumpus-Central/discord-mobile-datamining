@@ -1,5 +1,6 @@
+// discord_app/modules/guild_settings/native/GuildSettingsModalOfficialMessages.tsx
 import resetCache from "resetCache";
-import module_8943 from "module_8943";
+import module_8308 from "module_8308";
 import get_ActivityIndicator from "useNavigation";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -35,7 +36,7 @@ function MessagePreview(theme) {
   if (maybeApplyNoTextColorForLightCustomTheme.desaturateUserColors) {
     num = maybeApplyNoTextColorForLightCustomTheme.saturation;
   }
-  let obj = require(5796) /* useCanManageGuildOfficialMessages */;
+  let obj = require(6050) /* useCanManageGuildOfficialMessages */;
   const accessibleGuildOfficialTextColor = obj.getAccessibleGuildOfficialTextColor(selectedColor, semanticColor, num);
   let obj2 = tmp3(689)(selectedColor);
   const hexResult = accessibleGuildOfficialTextColor.hex();
@@ -46,27 +47,27 @@ function MessagePreview(theme) {
   obj = { style: items1, children: null };
   items1 = [tmp.chatContainerInner, { backgroundColor: obj2.alpha(closure_10).hex() }];
   const obj1 = { source: null };
-  obj1[0] = importDefault(14418);
+  obj1[0] = importDefault(14318);
   const items2 = [callback(require(1297) /* Button */.Avatar, obj1), ];
   obj2 = { style: tmp.chatContent, children: null };
   const obj3 = { style: tmp.chatHeader, children: null };
   const obj4 = { animated: true, style: animatedStyles.textStrong, variant: "text-md/semibold", lineClamp: 1, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj4[4] = intl.string(require(1236) /* getSystemLocale */.t.cqpybK);
-  const items3 = [callback(require(4281) /* Text */.Text, obj4), ];
+  const items3 = [callback(require(4189) /* Text */.Text, obj4), ];
   const items4 = [tmp.chatTimestamp, animatedStyles.textMuted];
-  items3[1] = callback(require(4281) /* Text */.Text, { animated: true, variant: "text-xs/medium", style: items4, children: memo });
+  items3[1] = callback(require(4189) /* Text */.Text, { animated: true, variant: "text-xs/medium", style: items4, children: memo });
   obj3[1] = items3;
   const items5 = [callback2(closure_5, obj3), ];
   const obj5 = { animated: true, variant: "text-md/normal", style: { color: hexResult }, children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj5[3] = intl2.string(require(1236) /* getSystemLocale */.t.Mi9Kbe);
-  items5[1] = callback(require(4281) /* Text */.Text, obj5);
+  items5[1] = callback(require(4189) /* Text */.Text, obj5);
   obj2[1] = items5;
   items2[1] = callback2(closure_5, obj2);
   obj[1] = items2;
   obj[2] = callback2(closure_5, obj);
-  return callback(importDefault(4146).View, obj);
+  return callback(importDefault(4054).View, obj);
 }
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: c9, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: c10 } = MESSAGE_GROUP_SPACING);
@@ -155,7 +156,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
   const effect1 = officialMessageColor.useEffect(() => {
     function handleSaveChanges() {
       let obj = outer1_1(outer1_2[19]);
-      obj = { officialMessageColor: module_8943 };
+      obj = { officialMessageColor: module_8308 };
       obj.saveGuild(handleSaveChanges, obj);
     }
     let fn;

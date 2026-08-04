@@ -1,3 +1,4 @@
+// discord_app/modules/application_assets_v2/ApplicationAssetV2Utils.tsx
 let result = require("set").fileFinishedImporting("modules/application_assets_v2/ApplicationAssetV2Utils.tsx");
 
 export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1, asset_id, width) {

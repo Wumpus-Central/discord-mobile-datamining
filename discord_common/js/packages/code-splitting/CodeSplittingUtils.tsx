@@ -1,3 +1,4 @@
+// discord_common/js/packages/code-splitting/CodeSplittingUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import jsxProd from "jsxProd";
@@ -42,12 +43,12 @@ export const makeLazy = function makeLazy(memo) {
   });
   class Wrapper {
     constructor(arg0) {
-      tmp = f73306;
+      tmp = f73032;
       if (null != renderLoader) {
         tmp2Result = tmp2();
       } else {
         tmp3 = outer1_6;
-        if (typeof outer1_6 !== "function") {
+        if (typeof outer1_6 !== "fileFinishedImporting") {
           str3 = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -63,7 +64,7 @@ export const makeLazy = function makeLazy(memo) {
       obj1 = { fallback: tmp2Result, children: null };
       obj2 = {};
       merged = Object.assign(memo);
-      obj1[1] = tmp(f73306, obj2);
+      obj1[1] = tmp(f73032, obj2);
       return tmp(name.Suspense, obj1);
     }
   }
@@ -121,7 +122,7 @@ export const makeLazyWithPreload = function makeLazyWithPreload(arg0) {
           tmp14Result = renderLoader();
         } else {
           tmp3 = outer1_6;
-          if (typeof outer1_6 !== "function") {
+          if (typeof outer1_6 !== "fileFinishedImporting") {
             str3 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }

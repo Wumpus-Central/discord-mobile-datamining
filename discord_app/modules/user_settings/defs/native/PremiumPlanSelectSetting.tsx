@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/PremiumPlanSelectSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.PREMIUM_PLAN_SELECT,
   getComponent() {
-    return require(14140) /* PremiumPlanSelectSettingScreen */.default;
+    return require(14040) /* PremiumPlanSelectSettingScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,7 +1,8 @@
+// discord_app/modules/activities/utils/isEmbeddedActivity.tsx
 import { ActivityFlags } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/isEmbeddedActivity.tsx");
 
 export default function isEmbeddedActivity(arg0) {
-  return importDefault(5837)(arg0, ActivityFlags.EMBEDDED);
+  return importDefault(6029)(arg0, ActivityFlags.EMBEDDED);
 };

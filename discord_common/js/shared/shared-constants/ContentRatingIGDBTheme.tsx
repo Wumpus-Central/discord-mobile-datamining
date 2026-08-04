@@ -1,3 +1,4 @@
+// discord_common/js/shared/shared-constants/ContentRatingIGDBTheme.tsx
 import set from "set";
 
 const obj = { ALL: null, ADULT_THEMES: null };

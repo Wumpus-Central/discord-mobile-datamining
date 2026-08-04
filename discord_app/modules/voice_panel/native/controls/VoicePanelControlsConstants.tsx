@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/controls/VoicePanelControlsConstants.tsx
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsConstants.tsx");
 
 export const VoicePanelControlsModes = { FLOATING_DEFAULT: "floating-default", DRAWER: "drawer", HIDDEN: "hidden", RESET: "reset" };

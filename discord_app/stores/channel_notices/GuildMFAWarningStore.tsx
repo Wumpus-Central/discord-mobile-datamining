@@ -1,3 +1,4 @@
+// discord_app/stores/channel_notices/GuildMFAWarningStore.tsx
 import comparator from "comparator";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { MFALevels } from "ME";

@@ -1,3 +1,4 @@
+// discord_app/modules/directory_channels/useCanManageGuildDirectoryEntry.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/screens/home/TrackSectionHeader.tsx
 import handleDismissWithDismissed from "handleDismissWithDismissed";
 
 const require = arg1;
@@ -17,6 +18,6 @@ export default function TrackSectionHeader(viewed) {
   obj[2] = obj;
   obj = { disableTrack: !viewed };
   const items = [viewed];
-  importDefault(9267)(obj, obj, items);
+  importDefault(8436)(obj, obj, items);
   return children;
 };

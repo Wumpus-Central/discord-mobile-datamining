@@ -1,3 +1,4 @@
+// discord_app/modules/app_icons/native/AppIcon.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { getIconById } from "items";
@@ -21,8 +22,8 @@ export default function AppIcon(size) {
     num = 56;
   }
   const tmp = createCacheKey();
-  const tmp2 = importDefault(4221)();
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  const tmp2 = importDefault(4129)();
+  let obj = require(4039) /* AccessibilityAnnouncer */;
   let num2 = 1;
   if (obj.isThemeDark(tmp2)) {
     num2 = 0;

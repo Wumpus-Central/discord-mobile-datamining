@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/components/StepsIndicator.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

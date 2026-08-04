@@ -1,3 +1,4 @@
+// discord_app/modules/frames/panel/native/FramePanelPIPView.tsx
 import importAllResult from "noop";
 import map from "map";
 import { FrameLayoutModes } from "FrameLayoutModes";

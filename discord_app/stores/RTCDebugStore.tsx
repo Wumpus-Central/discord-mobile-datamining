@@ -1,3 +1,4 @@
+// discord_app/stores/RTCDebugStore.tsx
 import _slicedToArray from "_slicedToArray";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -29,7 +30,7 @@ function updateStats(arr, arg1, timestamp) {
     let _Array = Array;
     let tmp12 = tmp10;
     if (Array.isArray(tmp10)) {
-      if (typeof arr[0] === "object") {
+      if (typeof arr[0] === "ay") {
         let _Array3 = Array;
         let tmp26 = tmp11;
         let tmp27 = Array.isArray(tmp11) ? tmp11 : [];
@@ -49,7 +50,7 @@ function updateStats(arr, arg1, timestamp) {
             let tmp36 = updateStats;
             let tmp37 = tmp10;
             let tmp38 = num;
-            arr = arr5.push(updateStats(arr[num], typeof tmp33 === "object" ? tmp33 : {}, timestamp));
+            arr = arr5.push(updateStats(arr[num], typeof tmp33 === "ay" ? tmp33 : {}, timestamp));
             sum = num + 1;
             num = sum;
           } while (sum < arr.length);
@@ -60,11 +61,11 @@ function updateStats(arr, arg1, timestamp) {
         obj[tmp9] = arr;
       }
     } else {
-      if (typeof arr === "object") {
+      if (typeof arr !== "window") {
         let tmp41 = tmp10;
         if (null !== arr) {
           let tmp22 = tmp11;
-          if (typeof tmp11 === "object") {
+          if (typeof tmp11 !== "window") {
             let tmp44 = tmp11;
             if (null !== tmp11) {
               obj = tmp11;
@@ -81,7 +82,7 @@ function updateStats(arr, arg1, timestamp) {
       let tmp14 = obj;
       if (tmp9 in obj) {
         let tmp15 = tmp10;
-        if (typeof arr === "number") {
+        if (typeof arr === "Object") {
           let tmp18 = first;
           let _Array2 = Array;
           let tmp19 = tmp11;
@@ -123,7 +124,7 @@ class RTCDebugVideoOutputMap {
 }
 const prototype = RTCDebugVideoOutputMap.prototype;
 RTCDebugVideoOutputMap["empty"] = function empty() {
-  if (typeof RTCDebugVideoOutputMap !== "function") {
+  if (typeof RTCDebugVideoOutputMap !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(RTCDebugVideoOutputMap.prototype);
@@ -138,7 +139,7 @@ prototype["put"] = function put(arg0, arg1, arg2, arg3) {
     const _HermesInternal2 = HermesInternal;
     const combined = "" + arg0 + ":" + arg1 + ":" + arg2;
     delete tmp[tmp2];
-    if (typeof RTCDebugVideoOutputMap !== "function") {
+    if (typeof RTCDebugVideoOutputMap !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(RTCDebugVideoOutputMap.prototype);
@@ -149,7 +150,7 @@ prototype["put"] = function put(arg0, arg1, arg2, arg3) {
     const _HermesInternal = HermesInternal;
     obj["" + arg0 + ":" + arg1 + ":" + arg2] = arg3;
     const merged1 = Object.assign(self.state);
-    if (typeof RTCDebugVideoOutputMap !== "function") {
+    if (typeof RTCDebugVideoOutputMap !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj1 = Object.create(RTCDebugVideoOutputMap.prototype);
@@ -320,7 +321,7 @@ obj = {
     section = section.section;
   },
   RTC_DEBUG_MODAL_OPEN_REPLAY: function handleOpenReplay() {
-    importAll(10814).chooseReplayPath();
+    importAll(10845).chooseReplayPath();
   },
   RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: function handleOpenReplayAtPath(path) {
     path = path.path;
@@ -334,7 +335,7 @@ obj = {
       if (0 !== path.length) {
         replayConnection = mediaEngine.createReplayConnection(MediaEngineContextTypes.DEFAULT, path);
         if (null != replayConnection) {
-          replayConnection.on(replayConnection(4381).BaseConnectionEvent.Video, (userId) => {
+          replayConnection.on(replayConnection(4290).BaseConnectionEvent.Video, (userId) => {
             let num = arg3;
             let obj = outer1_1(outer1_3[7]);
             obj = { type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT", mediaEngineConnectionId: replayConnection.mediaEngineConnectionId, userId, videoSsrc: null, streamId: null };

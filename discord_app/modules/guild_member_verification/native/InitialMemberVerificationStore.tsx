@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/InitialMemberVerificationStore.tsx
 import { Store } from "initialize";
 
 const map = new Map();

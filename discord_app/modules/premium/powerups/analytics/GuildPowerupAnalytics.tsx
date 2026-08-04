@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/analytics/GuildPowerupAnalytics.tsx
 import noop from "noop";
 import { AnalyticEvents } from "ME";
 

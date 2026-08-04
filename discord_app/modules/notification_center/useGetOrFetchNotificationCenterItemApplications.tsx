@@ -1,3 +1,4 @@
+// discord_app/modules/notification_center/useGetOrFetchNotificationCenterItemApplications.tsx
 import noop from "noop";
 import set from "useGetOrFetchApplications";
 
@@ -26,5 +27,5 @@ export const useGetOrFetchNotificationCenterItemsApplications = function useGetO
     });
     return items;
   }, items);
-  return importDefault(5616)(memo);
+  return importDefault(5525)(memo);
 };

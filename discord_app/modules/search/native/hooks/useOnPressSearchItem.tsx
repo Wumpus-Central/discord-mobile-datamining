@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/hooks/useOnPressSearchItem.tsx
 import SearchNavigatorScreens from "SearchNavigatorScreens";
 import ComponentDispatcher from "ComponentDispatcher";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -392,38 +393,80 @@ export const useOnPressGuildVoiceChannel = function useOnPressGuildVoiceChannel(
     let c2 = 0;
     let c3 = 0;
     return (function*(arg0, openMemberVerificationModal) {
-      let guildId = tmp2;
-      let guild_id = lib;
-      if (!obj9.maybeOpenAgeGateForVoiceChannel(lib.id)) {
-        let tmp23Result = tmp23(tmp24[27]);
-        if (!tmp23Result.maybeOpenSpoilerGateForVoiceChannel(guild_id.id)) {
-          tmp23Result = tmp23(tmp24[28]);
-          guildId = guild_id.getGuildId();
-          if (null != guildId) {
-            if (tmp23Result1.shouldShowMembershipVerificationGate(guildId)) {
-              const table = 1;
-              let c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = tmp23(tmp24[24])(tmp24[30], tmp24.paths);
-              return obj1;
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw openMemberVerificationModal;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = openMemberVerificationModal;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === table) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw openMemberVerificationModal;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = openMemberVerificationModal;
+              return obj;
+            } else {
+              let guildId = tmp2;
+              let guild_id = lib;
+              guildId = undefined;
+              if (!obj9.maybeOpenAgeGateForVoiceChannel(lib.id)) {
+                let tmp23Result = tmp23(tmp24[27]);
+                if (!tmp23Result.maybeOpenSpoilerGateForVoiceChannel(guild_id.id)) {
+                  tmp23Result = tmp23(tmp24[28]);
+                  guildId = guild_id.getGuildId();
+                  if (null != guildId) {
+                    if (tmp23Result1.shouldShowMembershipVerificationGate(guildId)) {
+                      table = 1;
+                      c3 = 1;
+                      const obj1 = { value: null, done: false };
+                      obj1[0] = tmp23(tmp24[24])(tmp24[30], tmp24.paths);
+                      return obj1;
+                    }
+                    tmp23Result1 = tmp23(tmp24[29]);
+                  }
+                  if (tmp23Result.getChannelRoleSubscriptionStatus(guild_id.id).needSubscriptionToAccess) {
+                    guild_id = guild_id.guild_id;
+                    const tmp23Result2 = tmp23(tmp24[31]);
+                    const transitionToResult = tmp23(tmp24[31]).transitionTo(outer1_12.CHANNEL(guild_id, outer1_16.ROLE_SUBSCRIPTIONS));
+                  } else {
+                    outer1_17(guild_id);
+                  }
+                }
+              }
+              c3 = 3;
+              return { value: "HermesInternal", done: null };
             }
-            tmp23Result1 = tmp23(tmp24[29]);
-          }
-          if (tmp23Result.getChannelRoleSubscriptionStatus(guild_id.id).needSubscriptionToAccess) {
-            guild_id = guild_id.guild_id;
-            const tmp23Result2 = tmp23(tmp24[31]);
-            const transitionToResult = tmp23(tmp24[31]).transitionTo(outer1_12.CHANNEL(guild_id, outer1_16.ROLE_SUBSCRIPTIONS));
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw openMemberVerificationModal;
           } else {
-            outer1_17(guild_id);
+            if (arg0 !== 2) {
+              const result = openMemberVerificationModal.openMemberVerificationModal(guildId, () => outer1_17(closure_0));
+              c3 = 3;
+            }
+            c3 = 3;
+            obj = { value: null, done: true };
+            obj[0] = openMemberVerificationModal;
+            return obj;
           }
+        } catch (tmp17) {
+          c3 = tmp;
+          throw tmp17;
         }
       }
-      yield "HermesInternal";
-      if (arg0 !== 2) {
-        const result = openMemberVerificationModal.openMemberVerificationModal(guildId, () => outer1_17(closure_0));
-        c3 = 3;
-      }
-      return openMemberVerificationModal;
     })();
   });
   callback = React.useCallback(function() {

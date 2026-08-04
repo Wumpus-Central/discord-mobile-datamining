@@ -1,3 +1,4 @@
+// discord_app/modules/activities/getURLForApplication.tsx
 import reset from "reset";
 import initialize from "initialize";
 

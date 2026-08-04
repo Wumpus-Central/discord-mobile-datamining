@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/native/components/EditGuildEventPreview.tsx
 import usePrimaryActionButtonType from "usePrimaryActionButtonType";
 import { View } from "EditGuildEventScreens";
 import ensureGuildLoaded from "ensureGuildLoaded";

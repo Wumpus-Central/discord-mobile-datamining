@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfileActivityTimebar.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { Fonts } from "ME";
@@ -28,7 +29,7 @@ export default function UserProfileActivityTimebar(arg0) {
   const tmp2 = importDefault(1348)("UserProfileActivityTimebar");
   const tmp3 = createCacheKey();
   let tmp5;
-  ({ elapsed, duration, percentage } = importDefault(12210)({ start, end }));
+  ({ elapsed, duration, percentage } = importDefault(12028)({ start, end }));
   if (!tmp2) {
     let obj = { fontFamily: null };
     obj[0] = Fonts.CODE_NORMAL;
@@ -46,9 +47,9 @@ export default function UserProfileActivityTimebar(arg0) {
     str = "text-subtle";
   }
   obj3[3] = str;
-  let tmp10Result = tmp10(12210);
+  let tmp10Result = tmp10(12028);
   obj3[4] = tmp10Result.formatTime(elapsed);
-  const items2 = [callback(require(4281) /* Text */.Text, obj3), ];
+  const items2 = [callback(require(4189) /* Text */.Text, obj3), ];
   const obj4 = { variant: "text-xs/normal", style: tmp5, tabularNumbers: null, color: null, children: null };
   obj4[2] = tmp2;
   let str2;
@@ -56,9 +57,9 @@ export default function UserProfileActivityTimebar(arg0) {
     str2 = "text-subtle";
   }
   obj4[3] = str2;
-  tmp10Result = tmp10(12210);
+  tmp10Result = tmp10(12028);
   obj4[4] = tmp10Result.formatTime(duration);
-  items2[1] = callback(require(4281) /* Text */.Text, obj4);
+  items2[1] = callback(require(4189) /* Text */.Text, obj4);
   obj2[1] = items2;
   items1[1] = closure_6(View, obj2);
   obj[1] = items1;

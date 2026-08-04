@@ -1,3 +1,4 @@
+// discord_app/utils/TrackedHTTPUtils.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 
 const require = arg1;
@@ -21,7 +22,7 @@ export default {
       del(c2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties === "function") {
+        if (typeof lib.properties !== "disabledUntil") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status };
@@ -32,7 +33,7 @@ export default {
       }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties === "function") {
+        if (typeof lib.properties !== "disabledUntil") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status, error_code: null, error_message: null };
@@ -71,7 +72,7 @@ export default {
       del(c2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties === "function") {
+        if (typeof lib.properties !== "disabledUntil") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status };
@@ -82,7 +83,7 @@ export default {
       }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties === "function") {
+        if (typeof lib.properties !== "disabledUntil") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status, error_code: null, error_message: null };
@@ -121,7 +122,7 @@ export default {
       del(c2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties === "function") {
+        if (typeof lib.properties !== "disabledUntil") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status };
@@ -132,7 +133,7 @@ export default {
       }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties === "function") {
+        if (typeof lib.properties !== "disabledUntil") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status, error_code: null, error_message: null };
@@ -171,7 +172,7 @@ export default {
       del(c2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties === "function") {
+        if (typeof lib.properties !== "disabledUntil") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status };
@@ -182,7 +183,7 @@ export default {
       }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties === "function") {
+        if (typeof lib.properties !== "disabledUntil") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status, error_code: null, error_message: null };
@@ -221,7 +222,7 @@ export default {
       del(c2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties === "function") {
+        if (typeof lib.properties !== "disabledUntil") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status };
@@ -232,7 +233,7 @@ export default {
       }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties === "function") {
+        if (typeof lib.properties !== "disabledUntil") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status, error_code: null, error_message: null };

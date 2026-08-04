@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DesignSystemsShadowsSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -10,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_SHADOWS,
   getComponent() {
-    return require(14685) /* DemoModal */.default;
+    return require(14585) /* DemoModal */.default;
   }
 };
 const route = createToggle.createRoute(obj);

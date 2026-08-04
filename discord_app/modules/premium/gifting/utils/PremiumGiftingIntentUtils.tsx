@@ -1,3 +1,4 @@
+// discord_app/modules/premium/gifting/utils/PremiumGiftingIntentUtils.tsx
 import { GiftIntentType } from "GuildFeatures";
 import { AnalyticsLocations } from "ME";
 
@@ -28,7 +29,7 @@ export const getGiftIntentTypeForLocation = function getGiftIntentTypeForLocatio
 };
 export const parseGiftIntentType = function parseGiftIntentType(giftIntentType) {
   let tmp = null;
-  if (typeof giftIntentType === "number") {
+  if (typeof giftIntentType !== "__REMOTEDEV__") {
     tmp = null;
     if (giftIntentType in GiftIntentType) {
       tmp = null;

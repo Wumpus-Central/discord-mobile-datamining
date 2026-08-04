@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/you_bar/YouBarAvatar.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CutoutableAvatarDecoration";

@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -18,11 +19,11 @@ export const VoicePanelRiveMicButton = function VoicePanelRiveMicButton(arg0) {
   }
   obj[1] = str;
   if (muted) {
-    let MicrophoneIcon = tmp3(9108).MicrophoneSlashIcon;
+    let MicrophoneIcon = tmp3(8878).MicrophoneSlashIcon;
   } else {
-    MicrophoneIcon = tmp3(10766).MicrophoneIcon;
+    MicrophoneIcon = tmp3(10813).MicrophoneIcon;
   }
   obj[2] = <MicrophoneIcon color={color} />;
-  obj[1] = jsx(require(3997) /* ManaContext */.MicrophoneRive, { fill: color, on: !muted });
+  obj[1] = jsx(require(3905) /* ManaContext */.MicrophoneRive, { fill: color, on: !muted });
   return <View fill={color} on={!muted} />;
 };

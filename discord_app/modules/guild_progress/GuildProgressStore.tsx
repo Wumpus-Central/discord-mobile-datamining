@@ -1,3 +1,4 @@
+// discord_app/modules/guild_progress/GuildProgressStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -33,7 +34,7 @@ prototype["initialize"] = function initialize(arg0) {
       let tmp2 = null != tmp;
       if (tmp2) {
         const _Symbol = Symbol;
-        tmp2 = typeof tmp[Symbol.iterator] === "function";
+        tmp2 = typeof tmp[Symbol.iterator] === "fileFinishedImporting";
       }
       if (tmp2) {
         const _Set = Set;

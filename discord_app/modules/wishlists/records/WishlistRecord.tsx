@@ -1,3 +1,4 @@
+// discord_app/modules/wishlists/records/WishlistRecord.tsx
 import "toJS";
 import createExecutable from "createExecutable";
 import fromServer from "fromServer";
@@ -47,7 +48,7 @@ prototype["fromServer"] = function fromServer(arg0) {
     mapped1 = applications.map((arg0) => createExecutable.createFromServer(arg0));
   }
   obj.applications = mapped1;
-  if (typeof prototype !== "function") {
+  if (typeof prototype !== "fileFinishedImporting") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }

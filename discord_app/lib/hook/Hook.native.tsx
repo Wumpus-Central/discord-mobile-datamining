@@ -1,3 +1,4 @@
+// discord_app/lib/hook/Hook.native.tsx
 const result = require("set").fileFinishedImporting("lib/hook/Hook.native.tsx");
 
 export function isHookModuleTooOld() {

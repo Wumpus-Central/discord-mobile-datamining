@@ -1,3 +1,4 @@
+// discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -21,7 +22,7 @@ export const getSafetyAlertsSettingOrDefault = function getSafetyAlertsSettingOr
   if (flag == null) {
     flag = true;
   }
-  let userIsTeen = require(10266) /* trackViewedEvent */.getUserIsTeen();
+  let userIsTeen = require(10169) /* trackViewedEvent */.getUserIsTeen();
   if (!userIsTeen) {
     userIsTeen = true === isStaffResult;
   }

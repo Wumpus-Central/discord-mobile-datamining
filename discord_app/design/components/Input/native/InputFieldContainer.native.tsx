@@ -1,3 +1,4 @@
+// discord_app/design/components/Input/native/InputFieldContainer.native.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -34,12 +35,12 @@ function useInputStyles(size) {
   } else if ("lg" === str) {
     INPUT_FIELD_RADIUS_LG = importDefault(712).modules.mobile.INPUT_FIELD_RADIUS_LG;
   }
-  let token = require(3989) /* map */.useToken(INPUT_FIELD_RADIUS_LG);
-  let tmpResult = tmp(3989);
+  let token = require(3897) /* map */.useToken(INPUT_FIELD_RADIUS_LG);
+  let tmpResult = tmp(3897);
   if (flag) {
     token = tmpResult.useToken(importDefault(712).modules.mobile.INPUT_FIELD_ROUND_RADIUS);
   }
-  tmpResult = tmp(3989);
+  tmpResult = tmp(3897);
   if ("sm" === str) {
     let INPUT_FIELD_TEXT_STYLE_LG = tmp7(712).modules.mobile.INPUT_FIELD_TEXT_STYLE_SM;
   } else if ("md" === str) {
@@ -48,8 +49,8 @@ function useInputStyles(size) {
     INPUT_FIELD_TEXT_STYLE_LG = tmp7(712).modules.mobile.INPUT_FIELD_TEXT_STYLE_LG;
   }
   const token1 = tmpResult.useToken(INPUT_FIELD_TEXT_STYLE_LG);
-  const obj = require(3989) /* map */;
-  return callback3(str, flag2, flag3, token, token1, require(3989) /* map */.useToken(importDefault(712).modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
+  const obj = require(3897) /* map */;
+  return callback3(str, flag2, flag3, token, token1, require(3897) /* map */.useToken(importDefault(712).modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
 }
 ({ Platform, StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -75,7 +76,7 @@ let closure_9 = createCacheKey.createStyles(() => {
   if (arg4 === undefined) {
     str2 = "text-md/medium";
   }
-  let obj = { sm: require(5910) /* InputHeights */.InputHeights.SM, md: require(5910) /* InputHeights */.InputHeights.MD, lg: require(5910) /* InputHeights */.InputHeights.LG };
+  let obj = { sm: require(6744) /* InputHeights */.InputHeights.SM, md: require(6744) /* InputHeights */.InputHeights.MD, lg: require(6744) /* InputHeights */.InputHeights.LG };
   obj = { sm: importDefault(712).space.PX_8, md: importDefault(712).space.PX_12, lg: importDefault(712).space.PX_16 };
   obj = { sm: importDefault(712).space.PX_4, md: importDefault(712).space.PX_8, lg: importDefault(712).space.PX_8 };
   const obj1 = { sm: null, md: null, lg: null };
@@ -109,7 +110,7 @@ let closure_9 = createCacheKey.createStyles(() => {
   obj6[4] = { borderRadius: num };
   obj6[5] = obj1[str];
   const obj9 = {};
-  const merged = Object.assign(tmp(4281).TextStyleSheet[str2]);
+  const merged = Object.assign(tmp(4189).TextStyleSheet[str2]);
   obj9.lineHeight = undefined;
   const colors = tmp3(712).colors;
   obj9.color = flag ? colors.TEXT_MUTED : colors.TEXT_DEFAULT;

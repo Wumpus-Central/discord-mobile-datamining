@@ -1,3 +1,4 @@
+// discord_app/components_native/channel_settings/ChannelSettingsPermissionsList.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "RoleLabel";
 import { View } from "applyOverwrites";

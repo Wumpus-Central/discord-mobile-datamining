@@ -1,3 +1,4 @@
+// discord_app/design/components/Backdrop/native/Backdrop.native.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -45,7 +46,7 @@ export const Backdrop = function Backdrop(animatedProps) {
   }
   backgroundColor2 = undefined;
   let backgroundColor = createCacheKey();
-  let obj = backgroundColor2(3997);
+  let obj = backgroundColor2(3905);
   backgroundColor2 = backgroundColor.backdrop.backgroundColor;
   const items = [backgroundColor2];
   obj = { onPress: onDismiss, "aria-hidden": true };
@@ -92,6 +93,6 @@ export const Backdrop = function Backdrop(animatedProps) {
     obj5.style = items4;
     items3[1] = tmp8(tmp9, obj5);
     obj[3] = items3;
-    return closure_6(importDefault(4146).View, obj);
+    return closure_6(importDefault(4054).View, obj);
   }
 };

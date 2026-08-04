@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/CollectiblesShopGiftPurchaseSection.tsx
 import context from "context";
 import isPremiumGiftingSupported from "isPremiumGiftingSupported";
 import dispatcher from "dispatcher";
@@ -7,7 +8,7 @@ import { useNativeCheckoutStore } from "context";
 import ME from "ME";
 import GuildFeatures from "GuildFeatures";
 import { PaymentGateways } from "sum";
-import jsxProd from "module_4624";
+import jsxProd from "module_4533";
 import createCacheKey from "createCacheKey";
 
 let c10;
@@ -135,7 +136,7 @@ function CollectiblesShopGiftPurchaseSection(disabled) {
     }
   }
   const items1 = [tmp16Result, , ];
-  const obj2 = { variant: "text-xs/normal", style: tmp3.disclaimer, children: null };
+  let obj2 = { variant: "text-xs/normal", style: tmp3.disclaimer, children: null };
   const intl = tmp4(tmp2[28]).intl;
   let obj3 = { buyButtonLabel: null, paidServiceTermURL: null, virtualGoodsURL: null };
   const intl2 = tmp4(tmp2[28]).intl;
@@ -143,32 +144,95 @@ function CollectiblesShopGiftPurchaseSection(disabled) {
   ({ PAID_TERMS: obj7[1], PAID_TERMS_VIRTUAL_GOODS: obj7[2] } = closure_10);
   obj2[2] = intl.format(require(baseAnalyticsFields[28]).t.rsEdd2, obj3);
   items1[1] = callback2(require(baseAnalyticsFields[27]).Text, obj2);
-  const obj4 = { disabled: disabled.isPurchaseDisabled, loading: first === constants.PURCHASING, variant: "active", text: null, onPress: null };
+  let obj4 = { disabled: disabled.isPurchaseDisabled, loading: first === constants.PURCHASING, variant: "active", text: null, onPress: null };
   const intl3 = tmp4(tmp2[28]).intl;
   obj4[3] = intl3.string(require(baseAnalyticsFields[28]).t.ouo4FK);
   obj4[4] = giftingOrigin(function*() {
-    let closure_0 = tmp3;
-    outer1_6(outer1_17.PURCHASING);
-    yield outer1_7();
-    if (!arg1) {
-      outer1_6(outer1_17.FAILED);
-      const obj1 = v0(table[25]);
-      obj1.track(outer1_9.PAYMENT_FLOW_FAILED, table);
-    }
-    table = 1;
-    yield outer1_8();
-    if (2 === tmp7) {
-      table = 0;
-      callback(outer1_17.FAILED);
-      let c3 = 3;
-    } else if (arg0 === 1) {
+    if (c3 === 2) {
       c3 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      table = 0;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === v0) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let closure_0 = tmp3;
+            outer1_6(outer1_17.PURCHASING);
+            v0 = 1;
+            c3 = 1;
+            let obj1 = { value: null, done: false };
+            obj1[0] = outer1_7();
+            return obj1;
+          }
+        } else if (1 === tmp7) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
+          } else if (arg1) {
+            let table = 1;
+            v0 = 3;
+            c3 = 1;
+            const obj3 = { value: null, done: false };
+            obj3[0] = outer1_8();
+            return obj3;
+          } else {
+            outer1_6(outer1_17.FAILED);
+            obj1 = v0(table[25]);
+            obj1.track(outer1_9.PAYMENT_FLOW_FAILED, table);
+            c3 = 3;
+            const obj4 = { value: null, done: true };
+            obj4[0] = undefined;
+            return obj4;
+          }
+        } else {
+          if (2 === tmp7) {
+            table = 0;
+            callback(outer1_17.FAILED);
+            c3 = 3;
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            table = 0;
+          }
+          table = 0;
+          c3 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        }
+      } catch (tmp25) {
+        if (tmp4 === table) {
+          c3 = tmp2;
+          throw tmp25;
+        } else {
+          v0 = tmp;
+        }
+      }
     }
-    table = 0;
-    return arg1;
   });
   items1[2] = callback2(require(baseAnalyticsFields[29]).Button, obj4);
   obj[1] = items1;
@@ -197,8 +261,8 @@ export default function WrappedCollectiblesShopGiftPurchaseSection(arg0) {
   let product;
   ({ product, onGiftModalDismiss } = arg0);
   ({ isPurchaseDisabled, giftOptions, baseAnalyticsFields, giftingOrigin } = arg0);
-  const GiftACOMOrderExperiment = onGiftModalDismiss(7333).GiftACOMOrderExperiment;
-  let obj = onGiftModalDismiss(9354);
+  const GiftACOMOrderExperiment = onGiftModalDismiss(6505).GiftACOMOrderExperiment;
+  let obj = onGiftModalDismiss(8744);
   const androidShopOrdersEnabled = obj.useAndroidShopOrdersEnabled({ location: "WrappedCollectiblesShopGiftPurchaseSection" });
   if (obj2.isIOS()) {
     let GOOGLE = tmp4.APPLE_ADVANCED_COMMERCE;
@@ -211,8 +275,8 @@ export default function WrappedCollectiblesShopGiftPurchaseSection(arg0) {
   if (!tmp6) {
     let result = GOOGLE === tmp5.GOOGLE;
     if (result) {
-      result = tmp(3944).isGooglePlayBillingSupported();
-      const tmpResult = tmp(3944);
+      result = tmp(3852).isGooglePlayBillingSupported();
+      const tmpResult = tmp(3852);
     }
     if (result) {
       result = androidShopOrdersEnabled;
@@ -228,10 +292,10 @@ export default function WrappedCollectiblesShopGiftPurchaseSection(arg0) {
     }
   }, items);
   obj = { skuIDs: [], activeSubscription: null, children: null };
-  obj = { paymentGateway: GOOGLE, orderRequired: tmp6, skuIds: items1, isGift: true, activeSubscription: null, initialExternalGatewayFacet: importDefault(9359)(product), onOrderRetryCancellation: callback, children: null };
+  obj = { paymentGateway: GOOGLE, orderRequired: tmp6, skuIds: items1, isGift: true, activeSubscription: null, initialExternalGatewayFacet: importDefault(8749)(product), onOrderRetryCancellation: callback, children: null };
   items1 = [product.skuId];
-  const tmp8 = importDefault(9359)(product);
+  const tmp8 = importDefault(8749)(product);
   obj[7] = callback2(CollectiblesShopGiftPurchaseSection, { product, isPurchaseDisabled, giftOptions, baseAnalyticsFields, giftingOrigin });
-  obj[2] = callback2(importDefault(7334), obj, product.skuId);
-  return callback2(onGiftModalDismiss(9489).NativePaymentContextProvider, obj);
+  obj[2] = callback2(importDefault(6668), obj, product.skuId);
+  return callback2(onGiftModalDismiss(8773).NativePaymentContextProvider, obj);
 };

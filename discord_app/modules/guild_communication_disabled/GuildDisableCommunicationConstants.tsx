@@ -1,3 +1,4 @@
+// discord_app/modules/guild_communication_disabled/GuildDisableCommunicationConstants.tsx
 import importDefaultResult from "combined";
 
 const require = arg1;

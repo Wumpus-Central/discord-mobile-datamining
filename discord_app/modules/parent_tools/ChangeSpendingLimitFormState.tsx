@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/ChangeSpendingLimitFormState.tsx
 import initialize from "initialize";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -119,14 +120,14 @@ export const useChangeSpendingLimitFormState = function useChangeSpendingLimitFo
               outer1_8(true);
               let c3 = 1;
               if (outer1_5) {
-                const ParentalControlledSpendingLimit2 = outer1_0(13975).ParentalControlledSpendingLimit;
+                const ParentalControlledSpendingLimit2 = outer1_0(13875).ParentalControlledSpendingLimit;
                 dependencyMap = 2;
                 c4 = 1;
                 const obj1 = { value: null, done: false };
                 obj1[0] = ParentalControlledSpendingLimit2.updateControlledSetting(outer1_0, null);
                 return obj1;
               } else if (null != outer1_7) {
-                const ParentalControlledSpendingLimit = outer1_0(13975).ParentalControlledSpendingLimit;
+                const ParentalControlledSpendingLimit = outer1_0(13875).ParentalControlledSpendingLimit;
                 const obj2 = { amount: null, currency: null };
                 obj2[0] = tmp16;
                 obj2[1] = outer1_2;

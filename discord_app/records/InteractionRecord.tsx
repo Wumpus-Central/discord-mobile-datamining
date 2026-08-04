@@ -1,3 +1,4 @@
+// discord_app/records/InteractionRecord.tsx
 import "toJS";
 import createdAt from "createdAt";
 
@@ -21,7 +22,7 @@ prototype["createFromServer"] = function createFromServer(user) {
   const merged = Object.assign(user);
   let str = user.user;
   obj.user = new createdAt(str);
-  if (typeof prototype !== "function") {
+  if (typeof prototype !== "fileFinishedImporting") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }

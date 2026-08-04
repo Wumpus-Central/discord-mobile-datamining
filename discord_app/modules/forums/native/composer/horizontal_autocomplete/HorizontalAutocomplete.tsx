@@ -1,3 +1,4 @@
+// discord_app/modules/forums/native/composer/horizontal_autocomplete/HorizontalAutocomplete.tsx
 import "getRoleIconData";
 import get_ActivityIndicator from "Text";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -23,9 +24,9 @@ function HorizontalAutocompleteOption(arg0) {
   let onPress;
   let sharedValue;
   ({ children, onPress } = arg0);
-  let obj = sharedValue(4146);
+  let obj = sharedValue(4054);
   sharedValue = obj.useSharedValue(0);
-  importDefault(4711)(() => {
+  importDefault(4620)(() => {
     const result = sharedValue.set(sharedValue(outer1_2[14]).withTiming(1));
   });
   const tmp = createCacheKey();
@@ -36,9 +37,9 @@ function HorizontalAutocompleteOption(arg0) {
   fn.__workletHash = 14159604656069;
   fn.__initData = closure_14;
   obj = { onPress, children: null };
-  const animatedStyle = sharedValue(4146).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4054).useAnimatedStyle(fn);
   const items = [tmp.horizontalAutocompleteOption, animatedStyle];
-  obj[1] = callback(importDefault(4146).View, { style: items, children });
+  obj[1] = callback(importDefault(4054).View, { style: items, children });
   return callback(closure_3, obj);
 }
 ({ TouchableOpacity: c3, View: c4, StyleSheet } = get_ActivityIndicator);
@@ -79,15 +80,15 @@ let obj3 = {
     const obj2 = { style: items2, variant: "text-sm/semibold", children: null };
     items2 = [tmp.nickname];
     if (nick == null) {
-      nick = importDefault(4124).getName(user);
-      const obj6 = importDefault(4124);
+      nick = importDefault(4032).getName(user);
+      const obj6 = importDefault(4032);
     }
     obj2[2] = nick;
-    const items3 = [callback(require(4281) /* Text */.Text, obj2), ];
+    const items3 = [callback(require(4189) /* Text */.Text, obj2), ];
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
-    const items4 = ["@", importDefault(4124).getUserTag(user, { decoration: "never" })];
+    const items4 = ["@", importDefault(4032).getUserTag(user, { decoration: "never" })];
     obj3[2] = items4;
-    items3[1] = closure_12(require(4281) /* Text */.Text, obj3);
+    items3[1] = closure_12(require(4189) /* Text */.Text, obj3);
     obj1[1] = items3;
     items1[1] = closure_12(closure_4, obj1);
     obj[1] = items1;
@@ -105,8 +106,8 @@ let obj3 = {
     const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = tmp2(5635).getRoleIconData(stateFromStores, 30);
-      const tmp2Result = tmp2(5635);
+      roleIconData = tmp2(5544).getRoleIconData(stateFromStores, 30);
+      const tmp2Result = tmp2(5544);
     }
     obj = { onPress: onPress.onPress, children: null };
     let tmp9Result = null;
@@ -123,10 +124,10 @@ let obj3 = {
       }
       obj1[1] = tmp13;
       obj1[2] = roleIconData.unicodeEmoji;
-      obj[1] = closure_11(importDefault(5636), obj1);
+      obj[1] = closure_11(importDefault(5545), obj1);
       tmp9Result = tmp9(closure_4, obj);
       const tmp10 = closure_4;
-      const tmp12 = importDefault(5636);
+      const tmp12 = importDefault(5545);
     }
     const items1 = [tmp9Result, ];
     const items2 = [tmp.nickname, ];
@@ -146,18 +147,18 @@ let obj3 = {
     channel(589);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = importDefault(8038);
+      let channelIconWithGuild = importDefault(7908);
     } else {
-      let tmp2Result = tmp2(4745);
+      let tmp2Result = tmp2(4654);
       channelIconWithGuild = tmp2Result.getChannelIconWithGuild(channel, tmp5);
     }
     const tmp = createCacheKey();
-    tmp2Result = tmp2(4475);
+    tmp2Result = tmp2(4384);
     let obj = { onPress: channel.onPress, children: null };
     const items = [callback(channel(1297).Icon, { source: channelIconWithGuild }), ];
     const channelName = tmp2Result.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
     obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
-    items[1] = callback(channel(4281).Text, obj);
+    items[1] = callback(channel(4189).Text, obj);
     obj[1] = items;
     return callback2(HorizontalAutocompleteOption, obj);
   },
@@ -176,7 +177,7 @@ let obj3 = {
       obj = { uri: null };
       obj[0] = url;
       obj[1] = obj;
-      let tmp5 = callback(importDefault(5236), obj);
+      let tmp5 = callback(importDefault(5145), obj);
       let tmp6 = callback;
     } else {
       obj = { style: null, allowFontScaling: false, children: null };
@@ -191,7 +192,7 @@ let obj3 = {
     const items2 = [tmp6(closure_4, { children: tmp5 }), ];
     const obj2 = { style: tmp.emojiName, variant: "text-sm/semibold", children: null };
     obj2[2] = ":" + name + ":";
-    items2[1] = tmp6(require(4281) /* Text */.Text, obj2);
+    items2[1] = tmp6(require(4189) /* Text */.Text, obj2);
     obj1[1] = items2;
     return callback2(HorizontalAutocompleteOption, obj1);
   }

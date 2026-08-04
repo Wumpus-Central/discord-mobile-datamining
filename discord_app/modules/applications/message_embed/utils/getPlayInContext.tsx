@@ -1,3 +1,4 @@
+// discord_app/modules/applications/message_embed/utils/getPlayInContext.tsx
 import participantFromServer from "participantFromServer";
 import handleConnectionOpen from "handleConnectionOpen";
 
@@ -59,12 +60,12 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
     return { currentChannelId: null, instanceId: null, instanceLocation: null, isCurrentlyInInstance: false, canLaunchInChannel: false };
   } else {
     if (null != channelId) {
-      let obj = _require(10892);
+      let obj = _require(11151);
       let NO_CHANNEL = obj.getEmbeddedActivityLaunchabilityForChannel(channelId);
       let tmp3 = _require;
     } else {
       tmp3 = _require;
-      NO_CHANNEL = _require(10892).EmbeddedActivityLaunchability.NO_CHANNEL;
+      NO_CHANNEL = _require(11151).EmbeddedActivityLaunchability.NO_CHANNEL;
     }
     embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channelId);
     const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);
@@ -94,7 +95,7 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       tmp11 = compositeInstanceId1 === compositeInstanceId;
     }
     obj[3] = tmp11;
-    obj[4] = NO_CHANNEL === tmp3(10892).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    obj[4] = NO_CHANNEL === tmp3(11151).EmbeddedActivityLaunchability.CAN_LAUNCH;
     return obj;
   }
 };

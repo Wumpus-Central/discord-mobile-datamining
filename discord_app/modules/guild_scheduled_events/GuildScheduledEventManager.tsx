@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/GuildScheduledEventManager.tsx
 import closure_2 from "set";
 import handleConnectionOpen from "handleConnectionOpen";
 import scheduledEventSort from "scheduledEventSort";
@@ -138,46 +139,93 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
   let closure_1 = id;
   const callback = items1;
   return callback(function*() {
-    const found = outer1_2.filter((arg0) => {
-      let tmp3 = null == outer1_5["" + c0 + "-" + c1 + "-" + arg0];
-      if (!tmp3) {
-        const _Date = Date;
-        const _HermesInternal = HermesInternal;
-        const timestamp = Date.now();
-        tmp3 = timestamp - outer1_5["" + tmp + "-" + tmp2 + "-" + arg0] > outer1_8;
-      }
-      return tmp3;
-    });
-    const _Date2 = Date;
-    const _HermesInternal2 = HermesInternal;
-    let timestamp = Date.now();
-    let _HermesInternal = HermesInternal;
-    let _Date = Date;
-    let combined = "" + tmp25 + "-" + tmp26;
-    outer1_5[combined] = Date.now();
-    const item = found.forEach((arg0) => {
-      const combined = "" + c0 + "-" + c1 + "-" + arg0;
-      const timestamp = Date.now();
-      outer1_5[combined] = timestamp;
-      return timestamp;
-    });
-    let c3 = 1;
-    const obj1 = v0(table[3]);
-    yield obj1.fetchGuildEventUserCounts(v0, table, found);
-    if (1 === tmp6) {
-      c3 = 0;
-    } else if (arg0 === 1) {
+    if (v0 === 2) {
       v0 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      c3 = 0;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp5 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        v0 = 2;
+        if (0 === table) {
+          if (arg0 === 1) {
+            v0 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            v0 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            const found = outer1_2.filter((arg0) => {
+              let tmp3 = null == outer1_5["" + c0 + "-" + c1 + "-" + arg0];
+              if (!tmp3) {
+                const _Date = Date;
+                const _HermesInternal = HermesInternal;
+                const timestamp = Date.now();
+                tmp3 = timestamp - outer1_5["" + tmp + "-" + tmp2 + "-" + arg0] > outer1_8;
+              }
+              return tmp3;
+            });
+            const _Date2 = Date;
+            const _HermesInternal2 = HermesInternal;
+            let timestamp = Date.now();
+            let _HermesInternal = HermesInternal;
+            let _Date = Date;
+            let combined = "" + tmp25 + "-" + tmp26;
+            outer1_5[combined] = Date.now();
+            const item = found.forEach((arg0) => {
+              const combined = "" + c0 + "-" + c1 + "-" + arg0;
+              const timestamp = Date.now();
+              outer1_5[combined] = timestamp;
+              return timestamp;
+            });
+            let c3 = 1;
+            let obj1 = v0(table[3]);
+            table = 2;
+            v0 = 1;
+            obj1 = { value: null, done: false };
+            obj1[0] = obj1.fetchGuildEventUserCounts(v0, table, found);
+            return obj1;
+          }
+        } else {
+          if (1 === tmp6) {
+            c3 = 0;
+          } else if (arg0 === 1) {
+            v0 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            c3 = 0;
+          }
+          c3 = 0;
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        }
+        v0 = 3;
+      } catch (tmp13) {
+        let closure_2 = tmp13;
+        if (tmp3 === c3) {
+          v0 = tmp2;
+          throw tmp13;
+        } else {
+          table = tmp;
+        }
+      }
     }
-    c3 = 0;
-    return arg1;
   })();
 };
 prototype["getGuildEventUsers"] = function getGuildEventUsers(id, arg1, guild_id) {
-  return importDefault(8862).fetchUsersForGuildEvent(id, arg1, guild_id);
+  return importDefault(8212).fetchUsersForGuildEvent(id, arg1, guild_id);
 };
 prototype["getGuildEventsForCurrentUser"] = function getGuildEventsForCurrentUser(arg0) {
   return getGuildEventsForCurrentUser(arg0);

@@ -1,3 +1,4 @@
+// discord_app/modules/emojis/utils/getEmojiText.tsx
 const result = require("set").fileFinishedImporting("modules/emojis/utils/getEmojiText.tsx");
 
 export default function getEmojiText(id) {

@@ -1,3 +1,4 @@
+// discord_app/utils/URLUtils.tsx
 import { Routes } from "ME";
 import set from "Url";
 
@@ -153,11 +154,11 @@ export default {
     }
     return tmp;
   },
-  isDiscordDirectAssetUrl(shareURI) {
-    if (null == shareURI) {
+  isDiscordDirectAssetUrl(url) {
+    if (null == url) {
       return false;
     } else {
-      const toURLSafeResult = importDefault(1467).toURLSafe(shareURI);
+      const toURLSafeResult = importDefault(1467).toURLSafe(url);
       let tmp9 = null != toURLSafeResult;
       if (tmp9) {
         const result = require(1351) /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();

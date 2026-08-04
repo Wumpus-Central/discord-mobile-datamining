@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/FrecencyUserSettingsManager.tsx
 import handleStickersStoreUpdate from "handleStickersStoreUpdate";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import closure_5 from "handleUserSettingsProtoStoreChange";

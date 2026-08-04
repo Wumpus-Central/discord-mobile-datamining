@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/shouldShowEndStageModal.tsx
 import fetchFingerprint from "fetchFingerprint";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 import buildStageChannelUserRoles from "buildStageChannelUserRoles";

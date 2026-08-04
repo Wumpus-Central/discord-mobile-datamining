@@ -1,3 +1,4 @@
+// discord_app/modules/age_gate/native/components/NsfwGateGuildSidebar.tsx
 import set from "set";
 import { View } from "getSystemLocale";
 import trackCommunicationDisabled from "trackCommunicationDisabled";

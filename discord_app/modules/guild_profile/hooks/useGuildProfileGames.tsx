@@ -1,10 +1,11 @@
+// discord_app/modules/guild_profile/hooks/useGuildProfileGames.tsx
 import noop from "noop";
 import applicationId from "applicationId";
-import handleLoadMessages from "handleLoadMessages";
+import map from "map";
 import fetchFingerprint from "fetchFingerprint";
 
 const require = arg1;
-let result = require("handleLoadMessages").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileGames.tsx");
+let result = require("map").fileFinishedImporting("modules/guild_profile/hooks/useGuildProfileGames.tsx");
 
 export default function useGuildProfileGames(games) {
   let stateFromStoresArray;
@@ -37,7 +38,7 @@ export default function useGuildProfileGames(games) {
         return map;
       }
     }, items2);
-    const items3 = [handleLoadMessages];
+    const items3 = [map];
     stateFromStoresArray = games(stateFromStoresArray[4]).useStateFromStoresArray(items3, () => {
       const gameApplicationIds = games.gameApplicationIds;
       const mapped = gameApplicationIds.map((gameId) => {
@@ -96,7 +97,7 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
   games = profile.games;
   const items = [fetchFingerprint];
   const stateFromStores = games(589).useStateFromStores(items, () => authenticated.isAuthenticated());
-  games(7002);
+  games(5910);
   if (null != games) {
     if (!stateFromStores) {
       let items1 = [];
@@ -121,7 +122,7 @@ export const useAllGuildProfileGames = function useAllGuildProfileGames(profile)
         return map;
       }
     }, items2);
-    const items3 = [handleLoadMessages];
+    const items3 = [map];
     return games(589).useStateFromStoresArray(items3, () => {
       const gameApplicationIds = games.gameApplicationIds;
       const mapped = gameApplicationIds.map((gameId) => {

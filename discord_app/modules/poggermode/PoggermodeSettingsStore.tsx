@@ -1,3 +1,4 @@
+// discord_app/modules/poggermode/PoggermodeSettingsStore.tsx
 import ConfettiLocation from "ConfettiLocation";
 import apply from "apply";
 import { DeviceSettingsStore } from "initialize";

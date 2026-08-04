@@ -1,3 +1,4 @@
+// discord_app/actions/native/GPlayActionCreators.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importDefaultResult from "updateProduct";
 import setGPlayAnalytics from "setGPlayAnalytics";
@@ -22,13 +23,13 @@ let c1 = importDefault;
 function getPlanIdForProduct(arg0, arg1) {
   if (arg1) {
     try {
-      return callback(5770).getPlanIdForGift(arg0);
+      return callback(5679).getPlanIdForGift(arg0);
     } catch (err) {
       return null;
     }
   } else {
     let basePlanId;
-    const tmp4 = callback(5770).AppStorePremiumProductIdsToPremiumBundledItems[arg0];
+    const tmp4 = callback(5679).AppStorePremiumProductIdsToPremiumBundledItems[arg0];
     if (tmp4 != null) {
       basePlanId = tmp4.basePlanId;
     }
@@ -578,48 +579,95 @@ function _subscribe() {
     let c11 = 0;
     let c9 = 0;
     return (function*(arg0, arg1, arg2, arg3, arg4) {
-      let _objectWithoutProperties = tmp3;
-      const callback2 = dependencyMap;
-      dependencyMap = closure_4;
-      let c9 = 1;
-      yield outer1_21.subscribe(callback, callback2, dependencyMap, message, closure_4);
-      if (1 === tmp7) {
-        c9 = 0;
-        message = closure_8;
-        const obj1 = callback(3946);
-        const obj2 = { productId: null, oldProductId: null };
-        obj2[0] = callback;
-        let c5 = callback2;
-        if (callback2 == null) {
-          c5 = "";
-        }
-        const obj3 = { tags: null };
-        obj2[1] = c5;
-        obj3[0] = obj2;
-        const result = obj1.captureBillingException(message, obj3);
-        let obj4 = callback2(4623);
-        obj4 = { title: null, body: null };
-        const intl = callback(1236).intl;
-        obj4[0] = intl.string(callback(1236).t["U+H+kd"]);
-        const intl2 = callback(1236).intl;
-        obj4[1] = intl2.string(callback(1236).t.LFFx5G);
-        obj4.show(obj4);
-        const obj5 = { location: "subscribe", product_id: null, offer_id: null, error: null };
-        obj5[1] = callback;
-        obj5[2] = dependencyMap;
-        obj5[3] = message.message;
-        callback2(698).track(constants.GPLAY_PURCHASE_FAILED, obj5);
-        let c11 = 3;
-        const obj7 = callback2(698);
-        const tmp14 = message;
-      } else if (arg0 === 1) {
+      if (c11 === 2) {
         c11 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c9 = 0;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c11 = 2;
+          if (0 === c10) {
+            if (arg0 === 1) {
+              c11 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c11 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let _objectWithoutProperties = tmp3;
+              let closure_6 = tmp7;
+              const callback2 = dependencyMap;
+              dependencyMap = closure_4;
+              let c9 = 1;
+              c10 = 2;
+              c11 = 1;
+              let obj1 = { value: null, done: false };
+              obj1[0] = outer1_21.subscribe(callback, callback2, dependencyMap, message, closure_4);
+              return obj1;
+            }
+          } else {
+            if (1 === tmp7) {
+              c9 = 0;
+              message = closure_8;
+              obj1 = callback(3854);
+              const obj2 = { productId: null, oldProductId: null };
+              obj2[0] = callback;
+              let c5 = callback2;
+              if (callback2 == null) {
+                c5 = "";
+              }
+              const obj3 = { tags: null };
+              obj2[1] = c5;
+              obj3[0] = obj2;
+              const result = obj1.captureBillingException(message, obj3);
+              let obj4 = callback2(4532);
+              obj4 = { title: null, body: null };
+              const intl = callback(1236).intl;
+              obj4[0] = intl.string(callback(1236).t["U+H+kd"]);
+              const intl2 = callback(1236).intl;
+              obj4[1] = intl2.string(callback(1236).t.LFFx5G);
+              obj4.show(obj4);
+              const obj5 = { location: "subscribe", product_id: null, offer_id: null, error: null };
+              obj5[1] = callback;
+              obj5[2] = dependencyMap;
+              obj5[3] = message.message;
+              callback2(698).track(constants.GPLAY_PURCHASE_FAILED, obj5);
+              c11 = 3;
+              const obj7 = callback2(698);
+              const tmp14 = message;
+            } else if (arg0 === 1) {
+              c11 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              c9 = 0;
+            }
+            c9 = 0;
+            c11 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp48) {
+          closure_8 = tmp48;
+          if (tmp4 === c9) {
+            c11 = tmp2;
+            throw tmp48;
+          } else {
+            c10 = tmp;
+          }
+        }
       }
-      c9 = 0;
-      return arg1;
     })();
   });
   const _subscribe = tmp;
@@ -731,7 +779,7 @@ function _verifyPurchase() {
           } else if (1 === tmp8) {
             c6 = 0;
             c6 = closure_5;
-            obj3 = lib(3946);
+            obj3 = lib(3854);
             const obj5 = { tags: null };
             let obj6 = { productId: null };
             obj6[0] = lib.productId;
@@ -876,7 +924,7 @@ closure_0 = importDefaultResult(() => {
                   obj3[0] = callback3(SubscriptionProductIds);
                   return obj3;
                 }
-                obj14 = SubscriptionProductIds(3944);
+                obj14 = SubscriptionProductIds(3852);
               }
             }
             c6 = 3;
@@ -1168,7 +1216,7 @@ closure_0 = importDefaultResult(() => {
                   })(IAPProductIds);
                   return obj3;
                 }
-                obj14 = IAPProductIds(3944);
+                obj14 = IAPProductIds(3852);
               }
             }
             c6 = 3;
@@ -1432,50 +1480,99 @@ closure_0 = importDefaultResult((arg0, arg1) => {
   let c8 = 0;
   let c6 = 0;
   return (function*(arg0, arg1) {
-    let closure_4 = tmp3;
-    let c3 = tmp5;
-    const callback2 = outer1_10.getState().analyticsByProductId[callback];
-    let c6 = 1;
-    yield outer1_21.purchase(callback, callback2);
-    if (1 === tmp8) {
-      c6 = 0;
-      closure_4 = closure_5;
-      const obj1 = callback(outer1_2[16]);
-      const obj2 = { tags: null };
-      const obj3 = { productId: null };
-      obj3[0] = callback;
-      obj2[0] = obj3;
-      const result = obj1.captureBillingException(closure_4, obj2);
-      let obj4 = callback2(outer1_2[17]);
-      obj4 = { title: null, body: null };
-      const intl = callback(outer1_2[18]).intl;
-      obj4[0] = intl.string(callback(outer1_2[18]).t["U+H+kd"]);
-      const intl2 = callback(outer1_2[18]).intl;
-      obj4[1] = intl2.string(callback(outer1_2[18]).t.LFFx5G);
-      obj4.show(obj4);
-      let closure_2 = callback2;
-      if (callback2 == null) {
-        closure_2 = {};
-      }
-      outer1_2 = closure_2;
-      const succeededOnlyFields = outer1_2.succeededOnlyFields;
-      outer1_3 = v0(outer1_2, outer1_3);
-      const obj5 = {};
-      const merged = Object.assign(outer1_3);
-      obj5.location = "purchase";
-      obj5.product_id = callback;
-      obj5.error = outer1_4.message;
-      callback2(outer1_2[19]).track(outer1_13.GPLAY_PURCHASE_FAILED, obj5);
-      let c8 = 3;
-      const obj7 = callback2(outer1_2[19]);
-    } else if (arg0 === 1) {
+    if (c8 === 2) {
       c8 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      c6 = 0;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c8 = 2;
+        if (0 === v0) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let closure_4 = tmp3;
+            let c3 = tmp5;
+            let callback2;
+            let closure_2;
+            c3 = undefined;
+            callback2 = outer1_10.getState().analyticsByProductId[callback];
+            let c6 = 1;
+            v0 = 2;
+            c8 = 1;
+            let obj1 = { value: null, done: false };
+            obj1[0] = outer1_21.purchase(callback, callback2);
+            return obj1;
+          }
+        } else {
+          if (1 === tmp8) {
+            c6 = 0;
+            closure_4 = closure_5;
+            obj1 = callback(outer1_2[16]);
+            const obj2 = { tags: null };
+            const obj3 = { productId: null };
+            obj3[0] = callback;
+            obj2[0] = obj3;
+            const result = obj1.captureBillingException(closure_4, obj2);
+            let obj4 = callback2(outer1_2[17]);
+            obj4 = { title: null, body: null };
+            const intl = callback(outer1_2[18]).intl;
+            obj4[0] = intl.string(callback(outer1_2[18]).t["U+H+kd"]);
+            const intl2 = callback(outer1_2[18]).intl;
+            obj4[1] = intl2.string(callback(outer1_2[18]).t.LFFx5G);
+            obj4.show(obj4);
+            closure_2 = callback2;
+            if (callback2 == null) {
+              closure_2 = {};
+            }
+            outer1_2 = closure_2;
+            const succeededOnlyFields = outer1_2.succeededOnlyFields;
+            outer1_3 = v0(outer1_2, outer1_3);
+            const obj5 = {};
+            const merged = Object.assign(outer1_3);
+            obj5.location = "purchase";
+            obj5.product_id = callback;
+            obj5.error = outer1_4.message;
+            callback2(outer1_2[19]).track(outer1_13.GPLAY_PURCHASE_FAILED, obj5);
+            c8 = 3;
+            const obj7 = callback2(outer1_2[19]);
+          } else if (arg0 === 1) {
+            c8 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            c6 = 0;
+          }
+          c6 = 0;
+          c8 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        }
+      } catch (tmp46) {
+        closure_5 = tmp46;
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp46;
+        } else {
+          v0 = tmp;
+        }
+      }
     }
-    c6 = 0;
-    return arg1;
   })();
 });
 closure_0 = importDefaultResult(function*() {
@@ -1898,7 +1995,7 @@ export const subscribe = function subscribe() {
   }
   return applyArgumentsResult;
 };
-export const verifyPurchase = function verifyPurchase() {
+export const verifyPurchase = function verifyPurchase(closure_0, closure_2) {
   const self = this;
   const apply = _verifyPurchase.apply;
   if (typeof apply === "unknown") {
@@ -1908,8 +2005,8 @@ export const verifyPurchase = function verifyPurchase() {
   }
   return applyArgumentsResult;
 };
-export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytics(productId) {
-  const tmp = state.getState().analyticsByProductId[productId.productId];
+export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytics(closure_0) {
+  const tmp = state.getState().analyticsByProductId[closure_0.productId];
   if (null != tmp) {
     const succeededOnlyFields = tmp.succeededOnlyFields;
     const tmp4 = callback2(tmp, closure_4);
@@ -1919,7 +2016,7 @@ export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytic
     const merged = Object.assign(tmp4);
     const merged1 = Object.assign(succeededOnlyFields);
     _true(698).track(constants.PAYMENT_FLOW_SUCCEEDED, obj);
-    callback3(productId.productId);
+    callback3(closure_0.productId);
     const obj2 = _true(698);
   }
 };
@@ -1934,7 +2031,7 @@ export const updatePendingDowngrade = function updatePendingDowngrade(closure_0,
         if (null != tmp) {
           if (null != tmp2.billingPeriod) {
             if (null != tmp.billingPeriod) {
-              let obj = callback(3946);
+              let obj = callback(3854);
             }
           }
         }

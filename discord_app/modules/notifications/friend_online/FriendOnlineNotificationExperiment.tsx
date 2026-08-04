@@ -1,3 +1,4 @@
+// discord_app/modules/notifications/friend_online/FriendOnlineNotificationExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { showSettingsToggle: true } };

@@ -1,3 +1,4 @@
+// discord_app/modules/premium/premium_marketing/native/showMarketingMomentRewardScreen.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 

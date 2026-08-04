@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/renderer/RowGeneratorStyleSheet.tsx
 import { processColor } from "get ActivityIndicator";
 
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/RowGeneratorStyleSheet.tsx");

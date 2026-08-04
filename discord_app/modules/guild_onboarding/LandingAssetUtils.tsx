@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding/LandingAssetUtils.tsx
 const result = require("set").fileFinishedImporting("modules/guild_onboarding/LandingAssetUtils.tsx");
 
 export default function replaceFlagIconAndFlagColor(layers, p) {

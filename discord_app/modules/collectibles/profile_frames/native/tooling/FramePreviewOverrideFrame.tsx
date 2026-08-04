@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideFrame.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO";

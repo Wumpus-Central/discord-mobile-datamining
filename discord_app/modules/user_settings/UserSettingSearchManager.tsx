@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/UserSettingSearchManager.tsx
 let result = require("set").fileFinishedImporting("modules/user_settings/UserSettingSearchManager.tsx");
 class SettingSearchManager {
   constructor(arg0) {

@@ -1,3 +1,4 @@
+// discord_app/modules/skus/utils/transformSKUTenantMetadata.tsx
 function transformProfileEffectKeyFrameFromServer(src) {
   let randomizedSources;
   const obj = { src: src.src, loop: src.loop, height: src.height, width: src.width, duration: null, start: null, loopDelay: null, position: null, zIndex: null, randomizedSources: null };

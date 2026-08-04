@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AccountSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.ACCOUNT,
   getComponent() {
-    return require(13869) /* PasswordlessUpsell */.default;
+    return require(13769) /* PasswordlessUpsell */.default;
   }
 };
 const route = createToggle.createRoute(obj);

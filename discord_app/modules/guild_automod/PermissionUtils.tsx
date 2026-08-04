@@ -1,3 +1,4 @@
+// discord_app/modules/guild_automod/PermissionUtils.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import ME from "ME";

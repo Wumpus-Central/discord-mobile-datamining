@@ -1,3 +1,4 @@
+// discord_app/modules/hub/HubJoinManager.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 import "initialize";

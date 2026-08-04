@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/EncryptionSetting.tsx
 import items from "items";
 import createToggle from "createToggle";
 
@@ -8,7 +9,7 @@ createToggle = {
     return intl.string(require(1236) /* getSystemLocale */.t.x8U2eC);
   },
   useDescription: function useSecureFramesEncryptionDescription() {
-    let obj = require(14763) /* useSecureFramesVerifiedUserIds */;
+    let obj = require(14663) /* useSecureFramesVerifiedUserIds */;
     const secureFramesVerifiedUserIds = obj.useSecureFramesVerifiedUserIds();
     const intl = require(1236) /* getSystemLocale */.intl;
     obj = { count: secureFramesVerifiedUserIds.length };
@@ -24,7 +25,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.SECURE_FRAMES,
   getComponent() {
-    return require(14764) /* UserListItem */.default;
+    return require(14664) /* UserListItem */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

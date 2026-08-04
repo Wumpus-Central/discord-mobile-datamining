@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DarkModeThemeSetting.tsx
 import handleThemeChange from "handleThemeChange";
 import { SystemTheme } from "SystemThemeState";
 import createToggle from "createToggle";
@@ -18,14 +19,14 @@ createToggle = {
     return stateFromStores;
   },
   useTrailing() {
-    return require(14440) /* useSyncedModeThemeName */.useSyncedModeThemeName(SystemTheme.DARK);
+    return require(14340) /* useSyncedModeThemeName */.useSyncedModeThemeName(SystemTheme.DARK);
   },
   screen: createToggle
 };
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
   getComponent() {
-    return require(14443) /* SettingsAppearanceDarkModeThemePickerScreen */.default;
+    return require(14343) /* SettingsAppearanceDarkModeThemePickerScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

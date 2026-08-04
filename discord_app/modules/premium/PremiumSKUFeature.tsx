@@ -1,3 +1,4 @@
+// discord_app/modules/premium/PremiumSKUFeature.tsx
 const result = require("set").fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
 
 export default function PremiumSKUFeature(name, getFeatureValue, description) {

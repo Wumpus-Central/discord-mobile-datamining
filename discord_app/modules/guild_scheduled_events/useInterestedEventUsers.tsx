@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/useInterestedEventUsers.tsx
 import { useMemo } from "noop";
 import scheduledEventSort from "scheduledEventSort";
 import { GuildScheduledEventUserResponses as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH";

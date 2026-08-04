@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx
 import handleThemeChange from "handleThemeChange";
 import createToggle from "createToggle";
 
@@ -23,7 +24,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
   getComponent() {
-    return require(14402) /* ThemeTypes */.default;
+    return require(14302) /* ThemeTypes */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

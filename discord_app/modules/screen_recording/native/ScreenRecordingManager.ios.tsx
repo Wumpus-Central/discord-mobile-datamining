@@ -1,3 +1,4 @@
+// discord_app/modules/screen_recording/native/ScreenRecordingManager.ios.tsx
 const DCDScreenRecordingManager = require("get ActivityIndicator").NativeModules.DCDScreenRecordingManager;
 const result = require("set").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingManager.ios.tsx");
 

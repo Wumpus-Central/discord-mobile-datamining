@@ -1,3 +1,4 @@
+// discord_app/modules/bidi/IsolateString.tsx
 const result = require("set").fileFinishedImporting("modules/bidi/IsolateString.tsx");
 
 export const FSI = "\u2068";

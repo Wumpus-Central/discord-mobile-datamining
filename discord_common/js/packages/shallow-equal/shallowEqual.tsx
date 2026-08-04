@@ -1,3 +1,4 @@
+// discord_common/js/packages/shallow-equal/shallowEqual.tsx
 let closure_0 = {};
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/shallow-equal/shallowEqual.tsx");
 

@@ -1,8 +1,9 @@
+// discord_app/design/components/Card/native/CardTokens.native.tsx
 const result = require("set").fileFinishedImporting("design/components/Card/native/CardTokens.native.tsx");
 
 export const createCardShadowToken = function createCardShadowToken(arg0) {
   const _require = arg0;
-  return _require(4285).experimental_createToken((gradient) => {
+  return _require(4193).experimental_createToken((gradient) => {
     if (null == gradient.gradient) {
       if ("none" !== closure_0) {
         if ("border" === tmp11) {

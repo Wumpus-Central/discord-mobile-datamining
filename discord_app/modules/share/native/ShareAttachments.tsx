@@ -1,9 +1,10 @@
+// discord_app/modules/share/native/ShareAttachments.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4146";
+import importDefaultResult from "module_4054";
 
 let c5;
 let closure_6;

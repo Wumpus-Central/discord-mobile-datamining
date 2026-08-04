@@ -1,3 +1,4 @@
+// discord_app/modules/public_guilds/native/components/EnableCommunityModal/SafetyCheckScreen.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import get_ActivityIndicator from "TableSwitchRow";

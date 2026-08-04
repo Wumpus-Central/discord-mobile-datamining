@@ -1,3 +1,4 @@
+// discord_app/modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -39,10 +40,10 @@ const memoResult = require("noop").memo(function ChatInputGuardRequiredLobbyAppl
         fn = () => outer1_1(outer1_2[7]).openURLExternally(connectionEntrypointUrl);
       }
       obj[4] = fn;
-      return jsx(importDefault(11721), { name: null });
+      return jsx(importDefault(11553), { name: null });
     }
   }
-  return jsx(importDefault(11721), { type: "simple-action", message: "" });
+  return jsx(importDefault(11553), { type: "simple-action", message: "" });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardRequiredLobbyApplicationAuthorization.tsx");
 

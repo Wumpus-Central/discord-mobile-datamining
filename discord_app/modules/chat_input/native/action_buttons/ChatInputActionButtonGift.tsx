@@ -1,3 +1,4 @@
+// discord_app/modules/chat_input/native/action_buttons/ChatInputActionButtonGift.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "LinearGradient";
 import { View } from "GiftIcon";

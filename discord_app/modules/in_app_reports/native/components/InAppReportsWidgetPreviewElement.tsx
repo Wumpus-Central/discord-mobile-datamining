@@ -1,3 +1,4 @@
+// discord_app/modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -16,7 +17,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/
 export default function WidgetPreview(widget) {
   widget = widget.widget;
   const tmp = createCacheKey();
-  let obj = require(6991) /* items */;
+  let obj = require(5901) /* items */;
   let tmp5 = null;
   if (obj.isGameWidget(widget)) {
     tmp5 = null;
@@ -27,13 +28,13 @@ export default function WidgetPreview(widget) {
       obj[0] = tmp.title;
       const intl = tmp4(1236).intl;
       obj[3] = intl.string(tmp4(1236).t.SpsnDY).toUpperCase();
-      const items = [callback(tmp4(4281).Text, obj), ];
+      const items = [callback(tmp4(4189).Text, obj), ];
       const obj1 = { userId: null, widget: null, disableInteraction: true, cardStyle: null };
       obj1[0] = widget.userId;
       obj1[1] = widget;
       const items1 = [tmp3.card, tmp.card];
       obj1[3] = items1;
-      items[1] = callback(tmp4(12252).WidgetSection, obj1);
+      items[1] = callback(tmp4(12070).WidgetSection, obj1);
       obj[1] = items;
       tmp5 = callback2(View, obj);
       const str = intl.string(tmp4(1236).t.SpsnDY);

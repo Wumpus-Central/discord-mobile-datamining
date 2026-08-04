@@ -1,3 +1,4 @@
+// discord_app/modules/application_widget/hooks/useApplicationWidgetConfigs.tsx
 import noop from "noop";
 import updateApplicationConfigs from "updateApplicationConfigs";
 import { FetchState } from "updateApplicationConfigs";

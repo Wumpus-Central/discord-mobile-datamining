@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_frames/hooks/useProfileFrame.tsx
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import map from "map";
 import { isProfileFrameRecord } from "fromServer";

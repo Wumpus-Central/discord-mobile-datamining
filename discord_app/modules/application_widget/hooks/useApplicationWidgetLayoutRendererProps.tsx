@@ -1,3 +1,4 @@
+// discord_app/modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import handleFeaturedOrDeveloperFetchSuccess from "handleFeaturedOrDeveloperFetchSuccess";

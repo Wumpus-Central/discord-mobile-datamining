@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -9,5 +10,5 @@ export default function ScrollHandlingActionSheet(children) {
   const obj = { startExpanded: true };
   const merged1 = Object.assign(merged);
   obj.children = children.children;
-  return jsx(require(5338) /* Background */.BottomSheet, { startExpanded: true });
+  return jsx(require(5247) /* Background */.BottomSheet, { startExpanded: true });
 };

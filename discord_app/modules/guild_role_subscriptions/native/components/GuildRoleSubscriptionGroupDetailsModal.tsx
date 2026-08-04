@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "set";
@@ -88,6 +89,6 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   obj.description = first;
   obj.setDescription = tmp4[1];
   obj.children = callback2(Content, obj);
-  return callback2(importDefault(16693), obj);
+  return callback2(importDefault(16596), obj);
 };
 export { Content };

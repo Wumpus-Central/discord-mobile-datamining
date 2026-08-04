@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx
 import computeAlertSettings from "computeAlertSettings";
 import createToggle from "createToggle";
 
@@ -21,7 +22,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.COMMUNITY_ALERTS,
   getComponent() {
-    return require(14599) /* UserSettingsCommunityNotifications */.default;
+    return require(14499) /* UserSettingsCommunityNotifications */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -1,3 +1,4 @@
+// discord_app/utils/HelpdeskUtils.tsx
 import _getSystemLocale from "_getSystemLocale";
 import ME from "ME";
 
@@ -23,7 +24,7 @@ export default {
     return "https://creator-support.discord.com" + "/hc/" + _getSystemLocale.locale.toLowerCase() + "/articles/" + MEDIA_CHANNEL;
   },
   getTwitterURL() {
-    return importDefault(3897)(LocalizedLinks.TWITTER);
+    return importDefault(3805)(LocalizedLinks.TWITTER);
   },
   getCommunityURL() {
     return combined + "/hc/" + _getSystemLocale.locale.toLowerCase();

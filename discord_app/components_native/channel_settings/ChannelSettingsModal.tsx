@@ -1,3 +1,4 @@
+// discord_app/components_native/channel_settings/ChannelSettingsModal.tsx
 import "EditLinkedLobby";
 import { View } from "WebhookItem";
 import ME from "ME";

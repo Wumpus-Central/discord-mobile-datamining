@@ -1,3 +1,4 @@
+// discord_app/stores/NowPlayingStore.tsx
 import recomputeAffinities from "recomputeAffinities";
 import sortActivity from "sortActivity";
 import mergeGuildAvatar from "mergeGuildAvatar";

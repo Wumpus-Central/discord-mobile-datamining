@@ -1,3 +1,4 @@
+// discord_app/modules/intl/overrides/getDeviceSpecificString.tsx
 const result = require("set").fileFinishedImporting("modules/intl/overrides/getDeviceSpecificString.tsx");
 
 export const getDeviceSpecificString = function getDeviceSpecificString(arg0, _2Yp7dF) {

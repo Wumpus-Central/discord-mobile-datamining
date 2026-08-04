@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx
 import batchUpdates from "batchUpdates";
 import { ActivityIndicator } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -62,7 +63,7 @@ function _onFindYourFriendsDeletionPress() {
             const aPIError = new callback(585).APIError(callback2);
             callback = aPIError.getAnyErrorMessage();
             if (null != callback) {
-              let obj2 = callback2(3986);
+              let obj2 = callback2(3894);
               obj2 = { key: "FIND_YOUR_FRIENDS_DELETION", content: null };
               obj2[1] = callback;
               obj2.open(obj2);
@@ -115,7 +116,7 @@ identity = {
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: function useIsFindYourFriendsDeletionDisabled() {
-    return callback2((isLoading) => isLoading.isLoading, require(3898) /* isIterable */.shallow);
+    return callback2((isLoading) => isLoading.isLoading, require(3806) /* isIterable */.shallow);
   },
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -130,7 +131,7 @@ identity = {
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate,
   useTrailing: function useIsFindYourFriendsDeletionTrailing() {
     let tmp = null;
-    if (callback2((isLoading) => isLoading.isLoading, require(3898) /* isIterable */.shallow)) {
+    if (callback2((isLoading) => isLoading.isLoading, require(3806) /* isIterable */.shallow)) {
       tmp = <ActivityIndicator />;
     }
     return tmp;

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/GuildSettingsEmojiStore.tsx
 import prototype from "prototype";
 import handleConnectionOpen from "handleConnectionOpen";
 import importDefaultResult from "priv";

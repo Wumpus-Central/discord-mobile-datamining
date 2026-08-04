@@ -1,3 +1,4 @@
+// discord_app/components_native/premium/GiftCodeRow.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import { AnalyticsSections } from "ME";
 import jsxProd from "jsxProd";
@@ -53,7 +54,7 @@ class GiftCodeRow extends PureComponent {
 }
 const prototype = GiftCodeRow.prototype;
 prototype["handleRevoke"] = function handleRevoke(code) {
-  importDefault(10327).revokeGiftCode(code);
+  importDefault(8038).revokeGiftCode(code);
 };
 prototype["render"] = function render() {
   let self = this;

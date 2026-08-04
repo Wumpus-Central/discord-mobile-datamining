@@ -1,3 +1,4 @@
+// discord_app/modules/share/useFetchShareEmbed.tsx
 import batchUpdates from "batchUpdates";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -57,7 +58,7 @@ export default function useFetchShareEmbed(arg0) {
                   c4 = 3;
                   c5 = 1;
                   let obj1 = { value: null, done: false };
-                  obj1[0] = outer2_0(11187).unfurlEmbedUrl(items);
+                  obj1[0] = outer2_0(11080).unfurlEmbedUrl(items);
                   return obj1;
                 } else {
                   c5 = 3;

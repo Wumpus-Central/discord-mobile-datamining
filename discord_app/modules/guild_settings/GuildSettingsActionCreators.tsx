@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/GuildSettingsActionCreators.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import initialize from "initialize";
 import closure_5 from "initialize";
@@ -262,7 +263,7 @@ let obj = {
     const merged = Object.assign(tmp);
     let toServerGuildProfileResult = profile;
     if (null != profile) {
-      let obj3 = _require(8951);
+      let obj3 = _require(8316);
       toServerGuildProfileResult = obj3.toServerGuildProfile(profile);
     }
     obj.profile = toServerGuildProfileResult;
@@ -272,7 +273,7 @@ let obj = {
     obj(709).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = store.getPendingOriginalMd5s();
     const obj5 = obj(709);
-    const obj6 = obj(8083);
+    const obj6 = obj(7953);
     const headersForMd5 = obj6.buildHeadersForMd5({ [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_INVITE_SPLASH]: pendingOriginalMd5s.splash, [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_DISCOVERY_SPLASH]: pendingOriginalMd5s.discoverySplash });
     const HTTP = _require(530).HTTP;
     const obj2 = { url: closure_10.GUILD(id), query: obj3, body: obj, headers: headersForMd5, oldFormErrors: true, rejectWithError: null };
@@ -329,7 +330,7 @@ let obj = {
     if (closure_0 === undefined) {
       tmp2 = null;
     }
-    let obj = importDefault(5094);
+    let obj = importDefault(5003);
     obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { owner_id: id2, code: tmp2 };
     obj[3] = { event: require(503) /* encodeProperties */.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
@@ -342,7 +343,7 @@ let obj = {
     if (arg1 === undefined) {
       flag = false;
     }
-    let obj = importDefault(5094);
+    let obj = importDefault(5003);
     obj = { url: closure_10.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { event: require(503) /* encodeProperties */.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: obj1 };
     obj[2] = obj;
@@ -412,7 +413,7 @@ let obj = {
               c3 = 1;
               obj3 = { value: null, done: false };
               obj3[0] = HTTP.del(obj1).then(() => {
-                const AccessibilityAnnouncer = _undefined(4100).AccessibilityAnnouncer;
+                const AccessibilityAnnouncer = _undefined(4008).AccessibilityAnnouncer;
                 const intl = _undefined(1236).intl;
                 AccessibilityAnnouncer.announce(intl.string(_undefined(1236).t["7iPyVW"]));
               });
@@ -483,9 +484,9 @@ let obj = {
               let c0 = 0;
               if (outer1_4.isFullServerPreview(outer1_0)) {
                 if (outer1_1 === outer1_6.getId()) {
-                  const result = outer1_0(5216).updateImpersonatedRoles(tmp29, dependencyMap);
+                  const result = outer1_0(5125).updateImpersonatedRoles(tmp29, dependencyMap);
                   c3 = 3;
-                  const obj6 = outer1_0(5216);
+                  const obj6 = outer1_0(5125);
                 }
               }
               const HTTP = outer1_0(530).HTTP;

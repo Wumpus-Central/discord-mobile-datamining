@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/tabs/notifications/useNotificationsTabBadge.tsx
 import noop from "noop";
 import _validate from "_validate";
 

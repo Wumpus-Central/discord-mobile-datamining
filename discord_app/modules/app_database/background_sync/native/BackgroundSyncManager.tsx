@@ -1,3 +1,4 @@
+// discord_app/modules/app_database/background_sync/native/BackgroundSyncManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import "initialize";
@@ -30,13 +31,13 @@ prototype["handleMessageCreate"] = function handleMessageCreate(message) {
       tmp2 = "run bg sync" === message.content;
     }
     if (tmp2) {
-      require(16258) /* _backgroundSync */.backgroundSync({ force: true });
-      const obj2 = require(16258) /* _backgroundSync */;
+      require(16162) /* _backgroundSync */.backgroundSync({ force: true });
+      const obj2 = require(16162) /* _backgroundSync */;
     }
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  require(16258) /* _backgroundSync */.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
+  require(16162) /* _backgroundSync */.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
 };
 const backgroundSyncManager = new BackgroundSyncManager();
 const result = require("initialize").fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");

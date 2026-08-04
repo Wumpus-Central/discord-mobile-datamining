@@ -1,3 +1,4 @@
+// discord_app/modules/home_drawer/native/HomeDrawerFolderRow.tsx
 import noop from "noop";
 import { View } from "set";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
@@ -230,7 +231,7 @@ export default function HomeDrawerFolderExpandedChildren(folderId) {
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(4142).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(4050).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

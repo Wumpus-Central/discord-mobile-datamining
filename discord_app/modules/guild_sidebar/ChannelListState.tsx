@@ -1,3 +1,4 @@
+// discord_app/modules/guild_sidebar/ChannelListState.tsx
 import participantFromServer from "participantFromServer";
 import addApplication from "addApplication";
 import handleConnectionReset from "handleConnectionReset";
@@ -45,7 +46,7 @@ function computeSubtitle(type) {
     } else {
       if (arg2) {
         if (arg1) {
-          let obj1 = require(4468) /* hasStream */;
+          let obj1 = require(4377) /* hasStream */;
           if (obj1.hasStream(tmp19)) {
             return { type: "go-live" };
           }
@@ -386,7 +387,7 @@ class ChannelListImpl {
     }
     obj.recentsSectionNumber = RECENTS;
     obj.favoritesSectionNumber = FAVORITES;
-    if (typeof ChannelListCategoryNoParent !== "function") {
+    if (typeof ChannelListCategoryNoParent !== "fileFinishedImporting") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -414,7 +415,7 @@ class ChannelListImpl {
     } else {
       tmp24 = new.target;
       tmp23 = ChannelListRecentsCategory;
-      if (typeof ChannelListRecentsCategory !== "function") {
+      if (typeof ChannelListRecentsCategory !== "fileFinishedImporting") {
         str2 = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
@@ -449,7 +450,7 @@ class ChannelListImpl {
     obj.recentsCategory = tmp31;
     throwTypeErrorResult2 = new.target;
     tmp35 = ChannelListVoiceChannelsCategory;
-    if (typeof ChannelListVoiceChannelsCategory !== "function") {
+    if (typeof ChannelListVoiceChannelsCategory !== "fileFinishedImporting") {
       str3 = "Trying to call a non-function";
       throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
     }
@@ -473,7 +474,7 @@ class ChannelListImpl {
     obj.voiceChannelsCategory = tmp37;
     tmp39 = ChannelListGuildActionSection;
     tmp40 = items3.length > 0;
-    if (typeof ChannelListGuildActionSection !== "function") {
+    if (typeof ChannelListGuildActionSection !== "fileFinishedImporting") {
       str4 = "Trying to call a non-function";
       throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
     }
@@ -487,7 +488,7 @@ class ChannelListImpl {
     }
     obj.guildActionSection = obj3;
     tmp44 = ChannelListChannelNoticeSection;
-    if (typeof ChannelListChannelNoticeSection !== "function") {
+    if (typeof ChannelListChannelNoticeSection !== "fileFinishedImporting") {
       str5 = "Trying to call a non-function";
       throwTypeErrorResult4 = HermesBuiltin.throwTypeError();
     }

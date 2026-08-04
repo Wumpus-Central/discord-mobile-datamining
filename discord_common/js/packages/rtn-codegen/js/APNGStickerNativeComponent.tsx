@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/APNGStickerNativeComponent.tsx
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "APNGStickerView", validAttributes: { url: true } };

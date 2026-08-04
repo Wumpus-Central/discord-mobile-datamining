@@ -1,3 +1,4 @@
+// discord_app/modules/soundboard/canChannelUseSoundboard.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleConnectionOpen from "handleConnectionOpen";

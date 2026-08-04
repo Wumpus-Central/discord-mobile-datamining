@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/ShowDevToolsSetting.tsx
 import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
@@ -9,7 +10,7 @@ const pressable = createToggle.createPressable({
   onPress: require("navigateToDevTools").navigateToDevTools,
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
-    const items = [...Object.values(require(13751) /* DevToolsScreens */.DevToolsScreens), ...Object.values(require(13751) /* DevToolsScreens */.PerformanceTestingScreens)];
+    const items = [...Object.values(require(13655) /* DevToolsScreens */.DevToolsScreens), ...Object.values(require(13655) /* DevToolsScreens */.PerformanceTestingScreens)];
     return items.map((headerTitle) => headerTitle.headerTitle);
   },
   withArrow: true
@@ -23,7 +24,7 @@ const obj = {
   onPress: require("navigateToDevTools").navigateToDevTools,
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate,
   useSearchTerms: function getAdditionalSearchTerms() {
-    const items = [...Object.values(require(13751) /* DevToolsScreens */.DevToolsScreens), ...Object.values(require(13751) /* DevToolsScreens */.PerformanceTestingScreens)];
+    const items = [...Object.values(require(13655) /* DevToolsScreens */.DevToolsScreens), ...Object.values(require(13655) /* DevToolsScreens */.PerformanceTestingScreens)];
     return items.map((headerTitle) => headerTitle.headerTitle);
   },
   withArrow: true

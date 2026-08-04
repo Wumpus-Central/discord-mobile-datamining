@@ -1,3 +1,4 @@
+// discord_app/modules/slayer_storefront/SocialLayerStorefrontActionCreators.tsx
 import dispatcher from "dispatcher";
 import getPromotionIdOverride from "getPromotionIdOverride";
 import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";
@@ -831,55 +832,104 @@ function _fetchSocialLayerStorefrontAnnouncement() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0, body) {
-      let obj = tmp3;
-      let c4 = 1;
-      const obj1 = { type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START", guildId: null };
-      obj1[1] = callback;
-      outer1_1(outer1_2[5]).dispatch(obj1);
-      const HTTP = callback(outer1_2[8]).HTTP;
-      let obj2 = { url: null, rejectWithError: true };
-      obj2[0] = c6.SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(callback);
-      yield HTTP.get(obj2);
-      if (1 === tmp7) {
-        c4 = 0;
-        let obj5 = body(obj[5]);
-        const obj4 = { type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE", guildId: null };
-        obj4[1] = callback;
-        obj5.dispatch(obj4);
+      if (c6 === 2) {
         c6 = 3;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw body;
-      } else if (arg0 !== 2) {
-        body = body.body;
-        if ("guild-discord-announcement" === body.type) {
-          obj5 = { type: "guild-discord-announcement", id: null, applicationId: null, applicationName: null, assetFullyQualifiedURL: null, videoAssetFullyQualifiedURL: null, popoverTitle: null, popoverBody: null, popoverCta: null };
-          obj5[1] = body.id;
-          obj5[2] = body.application_id;
-          obj5[3] = body.application_name;
-          obj5[4] = body.asset_fully_qualified_url;
-          obj5[5] = body.video_asset_fully_qualified_url;
-          obj5[6] = body.popover_title;
-          obj5[7] = body.popover_body;
-          obj5[8] = body.popover_cta;
-          obj = obj5;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
         } else {
-          obj = { type: "guild-application-announcement", id: null, applicationId: null, applicationName: null, assetId: null, backgroundImageAssetId: null };
-          obj[1] = body.id;
-          obj[2] = body.application_id;
-          obj[3] = body.application_name;
-          obj[4] = body.asset_id;
-          obj[5] = body.background_image_asset_id;
+          return { value: "HermesInternal", done: null };
         }
-        obj2 = body(obj[5]);
-        const obj6 = { type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS", guildId: null, announcement: null };
-        obj6[1] = callback;
-        obj6[2] = obj;
-        obj2.dispatch(obj6);
-        c4 = 0;
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              obj = tmp3;
+              body = tmp7;
+              body = undefined;
+              obj = undefined;
+              let c4 = 1;
+              const obj1 = { type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START", guildId: null };
+              obj1[1] = callback;
+              outer1_1(outer1_2[5]).dispatch(obj1);
+              const HTTP = callback(outer1_2[8]).HTTP;
+              let obj2 = { url: null, rejectWithError: true };
+              obj2[0] = c6.SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(callback);
+              c5 = 2;
+              c6 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.get(obj2);
+              return obj3;
+            }
+          } else {
+            if (1 === tmp7) {
+              c4 = 0;
+              let obj5 = body(obj[5]);
+              const obj4 = { type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE", guildId: null };
+              obj4[1] = callback;
+              obj5.dispatch(obj4);
+              c6 = 3;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw body;
+            } else if (arg0 !== 2) {
+              body = body.body;
+              if ("guild-discord-announcement" === body.type) {
+                obj5 = { type: "guild-discord-announcement", id: null, applicationId: null, applicationName: null, assetFullyQualifiedURL: null, videoAssetFullyQualifiedURL: null, popoverTitle: null, popoverBody: null, popoverCta: null };
+                obj5[1] = body.id;
+                obj5[2] = body.application_id;
+                obj5[3] = body.application_name;
+                obj5[4] = body.asset_fully_qualified_url;
+                obj5[5] = body.video_asset_fully_qualified_url;
+                obj5[6] = body.popover_title;
+                obj5[7] = body.popover_body;
+                obj5[8] = body.popover_cta;
+                obj = obj5;
+              } else {
+                obj = { type: "guild-application-announcement", id: null, applicationId: null, applicationName: null, assetId: null, backgroundImageAssetId: null };
+                obj[1] = body.id;
+                obj[2] = body.application_id;
+                obj[3] = body.application_name;
+                obj[4] = body.asset_id;
+                obj[5] = body.background_image_asset_id;
+              }
+              obj2 = body(obj[5]);
+              const obj6 = { type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS", guildId: null, announcement: null };
+              obj6[1] = callback;
+              obj6[2] = obj;
+              obj2.dispatch(obj6);
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            const obj7 = { value: null, done: true };
+            obj7[0] = body;
+            return obj7;
+          }
+        } catch (tmp37) {
+          let dispatcher = tmp37;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp37;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      c4 = 0;
-      return body;
     })();
   });
   const _fetchSocialLayerStorefrontAnnouncement = tmp;
@@ -1048,85 +1098,134 @@ function _fetchSocialLayerStorefrontConfig() {
 function _fetchSocialLayerStorefrontLaunchAnnouncement() {
   const self = this;
   const tmp = callback(function*() {
-    let closure_9 = tmp3;
-    let c11 = 1;
-    const HTTP = outer1_0(outer1_2[8]).HTTP;
-    const obj1 = { url: null, rejectWithError: true };
-    obj1[0] = outer1_6.SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT;
-    yield HTTP.get(obj1);
-    if (1 === tmp7) {
-      c11 = 0;
-      obj3 = obj3(709);
-      obj3.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_FAILURE" });
-      let c13 = 3;
-    } else if (arg0 === 1) {
+    if (c13 === 2) {
       c13 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      const body = arg1.body;
-      let closure_0 = body;
-      if (body == null) {
-        closure_0 = null;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
       }
-      obj3 = null;
-      if (null != closure_0) {
-        obj3 = { applicationId: null, lightThemeLogoUrl: null, darkThemeLogoUrl: null, backgroundUrl: null, titles: null, subtitle: null, features: null, buttonText: null };
-        obj3[0] = closure_0.application_id;
-        const light_theme_logo_url = closure_0.light_theme_logo_url;
-        obj3 = light_theme_logo_url;
-        if (light_theme_logo_url == null) {
-          obj3 = null;
+    } else {
+      try {
+        c13 = 2;
+        if (0 === c12) {
+          if (arg0 === 1) {
+            c13 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c13 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let closure_9 = tmp3;
+            let closure_8 = tmp7;
+            let closure_0;
+            let obj3;
+            let c11 = 1;
+            const HTTP = outer1_0(outer1_2[8]).HTTP;
+            const obj1 = { url: null, rejectWithError: true };
+            obj1[0] = outer1_6.SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT;
+            c12 = 2;
+            c13 = 1;
+            const obj2 = { value: null, done: false };
+            obj2[0] = HTTP.get(obj1);
+            return obj2;
+          }
+        } else {
+          if (1 === tmp7) {
+            c11 = 0;
+            obj3 = obj3(709);
+            obj3.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_FAILURE" });
+            c13 = 3;
+          } else if (arg0 === 1) {
+            c13 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            const body = arg1.body;
+            closure_0 = body;
+            if (body == null) {
+              closure_0 = null;
+            }
+            obj3 = null;
+            if (null != closure_0) {
+              obj3 = { applicationId: null, lightThemeLogoUrl: null, darkThemeLogoUrl: null, backgroundUrl: null, titles: null, subtitle: null, features: null, buttonText: null };
+              obj3[0] = closure_0.application_id;
+              const light_theme_logo_url = closure_0.light_theme_logo_url;
+              obj3 = light_theme_logo_url;
+              if (light_theme_logo_url == null) {
+                obj3 = null;
+              }
+              obj3[1] = obj3;
+              const dark_theme_logo_url = closure_0.dark_theme_logo_url;
+              let dependencyMap = dark_theme_logo_url;
+              if (dark_theme_logo_url == null) {
+                dependencyMap = null;
+              }
+              obj3[2] = dependencyMap;
+              const background_url = closure_0.background_url;
+              let c3 = background_url;
+              if (background_url == null) {
+                c3 = null;
+              }
+              obj3[3] = c3;
+              const titles = closure_0.titles;
+              let c4 = titles;
+              if (titles == null) {
+                c4 = null;
+              }
+              obj3[4] = c4;
+              const subtitle = closure_0.subtitle;
+              let c5 = subtitle;
+              if (subtitle == null) {
+                c5 = null;
+              }
+              obj3[5] = c5;
+              const features = closure_0.features;
+              let mapped;
+              if (features != null) {
+                mapped = features.map((assetUrl) => ({ assetUrl: assetUrl.asset_url, title: assetUrl.title, subtitle: assetUrl.subtitle }));
+              }
+              let c6 = mapped;
+              if (mapped == null) {
+                c6 = null;
+              }
+              obj3[6] = c6;
+              const button_text = closure_0.button_text;
+              let c7 = button_text;
+              if (button_text == null) {
+                c7 = null;
+              }
+              obj3[7] = c7;
+            }
+            obj = obj3(709);
+            const obj4 = { type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_SUCCESS", config: null };
+            obj4[1] = obj3;
+            obj.dispatch(obj4);
+            c11 = 0;
+          }
+          c11 = 0;
+          c13 = 3;
+          const obj5 = { value: null, done: true };
+          obj5[0] = arg1;
+          return obj5;
         }
-        obj3[1] = obj3;
-        const dark_theme_logo_url = closure_0.dark_theme_logo_url;
-        let dependencyMap = dark_theme_logo_url;
-        if (dark_theme_logo_url == null) {
-          dependencyMap = null;
+      } catch (tmp46) {
+        let closure_10 = tmp46;
+        if (tmp4 === c11) {
+          c13 = tmp2;
+          throw tmp46;
+        } else {
+          c12 = tmp;
         }
-        obj3[2] = dependencyMap;
-        const background_url = closure_0.background_url;
-        let c3 = background_url;
-        if (background_url == null) {
-          c3 = null;
-        }
-        obj3[3] = c3;
-        const titles = closure_0.titles;
-        let c4 = titles;
-        if (titles == null) {
-          c4 = null;
-        }
-        obj3[4] = c4;
-        const subtitle = closure_0.subtitle;
-        let c5 = subtitle;
-        if (subtitle == null) {
-          c5 = null;
-        }
-        obj3[5] = c5;
-        const features = closure_0.features;
-        let mapped;
-        if (features != null) {
-          mapped = features.map((assetUrl) => ({ assetUrl: assetUrl.asset_url, title: assetUrl.title, subtitle: assetUrl.subtitle }));
-        }
-        let c6 = mapped;
-        if (mapped == null) {
-          c6 = null;
-        }
-        obj3[6] = c6;
-        const button_text = closure_0.button_text;
-        let c7 = button_text;
-        if (button_text == null) {
-          c7 = null;
-        }
-        obj3[7] = c7;
       }
-      const obj = obj3(709);
-      const obj4 = { type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_SUCCESS", config: null };
-      obj4[1] = obj3;
-      obj.dispatch(obj4);
-      c11 = 0;
     }
-    c11 = 0;
-    return arg1;
   });
   const _fetchSocialLayerStorefrontLaunchAnnouncement = tmp;
   const apply = tmp.apply;

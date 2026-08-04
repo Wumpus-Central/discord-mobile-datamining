@@ -1,3 +1,4 @@
+// discord_app/modules/explicit_media_redaction/native/ExplicitMediaLearnMoreActionSheet.tsx
 import Background from "Background";
 import { View } from "ExplicitMediaObscuredFalsePositiveActionSheet";
 import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } from "USER_SETTING_ACTION_SHEET_KEY";

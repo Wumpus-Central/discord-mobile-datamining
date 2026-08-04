@@ -1,3 +1,4 @@
+// discord_app/modules/poggermode/PoggermodeActionCreators.tsx
 import fetchFingerprint from "fetchFingerprint";
 import initialize from "initialize";
 import updateCombo from "updateCombo";
@@ -11,7 +12,7 @@ export const updatePoggermodeSettings = function updatePoggermodeSettings(settin
   obj = {};
   const merged = Object.assign(state.getState());
   const merged1 = Object.assign(settings);
-  importDefault(7212)(obj);
+  importDefault(6148)(obj);
 };
 export const updateCombo = function updateCombo(arg0) {
   let obj = importDefault(709);

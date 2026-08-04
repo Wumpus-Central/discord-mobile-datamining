@@ -1,3 +1,4 @@
+// discord_app/modules/quests/SponsoredQuestUtils.native.tsx
 const result = require("set").fileFinishedImporting("modules/quests/SponsoredQuestUtils.native.tsx");
 
 export const createGameSheetHook = function createGameSheetHook(arg0) {

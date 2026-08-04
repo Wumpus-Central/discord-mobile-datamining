@@ -1,3 +1,4 @@
+// discord_app/modules/conversations/ConversationVisibilityStore.tsx
 import { DeviceSettingsStore } from "initialize";
 
 let c0 = true;

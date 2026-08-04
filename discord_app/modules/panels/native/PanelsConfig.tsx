@@ -1,3 +1,4 @@
+// discord_app/modules/panels/native/PanelsConfig.tsx
 function isTimingConfig(duration) {
   return null != duration && null != duration.duration;
 }

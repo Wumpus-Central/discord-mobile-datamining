@@ -1,3 +1,4 @@
+// discord_app/modules/cache/CacheActionCreators.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { ChannelLoader } from "ensureGuildLoaded";
 import handleClearCaches from "handleClearCaches";
@@ -9,98 +10,63 @@ function _writeCaches() {
     let c3 = 0;
     let c4 = 0;
     const iter = (function*() {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+      let table = tmp2;
+      let flag;
+      if (flag === undefined) {
+        flag = false;
+      }
+      table = undefined;
+      let c3 = 1;
+      let c4 = 1;
+      yield "ct";
+      if (1 === tmp5) {
         if (arg0 === 1) {
+          c4 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c4 = 3;
+          let obj1 = { value: null, done: true };
+          obj1[0] = arg1;
+          return obj1;
+        } else if (c4.canWriteCaches(flag)) {
+          c3 = 2;
+          c4 = 1;
+          const obj2 = { value: null, done: false };
+          obj2[0] = c3.loadAllMissingChannels();
+          return obj2;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value: null, done: true };
+          obj3[0] = arg1;
+          return obj3;
         } else {
-          return { value: "HermesInternal", done: null };
+          table = [];
+          obj1 = flag(table[3]);
+          const obj4 = { type: "WRITE_CACHES", promisesToWaitOn: null };
+          obj4[1] = table;
+          obj1.dispatch(obj4);
+          c3 = 3;
+          c4 = 1;
+          const obj5 = { value: null, done: false };
+          obj5[0] = Promise.all(table);
+          return obj5;
         }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let asyncGeneratorStep = tmp5;
-              let table = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = false;
-              }
-              table = undefined;
-              c3 = 1;
-              c4 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                let obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else if (c4.canWriteCaches(flag)) {
-                c3 = 2;
-                c4 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = c3.loadAllMissingChannels();
-                return obj2;
-              }
-            } else if (2 === tmp5) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = arg1;
-                return obj3;
-              } else {
-                table = [];
-                obj1 = flag(table[3]);
-                const obj4 = { type: "WRITE_CACHES", promisesToWaitOn: null };
-                obj4[1] = table;
-                obj1.dispatch(obj4);
-                c3 = 3;
-                c4 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = Promise.all(table);
-                return obj5;
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp20) {
-          c4 = tmp;
-          throw tmp20;
-        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
       }
+      c4 = 3;
+      yield "HermesInternal";
     })();
     iter.next();
     return iter;

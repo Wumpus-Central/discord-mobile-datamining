@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/DispatcherWorkScheduler.native.tsx
 import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS";
 import { AppStates } from "ME";
 import { BasicWorkScheduler } from "_trackAppBackgrounded";
@@ -50,7 +51,7 @@ prototype["_clearIdleCallback"] = function _clearIdleCallback() {
 let result = require("_trackAppBackgrounded").fileFinishedImporting("modules/gateway/DispatcherWorkScheduler.native.tsx");
 
 export const createDispatcherWorkScheduler = function createDispatcherWorkScheduler() {
-  if (typeof DispatcherWorkScheduler !== "function") {
+  if (typeof DispatcherWorkScheduler !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let importDefault;

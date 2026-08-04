@@ -1,3 +1,4 @@
+// discord_app/modules/analytics_sessions/SessionAdManager.tsx
 import importDefaultResult from "fetchFingerprint";
 import ME from "ME";
 import "initialize";
@@ -129,9 +130,9 @@ class SessionAdManager extends tmp3 {
 }
 const prototype = SessionAdManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  this.focusedOrForegrounded = require(6833) /* isForegrounded */.isForegrounded();
+  this.focusedOrForegrounded = require(5727) /* isForegrounded */.isForegrounded();
   importDefaultResult.addChangeListener(this.handleAuthenticationChange);
-  const obj = require(6833) /* isForegrounded */;
+  const obj = require(5727) /* isForegrounded */;
   const subscription = importDefault(709).subscribe("WINDOW_FOCUS", this.handleWindowFocus);
   const obj2 = importDefault(709);
   const subscription1 = importDefault(709).subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate);

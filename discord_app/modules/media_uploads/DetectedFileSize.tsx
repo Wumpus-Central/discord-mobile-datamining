@@ -1,3 +1,4 @@
+// discord_app/modules/media_uploads/DetectedFileSize.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _getDetectedFileSize() {

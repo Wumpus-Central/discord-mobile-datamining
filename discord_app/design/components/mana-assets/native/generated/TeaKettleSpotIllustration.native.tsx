@@ -1,3 +1,4 @@
+// discord_app/design/components/mana-assets/native/generated/TeaKettleSpotIllustration.native.tsx
 import { jsx } from "jsxProd";
 
 const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/TeaKettleSpotIllustration.native.tsx");
@@ -21,7 +22,7 @@ export const TeaKettleSpotIllustration = function TeaKettleSpotIllustration(widt
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(6724);
+  obj[0] = importDefault(7576);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -29,5 +30,5 @@ export const TeaKettleSpotIllustration = function TeaKettleSpotIllustration(widt
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5236), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5145), { width: num * num3, height: num2 * num3 });
 };

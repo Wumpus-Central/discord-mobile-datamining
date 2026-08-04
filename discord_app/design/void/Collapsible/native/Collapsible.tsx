@@ -1,3 +1,4 @@
+// discord_app/design/void/Collapsible/native/Collapsible.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

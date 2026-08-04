@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/ClipsOptOutOfVoiceRecordingSetting.tsx
 import getSystemLocale from "getSystemLocale";
 import createToggle from "createToggle";
 
@@ -36,7 +37,7 @@ function _updateClipsAllowVoiceRecording() {
               return obj;
             } else {
               const callback2 = tmp4;
-              const ClipsAllowVoiceRecording = callback(3958).ClipsAllowVoiceRecording;
+              const ClipsAllowVoiceRecording = callback(3866).ClipsAllowVoiceRecording;
               dependencyMap = 1;
               c3 = 1;
               const obj1 = { value: null, done: false };

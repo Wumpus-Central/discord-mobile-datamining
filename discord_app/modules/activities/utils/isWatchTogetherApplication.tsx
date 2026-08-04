@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/isWatchTogetherApplication.tsx
 import items3 from "items3";
 
 let c0;

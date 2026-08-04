@@ -1,3 +1,4 @@
+// discord_app/modules/video_calls/native/components/CallBarAction.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { resetFocusTimer } from "VoiceChatDrawerState";
@@ -218,7 +219,7 @@ export const NotifiedActionButton = function NotifiedActionButton(isMentioned) {
     const obj1 = { style: null, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
     obj1[0] = tmp2.notificationText;
     obj1[3] = isMentioned.notifications;
-    obj[1] = tmp3(require(4281) /* Text */.Text, obj1);
+    obj[1] = tmp3(require(4189) /* Text */.Text, obj1);
     obj.children = tmp3(tmp4, obj);
     obj[0] = tmp3(ActionButton, obj);
     return tmp3(tmp4, obj);

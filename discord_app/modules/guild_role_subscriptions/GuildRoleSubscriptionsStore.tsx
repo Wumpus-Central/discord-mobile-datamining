@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsStore.tsx
 import { DefaultCreatorMonetizationRestrictions as closure_2 } from "CreatorMonetizationRestrictions";
 import { Store } from "initialize";
 import set from "initialize";

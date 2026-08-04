@@ -1,3 +1,4 @@
+// discord_app/modules/directory_channels/GuildDirectoryUtils.tsx
 import { DirectoryEntryTypes } from "DirectoryEntryTypes";
 
 const result = require("apply").fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");

@@ -1,3 +1,4 @@
+// discord_app/modules/keyboard/native/KeyCommandsView.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
@@ -52,7 +53,7 @@ export default function KeyCommandsView(style) {
       found.onKeyCommand(nativeEvent);
     }
   };
-  obj[1] = jsx(first(13743), {});
+  obj[1] = jsx(first(13647), {});
   return <redux.Provider />;
 };
 export const useKeyCommands = function useKeyCommands(memo) {

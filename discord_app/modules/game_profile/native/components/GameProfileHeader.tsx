@@ -1,3 +1,4 @@
+// discord_app/modules/game_profile/native/components/GameProfileHeader.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

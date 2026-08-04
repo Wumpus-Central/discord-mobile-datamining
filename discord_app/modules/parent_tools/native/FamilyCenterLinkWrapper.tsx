@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/native/FamilyCenterLinkWrapper.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -12,7 +13,7 @@ const result = require("createCacheKey").fileFinishedImporting("modules/parent_t
 export default function FamilyCenterLinkRowWrapper(userId) {
   userId = userId.userId;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5610)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5519)().analyticsLocations;
   let tmp3 = null;
   if (undefined !== userId) {
     const obj = { style: null, onPress: null, children: null };
@@ -21,7 +22,7 @@ export default function FamilyCenterLinkRowWrapper(userId) {
       analyticsLocations(outer1_2[6])({ userId, disableCalls: true, disableMessage: true, sourceAnalyticsLocations: analyticsLocations });
     };
     obj[2] = userId.children;
-    tmp3 = jsx(userId(4812).PressableOpacity, { style: null, onPress: null, children: null });
+    tmp3 = jsx(userId(4721).PressableOpacity, { style: null, onPress: null, children: null });
   }
   return tmp3;
 };

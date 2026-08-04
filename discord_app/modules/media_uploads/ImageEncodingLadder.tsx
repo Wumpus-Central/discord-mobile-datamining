@@ -1,3 +1,4 @@
+// discord_app/modules/media_uploads/ImageEncodingLadder.tsx
 import { CompressionQuality } from "ME";
 
 function getAdaptiveImageCompressionQuality(outer1_13, ADAPTIVE_COMPRESSION_CONFIG) {

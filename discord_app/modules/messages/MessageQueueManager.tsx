@@ -1,3 +1,4 @@
+// discord_app/modules/messages/MessageQueueManager.tsx
 import "initialize";
 
 class MessageQueueManager extends tmp2 {
@@ -8,7 +9,7 @@ class MessageQueueManager extends tmp2 {
   }
 }
 MessageQueueManager.prototype["handleLogout"] = function handleLogout() {
-  importDefault(7213).clear();
+  importDefault(6149).clear();
 };
 const messageQueueManager = new MessageQueueManager();
 const result = require("set").fileFinishedImporting("modules/messages/MessageQueueManager.tsx");

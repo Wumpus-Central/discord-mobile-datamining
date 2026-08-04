@@ -1,3 +1,4 @@
+// discord_app/modules/premium/native/gifting/PremiumGiftSuccess.tsx
 import set from "set";
 import { View } from "PremiumGiftDMSuccessBody";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";

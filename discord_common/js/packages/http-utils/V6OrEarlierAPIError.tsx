@@ -1,3 +1,4 @@
+// discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx");
 class APIError {
   constructor(arg0, arg1) {
@@ -5,7 +6,7 @@ class APIError {
     if (importDefault === undefined) {
       str = "An unexpected error occurred.";
     }
-    if (typeof global === "string") {
+    if (typeof global === "y") {
       tmp4 = require;
       obj = { message: null, code: null };
       obj[0] = global;

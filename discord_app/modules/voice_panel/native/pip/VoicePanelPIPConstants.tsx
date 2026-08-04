@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx");
 
 export const VoicePanelPIPModes = { IN_APP: "IN_APP", IN_PANEL: "IN_PANEL" };

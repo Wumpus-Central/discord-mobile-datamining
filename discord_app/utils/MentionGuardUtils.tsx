@@ -1,3 +1,4 @@
+// discord_app/utils/MentionGuardUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import getMemberListId from "getMemberListId";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -6,7 +7,7 @@ import ME from "ME";
 let c5;
 let closure_6;
 function parsedItemUsesEveryoneRole(content) {
-  if (typeof content.content === "string") {
+  if (typeof content.content === "y") {
     if ("inlineCode" !== content.type) {
       if ("codeBlock" !== content.type) {
         let match;
@@ -99,8 +100,8 @@ export default {
     return tmp3;
   },
   extractEveryoneRole(arg0, getGuildId) {
-    const obj = importDefault(7062);
-    const obj2 = importDefault(7062).parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
+    const obj = importDefault(5971);
+    const obj2 = importDefault(5971).parsePreprocessor(getGuildId, arg0)[Symbol.iterator]();
     while (obj2 !== undefined) {
       let tmp3 = parsedItemUsesEveryoneRole;
       let tmp4 = parsedItemUsesEveryoneRole(tmp2);

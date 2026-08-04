@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/utils/getCurrentUserProfile.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 

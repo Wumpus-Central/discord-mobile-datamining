@@ -1,3 +1,4 @@
+// discord_app/modules/home_drawer/native/isHomeDrawerChannelMuted.tsx
 import storeThread from "storeThread";
 import { isThread } from "createChannelRecord";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";

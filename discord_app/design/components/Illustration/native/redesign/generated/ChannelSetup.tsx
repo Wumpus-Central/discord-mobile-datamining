@@ -1,3 +1,4 @@
+// discord_app/design/components/Illustration/native/redesign/generated/ChannelSetup.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -6,50 +7,50 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/ChannelSetup.tsx");
 
 export const getChannelSetupSource = function getChannelSetupSource(theme) {
-  let obj = require(7544) /* getIllustrationSource */;
+  let obj = require(6541) /* getIllustrationSource */;
   obj = {
     dark() {
-      return callback(16630);
+      return callback(16533);
     },
     darker() {
-      return callback(16631);
+      return callback(16534);
     },
     light() {
-      return callback(16632);
+      return callback(16535);
     }
   };
   return obj.getIllustrationSource(theme, obj);
 };
 export const useChannelSetupSource = function useChannelSetupSource() {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require(4039) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(16630);
+      return callback(16533);
     },
     darker() {
-      return callback(16631);
+      return callback(16534);
     },
     light() {
-      return callback(16632);
+      return callback(16535);
     }
   };
-  return require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return require(6541) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const ChannelSetup = function ChannelSetup(arg0) {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require(4039) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(16630);
+      return callback(16533);
     },
     darker() {
-      return callback(16631);
+      return callback(16534);
     },
     light() {
-      return callback(16632);
+      return callback(16535);
     }
   };
   obj = {};
-  const illustrationSource = require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = require(6541) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

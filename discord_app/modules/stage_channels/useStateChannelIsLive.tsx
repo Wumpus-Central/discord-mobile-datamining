@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/useStateChannelIsLive.tsx
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 
 const require = arg1;

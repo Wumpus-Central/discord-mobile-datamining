@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding/native/GuildOnboardingConnectionPrompt.tsx
 import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
 import get_ActivityIndicator from "isChattableChannel";
 import get from "get";

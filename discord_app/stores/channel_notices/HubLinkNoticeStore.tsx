@@ -1,3 +1,4 @@
+// discord_app/stores/channel_notices/HubLinkNoticeStore.tsx
 import set from "set";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";

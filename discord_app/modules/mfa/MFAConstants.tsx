@@ -1,3 +1,4 @@
+// discord_app/modules/mfa/MFAConstants.tsx
 const obj = {};
 Object.defineProperty(obj, "webauthn", {
   get: () => {

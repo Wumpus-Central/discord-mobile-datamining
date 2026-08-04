@@ -1,3 +1,4 @@
+// discord_common/js/packages/tokens/themes/generated/generated-definitions.tsx
 const obj = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" };
 const items = [, ];
 ({ MIDNIGHT: arr[0], DARK: arr[1] } = obj);

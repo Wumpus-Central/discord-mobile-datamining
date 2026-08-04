@@ -1,3 +1,4 @@
+// discord_app/lib/QueryTokenizer.tsx
 function getMatch(str, arg1, index) {
   let tmp3;
   if (null == arg1) {
@@ -36,7 +37,7 @@ function getMatch(str, arg1, index) {
               let type = obj.type;
               let tmp33 = new.target;
               let tmp32 = Token;
-              if (typeof Token !== "function") {
+              if (typeof Token !== "fileFinishedImporting") {
                 let str2 = "Trying to call a non-function";
                 let throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
@@ -60,7 +61,7 @@ function getMatch(str, arg1, index) {
                 let arraySpreadResult1 = HermesBuiltin.arraySpread(tmp3, 0);
                 obj.match = items2;
                 let num7 = 0;
-                if (typeof tmp3 !== "string") {
+                if (typeof tmp3 !== "y") {
                   let num8 = tmp3.index;
                   if (num8 == null) {
                     num8 = 0;
@@ -93,7 +94,7 @@ function getMatch(str, arg1, index) {
         }
         num10 = num10 + 1;
       }
-      if (typeof Token !== "function") {
+      if (typeof Token !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(Token.prototype);
@@ -116,7 +117,7 @@ function getMatch(str, arg1, index) {
       HermesBuiltin.arraySpread(index, 0);
       obj.match = items4;
       let num3 = 0;
-      if (typeof index !== "string") {
+      if (typeof index !== "y") {
         let num4 = index.index;
         if (num4 == null) {
           num4 = 0;
@@ -240,7 +241,7 @@ prototype["tokenize"] = function tokenize(errorcode) {
       _data = items1;
     }
     _data = self._nonTokenType;
-    if (typeof Token !== "function") {
+    if (typeof Token !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     arr = Object.create(tmp32.prototype);
@@ -263,7 +264,7 @@ prototype["tokenize"] = function tokenize(errorcode) {
     HermesBuiltin.arraySpread(_data, 0);
     arr.match = items3;
     let num5 = 0;
-    if (typeof _data !== "string") {
+    if (typeof _data !== "y") {
       let num6 = _data.index;
       if (num6 == null) {
         num6 = 0;
@@ -285,7 +286,7 @@ prototype["tokenize"] = function tokenize(errorcode) {
       _data1 = items4;
     }
     _data2 = self._nonTokenType;
-    if (typeof Token !== "function") {
+    if (typeof Token !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(tmp36.prototype);
@@ -308,7 +309,7 @@ prototype["tokenize"] = function tokenize(errorcode) {
     HermesBuiltin.arraySpread(_data1, 0);
     obj.match = items6;
     let num10 = 0;
-    if (typeof _data1 !== "string") {
+    if (typeof _data1 !== "y") {
       let num11 = _data1.index;
       if (num11 == null) {
         num11 = 0;
@@ -389,7 +390,7 @@ class Token {
         arraySpreadResult1 = HermesBuiltin.arraySpread(global, 0);
         obj.match = items1;
         num3 = 0;
-        if (typeof global !== "string") {
+        if (typeof global !== "y") {
           num4 = global.index;
           if (num4 == null) {
             num4 = 0;

@@ -1,3 +1,4 @@
+// discord_app/modules/rpc/native/events/voiceSettingsEventHandlers.tsx
 import importDefaultResult from "createVoiceSettingsEventHandlers";
 
 const importDefaultResultResult = require("createVoiceSettingsEventHandlers")(require("validateSocketClient").getDeprecatedVoiceSettings, require("validateSocketClient").getVoiceSettings);

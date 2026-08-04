@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding/useFlattenedChannels.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

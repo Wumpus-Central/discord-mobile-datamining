@@ -1,3 +1,4 @@
+// discord_app/modules/guild_sidebar/native/InvitesDisabledAlertModal.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,7 +15,7 @@ export default function InvitesDisabledAlertModal() {
   obj = { text: null };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.BddRzS);
-  obj[0] = jsx(require(4628) /* getAlertModalItemKey */.AlertActionButton, { text: null }, "okay");
-  obj[2] = jsx(require(4628) /* getAlertModalItemKey */.AlertActions, { text: null });
-  return jsx(require(4628) /* getAlertModalItemKey */.AlertModal, { text: null });
+  obj[0] = jsx(require(4537) /* getAlertModalItemKey */.AlertActionButton, { text: null }, "okay");
+  obj[2] = jsx(require(4537) /* getAlertModalItemKey */.AlertActions, { text: null });
+  return jsx(require(4537) /* getAlertModalItemKey */.AlertModal, { text: null });
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/utils/parseUserProfileCollectibles.tsx
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
 
 export default function parseUserProfileCollectibles(collectibles) {
@@ -8,7 +9,7 @@ export default function parseUserProfileCollectibles(collectibles) {
     collectibles = collectibles.collectibles;
   }
   if (null == collectibles) {
-    return { collectibles: "Array", profileEffect: "call", profileFrame: "format" };
+    return { collectibles: "Array", profileEffect: "accessibilityRole", profileFrame: "height" };
   } else {
     const items = [];
     collectibles = collectibles.collectibles;

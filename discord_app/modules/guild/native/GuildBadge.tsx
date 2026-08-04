@@ -1,3 +1,4 @@
+// discord_app/modules/guild/native/GuildBadge.tsx
 import "noop";
 import { GuildFeatures } from "ME";
 import { jsx } from "jsxProd";

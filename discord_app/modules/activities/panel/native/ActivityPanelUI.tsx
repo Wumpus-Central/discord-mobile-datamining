@@ -1,3 +1,4 @@
+// discord_app/modules/activities/panel/native/ActivityPanelUI.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { ActivityPanelModes } from "ActivityPanelModes";
@@ -10,9 +11,9 @@ let metroImportAll;
 const require = arg1;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
-    let tmp4 = 15961;
+    let tmp4 = 15865;
   } else {
-    tmp4 = 15967;
+    tmp4 = 15871;
   }
   return closure_7(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }

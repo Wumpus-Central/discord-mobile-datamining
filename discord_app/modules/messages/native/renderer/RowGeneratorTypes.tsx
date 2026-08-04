@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/renderer/RowGeneratorTypes.tsx
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/RowGeneratorTypes.tsx");
 
 export const MediaGalleryItemType = { IMAGE: 1, [1]: "IMAGE", VIDEO: 2, [2]: "VIDEO", VISUAL_PLACEHOLDER: 3, [3]: "VISUAL_PLACEHOLDER" };

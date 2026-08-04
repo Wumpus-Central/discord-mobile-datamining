@@ -1,3 +1,4 @@
+// discord_app/modules/billing/native/subscription/useCreateSubscriptionParams.tsx
 import noop from "noop";
 
 const require = arg1;
@@ -6,7 +7,7 @@ const result = require("v1").fileFinishedImporting("modules/billing/native/subsc
 export default function useCreateSubscriptionParams(arg0, arg1) {
   let closure_0 = arg0;
   const importDefault = arg1;
-  const tmp = importDefault(7338)();
+  const tmp = importDefault(6672)();
   const dependencyMap = tmp;
   let items = [arg0, arg1, tmp];
   return React.useMemo(() => {

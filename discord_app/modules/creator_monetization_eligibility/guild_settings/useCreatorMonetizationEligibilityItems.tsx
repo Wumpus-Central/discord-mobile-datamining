@@ -1,3 +1,4 @@
+// discord_app/modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx
 import getSystemLocale from "getSystemLocale";
 import noop from "noop";
 import { HelpdeskArticles } from "ME";
@@ -140,7 +141,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
       let fn;
       if (!noRecentViolations) {
         fn = () => {
-          const tmp = callback(3976);
+          const tmp = callback(3884);
           return tmp(callback(1945).getSubmitRequestURL());
         };
       }

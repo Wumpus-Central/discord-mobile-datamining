@@ -1,3 +1,4 @@
+// discord_app/modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx
 import comparator from "comparator";
 import { Permissions } from "sum";
 

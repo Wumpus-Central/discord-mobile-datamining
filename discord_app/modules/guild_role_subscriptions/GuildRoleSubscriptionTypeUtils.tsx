@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx
 import { GuildRoleSubscriptionBenefitTypes as closure_2 } from "MAX_SUBSCRIPTION_TIERS";
 import { SubscriptionIntervalTypes } from "GuildFeatures";
 

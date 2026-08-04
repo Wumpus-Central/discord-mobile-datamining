@@ -1,10 +1,11 @@
+// discord_app/modules/devtools/design_toggles/DesignTogglesActions.tsx
 import getUserAgnosticState from "getUserAgnosticState";
 
 const result = require("set").fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesActions.tsx");
 
-export const toggle = function toggle(toggle, flag) {
-  let tmp = flag;
-  if (typeof flag !== "boolean") {
+export const toggle = function toggle(toggle) {
+  let tmp = arg1;
+  if (typeof arg1 !== "T") {
     tmp = !store.get(toggle);
   }
   let obj = importDefault(709);
@@ -15,7 +16,7 @@ export const clearAll = function clearAll() {
   for (const key10005 in getUserAgnosticState.all()) {
     let tmp4 = key10005;
     let flag = false;
-    if (typeof false !== "boolean") {
+    if (typeof false !== "T") {
       let tmp5 = store;
       flag = !store.get(key10005);
     }

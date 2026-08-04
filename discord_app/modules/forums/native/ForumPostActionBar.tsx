@@ -1,3 +1,4 @@
+// discord_app/modules/forums/native/ForumPostActionBar.tsx
 import _slicedToArray from "_slicedToArray";
 import Text from "Text";
 import { View } from "getSystemLocale";
@@ -35,7 +36,7 @@ export default function ForumPostActionBar(channel) {
   let obj = channel(589);
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getChannel(channel.parent_id));
-  let obj1 = channel(5829);
+  let obj1 = channel(6068);
   const firstMessage = obj1.useFirstForumPostMessage(channel).firstMessage;
   let obj2 = channel(589);
   const items1 = [storeThread];
@@ -57,7 +58,7 @@ export default function ForumPostActionBar(channel) {
   const callback = React.useCallback((nativeEvent) => {
     callback(width - nativeEvent.nativeEvent.layout.width - 40);
   }, items3);
-  let obj4 = channel(8202);
+  let obj4 = channel(8833);
   obj = { style: null, children: null };
   const items4 = [tmp.actionBarContainer, obj4.useGradientTop()];
   obj[0] = items4;
@@ -70,7 +71,7 @@ export default function ForumPostActionBar(channel) {
     obj1[1] = stateFromStores;
     obj1[2] = firstMessage;
     obj1[3] = tmp7[0];
-    obj[1] = callback(tmp2(10310).ForumPostActionBarReactions, obj1);
+    obj[1] = callback(tmp2(10471).ForumPostActionBarReactions, obj1);
     tmp11 = callback(tmp10, obj);
   }
   const items5 = [tmp11, ];
@@ -78,78 +79,65 @@ export default function ForumPostActionBar(channel) {
   items6 = [, ];
   ({ actionRow: arr7[0], actionButtonsContainer: arr7[1] } = tmp);
   if (stateFromStores2) {
-    const items7 = [tmp13, , ];
+    const items7 = [tmp13, ];
     obj3 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl4 = tmp2(1236).intl;
     obj3[1] = intl4.string(tmp2(1236).t.WqhZss);
-    obj3[2] = tmp.actionButton;
+    const items8 = [, ];
+    ({ actionButton: arr12[0], lastActionButton: arr12[1] } = tmp);
+    obj3[2] = items8;
     obj3[3] = function onPress() {
       const guildId = channel.getGuildId();
       if (null != guildId) {
-        let obj = channel(8420);
+        let obj = channel(9320);
         obj = { section: null };
         obj[0] = outer1_9.CHANNEL_HEADER;
         const result = obj.handleCopyLinkForumPost(guildId, channel.id, obj);
       }
     };
-    obj3[4] = callback(tmp2(4229).LinkIcon, { size: "xs" });
-    items7[1] = callback(tmp2(4812).PressableOpacity, obj3);
-    obj4 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-    const intl5 = tmp2(1236).intl;
-    obj4[1] = intl5.string(tmp2(1236).t.nFP4oa);
-    const items8 = [, ];
-    ({ actionButton: arr12[0], lastActionButton: arr12[1] } = tmp);
-    obj4[2] = items8;
-    obj4[3] = function onPress() {
-      let obj = stateFromStores1(6826);
-      obj = { channelId: channel.id, messageId: null, flash: true, jumpType: null };
-      obj[1] = stateFromStores1(11).castChannelIdAsMessageId(channel.id);
-      obj[3] = channel(4217).JumpType.ANIMATED;
-      obj.jumpToMessage(obj);
-    };
-    obj4[4] = callback(tmp2(10311).ArrowLargeUpIcon, { size: "xs" });
-    items7[2] = callback(tmp2(4812).PressableOpacity, obj4);
+    obj3[4] = callback(tmp2(4137).LinkIcon, { size: "xs" });
+    items7[1] = callback(tmp2(4721).PressableOpacity, obj3);
     obj2[2] = items7;
     items5[1] = tmp9(tmp10, obj2);
     obj[1] = items5;
     return tmp9(tmp10, obj);
   } else {
     let items9 = function handleFollow() {
-      const result = channel(8420).handleToggleFollowForumPost(channel, stateFromStores1);
+      const result = channel(9320).handleToggleFollowForumPost(channel, stateFromStores1);
     };
-    const obj5 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
+    obj4 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     let intl = tmp2(1236).intl;
     let Text = intl.string;
     let t = tmp2(1236).t;
     if (stateFromStores1) {
-      obj5[1] = Text(t.G3ooHD);
-      obj5[2] = tmp.actionButton;
-      obj5[3] = items9;
+      obj4[1] = Text(t.G3ooHD);
+      obj4[2] = tmp.actionButton;
+      obj4[3] = items9;
       intl = callback;
-      items9 = [callback(tmp2(4237).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
-      Text = tmp2(4281).Text;
-      const obj6 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
+      items9 = [callback(tmp2(4145).CheckmarkLargeIcon, { size: "xs", color: "text-brand" }), ];
+      Text = tmp2(4189).Text;
+      const obj5 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
       const items10 = [tmp.buttonText];
-      obj6[0] = items10;
+      obj5[0] = items10;
       const intl3 = tmp2(1236).intl;
-      obj6[3] = intl3.string(tmp2(1236).t["OtF+lC"]);
-      t = callback(Text, obj6);
+      obj5[3] = intl3.string(tmp2(1236).t["OtF+lC"]);
+      t = callback(Text, obj5);
       items9[1] = t;
-      obj5[4] = items9;
-      let tmp15 = obj5;
+      obj4[4] = items9;
+      let tmp15 = obj4;
     } else {
-      obj5[1] = Text(t["DjZ+6E"]);
-      obj5[2] = tmp.actionButton;
-      obj5[3] = items9;
-      const items11 = [callback(tmp2(9058).BellIcon, { size: "xs" }), ];
-      const obj7 = { style: null, variant: "text-sm/semibold", color: "interactive-text-default", children: null };
-      obj7[0] = tmp.buttonText;
+      obj4[1] = Text(t["DjZ+6E"]);
+      obj4[2] = tmp.actionButton;
+      obj4[3] = items9;
+      const items11 = [callback(tmp2(10243).BellIcon, { size: "xs" }), ];
+      const obj6 = { style: null, variant: "text-sm/semibold", color: "interactive-text-default", children: null };
+      obj6[0] = tmp.buttonText;
       const intl2 = tmp2(1236).intl;
-      obj7[3] = intl2.string(tmp2(1236).t["0rQinA"]);
-      items11[1] = callback(tmp2(4281).Text, obj7);
-      obj5[4] = items11;
-      tmp15 = obj5;
+      obj6[3] = intl2.string(tmp2(1236).t["0rQinA"]);
+      items11[1] = callback(tmp2(4189).Text, obj6);
+      obj4[4] = items11;
+      tmp15 = obj4;
     }
-    tmp9(tmp2(4812).PressableOpacity, tmp15);
+    tmp9(tmp2(4721).PressableOpacity, tmp15);
   }
 };

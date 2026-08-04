@@ -1,3 +1,4 @@
+// discord_app/modules/application_commands/native/ApplicationCommandValidationUtils.tsx
 const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandValidationUtils.tsx");
 
 export const getFirstInvalidOption = function getFirstInvalidOption(activeCommand, first2) {

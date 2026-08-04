@@ -1,3 +1,4 @@
+// discord_app/modules/screen_recording/native/StudyConfig.tsx
 const obj = {};
 const result = require("set").fileFinishedImporting("modules/screen_recording/native/StudyConfig.tsx");
 

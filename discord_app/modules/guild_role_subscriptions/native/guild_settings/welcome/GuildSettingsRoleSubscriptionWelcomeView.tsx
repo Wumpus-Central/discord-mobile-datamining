@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx
 import encodeProperties from "encodeProperties";
 import Form from "Form";
 import get_ActivityIndicator from "asyncRequireImpl";
@@ -30,7 +31,7 @@ function ApplicationStatusNotice(arg0) {
     obj[0] = items;
     obj = { children: null };
     obj[0] = resubmissionError.getAnyErrorMessage();
-    obj[1] = callback(importDefault(11506), obj);
+    obj[1] = callback(importDefault(11397), obj);
     return callback(closure_6, obj);
   } else {
     if (isApplicationPending) {
@@ -54,7 +55,7 @@ function ApplicationStatusNotice(arg0) {
       obj1[1] = stringResult;
       obj1[2] = createEnableRequest;
       obj1[3] = resubmittingEnableRequest;
-      obj[1] = callback(importDefault(16643), obj1);
+      obj[1] = callback(importDefault(16546), obj1);
       tmp7 = callback(closure_6, obj);
     }
     return tmp7;

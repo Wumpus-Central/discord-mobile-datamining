@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useCurrentUser.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

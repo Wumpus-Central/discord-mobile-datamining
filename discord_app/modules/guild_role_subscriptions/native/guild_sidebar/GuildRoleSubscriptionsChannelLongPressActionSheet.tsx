@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsChannelLongPressActionSheet.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import { StaticChannelRoute } from "set";
@@ -22,25 +23,25 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   obj = { leading: null, title: null };
   obj = { style: createCacheKey().headerIcon, children: null };
   const obj1 = { disableColor: true, source: null };
-  obj1[1] = importDefault(12042);
+  obj1[1] = importDefault(10151);
   obj[1] = callback(require(1297) /* Button */.Icon, obj1);
   obj[0] = callback(View, obj);
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t["KzCF/6"]);
-  const items = [callback(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), ];
+  const items = [callback(require(5246) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), ];
   const obj2 = { leading: null, label: null, onPress: null };
   const obj3 = { source: null };
-  obj3[0] = importDefault(15127);
+  obj3[0] = importDefault(15114);
   obj2[0] = callback(require(1297) /* Button */.Icon, obj3);
   const obj4 = { text: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj4[0] = intl2.string(require(1236) /* getSystemLocale */.t.WqhZss);
-  obj2[1] = callback(require(7777) /* Form */.FormLabel, obj4);
+  obj2[1] = callback(require(7639) /* Form */.FormLabel, obj4);
   obj2[2] = function onPress() {
     callback();
     const result = outer1_0(outer1_2[13]).copyGuildChannelOrThreadLink(closure_0, outer1_4.ROLE_SUBSCRIPTIONS);
   };
-  items[1] = callback(require(7777) /* Form */.FormRow, obj2);
+  items[1] = callback(require(7639) /* Form */.FormRow, obj2);
   obj[0] = items;
-  return callback2(require(5646) /* ActionSheet */.ActionSheet, obj);
+  return callback2(require(5555) /* ActionSheet */.ActionSheet, obj);
 };

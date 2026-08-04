@@ -1,3 +1,4 @@
+// discord_app/utils/native/ImageUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_6 } from "ME";

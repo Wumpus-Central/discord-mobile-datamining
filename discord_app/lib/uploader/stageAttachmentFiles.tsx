@@ -1,3 +1,4 @@
+// discord_app/lib/uploader/stageAttachmentFiles.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { AbortCodes } from "ME";
 

@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/FamilyCenterModels.tsx
 import "toJS";
 
 const require = arg1;
@@ -22,7 +23,7 @@ ScheduleRuleRecord["fromServer"] = function fromServer(end_time) {
   ({ rule_id, label, start_time } = end_time);
   end_time = end_time.end_time;
   ({ days, enabled } = end_time);
-  if (typeof ScheduleRuleRecord !== "function") {
+  if (typeof ScheduleRuleRecord !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new ScheduleRuleRecord("Trying to call a non-function", ScheduleRuleRecord, new.target, rule_id, label, start_time, end_time, days, enabled);
@@ -36,7 +37,7 @@ ScheduleRuleRecord["fromServer"] = function fromServer(end_time) {
   return tmp2;
 };
 ScheduleRuleRecord["fromCache"] = function fromCache(arg0) {
-  if (typeof ScheduleRuleRecord !== "function") {
+  if (typeof ScheduleRuleRecord !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new ScheduleRuleRecord("Trying to call a non-function", ScheduleRuleRecord);
@@ -118,7 +119,7 @@ RestrictedScheduleRecord["fromServer"] = function fromServer(rules) {
   if (null != rules) {
     rules = rules.rules;
     const mapped = rules.map(ScheduleRuleRecord.fromServer);
-    if (typeof RestrictedScheduleRecord !== "function") {
+    if (typeof RestrictedScheduleRecord !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const tmp9 = new RestrictedScheduleRecord("Trying to call a non-function", rules, RestrictedScheduleRecord, new.target);
@@ -134,7 +135,7 @@ RestrictedScheduleRecord["fromCache"] = function fromCache(rules) {
   if (null != rules) {
     rules = rules.rules;
     const mapped = rules.map(ScheduleRuleRecord.fromCache);
-    if (typeof RestrictedScheduleRecord !== "function") {
+    if (typeof RestrictedScheduleRecord !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const tmp9 = new RestrictedScheduleRecord("Trying to call a non-function", rules, RestrictedScheduleRecord, new.target);
@@ -307,7 +308,7 @@ export const ensureRestrictedScheduleRecord = function ensureRestrictedScheduleR
     } else {
       let length = restrictedSchedule.rules.length;
       if (0 === length) {
-        if (typeof obj !== "function") {
+        if (typeof obj !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const items = [];

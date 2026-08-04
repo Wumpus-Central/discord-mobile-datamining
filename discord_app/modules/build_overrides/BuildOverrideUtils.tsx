@@ -1,3 +1,4 @@
+// discord_app/modules/build_overrides/BuildOverrideUtils.tsx
 import { BUILD_OVERRIDE_COOKIE_NAME as closure_4 } from "BUILD_OVERRIDE_TARGET_NAMES";
 import { PRIMARY_DOMAIN } from "ME";
 import getConstants from "getConstants";
@@ -121,7 +122,7 @@ export const probablyHasBuildOverride = function probablyHasBuildOverride() {
 };
 export const getBuildOverrideExperiments = function getBuildOverrideExperiments() {
   try {
-    let experiments = importDefault(4203);
+    let experiments = importDefault(4111);
     const _window = window;
     const tmp5 = experiments.parse(window.document.cookie)[closure_4];
     if (null == tmp5) {

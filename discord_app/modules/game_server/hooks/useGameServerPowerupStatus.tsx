@@ -1,3 +1,4 @@
+// discord_app/modules/game_server/hooks/useGameServerPowerupStatus.tsx
 import noop from "noop";
 import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
 
@@ -16,7 +17,7 @@ export default function useGameServerPowerupStatus(arg0) {
     }
     return entitlements;
   }, items1);
-  const tmp2 = stateFromStores(11830)(arg0);
+  const tmp2 = stateFromStores(11664)(arg0);
   const dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return React.useMemo(() => {

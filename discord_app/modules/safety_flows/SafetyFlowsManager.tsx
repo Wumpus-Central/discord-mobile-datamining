@@ -1,14 +1,15 @@
+// discord_app/modules/safety_flows/SafetyFlowsManager.tsx
 import "initialize";
 
 const require = arg1;
 function handleConnectionOpenSupplemental() {
-  require(16822) /* _openSafetyFlow */.openSafetyFlow();
+  require(16725) /* _openSafetyFlow */.openSafetyFlow();
 }
 function handleSafetyFlowsModalOpen() {
-  require(16822) /* _openSafetyFlow */.openSafetyFlow();
+  require(16725) /* _openSafetyFlow */.openSafetyFlow();
 }
 function handleUserRequiredActionUpdate(requiredAction) {
-  require(16822) /* _openSafetyFlow */.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
+  require(16725) /* _openSafetyFlow */.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
 }
 let prototype = function SafetyFlowsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

@@ -1,3 +1,4 @@
+// discord_app/modules/libdiscore/stores/BridgedStore.tsx
 const result = require("set").fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
 
 export const ensureValidMode = function ensureValidMode(arg0) {

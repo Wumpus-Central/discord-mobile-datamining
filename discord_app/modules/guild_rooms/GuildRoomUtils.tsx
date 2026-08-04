@@ -1,7 +1,8 @@
+// discord_app/modules/guild_rooms/GuildRoomUtils.tsx
 function serverGuildRoomObjectToClient(object_type) {
-  if (object_type.object_type === require(12930) /* GuildRoomObjectTypes */.GuildRoomObjectTypes.PLANT) {
+  if (object_type.object_type === require(12834) /* GuildRoomObjectTypes */.GuildRoomObjectTypes.PLANT) {
     let obj = { objectType: null };
-    obj[0] = tmp(12930).GuildRoomObjectTypes.PLANT;
+    obj[0] = tmp(12834).GuildRoomObjectTypes.PLANT;
     obj = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj2[0], created_by: obj2[1] } = object_type);
     let date;
@@ -14,7 +15,7 @@ function serverGuildRoomObjectToClient(object_type) {
     const merged = Object.assign(obj);
   } else {
     obj = { objectType: null };
-    obj[0] = tmp(12930).GuildRoomObjectTypes.NOTE;
+    obj[0] = tmp(12834).GuildRoomObjectTypes.NOTE;
     const obj1 = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };
     ({ object_id: obj4[0], created_by: obj4[1] } = object_type);
     let date1;

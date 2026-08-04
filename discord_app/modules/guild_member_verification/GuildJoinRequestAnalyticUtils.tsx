@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/GuildJoinRequestAnalyticUtils.tsx
 import fetchFingerprint from "fetchFingerprint";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import { AnalyticEvents } from "ME";

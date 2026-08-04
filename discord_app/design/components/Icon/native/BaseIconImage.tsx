@@ -1,9 +1,10 @@
+// discord_app/design/components/Icon/native/BaseIconImage.tsx
 import "noop";
 import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 
 const require = arg1;
-let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "body", height: "useStateFromStores" }, refresh_sm: { width: 18, height: 18 } };
+let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "Array", height: "HermesInternal" }, refresh_sm: { width: 18, height: 18 } };
 const result = require("jsxProd").fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 
 export const BaseIconImage = function BaseIconImage(source) {
@@ -17,7 +18,7 @@ export const BaseIconImage = function BaseIconImage(source) {
   }
   const color = source.color;
   ({ resizeMode, style, accessible, accessibilityLabel } = source);
-  let obj = require(3989) /* map */;
+  let obj = require(3897) /* map */;
   const token = obj.useToken(color);
   if (null != token) {
     obj = { tintColor: null };
@@ -29,7 +30,7 @@ export const BaseIconImage = function BaseIconImage(source) {
       obj[0] = color;
       tmp3 = obj;
     }
-    tmp2 = null != color && typeof color === "string";
+    tmp2 = null != color && typeof color === "y";
   }
   style = [table[str], tmp3, ];
   style[2] = style;

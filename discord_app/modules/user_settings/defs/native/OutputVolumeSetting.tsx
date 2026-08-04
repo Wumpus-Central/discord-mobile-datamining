@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/OutputVolumeSetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
 
@@ -22,7 +23,7 @@ createToggle = {
     return items;
   },
   usePredicate() {
-    return importDefault(10743).useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
+    return importDefault(10782).useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
   }
 };
 createToggle = createToggle.createVolumeSlider(createToggle);

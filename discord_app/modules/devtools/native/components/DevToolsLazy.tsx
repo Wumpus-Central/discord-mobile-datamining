@@ -1,3 +1,4 @@
+// discord_app/modules/devtools/native/components/DevToolsLazy.tsx
 import jsxProd from "jsxProd";
 import noop from "noop";
 import { NativeModules } from "get ActivityIndicator";
@@ -95,10 +96,10 @@ export default function DevToolsLazy() {
     }
   });
   const obj2 = stateFromStores(589);
-  const keyCommands = stateFromStores(13742).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(13646).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(14955).default, {});
+      return jsx(tmp(14855).default, {});
     }
   }
   return null;

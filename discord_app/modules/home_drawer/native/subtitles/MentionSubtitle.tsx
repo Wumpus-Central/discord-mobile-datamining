@@ -1,3 +1,4 @@
+// discord_app/modules/home_drawer/native/subtitles/MentionSubtitle.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -14,15 +15,15 @@ export default function MentionSubtitle(channel) {
   let guild;
   channel = channel.channel;
   ({ guild, channelName, count } = channel);
-  let obj = require(15321) /* styles */;
+  let obj = require(15004) /* styles */;
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {
-    channelIconComponentWithGuild = tmp(4745).getChannelIconComponentWithGuild(channel, guild);
-    const tmpResult = tmp(4745);
+    channelIconComponentWithGuild = tmp(4654).getChannelIconComponentWithGuild(channel, guild);
+    const tmpResult = tmp(4654);
   }
   if (channelIconComponentWithGuild == null) {
-    channelIconComponentWithGuild = tmp(4790).TextIcon;
+    channelIconComponentWithGuild = tmp(4699).TextIcon;
   }
   obj = { style: subtitleStyles.subtitleRow, children: null };
   obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
@@ -36,7 +37,7 @@ export default function MentionSubtitle(channel) {
       return callback2(callback(table[6]).Text, { variant: "text-xs/medium", children }, arg1);
     }
   });
-  items[1] = callback(require(4281) /* Text */.Text, obj1);
+  items[1] = callback(require(4189) /* Text */.Text, obj1);
   obj[1] = items;
   return callback2(View, obj);
 };

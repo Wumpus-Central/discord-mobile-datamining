@@ -1,3 +1,4 @@
+// discord_app/modules/app_database/modules/messages/isReadableChannel.tsx
 import { isTextChannel } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

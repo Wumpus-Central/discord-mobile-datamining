@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/hooks/useConnectGuardianGate.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import freshTeenActivityWithMap from "freshTeenActivityWithMap";
@@ -53,7 +54,7 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
       }
     });
   }, []);
-  importDefault(4711)(callback);
+  importDefault(4620)(callback);
   if (tmp3) {
     obj = { state: "error" };
   } else if (tmp4[0]) {

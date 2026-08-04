@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/utils/ShareEventUtils.tsx
 const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/ShareEventUtils.tsx");
 
 export const SHARE_EVENT_DETAILS_LINK = (guildId) => "https://discord.com/events/" + guildId.guildId + "/" + guildId.guildEventId;

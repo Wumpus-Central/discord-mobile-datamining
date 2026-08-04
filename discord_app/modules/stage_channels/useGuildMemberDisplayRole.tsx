@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/useGuildMemberDisplayRole.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 
@@ -20,8 +21,8 @@ function getHighestHoistedRole(arg0, arg1) {
         const member = obj2.getMember(guild.id, arg1);
         let highestHoistedRole = null;
         if (null != member) {
-          highestHoistedRole = importAll(3918).getHighestHoistedRole(guild, member);
-          const obj3 = importAll(3918);
+          highestHoistedRole = importAll(3826).getHighestHoistedRole(guild, member);
+          const obj3 = importAll(3826);
         }
         return highestHoistedRole;
       }

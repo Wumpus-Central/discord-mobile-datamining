@@ -1,3 +1,4 @@
+// discord_app/modules/nuf_channels/native/useCanSeeNUFChannelsForGuild.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";

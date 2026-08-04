@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/useEventException.tsx
 import scheduledEventSort from "scheduledEventSort";
 
 const require = arg1;

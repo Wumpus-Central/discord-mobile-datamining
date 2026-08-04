@@ -1,3 +1,4 @@
+// discord_app/modules/calls/ProportionalVadIndicatorExperiment.tsx
 const obj = { 1: null, 2: { enabled: true }, 3: { enabled: true, disableUI: true }, 4: { enabled: true, disableUI: true, swallowVolumeOnlySpeakingEvents: true } };
 obj[4] = { enabled: true, disableUI: true, dontEmitVolumeOnlySpeakingEvents: true };
 const tmp2 = require("getUnitId")({ kind: "user", name: "2025-12-proportional-vad-indicator", defaultConfig: { enabled: false }, variations: obj });

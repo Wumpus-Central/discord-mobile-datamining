@@ -1,3 +1,4 @@
+// discord_app/modules/chat_input/native/accessories/ChatInputCover.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

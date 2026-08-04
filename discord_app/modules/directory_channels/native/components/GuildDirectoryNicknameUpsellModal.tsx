@@ -1,10 +1,11 @@
+// discord_app/modules/directory_channels/native/components/GuildDirectoryNicknameUpsellModal.tsx
 import GuildPrompts from "GuildPrompts";
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";
-import get_ActivityIndicator from "module_8276";
+import get_ActivityIndicator from "module_9004";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildPrompts } from "GuildPrompts";
-import jsxProd from "module_11930";
+import jsxProd from "module_11769";
 import createCacheKey from "createCacheKey";
 
 let c10;
@@ -24,28 +25,75 @@ function GuildDirectoryNicknameUpsell(arg0) {
   function _handleSubmit() {
     const self = this;
     const tmp = first(function*() {
-      const callback = tmp3;
-      outer1_2(null);
-      const obj1 = { nick: null };
-      obj1[0] = c3;
-      c3 = 1;
-      const obj2 = outer1_0(outer1_2[12]);
-      yield obj2.updateGuildSelfMember(outer1_0, obj1);
-      if (1 === tmp7) {
-        c3 = 0;
-        let closure_0 = callback2;
-        const aPIError = new outer1_0(outer1_2[13]).APIError(closure_0);
-        callback2(aPIError);
-        let c5 = 3;
-      } else if (arg0 === 1) {
+      if (c5 === 2) {
         c5 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        callback();
-        c3 = 0;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c5 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const callback = tmp3;
+              let closure_0 = tmp7;
+              outer1_2(null);
+              const obj1 = { nick: null };
+              obj1[0] = c3;
+              c3 = 1;
+              let obj2 = outer1_0(outer1_2[12]);
+              c4 = 2;
+              c5 = 1;
+              obj2 = { value: null, done: false };
+              obj2[0] = obj2.updateGuildSelfMember(outer1_0, obj1);
+              return obj2;
+            }
+          } else {
+            if (1 === tmp7) {
+              c3 = 0;
+              closure_0 = callback2;
+              const aPIError = new outer1_0(outer1_2[13]).APIError(closure_0);
+              callback2(aPIError);
+              c5 = 3;
+            } else if (arg0 === 1) {
+              c5 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              callback();
+              c3 = 0;
+            }
+            c3 = 0;
+            c5 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp30) {
+          callback2 = tmp30;
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp30;
+          } else {
+            c4 = tmp;
+          }
+        }
       }
-      c3 = 0;
-      return arg1;
     });
     const _handleSubmit = tmp;
     const apply = tmp.apply;
@@ -60,7 +108,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
   let obj = require(589) /* initialize */;
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getGuild(closure_0));
-  const insets = importDefault(5310)().insets;
+  const insets = importDefault(5219)().insets;
   [obj2, c2] = ref(_handleSubmit.useState(null), 2);
   const tmp7 = ref(_handleSubmit.useState(""), 2);
   first = tmp7[0];
@@ -74,8 +122,8 @@ function GuildDirectoryNicknameUpsell(arg0) {
   const tmp11 = closure_7;
   const tmp5 = importDefault;
   const tmp6 = ref(_handleSubmit.useState(null), 2);
-  obj1[2] = require(5661) /* GuildIconSizes */.GuildIconSizes.XLARGE;
-  const items2 = [callback(importDefault(5661), obj1), , , , ];
+  obj1[2] = require(5570) /* GuildIconSizes */.GuildIconSizes.XLARGE;
+  const items2 = [callback(importDefault(5570), obj1), , , , ];
   obj2 = { style: tmp.header, children: null };
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
@@ -84,15 +132,15 @@ function GuildDirectoryNicknameUpsell(arg0) {
     name = stateFromStores.name;
   }
   obj3[4] = intl.format(require(1236) /* getSystemLocale */.t["d+6kzl"], { guildName: name });
-  const items3 = [callback(require(4281) /* Text */.Text, obj3), ];
+  const items3 = [callback(require(4189) /* Text */.Text, obj3), ];
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = tmp2(1236).intl;
   obj4[3] = intl2.string(require(1236) /* getSystemLocale */.t.b3L8yx);
-  items3[1] = callback(require(4281) /* Text */.Text, obj4);
+  items3[1] = callback(require(4189) /* Text */.Text, obj4);
   obj2[1] = items3;
   items2[1] = closure_11(closure_6, obj2);
   const obj5 = { label: null, placeholder: null, value: null, onChangeText: null, style: null, textStyle: null, clearButtonVisibility: null, error: null, onFocus: null, onBlur: null };
-  const tmp13 = importDefault(5661);
+  const tmp13 = importDefault(5570);
   const intl3 = tmp2(1236).intl;
   obj5[0] = intl3.string(require(1236) /* getSystemLocale */.t.ilDlmW);
   const intl4 = tmp2(1236).intl;
@@ -122,7 +170,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
       }
     }, 100);
   };
-  items2[2] = callback(tmp5(8276), obj5);
+  items2[2] = callback(tmp5(9004), obj5);
   items2[3] = callback(closure_6, { style: tmp.redesignGrowSpacing });
   const obj7 = { style: tmp.redesignButtonContainer, children: null };
   const obj8 = { size: "lg", text: null, onPress: null };
@@ -138,7 +186,7 @@ function GuildDirectoryNicknameUpsell(arg0) {
     }
     return applyArgumentsResult;
   };
-  obj7[1] = callback(require(4695) /* Button */.Button, obj8);
+  obj7[1] = callback(require(4604) /* Button */.Button, obj8);
   items2[4] = callback(closure_6, obj7);
   obj[2] = items2;
   return closure_11(tmp11, obj);
@@ -166,7 +214,7 @@ const result = require("noop").fileFinishedImporting("modules/directory_channels
 export default function GuildDirectoryNicknameUpsellModal(arg0) {
   const _require = arg0;
   let obj = { screens: null, initialRouteName: null };
-  obj[0] = importDefault(5598)(() => {
+  obj[0] = importDefault(5507)(() => {
     let closure_0;
     let closure_1;
     ({ guildId: closure_0, onHide: closure_1 } = callback);
@@ -189,5 +237,5 @@ export default function GuildDirectoryNicknameUpsellModal(arg0) {
     return obj;
   });
   obj[1] = UPSELL_SCREEN_KEY;
-  return callback(_require(5665).Navigator, obj);
+  return callback(_require(5574).Navigator, obj);
 };

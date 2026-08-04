@@ -1,3 +1,4 @@
+// discord_app/modules/self_mod/hooks/useUserIsTeen.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 
 const require = arg1;

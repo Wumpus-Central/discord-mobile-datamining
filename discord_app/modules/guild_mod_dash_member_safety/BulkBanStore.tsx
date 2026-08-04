@@ -1,3 +1,4 @@
+// discord_app/modules/guild_mod_dash_member_safety/BulkBanStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";
 import set from "dispatcher";

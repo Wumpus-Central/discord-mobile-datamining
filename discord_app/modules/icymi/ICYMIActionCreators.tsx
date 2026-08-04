@@ -1,3 +1,4 @@
+// discord_app/modules/icymi/ICYMIActionCreators.tsx
 import generateHydrationId from "generateHydrationId";
 import { Endpoints } from "ME";
 
@@ -214,85 +215,31 @@ export default {
     let closure_0 = items;
     let closure_1 = icymi_info_modal;
     return callback(function*() {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === constants) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let closure_1 = tmp3;
-              let closure_0 = tmp7;
-              if (obj8.icymiEnabled("gravityJoinGuild")) {
-                if (0 !== outer1_0.length) {
-                  let c3 = 1;
-                  const HTTP = outer1_0(outer1_2[2]).HTTP;
-                  let obj1 = { url: null, body: null, rejectWithError: false };
-                  obj1[0] = constants.GRAVITY_JOIN_GUILD;
-                  const obj2 = { guild_ids: null, location: null };
-                  obj2[0] = tmp16;
-                  obj2[1] = outer1_1;
-                  obj1[1] = obj2;
-                  constants = 2;
-                  c5 = 1;
-                  const obj3 = { value: null, done: false };
-                  obj3[0] = HTTP.post(obj1);
-                  return obj3;
-                }
-              }
-              c5 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } else if (1 === tmp7) {
-            c3 = 0;
-            closure_0 = closure_2;
-            obj1 = outer1_1(outer1_2[4]);
-            obj1.captureException(closure_0);
-            c5 = 3;
-            return { value: false, done: true };
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c3 = 0;
-            c5 = 3;
-            return { value: true, done: true };
-          }
-        } catch (tmp20) {
-          closure_2 = tmp20;
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp20;
-          } else {
-            constants = tmp;
-          }
+      if (obj8.icymiEnabled("gravityJoinGuild")) {
+        if (0 !== outer1_0.length) {
+          let c3 = 1;
+          const HTTP = outer1_0(outer1_2[2]).HTTP;
+          let obj1 = { url: null, body: null, rejectWithError: false };
+          obj1[0] = constants.GRAVITY_JOIN_GUILD;
+          const obj2 = { guild_ids: null, location: null };
+          obj2[0] = tmp16;
+          obj2[1] = outer1_1;
+          obj1[1] = obj2;
+          constants = 2;
+          let c5 = 1;
+          const obj3 = { value: null, done: false };
+          obj3[0] = HTTP.post(obj1);
+          return obj3;
         }
       }
+      c5 = 3;
+      yield "HermesInternal";
+      c3 = 0;
+      obj1 = outer1_1(outer1_2[4]);
+      obj1.captureException(closure_0);
+      c5 = 3;
+      c3 = 0;
+      c5 = 3;
     })();
   },
   fetchForNotification(channel_id, message_id) {
@@ -393,7 +340,7 @@ export default {
     })();
   },
   fetchForStatusNotification(arg0) {
-    let obj = require(8834) /* generateHydrationId */;
+    let obj = require(8188) /* generateHydrationId */;
     if (obj.icymiEnabled("fetchInitialStatus")) {
       obj = { type: "LOAD_ICYMI_FROM_NOTIFICATION", customStatusItem: null };
       obj[1] = arg0;

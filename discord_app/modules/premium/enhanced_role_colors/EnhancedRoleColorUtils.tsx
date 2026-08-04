@@ -1,3 +1,4 @@
+// discord_app/modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx
 import { DEFAULT_ROLE_COLOR_HEX } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx");

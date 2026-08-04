@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/nameplates/hooks/useNameplate.tsx
 import noop from "noop";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 

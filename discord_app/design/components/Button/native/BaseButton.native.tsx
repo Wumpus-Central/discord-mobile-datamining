@@ -1,21 +1,33 @@
+// discord_app/design/components/Button/native/BaseButton.native.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { IOS_POINTER_STYLE } from "IOS_POINTER_STYLE";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4146";
-import importDefaultResult1 from "module_4146";
+import importDefaultResult from "module_4054";
+import importDefaultResult1 from "module_4054";
 
 let Pressable;
 let TouchableOpacity;
 const require = arg1;
-let closure_2 = ["style"];
-let c4 = importAllResult;
+let closure_3 = ["style"];
+let c5 = importAllResult;
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
-let closure_7 = createCacheKey.createStyles({ disabled: { opacity: 0.5 } });
-let closure_8 = require("module_4146").createAnimatedComponent(Pressable);
-let closure_9 = require("module_4146").createAnimatedComponent(TouchableOpacity);
+let closure_8 = createCacheKey.createStyles((arg0) => {
+  let prop = {};
+  if ("primary-overlay" === arg0) {
+    prop = importDefault(712).shadows.SHADOW_BUTTON_OVERLAY;
+  }
+  let obj = { button: null, disabled: null };
+  obj = {};
+  const merged = Object.assign(prop);
+  obj[0] = obj;
+  obj[1] = { opacity: 0.5 };
+  return obj;
+});
+let closure_9 = require("module_4054").createAnimatedComponent(Pressable);
+let closure_10 = require("module_4054").createAnimatedComponent(TouchableOpacity);
 const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   let accessibilityActions;
   let accessibilityElementsHidden;
@@ -53,18 +65,19 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
   }
   ({ pressed, onPress, onPressDisabled, onPressIn, onPressOut, onLayout, accessible, accessibilityRole, accessibilityLabel, accessibilityHint, accessibilityState } = disabled);
   ({ accessibilityElementsHidden, importantForAccessibility, hitSlop, scaleAmountInPx } = disabled);
-  let c2;
+  let dependencyMap;
   let buttonAnimationProps;
   ({ onLongPress, accessibilityValue, accessibilityActions, onAccessibilityAction, pointerEvents } = disabled);
+  const tmp = callback(variant);
   let tmp2 = flag;
   if (flag) {
     tmp2 = null == onPressDisabled;
   }
-  c2 = tmp2;
+  dependencyMap = tmp2;
   if (flag) {
     onPress = onPressDisabled;
   }
-  let obj = flag2(accessibilityState[7]);
+  let obj = flag2(4609);
   const buttonPressAnimationProps = obj.useButtonPressAnimationProps(pressed, scaleAmountInPx, onLayout, onPressIn, onPressOut);
   if (null == pressed) {
     obj = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
@@ -88,7 +101,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     obj.busy = flag2;
     return obj;
   }, items);
-  let tmp4Result = tmp4(tmp5[5]);
+  let tmp4Result = tmp4(3905);
   let str = "light";
   if ("primary-overlay" !== variant) {
     let str3;
@@ -104,15 +117,15 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     const obj2 = { theme: null, children: null };
     obj2[0] = str;
     obj2[1] = children;
-    tmp11 = jsx(tmp4(tmp5[5]).ThemeContextProvider, { theme: null, children: null });
+    tmp11 = jsx(tmp4(3905).ThemeContextProvider, { theme: null, children: null });
   }
-  const items1 = [disabled.style, , , ];
+  const items1 = [tmp.button, disabled.style, , , ];
   if (flag) {
     flag = tmp.disabled;
   }
-  items1[1] = flag;
-  items1[2] = obj1.animatedScaleStyles;
-  items1[3] = IOS_POINTER_STYLE;
+  items1[2] = flag;
+  items1[3] = obj1.animatedScaleStyles;
+  items1[4] = IOS_POINTER_STYLE;
   if ("none" !== accessibilityRole) {
     const obj3 = {};
     let merged = Object.assign(buttonAnimationProps);
@@ -137,12 +150,12 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     obj3.disabled = tmp2;
     obj3.hitSlop = hitSlop;
     obj3.children = tmp11;
-    return <closure_8 />;
+    return <closure_9 />;
   } else {
     let str5 = "";
     if (!accessibilityElementsHidden) {
       const items2 = [accessibilityLabel, accessibilityHint];
-      const found = items2.filter(tmp4(tmp5[9]).isNotNullish);
+      const found = items2.filter(tmp4(1351).isNotNullish);
       str5 = found.join(", ");
     }
     const obj4 = {};
@@ -150,7 +163,7 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     obj4.ref = ref;
     let isAndroidResult = accessible;
     if (accessible == null) {
-      tmp4Result = tmp4(tmp5[10]);
+      tmp4Result = tmp4(500);
       isAndroidResult = tmp4Result.isAndroid();
     }
     obj4.accessible = !isAndroidResult;
@@ -175,9 +188,8 @@ const forwardRefResult = importAllResult.forwardRef((disabled, ref) => {
     };
     obj4.hitSlop = hitSlop;
     obj4.children = tmp11;
-    return <closure_9 />;
+    return <closure_10 />;
   }
-  tmp = callback();
 });
 const result = require("get ActivityIndicator").fileFinishedImporting("design/components/Button/native/BaseButton.native.tsx");
 

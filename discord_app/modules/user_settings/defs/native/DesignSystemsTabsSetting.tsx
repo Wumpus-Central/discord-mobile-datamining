@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DesignSystemsTabsSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -10,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TABS,
   getComponent() {
-    return require(14691) /* UserSettingsDesignSystemTabs */.default;
+    return require(14591) /* UserSettingsDesignSystemTabs */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useProductDescription.tsx
 import { useMemo } from "noop";
 
 function getBundleDescription(bundledProducts) {

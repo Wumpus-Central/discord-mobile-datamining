@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx
 import handleFormInit from "handleFormInit";
 import fetchFingerprint from "fetchFingerprint";
 import updateWithLatestInvite from "updateWithLatestInvite";
@@ -8,7 +9,7 @@ import "initialize";
 
 const require = arg1;
 function handlePushedModal(key) {
-  let obj = require(4137) /* getRootNavigationRef */;
+  let obj = require(4045) /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     obj = { name: "modal", key: null, params: null };
@@ -20,7 +21,7 @@ function handlePushedModal(key) {
   }
 }
 function handlePoppedModal() {
-  require(4136) /* navigationToRootTabHelper */.popModal();
+  require(4044) /* navigationToRootTabHelper */.popModal();
 }
 function pushFirstOpenModal(arg0, arg1) {
   const iter = arg0[Symbol.iterator]();
@@ -42,7 +43,7 @@ function pushFirstOpenModal(arg0, arg1) {
     if (store != null) {
       getProps = store.getProps;
     }
-    if (typeof getProps === "function") {
+    if (typeof getProps === "fileFinishedImporting") {
       let tmp7 = key;
       let store2 = key.store;
       let props = store2.getProps();
@@ -57,7 +58,7 @@ function pushFirstOpenModal(arg0, arg1) {
     key = key.key;
     obj[0] = key;
     let num = 0;
-    component = handlePushedModal(importDefault(4492)(component, obj, props));
+    component = handlePushedModal(importDefault(4401)(component, obj, props));
   }
 }
 function createPushModalHandler(closure_15, closure_152) {
@@ -79,18 +80,18 @@ let closure_15 = {
     if (action == null) {
       action = importDefaultResult.getAction();
     }
-    let result = importDefault(8270).isFullScreenVerification(action);
+    let result = importDefault(9194).isFullScreenVerification(action);
     if (result) {
       result = null != token.getToken();
     }
     if (result) {
-      result = !require(16460) /* isEligibleForSafetyFlowsExperiment */.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
-      const obj2 = require(16460) /* isEligibleForSafetyFlowsExperiment */;
+      result = !require(16362) /* isEligibleForSafetyFlowsExperiment */.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
+      const obj2 = require(16362) /* isEligibleForSafetyFlowsExperiment */;
     }
     return result;
   },
   getComponent() {
-    return require(16461) /* PhoneThenEmailInterstitial */.default;
+    return require(16363) /* PhoneThenEmailInterstitial */.default;
   }
 };
 const USER_REQUIRED_ACTION_UPDATE = "USER_REQUIRED_ACTION_UPDATE";
@@ -106,7 +107,7 @@ let closure_17 = {
     return action === UserRequiredActions.AGREEMENTS;
   },
   getComponent() {
-    return require(16469) /* handleTouch */.default;
+    return require(16371) /* handleTouch */.default;
   }
 };
 let prototype = function DeprecatedModalManager() {
@@ -117,15 +118,15 @@ let prototype = function DeprecatedModalManager() {
     USER_REQUIRED_ACTION_UPDATE(requiredAction) {
       if (null == requiredAction.requiredAction) {
         if (obj.isModalOpen(closure_16)) {
-          let tmp5Result = tmp5(4136);
+          let tmp5Result = tmp5(4044);
           tmp5Result.popModal(tmp7);
         }
-        tmp5Result = tmp5(4136);
+        tmp5Result = tmp5(4044);
         if (tmp5Result.isModalOpen(closure_14)) {
-          tmp5(4136).popModal(tmp9);
-          const tmp5Result1 = tmp5(4136);
+          tmp5(4044).popModal(tmp9);
+          const tmp5Result1 = tmp5(4044);
         }
-        obj = callback(4136);
+        obj = callback(4044);
         tmp7 = closure_16;
         tmp9 = closure_14;
       } else {
@@ -149,7 +150,7 @@ let prototype = function DeprecatedModalManager() {
     store: handleFormInit,
     closable: false,
     getComponent() {
-      return callback(16470).default;
+      return callback(16372).default;
     }
   };
   obj = {
@@ -157,7 +158,7 @@ let prototype = function DeprecatedModalManager() {
     store: FormStates,
     closable: false,
     getComponent() {
-      return callback(16751).default;
+      return callback(16654).default;
     }
   };
   applyArgumentsResult.actions = obj;

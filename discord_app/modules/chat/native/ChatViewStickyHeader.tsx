@@ -1,3 +1,4 @@
+// discord_app/modules/chat/native/ChatViewStickyHeader.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import { LOCATION_CONTEXT_MOBILE } from "LOCATION_CONTEXT_MOBILE";
@@ -11,23 +12,23 @@ function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   let channelId;
   let senderId;
   ({ channelId, senderId } = arg0);
-  let obj = require(10254) /* useStrangerDangerWarning */;
+  let obj = require(10445) /* useStrangerDangerWarning */;
   const strangerDangerWarning = obj.useStrangerDangerWarning(channelId);
-  let obj1 = require(10259) /* useInappropriateConversationBannerForChannel */;
+  let obj1 = require(10449) /* useInappropriateConversationBannerForChannel */;
   const inappropriateConversationBannerForChannel = obj1.useInappropriateConversationBannerForChannel(channelId, LOCATION_CONTEXT_MOBILE);
-  const likelyAtoWarning = require(10263) /* useLikelyAtoWarning */.useLikelyAtoWarning(channelId);
+  const likelyAtoWarning = require(10450) /* useLikelyAtoWarning */.useLikelyAtoWarning(channelId);
   if (null != likelyAtoWarning) {
     obj = { channelId: null, warningId: null, senderId: null };
     obj[0] = channelId;
     obj[1] = likelyAtoWarning.id;
     obj[2] = senderId;
-    let tmp5 = callback2(importDefault(10264), obj);
+    let tmp5 = callback2(importDefault(10451), obj);
   } else if (null != strangerDangerWarning) {
     obj = { channelId: null, warningId: null, senderId: null };
     obj[0] = channelId;
     obj[1] = strangerDangerWarning.id;
     obj[2] = senderId;
-    tmp5 = callback2(importDefault(10277), obj);
+    tmp5 = callback2(importDefault(10461), obj);
   } else {
     tmp5 = null;
     if (null != inappropriateConversationBannerForChannel) {
@@ -35,7 +36,7 @@ function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
       obj1[0] = channelId;
       obj1[1] = inappropriateConversationBannerForChannel.id;
       obj1[2] = senderId;
-      tmp5 = callback2(importDefault(10283), obj1);
+      tmp5 = callback2(importDefault(10467), obj1);
     }
   }
   return tmp5;
@@ -49,7 +50,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScroll
   let importDefault;
   const tmp = callback(importAllResult.useState(false), 2);
   importDefault = tmp[1];
-  ({ showUnreadsNotice, clearUnreadsNotice } = importDefault(10307)(channel));
+  ({ showUnreadsNotice, clearUnreadsNotice } = importDefault(10468)(channel));
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
     onChatViewScrolled(isFirstMessageVisible) {
       if (forumPost.isForumPost()) {
@@ -63,7 +64,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScroll
     if (tmp[0]) {
       let obj = { channel: null };
       obj[0] = channel;
-      tmp8 = callback2(tmp2(10309), obj);
+      tmp8 = callback2(tmp2(10470), obj);
     }
   }
   const items = [tmp8, , , ];
@@ -80,11 +81,11 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((handleScroll
     obj = { channel: null, clearUnreadsNotice: null };
     obj[0] = channel;
     obj[1] = clearUnreadsNotice;
-    tmp13 = callback2(tmp2(10313), obj);
+    tmp13 = callback2(tmp2(10472), obj);
   }
   const obj1 = { children: null };
   items[2] = tmp13;
-  items[3] = callback2(importDefault(10316), { channel, handleScrollToNewMessages: handleScrollToNewMessages.scrollToNewMessages });
+  items[3] = callback2(importDefault(10475), { channel, handleScrollToNewMessages: handleScrollToNewMessages.scrollToNewMessages });
   obj1[0] = items;
   return closure_8(closure_7, obj1);
 }));

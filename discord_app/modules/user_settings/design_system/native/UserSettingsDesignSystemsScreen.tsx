@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";
@@ -20,5 +21,5 @@ export default function SettingsDesignSystemsScreen() {
     sections[3] = { label: "Legacy Audit", settings: items4 };
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(importDefault(13793), { node });
+  return jsx(importDefault(13697), { node });
 };

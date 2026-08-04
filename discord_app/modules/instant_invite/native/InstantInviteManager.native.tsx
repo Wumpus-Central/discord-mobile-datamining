@@ -1,3 +1,4 @@
+// discord_app/modules/instant_invite/native/InstantInviteManager.native.tsx
 import "initialize";
 
 let require = arg1;
@@ -10,7 +11,7 @@ let prototype = function InstantInviteManager() {
     }
   };
   applyArgumentsResult.shareInviteFailed = function shareInviteFailed() {
-    let obj = callback(3986);
+    let obj = callback(3894);
     obj = { key: "GROUP_DM_ADD_ERROR", content: null };
     const intl = applyArgumentsResult(1236).intl;
     obj[1] = intl.string(applyArgumentsResult(1236).t["N/9OFy"]);

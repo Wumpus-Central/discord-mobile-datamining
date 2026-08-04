@@ -1,3 +1,4 @@
+// discord_app/modules/messages/useMessageAuthor.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
@@ -232,7 +233,7 @@ function computeMessageAuthor(channel) {
   let str = "???";
   if (null != user) {
     if (userName == null) {
-      let obj = importDefault(4124);
+      let obj = importDefault(4032);
       userName = obj.getName(user);
     }
     str = userName;

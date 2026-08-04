@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AuthorizedAppSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -11,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.AUTHORIZED_APP,
   getComponent() {
-    return require(14090) /* AuthorizedAppScreen */.default;
+    return require(13990) /* AuthorizedAppScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

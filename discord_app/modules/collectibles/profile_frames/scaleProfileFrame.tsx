@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_frames/scaleProfileFrame.tsx
 let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/scaleProfileFrame.tsx");
 
 export default function scaleProfileFrame(innerWidth) {

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/components/MemberVerificationGuildHeader.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import BANNER_RATIO_HEIGHT_16_9 from "BANNER_RATIO_HEIGHT_16_9";

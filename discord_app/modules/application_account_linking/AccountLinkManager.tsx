@@ -1,3 +1,4 @@
+// discord_app/modules/application_account_linking/AccountLinkManager.tsx
 import _slicedToArray from "_slicedToArray";
 import set from "set";
 import recomputeFromAppTokens from "recomputeFromAppTokens";
@@ -19,35 +20,97 @@ function _claimIncentivizedAccountLinkingReward() {
       let c0;
       let c1;
       let c2;
-      c2 = tmp3;
-      const dependencyMap = tmp5;
-      ({ applicationId: c0, onSuccess: c1, onError: c2 } = callback);
-      yield "ct";
-      let c4 = 1;
-      const HTTP = callback(530).HTTP;
-      const obj2 = { url: null, body: null, rejectWithError: true };
-      obj2[0] = obj.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT;
-      const obj3 = { application_id: null };
-      obj3[0] = callback;
-      obj2[1] = obj3;
-      yield HTTP.post(obj2);
-      if (2 === tmp8) {
-        c4 = 0;
-        if (c2 != null) {
-          tmp14(set);
-        }
-        let c6 = 3;
-      } else if (arg0 === 1) {
+      if (c6 === 2) {
         c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        if (dependencyMap != null) {
-          dependencyMap();
+        HermesBuiltin.throwTypeError();
+      } else if (tmp7 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
         }
-        c4 = 0;
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              c2 = tmp3;
+              let dependencyMap = tmp5;
+              let callback;
+              dependencyMap = undefined;
+              c2 = undefined;
+              ({ applicationId: c0, onSuccess: c1, onError: c2 } = callback);
+              c5 = 1;
+              c6 = 1;
+              return { value: "ct", done: "Array" };
+            }
+          } else if (1 === tmp8) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
+            } else {
+              let c4 = 1;
+              const HTTP = callback(530).HTTP;
+              const obj2 = { url: null, body: null, rejectWithError: true };
+              obj2[0] = obj.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT;
+              const obj3 = { application_id: null };
+              obj3[0] = callback;
+              obj2[1] = obj3;
+              c5 = 3;
+              c6 = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = HTTP.post(obj2);
+              return obj4;
+            }
+          } else {
+            if (2 === tmp8) {
+              c4 = 0;
+              if (c2 != null) {
+                tmp14(set);
+              }
+              c6 = 3;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              if (dependencyMap != null) {
+                dependencyMap();
+              }
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp25) {
+          set = tmp25;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp25;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      c4 = 0;
-      return arg1;
     })();
     iter.next();
     return iter;

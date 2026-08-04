@@ -1,3 +1,4 @@
+// discord_app/modules/devtools/native/components/screens/performance/useFrameMonitor.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
@@ -19,7 +20,7 @@ export default function useFrameMonitor(stateFromStores) {
     if (current != null) {
       current.stop();
     }
-    ref.current = stateFromStores(14946).startFrameMonitor();
+    ref.current = stateFromStores(14846).startFrameMonitor();
     dependencyMap(true);
   }, []);
   const stop = React.useCallback(() => {

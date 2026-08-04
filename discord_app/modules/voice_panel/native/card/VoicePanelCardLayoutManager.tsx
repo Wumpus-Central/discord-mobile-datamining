@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/card/VoicePanelCardLayoutManager.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { PixelRatio } from "get ActivityIndicator";
@@ -479,7 +480,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
               ({ item, dimensions } = obj);
               let num7 = dimensions.height;
               const id = item.id;
-              if (typeof closure_20 !== "function") {
+              if (typeof closure_20 !== "fileFinishedImporting") {
                 HermesBuiltin.throwTypeError();
               }
               let arr = closure_14;

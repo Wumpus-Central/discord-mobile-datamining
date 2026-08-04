@@ -1,3 +1,4 @@
+// discord_app/modules/friend_suggestions/FriendSuggestionUtils.tsx
 const result = require("set").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");
 
 export const getSuggestedContactNameForSuggestion = function getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend) {

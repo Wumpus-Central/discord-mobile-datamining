@@ -1,3 +1,4 @@
+// discord_app/modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 

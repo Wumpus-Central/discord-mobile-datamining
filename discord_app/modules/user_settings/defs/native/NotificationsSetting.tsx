@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/NotificationsSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.NOTIFICATIONS,
   getComponent() {
-    return require(14558) /* SystemNotificationsSubLabel */.default;
+    return require(14458) /* SystemNotificationsSubLabel */.default;
   }
 };
 const route = createToggle.createRoute(obj);

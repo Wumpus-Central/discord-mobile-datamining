@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/shared_components/MainTabsV2Constants.tsx
 const result = 2 * require("get ActivityIndicator").StyleSheet.hairlineWidth;
 const result1 = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MainTabsV2Constants.tsx");
 

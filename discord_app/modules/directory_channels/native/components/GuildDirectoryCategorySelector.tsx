@@ -1,3 +1,4 @@
+// discord_app/modules/directory_channels/native/components/GuildDirectoryCategorySelector.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { View } from "get ActivityIndicator";

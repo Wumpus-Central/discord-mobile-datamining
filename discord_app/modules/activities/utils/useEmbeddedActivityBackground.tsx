@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/useEmbeddedActivityBackground.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

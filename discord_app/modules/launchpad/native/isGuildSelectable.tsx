@@ -1,3 +1,4 @@
+// discord_app/modules/launchpad/native/isGuildSelectable.tsx
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
 import reset from "reset";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";

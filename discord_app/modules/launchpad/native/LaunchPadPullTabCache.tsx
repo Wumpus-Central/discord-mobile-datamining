@@ -1,3 +1,4 @@
+// discord_app/modules/launchpad/native/LaunchPadPullTabCache.tsx
 import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG";
 
 let c3;
@@ -53,8 +54,8 @@ function setLaunchPadPullTabExclusionRect() {
       obj[2] = tmp;
       obj[3] = sum;
       const items = [obj];
-      const result = importDefault(4836).setSystemGestureExclusionRects(items);
-      const obj5 = importDefault(4836);
+      const result = importDefault(4745).setSystemGestureExclusionRects(items);
+      const obj5 = importDefault(4745);
     }
   }
 }
@@ -94,8 +95,8 @@ export const clearLaunchPadPullTabExclusionRect = function clearLaunchPadPullTab
   }
   if (isAndroidResult) {
     c8 = undefined;
-    const result = importDefault(4836).setSystemGestureExclusionRects([]);
-    const obj2 = importDefault(4836);
+    const result = importDefault(4745).setSystemGestureExclusionRects([]);
+    const obj2 = importDefault(4745);
   }
 };
 export { setLaunchPadPullTabExclusionRect };

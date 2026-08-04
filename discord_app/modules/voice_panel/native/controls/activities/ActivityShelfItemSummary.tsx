@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItemSummary.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import { View } from "get ActivityIndicator";
@@ -12,12 +13,12 @@ function ParticipantsSummary(arg0) {
   let applicationId;
   let channelId;
   ({ applicationId, channelId } = arg0);
-  const obj = { users: importDefault(16093)(applicationId, channelId), max: 5, avatarSize: null, withPlusCount: true, style: null, cutout: null };
-  const tmp = importDefault(16093)(applicationId, channelId);
+  const obj = { users: importDefault(15997)(applicationId, channelId), max: 5, avatarSize: null, withPlusCount: true, style: null, cutout: null };
+  const tmp = importDefault(15997)(applicationId, channelId);
   obj[2] = require(1297) /* Button */.AvatarSizes.REFRESH_MEDIUM_32;
   obj[4] = { marginBottom: 8 };
   obj[5] = { inset: -8 };
-  return callback2(importDefault(10829), obj);
+  return callback2(importDefault(10030), obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { ongoingActivityContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)", alignItems: "center", justifyContent: "center" }, overlayActivityName: null, overlayActivityNameText: null, loadingTextColor: null, ellipsis: null };
@@ -41,18 +42,18 @@ export default function ActivityShelfItemSummary(submitting) {
     flag = false;
   }
   const tmp = createCacheKey();
-  let obj = require(4704) /* PillWrapper */;
+  let obj = require(4613) /* PillWrapper */;
   obj = { style: tmp.ongoingActivityContainer, children: null };
   obj = { style: tmp.overlayActivityName, children: null };
   let tmp7Result = flag;
-  const items = [closure_5(require(4281) /* Text */.Text, { variant: "text-md/semibold", style: flag ? tmp.loadingTextColor : tmp.overlayActivityNameText, lineClamp: 2, children: applicationName }), ];
+  const items = [closure_5(require(4189) /* Text */.Text, { variant: "text-md/semibold", style: flag ? tmp.loadingTextColor : tmp.overlayActivityNameText, lineClamp: 2, children: applicationName }), ];
   const obj2 = { style: items1, children: null };
   items1 = [tmp.ellipsis, callback(obj.useLoadingStyles(flag, "md"), 2)[1]];
   if (tmp7Result) {
-    tmp7Result = tmp7(require(4710) /* EllipsisCircle */.Ellipsis, { variant: "active", size: "md" });
+    tmp7Result = tmp7(require(4619) /* EllipsisCircle */.Ellipsis, { variant: "active", size: "md" });
   }
   obj2[1] = tmp7Result;
-  items[1] = closure_5(importDefault(4146).View, obj2);
+  items[1] = closure_5(importDefault(4054).View, obj2);
   obj[1] = items;
   const items2 = [closure_6(View, obj), closure_5(ParticipantsSummary, { channelId, applicationId })];
   obj[1] = items2;

@@ -1,3 +1,4 @@
+// discord_app/components_native/common/ViewEmptyState.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { Fonts } from "ME";

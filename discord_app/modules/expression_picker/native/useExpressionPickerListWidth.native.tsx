@@ -1,3 +1,4 @@
+// discord_app/modules/expression_picker/native/useExpressionPickerListWidth.native.tsx
 import { PADDING_HORIZONTAL } from "ExpressionPickerViewType";
 import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
 

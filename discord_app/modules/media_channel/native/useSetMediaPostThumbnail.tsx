@@ -1,3 +1,4 @@
+// discord_app/modules/media_channel/native/useSetMediaPostThumbnail.tsx
 import noop from "noop";
 import { DraftType } from "handleChanged";
 import map from "map";

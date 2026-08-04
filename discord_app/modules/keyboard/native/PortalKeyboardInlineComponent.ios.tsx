@@ -1,3 +1,4 @@
+// discord_app/modules/keyboard/native/PortalKeyboardInlineComponent.ios.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -17,13 +18,13 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
   let field1;
   let closure_7;
   id = importAllResult.useId();
-  const tmp2 = id(4151)();
+  const tmp2 = id(4059)();
   dependencyMap = tmp2;
-  let tmp4 = id(5913)({ includeCustomKeyboard: false });
+  let tmp4 = id(6747)({ includeCustomKeyboard: false });
   importAllResult = tmp4;
   let tmp3 = id(1847)();
-  keyboardContextForType = messagesRef(4151).useKeyboardContextForType(messagesRef(1579).KeyboardTypes.SYSTEM);
-  id(4711)(() => () => {
+  keyboardContextForType = messagesRef(4059).useKeyboardContextForType(messagesRef(1579).KeyboardTypes.SYSTEM);
+  id(4620)(() => () => {
     const PortalKeyboardUIStore = outer1_0(outer1_2[8]).PortalKeyboardUIStore;
     const field = PortalKeyboardUIStore.getField("keyboard");
     let tmp4 = null != field;
@@ -37,9 +38,9 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
       tmpResult.closePortalKeyboard();
     }
   });
-  let PortalKeyboardUIStore = messagesRef(4152).PortalKeyboardUIStore;
+  let PortalKeyboardUIStore = messagesRef(4060).PortalKeyboardUIStore;
   field = PortalKeyboardUIStore.useField("keyboard");
-  const PortalKeyboardUIStore2 = messagesRef(4152).PortalKeyboardUIStore;
+  const PortalKeyboardUIStore2 = messagesRef(4060).PortalKeyboardUIStore;
   field1 = PortalKeyboardUIStore2.useField("state");
   closure_7 = importAllResult.useRef(false);
   const items = [messagesRef.channelId, id, field, field1, tmp2, messagesRef, keyboardContextForType, tmp3, tmp4];

@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/clips/native/SettingsClipsScreen.tsx
 import noop from "noop";
 import { MobileSetting } from "MobileSetting";
 import { jsx } from "jsxProd";
@@ -11,5 +12,5 @@ export default function ClipsSettingsScreen() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(importDefault(13793), { node });
+  return jsx(importDefault(13697), { node });
 };

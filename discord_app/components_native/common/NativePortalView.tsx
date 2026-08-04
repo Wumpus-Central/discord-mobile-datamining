@@ -1,3 +1,4 @@
+// discord_app/components_native/common/NativePortalView.tsx
 import importAllResult from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

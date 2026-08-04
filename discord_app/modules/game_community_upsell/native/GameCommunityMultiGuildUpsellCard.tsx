@@ -1,3 +1,4 @@
+// discord_app/modules/game_community_upsell/native/GameCommunityMultiGuildUpsellCard.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import _slicedToArray from "_slicedToArray";
 import GuildBadgeV2 from "GuildBadgeV2";

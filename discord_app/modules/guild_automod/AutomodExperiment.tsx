@@ -1,3 +1,4 @@
+// discord_app/modules/guild_automod/AutomodExperiment.tsx
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Automod Mention Raid Limit", config: { enabled: true } }];

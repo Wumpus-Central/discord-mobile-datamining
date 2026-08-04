@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/CollectiblesShopSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -10,11 +11,11 @@ obj = {
   screen: obj,
   usePreNavigationAction() {
     return () => {
-      let obj = callback(6909);
+      let obj = callback(5802);
       obj = { analyticsLocations: null, analyticsSource: null };
-      const items = [callback2(5630).USER_SETTINGS];
+      const items = [callback2(5539).USER_SETTINGS];
       obj[0] = items;
-      obj[1] = callback2(5630).USER_SETTINGS;
+      obj[1] = callback2(5539).USER_SETTINGS;
       const result = obj.openCollectiblesShopMobile(obj);
       return false;
     };
@@ -23,7 +24,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.COLLECTIBLES_SHOP,
   getComponent() {
-    return require(14721) /* CollectiblesShopScreen */.default;
+    return require(14621) /* CollectiblesShopScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,3 +1,4 @@
+// discord_app/modules/activities/useActivityUsers.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import participantFromServer from "participantFromServer";
 

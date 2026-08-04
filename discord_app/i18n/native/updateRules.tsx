@@ -1,3 +1,4 @@
+// discord_app/i18n/native/updateRules.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 

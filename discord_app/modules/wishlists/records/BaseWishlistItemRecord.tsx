@@ -1,3 +1,4 @@
+// discord_app/modules/wishlists/records/BaseWishlistItemRecord.tsx
 import "toJS";
 import createFromServer from "createFromServer";
 
@@ -33,7 +34,7 @@ prototype["fromServer"] = function fromServer(sku) {
     fromServer = createFromServer.createFromServer(sku);
   }
   obj.sku = fromServer;
-  if (typeof prototype !== "function") {
+  if (typeof prototype !== "fileFinishedImporting") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }

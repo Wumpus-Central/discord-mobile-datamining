@@ -1,3 +1,4 @@
+// discord_app/modules/interactions/InteractionUtils.tsx
 import patchThread from "patchThread";
 import fetchFingerprint from "fetchFingerprint";
 import deleteNonce from "deleteNonce";
@@ -25,162 +26,123 @@ function _executeMessageComponentInteraction() {
       let c6;
       let c7;
       let c8;
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+      let dependencyMap = tmp3;
+      let callback2 = tmp7;
+      let callback;
+      callback2 = undefined;
+      dependencyMap = undefined;
+      c3 = undefined;
+      let sessionId;
+      c5 = undefined;
+      let constants;
+      c7 = undefined;
+      c8 = undefined;
+      ({ componentType: c0, messageId: c1, messageFlags: c2, customId: c3, componentId: c4, applicationId: c5, channelId: c6, guildId: c7, localState: c8 } = callback);
+      let obj6;
+      sessionId = 1;
+      c5 = 1;
+      yield "ct";
+      if (1 === tmp7) {
         if (arg0 === 1) {
+          c5 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          c5 = 3;
+          let obj1 = { value: null, done: true };
+          obj1[0] = arg1;
+          return obj1;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === sessionId) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let dependencyMap = tmp3;
-              let callback2 = tmp7;
-              let callback;
-              callback2 = undefined;
-              dependencyMap = undefined;
-              c3 = undefined;
-              sessionId = undefined;
-              c5 = undefined;
-              let constants;
-              c7 = undefined;
-              c8 = undefined;
-              ({ componentType: c0, messageId: c1, messageFlags: c2, customId: c3, componentId: c4, applicationId: c5, channelId: c6, guildId: c7, localState: c8 } = callback);
-              let closure_9;
-              let obj6;
-              sessionId = 1;
-              c5 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else {
-            if (1 === tmp7) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                let obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                const _Date = Date;
-                closure_9 = callback2(11).fromTimestamp(Date.now());
-                if (c5.canQueueInteraction(callback2, closure_9)) {
-                  c3 = 1;
-                  let obj8 = callback2(7144);
-                  sessionId = 3;
-                  c5 = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = obj8.unarchiveThreadIfNecessary(constants);
-                  return obj2;
-                }
-                const obj17 = callback2(11);
-              }
-            } else if (2 === tmp7) {
-              c3 = 0;
-              c5 = 3;
-              return { value: "HermesInternal", done: null };
-            } else if (3 === tmp7) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 0;
-                c5 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = arg1;
-                return obj3;
-              } else {
-                c3 = 0;
-                const obj4 = { messageId: null, data: null, onFailure: null };
-                obj4[0] = callback2;
-                let obj5 = { interactionType: null, applicationId: null, customId: null, componentId: null };
-                obj5[0] = callback(1906).InteractionTypes.MESSAGE_COMPONENT;
-                obj5[1] = c5;
-                obj5[2] = c3;
-                obj5[3] = sessionId;
-                obj4[1] = obj5;
-                obj4[2] = function onFailure(code) {
-                  let tmp2 = null == arg1;
-                  if (tmp2) {
-                    tmp2 = null != code;
-                  }
-                  if (tmp2) {
-                    _undefined(_undefined2[9]).sendClydeError(c6, code);
-                    const obj = _undefined(_undefined2[9]);
-                  }
-                };
-                callback(8031).addQueued(closure_9, obj4);
-                if (null != c8) {
-                  obj1 = callback(8031);
-                  const result = obj1.queueInteractionComponentState(callback2, closure_9, c8, sessionId);
-                }
-                obj6 = { type: null, nonce: null, guild_id: null, channel_id: null, message_flags: null, message_id: null, application_id: null, session_id: null, data: null };
-                obj6[0] = callback(1906).InteractionTypes.MESSAGE_COMPONENT;
-                obj6[1] = closure_9;
-                obj6[2] = c7;
-                obj6[3] = constants;
-                obj6[4] = dependencyMap;
-                obj6[5] = callback2;
-                obj6[6] = c5;
-                obj6[7] = sessionId.getSessionId();
-                const obj7 = { component_type: null, custom_id: null };
-                obj7[0] = callback;
-                obj7[1] = c3;
-                const merged = Object.assign(callback3(c8));
-                obj6[8] = obj7;
-                const HTTP = callback(530).HTTP;
-                obj8 = { url: null, body: null, timeout: 3000, rejectWithError: null };
-                obj8[0] = constants.INTERACTIONS;
-                obj8[1] = obj6;
-                obj5 = callback(530);
-                obj8[3] = obj5.rejectWithMigratedError();
-                sessionId = 4;
-                c5 = 1;
-                const obj9 = { value: null, done: false };
-                obj9[0] = HTTP.post(obj8, (arg0) => {
-                  outer1_12(closure_9, arg0, c5, c6, c7);
-                });
-                return obj9;
-              }
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-            c5 = 3;
-            return { value: "HermesInternal", done: null };
+          const _Date = Date;
+          let closure_9 = callback2(11).fromTimestamp(Date.now());
+          if (c5.canQueueInteraction(callback2, closure_9)) {
+            c3 = 1;
+            let obj8 = callback2(6080);
+            sessionId = 3;
+            c5 = 1;
+            const obj2 = { value: null, done: false };
+            obj2[0] = obj8.unarchiveThreadIfNecessary(constants);
+            return obj2;
           }
-        } catch (tmp46) {
-          if (tmp4 === c3) {
-            c5 = tmp2;
-            throw tmp46;
-          } else {
-            sessionId = tmp;
-          }
+          const obj17 = callback2(11);
         }
+      } else if (2 === tmp7) {
+        c3 = 0;
+        c5 = 3;
+        return { value: "HermesInternal", done: null };
+      } else if (3 === tmp7) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          c3 = 0;
+          c5 = 3;
+          const obj3 = { value: null, done: true };
+          obj3[0] = arg1;
+          return obj3;
+        } else {
+          c3 = 0;
+          const obj4 = { messageId: null, data: null, onFailure: null };
+          obj4[0] = callback2;
+          let obj5 = { interactionType: null, applicationId: null, customId: null, componentId: null };
+          obj5[0] = callback(1906).InteractionTypes.MESSAGE_COMPONENT;
+          obj5[1] = c5;
+          obj5[2] = c3;
+          obj5[3] = sessionId;
+          obj4[1] = obj5;
+          obj4[2] = function onFailure(code) {
+            let tmp2 = null == arg1;
+            if (tmp2) {
+              tmp2 = null != code;
+            }
+            if (tmp2) {
+              _undefined(_undefined2[9]).sendClydeError(c6, code);
+              const obj = _undefined(_undefined2[9]);
+            }
+          };
+          callback(7901).addQueued(closure_9, obj4);
+          if (null != c8) {
+            obj1 = callback(7901);
+            const result = obj1.queueInteractionComponentState(callback2, closure_9, c8, sessionId);
+          }
+          obj6 = { type: null, nonce: null, guild_id: null, channel_id: null, message_flags: null, message_id: null, application_id: null, session_id: null, data: null };
+          obj6[0] = callback(1906).InteractionTypes.MESSAGE_COMPONENT;
+          obj6[1] = closure_9;
+          obj6[2] = c7;
+          obj6[3] = constants;
+          obj6[4] = dependencyMap;
+          obj6[5] = callback2;
+          obj6[6] = c5;
+          obj6[7] = sessionId.getSessionId();
+          const obj7 = { component_type: null, custom_id: null };
+          obj7[0] = callback;
+          obj7[1] = c3;
+          const merged = Object.assign(callback3(c8));
+          obj6[8] = obj7;
+          const HTTP = callback(530).HTTP;
+          obj8 = { url: null, body: null, timeout: 3000, rejectWithError: null };
+          obj8[0] = constants.INTERACTIONS;
+          obj8[1] = obj6;
+          obj5 = callback(530);
+          obj8[3] = obj5.rejectWithMigratedError();
+          sessionId = 4;
+          c5 = 1;
+          const obj9 = { value: null, done: false };
+          obj9[0] = HTTP.post(obj8, (arg0) => {
+            outer1_12(closure_9, arg0, c5, c6, c7);
+          });
+          return obj9;
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
       }
+      c5 = 3;
+      yield "HermesInternal";
     })();
     iter.next();
     return iter;
@@ -233,8 +195,8 @@ function mapMessageComponentLocalStateForAPI(type) {
 function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId) {
   if (!ok.ok) {
     if (ok.hasErr) {
-      require(8031) /* _fetchMessageInteractionData */.setFailed(nonce);
-      const obj10 = require(8031) /* _fetchMessageInteractionData */;
+      require(7901) /* _fetchMessageInteractionData */.setFailed(nonce);
+      const obj10 = require(7901) /* _fetchMessageInteractionData */;
     } else {
       if (ok.status >= 400) {
         if (ok.status < 500) {
@@ -242,7 +204,7 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
             let tmp9 = guildId;
             if (ok.body.code === constants.INVALID_FORM_BODY) {
               if (ok.body.errors) {
-                const firstSkemaError = require(8032) /* getFirstSkemaFieldError */.getFirstSkemaError(ok.body.errors);
+                const firstSkemaError = require(7902) /* getFirstSkemaFieldError */.getFirstSkemaError(ok.body.errors);
                 let tmp28 = null == firstSkemaError;
                 if (!tmp28) {
                   let tmp29 = "INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" !== firstSkemaError.code;
@@ -262,13 +224,13 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
                   importDefault(709).dispatch(obj);
                   const obj7 = importDefault(709);
                 }
-                const obj6 = require(8032) /* getFirstSkemaFieldError */;
+                const obj6 = require(7902) /* getFirstSkemaFieldError */;
                 const tmp24 = require;
                 let message;
                 if (firstSkemaError != null) {
                   message = firstSkemaError.message;
                 }
-                require(8031) /* _fetchMessageInteractionData */.setFailed(nonce, undefined, message);
+                require(7901) /* _fetchMessageInteractionData */.setFailed(nonce, undefined, message);
               }
             }
             if (ok.body.code === constants.UNKNOWN_INTEGRATION) {
@@ -282,17 +244,17 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
               obj[3] = tmp20;
               importDefault(709).dispatch(obj);
               const obj3 = importDefault(709);
-              require(8031) /* _fetchMessageInteractionData */.setFailed(nonce, undefined, ok.body.message);
-              const obj5 = require(8031) /* _fetchMessageInteractionData */;
+              require(7901) /* _fetchMessageInteractionData */.setFailed(nonce, undefined, ok.body.message);
+              const obj5 = require(7901) /* _fetchMessageInteractionData */;
             } else {
-              const obj2 = require(8031) /* _fetchMessageInteractionData */;
+              const obj2 = require(7901) /* _fetchMessageInteractionData */;
               obj2.setFailed(nonce, ok.body.code, ok.body.message, ok.status);
             }
             return tmp16;
           }
         }
       }
-      obj = require(8031) /* _fetchMessageInteractionData */;
+      obj = require(7901) /* _fetchMessageInteractionData */;
       const body = ok.body;
       let code;
       if (body != null) {

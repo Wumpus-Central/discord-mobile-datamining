@@ -1,10 +1,11 @@
+// discord_app/modules/contact_sync/native/components/ContactSyncBackToLanding.tsx
 let result = require("handleNameInputScreenOrSuggestions").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
 
 export default function ContactSyncBackToLanding(arg0) {
   const _require = arg0;
   const dependencyMap = _require(1480).useNavigation();
   const obj = _require(1480);
-  return _require(5238).getHeaderBackButton(() => {
+  return _require(5147).getHeaderBackButton(() => {
     if (null != lib.navigateToLandingPage) {
       const result = lib.navigateToLandingPage();
     } else {

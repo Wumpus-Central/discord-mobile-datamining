@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/utils/getExpiringGuildEntitlements.tsx
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/getExpiringGuildEntitlements.tsx");
 
 export const getExpiringGuildEntitlements = function getExpiringGuildEntitlements(items) {

@@ -1,3 +1,4 @@
+// discord_app/modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -25,7 +26,7 @@ export default function SlayerStorefrontItemCard(sku) {
   let dominantColorFromImage;
   let cardImage = createCacheKey();
   let size = num;
-  if (typeof num !== "object") {
+  if (typeof num !== "ay") {
     let obj = { width: null, height: null };
     obj[0] = num;
     obj[1] = num;

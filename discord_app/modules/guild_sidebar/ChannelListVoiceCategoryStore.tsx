@@ -1,3 +1,4 @@
+// discord_app/modules/guild_sidebar/ChannelListVoiceCategoryStore.tsx
 import { PersistedStore } from "initialize";
 
 function handleChange(expand) {

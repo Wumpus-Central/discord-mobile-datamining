@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/native/ParentalConsentWarningBanner.tsx
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "Text";
 import { FamilyCenterSubPages } from "items";

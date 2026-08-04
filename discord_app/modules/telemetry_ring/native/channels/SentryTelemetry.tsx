@@ -1,3 +1,4 @@
+// discord_app/modules/telemetry_ring/native/channels/SentryTelemetry.tsx
 import "append";
 import importDefaultResult1 from "TelemetryChannel";
 

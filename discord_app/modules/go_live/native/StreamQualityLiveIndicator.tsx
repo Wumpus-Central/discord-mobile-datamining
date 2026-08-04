@@ -1,3 +1,4 @@
+// discord_app/modules/go_live/native/StreamQualityLiveIndicator.tsx
 import getPremiumPlanItem from "getPremiumPlanItem";
 import { View } from "openPremiumModal";
 import { AnalyticEvents } from "ME";

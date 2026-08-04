@@ -1,3 +1,4 @@
+// discord_app/utils/native/RunAfterInteractionsUtils.tsx
 import { InteractionManager } from "get ActivityIndicator";
 
 function runAfterInteractions(arg0, MINUTE) {
@@ -12,7 +13,7 @@ function runAfterInteractions(arg0, MINUTE) {
     delayedCall.cancel();
     callback();
   });
-  delayedCall = new _require(4170).DelayedCall(num, () => {
+  delayedCall = new _require(4078).DelayedCall(num, () => {
     closure_1.cancel();
     callback();
   });

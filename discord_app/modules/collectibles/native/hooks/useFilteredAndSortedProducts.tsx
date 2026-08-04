@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { CollectiblesMobileShopScreen as closure_5 } from "items";

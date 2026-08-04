@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/notifications/EmailSettingsStore.tsx
 import { Store } from "initialize";
 
 function reset() {

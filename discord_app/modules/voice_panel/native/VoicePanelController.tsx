@@ -1,11 +1,12 @@
+// discord_app/modules/voice_panel/native/VoicePanelController.tsx
 import trackDeviceChanged from "trackDeviceChanged";
 import MIN_PAN_GESTURE_MOVE from "MIN_PAN_GESTURE_MOVE";
 import { AppState } from "ActivityPanelModes";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
-import module_8784 from "module_8784";
-import module_10649 from "module_10649";
+import module_8138 from "module_8138";
+import module_10690 from "module_10690";
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -227,16 +228,16 @@ export default function VoicePanelController(channelId) {
   const animatedReaction3Result16 = animatedReaction3(tmp2[22]);
   class H {
     constructor() {
-      value = f112754.get();
+      value = f112476.get();
       if (c16.PANEL === value) {
-        tmp5 = f112746;
-        return f112746.PANEL;
+        tmp5 = f112468;
+        return f112468.PANEL;
       } else if (tmp2.PIP === value) {
-        tmp4 = f112746;
-        return f112746.PIP;
+        tmp4 = f112468;
+        return f112468.PIP;
       } else {
-        tmp3 = f112746;
-        return f112746.UNDEFINED;
+        tmp3 = f112468;
+        return f112468.UNDEFINED;
       }
     }
   }
@@ -620,16 +621,16 @@ export default function VoicePanelController(channelId) {
     const items19 = [];
     class H {
       constructor() {
-        value = f112754.get();
+        value = f112476.get();
         if (c16.PANEL === value) {
-          tmp5 = f112746;
-          return f112746.PANEL;
+          tmp5 = f112468;
+          return f112468.PANEL;
         } else if (tmp2.PIP === value) {
-          tmp4 = f112746;
-          return f112746.PIP;
+          tmp4 = f112468;
+          return f112468.PIP;
         } else {
-          tmp3 = f112746;
-          return f112746.UNDEFINED;
+          tmp3 = f112468;
+          return f112468.UNDEFINED;
         }
       }
     }
@@ -1268,7 +1269,7 @@ export default function VoicePanelController(channelId) {
         items = [, , ];
         items[0] = id;
         items[1] = useSharedValue.get();
-        items[2] = f112754.get();
+        items[2] = f112476.get();
         return items;
       }
     }

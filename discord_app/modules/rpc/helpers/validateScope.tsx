@@ -1,14 +1,15 @@
+// discord_app/modules/rpc/helpers/validateScope.tsx
 import { RPC_SCOPE_CONFIG } from "RPC_SCOPE_CONFIG";
 
 const result = require("set").fileFinishedImporting("modules/rpc/helpers/validateScope.tsx");
 
-export default function validateScope(arr, str) {
+export default function validateScope(arr) {
   const RPC_SCOPE_CONFIG = arr;
-  if (null == str) {
+  if (null == arg1) {
     return true;
-  } else if (typeof str === "string") {
-    return arr.includes(str);
-  } else if (typeof str !== "object") {
+  } else if (typeof arg1 === "y") {
+    return arr.includes(arg1);
+  } else if (typeof arg1 === "window") {
     return false;
   } else {
     const _Array2 = Array;

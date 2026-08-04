@@ -1,3 +1,4 @@
+// discord_app/modules/notification_center/NotificationCenterItemsActions.tsx
 import encodeProperties from "encodeProperties";
 import _validate from "_validate";
 import { Endpoints } from "ME";
@@ -91,7 +92,7 @@ function _fetchNotificationCenterItems() {
               c6 = 3;
               c7 = 1;
               let obj6 = { value: null, done: false };
-              obj6[0] = callback(5094).get(obj3);
+              obj6[0] = callback(5003).get(obj3);
               return obj6;
             }
           } else if (2 === tmp7) {
@@ -191,32 +192,79 @@ function _markNotificationCenterRemoteItemAcked() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      const table = tmp3;
-      let c4 = 1;
-      let obj1 = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
-      const items = [callback];
-      obj1[2] = items;
-      outer1_1(outer1_2[3]).dispatch(obj1);
-      const HTTP = callback(outer1_2[8]).HTTP;
-      const obj2 = { url: null, rejectWithError: true };
-      obj2[0] = c5.NOTIF_CENTER_ITEMS_ACK(callback);
-      yield HTTP.post(obj2);
-      if (1 === tmp7) {
-        c4 = 0;
-        obj1 = callback2(table[3]);
-        const obj4 = { type: "NOTIFICATION_CENTER_ITEMS_ACK_FAILURE", ids: null };
-        const items1 = [callback];
-        obj4[1] = items1;
-        obj1.dispatch(obj4);
-        let c6 = 3;
-      } else if (arg0 === 1) {
+      if (c6 === 2) {
         c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c4 = 0;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === c5) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const table = tmp3;
+              const callback2 = tmp7;
+              let c4 = 1;
+              let obj1 = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
+              const items = [callback];
+              obj1[2] = items;
+              outer1_1(outer1_2[3]).dispatch(obj1);
+              const HTTP = callback(outer1_2[8]).HTTP;
+              const obj2 = { url: null, rejectWithError: true };
+              obj2[0] = c5.NOTIF_CENTER_ITEMS_ACK(callback);
+              c5 = 2;
+              c6 = 1;
+              const obj3 = { value: null, done: false };
+              obj3[0] = HTTP.post(obj2);
+              return obj3;
+            }
+          } else {
+            if (1 === tmp7) {
+              c4 = 0;
+              obj1 = callback2(table[3]);
+              const obj4 = { type: "NOTIFICATION_CENTER_ITEMS_ACK_FAILURE", ids: null };
+              const items1 = [callback];
+              obj4[1] = items1;
+              obj1.dispatch(obj4);
+              c6 = 3;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp15) {
+          let encodeProperties = tmp15;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp15;
+          } else {
+            c5 = tmp;
+          }
+        }
       }
-      c4 = 0;
-      return arg1;
     })();
   });
   const _markNotificationCenterRemoteItemAcked = tmp;
@@ -236,43 +284,91 @@ function _bulkMarkNotificationCenterItemsAcked() {
     let c6 = 0;
     let c4 = 0;
     return (function*(arg0) {
-      const table = tmp3;
-      mapped = mapped.map((id) => id.id);
-      let c4 = 1;
-      let obj1 = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
-      obj1[2] = mapped;
-      outer1_1(outer1_2[3]).dispatch(obj1);
-      const found = mapped.filter((local_id) => {
-        let isMentionItemResult = null == local_id.local_id;
-        if (!isMentionItemResult) {
-          isMentionItemResult = mapped(tmp3[7]).isMentionItem(local_id);
-          const obj = mapped(tmp3[7]);
-        }
-        return isMentionItemResult;
-      });
-      const mapped1 = found.map((id) => id.id);
-      const HTTP = callback(outer1_2[8]).HTTP;
-      const obj2 = { url: null, query: null, rejectWithError: true };
-      obj2[0] = constants.NOTIF_CENTER_ITEMS_BULK_ACK;
-      const obj3 = { item_ids: null };
-      obj3[0] = mapped1;
-      obj2[1] = obj3;
-      yield HTTP.post(obj2);
-      if (1 === tmp7) {
-        c4 = 0;
-        obj1 = callback2(table[3]);
-        const obj5 = { type: "NOTIFICATION_CENTER_ITEMS_ACK_FAILURE", ids: null };
-        obj5[1] = mapped;
-        obj1.dispatch(obj5);
-        let c6 = 3;
-      } else if (arg0 === 1) {
+      if (c6 === 2) {
         c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c4 = 0;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp6 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c6 = 2;
+          if (0 === constants) {
+            if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c6 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              const table = tmp3;
+              const callback2 = tmp7;
+              let mapped;
+              mapped = mapped.map((id) => id.id);
+              let c4 = 1;
+              let obj1 = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
+              obj1[2] = mapped;
+              outer1_1(outer1_2[3]).dispatch(obj1);
+              const found = mapped.filter((local_id) => {
+                let isMentionItemResult = null == local_id.local_id;
+                if (!isMentionItemResult) {
+                  isMentionItemResult = mapped(tmp3[7]).isMentionItem(local_id);
+                  const obj = mapped(tmp3[7]);
+                }
+                return isMentionItemResult;
+              });
+              const mapped1 = found.map((id) => id.id);
+              const HTTP = callback(outer1_2[8]).HTTP;
+              const obj2 = { url: null, query: null, rejectWithError: true };
+              obj2[0] = constants.NOTIF_CENTER_ITEMS_BULK_ACK;
+              const obj3 = { item_ids: null };
+              obj3[0] = mapped1;
+              obj2[1] = obj3;
+              constants = 2;
+              c6 = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = HTTP.post(obj2);
+              return obj4;
+            }
+          } else {
+            if (1 === tmp7) {
+              c4 = 0;
+              obj1 = callback2(table[3]);
+              const obj5 = { type: "NOTIFICATION_CENTER_ITEMS_ACK_FAILURE", ids: null };
+              obj5[1] = mapped;
+              obj1.dispatch(obj5);
+              c6 = 3;
+            } else if (arg0 === 1) {
+              c6 = 3;
+              throw arg1;
+            } else if (arg0 !== 2) {
+              c4 = 0;
+            }
+            c4 = 0;
+            c6 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          }
+        } catch (tmp15) {
+          let encodeProperties = tmp15;
+          if (tmp4 === c4) {
+            c6 = tmp2;
+            throw tmp15;
+          } else {
+            constants = tmp;
+          }
+        }
       }
-      c4 = 0;
-      return arg1;
     })();
   });
   const _bulkMarkNotificationCenterItemsAcked = tmp;
@@ -428,7 +524,7 @@ export const markNotificationCenterItemAcked = function markNotificationCenterIt
     importDefault(709).dispatch(obj);
     const obj4 = importDefault(709);
   } else {
-    obj = require(7022) /* getRelativeTimestamp */;
+    obj = require(5931) /* getRelativeTimestamp */;
     if (obj.isMentionItem(local_id)) {
       obj = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
       const items1 = [local_id.id];

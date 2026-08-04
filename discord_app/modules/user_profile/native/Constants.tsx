@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/Constants.tsx
 const XXLARGE = require("Button").AvatarSizes.XXLARGE;
 const tmp2 = require("Button").AVATAR_SIZE_MAP[XXLARGE];
 const sum = tmp2 + 12;

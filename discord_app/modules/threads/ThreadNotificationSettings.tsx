@@ -1,3 +1,4 @@
+// discord_app/modules/threads/ThreadNotificationSettings.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import storeThread from "storeThread";

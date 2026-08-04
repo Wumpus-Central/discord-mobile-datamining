@@ -1,3 +1,4 @@
+// discord_app/modules/lurker_mode/LurkingStore.tsx
 import { isGuildLurker } from "GuildNSFWContentLevel";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -11,6 +12,7 @@ let c5;
 let closure_6 = [];
 let closure_7 = {};
 let closure_8 = {};
+let closure_9 = {};
 class LurkingStore extends Store {
 }
 const prototype = LurkingStore.prototype;
@@ -40,10 +42,10 @@ prototype["isLurking"] = function isLurking(guildId) {
     return Boolean(tmp6);
   }
 };
-prototype["getLurkingSourceForGuild"] = function getLurkingSourceForGuild(arg0) {
+prototype["getLurkingSourceForGuild"] = function getLurkingSourceForGuild(closure_0) {
   let tmp = null;
-  if (null != arg0) {
-    let tmp3 = table2[arg0];
+  if (null != closure_0) {
+    let tmp3 = table2[closure_0];
     if (tmp3 == null) {
       tmp3 = null;
     }
@@ -58,6 +60,20 @@ prototype["getLoadId"] = function getLoadId(arg0) {
   }
   return tmp;
 };
+prototype["getLurkingPreviewExpirations"] = function getLurkingPreviewExpirations() {
+  return closure_9;
+};
+prototype["getLurkingPreviewExpiry"] = function getLurkingPreviewExpiry(closure_0) {
+  let tmp = null;
+  if (null != closure_0) {
+    let tmp3 = dependencyMap[closure_0];
+    if (tmp3 == null) {
+      tmp3 = null;
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+};
 LurkingStore.displayName = "LurkingStore";
 const lurkingStore = new LurkingStore(require("dispatcher"), {
   CONNECTION_OPEN: function handleConnectionOpen() {
@@ -65,6 +81,7 @@ const lurkingStore = new LurkingStore(require("dispatcher"), {
     const found = guildsArray.filter((arg0) => callback(arg0));
     let closure_6 = found.map((id) => id.id);
     let closure_8 = {};
+    let closure_9 = {};
   },
   GUILD_JOIN: function handleGuildJoin(lurker) {
     let guildId;
@@ -82,17 +99,18 @@ const lurkingStore = new LurkingStore(require("dispatcher"), {
       if (null != loadId) {
         closure_7[guildId] = loadId;
       }
+      delete tmp2[tmp];
       if (constants.MOBILE_GUILD_DISCOVERY === source) {
         let obj = { type: null };
-        obj[0] = tmp12.MOBILE_GUILD_DISCOVERY;
+        obj[0] = tmp14.MOBILE_GUILD_DISCOVERY;
         closure_8[guildId] = obj;
-      } else if (tmp12.DIRECTORY_ENTRY === source) {
+      } else if (tmp14.DIRECTORY_ENTRY === source) {
         obj = { type: null, directoryChannelId: null };
-        obj[0] = tmp12.DIRECTORY_ENTRY;
-        obj[1] = tmp3;
+        obj[0] = tmp14.DIRECTORY_ENTRY;
+        obj[1] = tmp4;
         closure_8[guildId] = obj;
       } else {
-        delete tmp2[tmp];
+        delete tmp3[tmp];
       }
       return true;
     } else {
@@ -119,6 +137,7 @@ const lurkingStore = new LurkingStore(require("dispatcher"), {
           items.splice(index, 1);
           outer1_6 = items;
           delete tmp3[tmp2];
+          delete tmp3[tmp2];
           delete tmp[tmp2];
           flag = true;
         }
@@ -129,6 +148,20 @@ const lurkingStore = new LurkingStore(require("dispatcher"), {
       }
       return tmp4;
     }, false);
+  },
+  GUILD_STOP_LURKING_FOR_GUILD: function handleGuildStopLurkingForGuild(lurkingGuildId) {
+    const index = items.indexOf(lurkingGuildId.lurkingGuildId);
+    let flag = false;
+    if (index > -1) {
+      items = [];
+      HermesBuiltin.arraySpread(items, 0);
+      items.splice(index, 1);
+      delete tmp3[tmp2];
+      delete tmp3[tmp2];
+      delete tmp[tmp2];
+      flag = true;
+    }
+    return flag;
   },
   GUILD_STOP_LURKING_FAILURE: function handleGuildStopLurkingFailure(arg0) {
     let lurkingGuildId;
@@ -163,6 +196,7 @@ const lurkingStore = new LurkingStore(require("dispatcher"), {
         HermesBuiltin.arraySpread(items, 0);
         items.splice(index, 1);
         delete tmp3[tmp2];
+        delete tmp3[tmp2];
         delete tmp[tmp2];
         flag = true;
       }
@@ -179,6 +213,7 @@ const lurkingStore = new LurkingStore(require("dispatcher"), {
         items = [];
         HermesBuiltin.arraySpread(items, 0);
         items.splice(index, 1);
+        delete tmp3[tmp2];
         delete tmp3[tmp2];
         delete tmp[tmp2];
         flag = true;
@@ -206,9 +241,34 @@ const lurkingStore = new LurkingStore(require("dispatcher"), {
         HermesBuiltin.arraySpread(items, 0);
         items.splice(index, 1);
         delete tmp3[tmp2];
+        delete tmp3[tmp2];
         delete tmp[tmp2];
         flag = true;
       }
+    }
+    return flag;
+  },
+  LURKER_PREVIEW_SET_EXPIRY: function handleLurkerPreviewSetExpiry(arg0) {
+    let expiresAt;
+    let guildIds;
+    ({ guildIds, expiresAt } = arg0);
+    let flag = false;
+    for (const item10009 of guildIds) {
+      let tmp = item10009;
+      let tmp2 = closure_6;
+      let hasItem = closure_6.includes(item10009);
+      if (hasItem) {
+        let tmp4 = dependencyMap;
+        let tmp5 = item10009;
+        hasItem = dependencyMap[tmp] !== expiresAt;
+      }
+      if (hasItem) {
+        let tmp6 = dependencyMap;
+        let tmp7 = item10009;
+        dependencyMap[tmp] = expiresAt;
+        flag = true;
+      }
+      continue;
     }
     return flag;
   }

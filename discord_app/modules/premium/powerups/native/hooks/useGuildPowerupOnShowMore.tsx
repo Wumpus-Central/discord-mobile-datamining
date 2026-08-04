@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx");

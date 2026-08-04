@@ -1,3 +1,4 @@
+// discord_common/js/shared/utils/PlatformUtils.tsx
 let obj = { WINDOWS: "WINDOWS", OSX: "OSX", LINUX: "LINUX", WEB: "WEB" };
 let c1 = true;
 const android = "android";

@@ -1,3 +1,4 @@
+// discord_app/actions/CategoryCollapseActionCreators.tsx
 const result = require("set").fileFinishedImporting("actions/CategoryCollapseActionCreators.tsx");
 
 export const categoryCollapse = function categoryCollapse(id) {

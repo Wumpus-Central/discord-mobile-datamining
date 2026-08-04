@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/FrecencySettingsMigrations.tsx
 import MAX_FAVORITES from "MAX_FAVORITES";
 import { ID_REGEX } from "ME";
 
@@ -108,15 +109,12 @@ let items = [
           if (null != favorites) {
             const _Object = Object;
             if (0 !== Object.keys(favorites).length) {
-              let obj = favorites;
               if (null == favorites.favorites) {
                 favorites.favorites = [];
-                obj = favorites;
               }
             }
-            return obj;
+            return { usageHistory: {}, favorites: [] };
           }
-          obj = { usageHistory: {}, favorites: [] };
         }
       ];
       const state = PersistedStore.migrateAndReadStoreState("StickersPersistedStore", items).state;

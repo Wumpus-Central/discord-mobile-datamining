@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding/usePromptHelpText.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

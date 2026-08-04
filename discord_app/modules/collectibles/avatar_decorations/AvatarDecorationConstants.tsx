@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx
 import { AvatarSizes } from "frozen";
 
 const result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationConstants.tsx");

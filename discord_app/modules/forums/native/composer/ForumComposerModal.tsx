@@ -1,3 +1,4 @@
+// discord_app/modules/forums/native/composer/ForumComposerModal.tsx
 import "computeEntryState";
 import { View } from "useGetThreadDraftSettings";
 import initialize from "initialize";

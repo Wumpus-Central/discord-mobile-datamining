@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/SafetyTermsOfServiceSetting.tsx
 import { MarketingURLs } from "ME";
 import createToggle from "createToggle";
 
@@ -8,7 +9,7 @@ const pressable = createToggle.createPressable({
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   onPress: function onTermsOfServicePress() {
-    importDefault(3982).openURL(MarketingURLs.TERMS);
+    importDefault(3890).openURL(MarketingURLs.TERMS);
   },
   withArrow: true
 });
@@ -19,10 +20,10 @@ const obj = {
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   onPress: function onTermsOfServicePress() {
-    importDefault(3982).openURL(MarketingURLs.TERMS);
+    importDefault(3890).openURL(MarketingURLs.TERMS);
   },
   withArrow: true
 };
-const result = require("module_3982").fileFinishedImporting("modules/user_settings/defs/native/SafetyTermsOfServiceSetting.tsx");
+const result = require("module_3890").fileFinishedImporting("modules/user_settings/defs/native/SafetyTermsOfServiceSetting.tsx");
 
 export default pressable;

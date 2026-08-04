@@ -1,3 +1,4 @@
+// discord_app/modules/forums/tracking/ForumPostAnalyticsManager.tsx
 import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

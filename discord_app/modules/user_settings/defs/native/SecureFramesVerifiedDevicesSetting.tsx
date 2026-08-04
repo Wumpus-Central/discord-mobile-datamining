@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/SecureFramesVerifiedDevicesSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES,
   getComponent() {
-    return require(14768) /* VerificationListItem */.default;
+    return require(14668) /* VerificationListItem */.default;
   }
 };
 const route = createToggle.createRoute(obj);

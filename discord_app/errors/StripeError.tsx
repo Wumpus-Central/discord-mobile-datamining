@@ -1,3 +1,4 @@
+// discord_app/errors/StripeError.tsx
 import "set";
 
 const prototype = function StripeError(error) {

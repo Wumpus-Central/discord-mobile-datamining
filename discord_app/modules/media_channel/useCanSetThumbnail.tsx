@@ -1,3 +1,4 @@
+// discord_app/modules/media_channel/useCanSetThumbnail.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 
 const require = arg1;

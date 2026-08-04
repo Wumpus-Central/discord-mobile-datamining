@@ -1,3 +1,4 @@
+// discord_app/modules/forums/ForumManager.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { isStaticChannelRoute } from "set";
 import "initialize";
@@ -15,8 +16,8 @@ ForumManager.prototype["handleChannelPreload"] = function handleChannelPreload(c
   if (!isStaticChannelRoute(channelId)) {
     channel = channel.getChannel(channelId);
     if (tmp3) {
-      require(5829) /* loadForumPostData */.preloadForumThreads(channel);
-      const obj2 = require(5829) /* loadForumPostData */;
+      require(6068) /* loadForumPostData */.preloadForumThreads(channel);
+      const obj2 = require(6068) /* loadForumPostData */;
     }
     tmp3 = null != channel && channel.isForumLikeChannel();
   }

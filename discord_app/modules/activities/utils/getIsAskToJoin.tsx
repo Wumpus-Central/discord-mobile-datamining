@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/getIsAskToJoin.tsx
 import { ActivityActionTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getIsAskToJoin.tsx");

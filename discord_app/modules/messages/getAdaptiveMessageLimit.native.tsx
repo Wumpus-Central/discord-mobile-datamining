@@ -1,3 +1,4 @@
+// discord_app/modules/messages/getAdaptiveMessageLimit.native.tsx
 import { MAX_MESSAGES_PER_CHANNEL } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/messages/getAdaptiveMessageLimit.native.tsx");

@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -19,5 +20,5 @@ export default function ProfileEffectUserPreview(profileEffect) {
   }
   obj[1] = formatToPlainStringResult;
   const merged1 = Object.assign(merged);
-  return jsx(importDefault(9365), { profileEffectOverride: profileEffect, accessibilityLabel: null });
+  return jsx(importDefault(8080), { profileEffectOverride: profileEffect, accessibilityLabel: null });
 };

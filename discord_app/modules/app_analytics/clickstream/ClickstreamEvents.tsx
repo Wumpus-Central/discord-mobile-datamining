@@ -1,3 +1,4 @@
+// discord_app/modules/app_analytics/clickstream/ClickstreamEvents.tsx
 import { AnalyticEvents } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/app_analytics/clickstream/ClickstreamEvents.tsx");

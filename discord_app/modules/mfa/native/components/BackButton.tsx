@@ -1,3 +1,4 @@
+// discord_app/modules/mfa/native/components/BackButton.tsx
 import { jsx } from "jsxProd";
 
 const result = require("MFAButton").fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");
@@ -13,5 +14,5 @@ export default function BackButton(props) {
   obj[2] = function onPress() {
 
   };
-  return jsx(importDefault(14890), { variant: "secondary", text: null, onPress: null });
+  return jsx(importDefault(14790), { variant: "secondary", text: null, onPress: null });
 };

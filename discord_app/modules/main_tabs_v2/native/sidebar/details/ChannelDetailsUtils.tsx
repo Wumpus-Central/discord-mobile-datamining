@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx
 import { ChannelDetailsButtonTypes } from "ChannelDetailsNavigatorScreens";
 
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");

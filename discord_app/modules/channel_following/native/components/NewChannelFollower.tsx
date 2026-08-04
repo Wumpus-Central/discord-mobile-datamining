@@ -1,3 +1,4 @@
+// discord_app/modules/channel_following/native/components/NewChannelFollower.tsx
 import asyncRequireImpl from "asyncRequireImpl";
 import registerAsset from "registerAsset";
 import get_ActivityIndicator from "AccessibilityAnnouncer";
@@ -19,14 +20,6 @@ let closure_17;
 let closure_6;
 let map1;
 const require = arg1;
-function canFollowIntoChannel(channel) {
-  channel = channel.channel;
-  let canResult = channel.type === constants.GUILD_TEXT;
-  if (canResult) {
-    canResult = getUncachedChannelPermissions.can(constants2.MANAGE_WEBHOOKS, channel);
-  }
-  return canResult;
-}
 ({ View: c5, ImageBackground: closure_6 } = get_ActivityIndicator);
 ({ AbortCodes: map1, ChannelTypes: closure_14, Permissions: closure_15 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
@@ -167,13 +160,13 @@ export default function NewChannelFollower(targetChannelId) {
       return arr;
     }, array);
     obj[2] = targetGuildId;
-    obj[3] = function onItemSelect(arg0) {
-      const firstChannelOfType = outer1_8.getFirstChannelOfType(arg0, outer1_19, outer1_9);
-      let id;
-      if (firstChannelOfType != null) {
-        id = firstChannelOfType.id;
+    obj[3] = function onItemSelect(id) {
+      const defaultChannel = outer1_8.getDefaultChannel(id);
+      id = undefined;
+      if (defaultChannel != null) {
+        id = defaultChannel.id;
       }
-      registerAsset(arg0, id);
+      registerAsset(id, id);
     };
     obj[4] = function onClose() {
       callback(closure_2, asyncRequireImpl);
@@ -212,7 +205,14 @@ export default function NewChannelFollower(targetChannelId) {
       }
       obj[1] = tmp5;
       obj[2] = targetChannel;
-      obj[3] = outer1_19;
+      obj[3] = function filterFn(channel) {
+        channel = channel.channel;
+        let canResult = channel.type === constants.GUILD_TEXT;
+        if (canResult) {
+          canResult = getUncachedChannelPermissions.can(constants2.MANAGE_WEBHOOKS, channel);
+        }
+        return canResult;
+      };
       obj[4] = function onSelect(id) {
         callback(closure_2, id.id);
       };

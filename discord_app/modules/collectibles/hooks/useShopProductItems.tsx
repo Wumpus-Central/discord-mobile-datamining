@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useShopProductItems.tsx
 import noop from "noop";
 
 const require = arg1;
@@ -61,7 +62,7 @@ export const useShopProductItems = function useShopProductItems(product) {
   let closure_0 = product;
   const items = [product];
   return React.useMemo(() => {
-    if (typeof outer1_3 !== "function") {
+    if (typeof outer1_3 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(outer1_3.prototype);

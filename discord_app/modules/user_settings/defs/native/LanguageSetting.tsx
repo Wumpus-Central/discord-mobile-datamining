@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/LanguageSetting.tsx
 import _getSystemLocale from "_getSystemLocale";
 import createToggle from "createToggle";
 
@@ -28,7 +29,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.LANGUAGE,
   getComponent() {
-    return require(14502) /* handleLanguageChange */.default;
+    return require(14402) /* handleLanguageChange */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

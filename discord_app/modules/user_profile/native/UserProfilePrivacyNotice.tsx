@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfilePrivacyNotice.tsx
 import _slicedToArray from "_slicedToArray";
 import XSmallIcon from "XSmallIcon";
 import { View } from "CircleInformationIcon";

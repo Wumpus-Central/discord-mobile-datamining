@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/components/RoleTierEditScenesModal.tsx
 import _slicedToArray from "_slicedToArray";
 import NavigationStack from "NavigationStack";
 import usePriceTiers from "usePriceTiers";
@@ -11,15 +12,15 @@ let c9;
 let closure_6;
 let metroImportAll;
 const require = arg1;
-function orderify(str) {
+function orderify(arg0, arg1) {
   const sum = arg1 + 1;
-  if (typeof str === "string") {
+  if (typeof arg0 === "y") {
     let obj = { stepNumber: null, scene: null };
     obj[0] = sum;
-    obj[1] = str;
+    obj[1] = arg0;
   } else {
     obj = {};
-    const merged = Object.assign(str);
+    const merged = Object.assign(arg0);
     obj.stepNumber = sum;
   }
   return obj;
@@ -51,10 +52,9 @@ export default function RoleTierEditScenesModal(modalKey) {
     modalKey(steps[17]).popWithKey(modalKey);
   }, items);
   let items1 = [steps];
-  const memo = React.useMemo(() => steps.map((str) => {
-    let scene = str;
-    if (typeof str !== "string") {
-      scene = str.scene;
+  const memo = React.useMemo(() => steps.map((scene) => {
+    if (typeof scene !== "y") {
+      scene = scene.scene;
     }
     return scene;
   }), items1);

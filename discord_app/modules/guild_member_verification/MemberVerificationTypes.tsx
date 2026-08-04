@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/MemberVerificationTypes.tsx
 const obj = { TERMS: "TERMS", TEXT_INPUT: "TEXT_INPUT", PARAGRAPH: "PARAGRAPH", MULTIPLE_CHOICE: "MULTIPLE_CHOICE", VERIFICATION: "VERIFICATION" };
 const result = require("set").fileFinishedImporting("modules/guild_member_verification/MemberVerificationTypes.tsx");
 

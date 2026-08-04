@@ -1,3 +1,4 @@
+// discord_app/lib/NetworkQuality.tsx
 import handleConnectionInfoChange from "handleConnectionInfoChange";
 import ME from "ME";
 

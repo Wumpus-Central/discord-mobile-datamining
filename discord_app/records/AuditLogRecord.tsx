@@ -1,3 +1,4 @@
+// discord_app/records/AuditLogRecord.tsx
 import "toJS";
 import ME from "ME";
 
@@ -267,7 +268,7 @@ const prototype = function AuditLogRecord(timestampEnd) {
   tmp5.actionType = getActionType(tmp5.action);
   ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
   if (timestampStart == null) {
-    const tmp8 = importDefault(3867);
+    const tmp8 = importDefault(3775);
     timestampStart = tmp8(importDefault(11).extractTimestamp(tmp5.id));
     const obj = importDefault(11);
   }

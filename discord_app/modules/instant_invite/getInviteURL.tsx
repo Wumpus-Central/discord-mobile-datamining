@@ -1,3 +1,4 @@
+// discord_app/modules/instant_invite/getInviteURL.tsx
 const result = require("set").fileFinishedImporting("modules/instant_invite/getInviteURL.tsx");
 
 export default function getInviteURL() {

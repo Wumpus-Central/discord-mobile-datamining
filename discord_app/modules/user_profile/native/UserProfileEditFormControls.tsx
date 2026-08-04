@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfileEditFormControls.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
@@ -11,7 +12,7 @@ let error;
 let require = arg1;
 function FormControlText(children) {
   const tmp = createCacheKey();
-  return callback2(require(4281) /* Text */.Text, { variant: "text-sm/medium", color: "text-default", style: createCacheKey().formControlText, children: children.text });
+  return callback2(require(4189) /* Text */.Text, { variant: "text-sm/medium", color: "text-default", style: createCacheKey().formControlText, children: children.text });
 }
 function FormControlSubtext(text) {
   text = text.text;
@@ -20,7 +21,7 @@ function FormControlSubtext(text) {
     const obj = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
     obj[2] = tmp.formControlText;
     obj[3] = text;
-    tmp2 = callback2(require(4281) /* Text */.Text, obj);
+    tmp2 = callback2(require(4189) /* Text */.Text, obj);
   }
   return tmp2;
 }
@@ -38,15 +39,14 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   let accessibilityValue;
   let buttonSubtext;
   let buttonText;
-  let content;
   let disabled;
   let label;
   let labelTrailing;
   let leading;
   let onPress;
   let trailing;
-  ({ label, buttonText, content, disabled } = loading);
-  ({ labelTrailing, buttonSubtext, onPress, leading, trailing, accessibilityValue } = loading);
+  ({ label, disabled } = loading);
+  ({ labelTrailing, buttonText, buttonSubtext, onPress, leading, trailing, accessibilityValue } = loading);
   if (disabled === undefined) {
     disabled = false;
   }
@@ -66,33 +66,19 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   obj[6] = { disabled, busy: flag };
   obj[7] = disabled;
   const items = [leading, , , ];
-  if (content == null) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.buttonTextContainer;
-    let tmp2Result = null != buttonText;
-    if (tmp2Result) {
-      const obj1 = { text: null };
-      obj1[0] = buttonText;
-      tmp2Result = tmp2(FormControlText, obj1);
-    }
-    const items1 = [tmp2Result, ];
-    const obj2 = { text: null };
-    obj2[0] = buttonSubtext;
-    items1[1] = tmp2(FormControlSubtext, obj2);
-    obj[1] = items1;
-    content = tmp5(closure_5, obj);
-    const tmp6 = closure_5;
-  }
-  items[1] = content;
+  obj = { style: tmp.buttonTextContainer, children: null };
+  const items1 = [callback2(FormControlText, { text: buttonText }), callback2(FormControlSubtext, { text: buttonSubtext })];
+  obj[1] = items1;
+  items[1] = callback3(closure_5, obj);
   items[2] = trailing;
-  tmp2Result = !flag2;
+  let tmp2Result = !flag2;
   if (!flag2) {
-    tmp2Result = tmp2(require(5322) /* TableRowArrow */.TableRowArrow, {});
+    tmp2Result = tmp2(require(5231) /* TableRowArrow */.TableRowArrow, {});
   }
   items[3] = tmp2Result;
   obj[8] = items;
-  obj[2] = closure_7(require(4812) /* PressableBase */.PressableHighlight, obj);
-  return closure_6(require(7714) /* Input */.Input, obj);
+  obj[2] = callback3(require(4721) /* PressableBase */.PressableHighlight, obj);
+  return callback2(require(6731) /* Input */.Input, obj);
 };
 export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0) {
   let accessibilityHint;
@@ -119,7 +105,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
     callback(closure_0);
   }, items);
   if (isAndroidResult) {
-    let PressableHighlight = tmp2(4812).PressableHighlight;
+    let PressableHighlight = tmp2(4721).PressableHighlight;
   } else {
     PressableHighlight = closure_4;
   }
@@ -160,8 +146,8 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
   obj[5] = accessibilityHint;
   obj[6] = { disabled, checked: tmp5[0] };
   obj[7] = disabled;
-  const items1 = [closure_6(FormControlText, { text: subLabel }), closure_6(require(5651) /* FormSwitch */.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled })];
+  const items1 = [closure_6(FormControlText, { text: subLabel }), closure_6(require(5560) /* FormSwitch */.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled })];
   obj[8] = items1;
   obj[1] = closure_7(PressableHighlight, obj);
-  return closure_6(require(7714) /* Input */.Input, obj);
+  return closure_6(require(6731) /* Input */.Input, obj);
 };

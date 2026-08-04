@@ -1,3 +1,4 @@
+// discord_app/stores/web/WindowStore.tsx
 import { Store } from "initialize";
 import set from "getWindowId";
 
@@ -11,7 +12,7 @@ const prototype = WindowStore.prototype;
 prototype["isFocused"] = function isFocused() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require(5285) /* getWindowId */;
+    let obj = require(5194) /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);
@@ -29,7 +30,7 @@ prototype["isAppFocused"] = function isAppFocused() {
 prototype["isVisible"] = function isVisible() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require(5285) /* getWindowId */;
+    let obj = require(5194) /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);
@@ -56,7 +57,7 @@ prototype["getLastFocusedWindowId"] = function getLastFocusedWindowId() {
 prototype["isElementFullScreen"] = function isElementFullScreen() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require(5285) /* getWindowId */;
+    let obj = require(5194) /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);
@@ -71,7 +72,7 @@ prototype["isElementFullScreen"] = function isElementFullScreen() {
 prototype["windowSize"] = function windowSize() {
   let mainWindowId = arg0;
   if (arg0 === undefined) {
-    let obj = require(5285) /* getWindowId */;
+    let obj = require(5194) /* getWindowId */;
     mainWindowId = obj.getMainWindowId();
   }
   let value = map.get(mainWindowId);

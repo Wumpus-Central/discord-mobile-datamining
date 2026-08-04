@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding/GuildOnboardingPromptsConstants.tsx
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { PlatformTypes } from "ME";

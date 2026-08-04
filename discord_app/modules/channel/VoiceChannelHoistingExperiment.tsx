@@ -1,3 +1,4 @@
+// discord_app/modules/channel/VoiceChannelHoistingExperiment.tsx
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Both waveform and highlight", config: { enableWaveformIcon: true, enableHighlight: true } }, { id: 2, label: "Waveform icon only", config: { enableWaveformIcon: true, enableHighlight: false } }];

@@ -1,3 +1,4 @@
+// discord_app/modules/applications/utils/isApplicationAgeRestricted.tsx
 import addApplication from "addApplication";
 
 const require = arg1;
@@ -10,9 +11,9 @@ export default function isApplicationAgeRestricted(arg0) {
     if (application != null) {
       prop = application.contentClassification;
     }
-    return require(7004) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(prop);
+    return require(5912) /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(prop);
   } else {
     return false;
   }
-  obj = importDefault(9458);
+  obj = importDefault(8031);
 };

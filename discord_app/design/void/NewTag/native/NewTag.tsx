@@ -1,3 +1,4 @@
+// discord_app/design/void/NewTag/native/NewTag.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { HorizontalGradient } from "ME";
@@ -61,10 +62,10 @@ export default function NewTag(color) {
     obj2.style = items2;
     const intl2 = require(1236) /* getSystemLocale */.intl;
     obj2.children = intl2.string(require(1236) /* getSystemLocale */.t.y2b7CA);
-    obj1[1] = tmp7(require(4281) /* Text */.Text, obj2);
+    obj1[1] = tmp7(require(4189) /* Text */.Text, obj2);
     obj[4] = tmp7(closure_3, obj1);
-    let tmp7Result = tmp7(importDefault(4706), obj);
-    const tmp17 = importDefault(4706);
+    let tmp7Result = tmp7(importDefault(4615), obj);
+    const tmp17 = importDefault(4615);
   } else {
     obj = { style: null, children: null };
     const items3 = [tmp6.tagContainer, containerStyle];
@@ -77,7 +78,7 @@ export default function NewTag(color) {
     obj3.style = items4;
     const intl = require(1236) /* getSystemLocale */.intl;
     obj3.children = intl.string(require(1236) /* getSystemLocale */.t.y2b7CA);
-    obj[1] = tmp7(require(4281) /* Text */.Text, obj3);
+    obj[1] = tmp7(require(4189) /* Text */.Text, obj3);
     tmp7Result = tmp7(closure_3, obj);
   }
   return tmp7Result;

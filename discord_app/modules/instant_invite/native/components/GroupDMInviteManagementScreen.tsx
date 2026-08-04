@@ -1,3 +1,4 @@
+// discord_app/modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx
 import closure_3 from "normalizeChannelPropertyForCompare";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "HeaderBackImage";
@@ -25,7 +26,7 @@ function GroupDMInviteManagement(channelId) {
   dependencyMap = tmp2[1];
   const tmp3 = callback(importAllResult.useState(true), 2);
   closure_3 = tmp3[1];
-  first(4711)(() => {
+  first(4620)(() => {
     function _fetchInvites() {
       const self = this;
       const tmp = callback(function*() {
@@ -138,11 +139,11 @@ function GroupDMInviteManagement(channelId) {
   [][0] = first;
   callback = importAllResult.useCallback((code) => code.code, []);
   if (tmp3[0]) {
-    let tmp14 = jsx(channelId(5731).SceneLoadingIndicator, {});
+    let tmp14 = jsx(channelId(5640).SceneLoadingIndicator, {});
   } else if (0 === first.length) {
     let obj = { lightSource: null, darkSource: null, title: null, body: null };
-    obj[0] = tmp4(9621);
-    obj[1] = tmp4(9622);
+    obj[0] = tmp4(10222);
+    obj[1] = tmp4(10223);
     const intl = channelId(1236).intl;
     obj[2] = intl.string(channelId(1236).t["+nLJkZ"]);
     const intl2 = channelId(1236).intl;
@@ -180,7 +181,7 @@ const memoResult = importAllResult.memo(function GroupDMInviteManagementScreen(c
     obj[outer1_9.INSTANT_INVITES_MANAGEMENT] = obj;
     return obj;
   }, items);
-  return jsx(channelId(5665).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
+  return jsx(channelId(5574).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 });
 const result = require("noop").fileFinishedImporting("modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx");
 

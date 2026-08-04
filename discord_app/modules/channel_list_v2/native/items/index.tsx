@@ -1,3 +1,4 @@
+// discord_app/modules/channel_list_v2/native/items/index.tsx
 const result = require("ThreadChannel").fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
 
 export const CategoryChannel = require("renderCategoryItem").CategoryChannel;

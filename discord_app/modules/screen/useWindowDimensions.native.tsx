@@ -1,3 +1,4 @@
+// discord_app/modules/screen/useWindowDimensions.native.tsx
 import noop from "noop";
 import getDimensionsStoreStateForEntry from "getDimensionsStoreStateForEntry";
 

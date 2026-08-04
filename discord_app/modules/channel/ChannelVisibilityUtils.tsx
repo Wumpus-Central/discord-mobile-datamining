@@ -1,3 +1,4 @@
+// discord_app/modules/channel/ChannelVisibilityUtils.tsx
 import handlePermissionsChange from "handlePermissionsChange";
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_2 from "handleConnectionOpen";

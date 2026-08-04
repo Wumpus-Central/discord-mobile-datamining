@@ -1,3 +1,4 @@
+// discord_app/modules/global_discovery_apps/applicationDirectoryAnalytics.tsx
 import handleConnectionOpen from "handleConnectionOpen";
 import closure_3 from "handleConnectionOpen";
 import { AnalyticEvents } from "ME";

@@ -1,3 +1,4 @@
+// discord_app/modules/home_drawer/native/useHomeDrawerGuildTyping.tsx
 import storeThread from "storeThread";
 import { isThread } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";

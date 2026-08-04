@@ -1,3 +1,4 @@
+// discord_app/utils/InviteErrorUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 
@@ -30,7 +31,7 @@ export const getDescriptiveInviteError = function getDescriptiveInviteError(code
       return obj;
     }
     tmp14 = closure_7;
-    obj5 = importDefault(3931);
+    obj5 = importDefault(3839);
   } else if (tmp.GUILD_AT_CAPACITY === code) {
     const obj1 = { title: null, description: null };
     const intl5 = require(1236) /* getSystemLocale */.intl;

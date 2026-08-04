@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/utils/storeListingToGuildPowerup.tsx
 import GuildFeatures from "GuildFeatures";
 import { GuildPowerupType } from "BoostedGuildTiers";
 import { DEFAULT_EMOJI_SLOTS } from "set";

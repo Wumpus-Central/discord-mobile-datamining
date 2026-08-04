@@ -1,3 +1,4 @@
+// discord_app/modules/guild_space/canUseGuildSpace.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 
@@ -31,9 +32,9 @@ export const useCanUseGuildSpace = function useCanUseGuildSpace(id, useGuildActi
   if (id != null) {
     id = id.id;
   }
-  const guildSpaceExperimentEnabled = _require(5756).useGuildSpaceExperimentEnabled(id, useGuildActionRows);
+  const guildSpaceExperimentEnabled = _require(5665).useGuildSpaceExperimentEnabled(id, useGuildActionRows);
   _require = id;
-  const obj = _require(5756);
+  const obj = _require(5665);
   const tmp = _require;
   const items = [getUncachedChannelPermissions];
   const items1 = [id];

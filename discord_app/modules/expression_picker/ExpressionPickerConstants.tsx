@@ -1,3 +1,4 @@
+// discord_app/modules/expression_picker/ExpressionPickerConstants.tsx
 const obj = { EMOJI: "emoji", GIF: "gif", STICKER: "sticker", SOUNDBOARD: "soundboard" };
 const items = [, , ];
 ({ EMOJI: arr[0], GIF: arr[1], STICKER: arr[2] } = obj);

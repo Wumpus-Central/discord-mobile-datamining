@@ -1,3 +1,4 @@
+// discord_app/modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx
 import "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import mergeGuildAvatar from "mergeGuildAvatar";

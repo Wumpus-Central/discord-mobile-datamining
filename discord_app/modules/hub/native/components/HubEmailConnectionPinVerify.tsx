@@ -1,3 +1,4 @@
+// discord_app/modules/hub/native/components/HubEmailConnectionPinVerify.tsx
 import _slicedToArray from "_slicedToArray";
 import closure_4 from "jsxProd";
 import SingleCodeInput from "SingleCodeInput";
@@ -12,8 +13,8 @@ let closure_6;
 let error;
 const require = arg1;
 function presentResendToast(content) {
-  let obj = importDefault(3986);
-  obj = { key: "HUB_EMAIL_RESET", content, icon: importDefault(9039) };
+  let obj = importDefault(3894);
+  obj = { key: "HUB_EMAIL_RESET", content, icon: importDefault(11855) };
   obj.open(obj);
 }
 ({ View: closure_6, Image: error } = get_ActivityIndicator);
@@ -37,30 +38,78 @@ export default function HubEmailConnectionPinVerify(email) {
       let c6 = 0;
       let c4 = 0;
       return (function*(arg0) {
-        const callback = tmp3;
-        let c4 = 1;
-        const obj2 = outer1_1(outer1_2[12]);
-        yield obj2.verifyCode(lib, outer1_1, lib);
-        if (1 === tmp7) {
-          c4 = 0;
-          let closure_1 = _slicedToArray;
-          const aPIError = new lib(outer1_2[14]).APIError(closure_1);
-          outer1_3(aPIError);
-          let c6 = 3;
-        } else if (arg0 === 1) {
+        if (c6 === 2) {
           c6 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          lib = outer1_8.getGuild(closure_1);
-          if (null != lib) {
-            callback(true);
-            const obj = lib(outer1_2[15]);
-            obj.transitionToGuild(lib.id);
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
           }
-          c4 = 0;
+        } else {
+          try {
+            c6 = 2;
+            if (0 === c5) {
+              if (arg0 === 1) {
+                c6 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c6 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                const callback = tmp3;
+                let closure_1 = tmp7;
+                let lib;
+                let c4 = 1;
+                let obj2 = outer1_1(outer1_2[12]);
+                c5 = 2;
+                c6 = 1;
+                const obj1 = { value: null, done: false };
+                obj1[0] = obj2.verifyCode(lib, outer1_1, lib);
+                return obj1;
+              }
+            } else {
+              if (1 === tmp7) {
+                c4 = 0;
+                closure_1 = _slicedToArray;
+                const aPIError = new lib(outer1_2[14]).APIError(closure_1);
+                outer1_3(aPIError);
+                c6 = 3;
+              } else if (arg0 === 1) {
+                c6 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                lib = outer1_8.getGuild(closure_1);
+                if (null != lib) {
+                  callback(true);
+                  obj = lib(outer1_2[15]);
+                  obj.transitionToGuild(lib.id);
+                }
+                c4 = 0;
+              }
+              c4 = 0;
+              c6 = 3;
+              obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
+            }
+          } catch (tmp39) {
+            _slicedToArray = tmp39;
+            if (tmp4 === c4) {
+              c6 = tmp2;
+              throw tmp39;
+            } else {
+              c5 = tmp;
+            }
+          }
         }
-        c4 = 0;
-        return arg1;
       })();
     });
     _handleCodeEntered = tmp;
@@ -80,42 +129,90 @@ export default function HubEmailConnectionPinVerify(email) {
       outer1_1(outer1_2[10])();
     });
     return () => {
-      callback(12006).terminate();
+      callback(11856).terminate();
     };
   }, items);
   let obj = importDefault(onClose[11]);
   const throttleResult = obj.throttle(_handleCodeEntered(function*() {
-    let closure_2 = tmp3;
-    let c4 = 1;
-    yield outer1_1(outer1_2[12]).sendVerificationEmail(outer1_0, true, outer1_1);
-    if (1 === tmp7) {
-      c4 = 0;
-      outer1_1 = _slicedToArray;
-      const aPIError = new outer1_0(outer1_2[14]).APIError(outer1_1);
-      outer1_0 = aPIError;
-      const obj1 = outer1_0;
-      let anyErrorMessage;
-      if (outer1_0 != null) {
-        anyErrorMessage = obj1.getAnyErrorMessage();
-      }
-      let closure_0 = anyErrorMessage;
-      if (anyErrorMessage == null) {
-        const intl2 = outer1_0(outer1_2[13]).intl;
-        closure_0 = intl2.string(outer1_0(outer1_2[13]).t.FPzC5z);
-      }
-      outer1_12(closure_0);
-      let c6 = 3;
-      const tmp26 = outer1_12;
-    } else if (arg0 === 1) {
+    if (c6 === 2) {
       c6 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      const intl = outer1_0(outer1_2[13]).intl;
-      outer1_12(intl.string(outer1_0(outer1_2[13]).t["2bO4dz"]));
-      c4 = 0;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let closure_2 = tmp3;
+            let closure_1 = tmp7;
+            let closure_0;
+            let c4 = 1;
+            c5 = 2;
+            c6 = 1;
+            let obj1 = { value: null, done: false };
+            obj1[0] = outer1_1(outer1_2[12]).sendVerificationEmail(outer1_0, true, outer1_1);
+            return obj1;
+          }
+        } else {
+          if (1 === tmp7) {
+            c4 = 0;
+            outer1_1 = _slicedToArray;
+            const aPIError = new outer1_0(outer1_2[14]).APIError(outer1_1);
+            outer1_0 = aPIError;
+            obj1 = outer1_0;
+            let anyErrorMessage;
+            if (outer1_0 != null) {
+              anyErrorMessage = obj1.getAnyErrorMessage();
+            }
+            closure_0 = anyErrorMessage;
+            if (anyErrorMessage == null) {
+              const intl2 = outer1_0(outer1_2[13]).intl;
+              closure_0 = intl2.string(outer1_0(outer1_2[13]).t.FPzC5z);
+            }
+            outer1_12(closure_0);
+            c6 = 3;
+            const tmp26 = outer1_12;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            const intl = outer1_0(outer1_2[13]).intl;
+            outer1_12(intl.string(outer1_0(outer1_2[13]).t["2bO4dz"]));
+            c4 = 0;
+          }
+          c4 = 0;
+          c6 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        }
+      } catch (tmp39) {
+        _slicedToArray = tmp39;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp39;
+        } else {
+          c5 = tmp;
+        }
+      }
     }
-    c4 = 0;
-    return arg1;
   }), 1000);
   const tmp3 = onClose;
   [obj2, c3] = callback(React.useState(null), 2);

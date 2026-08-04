@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx
 import noop from "noop";
 
 let closure_3 = function SearchFetchPendingManager() {
@@ -32,8 +33,8 @@ const result = require("useInitialValue").fileFinishedImporting("modules/search/
 
 export const useSearchFetchPendingManager = function useSearchFetchPendingManager(searchContext) {
   const importDefault = searchContext;
-  const tmp = importDefault(5598)(() => {
-    if (typeof closure_3 !== "function") {
+  const tmp = importDefault(5507)(() => {
+    if (typeof closure_3 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(closure_3.prototype);

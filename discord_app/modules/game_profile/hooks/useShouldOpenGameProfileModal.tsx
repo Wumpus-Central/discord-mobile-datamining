@@ -1,5 +1,6 @@
+// discord_app/modules/game_profile/hooks/useShouldOpenGameProfileModal.tsx
 import noop from "noop";
-import handleLoadMessages from "handleLoadMessages";
+import map from "map";
 import { AnalyticEvents } from "ME";
 
 const require = arg1;
@@ -95,7 +96,7 @@ export const gameIsAcceptable = function gameIsAcceptable(gameFlags) {
     let arr = items;
   } else {
     const items1 = [];
-    if (obj2.hasFlag(gameFlags.gameFlags, require(9191) /* GameFlags */.GameFlags.GAME_PROFILE_DISABLED)) {
+    if (obj2.hasFlag(gameFlags.gameFlags, require(8487) /* GameFlags */.GameFlags.GAME_PROFILE_DISABLED)) {
       arr = items1.push(closure_7.Disabled);
     }
     obj2 = importAll(1384);
@@ -105,7 +106,7 @@ export const gameIsAcceptable = function gameIsAcceptable(gameFlags) {
       arr = items1.push(closure_7.NSFW);
       arr = items1;
     }
-    tmp8Result = require(7004) /* isAgeRestrictedContentClassification */;
+    tmp8Result = require(5912) /* isAgeRestrictedContentClassification */;
   }
   return 0 === arr.length;
 };
@@ -116,7 +117,7 @@ export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
     let arr = items;
   } else {
     const items1 = [];
-    if (obj2.hasFlag(game.gameFlags, require(9191) /* GameFlags */.GameFlags.GAME_PROFILE_DISABLED)) {
+    if (obj2.hasFlag(game.gameFlags, require(8487) /* GameFlags */.GameFlags.GAME_PROFILE_DISABLED)) {
       arr = items1.push(closure_7.Disabled);
     }
     obj2 = importAll(1384);
@@ -126,7 +127,7 @@ export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
       arr = items1.push(closure_7.NSFW);
       arr = items1;
     }
-    tmp9Result = require(7004) /* isAgeRestrictedContentClassification */;
+    tmp9Result = require(5912) /* isAgeRestrictedContentClassification */;
   }
   return 0 === arr.length;
 };

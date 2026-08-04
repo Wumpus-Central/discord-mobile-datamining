@@ -1,3 +1,4 @@
+// discord_app/modules/lobbies/LobbyUtils.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "ME";
 

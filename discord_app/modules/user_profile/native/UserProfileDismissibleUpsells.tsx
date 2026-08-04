@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfileDismissibleUpsells.tsx
 import XSmallIcon from "XSmallIcon";
 import { View } from "getSystemLocale";
 import mergeGuildAvatar from "mergeGuildAvatar";

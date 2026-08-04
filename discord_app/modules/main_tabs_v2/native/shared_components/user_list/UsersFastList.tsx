@@ -1,8 +1,9 @@
+// discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "UserRowSubLabel";
 import { View } from "useScaledRowHeight";
 import PX_24 from "PX_24";
-import jsxProd from "module_9584";
+import jsxProd from "module_9103";
 import createCacheKey from "createCacheKey";
 
 let c9;
@@ -13,14 +14,14 @@ function Placeholder(arg0) {
   let end;
   let start;
   ({ start, end } = arg0);
-  let obj = require(9547) /* styles */;
+  let obj = require(8831) /* styles */;
   const fastestListTableRowPlaceholderStyles = obj.useFastestListTableRowPlaceholderStyles();
   obj = { end, start, label: null, icon: null, height: "100%" };
   const items = [fastestListTableRowPlaceholderStyles.placeholderUsername, callback(importAllResult.useState(() => ({ width: `${10 + 80 * Math.random() | 0}%` })), 1)[0]];
   obj[2] = callback2(View, { style: items });
   obj = { style: fastestListTableRowPlaceholderStyles.placeholderAvatar };
   obj[3] = callback2(View, obj);
-  return callback2(require(5315) /* TableRowInner */.TableRow, obj);
+  return callback2(require(5224) /* TableRowInner */.TableRow, obj);
 }
 function PlaceholderSection() {
   return callback2(View, {});

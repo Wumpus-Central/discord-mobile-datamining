@@ -1,3 +1,4 @@
+// discord_app/modules/forums/tracking/ForumChannelAnalyticsManager.tsx
 import "ensureGuildLoaded";
 import set from "set";
 

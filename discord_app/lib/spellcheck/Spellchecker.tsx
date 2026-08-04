@@ -1,3 +1,4 @@
+// discord_app/lib/spellcheck/Spellchecker.tsx
 import set from "set";
 import _slicedToArray from "_slicedToArray";
 import _getSystemLocale from "_getSystemLocale";
@@ -6,11 +7,11 @@ import importDefaultResult1 from "apply";
 
 const require = arg1;
 function normalizeLocale(arg0) {
-  let str = importDefault(5289)[arg0];
+  let str = importDefault(5198)[arg0];
   if (str == null) {
     str = arg0;
   }
-  const parsed = require(5290) /* parse */.parse(str.replace(/[_-]/g, "-"));
+  const parsed = require(5199) /* parse */.parse(str.replace(/[_-]/g, "-"));
   if (null != parsed) {
     if (null != parsed.langtag.language) {
       if (null != parsed.langtag.region) {
@@ -26,23 +27,75 @@ function normalizeLocale(arg0) {
 function _install() {
   const self = this;
   const tmp = callback(function*() {
-    const table = tmp2;
-    let closure_1 = 0;
-    let lib = yield outer1_7.getAvailableDictionaries();
-    if (arg1 == null) {
-      lib = [];
-    }
-    const mapped = lib.map(closure_8);
-    lib = mapped.filter(lib(table[10]).isNotNullish);
-    closure_1 = new closure_9(lib);
-    (function attachToInput(closure_1) {
-      let closure_0 = closure_1;
-      if (null != document.body) {
-        const _document = document;
-        const listener = body.addEventListener("beforeinput", (target) => outer1_10(closure_0, target.target), true);
+    if (c4 === 2) {
+      c4 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
       }
-    })(closure_1);
-    return closure_1;
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            const table = tmp2;
+            let closure_1 = 0;
+            let lib;
+            closure_1 = undefined;
+            c3 = 1;
+            c4 = 1;
+            const obj1 = { value: null, done: false };
+            obj1[0] = outer1_7.getAvailableDictionaries();
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
+        } else {
+          lib = arg1;
+          if (arg1 == null) {
+            lib = [];
+          }
+          const mapped = lib.map(closure_8);
+          lib = mapped.filter(lib(table[10]).isNotNullish);
+          closure_1 = new closure_9(lib);
+          (function attachToInput(closure_1) {
+            let closure_0 = closure_1;
+            if (null != document.body) {
+              const _document = document;
+              const listener = body.addEventListener("beforeinput", (target) => outer1_10(closure_0, target.target), true);
+            }
+          })(closure_1);
+          c4 = 3;
+          obj = { value: null, done: true };
+          obj[0] = closure_1;
+          return obj;
+        }
+      } catch (tmp18) {
+        c4 = tmp;
+        throw tmp18;
+      }
+    }
   });
   const _install = tmp;
   const apply = tmp.apply;
@@ -79,7 +132,7 @@ class Spellchecker {
       } else {
         let tmp3 = dependencyMap[arg0];
         if (tmp3 == null) {
-          tmp3 = first(5289)[first];
+          tmp3 = first(5198)[first];
         }
         if (null != tmp3) {
           obj.setLocale(tmp3);

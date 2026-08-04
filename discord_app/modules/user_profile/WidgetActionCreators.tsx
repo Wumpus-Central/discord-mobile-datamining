@@ -1,4 +1,5 @@
-import convertClip from "convertClip";
+// discord_app/modules/user_profile/WidgetActionCreators.tsx
+import module_1208 from "module_1208";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { Endpoints } from "ME";
 
@@ -217,49 +218,6 @@ export default {
       }
     })();
   },
-  uploadWidgetClip(arg0) {
-    let dependencyMap;
-    let importDefault;
-    let closure_0 = arg0;
-    let obj = arg1;
-    if (arg1 === undefined) {
-      obj = {};
-    }
-    ({ onProgress: importDefault, signal: dependencyMap } = obj);
-    return callback(function*() {
-      let upload_url = tmp2;
-      const HTTP2 = outer1_0(530).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: true };
-      obj1[0] = outer1_5.USER_PROFILE_WIDGET_CLIP_UPLOAD;
-      const obj2 = { file_size: null };
-      obj2[0] = outer1_0.size;
-      obj1[1] = obj2;
-      yield HTTP2.post(obj1);
-      const body = arg1.body;
-      upload_url = body.upload_url;
-      const HTTP = outer1_0(530).HTTP;
-      const obj5 = { url: null, body: null, headers: null, onRequestProgress: null, signal: null, rejectWithError: true };
-      obj5[0] = upload_url;
-      obj5[1] = body;
-      const obj6 = { "Content-Type": null };
-      obj6[0] = outer1_0(6997).WIDGET_CLIP_CONTENT_TYPE;
-      obj5[2] = obj6;
-      obj5[3] = function onRequestProgress(direction) {
-        let tmp = "upload" === direction.direction;
-        if (tmp) {
-          tmp = direction.total > 0;
-        }
-        if (tmp) {
-          if (upload_url != null) {
-            tmp2(direction.loaded / direction.total);
-          }
-        }
-      };
-      obj5[4] = dependencyMap;
-      yield HTTP.put(obj5);
-      return dependencyMap;
-    })();
-  },
   fetchSuggestedGames() {
     return callback(function*() {
       if (c7 === 2) {
@@ -288,7 +246,7 @@ export default {
               obj[0] = arg1;
               return obj;
             } else {
-              let convertClip = tmp3;
+              let module_1208 = tmp3;
               const dependencyMap = tmp7;
               let closure_0;
               outer1_1(outer1_2[3]).dispatch({ type: "WIDGET_SUGGESTED_FETCH_START" });

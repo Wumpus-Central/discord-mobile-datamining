@@ -1,3 +1,4 @@
+// discord_app/modules/voice_chat/VoiceChatHooks.tsx
 import fetchFingerprint from "fetchFingerprint";
 import updateVoiceState from "updateVoiceState";
 

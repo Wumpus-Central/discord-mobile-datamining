@@ -1,3 +1,4 @@
+// discord_app/modules/game_profile/hooks/useGameAnnouncements.tsx
 import { useEffect } from "noop";
 import getSimilarGames from "getSimilarGames";
 

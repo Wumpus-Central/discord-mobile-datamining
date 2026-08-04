@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/safety/native/TransferOwnershipModal.tsx
 import encodeProperties from "encodeProperties";
 import noop from "noop";
 import TransferOwnershipModalScenes from "TransferOwnershipModalScenes";
@@ -7,7 +8,7 @@ let c5;
 let closure_6;
 const require = arg1;
 function closeModal() {
-  importDefault(11156).close();
+  importDefault(11049).close();
 }
 ({ TransferOwnershipModalScenes: c5, TransferOwnershipVerificationTypes: closure_6 } = TransferOwnershipModalScenes);
 let result = require("TransferOwnershipModalScenes").fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModal.tsx");
@@ -44,9 +45,58 @@ export default function TransferOwnershipModal(guild) {
         let c2 = 0;
         let c1 = 0;
         return (function*(arg0) {
-          const obj2 = outer2_1(outer2_2[10]);
-          yield obj2.transferOwnership(id.id, id2.id, outer2_6.EMAIL, id);
-          return arg1;
+          if (id2 === 2) {
+            id2 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              id2 = 2;
+              if (0 === c2) {
+                if (arg0 === 1) {
+                  id2 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  id2 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  let obj2 = outer2_1(outer2_2[10]);
+                  c2 = 1;
+                  id2 = 1;
+                  const obj1 = { value: null, done: false };
+                  obj1[0] = obj2.transferOwnership(id.id, id2.id, outer2_6.EMAIL, id);
+                  return obj1;
+                }
+              } else if (arg0 === 1) {
+                id2 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                id2 = 3;
+                obj2 = { value: null, done: true };
+                obj2[0] = arg1;
+                return obj2;
+              } else {
+                id2 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              }
+            } catch (tmp12) {
+              id2 = tmp;
+              throw tmp12;
+            }
+          }
         })();
       });
       obj[0] = function() {
@@ -60,11 +110,11 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj[1] = function onSuccess() {
-        callback2(11156).close();
-        const obj = callback2(11156);
-        callback2(8943).close();
-        const obj2 = callback2(8943);
-        const result = callback(3985).showTransferOwnershipSuccess();
+        callback2(11049).close();
+        const obj = callback2(11049);
+        callback2(8308).close();
+        const obj2 = callback2(8308);
+        const result = callback(3893).showTransferOwnershipSuccess();
       };
       obj[2] = outer1_3(function*() {
         if (id === 2) {
@@ -130,5 +180,5 @@ export default function TransferOwnershipModal(guild) {
   let obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
   let intl = guild(1236).intl;
   obj[2] = intl.string(guild(1236).t["13/7kX"]);
-  return jsx(guild(5665).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
+  return jsx(guild(5574).Navigator, { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null });
 };

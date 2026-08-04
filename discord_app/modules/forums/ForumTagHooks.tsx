@@ -1,3 +1,4 @@
+// discord_app/modules/forums/ForumTagHooks.tsx
 import noop from "noop";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

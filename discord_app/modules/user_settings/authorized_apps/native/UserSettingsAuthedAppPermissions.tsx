@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

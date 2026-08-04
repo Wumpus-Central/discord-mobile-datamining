@@ -1,3 +1,4 @@
+// discord_app/modules/interaction_components/native/NativeSearchableSelectActionComponentUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -104,10 +105,10 @@ export const transformSearchableSelectOptions = function transformSearchableSele
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = importDefault(8038);
+    let channelIconWithGuild = importDefault(7908);
   } else {
-    channelIconWithGuild = require(4745) /* getChannelIcon */.getChannelIconWithGuild(channel, guild);
-    const obj = require(4745) /* getChannelIcon */;
+    channelIconWithGuild = require(4654) /* getChannelIcon */.getChannelIconWithGuild(channel, guild);
+    const obj = require(4654) /* getChannelIcon */;
   }
   return channelIconWithGuild;
 };

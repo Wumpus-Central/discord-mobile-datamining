@@ -1,3 +1,4 @@
+// discord_app/modules/saved_messages/native/ForLaterModal.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -20,7 +21,7 @@ export default function ForLaterModal(type) {
   let _require;
   const tmp = createCacheKey();
   const intl = _require(1236).intl;
-  if (type === _require(8192).SavedMessageSortTypes.REMINDER) {
+  if (type === _require(9565).SavedMessageSortTypes.REMINDER) {
   } else {
   }
   const stringResult = intl.string(_2pAkDA);
@@ -42,13 +43,13 @@ export default function ForLaterModal(type) {
     num = 0;
   }
   obj[3] = num;
-  tmp2Result = tmp2(5238);
-  obj[4] = tmp2Result.getHeaderCloseButton(importDefault(4490).pop);
-  obj[1] = closure_4(_require(5245).Header, obj);
+  tmp2Result = tmp2(5147);
+  obj[4] = tmp2Result.getHeaderCloseButton(importDefault(4399).pop);
+  obj[1] = closure_4(_require(5154).Header, obj);
   const items = [closure_4(View, obj), ];
   const obj1 = { type, onClose: null };
-  obj1[1] = importDefault(4490).pop;
-  items[1] = closure_4(importDefault(12464), obj1, type);
+  obj1[1] = importDefault(4399).pop;
+  items[1] = closure_4(importDefault(9951), obj1, type);
   obj[1] = items;
   return closure_5(View, obj);
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/routing/KeybindRouterStore.tsx
 import ME from "ME";
 import identity from "identity";
 
@@ -7,15 +8,15 @@ function getMatchData(pathname) {
   let channelId;
   let guildId;
   let str = pathname;
-  let obj = require(4107) /* matchPath */;
+  let obj = require(4015) /* matchPath */;
   let str2 = pathname;
   if (pathname == null) {
     str2 = "";
   }
   obj = { path: null };
   let obj2 = closure_2;
-  const RouteParam = tmp(4120).RouteParam;
-  const RouteParam2 = tmp(4120).RouteParam;
+  const RouteParam = tmp(4028).RouteParam;
+  const RouteParam2 = tmp(4028).RouteParam;
   obj[0] = closure_2.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
   const matchPathResult = obj.matchPath(str2, obj);
   if (null != matchPathResult) {
@@ -36,9 +37,9 @@ function getMatchData(pathname) {
       str = "";
     }
     const obj1 = { path: null };
-    const RouteParam3 = tmp(4120).RouteParam;
+    const RouteParam3 = tmp(4028).RouteParam;
     obj1[0] = obj2.GUILD_BOOSTING_MARKETING(RouteParam3.guildId());
-    const matchPathResult1 = tmp(4107).matchPath(str, obj1);
+    const matchPathResult1 = tmp(4015).matchPath(str, obj1);
     if (null != matchPathResult1) {
       obj2 = { guildId: null, channelId: null };
       obj2[0] = matchPathResult1.params.guildId;

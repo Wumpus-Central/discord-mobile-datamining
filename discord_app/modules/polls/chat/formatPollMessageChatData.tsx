@@ -1,3 +1,4 @@
+// discord_app/modules/polls/chat/formatPollMessageChatData.tsx
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -14,7 +15,7 @@ function reactionForId(reactions, first) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    if (typeof nextResult.emoji.id === "number") {
+    if (typeof nextResult.emoji.id === "Object") {
       let tmp3 = nextResult;
       let _HermesInternal = HermesInternal;
       let id = "" + tmp2.emoji.id;
@@ -44,8 +45,8 @@ function computeBasicPollChatData(message) {
     let str = "";
     if (message.state === MessageStates.SENT) {
       if (formattedExpirationLabel == null) {
-        formattedExpirationLabel = require(8133) /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
-        const obj2 = require(8133) /* formatExpirationLabel */;
+        formattedExpirationLabel = require(8003) /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
+        const obj2 = require(8003) /* formatExpirationLabel */;
       }
       str = formattedExpirationLabel;
     }
@@ -116,13 +117,13 @@ function computeBasicPollChatData(message) {
     if (null != guildId) {
       selfMember = selfMember.getSelfMember(guildId);
     }
-    const result = require(3919) /* GuildMemberFlags */.hasAutomodQuarantinedProfile(selfMember);
-    const obj4 = require(3919) /* GuildMemberFlags */;
+    const result = require(3827) /* GuildMemberFlags */.hasAutomodQuarantinedProfile(selfMember);
+    const obj4 = require(3827) /* GuildMemberFlags */;
     obj = { poll: null, canTapAnswers: null, canRemoveVote: null, canShowVoteCounts: null, canSubmitVote: null, expirationLabel: null, hasSelectedAnswer: null, hasVoted: null, hasVoteRecorded: null, isEditingVote: null, isExpired: null, isInteractive: null, isSent: null, reactions: null, selectedAnswerIds: null, submitting: null, tapShouldOpenVotersModal: null, showResults: null };
     obj[0] = poll;
     obj[1] = tmp19;
     let tmp30 = tmp16;
-    const result1 = require(3902) /* isCommunicationDisabled */.isMemberCommunicationDisabled(selfMember);
+    const result1 = require(3810) /* isCommunicationDisabled */.isMemberCommunicationDisabled(selfMember);
     if (tmp16) {
       tmp30 = tmp2;
     }

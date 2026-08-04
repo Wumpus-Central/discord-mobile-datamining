@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_frames/hooks/useProfileFrameSections.tsx
 import _slicedToArray from "_slicedToArray";
 import { useMemo } from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

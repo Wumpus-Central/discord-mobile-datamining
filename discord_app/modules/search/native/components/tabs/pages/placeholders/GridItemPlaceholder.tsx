@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/tabs/pages/placeholders/GridItemPlaceholder.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";

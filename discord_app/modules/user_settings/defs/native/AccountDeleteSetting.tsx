@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AccountDeleteSetting.tsx
 import createToggle from "createToggle";
 
 const pressable = createToggle.createPressable({
@@ -8,7 +9,7 @@ const pressable = createToggle.createPressable({
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   variant: "danger",
   onPress: function handlePress() {
-    importDefault(13961)(true);
+    importDefault(13861)(true);
   }
 });
 const obj = {
@@ -19,7 +20,7 @@ const obj = {
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   variant: "danger",
   onPress: function handlePress() {
-    importDefault(13961)(true);
+    importDefault(13861)(true);
   }
 };
 const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/AccountDeleteSetting.tsx");

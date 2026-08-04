@@ -1,3 +1,4 @@
+// discord_app/modules/applications/ApplicationInteractionInfoUtils.tsx
 const result = require("set").fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
 
 export const canViewInteractionInfo = function canViewInteractionInfo(message) {

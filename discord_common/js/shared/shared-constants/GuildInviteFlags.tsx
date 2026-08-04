@@ -1,3 +1,4 @@
+// discord_common/js/shared/shared-constants/GuildInviteFlags.tsx
 import set from "set";
 
 const obj = { ALL: null };

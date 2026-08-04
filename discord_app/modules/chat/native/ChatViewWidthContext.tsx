@@ -1,3 +1,4 @@
+// discord_app/modules/chat/native/ChatViewWidthContext.tsx
 import importAllResult from "noop";
 
 const context = require("noop").createContext(null);

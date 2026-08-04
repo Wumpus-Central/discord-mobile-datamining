@@ -1,3 +1,4 @@
+// discord_app/modules/guild_sidebar/native/GuildMFAWarning.tsx
 import closure_3 from "createCacheKey";
 import "noop";
 import { Image } from "get ActivityIndicator";
@@ -103,7 +104,7 @@ export default function GuildMFAWarning() {
   const tmp = createCacheKey();
   let obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
   obj = { style: tmp.MFAWarningIcon, source: null };
-  obj[1] = importDefault(15205);
+  obj[1] = importDefault(15191);
   const items = [callback2(Image, obj), ];
   obj = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
@@ -114,10 +115,10 @@ export default function GuildMFAWarning() {
   obj1[1] = items2;
   items1[1] = callback3(require(1297) /* Button */.LegacyText, obj1);
   obj[2] = items1;
-  items[1] = callback3(require(4281) /* Text */.Text, obj);
+  items[1] = callback3(require(4189) /* Text */.Text, obj);
   obj[3] = items;
-  return callback3(require(4812) /* PressableBase */.PressableOpacity, obj);
+  return callback3(require(4721) /* PressableBase */.PressableOpacity, obj);
 };
 export const getScaledGuildMFAWarningHeight = function getScaledGuildMFAWarningHeight(fontScale) {
-  return 83 + 5 * require(9370) /* map */.scaleTextLineHeight("text-xs/medium", fontScale) + 10 + 10;
+  return 83 + 5 * require(9925) /* map */.scaleTextLineHeight("text-xs/medium", fontScale) + 10 + 10;
 };

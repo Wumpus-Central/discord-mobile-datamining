@@ -1,3 +1,4 @@
+// discord_app/modules/activities/panel/native/utils/ActivityPanelUtils.tsx
 import participantFromServer from "participantFromServer";
 import { ActivityPanelModes } from "ActivityPanelModes";
 

@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx
 import map from "map";
 import { CollectibleShopTab } from "items";
 

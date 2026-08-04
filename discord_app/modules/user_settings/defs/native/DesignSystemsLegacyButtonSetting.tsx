@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DesignSystemsLegacyButtonSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -10,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_LEGACY_BUTTON,
   getComponent() {
-    return require(14675) /* ComparisonRow */.default;
+    return require(14575) /* ComparisonRow */.default;
   }
 };
 const route = createToggle.createRoute(obj);

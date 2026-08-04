@@ -1,3 +1,4 @@
+// discord_app/modules/video_calls/native/useIsVideoMode.tsx
 import reset from "reset";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";

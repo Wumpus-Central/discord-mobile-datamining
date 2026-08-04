@@ -1,3 +1,4 @@
+// discord_app/modules/native_permissions/NativePermissionActionCreators.tsx
 const prototype = function NativePermissionActionCreators() {
   return Object.create(new.target.prototype);
 }.prototype;

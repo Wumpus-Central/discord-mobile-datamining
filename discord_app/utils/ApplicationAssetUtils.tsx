@@ -1,3 +1,4 @@
+// discord_app/utils/ApplicationAssetUtils.tsx
 import _slicedToArray from "_slicedToArray";
 import timestamp from "timestamp";
 import handleFetchEmbeddedActivityShelfSuccess from "handleFetchEmbeddedActivityShelfSuccess";
@@ -23,19 +24,69 @@ function _updateAssets() {
     let c3 = 0;
     let c4 = 0;
     return (function*(arg0, body) {
-      const table = tmp2;
-      body = tmp5;
-      const HTTP = callback(outer1_2[6]).HTTP;
-      const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj1[0] = outer1_6.APPLICATION_ASSETS(callback);
-      yield HTTP.get(obj1);
-      body = body.body;
-      const obj = body(table[7]);
-      const obj4 = { type: "APPLICATION_ASSETS_UPDATE", applicationId: null, assets: null };
-      obj4[1] = callback;
-      obj4[2] = body;
-      obj.dispatch(obj4);
-      return applicationAssets.getApplicationAssets(callback);
+      if (c4 === 2) {
+        c4 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw body;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = body;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c4 = 2;
+          if (0 === c3) {
+            if (arg0 === 1) {
+              c4 = 3;
+              throw body;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = body;
+              return obj;
+            } else {
+              const table = tmp2;
+              body = tmp5;
+              body = undefined;
+              const HTTP = callback(outer1_2[6]).HTTP;
+              const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
+              obj1[0] = outer1_6.APPLICATION_ASSETS(callback);
+              c3 = 1;
+              c4 = 1;
+              const obj2 = { value: null, done: false };
+              obj2[0] = HTTP.get(obj1);
+              return obj2;
+            }
+          } else if (arg0 === 1) {
+            c4 = 3;
+            throw body;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value: null, done: true };
+            obj3[0] = body;
+            return obj3;
+          } else {
+            body = body.body;
+            obj = body(table[7]);
+            const obj4 = { type: "APPLICATION_ASSETS_UPDATE", applicationId: null, assets: null };
+            obj4[1] = callback;
+            obj4[2] = body;
+            obj.dispatch(obj4);
+            c4 = 3;
+            const obj5 = { value: null, done: true };
+            obj5[0] = applicationAssets.getApplicationAssets(callback);
+            return obj5;
+          }
+        } catch (tmp19) {
+          c4 = tmp;
+          throw tmp19;
+        }
+      }
     })();
   });
   const _updateAssets = tmp;
@@ -75,12 +126,64 @@ function _getAssets() {
     let c2 = 0;
     let c3 = 0;
     return (function*(arg0) {
-      let closure_1 = tmp2;
-      assets = yield outer1_15(assets);
-      if (assets != null) {
-        assets = assets.assets;
+      if (c3 === 2) {
+        c3 = 3;
+        HermesBuiltin.throwTypeError();
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw arg1;
+        } else if (arg0 === 2) {
+          let obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              c3 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              let closure_1 = tmp2;
+              let assets;
+              c2 = 1;
+              c3 = 1;
+              const obj1 = { value: null, done: false };
+              obj1[0] = outer1_15(assets);
+              return obj1;
+            }
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj2 = { value: null, done: true };
+            obj2[0] = arg1;
+            return obj2;
+          } else {
+            assets = arg1;
+            assets = undefined;
+            if (assets != null) {
+              assets = assets.assets;
+            }
+            c3 = 3;
+            obj = { value: null, done: true };
+            obj[0] = assets;
+            return obj;
+          }
+        } catch (tmp11) {
+          c3 = tmp;
+          throw tmp11;
+        }
       }
-      return assets;
     })();
   });
   const _getAssets = tmp;
@@ -595,7 +698,7 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
       [tmp21, tmp22] = callback(media_assets_large_image.split(":"), 2);
       if (tmp21 === PlatformTypes.TWITCH) {
         if (null != items) {
-          if (typeof items !== "number") {
+          if (typeof items !== "Object") {
             const deserializeResult = closure_11[tmp23.TWITCH].deserialize(tmp22, items);
             const obj5 = closure_11[tmp23.TWITCH];
           }
@@ -627,7 +730,7 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
         applyResult = HermesBuiltin.apply(items, Math);
       }
       let str4 = "";
-      if (typeof applyResult === "number") {
+      if (typeof applyResult !== "__REMOTEDEV__") {
         const _HermesInternal3 = HermesInternal;
         str4 = "?size=" + require(1450) /* handleImageLoad */.getBestMediaProxySize(applyResult);
         const obj4 = require(1450) /* handleImageLoad */;

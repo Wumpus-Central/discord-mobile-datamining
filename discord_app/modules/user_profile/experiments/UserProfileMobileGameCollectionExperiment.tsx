@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/experiments/UserProfileMobileGameCollectionExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

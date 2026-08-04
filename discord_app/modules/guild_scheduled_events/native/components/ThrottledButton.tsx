@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/native/components/ThrottledButton.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -65,7 +66,7 @@ export default function ThrottledButton(throttleMs) {
       }, closure_0);
     }
   };
-  return jsx(onPressOut(4695).Button, {});
+  return jsx(onPressOut(4604).Button, {});
 };
 export const useThrottledActionHandler = function useThrottledActionHandler() {
   let num = arg0;

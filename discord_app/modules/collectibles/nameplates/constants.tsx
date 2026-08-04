@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/nameplates/constants.tsx
 let obj = {};
 obj = { darkBackground: "#900007", lightBackground: "#E7040F", name: null };
 obj[2] = require("PaletteKeys").PaletteKeys.Crimson;

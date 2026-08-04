@@ -1,3 +1,4 @@
+// discord_app/modules/forwarding/isStaffToNonStaffForward.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import mergeGuildAvatar from "mergeGuildAvatar";

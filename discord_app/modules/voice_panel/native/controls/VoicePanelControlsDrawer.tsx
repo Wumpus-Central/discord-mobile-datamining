@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import get_ActivityIndicator from "set";
@@ -13,7 +14,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function renderChat(shown) {
-  obj = { collapsable: false, style: absoluteFill.absoluteFill, children: callback(importDefault(11555), obj) };
+  obj = { collapsable: false, style: absoluteFill.absoluteFill, children: callback(importDefault(11446), obj) };
   obj = { shown };
   return callback(closure_6, obj);
 }
@@ -58,11 +59,11 @@ const memoResult = importAllResult.memo((shown) => {
   }, items);
   const items1 = [renderContent, shown];
   const memo = obj.useMemo(() => renderContent(shown), items1);
-  if (renderContent(5273)(ref)) {
+  if (renderContent(5182)(ref)) {
     obj = { freeze: null, children: null };
     obj[0] = tmp2;
     obj[1] = memo;
-    let tmp11 = callback(shown(4642).Freeze, obj);
+    let tmp11 = callback(shown(4551).Freeze, obj);
   } else {
     tmp11 = null;
   }

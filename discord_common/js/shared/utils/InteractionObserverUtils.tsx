@@ -1,3 +1,4 @@
+// discord_common/js/shared/utils/InteractionObserverUtils.tsx
 function __handleIntersections(arr) {
   let closure_0 = arg1;
   const item = arr.forEach((target) => {

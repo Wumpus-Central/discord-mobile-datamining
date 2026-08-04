@@ -1,3 +1,4 @@
+// discord_common/js/packages/libdiscore/mobile/js/index.tsx
 import { NativeModules } from "get ActivityIndicator";
 
 if (NativeModules.LibDiscoreModule) {

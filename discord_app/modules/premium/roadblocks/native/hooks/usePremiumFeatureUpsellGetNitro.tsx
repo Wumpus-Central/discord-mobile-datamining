@@ -1,3 +1,4 @@
+// discord_app/modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import reset from "reset";
@@ -15,7 +16,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
   const dependencyMap = arg3;
   const loading = callback(analyticsLocations.useState(false), 2);
   callback = loading[1];
-  analyticsLocations = importDefault(5610)().analyticsLocations;
+  analyticsLocations = importDefault(5519)().analyticsLocations;
   let reset = analyticsLocations.useRef(0);
   let items = [arg2, analyticsLocations, arg1, arg0, arg3];
   const onPress = analyticsLocations.useCallback(() => {
@@ -38,7 +39,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           obj[0] = obj;
           obj[1] = analyticsLocations;
           obj[2] = callback ? outer1_8.TIER_0 : outer1_8.TIER_2;
-          callback2(6795)(obj, dependencyMap);
+          callback2(6219)(obj, dependencyMap);
         }
       }
     }
@@ -48,15 +49,15 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
         if (result) {
           let resolved = Promise.resolve();
         } else {
-          resolved = callback(4604).fetchSubscriptions();
-          const obj2 = callback(4604);
+          resolved = callback(4513).fetchSubscriptions();
+          const obj2 = callback(4513);
         }
         const items = [resolved, ];
         if (isFetchingOfferResult) {
           let resolved1 = Promise.resolve();
         } else {
-          resolved1 = callback(7513).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
-          const obj3 = callback(7513);
+          resolved1 = callback(6507).fetchUserOffer("usePremiumFeatureUpsellGetNitro");
+          const obj3 = callback(6507);
         }
         items[1] = resolved1;
         const allPromises = Promise.all(items);
@@ -69,20 +70,20 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           callback4();
         }).catch(() => {
           const intl = callback(1236).intl;
-          callback2(3985).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
+          callback2(3893).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
         }).finally(() => callback3(false));
         const catchPromise = Promise.all(items).then(() => {
           ref.current = ref.current + 1;
           callback4();
         }).catch(() => {
           const intl = callback(1236).intl;
-          callback2(3985).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
+          callback2(3893).presentFailedToast(intl.string(callback(1236).t.R0RpRX));
         });
       }
     }
     callback2();
     tmp5 = onPress.hasFetchedOffer() && !obj.hasAnyUnexpiredOffer();
-    const bestActiveInput = callback(4144).getBestActiveInput();
+    const bestActiveInput = callback(4052).getBestActiveInput();
     if (bestActiveInput != null) {
       bestActiveInput.closeCustomKeyboard();
     }

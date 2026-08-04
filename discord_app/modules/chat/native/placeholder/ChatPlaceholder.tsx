@@ -1,3 +1,4 @@
+// discord_app/modules/chat/native/placeholder/ChatPlaceholder.tsx
 import importAllResult from "noop";
 import { useChatInputContainerHeight as closure_3 } from "updateChatInputContainerHeight";
 import { jsx } from "jsxProd";

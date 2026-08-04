@@ -1,3 +1,4 @@
+// discord_app/modules/chat/native/ChatUpdatesQueue.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;

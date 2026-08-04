@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_frames/native/useProfileFrameLayerAsset.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";

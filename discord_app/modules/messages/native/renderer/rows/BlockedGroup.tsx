@@ -1,31 +1,32 @@
+// discord_app/modules/messages/native/renderer/rows/BlockedGroup.tsx
 import { SeparatorAction } from "Changeset";
 import { UNSAFE_Colors } from "sum";
 import apply from "apply";
 
 let closure_5 = apply.memoize((arg0) => {
-  let obj = require(4131) /* AccessibilityAnnouncer */;
+  let obj = require(4039) /* AccessibilityAnnouncer */;
   let str = "#DBE0E4";
   if (obj.isThemeDark(arg0)) {
     str = importDefault(712).unsafe_rawColors.PRIMARY_700;
   }
-  let tmpResult = tmp(4131);
+  let tmpResult = tmp(4039);
   let str2 = "#FAFAFA";
   if (tmpResult.isThemeDark(arg0)) {
     str2 = importDefault(712).unsafe_rawColors.PRIMARY_630;
   }
-  tmpResult = tmp(4131);
+  tmpResult = tmp(4039);
   if (tmpResult.isThemeDark(arg0)) {
-    let GREY1 = tmp(4129).hexWithOpacity(importDefault(712).unsafe_rawColors.PRIMARY_300, 0.6);
-    const tmpResult1 = tmp(4129);
+    let GREY1 = tmp(4037).hexWithOpacity(importDefault(712).unsafe_rawColors.PRIMARY_300, 0.6);
+    const tmpResult1 = tmp(4037);
   } else {
     GREY1 = UNSAFE_Colors.GREY1;
   }
   obj = { borderColor: null, backgroundColor: null, color: null };
-  obj[0] = require(7855) /* processColorOrThrow */.processColorOrThrow(str);
-  const tmpResult2 = require(7855) /* processColorOrThrow */;
-  obj[1] = require(7855) /* processColorOrThrow */.processColorOrThrow(str2);
-  const tmpResult3 = require(7855) /* processColorOrThrow */;
-  obj[2] = require(7855) /* processColorOrThrow */.processColorOrThrow(GREY1);
+  obj[0] = require(7722) /* processColorOrThrow */.processColorOrThrow(str);
+  const tmpResult2 = require(7722) /* processColorOrThrow */;
+  obj[1] = require(7722) /* processColorOrThrow */.processColorOrThrow(str2);
+  const tmpResult3 = require(7722) /* processColorOrThrow */;
+  obj[2] = require(7722) /* processColorOrThrow */.processColorOrThrow(GREY1);
   return obj;
 });
 const result = require("apply").fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");

@@ -1,3 +1,4 @@
+// discord_app/modules/tti_analytics/native/TTIFirstContentfulPaint.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -20,5 +21,5 @@ export const TTIFirstContentfulPaint = function TTIFirstContentfulPaint(checkFoc
     firstContentfulPaint.record(nativeEvent.nativeEvent.timestamp);
     checkFocusedScreen(outer1_2[4]).notifyAboutTTI();
   }, items);
-  return jsx(checkFocusedScreen(11208).TTIMeasurementView, { onMeasurement });
+  return jsx(checkFocusedScreen(10062).TTIMeasurementView, { onMeasurement });
 };

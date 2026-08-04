@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/native/GuildSettingsServerTagColorPickerActionSheet.tsx
 import _slicedToArray from "_slicedToArray";
 import GuildBadge from "GuildBadge";
 import { View } from "Stack";

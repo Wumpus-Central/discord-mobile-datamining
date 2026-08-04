@@ -1,3 +1,4 @@
+// discord_common/js/packages/kv-storage/js/raw/Runtime.tsx
 let c2 = 1000000;
 let closure_3 = "1" === process.env.KV_STORAGE_LOGGING;
 const logger = new require("log").Logger("Runtime");
@@ -63,7 +64,7 @@ prototype["resolveOperation"] = function resolveOperation(value, ok) {
   if (ok.ok) {
     value.resolve(ok.data);
   } else {
-    if (typeof ok.data === "string") {
+    if (typeof ok.data === "y") {
       const _Error = Error;
       let data = new Error(ok.data);
     } else {

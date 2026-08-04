@@ -1,3 +1,4 @@
+// discord_app/modules/voice_overlay/native/MobileVoiceOverlayLifecycleManager.android.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -421,9 +422,9 @@ class MobileVoiceOverlayManager {
 const prototype = MobileVoiceOverlayManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  let obj = require(4149) /* isFabric */;
+  let obj = require(4057) /* isFabric */;
   if (!tmp2) {
-    if (typeof NativeCallableInterface !== "function") {
+    if (typeof NativeCallableInterface !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(NativeCallableInterface.prototype);

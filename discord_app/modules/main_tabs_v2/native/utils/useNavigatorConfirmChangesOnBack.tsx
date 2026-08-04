@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx
 import noop from "noop";
 import { Keyboard } from "get ActivityIndicator";
 import { NOOP } from "ME";
@@ -7,7 +8,7 @@ const result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/
 export default function useNavigatorConfirmChangesOnBack() {
   const ref = React.useRef(null);
   const dependencyMap = React.useRef(false);
-  obj = { onGoBack: ref(9595)(obj).onGoBack, ref };
+  obj = { onGoBack: ref(9115)(obj).onGoBack, ref };
   obj = {
     onBeforeGoBack(preventable) {
       if (preventable.preventable) {

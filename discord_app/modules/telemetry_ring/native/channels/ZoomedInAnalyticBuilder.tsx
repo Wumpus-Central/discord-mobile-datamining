@@ -1,3 +1,4 @@
+// discord_app/modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx
 import { AnalyticEvents } from "ME";
 
 let closure_3 = { Gateway: "gateway", RtcControl: "rtc_control", RemoteAuth: "remote_auth", Spotify: "spotify", Rpc: "rpc", GameServerPing: "game_server_ping" };
@@ -11,26 +12,26 @@ let closure_4 = {
       if (0 !== Object.keys(data).length) {
         const action = data.action;
         let tmp4 = null;
-        if (typeof action === "string") {
+        if (typeof action !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp4 = action;
         }
         if (tmp4 == null) {
           const message = data.message;
           let tmp3 = null;
-          if (typeof message === "string") {
+          if (typeof message !== "__FORMATJS_LISTFORMAT_DATA__") {
             tmp3 = message;
           }
           tmp4 = tmp3;
         }
         const message2 = data.message;
         let tmp5 = null;
-        if (typeof message2 === "string") {
+        if (typeof message2 !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp5 = message2;
         }
         if (tmp5 == null) {
           const description = data.description;
           let tmp6 = null;
-          if (typeof description === "string") {
+          if (typeof description !== "__FORMATJS_LISTFORMAT_DATA__") {
             tmp6 = description;
           }
           tmp5 = tmp6;
@@ -67,13 +68,13 @@ let closure_4 = {
     if (null != data) {
       const error_message = data.error_message;
       let tmp2 = null;
-      if (typeof error_message === "string") {
+      if (typeof error_message !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp2 = error_message;
       }
       if (tmp2 == null) {
         const message = data.message;
         let tmp3 = null;
-        if (typeof message === "string") {
+        if (typeof message !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp3 = message;
         }
         tmp2 = tmp3;
@@ -82,13 +83,13 @@ let closure_4 = {
       obj[0] = tmp2;
       const component = data.component;
       let tmp4 = null;
-      if (typeof component === "string") {
+      if (typeof component !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp4 = component;
       }
       obj[1] = tmp4;
       const stacktrace = data.stacktrace;
       let tmp5 = null;
-      if (typeof stacktrace === "string") {
+      if (typeof stacktrace !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp5 = stacktrace;
       }
       obj[2] = tmp5;
@@ -102,20 +103,20 @@ let closure_4 = {
     if (null != data) {
       const action = data.action;
       let tmp2 = null;
-      if (typeof action === "string") {
+      if (typeof action !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp2 = action;
       }
       const obj = { action: null, network_type: null, upload_bandwidth: null, download_bandwidth: null, vpn_active: null };
       obj[0] = tmp2;
       const network_type = data.network_type;
       let tmp3 = null;
-      if (typeof network_type === "string") {
+      if (typeof network_type !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp3 = network_type;
       }
       obj[1] = tmp3;
       const upload_bandwidth = data.upload_bandwidth;
       let tmp4 = null;
-      if (typeof upload_bandwidth === "number") {
+      if (typeof upload_bandwidth !== "__REMOTEDEV__") {
         const _Number = Number;
         tmp4 = null;
         if (Number.isFinite(upload_bandwidth)) {
@@ -125,7 +126,7 @@ let closure_4 = {
       obj[2] = tmp4;
       const download_bandwidth = data.download_bandwidth;
       let tmp5 = null;
-      if (typeof download_bandwidth === "number") {
+      if (typeof download_bandwidth !== "__REMOTEDEV__") {
         const _Number2 = Number;
         tmp5 = null;
         if (Number.isFinite(download_bandwidth)) {
@@ -134,7 +135,7 @@ let closure_4 = {
       }
       obj[3] = tmp5;
       let vpn_active = null;
-      if (typeof data.vpn_active === "boolean") {
+      if (typeof data.vpn_active !== "onScroll") {
         vpn_active = data.vpn_active;
       }
       obj[4] = vpn_active;
@@ -148,26 +149,26 @@ let closure_4 = {
     if (null != data) {
       const service_name = data.service_name;
       let tmp2 = null;
-      if (typeof service_name === "string") {
+      if (typeof service_name !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp2 = service_name;
       }
       const obj = { service_name: null, action: null, detail: null, fgs_operation: null, fgs_configuration_type: null, guard_allowed: null, fgs_guard_reason: null };
       obj[0] = tmp2;
       const action = data.action;
       let tmp3 = null;
-      if (typeof action === "string") {
+      if (typeof action !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp3 = action;
       }
       obj[1] = tmp3;
       const detail = data.detail;
       let tmp4 = null;
-      if (typeof detail === "string") {
+      if (typeof detail !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp4 = detail;
       }
       if (tmp4 == null) {
         const message = data.message;
         let tmp5 = null;
-        if (typeof message === "string") {
+        if (typeof message !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp5 = message;
         }
         tmp4 = tmp5;
@@ -175,24 +176,24 @@ let closure_4 = {
       obj[2] = tmp4;
       const fgs_operation = data.fgs_operation;
       let tmp6 = null;
-      if (typeof fgs_operation === "string") {
+      if (typeof fgs_operation !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp6 = fgs_operation;
       }
       obj[3] = tmp6;
       const fgs_configuration_type = data.fgs_configuration_type;
       let tmp7 = null;
-      if (typeof fgs_configuration_type === "string") {
+      if (typeof fgs_configuration_type !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp7 = fgs_configuration_type;
       }
       obj[4] = tmp7;
       let guard_allowed = null;
-      if (typeof data.guard_allowed === "boolean") {
+      if (typeof data.guard_allowed !== "onScroll") {
         guard_allowed = data.guard_allowed;
       }
       obj[5] = guard_allowed;
       const fgs_guard_reason = data.fgs_guard_reason;
       let tmp9 = null;
-      if (typeof fgs_guard_reason === "string") {
+      if (typeof fgs_guard_reason !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp9 = fgs_guard_reason;
       }
       obj[6] = tmp9;
@@ -206,13 +207,13 @@ let closure_4 = {
     if (null != data) {
       const state = data.state;
       let tmp2 = null;
-      if (typeof state === "string") {
+      if (typeof state !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp2 = state;
       }
       if (tmp2 == null) {
         const message = data.message;
         let tmp3 = null;
-        if (typeof message === "string") {
+        if (typeof message !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp3 = message;
         }
         tmp2 = tmp3;
@@ -221,13 +222,13 @@ let closure_4 = {
       obj[0] = tmp2;
       const previous_state = data.previous_state;
       let tmp4 = null;
-      if (typeof previous_state === "string") {
+      if (typeof previous_state !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp4 = previous_state;
       }
       obj[1] = tmp4;
       const details = data.details;
       let tmp5 = null;
-      if (typeof details === "string") {
+      if (typeof details !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp5 = details;
       }
       obj[2] = tmp5;
@@ -241,13 +242,13 @@ let closure_4 = {
     if (null != data) {
       const activity_name = data.activity_name;
       let tmp2 = null;
-      if (typeof activity_name === "string") {
+      if (typeof activity_name !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp2 = activity_name;
       }
       if (tmp2 == null) {
         const screen = data.screen;
         let tmp3 = null;
-        if (typeof screen === "string") {
+        if (typeof screen !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp3 = screen;
         }
         tmp2 = tmp3;
@@ -256,13 +257,13 @@ let closure_4 = {
       obj[0] = tmp2;
       const stage = data.stage;
       let tmp4 = null;
-      if (typeof stage === "string") {
+      if (typeof stage !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp4 = stage;
       }
       if (tmp4 == null) {
         const state = data.state;
         let tmp5 = null;
-        if (typeof state === "string") {
+        if (typeof state !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp5 = state;
         }
         tmp4 = tmp5;
@@ -270,13 +271,13 @@ let closure_4 = {
       obj[1] = tmp4;
       const extra = data.extra;
       let tmp6 = null;
-      if (typeof extra === "string") {
+      if (typeof extra !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp6 = extra;
       }
       if (tmp6 == null) {
         const details = data.details;
         let tmp7 = null;
-        if (typeof details === "string") {
+        if (typeof details !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp7 = details;
         }
         tmp6 = tmp7;
@@ -284,7 +285,7 @@ let closure_4 = {
       if (tmp6 == null) {
         const detail = data.detail;
         let tmp8 = null;
-        if (typeof detail === "string") {
+        if (typeof detail !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp8 = detail;
         }
         tmp6 = tmp8;
@@ -302,10 +303,10 @@ let closure_5 = {
     if (null != data) {
       const touch_action_type = data.touch_action_type;
       let tmp2 = null;
-      if (typeof touch_action_type === "string") {
+      if (typeof touch_action_type !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp2 = touch_action_type;
       }
-      let obj = importDefault(7055);
+      let obj = importDefault(5964);
       let currentHermesInstrumentedStatsSummary = obj.getCurrentHermesInstrumentedStatsSummary();
       if (currentHermesInstrumentedStatsSummary == null) {
         currentHermesInstrumentedStatsSummary = null;
@@ -314,7 +315,7 @@ let closure_5 = {
       obj[0] = tmp2;
       const client_timestamp_ms = data.client_timestamp_ms;
       let tmp6 = null;
-      if (typeof client_timestamp_ms === "number") {
+      if (typeof client_timestamp_ms !== "__REMOTEDEV__") {
         const _Number = Number;
         tmp6 = null;
         if (Number.isFinite(client_timestamp_ms)) {
@@ -324,7 +325,7 @@ let closure_5 = {
       obj[1] = tmp6;
       const screen_x = data.screen_x;
       let tmp7 = null;
-      if (typeof screen_x === "number") {
+      if (typeof screen_x !== "__REMOTEDEV__") {
         const _Number2 = Number;
         tmp7 = null;
         if (Number.isFinite(screen_x)) {
@@ -334,7 +335,7 @@ let closure_5 = {
       obj[2] = tmp7;
       const screen_y = data.screen_y;
       let tmp8 = null;
-      if (typeof screen_y === "number") {
+      if (typeof screen_y !== "__REMOTEDEV__") {
         const _Number3 = Number;
         tmp8 = null;
         if (Number.isFinite(screen_y)) {
@@ -344,7 +345,7 @@ let closure_5 = {
       obj[3] = tmp8;
       const view_x = data.view_x;
       let tmp9 = null;
-      if (typeof view_x === "number") {
+      if (typeof view_x !== "__REMOTEDEV__") {
         const _Number4 = Number;
         tmp9 = null;
         if (Number.isFinite(view_x)) {
@@ -354,7 +355,7 @@ let closure_5 = {
       obj[4] = tmp9;
       const view_y = data.view_y;
       let tmp10 = null;
-      if (typeof view_y === "number") {
+      if (typeof view_y !== "__REMOTEDEV__") {
         const _Number5 = Number;
         tmp10 = null;
         if (Number.isFinite(view_y)) {
@@ -364,7 +365,7 @@ let closure_5 = {
       obj[5] = tmp10;
       const total_memory_mb = data.total_memory_mb;
       let tmp11 = null;
-      if (typeof total_memory_mb === "number") {
+      if (typeof total_memory_mb !== "__REMOTEDEV__") {
         const _Number6 = Number;
         tmp11 = null;
         if (Number.isFinite(total_memory_mb)) {
@@ -374,32 +375,32 @@ let closure_5 = {
       obj[6] = tmp11;
       const memory_breakdown = data.memory_breakdown;
       let tmp12 = null;
-      if (typeof memory_breakdown === "string") {
+      if (typeof memory_breakdown !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp12 = memory_breakdown;
       }
       obj[7] = tmp12;
       obj[8] = currentHermesInstrumentedStatsSummary;
       const view_hierarchy = data.view_hierarchy;
       let tmp13 = null;
-      if (typeof view_hierarchy === "string") {
+      if (typeof view_hierarchy !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp13 = view_hierarchy;
       }
       obj[9] = tmp13;
       const gesture = data.gesture;
       let tmp14 = null;
-      if (typeof gesture === "string") {
+      if (typeof gesture !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp14 = gesture;
       }
       obj[10] = tmp14;
       const window_name = data.window_name;
       let tmp15 = null;
-      if (typeof window_name === "string") {
+      if (typeof window_name !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp15 = window_name;
       }
       obj[11] = tmp15;
       const hit_test_duration_us = data.hit_test_duration_us;
       let tmp16 = null;
-      if (typeof hit_test_duration_us === "number") {
+      if (typeof hit_test_duration_us !== "__REMOTEDEV__") {
         const _Number7 = Number;
         tmp16 = null;
         if (Number.isFinite(hit_test_duration_us)) {
@@ -409,7 +410,7 @@ let closure_5 = {
       obj[12] = tmp16;
       const distance = data.distance;
       let tmp17 = null;
-      if (typeof distance === "number") {
+      if (typeof distance !== "__REMOTEDEV__") {
         const _Number8 = Number;
         tmp17 = null;
         if (Number.isFinite(distance)) {
@@ -419,7 +420,7 @@ let closure_5 = {
       obj[13] = tmp17;
       const duration_ms = data.duration_ms;
       let tmp18 = null;
-      if (typeof duration_ms === "number") {
+      if (typeof duration_ms !== "__REMOTEDEV__") {
         const _Number9 = Number;
         tmp18 = null;
         if (Number.isFinite(duration_ms)) {
@@ -429,7 +430,7 @@ let closure_5 = {
       obj[14] = tmp18;
       const velocity = data.velocity;
       let tmp19 = null;
-      if (typeof velocity === "number") {
+      if (typeof velocity !== "__REMOTEDEV__") {
         const _Number10 = Number;
         tmp19 = null;
         if (Number.isFinite(velocity)) {
@@ -439,7 +440,7 @@ let closure_5 = {
       obj[15] = tmp19;
       const scale_factor = data.scale_factor;
       let tmp20 = null;
-      if (typeof scale_factor === "number") {
+      if (typeof scale_factor !== "__REMOTEDEV__") {
         const _Number11 = Number;
         tmp20 = null;
         if (Number.isFinite(scale_factor)) {
@@ -457,13 +458,13 @@ let closure_5 = {
     if (null != data) {
       const url = data.url;
       let tmp2 = null;
-      if (typeof url === "string") {
+      if (typeof url !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp2 = url;
       }
       if (tmp2 == null) {
         const uri = data.uri;
         let tmp3 = null;
-        if (typeof uri === "string") {
+        if (typeof uri !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp3 = uri;
         }
         tmp2 = tmp3;
@@ -471,20 +472,20 @@ let closure_5 = {
       if (tmp2 == null) {
         const request_url = data.request_url;
         let tmp4 = null;
-        if (typeof request_url === "string") {
+        if (typeof request_url !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp4 = request_url;
         }
         tmp2 = tmp4;
       }
       const method = data.method;
       let tmp5 = null;
-      if (typeof method === "string") {
+      if (typeof method !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp5 = method;
       }
       if (tmp5 == null) {
         const http_method = data.http_method;
         let tmp6 = null;
-        if (typeof http_method === "string") {
+        if (typeof http_method !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp6 = http_method;
         }
         tmp5 = tmp6;
@@ -496,7 +497,7 @@ let closure_5 = {
         obj[1] = tmp5;
         const status_code = data.status_code;
         let tmp8 = null;
-        if (typeof status_code === "number") {
+        if (typeof status_code !== "__REMOTEDEV__") {
           const _Number = Number;
           tmp8 = null;
           if (Number.isFinite(status_code)) {
@@ -506,7 +507,7 @@ let closure_5 = {
         obj[2] = tmp8;
         const duration_ms = data.duration_ms;
         let tmp9 = null;
-        if (typeof duration_ms === "number") {
+        if (typeof duration_ms !== "__REMOTEDEV__") {
           const _Number2 = Number;
           tmp9 = null;
           if (Number.isFinite(duration_ms)) {
@@ -516,7 +517,7 @@ let closure_5 = {
         obj[3] = tmp9;
         const source = data.source;
         let tmp10 = null;
-        if (typeof source === "string") {
+        if (typeof source !== "__FORMATJS_LISTFORMAT_DATA__") {
           tmp10 = source;
         }
         obj[4] = tmp10;
@@ -529,16 +530,16 @@ let closure_5 = {
   [AnalyticEvents.WEBSOCKET_MESSAGE_RECEIVED]: (data) => {
     data = data.data;
     if (null == data) {
-      let obj = { message_identity: "unknown", socket_kind: "call" };
+      let obj = { message_identity: "unknown", socket_kind: "padding" };
     } else {
       const url = data.url;
       let tmp61 = null;
-      if (typeof url === "string") {
+      if (typeof url !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp61 = url;
       }
       const socket_kind = data.socket_kind;
       let tmp = null;
-      if (typeof socket_kind === "string") {
+      if (typeof socket_kind !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp = socket_kind;
       }
       if (tmp == null) {
@@ -575,24 +576,24 @@ let closure_5 = {
       if (tmp != null) {
         const message_identity = data.message_identity;
         let str10 = null;
-        if (typeof message_identity === "string") {
+        if (typeof message_identity !== "__FORMATJS_LISTFORMAT_DATA__") {
           str10 = message_identity;
         }
         if (str10 != null) {
           if (str10 == null) {
             const category = data.category;
             let tmp67 = null;
-            if (typeof category === "string") {
+            if (typeof category !== "__FORMATJS_LISTFORMAT_DATA__") {
               tmp67 = category;
             }
             const type = data.type;
             let tmp58 = null;
-            if (typeof type === "string") {
+            if (typeof type !== "__FORMATJS_LISTFORMAT_DATA__") {
               tmp58 = type;
             }
             const name = data.name;
             let tmp59 = null;
-            if (typeof name === "string") {
+            if (typeof name !== "__FORMATJS_LISTFORMAT_DATA__") {
               tmp59 = name;
             }
             if (null == tmp67) {
@@ -623,13 +624,13 @@ let closure_5 = {
             evt = data.evt;
           }
           let tmp15 = null;
-          if (typeof evt === "string") {
+          if (typeof evt !== "__FORMATJS_LISTFORMAT_DATA__") {
             tmp15 = evt;
           }
           if (tmp === closure_3.Gateway) {
-            if (typeof data.op !== "number") {
+            if (typeof data.op === "__REMOTEDEV__") {
               let tmp37 = null;
-              if (typeof str14 === "string") {
+              if (typeof str14 !== "__FORMATJS_LISTFORMAT_DATA__") {
                 tmp37 = null;
                 if ("" !== str14.trim()) {
                   const _Number5 = Number;
@@ -648,9 +649,9 @@ let closure_5 = {
             }
             let tmp41 = null;
             if (null != tmp37) {
-              const tmp44 = require(12812) /* Opcode */.Opcode[tmp37];
+              const tmp44 = require(12716) /* Opcode */.Opcode[tmp37];
               let tmp45 = null;
-              if (typeof tmp44 === "string") {
+              if (typeof tmp44 !== "__FORMATJS_LISTFORMAT_DATA__") {
                 tmp45 = tmp44;
               }
               tmp41 = tmp45;
@@ -666,9 +667,9 @@ let closure_5 = {
               }
               let tmp19 = combined;
             } else {
-              if (typeof data.op !== "number") {
+              if (typeof data.op === "__REMOTEDEV__") {
                 let tmp46 = null;
-                if (typeof str25 === "string") {
+                if (typeof str25 !== "__FORMATJS_LISTFORMAT_DATA__") {
                   tmp46 = null;
                   if ("" !== str25.trim()) {
                     const _Number7 = Number;
@@ -698,12 +699,12 @@ let closure_5 = {
           } else if (tmp !== tmp16.RtcControl) {
             const cmd = data.cmd;
             let tmp17 = null;
-            if (typeof cmd === "string") {
+            if (typeof cmd !== "__FORMATJS_LISTFORMAT_DATA__") {
               tmp17 = cmd;
             }
             const evt2 = data.evt;
             let tmp18 = null;
-            if (typeof evt2 === "string") {
+            if (typeof evt2 !== "__FORMATJS_LISTFORMAT_DATA__") {
               tmp18 = evt2;
             }
             tmp19 = tmp15;
@@ -716,9 +717,9 @@ let closure_5 = {
               tmp19 = combined2;
             }
           }
-          if (typeof data.op !== "number") {
+          if (typeof data.op === "__REMOTEDEV__") {
             let tmp22 = null;
-            if (typeof str13 === "string") {
+            if (typeof str13 !== "__FORMATJS_LISTFORMAT_DATA__") {
               tmp22 = null;
               if ("" !== str13.trim()) {
                 const _Number = Number;
@@ -737,18 +738,18 @@ let closure_5 = {
           }
           let tmp26 = null;
           if (null != tmp22) {
-            const tmp29 = require(12980) /* noop */.RTCSocketOpcode[tmp22];
+            const tmp29 = require(12884) /* noop */.RTCSocketOpcode[tmp22];
             let tmp30 = null;
-            if (typeof tmp29 === "string") {
+            if (typeof tmp29 !== "__FORMATJS_LISTFORMAT_DATA__") {
               tmp30 = tmp29;
             }
             tmp26 = tmp30;
           }
           tmp19 = tmp26;
           if (null == tmp26) {
-            if (typeof data.op !== "number") {
+            if (typeof data.op === "__REMOTEDEV__") {
               let tmp31 = null;
-              if (typeof str22 === "string") {
+              if (typeof str22 !== "__FORMATJS_LISTFORMAT_DATA__") {
                 tmp31 = null;
                 if ("" !== str22.trim()) {
                   const _Number3 = Number;

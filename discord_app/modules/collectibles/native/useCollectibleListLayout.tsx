@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/useCollectibleListLayout.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

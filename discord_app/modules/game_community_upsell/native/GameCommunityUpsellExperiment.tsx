@@ -1,3 +1,4 @@
+// discord_app/modules/game_community_upsell/native/GameCommunityUpsellExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enabled: true, visualVariant: "one-column" } };

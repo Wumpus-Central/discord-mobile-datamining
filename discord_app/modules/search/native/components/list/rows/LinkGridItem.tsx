@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/list/rows/LinkGridItem.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "SearchMediaObscurityIcon";
 import get_ActivityIndicator from "SearchListContentAuthor";

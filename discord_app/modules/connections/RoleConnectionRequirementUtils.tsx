@@ -1,3 +1,4 @@
+// discord_app/modules/connections/RoleConnectionRequirementUtils.tsx
 import { OperatorTypes } from "OperatorTypes";
 
 const result = require("set").fileFinishedImporting("modules/connections/RoleConnectionRequirementUtils.tsx");

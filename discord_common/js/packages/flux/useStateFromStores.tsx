@@ -1,3 +1,4 @@
+// discord_common/js/packages/flux/useStateFromStores.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
@@ -22,7 +23,7 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
   let callback2;
   const tmp2 = state(null);
   if (null == tmp2.current) {
-    const obj = { stores: null, areStatesEqual: null, getStateFromStores: null, prevDeps: "Boolean", state: "paddingHorizontal" };
+    const obj = { stores: null, areStatesEqual: null, getStateFromStores: null, prevDeps: "Boolean", state: "accessibilityRole" };
     obj[0] = items;
     obj[1] = tmp;
     obj[2] = getCurrentRestrictedHoursState;

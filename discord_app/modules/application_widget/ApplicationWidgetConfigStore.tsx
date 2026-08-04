@@ -1,3 +1,4 @@
+// discord_app/modules/application_widget/ApplicationWidgetConfigStore.tsx
 import _slicedToArray from "_slicedToArray";
 import { Store } from "initialize";
 

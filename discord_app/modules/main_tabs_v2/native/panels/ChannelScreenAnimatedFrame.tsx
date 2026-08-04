@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import MIN_HEADER_HEIGHT from "MIN_HEADER_HEIGHT";

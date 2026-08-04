@@ -1,3 +1,4 @@
+// discord_app/modules/premium/experiments/AndroidTwoWeekTrialsExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null, 2: { enabled: true, trialCTAEnabled: true } };

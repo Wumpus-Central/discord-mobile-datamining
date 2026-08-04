@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/useShopOrientationLock.tsx
 import noop from "noop";
 
 const require = arg1;

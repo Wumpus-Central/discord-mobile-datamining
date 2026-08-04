@@ -1,3 +1,4 @@
+// discord_app/modules/markup/BioMarkupUtils.tsx
 import importDefaultResult from "combineMarkupRules";
 import importAllResult from "reactParserFor";
 import importDefaultResult1 from "get defaultRules";
@@ -50,8 +51,8 @@ export const parseBioReactWithCachedAST = function parseBioReactWithCachedAST(de
       value = tmp4;
     }
     obj = tmp4;
-    const obj2 = importDefault(3984);
-    return obj2.reactFor(importDefault(3984).ruleOutput(closure_2, "react"))(value);
+    const obj2 = importDefault(3892);
+    return obj2.reactFor(importDefault(3892).ruleOutput(closure_2, "react"))(value);
   }
 };
 export const parseBioReactWithoutScrolling = reactParserForResult1;

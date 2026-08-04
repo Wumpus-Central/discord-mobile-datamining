@@ -1,3 +1,4 @@
+// discord_app/modules/game_profile/GameProfileStore.tsx
 import { Store } from "initialize";
 
 let closure_0 = {};

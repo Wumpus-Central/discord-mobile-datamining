@@ -1,3 +1,4 @@
+// discord_app/modules/opt_in_channels/RecentlyActiveCollapseStore.tsx
 import { PersistedStore } from "initialize";
 import set from "set";
 

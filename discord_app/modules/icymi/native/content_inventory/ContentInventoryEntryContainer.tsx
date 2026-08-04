@@ -1,3 +1,4 @@
+// discord_app/modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import mergeGuildAvatar from "mergeGuildAvatar";

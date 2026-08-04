@@ -1,3 +1,4 @@
+// discord_app/stores/PermissionSpeakStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { Store } from "initialize";

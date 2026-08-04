@@ -1,3 +1,4 @@
+// discord_app/modules/errors/InteractionCallbackError.tsx
 const result = require("set").fileFinishedImporting("modules/errors/InteractionCallbackError.tsx");
 const prototype = function InteractionCallbackError(reason) {
   const obj = Object.create(new.target.prototype);

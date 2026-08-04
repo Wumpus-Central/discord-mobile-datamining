@@ -1,3 +1,4 @@
+// discord_common/js/shared/utils/MathUtils.tsx
 function roundIfClose(result, arg1) {
   const diff = result - Math.floor(result);
   if (diff >= 1 - arg1) {

@@ -1,3 +1,4 @@
+// discord_app/modules/interaction_components/native/components/SelectComponentActionSheet.tsx
 import useWindowDimensions from "useWindowDimensions";
 import { View } from "AccessibilityAnnouncer";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -78,10 +79,10 @@ function SelectionHeader(renderIcon) {
     obj[3] = renderIcon.submitSelection;
     const intl3 = tmp6(1236).intl;
     obj[4] = intl3.string(tmp6(1236).t.XqMe3N);
-    tmp5Result = tmp5(tmp6(4695).Button, obj);
+    tmp5Result = tmp5(tmp6(4604).Button, obj);
   }
   obj[2] = tmp5Result;
-  const children = [closure_8(renderIcon(5337).BottomSheetTitleHeader, obj), ];
+  const children = [closure_8(renderIcon(5246).BottomSheetTitleHeader, obj), ];
   let tmp5Result1 = null;
   if (null != onQueryChange) {
     tmp5Result1 = null;
@@ -116,8 +117,8 @@ function SelectionHeader(renderIcon) {
         }
         onQueryChange(arg0);
       };
-      tmp5Result1 = tmp5(selectedOptions(8931), obj1);
-      const tmp13 = selectedOptions(8931);
+      tmp5Result1 = tmp5(selectedOptions(8293), obj1);
+      const tmp13 = selectedOptions(8293);
     }
   }
   children[1] = tmp5Result1;
@@ -141,7 +142,7 @@ function SelectionOptionItem(item) {
   item = item.item;
   ({ onPressOptionItem: importDefault, selected, disabled, index: dependencyMap, itemAccessibilityLabel, renderDescription, renderOptionSuffix } = item);
   ({ clearable, start, end, iconContainerStyle, skipIcon, multi, renderIcon } = item);
-  let obj = item(4003);
+  let obj = item(3911);
   let flag = selected;
   if (selected == null) {
     flag = false;
@@ -152,7 +153,7 @@ function SelectionOptionItem(item) {
   if (selected == null) {
     flag2 = false;
   }
-  let radioA11yNative = item(4003).useRadioA11yNative({ selected: flag2, disabled });
+  let radioA11yNative = item(3911).useRadioA11yNative({ selected: flag2, disabled });
   if (multi) {
     radioA11yNative = checkboxA11yNative;
   }
@@ -196,17 +197,17 @@ function SelectionOptionItem(item) {
     }
     const obj2 = { checked: null };
     obj2[0] = selected;
-    tmp6Result = tmp6(tmp2(7779).FormCheckbox, obj2);
+    tmp6Result = tmp6(tmp2(7641).FormCheckbox, obj2);
   } else {
     tmp6Result = null;
     if (true === selected) {
-      tmp6Result = tmp6(tmp2(9054).CheckmarkSmallBoldIcon, { color: "text-brand" });
+      tmp6Result = tmp6(tmp2(8401).CheckmarkSmallBoldIcon, { color: "text-brand" });
     }
   }
   items1[1] = tmp6Result;
   obj1[1] = items1;
   obj[12] = closure_10(View, obj1);
-  return closure_8(item(5315).TableRow, obj);
+  return closure_8(item(5224).TableRow, obj);
 }
 ({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { selectionOptionItemIconWrapper: null, tagListIconWrapper: null, tagListIcon: null, textInputWrapper: null };

@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/activityLaunchErrorUtils.tsx
 import explicitContentFromProto from "explicitContentFromProto";
 import initialize from "initialize";
 import { DevShelfFetchState } from "initialize";

@@ -1,3 +1,4 @@
+// discord_app/modules/activities/useEmbeddedAppsForChannel.tsx
 import noop from "noop";
 import sortActivity from "sortActivity";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -9,7 +10,7 @@ function useEmbeddedApps(arr, arg1) {
   const _require = arr;
   const importDefault = arg1;
   let mapped = arr.map((applicationId) => applicationId.applicationId);
-  const tmp2 = importDefault(5616)(mapped);
+  const tmp2 = importDefault(5525)(mapped);
   const dependencyMap = tmp2;
   const set = new Set([]);
   const iter = arr[Symbol.iterator]();

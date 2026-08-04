@@ -1,3 +1,4 @@
+// discord_app/stores/GuildRoleStore.tsx
 import { constructInPlace } from "isValueEqual";
 import { LibdiscoreStore } from "identity";
 import { getGuildEveryoneRoleId } from "GuildNSFWContentLevel";

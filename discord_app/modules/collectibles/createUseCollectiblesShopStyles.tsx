@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/createUseCollectiblesShopStyles.tsx
 import _slicedToArray from "_slicedToArray";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 

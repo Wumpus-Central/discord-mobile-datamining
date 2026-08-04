@@ -1,3 +1,4 @@
+// discord_app/modules/game_server/GameServerExperiment.tsx
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Enable GameServer", config: { enabled: true } }];

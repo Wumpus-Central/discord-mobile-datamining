@@ -1,3 +1,4 @@
+// discord_app/modules/global_discovery_servers/GlobalDiscoveryServersSearchResultsStore.tsx
 import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID";
 import { Store } from "initialize";
 
@@ -23,7 +24,7 @@ prototype["handleSearchStart"] = function handleSearchStart() {
 prototype["handleSearchFailure"] = function handleSearchFailure(arg0) {
   this.isFetching = false;
   this.isInitialFetchComplete = true;
-  const aPIError = new require(4184) /* V6OrEarlierAPIError */.APIError(arg0);
+  const aPIError = new require(4092) /* V6OrEarlierAPIError */.APIError(arg0);
   this.error = aPIError;
 };
 prototype["handleSearchSuccess"] = function handleSearchSuccess(arg0) {
@@ -147,7 +148,7 @@ const globalDiscoveryServersSearchResultsStore = new GlobalDiscoveryServersSearc
     let obj = map;
     let value = map.get(joined);
     if (value == null) {
-      if (typeof SearchState !== "function") {
+      if (typeof SearchState !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchState.prototype);
@@ -168,7 +169,7 @@ const globalDiscoveryServersSearchResultsStore = new GlobalDiscoveryServersSearc
     let obj = map;
     let value = map.get(joined);
     if (value == null) {
-      if (typeof SearchState !== "function") {
+      if (typeof SearchState !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchState.prototype);
@@ -190,7 +191,7 @@ const globalDiscoveryServersSearchResultsStore = new GlobalDiscoveryServersSearc
     let obj = map;
     let value = map.get(joined);
     if (value == null) {
-      if (typeof SearchState !== "function") {
+      if (typeof SearchState !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchState.prototype);
@@ -257,7 +258,7 @@ let obj = {
     let obj = map;
     let value = map.get(joined);
     if (value == null) {
-      if (typeof SearchState !== "function") {
+      if (typeof SearchState !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchState.prototype);
@@ -278,7 +279,7 @@ let obj = {
     let obj = map;
     let value = map.get(joined);
     if (value == null) {
-      if (typeof SearchState !== "function") {
+      if (typeof SearchState !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchState.prototype);
@@ -300,7 +301,7 @@ let obj = {
     let obj = map;
     let value = map.get(joined);
     if (value == null) {
-      if (typeof SearchState !== "function") {
+      if (typeof SearchState !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchState.prototype);

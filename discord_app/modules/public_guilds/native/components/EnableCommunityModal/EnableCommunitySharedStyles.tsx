@@ -1,3 +1,4 @@
+// discord_app/modules/public_guilds/native/components/EnableCommunityModal/EnableCommunitySharedStyles.tsx
 import { Platform } from "get ActivityIndicator";
 import createCacheKey from "createCacheKey";
 

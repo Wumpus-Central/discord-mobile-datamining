@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/header/VoicePanelHeaderConstants.tsx
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeaderConstants.tsx");
 
 export const VOICE_PANEL_SETTINGS_KEY = "voice-panel-settings-action-sheet";

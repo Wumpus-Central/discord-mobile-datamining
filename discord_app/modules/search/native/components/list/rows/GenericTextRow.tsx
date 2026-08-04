@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/list/rows/GenericTextRow.tsx
 import Text from "Text";
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";

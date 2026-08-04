@@ -1,3 +1,4 @@
+// discord_app/errors/ClientOutdatedAcceptGiftError.tsx
 import { AbortCodes } from "ME";
 
 const prototype = function ClientOutdatedAcceptGiftError(arg0) {

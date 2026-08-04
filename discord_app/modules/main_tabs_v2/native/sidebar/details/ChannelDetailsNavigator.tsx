@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsNavigator.tsx
 import importAllResult from "useSafeAreaInsets";
 import { View } from "useNavigatorBackPressHandler";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -25,7 +26,7 @@ function ConnectedCreateThreadHeaderButton(channelId) {
 }
 function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
-  let obj = channel(5798);
+  let obj = channel(6052);
   [][0] = channel;
   const canStartThread = obj.useCanStartThread(channel);
   let tmp5 = null;
@@ -34,8 +35,8 @@ function CreateThreadHeaderButton(channel) {
     const intl = tmp(1236).intl;
     obj[0] = intl.string(tmp(1236).t.rBIGBL);
     obj[1] = tmp4;
-    obj[2] = importDefault(12036);
-    tmp5 = callback(tmp(8193).HeaderIconButton, obj);
+    obj[2] = importDefault(11886);
+    tmp5 = callback(tmp(9127).HeaderIconButton, obj);
   }
   return tmp5;
 }
@@ -134,7 +135,7 @@ const memoResult = importAllResult.memo((route) => {
         route = route.route;
         let obj = {
           header(arg0) {
-            let obj = route(8193);
+            let obj = route(9127);
             obj = {};
             const merged = Object.assign(arg0);
             obj.shouldHandleSafeArea = route(500).isAndroid();

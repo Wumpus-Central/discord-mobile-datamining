@@ -1,3 +1,4 @@
+// discord_app/modules/media_channel/useShouldHideMediaOptions.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { ChannelFlags } from "set";
 

@@ -1,4 +1,5 @@
-import module_3979 from "module_3979";
+// discord_app/modules/links/native/handleURL.tsx
+import module_3887 from "module_3887";
 import { Linking } from "handleSupportedURL";
 import setContent from "setContent";
 import { WebBrowserType } from "ME";

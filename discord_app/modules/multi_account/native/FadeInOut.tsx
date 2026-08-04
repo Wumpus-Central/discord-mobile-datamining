@@ -1,3 +1,4 @@
+// discord_app/modules/multi_account/native/FadeInOut.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 
@@ -63,6 +64,6 @@ const forwardRefResult = importAllResult.forwardRef((duration, ref) => {
   style[1] = animatedStyle;
   return jsx(sharedValue(ref[2]).View, { style, children });
 });
-let result = require("module_4146").fileFinishedImporting("modules/multi_account/native/FadeInOut.tsx");
+let result = require("module_4054").fileFinishedImporting("modules/multi_account/native/FadeInOut.tsx");
 
 export default forwardRefResult;

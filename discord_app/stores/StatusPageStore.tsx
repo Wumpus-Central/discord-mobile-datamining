@@ -1,3 +1,4 @@
+// discord_app/stores/StatusPageStore.tsx
 import { Store } from "initialize";
 
 const require = arg1;

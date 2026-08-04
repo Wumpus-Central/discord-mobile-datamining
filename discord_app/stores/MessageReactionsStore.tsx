@@ -1,3 +1,4 @@
+// discord_app/stores/MessageReactionsStore.tsx
 import initialize from "initialize";
 import createdAt from "createdAt";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -46,7 +47,7 @@ prototype["ensure"] = function ensure(messageId, emoji, reactionType) {
   const combined = "" + messageId + ":" + name + ":" + id + ":" + reactionType;
   let tmp3 = dependencyMap[combined];
   if (tmp3 == null) {
-    if (typeof prototype !== "function") {
+    if (typeof prototype !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(prototype.prototype);
@@ -108,9 +109,9 @@ prototype2["getReactions"] = function getReactions(channelId, messageId, emoji, 
     obj[2] = emoji;
     obj[3] = closure_9;
     obj[4] = VOTE;
-    const reactors = importAll(7143).getReactors(obj);
+    const reactors = importAll(6079).getReactors(obj);
     ensureResult.fetched = true;
-    const obj2 = importAll(7143);
+    const obj2 = importAll(6079);
   }
   return ensureResult.users;
 };

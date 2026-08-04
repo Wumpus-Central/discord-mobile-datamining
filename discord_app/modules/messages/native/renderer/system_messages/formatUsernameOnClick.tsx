@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
 
 export default function formatUsernameOnClick(arg0) {

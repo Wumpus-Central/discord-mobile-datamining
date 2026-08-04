@@ -1,3 +1,4 @@
+// discord_app/modules/a11y/native/useIsScreenReaderEnabled.native.tsx
 import { AccessibilityInfo } from "get ActivityIndicator";
 import keys from "keys";
 

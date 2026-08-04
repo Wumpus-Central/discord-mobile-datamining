@@ -1,3 +1,4 @@
+// discord_app/modules/app_startup/AllCacheStores.native.tsx
 import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged";
 import isSubscriptionGated from "isSubscriptionGated";
 import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";

@@ -1,3 +1,4 @@
+// discord_app/modules/directory_channels/native/components/GuildDirectorySearchModal.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -8,7 +9,7 @@ const result = require("DefaultState").fileFinishedImporting("modules/directory_
 export default function GuildDirectorySearchModal(arg0) {
   const _require = arg0;
   const obj = { screens: null, initialRouteName: null };
-  obj[0] = importDefault(5598)(() => ({
+  obj[0] = importDefault(5507)(() => ({
     [outer1_4]: {
       fullscreen: true,
       headerShown: false,
@@ -19,5 +20,5 @@ export default function GuildDirectorySearchModal(arg0) {
     }
   }));
   obj[1] = SEARCH_SCREEN_KEY;
-  return jsx(_require(5665).Navigator, { screens: null, initialRouteName: null });
+  return jsx(_require(5574).Navigator, { screens: null, initialRouteName: null });
 };

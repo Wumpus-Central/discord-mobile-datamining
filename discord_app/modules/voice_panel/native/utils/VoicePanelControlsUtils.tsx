@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx
 import { VOICE_PANEL_DRAWER_MAX_WIDTH } from "VoicePanelModes";
 import { EDGE_GUTTER } from "CARD_SIZE";
 import { CONTROLS_MAX_WIDTH } from "VoicePanelControlsModes";

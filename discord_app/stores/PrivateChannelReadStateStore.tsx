@@ -1,3 +1,4 @@
+// discord_app/stores/PrivateChannelReadStateStore.tsx
 import { isPrivate } from "createChannelRecord";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import generateOldThreadCutoff from "generateOldThreadCutoff";

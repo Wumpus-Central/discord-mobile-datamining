@@ -1,3 +1,4 @@
+// discord_app/modules/visual_effect_view/native/overrides/VEVOOSlider.tsx
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "set";
@@ -34,7 +35,7 @@ export default require("noop").memo(function VEVOOSlider(disabled) {
   obj[5] = importDefault(712).unsafe_rawColors.BRAND_500;
   obj[6] = importDefault(712).unsafe_rawColors.PRIMARY_400;
   obj[7] = onValueChange;
-  const tmp5 = importDefault(7799);
+  const tmp5 = importDefault(7664);
   let fn;
   if (obj2.isAndroid()) {
     fn = () => true;

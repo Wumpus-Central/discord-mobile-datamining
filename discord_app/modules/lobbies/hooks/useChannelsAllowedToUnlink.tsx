@@ -1,3 +1,4 @@
+// discord_app/modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx
 import comparator from "comparator";
 import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

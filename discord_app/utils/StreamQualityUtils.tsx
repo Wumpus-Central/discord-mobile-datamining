@@ -1,3 +1,4 @@
+// discord_app/utils/StreamQualityUtils.tsx
 import noop from "noop";
 import ApplicationStreamPresets from "ApplicationStreamPresets";
 import fetchFingerprint from "fetchFingerprint";

@@ -1,3 +1,4 @@
+// discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
 import { MessageType as MessageType2 } from "module_1307";

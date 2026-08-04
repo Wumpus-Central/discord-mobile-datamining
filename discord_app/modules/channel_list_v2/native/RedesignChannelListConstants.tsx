@@ -1,3 +1,4 @@
+// discord_app/modules/channel_list_v2/native/RedesignChannelListConstants.tsx
 import PlatformTypes from "PlatformTypes";
 
 let c2 = "text-xs/medium";
@@ -38,16 +39,16 @@ export const CATEGORY_MARGIN_TOP = 12;
 export const CATEGORY_MARGIN_BOTTOM = 4;
 export const CATEGORY_VERTICAL_PADDING = 4;
 export const getScaledChannelSubtitleHeight = function getScaledChannelSubtitleHeight(fontScale) {
-  return require(9370) /* map */.scaleTextLineHeight(c2, fontScale);
+  return require(9925) /* map */.scaleTextLineHeight(c2, fontScale);
 };
 export const getScaledCategoryRowHeight = function getScaledCategoryRowHeight(fontScale) {
-  return require(9370) /* map */.scaleTextLineHeight(c5, fontScale) + 8 + 4;
+  return require(9925) /* map */.scaleTextLineHeight(c5, fontScale) + 8 + 4;
 };
 export const getScaledChannelRowHeight = function getScaledChannelRowHeight(arg0) {
   const sum = 8 + hairlineWidth;
-  return 2 * sum + require(9370) /* map */.scaleLineHeight(num, arg0);
+  return 2 * sum + require(9925) /* map */.scaleLineHeight(num, arg0);
 };
 export const getScaledSearchBarHeight = function getScaledSearchBarHeight(fontScale) {
-  return 24 + require(9370) /* map */.scaleTextLineHeight(c4, fontScale);
+  return 24 + require(9925) /* map */.scaleTextLineHeight(c4, fontScale);
 };
 export const VIEWABILITY_CONFIG = frozen;

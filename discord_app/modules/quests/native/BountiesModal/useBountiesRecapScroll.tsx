@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/BountiesModal/useBountiesRecapScroll.tsx
 import noop from "noop";
 
 function getRevealProgress(scrollY, lastBountyScrollOffset, height3) {
@@ -42,7 +43,7 @@ export const useBountiesRecapScroll = function useBountiesRecapScroll(listRef) {
     if (enabled) {
       if (arg0 > offsets.lastBounty) {
         ({ revealHeight, lastBounty } = tmp2);
-        if (typeof enabled !== "function") {
+        if (typeof enabled !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         let num = 0;

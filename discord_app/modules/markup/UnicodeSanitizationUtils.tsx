@@ -1,3 +1,4 @@
+// discord_app/modules/markup/UnicodeSanitizationUtils.tsx
 function safelyPartiallyDecodeURIComponent(hash) {
   let substr;
   const result = importDefault(1467).safeDecodeURIComponent(hash);

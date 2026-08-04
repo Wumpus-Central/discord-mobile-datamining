@@ -1,3 +1,4 @@
+// discord_app/modules/app_database/util/ExtendedMemoryLru.tsx
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
@@ -120,19 +121,19 @@ prototype["allEntries"] = function allEntries() {
   const extended = this.extended;
   const primary = this.primary;
   const entries = extended.entries();
-  return importAll(6850).chain(entries, primary.entries());
+  return importAll(5743).chain(entries, primary.entries());
 };
 prototype["allKeys"] = function allKeys() {
   const extended = this.extended;
   const primary = this.primary;
   const keys = extended.keys();
-  return importAll(6850).chain(keys, primary.keys());
+  return importAll(5743).chain(keys, primary.keys());
 };
 prototype["allValues"] = function allValues() {
   const extended = this.extended;
   const primary = this.primary;
   const values = extended.values();
-  return importAll(6850).chain(values, primary.values());
+  return importAll(5743).chain(values, primary.values());
 };
 
 export { ExtendedMemoryLru };

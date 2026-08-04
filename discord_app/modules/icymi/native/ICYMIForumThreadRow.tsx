@@ -1,3 +1,4 @@
+// discord_app/modules/icymi/native/ICYMIForumThreadRow.tsx
 import getDefaultRules from "get defaultRules";
 import { View } from "PressableBase";
 import ensureGuildLoaded from "ensureGuildLoaded";
@@ -14,7 +15,7 @@ class ICYMIForumThreadRow {
     message = global.message;
     c2 = undefined;
     author = undefined;
-    tmp = f61870();
+    tmp = f61687();
     tmp2 = channel;
     tmp3 = c2;
     obj = require("initialize");

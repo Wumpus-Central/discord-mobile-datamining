@@ -1,3 +1,4 @@
+// discord_app/lib/VoiceQuality.tsx
 import _slicedToArray from "_slicedToArray";
 import "on";
 
@@ -465,11 +466,11 @@ class VoiceQuality extends tmp2 {
 const prototype = VoiceQuality.prototype;
 prototype["start"] = function start() {
   const connection = this.connection;
-  connection.on(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.on(require(4290) /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
 };
 prototype["stop"] = function stop() {
   const connection = this.connection;
-  connection.off(require(4381) /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.off(require(4290) /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
 };
 prototype["getMosStats"] = function getMosStats() {
   const reduced = importDefault(12).reduce(this.inboundStats, (mosSum, mosSum2) => {
@@ -591,7 +592,7 @@ prototype["getBufferStats"] = function getBufferStats() {
           let obj4 = obj[key10055];
           let tmp29 = require;
           let tmp30 = dependencyMap;
-          if (obj4 instanceof require(7122) /* getSamples */.Histogram) {
+          if (obj4 instanceof require(6032) /* getSamples */.Histogram) {
             let report = obj4.getReport([75, 95, 99]);
             let _Math = Math;
             let text = `${key10055}_mean`;

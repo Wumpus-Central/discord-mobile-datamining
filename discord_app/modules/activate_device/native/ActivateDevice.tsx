@@ -1,3 +1,4 @@
+// discord_app/modules/activate_device/native/ActivateDevice.tsx
 import _slicedToArray from "_slicedToArray";
 import SafeAreaPaddingView from "SafeAreaPaddingView";
 import get_ActivityIndicator from "getAvatarURL";

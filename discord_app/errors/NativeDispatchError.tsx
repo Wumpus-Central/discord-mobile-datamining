@@ -1,3 +1,4 @@
+// discord_app/errors/NativeDispatchError.tsx
 import { DispatchErrorCodes } from "RPC_SCOPE_CONFIG";
 
 const result = require("formatSize").fileFinishedImporting("errors/NativeDispatchError.tsx");
@@ -38,12 +39,12 @@ Object.defineProperty(NativeDispatchError.prototype, "displayMessage", {
       const code = self.code;
       if (DispatchErrorCodes.DISK_LOW === code) {
         ({ available, required } = self.context);
-        const obj5 = require(4180) /* formatSize */;
-        const formatSizeResult = require(4180) /* formatSize */.formatSize(available, { useKibibytes: true });
-        const obj6 = require(4180) /* formatSize */;
+        const obj5 = require(4088) /* formatSize */;
+        const formatSizeResult = require(4088) /* formatSize */.formatSize(available, { useKibibytes: true });
+        const obj6 = require(4088) /* formatSize */;
         const intl13 = require(1236) /* getSystemLocale */.intl;
         let obj = { required: null, available: null };
-        obj[0] = require(4180) /* formatSize */.formatSize(required, { useKibibytes: true });
+        obj[0] = require(4088) /* formatSize */.formatSize(required, { useKibibytes: true });
         obj[1] = formatSizeResult;
         return intl13.formatToPlainString(require(1236) /* getSystemLocale */.t["2DR5dl"], obj);
       } else if (tmp32.POST_INSTALL_FAILED === code) {

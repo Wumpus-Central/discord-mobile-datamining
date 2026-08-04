@@ -1,3 +1,4 @@
+// discord_app/components_native/common/SwipeableFastList.tsx
 import { jsx } from "jsxProd";
 import { Component } from "noop";
 import importAllResult from "noop";
@@ -103,7 +104,7 @@ prototype["render"] = function render() {
   const obj = {};
   const merged = Object.assign(this.props);
   ({ handleScroll: obj.onScroll, renderRow: obj.renderItem } = this);
-  return jsx(importDefault(7818), {});
+  return jsx(importDefault(7683), {});
 };
 SwipeableFastList.defaultProps = {
   bounceFirstRowOnMount: true,

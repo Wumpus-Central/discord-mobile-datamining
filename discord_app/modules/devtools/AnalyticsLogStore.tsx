@@ -1,3 +1,4 @@
+// discord_app/modules/devtools/AnalyticsLogStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import init from "init";
 import { Store } from "initialize";

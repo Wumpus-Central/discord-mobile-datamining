@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/StageMusicStore.tsx
 import { DeviceSettingsStore } from "initialize";
 
 let c0 = false;

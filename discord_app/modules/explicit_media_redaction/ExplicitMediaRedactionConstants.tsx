@@ -1,3 +1,4 @@
+// discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionConstants.tsx
 import set from "set";
 
 const items = [require("MessageEmbedTypes").MessageEmbedTypes.IMAGE, require("MessageEmbedTypes").MessageEmbedTypes.VIDEO, require("MessageEmbedTypes").MessageEmbedTypes.GIFV];

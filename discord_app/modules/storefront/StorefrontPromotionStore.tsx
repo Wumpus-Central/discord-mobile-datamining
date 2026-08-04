@@ -1,3 +1,4 @@
+// discord_app/modules/storefront/StorefrontPromotionStore.tsx
 import { Store } from "initialize";
 
 function handleReset() {

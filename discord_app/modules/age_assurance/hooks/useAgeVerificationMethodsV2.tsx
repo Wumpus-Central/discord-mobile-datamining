@@ -1,3 +1,4 @@
+// discord_app/modules/age_assurance/hooks/useAgeVerificationMethodsV2.tsx
 import dispatcher from "dispatcher";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -72,7 +73,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
               outer1_1(true);
               outer1_2(false);
               let c4 = 2;
-              let obj4 = callback(7754);
+              let obj4 = callback(6785);
               c5 = 3;
               c6 = 1;
               const obj2 = { value: null, done: false };

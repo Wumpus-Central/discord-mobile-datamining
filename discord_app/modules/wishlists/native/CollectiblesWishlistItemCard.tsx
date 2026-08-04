@@ -1,3 +1,4 @@
+// discord_app/modules/wishlists/native/CollectiblesWishlistItemCard.tsx
 import noop from "noop";
 import { transformSKUToCollectiblesItem as closure_4 } from "createCollectiblesItemsFromServerResponse";
 import initialize from "initialize";

@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx
 import upsertRelationship from "upsertRelationship";
 import createToggle from "createToggle";
 
@@ -20,7 +21,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.BLOCKED_USERS_V2,
   getComponent() {
-    return require(13951) /* BlockedUsersList */.default;
+    return require(13851) /* BlockedUsersList */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

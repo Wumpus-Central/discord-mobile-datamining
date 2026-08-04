@@ -1,3 +1,4 @@
+// discord_app/modules/app_database/modules/UserSearchItems.tsx
 import ME from "ME";
 import recountRelationshipTypes from "recountRelationshipTypes";
 import recomputeAffinities from "recomputeAffinities";
@@ -123,7 +124,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     if (null != user) {
       let tmp14 = obj;
       let tmp15 = dependencyMap;
-      let obj5 = obj(7042);
+      let obj5 = obj(5951);
       let tmp16 = user;
       let names = obj5.getNames(tmp6);
       let tmp18 = nextResult;
@@ -158,7 +159,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     if (null != user1) {
       let tmp22 = obj;
       let tmp23 = dependencyMap;
-      let obj7 = obj(7042);
+      let obj7 = obj(5951);
       let tmp24 = user1;
       let names1 = obj7.getNames(tmp11);
       let tmp26 = item10033;

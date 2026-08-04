@@ -1,3 +1,4 @@
+// discord_app/modules/storefront/native/StorefrontNativeUtils.android.tsx
 import noop from "noop";
 
 const require = arg1;
@@ -26,7 +27,7 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
       const obj = _undefined(outer1_2[1]);
     }
   }, items);
-  const items1 = [stateFromStores(5767)];
+  const items1 = [stateFromStores(5676)];
   const items2 = [tmp2];
   stateFromStores = _require(589).useStateFromStores(items1, () => {
     let product = null;

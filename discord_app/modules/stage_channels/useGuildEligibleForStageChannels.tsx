@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/useGuildEligibleForStageChannels.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 

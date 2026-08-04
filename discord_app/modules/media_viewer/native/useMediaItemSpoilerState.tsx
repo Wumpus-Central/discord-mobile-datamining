@@ -1,3 +1,4 @@
+// discord_app/modules/media_viewer/native/useMediaItemSpoilerState.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 

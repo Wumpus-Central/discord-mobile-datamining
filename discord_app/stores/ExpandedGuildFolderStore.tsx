@@ -1,3 +1,4 @@
+// discord_app/stores/ExpandedGuildFolderStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import { PersistedStore } from "initialize";
 import set from "dispatcher";

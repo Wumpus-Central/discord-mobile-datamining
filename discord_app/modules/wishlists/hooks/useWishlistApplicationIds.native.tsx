@@ -1,3 +1,4 @@
+// discord_app/modules/wishlists/hooks/useWishlistApplicationIds.native.tsx
 import noop from "noop";
 import { COLLECTIBLES_APPLICATION_ID as closure_1 } from "ME";
 

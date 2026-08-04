@@ -1,3 +1,4 @@
+// discord_app/utils/ClipboardUtils.native.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _copy() {
@@ -87,5 +88,5 @@ export const copy = function copy() {
   return applyArgumentsResult;
 };
 export const getString = function getString() {
-  return importDefault(5639).getString();
+  return importDefault(5548).getString();
 };

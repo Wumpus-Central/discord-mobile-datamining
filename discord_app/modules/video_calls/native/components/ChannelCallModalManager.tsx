@@ -1,3 +1,4 @@
+// discord_app/modules/video_calls/native/components/ChannelCallModalManager.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import updateVoiceState from "updateVoiceState";
 import "initialize";

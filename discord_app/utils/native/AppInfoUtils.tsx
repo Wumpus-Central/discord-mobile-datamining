@@ -1,3 +1,4 @@
+// discord_app/utils/native/AppInfoUtils.tsx
 import getConstants from "getConstants";
 
 getConstants = getConstants.getConstants();

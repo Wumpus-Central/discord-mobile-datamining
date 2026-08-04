@@ -1,5 +1,6 @@
+// discord_app/modules/launchpad/native/shared/SimpleGuild.tsx
 import noop from "noop";
-import { View } from "module_15917";
+import { View } from "module_15821";
 import { getGuildIconSource } from "GuildNSFWContentLevel";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -126,7 +127,7 @@ export default function SimpleGuild(guildId) {
     const tmp17 = getGuildIconSource;
   }
   if (null !== tmp17Result) {
-    if (typeof tmp17Result === "object") {
+    if (typeof tmp17Result !== "window") {
       if ("uri" in tmp17Result) {
         let tmp19 = null != tmp17Result.uri;
       }

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_rooms/GuildRoomConstants.tsx
 import { ytIYuY as IE3e0y } from "messagesProxy";
 import { ytIYuY as IE3e0y } from "messagesProxy";
 import { ytIYuY as IE3e0y } from "messagesProxy";
@@ -37,7 +38,7 @@ obj[0] = require("metadata");
 obj[1] = require("metadata");
 obj[3] = function getName() {
   const intl = IE3e0y(1236).intl;
-  return intl.string(v3(2157).y33CVg);
+  return intl.string(v3(2157)["4KcB5R"]);
 };
 obj = { name: "PC_SEAT_1", getLabel: null, position: null };
 YpJ7QS = 1;
@@ -303,7 +304,7 @@ export const BACKGROUND_BLUR_WIDTH_FACTOR = 0.0228310502283105;
 export const getSeatName = function getSeatName(arg0, arg1) {
   const IE3e0y = arg0;
   let closure_1 = arg1;
-  const seats = obj[IE3e0y(undefined, 16317).GuildRoomBackgrounds.DEFAULT].seats;
+  const seats = obj[IE3e0y(undefined, 16221).GuildRoomBackgrounds.DEFAULT].seats;
   const found = seats.find((position) => {
     let tmp = position.position.x === closure_0;
     if (tmp) {

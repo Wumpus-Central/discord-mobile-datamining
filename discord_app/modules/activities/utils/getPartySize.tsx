@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/getPartySize.tsx
 import _slicedToArray from "_slicedToArray";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getPartySize.tsx");

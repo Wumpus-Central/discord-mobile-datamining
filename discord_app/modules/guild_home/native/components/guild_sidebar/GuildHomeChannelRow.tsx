@@ -1,3 +1,4 @@
+// discord_app/modules/guild_home/native/components/guild_sidebar/GuildHomeChannelRow.tsx
 import noop from "noop";
 import { Routes } from "ME";
 import { StaticChannelRoute } from "set";
@@ -19,7 +20,7 @@ export default function GuildHomeChannelRow(selected) {
   const callback = React.useCallback(() => {
     id(outer1_2[7]).transitionTo(outer1_4.CHANNEL(id, outer1_5.GUILD_HOME));
   }, items);
-  const ChannelModes = id(11665).ChannelModes;
+  const ChannelModes = id(11492).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp5 = tmp3;
@@ -37,9 +38,9 @@ export default function GuildHomeChannelRow(selected) {
   const intl2 = tmp5(1236).intl;
   obj[0] = intl2.string(tmp5(1236).t.VbpLyU);
   obj[1] = DEFAULT;
-  obj[6] = jsx(tmp5(11665).BaseChannelName, { name: null, mode: null });
+  obj[6] = jsx(tmp5(11492).BaseChannelName, { name: null, mode: null });
   obj = { mode: DEFAULT, IconComponent: null };
-  obj[1] = tmp5(13097).SignPostIcon;
-  obj[7] = jsx(tmp5(11665).BaseChannelIcon, { mode: DEFAULT, IconComponent: null });
-  return jsx(importDefault(11665), { mode: DEFAULT, IconComponent: null });
+  obj[1] = tmp5(13001).SignPostIcon;
+  obj[7] = jsx(tmp5(11492).BaseChannelIcon, { mode: DEFAULT, IconComponent: null });
+  return jsx(importDefault(11492), { mode: DEFAULT, IconComponent: null });
 };

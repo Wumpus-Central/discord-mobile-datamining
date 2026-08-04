@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/native/components/SpeakerPulse.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

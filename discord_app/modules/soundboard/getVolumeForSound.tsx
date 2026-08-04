@@ -1,3 +1,4 @@
+// discord_app/modules/soundboard/getVolumeForSound.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 
 const require = arg1;
@@ -6,7 +7,7 @@ let result = require("explicitContentFromProto").fileFinishedImporting("modules/
 export default function getVolumeForSound(arg0, USER) {
   let tmp = USER;
   if (USER === undefined) {
-    const SoundboardSettings = require(3958) /* explicitContentFromProto */.SoundboardSettings;
+    const SoundboardSettings = require(3866) /* explicitContentFromProto */.SoundboardSettings;
     const setting = SoundboardSettings.getSetting();
     let num;
     if (setting != null) {
@@ -17,7 +18,7 @@ export default function getVolumeForSound(arg0, USER) {
     }
     tmp = num;
   }
-  const result = require(4732) /* perceptualToAmplitude */.amplitudeToPerceptual(tmp) / 100;
+  const result = require(4641) /* perceptualToAmplitude */.amplitudeToPerceptual(tmp) / 100;
   return Math.min(arg0 * result * Math.min(outputVolume.getOutputVolume() / 100, 1), 1);
 };
 export const getPerceptualSoundboardVolume = function getPerceptualSoundboardVolume(USER) {
@@ -25,5 +26,5 @@ export const getPerceptualSoundboardVolume = function getPerceptualSoundboardVol
   if (USER == null) {
     num = 100;
   }
-  return require(4732) /* perceptualToAmplitude */.amplitudeToPerceptual(num) / 100;
+  return require(4641) /* perceptualToAmplitude */.amplitudeToPerceptual(num) / 100;
 };

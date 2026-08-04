@@ -1,3 +1,4 @@
+// discord_app/modules/launchpad/native/shared/ChannelSubtitle.tsx
 import "noop";
 import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth";
 import { jsx } from "jsxProd";
@@ -12,7 +13,7 @@ function ChannelSubtitle(arg0) {
   let textProps;
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, subtitle } = arg0);
-  let obj = require(15225) /* getChannelSubtitleData */;
+  let obj = require(15211) /* getChannelSubtitleData */;
   const channelSubtitleData = obj.getChannelSubtitleData(subtitle);
   if (null == channelSubtitleData) {
     return null;
@@ -34,8 +35,8 @@ function ChannelSubtitle(arg0) {
       str = "text-muted";
     }
     obj[5] = str;
-    obj.children = tmp(9708).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4281).Text, { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
+    obj.children = tmp(10296).renderMessagePreviewMarkup(obj);
+    return jsx(tmp(4189).Text, { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
   }
 }
 const result = require("jsxProd").fileFinishedImporting("modules/launchpad/native/shared/ChannelSubtitle.tsx");
@@ -48,7 +49,7 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
     return null;
   } else {
     let obj = { variant: null, color: "text-muted", lineClamp: 1, maxFontSizeMultiplier: 1.75, style: null };
-    obj[0] = importDefault(15921)().messagePreview.text.variant;
+    obj[0] = importDefault(15825)().messagePreview.text.variant;
     let num = 1;
     if (!muted) {
       num = SUBTITLE_OPACITY_NORMAL;
@@ -56,11 +57,11 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
     obj = { opacity: null };
     obj[0] = num;
     obj[4] = obj;
-    if (typeof subtitle === "string") {
+    if (typeof subtitle === "y") {
       obj = {};
       const merged = Object.assign(obj);
       obj.children = subtitle;
-      let tmp9 = jsx(require(4281) /* Text */.Text, {});
+      let tmp9 = jsx(require(4189) /* Text */.Text, {});
     } else {
       const obj1 = { channelId: null, guildId: null, subtitle: null, muted: null, connected: null, textProps: null };
       obj1[0] = tmp;

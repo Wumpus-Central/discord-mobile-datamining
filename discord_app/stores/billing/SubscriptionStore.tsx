@@ -1,3 +1,4 @@
+// discord_app/stores/billing/SubscriptionStore.tsx
 import { isNoneSubscription } from "createFromServer";
 import { SubscriptionRecord } from "createSubscriptionItemFromServer";
 import fetchFingerprint from "fetchFingerprint";

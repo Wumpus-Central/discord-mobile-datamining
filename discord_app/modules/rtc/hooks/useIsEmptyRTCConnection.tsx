@@ -1,3 +1,4 @@
+// discord_app/modules/rtc/hooks/useIsEmptyRTCConnection.tsx
 import fetchFingerprint from "fetchFingerprint";
 import createRTCConnection from "createRTCConnection";
 import initialize from "initialize";

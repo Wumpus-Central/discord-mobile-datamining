@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/components/MemberVerificationForm.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import Button from "Button";

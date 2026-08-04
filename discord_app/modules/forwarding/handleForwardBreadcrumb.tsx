@@ -1,3 +1,4 @@
+// discord_app/modules/forwarding/handleForwardBreadcrumb.tsx
 import showTooManyUserGuildsAlert from "showTooManyUserGuildsAlert";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/hasFlag.tsx
 import { ActivityFlags } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/hasFlag.tsx");

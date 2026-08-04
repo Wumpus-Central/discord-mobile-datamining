@@ -1,3 +1,4 @@
+// discord_app/design/utils/native.tsx
 const result = require("chainCallbacks").fileFinishedImporting("design/utils/native.tsx");
 
 export const getNodeText = require("getNodeText").getNodeText;

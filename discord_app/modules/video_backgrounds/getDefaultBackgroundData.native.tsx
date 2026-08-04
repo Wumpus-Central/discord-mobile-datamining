@@ -1,3 +1,4 @@
+// discord_app/modules/video_backgrounds/getDefaultBackgroundData.native.tsx
 import { DefaultVideoBackground } from "VideoFilterType";
 
 let closure_1 = { id: DefaultVideoBackground.OPTION_1, source: "", name: "" };

@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/deferJoinActivityInChannel.tsx
 const result = require("set").fileFinishedImporting("modules/activities/utils/deferJoinActivityInChannel.tsx");
 
 export default function deferJoinActivityApplication(arg0) {

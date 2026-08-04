@@ -1,3 +1,4 @@
+// discord_app/design/components/Tooltip/native/Tooltip.native.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { Pressable } from "get ActivityIndicator";

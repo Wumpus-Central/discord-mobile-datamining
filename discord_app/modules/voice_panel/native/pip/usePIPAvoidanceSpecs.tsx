@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/pip/usePIPAvoidanceSpecs.tsx
 import { VoicePanelModes } from "VoicePanelModes";
 import { VoicePanelControlsModes } from "VoicePanelControlsModes";
 import { PIP_WINDOW_OFFSET } from "MIN_PAN_GESTURE_MOVE";

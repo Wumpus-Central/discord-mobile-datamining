@@ -1,3 +1,4 @@
+// discord_app/modules/client_themes/ClientThemesBackgroundActionCreators.tsx
 const result = require("set").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundActionCreators.tsx");
 
 export const updateBackgroundGradientPreset = function updateBackgroundGradientPreset(id) {

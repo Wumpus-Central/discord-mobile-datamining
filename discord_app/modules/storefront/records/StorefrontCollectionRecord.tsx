@@ -1,3 +1,4 @@
+// discord_app/modules/storefront/records/StorefrontCollectionRecord.tsx
 import fromServer from "fromServer";
 import { AssetDisplayConfigRecord } from "fromServer";
 import closure_2 from "fromServer";

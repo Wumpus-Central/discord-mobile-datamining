@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/useHandleBuyNow.tsx
 import useMobileCollectiblesPurchaseSKU from "useMobileCollectiblesPurchaseSKU";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -46,7 +47,7 @@ function useHandleBuyNow(product) {
               v0 = 1;
               dependencyMap = 1;
               let obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(6909).fetchCollectiblesPurchases();
+              obj1[0] = outer1_0(5802).fetchCollectiblesPurchases();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -59,9 +60,9 @@ function useHandleBuyNow(product) {
             return obj2;
           } else {
             callback(false);
-            obj = v0(4253);
+            obj = v0(4161);
             obj.hideActionSheet();
-            obj1 = v0(10040);
+            obj1 = v0(9804);
             const obj3 = { product: null, useCategoryImage: true };
             obj3[0] = closure_0;
             obj1.open(obj3);

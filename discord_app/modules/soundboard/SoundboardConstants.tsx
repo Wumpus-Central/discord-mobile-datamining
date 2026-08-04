@@ -1,3 +1,4 @@
+// discord_app/modules/soundboard/SoundboardConstants.tsx
 import set from "set";
 
 const obj = { SUCCESS: 0, [0]: "SUCCESS", INTERRUPTED: 1, [1]: "INTERRUPTED" };

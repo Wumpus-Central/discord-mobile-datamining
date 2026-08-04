@@ -1,3 +1,4 @@
+// discord_app/lib/uploader/Upload.tsx
 import { EventEmitter } from "EventEmitter";
 
 let obj = { REACT_NATIVE: 0, [0]: "REACT_NATIVE", WEB: 1, [1]: "WEB" };

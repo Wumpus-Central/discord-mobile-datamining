@@ -1,3 +1,4 @@
+// discord_app/modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx
 const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");
 
 export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(arg0) {

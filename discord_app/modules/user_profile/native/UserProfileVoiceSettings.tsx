@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfileVoiceSettings.tsx
 import "SoundboardSlashIcon";
 import { View } from "MicrophoneSlashIcon";
 import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
@@ -187,7 +188,7 @@ function CurrentUserVoiceSettings(channel) {
   ({ user, style } = channel);
   const tmp = callback3();
   let tmp9Result = dependencyMap;
-  let obj = channel(8710);
+  let obj = channel(8111);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   let obj1 = channel(589);
   const items = [_detectH265HardwareDecode];
@@ -222,9 +223,9 @@ function CurrentUserVoiceSettings(channel) {
     obj = { label: null, icon: null, onPress: null };
     obj[0] = stringResult;
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9108).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(8878).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(10766).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10813).MicrophoneIcon;
     }
     obj1 = { children: null };
     obj[1] = MicrophoneIcon;
@@ -232,11 +233,11 @@ function CurrentUserVoiceSettings(channel) {
       trackUserProfileAction({ action: "MUTE" });
       trackUserProfileAction(outer1_2[14]).toggleSelfMute();
     };
-    obj1[0] = closure_9(tmp2(5657).UserProfileFormRow, obj, "mute");
-    tmp9Result = tmp9(tmp2(5657).UserProfileCardRows, obj1);
+    obj1[0] = closure_9(tmp2(5566).UserProfileFormRow, obj, "mute");
+    tmp9Result = tmp9(tmp2(5566).UserProfileCardRows, obj1);
     obj[3] = tmp9Result;
-    tmp9Result = tmp9(trackUserProfileAction(5657), obj);
-    const tmp6Result = trackUserProfileAction(5657);
+    tmp9Result = tmp9(trackUserProfileAction(5566), obj);
+    const tmp6Result = trackUserProfileAction(5566);
   }
   return tmp8;
 }

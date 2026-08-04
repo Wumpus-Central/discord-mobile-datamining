@@ -1,3 +1,4 @@
+// discord_app/modules/video_calls/native/components/ScreenshareParticipant.tsx
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";

@@ -1,3 +1,4 @@
+// discord_app/modules/rtc/native/SecureFramesStreamVerificationBottomSheet.tsx
 import noop from "noop";
 import initialize from "initialize";
 import { AnalyticsSections } from "ME";
@@ -34,8 +35,8 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   obj[1] = intl2.string(channelId(1236).t.qODBkW);
   const intl3 = channelId(1236).intl;
   obj = { helpArticle: null };
-  const tmp3 = streamKey(9147);
-  obj[0] = channelId(9131).getSecureFramesHelpdeskArticle();
+  const tmp3 = streamKey(8917);
+  obj[0] = channelId(8901).getSecureFramesHelpdeskArticle();
   obj[2] = intl3.format(channelId(1236).t["H3+ktv"], obj);
   obj[3] = stateFromStores;
   obj[4] = callback;

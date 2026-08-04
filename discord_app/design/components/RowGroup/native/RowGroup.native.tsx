@@ -1,3 +1,4 @@
+// discord_app/design/components/RowGroup/native/RowGroup.native.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -25,12 +26,12 @@ export const RowGroup = function RowGroup(children) {
     if (tmp7) {
       obj = { title: null };
       obj[0] = title;
-      tmp7 = callback(tmp5(5649).TableRowGroupTitle, obj);
+      tmp7 = callback(tmp5(5558).TableRowGroupTitle, obj);
     }
     obj = { direction: "horizontal", spacing: 4, children: null };
     const items = [tmp7, trailing];
     obj[2] = items;
-    tmp2Result = tmp2(require(4693) /* Stack */.Stack, obj);
+    tmp2Result = tmp2(require(4602) /* Stack */.Stack, obj);
     tmp5 = require;
   }
   const items1 = [tmp2Result, callback(View, { style: tmp.content, children: children.children })];

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx
 import { GUILD_EVENT_STAGE_UPSELL_CARD_KEY as closure_2 } from "GUILD_EVENT_MAX_NAME_LENGTH";
 import identity from "identity";
 
@@ -20,5 +21,5 @@ export const useStageChannelUpsellCardStore = function useStageChannelUpsellCard
     const items = [, ];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
-  }, require(3898) /* isIterable */.shallow);
+  }, require(3806) /* isIterable */.shallow);
 };

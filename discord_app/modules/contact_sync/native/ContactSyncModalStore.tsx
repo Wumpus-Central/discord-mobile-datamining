@@ -1,3 +1,4 @@
+// discord_app/modules/contact_sync/native/ContactSyncModalStore.tsx
 import set from "set";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { ContactPermissions } from "ContactSyncLandingPage";

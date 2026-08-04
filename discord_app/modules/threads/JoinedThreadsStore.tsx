@@ -1,3 +1,4 @@
+// discord_app/modules/threads/JoinedThreadsStore.tsx
 import { ALL_CHANNEL_TYPES } from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
 import { Store } from "initialize";

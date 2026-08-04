@@ -1,3 +1,4 @@
+// discord_app/design/components/ButtonGroup/native/ButtonGroup.native.tsx
 import "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -25,5 +26,5 @@ export const ButtonGroup = function ButtonGroup(size) {
   const items = [callback().container, style];
   obj.style = items;
   obj.children = children;
-  return jsx(require(4693) /* Stack */.Stack, {});
+  return jsx(require(4602) /* Stack */.Stack, {});
 };

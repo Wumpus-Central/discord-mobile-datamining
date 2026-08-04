@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/onboarding/banner/ApplicationsImage.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -28,12 +29,12 @@ export default function ApplicationsImage(arg0) {
   const tmp = createCacheKey();
   let appLauncherIconSource = null;
   if (null != firstApplication) {
-    let obj = require(11350) /* handleApplicationSelected */;
+    let obj = require(11239) /* handleApplicationSelected */;
     appLauncherIconSource = obj.getAppLauncherIconSource(firstApplication);
   }
   let appLauncherIconSource1 = null;
   if (null != secondApplication) {
-    let obj1 = require(11350) /* handleApplicationSelected */;
+    let obj1 = require(11239) /* handleApplicationSelected */;
     appLauncherIconSource1 = obj1.getAppLauncherIconSource(secondApplication);
   }
   let tmp8 = null != appLauncherIconSource;
@@ -41,14 +42,14 @@ export default function ApplicationsImage(arg0) {
     obj = { style: null, source: null };
     obj[0] = tmp.appIcon;
     obj[1] = appLauncherIconSource;
-    tmp8 = callback(importDefault(5236), obj);
+    tmp8 = callback(importDefault(5145), obj);
   }
   let tmp12 = null != appLauncherIconSource1;
   if (tmp12) {
     obj = { style: null, source: null };
     obj[0] = tmp.appIcon;
     obj[1] = appLauncherIconSource1;
-    tmp12 = callback(importDefault(5236), obj);
+    tmp12 = callback(importDefault(5145), obj);
   }
   obj1 = { children: null };
   const items = [, ];

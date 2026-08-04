@@ -1,3 +1,4 @@
+// discord_app/stores/SelectedChannelStore.tsx
 import createChannelRecord from "createChannelRecord";
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";

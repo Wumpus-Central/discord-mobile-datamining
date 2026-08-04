@@ -1,3 +1,4 @@
+// discord_app/modules/stickers/StickerMessagePreviewStore.tsx
 import { DraftType } from "handleChanged";
 import { Store } from "initialize";
 

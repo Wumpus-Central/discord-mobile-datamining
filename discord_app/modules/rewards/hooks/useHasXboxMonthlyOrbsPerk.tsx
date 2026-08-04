@@ -1,3 +1,4 @@
+// discord_app/modules/rewards/hooks/useHasXboxMonthlyOrbsPerk.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { PremiumTypes } from "GuildFeatures";
 
@@ -18,7 +19,7 @@ export const hasCrepeMonthlyOrbsPerk = function hasCrepeMonthlyOrbsPerk(currentU
       }
       return hasItem;
     }
-    obj2 = require(3931) /* getPremiumPlanItem */;
+    obj2 = require(3839) /* getPremiumPlanItem */;
   }
   return false;
 };
@@ -28,7 +29,7 @@ export const useHasXboxMonthlyOrbsPerk = function useHasXboxMonthlyOrbsPerk() {
   const obj = require(589) /* initialize */;
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {
-    let tmpResult = tmp(3931);
+    let tmpResult = tmp(3839);
     flag = false;
     if (!tmpResult.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2)) {
       tmpResult = tmp(1890);

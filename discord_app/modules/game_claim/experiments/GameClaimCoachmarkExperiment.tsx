@@ -1,3 +1,4 @@
+// discord_app/modules/game_claim/experiments/GameClaimCoachmarkExperiment.tsx
 import createExperiment from "createExperiment";
 
 const items = [{ id: 1, label: "Enable Game Claim Coachmark", config: { enabled: true } }];

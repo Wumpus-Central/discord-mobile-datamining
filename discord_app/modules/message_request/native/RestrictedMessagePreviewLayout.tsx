@@ -1,3 +1,4 @@
+// discord_app/modules/message_request/native/RestrictedMessagePreviewLayout.tsx
 const tmp2 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL];
 const sum = tmp2 + 18;
 const result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewLayout.tsx");

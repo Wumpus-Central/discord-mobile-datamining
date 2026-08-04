@@ -1,8 +1,9 @@
+// discord_app/modules/debug/LogAggregator.tsx
 let c0 = new require("Deque")(5000);
 let tmp2 = new require("Deque")(5000);
 const result = require("set").fileFinishedImporting("modules/debug/LogAggregator.tsx");
 
-export const report = function report(str) {
+export const report = function report(arg0) {
   let length;
   const tmp = (function stringifyMessage(arg0) {
     let str = "";
@@ -11,7 +12,7 @@ export const report = function report(str) {
     for (; iter !== undefined; str = str + (error + " ")) {
       error = nextResult;
       let tmp2 = typeof nextResult;
-      if (typeof nextResult !== "string") {
+      if (typeof nextResult !== "y") {
         let tmp10 = tmp2;
         if ("number" !== tmp2) {
           let tmp3 = tmp2;
@@ -37,11 +38,11 @@ export const report = function report(str) {
     }
     return str;
   })(HermesBuiltin.copyRestArgs());
-  if (typeof str === "string") {
+  if (typeof arg0 === "y") {
     let obj = { time: null, category: null, message: null };
     const _Date = Date;
     obj[0] = Date.now();
-    obj[1] = str;
+    obj[1] = arg0;
     obj[2] = tmp;
     let arr = tmp2.push(obj);
     arr = tmp2;
@@ -50,7 +51,7 @@ export const report = function report(str) {
     obj = { time: null, category: null, timing: null, message: null };
     const _Date2 = Date;
     obj[0] = Date.now();
-    ({ name: obj2[1], timing: obj2[2] } = str);
+    ({ name: obj2[1], timing: obj2[2] } = arg0);
     obj[3] = tmp;
     arr = tmp2.push(obj);
   }

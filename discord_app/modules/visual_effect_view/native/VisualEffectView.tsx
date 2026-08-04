@@ -1,3 +1,4 @@
+// discord_app/modules/visual_effect_view/native/VisualEffectView.tsx
 import { View } from "get ActivityIndicator";
 import { useVisualEffectViewOverrides as closure_4 } from "useVisualEffectViewOverrides";
 import { jsx } from "jsxProd";
@@ -33,9 +34,9 @@ export default require("noop").forwardRef(function VisualEffectView(blurAmount) 
   }
   const merged = Object.assign(blurAmount, Object.create(null));
   ({ blurAmountOverride, blurTintRgbaOverride, blurEffectNameOverride } = callback());
-  let obj = require(3989) /* map */;
+  let obj = require(3897) /* map */;
   const token = obj.useToken(importDefault(712).colors.LEGACY_BLUR_FALLBACK_DEFAULT, blurTheme);
-  let obj1 = require(3989) /* map */;
+  let obj1 = require(3897) /* map */;
   let token1 = obj1.useToken(importDefault(712).colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN, blurTheme);
   if ("default" === blurStyle) {
     token1 = token;
@@ -48,9 +49,9 @@ export default require("noop").forwardRef(function VisualEffectView(blurAmount) 
     tmp8 = obj;
   }
   items[2] = tmp8;
-  let tmp3Result = tmp3(3989);
+  let tmp3Result = tmp3(3897);
   const token2 = tmp3Result.useToken(tmp5(712).colors.LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT, blurTheme);
-  tmp3Result = tmp3(3989);
+  tmp3Result = tmp3(3897);
   if ("default" === blurStyle) {
     let tmp12 = token2;
   } else {
@@ -61,7 +62,7 @@ export default require("noop").forwardRef(function VisualEffectView(blurAmount) 
     let tmp15 = null == android_blurTargetViewNativeId;
     if (!tmp15) {
       if (android_softwareBlurDisabled) {
-        android_softwareBlurDisabled = !tmp3(4690).MODERN_ANDROID_BLURRING_AVAILABLE;
+        android_softwareBlurDisabled = !tmp3(4599).MODERN_ANDROID_BLURRING_AVAILABLE;
       }
       tmp15 = true === android_softwareBlurDisabled;
     }
@@ -87,8 +88,8 @@ export default require("noop").forwardRef(function VisualEffectView(blurAmount) 
       blurAmountOverride = num;
     }
     obj1[1] = blurAmountOverride;
-    const tmp5Result = tmp5(4690);
-    obj1[2] = tmp3(4129).hexToRgbaString(tmp12);
+    const tmp5Result = tmp5(4599);
+    obj1[2] = tmp3(4037).hexToRgbaString(tmp12);
     if (blurTintRgbaOverride == null) {
       blurTintRgbaOverride = blurTintRgba;
     }
@@ -96,7 +97,7 @@ export default require("noop").forwardRef(function VisualEffectView(blurAmount) 
     obj1[4] = android_blurTargetViewNativeId;
     const merged2 = Object.assign(merged);
     tmp16Result = tmp16(tmp5Result, obj1);
-    const tmp3Result1 = tmp3(4129);
+    const tmp3Result1 = tmp3(4037);
   } else {
     const obj2 = { ref: null, blurEffectName: null, blurAmount: null, blurTintRgba: null };
     obj2[0] = arg1;
@@ -115,7 +116,7 @@ export default require("noop").forwardRef(function VisualEffectView(blurAmount) 
       const merged3 = Object.assign(merged);
       tmp16Result = tmp16(tmp17, obj2);
     } else {
-      if (!tmp3(4687).MODERN_IOS_BLURS_EFFECTS_AVAILABLE) {
+      if (!tmp3(4596).MODERN_IOS_BLURS_EFFECTS_AVAILABLE) {
         let str2 = "UIBlurEffectStyleDark";
         if ("light" === blurTheme) {
           str2 = "UIBlurEffectStyleLight";
@@ -137,7 +138,7 @@ export const isBlurDisabled = function isBlurDisabled(merged) {
     let tmp4 = null == tmp;
     if (!tmp4) {
       if (android_softwareBlurDisabled) {
-        android_softwareBlurDisabled = !require(4690) /* MODERN_ANDROID_BLURRING_AVAILABLE */.MODERN_ANDROID_BLURRING_AVAILABLE;
+        android_softwareBlurDisabled = !require(4599) /* MODERN_ANDROID_BLURRING_AVAILABLE */.MODERN_ANDROID_BLURRING_AVAILABLE;
       }
       tmp4 = true === android_softwareBlurDisabled;
     }

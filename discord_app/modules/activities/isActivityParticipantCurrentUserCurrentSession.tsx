@@ -1,3 +1,4 @@
+// discord_app/modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx
 import fetchFingerprint from "fetchFingerprint";
 
 const result = require("set").fileFinishedImporting("modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx");

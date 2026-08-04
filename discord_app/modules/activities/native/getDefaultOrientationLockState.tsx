@@ -1,3 +1,4 @@
+// discord_app/modules/activities/native/getDefaultOrientationLockState.tsx
 import DCDDeviceManager from "DCDDeviceManager";
 import isMetaQuest from "isMetaQuest";
 

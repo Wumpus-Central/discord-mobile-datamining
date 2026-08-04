@@ -1,3 +1,4 @@
+// discord_app/modules/auth/native/components/utils/usePasswordScore.tsx
 import set from "set";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

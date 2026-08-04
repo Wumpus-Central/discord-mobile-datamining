@@ -1,3 +1,4 @@
+// discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx
 import _slicedToArray from "_slicedToArray";
 import { MessageType } from "module_1307";
 

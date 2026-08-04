@@ -1,3 +1,4 @@
+// discord_app/stores/UserSettingsAccountStore.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { FormStates } from "ME";
 import { Store } from "initialize";

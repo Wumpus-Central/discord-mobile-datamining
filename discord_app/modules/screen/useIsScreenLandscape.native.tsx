@@ -1,3 +1,4 @@
+// discord_app/modules/screen/useIsScreenLandscape.native.tsx
 import noop from "noop";
 import getDimensionsStoreStateForEntry from "getDimensionsStoreStateForEntry";
 

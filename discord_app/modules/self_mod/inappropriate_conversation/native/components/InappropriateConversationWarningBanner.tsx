@@ -1,3 +1,4 @@
+// discord_app/modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx
 import noop from "noop";
 import upsertRelationship from "upsertRelationship";
 import { SafetyWarningTypes } from "handleConnectionOpen";

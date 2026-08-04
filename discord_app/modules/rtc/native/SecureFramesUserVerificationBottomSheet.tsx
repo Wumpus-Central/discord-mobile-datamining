@@ -1,3 +1,4 @@
+// discord_app/modules/rtc/native/SecureFramesUserVerificationBottomSheet.tsx
 import Button from "Button";
 import trackRTCPanelViewed from "trackRTCPanelViewed";
 import get_ActivityIndicator from "getNickname";

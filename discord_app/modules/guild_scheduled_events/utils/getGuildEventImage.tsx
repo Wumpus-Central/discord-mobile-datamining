@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/utils/getGuildEventImage.tsx
 import { Endpoints } from "ME";
 
 let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");

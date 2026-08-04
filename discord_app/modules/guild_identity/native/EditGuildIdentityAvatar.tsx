@@ -1,3 +1,4 @@
+// discord_app/modules/guild_identity/native/EditGuildIdentityAvatar.tsx
 import ProfileGIFSelectActionSheet from "ProfileGIFSelectActionSheet";
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";

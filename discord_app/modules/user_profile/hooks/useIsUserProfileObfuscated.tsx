@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/hooks/useIsUserProfileObfuscated.tsx
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 
 const require = arg1;

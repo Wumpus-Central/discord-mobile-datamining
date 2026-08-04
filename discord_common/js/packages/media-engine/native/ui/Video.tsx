@@ -1,3 +1,4 @@
+// discord_common/js/packages/media-engine/native/ui/Video.tsx
 class Video {
   constructor(arg0) {
     return require("logger")(global, Video.onContainerResized);

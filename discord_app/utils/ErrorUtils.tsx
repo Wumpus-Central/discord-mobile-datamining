@@ -1,3 +1,4 @@
+// discord_app/utils/ErrorUtils.tsx
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   if (null != NSUnderlyingError.userInfo.NSUnderlyingError) {
     const tmp2 = getUnderlyingIOSExceptionRecursively(NSUnderlyingError.userInfo.NSUnderlyingError);
@@ -9,9 +10,9 @@ function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
 }
 const result = require("set").fileFinishedImporting("utils/ErrorUtils.tsx");
 
-export const getUnderlyingIOSError = function getUnderlyingIOSError(c11) {
+export const getUnderlyingIOSError = function getUnderlyingIOSError(c9) {
   try {
-    let tmp3 = getUnderlyingIOSExceptionRecursively(c11);
+    let tmp3 = getUnderlyingIOSExceptionRecursively(c9);
     if (tmp3 == null) {
       tmp3 = null;
     }
@@ -27,10 +28,10 @@ export const serializeError = function serializeError(arg0) {
     error = new Error("unknown error");
   }
   let error1 = error;
-  if (typeof error !== "object") {
+  if (typeof error !== "ay") {
     const _Error2 = Error;
     const _String = String;
     error1 = new Error(String(error));
   }
-  return JSON.stringify(require(7369) /* BAGGAGE_HEADER_NAME */.normalizeToSize(error1));
+  return JSON.stringify(require(6365) /* BAGGAGE_HEADER_NAME */.normalizeToSize(error1));
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx
 import noop from "noop";
 import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_4 } from "set";
 import { jsx } from "jsxProd";

@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/QuestDock/QuestDockUnenrolledBody.tsx
 import closure_3 from "QuestsExperimentLocations";
 import importAllResult from "_manuallyStartConsoleQuest";
 import { View } from "items";
@@ -65,44 +66,86 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
   setRestingQuestDockMode = obj1.useContext(tmp(tmp2[18]).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
   const items2 = [questCreative.id, hasWatchVideoOnMobileTasks, setRestingQuestDockMode, isMobileActivityQuest, launchMobileActivity];
   const callback = obj1.useCallback(launchMobileActivity(function*() {
-    const obj1 = { questContentCTA: null, questContent: null, sourceQuestContent: null };
-    obj1[0] = outer1_0(7107).QuestContentCTA.ACCEPT_QUEST;
-    obj1[1] = outer1_0(5131).QuestContent.QUEST_BAR_MOBILE;
-    obj1[2] = outer1_0(5131).QuestContent.QUEST_BAR_MOBILE;
-    yield outer1_0(10376).enrollInQuest(outer1_0.id, obj1);
-    if (1 === tmp4) {
+    if (dependencyMap === 2) {
+      dependencyMap = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        let dependencyMap = 3;
         throw arg1;
       } else if (arg0 === 2) {
-        dependencyMap = 3;
-        const obj3 = { value: null, done: true };
-        obj3[0] = arg1;
-        return obj3;
-      } else if (dependencyMap) {
-        const v0 = 2;
-        dependencyMap = 1;
-        const obj4 = { value: null, done: false };
-        obj4[0] = outer1_3();
-        return obj4;
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
       } else {
-        if (v0) {
-          const obj5 = { questId: null, sourceQuestContent: null };
-          obj5[0] = outer1_0.id;
-          obj5[1] = outer1_0(5131).QuestContent.QUEST_BAR_MOBILE;
-          v0(14266)(obj5);
-          outer1_4(outer1_8.COLLAPSED);
-          const tmp12 = v0(14266);
-        }
-        dependencyMap = 3;
+        return { value: "HermesInternal", done: null };
       }
-    } else if (arg0 === 1) {
-      dependencyMap = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      callback(outer1_8.COLLAPSED);
+    } else {
+      try {
+        dependencyMap = 2;
+        if (0 === v0) {
+          if (arg0 === 1) {
+            dependencyMap = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            dependencyMap = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let closure_0 = tmp4;
+            const obj1 = { questContentCTA: null, questContent: null, sourceQuestContent: null };
+            obj1[0] = outer1_0(6016).QuestContentCTA.ACCEPT_QUEST;
+            obj1[1] = outer1_0(5040).QuestContent.QUEST_BAR_MOBILE;
+            obj1[2] = outer1_0(5040).QuestContent.QUEST_BAR_MOBILE;
+            v0 = 1;
+            dependencyMap = 1;
+            const obj2 = { value: null, done: false };
+            obj2[0] = outer1_0(9480).enrollInQuest(outer1_0.id, obj1);
+            return obj2;
+          }
+        } else {
+          if (1 === tmp4) {
+            if (arg0 === 1) {
+              dependencyMap = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              dependencyMap = 3;
+              const obj3 = { value: null, done: true };
+              obj3[0] = arg1;
+              return obj3;
+            } else if (dependencyMap) {
+              v0 = 2;
+              dependencyMap = 1;
+              const obj4 = { value: null, done: false };
+              obj4[0] = outer1_3();
+              return obj4;
+            } else {
+              if (v0) {
+                const obj5 = { questId: null, sourceQuestContent: null };
+                obj5[0] = outer1_0.id;
+                obj5[1] = outer1_0(5040).QuestContent.QUEST_BAR_MOBILE;
+                v0(14166)(obj5);
+                outer1_4(outer1_8.COLLAPSED);
+                const tmp12 = v0(14166);
+              }
+              dependencyMap = 3;
+            }
+          } else if (arg0 === 1) {
+            dependencyMap = 3;
+            throw arg1;
+          } else if (arg0 !== 2) {
+            callback(outer1_8.COLLAPSED);
+          }
+          dependencyMap = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        }
+      } catch (tmp21) {
+        dependencyMap = tmp;
+        throw tmp21;
+      }
     }
-    return arg1;
   }), items2);
   let tmpResult = tmp(tmp2[23]);
   const primaryCtaCopy = tmpResult.usePrimaryCtaCopy({ quest: questCreative, application: mobileActivityQuest.questApplication, shortText: true });

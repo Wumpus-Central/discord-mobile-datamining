@@ -1,3 +1,4 @@
+// discord_app/modules/app_database/modules/GuildStickers.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import set from "items";
 
@@ -33,16 +34,70 @@ const prototype = GuildStickers.prototype;
 prototype["getAsync"] = function getAsync(arg0) {
   let closure_0 = arg0;
   return callback(function*() {
-    let length = tmp5;
-    let closure_0 = tmp2;
-    const _performance2 = performance;
-    closure_0 = performance.now();
-    const obj6 = outer1_0(outer1_1[2]);
-    length = yield outer1_0(outer1_1[2]).stickers(outer1_0).getMapEntries();
-    const _performance = performance;
-    const _HermesInternal = HermesInternal;
-    logger.log("asynchronously loaded in " + asyncGeneratorStep - closure_0 + "ms (guilds: " + length.length + ")");
-    return length;
+    if (logger === 2) {
+      logger = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        logger = 2;
+        if (0 === asyncGeneratorStep) {
+          if (arg0 === 1) {
+            logger = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            logger = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            let length = tmp5;
+            let closure_0 = tmp2;
+            closure_0 = undefined;
+            length = undefined;
+            asyncGeneratorStep = undefined;
+            const _performance2 = performance;
+            closure_0 = performance.now();
+            const obj6 = outer1_0(outer1_1[2]);
+            asyncGeneratorStep = 1;
+            logger = 1;
+            const obj1 = { value: null, done: false };
+            obj1[0] = outer1_0(outer1_1[2]).stickers(outer1_0).getMapEntries();
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          logger = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          logger = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
+        } else {
+          length = arg1;
+          const _performance = performance;
+          asyncGeneratorStep = performance.now();
+          const _HermesInternal = HermesInternal;
+          logger.log("asynchronously loaded in " + asyncGeneratorStep - closure_0 + "ms (guilds: " + length.length + ")");
+          logger = 3;
+          obj = { value: null, done: true };
+          obj[0] = length;
+          return obj;
+        }
+      } catch (tmp6) {
+        logger = tmp;
+        throw tmp6;
+      }
+    }
   })();
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {

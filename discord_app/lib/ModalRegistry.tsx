@@ -1,3 +1,4 @@
+// discord_app/lib/ModalRegistry.tsx
 class ModalRegistry {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);

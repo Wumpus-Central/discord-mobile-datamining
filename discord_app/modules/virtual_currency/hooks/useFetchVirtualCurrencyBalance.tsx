@@ -1,3 +1,4 @@
+// discord_app/modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx
 import { useEffect } from "noop";
 import redeemError from "redeemError";
 

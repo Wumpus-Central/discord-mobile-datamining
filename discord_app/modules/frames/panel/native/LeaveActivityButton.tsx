@@ -1,3 +1,4 @@
+// discord_app/modules/frames/panel/native/LeaveActivityButton.tsx
 import { ActivityPanelModes } from "ActivityPanelModes";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";
@@ -7,7 +8,7 @@ const memoResult = require("noop").memo(function LeaveActivityButton(arg0) {
   let importDefault;
   let require;
   ({ frame: require, setMode: importDefault } = arg0);
-  return jsx(require(15980) /* BaseLeaveActivityButton */.BaseLeaveActivityButton, {
+  return jsx(require(15884) /* BaseLeaveActivityButton */.BaseLeaveActivityButton, {
     onPress() {
       callback(outer1_3.DISCONNECTED);
       const timerId = setTimeout(() => {

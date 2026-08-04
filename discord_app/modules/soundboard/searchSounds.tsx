@@ -1,3 +1,4 @@
+// discord_app/modules/soundboard/searchSounds.tsx
 import getEmojiToGroupId from "getEmojiToGroupId";
 import ME from "ME";
 
@@ -42,13 +43,13 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result = null;
     if (null != name.emojiName) {
-      result = stateFromStores(3926).convertSurrogateToName(name.emojiName, false);
-      const obj2 = stateFromStores(3926);
+      result = stateFromStores(3834).convertSurrogateToName(name.emojiName, false);
+      const obj2 = stateFromStores(3834);
     }
     let byName = null;
     if (null != result) {
-      byName = stateFromStores(3926).getByName(result);
-      const obj3 = stateFromStores(3926);
+      byName = stateFromStores(3834).getByName(result);
+      const obj3 = stateFromStores(3834);
     }
     if (null != customEmojiById) {
       const items = [customEmojiById.name];
@@ -97,8 +98,8 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
     }
     let result1 = sum6 > 0;
     if (0 < sum6) {
-      result1 = lib(5868).canUseSoundboardSound(stateFromStores, name, tmp3);
-      const obj4 = lib(5868);
+      result1 = lib(10790).canUseSoundboardSound(stateFromStores, name, tmp3);
+      const obj4 = lib(10790);
     }
     let sum7 = sum6;
     if (result1) {

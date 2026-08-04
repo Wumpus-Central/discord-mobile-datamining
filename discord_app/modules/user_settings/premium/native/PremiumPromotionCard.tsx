@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/premium/native/PremiumPromotionCard.tsx
 import noop from "noop";
 import { View } from "set";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

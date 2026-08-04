@@ -1,3 +1,4 @@
+// discord_app/design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 import Link from "Link";

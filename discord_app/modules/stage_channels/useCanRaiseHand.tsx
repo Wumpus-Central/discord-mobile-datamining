@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/useCanRaiseHand.tsx
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import { Permissions } from "sum";
 

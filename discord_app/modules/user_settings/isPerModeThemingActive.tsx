@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/isPerModeThemingActive.tsx
 import handleThemeChange from "handleThemeChange";
 import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
 import { SystemThemeState } from "SystemThemeState";

@@ -1,3 +1,4 @@
+// discord_app/modules/auth/native/components/utils/useIdentityRegistrationStep.tsx
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

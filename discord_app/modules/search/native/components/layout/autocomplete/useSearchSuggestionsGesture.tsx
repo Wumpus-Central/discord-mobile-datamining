@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx
 import noop from "noop";
 
 const require = arg1;
@@ -49,7 +50,7 @@ export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(
       const rect = closure_2.get();
       let tmp2 = null == rect;
       if (!tmp2) {
-        if (typeof outer1_4 !== "function") {
+        if (typeof outer1_4 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const first = arg0.allTouches[0];

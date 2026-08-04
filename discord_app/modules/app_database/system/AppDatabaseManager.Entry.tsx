@@ -1,3 +1,4 @@
+// discord_app/modules/app_database/system/AppDatabaseManager.Entry.tsx
 const result = require("set").fileFinishedImporting("modules/app_database/system/AppDatabaseManager.Entry.tsx");
 class Entry {
   constructor(arg0, arg1) {

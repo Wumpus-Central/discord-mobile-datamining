@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx
 import noop from "noop";
 
 const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx");

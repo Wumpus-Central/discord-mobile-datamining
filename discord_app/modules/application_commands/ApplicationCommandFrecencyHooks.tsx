@@ -1,3 +1,4 @@
+// discord_app/modules/application_commands/ApplicationCommandFrecencyHooks.tsx
 import noop from "noop";
 import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
 import closure_5 from "handleUserSettingsProtoStoreChange";

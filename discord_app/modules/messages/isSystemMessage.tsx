@@ -1,3 +1,4 @@
+// discord_app/modules/messages/isSystemMessage.tsx
 const result = require("set").fileFinishedImporting("modules/messages/isSystemMessage.tsx");
 
 export default function isSystemMessage(type) {

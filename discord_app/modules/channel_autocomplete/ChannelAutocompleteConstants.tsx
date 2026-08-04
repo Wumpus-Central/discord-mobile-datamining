@@ -1,3 +1,4 @@
+// discord_app/modules/channel_autocomplete/ChannelAutocompleteConstants.tsx
 let closure_0 = [];
 const tmp2 = /^<@\$(\d+)>/;
 const regExp = new RegExp(tmp2.source.replace(/^\^/, ""), "g");

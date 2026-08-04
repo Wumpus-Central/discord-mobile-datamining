@@ -1,3 +1,4 @@
+// discord_app/stores/ApplicationStreamingSettingsStore.tsx
 import RESOLUTION_720 from "RESOLUTION_720";
 import { MediaEngineContextTypes } from "DesktopSources";
 import { PersistedStore } from "initialize";

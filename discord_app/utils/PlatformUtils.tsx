@@ -1,3 +1,4 @@
+// discord_app/utils/PlatformUtils.tsx
 const result = require("set").fileFinishedImporting("utils/PlatformUtils.tsx");
 for (const key10018 in require("PlatformTypes")) {
   let tmp3 = key10018;

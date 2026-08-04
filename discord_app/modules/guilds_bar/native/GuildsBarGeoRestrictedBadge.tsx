@@ -1,3 +1,4 @@
+// discord_app/modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -14,9 +15,9 @@ const memoResult = require("noop").memo(function GuildsBarGeoRestrictedBadge(sty
   let obj = { style: items, pointerEvents: "none", children: null };
   items = [tmp.badgeImageContainer, style.style];
   obj = { source: null, style: null };
-  obj[0] = importDefault(11547);
+  obj[0] = importDefault(11438);
   obj[1] = tmp.badgeImage;
-  obj[2] = jsx(importDefault(5236), { source: null, style: null });
+  obj[2] = jsx(importDefault(5145), { source: null, style: null });
   return <View source={null} style={null} />;
 });
 const result = require("jsxProd").fileFinishedImporting("modules/guilds_bar/native/GuildsBarGeoRestrictedBadge.tsx");

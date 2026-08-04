@@ -1,3 +1,4 @@
+// discord_app/modules/self_mod/ChannelSafetyWarningsStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { Store } from "initialize";
 import set from "initialize";

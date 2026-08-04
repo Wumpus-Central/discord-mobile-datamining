@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { useAppLauncherNavigation } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";

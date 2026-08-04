@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AccountEnable2faSetting.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createToggle from "createToggle";
 
@@ -16,7 +17,7 @@ createToggle = {
     }
     if (verified != null) {
       if (verified) {
-        let obj = importDefault(13931);
+        let obj = importDefault(13831);
         obj.open();
       }
     }
@@ -25,11 +26,11 @@ createToggle = {
     obj[0] = intl.string(require(1236) /* getSystemLocale */.t.v740sh);
     const intl2 = require(1236) /* getSystemLocale */.intl;
     obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.uggF7o);
-    importDefault(4623).show(obj);
+    importDefault(4532).show(obj);
   },
   withArrow: true,
   usePredicate: function useHasAccountEnable2FASetting() {
-    return !require(13895) /* useIs2FAEnabled */.useIsTOTPEnabled();
+    return !require(13795) /* useIs2FAEnabled */.useIsTOTPEnabled();
   }
 };
 createToggle = createToggle.createPressable(createToggle);

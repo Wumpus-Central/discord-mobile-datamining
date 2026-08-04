@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/billing/native/OrbsFlowTestModal.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "BalanceWidgetPill";
 import get_ActivityIndicator from "TextInput";
@@ -14,9 +15,9 @@ function BalanceWidgetMenuSection() {
   const tmp = callback4();
   let obj = { spacing: 16, style: tmp.container, children: null };
   obj = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" };
-  const items = [callback2(require(4281) /* Text */.Text, obj), callback2(importDefault(14912), {})];
+  const items = [callback2(require(4189) /* Text */.Text, obj), callback2(importDefault(14812), {})];
   obj[2] = items;
-  return callback3(require(4693) /* Stack */.Stack, obj);
+  return callback3(require(4602) /* Stack */.Stack, obj);
 }
 function BalanceWidgetPillSection() {
   const tmp = callback4();
@@ -72,14 +73,14 @@ function BalanceWidgetPillSection() {
   return callback3(first(first1[10]).Stack, obj);
 }
 function OrbsFlowTest() {
-  const insets = importDefault(5310)({ includeKeyboardHeight: true }).insets;
+  const insets = importDefault(5219)({ includeKeyboardHeight: true }).insets;
   let obj = { children: null };
   obj = { style: callback4().wrap, contentContainerStyle: obj, children: null };
   obj = { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right };
-  const items = [callback2(BalanceWidgetMenuSection, {}), callback2(BalanceWidgetPillSection, {}), callback2(importDefault(14914), {})];
+  const items = [callback2(BalanceWidgetMenuSection, {}), callback2(BalanceWidgetPillSection, {}), callback2(importDefault(14814), {})];
   obj[2] = items;
   obj[0] = callback3(closure_5, obj);
-  return callback2(require(5597) /* Layer */.LayerScope, obj);
+  return callback2(require(5506) /* Layer */.LayerScope, obj);
 }
 let c4 = importAllResult;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
@@ -95,7 +96,7 @@ createCacheKey = { flexDirection: "row", justifyContent: "center", marginBottom:
 obj[3] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function OrbsFlowTestModal() {
-  let obj = _require(5665);
+  let obj = _require(5574);
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions(navigation) {

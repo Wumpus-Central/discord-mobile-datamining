@@ -1,3 +1,4 @@
+// discord_app/modules/chat/native/ChatView.tsx
 import importAllResult from "initialize";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import { createChannelRecord } from "createChannelRecord";

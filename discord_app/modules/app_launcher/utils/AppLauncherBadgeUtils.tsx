@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/utils/AppLauncherBadgeUtils.tsx
 const result = require("set").fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");
 
 export const getNewestBadgeableVersion = function getNewestBadgeableVersion(arg0) {

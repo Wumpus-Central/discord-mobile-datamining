@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/list/SearchListSection.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -13,7 +14,7 @@ const memoResult = require("noop").memo((arg0) => {
   let trailing;
   ({ title, trailing } = arg0);
   const obj = { style: callback3().section, children: null };
-  const items = [callback(require(4281) /* Text */.Text, { maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: title }), trailing];
+  const items = [callback(require(4189) /* Text */.Text, { maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: title }), trailing];
   obj[1] = items;
   return callback2(View, obj);
 });

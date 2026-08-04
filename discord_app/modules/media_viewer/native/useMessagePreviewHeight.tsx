@@ -1,3 +1,4 @@
+// discord_app/modules/media_viewer/native/useMessagePreviewHeight.tsx
 import keys from "keys";
 
 const obj = keys.create(() => ({ collapsedHeight: 0, expandedHeight: 0 }));

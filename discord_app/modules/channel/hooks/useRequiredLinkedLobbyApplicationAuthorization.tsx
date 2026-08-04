@@ -1,3 +1,4 @@
+// discord_app/modules/channel/hooks/useRequiredLinkedLobbyApplicationAuthorization.tsx
 import { useEffect } from "noop";
 import addApplication from "addApplication";
 import recomputeFromAppTokens from "recomputeFromAppTokens";

@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/utils/roundToNearestPixel.tsx
 import { PixelRatio } from "get ActivityIndicator";
 
 const value = PixelRatio.get();

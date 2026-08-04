@@ -1,11 +1,10 @@
+// discord_app/modules/channel/useChannelName.tsx
 import _slicedToArray from "_slicedToArray";
 import getHash from "getHash";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
+import { ChannelTypes } from "ME";
 
-let error;
-let metroImportAll;
 const require = arg1;
 function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
   let flag = arg3;
@@ -17,15 +16,15 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
     flag2 = false;
   }
   if (channel.isObfuscated()) {
-    const intl3 = _require(1236).intl;
-    return intl3.string(_require(1236).t["/YzI63"]);
+    const intl2 = _require(1236).intl;
+    return intl2.string(_require(1236).t["/YzI63"]);
   } else {
     const type = channel.type;
-    if (constants.DM === type) {
+    if (ChannelTypes.DM === type) {
       if ("" !== str) {
         let combined = str;
         if (flag) {
-          const _HermesInternal6 = HermesInternal;
+          const _HermesInternal5 = HermesInternal;
           combined = "@" + str;
         }
         return combined;
@@ -37,18 +36,18 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
           return "???";
         } else {
           if (!first.isProvisional) {
-            let str17 = closure_7.getNickname(first.id);
-            if (str17 == null) {
-              str17 = importDefault(4124).getName(first);
-              const obj3 = importDefault(4124);
+            let str12 = closure_7.getNickname(first.id);
+            if (str12 == null) {
+              str12 = importDefault(4032).getName(first);
+              const obj3 = importDefault(4032);
             }
-            if (str17 == null) {
-              str17 = "???";
+            if (str12 == null) {
+              str12 = "???";
             }
-            let globalName = str17;
+            let globalName = str12;
             if (flag) {
-              const _HermesInternal5 = HermesInternal;
-              globalName = "@" + str17;
+              const _HermesInternal4 = HermesInternal;
+              globalName = "@" + str12;
             }
           }
           globalName = first.globalName;
@@ -73,11 +72,11 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         if (mapped2.length > 0) {
           let joined = mapped2.join(", ");
         } else {
-          const intl2 = tmp25(1236).intl;
+          const intl = tmp20(1236).intl;
           const obj = { name: null };
-          obj[0] = importDefault(4124).getName(closure_9.getCurrentUser());
-          joined = intl2.formatToPlainString(tmp25(1236).t["9Uk8PF"], obj);
-          const obj2 = importDefault(4124);
+          obj[0] = importDefault(4032).getName(closure_9.getCurrentUser());
+          joined = intl.formatToPlainString(tmp20(1236).t["9Uk8PF"], obj);
+          const obj2 = importDefault(4032);
         }
       }
     } else {
@@ -85,61 +84,47 @@ function computeChannelName(channel, closure_9, closure_7, arg3, arg4) {
         if (tmp3.GUILD_TEXT !== type) {
           if (tmp3.GUILD_FORUM !== type) {
             if (tmp3.GUILD_MEDIA !== type) {
-              if (tmp3.GUILD_CATEGORY === type) {
-                if (channel.id === closure_8) {
-                  const intl = _require(1236).intl;
-                  let stringResult = intl.string(_require(1236).t.GSfOoo);
-                } else {
-                  stringResult = str;
-                  if (flag2) {
-                    const _HermesInternal3 = HermesInternal;
-                    stringResult = "#\"" + str.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"";
-                    const str9 = str.replace(/\\/g, "\\\\");
-                  }
-                }
-                return stringResult;
-              } else {
-                if (tmp3.PUBLIC_THREAD !== type) {
-                  if (tmp3.PRIVATE_THREAD !== type) {
-                    if (tmp3.ANNOUNCEMENT_THREAD !== type) {
-                      if (tmp3.GUILD_VOICE !== type) {
-                        if (tmp3.GUILD_STAGE_VOICE !== type) {
+              if (tmp3.PUBLIC_THREAD !== type) {
+                if (tmp3.PRIVATE_THREAD !== type) {
+                  if (tmp3.ANNOUNCEMENT_THREAD !== type) {
+                    if (tmp3.GUILD_VOICE !== type) {
+                      if (tmp3.GUILD_STAGE_VOICE !== type) {
+                        if (tmp3.GUILD_CATEGORY !== type) {
                           return str;
                         }
                       }
                     }
                   }
                 }
-                if (flag2) {
-                  const _HermesInternal2 = HermesInternal;
-                  let combined1 = "#\"" + str.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"";
-                  const str4 = str.replace(/\\/g, "\\\\");
-                } else {
+              }
+              if (flag2) {
+                const _HermesInternal2 = HermesInternal;
+                let combined1 = "#\"" + str.replace(/\\/g, "\\\\").replace(/"/g, "\\\"") + "\"";
+                const str4 = str.replace(/\\/g, "\\\\");
+              } else {
+                combined1 = str;
+                if (flag) {
                   combined1 = str;
-                  if (flag) {
-                    combined1 = str;
-                    if (channel.isThread()) {
-                      const _HermesInternal = HermesInternal;
-                      combined1 = "\"" + str + "\"";
-                    }
+                  if (channel.isThread()) {
+                    const _HermesInternal = HermesInternal;
+                    combined1 = "\"" + str + "\"";
                   }
                 }
-                return combined1;
               }
+              return combined1;
             }
           }
         }
       }
       let combined2 = str;
       if (flag) {
-        const _HermesInternal4 = HermesInternal;
+        const _HermesInternal3 = HermesInternal;
         combined2 = "#" + str;
       }
       return combined2;
     }
   }
 }
-({ ChannelTypes: error, NULL_STRING_CHANNEL_ID: metroImportAll } = ME);
 const result = require("upsertRelationship").fileFinishedImporting("modules/channel/useChannelName.tsx");
 
 export default function useChannelName(arg0) {
@@ -152,7 +137,7 @@ export default function useChannelName(arg0) {
   return _require(589).useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      tmp2 = outer1_9(tmp, outer1_6, outer1_5, flag);
+      tmp2 = outer1_8(tmp, outer1_6, outer1_5, flag);
     }
     return tmp2;
   });
@@ -174,9 +159,9 @@ export const computeDefaultGroupDmNameFromUserIds = function computeDefaultGroup
   } else {
     const intl = tmp(1236).intl;
     const obj = { name: null };
-    obj[0] = importDefault(4124).getName(getUser.getCurrentUser());
+    obj[0] = importDefault(4032).getName(getUser.getCurrentUser());
     joined = intl.formatToPlainString(tmp(1236).t["9Uk8PF"], obj);
-    const obj2 = importDefault(4124);
+    const obj2 = importDefault(4032);
   }
   return joined;
 };
@@ -198,9 +183,9 @@ export const computeDefaultGroupDmName = function computeDefaultGroupDmName(reci
   } else {
     const intl = tmp(1236).intl;
     const obj = { name: null };
-    obj[0] = importDefault(4124).getName(getUser.getCurrentUser());
+    obj[0] = importDefault(4032).getName(getUser.getCurrentUser());
     joined = intl.formatToPlainString(tmp(1236).t["9Uk8PF"], obj);
-    const obj2 = importDefault(4124);
+    const obj2 = importDefault(4032);
   }
   return joined;
 };

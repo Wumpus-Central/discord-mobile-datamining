@@ -1,3 +1,4 @@
+// discord_app/modules/emoji_picker/native/components/EmojiPickerListComponents.tsx
 import importAllResult from "noop";
 import { View } from "get ActivityIndicator";
 import IMAGE_SIZE from "IMAGE_SIZE";
@@ -23,13 +24,13 @@ const memoResult = importAllResult.memo(() => {
   const tmp = callback3();
   let obj = { style: tmp.nsfwContainer, children: null };
   obj = { source: null, size: null };
-  obj[0] = importDefault(8068);
+  obj[0] = importDefault(7938);
   obj[1] = require(1297) /* Button */.Icon.Sizes.SMALL;
   const items = [callback(require(1297) /* Button */.Icon, obj), ];
   obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t.SLzV5z);
-  items[1] = callback(require(4281) /* Text */.Text, obj);
+  items[1] = callback(require(4189) /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 });
@@ -41,14 +42,14 @@ const memoResult1 = importAllResult.memo((useTier0UpsellContent) => {
   if (isSectionNitroLocked) {
     obj = { useTier0UpsellContent: null };
     obj[0] = useTier0UpsellContent.useTier0UpsellContent;
-    isSectionNitroLocked = callback(require(8628) /* PremiumUpsellGradientBackground */.PremiumUpsellGradientBackground, obj);
+    isSectionNitroLocked = callback(require(9394) /* PremiumUpsellGradientBackground */.PremiumUpsellGradientBackground, obj);
   }
   const items = [isSectionNitroLocked, ];
   let tmp6 = null;
   if ("" !== label) {
     obj = { lineClamp: 1, color: "interactive-text-default", variant: "heading-sm/semibold", children: null };
     obj[3] = label;
-    tmp6 = callback(require(4281) /* Text */.Text, obj);
+    tmp6 = callback(require(4189) /* Text */.Text, obj);
   }
   items[1] = tmp6;
   obj[1] = items;

@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/profile_effects/useClock.tsx
 import noop from "noop";
 
 const result = require("useMountLayoutEffect").fileFinishedImporting("modules/collectibles/profile_effects/useClock.tsx");

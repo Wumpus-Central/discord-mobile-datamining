@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/StageChannelParticipantUtils.tsx
 const require = arg1;
 const DAY = require("set").Millis.DAY;
 const result = require("getSystemLocale").fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
@@ -44,5 +45,5 @@ export const participantMemberInfo = function participantMemberInfo(participant)
     }
     return stringResult;
   }
-  obj = require(4124) /* nameFromUser */;
+  obj = require(4032) /* nameFromUser */;
 };

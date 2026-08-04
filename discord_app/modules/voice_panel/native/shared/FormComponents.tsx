@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/shared/FormComponents.tsx
 import getSystemLocale from "getSystemLocale";
 import sortActivity from "sortActivity";
 import jsxProd from "Button";
@@ -16,12 +17,12 @@ function VoiceBadges(arg0) {
   if (null != muteDeafenIconState) {
     obj = { style: null, children: null };
     obj[0] = tmp.iconWrapper;
-    let tmp3Result = tmp3(5663);
+    let tmp3Result = tmp3(5572);
     obj = { state: null, size: null, style: null };
     obj[0] = muteDeafenIconState;
     obj[1] = require(1297) /* Button */.IconSizes.SMALL;
     obj[2] = tmp.icon;
-    obj[1] = callback(require(9100) /* VideoDisabledSvgIcon */.MuteDeafenIcon, obj);
+    obj[1] = callback(require(8870) /* VideoDisabledSvgIcon */.MuteDeafenIcon, obj);
     tmp6 = callback(tmp3Result, obj);
   }
   const items = [tmp6, ];
@@ -29,17 +30,17 @@ function VoiceBadges(arg0) {
   if (null != videoIconState) {
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.iconWrapper;
-    tmp3Result = tmp3(5663);
+    tmp3Result = tmp3(5572);
     const obj2 = { state: null, size: null, style: null };
     obj2[0] = videoIconState;
     obj2[1] = require(1297) /* Button */.IconSizes.SMALL;
     obj2[2] = tmp.icon;
-    obj1[1] = callback(require(9100) /* VideoDisabledSvgIcon */.VideoIcon, obj2);
+    obj1[1] = callback(require(8870) /* VideoDisabledSvgIcon */.VideoIcon, obj2);
     tmp10 = callback(tmp3Result, obj1);
   }
   items[1] = tmp10;
   obj[1] = items;
-  return closure_6(importDefault(5663), obj);
+  return closure_6(importDefault(5572), obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: null, icon: null, notConnectedAvatar: null, memberRow: null };
@@ -59,8 +60,8 @@ export const VoicePanelFormSection = function VoicePanelFormSection(style) {
   const tmp2 = createCacheKey();
   obj = {};
   const merged1 = Object.assign(merged);
-  obj[1] = callback(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
-  return callback(importDefault(5663), obj);
+  obj[1] = callback(require(5558) /* TableRowGroupTitle */.TableRowGroup, obj);
+  return callback(importDefault(5572), obj);
 };
 export const MemberRowItem = function MemberRowItem(user) {
   let guildId;

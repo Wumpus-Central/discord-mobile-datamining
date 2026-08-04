@@ -1,3 +1,4 @@
+// discord_app/modules/captcha/native/HcaptchaModal.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import siteKey from "siteKey";
 import get_ActivityIndicator from "Text";

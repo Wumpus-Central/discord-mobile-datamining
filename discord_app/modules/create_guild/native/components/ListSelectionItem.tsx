@@ -1,3 +1,4 @@
+// discord_app/modules/create_guild/native/components/ListSelectionItem.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -11,5 +12,5 @@ export default function ListSelectionItem(arg0) {
   ({ Icon, message, onPress } = arg0);
   const obj = { onPress, label: message, icon: null };
   obj[2] = <Icon size={24} />;
-  return jsx(require(5315) /* TableRowInner */.TableRow, { onPress, label: message, icon: null });
+  return jsx(require(5224) /* TableRowInner */.TableRow, { onPress, label: message, icon: null });
 };

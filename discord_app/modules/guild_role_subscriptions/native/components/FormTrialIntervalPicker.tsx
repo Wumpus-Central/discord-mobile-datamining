@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/components/FormTrialIntervalPicker.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -14,7 +15,7 @@ export default function FormTrialIntervalPicker(disabled) {
     let intl = interval(1236).intl;
     let stringResult = intl.string(interval(1236).t.WZG1BU);
   } else {
-    let obj = interval(14367);
+    let obj = interval(14267);
     stringResult = obj.formatPlanIntervalDuration(interval);
   }
   obj = {
@@ -40,7 +41,7 @@ export default function FormTrialIntervalPicker(disabled) {
     },
     disabled: disabled.disabled
   };
-  return jsx(importDefault(13150), {
+  return jsx(importDefault(13054), {
     label: stringResult,
     onPress() {
       let obj = outer1_1(outer1_2[5]);

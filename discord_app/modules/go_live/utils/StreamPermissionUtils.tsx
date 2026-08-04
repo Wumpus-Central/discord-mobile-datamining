@@ -1,3 +1,4 @@
+// discord_app/modules/go_live/utils/StreamPermissionUtils.tsx
 import set from "set";
 import { ChannelRecordBase } from "createChannelRecord";
 import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
@@ -30,7 +31,7 @@ function canStreamInChannel(channel, closure_2, set, arg3) {
     let tmp5 = !isGuildStageVoiceResult;
     if (!isGuildStageVoiceResult) {
       if (flag) {
-        flag = !importDefault(5101)(channel, set);
+        flag = !importDefault(5010)(channel, set);
       }
       let tmp9 = !flag;
       if (!flag) {
@@ -54,15 +55,15 @@ function canWatchStream(basicChannel1, closure_17, closure_12, closure_14, updat
     let isInChannelResult = closure_17.isInChannel(basicChannel1.id);
     let isChannelFullResult = basicChannel1 instanceof ChannelRecordBase;
     if (isChannelFullResult) {
-      obj = require(4467) /* allowChannelAccess */;
+      obj = require(4376) /* allowChannelAccess */;
       isChannelFullResult = obj.isChannelFull(basicChannel1, closure_17, closure_12);
     }
-    let tmp9 = importDefault(5101)(basicChannel1, closure_14);
+    let tmp9 = importDefault(5010)(basicChannel1, closure_14);
     const tmp10 = null != updateVoiceState.getAwaitingRemoteSessionInfo() || null != updateVoiceState.getRemoteSessionId();
-    let result = require(4498) /* shouldShowAgeGateForVoiceChannel */.shouldAgeVerifyForAgeGate();
+    let result = require(4407) /* shouldShowAgeGateForVoiceChannel */.shouldAgeVerifyForAgeGate();
     if (result) {
-      result = require(4498) /* shouldShowAgeGateForVoiceChannel */.shouldShowAgeGateForChannelId(basicChannel1.id);
-      const tmp11Result = require(4498) /* shouldShowAgeGateForVoiceChannel */;
+      result = require(4407) /* shouldShowAgeGateForVoiceChannel */.shouldShowAgeGateForChannelId(basicChannel1.id);
+      const tmp11Result = require(4407) /* shouldShowAgeGateForVoiceChannel */;
     }
     if (tmp10) {
       let CHANNEL_FULL = obj.REMOTE_MODE;

@@ -1,3 +1,4 @@
+// discord_app/modules/spoiler_channels/ChannelSpoilerAgreeStore.tsx
 import fetchFingerprint from "fetchFingerprint";
 import { DeviceSettingsStore } from "initialize";
 

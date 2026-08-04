@@ -1,3 +1,4 @@
+// discord_app/modules/notifications/NotificationUtils.tsx
 import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
 import { UserNotificationSettings } from "ME";
 import MAX_FAVORITES from "MAX_FAVORITES";

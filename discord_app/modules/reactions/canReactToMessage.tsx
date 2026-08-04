@@ -1,3 +1,4 @@
+// discord_app/modules/reactions/canReactToMessage.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import recomputeGuild from "recomputeGuild";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
@@ -49,8 +50,8 @@ function canReactToMessageInternal(state, getGuildId, items) {
     const obj5 = require(1384) /* hasFlag */;
   }
   if (canResult) {
-    canResult = !require(3902) /* isCommunicationDisabled */.isMemberCommunicationDisabled(member);
-    const obj6 = require(3902) /* isCommunicationDisabled */;
+    canResult = !require(3810) /* isCommunicationDisabled */.isMemberCommunicationDisabled(member);
+    const obj6 = require(3810) /* isCommunicationDisabled */;
   }
   return canResult;
 }

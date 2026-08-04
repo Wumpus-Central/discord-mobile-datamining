@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx
 import computeRolesForGuild from "computeRolesForGuild";
 
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionEmojiUtils.tsx");

@@ -1,3 +1,4 @@
+// discord_app/modules/premium/tiered_tenure_badging/native/hooks/useMobileTenureBadgeImages.tsx
 import { TieredTenureBadge } from "GuildFeatures";
 
 let obj = {};

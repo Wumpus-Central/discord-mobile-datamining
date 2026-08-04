@@ -1,3 +1,4 @@
+// discord_app/modules/sentry/addSentryBreadcrumb.native.tsx
 const result = require("set").fileFinishedImporting("modules/sentry/addSentryBreadcrumb.native.tsx");
 
 export default function addSentryBreadcrumb(category) {

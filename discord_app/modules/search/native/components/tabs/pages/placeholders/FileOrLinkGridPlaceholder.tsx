@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx
 import noop from "noop";
 import { jsx } from "jsxProd";
 
@@ -8,15 +9,15 @@ export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
   let width;
   let importDefault;
-  let obj = width(15603);
+  let obj = width(15506);
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   width = imageStyle.width;
-  const sum = imageStyle.height + 108 * width(4701).useFontScale();
+  const sum = imageStyle.height + 108 * width(4610).useFontScale();
   importDefault = sum;
   const items = [width, sum];
   const memo = React.useMemo(() => ({ width, height: c1 }), items);
   obj = { style: items1, pointerEvents: "none", children: null };
   items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
-  obj[2] = jsx(width(15624).SearchListCardContainer, { containerStyle: memo });
-  return jsx(importDefault(4146).View, { style: items1, pointerEvents: "none", children: null });
+  obj[2] = jsx(width(15527).SearchListCardContainer, { containerStyle: memo });
+  return jsx(importDefault(4054).View, { style: items1, pointerEvents: "none", children: null });
 };

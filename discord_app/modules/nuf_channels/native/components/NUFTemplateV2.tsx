@@ -1,3 +1,4 @@
+// discord_app/modules/nuf_channels/native/components/NUFTemplateV2.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -22,9 +23,9 @@ export default function NUFActionSheetTemplate(arg0) {
   obj = { style: tmp.illustration, children: illustration };
   const items = [callback(View, obj), , , ];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/bold", children: title };
-  items[1] = callback(require(4281) /* Text */.Text, obj);
-  items[2] = callback(require(4281) /* Text */.Text, { style: tmp.description, variant: "text-md/medium", children: description });
-  items[3] = callback(require(4695) /* Button */.Button, { text: CTALabel, onPress: onCTAPress, grow: true });
+  items[1] = callback(require(4189) /* Text */.Text, obj);
+  items[2] = callback(require(4189) /* Text */.Text, { style: tmp.description, variant: "text-md/medium", children: description });
+  items[3] = callback(require(4604) /* Button */.Button, { text: CTALabel, onPress: onCTAPress, grow: true });
   obj[1] = items;
   return callback2(View, obj);
 };

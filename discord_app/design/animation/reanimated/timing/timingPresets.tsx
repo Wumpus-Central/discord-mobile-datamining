@@ -1,3 +1,4 @@
+// discord_app/design/animation/reanimated/timing/timingPresets.tsx
 const result = require("set").fileFinishedImporting("design/animation/reanimated/timing/timingPresets.tsx");
 
 export const timingNone = { duration: 0 };

@@ -1,3 +1,4 @@
+// discord_app/modules/age_assurance/native/PlayAgeSignals.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _getAgeSignals() {

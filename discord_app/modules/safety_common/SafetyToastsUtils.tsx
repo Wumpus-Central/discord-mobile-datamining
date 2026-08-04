@@ -1,3 +1,4 @@
+// discord_app/modules/safety_common/SafetyToastsUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SafetyToastType } from "SafetyToastType";
@@ -8,7 +9,7 @@ const result = require("SafetyToastType").fileFinishedImporting("modules/safety_
 export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOCK_SUCCESS, closure_0, c1) {
   user = user.getUser(closure_0);
   channel = channel.getChannel(c1);
-  let obj = importDefault(4474);
+  let obj = importDefault(4383);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -19,8 +20,8 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
   }
   let name = obj.getName(guild_id, id, user);
   if (name == null) {
-    name = tmp3(4124).getGlobalName(user);
-    const tmp3Result = tmp3(4124);
+    name = tmp3(4032).getGlobalName(user);
+    const tmp3Result = tmp3(4032);
   }
   if (SafetyToastType.IGNORE_SUCCESS === BLOCK_SUCCESS) {
     const intl14 = require(1236) /* getSystemLocale */.intl;
@@ -68,7 +69,7 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
     return intl5.string(require(1236) /* getSystemLocale */.t.zBpoc7);
   } else if (tmp8.REPORT_TO_MOD_SUCCESS === BLOCK_SUCCESS) {
     const intl4 = require(1236) /* getSystemLocale */.intl;
-    return intl4.string(tmp3(2385).iBypeZ);
+    return intl4.string(tmp3(2325).iBypeZ);
   } else if (tmp8.SAFETY_FEEDBACK_SUCCESS === BLOCK_SUCCESS) {
     const intl3 = require(1236) /* getSystemLocale */.intl;
     return intl3.string(require(1236) /* getSystemLocale */.t.TcFR5k);

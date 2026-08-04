@@ -1,6 +1,7 @@
+// discord_app/modules/gif_picker/native/GIFPicker.tsx
 import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_9867";
-import { View } from "module_9862";
+import importAllResult from "module_9626";
+import { View } from "module_9621";
 import getFormatFromUrl from "getFormatFromUrl";
 import ME from "ME";
 import jsxProd from "jsxProd";

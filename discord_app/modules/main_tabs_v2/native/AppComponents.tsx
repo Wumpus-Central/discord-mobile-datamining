@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/AppComponents.tsx
 import jsxProd from "jsxProd";
 import set from "set";
 import importDefaultResult from "jsx";
@@ -26,7 +27,7 @@ if (set.isAndroid()) {
   jsxResult = jsx(require("updateAccessibilityAnnouncerLiveRegionMessage").AccessibilityAnnouncerLiveRegion, {});
 }
 obj = { lockKeys: ["external-pip"], children: null };
-const items1 = [jsx(require("module_15950"), {}), jsx(require("module_15983"), {}), jsx(require("VoicePanel"), {}), jsx(require("module_16158"), {})];
+const items1 = [jsx(require("module_15854"), {}), jsx(require("module_15887"), {}), jsx(require("VoicePanel"), {}), jsx(require("module_16062"), {})];
 obj[1] = items1;
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/AppComponents.tsx");
 

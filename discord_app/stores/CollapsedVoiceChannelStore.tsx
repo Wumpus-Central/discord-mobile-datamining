@@ -1,3 +1,4 @@
+// discord_app/stores/CollapsedVoiceChannelStore.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import { PersistedStore } from "initialize";
 

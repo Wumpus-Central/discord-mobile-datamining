@@ -1,3 +1,4 @@
+// discord_app/utils/native/requireNativeComponentOrDefault.native.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let c0;

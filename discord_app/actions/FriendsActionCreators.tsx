@@ -1,3 +1,4 @@
+// discord_app/actions/FriendsActionCreators.tsx
 import { Routes } from "ME";
 
 const result = require("transitionTo").fileFinishedImporting("actions/FriendsActionCreators.tsx");
@@ -24,7 +25,7 @@ export default {
     if (flag) {
       obj = { tab_opened: null };
       obj[0] = PENDING;
-      tmp5(15701)(obj);
+      tmp5(15605)(obj);
     }
   },
   setSection(section) {

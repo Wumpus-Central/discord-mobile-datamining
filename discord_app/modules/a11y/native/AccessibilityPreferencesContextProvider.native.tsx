@@ -1,3 +1,4 @@
+// discord_app/modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { jsx } from "jsxProd";

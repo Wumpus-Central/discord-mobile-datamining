@@ -1,13 +1,14 @@
+// discord_app/modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx
 const result = require("getSystemLocale").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
 
 export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
-  let arr = importDefault(11829)(arg0);
-  const arr2 = importDefault(11830)(arg0);
+  let arr = importDefault(11663)(arg0);
+  const arr2 = importDefault(11664)(arg0);
   if (arr.length > 0 || arr2.length > 0) {
     let stringResult;
     if (arr2.length > 0) {
       const intl = require(1236) /* getSystemLocale */.intl;
-      stringResult = intl.string(tmp(2707)["B3OfL/"]);
+      stringResult = intl.string(tmp(2647)["B3OfL/"]);
     }
     const items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(arr.map((title) => title.title), 0);
@@ -21,11 +22,11 @@ export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
     const items3 = [];
     if (arr.some((skuId) => skuId.skuId === callback(table[4]).VANITY_URL_POWERUP_SKU_ID)) {
       const intl2 = require(1236) /* getSystemLocale */.intl;
-      arr = items3.push(intl2.string(tmp(2317).Sfr0Jw));
+      arr = items3.push(intl2.string(tmp(2257).Sfr0Jw));
     }
     if (arr2.length > 0) {
       const intl3 = require(1236) /* getSystemLocale */.intl;
-      arr = items3.push(intl3.string(tmp(2707).wiungr));
+      arr = items3.push(intl3.string(tmp(2647).wiungr));
     }
     let obj = { shouldShow: null, expiringPowerups: null, expiringPowerupNames: null, warnings: null };
     obj[0] = tmp3;

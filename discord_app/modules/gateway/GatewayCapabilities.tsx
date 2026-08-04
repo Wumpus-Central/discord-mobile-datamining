@@ -1,3 +1,4 @@
+// discord_app/modules/gateway/GatewayCapabilities.tsx
 const result = require("set").fileFinishedImporting("modules/gateway/GatewayCapabilities.tsx");
 
 export const getClientCapabilities = function getClientCapabilities(useChannelObfuscation) {

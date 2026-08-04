@@ -1,3 +1,4 @@
+// discord_app/modules/age_assurance/GoogleWalletActionCreators.native.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { Endpoints } from "ME";
 
@@ -5,12 +6,61 @@ const require = arg1;
 function _requestGoogleWalletVerification() {
   const self = this;
   const tmp = callback(function*() {
-    const HTTP = v0(outer1_2[2]).HTTP;
-    const obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-    obj1[0] = outer1_4.GOOGLE_WALLET_REQUEST;
-    obj1[1] = {};
-    yield HTTP.post(obj1);
-    return arg1.body;
+    if (v0 === 2) {
+      v0 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        v0 = 2;
+        if (0 === c1) {
+          if (arg0 === 1) {
+            v0 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            v0 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            const HTTP = v0(outer1_2[2]).HTTP;
+            const obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+            obj1[0] = outer1_4.GOOGLE_WALLET_REQUEST;
+            obj1[1] = {};
+            c1 = 1;
+            v0 = 1;
+            const obj2 = { value: null, done: false };
+            obj2[0] = HTTP.post(obj1);
+            return obj2;
+          }
+        } else if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          const obj3 = { value: null, done: true };
+          obj3[0] = arg1;
+          return obj3;
+        } else {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1.body;
+          return obj;
+        }
+      } catch (tmp8) {
+        v0 = tmp;
+        throw tmp8;
+      }
+    }
   });
   const _requestGoogleWalletVerification = tmp;
   const apply = tmp.apply;

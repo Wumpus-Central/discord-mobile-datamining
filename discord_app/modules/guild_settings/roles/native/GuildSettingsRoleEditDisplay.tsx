@@ -1,3 +1,4 @@
+// discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEditDisplay.tsx
 import AsyncFromSyncIterator from "AsyncFromSyncIterator";
 import { View } from "items";
 import { isEveryoneRole } from "GuildRoleRecordTypeTag";

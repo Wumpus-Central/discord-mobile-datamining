@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/HideCoveredChannelsExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 const obj = { 1: null };

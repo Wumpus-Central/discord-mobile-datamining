@@ -1,3 +1,4 @@
+// discord_app/stores/BrowserHandoffStore.native.tsx
 import { Store } from "initialize";
 
 class BrowserHandoffStore extends Store {

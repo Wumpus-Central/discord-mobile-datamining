@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/isOnMetaHorizon.tsx
 import { META_PRESENCE_APPLICATION_ID as closure_0 } from "items3";
 import { ActivityGamePlatforms } from "ME";
 

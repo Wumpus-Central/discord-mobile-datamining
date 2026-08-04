@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/native/BoostProgressBarCoachmark.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { ContentDismissActionType } from "ContentDismissActionType";
@@ -41,6 +42,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj[9] = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(8575).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(8440).useCoachmark(guild.targetRef, memo);
   return null;
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/voice_calls/useIsVoiceChannelFull.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import updateVoiceState from "updateVoiceState";

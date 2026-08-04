@@ -1,6 +1,7 @@
+// discord_app/modules/suspicious_downloads/SuspiciousDownloadUtils.tsx
 import set from "set";
 
-let set = new Set(require("module_8042"));
+let set = new Set(require("module_7912"));
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj[0] = regExp;

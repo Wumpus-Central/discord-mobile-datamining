@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomNoop.tsx
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 import importAllResult from "noop";

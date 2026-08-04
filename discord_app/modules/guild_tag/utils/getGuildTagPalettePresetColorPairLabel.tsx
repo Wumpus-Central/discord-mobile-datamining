@@ -1,3 +1,4 @@
+// discord_app/modules/guild_tag/utils/getGuildTagPalettePresetColorPairLabel.tsx
 import { GuildTagPalettePresetColor as closure_2 } from "items";
 
 function getGuildTagPalettePresetColorLabel(primary) {

@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/hooks/useChatBadge.tsx
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 
 const require = arg1;

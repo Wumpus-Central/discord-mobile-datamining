@@ -1,3 +1,4 @@
+// discord_app/modules/messages/useMessageMaxLength.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ME from "ME";
 
@@ -12,5 +13,5 @@ export default function useMessageMaxLength() {
   return require(589) /* initialize */.useStateFromStores(items, () => callback(table[2]).canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5);
 };
 export const getMaxMessageLength = function getMaxMessageLength() {
-  return importDefault(3931).canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5;
+  return importDefault(3839).canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5;
 };

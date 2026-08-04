@@ -1,3 +1,4 @@
+// discord_app/modules/device/native/WakeLock.tsx
 import noop from "noop";
 import { NativeModules } from "get ActivityIndicator";
 

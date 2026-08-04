@@ -1,3 +1,4 @@
+// discord_app/modules/activities/EmbeddedActivitiesManager.tsx
 import createRTCConnection from "createRTCConnection";
 import getParticipants from "getParticipants";
 import { GUILD_VOCAL_CHANNEL_TYPES } from "createChannelRecord";
@@ -23,8 +24,8 @@ function getShelfItemTrackingProperties(activity) {
     activity = activity.activity;
     if (activity != null) {
       const obj = require(500) /* set */;
-      releasePhase = activity.client_platform_config[importDefault(10522)(undefined, obj.getOS(obj))].release_phase;
-      const tmp4 = importDefault(10522);
+      releasePhase = activity.client_platform_config[importDefault(8022)(undefined, obj.getOS(obj))].release_phase;
+      const tmp4 = importDefault(8022);
     }
   }
   return { releasePhase };
@@ -72,174 +73,137 @@ function _handleActivityClose() {
       let c0;
       let c1;
       let c2;
-      if (sessionId2 === 2) {
-        sessionId2 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+      let dependencyMap = tmp6;
+      let lib = tmp3;
+      let callback;
+      lib = undefined;
+      dependencyMap = undefined;
+      ({ applicationId: c0, location: c1, instanceId: c2 } = callback);
+      let embeddedActivityDurationMs;
+      let sessionId2;
+      let sessionId;
+      let channel;
+      let type;
+      let premiumType;
+      let currentUser;
+      let activity;
+      let releasePhase;
+      let constants;
+      embeddedActivityDurationMs = 1;
+      sessionId2 = 1;
+      yield "ct";
+      if (1 === tmp6) {
         if (arg0 === 1) {
+          sessionId2 = 3;
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          sessionId2 = 3;
+          let obj1 = { value: null, done: true };
+          obj1[0] = arg1;
+          return obj1;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          sessionId2 = 2;
-          if (0 === embeddedActivityDurationMs) {
-            if (arg0 === 1) {
-              sessionId2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              sessionId2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let dependencyMap = tmp6;
-              let lib = tmp3;
-              let callback;
-              lib = undefined;
-              dependencyMap = undefined;
-              let tmp = callback;
-              ({ applicationId: c0, location: c1, instanceId: c2 } = callback);
-              embeddedActivityDurationMs = undefined;
-              sessionId2 = undefined;
-              let closure_5;
-              let sessionId;
-              let channel;
-              let type;
-              let premiumType;
-              let currentUser;
-              let activity;
-              let releasePhase;
-              let constants;
-              embeddedActivityDurationMs = 1;
-              sessionId2 = 1;
-              return { value: "ct", done: "Array" };
-            }
-          } else {
-            if (1 === tmp6) {
-              if (arg0 === 1) {
-                sessionId2 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                sessionId2 = 3;
-                let obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                embeddedActivityDurationMs = releasePhase.getEmbeddedActivityDurationMs(lib.id, callback);
-                sessionId2 = sessionId.getSessionId();
-                let tmp9 = null != dependencyMap;
-                if (tmp9) {
-                  tmp9 = null != sessionId2;
-                }
-                if (tmp9) {
-                  const HTTP = callback(530).HTTP;
-                  let obj2 = { url: null, body: null, retries: 2, rejectWithError: false };
-                  obj2[0] = closure_15.ACTIVITY_LEAVE(callback, lib.id, dependencyMap);
-                  let obj3 = { session_id: null };
-                  obj3[0] = sessionId2;
-                  obj2[1] = obj3;
-                  embeddedActivityDurationMs = 2;
-                  sessionId2 = 1;
-                  const obj4 = { value: null, done: false };
-                  obj4[0] = HTTP.post(obj2);
-                  return obj4;
-                }
-              }
-            } else if (arg0 === 1) {
-              sessionId2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              sessionId2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-            closure_5 = table[callback];
-            obj1 = callback(3903);
-            sessionId = obj1.getEmbeddedActivityLocationChannelId(lib);
-            obj2 = callback(3903);
-            channel = obj2.getEmbeddedActivityLocationGuildId(lib);
-            type = channel.getChannel(sessionId);
-            premiumType = currentUser.getCurrentUser();
-            if (null != closure_5) {
-              if (null != premiumType) {
-                if (null == closure_5.connectedSince) {
-                  currentUser = releasePhase.getShelfActivities(channel);
-                  const obj5 = { applicationId: null, activityConfigs: null };
-                  obj5[0] = callback;
-                  obj5[1] = currentUser;
-                  activity = lib(10523)(obj5);
-                  releasePhase = callback2(activity).releasePhase;
-                  constants = lib(10524).getRawThermalState();
-                  const obj13 = lib(10524);
-                  const obj6 = { channel_id: null, guild_id: null, media_session_id: null, activity_session_id: null, application_id: null, duration_ms: null, user_premium_tier: null, raw_thermal_state: null, release_phase: null, shelf_rank: null, activity_user_session_id: null, channel_type: null, media_session_ids: null, embedded_activity_location_kind: null };
-                  obj6[0] = sessionId;
-                  obj6[1] = channel;
-                  obj6[2] = closure_5.mediaSessionIds[0];
-                  obj6[3] = closure_5.activitySessionId;
-                  tmp = callback;
-                  obj6[4] = callback;
-                  tmp = embeddedActivityDurationMs;
-                  obj6[5] = embeddedActivityDurationMs;
-                  tmp = premiumType;
-                  obj6[6] = premiumType.premiumType;
-                  tmp = constants;
-                  obj6[7] = constants;
-                  tmp = releasePhase;
-                  obj6[8] = releasePhase;
-                  let shelf_rank;
-                  if (activity != null) {
-                    activity = activity.activity;
-                    if (activity != null) {
-                      shelf_rank = activity.shelf_rank;
-                    }
-                  }
-                  obj6[9] = shelf_rank;
-                  obj6[10] = closure_5.activityUserSessionId;
-                  type = undefined;
-                  if (type != null) {
-                    type = type.type;
-                  }
-                  obj6[11] = type;
-                  obj6[12] = closure_5.mediaSessionIds;
-                  obj6[13] = lib.kind;
-                  lib(698).track(constants.ACTIVITY_SESSION_LEFT, obj6);
-                  obj3 = lib(698);
-                  const obj7 = { channel_id: null, guild_id: null, application_id: null, instance_ids: null, media_session_ids: null, activity_user_session_id: null, raw_thermal_state: null, duration_ms: null, embedded_activity_location_kind: null };
-                  obj7[0] = sessionId;
-                  obj7[1] = channel;
-                  obj7[2] = callback;
-                  let tmp41;
-                  if (null != closure_5.launchId) {
-                    const items = [closure_5.launchId];
-                    tmp41 = items;
-                  }
-                  obj7[3] = tmp41;
-                  obj7[4] = closure_5.mediaSessionIds;
-                  obj7[5] = closure_5.activityUserSessionId;
-                  obj7[6] = constants;
-                  obj7[7] = embeddedActivityDurationMs;
-                  obj7[8] = lib.kind;
-                  obj3.track(constants.ACTIVITY_IFRAME_UNMOUNT, obj7);
-                  delete tmp3[tmp2];
-                  const obj14 = lib(698);
-                }
-              }
-            }
-            sessionId2 = 3;
-            return { value: "HermesInternal", done: null };
+          embeddedActivityDurationMs = releasePhase.getEmbeddedActivityDurationMs(lib.id, callback);
+          sessionId2 = sessionId.getSessionId();
+          let tmp9 = null != dependencyMap;
+          if (tmp9) {
+            tmp9 = null != sessionId2;
           }
-        } catch (tmp63) {
-          sessionId2 = tmp;
-          throw tmp63;
+          if (tmp9) {
+            const HTTP = callback(530).HTTP;
+            let obj2 = { url: null, body: null, retries: 2, rejectWithError: false };
+            obj2[0] = closure_15.ACTIVITY_LEAVE(callback, lib.id, dependencyMap);
+            let obj3 = { session_id: null };
+            obj3[0] = sessionId2;
+            obj2[1] = obj3;
+            embeddedActivityDurationMs = 2;
+            sessionId2 = 1;
+            const obj4 = { value: null, done: false };
+            obj4[0] = HTTP.post(obj2);
+            return obj4;
+          }
+        }
+      } else if (arg0 === 1) {
+        sessionId2 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        sessionId2 = 3;
+        const obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      }
+      obj1 = callback(3811);
+      sessionId = obj1.getEmbeddedActivityLocationChannelId(lib);
+      obj2 = callback(3811);
+      channel = obj2.getEmbeddedActivityLocationGuildId(lib);
+      type = channel.getChannel(sessionId);
+      premiumType = currentUser.getCurrentUser();
+      if (null != closure_5) {
+        if (null != premiumType) {
+          if (null == closure_5.connectedSince) {
+            currentUser = releasePhase.getShelfActivities(channel);
+            const obj5 = { applicationId: null, activityConfigs: null };
+            obj5[0] = callback;
+            obj5[1] = currentUser;
+            activity = lib(10628)(obj5);
+            releasePhase = callback2(activity).releasePhase;
+            constants = lib(10629).getRawThermalState();
+            const obj13 = lib(10629);
+            const obj6 = { channel_id: null, guild_id: null, media_session_id: null, activity_session_id: null, application_id: null, duration_ms: null, user_premium_tier: null, raw_thermal_state: null, release_phase: null, shelf_rank: null, activity_user_session_id: null, channel_type: null, media_session_ids: null, embedded_activity_location_kind: null };
+            obj6[0] = sessionId;
+            obj6[1] = channel;
+            obj6[2] = closure_5.mediaSessionIds[0];
+            obj6[3] = closure_5.activitySessionId;
+            let tmp = callback;
+            obj6[4] = callback;
+            tmp = embeddedActivityDurationMs;
+            obj6[5] = embeddedActivityDurationMs;
+            tmp = premiumType;
+            obj6[6] = premiumType.premiumType;
+            tmp = constants;
+            obj6[7] = constants;
+            tmp = releasePhase;
+            obj6[8] = releasePhase;
+            let shelf_rank;
+            if (activity != null) {
+              activity = activity.activity;
+              if (activity != null) {
+                shelf_rank = activity.shelf_rank;
+              }
+            }
+            obj6[9] = shelf_rank;
+            obj6[10] = closure_5.activityUserSessionId;
+            type = undefined;
+            if (type != null) {
+              type = type.type;
+            }
+            obj6[11] = type;
+            obj6[12] = closure_5.mediaSessionIds;
+            obj6[13] = lib.kind;
+            lib(698).track(constants.ACTIVITY_SESSION_LEFT, obj6);
+            obj3 = lib(698);
+            const obj7 = { channel_id: null, guild_id: null, application_id: null, instance_ids: null, media_session_ids: null, activity_user_session_id: null, raw_thermal_state: null, duration_ms: null, embedded_activity_location_kind: null };
+            obj7[0] = sessionId;
+            obj7[1] = channel;
+            obj7[2] = callback;
+            let tmp41;
+            if (null != closure_5.launchId) {
+              const items = [closure_5.launchId];
+              tmp41 = items;
+            }
+            obj7[3] = tmp41;
+            obj7[4] = closure_5.mediaSessionIds;
+            obj7[5] = closure_5.activityUserSessionId;
+            obj7[6] = constants;
+            obj7[7] = embeddedActivityDurationMs;
+            obj7[8] = lib.kind;
+            obj3.track(constants.ACTIVITY_IFRAME_UNMOUNT, obj7);
+            delete tmp3[tmp2];
+            const obj14 = lib(698);
+          }
         }
       }
+      sessionId2 = 3;
+      yield "HermesInternal";
     })();
     iter.next();
     return iter;
@@ -261,17 +225,17 @@ function handleOpenEmbeddedActivity(applicationId) {
   let participants;
   applicationId = applicationId.applicationId;
   ({ isStart, participants, embeddedActivity, location: _location, inviterUserId } = applicationId);
-  let obj = applicationId(10514);
+  let obj = applicationId(10631);
   obj.leaveCurrentFrame();
-  let obj1 = applicationId(10526);
+  let obj1 = applicationId(10651);
   if (obj1.tryLaunchAsFrame({ applicationId })) {
-    let tmpResult = tmp(10527);
+    let tmpResult = tmp(10635);
     obj = { isStart: null, inviterUserId: null, channelId: null, guildId: null, locationKind: null, launchId: null, compositeInstanceId: null, activitiesInfraVersion: null };
     obj[0] = isStart;
     obj[1] = inviterUserId;
-    tmpResult = tmp(3903);
+    tmpResult = tmp(3811);
     obj[2] = tmpResult.getEmbeddedActivityLocationChannelId(_location);
-    obj[3] = tmp(3903).getEmbeddedActivityLocationGuildId(_location);
+    obj[3] = tmp(3811).getEmbeddedActivityLocationGuildId(_location);
     obj[4] = _location.kind;
     ({ launchId: obj18[5], compositeInstanceId: obj18[6] } = embeddedActivity);
     let num4 = 1;
@@ -280,13 +244,13 @@ function handleOpenEmbeddedActivity(applicationId) {
     }
     obj[7] = num4;
     const result = tmpResult.stashPendingFrameLaunch(applicationId, obj);
-    const tmpResult1 = tmp(3903);
+    const tmpResult1 = tmp(3811);
   } else {
     const importDefault = id.getId();
     const found = participants.find((userId) => userId.userId === closure_1);
-    const embeddedActivityLocationChannelId = tmp(3903).getEmbeddedActivityLocationChannelId(_location);
-    const tmpResult2 = tmp(3903);
-    const embeddedActivityLocationGuildId = tmp(3903).getEmbeddedActivityLocationGuildId(_location);
+    const embeddedActivityLocationChannelId = tmp(3811).getEmbeddedActivityLocationChannelId(_location);
+    const tmpResult2 = tmp(3811);
+    const embeddedActivityLocationGuildId = tmp(3811).getEmbeddedActivityLocationGuildId(_location);
     const channel = store.getChannel(embeddedActivityLocationChannelId);
     let isFirstActivityInChannel = isStart;
     if (isStart) {
@@ -302,8 +266,8 @@ function handleOpenEmbeddedActivity(applicationId) {
       isFirstActivityInChannel = null == found;
     }
     if (isFirstActivityInChannel) {
-      const participant = importDefault(4478).selectParticipant(channel.id, null);
-      const obj6 = importDefault(4478);
+      const participant = importDefault(4387).selectParticipant(channel.id, null);
+      const obj6 = importDefault(4387);
     }
     if (null != found) {
       const mediaSessionId = store2.getMediaSessionId();
@@ -337,18 +301,18 @@ function handleOpenEmbeddedActivity(applicationId) {
             obj = { applicationId: null, activityConfigs: null };
             obj[0] = applicationId;
             obj[1] = shelfActivities;
-            const tmp53 = importDefault(10523)(obj);
+            const tmp53 = importDefault(10628)(obj);
             const sum = 1 + shelfOrder.findIndex((arg0) => arg0 === applicationId);
             let release_phase;
             if (tmp53 != null) {
               const activity = tmp53.activity;
               if (activity != null) {
-                let tmp52Result = tmp52(10522);
+                let tmp52Result = tmp52(8022);
                 const tmpResult5 = tmp(500);
                 release_phase = activity.client_platform_config[tmp52Result(undefined, tmpResult5.getOS(tmpResult5))].release_phase;
               }
             }
-            tmp52Result = tmp52(10524);
+            tmp52Result = tmp52(10629);
             const rawThermalState = tmp52Result.getRawThermalState();
             if (null != mediaSessionId) {
               const items = [mediaSessionId];
@@ -418,8 +382,8 @@ function handleOpenEmbeddedActivity(applicationId) {
             obj2[15] = source;
             let commandContextType = null;
             if (null != channel) {
-              commandContextType = tmp(8155).computeCommandContextType(channel, applicationId);
-              const tmpResult7 = tmp(8155);
+              commandContextType = tmp(5710).computeCommandContextType(channel, applicationId);
+              const tmpResult7 = tmp(5710);
             }
             obj2[16] = commandContextType;
             obj2[17] = inviterUserId;
@@ -473,7 +437,7 @@ function handleOpenEmbeddedActivity(applicationId) {
         }
       }
     }
-    const tmpResult3 = tmp(3903);
+    const tmpResult3 = tmp(3811);
   }
 }
 ({ AnalyticEvents: map1, RPCCloseCodes: closure_14, Endpoints: closure_15, RTCConnectionStates: closure_16, ComponentActions: closure_17 } = ME);
@@ -484,7 +448,7 @@ let c27;
 class EmbeddedActivitiesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f107661 = applyArgumentsResult;
+    f107509 = applyArgumentsResult;
     applyArgumentsResult.handleSelectedChannelUpdate = function handleSelectedChannelUpdate() {
       let _location;
       let applicationId;
@@ -564,9 +528,9 @@ class EmbeddedActivitiesManager extends tmp3 {
         const result = lib.showDevShelfOverrideEnabled();
       }
     };
-    f107661 = undefined;
+    f107509 = undefined;
     closure_1 = applyArgumentsResult;
-    f107661 = handleOpenEmbeddedActivity((arg0) => {
+    f107509 = handleOpenEmbeddedActivity((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -767,9 +731,9 @@ class EmbeddedActivitiesManager extends tmp3 {
         lib.leaveActivity(obj);
       }
     };
-    f107661 = undefined;
+    f107509 = undefined;
     closure_1 = applyArgumentsResult;
-    f107661 = handleOpenEmbeddedActivity((arg0) => {
+    f107509 = handleOpenEmbeddedActivity((arg0) => {
       let closure_0 = arg0;
       let c5 = 0;
       let c6 = 0;
@@ -1249,7 +1213,7 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
   let launchId;
   let locationKind;
   const _require = applicationId;
-  let obj = _require(10527);
+  let obj = _require(10635);
   const result = obj.consumePendingFrameLaunch(applicationId);
   if (null != result) {
     ({ isStart, channelId, guildId, locationKind, launchId, compositeInstanceId, activitiesInfraVersion } = result);
@@ -1285,18 +1249,18 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       obj = { applicationId: null, activityConfigs: null };
       obj[0] = applicationId;
       obj[1] = shelfActivities;
-      const tmp15 = importDefault(10523)(obj);
+      const tmp15 = importDefault(10628)(obj);
       const sum = 1 + shelfOrder.findIndex((arg0) => arg0 === closure_0);
       let release_phase;
       if (tmp15 != null) {
         const activity = tmp15.activity;
         if (activity != null) {
-          let tmp14Result = tmp14(10522);
+          let tmp14Result = tmp14(8022);
           tmpResult = tmp(500);
           release_phase = activity.client_platform_config[tmp14Result(undefined, tmpResult.getOS(tmpResult))].release_phase;
         }
       }
-      tmp14Result = tmp14(10524);
+      tmp14Result = tmp14(10629);
       const rawThermalState = tmp14Result.getRawThermalState();
       const obj1 = { channel_id: null, guild_id: null, media_session_id: null, activity_session_id: null, application_id: null, location_stack: null, user_premium_tier: null, raw_thermal_state: null, n_participants: null, is_activity_start: null, release_phase: null, shelf_rank: null, shelf_sorted_rank: null, activity_user_session_id: null, channel_type: null, source: null, command_context_type: null, invite_inviter_id: null, interaction_id: null, embedded_activity_location_kind: null };
       obj1[0] = channelId;
@@ -1344,8 +1308,8 @@ export const trackFrameSessionStart = function trackFrameSessionStart(applicatio
       obj1[15] = source;
       let commandContextType = null;
       if (null != channel) {
-        commandContextType = tmp(8155).computeCommandContextType(channel, applicationId);
-        const tmpResult1 = tmp(8155);
+        commandContextType = tmp(5710).computeCommandContextType(channel, applicationId);
+        const tmpResult1 = tmp(5710);
       }
       obj1[16] = commandContextType;
       obj1[17] = result.inviterUserId;
@@ -1420,17 +1384,17 @@ export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId)
       let obj = { applicationId: null, activityConfigs: null };
       obj[0] = applicationId;
       obj[1] = shelfActivities;
-      const tmp13 = importDefault(10523)(obj);
+      const tmp13 = importDefault(10628)(obj);
       let release_phase;
       if (tmp13 != null) {
         const activity = tmp13.activity;
         if (activity != null) {
-          let tmp11Result = tmp11(10522);
+          let tmp11Result = tmp11(8022);
           const obj2 = require(500) /* set */;
           release_phase = activity.client_platform_config[tmp11Result(undefined, obj2.getOS(obj2))].release_phase;
         }
       }
-      tmp11Result = tmp11(10524);
+      tmp11Result = tmp11(10629);
       const rawThermalState = tmp11Result.getRawThermalState();
       let diff = null;
       if (null != tmp3.connectedSince) {

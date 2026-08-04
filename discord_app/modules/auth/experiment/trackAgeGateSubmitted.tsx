@@ -1,3 +1,4 @@
+// discord_app/modules/auth/experiment/trackAgeGateSubmitted.tsx
 import { AnalyticEvents } from "ME";
 
 const result = require("t").fileFinishedImporting("modules/auth/experiment/trackAgeGateSubmitted.tsx");

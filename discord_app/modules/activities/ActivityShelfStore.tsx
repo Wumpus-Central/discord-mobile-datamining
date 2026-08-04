@@ -1,3 +1,4 @@
+// discord_app/modules/activities/ActivityShelfStore.tsx
 import { PersistedStore } from "initialize";
 
 let closure_0 = { usageByApplicationId: {}, shelfOrder: [] };

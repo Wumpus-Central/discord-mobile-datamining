@@ -1,3 +1,4 @@
+// discord_app/modules/game_claim/native/GameClaimCoachmark.tsx
 import closure_3 from "jsxProd";
 import { View } from "Text";
 import ME from "ME";
@@ -32,15 +33,15 @@ const memoResult = importAllResult.memo((arg0) => {
   let require;
   ({ guild, markAsDismissed: require } = arg0);
   const tmp = callback4();
-  let obj = require(15196) /* fetchUnclaimedGames */;
+  let obj = require(15182) /* fetchUnclaimedGames */;
   let first = obj.useUnclaimedGameIdsForGuild(guild.id)[0];
   if (first == null) {
     first = null;
   }
   const intl = tmp2(1236).intl;
   const tmp5 = importDefault;
-  const tmp6 = importDefault(12257);
-  const coverImageUrl = importDefault(12257)(first, intl.string(require(1236) /* getSystemLocale */.t.VQq92a)).coverImageUrl;
+  const tmp6 = importDefault(12075);
+  const coverImageUrl = importDefault(12075)(first, intl.string(require(1236) /* getSystemLocale */.t.VQq92a)).coverImageUrl;
   if (null == coverImageUrl) {
     return null;
   } else {
@@ -61,30 +62,30 @@ const memoResult = importAllResult.memo((arg0) => {
       return callback(outer1_7.USER_DISMISS);
     };
     obj[2] = tmp.closeButton;
-    obj[3] = callback2(tmp2(5270).XSmallIcon, { size: "sm", color: "text-default" });
-    const items = [callback2(tmp2(4812).PressableOpacity, obj), , , , ];
+    obj[3] = callback2(tmp2(5179).XSmallIcon, { size: "sm", color: "text-default" });
+    const items = [callback2(tmp2(4721).PressableOpacity, obj), , , , ];
     let obj1 = { imageSrc: null };
     obj1[0] = coverImageUrl;
-    items[1] = callback2(tmp5(15195), obj1);
+    items[1] = callback2(tmp5(15181), obj1);
     const obj2 = { variant: "text-md/medium", color: "text-overlay-light", style: null, children: null };
     obj2[2] = tmp.centeredText;
     const intl2 = tmp2(1236).intl;
     const obj3 = { gameName: null };
     obj3[0] = tmp8;
     obj2[3] = intl2.format(tmp2(1236).t.Q11WTQ, obj3);
-    items[2] = callback2(tmp2(4281).Text, obj2);
+    items[2] = callback2(tmp2(4189).Text, obj2);
     const obj4 = { variant: "text-sm/normal", color: "text-overlay-light", style: null, children: null };
     const items1 = [, ];
     ({ body: arr2[0], centeredText: arr2[1] } = tmp);
     obj4[2] = items1;
     obj4[3] = stringResult;
-    items[3] = callback2(tmp2(4281).Text, obj4);
+    items[3] = callback2(tmp2(4189).Text, obj4);
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.cta;
     const obj6 = { variant: "primary", size: "sm", text: null, icon: null, iconPosition: "end", onPress: null };
     const intl3 = tmp2(1236).intl;
     obj6[2] = intl3.string(tmp2(1236).t["2u6ZlY"]);
-    obj6[3] = callback2(tmp2(7765).LinkExternalSmallIcon, { size: "xs", color: "white" });
+    obj6[3] = callback2(tmp2(7627).LinkExternalSmallIcon, { size: "xs", color: "white" });
     obj6[5] = callback(function*() {
       if (v0 === 2) {
         v0 = 3;
@@ -138,12 +139,12 @@ const memoResult = importAllResult.memo((arg0) => {
         }
       }
     });
-    obj5[1] = callback2(tmp2(4695).Button, obj6);
+    obj5[1] = callback2(tmp2(4604).Button, obj6);
     items[4] = callback2(View, obj5);
     obj[2] = items;
-    return callback3(tmp2(5317).Card, obj);
+    return callback3(tmp2(5226).Card, obj);
   }
-  const tmp6Result = importDefault(12257)(first, intl.string(require(1236) /* getSystemLocale */.t.VQq92a));
+  const tmp6Result = importDefault(12075)(first, intl.string(require(1236) /* getSystemLocale */.t.VQq92a));
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/game_claim/native/GameClaimCoachmark.tsx");
 
@@ -152,11 +153,11 @@ export const GAME_CLAIM_NOTICE_MARGIN_TOP = PX_8;
 export const GAME_CLAIM_NOTICE_MARGIN_BOTTOM = PX_82;
 export const getScaledGameClaimNoticeHeight = function getScaledGameClaimNoticeHeight(fontScale) {
   const sum = PX_8 + closure_12;
-  const sum1 = sum + require(15195) /* importDefaultResult1 */.CARD_STACK_HEIGHT;
-  const sum2 = sum1 + require(9370) /* map */.scaleTextLineHeight("text-md/medium", fontScale);
+  const sum1 = sum + require(15181) /* importDefaultResult1 */.CARD_STACK_HEIGHT;
+  const sum2 = sum1 + require(9925) /* map */.scaleTextLineHeight("text-md/medium", fontScale);
   const sum3 = sum2 + importDefault(712).space.PX_4;
-  const obj = require(9370) /* map */;
-  const result = 2 * require(9370) /* map */.scaleTextLineHeight("text-sm/normal", fontScale);
+  const obj = require(9925) /* map */;
+  const result = 2 * require(9925) /* map */.scaleTextLineHeight("text-sm/normal", fontScale);
   const sum4 = sum3 + result + importDefault(712).space.PX_8;
-  return sum4 + require(4699) /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + PX_82;
+  return sum4 + require(4608) /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + PX_82;
 };

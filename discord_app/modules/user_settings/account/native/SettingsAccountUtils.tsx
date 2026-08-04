@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/account/native/SettingsAccountUtils.tsx
 import fetchFingerprint from "fetchFingerprint";
 import mergeGuildAvatar from "mergeGuildAvatar";
 

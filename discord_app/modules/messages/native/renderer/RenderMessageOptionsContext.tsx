@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/renderer/RenderMessageOptionsContext.tsx
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/RenderMessageOptionsContext.tsx");
 
 export const UserOption = { USER_SETTING: 0, [0]: "USER_SETTING", FORCE_ENABLE: 1, [1]: "FORCE_ENABLE", FORCE_DISABLE: 2, [2]: "FORCE_DISABLE" };

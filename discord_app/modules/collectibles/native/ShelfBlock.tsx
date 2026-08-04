@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/native/ShelfBlock.tsx
 import Button from "Button";
 import get_ActivityIndicator from "CollectiblesShopCardInternalV2";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

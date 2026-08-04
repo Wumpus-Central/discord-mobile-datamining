@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/getCurrentUserPresenceActivity.tsx
 const result = require("set").fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");
 
 export default function getCurrentUserPresenceActivity(getApplicationActivity, getApplicationActivity2) {

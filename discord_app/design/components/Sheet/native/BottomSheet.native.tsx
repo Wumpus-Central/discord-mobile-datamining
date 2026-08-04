@@ -1,3 +1,4 @@
+// discord_app/design/components/Sheet/native/BottomSheet.native.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "ActionSheetHeaderBar";
 import get_ActivityIndicator from "useBottomSheetImperativeHandle";
@@ -71,7 +72,7 @@ let closure_18 = createCacheKey.createStyles((arg0) => {
   }
   obj1[3] = num2;
   obj[3] = obj1;
-  let obj4 = require(4149) /* isFabric */;
+  let obj4 = require(4057) /* isFabric */;
   let str2;
   if (obj4.isIosFabric()) {
     str2 = "hidden";

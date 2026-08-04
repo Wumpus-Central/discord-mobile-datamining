@@ -1,3 +1,4 @@
+// discord_app/modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 

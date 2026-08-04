@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/nameplates/useNameplateSections.tsx
 import _slicedToArray from "_slicedToArray";
 import { useMemo } from "noop";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";

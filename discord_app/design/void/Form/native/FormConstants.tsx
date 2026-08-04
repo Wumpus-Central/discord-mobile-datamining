@@ -1,3 +1,4 @@
+// discord_app/design/void/Form/native/FormConstants.tsx
 import handleThemeChange from "handleThemeChange";
 import set from "set";
 import { internal } from "Themes";
@@ -52,8 +53,8 @@ export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
       }
       obj3 = map;
     } else {
-      require(4131) /* AccessibilityAnnouncer */.isThemeLight(theme.theme) ? semanticColor1 : semanticColor;
-      const tmpResult = require(4131) /* AccessibilityAnnouncer */;
+      require(4039) /* AccessibilityAnnouncer */.isThemeLight(theme.theme) ? semanticColor1 : semanticColor;
+      const tmpResult = require(4039) /* AccessibilityAnnouncer */;
     }
   } else {
     return closure_6;

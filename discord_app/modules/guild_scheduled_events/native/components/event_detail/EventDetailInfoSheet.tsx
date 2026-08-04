@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/native/components/event_detail/EventDetailInfoSheet.tsx
 import usePrimaryActionButtonType from "usePrimaryActionButtonType";
 import { View } from "getGuildEventsForCurrentUser";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
@@ -68,7 +69,7 @@ export default function EventDetailInfoSheet(guildEvent) {
     }
     return isConnectedResult;
   }, items2);
-  let obj2 = guildEvent(8863);
+  let obj2 = guildEvent(8213);
   const result = obj2.recurrenceRuleFromServer(guildEvent.recurrence_rule);
   const items3 = [, ];
   ({ guild_id: arr4[0], id: arr4[1] } = guildEvent);
@@ -100,18 +101,18 @@ export default function EventDetailInfoSheet(guildEvent) {
   obj = { paddingBottom: safeBottomPadding + 16 };
   items7[1] = obj;
   obj1 = { event: guildEvent, style: tmp.eventHeader, showUserCount: false, showEndDate: true, showCreator: false, recurrenceId };
-  const items8 = [callback(guildEvent(8879).GuildEventCardHeader, obj1), , , , , , , , , ];
+  const items8 = [callback(guildEvent(8229).GuildEventCardHeader, obj1), , , , , , , , , ];
   obj2 = { event: guildEvent, textStyle: tmp.eventTitle, style: tmp.eventTitleContainer };
-  items8[1] = callback(guildEvent(8879).GuildEventCardTitle, obj2);
+  items8[1] = callback(guildEvent(8229).GuildEventCardTitle, obj2);
   obj3 = { event: guildEvent, textStyle: tmp.guildTextStyle };
-  items8[2] = callback(guildEvent(8879).GuildEventCardSimpleGuildInfo, obj3);
-  items8[3] = callback(guildEvent(8879).GuildEventSimpleLocation, { event: guildEvent });
+  items8[2] = callback(guildEvent(8229).GuildEventCardSimpleGuildInfo, obj3);
+  items8[3] = callback(guildEvent(8229).GuildEventSimpleLocation, { event: guildEvent });
   obj4 = { style: tmp.interestedContainer, children: null };
-  const items9 = [callback(guildEvent(9058).BellIcon, { size: "sm", style: tmp.interestedIcon }), ];
+  const items9 = [callback(guildEvent(10243).BellIcon, { size: "sm", style: tmp.interestedIcon }), ];
   const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = guildEvent(1236).intl;
-  obj6[2] = intl.format(guildEvent(1236).t["+DLsD8"], { count: importDefault(8874)(guildEvent.guild_id, guildEvent.id, recurrenceId) });
-  items9[1] = callback(guildEvent(4281).Text, obj6);
+  obj6[2] = intl.format(guildEvent(1236).t["+DLsD8"], { count: importDefault(8224)(guildEvent.guild_id, guildEvent.id, recurrenceId) });
+  items9[1] = callback(guildEvent(4189).Text, obj6);
   obj4[1] = items9;
   items8[4] = callback2(creator, obj4);
   let tmp11Result = null != creator && stateFromStores1;
@@ -168,29 +169,29 @@ export default function EventDetailInfoSheet(guildEvent) {
       return outer1_13(outer1_14, obj1);
     };
     obj9[2] = intl2.format(tmp2(1236).t["66DLFs"], obj10);
-    items10[1] = tmp13(tmp2(4281).Text, obj9);
+    items10[1] = tmp13(tmp2(4189).Text, obj9);
     obj7[1] = items10;
     tmp11Result = tmp11(tmp12, obj7);
   }
   items8[5] = tmp11Result;
-  items8[6] = callback(guildEvent(8879).GuildEventCardDescription, { event: guildEvent, style: tmp.eventDescriptionContainer });
+  items8[6] = callback(guildEvent(8229).GuildEventCardDescription, { event: guildEvent, style: tmp.eventDescriptionContainer });
   let hasItem = set.has(guildEvent.entity_type);
   if (hasItem) {
     const obj12 = { noBackground: true, divider: null, onConfirmPress: null, channelId: null, style: null };
-    const items11 = [tmp2(7719).DividerPosition.TOP, tmp2(7719).DividerPosition.BOTTOM];
+    const items11 = [tmp2(6749).DividerPosition.TOP, tmp2(6749).DividerPosition.BOTTOM];
     obj12[1] = items11;
     obj12[2] = function onConfirmPress() {
-      return callback(4253).hideAllActionSheets();
+      return callback(4161).hideAllActionSheets();
     };
     obj12[3] = guildEvent.channel_id;
     obj12[4] = tmp.ageVerificationContainer;
-    hasItem = tmp13(tmp7(7719), obj12);
-    const tmp7Result = tmp7(7719);
+    hasItem = tmp13(tmp7(6749), obj12);
+    const tmp7Result = tmp7(6749);
   }
   items8[7] = hasItem;
   const obj13 = { direction: "horizontal", style: tmp.controlsContainer, children: null };
   const items12 = [
-    callback(guildEvent(8879).GuildEventCardPrimaryAction, {
+    callback(guildEvent(8229).GuildEventCardPrimaryAction, {
       event: guildEvent,
       onCloseAction() {
         outer1_1(outer1_2[14]).hideActionSheet(outer1_11);
@@ -208,12 +209,12 @@ export default function EventDetailInfoSheet(guildEvent) {
   if (stateFromStores1) {
     const obj15 = { event: null };
     obj15[0] = guildEvent;
-    tmp13Result = tmp13(tmp2(8879).GuildEventShareAction, obj15);
+    tmp13Result = tmp13(tmp2(8229).GuildEventShareAction, obj15);
   }
   items12[1] = tmp13Result;
-  items12[2] = callback(guildEvent(8879).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
+  items12[2] = callback(guildEvent(8229).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
   obj13[2] = items12;
-  items8[8] = callback2(guildEvent(5117).ButtonGroup, obj13);
+  items8[8] = callback2(guildEvent(5026).ButtonGroup, obj13);
   tmp13Result = null != result;
   if (tmp13Result) {
     const obj16 = { guildId: null, recurrenceRule: null, guildEventId: null, onRecurrencePress: null, activeRecurrenceId: null };
@@ -224,12 +225,12 @@ export default function EventDetailInfoSheet(guildEvent) {
       return dependencyMap(arg0);
     };
     obj16[4] = recurrenceId;
-    tmp13Result = tmp13(tmp7(8969), obj16);
+    tmp13Result = tmp13(tmp7(8334), obj16);
   }
   items8[9] = tmp13Result;
   obj[2] = items8;
   return callback2(creator, obj);
 };
 export const closeGuildEventInfoActionSheet = function closeGuildEventInfoActionSheet() {
-  importDefault(4253).hideActionSheet(closure_11);
+  importDefault(4161).hideActionSheet(closure_11);
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/hub/native/components/HubSidebar.tsx
 import "UserPlusIcon";
 import { View } from "PlusMediumIcon";
 import comparator from "comparator";
@@ -17,7 +18,7 @@ function HubItem(arg0) {
   let unreadCount;
   ({ label, unreadCount } = arg0);
   ({ IconComponent, handleItemClick, active } = arg0);
-  const ChannelModes = require(11665) /* BaseChannelSubtitle */.ChannelModes;
+  const ChannelModes = require(11492) /* BaseChannelSubtitle */.ChannelModes;
   if (active) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp5 = tmp2;
@@ -27,8 +28,8 @@ function HubItem(arg0) {
   }
   let obj = { style: createCacheKey().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
   const tmp = createCacheKey();
-  obj[6] = callback(tmp5(11665).BaseChannelName, { name: label, mode: DEFAULT });
-  obj[7] = callback(tmp5(11665).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj[6] = callback(tmp5(11492).BaseChannelName, { name: label, mode: DEFAULT });
+  obj[7] = callback(tmp5(11492).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     obj = { value: null };
@@ -36,7 +37,7 @@ function HubItem(arg0) {
     tmp6Result = tmp6(tmp5(1297).Badge, obj);
   }
   obj[8] = tmp6Result;
-  return callback(importDefault(11665), obj);
+  return callback(importDefault(11492), obj);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 createCacheKey = { container: null, row: null };
@@ -66,7 +67,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(15213);
+  guild(15199);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -77,33 +78,33 @@ export default function HubSidebar(guild) {
     obj[0] = row;
     obj = { guild: null };
     obj[0] = guild;
-    const items4 = [callback(stateFromStores(15214), obj), , , ];
+    const items4 = [callback(stateFromStores(15200), obj), , , ];
     obj1 = { active: null, IconComponent: null, label: null, handleItemClick: null, unreadCount: null };
     obj1[0] = stateFromStores1;
-    obj1[1] = tmp(13769).CompassIcon;
+    obj1[1] = tmp(13673).CompassIcon;
     const intl = tmp(1236).intl;
     obj1[2] = intl.string(tmp(1236).t.K50GHd);
     obj1[3] = function handleItemClick() {
-      guild(4293).transitionToChannel(stateFromStores.id);
+      guild(4201).transitionToChannel(stateFromStores.id);
     };
     obj1[4] = tmp7;
     items4[1] = callback(HubItem, obj1);
     obj2 = { IconComponent: null, label: null, handleItemClick: null };
-    obj2[0] = tmp(12020).PlusMediumIcon;
+    obj2[0] = tmp(11870).PlusMediumIcon;
     const intl2 = tmp(1236).intl;
     obj2[1] = intl2.string(tmp(1236).t.emRpdS);
     obj2[2] = function handleItemClick() {
-      let obj = stateFromStores(11592);
+      let obj = stateFromStores(10073);
       obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: stateFromStores.id };
       return obj.open(obj);
     };
     items4[2] = callback(HubItem, obj2);
     const obj3 = { IconComponent: null, label: null, handleItemClick: null };
-    obj3[0] = tmp(4223).UserPlusIcon;
+    obj3[0] = tmp(4131).UserPlusIcon;
     const intl3 = tmp(1236).intl;
     obj3[1] = intl3.string(tmp(1236).t.MJQOuJ);
     obj3[2] = function handleItemClick() {
-      const result = guild(8987).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, outer1_6.GUILD_HEADER);
+      const result = guild(8352).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, outer1_6.GUILD_HEADER);
     };
     items4[3] = callback(HubItem, obj3);
     obj[1] = items4;

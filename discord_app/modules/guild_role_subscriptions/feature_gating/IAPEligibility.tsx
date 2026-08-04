@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx
 import noop from "noop";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 
@@ -8,7 +9,7 @@ const result = require("ME").fileFinishedImporting("modules/guild_role_subscript
 
 export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guildId) {
   if (obj.isIOS()) {
-    const str = tmp(5184).getSystemVersion();
+    const str = tmp(5093).getSystemVersion();
     if (null != str) {
       const parts = str.split(".");
       const _Number = Number;
@@ -71,7 +72,7 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
 export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIAP(guildId) {
   const _require = guildId;
   const memo = React.useMemo(() => {
-    const str = guildId(5184).getSystemVersion();
+    const str = guildId(5093).getSystemVersion();
     let tmp = null != str;
     if (tmp) {
       const parts = str.split(".");

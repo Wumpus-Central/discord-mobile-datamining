@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/BotUserProfileContent.tsx
 import importAllResult from "_copy";
 import { View } from "useProfileTheme";
 import mergeGuildAvatar from "mergeGuildAvatar";

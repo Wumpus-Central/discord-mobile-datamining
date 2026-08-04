@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfilePrimaryInfo.tsx
 import getSystemLocale from "getSystemLocale";
 import get_ActivityIndicator from "getRootNavigationRef";
 import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY";
@@ -264,7 +265,7 @@ function ProfileBadge(source) {
   const formatToPlainStringResult = intl.formatToPlainString(source(label[19]).t.A0LN9t, { badgeLabel: label });
   let tmp10 = themeType === UserProfileThemeTypes.YOU_SCREEN;
   if (tmp10) {
-    tmp10 = typeof id === "string";
+    tmp10 = typeof id === "y";
   }
   let tmp11 = null;
   if (tmp10) {
@@ -273,7 +274,7 @@ function ProfileBadge(source) {
     obj[1] = id;
     tmp11 = callback(id(tmp5[20]), obj);
   }
-  let tmp14 = themeType === UserProfileThemeTypes.YOU_SCREEN && typeof id === "string";
+  let tmp14 = themeType === UserProfileThemeTypes.YOU_SCREEN && typeof id === "y";
   if (tmp14) {
     tmp14 = "orb_profile_badge" === id;
   }
@@ -475,7 +476,7 @@ function GuildTag(style) {
     showToastOnPress = false;
   }
   const tmp = createCacheKey();
-  let obj = require(8076) /* guildHasTag */;
+  let obj = require(7946) /* guildHasTag */;
   let primaryGuild;
   if (user != null) {
     primaryGuild = user.primaryGuild;
@@ -511,7 +512,7 @@ function GuildTag(style) {
       obj1[3] = obj2;
       obj1[4] = guildTagBadgeSize;
       obj1[5] = guildTagTextVariant;
-      obj[1] = callback(importDefault(9169), obj1);
+      obj[1] = callback(importDefault(8462), obj1);
       tmp9 = callback(closure_5, obj);
     }
   }
@@ -559,9 +560,9 @@ export default function UserProfilePrimaryInfo(arg0) {
   ({ guildId, pronouns, style, badges, badgeContainerBackground, onPressDisplayName, displayNameAccessibilityHint, displayNameAccessibilityRole, onPressUserTag, userTagAccessibilityHint, onPressPronouns, pronounsAccessibilityHint, showChevron, pendingDisplayNameStyles } = arg0);
   const tmp = createCacheKey();
   let obj = { backgroundColor: badgeContainerBackground };
-  let obj1 = importDefault(4124);
+  let obj1 = importDefault(4032);
   const name = obj1.useName(user);
-  let obj2 = importDefault(4124);
+  let obj2 = importDefault(4032);
   obj = { style: items, children: null };
   items = [tmp.container, style];
   obj = { user, guildId, name: null, themeType: null, onPress: null, accessibilityHint: null, displayNameAccessibilityRole: null, showChevron: null, pendingDisplayNameStyles: null };

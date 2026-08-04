@@ -1,3 +1,4 @@
+// discord_app/modules/custom_status/native/CustomStatusPreview.tsx
 import EmojiImage from "EmojiImage";
 import { View } from "OpenableUserProfileAvatar";
 import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";

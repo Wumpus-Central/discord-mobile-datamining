@@ -1,3 +1,4 @@
+// discord_app/modules/media_viewer/native/components/overlay/MediaViewerOverlayButtonFavoriteGIF.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 

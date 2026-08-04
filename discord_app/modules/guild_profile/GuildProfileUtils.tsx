@@ -1,3 +1,4 @@
+// discord_app/modules/guild_profile/GuildProfileUtils.tsx
 import { createChannelRecordFromInvite as closure_2 } from "createChannelRecord";
 import { GuildFeatures } from "ME";
 

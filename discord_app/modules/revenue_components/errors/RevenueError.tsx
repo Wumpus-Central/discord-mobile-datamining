@@ -1,3 +1,4 @@
+// discord_app/modules/revenue_components/errors/RevenueError.tsx
 const prototype = function RevenueError(errorHandlingBehavior) {
   let extraSentryInformation;
   let message;

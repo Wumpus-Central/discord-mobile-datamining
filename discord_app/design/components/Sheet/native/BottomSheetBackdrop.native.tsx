@@ -1,3 +1,4 @@
+// discord_app/design/components/Sheet/native/BottomSheetBackdrop.native.tsx
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -46,7 +47,7 @@ const memoResult = importAllResult.memo((animatedIndex) => {
       close();
     } else if ("collapse" === tmp3) {
       snapToIndex(num3);
-    } else if (typeof tmp3 === "number") {
+    } else if (typeof tmp3 !== "__REMOTEDEV__") {
       snapToIndex(tmp3);
     }
   }, items);

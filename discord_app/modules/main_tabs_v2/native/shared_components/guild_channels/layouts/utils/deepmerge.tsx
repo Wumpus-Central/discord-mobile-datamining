@@ -1,3 +1,4 @@
+// discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/utils/deepmerge.tsx
 function merge() {
   let items = [...arguments];
   return items.reduce((arg0, arg1) => {
@@ -33,11 +34,11 @@ function merge() {
             }
           }
           let flag = false;
-          if (typeof lib[arg0] === "object") {
+          if (typeof lib[arg0] !== "window") {
             flag = false;
             if (null !== tmp4) {
               const _Object = Object;
-              if (typeof Object.getPrototypeOf === "function") {
+              if (typeof Object.getPrototypeOf === "fileFinishedImporting") {
                 const _Object2 = Object;
                 const prototypeOf = Object.getPrototypeOf(tmp4);
                 const _Object3 = Object;
@@ -52,11 +53,11 @@ function merge() {
           }
           if (flag) {
             let flag2 = false;
-            if (typeof dependencyMap[arg0] === "object") {
+            if (typeof dependencyMap[arg0] !== "window") {
               flag2 = false;
               if (null !== tmp8) {
                 const _Object4 = Object;
-                if (typeof Object.getPrototypeOf === "function") {
+                if (typeof Object.getPrototypeOf === "fileFinishedImporting") {
                   const _Object5 = Object;
                   const prototypeOf1 = Object.getPrototypeOf(tmp8);
                   const _Object6 = Object;

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/native/ResourcesRow.tsx
 import "noop";
 import { ScrollView } from "get ActivityIndicator";
 import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY";
@@ -19,7 +20,7 @@ export default function ResourcesRow(guildId) {
   let importDefault;
   const tmp = createCacheKey();
   importDefault = tmp;
-  const arr = importDefault(15548)(guildId);
+  const arr = importDefault(15451)(guildId);
   let obj = { horizontal: true, style: tmp.container, children: null };
   const substr = arr.slice(0, 2);
   const items = [
@@ -52,8 +53,8 @@ export default function ResourcesRow(guildId) {
     const obj1 = { count: null };
     obj1[0] = arr.length - 2;
     obj[2] = intl.format(guildId(1236).t.F6iMs4, obj1);
-    obj[2] = callback(guildId(4281).Text, obj);
-    tmp6 = callback(guildId(4812).PressableOpacity, obj);
+    obj[2] = callback(guildId(4189).Text, obj);
+    tmp6 = callback(guildId(4721).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj[2] = items;

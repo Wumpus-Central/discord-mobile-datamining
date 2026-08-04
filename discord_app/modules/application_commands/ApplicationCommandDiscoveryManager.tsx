@@ -1,3 +1,4 @@
+// discord_app/modules/application_commands/ApplicationCommandDiscoveryManager.tsx
 import keys from "keys";
 
 const obj = keys.create(() => ({ initialSectionId: "r" }));

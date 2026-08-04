@@ -1,3 +1,4 @@
+// discord_app/modules/panels/morphable/native/getPIPBottomOffsetForPIPMode.tsx
 import { PIP_WINDOW_OFFSET } from "MIN_PAN_GESTURE_MOVE";
 
 const fn = function _(arg0) {

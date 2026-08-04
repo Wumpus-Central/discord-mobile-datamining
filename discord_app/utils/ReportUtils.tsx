@@ -1,3 +1,4 @@
+// discord_app/utils/ReportUtils.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleInviteData from "handleInviteData";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";

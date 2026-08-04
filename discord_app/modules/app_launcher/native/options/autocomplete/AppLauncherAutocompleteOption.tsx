@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/native/options/autocomplete/AppLauncherAutocompleteOption.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -64,7 +65,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
   first = tmp[0];
   closure_9 = tmp[1];
   const tmp3 = createCacheKey();
-  let obj = require(11469) /* useAnimationDelayedAutoFocus */;
+  let obj = require(11360) /* useAnimationDelayedAutoFocus */;
   const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, onPress);
   obj = { onPress, style: null, children: null };
   const items = [tmp3.container, , ];
@@ -80,6 +81,6 @@ export default function AppLauncherAutocompleteOption(arg0) {
     str = first.displayName;
   }
   obj[2] = str;
-  obj[2] = jsx(require(4281) /* Text */.Text, { variant: "text-md/normal", style: tmp3.inputText, children: null });
-  return jsx(require(4812) /* PressableBase */.PressableOpacity, { variant: "text-md/normal", style: tmp3.inputText, children: null });
+  obj[2] = jsx(require(4189) /* Text */.Text, { variant: "text-md/normal", style: tmp3.inputText, children: null });
+  return jsx(require(4721) /* PressableBase */.PressableOpacity, { variant: "text-md/normal", style: tmp3.inputText, children: null });
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/game_server/utils/gameServerResponseToInstance.tsx
 const result = require("set").fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");
 
 export default function gameServerResponseToInstance(id) {

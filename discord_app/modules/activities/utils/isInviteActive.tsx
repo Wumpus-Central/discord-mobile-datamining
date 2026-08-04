@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/isInviteActive.tsx
 const result = 2 * require("set").Millis.HOUR;
 const result1 = require("set").fileFinishedImporting("modules/activities/utils/isInviteActive.tsx");
 

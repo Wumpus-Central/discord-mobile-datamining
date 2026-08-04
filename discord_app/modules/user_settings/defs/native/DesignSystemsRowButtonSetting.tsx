@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/DesignSystemsRowButtonSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -10,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_ROW_BUTTON,
   getComponent() {
-    return require(14679) /* UserSettingsDesignSystemRowButton */.default;
+    return require(14579) /* UserSettingsDesignSystemRowButton */.default;
   }
 };
 const route = createToggle.createRoute(obj);

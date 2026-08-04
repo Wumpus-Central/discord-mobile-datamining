@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding/GuildOnboardingPromptsStore.tsx
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import shouldShowOnboarding from "shouldShowOnboarding";

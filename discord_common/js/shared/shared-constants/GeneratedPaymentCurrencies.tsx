@@ -1,3 +1,4 @@
+// discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx");
 
 export const GeneratedPaymentCurrencies = {};

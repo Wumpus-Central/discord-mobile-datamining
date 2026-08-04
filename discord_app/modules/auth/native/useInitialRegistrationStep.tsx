@@ -1,3 +1,4 @@
+// discord_app/modules/auth/native/useInitialRegistrationStep.tsx
 import noop from "noop";
 import fetchFingerprint from "fetchFingerprint";
 import hasConsented from "hasConsented";

@@ -1,10 +1,60 @@
+// discord_app/intl/locale-data/date-fns.tsx
 import importDefaultResult from "code";
 
 const require = arg1;
-const obj = { bg: null, cs: null, da: null, de: null, el: null, "en-GB": null, "en-US": null, "es-ES": null, "es-419": null, fi: null, fr: null, hr: null, hu: null, it: null, ja: null, ko: null, lt: null, nl: null, no: null, pl: null, "pt-BR": null, ro: null, ru: null, "sv-SE": null, th: null, tr: null, uk: null, vi: null, "zh-CN": null, "zh-TW": null, hi: null };
+let obj = { bg: null, cs: null, da: null, de: null, el: null, "en-GB": null, "en-US": null, "es-ES": null, "es-419": null, fi: null, fr: null, hr: null, hu: null, it: null, ja: null, ko: null, lt: null, nl: null, no: null, pl: null, "pt-BR": null, ro: null, ru: null, "sv-SE": null, th: null, tr: null, uk: null, vi: null, "zh-CN": null, "zh-TW": null, hi: null };
 let closure_32 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[1], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[1], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[0] = function() {
   const self = this;
@@ -17,8 +67,57 @@ obj[0] = function() {
   return applyArgumentsResult;
 };
 let closure_31 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[3], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[3], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[1] = function() {
   const self = this;
@@ -31,8 +130,57 @@ obj[1] = function() {
   return applyArgumentsResult;
 };
 let closure_30 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[4], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[4], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[2] = function() {
   const self = this;
@@ -45,8 +193,57 @@ obj[2] = function() {
   return applyArgumentsResult;
 };
 let closure_29 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[5], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[5], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[3] = function() {
   const self = this;
@@ -59,8 +256,57 @@ obj[3] = function() {
   return applyArgumentsResult;
 };
 let closure_28 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[6], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[6], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[4] = function() {
   const self = this;
@@ -73,8 +319,57 @@ obj[4] = function() {
   return applyArgumentsResult;
 };
 let closure_27 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[7], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[7], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[5] = function() {
   const self = this;
@@ -87,8 +382,57 @@ obj[5] = function() {
   return applyArgumentsResult;
 };
 let closure_26 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[8], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[8], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[6] = function() {
   const self = this;
@@ -101,8 +445,57 @@ obj[6] = function() {
   return applyArgumentsResult;
 };
 let closure_25 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[9], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[9], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[7] = function() {
   const self = this;
@@ -115,8 +508,57 @@ obj[7] = function() {
   return applyArgumentsResult;
 };
 let closure_24 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[9], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[9], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[8] = function() {
   const self = this;
@@ -129,8 +571,57 @@ obj[8] = function() {
   return applyArgumentsResult;
 };
 let closure_23 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[10], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[10], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[9] = function() {
   const self = this;
@@ -143,8 +634,57 @@ obj[9] = function() {
   return applyArgumentsResult;
 };
 let closure_22 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[11], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[11], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[10] = function() {
   const self = this;
@@ -157,8 +697,57 @@ obj[10] = function() {
   return applyArgumentsResult;
 };
 let closure_21 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[12], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[12], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[11] = function() {
   const self = this;
@@ -171,8 +760,57 @@ obj[11] = function() {
   return applyArgumentsResult;
 };
 let closure_20 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[13], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[13], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[12] = function() {
   const self = this;
@@ -185,8 +823,57 @@ obj[12] = function() {
   return applyArgumentsResult;
 };
 let closure_19 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[14], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[14], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[13] = function() {
   const self = this;
@@ -199,8 +886,57 @@ obj[13] = function() {
   return applyArgumentsResult;
 };
 let closure_18 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[15], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[15], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[14] = function() {
   const self = this;
@@ -213,8 +949,57 @@ obj[14] = function() {
   return applyArgumentsResult;
 };
 let closure_17 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[16], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[16], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[15] = function() {
   const self = this;
@@ -227,8 +1012,57 @@ obj[15] = function() {
   return applyArgumentsResult;
 };
 let closure_16 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[17], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[17], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[16] = function() {
   const self = this;
@@ -241,8 +1075,57 @@ obj[16] = function() {
   return applyArgumentsResult;
 };
 let closure_15 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[18], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[18], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[17] = function() {
   const self = this;
@@ -255,8 +1138,57 @@ obj[17] = function() {
   return applyArgumentsResult;
 };
 let closure_14 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[19], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[19], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[18] = function() {
   const self = this;
@@ -269,8 +1201,57 @@ obj[18] = function() {
   return applyArgumentsResult;
 };
 let closure_13 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[20], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[20], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[19] = function() {
   const self = this;
@@ -283,8 +1264,57 @@ obj[19] = function() {
   return applyArgumentsResult;
 };
 let closure_12 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[21], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[21], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[20] = function() {
   const self = this;
@@ -297,8 +1327,57 @@ obj[20] = function() {
   return applyArgumentsResult;
 };
 let closure_11 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[22], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[22], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[21] = function() {
   const self = this;
@@ -311,8 +1390,57 @@ obj[21] = function() {
   return applyArgumentsResult;
 };
 let closure_10 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[23], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[23], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[22] = function() {
   const self = this;
@@ -325,8 +1453,57 @@ obj[22] = function() {
   return applyArgumentsResult;
 };
 let closure_9 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[24], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[24], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[23] = function() {
   const self = this;
@@ -339,8 +1516,57 @@ obj[23] = function() {
   return applyArgumentsResult;
 };
 let closure_8 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[25], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[25], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[24] = function() {
   const self = this;
@@ -353,8 +1579,57 @@ obj[24] = function() {
   return applyArgumentsResult;
 };
 let closure_7 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[26], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[26], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[25] = function() {
   const self = this;
@@ -367,8 +1642,57 @@ obj[25] = function() {
   return applyArgumentsResult;
 };
 let closure_6 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[27], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[27], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[26] = function() {
   const self = this;
@@ -381,8 +1705,57 @@ obj[26] = function() {
   return applyArgumentsResult;
 };
 let closure_5 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[28], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[28], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[27] = function() {
   const self = this;
@@ -395,8 +1768,57 @@ obj[27] = function() {
   return applyArgumentsResult;
 };
 let closure_4 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[29], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[29], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[28] = function() {
   const self = this;
@@ -409,8 +1831,57 @@ obj[28] = function() {
   return applyArgumentsResult;
 };
 let closure_3 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[30], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[30], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[29] = function() {
   const self = this;
@@ -423,8 +1894,57 @@ obj[29] = function() {
   return applyArgumentsResult;
 };
 let closure_2 = importDefaultResult(function*() {
-  yield v0(paths[2])(paths[31], paths.paths);
-  return arg1.default;
+  if (v0 === 2) {
+    v0 = 3;
+    HermesBuiltin.throwTypeError();
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw arg1;
+    } else if (arg0 === 2) {
+      let obj = { value: null, done: true };
+      obj[0] = arg1;
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      v0 = 2;
+      if (0 === paths) {
+        if (arg0 === 1) {
+          v0 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          v0 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1;
+          return obj;
+        } else {
+          paths = 1;
+          v0 = 1;
+          const obj1 = { value: null, done: false };
+          obj1[0] = v0(paths[2])(paths[31], paths.paths);
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        v0 = 3;
+        throw arg1;
+      } else if (arg0 === 2) {
+        v0 = 3;
+        const obj2 = { value: null, done: true };
+        obj2[0] = arg1;
+        return obj2;
+      } else {
+        v0 = 3;
+        obj = { value: null, done: true };
+        obj[0] = arg1.default;
+        return obj;
+      }
+    } catch (tmp7) {
+      v0 = tmp;
+      throw tmp7;
+    }
+  }
 });
 obj[30] = function() {
   const self = this;

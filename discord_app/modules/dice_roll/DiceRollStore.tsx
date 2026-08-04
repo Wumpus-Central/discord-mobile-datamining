@@ -1,3 +1,4 @@
+// discord_app/modules/dice_roll/DiceRollStore.tsx
 import keys from "keys";
 
 let obj = { channelId: null, rolling: false, dismissing: false, diceCount: 1, diceSides: 6, results: null };

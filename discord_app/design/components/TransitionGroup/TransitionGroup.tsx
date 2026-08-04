@@ -1,3 +1,4 @@
+// discord_app/design/components/TransitionGroup/TransitionGroup.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -12,11 +13,11 @@ class TransitionGroup {
     getItemKey = global.getItemKey;
     wrapChildren = global.wrapChildren;
     if (wrapChildren === undefined) {
-      wrapChildren = f75198;
+      wrapChildren = f74914;
     }
     lazyCleanUpDelay = global.lazyCleanUpDelay;
     c4 = undefined;
-    f75198 = undefined;
+    f74914 = undefined;
     useRef = undefined;
     useMemo = undefined;
     c4 = require("module_4294967295");
@@ -26,7 +27,7 @@ class TransitionGroup {
         clearTimeout(tmp.current);
       }
     }, []);
-    f75198 = items(renderItem.useState(c4), 2)[1];
+    f74914 = items(renderItem.useState(c4), 2)[1];
     useRef = renderItem.useRef(null);
     items = [, , , ];
     items[0] = items;

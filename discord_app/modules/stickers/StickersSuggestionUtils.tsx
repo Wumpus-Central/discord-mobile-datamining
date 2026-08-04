@@ -1,3 +1,4 @@
+// discord_app/modules/stickers/StickersSuggestionUtils.tsx
 const re0 = /(!|\.|;|,|-|—|–|\?|"|')/g;
 const re1 = /(\n|\t|\s)/g;
 const result = require("set").fileFinishedImporting("modules/stickers/StickersSuggestionUtils.tsx");

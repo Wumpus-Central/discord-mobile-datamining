@@ -1,3 +1,4 @@
+// discord_app/modules/guild/GuildPromptsStore.tsx
 import { PersistedStore } from "initialize";
 
 let closure_0 = {};

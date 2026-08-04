@@ -1,3 +1,4 @@
+// discord_app/stores/ChannelStore.tsx
 import _slicedToArray from "_slicedToArray";
 import fetchFingerprint from "fetchFingerprint";
 import hasChannel from "hasChannel";

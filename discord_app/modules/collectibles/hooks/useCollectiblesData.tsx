@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/hooks/useCollectiblesData.tsx
 import _slicedToArray from "_slicedToArray";
 import updateCategoriesAndProducts from "updateCategoriesAndProducts";
 import map from "map";

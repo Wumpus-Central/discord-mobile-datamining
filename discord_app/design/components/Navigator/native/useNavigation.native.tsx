@@ -1,3 +1,4 @@
+// discord_app/design/components/Navigator/native/useNavigation.native.tsx
 function useNavigation() {
   return require(1481) /* Link */.useNavigation();
 }

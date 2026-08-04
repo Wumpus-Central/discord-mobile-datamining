@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/header/VoicePanelHeaderChatButton.tsx
 import noop from "noop";
 import { ComponentActions } from "ME";
 import jsxProd from "jsxProd";
@@ -21,17 +22,17 @@ export default function VoicePanelHeaderChatButton(channelId) {
     const ComponentDispatch = callback(table[5]).ComponentDispatch;
     ComponentDispatch.dispatch(constants.VOICE_PANEL_OPEN_CHAT_TAB);
   }, []);
-  const tmp5 = importDefault(16074)(channelId.channelId);
+  const tmp5 = importDefault(15978)(channelId.channelId);
   const tmp6 = closure_6;
   let obj = { icon: null, accessibilityLabel: null, onPress: null };
-  const tmp7 = importDefault(5663);
+  const tmp7 = importDefault(5572);
   obj = { color: null, size: "sm" };
   obj[0] = importDefault(712).colors.WHITE;
-  obj[0] = callback(require(4781) /* ChatIcon */.ChatIcon, obj);
+  obj[0] = callback(require(4690) /* ChatIcon */.ChatIcon, obj);
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t["5KxXrK"]);
   obj[2] = callback;
-  const children = [callback(importDefault(15979), obj), ];
+  const children = [callback(importDefault(15883), obj), ];
   let tmp8Result = null != tmp5;
   if (tmp8Result) {
     obj = { style: null, children: null };
@@ -40,9 +41,9 @@ export default function VoicePanelHeaderChatButton(channelId) {
     const items1 = [, ];
     ({ badge: arr2[0], notificationBadge: arr2[1] } = tmp);
     obj1[0] = items1;
-    obj[1] = tmp8(tmp3(5663), obj1);
-    tmp8Result = tmp8(tmp3(5663), obj);
-    const tmp3Result = tmp3(5663);
+    obj[1] = tmp8(tmp3(5572), obj1);
+    tmp8Result = tmp8(tmp3(5572), obj);
+    const tmp3Result = tmp3(5572);
   }
   children[1] = tmp8Result;
   return tmp6(tmp7, { children });

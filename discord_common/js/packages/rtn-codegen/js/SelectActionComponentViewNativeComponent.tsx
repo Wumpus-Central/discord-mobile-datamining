@@ -1,3 +1,4 @@
+// discord_common/js/packages/rtn-codegen/js/SelectActionComponentViewNativeComponent.tsx
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 

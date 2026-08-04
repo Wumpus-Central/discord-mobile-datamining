@@ -1,3 +1,4 @@
+// discord_app/modules/nuf/NewUserStore.tsx
 import { PersistedStore } from "initialize";
 
 let c0 = null;

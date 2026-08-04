@@ -1,3 +1,4 @@
+// discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx
 import set from "set";
 
 const obj = { PLAYSTATION_APPLICATION_IDS: null, IMPLICIT_IDENTIFY_PREMIUM_APPLICATION_IDS: null, ALL: null };

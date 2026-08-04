@@ -1,3 +1,4 @@
+// discord_common/js/shared/lib/RPCError.tsx
 const prototype = function RPCError(arg0, message) {
   const tmp = new prototype(message, new.target, new.target, arg0);
   // ThrowIfThisInitialized (0x7c)

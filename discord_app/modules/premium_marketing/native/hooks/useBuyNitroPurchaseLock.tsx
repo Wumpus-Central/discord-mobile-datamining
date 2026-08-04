@@ -1,3 +1,4 @@
+// discord_app/modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx
 import updateProduct from "updateProduct";
 import keys from "keys";
 

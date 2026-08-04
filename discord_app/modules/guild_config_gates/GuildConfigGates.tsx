@@ -1,3 +1,4 @@
+// discord_app/modules/guild_config_gates/GuildConfigGates.tsx
 import importDefaultResult1 from "hasLoaded";
 import { Endpoints } from "ME";
 import initialize from "initialize";

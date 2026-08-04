@@ -1,3 +1,4 @@
+// discord_app/modules/video_backgrounds/VideoBackgroundStore.tsx
 import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import handleConnectionOpen from "handleConnectionOpen";
@@ -19,7 +20,7 @@ function handleSyncedStoresUpdate() {
     if (voiceAndVideo != null) {
       prop = voiceAndVideo.videoBackgroundFilterDesktop;
     }
-    const videoBackgroundOptionFromProto = require(9084) /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+    const videoBackgroundOptionFromProto = require(8854) /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
     let isVideoEnabledResult = null != obj.getVoiceChannelId();
     if (isVideoEnabledResult) {
       isVideoEnabledResult = _detectH265HardwareDecode.isVideoEnabled();
@@ -28,7 +29,7 @@ function handleSyncedStoresUpdate() {
       isVideoEnabledResult = null != videoBackgroundOptionFromProto;
     }
     flag2 = isVideoEnabledResult;
-    const obj2 = require(9084) /* isAnimatedBackgroundOption */;
+    const obj2 = require(8854) /* isAnimatedBackgroundOption */;
   }
   if (flag2) {
     c8 = true;
@@ -112,8 +113,8 @@ const videoBackgroundStore = new VideoBackgroundStore(require("dispatcher"), {
         if (voiceAndVideo != null) {
           prop = voiceAndVideo.videoBackgroundFilterDesktop;
         }
-        backgroundOption = require(9084) /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
-        const obj = require(9084) /* isAnimatedBackgroundOption */;
+        backgroundOption = require(8854) /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+        const obj = require(8854) /* isAnimatedBackgroundOption */;
       }
       let isVideoEnabledResult = null != store.getVoiceChannelId();
       if (isVideoEnabledResult) {
@@ -130,11 +131,11 @@ const videoBackgroundStore = new VideoBackgroundStore(require("dispatcher"), {
   },
   MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function handleApplyMediaFilterSettings(settings) {
     settings = settings.settings;
-    if (require(4381) /* BaseConnectionEvent */.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in settings) {
+    if (require(4290) /* BaseConnectionEvent */.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in settings) {
       let c6 = true;
       let c10 = false;
     }
-    if (require(4381) /* BaseConnectionEvent */.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW in settings) {
+    if (require(4290) /* BaseConnectionEvent */.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW in settings) {
       let c11 = false;
     }
   },

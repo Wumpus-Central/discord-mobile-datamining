@@ -1,3 +1,4 @@
+// discord_app/modules/guild_boosting/RoleIconUtils.tsx
 import ME from "ME";
 import set from "set";
 import set from "parseRawEmojiObject";
@@ -18,9 +19,9 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
   } else {
     let byName;
     if (null != role.unicodeEmoji) {
-      let obj = importDefault(3926);
-      byName = obj.getByName(importDefault(3926).convertSurrogateToName(role.unicodeEmoji, false));
-      const obj2 = importDefault(3926);
+      let obj = importDefault(3834);
+      byName = obj.getByName(importDefault(3834).convertSurrogateToName(role.unicodeEmoji, false));
+      const obj2 = importDefault(3834);
     }
     ({ id, icon } = role);
     let tmp4;

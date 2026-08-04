@@ -1,3 +1,4 @@
+// discord_app/modules/guild_role_subscriptions/native/purchase_page/SubscribeButton.tsx
 import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
 import _slicedToArray from "_slicedToArray";
 import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";
@@ -12,20 +13,20 @@ let closure_12;
 let map1;
 const require = arg1;
 function emphasisHook(children) {
-  return callback3(require(4281) /* Text */.Text, { variant: "text-xs/semibold", color: "text-default", children });
+  return callback3(require(4189) /* Text */.Text, { variant: "text-xs/semibold", color: "text-default", children });
 }
 function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  let obj = changeToListingId(14363);
-  let obj1 = activeListingId(3867)(activeSubscription.currentPeriodEnd);
+  let obj = changeToListingId(14263);
+  let obj1 = activeListingId(3775)(activeSubscription.currentPeriodEnd);
   obj = { children: null };
   obj = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1236).intl;
   obj1 = { activeListingName: callback2(obj.useName(activeListingId), 1)[0], billingEndDate: obj1.format("MMMM Do"), emphasisHook };
   obj[2] = intl.format(activeSubscription(1236).t.lA7ztO, obj1);
-  const items = [callback3(activeSubscription(4281).Text, obj), callback3(activeSubscription(1297).Spacer, { size: 16 }), ];
+  const items = [callback3(activeSubscription(4189).Text, obj), callback3(activeSubscription(1297).Spacer, { size: 16 }), ];
   const obj2 = { text: null, onPress: null };
   const intl2 = activeSubscription(1236).intl;
   obj2[0] = intl2.string(activeSubscription(1236).t.SACegK);
@@ -34,7 +35,7 @@ function SwitchTiersButton(activeSubscription) {
     obj = { activeSubscription, activeListingId, changeToListingId };
     obj.openLazy(activeSubscription(outer1_3[21])(outer1_3[20], outer1_3.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
   };
-  items[2] = callback3(activeSubscription(15530).ArrowButton, obj2);
+  items[2] = callback3(activeSubscription(15433).ArrowButton, obj2);
   obj[0] = items;
   return callback4(View, obj);
 }

@@ -1,3 +1,4 @@
+// discord_app/stores/CertifiedDeviceStore.tsx
 import { DeviceTypes } from "DesktopSources";
 import { Store } from "initialize";
 

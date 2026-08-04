@@ -1,3 +1,4 @@
+// discord_app/modules/threads/ThreadCreationHooks.tsx
 import snowflakeSequence from "snowflakeSequence";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import dispatcher from "dispatcher";
@@ -88,11 +89,11 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     if (str3 == null) {
       str3 = "";
     }
-    const obj = importDefault(7062);
+    const obj = importDefault(5971);
     const tmp17 = importDefault;
-    const str4 = importDefault(7062).unparse(str3, stateFromStores.id, true);
-    const tmp17Result = tmp17(8166);
-    let str7 = tmp17(8166)(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
+    const str4 = importDefault(5971).unparse(str3, stateFromStores.id, true);
+    const tmp17Result = tmp17(6187);
+    let str7 = tmp17(6187)(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
     const items = [];
     const match = str7.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
     while (null != match) {
@@ -150,403 +151,464 @@ function _createThread_() {
     let c11 = 0;
     let c9 = 0;
     return (function*(arg0, body) {
-      let id = tmp3;
-      let maybeRebuildState = tmp6;
-      let throwTypeErrorResult = lib;
-      throwTypeErrorResult = callback;
-      throwTypeErrorResult = dependencyMap;
-      throwTypeErrorResult = lib2;
-      let c4 = lib.isForumLikeChannel();
-      let c9 = 1;
-      yield lib2();
-      if (1 === tmp9) {
-        c9 = 0;
-        body = closure_8.body;
-        let code;
-        if (body != null) {
-          code = body.code;
-        }
-        if (code === constants.TOO_MANY_THREADS) {
-          throwTypeErrorResult = maybeRebuildState;
-          throwTypeErrorResult = id;
-          throwTypeErrorResult = callback;
-          throwTypeErrorResult = dependencyMap;
-          throwTypeErrorResult = c4;
-          throwTypeErrorResult = id;
-          throwTypeErrorResult = lib;
-          throwTypeErrorResult = dependencyMap;
-          const intl9 = lib(1236).intl;
-          const string2 = intl9.string;
-          throwTypeErrorResult = lib;
-          throwTypeErrorResult = dependencyMap;
-          const t2 = lib(1236).t;
-          if (c4) {
-            throwTypeErrorResult = string2(t2.vWNFkx);
+      if (c11 === 2) {
+        c11 = 3;
+        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      } else {
+        throwTypeErrorResult = body;
+        throwTypeErrorResult = arg0;
+        throwTypeErrorResult = tmp7;
+        throwTypeErrorResult = globalThis;
+        throwTypeErrorResult = null;
+        if (tmp8 === 3) {
+          if (arg0 === 1) {
+            throw body;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = body;
+            return obj;
           } else {
-            throwTypeErrorResult = string2(t2["1KEdvB"]);
+            return { value: "HermesInternal", done: null };
           }
-          let obj2 = { title: null, body: null };
-          throwTypeErrorResult = maybeRebuildState;
-          obj2[0] = throwTypeErrorResult;
-          throwTypeErrorResult = c4;
-          throwTypeErrorResult = id;
-          throwTypeErrorResult = lib;
-          throwTypeErrorResult = dependencyMap;
-          const intl10 = lib(1236).intl;
-          const string3 = intl10.string;
-          throwTypeErrorResult = lib;
-          throwTypeErrorResult = dependencyMap;
-          let KGaiEK = lib(1236).t;
-          if (c4) {
-            KGaiEK = KGaiEK.KGaiEK;
-            throwTypeErrorResult = string3(KGaiEK);
-          } else {
-            throwTypeErrorResult = string3(KGaiEK.P0wT5S);
-          }
-          obj2[1] = throwTypeErrorResult;
-          obj2 = callback(4623).show(obj2);
-          const obj18 = callback(4623);
         } else {
-          throwTypeErrorResult = maybeRebuildState;
-          throwTypeErrorResult = closure_8;
-          const body7 = closure_8.body;
-          let code1;
-          if (body7 != null) {
-            code1 = body7.code;
-          }
-          if (code1 === constants.TOO_MANY_ANNOUNCEMENT_THREADS) {
-            throwTypeErrorResult = id;
-            throwTypeErrorResult = callback;
-            throwTypeErrorResult = dependencyMap;
-            const obj15 = callback(4623);
-            const obj3 = { title: null, body: null };
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            const intl7 = lib(1236).intl;
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            obj3[0] = intl7.string(lib(1236).t["1KEdvB"]);
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            const intl8 = lib(1236).intl;
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            obj3[1] = intl8.string(lib(1236).t.jDMxz2);
-            throwTypeErrorResult = obj15.show(obj3);
-          } else {
-            throwTypeErrorResult = maybeRebuildState;
-            throwTypeErrorResult = closure_8;
-            const body8 = closure_8.body;
-            let code2;
-            if (body8 != null) {
-              code2 = body8.code;
-            }
-            if (code2 === constants.SLOWMODE_RATE_LIMITED) {
-              throwTypeErrorResult = maybeRebuildState;
-              throwTypeErrorResult = closure_8;
-              const retry_after = closure_8.body.retry_after;
-              c4 = retry_after;
-              if (retry_after == null) {
-                c4 = 0;
-              }
-              throwTypeErrorResult = maybeRebuildState;
-              throwTypeErrorResult = c4;
-              let dispatcher = c4;
-              throwTypeErrorResult = dispatcher;
-              if (dispatcher > 0) {
-                throwTypeErrorResult = maybeRebuildState;
-                throwTypeErrorResult = id;
-                throwTypeErrorResult = callback;
-                throwTypeErrorResult = dependencyMap;
-                let obj4 = { type: "SLOWMODE_SET_COOLDOWN", channelId: null, slowmodeType: null, cooldownMs: null };
+          try {
+            c11 = 2;
+            if (0 === c10) {
+              if (arg0 === 1) {
+                c11 = 3;
+                throw body;
+              } else if (arg0 === 2) {
+                c11 = 3;
+                obj = { value: null, done: true };
+                obj[0] = body;
+                return obj;
+              } else {
+                let id = tmp3;
+                let maybeRebuildState = tmp6;
                 throwTypeErrorResult = lib;
-                obj4[1] = lib.id;
-                throwTypeErrorResult = closure_12;
-                obj4[2] = closure_12.CreateThread;
-                throwTypeErrorResult = dispatcher;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                obj4[3] = dispatcher * callback(687).Millis.SECOND;
-                throwTypeErrorResult = callback(709).dispatch(obj4);
-                const obj29 = callback(709);
+                throwTypeErrorResult = lib2;
+                lib2 = undefined;
+                let c4;
+                let dispatcher;
+                maybeRebuildState = undefined;
+                id = undefined;
+                c4 = lib.isForumLikeChannel();
+                let c9 = 1;
+                c10 = 3;
+                c11 = 1;
+                let obj1 = { value: null, done: false };
+                obj1[0] = lib2();
+                return obj1;
               }
             } else {
-              throwTypeErrorResult = maybeRebuildState;
-              throwTypeErrorResult = closure_8;
-              if (429 === closure_8.status) {
-                throwTypeErrorResult = maybeRebuildState;
-                throwTypeErrorResult = id;
-                throwTypeErrorResult = callback;
-                throwTypeErrorResult = dependencyMap;
-                let obj13 = callback(4623);
-                throwTypeErrorResult = c4;
-                throwTypeErrorResult = id;
-                throwTypeErrorResult = lib;
-                throwTypeErrorResult = dependencyMap;
-                const intl5 = lib(1236).intl;
-                const string = intl5.string;
-                throwTypeErrorResult = lib;
-                throwTypeErrorResult = dependencyMap;
-                const t = lib(1236).t;
-                if (c4) {
-                  throwTypeErrorResult = string(t.vWNFkx);
-                } else {
-                  throwTypeErrorResult = string(t["1KEdvB"]);
+              if (1 === tmp9) {
+                c9 = 0;
+                body = closure_8.body;
+                let code;
+                if (body != null) {
+                  code = body.code;
                 }
-                const obj5 = { title: null, body: null };
-                throwTypeErrorResult = id;
-                obj5[0] = throwTypeErrorResult;
-                throwTypeErrorResult = lib;
-                throwTypeErrorResult = dependencyMap;
-                const intl6 = lib(1236).intl;
-                throwTypeErrorResult = lib;
-                throwTypeErrorResult = dependencyMap;
-                obj5[1] = intl6.string(lib(1236).t.Whhv4w);
-                throwTypeErrorResult = obj13.show(obj5);
-              } else {
-                throwTypeErrorResult = maybeRebuildState;
-                throwTypeErrorResult = id;
-                throwTypeErrorResult = closure_8;
-                const body9 = closure_8.body;
-                let code3;
-                throwTypeErrorResult = set;
-                if (body9 != null) {
-                  code3 = body9.code;
-                }
-                if (set.has(code3)) {
-                  throw tmp47;
-                } else {
-                  const body2 = tmp47.body;
-                  let code4;
-                  if (body2 != null) {
-                    code4 = body2.code;
+                if (code === constants.TOO_MANY_THREADS) {
+                  throwTypeErrorResult = maybeRebuildState;
+                  throwTypeErrorResult = id;
+                  throwTypeErrorResult = callback;
+                  throwTypeErrorResult = dependencyMap;
+                  throwTypeErrorResult = c4;
+                  throwTypeErrorResult = id;
+                  throwTypeErrorResult = lib;
+                  throwTypeErrorResult = dependencyMap;
+                  const intl9 = lib(1236).intl;
+                  const string2 = intl9.string;
+                  throwTypeErrorResult = lib;
+                  throwTypeErrorResult = dependencyMap;
+                  const t2 = lib(1236).t;
+                  if (c4) {
+                    throwTypeErrorResult = string2(t2.vWNFkx);
+                  } else {
+                    throwTypeErrorResult = string2(t2["1KEdvB"]);
                   }
-                  if (code4 === constants.INVALID_FORM_BODY) {
-                    const body3 = closure_8.body;
-                    let name;
-                    if (body3 != null) {
-                      const errors = body3.errors;
-                      if (errors != null) {
-                        name = errors.name;
-                      }
+                  let obj2 = { title: null, body: null };
+                  throwTypeErrorResult = maybeRebuildState;
+                  obj2[0] = throwTypeErrorResult;
+                  throwTypeErrorResult = c4;
+                  throwTypeErrorResult = id;
+                  throwTypeErrorResult = lib;
+                  throwTypeErrorResult = dependencyMap;
+                  const intl10 = lib(1236).intl;
+                  const string3 = intl10.string;
+                  throwTypeErrorResult = lib;
+                  throwTypeErrorResult = dependencyMap;
+                  let KGaiEK = lib(1236).t;
+                  if (c4) {
+                    KGaiEK = KGaiEK.KGaiEK;
+                    throwTypeErrorResult = string3(KGaiEK);
+                  } else {
+                    throwTypeErrorResult = string3(KGaiEK.P0wT5S);
+                  }
+                  obj2[1] = throwTypeErrorResult;
+                  obj2 = callback(4532).show(obj2);
+                  const obj18 = callback(4532);
+                } else {
+                  throwTypeErrorResult = maybeRebuildState;
+                  throwTypeErrorResult = closure_8;
+                  const body7 = closure_8.body;
+                  let code1;
+                  if (body7 != null) {
+                    code1 = body7.code;
+                  }
+                  if (code1 === constants.TOO_MANY_ANNOUNCEMENT_THREADS) {
+                    throwTypeErrorResult = id;
+                    throwTypeErrorResult = callback;
+                    throwTypeErrorResult = dependencyMap;
+                    let obj15 = callback(4532);
+                    const obj3 = { title: null, body: null };
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = dependencyMap;
+                    const intl7 = lib(1236).intl;
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = dependencyMap;
+                    obj3[0] = intl7.string(lib(1236).t["1KEdvB"]);
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = dependencyMap;
+                    const intl8 = lib(1236).intl;
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = dependencyMap;
+                    obj3[1] = intl8.string(lib(1236).t.jDMxz2);
+                    throwTypeErrorResult = obj15.show(obj3);
+                  } else {
+                    throwTypeErrorResult = maybeRebuildState;
+                    throwTypeErrorResult = closure_8;
+                    const body8 = closure_8.body;
+                    let code2;
+                    if (body8 != null) {
+                      code2 = body8.code;
                     }
-                    if (null != name) {
+                    if (code2 === constants.SLOWMODE_RATE_LIMITED) {
                       throwTypeErrorResult = maybeRebuildState;
                       throwTypeErrorResult = closure_8;
-                      throw closure_8;
-                    }
-                  }
-                  const body4 = closure_8.body;
-                  let code5;
-                  if (body4 != null) {
-                    code5 = body4.code;
-                  }
-                  if (set2.has(code5)) {
-                    if (null == dependencyMap) {
+                      const retry_after = closure_8.body.retry_after;
+                      c4 = retry_after;
+                      if (retry_after == null) {
+                        c4 = 0;
+                      }
                       throwTypeErrorResult = maybeRebuildState;
-                      throwTypeErrorResult = new.target;
-                      throwTypeErrorResult = new.target;
-                      throwTypeErrorResult = new Promise((arg0, arg1) => {
-                        let closure_0 = arg0;
-                        let closure_1 = arg1;
-                        if (null == throwTypeErrorResult.body) {
-                          arg1();
-                        }
-                        const result = maybeRebuildState.addConditionalChangeListener(() => {
-                          const andDeleteMostRecentUserCreatedThreadId = outer1_6.getAndDeleteMostRecentUserCreatedThreadId();
-                          if (null != andDeleteMostRecentUserCreatedThreadId) {
-                            const channel = outer1_8.getChannel(andDeleteMostRecentUserCreatedThreadId);
-                            callback(outer1_2[29]).wait(() => { ... });
-                            return false;
-                          }
-                        });
-                      });
-                      let c11 = 3;
+                      throwTypeErrorResult = c4;
+                      dispatcher = c4;
+                      throwTypeErrorResult = dispatcher;
+                      if (dispatcher > 0) {
+                        throwTypeErrorResult = maybeRebuildState;
+                        throwTypeErrorResult = id;
+                        throwTypeErrorResult = callback;
+                        throwTypeErrorResult = dependencyMap;
+                        let obj4 = { type: "SLOWMODE_SET_COOLDOWN", channelId: null, slowmodeType: null, cooldownMs: null };
+                        throwTypeErrorResult = lib;
+                        obj4[1] = lib.id;
+                        throwTypeErrorResult = closure_12;
+                        obj4[2] = closure_12.CreateThread;
+                        throwTypeErrorResult = dispatcher;
+                        throwTypeErrorResult = callback;
+                        throwTypeErrorResult = dependencyMap;
+                        obj4[3] = dispatcher * callback(687).Millis.SECOND;
+                        throwTypeErrorResult = callback(709).dispatch(obj4);
+                        const obj29 = callback(709);
+                      }
                     } else {
                       throwTypeErrorResult = maybeRebuildState;
                       throwTypeErrorResult = closure_8;
-                      const body10 = closure_8.body;
-                      let code6;
-                      if (body10 != null) {
-                        code6 = body10.code;
-                      }
-                      if (code6 !== constants.EXPLICIT_CONTENT) {
+                      if (429 === closure_8.status) {
                         throwTypeErrorResult = maybeRebuildState;
+                        throwTypeErrorResult = id;
+                        throwTypeErrorResult = callback;
+                        throwTypeErrorResult = dependencyMap;
+                        let obj13 = callback(4532);
+                        throwTypeErrorResult = c4;
                         throwTypeErrorResult = id;
                         throwTypeErrorResult = lib;
                         throwTypeErrorResult = dependencyMap;
-                        const obj6 = { file: null, guildId: null, analyticsLocations: null, code: null, reason: null };
-                        throwTypeErrorResult = dependencyMap;
-                        obj6[0] = dependencyMap;
+                        const intl5 = lib(1236).intl;
+                        const string = intl5.string;
                         throwTypeErrorResult = lib;
-                        obj6[1] = lib.getGuildId();
-                        throwTypeErrorResult = callback;
-                        dispatcher = callback;
-                        if (callback == null) {
-                          dispatcher = [];
+                        throwTypeErrorResult = dependencyMap;
+                        const t = lib(1236).t;
+                        if (c4) {
+                          throwTypeErrorResult = string(t.vWNFkx);
+                        } else {
+                          throwTypeErrorResult = string(t["1KEdvB"]);
                         }
-                        obj6[2] = dispatcher;
-                        const body5 = closure_8.body;
-                        let code7;
-                        if (body5 != null) {
-                          code7 = body5.code;
+                        const obj5 = { title: null, body: null };
+                        throwTypeErrorResult = id;
+                        obj5[0] = throwTypeErrorResult;
+                        throwTypeErrorResult = lib;
+                        throwTypeErrorResult = dependencyMap;
+                        const intl6 = lib(1236).intl;
+                        throwTypeErrorResult = lib;
+                        throwTypeErrorResult = dependencyMap;
+                        obj5[1] = intl6.string(lib(1236).t.Whhv4w);
+                        throwTypeErrorResult = obj13.show(obj5);
+                      } else {
+                        throwTypeErrorResult = maybeRebuildState;
+                        throwTypeErrorResult = id;
+                        throwTypeErrorResult = closure_8;
+                        const body9 = closure_8.body;
+                        let code3;
+                        throwTypeErrorResult = set;
+                        if (body9 != null) {
+                          code3 = body9.code;
                         }
-                        obj6[3] = code7;
-                        const body6 = closure_8.body;
-                        let reason;
-                        if (body6 != null) {
-                          reason = body6.reason;
+                        if (set.has(code3)) {
+                          throw tmp47;
+                        } else {
+                          const body2 = tmp47.body;
+                          let code4;
+                          if (body2 != null) {
+                            code4 = body2.code;
+                          }
+                          if (code4 === constants.INVALID_FORM_BODY) {
+                            const body3 = closure_8.body;
+                            let name;
+                            if (body3 != null) {
+                              const errors = body3.errors;
+                              if (errors != null) {
+                                name = errors.name;
+                              }
+                            }
+                            if (null != name) {
+                              throwTypeErrorResult = maybeRebuildState;
+                              throwTypeErrorResult = closure_8;
+                              throw closure_8;
+                            }
+                          }
+                          const body4 = closure_8.body;
+                          let code5;
+                          if (body4 != null) {
+                            code5 = body4.code;
+                          }
+                          if (set2.has(code5)) {
+                            if (null == dependencyMap) {
+                              throwTypeErrorResult = maybeRebuildState;
+                              throwTypeErrorResult = new.target;
+                              throwTypeErrorResult = new.target;
+                              throwTypeErrorResult = new Promise((arg0, arg1) => {
+                                let closure_0 = arg0;
+                                let closure_1 = arg1;
+                                if (null == throwTypeErrorResult.body) {
+                                  arg1();
+                                }
+                                const result = maybeRebuildState.addConditionalChangeListener(() => {
+                                  const andDeleteMostRecentUserCreatedThreadId = outer1_6.getAndDeleteMostRecentUserCreatedThreadId();
+                                  if (null != andDeleteMostRecentUserCreatedThreadId) {
+                                    const channel = outer1_8.getChannel(andDeleteMostRecentUserCreatedThreadId);
+                                    callback(outer1_2[29]).wait(() => { ... });
+                                    return false;
+                                  }
+                                });
+                              });
+                              c11 = 3;
+                            } else {
+                              throwTypeErrorResult = maybeRebuildState;
+                              throwTypeErrorResult = closure_8;
+                              const body10 = closure_8.body;
+                              let code6;
+                              if (body10 != null) {
+                                code6 = body10.code;
+                              }
+                              if (code6 !== constants.EXPLICIT_CONTENT) {
+                                throwTypeErrorResult = maybeRebuildState;
+                                throwTypeErrorResult = id;
+                                throwTypeErrorResult = lib;
+                                throwTypeErrorResult = dependencyMap;
+                                const obj6 = { file: null, guildId: null, analyticsLocations: null, code: null, reason: null };
+                                throwTypeErrorResult = dependencyMap;
+                                obj6[0] = dependencyMap;
+                                throwTypeErrorResult = lib;
+                                obj6[1] = lib.getGuildId();
+                                throwTypeErrorResult = callback;
+                                dispatcher = callback;
+                                if (callback == null) {
+                                  dispatcher = [];
+                                }
+                                obj6[2] = dispatcher;
+                                const body5 = closure_8.body;
+                                let code7;
+                                if (body5 != null) {
+                                  code7 = body5.code;
+                                }
+                                obj6[3] = code7;
+                                const body6 = closure_8.body;
+                                let reason;
+                                if (body6 != null) {
+                                  reason = body6.reason;
+                                }
+                                obj6[4] = reason;
+                                let result = lib(6190).handleUploadMessageAttachmentsErrors(obj6);
+                                const obj27 = lib(6190);
+                              }
+                            }
+                            let obj10 = lib(6043);
+                            maybeRebuildState = obj10.createNonce();
+                            let tmp89 = null != closure_8.body.attachments;
+                            if (tmp89) {
+                              tmp89 = closure_8.body.attachments.length > 0;
+                            }
+                            if (tmp89) {
+                              let obj11 = callback(709);
+                              const obj7 = { type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE", messageId: null, channelId: null, attachments: null };
+                              obj7[1] = maybeRebuildState;
+                              obj7[2] = lib.id;
+                              obj7[3] = closure_8.body.attachments;
+                              obj11.dispatch(obj7);
+                              throwTypeErrorResult = callback;
+                              throwTypeErrorResult = dependencyMap;
+                              throwTypeErrorResult = lib;
+                              throwTypeErrorResult = maybeRebuildState;
+                              throwTypeErrorResult = callback(12628)(lib.id, maybeRebuildState);
+                            }
+                          } else {
+                            let obj8 = callback(4532);
+                            obj8 = { title: null, body: null };
+                            const intl3 = lib(1236).intl;
+                            obj8[0] = intl3.string(lib(1236).t.j2d6Km);
+                            const intl4 = lib(1236).intl;
+                            obj8[1] = intl4.string(lib(1236).t.fEptJP);
+                            obj8.show(obj8);
+                          }
                         }
-                        obj6[4] = reason;
-                        let result = lib(8169).handleUploadMessageAttachmentsErrors(obj6);
-                        const obj27 = lib(8169);
                       }
                     }
-                    let obj10 = lib(7133);
-                    maybeRebuildState = obj10.createNonce();
-                    let tmp89 = null != closure_8.body.attachments;
-                    if (tmp89) {
-                      tmp89 = closure_8.body.attachments.length > 0;
-                    }
-                    if (tmp89) {
-                      let obj11 = callback(709);
-                      const obj7 = { type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE", messageId: null, channelId: null, attachments: null };
-                      obj7[1] = maybeRebuildState;
-                      obj7[2] = lib.id;
-                      obj7[3] = closure_8.body.attachments;
-                      obj11.dispatch(obj7);
-                      throwTypeErrorResult = callback;
-                      throwTypeErrorResult = dependencyMap;
-                      throwTypeErrorResult = lib;
-                      throwTypeErrorResult = maybeRebuildState;
-                      throwTypeErrorResult = callback(12481)(lib.id, maybeRebuildState);
-                    }
-                  } else {
-                    let obj8 = callback(4623);
-                    obj8 = { title: null, body: null };
-                    const intl3 = lib(1236).intl;
-                    obj8[0] = intl3.string(lib(1236).t.j2d6Km);
-                    const intl4 = lib(1236).intl;
-                    obj8[1] = intl4.string(lib(1236).t.fEptJP);
-                    obj8.show(obj8);
                   }
+                  throwTypeErrorResult = maybeRebuildState;
+                  throwTypeErrorResult = new.target;
+                  throwTypeErrorResult = new.target;
+                  throwTypeErrorResult = new Promise((arg0, arg1) => {
+                    let closure_0 = arg0;
+                    if (null == body.body) {
+                      arg1();
+                    }
+                    const result = throwTypeErrorResult.addConditionalChangeListener(() => {
+                      const channel = throwTypeErrorResult.getChannel(outer1_3.body.id);
+                      if (null != channel) {
+                        callback(table[29]).wait(() => { ... });
+                        return false;
+                      }
+                    });
+                  });
+                  c10 = 2;
+                  c11 = 1;
                 }
+              } else if (2 === tmp9) {
+                if (arg0 === 1) {
+                  c11 = 3;
+                  throw body;
+                } else if (arg0 === 2) {
+                  c11 = 3;
+                  const obj9 = { value: null, done: true };
+                  obj9[0] = body;
+                  return obj9;
+                } else {
+                  id = body;
+                  c9 = 2;
+                  obj4 = callback(5718);
+                  obj10 = { channelId: null, limit: null };
+                  obj10[0] = id.id;
+                  obj10[1] = closure_20;
+                  c10 = 5;
+                  c11 = 1;
+                  obj11 = { value: null, done: false };
+                  obj11[0] = obj4.fetchMessages(obj10);
+                  return obj11;
+                }
+              } else if (3 === tmp9) {
+                if (arg0 === 1) {
+                  c11 = 3;
+                  throw body;
+                } else if (arg0 !== 2) {
+                  throwTypeErrorResult = maybeRebuildState;
+                  lib2 = body;
+                  if (null == body.body) {
+                    obj1 = callback(4532);
+                    const obj12 = { title: null, body: null };
+                    const intl = lib(1236).intl;
+                    obj12[0] = intl.string(lib(1236).t.j2d6Km);
+                    const intl2 = lib(1236).intl;
+                    obj12[1] = intl2.string(lib(1236).t.fEptJP);
+                    obj1.show(obj12);
+                  } else {
+                    throwTypeErrorResult = maybeRebuildState;
+                    throwTypeErrorResult = id;
+                    throwTypeErrorResult = callback;
+                    throwTypeErrorResult = dependencyMap;
+                    obj13 = { type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: null, channelId: null };
+                    throwTypeErrorResult = closure_12;
+                    obj13[1] = closure_12.CreateThread;
+                    throwTypeErrorResult = lib;
+                    obj13[2] = lib.id;
+                    throwTypeErrorResult = callback(709).dispatch(obj13);
+                    throwTypeErrorResult = callback;
+                    throwTypeErrorResult = dependencyMap;
+                    const obj23 = callback(709);
+                    const obj14 = { type: "THREAD_CREATE_LOCAL", channelId: null };
+                    throwTypeErrorResult = lib2;
+                    obj14[1] = lib2.body.id;
+                    throwTypeErrorResult = callback(709).dispatch(obj14);
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = dependencyMap;
+                    const AccessibilityAnnouncer = lib(4039).AccessibilityAnnouncer;
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = dependencyMap;
+                    const intl11 = lib(1236).intl;
+                    throwTypeErrorResult = c4;
+                    throwTypeErrorResult = id;
+                    throwTypeErrorResult = lib;
+                    throwTypeErrorResult = dependencyMap;
+                    const t3 = lib(1236).t;
+                    if (c4) {
+                      let XkUoBb = t3.zDAG2N;
+                    } else {
+                      XkUoBb = t3.XkUoBb;
+                    }
+                    AccessibilityAnnouncer.announce(intl11.string(XkUoBb));
+                    const obj25 = callback(709);
+                  }
+                  c9 = 0;
+                }
+              } else {
+                if (4 === tmp9) {
+                  c9 = 0;
+                  c11 = 3;
+                } else if (arg0 === 1) {
+                  c11 = 3;
+                  throw body;
+                } else if (arg0 !== 2) {
+                  c9 = 0;
+                }
+                c9 = 0;
+                c11 = 3;
+                obj = { value: null, done: true };
+                obj[0] = body;
+                return obj;
               }
+              c9 = 0;
+              c11 = 3;
+              obj15 = { value: null, done: true };
+              obj15[0] = body;
+              return obj15;
             }
-          }
-          throwTypeErrorResult = maybeRebuildState;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new Promise((arg0, arg1) => {
-            let closure_0 = arg0;
-            if (null == body.body) {
-              arg1();
-            }
-            const result = throwTypeErrorResult.addConditionalChangeListener(() => {
-              const channel = throwTypeErrorResult.getChannel(outer1_3.body.id);
-              if (null != channel) {
-                callback(table[29]).wait(() => { ... });
-                return false;
-              }
-            });
-          });
-          let c10 = 2;
-          c11 = 1;
-        }
-      } else if (2 === tmp9) {
-        if (arg0 === 1) {
-          c11 = 3;
-          throw body;
-        } else if (arg0 === 2) {
-          c11 = 3;
-          const obj9 = { value: null, done: true };
-          obj9[0] = body;
-          return obj9;
-        } else {
-          id = body;
-          c9 = 2;
-          obj4 = callback(6826);
-          obj10 = { channelId: null, limit: null };
-          obj10[0] = id.id;
-          obj10[1] = closure_20;
-          c10 = 5;
-          c11 = 1;
-          obj11 = { value: null, done: false };
-          obj11[0] = obj4.fetchMessages(obj10);
-          return obj11;
-        }
-      } else if (3 === tmp9) {
-        if (arg0 === 1) {
-          c11 = 3;
-          throw body;
-        } else if (arg0 !== 2) {
-          throwTypeErrorResult = maybeRebuildState;
-          lib2 = body;
-          if (null == body.body) {
-            const obj1 = callback(4623);
-            const obj12 = { title: null, body: null };
-            const intl = lib(1236).intl;
-            obj12[0] = intl.string(lib(1236).t.j2d6Km);
-            const intl2 = lib(1236).intl;
-            obj12[1] = intl2.string(lib(1236).t.fEptJP);
-            obj1.show(obj12);
-          } else {
-            throwTypeErrorResult = maybeRebuildState;
-            throwTypeErrorResult = id;
-            throwTypeErrorResult = callback;
-            throwTypeErrorResult = dependencyMap;
-            obj13 = { type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: null, channelId: null };
-            throwTypeErrorResult = closure_12;
-            obj13[1] = closure_12.CreateThread;
-            throwTypeErrorResult = lib;
-            obj13[2] = lib.id;
-            throwTypeErrorResult = callback(709).dispatch(obj13);
-            throwTypeErrorResult = callback;
-            throwTypeErrorResult = dependencyMap;
-            const obj23 = callback(709);
-            const obj14 = { type: "THREAD_CREATE_LOCAL", channelId: null };
-            throwTypeErrorResult = lib2;
-            obj14[1] = lib2.body.id;
-            throwTypeErrorResult = callback(709).dispatch(obj14);
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            const AccessibilityAnnouncer = lib(4131).AccessibilityAnnouncer;
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            const intl11 = lib(1236).intl;
-            throwTypeErrorResult = c4;
-            throwTypeErrorResult = id;
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            const t3 = lib(1236).t;
-            if (c4) {
-              let XkUoBb = t3.zDAG2N;
+          } catch (throwTypeErrorResult) {
+            closure_8 = throwTypeErrorResult;
+            if (tmp4 === c9) {
+              throwTypeErrorResult = tmp2;
+              c11 = tmp2;
+              throw throwTypeErrorResult;
+            } else if (throwTypeErrorResult === throwTypeErrorResult) {
+              c10 = throwTypeErrorResult;
             } else {
-              XkUoBb = t3.XkUoBb;
+              c10 = tmp5;
             }
-            AccessibilityAnnouncer.announce(intl11.string(XkUoBb));
-            const obj25 = callback(709);
           }
-          c9 = 0;
         }
-      } else {
-        if (4 === tmp9) {
-          c9 = 0;
-          c11 = 3;
-        } else if (arg0 === 1) {
-          c11 = 3;
-          throw body;
-        } else if (arg0 !== 2) {
-          c9 = 0;
-        }
-        c9 = 0;
-        c11 = 3;
-        const obj = { value: null, done: true };
-        obj[0] = body;
-        return obj;
       }
-      c9 = 0;
-      return body;
     })();
   });
   const _createThread_ = tmp;
@@ -565,7 +627,7 @@ let result = require("noop").fileFinishedImporting("modules/threads/ThreadCreati
 
 export const PrivateThreadMode = obj;
 export const usePrivateThreadMode = function usePrivateThreadMode(parentChannel) {
-  const obj = require(5798) /* useCanUnarchiveThread */;
+  const obj = require(6052) /* useCanUnarchiveThread */;
   const canStartPublicThread = obj.useCanStartPublicThread(parentChannel);
   if (!obj2.useCanStartPrivateThread(parentChannel)) {
     return tmp2.Disabled;
@@ -711,18 +773,18 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
                 }
                 if (null != closure_1) {
                   if (closure_1.length > 0) {
-                    const obj4 = callback(6826);
+                    const obj4 = callback(5718);
                     const id = c7.id;
                     let obj = { location: null };
                     obj[0] = constants.THREAD_CREATION;
-                    let sendStickersResult = obj4.sendStickers(id, closure_1, callback(7062).parse(c7, closure_0), obj);
-                    const obj5 = callback(7062);
+                    let sendStickersResult = obj4.sendStickers(id, closure_1, callback(5971).parse(c7, closure_0), obj);
+                    const obj5 = callback(5971);
                   }
                   return sendStickersResult;
                 }
-                obj = callback(6826);
+                obj = callback(5718);
                 obj = { location: constants.THREAD_CREATION };
-                sendStickersResult = obj.sendMessage(c7.id, callback(7062).parse(c7, closure_0), undefined, obj);
+                sendStickersResult = obj.sendMessage(c7.id, callback(5971).parse(c7, closure_0), undefined, obj);
               })(c7, lib, closure_1, name, c7);
               const obj10 = parentMessageId(threadSettings[19]);
             }

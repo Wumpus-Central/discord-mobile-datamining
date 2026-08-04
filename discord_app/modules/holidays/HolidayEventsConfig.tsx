@@ -1,3 +1,4 @@
+// discord_app/modules/holidays/HolidayEventsConfig.tsx
 let obj = {
   experiment: null,
   useIsExperimentEligible() {

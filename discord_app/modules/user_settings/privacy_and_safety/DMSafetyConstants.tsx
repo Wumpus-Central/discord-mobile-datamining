@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/privacy_and_safety/DMSafetyConstants.tsx
 const obj = { DISABLED: 0, [0]: "DISABLED", NON_FRIENDS: 1, [1]: "NON_FRIENDS", FRIENDS_AND_NON_FRIENDS: 2, [2]: "FRIENDS_AND_NON_FRIENDS" };
 const items = [obj.DISABLED, require("create").DmSpamFilterV2.DISABLED];
 const items1 = [items, , ];

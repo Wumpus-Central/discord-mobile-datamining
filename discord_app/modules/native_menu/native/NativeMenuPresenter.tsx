@@ -1,3 +1,4 @@
+// discord_app/modules/native_menu/native/NativeMenuPresenter.tsx
 import noop from "noop";
 import initialize from "initialize";
 
@@ -17,7 +18,7 @@ export default function MenuContainer() {
     }
     return null != key;
   }, items1);
-  importDefault(4692)(callback);
+  importDefault(4601)(callback);
   let tmp4 = null;
   if (null != key) {
     tmp4 = null;

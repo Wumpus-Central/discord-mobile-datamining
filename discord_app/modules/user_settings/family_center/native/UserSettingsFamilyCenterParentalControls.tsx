@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/family_center/native/UserSettingsFamilyCenterParentalControls.tsx
 import _slicedToArray from "_slicedToArray";
 import FamilyCenterParentalControlsDataAndPrivacy from "FamilyCenterParentalControlsDataAndPrivacy";
 import get_ActivityIndicator from "GenericHeaderTitle";
@@ -103,7 +104,7 @@ export default function FamilyCenterParentalControlsSettings() {
         }
       }
     }
-    stackNavigation.setOptions({ title: "body", headerRight: "useStateFromStores" });
+    stackNavigation.setOptions({ title: "Array", headerRight: "HermesInternal" });
   }, items1);
   if (isFamilyCenterV3Enabled) {
     isFamilyCenterV3Enabled = selectedSubPage === items2.SCREEN_TIME_CONTROLS;

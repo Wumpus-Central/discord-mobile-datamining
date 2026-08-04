@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/native/components/GuildEventsListView.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

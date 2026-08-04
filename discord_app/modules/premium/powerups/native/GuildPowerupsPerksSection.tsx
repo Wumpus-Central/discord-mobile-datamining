@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/native/GuildPowerupsPerksSection.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -20,10 +21,10 @@ export default function GuildPowerupPerksSection(arg0) {
   obj = { title: null, description: null };
   const tmp = callback3();
   const intl = require(1236) /* getSystemLocale */.intl;
-  obj[0] = intl.string(importDefault(2317).TV3Vm8);
+  obj[0] = intl.string(importDefault(2257).TV3Vm8);
   const intl2 = require(1236) /* getSystemLocale */.intl;
-  obj[1] = intl2.string(importDefault(2317).STx9hp);
-  const items = [callback(importDefault(11823), obj), ];
+  obj[1] = intl2.string(importDefault(2257).STx9hp);
+  const items = [callback(importDefault(11657), obj), ];
   obj = {
     style: tmp.container,
     children: listings.map((type) => {

@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfileContent.tsx
 import useBadges from "useBadges";
 import importAllResult from "asyncRequireImpl";
 import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";
@@ -218,20 +219,20 @@ function EditSection(guildId) {
   let trackUserProfileAction;
   let dependencyMap;
   let useBadges;
-  let obj = guildId(8710);
+  let obj = guildId(8111);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   let obj1 = guildId(589);
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_8.getGuild(guildId));
-  dependencyMap = trackUserProfileAction(10050)();
-  useBadges = trackUserProfileAction(10050)({ guild: stateFromStores });
-  obj = { style: trackUserProfileAction(8757)().primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: null, secondaryButton: null };
+  dependencyMap = trackUserProfileAction(9814)();
+  useBadges = trackUserProfileAction(9814)({ guild: stateFromStores });
+  obj = { style: trackUserProfileAction(8083)().primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: null, secondaryButton: null };
   const tmp = trackUserProfileAction;
-  const tmp3 = trackUserProfileAction(8757)();
+  const tmp3 = trackUserProfileAction(8083)();
   obj = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
   obj1 = { size: "sm", color: null };
   obj1[1] = trackUserProfileAction(712).colors.WHITE;
-  obj[1] = callback(guildId(9591).PencilIcon, obj1);
+  obj[1] = callback(guildId(9111).PencilIcon, obj1);
   if (null != stateFromStores) {
     const intl2 = tmp4(1236).intl;
     let stringResult = intl2.string(tmp4(1236).t.HmFaFB);
@@ -242,29 +243,29 @@ function EditSection(guildId) {
   obj[2] = stringResult;
   obj[3] = function onPress() {
     trackUserProfileAction({ action: "EDIT_PROFILE" });
-    trackUserProfileAction(4253).hideActionSheet();
-    trackUserProfileAction(10511)();
+    trackUserProfileAction(4161).hideActionSheet();
+    trackUserProfileAction(5699)();
     dependencyMap();
   };
-  obj[2] = callback(guildId(4695).Button, obj);
+  obj[2] = callback(guildId(4604).Button, obj);
   let tmp6Result;
   if (null != stateFromStores) {
     const obj2 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj3 = { size: "sm", color: null };
     obj3[1] = tmp(712).colors.WHITE;
-    obj2[1] = tmp6(tmp4(9591).PencilIcon, obj3);
+    obj2[1] = tmp6(tmp4(9111).PencilIcon, obj3);
     const intl3 = tmp4(1236).intl;
     obj2[2] = intl3.string(tmp4(1236).t["PKQB/H"]);
     obj2[3] = function onPress() {
       trackUserProfileAction({ action: "EDIT_GUILD_PROFILE" });
-      trackUserProfileAction(4253).hideActionSheet();
-      trackUserProfileAction(10511)();
+      trackUserProfileAction(4161).hideActionSheet();
+      trackUserProfileAction(5699)();
       callback();
     };
-    tmp6Result = tmp6(tmp4(4695).Button, obj2);
+    tmp6Result = tmp6(tmp4(4604).Button, obj2);
   }
   obj[3] = tmp6Result;
-  return callback(trackUserProfileAction(12181), obj);
+  return callback(trackUserProfileAction(11999), obj);
 }
 function UserProfileWidgetsBoardContainer(isCurrentUser) {
   let containerBackground;
@@ -272,13 +273,13 @@ function UserProfileWidgetsBoardContainer(isCurrentUser) {
   let userId;
   isCurrentUser = isCurrentUser.isCurrentUser;
   ({ userId, isVisible, containerBackground } = isCurrentUser);
-  const tmp3 = importDefault(8757)();
+  const tmp3 = importDefault(8083)();
   const items = [tmp3.card, { backgroundColor: containerBackground }];
   const obj = { style: tmp3.profileContent, children: null };
   if (isCurrentUser) {
-    isCurrentUser = callback(tmp(12251), {});
+    isCurrentUser = callback(tmp(12069), {});
   }
-  const items1 = [isCurrentUser, callback(importDefault(12252), { userId, isVisible, cardStyle: items })];
+  const items1 = [isCurrentUser, callback(importDefault(12070), { userId, isVisible, cardStyle: items })];
   obj[1] = items1;
   return closure_20(closure_6, obj);
 }

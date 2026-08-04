@@ -1,3 +1,4 @@
+// discord_app/components_native/warnings/VADPermission.tsx
 import { jsx } from "jsxProd";
 import { Component } from "noop";
 import importAllResult from "noop";
@@ -19,7 +20,7 @@ VADPermission.prototype["render"] = function render() {
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.EJ26Oh);
   obj[2] = this.close;
-  return jsx(importDefault(4713), { title: null, body: null, onConfirm: null });
+  return jsx(importDefault(4622), { title: null, body: null, onConfirm: null });
 };
 const result = require("dispatcher").fileFinishedImporting("components_native/warnings/VADPermission.tsx");
 

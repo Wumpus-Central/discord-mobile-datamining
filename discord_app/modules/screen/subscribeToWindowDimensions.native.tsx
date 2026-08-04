@@ -1,3 +1,4 @@
+// discord_app/modules/screen/subscribeToWindowDimensions.native.tsx
 import getDimensionsStoreStateForEntry from "getDimensionsStoreStateForEntry";
 
 const result = require("set").fileFinishedImporting("modules/screen/subscribeToWindowDimensions.native.tsx");

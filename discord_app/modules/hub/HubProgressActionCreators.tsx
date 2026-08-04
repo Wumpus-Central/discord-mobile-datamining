@@ -1,3 +1,4 @@
+// discord_app/modules/hub/HubProgressActionCreators.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { HUB_PROGRESS_STEP_ORDER } from "items";
 import { GuildFeatures } from "ME";
@@ -5,7 +6,7 @@ import { GuildFeatures } from "ME";
 const require = arg1;
 let result = require("ME").fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");
 
-export const setHubProgressActionComplete = function setHubProgressActionComplete(guildId, INVITE_USER) {
+export const setHubProgressActionComplete = function setHubProgressActionComplete(guildId, JOIN_GUILD) {
   if (null != guildId) {
     guild = guild.getGuild(guildId);
     let hasItem = null != guild;
@@ -14,7 +15,7 @@ export const setHubProgressActionComplete = function setHubProgressActionComplet
       hasItem = features.has(GuildFeatures.HUB);
     }
     if (hasItem) {
-      const items = [INVITE_USER];
+      const items = [JOIN_GUILD];
       const result = items(1355).updateUserGuildSettings(guildId, (hubProgress) => {
         let flag = false;
         for (const item10008 of closure_0) {

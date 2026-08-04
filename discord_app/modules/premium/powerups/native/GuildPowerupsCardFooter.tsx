@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/native/GuildPowerupsCardFooter.tsx
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";

@@ -1,3 +1,4 @@
+// discord_app/modules/image_upload/ForceSdrEmojisStickersExperiment.tsx
 import ApexExperiment from "ApexExperiment";
 
 let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-10-force-sdr-emojis-stickers", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

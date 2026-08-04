@@ -1,3 +1,4 @@
+// discord_app/modules/messages/native/renderer/RowGeneratorConstants.tsx
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/RowGeneratorConstants.tsx");
 
 export const Changeset = { NOOP: 0, [0]: "NOOP", INSERT: 1, [1]: "INSERT", UPDATE: 2, [2]: "UPDATE", REMOVE: 3, [3]: "REMOVE" };

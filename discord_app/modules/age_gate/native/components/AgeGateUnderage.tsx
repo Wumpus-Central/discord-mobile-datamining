@@ -1,3 +1,4 @@
+// discord_app/modules/age_gate/native/components/AgeGateUnderage.tsx
 import noop from "noop";
 import { View } from "Button";
 import { HelpdeskArticles } from "ME";

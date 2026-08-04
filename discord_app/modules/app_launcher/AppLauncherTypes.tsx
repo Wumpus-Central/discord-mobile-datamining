@@ -1,3 +1,4 @@
+// discord_app/modules/app_launcher/AppLauncherTypes.tsx
 const result = require("set").fileFinishedImporting("modules/app_launcher/AppLauncherTypes.tsx");
 
 export const AppLauncherEntrypoint = { NONE: "NONE", TEXT: "TEXT", VOICE: "VOICE" };

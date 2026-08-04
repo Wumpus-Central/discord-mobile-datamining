@@ -1,3 +1,4 @@
+// discord_app/modules/search/native/components/list/SearchListRow.tsx
 import { View } from "get ActivityIndicator";
 import { SEARCH_ROW_TAP_STATE_PADDING as closure_4 } from "MessageEmbedTypes";
 import jsxProd from "jsxProd";
@@ -58,11 +59,11 @@ const memoResult = require("noop").memo((accessibilityRole) => {
   const items4 = [callback(View, { style: items3, children: icon }), , ];
   obj = { style: tmpResult.labels, children: null };
   let tmp7Result = label;
-  if (typeof label === "string") {
+  if (typeof label !== "__FORMATJS_LISTFORMAT_DATA__") {
     const obj1 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", style: null, children: null };
     obj1[3] = tmpResult.text;
     obj1[4] = label;
-    tmp7Result = tmp7(require(4281) /* Text */.Text, obj1);
+    tmp7Result = tmp7(require(4189) /* Text */.Text, obj1);
   }
   const items5 = [tmp7Result, subLabel];
   obj[1] = items5;
@@ -80,7 +81,7 @@ const memoResult = require("noop").memo((accessibilityRole) => {
   }
   items1[2] = tmp7Result;
   obj[10] = items1;
-  return closure_6(require(4812) /* PressableBase */.PressableHighlight, obj);
+  return closure_6(require(4721) /* PressableBase */.PressableHighlight, obj);
 });
 const result = require("MessageEmbedTypes").fileFinishedImporting("modules/search/native/components/list/SearchListRow.tsx");
 

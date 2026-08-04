@@ -1,3 +1,4 @@
+// discord_app/modules/premium/fractional/native/LargeCountDownPill.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -40,10 +41,10 @@ export default function LargeCountDownPill(countdownText) {
   obj = { style: tmp.largeCountdownPill, children: null };
   obj = { variant: "text-xs/bold", style: tmp.largeCountdownPillText, children: null };
   obj[2] = countdownText.countdownText.toUpperCase();
-  const items = [callback(_require(4281).Text, obj), ];
+  const items = [callback(_require(4189).Text, obj), ];
   const obj1 = { style: tmp.iconStyle, color: null };
   obj1[1] = importDefault(712).colors.TEXT_STATUS_IDLE;
-  items[1] = callback(_require(4241).CircleInformationIcon, obj1);
+  items[1] = callback(_require(4149).CircleInformationIcon, obj1);
   obj[1] = items;
   obj[1] = callback2(closure_4, obj);
   return callback(closure_3, obj);

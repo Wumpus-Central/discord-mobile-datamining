@@ -1,3 +1,4 @@
+// discord_app/modules/premium/promotions/PromotionsHooks.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import createEmptyPromotionsByType from "createEmptyPromotionsByType";

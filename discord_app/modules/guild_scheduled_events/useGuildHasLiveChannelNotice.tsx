@@ -1,3 +1,4 @@
+// discord_app/modules/guild_scheduled_events/useGuildHasLiveChannelNotice.tsx
 import noop from "noop";
 import getActiveStageChannelIds from "getActiveStageChannelIds";
 import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";

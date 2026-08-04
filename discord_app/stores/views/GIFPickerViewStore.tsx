@@ -1,3 +1,4 @@
+// discord_app/stores/views/GIFPickerViewStore.tsx
 import { GIFType } from "create";
 import { Store } from "initialize";
 

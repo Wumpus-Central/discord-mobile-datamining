@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/utils/parseProviderRouteHeadlessSessionId.tsx
 import _slicedToArray from "_slicedToArray";
 
 let c3 = "h:";
@@ -9,7 +10,7 @@ export default function parseProviderRouteHeadlessSessionId(str) {
       const first = callback(str.slice(2).split(","), 1)[0];
       if (null != first) {
         if (0 !== first.length) {
-          const value = importDefault(4966).get(first);
+          const value = importDefault(4875).get(first);
           let tmp5 = null;
           if (null != value) {
             tmp5 = null;

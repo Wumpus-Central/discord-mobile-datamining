@@ -1,3 +1,4 @@
+// discord_app/modules/activities/panel/native/ActivityPanelContainer.tsx
 import ensureGuildLoaded from "ensureGuildLoaded";
 import handleConnectionOpen from "handleConnectionOpen";
 import participantFromServer from "participantFromServer";
@@ -43,9 +44,9 @@ const memoResult = require("noop").memo(function ActivityPanelContainer() {
     }
   }, [])) {
     obj = { children: null };
-    obj[0] = jsx(importDefault(15960), {});
-    tmp2 = jsx(importDefault(15951), { children: null });
-    const tmp5 = importDefault(15951);
+    obj[0] = jsx(importDefault(15864), {});
+    tmp2 = jsx(importDefault(15855), { children: null });
+    const tmp5 = importDefault(15855);
   }
   return tmp2;
 });

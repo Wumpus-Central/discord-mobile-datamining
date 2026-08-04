@@ -1,3 +1,4 @@
+// discord_app/modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx
 import reinjectEphemerals from "reinjectEphemerals";
 import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME";
 
@@ -23,7 +24,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
     if (guild_id2 == null) {
       guild_id2 = DEFAULT_SOUND_GUILD_ID;
     }
-    return _require(4737).soundboardSoundFromAPI(found, guild_id2);
+    return _require(4646).soundboardSoundFromAPI(found, guild_id2);
   } else {
     message = message.getMessage(arg0, arg1);
     if (null != message) {
@@ -77,7 +78,7 @@ export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
         if (guild_id == null) {
           guild_id = DEFAULT_SOUND_GUILD_ID;
         }
-        return tmp3(4737).soundboardSoundFromAPI(found1, guild_id);
+        return tmp3(4646).soundboardSoundFromAPI(found1, guild_id);
       }
       tmp3 = _require;
     }

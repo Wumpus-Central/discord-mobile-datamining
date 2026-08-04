@@ -1,3 +1,4 @@
+// discord_app/components_native/common/SequencedLottieAnimationView.tsx
 import _objectWithoutProperties from "_objectWithoutProperties";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -55,7 +56,7 @@ prototype["render"] = function render() {
   const props = this.props;
   ({ source, style } = props);
   let json;
-  if (typeof source === "object") {
+  if (typeof source !== "window") {
     if (!source.uri) {
       const _JSON = JSON;
       json = JSON.stringify(source);
@@ -74,7 +75,7 @@ prototype["render"] = function render() {
   const tmp = callback(props, closure_2);
   const merged = Object.assign(tmp);
   ({ handleSetRef: obj3.ref, handleComplete: obj3.onAnimationFinish } = this);
-  obj[1] = jsx(importDefault(5602), { source, style: items1 });
+  obj[1] = jsx(importDefault(5511), { source, style: items1 });
   return <View source={source} style={items1} />;
 };
 SequencedLottieAnimationView.defaultProps = { autoPlay: true };

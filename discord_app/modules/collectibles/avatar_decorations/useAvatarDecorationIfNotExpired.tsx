@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { MAX_TIMEOUT_MS } from "ME";

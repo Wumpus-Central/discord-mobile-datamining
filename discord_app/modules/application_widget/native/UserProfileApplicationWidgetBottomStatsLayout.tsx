@@ -1,3 +1,4 @@
+// discord_app/modules/application_widget/native/UserProfileApplicationWidgetBottomStatsLayout.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import jsxProd from "jsxProd";

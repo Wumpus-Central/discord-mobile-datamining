@@ -1,3 +1,4 @@
+// discord_app/modules/guild_products/GuildProductsEligibility.tsx
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildFeatures } from "ME";
 

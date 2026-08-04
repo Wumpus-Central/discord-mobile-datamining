@@ -1,3 +1,4 @@
+// discord_app/modules/notifications_inbox/NotificationsInboxConstants.tsx
 import { NOTIFICATIONS_INBOX } from "ME";
 
 let obj = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };
@@ -30,7 +31,7 @@ export const getNotificationsInboxGuild = function getNotificationsInboxGuild(ar
     const intl = require(1236) /* getSystemLocale */.intl;
     stringResult = intl.string(require(1236) /* getSystemLocale */.t.HcoRu0);
   }
-  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "row" };
+  obj = { id: NOTIFICATIONS_INBOX, name: stringResult, description: "", icon: "Array", features: "SUBSCRIPTION" };
   obj[4] = [];
   return tmp2(1411).fromGuildBasic(obj);
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/AdvancedVoiceActivitySetting.tsx
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
 import createToggle from "createToggle";
 
@@ -14,7 +15,7 @@ createToggle = {
   },
   onValueChange: function onAdvancedVoiceActivitySettingValueChange(vadUseKrisp) {
     mode = mode.getMode();
-    let obj = importDefault(9077);
+    let obj = importDefault(8847);
     obj = { vadUseKrisp };
     obj.setMode(mode, obj);
   },

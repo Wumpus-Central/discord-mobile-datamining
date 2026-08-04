@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx");
 
 export default function useGuildPowerupColorConfig(arg0) {

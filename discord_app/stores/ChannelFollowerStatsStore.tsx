@@ -1,3 +1,4 @@
+// discord_app/stores/ChannelFollowerStatsStore.tsx
 import { Store } from "initialize";
 
 let closure_0 = { FAILED: "failed", SUCCEEDED: "succeeded" };

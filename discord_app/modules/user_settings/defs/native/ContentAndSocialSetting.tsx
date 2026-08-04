@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/defs/native/ContentAndSocialSetting.tsx
 import createToggle from "createToggle";
 
 obj = {
@@ -12,7 +13,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CONTENT_AND_SOCIAL,
   getComponent() {
-    return require(14776) /* ContentAndSocialSettings */.default;
+    return require(14676) /* ContentAndSocialSettings */.default;
   }
 };
 const route = createToggle.createRoute(obj);

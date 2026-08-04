@@ -1,3 +1,4 @@
+// discord_app/modules/keyboard/native/AnimatedKeyboardProvider.android.tsx
 import importDefaultResult from "enforcing";
 
 const result = require("enforcing").setNavigationBarContrastEnforced(false);

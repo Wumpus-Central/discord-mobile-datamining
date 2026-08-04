@@ -1,3 +1,4 @@
+// discord_app/modules/activities/useIsActivitiesAvailableInShelf.tsx
 import noop from "noop";
 
 const require = arg1;
@@ -5,9 +6,9 @@ const result = require("useIsPrivateChannelWithEnabledActivities").fileFinishedI
 
 export default function useIsActivitiesAvailableInShelf(arg0, arg1) {
   const _require = arg0;
-  const isActivitiesEnabledForCurrentPlatform = _require(10530).useIsActivitiesEnabledForCurrentPlatform();
+  const isActivitiesEnabledForCurrentPlatform = _require(10547).useIsActivitiesEnabledForCurrentPlatform();
   let tmp3 = null != arg0;
-  let obj = _require(10530);
+  let obj = _require(10547);
   if (tmp3) {
     tmp3 = "" !== arg0;
   }

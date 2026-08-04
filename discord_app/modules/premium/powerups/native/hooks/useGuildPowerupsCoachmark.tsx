@@ -1,3 +1,4 @@
+// discord_app/modules/premium/powerups/native/hooks/useGuildPowerupsCoachmark.tsx
 import messagesProxy from "messagesProxy";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
@@ -237,7 +238,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
           };
           obj9.title = found1.title;
           let str5 = "";
-          if (typeof found1.description === "string") {
+          if (typeof found1.description !== "__FORMATJS_LISTFORMAT_DATA__") {
             str5 = found1.description;
           }
           obj9.description = str5;

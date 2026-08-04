@@ -1,3 +1,4 @@
+// discord_app/modules/safety_common/native/SafetySettingsNotice.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { SafetySettingsNoticeAction as closure_4 } from "SafetyToastType";

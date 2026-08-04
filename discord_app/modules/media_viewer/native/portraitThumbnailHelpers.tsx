@@ -1,3 +1,4 @@
+// discord_app/modules/media_viewer/native/portraitThumbnailHelpers.tsx
 function lerpVarWidthThumbnailScrollBounds(closure_1, arg1) {
   if (0 === closure_1.length) {
     return 0;

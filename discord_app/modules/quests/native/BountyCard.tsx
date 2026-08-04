@@ -1,3 +1,4 @@
+// discord_app/modules/quests/native/BountyCard.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "CircleCheckIcon";
 import get_ActivityIndicator from "getSystemLocale";

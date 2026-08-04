@@ -1,3 +1,4 @@
+// discord_app/modules/voice_panel/native/controls/buttons/VoicePanelDisconnectCancelButton.tsx
 import _slicedToArray from "_slicedToArray";
 import AnimatedButtonWrapper from "AnimatedButtonWrapper";
 import participantFromServer from "participantFromServer";

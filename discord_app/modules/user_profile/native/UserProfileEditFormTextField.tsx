@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/native/UserProfileEditFormTextField.tsx
 import "noop";
 import { jsx } from "jsxProd";
 
@@ -28,13 +29,13 @@ export default function UserProfileEditFormTextField(inputRef) {
     obj = { ref: null };
     obj[0] = inputRef;
     const merged2 = Object.assign(obj);
-    let tmp9 = jsx(require(7786) /* TextArea */.TextArea, { ref: null });
+    let tmp9 = jsx(require(7649) /* TextArea */.TextArea, { ref: null });
   } else {
     obj = { ref: null };
     obj[0] = inputRef;
     const merged3 = Object.assign(obj);
     obj.isClearable = true;
-    tmp9 = jsx(require(7713) /* TextInput */.TextInput, { ref: null });
+    tmp9 = jsx(require(6730) /* TextInput */.TextInput, { ref: null });
   }
   return tmp9;
 };

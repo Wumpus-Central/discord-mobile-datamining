@@ -1,3 +1,4 @@
+// discord_common/js/packages/performance-utils/performance-polyfill.js
 let _Date = Date;
 if (Date.now) {
   let nowResult = _Date.now();
@@ -63,7 +64,7 @@ if (!tmp6.measure) {
 }
 if (!tmp6.getEntriesByType) {
   tmp6.getEntriesByType = tmp6.webkitGetEntriesByType || ((arg0) => {
-    if (typeof u !== "function") {
+    if (typeof u !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const items = [];
@@ -78,7 +79,7 @@ if (!tmp6.getEntriesByType) {
 }
 if (!tmp6.getEntriesByName) {
   tmp6.getEntriesByName = tmp6.webkitGetEntriesByName || ((arg0) => {
-    if (typeof u !== "function") {
+    if (typeof u !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const items = [];
@@ -94,7 +95,7 @@ if (!tmp6.getEntriesByName) {
 if (!tmp6.clearMarks) {
   tmp6.clearMarks = tmp6.webkitClearMarks || ((arg0) => {
     let tmp9;
-    if (typeof f !== "function") {
+    if (typeof f !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let diff = tmp - 1;
@@ -122,7 +123,7 @@ if (!tmp6.clearMarks) {
 if (!tmp6.clearMeasures) {
   tmp6.clearMeasures = tmp6.webkitClearMeasures || ((arg0) => {
     let tmp9;
-    if (typeof f !== "function") {
+    if (typeof f !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let diff = tmp - 1;
@@ -148,8 +149,8 @@ if (!tmp6.clearMeasures) {
   });
 }
 global.performance = tmp6;
-let tmp7 = typeof globalThis.define === "function";
-if (typeof globalThis.define === "function") {
+let tmp7 = typeof globalThis.define === "fileFinishedImporting";
+if (typeof globalThis.define !== "disabledUntil") {
   let ajs = globalThis.define.amd;
   if (!ajs) {
     ajs = globalThis.define.ajs;

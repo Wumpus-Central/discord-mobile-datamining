@@ -1,3 +1,4 @@
+// discord_app/modules/premium/referral_program/hooks/useReferralProgramBannerDetails.tsx
 import noop from "noop";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import emitChanges from "emitChanges";

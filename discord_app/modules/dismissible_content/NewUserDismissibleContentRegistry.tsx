@@ -1,3 +1,4 @@
+// discord_app/modules/dismissible_content/NewUserDismissibleContentRegistry.tsx
 import fetchFingerprint from "fetchFingerprint";
 import set from "set";
 

@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/getApplicationFromMessage.tsx
 import createExecutable from "createExecutable";
 import { SpotifyApplication } from "getIconURL";
 import { isSpotifyParty } from "WEB_OPEN";

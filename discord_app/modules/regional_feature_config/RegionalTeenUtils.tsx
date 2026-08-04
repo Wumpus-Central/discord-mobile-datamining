@@ -1,3 +1,4 @@
+// discord_app/modules/regional_feature_config/RegionalTeenUtils.tsx
 import noop from "noop";
 import getRegionalFeatureConfig from "getRegionalFeatureConfig";
 import set from "set";
@@ -31,7 +32,7 @@ export const useIsTeenInCountrySet = function useIsTeenInCountrySet(set) {
     }
   }, items1);
   const obj = stateFromStores(589);
-  let userIsTeen = stateFromStores(7846).useUserIsTeen();
+  let userIsTeen = stateFromStores(7713).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }
@@ -52,7 +53,7 @@ export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
   }, items1);
   let obj = set;
   const obj2 = stateFromStores(589);
-  let userIsTeen = stateFromStores(7846).useUserIsTeen();
+  let userIsTeen = stateFromStores(7713).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }

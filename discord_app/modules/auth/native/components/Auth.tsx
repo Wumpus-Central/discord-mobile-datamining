@@ -1,3 +1,4 @@
+// discord_app/modules/auth/native/components/Auth.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "PlatformTypes";
 import get_ActivityIndicator from "context";
@@ -16,10 +17,10 @@ const require = arg1;
 function NavigatorWithCaptchaHook() {
   let require;
   let tmp9;
-  let obj = require(15026) /* useIsHCaptchaModalOpenTracking */;
+  let obj = require(14926) /* useIsHCaptchaModalOpenTracking */;
   const isHCaptchaModalOpenTracking = obj.useIsHCaptchaModalOpenTracking();
   const tmp6 = callback3();
-  const tmp5 = importDefault(8283)();
+  const tmp5 = importDefault(9202)();
   [tmp9, require] = callback(importAllResult.useState(AuthStates.WELCOME), 2);
   const tmp10 = callback(importAllResult.useState(false), 2);
   importDefault = tmp11;
@@ -42,8 +43,8 @@ function NavigatorWithCaptchaHook() {
   const tmp15 = closure_10;
   const tmp16 = closure_9;
   const tmp8 = callback(importAllResult.useState(AuthStates.WELCOME), 2);
-  obj[0] = require(15027) /* registerAsset */;
-  const children = [callback2(importDefault(8313), obj), ];
+  obj[0] = require(14927) /* registerAsset */;
+  const children = [callback2(importDefault(9227), obj), ];
   if (tmp5) {
     obj = { value: null, children: null };
     obj[0] = tmp11;
@@ -97,10 +98,10 @@ function NavigatorWithCaptchaHook() {
     obj7[1] = tmp4(712).space.PX_24;
     obj7[2] = tmp4(712).space.PX_16;
     obj6[10] = obj7;
-    obj5[1] = tmp17(tmp(5665).Navigator, obj6);
+    obj5[1] = tmp17(tmp(5574).Navigator, obj6);
     obj2[1] = tmp17(closure_6, obj5);
     obj[1] = tmp17(closure_6, obj2);
-    let tmp17Result = tmp17(tmp(8311).WideAuthScrollContext.Provider, obj);
+    let tmp17Result = tmp17(tmp(9225).WideAuthScrollContext.Provider, obj);
     tmpResult = tmp(501);
   } else {
     const obj8 = { screens: null, viewStyle: null, containerStyle: null, headerBackTitle: null, initialRouteName: null, onWillFocus: null, headerStyle: null };
@@ -111,7 +112,7 @@ function NavigatorWithCaptchaHook() {
     obj8[4] = tmp7.WELCOME;
     obj8[5] = closure_5.dismiss;
     obj8[6] = { borderBottomWidth: 0 };
-    tmp17Result = tmp17(tmp(5665).Navigator, obj8);
+    tmp17Result = tmp17(tmp(5574).Navigator, obj8);
   }
   children[1] = tmp17Result;
   return tmp15(tmp16, { children });
@@ -165,7 +166,7 @@ let closure_12 = Object.fromEntries(headerTitle.map((arg0) => {
   let tmp8 = null;
   if (set.has(tmp)) {
     const obj1 = { cardStyleInterpolator: null };
-    obj1[0] = require(5667) /* createStackNavigator */.CardStyleInterpolators.forFadeFromCenter;
+    obj1[0] = require(5576) /* createStackNavigator */.CardStyleInterpolators.forFadeFromCenter;
     tmp8 = obj1;
   }
   const merged3 = Object.assign(tmp8);
@@ -192,11 +193,11 @@ const context = importAllResult.createContext(() => {
 let obj2 = { borderBottomWidth: 0, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
-    callback2(15028).initialize();
+    callback2(14928).initialize();
     return () => callback(table[21]).terminate();
   }, []);
-  const layoutEffect = importAllResult.useLayoutEffect(() => callback(6843).trackAppUIViewed(), []);
-  importDefault(15032)();
+  const layoutEffect = importAllResult.useLayoutEffect(() => callback(5736).trackAppUIViewed(), []);
+  importDefault(14932)();
   let closure_0 = importAllResult.useRef(undefined);
   return callback2(context.Provider, { value: importAllResult.useCallback(() => callback(outer1_2[7]).getTrackRegTransition(callback), [])(), children: callback2(NavigatorWithCaptchaHook, {}) });
 });

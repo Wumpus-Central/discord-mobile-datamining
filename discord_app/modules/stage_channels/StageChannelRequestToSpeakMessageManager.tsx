@@ -1,3 +1,4 @@
+// discord_app/modules/stage_channels/StageChannelRequestToSpeakMessageManager.tsx
 import fetchFingerprint from "fetchFingerprint";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import reinjectEphemerals from "reinjectEphemerals";

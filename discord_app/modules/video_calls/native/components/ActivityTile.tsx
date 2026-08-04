@@ -1,3 +1,4 @@
+// discord_app/modules/video_calls/native/components/ActivityTile.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import ManaContext from "ManaContext";
 import "context";
@@ -76,7 +77,7 @@ function ActivityTileInner(participant) {
                 v0 = 1;
                 dependencyMap = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = v0(10535)(obj1);
+                obj2[0] = v0(10620)(obj1);
                 return obj2;
               } else {
                 dependencyMap = 3;
@@ -87,7 +88,7 @@ function ActivityTileInner(participant) {
             dependencyMap = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj = outer1_0(10629);
+            obj = outer1_0(10670);
             const result = obj.setOrientationLockState(mergeGuildAvatar);
           }
           dependencyMap = 3;
@@ -305,5 +306,5 @@ export default function ActivityTile(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj[1] = callback(ActivityTileInner, obj);
-  return callback(require(3997) /* ManaContext */.ThemeContextProvider, obj);
+  return callback(require(3905) /* ManaContext */.ThemeContextProvider, obj);
 };

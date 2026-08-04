@@ -1,3 +1,4 @@
+// discord_app/modules/instant_invite/canViewInviteModal.tsx
 import { Permissions } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");

@@ -1,3 +1,4 @@
+// discord_app/modules/video_calls/native/useTrackActivityVideoPip.tsx
 import noop from "noop";
 import initialize from "initialize";
 import { AnalyticEvents } from "ME";
@@ -9,9 +10,9 @@ export default function useTrackActivityPip(arg0) {
   const _require = arg0;
   const items = [initialize];
   const stateFromStores = _require(647).useStateFromStores(items, () => pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream());
-  let tmp2 = stateFromStores(8775)(stateFromStores);
+  let tmp2 = stateFromStores(8129)(stateFromStores);
   const dependencyMap = tmp2;
-  const tmp3 = stateFromStores(10628)();
+  const tmp3 = stateFromStores(10617)();
   const React = tmp3;
   const items1 = [stateFromStores, tmp2, arg0, tmp3];
   const effect = React.useEffect(() => {

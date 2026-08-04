@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/utils/getActivityPlatformDisplayName.tsx
 import { PlatformTypes } from "ME";
 
 const result = require("isOnMetaHorizon").fileFinishedImporting("modules/user_profile/utils/getActivityPlatformDisplayName.tsx");

@@ -1,3 +1,4 @@
+// discord_app/modules/display_name_styles/native/effects/GummyStripesFromHue.tsx
 import _slicedToArray from "_slicedToArray";
 import "noop";
 import jsxProd from "jsxProd";

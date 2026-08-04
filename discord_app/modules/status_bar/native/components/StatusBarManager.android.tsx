@@ -1,3 +1,4 @@
+// discord_app/modules/status_bar/native/components/StatusBarManager.android.tsx
 import { StatusBar } from "get ActivityIndicator";
 
 class StatusBarManager {

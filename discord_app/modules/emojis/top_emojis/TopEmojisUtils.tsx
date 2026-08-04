@@ -1,3 +1,4 @@
+// discord_app/modules/emojis/top_emojis/TopEmojisUtils.tsx
 import mergeGuildAvatar from "mergeGuildAvatar";
 import getEmojiToGroupId from "getEmojiToGroupId";
 import initialize from "initialize";
@@ -16,8 +17,8 @@ export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(gu
         }
       }
       if (!isFetching.getIsFetching(guildId)) {
-        const topEmojis = require(8566) /* fetchTopEmojis */.fetchTopEmojis(guildId);
-        const obj = require(8566) /* fetchTopEmojis */;
+        const topEmojis = require(9354) /* fetchTopEmojis */.fetchTopEmojis(guildId);
+        const obj = require(9354) /* fetchTopEmojis */;
       }
     }
   }

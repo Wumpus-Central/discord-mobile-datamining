@@ -1,3 +1,4 @@
+// discord_app/modules/activities/utils/embeddedActivityLocationUtils.tsx
 const result = require("set").fileFinishedImporting("modules/activities/utils/embeddedActivityLocationUtils.tsx");
 
 export const getEmbeddedActivityLocationChannelId = function getEmbeddedActivityLocationChannelId(_location) {

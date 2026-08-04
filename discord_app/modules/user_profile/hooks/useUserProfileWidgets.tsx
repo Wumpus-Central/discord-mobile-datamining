@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/hooks/useUserProfileWidgets.tsx
 import fetchFingerprint from "fetchFingerprint";
 import createUserWidgetFromServer from "createUserWidgetFromServer";
 import initialize from "initialize";

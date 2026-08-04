@@ -1,7 +1,8 @@
+// discord_app/modules/media_viewer/native/getMediaViewerStateForScreen.tsx
 let result = require("set").fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
 
 export default function getMediaViewerStateForScreen(arg0, arg1, closure_1) {
-  let obj = require(8768) /* isValidImageAttachment */;
+  let obj = require(8121) /* isValidImageAttachment */;
   const size = obj.flattenSource(closure_1, true);
   if (null == size) {
     obj = { maximumZoomScale: 1, width: null, height: null };

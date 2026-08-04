@@ -1,3 +1,4 @@
+// discord_app/modules/quests/types/v2/Video.tsx
 const result = require("set").fileFinishedImporting("modules/quests/types/v2/Video.tsx");
 
 export const videoAssetFromServer = function videoAssetFromServer(url) {

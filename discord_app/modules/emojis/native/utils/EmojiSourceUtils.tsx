@@ -1,3 +1,4 @@
+// discord_app/modules/emojis/native/utils/EmojiSourceUtils.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 import { NativeModules } from "get ActivityIndicator";
 

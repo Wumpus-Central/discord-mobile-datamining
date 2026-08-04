@@ -1,3 +1,4 @@
+// discord_app/modules/native_permissions/NativePermissionUtils.tsx
 import { ProcessArgs } from "get";
 import importDefaultResult from "isEnabled";
 

@@ -1,3 +1,4 @@
+// discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx
 import { WebAnalyticsEvents } from "sum";
 
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/analytics-utils/AnalyticsSchema.tsx");

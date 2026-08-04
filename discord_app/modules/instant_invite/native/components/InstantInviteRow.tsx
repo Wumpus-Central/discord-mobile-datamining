@@ -1,3 +1,4 @@
+// discord_app/modules/instant_invite/native/components/InstantInviteRow.tsx
 import { View } from "Button";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import updateWithLatestInvite from "updateWithLatestInvite";

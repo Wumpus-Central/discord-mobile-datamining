@@ -1,3 +1,4 @@
+// discord_app/modules/native_permissions/NativePermissionUtils.null.tsx
 import { NativePermissionBaseUtils } from "requestAuthorization";
 
 class NativePermissionDesktopNullUtils extends NativePermissionBaseUtils {

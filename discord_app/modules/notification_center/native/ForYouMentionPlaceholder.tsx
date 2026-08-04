@@ -1,3 +1,4 @@
+// discord_app/modules/notification_center/native/ForYouMentionPlaceholder.tsx
 import "noop";
 import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

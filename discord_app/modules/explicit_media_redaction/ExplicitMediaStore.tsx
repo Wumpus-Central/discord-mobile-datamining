@@ -1,3 +1,4 @@
+// discord_app/modules/explicit_media_redaction/ExplicitMediaStore.tsx
 import { Store } from "initialize";
 
 const require = arg1;
@@ -48,7 +49,7 @@ Object.defineProperty(prototype, "validContentScanVersion", {
       const _Math = Math;
       return Math.min(num2, 4);
     }
-    obj = require(5820) /* apexExperiment */;
+    obj = require(5867) /* apexExperiment */;
   },
   set: undefined
 });

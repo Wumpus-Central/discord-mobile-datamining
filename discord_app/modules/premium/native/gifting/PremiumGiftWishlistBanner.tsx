@@ -1,3 +1,4 @@
+// discord_app/modules/premium/native/gifting/PremiumGiftWishlistBanner.tsx
 import closure_3 from "ME";
 import useSelectPremiumGift from "useSelectPremiumGift";
 import get_ActivityIndicator from "expandEventProperties";

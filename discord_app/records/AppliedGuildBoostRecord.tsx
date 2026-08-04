@@ -1,3 +1,4 @@
+// discord_app/records/AppliedGuildBoostRecord.tsx
 import "toJS";
 
 let prototype;
@@ -35,7 +36,7 @@ prototype["createFromServer"] = function createFromServer(user) {
       date = new Date(user.ends_at);
     }
   }
-  if (typeof prototype !== "function") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const tmp5 = new prototype(str2, _Date, str, prototype, new.target, id, guild_id, user_id, user);

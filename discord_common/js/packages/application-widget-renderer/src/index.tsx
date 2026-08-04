@@ -1,3 +1,4 @@
+// discord_common/js/packages/application-widget-renderer/src/index.tsx
 const result = require("resolveTextComponentValues").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/index.tsx");
 for (const key10018 in require("toAsciiDigits")) {
   let tmp3 = key10018;

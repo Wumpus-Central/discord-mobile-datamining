@@ -1,3 +1,4 @@
+// discord_app/modules/safe_area/SafeAreaStore.native.tsx
 import keys from "keys";
 
 let obj = { safeAreaInsets: require("EMPTY_SAFE_AREA_INSETS").INITIAL_SAFE_AREA_INSETS };

@@ -1,3 +1,4 @@
+// discord_app/modules/forwarding/canForwardMessage.tsx
 import isSubscriptionGated from "isSubscriptionGated";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

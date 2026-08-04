@@ -1,3 +1,4 @@
+// discord_app/lib/uploader/webpConversion.tsx
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;
@@ -59,7 +60,7 @@ function _shouldConvertToWebP2() {
                 const items = ["image/png"];
                 if (items.includes(obj18.type)) {
                   c4 = 1;
-                  if (typeof obj18.arrayBuffer === "function") {
+                  if (typeof obj18.arrayBuffer === "fileFinishedImporting") {
                     c5 = 4;
                     c6 = 1;
                     const obj2 = { value: null, done: false };

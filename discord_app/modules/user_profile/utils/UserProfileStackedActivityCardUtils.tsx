@@ -1,3 +1,4 @@
+// discord_app/modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx
 import { ActivityTypes } from "ME";
 
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");

@@ -1,3 +1,4 @@
+// discord_app/modules/threads/getThreadAutoArchiveTimeOnce.tsx
 import generateOldThreadCutoff from "generateOldThreadCutoff";
 
 let result = require("DISCORD_EPOCH").fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");

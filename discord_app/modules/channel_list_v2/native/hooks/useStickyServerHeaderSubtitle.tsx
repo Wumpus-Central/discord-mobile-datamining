@@ -1,3 +1,4 @@
+// discord_app/modules/channel_list_v2/native/hooks/useStickyServerHeaderSubtitle.tsx
 import handleInviteData from "handleInviteData";
 import { GuildFeatures } from "ME";
 

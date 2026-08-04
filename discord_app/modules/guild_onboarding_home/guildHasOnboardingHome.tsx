@@ -1,3 +1,4 @@
+// discord_app/modules/guild_onboarding_home/guildHasOnboardingHome.tsx
 import ME from "ME";
 
 let c3;

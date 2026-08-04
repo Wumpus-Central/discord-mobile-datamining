@@ -1,3 +1,4 @@
+// discord_app/modules/user_settings/UserSettingsManager.tsx
 import "initialize";
 
 let require = arg1;
@@ -26,7 +27,7 @@ prototype["ensureTimezoneUpdated"] = function ensureTimezoneUpdated() {
     const _Date = Date;
     const date = new Date();
     const timezoneOffset = date.getTimezoneOffset();
-    let TimezoneOffset = timezoneOffset(3958).TimezoneOffset;
+    let TimezoneOffset = timezoneOffset(3866).TimezoneOffset;
     if (TimezoneOffset.getSetting() !== timezoneOffset) {
       const _setImmediate = setImmediate;
       setImmediate(() => {

@@ -1,3 +1,4 @@
+// discord_app/modules/premium/native/PremiumAnalyticsUtils.tsx
 import ME from "ME";
 
 let c3;
@@ -53,13 +54,13 @@ export const trackPremiumSubscriptionCancellationStarted = function trackPremium
   obj[1] = type;
   let tmp4;
   if (null != closure_0) {
-    const premiumPlanItem = require(3931) /* getPremiumPlanItem */.getPremiumPlanItem(closure_0);
+    const premiumPlanItem = require(3839) /* getPremiumPlanItem */.getPremiumPlanItem(closure_0);
     let id1;
     if (premiumPlanItem != null) {
       id1 = premiumPlanItem.id;
     }
     tmp4 = id1;
-    const obj4 = require(3931) /* getPremiumPlanItem */;
+    const obj4 = require(3839) /* getPremiumPlanItem */;
   }
   obj[2] = tmp4;
   let paymentGatewayPlanId;
@@ -95,13 +96,13 @@ export const trackPremiumSubscriptionCancellationFlowStep = function trackPremiu
   obj[1] = type;
   let tmp4;
   if (null != subscription) {
-    const premiumPlanItem = require(3931) /* getPremiumPlanItem */.getPremiumPlanItem(subscription);
+    const premiumPlanItem = require(3839) /* getPremiumPlanItem */.getPremiumPlanItem(subscription);
     let id1;
     if (premiumPlanItem != null) {
       id1 = premiumPlanItem.id;
     }
     tmp4 = id1;
-    const obj4 = require(3931) /* getPremiumPlanItem */;
+    const obj4 = require(3839) /* getPremiumPlanItem */;
   }
   obj[2] = tmp4;
   let paymentGatewayPlanId;

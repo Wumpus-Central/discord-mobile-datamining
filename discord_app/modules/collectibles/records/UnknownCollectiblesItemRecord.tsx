@@ -1,3 +1,4 @@
+// discord_app/modules/collectibles/records/UnknownCollectiblesItemRecord.tsx
 import "fromServer";
 
 const require = arg1;
@@ -16,7 +17,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   const fromServerResult = super.fromServer(arg0);
   const merged = Object.assign(fromServerResult);
   obj.type = require(1901) /* CollectiblesItemType */.CollectiblesItemType.NONE;
-  if (typeof prototype !== "function") {
+  if (typeof prototype !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   tmp2 = new tmp2(obj, fromServerResult, this, prototype, obj);

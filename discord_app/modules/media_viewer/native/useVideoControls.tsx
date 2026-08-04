@@ -1,3 +1,4 @@
+// discord_app/modules/media_viewer/native/useVideoControls.tsx
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";

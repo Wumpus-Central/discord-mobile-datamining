@@ -1,3 +1,4 @@
+// discord_app/design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx
 import get_ActivityIndicator from "get ActivityIndicator";
 import PX_4 from "PX_4";
 import { jsx } from "jsxProd";
@@ -39,7 +40,7 @@ const memoResult = require("noop").memo((accessibilityLabel) => {
     obj = { style: null };
     const items1 = [tmp3.bar, animatedBarStyles];
     obj[0] = items1;
-    let tmp4Result = tmp4(importDefault(4146).View, obj);
+    let tmp4Result = tmp4(importDefault(4054).View, obj);
   } else {
     const obj1 = { style: null };
     obj1[0] = tmp3.bar;

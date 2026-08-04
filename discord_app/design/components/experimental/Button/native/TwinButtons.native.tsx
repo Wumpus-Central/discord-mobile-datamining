@@ -1,3 +1,4 @@
+// discord_app/design/components/experimental/Button/native/TwinButtons.native.tsx
 import noop from "noop";
 import { View } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
@@ -18,7 +19,7 @@ const result = require("jsxProd").fileFinishedImporting("design/components/exper
 
 export const TwinButtons = function TwinButtons(children) {
   let _require;
-  let obj = _require(4701);
+  let obj = _require(4610);
   let tmp = callback(obj.useFontScale() > 1.2);
   _require = tmp;
   obj = {

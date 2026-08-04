@@ -1,3 +1,4 @@
+// discord_app/modules/guild_moderation/native/BanConfirm.tsx
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "TextArea";
 import get_ActivityIndicator from "context";

@@ -1,3 +1,4 @@
+// discord_app/modules/parent_tools/native/FamilyCenterActivityPage.tsx
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import jsxProd from "jsxProd";
@@ -21,25 +22,25 @@ const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/na
 
 export default function FamilyCenterActivityPage() {
   const tmp = createCacheKey();
-  let obj = require(7259) /* useUserIdsForLinkStatus */;
+  let obj = require(6258) /* useUserIdsForLinkStatus */;
   obj = { style: tmp.scrollView, children: null };
   const activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = { style: tmp.container, children: null };
-  const items = [callback(importDefault(14023), {}), ];
+  const items = [callback(importDefault(13923), {}), ];
   if (0 === activeLinkUserIds.length) {
     const obj1 = { children: null };
-    const items1 = [tmp3(tmp7(14025), {}), tmp3(tmp7(14035), {}), ];
+    const items1 = [tmp3(tmp7(13925), {}), tmp3(tmp7(13935), {}), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.dataConfirmation;
-    obj2[1] = tmp3(tmp7(11238), {});
+    obj2[1] = tmp3(tmp7(11126), {});
     items1[2] = tmp3(tmp6, obj2);
     obj1[0] = items1;
     let tmp3Result = tmp5(closure_6, obj1);
   } else {
-    tmp3Result = tmp3(tmp7(14039), {});
+    tmp3Result = tmp3(tmp7(13939), {});
   }
   items[1] = tmp3Result;
   obj[1] = items;
-  obj[1] = callback(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, children: closure_7(closure_3, obj) });
+  obj[1] = callback(require(5181) /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, children: closure_7(closure_3, obj) });
   return callback(closure_4, obj);
 };

@@ -1,3 +1,4 @@
+// discord_app/modules/guild_communication_disabled/CommunicationDisabledManager.tsx
 import trackCommunicationDisabled from "trackCommunicationDisabled";
 import closure_5 from "trackCommunicationDisabled";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -48,7 +49,7 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
         importDefault(709).dispatch(obj1);
         const obj4 = importDefault(709);
       }
-      obj6 = require(3902) /* isCommunicationDisabled */;
+      obj6 = require(3810) /* isCommunicationDisabled */;
     }
   }
 }

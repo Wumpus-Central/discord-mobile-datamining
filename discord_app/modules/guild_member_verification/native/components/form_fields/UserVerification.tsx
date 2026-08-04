@@ -1,3 +1,4 @@
+// discord_app/modules/guild_member_verification/native/components/form_fields/UserVerification.tsx
 import "noop";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -18,22 +19,22 @@ export default function UserVerification(arg0) {
     return null;
   } else {
     const platform = field.platform;
-    let tmp5 = platform === require(4105) /* MAX_RESULTS_PER_PAGE */.UserVerificationFieldPlatforms.PHONE;
+    let tmp5 = platform === require(4013) /* MAX_RESULTS_PER_PAGE */.UserVerificationFieldPlatforms.PHONE;
     if (tmp5) {
       let obj = { passesVerification: null, platform: null };
-      obj[0] = verification[tmp12(undefined, 4105).UserVerificationFieldPlatforms.PHONE];
-      obj[1] = tmp12(4105).UserVerificationFieldPlatforms.PHONE;
-      tmp5 = callback(importDefault(8261), obj);
-      const tmp4 = importDefault(8261);
+      obj[0] = verification[tmp12(undefined, 4013).UserVerificationFieldPlatforms.PHONE];
+      obj[1] = tmp12(4013).UserVerificationFieldPlatforms.PHONE;
+      tmp5 = callback(importDefault(9185), obj);
+      const tmp4 = importDefault(9185);
     }
     const items = [tmp5, , ];
     obj = { passesVerification: null, platform: null };
-    obj[0] = verification[require(undefined, 4105) /* MAX_RESULTS_PER_PAGE */.UserVerificationFieldPlatforms.EMAIL];
-    obj[1] = require(4105) /* MAX_RESULTS_PER_PAGE */.UserVerificationFieldPlatforms.EMAIL;
-    items[1] = callback(importDefault(8261), obj);
+    obj[0] = verification[require(undefined, 4013) /* MAX_RESULTS_PER_PAGE */.UserVerificationFieldPlatforms.EMAIL];
+    obj[1] = require(4013) /* MAX_RESULTS_PER_PAGE */.UserVerificationFieldPlatforms.EMAIL;
+    items[1] = callback(importDefault(9185), obj);
     obj = { style: null, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
     obj[0] = tmp.emailPhoneNote;
-    if (platform === require(4105) /* MAX_RESULTS_PER_PAGE */.UserVerificationFieldPlatforms.PHONE) {
+    if (platform === require(4013) /* MAX_RESULTS_PER_PAGE */.UserVerificationFieldPlatforms.PHONE) {
       const intl2 = tmp12(1236).intl;
       let stringResult = intl2.string(tmp12(1236).t["jMh+TY"]);
     } else {
@@ -42,7 +43,7 @@ export default function UserVerification(arg0) {
     }
     const obj1 = { children: null };
     obj[3] = stringResult;
-    items[2] = callback(require(4281) /* Text */.Text, obj);
+    items[2] = callback(require(4189) /* Text */.Text, obj);
     obj1[0] = items;
     return closure_5(closure_4, obj1);
   }

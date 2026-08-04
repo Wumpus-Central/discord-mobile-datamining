@@ -1,3 +1,4 @@
+// discord_app/modules/guilds_bar/native/utils/isGuildsBarGuildDataEqual.tsx
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/isGuildsBarGuildDataEqual.tsx");
 
 export default function isGuildsBarGuildDataEqual(icon, icon2) {
