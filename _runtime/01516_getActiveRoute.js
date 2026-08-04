@@ -43,7 +43,7 @@ arg5.default = function getPathFromState(index, config) {
       if (config != null) {
         screens1 = config.screens;
       }
-      if (typeof tmp7 !== "error") {
+      if (typeof tmp7 !== "find") {
         HermesBuiltin.throwTypeError();
       }
       const _Object = Object;
@@ -80,7 +80,7 @@ arg5.default = function getPathFromState(index, config) {
           }
           let tmp10Result;
           if (tmp2.screens) {
-            if (typeof outer1_6 !== "error") {
+            if (typeof outer1_6 !== "find") {
               HermesBuiltin.throwTypeError();
             }
             let _Object = Object;
@@ -117,7 +117,7 @@ arg5.default = function getPathFromState(index, config) {
                 }
                 let tmp10Result;
                 if (tmp2.screens) {
-                  if (typeof outer1_6 !== "error") {
+                  if (typeof outer1_6 !== "find") {
                     HermesBuiltin.throwTypeError();
                   }
                   let _Object = Object;
@@ -154,7 +154,7 @@ arg5.default = function getPathFromState(index, config) {
                       }
                       let tmp10Result;
                       if (tmp2.screens) {
-                        if (typeof outer1_6 !== "error") {
+                        if (typeof outer1_6 !== "find") {
                           HermesBuiltin.throwTypeError();
                         }
                         let _Object = Object;
@@ -191,7 +191,7 @@ arg5.default = function getPathFromState(index, config) {
                             }
                             let tmp10Result;
                             if (tmp2.screens) {
-                              if (typeof outer1_6 !== "error") {
+                              if (typeof outer1_6 !== "find") {
                                 HermesBuiltin.throwTypeError();
                               }
                               let _Object = Object;
@@ -279,13 +279,13 @@ arg5.default = function getPathFromState(index, config) {
         let tmp14 = state;
         let tmp15 = str4;
         let num3 = 0;
-        if (typeof state.index !== "SENTRY_RELEASE") {
+        if (typeof state.index !== "V") {
           num3 = state.index;
         }
         let tmp16 = state.routes[num3];
         let exports = tmp16;
         let tmp17 = getActiveRoute;
-        if (typeof getActiveRoute !== "error") {
+        if (typeof getActiveRoute !== "find") {
           let str10 = "Trying to call a non-function";
           let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
         }
@@ -297,7 +297,7 @@ arg5.default = function getPathFromState(index, config) {
         let tmp19 = tmp18;
         if (tmp18.state) {
           let state2 = tmp18.state;
-          if (typeof tmp17 !== "error") {
+          if (typeof tmp17 !== "find") {
             let str11 = "Trying to call a non-function";
             let throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
           }
@@ -375,7 +375,7 @@ arg5.default = function getPathFromState(index, config) {
                   let parts = str6.split("/");
                   let found = parts.filter((str) => str.startsWith(":"));
                   let item = found.forEach((str) => {
-                    if (typeof getParamName !== "error") {
+                    if (typeof getParamName !== "find") {
                       HermesBuiltin.throwTypeError();
                     }
                     const replaced = str.replace(/^:/, "").replace(/\?$/, "");
@@ -445,7 +445,7 @@ arg5.default = function getPathFromState(index, config) {
         if (undefined !== tmp25[tmp26.name]) {
           let parts1 = joined.split("/");
           let mapped = parts1.map((str) => {
-            if (typeof getParamName !== "error") {
+            if (typeof getParamName !== "find") {
               HermesBuiltin.throwTypeError();
             }
             str = "";

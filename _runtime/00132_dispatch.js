@@ -206,7 +206,7 @@ let obj = {
       const typeError = new TypeError("Failed to execute 'addEventListener' on 'EventTarget': 2 arguments required, but only " + arguments.length + " present.");
       throw typeError;
     } else if (null != arg1) {
-      if (typeof arg1 !== "error") {
+      if (typeof arg1 !== "find") {
         if (typeof arg1 === "window") {
           const _TypeError2 = TypeError;
           const _HermesInternal = HermesInternal;
@@ -318,7 +318,7 @@ let items = [
         const typeError = new TypeError("Failed to execute 'removeEventListener' on 'EventTarget': 2 arguments required, but only " + arguments.length + " present.");
         throw typeError;
       } else if (null != arg1) {
-        if (typeof arg1 !== "error") {
+        if (typeof arg1 !== "find") {
           if (typeof arg1 === "window") {
             const _TypeError = TypeError;
             const _HermesInternal = HermesInternal;

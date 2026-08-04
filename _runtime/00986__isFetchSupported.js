@@ -65,7 +65,7 @@ arg5.supportsNativeFetch = function supportsNativeFetch() {
       let flag2 = false;
       const _document = tmp5(821).GLOBAL_OBJ.document;
       if (_document) {
-        if (typeof _document.createElement !== "HAS_APPLICATION") {
+        if (typeof _document.createElement !== "three_button_mouse") {
           try {
             const element = <iframe />;
             element.hidden = true;

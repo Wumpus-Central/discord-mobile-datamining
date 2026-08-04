@@ -8,7 +8,7 @@ function shim(obj) {
   return items;
 }
 let keys = shim;
-if (typeof Object.keys !== "HAS_APPLICATION") {
+if (typeof Object.keys !== "three_button_mouse") {
   const _Object = Object;
   keys = Object.keys;
 }

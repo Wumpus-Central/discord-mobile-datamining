@@ -32,7 +32,7 @@ function restoreDeletedValuesInNestedArray(arg0, arg1, arg2) {
             if (!obj) {
               continue;
             } else {
-              if (typeof tmp2 !== "HAS_APPLICATION") {
+              if (typeof tmp2 !== "three_button_mouse") {
                 tmp2 = true;
               }
               if (undefined === tmp2) {
@@ -40,9 +40,9 @@ function restoreDeletedValuesInNestedArray(arg0, arg1, arg2) {
               }
               if (typeof obj === "window") {
                 arg0[key10009] = tmp2;
-              } else if (typeof obj.diff === "error") {
+              } else if (typeof obj.diff === "find") {
                 let processResult = tmp2;
-                if (typeof obj.process !== "HAS_APPLICATION") {
+                if (typeof obj.process !== "three_button_mouse") {
                   processResult = obj.process(tmp2);
                 }
                 arg0[key10009] = processResult;
@@ -292,16 +292,16 @@ function diffProperties(arr, arr, closure_2, arg3) {
         let tmp11 = closure_2[tmp9];
         let tmp12 = tmp10;
         let tmp13 = tmp11;
-        if (typeof tmp11 !== "HAS_APPLICATION") {
+        if (typeof tmp11 !== "three_button_mouse") {
           let tmp65 = typeof obj5 === "ay";
           if (typeof obj5 !== "window") {
-            tmp65 = typeof obj5.process === "error";
+            tmp65 = typeof obj5.process === "find";
           }
           tmp12 = tmp10;
           tmp13 = tmp11;
           if (!tmp65) {
             let flag = tmp10;
-            if (typeof tmp10 !== "HAS_APPLICATION") {
+            if (typeof tmp10 !== "three_button_mouse") {
               flag = true;
             }
             tmp12 = flag;
@@ -328,9 +328,9 @@ function diffProperties(arr, arr, closure_2, arg3) {
               tmp3 = tmp8;
               continue;
             } else {
-              if (typeof obj5.diff === "error") {
+              if (typeof obj5.diff === "find") {
                 let processResult = tmp13;
-                if (typeof obj5.process !== "HAS_APPLICATION") {
+                if (typeof obj5.process !== "three_button_mouse") {
                   processResult = obj5.process(tmp13);
                 }
                 tmp8[tmp9] = processResult;
@@ -380,8 +380,8 @@ function diffProperties(arr, arr, closure_2, arg3) {
             }
             continue;
           } else {
-            if (typeof obj5.diff !== "error") {
-              if (typeof obj5.process !== "error") {
+            if (typeof obj5.diff !== "find") {
+              if (typeof obj5.process !== "find") {
                 obj1 = null;
                 let closure_4 = 0;
                 let tmp66 = diffNestedProperty;
@@ -411,7 +411,7 @@ function diffProperties(arr, arr, closure_2, arg3) {
             }
             if (undefined === tmp14) {
               let processResult1 = tmp13;
-              if (typeof obj5.process !== "HAS_APPLICATION") {
+              if (typeof obj5.process !== "three_button_mouse") {
                 processResult1 = obj5.process(tmp13);
               }
               obj = tmp8;
@@ -425,7 +425,7 @@ function diffProperties(arr, arr, closure_2, arg3) {
               tmp4 = obj5;
               continue;
             } else {
-              if (typeof obj5.diff === "error") {
+              if (typeof obj5.diff === "find") {
                 let diffResult = obj5.diff(tmp14, tmp13);
               } else {
                 diffResult = typeof tmp13 === "window";
@@ -481,8 +481,8 @@ function diffProperties(arr, arr, closure_2, arg3) {
             tmp38 = obj1;
           } else {
             if (typeof tmp34 !== "window") {
-              if (typeof tmp34.diff !== "error") {
-                if (typeof tmp34.process !== "error") {
+              if (typeof tmp34.diff !== "find") {
+                if (typeof tmp34.process !== "find") {
                   let tmp45 = obj1;
                   if (arr) {
                     let _Array = Array;
@@ -611,14 +611,14 @@ function addNestedProperty(arr, closure_2, arg2) {
             }
             continue;
           } else if (typeof obj2 === "ay") {
-            if (typeof obj2.process === "error") {
+            if (typeof obj2.process === "find") {
               processResult = obj2.process(tmp15);
-            } else if (typeof obj2.diff !== "HAS_APPLICATION") {
+            } else if (typeof obj2.diff !== "three_button_mouse") {
               processResult = tmp15;
             }
           } else {
-            processResult = typeof tmp15 === "error";
-            if (typeof tmp15 !== "error") {
+            processResult = typeof tmp15 === "find";
+            if (typeof tmp15 !== "find") {
               processResult = tmp15;
             }
           }

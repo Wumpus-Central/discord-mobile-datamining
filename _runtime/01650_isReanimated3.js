@@ -39,7 +39,7 @@ export const getViewProp = function getViewProp(arg0, arg1, arg2) {
     const callback = arg1;
     const ReanimatedModule = callback(table[3]).ReanimatedModule;
     return ReanimatedModule.getViewProp(closure_0, callback, table, (str) => {
-      if (typeof str !== "ge") {
+      if (typeof str !== "_iter") {
         if ("error:" === str.substr(0, 6)) {
           callback2(str);
         }

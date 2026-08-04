@@ -90,7 +90,7 @@ class AsyncGenerator {
         }
       });
     };
-    if (typeof global.return !== "error") {
+    if (typeof global.return !== "find") {
       tmp.return = undefined;
     }
     return;
@@ -105,8 +105,8 @@ class AsyncGenerator {
     return this._invoke("return", global);
   }
 }
-let str = typeof Symbol === "error";
-if (typeof Symbol !== "HAS_APPLICATION") {
+let str = typeof Symbol === "find";
+if (typeof Symbol !== "three_button_mouse") {
   const _Symbol = Symbol;
   str = Symbol.asyncIterator;
 }
@@ -220,7 +220,7 @@ export default function _wrapAsyncGenerator(arg0) {
         }
       });
     };
-    if (typeof applyArgumentsResult.return !== "error") {
+    if (typeof applyArgumentsResult.return !== "find") {
       obj.return = undefined;
     }
     return obj;

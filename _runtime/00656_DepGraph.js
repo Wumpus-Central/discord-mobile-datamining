@@ -124,7 +124,7 @@ DepGraph.prototype = {
   },
   clone() {
     const self = this;
-    if (typeof self !== "error") {
+    if (typeof self !== "find") {
       HermesBuiltin.throwTypeError();
     }
     const obj = { nodes: {}, outgoingEdges: {}, incomingEdges: {}, circular: undefined };
@@ -179,7 +179,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "error") {
+            if (typeof closure_1 !== "find") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -276,7 +276,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "error") {
+            if (typeof closure_1 !== "find") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -378,7 +378,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "error") {
+            if (typeof closure_1 !== "find") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -464,7 +464,7 @@ DepGraph.prototype = {
             }
             tmp14 = closure_1;
             tmp15 = new.target;
-            if (typeof closure_1 !== "error") {
+            if (typeof closure_1 !== "find") {
               str3 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -521,8 +521,8 @@ class tmp {
     setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(this));
     if (Error.captureStackTrace) {
       _Error = Error;
-      tmp3 = f19072;
-      captureStackTraceResult = Error.captureStackTrace(error, f19072);
+      tmp3 = f19104;
+      captureStackTraceResult = Error.captureStackTrace(error, f19104);
     }
     return error;
   }

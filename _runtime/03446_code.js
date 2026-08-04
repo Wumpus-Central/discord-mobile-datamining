@@ -1,15 +1,15 @@
-import formatDistance from "formatDistance";
+import translateSeconds from "translateSeconds";
 import buildFormatLongFn from "buildFormatLongFn";
 import formatRelative from "formatRelative";
 import buildLocalizeFn from "buildLocalizeFn";
 import module_3451 from "module_3451";
 
-if (!formatDistance) {
+if (!translateSeconds) {
   let obj = { default: null };
-  obj[0] = formatDistance;
+  obj[0] = translateSeconds;
   let tmp3 = obj;
 } else {
-  tmp3 = formatDistance;
+  tmp3 = translateSeconds;
 }
 if (!buildFormatLongFn) {
   obj = { default: null };
@@ -40,5 +40,5 @@ if (!module_3451) {
   tmp11 = module_3451;
 }
 
-export default { code: "ro", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "lt", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

@@ -86,7 +86,7 @@ function convertToPlainObject(type) {
           }
         }
         const merged1 = Object.assign(obj4);
-        let isInstanceOfResult = typeof globalThis.CustomEvent === "as";
+        let isInstanceOfResult = typeof globalThis.CustomEvent === "tee";
         if (typeof globalThis.CustomEvent !== "Array") {
           tmp2Result = tmp2(827);
           isInstanceOfResult = tmp2Result.isInstanceOf(type, globalThis.CustomEvent);
@@ -1206,9 +1206,9 @@ arg5.extractExceptionKeysForMessage = function extractExceptionKeysForMessage(ar
 };
 arg5.fill = function fill(arg0, arg1, arg2) {
   if (arg1 in arg0) {
-    if (typeof arg0[arg1] !== "HAS_APPLICATION") {
+    if (typeof arg0[arg1] !== "three_button_mouse") {
       const tmp10 = arg2(tmp4);
-      if (typeof tmp10 !== "HAS_APPLICATION") {
+      if (typeof tmp10 !== "three_button_mouse") {
         markFunctionWrapped(tmp10, tmp4);
       }
       try {

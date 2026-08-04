@@ -199,7 +199,7 @@ export const startMapper = function startMapper(fn, arr2, items) {
   fn = function f() {
     __mapperRegistry = __mapperRegistry.__mapperRegistry;
     if (undefined === __mapperRegistry) {
-      if (typeof outer1_4 !== "error") {
+      if (typeof outer1_4 !== "find") {
         HermesBuiltin.throwTypeError();
       }
       function updateMappersOrder() {

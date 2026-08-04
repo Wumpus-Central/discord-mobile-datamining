@@ -29,12 +29,12 @@ obj = {
     return obj;
   },
   timing(arg0, arg1) {
-    let f66766 = arg1;
+    let f66831 = arg1;
     let closure_1 = arg0;
     const obj = {};
     const merged = Object.assign(closure_1);
-    f66766 = (arg0) => {
-      value.setValue(f66766.toValue);
+    f66831 = (arg0) => {
+      value.setValue(f66831.toValue);
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -67,12 +67,12 @@ obj = {
     return obj;
   },
   spring(animation, arg1) {
-    let f66767 = arg1;
+    let f66832 = arg1;
     let closure_1 = animation;
     const obj = {};
     const merged = Object.assign(closure_1);
-    f66767 = (arg0) => {
-      animation.setValue(f66767.toValue);
+    f66832 = (arg0) => {
+      animation.setValue(f66832.toValue);
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -114,14 +114,14 @@ obj = {
     return obj;
   },
   sequence(arg0) {
-    if (typeof mockCompositeAnimation !== "error") {
+    if (typeof mockCompositeAnimation !== "find") {
       HermesBuiltin.throwTypeError();
     }
-    let f66765 = arg0;
+    let f66830 = arg0;
     const obj = {};
     const merged = Object.assign(obj);
-    f66765 = (arg0) => {
-      const item = f66765.forEach((start) => start.start());
+    f66830 = (arg0) => {
+      const item = f66830.forEach((start) => start.start());
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -154,14 +154,14 @@ obj = {
     return obj;
   },
   parallel(items, arg1) {
-    if (typeof mockCompositeAnimation !== "error") {
+    if (typeof mockCompositeAnimation !== "find") {
       HermesBuiltin.throwTypeError();
     }
-    let f66765 = items;
+    let f66830 = items;
     const obj = {};
     const merged = Object.assign(obj);
-    f66765 = (arg0) => {
-      const item = f66765.forEach((start) => start.start());
+    f66830 = (arg0) => {
+      const item = f66830.forEach((start) => start.start());
       if (arg0 != null) {
         arg0({ finished: true });
       }
@@ -194,14 +194,14 @@ obj = {
     return obj;
   },
   stagger(arg0, arg1) {
-    if (typeof mockCompositeAnimation !== "error") {
+    if (typeof mockCompositeAnimation !== "find") {
       HermesBuiltin.throwTypeError();
     }
-    let f66765 = arg1;
+    let f66830 = arg1;
     const obj = {};
     const merged = Object.assign(obj);
-    f66765 = (arg0) => {
-      const item = f66765.forEach((start) => start.start());
+    f66830 = (arg0) => {
+      const item = f66830.forEach((start) => start.start());
       if (arg0 != null) {
         arg0({ finished: true });
       }

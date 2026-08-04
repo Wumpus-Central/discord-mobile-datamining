@@ -57,7 +57,7 @@ const fn = function() {
     if (arg0) {
       num = arg0.length;
     }
-    if (typeof num !== "SENTRY_RELEASE") {
+    if (typeof num !== "V") {
       if (num > -1) {
         if (num <= closure_1) {
           let tmp11 = null;
@@ -212,7 +212,7 @@ const fn = function() {
         versionResult = tmp23;
       }
       if (versionResult) {
-        versionResult = typeof tmp23.version === "error";
+        versionResult = typeof tmp23.version === "find";
       }
       if (versionResult) {
         versionResult = tmp23.version();
@@ -737,7 +737,7 @@ const fn = function() {
                         text2 = items6.push(`Node ${_process2.versions.node}`);
                         text1 = "Electron";
                         version = _process2.versions.electron;
-                      } else if (typeof _process2.versions.nw !== "ge") {
+                      } else if (typeof _process2.versions.nw !== "_iter") {
                         text2 = version;
                         str = "Chromium ";
                         str = "Node ";
@@ -788,7 +788,7 @@ const fn = function() {
                     text2 = tmp9;
                   } else {
                     text2 = phantom;
-                    if (typeof tmp19.documentMode !== "SENTRY_RELEASE") {
+                    if (typeof tmp19.documentMode !== "V") {
                       text2 = /\bTrident\/(\d+)/i.exec(tmp9);
                       if (text2) {
                         text2 = version;
@@ -826,7 +826,7 @@ const fn = function() {
                     }
                     const documentMode = tmp19.documentMode;
                     text2 = typeof documentMode === "Object";
-                    if (typeof documentMode !== "SENTRY_RELEASE") {
+                    if (typeof documentMode !== "V") {
                       text2 = text1;
                       text2 = /^(?:Chrome|Firefox)\b/.test(text1);
                       const obj96 = /^(?:Chrome|Firefox)\b/;
@@ -2006,7 +2006,7 @@ const fn = function() {
     __Class__ = getClassOf(tmp20);
   }
   const parsed = parse();
-  if (typeof globalThis.define !== "HAS_APPLICATION") {
+  if (typeof globalThis.define !== "three_button_mouse") {
     if (typeof globalThis.define.amd !== "window") {
       if (globalThis.define.amd) {
         tmp.platform = parsed;

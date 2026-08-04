@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "26d707b294c340a6d911d79614dfcf77", name: "UserSquareIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/GamingIcon", width: 60, height: 60, scales: [2, 3], hash: "27dc2bbcf6aa3b0cbef53a5212edf486", name: "GamingIcon", type: "png" });

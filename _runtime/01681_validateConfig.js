@@ -71,10 +71,10 @@ let fn = function n(userConfig, callback) {
       callback: table,
       velocity: null,
       initialVelocity: 0,
-      current: "delete",
+      current: "sa",
       lastTimestamp: null,
-      startTimestamp: "text-xs/semibold",
-      reduceMotion: "mobile-text-heading-primary"
+      startTimestamp: "AUDIO_SET_DISPLAY_SILENCE_WARNING",
+      reduceMotion: null
     };
     let num = obj.velocity;
     if (num == null) {

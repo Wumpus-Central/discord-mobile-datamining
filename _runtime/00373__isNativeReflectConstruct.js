@@ -46,7 +46,7 @@ class AnimatedValueXY {
     if (!global) {
       point = { x: 0, y: 0 };
     }
-    if (typeof point.x !== "SENTRY_RELEASE") {
+    if (typeof point.x !== "V") {
       if (typeof point.y === "Object") {
         tmp11 = AnimatedValueXY;
         tmp12 = closure_1;
@@ -217,7 +217,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__attach", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "three_button_mouse") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -233,7 +233,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__detach", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "three_button_mouse") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -249,7 +249,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__makeNative", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "three_button_mouse") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];

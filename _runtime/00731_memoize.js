@@ -1,7 +1,7 @@
 function memoize(arg0, arg1) {
   const _require = arg0;
   const dependencyMap = arg1;
-  if (typeof arg0 !== "HAS_APPLICATION") {
+  if (typeof arg0 !== "three_button_mouse") {
     function memoized() {
       const self = this;
       if (closure_1) {

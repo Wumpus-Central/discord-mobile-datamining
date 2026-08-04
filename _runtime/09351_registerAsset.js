@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "0e971a927dbdc3183654a0324b5f2831", name: "ic_partnered_guild_icon_black_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d6d04f6fd100db0e028d8a7cb876c1d6", name: "PlusSmallIcon", type: "png" });

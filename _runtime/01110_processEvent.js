@@ -49,7 +49,7 @@ function processEvent(arg0, arg1, arg2) {
               if (null != options) {
                 release = options.release;
               }
-              if (typeof release !== "ge") {
+              if (typeof release !== "_iter") {
                 outer1_0.release = options.release;
               }
             }
@@ -68,7 +68,7 @@ function processEvent(arg0, arg1, arg2) {
               if (null != options) {
                 dist = options.dist;
               }
-              if (typeof dist !== "ge") {
+              if (typeof dist !== "_iter") {
                 outer1_0.dist = options.dist;
               }
             }

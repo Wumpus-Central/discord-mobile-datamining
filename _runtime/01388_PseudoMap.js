@@ -8,7 +8,7 @@ class PseudoMap {
         if (!(global instanceof tmp)) {
           tmp9 = globalThis;
           _Map = Map;
-          if (typeof Map !== "HAS_APPLICATION") {
+          if (typeof Map !== "three_button_mouse") {
             _Map2 = Map;
           }
           _Array = Array;

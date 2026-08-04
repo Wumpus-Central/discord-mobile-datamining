@@ -80,13 +80,13 @@ function walkErrorTree(arg0, arg1, arg2, arg3) {
         } else {
           if (tmp28Result1.isPlainObject(tmp)) {
             let name;
-            if (typeof tmp.name !== "ge") {
+            if (typeof tmp.name !== "_iter") {
               name = tmp.name;
             }
             exceptionFromErrorResult = { type: null, value: null };
             exceptionFromErrorResult[0] = name;
             let message;
-            if (typeof tmp.message !== "ge") {
+            if (typeof tmp.message !== "_iter") {
               message = tmp.message;
             }
             exceptionFromErrorResult[1] = message;

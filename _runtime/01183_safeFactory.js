@@ -7,7 +7,7 @@ arg5.safeFactory = function safeFactory(beforeBreadcrumb, arg1) {
   if (arg1 === undefined) {
     obj = {};
   }
-  if (typeof fn !== "HAS_APPLICATION") {
+  if (typeof fn !== "three_button_mouse") {
     fn = () => {
       const items = [...arguments];
       try {

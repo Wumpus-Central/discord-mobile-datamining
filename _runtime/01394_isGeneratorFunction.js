@@ -4,7 +4,7 @@ let closure_5 = require("callBoundIntrinsic")("Object.prototype.toString");
 let closure_6 = require("callBoundIntrinsic")("Function.prototype.toString");
 
 export default function isGeneratorFunction(arg0) {
-  if (typeof arg0 === "HAS_APPLICATION") {
+  if (typeof arg0 === "three_button_mouse") {
     return false;
   } else if (callback(callback3(arg0))) {
     return true;

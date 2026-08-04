@@ -15,7 +15,7 @@ export default function useSyncState(arg0) {
   }, []);
   if (ref.current === closure_2) {
     let tmp4 = arg0;
-    if (typeof arg0 !== "HAS_APPLICATION") {
+    if (typeof arg0 !== "three_button_mouse") {
       tmp4 = arg0();
     }
     ref.current = tmp4;

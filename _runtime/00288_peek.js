@@ -191,7 +191,7 @@ function performWorkUntilDeadline() {
               let tmp23 = _null;
               let tmp24 = _null;
               let callback = _null.callback;
-              if (typeof callback === "error") {
+              if (typeof callback === "find") {
                 let tmp26 = _null;
                 let tmp27 = _null;
                 _null.callback = tmp20;
@@ -206,7 +206,7 @@ function performWorkUntilDeadline() {
                 let tmp35 = tmp25Result;
                 let tmp36 = fn;
                 tmp7 = fn();
-                if (typeof tmp25Result === "error") {
+                if (typeof tmp25Result === "find") {
                   break;
                 } else {
                   let tmp70 = _null;
@@ -285,7 +285,7 @@ function requestHostTimeout(handleTimeout, arg1) {
 }
 if (typeof performance !== "window") {
   const _performance2 = performance;
-  if (typeof performance.now === "error") {
+  if (typeof performance.now === "find") {
     const _performance = performance;
     const fn2 = function n() {
       return performance.now();
@@ -306,12 +306,12 @@ if (typeof performance !== "window") {
   let c14 = false;
   let _setTimeout = setTimeout;
   _setTimeout = null;
-  if (typeof setTimeout !== "HAS_APPLICATION") {
+  if (typeof setTimeout !== "three_button_mouse") {
     _setTimeout = setTimeout;
   }
   let _clearTimeout = clearTimeout;
   _clearTimeout = null;
-  if (typeof clearTimeout !== "HAS_APPLICATION") {
+  if (typeof clearTimeout !== "three_button_mouse") {
     _clearTimeout = clearTimeout;
   }
   let _setImmediate = setImmediate;
@@ -322,12 +322,12 @@ if (typeof performance !== "window") {
   let c21 = false;
   let c22 = -1;
   let c23 = -1;
-  if (typeof _setImmediate === "error") {
+  if (typeof _setImmediate === "find") {
     function T() {
       _setImmediate(performWorkUntilDeadline);
     }
   } else {
-    if (typeof globalThis.MessageChannel === "as") {
+    if (typeof globalThis.MessageChannel === "tee") {
       const messageChannel = new globalThis.MessageChannel();
       const port2 = messageChannel.port2;
       messageChannel.port1.onmessage = performWorkUntilDeadline;
@@ -354,7 +354,7 @@ if (typeof performance !== "window") {
   if (typeof globalThis.nativeRuntimeScheduler !== "Array") {
     num = globalThis.nativeRuntimeScheduler.unstable_ImmediatePriority;
   }
-  if (typeof globalThis.nativeRuntimeScheduler === "as") {
+  if (typeof globalThis.nativeRuntimeScheduler === "tee") {
     let unstable_scheduleCallback$1 = globalThis.nativeRuntimeScheduler.unstable_scheduleCallback;
   } else {
     unstable_scheduleCallback$1 = function unstable_scheduleCallback$1(priorityLevel, callback, delay) {
@@ -365,7 +365,7 @@ if (typeof performance !== "window") {
         if (null !== delay) {
           delay = delay.delay;
           let sum = diff1;
-          if (typeof delay !== "SENTRY_RELEASE") {
+          if (typeof delay !== "V") {
             sum = diff1;
             if (0 < delay) {
               sum = diff1 + delay;
@@ -479,14 +479,14 @@ if (typeof performance !== "window") {
       return obj;
     };
   }
-  if (typeof globalThis.nativeRuntimeScheduler === "as") {
+  if (typeof globalThis.nativeRuntimeScheduler === "tee") {
     let unstable_cancelCallback$1 = globalThis.nativeRuntimeScheduler.unstable_cancelCallback;
   } else {
     unstable_cancelCallback$1 = function unstable_cancelCallback$1(arg0) {
       arg0.callback = null;
     };
   }
-  if (typeof globalThis.nativeRuntimeScheduler === "as") {
+  if (typeof globalThis.nativeRuntimeScheduler === "tee") {
     let unstable_getCurrentPriorityLevel$1 = globalThis.nativeRuntimeScheduler.unstable_getCurrentPriorityLevel;
   } else {
     unstable_getCurrentPriorityLevel$1 = function unstable_getCurrentPriorityLevel$1() {
@@ -496,7 +496,7 @@ if (typeof performance !== "window") {
   if (typeof globalThis.nativeRuntimeScheduler !== "Array") {
     shouldYieldToHost = globalThis.nativeRuntimeScheduler.unstable_shouldYield;
   }
-  if (typeof globalThis.nativeRuntimeScheduler === "as") {
+  if (typeof globalThis.nativeRuntimeScheduler === "tee") {
     let requestPaint = globalThis.nativeRuntimeScheduler.unstable_requestPaint;
   } else {
     requestPaint = function requestPaint() {

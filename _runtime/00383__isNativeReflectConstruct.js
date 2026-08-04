@@ -57,7 +57,7 @@ let obj = {
       let __makeNativeResult = obj.__makeNative(arg0);
     }
     let fn = callback3(callback2(self.prototype), "__makeNative", self);
-    if (typeof fn !== "HAS_APPLICATION") {
+    if (typeof fn !== "three_button_mouse") {
       fn = (items) => fn.apply(self, items);
     }
     const items = [arg0];
@@ -70,17 +70,17 @@ let items = [
     key: "__getValue",
     value: function __getValue() {
       const _transforms = this._transforms;
-      const f101617 = (__getValue) => __getValue.__getValue();
+      const f101715 = (__getValue) => __getValue.__getValue();
       return _transforms.map((obj) => {
         obj = {};
         for (const key10006 in arg0) {
           let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f101620;
+          let tmp6 = f101718;
           let tmp7 = outer1_1;
-          if (arr instanceof f101620(outer1_1[6])) {
-            let tmp4 = f101620;
-            obj[key10006] = f101620(arr);
+          if (arr instanceof f101718(outer1_1[6])) {
+            let tmp4 = f101718;
+            obj[key10006] = f101718(arr);
             continue;
           } else {
             let _Array = Array;
@@ -100,12 +100,12 @@ let items = [
                 for (const key10013 in arr) {
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f101620;
+                  let tmp10 = f101718;
                   let tmp11 = outer1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f101620(outer1_1[6])) {
-                    let tmp2 = f101620;
-                    tmp3 = f101620(tmp9);
+                  if (tmp9 instanceof f101718(outer1_1[6])) {
+                    let tmp2 = f101718;
+                    tmp3 = f101718(tmp9);
                   }
                   obj[key10013] = tmp3;
                   continue;
@@ -129,21 +129,21 @@ let items = [
   {
     key: "__getValueWithStaticTransforms",
     value: function __getValueWithStaticTransforms(arr) {
-      let f101619 = [];
+      let f101717 = [];
       const _transforms = this._transforms;
-      f101619 = (__getValue) => {
-        f101619.push(__getValue.__getValue());
+      f101717 = (__getValue) => {
+        f101717.push(__getValue.__getValue());
       };
       const mapped = _transforms.map((obj) => {
         obj = {};
         for (const key10006 in arg0) {
           let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f101620;
+          let tmp6 = f101718;
           let tmp7 = outer1_1;
-          if (arr instanceof f101620(outer1_1[6])) {
-            let tmp4 = f101620;
-            obj[key10006] = f101620(arr);
+          if (arr instanceof f101718(outer1_1[6])) {
+            let tmp4 = f101718;
+            obj[key10006] = f101718(arr);
             continue;
           } else {
             let _Array = Array;
@@ -163,12 +163,12 @@ let items = [
                 for (const key10013 in arr) {
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f101620;
+                  let tmp10 = f101718;
                   let tmp11 = outer1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f101620(outer1_1[6])) {
-                    let tmp2 = f101620;
-                    tmp3 = f101620(tmp9);
+                  if (tmp9 instanceof f101718(outer1_1[6])) {
+                    let tmp2 = f101718;
+                    tmp3 = f101718(tmp9);
                   }
                   obj[key10013] = tmp3;
                   continue;
@@ -187,17 +187,17 @@ let items = [
         }
         return obj;
       });
-      f101619 = () => f101619.shift();
+      f101717 = () => f101717.shift();
       return arr.map((obj) => {
         obj = {};
         for (const key10006 in arg0) {
           let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f101620;
+          let tmp6 = f101718;
           let tmp7 = outer1_1;
-          if (arr instanceof f101620(outer1_1[6])) {
-            let tmp4 = f101620;
-            obj[key10006] = f101620(arr);
+          if (arr instanceof f101718(outer1_1[6])) {
+            let tmp4 = f101718;
+            obj[key10006] = f101718(arr);
             continue;
           } else {
             let _Array = Array;
@@ -217,12 +217,12 @@ let items = [
                 for (const key10013 in arr) {
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f101620;
+                  let tmp10 = f101718;
                   let tmp11 = outer1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f101620(outer1_1[6])) {
-                    let tmp2 = f101620;
-                    tmp3 = f101620(tmp9);
+                  if (tmp9 instanceof f101718(outer1_1[6])) {
+                    let tmp2 = f101718;
+                    tmp3 = f101718(tmp9);
                   }
                   obj[key10013] = tmp3;
                   continue;
@@ -247,17 +247,17 @@ let items = [
     key: "__getAnimatedValue",
     value: function __getAnimatedValue() {
       const _transforms = this._transforms;
-      const f101620 = (__getAnimatedValue) => __getAnimatedValue.__getAnimatedValue();
+      const f101718 = (__getAnimatedValue) => __getAnimatedValue.__getAnimatedValue();
       return _transforms.map((obj) => {
         obj = {};
         for (const key10006 in arg0) {
           let tmp5 = key10006;
           let arr = arg0[key10006];
-          let tmp6 = f101620;
+          let tmp6 = f101718;
           let tmp7 = outer1_1;
-          if (arr instanceof f101620(outer1_1[6])) {
-            let tmp4 = f101620;
-            obj[key10006] = f101620(arr);
+          if (arr instanceof f101718(outer1_1[6])) {
+            let tmp4 = f101718;
+            obj[key10006] = f101718(arr);
             continue;
           } else {
             let _Array = Array;
@@ -277,12 +277,12 @@ let items = [
                 for (const key10013 in arr) {
                   let tmp8 = key10013;
                   let tmp9 = arr[key10013];
-                  let tmp10 = f101620;
+                  let tmp10 = f101718;
                   let tmp11 = outer1_1;
                   let tmp3 = tmp9;
-                  if (tmp9 instanceof f101620(outer1_1[6])) {
-                    let tmp2 = f101620;
-                    tmp3 = f101620(tmp9);
+                  if (tmp9 instanceof f101718(outer1_1[6])) {
+                    let tmp2 = f101718;
+                    tmp3 = f101718(tmp9);
                   }
                   obj[key10013] = tmp3;
                   continue;
@@ -313,7 +313,7 @@ let items = [
         let __addChildResult = obj.__addChild(self);
       }
       let fn = callback3(callback2(self.prototype), "__attach", self);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "three_button_mouse") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -329,7 +329,7 @@ let items = [
         let __removeChildResult = obj.__removeChild(self);
       }
       let fn = callback3(callback2(self.prototype), "__detach", self);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "three_button_mouse") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);

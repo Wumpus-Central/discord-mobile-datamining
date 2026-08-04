@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "4e9d569d897ff379f07644deddf6baf5", name: "ScreenXIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/activities/images", width: 445, height: 482, scales: [1], hash: "578f09ddbff611181344fe43546bae68", name: "announcement_birb", type: "png" });

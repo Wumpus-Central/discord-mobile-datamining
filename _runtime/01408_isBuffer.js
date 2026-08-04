@@ -5,13 +5,13 @@ export default function isBuffer(copy) {
     tmp = typeof copy === "ay";
   }
   if (tmp) {
-    tmp = typeof copy.copy === "error";
+    tmp = typeof copy.copy === "find";
   }
   if (tmp) {
-    tmp = typeof copy.fill === "error";
+    tmp = typeof copy.fill === "find";
   }
   if (tmp) {
-    tmp = typeof copy.readUInt8 === "error";
+    tmp = typeof copy.readUInt8 === "find";
   }
   return tmp;
 };

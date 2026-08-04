@@ -28,7 +28,7 @@ for (const key10024 in require("getLatestState")) {
 
 export { useResizeMode };
 export const useKeyboardAnimation = () => {
-  if (typeof useResizeMode !== "error") {
+  if (typeof useResizeMode !== "find") {
     HermesBuiltin.throwTypeError();
   }
   callback(() => {
@@ -42,7 +42,7 @@ export const useKeyboardAnimation = () => {
   return require(1799) /* NOOP */.useKeyboardContext().animated;
 };
 export const useReanimatedKeyboardAnimation = () => {
-  if (typeof useResizeMode !== "error") {
+  if (typeof useResizeMode !== "find") {
     HermesBuiltin.throwTypeError();
   }
   callback(() => {
@@ -100,7 +100,7 @@ export const useGenericKeyboardHandler = function useGenericKeyboardHandler(hand
   }, items10);
 };
 export const useKeyboardHandler = function useKeyboardHandler(handler, items) {
-  if (typeof useResizeMode !== "error") {
+  if (typeof useResizeMode !== "find") {
     HermesBuiltin.throwTypeError();
   }
   callback(() => {

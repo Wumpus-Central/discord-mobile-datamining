@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/self_mod/stranger_danger/images", width: 21, height: 20, scales: [1, 2, 3], hash: "4ea1c192cad9acc1fe190c6de3d2e5ff", name: "ic_thumbsdown", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/application_streaming", width: 300, height: 120, scales: [2, 3], hash: "a3a7de10a959d0177fccd05afcb73752", name: "img_stream_ended_dark", type: "png" });

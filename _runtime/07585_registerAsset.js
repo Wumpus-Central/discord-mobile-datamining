@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/SunsetIcon", width: 60, height: 60, scales: [2, 3], hash: "9f9f6665c181624b81b98f40c0532d57", name: "SunsetIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/AppIcon", width: 60, height: 60, scales: [2, 3], hash: "2a589a040df4c6bcca56de9fa304d36a", name: "AppIcon", type: "png" });

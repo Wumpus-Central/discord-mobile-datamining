@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "b5850b914f9528f3de18a75020fab1b9", name: "img_account_sync_facebook_white", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "dd9ba5b8ac4831db353c60f9d72ff648", name: "img_account_sync_bluesky_light_and_dark", type: "png" });

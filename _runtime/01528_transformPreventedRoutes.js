@@ -101,7 +101,7 @@ export default function PreventRemoveProvider(children) {
   const items2 = [tmp9, first1];
   let value = obj.useMemo(() => {
     const obj = { setPreventRemove: c6, preventedRoutes: null };
-    if (typeof c6 !== "error") {
+    if (typeof c6 !== "find") {
       HermesBuiltin.throwTypeError();
     }
     const items = [...first1.values()];

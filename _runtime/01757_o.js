@@ -160,7 +160,7 @@ function parseLength(str) {
   const match = /([+-]?\d*(\.\d+)?)([\w\W]+)?/g.exec(str);
   let NumberResult = null;
   if (match) {
-    if (typeof fn !== "error") {
+    if (typeof fn !== "find") {
       HermesBuiltin.throwTypeError();
     }
     let endsWithResult = str.endsWith("px");

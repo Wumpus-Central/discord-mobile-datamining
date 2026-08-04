@@ -255,7 +255,7 @@ function instrumentSupabaseClient(auth) {
             let tmp6 = tmp5;
             if (tmp5) {
               let tmp7 = item10014;
-              tmp5 = typeof arg0.auth[tmp4] === "error";
+              tmp5 = typeof arg0.auth[tmp4] === "find";
             }
             if (tmp5) {
               let tmp8 = item10014;
@@ -273,7 +273,7 @@ function instrumentSupabaseClient(auth) {
             let tmp18 = tmp17;
             if (tmp17) {
               let tmp19 = nextResult;
-              tmp17 = typeof auth.auth.admin[tmp16] === "error";
+              tmp17 = typeof auth.auth.admin[tmp16] === "find";
             }
             if (tmp17) {
               let tmp20 = nextResult;
@@ -305,7 +305,7 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
   supabaseClient = supabaseClient.supabaseClient;
   return {
     setupOnce() {
-      if (typeof outer1_13 !== "error") {
+      if (typeof outer1_13 !== "find") {
         HermesBuiltin.throwTypeError();
       }
       if (supabaseClient) {
@@ -354,7 +354,7 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
                 let tmp6 = tmp5;
                 if (tmp5) {
                   let tmp7 = item10014;
-                  tmp5 = typeof arg0.auth[tmp4] === "error";
+                  tmp5 = typeof arg0.auth[tmp4] === "find";
                 }
                 if (tmp5) {
                   let tmp8 = item10014;
@@ -372,7 +372,7 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
                 let tmp18 = tmp17;
                 if (tmp17) {
                   let tmp19 = nextResult;
-                  tmp17 = typeof auth.auth.admin[tmp16] === "error";
+                  tmp17 = typeof auth.auth.admin[tmp16] === "find";
                 }
                 if (tmp17) {
                   let tmp20 = nextResult;

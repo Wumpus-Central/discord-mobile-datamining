@@ -16,7 +16,7 @@ let fn = function n(_nextAnimation, arg1, arg2, callback, reduceMotion) {
   let obj = _require(num[0]);
   const fn = function l() {
     let tmpResult = _nextAnimation;
-    if (typeof _nextAnimation !== "HAS_APPLICATION") {
+    if (typeof _nextAnimation !== "three_button_mouse") {
       tmpResult = tmp();
     }
     _nextAnimation = tmpResult;

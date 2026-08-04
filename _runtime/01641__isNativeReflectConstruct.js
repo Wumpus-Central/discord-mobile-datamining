@@ -50,8 +50,8 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
   let AnimatedComponent = name;
   const importDefault = arg1;
   if (!isJest) {
-    let tmp4 = typeof name === "HAS_APPLICATION";
-    if (typeof name !== "HAS_APPLICATION") {
+    let tmp4 = typeof name === "three_button_mouse";
+    if (typeof name !== "three_button_mouse") {
       tmp4 = name.prototype && name.prototype.isReactComponent;
       let tmp5 = name.prototype && name.prototype.isReactComponent;
     }
@@ -487,7 +487,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
           if (!closure_13) {
             if (!tmp4Result4.isFabric()) {
               if ("getReduceMotion" in exiting) {
-                if (typeof exiting.getReduceMotion === "error") {
+                if (typeof exiting.getReduceMotion === "find") {
                   let reduceMotionFromConfig = tmp4(tmp5[22]).getReduceMotionFromConfig(exiting.getReduceMotion());
                   const tmp4Result5 = tmp4(tmp5[22]);
                 }
@@ -711,7 +711,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
         const tmp8 = null != _styles && items.length === _styles.length && items.every((viewDescriptors) => {
           let hasItem = viewDescriptors === _styles[arg1];
           if (hasItem) {
-            if (typeof isStyleAttached !== "error") {
+            if (typeof isStyleAttached !== "find") {
               HermesBuiltin.throwTypeError();
             }
             viewDescriptors = viewDescriptors.viewDescriptors;
@@ -740,7 +740,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
               if (!items.some((viewDescriptors) => {
                 let tmp = viewDescriptors !== closure_0;
                 if (!tmp) {
-                  if (typeof closure_0 !== "error") {
+                  if (typeof closure_0 !== "find") {
                     HermesBuiltin.throwTypeError();
                   }
                   viewDescriptors = viewDescriptors.viewDescriptors;
@@ -936,7 +936,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name) {
       value: function _isReducedMotion(getReduceMotion) {
         if (getReduceMotion) {
           if ("getReduceMotion" in getReduceMotion) {
-            if (typeof getReduceMotion.getReduceMotion === "error") {
+            if (typeof getReduceMotion.getReduceMotion === "find") {
               let reduceMotionFromConfig = AnimatedComponent(tmp9[22]).getReduceMotionFromConfig(getReduceMotion.getReduceMotion());
               const obj2 = AnimatedComponent(tmp9[22]);
             }

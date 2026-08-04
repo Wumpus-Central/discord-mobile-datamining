@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/stickers/native/images", width: 250, height: 120, scales: [2, 3], hash: "97335968179b868ec33c96b39450902f", name: "img_premium_canvas_mobile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 32, scales: [1, 2, 3], hash: "2650502107a79cae01df0fa151a7570a", name: "ic_file_small_video", type: "png" });

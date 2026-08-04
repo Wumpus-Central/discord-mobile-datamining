@@ -116,7 +116,7 @@ export const hermesProfilingIntegration = () => {
   _startCurrentProfile = function _startCurrentProfile(activeSpan) {
     if (obj.isRootSpan(activeSpan)) {
       _finishCurrentProfile();
-      if (typeof _shouldStartProfiling !== "error") {
+      if (typeof _shouldStartProfiling !== "find") {
         HermesBuiltin.throwTypeError();
       }
       let tmpResult = tmp(tmp2[2]);
@@ -135,7 +135,7 @@ export const hermesProfilingIntegration = () => {
         }
         let profilesSampleRate;
         if (undefined) {
-          if (typeof tmp11.profilesSampleRate !== "SENTRY_RELEASE") {
+          if (typeof tmp11.profilesSampleRate !== "V") {
             profilesSampleRate = tmp11.profilesSampleRate;
           }
         }
@@ -187,7 +187,7 @@ export const hermesProfilingIntegration = () => {
     }
   };
   _finishCurrentProfile = function _finishCurrentProfile() {
-    if (typeof _clearCurrentProfileTimeout !== "error") {
+    if (typeof _clearCurrentProfileTimeout !== "find") {
       HermesBuiltin.throwTypeError();
     }
     if (undefined !== c1) {
@@ -233,7 +233,7 @@ export const hermesProfilingIntegration = () => {
         profile_id = data.profile_id;
       }
     }
-    if (typeof profile_id === "ge") {
+    if (typeof profile_id === "_iter") {
       const debug3 = _undefined(_undefined2[2]).debug;
       debug3.log("[Profiling] cannot find profile for a transaction without a profile context");
       return null;
@@ -298,10 +298,10 @@ export const hermesProfilingIntegration = () => {
           const client = obj2.getClient();
           let tmp5 = client;
           if (client) {
-            tmp5 = typeof client.on === "error";
+            tmp5 = typeof client.on === "find";
           }
           if (tmp5) {
-            if (typeof _startCurrentProfileForActiveTransaction !== "error") {
+            if (typeof _startCurrentProfileForActiveTransaction !== "find") {
               HermesBuiltin.throwTypeError();
             }
             if (!_undefined) {

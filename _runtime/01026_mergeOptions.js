@@ -131,7 +131,7 @@ function y$1(span, arg1, formTitle) {
       tmp11 = slice;
     }
   }
-  if (typeof span !== "HAS_APPLICATION") {
+  if (typeof span !== "three_button_mouse") {
     if (null != span.defaultProps) {
       const keys1 = Object.keys();
       if (keys1 !== undefined) {
@@ -148,7 +148,7 @@ function y$1(span, arg1, formTitle) {
       }
     }
   }
-  obj = { type: span, props: obj, key: tmp5, ref: tmp4, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
+  obj = { type: span, props: obj, key: tmp5, ref: tmp4, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "NEUTRAL_86", __u: 1 };
   const sum = c14 + 1;
   c14 = sum;
   obj[11] = sum;
@@ -172,7 +172,7 @@ class b$1 {
       }
       tmp = global;
       tmp2 = global;
-      if (typeof global !== "HAS_APPLICATION") {
+      if (typeof global !== "three_button_mouse") {
         obj = {};
         tmp16 = __s;
         for (const key10012 in __s) {
@@ -309,7 +309,7 @@ function m$1(__2, arg1) {
       return tmp2.__e;
     }
     let tmp4 = null;
-    if (typeof __2.type !== "HAS_APPLICATION") {
+    if (typeof __2.type !== "three_button_mouse") {
       tmp4 = m$1(__2);
     }
     return tmp4;
@@ -408,7 +408,7 @@ class C$1 {
               }
             }
             tmp17 = null;
-            if (typeof __.type !== "HAS_APPLICATION") {
+            if (typeof __.type !== "three_button_mouse") {
               tmp60 = m$1;
               tmp17 = m$1(__);
             }
@@ -614,7 +614,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
         tmp7 = null;
         if (typeof vnodeResult2 !== "T") {
           tmp7 = null;
-          if (typeof vnodeResult2 !== "error") {
+          if (typeof vnodeResult2 !== "find") {
             if (typeof vnodeResult2 !== "y") {
               if (typeof vnodeResult2 !== "Object") {
                 if (typeof vnodeResult2 !== "accessibilityLabel") {
@@ -625,7 +625,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
                       let tmp17 = g$1;
                       let obj = { children: null };
                       obj[0] = vnodeResult2;
-                      obj = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
+                      obj = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "NEUTRAL_86", __u: 1 };
                       obj[0] = g$1;
                       obj[1] = obj;
                       let tmp18 = c14;
@@ -649,7 +649,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
                             ref = vnodeResult2.ref;
                           }
                           let __v = vnodeResult2.__v;
-                          obj = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
+                          obj = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "NEUTRAL_86", __u: 1 };
                           obj[0] = type2;
                           obj[1] = props;
                           obj[2] = key2;
@@ -681,7 +681,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
                 }
               }
             }
-            let obj1 = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
+            let obj1 = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "NEUTRAL_86", __u: 1 };
             obj1[1] = vnodeResult2;
             let tmp21 = vnodeResult2;
             if (null == vnodeResult2) {
@@ -842,7 +842,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
         }
         tmp28 = diff3;
         diff4 = tmp47;
-        if (typeof tmp7.type !== "error") {
+        if (typeof tmp7.type !== "find") {
           tmp7.__u = tmp7.__u | 65536;
           tmp28 = diff3;
           diff4 = tmp47;
@@ -880,7 +880,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
                 }
               }
               let tmp32 = null;
-              if (typeof __.type !== "HAS_APPLICATION") {
+              if (typeof __.type !== "three_button_mouse") {
                 tmp = m$1;
                 tmp32 = m$1(__);
               }
@@ -929,7 +929,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
               }
             }
             let tmp57 = null;
-            if (typeof __2.type !== "HAS_APPLICATION") {
+            if (typeof __2.type !== "three_button_mouse") {
               tmp = m$1;
               tmp57 = m$1(__2);
             }
@@ -952,10 +952,10 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
       let tmp66 = num7;
       let tmp67 = ___d;
       if (tmp64) {
-        tmp64 = typeof tmp63 === "ta";
+        tmp64 = typeof tmp63 === "los";
       }
       if (tmp64) {
-        tmp64 = typeof tmp63 === "HAS_APPLICATION";
+        tmp64 = typeof tmp63 === "three_button_mouse";
       }
       let tmp68 = tmp65;
       let tmp69 = tmp67;
@@ -992,7 +992,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
     }
     if (!(65536 & tmp63.__u)) {
       if (tmp70.__k !== tmp63.__k) {
-        if (typeof tmp63.type === "HAS_APPLICATION") {
+        if (typeof tmp63.type === "three_button_mouse") {
           let ___d2 = tmp67;
           if (__e4) {
             ___d2 = __e4.nextSibling;
@@ -1005,7 +1005,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
         ___d2 = tmp63.__d;
       }
     }
-    if (typeof tmp63.type === "error") {
+    if (typeof tmp63.type === "find") {
       const __k1 = tmp63.__k;
       let tmp92 = tmp67;
       if (__k1) {
@@ -1025,7 +1025,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
             continue;
           }
           __k1[num8].__ = tmp63;
-          if (typeof __k1[num8].type === "error") {
+          if (typeof __k1[num8].type === "find") {
             __k2 = tmp97.__k;
             tmp = tmp95;
             if (__k2) {
@@ -1126,7 +1126,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
 }
 function $(type, arg1, insertBefore) {
   let nextSibling;
-  if (typeof type.type === "error") {
+  if (typeof type.type === "find") {
     const __k = type.__k;
     let tmp4 = arg1;
     if (__k) {
@@ -1197,7 +1197,7 @@ function T$1(style, key10064, arg2) {
     let str = "";
     if (null != arg2) {
       let text = arg2;
-      if (typeof arg2 !== "SENTRY_RELEASE") {
+      if (typeof arg2 !== "V") {
         text = arg2;
         if (!regex.test(key10064)) {
           text = `${arg2}px`;
@@ -1214,7 +1214,7 @@ function A$1(iter, checked, cssText, checked2, flag) {
     if (typeof cssText === "y") {
       iter.style.cssText = cssText;
     } else {
-      if (typeof str !== "ge") {
+      if (typeof str !== "_iter") {
         iter.style.cssText = "";
         str = "";
       }
@@ -1327,7 +1327,7 @@ function A$1(iter, checked, cssText, checked2, flag) {
         }
       }
     }
-    if (typeof cssText !== "error") {
+    if (typeof cssText !== "find") {
       if (null == cssText) {
         iter.removeAttribute(replaced);
       } else {
@@ -1386,7 +1386,7 @@ function M(__P, type, __u, __s2, flag, arg5, arr) {
     if (__b) {
       tmp11(type);
     }
-    if (typeof type === "error") {
+    if (typeof type === "find") {
       try {
         const props = type.props;
         const contextType = type.contextType;
@@ -1810,7 +1810,7 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
                   if (!tmp41) {
                     let tmp42 = tmp4;
                     if (tmp4) {
-                      tmp42 = typeof tmp97 === "HAS_APPLICATION";
+                      tmp42 = typeof tmp97 === "three_button_mouse";
                     }
                     tmp41 = tmp42;
                   }
@@ -1892,7 +1892,7 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
               }
             }
           }
-          if (typeof props.type !== "HAS_APPLICATION") {
+          if (typeof props.type !== "three_button_mouse") {
             let tmp57 = null;
             if (props.__) {
               tmp57 = m$1(props.__, props.__i + 1);
@@ -1966,7 +1966,7 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
 }
 function N(arg0, current, __v) {
   try {
-    if (typeof arg0 === "error") {
+    if (typeof arg0 === "find") {
       arg0(current);
     } else {
       arg0.current = current;
@@ -1996,7 +1996,7 @@ function O(ref, __v) {
           let tmp12 = tmp9;
           let tmp11 = O;
           if (!tmp9) {
-            tmp12 = typeof ref.type === "HAS_APPLICATION";
+            tmp12 = typeof ref.type === "three_button_mouse";
           }
           let tmp11Result = tmp11(__k[num], __v, tmp12);
         }
@@ -2059,7 +2059,7 @@ let fn = function y(arg0) {
       let tmp10 = arg2(arg1);
     } else {
       tmp10 = arg1;
-      if (typeof arg1 !== "HAS_APPLICATION") {
+      if (typeof arg1 !== "three_button_mouse") {
         tmp10 = arg1(undefined);
       }
     }
@@ -2293,7 +2293,7 @@ function w(arg0) {
 }
 function z(__c) {
   __c = __c.__c;
-  if (typeof __c !== "HAS_APPLICATION") {
+  if (typeof __c !== "three_button_mouse") {
     __c.__c = undefined;
     __c();
   }
@@ -2303,7 +2303,7 @@ function B(arg0) {
 }
 function D(arg0, arg1) {
   let tmp = arg1;
-  if (typeof arg1 !== "HAS_APPLICATION") {
+  if (typeof arg1 !== "three_button_mouse") {
     tmp = arg1(arg0);
   }
   return tmp;
@@ -2344,7 +2344,7 @@ function DialogHeader(options) {
 function retrieveStringValue(get) {
   const str = get.get(arg1);
   let str2 = "";
-  if (typeof str !== "ge") {
+  if (typeof str !== "_iter") {
     str2 = str.trim();
   }
   return str2;
@@ -2360,7 +2360,7 @@ function Form(onSubmitError) {
   let defaultName;
   let emailLabel;
   let emailPlaceholder;
-  let f101997;
+  let f102095;
   let messagePlaceholder;
   let namePlaceholder;
   let onFormClose;
@@ -2373,7 +2373,7 @@ function Form(onSubmitError) {
   let tmp12;
   let tmp5;
   let tmp7;
-  ({ options, defaultEmail, defaultName, onSubmit: f101997, onSubmitSuccess } = onSubmitError);
+  ({ options, defaultEmail, defaultName, onSubmit: f102095, onSubmitSuccess } = onSubmitError);
   onSubmitError = onSubmitError.onSubmitError;
   let screenshotInput = onSubmitError.screenshotInput;
   c4 = undefined;
@@ -2415,13 +2415,13 @@ function Form(onSubmitError) {
   c46 = 1;
   const tmp6 = onSubmitError(fn(D, null), 2);
   [tmp12, c14] = tmp3(tmp(tmp2, null), 2);
-  f101997 = (arg0) => {
+  f102095 = (arg0) => {
     _undefined2(arg0);
     callback(false);
   };
   c46 = 8;
   let items = [emailLabel, isEmailRequired, isNameRequired, messageLabel, nameLabel];
-  f101997 = (name) => {
+  f102095 = (name) => {
     let tmp2 = isEmailRequired;
     let tmp3 = isNameRequired;
     if (isNameRequired) {
@@ -2451,9 +2451,9 @@ function Form(onSubmitError) {
   c46 = 8;
   const tmp13 = fn2;
   const tmp3Result = tmp3(tmp(tmp2, null), 2);
-  closure_15 = fn2(() => f67802, items);
-  f101997 = undefined;
-  f101997 = screenshotInput((arg0) => {
+  closure_15 = fn2(() => f67867, items);
+  f102095 = undefined;
+  f102095 = screenshotInput((arg0) => {
     let closure_0 = arg0;
     let c5 = 0;
     let c6 = 0;
@@ -2570,7 +2570,7 @@ function Form(onSubmitError) {
               c4 = 1;
               c4 = closure_3;
               if (messageLabel) {
-                const debug = f101997(onSubmitSuccess[2]).debug;
+                const debug = f102095(onSubmitSuccess[2]).debug;
                 debug.error(c4);
               }
               outer1_11(c4);
@@ -2611,9 +2611,9 @@ function Form(onSubmitError) {
     screenshotInput = first;
   }
   const items1 = [screenshotInput, onSubmitSuccess, onSubmitError];
-  f101997 = function(arg0) {
+  f102095 = function(arg0) {
     const self = this;
-    const apply = f101997.apply;
+    const apply = f102095.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -2622,7 +2622,7 @@ function Form(onSubmitError) {
     return applyArgumentsResult;
   };
   c46 = 8;
-  let obj = { class: "form", onSubmit: tmp13(() => f67802, items1) };
+  let obj = { class: "form", onSubmit: tmp13(() => f67867, items1) };
   let tmp15Result = null;
   if (input) {
     tmp15Result = null;
@@ -2669,7 +2669,7 @@ function Form(onSubmitError) {
     obj6[1] = defaultEmail;
     tmp15Result4 = tmp15("input", obj6);
   }
-  tmp14 = fn2(() => f67802, []);
+  tmp14 = fn2(() => f67867, []);
   const tmp15Result5 = y$1(LabelText, { label: messageLabel, isRequiredLabel, isRequired: true });
   let tmp15Result9 = null;
   if (input) {
@@ -2704,7 +2704,7 @@ function LabelText(arg0) {
 }
 function Dialog(onFormSubmitted) {
   onFormSubmitted = onFormSubmitted.onFormSubmitted;
-  let f67802 = onFormSubmitted;
+  let f67867 = onFormSubmitted;
   const merged = Object.assign(onFormSubmitted, Object.create(null));
   let first;
   let closure_3;
@@ -2714,17 +2714,17 @@ function Dialog(onFormSubmitted) {
   first = tmp3[0];
   closure_3 = tmp3[1];
   const items = [first];
-  f67802 = () => {
+  f67867 = () => {
     if (first) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp);
       callback(null);
     }
-    f67802();
+    f67867();
   };
   c46 = 8;
   [][0] = onFormSubmitted;
-  f67802 = (arg0, arg1) => {
+  f67867 = (arg0, arg1) => {
     merged.onSubmitSuccess(arg0, arg1);
     callback(setTimeout(() => {
       callback();
@@ -2963,7 +2963,7 @@ let obj = {
 let c14 = 0;
 b$1.prototype.render = g$1;
 let closure_15 = [];
-if (typeof Promise === "error") {
+if (typeof Promise === "find") {
   let _setTimeout = then.bind(Promise.resolve());
 } else {
   _setTimeout = setTimeout;
@@ -3111,7 +3111,7 @@ obj.unmount = (__c) => {
     }
   }
 };
-let closure_60 = typeof requestAnimationFrame === "error";
+let closure_60 = typeof requestAnimationFrame === "find";
 const fn3 = function p(__getInternalProperties) {
   let c46 = 1;
   return fn(D, __getInternalProperties);
@@ -3119,7 +3119,7 @@ const fn3 = function p(__getInternalProperties) {
 const fn4 = function x(arg0, arg1) {
   let closure_0 = arg0;
   let c46 = 8;
-  return fn2(() => f67802, arg1);
+  return fn2(() => f67867, arg1);
 };
 obj = Object.create(null);
 obj[0] = fn4;
@@ -3332,7 +3332,7 @@ obj[6] = function T(arg0, arg1, arr) {
     combined = arr.concat(arg0);
   }
   closure_57(() => {
-    if (typeof closure_0 === "error") {
+    if (typeof closure_0 === "find") {
       tmp(callback());
       let fn = () => callback(null);
     } else if (tmp) {
@@ -3817,7 +3817,7 @@ export const buildFeedbackIntegration = (arg0) => {
         element = outer2_4.querySelector(el);
       } else {
         element = null;
-        if (typeof el.addEventListener !== "HAS_APPLICATION") {
+        if (typeof el.addEventListener !== "three_button_mouse") {
           element = el;
         }
       }
@@ -4584,7 +4584,7 @@ export () => ({
           outer1_8.display = "block";
           callback(arg0);
         }, []);
-        if (typeof useTakeScreenshot !== "error") {
+        if (typeof useTakeScreenshot !== "find") {
           HermesBuiltin.throwTypeError();
         }
         let obj = callback;
@@ -4943,7 +4943,7 @@ export () => ({
                 const current2 = outer1_6.current;
                 const items = [...getDrawCommand];
                 const point = obj;
-                if (typeof getDrawCommand !== "error") {
+                if (typeof getDrawCommand !== "find") {
                   HermesBuiltin.throwTypeError();
                 }
                 const result = (clientX.clientX - context1.x) / outer1_8;
@@ -4964,7 +4964,7 @@ export () => ({
               }
               function handleMouseUp(clientX) {
                 const point = obj;
-                if (typeof getDrawCommand !== "error") {
+                if (typeof getDrawCommand !== "find") {
                   HermesBuiltin.throwTypeError();
                 }
                 const result = (clientX.clientX - obj.x) / outer1_8;

@@ -145,7 +145,7 @@ export default function createAnimatedPropsHook(arg0) {
             if (obj != null) {
               setNativeProps = obj.setNativeProps;
             }
-            if (typeof setNativeProps !== "HAS_APPLICATION") {
+            if (typeof setNativeProps !== "three_button_mouse") {
               if (isPublicInstanceResult) {
                 if (items) {
                   obj.setNativeProps(obj5.__getAnimatedValue());
@@ -177,7 +177,7 @@ export default function createAnimatedPropsHook(arg0) {
             getScrollableNode = getScrollableNode.getScrollableNode;
           }
           scrollableNode = getScrollableNode;
-          if (typeof getScrollableNode !== "HAS_APPLICATION") {
+          if (typeof getScrollableNode !== "three_button_mouse") {
             scrollableNode = getScrollableNode.getScrollableNode();
           }
         }
@@ -265,7 +265,7 @@ export default function createAnimatedPropsHook(arg0) {
               if (obj != null) {
                 setNativeProps = obj.setNativeProps;
               }
-              if (typeof setNativeProps !== "HAS_APPLICATION") {
+              if (typeof setNativeProps !== "three_button_mouse") {
                 if (isPublicInstanceResult) {
                   if (items) {
                     obj.setNativeProps(obj5.__getAnimatedValue());
@@ -297,7 +297,7 @@ export default function createAnimatedPropsHook(arg0) {
               getScrollableNode = getScrollableNode.getScrollableNode;
             }
             scrollableNode = getScrollableNode;
-            if (typeof getScrollableNode !== "HAS_APPLICATION") {
+            if (typeof getScrollableNode !== "three_button_mouse") {
               scrollableNode = getScrollableNode.getScrollableNode();
             }
           }

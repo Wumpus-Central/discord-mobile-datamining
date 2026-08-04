@@ -23,7 +23,7 @@ arg5.appRegistryIntegration = () => {
     name: AppRegistry,
     setupOnce() {
       if (!obj.isWeb()) {
-        if (typeof outer1_3 !== "error") {
+        if (typeof outer1_3 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         const AppRegistry = tmp(tmp2[2]).ReactNativeLibraries.AppRegistry;

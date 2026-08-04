@@ -56,7 +56,7 @@ function instrumentXHR() {
             }
           };
           if ("onreadystatechange" in onreadystatechange) {
-            if (typeof onreadystatechange.onreadystatechange === "error") {
+            if (typeof onreadystatechange.onreadystatechange === "find") {
               const _Proxy = Proxy;
               obj = { apply: null };
               obj[0] = function apply(apply) {

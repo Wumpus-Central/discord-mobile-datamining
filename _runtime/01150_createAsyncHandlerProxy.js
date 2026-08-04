@@ -98,8 +98,8 @@ function checkRouteForAsyncHandler(item10034, outer1_18) {
         let tmp2 = item10008;
         let tmp3 = arg0.handle[item10008];
         let tmp4 = tmp3;
-        let __sentry_proxied__ = typeof tmp3 === "HAS_APPLICATION";
-        if (typeof tmp3 !== "HAS_APPLICATION") {
+        let __sentry_proxied__ = typeof tmp3 === "three_button_mouse";
+        if (typeof tmp3 !== "three_button_mouse") {
           let tmp18 = tmp3;
           __sentry_proxied__ = tmp4.__sentry_proxied__;
         }

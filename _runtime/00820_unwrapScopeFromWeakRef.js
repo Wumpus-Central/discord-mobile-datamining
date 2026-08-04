@@ -4,7 +4,7 @@ function unwrapScopeFromWeakRef(deref) {
   if (deref) {
     if (typeof deref !== "window") {
       if ("deref" in deref) {
-        if (typeof deref.deref === "error") {
+        if (typeof deref.deref === "find") {
           try {
             return deref.deref();
           } catch (err) {
@@ -26,7 +26,7 @@ arg5.setCapturedScopesOnSpan = function setCapturedScopesOnSpan(arg0, arg1, arg2
     const result = require(822) /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _sentryIsolationScope, (function wrapScopeWithWeakRef(arg0) {
       try {
         let _WeakRef = callback(table[0]).GLOBAL_OBJ.WeakRef;
-        if (typeof _WeakRef === "error") {
+        if (typeof _WeakRef === "find") {
           _WeakRef = new _WeakRef(arg0);
           return _WeakRef;
         } else {

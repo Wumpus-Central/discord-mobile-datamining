@@ -218,7 +218,7 @@ obj = {
         return null;
       } else {
         let tmp8 = null;
-        if (typeof currentProps[eventTypePropName] !== "HAS_APPLICATION") {
+        if (typeof currentProps[eventTypePropName] !== "three_button_mouse") {
           tmp8 = tmp7;
         }
         return tmp8;

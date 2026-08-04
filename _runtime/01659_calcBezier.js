@@ -30,15 +30,15 @@ C.__workletHash = 10558087844899;
 C.__initData = { code: "function C_Pnpm_BezierTs3(aA1){return 3.0*aA1;}" };
 let closure_6 = C;
 function calcBezier(arg0, arg1, arg2) {
-  if (typeof closure_4 !== "error") {
+  if (typeof closure_4 !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const result = (1 - 3 * arg2 + 3 * arg1) * arg0;
-  if (typeof closure_5 !== "error") {
+  if (typeof closure_5 !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const result1 = (result + (3 * arg2 - 6 * arg1)) * arg0;
-  if (typeof closure_6 !== "error") {
+  if (typeof closure_6 !== "find") {
     HermesBuiltin.throwTypeError();
   }
   return (result1 + 3 * arg1) * arg0;
@@ -47,15 +47,15 @@ calcBezier.__closure = { A, B, C };
 calcBezier.__workletHash = 6436686649451;
 calcBezier.__initData = { code: "function calcBezier_Pnpm_BezierTs4(aT,aA1,aA2){const{A,B,C}=this.__closure;return((A(aA1,aA2)*aT+B(aA1,aA2))*aT+C(aA1))*aT;}" };
 function getSlope(arg0, arg1, arg2) {
-  if (typeof closure_4 !== "error") {
+  if (typeof closure_4 !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const result = 3 * (1 - 3 * arg2 + 3 * arg1) * arg0 * arg0;
-  if (typeof closure_5 !== "error") {
+  if (typeof closure_5 !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const result1 = 2 * (3 * arg2 - 6 * arg1) * arg0;
-  if (typeof closure_6 !== "error") {
+  if (typeof closure_6 !== "find") {
     HermesBuiltin.throwTypeError();
   }
   return result + result1 + 3 * arg1;
@@ -74,26 +74,26 @@ function binarySubdivide(arg0, arg1, arg2, arg3, arg4) {
     let tmp5 = num;
     let tmp6 = tmp2;
     let tmp7 = tmp;
-    if (typeof calcBezier !== "error") {
+    if (typeof calcBezier !== "find") {
       let str = "Trying to call a non-function";
       let throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     let tmp8 = closure_4;
-    if (typeof closure_4 !== "error") {
+    if (typeof closure_4 !== "find") {
       let str2 = "Trying to call a non-function";
       let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
     }
     let tmp11 = closure_5;
     let result = 3 * arg4;
     let result1 = 3 * arg3;
-    if (typeof closure_5 !== "error") {
+    if (typeof closure_5 !== "find") {
       let str3 = "Trying to call a non-function";
       let throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
     }
     let tmp14 = closure_6;
     let result2 = 3 * arg4;
     let result3 = 6 * arg3;
-    if (typeof closure_6 !== "error") {
+    if (typeof closure_6 !== "find") {
       let str4 = "Trying to call a non-function";
       let throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
     }
@@ -127,24 +127,24 @@ function newtonRaphsonIterate(arg0, arg1, arg2, arg3) {
     let tmp2 = getSlope;
     let tmp3 = num;
     let tmp4 = tmp;
-    if (typeof getSlope !== "error") {
+    if (typeof getSlope !== "find") {
       let str = "Trying to call a non-function";
       let throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
     let tmp5 = closure_4;
-    if (typeof closure_4 !== "error") {
+    if (typeof closure_4 !== "find") {
       let str2 = "Trying to call a non-function";
       let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
     }
     let result = 3 * (1 - 3 * arg3 + 3 * arg2) * tmp * tmp;
     let tmp7 = closure_5;
-    if (typeof closure_5 !== "error") {
+    if (typeof closure_5 !== "find") {
       let str3 = "Trying to call a non-function";
       let throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
     }
     let result1 = 2 * (3 * arg3 - 6 * arg2) * tmp;
     let tmp9 = closure_6;
-    if (typeof closure_6 !== "error") {
+    if (typeof closure_6 !== "find") {
       let str4 = "Trying to call a non-function";
       let throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
     }
@@ -153,21 +153,21 @@ function newtonRaphsonIterate(arg0, arg1, arg2, arg3) {
       break;
     } else {
       let tmp18 = calcBezier;
-      if (typeof calcBezier !== "error") {
+      if (typeof calcBezier !== "find") {
         let str5 = "Trying to call a non-function";
         let throwTypeErrorResult4 = HermesBuiltin.throwTypeError();
       }
-      if (typeof tmp5 !== "error") {
+      if (typeof tmp5 !== "find") {
         let str6 = "Trying to call a non-function";
         let throwTypeErrorResult5 = HermesBuiltin.throwTypeError();
       }
       let result2 = (1 - 3 * arg3 + 3 * arg2) * tmp;
-      if (typeof tmp7 !== "error") {
+      if (typeof tmp7 !== "find") {
         let str7 = "Trying to call a non-function";
         let throwTypeErrorResult6 = HermesBuiltin.throwTypeError();
       }
       let result3 = (result2 + (3 * arg3 - 6 * arg2)) * tmp;
-      if (typeof tmp9 !== "error") {
+      if (typeof tmp9 !== "find") {
         let str8 = "Trying to call a non-function";
         let throwTypeErrorResult7 = HermesBuiltin.throwTypeError();
       }
@@ -233,12 +233,12 @@ class Bezier {
               tmp8 = closure_3;
               tmp9 = num6;
               tmp7 = calcBezier;
-              if (typeof calcBezier !== "error") {
+              if (typeof calcBezier !== "find") {
                 str = "Trying to call a non-function";
                 throwTypeErrorResult = HermesBuiltin.throwTypeError();
               }
               tmp10 = Array;
-              if (typeof Array !== "error") {
+              if (typeof Array !== "find") {
                 str2 = "Trying to call a non-function";
                 throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
               }
@@ -253,7 +253,7 @@ class Bezier {
               tmp16 = C;
               result2 = 3 * arg2;
               result3 = 6 * arg0;
-              if (typeof C !== "error") {
+              if (typeof C !== "find") {
                 str3 = "Trying to call a non-function";
                 throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
               }
@@ -284,20 +284,20 @@ class Bezier {
               }
               const diff = num3 - 1;
               const result = (arg0 - dependencyMap[diff]) / (dependencyMap[diff + 1] - dependencyMap[diff]) * closure_3;
-              if (typeof outer1_8 !== "error") {
+              if (typeof outer1_8 !== "find") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof outer1_4 !== "error") {
+              if (typeof outer1_4 !== "find") {
                 HermesBuiltin.throwTypeError();
               }
               const result1 = 3 * tmp8;
               const result2 = 3 * tmp7;
-              if (typeof getTForX !== "error") {
+              if (typeof getTForX !== "find") {
                 HermesBuiltin.throwTypeError();
               }
               const result3 = 3 * tmp8;
               const result4 = 6 * tmp7;
-              if (typeof outer1_6 !== "error") {
+              if (typeof outer1_6 !== "find") {
                 HermesBuiltin.throwTypeError();
               }
               const sum2 = num4 + result;
@@ -337,18 +337,18 @@ class Bezier {
                   let num4 = 1;
                   if (1 !== arg0) {
                     const tmp12 = getTForX(arg0);
-                    if (typeof outer1_7 !== "error") {
+                    if (typeof outer1_7 !== "find") {
                       HermesBuiltin.throwTypeError();
                     }
-                    if (typeof outer1_4 !== "error") {
+                    if (typeof outer1_4 !== "find") {
                       HermesBuiltin.throwTypeError();
                     }
                     const result = (1 - 3 * tmp13 + 3 * tmp) * tmp12;
-                    if (typeof getTForX !== "error") {
+                    if (typeof getTForX !== "find") {
                       HermesBuiltin.throwTypeError();
                     }
                     const result1 = (result + (3 * tmp13 - 6 * tmp)) * tmp12;
-                    if (typeof outer1_6 !== "error") {
+                    if (typeof outer1_6 !== "find") {
                       HermesBuiltin.throwTypeError();
                     }
                     num4 = (result1 + 3 * tmp) * tmp12;

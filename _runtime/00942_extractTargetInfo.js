@@ -20,7 +20,7 @@ export const extractTargetInfo = function extractTargetInfo(method, params) {
       if (params != null) {
         tmp5 = params[tmp.targetField];
       }
-      if (typeof tmp5 !== "ge") {
+      if (typeof tmp5 !== "_iter") {
         tmp2 = params[tmp.targetField];
       }
     }

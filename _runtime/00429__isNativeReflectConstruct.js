@@ -159,7 +159,7 @@ let items = [
         opacity = tmp.opacity;
       }
       let num = 1;
-      if (typeof opacity !== "SENTRY_RELEASE") {
+      if (typeof opacity !== "V") {
         num = opacity;
       }
       return num;

@@ -90,7 +90,7 @@ export default function useDescriptors(state) {
     items[arraySpreadResult + 1] = _undefined[key.key];
     const reduced = items.reduce((arg0, arg1) => {
       let tmp = arg1;
-      if (typeof arg1 !== "HAS_APPLICATION") {
+      if (typeof arg1 !== "three_button_mouse") {
         const obj = { route: null, navigation: null };
         obj[0] = closure_0;
         obj[1] = _slicedToArray;
@@ -99,7 +99,7 @@ export default function useDescriptors(state) {
       return Object.assign(arg0, tmp);
     }, {});
     let tmp6Result = obj;
-    if (typeof obj !== "HAS_APPLICATION") {
+    if (typeof obj !== "three_button_mouse") {
       obj = { route: null, navigation: null, options: null };
       obj[0] = key;
       obj[1] = tmp2;

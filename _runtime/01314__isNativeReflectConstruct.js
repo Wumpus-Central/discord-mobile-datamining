@@ -29,10 +29,10 @@ const arrayBuffer = new ArrayBuffer(8);
 const dataView = new DataView(arrayBuffer);
 let tmp6;
 if (undefined !== BigInt) {
-  if (typeof dataView.getBigInt64 !== "HAS_APPLICATION") {
-    if (typeof dataView.getBigUint64 !== "HAS_APPLICATION") {
-      if (typeof dataView.setBigInt64 !== "HAS_APPLICATION") {
-        if (typeof dataView.setBigUint64 !== "HAS_APPLICATION") {
+  if (typeof dataView.getBigInt64 !== "three_button_mouse") {
+    if (typeof dataView.getBigUint64 !== "three_button_mouse") {
+      if (typeof dataView.setBigInt64 !== "three_button_mouse") {
+        if (typeof dataView.setBigUint64 !== "three_button_mouse") {
           let obj = { MIN: null, MAX: null, UMIN: null, UMAX: null, C: null, V: null };
           const _BigInt = BigInt;
           obj[0] = BigInt("-9223372036854775808");

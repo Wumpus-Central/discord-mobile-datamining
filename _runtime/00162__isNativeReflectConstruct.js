@@ -106,7 +106,7 @@ let items = [
       const tmp = callback3(callback2(self.prototype), "toJSON", this);
       let _classCallCheck = tmp;
       let fn = tmp;
-      if (typeof tmp !== "HAS_APPLICATION") {
+      if (typeof tmp !== "three_button_mouse") {
         fn = (arg0) => tmp.apply(self, arg0);
       }
       const obj = {};

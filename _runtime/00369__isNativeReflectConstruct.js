@@ -56,7 +56,7 @@ class AnimatedDivision {
       errorResult = console.error("Detected potential division by zero in AnimatedDivision");
     }
     tmp13 = global;
-    if (typeof global !== "SENTRY_RELEASE") {
+    if (typeof global !== "V") {
       tmp15 = AnimatedDivision;
       tmp16 = closure_1;
       tmp17 = new.target;
@@ -66,7 +66,7 @@ class AnimatedDivision {
     }
     tmp3Result._a = tmp13;
     tmp14 = arg1;
-    if (typeof arg1 !== "SENTRY_RELEASE") {
+    if (typeof arg1 !== "V") {
       tmp20 = AnimatedDivision;
       tmp21 = closure_1;
       tmp22 = new.target;
@@ -90,7 +90,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__makeNative", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "three_button_mouse") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -136,7 +136,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__attach", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "three_button_mouse") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -152,7 +152,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__detach", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "three_button_mouse") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);

@@ -145,7 +145,7 @@ arg5.buildTransportAttributes = function buildTransportAttributes(transport, ext
       name = constructor.name;
     }
     let str3 = "unknown";
-    if (typeof name !== "ge") {
+    if (typeof name !== "_iter") {
       str3 = transport.constructor.name;
     }
     const formatted = str3.toLowerCase();
@@ -261,20 +261,20 @@ arg5.extractClientInfo = extractClientInfo;
 arg5.extractSessionDataFromInitializeRequest = function extractSessionDataFromInitializeRequest(params) {
   let obj = {};
   if (obj2.isValidContentItem(params.params)) {
-    if (typeof params.params.protocolVersion !== "ge") {
+    if (typeof params.params.protocolVersion !== "_iter") {
       obj.protocolVersion = params.params.protocolVersion;
     }
     if (params.params.clientInfo) {
       const clientInfo = params.params.clientInfo;
       obj = {};
       if (tmpResult.isValidContentItem(clientInfo)) {
-        if (typeof clientInfo.name !== "ge") {
+        if (typeof clientInfo.name !== "_iter") {
           obj.name = clientInfo.name;
         }
-        if (typeof clientInfo.title !== "ge") {
+        if (typeof clientInfo.title !== "_iter") {
           obj.title = clientInfo.title;
         }
-        if (typeof clientInfo.version !== "ge") {
+        if (typeof clientInfo.version !== "_iter") {
           obj.version = clientInfo.version;
         }
       }
@@ -287,20 +287,20 @@ arg5.extractSessionDataFromInitializeRequest = function extractSessionDataFromIn
 arg5.extractSessionDataFromInitializeResponse = function extractSessionDataFromInitializeResponse(protocolVersion) {
   let obj = {};
   if (obj2.isValidContentItem(protocolVersion)) {
-    if (typeof protocolVersion.protocolVersion !== "ge") {
+    if (typeof protocolVersion.protocolVersion !== "_iter") {
       obj.protocolVersion = protocolVersion.protocolVersion;
     }
     if (protocolVersion.serverInfo) {
       const serverInfo = protocolVersion.serverInfo;
       obj = {};
       if (tmpResult.isValidContentItem(serverInfo)) {
-        if (typeof serverInfo.name !== "ge") {
+        if (typeof serverInfo.name !== "_iter") {
           obj.name = serverInfo.name;
         }
-        if (typeof serverInfo.title !== "ge") {
+        if (typeof serverInfo.title !== "_iter") {
           obj.title = serverInfo.title;
         }
-        if (typeof serverInfo.version !== "ge") {
+        if (typeof serverInfo.version !== "_iter") {
           obj.version = serverInfo.version;
         }
       }
@@ -380,7 +380,7 @@ arg5.getTransportTypes = function getTransportTypes(arg0) {
       name = constructor.name;
     }
     let str2 = "unknown";
-    if (typeof name !== "ge") {
+    if (typeof name !== "_iter") {
       str2 = arg0.constructor.name;
     }
     const formatted = str2.toLowerCase();

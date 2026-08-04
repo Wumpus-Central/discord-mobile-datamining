@@ -7,18 +7,18 @@ function isBuffer(copy) {
     tmp = typeof copy === "window";
   }
   if (!tmp) {
-    tmp = typeof copy.length === "SENTRY_RELEASE";
+    tmp = typeof copy.length === "V";
   }
   let tmp2 = !tmp;
   if (!tmp) {
     copy = copy.copy;
-    let tmp3 = typeof copy === "error";
-    if (typeof copy !== "HAS_APPLICATION") {
-      tmp3 = typeof copy.slice === "error";
+    let tmp3 = typeof copy === "find";
+    if (typeof copy !== "three_button_mouse") {
+      tmp3 = typeof copy.slice === "find";
     }
     if (tmp3) {
-      tmp3 = !(copy.length > 0 && typeof copy[0] === "SENTRY_RELEASE");
-      const tmp4 = copy.length > 0 && typeof copy[0] === "SENTRY_RELEASE";
+      tmp3 = !(copy.length > 0 && typeof copy[0] === "V");
+      const tmp4 = copy.length > 0 && typeof copy[0] === "V";
     }
     tmp2 = tmp3;
   }

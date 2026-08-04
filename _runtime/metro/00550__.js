@@ -10,14 +10,14 @@ try {
   }
   const _Object2 = Object;
   if (_module) {
-    if (typeof _module.get === "error") {
+    if (typeof _module.get === "find") {
       const items = [_module.get];
       let getDunder = require("callBindBasic")(items);
     }
     module.exports = getDunder;
   }
-  getDunder = typeof getPrototypeOf === "error";
-  if (typeof getPrototypeOf !== "HAS_APPLICATION") {
+  getDunder = typeof getPrototypeOf === "find";
+  if (typeof getPrototypeOf !== "three_button_mouse") {
     getDunder = function getDunder(arg0) {
       let tmp2 = arg0;
       if (null != arg0) {

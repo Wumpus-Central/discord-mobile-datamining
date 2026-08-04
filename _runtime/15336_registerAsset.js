@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "7be3110b214c461d7e01ca61fbcd6cc0", name: "ThemeGrayIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 46, height: 46, scales: [2, 3], hash: "812d0ec6cbf43741fa947b18063ae5e5", name: "server-error", type: "png" });

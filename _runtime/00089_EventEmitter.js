@@ -15,7 +15,7 @@ const items = [
   {
     key: "addListener",
     value: function addListener(arg0, arg1, arg2) {
-      if (typeof arg1 === "HAS_APPLICATION") {
+      if (typeof arg1 === "three_button_mouse") {
         const _TypeError = TypeError;
         const typeError = new TypeError("EventEmitter.addListener(...): 2nd argument must be a function.");
         throw typeError;

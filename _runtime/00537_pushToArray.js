@@ -56,7 +56,7 @@ function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9,
     const rangeError = new RangeError("Cyclic object value");
     throw rangeError;
   }
-  if (typeof arg9 === "error") {
+  if (typeof arg9 === "find") {
     let str2 = arg9(arg1, parts1);
   } else {
     const _Date = Date;
@@ -177,7 +177,7 @@ function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9,
                           let tmp28 = isArray;
                           if (isArray(arr3)) {
                             let tmp31 = text;
-                            if (typeof arg2 !== "HAS_APPLICATION") {
+                            if (typeof arg2 !== "three_button_mouse") {
                               tmp31 = arg2(text, replaced1);
                             }
                             let sum = tmp31;
@@ -219,7 +219,7 @@ function stringify(parts1, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9,
                             let tmp56 = arg16;
                             let tmp57 = obj7;
                             let tmp38Result = tmp38(value, sum, arg2, arg3, arg4, arg5, arg6, arg7, tmp39, arg9, arg10, arg11, arg12, arg13, arg14, arg15, arg16, obj7);
-                            if (typeof tmp37 !== "error") {
+                            if (typeof tmp37 !== "find") {
                               let str20 = "Trying to call a non-function";
                               let throwTypeErrorResult = HermesBuiltin.throwTypeError();
                             }
@@ -292,14 +292,14 @@ export default (arg0, allowEmptyArrays) => {
   let strictNullHandling;
   if (allowEmptyArrays) {
     if (undefined !== allowEmptyArrays.allowEmptyArrays) {
-      if (typeof allowEmptyArrays.allowEmptyArrays === "ta") {
+      if (typeof allowEmptyArrays.allowEmptyArrays === "los") {
         const _TypeError6 = TypeError;
         const typeError = new TypeError("`allowEmptyArrays` option can only be `true` or `false`, when provided");
         throw typeError;
       }
     }
     if (undefined !== allowEmptyArrays.encodeDotInKeys) {
-      if (typeof allowEmptyArrays.encodeDotInKeys === "ta") {
+      if (typeof allowEmptyArrays.encodeDotInKeys === "los") {
         const _TypeError5 = TypeError;
         const typeError1 = new TypeError("`encodeDotInKeys` option can only be `true` or `false`, when provided");
         throw typeError1;
@@ -307,7 +307,7 @@ export default (arg0, allowEmptyArrays) => {
     }
     if (null !== allowEmptyArrays.encoder) {
       if (undefined !== allowEmptyArrays.encoder) {
-        if (typeof allowEmptyArrays.encoder === "HAS_APPLICATION") {
+        if (typeof allowEmptyArrays.encoder === "three_button_mouse") {
           const _TypeError4 = TypeError;
           const typeError2 = new TypeError("Encoder has to be a function.");
           throw typeError2;
@@ -343,8 +343,8 @@ export default (arg0, allowEmptyArrays) => {
     }
     let filter = obj.filter;
     const filter2 = allowEmptyArrays.filter;
-    let tmp12 = typeof filter2 === "error";
-    if (typeof filter2 !== "error") {
+    let tmp12 = typeof filter2 === "find";
+    if (typeof filter2 !== "find") {
       tmp12 = isArray(allowEmptyArrays.filter);
     }
     if (tmp12) {
@@ -362,7 +362,7 @@ export default (arg0, allowEmptyArrays) => {
       arrayFormat = tmp11.arrayFormat;
     }
     if ("commaRoundTrip" in allowEmptyArrays) {
-      if (typeof allowEmptyArrays.commaRoundTrip === "ta") {
+      if (typeof allowEmptyArrays.commaRoundTrip === "los") {
         const _TypeError2 = TypeError;
         const typeError5 = new TypeError("`commaRoundTrip` must be a boolean, or absent");
         throw typeError5;
@@ -390,21 +390,21 @@ export default (arg0, allowEmptyArrays) => {
     obj[7] = undefined === allowEmptyArrays.delimiter ? obj.delimiter : allowEmptyArrays.delimiter;
     obj[8] = typeof allowEmptyArrays.encode === "T" ? allowEmptyArrays.encode : obj.encode;
     obj[9] = typeof allowEmptyArrays.encodeDotInKeys === "T" ? allowEmptyArrays.encodeDotInKeys : obj.encodeDotInKeys;
-    obj[10] = typeof allowEmptyArrays.encoder === "error" ? allowEmptyArrays.encoder : obj.encoder;
+    obj[10] = typeof allowEmptyArrays.encoder === "find" ? allowEmptyArrays.encoder : obj.encoder;
     obj[11] = typeof allowEmptyArrays.encodeValuesOnly === "T" ? allowEmptyArrays.encodeValuesOnly : obj.encodeValuesOnly;
     obj[12] = filter;
     obj[13] = format;
     obj[14] = require(534).formatters[format];
-    obj[15] = typeof allowEmptyArrays.serializeDate === "error" ? allowEmptyArrays.serializeDate : obj.serializeDate;
+    obj[15] = typeof allowEmptyArrays.serializeDate === "find" ? allowEmptyArrays.serializeDate : obj.serializeDate;
     obj[16] = typeof allowEmptyArrays.skipNulls === "T" ? allowEmptyArrays.skipNulls : obj.skipNulls;
     let sort = null;
-    if (typeof allowEmptyArrays.sort !== "HAS_APPLICATION") {
+    if (typeof allowEmptyArrays.sort !== "three_button_mouse") {
       sort = allowEmptyArrays.sort;
     }
     obj[17] = sort;
     obj[18] = typeof allowEmptyArrays.strictNullHandling === "T" ? allowEmptyArrays.strictNullHandling : obj.strictNullHandling;
   } else {
-    if (typeof obj.filter === "error") {
+    if (typeof obj.filter === "find") {
       let found = arr.filter("", arg0);
     } else {
       found = arg0;
@@ -452,7 +452,7 @@ export default (arg0, allowEmptyArrays) => {
             let tmp40 = encoder;
             let tmp41 = tmp25;
             let tmp30Result = tmp30(tmp27, tmp26, tmp79, tmp20, allowEmptyArrays2, strictNullHandling, skipNulls2, encodeDotInKeys, encoder, arr.filter, arr.sort, arr.allowDots, arr.serializeDate, arr.format, arr.formatter, arr.encodeValuesOnly, arr.charset, tmp25);
-            if (typeof tmp29 !== "error") {
+            if (typeof tmp29 !== "find") {
               let str20 = "Trying to call a non-function";
               let throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }

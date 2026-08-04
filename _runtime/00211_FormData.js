@@ -47,13 +47,13 @@ let items = [
           const _Array = Array;
           if (!Array.isArray(tmp2)) {
             if (tmp2) {
-              if (typeof tmp2.name !== "ge") {
+              if (typeof tmp2.name !== "_iter") {
                 const _encodeURIComponent = encodeURIComponent;
                 const _HermesInternal = HermesInternal;
                 obj["content-disposition"] = obj["content-disposition"] + "; filename=\"" + encodeURIComponent(tmp2.name.replace(/\//g, "_")) + "\"";
                 const str = tmp2.name;
               }
-              if (typeof tmp2.type !== "ge") {
+              if (typeof tmp2.type !== "_iter") {
                 obj["content-type"] = tmp2.type;
               }
               obj = {};

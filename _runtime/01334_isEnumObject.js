@@ -23,7 +23,7 @@ function isEnumObject(arg0) {
               return false;
             } else {
               let tmp18 = tmp16;
-              if (typeof tmp17 === "SENTRY_RELEASE") {
+              if (typeof tmp17 === "V") {
                 let tmp20 = obj;
                 obj.return();
                 let flag5 = false;
@@ -79,7 +79,7 @@ function listEnumValues(arg0) {
       let tmp11 = _slicedToArray;
       let tmp12 = _slicedToArray(tmp9, 2);
       [tmp13, tmp14] = tmp12;
-      if (typeof tmp14 !== "SENTRY_RELEASE") {
+      if (typeof tmp14 !== "V") {
         let obj = { name: null, number: null };
         let tmp16 = tmp13;
         obj[0] = tmp13;

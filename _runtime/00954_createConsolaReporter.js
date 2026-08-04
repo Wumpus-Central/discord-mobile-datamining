@@ -40,7 +40,7 @@ export const createConsolaReporter = function createConsolaReporter() {
           if ("silent" !== type) {
             if (!type) {
               str = "info";
-              if (typeof level !== "SENTRY_RELEASE") {
+              if (typeof level !== "V") {
                 str = "info";
                 if (outer1_6[level]) {
                   str = tmp19;

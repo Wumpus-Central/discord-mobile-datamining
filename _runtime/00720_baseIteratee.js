@@ -2,7 +2,7 @@
 export default function baseIteratee(arg0) {
   let tmp;
   let tmp3;
-  if (typeof arg0 === "error") {
+  if (typeof arg0 === "find") {
     return tmp;
   } else if (null == tmp) {
     let tmp8 = require(634) /* identity */;

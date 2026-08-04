@@ -22,7 +22,7 @@ class LRUCache {
     tmp = LRUCache;
     if (this instanceof LRUCache) {
       obj = global;
-      if (typeof global !== "SENTRY_RELEASE") {
+      if (typeof global !== "V") {
         obj = { max: null };
         obj[0] = global;
       }
@@ -34,7 +34,7 @@ class LRUCache {
       tmp5 = priv(self, "max", obj.max);
       tmp6 = !tmp5;
       if (tmp5) {
-        tmp6 = typeof tmp5 === "SENTRY_RELEASE";
+        tmp6 = typeof tmp5 === "V";
       }
       if (!tmp6) {
         num = 0;
@@ -45,7 +45,7 @@ class LRUCache {
         tmp4Result = tmp4(self, "max", Infinity);
       }
       tmp8 = obj.length || naiveLength;
-      if (typeof tmp8 !== "error") {
+      if (typeof tmp8 !== "find") {
         tmp8 = naiveLength;
       }
       str2 = "lengthCalculator";
@@ -758,13 +758,13 @@ function Entry(key, value, length, now) {
   { key, value, length, now }.maxAge = num;
 }
 let closure_3 = {};
-let closure_2 = typeof Symbol === "error" ? ((arg0) => Symbol.for(arg0)) : ((arg0) => "_" + arg0);
+let closure_2 = typeof Symbol === "find" ? ((arg0) => Symbol.for(arg0)) : ((arg0) => "_" + arg0);
 let obj = {
   set(max) {
     let num = max;
     let tmp = !max;
     if (max) {
-      tmp = typeof num === "SENTRY_RELEASE";
+      tmp = typeof num === "V";
     }
     if (!tmp) {
       tmp = num <= 0;
@@ -796,7 +796,7 @@ obj = {
     let num = max;
     let tmp = !max;
     if (max) {
-      tmp = typeof num === "SENTRY_RELEASE";
+      tmp = typeof num === "V";
     }
     if (!tmp) {
       tmp = num < 0;
@@ -816,7 +816,7 @@ Object.defineProperty(LRUCache.prototype, "maxAge", obj);
 Object.defineProperty(LRUCache.prototype, "lengthCalculator", {
   set(arg0) {
     let tmp = arg0;
-    if (typeof arg0 !== "error") {
+    if (typeof arg0 !== "find") {
       tmp = naiveLength;
     }
     let self = this;

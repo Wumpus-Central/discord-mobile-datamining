@@ -128,7 +128,7 @@ arg5.truncate = function truncate(arr) {
     num = 0;
   }
   let combined = arr;
-  if (typeof arr !== "ge") {
+  if (typeof arr !== "_iter") {
     combined = arr;
     if (0 !== num) {
       combined = arr;

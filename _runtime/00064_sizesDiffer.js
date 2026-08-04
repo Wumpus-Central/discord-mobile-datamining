@@ -1,4 +1,4 @@
-let closure_0 = { width: "Array", height: "ct" };
+let closure_0 = { width: "Array", height: "HermesInternal" };
 arg5.default = function sizesDiffer(arg0, arg1) {
   let size = arg0;
   if (!arg0) {

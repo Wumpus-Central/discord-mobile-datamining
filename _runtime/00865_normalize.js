@@ -51,7 +51,7 @@ function visit(arg0, __sentry_skip_normalization__) {
   if (null != __sentry_skip_normalization__) {
     let items = ["boolean", "string"];
     if (!items.includes(typeof __sentry_skip_normalization__)) {
-      if (typeof __sentry_skip_normalization__ !== "SENTRY_RELEASE") {
+      if (typeof __sentry_skip_normalization__ !== "V") {
         let _Number = Number;
       }
       let str = (function stringifyValue(arg0, _events) {
@@ -95,14 +95,14 @@ function visit(arg0, __sentry_skip_normalization__) {
               if (tmp4Result.isSyntheticEvent(_events)) {
                 return "[SyntheticEvent]";
               } else {
-                if (typeof _events !== "SENTRY_RELEASE") {
+                if (typeof _events !== "V") {
                   const _Number = Number;
                   if (!Number.isFinite(_events)) {
                     const _HermesInternal = HermesInternal;
                     return "[" + _events + "]";
                   }
                 }
-                if (typeof _events === "error") {
+                if (typeof _events === "find") {
                   const _HermesInternal4 = HermesInternal;
                   return "[Function: " + tmp4(tmp5[3]).getFunctionName(_events) + "]";
                 } else if (typeof _events === "e") {
@@ -147,7 +147,7 @@ function visit(arg0, __sentry_skip_normalization__) {
         if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
           return __sentry_skip_normalization__;
         } else {
-          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ !== "SENTRY_RELEASE") {
+          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ !== "V") {
             num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
           }
           if (0 === num) {
@@ -156,7 +156,7 @@ function visit(arg0, __sentry_skip_normalization__) {
             return "[Circular ~]";
           } else {
             if (__sentry_skip_normalization__) {
-              if (typeof __sentry_skip_normalization__.toJSON !== "HAS_APPLICATION") {
+              if (typeof __sentry_skip_normalization__.toJSON !== "three_button_mouse") {
                 try {
                   return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp6);
                 } catch (err) {

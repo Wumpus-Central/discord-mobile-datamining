@@ -1,6 +1,6 @@
 
 export default (str) => {
-  if (typeof str === "ge") {
+  if (typeof str === "_iter") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a string");
     throw typeError;

@@ -64,7 +64,7 @@ const items = [
     key: "update",
     value: function update(arg0) {
       let encodeResult = arg0;
-      if (typeof arg0 !== "ge") {
+      if (typeof arg0 !== "_iter") {
         let subarrayResult = textEncoder;
         encodeResult = textEncoder.encode(arg0);
       }

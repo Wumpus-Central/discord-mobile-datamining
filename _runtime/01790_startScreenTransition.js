@@ -33,7 +33,7 @@ function finishScreenTransition(stackTag) {
   let sharedEvent;
   ({ sharedEvent, goBackGesture } = stackTag);
   sharedEvent.removeListener(stackTag.stackTag);
-  if (typeof getLockAxis !== "error") {
+  if (typeof getLockAxis !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const items = ["swipeRight", "swipeLeft", "horizontalSwipe"];

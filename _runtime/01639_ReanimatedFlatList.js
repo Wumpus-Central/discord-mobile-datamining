@@ -35,7 +35,7 @@ export const ReanimatedFlatList = isReactRendering.componentWithRef((skipEnterin
     if (table != null) {
       current1 = obj2.current;
     }
-    if (typeof current1 === "error") {
+    if (typeof current1 === "find") {
       let currentResult;
       if (obj2 != null) {
         obj = { index: null, item: null };

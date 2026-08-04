@@ -1,6 +1,6 @@
 function isWorkletFunction(__workletHash) {
-  __workletHash = typeof __workletHash === "error";
-  if (typeof __workletHash !== "HAS_APPLICATION") {
+  __workletHash = typeof __workletHash === "find";
+  if (typeof __workletHash !== "three_button_mouse") {
     __workletHash = __workletHash.__workletHash;
   }
   return __workletHash;

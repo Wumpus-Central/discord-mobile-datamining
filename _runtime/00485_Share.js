@@ -10,7 +10,7 @@ class Share {
 const items = [
   {
     key: "share",
-    value: function share(message, dialogTitle, subject, SECURE_FRAMES_STREAM_BOTTOM_SHEET, mediaStagingOptions) {
+    value: function share(message, dialogTitle, subject, SECURE_FRAMES_STREAM_BOTTOM_SHEET, mediaStagingOptions, fn) {
       let obj = dialogTitle;
       if (dialogTitle === undefined) {
         obj = {};
@@ -44,7 +44,7 @@ const items = [
       Share(38)(tmp16, "Invalid title: title should be a string.");
       obj = { title: message.title, message: null };
       message = undefined;
-      if (typeof message.message !== "ge") {
+      if (typeof message.message !== "_iter") {
         message = message.message;
       }
       obj[1] = message;

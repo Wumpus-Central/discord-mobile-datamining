@@ -56,7 +56,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__makeNative", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "three_button_mouse") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -84,7 +84,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__attach", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "three_button_mouse") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -98,7 +98,7 @@ let items = [
       const self = this;
       let fn;
       fn = callback3(callback2(self.prototype), "__detach", this);
-      if (typeof fn !== "HAS_APPLICATION") {
+      if (typeof fn !== "three_button_mouse") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);

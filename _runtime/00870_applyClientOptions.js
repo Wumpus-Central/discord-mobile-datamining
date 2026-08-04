@@ -274,7 +274,7 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
         }
       }
       let tmp6 = exception;
-      if (typeof obj !== "SENTRY_RELEASE") {
+      if (typeof obj !== "V") {
         tmp6 = exception;
         if (tmp5 > 0) {
           obj = tmp5;

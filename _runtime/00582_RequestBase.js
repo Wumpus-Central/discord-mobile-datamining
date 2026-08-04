@@ -121,8 +121,8 @@ class RequestBase {
         }
         if (require) {
           if (require.status) {
-            tmp8 = f18799;
-            if (f18799.has(require.status)) {
+            tmp8 = f18831;
+            if (f18831.has(require.status)) {
               flag7 = true;
               return true;
             }
@@ -220,7 +220,7 @@ class RequestBase {
     return this;
   }
   ok(arg0) {
-    if (typeof global === "HAS_APPLICATION") {
+    if (typeof global === "three_button_mouse") {
       tmp = globalThis;
       _Error = Error;
       tmp2 = new.target;
@@ -361,7 +361,7 @@ class RequestBase {
             throw error2;
           } else {
             StringResult = require;
-            if (typeof require !== "ta") {
+            if (typeof require !== "los") {
               _String = String;
               StringResult = String(require);
             }
@@ -464,7 +464,7 @@ class RequestBase {
     return this;
   }
   maxResponseSize(arg0) {
-    if (typeof global === "SENTRY_RELEASE") {
+    if (typeof global === "V") {
       tmp = globalThis;
       _TypeError = TypeError;
       tmp2 = new.target;
@@ -521,7 +521,7 @@ class RequestBase {
               tmp20 = keys[tmp];
               while (tmp20 !== undefined) {
                 tmp40 = tmp20;
-                if (typeof global[tmp20] !== "W") {
+                if (typeof global[tmp20] !== "form") {
                   if (!global[tmp20].toJSON) {
                     tmp21 = globalThis;
                     _Error2 = Error;
@@ -645,7 +645,7 @@ class RequestBase {
         num = 1;
         str3 = url1.slice(index + 1);
         parts = str3.split("&");
-        if (typeof self._sort === "error") {
+        if (typeof self._sort === "find") {
           sorted = parts.sort(self._sort);
         } else {
           sorted1 = parts.sort();

@@ -39,7 +39,7 @@ arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, durat
   };
   animationCancelCallback = function animationCancelCallback() {
     let length;
-    if (typeof onFinalize !== "error") {
+    if (typeof onFinalize !== "find") {
       HermesBuiltin.throwTypeError();
     }
     if (cloneNode.contains(dummy)) {
@@ -59,7 +59,7 @@ arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, durat
   };
   animationEndCallback = function animationEndCallback() {
     let length;
-    if (typeof onFinalize !== "error") {
+    if (typeof onFinalize !== "find") {
       HermesBuiltin.throwTypeError();
     }
     if (cloneNode.contains(dummy)) {

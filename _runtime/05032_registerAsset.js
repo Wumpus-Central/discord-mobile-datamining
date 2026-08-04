@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "4a45d5464752b264a97efb61145f651f", name: "img_account_sync_ebay_white", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 628, height: 167, scales: [1], hash: "87dcaca9679ceb1e78d3b15aba4c2917", name: "img_account_sync_samsung_white", type: "svg" });

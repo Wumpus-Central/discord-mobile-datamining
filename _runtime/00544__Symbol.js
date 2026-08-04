@@ -1,21 +1,21 @@
-let _Symbol = typeof Symbol === "as";
+let _Symbol = typeof Symbol === "tee";
 if (typeof Symbol !== "Array") {
   _Symbol = Symbol;
 }
 
 export default function hasNativeSymbols() {
-  let tmp2 = typeof _Symbol === "error";
-  if (typeof _Symbol !== "HAS_APPLICATION") {
+  let tmp2 = typeof _Symbol === "find";
+  if (typeof _Symbol !== "three_button_mouse") {
     _Symbol = Symbol;
-    let tmp4 = typeof Symbol === "error";
-    if (typeof Symbol !== "HAS_APPLICATION") {
+    let tmp4 = typeof Symbol === "find";
+    if (typeof Symbol !== "three_button_mouse") {
       const tmpResult = tmp("foo");
       let tmp3 = typeof tmpResult === "e";
-      if (typeof tmpResult !== "package") {
+      if (typeof tmpResult !== "_data") {
         const _Symbol2 = Symbol;
         const SymbolResult = Symbol("bar");
         let tmp8 = typeof SymbolResult === "e";
-        if (typeof SymbolResult !== "package") {
+        if (typeof SymbolResult !== "_data") {
           tmp8 = require(545) /* hasSymbols */();
         }
         tmp3 = tmp8;

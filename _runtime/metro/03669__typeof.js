@@ -1,9 +1,7 @@
 import { Parser } from "Parser";
 
-let _createSuperInternal = require;
-let closure_1 = dependencyMap;
-function _typeof(arg0) {
-  if (typeof Symbol !== "HAS_APPLICATION") {
+let _createSuperInternal = function _typeof(arg0) {
+  if (typeof Symbol !== "three_button_mouse") {
     let _Symbol = Symbol;
     if (typeof Symbol.iterator === "e") {
       function _typeof(arg0) {
@@ -15,7 +13,7 @@ function _typeof(arg0) {
   _typeof = function _typeof(arg0) {
     if (arg0) {
       const _Symbol = Symbol;
-      if (typeof Symbol !== "HAS_APPLICATION") {
+      if (typeof Symbol !== "three_button_mouse") {
         const _Symbol3 = Symbol;
         if (arg0.constructor === Symbol) {
           const _Symbol2 = Symbol;
@@ -26,17 +24,17 @@ function _typeof(arg0) {
     }
     str = typeof arg0;
   };
-}
-function _setPrototypeOf(Hour1To24Parser, Parser) {
+};
+let store = function _setPrototypeOf(EraParser, Parser) {
   let _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(Hour1To24Parser, Parser) {
-      Hour1To24Parser.__proto__ = Parser;
-      return Hour1To24Parser;
+    _setPrototypeOf = function _setPrototypeOf(EraParser, Parser) {
+      EraParser.__proto__ = Parser;
+      return EraParser;
     };
   }
-  return _setPrototypeOf(Hour1To24Parser, Parser);
-}
+  return _setPrototypeOf(EraParser, Parser);
+};
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
@@ -54,7 +52,7 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 _createSuperInternal = undefined;
-class Hour1To24Parser {
+class EraParser {
   constructor() {
     if (this instanceof c1) {
       length = arguments.length;
@@ -90,10 +88,10 @@ class Hour1To24Parser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 140, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 70;
-          applyResult.priority = 70;
+          num3 = 140;
+          applyResult.priority = 140;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -104,7 +102,7 @@ class Hour1To24Parser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["a", "b", "h", "H", "K", "t", "T"];
+          items1 = ["R", "u", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -128,8 +126,8 @@ class Hour1To24Parser {
     }
   }
 }
-closure_1 = Hour1To24Parser;
-if (typeof Parser !== "error") {
+store = EraParser;
+if (typeof Parser !== "find") {
   if (null !== Parser) {
     let _TypeError = TypeError;
     let typeError = new TypeError("Super expression must either be null or a function");
@@ -140,14 +138,14 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: Hour1To24Parser, writable: true, configurable: true };
-Hour1To24Parser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: EraParser, writable: true, configurable: true };
+EraParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(Hour1To24Parser, Parser);
+  store(EraParser, Parser);
 }
-_createSuperInternal = Hour1To24Parser;
+_createSuperInternal = EraParser;
 let num = 0;
-closure_1 = (function _isNativeReflectConstruct() {
+store = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "Array") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
@@ -156,7 +154,7 @@ closure_1 = (function _isNativeReflectConstruct() {
         return false;
       } else {
         const _Proxy = Proxy;
-        if (typeof Proxy === "error") {
+        if (typeof Proxy === "find") {
           return true;
         } else {
           try {
@@ -197,7 +195,7 @@ _createSuperInternal = function _createSuperInternal() {
     }
   } else {
     tmp8 = constructResult;
-    if ("object" !== _typeof(constructResult)) {
+    if ("object" !== _createSuperInternal(constructResult)) {
       tmp8 = constructResult;
     }
   }
@@ -205,37 +203,30 @@ _createSuperInternal = function _createSuperInternal() {
 };
 obj = {
   key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    if ("k" === arg1) {
-      return _createSuperInternal(3642).parseNumericPattern(_createSuperInternal(3643).numericPatterns.hour24h, arg0);
-    } else if ("ko" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
-    } else {
-      return _createSuperInternal(3642).parseNDigits(arg1.length, arg0);
+  value: function parse(arg0, arg1, era) {
+    if ("G" !== arg1) {
+      if ("GG" !== arg1) {
+        if ("GGG" !== arg1) {
+          if ("GGGGG" === arg1) {
+            return era.era(arg0, { width: "narrow" });
+          } else {
+            return era.era(arg0, { width: "wide" }) || era.era(arg0, { width: "abbreviated" }) || era.era(arg0, { width: "narrow" });
+          }
+        }
+      }
     }
+    return era.era(arg0, { width: "abbreviated" }) || era.era(arg0, { width: "narrow" });
   }
 };
 let items = [
   obj,
   {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 1;
-      if (tmp) {
-        tmp = arg1 <= 24;
-      }
-      return tmp;
-    }
-  },
-  {
     key: "set",
-    value: function set(setUTCHours) {
-      let result = arg2;
-      if (arg2 <= 24) {
-        result = arg2 % 24;
-      }
-      setUTCHours.setUTCHours(result, 0, 0, 0);
-      return setUTCHours;
+    value: function set(setUTCFullYear, arg1, era) {
+      arg1.era = era;
+      setUTCFullYear.setUTCFullYear(era, 0, 1);
+      setUTCFullYear.setUTCHours(0, 0, 0, 0);
+      return setUTCFullYear;
     }
   }
 ];
@@ -258,4 +249,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { Hour1To24Parser };
+export { EraParser };

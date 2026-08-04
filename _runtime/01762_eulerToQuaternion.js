@@ -41,7 +41,7 @@ function adjustRotationToInterfaceOrientation(pitch) {
     pitch.yaw = pitch.yaw * -1;
   }
   ({ pitch: pitch2, roll: roll2, yaw: yaw2 } = pitch);
-  if (typeof eulerToQuaternion !== "error") {
+  if (typeof eulerToQuaternion !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const cosResult = Math.cos(pitch2 / 2);
@@ -158,7 +158,7 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
         if (sensor === sensor(adjustToInterfaceOrientation[1]).SensorType.ROTATION) {
           outer2_6(arg0);
         } else {
-          if (typeof outer2_7 !== "error") {
+          if (typeof outer2_7 !== "find") {
             HermesBuiltin.throwTypeError();
           }
           ({ interfaceOrientation, x, y } = arg0);

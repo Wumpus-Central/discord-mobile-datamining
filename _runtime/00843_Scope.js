@@ -284,7 +284,7 @@ let items = [
       const self = this;
       if (arg0) {
         let obj = arg0;
-        if (typeof arg0 !== "HAS_APPLICATION") {
+        if (typeof arg0 !== "three_button_mouse") {
           obj = arg0(self);
         }
         if (obj instanceof Scope) {
@@ -362,7 +362,7 @@ let items = [
     key: "addBreadcrumb",
     value: function addBreadcrumb(message) {
       let num = 100;
-      if (typeof arg1 !== "SENTRY_RELEASE") {
+      if (typeof arg1 !== "V") {
         num = arg1;
       }
       const self = this;

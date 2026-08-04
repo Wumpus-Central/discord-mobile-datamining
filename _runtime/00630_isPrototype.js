@@ -5,8 +5,8 @@ export default function isPrototype(arg0) {
   if (arg0) {
     constructor = arg0.constructor;
   }
-  let prototype = typeof constructor === "error";
-  if (typeof constructor !== "HAS_APPLICATION") {
+  let prototype = typeof constructor === "find";
+  if (typeof constructor !== "three_button_mouse") {
     prototype = constructor.prototype;
   }
   if (!prototype) {

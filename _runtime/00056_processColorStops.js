@@ -39,7 +39,7 @@ function processColorStops(nextResult) {
               let obj4 = item10036;
               if (typeof item10036 !== "Object") {
                 let tmp13 = item10036;
-                if (typeof obj4 !== "ge") {
+                if (typeof obj4 !== "_iter") {
                   let tmp14 = item10036;
                 }
                 let tmp9 = obj3;
@@ -157,7 +157,7 @@ function parseRadialGradientCSSString(str) {
                     if (null == parsed) {
                       return null;
                     } else {
-                      if (typeof parsed !== "SENTRY_RELEASE") {
+                      if (typeof parsed !== "V") {
                         if (parsed < 0) {
                           return null;
                         }
@@ -184,7 +184,7 @@ function parseRadialGradientCSSString(str) {
                           if (null == parsed1) {
                             return null;
                           } else {
-                            if (typeof parsed1 !== "SENTRY_RELEASE") {
+                            if (typeof parsed1 !== "V") {
                               if (parsed1 < 0) {
                                 return null;
                               }
@@ -1004,7 +1004,7 @@ export default function processBackgroundImage(str) {
                 let tmp12 = nextResult;
                 if (null != tmp5.size) {
                   let tmp61 = nextResult;
-                  if (typeof tmp5.size === "ge") {
+                  if (typeof tmp5.size === "_iter") {
                     let tmp17 = nextResult;
                     if (typeof tmp5.size !== "window") {
                       let tmp63 = nextResult;

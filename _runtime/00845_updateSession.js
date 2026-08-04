@@ -44,7 +44,7 @@ function updateSession(ipAddress) {
       const _HermesInternal = HermesInternal;
       ipAddress.did = "" + obj.did;
     }
-    if (typeof obj.started !== "SENTRY_RELEASE") {
+    if (typeof obj.started !== "V") {
       ipAddress.started = obj.started;
     }
     if (ipAddress.ignoreDuration) {
@@ -81,7 +81,7 @@ function updateSession(ipAddress) {
     if (userAgent2) {
       ipAddress.userAgent = obj.userAgent;
     }
-    if (typeof obj.errors !== "SENTRY_RELEASE") {
+    if (typeof obj.errors !== "V") {
       ipAddress.errors = obj.errors;
     }
     if (obj.status) {

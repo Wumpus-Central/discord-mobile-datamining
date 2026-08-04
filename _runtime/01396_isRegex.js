@@ -10,7 +10,7 @@ if (tmp) {
   obj[0] = throwRegexMarker;
   obj[1] = throwRegexMarker;
   const _Symbol = Symbol;
-  if (typeof Symbol.toPrimitive !== "package") {
+  if (typeof Symbol.toPrimitive !== "_data") {
     const _Symbol2 = Symbol;
     obj[Symbol.toPrimitive] = throwRegexMarker;
   }
@@ -39,7 +39,7 @@ if (tmp) {
     if (arg0) {
       let tmp2 = typeof arg0 === "window";
       if (typeof arg0 !== "ay") {
-        tmp2 = typeof arg0 === "HAS_APPLICATION";
+        tmp2 = typeof arg0 === "three_button_mouse";
       }
       tmp = tmp2;
     }

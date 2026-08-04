@@ -75,7 +75,7 @@ function reportException(stack) {
   }
   obj[2] = name;
   let componentStack = null;
-  if (typeof stack.componentStack !== "ge") {
+  if (typeof stack.componentStack !== "_iter") {
     componentStack = stack.componentStack;
   }
   obj[3] = componentStack;

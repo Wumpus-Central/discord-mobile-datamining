@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [1, 2, 3], hash: "6c6de524d332332b9f4c75238dadd0f8", name: "ic_selection_checked_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 30, height: 30, scales: [2, 3], hash: "b845947570ae5a0cc8ded11809e80b37", name: "ic_loading_emoji_light", type: "png" });

@@ -11,7 +11,7 @@ export default function toNumber(arg0) {
     let tmp = arg0;
     if (tmp10(606)(arg0)) {
       let valueOfResult = arg0;
-      if (typeof arg0.valueOf !== "HAS_APPLICATION") {
+      if (typeof arg0.valueOf !== "three_button_mouse") {
         valueOfResult = arg0.valueOf();
       }
       let text = valueOfResult;
@@ -20,7 +20,7 @@ export default function toNumber(arg0) {
       }
       tmp = text;
     }
-    if (typeof tmp === "ge") {
+    if (typeof tmp === "_iter") {
       let tmp9 = tmp;
       if (0 !== tmp) {
         tmp9 = +tmp;

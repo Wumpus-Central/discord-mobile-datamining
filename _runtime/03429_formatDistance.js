@@ -1,23 +1,22 @@
-let closure_0 = { lessThanXSeconds: { one: "mindre enn ett sekund", other: "mindre enn {{count}} sekunder" }, xSeconds: { one: "ett sekund", other: "{{count}} sekunder" }, halfAMinute: "et halvt minutt", lessThanXMinutes: { one: "mindre enn ett minutt", other: "mindre enn {{count}} minutter" }, xMinutes: { one: "ett minutt", other: "{{count}} minutter" }, aboutXHours: { one: "omtrent en time", other: "omtrent {{count}} timer" }, xHours: { one: "en time", other: "{{count}} timer" }, xDays: { one: "en dag", other: "{{count}} dager" }, aboutXWeeks: { one: "omtrent en uke", other: "omtrent {{count}} uker" }, xWeeks: { one: "en uke", other: "{{count}} uker" }, aboutXMonths: { one: "omtrent en m\u00E5ned", other: "omtrent {{count}} m\u00E5neder" }, xMonths: { one: "en m\u00E5ned", other: "{{count}} m\u00E5neder" }, aboutXYears: { one: "omtrent ett \u00E5r", other: "omtrent {{count}} \u00E5r" }, xYears: { one: "ett \u00E5r", other: "{{count}} \u00E5r" }, overXYears: { one: "over ett \u00E5r", other: "over {{count}} \u00E5r" }, almostXYears: { one: "nesten ett \u00E5r", other: "nesten {{count}} \u00E5r" } };
+let closure_0 = { lessThanXSeconds: { one: "meno di un secondo", other: "meno di {{count}} secondi" }, xSeconds: { one: "un secondo", other: "{{count}} secondi" }, halfAMinute: "alcuni secondi", lessThanXMinutes: { one: "meno di un minuto", other: "meno di {{count}} minuti" }, xMinutes: { one: "un minuto", other: "{{count}} minuti" }, aboutXHours: { one: "circa un'ora", other: "circa {{count}} ore" }, xHours: { one: "un'ora", other: "{{count}} ore" }, xDays: { one: "un giorno", other: "{{count}} giorni" }, aboutXWeeks: { one: "circa una settimana", other: "circa {{count}} settimane" }, xWeeks: { one: "una settimana", other: "{{count}} settimane" }, aboutXMonths: { one: "circa un mese", other: "circa {{count}} mesi" }, xMonths: { one: "un mese", other: "{{count}} mesi" }, aboutXYears: { one: "circa un anno", other: "circa {{count}} anni" }, xYears: { one: "un anno", other: "{{count}} anni" }, overXYears: { one: "pi\u00F9 di un anno", other: "pi\u00F9 di {{count}} anni" }, almostXYears: { one: "quasi un anno", other: "quasi {{count}} anni" } };
 
 export default function formatDistance(arg0, arg1, addSuffix) {
   if (typeof table[arg0] === "y") {
-    let tmp6 = tmp;
+    let tmp5 = tmp;
     if (null != addSuffix) {
-      tmp6 = tmp;
+      tmp5 = tmp;
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
-          let text = `${tmp} siden`;
+          let text = `${tmp} fa`;
         }
-        text = `om ${tmp}`;
+        text = `tra ${tmp}`;
       }
     }
-    return tmp6;
+    return tmp5;
   } else if (1 === arg1) {
     let one = tmp.one;
   } else {
-    const _String = String;
-    one = tmp.other.replace("{{count}}", String(arg1));
+    one = tmp.other.replace("{{count}}", arg1.toString());
     const str = tmp.other;
   }
 };

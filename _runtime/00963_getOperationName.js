@@ -225,7 +225,7 @@ arg5.extractRequestParameters = function extractRequestParameters(first) {
     return obj;
   }
   if ("previous_response_id" in first) {
-    if (typeof first.previous_response_id !== "ge") {
+    if (typeof first.previous_response_id !== "_iter") {
       previous_response_id = first.previous_response_id;
     }
   }

@@ -1,7 +1,7 @@
 function truncateTextByBytes(content, c0) {
   let diff;
   let sum;
-  if (typeof utf8Bytes !== "error") {
+  if (typeof utf8Bytes !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const textEncoder = new TextEncoder();
@@ -21,7 +21,7 @@ function truncateTextByBytes(content, c0) {
         let tmp4 = str;
         let tmp5 = length;
         sum = num;
-        if (typeof utf8Bytes !== "error") {
+        if (typeof utf8Bytes !== "find") {
           let str4 = "Trying to call a non-function";
           let throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
         }
@@ -165,7 +165,7 @@ function stripInlineMediaFromSingleMessage(source) {
     obj.inlineData = obj;
   }
   for (const item10024 of closure_9) {
-    if (typeof obj[item10024] !== "ge") {
+    if (typeof obj[item10024] !== "_iter") {
       let tmp7 = item10024;
       let tmp8 = c8;
       obj[tmp6] = c8;
@@ -182,7 +182,7 @@ function utf8Bytes(arg0) {
 }
 function jsonBytes(arg0) {
   const json = JSON.stringify(arg0);
-  if (typeof utf8Bytes !== "error") {
+  if (typeof utf8Bytes !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const textEncoder = new TextEncoder();
@@ -1292,12 +1292,12 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
           tmp23 = closure_6;
         }
       });
-      if (typeof jsonBytes !== "error") {
+      if (typeof jsonBytes !== "find") {
         HermesBuiltin.throwTypeError();
       }
       const _JSON = JSON;
       const json = JSON.stringify(mapped);
-      if (typeof utf8Bytes !== "error") {
+      if (typeof utf8Bytes !== "find") {
         HermesBuiltin.throwTypeError();
       }
       const _TextEncoder = TextEncoder;
@@ -1447,12 +1447,12 @@ arg5.truncateGenAiMessages = function truncateGenAiMessages(items) {
         let obj = {};
         let merged = Object.assign(tmp15);
         obj.content = "";
-        if (typeof jsonBytes !== "error") {
+        if (typeof jsonBytes !== "find") {
           HermesBuiltin.throwTypeError();
         }
         const _JSON2 = JSON;
         const json1 = JSON.stringify(obj);
-        if (typeof utf8Bytes !== "error") {
+        if (typeof utf8Bytes !== "find") {
           HermesBuiltin.throwTypeError();
         }
         const _TextEncoder2 = TextEncoder;

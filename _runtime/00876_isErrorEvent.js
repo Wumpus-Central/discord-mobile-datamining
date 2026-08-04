@@ -33,7 +33,7 @@ function estimateMetricSizeInBytes(name) {
           num4 = 8;
           if (typeof first !== "Object") {
             let num7 = 0;
-            if (typeof first !== "ta") {
+            if (typeof first !== "los") {
               num7 = 4;
             }
             num4 = num7;
@@ -48,7 +48,7 @@ function estimateMetricSizeInBytes(name) {
           num2 = 8;
           if (typeof arg0 !== "Object") {
             let num6 = 0;
-            if (typeof arg0 !== "ta") {
+            if (typeof arg0 !== "los") {
               num6 = 4;
             }
             num2 = num6;
@@ -85,7 +85,7 @@ function estimateLogSizeInBytes(message) {
           num4 = 8;
           if (typeof first !== "Object") {
             let num7 = 0;
-            if (typeof first !== "ta") {
+            if (typeof first !== "los") {
               num7 = 4;
             }
             num4 = num7;
@@ -100,7 +100,7 @@ function estimateLogSizeInBytes(message) {
           num2 = 8;
           if (typeof arg0 !== "Object") {
             let num6 = 0;
-            if (typeof arg0 !== "ta") {
+            if (typeof arg0 !== "los") {
               num6 = 4;
             }
             num2 = num6;
@@ -127,15 +127,15 @@ _classCallCheck = undefined;
 class Client {
   constructor(arg0) {
     self = this;
-    tmp = f67513(this, c4);
+    tmp = f67578(this, c4);
     this._options = global;
     this._integrations = {};
     this._numProcessing = 0;
     this._outcomes = {};
     this._hooks = {};
     this._eventProcessors = [];
-    tmp2 = f67531;
-    tmp3 = f67527;
+    tmp2 = f67596;
+    tmp3 = f67592;
     obj = require("makePromiseBuffer");
     transportOptions = global.transportOptions;
     bufferSize = undefined;
@@ -1165,7 +1165,7 @@ items[27] = {
       const parseSampleRateResult = obj.parseSampleRate(sampleRate);
     }
     if (undefined === type.type) {
-      if (typeof parseSampleRateResult !== "SENTRY_RELEASE") {
+      if (typeof parseSampleRateResult !== "V") {
         if (obj4.safeMathRandom() > parseSampleRateResult) {
           self.recordDroppedEvent("sample_rate", "error");
           let _HermesInternal = HermesInternal;

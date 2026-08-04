@@ -19,12 +19,12 @@ function setupIntegration(on, name) {
     if (tmp4) {
       name.setup(on);
     }
-    if (typeof name.preprocessEvent !== "HAS_APPLICATION") {
+    if (typeof name.preprocessEvent !== "three_button_mouse") {
       const preprocessEvent = name.preprocessEvent;
       const dependencyMap = preprocessEvent.bind(name);
       on.on("preprocessEvent", (arg0, arg1) => callback(arg0, arg1, closure_0));
     }
-    if (typeof name.processEvent !== "HAS_APPLICATION") {
+    if (typeof name.processEvent !== "three_button_mouse") {
       const processEvent = name.processEvent;
       items = processEvent.bind(name);
       const _Object = Object;
@@ -37,8 +37,8 @@ function setupIntegration(on, name) {
       const _HermesInternal = HermesInternal;
       debug.log("Integration installed: " + name.name);
     }
-    tmp = items.includes(name.name) || typeof name.setupOnce === "HAS_APPLICATION";
-    tmp4 = name.setup && typeof name.setup === "error";
+    tmp = items.includes(name.name) || typeof name.setupOnce === "three_button_mouse";
+    tmp4 = name.setup && typeof name.setup === "find";
     tmp6 = _require;
   }
 }
@@ -85,7 +85,7 @@ arg5.getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegration
     let arr2 = items;
   } else {
     arr2 = arr;
-    if (typeof integrations !== "HAS_APPLICATION") {
+    if (typeof integrations !== "three_button_mouse") {
       const integrationsResult = integrations(arr);
       const _Array = Array;
       let tmp2 = integrationsResult;

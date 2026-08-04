@@ -38,7 +38,7 @@ export default function useOnAction(router) {
       return false;
     } else {
       set.add(tmp4.key);
-      if (typeof target.target === "ge") {
+      if (typeof target.target === "_iter") {
         const stateForAction = router.getStateForAction(tmp4, target, ref.current);
         let tmp10 = stateForAction;
         if (null === stateForAction) {

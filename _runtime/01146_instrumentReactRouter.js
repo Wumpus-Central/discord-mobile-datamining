@@ -1,10 +1,10 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
-function instrumentReactRouter(f102336, arg1, arg2, location) {
+function instrumentReactRouter(f102434, arg1, arg2, location) {
   let tmp5;
   let tmp6;
-  const _require = f102336;
+  const _require = f102434;
   const dependencyMap = arg4;
   let items = arg5;
   if (arg5 === undefined) {
@@ -54,7 +54,7 @@ function instrumentReactRouter(f102336, arg1, arg2, location) {
       obj[_require(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react." + arg4;
       obj[_require(817).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp6;
       obj[1] = obj;
-      let result = obj.startBrowserTracingPageLoadSpan(f102336, obj);
+      let result = obj.startBrowserTracingPageLoadSpan(f102434, obj);
       let tmp4 = items(normalizeTransactionName(pathname), 2);
     }
   }

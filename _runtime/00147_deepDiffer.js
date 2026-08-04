@@ -4,11 +4,11 @@ function deepDiffer(name, name2, arg2, arg3) {
     num = -1;
   }
   let tmp = num;
-  if (typeof num !== "SENTRY_RELEASE") {
+  if (typeof num !== "V") {
     tmp = arg3;
   }
   let num2 = -1;
-  if (typeof num !== "SENTRY_RELEASE") {
+  if (typeof num !== "V") {
     num2 = num;
   }
   if (0 === num2) {
@@ -16,8 +16,8 @@ function deepDiffer(name, name2, arg2, arg3) {
   } else if (name === name2) {
     return false;
   } else {
-    if (typeof name !== "HAS_APPLICATION") {
-      if (typeof name2 === "error") {
+    if (typeof name !== "three_button_mouse") {
+      if (typeof name2 === "find") {
         let flag8;
         if (tmp != null) {
           flag8 = tmp.unsafelyIgnoreFunctions;

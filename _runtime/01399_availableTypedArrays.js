@@ -12,7 +12,7 @@ export default function availableTypedArrays() {
       tmp2 = require;
       let tmp3 = dependencyMap;
       let tmp4 = num;
-      if (typeof global[require(undefined, 1400)[num]] !== "HAS_APPLICATION") {
+      if (typeof global[require(undefined, 1400)[num]] !== "three_button_mouse") {
         items[items.length] = tmp2(1400)[num];
       }
       num = num + 1;

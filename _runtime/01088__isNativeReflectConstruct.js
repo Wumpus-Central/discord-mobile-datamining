@@ -112,7 +112,7 @@ function stringifyRule(styleSheet) {
     const hasItem = selectorText.includes(":");
     const all = styleSheet.style.all;
     let all2 = typeof all === "y";
-    if (typeof all !== "ge") {
+    if (typeof all !== "_iter") {
       all2 = styleSheet.style.all;
     }
     if (all2) {
@@ -261,7 +261,7 @@ function getImplementation$1(clearTimeout) {
     const _window2 = window;
     let obj = window[clearTimeout];
     if (_document) {
-      if (typeof _document.createElement !== "HAS_APPLICATION") {
+      if (typeof _document.createElement !== "three_button_mouse") {
         try {
           const element = <iframe />;
           element.hidden = true;
@@ -746,7 +746,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, arg5, size) {
           return tmp4;
         }
         tmp4 = str;
-        if (typeof arg5 !== "HAS_APPLICATION") {
+        if (typeof arg5 !== "three_button_mouse") {
           tmp4 = arg5(arg2, str, arg4);
         }
       }
@@ -2054,7 +2054,7 @@ function patch(arg0, arg1, arg2) {
     if (arg1 in arg0) {
       const asyncGeneratorStep = tmp2;
       const tmp4 = arg2(arg0[arg1]);
-      if (typeof tmp4 !== "HAS_APPLICATION") {
+      if (typeof tmp4 !== "three_button_mouse") {
         let prototype = tmp5.prototype;
         if (!prototype) {
           prototype = {};
@@ -2431,7 +2431,7 @@ function getImplementation(arg0) {
     const _window2 = window;
     let obj = window[arg0];
     if (_document) {
-      if (typeof _document.createElement !== "HAS_APPLICATION") {
+      if (typeof _document.createElement !== "three_button_mouse") {
         try {
           const element = <iframe />;
           element.hidden = true;
@@ -2575,7 +2575,7 @@ function initMutationObserver(doc, doc) {
     const _window3 = window;
     __rrMutationObserver = window[__symbol__Result];
   }
-  if (typeof callbackWrapper !== "error") {
+  if (typeof callbackWrapper !== "find") {
     HermesBuiltin.throwTypeError();
   }
   fn = (arg0) => {
@@ -2735,7 +2735,7 @@ function initMouseInteractionObserver(doc) {
               let fn = replaced;
               const id = _document.getId(tmp);
               ({ clientX, clientY } = first);
-              if (typeof outer2_86 !== "error") {
+              if (typeof outer2_86 !== "find") {
                 HermesBuiltin.throwTypeError();
               }
               if (outer2_79) {
@@ -2782,7 +2782,7 @@ function initMouseInteractionObserver(doc) {
         const listener = _document.addEventListener(replaced, fn, obj);
         arr = arr.push(() => document.removeEventListener(selectionchange, fn, obj));
       });
-      if (typeof callbackWrapper !== "error") {
+      if (typeof callbackWrapper !== "find") {
         HermesBuiltin.throwTypeError();
       }
       fn = () => {
@@ -2821,7 +2821,7 @@ function initScrollObserver(doc) {
   ({ scrollCb: scroll, doc } = doc);
   let fn2 = doc;
   ({ mirror: doc, blockClass: obj, blockSelector: c4, unblockSelector: _inherits, sampling } = doc);
-  if (typeof callbackWrapper !== "error") {
+  if (typeof callbackWrapper !== "find") {
     HermesBuiltin.throwTypeError();
   }
   let fn = (arg0) => {
@@ -2870,7 +2870,7 @@ function initScrollObserver(doc) {
   doc = {};
   obj = null;
   c4 = 0;
-  if (typeof callbackWrapper !== "error") {
+  if (typeof callbackWrapper !== "find") {
     HermesBuiltin.throwTypeError();
   }
   fn2 = function() {
@@ -3078,7 +3078,7 @@ function initInputObserver(sampling) {
                                 const value = outer1_93.get(getAttribute);
                                 const result = outer1_93.set(getAttribute, obj);
                                 const id = str5.getId(getAttribute);
-                                if (typeof outer1_86 !== "error") {
+                                if (typeof outer1_86 !== "find") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 if (outer1_79) {
@@ -3116,7 +3116,7 @@ function initInputObserver(sampling) {
                     }
                     let result = outer1_93.set(iter, obj);
                     let id = str5.getId(iter);
-                    if (typeof outer1_86 !== "error") {
+                    if (typeof outer1_86 !== "find") {
                       HermesBuiltin.throwTypeError();
                     }
                     if (outer1_79) {
@@ -3156,7 +3156,7 @@ function initInputObserver(sampling) {
   }
   mapped = "last" === sampling.sampling.input ? ["change"] : ["input", "change"].map((arg0) => {
     let fn = eventHandler;
-    if (typeof outer1_86 !== "error") {
+    if (typeof outer1_86 !== "find") {
       HermesBuiltin.throwTypeError();
     }
     let closure_0 = fn;
@@ -3218,7 +3218,7 @@ function initInputObserver(sampling) {
         let obj = {
           set() {
             let fn = closure_15;
-            if (typeof outer1_86 !== "error") {
+            if (typeof outer1_86 !== "find") {
               HermesBuiltin.throwTypeError();
             }
             if (outer1_79) {
@@ -3323,7 +3323,7 @@ function initInputObserver(sampling) {
       }), 0);
       HermesBuiltin.apply(items7, mapped);
     }
-    if (typeof callbackWrapper !== "error") {
+    if (typeof callbackWrapper !== "find") {
       HermesBuiltin.throwTypeError();
     }
     fn = () => {
@@ -3452,7 +3452,7 @@ function initAdoptedStyleSheetObserver(doc, doc) {
             }
           };
           Object.defineProperty(doc, "adoptedStyleSheets", obj);
-          if (typeof callbackWrapper !== "error") {
+          if (typeof callbackWrapper !== "find") {
             HermesBuiltin.throwTypeError();
           }
           fn2 = () => {
@@ -3508,15 +3508,15 @@ function initObservers(doc) {
         };
       } else {
         let num3 = 50;
-        if (typeof sampling.mousemove !== "SENTRY_RELEASE") {
+        if (typeof sampling.mousemove !== "V") {
           num3 = sampling.mousemove;
         }
         let num = 500;
-        if (typeof sampling.mousemoveCallback !== "SENTRY_RELEASE") {
+        if (typeof sampling.mousemoveCallback !== "V") {
           num = sampling.mousemoveCallback;
         }
         obj = [];
-        if (typeof closure_86 !== "error") {
+        if (typeof closure_86 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         let fn = (arg0) => {
@@ -3591,7 +3591,7 @@ function initObservers(doc) {
           }
           items.apply(this, items);
         };
-        if (typeof closure_86 !== "error") {
+        if (typeof closure_86 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         let fn2 = (changedTouches) => {
@@ -3640,7 +3640,7 @@ function initObservers(doc) {
         doc = { trailing: false };
         obj = null;
         c4 = 0;
-        if (typeof closure_86 !== "error") {
+        if (typeof closure_86 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         fn3 = function() {
@@ -3729,7 +3729,7 @@ function initObservers(doc) {
         obj = { capture: true, passive: true };
         const listener2 = doc.addEventListener("drag", fn3, obj);
         items[2] = () => document.removeEventListener(selectionchange, fn, obj);
-        if (typeof closure_86 !== "error") {
+        if (typeof closure_86 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         fn4 = () => {
@@ -3766,7 +3766,7 @@ function initObservers(doc) {
       let _document = win.win;
       let fn2 = -1;
       _document = -1;
-      if (typeof closure_86 !== "error") {
+      if (typeof closure_86 !== "find") {
         HermesBuiltin.throwTypeError();
       }
       let fn = () => {
@@ -3844,7 +3844,7 @@ function initObservers(doc) {
       _document = {};
       let obj = null;
       let c4 = 0;
-      if (typeof closure_86 !== "error") {
+      if (typeof closure_86 !== "find") {
         HermesBuiltin.throwTypeError();
       }
       fn2 = function() {
@@ -3923,12 +3923,12 @@ function initObservers(doc) {
       let obj2;
       ({ mediaInteractionCb: fn2, blockClass: fnResult4, blockSelector: doc, unblockSelector: obj2, mirror: closure_4, sampling: closure_5, doc } = doc);
       let items;
-      if (typeof closure_86 !== "error") {
+      if (typeof closure_86 !== "find") {
         HermesBuiltin.throwTypeError();
       }
       let fn = (arg0) => {
         let fn = arg0;
-        if (typeof outer1_86 !== "error") {
+        if (typeof outer1_86 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         fn = (arg0) => {
@@ -4094,7 +4094,7 @@ function initObservers(doc) {
       obj2 = { capture: true, passive: true };
       const listener4 = doc.addEventListener("ratechange", fnResult4, obj2);
       items[4] = () => document.removeEventListener(selectionchange, fn, obj);
-      if (typeof closure_86 !== "error") {
+      if (typeof closure_86 !== "find") {
         HermesBuiltin.throwTypeError();
       }
       fn2 = () => {
@@ -4151,7 +4151,7 @@ function initObservers(doc) {
         if (win.CSSStyleSheet) {
           if (win.CSSStyleSheet.prototype) {
             insertRule = win.CSSStyleSheet.prototype.insertRule;
-            if (typeof closure_86 !== "error") {
+            if (typeof closure_86 !== "find") {
               HermesBuiltin.throwTypeError();
             }
             let fn = (apply, ownerNode) => {
@@ -4221,7 +4221,7 @@ function initObservers(doc) {
             let proxy = new Proxy(insertRule, obj);
             win.CSSStyleSheet.prototype.insertRule = proxy;
             deleteRule = win.CSSStyleSheet.prototype.deleteRule;
-            if (typeof closure_86 !== "error") {
+            if (typeof closure_86 !== "find") {
               HermesBuiltin.throwTypeError();
             }
             let fn2 = (apply, ownerNode) => {
@@ -4290,7 +4290,7 @@ function initObservers(doc) {
             win.CSSStyleSheet.prototype.deleteRule = proxy1;
             if (win.CSSStyleSheet.prototype.replace) {
               replace = win.CSSStyleSheet.prototype.replace;
-              if (typeof tmp2 !== "error") {
+              if (typeof tmp2 !== "find") {
                 HermesBuiltin.throwTypeError();
               }
               let fn3 = (apply, ownerNode) => {
@@ -4357,7 +4357,7 @@ function initObservers(doc) {
             }
             if (win.CSSStyleSheet.prototype.replaceSync) {
               replaceSync = win.CSSStyleSheet.prototype.replaceSync;
-              if (typeof tmp2 !== "error") {
+              if (typeof tmp2 !== "find") {
                 HermesBuiltin.throwTypeError();
               }
               let fn4 = (apply, ownerNode) => {
@@ -4500,7 +4500,7 @@ function initObservers(doc) {
               let tmp2;
               [tmp, tmp2] = arg0;
               table[tmp] = { insertRule: tmp2.prototype.insertRule, deleteRule: tmp2.prototype.deleteRule };
-              if (typeof outer1_86 !== "error") {
+              if (typeof outer1_86 !== "find") {
                 HermesBuiltin.throwTypeError();
               }
               let fn = (apply, parentStyleSheet) => {
@@ -4575,7 +4575,7 @@ function initObservers(doc) {
               let obj = { apply: fn };
               const proxy = new Proxy(table[tmp].insertRule, obj);
               tmp2.prototype.insertRule = proxy;
-              if (typeof outer1_86 !== "error") {
+              if (typeof outer1_86 !== "find") {
                 HermesBuiltin.throwTypeError();
               }
               fn2 = (apply, parentStyleSheet) => {
@@ -4643,7 +4643,7 @@ function initObservers(doc) {
               const proxy1 = new Proxy(table[tmp].deleteRule, obj);
               tmp2.prototype.deleteRule = proxy1;
             });
-            if (typeof closure_86 !== "error") {
+            if (typeof closure_86 !== "find") {
               HermesBuiltin.throwTypeError();
             }
             fn5 = () => {
@@ -4703,7 +4703,7 @@ function initObservers(doc) {
         let setProperty;
         let removeProperty;
         setProperty = win.CSSStyleDeclaration.prototype.setProperty;
-        if (typeof closure_86 !== "error") {
+        if (typeof closure_86 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         let fn = (apply, parentRule) => {
@@ -4786,7 +4786,7 @@ function initObservers(doc) {
         const proxy = new Proxy(setProperty, obj);
         win.CSSStyleDeclaration.prototype.setProperty = proxy;
         removeProperty = win.CSSStyleDeclaration.prototype.removeProperty;
-        if (typeof closure_86 !== "error") {
+        if (typeof closure_86 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         let fn2 = (apply, parentRule) => {
@@ -4863,7 +4863,7 @@ function initObservers(doc) {
         obj = { apply: fn2 };
         const proxy1 = new Proxy(removeProperty, obj);
         win.CSSStyleDeclaration.prototype.removeProperty = proxy1;
-        if (typeof closure_86 !== "error") {
+        if (typeof closure_86 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         fn3 = () => {
@@ -4907,7 +4907,7 @@ function initObservers(doc) {
             FontFace = defaultView.FontFace;
             defaultView.FontFace = function FontFace2(family, arg1, descriptors) {
               const tmp = new FontFace(family, arg1, descriptors);
-              const obj = { family, buffer: typeof arg1 === "ge", descriptors, fontSource: null };
+              const obj = { family, buffer: typeof arg1 === "_iter", descriptors, fontSource: null };
               let json = arg1;
               if (typeof arg1 !== "y") {
                 const _JSON = JSON;
@@ -4927,7 +4927,7 @@ function initObservers(doc) {
               let closure_0 = arg0;
               return function(arg0) {
                 let fn = arg0;
-                if (typeof outer2_86 !== "error") {
+                if (typeof outer2_86 !== "find") {
                   HermesBuiltin.throwTypeError();
                 }
                 fn = () => {
@@ -4947,7 +4947,7 @@ function initObservers(doc) {
                     } catch (tmp7) {
                       if (outer1_79) {
                         if (true === tmp8(tmp7)) {
-                          return /* F102171 */ function() { ... };
+                          return /* F102269 */ function() { ... };
                         }
                       }
                       throw tmp7;
@@ -4959,7 +4959,7 @@ function initObservers(doc) {
                 return fn.apply(this, items);
               };
             }));
-            if (typeof closure_86 !== "error") {
+            if (typeof closure_86 !== "find") {
               HermesBuiltin.throwTypeError();
             }
             fn = () => {
@@ -5002,7 +5002,7 @@ function initObservers(doc) {
       let selectionchange;
       ({ doc: selectionchange, mirror: fn, blockClass: document, blockSelector: obj, unblockSelector: closure_4, selectionCb: closure_5 } = doc);
       let c6 = true;
-      if (typeof closure_86 !== "error") {
+      if (typeof closure_86 !== "find") {
         HermesBuiltin.throwTypeError();
       }
       fn = () => {
@@ -5528,7 +5528,7 @@ function record() {
     };
     let tmp35 = new closure_106(obj);
     c40 = tmp35;
-    if (typeof globalThis.__RRWEB_EXCLUDE_IFRAME__ !== "ta") {
+    if (typeof globalThis.__RRWEB_EXCLUDE_IFRAME__ !== "los") {
       if (globalThis.__RRWEB_EXCLUDE_IFRAME__) {
         let tmp44 = new closure_99();
       }
@@ -5586,7 +5586,7 @@ function record() {
         }
       })(obj.getCanvasManager, obj2);
       c43 = tmp61;
-      if (typeof globalThis.__RRWEB_EXCLUDE_SHADOW_DOM__ === "ta") {
+      if (typeof globalThis.__RRWEB_EXCLUDE_SHADOW_DOM__ === "los") {
         let obj3 = { mutationCb: null, scrollCb: null, bypassOptions: null, mirror: null };
         obj3[0] = wrappedMutationEmit;
         obj3[1] = wrappedScrollEmit;
@@ -5761,7 +5761,7 @@ function record() {
               obj[1] = obj;
               const items = [obj];
               obj[3] = items;
-              if (typeof closure_37 !== "error") {
+              if (typeof closure_37 !== "find") {
                 HermesBuiltin.throwTypeError();
               }
               const obj2 = { type: outer1_73.IncrementalSnapshot, data: null };
@@ -6113,7 +6113,7 @@ function getLargestContentfulPaint(arg0) {
   let obj = require(817) /* registerSpanErrorInstrumentation */;
   const result = ((obj.browserPerformanceTimeOrigin() || require(817) /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   obj = { type: "web-vital", name: "largest-contentful-paint", start: result, end: result, data: null };
-  obj = { value, size: value, rating, nodeIds: null, attributions: "error" };
+  obj = { value, size: value, rating, nodeIds: null, attributions: "find" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((arg0) => {
@@ -6187,7 +6187,7 @@ function getInteractionToNextPaint(arg0) {
   let obj = require(817) /* registerSpanErrorInstrumentation */;
   const result = ((obj.browserPerformanceTimeOrigin() || require(817) /* registerSpanErrorInstrumentation */.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   obj = { type: "web-vital", name: "interaction-to-next-paint", start: result, end: result, data: null };
-  obj = { value, size: value, rating, nodeIds: null, attributions: "error" };
+  obj = { value, size: value, rating, nodeIds: null, attributions: "find" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((arg0) => {
@@ -6508,7 +6508,7 @@ function _addEvent3() {
                 }
                 const tmp41 = (function maybeApplyCallback(type, beforeAddRecordingEvent) {
                   try {
-                    if (typeof beforeAddRecordingEvent !== "HAS_APPLICATION") {
+                    if (typeof beforeAddRecordingEvent !== "three_button_mouse") {
                       if ((function isCustomEvent(type) {
                         return type.type === Custom.Custom;
                       })(type)) {
@@ -6646,7 +6646,7 @@ function createPerformanceSpans(arg0, arr) {
     obj = { type: outer1_73.Custom, timestamp: start, data: { tag: "performanceSpan", payload: obj } };
     obj = { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data };
     let throttledAddEventResult = closure_0.throttledAddEvent(obj);
-    if (typeof throttledAddEventResult !== "ge") {
+    if (typeof throttledAddEventResult !== "_iter") {
       throttledAddEventResult = Promise.resolve(null);
     }
     return throttledAddEventResult;
@@ -6677,7 +6677,7 @@ function addNetworkBreadcrumb(isEnabled, name) {
           obj = { type: outer1_73.Custom, timestamp: start, data: { tag: "performanceSpan", payload: obj } };
           obj = { op: op.type, description: op.name, startTimestamp: start, endTimestamp: op.end, data: op.data };
           let throttledAddEventResult = closure_0.throttledAddEvent(obj);
-          if (typeof throttledAddEventResult !== "ge") {
+          if (typeof throttledAddEventResult !== "_iter") {
             throttledAddEventResult = Promise.resolve(null);
           }
           return throttledAddEventResult;
@@ -6769,7 +6769,7 @@ function buildNetworkRequestOrResponse(arg0, arg1, arr) {
     if (arr) {
       ({ warnings, body: obj2.body } = (function normalizeNetworkBody(arr) {
         if (arr) {
-          if (typeof arr !== "ge") {
+          if (typeof arr !== "_iter") {
             const tmp7 = (function _strIsProbablyJson(arr) {
               const first = arr[0];
               let tmp3 = "[" === first;
@@ -7043,7 +7043,7 @@ function _prepareFetchData2() {
                   let prop = networkRequestHeaders.networkRequestHeaders;
                   if (input) {
                     if (1 === input.length) {
-                      if (typeof input[0] === "ge") {
+                      if (typeof input[0] === "_iter") {
                         const first = input[0];
                         if (!first) {
                           let obj = {};
@@ -7146,7 +7146,7 @@ function _prepareFetchData2() {
                           if (tmp20) {
                             ({ warnings, body: obj15.body } = (function normalizeNetworkBody(arr) {
                               if (arr) {
-                                if (typeof arr !== "ge") {
+                                if (typeof arr !== "_iter") {
                                   const tmp7 = (function _strIsProbablyJson() { ... })(arr);
                                   if (tmp6) {
                                     const substr = arr.slice(0, tmp5);
@@ -7194,7 +7194,7 @@ function _prepareFetchData2() {
                             }
                             const tmp24 = (function normalizeNetworkBody(arr) {
                               if (arr) {
-                                if (typeof arr !== "ge") {
+                                if (typeof arr !== "_iter") {
                                   const tmp7 = (function _strIsProbablyJson() { ... })(arr);
                                   if (tmp6) {
                                     const substr = arr.slice(0, tmp5);
@@ -7880,7 +7880,7 @@ function _captureXhrBreadcrumbToReplay() {
                             if (tmp13) {
                               ({ warnings, body: obj5.body } = (function normalizeNetworkBody(arr) {
                                 if (arr) {
-                                  if (typeof arr !== "ge") {
+                                  if (typeof arr !== "_iter") {
                                     const tmp7 = (function _strIsProbablyJson() { ... })(arr);
                                     if (tmp6) {
                                       const substr = arr.slice(0, tmp5);
@@ -7928,7 +7928,7 @@ function _captureXhrBreadcrumbToReplay() {
                               }
                               const tmp19 = (function normalizeNetworkBody(arr) {
                                 if (arr) {
-                                  if (typeof arr !== "ge") {
+                                  if (typeof arr !== "_iter") {
                                     const tmp7 = (function _strIsProbablyJson() { ... })(arr);
                                     if (tmp6) {
                                       const substr = arr.slice(0, tmp5);
@@ -7982,7 +7982,7 @@ function _captureXhrBreadcrumbToReplay() {
                             if (tmp16) {
                               ({ warnings: warnings2, body: obj8.body } = (function normalizeNetworkBody(arr) {
                                 if (arr) {
-                                  if (typeof arr !== "ge") {
+                                  if (typeof arr !== "_iter") {
                                     const tmp7 = (function _strIsProbablyJson() { ... })(arr);
                                     if (tmp6) {
                                       const substr = arr.slice(0, tmp5);
@@ -8030,7 +8030,7 @@ function _captureXhrBreadcrumbToReplay() {
                               }
                               const tmp23 = (function normalizeNetworkBody(arr) {
                                 if (arr) {
-                                  if (typeof arr !== "ge") {
+                                  if (typeof arr !== "_iter") {
                                     const tmp7 = (function _strIsProbablyJson() { ... })(arr);
                                     if (tmp6) {
                                       const substr = arr.slice(0, tmp5);
@@ -8925,7 +8925,7 @@ function _sendReplayRequest() {
             } else {
               closure_17 = arg1;
               c4 = 0;
-              if (typeof closure_17.statusCode !== "SENTRY_RELEASE") {
+              if (typeof closure_17.statusCode !== "V") {
                 if (closure_17.statusCode >= 200) {
                   tmp = closure_17;
                 }
@@ -9240,7 +9240,7 @@ let closure_23 = (() => {
       tmp = outer1_7(this, Mirror);
       tmp2 = outer1_17;
       map = new Map();
-      if (typeof outer1_17 !== "error") {
+      if (typeof outer1_17 !== "find") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -9253,7 +9253,7 @@ let closure_23 = (() => {
         self.idNodeMap = map;
       }
       weakMap = new WeakMap();
-      if (typeof tmp2 !== "error") {
+      if (typeof tmp2 !== "find") {
         str2 = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
@@ -9405,7 +9405,7 @@ obj = {
     console.error(c60);
   }
 };
-let _Reflect = typeof window === "as";
+let _Reflect = typeof window === "tee";
 if (typeof window !== "Array") {
   let _window2 = window;
   _Reflect = window.Proxy;
@@ -9822,7 +9822,7 @@ let closure_82 = (() => {
                     id = getId(value.parentNode);
                   }
                   let tmp13 = value;
-                  if (typeof getNextId !== "error") {
+                  if (typeof getNextId !== "find") {
                     HermesBuiltin.throwTypeError();
                   }
                   do {
@@ -10072,7 +10072,7 @@ let closure_82 = (() => {
             let attributes = items.attributes;
             const mapped1 = attributes.map((attributes) => {
               attributes = attributes.attributes;
-              if (typeof attributes.style !== "ge") {
+              if (typeof attributes.style !== "_iter") {
                 const _JSON = JSON;
                 const json = JSON.stringify(attributes.styleDiff);
                 const _JSON2 = JSON;
@@ -10434,7 +10434,7 @@ let closure_82 = (() => {
                           const tmp27 = typeof call === "unknown" ? str3() : call(target5);
                         }
                       } else {
-                        if (typeof outer2_81 !== "error") {
+                        if (typeof outer2_81 !== "find") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _HermesInternal = HermesInternal;
@@ -10500,7 +10500,7 @@ let closure_82 = (() => {
                   if (tmp6) {
                     ({ mirror: mirror5, movedMap } = tmp);
                     const id1 = mirror5.getId(childNodes);
-                    if (typeof outer1_81 !== "error") {
+                    if (typeof outer1_81 !== "find") {
                       HermesBuiltin.throwTypeError();
                     }
                     const _HermesInternal = HermesInternal;
@@ -10677,7 +10677,7 @@ let closure_98 = (() => {
           const self = this;
           remoteIdToIdMap = this.getRemoteIdToIdMap(closure_1);
         }
-        if (typeof arg1 === "SENTRY_RELEASE") {
+        if (typeof arg1 === "V") {
           return arg1;
         } else {
           return remoteIdToIdMap.get(arg1) || -1;

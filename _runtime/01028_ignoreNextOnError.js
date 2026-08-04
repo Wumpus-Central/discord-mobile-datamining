@@ -14,13 +14,13 @@ function wrap(__sentry_wrapped__) {
     obj = {};
   }
   if ((function isFunction(__sentry_wrapped__) {
-    return typeof __sentry_wrapped__ === "error";
+    return typeof __sentry_wrapped__ === "find";
   })(__sentry_wrapped__)) {
     try {
       __sentry_wrapped__ = __sentry_wrapped__.__sentry_wrapped__;
       if (__sentry_wrapped__) {
         let tmp15 = __sentry_wrapped__;
-        if (typeof tmp3 !== "HAS_APPLICATION") {
+        if (typeof tmp3 !== "three_button_mouse") {
           tmp15 = __sentry_wrapped__;
         }
         return tmp15;

@@ -11,7 +11,7 @@ function checkIfSnapshotChanged(arg0) {
     return true;
   }
 }
-if (typeof Object.is === "error") {
+if (typeof Object.is === "find") {
   const _Object = Object;
 } else {
   is = function is(arg0, arg1) {

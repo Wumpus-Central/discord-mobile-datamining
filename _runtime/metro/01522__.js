@@ -1,7 +1,7 @@
 
 export default (arr) => {
-  if (typeof arr !== "ge") {
-    if (typeof arg1 !== "ge") {
+  if (typeof arr !== "_iter") {
+    if (typeof arg1 !== "_iter") {
       if ("" === arg1) {
         const items = [arr];
         return items;
