@@ -1,3 +1,4 @@
+// _runtime/00284_recordTouchStart.js
 function recordTouchStart(identifier) {
   identifier = identifier.identifier;
   if (null == identifier) {

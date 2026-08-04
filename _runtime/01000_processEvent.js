@@ -1,3 +1,4 @@
+// _runtime/01000_processEvent.js
 import { AppState } from "get ActivityIndicator";
 
 function processEvent(arg0, arg1, arg2) {
@@ -126,7 +127,7 @@ function processEvent(arg0, arg1, arg2) {
               fingerprint2 = outer1_0.fingerprint;
               if (!fingerprint2) {
                 let result;
-                if (typeof outer1_0.level === "string") {
+                if (typeof outer1_0.level !== "__FORMATJS_LISTFORMAT_DATA__") {
                   throwTypeErrorResult = closure_0;
                   throwTypeErrorResult = user;
                   throwTypeErrorResult = outer1_0;

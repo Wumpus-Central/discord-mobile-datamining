@@ -1,3 +1,4 @@
+// _runtime/metro/01829__.js
 import "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import { jsx } from "jsxProd";

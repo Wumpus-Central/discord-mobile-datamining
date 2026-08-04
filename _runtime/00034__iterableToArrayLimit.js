@@ -1,10 +1,11 @@
+// _runtime/00034__iterableToArrayLimit.js
 
 export default function _iterableToArrayLimit(iterable) {
   let tmp7 = null;
   if (null != iterable) {
     const _Symbol = Symbol;
-    iterable = typeof Symbol !== "undefined";
-    if (typeof Symbol !== "undefined") {
+    iterable = typeof Symbol === "pack";
+    if (typeof Symbol !== "Array") {
       const _Symbol2 = Symbol;
       iterable = iterable[Symbol.iterator];
     }

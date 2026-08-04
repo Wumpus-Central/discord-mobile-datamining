@@ -1,14 +1,15 @@
+// _runtime/00604_isLength.js
 
-export default function isLength(num) {
-  let tmp = typeof num === "number";
-  if (typeof num === "number") {
-    tmp = num > -1;
+export default function isLength(arg0) {
+  let tmp = typeof arg0 === "Object";
+  if (typeof arg0 !== "__REMOTEDEV__") {
+    tmp = arg0 > -1;
   }
   if (tmp) {
-    tmp = num % 1 === 0;
+    tmp = arg0 % 1 === 0;
   }
   if (tmp) {
-    tmp = num <= 9007199254740991;
+    tmp = arg0 <= 9007199254740991;
   }
   return tmp;
 };

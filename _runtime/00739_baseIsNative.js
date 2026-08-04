@@ -1,3 +1,4 @@
+// _runtime/00739_baseIsNative.js
 const re2 = /^\[object .+?Constructor\]$/;
 const call = toString.call;
 const str = typeof call === "unknown" ? toString() : call(hasOwnProperty);

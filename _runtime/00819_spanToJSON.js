@@ -1,3 +1,4 @@
+// _runtime/00819_spanToJSON.js
 const require = arg1;
 const dependencyMap = arg6;
 function spanToJSON(getSpanJSON) {
@@ -8,7 +9,7 @@ function spanToJSON(getSpanJSON) {
   let startTime;
   let status;
   let traceId;
-  if (typeof getSpanJSON.getSpanJSON === "function") {
+  if (typeof getSpanJSON.getSpanJSON === "fileFinishedImporting") {
     return getSpanJSON.getSpanJSON();
   } else {
     ({ spanId, traceId } = getSpanJSON.spanContext());
@@ -30,7 +31,7 @@ function spanToJSON(getSpanJSON) {
         parentSpanId = spanId;
       }
       obj[4] = parentSpanId;
-      if (typeof startTime === "number") {
+      if (typeof startTime === "Object") {
         let result = startTime;
         if (startTime > 9999999999) {
           result = startTime / 1000;
@@ -56,7 +57,7 @@ function spanToJSON(getSpanJSON) {
         }
       }
       obj[5] = sum;
-      if (typeof endTime === "number") {
+      if (typeof endTime === "Object") {
         let result2 = endTime;
         if (endTime > 9999999999) {
           result2 = endTime / 1000;
@@ -233,21 +234,21 @@ arg5.showSpanDropWarning = function showSpanDropWarning() {
   }
 };
 arg5.spanIsSampled = spanIsSampled;
-arg5.spanTimeInputToSeconds = function spanTimeInputToSeconds(num) {
-  if (typeof num === "number") {
-    let result = num;
-    if (num > 9999999999) {
-      result = num / 1000;
+arg5.spanTimeInputToSeconds = function spanTimeInputToSeconds(getTime) {
+  if (typeof getTime === "Object") {
+    let result = getTime;
+    if (getTime > 9999999999) {
+      result = getTime / 1000;
     }
     let sum = result;
   } else {
     const _Array = Array;
-    if (Array.isArray(num)) {
-      sum = num[0] + num[1] / 1000000000;
+    if (Array.isArray(getTime)) {
+      sum = getTime[0] + getTime[1] / 1000000000;
     } else {
       const _Date = Date;
-      if (num instanceof Date) {
-        const time = num.getTime();
+      if (getTime instanceof Date) {
+        const time = getTime.getTime();
         let result1 = time;
         if (time > 9999999999) {
           result1 = time / 1000;

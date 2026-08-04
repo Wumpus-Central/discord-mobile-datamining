@@ -1,3 +1,4 @@
+// _runtime/metro/00109__objectWithoutProperties.js
 
 export default function _objectWithoutProperties(arg0, arr) {
   if (null == arg0) {

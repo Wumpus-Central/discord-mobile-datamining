@@ -1,3 +1,4 @@
+// _runtime/00919_instrumentConsole.js
 const require = arg1;
 const dependencyMap = arg6;
 function instrumentConsole() {

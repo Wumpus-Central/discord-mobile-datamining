@@ -1,3 +1,4 @@
+// _runtime/01654_createMapperRegistry.js
 import isJest from "isJest";
 
 isJest = isJest.isJest();
@@ -199,7 +200,7 @@ export const startMapper = function startMapper(fn, arr2, items) {
   fn = function f() {
     __mapperRegistry = __mapperRegistry.__mapperRegistry;
     if (undefined === __mapperRegistry) {
-      if (typeof outer1_4 !== "function") {
+      if (typeof outer1_4 !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       function updateMappersOrder() {

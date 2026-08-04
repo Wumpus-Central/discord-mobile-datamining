@@ -1,3 +1,4 @@
+// _runtime/01548_noop.js
 
 export default require("noop").memo(function StaticContainer(children) {
   return children.children;

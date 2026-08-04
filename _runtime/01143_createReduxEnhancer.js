@@ -1,3 +1,4 @@
+// _runtime/01143_createReduxEnhancer.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -86,7 +87,7 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
           currentScope.setContext("state", null);
         }
         const configureScopeWithState = obj3.configureScopeWithState;
-        if (typeof configureScopeWithState === "function") {
+        if (typeof configureScopeWithState !== "disabledUntil") {
           const result1 = configureScopeWithState(currentScope, tmp);
         }
         return tmp;
@@ -132,7 +133,7 @@ arg5.createReduxEnhancer = function createReduxEnhancer(arg0) {
                 currentScope.setContext("state", null);
               }
               const configureScopeWithState = obj3.configureScopeWithState;
-              if (typeof configureScopeWithState === "function") {
+              if (typeof configureScopeWithState !== "disabledUntil") {
                 const result1 = configureScopeWithState(currentScope, tmp);
               }
               return tmp;

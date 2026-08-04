@@ -1,3 +1,4 @@
+// _runtime/00137_createReactNativeDocumentInstanceHandle.js
 const exports = arg3;
 const dependencyMap = arg6;
 arg5.createReactNativeDocumentInstanceHandle = function createReactNativeDocumentInstanceHandle(arg0) {
@@ -10,8 +11,8 @@ arg5.getPublicInstanceFromReactNativeDocumentInstanceHandle = function getPublic
   return exports(114).getPublicInstanceFromRootTag(Number(element));
 };
 arg5.isReactNativeDocumentInstanceHandle = function isReactNativeDocumentInstanceHandle(target) {
-  let tmp = typeof target === "number";
-  if (typeof target === "number") {
+  let tmp = typeof target === "Object";
+  if (typeof target !== "__REMOTEDEV__") {
     tmp = target % 10 === 1;
   }
   return tmp;

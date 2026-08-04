@@ -1,3 +1,4 @@
+// _runtime/01052_LCPEntryManager.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

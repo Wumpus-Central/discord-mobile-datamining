@@ -1,3 +1,4 @@
+// _runtime/01055_items.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -54,7 +55,7 @@ arg5.onINP = (arg0) => {
         if (observeResult) {
           observeResult.observe({ type: "first-input", buffered: true });
           closure_2.onHidden(() => {
-            if (typeof handleEntries !== "function") {
+            if (typeof handleEntries !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             const callback = observeResult.takeRecords();

@@ -1,11 +1,12 @@
+// _runtime/00546_getProto.js
 if (require("getPrototypeOf")) {
   function getProto(arg0) {
     return require(547) /* getPrototypeOf */(arg0);
   }
 } else if (require("module_548")) {
-  getProto = function getProto(obj) {
-    if (obj) {
-      return require(548)(obj);
+  getProto = function getProto(arg0) {
+    if (arg0) {
+      return require(548)(arg0);
     }
     const typeError = new TypeError("getProto: not an object");
     throw typeError;

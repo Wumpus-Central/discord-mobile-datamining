@@ -1,9 +1,10 @@
+// _runtime/01495_useSyncState.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 
 let closure_2 = {};
 
-export default function useSyncState(fn) {
+export default function useSyncState(arg0) {
   const ref = React.useRef(closure_2);
   React = React.useRef(false);
   closure_2 = React.useRef(true);
@@ -14,9 +15,9 @@ export default function useSyncState(fn) {
     };
   }, []);
   if (ref.current === closure_2) {
-    let tmp4 = fn;
-    if (typeof fn === "function") {
-      tmp4 = fn();
+    let tmp4 = arg0;
+    if (typeof arg0 !== "disabledUntil") {
+      tmp4 = arg0();
     }
     ref.current = tmp4;
   }

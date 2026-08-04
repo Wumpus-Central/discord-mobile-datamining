@@ -1,3 +1,4 @@
+// _runtime/01694_addPxToTransform.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 
@@ -14,7 +15,7 @@ function addPxToTransform(transform) {
       let tmp6 = tmp5[1];
       if (first.includes("translate")) {
         let tmp8 = tmp6;
-        if (typeof tmp6 === "number") {
+        if (typeof tmp6 === "Object") {
           let tmp11 = first;
           let tmp12 = tmp6;
           let _HermesInternal = HermesInternal;

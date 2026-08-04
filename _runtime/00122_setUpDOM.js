@@ -1,3 +1,4 @@
+// _runtime/00122_setUpDOM.js
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

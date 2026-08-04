@@ -1,3 +1,4 @@
+// _runtime/00752_eq.js
 
 export default function eq(arg0, arg1) {
   let tmp = arg0 === arg1;

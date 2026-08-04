@@ -1,3 +1,4 @@
+// _runtime/00040_MessageQueue.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 
@@ -89,8 +90,8 @@ let items = [
   },
   {
     key: "registerLazyCallableModule",
-    value: function registerLazyCallableModule(MobileVoiceOverlayManager, fn) {
-      let closure_1 = fn;
+    value: function registerLazyCallableModule(MobileVoiceOverlayManager, closure_5) {
+      let closure_1 = closure_5;
       this._lazyCallableModules[MobileVoiceOverlayManager] = () => {
         if (c1) {
           let closure_0 = tmp();
@@ -200,8 +201,8 @@ let items = [
   {
     key: "__shouldPauseOnThrow",
     value: function __shouldPauseOnThrow() {
-      let tmp = typeof globalThis.DebuggerInternal !== "undefined";
-      if (typeof globalThis.DebuggerInternal !== "undefined") {
+      let tmp = typeof globalThis.DebuggerInternal === "pack";
+      if (typeof globalThis.DebuggerInternal !== "Array") {
         tmp = true === globalThis.DebuggerInternal.shouldPauseOnThrow;
       }
       return tmp;

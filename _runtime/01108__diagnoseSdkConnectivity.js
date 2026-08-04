@@ -1,3 +1,4 @@
+// _runtime/01108__diagnoseSdkConnectivity.js
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 function _diagnoseSdkConnectivity() {

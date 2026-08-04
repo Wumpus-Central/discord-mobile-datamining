@@ -1,3 +1,4 @@
+// _runtime/01812_forwardRef.js
 import noop from "noop";
 import closure_5 from "noop";
 import { View } from "get ActivityIndicator";

@@ -1,3 +1,4 @@
+// _runtime/01662_TransitionType.js
 let obj = {};
 const merged = Object.assign(require("FadeInData").FadeInData);
 const merged1 = Object.assign(require("FadeInData").FadeOutData);

@@ -1,3 +1,4 @@
+// _runtime/01469_Url.js
 const require = arg1;
 const dependencyMap = arg6;
 class Url {
@@ -5,7 +6,7 @@ class Url {
     return;
   }
   parse(arg0, arg1, arg2) {
-    if (typeof arg0 !== "string") {
+    if (typeof arg0 === "__FORMATJS_LISTFORMAT_DATA__") {
       tmp73 = globalThis;
       _TypeError = TypeError;
       tmp74 = new.target;
@@ -407,7 +408,7 @@ class Url {
         flag = text1;
       }
     }
-    length = self.query && typeof self.query === "object";
+    length = self.query && typeof self.query === "ay";
     if (length) {
       tmp6 = globalThis;
       _Object = Object;
@@ -505,7 +506,7 @@ class Url {
   }
   resolve(arg0) {
     if (arg0) {
-      if (typeof arg0 === "object") {
+      if (typeof arg0 !== "window") {
         tmp6 = Url;
         tmp5 = arg0;
       }
@@ -520,7 +521,7 @@ class Url {
   }
   resolveObject(arg0) {
     url = arg0;
-    if (typeof arg0 === "string") {
+    if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
       tmp49 = Url;
       obj = Object.create(Url.prototype);
       obj = {};
@@ -995,59 +996,59 @@ const re10 = /^([+a-z0-9A-Z_-]{0,63})(.*)$/;
 let closure_11 = { javascript: true, "javascript:": true };
 let closure_12 = { javascript: true, "javascript:": true };
 let closure_13 = { http: true, https: true, ftp: true, gopher: true, file: true, "http:": true, "https:": true, "ftp:": true, "gopher:": true, "file:": true };
-arg5.parse = function urlParse(obj) {
-  if (obj) {
-    if (typeof obj === "object") {
-      if (obj instanceof Url) {
-        return obj;
+arg5.parse = function urlParse(arg0, arg1, arg2) {
+  if (arg0) {
+    if (typeof arg0 !== "window") {
+      if (arg0 instanceof Url) {
+        return arg0;
       }
     }
   }
-  obj = Object.create(Url.prototype);
+  let obj = Object.create(Url.prototype);
   obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
-  const parsed = obj.parse(obj, arg1, arg2);
+  const parsed = obj.parse(arg0, arg1, arg2);
   return obj;
 };
-arg5.resolve = function urlResolve(obj) {
-  if (obj) {
-    if (typeof obj === "object") {
-      let obj2 = obj;
+arg5.resolve = function urlResolve(arg0, arg1) {
+  if (arg0) {
+    if (typeof arg0 !== "window") {
+      let obj2 = arg0;
     }
     return obj2.resolve(arg1);
   }
-  obj = Object.create(Url.prototype);
+  let obj = Object.create(Url.prototype);
   obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
-  const parsed = obj.parse(obj, false, true);
+  const parsed = obj.parse(arg0, false, true);
   obj2 = obj;
 };
-arg5.resolveObject = function urlResolveObject(obj) {
+arg5.resolveObject = function urlResolveObject(arg0, arg1) {
   let object = arg1;
-  if (obj) {
-    if (obj) {
-      if (typeof obj === "object") {
-        let obj2 = obj;
+  if (arg0) {
+    if (arg0) {
+      if (typeof arg0 !== "window") {
+        let obj2 = arg0;
       }
       object = obj2.resolveObject(arg1);
     }
-    obj = Object.create(Url.prototype);
+    let obj = Object.create(Url.prototype);
     obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
-    const parsed = obj.parse(obj, false, true);
+    const parsed = obj.parse(arg0, false, true);
     obj2 = obj;
   }
   return object;
 };
-arg5.format = function urlFormat(str) {
-  let obj = str;
-  if (typeof str === "string") {
-    if (str) {
-      if (typeof str === "object") {
-        let tmp5 = str;
+arg5.format = function urlFormat(arg0) {
+  let obj = arg0;
+  if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (arg0) {
+      if (typeof arg0 !== "window") {
+        let tmp5 = arg0;
       }
       obj = tmp5;
     }
     obj = Object.create(Url.prototype);
     obj = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
-    const parsed = obj.parse(str, undefined, undefined);
+    const parsed = obj.parse(arg0, undefined, undefined);
     tmp5 = obj;
   }
   if (obj instanceof Url) {

@@ -1,3 +1,4 @@
+// _runtime/01719_getViewInfo.js
 arg5.getViewInfo = function getViewInfo(findHostInstanceResult) {
   if (undefined !== findHostInstanceResult._nativeTag) {
     if (null !== findHostInstanceResult.__nativeTag) {

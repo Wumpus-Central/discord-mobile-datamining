@@ -1,3 +1,4 @@
+// _runtime/00163_PerformanceEntry.js
 import PerformanceEntry from "_classCallCheck";
 import setPlatformObject from "setPlatformObject";
 

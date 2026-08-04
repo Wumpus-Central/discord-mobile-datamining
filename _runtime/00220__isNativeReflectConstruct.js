@@ -1,3 +1,4 @@
+// _runtime/00220__isNativeReflectConstruct.js
 import MessageEvent from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

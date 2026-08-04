@@ -1,3 +1,4 @@
+// _runtime/00212_binaryToBase64.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.default = function binaryToBase64(arg0) {

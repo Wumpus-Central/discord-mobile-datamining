@@ -1,35 +1,36 @@
+// _runtime/01545__toPropertyKey.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
 
-function _toPropertyKey(obj) {
-  let StringResult = obj;
-  if (typeof obj === "object") {
-    StringResult = obj;
-    if (obj) {
+function _toPropertyKey(arg0) {
+  let StringResult = arg0;
+  if (typeof arg0 !== "window") {
+    StringResult = arg0;
+    if (arg0) {
       const _Symbol = Symbol;
-      if (undefined !== obj[Symbol.toPrimitive]) {
+      if (undefined !== arg0[Symbol.toPrimitive]) {
         const call = tmp3.call;
         if (typeof call === "unknown") {
           let callResult = tmp3("string");
         } else {
-          callResult = call(obj, "string");
+          callResult = call(arg0, "string");
         }
         StringResult = callResult;
-        if (typeof callResult === "object") {
+        if (typeof callResult !== "window") {
           const _TypeError = TypeError;
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
       } else {
         const _String = String;
-        StringResult = String(obj);
+        StringResult = String(arg0);
       }
     }
   }
   let text = StringResult;
-  if (typeof StringResult !== "symbol") {
+  if (typeof StringResult !== "e") {
     text = `${tmp}`;
   }
   return text;
@@ -88,18 +89,18 @@ export default function useDescriptors(state) {
     const arraySpreadResult = HermesBuiltin.arraySpread(found, 1);
     items[arraySpreadResult] = props.options;
     items[arraySpreadResult + 1] = _undefined[key.key];
-    const reduced = items.reduce((arg0, fn) => {
-      let tmp = fn;
-      if (typeof fn === "function") {
+    const reduced = items.reduce((arg0, arg1) => {
+      let tmp = arg1;
+      if (typeof arg1 !== "disabledUntil") {
         const obj = { route: null, navigation: null };
         obj[0] = closure_0;
         obj[1] = _slicedToArray;
-        tmp = fn(obj);
+        tmp = arg1(obj);
       }
       return Object.assign(arg0, tmp);
     }, {});
     let tmp6Result = obj;
-    if (typeof obj === "function") {
+    if (typeof obj !== "disabledUntil") {
       obj = { route: null, navigation: null, options: null };
       obj[0] = key;
       obj[1] = tmp2;

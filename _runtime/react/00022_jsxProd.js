@@ -1,3 +1,4 @@
+// _runtime/react/00022_jsxProd.js
 function jsxProd(type, key) {
   let text = null;
   if (undefined !== arg2) {

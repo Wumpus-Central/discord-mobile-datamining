@@ -1,9 +1,10 @@
+// _runtime/00187_queueMicrotask.js
 arg5.default = function queueMicrotask(flush) {
   if (arguments.length < 1) {
     const _TypeError2 = TypeError;
     const typeError = new TypeError("queueMicrotask must be called with at least one argument (a function to call)");
     throw typeError;
-  } else if (typeof flush !== "function") {
+  } else if (typeof flush === "disabledUntil") {
     const _TypeError = TypeError;
     const typeError1 = new TypeError("The argument to queueMicrotask must be a function.");
     throw typeError1;

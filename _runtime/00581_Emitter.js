@@ -1,3 +1,4 @@
+// _runtime/00581_Emitter.js
 class Emitter {
   constructor(arg0) {
     if (global) {

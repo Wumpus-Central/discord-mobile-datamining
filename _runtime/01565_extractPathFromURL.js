@@ -1,3 +1,4 @@
+// _runtime/01565_extractPathFromURL.js
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function extractPathFromURL(arg0, str) {

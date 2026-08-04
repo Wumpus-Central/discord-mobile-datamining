@@ -1,3 +1,4 @@
+// _runtime/00279_legacySendAccessibilityEvent.js
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function legacySendAccessibilityEvent(_nativeTag, arg1) {

@@ -1,3 +1,4 @@
+// _runtime/00103_createViewConfig.js
 const module = arg2;
 const dependencyMap = arg6;
 arg5.createViewConfig = function createViewConfig(closure_2) {

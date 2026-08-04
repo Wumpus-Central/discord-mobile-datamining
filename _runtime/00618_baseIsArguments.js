@@ -1,3 +1,4 @@
+// _runtime/00618_baseIsArguments.js
 import baseIsArguments from "baseIsArguments";
 
 let c3;

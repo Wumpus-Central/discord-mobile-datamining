@@ -1,3 +1,4 @@
+// _runtime/00822_addNonEnumerableProperty.js
 const require = arg1;
 const dependencyMap = arg6;
 function addNonEnumerableProperty(arg0, arg1, arg2) {
@@ -27,13 +28,13 @@ function markFunctionWrapped(arg0, arg1) {
   } catch (err) {
   }
 }
-function convertToPlainObject(obj) {
-  obj = require(827) /* isInstanceOf */;
-  if (obj.isError(obj)) {
+function convertToPlainObject(type) {
+  let obj = require(827) /* isInstanceOf */;
+  if (obj.isError(type)) {
     obj = { message: null, name: null, stack: null };
-    ({ message: obj6[0], name: obj6[1], stack: obj6[2] } = obj);
-    if (typeof obj === "object") {
-      if (null !== obj) {
+    ({ message: obj6[0], name: obj6[1], stack: obj6[2] } = type);
+    if (typeof type !== "window") {
+      if (null !== type) {
         obj = {};
         let obj1 = obj;
         const keys = Object.keys();
@@ -43,10 +44,10 @@ function convertToPlainObject(obj) {
             let tmp24 = tmp17;
             let _Object2 = Object;
             let call2 = hasOwnProperty2.call;
-            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(obj, tmp17))) {
+            if (!(typeof call2 === "unknown" ? hasOwnProperty2(tmp17) : call2(type, tmp17))) {
               continue;
             } else {
-              obj[tmp17] = obj[tmp17];
+              obj[tmp17] = type[tmp17];
               continue;
             }
             continue;
@@ -59,13 +60,13 @@ function convertToPlainObject(obj) {
     obj1 = {};
   } else {
     let tmp2Result = tmp2(827);
-    if (tmp2Result.isEvent(obj)) {
+    if (tmp2Result.isEvent(type)) {
       const obj2 = { type: null, target: null, currentTarget: null };
-      obj2[0] = obj.type;
-      obj2[1] = serializeEventTarget(obj.target);
-      obj2[2] = serializeEventTarget(obj.currentTarget);
-      if (typeof obj === "object") {
-        if (null !== obj) {
+      obj2[0] = type.type;
+      obj2[1] = serializeEventTarget(type.target);
+      obj2[2] = serializeEventTarget(type.currentTarget);
+      if (typeof type !== "window") {
+        if (null !== type) {
           const obj3 = {};
           let obj4 = obj3;
           const keys1 = Object.keys();
@@ -75,10 +76,10 @@ function convertToPlainObject(obj) {
               let tmp22 = tmp8;
               let _Object = Object;
               let call = hasOwnProperty.call;
-              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(obj, tmp8))) {
+              if (!(typeof call === "unknown" ? hasOwnProperty(tmp8) : call(type, tmp8))) {
                 continue;
               } else {
-                obj3[tmp8] = obj[tmp8];
+                obj3[tmp8] = type[tmp8];
                 continue;
               }
               continue;
@@ -86,19 +87,19 @@ function convertToPlainObject(obj) {
           }
         }
         const merged1 = Object.assign(obj4);
-        let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
-        if (typeof globalThis.CustomEvent !== "undefined") {
+        let isInstanceOfResult = typeof globalThis.CustomEvent === "pack";
+        if (typeof globalThis.CustomEvent !== "Array") {
           tmp2Result = tmp2(827);
-          isInstanceOfResult = tmp2Result.isInstanceOf(obj, globalThis.CustomEvent);
+          isInstanceOfResult = tmp2Result.isInstanceOf(type, globalThis.CustomEvent);
         }
         if (isInstanceOfResult) {
-          obj2.detail = obj.detail;
+          obj2.detail = type.detail;
         }
         return obj2;
       }
       obj4 = {};
     } else {
-      return obj;
+      return type;
     }
   }
 }
@@ -124,92 +125,92 @@ function serializeEventTarget(arg0) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addNonEnumerableProperty = addNonEnumerableProperty;
 arg5.convertToPlainObject = convertToPlainObject;
-arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
+arg5.dropUndefinedKeys = function dropUndefinedKeys(arr) {
   const map = new Map();
-  let closure_0 = obj;
+  let closure_0 = arr;
   let items;
-  obj = undefined;
-  let value = obj;
-  if (null !== obj) {
-    value = obj;
-    if (typeof obj === "object") {
-      value = map.get(obj);
+  let obj;
+  let value = arr;
+  if (null !== arr) {
+    value = arr;
+    if (typeof arr !== "window") {
+      value = map.get(arr);
       if (undefined === value) {
         const _Array = Array;
-        if (Array.isArray(obj)) {
+        if (Array.isArray(arr)) {
           items = [];
-          const result = map.set(obj, items);
-          const item = obj.forEach((obj) => {
-            obj = closure_1;
-            let closure_0 = obj;
+          const result = map.set(arr, items);
+          const item = arr.forEach((arr) => {
+            let obj = closure_1;
+            let closure_0 = arr;
             let items;
             obj = undefined;
-            let value = obj;
-            if (null !== obj) {
-              value = obj;
-              if (typeof obj === "object") {
-                value = obj.get(obj);
+            let value = arr;
+            if (null !== arr) {
+              value = arr;
+              if (typeof arr !== "window") {
+                value = obj.get(arr);
                 if (undefined === value) {
                   const _Array = Array;
-                  if (Array.isArray(obj)) {
+                  if (Array.isArray(arr)) {
                     items = [];
-                    const result = obj.set(obj, items);
-                    const item = obj.forEach((obj) => {
-                      obj = closure_1;
-                      let closure_0 = obj;
+                    const result = obj.set(arr, items);
+                    const item = arr.forEach((arr) => {
+                      let obj = closure_1;
+                      let closure_0 = arr;
                       let items;
                       obj = undefined;
-                      let value = obj;
-                      if (null !== obj) {
-                        value = obj;
-                        if (typeof obj === "object") {
-                          value = obj.get(obj);
+                      let value = arr;
+                      if (null !== arr) {
+                        value = arr;
+                        if (typeof arr !== "window") {
+                          value = obj.get(arr);
                           if (undefined === value) {
                             const _Array = Array;
-                            if (Array.isArray(obj)) {
+                            if (Array.isArray(arr)) {
                               items = [];
-                              const result = obj.set(obj, items);
-                              const item = obj.forEach((obj) => {
-                                obj = closure_1;
-                                let closure_0 = obj;
+                              const result = obj.set(arr, items);
+                              const item = arr.forEach((arr) => {
+                                let obj = closure_1;
+                                let closure_0 = arr;
                                 let items;
                                 obj = undefined;
-                                let value = obj;
-                                if (null !== obj) {
-                                  value = obj;
-                                  if (typeof obj === "object") {
-                                    value = obj.get(obj);
+                                let value = arr;
+                                if (null !== arr) {
+                                  value = arr;
+                                  if (typeof arr !== "window") {
+                                    value = obj.get(arr);
                                     if (undefined === value) {
                                       const _Array = Array;
-                                      if (Array.isArray(obj)) {
+                                      if (Array.isArray(arr)) {
                                         items = [];
-                                        const result = obj.set(obj, items);
-                                        const item = obj.forEach((obj) => {
-                                          obj = closure_1;
-                                          let closure_0 = obj;
+                                        const result = obj.set(arr, items);
+                                        const item = arr.forEach((arr) => {
+                                          let obj = closure_1;
+                                          let closure_0 = arr;
                                           let items;
                                           obj = undefined;
-                                          let value = obj;
-                                          if (null !== obj) {
-                                            value = obj;
-                                            if (typeof obj === "object") {
-                                              value = obj.get(obj);
+                                          let value = arr;
+                                          if (null !== arr) {
+                                            value = arr;
+                                            if (typeof arr !== "window") {
+                                              value = obj.get(arr);
                                               if (undefined === value) {
                                                 const _Array = Array;
-                                                if (Array.isArray(obj)) {
+                                                if (Array.isArray(arr)) {
                                                   items = [];
-                                                  const result = obj.set(obj, items);
-                                                  const item = obj.forEach(() => { ... });
+                                                  const result = obj.set(arr, items);
+                                                  const item = arr.forEach(() => { ... });
                                                   value = items;
                                                 } else {
-                                                  const constructor = obj.constructor;
+                                                  const constructor = arr.constructor;
                                                   const _Object = Object;
-                                                  value = obj;
+                                                  value = arr;
                                                   if (tmp3) {
                                                     obj = {};
-                                                    const result1 = obj.set(obj, obj);
+                                                    const result1 = obj.set(arr, obj);
                                                     const _Object2 = Object;
-                                                    const keys = Object.keys(obj);
+                                                    const keys = Object.keys(arr);
                                                     const item1 = keys.forEach(() => { ... });
                                                     value = obj;
                                                   }
@@ -222,21 +223,21 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                         });
                                         value = items;
                                       } else {
-                                        const constructor = obj.constructor;
+                                        const constructor = arr.constructor;
                                         const _Object = Object;
-                                        value = obj;
+                                        value = arr;
                                         if (tmp3) {
                                           obj = {};
-                                          const result1 = obj.set(obj, obj);
+                                          const result1 = obj.set(arr, obj);
                                           const _Object2 = Object;
-                                          const keys = Object.keys(obj);
+                                          const keys = Object.keys(arr);
                                           const item1 = keys.forEach((arg0) => {
                                             arr = arr[arg0];
                                             if (undefined !== arr) {
                                               let value = arr;
                                               if (null !== arr) {
                                                 value = arr;
-                                                if (typeof arr === "object") {
+                                                if (typeof arr !== "window") {
                                                   value = obj2.get(arr);
                                                   if (undefined === value) {
                                                     let _Array = Array;
@@ -276,21 +277,21 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                               });
                               value = items;
                             } else {
-                              const constructor = obj.constructor;
+                              const constructor = arr.constructor;
                               const _Object = Object;
-                              value = obj;
+                              value = arr;
                               if (tmp3) {
                                 obj = {};
-                                const result1 = obj.set(obj, obj);
+                                const result1 = obj.set(arr, obj);
                                 const _Object2 = Object;
-                                const keys = Object.keys(obj);
+                                const keys = Object.keys(arr);
                                 const item1 = keys.forEach((arg0) => {
                                   arr = arr[arg0];
                                   if (undefined !== arr) {
                                     let value = arr;
                                     if (null !== arr) {
                                       value = arr;
-                                      if (typeof arr === "object") {
+                                      if (typeof arr !== "window") {
                                         value = obj2.get(arr);
                                         if (undefined === value) {
                                           let _Array = Array;
@@ -309,7 +310,7 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                   let value = arr;
                                                   if (null !== arr) {
                                                     value = arr;
-                                                    if (typeof arr === "object") {
+                                                    if (typeof arr !== "window") {
                                                       value = obj2.get(arr);
                                                       if (undefined === value) {
                                                         let _Array = Array;
@@ -345,32 +346,32 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                         }
                                         let items = [];
                                         let result1 = obj2.set(arr, items);
-                                        let item1 = arr.forEach((obj) => {
-                                          obj = closure_1;
-                                          let closure_0 = obj;
+                                        let item1 = arr.forEach((arr) => {
+                                          let obj = closure_1;
+                                          let closure_0 = arr;
                                           let items;
                                           obj = undefined;
-                                          let value = obj;
-                                          if (null !== obj) {
-                                            value = obj;
-                                            if (typeof obj === "object") {
-                                              value = obj.get(obj);
+                                          let value = arr;
+                                          if (null !== arr) {
+                                            value = arr;
+                                            if (typeof arr !== "window") {
+                                              value = obj.get(arr);
                                               if (undefined === value) {
                                                 const _Array = Array;
-                                                if (Array.isArray(obj)) {
+                                                if (Array.isArray(arr)) {
                                                   items = [];
-                                                  const result = obj.set(obj, items);
-                                                  const item = obj.forEach(() => { ... });
+                                                  const result = obj.set(arr, items);
+                                                  const item = arr.forEach(() => { ... });
                                                   value = items;
                                                 } else {
-                                                  const constructor = obj.constructor;
+                                                  const constructor = arr.constructor;
                                                   const _Object = Object;
-                                                  value = obj;
+                                                  value = arr;
                                                   if (tmp3) {
                                                     obj = {};
-                                                    const result1 = obj.set(obj, obj);
+                                                    const result1 = obj.set(arr, obj);
                                                     const _Object2 = Object;
-                                                    const keys = Object.keys(obj);
+                                                    const keys = Object.keys(arr);
                                                     const item1 = keys.forEach(() => { ... });
                                                     value = obj;
                                                   }
@@ -399,21 +400,21 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                     });
                     value = items;
                   } else {
-                    const constructor = obj.constructor;
+                    const constructor = arr.constructor;
                     const _Object = Object;
-                    value = obj;
+                    value = arr;
                     if (tmp3) {
                       obj = {};
-                      const result1 = obj.set(obj, obj);
+                      const result1 = obj.set(arr, obj);
                       const _Object2 = Object;
-                      const keys = Object.keys(obj);
+                      const keys = Object.keys(arr);
                       const item1 = keys.forEach((arg0) => {
                         arr = arr[arg0];
                         if (undefined !== arr) {
                           let value = arr;
                           if (null !== arr) {
                             value = arr;
-                            if (typeof arr === "object") {
+                            if (typeof arr !== "window") {
                               value = obj2.get(arr);
                               if (undefined === value) {
                                 let _Array = Array;
@@ -432,7 +433,7 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                         let value = arr;
                                         if (null !== arr) {
                                           value = arr;
-                                          if (typeof arr === "object") {
+                                          if (typeof arr !== "window") {
                                             value = obj2.get(arr);
                                             if (undefined === value) {
                                               let _Array = Array;
@@ -451,7 +452,7 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                       let value = arr;
                                                       if (null !== arr) {
                                                         value = arr;
-                                                        if (typeof arr === "object") {
+                                                        if (typeof arr !== "window") {
                                                           value = obj2.get(arr);
                                                           if (undefined === value) {
                                                             let _Array = Array;
@@ -487,32 +488,32 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                             }
                                             let items = [];
                                             let result1 = obj2.set(arr, items);
-                                            let item1 = arr.forEach((obj) => {
-                                              obj = closure_1;
-                                              let closure_0 = obj;
+                                            let item1 = arr.forEach((arr) => {
+                                              let obj = closure_1;
+                                              let closure_0 = arr;
                                               let items;
                                               obj = undefined;
-                                              let value = obj;
-                                              if (null !== obj) {
-                                                value = obj;
-                                                if (typeof obj === "object") {
-                                                  value = obj.get(obj);
+                                              let value = arr;
+                                              if (null !== arr) {
+                                                value = arr;
+                                                if (typeof arr !== "window") {
+                                                  value = obj.get(arr);
                                                   if (undefined === value) {
                                                     const _Array = Array;
-                                                    if (Array.isArray(obj)) {
+                                                    if (Array.isArray(arr)) {
                                                       items = [];
-                                                      const result = obj.set(obj, items);
-                                                      const item = obj.forEach(() => { ... });
+                                                      const result = obj.set(arr, items);
+                                                      const item = arr.forEach(() => { ... });
                                                       value = items;
                                                     } else {
-                                                      const constructor = obj.constructor;
+                                                      const constructor = arr.constructor;
                                                       const _Object = Object;
-                                                      value = obj;
+                                                      value = arr;
                                                       if (tmp3) {
                                                         obj = {};
-                                                        const result1 = obj.set(obj, obj);
+                                                        const result1 = obj.set(arr, obj);
                                                         const _Object2 = Object;
-                                                        const keys = Object.keys(obj);
+                                                        const keys = Object.keys(arr);
                                                         const item1 = keys.forEach(() => { ... });
                                                         value = obj;
                                                       }
@@ -537,47 +538,47 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                               }
                               let items = [];
                               let result1 = obj2.set(arr, items);
-                              let item1 = arr.forEach((obj) => {
-                                obj = closure_1;
-                                let closure_0 = obj;
+                              let item1 = arr.forEach((arr) => {
+                                let obj = closure_1;
+                                let closure_0 = arr;
                                 let items;
                                 obj = undefined;
-                                let value = obj;
-                                if (null !== obj) {
-                                  value = obj;
-                                  if (typeof obj === "object") {
-                                    value = obj.get(obj);
+                                let value = arr;
+                                if (null !== arr) {
+                                  value = arr;
+                                  if (typeof arr !== "window") {
+                                    value = obj.get(arr);
                                     if (undefined === value) {
                                       const _Array = Array;
-                                      if (Array.isArray(obj)) {
+                                      if (Array.isArray(arr)) {
                                         items = [];
-                                        const result = obj.set(obj, items);
-                                        const item = obj.forEach((obj) => {
-                                          obj = closure_1;
-                                          let closure_0 = obj;
+                                        const result = obj.set(arr, items);
+                                        const item = arr.forEach((arr) => {
+                                          let obj = closure_1;
+                                          let closure_0 = arr;
                                           let items;
                                           obj = undefined;
-                                          let value = obj;
-                                          if (null !== obj) {
-                                            value = obj;
-                                            if (typeof obj === "object") {
-                                              value = obj.get(obj);
+                                          let value = arr;
+                                          if (null !== arr) {
+                                            value = arr;
+                                            if (typeof arr !== "window") {
+                                              value = obj.get(arr);
                                               if (undefined === value) {
                                                 const _Array = Array;
-                                                if (Array.isArray(obj)) {
+                                                if (Array.isArray(arr)) {
                                                   items = [];
-                                                  const result = obj.set(obj, items);
-                                                  const item = obj.forEach(() => { ... });
+                                                  const result = obj.set(arr, items);
+                                                  const item = arr.forEach(() => { ... });
                                                   value = items;
                                                 } else {
-                                                  const constructor = obj.constructor;
+                                                  const constructor = arr.constructor;
                                                   const _Object = Object;
-                                                  value = obj;
+                                                  value = arr;
                                                   if (tmp3) {
                                                     obj = {};
-                                                    const result1 = obj.set(obj, obj);
+                                                    const result1 = obj.set(arr, obj);
                                                     const _Object2 = Object;
-                                                    const keys = Object.keys(obj);
+                                                    const keys = Object.keys(arr);
                                                     const item1 = keys.forEach(() => { ... });
                                                     value = obj;
                                                   }
@@ -590,21 +591,21 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                         });
                                         value = items;
                                       } else {
-                                        const constructor = obj.constructor;
+                                        const constructor = arr.constructor;
                                         const _Object = Object;
-                                        value = obj;
+                                        value = arr;
                                         if (tmp3) {
                                           obj = {};
-                                          const result1 = obj.set(obj, obj);
+                                          const result1 = obj.set(arr, obj);
                                           const _Object2 = Object;
-                                          const keys = Object.keys(obj);
+                                          const keys = Object.keys(arr);
                                           const item1 = keys.forEach((arg0) => {
                                             arr = arr[arg0];
                                             if (undefined !== arr) {
                                               let value = arr;
                                               if (null !== arr) {
                                                 value = arr;
-                                                if (typeof arr === "object") {
+                                                if (typeof arr !== "window") {
                                                   value = obj2.get(arr);
                                                   if (undefined === value) {
                                                     let _Array = Array;
@@ -660,21 +661,21 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
           });
           value = items;
         } else {
-          const constructor = obj.constructor;
+          const constructor = arr.constructor;
           const _Object = Object;
-          value = obj;
+          value = arr;
           if (tmp2) {
             obj = {};
-            const result1 = map.set(obj, obj);
+            const result1 = map.set(arr, obj);
             const _Object2 = Object;
-            const keys = Object.keys(obj);
+            const keys = Object.keys(arr);
             const item1 = keys.forEach((arg0) => {
               arr = arr[arg0];
               if (undefined !== arr) {
                 let value = arr;
                 if (null !== arr) {
                   value = arr;
-                  if (typeof arr === "object") {
+                  if (typeof arr !== "window") {
                     value = obj2.get(arr);
                     if (undefined === value) {
                       let _Array = Array;
@@ -693,7 +694,7 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                               let value = arr;
                               if (null !== arr) {
                                 value = arr;
-                                if (typeof arr === "object") {
+                                if (typeof arr !== "window") {
                                   value = obj2.get(arr);
                                   if (undefined === value) {
                                     let _Array = Array;
@@ -712,7 +713,7 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                             let value = arr;
                                             if (null !== arr) {
                                               value = arr;
-                                              if (typeof arr === "object") {
+                                              if (typeof arr !== "window") {
                                                 value = obj2.get(arr);
                                                 if (undefined === value) {
                                                   let _Array = Array;
@@ -731,7 +732,7 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                           let value = arr;
                                                           if (null !== arr) {
                                                             value = arr;
-                                                            if (typeof arr === "object") {
+                                                            if (typeof arr !== "window") {
                                                               value = obj2.get(arr);
                                                               if (undefined === value) {
                                                                 let _Array = Array;
@@ -767,32 +768,32 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                 }
                                                 let items = [];
                                                 let result1 = obj2.set(arr, items);
-                                                let item1 = arr.forEach((obj) => {
-                                                  obj = closure_1;
-                                                  let closure_0 = obj;
+                                                let item1 = arr.forEach((arr) => {
+                                                  let obj = closure_1;
+                                                  let closure_0 = arr;
                                                   let items;
                                                   obj = undefined;
-                                                  let value = obj;
-                                                  if (null !== obj) {
-                                                    value = obj;
-                                                    if (typeof obj === "object") {
-                                                      value = obj.get(obj);
+                                                  let value = arr;
+                                                  if (null !== arr) {
+                                                    value = arr;
+                                                    if (typeof arr !== "window") {
+                                                      value = obj.get(arr);
                                                       if (undefined === value) {
                                                         const _Array = Array;
-                                                        if (Array.isArray(obj)) {
+                                                        if (Array.isArray(arr)) {
                                                           items = [];
-                                                          const result = obj.set(obj, items);
-                                                          const item = obj.forEach(() => { ... });
+                                                          const result = obj.set(arr, items);
+                                                          const item = arr.forEach(() => { ... });
                                                           value = items;
                                                         } else {
-                                                          const constructor = obj.constructor;
+                                                          const constructor = arr.constructor;
                                                           const _Object = Object;
-                                                          value = obj;
+                                                          value = arr;
                                                           if (tmp3) {
                                                             obj = {};
-                                                            const result1 = obj.set(obj, obj);
+                                                            const result1 = obj.set(arr, obj);
                                                             const _Object2 = Object;
-                                                            const keys = Object.keys(obj);
+                                                            const keys = Object.keys(arr);
                                                             const item1 = keys.forEach(() => { ... });
                                                             value = obj;
                                                           }
@@ -817,47 +818,47 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                   }
                                   let items = [];
                                   let result1 = obj2.set(arr, items);
-                                  let item1 = arr.forEach((obj) => {
-                                    obj = closure_1;
-                                    let closure_0 = obj;
+                                  let item1 = arr.forEach((arr) => {
+                                    let obj = closure_1;
+                                    let closure_0 = arr;
                                     let items;
                                     obj = undefined;
-                                    let value = obj;
-                                    if (null !== obj) {
-                                      value = obj;
-                                      if (typeof obj === "object") {
-                                        value = obj.get(obj);
+                                    let value = arr;
+                                    if (null !== arr) {
+                                      value = arr;
+                                      if (typeof arr !== "window") {
+                                        value = obj.get(arr);
                                         if (undefined === value) {
                                           const _Array = Array;
-                                          if (Array.isArray(obj)) {
+                                          if (Array.isArray(arr)) {
                                             items = [];
-                                            const result = obj.set(obj, items);
-                                            const item = obj.forEach((obj) => {
-                                              obj = closure_1;
-                                              let closure_0 = obj;
+                                            const result = obj.set(arr, items);
+                                            const item = arr.forEach((arr) => {
+                                              let obj = closure_1;
+                                              let closure_0 = arr;
                                               let items;
                                               obj = undefined;
-                                              let value = obj;
-                                              if (null !== obj) {
-                                                value = obj;
-                                                if (typeof obj === "object") {
-                                                  value = obj.get(obj);
+                                              let value = arr;
+                                              if (null !== arr) {
+                                                value = arr;
+                                                if (typeof arr !== "window") {
+                                                  value = obj.get(arr);
                                                   if (undefined === value) {
                                                     const _Array = Array;
-                                                    if (Array.isArray(obj)) {
+                                                    if (Array.isArray(arr)) {
                                                       items = [];
-                                                      const result = obj.set(obj, items);
-                                                      const item = obj.forEach(() => { ... });
+                                                      const result = obj.set(arr, items);
+                                                      const item = arr.forEach(() => { ... });
                                                       value = items;
                                                     } else {
-                                                      const constructor = obj.constructor;
+                                                      const constructor = arr.constructor;
                                                       const _Object = Object;
-                                                      value = obj;
+                                                      value = arr;
                                                       if (tmp3) {
                                                         obj = {};
-                                                        const result1 = obj.set(obj, obj);
+                                                        const result1 = obj.set(arr, obj);
                                                         const _Object2 = Object;
-                                                        const keys = Object.keys(obj);
+                                                        const keys = Object.keys(arr);
                                                         const item1 = keys.forEach(() => { ... });
                                                         value = obj;
                                                       }
@@ -870,21 +871,21 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                             });
                                             value = items;
                                           } else {
-                                            const constructor = obj.constructor;
+                                            const constructor = arr.constructor;
                                             const _Object = Object;
-                                            value = obj;
+                                            value = arr;
                                             if (tmp3) {
                                               obj = {};
-                                              const result1 = obj.set(obj, obj);
+                                              const result1 = obj.set(arr, obj);
                                               const _Object2 = Object;
-                                              const keys = Object.keys(obj);
+                                              const keys = Object.keys(arr);
                                               const item1 = keys.forEach((arg0) => {
                                                 arr = arr[arg0];
                                                 if (undefined !== arr) {
                                                   let value = arr;
                                                   if (null !== arr) {
                                                     value = arr;
-                                                    if (typeof arr === "object") {
+                                                    if (typeof arr !== "window") {
                                                       value = obj2.get(arr);
                                                       if (undefined === value) {
                                                         let _Array = Array;
@@ -936,62 +937,62 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                     }
                     let items = [];
                     let result1 = obj2.set(arr, items);
-                    let item1 = arr.forEach((obj) => {
-                      obj = closure_1;
-                      let closure_0 = obj;
+                    let item1 = arr.forEach((arr) => {
+                      let obj = closure_1;
+                      let closure_0 = arr;
                       let items;
                       obj = undefined;
-                      let value = obj;
-                      if (null !== obj) {
-                        value = obj;
-                        if (typeof obj === "object") {
-                          value = obj.get(obj);
+                      let value = arr;
+                      if (null !== arr) {
+                        value = arr;
+                        if (typeof arr !== "window") {
+                          value = obj.get(arr);
                           if (undefined === value) {
                             const _Array = Array;
-                            if (Array.isArray(obj)) {
+                            if (Array.isArray(arr)) {
                               items = [];
-                              const result = obj.set(obj, items);
-                              const item = obj.forEach((obj) => {
-                                obj = closure_1;
-                                let closure_0 = obj;
+                              const result = obj.set(arr, items);
+                              const item = arr.forEach((arr) => {
+                                let obj = closure_1;
+                                let closure_0 = arr;
                                 let items;
                                 obj = undefined;
-                                let value = obj;
-                                if (null !== obj) {
-                                  value = obj;
-                                  if (typeof obj === "object") {
-                                    value = obj.get(obj);
+                                let value = arr;
+                                if (null !== arr) {
+                                  value = arr;
+                                  if (typeof arr !== "window") {
+                                    value = obj.get(arr);
                                     if (undefined === value) {
                                       const _Array = Array;
-                                      if (Array.isArray(obj)) {
+                                      if (Array.isArray(arr)) {
                                         items = [];
-                                        const result = obj.set(obj, items);
-                                        const item = obj.forEach((obj) => {
-                                          obj = closure_1;
-                                          let closure_0 = obj;
+                                        const result = obj.set(arr, items);
+                                        const item = arr.forEach((arr) => {
+                                          let obj = closure_1;
+                                          let closure_0 = arr;
                                           let items;
                                           obj = undefined;
-                                          let value = obj;
-                                          if (null !== obj) {
-                                            value = obj;
-                                            if (typeof obj === "object") {
-                                              value = obj.get(obj);
+                                          let value = arr;
+                                          if (null !== arr) {
+                                            value = arr;
+                                            if (typeof arr !== "window") {
+                                              value = obj.get(arr);
                                               if (undefined === value) {
                                                 const _Array = Array;
-                                                if (Array.isArray(obj)) {
+                                                if (Array.isArray(arr)) {
                                                   items = [];
-                                                  const result = obj.set(obj, items);
-                                                  const item = obj.forEach(() => { ... });
+                                                  const result = obj.set(arr, items);
+                                                  const item = arr.forEach(() => { ... });
                                                   value = items;
                                                 } else {
-                                                  const constructor = obj.constructor;
+                                                  const constructor = arr.constructor;
                                                   const _Object = Object;
-                                                  value = obj;
+                                                  value = arr;
                                                   if (tmp3) {
                                                     obj = {};
-                                                    const result1 = obj.set(obj, obj);
+                                                    const result1 = obj.set(arr, obj);
                                                     const _Object2 = Object;
-                                                    const keys = Object.keys(obj);
+                                                    const keys = Object.keys(arr);
                                                     const item1 = keys.forEach(() => { ... });
                                                     value = obj;
                                                   }
@@ -1004,21 +1005,21 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                         });
                                         value = items;
                                       } else {
-                                        const constructor = obj.constructor;
+                                        const constructor = arr.constructor;
                                         const _Object = Object;
-                                        value = obj;
+                                        value = arr;
                                         if (tmp3) {
                                           obj = {};
-                                          const result1 = obj.set(obj, obj);
+                                          const result1 = obj.set(arr, obj);
                                           const _Object2 = Object;
-                                          const keys = Object.keys(obj);
+                                          const keys = Object.keys(arr);
                                           const item1 = keys.forEach((arg0) => {
                                             arr = arr[arg0];
                                             if (undefined !== arr) {
                                               let value = arr;
                                               if (null !== arr) {
                                                 value = arr;
-                                                if (typeof arr === "object") {
+                                                if (typeof arr !== "window") {
                                                   value = obj2.get(arr);
                                                   if (undefined === value) {
                                                     let _Array = Array;
@@ -1058,21 +1059,21 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                               });
                               value = items;
                             } else {
-                              const constructor = obj.constructor;
+                              const constructor = arr.constructor;
                               const _Object = Object;
-                              value = obj;
+                              value = arr;
                               if (tmp3) {
                                 obj = {};
-                                const result1 = obj.set(obj, obj);
+                                const result1 = obj.set(arr, obj);
                                 const _Object2 = Object;
-                                const keys = Object.keys(obj);
+                                const keys = Object.keys(arr);
                                 const item1 = keys.forEach((arg0) => {
                                   arr = arr[arg0];
                                   if (undefined !== arr) {
                                     let value = arr;
                                     if (null !== arr) {
                                       value = arr;
-                                      if (typeof arr === "object") {
+                                      if (typeof arr !== "window") {
                                         value = obj2.get(arr);
                                         if (undefined === value) {
                                           let _Array = Array;
@@ -1091,7 +1092,7 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                   let value = arr;
                                                   if (null !== arr) {
                                                     value = arr;
-                                                    if (typeof arr === "object") {
+                                                    if (typeof arr !== "window") {
                                                       value = obj2.get(arr);
                                                       if (undefined === value) {
                                                         let _Array = Array;
@@ -1127,32 +1128,32 @@ arg5.dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                         }
                                         let items = [];
                                         let result1 = obj2.set(arr, items);
-                                        let item1 = arr.forEach((obj) => {
-                                          obj = closure_1;
-                                          let closure_0 = obj;
+                                        let item1 = arr.forEach((arr) => {
+                                          let obj = closure_1;
+                                          let closure_0 = arr;
                                           let items;
                                           obj = undefined;
-                                          let value = obj;
-                                          if (null !== obj) {
-                                            value = obj;
-                                            if (typeof obj === "object") {
-                                              value = obj.get(obj);
+                                          let value = arr;
+                                          if (null !== arr) {
+                                            value = arr;
+                                            if (typeof arr !== "window") {
+                                              value = obj.get(arr);
                                               if (undefined === value) {
                                                 const _Array = Array;
-                                                if (Array.isArray(obj)) {
+                                                if (Array.isArray(arr)) {
                                                   items = [];
-                                                  const result = obj.set(obj, items);
-                                                  const item = obj.forEach(() => { ... });
+                                                  const result = obj.set(arr, items);
+                                                  const item = arr.forEach(() => { ... });
                                                   value = items;
                                                 } else {
-                                                  const constructor = obj.constructor;
+                                                  const constructor = arr.constructor;
                                                   const _Object = Object;
-                                                  value = obj;
+                                                  value = arr;
                                                   if (tmp3) {
                                                     obj = {};
-                                                    const result1 = obj.set(obj, obj);
+                                                    const result1 = obj.set(arr, obj);
                                                     const _Object2 = Object;
-                                                    const keys = Object.keys(obj);
+                                                    const keys = Object.keys(arr);
                                                     const item1 = keys.forEach(() => { ... });
                                                     value = obj;
                                                   }
@@ -1206,9 +1207,9 @@ arg5.extractExceptionKeysForMessage = function extractExceptionKeysForMessage(ar
 };
 arg5.fill = function fill(arg0, arg1, arg2) {
   if (arg1 in arg0) {
-    if (typeof arg0[arg1] === "function") {
+    if (typeof arg0[arg1] !== "disabledUntil") {
       const tmp10 = arg2(tmp4);
-      if (typeof tmp10 === "function") {
+      if (typeof tmp10 !== "disabledUntil") {
         markFunctionWrapped(tmp10, tmp4);
       }
       try {
@@ -1233,9 +1234,9 @@ arg5.objectify = function objectify(arg0) {
     const _String = String;
     let string = new String(arg0);
   } else {
-    let tmp = typeof arg0 === "symbol";
-    if (typeof arg0 !== "symbol") {
-      tmp = typeof arg0 === "bigint";
+    let tmp = typeof arg0 === "e";
+    if (typeof arg0 !== "e") {
+      tmp = typeof arg0 === "accessibilityLabel";
     }
     if (tmp === true) {
       const _Object = Object;

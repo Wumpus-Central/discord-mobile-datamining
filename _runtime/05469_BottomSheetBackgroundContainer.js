@@ -1,2 +1,0 @@
-
-export const BottomSheetBackgroundContainer = require("BottomSheetBackgroundContainer").BottomSheetBackgroundContainer;

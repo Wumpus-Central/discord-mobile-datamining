@@ -1,3 +1,4 @@
+// _runtime/01081_browserSessionIntegration.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

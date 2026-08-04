@@ -1,3 +1,4 @@
+// _runtime/01705_configureProps.js
 import isJest from "isJest";
 
 function configureProps() {

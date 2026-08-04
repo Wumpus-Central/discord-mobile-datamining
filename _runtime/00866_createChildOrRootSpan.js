@@ -1,3 +1,4 @@
+// _runtime/00866_createChildOrRootSpan.js
 import _slicedToArray from "_slicedToArray";
 
 function createChildOrRootSpan(arg0) {

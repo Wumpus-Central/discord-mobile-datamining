@@ -1,3 +1,4 @@
+// _runtime/01091_baggageHeaderHasSentryValues.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -30,7 +31,7 @@ arg5.isPerformanceResourceTiming = function isPerformanceResourceTiming(entryTyp
     tmp = "initiatorType" in entryType;
   }
   if (tmp) {
-    tmp = typeof entryType.nextHopProtocol === "string";
+    tmp = typeof entryType.nextHopProtocol === "y";
   }
   if (tmp) {
     let tmp2 = "fetch" === entryType.initiatorType;

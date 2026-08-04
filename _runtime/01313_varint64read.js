@@ -1,3 +1,4 @@
+// _runtime/01313_varint64read.js
 arg5.varint64read = undefined;
 arg5.varint64write = undefined;
 arg5.int64fromString = undefined;

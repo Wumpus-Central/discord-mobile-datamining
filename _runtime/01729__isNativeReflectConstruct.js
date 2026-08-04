@@ -1,3 +1,4 @@
+// _runtime/01729__isNativeReflectConstruct.js
 import RollOutRight from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

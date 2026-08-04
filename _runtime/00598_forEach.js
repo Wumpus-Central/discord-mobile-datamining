@@ -1,3 +1,4 @@
+// _runtime/00598_forEach.js
 
 export default function forEach(arg0, arg1) {
   if (require(599)(arg0)) {

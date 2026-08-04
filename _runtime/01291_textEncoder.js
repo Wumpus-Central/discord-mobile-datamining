@@ -1,3 +1,4 @@
+// _runtime/01291_textEncoder.js
 import XXH64 from "_classCallCheck";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 import importDefaultResult1 from "_classPrivateFieldKey";
@@ -62,11 +63,11 @@ const items = [
   },
   {
     key: "update",
-    value: function update(str) {
-      let encodeResult = str;
-      if (typeof str === "string") {
+    value: function update(arg0) {
+      let encodeResult = arg0;
+      if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
         let subarrayResult = textEncoder;
-        encodeResult = textEncoder.encode(str);
+        encodeResult = textEncoder.encode(arg0);
       }
       const self = this;
       subarrayResult = length;

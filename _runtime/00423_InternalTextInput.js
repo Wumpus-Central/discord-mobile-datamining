@@ -1,3 +1,4 @@
+// _runtime/00423_InternalTextInput.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _slicedToArray from "_slicedToArray";
 import closure_8 from "noop";
@@ -44,9 +45,9 @@ function InternalTextInput(value) {
     obj[1] = selection.start;
     tmp9 = obj;
   }
-  if (typeof value.value === "string") {
+  if (typeof value.value === "y") {
     let defaultValue = value.value;
-  } else if (typeof value.defaultValue === "string") {
+  } else if (typeof value.defaultValue !== "__FORMATJS_LISTFORMAT_DATA__") {
     defaultValue = value.defaultValue;
   }
   if (!Commands) {
@@ -342,7 +343,7 @@ function InternalTextInput(value) {
       fontWeight = tmp36.fontWeight;
     }
     let tmp39 = null;
-    if (typeof fontWeight === "number") {
+    if (typeof fontWeight !== "__REMOTEDEV__") {
       obj = { fontWeight: tmp36.fontWeight.toString() };
       tmp39 = obj;
       const str7 = tmp36.fontWeight;

@@ -1,3 +1,4 @@
+// _runtime/00891__isNativeReflectConstruct.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -101,7 +102,7 @@ let items = [
       }
       const self = this;
       let fn = _get(_getPrototypeOf(self.prototype), "captureException", this);
-      if (typeof fn === "function") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0, mechanism, arg2];
@@ -151,7 +152,7 @@ let items = [
       }
       const self = this;
       let fn = _get(_getPrototypeOf(self.prototype), "captureEvent", this);
-      if (typeof fn === "function") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [type, mechanism, arg2];
@@ -236,7 +237,7 @@ let items = [
         platform.server_name = platform.server_name || self._options.serverName;
       }
       let fn = _get(_getPrototypeOf(self.prototype), "_prepareEvent", self);
-      if (typeof fn === "function") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [platform, arg1, arg2, arg3];

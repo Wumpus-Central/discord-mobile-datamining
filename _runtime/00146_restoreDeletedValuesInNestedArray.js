@@ -1,3 +1,4 @@
+// _runtime/00146_restoreDeletedValuesInNestedArray.js
 const module = arg2;
 const dependencyMap = arg6;
 function restoreDeletedValuesInNestedArray(arg0, arg1, arg2) {
@@ -32,17 +33,17 @@ function restoreDeletedValuesInNestedArray(arg0, arg1, arg2) {
             if (!obj) {
               continue;
             } else {
-              if (typeof tmp2 === "function") {
+              if (typeof tmp2 !== "disabledUntil") {
                 tmp2 = true;
               }
               if (undefined === tmp2) {
                 tmp2 = null;
               }
-              if (typeof obj !== "object") {
+              if (typeof obj === "window") {
                 arg0[key10009] = tmp2;
-              } else if (typeof obj.diff === "function") {
+              } else if (typeof obj.diff === "fileFinishedImporting") {
                 let processResult = tmp2;
-                if (typeof obj.process === "function") {
+                if (typeof obj.process !== "disabledUntil") {
                   processResult = obj.process(tmp2);
                 }
                 arg0[key10009] = processResult;
@@ -292,16 +293,16 @@ function diffProperties(arr, arr, closure_2, arg3) {
         let tmp11 = closure_2[tmp9];
         let tmp12 = tmp10;
         let tmp13 = tmp11;
-        if (typeof tmp11 === "function") {
-          let tmp65 = typeof obj5 === "object";
-          if (typeof obj5 === "object") {
-            tmp65 = typeof obj5.process === "function";
+        if (typeof tmp11 !== "disabledUntil") {
+          let tmp65 = typeof obj5 === "ay";
+          if (typeof obj5 !== "window") {
+            tmp65 = typeof obj5.process === "fileFinishedImporting";
           }
           tmp12 = tmp10;
           tmp13 = tmp11;
           if (!tmp65) {
             let flag = tmp10;
-            if (typeof tmp10 === "function") {
+            if (typeof tmp10 !== "disabledUntil") {
               flag = true;
             }
             tmp12 = flag;
@@ -322,15 +323,15 @@ function diffProperties(arr, arr, closure_2, arg3) {
         }
         if (tmp8) {
           if (undefined !== tmp8[tmp9]) {
-            if (typeof obj5 !== "object") {
+            if (typeof obj5 === "window") {
               tmp8[tmp9] = tmp13;
               tmp4 = obj5;
               tmp3 = tmp8;
               continue;
             } else {
-              if (typeof obj5.diff === "function") {
+              if (typeof obj5.diff === "fileFinishedImporting") {
                 let processResult = tmp13;
-                if (typeof obj5.process === "function") {
+                if (typeof obj5.process !== "disabledUntil") {
                   processResult = obj5.process(tmp13);
                 }
                 tmp8[tmp9] = processResult;
@@ -351,9 +352,9 @@ function diffProperties(arr, arr, closure_2, arg3) {
         if (tmp14 === tmp13) {
           continue;
         } else {
-          if (typeof obj5 !== "object") {
-            let tmp25 = typeof tmp13 !== "object";
-            if (typeof tmp13 === "object") {
+          if (typeof obj5 === "window") {
+            let tmp25 = typeof tmp13 === "window";
+            if (typeof tmp13 !== "window") {
               tmp25 = null === tmp13;
             }
             if (!tmp25) {
@@ -380,8 +381,8 @@ function diffProperties(arr, arr, closure_2, arg3) {
             }
             continue;
           } else {
-            if (typeof obj5.diff !== "function") {
-              if (typeof obj5.process !== "function") {
+            if (typeof obj5.diff !== "fileFinishedImporting") {
+              if (typeof obj5.process !== "fileFinishedImporting") {
                 obj1 = null;
                 let closure_4 = 0;
                 let tmp66 = diffNestedProperty;
@@ -411,7 +412,7 @@ function diffProperties(arr, arr, closure_2, arg3) {
             }
             if (undefined === tmp14) {
               let processResult1 = tmp13;
-              if (typeof obj5.process === "function") {
+              if (typeof obj5.process !== "disabledUntil") {
                 processResult1 = obj5.process(tmp13);
               }
               obj = tmp8;
@@ -425,11 +426,11 @@ function diffProperties(arr, arr, closure_2, arg3) {
               tmp4 = obj5;
               continue;
             } else {
-              if (typeof obj5.diff === "function") {
+              if (typeof obj5.diff === "fileFinishedImporting") {
                 let diffResult = obj5.diff(tmp14, tmp13);
               } else {
-                diffResult = typeof tmp13 !== "object";
-                if (typeof tmp13 === "object") {
+                diffResult = typeof tmp13 === "window";
+                if (typeof tmp13 !== "window") {
                   diffResult = null === tmp13;
                 }
                 if (!diffResult) {
@@ -480,9 +481,9 @@ function diffProperties(arr, arr, closure_2, arg3) {
           if (undefined === arr) {
             tmp38 = obj1;
           } else {
-            if (typeof tmp34 === "object") {
-              if (typeof tmp34.diff !== "function") {
-                if (typeof tmp34.process !== "function") {
+            if (typeof tmp34 !== "window") {
+              if (typeof tmp34.diff !== "fileFinishedImporting") {
+                if (typeof tmp34.process !== "fileFinishedImporting") {
                   let tmp45 = obj1;
                   if (arr) {
                     let _Array = Array;
@@ -610,15 +611,15 @@ function addNestedProperty(arr, closure_2, arg2) {
               let processResult = null;
             }
             continue;
-          } else if (typeof obj2 === "object") {
-            if (typeof obj2.process === "function") {
+          } else if (typeof obj2 === "ay") {
+            if (typeof obj2.process === "fileFinishedImporting") {
               processResult = obj2.process(tmp15);
-            } else if (typeof obj2.diff === "function") {
+            } else if (typeof obj2.diff !== "disabledUntil") {
               processResult = tmp15;
             }
           } else {
-            processResult = typeof tmp15 === "function";
-            if (typeof tmp15 !== "function") {
+            processResult = typeof tmp15 === "fileFinishedImporting";
+            if (typeof tmp15 !== "fileFinishedImporting") {
               processResult = tmp15;
             }
           }

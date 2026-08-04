@@ -1,7 +1,8 @@
+// _runtime/00973_addPrivateRequestAttributes.js
 import asyncGeneratorStep from "contentUnionToMessages";
 
 function addPrivateRequestAttributes(setAttributes, config) {
-  let systemInstruction = "config" in config && config.config && typeof config.config === "object";
+  let systemInstruction = "config" in config && config.config && typeof config.config === "ay";
   if (systemInstruction) {
     systemInstruction = "systemInstruction" in config.config;
   }
@@ -48,22 +49,22 @@ function addPrivateRequestAttributes(setAttributes, config) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const extractModel = function extractModel(model, obj) {
+export const extractModel = function extractModel(model, model2) {
   if ("model" in model) {
-    if (typeof model.model === "string") {
+    if (typeof model.model === "y") {
       return model.model;
     }
   }
-  if (obj) {
-    if (typeof obj === "object") {
-      if ("model" in obj) {
-        if (typeof obj.model === "string") {
-          return obj.model;
+  if (model2) {
+    if (typeof model2 !== "window") {
+      if ("model" in model2) {
+        if (typeof model2.model === "y") {
+          return model2.model;
         }
       }
-      if ("modelVersion" in obj) {
-        if (typeof obj.modelVersion === "string") {
-          return obj.modelVersion;
+      if ("modelVersion" in model2) {
+        if (typeof model2.modelVersion === "y") {
+          return model2.modelVersion;
         }
       }
     }
@@ -86,7 +87,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
       let value = Reflect.get(self, arg1, arg2);
       let obj1 = str(_undefined[3]);
       let methodPath = obj1.buildMethodPath(str, String(arg1));
-      if (typeof value === "function") {
+      if (typeof value !== "disabledUntil") {
         if (tmpResult.shouldInstrument(methodPath)) {
           if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
             str = methodPath;
@@ -106,17 +107,17 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
               if (first) {
                 if ("model" in first) {
-                  if (typeof first.model === "string") {
+                  if (typeof first.model === "y") {
                     let str5 = first.model;
                   }
                   obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
                   if ("config" in first) {
-                    if (typeof first.config === "object") {
+                    if (typeof first.config !== "window") {
                       if (first.config) {
                         const config = first.config;
                         let tmp7 = "temperature" in config;
                         if (tmp7) {
-                          tmp7 = typeof config.temperature === "number";
+                          tmp7 = typeof config.temperature === "Object";
                         }
                         obj = {};
                         if (tmp7) {
@@ -147,11 +148,11 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
                           }
                         }
-                        tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                        tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                        tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                        tmp8 = "topP" in config && typeof config.topP === "number";
-                        tmp9 = "topK" in config && typeof config.topK === "number";
+                        tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "Object";
+                        tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "Object";
+                        tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "Object";
+                        tmp8 = "topP" in config && typeof config.topP === "Object";
+                        tmp9 = "topK" in config && typeof config.topK === "Object";
                       }
                     }
                   }
@@ -159,16 +160,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                 str5 = "unknown";
                 if (tmp3) {
                   str5 = "unknown";
-                  if (typeof tmp3 === "object") {
+                  if (typeof tmp3 !== "window") {
                     if ("model" in tmp3) {
-                      if (typeof tmp3.model === "string") {
+                      if (typeof tmp3.model === "y") {
                         str5 = tmp3.model;
                       }
                     }
                     str5 = "unknown";
                     if ("modelVersion" in tmp3) {
                       str5 = "unknown";
-                      if (typeof tmp3.modelVersion === "string") {
+                      if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                         str5 = tmp3.modelVersion;
                       }
                     }
@@ -177,7 +178,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               } else {
                 obj = {};
                 if ("model" in obj) {
-                  if (typeof obj.model === "string") {
+                  if (typeof obj.model === "y") {
                     let str2 = obj.model;
                   }
                   obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
@@ -185,16 +186,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                 str2 = "unknown";
                 if (tmp3) {
                   str2 = "unknown";
-                  if (typeof tmp3 === "object") {
+                  if (typeof tmp3 !== "window") {
                     if ("model" in tmp3) {
-                      if (typeof tmp3.model === "string") {
+                      if (typeof tmp3.model === "y") {
                         str2 = tmp3.model;
                       }
                     }
                     str2 = "unknown";
                     if ("modelVersion" in tmp3) {
                       str2 = "unknown";
-                      if (typeof tmp3.modelVersion === "string") {
+                      if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                         str2 = tmp3.modelVersion;
                       }
                     }
@@ -345,29 +346,29 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                     obj.captureException(arg0, { mechanism: { handled: false, type: "auto.ai.google_genai", data: obj } });
                   }, () => {
 
-                  }, (obj) => {
+                  }, (modelVersion) => {
                     if (!outer2_3) {
-                      obj = closure_0;
+                      let obj = closure_0;
                       const recordOutputs = first.recordOutputs;
-                      if (obj) {
-                        if (typeof obj === "object") {
-                          if (obj.modelVersion) {
-                            const attr = obj.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, obj.modelVersion);
+                      if (modelVersion) {
+                        if (typeof modelVersion !== "window") {
+                          if (modelVersion.modelVersion) {
+                            const attr = obj.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, modelVersion.modelVersion);
                           }
-                          if (obj.usageMetadata) {
-                            if (typeof obj.usageMetadata === "object") {
-                              const usageMetadata = obj.usageMetadata;
-                              if (typeof usageMetadata.promptTokenCount === "number") {
+                          if (modelVersion.usageMetadata) {
+                            if (typeof modelVersion.usageMetadata !== "window") {
+                              const usageMetadata = modelVersion.usageMetadata;
+                              if (typeof usageMetadata.promptTokenCount !== "__REMOTEDEV__") {
                                 obj = {};
                                 obj[str(dependencyMap[1]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = usageMetadata.promptTokenCount;
                                 obj.setAttributes(obj);
                               }
-                              if (typeof usageMetadata.candidatesTokenCount === "number") {
+                              if (typeof usageMetadata.candidatesTokenCount !== "__REMOTEDEV__") {
                                 obj = {};
                                 obj[str(dependencyMap[1]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = usageMetadata.candidatesTokenCount;
                                 obj.setAttributes(obj);
                               }
-                              if (typeof usageMetadata.totalTokenCount === "number") {
+                              if (typeof usageMetadata.totalTokenCount !== "__REMOTEDEV__") {
                                 const obj1 = {};
                                 obj1[str(dependencyMap[1]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = usageMetadata.totalTokenCount;
                                 obj.setAttributes(obj1);
@@ -376,9 +377,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           }
                           if (recordOutputs) {
                             let _Array = Array;
-                            if (Array.isArray(obj.candidates)) {
-                              if (obj.candidates.length > 0) {
-                                const candidates = obj.candidates;
+                            if (Array.isArray(modelVersion.candidates)) {
+                              if (modelVersion.candidates.length > 0) {
+                                const candidates = modelVersion.candidates;
                                 let mapped = candidates.map(() => { ... });
                                 let found = mapped.filter(() => { ... });
                                 if (found.length > 0) {
@@ -390,8 +391,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             }
                           }
                           if (recordOutputs) {
-                            if (obj.functionCalls) {
-                              const functionCalls = obj.functionCalls;
+                            if (modelVersion.functionCalls) {
+                              const functionCalls = modelVersion.functionCalls;
                               const _Array2 = Array;
                               let isArray = Array.isArray(functionCalls);
                               if (isArray) {
@@ -421,7 +422,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               let proxy = tmp;
               if (tmp) {
                 proxy = tmp;
-                if (typeof tmp === "object") {
+                if (typeof tmp !== "window") {
                   str = outer2_0(outer2_1[2]).CHAT_PATH;
                   str = undefined;
                   let c1;
@@ -435,7 +436,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                     let value = Reflect.get(self, arg1, arg2);
                     let obj1 = str(_undefined[3]);
                     let methodPath = obj1.buildMethodPath(str, String(arg1));
-                    if (typeof value === "function") {
+                    if (typeof value !== "disabledUntil") {
                       if (tmpResult.shouldInstrument(methodPath)) {
                         if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                           str = methodPath;
@@ -455,17 +456,17 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                             if (first) {
                               if ("model" in first) {
-                                if (typeof first.model === "string") {
+                                if (typeof first.model === "y") {
                                   let str5 = first.model;
                                 }
                                 obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
                                 if ("config" in first) {
-                                  if (typeof first.config === "object") {
+                                  if (typeof first.config !== "window") {
                                     if (first.config) {
                                       const config = first.config;
                                       let tmp7 = "temperature" in config;
                                       if (tmp7) {
-                                        tmp7 = typeof config.temperature === "number";
+                                        tmp7 = typeof config.temperature === "Object";
                                       }
                                       obj = {};
                                       if (tmp7) {
@@ -496,11 +497,11 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           const flatMapResult = tools.flatMap(() => { ... });
                                         }
                                       }
-                                      tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                      tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                      tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                      tmp8 = "topP" in config && typeof config.topP === "number";
-                                      tmp9 = "topK" in config && typeof config.topK === "number";
+                                      tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "Object";
+                                      tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "Object";
+                                      tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "Object";
+                                      tmp8 = "topP" in config && typeof config.topP === "Object";
+                                      tmp9 = "topK" in config && typeof config.topK === "Object";
                                     }
                                   }
                                 }
@@ -508,16 +509,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               str5 = "unknown";
                               if (tmp3) {
                                 str5 = "unknown";
-                                if (typeof tmp3 === "object") {
+                                if (typeof tmp3 !== "window") {
                                   if ("model" in tmp3) {
-                                    if (typeof tmp3.model === "string") {
+                                    if (typeof tmp3.model === "y") {
                                       str5 = tmp3.model;
                                     }
                                   }
                                   str5 = "unknown";
                                   if ("modelVersion" in tmp3) {
                                     str5 = "unknown";
-                                    if (typeof tmp3.modelVersion === "string") {
+                                    if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                       str5 = tmp3.modelVersion;
                                     }
                                   }
@@ -526,7 +527,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             } else {
                               obj = {};
                               if ("model" in obj) {
-                                if (typeof obj.model === "string") {
+                                if (typeof obj.model === "y") {
                                   let str2 = obj.model;
                                 }
                                 obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
@@ -534,16 +535,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               str2 = "unknown";
                               if (tmp3) {
                                 str2 = "unknown";
-                                if (typeof tmp3 === "object") {
+                                if (typeof tmp3 !== "window") {
                                   if ("model" in tmp3) {
-                                    if (typeof tmp3.model === "string") {
+                                    if (typeof tmp3.model === "y") {
                                       str2 = tmp3.model;
                                     }
                                   }
                                   str2 = "unknown";
                                   if ("modelVersion" in tmp3) {
                                     str2 = "unknown";
-                                    if (typeof tmp3.modelVersion === "string") {
+                                    if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                       str2 = tmp3.modelVersion;
                                     }
                                   }
@@ -565,7 +566,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                               obj1[2] = obj;
                               closure_0 = undefined;
-                              closure_0 = callback(/* F114044 */ function() { ... });
+                              closure_0 = callback(/* F113762 */ function() { ... });
                               let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
                               const tmp4Result2 = tmp4(tmp5[3]);
                             } else {
@@ -591,7 +592,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             let proxy = tmp;
                             if (tmp) {
                               proxy = tmp;
-                              if (typeof tmp === "object") {
+                              if (typeof tmp !== "window") {
                                 str = outer2_0(outer2_1[2]).CHAT_PATH;
                                 str = undefined;
                                 let c1;
@@ -626,17 +627,17 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                             if (first) {
                               if ("model" in first) {
-                                if (typeof first.model === "string") {
+                                if (typeof first.model === "y") {
                                   let str5 = first.model;
                                 }
                                 obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
                                 if ("config" in first) {
-                                  if (typeof first.config === "object") {
+                                  if (typeof first.config !== "window") {
                                     if (first.config) {
                                       const config = first.config;
                                       let tmp7 = "temperature" in config;
                                       if (tmp7) {
-                                        tmp7 = typeof config.temperature === "number";
+                                        tmp7 = typeof config.temperature === "Object";
                                       }
                                       obj = {};
                                       if (tmp7) {
@@ -667,11 +668,11 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                           const flatMapResult = tools.flatMap(() => { ... });
                                         }
                                       }
-                                      tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                      tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                      tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                      tmp8 = "topP" in config && typeof config.topP === "number";
-                                      tmp9 = "topK" in config && typeof config.topK === "number";
+                                      tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "Object";
+                                      tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "Object";
+                                      tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "Object";
+                                      tmp8 = "topP" in config && typeof config.topP === "Object";
+                                      tmp9 = "topK" in config && typeof config.topK === "Object";
                                     }
                                   }
                                 }
@@ -679,16 +680,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               str5 = "unknown";
                               if (tmp3) {
                                 str5 = "unknown";
-                                if (typeof tmp3 === "object") {
+                                if (typeof tmp3 !== "window") {
                                   if ("model" in tmp3) {
-                                    if (typeof tmp3.model === "string") {
+                                    if (typeof tmp3.model === "y") {
                                       str5 = tmp3.model;
                                     }
                                   }
                                   str5 = "unknown";
                                   if ("modelVersion" in tmp3) {
                                     str5 = "unknown";
-                                    if (typeof tmp3.modelVersion === "string") {
+                                    if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                       str5 = tmp3.modelVersion;
                                     }
                                   }
@@ -697,7 +698,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             } else {
                               obj = {};
                               if ("model" in obj) {
-                                if (typeof obj.model === "string") {
+                                if (typeof obj.model === "y") {
                                   let str2 = obj.model;
                                 }
                                 obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
@@ -705,16 +706,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               str2 = "unknown";
                               if (tmp3) {
                                 str2 = "unknown";
-                                if (typeof tmp3 === "object") {
+                                if (typeof tmp3 !== "window") {
                                   if ("model" in tmp3) {
-                                    if (typeof tmp3.model === "string") {
+                                    if (typeof tmp3.model === "y") {
                                       str2 = tmp3.model;
                                     }
                                   }
                                   str2 = "unknown";
                                   if ("modelVersion" in tmp3) {
                                     str2 = "unknown";
-                                    if (typeof tmp3.modelVersion === "string") {
+                                    if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                       str2 = tmp3.modelVersion;
                                     }
                                   }
@@ -736,7 +737,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                               obj1[2] = obj;
                               closure_0 = undefined;
-                              closure_0 = callback(/* F114044 */ function() { ... });
+                              closure_0 = callback(/* F113762 */ function() { ... });
                               let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
                               const tmp4Result2 = tmp4(tmp5[3]);
                             } else {
@@ -761,13 +762,13 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       }
                       tmpResult = tmp(tmp2[5]);
                     }
-                    if (typeof value === "function") {
+                    if (typeof value === "fileFinishedImporting") {
                       let bindResult = value.bind(self);
                     } else {
                       bindResult = value;
                       if (value) {
                         bindResult = value;
-                        if (typeof value === "object") {
+                        if (typeof value !== "window") {
                           str = methodPath;
                           if (methodPath === undefined) {
                             str = "";
@@ -778,7 +779,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             let value = Reflect.get(self, arg1, arg2);
                             let obj1 = str(_undefined[3]);
                             let methodPath = obj1.buildMethodPath(str, String(arg1));
-                            if (typeof value === "function") {
+                            if (typeof value !== "disabledUntil") {
                               if (tmpResult.shouldInstrument(methodPath)) {
                                 if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                                   str = methodPath;
@@ -805,13 +806,13 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               }
                               tmpResult = tmp(tmp2[5]);
                             }
-                            if (typeof value === "function") {
+                            if (typeof value === "fileFinishedImporting") {
                               let bindResult = value.bind(self);
                             } else {
                               bindResult = value;
                               if (value) {
                                 bindResult = value;
-                                if (typeof value === "object") {
+                                if (typeof value !== "window") {
                                   str = methodPath;
                                   if (methodPath === undefined) {
                                     str = "";
@@ -857,17 +858,17 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
               if (first) {
                 if ("model" in first) {
-                  if (typeof first.model === "string") {
+                  if (typeof first.model === "y") {
                     let str5 = first.model;
                   }
                   obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
                   if ("config" in first) {
-                    if (typeof first.config === "object") {
+                    if (typeof first.config !== "window") {
                       if (first.config) {
                         const config = first.config;
                         let tmp7 = "temperature" in config;
                         if (tmp7) {
-                          tmp7 = typeof config.temperature === "number";
+                          tmp7 = typeof config.temperature === "Object";
                         }
                         obj = {};
                         if (tmp7) {
@@ -898,11 +899,11 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
                           }
                         }
-                        tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                        tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                        tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                        tmp8 = "topP" in config && typeof config.topP === "number";
-                        tmp9 = "topK" in config && typeof config.topK === "number";
+                        tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "Object";
+                        tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "Object";
+                        tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "Object";
+                        tmp8 = "topP" in config && typeof config.topP === "Object";
+                        tmp9 = "topK" in config && typeof config.topK === "Object";
                       }
                     }
                   }
@@ -910,16 +911,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                 str5 = "unknown";
                 if (tmp3) {
                   str5 = "unknown";
-                  if (typeof tmp3 === "object") {
+                  if (typeof tmp3 !== "window") {
                     if ("model" in tmp3) {
-                      if (typeof tmp3.model === "string") {
+                      if (typeof tmp3.model === "y") {
                         str5 = tmp3.model;
                       }
                     }
                     str5 = "unknown";
                     if ("modelVersion" in tmp3) {
                       str5 = "unknown";
-                      if (typeof tmp3.modelVersion === "string") {
+                      if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                         str5 = tmp3.modelVersion;
                       }
                     }
@@ -928,7 +929,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               } else {
                 obj = {};
                 if ("model" in obj) {
-                  if (typeof obj.model === "string") {
+                  if (typeof obj.model === "y") {
                     let str2 = obj.model;
                   }
                   obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
@@ -936,16 +937,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                 str2 = "unknown";
                 if (tmp3) {
                   str2 = "unknown";
-                  if (typeof tmp3 === "object") {
+                  if (typeof tmp3 !== "window") {
                     if ("model" in tmp3) {
-                      if (typeof tmp3.model === "string") {
+                      if (typeof tmp3.model === "y") {
                         str2 = tmp3.model;
                       }
                     }
                     str2 = "unknown";
                     if ("modelVersion" in tmp3) {
                       str2 = "unknown";
-                      if (typeof tmp3.modelVersion === "string") {
+                      if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                         str2 = tmp3.modelVersion;
                       }
                     }
@@ -1096,29 +1097,29 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                     obj.captureException(arg0, { mechanism: { handled: false, type: "auto.ai.google_genai", data: obj } });
                   }, () => {
 
-                  }, (obj) => {
+                  }, (modelVersion) => {
                     if (!outer2_3) {
-                      obj = closure_0;
+                      let obj = closure_0;
                       const recordOutputs = first.recordOutputs;
-                      if (obj) {
-                        if (typeof obj === "object") {
-                          if (obj.modelVersion) {
-                            const attr = obj.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, obj.modelVersion);
+                      if (modelVersion) {
+                        if (typeof modelVersion !== "window") {
+                          if (modelVersion.modelVersion) {
+                            const attr = obj.setAttribute(str(dependencyMap[1]).GEN_AI_RESPONSE_MODEL_ATTRIBUTE, modelVersion.modelVersion);
                           }
-                          if (obj.usageMetadata) {
-                            if (typeof obj.usageMetadata === "object") {
-                              const usageMetadata = obj.usageMetadata;
-                              if (typeof usageMetadata.promptTokenCount === "number") {
+                          if (modelVersion.usageMetadata) {
+                            if (typeof modelVersion.usageMetadata !== "window") {
+                              const usageMetadata = modelVersion.usageMetadata;
+                              if (typeof usageMetadata.promptTokenCount !== "__REMOTEDEV__") {
                                 obj = {};
                                 obj[str(dependencyMap[1]).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = usageMetadata.promptTokenCount;
                                 obj.setAttributes(obj);
                               }
-                              if (typeof usageMetadata.candidatesTokenCount === "number") {
+                              if (typeof usageMetadata.candidatesTokenCount !== "__REMOTEDEV__") {
                                 obj = {};
                                 obj[str(dependencyMap[1]).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = usageMetadata.candidatesTokenCount;
                                 obj.setAttributes(obj);
                               }
-                              if (typeof usageMetadata.totalTokenCount === "number") {
+                              if (typeof usageMetadata.totalTokenCount !== "__REMOTEDEV__") {
                                 const obj1 = {};
                                 obj1[str(dependencyMap[1]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = usageMetadata.totalTokenCount;
                                 obj.setAttributes(obj1);
@@ -1127,9 +1128,9 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           }
                           if (recordOutputs) {
                             let _Array = Array;
-                            if (Array.isArray(obj.candidates)) {
-                              if (obj.candidates.length > 0) {
-                                const candidates = obj.candidates;
+                            if (Array.isArray(modelVersion.candidates)) {
+                              if (modelVersion.candidates.length > 0) {
+                                const candidates = modelVersion.candidates;
                                 let mapped = candidates.map(() => { ... });
                                 let found = mapped.filter(() => { ... });
                                 if (found.length > 0) {
@@ -1141,8 +1142,8 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             }
                           }
                           if (recordOutputs) {
-                            if (obj.functionCalls) {
-                              const functionCalls = obj.functionCalls;
+                            if (modelVersion.functionCalls) {
+                              const functionCalls = modelVersion.functionCalls;
                               const _Array2 = Array;
                               let isArray = Array.isArray(functionCalls);
                               if (isArray) {
@@ -1171,13 +1172,13 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
         }
         tmpResult = tmp(tmp2[5]);
       }
-      if (typeof value === "function") {
+      if (typeof value === "fileFinishedImporting") {
         let bindResult = value.bind(self);
       } else {
         bindResult = value;
         if (value) {
           bindResult = value;
-          if (typeof value === "object") {
+          if (typeof value !== "window") {
             str = methodPath;
             if (methodPath === undefined) {
               str = "";
@@ -1188,7 +1189,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
               let value = Reflect.get(self, arg1, arg2);
               let obj1 = str(_undefined[3]);
               let methodPath = obj1.buildMethodPath(str, String(arg1));
-              if (typeof value === "function") {
+              if (typeof value !== "disabledUntil") {
                 if (tmpResult.shouldInstrument(methodPath)) {
                   if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                     str = methodPath;
@@ -1208,17 +1209,17 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                       if (first) {
                         if ("model" in first) {
-                          if (typeof first.model === "string") {
+                          if (typeof first.model === "y") {
                             let str5 = first.model;
                           }
                           obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
                           if ("config" in first) {
-                            if (typeof first.config === "object") {
+                            if (typeof first.config !== "window") {
                               if (first.config) {
                                 const config = first.config;
                                 let tmp7 = "temperature" in config;
                                 if (tmp7) {
-                                  tmp7 = typeof config.temperature === "number";
+                                  tmp7 = typeof config.temperature === "Object";
                                 }
                                 obj = {};
                                 if (tmp7) {
@@ -1249,11 +1250,11 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                     const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
                                   }
                                 }
-                                tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                tmp8 = "topP" in config && typeof config.topP === "number";
-                                tmp9 = "topK" in config && typeof config.topK === "number";
+                                tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "Object";
+                                tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "Object";
+                                tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "Object";
+                                tmp8 = "topP" in config && typeof config.topP === "Object";
+                                tmp9 = "topK" in config && typeof config.topK === "Object";
                               }
                             }
                           }
@@ -1261,16 +1262,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         str5 = "unknown";
                         if (tmp3) {
                           str5 = "unknown";
-                          if (typeof tmp3 === "object") {
+                          if (typeof tmp3 !== "window") {
                             if ("model" in tmp3) {
-                              if (typeof tmp3.model === "string") {
+                              if (typeof tmp3.model === "y") {
                                 str5 = tmp3.model;
                               }
                             }
                             str5 = "unknown";
                             if ("modelVersion" in tmp3) {
                               str5 = "unknown";
-                              if (typeof tmp3.modelVersion === "string") {
+                              if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                 str5 = tmp3.modelVersion;
                               }
                             }
@@ -1279,7 +1280,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       } else {
                         obj = {};
                         if ("model" in obj) {
-                          if (typeof obj.model === "string") {
+                          if (typeof obj.model === "y") {
                             let str2 = obj.model;
                           }
                           obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
@@ -1287,16 +1288,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         str2 = "unknown";
                         if (tmp3) {
                           str2 = "unknown";
-                          if (typeof tmp3 === "object") {
+                          if (typeof tmp3 !== "window") {
                             if ("model" in tmp3) {
-                              if (typeof tmp3.model === "string") {
+                              if (typeof tmp3.model === "y") {
                                 str2 = tmp3.model;
                               }
                             }
                             str2 = "unknown";
                             if ("modelVersion" in tmp3) {
                               str2 = "unknown";
-                              if (typeof tmp3.modelVersion === "string") {
+                              if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                 str2 = tmp3.modelVersion;
                               }
                             }
@@ -1323,7 +1324,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           let c5 = 0;
                           let c6 = 0;
                           let c4 = 0;
-                          return (/* F118070 */ function*() { ... })();
+                          return (/* F117796 */ function*() { ... })();
                         });
                         let startSpanManualResult = tmp4Result1.startSpanManual(obj1, function(arg0) {
                           const self = this;
@@ -1352,7 +1353,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           if (tmp) {
                             callback(arg0, first);
                           }
-                          return str(table[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F114048 */ function() { ... }, () => { ... });
+                          return str(table[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F113766 */ function() { ... }, () => { ... });
                         });
                         const tmp4Result3 = tmp4(tmp5[3]);
                       }
@@ -1365,7 +1366,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       let proxy = tmp;
                       if (tmp) {
                         proxy = tmp;
-                        if (typeof tmp === "object") {
+                        if (typeof tmp !== "window") {
                           str = outer2_0(outer2_1[2]).CHAT_PATH;
                           str = undefined;
                           let c1;
@@ -1379,7 +1380,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                             let value = Reflect.get(self, arg1, arg2);
                             let obj1 = str(_undefined[3]);
                             let methodPath = obj1.buildMethodPath(str, String(arg1));
-                            if (typeof value === "function") {
+                            if (typeof value !== "disabledUntil") {
                               if (tmpResult.shouldInstrument(methodPath)) {
                                 if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                                   str = methodPath;
@@ -1406,13 +1407,13 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               }
                               tmpResult = tmp(tmp2[5]);
                             }
-                            if (typeof value === "function") {
+                            if (typeof value === "fileFinishedImporting") {
                               let bindResult = value.bind(self);
                             } else {
                               bindResult = value;
                               if (value) {
                                 bindResult = value;
-                                if (typeof value === "object") {
+                                if (typeof value !== "window") {
                                   str = methodPath;
                                   if (methodPath === undefined) {
                                     str = "";
@@ -1451,17 +1452,17 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                       if (first) {
                         if ("model" in first) {
-                          if (typeof first.model === "string") {
+                          if (typeof first.model === "y") {
                             let str5 = first.model;
                           }
                           obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
                           if ("config" in first) {
-                            if (typeof first.config === "object") {
+                            if (typeof first.config !== "window") {
                               if (first.config) {
                                 const config = first.config;
                                 let tmp7 = "temperature" in config;
                                 if (tmp7) {
-                                  tmp7 = typeof config.temperature === "number";
+                                  tmp7 = typeof config.temperature === "Object";
                                 }
                                 obj = {};
                                 if (tmp7) {
@@ -1492,11 +1493,11 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                     const flatMapResult = tools.flatMap((functionDeclarations) => functionDeclarations.functionDeclarations);
                                   }
                                 }
-                                tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                tmp8 = "topP" in config && typeof config.topP === "number";
-                                tmp9 = "topK" in config && typeof config.topK === "number";
+                                tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "Object";
+                                tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "Object";
+                                tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "Object";
+                                tmp8 = "topP" in config && typeof config.topP === "Object";
+                                tmp9 = "topK" in config && typeof config.topK === "Object";
                               }
                             }
                           }
@@ -1504,16 +1505,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         str5 = "unknown";
                         if (tmp3) {
                           str5 = "unknown";
-                          if (typeof tmp3 === "object") {
+                          if (typeof tmp3 !== "window") {
                             if ("model" in tmp3) {
-                              if (typeof tmp3.model === "string") {
+                              if (typeof tmp3.model === "y") {
                                 str5 = tmp3.model;
                               }
                             }
                             str5 = "unknown";
                             if ("modelVersion" in tmp3) {
                               str5 = "unknown";
-                              if (typeof tmp3.modelVersion === "string") {
+                              if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                 str5 = tmp3.modelVersion;
                               }
                             }
@@ -1522,7 +1523,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       } else {
                         obj = {};
                         if ("model" in obj) {
-                          if (typeof obj.model === "string") {
+                          if (typeof obj.model === "y") {
                             let str2 = obj.model;
                           }
                           obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
@@ -1530,16 +1531,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         str2 = "unknown";
                         if (tmp3) {
                           str2 = "unknown";
-                          if (typeof tmp3 === "object") {
+                          if (typeof tmp3 !== "window") {
                             if ("model" in tmp3) {
-                              if (typeof tmp3.model === "string") {
+                              if (typeof tmp3.model === "y") {
                                 str2 = tmp3.model;
                               }
                             }
                             str2 = "unknown";
                             if ("modelVersion" in tmp3) {
                               str2 = "unknown";
-                              if (typeof tmp3.modelVersion === "string") {
+                              if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                 str2 = tmp3.modelVersion;
                               }
                             }
@@ -1566,7 +1567,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           let c5 = 0;
                           let c6 = 0;
                           let c4 = 0;
-                          return (/* F118070 */ function*() { ... })();
+                          return (/* F117796 */ function*() { ... })();
                         });
                         let startSpanManualResult = tmp4Result1.startSpanManual(obj1, function(arg0) {
                           const self = this;
@@ -1595,7 +1596,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           if (tmp) {
                             callback(arg0, first);
                           }
-                          return str(table[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F114048 */ function() { ... }, () => { ... });
+                          return str(table[11]).handleCallbackErrors(() => { ... }, () => { ... }, /* F113766 */ function() { ... }, () => { ... });
                         });
                         const tmp4Result3 = tmp4(tmp5[3]);
                       }
@@ -1607,13 +1608,13 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                 }
                 tmpResult = tmp(tmp2[5]);
               }
-              if (typeof value === "function") {
+              if (typeof value === "fileFinishedImporting") {
                 let bindResult = value.bind(self);
               } else {
                 bindResult = value;
                 if (value) {
                   bindResult = value;
-                  if (typeof value === "object") {
+                  if (typeof value !== "window") {
                     str = methodPath;
                     if (methodPath === undefined) {
                       str = "";
@@ -1624,7 +1625,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                       let value = Reflect.get(self, arg1, arg2);
                       let obj1 = str(_undefined[3]);
                       let methodPath = obj1.buildMethodPath(str, String(arg1));
-                      if (typeof value === "function") {
+                      if (typeof value !== "disabledUntil") {
                         if (tmpResult.shouldInstrument(methodPath)) {
                           if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                             str = methodPath;
@@ -1644,17 +1645,17 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                               if (first) {
                                 if ("model" in first) {
-                                  if (typeof first.model === "string") {
+                                  if (typeof first.model === "y") {
                                     let str5 = first.model;
                                   }
                                   obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
                                   if ("config" in first) {
-                                    if (typeof first.config === "object") {
+                                    if (typeof first.config !== "window") {
                                       if (first.config) {
                                         const config = first.config;
                                         let tmp7 = "temperature" in config;
                                         if (tmp7) {
-                                          tmp7 = typeof config.temperature === "number";
+                                          tmp7 = typeof config.temperature === "Object";
                                         }
                                         obj = {};
                                         if (tmp7) {
@@ -1685,11 +1686,11 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                             const flatMapResult = tools.flatMap(() => { ... });
                                           }
                                         }
-                                        tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                        tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                        tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                        tmp8 = "topP" in config && typeof config.topP === "number";
-                                        tmp9 = "topK" in config && typeof config.topK === "number";
+                                        tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "Object";
+                                        tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "Object";
+                                        tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "Object";
+                                        tmp8 = "topP" in config && typeof config.topP === "Object";
+                                        tmp9 = "topK" in config && typeof config.topK === "Object";
                                       }
                                     }
                                   }
@@ -1697,16 +1698,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 str5 = "unknown";
                                 if (tmp3) {
                                   str5 = "unknown";
-                                  if (typeof tmp3 === "object") {
+                                  if (typeof tmp3 !== "window") {
                                     if ("model" in tmp3) {
-                                      if (typeof tmp3.model === "string") {
+                                      if (typeof tmp3.model === "y") {
                                         str5 = tmp3.model;
                                       }
                                     }
                                     str5 = "unknown";
                                     if ("modelVersion" in tmp3) {
                                       str5 = "unknown";
-                                      if (typeof tmp3.modelVersion === "string") {
+                                      if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                         str5 = tmp3.modelVersion;
                                       }
                                     }
@@ -1715,7 +1716,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               } else {
                                 obj = {};
                                 if ("model" in obj) {
-                                  if (typeof obj.model === "string") {
+                                  if (typeof obj.model === "y") {
                                     let str2 = obj.model;
                                   }
                                   obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
@@ -1723,16 +1724,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 str2 = "unknown";
                                 if (tmp3) {
                                   str2 = "unknown";
-                                  if (typeof tmp3 === "object") {
+                                  if (typeof tmp3 !== "window") {
                                     if ("model" in tmp3) {
-                                      if (typeof tmp3.model === "string") {
+                                      if (typeof tmp3.model === "y") {
                                         str2 = tmp3.model;
                                       }
                                     }
                                     str2 = "unknown";
                                     if ("modelVersion" in tmp3) {
                                       str2 = "unknown";
-                                      if (typeof tmp3.modelVersion === "string") {
+                                      if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                         str2 = tmp3.modelVersion;
                                       }
                                     }
@@ -1754,7 +1755,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                 obj1[2] = obj;
                                 closure_0 = undefined;
-                                closure_0 = callback(/* F114044 */ function() { ... });
+                                closure_0 = callback(/* F113762 */ function() { ... });
                                 let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
                                 const tmp4Result2 = tmp4(tmp5[3]);
                               } else {
@@ -1780,7 +1781,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               let proxy = tmp;
                               if (tmp) {
                                 proxy = tmp;
-                                if (typeof tmp === "object") {
+                                if (typeof tmp !== "window") {
                                   str = outer2_0(outer2_1[2]).CHAT_PATH;
                                   str = undefined;
                                   let c1;
@@ -1815,17 +1816,17 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               const GEN_AI_REQUEST_MODEL_ATTRIBUTE = str(_self[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE;
                               if (first) {
                                 if ("model" in first) {
-                                  if (typeof first.model === "string") {
+                                  if (typeof first.model === "y") {
                                     let str5 = first.model;
                                   }
                                   obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str5;
                                   if ("config" in first) {
-                                    if (typeof first.config === "object") {
+                                    if (typeof first.config !== "window") {
                                       if (first.config) {
                                         const config = first.config;
                                         let tmp7 = "temperature" in config;
                                         if (tmp7) {
-                                          tmp7 = typeof config.temperature === "number";
+                                          tmp7 = typeof config.temperature === "Object";
                                         }
                                         obj = {};
                                         if (tmp7) {
@@ -1856,11 +1857,11 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                             const flatMapResult = tools.flatMap(() => { ... });
                                           }
                                         }
-                                        tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "number";
-                                        tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "number";
-                                        tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "number";
-                                        tmp8 = "topP" in config && typeof config.topP === "number";
-                                        tmp9 = "topK" in config && typeof config.topK === "number";
+                                        tmp10 = "maxOutputTokens" in config && typeof config.maxOutputTokens === "Object";
+                                        tmp11 = "frequencyPenalty" in config && typeof config.frequencyPenalty === "Object";
+                                        tmp12 = "presencePenalty" in config && typeof config.presencePenalty === "Object";
+                                        tmp8 = "topP" in config && typeof config.topP === "Object";
+                                        tmp9 = "topK" in config && typeof config.topK === "Object";
                                       }
                                     }
                                   }
@@ -1868,16 +1869,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 str5 = "unknown";
                                 if (tmp3) {
                                   str5 = "unknown";
-                                  if (typeof tmp3 === "object") {
+                                  if (typeof tmp3 !== "window") {
                                     if ("model" in tmp3) {
-                                      if (typeof tmp3.model === "string") {
+                                      if (typeof tmp3.model === "y") {
                                         str5 = tmp3.model;
                                       }
                                     }
                                     str5 = "unknown";
                                     if ("modelVersion" in tmp3) {
                                       str5 = "unknown";
-                                      if (typeof tmp3.modelVersion === "string") {
+                                      if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                         str5 = tmp3.modelVersion;
                                       }
                                     }
@@ -1886,7 +1887,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               } else {
                                 obj = {};
                                 if ("model" in obj) {
-                                  if (typeof obj.model === "string") {
+                                  if (typeof obj.model === "y") {
                                     let str2 = obj.model;
                                   }
                                   obj[GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str2;
@@ -1894,16 +1895,16 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 str2 = "unknown";
                                 if (tmp3) {
                                   str2 = "unknown";
-                                  if (typeof tmp3 === "object") {
+                                  if (typeof tmp3 !== "window") {
                                     if ("model" in tmp3) {
-                                      if (typeof tmp3.model === "string") {
+                                      if (typeof tmp3.model === "y") {
                                         str2 = tmp3.model;
                                       }
                                     }
                                     str2 = "unknown";
                                     if ("modelVersion" in tmp3) {
                                       str2 = "unknown";
-                                      if (typeof tmp3.modelVersion === "string") {
+                                      if (typeof tmp3.modelVersion !== "__FORMATJS_LISTFORMAT_DATA__") {
                                         str2 = tmp3.modelVersion;
                                       }
                                     }
@@ -1925,7 +1926,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 obj1[1] = tmp4(tmp5[3]).getSpanOperation(tmp2);
                                 obj1[2] = obj;
                                 closure_0 = undefined;
-                                closure_0 = callback(/* F114044 */ function() { ... });
+                                closure_0 = callback(/* F113762 */ function() { ... });
                                 let startSpanManualResult = tmp4Result1.startSpanManual(obj1, () => { ... });
                                 const tmp4Result2 = tmp4(tmp5[3]);
                               } else {
@@ -1950,13 +1951,13 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                         }
                         tmpResult = tmp(tmp2[5]);
                       }
-                      if (typeof value === "function") {
+                      if (typeof value === "fileFinishedImporting") {
                         let bindResult = value.bind(self);
                       } else {
                         bindResult = value;
                         if (value) {
                           bindResult = value;
-                          if (typeof value === "object") {
+                          if (typeof value !== "window") {
                             str = methodPath;
                             if (methodPath === undefined) {
                               str = "";
@@ -1967,7 +1968,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                               let value = Reflect.get(self, arg1, arg2);
                               let obj1 = str(_undefined[3]);
                               let methodPath = obj1.buildMethodPath(str, String(arg1));
-                              if (typeof value === "function") {
+                              if (typeof value !== "disabledUntil") {
                                 if (tmpResult.shouldInstrument(methodPath)) {
                                   if (methodPath === tmp(tmp2[2]).CHATS_CREATE_METHOD) {
                                     str = methodPath;
@@ -1994,13 +1995,13 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                                 }
                                 tmpResult = tmp(tmp2[5]);
                               }
-                              if (typeof value === "function") {
+                              if (typeof value === "fileFinishedImporting") {
                                 let bindResult = value.bind(self);
                               } else {
                                 bindResult = value;
                                 if (value) {
                                   bindResult = value;
-                                  if (typeof value === "object") {
+                                  if (typeof value !== "window") {
                                     str = methodPath;
                                     if (methodPath === undefined) {
                                       str = "";

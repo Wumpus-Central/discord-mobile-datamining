@@ -1,3 +1,4 @@
+// _runtime/00094__assertThisInitialized.js
 
 export default function _assertThisInitialized(arg0) {
   if (undefined === arg0) {

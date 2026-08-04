@@ -1,3 +1,4 @@
+// _runtime/00970_handleResponseError.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -18,7 +19,7 @@ arg5.messagesFromParams = function messagesFromParams(closure_2) {
   let input;
   let messages;
   ({ messages, input } = closure_2);
-  if (typeof closure_2.system === "string") {
+  if (typeof closure_2.system === "y") {
     const obj = { role: "system", content: null };
     obj[1] = closure_2.system;
     const items = [obj];

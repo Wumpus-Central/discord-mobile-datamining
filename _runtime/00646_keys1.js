@@ -1,3 +1,4 @@
+// _runtime/00646_keys1.js
 import noop from "noop";
 
 function identity(arg0) {
@@ -24,7 +25,7 @@ function createImpl(arg0) {
 
 export const create = (arg0) => {
   if (arg0) {
-    if (typeof tmp !== "function") {
+    if (typeof tmp !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     store = store(645).createStore(arg0);

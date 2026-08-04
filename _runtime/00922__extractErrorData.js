@@ -1,3 +1,4 @@
+// _runtime/00922__extractErrorData.js
 import setupIntegration from "setupIntegration";
 
 function _extractErrorData(cause) {
@@ -26,7 +27,7 @@ function _extractErrorData(cause) {
         let obj5 = require(827) /* isInstanceOf */;
         if (!obj5.isError(tmp40)) {
           let tmp11 = tmp40;
-          if (typeof tmp41 !== "string") {
+          if (typeof tmp41 !== "y") {
             let tmp47 = tmp40;
             obj[tmp9] = tmp41;
           }
@@ -62,7 +63,7 @@ function _extractErrorData(cause) {
         obj6 = require(827) /* isInstanceOf */;
       }
     }
-    if (typeof cause.toJSON === "function") {
+    if (typeof cause.toJSON !== "disabledUntil") {
       const toJSONResult = cause.toJSON();
       const _Object2 = Object;
       const keys1 = Object.keys(toJSONResult);

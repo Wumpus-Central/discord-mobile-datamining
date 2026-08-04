@@ -1,3 +1,4 @@
+// _runtime/00018_ActivityIndicator.js
 import "noop";
 import { jsx } from "jsxProd";
 import { default as ProgressBarAndroid } from "ProgressBarAndroid";

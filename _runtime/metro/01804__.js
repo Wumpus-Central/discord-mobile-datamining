@@ -1,3 +1,4 @@
+// _runtime/metro/01804__.js
 for (const key10013 in require("module_1805")) {
   let tmp2 = key10013;
   arg5[key10013] = require("module_1805")[key10013];

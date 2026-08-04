@@ -1,3 +1,4 @@
+// _runtime/00359_shouldUseTurboAnimatedModule.js
 let value = null;
 if (!require("shouldUseTurboAnimatedModule")()) {
   value = require("get").get("NativeAnimatedModule");

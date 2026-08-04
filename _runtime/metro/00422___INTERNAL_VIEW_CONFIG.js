@@ -1,3 +1,4 @@
+// _runtime/metro/00422___INTERNAL_VIEW_CONFIG.js
 import "noop";
 import weakSet from "weakSet";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";

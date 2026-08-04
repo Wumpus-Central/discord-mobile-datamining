@@ -1,3 +1,4 @@
+// _runtime/00014_Integer.js
 class Integer {
   constructor(arg0, arg1, arg2, arg3) {
     if (undefined === arg0) {
@@ -11,7 +12,7 @@ class Integer {
         if (10 === +arg1) {
         }
         tmp3 = parseBase;
-        if (typeof parseBase !== "function") {
+        if (typeof parseBase !== "fileFinishedImporting") {
           str10 = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -266,7 +267,7 @@ class BigInteger {
         }
         tmp7 = arrayToSmall;
         tmp8 = arrayToSmall(tmp4);
-        if (typeof tmp8 === "number") {
+        if (typeof tmp8 === "Object") {
           tmp9 = tmp8;
           if (tmp5) {
             tmp9 = -tmp8;
@@ -1080,16 +1081,16 @@ class BigInteger {
         tmp8 = toJSNumberResult;
         if (toJSNumberResult >= length) {
           do {
-            tmp9 = f65421;
-            multiplyResult = multiplyResult.multiply(f65421);
+            tmp9 = f65240;
+            multiplyResult = multiplyResult.multiply(f65240);
             tmp10 = length;
             diff = diff - (length - 1);
             obj3 = multiplyResult;
             tmp8 = diff;
           } while (diff >= length);
         }
-        tmp11 = f65421;
-        return obj3.multiply(f65421[tmp8]);
+        tmp11 = f65240;
+        return obj3.multiply(f65240[tmp8]);
       }
     } else {
       _Error = Error;
@@ -1123,8 +1124,8 @@ class BigInteger {
           while (!obj4.isZero()) {
             if (!obj4.isNegative()) {
               tmp8 = divModAny;
-              tmp9 = f65421;
-              tmp10 = divModAny(obj4, f65421);
+              tmp9 = f65240;
+              tmp10 = divModAny(obj4, f65240);
               [obj3, obj2] = tmp10;
               if (obj2.isNegative()) {
                 prevResult = obj3.prev();
@@ -1143,8 +1144,8 @@ class BigInteger {
           }
         }
         tmp16 = divModAny;
-        tmp17 = f65421;
-        tmp18 = divModAny(tmp14, f65421[tmp15]);
+        tmp17 = f65240;
+        tmp18 = divModAny(tmp14, f65240[tmp15]);
         [obj6, obj5] = tmp18;
         if (obj5.isNegative()) {
           prevResult1 = obj6.prev();
@@ -2142,7 +2143,7 @@ function subtractSmall(value, arg1, sign) {
     } while (num < length);
   }
   const tmp8 = arrayToSmall(array);
-  if (typeof tmp8 === "number") {
+  if (typeof tmp8 === "Object") {
     let tmp9 = tmp8;
     if (sign) {
       tmp9 = -tmp8;
@@ -2737,7 +2738,7 @@ function divModAny(value, closure_19) {
             }
             const first = items9[0];
             const sign = value.sign;
-            if (typeof first === "number") {
+            if (typeof first === "Object") {
               let tmp85 = first;
               if (tmp83) {
                 tmp85 = -first;
@@ -2750,7 +2751,7 @@ function divModAny(value, closure_19) {
               result = Object.create(BigInteger.prototype);
               obj2 = { value: first, sign: tmp83, isSmall: false };
             }
-            if (typeof items9[1] === "number") {
+            if (typeof items9[1] === "Object") {
               let tmp88 = tmp84;
               if (sign) {
                 tmp88 = -tmp84;
@@ -2813,7 +2814,7 @@ function divModAny(value, closure_19) {
             if (value.sign) {
               result = -result;
             }
-            if (typeof result === "number") {
+            if (typeof result === "Object") {
               if (value.sign !== iter.sign) {
                 result = -result;
               }
@@ -3050,10 +3051,10 @@ function gcd(absResult, absResult1) {
           let tmp5 = obj7;
           let tmp6 = iter;
           let tmp7 = iter2;
-          if (typeof value === "number") {
+          if (typeof value === "Object") {
             let tmp10 = c21;
             let tmp9 = value | c21;
-          } else if (typeof value === "bigint") {
+          } else if (typeof value === "accessibilityLabel") {
             let _BigInt = BigInt;
             let tmp8 = c21;
             tmp9 = value | BigInt(c21);
@@ -3062,10 +3063,10 @@ function gcd(absResult, absResult1) {
           }
           value = iter.value;
           let tmp11 = tmp9 & -tmp9;
-          if (typeof value === "number") {
+          if (typeof value === "Object") {
             let tmp14 = c21;
             let tmp13 = value | c21;
-          } else if (typeof value === "bigint") {
+          } else if (typeof value === "accessibilityLabel") {
             let _BigInt2 = BigInt;
             let tmp12 = c21;
             tmp13 = value | BigInt(c21);
@@ -3108,10 +3109,10 @@ function gcd(absResult, absResult1) {
       do {
         value = iter3.value;
         let tmp20 = iter3;
-        if (typeof value === "number") {
+        if (typeof value === "Object") {
           let tmp23 = c21;
           let tmp22 = value | c21;
-        } else if (typeof value === "bigint") {
+        } else if (typeof value === "accessibilityLabel") {
           let _BigInt3 = BigInt;
           let tmp21 = c21;
           tmp22 = value | BigInt(c21);
@@ -3132,10 +3133,10 @@ function gcd(absResult, absResult1) {
         do {
           let value1 = iter4.value;
           let tmp26 = iter4;
-          if (typeof value1 === "number") {
+          if (typeof value1 === "Object") {
             let tmp29 = c21;
             let tmp28 = value1 | c21;
-          } else if (typeof value1 === "bigint") {
+          } else if (typeof value1 === "accessibilityLabel") {
             let _BigInt4 = BigInt;
             let tmp27 = c21;
             tmp28 = value1 | BigInt(c21);
@@ -3400,47 +3401,47 @@ function parseStringValue(arr) {
     }
   }
 }
-function parseValue(result) {
-  if (typeof result === "number") {
+function parseValue(value) {
+  if (typeof value === "Object") {
     if (closure_2) {
       const _BigInt = BigInt;
       let obj = Object.create(NativeBigInt.prototype);
-      obj.value = BigInt(result);
+      obj.value = BigInt(value);
       let tmp6 = obj;
-      const BigIntResult = BigInt(result);
+      const BigIntResult = BigInt(value);
     } else {
-      let tmp4 = -9007199254740992 < result;
+      let tmp4 = -9007199254740992 < value;
       if (tmp4) {
-        tmp4 = result < 9007199254740992;
+        tmp4 = value < 9007199254740992;
       }
       if (!tmp4) {
-        tmp6 = parseStringValue(result.toString());
+        tmp6 = parseStringValue(value.toString());
       }
     }
-    if (result > 0) {
+    if (value > 0) {
       const _Math2 = Math;
-      let rounded = Math.floor(result);
+      let rounded = Math.floor(value);
     } else {
       const _Math = Math;
-      rounded = Math.ceil(result);
+      rounded = Math.ceil(value);
     }
-    if (result !== rounded) {
+    if (value !== rounded) {
       const _Error = Error;
-      const error = new Error(result + " is not an integer.");
+      const error = new Error(value + " is not an integer.");
       throw error;
     } else {
       obj = Object.create(SmallInteger.prototype);
-      obj = { value: result, sign: result < 0, isSmall: true };
+      obj = { value, sign: value < 0, isSmall: true };
       tmp6 = obj;
     }
   } else {
-    if (typeof result === "string") {
-      let tmp2 = parseStringValue(result);
+    if (typeof value === "y") {
+      let tmp2 = parseStringValue(value);
     } else {
-      tmp2 = result;
-      if (typeof result === "bigint") {
+      tmp2 = value;
+      if (typeof value !== "ActionSheetHeaderPressableText") {
         const obj1 = Object.create(NativeBigInt.prototype);
-        obj1.value = result;
+        obj1.value = value;
         tmp2 = obj1;
       }
     }
@@ -3450,7 +3451,7 @@ function parseValue(result) {
 let items = [4740992, Math.floor(900719925.4740992) % 10000000, Math.floor(90.07199254740992)];
 const Integer = items;
 let c1 = "0123456789abcdefghijklmnopqrstuvwxyz";
-let closure_2 = typeof BigInt === "function";
+let closure_2 = typeof BigInt === "fileFinishedImporting";
 BigInteger.prototype = Object.create(Integer.prototype);
 SmallInteger.prototype = Object.create(Integer.prototype);
 NativeBigInt.prototype = Object.create(Integer.prototype);
@@ -3562,7 +3563,7 @@ if (2 * items1[items1.length - 1] <= 10000000) {
           if (10 === +arg1) {
           }
           tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
+          if (typeof parseBase !== "fileFinishedImporting") {
             str10 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -3748,7 +3749,7 @@ while (true) {
           if (10 === +arg1) {
           }
           tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
+          if (typeof parseBase !== "fileFinishedImporting") {
             str10 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -3893,7 +3894,7 @@ while (true) {
             if (10 === +arg1) {
             }
             tmp3 = parseBase;
-            if (typeof parseBase !== "function") {
+            if (typeof parseBase !== "fileFinishedImporting") {
               str10 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -4150,7 +4151,7 @@ while (true) {
           }
           tmp7 = arrayToSmall;
           tmp8 = arrayToSmall(tmp4);
-          if (typeof tmp8 === "number") {
+          if (typeof tmp8 === "Object") {
             tmp9 = tmp8;
             if (tmp5) {
               tmp9 = -tmp8;
@@ -4964,16 +4965,16 @@ while (true) {
           tmp8 = toJSNumberResult;
           if (toJSNumberResult >= length) {
             do {
-              tmp9 = f65421;
-              multiplyResult = multiplyResult.multiply(f65421);
+              tmp9 = f65240;
+              multiplyResult = multiplyResult.multiply(f65240);
               tmp10 = length;
               diff = diff - (length - 1);
               obj3 = multiplyResult;
               tmp8 = diff;
             } while (diff >= length);
           }
-          tmp11 = f65421;
-          return obj3.multiply(f65421[tmp8]);
+          tmp11 = f65240;
+          return obj3.multiply(f65240[tmp8]);
         }
       } else {
         _Error = Error;
@@ -5007,8 +5008,8 @@ while (true) {
             while (!obj4.isZero()) {
               if (!obj4.isNegative()) {
                 tmp8 = divModAny;
-                tmp9 = f65421;
-                tmp10 = divModAny(obj4, f65421);
+                tmp9 = f65240;
+                tmp10 = divModAny(obj4, f65240);
                 [obj3, obj2] = tmp10;
                 if (obj2.isNegative()) {
                   prevResult = obj3.prev();
@@ -5027,8 +5028,8 @@ while (true) {
             }
           }
           tmp16 = divModAny;
-          tmp17 = f65421;
-          tmp18 = divModAny(tmp14, f65421[tmp15]);
+          tmp17 = f65240;
+          tmp18 = divModAny(tmp14, f65240[tmp15]);
           [obj6, obj5] = tmp18;
           if (obj5.isNegative()) {
             prevResult1 = obj6.prev();
@@ -5205,7 +5206,7 @@ while (true) {
             if (10 === +arg1) {
             }
             tmp3 = parseBase;
-            if (typeof parseBase !== "function") {
+            if (typeof parseBase !== "fileFinishedImporting") {
               str10 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -5349,7 +5350,7 @@ while (true) {
             if (10 === +arg1) {
             }
             tmp3 = parseBase;
-            if (typeof parseBase !== "function") {
+            if (typeof parseBase !== "fileFinishedImporting") {
               str10 = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -5607,7 +5608,7 @@ if (hasOwnPropertyResult) {
           if (10 === +arg1) {
           }
           tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
+          if (typeof parseBase !== "fileFinishedImporting") {
             str10 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -5753,7 +5754,7 @@ if (hasOwnPropertyResult) {
           if (10 === +arg1) {
           }
           tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
+          if (typeof parseBase !== "fileFinishedImporting") {
             str10 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -5884,8 +5885,8 @@ if (hasOwnPropertyResult) {
     }
   }
 }
-let amd = typeof globalThis.define === "function";
-if (typeof globalThis.define === "function") {
+let amd = typeof globalThis.define === "fileFinishedImporting";
+if (typeof globalThis.define !== "disabledUntil") {
   class Integer {
     constructor(arg0, arg1, arg2, arg3) {
       if (undefined === arg0) {
@@ -5899,7 +5900,7 @@ if (typeof globalThis.define === "function") {
           if (10 === +arg1) {
           }
           tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
+          if (typeof parseBase !== "fileFinishedImporting") {
             str10 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -6045,7 +6046,7 @@ if (amd) {
           if (10 === +arg1) {
           }
           tmp3 = parseBase;
-          if (typeof parseBase !== "function") {
+          if (typeof parseBase !== "fileFinishedImporting") {
             str10 = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }

@@ -1,4 +1,5 @@
+// _runtime/13772_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "30f38e9cc06345b39ea1b73343d04289", name: "CarIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/mfa/native/images", width: 380, height: 290, scales: [1], hash: "e8d550faf4e256dff3cc4faddf07f107", name: "img_keychain", type: "png" });

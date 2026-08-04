@@ -1,3 +1,4 @@
+// _runtime/00975_contentUnionToMessages.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -6,7 +7,7 @@ function contentUnionToMessages(contents, user) {
   if (user === undefined) {
     str = "user";
   }
-  if (typeof contents === "string") {
+  if (typeof contents === "y") {
     let obj = { role: null, content: null };
     obj[0] = str;
     obj[1] = contents;
@@ -17,7 +18,7 @@ function contentUnionToMessages(contents, user) {
     if (Array.isArray(contents)) {
       flatMapResult = contents.flatMap((arg0) => outer1_2(arg0, str));
     } else {
-      if (typeof contents === "object") {
+      if (typeof contents !== "window") {
         if (contents) {
           if (!("role" in contents)) {
             if ("parts" in contents) {

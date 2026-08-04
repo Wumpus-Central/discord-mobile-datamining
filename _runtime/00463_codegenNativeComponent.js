@@ -1,3 +1,4 @@
+// _runtime/00463_codegenNativeComponent.js
 const global = arg0;
 const module = arg2;
 const dependencyMap = arg6;

@@ -1,3 +1,4 @@
+// _runtime/00920_severityLevelFromString.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.severityLevelFromString = function severityLevelFromString(arg0) {
   let str = "warning";

@@ -1,9 +1,10 @@
+// _runtime/00424_Mixin.js
 import "noop";
 import { jsx } from "jsxProd";
 
 let touchableHandleBlur;
 let touchableHandleFocus;
-const f18387 = (arg0) => {
+const f18290 = (arg0) => {
 
 };
 const NOT_RESPONDER = "NOT_RESPONDER";
@@ -158,7 +159,7 @@ let obj2 = {
         const tmp6 = touchableGetHitSlopResult.left || 0;
       }
       nativeEvent = nativeEvent.nativeEvent;
-      if (typeof f18387 !== "function") {
+      if (typeof f18290 !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       ({ touches, changedTouches } = nativeEvent);
@@ -225,7 +226,7 @@ let obj2 = {
     const self = this;
     const responderID = this.state.touchable.responderID;
     if (null != responderID) {
-      if (typeof responderID === "number") {
+      if (typeof responderID === "Object") {
         importDefault(68).measure(responderID, self._handleQueryLayout);
         const obj = importDefault(68);
       } else {
@@ -333,7 +334,7 @@ let obj2 = {
     let changedTouches;
     let touches;
     nativeEvent = nativeEvent.nativeEvent;
-    if (typeof f18387 !== "function") {
+    if (typeof f18290 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     ({ touches, changedTouches } = nativeEvent);

@@ -1,8 +1,9 @@
+// _runtime/00855_hasSpansEnabled.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.hasSpansEnabled = function hasSpansEnabled(options) {
-  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
+  if (typeof globalThis.__SENTRY_TRACING__ !== "onScroll") {
     if (!globalThis.__SENTRY_TRACING__) {
       return false;
     }

@@ -1,3 +1,4 @@
+// _runtime/01537_isRecordEqual.js
 arg5.default = function isRecordEqual(arg0, arg1) {
   let closure_0 = arg0;
   let closure_1 = arg1;

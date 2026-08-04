@@ -1,3 +1,4 @@
+// _runtime/01395_regexTester.js
 let closure_2 = require("callBoundIntrinsic")("RegExp.prototype.exec");
 
 export default function regexTester(arg0) {

@@ -1,3 +1,4 @@
+// _runtime/01612_logToConsole.js
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;
@@ -24,7 +25,7 @@ formatMessage.__closure = {};
 formatMessage.__workletHash = 4586683970876;
 formatMessage.__initData = { code: "function formatMessage_Pnpm_loggerTs2(message){return\"[Reanimated] \"+message;}" };
 function createLog(level) {
-  if (typeof formatMessage !== "function") {
+  if (typeof formatMessage !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const combined = "[Reanimated] " + arg1;
@@ -46,7 +47,7 @@ function replaceLoggerImplementation(fn) {
   const obj = {};
   const merged = Object.assign(global.__reanimatedLoggerConfig);
   obj.logFunction = fn;
-  if (typeof registerLoggerConfig !== "function") {
+  if (typeof registerLoggerConfig !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   global.__reanimatedLoggerConfig = obj;
@@ -73,7 +74,7 @@ function updateLoggerConfig(level) {
     strict = obj.strict;
   }
   obj.strict = strict;
-  if (typeof registerLoggerConfig !== "function") {
+  if (typeof registerLoggerConfig !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   global.__reanimatedLoggerConfig = obj;
@@ -93,10 +94,10 @@ function handleLog(error, arg1, strict) {
       const _HermesInternal = HermesInternal;
       sum = arg1 + "\n\n" + c3;
     }
-    if (typeof createLog !== "function") {
+    if (typeof createLog !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
-    if (typeof formatMessage !== "function") {
+    if (typeof formatMessage !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const _HermesInternal2 = HermesInternal;
@@ -147,7 +148,7 @@ arg5.LogLevel = obj;
 arg5.DEFAULT_LOGGER_CONFIG = obj;
 arg5.logToLogBoxAndConsole = function logToLogBoxAndConsole(level) {
   require(1611) /* addLogBoxLog */.addLogBoxLog(level);
-  if (typeof logToConsole !== "function") {
+  if (typeof logToConsole !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   level = level.level;

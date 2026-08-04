@@ -1,3 +1,4 @@
+// _runtime/01494_get_getKey.js
 let c0 = "Couldn't find a navigation context. Have you wrapped your app with 'NavigationContainer'? See https://reactnavigation.org/docs/getting-started for setup instructions.";
 const obj = { isDefault: true };
 Object.defineProperty(obj, "getKey", {

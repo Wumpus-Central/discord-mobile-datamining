@@ -1,3 +1,4 @@
+// _runtime/01726__isNativeReflectConstruct.js
 import FlipOutEasyY from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

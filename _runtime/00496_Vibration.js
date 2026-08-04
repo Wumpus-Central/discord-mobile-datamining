@@ -1,3 +1,4 @@
+// _runtime/00496_Vibration.js
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {
@@ -10,7 +11,7 @@ arg5.default = {
     if (arg1 === undefined) {
       flag = false;
     }
-    if (typeof num === "number") {
+    if (typeof num === "Object") {
       module(497).vibrate(num);
       const obj2 = module(497);
     } else {

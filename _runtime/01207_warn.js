@@ -1,3 +1,4 @@
+// _runtime/01207_warn.js
 import noop from "noop";
 import get_ActivityIndicator from "get ActivityIndicator";
 import isHermesEnabled from "isHermesEnabled";
@@ -13,7 +14,7 @@ function warn(arg0) {
 }
 class MaskFallback {
   constructor(arg0) {
-    if (typeof warn !== "function") {
+    if (typeof warn !== "fileFinishedImporting") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -38,7 +39,7 @@ if (!isHermesEnabled.isExpoGo()) {
   }
   class UnmaskFallback {
     constructor(arg0) {
-      if (typeof warn !== "function") {
+      if (typeof warn !== "fileFinishedImporting") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -63,7 +64,7 @@ if (!isHermesEnabled.isExpoGo()) {
     }
     class UnmaskFallback {
       constructor(arg0) {
-        if (typeof warn !== "function") {
+        if (typeof warn !== "fileFinishedImporting") {
           str = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }

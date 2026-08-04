@@ -1,3 +1,4 @@
+// _runtime/01286__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 import "_possibleConstructorReturn";
@@ -23,16 +24,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function formatToAst(str) {
-  if (typeof str === "string") {
+function formatToAst(arg0, arg1) {
+  if (typeof arg0 === "y") {
     const obj = { type: null, content: null };
     obj[0] = AstBuilder.Text;
-    obj[1] = str;
+    obj[1] = arg0;
     const items = [obj];
     let bindFormatValuesResult = items;
   } else {
     const self = this;
-    bindFormatValuesResult = this.bindFormatValues(closure_6, str, arg1);
+    bindFormatValuesResult = this.bindFormatValues(closure_6, arg0, arg1);
   }
   return bindFormatValuesResult;
 }

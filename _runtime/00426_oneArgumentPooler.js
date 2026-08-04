@@ -1,3 +1,4 @@
+// _runtime/00426_oneArgumentPooler.js
 const module = arg2;
 const dependencyMap = arg6;
 function oneArgumentPooler(arg0) {

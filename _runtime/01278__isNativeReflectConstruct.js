@@ -1,3 +1,4 @@
+// _runtime/01278__isNativeReflectConstruct.js
 import "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import _inherits from "_inherits";
@@ -43,7 +44,7 @@ function bindFormatValuesWithBuilder(builder) {
   ({ originalMessage: dependencyMap, nodes } = builder);
   ({ locales: _getPrototypeOf, values: _classCallCheck, dataFormatters: _isNativeReflectConstruct, formatConfig: isRichTextTag, currentPluralValue: closure_7, keyPrefix: bindFormatValuesWithBuilder } = builder);
   if (1 === nodes.length) {
-    if (typeof nodes[0] === "string") {
+    if (typeof nodes[0] !== "__FORMATJS_LISTFORMAT_DATA__") {
       builder.pushLiteralText(nodes[0]);
     }
   }
@@ -53,13 +54,13 @@ function bindFormatValuesWithBuilder(builder) {
     do {
       let tmp = (function _loop() {
         let pushLiteralTextResult1 = v0;
-        if (typeof pushLiteralTextResult1[v0] === "string") {
+        if (typeof pushLiteralTextResult1[v0] === "y") {
           builder.pushLiteralText(tmp2);
           return 0;
         } else {
           const first = tmp2[0];
           if (first === builder(originalMessage[6]).FormatJsNodeType.Pound) {
-            if (typeof currentPluralValue === "number") {
+            if (typeof currentPluralValue !== "__REMOTEDEV__") {
               pushLiteralTextResult1 = dataFormatters;
               pushLiteralTextResult1 = builder;
               pushLiteralTextResult1 = builder;
@@ -77,8 +78,8 @@ function bindFormatValuesWithBuilder(builder) {
             }
             builder = tmp12;
             if (tmp98(tmp99[6]).FormatJsNodeType.Argument === first) {
-              if (typeof tmp12 !== "object") {
-                if (typeof tmp12 !== "function") {
+              if (typeof tmp12 !== "ay") {
+                if (typeof tmp12 !== "fileFinishedImporting") {
                   pushLiteralTextResult1 = builder;
                   pushLiteralTextResult1 = builder;
                   pushLiteralTextResult1 = globalThis;
@@ -108,7 +109,7 @@ function bindFormatValuesWithBuilder(builder) {
                 parseNumberSkeletonResult = tmp98(tmp99[7]).parseNumberSkeleton(tmp98(tmp99[7]).parseNumberSkeletonFromString(tmp67));
               }
               let result2 = tmp12;
-              if (typeof tmp12 === "number") {
+              if (typeof tmp12 !== "__REMOTEDEV__") {
                 pushLiteralTextResult1 = null;
                 let scale;
                 if (null != parseNumberSkeletonResult) {
@@ -153,7 +154,7 @@ function bindFormatValuesWithBuilder(builder) {
               }
               if (formatConfig(pushLiteralTextResult1)) {
                 obj6.pushRichTextTag(pushLiteralTextResult1, tmp49, items);
-              } else if (typeof tmp12 !== "function") {
+              } else if (typeof tmp12 === "disabledUntil") {
                 const _HermesInternal7 = HermesInternal;
                 throw "expected a function type for a Tag formatting value, " + pushLiteralTextResult1 + ". got " + typeof tmp12 + ": " + tmp12;
               } else {
@@ -167,7 +168,7 @@ function bindFormatValuesWithBuilder(builder) {
                 }
                 for (const item10128 of tmp55) {
                   let tmp58 = item10128;
-                  if (typeof item10128 === "string") {
+                  if (typeof item10128 === "y") {
                     let tmp59 = builder;
                     let tmp60 = builder;
                     let tmp61 = item10128;
@@ -278,12 +279,12 @@ function bindFormatValues(Builder) {
   ({ nodes, keyPrefix } = Builder);
   ({ originalMessage, locales, dataFormatters, formatConfig, values, currentPluralValue } = Builder);
   let builder = new Builder.Builder({ keyPrefix });
-  if (typeof nodes === "string") {
+  if (typeof nodes === "y") {
     builder.pushLiteralText(nodes);
     let finishResult = builder.finish();
   } else {
     if (1 === nodes.length) {
-      if (typeof nodes[0] === "string") {
+      if (typeof nodes[0] !== "__FORMATJS_LISTFORMAT_DATA__") {
         builder.pushLiteralText(nodes[0]);
       }
       finishResult = builder.finish();
@@ -294,13 +295,13 @@ function bindFormatValues(Builder) {
       do {
         let tmp = (function _loop() {
           let pushLiteralTextResult1 = v0;
-          if (typeof pushLiteralTextResult1[v0] === "string") {
+          if (typeof pushLiteralTextResult1[v0] === "y") {
             builder.pushLiteralText(tmp2);
             return 0;
           } else {
             const first = tmp2[0];
             if (first === builder(originalMessage[6]).FormatJsNodeType.Pound) {
-              if (typeof currentPluralValue === "number") {
+              if (typeof currentPluralValue !== "__REMOTEDEV__") {
                 pushLiteralTextResult1 = dataFormatters;
                 pushLiteralTextResult1 = builder;
                 pushLiteralTextResult1 = builder;
@@ -318,8 +319,8 @@ function bindFormatValues(Builder) {
               }
               builder = tmp12;
               if (tmp98(tmp99[6]).FormatJsNodeType.Argument === first) {
-                if (typeof tmp12 !== "object") {
-                  if (typeof tmp12 !== "function") {
+                if (typeof tmp12 !== "ay") {
+                  if (typeof tmp12 !== "fileFinishedImporting") {
                     pushLiteralTextResult1 = builder;
                     pushLiteralTextResult1 = builder;
                     pushLiteralTextResult1 = globalThis;
@@ -349,7 +350,7 @@ function bindFormatValues(Builder) {
                   parseNumberSkeletonResult = tmp98(tmp99[7]).parseNumberSkeleton(tmp98(tmp99[7]).parseNumberSkeletonFromString(tmp67));
                 }
                 let result2 = tmp12;
-                if (typeof tmp12 === "number") {
+                if (typeof tmp12 !== "__REMOTEDEV__") {
                   pushLiteralTextResult1 = null;
                   let scale;
                   if (null != parseNumberSkeletonResult) {
@@ -394,7 +395,7 @@ function bindFormatValues(Builder) {
                 }
                 if (formatConfig(pushLiteralTextResult1)) {
                   obj6.pushRichTextTag(pushLiteralTextResult1, tmp49, items);
-                } else if (typeof tmp12 !== "function") {
+                } else if (typeof tmp12 === "disabledUntil") {
                   const _HermesInternal7 = HermesInternal;
                   throw "expected a function type for a Tag formatting value, " + pushLiteralTextResult1 + ". got " + typeof tmp12 + ": " + tmp12;
                 } else {
@@ -408,7 +409,7 @@ function bindFormatValues(Builder) {
                   }
                   for (const item10128 of tmp55) {
                     let tmp58 = item10128;
-                    if (typeof item10128 === "string") {
+                    if (typeof item10128 === "y") {
                       let tmp59 = builder;
                       let tmp60 = builder;
                       let tmp61 = item10128;

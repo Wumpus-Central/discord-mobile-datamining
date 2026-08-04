@@ -1,3 +1,4 @@
+// _runtime/00264_getTargetFromInstanceHandle.js
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;

@@ -1,3 +1,4 @@
+// _runtime/00276_MessageQueue.js
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = {

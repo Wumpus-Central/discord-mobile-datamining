@@ -1,3 +1,4 @@
+// _runtime/00571_sign.js
 
 export default function sign(arg0) {
   let tmp = arg0;

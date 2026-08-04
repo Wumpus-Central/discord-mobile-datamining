@@ -1,3 +1,4 @@
+// _runtime/metro/00552__.js
 import apply from "apply";
 
 if (apply) {

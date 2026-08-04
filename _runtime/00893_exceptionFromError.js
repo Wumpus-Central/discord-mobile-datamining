@@ -1,3 +1,4 @@
+// _runtime/00893_exceptionFromError.js
 import _slicedToArray from "_slicedToArray";
 
 function exceptionFromError(arg0, name) {
@@ -7,7 +8,7 @@ function exceptionFromError(arg0, name) {
     isErrorResult = "__sentry_fetch_url_host__" in name;
   }
   if (isErrorResult) {
-    isErrorResult = typeof name.__sentry_fetch_url_host__ === "string";
+    isErrorResult = typeof name.__sentry_fetch_url_host__ === "y";
   }
   const message = name.message;
   if (isErrorResult) {
@@ -33,7 +34,7 @@ export const _enhanceErrorWithSentryInfo = function _enhanceErrorWithSentryInfo(
     isErrorResult = "__sentry_fetch_url_host__" in __sentry_fetch_url_host__;
   }
   if (isErrorResult) {
-    isErrorResult = typeof __sentry_fetch_url_host__.__sentry_fetch_url_host__ === "string";
+    isErrorResult = typeof __sentry_fetch_url_host__.__sentry_fetch_url_host__ === "y";
   }
   const message = __sentry_fetch_url_host__.message;
   if (isErrorResult) {
@@ -138,7 +139,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
         items3 = items1;
       } else {
         if ("name" in name) {
-          if (typeof name.name === "string") {
+          if (typeof name.name === "y") {
             const _HermesInternal5 = HermesInternal;
             const combined = "'" + name.name + "' captured as exception";
             let sum = combined;
@@ -147,7 +148,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
               sum = combined + " with message '" + name.message + "'";
             }
             let message = sum;
-            tmp23 = "message" in name && typeof name.message === "string";
+            tmp23 = "message" in name && typeof name.message === "y";
           }
           let syntheticException;
           if (data != null) {
@@ -162,7 +163,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
           items3 = items2;
         }
         if ("message" in name) {
-          if (typeof name.message === "string") {
+          if (typeof name.message === "y") {
             message = name.message;
           }
         }

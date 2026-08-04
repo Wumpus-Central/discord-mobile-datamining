@@ -1,3 +1,4 @@
+// _runtime/01782_getRelativeCoords.js
 const require = arg1;
 const dependencyMap = arg6;
 function getRelativeCoords(arg0, arg1, arg2) {

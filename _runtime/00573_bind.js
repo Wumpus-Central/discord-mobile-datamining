@@ -1,3 +1,4 @@
+// _runtime/00573_bind.js
 import bind from "bind";
 
 const call2 = bind.call;

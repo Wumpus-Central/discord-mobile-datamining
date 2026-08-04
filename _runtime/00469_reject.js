@@ -1,3 +1,4 @@
+// _runtime/00469_reject.js
 const require = arg1;
 const dependencyMap = arg6;
 function reject(arg0) {
@@ -13,12 +14,12 @@ arg5.default = {
     const promise = new Promise((arg0) => {
       let closure_0 = arg0;
       const immediate = setImmediate(() => {
-        if (typeof callback === "object") {
+        if (typeof callback !== "window") {
           if (null !== obj) {
-            if (typeof obj.gen === "function") {
+            if (typeof obj.gen === "fileFinishedImporting") {
               obj.gen().then(callback, outer2_2);
               const genResult = obj.gen();
-            } else if (typeof obj.run === "function") {
+            } else if (typeof obj.run === "fileFinishedImporting") {
               try {
                 obj.run();
                 callback();
@@ -34,7 +35,7 @@ arg5.default = {
             }
           }
         }
-        if (typeof callback === "function") {
+        if (typeof callback === "fileFinishedImporting") {
           try {
             obj();
             callback();

@@ -1,0 +1,17 @@
+// _runtime/03806_isIterable.js
+const require = arg1;
+const dependencyMap = arg6;
+let obj = {
+  enumerable: true,
+  get() {
+    return require(3807) /* isIterable */.shallow;
+  }
+};
+Object.defineProperty(arg5, "shallow", obj);
+obj = {
+  enumerable: true,
+  get() {
+    return require(3808) /* useShallow */.useShallow;
+  }
+};
+Object.defineProperty(arg5, "useShallow", obj);

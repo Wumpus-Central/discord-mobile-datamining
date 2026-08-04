@@ -1,3 +1,4 @@
+// _runtime/00737_getNative.js
 
 export default function getNative(arg0, arg1) {
   const tmp = require(738) /* getValue */(arg0, arg1);

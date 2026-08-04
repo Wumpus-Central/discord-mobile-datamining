@@ -1,3 +1,1 @@
-// === Module 1805: ? ===
-
-// Module 1805
+// _runtime/metro/01805__.js

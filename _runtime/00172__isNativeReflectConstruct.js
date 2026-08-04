@@ -1,3 +1,4 @@
+// _runtime/00172__isNativeReflectConstruct.js
 import PerformanceResourceTiming from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
@@ -136,7 +137,7 @@ let items = [
       const tmp = callback2(callback(self.prototype), "toJSON", this);
       let _possibleConstructorReturn = tmp;
       let fn = tmp;
-      if (typeof tmp === "function") {
+      if (typeof tmp !== "disabledUntil") {
         fn = (arg0) => tmp.apply(self, arg0);
       }
       const obj = {};

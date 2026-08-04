@@ -1,3 +1,4 @@
+// _runtime/00611_toStringTag.js
 let c0;
 let closure_1;
 ({ hasOwnProperty: c0, toString: closure_1 } = Object.prototype);

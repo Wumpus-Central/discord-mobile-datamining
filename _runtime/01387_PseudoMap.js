@@ -1,3 +1,4 @@
+// _runtime/01387_PseudoMap.js
 let tmp = "pseudomap" === process.env.npm_package_name;
 if (tmp) {
   const _process = process;
@@ -7,7 +8,7 @@ if (tmp) {
   const _process2 = process;
   process.env.TEST_PSEUDOMAP = "true";
 }
-if (typeof Map === "function") {
+if (typeof Map !== "disabledUntil") {
   const _process3 = process;
   if (!process.env.TEST_PSEUDOMAP) {
     const _Map = Map;

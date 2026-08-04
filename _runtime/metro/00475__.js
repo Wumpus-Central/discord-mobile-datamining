@@ -1,3 +1,4 @@
+// _runtime/metro/00475__.js
 const obj = {
   centroidDimension(touchBank, arg1, arg2, arg3) {
     let tmp2;

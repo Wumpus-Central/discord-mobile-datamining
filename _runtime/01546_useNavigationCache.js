@@ -1,3 +1,4 @@
+// _runtime/01546_useNavigationCache.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 
@@ -44,11 +45,11 @@ export default function useNavigationCache(getState) {
           outer1_4(() => {
             const items = [...closure_0];
             const applyResult = outer3_5[args].apply(items);
-            if (typeof outer2_3 !== "function") {
+            if (typeof outer2_3 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             let applyResultResult = applyResult;
-            if (typeof applyResult === "function") {
+            if (typeof applyResult !== "disabledUntil") {
               applyResultResult = applyResult(args());
             }
             if (null != applyResultResult) {
@@ -68,11 +69,11 @@ export default function useNavigationCache(getState) {
       obj.dispatch = function dispatch(arg0) {
         let closure_0 = arg0;
         withStack(() => {
-          if (typeof outer1_3 !== "function") {
+          if (typeof outer1_3 !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           let tmpResult = tmp;
-          if (typeof callback === "function") {
+          if (typeof callback !== "disabledUntil") {
             tmpResult = tmp(callback());
           }
           if (null != tmpResult) {

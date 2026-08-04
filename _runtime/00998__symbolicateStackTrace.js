@@ -1,3 +1,4 @@
+// _runtime/00998__symbolicateStackTrace.js
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 const require = arg1;

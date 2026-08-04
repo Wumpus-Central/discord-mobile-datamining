@@ -1,3 +1,4 @@
+// _runtime/01647_isReducedMotionEnabledInSystem.js
 import isJest from "isJest";
 import addCompilerSafeGetAndSet from "addCompilerSafeGetAndSet";
 

@@ -1,3 +1,4 @@
+// _runtime/01540_shouldPreventRemove.js
 import noop from "noop";
 
 let closure_3 = Symbol("VISITED_ROUTE_KEYS");

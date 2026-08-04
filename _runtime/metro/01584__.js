@@ -1,3 +1,4 @@
+// _runtime/metro/01584__.js
 for (const key10013 in require("context")) {
   let tmp2 = key10013;
   arg5[key10013] = require("context")[key10013];

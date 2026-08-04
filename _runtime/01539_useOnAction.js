@@ -1,3 +1,4 @@
+// _runtime/01539_useOnAction.js
 import noop from "noop";
 
 const require = arg1;
@@ -38,7 +39,7 @@ export default function useOnAction(router) {
       return false;
     } else {
       set.add(tmp4.key);
-      if (typeof target.target !== "string") {
+      if (typeof target.target === "__FORMATJS_LISTFORMAT_DATA__") {
         const stateForAction = router.getStateForAction(tmp4, target, ref.current);
         let tmp10 = stateForAction;
         if (null === stateForAction) {

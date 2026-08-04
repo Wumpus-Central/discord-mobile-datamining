@@ -1,3 +1,4 @@
+// _runtime/00204_map.js
 const map = new Map();
 arg5.register = (arg0) => {
   const value = map.get(arg0);

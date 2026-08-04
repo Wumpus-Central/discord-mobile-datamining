@@ -1,3 +1,4 @@
+// _runtime/00988_dynamicRequire.js
 const require = arg1;
 let dependencyMap = arg4;
 dependencyMap = arg6;
@@ -14,7 +15,7 @@ arg5.isNodeEnv = function isNodeEnv() {
     const call = toString.call;
     const _process = process;
     let str = 0;
-    if (typeof process !== "undefined") {
+    if (typeof process !== "Array") {
       str = process;
     }
     str = "[object process]";

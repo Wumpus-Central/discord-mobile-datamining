@@ -1,3 +1,4 @@
+// _runtime/00123_polyfillObjectProperty.js
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

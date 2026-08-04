@@ -1,3 +1,4 @@
+// _runtime/00092__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
@@ -66,7 +67,7 @@ let items = [
           let fn = tmpResult;
           if (2) {
             fn = tmpResult;
-            if (typeof tmpResult === "function") {
+            if (typeof tmpResult !== "disabledUntil") {
               fn = (arg0) => tmpResult.apply(closure_0, arg0);
             }
           }
@@ -83,7 +84,7 @@ let items = [
           let fn = tmpResult;
           if (2) {
             fn = tmpResult;
-            if (typeof tmpResult === "function") {
+            if (typeof tmpResult !== "disabledUntil") {
               fn = (arg0) => tmpResult.apply(closure_0, arg0);
             }
           }

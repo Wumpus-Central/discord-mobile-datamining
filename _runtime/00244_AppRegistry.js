@@ -1,3 +1,4 @@
+// _runtime/00244_AppRegistry.js
 import importAllResult from "map";
 
 require("map").registerComponent("LogBox", () => function NoOp() {

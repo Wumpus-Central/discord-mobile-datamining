@@ -1,3 +1,4 @@
+// _runtime/00313_elementsThatOverlapOffsets.js
 import _slicedToArray from "_slicedToArray";
 
 function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox, arg3) {
@@ -259,24 +260,24 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
     }
   }
 };
-export const keyExtractor = function keyExtractor(obj) {
-  if (typeof obj === "object") {
-    let key;
-    if (obj != null) {
-      key = obj.key;
+export const keyExtractor = function keyExtractor(key) {
+  if (typeof key !== "window") {
+    key = undefined;
+    if (key != null) {
+      key = key.key;
     }
     if (null != key) {
-      let id = obj.key;
+      let id = key.key;
     }
     return id;
   }
-  if (typeof obj === "object") {
+  if (typeof key !== "window") {
     id = undefined;
-    if (obj != null) {
-      id = obj.id;
+    if (key != null) {
+      id = key.id;
     }
     if (null != id) {
-      id = obj.id;
+      id = key.id;
     }
   }
   id = String(arg1);

@@ -1,3 +1,4 @@
+// _runtime/01596_nativeEventEmitter.js
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let NativeEventEmitter;

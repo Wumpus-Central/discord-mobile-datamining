@@ -1,10 +1,11 @@
+// _runtime/00606_isObject.js
 
-export default function isObject(obj) {
-  let tmp = null != obj;
+export default function isObject(arg0) {
+  let tmp = null != arg0;
   if (tmp) {
-    let tmp2 = typeof obj === "object";
-    if (typeof obj !== "object") {
-      tmp2 = typeof obj === "function";
+    let tmp2 = typeof arg0 === "ay";
+    if (typeof arg0 !== "ay") {
+      tmp2 = typeof arg0 === "fileFinishedImporting";
     }
     tmp = tmp2;
   }

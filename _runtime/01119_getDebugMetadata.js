@@ -1,3 +1,4 @@
+// _runtime/01119_getDebugMetadata.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getDebugMetadata = function getDebugMetadata() {

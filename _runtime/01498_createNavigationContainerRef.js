@@ -1,3 +1,4 @@
+// _runtime/01498_createNavigationContainerRef.js
 const require = arg1;
 let dependencyMap = arg6;
 let c2 = "The 'navigation' object hasn't been initialized yet. This might happen if you don't have a navigator mounted, or if the navigator hasn't finished mounting. See https://reactnavigation.org/docs/navigating-without-navigation-prop#handling-initialization for more details.";
@@ -59,7 +60,7 @@ arg5.default = function createNavigationContainerRef() {
         dependencyMap[first] = dependencyMap[first] || [];
         dependencyMap[first].push(items[1]);
         return () => {
-          if (typeof c1 !== "function") {
+          if (typeof c1 !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           const table = c1;
@@ -70,7 +71,7 @@ arg5.default = function createNavigationContainerRef() {
         };
       } else if ("removeListener" === tmp20) {
         const first1 = items[0];
-        if (typeof outer1_1 !== "function") {
+        if (typeof outer1_1 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         dependencyMap = items[1];

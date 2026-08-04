@@ -1,3 +1,4 @@
+// _runtime/01650_isReanimated3.js
 import controlEdgeToEdgeValues from "controlEdgeToEdgeValues";
 import isJest from "isJest";
 
@@ -39,7 +40,7 @@ export const getViewProp = function getViewProp(arg0, arg1, arg2) {
     const callback = arg1;
     const ReanimatedModule = callback(table[3]).ReanimatedModule;
     return ReanimatedModule.getViewProp(closure_0, callback, table, (str) => {
-      if (typeof str === "string") {
+      if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
         if ("error:" === str.substr(0, 6)) {
           callback2(str);
         }

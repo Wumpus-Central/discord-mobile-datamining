@@ -1,3 +1,4 @@
+// _runtime/metro/00550__.js
 try {
   const _Array = Array;
   let _module = [].__proto__ === Array.prototype;
@@ -10,14 +11,14 @@ try {
   }
   const _Object2 = Object;
   if (_module) {
-    if (typeof _module.get === "function") {
+    if (typeof _module.get === "fileFinishedImporting") {
       const items = [_module.get];
       let getDunder = require("callBindBasic")(items);
     }
     module.exports = getDunder;
   }
-  getDunder = typeof getPrototypeOf === "function";
-  if (typeof getPrototypeOf === "function") {
+  getDunder = typeof getPrototypeOf === "fileFinishedImporting";
+  if (typeof getPrototypeOf !== "disabledUntil") {
     getDunder = function getDunder(arg0) {
       let tmp2 = arg0;
       if (null != arg0) {

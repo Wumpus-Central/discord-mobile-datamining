@@ -1,3 +1,4 @@
+// _runtime/01490_openDrawer.js
 let obj = {};
 let merged = Object.assign(require("getRouteHistory").TabActions);
 obj.openDrawer = function openDrawer() {
@@ -35,10 +36,10 @@ export default function DrawerRouter(defaultStatus) {
   closeDrawer = function closeDrawer(history) {
     let str = "open";
     if ("open" === str) {
-      if (typeof addDrawerToHistory !== "function") {
+      if (typeof addDrawerToHistory !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof isDrawerInHistory !== "function") {
+      if (typeof isDrawerInHistory !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       const history2 = history.history;
@@ -63,10 +64,10 @@ export default function DrawerRouter(defaultStatus) {
       }
       let tmp7 = tmp16;
     } else {
-      if (typeof removeDrawerFromHistory !== "function") {
+      if (typeof removeDrawerFromHistory !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
-      if (typeof isDrawerInHistory !== "function") {
+      if (typeof isDrawerInHistory !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       history = history.history;
@@ -107,7 +108,7 @@ export default function DrawerRouter(defaultStatus) {
       obj[1] = tmp2;
       obj[2] = tmp3;
       const rehydratedState = _undefined.getRehydratedState(stale, obj);
-      if (typeof isDrawerInHistory !== "function") {
+      if (typeof isDrawerInHistory !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       let history = stale.history;
@@ -117,10 +118,10 @@ export default function DrawerRouter(defaultStatus) {
       }
       let tmp7 = rehydratedState;
       if (Boolean(someResult)) {
-        if (typeof removeDrawerFromHistory !== "function") {
+        if (typeof removeDrawerFromHistory !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp31 !== "function") {
+        if (typeof tmp31 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const history2 = rehydratedState.history;
@@ -136,10 +137,10 @@ export default function DrawerRouter(defaultStatus) {
           obj.history = history.filter((type) => "drawer" !== type.type);
           tmp10 = obj;
         }
-        if (typeof addDrawerToHistory !== "function") {
+        if (typeof addDrawerToHistory !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp31 !== "function") {
+        if (typeof tmp31 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const history3 = tmp10.history;
@@ -182,10 +183,10 @@ export default function DrawerRouter(defaultStatus) {
     if ("OPEN_DRAWER" === type) {
       let str2 = "open";
       if ("open" === str) {
-        if (typeof removeDrawerFromHistory !== "function") {
+        if (typeof removeDrawerFromHistory !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof isDrawerInHistory !== "function") {
+        if (typeof isDrawerInHistory !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const history7 = history.history;
@@ -203,10 +204,10 @@ export default function DrawerRouter(defaultStatus) {
         }
         let tmp46 = tmp57;
       } else {
-        if (typeof addDrawerToHistory !== "function") {
+        if (typeof addDrawerToHistory !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof isDrawerInHistory !== "function") {
+        if (typeof isDrawerInHistory !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const history6 = history.history;
@@ -234,7 +235,7 @@ export default function DrawerRouter(defaultStatus) {
     } else if ("CLOSE_DRAWER" === type) {
       return closeDrawer(history);
     } else if ("TOGGLE_DRAWER" === type) {
-      if (typeof isDrawerInHistory !== "function") {
+      if (typeof isDrawerInHistory !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       const history3 = history.history;
@@ -243,10 +244,10 @@ export default function DrawerRouter(defaultStatus) {
         someResult2 = history3.some((type) => "drawer" === type.type);
       }
       if (Boolean(someResult2)) {
-        if (typeof removeDrawerFromHistory !== "function") {
+        if (typeof removeDrawerFromHistory !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp19 !== "function") {
+        if (typeof tmp19 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const history5 = history.history;
@@ -264,10 +265,10 @@ export default function DrawerRouter(defaultStatus) {
         }
         let tmp25 = tmp34;
       } else {
-        if (typeof addDrawerToHistory !== "function") {
+        if (typeof addDrawerToHistory !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
-        if (typeof tmp19 !== "function") {
+        if (typeof tmp19 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const history4 = history.history;
@@ -297,7 +298,7 @@ export default function DrawerRouter(defaultStatus) {
       if ("JUMP_TO" !== type) {
         if ("NAVIGATE" !== type) {
           if ("GO_BACK" === type) {
-            if (typeof isDrawerInHistory !== "function") {
+            if (typeof isDrawerInHistory !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             history = history.history;
@@ -306,10 +307,10 @@ export default function DrawerRouter(defaultStatus) {
               someResult5 = history.some((type) => "drawer" === type.type);
             }
             if (Boolean(someResult5)) {
-              if (typeof removeDrawerFromHistory !== "function") {
+              if (typeof removeDrawerFromHistory !== "fileFinishedImporting") {
                 HermesBuiltin.throwTypeError();
               }
-              if (typeof isDrawerInHistory !== "function") {
+              if (typeof isDrawerInHistory !== "fileFinishedImporting") {
                 HermesBuiltin.throwTypeError();
               }
               let history2 = history.history;

@@ -1,3 +1,4 @@
+// _runtime/01904_decodeImage.js
 let c0;
 let c1;
 let c2;

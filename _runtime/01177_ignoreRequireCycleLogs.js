@@ -1,3 +1,4 @@
+// _runtime/01177_ignoreRequireCycleLogs.js
 import { LogBox } from "get ActivityIndicator";
 
 

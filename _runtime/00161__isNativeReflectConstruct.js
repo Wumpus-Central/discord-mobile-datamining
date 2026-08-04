@@ -1,3 +1,4 @@
+// _runtime/00161__isNativeReflectConstruct.js
 
 export default function _isNativeReflectConstruct() {
   try {

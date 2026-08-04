@@ -1,3 +1,4 @@
+// _runtime/00174_polyfillObjectProperty.js
 let hasPromiseResult;
 if (global != null) {
   const _HermesInternal = global.HermesInternal;

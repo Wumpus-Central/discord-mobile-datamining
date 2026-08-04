@@ -1,3 +1,4 @@
+// _runtime/01197__isNativeReflectConstruct.js
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_inherits";

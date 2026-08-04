@@ -1,3 +1,4 @@
+// _runtime/00881__getTraceInfoFromScope.js
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

@@ -1,3 +1,4 @@
+// _runtime/metro/01842__.js
 import "noop";
 import { Animated } from "get ActivityIndicator";
 import { jsx } from "jsxProd";

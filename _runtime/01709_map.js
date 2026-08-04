@@ -1,3 +1,4 @@
+// _runtime/01709_map.js
 const map = new Map();
 arg5.ComponentRegistry = {
   register(arg0, arg1) {

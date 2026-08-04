@@ -1,3 +1,4 @@
+// _runtime/00726_get.js
 
 export default function get(arg0, arg1, arg2) {
   let tmp;

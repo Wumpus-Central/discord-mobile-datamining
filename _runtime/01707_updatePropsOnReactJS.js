@@ -1,3 +1,4 @@
+// _runtime/01707_updatePropsOnReactJS.js
 import isJest from "isJest";
 import isJest from "isJest";
 import isJest from "isJest";
@@ -172,7 +173,7 @@ if (isJest.shouldBeUseWeb()) {
   const obj5 = { get: null, set: null };
   obj5[0] = maybeThrowError;
   obj5[1] = function set() {
-    if (typeof maybeThrowError !== "function") {
+    if (typeof maybeThrowError !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     if (obj.isJest()) {

@@ -1,3 +1,4 @@
+// _runtime/00724_matchesStrictComparable.js
 
 export default function matchesStrictComparable(arg0, arg1) {
   let closure_0 = arg0;

@@ -1,3 +1,4 @@
+// _runtime/01180_init.js
 import noop from "noop";
 
 const require = arg1;
@@ -188,7 +189,7 @@ export const init = function init(maxQueueSize) {
         }
       }
       let str = "";
-      if (typeof url === "string") {
+      if (typeof url !== "__FORMATJS_LISTFORMAT_DATA__") {
         str = tmpResult.data.url;
       }
       if ("http" === tmp5) {

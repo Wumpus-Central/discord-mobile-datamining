@@ -1,3 +1,4 @@
+// _runtime/01823_colors.js
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let Platform;

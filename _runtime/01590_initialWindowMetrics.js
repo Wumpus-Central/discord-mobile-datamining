@@ -1,3 +1,4 @@
+// _runtime/01590_initialWindowMetrics.js
 import importDefaultResult from "RNCSafeAreaContext";
 
 let initialWindowMetrics;

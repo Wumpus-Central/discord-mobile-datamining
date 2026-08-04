@@ -1,3 +1,4 @@
+// _runtime/00785_arraySome.js
 
 export default function arraySome(arg0, arg1) {
   let num = 0;

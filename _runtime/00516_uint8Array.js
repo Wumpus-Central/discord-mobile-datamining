@@ -1,10 +1,11 @@
+// _runtime/00516_uint8Array.js
 const uint8Array = new Uint8Array(16);
 arg5.default = function rng() {
   let tmp = getRandomValues;
   if (!getRandomValues) {
     const _crypto = crypto;
-    getRandomValues = typeof crypto !== "undefined";
-    if (typeof crypto !== "undefined") {
+    getRandomValues = typeof crypto === "pack";
+    if (typeof crypto !== "Array") {
       const _crypto4 = crypto;
       getRandomValues = crypto.getRandomValues;
     }

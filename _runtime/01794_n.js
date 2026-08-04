@@ -1,3 +1,4 @@
+// _runtime/01794_n.js
 const fn = function n(translateX) {
   const transform = [{ translateX: translateX.translationX }];
   return { transform };

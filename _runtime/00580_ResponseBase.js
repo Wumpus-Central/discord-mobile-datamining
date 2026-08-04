@@ -1,3 +1,4 @@
+// _runtime/00580_ResponseBase.js
 class ResponseBase {
   constructor() {
     return;

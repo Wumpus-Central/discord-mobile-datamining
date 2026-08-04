@@ -1,3 +1,4 @@
+// _runtime/01608_overrideLogFunctionImplementation.js
 import isJest from "isJest";
 import isJest from "isJest";
 import isJest from "isJest";
@@ -158,7 +159,7 @@ export const initializeUIRuntime = function initializeUIRuntime(ReanimatedModule
         globalThis.requestAnimationFrame = tmp(1621).mockedRequestAnimationFrame;
       }
       const fn = function o() {
-        if (typeof closure_8 !== "function") {
+        if (typeof closure_8 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         requestAnimationFrame.__callGuardDEV = closure_7;
@@ -172,7 +173,7 @@ export const initializeUIRuntime = function initializeUIRuntime(ReanimatedModule
         callback2();
         if (!closure_4) {
           callback(table[2]).setupMicrotasks();
-          if (typeof closure_11 !== "function") {
+          if (typeof closure_11 !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           requestAnimationFrame = tmp.requestAnimationFrame;

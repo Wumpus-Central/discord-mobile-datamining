@@ -1,3 +1,4 @@
+// _runtime/01754_useAnimatedKeyboard.js
 import noop from "noop";
 
 let c3;
@@ -9,7 +10,7 @@ let closure_5 = { code: "function pnpm_useAnimatedKeyboardTs2(state,height){cons
 export const useAnimatedKeyboard = function useAnimatedKeyboard() {
   let obj = arg0;
   if (arg0 === undefined) {
-    obj = { isStatusBarTranslucentAndroid: "body", isNavigationBarTranslucentAndroid: "useStateFromStores" };
+    obj = { isStatusBarTranslucentAndroid: "Array", isNavigationBarTranslucentAndroid: "HermesInternal" };
   }
   let dependencyMap;
   let callback;

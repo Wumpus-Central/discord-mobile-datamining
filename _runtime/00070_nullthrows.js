@@ -1,3 +1,4 @@
+// _runtime/00070_nullthrows.js
 function nullthrows(arg0, arg1) {
   if (null != arg0) {
     return arg0;

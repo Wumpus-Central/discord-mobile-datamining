@@ -1,3 +1,4 @@
+// _runtime/00795_getOwnPropertySymbols.js
 if (getOwnPropertySymbols) {
   let fn = (arg0) => {
     let _require = arg0;

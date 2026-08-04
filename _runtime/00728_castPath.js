@@ -1,3 +1,4 @@
+// _runtime/00728_castPath.js
 
 export default function castPath(arg0, arg1) {
   if (require(599)(arg0)) {

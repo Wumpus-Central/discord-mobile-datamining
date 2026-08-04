@@ -1,4 +1,5 @@
+// _runtime/03266_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jb252ZXJzYXRpb25z", scales: [1], hash: "125564cd1776f586476df5218584653c", name: "hi.messages.125564cd1776f586476df5218584653c.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/connected_devices", scales: [1], hash: "fac01a310aa1e8bc3d1aaac6ab09e1c9", name: "DeviceDetected.compiled.messages", type: "jsona" });

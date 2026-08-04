@@ -1,0 +1,3 @@
+// _runtime/12935_SemVer.js
+
+export default (arg0, arg1) => new require(12925) /* SemVer */(arg0, arg1).major;

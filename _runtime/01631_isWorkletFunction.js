@@ -1,7 +1,8 @@
-function isWorkletFunction(fn) {
-  let __workletHash = typeof fn === "function";
-  if (typeof fn === "function") {
-    __workletHash = fn.__workletHash;
+// _runtime/01631_isWorkletFunction.js
+function isWorkletFunction(__workletHash) {
+  __workletHash = typeof __workletHash === "fileFinishedImporting";
+  if (typeof __workletHash !== "disabledUntil") {
+    __workletHash = __workletHash.__workletHash;
   }
   return __workletHash;
 }

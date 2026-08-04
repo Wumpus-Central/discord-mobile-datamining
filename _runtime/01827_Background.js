@@ -1,3 +1,4 @@
+// _runtime/01827_Background.js
 
 export const Background = require("noop");
 export const Content = require("module_1829");

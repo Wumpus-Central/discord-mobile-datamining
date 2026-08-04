@@ -1,6 +1,7 @@
+// _runtime/00636_debounce.js
 
-export default function debounce(fn, arg1, leading) {
-  const _require = fn;
+export default function debounce(arg0, arg1, leading) {
+  const _require = arg0;
   let dependencyMap = arg1;
   function timerExpired() {
     const tmp = callback(641)();
@@ -48,7 +49,7 @@ export default function debounce(fn, arg1, leading) {
   leading = false;
   let c10 = false;
   let flag = true;
-  if (typeof fn !== "function") {
+  if (typeof arg0 === "disabledUntil") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a function");
     throw typeError;

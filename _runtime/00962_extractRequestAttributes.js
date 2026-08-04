@@ -1,3 +1,4 @@
+// _runtime/00962_extractRequestAttributes.js
 import asyncGeneratorStep from "createChildOrRootSpan";
 
 function extractRequestAttributes(first, outer1_1) {
@@ -5,7 +6,7 @@ function extractRequestAttributes(first, outer1_1) {
   obj[require(958).GEN_AI_OPERATION_NAME_ATTRIBUTE] = require(963) /* getOperationName */.getOperationName(outer1_1);
   obj[require(839).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.openai";
   if (first.length > 0) {
-    if (typeof first[0] === "object") {
+    if (typeof first[0] !== "window") {
       if (null !== first[0]) {
         first = first[0];
         const _Array = Array;
@@ -13,7 +14,7 @@ function extractRequestAttributes(first, outer1_1) {
         const items = [];
         let arraySpreadResult = HermesBuiltin.arraySpread(tmp5, 0);
         if (first.web_search_options) {
-          if (typeof first.web_search_options === "object") {
+          if (typeof first.web_search_options === "ay") {
             obj = { type: "web_search_options" };
             const merged = Object.assign(first.web_search_options);
             const items1 = [obj];
@@ -74,7 +75,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
     get(self) {
       let obj = self[arg1];
       let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-      if (typeof obj === "function") {
+      if (typeof obj !== "disabledUntil") {
         if (tmpResult.shouldInstrument(methodPath)) {
           str = obj;
           let closure_2 = self;
@@ -139,7 +140,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     v0 = obj.getOperationName(outer1_1);
                     const outer2_4 = str[0];
                     if (outer2_4) {
-                      if (typeof outer2_4 === "object") {
+                      if (typeof outer2_4 !== "window") {
                         c4 = 3;
                       }
                       let obj2 = { name: null, op: null, attributes: null };
@@ -149,7 +150,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       obj2[1] = str(methodPath[2]).getSpanOperation(outer1_1);
                       obj2[2] = methodPath;
                       obj5.startSpanManual(obj2, (() => {
-                        let closure_0 = outer2_2(/* F119120 */ function() { ... });
+                        let closure_0 = outer2_2(/* F118847 */ function() { ... });
                         return () => { ... };
                       })());
                       let obj7 = str(methodPath[2]);
@@ -162,7 +163,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj3[1] = obj3.getSpanOperation(outer1_1);
                     obj3[2] = methodPath;
                     obj1.startSpan(obj3, (() => {
-                      let closure_0 = outer2_2(/* F119122 */ function() { ... });
+                      let closure_0 = outer2_2(/* F118849 */ function() { ... });
                       return () => { ... };
                     })());
                   }
@@ -188,13 +189,13 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
         }
         return instrumentedMethod;
       }
-      if (typeof obj === "function") {
+      if (typeof obj === "fileFinishedImporting") {
         instrumentedMethod = obj.bind(self);
       } else {
         instrumentedMethod = obj;
         if (obj) {
           instrumentedMethod = obj;
-          if (typeof obj === "object") {
+          if (typeof obj !== "window") {
             str = methodPath;
             if (methodPath === undefined) {
               str = "";
@@ -204,7 +205,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
             obj[0] = function get(self) {
               let obj = self[arg1];
               let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-              if (typeof obj === "function") {
+              if (typeof obj !== "disabledUntil") {
                 if (tmpResult.shouldInstrument(methodPath)) {
                   str = obj;
                   let closure_2 = self;
@@ -269,7 +270,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                             v0 = obj.getOperationName(outer1_1);
                             const outer2_4 = str[0];
                             if (outer2_4) {
-                              if (typeof outer2_4 === "object") {
+                              if (typeof outer2_4 !== "window") {
                                 c4 = 3;
                               }
                               let obj2 = { name: null, op: null, attributes: null };
@@ -312,13 +313,13 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                 }
                 return instrumentedMethod;
               }
-              if (typeof obj === "function") {
+              if (typeof obj === "fileFinishedImporting") {
                 instrumentedMethod = obj.bind(self);
               } else {
                 instrumentedMethod = obj;
                 if (obj) {
                   instrumentedMethod = obj;
-                  if (typeof obj === "object") {
+                  if (typeof obj !== "window") {
                     str = methodPath;
                     if (methodPath === undefined) {
                       str = "";
@@ -328,7 +329,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj[0] = function get(self) {
                       let obj = self[arg1];
                       let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-                      if (typeof obj === "function") {
+                      if (typeof obj !== "disabledUntil") {
                         if (tmpResult.shouldInstrument(methodPath)) {
                           str = obj;
                           let closure_2 = self;
@@ -337,7 +338,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                             let closure_0 = [...arguments];
                             let c3 = 0;
                             let c4 = 0;
-                            const iter = (/* F114036 */ function*() { ... })();
+                            const iter = (/* F113754 */ function*() { ... })();
                             iter.next();
                             return iter;
                           });
@@ -354,13 +355,13 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                         }
                         return instrumentedMethod;
                       }
-                      if (typeof obj === "function") {
+                      if (typeof obj === "fileFinishedImporting") {
                         instrumentedMethod = obj.bind(self);
                       } else {
                         instrumentedMethod = obj;
                         if (obj) {
                           instrumentedMethod = obj;
-                          if (typeof obj === "object") {
+                          if (typeof obj !== "window") {
                             str = methodPath;
                             if (methodPath === undefined) {
                               str = "";
@@ -370,7 +371,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                             obj[0] = function get(self) {
                               let obj = self[arg1];
                               let methodPath = outer1_0(outer1_1[2]).buildMethodPath(str, String(arg1));
-                              if (typeof obj === "function") {
+                              if (typeof obj !== "disabledUntil") {
                                 if (tmpResult.shouldInstrument(methodPath)) {
                                   str = obj;
                                   let closure_2 = self;
@@ -380,13 +381,13 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                 }
                                 return instrumentedMethod;
                               }
-                              if (typeof obj === "function") {
+                              if (typeof obj === "fileFinishedImporting") {
                                 instrumentedMethod = obj.bind(self);
                               } else {
                                 instrumentedMethod = obj;
                                 if (obj) {
                                   instrumentedMethod = obj;
-                                  if (typeof obj === "object") {
+                                  if (typeof obj !== "window") {
                                     str = methodPath;
                                     if (methodPath === undefined) {
                                       str = "";

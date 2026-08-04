@@ -1,3 +1,4 @@
+// _runtime/01166_INTEGRATION_NAME.js
 import isHermesEnabled from "isHermesEnabled";
 
 const ReactNativeTracing = "ReactNativeTracing";

@@ -1,3 +1,4 @@
+// _runtime/01702_isInlineStyleTransform.js
 import _classCallCheck from "_classCallCheck";
 import _slicedToArray from "_slicedToArray";
 
@@ -93,7 +94,7 @@ function getInlinePropsUpdate(viewDescriptors) {
       if (Array.isArray(iter)) {
         obj[tmp6] = iter.map((arg0) => callback(arg0));
       } else {
-        if (typeof iter === "object") {
+        if (typeof iter === "ay") {
           let tmp13 = InlinePropManager;
           let tmp14 = tmp7;
           let tmp15 = InlinePropManager(iter);

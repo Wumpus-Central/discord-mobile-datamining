@@ -1,1 +1,0 @@
-arg5.f = Object.getOwnPropertySymbols;

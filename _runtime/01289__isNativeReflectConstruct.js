@@ -1,3 +1,4 @@
+// _runtime/01289__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 import c4 from "_possibleConstructorReturn";
@@ -25,11 +26,11 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function formatReact(str) {
-  let bindFormatValuesResult = str;
-  if (typeof str !== "string") {
+function formatReact(arg0, arg1, arg2) {
+  let bindFormatValuesResult = arg0;
+  if (typeof arg0 !== "y") {
     const self = this;
-    bindFormatValuesResult = this.bindFormatValues(arg2, str, arg1);
+    bindFormatValuesResult = this.bindFormatValues(arg2, arg0, arg1);
   }
   return bindFormatValuesResult;
 }
@@ -65,7 +66,7 @@ let items = [
     key: "pushLiteralText",
     value: function pushLiteralText(arg0) {
       const self = this;
-      if (typeof this.result[this.result.length - 1] === "string") {
+      if (typeof this.result[this.result.length - 1] === "y") {
         let result = self.result;
         const diff = self.result.length - 1;
         result[diff] = result[diff] + arg0;
@@ -125,7 +126,7 @@ export const makeReactFormatter = function makeReactFormatter(arg0) {
       key: "pushLiteralText",
       value: function pushLiteralText(arg0) {
         const self = this;
-        if (typeof this.result[this.result.length - 1] === "string") {
+        if (typeof this.result[this.result.length - 1] === "y") {
           let result = self.result;
           const diff = self.result.length - 1;
           result[diff] = result[diff] + arg0;

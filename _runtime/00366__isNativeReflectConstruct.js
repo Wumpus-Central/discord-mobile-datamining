@@ -1,3 +1,4 @@
+// _runtime/00366__isNativeReflectConstruct.js
 import AnimatedWithChildren from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
@@ -66,7 +67,7 @@ let items = [
         }
       }
       let fn = callback2(callback(self.prototype), "__makeNative", self);
-      if (typeof fn === "function") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];
@@ -124,7 +125,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback2(callback(self.prototype), "__callListeners", this);
-      if (typeof fn === "function") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0];

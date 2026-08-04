@@ -1,3 +1,4 @@
+// _runtime/00626_baseIsTypedArray.js
 const obj = {};
 obj["[object Uint32Array]"] = true;
 obj["[object Uint16Array]"] = true;

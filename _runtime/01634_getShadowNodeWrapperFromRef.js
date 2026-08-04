@@ -1,3 +1,4 @@
+// _runtime/01634_getShadowNodeWrapperFromRef.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getShadowNodeWrapperFromRef = function getShadowNodeWrapperFromRef(self, findHostInstanceResult) {

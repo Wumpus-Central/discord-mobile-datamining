@@ -1,3 +1,4 @@
+// _runtime/00775_Stack.js
 class Stack {
   constructor(arg0) {
     obj = {};

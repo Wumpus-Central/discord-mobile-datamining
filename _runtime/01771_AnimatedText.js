@@ -1,3 +1,4 @@
+// _runtime/01771_AnimatedText.js
 import createAnimatedComponent from "createAnimatedComponent";
 
 

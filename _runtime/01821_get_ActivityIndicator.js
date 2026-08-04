@@ -1,3 +1,4 @@
+// _runtime/01821_get_ActivityIndicator.js
 import { StyleSheet } from "get ActivityIndicator";
 
 

@@ -1,3 +1,4 @@
+// _runtime/00824_consoleSandbox.js
 const require = arg1;
 let dependencyMap = arg6;
 function consoleSandbox(arg0) {

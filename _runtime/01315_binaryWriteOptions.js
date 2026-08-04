@@ -1,3 +1,4 @@
+// _runtime/01315_binaryWriteOptions.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

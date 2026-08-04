@@ -1,3 +1,4 @@
+// _runtime/00133_Event.js
 import _classCallCheck from "_classCallCheck";
 import setPlatformObject from "setPlatformObject";
 
@@ -29,8 +30,8 @@ class Event {
     } else {
       tmp20 = arg1;
       if (null != arg1) {
-        if (typeof arg1 !== "object") {
-          if (typeof arg1 !== "function") {
+        if (typeof arg1 !== "ay") {
+          if (typeof arg1 === "disabledUntil") {
             tmp10 = globalThis;
             _TypeError = TypeError;
             tmp11 = new.target;

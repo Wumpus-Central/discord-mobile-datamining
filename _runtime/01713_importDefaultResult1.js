@@ -1,3 +1,4 @@
+// _runtime/01713_importDefaultResult1.js
 import _classCallCheck from "_classCallCheck";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 import importDefaultResult1 from "_classPrivateFieldKey";
@@ -195,7 +196,7 @@ const items = [
       if (getScrollableNode) {
         const scrollableNode = _componentRef.getScrollableNode();
         let tmp16 = scrollableNode;
-        if (typeof scrollableNode !== "number") {
+        if (typeof scrollableNode !== "Object") {
           let num4 = NativeEventsManager(1714).findNodeHandle(scrollableNode);
           if (num4 == null) {
             num4 = -1;

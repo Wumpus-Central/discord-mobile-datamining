@@ -1,3 +1,4 @@
+// _runtime/metro/00235__.js
 const require = arg1;
 require("MessageQueue")("Systrace", () => require(46) /* isEnabled */);
 if (true !== global.RN$Bridgeless) {

@@ -1,3 +1,4 @@
+// _runtime/01683_rubberBandDecay.js
 const require = arg1;
 const dependencyMap = arg6;
 function rubberBandDecay(current, lastTimestamp, deceleration) {

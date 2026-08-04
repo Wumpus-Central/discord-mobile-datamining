@@ -1,3 +1,4 @@
+// _runtime/00199__isNativeReflectConstruct.js
 import _get from "_get";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
@@ -29,7 +30,7 @@ if (require("BlobManager").default.isAvailable) {
   require("BlobManager").default.addNetworkingHandler();
   let _default = require("BlobManager").default;
 }
-let closure_8 = { arraybuffer: typeof global.ArrayBuffer === "function", blob: typeof global.Blob === "function", document: false, json: true, text: true, "": true };
+let closure_8 = { arraybuffer: typeof global.ArrayBuffer === "fileFinishedImporting", blob: typeof global.Blob === "fileFinishedImporting", document: false, json: true, text: true, "": true };
 class XMLHttpRequestEventTarget {
   constructor() {
     self = this;
@@ -57,8 +58,8 @@ let obj = {
   get() {
     return XMLHttpRequest(205).getEventHandlerAttribute(this, "load");
   },
-  set(fn) {
-    const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "load", fn);
+  set(arg0) {
+    const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "load", arg0);
   }
 };
 let items = [
@@ -68,8 +69,8 @@ let items = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "loadstart");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadstart", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadstart", arg0);
     }
   },
   {
@@ -77,8 +78,8 @@ let items = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "progress");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "progress", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "progress", arg0);
     }
   },
   {
@@ -86,8 +87,8 @@ let items = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "timeout");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "timeout", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "timeout", arg0);
     }
   },
   {
@@ -95,8 +96,8 @@ let items = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "error");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "error", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "error", arg0);
     }
   },
   {
@@ -104,8 +105,8 @@ let items = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "abort");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "abort", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "abort", arg0);
     }
   },
   {
@@ -113,8 +114,8 @@ let items = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "loadend");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadend", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadend", arg0);
     }
   }
 ];
@@ -249,7 +250,7 @@ const items1 = [
               self._cachedResponse = XMLHttpRequest(206).toByteArray(self._response).buffer;
               const obj = XMLHttpRequest(206);
             } else if ("blob" === responseType) {
-              if (typeof self._response === "object") {
+              if (typeof self._response !== "window") {
                 if (self._response) {
                   self._cachedResponse = XMLHttpRequest(200).default.createFromOptions(self._response);
                   const _default2 = XMLHttpRequest(200).default;
@@ -747,7 +748,7 @@ const items1 = [
         self._incrementalEvents = true;
       }
       let fn = callback(callback3(self.prototype), "addEventListener", self);
-      if (typeof fn === "function") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [arg0, arg1];
@@ -759,8 +760,8 @@ const items1 = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "abort");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "abort", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "abort", arg0);
     }
   },
   {
@@ -768,8 +769,8 @@ const items1 = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "error");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "error", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "error", arg0);
     }
   },
   {
@@ -777,8 +778,8 @@ const items1 = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "load");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "load", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "load", arg0);
     }
   },
   {
@@ -786,8 +787,8 @@ const items1 = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "loadstart");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadstart", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadstart", arg0);
     }
   },
   {
@@ -795,8 +796,8 @@ const items1 = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "progress");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "progress", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "progress", arg0);
     }
   },
   {
@@ -804,8 +805,8 @@ const items1 = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "timeout");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "timeout", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "timeout", arg0);
     }
   },
   {
@@ -813,8 +814,8 @@ const items1 = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "loadend");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadend", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "loadend", arg0);
     }
   },
   {
@@ -822,8 +823,8 @@ const items1 = [
     get() {
       return XMLHttpRequest(205).getEventHandlerAttribute(this, "readystatechange");
     },
-    set(fn) {
-      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "readystatechange", fn);
+    set(arg0) {
+      const result = XMLHttpRequest(205).setEventHandlerAttribute(this, "readystatechange", arg0);
     }
   }
 ];

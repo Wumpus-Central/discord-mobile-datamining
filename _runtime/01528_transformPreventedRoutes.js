@@ -1,3 +1,4 @@
+// _runtime/01528_transformPreventedRoutes.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { jsx } from "jsxProd";
@@ -101,7 +102,7 @@ export default function PreventRemoveProvider(children) {
   const items2 = [tmp9, first1];
   let value = obj.useMemo(() => {
     const obj = { setPreventRemove: c6, preventedRoutes: null };
-    if (typeof c6 !== "function") {
+    if (typeof c6 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const items = [...first1.values()];

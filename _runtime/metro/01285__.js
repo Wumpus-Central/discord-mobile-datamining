@@ -1,3 +1,4 @@
+// _runtime/metro/01285__.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.astFormatter = undefined;

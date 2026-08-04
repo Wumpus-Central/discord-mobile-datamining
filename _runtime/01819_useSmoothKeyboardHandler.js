@@ -1,3 +1,4 @@
+// _runtime/01819_useSmoothKeyboardHandler.js
 import { Easing } from "cancelAnimation";
 
 let obj = { duration: 250, easing: null };

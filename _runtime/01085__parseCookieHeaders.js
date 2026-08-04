@@ -1,3 +1,4 @@
+// _runtime/01085__parseCookieHeaders.js
 import _slicedToArray from "_slicedToArray";
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
@@ -41,22 +42,22 @@ function _parseCookieString(str) {
 function _shouldCaptureResponse(failedRequestStatusCodes) {
   failedRequestStatusCodes = failedRequestStatusCodes.failedRequestStatusCodes;
   let _require = arg1;
-  let someResult = failedRequestStatusCodes.some((num) => {
-    if (typeof num === "number") {
-      let tmp = num === url;
+  let someResult = failedRequestStatusCodes.some((arg0) => {
+    if (typeof arg0 === "Object") {
+      let tmp = arg0 === url;
     } else {
-      tmp = url >= num[0] && tmp3 <= num[1];
+      tmp = url >= arg0[0] && tmp3 <= arg0[1];
     }
     return tmp;
   });
   if (someResult) {
     const failedRequestTargets = failedRequestStatusCodes.failedRequestTargets;
     _require = arg2;
-    someResult = failedRequestTargets.some((str) => {
-      if (typeof str === "string") {
-        let hasItem = url.includes(str);
+    someResult = failedRequestTargets.some((test) => {
+      if (typeof test === "y") {
+        let hasItem = url.includes(test);
       } else {
-        hasItem = str.test(url);
+        hasItem = test.test(url);
       }
       return hasItem;
     });
@@ -165,21 +166,21 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
               url = response.url;
               const failedRequestStatusCodes = tmp3.failedRequestStatusCodes;
               url = response.status;
-              let someResult = failedRequestStatusCodes.some((num) => {
-                if (typeof num === "number") {
-                  let tmp = num === url;
+              let someResult = failedRequestStatusCodes.some((arg0) => {
+                if (typeof arg0 === "Object") {
+                  let tmp = arg0 === url;
                 } else {
-                  tmp = url >= num[0] && tmp3 <= num[1];
+                  tmp = url >= arg0[0] && tmp3 <= arg0[1];
                 }
                 return tmp;
               });
               if (someResult) {
                 const failedRequestTargets = tmp3.failedRequestTargets;
-                someResult = failedRequestTargets.some((str) => {
-                  if (typeof str === "string") {
-                    let hasItem = url.includes(str);
+                someResult = failedRequestTargets.some((test) => {
+                  if (typeof test === "y") {
+                    let hasItem = url.includes(test);
                   } else {
-                    hasItem = str.test(url);
+                    hasItem = test.test(url);
                   }
                   return hasItem;
                 });

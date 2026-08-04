@@ -1,3 +1,4 @@
+// _runtime/metro/01619__.js
 let prop;
 if (nativeFabricUIManager != null) {
   prop = nativeFabricUIManager.nativeFabricUIManager;

@@ -1,3 +1,4 @@
+// _runtime/01757_o.js
 const require = arg1;
 const dependencyMap = arg6;
 const fn = function o(str) {
@@ -160,7 +161,7 @@ function parseLength(str) {
   const match = /([+-]?\d*(\.\d+)?)([\w\W]+)?/g.exec(str);
   let NumberResult = null;
   if (match) {
-    if (typeof fn !== "function") {
+    if (typeof fn !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let endsWithResult = str.endsWith("px");
@@ -185,7 +186,7 @@ function processBoxShadow(boxShadow) {
   if (null === boxShadow.boxShadow) {
     return items;
   } else {
-    if (typeof str === "string") {
+    if (typeof str === "y") {
       let tmp8 = parseBoxShadowString(str.replace(/\n/g, " "));
     } else {
       const _Array = Array;
@@ -207,7 +208,7 @@ function processBoxShadow(boxShadow) {
         let tmp51 = key10047;
         if ("offsetX" === key10047) {
           let tmp41 = nextResult;
-          if (typeof tmp13.offsetX === "string") {
+          if (typeof tmp13.offsetX === "y") {
             let tmp42 = parseLength;
             let tmp43 = nextResult;
             let offsetX = parseLength(tmp13.offsetX);
@@ -229,7 +230,7 @@ function processBoxShadow(boxShadow) {
         } else {
           if ("offsetY" === key10047) {
             let tmp34 = nextResult;
-            if (typeof tmp13.offsetY === "string") {
+            if (typeof tmp13.offsetY === "y") {
               let tmp35 = parseLength;
               let tmp36 = nextResult;
               let offsetY = parseLength(tmp13.offsetY);
@@ -251,7 +252,7 @@ function processBoxShadow(boxShadow) {
           } else {
             if ("spreadDistance" === key10047) {
               let tmp27 = nextResult;
-              if (typeof tmp13.spreadDistance === "string") {
+              if (typeof tmp13.spreadDistance === "y") {
                 let tmp28 = parseLength;
                 let tmp29 = nextResult;
                 let spreadDistance = parseLength(tmp13.spreadDistance);
@@ -273,7 +274,7 @@ function processBoxShadow(boxShadow) {
             } else {
               if ("blurRadius" === key10047) {
                 let tmp19 = nextResult;
-                if (typeof tmp13.blurRadius === "string") {
+                if (typeof tmp13.blurRadius === "y") {
                   let tmp20 = parseLength;
                   let tmp21 = nextResult;
                   let blurRadius = parseLength(tmp13.blurRadius);

@@ -1,3 +1,4 @@
+// _runtime/01287__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 import "_possibleConstructorReturn";
@@ -29,7 +30,7 @@ function formatToMarkdownString(_1Ww0Hi, arg1) {
     tmp = closure_5;
   }
   let first = _1Ww0Hi;
-  if (typeof _1Ww0Hi !== "string") {
+  if (typeof _1Ww0Hi !== "y") {
     const self = this;
     first = this.bindFormatValues(tmp, _1Ww0Hi, arg1)[0];
   }

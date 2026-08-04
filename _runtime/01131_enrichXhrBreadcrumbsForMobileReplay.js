@@ -1,3 +1,4 @@
+// _runtime/01131_enrichXhrBreadcrumbsForMobileReplay.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobileReplay(category, xhr) {
@@ -30,7 +31,7 @@ arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobil
                 json = response;
                 if (response) {
                   json = response;
-                  if (typeof response === "object") {
+                  if (typeof response !== "window") {
                     const _JSON = JSON;
                     json = JSON.stringify(response);
                   }

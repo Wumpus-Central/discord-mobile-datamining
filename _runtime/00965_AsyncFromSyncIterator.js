@@ -1,3 +1,4 @@
+// _runtime/00965_AsyncFromSyncIterator.js
 import _awaitAsyncGenerator from "_awaitAsyncGenerator";
 import AsyncGenerator from "AsyncGenerator";
 
@@ -193,41 +194,41 @@ function processChatCompletionChunk(id, responseId) {
     continue;
   }
 }
-function processResponsesApiEvent(obj, responsesApiToolCalls, arg2, setStatus) {
-  if (obj) {
-    if (typeof obj === "object") {
+function processResponsesApiEvent(type, responsesApiToolCalls, arg2, setStatus) {
+  if (type) {
+    if (typeof type === "ay") {
       const _Error = Error;
-      if (obj instanceof Error) {
-        obj = { code: null, message: "internal_error" };
+      if (type instanceof Error) {
+        let obj = { code: null, message: "internal_error" };
         obj[0] = require(840) /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
         setStatus.setStatus(obj);
         obj = { mechanism: null };
         obj[0] = { handled: false, type: "auto.ai.openai.stream-response" };
-        require(869) /* captureCheckIn */.captureException(obj, obj);
-      } else if ("type" in obj) {
+        require(869) /* captureCheckIn */.captureException(type, obj);
+      } else if ("type" in type) {
         const RESPONSE_EVENT_TYPES = require(964) /* items */.RESPONSE_EVENT_TYPES;
-        if (RESPONSE_EVENT_TYPES.includes(obj.type)) {
+        if (RESPONSE_EVENT_TYPES.includes(type.type)) {
           let output_text = arg2;
           if (arg2) {
-            let tmp6 = "response.output_item.done" === obj.type;
+            let tmp6 = "response.output_item.done" === type.type;
             if (tmp6) {
-              tmp6 = "item" in obj;
+              tmp6 = "item" in type;
             }
             if (tmp6) {
               const prop = responsesApiToolCalls.responsesApiToolCalls;
-              prop.push(obj.item);
+              prop.push(type.item);
             }
-            if ("response.output_text.delta" === obj.type) {
-              if ("delta" in obj) {
-                if (obj.delta) {
+            if ("response.output_text.delta" === type.type) {
+              if ("delta" in type) {
+                if (type.delta) {
                   const responseTexts = responsesApiToolCalls.responseTexts;
-                  responseTexts.push(obj.delta);
+                  responseTexts.push(type.delta);
                 }
               }
             }
           }
-          if ("response" in obj) {
-            const response = obj.response;
+          if ("response" in type) {
+            const response = type.response;
             let responseId = response.id;
             if (responseId == null) {
               responseId = responsesApiToolCalls.responseId;
@@ -262,7 +263,7 @@ function processResponsesApiEvent(obj, responsesApiToolCalls, arg2, setStatus) {
           }
         } else {
           const eventTypes = responsesApiToolCalls.eventTypes;
-          eventTypes.push(obj.type);
+          eventTypes.push(type.type);
         }
       }
     }

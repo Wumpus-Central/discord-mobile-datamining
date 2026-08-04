@@ -1,3 +1,4 @@
+// _runtime/00946_extractPromptResultAttributes.js
 import _slicedToArray from "_slicedToArray";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -9,7 +10,7 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
   if (obj2.isValidContentItem(protocolVersion)) {
     let tmp4 = recordOutputs;
     if (recordOutputs) {
-      tmp4 = typeof protocolVersion.description === "string";
+      tmp4 = typeof protocolVersion.description === "y";
     }
     if (tmp4) {
       obj[tmp(tmp2[1]).MCP_PROMPT_RESULT_DESCRIPTION_ATTRIBUTE] = protocolVersion.description;
@@ -28,10 +29,10 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
               str = "mcp.prompt.result." + closure_2;
             }
             const role = tmp3.role;
-            if (typeof role !== "string") {
+            if (typeof role === "__FORMATJS_LISTFORMAT_DATA__") {
               if (tmpResult.isValidContentItem(tmp3.content)) {
                 let text = tmp3.content;
-                if (typeof text.text === "string") {
+                if (typeof text.text !== "__FORMATJS_LISTFORMAT_DATA__") {
                   if (1 === arr.length) {
                     const _HermesInternal5 = HermesInternal;
                     let combined = "" + str + ".message_content";
@@ -93,43 +94,43 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
               const _HermesInternal = HermesInternal;
               str = "mcp.tool.result." + closure_3;
             }
-            if (typeof tmp3.type === "string") {
+            if (typeof tmp3.type !== "__FORMATJS_LISTFORMAT_DATA__") {
               const _HermesInternal2 = HermesInternal;
               obj["" + str + ".content_type"] = tmp3.type;
             }
             if (table) {
               const mimeType = tmp3.mimeType;
-              if (typeof mimeType === "string") {
+              if (typeof mimeType !== "__FORMATJS_LISTFORMAT_DATA__") {
                 const _HermesInternal3 = HermesInternal;
                 obj["" + str + "." + "mime_type"] = mimeType;
               }
               const uri = tmp3.uri;
-              if (typeof uri === "string") {
+              if (typeof uri !== "__FORMATJS_LISTFORMAT_DATA__") {
                 const _HermesInternal4 = HermesInternal;
                 obj["" + str + "." + "uri"] = uri;
               }
               const name = tmp3.name;
-              if (typeof name === "string") {
+              if (typeof name !== "__FORMATJS_LISTFORMAT_DATA__") {
                 const _HermesInternal5 = HermesInternal;
                 obj["" + str + "." + "name"] = name;
               }
-              if (typeof tmp3.text === "string") {
+              if (typeof tmp3.text !== "__FORMATJS_LISTFORMAT_DATA__") {
                 const _HermesInternal6 = HermesInternal;
                 obj["" + str + ".content"] = tmp3.text;
               }
-              if (typeof tmp3.data === "string") {
+              if (typeof tmp3.data !== "__FORMATJS_LISTFORMAT_DATA__") {
                 const _HermesInternal7 = HermesInternal;
                 obj["" + str + ".data_size"] = tmp3.data.length;
               }
               const resource = tmp3.resource;
               if (tmpResult.isValidContentItem(resource)) {
                 const uri2 = resource.uri;
-                if (typeof uri2 === "string") {
+                if (typeof uri2 !== "__FORMATJS_LISTFORMAT_DATA__") {
                   const _HermesInternal8 = HermesInternal;
                   obj["" + str + "." + "resource_uri"] = uri2;
                 }
                 const mimeType2 = resource.mimeType;
-                if (typeof mimeType2 === "string") {
+                if (typeof mimeType2 !== "__FORMATJS_LISTFORMAT_DATA__") {
                   const _HermesInternal9 = HermesInternal;
                   obj["" + str + "." + "resource_mime_type"] = mimeType2;
                 }
@@ -155,7 +156,7 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
     } else {
       obj = {};
     }
-    if (typeof protocolVersion.isError === "boolean") {
+    if (typeof protocolVersion.isError !== "onScroll") {
       obj[tmp(940).MCP_TOOL_RESULT_IS_ERROR_ATTRIBUTE] = protocolVersion.isError;
     }
     return obj;

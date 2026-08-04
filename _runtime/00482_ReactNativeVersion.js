@@ -1,3 +1,4 @@
+// _runtime/00482_ReactNativeVersion.js
 import ReactNativeVersion from "_classCallCheck";
 
 class ReactNativeVersion {

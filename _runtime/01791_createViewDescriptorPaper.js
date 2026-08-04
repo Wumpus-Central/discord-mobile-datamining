@@ -1,3 +1,4 @@
+// _runtime/01791_createViewDescriptorPaper.js
 import isJest from "isJest";
 
 function createViewDescriptorPaper(topScreenId) {
@@ -38,7 +39,7 @@ applyStyleForBelowTopScreen.__closure = obj;
 applyStyleForBelowTopScreen.__workletHash = 1349027100765;
 applyStyleForBelowTopScreen.__initData = { code: "function applyStyleForBelowTopScreen_Pnpm_styleUpdaterTs4(screenTransitionConfig,event){const{createViewDescriptor,updateProps}=this.__closure;const{screenDimensions:screenDimensions,belowTopScreenId:belowTopScreenId,screenTransition:screenTransition}=screenTransitionConfig;const{belowTopScreenStyle:computeBelowTopScreenStyle}=screenTransition;const belowTopScreenStyle=computeBelowTopScreenStyle(event,screenDimensions);const belowTopScreenDescriptor={value:[createViewDescriptor(belowTopScreenId)]};updateProps(belowTopScreenDescriptor,belowTopScreenStyle,undefined);}" };
 function applyStyle(closure_1, value) {
-  if (typeof applyStyleForTopScreen !== "function") {
+  if (typeof applyStyleForTopScreen !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let obj = { value: null };
@@ -48,7 +49,7 @@ function applyStyle(closure_1, value) {
   const tmp3 = require;
   const topScreenStyleResult = closure_1.screenTransition.topScreenStyle(value, closure_1.screenDimensions);
   require(1706) /* updateProps */.updateProps(obj, topScreenStyleResult, undefined);
-  if (typeof applyStyleForBelowTopScreen !== "function") {
+  if (typeof applyStyleForBelowTopScreen !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   obj = { value: null };

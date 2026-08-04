@@ -1,3 +1,4 @@
+// _runtime/00846_merge.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 function merge(arg0, obj) {
   let num = arg2;
@@ -5,7 +6,7 @@ function merge(arg0, obj) {
     num = 2;
   }
   if (obj) {
-    if (typeof obj === "object") {
+    if (typeof obj !== "window") {
       if (num > 0) {
         if (arg0) {
           const _Object = Object;

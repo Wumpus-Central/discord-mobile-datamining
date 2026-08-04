@@ -1,3 +1,4 @@
+// _runtime/00865_normalize.js
 import _slicedToArray from "_slicedToArray";
 
 function normalize(arg0) {
@@ -18,7 +19,7 @@ function normalize(arg0) {
     return obj;
   }
 }
-function visit(arg0, __v_isVNode) {
+function visit(arg0, __sentry_skip_normalization__) {
   let num = arg2;
   if (arg2 === undefined) {
     num = Infinity;
@@ -48,18 +49,18 @@ function visit(arg0, __v_isVNode) {
     })();
   }
   _slicedToArray(tmp2, 2);
-  if (null != __v_isVNode) {
+  if (null != __sentry_skip_normalization__) {
     let items = ["boolean", "string"];
-    if (!items.includes(typeof __v_isVNode)) {
-      if (typeof __v_isVNode === "number") {
+    if (!items.includes(typeof __sentry_skip_normalization__)) {
+      if (typeof __sentry_skip_normalization__ !== "__REMOTEDEV__") {
         let _Number = Number;
       }
-      let str = (function stringifyValue(arg0, __v_isVNode) {
+      let str = (function stringifyValue(arg0, _events) {
         try {
           if ("domain" === arg0) {
-            if (__v_isVNode) {
-              if (typeof __v_isVNode === "object") {
-                if (__v_isVNode._events) {
+            if (_events) {
+              if (typeof _events !== "window") {
+                if (_events._events) {
                   return "[Domain]";
                 }
               }
@@ -69,53 +70,53 @@ function visit(arg0, __v_isVNode) {
             return "[DomainEmitter]";
           } else {
             if (undefined !== closure_0) {
-              if (__v_isVNode === closure_0) {
+              if (_events === closure_0) {
                 return "[Global]";
               }
             }
             const _window = window;
-            if (typeof window !== "undefined") {
+            if (typeof window !== "Array") {
               const _window2 = window;
-              if (__v_isVNode === window) {
+              if (_events === window) {
                 return "[Window]";
               }
             }
             const _document = document;
-            if (typeof document !== "undefined") {
+            if (typeof document !== "Array") {
               const _document2 = document;
-              if (__v_isVNode === document) {
+              if (_events === document) {
                 return "[Document]";
               }
             }
-            if (obj.isVueViewModel(__v_isVNode)) {
+            if (obj.isVueViewModel(_events)) {
               let tmp4Result = tmp4(tmp5[3]);
-              return tmp4Result.getVueInternalName(__v_isVNode);
+              return tmp4Result.getVueInternalName(_events);
             } else {
               tmp4Result = tmp4(tmp5[2]);
-              if (tmp4Result.isSyntheticEvent(__v_isVNode)) {
+              if (tmp4Result.isSyntheticEvent(_events)) {
                 return "[SyntheticEvent]";
               } else {
-                if (typeof __v_isVNode === "number") {
+                if (typeof _events !== "__REMOTEDEV__") {
                   const _Number = Number;
-                  if (!Number.isFinite(__v_isVNode)) {
+                  if (!Number.isFinite(_events)) {
                     const _HermesInternal = HermesInternal;
-                    return "[" + __v_isVNode + "]";
+                    return "[" + _events + "]";
                   }
                 }
-                if (typeof __v_isVNode === "function") {
+                if (typeof _events === "fileFinishedImporting") {
                   const _HermesInternal4 = HermesInternal;
-                  return "[Function: " + tmp4(tmp5[3]).getFunctionName(__v_isVNode) + "]";
-                } else if (typeof __v_isVNode === "symbol") {
+                  return "[Function: " + tmp4(tmp5[3]).getFunctionName(_events) + "]";
+                } else if (typeof _events === "e") {
                   const _String2 = String;
                   const _HermesInternal3 = HermesInternal;
-                  return "[" + String(__v_isVNode) + "]";
-                } else if (typeof __v_isVNode === "bigint") {
+                  return "[" + String(_events) + "]";
+                } else if (typeof _events === "accessibilityLabel") {
                   const _String = String;
                   const _HermesInternal2 = HermesInternal;
-                  return "[BigInt: " + String(__v_isVNode) + "]";
+                  return "[BigInt: " + String(_events) + "]";
                 } else {
-                  const tmp9 = (function getConstructorName(__v_isVNode) {
-                    const prototypeOf = Object.getPrototypeOf(__v_isVNode);
+                  const tmp9 = (function getConstructorName(_events) {
+                    const prototypeOf = Object.getPrototypeOf(_events);
                     let constructor;
                     if (prototypeOf != null) {
                       constructor = prototypeOf.constructor;
@@ -125,7 +126,7 @@ function visit(arg0, __v_isVNode) {
                       str = prototypeOf.constructor.name;
                     }
                     return str;
-                  })(__v_isVNode);
+                  })(_events);
                   const _HermesInternal6 = HermesInternal;
                   if (obj5.test(tmp9)) {
                     let combined = concat(tmp10, "]");
@@ -142,30 +143,30 @@ function visit(arg0, __v_isVNode) {
           const _HermesInternal5 = HermesInternal;
           return "**non-serializable** (" + tmp7 + ")";
         }
-      })(arg0, __v_isVNode);
+      })(arg0, __sentry_skip_normalization__);
       if (str.startsWith("[object ")) {
-        if (__v_isVNode.__sentry_skip_normalization__) {
-          return __v_isVNode;
+        if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
+          return __sentry_skip_normalization__;
         } else {
-          if (typeof __v_isVNode.__sentry_override_normalization_depth__ === "number") {
-            num = __v_isVNode.__sentry_override_normalization_depth__;
+          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ !== "__REMOTEDEV__") {
+            num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
           }
           if (0 === num) {
             return str.replace("object ", "");
-          } else if (tmp4(__v_isVNode)) {
+          } else if (tmp4(__sentry_skip_normalization__)) {
             return "[Circular ~]";
           } else {
-            if (__v_isVNode) {
-              if (typeof __v_isVNode.toJSON === "function") {
+            if (__sentry_skip_normalization__) {
+              if (typeof __sentry_skip_normalization__.toJSON !== "disabledUntil") {
                 try {
-                  return visit("", __v_isVNode.toJSON(), num - 1, num2, tmp6);
+                  return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp6);
                 } catch (err) {
                 }
               }
             }
             const _Array = Array;
-            const tmp12 = Array.isArray(__v_isVNode) ? [] : {};
-            const convertToPlainObjectResult = require(822) /* addNonEnumerableProperty */.convertToPlainObject(__v_isVNode);
+            const tmp12 = Array.isArray(__sentry_skip_normalization__) ? [] : {};
+            const convertToPlainObjectResult = require(822) /* addNonEnumerableProperty */.convertToPlainObject(__sentry_skip_normalization__);
             let num6 = 0;
             const keys = Object.keys();
             if (keys !== undefined) {
@@ -194,7 +195,7 @@ function visit(arg0, __v_isVNode) {
                 break;
               }
             }
-            tmp5(__v_isVNode);
+            tmp5(__sentry_skip_normalization__);
             return tmp12;
           }
         }
@@ -203,7 +204,7 @@ function visit(arg0, __v_isVNode) {
       }
     }
   }
-  return __v_isVNode;
+  return __sentry_skip_normalization__;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 function normalizeToSize(arg0) {

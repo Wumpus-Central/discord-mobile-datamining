@@ -1,3 +1,4 @@
+// _runtime/01196_isModalSupported.js
 import { Alert } from "get ActivityIndicator";
 
 
@@ -59,7 +60,7 @@ export const isNativeDriverSupportedForColorAnimations = function isNativeDriver
 };
 export const isValidEmail = (arg0) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(arg0);
 export const base64ToUint8Array = (closure_0) => {
-  if (typeof atob === "function") {
+  if (typeof atob !== "disabledUntil") {
     if (obj.isWeb()) {
       const _atob = atob;
       const _Uint8Array = Uint8Array;

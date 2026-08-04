@@ -1,3 +1,4 @@
+// _runtime/01061__sendStandaloneLcpSpan.js
 const require = arg1;
 let dependencyMap = arg6;
 function _sendStandaloneLcpSpan(arg0, startTime, sentry_pageload_span_id, sentry_report_event) {

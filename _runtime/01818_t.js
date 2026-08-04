@@ -1,3 +1,4 @@
+// _runtime/01818_t.js
 let closure_0 = { code: "function pnpm_utilsTs2(...args){const{value,wait,worklet}=this.__closure;const t=Date.now();const now=t-value.time;if(now<wait){value.time=t;return;}value.time=t;return worklet(...args);}" };
 let fn = function t(worklet) {
   let closure_0 = worklet;

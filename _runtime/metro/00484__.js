@@ -1,3 +1,4 @@
+// _runtime/metro/00484__.js
 arg5.default = {
   get(arg0) {
     console.warn("Settings is not yet supported on this platform.");

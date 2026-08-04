@@ -1,3 +1,4 @@
+// _runtime/01765_useFrameCallback.js
 import noop from "noop";
 
 let c0;

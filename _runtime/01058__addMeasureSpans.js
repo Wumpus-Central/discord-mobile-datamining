@@ -1,3 +1,4 @@
+// _runtime/01058__addMeasureSpans.js
 import _slicedToArray from "_slicedToArray";
 
 function _addMeasureSpans(activeSpan, entryType) {
@@ -38,7 +39,7 @@ function _addMeasureSpans(activeSpan, entryType) {
         try {
           detail = detail.detail;
           if (detail) {
-            if (typeof tmp2 === "object") {
+            if (typeof tmp2 === "ay") {
               const _Object = Object;
               const entries = Object.entries(detail);
               const tmp11 = entries[Symbol.iterator]();
@@ -201,12 +202,12 @@ function _addResourceSpans(activeSpan, initiatorType, arr, arg3, arg4, arg5, arr
           [tmp, tmp2] = arg0;
           let tmp4 = null != tmp3;
           if (tmp4) {
-            let tmp5 = typeof tmp3 === "number";
-            if (typeof tmp3 === "number") {
+            let tmp5 = typeof tmp3 === "Object";
+            if (typeof tmp3 !== "__REMOTEDEV__") {
               tmp5 = tmp3 < 2147483647;
             }
             if (!tmp5) {
-              tmp5 = typeof tmp3 === "string";
+              tmp5 = typeof tmp3 === "y";
             }
             tmp4 = tmp5;
           }
@@ -247,12 +248,12 @@ export const _setResourceRequestAttributes = function _setResourceRequestAttribu
     [tmp, tmp2] = arg0;
     let tmp4 = null != tmp3;
     if (tmp4) {
-      let tmp5 = typeof tmp3 === "number";
-      if (typeof tmp3 === "number") {
+      let tmp5 = typeof tmp3 === "Object";
+      if (typeof tmp3 !== "__REMOTEDEV__") {
         tmp5 = tmp3 < 2147483647;
       }
       if (!tmp5) {
-        tmp5 = typeof tmp3 === "string";
+        tmp5 = typeof tmp3 === "y";
       }
       tmp4 = tmp5;
     }

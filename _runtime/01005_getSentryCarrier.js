@@ -1,3 +1,4 @@
+// _runtime/01005_getSentryCarrier.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getSentryCarrier = () => {

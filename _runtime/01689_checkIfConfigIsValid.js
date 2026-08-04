@@ -1,3 +1,4 @@
+// _runtime/01689_checkIfConfigIsValid.js
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
@@ -225,7 +226,7 @@ function calculateNewMassToMatchDuration(diff, skipAnimation, velocity) {
     fn.__initData = restSpeedThreshold;
     obj = { min: 0, max: 100, func: null };
     obj[2] = fn;
-    if (typeof dampingRatio !== "function") {
+    if (typeof dampingRatio !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     ({ min, max, func, maxIterations } = obj);

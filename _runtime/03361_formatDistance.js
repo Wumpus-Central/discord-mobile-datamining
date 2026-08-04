@@ -1,15 +1,16 @@
-let closure_0 = { lessThanXSeconds: { one: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 \u0441\u0435\u043A\u0443\u043D\u0434\u0430", other: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 {{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438" }, xSeconds: { one: "1 \u0441\u0435\u043A\u0443\u043D\u0434\u0430", other: "{{count}} \u0441\u0435\u043A\u0443\u043D\u0434\u0438" }, halfAMinute: "\u043F\u043E\u043B\u043E\u0432\u0438\u043D \u043C\u0438\u043D\u0443\u0442\u0430", lessThanXMinutes: { one: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 \u043C\u0438\u043D\u0443\u0442\u0430", other: "\u043F\u043E-\u043C\u0430\u043B\u043A\u043E \u043E\u0442 {{count}} \u043C\u0438\u043D\u0443\u0442\u0438" }, xMinutes: { one: "1 \u043C\u0438\u043D\u0443\u0442\u0430", other: "{{count}} \u043C\u0438\u043D\u0443\u0442\u0438" }, aboutXHours: { one: "\u043E\u043A\u043E\u043B\u043E \u0447\u0430\u0441", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0447\u0430\u0441\u0430" }, xHours: { one: "1 \u0447\u0430\u0441", other: "{{count}} \u0447\u0430\u0441\u0430" }, xDays: { one: "1 \u0434\u0435\u043D", other: "{{count}} \u0434\u043D\u0438" }, aboutXWeeks: { one: "\u043E\u043A\u043E\u043B\u043E \u0441\u0435\u0434\u043C\u0438\u0446\u0430", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0441\u0435\u0434\u043C\u0438\u0446\u0438" }, xWeeks: { one: "1 \u0441\u0435\u0434\u043C\u0438\u0446\u0430", other: "{{count}} \u0441\u0435\u0434\u043C\u0438\u0446\u0438" }, aboutXMonths: { one: "\u043E\u043A\u043E\u043B\u043E \u043C\u0435\u0441\u0435\u0446", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u043C\u0435\u0441\u0435\u0446\u0430" }, xMonths: { one: "1 \u043C\u0435\u0441\u0435\u0446", other: "{{count}} \u043C\u0435\u0441\u0435\u0446\u0430" }, aboutXYears: { one: "\u043E\u043A\u043E\u043B\u043E \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043E\u043A\u043E\u043B\u043E {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, xYears: { one: "1 \u0433\u043E\u0434\u0438\u043D\u0430", other: "{{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, overXYears: { one: "\u043D\u0430\u0434 \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043D\u0430\u0434 {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" }, almostXYears: { one: "\u043F\u043E\u0447\u0442\u0438 \u0433\u043E\u0434\u0438\u043D\u0430", other: "\u043F\u043E\u0447\u0442\u0438 {{count}} \u0433\u043E\u0434\u0438\u043D\u0438" } };
+// _runtime/03361_formatDistance.js
+let closure_0 = { lessThanXSeconds: { one: "minder dan een seconde", other: "minder dan {{count}} seconden" }, xSeconds: { one: "1 seconde", other: "{{count}} seconden" }, halfAMinute: "een halve minuut", lessThanXMinutes: { one: "minder dan een minuut", other: "minder dan {{count}} minuten" }, xMinutes: { one: "een minuut", other: "{{count}} minuten" }, aboutXHours: { one: "ongeveer 1 uur", other: "ongeveer {{count}} uur" }, xHours: { one: "1 uur", other: "{{count}} uur" }, xDays: { one: "1 dag", other: "{{count}} dagen" }, aboutXWeeks: { one: "ongeveer 1 week", other: "ongeveer {{count}} weken" }, xWeeks: { one: "1 week", other: "{{count}} weken" }, aboutXMonths: { one: "ongeveer 1 maand", other: "ongeveer {{count}} maanden" }, xMonths: { one: "1 maand", other: "{{count}} maanden" }, aboutXYears: { one: "ongeveer 1 jaar", other: "ongeveer {{count}} jaar" }, xYears: { one: "1 jaar", other: "{{count}} jaar" }, overXYears: { one: "meer dan 1 jaar", other: "meer dan {{count}} jaar" }, almostXYears: { one: "bijna 1 jaar", other: "bijna {{count}} jaar" } };
 
 export default function formatDistance(arg0, arg1, addSuffix) {
-  if (typeof table[arg0] === "string") {
+  if (typeof table[arg0] === "y") {
     let tmp6 = tmp;
     if (null != addSuffix) {
       tmp6 = tmp;
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
-          let text = `преди ${tmp}`;
+          let text = `${tmp} geleden`;
         }
-        text = `след ${tmp}`;
+        text = `over ${tmp}`;
       }
     }
     return tmp6;

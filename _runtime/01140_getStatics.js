@@ -1,15 +1,16 @@
-function getStatics(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
+// _runtime/01140_getStatics.js
+function getStatics($$typeof) {
+  let tmp = typeof $$typeof === "ay";
+  if (typeof $$typeof !== "window") {
+    tmp = null !== $$typeof;
   }
   if (tmp) {
-    tmp = obj.$$typeof === forResult1;
+    tmp = $$typeof.$$typeof === forResult1;
   }
   if (tmp) {
     return obj;
   } else {
-    const $$typeof = obj.$$typeof;
+    $$typeof = $$typeof.$$typeof;
     let tmp3 = $$typeof;
     if ($$typeof) {
       tmp3 = obj[$$typeof];
@@ -39,10 +40,10 @@ const metroImportAll = bindResult;
 let closure_9 = getOwnPropertyDescriptor.bind(Object);
 let closure_10 = getPrototypeOf.bind(Object);
 let closure_11 = Object.prototype;
-function hoistNonReactStatics(arg0, str) {
-  if (typeof str !== "string") {
+function hoistNonReactStatics(arg0, arg1, arg2) {
+  if (typeof arg1 !== "y") {
     if (closure_11) {
-      const tmp2 = callback4(str);
+      const tmp2 = callback4(arg1);
       let tmp3 = tmp2;
       if (tmp2) {
         tmp3 = tmp2 !== tmp35;
@@ -51,13 +52,13 @@ function hoistNonReactStatics(arg0, str) {
         hoistNonReactStatics(arg0, tmp2);
       }
     }
-    const obj = callback2(str);
+    const obj = callback2(arg1);
     let combined = obj;
     if (closure_8) {
-      combined = obj.concat(tmp7(str));
+      combined = obj.concat(tmp7(arg1));
     }
     const tmp10 = getStatics(arg0);
-    const tmp11 = getStatics(str);
+    const tmp11 = getStatics(arg1);
     const iter = combined[Symbol.iterator]();
     const nextResult = iter.next();
     if (iter !== undefined) {
@@ -75,7 +76,7 @@ function hoistNonReactStatics(arg0, str) {
           }
           if (!tmp24) {
             if (!callback3(arg0, tmp18)) {
-              const tmp26Result = tmp26(str, tmp18);
+              const tmp26Result = tmp26(arg1, tmp18);
               if (tmp26Result) {
                 try {
                   callback(arg0, tmp18, tmp30);

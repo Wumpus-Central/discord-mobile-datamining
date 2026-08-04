@@ -1,3 +1,4 @@
+// _runtime/00255_get_hairlineWidth.js
 const require = arg1;
 let obj = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0 };
 obj = {};
@@ -23,7 +24,7 @@ obj.setStyleAttributePreprocessor = function setStyleAttributePreprocessor(arg0,
   if (true === importDefault(26)[arg0]) {
     let obj = { process: null };
     obj[0] = process;
-  } else if (typeof tmp(26)[arg0] !== "object") {
+  } else if (typeof tmp(26)[arg0] === "window") {
     const _console = console;
     const _HermesInternal = HermesInternal;
     console.error("" + arg0 + " is not a valid style attribute");

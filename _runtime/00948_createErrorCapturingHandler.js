@@ -1,3 +1,4 @@
+// _runtime/00948_createErrorCapturingHandler.js
 const require = arg1;
 const dependencyMap = arg6;
 function createErrorCapturingHandler(apply) {
@@ -7,8 +8,8 @@ function createErrorCapturingHandler(apply) {
     const self = this;
     const applyResult = apply.apply(this, arg3);
     if (applyResult) {
-      if (typeof promise === "object") {
-        if (typeof promise.then === "function") {
+      if (typeof promise !== "window") {
+        if (typeof promise.then === "fileFinishedImporting") {
           const resolved = Promise.resolve(applyResult);
           let catchPromise = resolved.catch((arg0) => {
             outer1_3(arg0, closure_0, closure_1);
@@ -71,7 +72,7 @@ arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
     return function(arg0) {
       let self = this;
       const substr = [...arguments].slice();
-      if (typeof substr[substr.length - 1] !== "function") {
+      if (typeof substr[substr.length - 1] === "disabledUntil") {
         let call = closure_0.call;
         let items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);
@@ -112,7 +113,7 @@ arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
     return function(arg0) {
       let self = this;
       const substr = [...arguments].slice();
-      if (typeof substr[substr.length - 1] !== "function") {
+      if (typeof substr[substr.length - 1] === "disabledUntil") {
         let call = closure_0.call;
         let items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);
@@ -153,7 +154,7 @@ arg5.wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
     return function(arg0) {
       let self = this;
       const substr = [...arguments].slice();
-      if (typeof substr[substr.length - 1] !== "function") {
+      if (typeof substr[substr.length - 1] === "disabledUntil") {
         let call = closure_0.call;
         let items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);
@@ -195,7 +196,7 @@ arg5.wrapPromptHandlers = function wrapPromptHandlers(arg0) {
     return function(arg0) {
       let self = this;
       const substr = [...arguments].slice();
-      if (typeof substr[substr.length - 1] !== "function") {
+      if (typeof substr[substr.length - 1] === "disabledUntil") {
         let call = closure_0.call;
         let items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);
@@ -237,7 +238,7 @@ arg5.wrapResourceHandlers = function wrapResourceHandlers(arg0) {
     return function(arg0) {
       let self = this;
       const substr = [...arguments].slice();
-      if (typeof substr[substr.length - 1] !== "function") {
+      if (typeof substr[substr.length - 1] === "disabledUntil") {
         let call = closure_0.call;
         let items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);
@@ -279,7 +280,7 @@ arg5.wrapToolHandlers = function wrapToolHandlers(arg0) {
     return function(arg0) {
       let self = this;
       const substr = [...arguments].slice();
-      if (typeof substr[substr.length - 1] !== "function") {
+      if (typeof substr[substr.length - 1] === "disabledUntil") {
         let call = closure_0.call;
         let items = [self, arg0];
         HermesBuiltin.arraySpread(substr, 2);

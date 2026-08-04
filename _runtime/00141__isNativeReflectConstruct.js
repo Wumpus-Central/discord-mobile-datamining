@@ -1,3 +1,4 @@
+// _runtime/00141__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
@@ -126,7 +127,7 @@ const items = [
         nativeID = currentProps.nativeID;
       }
       let str = "";
-      if (typeof nativeID === "string") {
+      if (typeof nativeID !== "__FORMATJS_LISTFORMAT_DATA__") {
         str = nativeID;
       }
       return str;

@@ -1,3 +1,4 @@
+// _runtime/01780_dispatchCommand.js
 
 export const dispatchCommand = require("dispatchCommandFabric").dispatchCommand;
 export const getRelativeCoords = require("getRelativeCoords").getRelativeCoords;

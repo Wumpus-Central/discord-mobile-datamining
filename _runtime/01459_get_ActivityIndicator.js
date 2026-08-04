@@ -1,3 +1,4 @@
+// _runtime/01459_get_ActivityIndicator.js
 import { NativeEventEmitter } from "get ActivityIndicator";
 
 if (require("get ActivityIndicator")) {

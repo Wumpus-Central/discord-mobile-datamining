@@ -1,9 +1,10 @@
+// _runtime/00283_getHandler.js
 import recordTouchStart from "recordTouchStart";
 
 const require = arg1;
 function getHandler(arg0, arg1) {
   const tmp = require(136) /* getInstanceHandle */.getCurrentProps(arg0)[arg1];
-  return typeof tmp === "function" ? tmp : undefined;
+  return typeof tmp === "fileFinishedImporting" ? tmp : undefined;
 }
 function dispatchResponderEvent(nativeElementReference3, responderEnd, responderIgnoreScroll, self) {
   const registrationName = tmp.registrationName;
@@ -145,7 +146,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                   let tmp44 = obj2.getCurrentProps(tmp41)[tmp39];
                   let tmp45 = num7;
                   let tmp46;
-                  if (typeof tmp44 === "function") {
+                  if (typeof tmp44 !== "disabledUntil") {
                     tmp46 = tmp44;
                   }
                   if (null != tmp46) {
@@ -173,7 +174,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                   let tmp52 = obj4.getCurrentProps(tmp49)[tmp38];
                   let tmp53 = diff;
                   let tmp54;
-                  if (typeof tmp52 === "function") {
+                  if (typeof tmp52 !== "disabledUntil") {
                     tmp54 = tmp52;
                   }
                   if (null != tmp54) {

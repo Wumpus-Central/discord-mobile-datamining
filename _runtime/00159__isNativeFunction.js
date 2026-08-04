@@ -1,3 +1,4 @@
+// _runtime/00159__isNativeFunction.js
 
 export default function _isNativeFunction(arg0) {
   try {
@@ -12,6 +13,6 @@ export default function _isNativeFunction(arg0) {
     str = "[native code]";
     const index = strResult.indexOf("[native code]");
   } catch (err) {
-    return typeof tmp === "function";
+    return typeof tmp === "fileFinishedImporting";
   }
 };

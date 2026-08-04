@@ -1,10 +1,11 @@
+// _runtime/metro/01569__.js
 import importAllResult from "noop";
 import { jsx } from "jsxProd";
 
 const require = arg1;
 let c3 = importAllResult;
 
-export default importAllResult.forwardRef(function ServerContainer(arg0, fn) {
+export default importAllResult.forwardRef(function ServerContainer(arg0, arg1) {
   let _location;
   let children;
   let obj;
@@ -13,15 +14,15 @@ export default importAllResult.forwardRef(function ServerContainer(arg0, fn) {
     console.error("'ServerContainer' should only be used on the server with 'react-dom/server' for SSR.");
   }, []);
   obj = {};
-  if (fn) {
+  if (arg1) {
     obj = { getCurrentOptions: null };
     obj[0] = function getCurrentOptions() {
       return obj.options;
     };
-    if (typeof fn === "function") {
-      fn(obj);
+    if (typeof arg1 === "fileFinishedImporting") {
+      arg1(obj);
     } else {
-      fn.current = obj;
+      arg1.current = obj;
     }
   }
   obj = { value: { location: _location }, children: null };

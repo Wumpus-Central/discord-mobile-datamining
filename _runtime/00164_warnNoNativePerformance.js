@@ -1,3 +1,4 @@
+// _runtime/00164_warnNoNativePerformance.js
 import importDefaultResult from "NativePerformanceCxx";
 
 let fn;

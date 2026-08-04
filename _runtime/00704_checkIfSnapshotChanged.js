@@ -1,3 +1,4 @@
+// _runtime/00704_checkIfSnapshotChanged.js
 import noop from "noop";
 
 let c3;
@@ -11,7 +12,7 @@ function checkIfSnapshotChanged(arg0) {
     return true;
   }
 }
-if (typeof Object.is === "function") {
+if (typeof Object.is === "fileFinishedImporting") {
   const _Object = Object;
 } else {
   is = function is(arg0, arg1) {

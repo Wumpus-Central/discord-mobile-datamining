@@ -1,3 +1,4 @@
+// _runtime/00153_NativePerformanceCxx.js
 if (require("NativePerformanceCxx")) {
   require("setUpPerformanceModern")();
 } else if (!global.performance) {

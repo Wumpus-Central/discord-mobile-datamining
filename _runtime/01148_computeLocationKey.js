@@ -1,3 +1,4 @@
+// _runtime/01148_computeLocationKey.js
 import asyncGeneratorStep from "createAsyncHandlerProxy";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
@@ -362,7 +363,7 @@ function wrapPatchRoutesOnNavigation(arg0) {
   let patchRoutesOnNavigation;
   if (arg0) {
     if ("patchRoutesOnNavigation" in obj) {
-      if (typeof obj.patchRoutesOnNavigation === "function") {
+      if (typeof obj.patchRoutesOnNavigation !== "disabledUntil") {
         patchRoutesOnNavigation = obj.patchRoutesOnNavigation;
         obj = {};
         const merged = Object.assign(obj);
@@ -908,7 +909,7 @@ function updatePageloadTransaction(arg0) {
                       racePromise.then(() => {
                         const spanToJSONResult = callback(817).spanToJSON(first);
                         outer2_25(first, spanToJSONResult, spanToJSONResult.description, cleanupNavigationSpan, outer1_2, outer1_3, outer1_4, outer1_5);
-                        if (typeof cleanupNavigationSpan !== "function") {
+                        if (typeof cleanupNavigationSpan !== "fileFinishedImporting") {
                           HermesBuiltin.throwTypeError();
                         }
                         const obj = callback(817);
@@ -931,7 +932,7 @@ function updatePageloadTransaction(arg0) {
                         }
                         outer1_6(first);
                       }).catch(() => {
-                        if (typeof cleanupNavigationSpan !== "function") {
+                        if (typeof cleanupNavigationSpan !== "fileFinishedImporting") {
                           HermesBuiltin.throwTypeError();
                         }
                         const client = callback(817).getClient();
@@ -953,7 +954,7 @@ function updatePageloadTransaction(arg0) {
                       const nextPromise1 = racePromise.then(() => {
                         const spanToJSONResult = callback(817).spanToJSON(first);
                         outer2_25(first, spanToJSONResult, spanToJSONResult.description, cleanupNavigationSpan, outer1_2, outer1_3, outer1_4, outer1_5);
-                        if (typeof cleanupNavigationSpan !== "function") {
+                        if (typeof cleanupNavigationSpan !== "fileFinishedImporting") {
                           HermesBuiltin.throwTypeError();
                         }
                         const obj = callback(817);
@@ -1170,7 +1171,7 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
                   racePromise.then(() => {
                     const spanToJSONResult = callback(817).spanToJSON(first);
                     outer2_25(first, spanToJSONResult, spanToJSONResult.description, cleanupNavigationSpan, outer1_2, outer1_3, outer1_4, outer1_5);
-                    if (typeof cleanupNavigationSpan !== "function") {
+                    if (typeof cleanupNavigationSpan !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     const obj = callback(817);
@@ -1193,7 +1194,7 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
                     }
                     outer1_6(first);
                   }).catch(() => {
-                    if (typeof cleanupNavigationSpan !== "function") {
+                    if (typeof cleanupNavigationSpan !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     const client = callback(817).getClient();
@@ -1215,7 +1216,7 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
                   const nextPromise1 = racePromise.then(() => {
                     const spanToJSONResult = callback(817).spanToJSON(first);
                     outer2_25(first, spanToJSONResult, spanToJSONResult.description, cleanupNavigationSpan, outer1_2, outer1_3, outer1_4, outer1_5);
-                    if (typeof cleanupNavigationSpan !== "function") {
+                    if (typeof cleanupNavigationSpan !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     const obj = callback(817);
@@ -1377,8 +1378,8 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
     }
     const result1 = instrumentPageLoad(1149).initializeRouterUtils(closure_7, flag);
   };
-  obj.afterAllSetup = function afterAllSetup(f102430) {
-    closure_2.afterAllSetup(f102430);
+  obj.afterAllSetup = function afterAllSetup(f102143) {
+    closure_2.afterAllSetup(f102143);
     const _location = instrumentPageLoad(1024).WINDOW.location;
     if (_location != null) {
       const pathname = _location.pathname;
@@ -1396,11 +1397,11 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
       const _HermesInternal = HermesInternal;
       obj[tmp2(817).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + dependencyMap;
       obj[1] = obj;
-      const result = tmp2(1024).startBrowserTracingPageLoadSpan(f102430, obj);
+      const result = tmp2(1024).startBrowserTracingPageLoadSpan(f102143, obj);
       const tmp2Result = tmp2(1024);
     }
     if (closure_11) {
-      lazyRouteTimeout.add(f102430);
+      lazyRouteTimeout.add(f102143);
     }
   };
   return obj;
@@ -1424,7 +1425,73 @@ export const createV6CompatibleWithSentryReactRouterRouting = function createV6C
                 items = [, ];
                 items[0] = tmp;
                 items[1] = tmp2;
-                tmp3 = outer1_4(() => { ... }, items);
+                tmp3 = outer1_4(() => {
+                  const arr = outer2_7(lib.children);
+                  if (ref.current) {
+                    const item = arr.forEach((children) => {
+                      const set = new Set();
+                      if (!set.has(children)) {
+                        set.add(children);
+                        if (tmp2) {
+                          children = children.children;
+                          const item = children.forEach((children) => {
+                            if (set === undefined) {
+                              let _Set = Set;
+                              set = new Set();
+                            }
+                            if (!set.has(children)) {
+                              set.add(children);
+                              if (tmp5) {
+                                children = children.children;
+                                let item = children.forEach((children) => {
+                                  if (set === undefined) {
+                                    let _Set = Set;
+                                    set = new Set();
+                                  }
+                                  if (!set.has(children)) {
+                                    set.add(children);
+                                    if (tmp5) {
+                                      children = children.children;
+                                      let item = children.forEach(() => { ... });
+                                    }
+                                    tmp5 = children.children && !children.index;
+                                  }
+                                  let item1 = set.forEach(() => { ... });
+                                });
+                              }
+                              tmp5 = children.children && !children.index;
+                            }
+                            let item1 = set.forEach((arg0) => {
+                              set.add(arg0);
+                            });
+                          });
+                        }
+                        tmp2 = children.children && !children.index;
+                      }
+                      const item1 = set.forEach((arg0) => {
+                        set.add(arg0);
+                      });
+                    });
+                    let obj = { activeRootSpan: null, location: null, routes: null, allRoutes: null };
+                    obj[0] = lib(ref[4]).getActiveRootSpan();
+                    obj[1] = closure_2;
+                    obj[2] = arr;
+                    const _Array2 = Array;
+                    obj[3] = Array.from(outer2_14);
+                    outer2_24(obj);
+                    tmp.current = false;
+                    const obj3 = lib(ref[4]);
+                  } else {
+                    obj = { location: null, routes: null, navigationType: null, version: null, allRoutes: null };
+                    obj[0] = closure_2;
+                    obj[1] = arr;
+                    obj[2] = closure_3;
+                    obj[3] = ref;
+                    const _Array = Array;
+                    obj[4] = Array.from(outer2_14);
+                    outer2_22(obj);
+                  }
+                }, items);
                 obj = {};
                 merged = Object.assign(arg0);
                 return outer1_9.createElement(closure_0, obj);
@@ -1449,7 +1516,73 @@ export const createV6CompatibleWithSentryReactRouterRouting = function createV6C
         items = [, ];
         items[0] = tmp;
         items[1] = tmp2;
-        tmp3 = outer1_4(() => { ... }, items);
+        tmp3 = outer1_4(() => {
+          const arr = outer2_7(lib.children);
+          if (ref.current) {
+            const item = arr.forEach((children) => {
+              const set = new Set();
+              if (!set.has(children)) {
+                set.add(children);
+                if (tmp2) {
+                  children = children.children;
+                  const item = children.forEach((children) => {
+                    if (set === undefined) {
+                      let _Set = Set;
+                      set = new Set();
+                    }
+                    if (!set.has(children)) {
+                      set.add(children);
+                      if (tmp5) {
+                        children = children.children;
+                        let item = children.forEach((children) => {
+                          if (set === undefined) {
+                            let _Set = Set;
+                            set = new Set();
+                          }
+                          if (!set.has(children)) {
+                            set.add(children);
+                            if (tmp5) {
+                              children = children.children;
+                              let item = children.forEach(() => { ... });
+                            }
+                            tmp5 = children.children && !children.index;
+                          }
+                          let item1 = set.forEach(() => { ... });
+                        });
+                      }
+                      tmp5 = children.children && !children.index;
+                    }
+                    let item1 = set.forEach((arg0) => {
+                      set.add(arg0);
+                    });
+                  });
+                }
+                tmp2 = children.children && !children.index;
+              }
+              const item1 = set.forEach((arg0) => {
+                set.add(arg0);
+              });
+            });
+            let obj = { activeRootSpan: null, location: null, routes: null, allRoutes: null };
+            obj[0] = lib(ref[4]).getActiveRootSpan();
+            obj[1] = closure_2;
+            obj[2] = arr;
+            const _Array2 = Array;
+            obj[3] = Array.from(outer2_14);
+            outer2_24(obj);
+            tmp.current = false;
+            const obj3 = lib(ref[4]);
+          } else {
+            obj = { location: null, routes: null, navigationType: null, version: null, allRoutes: null };
+            obj[0] = closure_2;
+            obj[1] = arr;
+            obj[2] = closure_3;
+            obj[3] = ref;
+            const _Array = Array;
+            obj[4] = Array.from(outer2_14);
+            outer2_22(obj);
+          }
+        }, items);
         obj = {};
         merged = Object.assign(arg0);
         return outer1_9.createElement(closure_0, obj);
@@ -1556,7 +1689,7 @@ export const createV6CompatibleWrapCreateMemoryRouter = function createV6Compati
             }
             if (first) {
               let tmp18 = first;
-              if (typeof first === "string") {
+              if (typeof first !== "__FORMATJS_LISTFORMAT_DATA__") {
                 obj = { pathname: null };
                 obj[0] = first;
                 tmp18 = obj;
@@ -1606,7 +1739,7 @@ export const createV6CompatibleWrapUseRoutes = function createV6CompatibleWrapUs
             let tmp2 = outer1_5();
             const tmp3 = outer1_6();
             const SentryRoutes = tmp3;
-            if (typeof locationArg === "string") {
+            if (typeof locationArg === "y") {
               tmp2 = locationArg;
             } else {
               let pathname;
@@ -1618,7 +1751,7 @@ export const createV6CompatibleWrapUseRoutes = function createV6CompatibleWrapUs
             const items = [tmp3, tmp2];
             outer1_4(() => {
               let tmp2 = closure_3;
-              if (typeof closure_3 === "string") {
+              if (typeof closure_3 !== "__FORMATJS_LISTFORMAT_DATA__") {
                 let obj = { pathname: null };
                 obj[0] = tmp;
                 tmp2 = obj;

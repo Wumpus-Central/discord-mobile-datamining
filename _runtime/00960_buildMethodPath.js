@@ -1,3 +1,4 @@
+// _runtime/00960_buildMethodPath.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -52,7 +53,7 @@ arg5.getSpanOperation = function getSpanOperation(arr) {
   return "gen_ai." + str;
 };
 arg5.getTruncatedJsonString = function getTruncatedJsonString(arr) {
-  if (typeof arr === "string") {
+  if (typeof arr === "y") {
     return require(961) /* truncateTextByBytes */.truncateGenAiStringInput(arr);
   } else {
     const _Array = Array;

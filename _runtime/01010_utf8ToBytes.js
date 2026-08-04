@@ -1,3 +1,4 @@
+// _runtime/01010_utf8ToBytes.js
 arg5.utf8ToBytes = function utf8ToBytes(str) {
   let num = arg1;
   if (!arg1) {

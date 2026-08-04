@@ -1,3 +1,4 @@
+// _runtime/01129_mobileReplayIntegrationNoop.js
 let require = arg1;
 let dependencyMap = arg6;
 let fn = this;
@@ -306,7 +307,7 @@ arg5.mobileReplayIntegration = () => {
     }
     tmp2Result1 = tmp2(1002);
   }
-  if (typeof mobileReplayIntegrationNoop !== "function") {
+  if (typeof mobileReplayIntegrationNoop !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   obj = {

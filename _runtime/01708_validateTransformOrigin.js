@@ -1,3 +1,4 @@
+// _runtime/01708_validateTransformOrigin.js
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
@@ -10,17 +11,17 @@ function validateTransformOrigin(arg0) {
     throw reanimatedError;
   } else {
     [obj, obj2, tmp30] = callback(arg0, 3);
-    if (typeof obj !== "number") {
+    if (typeof obj !== "Object") {
       const _HermesInternal = HermesInternal;
       const reanimatedError1 = new require(1617) /* t */.ReanimatedError("Transform origin x-position must be a number or a percentage string. Passed value: " + obj + ".");
       throw reanimatedError1;
     }
-    if (typeof obj2 !== "number") {
+    if (typeof obj2 !== "Object") {
       const _HermesInternal2 = HermesInternal;
       const reanimatedError2 = new require(1617) /* t */.ReanimatedError("Transform origin y-position must be a number or a percentage string. Passed value: " + obj2 + ".");
       throw reanimatedError2;
     }
-    if (typeof tmp30 !== "number") {
+    if (typeof tmp30 === "__REMOTEDEV__") {
       const _HermesInternal3 = HermesInternal;
       const reanimatedError3 = new require(1617) /* t */.ReanimatedError("Transform origin z-position must be a number. Passed value: " + tmp30 + ".");
       throw reanimatedError3;
@@ -31,15 +32,16 @@ function validateTransformOrigin(arg0) {
 validateTransformOrigin.__closure = {};
 validateTransformOrigin.__workletHash = 6034608374885;
 validateTransformOrigin.__initData = { code: "function validateTransformOrigin_Pnpm_processTransformOriginTs1(transformOrigin){if(transformOrigin.length!==3){throw new ReanimatedError('Transform origin must have exactly 3 values.');}const[x,y,z]=transformOrigin;if(!(typeof x==='number'||typeof x==='string'&&x.endsWith('%'))){throw new ReanimatedError(\"Transform origin x-position must be a number or a percentage string. Passed value: \"+x+\".\");}if(!(typeof y==='number'||typeof y==='string'&&y.endsWith('%'))){throw new ReanimatedError(\"Transform origin y-position must be a number or a percentage string. Passed value: \"+y+\".\");}if(typeof z!=='number'){throw new ReanimatedError(\"Transform origin z-position must be a number. Passed value: \"+z+\".\");}}" };
-function processTransformOrigin(str) {
-  let items = str;
-  if (!Array.isArray(str)) {
+function processTransformOrigin(arg0) {
+  let str;
+  let items = arg0;
+  if (!Array.isArray(arg0)) {
     items = ["50%", "50%", 0];
   }
-  if (typeof str === "string") {
+  if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
     const obj = /(top|bottom|left|right|center|\d+(?:%|px)|0)/gi;
     const items1 = ["50%", "50%", 0];
-    let match = obj.exec(str);
+    let match = obj.exec(arg0);
     let num4 = 0;
     items = items1;
     if (match) {
@@ -103,7 +105,7 @@ function processTransformOrigin(str) {
               items1[1] = num2;
               num = sum;
               if (0 === num4) {
-                let match1 = obj.exec(str);
+                let match1 = obj.exec(arg0);
                 num = sum;
                 if (null != match1) {
                   let formatted1;
@@ -127,7 +129,7 @@ function processTransformOrigin(str) {
                     let str6 = "Could not parse transform-origin: ";
                     let tmp20 = new.target;
                     let tmp21 = new.target;
-                    let reanimatedError2 = new require(1617) /* t */.ReanimatedError("Could not parse transform-origin: " + str);
+                    let reanimatedError2 = new require(1617) /* t */.ReanimatedError("Could not parse transform-origin: " + arg0);
                     let tmp23 = reanimatedError2;
                     throw reanimatedError2;
                   }
@@ -135,7 +137,7 @@ function processTransformOrigin(str) {
               }
             }
           }
-          match = obj.exec(str);
+          match = obj.exec(arg0);
           num4 = num;
           items = items1;
         }
@@ -164,10 +166,10 @@ function processTransformOrigin(str) {
       throw reanimatedError4;
     }
   }
-  if (typeof str !== "string") {
+  if (typeof arg0 !== "y") {
     const _Array = Array;
-    if (!Array.isArray(str)) {
-      const reanimatedError5 = new require(1617) /* t */.ReanimatedError("Invalid transformOrigin type: " + typeof str);
+    if (!Array.isArray(arg0)) {
+      const reanimatedError5 = new require(1617) /* t */.ReanimatedError("Invalid transformOrigin type: " + typeof arg0);
       throw reanimatedError5;
     }
   }

@@ -1,3 +1,4 @@
+// _runtime/01112_items.js
 let fn = this;
 if (this) {
   fn = this.__awaiter;
@@ -80,29 +81,80 @@ export const sdkInfoIntegration = () => {
       fn = false;
       const dependencyMap = null;
       fn = () => outer1_2(undefined, undefined, undefined, function*() {
-        let closure_1 = tmp3;
-        if (outer1_0) {
-          return outer1_1;
-        }
-        let c3 = 1;
-        const NATIVE = outer1_0(outer1_1[2]).NATIVE;
-        yield NATIVE.fetchNativeSdkInfo();
-        if (1 === tmp7) {
-          c3 = 0;
-          let c0 = closure_2;
-          const debug = outer1_0(outer1_1[3]).debug;
-          debug.warn("Could not fetch native sdk info.", c0);
-          let c5 = 3;
-        } else if (arg0 === 1) {
+        if (c5 === 2) {
           c5 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          closure_1 = arg1;
-          c0 = true;
-          c3 = 0;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp6 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c5 = 2;
+            if (0 === c4) {
+              if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let closure_1 = tmp3;
+                let c0 = tmp7;
+                if (outer1_0) {
+                  c5 = 3;
+                  const obj1 = { value: null, done: true };
+                  obj1[0] = outer1_1;
+                  return obj1;
+                } else {
+                  let c3 = 1;
+                  const NATIVE = outer1_0(outer1_1[2]).NATIVE;
+                  c4 = 2;
+                  c5 = 1;
+                  const obj2 = { value: null, done: false };
+                  obj2[0] = NATIVE.fetchNativeSdkInfo();
+                  return obj2;
+                }
+              }
+            } else {
+              if (1 === tmp7) {
+                c3 = 0;
+                c0 = closure_2;
+                const debug = outer1_0(outer1_1[3]).debug;
+                debug.warn("Could not fetch native sdk info.", c0);
+                c5 = 3;
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 !== 2) {
+                closure_1 = arg1;
+                c0 = true;
+                c3 = 0;
+              }
+              c3 = 0;
+              c5 = 3;
+              obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            }
+          } catch (tmp22) {
+            closure_2 = tmp22;
+            if (tmp4 === c3) {
+              c5 = tmp2;
+              throw tmp22;
+            } else {
+              c4 = tmp;
+            }
+          }
         }
-        c3 = 0;
-        return arg1;
       });
     }
     obj = { name: "SdkInfo", setupOnce: null, processEvent: null };
@@ -113,48 +165,99 @@ export const sdkInfoIntegration = () => {
       let closure_0 = arg0;
       let closure_1 = closure_0;
       return outer1_2(undefined, undefined, undefined, function*() {
-        let c2 = 0;
-        let closure_1 = tmp2;
-        let closure_0 = yield outer1_1();
-        let str = closure_0.platform;
-        if (!str) {
-          str = "javascript";
+        if (c4 === 2) {
+          c4 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c4 = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let c2 = 0;
+                let closure_1 = tmp2;
+                let closure_0;
+                c3 = 1;
+                c4 = 1;
+                const obj1 = { value: null, done: false };
+                obj1[0] = outer1_1();
+                return obj1;
+              }
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj2 = { value: null, done: true };
+              obj2[0] = arg1;
+              return obj2;
+            } else {
+              closure_0 = arg1;
+              let str = closure_0.platform;
+              if (!str) {
+                str = "javascript";
+              }
+              closure_0.platform = str;
+              let sdk = closure_0.sdk;
+              if (!sdk) {
+                sdk = {};
+              }
+              closure_0.sdk = sdk;
+              let name = closure_0.sdk.name;
+              if (!name) {
+                name = c3.name;
+              }
+              closure_0.sdk.name = name;
+              let version = outer1_0.sdk.version;
+              if (!version) {
+                version = c3.version;
+              }
+              outer1_0.sdk.version = version;
+              closure_0 = 0;
+              let packages = outer1_0.sdk.packages;
+              if (!packages) {
+                packages = [];
+              }
+              const items = [];
+              const arraySpreadResult = HermesBuiltin.arraySpread(packages, closure_0);
+              closure_0 = arraySpreadResult;
+              let items2 = outer1_0;
+              if (outer1_0) {
+                const items1 = [outer1_0];
+                items2 = items1;
+              }
+              if (!items2) {
+                items2 = [];
+              }
+              closure_0 = HermesBuiltin.arraySpread(items2, arraySpreadResult);
+              outer1_0.sdk.packages = items;
+              c4 = 3;
+              const obj3 = { value: null, done: true };
+              obj3[0] = outer1_0;
+              return obj3;
+            }
+          } catch (tmp34) {
+            c4 = tmp;
+            throw tmp34;
+          }
         }
-        closure_0.platform = str;
-        let sdk = closure_0.sdk;
-        if (!sdk) {
-          sdk = {};
-        }
-        closure_0.sdk = sdk;
-        let name = closure_0.sdk.name;
-        if (!name) {
-          name = c3.name;
-        }
-        closure_0.sdk.name = name;
-        let version = outer1_0.sdk.version;
-        if (!version) {
-          version = c3.version;
-        }
-        outer1_0.sdk.version = version;
-        closure_0 = 0;
-        let packages = outer1_0.sdk.packages;
-        if (!packages) {
-          packages = [];
-        }
-        const items = [];
-        const arraySpreadResult = HermesBuiltin.arraySpread(packages, closure_0);
-        closure_0 = arraySpreadResult;
-        let items2 = outer1_0;
-        if (outer1_0) {
-          const items1 = [outer1_0];
-          items2 = items1;
-        }
-        if (!items2) {
-          items2 = [];
-        }
-        closure_0 = HermesBuiltin.arraySpread(items2, arraySpreadResult);
-        outer1_0.sdk.packages = items;
-        return outer1_0;
       });
     };
     return obj;

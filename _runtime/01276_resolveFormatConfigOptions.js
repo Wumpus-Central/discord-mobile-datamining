@@ -1,10 +1,11 @@
+// _runtime/01276_resolveFormatConfigOptions.js
 arg5.DEFAULT_FORMAT_CONFIG = undefined;
 arg5.resolveFormatConfigOptions = function resolveFormatConfigOptions(list, format) {
   format = undefined;
   if (null != format) {
     format = format.format;
   }
-  if (typeof format === "string") {
+  if (typeof format === "y") {
     const _Object = Object;
     const _Object2 = Object;
     return Object.assign(Object.assign({}, list[format.format]), format);

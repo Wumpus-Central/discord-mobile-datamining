@@ -1,3 +1,4 @@
+// _runtime/01639_ReanimatedFlatList.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import noop from "noop";
 import { useRef } from "noop";
@@ -35,7 +36,7 @@ export const ReanimatedFlatList = isReactRendering.componentWithRef((skipEnterin
     if (table != null) {
       current1 = obj2.current;
     }
-    if (typeof current1 === "function") {
+    if (typeof current1 === "fileFinishedImporting") {
       let currentResult;
       if (obj2 != null) {
         obj = { index: null, item: null };

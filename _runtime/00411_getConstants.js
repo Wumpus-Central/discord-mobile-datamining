@@ -1,3 +1,4 @@
+// _runtime/00411_getConstants.js
 if (require("I18nManager")) {
   const constants = require("I18nManager").getConstants();
   let obj = { isRTL: null, doLeftAndRightSwapInRTL: null, localeIdentifier: null };

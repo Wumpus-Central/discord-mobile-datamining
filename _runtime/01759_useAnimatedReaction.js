@@ -1,3 +1,4 @@
+// _runtime/01759_useAnimatedReaction.js
 import { useEffect } from "noop";
 
 let closure_3 = { code: "function pnpm_useAnimatedReactionTs1(){const{prepare,react,previous}=this.__closure;const input=prepare();react(input,previous.value);previous.value=input;}" };

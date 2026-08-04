@@ -1,3 +1,4 @@
+// _runtime/01162_fetchNativeFrames.js
 const require = arg1;
 const dependencyMap = arg6;
 function fetchNativeFrames() {
@@ -567,7 +568,7 @@ arg5.createNativeFramesIntegrations = (arg0) => {
     tmp = _require;
     tmp2 = asyncExpiringMap;
   }
-  if (typeof fetchEndFramesForSpan !== "function") {
+  if (typeof fetchEndFramesForSpan !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   _require = null;

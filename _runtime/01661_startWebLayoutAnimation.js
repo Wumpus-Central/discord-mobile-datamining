@@ -1,3 +1,4 @@
+// _runtime/01661_startWebLayoutAnimation.js
 const require = arg1;
 const dependencyMap = arg6;
 function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
@@ -17,7 +18,7 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
     if (tmp5) {
       let tmpResult = tmp(1694);
       let presetName = tmpResult.createCustomKeyFrameAnimation(entering.definitions);
-    } else if (typeof entering === "function") {
+    } else if (typeof entering === "fileFinishedImporting") {
       presetName = entering.presetName;
     } else {
       presetName = entering.constructor.presetName;

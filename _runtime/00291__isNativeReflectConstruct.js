@@ -1,3 +1,4 @@
+// _runtime/00291__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -267,7 +268,7 @@ let items = [
       } else {
         background = self.props.background;
       }
-      if (typeof getBackgroundProp !== "function") {
+      if (typeof getBackgroundProp !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       if (true === self.props.useForeground) {

@@ -1,4 +1,5 @@
+// _runtime/02514_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/client_themes/intl", scales: [1], hash: "631f3b0877ceef629b2dfdccdc28a8bb", name: "ClientThemes.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "f2e2d78eb7d1e13cc954bd1d9816f75f", name: "uk.messages.f2e2d78eb7d1e13cc954bd1d9816f75f.compiled.messages", type: "jsona" });

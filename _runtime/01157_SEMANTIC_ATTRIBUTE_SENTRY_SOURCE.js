@@ -1,3 +1,4 @@
+// _runtime/01157_SEMANTIC_ATTRIBUTE_SENTRY_SOURCE.js
 
 export const SEMANTIC_ATTRIBUTE_SENTRY_SOURCE = require("registerSpanErrorInstrumentation").SEMANTIC_ATTRIBUTE_SENTRY_SOURCE;
 export const SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN = require("registerSpanErrorInstrumentation").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN;

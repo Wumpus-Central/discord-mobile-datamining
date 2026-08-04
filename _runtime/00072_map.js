@@ -1,3 +1,4 @@
+// _runtime/00072_map.js
 const global = arg0;
 const map = new Map();
 arg5.unstable_hasComponent = function unstable_hasComponent(arg0) {

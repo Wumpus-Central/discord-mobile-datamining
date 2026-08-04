@@ -1,3 +1,4 @@
+// _runtime/00912_aggregateExceptionsFromError.js
 const require = arg1;
 let dependencyMap = arg6;
 function aggregateExceptionsFromError(arg0, arg1, arg2, errors, source, arg5, mechanism, exception_id) {

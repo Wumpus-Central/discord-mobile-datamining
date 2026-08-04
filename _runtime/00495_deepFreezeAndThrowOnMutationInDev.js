@@ -1,3 +1,4 @@
+// _runtime/00495_deepFreezeAndThrowOnMutationInDev.js
 import deepFreezeAndThrowOnMutationInDev from "deepFreezeAndThrowOnMutationInDev";
 
 

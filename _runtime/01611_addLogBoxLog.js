@@ -1,3 +1,4 @@
+// _runtime/01611_addLogBoxLog.js
 import { LogBox } from "get ActivityIndicator";
 
 let fn;

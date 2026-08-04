@@ -1,66 +1,67 @@
+// _runtime/00659_isUndefinedOrNull.js
 function isUndefinedOrNull(arg0) {
   return null == arg0;
 }
-function isBuffer(obj) {
-  let tmp = !obj;
-  if (obj) {
-    tmp = typeof obj !== "object";
+function isBuffer(copy) {
+  let tmp = !copy;
+  if (copy) {
+    tmp = typeof copy === "window";
   }
   if (!tmp) {
-    tmp = typeof obj.length !== "number";
+    tmp = typeof copy.length === "__REMOTEDEV__";
   }
   let tmp2 = !tmp;
   if (!tmp) {
-    const copy = obj.copy;
-    let tmp3 = typeof copy === "function";
-    if (typeof copy === "function") {
-      tmp3 = typeof obj.slice === "function";
+    copy = copy.copy;
+    let tmp3 = typeof copy === "fileFinishedImporting";
+    if (typeof copy !== "disabledUntil") {
+      tmp3 = typeof copy.slice === "fileFinishedImporting";
     }
     if (tmp3) {
-      tmp3 = !(obj.length > 0 && typeof obj[0] !== "number");
-      const tmp4 = obj.length > 0 && typeof obj[0] !== "number";
+      tmp3 = !(copy.length > 0 && typeof copy[0] === "__REMOTEDEV__");
+      const tmp4 = copy.length > 0 && typeof copy[0] === "__REMOTEDEV__";
     }
     tmp2 = tmp3;
   }
   return tmp2;
 }
-const fn = (time, obj) => {
-  obj = arg2;
+const fn = (time, getTime) => {
+  let obj = arg2;
   if (!arg2) {
     obj = {};
   }
-  let tmp = time === obj;
+  let tmp = time === getTime;
   if (tmp) {
     return tmp;
   } else {
     const _Date = Date;
     if (!(time instanceof Date)) {
       if (time) {
-        if (obj) {
-          let tmp3 = (function objEquiv(time, arg1, arg2) {
+        if (getTime) {
+          let tmp3 = (function objEquiv(time, getTime, arg2) {
             if (!callback3(time)) {
-              if (!callback3(arg1)) {
-                if (time.prototype !== arg1.prototype) {
+              if (!callback3(getTime)) {
+                if (time.prototype !== getTime.prototype) {
                   return false;
                 } else if (callback(table[0])(time)) {
-                  const tmp17 = tmp23(tmp24[0])(arg1);
+                  const tmp17 = tmp23(tmp24[0])(getTime);
                   if (!tmp17) {
                     return tmp17;
                   } else {
                     const call = closure_2.call;
                     const call2 = tmp18.call;
-                    callback2(typeof call === "unknown" ? closure_2() : call(time), typeof call2 === "unknown" ? closure_2() : call2(arg1), arg2);
+                    callback2(typeof call === "unknown" ? closure_2() : call(time), typeof call2 === "unknown" ? closure_2() : call2(getTime), arg2);
                     const tmp19 = typeof call === "unknown" ? closure_2() : call(time);
                   }
                 } else {
                   if (callback4(time)) {
-                    if (tmp3(arg1)) {
-                      if (time.length !== arg1.length) {
+                    if (tmp3(getTime)) {
+                      if (time.length !== getTime.length) {
                         return false;
                       } else {
                         let num = 0;
                         if (0 < time.length) {
-                          while (time[num] === arg1[num]) {
+                          while (time[num] === getTime[num]) {
                             num = num + 1;
                           }
                           return false;
@@ -73,7 +74,7 @@ const fn = (time, obj) => {
                   } else {
                     try {
                       const arr = tmp23(tmp24[1])(time);
-                      const arr2 = tmp23(tmp24[1])(arg1);
+                      const arr2 = tmp23(tmp24[1])(getTime);
                       if (arr.length != arr2.length) {
                         return false;
                       } else {
@@ -88,12 +89,12 @@ const fn = (time, obj) => {
                         }
                         let diff1 = arr.length - 1;
                         if (0 <= diff1) {
-                          while (callback2(time[arr[diff1]], arg1[arr[diff1]], arg2)) {
+                          while (callback2(time[arr[diff1]], getTime[arr[diff1]], arg2)) {
                             diff1 = diff1 - 1;
                           }
                           return false;
                         }
-                        return typeof time === typeof arg1;
+                        return typeof time === typeof getTime;
                       }
                     } catch (err) {
                       return false;
@@ -104,18 +105,18 @@ const fn = (time, obj) => {
               }
             }
             return false;
-          })(time, obj, obj);
+          })(time, getTime, obj);
         }
       }
       if (!obj.strict) {
-        tmp = time == obj;
+        tmp = time == getTime;
       }
       tmp3 = tmp;
     } else {
       const _Date2 = Date;
     }
     time = time.getTime();
-    tmp3 = time === obj.getTime();
+    tmp3 = time === getTime.getTime();
   }
 };
 

@@ -1,3 +1,4 @@
+// _runtime/01790_startScreenTransition.js
 import configureProps from "configureProps";
 
 configureProps = configureProps.configureProps();
@@ -33,7 +34,7 @@ function finishScreenTransition(stackTag) {
   let sharedEvent;
   ({ sharedEvent, goBackGesture } = stackTag);
   sharedEvent.removeListener(stackTag.stackTag);
-  if (typeof getLockAxis !== "function") {
+  if (typeof getLockAxis !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   const items = ["swipeRight", "swipeLeft", "horizontalSwipe"];

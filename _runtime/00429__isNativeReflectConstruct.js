@@ -1,3 +1,4 @@
+// _runtime/00429__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -159,7 +160,7 @@ let items = [
         opacity = tmp.opacity;
       }
       let num = 1;
-      if (typeof opacity === "number") {
+      if (typeof opacity !== "__REMOTEDEV__") {
         num = opacity;
       }
       return num;

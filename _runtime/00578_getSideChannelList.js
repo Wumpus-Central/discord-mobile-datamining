@@ -1,3 +1,4 @@
+// _runtime/00578_getSideChannelList.js
 
 export default function getSideChannelList() {
   let obj = {

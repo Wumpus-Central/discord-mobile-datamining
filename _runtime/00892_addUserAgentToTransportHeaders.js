@@ -1,3 +1,4 @@
+// _runtime/00892_addUserAgentToTransportHeaders.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addUserAgentToTransportHeaders = function addUserAgentToTransportHeaders(_metadata) {
   _metadata = _metadata._metadata;

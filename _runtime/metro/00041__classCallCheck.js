@@ -1,3 +1,4 @@
+// _runtime/metro/00041__classCallCheck.js
 
 export default function _classCallCheck(arg0, arg1) {
   if (!(arg0 instanceof arg1)) {

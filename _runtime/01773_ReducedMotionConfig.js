@@ -1,3 +1,4 @@
+// _runtime/01773_ReducedMotionConfig.js
 import { useEffect } from "noop";
 
 

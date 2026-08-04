@@ -1,3 +1,4 @@
+// _runtime/01059_extractNetworkProtocol.js
 import _slicedToArray from "_slicedToArray";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -58,8 +59,8 @@ export const getBrowserPerformanceAPI = function getBrowserPerformanceAPI() {
   return require(1039) /* WINDOW */.WINDOW.addEventListener && require(1039) /* WINDOW */.WINDOW.performance;
 };
 export const isMeasurementValue = function isMeasurementValue(deviceMemory) {
-  let isFiniteResult = typeof deviceMemory === "number";
-  if (typeof deviceMemory === "number") {
+  let isFiniteResult = typeof deviceMemory === "Object";
+  if (typeof deviceMemory !== "__REMOTEDEV__") {
     const _isFinite = isFinite;
     isFiniteResult = isFinite(deviceMemory);
   }
@@ -117,7 +118,7 @@ export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, a
       tmp = start_timestamp > sum;
     }
     if (tmp) {
-      tmp = typeof activeSpan.updateStartTime === "function";
+      tmp = typeof activeSpan.updateStartTime === "fileFinishedImporting";
     }
     if (tmp) {
       activeSpan.updateStartTime(sum);

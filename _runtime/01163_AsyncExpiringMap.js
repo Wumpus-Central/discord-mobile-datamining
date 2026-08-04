@@ -1,3 +1,4 @@
+// _runtime/01163_AsyncExpiringMap.js
 import AsyncExpiringMap from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 
@@ -27,20 +28,20 @@ class AsyncExpiringMap {
 const items = [
   {
     key: "set",
-    value: function set(arg0, value) {
+    value: function set(arg0, promise) {
       let self = this;
       self = this;
       if (!this._cleanupInterval) {
         self.startCleanup();
       }
-      if (typeof value === "object") {
-        if (value) {
-          if ("then" in value) {
+      if (typeof promise !== "window") {
+        if (promise) {
+          if ("then" in promise) {
             let obj = { value: "r", expiresAt: "PX_16", promise: "TRANSPARENT" };
-            obj[2] = value;
+            obj[2] = promise;
             const _map2 = self._map;
             const result = _map2.set(arg0, obj);
-            value.then((value) => {
+            promise.then((value) => {
               obj.value = value;
               obj.expiresAt = Date.now() + self._ttl;
               obj.promise = null;
@@ -52,7 +53,7 @@ const items = [
         }
       }
       const _map = self._map;
-      obj = { value, expiresAt: Date.now() + self._ttl, promise: null };
+      obj = { value: promise, expiresAt: Date.now() + self._ttl, promise: null };
       const result1 = _map.set(arg0, obj);
     }
   },

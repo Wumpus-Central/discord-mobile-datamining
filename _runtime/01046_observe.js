@@ -1,3 +1,4 @@
+// _runtime/01046_observe.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.observe = (arg0, arg1) => {
   let closure_0 = arg1;

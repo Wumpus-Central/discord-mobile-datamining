@@ -1,3 +1,4 @@
+// _runtime/00056_processColorStops.js
 import _slicedToArray from "_slicedToArray";
 
 const require = arg1;
@@ -14,7 +15,7 @@ function processColorStops(nextResult) {
         if (Array.isArray(positions)) {
           if (1 === positions.length) {
             let first = positions[0];
-            if (typeof first !== "number") {
+            if (typeof first !== "Object") {
               return null;
             }
             let obj = { color: null, position: null };
@@ -37,9 +38,9 @@ function processColorStops(nextResult) {
             let tmp8 = positions;
             for (const item10036 of positions) {
               let obj4 = item10036;
-              if (typeof item10036 !== "number") {
+              if (typeof item10036 !== "Object") {
                 let tmp13 = item10036;
-                if (typeof obj4 === "string") {
+                if (typeof obj4 !== "__FORMATJS_LISTFORMAT_DATA__") {
                   let tmp14 = item10036;
                 }
                 let tmp9 = obj3;
@@ -157,7 +158,7 @@ function parseRadialGradientCSSString(str) {
                     if (null == parsed) {
                       return null;
                     } else {
-                      if (typeof parsed === "number") {
+                      if (typeof parsed !== "__REMOTEDEV__") {
                         if (parsed < 0) {
                           return null;
                         }
@@ -184,7 +185,7 @@ function parseRadialGradientCSSString(str) {
                           if (null == parsed1) {
                             return null;
                           } else {
-                            if (typeof parsed1 === "number") {
+                            if (typeof parsed1 !== "__REMOTEDEV__") {
                               if (parsed1 < 0) {
                                 return null;
                               }
@@ -799,7 +800,7 @@ export default function processBackgroundImage(str) {
   if (null == str) {
     return items;
   } else {
-    if (typeof str === "string") {
+    if (typeof str === "y") {
       items = (function parseBackgroundImageCSSString(arg0) {
         let items = [];
         const iter = (function splitGradients(arg0) {
@@ -1004,9 +1005,9 @@ export default function processBackgroundImage(str) {
                 let tmp12 = nextResult;
                 if (null != tmp5.size) {
                   let tmp61 = nextResult;
-                  if (typeof tmp5.size !== "string") {
+                  if (typeof tmp5.size === "__FORMATJS_LISTFORMAT_DATA__") {
                     let tmp17 = nextResult;
-                    if (typeof tmp5.size === "object") {
+                    if (typeof tmp5.size !== "window") {
                       let tmp63 = nextResult;
                       if (null != tmp5.size.x) {
                         let tmp64 = nextResult;

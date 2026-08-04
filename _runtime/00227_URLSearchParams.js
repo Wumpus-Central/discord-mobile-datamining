@@ -1,3 +1,4 @@
+// _runtime/00227_URLSearchParams.js
 import URLSearchParams from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 
@@ -8,7 +9,7 @@ class URLSearchParams {
     map = new Map();
     this._searchParams = map;
     if (null !== global) {
-      if (typeof global === "string") {
+      if (typeof global === "y") {
         str = "";
         str2 = global.replace(/^\?/, "");
         str3 = "&";
@@ -29,7 +30,7 @@ class URLSearchParams {
             [tmp, tmp2] = arg0;
             return self.append(tmp, tmp2);
           });
-        } else if (typeof global === "object") {
+        } else if (typeof global !== "window") {
           _Object = Object;
           entries = Object.entries(global);
           item2 = entries.forEach((arg0) => {

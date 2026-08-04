@@ -1,3 +1,4 @@
+// _runtime/01389_Yallist.js
 class Yallist {
   constructor(arg0) {
     self = this;
@@ -12,7 +13,7 @@ class Yallist {
     self.head = null;
     self.length = 0;
     if (global) {
-      if (typeof global.forEach === "function") {
+      if (typeof global.forEach === "fileFinishedImporting") {
         item = global.forEach((arg0) => {
           self.push(arg0);
         });

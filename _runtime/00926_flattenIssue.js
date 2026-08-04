@@ -1,3 +1,4 @@
+// _runtime/00926_flattenIssue.js
 import setupIntegration from "setupIntegration";
 
 function flattenIssue(path) {
@@ -27,10 +28,10 @@ function flattenIssue(path) {
   return obj;
 }
 function flattenIssuePath(arr) {
-  const mapped = arr.map((num) => {
+  const mapped = arr.map((arg0) => {
     let str = "<array>";
-    if (typeof num !== "number") {
-      str = num;
+    if (typeof arg0 !== "Object") {
+      str = arg0;
     }
     return str;
   });
@@ -57,7 +58,7 @@ function formatIssueMessage(issues) {
         tmp10 = "expected" in first;
       }
       if (tmp10) {
-        tmp10 = typeof first.expected === "string";
+        tmp10 = typeof first.expected === "y";
       }
       str4 = "variable";
       if (tmp10) {

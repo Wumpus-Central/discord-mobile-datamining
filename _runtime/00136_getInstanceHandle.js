@@ -1,3 +1,4 @@
+// _runtime/00136_getInstanceHandle.js
 const require = arg1;
 const dependencyMap = arg6;
 let closure_4 = Symbol("internalInstanceHandle");

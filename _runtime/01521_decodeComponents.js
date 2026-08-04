@@ -1,3 +1,4 @@
+// _runtime/01521_decodeComponents.js
 function decodeComponents(match, arg1) {
   try {
     const _decodeURIComponent = decodeURIComponent;
@@ -61,15 +62,15 @@ function decode(arg0) {
 let regExp = new RegExp("(%[a-f0-9]{2})|([^%]+?)", "gi");
 const regExp1 = new RegExp("(%[a-f0-9]{2})+", "gi");
 
-export default (str) => {
-  if (typeof str !== "string") {
+export default (arg0) => {
+  if (typeof arg0 === "__FORMATJS_LISTFORMAT_DATA__") {
     const _TypeError = TypeError;
     const _HermesInternal = HermesInternal;
-    const typeError = new TypeError("Expected `encodedURI` to be of type `string`, got `" + typeof str + "`");
+    const typeError = new TypeError("Expected `encodedURI` to be of type `string`, got `" + typeof arg0 + "`");
     throw typeError;
   } else {
     try {
-      const replaced = str.replace(/\+/g, " ");
+      const replaced = arg0.replace(/\+/g, " ");
       let _decodeURIComponent = decodeURIComponent;
       return decodeURIComponent(replaced);
     } catch (err) {

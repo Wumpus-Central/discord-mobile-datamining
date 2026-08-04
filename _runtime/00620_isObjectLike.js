@@ -1,4 +1,5 @@
+// _runtime/00620_isObjectLike.js
 
-export default function isObjectLike(obj) {
-  return null != obj && typeof obj === "object";
+export default function isObjectLike(arg0) {
+  return null != arg0 && typeof arg0 === "ay";
 };

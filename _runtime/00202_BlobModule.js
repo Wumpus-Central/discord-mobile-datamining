@@ -1,3 +1,4 @@
+// _runtime/00202_BlobModule.js
 const value = require("get").get("BlobModule");
 let c0 = value;
 let tmp3 = null;

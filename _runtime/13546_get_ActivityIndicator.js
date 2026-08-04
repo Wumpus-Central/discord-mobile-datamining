@@ -1,1 +1,0 @@
-const parsed = parseInt(require("get ActivityIndicator").Platform.Version, 10);

@@ -1,3 +1,4 @@
+// _runtime/01824_TEST_ID_KEYBOARD_TOOLBAR.js
 const combined = "" + "keyboard.toolbar" + ".previous";
 const combined1 = "" + "keyboard.toolbar" + ".next";
 const combined2 = "" + "keyboard.toolbar" + ".content";

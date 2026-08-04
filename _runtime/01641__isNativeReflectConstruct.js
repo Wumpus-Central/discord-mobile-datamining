@@ -1,3 +1,4 @@
+// _runtime/01641__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -46,21 +47,21 @@ if (isJest) {
 }
 let c17 = 0;
 
-export const createAnimatedComponent = function createAnimatedComponent(fn) {
-  let AnimatedComponent = fn;
+export const createAnimatedComponent = function createAnimatedComponent(name) {
+  let AnimatedComponent = name;
   const importDefault = arg1;
   if (!isJest) {
-    let tmp4 = typeof fn !== "function";
-    if (typeof fn === "function") {
-      tmp4 = fn.prototype && fn.prototype.isReactComponent;
-      let tmp5 = fn.prototype && fn.prototype.isReactComponent;
+    let tmp4 = typeof name === "disabledUntil";
+    if (typeof name !== "disabledUntil") {
+      tmp4 = name.prototype && name.prototype.isReactComponent;
+      let tmp5 = name.prototype && name.prototype.isReactComponent;
     }
     class AnimatedComponent {
       constructor(arg0) {
         self = this;
         tmp = _isNativeReflectConstruct(this, apply);
         items = [];
-        items[0] = fn;
+        items[0] = name;
         tmp2 = _isNativeReflectConstruct;
         obj = _isNativeReflectConstruct(apply);
         tmp3 = _isNativeReflectConstruct;
@@ -176,7 +177,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         return tmp3Result;
       }
     }
-    importDefault(38)(tmp4, "Looks like you're passing a function component `" + fn.name + "` to `createAnimatedComponent` function which supports only class components. Please wrap your function component with `React.forwardRef()` or use a class component instead.");
+    importDefault(38)(tmp4, "Looks like you're passing a function component `" + name.name + "` to `createAnimatedComponent` function which supports only class components. Please wrap your function component with `React.forwardRef()` or use a class component instead.");
     let tmp3 = importDefault(38);
   }
   class AnimatedComponent {
@@ -184,7 +185,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
       self = this;
       tmp = _isNativeReflectConstruct(this, apply);
       items = [];
-      items[0] = fn;
+      items[0] = name;
       tmp2 = _isNativeReflectConstruct;
       obj = _isNativeReflectConstruct(apply);
       tmp3 = _isNativeReflectConstruct;
@@ -405,7 +406,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
           _willUnmount = self._willUnmount;
         }
         if (_willUnmount) {
-          _willUnmount = typeof componentViewTag === "number";
+          _willUnmount = typeof componentViewTag === "Object";
         }
         if (_willUnmount) {
           tmp25Result = tmp25(tmp24[16]);
@@ -487,7 +488,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
           if (!closure_13) {
             if (!tmp4Result4.isFabric()) {
               if ("getReduceMotion" in exiting) {
-                if (typeof exiting.getReduceMotion === "function") {
+                if (typeof exiting.getReduceMotion === "fileFinishedImporting") {
                   let reduceMotionFromConfig = tmp4(tmp5[22]).getReduceMotionFromConfig(exiting.getReduceMotion());
                   const tmp4Result5 = tmp4(tmp5[22]);
                 }
@@ -584,7 +585,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
             let tmp8 = arg0[key10015];
             if ("color" === key10015) {
               if (tmp8) {
-                if (typeof tmp8 === "string") {
+                if (typeof tmp8 === "y") {
                   let tmp5 = outer1_9;
                   let tmp4 = outer1_9(tmp8);
                   obj[key10015] = tmp4;
@@ -711,7 +712,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         const tmp8 = null != _styles && items.length === _styles.length && items.every((viewDescriptors) => {
           let hasItem = viewDescriptors === _styles[arg1];
           if (hasItem) {
-            if (typeof isStyleAttached !== "function") {
+            if (typeof isStyleAttached !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             viewDescriptors = viewDescriptors.viewDescriptors;
@@ -740,7 +741,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
               if (!items.some((viewDescriptors) => {
                 let tmp = viewDescriptors !== closure_0;
                 if (!tmp) {
-                  if (typeof closure_0 !== "function") {
+                  if (typeof closure_0 !== "fileFinishedImporting") {
                     HermesBuiltin.throwTypeError();
                   }
                   viewDescriptors = viewDescriptors.viewDescriptors;
@@ -936,7 +937,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
       value: function _isReducedMotion(getReduceMotion) {
         if (getReduceMotion) {
           if ("getReduceMotion" in getReduceMotion) {
-            if (typeof getReduceMotion.getReduceMotion === "function") {
+            if (typeof getReduceMotion.getReduceMotion === "fileFinishedImporting") {
               let reduceMotionFromConfig = AnimatedComponent(tmp9[22]).getReduceMotionFromConfig(getReduceMotion.getReduceMotion());
               const obj2 = AnimatedComponent(tmp9[22]);
             }
@@ -1161,7 +1162,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
   const tmp9 = callback(AnimatedComponent, items);
   const dependencyMap = tmp9;
   tmp9.contextType = AnimatedComponent(1744).SkipEnteringContext;
-  tmp9.displayName = "AnimatedComponent(" + fn.displayName || fn.name || "Component" + ")";
+  tmp9.displayName = "AnimatedComponent(" + name.displayName || name.name || "Component" + ")";
   const componentWithRefResult = AnimatedComponent(1745).componentWithRef((arg0, arg1) => {
     let obj = {};
     const merged = Object.assign(arg0);
@@ -1174,6 +1175,6 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
     const merged1 = Object.assign(tmp4);
     return outer1_11(closure_2, obj);
   });
-  componentWithRefResult.displayName = fn.displayName || fn.name || "Component";
+  componentWithRefResult.displayName = name.displayName || name.name || "Component";
   return componentWithRefResult;
 };

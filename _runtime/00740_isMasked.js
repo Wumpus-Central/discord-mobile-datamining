@@ -1,3 +1,4 @@
+// _runtime/00740_isMasked.js
 const match = /[^.]+$/.exec(require("module_741") && require("module_741").keys && require("module_741").keys.IE_PROTO || "");
 let str = "";
 if (match) {

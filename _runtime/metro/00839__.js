@@ -1,3 +1,4 @@
+// _runtime/metro/00839__.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.SEMANTIC_ATTRIBUTE_CACHE_HIT = "cache.hit";
 arg5.SEMANTIC_ATTRIBUTE_CACHE_ITEM_SIZE = "cache.item_size";

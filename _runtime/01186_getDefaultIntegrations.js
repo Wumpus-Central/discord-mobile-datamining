@@ -1,3 +1,4 @@
+// _runtime/01186_getDefaultIntegrations.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise) {
@@ -64,16 +65,16 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
       items.push(tmp(811).viewHierarchyIntegration());
       const tmpResult18 = tmp(811);
     }
-    if (typeof patchGlobalPromise.profilesSampleRate === "number") {
+    if (typeof patchGlobalPromise.profilesSampleRate !== "__REMOTEDEV__") {
       items.push(tmp(811).hermesProfilingIntegration());
       const tmpResult19 = tmp(811);
     }
     const tmpResult14 = tmp(811);
   }
   const tracesSampleRate = patchGlobalPromise.tracesSampleRate;
-  let tmp26 = typeof tracesSampleRate === "number";
-  if (typeof tracesSampleRate !== "number") {
-    tmp26 = typeof patchGlobalPromise.tracesSampler === "function";
+  let tmp26 = typeof tracesSampleRate === "Object";
+  if (typeof tracesSampleRate !== "Object") {
+    tmp26 = typeof patchGlobalPromise.tracesSampler === "fileFinishedImporting";
   }
   let enableNative = tmp26;
   if (tmp26) {
@@ -136,7 +137,7 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
   items.push(require(811) /* debugSymbolicatorIntegration */.expoContextIntegration());
   if (patchGlobalPromise.spotlight) {
     let spotlight;
-    if (typeof patchGlobalPromise.spotlight === "string") {
+    if (typeof patchGlobalPromise.spotlight !== "__FORMATJS_LISTFORMAT_DATA__") {
       spotlight = patchGlobalPromise.spotlight;
     }
     obj = { sidecarUrl: null };
@@ -145,14 +146,14 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     const tmpResult29 = tmp(811);
   }
   const replaysOnErrorSampleRate = patchGlobalPromise.replaysOnErrorSampleRate;
-  let notWebResult1 = typeof replaysOnErrorSampleRate === "number";
-  if (typeof replaysOnErrorSampleRate !== "number") {
-    notWebResult1 = typeof patchGlobalPromise.replaysSessionSampleRate === "number";
+  let notWebResult1 = typeof replaysOnErrorSampleRate === "Object";
+  if (typeof replaysOnErrorSampleRate !== "Object") {
+    notWebResult1 = typeof patchGlobalPromise.replaysSessionSampleRate === "Object";
   }
-  let tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysOnErrorSampleRate === "number";
+  let tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysOnErrorSampleRate === "Object";
   if (!tmp40) {
-    tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
-    const tmp41 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "number";
+    tmp40 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "Object";
+    const tmp41 = patchGlobalPromise._experiments && typeof patchGlobalPromise._experiments.replaysSessionSampleRate === "Object";
   }
   let tmp42 = !notWebResult1;
   if (!notWebResult1) {

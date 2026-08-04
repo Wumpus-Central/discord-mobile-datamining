@@ -1,3 +1,4 @@
+// _runtime/00107_accumulateDifferences.js
 const exports = arg3;
 const dependencyMap = arg6;
 function accumulateDifferences(items, arr2, obj, arg3) {
@@ -7,7 +8,7 @@ function accumulateDifferences(items, arr2, obj, arg3) {
     if (arg3.hasOwnProperty(key10009)) {
       let tmp4 = arg3[key10009];
       let tmp5 = null;
-      if (typeof tmp22 === "object") {
+      if (typeof tmp22 !== "window") {
         let _Array = Array;
         tmp5 = null;
         if (!Array.isArray(tmp22)) {
@@ -16,7 +17,7 @@ function accumulateDifferences(items, arr2, obj, arg3) {
       }
       if (null != tmp5) {
         let tmp6 = null;
-        if (typeof tmp4 === "object") {
+        if (typeof tmp4 !== "window") {
           let _Array2 = Array;
           tmp6 = null;
           if (!Array.isArray(tmp4)) {

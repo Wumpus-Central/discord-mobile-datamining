@@ -1,3 +1,4 @@
+// _runtime/01329_ReflectionBinaryWriter.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -92,8 +93,8 @@ let items = [
               let tmp88 = dependencyMap;
               let obj5 = ReflectionBinaryWriter(1316);
               let tmp89 = tmp4;
-              let tmp90 = typeof tmp4 === "object";
-              if (typeof tmp4 === "object") {
+              let tmp90 = typeof tmp4 === "ay";
+              if (typeof tmp4 !== "window") {
                 let tmp91 = tmp4;
                 tmp90 = null !== tmp4;
               }

@@ -1,3 +1,4 @@
+// _runtime/01678_withClamp.js
 
 export const withClamp = require("n").withClamp;
 export const withDecay = require("withDecay").withDecay;

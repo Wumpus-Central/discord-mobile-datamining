@@ -1,3 +1,4 @@
+// _runtime/00223__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
@@ -206,8 +207,8 @@ const items = [
     get() {
       return FileReader(205).getEventHandlerAttribute(this, "abort");
     },
-    set(fn) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "abort", fn);
+    set(arg0) {
+      const result = FileReader(205).setEventHandlerAttribute(this, "abort", arg0);
     }
   },
   {
@@ -215,8 +216,8 @@ const items = [
     get() {
       return FileReader(205).getEventHandlerAttribute(this, "error");
     },
-    set(fn) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "error", fn);
+    set(arg0) {
+      const result = FileReader(205).setEventHandlerAttribute(this, "error", arg0);
     }
   },
   {
@@ -224,8 +225,8 @@ const items = [
     get() {
       return FileReader(205).getEventHandlerAttribute(this, "load");
     },
-    set(fn) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "load", fn);
+    set(arg0) {
+      const result = FileReader(205).setEventHandlerAttribute(this, "load", arg0);
     }
   },
   {
@@ -233,8 +234,8 @@ const items = [
     get() {
       return FileReader(205).getEventHandlerAttribute(this, "loadstart");
     },
-    set(fn) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "loadstart", fn);
+    set(arg0) {
+      const result = FileReader(205).setEventHandlerAttribute(this, "loadstart", arg0);
     }
   },
   {
@@ -242,8 +243,8 @@ const items = [
     get() {
       return FileReader(205).getEventHandlerAttribute(this, "loadend");
     },
-    set(fn) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "loadend", fn);
+    set(arg0) {
+      const result = FileReader(205).setEventHandlerAttribute(this, "loadend", arg0);
     }
   },
   {
@@ -251,8 +252,8 @@ const items = [
     get() {
       return FileReader(205).getEventHandlerAttribute(this, "progress");
     },
-    set(fn) {
-      const result = FileReader(205).setEventHandlerAttribute(this, "progress", fn);
+    set(arg0) {
+      const result = FileReader(205).setEventHandlerAttribute(this, "progress", arg0);
     }
   }
 ];

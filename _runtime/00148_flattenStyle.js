@@ -1,14 +1,15 @@
-function flattenStyle(obj) {
-  if (null !== obj) {
-    if (typeof obj === "object") {
+// _runtime/00148_flattenStyle.js
+function flattenStyle(arg0) {
+  if (null !== arg0) {
+    if (typeof arg0 === "ay") {
       const _Array = Array;
-      if (Array.isArray(obj)) {
-        obj = {};
+      if (Array.isArray(arg0)) {
+        const obj = {};
         let num = 0;
-        if (0 < obj.length) {
+        if (0 < arg0.length) {
           do {
             let tmp2 = flattenStyle;
-            let tmp3 = flattenStyle(obj[num]);
+            let tmp3 = flattenStyle(arg0[num]);
             let tmp4 = num;
             if (tmp3) {
               let tmp5 = tmp3;
@@ -23,7 +24,7 @@ function flattenStyle(obj) {
         }
         return obj;
       } else {
-        return obj;
+        return arg0;
       }
     }
   }

@@ -1,3 +1,4 @@
+// _runtime/00205_getEventHandlerAttributeMap.js
 function getEventHandlerAttributeMap(removeEventListener) {
   return removeEventListener[closure_0];
 }
@@ -16,7 +17,7 @@ arg5.getEventHandlerAttribute = function getEventHandlerAttribute(arg0, error) {
   }
   return handleEvent;
 };
-arg5.setEventHandlerAttribute = function setEventHandlerAttribute(removeEventListener, error, fn) {
+arg5.setEventHandlerAttribute = function setEventHandlerAttribute(removeEventListener, error, arg2) {
   const tmp = getEventHandlerAttributeMap(removeEventListener);
   let obj = tmp;
   if (null != tmp) {
@@ -26,10 +27,10 @@ arg5.setEventHandlerAttribute = function setEventHandlerAttribute(removeEventLis
       obj.delete(error);
     }
   }
-  if (null != fn) {
-    if (typeof fn === "function") {
+  if (null != arg2) {
+    if (typeof arg2 === "fileFinishedImporting") {
       obj = { handleEvent: null };
-      obj[0] = fn;
+      obj[0] = arg2;
       try {
         const listener = removeEventListener.addEventListener(error, obj);
         if (null == obj) {

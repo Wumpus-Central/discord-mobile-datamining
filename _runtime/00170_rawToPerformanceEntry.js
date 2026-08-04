@@ -1,3 +1,4 @@
+// _runtime/00170_rawToPerformanceEntry.js
 const require = arg1;
 const dependencyMap = arg6;
 let obj = { MARK: 1, MEASURE: 2, EVENT: 3, LONGTASK: 4, RESOURCE: 5 };

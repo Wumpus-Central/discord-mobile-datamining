@@ -1,3 +1,4 @@
+// _runtime/00385__isNativeReflectConstruct.js
 import "_readOnlyError";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -95,7 +96,7 @@ let items = [
       const tmp = callback3(callback2(self.prototype), "start", this);
       self = tmp;
       let fn = tmp;
-      if (typeof tmp === "function") {
+      if (typeof tmp !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       const items = [_fromValue, _onUpdate, arg2, arg3, self];
@@ -165,7 +166,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback3(callback2(self.prototype), "stop", this);
-      if (typeof fn === "function") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);

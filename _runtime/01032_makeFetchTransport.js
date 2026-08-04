@@ -1,3 +1,4 @@
+// _runtime/01032_makeFetchTransport.js
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

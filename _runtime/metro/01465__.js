@@ -1,3 +1,4 @@
+// _runtime/metro/01465__.js
 
 export default (str, SEPARATOR, arg2, maxKeys) => {
   str = SEPARATOR;
@@ -9,12 +10,12 @@ export default (str, SEPARATOR, arg2, maxKeys) => {
     str2 = "=";
   }
   const obj = {};
-  if (typeof str === "string") {
+  if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
     if (0 !== str.length) {
       const parts = str.split(str);
       let tmp = maxKeys;
       if (maxKeys) {
-        tmp = typeof maxKeys.maxKeys === "number";
+        tmp = typeof maxKeys.maxKeys === "Object";
       }
       let num = 1000;
       if (tmp) {

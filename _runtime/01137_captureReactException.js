@@ -1,3 +1,4 @@
+// _runtime/01137_captureReactException.js
 import noop from "noop";
 
 function captureReactException(closure_1, closure_2, arg2) {

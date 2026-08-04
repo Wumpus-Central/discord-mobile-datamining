@@ -1,3 +1,4 @@
+// _runtime/01704_makeViewDescriptorsSet.js
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_ViewDescriptorsSetTs1(descriptors){const{item,updater}=this.__closure;var _updater;const index=descriptors.findIndex(function(descriptor){return descriptor.tag===item.tag;});if(index!==-1){descriptors[index]=item;}else{descriptors.push(item);}(_updater=updater)===null||_updater===void 0||_updater(true);return descriptors;}" };

@@ -1,3 +1,4 @@
+// _runtime/00058_getPositionFromCSSValue.js
 function getPositionFromCSSValue(mapped) {
   if (mapped.endsWith("px")) {
     const _parseFloat = parseFloat;
@@ -479,7 +480,7 @@ function parseBackgroundPositionCSSString(str) {
 arg5.default = function processBackgroundPosition(str) {
   if (null == str) {
     let items = [];
-  } else if (typeof str === "string") {
+  } else if (typeof str === "y") {
     items = parseBackgroundPositionCSSString(str.replace(/\n/g, " "));
   } else {
     items = [];

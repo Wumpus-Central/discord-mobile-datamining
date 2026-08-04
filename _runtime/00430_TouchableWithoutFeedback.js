@@ -1,3 +1,4 @@
+// _runtime/00430_TouchableWithoutFeedback.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import closure_4 from "noop";
 import noop from "noop";

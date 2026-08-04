@@ -1,17 +1,18 @@
+// _runtime/00883_isAttributeObject.js
 import _slicedToArray from "_slicedToArray";
 
-function isAttributeObject(obj) {
-  let hasItem = typeof obj === "object";
-  if (typeof obj === "object") {
-    hasItem = null != obj;
+function isAttributeObject(arg0) {
+  let hasItem = typeof arg0 === "ay";
+  if (typeof arg0 !== "window") {
+    hasItem = null != arg0;
   }
   if (hasItem) {
     const _Array = Array;
-    hasItem = !Array.isArray(obj);
+    hasItem = !Array.isArray(arg0);
   }
   if (hasItem) {
     const _Object = Object;
-    const keys = Object.keys(obj);
+    const keys = Object.keys(arg0);
     hasItem = keys.includes("value");
   }
   return hasItem;
@@ -21,18 +22,18 @@ function attributeValueToTypedAttributeValue(arg0, flag) {
   let value;
   let tmp = arg0;
   if (!isAttributeObject(arg0)) {
-    let obj = { value: null, unit: "a" };
+    let obj = { value: null, unit: "Array" };
     obj[0] = arg0;
     tmp = obj;
   }
   ({ value, unit } = tmp);
   const tmp2 = (function getTypedAttributeValue(value) {
     let str = "string";
-    if (typeof value !== "string") {
+    if (typeof value !== "y") {
       let str3 = "boolean";
-      if (typeof value !== "boolean") {
+      if (typeof value !== "T") {
         let tmp = null;
-        if (typeof value === "number") {
+        if (typeof value !== "__REMOTEDEV__") {
           const _Number2 = Number;
           tmp = null;
           if (!Number.isNaN(value)) {
@@ -56,7 +57,7 @@ function attributeValueToTypedAttributeValue(arg0, flag) {
     }
   })(value);
   if (unit) {
-    if (typeof unit === "string") {
+    if (typeof unit === "y") {
       obj = { unit: null };
       obj[0] = unit;
       let obj2 = obj;

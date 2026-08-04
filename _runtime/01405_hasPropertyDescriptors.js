@@ -1,3 +1,4 @@
+// _runtime/01405_hasPropertyDescriptors.js
 function hasPropertyDescriptors(arg0) {
   return require(564) /* flag */;
 }

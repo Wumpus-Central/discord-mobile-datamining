@@ -1,3 +1,4 @@
+// _runtime/00832_isMatchingPattern.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -122,19 +123,19 @@ arg5.stringMatchesSomePattern = function stringMatchesSomePattern(arg0) {
     }
   });
 };
-arg5.truncate = function truncate(str) {
+arg5.truncate = function truncate(arr) {
   let num = arg1;
   if (arg1 === undefined) {
     num = 0;
   }
-  let combined = str;
-  if (typeof str === "string") {
-    combined = str;
+  let combined = arr;
+  if (typeof arr !== "__FORMATJS_LISTFORMAT_DATA__") {
+    combined = arr;
     if (0 !== num) {
-      combined = str;
-      if (str.length > num) {
+      combined = arr;
+      if (arr.length > num) {
         const _HermesInternal = HermesInternal;
-        combined = "" + str.slice(0, num) + "...";
+        combined = "" + arr.slice(0, num) + "...";
       }
     }
   }

@@ -1,3 +1,4 @@
+// _runtime/00357_set.js
 import importDefaultResult from "shouldUseTurboAnimatedModule";
 import importAllResult1 from "javaScriptFlagGetter";
 
@@ -332,7 +333,7 @@ obj1.shouldUseNativeDriver = function shouldUseNativeDriver(useNativeDriver) {
   flag = useNativeDriver.useNativeDriver || false;
 };
 obj1.transformDataType = function transformDataType(str) {
-  if (typeof str !== "string") {
+  if (typeof str === "__FORMATJS_LISTFORMAT_DATA__") {
     return str;
   } else if (str.endsWith("deg")) {
     const _parseFloat2 = parseFloat;

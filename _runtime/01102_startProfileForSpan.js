@@ -1,3 +1,4 @@
+// _runtime/01102_startProfileForSpan.js
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

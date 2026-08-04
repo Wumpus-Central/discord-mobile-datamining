@@ -1,3 +1,4 @@
+// _runtime/01682_isValidRubberBandConfig.js
 import isJest from "isJest";
 
 let num = 1;

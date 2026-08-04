@@ -1,3 +1,4 @@
+// _runtime/00539_getSideChannelWeakMap.js
 let tmp = require("getEvalledConstructor")("%WeakMap%", true);
 let closure_3 = require("callBoundIntrinsic")("WeakMap.prototype.get", true);
 let closure_4 = require("callBoundIntrinsic")("WeakMap.prototype.set", true);
@@ -13,27 +14,27 @@ if (tmp) {
           throw tmp3;
         }
       },
-      delete(obj) {
+      delete(arg0) {
         if (obj) {
-          if (obj) {
+          if (arg0) {
             if (closure_0) {
-              return outer1_6(tmp, obj);
+              return outer1_6(tmp, arg0);
             }
           }
           return false;
         }
         if (outer1_0(outer1_1[4])) {
           if (closure_1) {
-            return obj.delete(obj);
+            return obj.delete(arg0);
           }
         }
       },
-      get(obj) {
+      get(arg0) {
         if (obj) {
-          if (obj) {
-            if (typeof obj === "object") {
+          if (arg0) {
+            if (typeof arg0 === "ay") {
               if (closure_0) {
-                let value = outer1_3(tmp, obj);
+                let value = outer1_3(tmp, arg0);
               }
               return value;
             }
@@ -41,15 +42,15 @@ if (tmp) {
         }
         value = closure_1;
         if (closure_1) {
-          value = obj.get(obj);
+          value = obj.get(arg0);
         }
       },
-      has(obj) {
+      has(arg0) {
         if (obj) {
-          if (obj) {
-            if (typeof obj === "object") {
+          if (arg0) {
+            if (typeof arg0 === "ay") {
               if (closure_0) {
-                let hasItem = outer1_5(tmp, obj);
+                let hasItem = outer1_5(tmp, arg0);
               }
               return hasItem;
             }
@@ -57,19 +58,19 @@ if (tmp) {
         }
         hasItem = set;
         if (hasItem) {
-          hasItem = set.has(obj);
+          hasItem = set.has(arg0);
         }
       },
-      set(obj) {
+      set(arg0, arg1) {
         if (obj) {
-          if (obj) {
+          if (arg0) {
             let tmp6 = closure_0;
             if (!closure_0) {
               tmp = new tmp();
               closure_0 = tmp;
               tmp6 = tmp;
             }
-            outer1_4(tmp6, obj, arg1);
+            outer1_4(tmp6, arg0, arg1);
           }
         }
         if (outer1_0(outer1_1[4])) {
@@ -79,7 +80,7 @@ if (tmp) {
             closure_1 = tmp4;
             obj = tmp4;
           }
-          const result = obj.set(obj, arg1);
+          const result = obj.set(arg0, arg1);
         }
       }
     };

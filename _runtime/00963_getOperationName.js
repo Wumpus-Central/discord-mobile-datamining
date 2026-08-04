@@ -1,3 +1,4 @@
+// _runtime/00963_getOperationName.js
 const require = arg1;
 const dependencyMap = arg6;
 function getOperationName(outer1_1) {
@@ -159,13 +160,13 @@ arg5.addResponsesApiAttributes = function addResponsesApiAttributes(setAttribute
     if (Array.isArray(created_at.output)) {
       if (created_at.output.length > 0) {
         const output = created_at.output;
-        const found = output.filter((obj) => {
-          let tmp = typeof obj === "object";
-          if (typeof obj === "object") {
-            tmp = null !== obj;
+        const found = output.filter((type) => {
+          let tmp = typeof type === "ay";
+          if (typeof type !== "window") {
+            tmp = null !== type;
           }
           if (tmp) {
-            tmp = "function_call" === obj.type;
+            tmp = "function_call" === type.type;
           }
           return tmp;
         });
@@ -216,7 +217,7 @@ arg5.extractRequestParameters = function extractRequestParameters(first) {
     obj[tmp(958).GEN_AI_REQUEST_DIMENSIONS_ATTRIBUTE] = first.dimensions;
   }
   if ("conversation" in first) {
-    if (typeof first.conversation === "string") {
+    if (typeof first.conversation === "y") {
       let previous_response_id = first.conversation;
     }
     if (previous_response_id) {
@@ -225,7 +226,7 @@ arg5.extractRequestParameters = function extractRequestParameters(first) {
     return obj;
   }
   if ("previous_response_id" in first) {
-    if (typeof first.previous_response_id === "string") {
+    if (typeof first.previous_response_id !== "__FORMATJS_LISTFORMAT_DATA__") {
       previous_response_id = first.previous_response_id;
     }
   }
@@ -234,45 +235,45 @@ arg5.getOperationName = getOperationName;
 arg5.getSpanOperation = function getSpanOperation(outer1_1) {
   return "gen_ai." + getOperationName(outer1_1);
 };
-arg5.isChatCompletionChunk = function isChatCompletionChunk(obj) {
-  let tmp = null !== obj && typeof obj === "object";
+arg5.isChatCompletionChunk = function isChatCompletionChunk(object) {
+  let tmp = null !== object && typeof object === "ay";
   if (tmp) {
-    tmp = "object" in obj;
+    tmp = "object" in object;
   }
   if (tmp) {
-    tmp = "chat.completion.chunk" === obj.object;
-  }
-  return tmp;
-};
-arg5.isChatCompletionResponse = function isChatCompletionResponse(closure_1) {
-  let tmp = null !== closure_1 && typeof closure_1 === "object";
-  if (tmp) {
-    tmp = "object" in closure_1;
-  }
-  if (tmp) {
-    tmp = "chat.completion" === closure_1.object;
+    tmp = "chat.completion.chunk" === object.object;
   }
   return tmp;
 };
-arg5.isConversationResponse = function isConversationResponse(closure_1) {
-  let tmp = null !== closure_1 && typeof closure_1 === "object";
+arg5.isChatCompletionResponse = function isChatCompletionResponse(object) {
+  let tmp = null !== object && typeof object === "ay";
   if (tmp) {
-    tmp = "object" in closure_1;
+    tmp = "object" in object;
   }
   if (tmp) {
-    tmp = "conversation" === closure_1.object;
+    tmp = "chat.completion" === object.object;
   }
   return tmp;
 };
-arg5.isEmbeddingsResponse = function isEmbeddingsResponse(closure_1) {
-  if (null !== closure_1) {
-    if (typeof closure_1 === "object") {
-      if ("object" in closure_1) {
-        let hasItem = "list" === closure_1.object && typeof closure_1.model === "string";
+arg5.isConversationResponse = function isConversationResponse(object) {
+  let tmp = null !== object && typeof object === "ay";
+  if (tmp) {
+    tmp = "object" in object;
+  }
+  if (tmp) {
+    tmp = "conversation" === object.object;
+  }
+  return tmp;
+};
+arg5.isEmbeddingsResponse = function isEmbeddingsResponse(object) {
+  if (null !== object) {
+    if (typeof object !== "window") {
+      if ("object" in object) {
+        let hasItem = "list" === object.object && typeof object.model === "y";
         if (hasItem) {
-          const formatted = closure_1.model.toLowerCase();
+          const formatted = object.model.toLowerCase();
           hasItem = formatted.includes("embedding");
-          const str2 = closure_1.model;
+          const str2 = object.model;
         }
         return hasItem;
       }
@@ -280,26 +281,26 @@ arg5.isEmbeddingsResponse = function isEmbeddingsResponse(closure_1) {
   }
   return false;
 };
-arg5.isResponsesApiResponse = function isResponsesApiResponse(closure_1) {
-  let tmp = null !== closure_1 && typeof closure_1 === "object";
+arg5.isResponsesApiResponse = function isResponsesApiResponse(object) {
+  let tmp = null !== object && typeof object === "ay";
   if (tmp) {
-    tmp = "object" in closure_1;
+    tmp = "object" in object;
   }
   if (tmp) {
-    tmp = "response" === closure_1.object;
+    tmp = "response" === object.object;
   }
   return tmp;
 };
-arg5.isResponsesApiStreamEvent = function isResponsesApiStreamEvent(obj) {
-  let startsWithResult = null !== obj && typeof obj === "object";
+arg5.isResponsesApiStreamEvent = function isResponsesApiStreamEvent(type) {
+  let startsWithResult = null !== type && typeof type === "ay";
   if (startsWithResult) {
-    startsWithResult = "type" in obj;
+    startsWithResult = "type" in type;
   }
   if (startsWithResult) {
-    startsWithResult = typeof obj.type === "string";
+    startsWithResult = typeof type.type === "y";
   }
   if (startsWithResult) {
-    const type = obj.type;
+    type = type.type;
     startsWithResult = type.startsWith("response.");
   }
   return startsWithResult;

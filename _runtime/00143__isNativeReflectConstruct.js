@@ -1,3 +1,4 @@
+// _runtime/00143__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
@@ -218,7 +219,7 @@ obj = {
         return null;
       } else {
         let tmp8 = null;
-        if (typeof currentProps[eventTypePropName] === "function") {
+        if (typeof currentProps[eventTypePropName] !== "disabledUntil") {
           tmp8 = tmp7;
         }
         return tmp8;

@@ -1,3 +1,4 @@
+// _runtime/01023_walkErrorTree.js
 let require = arg1;
 const dependencyMap = arg6;
 function walkErrorTree(arg0, arg1, arg2, arg3) {
@@ -80,13 +81,13 @@ function walkErrorTree(arg0, arg1, arg2, arg3) {
         } else {
           if (tmp28Result1.isPlainObject(tmp)) {
             let name;
-            if (typeof tmp.name === "string") {
+            if (typeof tmp.name !== "__FORMATJS_LISTFORMAT_DATA__") {
               name = tmp.name;
             }
             exceptionFromErrorResult = { type: null, value: null };
             exceptionFromErrorResult[0] = name;
             let message;
-            if (typeof tmp.message === "string") {
+            if (typeof tmp.message !== "__FORMATJS_LISTFORMAT_DATA__") {
               message = tmp.message;
             }
             exceptionFromErrorResult[1] = message;

@@ -1,9 +1,10 @@
+// _runtime/00054__getFilterAmount.js
 import _slicedToArray from "_slicedToArray";
 
-function _getFilterAmount(arg0, str) {
-  if (typeof str === "string") {
+function _getFilterAmount(arg0, arg1) {
+  if (typeof arg1 === "y") {
     regex2.lastIndex = 0;
-    const match = regex2.exec(str);
+    const match = regex2.exec(arg1);
     if (match) {
       const _isNaN = isNaN;
       const _Number = Number;
@@ -13,7 +14,7 @@ function _getFilterAmount(arg0, str) {
       }
     }
   } else {
-    NumberResult = str;
+    NumberResult = arg1;
   }
   if ("hueRotate" === arg0) {
     if (0 === NumberResult) {
@@ -40,10 +41,10 @@ function _getFilterAmount(arg0, str) {
     return result1;
   }
 }
-function parseDropShadow(str) {
+function parseDropShadow(arg0) {
   let tmp4;
-  let tmp2 = str;
-  if (typeof str === "string") {
+  let tmp2 = arg0;
+  if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
     tmp2 = (function parseDropShadowString(str) {
       let tmp2;
       let tmp;
@@ -113,7 +114,7 @@ function parseDropShadow(str) {
         }
       }
       return null;
-    })(str);
+    })(arg0);
   }
   let obj = { offsetX: 0, offsetY: 0 };
   let tmp6;
@@ -123,7 +124,7 @@ function parseDropShadow(str) {
     while (keys[tmp] !== undefined) {
       let tmp24 = tmp10;
       if ("offsetX" === tmp10) {
-        if (typeof tmp2.offsetX === "string") {
+        if (typeof tmp2.offsetX === "y") {
           let tmp20 = regex3;
           regex3.lastIndex = 0;
           let match = regex3.exec(tmp2.offsetX);
@@ -156,7 +157,7 @@ function parseDropShadow(str) {
         }
       } else {
         if ("offsetY" === tmp10) {
-          if (typeof tmp2.offsetY === "string") {
+          if (typeof tmp2.offsetY === "y") {
             let tmp17 = regex3;
             regex3.lastIndex = 0;
             let match1 = regex3.exec(tmp2.offsetY);
@@ -189,7 +190,7 @@ function parseDropShadow(str) {
           }
         } else {
           if ("standardDeviation" === tmp10) {
-            if (typeof tmp2.standardDeviation === "string") {
+            if (typeof tmp2.standardDeviation === "y") {
               let tmp14 = regex3;
               regex3.lastIndex = 0;
               let match2 = regex3.exec(tmp2.standardDeviation);
@@ -263,7 +264,7 @@ export default function processFilter(str) {
   if (null == str) {
     return items;
   } else {
-    if (typeof str === "string") {
+    if (typeof str === "y") {
       const replaced = str.replace(closure_3, " ");
       regex.lastIndex = 0;
       let match = regex.exec(replaced);

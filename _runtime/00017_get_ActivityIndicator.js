@@ -1,3 +1,4 @@
+// _runtime/00017_get_ActivityIndicator.js
 const obj = {};
 Object.defineProperty(obj, "ActivityIndicator", { get: () => require(18) /* ActivityIndicator */.default, set: undefined });
 Object.defineProperty(obj, "Button", { get: () => require(290) /* Button */.default, set: undefined });

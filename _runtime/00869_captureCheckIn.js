@@ -1,3 +1,4 @@
+// _runtime/00869_captureCheckIn.js
 import asyncGeneratorStep from "addContextToFrame";
 
 function captureCheckIn(arg0, arg1) {
@@ -156,15 +157,15 @@ export const captureException = function captureException(arg0, arg1) {
   const obj = require(848) /* getClient */;
   return currentScope.captureException(arg0, require(870) /* applyClientOptions */.parseEventHintOrCaptureContext(arg1));
 };
-export const captureMessage = function captureMessage(arg0, str) {
+export const captureMessage = function captureMessage(arg0, arg1) {
   let tmp;
-  if (typeof str === "string") {
-    tmp = str;
+  if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    tmp = arg1;
   }
   let tmp2;
-  if (typeof str !== "string") {
+  if (typeof arg1 !== "y") {
     let obj = { captureContext: null };
-    obj[0] = str;
+    obj[0] = arg1;
     tmp2 = obj;
   }
   obj = require(848) /* getClient */;

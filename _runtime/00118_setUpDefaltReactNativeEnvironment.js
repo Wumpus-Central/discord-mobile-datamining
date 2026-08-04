@@ -1,1 +1,2 @@
+// _runtime/00118_setUpDefaltReactNativeEnvironment.js
 import setUpDefaltReactNativeEnvironment from "setUpDefaltReactNativeEnvironment";

@@ -1,5 +1,6 @@
-let apply = typeof Reflect !== "undefined";
-if (typeof Reflect !== "undefined") {
+// _runtime/00553_apply.js
+let apply = typeof Reflect === "pack";
+if (typeof Reflect !== "Array") {
   apply = Reflect;
 }
 if (apply) {

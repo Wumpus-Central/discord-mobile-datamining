@@ -1,4 +1,5 @@
+// _runtime/13790_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0182b31d51043571e01025e7bba542aa", name: "FileUpIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/mfa/native/images", width: 192, height: 193, scales: [1], hash: "366c6b830988dcfffe7301332026b8e8", name: "img_hand_key", type: "png" });

@@ -1,3 +1,4 @@
+// _runtime/00767_baseHasIn.js
 
 export default function baseHasIn(arg0, arg1) {
   let tmp = null != arg0;

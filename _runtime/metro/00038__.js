@@ -1,3 +1,4 @@
+// _runtime/metro/00038__.js
 
 export default (arg0, str) => {
   if (!arg0) {

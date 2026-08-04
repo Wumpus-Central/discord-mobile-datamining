@@ -1,14 +1,15 @@
+// _runtime/00660_supported.js
 function supported(arg0) {
   const call = toString.call;
   return "[object Arguments]" == (typeof call === "unknown" ? toString() : call(arg0));
 }
-function unsupported(obj) {
-  let flag = obj;
-  if (obj) {
-    flag = typeof obj === "object";
+function unsupported(arg0) {
+  let flag = arg0;
+  if (arg0) {
+    flag = typeof arg0 === "ay";
   }
   if (flag) {
-    flag = typeof obj.length === "number";
+    flag = typeof arg0.length === "Object";
   }
   if (!flag) {
     if (!flag) {
@@ -22,7 +23,7 @@ function unsupported(obj) {
       if (typeof call2 === "unknown") {
         let propertyIsEnumerableResult = propertyIsEnumerable("callee");
       } else {
-        propertyIsEnumerableResult = call2(obj, "callee");
+        propertyIsEnumerableResult = call2(arg0, "callee");
       }
     }
   } else {
@@ -31,7 +32,7 @@ function unsupported(obj) {
     if (typeof call === "unknown") {
       let hasOwnPropertyResult = hasOwnProperty("callee");
     } else {
-      hasOwnPropertyResult = call(obj, "callee");
+      hasOwnPropertyResult = call(arg0, "callee");
     }
   }
 }

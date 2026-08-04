@@ -1,3 +1,4 @@
+// _runtime/00493_useAnimatedColor.js
 import { useRef } from "noop";
 
 

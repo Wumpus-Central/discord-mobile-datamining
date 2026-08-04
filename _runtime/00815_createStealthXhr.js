@@ -1,3 +1,4 @@
+// _runtime/00815_createStealthXhr.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.XHR_READYSTATE_DONE = 4;

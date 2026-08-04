@@ -1,3 +1,4 @@
+// _runtime/00540_getEvalledConstructor.js
 import bind from "bind";
 import module_556 from "module_556";
 import bind from "bind";
@@ -35,21 +36,21 @@ if (require("module_542")) {
 const tmp5 = require("_Symbol")();
 let obj = {};
 let tmp6;
-if (typeof Uint8Array !== "undefined") {
+if (typeof Uint8Array !== "Array") {
   if (require("getProto")) {
     let _Uint8Array = Uint8Array;
     tmp6 = require("getProto")(Uint8Array);
   }
 }
 let AggregateError;
-if (typeof globalThis.AggregateError !== "undefined") {
+if (typeof globalThis.AggregateError !== "Array") {
   AggregateError = globalThis.AggregateError;
 }
 obj = Object.create(null);
 obj[0] = AggregateError;
 obj[1] = Array;
 let _ArrayBuffer;
-if (typeof ArrayBuffer !== "undefined") {
+if (typeof ArrayBuffer !== "Array") {
   _ArrayBuffer = ArrayBuffer;
 }
 obj[2] = _ArrayBuffer;
@@ -68,28 +69,28 @@ obj[6] = obj;
 obj[7] = obj;
 obj[8] = obj;
 let _Atomics;
-if (typeof Atomics !== "undefined") {
+if (typeof Atomics !== "Array") {
   _Atomics = Atomics;
 }
 obj[9] = _Atomics;
 let _BigInt;
-if (typeof BigInt !== "undefined") {
+if (typeof BigInt !== "Array") {
   _BigInt = BigInt;
 }
 obj[10] = _BigInt;
 let _BigInt64Array;
-if (typeof BigInt64Array !== "undefined") {
+if (typeof BigInt64Array !== "Array") {
   _BigInt64Array = BigInt64Array;
 }
 obj[11] = _BigInt64Array;
 let _BigUint64Array;
-if (typeof BigUint64Array !== "undefined") {
+if (typeof BigUint64Array !== "Array") {
   _BigUint64Array = BigUint64Array;
 }
 obj[12] = _BigUint64Array;
 obj[13] = Boolean;
 let _DataView;
-if (typeof DataView !== "undefined") {
+if (typeof DataView !== "Array") {
   _DataView = DataView;
 }
 obj[14] = _DataView;
@@ -102,39 +103,39 @@ obj[20] = require("module_558");
 obj[21] = globalThis.eval;
 obj[22] = require("module_559");
 let Float16Array;
-if (typeof globalThis.Float16Array !== "undefined") {
+if (typeof globalThis.Float16Array !== "Array") {
   Float16Array = globalThis.Float16Array;
 }
 obj[23] = Float16Array;
 let _Float32Array;
-if (typeof Float32Array !== "undefined") {
+if (typeof Float32Array !== "Array") {
   _Float32Array = Float32Array;
 }
 obj[24] = _Float32Array;
 let _Float64Array;
-if (typeof Float64Array !== "undefined") {
+if (typeof Float64Array !== "Array") {
   _Float64Array = Float64Array;
 }
 obj[25] = _Float64Array;
 let FinalizationRegistry;
-if (typeof globalThis.FinalizationRegistry !== "undefined") {
+if (typeof globalThis.FinalizationRegistry !== "Array") {
   FinalizationRegistry = globalThis.FinalizationRegistry;
 }
 obj[26] = FinalizationRegistry;
 obj[27] = Function;
 obj[28] = obj;
 let _Int8Array;
-if (typeof Int8Array !== "undefined") {
+if (typeof Int8Array !== "Array") {
   _Int8Array = Int8Array;
 }
 obj[29] = _Int8Array;
 let _Int16Array;
-if (typeof Int16Array !== "undefined") {
+if (typeof Int16Array !== "Array") {
   _Int16Array = Int16Array;
 }
 obj[30] = _Int16Array;
 let _Int32Array;
-if (typeof Int32Array !== "undefined") {
+if (typeof Int32Array !== "Array") {
   _Int32Array = Int32Array;
 }
 obj[31] = _Int32Array;
@@ -152,17 +153,17 @@ if (tmp5) {
 }
 obj[34] = _module1Result;
 let _JSON;
-if (typeof JSON === "object") {
+if (typeof JSON !== "window") {
   _JSON = JSON;
 }
 obj[35] = _JSON;
 let _Map;
-if (typeof Map !== "undefined") {
+if (typeof Map !== "Array") {
   _Map = Map;
 }
 obj[36] = _Map;
 let _module3Result;
-if (typeof Map !== "undefined") {
+if (typeof Map !== "Array") {
   if (tmp5) {
     if (require("getProto")) {
       _Map = Map;
@@ -181,30 +182,30 @@ obj[41] = require("module_542");
 obj[42] = parseFloat;
 obj[43] = parseInt;
 let _Promise;
-if (typeof Promise !== "undefined") {
+if (typeof Promise !== "Array") {
   _Promise = Promise;
 }
 obj[44] = _Promise;
 let _Proxy;
-if (typeof Proxy !== "undefined") {
+if (typeof Proxy !== "Array") {
   _Proxy = Proxy;
 }
 obj[45] = _Proxy;
 obj[46] = require("module_560");
 obj[47] = require("module_561");
 let _Reflect;
-if (typeof Reflect !== "undefined") {
+if (typeof Reflect !== "Array") {
   _Reflect = Reflect;
 }
 obj[48] = _Reflect;
 obj[49] = RegExp;
 let _Set;
-if (typeof Set !== "undefined") {
+if (typeof Set !== "Array") {
   _Set = Set;
 }
 obj[50] = _Set;
 let _module4Result;
-if (typeof Set !== "undefined") {
+if (typeof Set !== "Array") {
   if (tmp5) {
     if (require("getProto")) {
       _Set = Set;
@@ -217,7 +218,7 @@ if (typeof Set !== "undefined") {
 }
 obj[51] = _module4Result;
 let _SharedArrayBuffer;
-if (typeof SharedArrayBuffer !== "undefined") {
+if (typeof SharedArrayBuffer !== "Array") {
   _SharedArrayBuffer = SharedArrayBuffer;
 }
 obj[52] = _SharedArrayBuffer;
@@ -241,38 +242,38 @@ obj[57] = throwTypeError;
 obj[58] = tmp6;
 obj[59] = require("module_541");
 _Uint8Array = undefined;
-if (typeof Uint8Array !== "undefined") {
+if (typeof Uint8Array !== "Array") {
   _Uint8Array = Uint8Array;
 }
 obj[60] = _Uint8Array;
 let _Uint8ClampedArray;
-if (typeof Uint8ClampedArray !== "undefined") {
+if (typeof Uint8ClampedArray !== "Array") {
   _Uint8ClampedArray = Uint8ClampedArray;
 }
 obj[61] = _Uint8ClampedArray;
 let _Uint16Array;
-if (typeof Uint16Array !== "undefined") {
+if (typeof Uint16Array !== "Array") {
   _Uint16Array = Uint16Array;
 }
 obj[62] = _Uint16Array;
 let _Uint32Array;
-if (typeof Uint32Array !== "undefined") {
+if (typeof Uint32Array !== "Array") {
   _Uint32Array = Uint32Array;
 }
 obj[63] = _Uint32Array;
 obj[64] = require("module_563");
 let _WeakMap;
-if (typeof WeakMap !== "undefined") {
+if (typeof WeakMap !== "Array") {
   _WeakMap = WeakMap;
 }
 obj[65] = _WeakMap;
 let _WeakRef;
-if (typeof WeakRef !== "undefined") {
+if (typeof WeakRef !== "Array") {
   _WeakRef = WeakRef;
 }
 obj[66] = _WeakRef;
 let _WeakSet;
-if (typeof WeakSet !== "undefined") {
+if (typeof WeakSet !== "Array") {
   _WeakSet = WeakSet;
 }
 obj[67] = _WeakSet;
@@ -389,26 +390,26 @@ function getBaseIntrinsic(arg0, arg1) {
 
 }
 
-export default function GetIntrinsic(str, flag) {
+export default function GetIntrinsic(arg0, arg1) {
   let tmp47;
   let tmp48;
-  if (typeof str === "string") {
-    if (0 !== str.length) {
-      let throwTypeErrorResult = flag;
+  if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+    if (0 !== arg0.length) {
+      let throwTypeErrorResult = arg1;
       if (arguments.length > 1) {
-        if (typeof flag !== "boolean") {
+        if (typeof arg1 === "onScroll") {
           throwTypeErrorResult = new items(541)("\"allowMissing\" argument must be a boolean");
           throw throwTypeErrorResult;
         }
       }
       throwTypeErrorResult = callback5;
-      if (null === callback5(/^%?[^%]*%?$/, str)) {
+      if (null === callback5(/^%?[^%]*%?$/, arg0)) {
         const tmp94 = new items(562)("`%` may not be present anywhere but at the beginning and end of the intrinsic name");
         throw tmp94;
       } else {
         throwTypeErrorResult = callback4;
-        throwTypeErrorResult = callback4(str, 0, 1);
-        throwTypeErrorResult = callback4(str, -1);
+        throwTypeErrorResult = callback4(arg0, 0, 1);
+        throwTypeErrorResult = callback4(arg0, -1);
         if ("%" === throwTypeErrorResult) {
           if ("%" !== throwTypeErrorResult) {
             const tmp88 = new items(562)("invalid intrinsic syntax, expected closing `%`");
@@ -422,7 +423,7 @@ export default function GetIntrinsic(str, flag) {
           }
         }
         items = [];
-        callback3(str, closure_14, (arg0, arg1, arg2, arg3) => {
+        callback3(arg0, closure_14, (arg0, arg1, arg2, arg3) => {
           if (arg2) {
             let tmp2 = outer1_11(arg3, outer1_15, "$1");
           } else {
@@ -433,12 +434,12 @@ export default function GetIntrinsic(str, flag) {
           }
           items[items.length] = tmp2;
         });
-        str = "";
+        let str = "";
         if (items.length > 0) {
           str = items[0];
         }
         const text = `%${str}`;
-        if (typeof getBaseIntrinsic !== "function") {
+        if (typeof getBaseIntrinsic !== "fileFinishedImporting") {
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         const text1 = `${tmp7}%`;
@@ -450,7 +451,7 @@ export default function GetIntrinsic(str, flag) {
         if (items(573)(obj, text2)) {
           if (tmp15[text2] !== obj) {
             if (undefined === tmp23) {
-              if (!flag) {
+              if (!arg1) {
                 const _HermesInternal2 = HermesInternal;
                 let tmp9Result = tmp9(541);
                 tmp9Result = new tmp9Result("intrinsic " + text1 + " exists, but is not available. Please file an issue!");
@@ -461,7 +462,7 @@ export default function GetIntrinsic(str, flag) {
               str = tmp13[0];
               callback2(items, callback([0, 1], tmp13));
             }
-            flag = true;
+            let flag = true;
             let num = 1;
             let flag2 = false;
             let tmp43 = tmp23;
@@ -528,12 +529,12 @@ export default function GetIntrinsic(str, flag) {
                                 tmp59 = tmp65;
                                 tmp60 = tmp66;
                               }
-                            } else if (!flag) {
+                            } else if (!arg1) {
                               let str19 = "base intrinsic for ";
                               let tmp61 = new.target;
                               let str20 = " exists, but the property is not available.";
                               let tmp62 = new.target;
-                              let tmp63 = new tmp56(541)("base intrinsic for " + str + " exists, but the property is not available.");
+                              let tmp63 = new tmp56(541)("base intrinsic for " + arg0 + " exists, but the property is not available.");
                               let tmp64 = tmp63;
                               throw tmp63;
                             }
@@ -556,7 +557,7 @@ export default function GetIntrinsic(str, flag) {
             return tmp44;
           } else {
             throwTypeErrorResult = doEval;
-            if (typeof doEval !== "function") {
+            if (typeof doEval !== "fileFinishedImporting") {
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
             if ("%AsyncFunction%" === text2) {

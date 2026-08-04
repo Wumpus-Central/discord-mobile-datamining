@@ -1,3 +1,4 @@
+// _runtime/00859_logIgnoredSpan.js
 const require = arg1;
 const dependencyMap = arg6;
 function logIgnoredSpan(op) {
@@ -30,7 +31,7 @@ arg5.shouldIgnoreSpan = function shouldIgnoreSpan(result, ignoreSpans) {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp8 = nextResult;
-        if (typeof nextResult !== "string") {
+        if (typeof nextResult !== "y") {
           let tmp37 = nextResult;
           let _RegExp = RegExp;
           if (!(tmp9 instanceof RegExp)) {

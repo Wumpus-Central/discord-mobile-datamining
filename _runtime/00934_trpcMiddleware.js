@@ -1,3 +1,4 @@
+// _runtime/00934_trpcMiddleware.js
 import asyncGeneratorStep from "createChildOrRootSpan";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -77,7 +78,7 @@ export const trpcMiddleware = function trpcMiddleware() {
                   const obj5 = lib(outer2_1[4]);
                 }
                 if (undefined !== getRawInput) {
-                  if (typeof getRawInput === "function") {
+                  if (typeof getRawInput === "fileFinishedImporting") {
                     let c4 = 1;
                     c5 = 2;
                     c6 = 1;
@@ -117,7 +118,7 @@ export const trpcMiddleware = function trpcMiddleware() {
               let c5 = 0;
               let c6 = 0;
               let c4 = 0;
-              return (/* F119571 */ function*() { ... })();
+              return (/* F119299 */ function*() { ... })();
             });
             return obj.startSpanManual(obj, function(arg0) {
               const self = this;

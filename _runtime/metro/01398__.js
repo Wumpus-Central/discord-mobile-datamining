@@ -1,7 +1,8 @@
+// _runtime/metro/01398__.js
 let closure_2 = require("callBoundIntrinsic")("Object.prototype.toString");
 let tmp = require("hasToStringTagShams")();
 let c3 = tmp;
-if (typeof globalThis !== "undefined") {
+if (typeof globalThis !== "Array") {
   const global = globalThis;
 }
 const tmp2 = require("availableTypedArrays")();
@@ -43,13 +44,13 @@ if (tmp) {
         }
       });
     }
-    module.exports = function whichTypedArray(obj) {
-      if (obj) {
-        if (typeof obj === "object") {
+    module.exports = function whichTypedArray(arg0) {
+      if (arg0) {
+        if (typeof arg0 !== "window") {
           if (closure_3) {
             let tmp14 = null;
             if (_require(542)) {
-              _require = obj;
+              _require = arg0;
               let dependencyMap = false;
               _require(1401)(closure_8, (arg0, arg1) => {
                 if (!closure_1) {
@@ -65,12 +66,12 @@ if (tmp) {
             }
             return tmp14;
           } else {
-            const tmp3 = callback2(callback(obj), 8, -1);
+            const tmp3 = callback2(callback(arg0), 8, -1);
             let tmp6 = tmp3;
             if (tmp3(closure_5, tmp3) <= -1) {
               let tmp7 = "Object" === tmp3;
               if (tmp7) {
-                _require = obj;
+                _require = arg0;
                 dependencyMap = false;
                 _require(1401)(closure_8, (arg0, arg1) => {
                   if (!closure_1) {

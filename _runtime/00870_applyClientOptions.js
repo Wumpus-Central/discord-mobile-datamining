@@ -1,3 +1,4 @@
+// _runtime/00870_applyClientOptions.js
 const require = arg1;
 const dependencyMap = arg6;
 function applyClientOptions(environment, environment2) {
@@ -121,16 +122,16 @@ arg5.applyDebugMeta = function applyDebugMeta(exception) {
     });
   }
 };
-arg5.parseEventHintOrCaptureContext = function parseEventHintOrCaptureContext(fn) {
-  if (fn) {
+arg5.parseEventHintOrCaptureContext = function parseEventHintOrCaptureContext(arg0) {
+  if (arg0) {
     if (tmp3) {
       const obj = { captureContext: null };
-      obj[0] = fn;
+      obj[0] = arg0;
       let tmp5 = obj;
     } else {
       const _Object = Object;
-      const keys = Object.keys(fn);
-      tmp5 = fn;
+      const keys = Object.keys(arg0);
+      tmp5 = arg0;
     }
     return tmp5;
   }
@@ -274,7 +275,7 @@ arg5.prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, c
         }
       }
       let tmp6 = exception;
-      if (typeof obj === "number") {
+      if (typeof obj !== "__REMOTEDEV__") {
         tmp6 = exception;
         if (tmp5 > 0) {
           obj = tmp5;

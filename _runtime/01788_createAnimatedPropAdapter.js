@@ -1,3 +1,4 @@
+// _runtime/01788_createAnimatedPropAdapter.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.createAnimatedPropAdapter = function createAnimatedPropAdapter(arg0, arr) {

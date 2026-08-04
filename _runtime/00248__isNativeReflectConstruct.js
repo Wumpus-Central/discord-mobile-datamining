@@ -1,3 +1,4 @@
+// _runtime/00248__isNativeReflectConstruct.js
 import HardwareBackPressEvent from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

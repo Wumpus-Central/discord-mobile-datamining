@@ -1,3 +1,4 @@
+// _runtime/00612_objectToString.js
 
 export default function objectToString(arg0) {
   const call = toString.call;

@@ -1,14 +1,15 @@
-arg5.default = function sha1(str) {
+// _runtime/00527_sha1.js
+arg5.default = function sha1(arg0) {
   let length;
   let tmp20;
   let tmp21;
   let tmp22;
   let tmp23;
   let tmp24;
-  if (typeof str === "string") {
+  if (typeof arg0 === "y") {
     const _unescape = unescape;
     const _encodeURIComponent = encodeURIComponent;
-    const unescapeResult = unescape(encodeURIComponent(str));
+    const unescapeResult = unescape(encodeURIComponent(arg0));
     const items = [];
     let num = 0;
     let arr = items;
@@ -22,11 +23,11 @@ arg5.default = function sha1(str) {
     }
   } else {
     const _Array2 = Array;
-    arr = str;
-    if (!Array.isArray(str)) {
+    arr = arg0;
+    if (!Array.isArray(arg0)) {
       const _Array = Array;
       const call = slice.call;
-      arr = typeof call === "unknown" ? slice() : call(str);
+      arr = typeof call === "unknown" ? slice() : call(arg0);
     }
   }
   arr = arr.push(128);

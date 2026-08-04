@@ -1,4 +1,5 @@
-let closure_0 = { x: "body", y: "useStateFromStores" };
+// _runtime/00078_pointsDiffer.js
+let closure_0 = { x: "Array", y: "HermesInternal" };
 arg5.default = function pointsDiffer(arg0, arg1) {
   let point = arg0;
   if (!arg0) {

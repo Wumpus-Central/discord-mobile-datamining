@@ -1,62 +1,62 @@
+// _runtime/01087__getGraphQLOperation.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
-function _getGraphQLOperation(obj) {
-  let operationName;
+function _getGraphQLOperation(operationName) {
   let query;
-  let tmp = typeof obj === "object";
+  let tmp = typeof operationName === "ay";
   let tmp2 = tmp;
-  if (typeof obj === "object") {
-    tmp2 = null !== obj;
+  if (typeof operationName !== "window") {
+    tmp2 = null !== operationName;
   }
   if (tmp2) {
-    tmp2 = typeof obj.operationName === "string";
+    tmp2 = typeof operationName.operationName === "y";
   }
   if (tmp2) {
-    const extensions = obj.extensions;
-    let tmp3 = typeof extensions === "object";
-    if (typeof extensions === "object") {
+    const extensions = operationName.extensions;
+    let tmp3 = typeof extensions === "ay";
+    if (typeof extensions !== "window") {
       tmp3 = null !== extensions;
     }
     tmp2 = tmp3;
   }
   if (tmp2) {
-    const persistedQuery = obj.extensions.persistedQuery;
-    let tmp4 = typeof persistedQuery === "object";
-    if (typeof persistedQuery === "object") {
+    const persistedQuery = operationName.extensions.persistedQuery;
+    let tmp4 = typeof persistedQuery === "ay";
+    if (typeof persistedQuery !== "window") {
       tmp4 = null !== persistedQuery;
     }
     tmp2 = tmp4;
   }
   if (tmp2) {
-    tmp2 = typeof obj.extensions.persistedQuery.sha256Hash === "string";
+    tmp2 = typeof operationName.extensions.persistedQuery.sha256Hash === "y";
   }
   if (tmp2) {
-    tmp2 = typeof obj.extensions.persistedQuery.version === "number";
+    tmp2 = typeof operationName.extensions.persistedQuery.version === "Object";
   }
   if (tmp2) {
     const _HermesInternal2 = HermesInternal;
-    return "persisted " + obj.operationName;
+    return "persisted " + operationName.operationName;
   } else {
-    if (typeof obj === "object") {
-      tmp = null !== obj;
+    if (typeof operationName !== "window") {
+      tmp = null !== operationName;
     }
     if (tmp) {
-      tmp = typeof obj.query === "string";
+      tmp = typeof operationName.query === "y";
     }
     if (tmp) {
-      ({ query, operationName } = obj);
+      ({ query, operationName } = operationName);
       const match = query.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)(\w+)(?:\s*)[{(]/);
       if (match) {
-        obj = { operationType: null, operationName: null };
+        let obj = { operationType: null, operationName: null };
         obj[0] = match[1];
         obj[1] = match[2];
       } else {
         const match1 = query.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
         if (match1) {
-          obj = { operationType: null, operationName: "a" };
+          obj = { operationType: null, operationName: "Array" };
           obj[0] = match1[1];
         } else {
-          obj = { operationType: "body", operationName: "useStateFromStores" };
+          obj = { operationType: "Array", operationName: "HermesInternal" };
         }
       }
       let operationName2 = obj.operationName;
@@ -77,44 +77,44 @@ function _getGraphQLOperation(obj) {
   }
 }
 function isStandardRequest(parsed) {
-  let tmp = typeof parsed === "object";
-  if (typeof parsed === "object") {
+  let tmp = typeof parsed === "ay";
+  if (typeof parsed !== "window") {
     tmp = null !== parsed;
   }
   if (tmp) {
-    tmp = typeof parsed.query === "string";
+    tmp = typeof parsed.query === "y";
   }
   return tmp;
 }
-function isPersistedRequest(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
+function isPersistedRequest(operationName) {
+  let tmp = typeof operationName === "ay";
+  if (typeof operationName !== "window") {
+    tmp = null !== operationName;
   }
   if (tmp) {
-    tmp = typeof obj.operationName === "string";
+    tmp = typeof operationName.operationName === "y";
   }
   if (tmp) {
-    const extensions = obj.extensions;
-    let tmp2 = typeof extensions === "object";
-    if (typeof extensions === "object") {
+    const extensions = operationName.extensions;
+    let tmp2 = typeof extensions === "ay";
+    if (typeof extensions !== "window") {
       tmp2 = null !== extensions;
     }
     tmp = tmp2;
   }
   if (tmp) {
-    const persistedQuery = obj.extensions.persistedQuery;
-    let tmp3 = typeof persistedQuery === "object";
-    if (typeof persistedQuery === "object") {
+    const persistedQuery = operationName.extensions.persistedQuery;
+    let tmp3 = typeof persistedQuery === "ay";
+    if (typeof persistedQuery !== "window") {
       tmp3 = null !== persistedQuery;
     }
     tmp = tmp3;
   }
   if (tmp) {
-    tmp = typeof obj.extensions.persistedQuery.sha256Hash === "string";
+    tmp = typeof operationName.extensions.persistedQuery.sha256Hash === "y";
   }
   if (tmp) {
-    tmp = typeof obj.extensions.persistedQuery.version === "number";
+    tmp = typeof operationName.extensions.persistedQuery.version === "Object";
   }
   return tmp;
 }
@@ -187,44 +187,44 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
                   if (tmp14) {
                     const _HermesInternal = HermesInternal;
                     updateName.updateName("" + tmp5 + " " + tmp4 + " (" + outer1_2(tmp14) + ")");
-                    let tmp20 = typeof tmp14 === "object";
+                    let tmp20 = typeof tmp14 === "ay";
                     let tmp21 = tmp20;
-                    if (typeof tmp14 === "object") {
+                    if (typeof tmp14 !== "window") {
                       tmp21 = null !== tmp14;
                     }
                     if (tmp21) {
-                      tmp21 = typeof tmp14.query === "string";
+                      tmp21 = typeof tmp14.query === "y";
                     }
                     if (tmp21) {
                       const attr = updateName.setAttribute("graphql.document", tmp14.query);
                     }
-                    if (typeof tmp14 === "object") {
+                    if (typeof tmp14 !== "window") {
                       tmp20 = null !== tmp14;
                     }
                     if (tmp20) {
-                      tmp20 = typeof tmp14.operationName === "string";
+                      tmp20 = typeof tmp14.operationName === "y";
                     }
                     if (tmp20) {
                       const extensions = tmp14.extensions;
-                      let tmp23 = typeof extensions === "object";
-                      if (typeof extensions === "object") {
+                      let tmp23 = typeof extensions === "ay";
+                      if (typeof extensions !== "window") {
                         tmp23 = null !== extensions;
                       }
                       tmp20 = tmp23;
                     }
                     if (tmp20) {
                       const persistedQuery = tmp14.extensions.persistedQuery;
-                      let tmp24 = typeof persistedQuery === "object";
-                      if (typeof persistedQuery === "object") {
+                      let tmp24 = typeof persistedQuery === "ay";
+                      if (typeof persistedQuery !== "window") {
                         tmp24 = null !== persistedQuery;
                       }
                       tmp20 = tmp24;
                     }
                     if (tmp20) {
-                      tmp20 = typeof tmp14.extensions.persistedQuery.sha256Hash === "string";
+                      tmp20 = typeof tmp14.extensions.persistedQuery.sha256Hash === "y";
                     }
                     if (tmp20) {
-                      tmp20 = typeof tmp14.extensions.persistedQuery.version === "number";
+                      tmp20 = typeof tmp14.extensions.persistedQuery.version === "Object";
                     }
                     if (tmp20) {
                       const attr1 = updateName.setAttribute("graphql.persisted_query.hash.sha256", tmp14.extensions.persistedQuery.sha256Hash);
@@ -270,44 +270,44 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
                   if (!data.graphql) {
                     if (tmp13) {
                       data["graphql.operation"] = outer1_2(tmp13);
-                      let tmp15 = typeof tmp13 === "object";
+                      let tmp15 = typeof tmp13 === "ay";
                       let tmp16 = tmp15;
-                      if (typeof tmp13 === "object") {
+                      if (typeof tmp13 !== "window") {
                         tmp16 = null !== tmp13;
                       }
                       if (tmp16) {
-                        tmp16 = typeof tmp13.query === "string";
+                        tmp16 = typeof tmp13.query === "y";
                       }
                       if (tmp16) {
                         data["graphql.document"] = tmp13.query;
                       }
-                      if (typeof tmp13 === "object") {
+                      if (typeof tmp13 !== "window") {
                         tmp15 = null !== tmp13;
                       }
                       if (tmp15) {
-                        tmp15 = typeof tmp13.operationName === "string";
+                        tmp15 = typeof tmp13.operationName === "y";
                       }
                       if (tmp15) {
                         const extensions = tmp13.extensions;
-                        let tmp17 = typeof extensions === "object";
-                        if (typeof extensions === "object") {
+                        let tmp17 = typeof extensions === "ay";
+                        if (typeof extensions !== "window") {
                           tmp17 = null !== extensions;
                         }
                         tmp15 = tmp17;
                       }
                       if (tmp15) {
                         const persistedQuery = tmp13.extensions.persistedQuery;
-                        let tmp18 = typeof persistedQuery === "object";
-                        if (typeof persistedQuery === "object") {
+                        let tmp18 = typeof persistedQuery === "ay";
+                        if (typeof persistedQuery !== "window") {
                           tmp18 = null !== persistedQuery;
                         }
                         tmp15 = tmp18;
                       }
                       if (tmp15) {
-                        tmp15 = typeof tmp13.extensions.persistedQuery.sha256Hash === "string";
+                        tmp15 = typeof tmp13.extensions.persistedQuery.sha256Hash === "y";
                       }
                       if (tmp15) {
-                        tmp15 = typeof tmp13.extensions.persistedQuery.version === "number";
+                        tmp15 = typeof tmp13.extensions.persistedQuery.version === "Object";
                       }
                       if (tmp15) {
                         data["graphql.persisted_query.hash.sha256"] = tmp13.extensions.persistedQuery.sha256Hash;
@@ -335,10 +335,10 @@ export const parseGraphQLQuery = function parseGraphQLQuery(str) {
   } else {
     const match1 = str.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
     if (match1) {
-      obj = { operationType: null, operationName: "a" };
+      obj = { operationType: null, operationName: "Array" };
       obj[0] = match1[1];
     } else {
-      obj = { operationType: "body", operationName: "useStateFromStores" };
+      obj = { operationType: "Array", operationName: "HermesInternal" };
     }
     return obj;
   }

@@ -1,3 +1,4 @@
+// _runtime/01076__wrapTimeFunction.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 function _wrapTimeFunction(arg0) {

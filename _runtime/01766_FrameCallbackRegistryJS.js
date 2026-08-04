@@ -1,3 +1,4 @@
+// _runtime/01766_FrameCallbackRegistryJS.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

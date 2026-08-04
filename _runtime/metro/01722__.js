@@ -1,3 +1,4 @@
+// _runtime/metro/01722__.js
 import startObservingProgress from "startObservingProgress";
 
 for (const key10015 in require("BaseAnimationBuilder")) {

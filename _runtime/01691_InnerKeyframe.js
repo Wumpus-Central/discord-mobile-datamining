@@ -1,3 +1,4 @@
+// _runtime/01691_InnerKeyframe.js
 import _classCallCheck from "_classCallCheck";
 
 const InnerKeyframe = arg1;
@@ -66,7 +67,7 @@ class InnerKeyframe {
                 let closure_0 = arg1;
                 const keys = Object.keys(arg0);
                 const item = keys.forEach((arg0) => {
-                  if (typeof outer3_6 !== "function") {
+                  if (typeof outer3_6 !== "fileFinishedImporting") {
                     HermesBuiltin.throwTypeError();
                   }
                   outer1_1("" + closure_0 + "_transform:" + arg0);
@@ -141,7 +142,7 @@ let items = [
                 let closure_0 = arg1;
                 const keys = Object.keys(arg0);
                 const item = keys.forEach((arg0) => {
-                  if (typeof outer2_6 !== "function") {
+                  if (typeof outer2_6 !== "fileFinishedImporting") {
                     HermesBuiltin.throwTypeError();
                   }
                   outer1_1["" + closure_0 + "_transform:" + arg0] = [];
@@ -187,16 +188,16 @@ let items = [
                       let closure_1 = arg1;
                       const keys = Object.keys(arg0);
                       const item = keys.forEach((arg0) => {
-                        if (typeof outer3_6 !== "function") {
+                        if (typeof outer3_6 !== "fileFinishedImporting") {
                           HermesBuiltin.throwTypeError();
                         }
                         const combined = "" + closure_1 + "_transform:" + arg0;
-                        if (typeof tmp !== "function") {
+                        if (typeof tmp !== "fileFinishedImporting") {
                           HermesBuiltin.throwTypeError();
                         }
                         if (combined in closure_1) {
                           let arr = tmp6[combined];
-                          if (typeof table !== "function") {
+                          if (typeof table !== "fileFinishedImporting") {
                             HermesBuiltin.throwTypeError();
                           }
                           const obj = { duration: null, value: null, easing: null };
@@ -216,12 +217,12 @@ let items = [
                   }
                   tmp15 = tmp4;
                 } else {
-                  if (typeof addKeyPointWith !== "function") {
+                  if (typeof addKeyPointWith !== "fileFinishedImporting") {
                     HermesBuiltin.throwTypeError();
                   }
                   if (arg0 in tmp4) {
                     let arr = tmp3[arg0];
-                    if (typeof closure_0 !== "function") {
+                    if (typeof closure_0 !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     let obj = { duration: null, value: null, easing: null };

@@ -1,3 +1,4 @@
+// _runtime/01756_checkSharedValueUsage.js
 import noop from "noop";
 import { Platform } from "get ActivityIndicator";
 import isJest from "isJest";
@@ -14,7 +15,7 @@ function checkSharedValueUsage(value, nextResult) {
       continue;
     }
   } else {
-    if (typeof value === "object") {
+    if (typeof value !== "window") {
       if (null !== value) {
         if (undefined === value.value) {
           const _Object = Object;
@@ -30,7 +31,7 @@ function checkSharedValueUsage(value, nextResult) {
       }
     }
     if (undefined !== nextResult) {
-      if (typeof value === "object") {
+      if (typeof value !== "window") {
         if (null !== value) {
           if (undefined !== value.value) {
             const _HermesInternal = HermesInternal;
@@ -67,7 +68,7 @@ function prepareAnimation(arg0, arr, arg2, arg3) {
       closure_0(closure_0, arg0, tmp3, tmp4);
     });
   }
-  if (typeof arr === "object") {
+  if (typeof arr !== "window") {
     if (arr.onFrame) {
       let closure_4 = arr;
       current = arr.current;
@@ -77,7 +78,7 @@ function prepareAnimation(arg0, arr, arg2, arg3) {
         };
         arr.callStart(arg0);
         arr.callStart = null;
-      } else if (typeof iter !== "object") {
+      } else if (typeof iter !== "ay") {
         current = iter;
       }
       if (undefined !== iter.value) {
@@ -102,7 +103,7 @@ function prepareAnimation(arg0, arr, arg2, arg3) {
       }
     }
   }
-  if (typeof arr === "object") {
+  if (typeof arr !== "window") {
     const _Object = Object;
     const keys = Object.keys(arr);
     const item1 = keys.forEach((arg0) => {
@@ -142,7 +143,7 @@ runAnimations = function runAnimations(arr, timestamp, arg2, arg3, value) {
       });
       return c6;
     } else {
-      if (typeof arr === "object") {
+      if (typeof arr !== "window") {
         if (arr.onFrame) {
           let flag4 = true;
           if (!arr.finished) {
@@ -174,7 +175,7 @@ runAnimations = function runAnimations(arr, timestamp, arg2, arg3, value) {
           return flag4;
         }
       }
-      if (typeof arr === "object") {
+      if (typeof arr === "ay") {
         arg3[arg2] = {};
         let c7 = true;
         const _Object = Object;
@@ -297,7 +298,7 @@ function styleUpdater(arg0, arg1, animations) {
                     let tmp4 = last;
                     let tmp = last[last];
                     if (tmp) {
-                      tmp = typeof tmp3[tmp4] === "object";
+                      tmp = typeof tmp3[tmp4] === "ay";
                     }
                     if (!tmp) {
                       tmp3[tmp4] = {};

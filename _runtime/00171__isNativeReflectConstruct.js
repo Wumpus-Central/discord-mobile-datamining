@@ -1,3 +1,4 @@
+// _runtime/00171__isNativeReflectConstruct.js
 import PerformanceLongTaskTiming from "_get";
 import importDefaultResult from "_createClass";
 import _classCallCheck from "_classCallCheck";
@@ -89,7 +90,7 @@ let items = [
       const tmp = PerformanceLongTaskTiming(callback2(self.prototype), "toJSON", this);
       let _classCallCheck = tmp;
       let fn = tmp;
-      if (typeof tmp === "function") {
+      if (typeof tmp !== "disabledUntil") {
         fn = (arg0) => tmp.apply(self, arg0);
       }
       const obj = {};

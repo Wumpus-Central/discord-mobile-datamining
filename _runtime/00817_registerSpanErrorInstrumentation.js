@@ -1,3 +1,4 @@
+// _runtime/00817_registerSpanErrorInstrumentation.js
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const registerSpanErrorInstrumentation = require("registerSpanErrorInstrumentation").registerSpanErrorInstrumentation;

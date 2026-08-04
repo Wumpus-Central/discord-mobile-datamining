@@ -1,3 +1,4 @@
+// _runtime/01060_onHidden.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

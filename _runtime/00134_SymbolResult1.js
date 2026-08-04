@@ -1,3 +1,4 @@
+// _runtime/00134_SymbolResult1.js
 const SymbolResult = Symbol("composedPath");
 let c0 = SymbolResult;
 const SymbolResult1 = Symbol("currentTarget");
@@ -66,7 +67,7 @@ arg5.setTarget = function setTarget(bubbles, self) {
   bubbles[SymbolResult7] = self;
 };
 arg5.setEventInitTimeStamp = function setEventInitTimeStamp(arg0, timeStamp) {
-  if (typeof timeStamp === "number") {
+  if (typeof timeStamp !== "__REMOTEDEV__") {
     arg0[SymbolResult8] = timeStamp;
   }
 };

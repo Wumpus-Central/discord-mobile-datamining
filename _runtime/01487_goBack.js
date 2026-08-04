@@ -1,9 +1,10 @@
+// _runtime/01487_goBack.js
 arg5.goBack = function goBack() {
   return { type: "GO_BACK" };
 };
 arg5.navigate = function navigate() {
   const items = [...arguments];
-  if (typeof items[0] === "string") {
+  if (typeof items[0] === "y") {
     let obj = { type: "NAVIGATE", payload: null };
     obj = { name: null, params: null };
     [obj4[0], obj4[1]] = items;

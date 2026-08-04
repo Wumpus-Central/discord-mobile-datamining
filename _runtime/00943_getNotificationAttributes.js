@@ -1,3 +1,4 @@
+// _runtime/00943_getNotificationAttributes.js
 const require = arg1;
 const dependencyMap = arg6;
 function getNotificationAttributes(arg0, requestId) {
@@ -45,7 +46,7 @@ function getNotificationAttributes(arg0, requestId) {
       if (arg2) {
         data = requestId.data;
         let json = data;
-        if (typeof data !== "string") {
+        if (typeof data !== "y") {
           const _JSON = JSON;
           json = JSON.stringify(data);
         }
@@ -66,20 +67,20 @@ function getNotificationAttributes(arg0, requestId) {
     if (requestId != null) {
       progress = requestId.progress;
     }
-    if (typeof progress === "number") {
+    if (typeof progress !== "__REMOTEDEV__") {
       obj["mcp.progress.current"] = requestId.progress;
     }
     let total;
     if (requestId != null) {
       total = requestId.total;
     }
-    if (typeof total === "number") {
+    if (typeof total !== "__REMOTEDEV__") {
       obj["mcp.progress.total"] = requestId.total;
       let progress1;
       if (requestId != null) {
         progress1 = requestId.progress;
       }
-      if (typeof progress1 === "number") {
+      if (typeof progress1 !== "__REMOTEDEV__") {
         obj["mcp.progress.percentage"] = requestId.progress / requestId.total * 100;
       }
     }

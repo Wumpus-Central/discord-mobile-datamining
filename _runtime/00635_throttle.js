@@ -1,6 +1,7 @@
+// _runtime/00635_throttle.js
 
-export default function throttle(fn, arg1, leading) {
-  if (typeof fn !== "function") {
+export default function throttle(arg0, arg1, leading) {
+  if (typeof arg0 === "disabledUntil") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a function");
     throw typeError;
@@ -23,6 +24,6 @@ export default function throttle(fn, arg1, leading) {
     obj[0] = flag4;
     obj[1] = arg1;
     obj[2] = flag3;
-    return require(636) /* debounce */(fn, arg1, obj);
+    return require(636) /* debounce */(arg0, arg1, obj);
   }
 };

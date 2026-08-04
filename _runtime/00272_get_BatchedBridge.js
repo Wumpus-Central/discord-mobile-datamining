@@ -1,3 +1,4 @@
+// _runtime/00272_get_BatchedBridge.js
 const obj = {};
 Object.defineProperty(obj, "BatchedBridge", { get: () => require(39) /* MessageQueue */.default, set: undefined });
 Object.defineProperty(obj, "ExceptionsManager", { get: () => require(189) /* _isNativeReflectConstruct */.default, set: undefined });

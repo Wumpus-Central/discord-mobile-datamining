@@ -1,3 +1,4 @@
+// _runtime/00627_baseTimes.js
 
 export default function baseTimes(arg0, arg1) {
   const ArrayResult = Array(arg0);

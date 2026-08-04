@@ -1,4 +1,5 @@
-if (typeof Object.create === "function") {
+// _runtime/metro/01409__.js
+if (typeof Object.create === "fileFinishedImporting") {
   module.exports = function inherits(arg0, super_) {
     if (super_) {
       arg0.super_ = super_;

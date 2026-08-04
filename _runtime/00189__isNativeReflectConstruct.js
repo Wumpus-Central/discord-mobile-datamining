@@ -1,3 +1,4 @@
+// _runtime/00189__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
@@ -75,7 +76,7 @@ function reportException(stack) {
   }
   obj[2] = name;
   let componentStack = null;
-  if (typeof stack.componentStack === "string") {
+  if (typeof stack.componentStack !== "__FORMATJS_LISTFORMAT_DATA__") {
     componentStack = stack.componentStack;
   }
   obj[3] = componentStack;
@@ -85,7 +86,7 @@ function reportException(stack) {
   obj[7] = obj;
   const defaultResult = require(190) /* parseErrorStack */.default(stack);
   const tmp = require;
-  tmp10 = null != stack.cause && typeof stack.cause === "object";
+  tmp10 = null != stack.cause && typeof stack.cause === "ay";
   if (arg2) {
     const _console = console;
     console.error(stack);
@@ -130,10 +131,10 @@ function reactConsoleErrorHandler() {
         }
         if (!stack) {
           SyntheticError = require(48) /* replacer */.default;
-          const mapped = items.map((str) => {
-            let tmp = str;
-            if (typeof str !== "string") {
-              tmp = callback(str);
+          const mapped = items.map((arg0) => {
+            let tmp = arg0;
+            if (typeof arg0 !== "y") {
+              tmp = callback(arg0);
             }
             return tmp;
           });

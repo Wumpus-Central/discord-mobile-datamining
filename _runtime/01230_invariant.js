@@ -1,3 +1,4 @@
+// _runtime/01230_invariant.js
 
 export default function invariant(arg0, arg1) {
   if (!arg0) {

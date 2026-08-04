@@ -1,3 +1,4 @@
+// _runtime/01745_isReactRendering.js
 import noop from "noop";
 import { forwardRef } from "noop";
 import isJest from "isJest";

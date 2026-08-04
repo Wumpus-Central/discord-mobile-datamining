@@ -1,3 +1,4 @@
+// _runtime/01199_getTheme.js
 import { Appearance } from "get ActivityIndicator";
 
 let obj = { accentBackground: "rgba(88, 74, 192, 1)", accentForeground: "#ffffff", foreground: "#2b2233", background: "#ffffff", border: "rgba(41, 35, 47, 0.13)", feedbackIcon: "rgba(54, 45, 89, 1)", sentryLogo: "rgba(54, 45, 89, 1)" };

@@ -1,3 +1,4 @@
+// _runtime/00911_linkedErrorsIntegration.js
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

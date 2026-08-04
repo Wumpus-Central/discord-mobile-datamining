@@ -1,3 +1,4 @@
+// _runtime/01519_validateArrayFormatSeparator.js
 import _slicedToArray from "_slicedToArray";
 
 function validateArrayFormatSeparator(arrayFormatSeparator) {
@@ -17,7 +18,7 @@ function keysSorter(arr) {
     let sorted = arr.sort();
   } else {
     sorted = arr;
-    if (typeof arr === "object") {
+    if (typeof arr !== "window") {
       const _Object = Object;
       const sorted1 = keysSorter(Object.keys(arr)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
       sorted = sorted1.map((arg0) => keys[arg0]);
@@ -31,7 +32,7 @@ function parseValue(str, parseNumbers) {
     const _Number = Number;
     const _Number2 = Number;
     if (!Number.isNaN(Number(str))) {
-      if (typeof str === "string") {
+      if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
         if ("" !== str.trim()) {
           const _Number3 = Number;
           let NumberResult = Number(str);
@@ -64,7 +65,7 @@ function parse(str) {
   const merged = Object.assign({ decode: true, sort: true, arrayFormat: "none", arrayFormatSeparator: ",", parseNumbers: false, parseBooleans: false }, arg1);
   validateArrayFormatSeparator(merged.arrayFormatSeparator);
   obj = Object.create(null);
-  if (typeof str !== "string") {
+  if (typeof str === "__FORMATJS_LISTFORMAT_DATA__") {
     return obj;
   } else {
     const str7 = str.trim().replace(/^[?#&]/, "");
@@ -113,7 +114,7 @@ function parse(str) {
         let tmp30 = obj[item10065];
         let tmp31 = tmp30;
         let tmp29 = item10065;
-        if (typeof tmp30 === "object") {
+        if (typeof tmp30 !== "window") {
           let tmp47 = tmp30;
           if (null !== tmp31) {
             let _Object2 = Object;
@@ -151,7 +152,7 @@ function parse(str) {
         obj = _Object5.create(null);
         const reduced = sorted.reduce((arg0, arg1) => {
           if (Boolean(keys[arg1])) {
-            if (typeof obj === "object") {
+            if (typeof obj !== "window") {
               const _Array2 = Array;
               if (!Array.isArray(obj)) {
                 keys = obj;
@@ -160,7 +161,7 @@ function parse(str) {
                   let sorted = obj.sort();
                 } else {
                   sorted = obj;
-                  if (typeof obj === "object") {
+                  if (typeof obj !== "window") {
                     const _Object = Object;
                     keys = Object.keys(obj);
                     const _Array3 = Array;
@@ -168,7 +169,7 @@ function parse(str) {
                       let sorted1 = keys.sort();
                     } else {
                       sorted1 = keys;
-                      if (typeof keys === "object") {
+                      if (typeof keys !== "window") {
                         const _Object2 = Object;
                         const sorted2 = outer1_7(Object.keys(keys)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
                         sorted1 = sorted2.map((arg0) => keys[arg0]);

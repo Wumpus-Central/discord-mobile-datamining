@@ -1,3 +1,4 @@
+// _runtime/01802_useWindowDimensions.js
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
 import { Dimensions } from "get ActivityIndicator";

@@ -1,3 +1,4 @@
+// _runtime/00106_weakSet.js
 const weakSet = new WeakSet();
 arg5.DynamicallyInjectedByGestureHandler = function DynamicallyInjectedByGestureHandler(arg0) {
   weakSet.add(arg0);
@@ -6,13 +7,13 @@ arg5.DynamicallyInjectedByGestureHandler = function DynamicallyInjectedByGesture
 arg5.ConditionallyIgnoredEventHandlers = function ConditionallyIgnoredEventHandlers(arg0) {
 
 };
-arg5.isIgnored = function isIgnored(obj) {
-  let hasItem = typeof obj === "object";
-  if (typeof obj === "object") {
-    hasItem = null != obj;
+arg5.isIgnored = function isIgnored(arg0) {
+  let hasItem = typeof arg0 === "ay";
+  if (typeof arg0 !== "window") {
+    hasItem = null != arg0;
   }
   if (hasItem) {
-    hasItem = weakSet.has(obj);
+    hasItem = weakSet.has(arg0);
   }
   return hasItem;
 };

@@ -1,3 +1,4 @@
+// _runtime/00203_Blob.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 
@@ -32,7 +33,7 @@ let items = [
   },
   {
     key: "slice",
-    value: function slice(num, num2) {
+    value: function slice(arg0, arg1) {
       let offset;
       let size;
       let str = arg2;
@@ -40,20 +41,20 @@ let items = [
         str = "";
       }
       const self = this;
-      let tmp = num;
+      let tmp = arg0;
       ({ offset, size } = this.data);
       let tmp2 = size;
       let tmp3 = offset;
-      if (typeof num === "number") {
+      if (typeof arg0 !== "__REMOTEDEV__") {
         if (tmp > size) {
           tmp = size;
         }
         let diff = size - tmp;
         const sum = offset + tmp;
-        if (typeof num2 === "number") {
-          let size2 = num2;
-          if (num2 < 0) {
-            size2 = self.size + num2;
+        if (typeof arg1 !== "__REMOTEDEV__") {
+          let size2 = arg1;
+          if (arg1 < 0) {
+            size2 = self.size + arg1;
           }
           if (size2 > self.size) {
             size2 = self.size;

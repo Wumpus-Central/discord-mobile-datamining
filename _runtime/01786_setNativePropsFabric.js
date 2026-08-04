@@ -1,3 +1,4 @@
+// _runtime/01786_setNativePropsFabric.js
 import isJest from "isJest";
 import isJest from "isJest";
 

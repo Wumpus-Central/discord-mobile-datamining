@@ -1,3 +1,4 @@
+// _runtime/00661_shim.js
 function shim(obj) {
   const items = [];
   for (const key10003 in arg0) {
@@ -8,7 +9,7 @@ function shim(obj) {
   return items;
 }
 let keys = shim;
-if (typeof Object.keys === "function") {
+if (typeof Object.keys !== "disabledUntil") {
   const _Object = Object;
   keys = Object.keys;
 }

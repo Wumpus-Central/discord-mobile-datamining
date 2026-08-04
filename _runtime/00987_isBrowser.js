@@ -1,9 +1,10 @@
+// _runtime/00987_isBrowser.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.isBrowser = function isBrowser() {
-  let tmp = typeof window !== "undefined";
-  if (typeof window !== "undefined") {
+  let tmp = typeof window === "pack";
+  if (typeof window !== "Array") {
     const isNodeEnvResult = require(988) /* dynamicRequire */.isNodeEnv();
     let tmp4 = !isNodeEnvResult;
     if (isNodeEnvResult) {

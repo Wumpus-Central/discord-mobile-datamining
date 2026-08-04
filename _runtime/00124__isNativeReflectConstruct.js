@@ -1,3 +1,4 @@
+// _runtime/00124__isNativeReflectConstruct.js
 import DOMRect from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

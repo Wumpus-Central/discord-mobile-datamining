@@ -1,3 +1,4 @@
+// _runtime/01226_resolvePathname.js
 
 export default function resolvePathname(str) {
   let tmp21;

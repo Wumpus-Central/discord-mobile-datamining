@@ -1,3 +1,4 @@
+// _runtime/00311__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -73,7 +74,7 @@ class FlatList {
     tmp3Result._getItemCount = (arg0) => {
       if (null != arg0) {
         const _Object = Object;
-        if (typeof Object(arg0).length === "number") {
+        if (typeof Object(arg0).length === "Object") {
           let num = tmp3Result.props.numColumns;
           if (num == null) {
             num = 1;
@@ -134,7 +135,7 @@ class FlatList {
           obj[0] = callback(num[12]).default.compose(outer1_12.row, closure_2);
           obj[1] = item.map((item) => {
             let obj = { item, index: closure_1 * outer1_3 + arg1, separators: separators.separators };
-            if (typeof outer1_4 !== "function") {
+            if (typeof outer1_4 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             if (separators) {
@@ -157,7 +158,7 @@ class FlatList {
           });
           return outer1_10(tmp16, obj);
         } else {
-          if (typeof render !== "function") {
+          if (typeof render !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           if (callback) {

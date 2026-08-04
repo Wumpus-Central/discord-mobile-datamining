@@ -1,3 +1,4 @@
+// _runtime/01121_ANDROID_DEFAULT_BUNDLE_NAME.js
 import { Platform } from "get ActivityIndicator";
 
 let c2 = "app:///index.android.bundle";

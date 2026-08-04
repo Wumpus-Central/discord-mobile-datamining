@@ -1,18 +1,16 @@
+// _runtime/01014_convertToNormalizedObject.js
 const require = arg1;
 const dependencyMap = arg6;
 const value = "value";
 arg5.convertToNormalizedObject = function convertToNormalizedObject(data) {
-  let obj = require(817) /* registerSpanErrorInstrumentation */;
-  const normalizeResult = obj.normalize(data);
+  const normalizeResult = require(817) /* registerSpanErrorInstrumentation */.normalize(data);
   if (null !== normalizeResult) {
-    if (typeof normalizeResult === "object") {
+    if (typeof normalizeResult !== "window") {
       const _Array = Array;
       if (!Array.isArray(normalizeResult)) {
         const _Object = Object;
-        obj = normalizeResult;
       }
-      return obj;
+      return { [closure_2]: normalizeResult };
     }
   }
-  obj = { [closure_2]: normalizeResult };
 };

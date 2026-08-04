@@ -1,3 +1,4 @@
+// _runtime/01179_mergeOutcomes.js
 arg5.mergeOutcomes = function mergeOutcomes(_outcomesBuffer, _clearOutcomesResult) {
   const items = [...arguments];
   let map;

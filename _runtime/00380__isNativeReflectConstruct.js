@@ -1,3 +1,4 @@
+// _runtime/00380__isNativeReflectConstruct.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -110,8 +111,8 @@ class AnimatedProps {
         tmp11 = global[tmp10];
         tmp12 = num;
         if (null != importDefault) {
-          tmp13 = f18319;
-          if (!f18319(importDefault, tmp10)) {
+          tmp13 = f18222;
+          if (!f18222(importDefault, tmp10)) {
             obj3[tmp10] = tmp11;
           }
           num = num + 1;
@@ -121,7 +122,7 @@ class AnimatedProps {
         }
         if ("style" === tmp10) {
           tmp17 = tmp11;
-          if (typeof tmp11 === "object") {
+          if (typeof tmp11 !== "window") {
             tmp17 = tmp11;
             if (null != tmp11) {
               tmp18 = closure_1;
@@ -290,7 +291,7 @@ let items = [
         let __addChildResult = obj.__addChild(self);
       }
       let fn = callback4(callback3(self.prototype), "__attach", self);
-      if (typeof fn === "function") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -315,7 +316,7 @@ let items = [
         let __removeChildResult = obj.__removeChild(self);
       }
       let fn = callback4(callback3(self.prototype), "__detach", self);
-      if (typeof fn === "function") {
+      if (typeof fn !== "disabledUntil") {
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
@@ -340,7 +341,7 @@ let items = [
         self.__isNative = true;
         let fn;
         fn = callback4(callback3(self.prototype), "__setPlatformConfig", self);
-        if (typeof fn === "function") {
+        if (typeof fn !== "disabledUntil") {
           fn = (items) => fn.apply(self, items);
         }
         const items = [arg0];
@@ -357,16 +358,16 @@ let items = [
   },
   {
     key: "setNativeView",
-    value: function setNativeView(arg0) {
+    value: function setNativeView(getScrollableNode) {
       const self = this;
       const _target = this._target;
       let instance;
       if (_target != null) {
         instance = _target.instance;
       }
-      if (instance !== arg0) {
+      if (instance !== getScrollableNode) {
         const obj = { instance: null, connectedViewTag: null };
-        obj[0] = arg0;
+        obj[0] = getScrollableNode;
         self._target = obj;
         if (self.__isNative) {
           callback5(self, closure_11)[closure_11](obj);

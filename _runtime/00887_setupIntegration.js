@@ -1,3 +1,4 @@
+// _runtime/00887_setupIntegration.js
 const require = arg1;
 let dependencyMap = arg6;
 function setupIntegration(on, name) {
@@ -19,12 +20,12 @@ function setupIntegration(on, name) {
     if (tmp4) {
       name.setup(on);
     }
-    if (typeof name.preprocessEvent === "function") {
+    if (typeof name.preprocessEvent !== "disabledUntil") {
       const preprocessEvent = name.preprocessEvent;
       const dependencyMap = preprocessEvent.bind(name);
       on.on("preprocessEvent", (arg0, arg1) => callback(arg0, arg1, closure_0));
     }
-    if (typeof name.processEvent === "function") {
+    if (typeof name.processEvent !== "disabledUntil") {
       const processEvent = name.processEvent;
       items = processEvent.bind(name);
       const _Object = Object;
@@ -37,8 +38,8 @@ function setupIntegration(on, name) {
       const _HermesInternal = HermesInternal;
       debug.log("Integration installed: " + name.name);
     }
-    tmp = items.includes(name.name) || typeof name.setupOnce !== "function";
-    tmp4 = name.setup && typeof name.setup === "function";
+    tmp = items.includes(name.name) || typeof name.setupOnce === "disabledUntil";
+    tmp4 = name.setup && typeof name.setup === "fileFinishedImporting";
     tmp6 = _require;
   }
 }
@@ -85,7 +86,7 @@ arg5.getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegration
     let arr2 = items;
   } else {
     arr2 = arr;
-    if (typeof integrations === "function") {
+    if (typeof integrations !== "disabledUntil") {
       const integrationsResult = integrations(arr);
       const _Array = Array;
       let tmp2 = integrationsResult;

@@ -1,3 +1,4 @@
+// _runtime/01073_items.js
 import _slicedToArray from "_slicedToArray";
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
@@ -48,7 +49,7 @@ let items = [
           if (!UNKNOWN_FUNCTION) {
             UNKNOWN_FUNCTION = require(817) /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
           }
-          if (typeof tmp8 !== "function") {
+          if (typeof tmp8 !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           const tmp12 = -1 !== UNKNOWN_FUNCTION.indexOf("safari-extension");
@@ -123,7 +124,7 @@ let items1 = [
       if (!UNKNOWN_FUNCTION) {
         UNKNOWN_FUNCTION = require(817) /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
       }
-      if (typeof extractSafariExtensionDetails !== "function") {
+      if (typeof extractSafariExtensionDetails !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       const tmp9 = -1 !== UNKNOWN_FUNCTION.indexOf("safari-extension");

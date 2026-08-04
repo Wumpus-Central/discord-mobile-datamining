@@ -1,4 +1,5 @@
+// _runtime/15999_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/user_profile", width: 24, height: 24, scales: [2, 3], hash: "c67b491c21edfc140b968b3afa5e6528", name: "ic_video_disabled", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/badge", width: 30, height: 30, scales: [2, 3], hash: "394e48046e846651a339ee88e4f1b0b4", name: "ic_profile_badge_active_developer", type: "png" });

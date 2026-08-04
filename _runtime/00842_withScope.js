@@ -1,3 +1,4 @@
+// _runtime/00842_withScope.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 

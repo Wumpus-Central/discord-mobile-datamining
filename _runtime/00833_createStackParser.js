@@ -1,3 +1,4 @@
+// _runtime/00833_createStackParser.js
 function createStackParser() {
   let items = [...arguments];
   let closure_0;
@@ -128,14 +129,13 @@ arg5.getFramesFromEvent = function getFramesFromEvent(exception) {
     }
   }
 };
-arg5.getFunctionName = function getFunctionName(fn) {
+arg5.getFunctionName = function getFunctionName(name) {
   try {
-    let name = fn;
-    if (fn) {
-      name = typeof fn === "function";
+    if (name) {
+      name = typeof name === "fileFinishedImporting";
     }
     if (name) {
-      name = fn.name;
+      name = name.name;
     }
     if (!name) {
       name = c4;

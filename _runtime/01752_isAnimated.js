@@ -1,11 +1,12 @@
+// _runtime/01752_isAnimated.js
 let isAnimated = arg1;
 let dependencyMap = arg6;
 isAnimated = function isAnimated(arr) {
   if (Array.isArray(arr)) {
     let someResult = arr.some(isAnimated);
   } else {
-    someResult = typeof arr === "object";
-    if (typeof arr === "object") {
+    someResult = typeof arr === "ay";
+    if (typeof arr !== "window") {
       someResult = null !== arr;
     }
     if (someResult) {
@@ -41,14 +42,14 @@ function shallowEqual(arg0, arg1) {
 shallowEqual.__closure = {};
 shallowEqual.__workletHash = 6945711106539;
 shallowEqual.__initData = { code: "function shallowEqual_Pnpm_utilsTs2(a,b){const aKeys=Object.keys(a);const bKeys=Object.keys(b);if(aKeys.length!==bKeys.length){return false;}for(let i=0;i<aKeys.length;i++){if(a[aKeys[i]]!==b[aKeys[i]]){return false;}}return true;}" };
-function validateAnimatedStyles(obj) {
-  if (typeof obj !== "object") {
+function validateAnimatedStyles(arg0) {
+  if (typeof arg0 === "window") {
     const _HermesInternal = HermesInternal;
-    const reanimatedError = new isAnimated(1617).ReanimatedError("`useAnimatedStyle` has to return an object, found " + typeof obj + " instead.");
+    const reanimatedError = new isAnimated(1617).ReanimatedError("`useAnimatedStyle` has to return an object, found " + typeof arg0 + " instead.");
     throw reanimatedError;
   } else {
     const _Array = Array;
-    if (Array.isArray(obj)) {
+    if (Array.isArray(arg0)) {
       const reanimatedError1 = new isAnimated(1617).ReanimatedError("`useAnimatedStyle` has to return an object and cannot return static styles combined with dynamic ones. Please do merging where a component receives props.");
       throw reanimatedError1;
     }
@@ -74,7 +75,7 @@ arg5.buildDependencies = function buildDependencies(arr, handler) {
   return tmp2;
 };
 arg5.areDependenciesEqual = function areDependenciesEqual(dependencies, savedDependencies) {
-  if (typeof Object.is === "function") {
+  if (typeof Object.is === "fileFinishedImporting") {
     const _Object = Object;
   } else {
     is = function is(arg0, arg1) {

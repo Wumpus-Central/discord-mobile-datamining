@@ -1,3 +1,4 @@
+// _runtime/00772_getNative.js
 import getNative from "getNative";
 
 

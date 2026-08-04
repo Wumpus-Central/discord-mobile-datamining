@@ -1,3 +1,4 @@
+// _runtime/00639_baseTrim.js
 const re2 = /^\s+/;
 
 export default function baseTrim(arr) {

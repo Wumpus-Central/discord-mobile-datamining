@@ -1,3 +1,4 @@
+// _runtime/01461_InternetReachability.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 
@@ -96,7 +97,7 @@ class InternetReachability {
       return obj;
     };
     this.update = (isInternetReachable) => {
-      if (typeof isInternetReachable.isInternetReachable === "boolean") {
+      if (typeof isInternetReachable.isInternetReachable !== "onScroll") {
         if (self._configuration.useNativeReachability) {
           const result = self._setIsInternetReachable(isInternetReachable.isInternetReachable);
         }

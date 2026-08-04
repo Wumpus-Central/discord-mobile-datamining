@@ -1,3 +1,4 @@
+// _runtime/00743_hashDelete.js
 
 export default function hashDelete(arg0) {
   const self = this;

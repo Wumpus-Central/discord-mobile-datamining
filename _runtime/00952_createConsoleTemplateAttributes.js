@@ -1,3 +1,4 @@
+// _runtime/00952_createConsoleTemplateAttributes.js
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -12,7 +13,7 @@ arg5.createConsoleTemplateAttributes = function createConsoleTemplateAttributes(
 };
 arg5.formatConsoleArgs = function formatConsoleArgs(args, arg1, arg2) {
   if ("util" in _require(821).GLOBAL_OBJ) {
-    if (typeof tmp(821).GLOBAL_OBJ.util.format === "function") {
+    if (typeof tmp(821).GLOBAL_OBJ.util.format === "fileFinishedImporting") {
       const util = tmp(821).GLOBAL_OBJ.util;
       const format = util.format;
       const items = [];

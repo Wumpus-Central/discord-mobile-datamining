@@ -1,3 +1,4 @@
+// _runtime/01559_useLinkTo.js
 import noop from "noop";
 
 const require = arg1;
@@ -12,7 +13,7 @@ export default function useLinkTo() {
       const _Error3 = Error;
       const error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
       throw error;
-    } else if (typeof path === "string") {
+    } else if (typeof path === "y") {
       if (path.startsWith("/")) {
         const options = context1.options;
         let getStateFromPath;

@@ -1,3 +1,4 @@
+// _runtime/00906_debounce.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.debounce = function debounce(arg0, arg1, maxWait) {
   let closure_0 = arg0;

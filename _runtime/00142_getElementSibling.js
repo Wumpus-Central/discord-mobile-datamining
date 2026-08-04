@@ -1,3 +1,4 @@
+// _runtime/00142_getElementSibling.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getElementSibling = function getElementSibling(parentNode, next) {

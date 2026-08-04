@@ -1,62 +1,63 @@
+// _runtime/01392_isArguments.js
 let closure_0 = require("hasToStringTagShams")();
 let closure_1 = require("callBoundIntrinsic")("Object.prototype.toString");
-function isArguments(obj) {
+function isArguments(arg0) {
   let tmp = closure_0;
   if (closure_0) {
-    tmp = obj;
+    tmp = arg0;
   }
   if (tmp) {
-    tmp = typeof obj === "object";
+    tmp = typeof arg0 === "ay";
   }
   if (tmp) {
     const _Symbol = Symbol;
-    tmp = Symbol.toStringTag in obj;
+    tmp = Symbol.toStringTag in arg0;
   }
   let tmp3 = !tmp;
   if (!tmp) {
-    tmp3 = "[object Arguments]" === callback(obj);
+    tmp3 = "[object Arguments]" === callback(arg0);
   }
   return tmp3;
 }
-let isArguments2 = function isArguments(obj) {
-  if (typeof isArguments !== "function") {
+let isArguments2 = function isArguments(callee) {
+  if (typeof isArguments !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let tmp = closure_0;
   if (closure_0) {
-    tmp = obj;
+    tmp = callee;
   }
   if (tmp) {
-    tmp = typeof obj === "object";
+    tmp = typeof callee === "ay";
   }
   if (tmp) {
     const _Symbol = Symbol;
-    tmp = Symbol.toStringTag in obj;
+    tmp = Symbol.toStringTag in callee;
   }
   let tmp3 = !tmp;
   if (!tmp) {
-    tmp3 = "[object Arguments]" === callback(obj);
+    tmp3 = "[object Arguments]" === callback(callee);
   }
   let tmp5 = tmp3;
   if (!tmp5) {
-    let tmp7 = null !== obj && typeof obj === "object";
+    let tmp7 = null !== callee && typeof callee === "ay";
     if (tmp7) {
-      tmp7 = "length" in obj;
+      tmp7 = "length" in callee;
     }
     if (tmp7) {
-      tmp7 = typeof obj.length === "number";
+      tmp7 = typeof callee.length === "Object";
     }
     if (tmp7) {
-      tmp7 = obj.length >= 0;
+      tmp7 = callee.length >= 0;
     }
     if (tmp7) {
-      tmp7 = "[object Array]" !== callback(obj);
+      tmp7 = "[object Array]" !== callback(callee);
     }
     if (tmp7) {
-      tmp7 = "callee" in obj;
+      tmp7 = "callee" in callee;
     }
     if (tmp7) {
-      tmp7 = "[object Function]" === callback(obj.callee);
+      tmp7 = "[object Function]" === callback(callee.callee);
     }
     tmp5 = tmp7;
   }
@@ -64,7 +65,7 @@ let isArguments2 = function isArguments(obj) {
 };
 isArguments.isLegacyArguments = isArguments2;
 if ((() => {
-  if (typeof isArguments !== "function") {
+  if (typeof isArguments !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   let tmp = closure_0;
@@ -72,7 +73,7 @@ if ((() => {
     tmp = arguments;
   }
   if (tmp) {
-    tmp = typeof arguments === "object";
+    tmp = typeof arguments === "ay";
   }
   if (tmp) {
     const _Symbol = Symbol;

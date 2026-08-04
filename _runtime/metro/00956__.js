@@ -1,3 +1,4 @@
+// _runtime/metro/00956__.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.AI_MODEL_ID_ATTRIBUTE = "ai.model.id";
 arg5.AI_OPERATION_ID_ATTRIBUTE = "ai.operationId";

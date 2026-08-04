@@ -1,3 +1,4 @@
+// _runtime/metro/00042__createClass.js
 
 export default function _createClass(arg0, arg1, arg2) {
   if (arg1) {

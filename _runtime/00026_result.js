@@ -1,3 +1,4 @@
+// _runtime/00026_result.js
 import importAllResult from "javaScriptFlagGetter";
 
 const result = require("javaScriptFlagGetter").enableNativeCSSParsing();

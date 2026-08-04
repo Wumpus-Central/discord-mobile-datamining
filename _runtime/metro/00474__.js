@@ -1,3 +1,4 @@
+// _runtime/metro/00474__.js
 let closure_0 = require("module_475").default.currentCentroidXOfTouchesChangedAfter;
 let closure_1 = require("module_475").default.currentCentroidYOfTouchesChangedAfter;
 let closure_2 = require("module_475").default.previousCentroidXOfTouchesChangedAfter;

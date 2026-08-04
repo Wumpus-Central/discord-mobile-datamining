@@ -1,3 +1,4 @@
+// _runtime/00261__isNativeReflectConstruct.js
 import HeadlessJsTaskError from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";

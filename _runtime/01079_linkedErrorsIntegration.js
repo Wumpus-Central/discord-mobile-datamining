@@ -1,3 +1,4 @@
+// _runtime/01079_linkedErrorsIntegration.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

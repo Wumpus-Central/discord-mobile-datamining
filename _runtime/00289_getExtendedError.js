@@ -1,3 +1,4 @@
+// _runtime/00289_getExtendedError.js
 import "noop";
 
 const require = arg1;
@@ -9,7 +10,7 @@ function getExtendedError(value, componentStack) {
       return value;
     } catch (err) {
     }
-  } else if (typeof value === "string") {
+  } else if (typeof value === "y") {
     let syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError(value);
   } else {
     syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");

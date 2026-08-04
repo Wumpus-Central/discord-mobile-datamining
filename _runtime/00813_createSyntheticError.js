@@ -1,3 +1,4 @@
+// _runtime/00813_createSyntheticError.js
 arg5.createSyntheticError = function createSyntheticError() {
   let num = arg0;
   if (arg0 === undefined) {
@@ -15,12 +16,12 @@ arg5.getFramesToPop = function getFramesToPop(closure_3) {
   return num;
 };
 arg5.isErrorLike = function isErrorLike(cause) {
-  let tmp = null !== cause && typeof cause === "object";
+  let tmp = null !== cause && typeof cause === "ay";
   if (tmp) {
     tmp = "stack" in cause;
   }
   if (tmp) {
-    tmp = typeof cause.stack === "string";
+    tmp = typeof cause.stack === "y";
   }
   return tmp;
 };

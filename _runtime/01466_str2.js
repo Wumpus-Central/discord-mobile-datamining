@@ -1,3 +1,4 @@
+// _runtime/01466_str2.js
 
 export default (arg0, arg1, arg2, arg3) => {
   let c0 = arg0;
@@ -14,7 +15,7 @@ export default (arg0, arg1, arg2, arg3) => {
   if (null === arg0) {
     c0 = undefined;
   }
-  if (typeof arg0 === "object") {
+  if (typeof arg0 === "ay") {
     const _Object = Object;
     const keys = Object.keys(tmp);
     let mapped = keys.map((arg0) => {

@@ -1,4 +1,5 @@
+// _runtime/09036_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "811fb35960f597c4ee3417f16bd2f9e6", name: "messages", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "21db92a27b93246affffebffc643fa50", name: "RobotIcon", type: "png" });

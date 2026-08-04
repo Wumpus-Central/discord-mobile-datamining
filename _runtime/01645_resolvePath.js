@@ -1,3 +1,4 @@
+// _runtime/01645_resolvePath.js
 const require = arg1;
 const dependencyMap = arg6;
 function resolvePath(arg0, arg1) {
@@ -6,12 +7,12 @@ function resolvePath(arg0, arg1) {
     const items = [arg1];
     arr = items;
   }
-  return arr.reduce((obj, num) => {
-    if (!Array.isArray(obj)) {
+  return arr.reduce((arg0, arg1) => {
+    if (!Array.isArray(arg0)) {
       let tmp2;
       return tmp2;
     }
-    tmp2 = obj[num];
+    tmp2 = arg0[arg1];
   }, arg0);
 }
 resolvePath.__closure = {};
@@ -31,7 +32,7 @@ function setPath(arg0, arg1, arg2) {
       let tmp3 = num;
       let tmp4 = tmp;
       if (!(arr[num] in tmp)) {
-        if (typeof arr[num + 1] === "number") {
+        if (typeof arr[num + 1] === "Object") {
           tmp[arr[num]] = [];
         } else {
           tmp[arr[num]] = {};
@@ -80,7 +81,7 @@ function withStyleAnimation(animations) {
               } while (num < length);
             }
           } else {
-            if (typeof value === "object") {
+            if (typeof value !== "window") {
               if (undefined === iter.value.onFrame) {
                 let _Object = Object;
                 let keys = Object.keys(iter.value);
@@ -150,7 +151,7 @@ function withStyleAnimation(animations) {
                 } while (num < length);
               }
             } else {
-              if (typeof value === "object") {
+              if (typeof value !== "window") {
                 if (undefined === iter.value.onStart) {
                   let _Object = Object;
                   let keys = Object.keys(iter.value);
@@ -182,7 +183,7 @@ function withStyleAnimation(animations) {
               }
               let tmp5 = outer1_3;
               let tmp6 = outer1_3(current.current, iter.path, current);
-              if (typeof iter.value === "object") {
+              if (typeof iter.value !== "window") {
                 if (iter.value.onStart) {
                   value = iter.value;
                   let tmp12 = value;
@@ -220,7 +221,7 @@ function withStyleAnimation(animations) {
                   continue;
                 }
               } else {
-                if (typeof arr === "object") {
+                if (typeof arr !== "window") {
                   if (undefined === arr.onStart) {
                     let _Object = Object;
                     let values = Object.values(arr);

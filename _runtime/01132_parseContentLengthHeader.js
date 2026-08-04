@@ -1,3 +1,4 @@
+// _runtime/01132_parseContentLengthHeader.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.parseContentLengthHeader = function parseContentLengthHeader(responseHeader) {
@@ -12,30 +13,30 @@ arg5.parseContentLengthHeader = function parseContentLengthHeader(responseHeader
     return tmp3;
   }
 };
-arg5.getBodySize = function getBodySize(json) {
-  if (json) {
+arg5.getBodySize = function getBodySize(size) {
+  if (size) {
     try {
-      if (typeof json === "string") {
-        return require(1004) /* encodeUTF8 */.encodeUTF8(json).length;
+      if (typeof size === "y") {
+        return require(1004) /* encodeUTF8 */.encodeUTF8(size).length;
       } else {
         const _URLSearchParams = URLSearchParams;
-        if (json instanceof URLSearchParams) {
-          return require(1004) /* encodeUTF8 */.encodeUTF8(json.toString()).length;
+        if (size instanceof URLSearchParams) {
+          return require(1004) /* encodeUTF8 */.encodeUTF8(size.toString()).length;
         } else {
           const _FormData = FormData;
-          if (json instanceof FormData) {
-            const tmp = (function _serializeFormData(json) {
-              return new URLSearchParams(json).toString();
-            })(json);
+          if (size instanceof FormData) {
+            const tmp = (function _serializeFormData(size) {
+              return new URLSearchParams(size).toString();
+            })(size);
             return require(1004) /* encodeUTF8 */.encodeUTF8(tmp).length;
           } else {
             const _Blob = Blob;
-            if (json instanceof Blob) {
-              return json.size;
+            if (size instanceof Blob) {
+              return size.size;
             } else {
               const _ArrayBuffer = ArrayBuffer;
-              if (json instanceof ArrayBuffer) {
-                return json.byteLength;
+              if (size instanceof ArrayBuffer) {
+                return size.byteLength;
               }
             }
           }

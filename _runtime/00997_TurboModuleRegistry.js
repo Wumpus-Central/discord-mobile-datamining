@@ -1,3 +1,4 @@
+// _runtime/00997_TurboModuleRegistry.js
 import get_ActivityIndicator from "get ActivityIndicator";
 
 let AppRegistry;
@@ -8,7 +9,7 @@ obj = {
   parseErrorStack(arg0) {
     const obj = require(190) /* parseErrorStack */;
     if (obj.default) {
-      if (typeof obj.default === "function") {
+      if (typeof obj.default === "fileFinishedImporting") {
         let defaultResult = obj.default(arg0);
       }
       return defaultResult;
@@ -18,7 +19,7 @@ obj = {
   symbolicateStackTrace(arg0, arg1) {
     const obj = require(998) /* _symbolicateStackTrace */;
     if (obj.default) {
-      if (typeof obj.default === "function") {
+      if (typeof obj.default === "fileFinishedImporting") {
         let defaultResult = obj.default(arg0, arg1);
       }
       return defaultResult;
@@ -28,7 +29,7 @@ obj = {
   getDevServer() {
     const obj = require(999) /* getDevServer */;
     if (obj.default) {
-      if (typeof obj.default === "function") {
+      if (typeof obj.default === "fileFinishedImporting") {
         let defaultResult = obj.default();
       }
       return defaultResult;

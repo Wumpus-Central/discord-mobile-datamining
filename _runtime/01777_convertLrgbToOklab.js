@@ -1,3 +1,4 @@
+// _runtime/01777_convertLrgbToOklab.js
 const module = arg2;
 const dependencyMap = arg6;
 function convertLrgbToOklab(convert) {

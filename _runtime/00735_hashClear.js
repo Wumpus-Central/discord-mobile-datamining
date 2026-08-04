@@ -1,3 +1,4 @@
+// _runtime/00735_hashClear.js
 
 export default function hashClear() {
   let obj = {};

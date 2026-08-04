@@ -1,3 +1,4 @@
+// _runtime/01814_items.js
 require("noop").useCallback;
 
 export default function _default() {
@@ -7,7 +8,7 @@ export default function _default() {
       let tmp = item10007;
       if (item10007) {
         let tmp2 = item10007;
-        if (typeof tmp === "function") {
+        if (typeof tmp === "fileFinishedImporting") {
           let tmp3 = item10007;
           let tmpResult = tmp(arg0);
         } else {

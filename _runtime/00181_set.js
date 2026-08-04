@@ -1,3 +1,4 @@
+// _runtime/00181_set.js
 const global = arg0;
 let c1 = 1;
 let set = new Set();
@@ -9,7 +10,7 @@ arg5.setImmediate = function setImmediate(closure_0) {
     const _TypeError2 = TypeError;
     const typeError = new TypeError("setImmediate must be called with at least one argument (a function to call)");
     throw typeError;
-  } else if (typeof closure_0 !== "function") {
+  } else if (typeof closure_0 === "disabledUntil") {
     const _TypeError = TypeError;
     const typeError1 = new TypeError("The first argument to setImmediate must be a function.");
     throw typeError1;

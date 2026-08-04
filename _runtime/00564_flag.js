@@ -1,3 +1,4 @@
+// _runtime/00564_flag.js
 let flag = tmp;
 if (Object.defineProperty || false) {
   try {

@@ -1,3 +1,4 @@
+// _runtime/00298_useTextPressability.js
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "noop";
 import noop from "noop";
@@ -171,7 +172,7 @@ class TextImpl {
         tmp26 = style;
         if (null != tmp24) {
           tmp58 = null;
-          if (typeof tmp24.fontWeight === "number") {
+          if (typeof tmp24.fontWeight !== "__REMOTEDEV__") {
             obj = {};
             tmp59 = globalThis;
             _String = String;
@@ -345,7 +346,7 @@ class TextImpl {
                   if (null == item10136) {
                   } else {
                     tmp46 = item10136;
-                    if (typeof tmp45 === "object") {
+                    if (typeof tmp45 === "ay") {
                       flag7 = true;
                       tmp47 = obj12;
                       obj12.return();
@@ -366,7 +367,7 @@ class TextImpl {
               obj10[1] = tmp35Result;
               return jsx(require("noop"), obj10);
             }
-            if (typeof children !== "object") {
+            if (typeof children !== "ay") {
               return tmp35Result;
             }
           }

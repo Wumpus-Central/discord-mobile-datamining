@@ -1,3 +1,4 @@
+// _runtime/metro/00577__.js
 let tmp = require("getEvalledConstructor")("%Map%", true);
 let closure_3 = require("callBoundIntrinsic")("Map.prototype.get", true);
 let closure_4 = require("callBoundIntrinsic")("Map.prototype.set", true);

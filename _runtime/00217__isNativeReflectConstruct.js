@@ -1,3 +1,4 @@
+// _runtime/00217__isNativeReflectConstruct.js
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
@@ -48,7 +49,7 @@ class WebSocket {
     tmp5Result.readyState = 0;
     tmp5Result.url = global;
     tmp8 = arg1;
-    if (typeof arg1 === "string") {
+    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
       items = [];
       items[0] = arg1;
       tmp8 = items;
@@ -64,7 +65,7 @@ class WebSocket {
     tmp9 = _isNativeReflectConstruct(obj, _isNativeReflectConstruct);
     tmp10 = tmp9;
     if (tmp9) {
-      tmp10 = typeof tmp9.origin === "string";
+      tmp10 = typeof tmp9.origin === "y";
     }
     if (tmp10) {
       tmp11 = globalThis;
@@ -142,31 +143,31 @@ let items = [
   },
   {
     key: "send",
-    value: function send(str) {
+    value: function send(arg0) {
       const self = this;
       if (this.readyState === this.CONNECTING) {
         const _Error2 = Error;
         const error = new Error("INVALID_STATE_ERR");
         throw error;
-      } else if (str instanceof importDefault(203)) {
+      } else if (arg0 instanceof importDefault(203)) {
         let tmp16Result = tmp16(38);
         tmp16Result(tmp16(200).isAvailable, "Native module BlobModule is required for blob support");
         tmp16Result = tmp16(200);
-        tmp16Result.sendOverSocket(str, self._socketId);
-      } else if (typeof str !== "string") {
+        tmp16Result.sendOverSocket(arg0, self._socketId);
+      } else if (typeof arg0 === "__FORMATJS_LISTFORMAT_DATA__") {
         const _ArrayBuffer = ArrayBuffer;
-        if (!(str instanceof ArrayBuffer)) {
+        if (!(arg0 instanceof ArrayBuffer)) {
           const _ArrayBuffer2 = ArrayBuffer;
-          if (!ArrayBuffer.isView(str)) {
+          if (!ArrayBuffer.isView(arg0)) {
             const _Error = Error;
             const error1 = new Error("Unsupported data type");
             throw error1;
           }
         }
-        tmp16(218).sendBinary(tmp16(212)(str), self._socketId);
+        tmp16(218).sendBinary(tmp16(212)(arg0), self._socketId);
         const tmp16Result1 = tmp16(218);
       } else {
-        tmp16(218).send(str, self._socketId);
+        tmp16(218).send(arg0, self._socketId);
         const tmp16Result2 = tmp16(218);
       }
     }
@@ -185,9 +186,15 @@ let items = [
   },
   {
     key: "_close",
-    value: function _close(num, str) {
-      num = 1000;
-      str = "";
+    value: function _close(arg0, arg1) {
+      let num = 1000;
+      if (typeof arg0 !== "__REMOTEDEV__") {
+        num = arg0;
+      }
+      let str = "";
+      if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+        str = arg1;
+      }
       const self = this;
       importDefault(218).close(num, str, this._socketId);
       let isAvailable = importDefault(200).isAvailable;
@@ -284,8 +291,8 @@ let items = [
     get() {
       return WebSocket(205).getEventHandlerAttribute(this, "close");
     },
-    set(fn) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "close", fn);
+    set(arg0) {
+      const result = WebSocket(205).setEventHandlerAttribute(this, "close", arg0);
     }
   },
   {
@@ -293,8 +300,8 @@ let items = [
     get() {
       return WebSocket(205).getEventHandlerAttribute(this, "error");
     },
-    set(fn) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "error", fn);
+    set(arg0) {
+      const result = WebSocket(205).setEventHandlerAttribute(this, "error", arg0);
     }
   },
   {
@@ -302,8 +309,8 @@ let items = [
     get() {
       return WebSocket(205).getEventHandlerAttribute(this, "message");
     },
-    set(fn) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "message", fn);
+    set(arg0) {
+      const result = WebSocket(205).setEventHandlerAttribute(this, "message", arg0);
     }
   },
   {
@@ -311,8 +318,8 @@ let items = [
     get() {
       return WebSocket(205).getEventHandlerAttribute(this, "open");
     },
-    set(fn) {
-      const result = WebSocket(205).setEventHandlerAttribute(this, "open", fn);
+    set(arg0) {
+      const result = WebSocket(205).setEventHandlerAttribute(this, "open", arg0);
     }
   }
 ];

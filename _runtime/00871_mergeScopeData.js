@@ -1,3 +1,4 @@
+// _runtime/00871_mergeScopeData.js
 const require = arg1;
 const dependencyMap = arg6;
 function mergeScopeData(extra) {

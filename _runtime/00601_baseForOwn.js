@@ -1,3 +1,4 @@
+// _runtime/00601_baseForOwn.js
 import createBaseEach from "createBaseEach";
 
 

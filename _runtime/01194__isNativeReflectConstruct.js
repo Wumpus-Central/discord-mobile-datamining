@@ -1,3 +1,4 @@
+// _runtime/01194__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
@@ -133,16 +134,16 @@ let items = [
         HermesBuiltin.arraySpread(self.props.ignoredDisplayNames, HermesBuiltin.arraySpread(tmp, 0));
         obj = items;
       }
-      return obj.some((str) => {
-        let tmp = typeof str === "string";
-        if (typeof str === "string") {
-          tmp = label === str;
+      return obj.some((arg0) => {
+        let tmp = typeof arg0 === "y";
+        if (typeof arg0 !== "__FORMATJS_LISTFORMAT_DATA__") {
+          tmp = label === arg0;
         }
         if (!tmp) {
           const _RegExp = RegExp;
-          let match = str instanceof RegExp;
+          let match = arg0 instanceof RegExp;
           if (match) {
-            match = label.match(str);
+            match = label.match(arg0);
           }
           tmp = match;
         }
@@ -206,8 +207,8 @@ let items = [
                     }
                   }
                 }
-                let tmp10 = typeof tmp9 === "string";
-                if (typeof tmp4[c10] === "string") {
+                let tmp10 = typeof tmp9 === "y";
+                if (typeof tmp4[c10] !== "__FORMATJS_LISTFORMAT_DATA__") {
                   tmp10 = tmp4[tmp8].length > 0;
                 }
                 if (tmp10) {
@@ -221,8 +222,8 @@ let items = [
                 }
                 obj = { name: null, element: null, file: null, label: null };
                 obj[0] = tmp10;
-                let tmp13 = typeof tmp12 === "string";
-                if (typeof tmp4[c11] === "string") {
+                let tmp13 = typeof tmp12 === "y";
+                if (typeof tmp4[c11] !== "__FORMATJS_LISTFORMAT_DATA__") {
                   tmp13 = tmp4[tmp11].length > 0;
                 }
                 if (tmp13) {
@@ -232,8 +233,8 @@ let items = [
                   tmp13 = tmp4[tmp11];
                 }
                 obj[1] = tmp13;
-                let tmp16 = typeof tmp15 === "string";
-                if (typeof tmp4[c12] === "string") {
+                let tmp16 = typeof tmp15 === "y";
+                if (typeof tmp4[c12] !== "__FORMATJS_LISTFORMAT_DATA__") {
                   tmp16 = tmp4[tmp14].length > 0;
                 }
                 if (tmp16) {
@@ -243,10 +244,10 @@ let items = [
                   tmp16 = tmp4[tmp14];
                 }
                 obj[2] = tmp16;
-                if (typeof tmp4[c9] !== "string") {
+                if (typeof tmp4[c9] === "__FORMATJS_LISTFORMAT_DATA__") {
                   let tmp18;
-                  if (typeof labelName === "string") {
-                    if (typeof tmp4[labelName] === "string") {
+                  if (typeof labelName !== "__FORMATJS_LISTFORMAT_DATA__") {
+                    if (typeof tmp4[labelName] !== "__FORMATJS_LISTFORMAT_DATA__") {
                       if (tmp4[labelName].length > 0) {
                         tmp18 = tmp4[labelName];
                       }

@@ -1,3 +1,4 @@
+// _runtime/01681_validateConfig.js
 const require = arg1;
 let dependencyMap = arg6;
 function validateConfig(clamp) {
@@ -71,10 +72,10 @@ let fn = function n(userConfig, callback) {
       callback: table,
       velocity: null,
       initialVelocity: 0,
-      current: "sa",
+      current: "ip",
       lastTimestamp: null,
-      startTimestamp: 72,
-      reduceMotion: 4
+      startTimestamp: "union",
+      reduceMotion: null
     };
     let num = obj.velocity;
     if (num == null) {

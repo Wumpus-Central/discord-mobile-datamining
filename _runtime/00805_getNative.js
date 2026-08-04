@@ -1,3 +1,4 @@
+// _runtime/00805_getNative.js
 
 export default (() => {
   try {

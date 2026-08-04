@@ -1,3 +1,4 @@
+// _runtime/00476_PermissionsAndroidImpl.js
 import importDefaultResult from "DialogManagerAndroid";
 import PermissionsAndroidImpl from "_classCallCheck";
 import importDefaultResult1 from "_createClass";
@@ -47,11 +48,60 @@ closure_1 = importDefaultResult(function(arg0, arg1) {
   let c4 = 0;
   let c5 = 0;
   return (function*(arg0, arg1) {
-    const constants = self;
-    const _console = console;
-    console.warn("\"PermissionsAndroid.requestPermission\" is deprecated. Use \"PermissionsAndroid.request\" instead");
-    yield self.request(closure_1, closure_2);
-    return arg1 === constants.RESULTS.GRANTED;
+    if (c5 === 2) {
+      c5 = 3;
+      HermesBuiltin.throwTypeError();
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw arg1;
+      } else if (arg0 === 2) {
+        let obj = { value: null, done: true };
+        obj[0] = arg1;
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            const constants = self;
+            const _console = console;
+            console.warn("\"PermissionsAndroid.requestPermission\" is deprecated. Use \"PermissionsAndroid.request\" instead");
+            c4 = 1;
+            c5 = 1;
+            const obj1 = { value: null, done: false };
+            obj1[0] = self.request(closure_1, closure_2);
+            return obj1;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw arg1;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj2 = { value: null, done: true };
+          obj2[0] = arg1;
+          return obj2;
+        } else {
+          c5 = 3;
+          obj = { value: null, done: true };
+          obj[0] = arg1 === constants.RESULTS.GRANTED;
+          return obj;
+        }
+      } catch (tmp11) {
+        c5 = tmp;
+        throw tmp11;
+      }
+    }
   })();
 });
 obj[1] = function requestPermission(arg0, arg1) {

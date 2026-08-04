@@ -1,3 +1,4 @@
+// _runtime/00328__queryCache.js
 import resolveAssetSource from "resolveAssetSource";
 import "noop";
 import { use } from "noop";
@@ -59,7 +60,7 @@ function _queryCache() {
   return applyArgumentsResult;
 }
 let c6 = 1;
-let closure_8 = { uri: "Array", width: "call", height: "format" };
+let closure_8 = { uri: "Array", width: "accessibilityRole", height: "height" };
 function _BaseImage(arg0) {
   let accessibilityLabel;
   let accessibilityLabelledBy;
@@ -271,14 +272,14 @@ if (null != set) {
   resultResult = set(_BaseImage);
 }
 resultResult.displayName = "Image";
-resultResult.getSize = function getSize(arg0, fn) {
+resultResult.getSize = function getSize(arg0, arg1, arg2) {
   let closure_0 = arg0;
-  const importDefault = fn;
+  const importDefault = arg1;
   const size = importDefault(329).getSize(arg0);
-  if (typeof fn !== "function") {
+  if (typeof arg1 === "disabledUntil") {
     return size;
   } else {
-    fn = arg2;
+    let fn = arg2;
     if (!arg2) {
       fn = () => {
         console.warn(`Failed to get size for image: ${closure_0}`);
@@ -288,14 +289,14 @@ resultResult.getSize = function getSize(arg0, fn) {
   }
   const obj = importDefault(329);
 };
-resultResult.getSizeWithHeaders = function getSizeWithHeaders(arg0, arg1, fn) {
+resultResult.getSizeWithHeaders = function getSizeWithHeaders(arg0, arg1) {
   let closure_0 = arg0;
-  const importDefault = fn;
+  const importDefault = arg2;
   const sizeWithHeaders = importDefault(329).getSizeWithHeaders(arg0, arg1);
-  if (typeof fn !== "function") {
+  if (typeof arg2 === "disabledUntil") {
     return sizeWithHeaders;
   } else {
-    fn = arg3;
+    let fn = arg3;
     if (!arg3) {
       fn = () => {
         console.warn(`Failed to get size for image: ${closure_0}`);

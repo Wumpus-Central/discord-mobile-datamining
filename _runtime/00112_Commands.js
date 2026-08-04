@@ -1,3 +1,4 @@
+// _runtime/00112_Commands.js
 const value = require("setRuntimeConfigProvider").get("RCTView", () => ({ uiViewClassName: "RCTView" }));
 
 export default value;

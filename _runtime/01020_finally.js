@@ -1,3 +1,4 @@
+// _runtime/01020_finally.js
 require("noop").prototype.finally = function(arg0) {
   let closure_0 = arg0;
   return this.then((arg0) => {

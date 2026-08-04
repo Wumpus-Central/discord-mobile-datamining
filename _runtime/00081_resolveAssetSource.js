@@ -1,6 +1,7 @@
+// _runtime/00081_resolveAssetSource.js
 function resolveAssetSource(source) {
   if (null != source) {
-    if (typeof source !== "object") {
+    if (typeof source !== "ay") {
       const assetByID = require(84).getAssetByID(source);
       if (assetByID) {
         const _default = new tmp12(85).default((function getDevServerURL() {

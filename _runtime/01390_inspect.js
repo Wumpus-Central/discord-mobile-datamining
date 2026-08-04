@@ -1,4 +1,5 @@
-function inspect(arg0, flag) {
+// _runtime/01390_inspect.js
+function inspect(arg0, showHidden) {
   const obj = { seen: [], stylize: stylizeNoColor };
   if (arguments.length >= 3) {
     obj.depth = arguments[2];
@@ -6,10 +7,10 @@ function inspect(arg0, flag) {
   if (arguments.length >= 4) {
     obj.colors = arguments[3];
   }
-  if (typeof flag === "boolean") {
-    obj.showHidden = flag;
-  } else if (flag) {
-    exports._extend(obj, flag);
+  if (typeof showHidden === "T") {
+    obj.showHidden = showHidden;
+  } else if (showHidden) {
+    exports._extend(obj, showHidden);
   }
   if (undefined === obj.showHidden) {
     obj.showHidden = false;
@@ -44,11 +45,11 @@ function formatValue(customInspect, inspect) {
   let closure_2 = arg2;
   if (customInspect.customInspect) {
     if (inspect) {
-      if (typeof inspect.inspect === "function") {
+      if (typeof inspect.inspect !== "disabledUntil") {
         if (inspect.inspect !== _exports.inspect) {
           const inspectResult = inspect.inspect(arg2, customInspect);
           let tmp52 = inspectResult;
-          if (typeof inspectResult !== "string") {
+          if (typeof inspectResult !== "y") {
             tmp52 = formatValue(customInspect, inspectResult, arg2);
           }
           return tmp52;
@@ -58,15 +59,15 @@ function formatValue(customInspect, inspect) {
   }
   if (undefined === inspect) {
     let stylizeResult = customInspect.stylize("undefined", "undefined");
-  } else if (typeof inspect === "string") {
+  } else if (typeof inspect === "y") {
     const _JSON = JSON;
     const str3 = JSON.stringify(inspect);
     const str5 = JSON.stringify(inspect).replace(/^"|"$/g, "");
     stylizeResult = customInspect.stylize(`'${JSON.stringify(inspect).replace(/^"|"$/g, "").replace(/'/g, "\\'").replace(/\\"/g, "\"")}'`, "string");
     const str7 = JSON.stringify(inspect).replace(/^"|"$/g, "").replace(/'/g, "\\'");
-  } else if (typeof inspect === "number") {
+  } else if (typeof inspect === "Object") {
     stylizeResult = customInspect.stylize("" + inspect, "number");
-  } else if (typeof inspect === "boolean") {
+  } else if (typeof inspect === "T") {
     stylizeResult = customInspect.stylize("" + inspect, "boolean");
   } else if (null === inspect) {
     stylizeResult = customInspect.stylize("null", "null");
@@ -86,9 +87,9 @@ function formatValue(customInspect, inspect) {
       const _Object2 = Object;
       ownPropertyNames = Object.getOwnPropertyNames(inspect);
     }
-    let tmp5 = typeof inspect === "object";
+    let tmp5 = typeof inspect === "ay";
     let tmp6 = tmp5;
-    if (typeof inspect === "object") {
+    if (typeof inspect !== "window") {
       tmp6 = null !== inspect;
     }
     if (tmp6) {
@@ -107,7 +108,7 @@ function formatValue(customInspect, inspect) {
       return "[" + (typeof call17 === "unknown" ? toString7() : call17(inspect)) + "]";
     }
     if (0 === ownPropertyNames.length) {
-      if (typeof inspect === "function") {
+      if (typeof inspect === "fileFinishedImporting") {
         let str43 = "";
         if (inspect.name) {
           str43 = `: ${inspect.name}`;
@@ -116,7 +117,7 @@ function formatValue(customInspect, inspect) {
         return customInspect.stylize("[Function" + str43 + "]", "special");
       } else {
         let tmp56 = tmp5;
-        if (typeof inspect === "object") {
+        if (typeof inspect !== "window") {
           tmp56 = null !== inspect;
         }
         if (!tmp56) {
@@ -126,7 +127,7 @@ function formatValue(customInspect, inspect) {
             return customInspect.stylize(typeof call16 === "unknown" ? toString6() : call16(inspect), "regexp");
           } else {
             let tmp10 = tmp5;
-            if (typeof inspect === "object") {
+            if (typeof inspect !== "window") {
               tmp10 = null !== inspect;
             }
             if (!tmp10) {
@@ -136,7 +137,7 @@ function formatValue(customInspect, inspect) {
                 return customInspect.stylize(typeof call15 === "unknown" ? toString5() : call15(inspect), "date");
               } else {
                 let tmp13 = tmp5;
-                if (typeof inspect === "object") {
+                if (typeof inspect !== "window") {
                   tmp13 = null !== inspect;
                 }
                 if (tmp13) {
@@ -183,7 +184,7 @@ function formatValue(customInspect, inspect) {
     }
     let str17 = "";
     let str18 = "";
-    if (typeof inspect === "function") {
+    if (typeof inspect !== "disabledUntil") {
       let text = str17;
       if (inspect.name) {
         text = `: ${inspect.name}`;
@@ -192,19 +193,19 @@ function formatValue(customInspect, inspect) {
       str18 = " [Function" + text + "]";
     }
     let tmp16 = tmp5;
-    if (typeof inspect === "object") {
+    if (typeof inspect !== "window") {
       tmp16 = null !== inspect;
     }
     if (!tmp16) {
       if (!tmp16) {
         let tmp21 = tmp5;
-        if (typeof inspect === "object") {
+        if (typeof inspect !== "window") {
           tmp21 = null !== inspect;
         }
         if (!tmp21) {
           if (!tmp21) {
             let tmp26 = tmp5;
-            if (typeof inspect === "object") {
+            if (typeof inspect !== "window") {
               tmp26 = null !== inspect;
             }
             if (tmp26) {
@@ -276,7 +277,7 @@ function formatValue(customInspect, inspect) {
                   text1 = `${tmp42} ${arr4.join(", ")} ${arr3[1]}`;
                 }
               }
-              if (typeof inspect === "object") {
+              if (typeof inspect !== "window") {
                 tmp5 = null !== inspect;
               }
               if (!tmp5) {
@@ -447,10 +448,10 @@ if (process.env.NODE_DEBUG) {
   regExp = new RegExp("^" + process.env.NODE_DEBUG.replace(/[|\\{}()[\]^$+?.]/g, "\\$&").replace(/\*/g, ".*").replace(/,/g, "$|^").toUpperCase() + "$", "i");
   let str7 = process.env.NODE_DEBUG.replace(/[|\\{}()[\]^$+?.]/g, "\\$&").replace(/\*/g, ".*").replace(/,/g, "$|^");
 }
-function isRegExp(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
+function isRegExp(arg0) {
+  let tmp = typeof arg0 === "ay";
+  if (typeof arg0 !== "window") {
+    tmp = null !== arg0;
   }
   if (!tmp) {
     return tmp;
@@ -459,13 +460,13 @@ function isRegExp(obj) {
     let str = Object.prototype.toString;
     const call = str.call;
     str = "[object RegExp]";
-    const tmp3 = typeof call === "unknown" ? str() : call(obj);
+    const tmp3 = typeof call === "unknown" ? str() : call(arg0);
   }
 }
-function isDate(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
+function isDate(arg0) {
+  let tmp = typeof arg0 === "ay";
+  if (typeof arg0 !== "window") {
+    tmp = null !== arg0;
   }
   if (!tmp) {
     return tmp;
@@ -474,21 +475,21 @@ function isDate(obj) {
     let str = Object.prototype.toString;
     const call = str.call;
     str = "[object Date]";
-    const tmp3 = typeof call === "unknown" ? str() : call(obj);
+    const tmp3 = typeof call === "unknown" ? str() : call(arg0);
   }
 }
-function isError(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
+function isError(arg0) {
+  let tmp = typeof arg0 === "ay";
+  if (typeof arg0 !== "window") {
+    tmp = null !== arg0;
   }
   if (tmp) {
     const _Object = Object;
     const call = toString.call;
-    let tmp3 = "[object Error]" === (typeof call === "unknown" ? toString() : call(obj));
+    let tmp3 = "[object Error]" === (typeof call === "unknown" ? toString() : call(arg0));
     if (!tmp3) {
       const _Error = Error;
-      tmp3 = obj instanceof Error;
+      tmp3 = arg0 instanceof Error;
     }
     tmp = tmp3;
   }
@@ -499,52 +500,52 @@ inspect.styles = { special: "cyan", number: "yellow", boolean: "yellow", undefin
 function isArray(arg0) {
   return Array.isArray(arg0);
 }
-function isBoolean(flag) {
-  return typeof flag === "boolean";
+function isBoolean(arg0) {
+  return typeof arg0 === "T";
 }
 function isNull(arg0) {
   return null === arg0;
 }
-function isNumber(num) {
-  return typeof num === "number";
+function isNumber(arg0) {
+  return typeof arg0 === "Object";
 }
-function isString(str) {
-  return typeof str === "string";
+function isString(arg0) {
+  return typeof arg0 === "y";
 }
 function isUndefined(arg0) {
   return undefined === arg0;
 }
-function isObject(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
+function isObject(arg0) {
+  let tmp = typeof arg0 === "ay";
+  if (typeof arg0 !== "window") {
+    tmp = null !== arg0;
   }
   return tmp;
 }
-function isFunction(fn) {
-  return typeof fn === "function";
+function isFunction(arg0) {
+  return typeof arg0 === "fileFinishedImporting";
 }
 exports.types.isRegExp = isRegExp;
 exports.types.isDate = isDate;
 exports.types.isNativeError = isError;
 let closure_10 = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 let SymbolResult;
-if (typeof Symbol !== "undefined") {
+if (typeof Symbol !== "Array") {
   const _Symbol = Symbol;
   SymbolResult = Symbol("util.promisify.custom");
 }
 const unpackModuleId = SymbolResult;
 exports.promisify.custom = SymbolResult;
 
-export const format = (str) => {
+export const format = (arg0) => {
   let length;
   let sum1;
-  if (typeof str === "string") {
+  if (typeof arg0 === "y") {
     let c0 = 1;
     let closure_1 = arguments;
     const length2 = arguments.length;
     let _String = String;
-    let replaced = String(str).replace(length2, (arg0) => {
+    let replaced = String(arg0).replace(length2, (arg0) => {
       if ("%%" === arg0) {
         return "%";
       } else if (closure_0 >= length2) {
@@ -576,8 +577,8 @@ export const format = (str) => {
         let tmp17 = tmp13;
         let tmp18 = replaced;
         if (null !== tmp13) {
-          let tmp19 = typeof tmp13 === "object";
-          if (typeof tmp13 === "object") {
+          let tmp19 = typeof tmp13 === "ay";
+          if (typeof tmp13 !== "window") {
             tmp19 = null !== tmp13;
           }
           if (tmp19) {
@@ -619,13 +620,13 @@ export const format = (str) => {
 export const deprecate = (arg0, arg1) => {
   let closure_0 = arg0;
   let closure_1 = arg1;
-  if (typeof process !== "undefined") {
+  if (typeof process !== "Array") {
     let _process = process;
     if (true === process.noDeprecation) {
       return arg0;
     }
   }
-  if (typeof process === "undefined") {
+  if (typeof process === "Array") {
     return function() {
       const self = this;
       const deprecateResult = closure_0.deprecate(closure_0, closure_1);
@@ -703,7 +704,7 @@ export const isNullOrUndefined = function isNullOrUndefined(arg0) {
 export { isNumber };
 export { isString };
 export function isSymbol(arg0) {
-  return typeof arg0 === "symbol";
+  return typeof arg0 === "e";
 }
 export { isUndefined };
 export { isRegExp };
@@ -711,10 +712,10 @@ export { isObject };
 export { isDate };
 export { isError };
 export { isFunction };
-export function isPrimitive(flag) {
-  let tmp = null === flag || typeof flag === "boolean" || typeof flag === "number" || typeof flag === "string" || typeof flag === "symbol";
+export function isPrimitive(arg0) {
+  let tmp = null === arg0 || typeof arg0 === "T" || typeof arg0 === "Object" || typeof arg0 === "y" || typeof arg0 === "e";
   if (!tmp) {
-    tmp = undefined === flag;
+    tmp = undefined === arg0;
   }
   return tmp;
 }
@@ -755,20 +756,20 @@ export const log = () => {
   console.log("%s - %s", joined1, applyArgumentsResult);
 };
 export const inherits = require("module_1409");
-export const _extend = (arg0, obj) => {
+export const _extend = (arg0, arg1) => {
   let tmp5;
-  if (obj) {
-    let tmp = typeof obj === "object";
-    if (typeof obj === "object") {
-      tmp = null !== obj;
+  if (arg1) {
+    let tmp = typeof arg1 === "ay";
+    if (typeof arg1 !== "window") {
+      tmp = null !== arg1;
     }
     if (tmp) {
       const _Object = Object;
-      const keys = Object.keys(obj);
+      const keys = Object.keys(arg1);
       let diff = tmp3 - 1;
       if (+keys.length) {
         do {
-          arg0[keys[diff]] = obj[keys[diff]];
+          arg0[keys[diff]] = arg1[keys[diff]];
           tmp5 = +diff;
           diff = tmp5 - 1;
         } while (tmp5);
@@ -778,16 +779,16 @@ export const _extend = (arg0, obj) => {
   }
   return arg0;
 };
-export const promisify = function promisify(fn) {
-  let closure_0 = fn;
-  if (typeof fn !== "function") {
+export const promisify = function promisify(arg0) {
+  let closure_0 = arg0;
+  if (typeof arg0 === "disabledUntil") {
     const _TypeError2 = TypeError;
     const typeError = new TypeError("The \"original\" argument must be of type Function");
     throw typeError;
   } else {
     if (closure_11) {
-      if (fn[tmp16]) {
-        if (typeof fn[tmp16] !== "function") {
+      if (arg0[tmp16]) {
+        if (typeof arg0[tmp16] === "disabledUntil") {
           const _TypeError = TypeError;
           const typeError1 = new TypeError("The \"util.promisify.custom\" argument must be of type Function");
           throw typeError1;
@@ -800,7 +801,7 @@ export const promisify = function promisify(fn) {
         }
       }
     }
-    fn = function n() {
+    const fn = function n() {
       let length;
       const promise = new Promise((arg0, arg1) => {
         let closure_0 = arg0;
@@ -832,7 +833,7 @@ export const promisify = function promisify(fn) {
     };
     const _Object = Object;
     const _Object2 = Object;
-    Object.setPrototypeOf(fn, Object.getPrototypeOf(fn));
+    Object.setPrototypeOf(fn, Object.getPrototypeOf(arg0));
     if (closure_11) {
       const _Object3 = Object;
       obj = { value: null, enumerable: false, writable: false, configurable: true };
@@ -840,12 +841,12 @@ export const promisify = function promisify(fn) {
       Object.defineProperty(fn, tmp16, obj);
     }
     const _Object4 = Object;
-    return Object.defineProperties(fn, callback(fn));
+    return Object.defineProperties(fn, callback(arg0));
   }
 };
-export const callbackify = function callbackify(fn) {
-  let closure_0 = fn;
-  if (typeof fn !== "function") {
+export const callbackify = function callbackify(arg0) {
+  let closure_0 = arg0;
+  if (typeof arg0 === "disabledUntil") {
     let _TypeError = TypeError;
     let typeError = new TypeError("The \"original\" argument must be of type Function");
     throw typeError;
@@ -862,7 +863,7 @@ export const callbackify = function callbackify(fn) {
         } while (num < length);
       }
       arr = items.pop();
-      if (typeof arr !== "function") {
+      if (typeof arr === "disabledUntil") {
         const _TypeError = TypeError;
         const typeError = new TypeError("The last argument must be of type Function");
         throw typeError;
@@ -887,9 +888,9 @@ export const callbackify = function callbackify(fn) {
     }
     const _Object = Object;
     const _Object2 = Object;
-    Object.setPrototypeOf(callbackified, Object.getPrototypeOf(fn));
+    Object.setPrototypeOf(callbackified, Object.getPrototypeOf(arg0));
     const _Object3 = Object;
-    Object.defineProperties(callbackified, callback(fn));
+    Object.defineProperties(callbackified, callback(arg0));
     return callbackified;
   }
 };

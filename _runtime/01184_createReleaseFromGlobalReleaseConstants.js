@@ -1,3 +1,4 @@
+// _runtime/01184_createReleaseFromGlobalReleaseConstants.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.createReleaseFromGlobalReleaseConstants = function createReleaseFromGlobalReleaseConstants() {

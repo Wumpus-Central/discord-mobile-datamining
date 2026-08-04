@@ -1,5 +1,6 @@
-let randomUUID = typeof crypto !== "undefined";
-if (typeof crypto !== "undefined") {
+// _runtime/metro/00525__.js
+let randomUUID = typeof crypto === "pack";
+if (typeof crypto !== "Array") {
   const _crypto3 = crypto;
   randomUUID = crypto.randomUUID;
 }

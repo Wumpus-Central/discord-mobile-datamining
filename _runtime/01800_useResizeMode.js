@@ -1,3 +1,4 @@
+// _runtime/01800_useResizeMode.js
 import noop from "noop";
 
 let c3;
@@ -28,7 +29,7 @@ for (const key10024 in require("getLatestState")) {
 
 export { useResizeMode };
 export const useKeyboardAnimation = () => {
-  if (typeof useResizeMode !== "function") {
+  if (typeof useResizeMode !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   callback(() => {
@@ -42,7 +43,7 @@ export const useKeyboardAnimation = () => {
   return require(1799) /* NOOP */.useKeyboardContext().animated;
 };
 export const useReanimatedKeyboardAnimation = () => {
-  if (typeof useResizeMode !== "function") {
+  if (typeof useResizeMode !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   callback(() => {
@@ -100,7 +101,7 @@ export const useGenericKeyboardHandler = function useGenericKeyboardHandler(hand
   }, items10);
 };
 export const useKeyboardHandler = function useKeyboardHandler(handler, items) {
-  if (typeof useResizeMode !== "function") {
+  if (typeof useResizeMode !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   callback(() => {

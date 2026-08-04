@@ -1,3 +1,4 @@
+// _runtime/01795_useEventHandlerRegistration.js
 import { useRef } from "noop";
 import { Animated } from "get ActivityIndicator";
 

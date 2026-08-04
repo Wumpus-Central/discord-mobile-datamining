@@ -1,3 +1,4 @@
+// _runtime/01728__isNativeReflectConstruct.js
 import PinwheelOut from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

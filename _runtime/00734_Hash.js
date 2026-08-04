@@ -1,3 +1,4 @@
+// _runtime/00734_Hash.js
 class Hash {
   constructor(arg0) {
     num = 0;

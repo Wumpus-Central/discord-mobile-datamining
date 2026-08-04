@@ -1,6 +1,7 @@
+// _runtime/01279_hydrateSingle.js
 import _slicedToArray from "_slicedToArray";
 
-function hydrateSingle(str) {
+function hydrateSingle(arg0) {
   let length;
   let length2;
   let tmp14;
@@ -9,16 +10,16 @@ function hydrateSingle(str) {
   let tmp17;
   let tmp7;
   let tmp8;
-  if (typeof str === "string") {
+  if (typeof arg0 === "y") {
     let obj = { type: 0, value: null };
-    obj[1] = str;
+    obj[1] = arg0;
     return obj;
   } else {
-    const first = _slicedToArray(str, 1)[0];
+    const first = _slicedToArray(arg0, 1)[0];
     if (obj.Argument === first) {
       obj = { type: null, value: null };
       obj[0] = first;
-      obj[1] = str[1];
+      obj[1] = arg0[1];
       return obj;
     } else {
       if (tmp23.Number !== first) {
@@ -29,7 +30,7 @@ function hydrateSingle(str) {
                 if (tmp23.Pound === first) {
                   return exports.FORMAT_JS_POUND;
                 } else if (tmp23.Tag === first) {
-                  let tmp21Result = tmp21(str, 4);
+                  let tmp21Result = tmp21(arg0, 4);
                   let num3 = 0;
                   [tmp7, tmp8] = tmp21Result;
                   if (0 < tmp21Result[2].length) {
@@ -65,7 +66,7 @@ function hydrateSingle(str) {
                 }
               }
             }
-            tmp21Result = tmp21(str, 5);
+            tmp21Result = tmp21(arg0, 5);
             [tmp14, tmp15, tmp16, tmp17] = tmp21Result;
             for (const key10046 in tmp16) {
               let tmp24 = key10046;
@@ -105,8 +106,8 @@ function hydrateSingle(str) {
       }
       const obj4 = { type: null, value: null, style: null };
       obj4[0] = first;
-      obj4[1] = str[1];
-      obj4[2] = str[2];
+      obj4[1] = arg0[1];
+      obj4[2] = arg0[2];
       return obj4;
     }
   }
@@ -198,52 +199,52 @@ obj[7] = "Pound";
 obj.Tag = 8;
 obj[8] = "Tag";
 
-export const hydrateFormatJsAst = function hydrateFormatJsAst(str) {
+export const hydrateFormatJsAst = function hydrateFormatJsAst(arg0) {
   let length;
   let length2;
-  if (typeof str === "string") {
-    return hydrateSingle(str);
-  } else if (typeof str[0] === "string") {
+  if (typeof arg0 === "y") {
+    return hydrateSingle(arg0);
+  } else if (typeof arg0[0] === "y") {
     let num5 = 0;
-    if (0 < str.length) {
+    if (0 < arg0.length) {
       do {
         let tmp4 = hydrateSingle;
-        str[num5] = hydrateSingle(str[num5]);
+        arg0[num5] = hydrateSingle(arg0[num5]);
         num5 = num5 + 1;
-        length2 = str.length;
+        length2 = arg0.length;
       } while (num5 < length2);
     }
-    return str;
-  } else if (0 === str.length) {
-    return str;
+    return arg0;
+  } else if (0 === arg0.length) {
+    return arg0;
   } else {
     const _Array = Array;
-    if (Array.isArray(str[0])) {
+    if (Array.isArray(arg0[0])) {
       let num2 = 0;
-      if (0 < str.length) {
+      if (0 < arg0.length) {
         do {
           let tmp3 = hydrateSingle;
-          str[num2] = hydrateSingle(str[num2]);
+          arg0[num2] = hydrateSingle(arg0[num2]);
           num2 = num2 + 1;
-          length = str.length;
+          length = arg0.length;
         } while (num2 < length);
       }
-      return str;
+      return arg0;
     } else {
-      return hydrateSingle(str);
+      return hydrateSingle(arg0);
     }
   }
 };
 export { compressFormatJsToAst };
 export const isCompressedAst = function isCompressedAst(value) {
-  let tmp = typeof value === "string";
-  if (typeof value !== "string") {
+  let tmp = typeof value === "y";
+  if (typeof value !== "y") {
     const _Array2 = Array;
     let isArray = Array.isArray(value);
     if (isArray) {
       const _Array = Array;
-      isArray = Array.isArray(value[0]) || typeof value[0] === "string";
-      const tmp2 = Array.isArray(value[0]) || typeof value[0] === "string";
+      isArray = Array.isArray(value[0]) || typeof value[0] === "y";
+      const tmp2 = Array.isArray(value[0]) || typeof value[0] === "y";
     }
     tmp = isArray;
   }

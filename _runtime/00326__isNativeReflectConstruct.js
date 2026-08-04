@@ -1,3 +1,4 @@
+// _runtime/00326__isNativeReflectConstruct.js
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import _classCallCheck from "_classCallCheck";

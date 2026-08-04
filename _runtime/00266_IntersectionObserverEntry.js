@@ -1,3 +1,4 @@
+// _runtime/00266_IntersectionObserverEntry.js
 import _classCallCheck from "_classCallCheck";
 import setPlatformObject from "setPlatformObject";
 

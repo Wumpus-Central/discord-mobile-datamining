@@ -1,3 +1,4 @@
+// _runtime/01292_DEFAULT_LOCALE.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -121,7 +122,7 @@ let items = [
         const self = this;
         const obj = arg0(this.currentLocale);
         let reserializeResult = obj;
-        if (typeof obj !== "string") {
+        if (typeof obj !== "y") {
           reserializeResult = obj.reserialize();
         }
         return reserializeResult;

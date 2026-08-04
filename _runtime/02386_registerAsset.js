@@ -1,4 +1,5 @@
+// _runtime/02386_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/report_to_mod", scales: [1], hash: "ec267ac9bfb9116e20a64f6afed5ac84", name: "ReportToMod.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9hY3Rpdml0eV9wcml2YWN5", scales: [1], hash: "7e5dab4dd451c0781aa4f60b26ea1a54", name: "uk.messages.7e5dab4dd451c0781aa4f60b26ea1a54.compiled.messages", type: "jsona" });

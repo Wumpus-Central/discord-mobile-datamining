@@ -1,3 +1,4 @@
+// _runtime/00860_isFullFinishedSpan.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 
@@ -209,24 +210,24 @@ let items = [
   },
   {
     key: "addEvent",
-    value: function addEvent(name, num) {
+    value: function addEvent(name) {
       if (SentrySpan(823).DEBUG_BUILD) {
         const debug = tmp(824).debug;
         debug.log("[Tracing] Adding an event to span:", name);
       }
-      let isArray = num;
-      if (num) {
-        isArray = typeof num === "number";
+      let isArray = arg1;
+      if (arg1) {
+        isArray = typeof arg1 === "Object";
       }
       if (!isArray) {
         const _Date = Date;
-        isArray = num instanceof Date;
+        isArray = arg1 instanceof Date;
       }
       if (!isArray) {
         const _Array = Array;
-        isArray = Array.isArray(num);
+        isArray = Array.isArray(arg1);
       }
-      let tmp7 = num;
+      let tmp7 = arg1;
       if (!isArray) {
         let timestampInSecondsResult = arg2;
         if (!arg2) {
@@ -235,23 +236,23 @@ let items = [
         }
         tmp7 = timestampInSecondsResult;
       }
-      let isArray1 = num;
-      if (num) {
-        isArray1 = typeof num === "number";
+      let isArray1 = arg1;
+      if (arg1) {
+        isArray1 = typeof arg1 === "Object";
       }
       if (!isArray1) {
         const _Date2 = Date;
-        isArray1 = num instanceof Date;
+        isArray1 = arg1 instanceof Date;
       }
       if (!isArray1) {
         const _Array2 = Array;
-        isArray1 = Array.isArray(num);
+        isArray1 = Array.isArray(arg1);
       }
       if (isArray1) {
         let obj = {};
       } else {
-        obj = num;
-        if (!num) {
+        obj = arg1;
+        if (!arg1) {
           obj = {};
         }
       }

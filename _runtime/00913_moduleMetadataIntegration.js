@@ -1,3 +1,4 @@
+// _runtime/00913_moduleMetadataIntegration.js
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

@@ -1,3 +1,4 @@
+// _runtime/00173__createNativeObserver2.js
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";
 import _classPrivateFieldBase from "_classPrivateFieldBase";

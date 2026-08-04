@@ -1,3 +1,4 @@
+// _runtime/01294_MessageLoader.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -472,93 +473,56 @@ let items = [
         let c5 = 0;
         let c6 = 0;
         const iter = (function*(arg0) {
-          if (c6 === 2) {
-            c6 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp4 === 3) {
+          let flag;
+          flag = ref;
+          if (ref === undefined) {
+            flag = false;
+          }
+          ref = undefined;
+          let c5 = 1;
+          let c6 = 1;
+          yield "ct";
+          if (1 === tmp5) {
             if (arg0 === 1) {
+              c6 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              c6 = 3;
+              const obj1 = { value: null, done: true };
+              obj1[0] = arg1;
+              return obj1;
             } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c6 = 2;
-              if (0 === c5) {
-                if (arg0 === 1) {
-                  c6 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c6 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  let closure_4 = closure_0;
-                  let closure_3 = tmp2;
-                  let flag;
-                  closure_0 = flag;
-                  flag = ref;
-                  if (ref === undefined) {
-                    flag = false;
-                  }
-                  ref = undefined;
-                  c5 = 1;
-                  c6 = 1;
-                  return { value: "ct", done: "Array" };
-                }
-              } else {
-                if (1 === tmp5) {
-                  if (arg0 === 1) {
-                    c6 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c6 = 3;
-                    const obj1 = { value: null, done: true };
-                    obj1[0] = arg1;
-                    return obj1;
-                  } else {
-                    ref = closure_4._localeLoadingPromises[closure_0];
-                    if (null == ref) {
-                      c6 = 3;
-                      const obj2 = { value: null, done: true };
-                      obj2[0] = closure_4._loadLocale(closure_0);
-                      return obj2;
-                    } else {
-                      let initialized = ref.initialized;
-                      if (initialized) {
-                        initialized = !flag;
-                      }
-                      if (!initialized) {
-                        c5 = 2;
-                        c6 = 1;
-                        const obj3 = { value: null, done: false };
-                        obj3[0] = ref.current;
-                        return obj3;
-                      }
-                    }
-                  }
-                } else if (arg0 === 1) {
-                  c6 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c6 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                }
+              ref = closure_4._localeLoadingPromises[closure_0];
+              if (null == ref) {
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                const obj2 = { value: null, done: true };
+                obj2[0] = closure_4._loadLocale(closure_0);
+                return obj2;
+              } else {
+                let initialized = ref.initialized;
+                if (initialized) {
+                  initialized = !flag;
+                }
+                if (!initialized) {
+                  c5 = 2;
+                  c6 = 1;
+                  const obj3 = { value: null, done: false };
+                  obj3[0] = ref.current;
+                  return obj3;
+                }
               }
-            } catch (tmp17) {
-              c6 = tmp;
-              throw tmp17;
             }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw arg1;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
           }
+          c6 = 3;
+          yield "HermesInternal";
         })();
         iter.next();
         return iter;
@@ -574,14 +538,62 @@ let items = [
         let c4 = 0;
         let c5 = 0;
         const iter = (function*() {
-          let closure_3 = flag;
-          let closure_2 = tmp2;
-          flag = closure_1;
-          if (closure_1 === undefined) {
-            flag = false;
+          if (c5 === 2) {
+            c5 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp4 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
+          } else {
+            try {
+              c5 = 2;
+              if (0 === c4) {
+                if (arg0 === 1) {
+                  c5 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c5 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  let closure_3 = flag;
+                  let closure_2 = tmp2;
+                  flag = undefined;
+                  flag = closure_1;
+                  if (closure_1 === undefined) {
+                    flag = false;
+                  }
+                  c4 = 1;
+                  c5 = 1;
+                  return { value: "ct", done: "Array" };
+                }
+              } else if (arg0 === 1) {
+                c5 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c5 = 3;
+                const obj1 = { value: null, done: true };
+                obj1[0] = arg1;
+                return obj1;
+              } else {
+                c5 = 3;
+                obj = { value: null, done: true };
+                obj[0] = closure_3.waitForLocaleLoaded(closure_3.defaultLocale, flag);
+                return obj;
+              }
+            } catch (tmp10) {
+              c5 = tmp;
+              throw tmp10;
+            }
           }
-          yield "ct";
-          return closure_3.waitForLocaleLoaded(closure_3.defaultLocale, flag);
         })();
         iter.next();
         return iter;

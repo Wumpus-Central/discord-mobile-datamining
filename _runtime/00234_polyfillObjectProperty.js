@@ -1,3 +1,4 @@
+// _runtime/00234_polyfillObjectProperty.js
 const _navigator = global.navigator;
 if (undefined === _navigator) {
   global.navigator = { product: "ReactNative" };

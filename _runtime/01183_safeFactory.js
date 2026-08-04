@@ -1,3 +1,4 @@
+// _runtime/01183_safeFactory.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.safeFactory = function safeFactory(beforeBreadcrumb, arg1) {
@@ -7,7 +8,7 @@ arg5.safeFactory = function safeFactory(beforeBreadcrumb, arg1) {
   if (arg1 === undefined) {
     obj = {};
   }
-  if (typeof fn === "function") {
+  if (typeof fn !== "disabledUntil") {
     fn = () => {
       const items = [...arguments];
       try {

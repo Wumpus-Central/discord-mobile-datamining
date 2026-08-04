@@ -1,3 +1,4 @@
+// _runtime/metro/00247__.js
 const require = arg1;
 let closure_3 = [];
 require("_isNativeReflectConstruct").addListener("hardwareBackPress", (timeStamp) => {

@@ -1,3 +1,4 @@
+// _runtime/01295_chainMessagesObjects.js
 arg5.chainMessagesObjects = function chainMessagesObjects(importDefaultResult, $$loader2) {
   let tmp2 = "IntlMessagesProxy" === $$loader2[Symbol.toStringTag];
   if ("IntlMessagesProxy" === importDefaultResult[Symbol.toStringTag]) {

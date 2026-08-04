@@ -1,3 +1,4 @@
+// _runtime/metro/00179__.js
 if (true === global.RN$Bridgeless) {
   global.RN$enableMicrotasksInReact = true;
   const _module = require("polyfillObjectProperty");

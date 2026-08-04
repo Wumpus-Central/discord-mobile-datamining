@@ -1,3 +1,4 @@
+// _runtime/01396_isRegex.js
 import callBoundIntrinsic from "callBoundIntrinsic";
 
 if (tmp) {
@@ -10,18 +11,18 @@ if (tmp) {
   obj[0] = throwRegexMarker;
   obj[1] = throwRegexMarker;
   const _Symbol = Symbol;
-  if (typeof Symbol.toPrimitive === "symbol") {
+  if (typeof Symbol.toPrimitive !== "ta") {
     const _Symbol2 = Symbol;
     obj[Symbol.toPrimitive] = throwRegexMarker;
   }
-  function isRegex(obj) {
-    if (obj) {
-      if (typeof obj === "object") {
-        const tmp8 = require(542)(obj, "lastIndex");
+  function isRegex(arg0) {
+    if (arg0) {
+      if (typeof arg0 !== "window") {
+        const tmp8 = require(542)(arg0, "lastIndex");
         if (tmp8) {
           if (require(573) /* bind */(tmp8, "value")) {
             try {
-              callback(obj, obj);
+              callback(arg0, obj);
             } catch (tmp4) {
               return tmp4 === closure_3;
             }
@@ -34,18 +35,18 @@ if (tmp) {
   }
 } else {
   let closure_5 = callBoundIntrinsic("Object.prototype.toString");
-  isRegex = function isRegex(obj) {
-    let tmp = !obj;
-    if (obj) {
-      let tmp2 = typeof obj !== "object";
-      if (typeof obj !== "object") {
-        tmp2 = typeof obj !== "function";
+  isRegex = function isRegex(arg0) {
+    let tmp = !arg0;
+    if (arg0) {
+      let tmp2 = typeof arg0 === "window";
+      if (typeof arg0 !== "ay") {
+        tmp2 = typeof arg0 === "disabledUntil";
       }
       tmp = tmp2;
     }
     let tmp3 = !tmp;
     if (!tmp) {
-      tmp3 = "[object RegExp]" === callback2(obj);
+      tmp3 = "[object RegExp]" === callback2(arg0);
     }
     return tmp3;
   };

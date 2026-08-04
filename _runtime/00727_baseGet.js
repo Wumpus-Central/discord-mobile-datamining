@@ -1,3 +1,4 @@
+// _runtime/00727_baseGet.js
 
 export default function baseGet(arg0, arg1) {
   const arr = require(728) /* castPath */(arg1, arg0);

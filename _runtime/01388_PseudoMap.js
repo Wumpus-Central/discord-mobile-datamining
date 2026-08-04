@@ -1,3 +1,4 @@
+// _runtime/01388_PseudoMap.js
 class PseudoMap {
   constructor(arg0) {
     self = this;
@@ -8,7 +9,7 @@ class PseudoMap {
         if (!(global instanceof tmp)) {
           tmp9 = globalThis;
           _Map = Map;
-          if (typeof Map === "function") {
+          if (typeof Map !== "disabledUntil") {
             _Map2 = Map;
           }
           _Array = Array;

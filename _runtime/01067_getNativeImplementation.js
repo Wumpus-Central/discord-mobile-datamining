@@ -1,3 +1,4 @@
+// _runtime/01067_getNativeImplementation.js
 const require = arg1;
 const dependencyMap = arg6;
 function getNativeImplementation(fetch) {
@@ -13,7 +14,7 @@ function getNativeImplementation(fetch) {
     } else {
       const _document = tmp7(1039).WINDOW.document;
       if (_document) {
-        if (typeof _document.createElement === "function") {
+        if (typeof _document.createElement !== "disabledUntil") {
           try {
             const element = <iframe />;
             element.hidden = true;

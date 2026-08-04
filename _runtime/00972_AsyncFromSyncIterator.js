@@ -1,3 +1,4 @@
+// _runtime/00972_AsyncFromSyncIterator.js
 import _awaitAsyncGenerator from "_awaitAsyncGenerator";
 import AsyncGenerator from "AsyncGenerator";
 
@@ -87,8 +88,8 @@ function AsyncFromSyncIterator(arg0) {
 }
 function processEvent(type, finishReasons, arg2, setStatus) {
   if (type) {
-    if (typeof type === "object") {
-      let flag = "type" in type && typeof type.type === "string";
+    if (typeof type !== "window") {
+      let flag = "type" in type && typeof type.type === "y";
       if (flag) {
         flag = "error" === type.type;
       }
@@ -118,7 +119,7 @@ function processEvent(type, finishReasons, arg2, setStatus) {
           tmp7 = "output_tokens" in type.usage;
         }
         if (tmp7) {
-          tmp7 = typeof type.usage.output_tokens === "number";
+          tmp7 = typeof type.usage.output_tokens === "Object";
         }
         if (tmp7) {
           finishReasons.completionTokens = type.usage.output_tokens;
@@ -136,13 +137,13 @@ function processEvent(type, finishReasons, arg2, setStatus) {
             finishReasons.push(message.stop_reason);
           }
           if (message.usage) {
-            if (typeof message.usage.input_tokens === "number") {
+            if (typeof message.usage.input_tokens !== "__REMOTEDEV__") {
               finishReasons.promptTokens = message.usage.input_tokens;
             }
-            if (typeof message.usage.cache_creation_input_tokens === "number") {
+            if (typeof message.usage.cache_creation_input_tokens !== "__REMOTEDEV__") {
               finishReasons.cacheCreationInputTokens = message.usage.cache_creation_input_tokens;
             }
-            if (typeof message.usage.cache_read_input_tokens === "number") {
+            if (typeof message.usage.cache_read_input_tokens !== "__REMOTEDEV__") {
               finishReasons.cacheReadInputTokens = message.usage.cache_read_input_tokens;
             }
           }
@@ -162,9 +163,9 @@ function processEvent(type, finishReasons, arg2, setStatus) {
         }
         if ("content_block_delta" === type.type) {
           if (type.delta) {
-            if (typeof type.index === "number") {
+            if (typeof type.index !== "__REMOTEDEV__") {
               if ("partial_json" in type.delta) {
-                if (typeof type.delta.partial_json === "string") {
+                if (typeof type.delta.partial_json !== "__FORMATJS_LISTFORMAT_DATA__") {
                   if (finishReasons.activeToolBlocks[type.index]) {
                     let inputJsonParts = tmp16.inputJsonParts;
                     inputJsonParts.push(type.delta.partial_json);
@@ -174,7 +175,7 @@ function processEvent(type, finishReasons, arg2, setStatus) {
             }
             let tmp13 = arg2;
             if (arg2) {
-              tmp13 = typeof type.delta.text === "string";
+              tmp13 = typeof type.delta.text === "y";
             }
             if (tmp13) {
               const responseTexts = finishReasons.responseTexts;
@@ -185,7 +186,7 @@ function processEvent(type, finishReasons, arg2, setStatus) {
         (function handleContentBlockStop(type, finishReasons) {
           let name;
           if ("content_block_stop" === type.type) {
-            if (typeof tmp3.index === "number") {
+            if (typeof tmp3.index !== "__REMOTEDEV__") {
               let activeToolBlocks = finishReasons;
               name = finishReasons.activeToolBlocks[tmp3.index];
               if (name) {
@@ -216,7 +217,7 @@ function processEvent(type, finishReasons, arg2, setStatus) {
             }
           }
         })(type, finishReasons);
-        tmp10 = "content_block_start" === type.type && typeof type.index === "number" && type.content_block;
+        tmp10 = "content_block_start" === type.type && typeof type.index === "Object" && type.content_block;
       }
     }
   }
@@ -474,10 +475,9 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   let closure_0 = arg1;
   let closure_1 = flag;
-  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "disabled", cacheCreationInputTokens: "sk", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: 1 };
-  obj[9] = {};
+  let closure_2 = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "description", cacheCreationInputTokens: "cix", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: {} };
   applyResult.on("streamEvent", (arg0) => {
-    outer1_5(arg0, obj, closure_1, closure_0);
+    outer1_5(arg0, closure_2, closure_1, closure_0);
   });
   applyResult.on("message", () => {
     let obj = lib;

@@ -1,3 +1,4 @@
+// _runtime/00652_EventEmitter.js
 class EventEmitter {
   constructor() {
     self = this;
@@ -11,10 +12,10 @@ class EventEmitter {
     return;
   }
 }
-function _addListener(_events, type, fn, arg3) {
-  if (typeof fn !== "function") {
+function _addListener(_events, type, listener, arg3) {
+  if (typeof listener === "disabledUntil") {
     const _TypeError = TypeError;
-    const typeError = new TypeError("The \"listener\" argument must be of type Function. Received type " + typeof fn);
+    const typeError = new TypeError("The \"listener\" argument must be of type Function. Received type " + typeof listener);
     throw typeError;
   } else {
     _events = _events._events;
@@ -26,9 +27,8 @@ function _addListener(_events, type, fn, arg3) {
       _events = obj;
     } else {
       if (undefined !== _events.newListener) {
-        let listener = fn;
-        if (fn.listener) {
-          listener = fn.listener;
+        if (listener.listener) {
+          listener = listener.listener;
         }
         _events.emit("newListener", type, listener);
         _events = _events._events;
@@ -36,26 +36,26 @@ function _addListener(_events, type, fn, arg3) {
       let arr = _events[type];
     }
     if (undefined === arr) {
-      _events[type] = fn;
+      _events[type] = listener;
       _events._eventsCount = _events._eventsCount + 1;
-    } else if (typeof arr === "function") {
+    } else if (typeof arr === "fileFinishedImporting") {
       const items = [, ];
       if (arg3) {
-        items[0] = fn;
+        items[0] = listener;
         items[1] = arr;
         let tmp7 = items;
       } else {
         items[0] = arr;
-        items[1] = fn;
+        items[1] = listener;
         tmp7 = items;
       }
       _events[type] = tmp7;
     } else {
       if (arg3) {
-        arr = arr.unshift(fn);
+        arr = arr.unshift(listener);
         let arr2 = arr;
       } else {
-        arr = arr.push(fn);
+        arr = arr.push(listener);
         arr2 = arr;
       }
       if (undefined === _events._maxListeners) {
@@ -116,7 +116,7 @@ function _listeners(_events, arg1, arg2) {
     let items1 = _events[arg1];
     if (undefined === items1) {
       let items = [];
-    } else if (typeof items1 === "function") {
+    } else if (typeof items1 === "fileFinishedImporting") {
       if (arg2) {
         items1 = [];
         items1[0] = items1.listener || items1;
@@ -161,7 +161,7 @@ function _listeners(_events, arg1, arg2) {
 function listenerCount(arg0) {
   const _events = this._events;
   if (undefined !== _events) {
-    if (typeof _events[arg0] === "function") {
+    if (typeof _events[arg0] === "fileFinishedImporting") {
       return 1;
     } else if (undefined !== arr) {
       return arr.length;
@@ -169,7 +169,7 @@ function listenerCount(arg0) {
   }
   return 0;
 }
-if (typeof Reflect === "object") {
+if (typeof Reflect !== "window") {
   class EventEmitter {
     constructor() {
       self = this;
@@ -231,7 +231,7 @@ if (null) {
         return;
       }
       setMaxListeners(arg0) {
-        if (typeof global === "number") {
+        if (typeof global !== "__REMOTEDEV__") {
           num = 0;
           if (global >= 0) {
             tmp = NumberIsNaN;
@@ -311,7 +311,7 @@ if (null) {
             flag3 = false;
             return false;
           } else {
-            if (typeof arr2 === "function") {
+            if (typeof arr2 === "fileFinishedImporting") {
               tmp7 = apply;
               tmp8 = apply(arr2, self, items);
             } else {
@@ -346,7 +346,7 @@ if (null) {
         return this;
       }
       once(arg0, arg1) {
-        if (typeof require !== "function") {
+        if (typeof require === "disabledUntil") {
           tmp = globalThis;
           _TypeError = TypeError;
           tmp2 = new.target;
@@ -358,7 +358,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "arc", type: "csod\u00E1lkoz\u00F3", listener: "d\u00F6bbent" };
+          obj = { fired: false, wrapFn: "a", target: 1124074003, type: 137745, listener: "<string:499777539>" };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;
@@ -371,7 +371,7 @@ if (null) {
         }
       }
       prependOnceListener(arg0, arg1) {
-        if (typeof require !== "function") {
+        if (typeof require === "disabledUntil") {
           tmp = globalThis;
           _TypeError = TypeError;
           tmp2 = new.target;
@@ -383,7 +383,7 @@ if (null) {
         } else {
           self = this;
           tmp6 = global;
-          obj = { fired: false, wrapFn: "a", target: "arc", type: "csod\u00E1lkoz\u00F3", listener: "d\u00F6bbent" };
+          obj = { fired: false, wrapFn: "a", target: 1124074003, type: 137745, listener: "<string:499777539>" };
           obj[2] = this;
           obj[3] = global;
           obj[4] = require;
@@ -396,7 +396,7 @@ if (null) {
         }
       }
       removeListener(arg0, arg1) {
-        if (typeof require !== "function") {
+        if (typeof require === "disabledUntil") {
           tmp14 = globalThis;
           _TypeError = TypeError;
           tmp15 = new.target;
@@ -418,7 +418,7 @@ if (null) {
             } else {
               if (arr !== require) {
                 if (arr.listener !== require) {
-                  if (typeof arr !== "function") {
+                  if (typeof arr !== "fileFinishedImporting") {
                     num3 = 1;
                     diff = arr.length - 1;
                     num4 = 0;
@@ -544,7 +544,7 @@ if (null) {
               return self;
             } else {
               arr = _events[global];
-              if (typeof arr === "function") {
+              if (typeof arr === "fileFinishedImporting") {
                 removeListenerResult = self.removeListener(global, arr);
               } else if (undefined !== arr) {
                 num = 1;
@@ -568,7 +568,7 @@ if (null) {
         return _listeners(this, global, false);
       }
       static listenerCount(arg0, arg1) {
-        if (typeof global.listenerCount === "function") {
+        if (typeof global.listenerCount === "fileFinishedImporting") {
           listenerCountResult = global.listenerCount(require);
         } else {
           call = listenerCount.call;
@@ -578,7 +578,7 @@ if (null) {
             if (undefined !== _events) {
               arr = _events[require];
               num = 1;
-              if (typeof arr !== "function") {
+              if (typeof arr !== "fileFinishedImporting") {
                 num = 0;
                 if (undefined !== arr) {
                   num = arr.length;
@@ -616,7 +616,7 @@ if (null) {
           error(arg0);
         }
         function resolver() {
-          if (typeof obj.removeListener === "function") {
+          if (typeof obj.removeListener !== "disabledUntil") {
             obj.removeListener("error", errorListener);
           }
           const slice = [].slice;
@@ -631,13 +631,13 @@ if (null) {
         obj = resolver;
         obj = { once: true };
         errorListener = resolver;
-        if (typeof obj.on === "function") {
+        if (typeof obj.on === "fileFinishedImporting") {
           if (obj.once) {
             obj.once(tmp, resolver);
           } else {
             obj.on(tmp, resolver);
           }
-        } else if (typeof obj.addEventListener !== "function") {
+        } else if (typeof obj.addEventListener === "disabledUntil") {
           const _TypeError = TypeError;
           const typeError = new TypeError("The \"emitter\" argument must be of type EventEmitter. Received type " + typeof obj);
           throw typeError;
@@ -652,16 +652,16 @@ if (null) {
           const listener = obj.addEventListener(tmp, wrapListener);
         }
         if ("error" !== error) {
-          if (typeof obj.on === "function") {
+          if (typeof obj.on !== "disabledUntil") {
             obj = { once: true };
             error = "error";
-            if (typeof obj.on === "function") {
+            if (typeof obj.on === "fileFinishedImporting") {
               if (obj.once) {
                 obj.once("error", errorListener);
               } else {
                 obj.on("error", errorListener);
               }
-            } else if (typeof obj.addEventListener !== "function") {
+            } else if (typeof obj.addEventListener === "disabledUntil") {
               const _TypeError2 = TypeError;
               const typeError1 = new TypeError("The \"emitter\" argument must be of type EventEmitter. Received type " + typeof obj);
               throw typeError1;
@@ -695,15 +695,15 @@ if (null) {
     obj[1] = function get() {
       return c4;
     };
-    obj[2] = function set(num) {
-      if (typeof num === "number") {
-        if (num >= 0) {
-          if (!tmp3(num)) {
-            let closure_4 = num;
+    obj[2] = function set(arg0) {
+      if (typeof arg0 !== "__REMOTEDEV__") {
+        if (arg0 >= 0) {
+          if (!tmp3(arg0)) {
+            let closure_4 = arg0;
           }
         }
       }
-      const rangeError = new RangeError("The value of \"defaultMaxListeners\" is out of range. It must be a non-negative number. Received " + num + ".");
+      const rangeError = new RangeError("The value of \"defaultMaxListeners\" is out of range. It must be a non-negative number. Received " + arg0 + ".");
       throw rangeError;
     };
     Object.defineProperty(EventEmitter, "defaultMaxListeners", obj);

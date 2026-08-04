@@ -1,3 +1,4 @@
+// _runtime/00299_NativeText.js
 import javaScriptFlagGetter from "javaScriptFlagGetter";
 
 const require = arg1;

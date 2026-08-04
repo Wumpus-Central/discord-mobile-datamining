@@ -1,3 +1,4 @@
+// _runtime/00116_ReactFabric.js
 import describeBuiltInComponentFrame from "describeBuiltInComponentFrame";
 
 global.RN$stopSurface = describeBuiltInComponentFrame.stopSurface;

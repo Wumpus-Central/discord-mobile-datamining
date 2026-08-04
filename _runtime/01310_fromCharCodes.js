@@ -1,3 +1,4 @@
+// _runtime/01310_fromCharCodes.js
 arg5.utf8read = undefined;
 function fromCharCodes(arg0) {
 
@@ -48,7 +49,7 @@ arg5.utf8read = function utf8read(arg0) {
         }
         if (8191 < num) {
           let tmp10 = fromCharCodes;
-          if (typeof fromCharCodes !== "function") {
+          if (typeof fromCharCodes !== "fileFinishedImporting") {
             let str3 = "Trying to call a non-function";
             let throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -65,7 +66,7 @@ arg5.utf8read = function utf8read(arg0) {
     if (items.length) {
       if (num3) {
         const substr = items1.slice(0, num3);
-        if (typeof fromCharCodes !== "function") {
+        if (typeof fromCharCodes !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         const _String5 = String;
@@ -75,7 +76,7 @@ arg5.utf8read = function utf8read(arg0) {
       let joined = items.join("");
     } else {
       const substr1 = items1.slice(0, num3);
-      if (typeof fromCharCodes !== "function") {
+      if (typeof fromCharCodes !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       const _String3 = String;

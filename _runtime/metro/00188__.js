@@ -1,3 +1,4 @@
+// _runtime/metro/00188__.js
 if (true !== global.RN$useAlwaysAvailableJSErrorHandling) {
   const _default = require("_isNativeReflectConstruct").default;
   let closure_1 = require("toError").default;

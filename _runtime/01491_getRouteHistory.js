@@ -1,3 +1,4 @@
+// _runtime/01491_getRouteHistory.js
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
@@ -28,7 +29,7 @@ function changeIndex(history, index) {
     let combined = found.concat(obj);
   } else {
     const routes = history.routes;
-    if (typeof getRouteHistory !== "function") {
+    if (typeof getRouteHistory !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     closure_0 = arg3;
@@ -111,7 +112,7 @@ arg5.default = function TabRouter(arg0) {
       obj[2] = tmp[name];
       return obj;
     });
-    if (typeof outer1_5 !== "function") {
+    if (typeof outer1_5 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     closure_0 = tmp;
@@ -269,7 +270,7 @@ arg5.default = function TabRouter(arg0) {
       return found;
     });
     if (!found.length) {
-      if (typeof outer1_5 !== "function") {
+      if (typeof outer1_5 !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       let obj = { type: null, key: null };

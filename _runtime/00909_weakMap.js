@@ -1,3 +1,4 @@
+// _runtime/00909_weakMap.js
 import setupIntegration from "setupIntegration";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

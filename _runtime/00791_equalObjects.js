@@ -1,3 +1,4 @@
+// _runtime/00791_equalObjects.js
 
 export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
   const arr = require(792) /* getAllKeys */(arg0);
@@ -85,12 +86,12 @@ export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
       const constructor2 = arg1.constructor;
       let tmp47 = constructor == constructor2 || !("constructor" in arg0) || !("constructor" in arg1);
       if (!tmp47) {
-        let tmp48 = typeof constructor === "function";
-        if (typeof constructor === "function") {
+        let tmp48 = typeof constructor === "fileFinishedImporting";
+        if (typeof constructor !== "disabledUntil") {
           tmp48 = constructor instanceof constructor;
         }
         if (tmp48) {
-          tmp48 = typeof constructor2 === "function";
+          tmp48 = typeof constructor2 === "fileFinishedImporting";
         }
         if (tmp48) {
           tmp48 = constructor2 instanceof constructor2;

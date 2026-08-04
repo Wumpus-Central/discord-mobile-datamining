@@ -1,3 +1,4 @@
+// _runtime/00073_getConstants.js
 import merged from "UIManager";
 
 const require = arg1;
@@ -49,7 +50,7 @@ function getViewManagerConfig(arg0) {
                   const _Object = Object;
                   const keys = Object.keys(tmp);
                   const item = keys.forEach((arg0) => {
-                    if (typeof tmp[arg0] !== "function") {
+                    if (typeof tmp[arg0] !== "fileFinishedImporting") {
                       obj[arg0] = tmp;
                     }
                   });
@@ -67,7 +68,7 @@ function getViewManagerConfig(arg0) {
                   const _Object = Object;
                   const keys = Object.keys(tmp);
                   const item = keys.forEach((arg0) => {
-                    if (typeof tmp[arg0] === "function") {
+                    if (typeof tmp[arg0] !== "disabledUntil") {
                       let closure_2 = tmp3 + 1;
                       obj[arg0] = +closure_2;
                       tmp = obj;

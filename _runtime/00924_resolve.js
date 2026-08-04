@@ -1,3 +1,4 @@
+// _runtime/00924_resolve.js
 function resolve() {
   let tmp17;
   const items = [...arguments];

@@ -1,3 +1,4 @@
+// _runtime/00984__isNativeReflectConstruct.js
 import _createClass from "_createClass";
 import _classCallCheck from "_classCallCheck";
 import "_possibleConstructorReturn";

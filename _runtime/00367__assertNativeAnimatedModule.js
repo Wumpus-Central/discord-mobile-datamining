@@ -1,3 +1,4 @@
+// _runtime/00367__assertNativeAnimatedModule.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 
@@ -138,7 +139,7 @@ const items = [
       let __nativeTag = this.__nativeTag;
       if (null == __nativeTag) {
         if (c4 != null) {
-          if (typeof c4 !== "function") {
+          if (typeof c4 !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           const result = AnimatedNode(357).assertNativeAnimatedModule();

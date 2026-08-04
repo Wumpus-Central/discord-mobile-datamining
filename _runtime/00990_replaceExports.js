@@ -1,6 +1,7 @@
+// _runtime/00990_replaceExports.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.replaceExports = function replaceExports(arg0, arg1, arg2) {
-  if (typeof arg0[arg1] === "function") {
+  if (typeof arg0[arg1] !== "disabledUntil") {
     try {
       arg0[arg1] = arg2;
       if (arg0.default === tmp4) {

@@ -1,3 +1,4 @@
+// _runtime/01172_PrimitiveToString.js
 arg5.PrimitiveToString = function PrimitiveToString(arg0) {
   if (null === arg0) {
     return "";

@@ -1,3 +1,4 @@
+// _runtime/00246_renderApplication.js
 import noop from "noop";
 import module_247 from "module_247";
 import { jsx } from "jsxProd";

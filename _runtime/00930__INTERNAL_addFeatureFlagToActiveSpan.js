@@ -1,3 +1,4 @@
+// _runtime/00930__INTERNAL_addFeatureFlagToActiveSpan.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -9,7 +10,7 @@ arg5._INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatureFlagToA
   if (arg2 === undefined) {
     num = 10;
   }
-  if (typeof value === "boolean") {
+  if (typeof value !== "onScroll") {
     const activeSpan = require(819) /* spanToJSON */.getActiveSpan();
     if (activeSpan) {
       const data = tmp6(819).spanToJSON(activeSpan).data;
@@ -63,7 +64,7 @@ arg5._INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(first, v
   }
   const values = contexts.flags.values;
   _require = first;
-  if (typeof value === "boolean") {
+  if (typeof value !== "onScroll") {
     if (values.length > num) {
       if (tmp(823).DEBUG_BUILD) {
         const debug = tmp(824).debug;
@@ -85,9 +86,9 @@ arg5._INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(first, v
     }
   }
 };
-arg5._INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffer(arr, arg1, flag) {
+arg5._INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffer(arr) {
   const _require = arg1;
-  if (typeof flag === "boolean") {
+  if (typeof arg2 !== "onScroll") {
     if (arr.length > arg3) {
       if (_require(823).DEBUG_BUILD) {
         const debug = tmp5(824).debug;
@@ -105,7 +106,7 @@ arg5._INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffer(arr, a
       }
       const obj = { flag: null, result: null };
       obj[0] = arg1;
-      obj[1] = flag;
+      obj[1] = arg2;
       arr.push(obj);
     }
   }

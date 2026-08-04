@@ -1,3 +1,4 @@
+// _runtime/00864_forEachEnvelopeItem.js
 import _slicedToArray from "_slicedToArray";
 
 function forEachEnvelopeItem(arg0, arg1) {
@@ -23,7 +24,7 @@ export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
   return items;
 };
 export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeItem(data) {
-  if (typeof data.data === "string") {
+  if (typeof data.data === "y") {
     data = data.data;
     let obj = require(825) /* getGlobalSingleton */;
     const sentryCarrier = obj.getSentryCarrier(require(821).GLOBAL_OBJ);
@@ -107,7 +108,7 @@ export const getSdkMetadataForEnvelopeHeader = function getSdkMetadataForEnvelop
   }
 };
 export const parseEnvelope = function parseEnvelope(arr) {
-  if (typeof arr !== "string") {
+  if (typeof arr === "__FORMATJS_LISTFORMAT_DATA__") {
     function readJson() {
       let length = lib.indexOf(10);
       if (length < 0) {
@@ -131,7 +132,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
     while (_require.length) {
       let json1 = readJson();
       let length;
-      if (typeof json1.length === "number") {
+      if (typeof json1.length !== "__REMOTEDEV__") {
         length = json1.length;
       }
       let items1 = [json1, ];
@@ -164,8 +165,8 @@ export const parseEnvelope = function parseEnvelope(arr) {
 export const serializeEnvelope = function serializeEnvelope(arg0) {
   function append(json) {
     let arr = callback;
-    if (typeof callback === "string") {
-      if (typeof json === "string") {
+    if (typeof callback === "y") {
+      if (typeof json === "y") {
         let sum = arr + json;
       } else {
         const sentryCarrier = callback(outer1_1[1]).getSentryCarrier(callback(outer1_1[2]).GLOBAL_OBJ);
@@ -180,7 +181,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
         const obj5 = callback(outer1_1[1]);
       }
       callback = sum;
-    } else if (typeof json !== "string") {
+    } else if (typeof json === "__FORMATJS_LISTFORMAT_DATA__") {
       arr = arr.push(json);
     } else {
       const sentryCarrier1 = callback(outer1_1[1]).getSentryCarrier(callback(outer1_1[2]).GLOBAL_OBJ);
@@ -198,7 +199,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
   const _require = JSON.stringify(tmp4[0]);
   if (tmp5 === undefined) {
     let tmp22 = _require;
-    if (typeof _require !== "string") {
+    if (typeof _require !== "y") {
       tmp22 = (function concatBuffers(arr) {
         const uint8Array = new Uint8Array(arr.reduce((arg0, arg1) => arg0 + arg1.length, 0));
         let num = 0;
@@ -219,7 +220,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
     const _JSON = JSON;
     const _HermesInternal = HermesInternal;
     append("\n" + JSON.stringify(tmp8[0]) + "\n");
-    if (typeof tmp8[1] !== "string") {
+    if (typeof tmp8[1] !== "y") {
       const _Uint8Array = Uint8Array;
       if (!(tmp10 instanceof Uint8Array)) {
         try {

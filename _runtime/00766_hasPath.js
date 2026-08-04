@@ -1,3 +1,4 @@
+// _runtime/00766_hasPath.js
 
 export default function hasPath(arg0, arg1, arg2) {
   let tmp4;

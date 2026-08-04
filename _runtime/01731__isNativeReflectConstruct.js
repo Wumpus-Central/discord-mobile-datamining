@@ -1,3 +1,4 @@
+// _runtime/01731__isNativeReflectConstruct.js
 import SlideOutDown from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

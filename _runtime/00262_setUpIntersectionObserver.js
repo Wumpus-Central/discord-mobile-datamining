@@ -1,3 +1,4 @@
+// _runtime/00262_setUpIntersectionObserver.js
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = false;

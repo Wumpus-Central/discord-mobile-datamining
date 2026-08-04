@@ -1,3 +1,4 @@
+// _runtime/00921__shouldDropEvent.js
 import setupIntegration from "setupIntegration";
 
 function _shouldDropEvent(message, message2) {

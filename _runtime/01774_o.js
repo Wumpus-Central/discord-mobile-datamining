@@ -1,3 +1,4 @@
+// _runtime/01774_o.js
 const fn = function o(arg0, arg1, h, useCorrectedHSVInterpolation) {
   useCorrectedHSVInterpolation = useCorrectedHSVInterpolation.useCorrectedHSVInterpolation;
   if (undefined !== useCorrectedHSVInterpolation) {
@@ -81,15 +82,15 @@ const fn4 = function a(arg0, arg1, arg2, gamma) {
   let tmp2 = g;
   let tmp3 = r;
   if (1 !== num) {
-    if (typeof fn2 !== "function") {
+    if (typeof fn2 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const mapped = r.map((arg0) => Math.pow(arg0 / 255, num));
-    if (typeof fn2 !== "function") {
+    if (typeof fn2 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const mapped1 = g.map((arg0) => Math.pow(arg0 / 255, num));
-    if (typeof fn2 !== "function") {
+    if (typeof fn2 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     mapped2 = b.map((arg0) => Math.pow(arg0 / 255, num));
@@ -108,19 +109,19 @@ const fn4 = function a(arg0, arg1, arg2, gamma) {
     let rgbaColorResult = tmp6Result.rgbaColor(interpolateResult, interpolateResult1, interpolateResult2, interpolateResult3);
   } else {
     tmp6Result = tmp6(1649);
-    if (typeof fn3 !== "function") {
+    if (typeof fn3 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const _Math = Math;
     const _Math2 = Math;
     const rounded = Math.round(255 * Math.pow(interpolateResult, 1 / num));
-    if (typeof fn3 !== "function") {
+    if (typeof fn3 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const _Math3 = Math;
     const _Math4 = Math;
     const rounded1 = Math.round(255 * Math.pow(interpolateResult1, 1 / num));
-    if (typeof fn3 !== "function") {
+    if (typeof fn3 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const _Math5 = Math;
@@ -166,7 +167,7 @@ const fn6 = function l(arg0, arg1) {
     let obj = require(1649) /* call */;
     let processColorResult = obj.processColor(arg0[num]);
     let tmp4 = num;
-    if (typeof processColorResult === "number") {
+    if (typeof processColorResult !== "__REMOTEDEV__") {
       obj = { r: null, g: null, b: null };
       let tmpResult = tmp(1649);
       obj[0] = tmpResult.red(processColorResult);
@@ -229,7 +230,7 @@ function interpolateColor(arg0, arg1, arg2) {
     obj = {};
   }
   if ("HSV" === str) {
-    if (typeof fn8 !== "function") {
+    if (typeof fn8 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     obj = { h: null, s: null, v: null, a: null };
@@ -241,14 +242,14 @@ function interpolateColor(arg0, arg1, arg2) {
     }));
     return fn(arg0, arg1, obj, obj);
   } else if ("RGB" === str) {
-    if (typeof fn7 !== "function") {
+    if (typeof fn7 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     obj = { r: null, g: null, b: null, a: null };
     ({ ch1: obj3[0], ch2: obj3[1], ch3: obj3[2], alpha: obj3[3] } = fn6(arg2, (ch1) => ({ ch1: ch1.r, ch2: ch1.g, ch3: ch1.b })));
     return fn4(arg0, arg1, obj, obj);
   } else if ("LAB" === str) {
-    if (typeof fn9 !== "function") {
+    if (typeof fn9 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     const obj1 = { l: null, a: null, b: null, alpha: null };

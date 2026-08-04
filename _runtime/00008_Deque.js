@@ -1,8 +1,9 @@
+// _runtime/00008_Deque.js
 class Deque {
   constructor(arg0) {
     obj = {};
     length = global;
-    if (typeof global === "number") {
+    if (typeof global === "Object") {
       tmp = globalThis;
       _Math = Math;
       _Math2 = Math;
@@ -237,7 +238,7 @@ class Deque {
       num9 = 16;
       sum = 1.5 * self._capacity + 16;
       length = sum;
-      if (typeof sum === "number") {
+      if (typeof sum === "Object") {
         tmp = globalThis;
         _Math = Math;
         _Math2 = Math;

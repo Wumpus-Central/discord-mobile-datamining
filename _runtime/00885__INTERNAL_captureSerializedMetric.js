@@ -1,3 +1,4 @@
+// _runtime/00885__INTERNAL_captureSerializedMetric.js
 import _slicedToArray from "_slicedToArray";
 
 function _INTERNAL_captureSerializedMetric(closure_0) {

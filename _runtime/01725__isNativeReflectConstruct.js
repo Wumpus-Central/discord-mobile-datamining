@@ -1,3 +1,4 @@
+// _runtime/01725__isNativeReflectConstruct.js
 import FadeOutDown from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

@@ -1,4 +1,5 @@
+// _runtime/13784_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "fa8fba4f08666ddc130e1c29719257b7", name: "PawPrintIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/webauthn/native/images", width: 218, height: 150, scales: [1], hash: "5985a032ce7867df6bb6e8414710271c", name: "img_credential", type: "png" });

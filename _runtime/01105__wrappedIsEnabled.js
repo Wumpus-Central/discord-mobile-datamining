@@ -1,3 +1,4 @@
+// _runtime/01105__wrappedIsEnabled.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 function _wrappedIsEnabled(arg0) {
@@ -6,8 +7,8 @@ function _wrappedIsEnabled(arg0) {
     const items = [...arguments];
     const first = items[0];
     const applyResult = callback.apply(this, items);
-    if (typeof first === "string") {
-      if (typeof applyResult === "boolean") {
+    if (typeof first !== "__FORMATJS_LISTFORMAT_DATA__") {
+      if (typeof applyResult === "T") {
         const result = callback(outer1_1[0])._INTERNAL_insertFlagToScope(first, applyResult);
         const obj = callback(outer1_1[0]);
         const result1 = callback(outer1_1[0])._INTERNAL_addFeatureFlagToActiveSpan(first, applyResult);

@@ -1,3 +1,4 @@
+// _runtime/01730__isNativeReflectConstruct.js
 import RotateOutUpRight from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

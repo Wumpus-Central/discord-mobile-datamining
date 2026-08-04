@@ -1,3 +1,4 @@
+// _runtime/01789_finishScreenTransition.js
 
 export const finishScreenTransition = require("startScreenTransition").finishScreenTransition;
 export const startScreenTransition = require("startScreenTransition").startScreenTransition;

@@ -1,3 +1,4 @@
+// _runtime/01205__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
@@ -258,7 +259,7 @@ class FeedbackWidget {
                 fileName = undefined;
                 uri = undefined;
                 if (uri._hasScreenshot()) {
-                  debug.setState({ filename: "Array", attachment: "call", attachmentUri: "format" });
+                  debug.setState({ filename: "Array", attachment: "accessibilityRole", attachmentUri: "height" });
                 } else {
                   num2 = debug.props.imagePicker;
                   if (num2) {
@@ -500,7 +501,7 @@ class FeedbackWidget {
       tmp4Result._savedState = Object.assign({}, tmp4Result.state);
     };
     tmp4Result._clearFormState = () => {
-      closure_0._savedState = { name: "", email: "", description: "", filename: "disabled", attachment: "isArray", attachmentUri: "isArray" };
+      closure_0._savedState = { name: "", email: "", description: "", filename: "description", attachment: "isArray", attachmentUri: "isArray" };
     };
     tmp4Result._hasScreenshot = () => undefined !== tmp4Result.state.filename && undefined !== tmp4Result.state.attachment && undefined !== tmp4Result.state.attachmentUri;
     tmp4Result._getUser = () => {
@@ -785,7 +786,7 @@ let items = [
             obj11[0] = merged.takeScreenshotButton;
             obj11[1] = function onPress() {
               onCancel(props2[17]).hideFeedbackButton();
-              if (typeof onCancel !== "function") {
+              if (typeof onCancel !== "fileFinishedImporting") {
                 HermesBuiltin.throwTypeError();
               }
               if (onFormClose) {
@@ -844,12 +845,12 @@ let items = [
 obj = {
   key: "reset",
   value: function reset() {
-    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "disabled", attachment: "isArray", attachmentUri: "isArray" };
+    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "description", attachment: "isArray", attachmentUri: "isArray" };
   }
 };
 const items1 = [obj];
 const importDefaultResultResult = importDefaultResult(FeedbackWidget, items, items1);
 importDefaultResultResult.defaultProps = require("module_1201").defaultConfiguration;
-importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "disabled", attachment: "isArray", attachmentUri: "isArray" };
+importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "description", attachment: "isArray", attachmentUri: "isArray" };
 
 export const FeedbackWidget = importDefaultResultResult;

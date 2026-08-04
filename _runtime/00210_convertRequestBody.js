@@ -1,28 +1,29 @@
+// _runtime/00210_convertRequestBody.js
 const require = arg1;
 const dependencyMap = arg6;
-arg5.default = function convertRequestBody(str) {
-  if (typeof str === "string") {
+arg5.default = function convertRequestBody(data) {
+  if (typeof data === "y") {
     let obj = { string: null };
-    obj[0] = str;
+    obj[0] = data;
     let tmp2 = obj;
-  } else if (str instanceof require(203) /* Blob */.default) {
+  } else if (data instanceof require(203) /* Blob */.default) {
     obj = { blob: null };
-    obj[0] = str.data;
+    obj[0] = data.data;
     tmp2 = obj;
-  } else if (str instanceof tmp3(211).default) {
+  } else if (data instanceof tmp3(211).default) {
     const obj1 = { formData: null };
-    obj1[0] = str.getParts();
+    obj1[0] = data.getParts();
     tmp2 = obj1;
   } else {
     const _ArrayBuffer = ArrayBuffer;
-    if (str instanceof ArrayBuffer) {
+    if (data instanceof ArrayBuffer) {
       obj = { base64: null };
-      obj[0] = tmp3(212).default(str);
+      obj[0] = tmp3(212).default(data);
       tmp2 = obj;
       const tmp3Result = tmp3(212);
     } else {
       const _ArrayBuffer2 = ArrayBuffer;
-      tmp2 = str;
+      tmp2 = data;
     }
   }
   return tmp2;

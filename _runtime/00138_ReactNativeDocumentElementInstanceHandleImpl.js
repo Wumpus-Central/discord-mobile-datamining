@@ -1,3 +1,4 @@
+// _runtime/00138_ReactNativeDocumentElementInstanceHandleImpl.js
 import _classCallCheck from "_classCallCheck";
 
 class ReactNativeDocumentElementInstanceHandleImpl {

@@ -1,3 +1,4 @@
+// _runtime/01697_FadingTransition.js
 arg5.FadingTransition = function FadingTransition(name) {
   let scaleX;
   let scaleY;

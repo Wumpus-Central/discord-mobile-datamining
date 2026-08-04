@@ -1,3 +1,4 @@
+// _runtime/00267_setUpMutationObserver.js
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = false;

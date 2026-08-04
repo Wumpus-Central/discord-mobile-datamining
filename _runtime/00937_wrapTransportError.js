@@ -1,3 +1,4 @@
+// _runtime/00937_wrapTransportError.js
 import asyncGeneratorStep from "getClient";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -191,7 +192,7 @@ export const wrapTransportSend = function wrapTransportSend(closure_0, closure_0
                               (function captureJsonRpcErrorResponse(error) {
                                 try {
                                   if (error) {
-                                    if (typeof error === "object") {
+                                    if (typeof error !== "window") {
                                       if ("code" in error) {
                                         if ("message" in error) {
                                           if (-32603 === error.code) {

@@ -1,3 +1,4 @@
+// _runtime/00801_property.js
 
 export default function property(arg0) {
   if (require(722) /* isKey */(arg0)) {

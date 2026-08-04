@@ -1,3 +1,4 @@
+// _runtime/01732__isNativeReflectConstruct.js
 import StretchOutY from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import importDefaultResult from "_createClass";

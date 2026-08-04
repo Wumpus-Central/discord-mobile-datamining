@@ -1,3 +1,4 @@
+// _runtime/00278__isNativeReflectConstruct.js
 const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
@@ -12,7 +13,7 @@ arg5.default = {
         return false;
       } catch (err) {
       }
-    } else if (typeof error === "string") {
+    } else if (typeof error === "y") {
       let syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError(error);
     } else {
       syntheticError = new require(189) /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");

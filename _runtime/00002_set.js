@@ -1,3 +1,4 @@
+// _runtime/00002_set.js
 const set = new Set();
 arg5.clear = function clear() {
   set.clear();

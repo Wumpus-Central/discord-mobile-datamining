@@ -1,3 +1,4 @@
+// _runtime/00101_getConstants.js
 const enforcing = require("get").getEnforcing("DeviceInfo");
 let c1 = null;
 

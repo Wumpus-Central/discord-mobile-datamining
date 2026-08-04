@@ -1,3 +1,4 @@
+// _runtime/01536_isArrayEqual.js
 arg5.default = function isArrayEqual(arr) {
   let closure_0 = arg1;
   let tmp = arr === arg1;

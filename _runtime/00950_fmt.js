@@ -1,3 +1,4 @@
+// _runtime/00950_fmt.js
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const fmt = require("parameterize").fmt;
@@ -46,6 +47,6 @@ export const warn = function warn(message, attributes, attributes) {
   if (attributes === undefined) {
     obj = {};
   }
-  obj = { level: "warn", message, attributes, severityNumber: "channel_id" };
+  obj = { level: "warn", message, attributes, severityNumber: "channelId" };
   require(880) /* _INTERNAL_captureSerializedLog */._INTERNAL_captureLog(obj, obj.scope);
 };

@@ -1,3 +1,4 @@
+// _runtime/01749_useAnimatedGestureHandler.js
 
 export const useAnimatedGestureHandler = require("useAnimatedGestureHandler").useAnimatedGestureHandler;
 export const useAnimatedKeyboard = require("useAnimatedKeyboard").useAnimatedKeyboard;

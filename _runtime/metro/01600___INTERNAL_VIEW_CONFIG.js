@@ -1,3 +1,4 @@
+// _runtime/metro/01600___INTERNAL_VIEW_CONFIG.js
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 const obj = { uiViewClassName: "OverKeyboardView", validAttributes: { visible: true } };

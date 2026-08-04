@@ -1,3 +1,4 @@
+// _runtime/01401_forEach.js
 
 export default function forEach(str, call) {
   if (require(1402) /* apply */(call)) {
@@ -30,7 +31,7 @@ export default function forEach(str, call) {
           num4 = num4 + 1;
         } while (num4 < length2);
       }
-    } else if (typeof str === "string") {
+    } else if (typeof str === "y") {
       let num2 = 0;
       if (0 < str.length) {
         do {

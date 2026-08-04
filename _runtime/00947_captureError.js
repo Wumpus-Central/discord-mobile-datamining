@@ -1,3 +1,4 @@
+// _runtime/00947_captureError.js
 const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

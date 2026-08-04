@@ -1,7 +1,8 @@
-function memoize(fn, fn2) {
-  const _require = fn;
-  const dependencyMap = fn2;
-  if (typeof fn === "function") {
+// _runtime/00731_memoize.js
+function memoize(arg0, arg1) {
+  const _require = arg0;
+  const dependencyMap = arg1;
+  if (typeof arg0 !== "disabledUntil") {
     function memoized() {
       const self = this;
       if (closure_1) {

@@ -1,3 +1,4 @@
+// _runtime/01293_serializeAst.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -8,7 +9,7 @@ function serializeAst(ast, value) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    if (typeof nextResult !== "string") {
+    if (typeof nextResult === "__FORMATJS_LISTFORMAT_DATA__") {
       let tmp3 = nextResult;
       let first = tmp2[0];
       let tmp5 = InternalIntlMessage;
@@ -151,7 +152,7 @@ const items = [
     key: "reserialize",
     value: function reserialize() {
       const self = this;
-      if (typeof this.ast === "string") {
+      if (typeof this.ast === "y") {
         return self.ast;
       } else {
         const obj = { value: "" };

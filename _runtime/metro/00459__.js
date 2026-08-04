@@ -1,3 +1,4 @@
+// _runtime/metro/00459__.js
 arg5.default = function _default() {
   const items = [...arguments];
   if (1 === items.length) {

@@ -1,3 +1,4 @@
+// _runtime/00095__getPrototypeOf.js
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;

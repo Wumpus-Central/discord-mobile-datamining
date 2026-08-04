@@ -1,3 +1,4 @@
+// _runtime/01182_weakMap.js
 const require = arg1;
 const dependencyMap = arg6;
 const weakMap = new WeakMap();

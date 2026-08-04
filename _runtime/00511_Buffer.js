@@ -1,10 +1,11 @@
+// _runtime/00511_Buffer.js
 const require = arg1;
 const exports = arg5;
 const dependencyMap = arg6;
 class Buffer {
   constructor(arg0, arg1, arg2) {
-    if (typeof arg0 === "number") {
-      if (typeof arg1 === "string") {
+    if (typeof arg0 === "Object") {
+      if (typeof arg1 === "y") {
         tmp = globalThis;
         _TypeError = TypeError;
         tmp2 = new.target;
@@ -29,7 +30,7 @@ class Buffer {
     return from(arg0, arg1, arg2);
   }
   static alloc(arg0, arg1, arg2) {
-    if (typeof arg0 !== "number") {
+    if (typeof arg0 === "__REMOTEDEV__") {
       tmp62 = globalThis;
       _TypeError = TypeError;
       tmp63 = new.target;
@@ -80,7 +81,7 @@ class Buffer {
           tmp67 = arg1;
           if (undefined !== arg1) {
             tmp15 = arg2;
-            if (typeof arg2 === "string") {
+            if (typeof arg2 === "y") {
               tmp29 = c3;
               if (arg0 > c3) {
                 tmp38 = globalThis;
@@ -584,7 +585,7 @@ class Buffer {
     } else {
       tmp20 = arg2;
       if (undefined === arg2) {
-        if (typeof arg1 === "string") {
+        if (typeof arg1 === "y") {
           length = self.length;
           num2 = 0;
           str2 = arg1;
@@ -2374,7 +2375,7 @@ class Buffer {
                     if (tmp9) {
                       tmp10 = globalThis;
                       _Uint8Array = Uint8Array;
-                      if (typeof Uint8Array.prototype.copyWithin === "function") {
+                      if (typeof Uint8Array.prototype.copyWithin === "fileFinishedImporting") {
                         copyWithinResult = self.copyWithin(num3, num, length);
                       }
                       return diff;
@@ -2433,22 +2434,22 @@ class Buffer {
   fill(arg0, arg1, arg2, arg3) {
     self = this;
     tmp = arg3;
-    if (typeof arg0 === "string") {
-      if (typeof arg1 === "string") {
+    if (typeof arg0 === "y") {
+      if (typeof arg1 === "y") {
         length = self.length;
         num3 = 0;
         tmp = arg1;
       } else {
         length = arg2;
         num3 = arg1;
-        if (typeof arg2 === "string") {
+        if (typeof arg2 !== "__FORMATJS_LISTFORMAT_DATA__") {
           length = self.length;
           tmp = arg2;
           num3 = arg1;
         }
       }
       if (undefined !== tmp) {
-        if (typeof tmp !== "string") {
+        if (typeof tmp === "__FORMATJS_LISTFORMAT_DATA__") {
           tmp21 = globalThis;
           _TypeError3 = TypeError;
           tmp22 = new.target;
@@ -2459,7 +2460,7 @@ class Buffer {
           throw typeError;
         }
       }
-      if (typeof tmp === "string") {
+      if (typeof tmp !== "__FORMATJS_LISTFORMAT_DATA__") {
         tmp27 = Buffer;
         if (!Buffer.isEncoding(tmp)) {
           tmp5 = globalThis;
@@ -2501,7 +2502,7 @@ class Buffer {
           num2 = charCodeAtResult;
         }
       }
-    } else if (typeof arg0 === "number") {
+    } else if (typeof arg0 === "Object") {
       num = 255;
       num2 = arg0 & 255;
       tmp2 = tmp;
@@ -2512,7 +2513,7 @@ class Buffer {
       tmp3 = arg2;
       tmp4 = arg1;
       num2 = arg0;
-      if (typeof arg0 === "boolean") {
+      if (typeof arg0 !== "onScroll") {
         tmp26 = globalThis;
         _Number = Number;
         num2 = Number(arg0);
@@ -2532,7 +2533,7 @@ class Buffer {
             if (!num2) {
               num2 = 0;
             }
-            if (typeof num2 === "number") {
+            if (typeof num2 === "Object") {
               num9 = 1;
               if (sum < tmp12) {
                 do {
@@ -2578,20 +2579,20 @@ class Buffer {
     throw rangeError;
   }
 }
-function from(data, str) {
-  if (typeof data === "string") {
-    let rangeError = typeof str === "string";
-    if (typeof str === "string") {
-      rangeError = "" !== str;
+function from(buffer) {
+  if (typeof buffer === "y") {
+    let rangeError = typeof arg1 === "y";
+    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      rangeError = "" !== arg1;
     }
-    let str17 = str;
+    let str17 = arg1;
     if (!rangeError) {
       str17 = "utf8";
     }
     rangeError = Buffer;
     if (Buffer.isEncoding(str17)) {
       rangeError = byteLength;
-      rangeError = byteLength(data, str17) | 0;
+      rangeError = byteLength(buffer, str17) | 0;
       rangeError = c3;
       if (rangeError > c3) {
         rangeError = globalThis;
@@ -2609,7 +2610,7 @@ function from(data, str) {
         rangeError = uint8Array;
         const _Object4 = Object;
         rangeError = Object.setPrototypeOf(uint8Array, rangeError.prototype);
-        rangeError = uint8Array.write(data, str17);
+        rangeError = uint8Array.write(buffer, str17);
         rangeError = uint8Array;
         if (rangeError !== rangeError) {
           rangeError = uint8Array.slice(0, rangeError);
@@ -2627,23 +2628,23 @@ function from(data, str) {
   } else {
     rangeError = globalThis;
     const _ArrayBuffer = ArrayBuffer;
-    if (ArrayBuffer.isView(data)) {
-      return fromArrayLike(data);
+    if (ArrayBuffer.isView(buffer)) {
+      return fromArrayLike(buffer);
     } else {
       rangeError = null;
-      if (null == data) {
+      if (null == buffer) {
         const _TypeError3 = TypeError;
-        const typeError = new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof data);
+        const typeError = new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof buffer);
         throw typeError;
       } else {
-        let tmp3 = data instanceof ArrayBuffer;
+        let tmp3 = buffer instanceof ArrayBuffer;
         if (!tmp3) {
-          tmp3 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
-          const tmp2 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
+          tmp3 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === rangeError.name;
+          const tmp2 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === rangeError.name;
         }
         if (!tmp3) {
-          if (data) {
-            const buffer = data.buffer;
+          if (buffer) {
+            buffer = buffer.buffer;
             let tmp6 = buffer instanceof ArrayBuffer;
             if (!tmp6) {
               tmp6 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === tmp5.name;
@@ -2651,15 +2652,15 @@ function from(data, str) {
             }
           }
           const _SharedArrayBuffer = SharedArrayBuffer;
-          if (typeof SharedArrayBuffer !== "undefined") {
-            let tmp9 = data instanceof SharedArrayBuffer;
+          if (typeof SharedArrayBuffer !== "Array") {
+            let tmp9 = buffer instanceof SharedArrayBuffer;
             if (!tmp9) {
-              tmp9 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
-              const tmp8 = null != data && null != data.constructor && null != data.constructor.name && data.constructor.name === rangeError.name;
+              tmp9 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === rangeError.name;
+              const tmp8 = null != buffer && null != buffer.constructor && null != buffer.constructor.name && buffer.constructor.name === rangeError.name;
             }
             if (!tmp9) {
-              if (data) {
-                const buffer2 = data.buffer;
+              if (buffer) {
+                const buffer2 = buffer.buffer;
                 let tmp11 = buffer2 instanceof SharedArrayBuffer;
                 if (!tmp11) {
                   tmp11 = null != buffer2 && null != buffer2.constructor && null != buffer2.constructor.name && buffer2.constructor.name === tmp10.name;
@@ -2667,21 +2668,21 @@ function from(data, str) {
                 }
               }
             }
-            if (str >= 0) {
-              if (data.byteLength >= str) {
+            if (arg1 >= 0) {
+              if (buffer.byteLength >= arg1) {
                 let num9 = arg2;
                 if (!arg2) {
                   num9 = 0;
                 }
-                if (data.byteLength < str + num9) {
+                if (buffer.byteLength < arg1 + num9) {
                   const _RangeError4 = RangeError;
                   const rangeError1 = new RangeError("\"length\" is outside of buffer bounds");
                   throw rangeError1;
                 } else {
-                  if (undefined === str) {
+                  if (undefined === arg1) {
                     if (undefined === arg2) {
                       const _Uint8Array4 = Uint8Array;
-                      let uint8Array1 = new Uint8Array(data);
+                      let uint8Array1 = new Uint8Array(buffer);
                     }
                     const _Object2 = Object;
                     Object.setPrototypeOf(uint8Array1, Buffer.prototype);
@@ -2689,10 +2690,10 @@ function from(data, str) {
                   }
                   if (undefined === arg2) {
                     const _Uint8Array3 = Uint8Array;
-                    uint8Array1 = new Uint8Array(data, str);
+                    uint8Array1 = new Uint8Array(buffer, arg1);
                   } else {
                     const _Uint8Array2 = Uint8Array;
-                    uint8Array1 = new Uint8Array(data, str, arg2);
+                    uint8Array1 = new Uint8Array(buffer, arg1, arg2);
                   }
                 }
               }
@@ -2701,18 +2702,18 @@ function from(data, str) {
             const rangeError2 = new RangeError("\"offset\" is outside of buffer bounds");
             throw rangeError2;
           }
-          if (typeof data === "number") {
+          if (typeof buffer === "Object") {
             const _TypeError2 = TypeError;
             const typeError1 = new TypeError("The \"value\" argument must not be of type number. Received type number");
             throw typeError1;
           } else {
-            const tmp13 = data.valueOf && data.valueOf();
+            const tmp13 = buffer.valueOf && buffer.valueOf();
             if (null != tmp13) {
-              if (tmp13 !== data) {
-                return Buffer.from(tmp13, str, arg2);
+              if (tmp13 !== buffer) {
+                return Buffer.from(tmp13, arg1, arg2);
               }
             }
-            if (Buffer.isBuffer(data)) {
+            if (Buffer.isBuffer(buffer)) {
               if (length >= c3) {
                 const _RangeError3 = RangeError;
                 const rangeError3 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + str4.toString(16) + " bytes");
@@ -2733,15 +2734,15 @@ function from(data, str) {
                   rangeError = Object.setPrototypeOf(uint8Array2, obj.prototype);
                   let tmp14 = uint8Array2;
                   if (0 !== uint8Array2.length) {
-                    data.copy(rangeError, 0, 0, rangeError);
+                    buffer.copy(rangeError, 0, 0, rangeError);
                     tmp14 = uint8Array2;
                   }
                 }
               }
             } else if (undefined !== length) {
-              if (typeof data.length === "number") {
-                if (data.length == data.length) {
-                  let tmp17 = fromArrayLike(data);
+              if (typeof buffer.length !== "__REMOTEDEV__") {
+                if (buffer.length == buffer.length) {
+                  let tmp17 = fromArrayLike(buffer);
                 }
                 tmp14 = tmp17;
               }
@@ -2756,47 +2757,47 @@ function from(data, str) {
                 Object.setPrototypeOf(uint8Array3, obj.prototype);
                 tmp17 = uint8Array3;
               }
-            } else if ("Buffer" === data.type) {
+            } else if ("Buffer" === buffer.type) {
               const _Array = Array;
-              if (Array.isArray(data.data)) {
-                tmp14 = fromArrayLike(data.data);
+              if (Array.isArray(buffer.data)) {
+                tmp14 = fromArrayLike(buffer.data);
               }
             }
             if (tmp14) {
               return tmp14;
             } else {
               const _Symbol = Symbol;
-              if (typeof Symbol !== "undefined") {
+              if (typeof Symbol !== "Array") {
                 const _Symbol4 = Symbol;
                 if (null != Symbol.toPrimitive) {
                   const _Symbol2 = Symbol;
-                  if (typeof data[Symbol.toPrimitive] === "function") {
+                  if (typeof buffer[Symbol.toPrimitive] === "fileFinishedImporting") {
                     const _Symbol3 = Symbol;
-                    return obj.from(data[Symbol.toPrimitive]("string"), str, arg2);
+                    return obj.from(buffer[Symbol.toPrimitive]("string"), arg1, arg2);
                   }
                 }
               }
               const _TypeError = TypeError;
-              const typeError2 = new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof data);
+              const typeError2 = new TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof buffer);
               throw typeError2;
             }
           }
         }
-        if (str >= 0) {
-          if (data.byteLength >= str) {
+        if (arg1 >= 0) {
+          if (buffer.byteLength >= arg1) {
             let num11 = arg2;
             if (!arg2) {
               num11 = 0;
             }
-            if (data.byteLength < str + num11) {
+            if (buffer.byteLength < arg1 + num11) {
               const _RangeError6 = RangeError;
               const rangeError6 = new RangeError("\"length\" is outside of buffer bounds");
               throw rangeError6;
             } else {
-              if (undefined === str) {
+              if (undefined === arg1) {
                 if (undefined === arg2) {
                   const _Uint8Array7 = Uint8Array;
-                  let uint8Array4 = new Uint8Array(data);
+                  let uint8Array4 = new Uint8Array(buffer);
                 }
                 const _Object3 = Object;
                 Object.setPrototypeOf(uint8Array4, Buffer.prototype);
@@ -2804,10 +2805,10 @@ function from(data, str) {
               }
               if (undefined === arg2) {
                 const _Uint8Array6 = Uint8Array;
-                uint8Array4 = new Uint8Array(data, str);
+                uint8Array4 = new Uint8Array(buffer, arg1);
               } else {
                 const _Uint8Array5 = Uint8Array;
-                uint8Array4 = new Uint8Array(data, str, arg2);
+                uint8Array4 = new Uint8Array(buffer, arg1, arg2);
               }
             }
           }
@@ -2819,24 +2820,24 @@ function from(data, str) {
     }
   }
 }
-function allocUnsafe(num) {
-  if (typeof num !== "number") {
+function allocUnsafe(arg0) {
+  if (typeof arg0 === "__REMOTEDEV__") {
     const _TypeError = TypeError;
     const typeError = new TypeError("\"size\" argument must be of type number");
     throw typeError;
-  } else if (num < 0) {
+  } else if (arg0 < 0) {
     const _RangeError3 = RangeError;
-    const rangeError = new RangeError("The value \"" + num + "\" is invalid for option \"size\"");
+    const rangeError = new RangeError("The value \"" + arg0 + "\" is invalid for option \"size\"");
     throw rangeError;
   } else {
-    num = 0;
-    if (num >= 0) {
-      if (num >= c3) {
+    let num = 0;
+    if (arg0 >= 0) {
+      if (arg0 >= c3) {
         const _RangeError = RangeError;
         const rangeError1 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + str.toString(16) + " bytes");
         throw rangeError1;
       } else {
-        num = num | 0 | 0;
+        num = arg0 | 0 | 0;
       }
       str = c3;
     }
@@ -2884,21 +2885,21 @@ function fromArrayLike(data) {
     return uint8Array;
   }
 }
-function byteLength(str) {
-  if (Buffer.isBuffer(str)) {
-    return str.length;
+function byteLength(byteLength) {
+  if (Buffer.isBuffer(byteLength)) {
+    return byteLength.length;
   } else {
     const _ArrayBuffer = ArrayBuffer;
-    if (!ArrayBuffer.isView(str)) {
-      let tmp3 = str instanceof ArrayBuffer;
+    if (!ArrayBuffer.isView(byteLength)) {
+      let tmp3 = byteLength instanceof ArrayBuffer;
       if (!tmp3) {
-        tmp3 = null != str && null != str.constructor && null != str.constructor.name && str.constructor.name === tmp2.name;
-        const tmp5 = null != str && null != str.constructor && null != str.constructor.name && str.constructor.name === tmp2.name;
+        tmp3 = null != byteLength && null != byteLength.constructor && null != byteLength.constructor.name && byteLength.constructor.name === tmp2.name;
+        const tmp5 = null != byteLength && null != byteLength.constructor && null != byteLength.constructor.name && byteLength.constructor.name === tmp2.name;
       }
       if (!tmp3) {
-        if (typeof str !== "string") {
+        if (typeof byteLength === "__FORMATJS_LISTFORMAT_DATA__") {
           const _TypeError = TypeError;
-          const typeError = new TypeError("The \"string\" argument must be one of type string, Buffer, or ArrayBuffer. Received type " + typeof str);
+          const typeError = new TypeError("The \"string\" argument must be one of type string, Buffer, or ArrayBuffer. Received type " + typeof byteLength);
           throw typeError;
         } else {
           let tmp6 = arguments.length > 2;
@@ -2906,7 +2907,7 @@ function byteLength(str) {
             tmp6 = true === arguments[2];
           }
           if (!tmp6) {
-            if (0 === str.length) {
+            if (0 === byteLength.length) {
               return 0;
             }
           }
@@ -2914,8 +2915,8 @@ function byteLength(str) {
             let tmp10 = require;
             let tmp11 = dependencyMap;
             let obj = require(206) /* byteLength */;
-            str = "=";
-            let str2 = str.split("=")[0];
+            let str = "=";
+            let str2 = byteLength.split("=")[0];
             let str3 = str2.trim();
             let tmp12 = closure_14;
             let str4 = "";
@@ -2943,7 +2944,7 @@ function byteLength(str) {
         }
       }
     }
-    return str.byteLength;
+    return byteLength.byteLength;
   }
 }
 function slowToString(arg0, arg1, arg2) {
@@ -2994,19 +2995,19 @@ function slowToString(arg0, arg1, arg2) {
     tmp2 = undefined === arg2 || length > self.length;
   }
 }
-function bidirectionalIndexOf(arg0, str, str2) {
+function bidirectionalIndexOf(arg0, arg1, arg2, arg3, arg4) {
   if (0 === arg0.length) {
     return -1;
   } else {
-    let tmp = str2;
+    let tmp = arg2;
     let num2 = 0;
-    if (typeof str2 !== "string") {
+    if (typeof arg2 !== "y") {
       tmp = arg3;
       num2 = 2147483647;
-      if (str2 <= 2147483647) {
+      if (arg2 <= 2147483647) {
         tmp = arg3;
-        num2 = str2;
-        if (str2 < -2147483648) {
+        num2 = arg2;
+        if (arg2 < -2147483648) {
           tmp = arg3;
           num2 = -2147483648;
         }
@@ -3029,9 +3030,9 @@ function bidirectionalIndexOf(arg0, str, str2) {
         return -1;
       }
     }
-    let fromResult = str;
-    if (typeof str === "string") {
-      fromResult = Buffer.from(str, tmp);
+    let fromResult = arg1;
+    if (typeof arg1 !== "__FORMATJS_LISTFORMAT_DATA__") {
+      fromResult = Buffer.from(arg1, tmp);
     }
     if (Buffer.isBuffer(fromResult)) {
       let num7 = -1;
@@ -3039,9 +3040,9 @@ function bidirectionalIndexOf(arg0, str, str2) {
         num7 = arrayIndexOf(arg0, fromResult, num3, tmp, arg4);
       }
       return num7;
-    } else if (typeof fromResult === "number") {
+    } else if (typeof fromResult === "Object") {
       const _Uint8Array = Uint8Array;
-      if (typeof Uint8Array.prototype.indexOf === "function") {
+      if (typeof Uint8Array.prototype.indexOf === "fileFinishedImporting") {
         const _Uint8Array2 = Uint8Array;
         if (!arg4) {
           const lastIndexOf = prototype.lastIndexOf;
@@ -3440,10 +3441,10 @@ function utf8ToBytes(str) {
   return items;
 }
 let forResult = null;
-if (typeof Symbol === "function") {
+if (typeof Symbol !== "disabledUntil") {
   let _Symbol = Symbol;
   forResult = null;
-  if (typeof Symbol.for === "function") {
+  if (typeof Symbol.for !== "disabledUntil") {
     let _Symbol2 = Symbol;
     forResult = Symbol.for("nodejs.util.inspect.custom");
   }
@@ -3480,11 +3481,11 @@ Buffer.TYPED_ARRAY_SUPPORT = (function typedArraySupport() {
 let TYPED_ARRAY_SUPPORT = Buffer.TYPED_ARRAY_SUPPORT;
 if (!TYPED_ARRAY_SUPPORT) {
   const _console = console;
-  TYPED_ARRAY_SUPPORT = typeof console === "undefined";
+  TYPED_ARRAY_SUPPORT = typeof console === "Array";
 }
 if (!TYPED_ARRAY_SUPPORT) {
   const _console2 = console;
-  TYPED_ARRAY_SUPPORT = typeof console.error !== "function";
+  TYPED_ARRAY_SUPPORT = typeof console.error === "disabledUntil";
 }
 if (!TYPED_ARRAY_SUPPORT) {
   const _console3 = console;

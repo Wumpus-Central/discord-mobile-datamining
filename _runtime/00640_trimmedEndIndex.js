@@ -1,3 +1,4 @@
+// _runtime/00640_trimmedEndIndex.js
 const re0 = /\s/;
 
 export default function trimmedEndIndex(str) {

@@ -1,3 +1,4 @@
+// _runtime/01493_getPartialState.js
 import _slicedToArray from "_slicedToArray";
 import _objectWithoutProperties from "_objectWithoutProperties";
 import importAllResult from "noop";
@@ -61,7 +62,7 @@ export default importAllResult.forwardRef(function BaseNavigationContainer(child
     if (null != closure_0) {
       tmp2 = closure_0;
     }
-    if (typeof closure_8 !== "function") {
+    if (typeof closure_8 !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     let tmp3;
@@ -79,7 +80,7 @@ export default importAllResult.forwardRef(function BaseNavigationContainer(child
           let obj = {};
           const merged = Object.assign(state);
           state = state.state;
-          if (typeof closure_8 !== "function") {
+          if (typeof closure_8 !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           let tmp2;
@@ -97,7 +98,7 @@ export default importAllResult.forwardRef(function BaseNavigationContainer(child
                 let obj = {};
                 const merged = Object.assign(state);
                 state = state.state;
-                if (typeof closure_8 !== "function") {
+                if (typeof closure_8 !== "fileFinishedImporting") {
                   HermesBuiltin.throwTypeError();
                 }
                 let tmp2;
@@ -115,7 +116,7 @@ export default importAllResult.forwardRef(function BaseNavigationContainer(child
                       let obj = {};
                       const merged = Object.assign(state);
                       state = state.state;
-                      if (typeof closure_8 !== "function") {
+                      if (typeof closure_8 !== "fileFinishedImporting") {
                         HermesBuiltin.throwTypeError();
                       }
                       let tmp2;

@@ -1,3 +1,4 @@
+// _runtime/metro/00195__.js
 try {
   const _module = require("isNativeFunction");
   let flag = _module.hasNativeConstructor(function*() {

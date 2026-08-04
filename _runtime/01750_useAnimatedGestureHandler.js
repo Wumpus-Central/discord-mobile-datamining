@@ -1,3 +1,4 @@
+// _runtime/01750_useAnimatedGestureHandler.js
 const require = arg1;
 const dependencyMap = arg6;
 let closure_2 = { UNDETERMINED: 0, FAILED: 1, BEGAN: 2, CANCELLED: 3, ACTIVE: 4, END: 5 };

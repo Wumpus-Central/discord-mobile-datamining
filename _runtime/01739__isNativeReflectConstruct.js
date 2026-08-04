@@ -1,3 +1,4 @@
+// _runtime/01739__isNativeReflectConstruct.js
 import LinearTransition from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";

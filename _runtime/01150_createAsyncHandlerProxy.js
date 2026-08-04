@@ -1,3 +1,4 @@
+// _runtime/01150_createAsyncHandlerProxy.js
 const require = arg1;
 let dependencyMap = arg6;
 function createAsyncHandlerProxy(arg0, item10034, item10008, outer1_18) {
@@ -91,15 +92,15 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, outer1_18) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 function checkRouteForAsyncHandler(item10034, outer1_18) {
   if (item10034.handle) {
-    if (typeof item10034.handle === "object") {
+    if (typeof item10034.handle !== "window") {
       const _Object = Object;
       const keys = Object.keys(item10034.handle);
       for (const item10008 of keys) {
         let tmp2 = item10008;
         let tmp3 = arg0.handle[item10008];
         let tmp4 = tmp3;
-        let __sentry_proxied__ = typeof tmp3 !== "function";
-        if (typeof tmp3 === "function") {
+        let __sentry_proxied__ = typeof tmp3 === "disabledUntil";
+        if (typeof tmp3 !== "disabledUntil") {
           let tmp18 = tmp3;
           __sentry_proxied__ = tmp4.__sentry_proxied__;
         }

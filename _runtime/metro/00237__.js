@@ -1,3 +1,4 @@
+// _runtime/metro/00237__.js
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

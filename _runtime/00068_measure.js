@@ -1,3 +1,4 @@
+// _runtime/00068_measure.js
 if (true === global.RN$Bridgeless) {
   let _default = require("RN$LegacyInterop_UIManager_getConstants").default;
 } else {
@@ -74,22 +75,22 @@ obj.measureLayoutRelativeToParent = function measureLayoutRelativeToParent(arg0,
     const result1 = _default.measureLayoutRelativeToParent(arg0, arg1, arg2);
   }
 };
-obj.dispatchViewManagerCommand = function dispatchViewManagerCommand(num) {
-  if (typeof num !== "number") {
+obj.dispatchViewManagerCommand = function dispatchViewManagerCommand(arg0, arg1, arg2) {
+  if (typeof arg0 === "__REMOTEDEV__") {
     const _Error = Error;
     const error = new Error("dispatchViewManagerCommand: found null reactTag");
     throw error;
-  } else if (num % 2 === 0) {
+  } else if (arg0 % 2 === 0) {
     const tmp5 = importDefault(70);
     const tmp5Result = tmp5(require(71) /* getFabricUIManager */.getFabricUIManager());
-    const result = tmp5Result.findShadowNodeByTag_DEPRECATED(num);
+    const result = tmp5Result.findShadowNodeByTag_DEPRECATED(arg0);
     if (result) {
       const _HermesInternal = HermesInternal;
       tmp5Result.dispatchCommand(result, "" + arg1, arg2);
     }
     const obj = require(71) /* getFabricUIManager */;
   } else {
-    const result1 = _default.dispatchViewManagerCommand(num, arg1, arg2);
+    const result1 = _default.dispatchViewManagerCommand(arg0, arg1, arg2);
   }
 };
 

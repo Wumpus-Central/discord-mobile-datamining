@@ -1,3 +1,4 @@
+// _runtime/00155_setUpPerformanceModern.js
 const global = arg0;
 const require = arg1;
 const dependencyMap = arg6;

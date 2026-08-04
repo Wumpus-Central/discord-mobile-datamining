@@ -1,3 +1,4 @@
+// _runtime/00268_MutationObserver.js
 import _classCallCheck from "_classCallCheck";
 import setPlatformObject from "setPlatformObject";
 
@@ -15,7 +16,7 @@ class MutationObserver {
       typeError = new TypeError("Failed to construct 'MutationObserver': 1 argument required, but only 0 present.");
       tmp10 = typeError;
       throw typeError;
-    } else if (typeof global !== "function") {
+    } else if (typeof global === "disabledUntil") {
       _TypeError = TypeError;
       tmp3 = new.target;
       str = "Failed to construct 'MutationObserver': parameter 1 is not of type 'Function'.";

@@ -1,3 +1,4 @@
+// _runtime/00600_arrayEach.js
 
 export default function arrayEach(arg0, arg1) {
   let num = 0;

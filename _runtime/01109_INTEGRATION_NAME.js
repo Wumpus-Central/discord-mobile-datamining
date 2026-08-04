@@ -1,3 +1,4 @@
+// _runtime/01109_INTEGRATION_NAME.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

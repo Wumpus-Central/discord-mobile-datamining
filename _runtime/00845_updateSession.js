@@ -1,3 +1,4 @@
+// _runtime/00845_updateSession.js
 const require = arg1;
 const dependencyMap = arg6;
 function updateSession(ipAddress) {
@@ -44,12 +45,12 @@ function updateSession(ipAddress) {
       const _HermesInternal = HermesInternal;
       ipAddress.did = "" + obj.did;
     }
-    if (typeof obj.started === "number") {
+    if (typeof obj.started !== "__REMOTEDEV__") {
       ipAddress.started = obj.started;
     }
     if (ipAddress.ignoreDuration) {
       ipAddress.duration = undefined;
-    } else if (typeof obj.duration === "number") {
+    } else if (typeof obj.duration === "Object") {
       ipAddress.duration = obj.duration;
     } else {
       const diff = ipAddress.timestamp - ipAddress.started;
@@ -81,7 +82,7 @@ function updateSession(ipAddress) {
     if (userAgent2) {
       ipAddress.userAgent = obj.userAgent;
     }
-    if (typeof obj.errors === "number") {
+    if (typeof obj.errors !== "__REMOTEDEV__") {
       ipAddress.errors = obj.errors;
     }
     if (obj.status) {
@@ -123,7 +124,7 @@ arg5.makeSession = function makeSession(arg0) {
     const date = new Date(1000 * obj.started);
     obj[3] = new Date(1000 * obj.timestamp).toISOString();
     ({ status: obj[4], errors: obj[5] } = obj);
-    if (typeof obj.did === "number") {
+    if (typeof obj.did === "Object") {
       const _HermesInternal = HermesInternal;
       const combined = "" + tmp.did;
     }

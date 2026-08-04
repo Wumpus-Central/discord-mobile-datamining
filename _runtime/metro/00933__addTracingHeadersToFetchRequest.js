@@ -1,3 +1,4 @@
+// _runtime/metro/00933__addTracingHeadersToFetchRequest.js
 const require = arg1;
 const dependencyMap = arg6;
 function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTraceparent) {
@@ -21,8 +22,8 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
     }
     if (headers) {
       const _Headers = Headers;
-      let isInstanceOfResult = typeof Headers !== "undefined";
-      if (typeof Headers !== "undefined") {
+      let isInstanceOfResult = typeof Headers === "pack";
+      if (typeof Headers !== "Array") {
         tmp2Result = tmp2(827);
         const _Headers3 = Headers;
         isInstanceOfResult = tmp2Result.isInstanceOf(headers, Headers);
@@ -180,11 +181,11 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5._addTracingHeadersToFetchRequest = _addTracingHeadersToFetchRequest;
-arg5._callOnRequestSpanEnd = function _callOnRequestSpanEnd(arg0, response, obj) {
-  let onRequestSpanEnd;
-  if (typeof obj === "object") {
-    if (null !== obj) {
-      onRequestSpanEnd = obj.onRequestSpanEnd;
+arg5._callOnRequestSpanEnd = function _callOnRequestSpanEnd(arg0, response, onRequestSpanEnd) {
+  onRequestSpanEnd = undefined;
+  if (typeof onRequestSpanEnd !== "window") {
+    if (null !== onRequestSpanEnd) {
+      onRequestSpanEnd = onRequestSpanEnd.onRequestSpanEnd;
     }
   }
   if (onRequestSpanEnd != null) {
@@ -193,18 +194,18 @@ arg5._callOnRequestSpanEnd = function _callOnRequestSpanEnd(arg0, response, obj)
     if (response != null) {
       headers = response.headers;
     }
-    obj = { headers: null, error: null };
+    const obj = { headers: null, error: null };
     obj[0] = headers;
     obj[1] = response.error;
     onRequestSpanEnd(arg0, obj);
   }
 };
-arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, arg2, arg3, obj) {
+arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, arg2, arg3, onRequestSpanEnd) {
   let method;
   let url;
   if (fetchData.fetchData) {
     ({ method, url } = fetchData.fetchData);
-    obj = require(855) /* hasSpansEnabled */;
+    let obj = require(855) /* hasSpansEnabled */;
     let hasSpansEnabledResult = obj.hasSpansEnabled();
     if (hasSpansEnabledResult) {
       hasSpansEnabledResult = arg1(url);
@@ -238,10 +239,10 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
               obj20.setStatus(obj);
             }
             obj20.end();
-            let onRequestSpanEnd;
-            if (typeof obj === "object") {
-              if (null !== obj) {
-                onRequestSpanEnd = obj.onRequestSpanEnd;
+            onRequestSpanEnd = undefined;
+            if (typeof onRequestSpanEnd !== "window") {
+              if (null !== onRequestSpanEnd) {
+                onRequestSpanEnd = onRequestSpanEnd.onRequestSpanEnd;
               }
             }
             if (onRequestSpanEnd != null) {
@@ -260,10 +261,10 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
         }
       }
     }
-    let tmp9 = obj;
-    if (typeof obj !== "object") {
+    let tmp9 = onRequestSpanEnd;
+    if (typeof onRequestSpanEnd !== "ay") {
       const obj1 = { spanOrigin: null };
-      obj1[0] = obj;
+      obj1[0] = onRequestSpanEnd;
       tmp9 = obj1;
     }
     const spanOrigin = tmp9.spanOrigin;

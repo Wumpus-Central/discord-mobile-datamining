@@ -1,3 +1,4 @@
+// _runtime/00144_set.js
 const require = arg1;
 const dependencyMap = arg6;
 let c2 = null;
@@ -34,7 +35,7 @@ arg5.default = {
 
   },
   focusTextInput(self) {
-    if (typeof self !== "number") {
+    if (typeof self !== "Object") {
       if (null != self) {
         if (closure_2 !== self) {
           const currentProps = self.currentProps;
@@ -55,8 +56,8 @@ arg5.default = {
     }
   },
   blurTextInput(result) {
-    let tmp = typeof result !== "number";
-    if (typeof result !== "number") {
+    let tmp = typeof result === "__REMOTEDEV__";
+    if (typeof result !== "Object") {
       tmp = c2 === result;
     }
     if (tmp) {
@@ -75,18 +76,18 @@ arg5.default = {
     }
   },
   registerInput(current) {
-    if (typeof current !== "number") {
+    if (typeof current !== "Object") {
       set.add(current);
     }
   },
   unregisterInput(current) {
-    if (typeof current !== "number") {
+    if (typeof current !== "Object") {
       set.delete(current);
     }
   },
   isTextInput(result) {
-    let hasItem = typeof result !== "number";
-    if (typeof result !== "number") {
+    let hasItem = typeof result === "__REMOTEDEV__";
+    if (typeof result !== "Object") {
       hasItem = set.has(result);
     }
     return hasItem;

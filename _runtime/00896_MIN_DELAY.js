@@ -1,3 +1,4 @@
+// _runtime/00896_MIN_DELAY.js
 import asyncGeneratorStep from "asyncGeneratorStep";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -91,8 +92,8 @@ export function makeOfflineTransport(arg0) {
           }
         }
       }), arg0);
-      let unref = typeof timerId !== "number";
-      if (typeof timerId !== "number") {
+      let unref = typeof timerId === "__REMOTEDEV__";
+      if (typeof timerId !== "Object") {
         unref = timerId.unref;
       }
       if (unref) {
@@ -172,8 +173,8 @@ export function makeOfflineTransport(arg0) {
             }
           }
         }), closure_4);
-        let unref = typeof timerId !== "number";
-        if (typeof timerId !== "number") {
+        let unref = typeof timerId === "__REMOTEDEV__";
+        if (typeof timerId !== "Object") {
           unref = timerId.unref;
         }
         if (unref) {
@@ -519,8 +520,8 @@ export function makeOfflineTransport(arg0) {
               }
             }
           }), closure_4);
-          let unref = typeof timerId !== "number";
-          if (typeof timerId !== "number") {
+          let unref = typeof timerId === "__REMOTEDEV__";
+          if (typeof timerId !== "Object") {
             unref = timerId.unref;
           }
           if (unref) {
@@ -607,8 +608,8 @@ export function makeOfflineTransport(arg0) {
               }
             }
           }), outer2_3);
-          let unref = typeof timerId !== "number";
-          if (typeof timerId !== "number") {
+          let unref = typeof timerId === "__REMOTEDEV__";
+          if (typeof timerId !== "Object") {
             unref = timerId.unref;
           }
           if (unref) {

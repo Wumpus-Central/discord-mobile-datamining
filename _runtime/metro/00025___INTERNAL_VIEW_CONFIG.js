@@ -1,3 +1,4 @@
+// _runtime/metro/00025___INTERNAL_VIEW_CONFIG.js
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 
 let obj = { uiViewClassName: "AndroidProgressBar", validAttributes: null };

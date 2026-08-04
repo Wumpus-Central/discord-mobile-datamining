@@ -1,3 +1,4 @@
+// _runtime/00110__objectWithoutPropertiesLoose.js
 
 export default function _objectWithoutPropertiesLoose(obj, arr) {
   if (null == obj) {

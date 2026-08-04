@@ -1,3 +1,4 @@
+// _runtime/01518_fromEntries.js
 arg5.default = function fromEntries(entries) {
   return entries.reduce((arg0, arg1) => {
     let tmp;

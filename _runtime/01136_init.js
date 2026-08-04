@@ -1,3 +1,4 @@
+// _runtime/01136_init.js
 import noop from "noop";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

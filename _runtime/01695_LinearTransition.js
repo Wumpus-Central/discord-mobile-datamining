@@ -1,3 +1,4 @@
+// _runtime/01695_LinearTransition.js
 arg5.LinearTransition = function LinearTransition(name, translateX) {
   let obj = { name, style: null, duration: 300 };
   obj = { 0: null };

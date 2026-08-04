@@ -1,3 +1,4 @@
+// _runtime/01699_prepareCurvedTransition.js
 const require = arg1;
 const dependencyMap = arg6;
 arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, duration, easingY, dummyTransitionKeyframeName) {
@@ -39,7 +40,7 @@ arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, durat
   };
   animationCancelCallback = function animationCancelCallback() {
     let length;
-    if (typeof onFinalize !== "function") {
+    if (typeof onFinalize !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     if (cloneNode.contains(dummy)) {
@@ -59,7 +60,7 @@ arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, durat
   };
   animationEndCallback = function animationEndCallback() {
     let length;
-    if (typeof onFinalize !== "function") {
+    if (typeof onFinalize !== "fileFinishedImporting") {
       HermesBuiltin.throwTypeError();
     }
     if (cloneNode.contains(dummy)) {

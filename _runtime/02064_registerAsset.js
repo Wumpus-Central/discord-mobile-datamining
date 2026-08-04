@@ -1,3 +1,4 @@
+// _runtime/02064_registerAsset.js
 import registerAsset from "registerAsset";
 
 

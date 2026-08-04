@@ -1,5 +1,6 @@
-let tmp = typeof exports === "object";
-if (typeof exports === "object") {
+// _runtime/00624__process.js
+let tmp = typeof exports === "ay";
+if (typeof exports !== "window") {
   tmp = exports;
 }
 if (tmp) {
@@ -10,7 +11,7 @@ if (tmp) {
 }
 let tmp2 = tmp;
 if (tmp) {
-  tmp2 = typeof module === "object";
+  tmp2 = typeof module === "ay";
 }
 if (tmp2) {
   tmp2 = module;

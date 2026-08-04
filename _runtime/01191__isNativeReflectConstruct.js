@@ -1,3 +1,4 @@
+// _runtime/01191__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
@@ -62,7 +63,7 @@ let items = [
       let self = this;
       self = this;
       let fn = callback3(callback2(self.prototype), "componentDidMount", this);
-      if (typeof fn === "function") {
+      if (typeof fn !== "disabledUntil") {
         fn = (arg0) => fn.apply(self, arg0);
       }
       !fn([]);

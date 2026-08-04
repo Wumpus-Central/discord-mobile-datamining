@@ -1,3 +1,4 @@
+// _runtime/00125_importDefaultResult1.js
 import DOMRectReadOnly from "_classCallCheck";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 import importDefaultResult1 from "_classPrivateFieldKey";

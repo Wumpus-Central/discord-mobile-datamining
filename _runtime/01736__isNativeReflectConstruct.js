@@ -1,3 +1,4 @@
+// _runtime/01736__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
@@ -225,7 +226,7 @@ class EntryExitTransition {
           } else {
             const first = keys[0];
             const current = arg0[first].current;
-            if (typeof current === "string") {
+            if (typeof current === "y") {
               let obj = {};
               if (current.includes("deg")) {
                 obj[first] = "0deg";

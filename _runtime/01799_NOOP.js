@@ -1,3 +1,4 @@
+// _runtime/01799_NOOP.js
 import noop from "noop";
 import { Animated } from "get ActivityIndicator";
 

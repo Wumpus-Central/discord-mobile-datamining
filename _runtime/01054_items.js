@@ -1,3 +1,4 @@
+// _runtime/01054_items.js
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -17,7 +18,7 @@ arg5.onTTFB = (arg0) => {
   fn = metric;
   const obj2 = fn(1044);
   dependencyMap = fn(1047).bindReporter(arg0, metric, items, obj.reportAllChanges);
-  if (typeof whenReady !== "function") {
+  if (typeof whenReady !== "fileFinishedImporting") {
     HermesBuiltin.throwTypeError();
   }
   fn = (arg0) => {
@@ -38,7 +39,7 @@ arg5.onTTFB = (arg0) => {
   }
   if (prerendering) {
     tmp(1038).whenActivated(() => {
-      if (typeof outer1_3 !== "function") {
+      if (typeof outer1_3 !== "fileFinishedImporting") {
         HermesBuiltin.throwTypeError();
       }
       const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -48,7 +49,7 @@ arg5.onTTFB = (arg0) => {
       }
       if (prerendering) {
         tmp2(tmp3[1]).whenActivated(() => {
-          if (typeof outer1_3 !== "function") {
+          if (typeof outer1_3 !== "fileFinishedImporting") {
             HermesBuiltin.throwTypeError();
           }
           const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -58,7 +59,7 @@ arg5.onTTFB = (arg0) => {
           }
           if (prerendering) {
             tmp2(tmp3[1]).whenActivated(() => {
-              if (typeof outer1_3 !== "function") {
+              if (typeof outer1_3 !== "fileFinishedImporting") {
                 HermesBuiltin.throwTypeError();
               }
               const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -68,7 +69,7 @@ arg5.onTTFB = (arg0) => {
               }
               if (prerendering) {
                 tmp2(tmp3[1]).whenActivated(() => {
-                  if (typeof outer1_3 !== "function") {
+                  if (typeof outer1_3 !== "fileFinishedImporting") {
                     HermesBuiltin.throwTypeError();
                   }
                   const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -102,7 +103,7 @@ arg5.onTTFB = (arg0) => {
                 }
                 if ("complete" !== readyState) {
                   const listener = globalThis.addEventListener("load", () => {
-                    if (typeof outer1_3 !== "function") {
+                    if (typeof outer1_3 !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     let closure_0 = tmp;
@@ -143,7 +144,7 @@ arg5.onTTFB = (arg0) => {
             }
             if ("complete" !== readyState) {
               const listener = globalThis.addEventListener("load", () => {
-                if (typeof outer1_3 !== "function") {
+                if (typeof outer1_3 !== "fileFinishedImporting") {
                   HermesBuiltin.throwTypeError();
                 }
                 let closure_0 = tmp;
@@ -154,7 +155,7 @@ arg5.onTTFB = (arg0) => {
                 }
                 if (prerendering) {
                   tmp2(tmp3[1]).whenActivated(() => {
-                    if (typeof outer1_3 !== "function") {
+                    if (typeof outer1_3 !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -188,7 +189,7 @@ arg5.onTTFB = (arg0) => {
                   }
                   if ("complete" !== readyState) {
                     let listener = globalThis.addEventListener("load", () => {
-                      if (typeof outer1_3 !== "function") {
+                      if (typeof outer1_3 !== "fileFinishedImporting") {
                         HermesBuiltin.throwTypeError();
                       }
                       let closure_0 = tmp;
@@ -235,7 +236,7 @@ arg5.onTTFB = (arg0) => {
         }
         if ("complete" !== readyState) {
           const listener = globalThis.addEventListener("load", () => {
-            if (typeof outer1_3 !== "function") {
+            if (typeof outer1_3 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             let closure_0 = tmp;
@@ -246,7 +247,7 @@ arg5.onTTFB = (arg0) => {
             }
             if (prerendering) {
               tmp2(tmp3[1]).whenActivated(() => {
-                if (typeof outer1_3 !== "function") {
+                if (typeof outer1_3 !== "fileFinishedImporting") {
                   HermesBuiltin.throwTypeError();
                 }
                 const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -256,7 +257,7 @@ arg5.onTTFB = (arg0) => {
                 }
                 if (prerendering) {
                   tmp2(tmp3[1]).whenActivated(() => {
-                    if (typeof outer1_3 !== "function") {
+                    if (typeof outer1_3 !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -290,7 +291,7 @@ arg5.onTTFB = (arg0) => {
                   }
                   if ("complete" !== readyState) {
                     const listener = globalThis.addEventListener("load", () => {
-                      if (typeof outer1_3 !== "function") {
+                      if (typeof outer1_3 !== "fileFinishedImporting") {
                         HermesBuiltin.throwTypeError();
                       }
                       let closure_0 = tmp;
@@ -331,7 +332,7 @@ arg5.onTTFB = (arg0) => {
               }
               if ("complete" !== readyState) {
                 let listener = globalThis.addEventListener("load", () => {
-                  if (typeof outer1_3 !== "function") {
+                  if (typeof outer1_3 !== "fileFinishedImporting") {
                     HermesBuiltin.throwTypeError();
                   }
                   let closure_0 = tmp;
@@ -342,7 +343,7 @@ arg5.onTTFB = (arg0) => {
                   }
                   if (prerendering) {
                     tmp2(tmp3[1]).whenActivated(() => {
-                      if (typeof outer1_3 !== "function") {
+                      if (typeof outer1_3 !== "fileFinishedImporting") {
                         HermesBuiltin.throwTypeError();
                       }
                       const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -376,7 +377,7 @@ arg5.onTTFB = (arg0) => {
                     }
                     if ("complete" !== readyState) {
                       let listener = globalThis.addEventListener("load", () => {
-                        if (typeof outer1_3 !== "function") {
+                        if (typeof outer1_3 !== "fileFinishedImporting") {
                           HermesBuiltin.throwTypeError();
                         }
                         let closure_0 = tmp;
@@ -429,7 +430,7 @@ arg5.onTTFB = (arg0) => {
     }
     if ("complete" !== readyState) {
       const listener = globalThis.addEventListener("load", () => {
-        if (typeof outer1_3 !== "function") {
+        if (typeof outer1_3 !== "fileFinishedImporting") {
           HermesBuiltin.throwTypeError();
         }
         let closure_0 = tmp;
@@ -440,7 +441,7 @@ arg5.onTTFB = (arg0) => {
         }
         if (prerendering) {
           tmp2(tmp3[1]).whenActivated(() => {
-            if (typeof outer1_3 !== "function") {
+            if (typeof outer1_3 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -450,7 +451,7 @@ arg5.onTTFB = (arg0) => {
             }
             if (prerendering) {
               tmp2(tmp3[1]).whenActivated(() => {
-                if (typeof outer1_3 !== "function") {
+                if (typeof outer1_3 !== "fileFinishedImporting") {
                   HermesBuiltin.throwTypeError();
                 }
                 const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -460,7 +461,7 @@ arg5.onTTFB = (arg0) => {
                 }
                 if (prerendering) {
                   tmp2(tmp3[1]).whenActivated(() => {
-                    if (typeof outer1_3 !== "function") {
+                    if (typeof outer1_3 !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -494,7 +495,7 @@ arg5.onTTFB = (arg0) => {
                   }
                   if ("complete" !== readyState) {
                     const listener = globalThis.addEventListener("load", () => {
-                      if (typeof outer1_3 !== "function") {
+                      if (typeof outer1_3 !== "fileFinishedImporting") {
                         HermesBuiltin.throwTypeError();
                       }
                       let closure_0 = tmp;
@@ -535,7 +536,7 @@ arg5.onTTFB = (arg0) => {
               }
               if ("complete" !== readyState) {
                 const listener = globalThis.addEventListener("load", () => {
-                  if (typeof outer1_3 !== "function") {
+                  if (typeof outer1_3 !== "fileFinishedImporting") {
                     HermesBuiltin.throwTypeError();
                   }
                   let closure_0 = tmp;
@@ -546,7 +547,7 @@ arg5.onTTFB = (arg0) => {
                   }
                   if (prerendering) {
                     tmp2(tmp3[1]).whenActivated(() => {
-                      if (typeof outer1_3 !== "function") {
+                      if (typeof outer1_3 !== "fileFinishedImporting") {
                         HermesBuiltin.throwTypeError();
                       }
                       const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -580,7 +581,7 @@ arg5.onTTFB = (arg0) => {
                     }
                     if ("complete" !== readyState) {
                       let listener = globalThis.addEventListener("load", () => {
-                        if (typeof outer1_3 !== "function") {
+                        if (typeof outer1_3 !== "fileFinishedImporting") {
                           HermesBuiltin.throwTypeError();
                         }
                         let closure_0 = tmp;
@@ -627,7 +628,7 @@ arg5.onTTFB = (arg0) => {
           }
           if ("complete" !== readyState) {
             let listener = globalThis.addEventListener("load", () => {
-              if (typeof outer1_3 !== "function") {
+              if (typeof outer1_3 !== "fileFinishedImporting") {
                 HermesBuiltin.throwTypeError();
               }
               let closure_0 = tmp;
@@ -638,7 +639,7 @@ arg5.onTTFB = (arg0) => {
               }
               if (prerendering) {
                 tmp2(tmp3[1]).whenActivated(() => {
-                  if (typeof outer1_3 !== "function") {
+                  if (typeof outer1_3 !== "fileFinishedImporting") {
                     HermesBuiltin.throwTypeError();
                   }
                   const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -648,7 +649,7 @@ arg5.onTTFB = (arg0) => {
                   }
                   if (prerendering) {
                     tmp2(tmp3[1]).whenActivated(() => {
-                      if (typeof outer1_3 !== "function") {
+                      if (typeof outer1_3 !== "fileFinishedImporting") {
                         HermesBuiltin.throwTypeError();
                       }
                       const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -682,7 +683,7 @@ arg5.onTTFB = (arg0) => {
                     }
                     if ("complete" !== readyState) {
                       const listener = globalThis.addEventListener("load", () => {
-                        if (typeof outer1_3 !== "function") {
+                        if (typeof outer1_3 !== "fileFinishedImporting") {
                           HermesBuiltin.throwTypeError();
                         }
                         let closure_0 = tmp;
@@ -723,7 +724,7 @@ arg5.onTTFB = (arg0) => {
                 }
                 if ("complete" !== readyState) {
                   let listener = globalThis.addEventListener("load", () => {
-                    if (typeof outer1_3 !== "function") {
+                    if (typeof outer1_3 !== "fileFinishedImporting") {
                       HermesBuiltin.throwTypeError();
                     }
                     let closure_0 = tmp;
@@ -734,7 +735,7 @@ arg5.onTTFB = (arg0) => {
                     }
                     if (prerendering) {
                       tmp2(tmp3[1]).whenActivated(() => {
-                        if (typeof outer1_3 !== "function") {
+                        if (typeof outer1_3 !== "fileFinishedImporting") {
                           HermesBuiltin.throwTypeError();
                         }
                         const _document = tmp(outer1_1[0]).WINDOW.document;
@@ -768,7 +769,7 @@ arg5.onTTFB = (arg0) => {
                       }
                       if ("complete" !== readyState) {
                         let listener = globalThis.addEventListener("load", () => {
-                          if (typeof outer1_3 !== "function") {
+                          if (typeof outer1_3 !== "fileFinishedImporting") {
                             HermesBuiltin.throwTypeError();
                           }
                           let closure_0 = tmp;

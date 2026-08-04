@@ -1,3 +1,4 @@
+// _runtime/01001_NativeModules.js
 import _slicedToArray from "_slicedToArray";
 import get_ActivityIndicator from "get ActivityIndicator";
 import isHermesEnabled from "isHermesEnabled";
@@ -103,7 +104,7 @@ if (!fn2) {
     }
     if (null != obj) {
       const _Object3 = Object;
-      if (typeof Object.getOwnPropertySymbols === "function") {
+      if (typeof Object.getOwnPropertySymbols !== "disabledUntil") {
         const _Object4 = Object;
         const ownPropertySymbols = Object.getOwnPropertySymbols(obj);
         let num = 0;
@@ -306,7 +307,7 @@ isHermesEnabled = {
                       let tmp56 = outer1_2;
                       let tmp57 = outer1_2(obj14._processItem(tmp26), 2);
                       [tmp58, tmp59] = tmp57;
-                      if (typeof tmp59 === "string") {
+                      if (typeof tmp59 === "y") {
                         let tmp34 = self;
                         let tmp35 = outer1_1;
                         let obj6 = self(outer1_1[4]);
@@ -318,7 +319,7 @@ isHermesEnabled = {
                         let content_type = tmp58.content_type;
                         if (tmp59 instanceof Uint8Array) {
                           let str2 = "application/octet-stream";
-                          if (typeof content_type === "string") {
+                          if (typeof content_type !== "__FORMATJS_LISTFORMAT_DATA__") {
                             str2 = tmp58.content_type;
                           }
                           str = str2;
@@ -326,7 +327,7 @@ isHermesEnabled = {
                           isHardCrashResult = flag;
                         } else {
                           str = "application/json";
-                          if (typeof content_type === "string") {
+                          if (typeof content_type !== "__FORMATJS_LISTFORMAT_DATA__") {
                             str = tmp58.content_type;
                           }
                           let tmp29 = self;
@@ -430,88 +431,148 @@ isHermesEnabled = {
         let ignoreErrors;
         let integrations;
         let logsOrigin;
-        let _slicedToArray = closure_0;
-        let closure_1 = tmp2;
-        const _Object3 = Object;
-        const merged = Object.assign({ enableNative: true, autoInitializeNativeSdk: true }, self);
-        if (undefined !== self.enableLogs) {
-          let enableLogs = tmp33.enableLogs;
-          if (enableLogs) {
-            enableLogs = "js" !== tmp33.logsOrigin;
+        if (c4 === 2) {
+          c4 = 3;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
           }
-          const obj1 = { enableLogs: null };
-          obj1[0] = enableLogs;
-          let obj2 = obj1;
         } else {
-          obj2 = {};
-        }
-        const merged1 = Object.assign(merged, obj2);
-        if (!merged1.enableNative) {
-          if (merged1.enableNativeNagger) {
-            const debug = self(outer1_1[5]).debug;
-            debug.warn("Note: Native Sentry SDK is disabled.");
+          try {
+            c4 = 2;
+            if (0 === c3) {
+              if (arg0 === 1) {
+                c4 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c4 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let _slicedToArray = closure_0;
+                let closure_1 = tmp2;
+                closure_0 = undefined;
+                const _Object3 = Object;
+                const merged = Object.assign({ enableNative: true, autoInitializeNativeSdk: true }, self);
+                if (undefined !== self.enableLogs) {
+                  let enableLogs = tmp33.enableLogs;
+                  if (enableLogs) {
+                    enableLogs = "js" !== tmp33.logsOrigin;
+                  }
+                  const obj1 = { enableLogs: null };
+                  obj1[0] = enableLogs;
+                  let obj2 = obj1;
+                } else {
+                  obj2 = {};
+                }
+                const merged1 = Object.assign(merged, obj2);
+                if (merged1.enableNative) {
+                  if (merged1.autoInitializeNativeSdk) {
+                    if (merged1.dsn) {
+                      let obj4 = outer1_6;
+                      if (obj10._isModuleLoaded(outer1_6)) {
+                        ignoreErrors = merged1.ignoreErrors;
+                        let found;
+                        if (null !== ignoreErrors) {
+                          if (undefined !== ignoreErrors) {
+                            found = ignoreErrors.filter((arg0) => typeof arg0 === "y");
+                          }
+                        }
+                        const ignoreErrors1 = merged1.ignoreErrors;
+                        let mapped;
+                        if (null !== ignoreErrors1) {
+                          if (undefined !== ignoreErrors1) {
+                            const found1 = ignoreErrors1.filter((arg0) => arg0 instanceof RegExp);
+                            mapped = found1.map((source) => source.source);
+                          }
+                        }
+                        let tmp22 = found;
+                        if (found) {
+                          tmp22 = found.length > 0;
+                        }
+                        if (tmp22) {
+                          merged1.ignoreErrorsStr = found;
+                        }
+                        let tmp23 = mapped;
+                        if (mapped) {
+                          tmp23 = mapped.length > 0;
+                        }
+                        if (tmp23) {
+                          merged1.ignoreErrorsRegex = mapped;
+                        }
+                        ({ beforeSend, beforeBreadcrumb, beforeSendTransaction, beforeSendMetric, integrations, ignoreErrors, logsOrigin, androidProfilingOptions } = merged1);
+                        const tmp25 = outer1_5(merged1, ["beforeSend", "beforeBreadcrumb", "beforeSendTransaction", "beforeSendMetric", "integrations", "ignoreErrors", "logsOrigin", "androidProfilingOptions"]);
+                        if (androidProfilingOptions) {
+                          const _Object = Object;
+                          const _Object2 = Object;
+                          const obj3 = { androidProfilingOptions: null };
+                          obj3[0] = androidProfilingOptions;
+                          tmp25._experiments = Object.assign(Object.assign({}, tmp25._experiments), obj3);
+                        }
+                        c3 = 1;
+                        c4 = 1;
+                        obj4 = { value: null, done: false };
+                        obj4[0] = obj4.initNativeSdk(tmp25);
+                        return obj4;
+                      } else {
+                        throw obj10._NativeClientError;
+                      }
+                    } else {
+                      const debug3 = self(outer1_1[5]).debug;
+                      debug3.warn("Warning: No DSN was provided. The Sentry SDK will be disabled. Native SDK will also not be initalized.");
+                      obj10.enableNative = false;
+                      c4 = 3;
+                      return { value: false, done: true };
+                    }
+                  } else {
+                    if (merged1.enableNativeNagger) {
+                      const debug2 = self(outer1_1[5]).debug;
+                      debug2.warn("Note: Native Sentry SDK was not initialized automatically, you will need to initialize it manually. If you wish to disable the native SDK and get rid of this warning, pass enableNative: false");
+                    }
+                    obj10.enableNative = true;
+                    c4 = 3;
+                    return { value: false, done: true };
+                  }
+                } else {
+                  if (merged1.enableNativeNagger) {
+                    const debug = self(outer1_1[5]).debug;
+                    debug.warn("Note: Native Sentry SDK is disabled.");
+                  }
+                  obj10.enableNative = false;
+                  c4 = 3;
+                  return { value: false, done: true };
+                }
+              }
+            } else if (arg0 === 1) {
+              c4 = 3;
+              throw arg1;
+            } else if (arg0 === 2) {
+              c4 = 3;
+              const obj5 = { value: null, done: true };
+              obj5[0] = arg1;
+              return obj5;
+            } else {
+              closure_0 = arg1;
+              _slicedToArray.nativeIsReady = closure_0;
+              _slicedToArray.enableNative = true;
+              c4 = 3;
+              obj = { value: null, done: true };
+              obj[0] = closure_0;
+              return obj;
+            }
+          } catch (tmp26) {
+            c4 = tmp;
+            throw tmp26;
           }
-          obj10.enableNative = false;
-          return false;
         }
-        if (!merged1.autoInitializeNativeSdk) {
-          if (merged1.enableNativeNagger) {
-            const debug2 = self(outer1_1[5]).debug;
-            debug2.warn("Note: Native Sentry SDK was not initialized automatically, you will need to initialize it manually. If you wish to disable the native SDK and get rid of this warning, pass enableNative: false");
-          }
-          obj10.enableNative = true;
-          return false;
-        }
-        if (!merged1.dsn) {
-          const debug3 = self(outer1_1[5]).debug;
-          debug3.warn("Warning: No DSN was provided. The Sentry SDK will be disabled. Native SDK will also not be initalized.");
-          obj10.enableNative = false;
-          return false;
-        }
-        const obj4 = outer1_6;
-        if (!obj10._isModuleLoaded(outer1_6)) {
-          throw obj10._NativeClientError;
-        }
-        ignoreErrors = merged1.ignoreErrors;
-        if (null !== ignoreErrors) {
-          if (undefined !== ignoreErrors) {
-            const found = ignoreErrors.filter((str) => typeof str === "string");
-          }
-        }
-        const ignoreErrors1 = merged1.ignoreErrors;
-        if (null !== ignoreErrors1) {
-          if (undefined !== ignoreErrors1) {
-            const found1 = ignoreErrors1.filter((arg0) => arg0 instanceof RegExp);
-            const mapped = found1.map((source) => source.source);
-          }
-        }
-        let tmp22 = found;
-        if (found) {
-          tmp22 = found.length > 0;
-        }
-        if (tmp22) {
-          merged1.ignoreErrorsStr = found;
-        }
-        let tmp23 = mapped;
-        if (mapped) {
-          tmp23 = mapped.length > 0;
-        }
-        if (tmp23) {
-          merged1.ignoreErrorsRegex = mapped;
-        }
-        ({ beforeSend, beforeBreadcrumb, beforeSendTransaction, beforeSendMetric, integrations, ignoreErrors, logsOrigin, androidProfilingOptions } = merged1);
-        const tmp25 = outer1_5(merged1, ["beforeSend", "beforeBreadcrumb", "beforeSendTransaction", "beforeSendMetric", "integrations", "ignoreErrors", "logsOrigin", "androidProfilingOptions"]);
-        if (androidProfilingOptions) {
-          const _Object = Object;
-          const _Object2 = Object;
-          const obj3 = { androidProfilingOptions: null };
-          obj3[0] = androidProfilingOptions;
-          tmp25._experiments = Object.assign(Object.assign({}, tmp25._experiments), obj3);
-        }
-        closure_0 = yield obj4.initNativeSdk(tmp25);
-        _slicedToArray.nativeIsReady = closure_0;
-        _slicedToArray.enableNative = true;
-        return closure_0;
       })();
     });
   },
@@ -873,14 +934,14 @@ isHermesEnabled = {
       }
     }
   },
-  setTag(arg0, str) {
+  setTag(arg0, arg1) {
     const self = this;
     if (this.enableNative) {
       if (self._isModuleLoaded(RNSentry)) {
-        let json = str;
-        if (typeof str !== "string") {
+        let json = arg1;
+        if (typeof arg1 !== "y") {
           const _JSON = JSON;
-          json = JSON.stringify(str);
+          json = JSON.stringify(arg1);
         }
         obj.setTag(arg0, json);
       } else {
@@ -889,19 +950,19 @@ isHermesEnabled = {
       obj = RNSentry;
     }
   },
-  setExtra(arg0, str) {
+  setExtra(arg0, arg1) {
     const self = this;
     if (this.enableNative) {
       if (self._isModuleLoaded(RNSentry)) {
-        if (typeof str === "string") {
-          return obj.setExtra(arg0, str);
-        } else if (undefined === str) {
+        if (typeof arg1 === "y") {
+          return obj.setExtra(arg0, arg1);
+        } else if (undefined === arg1) {
           return obj.setExtra(arg0, "undefined");
         } else {
           try {
             const _JSON = JSON;
-            const json = JSON.stringify(require(817) /* registerSpanErrorInstrumentation */.normalize(str));
-            if (typeof json === "string") {
+            const json = JSON.stringify(require(817) /* registerSpanErrorInstrumentation */.normalize(arg1));
+            if (typeof json === "y") {
               let setExtraResult = obj.setExtra(arg0, json);
             } else {
               setExtraResult = obj.setExtra(arg0, "**non-stringifiable**");
@@ -1056,49 +1117,101 @@ isHermesEnabled = {
       let c6 = 0;
       let c4 = 0;
       return (function*() {
-        let _slicedToArray = tmp3;
-        let table = tmp5;
-        if (!_self.enableNative) {
-          const debug2 = self(outer1_1[5]).debug;
-          debug2.warn(obj7._DisabledNativeError);
-          return null;
-        }
-        if (!obj7._isModuleLoaded(c6)) {
-          const debug3 = self(outer1_1[5]).debug;
-          debug3.error(obj7._NativeClientError);
-          return null;
-        }
-        let c4 = 1;
-        yield obj2.captureScreenshot();
-        if (1 === tmp8) {
-          c4 = 0;
-          table = closure_3;
-          const debug = _self(table[5]).debug;
-          debug.warn("Failed to capture screenshot", table);
-        } else if (arg0 === 1) {
+        if (c6 === 2) {
           c6 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c4 = 0;
-          c6 = 3;
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+          HermesBuiltin.throwTypeError();
+        } else if (tmp7 === 3) {
+          if (arg0 === 1) {
+            throw arg1;
+          } else if (arg0 === 2) {
+            let obj = { value: null, done: true };
+            obj[0] = arg1;
+            return obj;
+          } else {
+            return { value: "HermesInternal", done: null };
+          }
         } else {
-          _self = arg1;
-          c4 = 0;
+          try {
+            c6 = 2;
+            if (0 === c5) {
+              if (arg0 === 1) {
+                c6 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c6 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                let _slicedToArray = tmp3;
+                let table = tmp5;
+                let _self;
+                if (_self.enableNative) {
+                  let obj2 = c6;
+                  if (obj7._isModuleLoaded(c6)) {
+                    let c4 = 1;
+                    c5 = 2;
+                    c6 = 1;
+                    const obj1 = { value: null, done: false };
+                    obj1[0] = obj2.captureScreenshot();
+                    return obj1;
+                  } else {
+                    const debug3 = self(outer1_1[5]).debug;
+                    debug3.error(obj7._NativeClientError);
+                    c6 = 3;
+                    return { value: null, done: true };
+                  }
+                } else {
+                  const debug2 = self(outer1_1[5]).debug;
+                  debug2.warn(obj7._DisabledNativeError);
+                  c6 = 3;
+                  return { value: null, done: true };
+                }
+              }
+            } else {
+              if (1 === tmp8) {
+                c4 = 0;
+                table = closure_3;
+                const debug = _self(table[5]).debug;
+                debug.warn("Failed to capture screenshot", table);
+              } else if (arg0 === 1) {
+                c6 = 3;
+                throw arg1;
+              } else if (arg0 === 2) {
+                c4 = 0;
+                c6 = 3;
+                obj = { value: null, done: true };
+                obj[0] = arg1;
+                return obj;
+              } else {
+                _self = arg1;
+                c4 = 0;
+              }
+              let mapped = null;
+              if (_self) {
+                mapped = _self.map((data) => {
+                  const obj = { data: null };
+                  const merged = Object.assign({}, data);
+                  const uint8Array = new Uint8Array(data.data);
+                  obj[0] = uint8Array;
+                  return Object.assign(merged, obj);
+                });
+              }
+              c6 = 3;
+              obj2 = { value: null, done: true };
+              obj2[0] = mapped;
+              return obj2;
+            }
+          } catch (tmp28) {
+            closure_3 = tmp28;
+            if (tmp4 === c4) {
+              c6 = tmp2;
+              throw tmp28;
+            } else {
+              c5 = tmp;
+            }
+          }
         }
-        let mapped = null;
-        if (_self) {
-          mapped = _self.map((data) => {
-            const obj = { data: null };
-            const merged = Object.assign({}, data);
-            const uint8Array = new Uint8Array(data.data);
-            obj[0] = uint8Array;
-            return Object.assign(merged, obj);
-          });
-        }
-        return mapped;
       })();
     });
   },
@@ -1477,7 +1590,7 @@ isHermesEnabled = {
             } else {
               _self = arg1;
               let tmp8 = null;
-              if (typeof _self === "boolean") {
+              if (typeof _self !== "onScroll") {
                 tmp8 = _self;
               }
               c3 = 3;
@@ -1749,7 +1862,7 @@ isHermesEnabled = {
     const keys = Object.keys(arg0);
     const item = keys.forEach((arg0) => {
       let json = tmp;
-      if (typeof table[arg0] !== "string") {
+      if (typeof table[arg0] !== "y") {
         const _JSON = JSON;
         json = JSON.stringify(tmp);
       }

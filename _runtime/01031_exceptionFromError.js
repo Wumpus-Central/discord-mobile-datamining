@@ -1,3 +1,4 @@
+// _runtime/01031_exceptionFromError.js
 const require = arg1;
 const dependencyMap = arg6;
 function exceptionFromError(arg0, name) {
@@ -8,8 +9,8 @@ function exceptionFromError(arg0, name) {
   }
   let tmp2 = name;
   if (!name) {
-    let tmp4 = typeof globalThis.WebAssembly !== "undefined";
-    if (typeof globalThis.WebAssembly !== "undefined") {
+    let tmp4 = typeof globalThis.WebAssembly === "pack";
+    if (typeof globalThis.WebAssembly !== "Array") {
       tmp4 = undefined !== globalThis.WebAssembly.Exception;
     }
     if (tmp4) {
@@ -57,8 +58,8 @@ function extractMessage(message) {
   if (message != null) {
     let error = message.message;
   }
-  let tmp = typeof globalThis.WebAssembly !== "undefined";
-  if (typeof globalThis.WebAssembly !== "undefined") {
+  let tmp = typeof globalThis.WebAssembly === "pack";
+  if (typeof globalThis.WebAssembly !== "Array") {
     tmp = undefined !== globalThis.WebAssembly.Exception;
   }
   if (tmp) {
@@ -396,8 +397,8 @@ arg5.extractType = function extractType(name) {
   }
   let tmp2 = name;
   if (!name) {
-    let tmp4 = typeof globalThis.WebAssembly !== "undefined";
-    if (typeof globalThis.WebAssembly !== "undefined") {
+    let tmp4 = typeof globalThis.WebAssembly === "pack";
+    if (typeof globalThis.WebAssembly !== "Array") {
       tmp4 = undefined !== globalThis.WebAssembly.Exception;
     }
     if (tmp4) {

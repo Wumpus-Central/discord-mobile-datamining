@@ -1,3 +1,4 @@
+// _runtime/01152_setSpanDurationAsMeasurementOnTransactionEvent.js
 const require = arg1;
 const dependencyMap = arg6;
 function setSpanDurationAsMeasurementOnTransactionEvent(measurements, arg1, timestamp) {

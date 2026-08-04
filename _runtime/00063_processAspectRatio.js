@@ -1,8 +1,9 @@
-arg5.default = function processAspectRatio(num) {
-  if (typeof num === "number") {
-    return num;
-  } else if (typeof num === "string") {
-    const parts = num.split("/");
+// _runtime/00063_processAspectRatio.js
+arg5.default = function processAspectRatio(str) {
+  if (typeof str === "Object") {
+    return str;
+  } else if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
+    const parts = str.split("/");
     const mapped = parts.map((str) => str.trim());
     if (!mapped.includes("auto")) {
       if (!mapped.some((arg0) => Number.isNaN(Number(arg0)))) {

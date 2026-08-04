@@ -1,4 +1,5 @@
+// _runtime/08251_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "fb8db2c451f0cd706524543233306348", name: "ic_partnered_guild_icon_blurple_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [1, 2, 3], hash: "9a9bbdc70f61ec2f6dad7a457855d73e", name: "ic_expand_more_24px", type: "png" });

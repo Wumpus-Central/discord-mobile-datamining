@@ -1,3 +1,4 @@
+// _runtime/01743_SharedTransition.js
 import _classCallCheck from "_classCallCheck";
 
 const SharedTransition = global;

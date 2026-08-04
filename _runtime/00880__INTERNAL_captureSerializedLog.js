@@ -1,3 +1,4 @@
+// _runtime/00880__INTERNAL_captureSerializedLog.js
 import _slicedToArray from "_slicedToArray";
 
 function _INTERNAL_captureSerializedLog(closure_0) {

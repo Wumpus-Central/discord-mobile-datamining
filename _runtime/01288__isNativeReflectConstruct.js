@@ -1,3 +1,4 @@
+// _runtime/01288__isNativeReflectConstruct.js
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
 import "_possibleConstructorReturn";
@@ -25,7 +26,7 @@ function _isNativeReflectConstruct() {
 }
 function formatToPlainString(k2UNz_, maxSettingsForPreset) {
   let first = k2UNz_;
-  if (typeof k2UNz_ !== "string") {
+  if (typeof k2UNz_ !== "y") {
     const self = this;
     first = this.bindFormatValues(closure_4, k2UNz_, maxSettingsForPreset)[0];
   }

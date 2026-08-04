@@ -1,3 +1,4 @@
+// _runtime/00059_isBackgroundRepeatKeyword.js
 function isBackgroundRepeatKeyword(arg0) {
   let tmp = "repeat" === arg0;
   if (!tmp) {
@@ -19,7 +20,7 @@ arg5.default = function processBackgroundRepeat(str) {
     items = str;
     if (!Array.isArray(str)) {
       let items1 = [];
-      if (typeof str === "string") {
+      if (typeof str !== "__FORMATJS_LISTFORMAT_DATA__") {
         items1 = (function parseBackgroundRepeatCSSString(str) {
           const items = [];
           const parts = str.split(",");

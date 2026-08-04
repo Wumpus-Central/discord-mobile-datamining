@@ -1,4 +1,5 @@
+// _runtime/11491_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 128, height: 128, scales: [2, 3], hash: "153e24032a5a8790888aef41caaf4b2c", name: "app_dock_not_found_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "fd49fb07fb819ce61e9240fd55fe1f4f", name: "ic_mute_channel_24px", type: "png" });

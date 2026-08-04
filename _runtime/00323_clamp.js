@@ -1,3 +1,4 @@
+// _runtime/00323_clamp.js
 arg5.default = function clamp(arg0, arg1, arg2) {
   let tmp = arg0;
   let tmp2 = arg1;

@@ -1,3 +1,4 @@
+// _runtime/metro/00418___INTERNAL_VIEW_CONFIG.js
 import "noop";
 import processColorElement from "processColorElement";
 import weakSet from "weakSet";

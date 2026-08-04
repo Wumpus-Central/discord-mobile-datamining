@@ -1,3 +1,4 @@
+// _runtime/00342_configureNext.js
 const require = arg1;
 function configureNext(duration) {
   const _global = arg1;

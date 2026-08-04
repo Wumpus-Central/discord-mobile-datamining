@@ -1,3 +1,4 @@
+// _runtime/01566_useThenable.js
 import asyncGeneratorStep from "asyncGeneratorStep";
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";

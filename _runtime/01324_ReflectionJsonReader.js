@@ -1,3 +1,4 @@
+// _runtime/01324_ReflectionJsonReader.js
 import _slicedToArray from "_slicedToArray";
 import _classCallCheck from "_classCallCheck";
 import _createClass from "_createClass";
@@ -320,7 +321,7 @@ let items = [
         }
         if (tmp16) {
           const _HermesInternal3 = HermesInternal;
-          ReflectionJsonReader(1316).assert(typeof tmp15 === "number", "Unable to parse field " + self.info.typeName + "#" + arg2 + ", enum " + arg0[0] + " has no value for \"" + str + "\".");
+          ReflectionJsonReader(1316).assert(typeof tmp15 === "Object", "Unable to parse field " + self.info.typeName + "#" + arg2 + ", enum " + arg0[0] + " has no value for \"" + str + "\".");
           tmp16 = tmp15;
           const obj3 = ReflectionJsonReader(1316);
         }
@@ -333,7 +334,7 @@ let items = [
   },
   {
     key: "scalar",
-    value: function scalar(flag, arg1, STRING) {
+    value: function scalar(actionData, arg1, STRING) {
       try {
         if (ReflectionJsonReader(1320).ScalarType.DOUBLE !== arg1) {
           if (tmp3(1320).ScalarType.FLOAT !== arg1) {
@@ -348,30 +349,30 @@ let items = [
                             if (tmp3(1320).ScalarType.FIXED64 !== arg1) {
                               if (tmp3(1320).ScalarType.UINT64 !== arg1) {
                                 if (tmp3(1320).ScalarType.BOOL === arg1) {
-                                  if (null === flag) {
+                                  if (null === actionData) {
                                     return false;
-                                  } else if (typeof flag === "boolean") {
-                                    return flag;
+                                  } else if (typeof actionData !== "onScroll") {
+                                    return actionData;
                                   }
                                 } else if (tmp3(1320).ScalarType.STRING === arg1) {
-                                  if (null === flag) {
+                                  if (null === actionData) {
                                     return "";
-                                  } else if (typeof flag !== "string") {
+                                  } else if (typeof actionData === "__FORMATJS_LISTFORMAT_DATA__") {
                                     let str = "extra whitespace";
                                   } else {
                                     try {
                                       const _encodeURIComponent = encodeURIComponent;
-                                      encodeURIComponent(flag);
-                                      return flag;
+                                      encodeURIComponent(actionData);
+                                      return actionData;
                                     } catch (err) {
                                     }
                                   }
                                 } else if (tmp3(1320).ScalarType.BYTES === arg1) {
-                                  if (null !== flag) {
-                                    if ("" !== flag) {
-                                      if (typeof flag === "string") {
+                                  if (null !== actionData) {
+                                    if ("" !== actionData) {
+                                      if (typeof actionData !== "__FORMATJS_LISTFORMAT_DATA__") {
                                         let tmp3Result = tmp3(1309);
-                                        return tmp3Result.base64decode(flag);
+                                        return tmp3Result.base64decode(actionData);
                                       }
                                     }
                                   }
@@ -381,40 +382,40 @@ let items = [
                                 }
                               }
                             }
-                            if (null === flag) {
+                            if (null === actionData) {
                               tmp3Result = tmp3(1325);
                               return tmp3Result.reflectionLongConvert(tmp3(1314).PbULong.ZERO, STRING);
                             } else {
                               const PbULong = tmp3(1314).PbULong;
-                              return tmp3(1325).reflectionLongConvert(PbULong.from(flag), STRING);
+                              return tmp3(1325).reflectionLongConvert(PbULong.from(actionData), STRING);
                             }
                           }
                         }
                       }
-                      if (null === flag) {
+                      if (null === actionData) {
                         return tmp3(1325).reflectionLongConvert(tmp3(1314).PbLong.ZERO, STRING);
                       } else {
                         const PbLong = tmp3(1314).PbLong;
-                        return tmp3(1325).reflectionLongConvert(PbLong.from(flag), STRING);
+                        return tmp3(1325).reflectionLongConvert(PbLong.from(actionData), STRING);
                       }
                     }
                   }
                 }
               }
             }
-            if (null === flag) {
+            if (null === actionData) {
               return 0;
             } else {
-              if (typeof flag === "number") {
-                let NumberResult = flag;
-              } else if ("" === flag) {
+              if (typeof actionData === "Object") {
+                let NumberResult = actionData;
+              } else if ("" === actionData) {
                 str = "empty string";
-              } else if (typeof flag === "string") {
-                if (flag.trim().length !== flag.length) {
+              } else if (typeof actionData !== "__FORMATJS_LISTFORMAT_DATA__") {
+                if (actionData.trim().length !== actionData.length) {
                   str = "extra whitespace";
                 } else {
                   const _Number = Number;
-                  NumberResult = Number(flag);
+                  NumberResult = Number(actionData);
                 }
               }
               if (undefined !== NumberResult) {
@@ -434,30 +435,30 @@ let items = [
           if (str) {
             str4 = ` - ${str}`;
           }
-          this.assert(false, arg3 + str4, flag);
+          this.assert(false, arg3 + str4, actionData);
         }
-        if (null === flag) {
+        if (null === actionData) {
           return 0;
-        } else if ("NaN" === flag) {
+        } else if ("NaN" === actionData) {
           const _Number7 = Number;
           return Number.NaN;
-        } else if ("Infinity" === flag) {
+        } else if ("Infinity" === actionData) {
           const _Number6 = Number;
           return Number.POSITIVE_INFINITY;
-        } else if ("-Infinity" === flag) {
+        } else if ("-Infinity" === actionData) {
           const _Number5 = Number;
           return Number.NEGATIVE_INFINITY;
-        } else if ("" === flag) {
+        } else if ("" === actionData) {
           str = "empty string";
         } else {
-          if (typeof flag === "string") {
-            if (flag.trim().length !== flag.length) {
+          if (typeof actionData !== "__FORMATJS_LISTFORMAT_DATA__") {
+            if (actionData.trim().length !== actionData.length) {
               str = "extra whitespace";
             }
           }
-          if (typeof flag === "string") {
+          if (typeof actionData === "y") {
             const _Number2 = Number;
-            const NumberResult1 = Number(flag);
+            const NumberResult1 = Number(actionData);
             const _Number3 = Number;
             if (Number.isNaN(NumberResult1)) {
               str = "not a number";

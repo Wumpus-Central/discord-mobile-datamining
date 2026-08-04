@@ -1,3 +1,4 @@
+// _runtime/01084_weakMap.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

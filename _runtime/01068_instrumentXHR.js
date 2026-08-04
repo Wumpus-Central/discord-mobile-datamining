@@ -1,3 +1,4 @@
+// _runtime/01068_instrumentXHR.js
 import _slicedToArray from "_slicedToArray";
 
 function instrumentXHR() {
@@ -56,7 +57,7 @@ function instrumentXHR() {
             }
           };
           if ("onreadystatechange" in onreadystatechange) {
-            if (typeof onreadystatechange.onreadystatechange === "function") {
+            if (typeof onreadystatechange.onreadystatechange === "fileFinishedImporting") {
               const _Proxy = Proxy;
               obj = { apply: null };
               obj[0] = function apply(apply) {

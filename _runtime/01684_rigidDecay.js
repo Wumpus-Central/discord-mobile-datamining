@@ -1,3 +1,4 @@
+// _runtime/01684_rigidDecay.js
 const require = arg1;
 const dependencyMap = arg6;
 function rigidDecay(initialVelocity, lastTimestamp, deceleration) {

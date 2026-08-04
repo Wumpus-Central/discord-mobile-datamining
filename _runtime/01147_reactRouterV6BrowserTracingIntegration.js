@@ -1,3 +1,4 @@
+// _runtime/01147_reactRouterV6BrowserTracingIntegration.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 import feedbackAsyncIntegration from "feedbackAsyncIntegration";
 

@@ -1,3 +1,4 @@
+// _runtime/metro/01602___INTERNAL_VIEW_CONFIG.js
 import { codegenNativeComponent } from "get ActivityIndicator";
 import setRuntimeConfigProvider from "setRuntimeConfigProvider";
 

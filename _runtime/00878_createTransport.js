@@ -1,3 +1,4 @@
+// _runtime/00878_createTransport.js
 const require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -59,7 +60,7 @@ arg5.createTransport = function createTransport(bufferSize) {
             closure_3 = outer1_0(outer1_1[2]).updateRateLimits(closure_3, statusCode);
             return statusCode;
           }, (arg0) => {
-            if (typeof closure_2 !== "function") {
+            if (typeof closure_2 !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             const network_error = "network_error";
@@ -87,7 +88,7 @@ arg5.createTransport = function createTransport(bufferSize) {
               const debug = tmp(824).debug;
               debug.error("Skipped sending event because buffer is full.");
             }
-            if (typeof recordEnvelopeLoss !== "function") {
+            if (typeof recordEnvelopeLoss !== "fileFinishedImporting") {
               HermesBuiltin.throwTypeError();
             }
             const queue_overflow = "queue_overflow";

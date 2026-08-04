@@ -1,3 +1,4 @@
+// _runtime/00057_getValidLengthPercentageSizeOrNull.js
 function getValidLengthPercentageSizeOrNull(str) {
   if (null == str) {
     return null;
@@ -24,7 +25,7 @@ function getValidLengthPercentageSizeOrNull(str) {
 arg5.default = function processBackgroundSize(str) {
   if (null == str) {
     let items = [];
-  } else if (typeof str === "string") {
+  } else if (typeof str === "y") {
     items = (function parseBackgroundSizeCSSString(str) {
       const items = [];
       const parts = str.split(",");

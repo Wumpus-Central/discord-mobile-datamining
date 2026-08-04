@@ -1,3 +1,4 @@
+// _runtime/00281_createPublicRootInstance.js
 const require = arg1;
 const module = arg2;
 const exports = arg3;

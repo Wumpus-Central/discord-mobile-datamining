@@ -1,3 +1,4 @@
+// _runtime/01099_browserProfilingIntegration.js
 import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -89,7 +90,7 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
                 }
               }
               let tmp23 = profile_id;
-              if (typeof tmp20 === "string") {
+              if (typeof tmp20 === "y") {
                 let tmp27 = profile_id;
                 if (tmp20) {
                   let tmp35 = contexts;

@@ -1,4 +1,5 @@
+// _runtime/14424_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 161, scales: [1], hash: "f06539dd2236c72b26d5b18fa1a5f589", name: "amanda_2", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "894cceea2dd5b523936930d1d7e333c5", name: "pl", type: "png" });

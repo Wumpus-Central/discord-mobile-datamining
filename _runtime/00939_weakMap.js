@@ -1,3 +1,4 @@
+// _runtime/00939_weakMap.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const weakMap = new WeakMap();
 arg5.cleanupSessionDataForTransport = function cleanupSessionDataForTransport(arg0) {

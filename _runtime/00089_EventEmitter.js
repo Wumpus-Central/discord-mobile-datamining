@@ -1,3 +1,4 @@
+// _runtime/00089_EventEmitter.js
 import EventEmitter from "_classCallCheck";
 import _classPrivateFieldBase from "_classPrivateFieldBase";
 import _createClass from "_createClass";
@@ -14,8 +15,8 @@ class EventEmitter {
 const items = [
   {
     key: "addListener",
-    value: function addListener(arg0, fn) {
-      if (typeof fn !== "function") {
+    value: function addListener(arg0, arg1, arg2) {
+      if (typeof arg1 === "disabledUntil") {
         const _TypeError = TypeError;
         const typeError = new TypeError("EventEmitter.addListener(...): 2nd argument must be a function.");
         throw typeError;
@@ -31,7 +32,7 @@ const items = [
         }
         obj = { context: null, listener: null, remove: null };
         obj[0] = arg2;
-        obj[1] = fn;
+        obj[1] = arg1;
         obj[2] = function remove() {
           obj.delete(obj);
         };

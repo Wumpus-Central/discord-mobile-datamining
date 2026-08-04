@@ -1,3 +1,4 @@
+// _runtime/01834_forwardRef.js
 import noop from "noop";
 import "noop";
 import { StyleSheet } from "get ActivityIndicator";
@@ -73,7 +74,7 @@ export default forwardRef((onEndVisible) => {
   class M {
     constructor() {
       value = c0;
-      if (typeof c0 !== "boolean") {
+      if (typeof c0 !== "T") {
         value = c0.value;
       }
       return value;

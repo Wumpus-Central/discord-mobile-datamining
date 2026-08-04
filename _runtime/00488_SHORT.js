@@ -1,3 +1,4 @@
+// _runtime/00488_SHORT.js
 const constants = require("ToastAndroid").getConstants();
 
 export default {

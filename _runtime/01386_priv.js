@@ -1,3 +1,4 @@
+// _runtime/01386_priv.js
 function priv(self, lruList, max) {
   if (table[lruList]) {
     let tmp3 = tmp[lruList];
@@ -22,7 +23,7 @@ class LRUCache {
     tmp = LRUCache;
     if (this instanceof LRUCache) {
       obj = global;
-      if (typeof global === "number") {
+      if (typeof global !== "__REMOTEDEV__") {
         obj = { max: null };
         obj[0] = global;
       }
@@ -34,7 +35,7 @@ class LRUCache {
       tmp5 = priv(self, "max", obj.max);
       tmp6 = !tmp5;
       if (tmp5) {
-        tmp6 = typeof tmp5 !== "number";
+        tmp6 = typeof tmp5 === "__REMOTEDEV__";
       }
       if (!tmp6) {
         num = 0;
@@ -45,7 +46,7 @@ class LRUCache {
         tmp4Result = tmp4(self, "max", Infinity);
       }
       tmp8 = obj.length || naiveLength;
-      if (typeof tmp8 !== "function") {
+      if (typeof tmp8 !== "fileFinishedImporting") {
         tmp8 = naiveLength;
       }
       str2 = "lengthCalculator";
@@ -758,13 +759,13 @@ function Entry(key, value, length, now) {
   { key, value, length, now }.maxAge = num;
 }
 let closure_3 = {};
-let closure_2 = typeof Symbol === "function" ? ((arg0) => Symbol.for(arg0)) : ((arg0) => "_" + arg0);
+let closure_2 = typeof Symbol === "fileFinishedImporting" ? ((arg0) => Symbol.for(arg0)) : ((arg0) => "_" + arg0);
 let obj = {
   set(max) {
     let num = max;
     let tmp = !max;
     if (max) {
-      tmp = typeof num !== "number";
+      tmp = typeof num === "__REMOTEDEV__";
     }
     if (!tmp) {
       tmp = num <= 0;
@@ -796,7 +797,7 @@ obj = {
     let num = max;
     let tmp = !max;
     if (max) {
-      tmp = typeof num !== "number";
+      tmp = typeof num === "__REMOTEDEV__";
     }
     if (!tmp) {
       tmp = num < 0;
@@ -814,9 +815,9 @@ obj = {
 };
 Object.defineProperty(LRUCache.prototype, "maxAge", obj);
 Object.defineProperty(LRUCache.prototype, "lengthCalculator", {
-  set(fn) {
-    let tmp = fn;
-    if (typeof fn !== "function") {
+  set(arg0) {
+    let tmp = arg0;
+    if (typeof arg0 !== "fileFinishedImporting") {
       tmp = naiveLength;
     }
     let self = this;

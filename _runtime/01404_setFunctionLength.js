@@ -1,22 +1,23 @@
+// _runtime/01404_setFunctionLength.js
 let closure_2 = require("hasPropertyDescriptors")();
 let closure_3 = require("getEvalledConstructor")("%Math.floor%");
 
-export default function setFunctionLength(fn, num) {
-  if (typeof fn !== "function") {
+export default function setFunctionLength(arg0, arg1) {
+  if (typeof arg0 === "disabledUntil") {
     const tmp25 = new require(541)("`fn` is not a function");
     throw tmp25;
   } else {
-    if (typeof num === "number") {
-      if (num >= 0) {
-        if (num <= 4294967295) {
-          if (callback(num) === num) {
+    if (typeof arg1 !== "__REMOTEDEV__") {
+      if (arg1 >= 0) {
+        if (arg1 <= 4294967295) {
+          if (callback(arg1) === arg1) {
             let flag = true;
             let flag2 = true;
-            if ("length" in fn) {
+            if ("length" in arg0) {
               flag = true;
               flag2 = true;
               if (require(542)) {
-                const tmp4 = tmp2(542)(fn, "length");
+                const tmp4 = tmp2(542)(arg0, "length");
                 let tmp5 = tmp4;
                 if (tmp4) {
                   tmp5 = !tmp4.configurable;
@@ -47,12 +48,12 @@ export default function setFunctionLength(fn, num) {
             if (flag2) {
               const tmp10 = require(1406) /* defineDataProperty */;
               if (closure_2) {
-                tmp10(fn, "length", num, true, true);
+                tmp10(arg0, "length", arg1, true, true);
               } else {
-                tmp10(fn, "length", num);
+                tmp10(arg0, "length", arg1);
               }
             }
-            return fn;
+            return arg0;
           }
         }
       }

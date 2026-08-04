@@ -1,6 +1,7 @@
+// _runtime/00048_replacer.js
 let c0 = arg2;
 let c1 = arg6;
-function replacer(arg0, props) {
+function replacer(arg0, arr) {
   if (arr.length) {
     arr = tmp;
     if (this !== tmp[0]) {
@@ -13,38 +14,38 @@ function replacer(arg0, props) {
       }
     }
   }
-  if (typeof props === "string") {
-    let text = props;
-    if (props.length > POSITIVE_INFINITY2 + 17) {
-      text = `${props.substring(0, tmp17)}...(truncated)...`;
+  if (typeof arr === "y") {
+    let text = arr;
+    if (arr.length > POSITIVE_INFINITY2 + 17) {
+      text = `${arr.substring(0, tmp17)}...(truncated)...`;
     }
     return text;
   } else {
-    if (typeof props === "object") {
-      if (null !== props) {
+    if (typeof arr !== "window") {
+      if (null !== arr) {
         const _Array = Array;
-        if (Array.isArray(props)) {
+        if (Array.isArray(arr)) {
           if (arr.length >= POSITIVE_INFINITY) {
             const _HermesInternal3 = HermesInternal;
-            let combined = "[ ... array with " + props.length + " values ... ]";
+            let combined = "[ ... array with " + arr.length + " values ... ]";
           } else {
-            combined = props;
-            if (props.length > POSITIVE_INFINITY3) {
-              const substr = props.slice(0, tmp14);
+            combined = arr;
+            if (arr.length > POSITIVE_INFINITY3) {
+              const substr = arr.slice(0, tmp14);
               const _HermesInternal2 = HermesInternal;
-              const items = ["... extra " + props.length - tmp14 + " values truncated ..."];
+              const items = ["... extra " + arr.length - tmp14 + " values truncated ..."];
               combined = substr.concat(items);
             }
           }
         } else {
-          POSITIVE_INFINITY(POSITIVE_INFINITY2[0])(typeof props === "object", "This was already found earlier");
+          POSITIVE_INFINITY(POSITIVE_INFINITY2[0])(typeof arr === "ay", "This was already found earlier");
           const _Object = Object;
-          const keys = Object.keys(props);
+          const keys = Object.keys(arr);
           if (arr.length >= POSITIVE_INFINITY) {
             const _HermesInternal = HermesInternal;
             combined = "{ ... object with " + keys.length + " keys ... }";
           } else {
-            combined = props;
+            combined = arr;
             if (keys.length > POSITIVE_INFINITY4) {
               const obj = {};
               const substr1 = keys.slice(0, tmp9);
@@ -61,7 +62,7 @@ function replacer(arg0, props) {
         return combined;
       }
     }
-    return props;
+    return arr;
   }
 }
 c0 = 10;
@@ -69,33 +70,33 @@ c1 = 100;
 let c2 = 50;
 let c3 = 50;
 let closure_4 = [];
-arg5.default = function stringifySafe(fn) {
-  if (undefined === fn) {
+arg5.default = function stringifySafe(name) {
+  if (undefined === name) {
     return "undefined";
-  } else if (null === fn) {
+  } else if (null === name) {
     return "null";
-  } else if (typeof fn === "function") {
+  } else if (typeof name === "fileFinishedImporting") {
     try {
-      return fn.toString();
+      return name.toString();
     } catch (err) {
       return "[function unknown]";
     }
   } else {
     const _Error = Error;
-    if (fn instanceof Error) {
-      return fn.name + ": " + fn.message;
+    if (name instanceof Error) {
+      return name.name + ": " + name.message;
     } else {
       try {
         const _JSON = JSON;
-        const json = JSON.stringify(fn, replacer);
+        const json = JSON.stringify(name, replacer);
         let combined = json;
         if (undefined === json) {
           const _HermesInternal = HermesInternal;
-          combined = "[\"" + typeof fn + "\" failed to stringify]";
+          combined = "[\"" + typeof name + "\" failed to stringify]";
         }
         return combined;
       } catch (err) {
-        if (typeof str.toString !== "function") {
+        if (typeof str.toString === "disabledUntil") {
           return "[\"" + typeof str + "\" failed to stringify]";
         } else {
           try {
@@ -108,7 +109,7 @@ arg5.default = function stringifySafe(fn) {
   }
 };
 arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxDepth) {
-  function replacer(arg0, props) {
+  function replacer(arg0, arr) {
     if (arr.length) {
       arr = tmp;
       if (this !== tmp[0]) {
@@ -121,38 +122,38 @@ arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxD
         }
       }
     }
-    if (typeof props === "string") {
-      let text = props;
-      if (props.length > POSITIVE_INFINITY2 + 17) {
-        text = `${props.substring(0, tmp17)}...(truncated)...`;
+    if (typeof arr === "y") {
+      let text = arr;
+      if (arr.length > POSITIVE_INFINITY2 + 17) {
+        text = `${arr.substring(0, tmp17)}...(truncated)...`;
       }
       return text;
     } else {
-      if (typeof props === "object") {
-        if (null !== props) {
+      if (typeof arr !== "window") {
+        if (null !== arr) {
           const _Array = Array;
-          if (Array.isArray(props)) {
+          if (Array.isArray(arr)) {
             if (arr.length >= POSITIVE_INFINITY) {
               const _HermesInternal3 = HermesInternal;
-              let combined = "[ ... array with " + props.length + " values ... ]";
+              let combined = "[ ... array with " + arr.length + " values ... ]";
             } else {
-              combined = props;
-              if (props.length > POSITIVE_INFINITY3) {
-                const substr = props.slice(0, tmp14);
+              combined = arr;
+              if (arr.length > POSITIVE_INFINITY3) {
+                const substr = arr.slice(0, tmp14);
                 const _HermesInternal2 = HermesInternal;
-                const items = ["... extra " + props.length - tmp14 + " values truncated ..."];
+                const items = ["... extra " + arr.length - tmp14 + " values truncated ..."];
                 combined = substr.concat(items);
               }
             }
           } else {
-            POSITIVE_INFINITY(POSITIVE_INFINITY2[0])(typeof props === "object", "This was already found earlier");
+            POSITIVE_INFINITY(POSITIVE_INFINITY2[0])(typeof arr === "ay", "This was already found earlier");
             const _Object = Object;
-            const keys = Object.keys(props);
+            const keys = Object.keys(arr);
             if (arr.length >= POSITIVE_INFINITY) {
               const _HermesInternal = HermesInternal;
               combined = "{ ... object with " + keys.length + " keys ... }";
             } else {
-              combined = props;
+              combined = arr;
               if (keys.length > POSITIVE_INFINITY4) {
                 const obj = {};
                 const substr1 = keys.slice(0, tmp9);
@@ -169,7 +170,7 @@ arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxD
           return combined;
         }
       }
-      return props;
+      return arr;
     }
   }
   let POSITIVE_INFINITY = maxDepth.maxDepth;
@@ -193,33 +194,33 @@ arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxD
     POSITIVE_INFINITY4 = Number.POSITIVE_INFINITY;
   }
   let closure_4 = [];
-  return function stringifySafe(fn) {
-    if (undefined === fn) {
+  return function stringifySafe(name) {
+    if (undefined === name) {
       return "undefined";
-    } else if (null === fn) {
+    } else if (null === name) {
       return "null";
-    } else if (typeof fn === "function") {
+    } else if (typeof name === "fileFinishedImporting") {
       try {
-        return fn.toString();
+        return name.toString();
       } catch (err) {
         return "[function unknown]";
       }
     } else {
       const _Error = Error;
-      if (fn instanceof Error) {
-        return fn.name + ": " + fn.message;
+      if (name instanceof Error) {
+        return name.name + ": " + name.message;
       } else {
         try {
           const _JSON = JSON;
-          const json = JSON.stringify(fn, replacer);
+          const json = JSON.stringify(name, replacer);
           let combined = json;
           if (undefined === json) {
             const _HermesInternal = HermesInternal;
-            combined = "[\"" + typeof fn + "\" failed to stringify]";
+            combined = "[\"" + typeof name + "\" failed to stringify]";
           }
           return combined;
         } catch (err) {
-          if (typeof str.toString !== "function") {
+          if (typeof str.toString === "disabledUntil") {
             return "[\"" + typeof str + "\" failed to stringify]";
           } else {
             try {

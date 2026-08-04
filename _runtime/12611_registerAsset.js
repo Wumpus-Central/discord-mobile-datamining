@@ -1,4 +1,5 @@
+// _runtime/12611_registerAsset.js
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300, height: 175, scales: [2, 3], hash: "cb2a2e3b1b856419d08252c8139a8321", name: "entrace_sounds", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 141, height: 96, scales: [2, 3], hash: "417f63594df34390f8816db66b0c9b6a", name: "img_outbound_promotion_error", type: "png" });

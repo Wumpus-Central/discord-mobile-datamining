@@ -1,3 +1,4 @@
+// _runtime/01124_mapSamples.js
 function mapSamples(samples) {
   let tmp = arg1;
   if (arg1 === undefined) {

@@ -1,3 +1,4 @@
+// _runtime/01407_applyBind.js
 
 export default function applyBind() {
   const tmp = require(552);

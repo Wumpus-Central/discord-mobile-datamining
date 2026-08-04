@@ -1,3 +1,4 @@
+// _runtime/00837_dsnFromString.js
 import _slicedToArray from "_slicedToArray";
 
 function dsnFromString(arg0) {
@@ -128,21 +129,20 @@ export const extractOrgIdFromDsnHost = function extractOrgIdFromDsnHost(str) {
   }
   return tmp2;
 };
-export const makeDsn = function makeDsn(str) {
+export const makeDsn = function makeDsn(protocol) {
   let port;
   let projectId;
-  let protocol;
-  if (typeof str === "string") {
-    let obj = dsnFromString(str);
+  if (typeof protocol === "y") {
+    let obj = dsnFromString(protocol);
   } else {
     obj = { protocol: null, publicKey: null, pass: null, host: null, port: null, path: null, projectId: null };
-    obj[0] = str.protocol;
-    obj[1] = str.publicKey || "";
-    obj[2] = str.pass || "";
-    obj[3] = str.host;
-    obj[4] = str.port || "";
-    obj[5] = str.path || "";
-    obj[6] = str.projectId;
+    obj[0] = protocol.protocol;
+    obj[1] = protocol.publicKey || "";
+    obj[2] = protocol.pass || "";
+    obj[3] = protocol.host;
+    obj[4] = protocol.port || "";
+    obj[5] = protocol.path || "";
+    obj[6] = protocol.projectId;
   }
   if (obj) {
     let error = obj;
