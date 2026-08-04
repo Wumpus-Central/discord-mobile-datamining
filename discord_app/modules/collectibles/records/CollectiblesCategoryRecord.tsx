@@ -70,10 +70,10 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.pdpBgUrl = pdp_bg_url;
   obj.mobileBannerUrl = mobile_banner_url;
   obj.mobileBgUrl = mobile_bg_url;
-  obj.heroLogoDisplayConfig = require(6910) /* getItemRecordsFromPurchases */.getAssetDisplayConfig(hero_logo_display_config);
-  const obj2 = require(6910) /* getItemRecordsFromPurchases */;
+  obj.heroLogoDisplayConfig = require(6922) /* getItemRecordsFromPurchases */.getAssetDisplayConfig(hero_logo_display_config);
+  const obj2 = require(6922) /* getItemRecordsFromPurchases */;
   const tmp2 = prototype;
-  obj.heroBannerDisplayConfig = require(6910) /* getItemRecordsFromPurchases */.getAssetDisplayConfig(hero_banner_display_config);
+  obj.heroBannerDisplayConfig = require(6922) /* getItemRecordsFromPurchases */.getAssetDisplayConfig(hero_banner_display_config);
   return new tmp2(obj);
 };
 prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionRecord(id) {

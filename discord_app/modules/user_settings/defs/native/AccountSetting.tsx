@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.ACCOUNT,
   getComponent() {
-    return require(13836) /* PasswordlessUpsell */.default;
+    return require(13870) /* PasswordlessUpsell */.default;
   }
 };
 const route = createToggle.createRoute(obj);

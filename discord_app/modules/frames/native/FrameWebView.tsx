@@ -30,14 +30,14 @@ export default function FrameWebView(applicationId) {
     }
   }, items);
   obj = {
-    hasFrameId() {
-      return hasInvalidUrlError(hadInvalidUrlError[3]).hasFrameId();
+    hasIframeId() {
+      return hasInvalidUrlError(hadInvalidUrlError[3]).hasIframeId();
     },
-    getOrCreateFrameId() {
-      return hasInvalidUrlError(hadInvalidUrlError[3]).getOrCreateFrameId();
+    getOrCreateIframeId() {
+      return hasInvalidUrlError(hadInvalidUrlError[3]).getOrCreateIframeId();
     },
-    releaseFrameId() {
-      return hasInvalidUrlError(hadInvalidUrlError[3]).releaseFrameId();
+    releaseIframeId() {
+      return hasInvalidUrlError(hadInvalidUrlError[3]).releaseIframeId();
     },
     hasInvalidUrlError,
     setHasInvalidUrlError: hasInvalidUrlErrorState.setHasInvalidUrlError,
@@ -46,14 +46,14 @@ export default function FrameWebView(applicationId) {
   };
   const merged1 = Object.assign(merged);
   return jsx(applicationId(hadInvalidUrlError[2]).BaseActivityWebView, {
-    hasFrameId() {
-      return hasInvalidUrlError(hadInvalidUrlError[3]).hasFrameId();
+    hasIframeId() {
+      return hasInvalidUrlError(hadInvalidUrlError[3]).hasIframeId();
     },
-    getOrCreateFrameId() {
-      return hasInvalidUrlError(hadInvalidUrlError[3]).getOrCreateFrameId();
+    getOrCreateIframeId() {
+      return hasInvalidUrlError(hadInvalidUrlError[3]).getOrCreateIframeId();
     },
-    releaseFrameId() {
-      return hasInvalidUrlError(hadInvalidUrlError[3]).releaseFrameId();
+    releaseIframeId() {
+      return hasInvalidUrlError(hadInvalidUrlError[3]).releaseIframeId();
     },
     hasInvalidUrlError,
     setHasInvalidUrlError: hasInvalidUrlErrorState.setHasInvalidUrlError,

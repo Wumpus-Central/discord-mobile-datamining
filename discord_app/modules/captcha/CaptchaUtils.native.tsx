@@ -24,10 +24,10 @@ export default {
         return callback2(table[3]).hideActionSheet(closure_4);
       }
     };
-    const obj2 = importDefault(4223);
+    const obj2 = importDefault(4253);
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(_require(1959)(16192, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
+    obj2.openLazy(_require(1959)(16225, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
   },
   showCaptchaAsync(nextResult1) {
     let c1;
@@ -54,8 +54,8 @@ export default {
           return callback({ captcha_key, captcha_rqtoken, captcha_session_id: outer1_3 });
         },
         onReject(arg0) {
-          if (arg0 === obj(9628).CaptchaError.CANCEL) {
-            const captchaCancelError = new obj(9628).CaptchaCancelError();
+          if (arg0 === obj(10377).CaptchaError.CANCEL) {
+            const captchaCancelError = new obj(10377).CaptchaCancelError();
             callback2(captchaCancelError);
           } else {
             const _Error = Error;
@@ -65,7 +65,7 @@ export default {
           }
         },
         close() {
-          return callback2(4223).hideActionSheet(closure_4);
+          return callback2(4253).hideActionSheet(closure_4);
         }
       };
       const merged = Object.assign(closure_0);

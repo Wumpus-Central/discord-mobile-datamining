@@ -232,7 +232,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _require(3868).shallow), 2);
+  }, _require(3898).shallow), 2);
   first = tmp2[0];
   const callback = tmp4;
   const items = [tmp[0], ];
@@ -316,7 +316,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
     return items;
-  }, _require(3868).shallow), 2);
+  }, _require(3898).shallow), 2);
   first = tmp2[0];
   const callback = tmp4;
   let items = [tmp[0], ];
@@ -462,5 +462,5 @@ export const useAutomodRulesList = function useAutomodRulesList(arg0) {
     }
     obj = { rulesByTriggerType: obj, updateRule: updateRule.updateRule, removeRule: updateRule.removeRule };
     return obj;
-  }, _require(3868).shallow);
+  }, _require(3898).shallow);
 };

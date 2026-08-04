@@ -46,5 +46,5 @@ export default function PlaceholderAppRow(isFirstRow) {
   obj[6] = function onPress() {
 
   };
-  return jsx(require(5286) /* TableRowInner */.TableRow, { style: tmp.loadingAppIcon });
+  return jsx(require(5315) /* TableRowInner */.TableRow, { style: tmp.loadingAppIcon });
 };

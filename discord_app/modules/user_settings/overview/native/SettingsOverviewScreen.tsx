@@ -6,7 +6,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/overview/native/SettingsOverviewScreen.tsx");
 
 export default function SettingsOverviewScreen() {
-  hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(3901).useHasPremiumSubscriptionToDisplay();
+  hasPremiumSubscriptionToDisplay = hasPremiumSubscriptionToDisplay(3931).useHasPremiumSubscriptionToDisplay();
   let items = [hasPremiumSubscriptionToDisplay];
   const node = React.useMemo(() => {
     let obj = hasPremiumSubscriptionToDisplay(outer1_1[6]);
@@ -80,5 +80,5 @@ export default function SettingsOverviewScreen() {
     obj1[0] = items1;
     return obj.createList(obj1);
   }, items);
-  return jsx(hasPremiumSubscriptionToDisplay(13761).SearchableSettingsList, { node });
+  return jsx(hasPremiumSubscriptionToDisplay(13795).SearchableSettingsList, { node });
 };

@@ -78,30 +78,33 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
       obj[7] = prop1;
       obj[8] = arg2;
       ({ users, globals, roles } = obj.queryMentionResults(obj));
-      const queryMentionResultsResult = obj.queryMentionResults(obj);
-      const tmp = flag;
-      const tmp10 = _private;
-      const gameMentionsAutocompleteConfig = _private(flag2[15]).getGameMentionsAutocompleteConfig("mentions autocomplete");
+      const GameMentionsMobileExperiment = _private(tmp2[15]).GameMentionsMobileExperiment;
+      const config = GameMentionsMobileExperiment.getConfig({ location: "mentions autocomplete" });
+      let enabled = config.enabled;
+      if (enabled) {
+        const IncludeGameMentionsInAutocomplete = tmp10(tmp2[16]).IncludeGameMentionsInAutocomplete;
+        enabled = IncludeGameMentionsInAutocomplete.getSetting();
+      }
       let canMentionGames;
       if (canMentionEveryone != null) {
         canMentionGames = canMentionEveryone.canMentionGames;
       }
       if (true === canMentionGames) {
-        if (gameMentionsAutocompleteConfig.enabled) {
-          if (gameMentionsAutocompleteConfig.combineMentionAutocomplete) {
+        if (enabled) {
+          if (config.combineMentionAutocomplete) {
             if (query.length > 0) {
               let prop2;
               if (canMentionEveryone != null) {
                 prop2 = canMentionEveryone.isActiveApplicationCommand;
               }
               if (!prop2) {
-                let result = tmp10(tmp2[16]).queryGamesAutocomplete(query);
+                let result = tmp10(tmp2[17]).queryGamesAutocomplete(query);
                 if (result == null) {
                   result = [];
                 }
                 const substr = result.slice(0, 1);
                 let mapped = substr.map((game) => ({ type: constants.GAME_MENTION, game }));
-                const tmp10Result = tmp10(tmp2[16]);
+                const tmp10Result = tmp10(tmp2[17]);
               }
               const items = [];
               let arraySpreadResult = HermesBuiltin.arraySpread(users.map((arg0) => {
@@ -116,8 +119,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
                 const merged = Object.assign(arg0);
                 return { type: constants.ROLE };
               }), arraySpreadResult));
-              const tmpResult = tmp(tmp2[12]);
-              return tmp(tmp2[12])(items).value();
+              const tmpResult = flag(tmp2[12]);
+              return flag(tmp2[12])(items).value();
             }
           }
         }
@@ -132,19 +135,23 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
   obj = {
     stores: items1,
     queryResults(query) {
-      const gameMentionsAutocompleteConfig = _private(flag2[15]).getGameMentionsAutocompleteConfig("game_mentions autocomplete");
-      if (gameMentionsAutocompleteConfig.enabled) {
-        if (!gameMentionsAutocompleteConfig.combineMentionAutocomplete) {
-          if (0 !== query.length) {
-            let result = _private(flag2[16]).queryGamesAutocomplete(query);
-            if (result == null) {
-              result = [];
+      const GameMentionsMobileExperiment = _private(flag2[15]).GameMentionsMobileExperiment;
+      const config = GameMentionsMobileExperiment.getConfig({ location: "game_mentions autocomplete" });
+      if (config.enabled) {
+        const IncludeGameMentionsInAutocomplete = tmp(tmp2[16]).IncludeGameMentionsInAutocomplete;
+        if (IncludeGameMentionsInAutocomplete.getSetting()) {
+          if (!config.combineMentionAutocomplete) {
+            if (0 !== query.length) {
+              let result = tmp(tmp2[17]).queryGamesAutocomplete(query);
+              if (result == null) {
+                result = [];
+              }
+              const substr = result.slice(0, closure_11);
+              const mapped = substr.map((game) => ({ type: constants.GAME_MENTION, game }));
+              const tmpResult = tmp(tmp2[17]);
             }
-            const substr = result.slice(0, closure_11);
-            const mapped = substr.map((game) => ({ type: constants.GAME_MENTION, game }));
-            const tmpResult = _private(flag2[16]);
+            return [];
           }
-          return [];
         }
       }
     },
@@ -223,11 +230,11 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               }
               if (!hasLoadedStickerPacks) {
                 outer1_20 = true;
-                const stickerPacks = _private(tmp3[17]).fetchStickerPacks();
-                const obj4 = _private(tmp3[17]);
+                const stickerPacks = _private(tmp3[18]).fetchStickerPacks();
+                const obj4 = _private(tmp3[18]);
               }
               const items2 = [query];
-              const items3 = [_private, (arg0, arg1) => arg1 === callback(5851).StickerSendability.SENDABLE];
+              const items3 = [_private, (arg0, arg1) => arg1 === callback(5861).StickerSendability.SENDABLE];
               items1 = flag(tmp3[14]).queryStickers(items2, true, items3);
               const tmp2Result = flag(tmp3[14]);
             }
@@ -356,8 +363,8 @@ export const getAutocompleteOptions = function getAutocompleteOptions(channel, a
               } else if (0 === autocompleteChoices.length) {
                 const obj3 = { type: null, label: null };
                 obj3[0] = outer1_10.LABEL;
-                const intl = _private(flag2[20]).intl;
-                obj3[1] = intl.string(_private(flag2[20]).t["41014u"]);
+                const intl = _private(flag2[21]).intl;
+                obj3[1] = intl.string(_private(flag2[21]).t["41014u"]);
                 const items = [obj3];
                 fillResult = items;
               } else {

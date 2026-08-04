@@ -13,7 +13,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
     flag = false;
   }
   let _require;
-  let obj = _require(3901);
+  let obj = _require(3931);
   let billingInformationString = obj.getBillingInformationString(subscription, first, tmp, flag, fractionalPremiumInfo);
   let tmp5 = _require(501).isIOS() && subscription.isPurchasedViaApple;
   if (tmp5) {

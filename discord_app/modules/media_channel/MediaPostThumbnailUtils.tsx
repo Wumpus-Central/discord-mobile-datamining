@@ -28,7 +28,7 @@ export const getBackgroundImageUrl = function getBackgroundImageUrl(coverImage) 
     let combined = "" + coverImage + "?format=webp";
   } else {
     combined = coverImage;
-    const tmpResult = require(4443) /* urlMatchesFileExtension */;
+    const tmpResult = require(4472) /* urlMatchesFileExtension */;
   }
   return combined;
 };
@@ -47,7 +47,7 @@ export const getThumbnailImage = function getThumbnailImage(thumbnail) {
           combined = "" + proxy_url + "?format=webp";
         }
         tmp = combined;
-        obj = require(4443) /* urlMatchesFileExtension */;
+        obj = require(4472) /* urlMatchesFileExtension */;
       }
     }
     return tmp;

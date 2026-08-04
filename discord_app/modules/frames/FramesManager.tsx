@@ -14,13 +14,13 @@ const prototype = function FramesManager() {
       applyArgumentsResult.handleRPCDisconnect(arg0);
     },
     FRAME_LAUNCH(applicationId) {
-      const result = applyArgumentsResult(10671).trackFrameSessionStart(applicationId.applicationId);
+      const result = applyArgumentsResult(10520).trackFrameSessionStart(applicationId.applicationId);
     },
     FRAME_LAUNCH_FAIL(applicationId) {
-      const result = applyArgumentsResult(10677).discardPendingFrameLaunch(applicationId.applicationId);
+      const result = applyArgumentsResult(10527).discardPendingFrameLaunch(applicationId.applicationId);
     },
     FRAME_STOP(applicationId) {
-      applyArgumentsResult(10671).trackFrameSessionEnd(applicationId.applicationId);
+      applyArgumentsResult(10520).trackFrameSessionEnd(applicationId.applicationId);
     }
   };
   applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(reason) {

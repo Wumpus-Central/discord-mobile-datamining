@@ -27,7 +27,7 @@ function _computeRows(query) {
   if (!tmp) {
     id = id.id;
   }
-  const mostRecentDMedUser = set1(8659).getMostRecentDMedUser(set, id);
+  const mostRecentDMedUser = set1(8989).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
     isBlockedOrIgnoredResult = upsertRelationship.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -50,8 +50,8 @@ function _computeRows(query) {
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
-  const obj2 = set1(8659);
-  return set1(8659).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_7 });
+  const obj2 = set1(8989);
+  return set1(8989).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType: closure_7 });
 }
 ({ ChannelTypes: map1, Permissions: closure_14 } = ME);
 let set = new Set();
@@ -99,7 +99,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(require("dispatcher"),
     }
     const applicationId = guild.applicationId;
     const blockedOrIgnoredIDs = upsertRelationship.getBlockedOrIgnoredIDs();
-    let obj = require(8659) /* isGuildMember */;
+    let obj = require(8989) /* isGuildMember */;
     obj = { channel, applicationId, inviteTargetType };
     const usersAlreadyJoined = obj.getUsersAlreadyJoined(obj);
     const items = [...usersAlreadyJoined];

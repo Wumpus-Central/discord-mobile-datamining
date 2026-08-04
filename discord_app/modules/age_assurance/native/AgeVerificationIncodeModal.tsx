@@ -25,7 +25,7 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
   const memo = React.useMemo(() => {
     function handleClose() {
       dependencyMap();
-      let arr = callback2(4461);
+      let arr = callback2(4490);
       arr = arr.pop();
     }
     const uRL = new URL(closure_0);
@@ -38,11 +38,11 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
       const obj = { onPress: handleClose, text: null };
       const intl = callback(1236).intl;
       obj[1] = intl.string(callback(1236).t.cpT0Cq);
-      return handleClose(callback(5907).HeaderActionButton, obj);
+      return handleClose(callback(5917).HeaderActionButton, obj);
     };
     obj[3] = function render(arg0, arg1) {
       let closure_0 = arg1;
-      return handleClose(callback2(7713), {
+      return handleClose(callback2(7725), {
         onClose: handleClose,
         trustedOrigin: origin,
         onMethodSelected(injectedJavaScriptBeforeContentLoaded) {
@@ -58,10 +58,10 @@ export default function AgeVerificationIncodeModal(webviewUrl) {
         const obj = { onPress: handleClose, text: null };
         const intl = callback(1236).intl;
         obj[1] = intl.string(callback(1236).t.cpT0Cq);
-        return handleClose(callback(5907).HeaderActionButton, obj);
+        return handleClose(callback(5917).HeaderActionButton, obj);
       },
       render(injectedJavaScriptBeforeContentLoaded) {
-        return handleClose(callback2(7718), { webviewUrl: closure_0, onComplete: callback2, onClose: handleClose, injectedJavaScriptBeforeContentLoaded: injectedJavaScriptBeforeContentLoaded.injectedJavaScriptBeforeContentLoaded });
+        return handleClose(callback2(7730), { webviewUrl: closure_0, onComplete: callback2, onClose: handleClose, injectedJavaScriptBeforeContentLoaded: injectedJavaScriptBeforeContentLoaded.injectedJavaScriptBeforeContentLoaded });
       }
     };
     return obj;

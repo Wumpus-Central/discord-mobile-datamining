@@ -83,21 +83,21 @@ export const getSearchTokenSubLabel = function getSearchTokenSubLabel(searchToke
 };
 export const getSearchTokenIcon = function getSearchTokenIcon(searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
-    return require(11146) /* UserIcon */.UserIcon;
+    return require(11136) /* UserIcon */.UserIcon;
   } else if (tmp.FILTER_HAS === searchTokenType) {
-    return require(9836) /* AttachmentIcon */.AttachmentIcon;
+    return require(9706) /* AttachmentIcon */.AttachmentIcon;
   } else if (tmp.FILTER_IN === searchTokenType) {
-    return require(13066) /* ChannelListMagnifyingGlassIcon */.ChannelListMagnifyingGlassIcon;
+    return require(13100) /* ChannelListMagnifyingGlassIcon */.ChannelListMagnifyingGlassIcon;
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    return require(4770) /* AtIcon */.AtIcon;
+    return require(4799) /* AtIcon */.AtIcon;
   } else if (tmp.FILTER_ON === searchTokenType) {
-    return require(8636) /* CalendarIcon */.CalendarIcon;
+    return require(8966) /* CalendarIcon */.CalendarIcon;
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    return require(15557) /* CalendarMinusIcon */.CalendarMinusIcon;
+    return require(15588) /* CalendarMinusIcon */.CalendarMinusIcon;
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    return require(15559) /* CalendarPlusIcon */.CalendarPlusIcon;
+    return require(15590) /* CalendarPlusIcon */.CalendarPlusIcon;
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    return require(9210) /* RobotIcon */.RobotIcon;
+    return require(10456) /* RobotIcon */.RobotIcon;
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -200,7 +200,7 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(cl
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   let closure_0 = textInputValue;
   const items = [];
-  const keys = Object.keys(items(10256));
+  const keys = Object.keys(items(11625));
   const item = keys.forEach((type) => {
     let obj = textInputValue(outer1_2[12]);
     if (obj.isSearchFilterTokenType(type)) {

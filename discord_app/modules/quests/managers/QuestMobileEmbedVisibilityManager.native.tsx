@@ -19,8 +19,8 @@ let require = arg1;
 ({ useChannelDetailsStore: error, getIsChannelDetailsSearchActive: metroImportAll } = useChannelDetailsStore);
 function log() {
   if (questLogger == null) {
-    questLogger = require(7074) /* getQuestLogger */.getQuestLogger({ location: "QuestMobileEmbedVisibilityManager" });
-    const obj = require(7074) /* getQuestLogger */;
+    questLogger = require(7086) /* getQuestLogger */.getQuestLogger({ location: "QuestMobileEmbedVisibilityManager" });
+    const obj = require(7086) /* getQuestLogger */;
   }
 }
 class QuestMobileEmbedVisibilityManager extends tmp3 {
@@ -233,8 +233,8 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(10407).isChannelFocused();
-      applyArgumentsResult(4106);
+      let isChannelFocusedResult = applyArgumentsResult(9677).isChannelFocused();
+      applyArgumentsResult(4136);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;
       }

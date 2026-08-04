@@ -83,7 +83,7 @@ export default function AddMembersBody(pendingAdditions) {
   pendingAdditions = pendingAdditions.pendingAdditions;
   ({ setPendingAdditions: importAll, permission } = pendingAdditions);
   if (permission === undefined) {
-    permission = importAll(3888).NONE;
+    permission = importAll(3918).NONE;
   }
   ({ inputDesc, inActionSheet } = pendingAdditions);
   let dependencyMap;
@@ -114,7 +114,7 @@ export default function AddMembersBody(pendingAdditions) {
   const tmp9 = callback(str.useState(""), 2);
   str = tmp9[0];
   closure_7 = tmp9[1];
-  let obj3 = importAll(3888);
+  let obj3 = importAll(3918);
   let canEveryoneRoleResult = obj3.canEveryoneRole(Permissions.ADMINISTRATOR, guild);
   let obj4 = guild(589);
   const items1 = [trackCommunicationDisabled];
@@ -122,7 +122,7 @@ export default function AddMembersBody(pendingAdditions) {
   if (first) {
     let items2 = [];
   } else {
-    let tmp10Result = tmp10(8588);
+    let tmp10Result = tmp10(8919);
     const rolesRowsWithPermissionDisabled = tmp10Result.getRolesRowsWithPermissionDisabled(guild, stateFromStores, channel, permission, filterByQuery);
     let tmp19 = 0 === rolesRowsWithPermissionDisabled.length && "" === str.trim();
     if (tmp19) {
@@ -130,11 +130,11 @@ export default function AddMembersBody(pendingAdditions) {
     }
     items2 = rolesRowsWithPermissionDisabled;
     if (tmp19) {
-      tmp10Result = tmp10(8588);
+      tmp10Result = tmp10(8919);
       items2 = tmp10Result.getNoRolesRow();
     }
   }
-  const membersRows = importAll(8588).getMembersRows(stateFromStoresArray, channel, guild, permission, filterByQuery);
+  const membersRows = importAll(8919).getMembersRows(stateFromStoresArray, channel, guild, permission, filterByQuery);
   const items3 = [];
   obj = { title: null, data: null };
   let intl = tmp6(1236).intl;
@@ -166,18 +166,18 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = tmp6(5311).BottomSheetScrollView;
+    let BottomSheetScrollView = tmp6(5340).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = tmp6(5311).BottomSheetSectionList;
+    let BottomSheetSectionList = tmp6(5340).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
   obj1 = { style: tmp3.inputContainer, children: null };
   obj2 = { placeholder: null, tags: null, onChangeText: null, onRemove: null, autoFocus: true };
-  const tmp10Result1 = importAll(8588);
+  const tmp10Result1 = importAll(8919);
   const tmp25 = closure_18;
   const tmp26 = closure_17;
   const intl3 = tmp6(1236).intl;
@@ -201,7 +201,7 @@ export default function AddMembersBody(pendingAdditions) {
       return outer1_4(arg0, items.map(outer1_19));
     });
   };
-  obj1[1] = callback2(pendingAdditions(8600), obj2);
+  obj1[1] = callback2(pendingAdditions(8931), obj2);
   const items5 = [callback2(closure_7, obj1), , , ];
   let tmp27Result = null;
   if (null != inputDesc) {
@@ -210,7 +210,7 @@ export default function AddMembersBody(pendingAdditions) {
     obj4 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
     obj4[0] = tmp3.inputDescText;
     obj4[3] = inputDesc;
-    obj3[1] = tmp27(tmp6(4251).Text, obj4);
+    obj3[1] = tmp27(tmp6(4281).Text, obj4);
     tmp27Result = tmp27(tmp28, obj3);
   }
   items5[1] = tmp27Result;
@@ -230,7 +230,7 @@ export default function AddMembersBody(pendingAdditions) {
       if (0 === membersRows.length) {
         const obj7 = { children: null };
         const obj8 = { Illustration: null, style: null, bodyStyle: null, body: null };
-        obj8[0] = tmp6(8605).NoResultsAlt;
+        obj8[0] = tmp6(8936).NoResultsAlt;
         ({ emptyState: obj20[1], emptyStateText: obj20[2] } = tmp3);
         const intl5 = tmp6(1236).intl;
         const obj9 = { query: null };
@@ -246,8 +246,8 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }
   const obj11 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
-  const tmp4Result = pendingAdditions(8600);
-  obj11[0] = { paddingHorizontal: pendingAdditions(712).space.PX_16, paddingBottom: pendingAdditions(712).space.PX_16 + pendingAdditions(5281)(obj).insets.bottom };
+  const tmp4Result = pendingAdditions(8931);
+  obj11[0] = { paddingHorizontal: pendingAdditions(712).space.PX_16, paddingBottom: pendingAdditions(712).space.PX_16 + pendingAdditions(5310)(obj).insets.bottom };
   obj11[1] = function renderItem(item) {
     let index;
     let section;

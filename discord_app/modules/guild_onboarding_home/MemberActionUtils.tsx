@@ -13,7 +13,7 @@ export const useMemberActionsForChannel = function useMemberActionsForChannel(gu
   const items = [handleSettingsLoadSuccess];
   const items1 = [guild_id];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getNewMemberActions(closure_0), items1);
-  const tmp = importDefault(5725)(guild_id);
+  const tmp = importDefault(5754)(guild_id);
   const items2 = [set];
   const stateFromStores1 = _require(647).useStateFromStores(items2, () => outer1_5.getCompletedActions(closure_0));
   if (tmp) {

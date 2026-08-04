@@ -48,7 +48,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   obj.premiumType = tmp8;
   obj.categorySkuId = category_sku_id;
   obj.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === merged.sku_id);
-  obj.prices = importDefault(4296)(prices);
+  obj.prices = importDefault(4326)(prices);
   obj.items = callback(merged.items);
   let mapped;
   if (bundled_products != null) {
@@ -71,7 +71,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   obj.badgeOverride = badge_override;
   obj.hideBadge = hide_badge;
   obj.isFirstParty = is_first_party;
-  if (typeof CollectiblesProductRecord !== "error") {
+  if (typeof CollectiblesProductRecord !== "find") {
     HermesBuiltin.throwTypeError();
   }
   tmp4 = new tmp4(obj, fromServerResult, obj, this, closure_8);
@@ -151,7 +151,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             }
             ({ items, item } = obj);
             const first = outer1_3(tenantMetadata.selectedOptions, 1)[0];
-            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "e", type: "Array", premiumType: "accessibilityRole", items: "memo", categorySkuId: "<string:1649475840>", isCategoryReward: "<string:108073457>", prices: "<string:1090519040>", previewAssets: "asset_field", googleSkuIds: "<string:1903596369>", eligibleOffers: "Button", variants: "<string:1359536465>", bundledProducts: "<string:86073593>", isFirstParty: "<string:1359536977>" };
+            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "e", type: "Array", premiumType: "channelId", items: "cix", categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: null, bundledProducts: null, isFirstParty: null };
             obj[0] = skus.name;
             obj[1] = first.id;
             let str;
@@ -201,7 +201,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             }
             obj[16] = googleSkuIds;
             obj[20] = collectibles.isFirstParty;
-            if (typeof outer1_10 !== "error") {
+            if (typeof outer1_10 !== "find") {
               HermesBuiltin.throwTypeError();
             }
             const tmp16 = new outer1_14(obj, tmp, premiumType, items, premiumType, item);
@@ -250,7 +250,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
         found1 = mapped.filter((arg0) => null != arg0);
       }
       obj[16] = found1;
-      if (typeof CollectiblesProductRecord !== "error") {
+      if (typeof CollectiblesProductRecord !== "find") {
         HermesBuiltin.throwTypeError();
       }
       const tmp19 = new CollectiblesProductRecord(obj, premiumType, items, closure_7, type, str2);
@@ -284,7 +284,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.baseVariantSkuId = base_variant_sku_id;
   obj.variantLabel = variant_label;
   obj.variantValue = variant_value;
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "find") {
     HermesBuiltin.throwTypeError();
   }
   tmp2 = new tmp2(obj, fromServerResult, obj);

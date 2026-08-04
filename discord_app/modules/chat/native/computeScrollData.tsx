@@ -31,13 +31,13 @@ export default function computeScrollData(shouldInitialScroll) {
       }
       if (null != tmp3) {
         let obj = { type: null, index: null, animate: null, highlight: false, position: null };
-        obj[0] = focusTargetId(9623).ChatScrollType.SCROLL;
+        obj[0] = focusTargetId(10922).ChatScrollType.SCROLL;
         obj[1] = tmp3;
         if (animated) {
           animated = !maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
         }
         obj[2] = animated;
-        obj[4] = focusTargetId(9623).ChatScrollPosition.TOP;
+        obj[4] = focusTargetId(10922).ChatScrollPosition.TOP;
         return obj;
       }
     }
@@ -58,17 +58,17 @@ export default function computeScrollData(shouldInitialScroll) {
     }
     if (null != tmp6) {
       obj = { type: null, index: null, animate: null, highlight: null, position: null };
-      obj[0] = focusTargetId(9623).ChatScrollType.SCROLL;
+      obj[0] = focusTargetId(10922).ChatScrollType.SCROLL;
       obj[1] = tmp6;
       const useReducedMotion = maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
       let tmp10 = !useReducedMotion;
       if (!useReducedMotion) {
-        tmp10 = jumpType !== tmp7(4187).JumpType.INSTANT;
+        tmp10 = jumpType !== tmp7(4217).JumpType.INSTANT;
       }
       obj[2] = tmp10;
       obj[3] = scrollToMessageId === jumpTargetId;
       if (scrollPosition == null) {
-        scrollPosition = tmp7(9623).ChatScrollPosition.TOP;
+        scrollPosition = tmp7(10922).ChatScrollPosition.TOP;
       }
       obj[4] = scrollPosition;
       tmp4 = obj;
@@ -90,7 +90,7 @@ export default function computeScrollData(shouldInitialScroll) {
       }
       if (null != tmp13) {
         obj = { type: null, index: null };
-        obj[0] = focusTargetId(9623).ChatScrollType.FOCUS_ONLY;
+        obj[0] = focusTargetId(10922).ChatScrollType.FOCUS_ONLY;
         obj[1] = tmp13;
         tmp11 = obj;
       }

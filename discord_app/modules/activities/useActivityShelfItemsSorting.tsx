@@ -49,11 +49,11 @@ export default function useActivityShelfItemsSorting(arg0) {
       let label_type;
       if (embeddedActivityConfig != null) {
         const obj = items2(500);
-        const tmp7 = embeddedActivityConfig.client_platform_config[v0(8359)(undefined, obj.getOS(obj))];
+        const tmp7 = embeddedActivityConfig.client_platform_config[v0(10522)(undefined, obj.getOS(obj))];
         if (tmp7 != null) {
           label_type = tmp7.label_type;
         }
-        const tmp5 = v0(8359);
+        const tmp5 = v0(10522);
       }
       let tmp8 = null != label_type;
       if (tmp8) {

@@ -30,7 +30,7 @@ export default function VoiceActivityStatus(hideText) {
       obj[0] = channel;
       const items = [tmp.icon, hideText.iconStyle];
       obj[3] = items;
-      tmp5 = callback(importDefault(9264), obj);
+      tmp5 = callback(importDefault(9576), obj);
     }
     const items1 = [tmp5, ];
     if (flag) {
@@ -41,7 +41,7 @@ export default function VoiceActivityStatus(hideText) {
     } else {
       if (!channel.isDM()) {
         if (!channel.isGroupDM()) {
-          const tmp14 = importDefault(9253);
+          const tmp14 = importDefault(9565);
           obj = { style: null, maxFontSizeMultiplier: null, children: null };
           obj[0] = textStyle;
           obj[1] = maxFontSizeMultiplier;
@@ -64,8 +64,8 @@ export default function VoiceActivityStatus(hideText) {
       textStyle = require;
       maxFontSizeMultiplier = require(1236) /* getSystemLocale */.intl;
       obj1[2] = maxFontSizeMultiplier.string(require(1236) /* getSystemLocale */.t["9FaEzi"]);
-      tmp11Result = callback(importDefault(9253), obj1);
-      const tmp20 = importDefault(9253);
+      tmp11Result = callback(importDefault(9565), obj1);
+      const tmp20 = importDefault(9565);
     }
     tmp3 = closure_5;
     tmp4 = closure_4;

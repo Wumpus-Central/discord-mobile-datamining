@@ -26,7 +26,7 @@ const prototype = GuildAvailabilityStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(createGuildRecordFromRust);
 };
-prototype["isUnavailable"] = function isUnavailable(guildId, arg1, selected) {
+prototype["isUnavailable"] = function isUnavailable(guildId, token, selected) {
   let hasItem = null != guildId;
   if (hasItem) {
     hasItem = set.has(guildId);

@@ -19,7 +19,7 @@ class FeatureCard$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(7260).LocalizedString;
+            return callback(7272).LocalizedString;
           }
     };
     items[6] = {
@@ -27,7 +27,7 @@ class FeatureCard$Type extends MessageType {
       name: "pill_localized",
       kind: "message",
       T() {
-            return callback(7260).LocalizedString;
+            return callback(7272).LocalizedString;
           }
     };
     obj = { no: 8, name: "body_localized", kind: "message", T: null };
@@ -43,7 +43,7 @@ class FeatureCard$Type extends MessageType {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(7261).HelpArticle;
+            return callback(7273).HelpArticle;
           }
     };
     tmp = new tmp("discord_protos.premium_marketing.v1.FeatureCard", items, T);
@@ -90,7 +90,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (6 === tmp5) {
         let tmp37 = require;
         let tmp38 = dependencyMap;
-        let LocalizedString3 = require(7260) /* create */.LocalizedString;
+        let LocalizedString3 = require(7272) /* create */.LocalizedString;
         let tmp39 = LocalizedString3;
         let tmp40 = pos;
         let tmp41 = readUnknownField;
@@ -98,7 +98,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (7 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let LocalizedString2 = require(7260) /* create */.LocalizedString;
+        let LocalizedString2 = require(7272) /* create */.LocalizedString;
         let tmp34 = LocalizedString2;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -106,7 +106,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (8 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let LocalizedString = require(7260) /* create */.LocalizedString;
+        let LocalizedString = require(7272) /* create */.LocalizedString;
         let tmp29 = LocalizedString;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -114,7 +114,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (9 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let HelpArticle = require(7261) /* create */.HelpArticle;
+        let HelpArticle = require(7273) /* create */.HelpArticle;
         let tmp24 = HelpArticle;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -177,25 +177,25 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
     const tagResult4 = tag.tag(5, require(1307).WireType.LengthDelimited);
   }
   if (header.headerLocalized) {
-    const LocalizedString = require(7260) /* create */.LocalizedString;
+    const LocalizedString = require(7272) /* create */.LocalizedString;
     const tagResult5 = tag.tag(6, require(1307).WireType.LengthDelimited);
     const joined = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(6, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(6, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.pillLocalized) {
-    const LocalizedString2 = require(7260) /* create */.LocalizedString;
+    const LocalizedString2 = require(7272) /* create */.LocalizedString;
     const tagResult6 = tag.tag(7, require(1307).WireType.LengthDelimited);
     const joined1 = LocalizedString2.internalBinaryWrite(header.pillLocalized, tag.tag(7, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(header.pillLocalized, tag.tag(7, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.bodyLocalized) {
-    const LocalizedString3 = require(7260) /* create */.LocalizedString;
+    const LocalizedString3 = require(7272) /* create */.LocalizedString;
     const tagResult7 = tag.tag(8, require(1307).WireType.LengthDelimited);
     const joined2 = LocalizedString3.internalBinaryWrite(header.bodyLocalized, tag.tag(8, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = LocalizedString3.internalBinaryWrite(header.bodyLocalized, tag.tag(8, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.helpArticle) {
-    const HelpArticle = require(7261) /* create */.HelpArticle;
+    const HelpArticle = require(7273) /* create */.HelpArticle;
     const tagResult8 = tag.tag(9, require(1307).WireType.LengthDelimited);
     const joined3 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(9, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(9, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -221,7 +221,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(7260).LocalizedString;
+      return callback(7272).LocalizedString;
     }
   },
   {
@@ -229,7 +229,7 @@ let items = [
     name: "pill_localized",
     kind: "message",
     T() {
-      return callback(7260).LocalizedString;
+      return callback(7272).LocalizedString;
     }
   },
   {
@@ -237,7 +237,7 @@ let items = [
     name: "body_localized",
     kind: "message",
     T() {
-      return require(7260) /* create */.LocalizedString;
+      return require(7272) /* create */.LocalizedString;
     }
   },
   {
@@ -245,7 +245,7 @@ let items = [
     name: "help_article",
     kind: "message",
     T() {
-      return callback(7261).HelpArticle;
+      return callback(7273).HelpArticle;
     }
   }
 ];
@@ -660,7 +660,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (2 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let HelpArticle = require(7261) /* create */.HelpArticle;
+        let HelpArticle = require(7273) /* create */.HelpArticle;
         let tmp29 = HelpArticle;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -668,7 +668,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let LocalizedString = require(7260) /* create */.LocalizedString;
+        let LocalizedString = require(7272) /* create */.LocalizedString;
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -715,13 +715,13 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(disclaimerText,
     const tagResult = tag.tag(1, require(1307).WireType.LengthDelimited);
   }
   if (disclaimerText.disclaimerHelpArticle) {
-    const HelpArticle = require(7261) /* create */.HelpArticle;
+    const HelpArticle = require(7273) /* create */.HelpArticle;
     const tagResult1 = tag.tag(2, require(1307).WireType.LengthDelimited);
     const joined = HelpArticle.internalBinaryWrite(disclaimerText.disclaimerHelpArticle, tag.tag(2, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = HelpArticle.internalBinaryWrite(disclaimerText.disclaimerHelpArticle, tag.tag(2, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (disclaimerText.disclaimerTextLocalized) {
-    const LocalizedString = require(7260) /* create */.LocalizedString;
+    const LocalizedString = require(7272) /* create */.LocalizedString;
     const tagResult2 = tag.tag(3, require(1307).WireType.LengthDelimited);
     const joined1 = LocalizedString.internalBinaryWrite(disclaimerText.disclaimerTextLocalized, tag.tag(3, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(disclaimerText.disclaimerTextLocalized, tag.tag(3, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -743,7 +743,7 @@ const items3 = [
     name: "disclaimer_help_article",
     kind: "message",
     T() {
-      return require(7261) /* create */.HelpArticle;
+      return require(7273) /* create */.HelpArticle;
     }
   },
   {
@@ -778,7 +778,7 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
       name: "button",
       kind: "message",
       T() {
-            return callback(7262).CTAButton;
+            return callback(7274).CTAButton;
           }
     };
     items[6] = { no: 8, name: "hero_art_video_link_light_theme", kind: "scalar", T: 9 };
@@ -815,7 +815,7 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
       name: "help_article",
       kind: "message",
       T() {
-            return callback(7261).HelpArticle;
+            return callback(7273).HelpArticle;
           }
     };
     items[14] = {
@@ -823,7 +823,7 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(7260).LocalizedString;
+            return callback(7272).LocalizedString;
           }
     };
     obj = { no: 20, name: "subheader_localized", kind: "message", T: null };
@@ -839,7 +839,7 @@ class AnnouncementModalVariant1Properties$Type extends MessageType5 {
       name: "modal_top_pill_localized",
       kind: "message",
       T() {
-            return callback(7260).LocalizedString;
+            return callback(7272).LocalizedString;
           }
     };
     items[17] = { no: 7, name: "dismiss_key", kind: "scalar", T: 9 };
@@ -906,7 +906,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
     } while (num5 < length);
   }
   if (header.button) {
-    const CTAButton = require(7262) /* create */.CTAButton;
+    const CTAButton = require(7274) /* create */.CTAButton;
     const tagResult5 = tag.tag(6, require(1307).WireType.LengthDelimited);
     const joined1 = CTAButton.internalBinaryWrite(header.button, tag.tag(6, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(header.button, tag.tag(6, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -951,25 +951,25 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
     const internalBinaryWriteResult4 = subtitleType.internalBinaryWrite(header.disclaimer, tag.tag(15, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.helpArticle) {
-    const HelpArticle = require(7261) /* create */.HelpArticle;
+    const HelpArticle = require(7273) /* create */.HelpArticle;
     const tagResult13 = tag.tag(18, require(1307).WireType.LengthDelimited);
     const joined5 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(18, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(18, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.headerLocalized) {
-    const LocalizedString = require(7260) /* create */.LocalizedString;
+    const LocalizedString = require(7272) /* create */.LocalizedString;
     const tagResult14 = tag.tag(19, require(1307).WireType.LengthDelimited);
     const joined6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(19, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(19, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.subheaderLocalized) {
-    const LocalizedString2 = require(7260) /* create */.LocalizedString;
+    const LocalizedString2 = require(7272) /* create */.LocalizedString;
     const tagResult15 = tag.tag(20, require(1307).WireType.LengthDelimited);
     const joined7 = LocalizedString2.internalBinaryWrite(header.subheaderLocalized, tag.tag(20, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult7 = LocalizedString2.internalBinaryWrite(header.subheaderLocalized, tag.tag(20, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.modalTopPillLocalized) {
-    const LocalizedString3 = require(7260) /* create */.LocalizedString;
+    const LocalizedString3 = require(7272) /* create */.LocalizedString;
     const tagResult16 = tag.tag(21, require(1307).WireType.LengthDelimited);
     const joined8 = LocalizedString3.internalBinaryWrite(header.modalTopPillLocalized, tag.tag(21, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult8 = LocalizedString3.internalBinaryWrite(header.modalTopPillLocalized, tag.tag(21, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);

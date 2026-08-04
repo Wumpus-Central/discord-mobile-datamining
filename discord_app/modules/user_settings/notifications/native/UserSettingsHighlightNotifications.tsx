@@ -39,12 +39,12 @@ function Row(guildId) {
     obj[0] = guild;
     obj = { label: null, icon: null, value: null, onValueChange: null, start: null, end: null };
     obj[0] = guild.name;
-    obj[1] = jsx(importDefault(5632), { label: null, icon: null, value: null, onValueChange: null, start: null, end: null });
+    obj[1] = jsx(importDefault(5661), { label: null, icon: null, value: null, onValueChange: null, start: null, end: null });
     obj[2] = !muted;
     obj[3] = callback;
     obj[4] = isStart;
     obj[5] = isEnd;
-    return jsx(tmp2(5621).TableSwitchRow, { label: null, icon: null, value: null, onValueChange: null, start: null, end: null });
+    return jsx(tmp2(5650).TableSwitchRow, { label: null, icon: null, value: null, onValueChange: null, start: null, end: null });
   }
   tmp2 = guildId;
 }
@@ -59,7 +59,7 @@ export default function UserSettingsHighlightNotifications() {
   if (0 !== stateFromStoresArray.length) {
     obj = { children: null };
     obj[0] = tmp3;
-    tmp4 = jsx(stateFromStoresArray(7765).Form, { children: null });
+    tmp4 = jsx(stateFromStoresArray(7777).Form, { children: null });
   }
   return tmp4;
 };

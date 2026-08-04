@@ -1,7 +1,7 @@
 import noop from "noop";
 
 const require = arg1;
-const result = require("module_8905").fileFinishedImporting("modules/collectibles/native/hooks/useVirtualCurrencyData.tsx");
+const result = require("module_9340").fileFinishedImporting("modules/collectibles/native/hooks/useVirtualCurrencyData.tsx");
 
 export const useVirtualCurrencyData = function useVirtualCurrencyData(product, canUseShopDiscountsResult) {
   let obj = productOrbPrice(balance[1]);

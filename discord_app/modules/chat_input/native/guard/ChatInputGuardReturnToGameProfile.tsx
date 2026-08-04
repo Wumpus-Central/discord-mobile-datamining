@@ -27,9 +27,9 @@ const memoResult = require("noop").memo(function ChatInputGuardReturnToGameProfi
   obj[3] = intl2.string(require(1236) /* getSystemLocale */.t.DjifDP);
   obj1 = { color: null };
   obj1[0] = tmp3(712).colors.WHITE;
-  obj[4] = jsx(require(10174) /* ArrowSmallLeftIcon */.ArrowSmallLeftIcon, { color: null });
+  obj[4] = jsx(require(10853) /* ArrowSmallLeftIcon */.ArrowSmallLeftIcon, { color: null });
   obj[5] = pendingGameProfileReturn.pendingGameProfileReturn.onReturnToGameProfile;
-  return jsx(importDefault(11660), { gameName: pendingGameProfileReturn.gameName });
+  return jsx(importDefault(11721), { gameName: pendingGameProfileReturn.gameName });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardReturnToGameProfile.tsx");
 

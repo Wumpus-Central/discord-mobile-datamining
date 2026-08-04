@@ -65,7 +65,7 @@ export default function StickerPickerListRow(stickers) {
   }
   const tmp6 = callback2();
   c6 = tmp6;
-  let AnimateStickers = stickers(3928).AnimateStickers;
+  let AnimateStickers = stickers(3958).AnimateStickers;
   closure_7 = AnimateStickers.useSetting();
   items = [];
   if (nativeRow) {
@@ -82,7 +82,7 @@ export default function StickerPickerListRow(stickers) {
           ({ id: obj4[0], name: obj4[1], format_type: obj4[2] } = tmp12);
           let tmp20 = stickers;
           let tmp21 = dependencyMap;
-          let obj4 = stickers(9794);
+          let obj4 = stickers(9764);
           let tmp22 = closure_7;
           obj[3] = obj4.getStickerAssetUrl(tmp12, closure_7, first);
           obj[4] = first;
@@ -94,7 +94,7 @@ export default function StickerPickerListRow(stickers) {
           obj = { stickerId: null, stickerName: "", stickerType: null, stickerUrl: "", stickerAnimated: false, stickerDisabled: true, stickerOpaque: false };
           let tmp14 = stickers;
           tmp15 = dependencyMap;
-          obj[2] = stickers(4922).StickerFormat.PNG;
+          obj[2] = stickers(4951).StickerFormat.PNG;
           arr = items.push(obj);
         }
         num5 = num5 + 1;
@@ -128,7 +128,7 @@ export default function StickerPickerListRow(stickers) {
           handleOnLongPressSticker(found);
         }
       };
-      return items(importDefault(9797), obj1);
+      return items(importDefault(9887), obj1);
     } catch (tmp28) {
       const obj3 = { message: "Error in StickerPickerListRowNativeComponent", category: "sticker", data: null };
       obj4 = { itemLength: null, items: null };

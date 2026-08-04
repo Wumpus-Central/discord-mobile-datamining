@@ -45,13 +45,13 @@ export default function useMessagePreview(guild_id) {
     return hasUnreadResult;
   });
   if (!disabled) {
-    disabled = importDefault(9314)(guild_id);
+    disabled = importDefault(8213)(guild_id);
   }
   if (!disabled) {
-    disabled = stateFromStores === tmp(3933).MessagePreviewTypes.NONE;
+    disabled = stateFromStores === tmp(3963).MessagePreviewTypes.NONE;
   }
   if (!disabled) {
-    let tmp6 = stateFromStores === tmp(3933).MessagePreviewTypes.UNREADS;
+    let tmp6 = stateFromStores === tmp(3963).MessagePreviewTypes.UNREADS;
     if (tmp6) {
       if (unread == null) {
         unread = stateFromStores1;
@@ -60,7 +60,7 @@ export default function useMessagePreview(guild_id) {
     }
     disabled = tmp6;
   }
-  return importDefault(14421)(guild_id, disabled);
+  return importDefault(14455)(guild_id, disabled);
 };
 export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) {
   const _require = arg0;

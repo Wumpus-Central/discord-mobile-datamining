@@ -63,7 +63,7 @@ prototype["fromServer"] = function fromServer(sku_ids) {
     }
   }
   obj.gameApplicationId = game_application_id;
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "find") {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(tmp.prototype);

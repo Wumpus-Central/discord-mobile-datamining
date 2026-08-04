@@ -103,10 +103,10 @@ export const useProcessColorStringsArray = function useProcessColorStringsArray(
   }, items);
 };
 export const isNativeMessageEligibleForEnhancedRoleColors = function isNativeMessageEligibleForEnhancedRoleColors(guildId, id) {
-  return require(4694) /* useHasEnhancedRoleColors */.getHasEnhancedRoleColors(guildId, id);
+  return require(4723) /* useHasEnhancedRoleColors */.getHasEnhancedRoleColors(guildId, id);
 };
 export const useIsRoleStyleAndRoleColorsEligibleForERC = function useIsRoleStyleAndRoleColorsEligibleForERC(guildId, id, stateFromStores, processColorStringsArray) {
-  let tmp = importDefault(4694)(guildId, id);
+  let tmp = importDefault(4723)(guildId, id);
   if (tmp) {
     tmp = "username" === stateFromStores;
   }

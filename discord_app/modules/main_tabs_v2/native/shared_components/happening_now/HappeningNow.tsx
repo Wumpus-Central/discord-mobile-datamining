@@ -23,11 +23,11 @@ function renderCard(kind, fullWidth) {
       const merged = Object.assign(kind);
       const merged1 = Object.assign(fullWidth);
       obj.cardKey = keyExtractor(kind);
-      return jsx(importDefault(15067), {});
+      return jsx(importDefault(15101), {});
     }
   }
   obj = { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant };
-  return jsx(require(15064) /* HappeningNowCardPlaceholder */.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
+  return jsx(require(15098) /* HappeningNowCardPlaceholder */.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
 }
 function keyExtractor(voiceState) {
   let kind;
@@ -56,7 +56,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj = { ref };
   const merged = Object.assign(arg0);
   obj[1] = <closure_5 ref={arg1} />;
-  return jsx(require(5339) /* Directions */.GestureDetector, { ref });
+  return jsx(require(5368) /* Directions */.GestureDetector, { ref });
 });
 forwardRefResult.displayName = "HappeningNowScrollView";
 const NativeResult = Gesture.Native();
@@ -75,7 +75,7 @@ const memoResult = importAllResult.memo((listRef) => {
   obj = obj(isFocused[14]);
   isFocused = obj.useIsFocused();
   ref = isFocused;
-  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "eri\u015Filebilirlik", isFocused: "kad\u0131n" };
+  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "Array", isFocused: "isArray" };
   obj[3] = isFocused;
   const tmp7 = callback(ref(isFocused[15])(listRef.cards, obj), 2);
   let first = tmp7[0];

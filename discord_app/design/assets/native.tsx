@@ -312,6 +312,7 @@ export const PrivacyShieldWithLaptopSpotIllustration = require("PrivacyShieldWit
 export const PrivateProfileAbstractUI = require("PrivateProfileAbstractUI").PrivateProfileAbstractUI;
 export const ProfileEffectsAbstractUI = require("ProfileEffectsAbstractUI").ProfileEffectsAbstractUI;
 export const PsychicIllocon = require("PsychicIllocon").PsychicIllocon;
+export const PurchaseDiscountSpotIllustration = require("PurchaseDiscountSpotIllustration").PurchaseDiscountSpotIllustration;
 export const PuzzleCubeSpotIllustration = require("PuzzleCubeSpotIllustration").PuzzleCubeSpotIllustration;
 export const QrCodeLoginSpotIllustration = require("QrCodeLoginSpotIllustration").QrCodeLoginSpotIllustration;
 export const QrCodeSuccessSpotIllustration = require("QrCodeSuccessSpotIllustration").QrCodeSuccessSpotIllustration;

@@ -67,7 +67,7 @@ export default {
     }
     obj = { url: closure_6.GUILD_CHANNELS(guildId), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     const tmp = permissionOverwrites;
-    const tmpResult = permissionOverwrites(5065);
+    const tmpResult = permissionOverwrites(5094);
     obj[3] = {
       event: guildId(503).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
@@ -135,7 +135,7 @@ export default {
     });
   },
   createRoleSubscriptionTemplateChannel(closure_0, name, type, topic) {
-    let obj = importDefault(5065);
+    let obj = importDefault(5094);
     obj = { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, type, topic };
     obj[3] = {

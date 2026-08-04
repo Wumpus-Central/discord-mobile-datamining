@@ -4,7 +4,7 @@ export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   let request;
   let dependencyMap;
   let obj = { scope: scope.scope, handler: scope.handler };
-  const tmp = request(13618).RPCCommandSchemas[AUTHENTICATE];
+  const tmp = request(13652).RPCCommandSchemas[AUTHENTICATE];
   request = undefined;
   if (tmp != null) {
     request = tmp.request;

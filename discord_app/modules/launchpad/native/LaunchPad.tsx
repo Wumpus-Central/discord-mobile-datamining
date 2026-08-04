@@ -51,15 +51,15 @@ function TabButton(selected) {
   obj[4] = { selected };
   const colors = importDefault(712).colors;
   obj[5] = icon(selected ? colors.INTERACTIVE_TEXT_ACTIVE : colors.INTERACTIVE_TEXT_DEFAULT);
-  return closure_27(require(4783) /* PressableBase */.PressableHighlight, obj);
+  return closure_27(require(4812) /* PressableBase */.PressableHighlight, obj);
 }
 function TabHeader(children) {
   const tmp = callback3();
-  return callback2(require(4251) /* Text */.Text, { style: callback3().subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
+  return callback2(require(4281) /* Text */.Text, { style: callback3().subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
 }
 function createAndAppendChannel(arg0, has, arr) {
   if (!has.has(arg0)) {
-    const tmp3 = importDefault(7229)(arg0);
+    const tmp3 = importDefault(7241)(arg0);
     if (null != tmp3) {
       arr.push(tmp3);
       has.add(arg0);

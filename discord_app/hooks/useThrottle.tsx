@@ -37,7 +37,7 @@ export const useThrottledState = (stateFromStores) => {
   }
   let current2;
   let ref1;
-  if (typeof useThrottledFunction !== "error") {
+  if (typeof useThrottledFunction !== "find") {
     HermesBuiltin.throwTypeError();
   }
   _require = tmp;

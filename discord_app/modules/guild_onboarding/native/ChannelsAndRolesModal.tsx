@@ -90,7 +90,7 @@ export default function ChannelsAndRolesModal(arg0) {
   let obj = require(647) /* defaultAreStatesEqual */;
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getGuild(closure_0));
-  const tmp2 = importDefault(5849)(stateFromStores);
+  const tmp2 = importDefault(5859)(stateFromStores);
   const tmp3 = closure_8;
   const intl = require(1236) /* getSystemLocale */.intl;
   const string = intl.string;
@@ -107,5 +107,5 @@ export default function ChannelsAndRolesModal(arg0) {
       return outer1_8(outer1_11, { guildId: closure_0, defaultTab: closure_1 });
     }
   };
-  return tmp3(importDefault(9290), obj);
+  return tmp3(importDefault(9596), obj);
 };

@@ -10,7 +10,7 @@ let result = require("ME").fileFinishedImporting("modules/notifications/settings
 
 export default function NotificationSettingsMessageNotificationGuildActionSheet(guildId) {
   const _require = guildId;
-  let obj = _require(10471);
+  let obj = _require(9747);
   const guildPresetSettings = obj.useGuildPresetSettings(guildId.guildId);
   const unread = guildPresetSettings.unread;
   const notification = guildPresetSettings.notification;
@@ -36,5 +36,5 @@ export default function NotificationSettingsMessageNotificationGuildActionSheet(
     const NotificationLabel = guildId(outer1_2[11]).NotificationLabel;
     const result = unread(outer1_2[10]).updateGuildNotificationSettings(guildId.guildId, obj, NotificationLabel.notifications(message_notifications));
   };
-  return jsx(unread(10477), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
+  return jsx(unread(9753), { context: "guild", value: notification, allMessagesSubLabel: null, onChange: null });
 };

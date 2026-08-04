@@ -44,5 +44,5 @@ export const participantMemberInfo = function participantMemberInfo(participant)
     }
     return stringResult;
   }
-  obj = require(4094) /* nameFromUser */;
+  obj = require(4124) /* nameFromUser */;
 };

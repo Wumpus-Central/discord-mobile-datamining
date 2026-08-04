@@ -18,7 +18,7 @@ export default function SettingSearchBar() {
     const result = callback(1844).dismissGlobalKeyboard();
   }, []);
   const callback1 = React.useCallback(() => {
-    const result = callback(5914).trackSettingSearchInputFocused();
+    const result = callback(5924).trackSettingSearchInputFocused();
     store.setState({ isActive: true, isFocused: true });
   }, []);
   const callback2 = React.useCallback(() => {
@@ -31,6 +31,6 @@ export default function SettingSearchBar() {
   obj = { ref: React.useRef(null), size: "md", onFocus: callback1, onBlur: callback2, onClear: callback, defaultValue: null, onChange: null };
   obj[5] = field.getField("query");
   obj[6] = callback3;
-  obj[1] = jsx(require(5891) /* SearchField */.SearchField, { ref: React.useRef(null), size: "md", onFocus: callback1, onBlur: callback2, onClear: callback, defaultValue: null, onChange: null });
+  obj[1] = jsx(require(5901) /* SearchField */.SearchField, { ref: React.useRef(null), size: "md", onFocus: callback1, onBlur: callback2, onClear: callback, defaultValue: null, onChange: null });
   return <View ref={React.useRef(null)} size="md" onFocus={callback1} onBlur={callback2} onClear={callback} defaultValue={null} onChange={null} />;
 };

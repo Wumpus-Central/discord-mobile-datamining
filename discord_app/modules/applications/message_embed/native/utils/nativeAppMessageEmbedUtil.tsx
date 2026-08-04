@@ -13,22 +13,22 @@ export const getAppGradientColors = function getAppGradientColors(id2) {
     return tmp;
   } else {
     if (obj5.hasFetchedColors(id2)) {
-      let tmp6Result = tmp6(8034);
+      let tmp6Result = tmp6(8046);
       const heroColors = tmp6Result.getHeroColors(id2);
       ({ primaryColor, secondaryColor } = heroColors);
       let tmp5 = tmp;
       if (false === tmp4) {
-        tmp6Result = tmp6(4099);
-        const items = [tmp6Result.hexToRgba(primaryColor), tmp6(4099).hexToRgba(secondaryColor)];
+        tmp6Result = tmp6(4129);
+        const items = [tmp6Result.hexToRgba(primaryColor), tmp6(4129).hexToRgba(secondaryColor)];
         tmp5 = items;
-        const tmp6Result1 = tmp6(4099);
+        const tmp6Result1 = tmp6(4129);
       }
       return tmp5;
     } else {
-      tmp6(8033).maybeFetchColors(id2);
+      tmp6(8045).maybeFetchColors(id2);
       return tmp;
     }
-    obj5 = require(8033) /* hasFetchedColors */;
+    obj5 = require(8045) /* hasFetchedColors */;
   }
 };
 export const getAppIconSrc = function getAppIconSrc(id, icon, bot) {

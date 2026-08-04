@@ -4,7 +4,7 @@ const require = arg1;
 const result = require("Link").fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
 
 export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackAppLauncherItemImpressionOnFirstView() {
-  let obj = entrypoint(11060);
+  let obj = entrypoint(9466);
   entrypoint = obj.useAppLauncherContext().entrypoint;
   const dependencyMap = React.useRef(new Set());
   const set = new Set();

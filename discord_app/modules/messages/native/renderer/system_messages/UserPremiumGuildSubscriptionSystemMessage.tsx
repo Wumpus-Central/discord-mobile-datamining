@@ -2,10 +2,10 @@ const result = require("formatUsernameOnClick").fileFinishedImporting("modules/m
 
 export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  const tmp3 = importDefault(7909)(message);
-  let obj = require(7867) /* getMessageAuthorWithProcessedColor */;
+  const tmp3 = importDefault(7921)(message);
+  let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const tmp6 = importDefault(7869)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  const tmp6 = importDefault(7881)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   if (tmp3 > 1) {
     const intl2 = tmp4(1236).intl;
     obj = { username: null, usernameOnClick: null, numSubscriptions: null };
@@ -20,6 +20,6 @@ export const createUserPremiumGuildSubscriptionSystemMessage = function createUs
     obj[1] = tmp6;
     formatToPartsResult = intl.formatToParts(tmp4(1236).t.ihxM9x, obj);
   }
-  const merged = Object.assign(importDefault(7870)(roleStyle));
+  const merged = Object.assign(importDefault(7882)(roleStyle));
   return { content: formatToPartsResult };
 };

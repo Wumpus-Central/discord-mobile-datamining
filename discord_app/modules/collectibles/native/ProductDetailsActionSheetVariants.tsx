@@ -12,7 +12,7 @@ function VariantOption(onPress) {
   let variant;
   ({ variant, isSelected } = onPress);
   const tmp = callback2(isSelected);
-  let obj = require(8896) /* getProductPurchaseState */;
+  let obj = require(9331) /* getProductPurchaseState */;
   let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
   if (isPurchased) {
     const intl = tmp2(1236).intl;
@@ -32,13 +32,13 @@ function VariantOption(onPress) {
   }
   obj1[1] = isPurchased;
   obj[5] = closure_4(View, obj1);
-  return closure_4(require(4783) /* PressableBase */.PressableOpacity, obj);
+  return closure_4(require(4812) /* PressableBase */.PressableOpacity, obj);
 }
 function VariantCheckmark(variant) {
   const colors = importDefault(712).colors;
-  const tmp = importDefault(8914)(variant.variant);
+  const tmp = importDefault(9349)(variant.variant);
   const tmp2 = closure_4;
-  return tmp2(require(5275) /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: importDefault(8914)(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
+  return tmp2(require(5304) /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: importDefault(9349)(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, headerRow: null, variantsContainer: null, text: null };
@@ -67,7 +67,7 @@ export default function ProductDetailsActionSheetVariants(onVariantSelect) {
   ({ product, selectedVariantIndex } = onVariantSelect);
   onVariantSelect = onVariantSelect.onVariantSelect;
   const tmp = createCacheKey();
-  let obj = selectedVariantIndex(6909);
+  let obj = selectedVariantIndex(6921);
   let tmp5Result = null;
   if (obj.getIsVariantProduct(product)) {
     obj = { style: null, children: null };
@@ -77,13 +77,13 @@ export default function ProductDetailsActionSheetVariants(onVariantSelect) {
     const obj1 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1236).intl;
     obj1[2] = intl.string(tmp2(1236).t.wbgaj6);
-    const items = [callback(tmp2(4251).Text, obj1), ];
+    const items = [callback(tmp2(4281).Text, obj1), ];
     let tmp7Result = product.variants.length > selectedVariantIndex;
     if (tmp7Result) {
       const obj2 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, style: null, children: null };
       obj2[3] = tmp.text;
       obj2[4] = product.variants[selectedVariantIndex].variantLabel;
-      tmp7Result = tmp7(tmp2(4251).Text, obj2);
+      tmp7Result = tmp7(tmp2(4281).Text, obj2);
     }
     items[1] = tmp7Result;
     obj[1] = items;

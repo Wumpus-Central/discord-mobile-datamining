@@ -8,7 +8,7 @@ export const handleMessagesLongPressChannel = function handleMessagesLongPressCh
   ({ guildId, channelId, messageId, originalLink } = data.data);
   if (null != channelId) {
     if (originalLink == null) {
-      let obj = require(4438) /* allowChannelAccess */;
+      let obj = require(4467) /* allowChannelAccess */;
       originalLink = obj.getChannelPermalink(guildId, channelId, messageId);
     }
     if (null != originalLink) {
@@ -17,7 +17,7 @@ export const handleMessagesLongPressChannel = function handleMessagesLongPressCh
       obj[1] = guildId;
       obj[2] = channelId;
       obj[3] = messageId;
-      importDefault(9704)(obj);
+      importDefault(10971)(obj);
     }
   }
 };

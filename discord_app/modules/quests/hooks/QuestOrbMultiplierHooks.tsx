@@ -3,27 +3,27 @@ import mergeGuildAvatar from "mergeGuildAvatar";
 const require = arg1;
 function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStandardSub) {
   if (null == isFractionalPremiumWithNoStandardSub) {
-    let INELIGIBLE = require(9645) /* items */.QuestOrbMultiplierEligibilityType.INELIGIBLE;
+    let INELIGIBLE = require(10394) /* items */.QuestOrbMultiplierEligibilityType.INELIGIBLE;
   } else {
     let QuestOrbMultiplierEligibilityType2 = dependencyMap;
     if (obj2.canUseMoreQuestOrbs(isFractionalPremiumWithNoStandardSub)) {
-      const questOrbMultiplierSource = require(9645) /* items */.getQuestOrbMultiplierSource(isFractionalPremiumWithNoStandardSub);
-      if (questOrbMultiplierSource === require(9645) /* items */.QuestOrbMultiplierSource.CREPE) {
-        QuestOrbMultiplierEligibilityType2 = tmp3(9645).QuestOrbMultiplierEligibilityType;
+      const questOrbMultiplierSource = require(10394) /* items */.getQuestOrbMultiplierSource(isFractionalPremiumWithNoStandardSub);
+      if (questOrbMultiplierSource === require(10394) /* items */.QuestOrbMultiplierSource.CREPE) {
+        QuestOrbMultiplierEligibilityType2 = tmp3(10394).QuestOrbMultiplierEligibilityType;
         let NITRO = QuestOrbMultiplierEligibilityType2.CREPE;
       } else {
-        NITRO = tmp3(9645).QuestOrbMultiplierEligibilityType.NITRO;
+        NITRO = tmp3(10394).QuestOrbMultiplierEligibilityType.NITRO;
       }
-      const obj = require(9645) /* items */;
+      const obj = require(10394) /* items */;
     } else {
       let result;
       if (isFractionalPremiumWithNoStandardSub != null) {
         result = isFractionalPremiumWithNoStandardSub.isFractionalPremiumWithNoStandardSub();
       }
-      const QuestOrbMultiplierEligibilityType = require(9645) /* items */.QuestOrbMultiplierEligibilityType;
+      const QuestOrbMultiplierEligibilityType = require(10394) /* items */.QuestOrbMultiplierEligibilityType;
       INELIGIBLE = result ? QuestOrbMultiplierEligibilityType.INELIGIBLE : QuestOrbMultiplierEligibilityType.UPSELL;
     }
-    obj2 = importDefault(3901);
+    obj2 = importDefault(3931);
   }
   return INELIGIBLE;
 }

@@ -12,10 +12,10 @@ function renderTooltipItem(arg0, enterExitAnimatedStyles) {
     obj = {};
     const merged = Object.assign(arg0);
     obj.enterExitAnimatedStyles = enterExitAnimatedStyles;
-    tmpResult = tmp(require(8754) /* Coachmark */.CoachmarkContainer, obj);
+    tmpResult = tmp(require(8584) /* Coachmark */.CoachmarkContainer, obj);
   }
   obj[2] = tmpResult;
-  return jsx(importDefault(4116).View, { style: items, pointerEvents: "box-none", children: null });
+  return jsx(importDefault(4146).View, { style: items, pointerEvents: "box-none", children: null });
 }
 let result = require("get ActivityIndicator").fileFinishedImporting("design/components/Coachmark/native/AnimatedCoachmark.native.tsx");
 
@@ -26,13 +26,13 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   const merged = Object.assign(visible, Object.create(null));
   let importDefault;
   [tmp3, c1] = callback(React.useState(visible), 2);
-  let obj = visible(8750);
+  let obj = visible(8580);
   const result = obj.tooltipEnterExitAnimation(merged.position);
   const items = [visible];
   const effect = React.useEffect(() => {
     _undefined(visible);
   }, items);
-  obj = { useReducedMotion: React.useContext(visible(3974).AccessibilityPreferencesContext).reducedMotion.enabled, item: null, entering: null, exiting: null, renderItem: null };
+  obj = { useReducedMotion: React.useContext(visible(4004).AccessibilityPreferencesContext).reducedMotion.enabled, item: null, entering: null, exiting: null, renderItem: null };
   let tmp8;
   const tmp2 = callback(React.useState(visible), 2);
   const tmp6 = jsx;
@@ -43,5 +43,5 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   obj[2] = result;
   obj[3] = result;
   obj[4] = renderTooltipItem;
-  return tmp6(importDefault(8751), obj);
+  return tmp6(importDefault(8581), obj);
 };

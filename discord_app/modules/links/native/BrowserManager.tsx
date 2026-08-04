@@ -9,24 +9,24 @@ let BrowserManager = NativeModules.BrowserManager;
 let closure_7 = keys.create(() => {
   let obj = require(500) /* set */;
   if (obj.isAndroid()) {
-    let isChromeInstalled = importDefault(4222).getConstants().isChromeInstalled;
-    const obj2 = importDefault(4222);
+    let isChromeInstalled = importDefault(4252).getConstants().isChromeInstalled;
+    const obj2 = importDefault(4252);
   } else {
     isChromeInstalled = BrowserManager.isChromeInstalled;
   }
   obj = { isChromeInstalled, selectedBrowser: null, supportsInAppBrowser: null, isInAppBrowserOpen: false };
   let tmpResult = tmp(500);
   if (tmpResult.isAndroid()) {
-    let selectedBrowser = importDefault(4222).getConstants().selectedBrowser;
-    const obj5 = importDefault(4222);
+    let selectedBrowser = importDefault(4252).getConstants().selectedBrowser;
+    const obj5 = importDefault(4252);
   } else {
     selectedBrowser = BrowserManager.selectedBrowser;
   }
   obj[1] = selectedBrowser;
   tmpResult = tmp(500);
   if (tmpResult.isAndroid()) {
-    let supportsInAppBrowser = importDefault(4222).getConstants().supportsInAppBrowser;
-    const obj7 = importDefault(4222);
+    let supportsInAppBrowser = importDefault(4252).getConstants().supportsInAppBrowser;
+    const obj7 = importDefault(4252);
   } else {
     supportsInAppBrowser = BrowserManager.supportsInAppBrowser;
   }
@@ -78,8 +78,8 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
       if (tmp2(691).WebBrowserType.IN_APP === selectedBrowser) {
         tmp2Result = tmp2(500);
         if (tmp2Result.isAndroid()) {
-          let openInAppURLResult = importDefault(4222).openInAppURL(closure_0);
-          const obj6 = importDefault(4222);
+          let openInAppURLResult = importDefault(4252).openInAppURL(closure_0);
+          const obj6 = importDefault(4252);
         } else {
           openInAppURLResult = BrowserManager.openInAppURL(closure_0);
         }
@@ -126,8 +126,8 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
         });
       } else if (tmp2(691).WebBrowserType.CHROME === selectedBrowser) {
         if (tmp2Result1.isAndroid()) {
-          let openInChromeURLResult = importDefault(4222).openInChromeURL(closure_0);
-          let obj4 = importDefault(4222);
+          let openInChromeURLResult = importDefault(4252).openInChromeURL(closure_0);
+          let obj4 = importDefault(4252);
         } else {
           openInChromeURLResult = BrowserManager.openInChromeURL(closure_0, true);
         }
@@ -137,21 +137,21 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
       }
     }
   }
-  importDefault(3952).performURLNavigation(closure_0);
+  importDefault(3982).performURLNavigation(closure_0);
   return Promise.resolve();
 };
 export const browserManagerSelectBrowser = function browserManagerSelectBrowser(selectedBrowser) {
   let obj = require(500) /* set */;
   if (obj.isAndroid()) {
     if (tmp(691).WebBrowserType.SAFARI === selectedBrowser) {
-      const browser = importDefault(4222).selectBrowser(tmp(4222).BrowserType.SAFARI);
-      const obj3 = importDefault(4222);
+      const browser = importDefault(4252).selectBrowser(tmp(4252).BrowserType.SAFARI);
+      const obj3 = importDefault(4252);
     } else if (tmp(691).WebBrowserType.IN_APP === selectedBrowser) {
-      const browser1 = importDefault(4222).selectBrowser(tmp(4222).BrowserType.IN_APP);
-      const obj2 = importDefault(4222);
+      const browser1 = importDefault(4252).selectBrowser(tmp(4252).BrowserType.IN_APP);
+      const obj2 = importDefault(4252);
     } else if (tmp(691).WebBrowserType.CHROME === selectedBrowser) {
-      const browser2 = importDefault(4222).selectBrowser(tmp(4222).BrowserType.CHROME);
-      const obj5 = importDefault(4222);
+      const browser2 = importDefault(4252).selectBrowser(tmp(4252).BrowserType.CHROME);
+      const obj5 = importDefault(4252);
     }
   } else {
     const BrowserManager = NativeModules.BrowserManager;
@@ -171,12 +171,12 @@ export const openPlayStoreInlineInstall = function openPlayStoreInlineInstall(ur
   const _require = arg2;
   const importDefault = Date.now();
   if (obj.isAndroid()) {
-    let openPlayStoreInlineResult = importDefault(4222).openPlayStoreInline(url, arg1, function callback() {
+    let openPlayStoreInlineResult = importDefault(4252).openPlayStoreInline(url, arg1, function callback() {
       if (closure_0 != null) {
         tmp2(tmp);
       }
     });
-    const obj2 = importDefault(4222);
+    const obj2 = importDefault(4252);
   } else if (null == arg1) {
     openPlayStoreInlineResult = Promise.resolve(false);
   } else {

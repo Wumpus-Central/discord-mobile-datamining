@@ -5,11 +5,11 @@ let closure_4 = 12 * require("set").Millis.HOUR;
 const result = require("useInappropriateConversationSafetyToolsWarningForChannel").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx");
 
 export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButtonTooltipForChannel(channelId) {
-  const inappropriateConversationSafetyToolsWarningForChannel = require(10281) /* useInappropriateConversationSafetyToolsWarningForChannel */.useInappropriateConversationSafetyToolsWarningForChannel(channelId);
-  const obj = require(10281) /* useInappropriateConversationSafetyToolsWarningForChannel */;
+  const inappropriateConversationSafetyToolsWarningForChannel = require(10291) /* useInappropriateConversationSafetyToolsWarningForChannel */.useInappropriateConversationSafetyToolsWarningForChannel(channelId);
+  const obj = require(10291) /* useInappropriateConversationSafetyToolsWarningForChannel */;
   const tmp = require;
-  const inappropriateConversationWarningsForChannel = require(10285) /* useInappropriateConversationWarningsForChannel */.useInappropriateConversationWarningsForChannel(channelId);
-  const obj2 = require(10285) /* useInappropriateConversationWarningsForChannel */;
+  const inappropriateConversationWarningsForChannel = require(10258) /* useInappropriateConversationWarningsForChannel */.useInappropriateConversationWarningsForChannel(channelId);
+  const obj2 = require(10258) /* useInappropriateConversationWarningsForChannel */;
   if (null != inappropriateConversationSafetyToolsWarningForChannel) {
     if (!obj3.useShouldShowInitialSafetyToolsButtonTooltip(channelId)) {
       if (!tmpResult.shouldShowTakeoverForWarnings(inappropriateConversationWarningsForChannel)) {
@@ -48,7 +48,7 @@ export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButt
           }
         }
       }
-      tmpResult = tmp(10307);
+      tmpResult = tmp(10293);
     }
   }
 };

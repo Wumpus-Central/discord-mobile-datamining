@@ -105,7 +105,7 @@ prototype["data"] = function data(guildId, items, arg2) {
   const guilds = this.guilds;
   if (!guilds.has(guildId)) {
     const guilds2 = self.guilds;
-    const previewData = new object(12852).PreviewData();
+    const previewData = new object(12886).PreviewData();
     const result = guilds2.set(guildId, previewData);
   }
   const guilds3 = self.guilds;
@@ -219,7 +219,7 @@ prototype["handleLoadMessagesSuccess"] = function handleLoadMessagesSuccess(chan
     return false;
   } else {
     const self = this;
-    const result = object(4930).requireSortedDescending(channelId.messages);
+    const result = object(4959).requireSortedDescending(channelId.messages);
     if (!channelId.isAfter) {
       if (!channelId.isBefore) {
         if (!channelId.hasMoreAfter) {
@@ -232,7 +232,7 @@ prototype["handleLoadMessagesSuccess"] = function handleLoadMessagesSuccess(chan
         }
       }
     }
-    const obj3 = object(4930);
+    const obj3 = object(4959);
     let first1 = channelId.messages[0];
     if (first1 == null) {
       first1 = null;
@@ -245,8 +245,8 @@ prototype["handleLocalMessagesLoaded"] = function handleLocalMessagesLoaded(chan
   const basicChannel = store.getBasicChannel(channelId.channelId);
   if (null != basicChannel) {
     const self = this;
-    const result = object(4930).requireSortedDescending(channelId.messages);
-    const obj = object(4930);
+    const result = object(4959).requireSortedDescending(channelId.messages);
+    const obj = object(4959);
     let first = channelId.messages[0];
     if (first == null) {
       first = null;

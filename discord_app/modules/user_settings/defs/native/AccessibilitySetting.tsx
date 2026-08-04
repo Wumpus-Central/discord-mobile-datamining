@@ -15,7 +15,7 @@ createToggle = {
   IconComponent: require("AccessibilityIcon").AccessibilityIcon,
   useTrailing() {
     let tmp4;
-    let obj = require(5921) /* useSelectedDismissibleContent */;
+    let obj = require(5931) /* useSelectedDismissibleContent */;
     [tmp4, r10012] = callback(obj.useSelectedDismissibleContent(items), 2);
     let tmp5 = null;
     if (null != tmp4) {
@@ -34,7 +34,7 @@ createToggle = {
     return tmp5;
   },
   usePreNavigationAction() {
-    const tmp = callback(first(5921).useSelectedDismissibleContent(items), 2);
+    const tmp = callback(first(5931).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     const dependencyMap = tmp3;
     items = [tmp[1], first];
@@ -59,7 +59,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCESSIBILITY,
   getComponent() {
-    return require(14431) /* SettingsAccessibilityScreen */.default;
+    return require(14465) /* SettingsAccessibilityScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

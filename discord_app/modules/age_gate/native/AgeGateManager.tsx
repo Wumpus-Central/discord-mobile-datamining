@@ -24,7 +24,7 @@ const prototype = AgeGateManager.prototype;
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const guildId = store.getGuildId();
   channelId = channelId.getChannelId();
-  require(4469) /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guildId, channelId);
+  require(4498) /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guildId, channelId);
 };
 prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
   let channelId;
@@ -40,13 +40,13 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
     tmp2 = type !== constants.GUILD_VOICE;
   }
   if (tmp2) {
-    require(4469) /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guildId, channelId);
-    const obj = require(4469) /* shouldShowAgeGateForVoiceChannel */;
+    require(4498) /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guildId, channelId);
+    const obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
   }
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(source) {
   source = source.source;
-  importDefault(4461).pushLazy(callback(function*() {
+  importDefault(4490).pushLazy(callback(function*() {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -110,7 +110,7 @@ prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(source) {
   }), { source }, closure_7);
 };
 prototype["handleAgeGateModalClose"] = function handleAgeGateModalClose() {
-  importDefault(4461).popWithKey(closure_7);
+  importDefault(4490).popWithKey(closure_7);
 };
 prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
   guild = guild.guild;
@@ -120,8 +120,8 @@ prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
     tmp2 = guild.owner_configured_content_level === constants2.AGE_RESTRICTED;
   }
   if (tmp2) {
-    require(4469) /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guild.id, null);
-    const obj = require(4469) /* shouldShowAgeGateForVoiceChannel */;
+    require(4498) /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guild.id, null);
+    const obj = require(4498) /* shouldShowAgeGateForVoiceChannel */;
   }
 };
 const ageGateManager = new AgeGateManager();

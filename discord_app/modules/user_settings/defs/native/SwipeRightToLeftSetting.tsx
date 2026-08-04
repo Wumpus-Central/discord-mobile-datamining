@@ -7,7 +7,7 @@ obj = {
   },
   parent: require("MobileSetting").MobileSetting.CHAT,
   useTrailing: function useSwipeRightToLeftSettingTrailing() {
-    const SwipeRightToLeftModeSetting = require(3928) /* explicitContentFromProto */.SwipeRightToLeftModeSetting;
+    const SwipeRightToLeftModeSetting = require(3958) /* explicitContentFromProto */.SwipeRightToLeftModeSetting;
     const setting = SwipeRightToLeftModeSetting.useSetting();
     if (setting === require(1306) /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
       const intl2 = tmp(1236).intl;
@@ -26,7 +26,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.SWIPE_RIGHT_TO_LEFT,
   getComponent() {
-    return require(14520) /* UserSettingsSwipeRightToLeft */.default;
+    return require(14554) /* UserSettingsSwipeRightToLeft */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,4 +1,4 @@
-import module_15279 from "module_15279";
+import module_15312 from "module_15312";
 import _handleConnectionOpen from "_handleConnectionOpen";
 import initialize from "initialize";
 import processChannel from "processChannel";
@@ -465,11 +465,11 @@ export default function useGuildsBarProps(arg0) {
         const obj = { children: null };
         obj[0] = items1.map((arg0) => {
           if ("unavailable-guilds" === arg0) {
-            return callback2(callback(15314), {}, arg0);
+            return callback2(callback(15345), {}, arg0);
           } else if ("empty-nux" === arg0) {
-            return callback2(callback(15315), {}, arg0);
+            return callback2(callback(15346), {}, arg0);
           } else if ("create-join-guild" === arg0) {
-            return callback2(callback(15317), {}, arg0);
+            return callback2(callback(15348), {}, arg0);
           }
         });
         return memo1(callback(token[24]), obj);

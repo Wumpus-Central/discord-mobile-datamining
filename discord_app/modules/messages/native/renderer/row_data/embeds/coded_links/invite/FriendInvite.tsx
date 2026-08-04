@@ -11,7 +11,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   let acceptLabelGreenColor;
   let baseColors;
   let colors;
-  ({ colors, baseColors } = importDefault(7851)(arg3));
+  ({ colors, baseColors } = importDefault(7863)(arg3));
   const intl = require(1236) /* getSystemLocale */.intl;
   const string = intl.string;
   const t = require(1236) /* getSystemLocale */.t;
@@ -28,7 +28,7 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   }
   let str3 = "";
   if (null != inviter.inviter) {
-    let tmpResult = tmp(4094);
+    let tmpResult = tmp(4124);
     str3 = tmpResult.getUserTag(inviter.inviter);
   }
   let isFriendResult = null != inviter.inviter;

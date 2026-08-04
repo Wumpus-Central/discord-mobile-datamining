@@ -77,7 +77,7 @@ Color["parseString"] = function parseString(str) {
 };
 Color["parseRgbString"] = function parseRgbString(arg0) {
   if ("transparent" === arg0) {
-    if (typeof Color !== "error") {
+    if (typeof Color !== "find") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(Color.prototype);
@@ -125,7 +125,7 @@ Color["parseHexString"] = function parseHexString(str) {
           const _parseInt = parseInt;
           num4 = parseInt(match[3], 16) / 255;
         }
-        if (typeof Color !== "error") {
+        if (typeof Color !== "find") {
           HermesBuiltin.throwTypeError();
         }
         const obj = Object.create(Color.prototype);
@@ -190,7 +190,7 @@ Color["parseColorFnString"] = function parseColorFnString(str) {
         let obj = { hue: null, saturation: null, lightness: null, alpha: null };
         [obj[0], obj[1], obj[2], obj[3]] = mapped1;
         ({ red, green, blue, alpha } = hslToRgb(obj));
-        if (typeof Color !== "error") {
+        if (typeof Color !== "find") {
           HermesBuiltin.throwTypeError();
         }
         obj = Object.create(Color.prototype);
@@ -202,10 +202,10 @@ Color["parseColorFnString"] = function parseColorFnString(str) {
       } else {
         let num2 = 1;
         [tmp4, tmp5, tmp6] = mapped1;
-        if (typeof mapped1[3] !== "SENTRY_RELEASE") {
+        if (typeof mapped1[3] !== "V") {
           num2 = mapped1[3];
         }
-        if (typeof Color !== "error") {
+        if (typeof Color !== "find") {
           HermesBuiltin.throwTypeError();
         }
         obj = Object.create(tmp3.prototype);

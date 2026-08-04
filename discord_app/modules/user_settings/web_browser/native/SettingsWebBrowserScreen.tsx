@@ -10,7 +10,7 @@ const memoResult = importAllResult.memo(function SettingsWebBrowserScreen() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(importDefault(13760), { node });
+  return jsx(importDefault(13794), { node });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
 

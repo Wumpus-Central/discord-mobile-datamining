@@ -5,11 +5,11 @@ export const uid = function uid() {
   if (arg0 === undefined) {
     str = "uid_";
   }
-  return importDefault(4462)(str);
+  return importDefault(4491)(str);
 };
 export const useUID = function useUID() {
-  return importDefault(5569)(() => callback(table[0])("uid_"));
+  return importDefault(5598)(() => callback(table[0])("uid_"));
 };
 export const UID = function UID(children) {
-  return children.children(importDefault(5569)(() => callback(table[0])("uid_")));
+  return children.children(importDefault(5598)(() => callback(table[0])("uid_")));
 };

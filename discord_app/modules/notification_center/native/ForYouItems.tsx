@@ -31,7 +31,7 @@ const require = arg1;
 function ForYouFooter(loading) {
   let tmp = null;
   if (loading.loading) {
-    tmp = callback(require(15376) /* ForYouMentionPlaceholder */.ForYouMentionPlaceholder, {});
+    tmp = callback(require(15407) /* ForYouMentionPlaceholder */.ForYouMentionPlaceholder, {});
   }
   return tmp;
 }
@@ -41,7 +41,7 @@ function Callout(arg0) {
   let item;
   ({ item, acked, compactMode } = arg0);
   const tmp = createCacheKey();
-  let obj = importAll(4685);
+  let obj = importAll(4714);
   obj = { style: tmp.calloutContainer, pointerEvents: "none", children: null };
   obj = { style: tmp.messagePreviewBarV2 };
   const parser = obj.getParser(callback3());
@@ -54,7 +54,7 @@ function Callout(arg0) {
   }
   obj1[2] = num;
   obj1[3] = parser(item.callout);
-  items[1] = callback(require(4251) /* Text */.Text, obj1);
+  items[1] = callback(require(4281) /* Text */.Text, obj1);
   obj[2] = items;
   return closure_22(closure_7, obj);
 }
@@ -68,7 +68,7 @@ function ForYouMessagePreviewV2(item) {
   ({ compactMode, roleStyle } = item);
   let messagePreviewIconV2 = createCacheKey();
   let SMALL = dependencyMap;
-  let obj = message_channel_id(4685);
+  let obj = message_channel_id(4714);
   const notifCenterV2MessagePreviewParser = obj.getNotifCenterV2MessagePreviewParser(callback4(), closure_28, roleStyle);
   const intl = item(1236).intl;
   const stringResult = intl.string(item(1236).t.BOi07B);
@@ -123,10 +123,10 @@ function ForYouMessagePreviewV2(item) {
         first = embeds[0];
       }
     }
-    const tmp15 = guild_id(7947)(first);
+    const tmp15 = guild_id(7959)(first);
     let result = stringResult;
     if (null != tmp15) {
-      let tmp2Result = tmp2(7128);
+      let tmp2Result = tmp2(7140);
       result = tmp2Result.formatPollResultNotificationCenterText(tmp15);
     }
   } else if (stickers.length > 0) {
@@ -234,18 +234,18 @@ function ForYouMessagePreviewV2(item) {
   if (acked) {
     str2 = "text-muted";
   }
-  const items5 = [item(7999).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, { textColor: str2 }), ];
+  const items5 = [item(8011).renderMessageContentMarkup(notifCenterV2MessagePreviewParser, obj2, { textColor: str2 }), ];
   if (null == ATTACHMENT) {
     items5[1] = tmp26;
     obj1[3] = items5;
-    items3[1] = tmp21(tmp2(4251).Text, obj1);
+    items3[1] = tmp21(tmp2(4281).Text, obj1);
     obj[2] = items3;
     return tmp21(tmp22, obj);
   } else {
     const obj3 = { style: null, children: null };
     obj3[0] = messagePreviewIconV2.messagePreviewIconV2Container;
     if (constants3.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(10031);
+      let tmp29 = guild_id(10102);
       const obj4 = { source: null, size: null, style: null };
       obj4[0] = tmp29;
       SMALL = tmp2(1297).IconSizes.SMALL;
@@ -257,10 +257,10 @@ function ForYouMessagePreviewV2(item) {
     } else if (tmp28.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (tmp28.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(7804);
+        tmp29 = guild_id(7816);
       }
     }
-    tmp29 = guild_id(9815);
+    tmp29 = guild_id(9905);
   }
 }
 function ApplicationName(applicationId) {
@@ -274,7 +274,7 @@ function ApplicationName(applicationId) {
     obj = { application: null, textVariant: null, iconSize: 16 };
     obj[0] = stateFromStores;
     obj[1] = applicationId.textVariant;
-    tmp5 = callback(importDefault(11838), obj, stateFromStores.id);
+    tmp5 = callback(importDefault(11898), obj, stateFromStores.id);
   }
   return tmp5;
 }
@@ -668,7 +668,7 @@ let closure_35 = importAllResult.memo((item) => {
   }
   items7[2] = rowBodyAcked;
   obj7[1] = items7;
-  if (typeof tmp10 === "ge") {
+  if (typeof tmp10 === "_iter") {
     obj7[3] = tmp10;
     const items8 = [tmp25(tmp2(tmp3[14]).Text, obj7), ];
     const items9 = [, , ];
@@ -787,9 +787,7 @@ const memoResult = importAllResult.memo((loadMore) => {
     loadMore(true);
   }, items2);
   const items3 = [tmp.forYouDivider, suggestedFriendAdded, onAddSuggestionAnimationFinish, stateFromStores, setting, isSoftAcked, onSoftAckItem, forceHoistItem, isForceHoisted, tmp8, callback, flag];
-  const callback1 = suggestedFriendAdded.useCallback((arg0) => {
-
-  }, items3);
+  const callback1 = suggestedFriendAdded.useCallback((arg0) => outer1_21(loadMore(onSoftAckItem[64]).ForYouLoadMore, { onPressLoad: callback }), items3);
   ref = suggestedFriendAdded.useRef(null);
   const items4 = [shouldScrollToTop];
   const effect = suggestedFriendAdded.useEffect(() => {

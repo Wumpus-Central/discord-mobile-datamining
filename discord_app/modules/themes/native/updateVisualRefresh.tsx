@@ -4,8 +4,8 @@ let result = require("enforcing").fileFinishedImporting("modules/themes/native/u
 
 export const updateVisualRefresh = function updateVisualRefresh(closure_0) {
   if (obj.isAndroid()) {
-    let result = importDefault(13586).setVisualRefreshEnabled(closure_0);
-    const obj2 = importDefault(13586);
+    let result = importDefault(13620).setVisualRefreshEnabled(closure_0);
+    const obj2 = importDefault(13620);
   } else {
     const DCDTheme = NativeModules.DCDTheme;
     result = DCDTheme.setVisualRefreshEnabled(closure_0);

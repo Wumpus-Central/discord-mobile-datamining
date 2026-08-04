@@ -27,7 +27,7 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
   const tmp = createCacheKey();
-  let obj = markAsDismissed(7313);
+  let obj = markAsDismissed(7325);
   bottomSheetRef = obj.useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
   obj = {
@@ -41,12 +41,12 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
     children: null
   };
   obj = { children: null };
-  const items = [callback(importDefault(5207), { source: imageSource, style: tmp.image }), callback(markAsDismissed(5565).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
+  const items = [callback(importDefault(5236), { source: imageSource, style: tmp.image }), callback(markAsDismissed(5594).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
   obj[0] = items;
   obj[4] = callback2(View, obj);
   const obj2 = { style: tmp.content, children: null };
-  const items1 = [callback(markAsDismissed(4251).Text, { accessibilityRole: "header", variant: "heading-xl/medium", color: "mobile-text-heading-primary", children: header }), callback(markAsDismissed(1297).Spacer, { size: 12 }), callback(markAsDismissed(4251).Text, { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: body }), callback(markAsDismissed(4666).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta })];
+  const items1 = [callback(markAsDismissed(4281).Text, { accessibilityRole: "header", variant: "heading-xl/medium", color: "mobile-text-heading-primary", children: header }), callback(markAsDismissed(1297).Spacer, { size: 12 }), callback(markAsDismissed(4281).Text, { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: body }), callback(markAsDismissed(4695).Button, { variant: "primary", grow: true, onPress: onCTAPress, text: cta })];
   obj2[1] = items1;
   obj[5] = callback2(View, obj2);
-  return callback(markAsDismissed(5309).BottomSheet, obj);
+  return callback(markAsDismissed(5338).BottomSheet, obj);
 };

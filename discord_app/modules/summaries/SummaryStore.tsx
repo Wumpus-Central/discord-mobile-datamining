@@ -178,7 +178,7 @@ prototype["shouldFetch"] = function shouldFetch(arg0, arg1) {
   } else {
     return false;
   }
-  obj = require(9665) /* canSeeChannelSummaries */;
+  obj = require(10237) /* canSeeChannelSummaries */;
 };
 prototype["channelAffinities"] = function channelAffinities() {
   return closure_21;
@@ -271,7 +271,7 @@ obj = {
     if (null != summary) {
       const _Object = Object;
       if (Object.keys(summary).length > 0) {
-        let obj = summaryFromServer(9666);
+        let obj = summaryFromServer(10238);
         summaryFromServer = obj.createSummaryFromServer(summary, channelId);
         let items = dependencyMap2[channelId];
         if (items == null) {

@@ -49,7 +49,7 @@ export const useSearchSuggestionsGesture = function useSearchSuggestionsGesture(
       const rect = closure_2.get();
       let tmp2 = null == rect;
       if (!tmp2) {
-        if (typeof outer1_4 !== "error") {
+        if (typeof outer1_4 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         const first = arg0.allTouches[0];

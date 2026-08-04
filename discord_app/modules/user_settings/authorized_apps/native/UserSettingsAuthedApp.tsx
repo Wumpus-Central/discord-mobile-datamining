@@ -26,7 +26,7 @@ function WarningLabel(children) {
   obj = { size: "xs", color: null, style: null };
   obj[1] = importDefault(712).colors.TEXT_MUTED;
   obj[2] = tmp.warningIcon;
-  const items = [callback(require(4211) /* CircleInformationIcon */.CircleInformationIcon, obj), callback(require(4251) /* Text */.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
+  const items = [callback(require(4241) /* CircleInformationIcon */.CircleInformationIcon, obj), callback(require(4281) /* Text */.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
   obj[1] = items;
   return callback2(closure_5, obj);
 }
@@ -357,7 +357,7 @@ export default function UserSettingsAuthedApp(oauth2Token) {
 };
 export const handleDeleteApp = function handleDeleteApp(application) {
   application = application.application;
-  let obj = importDefault(5589);
+  let obj = importDefault(5618);
   obj.delete(application.id);
   selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
   const value = selfEmbeddedActivities.get(application.id);
@@ -366,5 +366,5 @@ export const handleDeleteApp = function handleDeleteApp(application) {
     _location = value.location;
   }
   obj = { location: _location, applicationId: application.id };
-  importDefault(10688).leaveActivity(obj);
+  importDefault(10538).leaveActivity(obj);
 };

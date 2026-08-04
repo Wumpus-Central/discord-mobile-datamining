@@ -15,10 +15,10 @@ const memoResult = require("noop").memo((channel) => {
   const participant = channel.participant;
   const size = channel.size;
   const tmp = callback();
-  let obj = channel(10952);
+  let obj = channel(10821);
   const speakerTileStyles = obj.useSpeakerTileStyles();
-  const isScreenLandscape = channel(4786).useIsScreenLandscape();
-  const obj2 = channel(4786);
+  const isScreenLandscape = channel(4815).useIsScreenLandscape();
+  const obj2 = channel(4815);
   const tmp5 = participant;
   const items = [getParticipants];
   const items1 = [channel.id, participant.id];
@@ -29,9 +29,9 @@ const memoResult = require("noop").memo((channel) => {
     if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
       obj = { style: null, children: null };
       const items2 = [tmp.container, , ];
-      let tmp2Result = tmp2(10952);
+      let tmp2Result = tmp2(10821);
       items2[1] = tmp2Result.getSizeStyle(size, speakerTileStyles);
-      tmp2Result = tmp2(10952);
+      tmp2Result = tmp2(10821);
       items2[2] = tmp2Result.getTileWidthStyle(size, participant(1474)().width, isScreenLandscape);
       obj[0] = items2;
       obj = { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null };
@@ -39,9 +39,9 @@ const memoResult = require("noop").memo((channel) => {
       obj[5] = tmp2(1297).AvatarSizes.XLARGE;
       obj[6] = channel;
       obj[8] = tmp.media;
-      obj[1] = jsx(tmp5(10962), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null });
+      obj[1] = jsx(tmp5(10832), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: null, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null });
       tmp8 = <View hasBottomSafeArea={false} hasLeftSafeArea={false} hasRightSafeArea={false} hasTopSafeArea={false} participant={null} avatarSize={null} channel={null} shrinkStreamEmptyState={false} contentStyle={null} />;
-      const tmp5Result = tmp5(10962);
+      const tmp5Result = tmp5(10832);
     }
   }
   return tmp8;

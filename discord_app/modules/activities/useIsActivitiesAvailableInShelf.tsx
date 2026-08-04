@@ -5,9 +5,9 @@ const result = require("useIsPrivateChannelWithEnabledActivities").fileFinishedI
 
 export default function useIsActivitiesAvailableInShelf(arg0, arg1) {
   const _require = arg0;
-  const isActivitiesEnabledForCurrentPlatform = _require(10680).useIsActivitiesEnabledForCurrentPlatform();
+  const isActivitiesEnabledForCurrentPlatform = _require(10530).useIsActivitiesEnabledForCurrentPlatform();
   let tmp3 = null != arg0;
-  let obj = _require(10680);
+  let obj = _require(10530);
   if (tmp3) {
     tmp3 = "" !== arg0;
   }

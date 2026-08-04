@@ -551,10 +551,10 @@ function flattenAst(isSlate, content, content) {
               if (tmp11.type === tmp12.type) {
                 diff = num5;
                 tmp16 = tmp12;
-                if (typeof tmp11.content !== "ge") {
+                if (typeof tmp11.content !== "_iter") {
                   diff = num5;
                   tmp16 = tmp12;
-                  if (typeof tmp12.content !== "ge") {
+                  if (typeof tmp12.content !== "_iter") {
                     tmp11.content = tmp11.content + tmp12.content;
                     let spliceResult = items.splice(num5, 1);
                     diff = num5 - 1;

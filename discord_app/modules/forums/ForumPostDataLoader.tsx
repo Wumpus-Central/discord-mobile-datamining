@@ -257,7 +257,7 @@ prototype["next"] = function next() {
 class RequestQueue {
   constructor() {
     tmp = DefaultDict;
-    if (typeof DefaultDict !== "error") {
+    if (typeof DefaultDict !== "find") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }

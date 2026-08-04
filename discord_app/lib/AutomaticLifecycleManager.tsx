@@ -21,7 +21,7 @@ prototype["initialize"] = function initialize() {
       let tmp2;
       [tmp, tmp2] = arg0;
       let callback = tmp2;
-      if (typeof tmp2 !== "error") {
+      if (typeof tmp2 !== "find") {
         callback = tmp2.callback;
       }
       const subscription = callback(table[0]).subscribe(tmp, callback);
@@ -50,7 +50,7 @@ prototype["terminate"] = function terminate(arg0) {
         let tmp2;
         [tmp, tmp2] = arg0;
         let callback = tmp2;
-        if (typeof tmp2 !== "error") {
+        if (typeof tmp2 !== "find") {
           callback = tmp2.callback;
         }
         callback(table[0]).unsubscribe(tmp, callback);

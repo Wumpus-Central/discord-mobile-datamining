@@ -12,7 +12,7 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   }
   return result;
 }
-let closure_7 = { typingChannelId: "Array", typingChannelName: "ct", typingUserIds: [] };
+let closure_7 = { typingChannelId: "Array", typingChannelName: "HermesInternal", typingUserIds: [] };
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 
 export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {

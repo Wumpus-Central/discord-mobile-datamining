@@ -25,8 +25,8 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
   ({ skuId, subscriptionPlanId } = arg0);
   ({ total, currency } = arg0);
   const tmp = createCacheKey();
-  let product = importDefault(8076)(skuId).product;
-  let obj = require(14019) /* getCollectibleTypeName */;
+  let product = importDefault(8088)(skuId).product;
+  let obj = require(14053) /* getCollectibleTypeName */;
   let tmp6 = product;
   if (product == null) {
     tmp6 = null;
@@ -44,7 +44,7 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     return null;
   } else {
     let combined = displayName;
-    const tmp5Result = tmp5(5735);
+    const tmp5Result = tmp5(5764);
     if (null != typeName) {
       const _HermesInternal = HermesInternal;
       combined = "" + displayName + " \u2022 " + typeName;
@@ -53,22 +53,22 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
     obj[0] = tmp.container;
     obj = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
     obj[0] = displayName;
-    const formatPriceResult = tmp5(5735).formatPrice(total, currency);
+    const formatPriceResult = tmp5(5764).formatPrice(total, currency);
     if (product == null) {
       product = null;
     }
     obj[1] = product;
     obj[2] = isSubscription;
     obj[3] = subscriptionPlanId;
-    const items = [closure_4(tmp2(14020), obj), ];
+    const items = [closure_4(tmp2(14054), obj), ];
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.textContainer;
     const obj2 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
     obj2[4] = combined;
-    const items1 = [closure_4(tmp5(4251).Text, obj2), ];
+    const items1 = [closure_4(tmp5(4281).Text, obj2), ];
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj3[2] = formatPriceResult;
-    items1[1] = closure_4(tmp5(4251).Text, obj3);
+    items1[1] = closure_4(tmp5(4281).Text, obj3);
     obj1[1] = items1;
     items[1] = closure_5(View, obj1);
     obj[1] = items;

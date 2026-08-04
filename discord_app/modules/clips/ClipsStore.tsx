@@ -15,9 +15,11 @@ let DEFAULT_CLIPS_BITRATE_PERCENT;
 let DEFAULT_MAX_AUTO_CLIPS;
 let c10;
 let c9;
+let closure_12;
 let closure_6;
 let error;
 let metroImportAll;
+let unpackModuleId;
 const require = arg1;
 function _migrateDefaultStorage() {
   const self = this;
@@ -52,7 +54,7 @@ function _migrateDefaultStorage() {
             let callback = tmp7;
             callback = undefined;
             callback2 = undefined;
-            if (outer1_29.clipsSettings.storageLocation === outer1_12) {
+            if (outer1_31.clipsSettings.storageLocation === outer1_14) {
               if (null != outer1_1(outer1_2[6])) {
                 if (null != outer1_1(outer1_2[6]).app) {
                   let c3 = 1;
@@ -70,7 +72,7 @@ function _migrateDefaultStorage() {
         } else if (1 === tmp7) {
           c3 = 0;
           logger.error("Failed to resolve videos path for default storage migration", dependencyMap);
-          const app = callback2(3866).app;
+          const app = callback2(3896).app;
           c4 = 2;
           c5 = 1;
           const obj2 = { value: null, done: false };
@@ -95,12 +97,12 @@ function _migrateDefaultStorage() {
             return obj3;
           } else {
             callback2 = arg1;
-            obj = callback(4311);
-            callback = obj.pathJoin(callback2, closure_13);
+            obj = callback(4341);
+            callback = obj.pathJoin(callback2, closure_15);
             c3 = 0;
           }
           clipsSettings.clipsSettings.storageLocation = callback;
-          closure_32.emitChange();
+          closure_34.emitChange();
         }
         c5 = 3;
         const obj4 = { value: null, done: true };
@@ -160,39 +162,39 @@ function trackSharedRemoteClipId(arg0, arg1, arg2) {
   } else {
     return false;
   }
-  obj = importDefault(4322);
+  obj = importDefault(4351);
 }
-({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6, ClipSaveTypes: error, ClipsUserEducationType: metroImportAll, ClipsLogger: c9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsLengthSettings, ClipsViewerConnectivitySettings, DEFAULT_MAX_AUTO_CLIPS, DEFAULT_CLIPS_BITRATE_PERCENT } = result);
-let c12 = "default";
-let c13 = "Discord Clips";
-let closure_14 = {};
-let closure_15 = {};
+({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: closure_6, ClipSaveTypes: error, ClipsUserEducationType: metroImportAll, ClipsLogger: c9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsHardwareClassification: unpackModuleId, ClipsSaveNoOpReason: closure_12, ClipsLengthSettings, ClipsViewerConnectivitySettings, DEFAULT_MAX_AUTO_CLIPS, DEFAULT_CLIPS_BITRATE_PERCENT } = result);
+let c14 = "default";
+let c15 = "Discord Clips";
 let closure_16 = {};
-let closure_17 = [];
-let c18 = 0;
-let c19 = null;
-let c20 = null;
+let closure_17 = {};
+let closure_18 = {};
+let closure_19 = [];
+let c20 = 0;
 let c21 = null;
-let closure_22 = {};
-let closure_23 = {};
-let c24 = null;
+let c22 = null;
+let c23 = null;
+let closure_24 = {};
+let closure_25 = {};
+let c26 = null;
 ({ ApplicationStreamFPS, ApplicationStreamResolutions } = RESOLUTION_720);
 let set = new Set();
-let c26 = false;
+let c28 = false;
 const map = new Map();
 obj = { clipsEnabled: false, storageLocation: "default", clipsQuality: obj, clipsLength: ClipsLengthSettings.SECONDS_30, remindersEnabled: true, decoupledClipsEnabled: false, viewerClipsEnabled: true, viewerConnectivity: ClipsViewerConnectivitySettings.ALL, maxAutoClips: DEFAULT_MAX_AUTO_CLIPS, clipSignals: { enableDistributedSignals: true, enableGameSignals: true }, debugTooltipsEnabled: false, enableAutoclipping: "ct", showPovClipsInGallery: "Array" };
 obj = { resolution: ApplicationStreamResolutions.RESOLUTION_1080, frameRate: ApplicationStreamFPS.FPS_30, bitratePercent: DEFAULT_CLIPS_BITRATE_PERCENT };
-let closure_29 = { clipsSettings: obj, hardwareClassification: null, hardwareClassificationForDecoupled: null, hardwareClassificationVersion: 0, newClipIds: [], hasClips: false, hasTakenDecoupledClip: false, clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 } };
+let closure_31 = { clipsSettings: obj, hardwareClassification: null, hardwareClassificationForDecoupled: null, hardwareClassificationVersion: 0, newClipIds: [], hasClips: false, hasTakenDecoupledClip: false, clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 } };
 class ClipsStoreClass extends DeviceSettingsStore {
 }
 const prototype = ClipsStoreClass.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    let closure_29 = arg0;
+    let closure_31 = arg0;
   }
   (function migrateDefaultStorage() {
     const self = this;
-    const apply = closure_30.apply;
+    const apply = closure_32.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -203,7 +205,7 @@ prototype["initialize"] = function initialize(arg0) {
   this.waitFor(initialize);
 };
 prototype["getClips"] = function getClips() {
-  return closure_14;
+  return closure_16;
 };
 prototype["getClipById"] = function getClipById(arg0) {
   return dependencyMap[arg0];
@@ -214,58 +216,58 @@ prototype["getClipByRemoteId"] = function getClipByRemoteId(arg0) {
   }
 };
 prototype["getClipCandidates"] = function getClipCandidates() {
-  return closure_17;
+  return closure_19;
 };
 prototype["getClipCandidateById"] = function getClipCandidateById(arg0) {
   return table[arg0];
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return closure_29;
+  return closure_31;
 };
 prototype["getSettings"] = function getSettings() {
-  return closure_29.clipsSettings;
+  return closure_31.clipsSettings;
 };
 prototype["getEnableAutoclipping"] = function getEnableAutoclipping() {
-  let enabled = closure_29.clipsSettings.enableAutoclipping;
+  let enabled = closure_31.clipsSettings.enableAutoclipping;
   if (enabled == null) {
-    const AutoclippingDefaultOverrideExperiment = require(4323) /* apexExperiment */.AutoclippingDefaultOverrideExperiment;
+    const AutoclippingDefaultOverrideExperiment = require(4352) /* apexExperiment */.AutoclippingDefaultOverrideExperiment;
     enabled = AutoclippingDefaultOverrideExperiment.getConfig({ location: "getAutoclippingDefault" }).enabled;
   }
   return enabled;
 };
 prototype["hasUserSetAutoclippingSettings"] = function hasUserSetAutoclippingSettings() {
-  return null != closure_29.clipsSettings.enableAutoclipping;
+  return null != closure_31.clipsSettings.enableAutoclipping;
 };
 prototype["getLastClipsSession"] = function getLastClipsSession() {
-  return c20;
+  return c22;
 };
 prototype["getCurrentClipsSession"] = function getCurrentClipsSession() {
-  return c21;
+  return c23;
 };
 prototype["getHistoricalClipsSessionById"] = function getHistoricalClipsSessionById(arg0) {
   return table3[arg0];
 };
 prototype["devSetLastClipsSession"] = function devSetLastClipsSession(arg0) {
-  let closure_20 = arg0;
+  let closure_22 = arg0;
   this.emitChange();
 };
 prototype["getClipsWarningShown"] = function getClipsWarningShown(channelId) {
-  return c19 === channelId;
+  return c21 === channelId;
 };
 prototype["getHardwareClassification"] = function getHardwareClassification() {
-  return closure_29.hardwareClassification;
+  return closure_31.hardwareClassification;
 };
 prototype["getHardwareClassificationForDecoupled"] = function getHardwareClassificationForDecoupled() {
-  return closure_29.hardwareClassificationForDecoupled;
+  return closure_31.hardwareClassificationForDecoupled;
 };
 prototype["getHardwareClassificationVersion"] = function getHardwareClassificationVersion() {
-  return closure_29.hardwareClassificationVersion;
+  return closure_31.hardwareClassificationVersion;
 };
 prototype["getIsAtMaxSaveClipOperations"] = function getIsAtMaxSaveClipOperations() {
-  return c18 >= closure_10;
+  return c20 >= closure_10;
 };
 prototype["getLastClipsError"] = function getLastClipsError() {
-  return c24;
+  return c26;
 };
 prototype["isClipsEnabledForUser"] = function isClipsEnabledForUser(userId) {
   let flag;
@@ -298,16 +300,16 @@ prototype["isViewerClippingAllowedForUser"] = function isViewerClippingAllowedFo
   return flag;
 };
 prototype["hasClips"] = function hasClips() {
-  return closure_29.hasClips;
+  return closure_31.hasClips;
 };
 prototype["hasTakenDecoupledClip"] = function hasTakenDecoupledClip() {
-  return closure_29.hasTakenDecoupledClip;
+  return closure_31.hasTakenDecoupledClip;
 };
 prototype["canShowReminders"] = function canShowReminders() {
-  return closure_29.clipsSettings.remindersEnabled;
+  return closure_31.clipsSettings.remindersEnabled;
 };
 prototype["getNewClipIds"] = function getNewClipIds() {
-  return closure_29.newClipIds;
+  return closure_31.newClipIds;
 };
 prototype["isClipExporting"] = function isClipExporting(arg0) {
   return set.has(arg0);
@@ -316,7 +318,7 @@ prototype["getExportingClipIds"] = function getExportingClipIds() {
   return set;
 };
 prototype["isAutoStashEnabled"] = function isAutoStashEnabled() {
-  return c26;
+  return c28;
 };
 prototype["wasClipSharedInChannel"] = function wasClipSharedInChannel(arg0, arg1) {
   const value = map.get(arg1);
@@ -403,7 +405,7 @@ let items = [
     return obj;
   },
   (clipsSettings) => {
-    const _default = require(4302) /* _detectH265HardwareDecode */.default;
+    const _default = require(4332) /* _detectH265HardwareDecode */.default;
     let hardwareEncoding;
     if (_default != null) {
       hardwareEncoding = _default.getHardwareEncoding();
@@ -544,11 +546,11 @@ obj = {
   },
   CLIPS_SAVE_CLIP: function handleSaveClip(clip) {
     clip = clip.clip;
-    closure_18 = Math.max(closure_18 - 1, 0);
+    closure_20 = Math.max(closure_20 - 1, 0);
     if (clip.isCandidate) {
       const items = [clip];
       HermesBuiltin.arraySpread(items, 1);
-      closure_15[clip.id] = clip;
+      closure_17[clip.id] = clip;
     }
     if (null != obj) {
       obj = {};
@@ -587,9 +589,9 @@ obj = {
       const items2 = [];
       items2[HermesBuiltin.arraySpread(newClipIds1, 0)] = clip.id;
       obj.newClipIds = items2;
-      closure_14[clip.id] = clip;
+      closure_16[clip.id] = clip;
       if (null != clip.remoteClipId) {
-        closure_16[clip.remoteClipId] = clip.id;
+        closure_18[clip.remoteClipId] = clip.id;
       }
       obj.hasClips = true;
     }
@@ -628,32 +630,32 @@ obj = {
     obj.newClipIds = items1;
     const tmp4 = importDefault(38);
     delete tmp2[tmp];
-    closure_14[clip.id] = clip;
+    closure_16[clip.id] = clip;
     obj.hasClips = true;
   },
   CLIPS_SAVE_CLIP_START: function handleSaveClipStart(arg0) {
-    closure_18 = closure_18 + 1;
-    let hasTakenDecoupledClip = closure_29.hasTakenDecoupledClip;
+    closure_20 = closure_20 + 1;
+    let hasTakenDecoupledClip = closure_31.hasTakenDecoupledClip;
     if (!hasTakenDecoupledClip) {
       hasTakenDecoupledClip = tmp === constants.DECOUPLED;
     }
-    closure_29.hasTakenDecoupledClip = hasTakenDecoupledClip;
+    closure_31.hasTakenDecoupledClip = hasTakenDecoupledClip;
   },
   CLIPS_SAVE_CLIP_ERROR: function handleSaveClipError() {
-    closure_18 = Math.max(closure_18 - 1, 0);
+    closure_20 = Math.max(closure_20 - 1, 0);
   },
   CLIPS_SAVE_CLIP_NO_OP: function handleSaveClipNoOp(reason) {
     reason = reason.reason;
-    if (!tmp3) {
+    if (!tmp) {
       const _Math = Math;
-      closure_18 = Math.max(closure_18 - 1, 0);
+      closure_20 = Math.max(closure_20 - 1, 0);
     }
   },
   STREAM_START: function handleStreamStart(arg0) {
     let pid;
     let sourceName;
     ({ sourceName, pid } = arg0);
-    let obj = require(4313) /* isClipsEnabled */;
+    let obj = require(4342) /* isClipsEnabled */;
     if (obj.isClipsEnabled()) {
       let tmp2 = sourceName;
       if (null != pid) {
@@ -682,7 +684,7 @@ obj = {
   STREAM_STOP: function handleStreamStop(arg0) {
     let tmp2 = null != _null;
     if (tmp2) {
-      let obj = require(4319) /* isStreamKey */;
+      let obj = require(4348) /* isStreamKey */;
       const tmp6 = obj.decodeStreamKey(tmp).ownerId === store.getId();
       if (tmp6) {
         let tmp8 = null;
@@ -699,10 +701,10 @@ obj = {
     return tmp2;
   },
   CLIPS_CLEAR_LAST_CLIPS_SESSION: function handleClearLastClipsSession() {
-    if (null == c20) {
+    if (null == c22) {
       return false;
     } else {
-      c20 = null;
+      c22 = null;
     }
   },
   CLIPS_SESSION_START: function handleClipsSessionStart(arg0) {
@@ -710,7 +712,7 @@ obj = {
     let sessionId;
     ({ sessionId, gameId } = arg0);
     if (null != _null2) {
-      closure_22[_null2.id] = _null2;
+      closure_24[_null2.id] = _null2;
     }
     _null2 = { id: sessionId, gameId, manualClipsSaved: 0, candidateClipsSaved: 0, candidateClipsPromoted: 0 };
   },
@@ -718,44 +720,44 @@ obj = {
     if (null == _null2) {
       return false;
     } else {
-      closure_22[_null2.id] = _null2;
+      closure_24[_null2.id] = _null2;
       _null2 = null;
     }
   },
   CLIPS_CLEAR_NEW_CLIP_IDS: function clearNewClipIds() {
-    closure_29.newClipIds = [];
+    closure_31.newClipIds = [];
   },
   CLIPS_REMOVE_SINGLE_NEW_CLIP_ID: function removeSingleNewClipId(clipId) {
     clipId = clipId.clipId;
-    const newClipIds = closure_29.newClipIds;
-    closure_29.newClipIds = newClipIds.filter((arg0) => arg0 !== clipId);
+    const newClipIds = closure_31.newClipIds;
+    closure_31.newClipIds = newClipIds.filter((arg0) => arg0 !== clipId);
   },
   CLIPS_LOAD_DIRECTORY_SUCCESS: function handleClipsDirectoryLoaded(arg0) {
-    let closure_14 = {};
+    let closure_16 = {};
     let arr = [];
     const iter = arg0.clips[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp2 = nextResult;
       if (nextResult.isCandidate) {
-        let tmp7 = closure_15;
+        let tmp7 = closure_17;
         let tmp8 = nextResult;
-        closure_15[tmp2.id] = tmp2;
+        closure_17[tmp2.id] = tmp2;
         let tmp9 = arr;
         arr = arr.push(tmp2);
       } else {
-        let tmp3 = closure_14;
+        let tmp3 = closure_16;
         let tmp4 = nextResult;
-        closure_14[tmp2.id] = tmp2;
+        closure_16[tmp2.id] = tmp2;
         if (null != tmp2.remoteClipId) {
-          let tmp5 = closure_16;
+          let tmp5 = closure_18;
           let tmp6 = nextResult;
-          closure_16[tmp2.remoteClipId] = tmp2.id;
+          closure_18[tmp2.remoteClipId] = tmp2.id;
         }
       }
       continue;
     }
-    closure_29.hasClips = Object.keys(closure_14).length > 0;
+    closure_31.hasClips = Object.keys(closure_16).length > 0;
   },
   CLIPS_DELETE_CLIP: function handleClipsDelete(arg0) {
     let closure_0 = arg0;
@@ -769,16 +771,16 @@ obj = {
       remoteClipId = tmp5.remoteClipId;
       delete tmp2[tmp];
     }
-    closure_29.hasClips = Object.keys(dependencyMap).length > 0;
+    closure_31.hasClips = Object.keys(dependencyMap).length > 0;
   },
   CLIPS_UPDATE_METADATA: function handleClipMetadataUpdate(clip) {
     clip = clip.clip;
     if (clip.isCandidate) {
-      closure_15[clip.id] = clip;
+      closure_17[clip.id] = clip;
     } else {
-      closure_14[clip.id] = clip;
+      closure_16[clip.id] = clip;
       if (null != clip.remoteClipId) {
-        closure_16[clip.remoteClipId] = clip.id;
+        closure_18[clip.remoteClipId] = clip.id;
       }
     }
   },
@@ -789,41 +791,35 @@ obj = {
     obj[1] = require(1384) /* hasFlag */.hasFlag(flags.flags, VoiceFlags.ALLOW_VOICE_RECORDING);
     const obj3 = require(1384) /* hasFlag */;
     obj[2] = require(1384) /* hasFlag */.hasFlag(flags.flags, VoiceFlags.ALLOW_ANY_VIEWER_CLIPS);
-    closure_23[flags.userId] = obj;
+    closure_25[flags.userId] = obj;
   },
   CLIPS_SHOW_CALL_WARNING: function handleShowCallWarning(channelId) {
     channelId = channelId.channelId;
   },
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(channelId) {
-    if (channelId.channelId !== c19) {
-      c19 = null;
+    if (channelId.channelId !== c21) {
+      c21 = null;
     }
   },
   CLIPS_CLASSIFY_HARDWARE: function handleClassifyHardware(classification) {
-    let hardwareClassification;
-    let hardwareClassification2;
-    let hardwareClassificationForDecoupled;
-    let hardwareClassificationForDecoupled2;
     classification = classification.classification;
-    closure_29.hardwareClassificationVersion = closure_6;
-    closure_29.hardwareClassification = classification;
-    ({ hardwareClassification, hardwareClassification: hardwareClassification2 } = closure_29);
+    closure_31.hardwareClassificationVersion = closure_6;
+    closure_31.hardwareClassification = classification;
     if (tmp3) {
-      closure_29.clipsSettings.clipsEnabled = true;
+      closure_31.clipsSettings.clipsEnabled = true;
     }
-    closure_29.hardwareClassificationForDecoupled = classification;
-    ({ hardwareClassificationForDecoupled, hardwareClassificationForDecoupled: hardwareClassificationForDecoupled2 } = closure_29);
-    let clipsEnabled = hardwareClassificationForDecoupled2 === tmp(4312).ClipsHardwareClassification.MEETS_AUTO_ENABLE && hardwareClassificationForDecoupled !== tmp(4312).ClipsHardwareClassification.MEETS_AUTO_ENABLE;
+    closure_31.hardwareClassificationForDecoupled = classification;
+    let clipsEnabled = closure_31.hardwareClassificationForDecoupled === tmp2.MEETS_AUTO_ENABLE && tmp5 !== tmp2.MEETS_AUTO_ENABLE;
     if (clipsEnabled) {
-      clipsEnabled = closure_29.clipsSettings.clipsEnabled;
+      clipsEnabled = closure_31.clipsSettings.clipsEnabled;
     }
     if (clipsEnabled) {
-      closure_29.clipsSettings.decoupledClipsEnabled = true;
+      closure_31.clipsSettings.decoupledClipsEnabled = true;
     }
   },
   CLIPS_INIT: function handleClipsInit(applicationName) {
-    let c24 = null;
-    let obj = require(4313) /* isClipsEnabled */;
+    let c26 = null;
+    let obj = require(4342) /* isClipsEnabled */;
     if (obj.isClipsEnabled()) {
       obj = { applicationName: null, newClipIds: null, ended: false };
       obj[0] = applicationName.applicationName;
@@ -838,18 +834,18 @@ obj = {
   CLIPS_DISMISS_EDUCATION: function handleDismissClipsEducation(educationType) {
     educationType = educationType.educationType;
     if (_Error.Error === educationType) {
-      let c24 = null;
+      let c26 = null;
     } else if (tmp.Disabled === educationType) {
       const _Date = Date;
-      closure_29.clipsEducationState.dismissedAt = Date.now();
-      closure_29.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0;
-      const clipsEducationState = closure_29.clipsEducationState;
+      closure_31.clipsEducationState.dismissedAt = Date.now();
+      closure_31.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0;
+      const clipsEducationState = closure_31.clipsEducationState;
       clipsEducationState.numberOfTimesDismissed = clipsEducationState.numberOfTimesDismissed + 1;
     }
   },
   RUNNING_GAMES_CHANGE: function handleRunningGamesChange(added) {
     if (added.added.length > 0) {
-      const clipsEducationState = closure_29.clipsEducationState;
+      const clipsEducationState = closure_31.clipsEducationState;
       clipsEducationState.numberOfGamesLaunchedSinceDismissal = clipsEducationState.numberOfGamesLaunchedSinceDismissal + 1;
     }
   },
@@ -904,9 +900,9 @@ obj = {
   },
   LOGOUT: function reset() {
     map.clear();
-    let c20 = null;
-    let c19 = null;
-    let closure_23 = {};
+    let c22 = null;
+    let c21 = null;
+    let closure_25 = {};
   }
 };
 const clipsStoreClass = new ClipsStoreClass(require("dispatcher"), obj);

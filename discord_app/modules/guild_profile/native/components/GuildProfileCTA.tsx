@@ -1,33 +1,26 @@
 import noop from "noop";
-import ME from "ME";
-import { ProfileCustomizationScrollPositions as closure_6 } from "MAX_FAVORITES";
+import { AnalyticsObjects } from "ME";
+import { ProfileCustomizationScrollPositions as closure_5 } from "MAX_FAVORITES";
 import { jsx } from "jsxProd";
 
-let c4;
-let c5;
 const require = arg1;
-({ AnalyticsObjects: c4, JoinGuildSources: c5 } = ME);
 let result = require("MAX_FAVORITES").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileCTA.tsx");
 
 export default function GuildProfileCTA(profile) {
   let context;
   let inviteKey;
   profile = profile.profile;
-  let flag = profile.isLurkerServerPreview;
-  ({ context, inviteKey } = profile);
-  if (flag === undefined) {
-    flag = false;
-  }
   let guildId;
   let validInviteKey;
   let React;
   let callback1;
   let constants;
-  const tmp3 = guildId(validInviteKey[4])(profile, context, inviteKey);
-  guildId = tmp3.guildId;
-  validInviteKey = tmp3.validInviteKey;
-  const ctaType = tmp3.ctaType;
-  let obj = { scrollPosition: constants2.GUILD_TAG };
+  ({ context, inviteKey } = profile);
+  let tmp2 = guildId(validInviteKey[4])(profile, context, inviteKey);
+  guildId = tmp2.guildId;
+  validInviteKey = tmp2.validInviteKey;
+  const ctaType = tmp2.ctaType;
+  let obj = { scrollPosition: constants.GUILD_TAG };
   React = guildId(validInviteKey[5])(obj);
   let obj1 = React;
   const items = [guildId];
@@ -49,12 +42,12 @@ export default function GuildProfileCTA(profile) {
       const obj2 = guildId(validInviteKey[8]);
     }
   }, items1);
-  const tmp6 = guildId(validInviteKey[9])(guildId);
-  constants = tmp6;
+  const tmp5 = guildId(validInviteKey[9])(guildId);
+  constants = tmp5;
   const items2 = [guildId, ];
   let applicationStatus;
-  if (tmp6 != null) {
-    applicationStatus = tmp6.applicationStatus;
+  if (tmp5 != null) {
+    applicationStatus = tmp5.applicationStatus;
   }
   items2[1] = applicationStatus;
   const items3 = [guildId, callback1, profile.visibility, validInviteKey];
@@ -97,65 +90,59 @@ export default function GuildProfileCTA(profile) {
     profile(validInviteKey[14]).startLurking(guildId, obj);
   }, items4);
   const memo = obj1.useMemo(() => ({ grow: true, size: "lg", variant: "active" }), []);
-  if (flag) {
-    obj = { guildId: null, joinSource: null };
-    obj[0] = guildId;
-    obj[1] = constants.GUILD_PROFILE_LURKER;
-    return jsx(tmp(tmp2[15]), { guildId: null, joinSource: null });
-  } else if (profile(tmp2[4]).CTATypes.IS_MEMBER === ctaType) {
+  if (profile(validInviteKey[4]).CTATypes.IS_MEMBER === ctaType) {
     obj = {};
     const merged = Object.assign(memo);
     obj.onPress = callback;
-    const intl7 = tmp12(tmp2[17]).intl;
-    obj.text = intl7.string(tmp12(tmp2[17]).t.KLOhbO);
-    return jsx(tmp12(tmp2[16]).Button, {});
-  } else if (tmp12(tmp2[4]).CTATypes.ADOPT_TAG === ctaType) {
-    obj1 = {};
+    const intl7 = tmp11(tmp[16]).intl;
+    obj.text = intl7.string(tmp11(tmp[16]).t.KLOhbO);
+    return jsx(tmp11(tmp[15]).Button, {});
+  } else if (tmp11(tmp[4]).CTATypes.ADOPT_TAG === ctaType) {
+    obj = {};
     const merged1 = Object.assign(memo);
-    obj1.onPress = function handleGoToTagSettings() {
+    obj.onPress = function handleGoToTagSettings() {
       guildId(validInviteKey[6]).hideActionSheet("GuildProfileActionSheet:" + guildId);
       callback();
     };
-    const intl6 = tmp12(tmp2[17]).intl;
-    obj1.text = intl6.string(tmp12(tmp2[17]).t.cQDYRu);
-    return jsx(tmp12(tmp2[16]).Button, {});
-  } else if (tmp12(tmp2[4]).CTATypes.HAS_APPLICATION === ctaType) {
-    let obj2 = {};
+    const intl6 = tmp11(tmp[16]).intl;
+    obj.text = intl6.string(tmp11(tmp[16]).t.cQDYRu);
+    return jsx(tmp11(tmp[15]).Button, {});
+  } else if (tmp11(tmp[4]).CTATypes.HAS_APPLICATION === ctaType) {
+    obj1 = {};
     const merged2 = Object.assign(memo);
-    obj2.onPress = callback2;
-    const intl5 = tmp12(tmp2[17]).intl;
-    obj2.text = intl5.string(tmp12(tmp2[17]).t["4yfIDk"]);
-    return jsx(tmp12(tmp2[16]).Button, {});
-  } else if (tmp12(tmp2[4]).CTATypes.APPLY_TO_JOIN === ctaType) {
-    const obj3 = {};
+    obj1.onPress = callback2;
+    const intl5 = tmp11(tmp[16]).intl;
+    obj1.text = intl5.string(tmp11(tmp[16]).t["4yfIDk"]);
+    return jsx(tmp11(tmp[15]).Button, {});
+  } else if (tmp11(tmp[4]).CTATypes.APPLY_TO_JOIN === ctaType) {
+    let obj2 = {};
     const merged3 = Object.assign(memo);
-    obj3.onPress = callback3;
-    const intl4 = tmp12(tmp2[17]).intl;
-    obj3.text = intl4.string(tmp12(tmp2[17]).t["7XdMW2"]);
-    return jsx(tmp12(tmp2[16]).Button, {});
-  } else if (tmp12(tmp2[4]).CTATypes.LURK_DISCOVERABLE === ctaType) {
-    const obj4 = {};
+    obj2.onPress = callback3;
+    const intl4 = tmp11(tmp[16]).intl;
+    obj2.text = intl4.string(tmp11(tmp[16]).t["7XdMW2"]);
+    return jsx(tmp11(tmp[15]).Button, {});
+  } else if (tmp11(tmp[4]).CTATypes.LURK_DISCOVERABLE === ctaType) {
+    const obj3 = {};
     const merged4 = Object.assign(memo);
-    obj4.onPress = callback4;
-    const intl3 = tmp12(tmp2[17]).intl;
-    obj4.text = intl3.string(tmp12(tmp2[17]).t.XpeFYr);
-    return jsx(tmp12(tmp2[16]).Button, {});
-  } else if (tmp12(tmp2[4]).CTATypes.JOIN_VIA_INVITE === ctaType) {
-    const obj5 = {};
+    obj3.onPress = callback4;
+    const intl3 = tmp11(tmp[16]).intl;
+    obj3.text = intl3.string(tmp11(tmp[16]).t.XpeFYr);
+    return jsx(tmp11(tmp[15]).Button, {});
+  } else if (tmp11(tmp[4]).CTATypes.JOIN_VIA_INVITE === ctaType) {
+    const obj4 = {};
     const merged5 = Object.assign(memo);
-    obj5.onPress = callback1;
-    const intl2 = tmp12(tmp2[17]).intl;
-    obj5.text = intl2.string(tmp12(tmp2[17]).t.XpeFYr);
-    return jsx(tmp12(tmp2[16]).Button, {});
-  } else if (tmp12(tmp2[4]).CTATypes.ACCEPT_ROLES === ctaType) {
-    const obj6 = {};
+    obj4.onPress = callback1;
+    const intl2 = tmp11(tmp[16]).intl;
+    obj4.text = intl2.string(tmp11(tmp[16]).t.XpeFYr);
+    return jsx(tmp11(tmp[15]).Button, {});
+  } else if (tmp11(tmp[4]).CTATypes.ACCEPT_ROLES === ctaType) {
+    const obj5 = {};
     const merged6 = Object.assign(memo);
-    obj6.onPress = callback1;
-    const intl = tmp12(tmp2[17]).intl;
-    obj6.text = intl.string(tmp12(tmp2[17]).t.MMlhsr);
-    return jsx(tmp12(tmp2[16]).Button, {});
+    obj5.onPress = callback1;
+    const intl = tmp11(tmp[16]).intl;
+    obj5.text = intl.string(tmp11(tmp[16]).t.MMlhsr);
+    return jsx(tmp11(tmp[15]).Button, {});
   } else {
     return null;
   }
-  tmp = guildId;
 };

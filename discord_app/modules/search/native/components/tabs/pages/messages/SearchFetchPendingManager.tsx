@@ -32,8 +32,8 @@ const result = require("useInitialValue").fileFinishedImporting("modules/search/
 
 export const useSearchFetchPendingManager = function useSearchFetchPendingManager(searchContext) {
   const importDefault = searchContext;
-  const tmp = importDefault(5569)(() => {
-    if (typeof closure_3 !== "error") {
+  const tmp = importDefault(5598)(() => {
+    if (typeof closure_3 !== "find") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(closure_3.prototype);

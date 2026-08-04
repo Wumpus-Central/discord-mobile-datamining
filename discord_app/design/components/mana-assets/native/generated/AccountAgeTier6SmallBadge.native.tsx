@@ -21,7 +21,7 @@ export const AccountAgeTier6SmallBadge = function AccountAgeTier6SmallBadge(widt
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
   obj = { uri: null };
-  obj[0] = importDefault(5954);
+  obj[0] = importDefault(5964);
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -29,5 +29,5 @@ export const AccountAgeTier6SmallBadge = function AccountAgeTier6SmallBadge(widt
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(importDefault(5207), { width: num * num3, height: num2 * num3 });
+  return jsx(importDefault(5236), { width: num * num3, height: num2 * num3 });
 };

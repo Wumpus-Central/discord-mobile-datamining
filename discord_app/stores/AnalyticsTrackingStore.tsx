@@ -9,7 +9,7 @@ encodeProperties = {
   waitFor: items,
   getFingerprint: importDefaultResult.getFingerprint,
   getSessionId() {
-    const session = require(6820) /* trackHeartbeat */.getSession();
+    const session = require(6832) /* trackHeartbeat */.getSession();
     return session.then((uuid) => {
       let sessionId;
       if (uuid != null) {

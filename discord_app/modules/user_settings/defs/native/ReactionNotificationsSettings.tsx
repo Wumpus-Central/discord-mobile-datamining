@@ -1,8 +1,8 @@
 import createToggle from "createToggle";
 
 function onChange(arg0) {
-  const obj = require(3894) /* MAX_REACTIONS */;
-  const ReactionNotifications = require(3928) /* explicitContentFromProto */.ReactionNotifications;
+  const obj = require(3924) /* MAX_REACTIONS */;
+  const ReactionNotifications = require(3958) /* explicitContentFromProto */.ReactionNotifications;
   const result = obj.updateReactionNotificationsSetting(Number(arg0), ReactionNotifications.getSetting());
 }
 const radio = createToggle.createRadio({

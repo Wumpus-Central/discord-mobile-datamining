@@ -104,7 +104,7 @@ prototype["render"] = function render() {
     const NumberResult = Number(deadline);
     tmp2 = null != freezeAtRemainingSeconds && result <= freezeAtRemainingSeconds;
   }
-  return jsx(require(4251) /* Text */.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
+  return jsx(require(4281) /* Text */.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
 };
 let result = require("getSystemLocale").fileFinishedImporting("components_native/common/CountDown.tsx");
 

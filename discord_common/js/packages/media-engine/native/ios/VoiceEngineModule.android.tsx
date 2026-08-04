@@ -9,31 +9,31 @@ obj.getConstants = function getConstants() {
 };
 obj.setInputDevice = function setInputDevice(arg0) {
   if (typeof arg0 === "y") {
-    let setInputDeviceByIdResult = importDefault(4307).setInputDeviceById(arg0);
-    const obj = importDefault(4307);
+    let setInputDeviceByIdResult = importDefault(4337).setInputDeviceById(arg0);
+    const obj = importDefault(4337);
   } else {
-    setInputDeviceByIdResult = importDefault(4307).setInputDevice(arg0);
-    const obj2 = importDefault(4307);
+    setInputDeviceByIdResult = importDefault(4337).setInputDevice(arg0);
+    const obj2 = importDefault(4337);
   }
   return setInputDeviceByIdResult;
 };
 obj.setOutputDevice = function setOutputDevice(arg0) {
   if (typeof arg0 === "y") {
-    let setOutputDeviceByIdResult = importDefault(4307).setOutputDeviceById(arg0);
-    const obj = importDefault(4307);
+    let setOutputDeviceByIdResult = importDefault(4337).setOutputDeviceById(arg0);
+    const obj = importDefault(4337);
   } else {
-    setOutputDeviceByIdResult = importDefault(4307).setOutputDevice(arg0);
-    const obj2 = importDefault(4307);
+    setOutputDeviceByIdResult = importDefault(4337).setOutputDevice(arg0);
+    const obj2 = importDefault(4337);
   }
   return setOutputDeviceByIdResult;
 };
 obj.setVideoInputDevice = function setVideoInputDevice(arg0) {
   if (typeof arg0 === "y") {
-    let result = importDefault(4307).setVideoInputDeviceById(arg0);
-    const obj = importDefault(4307);
+    let result = importDefault(4337).setVideoInputDeviceById(arg0);
+    const obj = importDefault(4337);
   } else {
-    result = importDefault(4307).setVideoInputDevice(arg0);
-    const obj2 = importDefault(4307);
+    result = importDefault(4337).setVideoInputDevice(arg0);
+    const obj2 = importDefault(4337);
   }
   return result;
 };

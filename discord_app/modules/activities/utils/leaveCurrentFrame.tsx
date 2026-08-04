@@ -5,7 +5,7 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/le
 export const leaveCurrentFrame = function leaveCurrentFrame() {
   connectedFrame = connectedFrame.getConnectedFrame();
   if (null != connectedFrame) {
-    let obj = importDefault(10666)();
+    let obj = importDefault(10515)();
     obj = { applicationId: null };
     obj[0] = connectedFrame.applicationId;
     obj.leaveFrame(obj);

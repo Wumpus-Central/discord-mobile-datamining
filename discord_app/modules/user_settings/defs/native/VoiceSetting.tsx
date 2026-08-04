@@ -34,7 +34,7 @@ createToggle = {
 createToggle = {
   route: UserSettingsSections.VOICE,
   getComponent() {
-    return require(14350) /* KrispLogo */.default;
+    return require(14384) /* KrispLogo */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

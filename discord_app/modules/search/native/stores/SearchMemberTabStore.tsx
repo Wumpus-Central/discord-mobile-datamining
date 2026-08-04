@@ -65,7 +65,7 @@ prototype["search"] = function search(arg0, targetChannelId, str) {
   const trimmed = str.toLowerCase().trim();
   this.searchQueryString = trimmed;
   str = str.toLowerCase();
-  const members = importDefault(5170).requestMembers(arg0, trimmed, 50);
+  const members = importDefault(5199).requestMembers(arg0, trimmed, 50);
   const autocompleter = this.autocompleter;
   autocompleter.search(trimmed);
 };
@@ -131,7 +131,7 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(require(
     ({ channelId, searchQueryString } = arg0);
     let value = map.get(id);
     if (value == null) {
-      if (typeof GuildMemberSearchManager !== "error") {
+      if (typeof GuildMemberSearchManager !== "find") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(GuildMemberSearchManager.prototype);
@@ -167,8 +167,8 @@ const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(require(
           outer1_9.emitChange();
         }
       };
-      let tmp4 = importDefault(7218);
-      let items = [obj(7218).AutocompleterResultTypes.USER];
+      let tmp4 = importDefault(7230);
+      let items = [obj(7230).AutocompleterResultTypes.USER];
       tmp4 = new tmp4(onAutocompleterResultsChange, items, 50);
       obj.autocompleter = tmp4;
       const autocompleter = obj.autocompleter;

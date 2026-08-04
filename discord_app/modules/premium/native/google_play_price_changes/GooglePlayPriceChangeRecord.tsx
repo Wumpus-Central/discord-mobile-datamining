@@ -23,7 +23,7 @@ GooglePlayPriceChangeRecord["createFromServer"] = function createFromServer(arg0
   let user_id;
   ({ user_id, subscription_id, old_currency, old_price, new_currency, new_price, price_change_mode } = arg0);
   ({ expected_charge_time, price_change_id } = arg0);
-  if (typeof GooglePlayPriceChangeRecord !== "error") {
+  if (typeof GooglePlayPriceChangeRecord !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new GooglePlayPriceChangeRecord("Trying to call a non-function", GooglePlayPriceChangeRecord, new.target, user_id, subscription_id, old_currency, old_price, new_currency, new_price, price_change_mode);

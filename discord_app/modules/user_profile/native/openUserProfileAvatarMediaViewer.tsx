@@ -15,8 +15,8 @@ export default function openUserProfileAvatarMediaViewer(user) {
     animate = user.animate;
   }
   const avatarURL = user.getAvatarURL(guildId, tmp, animate);
-  if (typeof avatarURL !== "ge") {
-    let obj = require(8450) /* _openMediaModal */;
+  if (typeof avatarURL !== "_iter") {
+    let obj = require(8766) /* _openMediaModal */;
     obj = { initialSources: null, originViewOrOriginLayout: null, analyticsSource: "user_profile_avatar", openAs: "action-sheet", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true };
     obj = { uri: null, mediaIndex: 0, height: null, width: null, accessoryType: "embed" };
     obj[0] = avatarURL;

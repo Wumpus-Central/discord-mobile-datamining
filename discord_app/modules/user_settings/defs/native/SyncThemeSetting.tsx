@@ -41,10 +41,10 @@ createToggle = {
         prop = clientThemeSettings.customUserThemeSettings;
       }
     }
-    let obj = require(14412) /* track */;
+    let obj = require(14446) /* track */;
     obj = { is_sync_enabled, base_theme: theme.theme, client_theme: id, has_custom_theme: null != prop };
     obj.track(AnalyticEvents.SYNC_ACROSS_CLIENTS_TOGGLED, obj);
-    const result = importDefault(8175).setShouldSyncAppearanceSettings(is_sync_enabled);
+    const result = importDefault(8620).setShouldSyncAppearanceSettings(is_sync_enabled);
   },
   useDescription: function useSyncThemeAcrossClientsDescription() {
     const intl = require(1236) /* getSystemLocale */.intl;

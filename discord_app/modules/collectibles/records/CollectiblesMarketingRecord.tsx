@@ -18,7 +18,7 @@ prototype["fromServer"] = function fromServer(marketings) {
     marketings = {};
   }
   const entries = Object.entries(marketings);
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);

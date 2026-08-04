@@ -1,5 +1,5 @@
 import addLikelySubtags from "addLikelySubtags";
-import module_13440 from "module_13440";
+import module_13474 from "module_13474";
 
 String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
   const self = this;

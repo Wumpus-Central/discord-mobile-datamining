@@ -33,8 +33,8 @@ export const isEligibleWishlistItemOnMobile = function isEligibleWishlistItemOnM
       let prop = isWishlistOwner.isSocialLayerStorefrontMobilePurchasingEnabled;
       if (prop) {
         if (!isWishlistOwner) {
-          isWishlistOwner = require(5732) /* useSKUPrice */.isSlayerSkuAvailableOnThisPlatform(sku.sku);
-          const obj = require(5732) /* useSKUPrice */;
+          isWishlistOwner = require(5761) /* useSKUPrice */.isSlayerSkuAvailableOnThisPlatform(sku.sku);
+          const obj = require(5761) /* useSKUPrice */;
         }
         prop = isWishlistOwner;
       }

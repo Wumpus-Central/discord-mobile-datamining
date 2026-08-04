@@ -108,7 +108,7 @@ export default function usePrivateChannelWave(id) {
       }
     }
   }), items);
-  obj[0] = _require(15035).usePrivateChannelWaveEligible(id, arg1);
+  obj[0] = _require(15069).usePrivateChannelWaveEligible(id, arg1);
   obj[1] = callback;
   return obj;
 };

@@ -68,27 +68,27 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     }
     return tmp30;
   } else if (tmp.THERMAL_STATE_UPDATE === participantFromServer) {
-    const thermalState = require(10704) /* useThermalState */.getThermalState();
+    const thermalState = require(10554) /* useThermalState */.getThermalState();
     let tmp23 = null;
-    if (thermalState !== require(10704) /* useThermalState */.ThermalStates.UNHANDLED) {
+    if (thermalState !== require(10554) /* useThermalState */.ThermalStates.UNHANDLED) {
       let obj2 = { thermal_state: null };
       obj2[0] = thermalState;
       tmp23 = obj2;
     }
     return tmp23;
   } else if (tmp.ORIENTATION_UPDATE === participantFromServer) {
-    let obj3 = require(4786) /* getIsScreenLandscape */;
+    let obj3 = require(4815) /* getIsScreenLandscape */;
     obj3 = { screen_orientation: null };
     obj3[0] = obj3.getIsScreenLandscape() ? closure_7.LANDSCAPE : closure_7.PORTRAIT;
     return obj3;
   } else if (tmp.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === participantFromServer) {
-    obj2 = require(13605) /* activityInstanceConnectedParticipants */;
+    obj2 = require(13639) /* activityInstanceConnectedParticipants */;
     return obj2.activityInstanceConnectedParticipants();
   } else if (tmp.QUEST_ENROLLMENT_STATUS_UPDATE === participantFromServer) {
     const quest_id = c3.quest_id;
     if (quest_id) {
       quest = quest.getQuest(quest_id);
-      obj = require(7091) /* getApplicationIdsByTaskTypes */;
+      obj = require(7103) /* getApplicationIdsByTaskTypes */;
       const activityApplicationId = obj.getActivityApplicationId(quest);
       let tmp11 = null;
       if (null != quest) {

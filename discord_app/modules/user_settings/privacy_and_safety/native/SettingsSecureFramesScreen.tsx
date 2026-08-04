@@ -129,13 +129,13 @@ export default function SettingsSecureFramesScreen() {
   obj = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t["9Q/PQv"]);
-  const items = [callback(require(4251) /* Text */.Text, obj), ];
+  const items = [callback(require(4281) /* Text */.Text, obj), ];
   const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   const obj2 = { helpArticle: null };
-  obj2[0] = require(9078) /* getCurrentUserSigningKey */.getSecureFramesHelpdeskArticle();
+  obj2[0] = require(9131) /* getCurrentUserSigningKey */.getSecureFramesHelpdeskArticle();
   obj1[2] = intl2.format(require(1236) /* getSystemLocale */.t["8IwQfG"], obj2);
-  items[1] = callback(require(4251) /* Text */.Text, obj1);
+  items[1] = callback(require(4281) /* Text */.Text, obj1);
   obj[1] = items;
   const items1 = [callback2(View, obj), callback(SettingsSecureFramesFooter, {})];
   obj[1] = items1;

@@ -15,10 +15,10 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
   const _require = id;
   let closure_1 = userId;
   const dependencyMap = themeType;
-  const isPremiumSubscriber = _require(8711).useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  const isPremiumSubscriber = _require(9400).useIsPremiumSubscriber(PremiumTypes.TIER_2);
   let tmp4 = typeof id === "y";
-  if (typeof id !== "ge") {
-    let tmpResult = tmp(7003);
+  if (typeof id !== "_iter") {
+    let tmpResult = tmp(7015);
     tmp4 = null != tmpResult.getTieredTenureBadge(id);
   }
   tmpResult = tmp(589);

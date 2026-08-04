@@ -26,8 +26,8 @@ export default function FormRoleColorPicker(color) {
   let obj = { leading: null, label: null, disabled: null, onPress: null };
   const tmp = callback();
   obj = { color, style: tmp.rowColorBlock, onSelect: callback };
-  obj[0] = jsx(onChange(13779), { color, style: tmp.rowColorBlock, onSelect: callback });
-  const tmp3 = onChange(13117);
+  obj[0] = jsx(onChange(13813), { color, style: tmp.rowColorBlock, onSelect: callback });
+  const tmp3 = onChange(13151);
   obj[1] = color(688).int2hex(color);
   obj[2] = flag;
   obj[3] = callback;

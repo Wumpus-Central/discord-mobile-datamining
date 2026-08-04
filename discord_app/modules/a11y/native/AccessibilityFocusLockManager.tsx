@@ -50,8 +50,8 @@ prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusL
   }
   if (self._focusLockEnabled) {
     if (obj.isAndroid()) {
-      importDefault(4653).disableFocusLock();
-      let obj2 = importDefault(4653);
+      importDefault(4682).disableFocusLock();
+      let obj2 = importDefault(4682);
     } else {
       let DCDAccessibilityManager = NativeModules.DCDAccessibilityManager;
       DCDAccessibilityManager.disableFocusLock();
@@ -62,7 +62,7 @@ prototype["_updateAccessibilityFocusLock"] = function _updateAccessibilityFocusL
 };
 prototype["_initialize"] = function _initialize() {
   const self = this;
-  this._screenReaderEnabledListener = self(4652).addScreenReaderEnabledListener((_screenReaderEnabled) => {
+  this._screenReaderEnabledListener = self(4681).addScreenReaderEnabledListener((_screenReaderEnabled) => {
     self._screenReaderEnabled = _screenReaderEnabled;
     const result = self._updateAccessibilityFocusLock();
   });

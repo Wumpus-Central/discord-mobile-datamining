@@ -23,7 +23,7 @@ function MoreTipsModalScreen(learnMore) {
   let obj = { keyboardShouldPersistTaps: "handled", style: tmp.scroll, children: null };
   obj = { style: tmp.contentContainer, children: null };
   obj = { style: tmp.tipsContainer, children: null };
-  const items = [callback(importDefault(10331), { description, safetyTips, showHeader: true }), ];
+  const items = [callback(importDefault(10272), { description, safetyTips, showHeader: true }), ];
   let tmp2Result = null;
   if (null != learnMore) {
     const obj1 = { style: null, children: null };
@@ -38,10 +38,10 @@ function MoreTipsModalScreen(learnMore) {
   const obj3 = { variant: "eyebrow", color: "text-default", style: tmp.header, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj3[3] = intl.string(require(1236) /* getSystemLocale */.t.K5FKtc);
-  const items2 = [callback(require(4251) /* Text */.Text, obj3), actionItems];
+  const items2 = [callback(require(4281) /* Text */.Text, obj3), actionItems];
   obj2[0] = items2;
   items1[1] = closure_9(closure_4, obj2);
-  items1[2] = callback(importDefault(10595), { channelId, warningId, senderId });
+  items1[2] = callback(importDefault(10273), { channelId, warningId, senderId });
   obj[1] = items1;
   obj[2] = closure_9(closure_4, obj);
   return callback(closure_5, obj);
@@ -129,5 +129,5 @@ export default function MoreTipsModal(channelId) {
       return outer1_8(outer1_11, { channelId: c1, warningId: c2, senderId: c3, description: c4, safetyTips: c5, actionItems: c6, learnMore: c7 });
     }
   };
-  return callback(_require(5636).Navigator, { screens: { MORE_TIPS }, initialRouteName: "MORE_TIPS", headerStatusBarHeight: importDefault(1581)().top });
+  return callback(_require(5665).Navigator, { screens: { MORE_TIPS }, initialRouteName: "MORE_TIPS", headerStatusBarHeight: importDefault(1581)().top });
 };

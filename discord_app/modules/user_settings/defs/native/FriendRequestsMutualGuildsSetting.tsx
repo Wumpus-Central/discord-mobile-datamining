@@ -10,15 +10,15 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsMutualGuildsSettingValue() {
-    const FriendSourceFlagsSetting = setting(3928).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(3958).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
     return React.useMemo(() => setting(outer1_2[5]).computeFlags(setting), items).mutualGuilds;
   },
   onValueChange: function onFriendRequestsMutualGuildsSettingValueChange(arg0) {
-    const FriendSourceFlagsSetting = require(3928) /* explicitContentFromProto */.FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = require(3958) /* explicitContentFromProto */.FriendSourceFlagsSetting;
     const setting = FriendSourceFlagsSetting.getSetting();
-    const FriendSourceFlagsSetting2 = require(3928) /* explicitContentFromProto */.FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting2 = require(3958) /* explicitContentFromProto */.FriendSourceFlagsSetting;
     const obj = importAll(1384);
     if (arg0) {
       let addFlagResult = obj.addFlag(setting, FriendSourceFlags.MUTUAL_GUILDS);
@@ -28,7 +28,7 @@ createToggle = {
     FriendSourceFlagsSetting2.updateSetting(addFlagResult);
   },
   useIsDisabled() {
-    return require(13941) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    return require(13975) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
   }
 };
 createToggle = createToggle.createToggle(createToggle);

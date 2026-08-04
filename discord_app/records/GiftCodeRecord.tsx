@@ -32,7 +32,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let tmp4 = null;
   if (null != user.expires_at) {
-    tmp4 = importDefault(3837)(user.expires_at);
+    tmp4 = importDefault(3867)(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -67,7 +67,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
     fromServer1 = createFromServer.createFromServer(user.promotion);
     const tmp11 = createFromServer;
   }
-  if (typeof GiftCodeRecord !== "error") {
+  if (typeof GiftCodeRecord !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const tmp13 = new GiftCodeRecord("Trying to call a non-function", tmp11, promotion, GiftCodeRecord, new.target, id, code, sku_id, application_id, uses, max_uses, tmp4, redeemed, id1, subscription_plan_id, fromServer, entitlement_branches, num);
@@ -95,8 +95,8 @@ prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = importDefault(3837)().isAfter(expiresAt);
-    const obj = importDefault(3837)();
+    isAfterResult = importDefault(3867)().isAfter(expiresAt);
+    const obj = importDefault(3867)();
   }
   return isAfterResult;
 };

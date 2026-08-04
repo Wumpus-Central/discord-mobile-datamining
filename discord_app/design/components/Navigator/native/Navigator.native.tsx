@@ -234,8 +234,8 @@ function WrappedNavigationStack(arg0) {
     }
     return tmp2;
   }), 1)[0];
-  const tmp4 = navigationContainerRef(4191)();
-  navigationTheme = require(5705) /* useNavigationTheme */.useNavigationTheme(tmp4);
+  const tmp4 = navigationContainerRef(4221)();
+  navigationTheme = require(5734) /* useNavigationTheme */.useNavigationTheme(tmp4);
   obj = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, independent: true, children: null };
   obj[1] = navigationTheme;
   if (null == initialRouteState) {
@@ -273,7 +273,7 @@ export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDa
   return React.useMemo(getNextRenewalDateLabel, items);
 };
 export const useAccessibilityNativeStackOptions = function useAccessibilityNativeStackOptions() {
-  navigatorShouldCrossfade = navigatorShouldCrossfade(5637).useNavigatorShouldCrossfade();
+  navigatorShouldCrossfade = navigatorShouldCrossfade(5666).useNavigatorShouldCrossfade();
   const items = [navigatorShouldCrossfade];
   return React.useMemo(() => {
     let obj;

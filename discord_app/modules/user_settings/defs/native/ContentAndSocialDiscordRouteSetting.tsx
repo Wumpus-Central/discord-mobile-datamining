@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CONTENT_AND_SOCIAL,
   getComponent() {
-    return require(14743) /* ContentAndSocialSettings */.DiscordPermissionsPage;
+    return require(14777) /* ContentAndSocialSettings */.DiscordPermissionsPage;
   }
 };
 const route = createToggle.createRoute(obj);

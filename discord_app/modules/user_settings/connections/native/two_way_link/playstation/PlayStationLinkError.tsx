@@ -12,7 +12,7 @@ export const PlayStationLinkError = function PlayStationLinkError(arg0) {
   ({ onClose, errorCode } = arg0);
   let obj = require(1480) /* useNavigation */;
   const navigation = obj.useNavigation();
-  const connectRetry = require(9165) /* useConnectRetry */.useConnectRetry(navigation, constants.PRE_CONNECT);
+  const connectRetry = require(10468) /* useConnectRetry */.useConnectRetry(navigation, constants.PRE_CONNECT);
   if (errorCode === AbortCodes.UNDER_MINIMUM_AGE) {
     const intl2 = tmp(1236).intl;
     let stringResult = intl2.string(tmp(1236).t["3dIn2A"]);
@@ -26,5 +26,5 @@ export const PlayStationLinkError = function PlayStationLinkError(arg0) {
   obj[1] = stringResult;
   obj[2] = onClose;
   obj[3] = connectRetry;
-  return jsx(require(9166) /* TwoWayLinkError */.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
+  return jsx(require(10469) /* TwoWayLinkError */.TwoWayLinkError, { title: null, body: null, onClose: null, onRetry: null });
 };

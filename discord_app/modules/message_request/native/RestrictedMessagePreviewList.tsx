@@ -27,11 +27,11 @@ function HiddenMedia(length) {
 
   ];
   obj = { style: tmp.mediaHiddenRow, children: null };
-  const items1 = [callback(_require(4211).CircleInformationIcon, { size: "sm", color: "text-muted" }), ];
+  const items1 = [callback(_require(4241).CircleInformationIcon, { size: "sm", color: "text-muted" }), ];
   obj = { variant: "text-sm/normal", color: "text-muted", children: null };
   let intl = _require(1236).intl;
   obj[2] = intl.string(_require(1236).t["VGf+K3"]);
-  items1[1] = callback(_require(4251).Text, obj);
+  items1[1] = callback(_require(4281).Text, obj);
   obj[1] = items1;
   items[1] = callback2(View, obj);
   obj[0] = items;

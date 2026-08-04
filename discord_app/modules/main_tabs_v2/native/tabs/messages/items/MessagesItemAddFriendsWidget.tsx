@@ -59,7 +59,7 @@ function _getFriendInviteCode() {
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          let obj2 = code(3955);
+          let obj2 = code(3985);
           const intl = code(1236).intl;
           obj2.presentError(intl.string(code(1236).t.R0RpRX));
           c5 = 3;
@@ -161,10 +161,10 @@ function _handleShare() {
           return obj;
         } else {
           callback = arg1;
-          const obj5 = callback(8657);
+          const obj5 = callback(8987);
           const intl = callback(1236).intl;
           const obj2 = { link: null };
-          obj2[0] = callback2(7126)(callback);
+          obj2[0] = callback2(7138)(callback);
           obj5.handleOpenShareSheet(callback, null, intl.formatToPlainString(callback(1236).t.PJf9P9, obj2), constants.ADD_FRIENDS_WIDGET);
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -298,22 +298,22 @@ const memoResult = importAllResult.memo(function MessagesItemAddFriendsWidget() 
   obj = { variant: "text-md/semibold", color: "text-default", lineClamp: 1, maxFontSizeMultiplier: 2, children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[4] = intl2.string(require(1236) /* getSystemLocale */.t.afcl67);
-  obj[4] = callback2(require(4251) /* Text */.Text, obj);
-  const items = [callback2(require(4783) /* PressableBase */.PressableHighlight, obj), ];
+  obj[4] = callback2(require(4281) /* Text */.Text, obj);
+  const items = [callback2(require(4812) /* PressableBase */.PressableHighlight, obj), ];
   const obj1 = { style: tmp.actions, children: null };
   const obj2 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj2[2] = importDefault(13075);
+  obj2[2] = importDefault(13109);
   obj2[3] = handleShare;
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj2[4] = intl3.string(require(1236) /* getSystemLocale */.t.Ej3B3Y);
-  const items1 = [callback2(importDefault(10277), obj2), ];
+  const items1 = [callback2(importDefault(12445), obj2), ];
   const obj3 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  const tmp3 = importDefault(10277);
-  obj3[2] = importDefault(15094);
+  const tmp3 = importDefault(12445);
+  obj3[2] = importDefault(15128);
   obj3[3] = handleLink;
   const intl4 = require(1236) /* getSystemLocale */.intl;
   obj3[4] = intl4.string(require(1236) /* getSystemLocale */.t.WqhZss);
-  items1[1] = callback2(importDefault(10277), obj3);
+  items1[1] = callback2(importDefault(12445), obj3);
   obj1[1] = items1;
   items[1] = callback3(View, obj1);
   obj[2] = items;

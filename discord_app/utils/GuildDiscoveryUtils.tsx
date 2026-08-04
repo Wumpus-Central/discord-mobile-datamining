@@ -80,25 +80,16 @@ function _startLurking() {
             if (null != joinedAt.joinedAt) {
               if (c9) {
                 if (null == page) {
-                  throwTypeErrorResult = onSuccess;
-                  throwTypeErrorResult = joinSource;
-                  throwTypeErrorResult = callback;
-                  throwTypeErrorResult = obj1;
-                  throwTypeErrorResult = callback;
-                  throwTypeErrorResult = obj3;
                   throwTypeErrorResult = callback(obj1[6]).transitionToGuild(callback, obj3);
-                  const obj19 = callback(obj1[6]);
+                  const obj17 = callback(obj1[6]);
                 } else {
-                  throwTypeErrorResult = obj1;
                   const obj5 = {};
-                  throwTypeErrorResult = obj3;
-                  throwTypeErrorResult = obj5;
-                  throwTypeErrorResult = history.CHANNEL(callback, page, obj1.messageId);
-                  throwTypeErrorResult = Object.assign(obj3);
+                  const tmp84 = lib(obj1[7]);
+                  const merged = Object.assign(obj3);
                   obj5.navigationReplace = true;
                   obj5.openChannel = true;
-                  throwTypeErrorResult = lib(obj1[7])(throwTypeErrorResult, obj5);
-                  const tmp96 = lib(obj1[7]);
+                  tmp84(history.CHANNEL(callback, page, obj1.messageId), obj5);
+                  const CHANNELResult = history.CHANNEL(callback, page, obj1.messageId);
                 }
               }
             }
@@ -106,9 +97,9 @@ function _startLurking() {
           if (null != joinedAt) {
             if (page.isLurking(callback)) {
               if (c9) {
-                const obj15 = lib(obj1[8]);
+                let obj12 = lib(obj1[8]);
                 obj6 = {};
-                const merged = Object.assign(obj3);
+                const merged1 = Object.assign(obj3);
                 obj6.welcomeModalChannelId = page;
                 obj6.navigationReplace = null != page;
                 obj6.openChannel = null != page;
@@ -116,7 +107,7 @@ function _startLurking() {
                 loadId = 2;
                 shouldNavigate = 1;
                 const obj7 = { value: null, done: false };
-                obj7[0] = obj15.transitionToGuildSync(callback, obj6, page, obj1.messageId);
+                obj7[0] = obj12.transitionToGuildSync(callback, obj6, page, obj1.messageId);
                 return obj7;
               }
             }
@@ -133,12 +124,7 @@ function _startLurking() {
             }
           }
           let closure_13 = page;
-          let obj9 = callback(obj1[9]);
-          if (obj9.getMobileLurkerServerPreview("startLurking").enabled) {
-            let obj10 = callback(obj1[10]);
-            obj10.trackLurkStarted(callback, joinSource, closure_13);
-          }
-          let obj11 = lib(obj1[8]);
+          let obj9 = lib(obj1[8]);
           const obj8 = { lurker: true, source: null, loadId: null, lurkLocation: null };
           obj8[1] = joinSource;
           obj8[2] = loadId;
@@ -146,7 +132,7 @@ function _startLurking() {
           loadId = 3;
           shouldNavigate = 1;
           obj9 = { value: null, done: false };
-          obj9[0] = obj11.joinGuild(callback, obj8);
+          obj9[0] = obj9.joinGuild(callback, obj8);
           return obj9;
         }
       } else if (2 === tmp5) {
@@ -155,7 +141,7 @@ function _startLurking() {
           throw arg1;
         } else if (arg0 === 2) {
           shouldNavigate = 3;
-          obj10 = { value: null, done: true };
+          const obj10 = { value: null, done: true };
           obj10[0] = arg1;
           return obj10;
         }
@@ -165,7 +151,7 @@ function _startLurking() {
           throw arg1;
         } else if (arg0 === 2) {
           shouldNavigate = 3;
-          obj11 = { value: null, done: true };
+          const obj11 = { value: null, done: true };
           obj11[0] = arg1;
           return obj11;
         } else {
@@ -173,8 +159,8 @@ function _startLurking() {
           throwTypeErrorResult = c9;
           if (c9) {
             obj1 = lib(obj1[8]);
-            const obj12 = {};
-            const merged1 = Object.assign(obj3);
+            obj12 = {};
+            const merged2 = Object.assign(obj3);
             obj12.welcomeModalChannelId = page;
             obj12.navigationReplace = null != page;
             obj12.openChannel = null != page;
@@ -260,12 +246,12 @@ function _getDiscoverableGuild() {
               let lib;
               first = undefined;
               let c4 = 1;
-              const HTTP = lib(outer1_2[12]).HTTP;
+              const HTTP = lib(outer1_2[10]).HTTP;
               const obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
               obj1[0] = outer1_9.GUILD_DISCOVERY;
               const obj2 = { guild_ids: null };
               obj2[0] = lib;
-              obj1[1] = outer1_1(outer1_2[13]).stringify(obj2);
+              obj1[1] = outer1_1(outer1_2[11]).stringify(obj2);
               c5 = 2;
               c6 = 1;
               const obj3 = { value: null, done: false };
@@ -359,7 +345,7 @@ function _fetchPublicDiscoveryGuild() {
               let closure_1 = tmp6;
               body = undefined;
               let c3 = 1;
-              const HTTP = callback(table[12]).HTTP;
+              const HTTP = callback(table[10]).HTTP;
               const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
               const _String = String;
               obj1[0] = outer1_9.GUILD_DISCOVERY_SLUG(String(body));
@@ -434,7 +420,7 @@ const result = require("handleInviteData").fileFinishedImporting("utils/GuildDis
 export const AnalyticsContexts = { SEARCH: "Search", RECOMMENDED: "Recommended", POPULAR: "Popular", RECOMMENDED_E3: "Recommended - E3", HEADER: "Header", GLOBAL_DISCOVERY: "Global Discovery", FORWARD_BREADCRUMB: "Forward Breadcrumb" };
 export const IOS_MINIMUM_MEMBER_COUNT = ">1000";
 export const MINIMUM_MEMBER_COUNT = ">200";
-export const startLurking = function startLurking(id, c4, arg2, c42) {
+export const startLurking = function startLurking(guildId, c4, arg2, c42) {
   const self = this;
   const apply = _startLurking.apply;
   if (typeof apply === "unknown") {

@@ -26,5 +26,5 @@ export const useGetOrFetchNotificationCenterItemsApplications = function useGetO
     });
     return items;
   }, items);
-  return importDefault(5587)(memo);
+  return importDefault(5616)(memo);
 };

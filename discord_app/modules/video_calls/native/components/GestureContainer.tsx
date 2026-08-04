@@ -23,9 +23,9 @@ export default function GestureContainer(children) {
   let sharedValue;
   const tmp = createCacheKey();
   height = sharedValue(1474)().height;
-  let obj = height(4116);
+  let obj = height(4146);
   sharedValue = obj.useSharedValue(0);
-  const Gesture = height(5339).Gesture;
+  const Gesture = height(5368).Gesture;
   const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
   const PanResult = Gesture.Pan();
   class S {
@@ -50,7 +50,7 @@ export default function GestureContainer(children) {
     }
     height(outer1_2[8]).runOnJS(sharedValue(outer1_2[10]).pop)();
   };
-  obj = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4116).runOnJS, ModalActionCreators: sharedValue(4461), withTiming: height(4256).withTiming, DECELERATED_EASING: height(1297).DECELERATED_EASING };
+  obj = { position: sharedValue, THRESHOLD_VELOCITY: 500, runOnJS: height(4146).runOnJS, ModalActionCreators: sharedValue(4490), withTiming: height(4286).withTiming, DECELERATED_EASING: height(1297).DECELERATED_EASING };
   fn.__closure = obj;
   fn.__workletHash = 10736744030668;
   fn.__initData = closure_9;
@@ -73,14 +73,14 @@ export default function GestureContainer(children) {
     obj[1] = items1;
     return obj;
   };
-  obj = { interpolate: height(4116).interpolate, position: sharedValue, height };
+  obj = { interpolate: height(4146).interpolate, position: sharedValue, height };
   fn2.__closure = obj;
   fn2.__workletHash = 16049033434372;
   fn2.__initData = closure_11;
   const obj1 = { style: tmp.background, children: null };
-  const animatedStyle = height(4116).useAnimatedStyle(fn2);
+  const animatedStyle = height(4146).useAnimatedStyle(fn2);
   let obj2 = { gesture: failOffsetXResult, children: null };
-  obj2[1] = jsx(sharedValue(4116).View, { style: animatedStyle, children: children.children });
-  obj1[1] = jsx(height(5339).GestureDetector, { gesture: failOffsetXResult, children: null });
+  obj2[1] = jsx(sharedValue(4146).View, { style: animatedStyle, children: children.children });
+  obj1[1] = jsx(height(5368).GestureDetector, { gesture: failOffsetXResult, children: null });
   return <View style={tmp.background}>{null}</View>;
 };

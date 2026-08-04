@@ -7,7 +7,7 @@ const result = require("MAX_FAVORITES").fileFinishedImporting("modules/user_sett
 
 export const defineProtoSetting = function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, set) {
   let getSetting = textAndImages;
-  let f73481 = activityRestrictedGuildIds;
+  let f73576 = activityRestrictedGuildIds;
   let closure_2 = explicitContentFromProto;
   let initialize = explicitContentToProto;
   let obj = set;
@@ -27,7 +27,7 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
   getSetting = function getSetting() {
     let tmp3;
     if (INFREQUENT_USER_ACTION.settings[getSetting] != null) {
-      tmp3 = tmp2[f73481];
+      tmp3 = tmp2[f73576];
     }
     return closure_2(tmp3);
   };
@@ -35,17 +35,17 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
     getSetting,
     updateSetting: (arg0) => {
       let tmp2 = arg0;
-      if (typeof arg0 !== "HAS_APPLICATION") {
+      if (typeof arg0 !== "three_button_mouse") {
         tmp2 = arg0(getSetting());
       }
-      return f73488(tmp2);
+      return f73583(tmp2);
     },
     useSetting() {
       const items = [INFREQUENT_USER_ACTION];
       return getSetting(explicitContentFromProto[4]).useStateFromStores(items, getSetting, undefined, fn);
     }
   };
-  f73481 = (favorites) => {
+  f73576 = (favorites) => {
     let closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(explicitContentFromProto[3]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync(closure_0, (arg0) => {
@@ -56,10 +56,10 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
 };
 export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animateEmoji) {
   let getSetting = defineProtoSetting;
-  let f73485 = text;
+  let f73580 = text;
   let closure_2 = animateEmoji;
   getSetting = function getSetting() {
-    const tmp = outer1_3.getState()[f73485];
+    const tmp = outer1_3.getState()[f73580];
     let setting;
     if (tmp != null) {
       setting = tmp.settings[closure_2];
@@ -69,18 +69,18 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
     }
     return setting;
   };
-  f73485 = (arg0) => {
-    if (outer1_3.shouldSync(f73485)) {
+  f73580 = (arg0) => {
+    if (outer1_3.shouldSync(f73580)) {
       let updateSettingResult = getSetting.updateSetting(arg0);
     } else {
-      let obj = f73485(animateEmoji[5]);
+      let obj = f73580(animateEmoji[5]);
       obj = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
       obj = {};
       const obj1 = { settings: null };
       const obj2 = {};
       obj2[animateEmoji] = arg0;
       obj1[0] = obj2;
-      obj[f73485] = obj1;
+      obj[f73580] = obj1;
       obj[1] = obj;
       obj.dispatch(obj);
       updateSettingResult = Promise.resolve();
@@ -107,16 +107,16 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
     },
     updateSetting: (arg0) => {
       let tmp2 = arg0;
-      if (typeof arg0 !== "HAS_APPLICATION") {
+      if (typeof arg0 !== "three_button_mouse") {
         tmp2 = arg0(getSetting());
       }
-      return f73488(tmp2);
+      return f73583(tmp2);
     }
   };
 }
 export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, arg3) {
   let getSetting = defineProtoSetting;
-  let f73488 = animateEmoji;
+  let f73583 = animateEmoji;
   let closure_2 = arg2;
   let initialize = arg3;
   getSetting = function getSetting() {
@@ -126,9 +126,9 @@ export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, 
     }
     return setting;
   };
-  f73488 = (arg0) => {
-    const items = [f73488];
-    f73488(709).dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items });
+  f73583 = (arg0) => {
+    const items = [f73583];
+    f73583(709).dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: items });
     return getSetting.updateSetting(arg0);
   };
   return {
@@ -143,10 +143,10 @@ export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, 
     },
     updateSetting: (arg0) => {
       let tmp2 = arg0;
-      if (typeof arg0 !== "HAS_APPLICATION") {
+      if (typeof arg0 !== "three_button_mouse") {
         tmp2 = arg0(getSetting());
       }
-      return f73488(tmp2);
+      return f73583(tmp2);
     }
   };
 }

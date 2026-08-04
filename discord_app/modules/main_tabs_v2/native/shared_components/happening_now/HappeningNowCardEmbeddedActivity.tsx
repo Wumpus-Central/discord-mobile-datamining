@@ -1,6 +1,6 @@
 import _slicedToArray from "_slicedToArray";
 import encodeProperties from "encodeProperties";
-import { View } from "module_4116";
+import { View } from "module_4146";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
 import { AnalyticEvents } from "ME";

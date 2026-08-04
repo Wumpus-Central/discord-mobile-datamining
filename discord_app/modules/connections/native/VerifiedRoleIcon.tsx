@@ -36,11 +36,11 @@ export default function VerifiedRoleIcon(arg0) {
   if (roleColor == null) {
     roleColor = closure_3;
   }
-  let obj = require(5626) /* getHigherContrastColor */;
+  let obj = require(5655) /* getHigherContrastColor */;
   const items = [WHITE, PRIMARY_630];
   const diff = size - size / 8 * 2;
   const higherContrastColor = obj.getHigherContrastColor({ backgroundColor: roleColor, colors: items });
-  let obj1 = require(5605) /* useRoleIcon */;
+  let obj1 = require(5634) /* useRoleIcon */;
   obj = { guildId, roleId: null, size: null };
   if (roleId == null) {
     let id;
@@ -64,7 +64,7 @@ export default function VerifiedRoleIcon(arg0) {
     obj2[1] = diff;
     obj1[0] = obj2;
     obj1[2] = higherContrastColor;
-    roleIcon = tmp9(require(4199) /* LinkIcon */.LinkIcon, obj1);
+    roleIcon = tmp9(require(4229) /* LinkIcon */.LinkIcon, obj1);
   }
   obj[1] = roleIcon;
   return <View style={items1}>{null}</View>;

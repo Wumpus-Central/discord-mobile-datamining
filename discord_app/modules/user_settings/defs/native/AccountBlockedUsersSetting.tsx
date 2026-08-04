@@ -20,7 +20,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.BLOCKED_USERS_V2,
   getComponent() {
-    return require(13918) /* BlockedUsersList */.default;
+    return require(13952) /* BlockedUsersList */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

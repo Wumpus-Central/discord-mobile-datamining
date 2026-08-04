@@ -12,7 +12,7 @@ export default function LabelLayoutComponent(arg0) {
   let renderComponent;
   ({ component, renderComponent } = arg0);
   ({ label, description } = arg0);
-  let obj = require(8014) /* isInteractionComponent */;
+  let obj = require(8026) /* isInteractionComponent */;
   const componentError = obj.useComponentError(component);
   if (component.type === require(1906) /* PermissionOverwriteType */.ComponentType.CHECKBOX) {
     let renderComponentResult = renderComponent(component, "label-child");
@@ -26,7 +26,7 @@ export default function LabelLayoutComponent(arg0) {
     obj[0] = { width: "100%" };
     obj[1] = renderComponent(component, "label-child");
     obj[4] = <View style={null}>{null}</View>;
-    renderComponentResult = jsx(require(7702) /* Input */.Input, { style: null, children: null });
+    renderComponentResult = jsx(require(7714) /* Input */.Input, { style: null, children: null });
   }
   return renderComponentResult;
 };

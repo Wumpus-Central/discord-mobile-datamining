@@ -14,7 +14,7 @@ export default function FormTrialIntervalPicker(disabled) {
     let intl = interval(1236).intl;
     let stringResult = intl.string(interval(1236).t.WZG1BU);
   } else {
-    let obj = interval(14334);
+    let obj = interval(14368);
     stringResult = obj.formatPlanIntervalDuration(interval);
   }
   obj = {
@@ -40,7 +40,7 @@ export default function FormTrialIntervalPicker(disabled) {
     },
     disabled: disabled.disabled
   };
-  return jsx(importDefault(13117), {
+  return jsx(importDefault(13151), {
     label: stringResult,
     onPress() {
       let obj = outer1_1(outer1_2[5]);

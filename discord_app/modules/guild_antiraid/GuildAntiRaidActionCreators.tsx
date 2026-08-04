@@ -138,7 +138,7 @@ function _setGuildIncidentActions() {
               }
               let toISOStringResult = null;
               if (tmp5) {
-                let obj2 = callback2(3837)();
+                let obj2 = callback2(3867)();
                 toISOStringResult = obj2.add(tmp8, "hours").toISOString();
                 const addResult = obj2.add(tmp8, "hours");
               }
@@ -237,7 +237,7 @@ function _handleResolveRaid() {
               guild = guild.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = callback2(10421)(guild);
+                tmp8 = callback2(9691)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {
@@ -328,7 +328,7 @@ function _handleReportRaid() {
               const guild = outer1_4.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
-                tmp8 = v0(10421)(guild);
+                tmp8 = v0(9691)(guild);
               }
               let tmp5 = null;
               if (null != tmp8) {
@@ -388,11 +388,11 @@ export const trackReportRaidViewed = function trackReportRaidViewed(onChange, on
   if (0 !== items.length) {
     let obj = importDefault(698);
     obj = {};
-    const merged = Object.assign(require(4450) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(onChange));
+    const merged = Object.assign(require(4479) /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(onChange));
     obj.guild_id = onChange;
     obj.raid_types = items;
     obj.track(constants.GUILD_RAID_REPORTED, obj);
-    const obj3 = require(4450) /* collectGuildAnalyticsMetadata */;
+    const obj3 = require(4479) /* collectGuildAnalyticsMetadata */;
   }
 };
 export const setGuildRaidAlerts = function setGuildRaidAlerts() {

@@ -5,11 +5,11 @@ let closure_3 = 10 * require("set").Millis.SECOND;
 let result = require("isIncomingVideoEnabled").fileFinishedImporting("modules/errors/av_errors/AVErrorUtils.tsx");
 
 export const getReportInboundErrors = function getReportInboundErrors() {
-  const WindowVisibilityVideoManager = require(10757) /* isIncomingVideoEnabled */.WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = require(10607) /* isIncomingVideoEnabled */.WindowVisibilityVideoManager;
   let result = WindowVisibilityVideoManager.isIncomingVideoEnabled();
   if (result) {
     const _performance = performance;
-    const WindowVisibilityVideoManager2 = require(10757) /* isIncomingVideoEnabled */.WindowVisibilityVideoManager;
+    const WindowVisibilityVideoManager2 = require(10607) /* isIncomingVideoEnabled */.WindowVisibilityVideoManager;
     result = performance.now() - WindowVisibilityVideoManager2.lastIncomingVideoEnabledChangeTime() > closure_3;
     const nowResult = performance.now();
   }

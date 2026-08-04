@@ -10,9 +10,9 @@ export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpirin
   const items = [clearDismissUntil];
   const stateFromStores = require(647) /* defaultAreStatesEqual */.useStateFromStores(items, () => noticeType.getNoticeType());
   const obj = require(647) /* defaultAreStatesEqual */;
-  const premiumTrialOffer = require(6808) /* usePremiumTrialOffer */.usePremiumTrialOffer();
+  const premiumTrialOffer = require(6820) /* usePremiumTrialOffer */.usePremiumTrialOffer();
   let num = 0;
-  const obj2 = require(6808) /* usePremiumTrialOffer */;
+  const obj2 = require(6820) /* usePremiumTrialOffer */;
   if (null != premiumTrialOffer) {
     num = 0;
     if (null != premiumTrialOffer.expires_at) {
@@ -21,7 +21,7 @@ export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpirin
     }
   }
   let tmp6 = null != premiumTrialOffer;
-  const tmp3 = importDefault(6800);
+  const tmp3 = importDefault(6812);
   if (tmp6) {
     tmp6 = null != stateFromStores;
   }

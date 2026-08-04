@@ -6,9 +6,9 @@ import { VoicePanelControlsModes } from "VoicePanelControlsModes";
 import { VoicePanelPIPModes } from "VoicePanelPIPModes";
 import { SCALE_PHYSICS } from "MIN_PAN_GESTURE_MOVE";
 import jsxProd from "u";
-import module_10763 from "module_10763";
+import module_10613 from "module_10613";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4116";
+import importDefaultResult from "module_4146";
 
 let closure_12;
 let unpackModuleId;
@@ -228,7 +228,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
           tmp12 = outer1_54;
           runOnJSResult = tmp2Result.runOnJS(isScrollVisible);
           tmp13 = id;
-          if (typeof outer1_54 !== "error") {
+          if (typeof outer1_54 !== "find") {
             str = "Trying to call a non-function";
             throwTypeErrorResult = HermesBuiltin.throwTypeError();
           }
@@ -874,7 +874,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
       value = store3.get();
       scaleChange = scaleChange.scaleChange;
       const value1 = store11.get();
-      if (typeof outer1_17 !== "error") {
+      if (typeof outer1_17 !== "find") {
         HermesBuiltin.throwTypeError();
       }
       let sum = scaleChange;
@@ -960,7 +960,7 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
         let value = store3.get();
         value = store3.get();
         const value1 = store11.get();
-        if (typeof outer1_17 !== "error") {
+        if (typeof outer1_17 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         const sum = 1 + result;
@@ -1050,8 +1050,8 @@ const memoResult = importAllResult.memo(function VideoRenderer(streamKey) {
         tmp4 = streamKey;
         if (!obj.cheapWorkletShallowEqual(streamKey, tmp)) {
           tmp2Result = tmp2(tmp3[8]);
-          tmp5 = f98706;
-          tmp6 = tmp2Result.runOnJS(f98706)();
+          tmp5 = f98804;
+          tmp6 = tmp2Result.runOnJS(f98804)();
         }
       }
       return;

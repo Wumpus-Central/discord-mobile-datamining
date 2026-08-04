@@ -49,8 +49,8 @@ function canReactToMessageInternal(state, getGuildId, items) {
     const obj5 = require(1384) /* hasFlag */;
   }
   if (canResult) {
-    canResult = !require(3872) /* isCommunicationDisabled */.isMemberCommunicationDisabled(member);
-    const obj6 = require(3872) /* isCommunicationDisabled */;
+    canResult = !require(3902) /* isCommunicationDisabled */.isMemberCommunicationDisabled(member);
+    const obj6 = require(3902) /* isCommunicationDisabled */;
   }
   return canResult;
 }

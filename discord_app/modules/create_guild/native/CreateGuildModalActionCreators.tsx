@@ -7,26 +7,26 @@ const result = require("CreateGuildModal").fileFinishedImporting("modules/create
 
 export default {
   openCreateGuildModal(onSuccess) {
-    let obj = importDefault(4461);
+    let obj = importDefault(4490);
     obj = { onSuccess };
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(11916, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(require(1959) /* asyncRequireImpl */(11977, dependencyMap.paths), obj, closure_4);
   },
   closeCreateGuildModal() {
-    importDefault(4461).popWithKey(closure_4);
+    importDefault(4490).popWithKey(closure_4);
   },
   closeCreateGuildOnboardingModal() {
-    importDefault(4461).popWithKey(closure_4);
-    const obj = importDefault(4461);
-    require(11911) /* _startContactSyncForDiscoverability */.nextOnboardingStep({});
+    importDefault(4490).popWithKey(closure_4);
+    const obj = importDefault(4490);
+    require(11972) /* _startContactSyncForDiscoverability */.nextOnboardingStep({});
   },
   openGuildInviteScreen(channel) {
-    let obj = importDefault(4461);
+    let obj = importDefault(4490);
     obj = { channel };
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(11916, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(require(1959) /* asyncRequireImpl */(11977, dependencyMap.paths), obj, closure_4);
   },
   openGuildJoinServerScreen() {
-    let obj = importDefault(4461);
+    let obj = importDefault(4490);
     obj = { initialState: constants.JOIN_SERVER };
-    obj.pushLazy(require(1959) /* asyncRequireImpl */(11916, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(require(1959) /* asyncRequireImpl */(11977, dependencyMap.paths), obj, closure_4);
   }
 };

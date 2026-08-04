@@ -43,9 +43,9 @@ function BundleStaticPreviewContent(mutedBackground) {
     obj[0] = combined;
     obj[0] = obj;
     obj[1] = closure_9.bgImage;
-    tmp = closure_6(importDefault(5207), obj);
+    tmp = closure_6(importDefault(5236), obj);
     const tmp2 = closure_6;
-    const tmp5 = importDefault(5207);
+    const tmp5 = importDefault(5236);
   }
   obj = { style: closure_9.container, children: null };
   let tmp21Result = !disableBackground;
@@ -93,9 +93,9 @@ function BundleStaticPreviewContent(mutedBackground) {
     obj5[0] = combined1;
     obj4[0] = obj5;
     obj4[1] = tmp19.fgImage;
-    obj3[2] = closure_6(importDefault(5207), obj4);
+    obj3[2] = closure_6(importDefault(5236), obj4);
     tmp24Result = tmp24(tmp18, obj3);
-    const tmp27 = importDefault(5207);
+    const tmp27 = importDefault(5236);
   }
   items[1] = tmp24Result;
   obj[1] = items;
@@ -125,7 +125,7 @@ function BundleSampleV2Composed(arg0) {
     obj[0] = tmp.pfx;
     const obj1 = { item: null };
     obj1[0] = pfx;
-    obj[1] = callback(importDefault(8392), obj1);
+    obj[1] = callback(importDefault(9295), obj1);
     tmp12 = callback(tmp11, obj);
   }
   const items = [tmp12, , ];
@@ -149,7 +149,7 @@ function BundleSampleV2Composed(arg0) {
       }
       obj3[1] = XSMALL_20;
       obj3[2] = nameplateData;
-      obj3 = tmp22(require(8404) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj3);
+      obj3 = tmp22(require(9307) /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj3);
       obj2[1] = obj3;
       callback(tmp11, obj2);
     }
@@ -161,7 +161,7 @@ function BundleSampleV2Composed(arg0) {
     obj5[0] = deco;
     obj5[1] = tmp9;
     obj5[2] = null != nameplateData;
-    obj4[1] = callback(importDefault(8402), obj5);
+    obj4[1] = callback(importDefault(9305), obj5);
     callback(tmp11, obj4);
   }
 }
@@ -173,7 +173,7 @@ function BundleSampleV2StaticPreview(composedFallbackProps) {
   let targetSize;
   composedFallbackProps = composedFallbackProps.composedFallbackProps;
   ({ previewAssets, disableStaticBackground, mutedStaticBackground, targetSize, exposureLocation } = composedFallbackProps);
-  let obj = require(8409) /* useCollectiblesMobileFlexibleBundlesExperiment */;
+  let obj = require(9312) /* useCollectiblesMobileFlexibleBundlesExperiment */;
   if (obj.useCollectiblesMobileFlexibleBundlesExperiment(exposureLocation).enabled) {
     obj = { previewAssets: null, disableBackground: null, mutedBackground: null, targetSize: null };
     obj[0] = previewAssets;

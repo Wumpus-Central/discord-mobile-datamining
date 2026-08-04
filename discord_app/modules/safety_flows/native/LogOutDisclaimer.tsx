@@ -11,13 +11,13 @@ export default function LogOutDisclaimer() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }
   };
-  obj[1] = intl.format(importDefault(2517)["0DHxym"], obj);
-  obj[0] = jsx(require(4251) /* Text */.Text, {
+  obj[1] = intl.format(importDefault(2547)["0DHxym"], obj);
+  obj[0] = jsx(require(4281) /* Text */.Text, {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }
   });
-  return jsx(require(13301) /* ModalDisclaimer */.ModalDisclaimer, {
+  return jsx(require(13335) /* ModalDisclaimer */.ModalDisclaimer, {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }

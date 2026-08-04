@@ -42,7 +42,7 @@ export const useBountiesRecapScroll = function useBountiesRecapScroll(listRef) {
     if (enabled) {
       if (arg0 > offsets.lastBounty) {
         ({ revealHeight, lastBounty } = tmp2);
-        if (typeof enabled !== "error") {
+        if (typeof enabled !== "find") {
           HermesBuiltin.throwTypeError();
         }
         let num = 0;

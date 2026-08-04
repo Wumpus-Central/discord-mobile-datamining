@@ -11,7 +11,7 @@ prototype = function LinkRecord(arg0) {
 class prototype extends tmp2 {
 }
 prototype["fromPath"] = function fromPath(pathname) {
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new prototype("Trying to call a non-function", prototype);
@@ -21,7 +21,7 @@ prototype["fromPath"] = function fromPath(pathname) {
 };
 prototype["fromInviteCode"] = function fromInviteCode(code) {
   const combined = "invite:" + code;
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const tmp4 = new prototype("Trying to call a non-function", prototype, new.target, combined);

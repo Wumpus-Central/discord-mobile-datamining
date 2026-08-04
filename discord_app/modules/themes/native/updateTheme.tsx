@@ -4,8 +4,8 @@ const result = require("enforcing").fileFinishedImporting("modules/themes/native
 
 export const updateTheme = function updateTheme(arg0) {
   if (obj.isAndroid()) {
-    let updateThemeResult = importDefault(13586).updateTheme(arg0);
-    const obj2 = importDefault(13586);
+    let updateThemeResult = importDefault(13620).updateTheme(arg0);
+    const obj2 = importDefault(13620);
   } else {
     const DCDTheme = NativeModules.DCDTheme;
     updateThemeResult = DCDTheme.updateTheme(arg0);

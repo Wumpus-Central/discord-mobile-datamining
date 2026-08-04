@@ -6,7 +6,7 @@ const result = require("CancelButton").fileFinishedImporting("modules/collectibl
 
 export default {
   open(closure_0) {
-    importDefault(4461).pushLazy(callback(function*() {
+    importDefault(4490).pushLazy(callback(function*() {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -61,7 +61,7 @@ export default {
     }), closure_0, ShopProductPurchaseSuccessModal);
   },
   close() {
-    importDefault(4461).popWithKey(ShopProductPurchaseSuccessModal);
+    importDefault(4490).popWithKey(ShopProductPurchaseSuccessModal);
   }
 };
 export const MODAL_KEY = "ShopProductPurchaseSuccessModal";

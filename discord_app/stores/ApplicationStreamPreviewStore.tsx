@@ -13,7 +13,7 @@ class ApplicationStreamPreviewStore extends Store {
 }
 const prototype = ApplicationStreamPreviewStore.prototype;
 prototype["getPreviewURL"] = function getPreviewURL(closure_0, channelId, closure_2) {
-  let obj = require(4319) /* isStreamKey */;
+  let obj = require(4348) /* isStreamKey */;
   if (null != closure_0) {
     let CALL = StreamTypes.GUILD;
   } else {
@@ -28,7 +28,7 @@ prototype["getPreviewURL"] = function getPreviewURL(closure_0, channelId, closur
   return url;
 };
 prototype["shouldFetchPreview"] = function shouldFetchPreview(c0, closure_1, closure_2) {
-  let obj = require(4319) /* isStreamKey */;
+  let obj = require(4348) /* isStreamKey */;
   if (null != c0) {
     let CALL = StreamTypes.GUILD;
   } else {
@@ -58,11 +58,11 @@ prototype["shouldFetchPreview"] = function shouldFetchPreview(c0, closure_1, clo
   return tmp7;
 };
 prototype["getPreviewURLForStreamKey"] = function getPreviewURLForStreamKey(streamKey) {
-  const decodeStreamKeyResult = require(4319) /* isStreamKey */.decodeStreamKey(streamKey);
+  const decodeStreamKeyResult = require(4348) /* isStreamKey */.decodeStreamKey(streamKey);
   return this.getPreviewURL(decodeStreamKeyResult.guildId, decodeStreamKeyResult.channelId, decodeStreamKeyResult.ownerId);
 };
 prototype["getIsPreviewLoading"] = function getIsPreviewLoading(closure_0, closure_1, closure_2) {
-  let obj = require(4319) /* isStreamKey */;
+  let obj = require(4348) /* isStreamKey */;
   if (null != closure_0) {
     let CALL = StreamTypes.GUILD;
   } else {

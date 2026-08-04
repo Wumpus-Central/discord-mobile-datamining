@@ -105,7 +105,7 @@ function _getOrRefreshPushSyncToken() {
           } else {
             token = body.body.token;
             c4 = 0;
-            obj = callback(11635);
+            obj = callback(11698);
             obj.updatePushSyncToken(lib.id, token);
             c6 = 3;
             const obj6 = { value: null, done: true };
@@ -149,7 +149,7 @@ let obj = {
       const self = this;
       let syncDeviceResult = this.syncDevice(token, flag);
     } else {
-      obj = importDefault(5065);
+      obj = importDefault(5094);
       obj = { url: null, body: null, oldFormErrors: true, trackedActionData: null, rejectWithError: false };
       obj[0] = constants.DEVICES;
       if (flag) {
@@ -280,8 +280,8 @@ let obj = {
             } else if (arg0 !== 2) {
               v0 = arg1;
               if (v0.body.invalid_push_sync_tokens.length > 0) {
-                const result = v0(11635).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
-                const obj9 = v0(11635);
+                const result = v0(11698).invalidatePushSyncTokens(v0.body.invalid_push_sync_tokens);
+                const obj9 = v0(11698);
               }
             }
             dependencyMap = 3;
@@ -298,7 +298,7 @@ let obj = {
   },
   unregisterDevice(token) {
     tmp4.log("Unregistering push notification token: " + token);
-    let obj = importDefault(5065);
+    let obj = importDefault(5094);
     obj = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
     obj = { provider: callback2(), token };
     obj[1] = obj;

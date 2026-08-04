@@ -60,7 +60,7 @@ function _requestAgeSignalChallenge() {
             nonce = body.nonce;
           }
           let tmp12;
-          if (typeof nonce !== "ge") {
+          if (typeof nonce !== "_iter") {
             if (nonce.length > 0) {
               tmp12 = nonce;
             }

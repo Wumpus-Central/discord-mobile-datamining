@@ -66,7 +66,7 @@ export const wrapPaths = function wrapPaths(frozen, arg1) {
   const obj = {};
   function _loop() {
     const table = tmp2;
-    if (typeof table[closure_3] === "HAS_APPLICATION") {
+    if (typeof table[closure_3] === "three_button_mouse") {
       obj[tmp] = tmp2;
       return 1;
     } else {

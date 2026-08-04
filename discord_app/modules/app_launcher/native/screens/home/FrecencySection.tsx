@@ -137,7 +137,7 @@ function FrecentApp(app) {
       obj = { style: null, source: null };
       obj[0] = tmp.appIcon;
       obj[1] = appLauncherIconSource;
-      tmp3 = callback2(onAppSelected(5207), obj);
+      tmp3 = callback2(onAppSelected(5236), obj);
     }
     const items = [tmp3, ];
     obj = { submitting: null, style: null };
@@ -145,7 +145,7 @@ function FrecentApp(app) {
     obj[1] = tmp.submittingOverlay;
     items[1] = callback2(app(11359).SubmittingOverlay, obj);
     obj[6] = items;
-    return closure_12(app(4783).PressableOpacity, obj, app.applicationId);
+    return closure_12(app(4812).PressableOpacity, obj, app.applicationId);
   }
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);

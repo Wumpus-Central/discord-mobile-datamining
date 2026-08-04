@@ -46,7 +46,7 @@ export default function GuildSelector(disabled) {
   obj = { variant: "eyebrow", color: "text-default", children: null };
   let intl = selectedGuildId(1236).intl;
   obj[2] = intl.string(selectedGuildId(1236).t["1DXFFd"]);
-  const items1 = [callback(selectedGuildId(4251).Text, obj), , , ];
+  const items1 = [callback(selectedGuildId(4281).Text, obj), , , ];
   let tmp6Result = null;
   if (null != error) {
     tmp6Result = null;
@@ -66,7 +66,7 @@ export default function GuildSelector(disabled) {
     const intl2 = tmp7(1236).intl;
     name = intl2.string(tmp7(1236).t.oM4E1A);
   }
-  items1[2] = callback(selectedGuildId(7765).FormRow, { label: name, disabled: disabled.disabled, trailing: callback(selectedGuildId(7765).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
+  items1[2] = callback(selectedGuildId(7777).FormRow, { label: name, disabled: disabled.disabled, trailing: callback(selectedGuildId(7777).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
   const obj2 = { style: tmp.label, children: null };
   const intl3 = tmp7(1236).intl;
   obj2[1] = intl3.format(selectedGuildId(1236).t.t9Jm9o, {});

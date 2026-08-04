@@ -3,9 +3,9 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/public
 
 export default {
   open() {
-    importDefault(4461).pushLazy(require(1959) /* asyncRequireImpl */(16591, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
+    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(16623, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
   },
   close() {
-    importDefault(4461).popWithKey(ENABLED_COMMUNITY_MODAL_KEY);
+    importDefault(4490).popWithKey(ENABLED_COMMUNITY_MODAL_KEY);
   }
 };

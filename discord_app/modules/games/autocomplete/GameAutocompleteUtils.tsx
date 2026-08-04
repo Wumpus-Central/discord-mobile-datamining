@@ -32,6 +32,6 @@ export const normalizeGameAutocompleteQuery = function normalizeGameAutocomplete
   }
 };
 export const isGameAutocompleteResultAllowedInGameWidgets = function isGameAutocompleteResultAllowedInGameWidgets(id) {
-  const GAME_WIDGET_BANNED_APPLICATION_IDS = require(6980) /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_BANNED_APPLICATION_IDS;
+  const GAME_WIDGET_BANNED_APPLICATION_IDS = require(6992) /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_BANNED_APPLICATION_IDS;
   return !GAME_WIDGET_BANNED_APPLICATION_IDS.has(id.id);
 };

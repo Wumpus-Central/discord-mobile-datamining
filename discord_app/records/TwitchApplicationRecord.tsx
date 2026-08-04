@@ -14,7 +14,7 @@ class TwitchApplicationRecord extends tmp2 {
   }
 }
 TwitchApplicationRecord.prototype["getIconURL"] = function getIconURL() {
-  return importDefault(4937).get("twitch").icon.lightPNG;
+  return importDefault(4966).get("twitch").icon.lightPNG;
 };
 
 export default TwitchApplicationRecord;

@@ -11,7 +11,7 @@ prototype = function CollectiblesCategoriesRecord(categories) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(categories) {
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);

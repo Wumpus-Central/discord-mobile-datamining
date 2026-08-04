@@ -89,16 +89,16 @@ function SyncedLoadingAlertModal(onConfirm) {
     }
   });
   obj[3] = tmp2;
-  const items = [callback3(onConfirm(4599).AlertActionButton, obj), ];
+  const items = [callback3(onConfirm(4628).AlertActionButton, obj), ];
   let obj1 = { variant: "secondary", text: null, onPress: null, loading: null };
   const intl = onConfirm(1236).intl;
   obj1[1] = intl.string(onConfirm(1236).t["ETE/oC"]);
   obj1[2] = onCancel;
   obj1[3] = tmp2;
-  items[1] = callback3(onConfirm(4599).AlertActionButton, obj1);
+  items[1] = callback3(onConfirm(4628).AlertActionButton, obj1);
   obj[0] = items;
   obj[2] = callback4(closure_6, obj);
-  return callback3(onConfirm(4599).AlertModal, obj);
+  return callback3(onConfirm(4628).AlertModal, obj);
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 const result = require("noop").fileFinishedImporting("modules/checkout/native/showCheckoutOrderErrorModal.tsx");
@@ -108,7 +108,7 @@ export const showRetryConfirmModal = function showRetryConfirmModal(dismissable)
   let onCloseCallback;
   ({ key, onCloseCallback } = dismissable);
   const merged = Object.assign(dismissable, Object.create(null));
-  let obj = require(4596) /* useAlertStore */;
+  let obj = require(4625) /* useAlertStore */;
   obj = {};
   const merged1 = Object.assign(merged);
   obj = { dismissable: dismissable.dismissable };
@@ -205,6 +205,6 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     obj = {};
     const merged1 = Object.assign(merged);
     obj = { dismissable: obj.dismissable };
-    callback(4596).openAlert(key, outer1_5(outer1_8, obj), onCloseCallback, obj);
+    callback(4625).openAlert(key, outer1_5(outer1_8, obj), onCloseCallback, obj);
   });
 };

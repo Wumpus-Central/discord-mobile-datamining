@@ -1,5 +1,5 @@
 import "noop";
-import module_8469 from "module_8469";
+import module_8784 from "module_8784";
 import { jsx } from "jsxProd";
 import set from "set";
 
@@ -28,5 +28,5 @@ export default function AppFreezer(children) {
   if (!freeze) {
     freeze = flag;
   }
-  return jsx(lockKeys(4613).Freeze, { freeze, placeholder, children: children.children });
+  return jsx(lockKeys(4642).Freeze, { freeze, placeholder, children: children.children });
 };

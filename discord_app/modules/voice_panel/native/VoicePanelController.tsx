@@ -4,8 +4,8 @@ import { AppState } from "ActivityPanelModes";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import participantFromServer from "participantFromServer";
 import getParticipants from "getParticipants";
-import module_8469 from "module_8469";
-import module_10798 from "module_10798";
+import module_8784 from "module_8784";
+import module_10649 from "module_10649";
 import initialize from "initialize";
 import ensureGuildLoaded from "ensureGuildLoaded";
 import _detectH265HardwareDecode from "_detectH265HardwareDecode";
@@ -227,16 +227,16 @@ export default function VoicePanelController(channelId) {
   const animatedReaction3Result16 = animatedReaction3(tmp2[22]);
   class H {
     constructor() {
-      value = f112664.get();
+      value = f112759.get();
       if (c16.PANEL === value) {
-        tmp5 = f112656;
-        return f112656.PANEL;
+        tmp5 = f112751;
+        return f112751.PANEL;
       } else if (tmp2.PIP === value) {
-        tmp4 = f112656;
-        return f112656.PIP;
+        tmp4 = f112751;
+        return f112751.PIP;
       } else {
-        tmp3 = f112656;
-        return f112656.UNDEFINED;
+        tmp3 = f112751;
+        return f112751.UNDEFINED;
       }
     }
   }
@@ -620,16 +620,16 @@ export default function VoicePanelController(channelId) {
     const items19 = [];
     class H {
       constructor() {
-        value = f112664.get();
+        value = f112759.get();
         if (c16.PANEL === value) {
-          tmp5 = f112656;
-          return f112656.PANEL;
+          tmp5 = f112751;
+          return f112751.PANEL;
         } else if (tmp2.PIP === value) {
-          tmp4 = f112656;
-          return f112656.PIP;
+          tmp4 = f112751;
+          return f112751.PIP;
         } else {
-          tmp3 = f112656;
-          return f112656.UNDEFINED;
+          tmp3 = f112751;
+          return f112751.UNDEFINED;
         }
       }
     }
@@ -1268,7 +1268,7 @@ export default function VoicePanelController(channelId) {
         items = [, , ];
         items[0] = id;
         items[1] = useSharedValue.get();
-        items[2] = f112664.get();
+        items[2] = f112759.get();
         return items;
       }
     }

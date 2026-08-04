@@ -29,5 +29,5 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
   if (paymentGateway != null) {
     noOp = paymentGateway.noOp;
   }
-  return require(8081) /* useMaybeFetchCollectiblesCategoriesShared */.useMaybeFetchCollectiblesCategoriesShared(obj, noOp, arg1);
+  return require(8093) /* useMaybeFetchCollectiblesCategoriesShared */.useMaybeFetchCollectiblesCategoriesShared(obj, noOp, arg1);
 };

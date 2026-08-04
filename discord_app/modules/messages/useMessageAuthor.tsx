@@ -232,7 +232,7 @@ function computeMessageAuthor(channel) {
   let str = "???";
   if (null != user) {
     if (userName == null) {
-      let obj = importDefault(4094);
+      let obj = importDefault(4124);
       userName = obj.getName(user);
     }
     str = userName;

@@ -13,8 +13,8 @@ export const useSearchMessagesLoadingState = function useSearchMessagesLoadingSt
   ({ searchContext: require, tab: dependencyMap } = arg0);
   let handleReaction;
   ({ placeholderHeight, numColumns } = arg0);
-  handleReaction = require(15573) /* useFullscreenPlaceholderCount */.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
-  let obj = require(15573) /* useFullscreenPlaceholderCount */;
+  handleReaction = require(15604) /* useFullscreenPlaceholderCount */.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
+  let obj = require(15604) /* useFullscreenPlaceholderCount */;
   const items = [prototype, handleReaction];
   return require(589) /* initialize */.useStateFromStoresObject(items, () => {
     let obj = outer1_0(outer1_1[5]);

@@ -5,9 +5,9 @@ const require = arg1;
 const result = require("matchPath").fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");
 
 export const saveLastRoute = function saveLastRoute(pathname) {
-  let obj = require(4077) /* matchPath */;
+  let obj = require(4107) /* matchPath */;
   obj = { path: null };
-  const RouteParam = require(4090) /* RouteParam */.RouteParam;
+  const RouteParam = require(4120) /* RouteParam */.RouteParam;
   obj[0] = Routes.CHANNEL(RouteParam.guildId());
   const matchPathResult = obj.matchPath(pathname, obj);
   let guildId;
@@ -29,9 +29,9 @@ export const saveLastRoute = function saveLastRoute(pathname) {
   }
 };
 export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
-  let obj = require(4077) /* matchPath */;
+  let obj = require(4107) /* matchPath */;
   obj = { path: null };
-  const RouteParam = require(4090) /* RouteParam */.RouteParam;
+  const RouteParam = require(4120) /* RouteParam */.RouteParam;
   obj[0] = Routes.CHANNEL(RouteParam.guildId());
   const matchPathResult = obj.matchPath(Routes, obj);
   let guildId;

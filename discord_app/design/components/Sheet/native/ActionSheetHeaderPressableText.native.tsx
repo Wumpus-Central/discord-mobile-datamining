@@ -18,6 +18,6 @@ export const ActionSheetHeaderPressableText = function ActionSheetHeaderPressabl
     tmp5 = accessibilityLabel;
   }
   obj[3] = tmp5;
-  obj[4] = jsx(require(4251) /* Text */.Text, { variant: str, color: "text-brand", children: label });
-  return jsx(require(4783) /* PressableBase */.PressableOpacity, { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null });
+  obj[4] = jsx(require(4281) /* Text */.Text, { variant: str, color: "text-brand", children: label });
+  return jsx(require(4812) /* PressableBase */.PressableOpacity, { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null });
 };

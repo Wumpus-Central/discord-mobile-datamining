@@ -2,7 +2,7 @@ import noop from "noop";
 import handleDismissWithDismissed from "handleDismissWithDismissed";
 
 const require = arg1;
-let result = require("module_4116").fileFinishedImporting("modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx");
+let result = require("module_4146").fileFinishedImporting("modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx");
 
 export const useViewableAppLauncherHomeItems = function useViewableAppLauncherHomeItems() {
   let obj = sharedValue(sharedValue1[2]);

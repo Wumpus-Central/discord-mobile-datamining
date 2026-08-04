@@ -19,7 +19,7 @@ let require = arg1;
 ({ Image: c4, View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: c10, LoginRequiredActions: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let closure_14 = { newPassword: "borderRadius", password: 17060929 };
+let closure_14 = { newPassword: "call", password: 17067073 };
 createCacheKey = { onePass: { width: 20, height: 20 }, unverifiedWrapper: null, container: null, header: null, requiredActionsSubtitle: null, requiredActionsTitle: null, image: null };
 createCacheKey = { overflow: "hidden", borderRadius: require("Themes").radii.xs, marginVertical: 16 };
 createCacheKey[1] = createCacheKey;
@@ -123,7 +123,7 @@ class EditPassword extends Component {
 const prototype = EditPassword.prototype;
 prototype["componentWillUnmount"] = function componentWillUnmount() {
   try {
-    importAll(9408).resetAccount();
+    importAll(8321).resetAccount();
   } catch (err) {
   }
 };
@@ -155,7 +155,7 @@ prototype["render"] = function render() {
   if (hasBannerText) {
     obj = { style: null, children: null };
     obj[0] = tmp.unverifiedWrapper;
-    obj[1] = tmp2(importDefault(9412), {});
+    obj[1] = tmp2(importDefault(8325), {});
     hasBannerText = tmp2(tmp5, obj);
   }
   const items = [hasBannerText, , , ];
@@ -164,19 +164,19 @@ prototype["render"] = function render() {
     obj = { style: null, children: null };
     obj[0] = tmp.header;
     const obj1 = { source: null, style: null };
-    obj1[0] = importDefault(13895);
+    obj1[0] = importDefault(13929);
     obj1[1] = tmp.image;
     const items1 = [tmp2(closure_4, obj1), , ];
     const obj2 = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     obj2[0] = tmp.requiredActionsTitle;
     const intl = require(1236) /* getSystemLocale */.intl;
     obj2[3] = intl.string(require(1236) /* getSystemLocale */.t.geta79);
-    items1[1] = tmp2(require(4251) /* Text */.Text, obj2);
+    items1[1] = tmp2(require(4281) /* Text */.Text, obj2);
     const obj3 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj3[0] = tmp.requiredActionsSubtitle;
     const intl2 = require(1236) /* getSystemLocale */.intl;
     obj3[3] = intl2.string(require(1236) /* getSystemLocale */.t["37iHbZ"]);
-    items1[2] = tmp2(require(4251) /* Text */.Text, obj3);
+    items1[2] = tmp2(require(4281) /* Text */.Text, obj3);
     obj[1] = items1;
     tmp4Result = tmp4(tmp5, obj);
   }
@@ -189,12 +189,12 @@ prototype["render"] = function render() {
     obj5[0] = tmp.requiredActionsTitle;
     const intl3 = require(1236) /* getSystemLocale */.intl;
     obj5[3] = intl3.string(require(1236) /* getSystemLocale */.t.geta79);
-    const items2 = [tmp2(require(4251) /* Text */.Text, obj5), ];
+    const items2 = [tmp2(require(4281) /* Text */.Text, obj5), ];
     const obj6 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj6[0] = tmp.requiredActionsSubtitle;
     const intl4 = require(1236) /* getSystemLocale */.intl;
     obj6[3] = intl4.string(require(1236) /* getSystemLocale */.t.x5tG4V);
-    items2[1] = tmp2(require(4251) /* Text */.Text, obj6);
+    items2[1] = tmp2(require(4281) /* Text */.Text, obj6);
     obj4[1] = items2;
     tmp4Result = tmp4(tmp5, obj4);
   }
@@ -204,7 +204,7 @@ prototype["render"] = function render() {
   obj7[3] = self.handlePasswordChange;
   obj7[4] = password;
   obj7[5] = self.canSubmit() ? self.handleSubmit : self.handleFocusNewPassword;
-  const items3 = [closure_12(require(7701) /* TextInput */.TextInput, obj7), , ];
+  const items3 = [closure_12(require(7713) /* TextInput */.TextInput, obj7), , ];
   const obj8 = { label: newPasswordLabel, ref: self.handleSetNewPasswordRef, secureTextEntry: true, errorMessage: null, onChange: null, value: null, returnKeyType: "done", autoComplete: "new-password", onSubmitEditing: null, required: true };
   obj8[3] = self.getError("new_password");
   obj8[4] = self.handleNewPasswordChange;
@@ -214,7 +214,7 @@ prototype["render"] = function render() {
     handleSubmit = self.handleSubmit;
   }
   obj8[8] = handleSubmit;
-  items3[1] = closure_12(require(7701) /* TextInput */.TextInput, obj8);
+  items3[1] = closure_12(require(7713) /* TextInput */.TextInput, obj8);
   const obj9 = { text: null, onPress: null, loading: null, disabled: null };
   const intl5 = tmp16(1236).intl;
   obj9[0] = intl5.string(require(1236) /* getSystemLocale */.t["FRep5/"]);
@@ -229,9 +229,9 @@ prototype["render"] = function render() {
   const obj10 = { children: null };
   const obj11 = { spacing: 24, children: null };
   obj9[3] = submitting;
-  items3[2] = closure_12(require(4666) /* Button */.Button, obj9);
+  items3[2] = closure_12(require(4695) /* Button */.Button, obj9);
   obj11[1] = items3;
-  items[3] = closure_13(require(4664) /* Stack */.Stack, obj11);
+  items[3] = closure_13(require(4693) /* Stack */.Stack, obj11);
   obj[1] = items;
   obj10[0] = closure_13(closure_5, obj);
   return closure_12(closure_6, obj10);
@@ -240,7 +240,7 @@ EditPassword.contextType = require("ManaContext").ThemeContext;
 let result = require("handleUpdateUser").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx");
 
 export default function EditPasswordWrapper() {
-  let obj = flag(6775);
+  let obj = flag(6787);
   const params = obj.useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {

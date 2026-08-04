@@ -2,11 +2,11 @@ import sendRequest from "sendRequest";
 import { Endpoints } from "ME";
 
 const require = arg1;
-const result = require("module_5065").fileFinishedImporting("actions/HubActionCreators.tsx");
+const result = require("module_5094").fileFinishedImporting("actions/HubActionCreators.tsx");
 
 export default {
   signup(email, school) {
-    let obj = importDefault(5065);
+    let obj = importDefault(5094);
     obj = { url: Endpoints.HUB_WAITLIST_SIGNUP, body: obj, trackedActionData: null, rejectWithError: null };
     obj = { email, school };
     obj[2] = {

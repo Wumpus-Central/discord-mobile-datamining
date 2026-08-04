@@ -13,8 +13,8 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
   },
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
-    const NoiseSuppressionOpt = require(10901) /* handleAutomaticGainControlChange */.NoiseSuppressionOpt;
-    const result = require(10901) /* handleAutomaticGainControlChange */.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
+    const NoiseSuppressionOpt = require(10754) /* handleAutomaticGainControlChange */.NoiseSuppressionOpt;
+    const result = require(10754) /* handleAutomaticGainControlChange */.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
   },
   usePredicate: function useHasNoiseSuppressionSetting() {
     const items = [_detectH265HardwareDecode];

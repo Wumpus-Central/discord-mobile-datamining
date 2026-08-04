@@ -17,13 +17,13 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => obj.screenDowntimeReminder);
   },
   onValueChange(screenDowntimeReminder) {
-    return importDefault(14563).setScreenDowntimeReminder(screenDowntimeReminder);
+    return importDefault(14597).setScreenDowntimeReminder(screenDowntimeReminder);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = require(6950) /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
-    const obj = require(6950) /* apexExperiment */;
-    const tmp2 = importDefault(14028)();
-    const hasActiveParentLinks = require(7247) /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
+    let isFamilyCenterV3Enabled = require(6962) /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
+    const obj = require(6962) /* apexExperiment */;
+    const tmp2 = importDefault(14062)();
+    const hasActiveParentLinks = require(7259) /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
     }

@@ -25,7 +25,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
   const memo = React.useMemo(() => ({ type: "simple", text: "Bug Catcher Clyde" }), []);
   obj[1] = <closure_4 source={{ uri: notification.imageUri }} style={tmp.preview} />;
   obj = { header: memo, children: null, rightAccessory: null, onPress: null, onSettingsPress: null, notification: null };
-  obj[1] = jsx(notification(10432).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." });
+  obj[1] = jsx(notification(9703).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." });
   obj[2] = <closure_5 header={memo} rightAccessory={null} onPress={null} onSettingsPress={null} notification={null}>{null}</closure_5>;
   obj[3] = function onPress() {
     let obj = outer1_6;
@@ -51,5 +51,5 @@ export const BugReporterNotification = function BugReporterNotification(notifica
     obj.openUserSettings(obj);
   };
   obj[5] = notification;
-  return jsx(notification(10487).NotificationPressable, { header: memo, children: null, rightAccessory: null, onPress: null, onSettingsPress: null, notification: null });
+  return jsx(notification(9767).NotificationPressable, { header: memo, children: null, rightAccessory: null, onPress: null, onSettingsPress: null, notification: null });
 };

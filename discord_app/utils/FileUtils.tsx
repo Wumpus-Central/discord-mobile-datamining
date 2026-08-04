@@ -112,17 +112,17 @@ export const classifyFileName = function classifyFileName(str) {
   return str2;
 };
 export const sizeString = function sizeString(createGuildRecordFromRust) {
-  return importDefault(4794).filesize(createGuildRecordFromRust);
+  return importDefault(4823).filesize(createGuildRecordFromRust);
 };
 export const maxFileSize = function maxFileSize(guildId) {
   const currentUser = authStore.getCurrentUser();
-  const userMaxFileSize = enabled(3901).getUserMaxFileSize(currentUser);
+  const userMaxFileSize = enabled(3931).getUserMaxFileSize(currentUser);
   if (null == guildId) {
     return userMaxFileSize;
   } else {
     const guild = store.getGuild(guildId);
     if (null != guild) {
-      const FileUploadPowerupHoldoutExperiment = guild(4182).FileUploadPowerupHoldoutExperiment;
+      const FileUploadPowerupHoldoutExperiment = guild(4212).FileUploadPowerupHoldoutExperiment;
       enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "getGuildMaxFileSize" }).enabled;
       let reduced = items2.reduce((arg0, arg1) => {
         let tmp;
@@ -149,12 +149,12 @@ export const maxFileSize = function maxFileSize(guildId) {
     const _Math = Math;
     return Math.max(reduced, userMaxFileSize);
   }
-  const obj = enabled(3901);
+  const obj = enabled(3931);
 };
 export const anyFileTooLarge = function anyFileTooLarge(arg0, arg1) {
   let reduce = dependencyMap;
   const currentUser = authStore.getCurrentUser();
-  const userMaxFileSize = enabled(3901).getUserMaxFileSize(currentUser);
+  const userMaxFileSize = enabled(3931).getUserMaxFileSize(currentUser);
   if (null == arg1) {
     let guild = userMaxFileSize;
     const _Array = Array;
@@ -162,7 +162,7 @@ export const anyFileTooLarge = function anyFileTooLarge(arg0, arg1) {
   } else {
     guild = store.getGuild(arg1);
     if (null != guild) {
-      const FileUploadPowerupHoldoutExperiment = guild(4182).FileUploadPowerupHoldoutExperiment;
+      const FileUploadPowerupHoldoutExperiment = guild(4212).FileUploadPowerupHoldoutExperiment;
       enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "getGuildMaxFileSize" }).enabled;
       guild = items2;
       reduce = items2.reduce;
@@ -207,19 +207,23 @@ export const getMaxRequestSize = function getMaxRequestSize() {
   }
   return 524288000;
 };
-export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadblockDescription(onClick) {
+export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadblockDescription(arg0) {
   let guildId;
+  let hideLearnMore;
   let maxSize;
-  ({ guildId, maxSize } = onClick);
+  let onClick;
+  ({ guildId, maxSize } = arg0);
+  ({ onClick, hideLearnMore } = arg0);
+  let obj = _Math(4180);
   if (maxSize == null) {
     const currentUser = authStore.getCurrentUser();
-    const userMaxFileSize = enabled(3901).getUserMaxFileSize(currentUser);
+    const userMaxFileSize = enabled(3931).getUserMaxFileSize(currentUser);
     if (null == guildId) {
       maxSize = userMaxFileSize;
     } else {
-      let _Math = store.getGuild(guildId);
+      _Math = store.getGuild(guildId);
       if (null != _Math) {
-        const FileUploadPowerupHoldoutExperiment = tmp(4182).FileUploadPowerupHoldoutExperiment;
+        const FileUploadPowerupHoldoutExperiment = tmp(4212).FileUploadPowerupHoldoutExperiment;
         enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "getGuildMaxFileSize" }).enabled;
         let reduced = items2.reduce((arg0, arg1) => {
           let tmp;
@@ -246,11 +250,23 @@ export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadb
       _Math = Math;
       const bound = Math.max(reduced, userMaxFileSize);
     }
-    const obj3 = enabled(3901);
+    const obj5 = enabled(3931);
   }
-  maxSize = _Math(4150).formatSize(maxSize / 1024, { useKibibytes: true });
-  const obj = _Math(4150);
-  const premiumMaxSize = _Math(4150).formatSize(closure_7 / 1024, { useKibibytes: true });
-  const intl = tmp(1236).intl;
-  return intl.format(_Math(1236).t.tRuxk9, { maxSize, premiumMaxSize, onClick: onClick.onClick });
+  const formatSizeResult = obj.formatSize(maxSize / 1024, { useKibibytes: true });
+  const formatSizeResult1 = _Math(4180).formatSize(closure_7 / 1024, { useKibibytes: true });
+  if (true === hideLearnMore) {
+    const intl2 = tmp(1236).intl;
+    obj = { maxSize: null, premiumMaxSize: null };
+    obj[0] = formatSizeResult;
+    obj[1] = formatSizeResult1;
+    let formatResult = intl2.format(tmp(1236).t["+R2TzS"], obj);
+  } else {
+    const intl = tmp(1236).intl;
+    obj = { maxSize: null, premiumMaxSize: null, onClick: null };
+    obj[0] = formatSizeResult;
+    obj[1] = formatSizeResult1;
+    obj[2] = onClick;
+    formatResult = intl.format(tmp(1236).t.tRuxk9, obj);
+  }
+  return formatResult;
 };

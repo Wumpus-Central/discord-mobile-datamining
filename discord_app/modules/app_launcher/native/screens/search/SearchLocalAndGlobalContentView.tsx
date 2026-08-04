@@ -50,8 +50,8 @@ function CommandRow(arg0) {
     obj[0] = appLauncherIconSource;
     tmp4 = callback2(onPressSend(11355), obj);
   }
-  let tmpResult = tmp(11403);
-  obj = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: tmp(8358).AppLauncherSectionName.SEARCH };
+  let tmpResult = tmp(11404);
+  obj = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: tmp(9467).AppLauncherSectionName.SEARCH };
   const commandRowSend = tmpResult.useCommandRowSend(obj);
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
@@ -74,15 +74,15 @@ function CommandRow(arg0) {
     }
   }, items1);
   const obj1 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
-  tmpResult = tmp(8137);
+  tmpResult = tmp(8149);
   obj1[2] = tmpResult.getSectionName(application);
   obj1[4] = isFirstRow;
   obj1[5] = isLastRow;
   obj1[6] = onPress;
   obj1[7] = memo;
   obj1[8] = callback;
-  obj1[9] = callback2(onPressSend(11403), { hasOptions, sending: commandRowSend.sending, onPressSend });
-  return callback2(hasOptions(5286).TableRow, obj1);
+  obj1[9] = callback2(onPressSend(11404), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return callback2(hasOptions(5315).TableRow, obj1);
 }
 function PlaceholderCommandRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
@@ -116,7 +116,7 @@ function PlaceholderCommandRow(isFirstRow) {
   obj[6] = function onPress() {
 
   };
-  return callback2(require(5286) /* TableRowInner */.TableRow, obj);
+  return callback2(require(5315) /* TableRowInner */.TableRow, obj);
 }
 function keyExtractor(type) {
   if (type.type === obj.PLACERHOLDER) {

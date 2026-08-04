@@ -198,23 +198,23 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = createCacheKey();
   importDefault = tmp;
   const bottom = importDefault(1581)().bottom;
-  let obj = goToMessageRequestPreview(15799);
+  let obj = goToMessageRequestPreview(15830);
   dependencyMap = obj.useSpamMessageRequestCount();
-  arr = importDefault(15806)();
-  let obj1 = goToMessageRequestPreview(15797);
+  arr = importDefault(15837)();
+  let obj1 = goToMessageRequestPreview(15828);
   closure_4 = obj1.useListHasSingleSpamMessageRequest();
-  importDefault(4682)(() => {
+  importDefault(4711)(() => {
     let obj = _undefined(698);
     obj = { num_spam_message_requests: dependencyMap };
     obj.track(outer1_7.SPAM_MESSAGE_REQUESTS_VIEWED, obj);
-    obj = { name: goToMessageRequestPreview(6963).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
-    _undefined(6958).increment(obj);
+    obj = { name: goToMessageRequestPreview(6975).MetricEvents.SPAM_MESSAGE_REQUEST_VIEW };
+    _undefined(6970).increment(obj);
   });
   if (0 === arr.length) {
     obj = { bodyText: null };
     let intl = tmp4(1236).intl;
     obj[0] = intl.string(tmp4(1236).t.hasFPQ);
-    return callback(tmp2(15800), obj);
+    return callback(tmp2(15831), obj);
   } else {
     const items = ["header-section"];
     HermesBuiltin.arraySpread(arr, 1);
@@ -242,7 +242,7 @@ export default function SpamMessageList(goToMessageRequestPreview) {
         obj = { count: null };
         obj[0] = arr.length;
         obj[2] = intl.format(goToMessageRequestPreview(1236).t.aNh5Kf, obj);
-        obj[1] = outer1_8(goToMessageRequestPreview(4251).Text, obj);
+        obj[1] = outer1_8(goToMessageRequestPreview(4281).Text, obj);
         let tmp11Result = outer1_8(outer1_5, obj);
       } else {
         const obj1 = { messageRequest: null, goToMessageRequestPreview: null, isLastRow: null, hasSingleMessageRequest: null };

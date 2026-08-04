@@ -205,5 +205,5 @@ export default function UnreadBars(contentInset) {
   }
   items1[1] = tmp6;
   obj[1] = items1;
-  return closure_9(require(10544) /* _toPropertyKey */.TransitionGroup, obj);
+  return closure_9(require(10206) /* _toPropertyKey */.TransitionGroup, obj);
 };

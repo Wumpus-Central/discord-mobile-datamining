@@ -12,8 +12,8 @@ const Idle = obj.Idle;
 const result = require("set").fileFinishedImporting("modules/checkout/native/useGiftCardMobileConsumptionHalfsheet.tsx");
 
 export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileConsumptionHalfsheet() {
-  enabled = enabled(5920).useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
-  let obj = enabled(5920);
+  enabled = enabled(5930).useGiftCardsExperimentConfig({ location: "useGiftCardMobileConsumptionHalfsheet" }).enabled;
+  let obj = enabled(5930);
   let tmp = enabled;
   let items = [callback];
   let items1 = [enabled];
@@ -80,7 +80,7 @@ export const useGiftCardMobileConsumptionHalfsheet = function useGiftCardMobileC
     return items1;
   }, items6);
   const obj4 = enabled(589);
-  const tmp10 = first(tmp(5921).useSelectedDismissibleContent(memo, undefined, true), 2);
+  const tmp10 = first(tmp(5931).useSelectedDismissibleContent(memo, undefined, true), 2);
   first = tmp10[0];
   React = tmp12;
   set = React.useRef(tmp12);

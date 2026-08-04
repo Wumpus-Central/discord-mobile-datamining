@@ -17,7 +17,7 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
   if (null == application) {
     return null;
   } else {
-    let obj = require(7867) /* getMessageAuthorWithProcessedColor */;
+    let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = { username: null, usernameOnClick: null, gameName: null, urlOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
@@ -25,7 +25,7 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     obj[0] = message;
     obj[1] = messageAuthorWithProcessedColor;
     obj[2] = roleStyle;
-    obj[1] = tmp(7869)(obj);
+    obj[1] = tmp(7881)(obj);
     obj[2] = application.name;
     const obj1 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
     obj1[1] = tmp(1945).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
@@ -34,8 +34,8 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     const obj2 = { content: null };
     const intl = require(1236) /* getSystemLocale */.intl;
     obj2[0] = intl.formatToParts(require(1236) /* getSystemLocale */.t["92erOB"], obj);
-    const merged = Object.assign(tmp(7870)(message));
+    const merged = Object.assign(tmp(7882)(message));
     return obj2;
   }
-  tmp3 = importDefault(7860)(theme);
+  tmp3 = importDefault(7872)(theme);
 };

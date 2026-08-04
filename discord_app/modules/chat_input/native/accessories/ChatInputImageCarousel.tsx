@@ -35,7 +35,7 @@ const memoResult = require("noop").memo(function ChatInputImageCarousel(canUploa
     obj = { attachments: null, channelId: null };
     obj[0] = stateFromStores;
     obj[1] = channelId;
-    tmp4 = jsx(channelId(9827), { attachments: null, channelId: null });
+    tmp4 = jsx(channelId(9920), { attachments: null, channelId: null });
   }
   return tmp4;
 });

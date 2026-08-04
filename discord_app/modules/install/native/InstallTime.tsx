@@ -2,7 +2,7 @@ import fetchFingerprint from "fetchFingerprint";
 
 const require = arg1;
 function getFirstInstallTimeMillis(arg0) {
-  const firstInstallTimeMillis = importDefault(12836).getFirstInstallTimeMillis();
+  const firstInstallTimeMillis = importDefault(12870).getFirstInstallTimeMillis();
   let str = "InstallTimeLaunch";
   if ("authed" === arg0.from) {
     str = "InstallTimeAuthed";
@@ -52,8 +52,8 @@ export const getFirstInstallTimeElapsed = function getFirstInstallTimeElapsed(un
     const diff = Date.now() - tmp;
     let result = diff;
     if (null != unit) {
-      result = require(4331) /* sleep */.convertMinutesToGivenTimeUnit(diff / require(4331) /* sleep */.MS_PER_MINUTE, unit);
-      const obj = require(4331) /* sleep */;
+      result = require(4360) /* sleep */.convertMinutesToGivenTimeUnit(diff / require(4360) /* sleep */.MS_PER_MINUTE, unit);
+      const obj = require(4360) /* sleep */;
     }
     return result;
   }

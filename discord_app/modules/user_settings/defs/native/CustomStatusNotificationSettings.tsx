@@ -3,7 +3,7 @@ import { NotificationSettingsUpdateType as closure_4 } from "AccountNotification
 import createToggle from "createToggle";
 
 function onChange(custom_status_push_notifications) {
-  const CustomStatusPushNotifications = require(3928) /* explicitContentFromProto */.CustomStatusPushNotifications;
+  const CustomStatusPushNotifications = require(3958) /* explicitContentFromProto */.CustomStatusPushNotifications;
   const CustomStatusPushNotificationType = require(1306) /* create */.CustomStatusPushNotificationType;
   CustomStatusPushNotifications.updateSetting(custom_status_push_notifications ? CustomStatusPushNotificationType.STATUS_PUSH_ENABLED : CustomStatusPushNotificationType.STATUS_PUSH_DISABLED);
   let obj = importDefault(698);
@@ -21,7 +21,7 @@ const toggle = createToggle.createToggle({
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue() {
-    const CustomStatusPushNotifications = require(3928) /* explicitContentFromProto */.CustomStatusPushNotifications;
+    const CustomStatusPushNotifications = require(3958) /* explicitContentFromProto */.CustomStatusPushNotifications;
     const setting = CustomStatusPushNotifications.useSetting();
     return setting !== require(1306) /* create */.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
   },
@@ -38,7 +38,7 @@ let obj = {
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue() {
-    const CustomStatusPushNotifications = require(3928) /* explicitContentFromProto */.CustomStatusPushNotifications;
+    const CustomStatusPushNotifications = require(3958) /* explicitContentFromProto */.CustomStatusPushNotifications;
     const setting = CustomStatusPushNotifications.useSetting();
     return setting !== require(1306) /* create */.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
   },

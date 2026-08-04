@@ -40,13 +40,13 @@ function _shouldSkipContactSyncStep() {
             return obj;
           } else {
             const callback = tmp4;
-            let obj2 = outer1_0(11887);
+            let obj2 = outer1_0(11948);
             const result = obj2.isContactSyncAvailable();
             if (result) {
               c1 = 1;
               dependencyMap = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(11887).checkContactPermissions();
+              obj1[0] = outer1_0(11948).checkContactPermissions();
               return obj1;
             } else {
               dependencyMap = 3;
@@ -81,15 +81,15 @@ function _shouldSkipContactSyncStep() {
   return applyArgumentsResult;
 }
 function lastStepComplete(STEP_GUILD_TEMPLATE) {
-  require(11890) /* trackNUFStep */.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
-  const obj = require(11890) /* trackNUFStep */;
-  if (obj2.isModalOpen(require(16360) /* NEW_USER_MODAL_KEY */.NEW_USER_MODAL_KEY)) {
-    importDefault(4461).popWithKey(tmp(16360).NEW_USER_MODAL_KEY);
-    const obj3 = importDefault(4461);
+  require(11951) /* trackNUFStep */.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
+  const obj = require(11951) /* trackNUFStep */;
+  if (obj2.isModalOpen(require(16393) /* NEW_USER_MODAL_KEY */.NEW_USER_MODAL_KEY)) {
+    importDefault(4490).popWithKey(tmp(16393).NEW_USER_MODAL_KEY);
+    const obj3 = importDefault(4490);
   }
   let tmpResult = tmp(1222);
   tmpResult.transitionTo(constants.ME, { navigationReplace: true });
-  tmpResult = tmp(11959);
+  tmpResult = tmp(12014);
   const result = tmpResult.setNewUserFlowCompleted();
 }
 function getNextOnboardingStep(flag, first1, first) {
@@ -206,7 +206,7 @@ function _getNextOnboardingStep() {
               return obj5;
             } else if (arg1) {
               callback = dependencyMap;
-              obj3 = flag(11890);
+              obj3 = flag(11951);
               const obj6 = { skip: null };
               obj6[0] = flag;
               obj3.trackNUFStep(closure_3, key, obj6);

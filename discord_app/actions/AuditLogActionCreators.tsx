@@ -142,7 +142,7 @@ export const filterByUserId = function filterByUserId(id, guildId) {
       if (!tmp5) {
         if (null != guildId) {
           importDefault(709).dispatch({ type: "AUDIT_LOG_FETCH_START" });
-          obj = { userId: null, action: "Array", targetId: "isArray" };
+          obj = { userId: null, action: "Array", targetId: "ti" };
           obj[0] = id;
           const tmp10Result = importDefault(709);
           nextPromise = makeRequest(guildId, obj).then((body) => {

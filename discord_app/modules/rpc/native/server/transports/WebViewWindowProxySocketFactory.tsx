@@ -2,17 +2,15 @@ const result = require("set").fileFinishedImporting("modules/rpc/native/server/t
 
 export default function _default(logger) {
   let encoding;
-  let frameId;
-  let origin;
   let postClose;
   let postMessageToRPCClient;
+  let source;
   let version;
   logger = logger.logger;
-  ({ origin, postMessageToRPCClient, frameId, version, encoding, postClose } = logger);
-  return new logger(10702)({
-    origin,
+  ({ source, postMessageToRPCClient, version, encoding, postClose } = logger);
+  return new logger(10552)({
+    source,
     postMessageToRPCClient,
-    frameId,
     version,
     encoding,
     logger,

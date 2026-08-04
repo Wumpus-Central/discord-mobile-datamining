@@ -154,7 +154,7 @@ function _fetchProfile() {
               }
               let obj7 = callback2(709);
               obj7 = { type: "USER_PROFILE_FETCH_FAILURE", apiError: null, fetchStartedAt: null, userId: null, guildId: null };
-              const aPIError = new callback(4154).APIError(closure_13);
+              const aPIError = new callback(4184).APIError(closure_13);
               obj7[1] = aPIError;
               obj7[2] = closure_10;
               obj7[3] = callback;
@@ -373,7 +373,7 @@ export const acceptAgreements = function acceptAgreements() {
   if (arg1 === undefined) {
     flag2 = true;
   }
-  let obj = importDefault(5065);
+  let obj = importDefault(5094);
   obj = { url: Endpoints.USER_AGREEMENTS, trackedActionData: null, body: null, oldFormErrors: true, rejectWithError: null };
   obj = { event: require(663) /* ImpressionNames */.NetworkActionNames.USER_ACCEPT_AGREEMENTS };
   obj[1] = obj;

@@ -16,6 +16,6 @@ export default function RemediationsElement(children) {
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t["k+QA9N"]);
   obj[2] = children.children;
-  obj[1] = jsx(require(5620) /* TableRowGroupTitle */.TableRowGroup, { title: null, hasIcons: true, children: null });
+  obj[1] = jsx(require(5649) /* TableRowGroupTitle */.TableRowGroup, { title: null, hasIcons: true, children: null });
   return <View title={null} hasIcons>{null}</View>;
 };

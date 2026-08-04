@@ -17,7 +17,7 @@ let metroImportAll;
 const require = arg1;
 function AvatarDefault() {
   const tmp = callback3();
-  let obj = require(3959) /* map */;
+  let obj = require(3989) /* map */;
   const token = obj.useToken(importDefault(712).colors.MOBILE_FLOATINGBAR_BACKGROUND);
   let obj1 = require(1297) /* Button */;
   let num = obj1.getStatusSize(closure_5);
@@ -28,7 +28,7 @@ function AvatarDefault() {
   const result = num / 2;
   const sum = result + tmp2(1297).STATUS_PADDING;
   const diff = tmp7 - sum - num / 4 * 2;
-  obj = { shape: tmp2(8091).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
+  obj = { shape: tmp2(8103).CutoutShape.Circle, x: diff, y: diff, size: 2 * sum };
   obj = { style: null, children: null };
   obj1 = { height: tmp2(1297).AVATAR_SIZE_MAP[tmp6], width: tmp2(1297).AVATAR_SIZE_MAP[tmp6], position: "relative" };
   obj[0] = obj1;
@@ -36,22 +36,22 @@ function AvatarDefault() {
   items = [obj];
   const obj3 = { style: items1, children: null };
   items1 = [tmp.placeholderAvatar, { width: tmp7, height: tmp7, backgroundColor: token }];
-  const items2 = [callback(View, { style: tmp.placeholderAvatarBackground }), callback(require(7564) /* ReactionIcon */.ReactionIcon, { size: "custom", style: { width: tmp7, height: tmp7 }, color: "background-mod-strong" })];
+  const items2 = [callback(View, { style: tmp.placeholderAvatarBackground }), callback(require(7576) /* ReactionIcon */.ReactionIcon, { size: "custom", style: { width: tmp7, height: tmp7 }, color: "background-mod-strong" })];
   obj3[1] = items2;
   obj2[1] = callback2(View, obj3);
-  const items3 = [callback(importDefault(8091), obj2), callback(require(1297) /* Button */.Status, { size: num, status: StatusTypes.OFFLINE, isMobileOnline: false, isVROnline: false, streaming: false, style: obj6 })];
+  const items3 = [callback(importDefault(8103), obj2), callback(require(1297) /* Button */.Status, { size: num, status: StatusTypes.OFFLINE, isMobileOnline: false, isVROnline: false, streaming: false, style: obj6 })];
   obj[1] = items3;
   return callback2(View, obj);
 }
 function AvatarDefaultLarge() {
   const tmp = callback3();
-  let obj = require(3959) /* map */;
+  let obj = require(3989) /* map */;
   const token = obj.useToken(importDefault(712).colors.MOBILE_FLOATINGBAR_BACKGROUND);
   const tmp3 = require(1297) /* Button */.AVATAR_SIZE_MAP[closure_4];
   const result = closure_8 / 2;
   const sum = result + require(1297) /* Button */.STATUS_PADDING;
   const diff = tmp3 - sum - closure_8 / 4 * 2;
-  obj = { shape: require(8091) /* SolidCutout */.CutoutShape.Circle, x: diff + closure_10, y: diff + closure_10, size: 2 * sum };
+  obj = { shape: require(8103) /* SolidCutout */.CutoutShape.Circle, x: diff + closure_10, y: diff + closure_10, size: 2 * sum };
   obj = { style: null, children: null };
   obj[0] = { height: require(1297) /* Button */.AVATAR_SIZE_MAP[closure_5], width: require(1297) /* Button */.AVATAR_SIZE_MAP[closure_5], position: "relative" };
   const obj2 = { style: null, children: null };
@@ -71,10 +71,10 @@ function AvatarDefaultLarge() {
   obj8[0] = require(1297) /* Button */.AVATAR_SIZE_MAP[closure_5];
   obj8[1] = require(1297) /* Button */.AVATAR_SIZE_MAP[closure_5];
   obj7[1] = obj8;
-  items3[1] = callback(require(7564) /* ReactionIcon */.ReactionIcon, obj7);
+  items3[1] = callback(require(7576) /* ReactionIcon */.ReactionIcon, obj7);
   obj5[1] = items3;
   obj4[1] = callback2(View, obj5);
-  const items4 = [callback(importDefault(8091), obj4), callback(require(1297) /* Button */.Status, { size: closure_8, status: StatusTypes.OFFLINE, isMobileOnline: false, isVROnline: false, streaming: false, style: obj10 })];
+  const items4 = [callback(importDefault(8103), obj4), callback(require(1297) /* Button */.Status, { size: closure_8, status: StatusTypes.OFFLINE, isMobileOnline: false, isVROnline: false, streaming: false, style: obj10 })];
   obj2[1] = items4;
   obj[1] = callback2(View, obj2);
   return callback(View, obj);

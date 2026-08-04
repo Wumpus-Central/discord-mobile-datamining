@@ -14,7 +14,7 @@ obj = {
     user = user.getUser(args.args.id);
     let tmp2 = null;
     if (null != user) {
-      tmp2 = importDefault(10699)(user);
+      tmp2 = importDefault(10549)(user);
     }
     return tmp2;
   }

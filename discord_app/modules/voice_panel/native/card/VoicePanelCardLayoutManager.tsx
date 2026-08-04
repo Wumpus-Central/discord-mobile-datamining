@@ -479,7 +479,7 @@ prototype["computeCardsLayout"] = function computeCardsLayout() {
               ({ item, dimensions } = obj);
               let num7 = dimensions.height;
               const id = item.id;
-              if (typeof closure_20 !== "error") {
+              if (typeof closure_20 !== "find") {
                 HermesBuiltin.throwTypeError();
               }
               let arr = closure_14;

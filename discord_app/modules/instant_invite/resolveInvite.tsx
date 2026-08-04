@@ -22,7 +22,7 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
   const _require = inviteKey;
   const importDefault = arg1;
   const dependencyMap = inviteInstanceId;
-  let obj = _require(4241);
+  let obj = _require(4271);
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   const baseCode = result.baseCode;
   ({ targetChannelId, targetMessageId, guildScheduledEventId } = result);
@@ -160,8 +160,8 @@ export default function resolveInvite(inviteKey, arg1, inviteInstanceId) {
       return obj.exact(obj);
     };
     obj1[3] = obj2;
-    const value = tmp4(5065).get(obj1);
-    const tmp4Result = tmp4(5065);
+    const value = tmp4(5094).get(obj1);
+    const tmp4Result = tmp4(5094);
     const cleanupPromise = value.then((body) => {
       body = body.body;
       if (null != callback) {

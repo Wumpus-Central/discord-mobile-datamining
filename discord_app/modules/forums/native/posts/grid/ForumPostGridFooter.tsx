@@ -47,7 +47,7 @@ export default function ForumPostGridFooter(parentChannel) {
     obj3[1] = firstMessage;
     obj3[2] = parentChannel.parentChannel;
     obj3[3] = AnalyticsObjects.FORUM_GRID_ITEM_FOOTER;
-    tmp7Result = tmp7(require(10609) /* MaxForumPostReactions */.MostCommonForumPostReaction, obj3);
+    tmp7Result = tmp7(require(10310) /* MaxForumPostReactions */.MostCommonForumPostReaction, obj3);
   }
   items[2] = tmp7Result;
   obj[1] = items;

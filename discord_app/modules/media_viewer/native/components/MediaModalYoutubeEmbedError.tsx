@@ -17,18 +17,18 @@ const memoResult = require("noop").memo(function MediaModalYoutubeEmbedError(vid
   videoId = videoId.videoId;
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  const items = [callback(videoId(10749).StreamFailed, { resizeMode: "contain" }), , ];
+  const items = [callback(videoId(10599).StreamFailed, { resizeMode: "contain" }), , ];
   obj = { style: tmp.text, variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl = videoId(1236).intl;
   obj[3] = intl.string(videoId(1236).t.u7vKPs);
-  items[1] = callback(videoId(4251).Text, obj);
+  items[1] = callback(videoId(4281).Text, obj);
   obj = { text: null, variant: "primary-overlay", shrink: true, grow: false, onPress: null };
   const intl2 = videoId(1236).intl;
   obj[0] = intl2.string(videoId(1236).t.LLpxJ5);
   obj[4] = function onPress() {
     outer1_1(outer1_2[9]).openURL("https://youtube.com/watch?v=" + videoId);
   };
-  items[2] = callback(videoId(4666).Button, obj);
+  items[2] = callback(videoId(4695).Button, obj);
   obj[1] = items;
   return callback2(View, obj);
 });

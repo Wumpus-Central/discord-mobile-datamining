@@ -28,5 +28,5 @@ export default function EntityBorderAppIcon(iconSize) {
   const tmp = callback(num, iconBorderRadius);
   const items = [tmp.entityWrapper, wrapperStyle];
   const items1 = [tmp.appIcon, iconStyle];
-  return <View style={items}>{jsx(importDefault(5207), { style: items1, source: iconSource })}</View>;
+  return <View style={items}>{jsx(importDefault(5236), { style: items1, source: iconSource })}</View>;
 };

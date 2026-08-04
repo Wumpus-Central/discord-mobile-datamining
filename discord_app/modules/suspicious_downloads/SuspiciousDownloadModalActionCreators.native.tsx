@@ -2,8 +2,8 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/suspic
 
 export default {
   show(href) {
-    let obj = importDefault(4223);
+    let obj = importDefault(4253);
     obj = { href };
-    obj.openLazy(require(1959) /* asyncRequireImpl */(12405, dependencyMap.paths), "suspicious-download", obj);
+    obj.openLazy(require(1959) /* asyncRequireImpl */(12134, dependencyMap.paths), "suspicious-download", obj);
   }
 };

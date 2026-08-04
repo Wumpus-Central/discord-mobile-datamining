@@ -75,7 +75,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
                   }
                   ref = 2;
                   outer1_2.current = true;
-                  let obj1 = guildJoinRequests(9338);
+                  let obj1 = guildJoinRequests(8238);
                   obj1 = { guildId: null, status: null, limit: null, force: true };
                   obj1[0] = lib;
                   obj1[1] = tmp69;
@@ -122,7 +122,7 @@ export const usePaginatedMemberApplications = function usePaginatedMemberApplica
             if (2 === tmp8) {
               ref = 1;
               outer1_2 = _slicedToArray;
-              const aPIError = new lib(4154).APIError(outer1_2);
+              const aPIError = new lib(4184).APIError(outer1_2);
               anyErrorMessage = aPIError;
               outer1_4(anyErrorMessage.getAnyErrorMessage());
             } else if (arg0 === 1) {

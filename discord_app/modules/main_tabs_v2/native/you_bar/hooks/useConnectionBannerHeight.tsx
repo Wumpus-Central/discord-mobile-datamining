@@ -8,7 +8,7 @@ const result = require("apexExperiment").fileFinishedImporting("modules/main_tab
 export const useConnectionBannerHeight = function useConnectionBannerHeight() {
   let hidden;
   let timeoutMs;
-  const config = importDefault(12823).useConfig({ location: "useConnectionBannerHeight" });
+  const config = importDefault(12857).useConfig({ location: "useConnectionBannerHeight" });
   ({ timeoutMs, hidden } = config);
   require(589) /* initialize */;
   [][0] = updateState;

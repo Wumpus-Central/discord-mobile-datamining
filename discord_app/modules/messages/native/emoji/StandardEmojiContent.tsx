@@ -12,9 +12,9 @@ function Emoji(surrogate) {
   surrogate = surrogate.surrogate;
   let obj = {};
   const merged = Object.assign(createCacheKey());
-  let obj1 = require(9569) /* styles */;
+  let obj1 = require(8658) /* styles */;
   const merged1 = Object.assign(obj1.useSharedMessageEmojiStyles());
-  let obj2 = importDefault(3900);
+  let obj2 = importDefault(3930);
   const uRL = obj2.getURL(surrogate);
   obj = { style: obj.emojiWrapper, children: null };
   if ("" !== uRL) {
@@ -23,12 +23,12 @@ function Emoji(surrogate) {
     obj1 = { uri: null };
     obj1[0] = uRL;
     obj[2] = obj1;
-    let tmp7Result = tmp7(importDefault(5207), obj);
+    let tmp7Result = tmp7(importDefault(5236), obj);
   } else {
     obj2 = { style: null, variant: "text-md/medium", children: null };
     obj2[0] = obj.emojiSurrogate;
     obj2[2] = surrogate;
-    tmp7Result = tmp7(require(4251) /* Text */.Text, obj2);
+    tmp7Result = tmp7(require(4281) /* Text */.Text, obj2);
   }
   obj[1] = tmp7Result;
   return closure_6(View, obj);

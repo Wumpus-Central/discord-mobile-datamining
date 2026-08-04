@@ -14,7 +14,7 @@ function ConnectionIcon(arg0) {
   let theme;
   ({ platform, theme } = arg0);
   const tmp = createCacheKey();
-  let obj = require(3965) /* isThemeLight */;
+  let obj = require(3995) /* isThemeLight */;
   const isThemeDarkResult = obj.isThemeDark(theme);
   const tmp2 = require;
   const icon = platform.icon;
@@ -22,10 +22,10 @@ function ConnectionIcon(arg0) {
   const source = require(1416) /* getAvatarURL */.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
   obj = { size: null, source: null, disableColor: true, style: null };
   const obj2 = require(1416) /* getAvatarURL */;
-  obj[0] = tmp2(4668).IconSizes.CUSTOM;
+  obj[0] = tmp2(4697).IconSizes.CUSTOM;
   obj[1] = source;
   obj[3] = tmp.connectionIcon;
-  obj[1] = callback(importDefault(4668), obj);
+  obj[1] = callback(importDefault(4697), obj);
   return callback(View, obj);
 }
 function ApplicationIcon(application) {
@@ -35,9 +35,9 @@ function ApplicationIcon(application) {
   if (null != application) {
     obj = { game: null, size: null };
     obj[0] = application;
-    obj[1] = require(5591) /* GameIcon */.GameIconSizes.NORMAL;
-    tmpResult = tmp(importDefault(5591), obj);
-    const tmp6 = importDefault(5591);
+    obj[1] = require(5620) /* GameIcon */.GameIconSizes.NORMAL;
+    tmpResult = tmp(importDefault(5620), obj);
+    const tmp6 = importDefault(5620);
   }
   obj[1] = tmpResult;
   return closure_8(View, obj);
@@ -208,8 +208,8 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
       replacedBy = migrationData.replacedBy;
     }
   }
-  const getOrFetchApplication = deprecatedPlatformTypes(5587).useGetOrFetchApplication(replacedBy);
-  const tmp5 = importDefault(5584)(getOrFetchApplication);
+  const getOrFetchApplication = deprecatedPlatformTypes(5616).useGetOrFetchApplication(replacedBy);
+  const tmp5 = importDefault(5613)(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {
     fetchingConnections = !tmp5.fetched;

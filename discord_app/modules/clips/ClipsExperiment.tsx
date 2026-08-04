@@ -11,13 +11,13 @@ const result = require("GuildFeatures").fileFinishedImporting("modules/clips/Cli
 
 export const ClipsExperiment = apexExperiment;
 export const areClipsAvailable = function areClipsAvailable() {
-  if (importDefault(4315)(_detectH265HardwareDecode)) {
+  if (importDefault(4344)(_detectH265HardwareDecode)) {
     currentUser = currentUser.getCurrentUser();
     let premiumType;
     if (currentUser != null) {
       premiumType = currentUser.premiumType;
     }
-    let enableClips = tmp(3901).isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
+    let enableClips = tmp(3931).isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
     if (!enableClips) {
       enableClips = apexExperiment.getConfig({ location: "areClipsEnabled" }).enableClips;
     }
@@ -28,7 +28,7 @@ export const areClipsAvailable = function areClipsAvailable() {
   tmp = importDefault;
 };
 export const useIsClipsAvailable = function useIsClipsAvailable() {
-  const tmp = importDefault(4315)(_detectH265HardwareDecode);
+  const tmp = importDefault(4344)(_detectH265HardwareDecode);
   const items = [mergeGuildAvatar];
   const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -46,7 +46,7 @@ export const isUserPremiumTypeForClipsEarlyAccess = function isUserPremiumTypeFo
   if (premiumType != null) {
     premiumType = premiumType.premiumType;
   }
-  return importDefault(3901).isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
+  return importDefault(3931).isPremiumAtLeast(premiumType, PremiumTypes.TIER_2);
 };
 export function isScreenshotKeybindEnabled() {
   return false;

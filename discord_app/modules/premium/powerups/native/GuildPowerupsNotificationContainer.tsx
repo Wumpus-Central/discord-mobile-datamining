@@ -5,7 +5,7 @@ import createCacheKey from "createCacheKey";
 let c4;
 let c5;
 function Tier3OverrideNotice(children) {
-  return callback(View, { style: callback2().staffContainer, children: callback(require(4251) /* Text */.Text, { variant: "text-sm/medium", children: children.text }) });
+  return callback(View, { style: callback2().staffContainer, children: callback(require(4281) /* Text */.Text, { variant: "text-sm/medium", children: children.text }) });
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { container: null, staffContainer: null };
@@ -18,15 +18,15 @@ const result = require("createCacheKey").fileFinishedImporting("modules/premium/
 
 export default function GuildPowerupsNotificationContainer(guildId) {
   guildId = guildId.guildId;
-  const tmp4 = importDefault(11766)(guildId);
-  const tmp5 = importDefault(11767)(guildId);
+  const tmp4 = importDefault(11827)(guildId);
+  const tmp5 = importDefault(11828)(guildId);
   if (tmp4.shouldShow) {
     let obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { variant: "eyebrow", color: "text-subtle", children: null };
     const intl = require(1236) /* getSystemLocale */.intl;
-    obj[2] = intl.string(tmp2(2287)["3FRirU"]);
-    const items = [callback(require(4251) /* Text */.Text, obj), , ];
+    obj[2] = intl.string(tmp2(2317)["3FRirU"]);
+    const items = [callback(require(4281) /* Text */.Text, obj), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
       obj = { text: null };
@@ -39,7 +39,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
       const obj1 = { guildId: null, powerupNames: null, warnings: null };
       obj1[0] = guildId;
       ({ expiringPowerupNames: obj4[1], warnings: obj4[2] } = tmp5);
-      shouldShow2 = tmp9(tmp2(11770), obj1);
+      shouldShow2 = tmp9(tmp2(11831), obj1);
     }
     items[2] = shouldShow2;
     obj[1] = items;

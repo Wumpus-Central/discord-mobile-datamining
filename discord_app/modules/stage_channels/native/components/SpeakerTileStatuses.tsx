@@ -41,15 +41,15 @@ const memoResult = importAllResult.memo((userId) => {
     flag2 = false;
   }
   if (stateFromStores) {
-    let tmp5 = channelId(10915);
+    let tmp5 = channelId(10768);
     let flag3 = true;
   } else if (flag2) {
-    tmp5 = channelId(10770);
+    tmp5 = channelId(10621);
     flag3 = false;
   } else {
     flag3 = false;
     if (flag) {
-      tmp5 = channelId(10771);
+      tmp5 = channelId(10622);
       flag3 = false;
     }
   }
@@ -76,7 +76,7 @@ const memoResult1 = importAllResult.memo((userId) => {
   const items1 = [channelId, userId];
   let tmp4;
   if (obj.useStateFromStores(items, () => outer1_6.isModerator(userId, channelId), items1)) {
-    tmp4 = channelId(10957);
+    tmp4 = channelId(10826);
   }
   let tmp6 = null;
   if (null != tmp4) {
@@ -98,14 +98,14 @@ export const VoiceStatus = memoResult;
 export const ModeratorStatus = memoResult1;
 export const BlockedStatus = function BlockedStatus() {
   const obj = { style: callback().restricted, source: null, size: null, color: null };
-  obj[1] = importDefault(10958);
+  obj[1] = importDefault(10827);
   obj[2] = require(1297) /* Button */.Icon.Sizes.EXTRA_SMALL;
   obj[3] = importDefault(712).unsafe_rawColors.RED_400;
   return jsx(require(1297) /* Button */.Icon, { style: callback().restricted, source: null, size: null, color: null });
 };
 export const IgnoredStatus = function IgnoredStatus() {
   const obj = { style: callback().restricted, source: null, size: null };
-  obj[1] = importDefault(8673);
+  obj[1] = importDefault(8307);
   obj[2] = require(1297) /* Button */.Icon.Sizes.EXTRA_SMALL;
   return jsx(require(1297) /* Button */.Icon, { style: callback().restricted, source: null, size: null });
 };

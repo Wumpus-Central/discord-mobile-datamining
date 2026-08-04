@@ -9,22 +9,22 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
-    const parentalControlledExplicitContentSettings = require(13941) /* useParentalControlledExplicitContentSettings */.useParentalControlledExplicitContentSettings();
+    const parentalControlledExplicitContentSettings = require(13975) /* useParentalControlledExplicitContentSettings */.useParentalControlledExplicitContentSettings();
     let prop;
     if (parentalControlledExplicitContentSettings != null) {
       prop = parentalControlledExplicitContentSettings.explicitContentFriendDm;
     }
     let tmp5 = null;
     if (null != prop) {
-      tmp5 = require(6956) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(prop)();
-      const tmpResult = require(6956) /* redactionSettingToRenderedString */;
+      tmp5 = require(6968) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(prop)();
+      const tmpResult = require(6968) /* redactionSettingToRenderedString */;
     }
     return tmp5;
   },
   onPress: function onObscuredContentFriendsDmOnPress() {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
-      let obj = selectedTeenId(13945);
+      let obj = selectedTeenId(13979);
       const intl = selectedTeenId(1236).intl;
       const stringResult = intl.string(selectedTeenId(1236).t.GYpoAq);
       obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
@@ -39,8 +39,8 @@ createToggle = {
       obj[3] = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentFriendDm;
       const items = [selectedTeenId(1306).ExplicitContentRedaction.SHOW];
       obj[4] = items;
-      const result = selectedTeenId(13938).handleSensitiveMediaFilterPress(obj);
-      const obj2 = selectedTeenId(13938);
+      const result = selectedTeenId(13972).handleSensitiveMediaFilterPress(obj);
+      const obj2 = selectedTeenId(13972);
     }
   },
   unsearchable: true

@@ -28,14 +28,14 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[4] = intl.string(require(1236) /* getSystemLocale */.t["v+Jm6X"]);
-  const items = [callback(require(4251) /* Text */.Text, obj), , , , ];
+  const items = [callback(require(4281) /* Text */.Text, obj), , , , ];
   const obj1 = { style: tmp.description, accessibilityRole: "text", variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj1[4] = intl2.string(require(1236) /* getSystemLocale */.t.kUUFbG);
-  items[1] = callback(require(4251) /* Text */.Text, obj1);
+  items[1] = callback(require(4281) /* Text */.Text, obj1);
   const obj2 = { style: tmp.image, resizeMode: "contain", source: null };
-  obj2[2] = importDefault(15219);
-  items[2] = callback(importDefault(5207), obj2);
+  obj2[2] = importDefault(15253);
+  items[2] = callback(importDefault(5236), obj2);
   const obj3 = {
     onPress() {
       callback(outer1_5.UNKNOWN);
@@ -45,7 +45,7 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj3[1] = intl3.string(require(1236) /* getSystemLocale */.t.OgQQbG);
-  items[3] = callback(require(4666) /* Button */.Button, obj3);
+  items[3] = callback(require(4695) /* Button */.Button, obj3);
   const obj4 = { style: tmp.dismissButton, children: null };
   const obj5 = {
     onPress() {
@@ -56,9 +56,9 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   };
   const intl4 = require(1236) /* getSystemLocale */.intl;
   obj5[1] = intl4.string(require(1236) /* getSystemLocale */.t.WAI6xu);
-  obj4[1] = callback(require(4666) /* Button */.Button, obj5);
+  obj4[1] = callback(require(4695) /* Button */.Button, obj5);
   items[4] = callback(View, obj4);
   obj[1] = items;
   obj[2] = callback2(View, obj);
-  return callback(require(5309) /* Background */.BottomSheet, obj);
+  return callback(require(5338) /* Background */.BottomSheet, obj);
 };

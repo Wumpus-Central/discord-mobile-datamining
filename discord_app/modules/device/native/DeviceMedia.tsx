@@ -89,14 +89,14 @@ export default {
             obj = { page: table, has_reached_end: tmp12 };
             lastAssetIndex(table[2]).track(outer1_3.MEDIA_PICKER_INFINITE_SCROLL_PAGED, obj);
           };
-          lastAssetIndex(9843)(obj);
+          lastAssetIndex(9934)(obj);
         }
       }
     }
   },
   refreshAssets(batchSize) {
     batchSize = batchSize.batchSize;
-    importDefault(9843)({
+    importDefault(9934)({
       batchSize,
       extensions: batchSize.extensions,
       onFetched(edges) {

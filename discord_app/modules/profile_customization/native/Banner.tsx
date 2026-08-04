@@ -33,7 +33,7 @@ export default function ProfileBanner(bannerHeight) {
     obj = { style: null, source: null };
     obj[0] = tmp.image;
     obj[1] = bannerSource;
-    tmp3Result = tmp3(importDefault(5207), obj);
+    tmp3Result = tmp3(importDefault(5236), obj);
   }
   obj[1] = tmp3Result;
   return <View style={items}>{null}</View>;

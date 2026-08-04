@@ -4,7 +4,7 @@ const result = require("setRequestedBy").fileFinishedImporting("modules/gateway/
 
 export const useRequestGatewaySocket = function useRequestGatewaySocket(arg0) {
   const importDefault = arg0;
-  const canUIRequestGatewaySocket = importDefault(9635).useCanUIRequestGatewaySocket();
+  const canUIRequestGatewaySocket = importDefault(10384).useCanUIRequestGatewaySocket();
   const items = [arg0, canUIRequestGatewaySocket];
   const effect = React.useEffect(() => {
     if (canUIRequestGatewaySocket) {

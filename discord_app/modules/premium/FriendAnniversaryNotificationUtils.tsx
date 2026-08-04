@@ -4,7 +4,7 @@ import { NotificationSettingsUpdateType as closure_4 } from "AccountNotification
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/premium/FriendAnniversaryNotificationUtils.tsx");
 
 export const onFriendAnniversaryNotificationSettingsChanged = function onFriendAnniversaryNotificationSettingsChanged(friend_anniversary_notifications) {
-  const EnableFriendAnniversaryNotifications = require(3928) /* explicitContentFromProto */.EnableFriendAnniversaryNotifications;
+  const EnableFriendAnniversaryNotifications = require(3958) /* explicitContentFromProto */.EnableFriendAnniversaryNotifications;
   EnableFriendAnniversaryNotifications.updateSetting(friend_anniversary_notifications);
   let obj = importDefault(698);
   obj = { update_type: constants.ACCOUNT, friend_anniversary_notifications };

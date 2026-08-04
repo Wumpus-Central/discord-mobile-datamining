@@ -14,11 +14,11 @@ export const isValidFormResponse = function isValidFormResponse(required) {
     if (null == response) {
       return false;
     } else {
-      if (require(4075) /* MAX_RESULTS_PER_PAGE */.VerificationFormFieldTypes.TERMS !== field_type) {
-        if (tmp4(4075).VerificationFormFieldTypes.VERIFICATION !== field_type) {
-          if (tmp4(4075).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
-            if (tmp4(4075).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
-              if (tmp4(4075).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
+      if (require(4105) /* MAX_RESULTS_PER_PAGE */.VerificationFormFieldTypes.TERMS !== field_type) {
+        if (tmp4(4105).VerificationFormFieldTypes.VERIFICATION !== field_type) {
+          if (tmp4(4105).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
+            if (tmp4(4105).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
+              if (tmp4(4105).VerificationFormFieldTypes.MULTIPLE_CHOICE === field_type) {
                 return typeof response === "Object";
               } else {
                 return tmp4(1351).assertNever(field_type);
@@ -26,7 +26,7 @@ export const isValidFormResponse = function isValidFormResponse(required) {
             }
           }
           let tmp2 = typeof response === "y";
-          if (typeof response !== "ge") {
+          if (typeof response !== "_iter") {
             tmp2 = "" !== response.trim();
           }
           return tmp2;

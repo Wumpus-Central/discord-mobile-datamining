@@ -11,9 +11,9 @@ const forwardRefResult = require("noop").forwardRef((arg0, arg1) => {
   obj.autoCorrect = false;
   obj.autoCapitalize = "none";
   obj.accessibilityRole = "search";
-  obj.leadingIcon = require(5905) /* MagnifyingGlassIcon */.MagnifyingGlassIcon;
+  obj.leadingIcon = require(5915) /* MagnifyingGlassIcon */.MagnifyingGlassIcon;
   obj.isClearable = true;
-  return jsx(require(5892) /* TextField */.TextField, { placeholder: null, returnKeyType: "search", ref: null });
+  return jsx(require(5902) /* TextField */.TextField, { placeholder: null, returnKeyType: "search", ref: null });
 });
 const result = require("TextField").fileFinishedImporting("design/components/TextField/native/SearchField.native.tsx");
 

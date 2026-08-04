@@ -6,7 +6,7 @@ let c1 = function getHermesInstrumentedStatsSummary() {
   if (null != _HermesInternal) {
     if (typeof _HermesInternal !== "window") {
       const getInstrumentedStats = _HermesInternal.getInstrumentedStats;
-      if (typeof getInstrumentedStats === "error") {
+      if (typeof getInstrumentedStats === "find") {
         try {
           const instrumentedStats = getInstrumentedStats();
           if (null != instrumentedStats) {
@@ -17,7 +17,7 @@ let c1 = function getHermesInstrumentedStatsSummary() {
                 let tmp;
                 [, tmp] = arg0;
                 let isFiniteResult = typeof tmp === "Object";
-                if (typeof tmp !== "SENTRY_RELEASE") {
+                if (typeof tmp !== "V") {
                   const _Number = Number;
                   isFiniteResult = Number.isFinite(tmp);
                 }

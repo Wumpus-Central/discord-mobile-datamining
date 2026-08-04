@@ -358,7 +358,7 @@ class ConnectedApplicationUserRoleAccount {
             let obj = { style: _undefined.connectedAccountPoweredByText, children: null };
             let tmp5 = null;
             if (null != applicationRoleConnection.application.bot) {
-              obj = { style: null, user: null, size: null, guildId: "Array" };
+              obj = { style: null, user: null, size: null, guildId: "add" };
               obj[0] = tmp3.connectedAccountPoweredByAvatar;
               const tmp12 = new outer1_7(tmp4.application.bot);
               obj[1] = tmp12;
@@ -525,8 +525,8 @@ export { ConnectedUserAccount };
 export { ConnectedApplicationUserRoleAccount };
 export const useAppplicationRoleConnectionItems = function useAppplicationRoleConnectionItems(arr) {
   const _require = arg1;
-  const theme = _require(3967).useThemeContext().theme;
-  const obj = _require(3967);
+  const theme = _require(3997).useThemeContext().theme;
+  const obj = _require(3997);
   const items = [_getSystemLocale];
   const dependencyMap = _require(589).useStateFromStores(items, () => _getSystemLocale.locale);
   return arr.map((applicationRoleConnection) => {

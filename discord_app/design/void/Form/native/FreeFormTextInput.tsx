@@ -16,11 +16,11 @@ function ClearButton(onPress) {
   obj[3] = onPress.onPress;
   obj[4] = { top: 8, bottom: 8, right: 8 };
   obj = { source: null, style: null, size: null };
-  obj[0] = importDefault(9184);
+  obj[0] = importDefault(8279);
   obj[1] = callback2().closeIcon;
   obj[2] = require(1297) /* Button */.Icon.Sizes.MEDIUM;
   obj[5] = callback(require(1297) /* Button */.Icon, obj);
-  return callback(require(4783) /* PressableBase */.PressableOpacity, obj);
+  return callback(require(4812) /* PressableBase */.PressableOpacity, obj);
 }
 let c3 = importAllResult;
 ({ TouchableWithoutFeedback: c4, View: c5, TouchableOpacity: closure_6 } = get_ActivityIndicator);

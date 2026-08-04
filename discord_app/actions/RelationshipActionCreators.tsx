@@ -24,10 +24,10 @@ function handleRelationshipAddError(arg0, arg1, substr) {
       obj[1] = intl8.string(require(1236) /* getSystemLocale */.t.TuJriJ);
       const intl9 = require(1236) /* getSystemLocale */.intl;
       obj[2] = intl9.string(require(1236) /* getSystemLocale */.t.DppXIx);
-      require(5254) /* openContextMenu */.closeContextMenu();
-      const obj11 = require(5254) /* openContextMenu */;
-      importDefault(4594).show(obj);
-      const obj12 = importDefault(4594);
+      require(5283) /* openContextMenu */.closeContextMenu();
+      const obj11 = require(5283) /* openContextMenu */;
+      importDefault(4623).show(obj);
+      const obj12 = importDefault(4623);
     }
   } else {
     if (403 === status) {
@@ -42,22 +42,22 @@ function handleRelationshipAddError(arg0, arg1, substr) {
         obj[3] = function onConfirm() {
           const result = callback(table[8]).openClaimAccountModal();
         };
-        require(5254) /* openContextMenu */.closeContextMenu();
-        const obj7 = require(5254) /* openContextMenu */;
-        importDefault(4594).show(obj);
-        const obj8 = importDefault(4594);
+        require(5283) /* openContextMenu */.closeContextMenu();
+        const obj7 = require(5283) /* openContextMenu */;
+        importDefault(4623).show(obj);
+        const obj8 = importDefault(4623);
       }
     }
     if (num === constants.USER_QUARANTINED) {
-      require(5254) /* openContextMenu */.closeContextMenu();
-      importDefault(5173)();
-      const obj5 = require(5254) /* openContextMenu */;
+      require(5283) /* openContextMenu */.closeContextMenu();
+      importDefault(5202)();
+      const obj5 = require(5283) /* openContextMenu */;
     } else {
       if (!obj9.isLimitedAccessErrorCode(status, num)) {
         if (num !== tmp2.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
           if (arg1 === obj.SHOW_ALWAYS) {
             if (null != substr) {
-              let tmp18Result = tmp18(9108);
+              let tmp18Result = tmp18(9165);
               if (!num) {
                 num = 0;
               }
@@ -72,14 +72,14 @@ function handleRelationshipAddError(arg0, arg1, substr) {
             obj1[1] = humanizeAbortCodeResult;
             const intl3 = tmp18(1236).intl;
             obj1[2] = intl3.string(tmp18(1236).t.BddRzS);
-            tmp18Result = tmp18(5254);
+            tmp18Result = tmp18(5283);
             tmp18Result.closeContextMenu();
-            importDefault(4594).show(obj1);
-            const obj4 = importDefault(4594);
+            importDefault(4623).show(obj1);
+            const obj4 = importDefault(4623);
           }
         }
       }
-      obj9 = require(9107) /* isLimitedAccessErrorCode */;
+      obj9 = require(9164) /* isLimitedAccessErrorCode */;
     }
   }
   throw arg0;
@@ -149,21 +149,21 @@ obj = {
   },
   acceptFriendRequest(arg0) {
     return obj.addRelationship(arg0, () => {
-      const AccessibilityAnnouncer = callback(4101).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t["3goNa5"]));
     });
   },
   cancelFriendRequest(arg0, arg1) {
     return obj.removeRelationship(arg0, arg1, () => {
-      const AccessibilityAnnouncer = callback(4101).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.pLUaxR));
     });
   },
   removeFriend(arg0, arg1) {
     obj.removeRelationship(arg0, arg1, () => {
-      const AccessibilityAnnouncer = callback(4101).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.vGSLa2));
     });
@@ -171,14 +171,14 @@ obj = {
   blockUser(userId, context) {
     const obj = { userId, context, type: constants2.BLOCKED };
     return obj.addRelationship(obj, () => {
-      const AccessibilityAnnouncer = callback(4101).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.mU0Vrp));
     });
   },
   unblockUser(id, arg1) {
     return obj.removeRelationship(id, arg1, () => {
-      const AccessibilityAnnouncer = callback(4101).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t["9t1au7"]));
     });
@@ -195,7 +195,7 @@ obj = {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(4101).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
     });
@@ -217,7 +217,7 @@ obj = {
     }, () => callback(709).dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }));
   },
   confirmClearPendingRelationships(arg0) {
-    importDefault(9109)(arg0);
+    importDefault(9166)(arg0);
   },
   clearPendingRelationships() {
     const HTTP = require(530) /* sendRequest */.HTTP;
@@ -229,7 +229,7 @@ obj = {
     return HTTP.del(obj).then(() => {
       callback2(709).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(4101).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
     });
@@ -246,7 +246,7 @@ obj = {
     return HTTP.del(obj).then(() => {
       callback2(709).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(4101).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
     });
@@ -269,8 +269,8 @@ obj = {
       obj = { type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: callback, timestamp: Date.now() };
       channelId(outer1_3[14]).dispatch(obj);
     }).catch(() => {
-      channelId(7695).showFailedToast();
-      const AccessibilityAnnouncer = callback(4101).AccessibilityAnnouncer;
+      channelId(7707).showFailedToast();
+      const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(callback(1236).t.n6Jo3E));
     });
@@ -290,8 +290,8 @@ obj = {
       const intl = id(outer1_3[7]).intl;
       AccessibilityAnnouncer.announce(intl.string(id(outer1_3[7]).t.QlH5w6));
     }).catch(() => {
-      id2(7695).showFailedToast();
-      const AccessibilityAnnouncer = id(4101).AccessibilityAnnouncer;
+      id2(7707).showFailedToast();
+      const AccessibilityAnnouncer = id(4131).AccessibilityAnnouncer;
       const intl = id(1236).intl;
       AccessibilityAnnouncer.announce(intl.string(id(1236).t.n6Jo3E));
     });

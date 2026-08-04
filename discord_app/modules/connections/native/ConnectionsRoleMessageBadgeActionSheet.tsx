@@ -51,7 +51,7 @@ function PopoutCheck(arg0) {
       }
     }
   } else {
-    obj = require(5062) /* officialApplicationIds */;
+    obj = require(5091) /* officialApplicationIds */;
     const obj1 = { connectionType: null, connectionMetadataField: null, operator: null, value: null };
     obj1[0] = connectionType;
     obj1[1] = connectionMetadataField;
@@ -65,10 +65,10 @@ function PopoutCheck(arg0) {
     obj2[0] = tmp.popoutCheck;
     const obj3 = { size: "sm", style: null };
     obj3[1] = tmp.popoutCheckIcon;
-    const items = [callback(require(4207) /* CheckmarkLargeIcon */.CheckmarkLargeIcon, obj3), ];
+    const items = [callback(require(4237) /* CheckmarkLargeIcon */.CheckmarkLargeIcon, obj3), ];
     const obj4 = { variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
     obj4[2] = formatResult;
-    items[1] = callback(require(4251) /* Text */.Text, obj4);
+    items[1] = callback(require(4281) /* Text */.Text, obj4);
     obj2[1] = items;
     tmp9 = callback2(closure_6, obj2);
   }
@@ -147,7 +147,7 @@ class PopoutChecks {
               const items1 = [null, , , ];
               let tmp26 = null;
               if (null != tmp7) {
-                const obj3 = { style: null, user: null, size: null, guildId: "Array" };
+                const obj3 = { style: null, user: null, size: null, guildId: "add" };
                 obj3[0] = tmp21.popoutCheckGroupPlatformIcon;
                 obj3[1] = tmp7;
                 obj3[2] = tmp11(tmp3[24]).AvatarSizes.XSMALL;

@@ -502,7 +502,7 @@ class SortableChannels extends Component3 {
               id = tmp2.data.channel.id;
             }
           }
-          if (typeof id !== "ge") {
+          if (typeof id !== "_iter") {
             let tmp22 = obj;
             obj = { y: null, height: null };
             obj[0] = num;

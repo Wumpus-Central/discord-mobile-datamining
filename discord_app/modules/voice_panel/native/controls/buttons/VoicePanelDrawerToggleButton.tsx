@@ -22,23 +22,23 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   let wrapperSpecs;
   ({ props, openTab, wrapperSpecs } = arg0);
   const tmp = createCacheKey();
-  let obj = require(16091) /* useVoicePanelButtonStyles */;
+  let obj = require(16124) /* useVoicePanelButtonStyles */;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
-  ({ isDrawerOpen, handlePress, accessibilityLabel } = importDefault(16078)(openTab));
+  ({ isDrawerOpen, handlePress, accessibilityLabel } = importDefault(16111)(openTab));
   obj = { onPress: handlePress, props, accessibilityLabel, children: null };
-  const tmp5 = importDefault(16078)(openTab);
+  const tmp5 = importDefault(16111)(openTab);
   const tmp6 = closure_4;
   const items = [tmp.circle, { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor }];
-  const items1 = [callback(importDefault(5634), { style: items }), ];
+  const items1 = [callback(importDefault(5663), { style: items }), ];
   obj = { style: tmp.iconContainer, children: null };
-  const tmp7 = importDefault(16092);
+  const tmp7 = importDefault(16125);
   if (isDrawerOpen) {
-    let ChevronSmallUpIcon = tmp2(8707).ChevronSmallDownIcon;
+    let ChevronSmallUpIcon = tmp2(9396).ChevronSmallDownIcon;
   } else {
-    ChevronSmallUpIcon = tmp2(12718).ChevronSmallUpIcon;
+    ChevronSmallUpIcon = tmp2(12752).ChevronSmallUpIcon;
   }
   obj[1] = callback(ChevronSmallUpIcon, { color: voicePanelButtonStyles.iconFill.color });
-  items1[1] = callback(importDefault(5634), obj);
+  items1[1] = callback(importDefault(5663), obj);
   obj[3] = items1;
   return tmp6(tmp7, obj);
 };

@@ -43,8 +43,8 @@ function processUserInChannel(channelId, id) {
             delete tmp[tmp2];
           }
           if (flag3) {
-            const result = importDefault(12868).handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id);
-            const obj4 = importDefault(12868);
+            const result = importDefault(12902).handleBlockedOrIgnoredUserVoiceChannelJoin(channelId, id);
+            const obj4 = importDefault(12902);
           }
           return flag4;
         }

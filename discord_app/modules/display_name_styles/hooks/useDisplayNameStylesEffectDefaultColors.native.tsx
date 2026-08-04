@@ -10,7 +10,7 @@ const result = require("int2hslRaw").fileFinishedImporting("modules/display_name
 
 export default function useDisplayNameStylesEffectDefaultColors() {
   let obj = require(688) /* int2hslRaw */;
-  const hex2intResult = obj.hex2int(require(3959) /* map */.useToken(importDefault(712).colors.TEXT_DEFAULT));
+  const hex2intResult = obj.hex2int(require(3989) /* map */.useToken(importDefault(712).colors.TEXT_DEFAULT));
   require = hex2intResult;
   let items = [hex2intResult];
   return React.useMemo(() => {

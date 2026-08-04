@@ -3,11 +3,11 @@ const result = require("AddDescription").fileFinishedImporting("modules/image_up
 
 export default {
   open(closure_0) {
-    importDefault(4223).hideActionSheet();
-    const obj = importDefault(4223);
-    importDefault(4461).pushLazy(require(1959) /* asyncRequireImpl */(10006, dependencyMap.paths), closure_0, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
+    importDefault(4253).hideActionSheet();
+    const obj = importDefault(4253);
+    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(10097, dependencyMap.paths), closure_0, ADD_IMAGE_DESCRIPTION_MODAL_KEY);
   },
   close() {
-    importDefault(4461).popWithKey(ADD_IMAGE_DESCRIPTION_MODAL_KEY);
+    importDefault(4490).popWithKey(ADD_IMAGE_DESCRIPTION_MODAL_KEY);
   }
 };

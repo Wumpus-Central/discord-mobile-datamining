@@ -11,9 +11,9 @@ export const SubscriptionIcon = function SubscriptionIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(14105) /* registerAsset */;
+  obj[0] = require(14139) /* registerAsset */;
   obj[1] = ICON_STRONG;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(require(3958) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(require(3988) /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
 };

@@ -9,9 +9,9 @@ function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
 }
 const result = require("set").fileFinishedImporting("utils/ErrorUtils.tsx");
 
-export const getUnderlyingIOSError = function getUnderlyingIOSError(c9) {
+export const getUnderlyingIOSError = function getUnderlyingIOSError(c11) {
   try {
-    let tmp3 = getUnderlyingIOSExceptionRecursively(c9);
+    let tmp3 = getUnderlyingIOSExceptionRecursively(c11);
     if (tmp3 == null) {
       tmp3 = null;
     }
@@ -32,5 +32,5 @@ export const serializeError = function serializeError(arg0) {
     const _String = String;
     error1 = new Error(String(error));
   }
-  return JSON.stringify(require(7357) /* BAGGAGE_HEADER_NAME */.normalizeToSize(error1));
+  return JSON.stringify(require(7369) /* BAGGAGE_HEADER_NAME */.normalizeToSize(error1));
 };

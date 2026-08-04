@@ -1,5 +1,5 @@
 import _slicedToArray from "_slicedToArray";
-import module_4461 from "module_4461";
+import module_4490 from "module_4490";
 import get_ActivityIndicator from "getSystemLocale";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import { VIBING_WUMPUS_MODAL_KEY } from "LOCATION_CONTEXT_MOBILE";
@@ -19,11 +19,11 @@ const require = arg1;
 class VibingWumpusScreen {
   constructor() {
     tmp = Fragment();
-    tmp2 = _slicedToArray(module_4461.useState(false), 2);
+    tmp2 = _slicedToArray(module_4490.useState(false), 2);
     first = tmp2[0];
     useState = first;
     closure_1 = tmp2[1];
-    ref = module_4461.useRef(null);
+    ref = module_4490.useRef(null);
     closure_2 = ref;
     tmp5 = useState;
     tmp6 = closure_2;
@@ -32,7 +32,7 @@ class VibingWumpusScreen {
     items[0] = View;
     stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
     _slicedToArray = stateFromStores;
-    effect = module_4461.useEffect(() => {
+    effect = module_4490.useEffect(() => {
       let date = new Date();
       let obj = date(ref[11]);
       let result = obj.playVibingWumpusMusic();
@@ -60,7 +60,7 @@ class VibingWumpusScreen {
     obj1 = { style: tmp.container, children: null };
     obj2 = { source: null, ref: null, autoPlay: null, loop: true, style: null, progress: null };
     tmp14 = require("play");
-    obj2[0] = require("module_10327");
+    obj2[0] = require("module_10301");
     obj2[1] = ref;
     obj2[2] = !stateFromStores;
     obj2[4] = tmp.wumpus;
@@ -188,6 +188,6 @@ export default function VibingWumpusModal() {
       return callback(closure_16, {});
     }
   };
-  return callback(require(5636) /* NavigationStack */.Navigator, { screens: { VIBING_WUMPUS }, initialRouteName: "VIBING_WUMPUS" });
+  return callback(require(5665) /* NavigationStack */.Navigator, { screens: { VIBING_WUMPUS }, initialRouteName: "VIBING_WUMPUS" });
 };
 export { VibingWumpusScreen };

@@ -62,7 +62,7 @@ function _fetchUserOffer() {
                   flag = true;
                 }
                 if (obj1 === undefined) {
-                  obj1 = { offerId: "Array", paymentGatewayOverride: "ct" };
+                  obj1 = { offerId: "Array", paymentGatewayOverride: "HermesInternal" };
                 }
                 throwTypeErrorResult = retries;
                 throwTypeErrorResult = createFromServer;

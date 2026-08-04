@@ -4,7 +4,7 @@ let require = arg1;
 const result = require("isMetaQuest").fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
 
 export default function usePortraitOrientationOnly() {
-  let tmp = importDefault(9375)();
+  let tmp = importDefault(8283)();
   const require = tmp;
   const items = [tmp];
   const effect = React.useEffect(() => {

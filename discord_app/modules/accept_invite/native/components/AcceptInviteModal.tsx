@@ -28,5 +28,5 @@ export default function AcceptInviteModal(arg0) {
     return obj;
   }, items);
   obj[1] = CreateGuildModalStates.ACCEPT_INVITE;
-  return jsx(_require(5636).Navigator, { screens: null, initialRouteName: null });
+  return jsx(_require(5665).Navigator, { screens: null, initialRouteName: null });
 };

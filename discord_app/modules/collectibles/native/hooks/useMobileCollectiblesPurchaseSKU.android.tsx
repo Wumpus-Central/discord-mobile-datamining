@@ -9,12 +9,12 @@ export default function useMobileCollectiblesPurchaseSKU(product) {
   let obj = require(589) /* initialize */;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const collectibleGoogleSkuId = require(8902) /* hasAtLeastOneGPlaySynced */.getCollectibleGoogleSkuId(product, stateFromStores);
+  const collectibleGoogleSkuId = require(9337) /* hasAtLeastOneGPlaySynced */.getCollectibleGoogleSkuId(product, stateFromStores);
   obj = {};
-  const obj2 = require(8902) /* hasAtLeastOneGPlaySynced */;
+  const obj2 = require(9337) /* hasAtLeastOneGPlaySynced */;
   const merged1 = Object.assign(merged);
   obj.skuId = product.skuId;
   obj.platformSkuId = collectibleGoogleSkuId;
   obj.isFreeForStaffSelfPurchase = true;
-  return importDefault(9919)(obj);
+  return importDefault(10010)(obj);
 };

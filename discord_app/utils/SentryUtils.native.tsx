@@ -27,8 +27,8 @@ let obj = {
   },
   captureException(arg0, extra) {
     const _require = arg0;
-    const importAll = _require(13340).getUpdatedOptions(extra);
-    const obj = _require(13340);
+    const importAll = _require(13374).getUpdatedOptions(extra);
+    const obj = _require(13374);
     importAll(810).withScope((setTags) => {
       if (null != callback) {
         if (null != tmp.tags) {
@@ -44,7 +44,7 @@ let obj = {
   },
   captureCrash(error, extra) {
     const _require = error;
-    const updatedOptions = _require(13340).getUpdatedOptions(extra);
+    const updatedOptions = _require(13374).getUpdatedOptions(extra);
     let tags;
     if (updatedOptions != null) {
       tags = updatedOptions.tags;
@@ -56,7 +56,7 @@ let obj = {
       }
     }
     const dependencyMap = Object.assign({ crash: "true" }, {});
-    let obj = _require(13340);
+    let obj = _require(13374);
     updatedOptions(810).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
@@ -86,8 +86,8 @@ let obj = {
   },
   captureMessage(arg0, extra) {
     const _require = arg0;
-    const updatedOptions = _require(13340).getUpdatedOptions(extra);
-    const obj = _require(13340);
+    const updatedOptions = _require(13374).getUpdatedOptions(extra);
+    const obj = _require(13374);
     importAll(810).withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
@@ -166,7 +166,7 @@ let obj = {
             if (null != timestamp) {
               tmp3 = (function parseNativeCrashReport(timestamp) {
                 let result;
-                if (typeof timestamp.timestamp !== "SENTRY_RELEASE") {
+                if (typeof timestamp.timestamp !== "V") {
                   const _Number = Number;
                   if (!Number.isNaN(timestamp.timestamp)) {
                     result = timestamp.timestamp / 1000;
@@ -184,13 +184,13 @@ let obj = {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                let obj = { type: "y", event_id: "local", timestamp: null, level: null, tags: null };
+                let obj = { type: "y", event_id: "image_descriptions", timestamp: "BULK_ACK", level: null, tags: null };
                 obj[1] = timestamp.event_id;
                 obj[2] = result;
                 obj[3] = formatted;
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "y";
-                if (typeof origin !== "ge") {
+                if (typeof origin !== "_iter") {
                   tmp3 = origin.length > 0;
                 }
                 let tmp4;
@@ -202,7 +202,7 @@ let obj = {
                 obj[4] = tmp4;
                 const error_message = timestamp.error_message;
                 let tmp5 = typeof error_message === "y";
-                if (typeof error_message !== "ge") {
+                if (typeof error_message !== "_iter") {
                   tmp5 = error_message.length > 0;
                 }
                 obj = {};
@@ -211,7 +211,7 @@ let obj = {
                 }
                 const error_stack = timestamp.error_stack;
                 let tmp6 = typeof error_stack === "y";
-                if (typeof error_stack !== "ge") {
+                if (typeof error_stack !== "_iter") {
                   tmp6 = error_stack.length > 0;
                 }
                 if (tmp6) {
@@ -220,7 +220,7 @@ let obj = {
                 if (timestamp.is_native) {
                   const exit_reason = timestamp.exit_reason;
                   let tmp7 = typeof exit_reason === "y";
-                  if (typeof exit_reason !== "ge") {
+                  if (typeof exit_reason !== "_iter") {
                     tmp7 = exit_reason.length > 0;
                   }
                   if (tmp7) {
@@ -228,7 +228,7 @@ let obj = {
                   }
                   const exit_description = timestamp.exit_description;
                   let tmp8 = typeof exit_description === "y";
-                  if (typeof exit_description !== "ge") {
+                  if (typeof exit_description !== "_iter") {
                     tmp8 = exit_description.length > 0;
                   }
                   if (tmp8) {
@@ -236,7 +236,7 @@ let obj = {
                   }
                   const tombstone = timestamp.tombstone;
                   let tmp9 = typeof tombstone === "y";
-                  if (typeof tombstone !== "ge") {
+                  if (typeof tombstone !== "_iter") {
                     tmp9 = tombstone.length > 0;
                   }
                   if (tmp9) {
@@ -244,7 +244,7 @@ let obj = {
                   }
                   const tombstone_cause = timestamp.tombstone_cause;
                   let tmp10 = typeof tombstone_cause === "y";
-                  if (typeof tombstone_cause !== "ge") {
+                  if (typeof tombstone_cause !== "_iter") {
                     tmp10 = tombstone_cause.length > 0;
                   }
                   if (tmp10) {
@@ -252,7 +252,7 @@ let obj = {
                   }
                   const tombstone_hash = timestamp.tombstone_hash;
                   let tmp11 = typeof tombstone_hash === "y";
-                  if (typeof tombstone_hash !== "ge") {
+                  if (typeof tombstone_hash !== "_iter") {
                     tmp11 = tombstone_hash.length > 0;
                   }
                   if (tmp11) {
@@ -260,7 +260,7 @@ let obj = {
                   }
                   const tombstone_group_by = timestamp.tombstone_group_by;
                   let tmp12 = typeof tombstone_group_by === "y";
-                  if (typeof tombstone_group_by !== "ge") {
+                  if (typeof tombstone_group_by !== "_iter") {
                     tmp12 = tombstone_group_by.length > 0;
                   }
                   if (tmp12) {
@@ -268,7 +268,7 @@ let obj = {
                   }
                   const tombstone_origin = timestamp.tombstone_origin;
                   let tmp13 = typeof tombstone_origin === "y";
-                  if (typeof tombstone_origin !== "ge") {
+                  if (typeof tombstone_origin !== "_iter") {
                     tmp13 = tombstone_origin.length > 0;
                   }
                   if (tmp13) {

@@ -17,12 +17,12 @@ export default function RedesignSkipAvatarUploadAlertModal(onConfirm) {
   obj = { onPress: onConfirm.onConfirm, text: null };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl3.string(require(1236) /* getSystemLocale */.t.nhJ8OC);
-  const items = [callback(require(4599) /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
+  const items = [callback(require(4628) /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
   const obj1 = { variant: "secondary", text: null };
   const intl4 = require(1236) /* getSystemLocale */.intl;
   obj1[1] = intl4.string(require(1236) /* getSystemLocale */.t["7eZ3ji"]);
-  items[1] = callback(require(4599) /* getAlertModalItemKey */.AlertActionButton, obj1, "add-profile-picture");
+  items[1] = callback(require(4628) /* getAlertModalItemKey */.AlertActionButton, obj1, "add-profile-picture");
   obj[0] = items;
-  obj[2] = callback2(require(4599) /* getAlertModalItemKey */.AlertActions, obj);
-  return callback(require(4599) /* getAlertModalItemKey */.AlertModal, obj);
+  obj[2] = callback2(require(4628) /* getAlertModalItemKey */.AlertActions, obj);
+  return callback(require(4628) /* getAlertModalItemKey */.AlertModal, obj);
 };

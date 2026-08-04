@@ -25,10 +25,10 @@ export default function DeleteMessageElement(message) {
   const items3 = [message, reportId];
   const callback = React.useCallback(() => {
     dependencyMap(true);
-    let obj = reportId(4450);
+    let obj = reportId(4479);
     obj = { report_id: reportId };
     obj.trackWithMetadata(outer1_6.IAR_DELETE_MESSAGE_BUTTON_CLICKED, obj);
-    reportId(6814).deleteMessage(message.getChannelId(), message.id);
+    reportId(6826).deleteMessage(message.getChannelId(), message.id);
   }, items3);
   obj = { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null };
   const intl = message(1236).intl;
@@ -39,6 +39,6 @@ export default function DeleteMessageElement(message) {
   obj[2] = intl3.string(message(1236).t.dK8S0w);
   obj[3] = tmp[0];
   obj[5] = callback;
-  obj[6] = jsx(message(4214).TrashIcon, { color: "text-feedback-critical" });
-  return jsx(reportId(12522), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
+  obj[6] = jsx(message(4244).TrashIcon, { color: "text-feedback-critical" });
+  return jsx(reportId(12556), { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null });
 };

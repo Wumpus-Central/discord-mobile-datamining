@@ -82,7 +82,7 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
   ref(defaultValue[9]);
   if (null != value.keyboardAppearance) {
     obj = {};
-    obj = { value: "Array", defaultValue: "ct" };
+    obj = { value: "Array", defaultValue: "HermesInternal" };
     let tmp6Result = tmp6(tmp3[10]);
     let merged = Object.assign(tmp6Result.mergeProps(value, tmp4, obj));
     tmp6Result = tmp6(tmp3[10]);

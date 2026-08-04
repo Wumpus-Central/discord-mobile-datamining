@@ -22,7 +22,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   if (channel != null) {
     id = channel.id;
   }
-  const embeddedActivityLaunchability = channel(11014).useEmbeddedActivityLaunchability(id);
+  const embeddedActivityLaunchability = channel(10892).useEmbeddedActivityLaunchability(id);
   let flag = false;
   if (channel(11356).ActivityAction.LEAVE !== activityAction) {
     if (tmp2(11356).ActivityAction.START === activityAction) {
@@ -34,11 +34,11 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
         }
         if (isGuildVoiceResult) {
           flag = false;
-          if (embeddedActivityLaunchability !== tmp2(11014).EmbeddedActivityLaunchability.CAN_LAUNCH) {
+          if (embeddedActivityLaunchability !== tmp2(10892).EmbeddedActivityLaunchability.CAN_LAUNCH) {
             flag = true;
           }
         } else {
-          let tmp2Result = tmp2(8136);
+          let tmp2Result = tmp2(8148);
           flag = false;
           if (!tmp2Result.isActivitiesInTextEnabled(channel)) {
             flag = true;
@@ -55,7 +55,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
         if (isGuildVoiceResult1) {
           flag = !stateFromStores;
         } else {
-          tmp2Result = tmp2(8136);
+          tmp2Result = tmp2(8148);
           flag = false;
           if (!tmp2Result.isActivitiesInTextEnabled(channel)) {
             flag = true;
@@ -68,7 +68,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   let reason;
   if (activityAction !== channel(11356).ActivityAction.LEAVE) {
     const tmp10 = application instanceof createExecutable ? application.embeddedActivityConfig : application.embedded_activity_config;
-    importDefault(8359);
+    importDefault(10522);
     tmp2(500);
     if (null != tmp10) {
       const supported_platforms = tmp10.supported_platforms;

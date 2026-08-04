@@ -12,7 +12,7 @@ function setCooldown(channel, SendMessage, arg2) {
     const id = channel.id;
     delete tmp2[tmp];
   }
-  let obj = _require(7055);
+  let obj = _require(7067);
   if (!obj.canBypassSlowmode(channel)) {
     if (arg2 > 0) {
       const _Date = Date;
@@ -22,7 +22,7 @@ function setCooldown(channel, SendMessage, arg2) {
       obj[0] = channel.rateLimitPerUser;
       obj[1] = arg2;
       obj[2] = sum;
-      const timeout = new _require(4140).Timeout();
+      const timeout = new _require(4170).Timeout();
       obj[3] = timeout;
       tmp3[SendMessage][channel.id] = obj;
       const timer2 = tmp3[SendMessage][channel.id].timer;

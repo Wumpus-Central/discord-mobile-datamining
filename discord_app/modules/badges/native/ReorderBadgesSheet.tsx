@@ -11,6 +11,6 @@ export default function ReorderBadgesSheet() {
   obj = { title: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl2.string(require(1236) /* getSystemLocale */.t.opzPIQ);
-  obj[1] = jsx(require(5308) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null });
-  return jsx(require(5309) /* Background */.BottomSheet, { title: null });
+  obj[1] = jsx(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null });
+  return jsx(require(5338) /* Background */.BottomSheet, { title: null });
 };

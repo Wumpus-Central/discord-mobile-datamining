@@ -2,7 +2,7 @@ import "initialize";
 
 const require = arg1;
 function handleUserApplicationIdentityGatewayEvent(user_id) {
-  const useUserApplicationIdentities = require(12274) /* fetchStore */.useUserApplicationIdentities;
+  const useUserApplicationIdentities = require(12361) /* fetchStore */.useUserApplicationIdentities;
   useUserApplicationIdentities.refetch(user_id.user_id);
 }
 let prototype = function UserApplicationIdentityManager() {

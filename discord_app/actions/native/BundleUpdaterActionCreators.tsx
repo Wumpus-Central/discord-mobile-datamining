@@ -6,7 +6,7 @@ const result = require("getSystemLocale").fileFinishedImporting("actions/native/
 export default {
   prepareUpdate(versionRequired) {
     if (versionRequired) {
-      let obj = importDefault(4594);
+      let obj = importDefault(4623);
       obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
       const intl = require(1236) /* getSystemLocale */.intl;
       obj[0] = intl.string(require(1236) /* getSystemLocale */.t.GQZdmI);

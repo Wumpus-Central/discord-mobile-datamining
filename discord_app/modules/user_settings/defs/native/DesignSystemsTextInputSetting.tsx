@@ -10,7 +10,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TEXT_INPUT,
   getComponent() {
-    return require(14666) /* Sample */.default;
+    return require(14700) /* Sample */.default;
   }
 };
 const route = createToggle.createRoute(obj);

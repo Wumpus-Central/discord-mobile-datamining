@@ -108,7 +108,7 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
       return null;
     })(text, throwTypeErrorResult, id, tmp, tmp2);
   } else if (":" === first) {
-    const EMOJI_NAME_RE = importDefault(3896).EMOJI_NAME_RE;
+    const EMOJI_NAME_RE = importDefault(3926).EMOJI_NAME_RE;
     const match = EMOJI_NAME_RE.exec(text);
     let tmp7 = null;
     if (null != match) {
@@ -142,7 +142,7 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
           const _HermesInternal = HermesInternal;
           const combined = ":" + obj2.name + ":";
         }
-        tmp4Result = importDefault(3900);
+        tmp4Result = importDefault(3930);
       }
     }
     return tmp7;
@@ -159,8 +159,8 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
             num[Symbol.iterator]();
             const obj2 = callback2(11);
           }
-          callback(4446).unescapeChannelName(arr.slice(2, arr.length - num));
-          const obj = callback(4446);
+          callback(4475).unescapeChannelName(arr.slice(2, arr.length - num));
+          const obj = callback(4475);
         }
         const substr = arr.slice(1);
       }
@@ -200,8 +200,8 @@ export const resolveApplicationCommandOption = function resolveApplicationComman
   const tmp = resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention);
   let voidToOptionValueResult = null;
   if (null != tmp) {
-    voidToOptionValueResult = require(7053) /* createEmptyState */.voidToOptionValue(tmp);
-    const obj = require(7053) /* createEmptyState */;
+    voidToOptionValueResult = require(7065) /* createEmptyState */.voidToOptionValue(tmp);
+    const obj = require(7065) /* createEmptyState */;
   }
   return voidToOptionValueResult;
 };

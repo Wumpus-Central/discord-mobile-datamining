@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.NOTIFICATIONS,
   getComponent() {
-    return require(14525) /* SystemNotificationsSubLabel */.default;
+    return require(14559) /* SystemNotificationsSubLabel */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -25,7 +25,7 @@ export default function getXboxURIForChannel(channelId) {
     tmp4 = closure_9;
   }
   const obj = { guildId: tmp4, channelId: channelId.id, channelName: null, guildName: null, muted: null, deafened: null, nonce: null };
-  obj[2] = require(4446) /* computeChannelName */.computeChannelName(channelId, mergeGuildAvatar, upsertRelationship);
+  obj[2] = require(4475) /* computeChannelName */.computeChannelName(channelId, mergeGuildAvatar, upsertRelationship);
   let name;
   if (guild != null) {
     name = guild.name;

@@ -12,12 +12,12 @@ export const AVErrorStreamSoundshareFailedDefinition = {
     if (null != currentUserActiveStream) {
       if (null != hookError.getHookError(MediaEngineHookTypes.SOUND)) {
         const obj = { type: null };
-        obj[0] = require(9038) /* mapped */.AVError.STREAM_SOUNDSHARE_FAILED;
-        const obj2 = require(16763) /* getVoiceChannelErrorContext */;
-        const merged = Object.assign(obj2.getStreamErrorContext(require(4319) /* isStreamKey */.encodeStreamKey(currentUserActiveStream)));
+        obj[0] = require(9091) /* mapped */.AVError.STREAM_SOUNDSHARE_FAILED;
+        const obj2 = require(16795) /* getVoiceChannelErrorContext */;
+        const merged = Object.assign(obj2.getStreamErrorContext(require(4348) /* isStreamKey */.encodeStreamKey(currentUserActiveStream)));
         const items = [obj];
         tmp2 = items;
-        const obj3 = require(4319) /* isStreamKey */;
+        const obj3 = require(4348) /* isStreamKey */;
       }
     }
     return tmp2;

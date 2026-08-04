@@ -29,7 +29,7 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
   }
   const tmp = createCacheKey();
   if (!showPendingAvatar) {
-    let tmp3 = importDefault(13083);
+    let tmp3 = importDefault(13117);
   } else {
     tmp3 = avatarSource;
   }
@@ -48,18 +48,18 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     const obj1 = { resizeMode: "contain", style: null, source: null };
     obj1[1] = defaultLogoStyle;
     obj1[2] = tmp3;
-    const items = [callback(importDefault(5207), obj1), ];
+    const items = [callback(importDefault(5236), obj1), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.uploadAvatarWrapper;
     const obj3 = { size: null, source: null, style: null };
     obj3[0] = require(1297) /* Button */.Icon.Sizes.MEDIUM;
-    obj3[1] = importDefault(11982);
+    obj3[1] = importDefault(12037);
     obj3[2] = tmp.uploadAvatarIcon;
     obj2[1] = callback(require(1297) /* Button */.Icon, obj3);
     items[1] = callback(View, obj2);
     obj[1] = items;
     obj[3] = callback2(View, obj);
-    obj[1] = callback(require(4783) /* PressableBase */.PressableOpacity, obj);
+    obj[1] = callback(require(4812) /* PressableBase */.PressableOpacity, obj);
     return callback(View, obj);
   }
   defaultLogoStyle = tmp.defaultLogoStyle;

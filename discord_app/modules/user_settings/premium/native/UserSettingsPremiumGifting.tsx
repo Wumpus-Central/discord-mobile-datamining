@@ -26,12 +26,12 @@ function GiftingSectionTitle(title) {
   if (importDefault(1348)("UserSettingsPremiumGifting")) {
     let obj = { title: null };
     obj[0] = title;
-    let tmp3Result = tmp3(tmp4(5620).TableRowGroupTitle, obj);
+    let tmp3Result = tmp3(tmp4(5649).TableRowGroupTitle, obj);
   } else {
     obj = { style: null, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null };
     obj[0] = tmp.title;
     obj[4] = title;
-    tmp3Result = tmp3(tmp4(4251).Text, obj);
+    tmp3Result = tmp3(tmp4(4281).Text, obj);
   }
   return tmp3Result;
 }

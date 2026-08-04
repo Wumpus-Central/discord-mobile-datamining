@@ -166,9 +166,9 @@ export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
   const obj2 = threadId(589);
   const tmp = threadId;
   const tmp4 = stateFromStores;
-  const firstForumPostMessage = threadId(5800).useFirstForumPostMessage(stateFromStores);
+  const firstForumPostMessage = threadId(5829).useFirstForumPostMessage(stateFromStores);
   ({ firstMessage, loaded } = firstForumPostMessage);
-  threadId(9315);
+  threadId(8214);
   if (loaded) {
     obj = { style: null, children: null };
     obj[0] = style;

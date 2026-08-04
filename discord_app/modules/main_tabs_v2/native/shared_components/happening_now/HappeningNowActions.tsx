@@ -41,9 +41,9 @@ let closure_15 = importAllResult.memo((panelVariant) => {
   let obj = { onPress, style: tmp.actionCard, width: "medium", panelVariant: flag, children: null };
   obj = { style: tmp.actionCardImage, children: null };
   obj[1] = callback(closure_5, { source: imageSource });
-  const items = [callback(closure_4, obj), callback(require(4251) /* Text */.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2, children: text })];
+  const items = [callback(closure_4, obj), callback(require(4281) /* Text */.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2, children: text })];
   obj[4] = items;
-  return callback2(importDefault(14398), obj);
+  return callback2(importDefault(14432), obj);
 });
 let result = require("comparator").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowActions.tsx");
 
@@ -61,7 +61,7 @@ export const HappeningNowCardCreateChannel = function HappeningNowCardCreateChan
     obj.track(outer1_10.ACTIVITY_CARD_CLICKED, obj);
     outer1_1(outer1_2[11]).open(null, guildId, null, null);
   }, items);
-  obj[0] = importDefault(15087);
+  obj[0] = importDefault(15121);
   obj[1] = callback;
   const intl = guildId(1236).intl;
   obj[2] = intl.string(guildId(1236).t["fUYU+j"]);
@@ -82,7 +82,7 @@ export const HappeningNowCardCustomizeGuild = function HappeningNowCardCustomize
     obj.track(outer1_10.ACTIVITY_CARD_CLICKED, obj);
     outer1_1(outer1_2[14]).open(guildId);
   }, items);
-  obj[1] = importDefault(15088);
+  obj[1] = importDefault(15122);
   obj[2] = callback;
   obj[3] = flag;
   return callback(closure_15, obj);
@@ -109,7 +109,7 @@ export const HappeningNowCardInvite = function HappeningNowCardInvite(guildId) {
       const result = obj3.handleOpenInviteActionsheet(guild, channelId, channels, outer1_11.SERVER_PROFILE);
     }
   }, items);
-  obj[0] = importDefault(15089);
+  obj[0] = importDefault(15123);
   obj[1] = callback;
   const intl = guildId(1236).intl;
   obj[2] = intl.string(guildId(1236).t.VINpSK);
@@ -140,7 +140,7 @@ export const HappeningNowStudentHubAddServer = function HappeningNowStudentHubAd
       const obj3 = outer1_1(outer1_2[18]);
     }
   }, items);
-  obj[0] = importDefault(11982);
+  obj[0] = importDefault(12037);
   obj[1] = callback;
   const intl = guildId(1236).intl;
   obj[2] = intl.string(guildId(1236).t.emRpdS);

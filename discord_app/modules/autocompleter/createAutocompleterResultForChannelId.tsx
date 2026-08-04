@@ -24,7 +24,7 @@ export default function createAutocompleterResultForChannelId(arg0, arg1, closur
   if (null == channel) {
     return null;
   } else {
-    const channelName = require(4446) /* computeChannelName */.computeChannelName(channel, obj1, tmp);
+    const channelName = require(4475) /* computeChannelName */.computeChannelName(channel, obj1, tmp);
     const type = channel.type;
     if (ChannelTypes.DM === type) {
       const user = obj1.getUser(channel.getRecipientId());
@@ -59,6 +59,6 @@ export default function createAutocompleterResultForChannelId(arg0, arg1, closur
       obj2[3] = channelName;
       return obj2;
     }
-    const obj8 = require(4446) /* computeChannelName */;
+    const obj8 = require(4475) /* computeChannelName */;
   }
 };

@@ -51,7 +51,7 @@ prototype["getState"] = function getState() {
 prototype["getTab"] = function getTab() {
   let ForYou = closure_6.tab;
   if (ForYou == null) {
-    ForYou = require(7009) /* NotificationCenterScenes */.NotificationCenterTabs.ForYou;
+    ForYou = require(7021) /* NotificationCenterScenes */.NotificationCenterTabs.ForYou;
   }
   return ForYou;
 };

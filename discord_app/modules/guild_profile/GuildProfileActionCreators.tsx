@@ -179,8 +179,8 @@ export const saveGuildProfile = function saveGuildProfile(outer1_0, name) {
     const HTTP = _require(530).HTTP;
     obj = { url: null, body: null, rejectWithError: null };
     obj[0] = closure_9.GUILD_PROFILE(outer1_0);
-    obj[1] = _require(5250).buildGuildProfileUpdateForServer(name);
-    const obj4 = _require(5250);
+    obj[1] = _require(5279).buildGuildProfileUpdateForServer(name);
+    const obj4 = _require(5279);
     obj[2] = _require(530).rejectWithMigratedError();
     const obj5 = _require(530);
     const patchResult = HTTP.patch(obj);
@@ -259,9 +259,9 @@ export const fetchGuildTopGames = function fetchGuildTopGames() {
   }
   return applyArgumentsResult;
 };
-export const trackGuildProfileViewed = function trackGuildProfileViewed(enabled, bottomSheetRef) {
-  const tmp = null != selfMember.getSelfMember(enabled);
+export const trackGuildProfileViewed = function trackGuildProfileViewed(guildId, analyticsLocations) {
+  const tmp = null != selfMember.getSelfMember(guildId);
   let obj = importDefault(698);
-  obj = { guild_id: enabled, location_stack: bottomSheetRef, is_member: tmp, has_join_request: null != request.getRequest(enabled) };
+  obj = { guild_id: guildId, location_stack: analyticsLocations, is_member: tmp, has_join_request: null != request.getRequest(guildId) };
   obj.track(constants.GUILD_PROFILE_VIEWED, obj);
 };

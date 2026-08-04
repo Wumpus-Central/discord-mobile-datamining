@@ -11,7 +11,7 @@ export default function trackHttpRequest(url) {
     const str2 = str.split(/[?#]/)[0];
   }
   obj.url = replaced;
-  importDefault(16190)(obj);
+  importDefault(16223)(obj);
   const random = Math.random();
   if (random < obj2.getHttpRequestSampleRate()) {
     obj = {};

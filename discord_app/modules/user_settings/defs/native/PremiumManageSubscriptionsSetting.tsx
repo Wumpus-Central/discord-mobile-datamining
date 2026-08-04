@@ -21,8 +21,8 @@ createToggle = {
     }, []);
   },
   usePredicate: function useShowManageSubscriptionsSetting() {
-    let hasPremiumSubscriptionToDisplay = require(3901) /* getPremiumPlanItem */.useHasPremiumSubscriptionToDisplay();
-    const obj = require(3901) /* getPremiumPlanItem */;
+    let hasPremiumSubscriptionToDisplay = require(3931) /* getPremiumPlanItem */.useHasPremiumSubscriptionToDisplay();
+    const obj = require(3931) /* getPremiumPlanItem */;
     if (hasPremiumSubscriptionToDisplay) {
       hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({ location: "useShowManageSubscriptionsSetting" });
     }
@@ -33,7 +33,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
-    return require(14102) /* PremiumPlanSelectSettingScreen */.default;
+    return require(14136) /* PremiumPlanSelectSettingScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -80,7 +80,7 @@ export default {
       obj[6] = targetApplicationId;
       obj[7] = flags;
       obj[8] = roleIds;
-      const invite1 = importDefault(7667).createInvite(channelId, obj, arg0);
+      const invite1 = importDefault(7679).createInvite(channelId, obj, arg0);
       invite1.then(() => {
         let obj = outer1_1(outer1_2[2]);
         obj = { type: "CREATE_INVITE_MODAL_GENERATE_INVITE_SUCCESS", channelId };
@@ -97,7 +97,7 @@ export default {
         }
         callback(709).dispatch({ type: "CREATE_INVITE_MODAL_GENERATE_INVITE_FAILURE", message });
       });
-      const tmp7Result = importDefault(7667);
+      const tmp7Result = importDefault(7679);
     }
   },
   close() {

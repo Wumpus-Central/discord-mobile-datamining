@@ -31,7 +31,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   obj = { id: id.sku.id, type: id.sku.type, premium: id.sku.premium, preorderReleaseAt: null, preorderApproximateReleaseDate: null };
   let entitlementsResult = null;
   if (null != id.sku.preorder_release_at) {
-    entitlements = importDefault(3837);
+    entitlements = importDefault(3867);
     entitlementsResult = entitlements(id.sku.preorder_release_at);
   }
   obj[3] = entitlementsResult;
@@ -41,7 +41,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   }
   obj[4] = prop;
   obj[6] = obj;
-  if (typeof LibraryApplicationRecord !== "error") {
+  if (typeof LibraryApplicationRecord !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const tmp7 = new LibraryApplicationRecord("Trying to call a non-function", entitlements, tmp2);
@@ -56,7 +56,7 @@ LibraryApplicationRecord["createForTestMode"] = function createForTestMode(id) {
   const branch = id.branch;
   const ENTITLED = closure_5.ENTITLED;
   const created_at = id.branch.created_at;
-  if (typeof LibraryApplicationRecord !== "error") {
+  if (typeof LibraryApplicationRecord !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const items = [];

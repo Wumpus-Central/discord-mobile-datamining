@@ -10,7 +10,7 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToCustomizeDiscordSettingValue() {
-    return require(13941) /* useParentalControlledExplicitContentSettings */.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented;
+    return require(13975) /* useParentalControlledExplicitContentSettings */.useParentalControlledConsent(Consents.PERSONALIZATION).hasConsented;
   },
   onValueChange: function handlePersonalizationChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
@@ -26,8 +26,8 @@ createToggle = {
       } else {
         items2 = [Consents.PERSONALIZATION];
       }
-      importDefault(6895).updateTeenConsents(selectedTeenId, items1, items2);
-      const obj = importDefault(6895);
+      importDefault(6907).updateTeenConsents(selectedTeenId, items1, items2);
+      const obj = importDefault(6907);
     }
   }
 };

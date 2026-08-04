@@ -18,8 +18,8 @@ const memoResult = require("noop").memo(function YouBarICYMIButton(hasNameplate)
     str = "white";
   }
   obj[2] = str;
-  obj[1] = jsx(require(12112) /* FlashIcon */.FlashIcon, { size: "custom", style: tmp.icon, color: null });
-  obj[2] = importDefault(15350)().showDot;
+  obj[1] = jsx(require(12199) /* FlashIcon */.FlashIcon, { size: "custom", style: tmp.icon, color: null });
+  obj[2] = importDefault(15381)().showDot;
   obj[3] = tmp.badge;
   obj[4] = function onPress() {
     let obj = callback(table[8]);
@@ -32,7 +32,7 @@ const memoResult = require("noop").memo(function YouBarICYMIButton(hasNameplate)
   };
   const intl = tmp5(1236).intl;
   obj[5] = intl.string(require(1236) /* getSystemLocale */.t["jnXV/V"]);
-  return jsx(importDefault(15351), { size: "custom", style: tmp.icon, color: null });
+  return jsx(importDefault(15382), { size: "custom", style: tmp.icon, color: null });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarICYMIButton.tsx");
 

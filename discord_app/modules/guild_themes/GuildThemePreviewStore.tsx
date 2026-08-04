@@ -133,7 +133,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(require("dispatcher"),
     if (null == obj.guildId) {
       return false;
     } else {
-      obj = { presetId: null, customUserThemeSettings: "Array" };
+      obj = { presetId: null, customUserThemeSettings: "a" };
       obj[0] = tmp;
       const isEqualResult = require(12) /* apply */.isEqual(obj.draft, obj);
       let flag = !isEqualResult;
@@ -158,7 +158,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(require("dispatcher"),
     if (null == obj.guildId) {
       return false;
     } else {
-      obj = { presetId: "Array", customUserThemeSettings: true };
+      obj = { presetId: "Array", customUserThemeSettings: 0 };
       obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
       const items = [];
       HermesBuiltin.arraySpread(colors, 0);

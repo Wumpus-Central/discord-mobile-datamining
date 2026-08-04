@@ -210,13 +210,13 @@ prototype["didHavePermission"] = function didHavePermission(arg0) {
   return storage.hasPermission(arg0);
 };
 prototype["openSettings"] = function openSettings() {
-  importDefault(4806)();
+  importDefault(4835)();
 };
 prototype["openAlertModal"] = function openAlertModal(arg0) {
   let body;
   let onConfirm;
   ({ body, onConfirm } = arg0);
-  let obj = require(4596) /* useAlertStore */;
+  let obj = require(4625) /* useAlertStore */;
   obj = { title: null, body: null, onConfirm: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.sMFVrS);

@@ -14,9 +14,9 @@ export default function useHeroColors(pendingAvatarSrc) {
   const items1 = [handleThemeChange];
   const stateFromStores1 = first(589).useStateFromStores(items1, () => theme.theme);
   let obj2 = first(589);
-  const fallbackHeroColor = first(8035).getFallbackHeroColor(stateFromStores1, stateFromStores);
-  let obj3 = first(8035);
-  let tmp4 = callback(first(8033).useAvatarColors(pendingAvatarSrc, fallbackHeroColor), 2);
+  const fallbackHeroColor = first(8047).getFallbackHeroColor(stateFromStores1, stateFromStores);
+  let obj3 = first(8047);
+  let tmp4 = callback(first(8045).useAvatarColors(pendingAvatarSrc, fallbackHeroColor), 2);
   first = tmp4[0];
   const importDefault = tmp6;
   const items2 = [first, tmp4[1]];
@@ -84,14 +84,14 @@ export default function useHeroColors(pendingAvatarSrc) {
 export const getHeroColors = function getHeroColors(game_name) {
   let tmp7;
   let tmp8;
-  let obj = num(8035);
+  let obj = num(8047);
   const fallbackHeroColor = obj.getFallbackHeroColor(theme.theme, maybeApplyNoTextColorForLightCustomTheme.saturation);
   num = undefined;
   num = 1;
   if (maybeApplyNoTextColorForLightCustomTheme.desaturateUserColors) {
     num = tmp.saturation;
   }
-  const useColorStore = tmp2(8033).useColorStore;
+  const useColorStore = tmp2(8045).useColorStore;
   const arr = useColorStore.getState().palette[game_name];
   let mapped;
   if (arr != null) {

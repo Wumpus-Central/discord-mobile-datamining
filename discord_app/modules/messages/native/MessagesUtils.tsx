@@ -253,10 +253,10 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       obj[1] = tmp13;
       let str3 = "video";
       if (!obj9.isVideoFile(tmp13.filename)) {
-        let tmp18Result = tmp18(4443);
+        let tmp18Result = tmp18(4472);
         let str4 = "audio";
         if (!tmp18Result.isAudioFile(tmp13.filename)) {
-          tmp18Result = tmp18(4443);
+          tmp18Result = tmp18(4472);
           let str5 = "file";
           if (tmp18Result.isImageFile(tmp13.filename)) {
             str5 = "image";
@@ -269,7 +269,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       ({ url: obj8[3], content_type } = tmp13);
       obj[4] = content_type;
       tmp17 = obj;
-      obj9 = require(4443) /* urlMatchesFileExtension */;
+      obj9 = require(4472) /* urlMatchesFileExtension */;
     }
     return tmp17;
   } else if ("embed" === mediaType) {
@@ -278,7 +278,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
     } else {
       if (tmp8.type === constants4.IMAGE) {
         if (null != tmp8.url) {
-          obj = { sourceType: "embed", source: null, mediaType: "image", mediaUrl: null, contentType: "Boolean" };
+          obj = { sourceType: "embed", source: null, mediaType: "image", mediaUrl: null, contentType: "Array" };
           obj[1] = tmp8;
           obj[3] = tmp8.url;
           return obj;
@@ -337,8 +337,8 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
     if (null == tmpResult) {
       return null;
     } else {
-      const obj12 = require(4477) /* flattenComponents */;
-      const value = require(4477) /* flattenComponents */.flattenComponents(obj.components).get(tmpResult);
+      const obj12 = require(4506) /* flattenComponents */;
+      const value = require(4506) /* flattenComponents */.flattenComponents(obj.components).get(tmpResult);
       if (null == value) {
         return null;
       } else if (value.type === tmp20(1906).ComponentType.MEDIA_GALLERY) {
@@ -361,7 +361,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       } else {
         return null;
       }
-      const flattenComponentsResult = require(4477) /* flattenComponents */.flattenComponents(obj.components);
+      const flattenComponentsResult = require(4506) /* flattenComponents */.flattenComponents(obj.components);
     }
   } else {
     return null;
@@ -370,14 +370,14 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
 export const toObscuredMedia = function toObscuredMedia(sourceType) {
   if ("attachment" === sourceType.sourceType) {
     let obj = { type: null, media: null };
-    obj[0] = require(5794) /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment;
+    obj[0] = require(5823) /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment;
     obj[1] = sourceType.source;
     let tmp = obj;
   } else {
     tmp = null;
     if ("embed" === sourceType.sourceType) {
       obj = { type: null, media: null };
-      obj[0] = require(5794) /* ContentHarmTypeChannel */.ObscuredMediaTypes.Embed;
+      obj[0] = require(5823) /* ContentHarmTypeChannel */.ObscuredMediaTypes.Embed;
       obj[1] = sourceType.source;
       tmp = obj;
     }
@@ -390,7 +390,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     flag = false;
   }
   if (MESSAGE === undefined) {
-    MESSAGE = require(7131) /* checkReactionResponse */.ReactionLocations.MESSAGE;
+    MESSAGE = require(7143) /* checkReactionResponse */.ReactionLocations.MESSAGE;
   }
   const guildId = channel.getGuildId();
   currentUser = currentUser.getCurrentUser();
@@ -403,7 +403,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
   }
   let result = null != guildId;
   if (result) {
-    let obj = require(4742) /* shouldShowMembershipVerificationGate */;
+    let obj = require(4771) /* shouldShowMembershipVerificationGate */;
     result = obj.shouldShowMembershipVerificationGate(guildId);
   }
   let member = null;
@@ -414,10 +414,10 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
   }
   let tmp36Result = dependencyMap;
-  let obj1 = require(3872) /* isCommunicationDisabled */;
+  let obj1 = require(3902) /* isCommunicationDisabled */;
   const result1 = obj1.isMemberCommunicationDisabled(member);
   if (channel.isArchivedLockedThread()) {
-    const obj15 = importDefault(3956);
+    const obj15 = importDefault(3986);
     const tmp36 = importDefault;
     const intl = tmp12(1236).intl;
     const string = intl.string;
@@ -429,7 +429,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: null, icon: null };
     obj[1] = stringResult;
-    tmp36Result = tmp36(9494);
+    tmp36Result = tmp36(8422);
     obj[2] = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();
@@ -438,15 +438,15 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (true === !reaction.me_burst) {
         let tmp12Result = tmp12(1897);
         if (!tmp12Result.isPremium(currentUser)) {
-          tmp12Result = tmp12(9495);
+          tmp12Result = tmp12(8423);
           return tmp12Result.handleOutOfSuperReactions();
         }
       }
     }
-    const ReactionTypes = tmp12(7130).ReactionTypes;
+    const ReactionTypes = tmp12(7142).ReactionTypes;
     if (tmp12Result1.isMeReaction(reaction.me, reaction.me_burst, tmp23)) {
-      const result2 = tmp12(4224).triggerHapticFeedback(importDefault(4225).IMPACT_LIGHT);
-      const tmp12Result2 = tmp12(4224);
+      const result2 = tmp12(4254).triggerHapticFeedback(importDefault(4255).IMPACT_LIGHT);
+      const tmp12Result2 = tmp12(4254);
       obj = { channelId: null, messageId: null, emoji: null, location: null, options: null };
       obj[0] = channel.id;
       obj[1] = messageId;
@@ -455,18 +455,18 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       obj1 = { burst: null };
       obj1[0] = flag;
       obj[4] = obj1;
-      tmp12(7131).removeReaction(obj);
+      tmp12(7143).removeReaction(obj);
     } else {
       if (!result) {
         if (channel.isPrivate()) {
           if (!result1) {
-            const tmp12Result4 = tmp12(7131);
+            const tmp12Result4 = tmp12(7143);
             const obj2 = { burst: null };
             obj2[0] = flag;
             tmp12Result4.addReaction(channel.id, messageId, reaction.emoji, MESSAGE, obj2);
             if (!flag) {
-              const result3 = tmp12(4224).triggerHapticFeedback(importDefault(4225).IMPACT_LIGHT);
-              const tmp12Result5 = tmp12(4224);
+              const result3 = tmp12(4254).triggerHapticFeedback(importDefault(4255).IMPACT_LIGHT);
+              const tmp12Result5 = tmp12(4254);
             }
           }
         }
@@ -474,22 +474,22 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       if (result) {
         const guildId1 = channel.getGuildId();
         if (null != guildId1) {
-          return tmp12(9323).openMemberVerificationModal(guildId1);
+          return tmp12(8223).openMemberVerificationModal(guildId1);
         }
       }
     }
-    tmp12Result1 = tmp12(3894);
+    tmp12Result1 = tmp12(3924);
     tmp23 = flag ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   } else {
-    const tmp12Result7 = tmp12(9495);
+    const tmp12Result7 = tmp12(8423);
     const obj3 = { burst: null };
     obj3[0] = flag;
     const result4 = tmp12Result7.handleAddNewReactions(channel, messageId, MESSAGE, obj3);
   }
 };
 export const handleToggleFollowForumPost = function handleToggleFollowForumPost(channel, outer1_19) {
-  const result = require(4224) /* HapticFeedbackTypes */.triggerHapticFeedback(importDefault(4225).IMPACT_LIGHT);
-  const obj2 = importDefault(7132);
+  const result = require(4254) /* HapticFeedbackTypes */.triggerHapticFeedback(importDefault(4255).IMPACT_LIGHT);
+  const obj2 = importDefault(7144);
   if (outer1_19) {
     obj2.leaveThread(channel, "iOS Forum Toolbar");
   } else {
@@ -511,36 +511,36 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
     flag = false;
   }
   let obj = { postId: id, location };
-  const result = require(7134) /* trackForumChannelSeenBatch */.trackForumPostLinkCopied(obj);
+  const result = require(7146) /* trackForumChannelSeenBatch */.trackForumPostLinkCopied(obj);
   if (flag) {
-    let tmp4Result = tmp4(4450);
+    let tmp4Result = tmp4(4479);
     obj = { media_post_id: null };
     obj[0] = id;
     tmp4Result.trackWithMetadata(constants3.MEDIA_POST_SHARE_PROMPT_CLICKED, obj);
   }
-  tmp4Result = tmp4(4224);
-  const result1 = tmp4Result.triggerHapticFeedback(importDefault(4225).IMPACT_LIGHT);
+  tmp4Result = tmp4(4254);
+  const result1 = tmp4Result.triggerHapticFeedback(importDefault(4255).IMPACT_LIGHT);
   if (null == channel) {
-    const tmp4Result1 = tmp4(5609);
+    const tmp4Result1 = tmp4(5638);
     let result2;
     if (true === flag) {
       result2 = tmp9(11).castChannelIdAsMessageId(id);
       const tmp9Result = tmp9(11);
     }
-    tmp4Result1.copy(tmp4(4438).getChannelPermalink(guildId, id, result2));
-    const tmp4Result2 = tmp4(4438);
+    tmp4Result1.copy(tmp4(4467).getChannelPermalink(guildId, id, result2));
+    const tmp4Result2 = tmp4(4467);
   } else {
-    const tmp4Result3 = tmp4(5609);
-    tmp4Result3.copy(tmp4(4438).getChannelLinkToCopy(channel, channel1));
-    const tmp4Result4 = tmp4(4438);
+    const tmp4Result3 = tmp4(5638);
+    tmp4Result3.copy(tmp4(4467).getChannelLinkToCopy(channel, channel1));
+    const tmp4Result4 = tmp4(4467);
   }
-  const obj2 = require(7134) /* trackForumChannelSeenBatch */;
+  const obj2 = require(7146) /* trackForumChannelSeenBatch */;
   tmp9 = importDefault;
-  require(3955) /* presentAddedFriendToast */.presentLinkCopied();
+  require(3985) /* presentAddedFriendToast */.presentLinkCopied();
 };
 export const findMessageIndex = function findMessageIndex(previousRows, ChatTTITracker) {
   if (null != ChatTTITracker) {
-    return require(9622) /* computeScrollData */.findMessageRowIndex(previousRows, ChatTTITracker);
+    return require(10928) /* computeScrollData */.findMessageRowIndex(previousRows, ChatTTITracker);
   }
 };
 export { getVisibleMessages };
@@ -580,7 +580,7 @@ export const recordTimings = function recordTimings(channelId, closure_0) {
 };
 export const findMessageIndexInRows = function findMessageIndexInRows(ChatTTITracker, previousRows) {
   if (null != ChatTTITracker) {
-    return require(9622) /* computeScrollData */.findMessageRowIndex(previousRows, ChatTTITracker);
+    return require(10928) /* computeScrollData */.findMessageRowIndex(previousRows, ChatTTITracker);
   }
 };
 export { getMessage };
@@ -643,7 +643,7 @@ export const scrollToBottom = function scrollToBottom(current) {
   if (flag) {
     flag = !arg1;
   }
-  importDefault(9623).scrollToBottom(current.current, flag);
+  importDefault(10922).scrollToBottom(current.current, flag);
 };
 export const scrollToTop = function scrollToTop(current) {
   let flag = arg2;
@@ -653,7 +653,7 @@ export const scrollToTop = function scrollToTop(current) {
   if (flag) {
     flag = !arg1;
   }
-  importDefault(9623).scrollToTop(current.current, flag);
+  importDefault(10922).scrollToTop(current.current, flag);
 };
 export const scrollToRelativeOffset = function scrollToRelativeOffset(current) {
   let flag = arg3;
@@ -663,13 +663,13 @@ export const scrollToRelativeOffset = function scrollToRelativeOffset(current) {
   if (flag) {
     flag = !arg1;
   }
-  const result = importDefault(9623).scrollToRelativeOffset(current.current, arg2, flag);
+  const result = importDefault(10922).scrollToRelativeOffset(current.current, arg2, flag);
 };
 export const scrollToTopMessage = function scrollToTopMessage(current, getPreviousRows) {
   const previousRows = getPreviousRows.getPreviousRows();
   if (previousRows.length > 0) {
-    importDefault(9623).scrollTo(current.current, previousRows.length - 1);
-    const obj = importDefault(9623);
+    importDefault(10922).scrollTo(current.current, previousRows.length - 1);
+    const obj = importDefault(10922);
   }
 };
 export const canAddNewReactions = function canAddNewReactions(isPrivate) {
@@ -685,7 +685,7 @@ export const canAddNewReactions = function canAddNewReactions(isPrivate) {
 export const loadMoreBefore = function loadMoreBefore(arg0, hasMoreBefore) {
   arg2(true);
   if (tmp2) {
-    let obj = importDefault(6814);
+    let obj = importDefault(6826);
     obj = { channelId: null, before: null, limit: null };
     obj[0] = arg0;
     const firstResult = hasMoreBefore.first();
@@ -701,7 +701,7 @@ export const loadMoreBefore = function loadMoreBefore(arg0, hasMoreBefore) {
 export const loadMoreAfter = function loadMoreAfter(arg0, hasMoreAfter) {
   arg2(true);
   if (tmp2) {
-    let obj = importDefault(6814);
+    let obj = importDefault(6826);
     obj = { channelId: null, after: null, limit: null };
     obj[0] = arg0;
     const lastResult = hasMoreAfter.last();
@@ -718,13 +718,13 @@ export const clearRows = function clearRows(current, clear) {
   arg4({ animated: false, hasHandledScroll: false, isNearBottom: false, isAtBottom: false, isNearTop: false, decelerating: false, dragging: false, hasMoreMessagesAfterForLastUpdate: false, pendingUpdatesQueue: [], _loaded: false, animatingStickerMessageId: null });
   clear.clear();
   callback3(arg2, arg3, false);
-  importDefault(9623).clearRows(current.current);
+  importDefault(10922).clearRows(current.current);
 };
 export const handleFirstLayout = function handleFirstLayout(arg0, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
-  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: require(5102) /* QuestsVisibleMessagesChangedSource */.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT });
+  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: require(5131) /* QuestsVisibleMessagesChangedSource */.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT });
 };
 export const handleMessageVisibilityChanged = function handleMessageVisibilityChanged(arg0, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
-  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: require(5102) /* QuestsVisibleMessagesChangedSource */.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
+  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: require(5131) /* QuestsVisibleMessagesChangedSource */.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
 };
 export const handleLongPressSticker = function handleLongPressSticker(arg0, arg1, arg2) {
   const items = [arg0];
@@ -757,14 +757,14 @@ export const jumpToPresent = function jumpToPresent(jumpReturnTargetId, id) {
         obj[0] = id.id;
         obj[1] = closure_21;
         obj[2] = { present: true };
-        const messages = importDefault(6814).fetchMessages(obj);
-        const obj3 = importDefault(6814);
+        const messages = importDefault(6826).fetchMessages(obj);
+        const obj3 = importDefault(6826);
       } else {
         arg2();
       }
     }
   } else {
-    obj = importDefault(6814);
+    obj = importDefault(6826);
     obj = { channelId: null, messageId: null, flash: true };
     obj[0] = id.id;
     obj[1] = jumpReturnTargetId;
@@ -774,7 +774,7 @@ export const jumpToPresent = function jumpToPresent(jumpReturnTargetId, id) {
 export const scrollToNewMessages = function scrollToNewMessages(channel) {
   channel = channel.channel;
   let id = generateOldThreadCutoff.ackMessageId(channel.id);
-  let obj = importDefault(6814);
+  let obj = importDefault(6826);
   obj = { channelId: channel.id, messageId: null, offset: 1, context: "Mark As Read" };
   if (id == null) {
     id = channel.id;
@@ -830,7 +830,7 @@ export const maybeRescrollToMessageId = function maybeRescrollToMessageId(arg0, 
   let trackCommunicationDisabled = undefined !== updateRowsEnabled && updateRowsEnabled;
   let INSTANT = jumpType.jumpType;
   if (undefined === INSTANT) {
-    INSTANT = _require(4187).JumpType.INSTANT;
+    INSTANT = _require(4217).JumpType.INSTANT;
   }
   if (null != arg0) {
     const _setTimeout = setTimeout;
@@ -975,16 +975,16 @@ export const handleVisibleMessagesChange = function handleVisibleMessagesChange(
             obj = { visibleMessages: null, source: null };
             obj[0] = arr;
             obj[1] = tmp;
-            const result = require(9627) /* _manuallyStartConsoleQuest */.questsVisibleMobileMessagesChanged(obj);
-            const obj4 = require(9653) /* getVoiceInviteEmbedRenderInfo */;
+            const result = require(10376) /* _manuallyStartConsoleQuest */.questsVisibleMobileMessagesChanged(obj);
+            const obj4 = require(10902) /* getVoiceInviteEmbedRenderInfo */;
             const result1 = obj4.handleAnnouncementMessageViewTracking(arr, shouldTrackAnnouncementMessageViews, guildId, channel);
-            const obj5 = require(9653) /* getVoiceInviteEmbedRenderInfo */;
+            const obj5 = require(10902) /* getVoiceInviteEmbedRenderInfo */;
             const result2 = obj5.handleOfficialMessageViewTracking(arr, shouldTrackOfficialMessageViews, guildId, channel);
-            const obj6 = require(9653) /* getVoiceInviteEmbedRenderInfo */;
+            const obj6 = require(10902) /* getVoiceInviteEmbedRenderInfo */;
             const result3 = obj6.handleRichPresenceInviteEmbedViewTracking(arr, shouldTrackRichPresenceInviteEmbedViews, guildId, channel);
-            const obj7 = require(9653) /* getVoiceInviteEmbedRenderInfo */;
+            const obj7 = require(10902) /* getVoiceInviteEmbedRenderInfo */;
             const result4 = obj7.handleVoiceInviteEmbedViewTracking(arr, shouldTrackVoiceInviteEmbedViews, guildId, channel);
-            const obj2 = require(9627) /* _manuallyStartConsoleQuest */;
+            const obj2 = require(10376) /* _manuallyStartConsoleQuest */;
           }
         }
       }

@@ -10,7 +10,7 @@ export const useBuyNitroExperiment = function useBuyNitroExperiment(isNitroHomeS
   let userHasSubscription;
   isNitroHomeSurface = isNitroHomeSurface.isNitroHomeSurface;
   ({ userHasSubscription, isConfirmedNonSubscriber } = isNitroHomeSurface);
-  let canRenderRedesignUpsellEarly = importDefault(5569)(() => callback(table[4]).getMobileNitroMarketingRedesignExperiment({ location: "PremiumMarketingPage" }));
+  let canRenderRedesignUpsellEarly = importDefault(5598)(() => callback(table[4]).getMobileNitroMarketingRedesignExperiment({ location: "PremiumMarketingPage" }));
   const tmp3 = callback(React.useState(false), 2);
   const first = tmp3[0];
   let showRedesignUpsell = canRenderRedesignUpsellEarly;

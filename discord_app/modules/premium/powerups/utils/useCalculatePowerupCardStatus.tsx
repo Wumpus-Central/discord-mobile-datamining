@@ -41,12 +41,12 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
         const obj1 = { type: "active", statusText: null };
         const obj2 = { perkName: null };
         obj2[0] = title;
-        obj1[1] = intl2.formatToPlainString(lib(2287).WRRYUT, obj2);
+        obj1[1] = intl2.formatToPlainString(lib(2317).WRRYUT, obj2);
         tmp5 = obj1;
       } else if (tmp.type !== tmp4.INACTIVE) {
         obj = { type: "active", statusText: null };
         const intl = powerup(1236).intl;
-        obj[1] = intl.string(lib(2287).FFLkmx);
+        obj[1] = intl.string(lib(2317).FFLkmx);
         tmp5 = obj;
       }
     }

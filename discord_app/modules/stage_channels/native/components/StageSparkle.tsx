@@ -11,7 +11,7 @@ function StageSparkleInner(style) {
   let icon;
   ({ IconComponent, icon } = style);
   if (icon === undefined) {
-    icon = importDefault(7699);
+    icon = importDefault(7711);
   }
   const tmp3 = createCacheKey();
   let obj = { style: items, children: null };
@@ -26,14 +26,14 @@ function StageSparkleInner(style) {
     const obj1 = { source: null, style: null };
     obj1[0] = icon;
     obj1[1] = tmp3.iconStyle;
-    tmp6Result = tmp6(importDefault(5207), obj1);
+    tmp6Result = tmp6(importDefault(5236), obj1);
     tmp10 = importDefault;
   }
   obj[1] = tmp6Result;
   const items1 = [closure_4(View, obj), ];
   const obj2 = { style: tmp3.sparkles, source: null };
-  obj2[1] = tmp10(7700);
-  items1[1] = closure_4(tmp10(5207), obj2);
+  obj2[1] = tmp10(7712);
+  items1[1] = closure_4(tmp10(5236), obj2);
   obj[1] = items1;
   return closure_5(View, obj);
 }
@@ -56,7 +56,7 @@ export default function StageSparkle(theme) {
     obj = {};
     const merged1 = Object.assign(merged);
     obj[1] = callback(StageSparkleInner, obj);
-    let tmp7 = callback(require(3967) /* ManaContext */.ThemeContextProvider, obj);
+    let tmp7 = callback(require(3997) /* ManaContext */.ThemeContextProvider, obj);
   } else {
     obj = {};
     const merged2 = Object.assign(merged);

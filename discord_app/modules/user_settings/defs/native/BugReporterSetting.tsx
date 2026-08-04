@@ -3,7 +3,7 @@ import createToggle from "createToggle";
 
 const require = arg1;
 function useBugReporterExperimentSettingPredicate() {
-  return importDefault(10512).useConfig({ location: "native-settings" }).hasBugReporterAccess;
+  return importDefault(9811).useConfig({ location: "native-settings" }).hasBugReporterAccess;
 }
 createToggle = {
   useTitle() {
@@ -15,8 +15,8 @@ createToggle = {
   onPress: function handleBugReporterSettingPress() {
     if (!field.getField("isReportOpen")) {
       field.setState({ isReportOpen: true });
-      importDefault(4461).pushLazy(require(1959) /* asyncRequireImpl */(10498, dependencyMap.paths));
-      const obj2 = importDefault(4461);
+      importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(9782, dependencyMap.paths));
+      const obj2 = importDefault(4490);
     }
   },
   withArrow: true,

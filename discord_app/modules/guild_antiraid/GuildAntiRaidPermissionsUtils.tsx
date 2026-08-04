@@ -47,8 +47,8 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
   }, items3);
   let hasDetectedActivityResult = null != stateFromStores1;
   if (hasDetectedActivityResult) {
-    hasDetectedActivityResult = tmp(7920).hasDetectedActivity(stateFromStores1);
-    const tmpResult = tmp(7920);
+    hasDetectedActivityResult = tmp(7932).hasDetectedActivity(stateFromStores1);
+    const tmpResult = tmp(7932);
   }
   let tmp6 = !hasDetectedActivityResult;
   if (!hasDetectedActivityResult) {
@@ -90,6 +90,6 @@ export const useShowMentionRaidLimitUpsell = function useShowMentionRaidLimitUps
   if (id == null) {
     id = closure_4;
   }
-  const obj2 = _require(10419);
-  return _require(10419).useIsMentionRaidExperimentEnabled(id, false) && stateFromStores;
+  const obj2 = _require(9689);
+  return _require(9689).useIsMentionRaidExperimentEnabled(id, false) && stateFromStores;
 };

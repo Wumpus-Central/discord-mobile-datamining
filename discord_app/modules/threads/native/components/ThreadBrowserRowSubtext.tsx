@@ -23,7 +23,7 @@ function MessageContent(arg0) {
   c3 = undefined;
   c4 = undefined;
   let maybeApplyNoTextColorForLightCustomTheme;
-  let obj = message(5806);
+  let obj = message(5835);
   const items = [message.author.id];
   const subscribeGuildMembers = obj.useSubscribeGuildMembers({ [thread.guild_id]: items }, "ThreadBrowserRowSubtext");
   let obj1 = message(589);
@@ -39,14 +39,14 @@ function MessageContent(arg0) {
   const items2 = [maybeApplyNoTextColorForLightCustomTheme];
   importDefault = message(589).useStateFromStores(items2, () => roleStyle.roleStyle);
   const obj3 = message(589);
-  ({ nick: c2, colorString: c3, colorStrings: c4 } = importDefault(4484)(message));
-  let tmp4 = importDefault(4484)(message);
+  ({ nick: c2, colorString: c3, colorStrings: c4 } = importDefault(4513)(message));
+  let tmp4 = importDefault(4513)(message);
   const extractTimestampResult = importDefault(11).extractTimestamp(message.id);
   const obj4 = importDefault(11);
-  const timestampString = message(7148).getTimestampString(extractTimestampResult);
-  const obj5 = message(7148);
-  const timestampAccessibilityLabel = message(7148).getTimestampAccessibilityLabel(extractTimestampResult);
-  maybeApplyNoTextColorForLightCustomTheme = importDefault(4694)(thread.guild_id, stateFromStores.id);
+  const timestampString = message(7160).getTimestampString(extractTimestampResult);
+  const obj5 = message(7160);
+  const timestampAccessibilityLabel = message(7160).getTimestampAccessibilityLabel(extractTimestampResult);
+  maybeApplyNoTextColorForLightCustomTheme = importDefault(4723)(thread.guild_id, stateFromStores.id);
   obj = { user: stateFromStores, timestamp: timestampString, accessibilityLabel: timestampAccessibilityLabel, children: null };
   obj = { lineClamp: 1, ellipsizeMode: "tail", lineBreakMode: "tail", style: tmp.subtextContent, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = message(1236).intl;
@@ -78,7 +78,7 @@ function MessageContent(arg0) {
     }
   };
   obj[6] = intl.format(message(1236).t.M79KAH, obj1);
-  obj[3] = callback(message(4251).Text, obj);
+  obj[3] = callback(message(4281).Text, obj);
   return callback(SubstringRow, obj);
 }
 function SubstringRow(arg0) {
@@ -96,7 +96,7 @@ function SubstringRow(arg0) {
     obj[0] = tmp.timestamp;
     obj[1] = accessibilityLabel;
     obj[4] = ` ${timestamp}`;
-    obj[1] = callback(require(4251) /* Text */.Text, obj);
+    obj[1] = callback(require(4281) /* Text */.Text, obj);
     let tmp6 = callback(View, obj);
   } else {
     obj = { style: null, children: null };
@@ -110,7 +110,7 @@ function SubstringRow(arg0) {
     obj2[1] = accessibilityLabel;
     const _HermesInternal = HermesInternal;
     obj2[4] = "" + timestamp;
-    items[2] = callback(require(4251) /* Text */.Text, obj2);
+    items[2] = callback(require(4281) /* Text */.Text, obj2);
     obj[1] = items;
     tmp6 = callback2(View, obj);
   }
@@ -140,7 +140,7 @@ function Username(usernameColor) {
     }
     return username;
   }, items);
-  let obj = usernameColor(7868);
+  let obj = usernameColor(7880);
   const processColorStringsArray = obj.useProcessColorStringsArray(roleColors);
   let tmp5 = !shouldShowRoleDot;
   if (!shouldShowRoleDot) {
@@ -154,7 +154,7 @@ function Username(usernameColor) {
   }
   const items1 = [shouldShowRoleDot, ];
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", experimental_useNativeText: null, gradientColors: null, style: null, children: null };
-  obj[2] = !usernameColor(4119).isFabric();
+  obj[2] = !usernameColor(4149).isFabric();
   let tmp10;
   if (tmp5) {
     tmp10 = processColorStringsArray;
@@ -163,7 +163,7 @@ function Username(usernameColor) {
   obj[3] = tmp10;
   obj[4] = memo;
   obj[5] = nickname;
-  items1[1] = callback(usernameColor(4251).Text, obj);
+  items1[1] = callback(usernameColor(4281).Text, obj);
   obj1[0] = items1;
   return closure_10(closure_11, obj1);
 }
@@ -275,7 +275,7 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
   const items = [updateState];
   const items1 = [id];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getMostRecentMessage(id), items1);
-  const lastMessageTimestamp = id(7148).useLastMessageTimestamp(thread);
+  const lastMessageTimestamp = id(7160).useLastMessageTimestamp(thread);
   if (null != stateFromStores) {
     if (!items.includes(stateFromStores.type)) {
       if (!thread.isArchivedThread()) {
@@ -286,9 +286,9 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
       }
     }
   }
-  let tmpResult = tmp(7148);
+  let tmpResult = tmp(7160);
   const timestampString = tmpResult.getTimestampString(lastMessageTimestamp);
-  tmpResult = tmp(7148);
+  tmpResult = tmp(7160);
   obj = { thread, timestamp: timestampString, accessibilityLabel: tmpResult.getTimestampAccessibilityLabel(lastMessageTimestamp) };
   return callback(closure_14, obj);
 };

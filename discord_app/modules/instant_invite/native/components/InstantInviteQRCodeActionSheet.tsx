@@ -63,12 +63,12 @@ export default function InstantInviteQRCodeActionSheet(location) {
       if (null != store.getGuild(channel2.guild_id)) {
         const obj2 = { guild: null, size: null };
         obj2[0] = obj7.getGuild(channel2.guild_id);
-        obj2[1] = tmp6(5632).GuildIconSizes.LARGE;
-        tmp13 = callback(importDefault(5632), obj2);
-        const tmp16 = importDefault(5632);
+        obj2[1] = tmp6(5661).GuildIconSizes.LARGE;
+        tmp13 = callback(importDefault(5661), obj2);
+        const tmp16 = importDefault(5661);
       }
     }
-    presentFriendRequestAcceptedToast = tmp6(3955).presentFriendRequestAcceptedToast;
+    presentFriendRequestAcceptedToast = tmp6(3985).presentFriendRequestAcceptedToast;
     const items1 = [presentFriendRequestAcceptedToast];
     const effect = React.useEffect(() => {
       function handleRelationshipAdd(relationship) {
@@ -85,7 +85,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
     const obj3 = { header: null, children: null };
     const obj4 = { title: null };
     obj4[0] = stringResult;
-    obj3[0] = callback(tmp6(5308).BottomSheetTitleHeader, obj4);
+    obj3[0] = callback(tmp6(5337).BottomSheetTitleHeader, obj4);
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.container;
     const obj6 = { text: null, size: 240, style: null, accessibilityLabel: null };
@@ -96,7 +96,7 @@ export default function InstantInviteQRCodeActionSheet(location) {
       plainText = tmp12.plainText;
     }
     obj6[3] = plainText;
-    const items2 = [callback(importDefault(12360), obj6), ];
+    const items2 = [callback(importDefault(9020), obj6), ];
     let tmp19Result = null != tmp13;
     if (tmp19Result) {
       obj7 = { style: null, children: null };
@@ -115,12 +115,12 @@ export default function InstantInviteQRCodeActionSheet(location) {
     if (tmp19Result) {
       const obj10 = { variant: "text-md/normal", children: null };
       obj10[1] = tmp12.visible;
-      tmp19Result = tmp19(tmp6(4251).Text, obj10);
+      tmp19Result = tmp19(tmp6(4281).Text, obj10);
     }
     items3[1] = tmp19Result;
     obj5[1] = items3;
     obj3[1] = closure_10(View, obj5);
-    return callback(tmp6(5617).ActionSheet, obj3);
+    return callback(tmp6(5646).ActionSheet, obj3);
   }
   tmp12 = null;
   if (_location === constants.ADD_FRIENDS_MODAL) {

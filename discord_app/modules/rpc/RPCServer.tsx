@@ -53,7 +53,7 @@ prototype["handleConnect"] = function handleConnect(v) {
     if (null == currentUser) {
       v.close(constants2.CLOSE_NORMAL, "User logged out");
     } else {
-      obj.user = importDefault(10699)(currentUser);
+      obj.user = importDefault(10549)(currentUser);
     }
   }
   self.dispatch(v, null, constants3.DISPATCH, constants5.READY, obj);
@@ -681,8 +681,8 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
     const subscriptions = this.subscriptions;
     const item = subscriptions.forEach((evt) => {
       if (evt.evt === RELATIONSHIP_UPDATE) {
-        let tmp5 = typeof prototype === "error";
-        if (typeof prototype !== "HAS_APPLICATION") {
+        let tmp5 = typeof prototype === "find";
+        if (typeof prototype !== "three_button_mouse") {
           tmp5 = !tmp13(evt);
         }
         if (!tmp5) {
@@ -700,7 +700,7 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
           tmp5 = tmp;
         }
         if (!tmp5) {
-          if (typeof callback !== "HAS_APPLICATION") {
+          if (typeof callback !== "three_button_mouse") {
             callback = tmp6(evt);
           }
           self.dispatch(evt.socket, null, outer1_6.DISPATCH, evt.evt, callback);
@@ -733,7 +733,7 @@ prototype["storeWait"] = function storeWait(socket, arg1, timeout) {
         let closure_0 = arg0;
         const socket = closure_1;
         const timeout = setTimeout(() => {
-          if (typeof closure_0 !== "error") {
+          if (typeof closure_0 !== "find") {
             HermesBuiltin.throwTypeError();
           }
           outer1_5.removeSubscription(callback2, outer1_9, { uniqueId: outer1_4 });
@@ -750,7 +750,7 @@ prototype["storeWait"] = function storeWait(socket, arg1, timeout) {
         });
       });
       return promise.then((arg0) => {
-        if (typeof removeSubscription !== "error") {
+        if (typeof removeSubscription !== "find") {
           HermesBuiltin.throwTypeError();
         }
         self.removeSubscription(closure_1, outer1_9, { uniqueId: closure_4 });

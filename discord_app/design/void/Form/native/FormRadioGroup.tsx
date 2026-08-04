@@ -19,7 +19,7 @@ export default function FormRadioGroup(arg0) {
   ({ title, children, hint } = arg0);
   ({ hasIcons, accessibilityLabel, value, icon } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  if (React.useContext(require(5285) /* context */.RedesignCompatContext)) {
+  if (React.useContext(require(5314) /* context */.RedesignCompatContext)) {
     let obj = { style: null, children: null };
     obj[0] = { marginBottom: 24, marginHorizontal: 12 };
     obj = { children: null };
@@ -29,7 +29,7 @@ export default function FormRadioGroup(arg0) {
     obj1[2] = title;
     obj1[3] = accessibilityLabel;
     obj1[4] = children;
-    obj[0] = callback(require(7783) /* context */.TableRadioGroup, obj1);
+    obj[0] = callback(require(7795) /* context */.TableRadioGroup, obj1);
     const items = [callback(View, obj), ];
     let tmp13Result = null;
     if (null != hint) {
@@ -51,8 +51,8 @@ export default function FormRadioGroup(arg0) {
     obj[4] = icon;
     const merged1 = Object.assign(merged);
     obj.children = children;
-    tmp11Result = callback(importDefault(7317), obj);
-    const tmp6 = importDefault(7317);
+    tmp11Result = callback(importDefault(7329), obj);
+    const tmp6 = importDefault(7329);
   }
   return tmp11Result;
 };

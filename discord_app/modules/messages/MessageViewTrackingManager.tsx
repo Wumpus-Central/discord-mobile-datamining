@@ -29,9 +29,9 @@ function getAnalyticsConfig(type) {
     const obj6 = { impression_type: null, invite_code: null, invite_guild_id: null, invite_channel_id: null, invite_instance_id: null, has_active_stream: null, location_stack: null };
     obj6[0] = require(503) /* encodeProperties */.ImpressionTypes.VIEW;
     ({ inviteCode: obj3[1], inviteGuildId: obj3[2], inviteChannelId: obj3[3], inviteInstanceId: obj3[4], hasActiveStream: obj3[5], treatmentRendered } = type);
-    const INVITE_EMBED = importDefault(5601).INVITE_EMBED;
+    const INVITE_EMBED = importDefault(5630).INVITE_EMBED;
     if (treatmentRendered) {
-      const items = [INVITE_EMBED, importDefault(5601).VOICE_CHANNEL_LIST_INVITE_EMBED];
+      const items = [INVITE_EMBED, importDefault(5630).VOICE_CHANNEL_LIST_INVITE_EMBED];
       let items1 = items;
     } else {
       items1 = [INVITE_EMBED];

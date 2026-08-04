@@ -363,7 +363,7 @@ function _fetchAppliedBoostsCooldown() {
             c5 = 3;
             return { value: null, done: true };
           } else {
-            const appliedGuildBoostError = new ends_at(4154).AppliedGuildBoostError(lib);
+            const appliedGuildBoostError = new ends_at(4184).AppliedGuildBoostError(lib);
             throw appliedGuildBoostError;
           }
         } else if (arg0 === 1) {
@@ -597,7 +597,7 @@ function _unapplyFromGuild() {
           } else if (1 === tmp7) {
             c5 = 0;
             dependencyMap = createFromServer;
-            appliedGuildBoostError = new callback(4154).AppliedGuildBoostError(dependencyMap);
+            appliedGuildBoostError = new callback(4184).AppliedGuildBoostError(dependencyMap);
             let obj3 = appliedGuildBoostError(709);
             obj3 = { type: "GUILD_UNAPPLY_BOOST_FAIL", error: null };
             obj3[1] = appliedGuildBoostError;

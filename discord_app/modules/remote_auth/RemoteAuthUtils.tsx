@@ -71,7 +71,7 @@ function _decodeEncodedUserRecord() {
               dependencyMap = dependencyMap(table, 5);
               asyncGeneratorStep = 5;
               createdAt = 1882;
-              c5 = 14988;
+              c5 = 15022;
               closure_6 = 2;
               const obj3 = { id: null, discriminator: null, avatar: null, username: null };
               obj3[0] = asyncGeneratorStep;

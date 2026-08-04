@@ -9,5 +9,5 @@ export default function SettingsAppearanceDarkModeThemePickerScreen() {
   const obj = { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t["EgvHH/"]);
-  return jsx(importDefault(14369), { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null });
+  return jsx(importDefault(14403), { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null });
 };

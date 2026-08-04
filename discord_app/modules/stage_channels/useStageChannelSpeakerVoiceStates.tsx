@@ -37,6 +37,6 @@ export default function useStageChannelSpeakerVoiceStates(arg0) {
       found1.reduce((arg0, id) => arg0 + store.getParticipantsVersion(id.id), 0)
     ];
     return items;
-  }, items1, _require(5087).isVersionEqual), 1)[0];
+  }, items1, _require(5116).isVersionEqual), 1)[0];
 };
 export { transformParticipantToSortedVoiceState };

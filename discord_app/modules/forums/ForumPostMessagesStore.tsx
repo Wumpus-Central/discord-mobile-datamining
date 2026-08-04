@@ -27,8 +27,8 @@ function handleLoadThreadsSuccess(arg0) {
 function storeFirstMessage(channel_id, nextResult) {
   let messageRecord = null;
   if (null != nextResult) {
-    messageRecord = require(4475) /* createMinimalMessageRecord */.createMessageRecord(nextResult);
-    const obj = require(4475) /* createMinimalMessageRecord */;
+    messageRecord = require(4504) /* createMinimalMessageRecord */.createMessageRecord(nextResult);
+    const obj = require(4504) /* createMinimalMessageRecord */;
   }
   closure_5[channel_id] = { loaded: true, firstMessage: messageRecord };
 }
@@ -99,8 +99,8 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
         const message = isPushNotification.message;
         let messageRecord = null;
         if (null != message) {
-          messageRecord = require(4475) /* createMinimalMessageRecord */.createMessageRecord(message);
-          const obj2 = require(4475) /* createMinimalMessageRecord */;
+          messageRecord = require(4504) /* createMinimalMessageRecord */.createMessageRecord(message);
+          const obj2 = require(4504) /* createMinimalMessageRecord */;
         }
         obj = { loaded: true, firstMessage: null };
         obj[1] = messageRecord;
@@ -123,9 +123,9 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
           const result = importDefault(11).castMessageIdAsChannelId(message.message.id);
           const merged = Object.assign(tmp12);
           const tmp10Result = importDefault(11);
-          obj.firstMessage = require(4475) /* createMinimalMessageRecord */.updateMessageRecord(tmp12.firstMessage, message.message);
+          obj.firstMessage = require(4504) /* createMinimalMessageRecord */.updateMessageRecord(tmp12.firstMessage, message.message);
           dependencyMap[result] = obj;
-          const obj3 = require(4475) /* createMinimalMessageRecord */;
+          const obj3 = require(4504) /* createMinimalMessageRecord */;
         }
         tmp8 = tmp;
       }
@@ -223,7 +223,7 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
       if (null != first_message) {
         let tmp = require;
         let tmp2 = dependencyMap;
-        let obj = require(4475) /* createMinimalMessageRecord */;
+        let obj = require(4504) /* createMinimalMessageRecord */;
         messageRecord = obj.createMessageRecord(first_message);
       }
       let tmp4 = closure_5;
@@ -246,9 +246,9 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
     }
     if (tmp2) {
       obj = { loaded: true, firstMessage: null };
-      obj[1] = require(4475) /* createMinimalMessageRecord */.createMessageRecord(tmp);
+      obj[1] = require(4504) /* createMinimalMessageRecord */.createMessageRecord(tmp);
       closure_5[channelId] = obj;
-      const obj3 = require(4475) /* createMinimalMessageRecord */;
+      const obj3 = require(4504) /* createMinimalMessageRecord */;
     }
   }
 });

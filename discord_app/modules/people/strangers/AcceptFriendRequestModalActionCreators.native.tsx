@@ -31,5 +31,5 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
       });
     }
   };
-  importDefault(4595).openLazy(obj);
+  importDefault(4624).openLazy(obj);
 };

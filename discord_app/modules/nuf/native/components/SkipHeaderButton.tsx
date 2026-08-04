@@ -28,5 +28,5 @@ export default function SkipHeaderButton(label) {
   obj.labelStyle = items;
   obj.label = label;
   obj.accessibilityLabel = label;
-  return jsx(require(9300) /* GenericHeaderTitle */.HeaderTextButton, {});
+  return jsx(require(8193) /* GenericHeaderTitle */.HeaderTextButton, {});
 };

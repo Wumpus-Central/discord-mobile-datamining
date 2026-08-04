@@ -44,7 +44,7 @@ class BaseActivityPanelSystemUIManager {
 let c3 = importAllResult;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 const memoResult = importAllResult.memo(() => {
-  const context = importAllResult.useContext(importDefault(15927));
+  const context = importAllResult.useContext(importDefault(15960));
   return callback(BaseActivityPanelSystemUIManager, { mode: context.mode, isWindowLandscape: context.wrapperDimensions.isWindowLandscape });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/activities/panel/native/ActivityPanelSystemUIManager.tsx");

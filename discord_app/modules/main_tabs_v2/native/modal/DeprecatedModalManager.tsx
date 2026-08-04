@@ -8,7 +8,7 @@ import "initialize";
 
 const require = arg1;
 function handlePushedModal(key) {
-  let obj = require(4107) /* getRootNavigationRef */;
+  let obj = require(4137) /* getRootNavigationRef */;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     obj = { name: "modal", key: null, params: null };
@@ -20,7 +20,7 @@ function handlePushedModal(key) {
   }
 }
 function handlePoppedModal() {
-  require(4106) /* navigationToRootTabHelper */.popModal();
+  require(4136) /* navigationToRootTabHelper */.popModal();
 }
 function pushFirstOpenModal(arg0, arg1) {
   const iter = arg0[Symbol.iterator]();
@@ -42,7 +42,7 @@ function pushFirstOpenModal(arg0, arg1) {
     if (store != null) {
       getProps = store.getProps;
     }
-    if (typeof getProps === "error") {
+    if (typeof getProps === "find") {
       let tmp7 = key;
       let store2 = key.store;
       let props = store2.getProps();
@@ -57,7 +57,7 @@ function pushFirstOpenModal(arg0, arg1) {
     key = key.key;
     obj[0] = key;
     let num = 0;
-    component = handlePushedModal(importDefault(4463)(component, obj, props));
+    component = handlePushedModal(importDefault(4492)(component, obj, props));
   }
 }
 function createPushModalHandler(closure_15, closure_152) {
@@ -79,18 +79,18 @@ let closure_15 = {
     if (action == null) {
       action = importDefaultResult.getAction();
     }
-    let result = importDefault(9367).isFullScreenVerification(action);
+    let result = importDefault(8270).isFullScreenVerification(action);
     if (result) {
       result = null != token.getToken();
     }
     if (result) {
-      result = !require(16428) /* isEligibleForSafetyFlowsExperiment */.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
-      const obj2 = require(16428) /* isEligibleForSafetyFlowsExperiment */;
+      result = !require(16461) /* isEligibleForSafetyFlowsExperiment */.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
+      const obj2 = require(16461) /* isEligibleForSafetyFlowsExperiment */;
     }
     return result;
   },
   getComponent() {
-    return require(16429) /* PhoneThenEmailInterstitial */.default;
+    return require(16462) /* PhoneThenEmailInterstitial */.default;
   }
 };
 const USER_REQUIRED_ACTION_UPDATE = "USER_REQUIRED_ACTION_UPDATE";
@@ -106,7 +106,7 @@ let closure_17 = {
     return action === UserRequiredActions.AGREEMENTS;
   },
   getComponent() {
-    return require(16437) /* handleTouch */.default;
+    return require(16470) /* handleTouch */.default;
   }
 };
 let prototype = function DeprecatedModalManager() {
@@ -117,15 +117,15 @@ let prototype = function DeprecatedModalManager() {
     USER_REQUIRED_ACTION_UPDATE(requiredAction) {
       if (null == requiredAction.requiredAction) {
         if (obj.isModalOpen(closure_16)) {
-          let tmp5Result = tmp5(4106);
+          let tmp5Result = tmp5(4136);
           tmp5Result.popModal(tmp7);
         }
-        tmp5Result = tmp5(4106);
+        tmp5Result = tmp5(4136);
         if (tmp5Result.isModalOpen(closure_14)) {
-          tmp5(4106).popModal(tmp9);
-          const tmp5Result1 = tmp5(4106);
+          tmp5(4136).popModal(tmp9);
+          const tmp5Result1 = tmp5(4136);
         }
-        obj = callback(4106);
+        obj = callback(4136);
         tmp7 = closure_16;
         tmp9 = closure_14;
       } else {
@@ -149,7 +149,7 @@ let prototype = function DeprecatedModalManager() {
     store: handleFormInit,
     closable: false,
     getComponent() {
-      return callback(16438).default;
+      return callback(16471).default;
     }
   };
   obj = {
@@ -157,7 +157,7 @@ let prototype = function DeprecatedModalManager() {
     store: FormStates,
     closable: false,
     getComponent() {
-      return callback(16720).default;
+      return callback(16752).default;
     }
   };
   applyArgumentsResult.actions = obj;

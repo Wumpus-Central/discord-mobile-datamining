@@ -8,7 +8,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return { toggleStates: closure_2 };
 };
 prototype["initialize"] = function initialize(toggleStates) {
-  for (const key10008 in importDefault(8499)) {
+  for (const key10008 in importDefault(8838)) {
     let tmp = key10008;
     let flag;
     let tmp2 = closure_2;

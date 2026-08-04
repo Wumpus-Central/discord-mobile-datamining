@@ -13,7 +13,7 @@ export const ActivityIndicator = function ActivityIndicator(size) {
     flag = true;
   }
   const merged = Object.assign(size, Object.create(null));
-  let obj = require(3959) /* map */;
+  let obj = require(3989) /* map */;
   let color = merged.color;
   if (color == null) {
     color = obj.useToken(importDefault(712).colors.BACKGROUND_BRAND);

@@ -17,13 +17,13 @@ const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/na
 export default function EmptyState() {
   const tmp = createCacheKey();
   let obj = require(11350) /* handleApplicationSelected */;
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(require(8358) /* AppLauncherEntrypoint */.AppLauncherEmptyStateType.HOME_EMPTY);
+  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(require(9467) /* AppLauncherEntrypoint */.AppLauncherEmptyStateType.HOME_EMPTY);
   obj = { style: tmp.container, children: null };
-  const items = [callback(importDefault(11410), {}), ];
+  const items = [callback(importDefault(11411), {}), ];
   obj = { style: tmp.textContainer, variant: "text-md/semibold", color: "text-default", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t["V7+xhH"]);
-  items[1] = callback(require(4251) /* Text */.Text, obj);
+  items[1] = callback(require(4281) /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

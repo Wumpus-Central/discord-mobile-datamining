@@ -29,8 +29,8 @@ prototype["renderCircle"] = function renderCircle() {
   obj[7] = props.color;
   obj = { strokeDasharray: result1, strokeDashoffset: (1 - bound / 100) * result1 };
   obj[8] = obj;
-  obj[2] = callback(require(8196) /* inlineStyles */.Circle, obj);
-  return callback(importDefault(8196), obj);
+  obj[2] = callback(require(8437) /* inlineStyles */.Circle, obj);
+  return callback(importDefault(8437), obj);
 };
 prototype["render"] = function render() {
   const tmp = callback2(this.context);

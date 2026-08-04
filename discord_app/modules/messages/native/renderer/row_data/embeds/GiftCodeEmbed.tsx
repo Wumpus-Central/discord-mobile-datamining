@@ -14,33 +14,33 @@ let closure_12;
 let unpackModuleId;
 function getGiftStyleUrl(arg0) {
   if (constants.BOX === arg0) {
-    return importDefault(12452);
+    return importDefault(12486);
   } else if (tmp.CUP === arg0) {
-    return importDefault(12453);
+    return importDefault(12487);
   } else if (tmp.SNOWGLOBE === arg0) {
-    return importDefault(12454);
+    return importDefault(12488);
   } else if (tmp.STANDARD_BOX === arg0) {
-    return importDefault(12455);
+    return importDefault(12489);
   } else if (tmp.COFFEE === arg0) {
-    return importDefault(12456);
+    return importDefault(12490);
   } else if (tmp.CAKE === arg0) {
-    return importDefault(12457);
+    return importDefault(12491);
   } else if (tmp.CHEST === arg0) {
-    return importDefault(12458);
+    return importDefault(12492);
   } else if (tmp.SEASONAL_STANDARD_BOX === arg0) {
-    return importDefault(12459);
+    return importDefault(12493);
   } else if (tmp.SEASONAL_CAKE === arg0) {
-    return importDefault(12460);
+    return importDefault(12494);
   } else if (tmp.SEASONAL_CHEST === arg0) {
-    return importDefault(12461);
+    return importDefault(12495);
   } else if (tmp.SEASONAL_COFFEE === arg0) {
-    return importDefault(12462);
+    return importDefault(12496);
   } else if (tmp.NITROWEEN_STANDARD === arg0) {
     const obj = { uri: null };
-    obj[0] = importDefault(12006);
+    obj[0] = importDefault(12063);
     return obj;
   } else {
-    return importDefault(12455);
+    return importDefault(12489);
   }
 }
 ({ Image: c3, processColor: c4 } = get_ActivityIndicator);
@@ -65,19 +65,19 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
   const importDefault = forcedTheme;
   if (null != message.author) {
     if (0 !== message.giftCodes.length) {
-      const colors = importDefault(7851)(forcedTheme).colors;
+      const colors = importDefault(7863)(forcedTheme).colors;
       ({ headerColor: dependencyMap, titleColor: closure_3, subtitleColor: closure_4, bodyTextColor: fetchFingerprint, backgroundColor, resolvingGradientStart: updateGiftCode, resolvingGradientEnd: mergeGuildAvatar, acceptLabelDisabledBackgroundColor: addSku, acceptLabelDisabledColor: closure_9, thumbnailBackgroundColor: closure_10, acceptLabelGreenColor: closure_11, acceptBlurpleLabelBackgroundColor: closure_12 } = colors);
       let obj = { borderColor: null, backgroundColor: null, thumbnailCornerRadius: 3 };
       obj[0] = colors.borderColor;
       let tmp4 = backgroundColor;
       if (obj2.isThemeDark(forcedTheme)) {
-        const embedBackground = _require(4066).getEmbedBackground();
+        const embedBackground = _require(4096).getEmbedBackground();
         let tmp5Result = closure_4(embedBackground);
         if (tmp5Result == null) {
           tmp5Result = backgroundColor;
         }
         tmp4 = tmp5Result;
-        const tmp3Result = _require(4066);
+        const tmp3Result = _require(4096);
         const tmp5 = closure_4;
       }
       obj[1] = tmp4;

@@ -11,7 +11,7 @@ export const getServerThemeEnabled = function getServerThemeEnabled(guildId, Gui
   const currentConfig = experiment.getCurrentConfig(obj, { autoTrackExposure: false });
   let enabled = currentConfig.enabled;
   if (null != guildId) {
-    const ServerThemeApexShadowExperiment = require(4186) /* apexExperiment */.ServerThemeApexShadowExperiment;
+    const ServerThemeApexShadowExperiment = require(4216) /* apexExperiment */.ServerThemeApexShadowExperiment;
     obj = { guildId: null, location: null };
     obj[0] = guildId;
     obj[1] = GuildPowerupsConstants;
@@ -29,7 +29,7 @@ export const useServerThemeEnabled = function useServerThemeEnabled(guildId, use
   let obj = { guildId, location: useGuildPowerupNewPerkMarketingVersion };
   experiment = experiment.useExperiment(obj, { autoTrackExposure: false });
   let enabled = experiment.enabled;
-  const ServerThemeApexShadowExperiment = require(4186) /* apexExperiment */.ServerThemeApexShadowExperiment;
+  const ServerThemeApexShadowExperiment = require(4216) /* apexExperiment */.ServerThemeApexShadowExperiment;
   let tmp2 = guildId;
   if (guildId == null) {
     tmp2 = EMPTY_STRING_SNOWFLAKE_ID;

@@ -5,8 +5,10 @@ import { SpeakingFlags } from "DesktopSources";
 
 let c4;
 let c5;
+let closure_6;
+let error;
 const require = arg1;
-({ CLIPS_MAX_PARTICIPANTS: c4, CLIPS_MAX_TIMELINE_EVENTS: c5 } = result);
+({ CLIPS_MAX_PARTICIPANTS: c4, CLIPS_MAX_TIMELINE_EVENTS: c5, ClipSignalTypes: closure_6, GameEventType: error } = result);
 let obj = { UNKNOWN: 0, [0]: "UNKNOWN", KILL: 1, [1]: "KILL", MULTIKILL: 2, [2]: "MULTIKILL", DEATH: 3, [3]: "DEATH" };
 result = require("ME").fileFinishedImporting("modules/clips/clipPayloadUtils.tsx");
 
@@ -43,24 +45,24 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
       const diff = clip.decision.timestamp - clip.length;
       const sum = diff + 1000 * editMetadata.end;
       const sum1 = diff + 1000 * editMetadata.start;
-      let closure_1 = _require(4791).isGameEventsOnPlayerEnabled("getClipEventsTimeline");
+      let closure_1 = _require(4820).isGameEventsOnPlayerEnabled("getClipEventsTimeline");
       const timeline1 = clip.timeline;
       const found = timeline1.filter((signal) => {
-        const editMetadata = clip.editMetadata;
+        editMetadata = editMetadata.editMetadata;
         let voiceAudio;
         if (editMetadata != null) {
           voiceAudio = editMetadata.voiceAudio;
         }
         let tmp2 = false !== voiceAudio;
         if (tmp2) {
-          tmp2 = signal.signal.type === clip(outer1_2[5]).ClipSignalTypes.SPEAKING;
+          tmp2 = signal.signal.type === outer1_6.SPEAKING;
         }
         if (!tmp2) {
-          let tmp5 = closure_1;
+          let tmp4 = closure_1;
           if (closure_1) {
-            tmp5 = signal.signal.type === clip(outer1_2[5]).ClipSignalTypes.GAME_EVENT;
+            tmp4 = signal.signal.type === outer1_6.GAME_EVENT;
           }
-          tmp2 = tmp5;
+          tmp2 = tmp4;
         }
         return tmp2;
       });
@@ -71,36 +73,34 @@ export const getClipEventsTimeline = function getClipEventsTimeline(clip) {
         const items = [];
         const _Map2 = Map;
         new Map();
-        for (const item10063 of sorted) {
-          let tmp18 = item10063;
-          let tmp19 = _require;
-          let tmp20 = _require;
-          let tmp21 = dependencyMap;
-          let tmp22 = dependencyMap;
-          if (item10063.signal.type !== _require(4312).ClipSignalTypes.SPEAKING) {
+        for (const item10061 of sorted) {
+          let tmp16 = item10061;
+          let tmp17 = constants;
+          let tmp18 = constants;
+          if (item10061.signal.type !== constants.SPEAKING) {
             continue;
           } else {
-            let tmp23 = item10063;
-            if (tmp18.timestamp >= sum1) {
-              let tmp27 = obj5;
+            let tmp19 = item10061;
+            if (tmp16.timestamp >= sum1) {
+              let tmp23 = obj5;
               obj5.return();
               break;
             } else {
-              let tmp24 = item10063;
-              let tmp25 = SpeakingFlags;
-              let result = map.set(tmp18.signal.userId, (tmp18.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE);
+              let tmp20 = item10061;
+              let tmp21 = SpeakingFlags;
+              let result = map.set(tmp16.signal.userId, (tmp16.signal.speakingFlags & SpeakingFlags.VOICE) === SpeakingFlags.VOICE);
             }
             break;
           }
-          let tmp29 = map;
+          let tmp25 = map;
           let num4 = 2;
-          let tmp28 = __exception;
-          tmp12[Symbol.iterator]().return();
-          throw tmp28;
+          let tmp24 = __exception;
+          tmp10[Symbol.iterator]().return();
+          throw tmp24;
         }
-        const tmp12 = map;
+        const tmp10 = map;
       }
-      const obj2 = _require(4791);
+      const obj2 = _require(4820);
     }
   }
 };

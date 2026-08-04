@@ -12,15 +12,14 @@ function createNativePlaceholderConfig(type) {
   }
   let NONE = type;
   if (type == null) {
-    NONE = require(9009) /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE;
+    NONE = require(8344) /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE;
   }
-  const obj = { borderRadius: "Array", borderTopLeftRadius: "content", borderTopRightRadius: "disabled", borderBottomLeftRadius: "slice", borderBottomRightRadius: "e", divider: "isArray", dividerColorRgba: "isArray", dividerPaddingLeft: "source", dividerPaddingRight: "e", placeholderShape: "isArray", placeholderShapeColorRgba: "isArray", placeholderShapeCount: "split", placeholderShapeGap: "e", placeholderShapePaddingHorizontal: "isArray", placeholderShapePaddingVertical: "isArray", placeholderFeedBackgroundColorRgba: "spriteIndex", placeholderFeedColorRgba: "e", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "isArray", placeholderFeedLabelSize: "sr", placeholderFeedLabelSecondarySize: "e", placeholderFeedPadding: "isArray", placeholderFeedShape: "isArray", placeholderFeedShapeSize: "borderRadius", placeholderType: "sk", width: "bottom", height: "__esModule", verticalAlignment: "start", horizontalAlignment: "disabled" };
-  obj[24] = NONE;
+  const obj = { borderRadius: "Array", borderTopLeftRadius: "create", borderTopRightRadius: "diversity", borderBottomLeftRadius: "y", borderBottomRightRadius: "e", divider: "isArray", dividerColorRgba: "isArray", dividerPaddingLeft: "Boolean", dividerPaddingRight: "e", placeholderShape: "isArray", placeholderShapeColorRgba: "isArray", placeholderShapeCount: "o", placeholderShapeGap: "e", placeholderShapePaddingHorizontal: "isArray", placeholderShapePaddingVertical: "isArray", placeholderFeedBackgroundColorRgba: "l", placeholderFeedColorRgba: "e", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "isArray", placeholderFeedLabelSize: "e", placeholderFeedLabelSecondarySize: "e", placeholderFeedPadding: "isArray", placeholderFeedShape: "isArray", placeholderFeedShapeSize: "call", placeholderType: NONE, width: null, height: null, verticalAlignment: null, horizontalAlignment: null };
   if (null == type) {
     return obj;
   } else {
-    if (require(9009) /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE !== type) {
-      if (tmp11(9009).FastestListPropsPlaceholderType.SHAPE === type) {
+    if (require(8344) /* FastestListPropsPlaceholderType */.FastestListPropsPlaceholderType.NONE !== type) {
+      if (tmp11(8344).FastestListPropsPlaceholderType.SHAPE === type) {
         let num9 = type.borderRadius;
         if (num9 == null) {
           num9 = 0;
@@ -41,7 +40,7 @@ function createNativePlaceholderConfig(type) {
           num11 = 0;
         }
         obj.placeholderShapePaddingVertical = num11;
-        let tmp11Result = tmp11(4099);
+        let tmp11Result = tmp11(4129);
         obj.placeholderShapeColorRgba = tmp11Result.hexToRgbaString(type.colorHex, type.opacity);
         let num12 = type.shapeCount;
         if (num12 == null) {
@@ -58,7 +57,7 @@ function createNativePlaceholderConfig(type) {
           str2 = "center";
         }
         obj.horizontalAlignment = str2;
-      } else if (tmp11(9009).FastestListPropsPlaceholderType.FEED_ITEM === type) {
+      } else if (tmp11(8344).FastestListPropsPlaceholderType.FEED_ITEM === type) {
         let num = type.borderRadius;
         if (num == null) {
           num = 0;
@@ -91,7 +90,7 @@ function createNativePlaceholderConfig(type) {
         obj.divider = flag;
         let hexToRgbaStringResult;
         if (null != type.dividerColorHex) {
-          tmp11Result = tmp11(4099);
+          tmp11Result = tmp11(4129);
           hexToRgbaStringResult = tmp11Result.hexToRgbaString(type.dividerColorHex);
         }
         obj.dividerColorRgba = hexToRgbaStringResult;
@@ -107,11 +106,11 @@ function createNativePlaceholderConfig(type) {
         obj.dividerPaddingRight = num7;
         let hexToRgbaStringResult1;
         if (null != type.backgroundColorHex) {
-          hexToRgbaStringResult1 = tmp11(4099).hexToRgbaString(type.backgroundColorHex);
-          const tmp11Result1 = tmp11(4099);
+          hexToRgbaStringResult1 = tmp11(4129).hexToRgbaString(type.backgroundColorHex);
+          const tmp11Result1 = tmp11(4129);
         }
         obj.placeholderFeedBackgroundColorRgba = hexToRgbaStringResult1;
-        obj.placeholderFeedColorRgba = tmp11(4099).hexToRgbaString(type.colorHex);
+        obj.placeholderFeedColorRgba = tmp11(4129).hexToRgbaString(type.colorHex);
         ({ labelSize: obj.placeholderFeedLabelSize, labelSecondarySize } = type);
         if (labelSecondarySize == null) {
           labelSecondarySize = 0;
@@ -128,7 +127,7 @@ function createNativePlaceholderConfig(type) {
         }
         obj.placeholderFeedPadding = num8;
         ({ shape: obj.placeholderFeedShape, shapeSize: obj.placeholderFeedShapeSize } = type);
-        const tmp11Result2 = tmp11(4099);
+        const tmp11Result2 = tmp11(4129);
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;

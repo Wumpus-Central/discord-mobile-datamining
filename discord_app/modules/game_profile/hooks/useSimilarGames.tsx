@@ -1,4 +1,4 @@
-import map from "map";
+import handleLoadMessages from "handleLoadMessages";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_4 } from "set";
 
@@ -15,7 +15,7 @@ export default function useSimilarGames(arg0, arg1) {
   if (arg1) {
     tmp = !set.has(arg0);
   }
-  let obj = require(8843) /* _getShopCollection */;
+  let obj = require(9258) /* _getShopCollection */;
   const similarGameIds = obj.useSimilarGameIds(arg0, tmp);
   ({ data, isLoading, error } = similarGameIds);
   if (!tmp) {
@@ -24,14 +24,14 @@ export default function useSimilarGames(arg0, arg1) {
     tmp7 = data;
   }
   require = tmp7;
-  let tmp3Result = tmp3(6990);
+  let tmp3Result = tmp3(7002);
   const games = tmp3Result.useGames(tmp7);
   tmp3Result = tmp3(589);
-  const items = [map];
+  const items = [handleLoadMessages];
   const items1 = [tmp7];
   const stateFromStores = tmp3Result.useStateFromStores(items, () => tmp7.some((gameId) => null == game.getGame(gameId) && !game.hasNoData(gameId) && !game.didFetchingFail(gameId)), items1);
   require(589) /* initialize */;
-  const items2 = [map, mergeGuildAvatar];
+  const items2 = [handleLoadMessages, mergeGuildAvatar];
   [][0] = tmp7;
   if (tmp) {
     obj = { isFetching: null, similarGames: null };

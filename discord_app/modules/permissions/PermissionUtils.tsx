@@ -679,7 +679,7 @@ export const renderDescription = function renderDescription(str) {
     let trimmed = str.trim();
   } else {
     trimmed = str;
-    if (typeof str !== "HAS_APPLICATION") {
+    if (typeof str !== "three_button_mouse") {
       const intl = require(1236) /* getSystemLocale */.intl;
       trimmed = intl.format(str, {});
     }

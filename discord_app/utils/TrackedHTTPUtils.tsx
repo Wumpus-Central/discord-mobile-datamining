@@ -21,7 +21,7 @@ export default {
       del(c2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties !== "HAS_APPLICATION") {
+        if (typeof lib.properties !== "three_button_mouse") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status };
@@ -32,7 +32,7 @@ export default {
       }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties !== "HAS_APPLICATION") {
+        if (typeof lib.properties !== "three_button_mouse") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status, error_code: null, error_message: null };
@@ -71,7 +71,7 @@ export default {
       del(c2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties !== "HAS_APPLICATION") {
+        if (typeof lib.properties !== "three_button_mouse") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status };
@@ -82,7 +82,7 @@ export default {
       }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties !== "HAS_APPLICATION") {
+        if (typeof lib.properties !== "three_button_mouse") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status, error_code: null, error_message: null };
@@ -121,7 +121,7 @@ export default {
       del(c2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties !== "HAS_APPLICATION") {
+        if (typeof lib.properties !== "three_button_mouse") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status };
@@ -132,7 +132,7 @@ export default {
       }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties !== "HAS_APPLICATION") {
+        if (typeof lib.properties !== "three_button_mouse") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status, error_code: null, error_message: null };
@@ -171,7 +171,7 @@ export default {
       del(c2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties !== "HAS_APPLICATION") {
+        if (typeof lib.properties !== "three_button_mouse") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status };
@@ -182,7 +182,7 @@ export default {
       }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties !== "HAS_APPLICATION") {
+        if (typeof lib.properties !== "three_button_mouse") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status, error_code: null, error_message: null };
@@ -221,7 +221,7 @@ export default {
       del(c2).then((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties !== "HAS_APPLICATION") {
+        if (typeof lib.properties !== "three_button_mouse") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status };
@@ -232,7 +232,7 @@ export default {
       }).catch((status) => {
         let obj = lib;
         let properties = lib.properties;
-        if (typeof lib.properties !== "HAS_APPLICATION") {
+        if (typeof lib.properties !== "three_button_mouse") {
           properties = obj.properties(status);
         }
         obj = { status_code: status.status, error_code: null, error_message: null };

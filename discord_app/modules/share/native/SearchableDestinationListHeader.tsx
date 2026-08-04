@@ -32,9 +32,9 @@ export default function SearchableDestinationListHeader(arg0) {
     headerRight: null,
     headerStatusBarHeight: null
   };
-  obj[4] = require(5209) /* HeaderBackImage */.getHeaderCloseButton(onClose);
+  obj[4] = require(5238) /* HeaderBackImage */.getHeaderCloseButton(onClose);
   obj[5] = headerRight;
-  const obj3 = require(5209) /* HeaderBackImage */;
+  const obj3 = require(5238) /* HeaderBackImage */;
   const tmp3 = View;
   const tmp4 = require;
   let num;
@@ -42,10 +42,10 @@ export default function SearchableDestinationListHeader(arg0) {
     if (!tmp4Result.getIsWindowLarge()) {
       num = 0;
     }
-    tmp4Result = tmp4(7550);
+    tmp4Result = tmp4(7562);
   }
   obj[6] = num;
-  obj[1] = jsx(require(5216) /* Background */.Header, {
+  obj[1] = jsx(require(5245) /* Background */.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

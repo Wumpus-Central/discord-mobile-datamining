@@ -24,7 +24,7 @@ export default {
     let obj = importDefault(709);
     obj = { type: "CHANGE_LOG_MARK_SEEN", changelogId: id, changelogDate: date };
     obj.dispatch(obj);
-    const LastReceivedChangelogId = require(3928) /* explicitContentFromProto */.LastReceivedChangelogId;
+    const LastReceivedChangelogId = require(3958) /* explicitContentFromProto */.LastReceivedChangelogId;
     LastReceivedChangelogId.updateSetting(id);
   },
   setChangelogOverride(id) {

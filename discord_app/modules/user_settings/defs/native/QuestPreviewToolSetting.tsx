@@ -6,7 +6,7 @@ obj = {
     return intl.string(require(1236) /* getSystemLocale */.t.BDUDau);
   },
   usePredicate() {
-    return require(10643) /* useQuests */.useIsPreviewerOnAnyQuest();
+    return require(10374) /* useQuests */.useIsPreviewerOnAnyQuest();
   },
   parent: null,
   IconComponent: require("QuestsIcon").QuestsIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.QUEST_PREVIEW_TOOL_2,
   getComponent() {
-    return require(14279) /* SettingsQuestPreviewScreen */.default;
+    return require(14313) /* SettingsQuestPreviewScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

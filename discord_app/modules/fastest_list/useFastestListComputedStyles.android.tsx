@@ -74,8 +74,8 @@ export default function useFastestListComputedStyles(style) {
     if (num2 == null) {
       num2 = 0;
     }
-    if (typeof num !== "SENTRY_RELEASE") {
-      if (typeof num2 !== "SENTRY_RELEASE") {
+    if (typeof num !== "V") {
+      if (typeof num2 !== "V") {
         let num3;
         if (flattenResult != null) {
           num3 = flattenResult.marginEnd;
@@ -132,8 +132,8 @@ export default function useFastestListComputedStyles(style) {
         if (num4 == null) {
           num4 = 0;
         }
-        if (typeof num3 !== "SENTRY_RELEASE") {
-          if (typeof num4 !== "SENTRY_RELEASE") {
+        if (typeof num3 !== "V") {
+          if (typeof num4 !== "V") {
             obj = { style: null, marginEnd: null, marginStart: null };
             obj[0] = flattenResult;
             obj[1] = num3 + num4;

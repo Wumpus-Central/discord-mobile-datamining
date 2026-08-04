@@ -70,7 +70,7 @@ export default function useFavoritesGuildCategoryAddAction(id) {
     if (id.type === ChannelTypes.GUILD_CATEGORY) {
       obj = { label: null, perform: null };
       const intl = _require(1236).intl;
-      obj[0] = intl.string(importDefault(3001)["1QJmIL"]);
+      obj[0] = intl.string(importDefault(3031)["1QJmIL"]);
       obj[1] = callback;
       tmp4 = obj;
     }

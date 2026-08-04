@@ -1,10 +1,10 @@
-let obj = { request: "Array", response: true };
+let obj = { request: "Array", response: 0 };
 obj[1] = function response(string) {
   const obj = { image_url: null };
   obj[0] = string.string().required();
   return obj;
 };
-obj = { response: "Array", request: true };
+obj = { response: "Array", request: 0 };
 obj[1] = function request(string) {
   const obj = { mediaUrl: null };
   const stringResult = string.string();
@@ -39,8 +39,8 @@ obj = {
     let arrayResult = string.array();
     const stringResult5 = string.string();
     const stringResult6 = string.string();
-    const items = [...require(13619) /* RPCCommands */.joiEnum(require(8485) /* set */.OAuth2Scopes)];
-    const obj12 = require(13619) /* RPCCommands */;
+    const items = [...require(13653) /* RPCCommands */.joiEnum(require(8824) /* set */.OAuth2Scopes)];
+    const obj12 = require(13653) /* RPCCommands */;
     obj[2] = arrayResult.items(stringResult6.valid.apply(items)).required();
     const itemsResult = arrayResult.items(stringResult6.valid.apply(items));
     obj[3] = string.string().required();
@@ -61,7 +61,7 @@ obj = {
     return obj;
   }
 };
-let obj1 = { request: "Array", response: true };
+let obj1 = { request: "Array", response: 0 };
 obj1[1] = function response(array) {
   let obj = { participants: null };
   const arrayResult = array.array();
@@ -73,7 +73,7 @@ obj1[1] = function response(array) {
   obj[0] = arrayResult.items(keys.required()).required();
   return obj;
 };
-let obj4 = { request: "Array", response: true };
+let obj4 = { request: "Array", response: 0 };
 obj4[1] = function response(array) {
   let arrayResult = array.array();
   let obj = { type: null, user: null, presence: null };
@@ -84,7 +84,7 @@ obj4[1] = function response(array) {
   obj = { status: null, activity: null };
   const numberResult = array.number();
   obj[0] = array.string().required();
-  if (typeof Activity !== "error") {
+  if (typeof Activity !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const obj1 = { relationships: null };
@@ -188,7 +188,7 @@ obj4[1] = function response(array) {
   obj1[0] = requiredResult.items(array.object(obj));
   return obj1;
 };
-const obj9 = { request: "Array", response: true };
+const obj9 = { request: "Array", response: 0 };
 obj9[1] = function response(string) {
   const obj = { quest_id: null, enrolled_at: null, completed_at: null, external_cta_url: null };
   obj[0] = string.string().required();
@@ -202,7 +202,7 @@ obj9[1] = function response(string) {
   obj[3] = string.string().required();
   return obj;
 };
-const obj10 = { request: "Array", response: true };
+const obj10 = { request: "Array", response: 0 };
 obj10[1] = function response(string) {
   const obj = { ticket: null };
   obj[0] = string.string().required();
@@ -255,11 +255,11 @@ function ButtonComponent(arg0) {
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/rpc-schema/definitions.tsx");
 
 export const RPCCommandSchemas = {
-  [require(13619).RPCCommand.INITIATE_IMAGE_UPLOAD]: obj,
-  [require(13619).RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: obj,
-  [require(13619).RPCCommand.AUTHENTICATE]: obj,
-  [require(13619).RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: obj1,
-  [require(13619).RPCCommand.SHARE_INTERACTION]: {
+  [require(13653).RPCCommand.INITIATE_IMAGE_UPLOAD]: obj,
+  [require(13653).RPCCommand.OPEN_SHARE_MOMENT_DIALOG]: obj,
+  [require(13653).RPCCommand.AUTHENTICATE]: obj,
+  [require(13653).RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: obj1,
+  [require(13653).RPCCommand.SHARE_INTERACTION]: {
     request(string) {
       let obj = { command: null, options: null, content: null, require_launch_channel: null, preview_image: null, components: null, pid: null };
       obj[0] = string.string().required();
@@ -282,7 +282,7 @@ export const RPCCommandSchemas = {
       obj[2] = string.number().required();
       obj[4] = string.object(obj);
       arrayResult = string.array();
-      if (typeof ActionRowComponent !== "error") {
+      if (typeof ActionRowComponent !== "find") {
         HermesBuiltin.throwTypeError();
       }
       const obj1 = { type: null, components: null };
@@ -291,7 +291,7 @@ export const RPCCommandSchemas = {
       obj1[0] = validResult.required();
       const numberResult2 = string.number();
       const arrayResult1 = string.array();
-      if (typeof ButtonComponent !== "error") {
+      if (typeof ButtonComponent !== "find") {
         HermesBuiltin.throwTypeError();
       }
       const obj2 = { type: null, style: null, label: null, custom_id: null };
@@ -319,7 +319,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [require(13619).RPCCommand.SHARE_LINK]: {
+  [require(13653).RPCCommand.SHARE_LINK]: {
     request(string) {
       const obj = { custom_id: null, message: null, link_id: null };
       obj[0] = string.string().max(64);
@@ -340,8 +340,8 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [require(13619).RPCCommand.GET_RELATIONSHIPS]: obj4,
-  [require(13619).RPCCommand.INVITE_USER_EMBEDDED]: {
+  [require(13653).RPCCommand.GET_RELATIONSHIPS]: obj4,
+  [require(13653).RPCCommand.INVITE_USER_EMBEDDED]: {
     request(string) {
       const obj = { user_id: null, content: null };
       obj[0] = string.string().required();
@@ -350,9 +350,9 @@ export const RPCCommandSchemas = {
       obj[1] = string.string().min(0).max(1024);
       return obj;
     },
-    response: "Array"
+    response: "a"
   },
-  [require(13619).RPCCommand.GET_USER]: {
+  [require(13653).RPCCommand.GET_USER]: {
     request(string) {
       const obj = { id: null };
       const stringResult = string.string();
@@ -363,7 +363,7 @@ export const RPCCommandSchemas = {
       return User(arg0).allow(null);
     }
   },
-  [require(13619).RPCCommand.GET_QUEST_ENROLLMENT_STATUS]: {
+  [require(13653).RPCCommand.GET_QUEST_ENROLLMENT_STATUS]: {
     request(string) {
       const obj = { quest_id: null };
       obj[0] = string.string().required();
@@ -380,7 +380,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [require(13619).RPCCommand.QUEST_START_TIMER]: {
+  [require(13653).RPCCommand.QUEST_START_TIMER]: {
     request(string) {
       const obj = { quest_id: null };
       obj[0] = string.string().required();
@@ -392,6 +392,6 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [require(13619).RPCCommand.GET_QUEST]: obj9,
-  [require(13619).RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj10
+  [require(13653).RPCCommand.GET_QUEST]: obj9,
+  [require(13653).RPCCommand.REQUEST_PROXY_TICKET_REFRESH]: obj10
 };

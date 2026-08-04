@@ -12,7 +12,7 @@ export default function PressableNavigatorModalIcon(onPress) {
     str = "back";
   }
   let obj = { source: null, onPress: null, accessibilityLabel: null };
-  obj[0] = importDefault("back" === str ? 9304 : 9308);
+  obj[0] = importDefault("back" === str ? 8197 : 8201);
   obj[1] = goBack;
   const intl = tmp5(1236).intl;
   const string = intl.string;
@@ -22,7 +22,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj = { isModal: true, children: tmp(require(9300) /* GenericHeaderTitle */.HeaderIconButton, obj) };
+  obj = { isModal: true, children: tmp(require(8193) /* GenericHeaderTitle */.HeaderIconButton, obj) };
   obj[2] = stringResult;
-  return jsx(importDefault(9303), { isModal: true, children: tmp(require(9300) /* GenericHeaderTitle */.HeaderIconButton, obj) });
+  return jsx(importDefault(8196), { isModal: true, children: tmp(require(8193) /* GenericHeaderTitle */.HeaderIconButton, obj) });
 };

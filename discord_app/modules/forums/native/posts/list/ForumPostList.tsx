@@ -28,7 +28,7 @@ export default function ForumPostList(arg0) {
   ({ firstMessage, hasUnreads, thread } = arg0);
   ({ messageContent, firstMessageLoaded, isNew, media, isEmbed, isLocalDeviceMedia, parentChannel, senderModifier } = arg0);
   const tmp = callback3();
-  let obj = require(5773) /* useAvailableTags */;
+  let obj = require(5802) /* useAvailableTags */;
   const tmp4 = callback(obj.useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   const hasFlagResult = thread.hasFlag(ChannelFlags.PINNED);

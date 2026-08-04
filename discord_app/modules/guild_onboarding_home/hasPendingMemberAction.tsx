@@ -13,7 +13,7 @@ export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, 
   channel = channel.getChannel(selectedChannelId);
   let hasItem = null != guild && null != channel;
   if (hasItem) {
-    hasItem = importDefault(4459)(guild);
+    hasItem = importDefault(4488)(guild);
   }
   if (hasItem) {
     const features = guild.features;

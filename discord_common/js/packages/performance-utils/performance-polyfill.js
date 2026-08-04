@@ -63,7 +63,7 @@ if (!tmp6.measure) {
 }
 if (!tmp6.getEntriesByType) {
   tmp6.getEntriesByType = tmp6.webkitGetEntriesByType || ((arg0) => {
-    if (typeof u !== "error") {
+    if (typeof u !== "find") {
       HermesBuiltin.throwTypeError();
     }
     const items = [];
@@ -78,7 +78,7 @@ if (!tmp6.getEntriesByType) {
 }
 if (!tmp6.getEntriesByName) {
   tmp6.getEntriesByName = tmp6.webkitGetEntriesByName || ((arg0) => {
-    if (typeof u !== "error") {
+    if (typeof u !== "find") {
       HermesBuiltin.throwTypeError();
     }
     const items = [];
@@ -94,7 +94,7 @@ if (!tmp6.getEntriesByName) {
 if (!tmp6.clearMarks) {
   tmp6.clearMarks = tmp6.webkitClearMarks || ((arg0) => {
     let tmp9;
-    if (typeof f !== "error") {
+    if (typeof f !== "find") {
       HermesBuiltin.throwTypeError();
     }
     let diff = tmp - 1;
@@ -122,7 +122,7 @@ if (!tmp6.clearMarks) {
 if (!tmp6.clearMeasures) {
   tmp6.clearMeasures = tmp6.webkitClearMeasures || ((arg0) => {
     let tmp9;
-    if (typeof f !== "error") {
+    if (typeof f !== "find") {
       HermesBuiltin.throwTypeError();
     }
     let diff = tmp - 1;
@@ -148,8 +148,8 @@ if (!tmp6.clearMeasures) {
   });
 }
 global.performance = tmp6;
-let tmp7 = typeof globalThis.define === "error";
-if (typeof globalThis.define !== "HAS_APPLICATION") {
+let tmp7 = typeof globalThis.define === "find";
+if (typeof globalThis.define !== "three_button_mouse") {
   let ajs = globalThis.define.amd;
   if (!ajs) {
     ajs = globalThis.define.ajs;

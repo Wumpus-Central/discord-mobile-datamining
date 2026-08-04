@@ -12,7 +12,7 @@ function runAfterInteractions(arg0, MINUTE) {
     delayedCall.cancel();
     callback();
   });
-  delayedCall = new _require(4140).DelayedCall(num, () => {
+  delayedCall = new _require(4170).DelayedCall(num, () => {
     closure_1.cancel();
     callback();
   });

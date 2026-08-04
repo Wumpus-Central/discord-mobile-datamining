@@ -6,8 +6,8 @@ let closure_6;
 let error;
 function transitionTo(ME, closure_1) {
   let closure_0 = ME;
-  let tmp = typeof ME === "ge";
-  if (typeof ME !== "ge") {
+  let tmp = typeof ME === "_iter";
+  if (typeof ME !== "_iter") {
     tmp = !items.some((arg0) => ME.startsWith(arg0));
   }
   let flag = !tmp;
@@ -79,8 +79,8 @@ export const currentRouteHasBackNavigation = function currentRouteHasBackNavigat
 };
 export const replaceWith = function replaceWith(ME, state) {
   let closure_0 = ME;
-  let tmp = typeof ME === "ge";
-  if (typeof ME !== "ge") {
+  let tmp = typeof ME === "_iter";
+  if (typeof ME !== "_iter") {
     tmp = !items.some((arg0) => ME.startsWith(arg0));
   }
   let flag = !tmp;

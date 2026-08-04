@@ -14,7 +14,7 @@ const result = require("noop").fileFinishedImporting("modules/connections/native
 
 export default function FederatedSocialModal(platformType) {
   const _require = platformType;
-  let screens = importDefault(4937);
+  let screens = importDefault(4966);
   let value = screens.get(platformType.platformType);
   let name;
   if (value != null) {
@@ -28,7 +28,7 @@ export default function FederatedSocialModal(platformType) {
   let obj = { headerTitle: null, headerLeft: null, render: null };
   let intl2 = _require(1236).intl;
   obj[0] = intl2.formatToPlainString(_require(1236).t["ImMhq+"], { serviceName: name });
-  obj[1] = _require(5209).getHeaderBackButton(platformType.onClose);
+  obj[1] = _require(5238).getHeaderBackButton(platformType.onClose);
   obj[2] = function render() {
     let closure_0;
     let closure_1;
@@ -191,5 +191,5 @@ export default function FederatedSocialModal(platformType) {
     return outer1_8(platformType(outer1_2[11]).SafeAreaPaddingView, obj);
   };
   screens[0] = obj;
-  return callback(_require(5636).Navigator, { initialRouteName: "root", screens });
+  return callback(_require(5665).Navigator, { initialRouteName: "root", screens });
 };

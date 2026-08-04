@@ -80,7 +80,7 @@ function RadioBar(arg0) {
   ({ style, size, onPress } = arg0);
   const tmp = callback2();
   const tmp3 = callback(RadioIndicator, { size, active: checked });
-  let obj = require(3973) /* useCheckboxA11yNative */;
+  let obj = require(4003) /* useCheckboxA11yNative */;
   const radioA11yNative = obj.useRadioA11yNative({ selected: checked, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   obj = { accessibilityRole, accessibilityState, disabled, onPress: null, DEPRECATED_style: null, label: null, subLabel: null, trailing: null, leading: null };
@@ -118,7 +118,7 @@ function RadioBar(arg0) {
     leading = option.leading;
   }
   obj[8] = leading;
-  return callback(importDefault(5279), obj);
+  return callback(importDefault(5308), obj);
 }
 class RadioItem {
   constructor(arg0) {

@@ -6,13 +6,13 @@ let obj1;
 const result = require("pushLayer").fileFinishedImporting("modules/premium/PremiumMarketingUtil.tsx");
 
 export const navigateToPremiumHomePage = function navigateToPremiumHomePage() {
-  require(5915) /* openUserSettings */.openUserSettings({ screen: constants2.PREMIUM });
+  require(5925) /* openUserSettings */.openUserSettings({ screen: constants2.PREMIUM });
 };
 export const navigateToNitroHomePage = function navigateToNitroHomePage(arg0) {
   if (arg0 != null) {
     arg0();
   }
-  require(6943) /* pushLayer */.popLayer();
-  const obj = require(6943) /* pushLayer */;
+  require(6955) /* pushLayer */.popLayer();
+  const obj = require(6955) /* pushLayer */;
   require(1222) /* transitionTo */.transitionTo(constants.APPLICATION_STORE);
 };

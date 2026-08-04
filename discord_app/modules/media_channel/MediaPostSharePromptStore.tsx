@@ -41,7 +41,7 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(require("dispatc
             }
           }
         }
-        obj2 = require(7849) /* useIsFirstMessageInMediaPost */;
+        obj2 = require(7861) /* useIsFirstMessageInMediaPost */;
       }
     }
   },

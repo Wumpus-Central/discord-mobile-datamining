@@ -68,8 +68,8 @@ export default function useUserProfileMutuals(arg0) {
     return tmp4;
   }, items4);
   const obj3 = _require(589);
-  const tmp9 = importDefault(8641)(tmp2);
-  const tmp10 = importDefault(8641)(tmp7);
+  const tmp9 = importDefault(8971)(tmp2);
+  const tmp10 = importDefault(8971)(tmp7);
   obj = { mutualFriendsCount: tmp2, mutualFriends: null, mutualGuilds: null, isFetching: null, isFetchingFriends: null };
   if (tmp7 == null) {
     tmp7 = tmp10;

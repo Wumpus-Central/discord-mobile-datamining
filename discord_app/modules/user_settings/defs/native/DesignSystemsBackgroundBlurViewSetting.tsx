@@ -10,7 +10,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_BACKGROUND_BLUR_VIEW,
   getComponent() {
-    return require(14652) /* DemoModal */.default;
+    return require(14686) /* DemoModal */.default;
   }
 };
 const route = createToggle.createRoute(obj);

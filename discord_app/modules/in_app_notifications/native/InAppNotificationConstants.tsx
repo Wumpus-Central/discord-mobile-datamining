@@ -1,4 +1,4 @@
-import { Easing } from "module_4116";
+import { Easing } from "module_4146";
 import set from "set";
 
 let set = new Set([10, 25]);

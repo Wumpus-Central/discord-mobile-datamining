@@ -18,20 +18,20 @@ const result = require("jsxProd").fileFinishedImporting("modules/activities/nati
 
 export default function ActivitiesDebugOverlay() {
   const tmp = createCacheKey();
-  const tmp4 = importDefault(10704)();
+  const tmp4 = importDefault(10554)();
   let str = "text-overlay-light";
   let str2 = "";
-  if (require(10704) /* useThermalState */.ThermalStates.UNHANDLED !== tmp4) {
+  if (require(10554) /* useThermalState */.ThermalStates.UNHANDLED !== tmp4) {
     str = "text-feedback-positive";
     str2 = "nominal";
-    if (tmp5(10704).ThermalStates.NOMINAL !== tmp4) {
+    if (tmp5(10554).ThermalStates.NOMINAL !== tmp4) {
       str = "text-feedback-warning";
       str2 = "fair";
-      if (tmp5(10704).ThermalStates.FAIR !== tmp4) {
+      if (tmp5(10554).ThermalStates.FAIR !== tmp4) {
         str2 = "serious";
         str = "text-feedback-critical";
-        if (tmp5(10704).ThermalStates.SERIOUS !== tmp4) {
-          if (tmp5(10704).ThermalStates.CRITICAL === tmp4) {
+        if (tmp5(10554).ThermalStates.SERIOUS !== tmp4) {
+          if (tmp5(10554).ThermalStates.CRITICAL === tmp4) {
             str2 = "critical";
             str = "text-feedback-critical";
           }
@@ -45,7 +45,7 @@ export default function ActivitiesDebugOverlay() {
   obj = { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 };
   items[1] = obj;
   obj = { style: tmp.row, children: null };
-  const items1 = [callback(require(4251) /* Text */.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), callback2(require(4251) /* Text */.Text, { variant: "text-md/normal", color: str, children: str2 })];
+  const items1 = [callback(require(4281) /* Text */.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), callback2(require(4281) /* Text */.Text, { variant: "text-md/normal", color: str, children: str2 })];
   obj[1] = items1;
   obj[2] = callback(View, obj);
   return callback2(View, obj);

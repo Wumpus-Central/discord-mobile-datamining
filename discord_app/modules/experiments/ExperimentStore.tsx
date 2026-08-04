@@ -239,8 +239,8 @@ function _loadGuildFilter(arg0) {
   let tmp2;
   [tmp, tmp2] = arg0;
   let tmp5 = null;
-  if (null != require(4174) /* isInRange */.GUILD_FILTERS[tmp]) {
-    const GUILD_FILTERS = require(4174) /* isInRange */.GUILD_FILTERS;
+  if (null != require(4204) /* isInRange */.GUILD_FILTERS[tmp]) {
+    const GUILD_FILTERS = require(4204) /* isInRange */.GUILD_FILTERS;
     tmp5 = GUILD_FILTERS[tmp](tmp2);
   }
   return tmp5;
@@ -1214,7 +1214,7 @@ prototype["getSerializedState"] = function getSerializedState() {
     }
   }
   obj = { hasLoadedExperiments: c16, trackedExposureExperiments: closure_17, loadedUserExperiments: closure_21, loadedGuildExperiments: obj, userExperimentOverrides: closure_24, guildExperimentOverrides: closure_25, cookieOverrides: null, assignmentSource: null, assignmentSessionId: null, assignmentFingerprint: null };
-  obj[6] = require(4171) /* Version */.getBuildOverrideExperiments();
+  obj[6] = require(4201) /* Version */.getBuildOverrideExperiments();
   obj[7] = closure_20.source;
   obj[8] = closure_20.sessionId;
   obj[9] = closure_20.fingerprint;

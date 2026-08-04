@@ -18,7 +18,7 @@ class FormattedMessage {
     obj = Object.create(new.target.prototype);
     obj.message = replaced;
     obj.hasMarkdown = importDefault;
-    tmp4 = new require("module_16137")(obj.message, arg1);
+    tmp4 = new require("module_16170")(obj.message, arg1);
     obj.intlMessage = tmp4;
     return obj;
   }
@@ -31,7 +31,7 @@ prototype["format"] = function format(arg0) {
     const first = tmp2[0];
     const intlMessage2 = self.intlMessage;
     const formatResult = intlMessage2.format(first);
-    if (typeof closure_3 !== "error") {
+    if (typeof closure_3 !== "find") {
       HermesBuiltin.throwTypeError();
     }
     const hasItem = formatResult.includes("\n\n");
@@ -55,7 +55,7 @@ prototype["astFormat"] = function astFormat(arg0) {
   const unsafeContext = callback(this.getContext(arg0), 2);
   const context = unsafeContext[0];
   const intlMessage = this.intlMessage;
-  if (typeof closure_4 !== "error") {
+  if (typeof closure_4 !== "find") {
     HermesBuiltin.throwTypeError();
   }
   return require(intlMessage.format(context) + "\n\n", { inline: false, context, unsafeContext: unsafeContext[1] });
@@ -95,18 +95,18 @@ prototype["getContext"] = function getContext(arg0) {
   const items = [arg0, obj];
   return items;
 };
-const result = require("module_16137").fileFinishedImporting("../discord_common/js/packages/i18n/parse.tsx");
+const result = require("module_16170").fileFinishedImporting("../discord_common/js/packages/i18n/parse.tsx");
 
 export { FormattedMessage };
 export const setUpdateRules = function setUpdateRules(arg0) {
-  const rules = _require(16181).rules;
+  const rules = _require(16214).rules;
   _require = undefined;
   let importDefault;
-  _require = importDefault(3954).parserFor(arg0(rules));
-  const obj = importDefault(3954);
-  const obj2 = importDefault(3954);
-  importDefault = obj2.reactFor(importDefault(3954).ruleOutput(rules, "react"));
-  const f112958 = (arr, context, unsafeContext) => {
+  _require = importDefault(3984).parserFor(arg0(rules));
+  const obj = importDefault(3984);
+  const obj2 = importDefault(3984);
+  importDefault = obj2.reactFor(importDefault(3984).ruleOutput(rules, "react"));
+  const f113053 = (arr, context, unsafeContext) => {
     const hasItem = arr.includes("\n\n");
     let text = arr;
     if (hasItem) {
@@ -117,23 +117,23 @@ export const setUpdateRules = function setUpdateRules(arg0) {
     return callback2(callback(text, { inline: !hasItem, context, unsafeContext }));
   };
   _require = undefined;
-  const obj3 = importDefault(3954);
-  _require = importDefault(3954).parserFor(_require(16181).rules);
-  const f112959 = (arg0, context, unsafeContext) => callback(arg0 + "\n\n", { inline: false, context, unsafeContext });
+  const obj3 = importDefault(3984);
+  _require = importDefault(3984).parserFor(_require(16214).rules);
+  const f113054 = (arg0, context, unsafeContext) => callback(arg0 + "\n\n", { inline: false, context, unsafeContext });
 };
 export const getMessage = function getMessage(str) {
   if (null == str) {
     return "";
   } else {
-    if (null == f112958) {
-      const rules = _require(16181).rules;
+    if (null == f113053) {
+      const rules = _require(16214).rules;
       _require = undefined;
       let importDefault;
-      let obj = importDefault(3954);
-      _require = obj.parserFor(_require(16182).default(rules));
-      const obj2 = importDefault(3954);
-      importDefault = obj2.reactFor(importDefault(3954).ruleOutput(rules, "react"));
-      f112958 = (arr, context, unsafeContext) => {
+      let obj = importDefault(3984);
+      _require = obj.parserFor(_require(16215).default(rules));
+      const obj2 = importDefault(3984);
+      importDefault = obj2.reactFor(importDefault(3984).ruleOutput(rules, "react"));
+      f113053 = (arr, context, unsafeContext) => {
         const hasItem = arr.includes("\n\n");
         let text = arr;
         if (hasItem) {
@@ -144,16 +144,16 @@ export const getMessage = function getMessage(str) {
         return callback2(callback(text, { inline: !hasItem, context, unsafeContext }));
       };
       _require = undefined;
-      const obj3 = importDefault(3954);
-      _require = importDefault(3954).parserFor(_require(16181).rules);
-      const f112959 = (arg0, context, unsafeContext) => callback(arg0 + "\n\n", { inline: false, context, unsafeContext });
-      const obj4 = importDefault(3954);
+      const obj3 = importDefault(3984);
+      _require = importDefault(3984).parserFor(_require(16214).rules);
+      const f113054 = (arg0, context, unsafeContext) => callback(arg0 + "\n\n", { inline: false, context, unsafeContext });
+      const obj4 = importDefault(3984);
     }
     const str2 = str.replace(/^\n+|\n+$/g, "");
     const isMatch = regex.test(str2);
     const isMatch1 = regex2.test(str2);
     if (isMatch) {
-      if (typeof FormattedMessage !== "error") {
+      if (typeof FormattedMessage !== "find") {
         HermesBuiltin.throwTypeError();
       }
       let replaced = str2;
@@ -163,7 +163,7 @@ export const getMessage = function getMessage(str) {
       obj = Object.create(FormattedMessage.prototype);
       obj.message = replaced;
       obj.hasMarkdown = isMatch1;
-      const tmp16 = new importDefault(16137)(obj.message, arg1);
+      const tmp16 = new importDefault(16170)(obj.message, arg1);
       obj.intlMessage = tmp16;
       let tmp5 = obj;
       const tmp6 = FormattedMessage;

@@ -87,11 +87,11 @@ if (!tmp12) {
 if (!tmp12) {
   tmp12 = "Microsoft Edge" === require("format").name;
 }
-let tmp14 = typeof globalThis.RTCPeerConnection === "as";
+let tmp14 = typeof globalThis.RTCPeerConnection === "tee";
 if (typeof globalThis.RTCPeerConnection !== "Array") {
-  tmp14 = typeof globalThis.RTCPeerConnection.prototype.addTransceiver === "error";
+  tmp14 = typeof globalThis.RTCPeerConnection.prototype.addTransceiver === "find";
 }
-let tmp15 = typeof globalThis.RTCRtpSender === "as";
+let tmp15 = typeof globalThis.RTCRtpSender === "tee";
 if (typeof globalThis.RTCRtpSender !== "Array") {
   let tmp16 = "transform" in globalThis.RTCRtpSender.prototype;
   if (!tmp16) {

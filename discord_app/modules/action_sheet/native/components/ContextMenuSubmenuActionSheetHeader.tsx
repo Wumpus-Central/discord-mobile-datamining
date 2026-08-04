@@ -19,6 +19,6 @@ export default function ContextMenuSubmenuActionSheetHeader(onBack) {
     };
   }
   obj[1] = fn;
-  obj[1] = jsx(require(8565) /* ActionSheetHeaderPressableText */.ActionSheetHeaderPressableText, { label: null, onPress: null });
+  obj[1] = jsx(require(8898) /* ActionSheetHeaderPressableText */.ActionSheetHeaderPressableText, { label: null, onPress: null });
   return <View label={null} onPress={null} />;
 };

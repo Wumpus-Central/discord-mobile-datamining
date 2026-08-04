@@ -11,9 +11,9 @@ function ReferralProgramCoachmarkImg() {
   const tmp = callback2();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
   obj = { source: null, style: null };
-  obj[0] = importDefault(15706);
+  obj[0] = importDefault(15737);
   obj[1] = tmp.coachmarkImage;
-  obj[1] = jsx(importDefault(5207), { source: null, style: null });
+  obj[1] = jsx(importDefault(5236), { source: null, style: null });
   return <View source={null} style={null} />;
 }
 let closure_9 = createCacheKey.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 200, height: 112 } });
@@ -23,13 +23,13 @@ export const useReferralProgramCoachmark = function useReferralProgramCoachmark(
   disabled = disabled.disabled;
   let _require;
   let c1;
-  let obj = _require(4071);
+  let obj = _require(4101);
   let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1358).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
   if (!result) {
     result = disabled;
   }
-  const isEligibleSenderForReferralProgram = _require(7960).useIsEligibleSenderForReferralProgram(result);
-  _require(5921);
+  const isEligibleSenderForReferralProgram = _require(7972).useIsEligibleSenderForReferralProgram(result);
+  _require(5931);
   if (isEligibleSenderForReferralProgram) {
     if (!disabled) {
       let items = [tmp(1358).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK];

@@ -18,10 +18,10 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
   let obj = require(589) /* initialize */;
   const items = [ensureGuildLoaded, createRTCConnection];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
-  const hasPipParticipant = require(10721) /* usePipVideoOrStream */.useHasPipParticipant({ isActivityViewFocused: false });
-  const obj2 = require(10721) /* usePipVideoOrStream */;
-  const isModalOpen = require(4106) /* navigationToRootTabHelper */.useIsModalOpen();
-  require(10811) /* isVoicePanelEnabled */;
+  const hasPipParticipant = require(10571) /* usePipVideoOrStream */.useHasPipParticipant({ isActivityViewFocused: false });
+  const obj2 = require(10571) /* usePipVideoOrStream */;
+  const isModalOpen = require(4136) /* navigationToRootTabHelper */.useIsModalOpen();
+  require(10663) /* isVoicePanelEnabled */;
   let tmp7 = null;
   if (null != stateFromStores) {
     tmp7 = null;
@@ -32,7 +32,7 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
         if (!tmp6) {
           obj = { channel: null };
           obj[0] = stateFromStores;
-          tmp7 = jsx(importDefault(15823), { channel: null });
+          tmp7 = jsx(importDefault(15854), { channel: null });
         }
       }
     }
@@ -57,7 +57,7 @@ export const useAppKeyCommands = function useAppKeyCommands() {
     const items = [obj];
     return items;
   }, []);
-  const keyCommands = require(13709) /* KeyCommandsView */.useKeyCommands(memo);
+  const keyCommands = require(13743) /* KeyCommandsView */.useKeyCommands(memo);
 };
 export const useScreenReaderEnabled = function useScreenReaderEnabled() {
   const effect = React.useEffect(() => {

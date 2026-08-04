@@ -31,12 +31,12 @@ export default function AcceptRequestConfirmationModal(onConfirm) {
   obj = { variant: "heading-lg/bold", color: "text-strong", style: tmp.text, children: null };
   const intl3 = onConfirm(1236).intl;
   obj[3] = intl3.string(onConfirm(1236).t.eJzSDT);
-  const items = [callback(onConfirm(4251).Text, obj), ];
+  const items = [callback(onConfirm(4281).Text, obj), ];
   const obj1 = { variant: "text-md/medium", color: "text-subtle", style: tmp.text, children: null };
   const intl4 = onConfirm(1236).intl;
   obj1[3] = intl4.string(onConfirm(1236).t.GB4jUw);
-  items[1] = callback(onConfirm(4251).Text, obj1);
+  items[1] = callback(onConfirm(4281).Text, obj1);
   obj[1] = items;
   obj[4] = callback2(View, obj);
-  return callback(importDefault(4684), obj);
+  return callback(importDefault(4713), obj);
 };

@@ -213,7 +213,7 @@ export const trackGuildNotificationSettingsUpdate = function trackGuildNotificat
   }
   obj.guild_message_notification_settings_old = prop4;
   obj.is_opt_in_only_change = 0 === removeFlagsResult;
-  importDefault(4450).trackWithMetadata(constants.NOTIFICATION_SETTINGS_UPDATED, obj);
+  importDefault(4479).trackWithMetadata(constants.NOTIFICATION_SETTINGS_UPDATED, obj);
 };
 export const muteConfigToTimestamp = function muteConfigToTimestamp(muteConfig) {
   let time = null;
@@ -369,7 +369,7 @@ export const trackChannelNotificationSettingsUpdate = function trackChannelNotif
   obj.is_opt_in_only_change = 0 === removeFlagsResult;
   obj.last_message_type = type;
   obj.application_id = applicationId;
-  importDefault(4450).trackWithMetadata(constants.NOTIFICATION_SETTINGS_UPDATED, obj);
+  importDefault(4479).trackWithMetadata(constants.NOTIFICATION_SETTINGS_UPDATED, obj);
 };
 export const getCurrentGuildSettings = function getCurrentGuildSettings(guildId) {
   let obj = store2;

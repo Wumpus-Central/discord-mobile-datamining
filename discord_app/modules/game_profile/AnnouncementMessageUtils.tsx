@@ -240,7 +240,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
   });
 };
 export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
-  let result = require(8121) /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
+  let result = require(8133) /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
   if (result == null) {
     const intl = tmp(1236).intl;
     result = intl.string(tmp(1236).t["e+J3JZ"]);

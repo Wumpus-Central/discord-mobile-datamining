@@ -10,7 +10,7 @@ function IdentityApplicationRow(arg0) {
   let applicationId;
   let onPress;
   ({ applicationId, onPress } = arg0);
-  let obj = require(10162) /* request */;
+  let obj = require(10950) /* request */;
   const getOrFetchApplicationBatched = obj.useGetOrFetchApplicationBatched(applicationId);
   if (null == getOrFetchApplicationBatched) {
     return null;
@@ -32,7 +32,7 @@ function IdentityApplicationRow(arg0) {
     }
     obj[2] = description;
     obj[3] = onPress;
-    return closure_6(tmp(5286).TableRow, obj);
+    return closure_6(tmp(5315).TableRow, obj);
   }
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -48,7 +48,7 @@ export default function SelectConnectionActionSheet(arg0) {
   let require;
   ({ addConnection: require, excludedConnections: importDefault, excludedApplications: dependencyMap, integrations, onCompleteApplication: _slicedToArray, gameApplicationIds, onCompleteIdentityApplication } = arg0);
   let closure_5;
-  closure_5 = importDefault(4191)();
+  closure_5 = importDefault(4221)();
   let obj = { title: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.Sm0YG7);
@@ -74,7 +74,7 @@ export default function SelectConnectionActionSheet(arg0) {
       return tmp2;
     });
   }
-  let tmp3Result = tmp3(6859);
+  let tmp3Result = tmp3(6871);
   const platforms = tmp3Result.usePlatforms();
   const found1 = platforms.filter((type) => !set.has(type.type));
   let mapped1;
@@ -154,7 +154,7 @@ export default function SelectConnectionActionSheet(arg0) {
     const intl4 = tmp3(1236).intl;
     items.push(intl4.string(tmp3(1236).t.y3ZnnU));
   }
-  tmp3Result = tmp3(8535);
+  tmp3Result = tmp3(8878);
   obj = { pageWidth: 0, defaultIndex: first, onSetActiveIndex: tmp5[1], items: items.map((id) => ({ id, label: id, page: null })) };
   const segmentedControlState = tmp3Result.useSegmentedControlState(obj);
   if (1 === first) {
@@ -168,12 +168,12 @@ export default function SelectConnectionActionSheet(arg0) {
       tmp15 = mapped2;
     }
   }
-  obj = { scrollable: true, header: callback2(require(5308) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), startExpanded: true, children: null };
+  obj = { scrollable: true, header: callback2(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), startExpanded: true, children: null };
   if (num > 0) {
     const obj1 = { children: null };
     const obj2 = { state: null };
     obj2[0] = segmentedControlState;
-    obj1[0] = tmp2(tmp3(8941).SegmentedControl, obj2);
+    obj1[0] = tmp2(tmp3(9063).SegmentedControl, obj2);
     let tmp2Result = tmp2(closure_5, obj1);
   } else {
     tmp2Result = null;
@@ -181,9 +181,9 @@ export default function SelectConnectionActionSheet(arg0) {
   const items1 = [tmp2Result, ];
   const obj3 = { children: null };
   const obj4 = { bottom: true, children: null };
-  obj4[1] = callback2(require(5620) /* TableRowGroupTitle */.TableRowGroup, { hasIcons: true, children: tmp15 });
-  obj3[0] = callback2(require(5243) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj4);
-  items1[1] = callback2(require(5311) /* BottomSheetModal */.BottomSheetScrollView, obj3);
+  obj4[1] = callback2(require(5649) /* TableRowGroupTitle */.TableRowGroup, { hasIcons: true, children: tmp15 });
+  obj3[0] = callback2(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj4);
+  items1[1] = callback2(require(5340) /* BottomSheetModal */.BottomSheetScrollView, obj3);
   obj[3] = items1;
-  return closure_7(require(5617) /* ActionSheet */.ActionSheet, obj);
+  return closure_7(require(5646) /* ActionSheet */.ActionSheet, obj);
 };

@@ -6,7 +6,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/captcha/tooling/native/OpenCaptchaTestModal.tsx");
 
 export const showCaptchaTestModal = function showCaptchaTestModal() {
-  importDefault(4461).pushLazy(callback(function*() {
+  importDefault(4490).pushLazy(callback(function*() {
     if (paths === 2) {
       paths = 3;
       HermesBuiltin.throwTypeError();

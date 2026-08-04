@@ -29,7 +29,7 @@ export default function EndStageActionSheet(channel) {
   const obj1 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = channel(1236).intl;
   obj1[3] = intl2.string(channel(1236).t.mT7jwN);
-  items[1] = callback(channel(4251).Text, obj1);
+  items[1] = callback(channel(4281).Text, obj1);
   let obj2 = { style: tmp.cancelButton, children: null };
   const obj3 = { variant: "secondary", text: null, onPress: null };
   const intl3 = channel(1236).intl;
@@ -39,7 +39,7 @@ export default function EndStageActionSheet(channel) {
     const obj = outer1_1(outer1_2[7]);
     channel(outer1_2[8]).handleDisconnect(channel);
   };
-  obj2[1] = callback(channel(4666).Button, obj3);
+  obj2[1] = callback(channel(4695).Button, obj3);
   items[2] = callback(View, obj2);
   const obj4 = { style: tmp.confirmButton, children: null };
   const obj5 = { variant: "destructive", text: null, onPress: null };
@@ -52,9 +52,9 @@ export default function EndStageActionSheet(channel) {
     const obj2 = outer1_1(outer1_2[7]);
     channel(outer1_2[8]).handleDisconnect(channel);
   };
-  obj4[1] = callback(channel(4666).Button, obj5);
+  obj4[1] = callback(channel(4695).Button, obj5);
   items[3] = callback(View, obj4);
   obj[1] = items;
   obj[0] = callback2(View, obj);
-  return callback(importDefault(7763), obj);
+  return callback(importDefault(7775), obj);
 };

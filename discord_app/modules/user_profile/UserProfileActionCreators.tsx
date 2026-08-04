@@ -182,7 +182,7 @@ export const notifyUnsavedUserProfileChangesInModal = function notifyUnsavedUser
   ComponentDispatch.dispatch(constants.SHAKE_PROFILE_MODAL);
   const ComponentDispatch2 = require(1231) /* ComponentDispatcher */.ComponentDispatch;
   ComponentDispatch2.dispatch(constants.EMPHASIZE_NOTICE);
-  const AccessibilityAnnouncer = require(4101) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const AccessibilityAnnouncer = require(4131) /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
   const intl = require(1236) /* getSystemLocale */.intl;
   const intl2 = require(1236) /* getSystemLocale */.intl;
   AccessibilityAnnouncer.announce("" + intl.string(require(1236) /* getSystemLocale */.t.GP7JLE) + " " + intl2.string(require(1236) /* getSystemLocale */.t.gKoO1D));

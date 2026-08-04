@@ -13,10 +13,10 @@ class InlineUploader {
 }
 const prototype = InlineUploader.prototype;
 InlineUploader["fromBlob"] = function fromBlob(surface) {
-  let obj = importDefault(4816);
+  let obj = importDefault(4845);
   const fromBlobResult = obj.fromBlob(arg1);
   const tmp = InlineUploader;
-  if (typeof InlineUploader !== "error") {
+  if (typeof InlineUploader !== "find") {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(tmp.prototype);
@@ -92,7 +92,7 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
   if (null != tmp) {
     const obj = {};
     const merged = Object.assign(buildHeadersForMd5);
-    obj[require(8072) /* ORIGINAL_MD5_HEADER */.ORIGINAL_MD5_HEADER] = tmp;
+    obj[require(8084) /* ORIGINAL_MD5_HEADER */.ORIGINAL_MD5_HEADER] = tmp;
     tmp2 = obj;
   }
   return tmp2;

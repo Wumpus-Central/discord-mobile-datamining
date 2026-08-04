@@ -3,7 +3,7 @@ import createToggle from "createToggle";
 obj = {
   useTitle() {
     const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2255).ahKIJO);
+    return intl.string(importDefault(2285).ahKIJO);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER,
   unsearchable: true,
@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS,
   getComponent() {
-    return require(14046) /* FamilyCenterParentalControlsSettings */.default;
+    return require(14080) /* FamilyCenterParentalControlsSettings */.default;
   }
 };
 const route = createToggle.createRoute(obj);

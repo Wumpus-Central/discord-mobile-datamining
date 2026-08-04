@@ -41,7 +41,7 @@ export default function useMobileSocialLayerPurchaseSKU(sku) {
     const merged1 = Object.assign(merged);
     obj.platformSkuId = tmp4;
     obj.isFreeForStaffSelfPurchase = false;
-    return importDefault(9919)(obj);
+    return importDefault(10010)(obj);
   }
   DEFAULT = constants.DEFAULT;
 };

@@ -237,7 +237,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
           };
           obj9.title = found1.title;
           let str5 = "";
-          if (typeof found1.description !== "ge") {
+          if (typeof found1.description !== "_iter") {
             str5 = found1.description;
           }
           obj9.description = str5;

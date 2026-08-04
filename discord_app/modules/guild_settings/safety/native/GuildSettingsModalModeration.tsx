@@ -23,7 +23,7 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
   if (DEFAULT2 == null) {
     DEFAULT2 = constants3.DEFAULT;
   }
-  let obj = require(7834) /* useUserIsTeen */;
+  let obj = require(7846) /* useUserIsTeen */;
   let tmp7 = DEFAULT === constants3.AGE_RESTRICTED;
   const userIsTeen = obj.useUserIsTeen();
   if (tmp7) {
@@ -44,8 +44,8 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
     obj1[1] = DEFAULT2 === tmp6.AGE_RESTRICTED;
     obj1[2] = tmp8;
     obj1[3] = tmp7;
-    obj[3] = callback(tmp3(5621).TableSwitchRow, obj1);
-    tmp9 = callback(tmp3(5620).TableRowGroup, obj, "filter-section");
+    obj[3] = callback(tmp3(5650).TableSwitchRow, obj1);
+    tmp9 = callback(tmp3(5649).TableRowGroup, obj, "filter-section");
     const obj4 = importDefault(1945);
   }
   return tmp9;
@@ -117,7 +117,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(13954).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(13988).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj[5] = verificationLevelOptions.map((arg0) => {
     let color;
     let desc;
@@ -146,7 +146,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     obj[3] = tmp5;
     return outer1_10(self(outer1_2[18]).TableRadioRow, obj, "level-" + value);
   });
-  return callback(self(7783).TableRadioGroup, obj, "level-section");
+  return callback(self(7795).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
@@ -164,7 +164,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
   };
   const obj3 = importDefault(1945);
   const features = guild.features;
-  const contentFilterOptions = self(13954).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(13988).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj[5] = contentFilterOptions.map((value) => {
     let desc;
     let disabled;
@@ -180,7 +180,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     obj[3] = tmp2;
     return outer1_10(self(outer1_2[18]).TableRadioRow, obj, "filter-" + value);
   });
-  return callback(self(7783).TableRadioGroup, obj, "filter-section");
+  return callback(self(7795).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   let guild;
@@ -202,24 +202,24 @@ prototype["render"] = function render() {
   const obj1 = { children: null };
   items1[2] = canManageGuild;
   obj[2] = items1;
-  obj[1] = closure_11(require(4664) /* Stack */.Stack, obj);
-  const items2 = [closure_10(require(7765) /* Form */.Form, obj), closure_10(require(5567) /* NavScrim */.NavScrim, {})];
+  obj[1] = closure_11(require(4693) /* Stack */.Stack, obj);
+  const items2 = [closure_10(require(7777) /* Form */.Form, obj), closure_10(require(5596) /* NavScrim */.NavScrim, {})];
   obj1[0] = items2;
   return closure_11(closure_12, obj1);
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
   if (this.props.hasChanges) {
-    importDefault(8613).cancelChanges(tmp.props.guild.id);
-    const obj = importDefault(8613);
+    importDefault(8943).cancelChanges(tmp.props.guild.id);
+    const obj = importDefault(8943);
   }
 };
 prototype["handleVerificationLevelChange"] = function handleVerificationLevelChange(verificationLevel) {
-  let obj = importDefault(8613);
+  let obj = importDefault(8943);
   obj = { verificationLevel };
   obj.updateGuild(obj);
 };
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
-  let obj = importDefault(8613);
+  let obj = importDefault(8943);
   obj = { explicitContentFilter };
   obj.updateGuild(obj);
 };

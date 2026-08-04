@@ -29,7 +29,7 @@ let items = [
     },
     id: "edit-user-profile",
     renderPage(autoFocusElement) {
-      return callback(importDefault(13770), { autoFocusElement: autoFocusElement.autoFocusElement });
+      return callback(importDefault(13804), { autoFocusElement: autoFocusElement.autoFocusElement });
     },
     subSection: ProfileCustomizationSubsection.USER_PROFILE
   },
@@ -40,7 +40,7 @@ let items = [
     },
     id: "edit-user-profiles-guilds",
     renderPage() {
-      return callback(importDefault(13826), {});
+      return callback(importDefault(13860), {});
     },
     subSection: ProfileCustomizationSubsection.GUILD
   }
@@ -238,7 +238,7 @@ let obj = {
   },
   id: "edit-user-profile",
   renderPage(autoFocusElement) {
-    return callback(importDefault(13770), { autoFocusElement: autoFocusElement.autoFocusElement });
+    return callback(importDefault(13804), { autoFocusElement: autoFocusElement.autoFocusElement });
   },
   subSection: ProfileCustomizationSubsection.USER_PROFILE
 };

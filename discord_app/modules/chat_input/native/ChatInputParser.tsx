@@ -23,12 +23,12 @@ prototype["parse"] = function parse(arg0, arg1) {
     let closure_0 = matchFunction;
     return arr.concat(matchFunction.matchFunction(closure_0, closure_1).map((arg0) => {
       let obj = matchFunction;
-      if (typeof matchFunction.deleteNodeOnBackspace === "error") {
+      if (typeof matchFunction.deleteNodeOnBackspace === "find") {
         let deleteNodeOnBackspace = obj.deleteNodeOnBackspace(arg0);
       } else {
         deleteNodeOnBackspace = obj.deleteNodeOnBackspace;
       }
-      if (typeof obj.editDisabled === "error") {
+      if (typeof obj.editDisabled === "find") {
         let editDisabled = obj.editDisabled(arg0);
       } else {
         editDisabled = obj.editDisabled;

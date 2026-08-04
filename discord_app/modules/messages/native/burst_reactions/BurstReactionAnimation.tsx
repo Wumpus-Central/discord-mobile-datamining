@@ -20,7 +20,7 @@ export default function BurstReactionAnimation(arg0) {
     withFadeOut = true;
   }
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = require(7151) /* _generateAnimationSource */;
+  let obj = require(7163) /* _generateAnimationSource */;
   const burstReactionAnimationSource = obj.useBurstReactionAnimationSource({ emoji, messageId, channelId, isFullscreen });
   require(589) /* initialize */;
   [][0] = maybeApplyNoTextColorForLightCustomTheme;
@@ -44,7 +44,7 @@ export default function BurstReactionAnimation(arg0) {
     const merged1 = Object.assign(merged);
     const merged2 = Object.assign(obj);
     obj1.source = burstReactionAnimationSource;
-    return jsx(importDefault(withFadeOut ? 7194 : 5572), { style: null, loop: false, speed: null });
+    return jsx(importDefault(withFadeOut ? 7206 : 5601), { style: null, loop: false, speed: null });
   }
   tmp2 = callback();
 };

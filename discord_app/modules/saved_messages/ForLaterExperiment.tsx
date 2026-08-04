@@ -3,11 +3,11 @@ import ApexExperiment from "ApexExperiment";
 import ApexExperiment from "ApexExperiment";
 
 let c3;
-let obj1;
-({ SAVED_BOOKMARKS_MAX: obj1, SAVED_REMINDERS_MAX: c3 } = SAVED_BOOKMARKS_MAX);
+let c4;
+({ SAVED_BOOKMARKS_MAX: c3, SAVED_REMINDERS_MAX: c4 } = SAVED_BOOKMARKS_MAX);
 let obj = { 1: null, 2: { enabled: true } };
 obj[2] = { enabled: true };
-let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-03-message-bookmarks", kind: "user", defaultConfig: { enabled: false }, variations: obj });
+let closure_5 = ApexExperiment.createApexExperiment({ name: "2026-03-message-bookmarks", kind: "user", defaultConfig: { enabled: false }, variations: obj });
 class ForLaterFreemiumConfig {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -19,7 +19,7 @@ class ForLaterFreemiumConfig {
   }
 }
 obj = { name: "2026-07-message-bookmarks-v2", kind: "user", defaultConfig: null, variations: null };
-obj1 = Object.create(ForLaterFreemiumConfig.prototype);
+const obj1 = Object.create(ForLaterFreemiumConfig.prototype);
 require("module_38")(true, "Config is missing bookmark limit");
 require("module_38")(true, "Config is missing reminder limit");
 obj1.enabled = false;
@@ -30,7 +30,7 @@ const obj2 = {
   1: null,
   2: (arg0) => {
     const parsed = JSON.parse(arg0);
-    if (typeof ForLaterFreemiumConfig !== "error") {
+    if (typeof ForLaterFreemiumConfig !== "find") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(ForLaterFreemiumConfig.prototype);
@@ -43,7 +43,7 @@ const obj2 = {
 };
 obj2[2] = (arg0) => {
   const parsed = JSON.parse(arg0);
-  if (typeof ForLaterFreemiumConfig !== "error") {
+  if (typeof ForLaterFreemiumConfig !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(ForLaterFreemiumConfig.prototype);
@@ -54,7 +54,7 @@ obj2[2] = (arg0) => {
   return obj;
 };
 obj[3] = obj2;
-let closure_6 = ApexExperiment.createApexExperiment(obj);
+let closure_7 = ApexExperiment.createApexExperiment(obj);
 const result = require("module_38").fileFinishedImporting("modules/saved_messages/ForLaterExperiment.tsx");
 
 export const useIsForLaterExperimentOn = function useIsForLaterExperimentOn(LongPressMessageActionSheet) {
@@ -86,7 +86,7 @@ export const useHasForLaterAccess = function useHasForLaterAccess(ForLaterOpenAc
   if (!enabled) {
     let enabled1 = store.useConfig(obj).enabled;
     if (enabled1) {
-      enabled1 = importDefault(9716)();
+      enabled1 = importDefault(8187)();
     }
     enabled = enabled1;
   }
@@ -99,7 +99,7 @@ export const hasForLaterAccess = function hasForLaterAccess(addOrUpdateSavedMess
   if (!enabled) {
     let enabled1 = store.getConfig(obj).enabled;
     if (enabled1) {
-      enabled1 = importDefault(9716)();
+      enabled1 = importDefault(8187)();
     }
     enabled = enabled1;
   }
@@ -108,13 +108,41 @@ export const hasForLaterAccess = function hasForLaterAccess(addOrUpdateSavedMess
 export const getForLaterLimit = function getForLaterLimit(addOrUpdateSavedMessage, arg1) {
   let obj = { location: addOrUpdateSavedMessage };
   const config = store2.getConfig(obj);
+  obj = { location: addOrUpdateSavedMessage };
+  const tmp2 = importDefault(8187)();
   if (!config.enabled) {
-    obj = { location: null };
-    obj[0] = addOrUpdateSavedMessage;
     let num = 0;
     if (store.getConfig(obj).enabled) {
       num = 0;
     }
     return num;
   }
+};
+export const useForLaterLimit = function useForLaterLimit(ForLaterScreen, arg1) {
+  let obj = { location: ForLaterScreen };
+  const config = store2.useConfig(obj);
+  obj = { location: ForLaterScreen };
+  const config1 = store.useConfig(obj);
+  const hasForLaterPremiumType = require(8187) /* hasForLaterPremiumType */.useHasForLaterPremiumType();
+  if (!config.enabled) {
+    let num = 0;
+    if (tmp4) {
+      num = 0;
+    }
+    return num;
+  }
+};
+export const isForLaterLimitUpgradable = function isForLaterLimitUpgradable(addOrUpdateSavedMessage) {
+  let enabled = store2.getConfig({ location: addOrUpdateSavedMessage }).enabled;
+  if (enabled) {
+    enabled = !importDefault(8187)();
+  }
+  return enabled;
+};
+export const useIsForLaterLimitUpgradable = function useIsForLaterLimitUpgradable(ForLaterScreen) {
+  let enabled = store2.useConfig({ location: ForLaterScreen }).enabled;
+  if (enabled) {
+    enabled = !obj2.useHasForLaterPremiumType();
+  }
+  return enabled;
 };

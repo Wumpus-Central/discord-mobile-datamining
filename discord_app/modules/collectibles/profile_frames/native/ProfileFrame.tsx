@@ -192,8 +192,8 @@ export default function ProfileFrame(arg0) {
     let obj = { override: null };
     obj[0] = tmp;
     const merged = Object.assign(arg0);
-    let tmp7 = jsx(importDefault(8435), { override: null });
-    const tmp11 = importDefault(8435);
+    let tmp7 = jsx(importDefault(8743), { override: null });
+    const tmp11 = importDefault(8743);
   } else {
     obj = {};
     const merged1 = Object.assign(arg0);

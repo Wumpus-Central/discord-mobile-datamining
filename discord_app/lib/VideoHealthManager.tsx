@@ -72,14 +72,14 @@ prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
               const streamDisabledUsers2 = self.streamDisabledUsers;
               streamDisabledUsers2.add(arg0);
               self.currentVideoAutoToggleState[arg0] = VideoToggleState.DISABLED;
-              importDefault(12963)(arg0, VideoToggleState.DISABLED);
+              importDefault(12997)(arg0, VideoToggleState.DISABLED);
               const result = self.startReenableBackoffTimer(arg0);
             } else if (self.currentVideoAutoToggleState[arg0] === VideoToggleState.AUTO_PROBING) {
               self.currentVideoAutoToggleState[arg0] = tmp7.AUTO_ENABLED;
               const logger2 = self.logger;
               const _HermesInternal2 = HermesInternal;
               logger2.info("acceptable conditions reached, will reset and send a AUTO_ENABLED for user " + arg0);
-              importDefault(12963)(arg0, tmp7.AUTO_ENABLED);
+              importDefault(12997)(arg0, tmp7.AUTO_ENABLED);
             }
             if (self.probingUserId === arg0) {
               self.probingUserId = undefined;
@@ -107,7 +107,7 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
     if (null !== lastBackoffTime) {
       num2 = 1;
       if (expBackoffFactor <= 16) {
-        let obj = _require(4331);
+        let obj = _require(4360);
         num2 = 1;
         if (self.elapsedSeconds(obj.now(), lastBackoffTime) <= 600) {
           num2 = expBackoffFactor * 2;
@@ -115,7 +115,7 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
       }
     }
     obj = { lastBackoffTime: null, expBackoffFactor: null };
-    obj[0] = _require(4331).now();
+    obj[0] = _require(4360).now();
     obj[1] = num2;
     self.retryBackoffCache[arg0] = obj;
     const result = num2 * self.backoffTimeSec;
@@ -127,7 +127,7 @@ prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0
     self.timeoutIdCache[arg0] = setTimeout(() => {
       self.queueReenable(closure_0);
     }, result1);
-    const obj3 = _require(4331);
+    const obj3 = _require(4360);
   }
 };
 prototype["queueReenable"] = function queueReenable(closure_0) {
@@ -161,13 +161,13 @@ prototype["reenableVideo"] = function reenableVideo(arr) {
   if (flag) {
     const logger = self.logger;
     const _HermesInternal = HermesInternal;
-    logger.info("reenableVideo called for user " + arr + " - time = " + require(4331) /* sleep */.now());
+    logger.info("reenableVideo called for user " + arr + " - time = " + require(4360) /* sleep */.now());
     const result = self.stateCleanupBeforeEnable(arr);
     self.currentVideoAutoToggleState[arr] = VideoToggleState.AUTO_PROBING;
     self.probingUserId = arr;
-    importDefault(12963)(arr, VideoToggleState.AUTO_PROBING);
+    importDefault(12997)(arr, VideoToggleState.AUTO_PROBING);
     flag = true;
-    const obj = require(4331) /* sleep */;
+    const obj = require(4360) /* sleep */;
   }
   return flag;
 };

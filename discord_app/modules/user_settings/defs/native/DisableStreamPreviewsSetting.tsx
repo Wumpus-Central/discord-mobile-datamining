@@ -11,7 +11,7 @@ const toggle = createToggle.createToggle({
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue() {
-    const DisableStreamPreviews = require(3928) /* explicitContentFromProto */.DisableStreamPreviews;
+    const DisableStreamPreviews = require(3958) /* explicitContentFromProto */.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
     if (flag == null) {
       flag = false;
@@ -31,7 +31,7 @@ const obj = {
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue() {
-    const DisableStreamPreviews = require(3928) /* explicitContentFromProto */.DisableStreamPreviews;
+    const DisableStreamPreviews = require(3958) /* explicitContentFromProto */.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
     if (flag == null) {
       flag = false;

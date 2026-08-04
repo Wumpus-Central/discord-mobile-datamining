@@ -98,7 +98,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = tmp8.attachmentId;
         if (null != attachmentId) {
-          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M1 7H0v2h1V7Z" };
+          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M16 7h-1v2h1V7ZM3 6H1v1h2V6ZM6 4H4v1h2V4ZM4 5H3v1h1V5Z" };
           obj[0] = tmp3;
           obj = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -109,7 +109,7 @@ function useMediaShareActions(source) {
         }
       } else {
         let obj1 = source(tmp[18]);
-        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M1 7H0v2h1V7Z" };
+        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M16 7h-1v2h1V7ZM3 6H1v1h2V6ZM6 4H4v1h2V4ZM4 5H3v1h1V5Z" };
         obj1[0] = tmp3;
         const obj2 = { onlyEmbedIndices: null };
         const items1 = [tmp8.mediaIndex];
@@ -230,11 +230,11 @@ export default function MediaShareActionSheet(source) {
   obj[1] = useMediaShareActions(obj).map((IconComponent) => {
     let obj = { icon: null, onPress: null, label: null };
     obj = { IconComponent: IconComponent.IconComponent };
-    obj[0] = callback2(callback(5619).ActionSheetRow.Icon, obj);
+    obj[0] = callback2(callback(5648).ActionSheetRow.Icon, obj);
     ({ action: obj[1], label: obj[2] } = IconComponent);
-    return callback2(callback(5619).ActionSheetRow, obj, arg1);
+    return callback2(callback(5648).ActionSheetRow, obj, arg1);
   });
-  obj[0] = jsx(require(5619) /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: null });
-  return jsx(require(5617) /* ActionSheet */.ActionSheet, { hasIcons: true, children: null });
+  obj[0] = jsx(require(5648) /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: null });
+  return jsx(require(5646) /* ActionSheet */.ActionSheet, { hasIcons: true, children: null });
 };
 export { useMediaShareActions };

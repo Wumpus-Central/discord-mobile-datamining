@@ -6,8 +6,8 @@ const result = require("NavigatorWithCaptchaHook").fileFinishedImporting("module
 
 export default function useAuthFlowBackHandler(arg0) {
   const _require = arg0;
-  const dependencyMap = React.useContext(_require(14942).TrackRegistrationContext);
-  _require(5215).useNavigatorBackPressHandler(() => {
+  const dependencyMap = React.useContext(_require(14976).TrackRegistrationContext);
+  _require(5244).useNavigatorBackPressHandler(() => {
     callback({ step: closure_0, actionType: outer1_3.VIEWED });
     return false;
   });

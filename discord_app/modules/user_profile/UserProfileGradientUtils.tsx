@@ -5,8 +5,8 @@ import apply from "apply";
 
 const require = arg1;
 const memoizeResult = apply.memoize((arg0) => {
-  let obj = require(4101) /* AccessibilityAnnouncer */;
-  obj = { base: "#ffffff", contrastRatio: require(4101) /* AccessibilityAnnouncer */.WCAGContrastRatios.HighContrastText };
+  let obj = require(4131) /* AccessibilityAnnouncer */;
+  obj = { base: "#ffffff", contrastRatio: require(4131) /* AccessibilityAnnouncer */.WCAGContrastRatios.HighContrastText };
   const contrastingColor = obj.getContrastingColor(arg0, obj);
   return require(688) /* int2hslRaw */.hex2int(contrastingColor);
 }, (arg0) => arg0);
@@ -68,7 +68,7 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
   if (null == overlay) {
     return 0;
   } else {
-    const parseStringResult = alpha(4100).parseString(overlay);
+    const parseStringResult = alpha(4130).parseString(overlay);
     if (null == parseStringResult) {
       return 0;
     } else {
@@ -82,7 +82,7 @@ export const calculateOverlayedColor = function calculateOverlayedColor(secondar
       const _HermesInternal = HermesInternal;
       return tmp(688).rgb2int("rgba(" + tmp8 + ", " + tmp9 + ", " + tmp10 + ")");
     }
-    const obj2 = alpha(4100);
+    const obj2 = alpha(4130);
   }
   int2rgbArrayResult = items1(688).int2rgbArray(secondaryColor);
 };

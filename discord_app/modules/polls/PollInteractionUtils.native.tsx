@@ -2,7 +2,7 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/polls/
 
 export const showVotesForAnswer = function showVotesForAnswer(initialAnswerId) {
   const message = initialAnswerId.message;
-  let obj = importDefault(4223);
+  let obj = importDefault(4253);
   obj = { channelId: message.channel_id, messageId: message.id, initialAnswerId: initialAnswerId.initialAnswerId };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(10115, dependencyMap.paths), "PollVotesActionSheet", obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(10199, dependencyMap.paths), "PollVotesActionSheet", obj);
 };

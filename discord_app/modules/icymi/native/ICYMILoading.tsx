@@ -12,7 +12,7 @@ function ICYMILoadingItem() {
   let subtitle;
   let title;
   const tmp = callback3();
-  const tmp2 = importDefault(11849)({ visible: true, animated: true });
+  const tmp2 = importDefault(11909)({ visible: true, animated: true });
   const memo = React.useMemo(() => ({ avatarTitle: Math.floor(10 * Math.random()), title: Math.floor(10 * Math.random()), subtitle: Math.floor(10 * Math.random()) }), []);
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
@@ -21,7 +21,7 @@ function ICYMILoadingItem() {
   const items = [, , ];
   ({ backgroundColor: arr[0], avatar: arr[1] } = tmp);
   items[2] = tmp2;
-  const items1 = [callback(importDefault(4116).View, { style: items }), ];
+  const items1 = [callback(importDefault(4146).View, { style: items }), ];
   const obj1 = { style: null };
   const items2 = [, , , ];
   ({ backgroundColor: arr3[0], avatarTitle: arr3[1] } = tmp);
@@ -31,7 +31,7 @@ function ICYMILoadingItem() {
   obj2[0] = "" + (result - Math.floor(result)) * 30 + 30 + "%";
   items2[3] = obj2;
   obj1[0] = items2;
-  items1[1] = callback(importDefault(4116).View, obj1);
+  items1[1] = callback(importDefault(4146).View, obj1);
   obj[1] = items1;
   const items3 = [callback2(View, obj), , , ];
   const obj3 = { style: null };
@@ -43,7 +43,7 @@ function ICYMILoadingItem() {
   obj4[0] = "" + (result1 - Math.floor(result1)) * 25 + 75 + "%";
   items4[3] = obj4;
   obj3[0] = items4;
-  items3[1] = callback(importDefault(4116).View, obj3);
+  items3[1] = callback(importDefault(4146).View, obj3);
   const obj5 = { style: null };
   const items5 = [, , , ];
   ({ backgroundColor: arr6[0], subtitle: arr6[1] } = tmp);
@@ -53,13 +53,13 @@ function ICYMILoadingItem() {
   obj6[0] = "" + (result2 - Math.floor(result2)) * 25 + 75 + "%";
   items5[3] = obj6;
   obj5[0] = items5;
-  items3[2] = callback(importDefault(4116).View, obj5);
+  items3[2] = callback(importDefault(4146).View, obj5);
   const items6 = [, , ];
   ({ backgroundColor: arr7[0], image: arr7[1] } = tmp);
   items6[2] = tmp2;
-  items3[3] = callback(importDefault(4116).View, { style: items6 });
+  items3[3] = callback(importDefault(4146).View, { style: items6 });
   obj[1] = items3;
-  const items7 = [callback2(View, obj), callback(require(15450) /* Separator */.Separator, {})];
+  const items7 = [callback2(View, obj), callback(require(15481) /* Separator */.Separator, {})];
   obj[0] = items7;
   return callback2(closure_7, obj);
 }

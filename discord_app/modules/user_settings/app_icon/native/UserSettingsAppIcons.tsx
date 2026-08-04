@@ -57,7 +57,7 @@ const memoResult = require("getSystemLocale").memo(() => {
                     if (v0 !== id) {
                       if (tmp27) {
                         if (!dependencyMap) {
-                          let obj4 = v0(8161);
+                          let obj4 = v0(8173);
                           const obj1 = { initialUpsellKey: null, imageSource: null };
                           obj1[0] = outer1_6.APP_ICONS;
                           obj1[1] = tmp28;
@@ -71,11 +71,11 @@ const memoResult = require("getSystemLocale").memo(() => {
                       dependencyMap = 1;
                       v0 = 1;
                       let obj2 = { value: null, done: false };
-                      obj2[0] = lib(7570).setAppIcon(id, premiumType);
+                      obj2[0] = lib(7582).setAppIcon(id, premiumType);
                       return obj2;
                     }
                   } else {
-                    obj2 = lib(7570);
+                    obj2 = lib(7582);
                     let premiumType1;
                     if (lib != null) {
                       premiumType1 = lib.premiumType;
@@ -83,7 +83,7 @@ const memoResult = require("getSystemLocale").memo(() => {
                     dependencyMap = 2;
                     v0 = 1;
                     const obj3 = { value: null, done: false };
-                    obj3[0] = obj2.setAppIcon(lib(7572).FreemiumAppIconIds.DEFAULT, premiumType1);
+                    obj3[0] = obj2.setAppIcon(lib(7584).FreemiumAppIconIds.DEFAULT, premiumType1);
                     return obj3;
                   }
                 }
@@ -129,12 +129,12 @@ const memoResult = require("getSystemLocale").memo(() => {
   let obj = stateFromStores(589);
   const items = [_onSelect];
   stateFromStores = obj.useStateFromStores(items, () => _onSelect.getCurrentUser());
-  let obj1 = stateFromStores(7570);
+  let obj1 = stateFromStores(7582);
   const importDefault = obj1.useCurrentAppIcon();
   let obj2 = stateFromStores(1897);
   const isPremiumResult = obj2.isPremium(stateFromStores);
   let dependencyMap = isPremiumResult;
-  const analyticsLocations = importDefault(5581)().analyticsLocations;
+  const analyticsLocations = importDefault(5610)().analyticsLocations;
   obj = { page: constants.APP_ICONS };
   obj = { children: null };
   obj1 = { accessibilityRole: "radiogroup", children: null };
@@ -150,9 +150,9 @@ const memoResult = require("getSystemLocale").memo(() => {
       return applyArgumentsResult;
     }
   };
-  obj1[1] = callback(importDefault(14574), obj2);
+  obj1[1] = callback(importDefault(14608), obj2);
   obj[0] = callback(obj, obj1);
-  const children = [callback(stateFromStores(7765).Form, obj), ];
+  const children = [callback(stateFromStores(7777).Form, obj), ];
   let tmp9Result = !isPremiumResult;
   if (!isPremiumResult) {
     let obj3 = { style: null, children: null };
@@ -165,9 +165,9 @@ const memoResult = require("getSystemLocale").memo(() => {
     };
     const intl = tmp2(1236).intl;
     obj4[1] = intl.string(tmp2(1236).t.M0rDSO);
-    obj3[1] = tmp9(importDefault(8742), obj4);
+    obj3[1] = tmp9(importDefault(9430), obj4);
     tmp9Result = tmp9(obj, obj3);
-    const tmp6Result = importDefault(8742);
+    const tmp6Result = importDefault(9430);
   }
   children[1] = tmp9Result;
   return closure_11(closure_10, { children });

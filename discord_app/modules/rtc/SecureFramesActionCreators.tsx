@@ -74,10 +74,10 @@ function _savePersistentCodesEnabled() {
             if (1 === tmp8) {
               c6 = 0;
               let dependencyMap = ensureGuildLoaded;
-              aPIError = new callback(4154).APIError(dependencyMap);
+              aPIError = new callback(4184).APIError(dependencyMap);
               obj1 = aPIError(709);
               obj1.dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: false });
-              obj2 = aPIError(4594);
+              obj2 = aPIError(4623);
               const obj3 = { title: null, body: null };
               const intl = callback(1236).intl;
               obj3[0] = intl.string(callback(1236).t.R0RpRX);
@@ -185,7 +185,7 @@ function _updatePersistentCodesEnabled() {
               })();
               dependencyMap = tmp19;
               if (null != tmp19) {
-                let obj2 = v0(9082);
+                let obj2 = v0(9135);
                 const intl = callback(1236).intl;
                 const string = intl.string;
                 const t = callback(1236).t;

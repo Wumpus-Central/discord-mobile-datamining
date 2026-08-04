@@ -23,7 +23,7 @@ function shouldHighlight(arg0, set) {
   } else if (isStopWord(tmp)) {
     return false;
   } else {
-    const snowballStemResult = require(15637) /* snowballStem */.snowballStem(tmp);
+    const snowballStemResult = require(15668) /* snowballStem */.snowballStem(tmp);
     if (flag) {
       const values = set.values();
       for (const item10025 of values) {
@@ -38,7 +38,7 @@ function shouldHighlight(arg0, set) {
     } else {
       return set.has(snowballStemResult);
     }
-    const obj = require(15637) /* snowballStem */;
+    const obj = require(15668) /* snowballStem */;
   }
 }
 function highlightAST(content, arg1, arg2) {
@@ -56,7 +56,7 @@ function highlightAST(content, arg1, arg2) {
       return arg0;
     });
   } else {
-    if (typeof content.content !== "ge") {
+    if (typeof content.content !== "_iter") {
       if ("codeBlock" !== content.type) {
         const items1 = [];
         const parts = content.content.split(/(\W+)/g);
@@ -110,7 +110,7 @@ export const analyze = function analyze(str) {
   const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);
-  return mapped1.reject(isStopWord).map(require(15637) /* snowballStem */.snowballStem).value();
+  return mapped1.reject(isStopWord).map(require(15668) /* snowballStem */.snowballStem).value();
 };
 export { shouldHighlight };
 export { highlightAST };

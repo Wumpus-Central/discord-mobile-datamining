@@ -61,7 +61,7 @@ export const useShopProductItems = function useShopProductItems(product) {
   let closure_0 = product;
   const items = [product];
   return React.useMemo(() => {
-    if (typeof outer1_3 !== "error") {
+    if (typeof outer1_3 !== "find") {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(outer1_3.prototype);

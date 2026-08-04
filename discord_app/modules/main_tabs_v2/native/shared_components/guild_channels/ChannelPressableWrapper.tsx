@@ -14,7 +14,7 @@ export const renderChannelPressableWrapper = function renderChannelPressableWrap
   if (flag === undefined) {
     flag = false;
   }
-  let obj = require(10438) /* getLayoutStyles */;
+  let obj = require(9711) /* getLayoutStyles */;
   const layout2 = obj.getLayoutStyles(layout, launchpad).layout;
   if (isThread) {
     let marginThread = layout2.marginThread;

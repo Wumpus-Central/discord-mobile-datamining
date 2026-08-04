@@ -25,7 +25,7 @@ export default function useUserProfileEditForm() {
     }
     return isSubmitting;
   });
-  const effect = React.useEffect(() => () => callback2(709).wait(callback(9408).resetAllPending), []);
+  const effect = React.useEffect(() => () => callback2(709).wait(callback(8321).resetAllPending), []);
   const items2 = [stateFromStores, pendingChanges];
   callback = React.useCallback(callback(function*() {
     if (bannerOriginalMd5 === 2) {
@@ -418,7 +418,7 @@ export default function useUserProfileEditForm() {
               if (outer1_1) {
                 c3 = 3;
               } else {
-                let obj2 = outer1_0(9408);
+                let obj2 = outer1_0(8321);
                 const obj1 = { avatarDecoration: null };
                 obj1[0] = outer1_0.pendingAvatarDecoration;
                 dependencyMap = 1;
@@ -438,7 +438,7 @@ export default function useUserProfileEditForm() {
               ok = ok.ok;
             }
             if (ok) {
-              obj = outer1_0(9408);
+              obj = outer1_0(8321);
               const result = obj.resetPendingAccountChanges();
             }
           }
@@ -452,7 +452,7 @@ export default function useUserProfileEditForm() {
         }
       }
     }), items3),
-    resetPending: pendingChanges(9408).resetAllPending
+    resetPending: pendingChanges(8321).resetAllPending
   };
   const merged = Object.assign(pendingChanges);
   const merged1 = Object.assign(tryItOutChanges);

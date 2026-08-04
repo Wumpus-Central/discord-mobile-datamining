@@ -24,7 +24,7 @@ export default {
     if (flag) {
       obj = { tab_opened: null };
       obj[0] = PENDING;
-      tmp5(15671)(obj);
+      tmp5(15702)(obj);
     }
   },
   setSection(section) {

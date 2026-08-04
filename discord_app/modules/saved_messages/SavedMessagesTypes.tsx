@@ -27,7 +27,7 @@ export const savedMessageDataToClient = function savedMessageDataToClient(save_d
 export const savedMessageCreateObjectToClient = function savedMessageCreateObjectToClient(body) {
   let messageRecord = null;
   if (null != body.message) {
-    let obj = require(4475) /* createMinimalMessageRecord */;
+    let obj = require(4504) /* createMinimalMessageRecord */;
     messageRecord = obj.createMessageRecord(body.message);
   }
   obj = { message: messageRecord, saveData: null };

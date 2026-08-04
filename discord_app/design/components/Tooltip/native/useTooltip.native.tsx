@@ -178,7 +178,7 @@ export const useTooltipHelper = function useTooltipHelper(ref, targetRef, callba
   const tmp = importDefault(1474)();
   let _slicedToArray = tmp;
   let v1 = context.useRef(tmp);
-  context = context.useContext(_require(5570).LayerContext);
+  context = context.useContext(_require(5599).LayerContext);
   let closure_6 = context.useRef(null);
   const items = [context, ref];
   const effect = context.useEffect(() => {

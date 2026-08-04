@@ -6,8 +6,8 @@ const require = arg1;
 const result = createCacheKey.experimental_createToken((theme) => {
   let str = "rgba(201,210,240,0.6)";
   if (obj.isThemeDark(theme.theme)) {
-    str = require(4099) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.WHITE, 0.1);
-    const tmpResult = require(4099) /* hexToRgba */;
+    str = require(4129) /* hexToRgba */.hexWithOpacity(importDefault(712).unsafe_rawColors.WHITE, 0.1);
+    const tmpResult = require(4129) /* hexToRgba */;
   }
   return str;
 });
@@ -22,17 +22,17 @@ export default function createCommonMessage(reactions) {
   const tmp = createCacheKey(theme);
   const obj = { id: message.id, channelId: message.channel_id, type: message.type, mentioned: message.mentioned, timestamp: null, timestampColor: null, dark: null, highlightColor: null, reactions: null, swipeToReplyIconUrl: null, swipeToEditIconUrl: null, accessibilityActions: null };
   channel = channel.getChannel(message.channel_id);
-  obj[4] = require(3925) /* resetCache */.calendarFormat(message.timestamp, true);
+  obj[4] = require(3955) /* resetCache */.calendarFormat(message.timestamp, true);
   obj[5] = tmp.timestampColor;
-  const obj2 = require(3925) /* resetCache */;
-  obj[6] = require(4101) /* AccessibilityAnnouncer */.isThemeDark(theme);
+  const obj2 = require(3955) /* resetCache */;
+  obj[6] = require(4131) /* AccessibilityAnnouncer */.isThemeDark(theme);
   obj[7] = tmp.highlightColor;
   obj[8] = reactions.reactions;
-  const obj3 = require(4101) /* AccessibilityAnnouncer */;
-  obj[9] = require(7853) /* frozen */.getAssetUriForEmbed(importDefault(7871));
-  const obj4 = require(7853) /* frozen */;
-  obj[10] = require(7853) /* frozen */.getAssetUriForEmbed(importDefault(7872));
-  const obj5 = require(7853) /* frozen */;
-  obj[11] = require(7873) /* MessageAccessibilityAction */.createMessageAccessibilityActions(message, channel);
+  const obj3 = require(4131) /* AccessibilityAnnouncer */;
+  obj[9] = require(7865) /* frozen */.getAssetUriForEmbed(importDefault(7883));
+  const obj4 = require(7865) /* frozen */;
+  obj[10] = require(7865) /* frozen */.getAssetUriForEmbed(importDefault(7884));
+  const obj5 = require(7865) /* frozen */;
+  obj[11] = require(7885) /* MessageAccessibilityAction */.createMessageAccessibilityActions(message, channel);
   return obj;
 };

@@ -38,23 +38,23 @@ const memoResult = importAllResult.memo(function MessagesItemEmptyState() {
       }
     }
   }, []);
-  obj[1] = importDefault(15049);
+  obj[1] = importDefault(15083);
   obj[2] = tmp.image;
   obj[1] = callback(closure_4, obj);
   const items = [callback(closure_5, obj), , , ];
   const obj1 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.title, maxFontSizeMultiplier: 2, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj1[4] = intl.string(require(1236) /* getSystemLocale */.t["8JZof8"]);
-  items[1] = callback(require(4251) /* Text */.Heading, obj1);
+  items[1] = callback(require(4281) /* Text */.Heading, obj1);
   const obj2 = { color: "text-default", variant: "text-md/medium", style: tmp.body, maxFontSizeMultiplier: 2, children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj2[4] = intl2.string(require(1236) /* getSystemLocale */.t["qm+H7x"]);
-  items[2] = callback(require(4251) /* Text */.Text, obj2);
+  items[2] = callback(require(4281) /* Text */.Text, obj2);
   const obj3 = { text: null, onPress: null, size: "lg" };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj3[0] = intl3.string(require(1236) /* getSystemLocale */.t.zIJnA6);
   obj3[1] = callback;
-  items[3] = callback(require(4666) /* Button */.Button, obj3);
+  items[3] = callback(require(4695) /* Button */.Button, obj3);
   obj[2] = items;
   return callback2(closure_5, obj);
 });

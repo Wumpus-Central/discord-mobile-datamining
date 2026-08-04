@@ -86,7 +86,7 @@ prototype["getPendingNote"] = function getPendingNote(arg0) {
 };
 prototype["getNotes"] = function getNotes(closure_1) {
   const roomObjects = this.getRoomObjects(closure_1);
-  let value = roomObjects.get(require(12897) /* GuildRoomObjectTypes */.GuildRoomObjectTypes.NOTE);
+  let value = roomObjects.get(require(12931) /* GuildRoomObjectTypes */.GuildRoomObjectTypes.NOTE);
   if (value == null) {
     value = closure_11;
   }

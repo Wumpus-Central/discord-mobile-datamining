@@ -14,12 +14,12 @@ const require = arg1;
 function isChattableChannel(guild_id) {
   let tmp = null != guild_id;
   if (tmp) {
-    const canChannelBeDefaultResult = require(5183) /* useCanChannelBeDefault */.canChannelBeDefault(guild_id.guild_id, guild_id.id);
+    const canChannelBeDefaultResult = require(5212) /* useCanChannelBeDefault */.canChannelBeDefault(guild_id.guild_id, guild_id.id);
     if (!canChannelBeDefaultResult) {
       tmp = canChannelBeDefaultResult;
     } else {
       const isForumChannelResult = guild_id.isForumChannel();
-      const canEveryoneRole = importAll(3888).canEveryoneRole;
+      const canEveryoneRole = importAll(3918).canEveryoneRole;
       let SEND_MESSAGES_IN_THREADS = closure_12;
       if (isForumChannelResult) {
         SEND_MESSAGES_IN_THREADS = SEND_MESSAGES_IN_THREADS.SEND_MESSAGES_IN_THREADS;
@@ -27,9 +27,9 @@ function isChattableChannel(guild_id) {
       } else {
         canEveryoneRoleResult = canEveryoneRole(SEND_MESSAGES_IN_THREADS.SEND_MESSAGES, guild_id);
       }
-      const tmp7 = importAll(3888);
+      const tmp7 = importAll(3918);
     }
-    const obj = require(5183) /* useCanChannelBeDefault */;
+    const obj = require(5212) /* useCanChannelBeDefault */;
   }
   return tmp;
 }
@@ -53,7 +53,7 @@ function getFlattenedDefaultChannels(closure_0, arr, arg2, fn) {
     let obj = channel;
     let tmp = require;
     let tmp2 = dependencyMap;
-    let obj2 = require(5183) /* useCanChannelBeDefault */;
+    let obj2 = require(5212) /* useCanChannelBeDefault */;
     if (obj2.canChannelBeDefault(channel.guild_id, channel.id)) {
       let tmp3 = channel;
       if (!arr.includes(obj.id)) {
@@ -281,12 +281,12 @@ export const isChattableChannelId = function isChattableChannelId(arg0) {
   channel = channel.getChannel(arg0);
   let tmp = null != channel;
   if (tmp) {
-    const canChannelBeDefaultResult = require(5183) /* useCanChannelBeDefault */.canChannelBeDefault(channel.guild_id, channel.id);
+    const canChannelBeDefaultResult = require(5212) /* useCanChannelBeDefault */.canChannelBeDefault(channel.guild_id, channel.id);
     if (!canChannelBeDefaultResult) {
       tmp = canChannelBeDefaultResult;
     } else {
       const isForumChannelResult = channel.isForumChannel();
-      const canEveryoneRole = importAll(3888).canEveryoneRole;
+      const canEveryoneRole = importAll(3918).canEveryoneRole;
       let SEND_MESSAGES_IN_THREADS = closure_12;
       if (isForumChannelResult) {
         SEND_MESSAGES_IN_THREADS = SEND_MESSAGES_IN_THREADS.SEND_MESSAGES_IN_THREADS;
@@ -294,9 +294,9 @@ export const isChattableChannelId = function isChattableChannelId(arg0) {
       } else {
         canEveryoneRoleResult = canEveryoneRole(SEND_MESSAGES_IN_THREADS.SEND_MESSAGES, channel);
       }
-      const tmp7 = importAll(3888);
+      const tmp7 = importAll(3918);
     }
-    const obj2 = require(5183) /* useCanChannelBeDefault */;
+    const obj2 = require(5212) /* useCanChannelBeDefault */;
   }
   return tmp;
 };

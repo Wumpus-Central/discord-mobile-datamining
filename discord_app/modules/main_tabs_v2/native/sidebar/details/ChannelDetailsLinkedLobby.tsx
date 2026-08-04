@@ -20,7 +20,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
   let divider = createCacheKey();
   let BPDKoA = require;
   let getArticleURL = dependencyMap;
-  let obj = require(5587) /* useGetOrFetchApplications */;
+  let obj = require(5616) /* useGetOrFetchApplications */;
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {
@@ -33,7 +33,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
     obj = { style: null, children: null };
     const items = [divider.container, channel.containerStyle];
     obj[0] = items;
-    let Text = BPDKoA(4251).Text;
+    let Text = BPDKoA(4281).Text;
     if (null != intl) {
       const intl3 = BPDKoA(1236).intl;
       obj = { applicationName: null };

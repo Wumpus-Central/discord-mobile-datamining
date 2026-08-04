@@ -93,13 +93,13 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
           } else {
             let closure_0 = tmp4;
             const obj1 = { questContentCTA: null, questContent: null, sourceQuestContent: null };
-            obj1[0] = outer1_0(7095).QuestContentCTA.ACCEPT_QUEST;
-            obj1[1] = outer1_0(5102).QuestContent.QUEST_BAR_MOBILE;
-            obj1[2] = outer1_0(5102).QuestContent.QUEST_BAR_MOBILE;
+            obj1[0] = outer1_0(7107).QuestContentCTA.ACCEPT_QUEST;
+            obj1[1] = outer1_0(5131).QuestContent.QUEST_BAR_MOBILE;
+            obj1[2] = outer1_0(5131).QuestContent.QUEST_BAR_MOBILE;
             v0 = 1;
             dependencyMap = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = outer1_0(9627).enrollInQuest(outer1_0.id, obj1);
+            obj2[0] = outer1_0(10376).enrollInQuest(outer1_0.id, obj1);
             return obj2;
           }
         } else {
@@ -122,10 +122,10 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
               if (v0) {
                 const obj5 = { questId: null, sourceQuestContent: null };
                 obj5[0] = outer1_0.id;
-                obj5[1] = outer1_0(5102).QuestContent.QUEST_BAR_MOBILE;
-                v0(14233)(obj5);
+                obj5[1] = outer1_0(5131).QuestContent.QUEST_BAR_MOBILE;
+                v0(14267)(obj5);
                 outer1_4(outer1_8.COLLAPSED);
-                const tmp12 = v0(14233);
+                const tmp12 = v0(14267);
               }
               dependencyMap = 3;
             }

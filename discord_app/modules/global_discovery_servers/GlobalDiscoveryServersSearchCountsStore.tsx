@@ -15,7 +15,7 @@ prototype["handleSearchCountSuccess"] = function handleSearchCountSuccess(catego
   this.isInitialFetchComplete = true;
 };
 prototype["handleSearchCountFailure"] = function handleSearchCountFailure(error) {
-  const aPIError = new require(4154) /* V6OrEarlierAPIError */.APIError(error);
+  const aPIError = new require(4184) /* V6OrEarlierAPIError */.APIError(error);
   this.error = aPIError;
   this.isFetching = false;
 };
@@ -56,7 +56,7 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     let obj = map;
     obj = map.get(query);
     if (obj == null) {
-      if (typeof SearchCountState !== "error") {
+      if (typeof SearchCountState !== "find") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);
@@ -70,7 +70,7 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     let obj = map;
     obj = map.get(query);
     if (obj == null) {
-      if (typeof SearchCountState !== "error") {
+      if (typeof SearchCountState !== "find") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);
@@ -84,7 +84,7 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     let obj = map;
     obj = map.get(query);
     if (obj == null) {
-      if (typeof SearchCountState !== "error") {
+      if (typeof SearchCountState !== "find") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SearchCountState.prototype);

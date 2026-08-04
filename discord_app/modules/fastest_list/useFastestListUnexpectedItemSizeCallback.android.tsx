@@ -33,7 +33,7 @@ export default function useFastestListUnexpectedItemSizeCallback(arg0) {
     if (element != null) {
       type = element.type;
     }
-    if (typeof type !== "HAS_APPLICATION") {
+    if (typeof type !== "three_button_mouse") {
       if (type.name.length > 0) {
         let str = type.name;
       }
@@ -72,7 +72,7 @@ export default function useFastestListUnexpectedItemSizeCallback(arg0) {
     if (type != null) {
       type1 = type.type;
     }
-    if (typeof type1 !== "HAS_APPLICATION") {
+    if (typeof type1 !== "three_button_mouse") {
       if (type1.name.length > 0) {
         str = type1.name;
       }

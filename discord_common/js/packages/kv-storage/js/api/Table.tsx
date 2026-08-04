@@ -67,7 +67,7 @@ class TableTransaction {
 }
 const prototype = TableTransaction.prototype;
 TableTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  if (typeof TableTransaction !== "error") {
+  if (typeof TableTransaction !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(TableTransaction.prototype);
@@ -466,7 +466,7 @@ prototype2["transaction"] = function transaction(arg0, arg1) {
     let prefix;
     let tableId;
     ({ prefix, tableId } = self);
-    if (typeof outer1_3 !== "error") {
+    if (typeof outer1_3 !== "find") {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(outer1_3.prototype);
@@ -533,7 +533,7 @@ prototype2["upgradeTransaction"] = function upgradeTransaction(transaction) {
   let prefix;
   let tableId;
   ({ prefix, tableId } = this);
-  if (typeof TableTransaction !== "error") {
+  if (typeof TableTransaction !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(TableTransaction.prototype);

@@ -6,7 +6,7 @@ const result = require("set").fileFinishedImporting("modules/game_server/experim
 
 export const GameServerPricingExperiment = experiment;
 export const useIsGameServerPricingEnabled = function useIsGameServerPricingEnabled(guildId, useGuildPowerupsChannelListPopout) {
-  let obj = require(4166) /* experiment */;
+  let obj = require(4196) /* experiment */;
   let enabled = obj.useGameServerEnabled(guildId, useGuildPowerupsChannelListPopout);
   obj = { guildId, location: useGuildPowerupsChannelListPopout };
   if (enabled) {

@@ -43,7 +43,7 @@ function PollEmoji(emoji) {
     }
   });
   obj = { style: emoji.style, src: stateFromStores, name: emoji.name, textEmojiStyle: tmp.emojiText, fastImageStyle: tmp.emojiImage };
-  return callback(importDefault(5272), obj);
+  return callback(importDefault(5301), obj);
 }
 function PollVotesHeader(message) {
   message = message.message;
@@ -328,25 +328,25 @@ function NoResults() {
   const tmp = callback3();
   let obj = { style: tmp.noResultsContainer, children: null };
   obj = { style: tmp.noResultsImage, source: null };
-  const tmp4 = importDefault(4191)();
+  const tmp4 = importDefault(4221)();
   const tmp5 = closure_15;
   const tmp6 = closure_7;
   const tmp8 = closure_6;
   if (obj3.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(10117);
+    let tmp2Result = tmp2(10201);
   } else {
-    tmp2Result = tmp2(10118);
+    tmp2Result = tmp2(10202);
   }
   obj[1] = tmp2Result;
   const items = [closure_14(tmp8, obj), , ];
   obj = { style: tmp.noResultsTitle, variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp9(1236).intl;
   obj[3] = intl.string(require(1236) /* getSystemLocale */.t.vhQK3o);
-  items[1] = closure_14(require(4251) /* Text */.Text, obj);
+  items[1] = closure_14(require(4281) /* Text */.Text, obj);
   const obj1 = { style: tmp.noResultsSubtitle, variant: "text-sm/semibold", color: "text-default", children: null };
   const intl2 = tmp9(1236).intl;
   obj1[3] = intl2.string(require(1236) /* getSystemLocale */.t.bwytdh);
-  items[2] = closure_14(require(4251) /* Text */.Text, obj1);
+  items[2] = closure_14(require(4281) /* Text */.Text, obj1);
   obj[1] = items;
   return tmp5(tmp6, obj);
 }
@@ -418,15 +418,15 @@ let closure_18 = importAllResult.forwardRef((answer, ref) => {
     obj1[0] = tmp.answerText;
     obj1[2] = str;
     obj1[4] = answer.poll_media.text;
-    tmp11 = callback(tmp3(4251).Text, obj1);
+    tmp11 = callback(tmp3(4281).Text, obj1);
   }
   items2[1] = tmp11;
   const obj2 = { variant: "text-sm/semibold", color: str, lineClamp: 1, children: null };
   const items3 = [" ", "(", num.toLocaleString(), ")"];
   obj2[3] = items3;
-  items2[2] = closure_15(answer(4251).Text, obj2);
+  items2[2] = closure_15(answer(4281).Text, obj2);
   obj[6] = items2;
-  return closure_15(answer(4783).PressableHighlight, obj);
+  return closure_15(answer(4812).PressableHighlight, obj);
 });
 let closure_20 = { code: "function PollVotesActionSheetTsx1(){const{opacity}=this.__closure;return{flex:1,opacity:opacity.get(),marginBottom:32};}" };
 let result = require("noop").fileFinishedImporting("modules/polls/native/PollVotesActionSheet.tsx");

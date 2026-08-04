@@ -15,7 +15,7 @@ let metroImportAll;
 const require = arg1;
 function EmojiItemLockedOverlay() {
   const tmp = callback2();
-  obj = { style: tmp.lockContainer, children: callback(require(4775) /* LockIcon */.LockIcon, obj) };
+  obj = { style: tmp.lockContainer, children: callback(require(4804) /* LockIcon */.LockIcon, obj) };
   obj = { style: tmp.lock };
   return callback(closure_3, obj);
 }
@@ -66,19 +66,19 @@ function EmojiItem(emoji) {
   if (null != emoji.id) {
     const obj1 = { resizeMode: "contain", style: null, placeholder: null, source: null, usesSmallCache: true };
     obj1[1] = tmp.image;
-    const tmp15 = importDefault(5207);
+    const tmp15 = importDefault(5236);
     if (tmp7Result.isThemeDark(theme.theme)) {
-      tmp8 = 5273;
+      tmp8 = 5302;
       let tmp14Result = tmp14(tmp8);
     } else {
-      tmp14Result = tmp14(5274);
+      tmp14Result = tmp14(5303);
     }
     obj1[2] = tmp14Result;
     const obj2 = { uri: null };
     obj2[0] = emojiURL;
     obj1[3] = obj2;
     callback(tmp15, obj1);
-    tmp7Result = tmp7(4101);
+    tmp7Result = tmp7(4131);
   } else {
     const obj3 = { allowFontScaling: false, style: null, children: null };
     obj3[1] = tmp.surrogates;
@@ -90,7 +90,7 @@ function EmojiItem(emoji) {
     }
     items1[1] = disabled;
     obj[5] = items1;
-    return closure_8(emoji(4783).PressableOpacity, obj);
+    return closure_8(emoji(4812).PressableOpacity, obj);
   }
 }
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
@@ -196,7 +196,7 @@ let closure_12 = importAllResult.memo((emojis) => {
     }
   };
   obj1 = { rowContentWidth: containerWidth, rowContentPaddingVertical: PADDING_VERTICAL, itemSize: IMAGE_SIZE, items, isSectionNitroLocked };
-  return callback(importDefault(9545), obj);
+  return callback(importDefault(8632), obj);
 });
 let closure_13 = importAllResult.memo((arg0) => {
   let animateEmoji;

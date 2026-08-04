@@ -17,7 +17,7 @@ export const logMessageSendFailure = function logMessageSendFailure(fileItems) {
   }
   const errorMessage = fileItems.errorMessage;
   const failureCode = fileItems.failureCode;
-  require(4450) /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.SEND_MESSAGE_FAILURE, { failure_code: failureCode, error_message: errorMessage, attachment_mimetypes: mapped });
+  require(4479) /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.SEND_MESSAGE_FAILURE, { failure_code: failureCode, error_message: errorMessage, attachment_mimetypes: mapped });
 };
 export const getAttachmentMimeTypes = function getAttachmentMimeTypes(items) {
   return items.map((mimeType) => {

@@ -4,7 +4,7 @@ export default function maybeCreateMessageRecordFromSnapshot(merge) {
   let tmp = arg1;
   if (arg1 == null) {
     let first;
-    if (importDefault(5798)(merge)) {
+    if (importDefault(5827)(merge)) {
       first = merge.messageSnapshots[0];
     }
     tmp = first;

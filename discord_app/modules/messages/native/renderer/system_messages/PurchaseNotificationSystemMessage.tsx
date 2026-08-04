@@ -8,8 +8,8 @@ export const createPurchaseNotificationSystemMessage = function createPurchaseNo
   }
   let guildProductPurchaseSystemMessage = null;
   if (type === require(1906) /* PermissionOverwriteType */.PurchaseNotificationType.GUILD_PRODUCT) {
-    guildProductPurchaseSystemMessage = require(7929) /* createGuildProductPurchaseSystemMessage */.createGuildProductPurchaseSystemMessage(message);
-    const tmp2Result = require(7929) /* createGuildProductPurchaseSystemMessage */;
+    guildProductPurchaseSystemMessage = require(7941) /* createGuildProductPurchaseSystemMessage */.createGuildProductPurchaseSystemMessage(message);
+    const tmp2Result = require(7941) /* createGuildProductPurchaseSystemMessage */;
   }
   return guildProductPurchaseSystemMessage;
 };

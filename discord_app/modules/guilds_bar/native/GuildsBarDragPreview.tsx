@@ -124,7 +124,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "padding", expanded: false, children: false };
+        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "paddingHorizontal", expanded: "getChannel", children: "r" };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
         obj[6] = items;
@@ -334,7 +334,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "text-sm/semibold", scrollPosition: "text-default", dragRegion: 2, windowSize: null, dropComplete: "eyebrow", listInsets: null };
+          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "HIDE_NATIVE_MENU", scrollPosition: null, dragRegion: "header", windowSize: "text-sm/medium", dropComplete: null, listInsets: "not_enough_content" };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;
           let node;
@@ -353,7 +353,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, require(3868) /* isIterable */.shallow);
+  }, require(3898) /* isIterable */.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

@@ -82,7 +82,7 @@ export default function CreationIntent(arg0) {
   let tmp = createCacheKey();
   let obj = require(1480) /* useNavigation */;
   dependencyMap = obj.useNavigation();
-  let obj1 = require(4652) /* SCREEN_READER_ENABLED_GETTER */;
+  let obj1 = require(4681) /* SCREEN_READER_ENABLED_GETTER */;
   isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   ref = isScreenReaderEnabled.useRef(null);
   const items = [isScreenReaderEnabled];
@@ -114,18 +114,18 @@ export default function CreationIntent(arg0) {
   let obj2 = { ref, style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj2[5] = intl.string(require(1236) /* getSystemLocale */.t.f3MvGS);
-  const items2 = [callback(require(4251) /* Text */.Text, obj2), ];
+  const items2 = [callback(require(4281) /* Text */.Text, obj2), ];
   let obj3 = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj3[3] = intl2.string(require(1236) /* getSystemLocale */.t.nOzc7w);
-  items2[1] = callback(require(4251) /* Text */.Text, obj3);
+  items2[1] = callback(require(4281) /* Text */.Text, obj3);
   obj1[1] = items2;
   const items3 = [callback2(ref, obj1), , ];
   const obj4 = { style: tmp.sections, children: null };
   const obj5 = { hasIcons: true, children: null };
-  const tmp13 = trigger(10231);
+  const tmp13 = trigger(11608);
   const obj6 = { Icon: null, message: null, onPress: null };
-  const tmp14 = require(5926) /* AccountAgeTier10LargeBadge */;
+  const tmp14 = require(5936) /* AccountAgeTier10LargeBadge */;
   if (closure_14) {
     obj6[0] = tmp14.ChairIllocon;
     const intl5 = tmp2(1236).intl;
@@ -135,8 +135,8 @@ export default function CreationIntent(arg0) {
     };
     const items4 = [tmp8(tmp13, obj6), ];
     const obj7 = { Icon: null, message: null, onPress: null };
-    let tmp12Result = tmp12(10231);
-    obj7[0] = tmp2(5926).WorldIllocon;
+    let tmp12Result = tmp12(11608);
+    obj7[0] = tmp2(5936).WorldIllocon;
     const intl6 = tmp2(1236).intl;
     obj7[1] = intl6.string(tmp2(1236).t.h9Q1lG);
     obj7[2] = function onPress() {
@@ -154,8 +154,8 @@ export default function CreationIntent(arg0) {
     };
     const items5 = [tmp8(tmp13, obj6), ];
     const obj8 = { Icon: null, message: null, onPress: null };
-    tmp12Result = tmp12(10231);
-    obj8[0] = tmp2(5926).ChairIllocon;
+    tmp12Result = tmp12(11608);
+    obj8[0] = tmp2(5936).ChairIllocon;
     const intl4 = tmp2(1236).intl;
     obj8[1] = intl4.string(tmp2(1236).t.uE7zcu);
     obj8[2] = function onPress() {
@@ -165,7 +165,7 @@ export default function CreationIntent(arg0) {
     obj5[1] = items5;
     tmp16 = obj5;
   }
-  obj4[1] = callback2(require(5620) /* TableRowGroupTitle */.TableRowGroup, tmp16);
+  obj4[1] = callback2(require(5649) /* TableRowGroupTitle */.TableRowGroup, tmp16);
   items3[1] = callback(ref, obj4);
   const obj9 = { style: tmp.skipDescription, variant: "text-sm/medium", color: "text-default", children: null };
   const intl7 = tmp2(1236).intl;
@@ -174,8 +174,8 @@ export default function CreationIntent(arg0) {
       onPress(null);
     }
   });
-  items3[2] = callback(require(4251) /* Text */.Text, obj9);
+  items3[2] = callback(require(4281) /* Text */.Text, obj9);
   obj[1] = items3;
   obj[2] = callback2(onPress, obj);
-  return callback(require(5243) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 };

@@ -9,24 +9,24 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue() {
-    return require(10901) /* handleAutomaticGainControlChange */.useSelectedNoiseSuppressionOption();
+    return require(10754) /* handleAutomaticGainControlChange */.useSelectedNoiseSuppressionOption();
   },
   onValueChange: function onNoiseSuppressionKrispValueSettingChange(arg0) {
-    const result = require(10901) /* handleAutomaticGainControlChange */.handleNoiseSuppressionChange(arg0);
+    const result = require(10754) /* handleAutomaticGainControlChange */.handleNoiseSuppressionChange(arg0);
   },
   useOptions: function useNoiseSuppressionKrispSettingOptions() {
-    let obj = require(10902) /* getNoiseCancellationDeferredToSystem */;
+    let obj = require(10755) /* getNoiseCancellationDeferredToSystem */;
     const noiseCancellationDeferredToSystem = obj.useNoiseCancellationDeferredToSystem();
-    obj = { value: require(10901) /* handleAutomaticGainControlChange */.NoiseSuppressionOpt.KRISP, label: null, disabled: null };
+    obj = { value: require(10754) /* handleAutomaticGainControlChange */.NoiseSuppressionOpt.KRISP, label: null, disabled: null };
     const intl = require(1236) /* getSystemLocale */.intl;
     obj[1] = intl.string(require(1236) /* getSystemLocale */.t.rdoNzt);
     obj[2] = noiseCancellationDeferredToSystem;
     const items = [obj, , ];
-    obj = { value: require(10901) /* handleAutomaticGainControlChange */.NoiseSuppressionOpt.STANDARD, disabled: noiseCancellationDeferredToSystem, label: null };
+    obj = { value: require(10754) /* handleAutomaticGainControlChange */.NoiseSuppressionOpt.STANDARD, disabled: noiseCancellationDeferredToSystem, label: null };
     const intl2 = require(1236) /* getSystemLocale */.intl;
     obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.qXeYHw);
     items[1] = obj;
-    const obj1 = { value: require(10901) /* handleAutomaticGainControlChange */.NoiseSuppressionOpt.NONE, disabled: noiseCancellationDeferredToSystem, label: null };
+    const obj1 = { value: require(10754) /* handleAutomaticGainControlChange */.NoiseSuppressionOpt.NONE, disabled: noiseCancellationDeferredToSystem, label: null };
     const intl3 = require(1236) /* getSystemLocale */.intl;
     obj1[2] = intl3.string(require(1236) /* getSystemLocale */.t.wkYAlz);
     items[2] = obj1;

@@ -4,7 +4,7 @@ const require = arg1;
 let result = require("transitionTo").fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
 
 export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
-  let obj = require(7141) /* collectThreadMetadata */;
+  let obj = require(7153) /* collectThreadMetadata */;
   const result = obj.collectThreadMetadata(channel.getChannel(selectedChannelId), true);
   let _location;
   if (result != null) {

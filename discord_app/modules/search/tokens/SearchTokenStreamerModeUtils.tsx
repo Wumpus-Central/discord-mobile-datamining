@@ -18,7 +18,7 @@ function getValidOrderedFilterTokens(closure_0, items) {
   }
   const items2 = [tmp];
   [tmp5] = items2;
-  let result = require(10255) /* SearchTokenTypes */.isGuildLikeSearchContext(closure_0);
+  let result = require(11624) /* SearchTokenTypes */.isGuildLikeSearchContext(closure_0);
   if (!result) {
     result = closure_0.type === constants2.DMS && !tmp5.hidePersonalInformation;
     const tmp8 = closure_0.type === constants2.DMS && !tmp5.hidePersonalInformation;
@@ -69,7 +69,7 @@ export const isInChannelFilterSupported = function isInChannelFilterSupported(se
     tmp = items;
   }
   [tmp3] = tmp;
-  let result = require(10255) /* SearchTokenTypes */.isGuildLikeSearchContext(selectedSearchContext);
+  let result = require(11624) /* SearchTokenTypes */.isGuildLikeSearchContext(selectedSearchContext);
   if (!result) {
     result = selectedSearchContext.type === constants2.DMS && !tmp3.hidePersonalInformation;
     const tmp6 = selectedSearchContext.type === constants2.DMS && !tmp3.hidePersonalInformation;

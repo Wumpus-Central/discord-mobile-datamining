@@ -41,7 +41,7 @@ const memoResult = require("noop").memo(function InviteButton(onPress) {
     disabled = flag;
   }
   obj[5] = disabled;
-  obj[1] = jsx(require(4666) /* Button */.Button, { accessibilityRole: "none", size: "sm", variant: "secondary", text: stringResult1, onPress: onPress.onPressSend, disabled: null, grow: true });
+  obj[1] = jsx(require(4695) /* Button */.Button, { accessibilityRole: "none", size: "sm", variant: "secondary", text: stringResult1, onPress: onPress.onPressSend, disabled: null, grow: true });
   return <View accessibilityRole="none" size="sm" variant="secondary" text={stringResult1} onPress={arg0.onPressSend} disabled={null} grow />;
 });
 const result = require("InviteSendStates").fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");

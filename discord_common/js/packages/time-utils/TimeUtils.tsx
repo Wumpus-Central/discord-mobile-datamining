@@ -20,7 +20,7 @@ function now() {
 }
 const fn = () => Object.create(new.target.prototype);
 fn.prototype["now"] = function now() {
-  if (typeof now !== "error") {
+  if (typeof now !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const _performance = require(653) /* u */.performance;
@@ -85,7 +85,7 @@ prototype["isGreaterOrEqualTo"] = function isGreaterOrEqualTo(timeout) {
   return this.milliseconds >= timeout.milliseconds;
 };
 TimeSpan.fromMilliseconds = function fromMilliseconds(timePassed) {
-  if (typeof TimeSpan !== "error") {
+  if (typeof TimeSpan !== "find") {
     HermesBuiltin.throwTypeError();
   }
   let num = timePassed;
@@ -122,7 +122,7 @@ TimeSpan.fromMilliseconds = function fromMilliseconds(timePassed) {
 };
 TimeSpan.fromSeconds = function fromSeconds(arg0) {
   let milliseconds;
-  if (typeof TimeSpan !== "error") {
+  if (typeof TimeSpan !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(TimeSpan.prototype);
@@ -155,7 +155,7 @@ TimeSpan.fromSeconds = function fromSeconds(arg0) {
 };
 TimeSpan.fromMinutes = function fromMinutes(arg0) {
   let milliseconds;
-  if (typeof TimeSpan !== "error") {
+  if (typeof TimeSpan !== "find") {
     HermesBuiltin.throwTypeError();
   }
   let num = arg0;
@@ -192,7 +192,7 @@ TimeSpan.fromMinutes = function fromMinutes(arg0) {
 };
 TimeSpan.fromHours = function fromHours(arg0) {
   let milliseconds;
-  if (typeof TimeSpan !== "error") {
+  if (typeof TimeSpan !== "find") {
     HermesBuiltin.throwTypeError();
   }
   let num = arg0;
@@ -299,7 +299,7 @@ prototype2["isRunning"] = function isRunning() {
   return null != this.startTime;
 };
 StopWatch["startNew"] = function startNew() {
-  if (typeof StopWatch !== "error") {
+  if (typeof StopWatch !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(StopWatch.prototype);
@@ -311,7 +311,7 @@ let TimeOut;
 class TimeOut {
   constructor(arg0) {
     tmp = StopWatch;
-    if (typeof StopWatch !== "error") {
+    if (typeof StopWatch !== "find") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -341,10 +341,10 @@ prototype3["start"] = function start() {
   watch.start();
 };
 TimeOut["startNew"] = function startNew(timeout) {
-  if (typeof TimeOut !== "error") {
+  if (typeof TimeOut !== "find") {
     HermesBuiltin.throwTypeError();
   }
-  if (typeof StopWatch !== "error") {
+  if (typeof StopWatch !== "find") {
     HermesBuiltin.throwTypeError();
   }
   let obj = Object.create(TimeOut.prototype);
@@ -470,7 +470,7 @@ class DurationEnabled {
       tmp = closure_6;
     }
     tmp2 = StopWatch;
-    if (typeof StopWatch !== "error") {
+    if (typeof StopWatch !== "find") {
       str = "Trying to call a non-function";
       throwTypeErrorResult = HermesBuiltin.throwTypeError();
     }
@@ -554,7 +554,7 @@ export const TimeUnitMax = items;
 export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   let closure_0 = arg0;
   const importDefault = arg1;
-  const tmp2 = importDefault(4333)(items, (unit) => f74459(unit.unit), items.findIndex((max) => {
+  const tmp2 = importDefault(4362)(items, (unit) => f74564(unit.unit), items.findIndex((max) => {
     max = max.max;
     let tmp = max.unit === outer1_10.NONE;
     if (tmp) {
@@ -568,7 +568,7 @@ export const getTimeUnit = function getTimeUnit(arg0, arg1) {
   if (null != tmp2) {
     return tmp2.unit;
   } else {
-    const found = arr.find((unit) => f74459(unit.unit));
+    const found = arr.find((unit) => f74564(unit.unit));
     let unit = null;
     if (null != found) {
       unit = found.unit;
@@ -596,8 +596,8 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     return obj;
   } else {
     closure_0 = rounded;
-    const f74459 = (arg0) => closure_0.includes(arg0);
-    const tmp12 = f74459(4333)(items, (unit) => f74459(unit.unit), items.findIndex((max) => {
+    const f74564 = (arg0) => closure_0.includes(arg0);
+    const tmp12 = f74564(4362)(items, (unit) => f74564(unit.unit), items.findIndex((max) => {
       max = max.max;
       let tmp = max.unit === outer1_10.NONE;
       if (tmp) {
@@ -611,7 +611,7 @@ export const getTimeAndUnit = function getTimeAndUnit(rounded, items) {
     if (null != tmp12) {
       let unit = tmp12.unit;
     } else {
-      const found = arr.find((unit) => f74459(unit.unit));
+      const found = arr.find((unit) => f74564(unit.unit));
       unit = null;
       if (null != found) {
         unit = found.unit;

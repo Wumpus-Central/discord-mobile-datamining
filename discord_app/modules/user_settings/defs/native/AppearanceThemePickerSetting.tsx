@@ -23,7 +23,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
   getComponent() {
-    return require(14369) /* ThemeTypes */.default;
+    return require(14403) /* ThemeTypes */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

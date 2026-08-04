@@ -102,6 +102,6 @@ export const LabeledActionButton = function LabeledActionButton(children) {
   const items5 = [closure_5(closure_3, obj3), children.children];
   obj1[1] = items5;
   obj.children = closure_5(closure_3, obj1);
-  obj[1] = closure_4(require(4783) /* PressableBase */.PressableOpacity, obj);
+  obj[1] = closure_4(require(4812) /* PressableBase */.PressableOpacity, obj);
   return closure_4(closure_3, obj);
 };

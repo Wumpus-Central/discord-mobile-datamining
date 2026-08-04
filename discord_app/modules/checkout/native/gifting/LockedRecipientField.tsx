@@ -23,8 +23,8 @@ export default function LockedRecipientField(user) {
   obj[3] = require(1297) /* Button */.AvatarSizes.NORMAL;
   const items = [callback(require(1297) /* Button */.Avatar, obj), ];
   obj = { variant: "text-md/semibold", children: null };
-  obj[1] = importDefault(4094).getName(user);
-  items[1] = callback(require(4251) /* Text */.Text, obj);
+  obj[1] = importDefault(4124).getName(user);
+  items[1] = callback(require(4281) /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

@@ -27,5 +27,5 @@ export default function ForumPostTitle(arg0) {
     str = "mobile-text-heading-primary";
   }
   const tmp = createCacheKey();
-  return jsx(require(4251) /* Text */.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: createCacheKey().title, onTextLayout, children: title });
+  return jsx(require(4281) /* Text */.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: createCacheKey().title, onTextLayout, children: title });
 };

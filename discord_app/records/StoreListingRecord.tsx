@@ -101,7 +101,7 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
   let mapped3 = null;
   if (null != id.assets) {
     const assets = id.assets;
-    mapped3 = assets.map(require(13639) /* transformStoreAssetFromServer */.transformStoreAssetFromServer);
+    mapped3 = assets.map(require(13673) /* transformStoreAssetFromServer */.transformStoreAssetFromServer);
   }
   obj[11] = mapped3;
   let tmp8 = null;
@@ -129,50 +129,50 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
   obj[13] = tmp13;
   let result = null;
   if (null != id.thumbnail) {
-    result = require(13639) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.thumbnail);
-    const obj4 = require(13639) /* transformStoreAssetFromServer */;
+    result = require(13673) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.thumbnail);
+    const obj4 = require(13673) /* transformStoreAssetFromServer */;
   }
   obj[14] = result;
   let result1 = null;
   if (null != id.preview_video) {
-    result1 = require(13639) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.preview_video);
-    const obj5 = require(13639) /* transformStoreAssetFromServer */;
+    result1 = require(13673) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.preview_video);
+    const obj5 = require(13673) /* transformStoreAssetFromServer */;
   }
   obj[15] = result1;
   let result2 = null;
   if (null != id.header_background) {
-    result2 = require(13639) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.header_background);
-    const obj6 = require(13639) /* transformStoreAssetFromServer */;
+    result2 = require(13673) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.header_background);
+    const obj6 = require(13673) /* transformStoreAssetFromServer */;
   }
   obj[16] = result2;
   let result3 = null;
   if (null != id.header_logo_dark_theme) {
-    result3 = require(13639) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.header_logo_dark_theme);
-    const obj7 = require(13639) /* transformStoreAssetFromServer */;
+    result3 = require(13673) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.header_logo_dark_theme);
+    const obj7 = require(13673) /* transformStoreAssetFromServer */;
   }
   obj[17] = result3;
   let result4 = null;
   if (null != id.header_logo_light_theme) {
-    result4 = require(13639) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.header_logo_light_theme);
-    const obj8 = require(13639) /* transformStoreAssetFromServer */;
+    result4 = require(13673) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.header_logo_light_theme);
+    const obj8 = require(13673) /* transformStoreAssetFromServer */;
   }
   obj[18] = result4;
   let result5 = null;
   if (null != id.box_art) {
-    result5 = require(13639) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.box_art);
-    const obj9 = require(13639) /* transformStoreAssetFromServer */;
+    result5 = require(13673) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.box_art);
+    const obj9 = require(13673) /* transformStoreAssetFromServer */;
   }
   obj[19] = result5;
   let result6 = null;
   if (null != id.hero_background) {
-    result6 = require(13639) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.hero_background);
-    const obj10 = require(13639) /* transformStoreAssetFromServer */;
+    result6 = require(13673) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.hero_background);
+    const obj10 = require(13673) /* transformStoreAssetFromServer */;
   }
   obj[20] = result6;
   let result7 = null;
   if (null != id.hero_video) {
-    result7 = require(13639) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.hero_video);
-    const obj11 = require(13639) /* transformStoreAssetFromServer */;
+    result7 = require(13673) /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.hero_video);
+    const obj11 = require(13673) /* transformStoreAssetFromServer */;
   }
   obj[21] = result7;
   ({ entitlement_branch_id: obj[22], benefits: obj[23], published: obj[24] } = id);

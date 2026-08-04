@@ -1011,16 +1011,16 @@ export default {
     })();
   },
   openThreadCreationForMobile(channel, id, Message) {
-    let obj = require(4450) /* collectGuildAnalyticsMetadata */;
+    let obj = require(4479) /* collectGuildAnalyticsMetadata */;
     obj = { location: Message, channel_id: channel.id, guild_id: channel.guild_id };
     obj.trackWithMetadata(constants.THREAD_CREATION_STARTED, obj);
     obj = { parentMessageId: id, isPrivate: false, location: Message };
-    importDefault(7144).changeThreadSettings(channel.id, obj);
+    importDefault(7156).changeThreadSettings(channel.id, obj);
     if (null == id) {
       const obj1 = { channelId: null, command: null, section: null };
       obj1[0] = channel.id;
-      require(7145) /* setActiveCommand */.setActiveCommand(obj1);
-      const tmpResult = require(7145) /* setActiveCommand */;
+      require(7157) /* setActiveCommand */.setActiveCommand(obj1);
+      const tmpResult = require(7157) /* setActiveCommand */;
     }
   },
   setNotificationSettings(channel, muteSettings) {

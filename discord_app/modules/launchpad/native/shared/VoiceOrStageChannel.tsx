@@ -140,20 +140,20 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     speakerVoiceStates = closure_19;
   }
   ({ id, guild_id } = channel);
-  const tmp3 = callback(4191)();
-  let obj = _require(4101);
-  const tmp6 = callback3(callback(9011)(), obj.isThemeLight(tmp3));
-  const tmp7 = callback(15889)();
-  let obj1 = _require(10392);
+  const tmp3 = callback(4221)();
+  let obj = _require(4131);
+  const tmp6 = callback3(callback(8203)(), obj.isThemeLight(tmp3));
+  const tmp7 = callback(15922)();
+  let obj1 = _require(9659);
   const isConnectedToVoiceChannel = obj1.useIsConnectedToVoiceChannel(channel);
-  let obj2 = _require(15308);
+  let obj2 = _require(15339);
   const baseChannelUnreadBadgeState = obj2.useBaseChannelUnreadBadgeState(channel, !isConnectedToVoiceChannel);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
   let obj3 = _require(589);
   const items = [updateUserGuildSettingsInternal];
   const stateFromStores = obj3.useStateFromStores(items, () => outer1_9.resolveUnreadSetting(closure_0));
-  let obj4 = _require(5086);
-  const stageParticipantsCount = obj4.useStageParticipantsCount(channel.id, _require(5080).StageChannelParticipantNamedIndex.AUDIENCE);
+  let obj4 = _require(5115);
+  const stageParticipantsCount = obj4.useStageParticipantsCount(channel.id, _require(5109).StageChannelParticipantNamedIndex.AUDIENCE);
   let userLimit = stageParticipantsCount + voiceStates.length;
   _require = channel;
   callback = undefined;
@@ -257,7 +257,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   items1 = [channel, callback];
   items2 = [channel.id];
   const arr5 = callback(11358)(channel);
-  let obj7 = _require(15902);
+  let obj7 = _require(15935);
   obj = { channel, unread, mentionCount, voiceStates, embeddedActivitiesCount: arr5.length };
   const channelAccessibilityProps = obj7.getChannelAccessibilityProps(obj);
   let obj9 = _require(589);
@@ -267,23 +267,23 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
   if (stateFromStores1 != null) {
     let topic = stateFromStores1.topic;
   }
-  const tmp15 = callback(4446)(channel, false);
+  const tmp15 = callback(4475)(channel, false);
   let arr8 = voiceStates;
   if (channel.isGuildStageVoice()) {
     arr8 = speakerVoiceStates;
   }
   const mapped = arr8.map((user) => user.user);
-  const tmp17 = callback(15898)();
-  let tmp5Result = tmp5(4672);
+  const tmp17 = callback(15931)();
+  let tmp5Result = tmp5(4701);
   const fontScale = tmp5Result.useFontScale();
   tmp5Result = tmp5(589);
   const items5 = [closure_8];
   const stateFromStores2 = tmp5Result.useStateFromStores(items5, () => locale.locale);
-  const tmp4 = callback(9011)();
+  const tmp4 = callback(8203)();
   const items6 = [isConnectedToVoiceChannel, subtitle];
-  ({ isSubscriptionGated, needSubscriptionToAccess } = callback(4697)(channel.id));
+  ({ isSubscriptionGated, needSubscriptionToAccess } = callback(4726)(channel.id));
   const effect = obj5.useEffect(() => {
-    let tmp2 = null != callback && typeof tmp === "ge";
+    let tmp2 = null != callback && typeof tmp === "_iter";
     if (tmp2) {
       tmp2 = "voice" === tmp.type;
     }
@@ -292,7 +292,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
       messagePreviewASTCache.del(tmp.text);
     }
   }, items6);
-  let tmpResult = tmp(15890);
+  let tmpResult = tmp(15923);
   const items7 = [tmp6.pressable, ];
   let num = 0;
   if (voiceStates.length > 0) {
@@ -305,7 +305,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     const merged1 = Object.assign(channelAccessibilityProps);
     obj2 = { channel: null, subtitle: null, unread: null, resolvedUnreadSetting: null, mentionCount: null, mentionBadge: null, live: null, end: null, connected: null, fontScale: null, isSubscriptionGated: null, needSubscriptionToAccess: null, showGuildBadgeIcon: true };
     obj2[0] = channel;
-    tmpResult = tmp(15902);
+    tmpResult = tmp(15935);
     if (topic == null) {
       topic = subtitle;
     }
@@ -314,7 +314,7 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     obj3[1] = id;
     obj3[2] = guild_id;
     obj3[3] = isConnectedToVoiceChannel;
-    obj2[1] = tmp5(15900).renderChannelSubtitle(obj3);
+    obj2[1] = tmp5(15933).renderChannelSubtitle(obj3);
     if (!unread) {
       unread = mentionCount > 0;
     }
@@ -324,20 +324,20 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
     obj4 = { mentionCount: null, locale: null };
     obj4[0] = mentionCount;
     obj4[1] = stateFromStores2;
-    obj2[5] = tmp(15896)(obj4);
+    obj2[5] = tmp(15929)(obj4);
     obj2[6] = null != stateFromStores1;
     if (arr5.length > 0) {
       obj5 = { embeddedApps: null, size: null };
       obj5[0] = arr5;
       obj5[1] = tmp7.joinVoiceButton.icon.gameSize;
-      let tmp32 = callback2(tmp(15198), obj5);
+      let tmp32 = callback2(tmp(15232), obj5);
       let tmp31 = callback2;
     } else {
       tmp31 = callback2;
       const obj6 = { channel: null, voiceStates: null };
       obj6[0] = channel;
       obj6[1] = voiceStates;
-      tmp32 = callback2(tmp5(11568).VocalChannelJoinButton, obj6);
+      tmp32 = callback2(tmp5(11575).VocalChannelJoinButton, obj6);
     }
     obj2[7] = tmp32;
     obj2[8] = isConnectedToVoiceChannel;
@@ -354,12 +354,12 @@ let closure_20 = importAllResult.memo(function UnmemoedVoiceOrStageChannelBase(c
       obj8[0] = mapped;
       obj8[2] = channel.guild_id;
       obj8[3] = stageParticipantsCount;
-      obj7[1] = tmp31(tmp(15905), obj8);
+      obj7[1] = tmp31(tmp(15938), obj8);
       tmp31Result = tmp31(View, obj7);
     }
     items8[1] = tmp31Result;
     obj1.children = items8;
-    return tmpResult(closure_15(tmp5(4783).PressableHighlight, obj1));
+    return tmpResult(closure_15(tmp5(4812).PressableHighlight, obj1));
   } else {
     const intl = tmp5(1236).intl;
     obj9 = { channelName: null };

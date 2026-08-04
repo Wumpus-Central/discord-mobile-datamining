@@ -3,7 +3,7 @@ import noop from "noop";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 
 const require = arg1;
-let obj = { "server-subscriptions-onboarding": require("module_13112"), "server-subscriptions-create-tier-from-template": require("module_13113") };
+let obj = { "server-subscriptions-onboarding": require("module_13146"), "server-subscriptions-create-tier-from-template": require("module_13147") };
 let closure_6 = {
   title() {
     const intl = require(1236) /* getSystemLocale */.intl;

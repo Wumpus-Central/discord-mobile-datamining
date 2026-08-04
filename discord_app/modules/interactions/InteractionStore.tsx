@@ -67,12 +67,12 @@ prototype["canQueueInteraction"] = function canQueueInteraction(c1, closure_9) {
     tmp2 = null != dependencyMap[tmp];
   }
   if (tmp2) {
-    tmp2 = dependencyMap[tmp].state !== require(4481) /* InteractionState */.InteractionState.FAILED;
+    tmp2 = dependencyMap[tmp].state !== require(4510) /* InteractionState */.InteractionState.FAILED;
   }
   if (!tmp2) {
     let tmp9 = null != dependencyMap[closure_9];
     if (tmp9) {
-      tmp9 = dependencyMap[closure_9].state !== require(4481) /* InteractionState */.InteractionState.FAILED;
+      tmp9 = dependencyMap[closure_9].state !== require(4510) /* InteractionState */.InteractionState.FAILED;
     }
     tmp2 = tmp9;
   }
@@ -139,7 +139,7 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
       closure_9[messageId] = nonce;
       closure_10[nonce] = messageId;
     }
-    closure_8[nonce] = { state: require(4481) /* InteractionState */.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure };
+    closure_8[nonce] = { state: require(4510) /* InteractionState */.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure };
   },
   INTERACTION_CREATE: function handleInteractionCreate(nonce) {
     nonce = nonce.nonce;
@@ -147,8 +147,8 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
       return false;
     } else {
       if (null != dependencyMap[nonce]) {
-        if (tmp3.state === require(4481) /* InteractionState */.InteractionState.QUEUED) {
-          tmp3.state = tmp4(4481).InteractionState.CREATED;
+        if (tmp3.state === require(4510) /* InteractionState */.InteractionState.QUEUED) {
+          tmp3.state = tmp4(4510).InteractionState.CREATED;
           const onCreate = tmp3.onCreate;
           if (onCreate != null) {
             onCreate(tmp);
@@ -222,7 +222,7 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
       } else {
         obj = {};
         const merged = Object.assign(tmp27);
-        obj.state = require(4481) /* InteractionState */.InteractionState.FAILED;
+        obj.state = require(4510) /* InteractionState */.InteractionState.FAILED;
         obj.errorCode = errorCode;
         obj.errorMessage = errorMessage;
         obj.reasonCode = reasonCode;
@@ -273,7 +273,7 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
         let first = tmp5[0];
         let tmp7 = require;
         let tmp8 = dependencyMap;
-        if (tmp5[1].state === require(4481) /* InteractionState */.InteractionState.FAILED) {
+        if (tmp5[1].state === require(4510) /* InteractionState */.InteractionState.FAILED) {
           let tmp9 = deleteNonce;
           let tmp10 = first;
           let tmp11 = deleteNonce(first);
@@ -390,8 +390,8 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
             tmp18 = "channelId" in interaction.data;
           }
           if (tmp18) {
-            importDefault(6814).deleteMessage(interaction.data.channelId, messageId, true);
-            const obj2 = importDefault(6814);
+            importDefault(6826).deleteMessage(interaction.data.channelId, messageId, true);
+            const obj2 = importDefault(6826);
           }
         }
         tmp7 = null != interaction && null != messageId;

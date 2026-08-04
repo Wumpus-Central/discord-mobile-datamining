@@ -183,10 +183,10 @@ export const ackDisclosures = function ackDisclosures(closure_0, outer1_50) {
   return applyArgumentsResult;
 };
 export const getTextForDisclosure = function getTextForDisclosure(toFixed) {
-  if (require(9139) /* create */.ApplicationDisclosureType.IP_LOCATION === toFixed) {
+  if (require(10428) /* create */.ApplicationDisclosureType.IP_LOCATION === toFixed) {
     const intl2 = tmp(1236).intl;
     return intl2.string(tmp(1236).t["6wPmjo"]);
-  } else if (tmp(9139).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {
+  } else if (tmp(10428).ApplicationDisclosureType.DISPLAYS_ADVERTISEMENTS === toFixed) {
     const intl = tmp(1236).intl;
     return intl.string(tmp(1236).t["/uOMKZ"]);
   } else {

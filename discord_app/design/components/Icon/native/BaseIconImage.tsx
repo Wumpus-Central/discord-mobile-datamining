@@ -3,7 +3,7 @@ import { Image } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 
 const require = arg1;
-let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "Array", height: "ct" }, refresh_sm: { width: 18, height: 18 } };
+let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "Array", height: "HermesInternal" }, refresh_sm: { width: 18, height: 18 } };
 const result = require("jsxProd").fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 
 export const BaseIconImage = function BaseIconImage(source) {
@@ -17,7 +17,7 @@ export const BaseIconImage = function BaseIconImage(source) {
   }
   const color = source.color;
   ({ resizeMode, style, accessible, accessibilityLabel } = source);
-  let obj = require(3959) /* map */;
+  let obj = require(3989) /* map */;
   const token = obj.useToken(color);
   if (null != token) {
     obj = { tintColor: null };

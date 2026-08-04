@@ -253,12 +253,12 @@ export const getRestrictedScheduleNotificationTitle = function getRestrictedSche
 export const getRestrictedScheduleNotificationSubtitle = function getRestrictedScheduleNotificationSubtitle(rule) {
   let result = null;
   if (null != rule) {
-    result = require(10400) /* setsEqual */.formatRestrictedScheduleInAppSubtitle(rule);
-    const obj = require(10400) /* setsEqual */;
+    result = require(9670) /* setsEqual */.formatRestrictedScheduleInAppSubtitle(rule);
+    const obj = require(9670) /* setsEqual */;
   }
   if (result == null) {
     const intl = require(1236) /* getSystemLocale */.intl;
-    result = intl.string(importDefault(2255)["8OlpoY"]);
+    result = intl.string(importDefault(2285)["8OlpoY"]);
   }
   return result;
 };

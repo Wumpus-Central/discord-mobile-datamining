@@ -4,7 +4,7 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/premium
 
 export default function useMultiPerkStatusValues(powerups) {
   powerups = powerups.powerups;
-  let obj = require(11711) /* usePowerupActiveStatus */;
+  let obj = require(11772) /* usePowerupActiveStatus */;
   const powerupsActiveStatuses = obj.usePowerupsActiveStatuses(powerups.guildId, powerups);
   const someResult = powerupsActiveStatuses.some((type) => type.type !== constants.INACTIVE);
   if (powerups.length <= 0) {
@@ -34,7 +34,7 @@ export default function useMultiPerkStatusValues(powerups) {
     } else if (someResult) {
       obj = { type: "active", statusText: null };
       const intl = tmp(1236).intl;
-      obj[1] = intl.string(importDefault(2287).FFLkmx);
+      obj[1] = intl.string(importDefault(2317).FFLkmx);
       tmp4 = obj;
     }
     const reduced1 = powerupsActiveStatuses.reduce((arg0, type) => {

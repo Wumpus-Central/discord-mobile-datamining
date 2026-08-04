@@ -70,9 +70,9 @@ export const useIsVoiceChatFocused = function useIsVoiceChatFocused() {
   return voiceChatDrawerState === VoiceChatDrawerState.OPEN || voiceChatDrawerState === VoiceChatDrawerState.CLOSING;
 };
 export const useChannelCallOrientationHandlers = function useChannelCallOrientationHandlers(isGuildStageVoice) {
-  const tmp2 = importDefault(10390)(isGuildStageVoice);
+  const tmp2 = importDefault(9657)(isGuildStageVoice);
   const require = tmp2;
-  const tmp3 = importDefault(10391)(isGuildStageVoice);
+  const tmp3 = importDefault(9658)(isGuildStageVoice);
   importDefault = tmp3;
   let isGuildStageVoiceResult = isGuildStageVoice.isGuildStageVoice();
   if (isGuildStageVoiceResult) {
@@ -90,7 +90,7 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
   if (currentEmbeddedActivity != null) {
     applicationId = currentEmbeddedActivity.applicationId;
   }
-  obj = require(10392) /* useIsConnectedToVoiceChannel */;
+  obj = require(9659) /* useIsConnectedToVoiceChannel */;
   const tmp7 = require;
   const tmp8 = applicationId;
   const items = [tmp8];

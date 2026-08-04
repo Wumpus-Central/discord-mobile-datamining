@@ -12,7 +12,7 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
     initialVariantIndex = 0;
   }
   ({ analyticsLocations, shopAnalyticsContext } = arg0);
-  let obj = require(6909) /* getProductOrbPrice */;
+  let obj = require(6921) /* getProductOrbPrice */;
   const isVariantProduct = obj.getIsVariantProduct(product);
   let num = 0;
   if (isVariantProduct) {
@@ -26,9 +26,9 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   } else {
     skuId = product.skuId;
   }
-  require(6897) /* openCollectiblesShop */.productDetailsOpened(skuId);
+  require(6909) /* openCollectiblesShop */.productDetailsOpened(skuId);
   const tmp2 = dependencyMap;
-  const tmpResult = require(6897) /* openCollectiblesShop */;
+  const tmpResult = require(6909) /* openCollectiblesShop */;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  importDefault(4223).openLazy(require(1959) /* asyncRequireImpl */(8918, tmp2.paths), c3, obj, stack);
+  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(9353, tmp2.paths), c3, obj, stack);
 };

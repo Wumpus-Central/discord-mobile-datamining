@@ -4,8 +4,8 @@ export const getSource = function getSource(imageLocal) {
   if (null != imageLocal.imageLocal) {
     imageLocal = imageLocal.imageLocal;
   } else {
-    imageLocal = importAll(16651).getSource(imageLocal);
-    const obj = importAll(16651);
+    imageLocal = importAll(16683).getSource(imageLocal);
+    const obj = importAll(16683);
   }
   return imageLocal;
 };

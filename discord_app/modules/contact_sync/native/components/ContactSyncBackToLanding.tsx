@@ -4,7 +4,7 @@ export default function ContactSyncBackToLanding(arg0) {
   const _require = arg0;
   const dependencyMap = _require(1480).useNavigation();
   const obj = _require(1480);
-  return _require(5209).getHeaderBackButton(() => {
+  return _require(5238).getHeaderBackButton(() => {
     if (null != lib.navigateToLandingPage) {
       const result = lib.navigateToLandingPage();
     } else {

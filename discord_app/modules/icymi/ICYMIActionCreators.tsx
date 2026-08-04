@@ -339,7 +339,7 @@ export default {
     })();
   },
   fetchForStatusNotification(arg0) {
-    let obj = require(8495) /* generateHydrationId */;
+    let obj = require(8834) /* generateHydrationId */;
     if (obj.icymiEnabled("fetchInitialStatus")) {
       obj = { type: "LOAD_ICYMI_FROM_NOTIFICATION", customStatusItem: null };
       obj[1] = arg0;

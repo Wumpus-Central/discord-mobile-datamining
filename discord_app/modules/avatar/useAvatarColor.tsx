@@ -161,7 +161,7 @@ function _fetchColors() {
               throw arg1;
             } else if (arg0 !== 2) {
               table = arg1;
-              obj = callback(4099);
+              obj = callback(4129);
               dependencyMap = obj.getComplimentaryPaletteForColor(table[0]);
               obj1 = callback(705);
               obj1.batchUpdates(() => {

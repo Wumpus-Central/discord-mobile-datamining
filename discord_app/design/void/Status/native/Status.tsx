@@ -1,5 +1,5 @@
 import _slicedToArray from "_slicedToArray";
-import "module_4116";
+import "module_4146";
 import get_ActivityIndicator from "STATUS_PADDING";
 import { STATUS_PADDING } from "STATUS_PADDING";
 import { StatusTypes } from "ME";
@@ -23,7 +23,7 @@ let closure_13 = createCacheKey.createStyles({ statusIcon: { width: "100%", heig
 let closure_14 = createCacheKey.createStyles((items) => {
   let dotSize;
   let height;
-  let obj = require(13228) /* getAnimatedTypingTranslateX */;
+  let obj = require(13262) /* getAnimatedTypingTranslateX */;
   const statusTypingDimensions = obj.getStatusTypingDimensions(items);
   ({ height, dotSize } = statusTypingDimensions);
   if (StatusTypes.ONLINE === arg1) {
@@ -74,27 +74,27 @@ export default function Status(isMobileOnline) {
     streaming = false;
   }
   let obj = { style: null, children: null };
-  const items = [importDefault(13229)(size, flag, flag2), style];
+  const items = [importDefault(13263)(size, flag, flag2), style];
   obj[0] = items;
   obj = { style: callback2().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = tmp4(13231);
+    let tmp4Result = tmp4(13265);
   } else if (flag2) {
-    tmp4Result = tmp4(13232);
+    tmp4Result = tmp4(13266);
   } else if (flag) {
-    tmp4Result = tmp4(13233);
+    tmp4Result = tmp4(13267);
   } else if (StatusTypes.IDLE === status) {
-    tmp4Result = tmp4(13234);
+    tmp4Result = tmp4(13268);
   } else if (tmp7.DND === status) {
-    tmp4Result = tmp4(13235);
+    tmp4Result = tmp4(13269);
   } else {
     if (tmp7.OFFLINE !== status) {
       if (tmp7.INVISIBLE !== status) {
         const ONLINE = tmp7.ONLINE;
-        tmp4Result = tmp4(13237);
+        tmp4Result = tmp4(13271);
       }
     }
-    tmp4Result = tmp4(13236);
+    tmp4Result = tmp4(13270);
   }
   obj[1] = tmp4Result;
   obj[1] = closure_11(closure_4, obj);

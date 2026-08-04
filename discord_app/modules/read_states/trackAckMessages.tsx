@@ -22,5 +22,5 @@ export default function trackAckMessages(channel_id) {
     const hasUnreadResult = updateGuildUnreadSentinel.hasUnread(id.id);
     return "" + id.id + "," + hasUnreadResult + "," + mentionCount + "," + updateUserGuildSettingsInternal.isMuted(id.id) + "," + updateUserGuildSettingsInternal.resolveGuildUnreadSetting(id);
   });
-  require(4450) /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.ACK_MESSAGES, obj);
+  require(4479) /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.ACK_MESSAGES, obj);
 };

@@ -12,8 +12,8 @@ let metroImportAll;
 const require = arg1;
 function ThemedTabBadge(children) {
   const tmp = createCacheKey();
-  let obj = require(4101) /* AccessibilityAnnouncer */;
-  const isThemeDarkResult = obj.isThemeDark(importDefault(4191)());
+  let obj = require(4131) /* AccessibilityAnnouncer */;
+  const isThemeDarkResult = obj.isThemeDark(importDefault(4221)());
   const items = [tmp.badge, ];
   obj = { style: items, children: null };
   items[1] = isThemeDarkResult ? tmp.badgeBackgroundDarkTheme : tmp.badgeBackgroundLightTheme;
@@ -22,7 +22,7 @@ function ThemedTabBadge(children) {
     str = "text-overlay-dark";
   }
   obj = { variant: "eyebrow", color: str, style: tmp.text, children: children.label };
-  obj[1] = closure_8(require(4251) /* Text */.Text, obj);
+  obj[1] = closure_8(require(4281) /* Text */.Text, obj);
   return closure_8(View, obj);
 }
 function OfferBadge(componentId) {
@@ -35,15 +35,15 @@ function OfferBadge(componentId) {
   let obj = { type: null, name: null, properties: null };
   obj[0] = require(503) /* encodeProperties */.ImpressionTypes.VIEW;
   obj[1] = require(503) /* encodeProperties */.ImpressionNames.PREMIUM_MARKETING_COMPONENT;
-  obj = { component_type: require(7556) /* MarketingComponentType */.MarketingComponentType.PREMIUM_TAB, component_id: componentId };
+  obj = { component_type: require(7568) /* MarketingComponentType */.MarketingComponentType.PREMIUM_TAB, component_id: componentId };
   obj[2] = obj;
   obj = { disableTrack: null == componentId };
-  importDefault(8741)(obj, obj);
+  importDefault(9267)(obj, obj);
   if (acked) {
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.acked;
     const obj2 = { source: null, size: null, color: null, style: null };
-    obj2[0] = importDefault(14099);
+    obj2[0] = importDefault(14133);
     obj2[1] = tmp5(1297).Icon.Sizes.EXTRA_SMALL;
     obj2[2] = tmp.icon.color;
     obj2[3] = tmp.icon;
@@ -51,7 +51,7 @@ function OfferBadge(componentId) {
     const obj3 = { variant: "eyebrow", color: "interactive-text-default", style: null, children: null };
     obj3[2] = tmp.text;
     obj3[3] = ackedBadgeCopy;
-    items[1] = callback2(tmp5(4251).Text, obj3);
+    items[1] = callback2(tmp5(4281).Text, obj3);
     obj1[1] = items;
     let tmp9 = callback3(View, obj1);
   } else {
@@ -87,13 +87,13 @@ export default function PremiumTabBadge() {
   let tmp14;
   let tmp18;
   let tmp = createCacheKey();
-  let obj = require(6808) /* usePremiumTrialOffer */;
+  let obj = require(6820) /* usePremiumTrialOffer */;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
-  let obj1 = require(7251) /* usePremiumDiscountOffer */;
+  let obj1 = require(7263) /* usePremiumDiscountOffer */;
   const premiumDiscountOffer = obj1.usePremiumDiscountOffer();
-  let obj3 = require(3901) /* getPremiumPlanItem */;
+  let obj3 = require(3931) /* getPremiumPlanItem */;
   const hasTier2Premium = obj3.useHasTier2Premium();
-  let obj4 = require(4071) /* UNSAFE_isDismissibleContentDismissed */;
+  let obj4 = require(4101) /* UNSAFE_isDismissibleContentDismissed */;
   const result = obj4.useIsDismissibleContentDismissed_UNSAFE(require(1358) /* DismissibleContent */.DismissibleContent.MOBILE_NITRO_HOME_SETTINGS_BADGE);
   let tmp7 = !result;
   if (!result) {
@@ -106,25 +106,25 @@ export default function PremiumTabBadge() {
   if (stateFromStores != null) {
     trialId = stateFromStores.trialId;
   }
-  tmp2Result = tmp2(5921);
+  tmp2Result = tmp2(5931);
   if (trialId === closure_6) {
     if (!tmp7) {
       let items1 = [tmp2(1358).DismissibleContent.REFERRAL_TRIAL_MOBILE_NITRO_HOME_BADGE];
     }
     [tmp14, r10051] = callback(tmp11(items1, undefined, true), 2);
-    tmp2(5921);
+    tmp2(5931);
     if (!tmp7) {
       if (hasTier2Premium) {
         let items2 = [tmp2(1358).DismissibleContent.WHATS_NEW_TENURE_BADGE_REWARD];
       }
       let tmp12Result = tmp12(tmp16(items2, undefined, true), 2);
       [tmp18, r10063] = tmp12Result;
-      const isEligibleSenderForReferralProgram = tmp2(7960).useIsEligibleSenderForReferralProgram();
-      const tmp2Result2 = tmp2(7960);
-      const isReferralProgramEntrypointBadgeAcknowledged = tmp2(7959).useIsReferralProgramEntrypointBadgeAcknowledged();
-      const tmp2Result3 = tmp2(7959);
-      const promotionMarketingComponent = tmp2(7552).usePromotionMarketingComponent(tmp2(7556).MarketingComponentType.PREMIUM_TAB);
-      const tmp2Result5 = tmp2(5921);
+      const isEligibleSenderForReferralProgram = tmp2(7972).useIsEligibleSenderForReferralProgram();
+      const tmp2Result2 = tmp2(7972);
+      const isReferralProgramEntrypointBadgeAcknowledged = tmp2(7971).useIsReferralProgramEntrypointBadgeAcknowledged();
+      const tmp2Result3 = tmp2(7971);
+      const promotionMarketingComponent = tmp2(7564).usePromotionMarketingComponent(tmp2(7568).MarketingComponentType.PREMIUM_TAB);
+      const tmp2Result5 = tmp2(5931);
       let prop = null;
       if (null != promotionMarketingComponent) {
         prop = null;
@@ -174,7 +174,7 @@ export default function PremiumTabBadge() {
         obj1[1] = Gradients.PREMIUM_TIER_2;
         obj1[2] = tmp2(691).HorizontalGradient.START;
         obj1[3] = tmp2(691).HorizontalGradient.END;
-        const tmp52 = importDefault(4677);
+        const tmp52 = importDefault(4706);
         let text;
         if (tmp2Result6.isAndroid()) {
           text = tmp.text;
@@ -183,7 +183,7 @@ export default function PremiumTabBadge() {
         obj2[2] = text;
         const intl8 = tmp2(1236).intl;
         obj2[3] = intl8.string(tmp2(1236).t.y2b7CA);
-        tmp = tmp50(tmp2(4251).Text, obj2);
+        tmp = tmp50(tmp2(4281).Text, obj2);
         obj1[4] = tmp;
         let tmp47Result = tmp50(tmp52, obj1);
         tmp2Result6 = tmp2(500);
@@ -208,7 +208,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr4[0], ackedBadge: arr4[1] } = tmp);
           obj4[0] = items3;
           const obj5 = { source: null, size: null, color: null, style: null };
-          obj5[0] = importDefault(14099);
+          obj5[0] = importDefault(14133);
           obj5[1] = tmp2(1297).Icon.Sizes.EXTRA_SMALL;
           obj5[2] = tmp.icon.color;
           obj5[3] = tmp.icon;
@@ -217,7 +217,7 @@ export default function PremiumTabBadge() {
           obj6[2] = tmp.text;
           const intl5 = tmp2(1236).intl;
           obj6[3] = intl5.string(tmp2(1236).t["/DTtr6"]);
-          items4[1] = callback2(tmp2(4251).Text, obj6);
+          items4[1] = callback2(tmp2(4281).Text, obj6);
           obj4[1] = items4;
           let tmp41 = callback3(View, obj4);
         } else {
@@ -230,9 +230,9 @@ export default function PremiumTabBadge() {
           obj8[2] = tmp.text;
           const intl4 = tmp2(1236).intl;
           obj8[3] = intl4.string(tmp2(1236).t["/DTtr6"]);
-          obj7[4] = callback2(tmp2(4251).Text, obj8);
-          tmp41 = callback2(importDefault(4677), obj7);
-          const tmp40 = importDefault(4677);
+          obj7[4] = callback2(tmp2(4281).Text, obj8);
+          tmp41 = callback2(importDefault(4706), obj7);
+          const tmp40 = importDefault(4706);
         }
       } else {
         tmp47Result = null;
@@ -242,7 +242,7 @@ export default function PremiumTabBadge() {
           obj9[1] = Gradients.PREMIUM_TIER_2;
           obj9[2] = tmp2(691).HorizontalGradient.START;
           obj9[3] = tmp2(691).HorizontalGradient.END;
-          const tmp34 = importDefault(4677);
+          const tmp34 = importDefault(4706);
           let text1;
           if (tmp2Result7.isAndroid()) {
             text1 = tmp.text;
@@ -250,12 +250,12 @@ export default function PremiumTabBadge() {
           const obj10 = { variant: "eyebrow", color: "text-overlay-light", style: null, children: null };
           obj10[2] = text1;
           obj10[3] = stringResult;
-          obj9[4] = callback2(tmp2(4251).Text, obj10);
+          obj9[4] = callback2(tmp2(4281).Text, obj10);
           tmp47Result = tmp32(tmp34, obj9);
           tmp2Result7 = tmp2(500);
         }
       }
-      const tmp2Result4 = tmp2(7552);
+      const tmp2Result4 = tmp2(7564);
     }
     items2 = [];
     const tmp13 = callback(tmp11(items1, undefined, true), 2);

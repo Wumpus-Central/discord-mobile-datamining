@@ -21,7 +21,7 @@ export default function DismissibleNewTag(dismissibleContent) {
   let closure_6;
   closure_6 = createCacheKey();
   let items = [dismissibleContent];
-  return jsx(importDefault(9821), {
+  return jsx(importDefault(9916), {
     contentTypes: items,
     children(visibleContent) {
       if (visibleContent.visibleContent !== dismissibleContent) {

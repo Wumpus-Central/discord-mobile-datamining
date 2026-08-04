@@ -12,7 +12,7 @@ export const useStageParticipants = function useStageParticipants(id, SPEAKER) {
   return callback(_require(589).useStateFromStores(items, () => {
     const items = [outer1_3.getMutableParticipants(closure_0, closure_1), outer1_3.getParticipantsVersion(closure_0)];
     return items;
-  }, items1, _require(5087).isVersionEqual), 1)[0];
+  }, items1, _require(5116).isVersionEqual), 1)[0];
 };
 export const useStageParticipantsCount = function useStageParticipantsCount(id, AUDIENCE) {
   const _require = id;
@@ -28,7 +28,7 @@ export const useSortedRequestToSpeakParticipants = function useSortedRequestToSp
   return callback(_require(589).useStateFromStores(items, () => {
     const items = [outer1_3.getMutableRequestToSpeakParticipants(closure_0), outer1_3.getRequestToSpeakParticipantsVersion(closure_0)];
     return items;
-  }, items1, _require(5087).isVersionEqual), 1)[0];
+  }, items1, _require(5116).isVersionEqual), 1)[0];
 };
 export const useActualStageSpeakerCount = function useActualStageSpeakerCount(id) {
   const _require = id;

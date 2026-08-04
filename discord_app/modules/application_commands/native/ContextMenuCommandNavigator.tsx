@@ -20,8 +20,8 @@ export default function ContextMenuCommandNavigator() {
   let Screen;
   const tmp = createNativeStackNavigator();
   const require = tmp;
-  const layoutEffect = React.useLayoutEffect(() => tmp(6831).trackAppUIViewed(), []);
-  let obj = require(5636) /* NavigationStack */;
+  const layoutEffect = React.useLayoutEffect(() => tmp(6843).trackAppUIViewed(), []);
+  let obj = require(5665) /* NavigationStack */;
   const importDefault = obj.useAccessibilityNativeStackOptions();
   const rect = importDefault(1581)();
   obj = { style: items, children: null };
@@ -60,7 +60,7 @@ export default function ContextMenuCommandNavigator() {
   obj2[0] = intl.string(require(1236) /* getSystemLocale */.t.PHjkRE);
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
-    return tmp(15782).default;
+    return tmp(15813).default;
   };
   const items1 = [
     callback(Screen, obj1),
@@ -75,7 +75,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return tmp(15784).default;
+        return tmp(15815).default;
       }
     })
   ];

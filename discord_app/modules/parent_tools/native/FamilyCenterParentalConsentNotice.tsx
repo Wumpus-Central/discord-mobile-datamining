@@ -13,9 +13,9 @@ const result = require("createCacheKey").fileFinishedImporting("modules/parent_t
 export default function FamilyCenterParentalConsentNotice() {
   const tmp = createCacheKey();
   const require = tmp;
-  let obj = require(13982) /* useIsParentalConsentBannerActive */;
+  let obj = require(14016) /* useIsParentalConsentBannerActive */;
   const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-  let obj1 = require(13983) /* useParentalConsentWarning */;
+  let obj1 = require(14017) /* useParentalConsentWarning */;
   const parentalConsentWarning = obj1.useParentalConsentWarning();
   let daysRemaining;
   if (parentalConsentWarning != null) {
@@ -39,16 +39,16 @@ export default function FamilyCenterParentalConsentNotice() {
           const intl2 = tmp2(1236).intl;
           obj = { learnMoreHook: null };
           obj[0] = learnMoreHook;
-          let formatResult = intl2.format(tmp9(2255).S5kmfO, obj);
+          let formatResult = intl2.format(tmp9(2285).S5kmfO, obj);
         } else {
           const intl = tmp2(1236).intl;
           obj1 = { count: null, learnMoreHook: null };
           obj1[0] = daysRemaining;
           obj1[1] = learnMoreHook;
-          formatResult = intl.format(tmp9(2255)["5jm+T3"], obj1);
+          formatResult = intl.format(tmp9(2285)["5jm+T3"], obj1);
         }
         obj[1] = formatResult;
-        return jsx(importDefault(13991), { style: null, text: null });
+        return jsx(importDefault(14025), { style: null, text: null });
       }
     }
   }

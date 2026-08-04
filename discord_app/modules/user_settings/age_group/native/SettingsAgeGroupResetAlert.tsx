@@ -43,12 +43,12 @@ export default function SettingsAgeGroupResetAlert() {
               c1 = 2;
               c3 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(12903).resetAgeVerification();
+              obj1[0] = outer1_0(12937).resetAgeVerification();
               return obj1;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
-            let obj2 = outer1_0(3955);
+            let obj2 = outer1_0(3985);
             const intl = outer1_0(1236).intl;
             obj2.presentError(intl.string(outer1_0(1236).t.fEptJP));
             const _Error = Error;
@@ -64,7 +64,7 @@ export default function SettingsAgeGroupResetAlert() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = outer1_0(4596);
+            obj = outer1_0(4625);
             obj.dismissAlert(outer1_6);
             navigation.goBack();
             dependencyMap = 0;
@@ -94,9 +94,9 @@ export default function SettingsAgeGroupResetAlert() {
   _require = obj.useNavigation();
   obj = { title: null, content: null, actions: null };
   let intl = _require(1236).intl;
-  obj[0] = intl.string(_handleConfirm(2773)["bD//cU"]);
+  obj[0] = intl.string(_handleConfirm(2803)["bD//cU"]);
   const intl2 = _require(1236).intl;
-  obj[1] = intl2.string(_handleConfirm(2773).FbTAmI);
+  obj[1] = intl2.string(_handleConfirm(2803).FbTAmI);
   obj = { children: null };
   let obj1 = {
     variant: "destructive",
@@ -113,14 +113,14 @@ export default function SettingsAgeGroupResetAlert() {
     text: null
   };
   const intl3 = _require(1236).intl;
-  obj1[2] = intl3.string(_handleConfirm(2773).V822Mp);
-  const items = [callback(_require(4599).AlertActionButton, obj1, "confirm"), ];
+  obj1[2] = intl3.string(_handleConfirm(2803).V822Mp);
+  const items = [callback(_require(4628).AlertActionButton, obj1, "confirm"), ];
   let obj2 = { variant: "secondary", text: null };
   const intl4 = _require(1236).intl;
   obj2[1] = intl4.string(_require(1236).t["ETE/oC"]);
-  items[1] = callback(_require(4599).AlertActionButton, obj2, "cancel");
+  items[1] = callback(_require(4628).AlertActionButton, obj2, "cancel");
   obj[0] = items;
-  obj[2] = callback2(_require(4599).AlertActions, obj);
-  return callback(_require(4599).AlertModal, obj);
+  obj[2] = callback2(_require(4628).AlertActions, obj);
+  return callback(_require(4628).AlertModal, obj);
 };
 export const SETTINGS_AGE_GROUP_RESET_ALERT_ID = "settings-age-group-reset";

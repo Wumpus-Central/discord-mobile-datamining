@@ -4,8 +4,8 @@ let result = require("enforcing").fileFinishedImporting("modules/native_permissi
 
 export default function openNotificationSettings() {
   if (obj.isAndroid()) {
-    const result = importDefault(4807).openNotificationSettings();
-    const obj2 = importDefault(4807);
+    const result = importDefault(4836).openNotificationSettings();
+    const obj2 = importDefault(4836);
   } else {
     const DeviceSettingsManager = NativeModules.DeviceSettingsManager;
     const result1 = DeviceSettingsManager.openNotificationSettings();

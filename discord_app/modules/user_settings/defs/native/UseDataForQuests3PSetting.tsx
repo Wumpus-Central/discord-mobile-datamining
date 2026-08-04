@@ -7,19 +7,19 @@ const toggle = createToggle.createToggle({
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   useValue: function useDataToSupportQuests3PSettingValue() {
-    const Quests3PDataOptedOut = require(3928) /* explicitContentFromProto */.Quests3PDataOptedOut;
+    const Quests3PDataOptedOut = require(3958) /* explicitContentFromProto */.Quests3PDataOptedOut;
     return !Quests3PDataOptedOut.useSetting();
   },
   onValueChange: function onDataToSupportQuests3PSettingValueChange(arg0) {
-    const Quests3PDataOptedOut = require(3928) /* explicitContentFromProto */.Quests3PDataOptedOut;
+    const Quests3PDataOptedOut = require(3958) /* explicitContentFromProto */.Quests3PDataOptedOut;
     Quests3PDataOptedOut.updateSetting(!arg0);
   },
   useIsDisabled: function useDataToSupportQuests3PSettingIsDisabled() {
-    let adPersonalizationTogglesDisabled = require(14737) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
-    const DropsOptedOut = require(3928) /* explicitContentFromProto */.DropsOptedOut;
+    let adPersonalizationTogglesDisabled = require(14771) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
+    const DropsOptedOut = require(3958) /* explicitContentFromProto */.DropsOptedOut;
     const setting = DropsOptedOut.useSetting();
-    const obj = require(14737) /* useAdPersonalizationTogglesDisabled */;
-    const isParentallyControlled = require(13941) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    const obj = require(14771) /* useAdPersonalizationTogglesDisabled */;
+    const isParentallyControlled = require(13975) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
     if (!adPersonalizationTogglesDisabled) {
       adPersonalizationTogglesDisabled = setting;
     }
@@ -36,19 +36,19 @@ let obj = {
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   useValue: function useDataToSupportQuests3PSettingValue() {
-    const Quests3PDataOptedOut = require(3928) /* explicitContentFromProto */.Quests3PDataOptedOut;
+    const Quests3PDataOptedOut = require(3958) /* explicitContentFromProto */.Quests3PDataOptedOut;
     return !Quests3PDataOptedOut.useSetting();
   },
   onValueChange: function onDataToSupportQuests3PSettingValueChange(arg0) {
-    const Quests3PDataOptedOut = require(3928) /* explicitContentFromProto */.Quests3PDataOptedOut;
+    const Quests3PDataOptedOut = require(3958) /* explicitContentFromProto */.Quests3PDataOptedOut;
     Quests3PDataOptedOut.updateSetting(!arg0);
   },
   useIsDisabled: function useDataToSupportQuests3PSettingIsDisabled() {
-    let adPersonalizationTogglesDisabled = require(14737) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
-    const DropsOptedOut = require(3928) /* explicitContentFromProto */.DropsOptedOut;
+    let adPersonalizationTogglesDisabled = require(14771) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
+    const DropsOptedOut = require(3958) /* explicitContentFromProto */.DropsOptedOut;
     const setting = DropsOptedOut.useSetting();
-    const obj = require(14737) /* useAdPersonalizationTogglesDisabled */;
-    const isParentallyControlled = require(13941) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    const obj = require(14771) /* useAdPersonalizationTogglesDisabled */;
+    const isParentallyControlled = require(13975) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
     if (!adPersonalizationTogglesDisabled) {
       adPersonalizationTogglesDisabled = setting;
     }

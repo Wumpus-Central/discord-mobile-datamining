@@ -17,7 +17,7 @@ export default function OrbCheckoutAmountTag(orbAmount) {
   const tmp = callback2();
   let obj = { style: tmp.orbAmountTag, children: null };
   obj = { size: "custom", color: "icon-strong", style: tmp.orbsIcon };
-  const items = [callback(require(8891) /* OrbsIcon */.OrbsIcon, obj), ];
+  const items = [callback(require(9326) /* OrbsIcon */.OrbsIcon, obj), ];
   if (null == orbAmount) {
     const intl2 = tmp5(1236).intl;
     let stringResult = intl2.string(tmp5(1236).t.pfChQr);
@@ -33,7 +33,7 @@ export default function OrbCheckoutAmountTag(orbAmount) {
     str = orbAmount;
   }
   obj1[2] = str;
-  items[1] = callback(require(4251) /* Text */.Text, obj1);
+  items[1] = callback(require(4281) /* Text */.Text, obj1);
   obj[1] = items;
   return closure_4(View, obj);
 };

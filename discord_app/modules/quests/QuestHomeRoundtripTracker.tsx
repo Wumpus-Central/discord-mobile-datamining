@@ -18,14 +18,14 @@ prototype["sendMetric"] = function sendMetric(timeout, duration) {
   obj.track(AnalyticEvents.QUEST_HOME_ROUNDTRIP, obj);
   if (Math.random() <= 0.1) {
     obj = { name: null, tags: null };
-    obj[0] = require(6963) /* set */.MetricEvents.QUEST_HOME_ROUNDTRIP;
+    obj[0] = require(6975) /* set */.MetricEvents.QUEST_HOME_ROUNDTRIP;
     const _HermesInternal = HermesInternal;
     const items = ["includes_bounties:" + arg2, ];
     const _HermesInternal2 = HermesInternal;
     items[1] = "timeout:" + timeout;
     obj[1] = items;
-    importDefault(6958).distribution(obj, duration);
-    const tmpResult = importDefault(6958);
+    importDefault(6970).distribution(obj, duration);
+    const tmpResult = importDefault(6970);
   }
 };
 prototype["startTracking"] = function startTracking() {
@@ -73,7 +73,7 @@ prototype["stopTracking"] = function stopTracking() {
       const _Math2 = Math;
       self.sendMetric(flag2, Math.min(rounded, c4), flag);
     }
-    obj2 = importDefault(9635);
+    obj2 = importDefault(10384);
   }
 };
 prototype["clearTracking"] = function clearTracking() {

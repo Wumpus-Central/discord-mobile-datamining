@@ -13,10 +13,10 @@ export default {
       let obj = { userId: null, applicationId: null };
       obj[0] = userId;
       obj[1] = applicationId;
-      importDefault(9239).removeGameFriend(obj);
-      const obj3 = importDefault(9239);
+      importDefault(9552).removeGameFriend(obj);
+      const obj3 = importDefault(9552);
     } else {
-      obj = importDefault(9104);
+      obj = importDefault(9161);
       obj = { location: null };
       obj[0] = tmp;
       obj.removeFriend(userId, obj);
@@ -30,10 +30,10 @@ export default {
       let obj = { userId: null, applicationId: null };
       obj[0] = userId;
       obj[1] = applicationId;
-      let result = importDefault(9239).cancelGameFriendRequest(obj);
-      const obj3 = importDefault(9239);
+      let result = importDefault(9552).cancelGameFriendRequest(obj);
+      const obj3 = importDefault(9552);
     } else {
-      obj = importDefault(9104);
+      obj = importDefault(9161);
       obj = { location: null };
       obj[0] = tmp;
       result = obj.cancelFriendRequest(userId, obj);
@@ -52,10 +52,10 @@ export default {
       let obj = { userId: null, applicationId: null };
       obj[0] = userId;
       obj[1] = applicationId;
-      let result = importDefault(9239).acceptGameFriendRequest(obj);
-      const obj4 = importDefault(9239);
+      let result = importDefault(9552).acceptGameFriendRequest(obj);
+      const obj4 = importDefault(9552);
     } else {
-      obj = importDefault(9104);
+      obj = importDefault(9161);
       obj = { userId: null, confirmStrangerRequest: null, context: null };
       obj[0] = userId;
       obj[1] = confirmStrangerRequest;

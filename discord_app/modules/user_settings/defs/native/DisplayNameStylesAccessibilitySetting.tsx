@@ -7,12 +7,12 @@ function useValue() {
   return require(589) /* initialize */.useStateFromStores(items, () => obj.displayNameStylesEnabled);
 }
 function onValueChange(enabled) {
-  const result = require(13584) /* setFontSize */.setDisplayNameStylesEnabled(enabled);
+  const result = require(13618) /* setFontSize */.setDisplayNameStylesEnabled(enabled);
 }
 createToggle = {
   useTitle() {
     const intl = require(1236) /* getSystemLocale */.intl;
-    return intl.string(importDefault(2613)["2gFUEw"]);
+    return intl.string(importDefault(2643)["2gFUEw"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue,

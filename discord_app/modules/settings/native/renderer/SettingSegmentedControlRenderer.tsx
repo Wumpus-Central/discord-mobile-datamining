@@ -74,10 +74,10 @@ export default function SettingSegmentedControl(node) {
     });
     return items;
   }, items);
-  let obj = _require(8535);
+  let obj = _require(8878);
   const segmentedControlState = obj.useSegmentedControlState({ items: memo, pageWidth: tmp3, defaultIndex: tmp5 });
   obj = { children: null };
-  obj = { style: tmp.controlContainer, onLayout: callback, children: callback2(_require(8941).SegmentedControl, { state: segmentedControlState }) };
+  obj = { style: tmp.controlContainer, onLayout: callback, children: callback2(_require(9063).SegmentedControl, { state: segmentedControlState }) };
   const items1 = [callback2(View, obj), ];
   const tmp4 = callback(React.useState(() => {
     const field = outer1_6.getField("selected");
@@ -102,7 +102,7 @@ export default function SettingSegmentedControl(node) {
     }
     return c0;
   }), 2);
-  items1[1] = callback2(View, { style: tmp.pageContainer, children: callback2(_require(8939).SegmentedControlPages, { state: segmentedControlState }) });
+  items1[1] = callback2(View, { style: tmp.pageContainer, children: callback2(_require(9480).SegmentedControlPages, { state: segmentedControlState }) });
   obj[0] = items1;
   return callback3(closure_9, obj);
 };

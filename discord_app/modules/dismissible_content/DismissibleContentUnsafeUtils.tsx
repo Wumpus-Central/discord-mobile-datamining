@@ -487,7 +487,7 @@ export const UNSAFE_markDismissibleContentAsDismissed = function UNSAFE_markDism
   return applyArgumentsResult;
 };
 export const UNSAFE_isSnowflakeBoundDismissibleContentDismissed = function UNSAFE_isSnowflakeBoundDismissibleContentDismissed(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionId) {
-  let obj = require(4093) /* useNewUserDismissibleContent */;
+  let obj = require(4123) /* useNewUserDismissibleContent */;
   if (obj.disableNewUserDismissibleContent(PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE)) {
     return { isDismissed: true, lastDismissedSnowflakeId: null };
   } else {

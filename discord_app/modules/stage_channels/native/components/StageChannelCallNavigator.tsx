@@ -1,6 +1,6 @@
 import set from "set";
 import ManaContext from "ManaContext";
-import get_ActivityIndicator from "module_10861";
+import get_ActivityIndicator from "module_10713";
 import { ThemeTypes } from "sum";
 import jsxProd from "GestureContainer";
 import createCacheKey from "createCacheKey";
@@ -74,7 +74,7 @@ function JoinStageOverlay(channel) {
   const tmp = callback(React.useState(false), 2);
   first = tmp[0];
   importDefault = tmp[1];
-  let obj = first(4116);
+  let obj = first(4146);
   const fn = function s() {
     let obj = first(outer1_2[7]);
     let num = 0;
@@ -84,7 +84,7 @@ function JoinStageOverlay(channel) {
     obj = { opacity: obj.withSpring(num, outer1_11) };
     return obj;
   };
-  obj = { withSpring: first(4665).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
+  obj = { withSpring: first(4694).withSpring, showOverlay: first, viewAnimationConfig: closure_11 };
   fn.__closure = obj;
   fn.__workletHash = 1929951426580;
   fn.__initData = closure_15;
@@ -104,17 +104,17 @@ function JoinStageOverlay(channel) {
   items[1] = obj1;
   items[2] = animatedStyle;
   obj[0] = items;
-  obj[1] = callback2(importDefault(10860), { channel: channel.channel });
-  return callback2(importDefault(4116).View, obj);
+  obj[1] = callback2(importDefault(10712), { channel: channel.channel });
+  return callback2(importDefault(4146).View, obj);
 }
 function StagePromptWrapper(channel) {
   const obj = { children: null };
   obj[0] = callback2(StagePromptInner, { channel: channel.channel });
-  return callback2(require(10980) /* RootThemeContextProvider */.DisableCustomTheme, obj);
+  return callback2(require(10851) /* RootThemeContextProvider */.DisableCustomTheme, obj);
 }
 function StagePromptInner(channel) {
   const tmp = createCacheKey();
-  return callback2(require(10823) /* AgeVerificationSpeakerActionSheet */.AnimatedStartStagePrompt, { channel: channel.channel, style: createCacheKey().startStagePrompt });
+  return callback2(require(10675) /* AgeVerificationSpeakerActionSheet */.AnimatedStartStagePrompt, { channel: channel.channel, style: createCacheKey().startStagePrompt });
 }
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = jsxProd);

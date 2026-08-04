@@ -27,14 +27,14 @@ prototype["update"] = function update(current) {
     const history = self.history;
     const obj = { state: null, startTime: null };
     obj[0] = current;
-    obj[1] = require(4331) /* sleep */.now();
+    obj[1] = require(4360) /* sleep */.now();
     history.push(obj);
-    const obj2 = require(4331) /* sleep */;
+    const obj2 = require(4360) /* sleep */;
   }
 };
 prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccessStats(nowResult) {
   if (nowResult === undefined) {
-    let obj = RTC_DISCONNECTED(4331);
+    let obj = RTC_DISCONNECTED(4360);
     nowResult = obj.now();
   }
   const stateDurations = this.getStateDurations(nowResult);
@@ -117,7 +117,7 @@ prototype["getStateDurations"] = function getStateDurations(nowResult) {
   if (0 === this.history.length) {
     return [];
   } else {
-    let arr = importDefault(12943)(self.history, (state, startTime) => ({ state: state.state, durationMs: startTime.startTime - state.startTime }));
+    let arr = importDefault(12977)(self.history, (state, startTime) => ({ state: state.state, durationMs: startTime.startTime - state.startTime }));
     let obj = importDefault(12);
     const lastResult = obj.last(self.history);
     obj = { state: null, durationMs: null };

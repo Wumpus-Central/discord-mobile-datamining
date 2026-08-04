@@ -28,7 +28,7 @@ const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
   if (!tmp3Result.isAndroid()) {
     if (accessibilityLabel == null) {
       let tmp9;
-      if (typeof label !== "ge") {
+      if (typeof label !== "_iter") {
         tmp9 = label;
       }
       accessibilityLabel = tmp9;
@@ -41,8 +41,8 @@ const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
     tmp10 = id;
   }
   obj.accessibilityLabelledBy = tmp10;
-  obj.children = jsx(require(5892) /* TextField */.TextField, { ref });
-  return jsx(require(7702) /* Input */.Input, { ref });
+  obj.children = jsx(require(5902) /* TextField */.TextField, { ref });
+  return jsx(require(7714) /* Input */.Input, { ref });
 });
 const result = require("Input").fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
 

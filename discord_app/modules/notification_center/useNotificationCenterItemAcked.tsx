@@ -11,8 +11,8 @@ export const useNotificationCenterItemAcked = function useNotificationCenterItem
   let tmp4 = !forceUnacked;
   if (!forceUnacked) {
     if (!stateFromStores) {
-      stateFromStores = _require(7010).isRemoteAcked(item, ackedBeforeId);
-      const tmpResult = _require(7010);
+      stateFromStores = _require(7022).isRemoteAcked(item, ackedBeforeId);
+      const tmpResult = _require(7022);
     }
     tmp4 = stateFromStores;
   }

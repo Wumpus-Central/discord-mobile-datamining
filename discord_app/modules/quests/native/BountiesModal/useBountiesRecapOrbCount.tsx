@@ -19,7 +19,7 @@ getRecapOrbCountFromPullProgress.__workletHash = 14295638108053;
 getRecapOrbCountFromPullProgress.__initData = { code: "function getRecapOrbCountFromPullProgress_useBountiesRecapOrbCountTsx1(progress,targetOrbAmount){if(targetOrbAmount<=0||!Number.isFinite(targetOrbAmount)){return 0;}const clampedProgress=Math.min(1,Math.max(0,progress));return Math.round(clampedProgress*targetOrbAmount);}" };
 let closure_5 = { code: "function useBountiesRecapOrbCountTsx2(){const{enabled,recapRevealHeight,getRevealProgress,scrollY,lastBountyScrollOffset,RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS,getRecapOrbCountFromPullProgress,targetOrbAmount}=this.__closure;if(!enabled||recapRevealHeight<=0){return{count:0,revealed:false};}const pullProgress=getRevealProgress(scrollY.get(),lastBountyScrollOffset,recapRevealHeight)/RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS;if(pullProgress<=0.1){return{count:0,revealed:false};}return{count:getRecapOrbCountFromPullProgress(pullProgress,targetOrbAmount),revealed:true};}" };
 let closure_6 = { code: "function useBountiesRecapOrbCountTsx3({count:count,revealed:revealed}){const{runOnJS,resetDisplayCount,setDisplayCountMonotonic}=this.__closure;if(!revealed){runOnJS(resetDisplayCount)();return;}runOnJS(setDisplayCountMonotonic)(count);}" };
-let result = require("module_4116").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapOrbCount.tsx");
+let result = require("module_4146").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapOrbCount.tsx");
 
 export { getRecapOrbCountFromPullProgress };
 export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scrollY) {
@@ -55,7 +55,7 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
         if (result <= 0.1) {
           let obj = { count: 0, revealed: false };
         } else {
-          if (typeof enabled !== "error") {
+          if (typeof enabled !== "find") {
             HermesBuiltin.throwTypeError();
           }
           let num2 = 0;

@@ -27,7 +27,7 @@ export default function ChannelBadge(arg0) {
       obj = { mentionsCount: null, isMentionLowImportance: null };
       obj[0] = mentionCount;
       obj[1] = isMentionLowImportance;
-      obj[1] = jsx(importDefault(15196), { mentionsCount: null, isMentionLowImportance: null });
+      obj[1] = jsx(importDefault(15230), { mentionsCount: null, isMentionLowImportance: null });
       let tmp5 = <View mentionsCount={null} isMentionLowImportance={null} />;
     }
     return tmp5;
@@ -35,7 +35,7 @@ export default function ChannelBadge(arg0) {
   if (isNewChannel) {
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.channelInfoContainer;
-    obj1[1] = jsx(importDefault(11573), {});
+    obj1[1] = jsx(importDefault(11580), {});
     tmp5 = <View style={null}>{null}</View>;
   } else {
     tmp5 = null;
@@ -50,7 +50,7 @@ export default function ChannelBadge(arg0) {
             obj2[0] = tmp.channelInfoContainer;
             const obj3 = { variant: "text-xs/semibold", color: "text-muted", children: null };
             obj3[2] = tmp2(1851).humanizeValue(postsWithUnreadsCount, stateFromStores);
-            obj2[1] = jsx(tmp2(4251).Text, { variant: "text-xs/semibold", color: "text-muted", children: null });
+            obj2[1] = jsx(tmp2(4281).Text, { variant: "text-xs/semibold", color: "text-muted", children: null });
             tmp5 = <View style={null}>{null}</View>;
             const tmp2Result = tmp2(1851);
           }

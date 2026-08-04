@@ -14,7 +14,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
   let guildOrApplication;
   let skuId;
   ({ skuId, guildOrApplication } = theme);
-  ({ colors, baseColors } = importDefault(7851)(theme.theme));
+  ({ colors, baseColors } = importDefault(7863)(theme.theme));
   let obj = addSku;
   const value = addSku.get(skuId);
   let applicationId;
@@ -24,7 +24,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
   application = application.getApplication(applicationId);
   const isFetchingResult = obj.isFetching(skuId);
   let result = null != applicationId;
-  const tmp3 = importDefault(7851)(theme.theme);
+  const tmp3 = importDefault(7863)(theme.theme);
   if (result) {
     result = obj2.isFetchingApplication(applicationId);
   }
@@ -43,11 +43,11 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       return null;
     } else {
       if (null != application) {
-        if (tmp(11031)(application)) {
+        if (tmp(10916)(application)) {
           if ("guild" !== guildOrApplication.type) {
-            const result1 = require(5732) /* useSKUPrice */.isSlayerSkuAvailableOnThisPlatform(value);
-            const obj4 = require(5732) /* useSKUPrice */;
-            const str4 = require(5728) /* getPrice */.getCardImageURL(value);
+            const result1 = require(5761) /* useSKUPrice */.isSlayerSkuAvailableOnThisPlatform(value);
+            const obj4 = require(5761) /* useSKUPrice */;
+            const str4 = require(5757) /* getPrice */.getCardImageURL(value);
             str = undefined;
             if (str4 != null) {
               str = str4.toString();
@@ -71,7 +71,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             if (result1) {
               let stringResult = string(tmp12(1236).t.boqtTA);
             } else {
-              stringResult = string(tmp(3193).BKf0MM);
+              stringResult = string(tmp(3223).BKf0MM);
             }
             obj.acceptLabelText = stringResult;
             let prop;

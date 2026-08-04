@@ -154,7 +154,7 @@ class AnalyticsFeedItemSeenManager {
     };
     obj.getTrackedFeedItem = function getTrackedFeedItem(feedItemId) {
       if (null == obj.trackedFeedItems[feedItemId]) {
-        if (typeof outer1_4 !== "error") {
+        if (typeof outer1_4 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         obj = Object.create(outer1_4.prototype);

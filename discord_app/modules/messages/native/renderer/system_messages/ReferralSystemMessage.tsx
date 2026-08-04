@@ -21,31 +21,31 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
       referrer_id = relevantUserTrialOffer.referrer_id;
     }
     if (referrer_id === id) {
-      const obj3 = require(7966) /* createReferralTrialEmbedRedeemable */;
+      const obj3 = require(7978) /* createReferralTrialEmbedRedeemable */;
       const referralTrialEmbedRedeemable = obj3.createReferralTrialEmbedRedeemable(message, theme, id, relevantUserTrialOffer);
       if (null == referralTrialEmbedRedeemable) {
         return null;
       } else {
         let obj = {};
-        const merged = Object.assign(importDefault(7870)(message));
+        const merged = Object.assign(importDefault(7882)(message));
         obj.referralTrialOfferInfo = referralTrialEmbedRedeemable;
         const tmp17 = createCacheKey(theme);
-        obj.iconUrl = tmp8(7853).getAssetUriForEmbed(importDefault(7614));
+        obj.iconUrl = tmp8(7865).getAssetUriForEmbed(importDefault(7626));
         ({ iconTintColor: obj4.iconTintColor, iconDividerColor: obj4.iconDividerColor } = tmp17);
         return obj;
       }
       tmp8 = require;
     } else {
-      const obj6 = require(7957) /* createReferralTrialEmbedRedesign */;
+      const obj6 = require(7969) /* createReferralTrialEmbedRedesign */;
       const referralTrialEmbedRedesign = obj6.createReferralTrialEmbedRedesign(message, theme, id, relevantUserTrialOffer);
       if (null == referralTrialEmbedRedesign) {
         return null;
       } else {
         obj = {};
-        const merged1 = Object.assign(importDefault(7870)(message));
+        const merged1 = Object.assign(importDefault(7882)(message));
         obj.referralTrialOfferInfoRedesign = referralTrialEmbedRedesign;
         const tmp4 = createCacheKey(theme);
-        obj.iconUrl = tmp23(7853).getAssetUriForEmbed(importDefault(7614));
+        obj.iconUrl = tmp23(7865).getAssetUriForEmbed(importDefault(7626));
         ({ iconTintColor: obj.iconTintColor, iconDividerColor: obj.iconDividerColor } = tmp4);
         obj.timestamp = undefined;
         return obj;

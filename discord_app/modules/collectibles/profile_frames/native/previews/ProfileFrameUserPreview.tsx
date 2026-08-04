@@ -19,5 +19,5 @@ export default function ProfileFrameUserPreview(profileFrame) {
   }
   obj[1] = formatToPlainStringResult;
   const merged1 = Object.assign(merged);
-  return jsx(importDefault(8411), { profileFrameOverride: profileFrame, accessibilityLabel: null });
+  return jsx(importDefault(9365), { profileFrameOverride: profileFrame, accessibilityLabel: null });
 };

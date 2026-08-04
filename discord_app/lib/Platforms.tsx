@@ -44,11 +44,11 @@ obj2[3] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset"
 const obj4 = {
   replacedBy: ApplicationIdentityConnections.BATTLENET,
   getMigrationExperimentEnabled(location) {
-    const battlenetSocialSDKMigrationExperiment = require(4282) /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
+    const battlenetSocialSDKMigrationExperiment = require(4312) /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
     return battlenetSocialSDKMigrationExperiment.getConfig({ location }).enabled;
   },
   useMigrationExperimentEnabled(location) {
-    const battlenetSocialSDKMigrationExperiment = require(4282) /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
+    const battlenetSocialSDKMigrationExperiment = require(4312) /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
     return battlenetSocialSDKMigrationExperiment.useConfig({ location }).enabled;
   },
   helpCenterLink: "https://discord.com/blog/link-world-of-warcraft-with-discord",
@@ -85,12 +85,12 @@ obj11[3] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset
 const obj13 = {
   replacedBy: ApplicationIdentityConnections.RIOT_GAMES,
   getMigrationExperimentEnabled(location) {
-    let obj = require(4282) /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = require(4312) /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.getIsRiotSocialSDKMigrationEnabled(obj);
   },
   useMigrationExperimentEnabled(location) {
-    let obj = require(4282) /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = require(4312) /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.useIsRiotSocialSDKMigrationEnabled(obj);
   },
@@ -189,12 +189,12 @@ obj38[2] = { lightPNG: require("registerAsset"), darkPNG: require("registerAsset
 const obj40 = {
   replacedBy: ApplicationIdentityConnections.RIOT_GAMES,
   getMigrationExperimentEnabled(location) {
-    let obj = require(4282) /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = require(4312) /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.getIsRiotSocialSDKMigrationEnabled(obj);
   },
   useMigrationExperimentEnabled(location) {
-    let obj = require(4282) /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = require(4312) /* useIsRiotSocialSDKMigrationEnabled */;
     obj = { location };
     return obj.useIsRiotSocialSDKMigrationEnabled(obj);
   },

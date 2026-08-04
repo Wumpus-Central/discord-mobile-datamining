@@ -27,7 +27,7 @@ function useApplicationsInContext(allowFetch) {
   if ("channel" === context.type) {
     channel = context.channel;
   }
-  let obj = onlyWithCommands(8143);
+  let obj = onlyWithCommands(8155);
   const items = [onlyWithCommands(1906).ApplicationCommandType.CHAT];
   const hasBaseAccessPermissions = obj.usePermissionContext(channel, items).hasBaseAccessPermissions;
   const tmp2 = callback2(context, hasBaseAccessPermissions, flag);
@@ -111,7 +111,7 @@ function useApplicationsInContext(allowFetch) {
     includeBuiltIn = allowFetch.includeBuiltIn;
   }
   if (includeBuiltIn) {
-    items2.push(onlyWithCommands(8137).FAKE_BUILT_IN_APP);
+    items2.push(onlyWithCommands(8149).FAKE_BUILT_IN_APP);
   }
   obj = { apps: items2, loading: null };
   let fetching;
@@ -134,9 +134,9 @@ function sortApplicationFreceny(id, id2) {
   return store.getScoreWithoutLoadingLatest(id2.id) - scoreWithoutLoadingLatest;
 }
 function sortApplicationAlpha(FAKE_BUILT_IN_APP, FAKE_BUILT_IN_APP) {
-  const sectionName = require(8137) /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP);
-  const obj = require(8137) /* getShelfBadgeTypeIfActive */;
-  return callback(sectionName, require(8137) /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP));
+  const sectionName = require(8149) /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP);
+  const obj = require(8149) /* getShelfBadgeTypeIfActive */;
+  return callback(sectionName, require(8149) /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP));
 }
 function sortCommandsAlpha(displayName, displayName2) {
   return callback(displayName.displayName, displayName2.displayName);
@@ -222,7 +222,7 @@ export const filterApplicationAllowed = function filterApplicationAllowed(type) 
     channel = type.channel;
   }
   const items = [_require(1906).ApplicationCommandType.CHAT, _require(1906).ApplicationCommandType.PRIMARY_ENTRY_POINT];
-  let closure_1 = _require(8143).buildPermissionContext(channel, items);
+  let closure_1 = _require(8155).buildPermissionContext(channel, items);
   return (id) => {
     let closure_1;
     let closure_2;
@@ -396,7 +396,7 @@ export const filterCommandAllowed = function filterCommandAllowed(type) {
     channel = type.channel;
   }
   const items = [_require(1906).ApplicationCommandType.CHAT];
-  let closure_1 = _require(8143).buildPermissionContext(channel, items);
+  let closure_1 = _require(8155).buildPermissionContext(channel, items);
   let closure_2 = {};
   return (applicationId) => {
     let applicationAllowedForChannel;
@@ -1354,7 +1354,7 @@ export const useGlobalSearchResults = function useGlobalSearchResults(fetches) {
     substr = query.substring(1);
     tmp = substr;
   }
-  const tmp5 = fetches.entrypoint === substr(8358).AppLauncherEntrypoint.VOICE;
+  const tmp5 = fetches.entrypoint === substr(9467).AppLauncherEntrypoint.VOICE;
   dependencyMap = tmp5;
   guild_id = undefined;
   if ("channel" === context.type) {

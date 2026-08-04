@@ -27,7 +27,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.SENSITIVE_MEDIA_FILTERS,
   getComponent() {
-    return require(13931) /* UserSettingsSensitiveContentFilters */.default;
+    return require(13965) /* UserSettingsSensitiveContentFilters */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -1,6 +1,6 @@
 import set from "set";
 
-let set = new Set(require("module_8030"));
+let set = new Set(require("module_8042"));
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj[0] = regExp;

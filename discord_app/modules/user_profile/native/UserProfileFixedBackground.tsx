@@ -15,13 +15,13 @@ const memoResult = require("noop").memo((style) => {
   let theme;
   style = style.style;
   ({ gradientHeight, bannerHeight } = style);
-  let obj = require(3967) /* ManaContext */;
+  let obj = require(3997) /* ManaContext */;
   const themeContext = obj.useThemeContext();
   ({ primaryColor, secondaryColor, theme } = themeContext);
-  const gradientFallbackBackground = require(8416) /* useUserProfileColors */.useUserProfileColors({ theme, primaryColor, secondaryColor }).gradientFallbackBackground;
-  const obj2 = require(8416) /* useUserProfileColors */;
-  const obj3 = require(8689) /* useUserProfileGradientColors */;
-  const first = callback(require(8689) /* useUserProfileGradientColors */.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
+  const gradientFallbackBackground = require(8754) /* useUserProfileColors */.useUserProfileColors({ theme, primaryColor, secondaryColor }).gradientFallbackBackground;
+  const obj2 = require(8754) /* useUserProfileColors */;
+  const obj3 = require(8755) /* useUserProfileGradientColors */;
+  const first = callback(require(8755) /* useUserProfileGradientColors */.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
   if (null != primaryColor) {
     if (null != secondaryColor) {
       const _Math = Math;
@@ -34,7 +34,7 @@ const memoResult = require("noop").memo((style) => {
       obj[1] = items1;
       const items2 = [closure_4.absoluteFill, style];
       obj[2] = items2;
-      return jsx(importDefault(4677), { colors: null, locations: null, style: null, pointerEvents: "none" });
+      return jsx(importDefault(4706), { colors: null, locations: null, style: null, pointerEvents: "none" });
     }
   }
   style = [closure_4.absoluteFill, { backgroundColor: gradientFallbackBackground }, ];

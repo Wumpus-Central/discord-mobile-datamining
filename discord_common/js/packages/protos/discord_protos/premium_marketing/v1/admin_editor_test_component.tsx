@@ -20,7 +20,7 @@ class AdminEditorTestComponent$Type extends MessageType {
       name: "textarea_field",
       kind: "message",
       T() {
-            return callback(7260).LocalizedString;
+            return callback(7272).LocalizedString;
           }
     };
     items[4] = { no: 5, name: "checkbox_field", kind: "scalar", T: 8 };
@@ -61,7 +61,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (2 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let LocalizedString2 = require(7260) /* create */.LocalizedString;
+        let LocalizedString2 = require(7272) /* create */.LocalizedString;
         let tmp29 = LocalizedString2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -71,7 +71,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (4 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let LocalizedString = require(7260) /* create */.LocalizedString;
+        let LocalizedString = require(7272) /* create */.LocalizedString;
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -122,7 +122,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
     const tagResult = tag.tag(1, require(1307).WireType.LengthDelimited);
   }
   if (deprecatedField.localizedTextField) {
-    const LocalizedString = require(7260) /* create */.LocalizedString;
+    const LocalizedString = require(7272) /* create */.LocalizedString;
     const tagResult1 = tag.tag(2, require(1307).WireType.LengthDelimited);
     const joined = LocalizedString.internalBinaryWrite(deprecatedField.localizedTextField, tag.tag(2, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(deprecatedField.localizedTextField, tag.tag(2, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -132,7 +132,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(deprecatedField,
     const tagResult2 = tag.tag(3, require(1307).WireType.LengthDelimited);
   }
   if (deprecatedField.textareaField) {
-    const LocalizedString2 = require(7260) /* create */.LocalizedString;
+    const LocalizedString2 = require(7272) /* create */.LocalizedString;
     const tagResult3 = tag.tag(4, require(1307).WireType.LengthDelimited);
     const joined1 = LocalizedString2.internalBinaryWrite(deprecatedField.textareaField, tag.tag(4, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(deprecatedField.textareaField, tag.tag(4, require(1307).WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -170,7 +170,7 @@ items[3] = {
   name: "textarea_field",
   kind: "message",
   T() {
-    return callback(7260).LocalizedString;
+    return callback(7272).LocalizedString;
   }
 };
 items[4] = { no: 5, name: "checkbox_field", kind: "scalar", T: 8 };

@@ -3,7 +3,7 @@ const result = require("set").fileFinishedImporting("modules/stage_channels/useS
 
 export default function useStageChannelConnectAction(arg0) {
   if (!tmp) {
-    if (importDefault(10803)(arg0, true).moderator) {
+    if (importDefault(10654)(arg0, true).moderator) {
       let NORMAL = obj.START_EVENT;
     }
     return NORMAL;
@@ -12,5 +12,5 @@ export default function useStageChannelConnectAction(arg0) {
 };
 export const ChannelConnectAction = obj;
 export const useStageChannelStartEvent = function useStageChannelStartEvent(id) {
-  return { isLive: importDefault(7687)(id), isModerator: importDefault(10803)(id, true).moderator };
+  return { isLive: importDefault(7699)(id), isModerator: importDefault(10654)(id, true).moderator };
 };

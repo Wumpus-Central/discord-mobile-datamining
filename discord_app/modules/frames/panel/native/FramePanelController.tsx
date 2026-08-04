@@ -37,13 +37,13 @@ export default function FramePanelController(children) {
   }, []);
   ({ mode, hasConnectedActivity, connectedActivityAppId, currentApp, orientationLockStateForApp } = stateFromStoresObject);
   obj = { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null };
-  obj[0] = importDefault(15953);
+  obj[0] = importDefault(15986);
   obj[1] = orientationLockStateForApp;
   obj[2] = mode;
   obj[3] = hasConnectedActivity;
   obj[4] = connectedActivityAppId;
   obj[5] = currentApp;
-  obj[6] = importDefault(10661).updateFramePanelMode;
+  obj[6] = importDefault(10510).updateFramePanelMode;
   obj[7] = children.children;
-  return jsx(require(15919) /* BaseActivityPanelController */.BaseActivityPanelController, { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null });
+  return jsx(require(15952) /* BaseActivityPanelController */.BaseActivityPanelController, { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null });
 };

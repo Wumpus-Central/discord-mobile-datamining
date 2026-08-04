@@ -144,17 +144,17 @@ export const getAttachmentPayload = function getAttachmentPayload(closure_0, clo
     obj.is_clip = true;
     obj.title = closure_0.clip.name;
     obj.application_id = closure_0.clip.applicationId;
-    obj.clip_created_at = require(4790) /* getClipCreatedAt */.getClipCreatedAt(closure_0.clip.createdAt);
-    const obj2 = require(4790) /* getClipCreatedAt */;
-    obj.clip_participant_ids = require(4790) /* getClipCreatedAt */.getClipParticipantIds(closure_0.clip.users);
+    obj.clip_created_at = require(4819) /* getClipCreatedAt */.getClipCreatedAt(closure_0.clip.createdAt);
+    const obj2 = require(4819) /* getClipCreatedAt */;
+    obj.clip_participant_ids = require(4819) /* getClipCreatedAt */.getClipParticipantIds(closure_0.clip.users);
     obj.clip_remote_id = closure_0.clip.remoteClipId;
-    const obj3 = require(4790) /* getClipCreatedAt */;
-    obj.clip_events_timeline = require(4790) /* getClipCreatedAt */.getClipEventsTimeline(closure_0.clip);
-    const obj4 = require(4790) /* getClipCreatedAt */;
+    const obj3 = require(4819) /* getClipCreatedAt */;
+    obj.clip_events_timeline = require(4819) /* getClipCreatedAt */.getClipEventsTimeline(closure_0.clip);
+    const obj4 = require(4819) /* getClipCreatedAt */;
   }
   let tmp9 = "item" in closure_0 && null != closure_0.item;
   if (tmp9) {
-    tmp9 = closure_0.item.platform === require(4788) /* cancel */.UploadPlatform.WEB;
+    tmp9 = closure_0.item.platform === require(4817) /* cancel */.UploadPlatform.WEB;
   }
   if (tmp9) {
     str = "mimeType";

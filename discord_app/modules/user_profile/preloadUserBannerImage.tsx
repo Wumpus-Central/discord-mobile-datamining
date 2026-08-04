@@ -25,7 +25,7 @@ export default function preloadUserBannerImage(user) {
           obj[0] = id;
           obj[1] = arg1;
           obj[2] = user.guild_member_profile.banner;
-          const GifAutoPlay = require(3928) /* explicitContentFromProto */.GifAutoPlay;
+          const GifAutoPlay = require(3958) /* explicitContentFromProto */.GifAutoPlay;
           obj[3] = GifAutoPlay.getSetting();
           guildMemberBannerURL = obj.getGuildMemberBannerURL(obj);
         }
@@ -40,7 +40,7 @@ export default function preloadUserBannerImage(user) {
           obj = { id: null, banner: null, canAnimate: null, size: 600 };
           obj[0] = id;
           obj[1] = user.user_profile.banner;
-          const GifAutoPlay2 = require(3928) /* explicitContentFromProto */.GifAutoPlay;
+          const GifAutoPlay2 = require(3958) /* explicitContentFromProto */.GifAutoPlay;
           obj[2] = GifAutoPlay2.getSetting();
           guildMemberBannerURL = require(1416) /* getAvatarURL */.getUserBannerURL(obj);
           const obj3 = require(1416) /* getAvatarURL */;

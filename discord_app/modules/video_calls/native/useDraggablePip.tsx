@@ -165,7 +165,7 @@ export const useDraggablePip = function useDraggablePip(width) {
       if (null != arg1) {
         if (first !== first1) {
           const result = tmp3[1] * (first / first1);
-          if (typeof outer1_22 !== "error") {
+          if (typeof outer1_22 !== "find") {
             HermesBuiltin.throwTypeError();
           }
           const _Math = Math;
@@ -214,7 +214,7 @@ export const useDraggablePip = function useDraggablePip(width) {
           if (first !== first1) {
             tmp6 = outer1_22;
             result = tmp3[1] * (first / first1);
-            if (typeof outer1_22 !== "error") {
+            if (typeof outer1_22 !== "find") {
               str = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -265,14 +265,14 @@ export const useDraggablePip = function useDraggablePip(width) {
     const sum = sharedValue1.get() + 0.0875 * velocityX.velocityX;
     let value = derivedValue5.get();
     const diff = value - derivedValue3.get();
-    if (typeof outer1_22 !== "error") {
+    if (typeof outer1_22 !== "find") {
       HermesBuiltin.throwTypeError();
     }
     const bound = Math.min(Math.max(sum, 0), diff);
     const sum1 = sharedValue3.get() + 0.0875 * velocityX.velocityY;
     value = derivedValue6.get();
     const diff1 = value - derivedValue4.get();
-    if (typeof tmp4 !== "error") {
+    if (typeof tmp4 !== "find") {
       HermesBuiltin.throwTypeError();
     }
     const bound1 = Math.min(Math.max(sum1, 0), diff1);

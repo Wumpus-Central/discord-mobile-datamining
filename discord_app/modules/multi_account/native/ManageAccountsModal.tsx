@@ -1,7 +1,7 @@
 import DragIcon from "DragIcon";
 import initialize from "initialize";
 import importAllResult from "validateMultiAccountTokens";
-import { View } from "module_4595";
+import { View } from "module_4624";
 import fetchFingerprint from "fetchFingerprint";
 import closure_9 from "initialize";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -139,8 +139,8 @@ function RemoveMultiAccountUserButton(user) {
     };
     obj = { color: null };
     obj[0] = importDefault(712).colors.ICON_FEEDBACK_CRITICAL;
-    obj[3] = callback2(tmp(14415).CircleMinusIcon, obj);
-    return callback2(tmp(4783).PressableOpacity, obj);
+    obj[3] = callback2(tmp(14449).CircleMinusIcon, obj);
+    return callback2(tmp(4812).PressableOpacity, obj);
   }
   let obj2 = user(589);
 }
@@ -326,7 +326,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
   let _require;
   c1 = undefined;
   c2 = undefined;
-  let obj = _require(5636);
+  let obj = _require(5665);
   _require = obj.useAccessibilityNativeStackOptions();
   [c1, c2] = callback(importAllResult.useState(false), 2);
   obj = {
@@ -386,14 +386,14 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return obj;
       },
       children() {
-        return callback2(_undefined(14975), {
+        return callback2(_undefined(15009), {
           handleLogin(login, password, undelete) {
-            let obj = callback(5707);
+            let obj = callback(5736);
             obj = { login, password, undelete };
             obj.login(obj);
           },
           onReset(arg0, arg1, arg2) {
-            callback(5707).loginReset(true);
+            callback(5736).loginReset(true);
           }
         });
       }
@@ -404,7 +404,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(9373), { isMultiAccount: true });
+        return callback2(_undefined(8281), { isMultiAccount: true });
       }
     }),
     callback2(createNativeStackNavigator.Screen, {
@@ -413,7 +413,7 @@ const memoResult = importAllResult.memo(function ManageAccountsModal(initialRout
         return { headerShown: false };
       },
       children() {
-        return callback2(_undefined(14974), { isMultiAccount: true });
+        return callback2(_undefined(15008), { isMultiAccount: true });
       }
     })
   ];

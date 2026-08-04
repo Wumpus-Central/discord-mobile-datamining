@@ -25,7 +25,7 @@ prototype["isValid"] = function isValid() {
   const self = this;
   let tmp = this.games.length > 0;
   if (tmp) {
-    tmp = self.games.length <= require(6980) /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_LIMITS_BY_TYPE[self.type];
+    tmp = self.games.length <= require(6992) /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_LIMITS_BY_TYPE[self.type];
   }
   return tmp;
 };
@@ -35,8 +35,8 @@ prototype["isEqual"] = function isEqual(type) {
     const self = this;
     let areWidgetGamesEqualResult = type.type === this.type;
     if (areWidgetGamesEqualResult) {
-      areWidgetGamesEqualResult = require(6981) /* findGameWidget */.areWidgetGamesEqual(self.games, type.games, self.type);
-      const obj = require(6981) /* findGameWidget */;
+      areWidgetGamesEqualResult = require(6993) /* findGameWidget */.areWidgetGamesEqual(self.games, type.games, self.type);
+      const obj = require(6993) /* findGameWidget */;
     }
     tmp = areWidgetGamesEqualResult;
   }

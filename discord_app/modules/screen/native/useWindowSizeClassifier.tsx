@@ -2,7 +2,7 @@ let obj = { SMALL: 0, [0]: "SMALL", NORMAL: 1, [1]: "NORMAL", LARGE: 2, [2]: "LA
 const result = require("set").fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
 
 export default function useWindowSizeClassifier() {
-  const width = importDefault(4111)().width;
+  const width = importDefault(4141)().width;
   if (width <= 360) {
     let XLARGE = obj.SMALL;
   } else if (width <= 600) {
@@ -16,7 +16,7 @@ export default function useWindowSizeClassifier() {
 };
 export const WindowSizeClassifier = obj;
 export const getWindowSizeClassifier = function getWindowSizeClassifier() {
-  const obj = require(4111) /* useBaseAppContainerDimensions */;
+  const obj = require(4141) /* useBaseAppContainerDimensions */;
   const width = obj.getBaseAppContainerDimensions().width;
   if (width <= 360) {
     let XLARGE = obj.SMALL;

@@ -20,7 +20,7 @@ createToggle = {
     });
   },
   onPress: function onAccountEmailSettingPress() {
-    importDefault(9359).open(true);
+    importDefault(8262).open(true);
   },
   withArrow: true
 };

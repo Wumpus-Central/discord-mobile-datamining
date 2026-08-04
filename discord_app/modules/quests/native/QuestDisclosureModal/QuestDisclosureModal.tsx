@@ -2,13 +2,13 @@ import { jsx } from "jsxProd";
 
 function CloseButton() {
   const obj = { source: null, onPress: null, accessibilityLabel: null };
-  obj[0] = importDefault(7825);
+  obj[0] = importDefault(7837);
   obj[1] = function onPress() {
     return callback(table[3]).hideModal();
   };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
-  return jsx(require(5907) /* HeaderActionButton */.HeaderActionButton, { source: null, onPress: null, accessibilityLabel: null });
+  return jsx(require(5917) /* HeaderActionButton */.HeaderActionButton, { source: null, onPress: null, accessibilityLabel: null });
 }
 let closure_4 = { DISCLOSURE: "disclosure" };
 const result = require("registerAsset").fileFinishedImporting("modules/quests/native/QuestDisclosureModal/QuestDisclosureModal.tsx");
@@ -21,7 +21,7 @@ export default function QuestDisclosureModal(arg0) {
   let require;
   ({ isTargetedDisclosure: require, gamePublisher: importDefault, gameTitle: dependencyMap, cosponsorName: jsx, isVideoQuest: closure_4 } = arg0);
   function onClose() {
-    return callback2(14217).hideModal();
+    return callback2(14251).hideModal();
   }
   let obj = {
     headerLeft: onClose,
@@ -32,7 +32,7 @@ export default function QuestDisclosureModal(arg0) {
       const obj = { title: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.GcsZKJ);
-      return callback3(callback(5209).NavigatorHeader, obj);
+      return callback3(callback(5238).NavigatorHeader, obj);
     },
     render() {
       return outer1_3(outer1_1(outer1_2[6]), { isTargetedDisclosure: closure_0, gamePublisher: closure_1, gameTitle: closure_2, onClose, cosponsorName: closure_3, isVideoQuest: closure_4 });
@@ -41,5 +41,5 @@ export default function QuestDisclosureModal(arg0) {
   obj = { screens: { [closure_4.DISCLOSURE]: obj }, initialRouteName: constants.DISCLOSURE, headerBackTitle: null };
   let intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]);
-  return jsx(require(5636) /* NavigationStack */.Navigator, { screens: { [closure_4.DISCLOSURE]: obj }, initialRouteName: constants.DISCLOSURE, headerBackTitle: null });
+  return jsx(require(5665) /* NavigationStack */.Navigator, { screens: { [closure_4.DISCLOSURE]: obj }, initialRouteName: constants.DISCLOSURE, headerBackTitle: null });
 };

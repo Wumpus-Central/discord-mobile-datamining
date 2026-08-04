@@ -49,13 +49,13 @@ export default function NoResults(illustration) {
   }
   const items2 = [tmp5, ];
   const obj1 = { style: tmp.textContainer, children: null };
-  const items3 = [callback(require(4251) /* Text */.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: title }), ];
+  const items3 = [callback(require(4281) /* Text */.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.text, children: title }), ];
   let tmp7Result = null;
   if (null != subtitle) {
     const obj3 = { variant: "text-xs/medium", color: "interactive-text-default", style: null, children: null };
     obj3[2] = tmp.text;
     obj3[3] = subtitle;
-    tmp7Result = callback(require(4251) /* Text */.Text, obj3);
+    tmp7Result = callback(require(4281) /* Text */.Text, obj3);
   }
   items3[1] = tmp7Result;
   obj1[1] = items3;

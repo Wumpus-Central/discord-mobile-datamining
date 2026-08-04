@@ -11,7 +11,7 @@ createToggle = {
   parent: null,
   IconComponent: require("NitroWheelIcon").NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
-    let obj = importDefault(6780);
+    let obj = importDefault(6792);
     const result = obj.restoreAndApplyPurchases(true);
     result.then((arg0) => {
       if (arg0.length > 0) {
@@ -49,7 +49,7 @@ createToggle = {
         });
       }
     };
-    importDefault(4595).openLazy(obj);
+    importDefault(4624).openLazy(obj);
   },
   withArrow: true,
   usePredicate: function useHasPremiumRestoreSubscriptionSetting() {

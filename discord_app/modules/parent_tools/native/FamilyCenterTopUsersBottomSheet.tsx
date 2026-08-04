@@ -12,16 +12,16 @@ function UserRow(userActivity) {
   if (null == user) {
     return null;
   } else {
-    let obj = require(6949) /* getEmptyActivityFormatter */;
+    let obj = require(6961) /* getEmptyActivityFormatter */;
     const topUserOrGuildDescription = obj.getTopUserOrGuildDescription(userActivity.dms_sent, userActivity.call_count);
     obj = { label: null, subLabel: null, icon: null };
-    obj[0] = importDefault(4094).getName(user);
+    obj[0] = importDefault(4124).getName(user);
     obj[1] = topUserOrGuildDescription;
     obj = { size: null, user: null, guildId: "Array" };
     obj[0] = require(1297) /* Button */.AvatarSizes.SMALL;
     obj[1] = user;
     obj[2] = callback(require(1297) /* Button */.Avatar, obj);
-    return callback(require(5286) /* TableRowInner */.TableRow, obj);
+    return callback(require(5315) /* TableRowInner */.TableRow, obj);
   }
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
@@ -33,11 +33,11 @@ export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   let obj = { children: null };
   obj = { variant: "text-md/bold", style: callback3().header, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
-  obj[2] = intl.string(importDefault(2255).BxbvS7);
-  const items = [callback(require(4251) /* Text */.Text, obj), ];
+  obj[2] = intl.string(importDefault(2285).BxbvS7);
+  const items = [callback(require(4281) /* Text */.Text, obj), ];
   obj = { hasIcons: true, children: null };
   obj[1] = topUserActivities.map((userActivity) => callback(closure_7, { userActivity }, userActivity.user_id));
-  items[1] = callback(require(5620) /* TableRowGroupTitle */.TableRowGroup, obj);
+  items[1] = callback(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
   obj[0] = items;
-  return callback2(require(5617) /* ActionSheet */.ActionSheet, obj);
+  return callback2(require(5646) /* ActionSheet */.ActionSheet, obj);
 };

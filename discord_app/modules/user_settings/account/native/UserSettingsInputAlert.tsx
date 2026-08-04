@@ -79,7 +79,7 @@ prototype["renderContent"] = function renderContent() {
     if (tmp7) {
       let obj = { variant: "text-md/normal", children: null };
       obj[1] = helpText;
-      tmp7 = callback(tmp5(4251).Text, obj);
+      tmp7 = callback(tmp5(4281).Text, obj);
     }
     const items = [tmp7, ];
     obj = { label: null, placeholder: null, secureTextEntry: null, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
@@ -97,9 +97,9 @@ prototype["renderContent"] = function renderContent() {
     obj[8] = function onChange(input) {
       return self.setState({ input });
     };
-    items[1] = callback(self(7701).TextInput, obj);
+    items[1] = callback(self(7713).TextInput, obj);
     obj[1] = items;
-    return closure_4(self(4664).Stack, obj);
+    return closure_4(self(4693).Stack, obj);
   }
   error = self.state.error;
 };
@@ -112,12 +112,12 @@ prototype["render"] = function render() {
   ({ title, actionText, cancelText, confirmColor, useKeyboardAwareWrapper } = this.props);
   let obj = { title, confirmText: actionText, confirmColor, onConfirm: this.handleSubmit, cancelText, onCancel: this.close, children: null };
   obj[6] = this.renderContent();
-  const tmp5 = callback(importDefault(4684), obj);
+  const tmp5 = callback(importDefault(4713), obj);
   let tmpResult = tmp5;
   if (useKeyboardAwareWrapper) {
     obj = { children: null };
     obj[0] = tmp5;
-    tmpResult = callback(importDefault(5704), obj);
+    tmpResult = callback(importDefault(5733), obj);
   }
   return tmpResult;
 };

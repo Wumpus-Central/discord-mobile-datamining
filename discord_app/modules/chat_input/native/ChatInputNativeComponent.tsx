@@ -41,10 +41,10 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
   _require = undefined;
   ({ setNoExtractUI, shouldShowCursor, onBeginFocus, onEndBlur, onChangeContentSize, onMaxHeightChanged, onSelectionOrTextChange, onTextFlushed, onPasteImage, onPasteCommand, onTapAction, onRequestSend, verticalInset } = markAsSpoilerTitle);
   const tmp3 = callback2();
-  let obj = _require(4191);
+  let obj = _require(4221);
   const theme = obj.useTheme();
-  const isThemeDarkResult = _require(4101).isThemeDark(theme);
-  const obj2 = _require(4101);
+  const isThemeDarkResult = _require(4131).isThemeDark(theme);
+  const obj2 = _require(4131);
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
   if (isThemeDarkResult) {
     let PRIMARY_500 = unsafe_rawColors.WHITE;
@@ -57,7 +57,7 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
   if (null != gradientPreset.gradientPreset) {
     num = 0.8;
   }
-  const obj3 = _require(4099);
+  const obj3 = _require(4129);
   let tmp4Result = tmp4(500);
   let tmp11;
   if (!tmp4Result.isAndroid()) {
@@ -68,7 +68,7 @@ const forwardRefResult = importAllResult.forwardRef((markAsSpoilerTitle, ref) =>
   if (!tmp4Result.isAndroid()) {
     tmp12 = customKeyboard;
   }
-  const hexWithOpacityResult = _require(4099).hexWithOpacity(PRIMARY_500, num);
+  const hexWithOpacityResult = _require(4129).hexWithOpacity(PRIMARY_500, num);
   let num2 = 2;
   if (isThemeDarkResult) {
     num2 = 1;

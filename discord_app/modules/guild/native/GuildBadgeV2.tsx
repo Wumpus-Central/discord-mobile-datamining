@@ -14,11 +14,11 @@ export default function GuildBadgeV2(arg0) {
     size = require(1297) /* Button */.Icon.Sizes.MEDIUM;
   }
   const merged = Object.assign(arg0, Object.create(null));
-  require(4101) /* AccessibilityAnnouncer */;
+  require(4131) /* AccessibilityAnnouncer */;
   if (null == guild) {
     return null;
   } else {
-    const guildBadgeImageSource = tmp5(5821).getGuildBadgeImageSource(guild, tmp8);
+    const guildBadgeImageSource = tmp5(9181).getGuildBadgeImageSource(guild, tmp8);
     let tmp10 = null;
     if (null != guildBadgeImageSource) {
       const obj = { size: null, source: null, style: null, disableColor: true };
@@ -33,15 +33,15 @@ export default function GuildBadgeV2(arg0) {
   tmp4 = callback();
 };
 export const hasGuildBadge = function hasGuildBadge(fromGuildProfileResult) {
-  const guildTraits = require(5823) /* GuildVisibility */.getGuildTraits(fromGuildProfileResult);
-  const obj = require(5823) /* GuildVisibility */;
+  const guildTraits = require(9178) /* GuildVisibility */.getGuildTraits(fromGuildProfileResult);
+  const obj = require(9178) /* GuildVisibility */;
   const tmp = require;
-  const badgeCategory = require(5822) /* BadgeCategory */.getBadgeCategory(guildTraits);
-  const tmp5 = require(5821) /* badgeVariants */.badgeVariants[badgeCategory];
+  const badgeCategory = require(9179) /* BadgeCategory */.getBadgeCategory(guildTraits);
+  const tmp5 = require(9181) /* badgeVariants */.badgeVariants[badgeCategory];
   let tmp6 = null != tmp5;
   if (tmp6) {
-    tmp6 = null != tmp(5821).resolveImageSource(tmp5, guildTraits, arg1);
-    const tmpResult = tmp(5821);
+    tmp6 = null != tmp(9181).resolveImageSource(tmp5, guildTraits, arg1);
+    const tmpResult = tmp(9181);
   }
   return tmp6;
 };

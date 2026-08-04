@@ -51,7 +51,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       const channels = tmp.channels;
       obj[1] = channels.map((id) => {
         const obj = { label: null, value: null };
-        obj[0] = callback(4446).computeChannelName(callback2(id), mergeGuildAvatar, closure_8);
+        obj[0] = callback(4475).computeChannelName(callback2(id), mergeGuildAvatar, closure_8);
         obj[1] = id.id;
         return obj;
       });

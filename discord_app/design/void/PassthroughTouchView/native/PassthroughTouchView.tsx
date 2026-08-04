@@ -9,5 +9,5 @@ export default function PassthroughTouchView(onTouchDown) {
   const merged1 = Object.assign(merged);
   obj.onTouchDown = onTouchDown.onTouchDown;
   obj.pointerEvents = "box-none";
-  return jsx(importDefault(13244), {});
+  return jsx(importDefault(13278), {});
 };

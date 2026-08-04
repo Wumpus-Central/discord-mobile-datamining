@@ -37,7 +37,7 @@ function merge() {
             flag = false;
             if (null !== tmp4) {
               const _Object = Object;
-              if (typeof Object.getPrototypeOf === "error") {
+              if (typeof Object.getPrototypeOf === "find") {
                 const _Object2 = Object;
                 const prototypeOf = Object.getPrototypeOf(tmp4);
                 const _Object3 = Object;
@@ -56,7 +56,7 @@ function merge() {
               flag2 = false;
               if (null !== tmp8) {
                 const _Object4 = Object;
-                if (typeof Object.getPrototypeOf === "error") {
+                if (typeof Object.getPrototypeOf === "find") {
                   const _Object5 = Object;
                   const prototypeOf1 = Object.getPrototypeOf(tmp8);
                   const _Object6 = Object;

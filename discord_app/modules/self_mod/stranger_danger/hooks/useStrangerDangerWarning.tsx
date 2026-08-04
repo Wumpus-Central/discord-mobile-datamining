@@ -9,17 +9,17 @@ export const useStrangerDangerWarning = function useStrangerDangerWarning(id) {
   const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = require(589) /* initialize */;
   const tmp = require;
-  const isSpamMessageRequest = require(10584) /* useIsSpamMessageRequest */.useIsSpamMessageRequest(id);
-  const obj3 = require(10584) /* useIsSpamMessageRequest */;
-  const isMessageRequest = require(10585) /* useIsMessageRequest */.useIsMessageRequest(id);
-  const obj4 = require(10585) /* useIsMessageRequest */;
-  const channelSafetyWarning = require(10586) /* useChannelSafetyWarning */.useChannelSafetyWarning(id, SafetyWarningTypes.STRANGER_DANGER);
-  const obj5 = require(10586) /* useChannelSafetyWarning */;
-  const userIsTeen = require(7834) /* useUserIsTeen */.useUserIsTeen();
+  const isSpamMessageRequest = require(10255) /* useIsSpamMessageRequest */.useIsSpamMessageRequest(id);
+  const obj3 = require(10255) /* useIsSpamMessageRequest */;
+  const isMessageRequest = require(10256) /* useIsMessageRequest */.useIsMessageRequest(id);
+  const obj4 = require(10256) /* useIsMessageRequest */;
+  const channelSafetyWarning = require(10257) /* useChannelSafetyWarning */.useChannelSafetyWarning(id, SafetyWarningTypes.STRANGER_DANGER);
+  const obj5 = require(10257) /* useChannelSafetyWarning */;
+  const userIsTeen = require(7846) /* useUserIsTeen */.useUserIsTeen();
   if (stateFromStores != null) {
     const isStaffResult = stateFromStores.isStaff();
   }
-  const obj6 = require(7834) /* useUserIsTeen */;
+  const obj6 = require(7846) /* useUserIsTeen */;
   if (userIsTeen) {
     if (!isSpamMessageRequest) {
       if (!isMessageRequest) {

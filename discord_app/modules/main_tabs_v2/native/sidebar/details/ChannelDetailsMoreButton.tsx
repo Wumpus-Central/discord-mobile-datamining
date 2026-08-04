@@ -14,11 +14,11 @@ export default function MoreButton(channel) {
       obj = { accessibilityLabel: null, source: null, onPress: null };
       const intl = channel(1236).intl;
       obj[0] = intl.string(channel(1236).t["UKOtz+"]);
-      obj[1] = importDefault(8643);
+      obj[1] = importDefault(8973);
       obj[2] = tmp;
-      obj[0] = jsx(channel(9300).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
-      tmp2 = jsx(importDefault(9303), { accessibilityLabel: null, source: null, onPress: null });
-      const tmp6 = importDefault(9303);
+      obj[0] = jsx(channel(8193).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+      tmp2 = jsx(importDefault(8196), { accessibilityLabel: null, source: null, onPress: null });
+      const tmp6 = importDefault(8196);
     } else {
       tmp2 = null;
     }

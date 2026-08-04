@@ -15,7 +15,7 @@ function Emoji(url) {
     obj = { uri: null };
     obj[0] = url;
     obj[2] = obj;
-    let tmp5 = jsx(importDefault(5207), { uri: null });
+    let tmp5 = jsx(importDefault(5236), { uri: null });
   } else {
     obj = { style: null, allowFontScaling: false, children: null };
     const items1 = [tmp.textEmoji];

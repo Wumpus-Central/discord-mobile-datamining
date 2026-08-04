@@ -21,7 +21,7 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(require("dispa
     let commandOrigin;
     context = context.context;
     ({ command, commandOrigin } = context);
-    let tmp = commandOrigin !== require(6879) /* ApplicationCommandSectionType */.CommandOrigin.APPLICATION_LAUNCHER;
+    let tmp = commandOrigin !== require(6891) /* ApplicationCommandSectionType */.CommandOrigin.APPLICATION_LAUNCHER;
     if (tmp) {
       tmp = null != context.channel;
     }

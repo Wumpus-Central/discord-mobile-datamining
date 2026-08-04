@@ -24,13 +24,13 @@ function ExtraMediaIcon(extraMediaCount) {
   const tmp = createCacheKey();
   let obj = { style: tmp.extraMediaCountContainer, children: null };
   obj = { source: null, color: null, size: null };
-  obj[0] = importDefault(10031);
+  obj[0] = importDefault(10102);
   obj[1] = tmp.icon.color;
   obj[2] = require(1297) /* Button */.Icon.Sizes.REFRESH_SMALL_16;
   const items = [callback(require(1297) /* Button */.Icon, obj), ];
   obj = { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: null };
   obj[4] = "+" + extraMediaCount.extraMediaCount;
-  items[1] = callback(require(4251) /* Text */.Text, obj);
+  items[1] = callback(require(4281) /* Text */.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

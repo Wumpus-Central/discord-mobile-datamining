@@ -38,10 +38,10 @@ function ComparisonRow(entry) {
   }
   items1[2] = str2;
   obj[2] = items1;
-  const items2 = [closure_4(require(4251) /* Text */.Text, obj), ];
+  const items2 = [closure_4(require(4281) /* Text */.Text, obj), ];
   const obj1 = { style: tmp.comparisonButtons, children: null };
   const obj2 = { style: tmp.comparisonSide, children: null };
-  const items3 = [callback2(require(4251) /* Text */.Text, { variant: "text-xxs/medium", color: "text-muted", children: "legacy" }), ];
+  const items3 = [callback2(require(4281) /* Text */.Text, { variant: "text-xxs/medium", color: "text-muted", children: "legacy" }), ];
   const obj3 = { look: entry.look, color: entry.color, size: null, shrink: true, text: null, textStyle: null, onPress: null };
   obj3[2] = require(1297) /* Button */.ButtonSizes.MEDIUM;
   obj3[4] = combined;
@@ -62,20 +62,20 @@ function ComparisonRow(entry) {
   if (null != redesignVariant) {
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.comparisonSide;
-    const items5 = [tmp9(tmp4(4251).Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }), ];
+    const items5 = [tmp9(tmp4(4281).Text, { variant: "text-xxs/medium", color: "text-muted", children: "mana" }), ];
     const obj5 = { variant: null, size: "md", text: null, onPress: null };
     obj5[0] = redesignVariant;
     obj5[2] = redesignVariant;
     obj5[3] = function onPress() {
 
     };
-    items5[1] = tmp9(tmp4(4666).Button, obj5);
+    items5[1] = tmp9(tmp4(4695).Button, obj5);
     obj4[1] = items5;
     let tmp9Result = tmp7(tmp8, obj4);
   } else {
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.comparisonSide;
-    obj6[1] = tmp9(tmp4(4251).Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" });
+    obj6[1] = tmp9(tmp4(4281).Text, { variant: "text-xs/medium", color: "text-muted", children: "no mapping" });
     tmp9Result = tmp9(tmp8, obj6);
   }
   items4[1] = tmp9Result;
@@ -108,7 +108,7 @@ function ComboRow(combo) {
     str2 = "text-default";
   }
   const items1 = [combined, " (", combo.count, ")"];
-  const items2 = [closure_4(require(4251) /* Text */.Text, { variant: "text-xs/medium", color: str2, children: items1 }), ];
+  const items2 = [closure_4(require(4281) /* Text */.Text, { variant: "text-xs/medium", color: str2, children: items1 }), ];
   obj = { look: combo.look, color: combo.color, size: combo.size, shrink: combo.shrink, text: combined, textStyle: null, onPress: null };
   let darkText = null;
   if (hasItem) {
@@ -288,9 +288,9 @@ export default function UserSettingsDesignSystemLegacyButton() {
   }
   obj = { style: tmp.container, children: null };
   obj = { spacing: 4, style: tmp.header, children: null };
-  items = [callback2(require(4251) /* Text */.Text, { variant: "heading-xl/bold", children: "Migration Mapping" }), callback2(require(4251) /* Text */.Text, { variant: "text-sm/normal", color: "text-muted", children: "Legacy (uikit-native) \u2192 Mana side-by-side" })];
+  items = [callback2(require(4281) /* Text */.Text, { variant: "heading-xl/bold", children: "Migration Mapping" }), callback2(require(4281) /* Text */.Text, { variant: "text-sm/normal", color: "text-muted", children: "Legacy (uikit-native) \u2192 Mana side-by-side" })];
   obj[2] = items;
-  const items1 = [callback(require(4664) /* Stack */.Stack, obj), , , ];
+  const items1 = [callback(require(4693) /* Stack */.Stack, obj), , , ];
   const entries = Object.entries(obj);
   items1[1] = entries.map((arg0) => {
     let arr;
@@ -298,12 +298,12 @@ export default function UserSettingsDesignSystemLegacyButton() {
     [tmp, arr] = arg0;
     const obj = { title: tmp, children: null };
     obj[1] = arr.map((entry) => callback(closure_8, { entry }, arg1));
-    return callback2(callback(7765).FormSection, obj, "cmp-" + tmp);
+    return callback2(callback(7777).FormSection, obj, "cmp-" + tmp);
   });
   const obj1 = { spacing: 4, style: tmp.header, children: null };
-  const items2 = [callback2(require(4251) /* Text */.Text, { variant: "heading-xl/bold", children: "Legacy Button Audit" }), callback2(require(4251) /* Text */.Text, { variant: "text-sm/normal", color: "text-muted", children: "41 combinations across 185 importers" })];
+  const items2 = [callback2(require(4281) /* Text */.Text, { variant: "heading-xl/bold", children: "Legacy Button Audit" }), callback2(require(4281) /* Text */.Text, { variant: "text-sm/normal", color: "text-muted", children: "41 combinations across 185 importers" })];
   obj1[2] = items2;
-  items1[2] = callback(require(4664) /* Stack */.Stack, obj1);
+  items1[2] = callback(require(4693) /* Stack */.Stack, obj1);
   const entries1 = Object.entries(tmp2);
   items1[3] = entries1.map((arg0) => {
     let arr;
@@ -312,7 +312,7 @@ export default function UserSettingsDesignSystemLegacyButton() {
     const obj = { title: null, children: null };
     obj[0] = "" + tmp + " (" + arr.reduce((arg0, count) => arg0 + count.count, 0) + " usages)";
     obj[1] = arr.map((combo) => callback(closure_9, { combo }, arg1));
-    return callback2(callback(7765).FormSection, obj, tmp);
+    return callback2(callback(7777).FormSection, obj, tmp);
   });
   obj[1] = items1;
   return callback(closure_2, obj);

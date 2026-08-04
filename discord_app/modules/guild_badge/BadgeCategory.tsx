@@ -17,7 +17,7 @@ export const getBadgeCategory = function getBadgeCategory(guildTraits) {
       DISCOVERABLE = obj.PARTNERED;
     } else {
       if (guildTraits.community) {
-        if (guildTraits.visibility === require(5823) /* GuildVisibility */.GuildVisibility.PUBLIC) {
+        if (guildTraits.visibility === require(9178) /* GuildVisibility */.GuildVisibility.PUBLIC) {
           DISCOVERABLE = obj.DISCOVERABLE;
         }
       }

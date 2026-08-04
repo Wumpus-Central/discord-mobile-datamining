@@ -15,30 +15,30 @@ function MentionableIcon(mentionable) {
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { icon: null, wrapperStyle: null };
   const tmp = createCacheKey();
-  obj[0] = jsx(require(9282) /* UserCircleIcon */.UserCircleIcon, { size: "sm", color: "interactive-text-default" });
+  obj[0] = jsx(require(9589) /* UserCircleIcon */.UserCircleIcon, { size: "sm", color: "interactive-text-default" });
   obj[1] = tmp.iconWrapper;
-  const tmp7 = jsx(importDefault(11480), { icon: null, wrapperStyle: null });
+  const tmp7 = jsx(importDefault(11479), { icon: null, wrapperStyle: null });
   if (null == mentionable) {
     return tmp7;
   } else {
     const type = mentionable.type;
-    if (tmp2(11481).MentionableItemTypes.USER === type) {
+    if (tmp2(11480).MentionableItemTypes.USER === type) {
       obj = { user: null, guildId: null, animate: null, size: null };
       obj[0] = mentionable.result.user;
       obj[1] = mentionable.guildId;
       obj[2] = !stateFromStores;
       obj[3] = tmp2(1297).AvatarSizes.REFRESH_MEDIUM_32;
       return tmp5(tmp2(1297).Avatar, obj);
-    } else if (tmp2(11481).MentionableItemTypes.ROLE === type) {
+    } else if (tmp2(11480).MentionableItemTypes.ROLE === type) {
       const obj1 = { role: null };
       obj1[0] = mentionable.result;
-      return tmp5(tmp2(11482).RoleIcon, obj1);
+      return tmp5(tmp2(11481).RoleIcon, obj1);
     } else {
-      const GLOBAL = tmp2(11481).MentionableItemTypes.GLOBAL;
+      const GLOBAL = tmp2(11480).MentionableItemTypes.GLOBAL;
       return tmp7;
     }
   }
-  const tmp6 = importDefault(11480);
+  const tmp6 = importDefault(11479);
 }
 createCacheKey = { iconWrapper: null };
 createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };

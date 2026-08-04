@@ -64,7 +64,7 @@ obj = {
     let id = user.id;
     let tmp = !c5;
     if (!c5) {
-      tmp = importDefault(11633)(user);
+      tmp = importDefault(11696)(user);
     }
     if (tmp) {
       c5 = true;
@@ -130,7 +130,7 @@ obj = {
     let from;
     let to;
     ({ from, to } = arg0);
-    closure_8 = require(11634) /* calculatePositionDeltas */.moveItemFromTo(closure_8, from, to);
+    closure_8 = require(11697) /* calculatePositionDeltas */.moveItemFromTo(closure_8, from, to);
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate(user) {
     user = user.user;

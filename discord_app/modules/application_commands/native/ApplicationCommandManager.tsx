@@ -1184,7 +1184,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
     if (tmp84) {
       let focused2 = editId.focused;
       if (!focused2) {
-        let obj5 = obj1(4121);
+        let obj5 = obj1(4151);
         const keyboardType = obj5.getKeyboardType();
         focused2 = keyboardType !== obj1(1579).KeyboardTypes.SYSTEM;
       }
@@ -1196,8 +1196,8 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       tmp91 = null != self.activeCommand;
     }
     if (tmp91) {
-      importDefault(8156).clearAll(channel.id, DraftType.SlashCommand);
-      const obj7 = importDefault(8156);
+      importDefault(8168).clearAll(channel.id, DraftType.SlashCommand);
+      const obj7 = importDefault(8168);
     }
     let name;
     if (activeOption != null) {
@@ -1230,7 +1230,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       preferredCommandType = obj1;
       preferredCommandType = dependencyMap;
       preferredCommandType = dependencyMap;
-      const obj8 = obj1(11456);
+      const obj8 = obj1(11455);
       preferredCommandType = obj8;
       preferredCommandType = activeCommand;
       self.optionValidationResults = obj8.getValidationResults(activeCommand, self.optionValues, editId.channel.guild_id, editId.channel.id, false);
@@ -1527,8 +1527,8 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
           obj3[3] = preferredCommandType;
           obj3[4] = self.location;
           obj3[5] = obj1;
-          preferredCommandType = importAll(7145).updateChannelState(obj3);
-          const obj16 = importAll(7145);
+          preferredCommandType = importAll(7157).updateChannelState(obj3);
+          const obj16 = importAll(7157);
         }
       }
     }
@@ -1540,9 +1540,9 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       preferredCommandType = activeOption.type !== preferredCommandType(1906).ApplicationCommandOptionType.ATTACHMENT;
     }
     if (preferredCommandType) {
-      preferredCommandType = preferredCommandType(4121).getKeyboardType();
+      preferredCommandType = preferredCommandType(4151).getKeyboardType();
       preferredCommandType = preferredCommandType !== preferredCommandType(1579).KeyboardTypes.SYSTEM;
-      const preferredCommandTypeResult1 = preferredCommandType(4121);
+      const preferredCommandTypeResult1 = preferredCommandType(4151);
     }
     if (preferredCommandType) {
       const current3 = self.ref.current;
@@ -1753,7 +1753,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
           continue;
         }
         if (items3.length > 0) {
-          obj4 = importDefault(8156);
+          obj4 = importDefault(8168);
           obj4.removeFiles(channel.id, items3, DraftType.SlashCommand);
         }
       }
@@ -1796,7 +1796,7 @@ prototype["updateValidationResults"] = function updateValidationResults() {
       }
     }
   }
-  importAll(7145).updateOptionStates(self.props.channel.id, obj);
+  importAll(7157).updateOptionStates(self.props.channel.id, obj);
 };
 
 export default ApplicationCommandManager;

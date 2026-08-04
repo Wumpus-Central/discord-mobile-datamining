@@ -9,7 +9,7 @@ export default function useBuyNitroListData(selection) {
   let analyticsLocations = setTier;
   let dependencyMap;
   let React;
-  const tmp = analyticsLocations(7563)(selection.tier);
+  const tmp = analyticsLocations(7575)(selection.tier);
   const ref = React.useRef(null);
   dependencyMap = ref;
   React = React.useRef(false);
@@ -37,7 +37,7 @@ export default function useBuyNitroListData(selection) {
   let obj = { onScroll: null, onSelectNitroTier: null, listData: null, listRef: null };
   analyticsLocations = undefined;
   dependencyMap = undefined;
-  analyticsLocations = analyticsLocations(5581)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5610)().analyticsLocations;
   dependencyMap = React.useRef(false);
   obj[0] = function onScroll(nativeEvent) {
     const current = ref.current;

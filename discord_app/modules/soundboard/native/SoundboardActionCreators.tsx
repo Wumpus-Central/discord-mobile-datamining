@@ -8,7 +8,7 @@ export const showSoundboardSoundPickerActionSheet = function showSoundboardSound
   ({ channel, analyticsSource } = arg0);
   const ComponentDispatch = require(1231) /* ComponentDispatcher */.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.TOGGLE_CALL_CONTROL_DRAWER);
-  const result = require(4071) /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
-  const obj = require(4071) /* UNSAFE_isDismissibleContentDismissed */;
-  importDefault(4223).openLazy(require(1959) /* asyncRequireImpl */(15975, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource });
+  const result = require(4101) /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(require(1358) /* DismissibleContent */.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
+  const obj = require(4101) /* UNSAFE_isDismissibleContentDismissed */;
+  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(16008, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource });
 };

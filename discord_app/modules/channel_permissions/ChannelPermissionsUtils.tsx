@@ -51,11 +51,11 @@ function getMemberRowData(id, id2) {
   const obj = { rowType: tmp3, name: null, username: null, id: null, avatarURL: null, bot: null, verifiedBot: null, disabled: null, key: null };
   nick = nick.getNick(id2.id, id.id);
   if (nick == null) {
-    nick = importDefault(4094).getName(id);
-    const obj2 = importDefault(4094);
+    nick = importDefault(4124).getName(id);
+    const obj2 = importDefault(4124);
   }
   obj[1] = nick;
-  obj[2] = importDefault(4094).getUserTag(id);
+  obj[2] = importDefault(4124).getUserTag(id);
   obj[3] = id.id;
   obj[4] = id.getAvatarURL(id2.id, 24);
   obj[5] = id.bot;
@@ -565,7 +565,7 @@ export const getRemoveTooltipHint = function getRemoveTooltipHint(arg0) {
 export const flipEveryonePermission = function flipEveryonePermission(outer1_0, accessPermissions, result) {
   let everyoneOverwrite = outer1_0.permissionOverwrites[outer1_0.guild_id];
   if (null == everyoneOverwrite) {
-    let obj = importAll(3888);
+    let obj = importAll(3918);
     everyoneOverwrite = obj.makeEveryoneOverwrite(outer1_0.guild_id);
   }
   obj = {};
@@ -583,7 +583,7 @@ export const flipEveryonePermission = function flipEveryonePermission(outer1_0, 
 export const toggleChannelEveryonePermission = function toggleChannelEveryonePermission(guild_id) {
   let everyoneOverwrite = guild_id.permissionOverwrites[guild_id.guild_id];
   if (null == everyoneOverwrite) {
-    let obj = importAll(3888);
+    let obj = importAll(3918);
     everyoneOverwrite = obj.makeEveryoneOverwrite(guild_id.guild_id);
   }
   obj = {};
@@ -597,7 +597,7 @@ export const toggleChannelEveryonePermission = function toggleChannelEveryonePer
     const tmp5Result = tmp5(506);
   }
   const obj4 = importAll(506);
-  require(8589) /* _updatePermission */.updatePermission(guild_id, obj.id, obj.allow, obj.deny);
+  require(8920) /* _updatePermission */.updatePermission(guild_id, obj.id, obj.allow, obj.deny);
 };
 export const grantUserChannelAccess = function grantUserChannelAccess(outer1_0, accessPermissions) {
   let allow;
@@ -608,15 +608,15 @@ export const grantUserChannelAccess = function grantUserChannelAccess(outer1_0, 
       let obj = { id: null, type: null, allow: null, deny: null };
       obj[0] = currentUser.id;
       obj[1] = require(1906) /* PermissionOverwriteType */.PermissionOverwriteType.MEMBER;
-      obj[2] = importAll(506).add(importAll(3888).NONE, accessPermissions);
-      obj[3] = importAll(3888).NONE;
+      obj[2] = importAll(506).add(importAll(3918).NONE, accessPermissions);
+      obj[3] = importAll(3918).NONE;
       const obj4 = importAll(506);
       const items = [obj];
-      return require(8589) /* _updatePermission */.savePermissionUpdates(outer1_0.id, items, true);
+      return require(8920) /* _updatePermission */.savePermissionUpdates(outer1_0.id, items, true);
     } else {
       ({ allow, deny } = tmp4);
       obj = importAll(506);
-      const obj2 = require(8589) /* _updatePermission */;
+      const obj2 = require(8920) /* _updatePermission */;
       return obj2.updatePermission(outer1_0, tmp4.id, obj.add(allow, accessPermissions), deny);
     }
   }

@@ -9,7 +9,7 @@ export default function SubscriptionGatedChannelIcon(arg0) {
   let locked;
   ({ locked, isInMainTabsExperiment } = arg0);
   const obj = { source: null, size: null, disableColor: null };
-  obj[0] = importDefault(9536);
+  obj[0] = importDefault(8610);
   const Sizes = require(1297) /* Button */.Icon.Sizes;
   obj[1] = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
   obj[2] = false !== locked;

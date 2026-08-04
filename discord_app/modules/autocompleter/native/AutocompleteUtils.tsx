@@ -20,7 +20,7 @@ let unpackModuleId;
 const require = arg1;
 function AutocompleteFormDivider() {
   const tmp = createCacheKey();
-  return jsx(importDefault(7318), { style: createCacheKey().itemDivider });
+  return jsx(importDefault(7330), { style: createCacheKey().itemDivider });
 }
 ({ AutoCompleteResultTypes: error, WHITESPACE_RE: metroImportAll } = ME);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: c9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = AUTOCOMPLETE_ROW_HEIGHT);
@@ -57,8 +57,8 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
       let combined = "" + tmp34 + user.tag;
     } else {
       const _HermesInternal8 = HermesInternal;
-      combined = "" + tmp34 + importDefault(4094).getUserTag(user);
-      const tmp32Result = importDefault(4094);
+      combined = "" + tmp34 + importDefault(4124).getUserTag(user);
+      const tmp32Result = importDefault(4124);
     }
     return combined;
   } else if (tmp.GLOBAL === type) {
@@ -69,9 +69,9 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
   } else if (tmp.CHANNEL === type) {
     channel = type.channel;
     if (channel.isThread()) {
-      const obj3 = require(4446) /* computeChannelName */;
+      const obj3 = require(4475) /* computeChannelName */;
       const _HermesInternal6 = HermesInternal;
-      return "#\"" + obj3.escapeChannelName(require(4446) /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship)) + "\"";
+      return "#\"" + obj3.escapeChannelName(require(4475) /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship)) + "\"";
     } else {
       channel2 = type.channel;
       const guildId = channel2.getGuildId();
@@ -83,15 +83,15 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
             name = tmp16.name;
           }
           if (name == null) {
-            name = require(4446) /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
-            const obj2 = require(4446) /* computeChannelName */;
+            name = require(4475) /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
+            const obj2 = require(4475) /* computeChannelName */;
           }
           const _HermesInternal5 = HermesInternal;
           return "" + closure_11 + name;
         }
       }
       const _HermesInternal4 = HermesInternal;
-      return "" + closure_11 + require(4446) /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
+      return "" + closure_11 + require(4475) /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
     }
   } else if (tmp.GAME_MENTION === type) {
     const _HermesInternal3 = HermesInternal;
@@ -119,8 +119,8 @@ export const getMentionTextWithUser = function getMentionTextWithUser(messageCha
     let combined = "" + tmp3 + user.tag;
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "" + tmp3 + importDefault(4094).getUserTag(user);
-    const tmpResult = importDefault(4094);
+    combined = "" + tmp3 + importDefault(4124).getUserTag(user);
+    const tmpResult = importDefault(4124);
   }
   return combined;
 };
@@ -142,4 +142,85 @@ export const isWhitespaceSeparatingBoundary = function isWhitespaceSeparatingBou
 };
 export const isUnbrokenRun = function isUnbrokenRun(arr, arg1, arg2) {
   return !regex.test(arr.slice(arg1, arg2));
+};
+export const findWordStart = function findWordStart(arg0, arg1) {
+  let tmp = arg1;
+  if (arg1 > 0) {
+    let tmp4 = arg1;
+    tmp = arg1;
+    if (!regex.test(arg0[arg1 - 1])) {
+      const diff = tmp4 - 1;
+      tmp = diff;
+      while (diff > 0) {
+        let tmp6 = regex;
+        tmp4 = diff;
+        tmp = diff;
+        if (regex.test(arg0[diff - 1])) {
+          break;
+        }
+      }
+    }
+  }
+  return tmp;
+};
+export const isSpaceJustTypedAtCaret = function isSpaceJustTypedAtCaret(text, selectionEnd, arr, arg3) {
+  let sum = arg3;
+  if (arg3 === selectionEnd + 1) {
+    if (arr.length === text.length + 1) {
+      if (" " === arr[sum - 1]) {
+        let num = 0;
+        if (0 < selectionEnd) {
+          while (arr[num] === text[num]) {
+            num = num + 1;
+          }
+          return false;
+        }
+        if (sum < arr.length) {
+          while (arr[sum] === text[sum - 1]) {
+            sum = sum + 1;
+          }
+          return false;
+        }
+        return true;
+      }
+    }
+  }
+  return false;
+};
+export const findAutoInsertOnSpaceToken = function findAutoInsertOnSpaceToken(arr, arg1, closure_18) {
+  if (arg1 >= closure_18.length + 2) {
+    if (" " === arr[arg1 - 1]) {
+      const diff = arg1 - 1;
+      let tmp3 = diff;
+      if (0 < diff) {
+        let tmp2 = diff;
+        tmp3 = diff;
+        if (!regex.test(arr[diff - 1])) {
+          const diff1 = tmp2 - 1;
+          tmp3 = diff1;
+          while (0 < diff1) {
+            let tmp5 = regex;
+            tmp2 = diff1;
+            tmp3 = diff1;
+            if (regex.test(arr[diff1 - 1])) {
+              break;
+            }
+          }
+        }
+      }
+      if (arr.startsWith(closure_18, tmp3)) {
+        if (arr.lastIndexOf(closure_18, diff - closure_18.length) !== tmp3) {
+          return null;
+        } else {
+          const obj = { tokenStart: null, trigger: null };
+          obj[0] = tmp3;
+          obj[1] = arr.slice(tmp3 + closure_18.length, diff);
+          return obj;
+        }
+      } else {
+        return null;
+      }
+    }
+  }
+  return null;
 };

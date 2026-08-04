@@ -72,13 +72,13 @@ function _sendShareMessage() {
               if (dependencyMap == null) {
                 lib2 = "";
               }
-              constants = lib2(7050).parse(lib2, lib2);
+              constants = lib2(7062).parse(lib2, lib2);
               if (c4.length > 0) {
-                let obj2 = lib2(8156);
+                let obj2 = lib2(8168);
                 obj2.clearAll(id, c4.ChannelMessage);
               }
-              future = new lib(8141).Future();
-              let obj3 = lib2(6814);
+              future = new lib(8153).Future();
+              let obj3 = lib2(6826);
               obj2 = { location: null, doNotNotifyOnError: true, attachmentsToUpload: null, onAttachmentUploadError: null };
               obj2[0] = constants.SHARE_MODAL;
               obj2[2] = c4;
@@ -131,8 +131,8 @@ function _sendShareMessage() {
 const result = require("MESSAGE_GROUP_SPACING").fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 
 export const showInformationToast = function showInformationToast(intl3) {
-  let obj = importDefault(3956);
-  obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: importDefault(9494) };
+  let obj = importDefault(3986);
+  obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: importDefault(8422) };
   obj.open(obj);
 };
 export const sendShareMessage = function sendShareMessage(arg0) {

@@ -59,7 +59,7 @@ prototype["isLivingRoomAvailable"] = function isLivingRoomAvailable() {
   const guildId = store.getGuildId();
   let interactionsEnabled = null != guildId;
   if (interactionsEnabled) {
-    let obj = importDefault(16280);
+    let obj = importDefault(16313);
     obj = { guildId: null, location: "GuildRoomSpatialAudioManager" };
     obj[0] = guildId;
     interactionsEnabled = obj.getCurrentConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
@@ -83,7 +83,7 @@ prototype["apply"] = function apply() {
           obj[0] = roomUsers.getRoomUsers(channelId);
           obj[1] = id.getId();
           obj[2] = channelId;
-          _require = _require(16290).computeLivingRoomWorldPoints(obj);
+          _require = _require(16323).computeLivingRoomWorldPoints(obj);
           const mediaEngine = obj.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
             let tmp6;
@@ -100,7 +100,7 @@ prototype["apply"] = function apply() {
               continue;
             }
           });
-          const obj3 = _require(16290);
+          const obj3 = _require(16323);
         }
       }
     }

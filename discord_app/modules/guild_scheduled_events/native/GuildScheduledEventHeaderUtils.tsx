@@ -19,7 +19,7 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
   ({ startDateTimeString, diffMinutes, currentOrPastEvent, upcomingEvent } = eventTimeData.eventTimeData);
   ({ event, recurrenceId } = eventTimeData);
   ({ isStage, theme, isCanceled } = eventTimeData);
-  let obj = require(8521) /* getRRule */;
+  let obj = require(8864) /* getRRule */;
   if (null != recurrenceId) {
     let tmp5 = obj.getNextRecurrenceIdInEvent(event) === recurrenceId;
     if (tmp5) {
@@ -31,12 +31,12 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
   }
   const tmp7 = callback(event);
   const ICON_SUBTLE = importDefault(712).colors.ICON_SUBTLE;
-  let tmp8Result = importDefault(8635);
+  let tmp8Result = importDefault(8965);
   if (tmp4) {
     const intl4 = tmp(1236).intl;
     let stringResult = intl4.string(tmp(1236).t["X2K3/4"]);
     if (isStage) {
-      tmp8Result = tmp8(7811);
+      tmp8Result = tmp8(7823);
     }
     let entity_type;
     if (event != null) {
@@ -49,11 +49,11 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     let ICON_FEEDBACK_CRITICAL = tmp8(712).colors.ICON_FEEDBACK_POSITIVE;
     let stringResult1 = stringResult;
   } else if (tmp7) {
-    tmp8Result = tmp8(12392);
+    tmp8Result = tmp8(9062);
     stringResult1 = startDateTimeString;
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
   } else if (currentOrPastEvent) {
-    tmp8Result = tmp8(12392);
+    tmp8Result = tmp8(9062);
     const intl3 = tmp(1236).intl;
     stringResult1 = intl3.string(tmp(1236).t.WINqKV);
     ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
@@ -71,9 +71,9 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
         formatToPlainStringResult = intl.string(tmp(1236).t.WINqKV);
       }
       stringResult1 = formatToPlainStringResult;
-      tmp8Result = tmp8(12392);
+      tmp8Result = tmp8(9062);
       ICON_FEEDBACK_CRITICAL = ICON_SUBTLE;
-      const tmp8Result1 = tmp8(12392);
+      const tmp8Result1 = tmp8(9062);
     }
   }
   if (isCanceled) {

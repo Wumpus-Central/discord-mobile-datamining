@@ -4,17 +4,17 @@ const RPCErrors = ME.RPCErrors;
 let obj = {
   scope: require("RPC_SCOPE_CONFIG").RPC_LOCAL_SCOPE,
   validation(boolean) {
-    let obj = importDefault(10696)(boolean);
+    let obj = importDefault(10546)(boolean);
     obj = { open: boolean.boolean() };
     return obj.keys(obj);
   },
   handler(args) {
-    let obj = require(13650) /* toggleVoiceChannelChat */;
+    let obj = require(13684) /* toggleVoiceChannelChat */;
     const result = obj.toggleVoiceChannelChat(args.args.open);
     if (null == result) {
       obj = { errorCode: null };
       obj[0] = RPCErrors.INVALID_CHANNEL;
-      const tmp8 = new importDefault(10693)(obj, "Not connected to a guild voice channel");
+      const tmp8 = new importDefault(10543)(obj, "Not connected to a guild voice channel");
       throw tmp8;
     } else {
       obj = { channel_id: null, chat_open: null };

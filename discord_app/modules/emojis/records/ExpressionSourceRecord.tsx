@@ -247,7 +247,7 @@ ExpressionSourceGuildRecord["createFromGuildRecord"] = function createFromGuildR
   obj.presenceCount = null;
   obj.memberCount = null;
   obj.emojis = null;
-  if (typeof ExpressionSourceGuildRecord !== "error") {
+  if (typeof ExpressionSourceGuildRecord !== "find") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }
@@ -266,7 +266,7 @@ ExpressionSourceGuildRecord["createFromDiscoverableGuild"] = function createFrom
   ({ premiumSubscriptionCount: obj.premiumSubscriberCount, presenceCount: obj.presenceCount, memberCount } = emojis);
   obj.memberCount = memberCount;
   obj.emojis = emojis.emojis;
-  if (typeof ExpressionSourceGuildRecord !== "error") {
+  if (typeof ExpressionSourceGuildRecord !== "find") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }
@@ -281,7 +281,7 @@ ExpressionSourceGuildRecord["createFromServer"] = function createFromServer(id) 
   let str = obj;
   const merged = Object.assign(_mapCommonResult);
   ({ premium_tier: obj.premiumTier, premium_subscription_count: obj.premiumSubscriberCount, approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, emojis: obj.emojis } = id);
-  if (typeof ExpressionSourceGuildRecord !== "error") {
+  if (typeof ExpressionSourceGuildRecord !== "find") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }
@@ -315,7 +315,7 @@ prototype2["createFromServer"] = function createFromServer(arg0) {
   let id;
   let name;
   ({ id, name } = arg0);
-  if (typeof prototype2 !== "error") {
+  if (typeof prototype2 !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const tmp2 = new prototype2("Trying to call a non-function", prototype2, new.target);

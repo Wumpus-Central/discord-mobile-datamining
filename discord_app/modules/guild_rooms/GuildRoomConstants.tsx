@@ -303,7 +303,7 @@ export const BACKGROUND_BLUR_WIDTH_FACTOR = 0.0228310502283105;
 export const getSeatName = function getSeatName(arg0, arg1) {
   const IE3e0y = arg0;
   let closure_1 = arg1;
-  const seats = obj[IE3e0y(undefined, 16285).GuildRoomBackgrounds.DEFAULT].seats;
+  const seats = obj[IE3e0y(undefined, 16318).GuildRoomBackgrounds.DEFAULT].seats;
   const found = seats.find((position) => {
     let tmp = position.position.x === closure_0;
     if (tmp) {

@@ -22,6 +22,6 @@ export default function UserProfilePrivateInfoBanner(username) {
   obj = { variant: "text-sm/normal", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.format(require(1236) /* getSystemLocale */.t.P8ij6Z, { username: username.username });
-  obj[1] = jsx(require(4251) /* Text */.Text, { variant: "text-sm/normal", children: null });
+  obj[1] = jsx(require(4281) /* Text */.Text, { variant: "text-sm/normal", children: null });
   return <View variant="text-sm/normal">{null}</View>;
 };

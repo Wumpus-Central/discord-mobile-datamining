@@ -15,7 +15,7 @@ class StageChannelRaiseHandAck {
   constructor(arg0) {
     channel = global.channel;
     _handleAcceptInvite = undefined;
-    f85815 = undefined;
+    f85435 = undefined;
     useState = undefined;
     _handleAcceptInvite = function _handleAcceptInvite(arg0) {
       const self = this;
@@ -51,19 +51,19 @@ class StageChannelRaiseHandAck {
                 if (null != outer1_0) {
                   if (obj9.shouldAgeVerifyToSpeakForCurrentUser(outer1_0.id)) {
                     const obj1 = { entryPoint: null };
-                    obj1[0] = tmp42(7710).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
-                    const result = outer1_1(7708).showAgeVerificationGetStartedModal(obj1);
-                    const obj4 = outer1_1(7708);
+                    obj1[0] = tmp42(7722).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
+                    const result = outer1_1(7720).showAgeVerificationGetStartedModal(obj1);
+                    const obj4 = outer1_1(7720);
                   } else {
                     dependencyMap(true);
                     dependencyMap = 1;
                     c4 = 2;
                     c5 = 1;
                     const obj2 = { value: null, done: false };
-                    obj2[0] = tmp42(7689).audienceAckRequestToSpeak(outer1_0, false);
+                    obj2[0] = tmp42(7701).audienceAckRequestToSpeak(outer1_0, false);
                     return obj2;
                   }
-                  obj9 = outer1_0(5078);
+                  obj9 = outer1_0(5107);
                 }
                 c5 = 3;
               }
@@ -79,8 +79,8 @@ class StageChannelRaiseHandAck {
               dependencyMap = 0;
               dependencyMap(false);
               if (null == outer1_8.getKey()) {
-                outer1_2(7685).openStageChannel(outer1_0);
-                const obj8 = outer1_2(7685);
+                outer1_2(7697).openStageChannel(outer1_0);
+                const obj8 = outer1_2(7697);
               }
             }
             dependencyMap = 0;
@@ -125,7 +125,7 @@ class StageChannelRaiseHandAck {
     items1 = [];
     items1[0] = channel.id;
     stateFromStores = obj.useStateFromStores(items, () => outer1_9.getStageInstanceByChannel(channel.id), items1);
-    f85815 = stateFromStores;
+    f85435 = stateFromStores;
     tmp8 = require("useMountLayoutEffect")(() => {
       let obj = _undefined(_undefined2[14]);
       const intl = channel(_undefined2[8]).intl;
@@ -289,13 +289,13 @@ export default function GlobalStageChannelStatus(arg0) {
   if (channel != null) {
     id = channel.id;
   }
-  let stringResult = importDefault(4446)(channel);
+  let stringResult = importDefault(4475)(channel);
   if (stringResult == null) {
     const intl = id(1236).intl;
     stringResult = intl.string(id(1236).t["/YzI63"]);
   }
-  const tmp7 = importDefault(10808)();
-  let invitedHeaderText = tmp3(10547)(id);
+  const tmp7 = importDefault(10659)();
+  let invitedHeaderText = tmp3(10211)(id);
   let obj = id(589);
   const items = [closure_9];
   const items1 = [id];
@@ -307,7 +307,7 @@ export default function GlobalStageChannelStatus(arg0) {
   }
   if (!invitedHeaderText) {
     if (!tmp7) {
-      let tmp8Result = tmp8(3965);
+      let tmp8Result = tmp8(3995);
       let str = "dark-content";
     }
     if (null != channel) {
@@ -331,11 +331,11 @@ export default function GlobalStageChannelStatus(arg0) {
           obj[0] = tmp.noticeContainer;
           const obj1 = { animated: true, barStyle: null };
           obj1[1] = str;
-          const items2 = [callback2(tmp3(7657), obj1), , ];
+          const items2 = [callback2(tmp3(7669), obj1), , ];
           const obj2 = { style: null, size: null, source: null };
           obj2[0] = activeSpeakerIcon;
           obj2[1] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-          tmp8Result = tmp8(4716);
+          tmp8Result = tmp8(4745);
           obj2[2] = tmp8Result.getChannelIconWithGuild(channel, guild);
           items2[1] = callback2(tmp8(1297).Icon, obj2);
           tmp13Result = "" !== str2;

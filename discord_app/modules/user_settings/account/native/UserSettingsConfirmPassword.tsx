@@ -1,7 +1,7 @@
 import ME from "ME";
 import _slicedToArray from "_slicedToArray";
 import importAllResult from "Button";
-import get_ActivityIndicator from "module_9181";
+import get_ActivityIndicator from "module_8276";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { UserSettingsSections } from "ME";
 import jsxProd from "jsxProd";
@@ -194,7 +194,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj[0] = items1;
     let tmp15 = null;
     if (!hideUnverifiedBanner) {
-      tmp15 = callback(importDefault(9412), {});
+      tmp15 = callback(importDefault(8325), {});
     }
     function handleSubmit() {
       const self = this;
@@ -213,12 +213,12 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj1[0] = tmp.title;
     let intl = tmp3(1236).intl;
     obj1[4] = intl.string(tmp3(1236).t["x+d9t3"]);
-    const items3 = [callback(tmp3(4251).Text, obj1), , , , ];
+    const items3 = [callback(tmp3(4281).Text, obj1), , , , ];
     obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj2[0] = tmp.prompt;
     const intl2 = tmp3(1236).intl;
     obj2[3] = intl2.string(tmp3(1236).t.vaZmAx);
-    items3[1] = callback(tmp3(4251).Text, obj2);
+    items3[1] = callback(tmp3(4281).Text, obj2);
     let obj3 = { style: null, textStyle: null, label: null, textContentType: "password", keyboardType: "default", secureTextEntry: true, value: null, onChangeText: null, onSubmitEditing: null, error: null, returnKeyType: "done", autoCapitalize: "none", autoFocus: true };
     ({ input: obj7[0], redesignInput: obj7[1] } = tmp);
     const intl3 = tmp3(1236).intl;
@@ -231,7 +231,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       fieldMessage = obj1.getFieldMessage("password");
     }
     obj3[9] = fieldMessage;
-    items3[2] = callback(importDefault(9181), obj3);
+    items3[2] = callback(importDefault(8276), obj3);
     let tmp19Result = null;
     if (null != obj1) {
       tmp19Result = null;
@@ -239,7 +239,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         const obj4 = { style: null, children: null };
         obj4[0] = tmp.hint;
         obj4[1] = obj1.message;
-        tmp19Result = tmp19(tmp20(9185), obj4);
+        tmp19Result = tmp19(tmp20(8280), obj4);
       }
     }
     items3[3] = tmp19Result;
@@ -250,7 +250,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     obj6[2] = intl4.string(tmp3(1236).t.i4jeWR);
     obj6[3] = handleSubmit;
     obj6[4] = tmp7;
-    obj5[1] = callback(tmp3(4666).Button, obj6);
+    obj5[1] = callback(tmp3(4695).Button, obj6);
     items3[4] = callback(_handleSubmit, obj5);
     obj[1] = items3;
     items2[1] = closure_11(_handleSubmit, obj);
@@ -258,7 +258,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     tmp13Result = tmp13(closure_7, obj);
     const tmp14 = closure_7;
     tmp20 = importDefault;
-    const tmp21 = importDefault(9181);
+    const tmp21 = importDefault(8276);
   }
   return tmp13Result;
 });
@@ -267,7 +267,7 @@ let result = require("noop").fileFinishedImporting("modules/user_settings/accoun
 
 export default forwardRefResult;
 export const UserSettingsConfirmPasswordWrapped = function UserSettingsConfirmPasswordWrapped() {
-  let obj = require(6775) /* useSettingNavigationRoute */;
+  let obj = require(6787) /* useSettingNavigationRoute */;
   obj = {};
   const merged = Object.assign(obj.useSettingNavigationRoute().params);
   return callback(closure_13, obj);

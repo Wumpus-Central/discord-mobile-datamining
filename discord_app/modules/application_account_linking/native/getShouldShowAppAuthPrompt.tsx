@@ -9,7 +9,7 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
     return false;
   } else {
     let response = dependencyMap;
-    const authorizationApp = require(5586) /* getAuthorizationApp */.getAuthorizationApp(application);
+    const authorizationApp = require(5615) /* getAuthorizationApp */.getAuthorizationApp(application);
     if (null == authorizationApp) {
       return false;
     } else {
@@ -33,9 +33,9 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
           return tmp4;
         } else if (fetchStateForApplication.getFetchStateForApplication(parentId) === FetchState.NOT_FETCHED) {
           const items = [parentId];
-          response = importDefault(5589).fetch(items);
+          response = importDefault(5618).fetch(items);
           let flag2 = false;
-          const obj2 = importDefault(5589);
+          const obj2 = importDefault(5618);
         } else {
           flag2 = !(obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId));
           const tmp6 = obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId);
@@ -44,6 +44,6 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
         return false;
       }
     }
-    const obj3 = require(5586) /* getAuthorizationApp */;
+    const obj3 = require(5615) /* getAuthorizationApp */;
   }
 };

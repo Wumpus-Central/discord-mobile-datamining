@@ -46,7 +46,7 @@ function BoostPurchaseNitroBanner() {
   let obj = { align: "center", spacing: null, style: null, children: null };
   obj[1] = importDefault(712).space.PX_12;
   obj[2] = tmp.nitroBanner;
-  const items = [callback3(require(5926) /* AccountAgeTier10LargeBadge */.TreasureChestBannerSpotIllustration, { width: 117, height: 93, accessible: false }), ];
+  const items = [callback3(require(5936) /* AccountAgeTier10LargeBadge */.TreasureChestBannerSpotIllustration, { width: 117, height: 93, accessible: false }), ];
   obj = { align: "center", spacing: null, children: null };
   obj[1] = importDefault(712).space.PX_4;
   obj = { variant: "text-md/semibold", color: "text-default", style: tmp.nitroBannerText, children: null };
@@ -55,17 +55,17 @@ function BoostPurchaseNitroBanner() {
   const obj2 = { variant: "text-md/semibold", color: "text-feedback-positive", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj2[2] = intl2.format(require(1236) /* getSystemLocale */.t.RmVM19, { percentageOff: closure_16 });
-  obj1[0] = callback3(require(4251) /* Text */.Text, obj2, "discount");
+  obj1[0] = callback3(require(4281) /* Text */.Text, obj2, "discount");
   obj[3] = intl.format(require(1236) /* getSystemLocale */.t.jbrHpT, obj1);
-  const items1 = [callback3(require(4251) /* Text */.Text, obj), ];
+  const items1 = [callback3(require(4281) /* Text */.Text, obj), ];
   const obj4 = { variant: "text-sm/medium", color: "text-muted", style: tmp.nitroBannerText, children: null };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj4[3] = intl3.format(require(1236) /* getSystemLocale */.t.HYpETY, { boostCount: closure_17 });
-  items1[1] = callback3(require(4251) /* Text */.Text, obj4);
+  items1[1] = callback3(require(4281) /* Text */.Text, obj4);
   obj[2] = items1;
-  items[1] = callback4(require(4664) /* Stack */.Stack, obj);
+  items[1] = callback4(require(4693) /* Stack */.Stack, obj);
   obj[3] = items;
-  return callback4(require(4664) /* Stack */.Stack, obj);
+  return callback4(require(4693) /* Stack */.Stack, obj);
 }
 function getPlanDescription(premiumTier) {
   let flag = arg1;
@@ -78,8 +78,8 @@ function getPlanDescription(premiumTier) {
     obj[0] = premiumTier.numPremiumGuild;
     let formatToPlainStringResult = intl.formatToPlainString(require(1236) /* getSystemLocale */.t.gDsyB9, obj);
   } else if (0 === premiumTier.numPremiumGuild) {
-    formatToPlainStringResult = require(3901) /* getPremiumPlanItem */.getPremiumTypeDisplayName(premiumTier.premiumTier);
-    const obj3 = require(3901) /* getPremiumPlanItem */;
+    formatToPlainStringResult = require(3931) /* getPremiumPlanItem */.getPremiumTypeDisplayName(premiumTier.premiumTier);
+    const obj3 = require(3931) /* getPremiumPlanItem */;
   } else {
     const intl2 = require(1236) /* getSystemLocale */.intl;
     const formatToPlainString = intl2.formatToPlainString;
@@ -108,7 +108,7 @@ function BoostDeltaPriceTrailing(arg0) {
   obj[2] = importDefault(712).space.PX_4;
   obj = { size: "xs", color: null };
   obj[1] = importDefault(712).colors.ICON_FEEDBACK_POSITIVE;
-  const items = [callback3(require(7613) /* NitroWheelIcon */.NitroWheelIcon, obj), ];
+  const items = [callback3(require(7625) /* NitroWheelIcon */.NitroWheelIcon, obj), ];
   const intl = require(1236) /* getSystemLocale */.intl;
   if (interval === constants.MONTH) {
     rS8FA_ = tmp2(1236).t.AbOLNu;
@@ -116,10 +116,10 @@ function BoostDeltaPriceTrailing(arg0) {
     rS8FA_ = tmp2(1236).t["rS8FA+"];
   }
   obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-  obj[2] = intl.format(rS8FA_, { price: callback3(require(4251) /* Text */.Text, { variant: "text-sm/semibold", color: "text-feedback-positive", children: price }, "price") });
-  items[1] = callback3(require(4251) /* Text */.Text, obj);
+  obj[2] = intl.format(rS8FA_, { price: callback3(require(4281) /* Text */.Text, { variant: "text-sm/semibold", color: "text-feedback-positive", children: price }, "price") });
+  items[1] = callback3(require(4281) /* Text */.Text, obj);
   obj[3] = items;
-  return closure_33(require(4664) /* Stack */.Stack, obj);
+  return closure_33(require(4693) /* Stack */.Stack, obj);
 }
 function PlanRow(plan) {
   let importDefault;
@@ -451,7 +451,7 @@ function PlanSection(showBoostOnlyLabels) {
     obj = { title: null, hasIcons: true, children: null };
     obj[0] = showBoostOnlyLabels.label;
     obj[2] = mapped;
-    let tmp7Result = tmp7(shouldShowModernBoostFlow(5620).TableRowGroup, obj);
+    let tmp7Result = tmp7(shouldShowModernBoostFlow(5649).TableRowGroup, obj);
   } else {
     obj = { children: null };
     obj[0] = mapped;
@@ -472,18 +472,18 @@ function CurrentPlanRow(subscription) {
   const tmp = callback5();
   if (subscription.showCurrentPlan) {
     if (null != subscription) {
-      productIdFromSubscription = subscription(6768).getProductIdFromSubscription(subscription, true);
-      let obj4 = subscription(6768);
+      productIdFromSubscription = subscription(6780).getProductIdFromSubscription(subscription, true);
+      let obj4 = subscription(6780);
       const tmp13 = subscription;
-      const premiumBundledItemsFromProductId = subscription(6768).getPremiumBundledItemsFromProductId(productIdFromSubscription);
+      const premiumBundledItemsFromProductId = subscription(6780).getPremiumBundledItemsFromProductId(productIdFromSubscription);
       const premiumTier = premiumBundledItemsFromProductId.premiumTier;
       if (null != premiumTier) {
         let PREMIUM_GUILD = callback2(premiumTier);
       } else {
         PREMIUM_GUILD = constants5.PREMIUM_GUILD;
       }
-      const obj5 = subscription(6768);
-      toggledIntervalProduct = tmp13(6768).getToggledIntervalProduct(productIdFromSubscription);
+      const obj5 = subscription(6780);
+      toggledIntervalProduct = tmp13(6780).getToggledIntervalProduct(productIdFromSubscription);
       let obj = { style: null, colors: null, start: null, end: null, children: null };
       obj[0] = tmp.currentPlanGradient;
       obj[1] = PREMIUM_GUILD;
@@ -492,7 +492,7 @@ function CurrentPlanRow(subscription) {
       obj[0] = premiumBundledItemsFromProductId;
       obj[1] = subscription;
       let tmp11 = null == toggledIntervalProduct;
-      const tmp13Result = tmp13(6768);
+      const tmp13Result = tmp13(6780);
       if (tmp11) {
         tmp11 = subscription.status !== constants4.CANCELED;
       }
@@ -524,8 +524,8 @@ function CurrentPlanRow(subscription) {
                     let obj = {};
                     const merged = Object.assign(arg0);
                     obj.productId = outer1_1;
-                    obj.continueWithUpsell = outer3_3(/* F119314 */ function() { ... });
-                    obj.continueWithDefault = outer3_3(/* F119315 */ function() { ... });
+                    obj.continueWithUpsell = outer3_3(/* F119401 */ function() { ... });
+                    obj.continueWithDefault = outer3_3(/* F119402 */ function() { ... });
                     return outer3_32(closure_0, obj);
                   };
                 });
@@ -558,7 +558,7 @@ function CurrentPlanRow(subscription) {
       };
       obj[5] = tmp.currentPlanRow;
       obj[4] = closure_32(PlanRow, obj);
-      return closure_32(importDefault(4677), obj);
+      return closure_32(importDefault(4706), obj);
     }
   }
   return null;
@@ -785,7 +785,7 @@ obj[23] = { textAlign: "center" };
 let obj5 = { alignItems: "center", paddingTop: require("Themes").space.PX_16, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
 obj[24] = { color: require("Themes").unsafe_rawColors.GUILD_BOOSTING_PINK };
 let closure_35 = createCacheKey.createStyles(obj);
-let closure_38 = { [importDefault(12690)]: "imgWumpusNitro", [importDefault(12692)]: "imgWumpusNitroBoost", [importDefault(12689)]: "imgWumpusNitroClassic", [importDefault(12691)]: "imgWumpusNitroClassicBoost", [importDefault(12688)]: "imgWumpusNitroTier0", [importDefault(12687)]: "imgBoost" };
+let closure_38 = { [importDefault(12724)]: "imgWumpusNitro", [importDefault(12726)]: "imgWumpusNitroBoost", [importDefault(12723)]: "imgWumpusNitroClassic", [importDefault(12725)]: "imgWumpusNitroClassicBoost", [importDefault(12722)]: "imgWumpusNitroTier0", [importDefault(12721)]: "imgBoost" };
 items = [
   {
     id: "premium",
@@ -974,8 +974,8 @@ let closure_46 = importAllResult.forwardRef(function PremiumPlanSelect(isBoostPu
                 const obj1 = { value: null, done: false };
                 obj1[0] = v0(modifySubscriptionItemsForProduct.map((planId) => {
                   const obj = { sku_id: null, subscription_plan_id: null, quantity: null, purchase_type: null };
-                  const obj2 = callback(3901);
-                  obj[0] = obj2.castPremiumSubscriptionAsSkuId(callback2(3901).getSkuIdForPlan(planId.planId));
+                  const obj2 = callback(3931);
+                  obj[0] = obj2.castPremiumSubscriptionAsSkuId(callback2(3931).getSkuIdForPlan(planId.planId));
                   ({ planId: obj[1], quantity: obj[2] } = planId);
                   obj[3] = constants.SUBSCRIPTION;
                   return obj;

@@ -35,7 +35,7 @@ class WishlistEmptyState {
     tmp2 = closure_2;
     obj = require("useIsMobileWishlistSuggestionsEnabled");
     isMobileWishlistSuggestionsEnabled = obj.useIsMobileWishlistSuggestionsEnabled("WishlistEmptyState");
-    tmp4 = f54097(isMobileWishlistSuggestionsEnabled);
+    tmp4 = f54243(isMobileWishlistSuggestionsEnabled);
     obj2 = require("ManaContext");
     obj3 = require("AccessibilityAnnouncer");
     str = "mobile-text-heading-primary";
@@ -393,7 +393,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                                   obj2[1] = callback(context[26]).USER_PROFILE_WISHLIST;
                                   obj2[2] = outer2_19.FEATURED_PAGE;
                                   obj2[3] = function onNavigateAway(arg0) {
-                                    callback(8668)({ userId: user.id, initialSection: outer1_16.WISHLIST });
+                                    callback(8705)({ userId: user.id, initialSection: outer1_16.WISHLIST });
                                   };
                                   const result = lib(context[25]).openCollectiblesShopMobile(obj2);
                                   const obj23 = lib(context[25]);
@@ -519,7 +519,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
                               throwTypeErrorResult = outer2_20;
                               obj10[3] = outer2_20.USER_PROFILE_WISHLIST;
                               obj10[4] = function onGiftModalDismiss(validateRecipient, arg1) {
-                                callback(8668)({ userId: user.id, initialSection: outer1_16.WISHLIST });
+                                callback(8705)({ userId: user.id, initialSection: outer1_16.WISHLIST });
                               };
                               throwTypeErrorResult = lib(context[47]).openSocialLayerStorefrontGiftModal(obj10);
                               const obj45 = lib(context[47]);

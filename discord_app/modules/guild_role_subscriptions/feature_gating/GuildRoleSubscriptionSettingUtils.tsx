@@ -68,8 +68,8 @@ function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
     return tmp3;
   });
   const obj2 = _require(589);
-  const isUserInCreatorMonetizationEligibleCountry = _require(5761).useIsUserInCreatorMonetizationEligibleCountry();
-  _require(5753);
+  const isUserInCreatorMonetizationEligibleCountry = _require(5790).useIsUserInCreatorMonetizationEligibleCountry();
+  _require(5782);
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
@@ -145,7 +145,7 @@ export const getGuildRoleSubscriptionSettingsVisibility = function getGuildRoleS
       canResult = getUncachedChannelPermissions.can(constants2.ADMINISTRATOR, guild);
     }
     obj[2] = canResult;
-    obj = require(5761) /* set */;
+    obj = require(5790) /* set */;
     obj[3] = obj.isUserInCreatorMonetizationEligibleCountry();
     const features = guild.features;
     obj[4] = features.has(constants.CREATOR_MONETIZABLE_RESTRICTED);

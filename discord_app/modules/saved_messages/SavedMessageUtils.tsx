@@ -164,9 +164,9 @@ export const useDueInString = function useDueInString(arg0) {
     const intl = tmp(1236).intl;
     obj = { duration: null };
     const time = dueAt.getTime();
-    const obj3 = importDefault(3837);
+    const obj3 = importDefault(3867);
     tmp8 = obj;
-    obj[0] = importDefault(3837).duration(time - now.getTime(), "millisecond").humanize();
+    obj[0] = importDefault(3867).duration(time - now.getTime(), "millisecond").humanize();
     obj[0] = intl.formatToPlainString(H4gnX9, obj);
     obj[1] = now > dueAt;
     return obj;

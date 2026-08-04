@@ -9,12 +9,12 @@ let closure_0 = arg1;
 function sendReply(status, message) {
   const merged = Object.assign(arg2);
   const json = JSON.stringify({ type: "response", status, message });
-  importDefault(4113).logToDevice(json);
+  importDefault(4143).logToDevice(json);
 }
 function sendStatus(message) {
   tmp2.log(message);
   const json = JSON.stringify({ type: "status", message });
-  importDefault(4113).logToDevice(json);
+  importDefault(4143).logToDevice(json);
 }
 function getErrorDetails(headers) {
   if (null != headers) {
@@ -186,7 +186,7 @@ function _apiLogin() {
                 }
               }
               if (null != outer1_8.getId()) {
-                let obj16 = callback(5707);
+                let obj16 = callback(5736);
                 c6 = 3;
                 c7 = 1;
                 const obj3 = { value: null, done: false };
@@ -233,7 +233,7 @@ function _apiLogin() {
               obj9[0] = ok;
               return obj9;
             } else if (ok.ok) {
-              obj7 = callback(5707);
+              obj7 = callback(5736);
               c6 = 4;
               c7 = 1;
               const obj10 = { value: null, done: false };
@@ -312,7 +312,7 @@ function _apiLogin() {
               let obj = iter;
               obj = callback2(table[11]);
               callback2 = iter;
-              const f119397 = () => { ... };
+              const f119484 = () => { ... };
               function handler() { ... }
               const subscription = obj.subscribe(iter, handler);
             }
@@ -322,7 +322,7 @@ function _apiLogin() {
               continue;
             }
             outer1_20(callback(709), "LOGIN_SUCCESS", (token) => callback(token.token));
-            let obj = callback(5707);
+            let obj = callback(5736);
             obj = { login: closure_0, password: callback };
             obj.login(obj);
           });
@@ -353,7 +353,7 @@ function subscribeOnce(subscribe) {
   let closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f119397(arg0);
+    return f119484(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
@@ -364,43 +364,43 @@ let obj = {
   "setup-test": setupTTITest,
   ping() {
     const json = JSON.stringify({ type: "pong" });
-    importDefault(4113).logToDevice(json);
+    importDefault(4143).logToDevice(json);
   },
   () => {
-    let obj = callback(10507);
+    let obj = callback(9791);
     const result = obj.resetComponentProfiler();
     obj = { type: "response", status: "success", message: "reset-component-profiler" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4113).logToDevice(json);
+    importDefault(4143).logToDevice(json);
   },
   () => {
-    let obj = callback(10507);
+    let obj = callback(9791);
     const result = obj.pauseComponentProfiler();
     obj = { type: "response", status: "success", message: "pause-component-profiler" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4113).logToDevice(json);
+    importDefault(4143).logToDevice(json);
   },
   () => {
-    let obj = callback(10507);
+    let obj = callback(9791);
     const result = obj.resumeComponentProfiler();
     obj = { type: "response", status: "success", message: "resume-component-profiler" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4113).logToDevice(json);
+    importDefault(4143).logToDevice(json);
   },
   () => {
     let obj = { stats: null };
-    obj[0] = callback(10507).dumpStats();
+    obj[0] = callback(9791).dumpStats();
     obj = { type: "response", status: "success", message: "dump-component-profiler-stats" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    const obj2 = callback(10507);
-    importDefault(4113).logToDevice(json);
+    const obj2 = callback(9791);
+    importDefault(4143).logToDevice(json);
   },
   () => {
-    let obj = importDefault(16323);
+    let obj = importDefault(16356);
     let report;
     if (obj != null) {
       report = obj.requestReport();
@@ -409,27 +409,27 @@ let obj = {
     obj = { type: "response", status: "success", message: "dump-jank-stats" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    importDefault(4113).logToDevice(json);
+    importDefault(4143).logToDevice(json);
   },
   (multiplier) => {
-    let obj = importDefault(16323);
+    let obj = importDefault(16356);
     if (obj != null) {
       const result = obj.setJankHeuristicMultiplier(multiplier.multiplier);
     }
     obj = { type: "response", status: "success", message: "set-jank-multiplier" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4113).logToDevice(json);
+    importDefault(4143).logToDevice(json);
   },
   () => {
-    let obj = importDefault(16323);
+    let obj = importDefault(16356);
     if (obj != null) {
       obj.startTracking();
     }
     obj = { type: "response", status: "success", message: "start-jank-stats" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4113).logToDevice(json);
+    importDefault(4143).logToDevice(json);
   },
   (action) => {
     let obj = importDefault(709);
@@ -437,25 +437,25 @@ let obj = {
     obj = { type: "response", status: "success", message: "flux-dispatch" };
     const merged = Object.assign(undefined);
     const json = JSON.stringify(obj);
-    importDefault(4113).logToDevice(json);
+    importDefault(4143).logToDevice(json);
   },
   () => {
     let obj = { token: token.getToken() };
     obj = { type: "response", status: "success", message: "get-token" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    importDefault(4113).logToDevice(json);
+    importDefault(4143).logToDevice(json);
   },
   () => {
     let obj = { cumulativeCPU: null, currentMemoryUsage: null };
-    obj[0] = importDefault(7043).getCumulativeCPUUsage();
-    const obj2 = importDefault(7043);
-    obj[1] = importDefault(7043).getCurrentMemoryUsageKB();
+    obj[0] = importDefault(7055).getCumulativeCPUUsage();
+    const obj2 = importDefault(7055);
+    obj[1] = importDefault(7055).getCurrentMemoryUsageKB();
     obj = { type: "response", status: "success", message: "get-resource-usage" };
     const merged = Object.assign(obj);
     const json = JSON.stringify(obj);
-    const obj3 = importDefault(7043);
-    importDefault(4113).logToDevice(json);
+    const obj3 = importDefault(7055);
+    importDefault(4143).logToDevice(json);
   },
   backchannel: null
 };

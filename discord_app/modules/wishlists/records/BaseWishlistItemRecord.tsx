@@ -33,7 +33,7 @@ prototype["fromServer"] = function fromServer(sku) {
     fromServer = createFromServer.createFromServer(sku);
   }
   obj.sku = fromServer;
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "find") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }

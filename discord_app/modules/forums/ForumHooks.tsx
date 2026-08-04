@@ -385,8 +385,8 @@ export const useMessageCount = function useMessageCount(thread) {
     }
     return num;
   });
-  const messageCountText = _require(7852).getMessageCountText(stateFromStores, thread.id);
-  const obj2 = _require(7852);
+  const messageCountText = _require(7864).getMessageCountText(stateFromStores, thread.id);
+  const obj2 = _require(7864);
   const items1 = [generateOldThreadCutoff];
   const dependencyMap = _require(589).useStateFromStores(items1, () => {
     const items = [outer1_13];
@@ -436,7 +436,7 @@ export const useForumPostMessageAuthor = function useForumPostMessageAuthor(mess
   let obj = id(589);
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_14.getUser(id));
-  const nullableMessageAuthor = id(4484).useNullableMessageAuthor(message);
+  const nullableMessageAuthor = id(4513).useNullableMessageAuthor(message);
   const items1 = [guildId, id];
   const effect = React.useEffect(() => {
     let tmp2 = null != id;
@@ -502,7 +502,7 @@ export const useForumPostAuthor = function useForumPostAuthor(thread) {
   }
   const items2 = [, ];
   ({ guild_id: arr3[0], ownerId: arr3[1] } = thread);
-  author = _require(4484).useNullableUserAuthor(author, thread);
+  author = _require(4513).useNullableUserAuthor(author, thread);
   const effect = React.useEffect(() => {
     if (null != thread.ownerId) {
       const member = outer1_10.requestMember(tmp.guild_id, tmp.ownerId);
@@ -525,7 +525,7 @@ export const getForumPostAuthor = function getForumPostAuthor(ownerId) {
   if (author == null) {
     author = user;
   }
-  obj[1] = require(4484) /* useNullableMessageAuthor */.getUserAuthor(author, ownerId);
+  obj[1] = require(4513) /* useNullableMessageAuthor */.getUserAuthor(author, ownerId);
   return obj;
 };
 export const useForumPostFirstMessageMarkup = function useForumPostFirstMessageMarkup(firstMessage) {

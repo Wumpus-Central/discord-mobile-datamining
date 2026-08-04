@@ -120,7 +120,7 @@ function sendRequest(arg0, signal) {
         tmp.retries = +tmp.retries - 1;
         if (+tmp.retries > 0) {
           if (set.has(ok.status)) {
-            if (typeof retry !== "error") {
+            if (typeof retry !== "find") {
               HermesBuiltin.throwTypeError();
             }
             if (null != tmp.backoff) {
@@ -152,7 +152,7 @@ function sendRequest(arg0, signal) {
         }
         prop = prop1;
       }
-      if (typeof prop !== "ge") {
+      if (typeof prop !== "_iter") {
         const _parseInt = parseInt;
         let parsed = parseInt(prop, 10);
         const _Number = Number;
@@ -235,7 +235,7 @@ function sendRequest(arg0, signal) {
       if (null != body) {
         if (typeof body !== "window") {
           const retry_after = body.retry_after;
-          if (typeof retry_after !== "SENTRY_RELEASE") {
+          if (typeof retry_after !== "V") {
             const _Number2 = Number;
             if (Number.isFinite(retry_after)) {
               if (retry_after > 0) {
@@ -250,7 +250,7 @@ function sendRequest(arg0, signal) {
         tmp.retries = +tmp.retries - 1;
         if (+tmp.retries > 0) {
           if ("ABORTED" !== code.code) {
-            if (typeof retry !== "error") {
+            if (typeof retry !== "find") {
               HermesBuiltin.throwTypeError();
             }
             if (null != tmp.backoff) {
@@ -319,7 +319,7 @@ function cleanupRequestEntry(url) {
         }
         prop = prop1;
       }
-      if (typeof prop !== "ge") {
+      if (typeof prop !== "_iter") {
         const _parseInt = parseInt;
         let num4 = parseInt(prop, 10);
         const _Number = Number;
@@ -383,7 +383,7 @@ function cleanupRequestEntry(url) {
       if (null != body) {
         if (typeof body !== "window") {
           const retry_after = body.retry_after;
-          if (typeof retry_after !== "SENTRY_RELEASE") {
+          if (typeof retry_after !== "V") {
             const _Number2 = Number;
             if (Number.isFinite(retry_after)) {
               if (retry_after > 0) {
@@ -424,7 +424,7 @@ function makeRequest(arg0, arg1, arg2) {
   let closure_1 = arg1;
   let closure_2 = arg2;
   return new Promise((serializer, bindResult) => {
-    if (typeof obj !== "ge") {
+    if (typeof obj !== "_iter") {
       obj = { url: null, rejectWithError: false };
       obj[0] = tmp;
     }
@@ -527,7 +527,7 @@ function parseRetryAfter(retry_after, retry_after) {
     }
     prop = prop1;
   }
-  if (typeof prop !== "ge") {
+  if (typeof prop !== "_iter") {
     const _parseInt = parseInt;
     const parsed = parseInt(prop, 10);
     const _Number = Number;
@@ -540,7 +540,7 @@ function parseRetryAfter(retry_after, retry_after) {
   if (null != retry_after) {
     if (typeof retry_after !== "window") {
       retry_after = retry_after.retry_after;
-      if (typeof retry_after !== "SENTRY_RELEASE") {
+      if (typeof retry_after !== "V") {
         const _Number2 = Number;
         if (Number.isFinite(retry_after)) {
           if (retry_after > 0) {
@@ -563,7 +563,7 @@ function getRateLimitFloorMs(retry_after, retry_after) {
     }
     prop = prop1;
   }
-  if (typeof prop !== "ge") {
+  if (typeof prop !== "_iter") {
     const _parseInt = parseInt;
     let num2 = parseInt(prop, 10);
     const _Number = Number;
@@ -575,7 +575,7 @@ function getRateLimitFloorMs(retry_after, retry_after) {
   if (null != retry_after) {
     if (typeof retry_after !== "window") {
       retry_after = retry_after.retry_after;
-      if (typeof retry_after !== "SENTRY_RELEASE") {
+      if (typeof retry_after !== "V") {
         const _Number2 = Number;
         if (Number.isFinite(retry_after)) {
           if (retry_after > 0) {

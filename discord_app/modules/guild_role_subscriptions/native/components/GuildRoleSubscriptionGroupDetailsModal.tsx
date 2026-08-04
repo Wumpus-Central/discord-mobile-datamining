@@ -88,6 +88,6 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   obj.description = first;
   obj.setDescription = tmp4[1];
   obj.children = callback2(Content, obj);
-  return callback2(importDefault(16662), obj);
+  return callback2(importDefault(16694), obj);
 };
 export { Content };

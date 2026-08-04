@@ -3,9 +3,9 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/direct
 
 export default {
   open(closure_0) {
-    importDefault(4461).pushLazy(require(1959) /* asyncRequireImpl */(10216, dependencyMap.paths), closure_0, GUILD_DIRECTORY_ADD_MODAL_KEY);
+    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(11593, dependencyMap.paths), closure_0, GUILD_DIRECTORY_ADD_MODAL_KEY);
   },
   close() {
-    importDefault(4461).popWithKey(GUILD_DIRECTORY_ADD_MODAL_KEY);
+    importDefault(4490).popWithKey(GUILD_DIRECTORY_ADD_MODAL_KEY);
   }
 };

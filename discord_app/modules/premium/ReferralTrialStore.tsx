@@ -72,8 +72,8 @@ prototype["checkAndFetchReferralsRemaining"] = function checkAndFetchReferralsRe
     tmp = tmp5;
   }
   if (tmp) {
-    const referralsRemaining = require(6813) /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
-    const obj = require(6813) /* _fetchReferralEligibleUsers */;
+    const referralsRemaining = require(6825) /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
+    const obj = require(6825) /* _fetchReferralEligibleUsers */;
   }
 };
 prototype["getReferralsRemaining"] = function getReferralsRemaining(arg0) {
@@ -136,8 +136,8 @@ const referralTrialStore = new ReferralTrialStore(require("dispatcher"), {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
-      const referralsRemaining = userTrialOfferId(6813).fetchReferralsRemaining();
-      const obj = userTrialOfferId(6813);
+      const referralsRemaining = userTrialOfferId(6825).fetchReferralsRemaining();
+      const obj = userTrialOfferId(6825);
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);
@@ -194,12 +194,12 @@ const referralTrialStore = new ReferralTrialStore(require("dispatcher"), {
   },
   BILLING_CREATE_REFERRAL_SUCCESS: function handleCreateReferralSuccess(userTrialOffer) {
     userTrialOffer = userTrialOffer.userTrialOffer;
-    const referralsRemaining = require(6813) /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
+    const referralsRemaining = require(6825) /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
     const result = map1.set(userTrialOffer.id, userTrialOffer);
     set.add(userTrialOffer.user_id);
   },
   CREATE_REFERRALS_SUCCESS: function handleCreateReferralsSuccess(arg0) {
-    const referralsRemaining = require(6813) /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
+    const referralsRemaining = require(6825) /* _fetchReferralEligibleUsers */.fetchReferralsRemaining();
     for (const item10012 of tmp) {
       let tmp3 = map1;
       let result = map1.set(item10012.id, item10012);

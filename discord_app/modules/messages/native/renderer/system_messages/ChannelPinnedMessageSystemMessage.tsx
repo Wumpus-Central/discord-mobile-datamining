@@ -2,9 +2,9 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/message
 
 export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = require(7867) /* getMessageAuthorWithProcessedColor */;
+  let obj = require(7879) /* getMessageAuthorWithProcessedColor */;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7869)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), pinsOnClick: obj };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: importDefault(7881)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), pinsOnClick: obj };
   obj = { action: "bindOpenPins", messageChannelId: message.channel_id, medium: true };
   const messageReference = message.messageReference;
   if (null != messageReference) {
@@ -19,7 +19,7 @@ export const createChannelPinnedMessageSystemMessage = function createChannelPin
     const intl = tmp(1236).intl;
     formatToPartsResult = intl.formatToParts(tmp(1236).t["6TrHq2"], obj);
   }
-  const tmp9 = importDefault(7870)(roleStyle);
+  const tmp9 = importDefault(7882)(roleStyle);
   let accessibilityActions = tmp9.accessibilityActions;
   if (accessibilityActions == null) {
     accessibilityActions = [];
@@ -28,13 +28,13 @@ export const createChannelPinnedMessageSystemMessage = function createChannelPin
   const obj3 = { label: null, name: null };
   const intl3 = tmp(1236).intl;
   obj3[0] = intl3.string(require(1236) /* getSystemLocale */.t["mp1N/2"]);
-  obj3[1] = require(7873) /* MessageAccessibilityAction */.MessageAccessibilityAction.OPEN_PINS;
+  obj3[1] = require(7885) /* MessageAccessibilityAction */.MessageAccessibilityAction.OPEN_PINS;
   items.push(obj3);
   if (null != messageReference) {
     const obj4 = { label: null, name: null };
     const intl4 = tmp(1236).intl;
     obj4[0] = intl4.string(tmp(1236).t["+TSRGD"]);
-    obj4[1] = tmp(7873).MessageAccessibilityAction.JUMP_TO_MESSAGE;
+    obj4[1] = tmp(7885).MessageAccessibilityAction.JUMP_TO_MESSAGE;
     items.push(obj4);
   }
   const obj5 = { content: formatToPartsResult };

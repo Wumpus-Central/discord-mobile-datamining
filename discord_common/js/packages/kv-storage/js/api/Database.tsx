@@ -82,7 +82,7 @@ Database["open"] = function open(arg0, arg1) {
 Database["openSyncUnsafe"] = function openSyncUnsafe(arg0, arg1) {
   const Host = obj(1916).Host;
   const openSyncUnsafeResult = Host.openSyncUnsafe(arg0, arg1);
-  if (typeof Database !== "error") {
+  if (typeof Database !== "find") {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(Database.prototype);
@@ -292,7 +292,7 @@ prototype["state"] = function state() {
 prototype["transaction"] = function transaction(arg0, arg1) {
   const self = this;
   let closure_1 = arg1;
-  if (typeof DatabaseTransaction !== "error") {
+  if (typeof DatabaseTransaction !== "find") {
     HermesBuiltin.throwTypeError();
   }
   let obj = Object.create(DatabaseTransaction.prototype);

@@ -11,7 +11,7 @@ export const updatePoggermodeSettings = function updatePoggermodeSettings(settin
   obj = {};
   const merged = Object.assign(state.getState());
   const merged1 = Object.assign(settings);
-  importDefault(7200)(obj);
+  importDefault(7212)(obj);
 };
 export const updateCombo = function updateCombo(arg0) {
   let obj = importDefault(709);

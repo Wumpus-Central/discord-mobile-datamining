@@ -6,7 +6,7 @@ const require = arg1;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(5581)().analyticsLocations;
+  analyticsLocations = analyticsLocations(5610)().analyticsLocations;
   let obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
   obj = { source: null, size: null };
   obj[0] = userRecord.getAvatarSource(undefined);
@@ -53,8 +53,8 @@ function IgnoredUserRow(userRecord) {
   obj1[3] = function onPress() {
     analyticsLocations(outer1_2[3]).unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj[9] = jsx(userRecord(4666).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5286).TableRow, { name: "unignore", label: null });
+  obj[9] = jsx(userRecord(4695).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
+  return jsx(userRecord(5315).TableRow, { name: "unignore", label: null });
 }
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUserRow.tsx");
 

@@ -10,6 +10,6 @@ export default function GuildPowerupRollbackSheet(arg0) {
   let onDismiss;
   ({ header, body, ctaText, onCtaPress, onDismiss } = arg0);
   const obj = { title: header, description: body, onDismiss, actions: null };
-  obj[3] = jsx(require(4666) /* Button */.Button, { variant: "primary", text: ctaText, onPress: onCtaPress });
-  return jsx(require(7642) /* PromoSheet */.PromoSheet, { title: header, description: body, onDismiss, actions: null });
+  obj[3] = jsx(require(4695) /* Button */.Button, { variant: "primary", text: ctaText, onPress: onCtaPress });
+  return jsx(require(7654) /* PromoSheet */.PromoSheet, { title: header, description: body, onDismiss, actions: null });
 };

@@ -18,10 +18,10 @@ function trackRoundtrip(channelId) {
       if (null != channelId.gatewaySeenTimestamp) {
         diff1 = channelId.gatewaySeenTimestamp - channelId.initialSendTimestamp;
       }
-      let obj = require(6818) /* receiveNetworkInfoformation */;
+      let obj = require(6830) /* receiveNetworkInfoformation */;
       const signalStrength = obj.getSignalStrength();
       obj = {};
-      const merged = Object.assign(importDefault(7045)());
+      const merged = Object.assign(importDefault(7057)());
       obj.api_latency_ms = diff;
       obj.gateway_latency_ms = diff1;
       ({ id: obj3.channel_id, type: obj3.channel_type, guild_id: obj3.guild_id } = basicChannel);

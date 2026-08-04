@@ -6,7 +6,7 @@ import createCacheKey from "createCacheKey";
 
 const require = arg1;
 function ShopThisLookMarketingCoachmarkImage() {
-  return <View style={callback().imageContainer}>{jsx(require(6041) /* BumpingFistsSpotIllustration */.BumpingFistsSpotIllustration, { width: 100, height: 56, resizeMode: "contain" })}</View>;
+  return <View style={callback().imageContainer}>{jsx(require(6051) /* BumpingFistsSpotIllustration */.BumpingFistsSpotIllustration, { width: 100, height: 56, resizeMode: "contain" })}</View>;
 }
 let closure_6 = createCacheKey.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" } });
 const result = require("ContentDismissActionType").fileFinishedImporting("modules/collectibles/shop_this_look/native/ShopThisLookMarketingCoachmark.tsx");

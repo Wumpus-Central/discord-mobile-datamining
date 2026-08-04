@@ -41,10 +41,10 @@ export default function RecommendationsBannerCard(application) {
   }
   const tmp = createCacheKey();
   if (!showsPromoted) {
-    let obj = application(8137);
+    let obj = application(8149);
     showsPromoted = obj.isPromotedApplication(application);
   }
-  let obj1 = application(8137);
+  let obj1 = application(8149);
   const shelfBadgeTypeIfActive = obj1.getShelfBadgeTypeIfActive(application);
   let bot = application.bot;
   let id;
@@ -96,8 +96,8 @@ export default function RecommendationsBannerCard(application) {
     obj3[0] = tmp.banner;
     const obj4 = { applicationBot: null, applicationEmbedded: null, applicationId: null, applicationIcon: null, overrideImageUrl: null };
     obj4[0] = application.bot;
-    const tmp10Result = tmp10(11390);
-    obj4[1] = tmp4(8137).isEmbeddedApp(application);
+    const tmp10Result = tmp10(11391);
+    obj4[1] = tmp4(8149).isEmbeddedApp(application);
     ({ id: obj8[2], icon } = application);
     obj4[3] = icon;
     obj4[4] = application.overrideImageUrl;
@@ -115,7 +115,7 @@ export default function RecommendationsBannerCard(application) {
         const obj8 = { variant: "text-xxs/medium", color: "mobile-text-heading-primary", children: null };
         const intl = tmp4(1236).intl;
         obj8[2] = intl.string(tmp4(1236).t["/eVltv"]);
-        obj7[1] = tmp14(tmp4(4251).Text, obj8);
+        obj7[1] = tmp14(tmp4(4281).Text, obj8);
         showsPromoted = tmp14(tmp13, obj7);
       }
       items3[1] = showsPromoted;
@@ -141,18 +141,18 @@ export default function RecommendationsBannerCard(application) {
     obj11[0] = tmp.appDetails;
     const obj12 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
     obj12[3] = application.name;
-    const items6 = [callback(tmp4(4251).Text, obj12), ];
+    const items6 = [callback(tmp4(4281).Text, obj12), ];
     const obj13 = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, children: null };
     obj13[3] = application.description;
-    items6[1] = callback(tmp4(4251).Text, obj13);
+    items6[1] = callback(tmp4(4281).Text, obj13);
     obj11[1] = items6;
     items5[1] = closure_7(View, obj11);
-    items5[2] = callback(tmp4(5293).TableRowArrow, {});
+    items5[2] = callback(tmp4(5322).TableRowArrow, {});
     obj9[1] = items5;
     items4[1] = closure_7(View, obj9);
     obj2[2] = items4;
-    tmp12Result = tmp12(tmp4(4783).PressableOpacity, obj2);
-    const tmp4Result = tmp4(8137);
+    tmp12Result = tmp12(tmp4(4812).PressableOpacity, obj2);
+    const tmp4Result = tmp4(8149);
   }
   return tmp12Result;
 };

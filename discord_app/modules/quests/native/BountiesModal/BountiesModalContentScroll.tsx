@@ -444,7 +444,7 @@ function BountiesModalContentScrollInner(arg0) {
       if (c31.get()) {
         tmp3 = c25;
         tmp2 = c30;
-        if (typeof c25 !== "error") {
+        if (typeof c25 !== "find") {
           str = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
@@ -466,7 +466,7 @@ function BountiesModalContentScrollInner(arg0) {
     constructor(arg0) {
       result = c31.set(true);
       tmp2 = c30;
-      if (typeof c25 !== "error") {
+      if (typeof c25 !== "find") {
         str = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -1033,7 +1033,7 @@ export default function BountiesModalContentScroll(arg0) {
   let sourceQuestContent;
   ({ bountyId, sourceQuestContent } = arg0);
   const obj = { theme: null, children: null };
-  obj[0] = require(7656) /* items */.ThemeTypes.DARKER;
+  obj[0] = require(7668) /* items */.ThemeTypes.DARKER;
   obj[1] = callback2(BountiesModalContentScrollInner, { initialBountyId: bountyId, sourceQuestContent });
-  return callback2(require(3979) /* ThemeContextProvider */.ThemeContextProvider, obj);
+  return callback2(require(4009) /* ThemeContextProvider */.ThemeContextProvider, obj);
 };

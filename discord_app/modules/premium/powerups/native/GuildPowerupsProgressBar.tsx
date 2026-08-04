@@ -5,7 +5,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import jsxProd from "jsxProd";
 import LinearGradient from "LinearGradient";
 import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4116";
+import importDefaultResult from "module_4146";
 
 let StyleSheet;
 let c4;

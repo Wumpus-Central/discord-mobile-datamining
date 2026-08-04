@@ -60,7 +60,7 @@ function _showAgeVerificationTestModal() {
         } else {
           if (1 === tmp7) {
             c3 = 0;
-            obj1 = callback(3956);
+            obj1 = callback(3986);
             obj1.open({ content: "Failed to show age verification test modal", key: "age-verification-test-failure" });
             c5 = 3;
           } else if (arg0 === 1) {
@@ -76,10 +76,10 @@ function _showAgeVerificationTestModal() {
             obj2[4] = function onComplete() {
               tmp3(tmp15[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
             };
-            obj2[5] = lib(7710).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
-            callback(7708).showAgeVerification(obj2);
+            obj2[5] = lib(7722).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
+            callback(7720).showAgeVerification(obj2);
             c3 = 0;
-            const obj7 = callback(7708);
+            const obj7 = callback(7720);
           }
           c3 = 0;
           c5 = 3;
@@ -125,23 +125,23 @@ export default function DevToolsAgeVerificationScreen() {
   obj[1] = items;
   obj = { title: "Quick Actions", hasIcons: true, children: null };
   const obj1 = { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: null, trailing: null };
-  obj1[2] = callback2(require(9388) /* KeyIcon */.KeyIcon, {});
-  obj1[3] = callback2(require(5293) /* TableRowArrow */.TableRowArrow, {});
-  const items1 = [callback2(require(5286) /* TableRowInner */.TableRow, obj1), ];
+  obj1[2] = callback2(require(8296) /* KeyIcon */.KeyIcon, {});
+  obj1[3] = callback2(require(5322) /* TableRowArrow */.TableRowArrow, {});
+  const items1 = [callback2(require(5315) /* TableRowInner */.TableRow, obj1), ];
   const obj2 = {
     label: "Launch Age Verification Modal",
     onPress() {
-      let obj = callback2(7708);
-      obj = { entryPoint: callback(7710).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
+      let obj = callback2(7720);
+      obj = { entryPoint: callback(7722).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
       return obj.showAgeVerificationGetStartedModal(obj);
     },
     icon: null,
     trailing: null
   };
-  obj2[2] = callback2(require(9388) /* KeyIcon */.KeyIcon, {});
-  obj2[3] = callback2(require(5293) /* TableRowArrow */.TableRowArrow, {});
-  items1[1] = callback2(require(5286) /* TableRowInner */.TableRow, obj2);
+  obj2[2] = callback2(require(8296) /* KeyIcon */.KeyIcon, {});
+  obj2[3] = callback2(require(5322) /* TableRowArrow */.TableRowArrow, {});
+  items1[1] = callback2(require(5315) /* TableRowInner */.TableRow, obj2);
   obj[2] = items1;
-  obj[2] = callback3(require(5620) /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[2] = callback3(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj);
   return callback2(ScrollView, obj);
 };

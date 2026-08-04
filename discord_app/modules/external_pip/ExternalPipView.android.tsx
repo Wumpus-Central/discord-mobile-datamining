@@ -1,6 +1,6 @@
 import _slicedToArray from "_slicedToArray";
 import noop from "noop";
-import module_8469 from "module_8469";
+import module_8784 from "module_8784";
 import { jsx } from "jsxProd";
 
 function FreezeAfterLayoutPipView() {
@@ -18,9 +18,9 @@ function FreezeAfterLayoutPipView() {
       const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
     }
   }, []);
-  return jsx(importDefault(15915), { onLayout });
+  return jsx(importDefault(15948), { onLayout });
 }
-const result = require("module_8469").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
+const result = require("module_8784").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
 
 export default function ExternalPipView() {
   let c0;

@@ -1,71 +1,11 @@
 let closure_0 = arg1;
 let obj = {
   load() {
-    return callback(7153);
+    return callback(7165);
   }
 };
 const items = [
   obj,
-  {
-    load() {
-      return callback(7154);
-    }
-  },
-  {
-    load() {
-      return callback(7155);
-    }
-  },
-  {
-    load() {
-      return callback(7156);
-    }
-  },
-  {
-    load() {
-      return callback(7157);
-    }
-  },
-  {
-    load() {
-      return callback(7158);
-    }
-  },
-  {
-    load() {
-      return callback(7159);
-    }
-  },
-  {
-    load() {
-      return callback(7160);
-    }
-  },
-  {
-    load() {
-      return callback(7161);
-    }
-  },
-  {
-    load() {
-      return callback(7162);
-    }
-  },
-  {
-    load() {
-      return callback(7163);
-    }
-  },
-  {
-    load() {
-      return callback(7164);
-    }
-  },
-  {
-    load() {
-      return callback(7165);
-    }
-  },
   {
     load() {
       return callback(7166);
@@ -90,15 +30,12 @@ const items = [
     load() {
       return callback(7170);
     }
-  }
-];
-obj = {
-  load() {
-    return callback(7171);
-  }
-};
-const items1 = [
-  obj,
+  },
+  {
+    load() {
+      return callback(7171);
+    }
+  },
   {
     load() {
       return callback(7172);
@@ -153,12 +90,15 @@ const items1 = [
     load() {
       return callback(7182);
     }
-  },
-  {
-    load() {
-      return callback(7183);
-    }
-  },
+  }
+];
+obj = {
+  load() {
+    return callback(7183);
+  }
+};
+const items1 = [
+  obj,
   {
     load() {
       return callback(7184);
@@ -183,9 +123,69 @@ const items1 = [
     load() {
       return callback(7188);
     }
+  },
+  {
+    load() {
+      return callback(7189);
+    }
+  },
+  {
+    load() {
+      return callback(7190);
+    }
+  },
+  {
+    load() {
+      return callback(7191);
+    }
+  },
+  {
+    load() {
+      return callback(7192);
+    }
+  },
+  {
+    load() {
+      return callback(7193);
+    }
+  },
+  {
+    load() {
+      return callback(7194);
+    }
+  },
+  {
+    load() {
+      return callback(7195);
+    }
+  },
+  {
+    load() {
+      return callback(7196);
+    }
+  },
+  {
+    load() {
+      return callback(7197);
+    }
+  },
+  {
+    load() {
+      return callback(7198);
+    }
+  },
+  {
+    load() {
+      return callback(7199);
+    }
+  },
+  {
+    load() {
+      return callback(7200);
+    }
   }
 ];
-closure_0 = require("module_7157")((arg0, arg1, arg2) => {
+closure_0 = require("module_7169")((arg0, arg1, arg2) => {
   let closure_0 = arg0;
   let closure_1 = arg1;
   let closure_2 = arg2;
@@ -262,7 +262,7 @@ closure_0 = require("module_7157")((arg0, arg1, arg2) => {
   iter.next();
   return iter;
 });
-const result = require("module_7154").fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
+const result = require("module_7166").fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
 
 export const getBurstAnimation = function() {
   const self = this;

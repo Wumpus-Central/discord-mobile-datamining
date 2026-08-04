@@ -45,7 +45,7 @@ prototype = function CollectiblesShopHomeRecord(shop_blocks) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(shop_blocks) {
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);

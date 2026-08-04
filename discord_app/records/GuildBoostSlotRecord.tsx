@@ -24,7 +24,7 @@ GuildBoostSlotRecord["createFromServer"] = function createFromServer(premium_gui
     tmp2 = obj;
   }
   ({ canceled, cooldown_ends_at } = premium_guild_subscription);
-  if (typeof GuildBoostSlotRecord !== "error") {
+  if (typeof GuildBoostSlotRecord !== "find") {
     HermesBuiltin.throwTypeError();
   }
   const tmp3 = new GuildBoostSlotRecord("Trying to call a non-function", GuildBoostSlotRecord, new.target, id, subscription_id, tmp2, canceled, cooldown_ends_at);

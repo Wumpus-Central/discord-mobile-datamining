@@ -22,7 +22,7 @@ export default function AlertNotification(notification) {
   channel = notification.channel;
   guild = notification.guild;
   const tmp = callback3();
-  let obj = channel(10417);
+  let obj = channel(9687);
   const incidentData = obj.useGuildIncidentsState(notification.key).incidentData;
   let raidDetectedAt;
   if (incidentData != null) {
@@ -55,18 +55,18 @@ export default function AlertNotification(notification) {
   obj = { children: null };
   const obj1 = { cutouts: items2, children: null };
   items2 = [obj];
-  obj1[1] = callback(guild(5632), { guild, selected: false });
-  const items3 = [callback(guild(8091), obj1), ];
+  obj1[1] = callback(guild(5661), { guild, selected: false });
+  const items3 = [callback(guild(8103), obj1), ];
   const obj2 = { style: tmp.warningBadge, children: null };
   const obj3 = { style: tmp.warningIcon, color: null };
   obj3[1] = guild(712).colors.ICON_FEEDBACK_WARNING;
-  obj2[1] = callback(channel(7760).WarningIcon, obj3);
+  obj2[1] = callback(channel(7772).WarningIcon, obj3);
   items3[1] = callback(View, obj2);
   obj[0] = items3;
   obj[0] = callback2(closure_6, obj);
   obj[1] = memo;
-  obj[2] = callback(channel(10432).SystemMessageText, { text: stringResult });
+  obj[2] = callback(channel(9703).SystemMessageText, { text: stringResult });
   obj[3] = callback;
   obj[4] = notification;
-  return callback(channel(10487).NotificationPressable, obj);
+  return callback(channel(9767).NotificationPressable, obj);
 };

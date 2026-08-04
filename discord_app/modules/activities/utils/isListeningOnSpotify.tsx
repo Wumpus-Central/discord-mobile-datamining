@@ -12,8 +12,8 @@ export default function isListeningOnSpotify(type) {
     tmp = type.type === constants.LISTENING;
   }
   if (tmp) {
-    tmp = type.name === importDefault(4937).get(constants2.SPOTIFY).name;
-    const obj = importDefault(4937);
+    tmp = type.name === importDefault(4966).get(constants2.SPOTIFY).name;
+    const obj = importDefault(4966);
   }
   if (tmp) {
     tmp = null != type.party;

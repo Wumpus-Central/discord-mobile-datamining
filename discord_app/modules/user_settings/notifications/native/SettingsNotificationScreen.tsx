@@ -11,16 +11,16 @@ let metroImportAll;
 const require = arg1;
 function SystemNotificationsSubLabel() {
   const tmp = callback2();
-  let obj = require(11629) /* _requestPushNotificationPermission */;
+  let obj = require(11692) /* _requestPushNotificationPermission */;
   let showReactivationPrompt = obj.useShowReactivationPrompt();
-  let obj1 = importDefault(14527);
-  let obj2 = require(14528) /* hasAndroidNotificationChannels */;
+  let obj1 = importDefault(14561);
+  let obj2 = require(14562) /* hasAndroidNotificationChannels */;
   let result = obj2.hasAndroidNotificationChannels();
   if (result) {
     obj = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl = tmp2(1236).intl;
     obj[2] = intl.string(tmp2(1236).t["/TZX1J"]);
-    result = callback(tmp2(4251).Text, obj);
+    result = callback(tmp2(4281).Text, obj);
   }
   const children = [result, ];
   if (showReactivationPrompt) {
@@ -34,17 +34,17 @@ function SystemNotificationsSubLabel() {
     obj2[0] = tmp.cardContent;
     const obj3 = { color: null };
     obj3[0] = importDefault(712).unsafe_rawColors.YELLOW_300;
-    const items1 = [callback(tmp2(7704).CircleErrorIcon, obj3), ];
+    const items1 = [callback(tmp2(7716).CircleErrorIcon, obj3), ];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.text;
     const obj5 = { color: "text-default", variant: "text-sm/medium", children: null };
     const intl2 = tmp2(1236).intl;
     obj5[2] = intl2.string(tmp2(1236).t.TAuasM);
-    obj4[1] = callback(tmp2(4251).Text, obj5);
+    obj4[1] = callback(tmp2(4281).Text, obj5);
     items1[1] = callback(View, obj4);
     obj2[1] = items1;
     obj1[2] = tmp7(View, obj2);
-    obj[1] = callback(tmp2(5288).Card, obj1);
+    obj[1] = callback(tmp2(5317).Card, obj1);
     showReactivationPrompt = callback(View, obj);
   }
   children[1] = showReactivationPrompt;
@@ -59,9 +59,9 @@ obj[1] = { flexDirection: "row", alignItems: "center", gap: 8 };
 obj[2] = { flex: 1 };
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
-  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(6950).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
-  let obj = isFamilyCenterV3Enabled(6950);
-  let tmp2 = !importDefault(14527).useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
+  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(6962).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
+  let obj = isFamilyCenterV3Enabled(6962);
+  let tmp2 = !importDefault(14561).useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   importDefault = tmp2;
   let items = [tmp2];
   const node = importAllResult.useMemo(() => {
@@ -147,7 +147,7 @@ const memoResult = importAllResult.memo(() => {
   const effect1 = importAllResult.useEffect(() => {
     const result = isFamilyCenterV3Enabled(outer1_2[17]).prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled);
   }, items1);
-  return callback(importDefault(13760), { node });
+  return callback(importDefault(13794), { node });
 });
 let result = require("_initializeAndroidNotificationSettingsStore").fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationScreen.tsx");
 

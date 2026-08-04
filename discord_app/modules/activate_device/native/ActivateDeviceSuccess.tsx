@@ -32,22 +32,22 @@ export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) 
     let obj1 = require(1416) /* getAvatarURL */;
     obj[0] = obj1.makeSource(successImage);
     obj[1] = tmp.image;
-    tmp9 = callback(importDefault(5207), obj);
-    const tmp13 = importDefault(5207);
+    tmp9 = callback(importDefault(5236), obj);
+    const tmp13 = importDefault(5236);
   }
   const items = [tmp9, , ];
-  obj = { style: importDefault(13105).innerContent, children: null };
+  obj = { style: importDefault(13139).innerContent, children: null };
   obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
-  obj[2] = importDefault(13105).centerText;
+  obj[2] = importDefault(13139).centerText;
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj[3] = intl3.string(require(1236) /* getSystemLocale */.t.qDtJmD);
-  const items1 = [callback(require(4251) /* Text */.Text, obj), ];
+  const items1 = [callback(require(4281) /* Text */.Text, obj), ];
   let tmp18Result = null;
   if (null != stringResult) {
     obj1 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
-    obj1[2] = importDefault(13105).centerText;
+    obj1[2] = importDefault(13139).centerText;
     obj1[3] = stringResult;
-    tmp18Result = tmp18(tmp19(4251).Text, obj1);
+    tmp18Result = tmp18(tmp19(4281).Text, obj1);
   }
   const obj2 = { children: null };
   items1[1] = tmp18Result;
@@ -57,7 +57,7 @@ export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) 
   const intl4 = tmp19(1236).intl;
   obj3[1] = intl4.string(require(1236) /* getSystemLocale */.t.cpT0Cq);
   obj3[2] = onComplete.onComplete;
-  items[2] = callback(require(4666) /* Button */.Button, obj3);
+  items[2] = callback(require(4695) /* Button */.Button, obj3);
   obj2[0] = items;
   return closure_5(closure_6, obj2);
 };

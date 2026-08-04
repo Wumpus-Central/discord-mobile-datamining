@@ -27,7 +27,7 @@ const require = arg1;
 function MusicMuteButton(channelId) {
   channelId = channelId.channelId;
   let stateFromStores;
-  const tmp3 = importDefault(10939)(channelId);
+  const tmp3 = importDefault(10808)(channelId);
   if (tmp3 != null) {
     const speaker = tmp3.speaker;
   }
@@ -48,13 +48,13 @@ function MusicMuteButton(channelId) {
       }
       obj = { accessibilityLabel: null, icon: null, onPress: null };
       obj[0] = stringResult;
-      obj[1] = tmp(stateFromStores ? 10830 : 9257);
+      obj[1] = tmp(stateFromStores ? 10682 : 9569);
       obj[2] = function onPress() {
         return stateFromStores(outer1_2[33]).updateStageMusicMuted(!stateFromStores);
       };
-      closure_23(tmp(15947), obj);
+      closure_23(tmp(15980), obj);
       const tmp7 = closure_23;
-      const tmpResult = tmp(15947);
+      const tmpResult = tmp(15980);
     }
   }
   return tmp6;

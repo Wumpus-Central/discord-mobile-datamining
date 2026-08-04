@@ -8,7 +8,7 @@ function orderPowerupListings(items) {
   const findIndexResult = items.findIndex((type) => {
     let tmp = "singlePerk" === type.type;
     if (tmp) {
-      tmp = type.powerup.skuId === callback(4146).GUILD_POWERUP_GUILD_THEME_SKU_ID;
+      tmp = type.powerup.skuId === callback(4176).GUILD_POWERUP_GUILD_THEME_SKU_ID;
     }
     return tmp;
   });
@@ -22,7 +22,7 @@ function orderPowerupListings(items) {
   const findIndexResult1 = obj.findIndex((type) => {
     let tmp = "singlePerk" === type.type;
     if (tmp) {
-      tmp = type.powerup.skuId === callback(4146).GUILD_POWERUP_TAG_SKU_ID;
+      tmp = type.powerup.skuId === callback(4176).GUILD_POWERUP_TAG_SKU_ID;
     }
     return tmp;
   });
@@ -49,7 +49,7 @@ function orderPowerupListings(items) {
         items1.splice(items1.findIndex((type) => {
           let tmp = "singlePerk" === type.type;
           if (tmp) {
-            tmp = type.powerup.skuId === callback(4146).GUILD_POWERUP_TAG_SKU_ID;
+            tmp = type.powerup.skuId === callback(4176).GUILD_POWERUP_TAG_SKU_ID;
           }
           return tmp;
         }) + 1, 0, callback(items1.splice(findIndexResult2, 1), 1)[0]);

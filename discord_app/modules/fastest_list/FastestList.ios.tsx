@@ -3,10 +3,10 @@ import { RefreshControl } from "get ActivityIndicator";
 import { jsx } from "jsxProd";
 
 const require = arg1;
-let c3 = importAllResult;
 function noop() {
 
 }
+let c3 = importAllResult;
 const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
   let accessibilityLabel;
   let enabled;

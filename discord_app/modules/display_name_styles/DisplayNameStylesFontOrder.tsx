@@ -6,7 +6,7 @@ const items1 = [...require("items3").FLYWHEEL_FONTS];
 const result = require("DisplayNameFont").fileFinishedImporting("modules/display_name_styles/DisplayNameStylesFontOrder.tsx");
 
 export const useVisibleFontOrder = function useVisibleFontOrder() {
-  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(8697).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
+  isDisplayNameStylesFlywheelSettersEnabled = isDisplayNameStylesFlywheelSettersEnabled(9159).useIsDisplayNameStylesFlywheelSettersEnabled("font-order");
   const items = [isDisplayNameStylesFlywheelSettersEnabled];
   return React.useMemo(() => isDisplayNameStylesFlywheelSettersEnabled ? outer1_4 : outer1_3, items);
 };

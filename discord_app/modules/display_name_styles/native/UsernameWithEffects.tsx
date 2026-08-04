@@ -76,7 +76,7 @@ let closure_12 = createCacheKey.createStyles((color) => {
   }
   const merged1 = Object.assign(obj5);
   obj1[2] = obj3;
-  tmp4Result2 = require(4119) /* isFabric */;
+  tmp4Result2 = require(4149) /* isFabric */;
   obj1[3] = { color: importDefault(712).colors.WHITE };
   const obj8 = { color: importDefault(712).colors.WHITE, top: null, left: null, marginRight: null };
   const obj7 = { color: importDefault(712).colors.WHITE };
@@ -107,7 +107,7 @@ const memoResult = importAllResult.memo((userName) => {
   let STATIC = userName.effectDisplayType;
   ({ userId, guildId } = userName);
   if (STATIC === undefined) {
-    STATIC = userName(8696).EffectDisplayType.STATIC;
+    STATIC = userName(9389).EffectDisplayType.STATIC;
   }
   ({ defaultColor, ignoreDisabledStylesSetting, pendingDisplayNameStyles } = userName);
   if (ignoreDisabledStylesSetting === undefined) {
@@ -115,20 +115,20 @@ const memoResult = importAllResult.memo((userName) => {
   }
   const merged = Object.assign(userName, Object.create(null));
   let num;
-  const tmp6 = num(4485)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
-  let obj = userName(8697);
+  const tmp6 = num(4514)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
+  let obj = userName(9159);
   const isDisplayNameStylesFlywheelViewersEnabled = obj.useIsDisplayNameStylesFlywheelViewersEnabled("UsernameWithEffects");
   let obj1 = userName(1885);
   const result = obj1.applyFlywheelViewingFallback(tmp6, isDisplayNameStylesFlywheelViewersEnabled);
-  let obj2 = userName(4486);
+  let obj2 = userName(4515);
   const displayNameStylesEnabled = obj2.useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
-  let obj3 = userName(8698);
+  let obj3 = userName(9158);
   const displayNameStylesFont = obj3.useDisplayNameStylesFont({ displayNameStyles: result, ignoreDisabledStylesSetting });
-  let obj4 = userName(3959);
+  let obj4 = userName(3989);
   const token = obj4.useToken(num(712).colors.BACKGROUND_BASE_LOW);
-  let obj5 = userName(3959);
+  let obj5 = userName(3989);
   const token1 = obj5.useToken(num(712).colors.WHITE);
-  let obj6 = userName(8699);
+  let obj6 = userName(9390);
   const displayNameStylesAccessibleColors = obj6.useDisplayNameStylesAccessibleColors({ displayNameStyles: result, backgroundColor: token });
   let first;
   if (displayNameStylesAccessibleColors.length > 0) {
@@ -146,8 +146,8 @@ const memoResult = importAllResult.memo((userName) => {
     let tmp7Result = tmp7(1885);
     colorVariants = tmp7Result.generateColorVariants(first);
   }
-  tmp7Result = tmp7(4260);
-  const tmp17 = userName(4251).TextStyleSheet[tmp7Result.useTypographyVariantRemap(tmp7Result, merged.variant, false)];
+  tmp7Result = tmp7(4290);
+  const tmp17 = userName(4281).TextStyleSheet[tmp7Result.useTypographyVariantRemap(tmp7Result, merged.variant, false)];
   const flattenResult = closure_7.flatten(merged.style);
   num = undefined;
   if (flattenResult != null) {
@@ -202,7 +202,7 @@ const memoResult = importAllResult.memo((userName) => {
   const tmp25Result = closure_12(str, num);
   if (displayNameStylesEnabled) {
     if (null != tmp6) {
-      if (STATIC !== tmp7(8696).EffectDisplayType.PLAIN) {
+      if (STATIC !== tmp7(9389).EffectDisplayType.PLAIN) {
         if (null != colorVariants) {
           const items1 = [merged.style, ];
           let tmp27 = null != displayNameStylesFont;
@@ -213,9 +213,9 @@ const memoResult = importAllResult.memo((userName) => {
           }
           items1[1] = tmp27;
           if (effectId === tmp7(1887).DisplayNameEffect.GUMMY) {
-            const tmp4Result = num(8702);
+            const tmp4Result = num(9393);
             const tmp64 = callback2;
-            let str3 = tmp7(3962).getNodeText(userName);
+            let str3 = tmp7(3992).getNodeText(userName);
             if (str3 == null) {
               str3 = "";
             }
@@ -279,7 +279,7 @@ const memoResult = importAllResult.memo((userName) => {
                     const items3 = [items1, tmp25Result.popBackLayer];
                     obj3.style = items3;
                     obj3.children = userName;
-                    const items4 = [callback2(tmp7(4251).Text, obj3), ];
+                    const items4 = [callback2(tmp7(4281).Text, obj3), ];
                     obj4 = {};
                     const merged3 = Object.assign(merged);
                     obj4.textStrokeWidth = sum;
@@ -291,7 +291,7 @@ const memoResult = importAllResult.memo((userName) => {
                     const items5 = [items1, tmp25Result.popFrontLayer];
                     obj4.style = items5;
                     obj4.children = userName;
-                    items4[1] = callback2(tmp7(4251).Text, obj4);
+                    items4[1] = callback2(tmp7(4281).Text, obj4);
                     obj2[1] = items4;
                     return closure_10(closure_4, obj2);
                   }
@@ -329,7 +329,7 @@ const memoResult = importAllResult.memo((userName) => {
               obj6.textStrokeWidth = tmp30;
               obj6.textStrokeColor = tmp29;
               obj6.children = userName;
-              return callback2(tmp7(4251).Text, obj6);
+              return callback2(tmp7(4281).Text, obj6);
             }
             const mapped = displayNameStylesAccessibleColors.map((arg0) => callback(arg0));
             const found = mapped.filter(tmp7(1351).isNotNullish);
@@ -364,7 +364,7 @@ const memoResult = importAllResult.memo((userName) => {
       const items11 = [merged.style, ];
       let tmp73 = null != displayNameStylesFont;
       if (tmp73) {
-        const obj8 = { fontFamily: null, lineHeight: "Array" };
+        const obj8 = { fontFamily: null, lineHeight: "a" };
         obj8[0] = displayNameStylesFont;
         tmp73 = obj8;
       }
@@ -372,14 +372,14 @@ const memoResult = importAllResult.memo((userName) => {
       obj7.style = items11;
       obj7.color = defaultColor;
       obj7.children = userName;
-      return callback2(tmp7(4251).Text, obj7);
+      return callback2(tmp7(4281).Text, obj7);
     }
   }
   const obj9 = {};
   const merged6 = Object.assign(merged);
   obj9.color = defaultColor;
   obj9.children = userName;
-  return callback2(userName(4251).Text, obj9);
+  return callback2(userName(4281).Text, obj9);
 });
 let result = require("items3").fileFinishedImporting("modules/display_name_styles/native/UsernameWithEffects.tsx");
 

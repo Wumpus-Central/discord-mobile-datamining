@@ -20,8 +20,8 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
   }
   const currentUser = authStore.getCurrentUser();
   let ExplicitContentRedaction = dependencyMap;
-  const obj = require(3934) /* isFeatureAgeGated */;
-  if (obj.isSettingTeenByDefault(require(3941) /* SettingsDefaultFeature */.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
+  const obj = require(3964) /* isFeatureAgeGated */;
+  if (obj.isSettingTeenByDefault(require(3971) /* SettingsDefaultFeature */.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
     if (isDm === undefined) {
       isDm = false;
     }
@@ -52,7 +52,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
       if (!flag5) {
         const BLUR = tmp4(1306).ExplicitContentRedaction.BLUR;
       }
-      const ExplicitContentFilter2 = tmp4(3928).ExplicitContentFilter;
+      const ExplicitContentFilter2 = tmp4(3958).ExplicitContentFilter;
       setting = ExplicitContentFilter2.getSetting();
       if (flag6) {
         let tmp11 = obj[setting];
@@ -69,7 +69,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
         flag4 = false;
       }
       if (flag3) {
-        const ExplicitContentFilter = tmp4(3928).ExplicitContentFilter;
+        const ExplicitContentFilter = tmp4(3958).ExplicitContentFilter;
         const setting1 = ExplicitContentFilter.getSetting();
         if (flag4) {
           let SHOW = obj[setting1];
@@ -138,7 +138,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
     flag2 = false;
   }
   if (flag) {
-    const ExplicitContentFilter = tmp(3928).ExplicitContentFilter;
+    const ExplicitContentFilter = tmp(3958).ExplicitContentFilter;
     const setting = ExplicitContentFilter.getSetting();
     if (flag2) {
       let tmp5 = obj[setting];
@@ -153,7 +153,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
 export const getExplicitContentSettingOrDefault = function getExplicitContentSettingOrDefault(arg0) {
   let setting = arg0;
   if (arg0 == null) {
-    const ExplicitContentSettings = require(3928) /* explicitContentFromProto */.ExplicitContentSettings;
+    const ExplicitContentSettings = require(3958) /* explicitContentFromProto */.ExplicitContentSettings;
     setting = ExplicitContentSettings.getSetting();
   }
   let prop;
@@ -174,7 +174,7 @@ export const getExplicitContentSettingOrDefault = function getExplicitContentSet
   return obj;
 };
 export const updateExplicitContentSetting = function updateExplicitContentSetting(arg0) {
-  const ExplicitContentSettings = require(3928) /* explicitContentFromProto */.ExplicitContentSettings;
+  const ExplicitContentSettings = require(3958) /* explicitContentFromProto */.ExplicitContentSettings;
   const setting = ExplicitContentSettings.getSetting();
   let prop;
   if (setting != null) {
@@ -191,7 +191,7 @@ export const updateExplicitContentSetting = function updateExplicitContentSettin
     prop2 = setting.explicitContentFriendDm;
   }
   obj[2] = resolveExplicitContentSettingWithDefaults({ setting: prop2, isDm: true, isFriend: true });
-  const ExplicitContentSettings2 = require(3928) /* explicitContentFromProto */.ExplicitContentSettings;
+  const ExplicitContentSettings2 = require(3958) /* explicitContentFromProto */.ExplicitContentSettings;
   obj = {};
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);
@@ -201,7 +201,7 @@ export const shouldRedactMessageMediaForForum = function shouldRedactMessageMedi
   if (null == authStore.getCurrentUser()) {
     return false;
   } else {
-    const ExplicitContentSettings = require(3928) /* explicitContentFromProto */.ExplicitContentSettings;
+    const ExplicitContentSettings = require(3958) /* explicitContentFromProto */.ExplicitContentSettings;
     const setting = ExplicitContentSettings.getSetting();
     let prop;
     if (setting != null) {
@@ -224,6 +224,6 @@ export const shouldRedactMessageMediaForForum = function shouldRedactMessageMedi
     obj = { setting: null, isDm: true, isFriend: true };
     obj[0] = prop2;
     resolveExplicitContentSettingWithDefaults(obj);
-    return require(5796) /* getShouldObscureForSetting */.getShouldObscureForSetting(tmp10Result);
+    return require(5825) /* getShouldObscureForSetting */.getShouldObscureForSetting(tmp10Result);
   }
 };

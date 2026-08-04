@@ -17,6 +17,6 @@ export default function TrackSectionHeader(viewed) {
   obj[2] = obj;
   obj = { disableTrack: !viewed };
   const items = [viewed];
-  importDefault(8741)(obj, obj, items);
+  importDefault(9267)(obj, obj, items);
   return children;
 };

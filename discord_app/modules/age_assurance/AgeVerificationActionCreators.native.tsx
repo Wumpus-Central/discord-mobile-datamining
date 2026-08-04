@@ -75,16 +75,16 @@ function openIncodeAgeVerificationModal(arg0) {
               v0 = 2;
               c4 = 1;
               let obj1 = { value: null, done: false };
-              obj1[0] = outer1_1(4798).requestPermission(outer1_10.CAMERA, { showAuthorizationError: true });
+              obj1[0] = outer1_1(4827).requestPermission(outer1_10.CAMERA, { showAuthorizationError: true });
               return obj1;
             }
           } else {
             if (1 === tmp7) {
               dependencyMap = 0;
-              outer1_1(7695).showFailedToast(outer1_11.TIGGER_PAWTECT_ERROR);
+              outer1_1(7707).showFailedToast(outer1_11.TIGGER_PAWTECT_ERROR);
               outer1_0();
               c4 = 3;
-              const obj5 = outer1_1(7695);
+              const obj5 = outer1_1(7707);
             } else if (2 === tmp7) {
               if (arg0 === 1) {
                 c4 = 3;
@@ -96,7 +96,7 @@ function openIncodeAgeVerificationModal(arg0) {
                 obj2[0] = arg1;
                 return obj2;
               } else {
-                obj1 = outer1_1(4461);
+                obj1 = outer1_1(4490);
                 v0 = 3;
                 c4 = 1;
                 const obj3 = { value: null, done: false };
@@ -289,14 +289,14 @@ export default {
     let currentUser;
     let obj = entryPoint(1577);
     if (obj.isMetaQuest()) {
-      let tmpResult = tmp(4596);
-      tmpResult.openAlert(closure_7, jsx(onClose(7727), {}), onClose);
+      let tmpResult = tmp(4625);
+      tmpResult.openAlert(closure_7, jsx(onClose(7739), {}), onClose);
     } else {
-      tmpResult = tmp(4471);
+      tmpResult = tmp(4500);
       let isAgeVerifiedResult = tmpResult.isAgeVerified();
       if (isAgeVerifiedResult) {
-        isAgeVerifiedResult = tmp(3934).hasAgeGatedFeatures();
-        const tmpResult1 = tmp(3934);
+        isAgeVerifiedResult = tmp(3964).hasAgeGatedFeatures();
+        const tmpResult1 = tmp(3964);
       }
       dependencyMap = isAgeVerifiedResult;
       if (tmpResult2.isAgeVerificationIncodeEnabled(entryPoint)) {
@@ -330,7 +330,7 @@ export default {
         }
       } else {
         if (tmpResult3.isExpressiveModalV2Enabled(entryPoint)) {
-          onClose(4461).pushLazy(prop(function*() {
+          onClose(4490).pushLazy(prop(function*() {
             if (paths === 2) {
               paths = 3;
               HermesBuiltin.throwTypeError();
@@ -395,11 +395,11 @@ export default {
               }
             }
           }), {}, closure_6);
-          const obj8 = onClose(4461);
+          const obj8 = onClose(4490);
         } else {
-          currentUser = tmp(7748).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
-          const tmpResult4 = tmp(7748);
-          onClose(4461).pushLazy(prop(function*() {
+          currentUser = tmp(7760).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
+          const tmpResult4 = tmp(7760);
+          onClose(4490).pushLazy(prop(function*() {
             if (paths === 2) {
               paths = 3;
               HermesBuiltin.throwTypeError();
@@ -455,14 +455,14 @@ export default {
               }
             }
           }), {}, closure_6);
-          const obj7 = onClose(4461);
+          const obj7 = onClose(4490);
         }
-        tmpResult3 = tmp(7730);
+        tmpResult3 = tmp(7742);
       }
-      tmpResult2 = tmp(7728);
+      tmpResult2 = tmp(7740);
     }
   },
   openUrl(arg0) {
-    importDefault(3952).openURL(arg0);
+    importDefault(3982).openURL(arg0);
   }
 };

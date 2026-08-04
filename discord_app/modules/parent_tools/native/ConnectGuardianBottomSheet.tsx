@@ -37,23 +37,23 @@ export default function ConnectGuardianBottomSheet(arg0) {
   const callback = React.useCallback(() => {
     callback(table[8]).hideActionSheet(closure_6);
   }, []);
-  importDefault(13997)(callback);
+  importDefault(14031)(callback);
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.info, children: null };
   obj1 = { style: tmp.centered, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   if (title == null) {
     const intl = tmp2(1236).intl;
-    title = intl.string(tmp7(2255).aCUVfL);
+    title = intl.string(tmp7(2285).aCUVfL);
   }
   obj1[4] = title;
-  const items2 = [closure_7(require(4251) /* Text */.Text, obj1), ];
+  const items2 = [closure_7(require(4281) /* Text */.Text, obj1), ];
   const obj2 = { style: tmp.centered, variant: "text-md/medium", color: "text-default", children: null };
   if (body == null) {
     const intl2 = tmp2(1236).intl;
-    body = intl2.format(tmp7(2255)["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
+    body = intl2.format(tmp7(2285)["2O6ltn"], { link: "https://support.discord.com/hc/articles/14155060633623" });
   }
   obj2[3] = body;
-  items2[1] = closure_7(require(4251) /* Text */.Text, obj2);
+  items2[1] = closure_7(require(4281) /* Text */.Text, obj2);
   obj[1] = items2;
   const items3 = [closure_8(View, obj), , ];
   const obj3 = { style: tmp.cardContainer, children: null };
@@ -67,14 +67,14 @@ export default function ConnectGuardianBottomSheet(arg0) {
   const obj5 = { startExpanded: true, children: null };
   obj4[1] = stateFromStores1;
   obj4[2] = onRefresh;
-  obj3[1] = closure_7(require(13998) /* ConnectGuardianCard */.ConnectGuardianCard, obj4);
+  obj3[1] = closure_7(require(14032) /* ConnectGuardianCard */.ConnectGuardianCard, obj4);
   items3[1] = closure_7(View, obj3);
   const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl3 = tmp2(1236).intl;
-  obj6[2] = intl3.string(importDefault(2255).Hsm5IF);
+  obj6[2] = intl3.string(importDefault(2285).Hsm5IF);
   obj6[3] = callback;
-  items3[2] = closure_7(require(4666) /* Button */.Button, obj6);
+  items3[2] = closure_7(require(4695) /* Button */.Button, obj6);
   obj[1] = items3;
   obj5[1] = closure_8(View, obj);
-  return closure_7(require(5309) /* Background */.BottomSheet, obj5);
+  return closure_7(require(5338) /* Background */.BottomSheet, obj5);
 };

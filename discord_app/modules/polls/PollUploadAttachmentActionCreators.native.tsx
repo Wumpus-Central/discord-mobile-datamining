@@ -47,13 +47,13 @@ function _handlePollGifAttachmentAdd() {
               let closure_5;
               let styles;
               obj7 = undefined;
-              dependencyMap = callback(11503).getFileNameFromGifUrl(callback2, dependencyMap);
+              dependencyMap = callback(11502).getFileNameFromGifUrl(callback2, dependencyMap);
               styles = 1;
-              const obj16 = callback(11503);
+              const obj16 = callback(11502);
               obj7 = 2;
               c8 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = callback(11503).downloadPollGif(dependencyMap);
+              obj1[0] = callback(11502).downloadPollGif(dependencyMap);
               return obj1;
             }
           } else if (1 === tmp8) {
@@ -77,9 +77,9 @@ function _handlePollGifAttachmentAdd() {
                 c8 = 3;
                 return { value: "HermesInternal", done: null };
               } else {
-                obj7 = callback(11503);
+                obj7 = callback(11502);
                 Poll = obj7.getFilePathForGif(dependencyMap);
-                let obj8 = callback(8421);
+                let obj8 = callback(8723);
                 obj7 = 3;
                 c8 = 1;
                 const obj3 = { value: null, done: false };
@@ -104,7 +104,7 @@ function _handlePollGifAttachmentAdd() {
                 c8 = 3;
                 return { value: "HermesInternal", done: null };
               } else {
-                obj4 = callback(4797);
+                obj4 = callback(4826);
                 obj7 = 4;
                 c8 = 1;
                 const obj5 = { value: null, done: false };
@@ -125,7 +125,7 @@ function _handlePollGifAttachmentAdd() {
             styles = arg1;
             obj7 = { id: null, origin: null, uri: null, originalUri: null, filename: null, mimeType: "image/gif", width: null, height: null, platform: null };
             obj7[0] = callback2;
-            obj7[1] = callback(4788).UploadOrigin.IMAGE_PICKER;
+            obj7[1] = callback(4817).UploadOrigin.IMAGE_PICKER;
             obj7[2] = closure_5;
             obj7[3] = closure_5;
             obj7[4] = dependencyMap;
@@ -139,8 +139,8 @@ function _handlePollGifAttachmentAdd() {
               height = styles.height;
             }
             obj7[7] = height;
-            obj7[8] = callback(4788).UploadPlatform.REACT_NATIVE;
-            obj = callback2(8156);
+            obj7[8] = callback(4817).UploadPlatform.REACT_NATIVE;
+            obj = callback2(8168);
             obj8 = { file: null, channelId: null, draftType: null };
             obj8[0] = obj7;
             obj8[1] = callback;
@@ -210,13 +210,13 @@ function _removePollUploadAttachment() {
               return obj;
             } else {
               let c6 = 1;
-              callback2(8156).remove(callback, callback2, Poll.Poll);
-              const obj5 = callback2(8156);
-              const obj6 = callback(8421);
+              callback2(8168).remove(callback, callback2, Poll.Poll);
+              const obj5 = callback2(8168);
+              const obj6 = callback(8723);
               Poll = 2;
               c3 = 1;
               const obj1 = { value: null, done: false };
-              obj1[0] = obj6.removeFile("cache", callback(11503).getFilePathForGif(dependencyMap));
+              obj1[0] = obj6.removeFile("cache", callback(11502).getFilePathForGif(dependencyMap));
               return obj1;
             }
           } else {
@@ -291,12 +291,12 @@ function _removeAllPollUploadAttachments() {
               return obj;
             } else {
               let Poll = 1;
-              let obj1 = v0(8156);
+              let obj1 = v0(8168);
               obj1.clearAll(callback, Poll.Poll);
               dependencyMap = 2;
               v0 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = callback(8421).clearFolder("cache", outer1_5);
+              obj1[0] = callback(8723).clearFolder("cache", outer1_5);
               return obj1;
             }
           } else {

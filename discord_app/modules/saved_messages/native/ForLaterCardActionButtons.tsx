@@ -34,7 +34,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
   }, items);
   let intl = savedMessage(1236).intl;
   obj[0] = intl.string(savedMessage(1236).t["+TSRGD"]);
-  obj[1] = savedMessage(10104).ChatArrowRightIcon;
+  obj[1] = savedMessage(11046).ChatArrowRightIcon;
   obj[2] = function action() {
     return jumpToMessage();
   };
@@ -47,21 +47,43 @@ export default function ForLaterCardActionButtons(savedMessage) {
   }
   obj = {
     label: intl2.string(SvXS1Z),
-    IconComponent: tmp3(5241).XSmallIcon,
+    IconComponent: tmp3(5270).XSmallIcon,
     action() {
       return savedMessage(outer1_2[7]).removeSavedMessage(savedMessage.saveData);
     },
     variant: "destructive"
   };
   items1[1] = obj;
-  if (null != savedMessage.saveData.dueAt) {
-    obj = { label: null, IconComponent: null, action: null };
+  if (null == savedMessage.saveData.dueAt) {
+    obj = { style: null, children: null };
+    obj[0] = tmp.actionGroup;
+    const obj1 = { items: null, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: null };
+    obj1[0] = items1;
+    obj1[3] = function children(ref) {
+      const merged = Object.assign(ref, Object.create(null));
+      const obj = { ref: ref.ref };
+      const merged1 = Object.assign(merged);
+      obj.variant = "secondary";
+      const intl = savedMessage(1236).intl;
+      obj.accessibilityLabel = intl.string(savedMessage(1236).t.e1heBD);
+      obj.size = "sm";
+      obj.icon = jumpToMessage(8415);
+      return callback(savedMessage(7672).IconButton, obj);
+    };
+    obj[1] = jsx(tmp3(8408).ContextMenu, { items: null, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: null });
+    return <View style={null}>{null}</View>;
+  } else {
     const intl3 = tmp3(1236).intl;
-    obj[0] = intl3.string(tmp3(1236).t.vrbqs1);
-    obj[1] = tmp3(9284).PencilIcon;
-    obj[2] = callback;
-    items1.unshift(obj);
+    const t = tmp3(1236).t;
+    let obj2 = { label: null, IconComponent: null, action: null };
+    obj2[0] = intl3.string(savedMessage.throttledNow > savedMessage.saveData.dueAt ? t.GtBCnz : t.vrbqs1);
+    if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
+      let PencilIcon = tmp3(12471).BellZIcon;
+    } else {
+      PencilIcon = tmp3(9591).PencilIcon;
+    }
+    obj2[1] = PencilIcon;
+    obj2[2] = callback;
+    obj2 = items1.unshift(obj2);
   }
-  const tmp = callback();
-  return <View style={callback().actionGroup}>{jsx(savedMessage(9482).ContextMenu, obj2)}</View>;
 };

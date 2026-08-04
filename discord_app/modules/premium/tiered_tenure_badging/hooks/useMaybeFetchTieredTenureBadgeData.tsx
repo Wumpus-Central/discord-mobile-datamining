@@ -8,8 +8,8 @@ export const useMaybeFetchTieredTenureBadgeData = function useMaybeFetchTieredTe
   const items = [mergeGuildAvatar];
   _require = _require(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = _require(589);
-  const importDefault = _require(8711).useIsPremiumSubscriber(PremiumTypes.TIER_2);
-  importDefault(4682)(() => {
+  const importDefault = _require(9400).useIsPremiumSubscriber(PremiumTypes.TIER_2);
+  importDefault(4711)(() => {
     let id;
     if (closure_0 != null) {
       id = tmp.id;

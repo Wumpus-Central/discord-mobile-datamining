@@ -7,7 +7,7 @@ const require = arg1;
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles((height) => {
   let obj = { container: null, gifImage: null, gifImageSelected: null };
-  obj = { paddingBottom: require(9760) /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: require(9760) /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: importDefault(712).radii.xs, width: "100%", height, flex: 1 };
+  obj = { paddingBottom: require(9853) /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: require(9853) /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: importDefault(712).radii.xs, width: "100%", height, flex: 1 };
   obj[0] = obj;
   obj = { backgroundColor: importDefault(712).colors.BORDER_SUBTLE, borderRadius: importDefault(712).radii.xs, flex: 1 };
   obj[1] = obj;

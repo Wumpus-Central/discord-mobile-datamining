@@ -13,14 +13,14 @@ const require = arg1;
 function getVoiceStatesForGuild(guildId) {
   let tmp = dependencyMap[guildId];
   if (null == tmp) {
-    if (typeof SortedVoiceStates !== "error") {
+    if (typeof SortedVoiceStates !== "find") {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(SortedVoiceStates.prototype);
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new require(3879) /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new require(3909) /* version */.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -53,8 +53,8 @@ function makeSortedVoiceState(voiceState, guildId, arr) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = importDefault(4094).getName(tmp3);
-    const obj2 = importDefault(4094);
+    nick = importDefault(4124).getName(tmp3);
+    const obj2 = importDefault(4124);
   }
   let str = "\u0001";
   if (voiceState.selfStream) {
@@ -148,7 +148,7 @@ prototype["updateVoiceState"] = function updateVoiceState(id) {
             nick = member.nick;
           }
           if (nick == null) {
-            let obj = importDefault(4094);
+            let obj = importDefault(4124);
             nick = obj.getName(user);
           }
           const _voiceStates2 = self._voiceStates;
@@ -215,7 +215,7 @@ prototype["updateMember"] = function updateMember(arg0) {
           nick2 = member.nick;
         }
         if (nick2 == null) {
-          let obj = importDefault(4094);
+          let obj = importDefault(4124);
           nick2 = obj.getName(user);
         }
         let str = "\u0001";
@@ -318,7 +318,7 @@ prototype2["initialize"] = function initialize() {
       }
       let obj = outer1_13[tmp];
       if (null == obj) {
-        if (typeof outer1_17 !== "error") {
+        if (typeof outer1_17 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         obj = Object.create(outer1_17.prototype);
@@ -445,14 +445,14 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
     }
     let obj2 = dependencyMap[tmp4];
     if (null == obj2) {
-      if (typeof SortedVoiceStates !== "error") {
+      if (typeof SortedVoiceStates !== "find") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SortedVoiceStates.prototype);
       const _Set = Set;
       const set = new Set();
       obj[0] = set;
-      const secondaryIndexMap = new require(3879) /* version */.SecondaryIndexMap((voiceState) => {
+      const secondaryIndexMap = new require(3909) /* version */.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
         if (null != channelId) {
           const items = [channelId];
@@ -482,14 +482,14 @@ prototype2["getVoiceStatesForChannel"] = function getVoiceStatesForChannel(getGu
   }
   let obj = dependencyMap[guildId];
   if (null == obj) {
-    if (typeof SortedVoiceStates !== "error") {
+    if (typeof SortedVoiceStates !== "find") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(SortedVoiceStates.prototype);
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new require(3879) /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new require(3909) /* version */.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -513,14 +513,14 @@ prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt
   }
   let obj = dependencyMap[tmp];
   if (null == obj) {
-    if (typeof SortedVoiceStates !== "error") {
+    if (typeof SortedVoiceStates !== "find") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(SortedVoiceStates.prototype);
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new require(3879) /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new require(3909) /* version */.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -547,14 +547,14 @@ prototype2["countVoiceStatesForChannel"] = function countVoiceStatesForChannel(a
     }
     let obj2 = dependencyMap[guildId];
     if (null == obj2) {
-      if (typeof SortedVoiceStates !== "error") {
+      if (typeof SortedVoiceStates !== "find") {
         HermesBuiltin.throwTypeError();
       }
       const obj = Object.create(SortedVoiceStates.prototype);
       const _Set = Set;
       const set = new Set();
       obj[0] = set;
-      const secondaryIndexMap = new require(3879) /* version */.SecondaryIndexMap((voiceState) => {
+      const secondaryIndexMap = new require(3909) /* version */.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
         if (null != channelId) {
           const items = [channelId];
@@ -581,14 +581,14 @@ prototype2["getVoiceStateVersion"] = function getVoiceStateVersion(arg0) {
   }
   let obj = dependencyMap[tmp];
   if (null == obj) {
-    if (typeof SortedVoiceStates !== "error") {
+    if (typeof SortedVoiceStates !== "find") {
       HermesBuiltin.throwTypeError();
     }
     obj = Object.create(SortedVoiceStates.prototype);
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new require(3879) /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new require(3909) /* version */.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -626,7 +626,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
         }
         let obj = outer1_13[tmp];
         if (null == obj) {
-          if (typeof outer1_17 !== "error") {
+          if (typeof outer1_17 !== "find") {
             HermesBuiltin.throwTypeError();
           }
           obj = Object.create(outer1_17.prototype);
@@ -662,14 +662,14 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
       }
       let obj = dependencyMap[guildId];
       if (null == obj) {
-        if (typeof SortedVoiceStates !== "error") {
+        if (typeof SortedVoiceStates !== "find") {
           HermesBuiltin.throwTypeError();
         }
         obj = Object.create(SortedVoiceStates.prototype);
         const _Set = Set;
         const set = new Set();
         obj[0] = set;
-        const secondaryIndexMap = new require(3879) /* version */.SecondaryIndexMap((voiceState) => {
+        const secondaryIndexMap = new require(3909) /* version */.SecondaryIndexMap((voiceState) => {
           const channelId = voiceState.voiceState.channelId;
           if (null != channelId) {
             const items = [channelId];
@@ -697,7 +697,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
       }
       let obj = table2[guildId];
       if (null == obj) {
-        if (typeof closure_17 !== "error") {
+        if (typeof closure_17 !== "find") {
           HermesBuiltin.throwTypeError();
         }
         obj = Object.create(closure_17.prototype);
@@ -726,14 +726,14 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
     guildId = guildId.guildId;
     let obj = dependencyMap[guildId];
     if (null == obj) {
-      if (typeof SortedVoiceStates !== "error") {
+      if (typeof SortedVoiceStates !== "find") {
         HermesBuiltin.throwTypeError();
       }
       obj = Object.create(SortedVoiceStates.prototype);
       const _Set = Set;
       const set = new Set();
       obj[0] = set;
-      const secondaryIndexMap = new require(3879) /* version */.SecondaryIndexMap((voiceState) => {
+      const secondaryIndexMap = new require(3909) /* version */.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
         if (null != channelId) {
           const items = [channelId];
@@ -810,8 +810,8 @@ export const makeMemberAndComparator = function makeMemberAndComparator(selfStre
     nick = member.nick;
   }
   if (nick == null) {
-    nick = importDefault(4094).getName(arg2);
-    const obj2 = importDefault(4094);
+    nick = importDefault(4124).getName(arg2);
+    const obj2 = importDefault(4124);
   }
   let str = "\u0001";
   if (selfStream.selfStream) {

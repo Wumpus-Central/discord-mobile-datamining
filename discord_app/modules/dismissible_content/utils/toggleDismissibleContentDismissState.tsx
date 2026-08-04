@@ -9,7 +9,7 @@ export default function useToggleDismissibleContentDismissState(APP_LAUNCHER_ONB
   const items = [handleConnectionOpen];
   const stateFromStores = obj.useStateFromStores(items, () => guildId.getGuildId());
   obj = { cooldownDurationMs: stateFromStores(687).Millis.WEEK, guildId: stateFromStores };
-  let result = _require(4071).useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, obj);
+  let result = _require(4101).useIsDismissibleContentDismissed_UNSAFE(APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, obj);
   const dependencyMap = result;
   const items1 = [APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER, stateFromStores, result];
   obj = {

@@ -19,7 +19,7 @@ export default function useGuildPowerupTier3OverrideConfig(arg0) {
   })) {
     obj = { shouldShow: true, text: null };
     const intl = _require(1236).intl;
-    obj[1] = intl.string(importDefault(2287).l9n4QZ);
+    obj[1] = intl.string(importDefault(2317).l9n4QZ);
   } else {
     obj = { shouldShow: false, text: "" };
   }

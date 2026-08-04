@@ -9,9 +9,9 @@ const memoResult = require("noop").memo(function FramePanelContainer() {
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => null != connectedFrame.getConnectedFrame())) {
     obj = { children: null };
-    obj[0] = jsx(importDefault(15954), {});
-    tmp2 = jsx(importDefault(15952), { children: null });
-    const tmp5 = importDefault(15952);
+    obj[0] = jsx(importDefault(15987), {});
+    tmp2 = jsx(importDefault(15985), { children: null });
+    const tmp5 = importDefault(15985);
   }
   return tmp2;
 });

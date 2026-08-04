@@ -19,12 +19,12 @@ function EmojiImage(id) {
   if (animated === undefined) {
     animated = false;
   }
-  const AnimateEmoji = require(3928) /* explicitContentFromProto */.AnimateEmoji;
+  const AnimateEmoji = require(3958) /* explicitContentFromProto */.AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
   let obj = { style: items, source: null, resizeMode: "contain" };
   items = [{ height: size, width: size }, id.style];
   const tmp2 = closure_8;
-  const tmp3 = importDefault(5207);
+  const tmp3 = importDefault(5236);
   obj = { id: id.emojiId, animated: null, size: null };
   const obj2 = importDefault(1416);
   obj = { uri: obj2.getEmojiURL(obj) };
@@ -97,7 +97,7 @@ function TextStatusContent(arg0) {
     }
     const items2 = [tmp7Result, text];
     obj[5] = items2;
-    return closure_10(require(4251) /* Text */.Text, obj);
+    return closure_10(require(4281) /* Text */.Text, obj);
   } else {
     obj1 = require(500) /* set */;
     obj1.isAndroid() ? { fontFamily: "ggsans-NormalItalic, NotoSans-NormalItalic" } : { fontStyle: "italic" };
@@ -107,7 +107,7 @@ function EmojiOnlyStatusContent(arg0) {
   let emoji;
   let size;
   ({ emoji, size } = arg0);
-  const AnimateEmoji = require(3928) /* explicitContentFromProto */.AnimateEmoji;
+  const AnimateEmoji = require(3958) /* explicitContentFromProto */.AnimateEmoji;
   let id;
   const setting = AnimateEmoji.useSetting();
   if (emoji != null) {
@@ -139,7 +139,7 @@ function EmojiOnlyStatusContent(arg0) {
     str = "";
   }
   obj1[3] = str;
-  obj[1] = closure_8(importDefault(5272), obj1);
+  obj[1] = closure_8(importDefault(5301), obj1);
   return closure_8(tmp12, obj);
 }
 let c4 = importAllResult;
@@ -176,7 +176,7 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
   return obj;
 });
 let closure_12 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-let closure_13 = { [arg1(5629).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+let closure_13 = { [arg1(5658).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 let closure_16 = createCacheKey.createStyles(() => ({ container: { alignItems: "center" } }));
 const forwardRefResult = importAllResult.forwardRef((showFullStatus, ref) => {
   let customStatusActivity;

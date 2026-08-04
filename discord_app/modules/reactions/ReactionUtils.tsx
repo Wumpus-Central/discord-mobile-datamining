@@ -11,8 +11,8 @@ let result = require("AccountNotificationFlags").fileFinishedImporting("modules/
 export const MAX_REACTIONS = 20;
 export const getReactionEmojiName = function getReactionEmojiName(emoji) {
   if (null == emoji.id) {
-    let result = importDefault(3896).convertSurrogateToName(emoji.name);
-    const obj = importDefault(3896);
+    let result = importDefault(3926).convertSurrogateToName(emoji.name);
+    const obj = importDefault(3926);
   } else {
     const _HermesInternal = HermesInternal;
     result = ":" + emoji.name + ":";
@@ -45,8 +45,8 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
     const obj = { reactions: null, emojiName: null };
     obj[0] = count;
     if (null == emoji.id) {
-      let str2 = importDefault(3896).convertSurrogateToName(emoji.name);
-      const obj2 = importDefault(3896);
+      let str2 = importDefault(3926).convertSurrogateToName(emoji.name);
+      const obj2 = importDefault(3926);
     } else {
       const _HermesInternal = HermesInternal;
       str2 = ":" + emoji.name + ":";
@@ -66,12 +66,12 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
   }
 };
 export const isMeReaction = function isMeReaction(me, me_burst, arg2) {
-  let tmp3 = arg2 === require(7130) /* ReactionTypes */.ReactionTypes.BURST;
+  let tmp3 = arg2 === require(7142) /* ReactionTypes */.ReactionTypes.BURST;
   if (tmp3) {
     tmp3 = true === me_burst;
   }
   if (!tmp3) {
-    let tmp5 = arg2 === require(7130) /* ReactionTypes */.ReactionTypes.NORMAL;
+    let tmp5 = arg2 === require(7142) /* ReactionTypes */.ReactionTypes.NORMAL;
     if (tmp5) {
       tmp5 = true === me;
     }
@@ -142,7 +142,7 @@ export const shouldApplyReaction = function shouldApplyReaction(optimistic) {
   return !optimistic;
 };
 export const updateReactionNotificationsSetting = function updateReactionNotificationsSetting(NumberResult, setting) {
-  const ReactionNotifications = require(3928) /* explicitContentFromProto */.ReactionNotifications;
+  const ReactionNotifications = require(3958) /* explicitContentFromProto */.ReactionNotifications;
   ReactionNotifications.updateSetting(NumberResult);
   let obj = importDefault(698);
   obj = { update_type: constants3.ACCOUNT, reaction_notifications: NumberResult, reaction_notifications_old: setting };

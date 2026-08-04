@@ -41,6 +41,6 @@ export default function BoostProgressBarCoachmark(guild) {
     obj[9] = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(8745).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(8575).useCoachmark(guild.targetRef, memo);
   return null;
 };

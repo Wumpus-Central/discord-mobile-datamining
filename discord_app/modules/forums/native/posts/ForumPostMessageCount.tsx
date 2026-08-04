@@ -39,7 +39,7 @@ export default function ForumPostMessageCount(hasUnreads) {
   hasUnreads = hasUnreads.hasUnreads;
   ({ thread, containerStyle } = hasUnreads);
   const tmp = createCacheKey();
-  let obj = require(9315) /* useLoadForumUnreadCounts */;
+  let obj = require(8214) /* useLoadForumUnreadCounts */;
   messageCount = obj.useMessageCount(thread);
   ({ messageCountText, unreadCount } = messageCount);
   let str = "text-muted";
@@ -57,17 +57,17 @@ export default function ForumPostMessageCount(hasUnreads) {
     str2 = "interactive-text-default";
   }
   obj[2] = str2;
-  const items1 = [closure_4(require(4752) /* ChatIcon */.ChatIcon, obj), , ];
+  const items1 = [closure_4(require(4781) /* ChatIcon */.ChatIcon, obj), , ];
   if (isMaxMessageCount) {
     const obj1 = { variant: "text-sm/semibold", color: null, children: null };
     obj1[1] = str;
     obj1[2] = messageCountText;
-    let tmp7Result = tmp7(tmp2(4251).Text, obj1);
+    let tmp7Result = tmp7(tmp2(4281).Text, obj1);
   } else {
     const obj2 = { count: null, textVariant: "text-sm/semibold", textColor: null, animate: false };
     obj2[0] = messageCount;
     obj2[2] = str;
-    tmp7Result = tmp7(importDefault(10529), obj2);
+    tmp7Result = tmp7(importDefault(10116), obj2);
   }
   items1[1] = tmp7Result;
   let tmp5Result = null != unreadCount;
@@ -79,7 +79,7 @@ export default function ForumPostMessageCount(hasUnreads) {
     obj4[0] = unreadCount;
     const items2 = ["(", intl2.format(tmp2(1236).t.z3PEth, obj4), ")"];
     obj3[3] = items2;
-    tmp5Result = tmp5(tmp2(4251).Text, obj3);
+    tmp5Result = tmp5(tmp2(4281).Text, obj3);
   }
   items1[2] = tmp5Result;
   obj[2] = items1;

@@ -8,15 +8,14 @@ import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import { TextAreaCta } from "TextAreaCta";
 import ME from "ME";
-import { PHONE_VERIFICATION_MODAL_KEY as closure_15 } from "PHONE_VERIFICATION_MODAL_KEY";
-import { jsx } from "useRequiredLinkedLobbyApplicationAuthorization";
+import { PHONE_VERIFICATION_MODAL_KEY as closure_14 } from "PHONE_VERIFICATION_MODAL_KEY";
+import { jsx } from "useChangelogRenderedAnalytics";
 
 let closure_12;
-let closure_14;
 let map1;
 let unpackModuleId;
 const require = arg1;
-({ AnalyticEvents: unpackModuleId, ChannelTypes: closure_12, JoinGuildSources: map1, VerificationCriteria: closure_14 } = ME);
+({ AnalyticEvents: unpackModuleId, ChannelTypes: closure_12, VerificationCriteria: map1 } = ME);
 let result = require("createChannelRecord").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");
 
 export default function ChatInputGuardWrapper(channel) {
@@ -25,9 +24,7 @@ export default function ChatInputGuardWrapper(channel) {
   let canCreateThreads;
   let canSendMessages;
   let children;
-  let isLurking;
   let isReadonly;
-  let lurkingSourceType;
   let memberDeadline;
   let missingVerificationRole;
   let newAccount;
@@ -112,213 +109,182 @@ export default function ChatInputGuardWrapper(channel) {
   const tmp2Result1 = channel(tmp3[12]);
   const items6 = [notClaimed];
   const items7 = [guildId];
-  const stateFromStoresObject1 = channel(tmp3[12]).useStateFromStoresObject(items6, () => {
+  const stateFromStores3 = channel(tmp3[12]).useStateFromStores(items6, () => {
     let isLurkingResult = null != guildId;
     if (isLurkingResult) {
       isLurkingResult = notClaimed.isLurking(tmp);
     }
-    const obj = { isLurking: isLurkingResult, lurkingSourceType: null };
-    let tmp4 = null != tmp;
-    if (tmp4) {
-      const lurkingSourceForGuild = notClaimed.getLurkingSourceForGuild(tmp);
-      let type;
-      if (lurkingSourceForGuild != null) {
-        type = lurkingSourceForGuild.type;
-      }
-      tmp4 = type;
-    }
-    obj[1] = tmp4;
-    return obj;
+    return isLurkingResult;
   }, items7);
-  ({ isLurking, lurkingSourceType } = stateFromStoresObject1);
   const tmp2Result2 = channel(tmp3[12]);
-  const tmp2Result3 = channel(tmp3[20]);
-  ({ showLinkedLobbyApplicationLoadingIndicator, requiredLinkedLobbyApplication } = guildId(tmp3[21])(channel.linkedLobby));
-  guildId(tmp3[22])(channel.id);
-  if (isLurking) {
-    if (lurkingSourceType !== constants2.DIRECTORY_ENTRY) {
-      if (tmp2Result3.useMobileLurkerServerPreview("ChatInputGuardWrapper").enabled) {
-        if (null != guildId) {
-          obj = { guildId: null };
-          obj[0] = guildId;
-          let tmp23Result = jsx(tmp7(tmp3[32]), { guildId: null });
-          let tmp25 = jsx;
-        }
-        obj1 = { screenIndex: null, channelId: null, onJumpToPresent: null, children: null };
-        obj1[0] = screenIndex;
-        obj1[1] = channel.id;
-        obj1[2] = onJumpToPresent;
-        obj1[3] = tmp23Result;
-        return tmp25(tmp2(tmp3[35]).ChatInputGuardContainer, obj1);
-      }
-    }
-  }
+  ({ showLinkedLobbyApplicationLoadingIndicator, requiredLinkedLobbyApplication } = guildId(tmp3[20])(channel.linkedLobby));
+  guildId(tmp3[21])(channel.id);
   if (tmp11) {
-    obj2 = { channel: null };
-    obj2[0] = channel;
-    tmp23Result = jsx(tmp7(tmp3[33]), { channel: null });
-    tmp25 = jsx;
+    obj = { channel: null };
+    obj[0] = channel;
+    let tmp21Result = jsx(tmp7(tmp3[31]), { channel: null });
+    let tmp23 = jsx;
   } else if (tmp12) {
-    let obj3 = { channel: null };
-    obj3[0] = channel;
-    tmp23Result = jsx(tmp7(tmp3[34]), { channel: null });
-    tmp25 = jsx;
+    obj1 = { channel: null };
+    obj1[0] = channel;
+    tmp21Result = jsx(tmp7(tmp3[32]), { channel: null });
+    tmp23 = jsx;
   } else if (channel.isSystemDM()) {
-    let obj4 = { type: "simple-action", icon: null, message: null, subtext: null };
-    let tmp7Result = tmp7(tmp3[35]);
-    obj4[1] = jsx(tmp2(tmp3[36]).CircleInformationIcon, {});
-    const intl14 = tmp2(tmp3[37]).intl;
-    obj4[2] = intl14.string(tmp2(tmp3[37]).t.Bt2N7D);
-    const intl15 = tmp2(tmp3[37]).intl;
-    obj4[3] = intl15.string(tmp2(tmp3[37]).t["n/Vzkw"]);
-    tmp23Result = <tmp7Result type="simple-action" icon={null} message={null} subtext={null} />;
-    tmp25 = jsx;
+    obj2 = { type: "simple-action", icon: null, message: null, subtext: null };
+    let tmp7Result = tmp7(tmp3[33]);
+    obj2[1] = jsx(tmp2(tmp3[34]).CircleInformationIcon, {});
+    const intl14 = tmp2(tmp3[35]).intl;
+    obj2[2] = intl14.string(tmp2(tmp3[35]).t.Bt2N7D);
+    const intl15 = tmp2(tmp3[35]).intl;
+    obj2[3] = intl15.string(tmp2(tmp3[35]).t["n/Vzkw"]);
+    tmp21Result = <tmp7Result type="simple-action" icon={null} message={null} subtext={null} />;
+    tmp23 = jsx;
   } else if (tmp8) {
-    tmp23Result = jsx(tmp7(tmp3[38]), {});
-    tmp25 = jsx;
+    tmp21Result = jsx(tmp7(tmp3[36]), {});
+    tmp23 = jsx;
   } else {
     if (tmp9) {
       if (null != tmp10) {
-        const obj5 = { pendingGameProfileReturn: null };
-        obj5[0] = tmp10;
-        tmp23Result = jsx(tmp7(tmp3[39]), { pendingGameProfileReturn: null });
-        tmp25 = jsx;
+        let obj3 = { pendingGameProfileReturn: null };
+        obj3[0] = tmp10;
+        tmp21Result = jsx(tmp7(tmp3[37]), { pendingGameProfileReturn: null });
+        tmp23 = jsx;
       }
     }
-    if (!isLurking) {
+    if (!stateFromStores3) {
       if (!tmp9) {
         if (stateFromStores2) {
-          const obj6 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
-          tmp7Result = tmp7(tmp3[35]);
-          const intl12 = tmp2(tmp3[37]).intl;
-          obj6[1] = intl12.string(tmp2(tmp3[37]).t["9T6N5/"]);
-          const intl13 = tmp2(tmp3[37]).intl;
-          obj6[2] = intl13.string(tmp2(tmp3[37]).t.XyHpKH);
-          obj6[3] = function handleUnblock() {
+          let obj4 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+          tmp7Result = tmp7(tmp3[33]);
+          const intl12 = tmp2(tmp3[35]).intl;
+          obj4[1] = intl12.string(tmp2(tmp3[35]).t["9T6N5/"]);
+          const intl13 = tmp2(tmp3[35]).intl;
+          obj4[2] = intl13.string(tmp2(tmp3[35]).t.XyHpKH);
+          obj4[3] = function handleUnblock() {
             let obj = channel;
             if (channel.isDM()) {
               obj = { cta_type: null };
               obj[0] = outer1_10.UNBLOCK;
-              guildId(stateFromStores[23]).trackWithMetadata(outer1_11.TEXT_AREA_CTA_CLICKED, obj);
-              const obj2 = guildId(stateFromStores[23]);
-              guildId(stateFromStores[24]).unblockUser(obj.getRecipientId());
-              const obj4 = guildId(stateFromStores[24]);
+              guildId(stateFromStores[22]).trackWithMetadata(outer1_11.TEXT_AREA_CTA_CLICKED, obj);
+              const obj2 = guildId(stateFromStores[22]);
+              guildId(stateFromStores[23]).unblockUser(obj.getRecipientId());
+              const obj4 = guildId(stateFromStores[23]);
             }
           };
-          tmp23Result = <tmp7Result type="button-action" message={null} buttonPrimaryText={null} buttonPrimaryOnPress={null} />;
-          tmp25 = jsx;
+          tmp21Result = <tmp7Result type="button-action" message={null} buttonPrimaryText={null} buttonPrimaryOnPress={null} />;
+          tmp23 = jsx;
         } else if (showMemberVerificationModal) {
-          const obj7 = { guildId: null };
-          obj7[0] = guildId;
-          tmp23Result = jsx(tmp7(tmp3[41]), { guildId: null });
-          tmp25 = jsx;
+          const obj5 = { guildId: null };
+          obj5[0] = guildId;
+          tmp21Result = jsx(tmp7(tmp3[39]), { guildId: null });
+          tmp23 = jsx;
         } else {
           if (!showLinkedLobbyApplicationLoadingIndicator) {
             if (null == requiredLinkedLobbyApplication) {
               if (null != communicationDisabledGuildMember) {
-                const obj8 = { guildMember: null };
-                obj8[0] = communicationDisabledGuildMember;
-                tmp23Result = jsx(tmp7(tmp3[43]), { guildMember: null });
-                tmp25 = jsx;
+                const obj6 = { guildMember: null };
+                obj6[0] = communicationDisabledGuildMember;
+                tmp21Result = jsx(tmp7(tmp3[41]), { guildMember: null });
+                tmp23 = jsx;
               } else if (automodUserProfileQuarantined) {
-                const obj9 = { guildId: null };
-                obj9[0] = guildId;
-                tmp23Result = jsx(tmp7(tmp3[44]), { guildId: null });
-                tmp25 = jsx;
+                const obj7 = { guildId: null };
+                obj7[0] = guildId;
+                tmp21Result = jsx(tmp7(tmp3[42]), { guildId: null });
+                tmp23 = jsx;
               } else if (notClaimed) {
-                const obj10 = { type: "simple-action", icon: null, message: null };
-                obj10[1] = jsx(tmp2(tmp3[45]).ChatXIcon, {});
-                const intl11 = tmp2(tmp3[37]).intl;
-                obj10[2] = intl11.string(tmp2(tmp3[37]).t["Eg3/c9"]);
-                tmp23Result = jsx(tmp7(tmp3[35]), { type: "simple-action", icon: null, message: null });
-                tmp25 = jsx;
-                const tmp7Result1 = tmp7(tmp3[35]);
+                const obj8 = { type: "simple-action", icon: null, message: null };
+                obj8[1] = jsx(tmp2(tmp3[43]).ChatXIcon, {});
+                const intl11 = tmp2(tmp3[35]).intl;
+                obj8[2] = intl11.string(tmp2(tmp3[35]).t["Eg3/c9"]);
+                tmp21Result = jsx(tmp7(tmp3[33]), { type: "simple-action", icon: null, message: null });
+                tmp23 = jsx;
+                const tmp7Result1 = tmp7(tmp3[33]);
               } else if (notPhoneVerified) {
-                const obj11 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
-                const intl9 = tmp2(tmp3[37]).intl;
-                obj11[1] = intl9.string(tmp2(tmp3[37]).t["2dThMM"]);
-                const intl10 = tmp2(tmp3[37]).intl;
-                obj11[2] = intl10.string(tmp2(tmp3[37]).t["50gfOv"]);
-                obj11[3] = function handleVerifyPhone() {
-                  let obj = guildId(stateFromStores[23]);
+                const obj9 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+                const intl9 = tmp2(tmp3[35]).intl;
+                obj9[1] = intl9.string(tmp2(tmp3[35]).t["2dThMM"]);
+                const intl10 = tmp2(tmp3[35]).intl;
+                obj9[2] = intl10.string(tmp2(tmp3[35]).t["50gfOv"]);
+                obj9[3] = function handleVerifyPhone() {
+                  let obj = guildId(stateFromStores[22]);
                   obj = { cta_type: constants.VERIFY_PHONE };
                   obj.trackWithMetadata(constants2.TEXT_AREA_CTA_CLICKED, obj);
                   obj = { reason: null };
-                  const obj3 = guildId(stateFromStores[25]);
-                  obj[0] = channel(stateFromStores[28]).ChangePhoneReason.GUILD_PHONE_REQUIRED;
-                  obj3.pushLazy(channel(stateFromStores[27])(stateFromStores[26], stateFromStores.paths), obj, closure_15);
+                  const obj3 = guildId(stateFromStores[24]);
+                  obj[0] = channel(stateFromStores[27]).ChangePhoneReason.GUILD_PHONE_REQUIRED;
+                  obj3.pushLazy(channel(stateFromStores[26])(stateFromStores[25], stateFromStores.paths), obj, closure_14);
                 };
-                tmp23Result = jsx(tmp7(tmp3[35]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
-                tmp25 = jsx;
-                const tmp7Result2 = tmp7(tmp3[35]);
+                tmp21Result = jsx(tmp7(tmp3[33]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
+                tmp23 = jsx;
+                const tmp7Result2 = tmp7(tmp3[33]);
               } else if (notEmailVerified) {
-                const obj12 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
-                const intl7 = tmp2(tmp3[37]).intl;
-                obj12[1] = intl7.string(tmp2(tmp3[37]).t.FkGPS5);
-                const intl8 = tmp2(tmp3[37]).intl;
-                obj12[2] = intl8.string(tmp2(tmp3[37]).t.lm1UKt);
-                obj12[3] = function handleVerifyEmail() {
-                  let obj = guildId(stateFromStores[23]);
+                const obj10 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+                const intl7 = tmp2(tmp3[35]).intl;
+                obj10[1] = intl7.string(tmp2(tmp3[35]).t.FkGPS5);
+                const intl8 = tmp2(tmp3[35]).intl;
+                obj10[2] = intl8.string(tmp2(tmp3[35]).t.lm1UKt);
+                obj10[3] = function handleVerifyEmail() {
+                  let obj = guildId(stateFromStores[22]);
                   obj = { cta_type: constants.VERIFY_EMAIL };
                   obj.trackWithMetadata(constants2.TEXT_AREA_CTA_CLICKED, obj);
-                  guildId(stateFromStores[29]).open();
+                  guildId(stateFromStores[28]).open();
                 };
-                tmp23Result = jsx(tmp7(tmp3[35]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
-                tmp25 = jsx;
-                const tmp7Result3 = tmp7(tmp3[35]);
+                tmp21Result = jsx(tmp7(tmp3[33]), { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
+                tmp23 = jsx;
+                const tmp7Result3 = tmp7(tmp3[33]);
               } else if (newMember) {
-                const obj13 = { type: "simple-action", icon: null, message: null, countdown: null };
-                obj13[1] = jsx(tmp2(tmp3[46]).CalendarIcon, {});
-                const intl6 = tmp2(tmp3[37]).intl;
-                const obj14 = { min: null };
-                obj14[0] = constants3.MEMBER_AGE;
-                obj13[2] = intl6.formatToPlainString(tmp2(tmp3[37]).t.IH7RMF, obj14);
-                obj13[3] = memberDeadline;
-                tmp23Result = jsx(tmp7(tmp3[35]), { type: "simple-action", icon: null, message: null, countdown: null });
-                tmp25 = jsx;
-                const tmp7Result4 = tmp7(tmp3[35]);
+                const obj11 = { type: "simple-action", icon: null, message: null, countdown: null };
+                obj11[1] = jsx(tmp2(tmp3[44]).CalendarIcon, {});
+                const intl6 = tmp2(tmp3[35]).intl;
+                const obj12 = { min: null };
+                obj12[0] = constants2.MEMBER_AGE;
+                obj11[2] = intl6.formatToPlainString(tmp2(tmp3[35]).t.IH7RMF, obj12);
+                obj11[3] = memberDeadline;
+                tmp21Result = jsx(tmp7(tmp3[33]), { type: "simple-action", icon: null, message: null, countdown: null });
+                tmp23 = jsx;
+                const tmp7Result4 = tmp7(tmp3[33]);
               } else if (newAccount) {
-                const obj15 = { type: "simple-action", icon: null, message: null, countdown: null };
-                obj15[1] = jsx(tmp2(tmp3[46]).CalendarIcon, {});
-                const intl5 = tmp2(tmp3[37]).intl;
-                const obj16 = { min: null };
-                obj16[0] = constants3.ACCOUNT_AGE;
-                obj15[2] = intl5.formatToPlainString(tmp2(tmp3[37]).t["2JA2GH"], obj16);
-                obj15[3] = accountDeadline;
-                tmp23Result = jsx(tmp7(tmp3[35]), { type: "simple-action", icon: null, message: null, countdown: null });
-                tmp25 = jsx;
-                const tmp7Result5 = tmp7(tmp3[35]);
+                const obj13 = { type: "simple-action", icon: null, message: null, countdown: null };
+                obj13[1] = jsx(tmp2(tmp3[44]).CalendarIcon, {});
+                const intl5 = tmp2(tmp3[35]).intl;
+                const obj14 = { min: null };
+                obj14[0] = constants2.ACCOUNT_AGE;
+                obj13[2] = intl5.formatToPlainString(tmp2(tmp3[35]).t["2JA2GH"], obj14);
+                obj13[3] = accountDeadline;
+                tmp21Result = jsx(tmp7(tmp3[33]), { type: "simple-action", icon: null, message: null, countdown: null });
+                tmp23 = jsx;
+                const tmp7Result5 = tmp7(tmp3[33]);
               } else {
                 if (missingVerificationRole) {
                   if (null != verificationRole) {
-                    const intl3 = tmp2(tmp3[37]).intl;
-                    const obj17 = { roleName: null };
+                    const intl3 = tmp2(tmp3[35]).intl;
+                    const obj15 = { roleName: null };
                     const _HermesInternal = HermesInternal;
-                    obj17[0] = "@" + verificationRole.name;
-                    const formatResult = intl3.format(tmp2(tmp3[37]).t.HbivnU, obj17);
+                    obj15[0] = "@" + verificationRole.name;
+                    const formatResult = intl3.format(tmp2(tmp3[35]).t.HbivnU, obj15);
                     if (null === verificationRole.tags.guild_connections) {
-                      const obj18 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
-                      obj18[1] = formatResult;
-                      const intl4 = tmp2(tmp3[37]).intl;
-                      obj18[2] = intl4.string(tmp2(tmp3[37]).t["6Ge2LG"]);
-                      obj18[3] = function handleGetVerificationRole() {
+                      const obj16 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+                      obj16[1] = formatResult;
+                      const intl4 = tmp2(tmp3[35]).intl;
+                      obj16[2] = intl4.string(tmp2(tmp3[35]).t["6Ge2LG"]);
+                      obj16[3] = function handleGetVerificationRole() {
                         let tmp2 = null != verificationRole;
                         if (tmp2) {
                           tmp2 = null != guildId;
                         }
                         if (tmp2) {
-                          const result = channel(stateFromStores[30]).openGuildRoleConnectionsConnectAccountModal(verificationRole, guildId);
-                          const obj = channel(stateFromStores[30]);
+                          const result = channel(stateFromStores[29]).openGuildRoleConnectionsConnectAccountModal(verificationRole, guildId);
+                          const obj = channel(stateFromStores[29]);
                         }
                       };
-                      let obj19 = obj18;
+                      let obj17 = obj16;
                     } else {
-                      obj19 = { type: "simple-action", message: null };
-                      obj19[1] = formatResult;
+                      obj17 = { type: "simple-action", message: null };
+                      obj17[1] = formatResult;
                     }
-                    tmp23Result = tmp29(tmp7(tmp3[35]), obj19);
-                    tmp25 = tmp29;
-                    const tmp7Result6 = tmp7(tmp3[35]);
+                    tmp21Result = tmp27(tmp7(tmp3[33]), obj17);
+                    tmp23 = tmp27;
+                    const tmp7Result6 = tmp7(tmp3[33]);
                   }
                 }
                 if (isReadonly) {
@@ -326,23 +292,23 @@ export default function ChatInputGuardWrapper(channel) {
                     if (!isForumPostResult) {
                       if (!verificationRole(channel.type)) {
                         if (canCreateThreads) {
-                          const obj20 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
-                          const intl = tmp2(tmp3[37]).intl;
-                          obj20[1] = intl.string(tmp2(tmp3[37]).t.Yi2xuY);
-                          const intl2 = tmp2(tmp3[37]).intl;
-                          obj20[2] = intl2.string(tmp2(tmp3[37]).t.rBIGBL);
-                          obj20[3] = function handleCreateThread() {
-                            const result = channel(stateFromStores[31]).navigateToThreadCreation(channel, "chat input guard");
+                          const obj18 = { type: "button-action", message: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
+                          const intl = tmp2(tmp3[35]).intl;
+                          obj18[1] = intl.string(tmp2(tmp3[35]).t.Yi2xuY);
+                          const intl2 = tmp2(tmp3[35]).intl;
+                          obj18[2] = intl2.string(tmp2(tmp3[35]).t.rBIGBL);
+                          obj18[3] = function handleCreateThread() {
+                            const result = channel(stateFromStores[30]).navigateToThreadCreation(channel, "chat input guard");
                           };
-                          tmp23Result = tmp23(tmp7(tmp3[35]), obj20);
-                          tmp25 = tmp23;
-                          const tmp7Result7 = tmp7(tmp3[35]);
+                          tmp21Result = tmp21(tmp7(tmp3[33]), obj18);
+                          tmp23 = tmp21;
+                          const tmp7Result7 = tmp7(tmp3[33]);
                         } else {
-                          const obj21 = { guildId: null, channel: null };
-                          obj21[0] = guildId;
-                          obj21[1] = channel;
-                          tmp23Result = tmp23(tmp7(tmp3[47]), obj21);
-                          tmp25 = tmp23;
+                          const obj19 = { guildId: null, channel: null };
+                          obj19[0] = guildId;
+                          obj19[1] = channel;
+                          tmp21Result = tmp21(tmp7(tmp3[45]), obj19);
+                          tmp23 = tmp21;
                         }
                       }
                     }
@@ -352,18 +318,19 @@ export default function ChatInputGuardWrapper(channel) {
               }
             }
           }
-          const obj22 = { showLinkedLobbyApplicationLoadingIndicator: null, requiredLinkedLobbyApplication: null };
-          obj22[0] = showLinkedLobbyApplicationLoadingIndicator;
-          obj22[1] = requiredLinkedLobbyApplication;
-          tmp23Result = jsx(tmp7(tmp3[42]), { showLinkedLobbyApplicationLoadingIndicator: null, requiredLinkedLobbyApplication: null });
-          tmp25 = jsx;
+          const obj20 = { showLinkedLobbyApplicationLoadingIndicator: null, requiredLinkedLobbyApplication: null };
+          obj20[0] = showLinkedLobbyApplicationLoadingIndicator;
+          obj20[1] = requiredLinkedLobbyApplication;
+          tmp21Result = jsx(tmp7(tmp3[40]), { showLinkedLobbyApplicationLoadingIndicator: null, requiredLinkedLobbyApplication: null });
+          tmp23 = jsx;
         }
       }
     }
-    const obj23 = { channel: null, isReadonlyAnnouncementsChannel: null };
-    obj23[0] = channel;
-    obj23[1] = tmp9;
-    tmp23Result = jsx(tmp7(tmp3[40]), { channel: null, isReadonlyAnnouncementsChannel: null });
-    tmp25 = jsx;
+    const obj21 = { channel: null, isReadonlyAnnouncementsChannel: null };
+    obj21[0] = channel;
+    obj21[1] = tmp9;
+    tmp21Result = jsx(tmp7(tmp3[38]), { channel: null, isReadonlyAnnouncementsChannel: null });
+    tmp23 = jsx;
   }
+  return tmp23(channel(tmp3[33]).ChatInputGuardContainer, { screenIndex, channelId: channel.id, onJumpToPresent, children: tmp21Result });
 };

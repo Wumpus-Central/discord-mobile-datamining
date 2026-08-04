@@ -35,7 +35,7 @@ createToggle = {
   },
   parent: MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onGuildSelectPress() {
-    importDefault(4223).openLazy(require(1959) /* asyncRequireImpl */(14746, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
+    importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(14780, dependencyMap.paths), "SettingsPrivacyAndSafetyGuildSelectActionSheet");
   }
 };
 createToggle = createToggle.createGuildSelector(createToggle);

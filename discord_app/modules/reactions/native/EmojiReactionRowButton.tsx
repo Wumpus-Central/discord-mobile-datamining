@@ -31,24 +31,24 @@ export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
   let styles;
   let str = iconSize.iconSize;
   ({ onPress, styles } = iconSize);
-  let obj = require(4101) /* AccessibilityAnnouncer */;
+  let obj = require(4131) /* AccessibilityAnnouncer */;
   const tmp = callback(iconSize.emojiContainerSize);
-  const obj2 = require(4101) /* AccessibilityAnnouncer */;
+  const obj2 = require(4131) /* AccessibilityAnnouncer */;
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
-  const isThemeLightResult = require(4101) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme);
+  const isThemeLightResult = require(4131) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme);
   obj = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 4, onPress: null, style: null, children: null };
   const intl = tmp2(1236).intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t.lfIHs4);
   obj[4] = onPress;
   const items = [tmp.emojiContainer, styles];
   obj[5] = items;
-  obj = { color: require(4101) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null };
+  obj = { color: require(4131) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null };
   if (str == null) {
     str = "md";
   }
   obj[1] = str;
-  obj[6] = jsx(require(7564) /* ReactionIcon */.ReactionIcon, { color: require(4101) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
-  return jsx(require(4783) /* PressableBase */.PressableOpacity, { color: require(4101) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
+  obj[6] = jsx(require(7576) /* ReactionIcon */.ReactionIcon, { color: require(4131) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
+  return jsx(require(4812) /* PressableBase */.PressableOpacity, { color: require(4131) /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
 };
 export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiContainerSize) {
   let animated;
@@ -76,12 +76,12 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
   obj[7] = items;
   if (null == animated) {
     obj[8] = null;
-    return tmp4(require(4783) /* PressableBase */.PressableOpacity, obj);
+    return tmp4(require(4812) /* PressableBase */.PressableOpacity, obj);
   } else {
     obj = { textEmojiStyle: null, fastImageStyle: null, name: null, src: null };
     ({ emojiText: obj3[0], emojiImage: obj3[1] } = tmp2);
     let str = "";
-    const emojiURL = getEmojiURL(5272);
+    const emojiURL = getEmojiURL(5301);
     if (null == animated.id) {
       str = animated.surrogates;
     }
@@ -105,6 +105,6 @@ export const getEmojiKey = function getEmojiKey(type, arg1) {
   if (null == type) {
     return arg1;
   } else {
-    type.type === require(3899) /* EmojiTypes */.EmojiTypes.UNICODE ? type.surrogates : type.id;
+    type.type === require(3929) /* EmojiTypes */.EmojiTypes.UNICODE ? type.surrogates : type.id;
   }
 };

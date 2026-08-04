@@ -41,14 +41,14 @@ export default function ApplicationsImage(arg0) {
     obj = { style: null, source: null };
     obj[0] = tmp.appIcon;
     obj[1] = appLauncherIconSource;
-    tmp8 = callback(importDefault(5207), obj);
+    tmp8 = callback(importDefault(5236), obj);
   }
   let tmp12 = null != appLauncherIconSource1;
   if (tmp12) {
     obj = { style: null, source: null };
     obj[0] = tmp.appIcon;
     obj[1] = appLauncherIconSource1;
-    tmp12 = callback(importDefault(5207), obj);
+    tmp12 = callback(importDefault(5236), obj);
   }
   obj1 = { children: null };
   const items = [, ];

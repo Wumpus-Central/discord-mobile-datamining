@@ -27,7 +27,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.overflowTop = overflow_top;
   obj.overflowBottom = overflow_bottom;
   obj.overflowHorizontal = overflow_horizontal;
-  if (typeof prototype !== "error") {
+  if (typeof prototype !== "find") {
     HermesBuiltin.throwTypeError();
   }
   tmp3 = new tmp3(obj, merged, obj, this);

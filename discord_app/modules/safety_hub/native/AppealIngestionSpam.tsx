@@ -13,7 +13,7 @@ export default function AppealIngestionSpam() {
   obj = { style: tmp.container, children: null };
   obj = { bottom: true, style: tmp.container, children: null };
   obj[2] = jsx(require(1297) /* Button */.LegacyText, { children: "TODO - SPAM" });
-  obj[1] = jsx(require(5243) /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, style: tmp.container, children: null });
+  obj[1] = jsx(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, style: tmp.container, children: null });
   obj[0] = <View bottom style={tmp.container}>{null}</View>;
-  return jsx(require(11217) /* AppealIngestionModal */.AppealIngestionModalScreen, { bottom: true, style: tmp.container, children: null });
+  return jsx(require(11213) /* AppealIngestionModal */.AppealIngestionModalScreen, { bottom: true, style: tmp.container, children: null });
 };

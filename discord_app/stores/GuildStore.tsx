@@ -236,7 +236,7 @@ const guildStore = new GuildStore({
     if (id === user.user.id) {
       if (null != value) {
         let date = joinedAt;
-        if (typeof joinedAt !== "ge") {
+        if (typeof joinedAt !== "_iter") {
           const _Date = Date;
           date = new Date(joinedAt);
         }

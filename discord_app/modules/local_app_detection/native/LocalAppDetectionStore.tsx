@@ -53,7 +53,7 @@ prototype["isAppInstalled"] = function isAppInstalled(nextResult) {
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const self = this;
   const items = [];
-  const iter = object(12845).ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
+  const iter = object(12879).ALL_DETECTABLE_APP_NAMES[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
@@ -71,8 +71,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     continue;
   }
   if (items.length > 0) {
-    object(12846).detectLocalApps(items);
-    const obj = object(12846);
+    object(12880).detectLocalApps(items);
+    const obj = object(12880);
   }
 };
 prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionComplete(result) {

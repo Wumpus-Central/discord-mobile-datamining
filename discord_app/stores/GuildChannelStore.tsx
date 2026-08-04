@@ -205,7 +205,7 @@ function handleGuildRoleUpdate(guildId) {
 function hasElevatedPermissions(user, context) {
   let obj = importAll(506);
   obj = { user, context, checkElevated: false };
-  return obj.hasAny(importAll(3888).computePermissions(obj), closure_20);
+  return obj.hasAny(importAll(3918).computePermissions(obj), closure_20);
 }
 function handleFavoritesUpdate() {
   rebuildGuildChannels(closure_17);

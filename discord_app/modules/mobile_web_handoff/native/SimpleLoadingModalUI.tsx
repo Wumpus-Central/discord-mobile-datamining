@@ -92,7 +92,7 @@ export default function SimpleLoadingModal(operation) {
     },
     children: null
   };
-  obj = { style: callback().modalBackground, children: jsx(operation(5703).ActivityIndicator, {}) };
-  obj[4] = <closure_4 style={callback().modalBackground}>{jsx(operation(5703).ActivityIndicator, {})}</closure_4>;
-  return <cancelable style={callback().modalBackground}>{jsx(operation(5703).ActivityIndicator, {})}</cancelable>;
+  obj = { style: callback().modalBackground, children: jsx(operation(5732).ActivityIndicator, {}) };
+  obj[4] = <closure_4 style={callback().modalBackground}>{jsx(operation(5732).ActivityIndicator, {})}</closure_4>;
+  return <cancelable style={callback().modalBackground}>{jsx(operation(5732).ActivityIndicator, {})}</cancelable>;
 };

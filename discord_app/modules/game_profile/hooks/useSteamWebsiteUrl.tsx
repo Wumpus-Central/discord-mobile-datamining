@@ -1,4 +1,4 @@
-import map from "map";
+import handleLoadMessages from "handleLoadMessages";
 import { Distributors } from "ME";
 
 const require = arg1;
@@ -9,7 +9,7 @@ export const buildSteamStoreUrl = function buildSteamStoreUrl(arg0) {
 };
 export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
   const _require = id;
-  const items = [map];
+  const items = [handleLoadMessages];
   const items1 = [id];
   return _require(589).useStateFromStores(items, () => {
     if (null == id) {
@@ -23,7 +23,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
           return null;
         } else {
           const websites = game.websites;
-          const found = websites.find((category) => category.category === callback(8789).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          const found = websites.find((category) => category.category === callback(9204).ThirdPartyGameApplicationWebsiteCategory.STEAM);
           if (found != null) {
             const url = found.url;
           }

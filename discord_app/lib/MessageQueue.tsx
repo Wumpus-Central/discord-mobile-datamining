@@ -191,7 +191,7 @@ prototype["handleSend"] = function handleSend(nonce) {
   let analyticsLocation;
   let channelId;
   ({ channelId, analyticsLocation } = nonce);
-  let tmp3 = importDefault(7203)();
+  let tmp3 = importDefault(7215)();
   if (tmp3 == null) {
     tmp3 = analyticsLocation;
   }
@@ -200,7 +200,7 @@ prototype["handleSend"] = function handleSend(nonce) {
     obj[0] = tmp3;
     const tmp4 = obj;
   }
-  let obj1 = handleCommand(6818);
+  let obj1 = handleCommand(6830);
   const signalStrength = obj1.getSignalStrength();
   obj = { mobile_network_type: store2.getType() };
   const merged = Object.assign(callback(nonce, closure_3));
@@ -243,7 +243,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
   let analyticsLocation;
   let channelId;
   ({ channelId, analyticsLocation } = message);
-  let tmp3 = importDefault(7203)();
+  let tmp3 = importDefault(7215)();
   if (tmp3 == null) {
     tmp3 = analyticsLocation;
   }
@@ -252,7 +252,7 @@ prototype["handleSendAnnouncement"] = function handleSendAnnouncement(message, a
     obj[0] = tmp3;
     const tmp4 = obj;
   }
-  let obj1 = handleCommand(6818);
+  let obj1 = handleCommand(6830);
   const signalStrength = obj1.getSignalStrength();
   obj = { mobile_network_type: store2.getType() };
   const merged = Object.assign(callback(message, closure_4));

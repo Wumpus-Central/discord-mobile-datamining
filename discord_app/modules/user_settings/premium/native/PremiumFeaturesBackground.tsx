@@ -39,5 +39,5 @@ export default function PremiumFeaturesBackground(opacity) {
   obj[3] = num(691).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(importDefault(4677), { style: items, colors: mapped, start: null, end: null });
+  return jsx(importDefault(4706), { style: items, colors: mapped, start: null, end: null });
 };

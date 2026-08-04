@@ -1,4 +1,6 @@
 require("ME").AutoCompleteResultTypes;
+const items = [["game", "gameMentionInput"]];
+const map = new Map(items);
 const result = require("set").fileFinishedImporting("utils/native/AutocompleteUtils.tsx");
 
 export default {
@@ -22,5 +24,8 @@ export default {
   },
   LAUNCHABLE_APPLICATIONS() {
     return [];
+  },
+  findAutoInsertOnSpaceMentionInlineAutocompleteType(trigger) {
+    return map.get(trigger.toLowerCase());
   }
 };
