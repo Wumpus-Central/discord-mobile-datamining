@@ -1313,6 +1313,8 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "$ZodCheckGreaterThan":
     break;
+    case "fetchMediaPostEmbed":
+    break;
     case "ToIntlMathematicalValue":
     break;
     case "th":
@@ -1359,31 +1361,7 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     break;
     case "_":
     break;
-    case "3AS4UM":
-    break;
-    case "UM":
-    break;
-    case "UMAX":
-    break;
-    case "MAX_AUDIENCE_ROW_LIMIT":
-    break;
-    case "AUD":
-    break;
-    case "AUDIENCE":
-    break;
-    case "mouse_three_button":
-    break;
-    case "three":
-    break;
-    case "three_button_mouse":
-    break;
-    case "mouse":
-    break;
-    case "mouse2":
-    break;
-    case "use2FARemoveDisableReason":
-    break;
-    case "useHasReachedEnd":
+    case "useICYMIEnabled":
     break;
     case "INVALID_PIN_MESSAGE_CHANNEL":
     break;
@@ -1534,6 +1512,28 @@ export const getChannelMentionIcon = function getChannelMentionIcon(iconType) {
     case "tagIconUrl":
     break;
     case "$ZodSymbol":
+    break;
+    case "ZodSymbol":
+    break;
+    case "SymbolLock":
+    break;
+    case "bo":
+    break;
+    case "bol":
+    break;
+    case "QUEST_BOTTOM_SHEET":
+    break;
+    case "MAX_DAYS_AHEAD_AN_EVENT_CAN_END":
+    break;
+    case "dashedTint":
+    break;
+    case "interactive":
+    break;
+    case "interactiveFilter":
+    break;
+    case "fullScreenSwipeEnabled":
+    break;
+    case "ActionSheetHeaderPressableText":
     break;
     default:
       return null;

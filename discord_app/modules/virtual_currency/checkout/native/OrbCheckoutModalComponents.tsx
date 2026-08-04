@@ -46,7 +46,7 @@ export const OrbCheckoutOrderSummary = function OrbCheckoutOrderSummary(product)
   } else {
     obj = { product: null, useOrbPrice: true };
     obj[0] = product;
-    tmp5 = callback(importDefault(12051), obj);
+    tmp5 = callback(importDefault(12050), obj);
     tmp6 = callback;
   }
   obj = { style: tmp.topRowWrapper, children: null };
@@ -70,14 +70,14 @@ export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSource
   const obj1 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj1[2] = intl2.string(require(1236) /* getSystemLocale */.t.y0WGqP);
-  const items2 = [callback(require(4281) /* Text */.Text, obj1), callback(importDefault(12053), { orbAmount: orbAmount.orbBalance })];
+  const items2 = [callback(require(4281) /* Text */.Text, obj1), callback(importDefault(12052), { orbAmount: orbAmount.orbBalance })];
   obj[1] = items2;
   items[1] = callback2(closure_4, obj);
   obj[1] = items;
   return callback2(closure_4, obj);
 };
 export const OrbCheckoutLegalFinePrint = function OrbCheckoutLegalFinePrint() {
-  let obj = skuId(12070);
+  let obj = skuId(12069);
   skuId = obj.useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = React.useMemo(() => skuId(outer1_2[12]).getOrbCheckoutDisclaimerMessage(skuId), items);
@@ -88,10 +88,10 @@ export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPr
   let isRedeeming;
   let orbProductContext;
   const tmp2 = importDefault(4221)();
-  let obj = require(12070) /* useOrbCheckoutModalContextProvider */;
+  let obj = require(12069) /* useOrbCheckoutModalContextProvider */;
   const orbCheckoutModalContext = obj.useOrbCheckoutModalContext();
   ({ isRedeeming, orbProductContext } = orbCheckoutModalContext);
-  const virtualCurrencyBalance = require(12072) /* useVirtualCurrencyBalance */.useVirtualCurrencyBalance();
+  const virtualCurrencyBalance = require(12071) /* useVirtualCurrencyBalance */.useVirtualCurrencyBalance();
   if (orbProductContext != null) {
     const orbPriceAmount = orbProductContext.orbPriceAmount;
   }

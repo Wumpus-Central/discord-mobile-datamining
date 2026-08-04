@@ -48,8 +48,8 @@ export const useProfileFramesMarketing = function useProfileFramesMarketing(Coll
   const canViewProfileFramesInCollectiblesShop = obj.useCanViewProfileFramesInCollectiblesShop(CollectiblesMobileAnnouncementActionSheet);
   let isProfileFramesEarlyAccessPhase = require(9321) /* useCanPurchaseFrames */.useIsProfileFramesEarlyAccessPhase(CollectiblesMobileAnnouncementActionSheet);
   const obj2 = require(9321) /* useCanPurchaseFrames */;
-  const isProfileFramesEAMarketingEnabled = require(15892) /* apexExperiment */.useIsProfileFramesEAMarketingEnabled(CollectiblesMobileAnnouncementActionSheet);
-  const obj3 = require(15892) /* apexExperiment */;
+  const isProfileFramesEAMarketingEnabled = require(15891) /* apexExperiment */.useIsProfileFramesEAMarketingEnabled(CollectiblesMobileAnnouncementActionSheet);
+  const obj3 = require(15891) /* apexExperiment */;
   const isProfileFrameGiftingEnabled = require(9269) /* apexExperiment */.useIsProfileFrameGiftingEnabled(CollectiblesMobileAnnouncementActionSheet);
   const obj4 = require(9269) /* apexExperiment */;
   const items = [mergeGuildAvatar];
@@ -102,8 +102,8 @@ export const getProfileFramesMarketing = function getProfileFramesMarketing(loca
     enableProfileFrames = bucket === require(9322) /* apexExperiment */.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
   }
   const obj3 = importDefault(9322);
-  const isProfileFramesEAMarketingEnabled = require(15892) /* apexExperiment */.getIsProfileFramesEAMarketingEnabled(location);
-  const obj5 = require(15892) /* apexExperiment */;
+  const isProfileFramesEAMarketingEnabled = require(15891) /* apexExperiment */.getIsProfileFramesEAMarketingEnabled(location);
+  const obj5 = require(15891) /* apexExperiment */;
   const isProfileFrameGiftingEnabled = require(9269) /* apexExperiment */.getIsProfileFrameGiftingEnabled(location);
   const obj6 = require(9269) /* apexExperiment */;
   const isUserPaidTier2Result = require(9321) /* useCanPurchaseFrames */.isUserPaidTier2(currentUser.getCurrentUser());

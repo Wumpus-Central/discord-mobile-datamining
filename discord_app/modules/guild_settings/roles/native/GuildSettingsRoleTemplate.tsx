@@ -266,7 +266,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
   obj3[10] = first1;
   obj3[11] = tmp.carousel;
   obj3[12] = !tmp10;
-  items1[1] = tmp14(importDefault(13340), obj3);
+  items1[1] = tmp14(importDefault(13339), obj3);
   obj[2] = items1;
   return tmp12(tmp13, obj);
 };

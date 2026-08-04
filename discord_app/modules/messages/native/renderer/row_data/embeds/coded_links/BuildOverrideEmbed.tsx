@@ -41,7 +41,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
       }
       tmp10 = id === id1;
     }
-    let tmpResult = tmp(12517);
+    let tmpResult = tmp(12516);
     obj = importAll(1578);
     const tmpResultResult = tmpResult(buildOverride.override, ["discord_ios", "discord_android"], obj.getConstants().Version);
     if (currentBuildOverride.state !== tmp6.Invalid) {
@@ -75,7 +75,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               obj.titleColor = colors.titleColor;
               obj.subtitle = id;
               obj.subtitleColor = colors.subtitleColor;
-              obj.thumbnailUrl = Image.resolveAssetSource(tmp(12515)).uri;
+              obj.thumbnailUrl = Image.resolveAssetSource(tmp(12514)).uri;
               let str2 = "primary";
               if (tmp10) {
                 str2 = "destructive";

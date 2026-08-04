@@ -17,7 +17,7 @@ function ForLaterPage(type) {
   let first;
   let importDefault;
   const tmp = callback4();
-  const arr = importDefault(12466)(type);
+  const arr = importDefault(12465)(type);
   const tmp5 = type === first(8192).SavedMessageSortTypes.REMINDER;
   let obj = first(8186);
   const forLaterLimit = obj.useForLaterLimit(ForLaterScreen, tmp5);
@@ -52,7 +52,7 @@ function ForLaterPage(type) {
   if (0 === arr.length) {
     obj = { type: null };
     obj[0] = type;
-    let tmp19Result = callback2(tmp2(12476), obj);
+    let tmp19Result = callback2(tmp2(12475), obj);
   } else {
     obj1 = { style: null, children: null };
     obj1[0] = tmp.listContainer;
@@ -68,7 +68,7 @@ function ForLaterPage(type) {
     if (isForLaterLimitUpgradable) {
       const obj3 = { isReminder: null };
       obj3[0] = tmp5;
-      tmp21Result = tmp21(tmp2(12479), obj3);
+      tmp21Result = tmp21(tmp2(12478), obj3);
     }
     const obj4 = { children: null };
     items2[1] = tmp21Result;

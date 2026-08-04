@@ -7,7 +7,7 @@ const pressable = createToggle.createPressable({
   },
   parent: require("MobileSetting").MobileSetting.SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentFriendsDmSettingValue() {
-    const obj = require(13971) /* useExplicitContentSettingOrDefault */;
+    const obj = require(13970) /* useExplicitContentSettingOrDefault */;
     return require(6968) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentFriendDm)();
   },
   onPress: function onGoreContentFriendsDmOnPress() {
@@ -23,7 +23,7 @@ const pressable = createToggle.createPressable({
       return obj.updateGoreContentSetting(obj);
     };
     obj[3] = obj.getGoreContentSettingOrDefault().goreContentFriendDm;
-    const result = require(13972) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+    const result = require(13971) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
   },
   useSearchTerms() {
     const intl = require(1236) /* getSystemLocale */.intl;
@@ -43,7 +43,7 @@ let obj = {
   },
   parent: require("MobileSetting").MobileSetting.SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentFriendsDmSettingValue() {
-    const obj = require(13971) /* useExplicitContentSettingOrDefault */;
+    const obj = require(13970) /* useExplicitContentSettingOrDefault */;
     return require(6968) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentFriendDm)();
   },
   onPress: function onGoreContentFriendsDmOnPress() {
@@ -59,7 +59,7 @@ let obj = {
       return obj.updateGoreContentSetting(obj);
     };
     obj[3] = obj.getGoreContentSettingOrDefault().goreContentFriendDm;
-    const result = require(13972) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+    const result = require(13971) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
   },
   useSearchTerms() {
     const intl = require(1236) /* getSystemLocale */.intl;

@@ -104,7 +104,7 @@ export const NewGameBadge = function NewGameBadge(entry) {
   let tmp3 = null;
   if (obj.isEntryNew(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
-    obj[0] = tmp(12197).NewUserIcon;
+    obj[0] = tmp(12196).NewUserIcon;
     const intl = tmp(1236).intl;
     obj[1] = intl.string(tmp(1236).t.keY6mW);
     obj[2] = importDefault(712).colors.STATUS_POSITIVE;
@@ -120,7 +120,7 @@ export const StreakBadge = function StreakBadge(entry) {
     tmp4 = null;
     if (streakCount >= 2) {
       obj = { Icon: null, text: null, iconColor: null };
-      obj[0] = tmp(12199).FlashIcon;
+      obj[0] = tmp(12198).FlashIcon;
       const intl = tmp(1236).intl;
       obj = { days: null };
       obj[0] = streakCount;
@@ -137,9 +137,9 @@ export const TrendingBadge = function TrendingBadge(entry) {
   let tmp4 = null;
   if (null != trendingType) {
     tmp4 = null;
-    if (trendingType !== tmp(12201).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
+    if (trendingType !== tmp(12200).TrendingType.TRENDING_TYPE_UNSPECIFIED) {
       obj = { Icon: null, text: null, iconColor: null };
-      obj[0] = tmp(12114).FireIcon;
+      obj[0] = tmp(12113).FireIcon;
       const intl = tmp(1236).intl;
       obj[1] = intl.string(tmp(1236).t.TsWCdW);
       obj[2] = importDefault(712).colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY;

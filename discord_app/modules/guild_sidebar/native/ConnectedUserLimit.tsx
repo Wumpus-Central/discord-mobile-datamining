@@ -27,5 +27,5 @@ export const ConnectedUserLimit = function ConnectedUserLimit(users) {
     videoLimit = num < 0 || limit < num;
     const tmp4 = num < 0 || limit < num;
   }
-  return jsx(importDefault(15142), { users: users.userCount, total, videoLimit });
+  return jsx(importDefault(15141), { users: users.userCount, total, videoLimit });
 };

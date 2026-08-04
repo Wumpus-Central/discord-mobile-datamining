@@ -7,7 +7,7 @@ const result = require("getAlertModalItemKey").fileFinishedImporting("modules/vo
 export default function VoicePanelNoJoinPermissionsAlert() {
   let obj = require(4628) /* getAlertModalItemKey */;
   obj = { header: null, title: null, content: null, actions: null };
-  obj[0] = jsx(importDefault(16128), {});
+  obj[0] = jsx(importDefault(16127), {});
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t["7/2/3M"]);
   const intl2 = require(1236) /* getSystemLocale */.intl;

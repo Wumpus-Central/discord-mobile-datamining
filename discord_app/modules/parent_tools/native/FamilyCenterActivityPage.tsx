@@ -25,10 +25,10 @@ export default function FamilyCenterActivityPage() {
   obj = { style: tmp.scrollView, children: null };
   const activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = { style: tmp.container, children: null };
-  const items = [callback(importDefault(14024), {}), ];
+  const items = [callback(importDefault(14023), {}), ];
   if (0 === activeLinkUserIds.length) {
     const obj1 = { children: null };
-    const items1 = [tmp3(tmp7(14026), {}), tmp3(tmp7(14036), {}), ];
+    const items1 = [tmp3(tmp7(14025), {}), tmp3(tmp7(14035), {}), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.dataConfirmation;
     obj2[1] = tmp3(tmp7(11238), {});
@@ -36,7 +36,7 @@ export default function FamilyCenterActivityPage() {
     obj1[0] = items1;
     let tmp3Result = tmp5(closure_6, obj1);
   } else {
-    tmp3Result = tmp3(tmp7(14040), {});
+    tmp3Result = tmp3(tmp7(14039), {});
   }
   items[1] = tmp3Result;
   obj[1] = items;

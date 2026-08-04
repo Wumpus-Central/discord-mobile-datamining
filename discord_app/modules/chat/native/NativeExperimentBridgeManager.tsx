@@ -9,8 +9,8 @@ function syncYYTextReplacementExperiment() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        const result = setShouldEnableYYTextReplacement(require(16779) /* shouldEnableYYTextReplacement */.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
-        const tmpResult = require(16779) /* shouldEnableYYTextReplacement */;
+        const result = setShouldEnableYYTextReplacement(require(16778) /* shouldEnableYYTextReplacement */.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
+        const tmpResult = require(16778) /* shouldEnableYYTextReplacement */;
       }
     }
   }
@@ -21,7 +21,7 @@ function updateIOSExperiments() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        let tmpResult = tmp(16779);
+        let tmpResult = tmp(16778);
         const result = setShouldEnableYYTextReplacement(tmpResult.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
       }
     }
@@ -54,7 +54,7 @@ function updateAndroidExperiments() {
   obj[3] = locale.locale;
   const obj2 = importDefault(698);
   const obj3 = store;
-  const config = importDefault(16781).getConfig({ location: "NativeExperimentBridgeManager" });
+  const config = importDefault(16780).getConfig({ location: "NativeExperimentBridgeManager" });
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;

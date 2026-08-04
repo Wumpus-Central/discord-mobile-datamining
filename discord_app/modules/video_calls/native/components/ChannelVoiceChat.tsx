@@ -123,7 +123,7 @@ const memoResult = importAllResult.memo((channel) => {
   obj6[4] = callback(id(1297).Icon, obj7);
   const items7 = [callback(id(4812).PressableOpacity, obj6), ];
   const tmp12 = guild_id(4221)();
-  items7[1] = callback(View, { style: tmp.chatHeaderTitleContainer, children: callback(id(12038).ChannelTitle, { guildId: guild_id, channelId: id }) });
+  items7[1] = callback(View, { style: tmp.chatHeaderTitleContainer, children: callback(id(12037).ChannelTitle, { guildId: guild_id, channelId: id }) });
   obj5[1] = items7;
   items3[4] = closure_7(View, obj5);
   obj1[2] = items3;

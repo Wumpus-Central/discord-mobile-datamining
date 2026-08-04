@@ -44,8 +44,8 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
     isConnectedResult = connected.isConnected();
   }
   if (isConnectedResult) {
-    tmp(14651).writeCaches();
-    const tmpResult = tmp(14651);
+    tmp(14650).writeCaches();
+    const tmpResult = tmp(14650);
   }
   return false;
 };
@@ -54,8 +54,8 @@ prototype["handleWindowFocus"] = function handleWindowFocus(focused) {
     const _Date = Date;
     if (Date.now() - lastWriteTime.lastWriteTime > closure_6) {
       tmp2.verbose("Writing cache from window unfocus");
-      require(14651) /* _writeCaches */.writeCaches();
-      const obj = require(14651) /* _writeCaches */;
+      require(14650) /* _writeCaches */.writeCaches();
+      const obj = require(14650) /* _writeCaches */;
     } else {
       tmp2.verbose("Not writing cache from window unfocus");
     }

@@ -74,7 +74,7 @@ function AnimatedWrapper(children) {
   fn.__workletHash = 6243014585347;
   fn.__initData = closure_55;
   derivedValue = obj2.useDerivedValue(fn);
-  let obj3 = wrapperOffset(16037);
+  let obj3 = wrapperOffset(16036);
   pIPState = obj3.usePIPState();
   let obj4 = wrapperOffset(4146);
   const fn2 = function l() {
@@ -148,7 +148,7 @@ function AnimatedWrapper(children) {
       }
     }
   };
-  obj = { cheapWorkletShallowEqual: wrapperOffset(8698).cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10245), wrapperOffset, getMaxPanelWidth: wrapperOffset(16025).getMaxPanelWidth, getPanelX: wrapperOffset(16025).getPanelX, roundToNearestPixel: height(10167), windowDimensions };
+  obj = { cheapWorkletShallowEqual: wrapperOffset(8698).cheapWorkletShallowEqual, VoicePanelModes: animatedStyle1, wrapperDimensions, updateSharedValueIfChanged: height(10245), wrapperOffset, getMaxPanelWidth: wrapperOffset(16024).getMaxPanelWidth, getPanelX: wrapperOffset(16024).getPanelX, roundToNearestPixel: height(10167), windowDimensions };
   fn3.__closure = obj;
   fn3.__workletHash = 3683279660781;
   fn3.__initData = closure_57;

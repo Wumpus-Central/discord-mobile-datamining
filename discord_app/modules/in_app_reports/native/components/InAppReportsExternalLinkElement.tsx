@@ -13,7 +13,7 @@ function ExternalLinkItem(data) {
     obj[0] = tmp;
     obj[1] = tmp2;
     obj = { IconComponent: null };
-    obj[0] = url(12565).LinkExternalMediumIcon;
+    obj[0] = url(12564).LinkExternalMediumIcon;
     obj[2] = callback(url(5321).TableRowIcon, obj);
     obj[3] = function onPress() {
       outer1_1(outer1_2[8]).openURL(url);

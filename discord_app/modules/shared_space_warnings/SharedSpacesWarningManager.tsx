@@ -32,7 +32,7 @@ function handleChannelSelect(channelId) {
             blockedUserWarningDismissed = num2 > Date.now() - closure_11;
           }
           if (!blockedUserWarningDismissed) {
-            let obj = require(12904) /* showGdmBlockedUserModal */;
+            let obj = require(12903) /* showGdmBlockedUserModal */;
             obj = { channelId: null, blockedUserIds: null, ignoredUserIds: null };
             obj[0] = channelId;
             obj[1] = found;
@@ -82,8 +82,8 @@ function handleAppStateChanged(state) {
           if (!everyResult) {
             const items1 = [];
             HermesBuiltin.arraySpread(ignoredUsersForVoiceChannel, HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0));
-            const result = require(12908) /* showVoiceChannelBlockedUserWarning */.showVoiceChannelBlockedUserWarning(channelId, items1[0]);
-            const tmpResult = require(12908) /* showVoiceChannelBlockedUserWarning */;
+            const result = require(12907) /* showVoiceChannelBlockedUserWarning */.showVoiceChannelBlockedUserWarning(channelId, items1[0]);
+            const tmpResult = require(12907) /* showVoiceChannelBlockedUserWarning */;
           }
         }
       }
@@ -125,8 +125,8 @@ SharedSpacesWarningManager.prototype["handleBlockedOrIgnoredUserVoiceChannelJoin
         tmp6 = num2 > Date.now() - closure_12;
       }
       if (!tmp6) {
-        const result = require(12908) /* showVoiceChannelBlockedUserWarning */.showVoiceChannelBlockedUserWarning(channelId, id);
-        const obj = require(12908) /* showVoiceChannelBlockedUserWarning */;
+        const result = require(12907) /* showVoiceChannelBlockedUserWarning */.showVoiceChannelBlockedUserWarning(channelId, id);
+        const obj = require(12907) /* showVoiceChannelBlockedUserWarning */;
       }
     }
   }

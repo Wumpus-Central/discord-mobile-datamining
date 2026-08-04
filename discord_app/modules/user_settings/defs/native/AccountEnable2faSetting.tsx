@@ -16,7 +16,7 @@ createToggle = {
     }
     if (verified != null) {
       if (verified) {
-        let obj = importDefault(13932);
+        let obj = importDefault(13931);
         obj.open();
       }
     }
@@ -29,7 +29,7 @@ createToggle = {
   },
   withArrow: true,
   usePredicate: function useHasAccountEnable2FASetting() {
-    return !require(13896) /* useIs2FAEnabled */.useIsTOTPEnabled();
+    return !require(13895) /* useIs2FAEnabled */.useIsTOTPEnabled();
   }
 };
 createToggle = createToggle.createPressable(createToggle);

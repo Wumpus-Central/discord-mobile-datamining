@@ -23,7 +23,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.QUESTS,
   getComponent() {
-    return require(14147) /* QuestHomeSetting */.default;
+    return require(14146) /* QuestHomeSetting */.default;
   }
 };
 const route = createToggle.createRoute(obj);

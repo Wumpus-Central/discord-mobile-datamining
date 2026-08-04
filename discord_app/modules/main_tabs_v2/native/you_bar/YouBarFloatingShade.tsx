@@ -15,7 +15,7 @@ let closure_10 = createCacheKey.createStyles({ container: { position: "absolute"
 let closure_11 = { code: "function YouBarFloatingShadeTsx1(){const{gradientHeight,drawerWidth}=this.__closure;return{height:gradientHeight,opacity:1,width:drawerWidth};}" };
 const memoResult = require("noop").memo(function YouBarFloatingShade() {
   const tmp = callback3();
-  let obj = require(14246) /* useYouBarTotalHeight */;
+  let obj = require(14245) /* useYouBarTotalHeight */;
   const youBarTotalHeight = obj.useYouBarTotalHeight();
   const sum = youBarTotalHeight + closure_5;
   require = sum;

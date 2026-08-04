@@ -52,7 +52,7 @@ export default function KeyCommandsView(style) {
       found.onKeyCommand(nativeEvent);
     }
   };
-  obj[1] = jsx(first(13744), {});
+  obj[1] = jsx(first(13743), {});
   return <redux.Provider />;
 };
 export const useKeyCommands = function useKeyCommands(memo) {

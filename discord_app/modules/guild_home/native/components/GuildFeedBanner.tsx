@@ -119,9 +119,9 @@ function GuildFeedBanner(guild) {
     const items6 = [obj3, animatedStyle];
     obj2[0] = items6;
     if (tmp2Result2.isThemeDark(tmp8)) {
-      let tmp6Result = tmp6(15544);
+      let tmp6Result = tmp6(15543);
     } else {
-      tmp6Result = tmp6(15545);
+      tmp6Result = tmp6(15544);
     }
     obj2[1] = tmp6Result;
     obj2[2] = handleLoad;
@@ -177,7 +177,7 @@ function GuildFeedBanner(guild) {
       };
       const obj14 = { style: null, source: null };
       obj14[0] = tmp.publicIcon;
-      obj14[1] = tmp6(15546);
+      obj14[1] = tmp6(15545);
       const items12 = [tmp17(tmp2(1297).Icon, obj14), ];
       const obj15 = { variant: "text-xs/medium", color: "text-default", children: null };
       let intl = tmp2(1236).intl;

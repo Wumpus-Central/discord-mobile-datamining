@@ -32,15 +32,15 @@ const memoResult = require("noop").memo(function DevToolsGuildPowerupsModal() {
     options() {
       return { title: "Guild Powerups" };
     },
-    component: importDefault(14919)
+    component: importDefault(14918)
   };
   ({ Navigator, Screen } = createNativeStackNavigator);
   obj[1] = <Screen name="DevToolsGuildPowerups" options={function options() {
     return { title: "Guild Powerups" };
-  }} component={importDefault(14919)} />;
+  }} component={importDefault(14918)} />;
   return <Navigator name="DevToolsGuildPowerups" options={function options() {
     return { title: "Guild Powerups" };
-  }} component={importDefault(14919)} />;
+  }} component={importDefault(14918)} />;
 });
 const result = require("createNativeStackNavigator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");
 

@@ -21,7 +21,7 @@ export default function VoicePanelHeaderChatButton(channelId) {
     const ComponentDispatch = callback(table[5]).ComponentDispatch;
     ComponentDispatch.dispatch(constants.VOICE_PANEL_OPEN_CHAT_TAB);
   }, []);
-  const tmp5 = importDefault(16075)(channelId.channelId);
+  const tmp5 = importDefault(16074)(channelId.channelId);
   const tmp6 = closure_6;
   let obj = { icon: null, accessibilityLabel: null, onPress: null };
   const tmp7 = importDefault(5663);
@@ -31,7 +31,7 @@ export default function VoicePanelHeaderChatButton(channelId) {
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t["5KxXrK"]);
   obj[2] = callback;
-  const children = [callback(importDefault(15980), obj), ];
+  const children = [callback(importDefault(15979), obj), ];
   let tmp8Result = null != tmp5;
   if (tmp8Result) {
     obj = { style: null, children: null };

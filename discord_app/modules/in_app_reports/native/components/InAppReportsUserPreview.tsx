@@ -29,7 +29,7 @@ export default function UserPreview(user) {
   const items = [callback(require(4281) /* Text */.Text, obj), ];
   const obj1 = { style: items1, children: null };
   items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
-  const obj2 = { size: null, user: null, guildId: "Array" };
+  const obj2 = { size: null, user: null, guildId: "disabled" };
   obj2[0] = require(1297) /* Button */.AvatarSizes.LARGE_48;
   obj2[1] = user;
   const items2 = [callback(require(1297) /* Button */.Avatar, obj2), ];

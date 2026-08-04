@@ -10,7 +10,7 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToImproveDiscordSettingValue() {
-    return require(13975) /* useParentalControlledExplicitContentSettings */.useParentalControlledConsent(Consents.USAGE_STATISTICS).hasConsented;
+    return require(13974) /* useParentalControlledExplicitContentSettings */.useParentalControlledConsent(Consents.USAGE_STATISTICS).hasConsented;
   },
   onValueChange: function handleUsageStatisticsChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();

@@ -264,7 +264,7 @@ function EditSection(guildId) {
     tmp6Result = tmp6(tmp4(4695).Button, obj2);
   }
   obj[3] = tmp6Result;
-  return callback(trackUserProfileAction(12182), obj);
+  return callback(trackUserProfileAction(12181), obj);
 }
 function UserProfileWidgetsBoardContainer(isCurrentUser) {
   let containerBackground;
@@ -276,9 +276,9 @@ function UserProfileWidgetsBoardContainer(isCurrentUser) {
   const items = [tmp3.card, { backgroundColor: containerBackground }];
   const obj = { style: tmp3.profileContent, children: null };
   if (isCurrentUser) {
-    isCurrentUser = callback(tmp(12252), {});
+    isCurrentUser = callback(tmp(12251), {});
   }
-  const items1 = [isCurrentUser, callback(importDefault(12253), { userId, isVisible, cardStyle: items })];
+  const items1 = [isCurrentUser, callback(importDefault(12252), { userId, isVisible, cardStyle: items })];
   obj[1] = items1;
   return closure_20(closure_6, obj);
 }

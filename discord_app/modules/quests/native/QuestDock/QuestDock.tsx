@@ -370,7 +370,7 @@ function QuestBarRenderedTriggerPointWrapper() {
 class QuestDockWithEntranceAnimation {
   constructor() {
     tmp = closure_0;
-    tmp2 = f93834;
+    tmp2 = f93830;
     obj = require("getDeliveredQuest");
     questCreative = obj.useQuestCreative();
     closure_0 = questCreative;
@@ -378,9 +378,9 @@ class QuestDockWithEntranceAnimation {
     tmp4 = isRendered;
     context = useRef.useContext(require("context"));
     isRendered = context.isRendered;
-    f93834 = Backdrop(useRef.useState(() => performance.now()), 1)[0];
+    f93830 = Backdrop(useRef.useState(() => performance.now()), 1)[0];
     useRef = useRef.useRef(false);
-    tmp6 = f59131();
+    tmp6 = f59128();
     tmp7 = Backdrop(useRef.useState({ width: 0, height: 0 }), 2);
     first = tmp7[0];
     Backdrop = first;
@@ -388,7 +388,7 @@ class QuestDockWithEntranceAnimation {
     obj3 = require("initialize");
     items = [];
     items[0] = staticUrl;
-    f93835 = obj3.useStateFromStores(items, () => staticUrl.prevRestingQuestDockMode);
+    f93831 = obj3.useStateFromStores(items, () => staticUrl.prevRestingQuestDockMode);
     obj4 = require("getIsEligibleForQuests");
     isEligibleForQuests = obj4.getIsEligibleForQuests();
     obj5 = require("useQuests");
@@ -410,10 +410,10 @@ class QuestDockWithEntranceAnimation {
       obj[1] = items;
       return obj;
     };
-    obj = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, isRendered, ENTRANCE_ANIMATION_SPING_CONFIG: f59131, componentDimensions: first };
+    obj = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, isRendered, ENTRANCE_ANIMATION_SPING_CONFIG: f59128, componentDimensions: first };
     fn.__closure = obj;
     fn.__workletHash = 15545726338295;
-    fn.__initData = f59131;
+    fn.__initData = f59128;
     animatedStyle = obj6.useAnimatedStyle(fn);
     tmp12 = Backdrop(useRef.useState(null), 2);
     first1 = tmp12[0];
@@ -707,18 +707,18 @@ class QuestDockWithEntranceAnimation {
           str = "flush";
         }
         obj[1] = str;
-        obj[2] = outer1_19(isRendered(closure_11 ? 14332 : 14333), {});
-        obj[3] = outer1_19(isRendered(closure_11 ? 14338 : 14339), {});
+        obj[2] = outer1_19(isRendered(closure_11 ? 14331 : 14332), {});
+        obj[3] = outer1_19(isRendered(closure_11 ? 14337 : 14338), {});
         let tmp3Result = null;
         if (!closure_11) {
-          tmp3Result = tmp3(tmp9(14340), {});
+          tmp3Result = tmp3(tmp9(14339), {});
         }
         const obj1 = { children: null };
         const obj2 = { children: null };
         obj[4] = tmp3Result;
         obj[1] = outer1_19(outer1_31, obj);
         obj2[0] = outer1_19(questCreative(3997).ThemeContextProvider, obj);
-        items[2] = outer1_19(questCreative(14242).QuestDockGestureContextProvider, obj2);
+        items[2] = outer1_19(questCreative(14241).QuestDockGestureContextProvider, obj2);
         obj1[0] = items;
         return outer1_20(outer1_21, obj1);
       };
@@ -773,13 +773,13 @@ obj5.overshootClamping = true;
 obj5.damping = 54;
 let closure_36 = { code: "function QuestDockTsx9(){const{withSpring,isRendered,ENTRANCE_ANIMATION_SPING_CONFIG,componentDimensions}=this.__closure;return{opacity:withSpring(isRendered?1:0,ENTRANCE_ANIMATION_SPING_CONFIG,'animate-always'),transform:[{translateY:withSpring(isRendered?0:componentDimensions.height,ENTRANCE_ANIMATION_SPING_CONFIG)}]};}" };
 const memoResult = importAllResult.memo(function QuestDockWithQuestContext() {
-  let obj = isMobileQuestDockRenderedBase(14237);
+  let obj = isMobileQuestDockRenderedBase(14236);
   const mobileQuestDock = obj.useMobileQuestDock();
-  const deliveredQuest = isMobileQuestDockRenderedBase(14324).getDeliveredQuest(mobileQuestDock);
-  const obj2 = isMobileQuestDockRenderedBase(14324);
-  isMobileQuestDockRenderedBase = isMobileQuestDockRenderedBase(14237).useIsMobileQuestDockRenderedBase(deliveredQuest);
-  const obj3 = isMobileQuestDockRenderedBase(14237);
-  const isMobileQuestDockVisibleToUser = isMobileQuestDockRenderedBase(14237).useIsMobileQuestDockVisibleToUser(deliveredQuest, isMobileQuestDockRenderedBase);
+  const deliveredQuest = isMobileQuestDockRenderedBase(14323).getDeliveredQuest(mobileQuestDock);
+  const obj2 = isMobileQuestDockRenderedBase(14323);
+  isMobileQuestDockRenderedBase = isMobileQuestDockRenderedBase(14236).useIsMobileQuestDockRenderedBase(deliveredQuest);
+  const obj3 = isMobileQuestDockRenderedBase(14236);
+  const isMobileQuestDockVisibleToUser = isMobileQuestDockRenderedBase(14236).useIsMobileQuestDockVisibleToUser(deliveredQuest, isMobileQuestDockRenderedBase);
   const items = [isMobileQuestDockRenderedBase, isMobileQuestDockVisibleToUser];
   const type = mobileQuestDock.type;
   const memo = importAllResult.useMemo(() => ({ isRendered: isMobileQuestDockRenderedBase, isVisibleToUser: isMobileQuestDockVisibleToUser }), items);
@@ -791,10 +791,10 @@ const memoResult = importAllResult.memo(function QuestDockWithQuestContext() {
     obj = { quest: null, children: null };
     obj[0] = mobileQuestDock.quest;
     obj[1] = callback(QuestDockWithEntranceAnimation, {});
-    obj[1] = callback(tmp(14324).QuestDockQuestProvider, obj);
-    return callback(isMobileQuestDockVisibleToUser(14323).Provider, obj);
+    obj[1] = callback(tmp(14323).QuestDockQuestProvider, obj);
+    return callback(isMobileQuestDockVisibleToUser(14322).Provider, obj);
   }
-  const obj4 = isMobileQuestDockRenderedBase(14237);
+  const obj4 = isMobileQuestDockRenderedBase(14236);
 });
 let result = require("noop").fileFinishedImporting("modules/quests/native/QuestDock/QuestDock.tsx");
 

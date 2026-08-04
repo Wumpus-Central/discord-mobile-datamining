@@ -18,7 +18,7 @@ function GuildProfileGameRow(activityLevel) {
     clickable = null != tmp3Result;
   }
   obj = { icon: null, label: null, arrow: null, onPress: null };
-  obj[0] = jsx(importDefault(12112), { game, activityLevel: activityLevel.activityLevel });
+  obj[0] = jsx(importDefault(12111), { game, activityLevel: activityLevel.activityLevel });
   obj[1] = game.name;
   obj[2] = clickable;
   let fn;

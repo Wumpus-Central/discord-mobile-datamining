@@ -75,7 +75,7 @@ export default function ItemDetailsActionSheet(arg0) {
     const obj3 = { channel: null, guild: null };
     obj3[0] = stateFromStores;
     obj3[1] = stateFromStores1;
-    tmp16Result = tmp16(tmp(15449).ChannelScoreSettings, obj3);
+    tmp16Result = tmp16(tmp(15448).ChannelScoreSettings, obj3);
   }
   const items3 = [tmp16Result, , ];
   let tmp15Result = null != stateFromStores2 && null != stateFromStores1;
@@ -89,7 +89,7 @@ export default function ItemDetailsActionSheet(arg0) {
     const items4 = [result, ];
     const obj6 = { guild: null };
     obj6[0] = stateFromStores1;
-    items4[1] = tmp16(tmp(15449).GuildScoreSettings, obj6);
+    items4[1] = tmp16(tmp(15448).GuildScoreSettings, obj6);
     obj5[0] = items4;
     tmp15Result = tmp15(closure_8, obj5);
     const tmp19 = closure_8;

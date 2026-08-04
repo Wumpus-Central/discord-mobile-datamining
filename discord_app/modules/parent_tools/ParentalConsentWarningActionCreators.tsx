@@ -154,7 +154,7 @@ function fetchWarning() {
   } else {
     return Promise.resolve();
   }
-  obj = _require(16420);
+  obj = _require(16419);
 }
 function maybeFetchWarning() {
   const self = this;

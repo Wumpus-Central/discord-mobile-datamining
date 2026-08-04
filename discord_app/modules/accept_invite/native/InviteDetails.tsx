@@ -60,7 +60,7 @@ function InviteDestinationIcon(invite) {
     if (null != invite.inviter) {
       let tmp2Result = null;
       if (null != invite.inviter) {
-        obj = { avatarStyle: null, user: null, guildId: "Array", size: false };
+        obj = { avatarStyle: null, user: null, guildId: "Array", size: true };
         obj[0] = tmp.avatar;
         const tmp14 = new createdAt(invite.inviter);
         obj[1] = tmp14;
@@ -76,9 +76,9 @@ function InviteDestinationIcon(invite) {
     obj = { style: null, guild: null, size: null, textScale: 2 };
     obj[0] = tmp.avatar;
     obj[1] = invite.guild;
-    obj[2] = importDefault(11929).Sizes.LARGE;
-    tmp2Result = tmp2(importDefault(11929), obj);
-    const tmp9 = importDefault(11929);
+    obj[2] = importDefault(11928).Sizes.LARGE;
+    tmp2Result = tmp2(importDefault(11928), obj);
+    const tmp9 = importDefault(11928);
   }
 }
 function InviteHeader(invite) {
@@ -364,7 +364,7 @@ export default function InviteDetails(invite) {
   obj2 = {};
   const merged3 = Object.assign(obj);
   items2[3] = callback2(InviteMemberCounts, obj2);
-  items2[4] = callback2(importDefault(11988), { invite, style: tmp.rolesList });
+  items2[4] = callback2(importDefault(11987), { invite, style: tmp.rolesList });
   let tmp8Result = null != guild_scheduled_event;
   if (tmp8Result) {
     const obj4 = { style: null, children: null };

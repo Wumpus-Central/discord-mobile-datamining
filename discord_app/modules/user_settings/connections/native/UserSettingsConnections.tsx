@@ -43,7 +43,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
   authorizedApps = stateFromStoresObject1.authorizedApps;
   const obj3 = selectedPlatformType(589);
   const tmp2 = importDefault;
-  const tmp7Result = importDefault(12384)(id.getId(), { includeHidden: true });
+  const tmp7Result = importDefault(12383)(id.getId(), { includeHidden: true });
   const prop = tmp7Result.filteredAppIdentities;
   const items3 = [authorizedAppsFetchState];
   const effect = authorizedAppsFetchState.useEffect(() => {
@@ -73,7 +73,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
     if (!tmp7Result.isLoading) {
       if (0 === accounts.length) {
         if (0 === prop.length) {
-          let tmp14 = callback(tmp2(14110), {});
+          let tmp14 = callback(tmp2(14109), {});
         }
       }
       obj = { style: null, children: null };

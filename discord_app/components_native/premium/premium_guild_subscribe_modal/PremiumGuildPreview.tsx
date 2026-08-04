@@ -18,32 +18,32 @@ function PremiumGuildTierPill(arg0) {
   let obj = { style: tmp.tierPill, children: null };
   obj = { style: tmp.tierPillImage, source: null };
   if (BoostedGuildTiers.NONE === tier) {
-    let tmp22 = importDefault(12789);
-    const tmp21 = importDefault(12788);
+    let tmp22 = importDefault(12788);
+    const tmp21 = importDefault(12787);
     if (obj5.isThemeDark(theme)) {
       tmp22 = tmp21;
     }
     let tmp7 = tmp22;
     obj5 = require(4131) /* AccessibilityAnnouncer */;
   } else if (tmp6.TIER_1 === tier) {
-    let tmp17 = importDefault(12791);
-    const tmp16 = importDefault(12790);
+    let tmp17 = importDefault(12790);
+    const tmp16 = importDefault(12789);
     if (obj4.isThemeDark(theme)) {
       tmp17 = tmp16;
     }
     tmp7 = tmp17;
     obj4 = require(4131) /* AccessibilityAnnouncer */;
   } else if (tmp6.TIER_2 === tier) {
-    let tmp12 = importDefault(12793);
-    const tmp11 = importDefault(12792);
+    let tmp12 = importDefault(12792);
+    const tmp11 = importDefault(12791);
     if (obj3.isThemeDark(theme)) {
       tmp12 = tmp11;
     }
     tmp7 = tmp12;
     obj3 = require(4131) /* AccessibilityAnnouncer */;
   } else if (tmp6.TIER_3 === tier) {
-    let tmp8 = importDefault(12795);
-    const tmp26 = importDefault(12794);
+    let tmp8 = importDefault(12794);
+    const tmp26 = importDefault(12793);
     if (obj8.isThemeDark(theme)) {
       tmp8 = tmp26;
     }

@@ -24,7 +24,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(15384)().value;
+    num2 = memo(15383)().value;
   }
   const sum = num + num2;
   _require = sum;

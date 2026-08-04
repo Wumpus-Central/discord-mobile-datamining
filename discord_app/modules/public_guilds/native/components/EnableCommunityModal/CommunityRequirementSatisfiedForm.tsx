@@ -10,7 +10,7 @@ let result = require("jsxProd").fileFinishedImporting("modules/public_guilds/nat
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-  let obj = formSwitchDisabled(16626);
+  let obj = formSwitchDisabled(16625);
   const enableCommunitySharedStyles = obj.useEnableCommunitySharedStyles();
   obj = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
   const items = [formSwitchDisabled.children, ];

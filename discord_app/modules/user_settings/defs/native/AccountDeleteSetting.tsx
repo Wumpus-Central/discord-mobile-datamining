@@ -8,7 +8,7 @@ const pressable = createToggle.createPressable({
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   variant: "danger",
   onPress: function handlePress() {
-    importDefault(13962)(true);
+    importDefault(13961)(true);
   }
 });
 const obj = {
@@ -19,7 +19,7 @@ const obj = {
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   variant: "danger",
   onPress: function handlePress() {
-    importDefault(13962)(true);
+    importDefault(13961)(true);
   }
 };
 const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/AccountDeleteSetting.tsx");

@@ -248,7 +248,7 @@ function DemoStepModal() {
     return items;
   }, []);
   obj = { screens: navigatorScreens, steps: memo, initialRouteName: constants.START };
-  return callback2(require(13333) /* StepModal */.StepModal, obj);
+  return callback2(require(13332) /* StepModal */.StepModal, obj);
 }
 function DemoScreen(arg0) {
   let action;
@@ -282,7 +282,7 @@ function DemoScreen(arg0) {
     if (tmp8Result) {
       const obj2 = { children: null };
       obj2[0] = disclaimer;
-      tmp8Result = tmp8(tmp3(13335).ModalDisclaimer, obj2);
+      tmp8Result = tmp8(tmp3(13334).ModalDisclaimer, obj2);
     }
     const items2 = [tmp8Result, , ];
     tmp8Result = null != action;

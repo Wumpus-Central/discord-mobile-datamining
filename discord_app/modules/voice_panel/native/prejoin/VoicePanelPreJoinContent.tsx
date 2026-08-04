@@ -690,7 +690,7 @@ const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
   const context = importAllResult.useContext(guildId(11557));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(15982)(channelId);
+  const tmp2 = guildId(15981)(channelId);
   const dependencyMap = tmp2;
   let obj = channelId(589);
   let items = [getVoiceStatesForGuild, init, participantFromServer, reset];
@@ -731,7 +731,7 @@ const memoResult = importAllResult.memo(function VoicePanelPreJoinWrapper() {
       obj[4] = ignoredUsersForVoiceChannel;
       return obj;
     }
-  }, items1, channelId(16104).areVoicePanelPreJoinContentPropsEqual);
+  }, items1, channelId(16103).areVoicePanelPreJoinContentPropsEqual);
   obj = { item: stateFromStores, renderItem };
   return callback(channelId(4629).TransitionItem, obj);
 });

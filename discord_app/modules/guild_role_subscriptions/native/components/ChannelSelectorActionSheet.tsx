@@ -32,11 +32,11 @@ function ChannelRow(channel) {
   obj[4] = channel;
   obj[5] = selected;
   obj[7] = UnreadSetting.ONLY_MENTIONS;
-  const children = [closure_11(onChannelSelected(15138), obj), ];
+  const children = [closure_11(onChannelSelected(15137), obj), ];
   if (selected) {
     obj = { style: null, source: null };
     obj[0] = tmp.selectedIcon;
-    obj[1] = tmp2(16653);
+    obj[1] = tmp2(16652);
     selected = tmp8(tmp2(5236), obj);
     const tmp2Result = tmp2(5236);
   }
@@ -163,7 +163,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     }
     const obj4 = { color: null, source: null };
     obj4[0] = str;
-    obj4[1] = importDefault(12784);
+    obj4[1] = importDefault(12783);
     const items3 = [tmp8(tmp5(1297).Icon, obj4), ];
     const obj5 = { style: null, variant: "text-md/medium", color: "text-link", children: null };
     obj5[0] = tmp.createChannelLabel;

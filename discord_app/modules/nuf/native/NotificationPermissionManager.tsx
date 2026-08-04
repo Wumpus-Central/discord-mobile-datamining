@@ -224,7 +224,7 @@ let c23 = null;
 class NotificationPermissionManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f113245 = applyArgumentsResult;
+    f113240 = applyArgumentsResult;
     applyArgumentsResult.previousAppState = null;
     applyArgumentsResult.actions = {
       MESSAGE_CREATE(message) {
@@ -247,7 +247,7 @@ class NotificationPermissionManager extends tmp4 {
             closure_0.handleAppStateUpdate(arg0);
           }
     };
-    f113245 = applyArgumentsResult;
+    f113240 = applyArgumentsResult;
     applyArgumentsResult.handleConnectionOpen = _logNotificationPermissionStatus2(function*() {
       if (c2 === 2) {
         c2 = 3;
@@ -316,7 +316,7 @@ class NotificationPermissionManager extends tmp4 {
         }
       }
     });
-    f113245 = _logNotificationPermissionStatus2((arg0) => {
+    f113240 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -433,7 +433,7 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f113245 = _logNotificationPermissionStatus2((arg0) => {
+    f113240 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -557,7 +557,7 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f113245 = _logNotificationPermissionStatus2((arg0) => {
+    f113240 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -672,9 +672,9 @@ class NotificationPermissionManager extends tmp4 {
       }
       return applyArgumentsResult;
     };
-    f113245 = undefined;
+    f113240 = undefined;
     closure_1 = applyArgumentsResult;
-    f113245 = _logNotificationPermissionStatus2((arg0) => {
+    f113240 = _logNotificationPermissionStatus2((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;

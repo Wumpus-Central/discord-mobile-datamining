@@ -24,7 +24,7 @@ function ColorBox(hue) {
       return obj.hslToRgbWorklet(obj);
     }
   }
-  obj = { hslToRgbWorklet: hue(13814).hslToRgbWorklet, hue };
+  obj = { hslToRgbWorklet: hue(13813).hslToRgbWorklet, hue };
   S.__closure = obj;
   S.__workletHash = 8814597686728;
   S.__initData = closure_9;

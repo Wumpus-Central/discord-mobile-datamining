@@ -17,7 +17,7 @@ export default function LogOutDisclaimer() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }
   });
-  return jsx(require(13335) /* ModalDisclaimer */.ModalDisclaimer, {
+  return jsx(require(13334) /* ModalDisclaimer */.ModalDisclaimer, {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }

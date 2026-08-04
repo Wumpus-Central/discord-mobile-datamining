@@ -27,7 +27,7 @@ export default function StandaloneMembersView(guildId) {
     return callback(guildId(5238).NavigatorHeader, obj);
   };
   obj1[2] = function render() {
-    return outer1_4(navigation(15559), { guildId });
+    return outer1_4(navigation(15558), { guildId });
   };
   obj[constants.MAIN] = obj1;
   obj[constants.MEMBER_EDIT] = {

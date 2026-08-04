@@ -11,7 +11,7 @@ function ReferralProgramCoachmarkImg() {
   const tmp = callback2();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
   obj = { source: null, style: null };
-  obj[0] = importDefault(15737);
+  obj[0] = importDefault(15736);
   obj[1] = tmp.coachmarkImage;
   obj[1] = jsx(importDefault(5236), { source: null, style: null });
   return <View source={null} style={null} />;

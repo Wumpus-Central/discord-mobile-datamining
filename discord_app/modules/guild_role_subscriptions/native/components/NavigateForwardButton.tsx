@@ -22,7 +22,7 @@ export default function NavigateForwardButton(arg0) {
   obj = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text };
   const items = [callback(require(4281) /* Text */.Text, obj), ];
   obj = { source: null };
-  obj[0] = importDefault(14359);
+  obj[0] = importDefault(14358);
   items[1] = callback(require(1297) /* Button */.Icon, obj);
   obj[2] = items;
   return callback2(require(4812) /* PressableBase */.PressableHighlight, obj);

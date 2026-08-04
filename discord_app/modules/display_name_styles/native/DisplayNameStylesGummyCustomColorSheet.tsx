@@ -53,10 +53,10 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   obj[0] = callback(onSelect(5337).BottomSheetTitleHeader, obj);
   obj2 = { style: tmp.body, children: null };
   const obj3 = { style: tmp.previewWrapper, children: null };
-  obj3[1] = callback(View, { style: tmp.preview, children: callback(sharedValue(14483), { hue: sharedValue }) });
+  obj3[1] = callback(View, { style: tmp.preview, children: callback(sharedValue(14482), { hue: sharedValue }) });
   const items1 = [callback(View, obj3), ];
-  const obj4 = { style: tmp.preview, children: callback(sharedValue(14483), { hue: sharedValue }) };
-  items1[1] = callback(View, { style: tmp.huePickerInset, children: callback(sharedValue(13817), obj6) });
+  const obj4 = { style: tmp.preview, children: callback(sharedValue(14482), { hue: sharedValue }) };
+  items1[1] = callback(View, { style: tmp.huePickerInset, children: callback(sharedValue(13816), obj6) });
   obj2[1] = items1;
   obj[1] = callback2(View, obj2);
   return callback(onSelect(5338).BottomSheet, obj);

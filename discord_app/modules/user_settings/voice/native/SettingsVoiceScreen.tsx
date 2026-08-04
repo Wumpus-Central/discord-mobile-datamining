@@ -126,5 +126,5 @@ export default function SettingsVoiceScreen() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return callback(importDefault(13794), { node });
+  return callback(importDefault(13793), { node });
 };

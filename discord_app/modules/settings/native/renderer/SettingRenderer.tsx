@@ -352,7 +352,7 @@ let closure_21 = importAllResult.memo((arg0) => {
   let withArrow;
   ({ useDescription, useIsDisabled, useTrailing, variant, start, end, IconComponent } = arg0);
   ({ setting, onPress, useTitle, withArrow } = arg0);
-  let obj = require(14824) /* useHighlightSettingItem */;
+  let obj = require(14823) /* useHighlightSettingItem */;
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   let description;
   const title = useTitle();
@@ -396,7 +396,7 @@ let closure_21 = importAllResult.memo((arg0) => {
     const obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = tmp10(importDefault(14825), obj2);
+    highlightSettingItem = tmp10(importDefault(14824), obj2);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -415,7 +415,7 @@ let closure_22 = importAllResult.memo((arg0) => {
   let variant;
   ({ useDescription, useIsDisabled, variant, start, end, IconComponent } = arg0);
   ({ setting, onValueChange, useTitle, useValue, hasIcon } = arg0);
-  let obj = require(14824) /* useHighlightSettingItem */;
+  let obj = require(14823) /* useHighlightSettingItem */;
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   const title = useTitle();
   let description;
@@ -454,7 +454,7 @@ let closure_22 = importAllResult.memo((arg0) => {
     const obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = tmp8(importDefault(14825), obj2);
+    highlightSettingItem = tmp8(importDefault(14824), obj2);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -466,7 +466,7 @@ let closure_24 = importAllResult.memo((arg0) => {
   let useTitle;
   let useValue;
   ({ setting, useTitle, useValue, useOptions, onValueChange } = arg0);
-  let obj = require(14824) /* useHighlightSettingItem */;
+  let obj = require(14823) /* useHighlightSettingItem */;
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   const title = useTitle();
   const value = useValue();
@@ -490,7 +490,7 @@ let closure_24 = importAllResult.memo((arg0) => {
   if (highlightSettingItem) {
     obj = { start: true, end: true, style: null };
     obj[2] = tmp.radioSettingHighlight;
-    highlightSettingItem = callback3(importDefault(14825), obj);
+    highlightSettingItem = callback3(importDefault(14824), obj);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -508,7 +508,7 @@ let closure_25 = importAllResult.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let obj = trailing(14824);
+  let obj = trailing(14823);
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
@@ -562,7 +562,7 @@ let closure_25 = importAllResult.memo((arg0) => {
     let obj2 = { start: null, end: null };
     obj2[0] = start;
     obj2[1] = end;
-    highlightSettingItem = tmp11(importDefault(14825), obj2);
+    highlightSettingItem = tmp11(importDefault(14824), obj2);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });
@@ -577,7 +577,7 @@ let closure_26 = importAllResult.memo((arg0) => {
   let useValue;
   ({ useValue, start, end } = arg0);
   ({ setting, useTitle, onValueChange, maximum } = arg0);
-  let obj = require(14824) /* useHighlightSettingItem */;
+  let obj = require(14823) /* useHighlightSettingItem */;
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   let value;
   const title = useTitle();
@@ -593,7 +593,7 @@ let closure_26 = importAllResult.memo((arg0) => {
     const obj1 = { start: null, end: null };
     obj1[0] = start;
     obj1[1] = end;
-    highlightSettingItem = callback3(importDefault(14825), obj1);
+    highlightSettingItem = callback3(importDefault(14824), obj1);
   }
   children[1] = highlightSettingItem;
   return closure_16(closure_15, { children });

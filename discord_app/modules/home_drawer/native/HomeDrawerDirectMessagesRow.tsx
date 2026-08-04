@@ -39,7 +39,7 @@ function HomeDrawerDMsRow() {
   obj4[3] = intl2.string(require(1236) /* getSystemLocale */.t.YUU0RF);
   obj3[0] = callback(require(4281) /* Text */.Text, obj4);
   obj3[1] = tmp5;
-  return callback(require(15303) /* HomeDrawerSharedItem */.HomeDrawerSharedItem, obj3);
+  return callback(require(15302) /* HomeDrawerSharedItem */.HomeDrawerSharedItem, obj3);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 createCacheKey = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };

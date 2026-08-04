@@ -138,7 +138,7 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
     tmp7 = isQuestProgressing;
   }
   obj1[3] = !tmp7;
-  const items2 = [defaultRewardName(isQuestProgressing(14274), obj1), ];
+  const items2 = [defaultRewardName(isQuestProgressing(14273), obj1), ];
   let tmp18Result = null != memo;
   if (tmp18Result) {
     let obj2 = { style: null, variant: "text-sm/semibold", color: "text-subtle", children: null };
@@ -175,7 +175,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   const memo1 = React.useMemo(() => quest(outer1_2[16]).getQuestAsset(quest, quest(outer1_2[16]).QuestAssetType.VIDEO_PLAYER_THUMBNAIL, undefined, true), items1);
   const items2 = [quest];
   const memo2 = React.useMemo(() => quest(outer1_2[16]).getQuestAsset(quest, quest(outer1_2[16]).QuestAssetType.QUEST_BAR_HERO_IMAGE), items2);
-  let obj1 = quest(14266);
+  let obj1 = quest(14265);
   obj = { questId: quest.id, sourceQuestContent: quest.sourceQuestContent };
   let isHeroVideoSupportedResult = null != memo;
   if (isHeroVideoSupportedResult) {
@@ -246,7 +246,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   }
   items5[1] = tmp12Result;
   const obj10 = { style: tmp.playVideoIconWrapper, children: null };
-  const items7 = [closure_7(importDefault(14303), { blurTheme: "light" }), ];
+  const items7 = [closure_7(importDefault(14302), { blurTheme: "light" }), ];
   const obj11 = { color: null };
   obj11[0] = importDefault(712).colors.WHITE;
   items7[1] = closure_7(quest(8777).PlayIcon, obj11);
@@ -255,7 +255,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   const watchTaskPressHandler = obj1.useWatchTaskPressHandler(obj);
   const items8 = [, ];
   ({ content: arr9[0], contentWatchTask: arr9[1] } = tmp);
-  items5[3] = closure_7(closure_4, { style: items8, children: closure_7(importDefault(14274), obj13) });
+  items5[3] = closure_7(closure_4, { style: items8, children: closure_7(importDefault(14273), obj13) });
   obj1[2] = items5;
   obj[3] = closure_8(quest(5317).Card, obj1);
   return closure_7(quest(4812).PressableOpacity, obj);
@@ -276,7 +276,7 @@ export const QuestBottomSheetProgressCardInGameTask = function QuestBottomSheetP
     num = 0;
   }
   obj1[2] = num;
-  obj[1] = closure_7(importDefault(14274), obj1);
+  obj[1] = closure_7(importDefault(14273), obj1);
   obj[2] = closure_7(closure_4, obj);
   return closure_7(require(5317) /* PressableCard */.Card, obj);
 };

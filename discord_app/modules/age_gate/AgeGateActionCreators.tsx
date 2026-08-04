@@ -8,7 +8,7 @@ const result = require("trackAgeGateSubmitted").fileFinishedImporting("modules/a
 
 export const submitDateOfBirth = function submitDateOfBirth(c0, outer1_2) {
   const _require = outer1_2;
-  importDefault(14991)(c0, outer1_2);
+  importDefault(14990)(c0, outer1_2);
   let obj = importDefault(698);
   obj = { source: outer1_2, action: AgeGateAnalyticAction.AGE_GATE_SUBMITTED };
   obj.track(constants.AGE_GATE_ACTION, obj);

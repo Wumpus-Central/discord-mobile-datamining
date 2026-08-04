@@ -29,7 +29,7 @@ function ConsoleRow(onPress) {
   const type = merged.type;
   if (constants.PLAYSTATION === type) {
     let obj = { arrow: true, icon: null, label: null, subLabel: null, onPress: null };
-    obj[1] = callback(onPress(12095).PlaystationNeutralIcon, {});
+    obj[1] = callback(onPress(12094).PlaystationNeutralIcon, {});
     const intl3 = onPress(1236).intl;
     obj[2] = intl3.string(onPress(1236).t.JafL6p);
     let stringResult;

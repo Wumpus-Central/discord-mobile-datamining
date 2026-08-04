@@ -2,7 +2,7 @@ import { MobileSetting } from "MobileSetting";
 import createToggle from "createToggle";
 
 function useObscuredContentNonFriendsDmSettingValue() {
-  const obj = require(13971) /* useExplicitContentSettingOrDefault */;
+  const obj = require(13970) /* useExplicitContentSettingOrDefault */;
   return require(6968) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentNonFriendDm)();
 }
 function onObscuredContentNonFriendsDmOnPress() {
@@ -18,7 +18,7 @@ function onObscuredContentNonFriendsDmOnPress() {
     return obj.updateExplicitContentSetting(obj);
   };
   obj[3] = obj.getExplicitContentSettingOrDefault().explicitContentNonFriendDm;
-  const result = require(13972) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+  const result = require(13971) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
 }
 const pressable = createToggle.createPressable({
   useTitle: function getTitle() {

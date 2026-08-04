@@ -21,7 +21,7 @@ const pressable = createToggle.createPressable({
     obj.show(obj);
   },
   useIsDisabled() {
-    return null !== require(13945) /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
+    return null !== require(13944) /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
   },
   useDescription: require("getSMSBackupDisabledMessage").use2FARemoveDisableReason,
   usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled
@@ -47,7 +47,7 @@ let obj = {
     obj.show(obj);
   },
   useIsDisabled() {
-    return null !== require(13945) /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
+    return null !== require(13944) /* getSMSBackupDisabledMessage */.use2FARemoveDisableReason();
   },
   useDescription: require("getSMSBackupDisabledMessage").use2FARemoveDisableReason,
   usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled

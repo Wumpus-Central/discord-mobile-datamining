@@ -291,16 +291,16 @@ export const getEmojiHighlightNodes = function getEmojiHighlightNodes(channel, a
 };
 export const getUsernameHighlightNodes = function getUsernameHighlightNodes(channel, arg1) {
   const items = [];
-  let obj = f86910(11297);
+  let obj = f86906(11297);
   const users = obj.getUsers(channel);
-  f86910 = (arg0) => arg0;
+  f86906 = (arg0) => arg0;
   let match = regex2.exec(arg1);
   if (null != match) {
     do {
       let str = match[1];
-      f86910 = str.trim();
+      f86906 = str.trim();
       let tmp2 = match;
-      if (null != users.find((text) => f86910(text.text) === f86910)) {
+      if (null != users.find((text) => f86906(text.text) === f86906)) {
         obj = { location: null, length: null };
         obj[0] = match.index;
         obj[1] = match[0].length;
@@ -309,14 +309,14 @@ export const getUsernameHighlightNodes = function getUsernameHighlightNodes(chan
       match = obj2.exec(arg1);
     } while (null != match);
   }
-  f86910 = (arg0) => arg0.split("#")[0];
+  f86906 = (arg0) => arg0.split("#")[0];
   let match1 = regex3.exec(arg1);
   if (null != match1) {
     do {
       let str2 = match1[1];
-      f86910 = str2.trim();
+      f86906 = str2.trim();
       let tmp5 = match1;
-      if (null != users.find((text) => f86910(text.text) === f86910)) {
+      if (null != users.find((text) => f86906(text.text) === f86906)) {
         obj = { location: null, length: null };
         obj[0] = match1.index;
         obj[1] = match1[0].length;

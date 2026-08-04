@@ -20,7 +20,7 @@ export const URLCallout = function URLCallout(url) {
   let protocol;
   let theRestOfTheUrl;
   const tmp = createCacheKey();
-  let obj = require(12138) /* useUrlParts */;
+  let obj = require(12137) /* useUrlParts */;
   const urlParts = obj.useUrlParts(url.url);
   obj = { style: tmp.linkCalloutContainer, children: null };
   ({ protocol, hostname, theRestOfTheUrl } = urlParts);

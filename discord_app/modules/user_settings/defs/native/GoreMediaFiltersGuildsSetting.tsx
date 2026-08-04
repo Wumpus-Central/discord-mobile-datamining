@@ -7,7 +7,7 @@ const pressable = createToggle.createPressable({
   },
   parent: require("MobileSetting").MobileSetting.SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentGuildsSettingValue() {
-    const obj = require(13971) /* useExplicitContentSettingOrDefault */;
+    const obj = require(13970) /* useExplicitContentSettingOrDefault */;
     return require(6968) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentGuilds)();
   },
   onPress: function onGoreContentGuildsOnPress() {
@@ -25,7 +25,7 @@ const pressable = createToggle.createPressable({
     const items = [require(1306) /* create */.ExplicitContentRedaction.BLOCK];
     obj[3] = items;
     obj[4] = obj.getGoreContentSettingOrDefault().goreContentGuilds;
-    const result = require(13972) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+    const result = require(13971) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
   },
   useIsDisabled() {
     let userIsTeen = require(7846) /* useUserIsTeen */.useUserIsTeen();
@@ -52,7 +52,7 @@ let obj = {
   },
   parent: require("MobileSetting").MobileSetting.SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentGuildsSettingValue() {
-    const obj = require(13971) /* useExplicitContentSettingOrDefault */;
+    const obj = require(13970) /* useExplicitContentSettingOrDefault */;
     return require(6968) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentGuilds)();
   },
   onPress: function onGoreContentGuildsOnPress() {
@@ -70,7 +70,7 @@ let obj = {
     const items = [require(1306) /* create */.ExplicitContentRedaction.BLOCK];
     obj[3] = items;
     obj[4] = obj.getGoreContentSettingOrDefault().goreContentGuilds;
-    const result = require(13972) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+    const result = require(13971) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
   },
   useIsDisabled() {
     let userIsTeen = require(7846) /* useUserIsTeen */.useUserIsTeen();

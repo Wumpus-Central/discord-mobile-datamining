@@ -12,7 +12,7 @@ const pressable = createToggle.createPressable({
     return intl.string(importDefault(2803).Gn0SAj);
   },
   onPress() {
-    require(4625) /* useAlertStore */.openAlert(require(13925) /* SettingsAgeGroupResetAlert */.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(require(13925) /* SettingsAgeGroupResetAlert */.default, {}));
+    require(4625) /* useAlertStore */.openAlert(require(13924) /* SettingsAgeGroupResetAlert */.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(require(13924) /* SettingsAgeGroupResetAlert */.default, {}));
   },
   withArrow: true,
   usePredicate: require("useAgeVerificationRunner").useShowAssignedAgeGroupSettings
@@ -28,7 +28,7 @@ const obj = {
     return intl.string(importDefault(2803).Gn0SAj);
   },
   onPress() {
-    require(4625) /* useAlertStore */.openAlert(require(13925) /* SettingsAgeGroupResetAlert */.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(require(13925) /* SettingsAgeGroupResetAlert */.default, {}));
+    require(4625) /* useAlertStore */.openAlert(require(13924) /* SettingsAgeGroupResetAlert */.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(require(13924) /* SettingsAgeGroupResetAlert */.default, {}));
   },
   withArrow: true,
   usePredicate: require("useAgeVerificationRunner").useShowAssignedAgeGroupSettings

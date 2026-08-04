@@ -6,7 +6,7 @@ let closure_3 = ["I", "I"];
 const items = [{ name: "all", start: 0, duration: 67 }, { name: "easteregg", start: 68, duration: 142 }];
 const forwardRefResult = require("noop").forwardRef((arg0, arg1) => {
   const obj = { dotLottie: null, animation: "all", ref: null, layers: null, markers: null };
-  obj[0] = require(13297) /* registerAsset */;
+  obj[0] = require(13296) /* registerAsset */;
   obj[2] = arg1;
   obj[3] = closure_3;
   obj[4] = items;

@@ -823,7 +823,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
       }
     }
   };
-  obj[constants.AUTHENTICATE] = _require(13651).createRPCCommand(constants.AUTHENTICATE, obj);
+  obj[constants.AUTHENTICATE] = _require(13650).createRPCCommand(constants.AUTHENTICATE, obj);
   obj[constants.AUTHORIZE] = {
     handler(socket) {
       socket = socket.socket;

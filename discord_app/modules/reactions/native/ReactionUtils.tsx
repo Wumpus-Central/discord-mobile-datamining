@@ -155,7 +155,7 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
   let obj = importDefault(4253);
   obj = { messageId: id2, channelId: id, emoji };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(12440, dependencyMap.paths), "MessagePreviewReactions", obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(12439, dependencyMap.paths), "MessagePreviewReactions", obj);
 };
 export const ADD_REACTION_ICONS = obj;
 export const ADD_REACTION_ICON_COMPONENTS = obj;

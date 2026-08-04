@@ -342,7 +342,7 @@ export const ICYMIServerRecommendationRow = function ICYMIServerRecommendationRo
     obj3[0] = stateFromStoresArray;
     items1[2] = callback3(RecommendedGuildsRow, obj3);
     obj[1] = items1;
-    const items2 = [callback4(View, obj), callback3(tmp(15481).Separator, {})];
+    const items2 = [callback4(View, obj), callback3(tmp(15480).Separator, {})];
     obj[0] = items2;
     tmp4 = callback4(closure_16, obj);
   }

@@ -27,7 +27,7 @@ let obj = {
     let obj1 = require(10548) /* recurseReplaceContentTree */;
     obj1.validateApplication(socket.application);
     const id = socket.application.id;
-    const obj3 = importDefault(13643)();
+    const obj3 = importDefault(13642)();
     if (obj3 != null) {
       const guildId = obj3.getGuildId();
     }

@@ -11,7 +11,7 @@ export default function ScrollBenchmark(subLabel) {
   if (str === undefined) {
     str = "Records frame times while you scroll the content below.";
   }
-  const tmp = importDefault(14949)(subLabel.onResult);
+  const tmp = importDefault(14948)(subLabel.onResult);
   ({ monitoring, start } = tmp);
   let str2 = "Start scroll monitor";
   if (monitoring) {

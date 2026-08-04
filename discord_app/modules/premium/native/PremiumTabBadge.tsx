@@ -43,7 +43,7 @@ function OfferBadge(componentId) {
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.acked;
     const obj2 = { source: null, size: null, color: null, style: null };
-    obj2[0] = importDefault(14133);
+    obj2[0] = importDefault(14132);
     obj2[1] = tmp5(1297).Icon.Sizes.EXTRA_SMALL;
     obj2[2] = tmp.icon.color;
     obj2[3] = tmp.icon;
@@ -208,7 +208,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr4[0], ackedBadge: arr4[1] } = tmp);
           obj4[0] = items3;
           const obj5 = { source: null, size: null, color: null, style: null };
-          obj5[0] = importDefault(14133);
+          obj5[0] = importDefault(14132);
           obj5[1] = tmp2(1297).Icon.Sizes.EXTRA_SMALL;
           obj5[2] = tmp.icon.color;
           obj5[3] = tmp.icon;

@@ -12,8 +12,8 @@ export default function executeRunnable(arg0, arg1) {
   const importDefault = arg1;
   new importDefault(3)(arg0).log("Loading the " + arg0 + " Discord runnable");
   const obj = new importDefault(3)(arg0);
-  importAll(12843).setIsPaused(false);
-  const obj2 = importAll(12843);
+  importAll(12842).setIsPaused(false);
+  const obj2 = importAll(12842);
   const combined = "executeRunnable:" + arg0;
   return importAll(675).withRequest(combined, callback(function*() {
     const obj4 = outer1_0(15);

@@ -57,7 +57,7 @@ function GuildInfoHeader(bannerHeight) {
   const tmp5 = bannerHeight(4147);
   obj[1] = callback(bannerHeight(4814), { absolute: true, tall: true });
   const items1 = [callback(bannerHeight(4147), obj), ];
-  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(15154), obj2) };
+  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(15153), obj2) };
   obj2 = { guild, showExtraButtons: !isFavoritesGuildIdResult, canOpenGuildActionSheet: !isFavoritesGuildIdResult, showCoachmarks: !isFavoritesGuildIdResult };
   items1[1] = callback(closure_5, obj1);
   obj[1] = items1;
@@ -236,7 +236,7 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   }
   const fontScale = require(4701) /* getFontScale */.useFontScale();
   const obj2 = require(4701) /* getFontScale */;
-  const tmp8 = null != importDefault(15153)(id);
+  const tmp8 = null != importDefault(15152)(id);
   const isFavoritesGuildIdResult = require(1865) /* getFavoritesAwareGuildName */.isFavoritesGuildId(id.id);
   const obj3 = require(1865) /* getFavoritesAwareGuildName */;
   const scaleTextLineHeightResult = require(9370) /* map */.scaleTextLineHeight("redesign/heading-18/bold", fontScale);

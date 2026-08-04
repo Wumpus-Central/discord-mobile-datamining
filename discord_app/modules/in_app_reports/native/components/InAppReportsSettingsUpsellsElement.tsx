@@ -38,7 +38,7 @@ function SettingsUpsellsTableRow(arg0) {
     icon: null
   };
   obj[5] = callback2(require(5920) /* SettingsIcon */.SettingsIcon, {});
-  return callback2(importDefault(12556), obj);
+  return callback2(importDefault(12555), obj);
 }
 ({ AnalyticEvents: error, UserSettingsSections: metroImportAll } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);

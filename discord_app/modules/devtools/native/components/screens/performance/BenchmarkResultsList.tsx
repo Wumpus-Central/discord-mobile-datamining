@@ -31,7 +31,7 @@ export default function BenchmarkResultsList(results) {
             const _HermesInternal2 = HermesInternal;
             obj[0] = "Scroll \u00B7 mean " + toFixedResult + " ms \u00B7 worst " + worstMs.toFixed(1) + " ms";
             ({ dropped, frames } = kind);
-            const FRAME_BUDGET_MS = callback(14947).FRAME_BUDGET_MS;
+            const FRAME_BUDGET_MS = callback(14946).FRAME_BUDGET_MS;
             const _HermesInternal3 = HermesInternal;
             obj[1] = "" + dropped + "/" + frames + " frames over " + FRAME_BUDGET_MS.toFixed(1) + " ms";
             tmp5 = callback2(callback(5315).TableRow, obj, kind.id);

@@ -308,7 +308,7 @@ function _chatInputSendApplicationCommand() {
                   tmp20 = null != setCooldown;
                 }
                 if (tmp20) {
-                  const obj5 = { text: null, parsedMessage: "Array", tts: "handleSendApplicationCommand", source: null, params: "M16 6h-1v6h1V6Z" };
+                  const obj5 = { text: null, parsedMessage: "Array", tts: "handleSendApplicationCommand", source: null, params: "M14 4V3h-2V1H8v1H7v1H6V2H3v1H2v4H1v3h1V9h1V8h5V6h1V5h5v1h1V4h-1Z" };
                   obj5[0] = setCooldown.content;
                   obj5[2] = setCooldown.tts;
                   obj5[4] = params;
@@ -396,7 +396,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             let intl2 = require(1236) /* getSystemLocale */.intl;
             obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.KJnHq3);
             obj[3] = function onConfirm() {
-              const obj = { text: closure_0, parsedMessage: c2, tts: "accessibilityRole", source: "<string:1359020033>", params: "<string:1359258885>" };
+              const obj = { text: closure_0, parsedMessage: c2, tts: "accessibilityRole", source: "Array", params: "isArray" };
               obj[4] = params;
               outer1_13(obj);
             };
@@ -414,7 +414,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             obj[0] = channel.id;
             obj[1] = uploads;
             obj[2] = function sendMessage() {
-              const obj = { text: closure_0, parsedMessage: c2, tts: "accessibilityRole", source: "<string:16777809>", params: "animal" };
+              const obj = { text: closure_0, parsedMessage: c2, tts: "accessibilityRole", source: "captureReplay", params: "isArrayBuffer" };
               obj[4] = params;
               outer1_13(obj);
             };
@@ -426,7 +426,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        obj1 = { text: null, parsedMessage: null, tts: "accessibilityRole", source: "<string:16777688>", params: "<string:289399633>" };
+        obj1 = { text: null, parsedMessage: null, tts: "accessibilityRole", source: "<string:16777688>", params: "<string:33405505>" };
         obj1[0] = text;
         obj1[1] = tmp2;
         obj1[4] = params;

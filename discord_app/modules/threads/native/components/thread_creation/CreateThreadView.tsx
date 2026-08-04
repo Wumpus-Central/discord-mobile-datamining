@@ -132,8 +132,8 @@ function CreateThreadViewInner(screenIndex) {
                   if (null != tmp50.name) {
                     const str = tmp50.name;
                   }
-                  outer1_2(lib(15577).makeEmptyTitleError());
-                  const obj8 = lib(15577);
+                  outer1_2(lib(15576).makeEmptyTitleError());
+                  const obj8 = lib(15576);
                   lib(4144).dismissKeyboard();
                   outer1_4.current = false;
                   c5 = 0;
@@ -157,8 +157,8 @@ function CreateThreadViewInner(screenIndex) {
                 code = body.code;
               }
               if (code === outer2_10.AUTOMOD_TITLE_BLOCKED) {
-                outer1_2(lib(15577).makeAutomodViolationError(lib.body, lib));
-                const obj5 = lib(15577);
+                outer1_2(lib(15576).makeAutomodViolationError(lib.body, lib));
+                const obj5 = lib(15576);
                 lib(4144).dismissKeyboard();
                 const obj6 = lib(4144);
               } else {
@@ -180,7 +180,7 @@ function CreateThreadViewInner(screenIndex) {
                   tmp23 = null != name;
                 }
                 if (tmp23) {
-                  let obj2 = lib(15577);
+                  let obj2 = lib(15576);
                   outer1_2(obj2.makeApiNameRequiredError());
                   lib(4144).dismissKeyboard();
                   const obj4 = lib(4144);
@@ -246,7 +246,7 @@ function CreateThreadViewInner(screenIndex) {
   let obj5 = { style: tmp.optionsInner, children: null };
   const isForumLikeChannelResult = parentChannel.isForumLikeChannel();
   const tmp20 = null != threadSettingsDraft.parentMessageId;
-  const items6 = [callback2(c6, { style: tmp.threadIconContainer, children: callback2(_require(4783).ThreadIcon, { size: "lg" }) }), callback2(threadSettingsDraft(15576), { ref: ref1, chatInputRef: ref, threadSettingsDraft, threadNameError: tmp6[0], optional: tmp20 }), ];
+  const items6 = [callback2(c6, { style: tmp.threadIconContainer, children: callback2(_require(4783).ThreadIcon, { size: "lg" }) }), callback2(threadSettingsDraft(15575), { ref: ref1, chatInputRef: ref, threadSettingsDraft, threadNameError: tmp6[0], optional: tmp20 }), ];
   let tmp22Result = null;
   if (!isForumLikeChannelResult) {
     tmp22Result = null;
@@ -290,7 +290,7 @@ function CreateThreadViewInner(screenIndex) {
     const obj11 = { channelId: null, messageId: null };
     obj11[0] = parentChannel.id;
     obj11[1] = threadSettingsDraft.parentMessageId;
-    items8[1] = tmp22(tmp2(15578).ThreadCreationStarterMessage, obj11);
+    items8[1] = tmp22(tmp2(15577).ThreadCreationStarterMessage, obj11);
     obj9[1] = items8;
     tmp21Result = tmp21(tmp23, obj9);
   }
@@ -310,7 +310,7 @@ function CreateThreadViewInner(screenIndex) {
   }
   items5[2] = tmp22Result;
   items5[3] = callback2(threadSettingsDraft(11277), { ref, channel: parentChannel, onJumpToPresent: closure_12, screenIndex: screenIndex.screenIndex, secondaryTextFieldRef: ref1, threadCreationCallback: callback1 });
-  items5[4] = callback2(threadSettingsDraft(11912), { channelId: parentChannel.id });
+  items5[4] = callback2(threadSettingsDraft(11911), { channelId: parentChannel.id });
   obj1[1] = items5;
   items3[1] = closure_14(c6, obj1);
   obj[1] = items3;

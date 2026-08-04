@@ -132,7 +132,7 @@ export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
 export const adminDeleteContactSync = function adminDeleteContactSync() {
   callback2();
   callback3();
-  let obj = require(11949) /* _requestAndSyncContacts */;
+  let obj = require(11948) /* _requestAndSyncContacts */;
   const result = obj.removeLastUserContactsUpload();
   const ContactSyncEnabled = require(3958) /* explicitContentFromProto */.ContactSyncEnabled;
   ContactSyncEnabled.updateSetting(false);

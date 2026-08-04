@@ -77,7 +77,7 @@ function ICYMIGuildEventRow(event) {
   }
   const tmp8Result1 = event(8864);
   obj = { actionLabel: null, id: null, interactionType: "guild_event", channelId: null, guildId: null, timestamp: null, onHeaderPress: null, onHeaderLongPress: null, children: null };
-  tmp2Result = tmp2(15483);
+  tmp2Result = tmp2(15482);
   let intl = tmp8(1236).intl;
   obj[0] = intl.string(event(1236).t["6pFsLQ"]);
   obj[1] = event.id;

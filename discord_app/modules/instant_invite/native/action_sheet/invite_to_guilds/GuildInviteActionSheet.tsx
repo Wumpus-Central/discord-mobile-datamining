@@ -13,8 +13,8 @@ function EmptyGuildList() {
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t["2bfiLk"]);
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl2.string(require(1236) /* getSystemLocale */.t.V6nAfF);
-  obj[3] = importDefault(12406);
-  obj[4] = importDefault(12407);
+  obj[3] = importDefault(12405);
+  obj[4] = importDefault(12406);
   return callback2(require(1297) /* Button */.ThemedEmptyState, obj);
 }
 function GuildList(recipientId) {
@@ -25,7 +25,7 @@ function GuildList(recipientId) {
   let dependencyMap;
   let callback;
   dependencyMap = createCacheKey();
-  let obj = recipientId(12403);
+  let obj = recipientId(12402);
   [arr, arr2] = callback(obj.useServerInviteRows(recipientId, recipientId.query), 2);
   if (0 === arr.length) {
     if (0 === arr2.length) {

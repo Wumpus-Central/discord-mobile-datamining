@@ -11,7 +11,7 @@ export const ChannelListMagnifyingGlassIcon = function ChannelListMagnifyingGlas
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(13101) /* registerAsset */;
+  obj[0] = require(13100) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);

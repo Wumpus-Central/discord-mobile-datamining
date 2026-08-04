@@ -13,7 +13,7 @@ function IgnoredUsersList(userIds) {
   importDefault(5610);
   if (0 === userIds.length) {
     let obj = { Illustration: null, body: null };
-    obj[0] = require(13953) /* getBlockedSource */.Blocked;
+    obj[0] = require(13952) /* getBlockedSource */.Blocked;
     const intl = require(1236) /* getSystemLocale */.intl;
     obj[1] = intl.string(require(1236) /* getSystemLocale */.t.PYrWFW);
     let tmp7 = callback(require(1297) /* Button */.EmptyState, obj);

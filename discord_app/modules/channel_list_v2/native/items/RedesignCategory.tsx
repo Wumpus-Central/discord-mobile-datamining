@@ -141,7 +141,7 @@ function renderCategoryItem(arg0) {
     let colors = importDefault(712).colors;
     const obj8 = { size: "xxs", color: null };
     obj8[1] = muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
-    colors = tmp6(trailingAction(12021).PlusMediumIcon, obj8);
+    colors = tmp6(trailingAction(12020).PlusMediumIcon, obj8);
     obj7[4] = colors;
     obj7 = tmp6(trailingAction(4812).PressableOpacity, obj7);
     obj6[1] = obj7;
@@ -235,7 +235,7 @@ export const CategoryChannel = function CategoryChannel(channel) {
   obj[5] = channel.withMarginTop;
   obj[6] = styles(tmp2);
   obj[7] = tmp2;
-  obj[8] = collapsed(12047)(channel);
+  obj[8] = collapsed(12046)(channel);
   const collapsed2 = obj.collapsed;
   const merged = Object.assign(obj, Object.create(null));
   const colors = collapsed(712).colors;

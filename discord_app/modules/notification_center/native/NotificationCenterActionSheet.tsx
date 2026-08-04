@@ -17,7 +17,7 @@ export default function NotificationCenterActionSheet() {
   const everyoneFilter = stateFromStoresObject.everyoneFilter;
   const items1 = [everyoneFilter, roleFilter];
   const dependencyMap = hasForLaterAccess.useCallback((arg0) => {
-    let obj = everyoneFilter(15398);
+    let obj = everyoneFilter(15397);
     obj = { roleFilter, everyoneFilter };
     const merged = Object.assign(arg0);
     obj.setGuildFilter(obj);
@@ -79,7 +79,7 @@ export default function NotificationCenterActionSheet() {
   obj4[3] = intl4.string(roleFilter(1236).t.jYgZa4);
   const obj5 = { IconComponent: null, source: null };
   obj5[0] = roleFilter(9058).BellIcon;
-  obj5[1] = everyoneFilter(15399);
+  obj5[1] = everyoneFilter(15398);
   obj4[4] = callback(roleFilter(5648).ActionSheetRow.Icon, obj5);
   items3[1] = callback(roleFilter(5648).ActionSheetSwitchRow, obj4);
   obj1[1] = items3;

@@ -43,7 +43,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
       obj2[0] = tmp14;
       obj8 = obj2;
       const tmp15Result = tmp15(9574);
-    } else if (importDefault(12188)(activity)) {
+    } else if (importDefault(12187)(activity)) {
       const obj3 = { largeImage: null, smallImage: "a" };
       const obj4 = { src: null, alt: null };
       let tmp2Result = tmp2(4966);
@@ -54,7 +54,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
       obj8 = obj3;
     } else {
       if (null == smallImage) {
-        if (tmp2(12189)(activity)) {
+        if (tmp2(12188)(activity)) {
           const obj5 = { largeImage: null, smallImage: "a" };
           const obj6 = { src: null, alt: null };
           tmp2Result = tmp2(4966);
@@ -202,7 +202,7 @@ function useRichImageForActivity(activity, activityApplication) {
     const application_id = activity.application_id;
   }
   if (null == activity) {
-    return { largeImage: "Array", smallImage: "HermesInternal" };
+    return { largeImage: "body", smallImage: "useStateFromStores" };
   } else {
     let large_image;
     if (activity != null) {
@@ -338,7 +338,7 @@ export const useImageForContentEntry = function useImageForContentEntry(tracking
   if (showCoverImage === undefined) {
     showCoverImage = true;
   }
-  ({ activity, activityApplication, fallbackApplication } = importDefault(12186)(entry));
+  ({ activity, activityApplication, fallbackApplication } = importDefault(12185)(entry));
   let obj = fallbackApplication;
   if (fallbackApplication == null) {
     obj = activityApplication;

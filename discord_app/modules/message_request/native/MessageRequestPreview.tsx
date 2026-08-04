@@ -31,7 +31,7 @@ const memoResult = importAllResult.memo(function MessageRequestPreview(channel) 
   channel = channel.channel;
   let message;
   const tmp = callback();
-  let obj = channel(11866);
+  let obj = channel(11865);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   message = messageRequestPreview.message;
   ({ loaded, error } = messageRequestPreview);

@@ -645,7 +645,7 @@ export default function DevToolsInAppNotificationTestingScreen() {
   items = [tmp.content, { paddingBottom: tmp.content.padding + importDefault(1581)().bottom }];
   obj = { title: "Expand NUX", hasIcons: true, children: null };
   obj = { label: "Reset Expand NUX", subLabel: "Resets in app notification expand NUX dismissible content.", onPress: handleResetInAppNotificationExpandNux, icon: null, trailing: null };
-  obj[3] = callback(_require(13760).BeakerIcon, {});
+  obj[3] = callback(_require(13759).BeakerIcon, {});
   obj[4] = callback(_require(5322).TableRowArrow, {});
   obj[2] = callback(_require(5315).TableRow, obj);
   const items1 = [callback(_require(5649).TableRowGroup, obj), , , ];

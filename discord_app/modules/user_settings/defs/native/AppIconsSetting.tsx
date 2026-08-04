@@ -15,7 +15,7 @@ createToggle = {
   useTrailing: function useAppIconSettingTrailing() {
     const obj = { dismissibleContent: null, newPremiumStyle: true };
     obj[0] = require(1358) /* DismissibleContent */.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE;
-    return jsx(importDefault(14604), { dismissibleContent: null, newPremiumStyle: true });
+    return jsx(importDefault(14603), { dismissibleContent: null, newPremiumStyle: true });
   },
   usePreNavigationAction: function useAppIconSettingPreNavigationAction() {
     const items = [first(1358).DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE];
@@ -38,7 +38,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APP_ICONS,
   getComponent() {
-    return require(14607).default;
+    return require(14606).default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

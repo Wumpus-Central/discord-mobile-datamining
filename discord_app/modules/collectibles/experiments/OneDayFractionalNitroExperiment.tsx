@@ -7,6 +7,6 @@ export default apexExperiment;
 export const useOneDayFractionalNitroEnabled = function useOneDayFractionalNitroEnabled(product_card) {
   let obj = { location: product_card };
   obj = { location: product_card };
-  const tmp = importDefault(12085)(obj);
-  return apexExperiment.useConfig(obj) && !importDefault(12085)(obj);
+  const tmp = importDefault(12084)(obj);
+  return apexExperiment.useConfig(obj) && !importDefault(12084)(obj);
 };

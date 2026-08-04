@@ -14,33 +14,33 @@ let closure_12;
 let unpackModuleId;
 function getGiftStyleUrl(arg0) {
   if (constants.BOX === arg0) {
-    return importDefault(12486);
+    return importDefault(12485);
   } else if (tmp.CUP === arg0) {
-    return importDefault(12487);
+    return importDefault(12486);
   } else if (tmp.SNOWGLOBE === arg0) {
-    return importDefault(12488);
+    return importDefault(12487);
   } else if (tmp.STANDARD_BOX === arg0) {
-    return importDefault(12489);
+    return importDefault(12488);
   } else if (tmp.COFFEE === arg0) {
-    return importDefault(12490);
+    return importDefault(12489);
   } else if (tmp.CAKE === arg0) {
-    return importDefault(12491);
+    return importDefault(12490);
   } else if (tmp.CHEST === arg0) {
-    return importDefault(12492);
+    return importDefault(12491);
   } else if (tmp.SEASONAL_STANDARD_BOX === arg0) {
-    return importDefault(12493);
+    return importDefault(12492);
   } else if (tmp.SEASONAL_CAKE === arg0) {
-    return importDefault(12494);
+    return importDefault(12493);
   } else if (tmp.SEASONAL_CHEST === arg0) {
-    return importDefault(12495);
+    return importDefault(12494);
   } else if (tmp.SEASONAL_COFFEE === arg0) {
-    return importDefault(12496);
+    return importDefault(12495);
   } else if (tmp.NITROWEEN_STANDARD === arg0) {
     const obj = { uri: null };
-    obj[0] = importDefault(12063);
+    obj[0] = importDefault(12062);
     return obj;
   } else {
-    return importDefault(12489);
+    return importDefault(12488);
   }
 }
 ({ Image: c3, processColor: c4 } = get_ActivityIndicator);

@@ -1,6 +1,6 @@
 import useNativeThemeUpdater from "useNativeThemeUpdater";
 import importAllResult from "HeaderWithBorder";
-import { View } from "module_15732";
+import { View } from "module_15731";
 import fetchFingerprint from "fetchFingerprint";
 import { StackNavigationAnimationSettings as closure_7 } from "StackNavigationAnimationSettings";
 import ME from "ME";
@@ -16,49 +16,49 @@ let metroImportAll;
 let unpackModuleId;
 let require = arg1;
 function getAuthComponent() {
-  return require(14976) /* NavigatorWithCaptchaHook */.default;
+  return require(14975) /* NavigatorWithCaptchaHook */.default;
 }
 function getTabsComponent() {
-  return require(15034).default;
+  return require(15033).default;
 }
 function getChannelComponent() {
   return View;
 }
 function WrappedAutoAnalytics() {
-  return callback2(require(15688) /* componentDidMount */.default, {});
+  return callback2(require(15687) /* componentDidMount */.default, {});
 }
 function getMemberVerificationComponent() {
-  return require(15693) /* Loading */.default;
+  return require(15692) /* Loading */.default;
 }
 function getFriendsNavigatorComponent() {
-  return require(15696) /* RequestsSettingsModalButton */.default;
+  return require(15695) /* RequestsSettingsModalButton */.default;
 }
 function getYouComponent() {
-  return require(15732).default;
+  return require(15731).default;
 }
 function getChannelDetailsComponent() {
-  return require(15755) /* ConnectedCreateThreadHeaderButton */.default;
+  return require(15754) /* ConnectedCreateThreadHeaderButton */.default;
 }
 function getConversationsComponent() {
   return require(8380) /* HeaderWithBorder */.default;
 }
 function getSearchComponent() {
-  return require(15809).default;
+  return require(15808).default;
 }
 function getContextMenuCommandNavigatorComponent() {
-  return require(15812) /* ContextMenuCommandNavigator */.default;
+  return require(15811) /* ContextMenuCommandNavigator */.default;
 }
 function getModalComponent() {
-  return require(15816) /* Modal */.default;
+  return require(15815) /* Modal */.default;
 }
 function getMessageRequestsComponent() {
-  return require(15818) /* MessageRequestsNavigator */.default;
+  return require(15817) /* MessageRequestsNavigator */.default;
 }
 function getSettingsComponent() {
-  return require(15847) /* Settings */.default;
+  return require(15846) /* Settings */.default;
 }
 function getAccountStanding() {
-  return require(15852) /* SuspendedUserSafetyHubPage */.default;
+  return require(15851) /* SuspendedUserSafetyHubPage */.default;
 }
 let c4 = importAllResult;
 ({ AnalyticEvents: metroImportAll, DrawerSourceTypes: c9 } = ME);

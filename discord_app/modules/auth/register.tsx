@@ -250,7 +250,7 @@ function registerFull(giftCodeSKUId) {
   let obj = importDefault(709);
   obj.dispatch({ type: "REGISTER" });
   if (null != birthday) {
-    tmp4(14991)(birthday, constants2.REGISTER);
+    tmp4(14990)(birthday, constants2.REGISTER);
     let tmp4Result = tmp4(698);
     obj = { source: null, action: null };
     obj[0] = constants5.REGISTER;
@@ -322,8 +322,8 @@ function registerFull(giftCodeSKUId) {
     } else {
       let obj = new callback2(4185)(arg0);
       if (null != obj.getFieldErrors("date_of_birth")) {
-        const result = callback3(14992).preventUnderageRegistration(constants3.REGISTER);
-        const obj2 = callback3(14992);
+        const result = callback3(14991).preventUnderageRegistration(constants3.REGISTER);
+        const obj2 = callback3(14991);
       }
       obj = { is_unique_username_registration: true, email_error_reason: null, phone_error_reason: null, password_error_reason: null, username_error_reason: null, global_name_error_reason: null, date_of_birth_error_reason: null, promotional_email_opt_in_error_reason: null, fingerprint_error_reason: null, invite_error_reason: null, gift_code_sku_id_error_reason: null, guild_template_code_error_reason: null, consent_error_reason: null, generic_error_reason: null };
       obj[1] = obj.getFirstFieldErrorMessage("email");

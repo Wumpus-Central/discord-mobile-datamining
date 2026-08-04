@@ -32,15 +32,15 @@ const memoResult = require("noop").memo(function DevToolsGuildTagBadgesModal() {
     options() {
       return { title: "Guild Tag Badges" };
     },
-    component: importDefault(14922)
+    component: importDefault(14921)
   };
   ({ Navigator, Screen } = createNativeStackNavigator);
   obj[1] = <Screen name="DevToolsGuildTagBadges" options={function options() {
     return { title: "Guild Tag Badges" };
-  }} component={importDefault(14922)} />;
+  }} component={importDefault(14921)} />;
   return <Navigator name="DevToolsGuildTagBadges" options={function options() {
     return { title: "Guild Tag Badges" };
-  }} component={importDefault(14922)} />;
+  }} component={importDefault(14921)} />;
 });
 const result = require("createNativeStackNavigator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildTagBadgesModal.tsx");
 

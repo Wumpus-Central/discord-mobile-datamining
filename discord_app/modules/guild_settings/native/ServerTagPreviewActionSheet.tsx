@@ -30,7 +30,7 @@ export default function ServerTagPreviewActionSheet(guildId) {
     obj[7] = function onAdopted(arg0) {
       return callback(table[9]).hideActionSheet();
     };
-    let tmp7 = callback(importDefault(13168), obj);
+    let tmp7 = callback(importDefault(13167), obj);
     let tmp8 = callback;
   } else if (guildProfile.fetchStatus === GuildProfileFetchStatus.FETCHED) {
     obj = { style: null, children: null };

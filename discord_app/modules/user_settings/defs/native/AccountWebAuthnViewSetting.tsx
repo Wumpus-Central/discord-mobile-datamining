@@ -51,7 +51,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.WEBAUTHN_VIEW,
   getComponent() {
-    return require(13874) /* UserSettingsWebAuthn */.default;
+    return require(13873) /* UserSettingsWebAuthn */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

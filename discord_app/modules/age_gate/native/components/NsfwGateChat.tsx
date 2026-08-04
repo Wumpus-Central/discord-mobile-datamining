@@ -27,7 +27,7 @@ export default function NsfwGateChat() {
   obj = { style: tmp.border };
   const items = [callback(closure_3, obj), ];
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(closure_4, { source: importDefault(11934) }), ];
+  const items1 = [callback(closure_4, { source: importDefault(11933) }), ];
   const obj2 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj2[3] = intl.string(require(1236) /* getSystemLocale */.t.W4Qyxr);

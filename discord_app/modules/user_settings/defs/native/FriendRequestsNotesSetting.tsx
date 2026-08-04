@@ -15,7 +15,7 @@ const toggle = createToggle.createToggle({
     return HideFriendRequestNotes.updateSetting(!arg0);
   },
   usePredicate() {
-    return importDefault(13111).useConfig({ location: "FriendRequestsNotesSetting" }).enabled;
+    return importDefault(13110).useConfig({ location: "FriendRequestsNotesSetting" }).enabled;
   }
 });
 const obj = {
@@ -33,7 +33,7 @@ const obj = {
     return HideFriendRequestNotes.updateSetting(!arg0);
   },
   usePredicate() {
-    return importDefault(13111).useConfig({ location: "FriendRequestsNotesSetting" }).enabled;
+    return importDefault(13110).useConfig({ location: "FriendRequestsNotesSetting" }).enabled;
   }
 };
 const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsNotesSetting.tsx");

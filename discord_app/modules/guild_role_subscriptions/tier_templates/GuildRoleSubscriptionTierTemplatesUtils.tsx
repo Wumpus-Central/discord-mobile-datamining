@@ -393,8 +393,8 @@ export const isEligibleForNewBadge = function isEligibleForNewBadge(features) {
     result = features.has(GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
   }
   if (result) {
-    result = require(13148) /* GuildFeatures */.isGuildEligibleForTierTemplates(features.id);
-    const tmpResult = require(13148) /* GuildFeatures */;
+    result = require(13147) /* GuildFeatures */.isGuildEligibleForTierTemplates(features.id);
+    const tmpResult = require(13147) /* GuildFeatures */;
   }
   return result;
 };

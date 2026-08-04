@@ -507,7 +507,7 @@ export const buildApplicationCommands = function buildApplicationCommands(applic
   let closure_0 = arg1;
   return importDefault(12).flatMap(application_commands, (id) => {
     outer1_1(outer1_3[10])(null != id.id, "Missing command id");
-    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: false };
+    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions: 0 };
     obj[4] = closure_0;
     return outer1_12(obj);
   });

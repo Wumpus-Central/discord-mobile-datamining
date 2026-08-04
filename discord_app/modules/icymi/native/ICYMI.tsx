@@ -20,7 +20,7 @@ let closure_6;
 const require = arg1;
 function SettingsButton() {
   let obj = { accessibilityLabel: "button", variant: "tertiary", size: "sm", icon: null, onPress: null };
-  obj[3] = callback(require(14150) /* FiltersHorizontalIcon */.FiltersHorizontalIcon, { size: "sm" });
+  obj[3] = callback(require(14149) /* FiltersHorizontalIcon */.FiltersHorizontalIcon, { size: "sm" });
   obj[4] = function onPress() {
     callback2(paths[16]).itemInteracted("filters_button", "filters_button", "press_info_button");
     const obj = callback2(paths[16]);
@@ -38,7 +38,7 @@ function InfoButton() {
     const obj = callback2(8835);
     callback2(8835).feedPageActioned({ actionParameters: { actionGestureType: "press", actionTargetElement: "info_button", actionIntentType: "open", actionDestinationType: null } });
     const obj2 = callback2(8835);
-    callback(15455).pushICYMIInfoModal({ extendedOnboarding: true });
+    callback(15454).pushICYMIInfoModal({ extendedOnboarding: true });
   };
   return callback(require(7672) /* IconButton */.IconButton, obj);
 }
@@ -383,9 +383,9 @@ let closure_22 = importAllResult.memo((inNestedNavigator) => {
   const obj6 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
   const intl = LeftBackIconWithBadge(1236).intl;
   obj6[1] = intl.string(LeftBackIconWithBadge(1236).t["13/7kX"]);
-  obj6[2] = LeftBackIconWithBadge(15391).goBack;
+  obj6[2] = LeftBackIconWithBadge(15390).goBack;
   if (inNestedNavigator) {
-    LeftBackIconWithBadge = LeftBackIconWithBadge(15393).LeftBackIconWithBadge;
+    LeftBackIconWithBadge = LeftBackIconWithBadge(15392).LeftBackIconWithBadge;
     obj = { includeNotificationsCount: true };
     let tmp4Result = tmp4(LeftBackIconWithBadge, obj);
   } else {
@@ -441,6 +441,6 @@ export const ICYMITab = function ICYMITab(route) {
   items2[1] = closure_14(_require(3997).ThemeContextProvider, obj4);
   obj3.children = items2;
   obj2[0] = closure_16(tmp11, obj3);
-  obj1[0] = closure_14(_require(15443).ICYMIContextProvider, obj2);
-  return closure_14(importDefault(15512), obj1);
+  obj1[0] = closure_14(_require(15442).ICYMIContextProvider, obj2);
+  return closure_14(importDefault(15511), obj1);
 };

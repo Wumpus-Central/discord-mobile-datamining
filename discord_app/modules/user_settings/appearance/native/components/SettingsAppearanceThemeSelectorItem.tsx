@@ -33,7 +33,7 @@ function GradientThemeBackground(arg0) {
   const items1 = [closure_6(importDefault(4814), obj1), ];
   if (isThemeLocked) {
     const obj3 = { source: null, style: null };
-    obj3[0] = importDefault(14411);
+    obj3[0] = importDefault(14410);
     obj3[1] = tmp4.lock;
     isThemeLocked = tmp7(require(1297) /* Button */.Icon, obj3);
   }
@@ -66,7 +66,7 @@ function DefaultThemeBackground(item) {
     obj1[0] = { alignSelf: "center", justifyContent: "center", flex: 1 };
     const obj2 = { fill: null };
     obj2[0] = token2;
-    obj1[1] = tmp9(importDefault(14412), obj2);
+    obj1[1] = tmp9(importDefault(14411), obj2);
     tmp9Result = tmp9(tmp10, obj1);
   }
   obj[1] = tmp9Result;
@@ -95,7 +95,7 @@ function CustomThemeBackground(arg0) {
   const items1 = [closure_6(require(4814) /* getMixedGradientColor */.CustomThemedGradient, obj1), ];
   if (isThemeLocked) {
     const obj3 = { source: null, style: null };
-    obj3[0] = importDefault(14411);
+    obj3[0] = importDefault(14410);
     obj3[1] = tmp4.lock;
     isThemeLocked = tmp7(tmp(1297).Icon, obj3);
   }

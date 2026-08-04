@@ -48,7 +48,7 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
   };
   obj = { style: tmp.info, children: null };
   obj1 = { source: null, style: null };
-  obj1[0] = importDefault(15872);
+  obj1[0] = importDefault(15871);
   obj1[1] = tmp.image;
   const items2 = [callback(closure_4, obj1), , ];
   const obj2 = { style: tmp.titleContainer, children: null };

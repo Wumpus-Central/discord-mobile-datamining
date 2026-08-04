@@ -46,7 +46,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj[1] = hasVideo;
     obj[2] = channel;
-    let tmp6Result = tmp6(channel(15141).ConnectedUserLimit, obj);
+    let tmp6Result = tmp6(channel(15140).ConnectedUserLimit, obj);
   } else {
     const obj1 = { channel: null };
     obj1[0] = channel;
@@ -55,7 +55,7 @@ function LimitAndDurationInfo(channel) {
   return tmp6Result;
 }
 function DurationInfo(channel) {
-  let obj = require(15233) /* useStartTime */;
+  let obj = require(15232) /* useStartTime */;
   const startTime = obj.useStartTime(channel.channel);
   let tmp5 = null;
   if (null != startTime) {
@@ -64,7 +64,7 @@ function DurationInfo(channel) {
     obj[0] = startTime;
     obj[0] = obj;
     obj[1] = tmp.activeTimestamp;
-    tmp5 = jsx(require(12196) /* ActiveTimestamp */.ActiveTimestamp, { start: null });
+    tmp5 = jsx(require(12195) /* ActiveTimestamp */.ActiveTimestamp, { start: null });
   }
   return tmp5;
 }
@@ -93,7 +93,7 @@ export default function ChannelInfo(channel) {
   const tmp5 = importDefault(11358)(channel);
   let obj1 = channel(8214);
   const postsWithUnreadsCount = obj1.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
-  if (importDefault(15228)({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
+  if (importDefault(15227)({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     obj = { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null };
     obj[0] = mentionsCount;
     obj[1] = stateFromStoresObject.isMentionLowImportance;
@@ -104,9 +104,9 @@ export default function ChannelInfo(channel) {
     }
     obj[3] = tmp18;
     obj[4] = muted;
-    let tmp11Result = jsx(tmp4(15229), { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null });
+    let tmp11Result = jsx(tmp4(15228), { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null });
     const tmp16 = jsx;
-    const tmp4Result = tmp4(15229);
+    const tmp4Result = tmp4(15228);
   } else {
     if (null != isChannelCollapsed) {
       if (isChannelCollapsed) {
@@ -125,12 +125,12 @@ export default function ChannelInfo(channel) {
     }
     if (null != enableActivities) {
       if (enableActivities) {
-        tmpResult = tmp(15231);
+        tmpResult = tmp(15230);
         if (tmpResult.showChannelItemEmbeddedActivities(tmp5)) {
           obj = { embeddedApps: null, muted: null };
           obj[0] = tmp5;
           obj[1] = muted;
-          tmp11Result = jsx(tmp4(15232), { embeddedApps: null, muted: null });
+          tmp11Result = jsx(tmp4(15231), { embeddedApps: null, muted: null });
         }
       }
     }
@@ -139,7 +139,7 @@ export default function ChannelInfo(channel) {
         if (isSubscriptionGated) {
           obj1 = { locked: null };
           obj1[0] = needSubscriptionToAccess;
-          tmp11Result = jsx(tmp4(15140), { locked: null });
+          tmp11Result = jsx(tmp4(15139), { locked: null });
         }
       }
     }

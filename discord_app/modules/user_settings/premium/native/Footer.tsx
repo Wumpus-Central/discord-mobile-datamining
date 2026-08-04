@@ -14,7 +14,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/p
 export default function Footer(showSubscribeButton) {
   showSubscribeButton = showSubscribeButton.showSubscribeButton;
   const tmp = callback2();
-  importDefault(12671)(importDefault(5630).PREMIUM_MARKETING_FOOTER);
+  importDefault(12670)(importDefault(5630).PREMIUM_MARKETING_FOOTER);
   let obj = { style: items, children: null };
   items = [tmp.container, showSubscribeButton.style];
   let tmp8Result = showSubscribeButton;
@@ -38,12 +38,12 @@ export default function Footer(showSubscribeButton) {
   const items2 = [tmp8Result, ];
   let easterEggSpacing = null;
   const tmp14 = callback;
-  const tmp4 = importDefault(12671);
+  const tmp4 = importDefault(12670);
   if (!showSubscribeButton) {
     easterEggSpacing = tmp.easterEggSpacing;
   }
   const tmp2Result = importDefault(5236);
-  items2[1] = tmp14(tmp2Result, { style: easterEggSpacing, source: importDefault(12672) });
+  items2[1] = tmp14(tmp2Result, { style: easterEggSpacing, source: importDefault(12671) });
   obj[1] = items2;
   return closure_6(View, obj);
 };

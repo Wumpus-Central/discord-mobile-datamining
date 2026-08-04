@@ -27,7 +27,7 @@ export default function ChannelBadge(arg0) {
       obj = { mentionsCount: null, isMentionLowImportance: null };
       obj[0] = mentionCount;
       obj[1] = isMentionLowImportance;
-      obj[1] = jsx(importDefault(15230), { mentionsCount: null, isMentionLowImportance: null });
+      obj[1] = jsx(importDefault(15229), { mentionsCount: null, isMentionLowImportance: null });
       let tmp5 = <View mentionsCount={null} isMentionLowImportance={null} />;
     }
     return tmp5;

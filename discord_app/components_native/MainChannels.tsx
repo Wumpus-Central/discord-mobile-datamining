@@ -90,14 +90,14 @@ function LeftPanelHomeDrawerContainer() {
   let gesture;
   let homeDrawerContext;
   let panelStyles;
-  let obj = require(15054) /* context */;
+  let obj = require(15053) /* context */;
   const homeGesture = obj.useHomeGesture();
   ({ gesture, panelStyles, homeDrawerContext } = homeGesture);
   obj = { value: homeDrawerContext, children: null };
   obj = { gesture, children: null };
   obj[1] = callback2(LeftPanelContent, { panelStyles });
-  obj[1] = callback2(require(15358) /* NonCollapsableGestureDetector */.NonCollapsableGestureDetector, obj);
-  return callback2(require(15054) /* context */.HomeDrawerStateContext.Provider, obj);
+  obj[1] = callback2(require(15357) /* NonCollapsableGestureDetector */.NonCollapsableGestureDetector, obj);
+  return callback2(require(15053) /* context */.HomeDrawerStateContext.Provider, obj);
 }
 let c4 = importAllResult;
 ({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);

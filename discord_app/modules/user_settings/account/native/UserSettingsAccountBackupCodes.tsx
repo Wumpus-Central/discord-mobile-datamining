@@ -103,7 +103,7 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
     obj4[0] = tmp10(tmp3(4281).Text, obj5);
     obj4[1] = function onPress() {
       const verificationKey = store.getVerificationKey();
-      const result = callback(13895).confirmViewBackupCodes(verificationKey, true);
+      const result = callback(13894).confirmViewBackupCodes(verificationKey, true);
     };
     obj3[1] = tmp10(tmp3(5315).TableRow, obj4);
     tmp10Result1 = tmp10(tmp3(5649).TableRowGroup, obj3);

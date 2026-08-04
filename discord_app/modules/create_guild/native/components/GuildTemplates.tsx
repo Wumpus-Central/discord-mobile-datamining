@@ -90,7 +90,7 @@ function GuildTemplatesItem(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;
   const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
   const obj = { Icon: null, message: null, onPress: null };
-  obj[0] = guildTemplate(11979).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id];
+  obj[0] = guildTemplate(11978).GUILD_TEMPLATE_ICON_COMPONENTS[guildTemplate.id];
   obj[1] = guildTemplate.label;
   obj[2] = function onPress() {
     return onGuildTemplatePress(guildTemplate);

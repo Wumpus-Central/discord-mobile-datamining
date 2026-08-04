@@ -70,7 +70,7 @@ prototype["componentDidMount"] = function componentDidMount() {
     const merged1 = Object.assign(obj3);
     obj4.postable_channels = postableChannelCount;
     obj4.viewing_all_channels = !updateUserGuildSettingsInternal.isOptInEnabled(selectedGuildId);
-    let obj5 = require(15689) /* collectGuildThemeAnalyticsMetadata */;
+    let obj5 = require(15688) /* collectGuildThemeAnalyticsMetadata */;
     const merged2 = Object.assign(obj5.collectGuildThemeAnalyticsMetadata(selectedGuildId));
     self._trackWithMetadata(constants.GUILD_VIEWED, obj4);
     obj5 = { guild_id: null };
@@ -224,7 +224,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
   }
   if (!tmp41) {
     obj2 = {};
-    let obj8 = require(15690) /* getChannelOpenedRouteTrackingProps */;
+    let obj8 = require(15689) /* getChannelOpenedRouteTrackingProps */;
     const merged7 = Object.assign(obj8.getChannelOpenedRouteTrackingProps(selectedChannelId));
     let obj9 = require(4479) /* collectGuildAnalyticsMetadata */;
     const merged8 = Object.assign(obj9.getChannelOpenedMetadata(selectedChannelId));
@@ -265,9 +265,9 @@ prototype["componentDidUpdate"] = function componentDidUpdate(voiceChannelId) {
       const merged9 = Object.assign(obj7);
       obj8.postable_channels = postableChannelCount;
       obj8.viewing_all_channels = !updateUserGuildSettingsInternal.isOptInEnabled(selectedGuildId);
-      const merged10 = Object.assign(require(15689) /* collectGuildThemeAnalyticsMetadata */.collectGuildThemeAnalyticsMetadata(selectedGuildId));
+      const merged10 = Object.assign(require(15688) /* collectGuildThemeAnalyticsMetadata */.collectGuildThemeAnalyticsMetadata(selectedGuildId));
       self._trackWithMetadata(constants.GUILD_VIEWED, obj8);
-      const obj19 = require(15689) /* collectGuildThemeAnalyticsMetadata */;
+      const obj19 = require(15688) /* collectGuildThemeAnalyticsMetadata */;
       obj9 = { guild_id: null };
       obj9[0] = selectedGuildId;
       require(6835) /* isClickstreamEnabled */.trackClickstream(constants.GUILD_VIEWED_CLICKSTREAM, obj9);

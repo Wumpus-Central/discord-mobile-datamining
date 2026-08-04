@@ -24,7 +24,7 @@ export default require("noop").memo(function MessagesItemHappeningNow(listRef) {
   let obj = require(3989) /* map */;
   obj = { backgroundColor: null, children: null };
   obj = { style: callback(closure_4 + obj.useToken(importDefault(712).modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: null };
-  obj[2] = jsx(importDefault(15087), { cards: set, listRef: listRef.listRef });
+  obj[2] = jsx(importDefault(15086), { cards: set, listRef: listRef.listRef });
   obj[1] = <View style={callback(closure_4 + obj.useToken(importDefault(712).modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container} collapsable={false}>{null}</View>;
   return jsx(require(8104) /* useCutoutBackgroundColor */.CutoutBackgroundProvider, { style: callback(closure_4 + obj.useToken(importDefault(712).modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: null });
 });

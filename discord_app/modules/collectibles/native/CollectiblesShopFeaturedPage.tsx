@@ -15,7 +15,7 @@ export default function _default(shopBlock) {
       let obj = { block: null, screen: null };
       obj[0] = shopBlock;
       obj[1] = constants.FEATURED_PAGE;
-      let tmp6 = jsx(importDefault(14732), { block: null, screen: null });
+      let tmp6 = jsx(importDefault(14731), { block: null, screen: null });
     }
     return tmp6;
   }

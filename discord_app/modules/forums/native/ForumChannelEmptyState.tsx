@@ -24,9 +24,9 @@ const memoResult = require("noop").memo((topViewHeight) => {
   items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
   let obj2 = require(4131) /* AccessibilityAnnouncer */;
   if (obj2.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = tmp4(12035);
+    let tmp4Result = tmp4(12034);
   } else {
-    tmp4Result = tmp4(12036);
+    tmp4Result = tmp4(12035);
   }
   obj = { source: tmp4Result, style: tmp.image };
   const items1 = [closure_5(closure_4, obj), , ];

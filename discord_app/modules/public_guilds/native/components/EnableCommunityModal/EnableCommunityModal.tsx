@@ -3,7 +3,7 @@ import { jsx } from "jsxProd";
 
 const require = arg1;
 function onModalClose() {
-  importDefault(16622).close();
+  importDefault(16621).close();
 }
 function HeaderBackButton(arg0) {
   require(5244) /* useNavigatorBackPressHandler */.useNavigatorBackPressHandler(() => {
@@ -14,7 +14,7 @@ function HeaderBackButton(arg0) {
   const intl = require(1236) /* getSystemLocale */.intl;
   return require(5238) /* HeaderBackImage */.getHeaderTextButton(intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]), onModalClose)(arg0);
 }
-const result = require("module_16622").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
+const result = require("module_16621").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
 
 export default function EnableCommunityModal() {
   const memo = React.useMemo(() => {
@@ -33,7 +33,16 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return callback3(callback2(16625), {});
+        return callback3(callback2(16624), {});
+      }
+    };
+    obj = {
+      headerRight,
+      headerTitle() {
+        return null;
+      },
+      render() {
+        return callback3(callback2(16636), {});
       }
     };
     obj = {
@@ -45,19 +54,10 @@ export default function EnableCommunityModal() {
         return callback3(callback2(16637), {});
       }
     };
-    obj = {
-      headerRight,
-      headerTitle() {
-        return null;
-      },
-      render() {
-        return callback3(callback2(16638), {});
-      }
-    };
     return { [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_1]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_2]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_3]: obj };
   }, []);
   let obj = { screens: memo, initialRouteName: null, headerBackTitle: null };
-  obj[1] = require(16624) /* EnableCommunityModalSteps */.EnableCommunityModalSteps.STEP_1;
+  obj[1] = require(16623) /* EnableCommunityModalSteps */.EnableCommunityModalSteps.STEP_1;
   let intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.string(require(1236) /* getSystemLocale */.t["13/7kX"]);
   return jsx(require(5665) /* NavigationStack */.Navigator, { screens: memo, initialRouteName: null, headerBackTitle: null });

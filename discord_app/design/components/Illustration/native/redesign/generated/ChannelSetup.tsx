@@ -9,13 +9,13 @@ export const getChannelSetupSource = function getChannelSetupSource(theme) {
   let obj = require(7544) /* getIllustrationSource */;
   obj = {
     dark() {
-      return callback(16631);
+      return callback(16630);
     },
     darker() {
-      return callback(16632);
+      return callback(16631);
     },
     light() {
-      return callback(16633);
+      return callback(16632);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -24,13 +24,13 @@ export const useChannelSetupSource = function useChannelSetupSource() {
   let obj = require(4131) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(16631);
+      return callback(16630);
     },
     darker() {
-      return callback(16632);
+      return callback(16631);
     },
     light() {
-      return callback(16633);
+      return callback(16632);
     }
   };
   return require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -39,13 +39,13 @@ export const ChannelSetup = function ChannelSetup(arg0) {
   let obj = require(4131) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(16631);
+      return callback(16630);
     },
     darker() {
-      return callback(16632);
+      return callback(16631);
     },
     light() {
-      return callback(16633);
+      return callback(16632);
     }
   };
   obj = {};

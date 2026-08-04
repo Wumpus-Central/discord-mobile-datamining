@@ -18,7 +18,7 @@ function SharedUser(user) {
   if (tmp6) {
     erroredAvatar = tmp.erroredAvatar;
   }
-  obj = { style: items, size: tmp5(1297).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "add" };
+  obj = { style: items, size: tmp5(1297).AvatarSizes.REFRESH_MEDIUM_32, user, guildId: "Array" };
   items[1] = erroredAvatar;
   const items1 = [closure_5(user(1297).Avatar, obj), , ];
   if (tmp6) {

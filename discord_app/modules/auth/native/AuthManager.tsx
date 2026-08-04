@@ -15,15 +15,15 @@ let c11 = null;
 class AuthManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f110841 = applyArgumentsResult;
+    f110837 = applyArgumentsResult;
     applyArgumentsResult.handleRegister = function handleRegister() {
       const REGISTER = constants2.REGISTER;
     };
     applyArgumentsResult.handleLogin = function handleLogin() {
       const LOGIN = constants2.LOGIN;
     };
-    f110841 = undefined;
-    f110841 = NewUserTypes((arg0) => {
+    f110837 = undefined;
+    f110837 = NewUserTypes((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;
@@ -111,10 +111,10 @@ class AuthManager extends tmp3 {
     };
     applyArgumentsResult.handleRegisterComplete = function handleRegisterComplete() {
       if (!obj.hasDeferredInvite()) {
-        let tmpResult = tmp(12014);
+        let tmpResult = tmp(12013);
         tmpResult.setNewUser(constants.ORGANIC_REGISTERED);
       }
-      tmpResult = tmp(11972);
+      tmpResult = tmp(11971);
       tmpResult.startOnboarding();
     };
     applyArgumentsResult.handleLoginWithConnection = function handleLoginWithConnection() {

@@ -30,7 +30,7 @@ function GuildPowerupsCoachmarkHost(arg0) {
   let popout;
   let targetRef;
   ({ targetRef, guildId, popout } = arg0);
-  importDefault(15179)(targetRef, guildId, popout);
+  importDefault(15178)(targetRef, guildId, popout);
   return null;
 }
 function GuildPowerupsCoachmark(arg0) {
@@ -38,7 +38,7 @@ function GuildPowerupsCoachmark(arg0) {
   let popout;
   let targetRef;
   ({ targetRef, guildId, popout } = arg0);
-  const context = React.useContext(require(15043) /* SidebarCoachmarkOverlayLayer */.SidebarCoachmarkOverlayContext);
+  const context = React.useContext(require(15042) /* SidebarCoachmarkOverlayLayer */.SidebarCoachmarkOverlayContext);
   const tmp5 = callback(GuildPowerupsCoachmarkHost, { targetRef, guildId, popout });
   let tmp4Result = tmp5;
   if (null != context) {
@@ -118,7 +118,7 @@ export default function GuildPowerupsChannelRow(guildId) {
   obj2[1] = DEFAULT;
   obj1[7] = closure_5(tmp14(11665).BaseChannelName, obj2);
   const obj3 = { mode: DEFAULT, IconComponent: null };
-  obj3[1] = tmp14(15219).BoostTier2Icon;
+  obj3[1] = tmp14(15218).BoostTier2Icon;
   obj1[8] = closure_5(tmp14(11665).BaseChannelIcon, obj3);
   if (tmp6Result.showNewBadgeOnRow) {
     let tmp16Result = tmp16(tmp14(11575).NewBadge, {});

@@ -20,7 +20,7 @@ export default function MessageRequestsScreen(route) {
   if (isMessageRequestRestrictedViewer) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp5Result = tmp5(tmp7(15840), obj);
+    let tmp5Result = tmp5(tmp7(15839), obj);
   } else {
     const obj1 = { guildId: null, channelId: null, chatInputRef: null, HACK_fixModalInteraction: true, screenIndex: "message-request" };
     obj1[0] = tmp6;

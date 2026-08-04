@@ -1,6 +1,6 @@
-import module_15669 from "module_15669";
+import module_15668 from "module_15668";
 
-let closure_0 = module_15669.newStemmer("english");
+let closure_0 = module_15668.newStemmer("english");
 const result = require("set").fileFinishedImporting("lib/search/snowballStemmer.tsx");
 
 export const snowballStem = function snowballStem(arg0) {

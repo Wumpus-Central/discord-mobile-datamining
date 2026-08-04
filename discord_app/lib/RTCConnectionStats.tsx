@@ -117,7 +117,7 @@ prototype["getStateDurations"] = function getStateDurations(nowResult) {
   if (0 === this.history.length) {
     return [];
   } else {
-    let arr = importDefault(12977)(self.history, (state, startTime) => ({ state: state.state, durationMs: startTime.startTime - state.startTime }));
+    let arr = importDefault(12976)(self.history, (state, startTime) => ({ state: state.state, durationMs: startTime.startTime - state.startTime }));
     let obj = importDefault(12);
     const lastResult = obj.last(self.history);
     obj = { state: null, durationMs: null };

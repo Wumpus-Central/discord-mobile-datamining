@@ -53,11 +53,11 @@ export const ShopCategory = function ShopCategory(category) {
   let obj = category(1480);
   dependencyMap = obj.useNavigation();
   unpublishedAt = category.unpublishedAt;
-  let obj1 = category(14222);
+  let obj1 = category(14221);
   obj = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
   filteredAndSortedProducts = obj1.useFilteredAndSortedProducts(obj);
   const mobileBannerUrl = category.mobileBannerUrl;
-  let obj3 = category(14728);
+  let obj3 = category(14727);
   const collectiblesShopDeepLinkProps = obj3.useCollectiblesShopDeepLinkProps({ products: filteredAndSortedProducts });
   ({ productIndex, initialProductSkuId } = collectiblesShopDeepLinkProps);
   initialVariantIndex = collectiblesShopDeepLinkProps.initialVariantIndex;
@@ -71,12 +71,12 @@ export const ShopCategory = function ShopCategory(category) {
       current.scrollToOffset({ offset: 0, animated: false });
     }
   });
-  let obj6 = category(14730);
+  let obj6 = category(14729);
   let tmp9 = null != productIndex;
   if (tmp9) {
     tmp9 = productIndex > 0;
   }
-  obj = { shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: tmp4(14730).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId };
+  obj = { shouldScroll: tmp9, initialScrollIndex: productIndex, flashListRef: ref, afterMs: tmp4(14729).INITIAL_SCROLL_DELAY_MS, resetKey: category.storeListingId };
   const scrollToInitialIndexOnce = obj6.useScrollToInitialIndexOnce(obj);
   collectiblesAnalyticsContext = category(9265).useCollectiblesAnalyticsContext();
   const items1 = [initialProductSkuId, initialVariantIndex, filteredAndSortedProducts, analyticsLocations, collectiblesAnalyticsContext];

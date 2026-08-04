@@ -22,7 +22,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.IGNORED_USERS,
   getComponent() {
-    return require(13959) /* IgnoredUsersList */.default;
+    return require(13958) /* IgnoredUsersList */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

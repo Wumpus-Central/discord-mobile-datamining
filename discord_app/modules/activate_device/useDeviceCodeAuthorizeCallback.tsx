@@ -46,7 +46,7 @@ function _createTwoWayLink() {
               let url;
               let c4;
               state = undefined;
-              const result = callback(13132).clientIdToActivateDevicePlatform(callback);
+              const result = callback(13131).clientIdToActivateDevicePlatform(callback);
               dependencyMap = result;
               if (null == result) {
                 c9 = 1;
@@ -67,7 +67,7 @@ function _createTwoWayLink() {
                 obj3[0] = obj10.authorize(result, obj2);
                 return obj3;
               }
-              const obj20 = callback(13132);
+              const obj20 = callback(13131);
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {

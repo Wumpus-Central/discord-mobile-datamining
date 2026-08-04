@@ -4,7 +4,7 @@ import set from "Storage";
 
 const require = arg1;
 let closure_3 = ["_state", "_version"];
-let closure_6 = { _state: "Array", _version: "HermesInternal" };
+let closure_6 = { _state: "body", _version: "useStateFromStores" };
 let c7 = null;
 let PersistedStore;
 class PersistedStore extends r10016 {

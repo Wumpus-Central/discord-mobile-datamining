@@ -5,8 +5,8 @@ const result = require("initialize").fileFinishedImporting("modules/guild_role_s
 
 export default function useSubscriptionRole(arg0, editStateId) {
   const _require = arg0;
-  const dependencyMap = _require(14349).useSubscriptionListing(editStateId);
-  const obj = _require(14349);
+  const dependencyMap = _require(14348).useSubscriptionListing(editStateId);
+  const obj = _require(14348);
   const items = [createGuildRoleRecordFromRust];
   return _require(589).useStateFromStores(items, () => {
     let role;

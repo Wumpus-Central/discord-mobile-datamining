@@ -64,7 +64,7 @@ function QuestProgressBottomSheet(quest) {
   const formatToPlainStringResult = intl.formatToPlainString(quest(1236).t.EAYZAr, obj);
   const tmp11 = QuestsExperimentLocations;
   obj1 = { quest, questContent: tmp(5131).QuestContent.RUNNING_ACTIVITY, sourceQuestContent: tmp(5131).QuestContent.RUNNING_ACTIVITY };
-  const questRewardClaimHandler = quest(14265).useQuestRewardClaimHandler(obj1);
+  const questRewardClaimHandler = quest(14264).useQuestRewardClaimHandler(obj1);
   ({ isClaiming, claim } = questRewardClaimHandler);
   const items = [claim];
   const items1 = [quest.id];
@@ -185,10 +185,10 @@ function QuestProgressBottomSheet(quest) {
   obj9[4] = intl2.string(quest(1236).t.RDE0Sc);
   const items5 = [callback2(quest(7672).IconButton, obj9), ];
   const obj10 = { quest, showShareLink: true, location: tmp11.QUEST_ACTIVITY_BOTTOM_SHEET, sourceQuestContent: null, children: null };
-  const tmpResult1 = quest(14265);
+  const tmpResult1 = quest(14264);
   obj10[3] = quest(5131).QuestContent.RUNNING_ACTIVITY;
   obj10[4] = contextMenuButton;
-  items5[1] = callback2(claim(14295), obj10);
+  items5[1] = callback2(claim(14294), obj10);
   obj8[1] = items5;
   items3[3] = closure_11(closure_5, obj8);
   obj2[1] = items3;

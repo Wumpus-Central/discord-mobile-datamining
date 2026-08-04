@@ -1,6 +1,6 @@
 import identity from "identity";
 
-let closure_2 = Object.freeze({ name: "", emojiId: "call", emojiName: "useCallback", description: "then", refId: "accessibilityRole" });
+let closure_2 = Object.freeze({ name: "", emojiId: "call", emojiName: "r", description: "title", refId: "accessibilityRole" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
   let closure_0 = arg0;
   const obj = {};

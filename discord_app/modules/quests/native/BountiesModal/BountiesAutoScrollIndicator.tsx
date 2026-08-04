@@ -58,7 +58,7 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
   const token = obj.useToken(importDefault(712).colors.WHITE);
   obj = { size: "md", color: null };
   obj[1] = importDefault(712).colors.WHITE;
-  const tmp6 = callback(_require(14203).ArrowSmallUpIcon, obj);
+  const tmp6 = callback(_require(14202).ArrowSmallUpIcon, obj);
   _require = tmp6;
   obj = { style: tmp.root, children: null };
   const obj1 = { variant: "text-md/semibold", color: "text-default", children: null };
@@ -73,7 +73,7 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
     obj3[8] = function children() {
       return c0;
     };
-    let tmp5Result = tmp5(_require(14205).AnimatedCircularProgress, obj3);
+    let tmp5Result = tmp5(_require(14204).AnimatedCircularProgress, obj3);
   } else {
     const obj4 = { children: null };
     obj4[0] = tmp6;

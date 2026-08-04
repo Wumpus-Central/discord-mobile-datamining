@@ -8,7 +8,7 @@ function getConsoleInfo(type) {
   type = type.type;
   if (PlatformTypes.XBOX === type) {
     let obj = { icon: null, color: null, connectLabel: null, connectSublabel: null };
-    obj[0] = importDefault(12126)(type.type);
+    obj[0] = importDefault(12125)(type.type);
     obj[1] = importDefault(712).unsafe_rawColors.PLATFORM_XBOX;
     const intl3 = require(1236) /* getSystemLocale */.intl;
     obj[2] = intl3.string(require(1236) /* getSystemLocale */.t.QN7HXV);
@@ -17,7 +17,7 @@ function getConsoleInfo(type) {
     return obj;
   } else if (tmp.PLAYSTATION === type) {
     obj = { icon: null, color: null, connectLabel: null, connectSublabel: null };
-    obj[0] = importDefault(12126)(type.type);
+    obj[0] = importDefault(12125)(type.type);
     obj[1] = importDefault(712).unsafe_rawColors.PLATFORM_PLAYSTATION;
     const intl = require(1236) /* getSystemLocale */.intl;
     obj[2] = intl.string(require(1236) /* getSystemLocale */.t["3qLlTS"]);

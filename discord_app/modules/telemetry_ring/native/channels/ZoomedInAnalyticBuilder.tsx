@@ -529,7 +529,7 @@ let closure_5 = {
   [AnalyticEvents.WEBSOCKET_MESSAGE_RECEIVED]: (data) => {
     data = data.data;
     if (null == data) {
-      let obj = { message_identity: "unknown", socket_kind: "disabled" };
+      let obj = { message_identity: "unknown", socket_kind: "call" };
     } else {
       const url = data.url;
       let tmp61 = null;
@@ -648,7 +648,7 @@ let closure_5 = {
             }
             let tmp41 = null;
             if (null != tmp37) {
-              const tmp44 = require(12813) /* Opcode */.Opcode[tmp37];
+              const tmp44 = require(12812) /* Opcode */.Opcode[tmp37];
               let tmp45 = null;
               if (typeof tmp44 === "string") {
                 tmp45 = tmp44;
@@ -737,7 +737,7 @@ let closure_5 = {
           }
           let tmp26 = null;
           if (null != tmp22) {
-            const tmp29 = require(12981) /* noop */.RTCSocketOpcode[tmp22];
+            const tmp29 = require(12980) /* noop */.RTCSocketOpcode[tmp22];
             let tmp30 = null;
             if (typeof tmp29 === "string") {
               tmp30 = tmp29;

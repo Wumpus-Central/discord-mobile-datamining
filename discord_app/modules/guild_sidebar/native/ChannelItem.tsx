@@ -72,7 +72,7 @@ function ChannelIcon(arg0) {
       tmp5 = importDefault;
     }
     if (tmp2) {
-      let tmp12 = importDefault(15139);
+      let tmp12 = importDefault(15138);
       let BookCheckIcon = require(4785) /* BookCheckIcon */.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -122,7 +122,7 @@ function DMChannelIcon(userId) {
   const items3 = [userId];
   const stateFromStoresObject = userId(589).useStateFromStoresObject(items2, () => ({ status: outer1_6.getStatus(userId), isMobileOnline: outer1_6.isMobileOnline(userId), isVROnline: outer1_6.isVROnline(userId) }), items3);
   ({ status, isMobileOnline, isVROnline } = stateFromStoresObject);
-  obj = { user: stateFromStores, guildId: "o", size: "relevance", style: "desc", status: "timestamp", isMobileOnline: "asc", isVROnline: "3", statusStyle: "channel-row" };
+  obj = { user: stateFromStores, guildId: "o", size: "moyai", style: "moai", status: "statue_of_liberty", isMobileOnline: "tokyo_tower", isVROnline: "icon", statusStyle: "unicodeEmoji" };
   obj[2] = userId(1297).AvatarSizes.XSMALL_20;
   obj[3] = tmp.dmAvatar;
   obj[4] = status;

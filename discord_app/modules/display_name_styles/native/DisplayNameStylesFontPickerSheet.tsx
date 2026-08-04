@@ -48,9 +48,9 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   let tmp = createCacheKey();
   importDefault = tmp;
   let obj = onSelectFont(7325);
-  let obj1 = onSelectFont(14473);
+  let obj1 = onSelectFont(14472);
   const visibleFontOrder = obj1.useVisibleFontOrder();
-  let obj2 = onSelectFont(14475);
+  let obj2 = onSelectFont(14474);
   const displayNameStylesNewFonts = obj2.useDisplayNameStylesNewFonts(visibleFontOrder);
   ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
   const tmp5 = callback(first.useState(selectedFontId), 2);

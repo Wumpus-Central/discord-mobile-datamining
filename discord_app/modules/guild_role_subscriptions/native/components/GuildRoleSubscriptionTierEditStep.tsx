@@ -18,7 +18,7 @@ function Header(arg0) {
   const items = [callback(require(4281) /* Text */.Text, obj), , ];
   obj = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
   items[1] = callback(require(4281) /* Text */.Text, obj);
-  items[2] = callback(importDefault(14354), { style: tmp.separator });
+  items[2] = callback(importDefault(14353), { style: tmp.separator });
   obj[2] = items;
   return callback2(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
 }

@@ -122,7 +122,7 @@ export default function GameProfileSimilarGames(trackAction) {
   const GameProfileSimilarGamesMobileExperiment = trackAction(9226).GameProfileSimilarGamesMobileExperiment;
   const config = GameProfileSimilarGamesMobileExperiment.useConfig({ location: "GameProfileSimilarGames" });
   ({ enabled, dense } = config);
-  const tmp6 = importDefault(12090)(trackAction.gameId, enabled);
+  const tmp6 = importDefault(12089)(trackAction.gameId, enabled);
   const similarGames = tmp6.similarGames;
   let num = 3;
   if (dense) {

@@ -132,7 +132,7 @@ export const renderChannelItem = function renderChannelItem(unread) {
   }
   let obj1 = require(9711) /* getLayoutStyles */;
   const layoutStyles = obj1.getLayoutStyles(layout);
-  let obj2 = require(15431) /* renderChannelWrapper */;
+  let obj2 = require(15430) /* renderChannelWrapper */;
   const children = [unreadBadge, , , ];
   obj = { style: null, children: null };
   obj = { position: "relative", borderRadius: importDefault(712).radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
@@ -152,7 +152,7 @@ export const renderChannelItem = function renderChannelItem(unread) {
   }
   obj[1] = tmp10Result;
   children[1] = closure_8(View, obj);
-  let tmp5Result = tmp5(15618);
+  let tmp5Result = tmp5(15617);
   const obj3 = { layout, name: null, subtitle: null, unread: null, resolvedUnreadSetting: null, muted: null, lastMessageTimestampString: null, channel: null, locked: null, connected: null, live: null, mentionCount: null, mentionBadge: null, isSubscriptionGated: null, needSubscriptionToAccess: null };
   if (channelName == null) {
     tmp5Result = tmp5(4475);

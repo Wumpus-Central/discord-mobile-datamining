@@ -11,7 +11,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
   getComponent() {
-    return require(13927).default;
+    return require(13926).default;
   }
 };
 const route = createToggle.createRoute(obj);

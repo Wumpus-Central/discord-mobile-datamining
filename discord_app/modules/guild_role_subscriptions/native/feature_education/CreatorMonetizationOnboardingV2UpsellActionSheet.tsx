@@ -34,7 +34,7 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   obj1[4] = intl2.string(require(1236) /* getSystemLocale */.t.kUUFbG);
   items[1] = callback(require(4281) /* Text */.Text, obj1);
   const obj2 = { style: tmp.image, resizeMode: "contain", source: null };
-  obj2[2] = importDefault(15253);
+  obj2[2] = importDefault(15252);
   items[2] = callback(importDefault(5236), obj2);
   const obj3 = {
     onPress() {

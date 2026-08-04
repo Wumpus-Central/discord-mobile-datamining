@@ -47,7 +47,7 @@ const memoResult1 = importAllResult.memo((channelId) => {
   let placeholder;
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
-  let obj = channelId(12447);
+  let obj = channelId(12446);
   const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
   const tmp = callback();
   const items = [initialize];

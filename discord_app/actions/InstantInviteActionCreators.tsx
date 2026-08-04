@@ -1997,8 +1997,8 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(12576).onOpenHubInvite(closure_0);
-        const obj6 = obj(12576);
+        obj(12575).onOpenHubInvite(closure_0);
+        const obj6 = obj(12575);
       }
     }
     let num = closure_0.flags;
@@ -2013,10 +2013,10 @@ export default {
     if (null != guild) {
       if (!hasFlagResult) {
         if (closure_0.new_member) {
-          tmp6Result = tmp6(12577);
+          tmp6Result = tmp6(12576);
           if (tmp6Result.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(12577).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result1 = tmp6(12577);
+            const result1 = tmp6(12576).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result1 = tmp6(12576);
           }
         }
       }
@@ -2470,7 +2470,7 @@ export default {
           const _HermesInternal = HermesInternal;
           let combined = "discord://" + substr;
         }
-        tmp7Result = tmp7(12581);
+        tmp7Result = tmp7(12580);
         tmp7Result.launch(combined, (arg0) => {
           let obj = outer1_1(outer1_3[39]);
           if (arg0) {
@@ -2485,15 +2485,15 @@ export default {
       }
     }
     if (null != baseCode) {
-      let inviteDynamicLinkTemplate = _require(12578).getInviteDynamicLinkTemplate(baseCode);
+      let inviteDynamicLinkTemplate = _require(12577).getInviteDynamicLinkTemplate(baseCode);
       let tmp20 = _require;
-      const obj5 = _require(12578);
+      const obj5 = _require(12577);
     } else {
-      inviteDynamicLinkTemplate = _require(12578).getDefaultDynamicLinkTemplate();
+      inviteDynamicLinkTemplate = _require(12577).getDefaultDynamicLinkTemplate();
       tmp20 = _require;
-      const obj4 = _require(12578);
+      const obj4 = _require(12577);
     }
-    let tmp20Result = tmp20(12579);
+    let tmp20Result = tmp20(12578);
     const attemptId = tmp20Result.generateAttemptId();
     let str7 = "friend_invite";
     if (2 !== arg4) {
@@ -2508,8 +2508,8 @@ export default {
     obj1[6] = targetChannelId;
     obj1[7] = targetMessageId;
     obj1[8] = "https://discord.com/api/download/mobile?invite_code=" + baseCode;
-    combined = importDefault(12579)(inviteDynamicLinkTemplate, obj1);
-    const tmp7Result1 = importDefault(12579);
+    combined = importDefault(12578)(inviteDynamicLinkTemplate, obj1);
+    const tmp7Result1 = importDefault(12578);
     const obj2 = { fingerprint: null, attempt_id: null, source: null, invite_code: null };
     tmp20Result = tmp20(513);
     obj2[0] = tmp20Result.maybeExtractId(fingerprint);

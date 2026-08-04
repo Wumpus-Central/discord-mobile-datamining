@@ -15,9 +15,9 @@ const prototype = EnableCommunityModalIcons.prototype;
 Object.defineProperty(prototype, "safetyCheck", {
   get: function safetyCheck() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(16628);
+      let tmpResult = tmp(16627);
     } else {
-      tmpResult = tmp(16629);
+      tmpResult = tmp(16628);
     }
     return tmpResult;
   },
@@ -25,16 +25,16 @@ Object.defineProperty(prototype, "safetyCheck", {
 });
 Object.defineProperty(prototype, "channelSetup", {
   get: function channelSetup() {
-    return require(16630) /* getChannelSetupSource */.getChannelSetupSource(this.theme);
+    return require(16629) /* getChannelSetupSource */.getChannelSetupSource(this.theme);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "finishingTouches", {
   get: function finishingTouches() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = tmp(16634);
+      let tmpResult = tmp(16633);
     } else {
-      tmpResult = tmp(16635);
+      tmpResult = tmp(16634);
     }
     return tmpResult;
   },

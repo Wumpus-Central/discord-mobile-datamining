@@ -3,7 +3,7 @@ import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 
 const require = arg1;
-createCacheKey = { maskStyle: { position: "relative", right: "channel" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };
+createCacheKey = { maskStyle: { position: "relative", right: "alignItems" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: null };
 createCacheKey = { backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_400 };
 createCacheKey[4] = createCacheKey;
 createCacheKey = createCacheKey.createStyles(createCacheKey);

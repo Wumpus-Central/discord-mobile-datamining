@@ -29,7 +29,7 @@ function keyExtractor(type) {
   if (type != null) {
     type = type.type;
   }
-  if (type === require(11938) /* RowType */.RowType.ENTRY) {
+  if (type === require(11937) /* RowType */.RowType.ENTRY) {
     let guildId = type.entry.guildId;
   } else {
     let type1;
@@ -47,11 +47,11 @@ function renderItem(item) {
   if (item != null) {
     type = item.type;
   }
-  if (require(11938) /* RowType */.RowType.HEADER === type) {
+  if (require(11937) /* RowType */.RowType.HEADER === type) {
     let obj = { children: null };
     obj[0] = item.header;
     return callback(GuildDirectoryHeaderRowItem, obj);
-  } else if (tmp2(11938).RowType.ENTRY === type) {
+  } else if (tmp2(11937).RowType.ENTRY === type) {
     obj = { entry: null };
     obj[0] = item.entry;
     return callback(importDefault(11619), obj);
@@ -71,7 +71,7 @@ function GuildDirectoryHeader(guild) {
   let obj = { style: tmp.headerWrapper, children: null };
   obj = { source: null, style: null };
   const hasItem = features.has(constants.HUB);
-  obj[0] = require(11939) /* registerAsset */;
+  obj[0] = require(11938) /* registerAsset */;
   obj[1] = tmp.backgroundImage;
   const items = [callback(closure_6, obj), ];
   obj = { style: tmp.textWrapper, children: null };
@@ -99,7 +99,7 @@ function GuildDirectoryHeader(guild) {
   if (hasItem) {
     const obj4 = { guild: null, onDirectoryPage: true };
     obj4[0] = guild;
-    tmp5Result = callback(importDefault(11940), obj4);
+    tmp5Result = callback(importDefault(11939), obj4);
   }
   children[1] = tmp5Result;
   return callback2(closure_21, { children });
@@ -126,7 +126,7 @@ function GuildDirectoryFooter(hideFooter) {
       obj[0] = tmp.footer;
       const obj1 = { style: null, children: null };
       obj1[0] = tmp.addIcon;
-      obj1[1] = callback(tmp2(12021).PlusMediumIcon, {});
+      obj1[1] = callback(tmp2(12020).PlusMediumIcon, {});
       const items = [callback(closure_5, obj1), ];
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
       const intl2 = tmp2(1236).intl;
@@ -189,9 +189,9 @@ export default function GuildDirectory(channel) {
   let obj1 = React;
   dependencyMap = React.useRef(null);
   let bottom = guildId(1581)().bottom;
-  let obj2 = channel(11937);
+  let obj2 = channel(11936);
   const hubProgressBarCompletedSteps = obj2.useHubProgressBarCompletedSteps(onPressSearch);
-  let obj3 = channel(11937);
+  let obj3 = channel(11936);
   if (null == obj3.getNextHubProgressStep(hubProgressBarCompletedSteps)) {
     let sum = _location;
   } else {
@@ -329,7 +329,7 @@ export default function GuildDirectory(channel) {
         obj2 = { guild: null, channel: null };
         obj2[0] = onPressSearch;
         obj2[1] = channel;
-        items9[1] = callback(guildId(12022), obj2);
+        items9[1] = callback(guildId(12021), obj2);
         items9[2] = callback(tmp2(11207).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
         obj[1] = items9;
         let tmp23 = callback2(currentCategoryId, obj);

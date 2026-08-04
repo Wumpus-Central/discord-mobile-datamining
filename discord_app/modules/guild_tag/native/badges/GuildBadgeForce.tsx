@@ -29,7 +29,7 @@ export const GuildBadgeForce = function GuildBadgeForce(width) {
   ({ primaryTintColor, secondaryTintColor } = width);
   const merged = Object.assign(width, Object.create(null));
   const memo = React.useMemo(() => "badge-force-gradient-" + callback(table[2]).v4(), []);
-  let obj = require(13172) /* getTransformedBadgeColors */;
+  let obj = require(13171) /* getTransformedBadgeColors */;
   obj = { primaryBaseColors: closure_5, primaryTintColor, primaryTintLuminances: closure_7, primaryLuminanceWeights: items, secondaryBaseColors: closure_6, secondaryTintColor, secondaryTintLuminances: closure_9, secondaryLuminanceWeights: items1 };
   const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);

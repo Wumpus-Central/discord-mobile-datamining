@@ -12,10 +12,10 @@ export default function GuildsBarFooterWrapper(children) {
   let obj = require(3989) /* map */;
   const token = obj.useToken(importDefault(712).modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp2 = callback();
-  const isHomeDrawerEnabled = require(15054) /* context */.useIsHomeDrawerEnabled();
+  const isHomeDrawerEnabled = require(15053) /* context */.useIsHomeDrawerEnabled();
   const style = [tmp2.footerWrapper, ];
   let tmp6 = null;
-  const obj2 = require(15054) /* context */;
+  const obj2 = require(15053) /* context */;
   const tmp4 = jsx;
   if (!isHomeDrawerEnabled) {
     obj = { width: null };

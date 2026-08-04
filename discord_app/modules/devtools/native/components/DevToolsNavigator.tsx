@@ -36,7 +36,7 @@ let closure_7 = require("noop").memo((screenKey) => {
   };
   obj = {
     name: "home",
-    component: importDefault(13750),
+    component: importDefault(13749),
     options() {
       return {
         headerTitle() {
@@ -55,8 +55,8 @@ let closure_7 = require("noop").memo((screenKey) => {
     }
   };
   let items = [callback(createNativeStackNavigator.Screen, obj), ];
-  let merged = Object.assign(tmp(13752).DevToolsScreens);
-  let merged1 = Object.assign(tmp(13752).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(13751).DevToolsScreens);
+  let merged1 = Object.assign(tmp(13751).PerformanceTestingScreens);
   const entries = Object.entries({});
   items[1] = entries.map((arg0) => {
     let tmp;

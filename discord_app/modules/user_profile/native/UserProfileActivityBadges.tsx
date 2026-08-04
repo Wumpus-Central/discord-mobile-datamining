@@ -14,7 +14,7 @@ const result = require("ME").fileFinishedImporting("modules/user_profile/native/
 export const TimestampBadge = function TimestampBadge(activity) {
   activity = activity.activity;
   const tmp = callback3();
-  let obj = require(12194) /* useTimestampTickedNow */;
+  let obj = require(12193) /* useTimestampTickedNow */;
   const timestamps = activity.timestamps;
   let start;
   if (timestamps != null) {
@@ -24,7 +24,7 @@ export const TimestampBadge = function TimestampBadge(activity) {
     start = activity.created_at;
   }
   if (null != start) {
-    if (!importDefault(12195)(activity)) {
+    if (!importDefault(12194)(activity)) {
       const timestamps2 = activity.timestamps;
       let end;
       if (timestamps2 != null) {
@@ -49,7 +49,7 @@ export const TimestampBadge = function TimestampBadge(activity) {
         flag2 = false;
       }
       if (flag2) {
-        let GameControllerIcon = tmp2(12192).HourglassIcon;
+        let GameControllerIcon = tmp2(12191).HourglassIcon;
       } else if (tmp10(7119)(activity)) {
         GameControllerIcon = tmp2(7611).AppsIcon;
       } else if (activity.type === ActivityTypes.WATCHING) {
@@ -71,7 +71,7 @@ export const TimestampBadge = function TimestampBadge(activity) {
       obj2[2] = flag;
       obj1[0] = obj2;
       obj1[1] = tmp.bold;
-      items[1] = callback(tmp2(12196).ActiveTimestamp, obj1);
+      items[1] = callback(tmp2(12195).ActiveTimestamp, obj1);
       obj[1] = items;
       return callback2(View, obj);
     }

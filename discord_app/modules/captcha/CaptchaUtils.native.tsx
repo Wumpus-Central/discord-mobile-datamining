@@ -27,7 +27,7 @@ export default {
     const obj2 = importDefault(4253);
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
-    obj2.openLazy(_require(1959)(16225, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
+    obj2.openLazy(_require(1959)(16224, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
   },
   showCaptchaAsync(nextResult1) {
     let c1;

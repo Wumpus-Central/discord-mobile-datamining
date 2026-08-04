@@ -15,7 +15,7 @@ function BenefitRow(description) {
   ({ emojiId, guildId, title } = description);
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  const items = [callback(importDefault(14377), { guildId, id: emojiId, size: 22, fontSize: 18 }), callback(require(1297) /* Button */.Spacer, { size: 16 }), ];
+  const items = [callback(importDefault(14376), { guildId, id: emojiId, size: 22, fontSize: 18 }), callback(require(1297) /* Button */.Spacer, { size: 16 }), ];
   obj = { style: tmp.textContainer, children: null };
   const items1 = [title, ];
   let tmp4Result = null;

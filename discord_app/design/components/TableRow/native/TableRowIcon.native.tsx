@@ -779,6 +779,8 @@ export const TableRowIcon = function TableRowIcon(arg0) {
     break;
     case "$ZodCheckGreaterThan":
     break;
+    case "fetchMediaPostEmbed":
+    break;
     case "ToIntlMathematicalValue":
     break;
     case "th":
@@ -825,15 +827,13 @@ export const TableRowIcon = function TableRowIcon(arg0) {
     break;
     case "_":
     break;
-    case "3AS4UM":
+    case "useICYMIEnabled":
     break;
-    case "UM":
+    case "INVALID_PIN_MESSAGE_CHANNEL":
     break;
-    case "UMAX":
+    case "CHANNEL_ADD_FLOW":
     break;
-    case "MAX_AUDIENCE_ROW_LIMIT":
-    break;
-    case "AUD":
+    case "FLOW_DISMISSED":
     break;
   }
 };

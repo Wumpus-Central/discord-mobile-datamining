@@ -32,14 +32,14 @@ function PriceOptionRow(selected) {
   obj = { style: tmp.rowStatusIcon, source: null };
   const tmp5 = closure_10;
   const tmp7 = importDefault(8979);
-  obj[1] = importDefault(selected ? 16653 : 15553);
+  obj[1] = importDefault(selected ? 16652 : 15552);
   const items1 = [closure_9(importDefault(5236), obj), ];
   const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl = tmp2(1236).intl;
   const obj2 = { price: null, interval: null };
   let tmp2Result = tmp2(5764);
   obj2[0] = tmp2Result.formatPrice(price, CurrencyCodes.USD);
-  tmp2Result = tmp2(14368);
+  tmp2Result = tmp2(14367);
   obj2[1] = tmp2Result.formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
   obj1[2] = intl.format(require(1236) /* getSystemLocale */.t.CgmBaG, obj2);
   items1[1] = closure_9(require(4281) /* Text */.Text, obj1);

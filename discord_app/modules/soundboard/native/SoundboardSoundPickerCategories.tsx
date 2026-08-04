@@ -52,7 +52,7 @@ function SoundCategoryItem(style) {
   } else if (tmp2(4737).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl = tmp2(1236).intl;
     name = intl.string(tmp2(1236).t.Rtvk9X);
-    tmp4 = importDefault(16022);
+    tmp4 = importDefault(16021);
     tmp5 = null;
     tmp13Result = null;
   } else {
@@ -63,7 +63,7 @@ function SoundCategoryItem(style) {
     if (tmp2(4737).SoundboardSoundGridSectionType.SEARCH === type) {
       const intl4 = tmp2(1236).intl;
       name = intl4.string(tmp2(1236).t.sKt3xS);
-      tmp4 = importDefault(16022);
+      tmp4 = importDefault(16021);
       tmp5 = null;
       tmp13Result = null;
     }

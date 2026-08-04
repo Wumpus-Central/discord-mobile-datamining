@@ -490,7 +490,7 @@ defineSimpleDispatch(["READY_SUPPLEMENTAL"], (arg0) => {
 });
 let result1 = definePreloadableDispatch(["READY"], (guilds) => {
   guilds = guilds.guilds;
-  const result = importAll(12852).preloadReadyPayloadData();
+  const result = importAll(12851).preloadReadyPayloadData();
   const found = guilds.filter((unavailable) => {
     unavailable = unavailable.unavailable;
     let tmp = !unavailable;
@@ -520,7 +520,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
     guildIds = Promise.resolve();
   }
   const items = [result, guildIds];
-  const obj = importAll(12852);
+  const obj = importAll(12851);
   return Promise.all(items).then((arg0) => {
     let tmp;
     [tmp] = arg0;
@@ -546,8 +546,8 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
       Emitter.batched(() => {
         const hydrateReady = outer1_1(outer1_3[14]).hydrateReady;
         const measureResult = hydrateReady.measure(() => {
-          const obj = callback(12852);
-          return obj.hydrateReadyPayloadPrioritized(obj, obj(12807).socket.identifyStartTime, closure_1);
+          const obj = callback(12851);
+          return obj.hydrateReadyPayloadPrioritized(obj, obj(12806).socket.identifyStartTime, closure_1);
         });
         let obj = measureResult;
         const private_channels = measureResult.private_channels;
@@ -565,7 +565,7 @@ let result1 = definePreloadableDispatch(["READY"], (guilds) => {
           result = obj.b64ToPreloadedUserSettingsProto(obj.user_settings_proto);
         }
         let closure_4 = result;
-        outer1_1(outer1_3[18])("AllGatewayConnectionStores", () => obj(12853));
+        outer1_1(outer1_3[18])("AllGatewayConnectionStores", () => obj(12852));
         const dispatchReady = tmp(tmp2[14]).dispatchReady;
         dispatchReady.measure(() => {
           obj = { type: "CONNECTION_OPEN", sessionId: obj.session_id, authSessionIdHash: obj.auth_session_id_hash, staticAuthSessionId: obj.static_client_session_id, user: obj.user, users: obj.users, guilds: closure_2, initialPrivateChannels: obj, unavailableGuilds: closure_1, readState: obj.read_state, userGuildSettings: obj.user_guild_settings, tutorial: obj.tutorial, relationships: null, gameRelationships: null, friendSuggestionCount: null, analyticsToken: null, experiments: null, connectedAccounts: null, guildExperiments: null, apexExperiments: null, requiredAction: null, consents: null, sessions: null, pendingPayments: null, countryCode: null, guildJoinRequests: null, userSettingsProto: null, apiCodeVersion: null, auth: null, notificationSettings: null, geoRestrictedGuilds: null, explicitContentScanVersion: null, failedStates: null, linkedUsers: null, regionalFeatureConfig: null };
@@ -687,9 +687,9 @@ defineSimpleDispatch(["EXPERIMENT_SESSION_OVERRIDE_DELETE"], (experimentName) =>
   obj.dispatch(obj);
 });
 defineSimpleDispatch(["RESUMED"], () => {
-  const localPresenceState = obj(12807).localPresenceState;
+  const localPresenceState = obj(12806).localPresenceState;
   localPresenceState.forceUpdate();
-  const localVoiceState = obj(12807).localVoiceState;
+  const localVoiceState = obj(12806).localVoiceState;
   localVoiceState.forceUpdate();
   obj = { type: "CONNECTION_RESUMED" };
   const obj2 = importDefault(709);
@@ -1100,7 +1100,7 @@ const result13 = definePreloadableDispatch(["GUILD_CREATE"], (data_mode) => {
     });
     const dispatchResult = importDefault(709).dispatch(obj);
   } else {
-    obj = importAll(12852);
+    obj = importAll(12851);
     const result = obj.hydratePreviouslyUnavailableGuild(unavailable);
     obj1 = result;
     obj = { type: "GUILD_CREATE", guild: null };
@@ -1609,8 +1609,8 @@ defineSimpleDispatch(["PRESENCE_UPDATE"], (hidden_activities) => {
   if (hidden_activities == null) {
     hidden_activities = [];
   }
-  const tmpResult = importDefault(12934)(activities, hidden_activities);
-  const tmp = importDefault(12934);
+  const tmpResult = importDefault(12933)(activities, hidden_activities);
+  const tmp = importDefault(12933);
   activities = tmpResult.activities;
   importDefaultResult3.add({
     user: hidden_activities.user,
@@ -3070,8 +3070,8 @@ defineSimpleDispatch(["SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE"], (intera
 });
 defineSimpleDispatch(["GUILD_ROOM_CONNECT"], (body, type) => {
   const obj = { type, room: null };
-  obj[1] = obj(12930).serverGuildRoomToClient(body);
-  const obj2 = obj(12930);
+  obj[1] = obj(12929).serverGuildRoomToClient(body);
+  const obj2 = obj(12929);
   const obj3 = importDefault(709);
   importDefault(709).dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -3092,8 +3092,8 @@ defineSimpleDispatch(["GUILD_ROOM_DISCONNECT"], (userId, type) => {
 });
 defineSimpleDispatch(["GUILD_ROOM_UPDATE"], (body, type) => {
   const obj = { type, room: null };
-  obj[1] = obj(12930).serverGuildRoomToClient(body);
-  const obj2 = obj(12930);
+  obj[1] = obj(12929).serverGuildRoomToClient(body);
+  const obj2 = obj(12929);
   const obj3 = importDefault(709);
   importDefault(709).dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -3104,8 +3104,8 @@ defineSimpleDispatch(["GUILD_ROOM_UPDATE"], (body, type) => {
 });
 defineSimpleDispatch(["HAVEN_CONNECT"], (roomId, type) => {
   const obj = { type, room: null };
-  obj[1] = obj(12932).parseRoom(roomId);
-  const obj2 = obj(12932);
+  obj[1] = obj(12931).parseRoom(roomId);
+  const obj2 = obj(12931);
   const obj3 = importDefault(709);
   importDefault(709).dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);
@@ -3126,8 +3126,8 @@ defineSimpleDispatch(["HAVEN_DISCONNECT"], (userId, type) => {
 });
 defineSimpleDispatch(["HAVEN_UPDATE"], (roomId, type) => {
   const obj = { type, room: null };
-  obj[1] = obj(12932).parseRoom(roomId);
-  const obj2 = obj(12932);
+  obj[1] = obj(12931).parseRoom(roomId);
+  const obj2 = obj(12931);
   const obj3 = importDefault(709);
   importDefault(709).dispatch(obj).catch((error) => {
     outer1_17.error("dispatchOrResetSocket error during " + obj.type + ":", error);

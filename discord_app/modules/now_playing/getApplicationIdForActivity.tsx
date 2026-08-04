@@ -25,7 +25,7 @@ export default function getApplicationIdForActivity(party) {
     }
   }
   id = null;
-  if (importDefault(12188)(party)) {
+  if (importDefault(12187)(party)) {
     id = closure_4 + party.name;
   }
 };

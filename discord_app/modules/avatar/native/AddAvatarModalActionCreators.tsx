@@ -20,8 +20,8 @@ export const handlePressNext = function handlePressNext(pendingImage, first, fn)
   } else {
     obj = importDefault(4490);
     obj.popWithKey(ADD_AVATAR_MODAL_KEY);
-    require(11972) /* _startContactSyncForDiscoverability */.nextOnboardingStep({ skip: false });
-    const obj2 = require(11972) /* _startContactSyncForDiscoverability */;
+    require(11971) /* _startContactSyncForDiscoverability */.nextOnboardingStep({ skip: false });
+    const obj2 = require(11971) /* _startContactSyncForDiscoverability */;
   }
 };
 export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
@@ -54,5 +54,5 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   importDefault(4623).show(obj);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(16380, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(16379, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

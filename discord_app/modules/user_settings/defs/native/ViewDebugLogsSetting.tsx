@@ -32,18 +32,18 @@ function ViewDebugLogsActionSheet() {
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.BUOCPi);
   obj[0] = callback(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
   obj = { icon: null, title: null, screenKey: "debugLogs", render: null };
-  obj[0] = callback(require(14643) /* WrenchIcon */.WrenchIcon, {});
+  obj[0] = callback(require(14642) /* WrenchIcon */.WrenchIcon, {});
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl2.string(require(1236) /* getSystemLocale */.t.XpPGhL);
   obj[3] = function render() {
-    return callback2(callback(14645), {});
+    return callback2(callback(14644), {});
   };
   const items = [callback(ViewDebugLogsActionSheetRow, obj), , ];
   const obj1 = { icon: callback(require(4249) /* ClockIcon */.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj1[1] = intl3.string(require(1236) /* getSystemLocale */.t.b0nJvk);
   obj1[3] = function render() {
-    return callback2(closure_3, { children: callback2(callback(14648), {}) });
+    return callback2(closure_3, { children: callback2(callback(14647), {}) });
   };
   items[1] = callback(ViewDebugLogsActionSheetRow, obj1);
   let tmpResult = null;
@@ -53,7 +53,7 @@ function ViewDebugLogsActionSheet() {
     const intl4 = tmp2(1236).intl;
     obj2[1] = intl4.string(tmp2(1236).t.Ljj0ps);
     obj2[3] = function render() {
-      return callback2(callback(14649), {});
+      return callback2(callback(14648), {});
     };
     tmpResult = tmp(ViewDebugLogsActionSheetRow, obj2);
   }

@@ -280,7 +280,7 @@ prototype["renderVideo"] = function renderVideo() {
       obj1[3] = function onReady() {
         return self.setState({ ytVideoReady: true });
       };
-      const items = [callback(importDefault(14624), obj1), ];
+      const items = [callback(importDefault(14623), obj1), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: null, source: null };

@@ -18,5 +18,5 @@ export default function FamilyCenterSettingsParentalControlsNotice() {
     outer1_1(outer1_2[7]).openPrivateChannel(obj);
   };
   obj[3] = activeLinkUserIds.length;
-  return jsx(importDefault(13898), { label: null, noticeType: null, labelHook: null, count: null });
+  return jsx(importDefault(13897), { label: null, noticeType: null, labelHook: null, count: null });
 };

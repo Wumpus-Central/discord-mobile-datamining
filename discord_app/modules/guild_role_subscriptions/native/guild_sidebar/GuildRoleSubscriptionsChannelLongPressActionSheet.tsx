@@ -22,7 +22,7 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   obj = { leading: null, title: null };
   obj = { style: createCacheKey().headerIcon, children: null };
   const obj1 = { disableColor: true, source: null };
-  obj1[1] = importDefault(12043);
+  obj1[1] = importDefault(12042);
   obj[1] = callback(require(1297) /* Button */.Icon, obj1);
   obj[0] = callback(View, obj);
   const intl = require(1236) /* getSystemLocale */.intl;
@@ -30,7 +30,7 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   const items = [callback(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), ];
   const obj2 = { leading: null, label: null, onPress: null };
   const obj3 = { source: null };
-  obj3[0] = importDefault(15128);
+  obj3[0] = importDefault(15127);
   obj2[0] = callback(require(1297) /* Button */.Icon, obj3);
   const obj4 = { text: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;

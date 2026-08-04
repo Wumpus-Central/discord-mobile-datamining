@@ -32,7 +32,7 @@ function CoachmarkVariant(shopButtonRef) {
     navigateToShop();
   };
   obj[4] = tmp3;
-  const items = [callback2(importDefault(15743), obj), callback2(importDefault(15745), { marketing, shopButtonRef, navigateToShop, visible: tmp3, onDismiss: tmp[1] })];
+  const items = [callback2(importDefault(15742), obj), callback2(importDefault(15744), { marketing, shopButtonRef, navigateToShop, visible: tmp3, onDismiss: tmp[1] })];
   obj[0] = items;
   return callback3(closure_7, obj);
 }

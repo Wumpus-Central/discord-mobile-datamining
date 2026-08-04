@@ -41,7 +41,7 @@ function CatEarsBackdrop() {
   items1[1] = obj1;
   const obj2 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   const obj3 = { uri: null };
-  obj3[0] = top(15890);
+  obj3[0] = top(15889);
   obj2[0] = obj3;
   obj2[1] = tmp.mascotImage;
   obj[1] = callback(closure_4, obj2);
@@ -92,7 +92,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   let importDefault;
   let dependencyMap;
   const tmp = createCacheKey();
-  let obj = markAsDismissed(15891);
+  let obj = markAsDismissed(15890);
   const profileFramesMarketing = obj.useProfileFramesMarketing("CollectiblesMobileAnnouncementActionSheet");
   const intl = markAsDismissed(1236).intl;
   const string = intl.string;
@@ -144,7 +144,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   obj = { style: tmp.container, children: null };
   const obj1 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   const obj2 = { uri: null };
-  obj2[0] = importDefault(15893);
+  obj2[0] = importDefault(15892);
   obj1[0] = obj2;
   obj1[1] = tmp.framePreviewImage;
   const items3 = [callback(closure_4, obj1), , , ];

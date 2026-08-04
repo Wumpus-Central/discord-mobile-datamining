@@ -143,7 +143,7 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   } else {
     const obj7 = { colors: null };
     obj7[0] = first1;
-    tmp16Result = tmp16(onSelectColors(13832), obj7);
+    tmp16Result = tmp16(onSelectColors(13831), obj7);
   }
   const items4 = [tmp16Result, ];
   const obj8 = { style: tmp.customIconOverlay, pointerEvents: "none", children: null };

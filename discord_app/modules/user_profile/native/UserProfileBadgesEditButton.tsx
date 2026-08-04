@@ -24,7 +24,7 @@ export default function UserProfileBadgesEditButton(badges) {
   let _require;
   const tmp = createCacheKey();
   _require = tmp;
-  let obj = _require(13837);
+  let obj = _require(13836);
   const isBadgeManagementEnabled = obj.useIsBadgeManagementEnabled({ location: "UserProfileBadgesEditButton" });
   const callback = React.useCallback(() => {
     callback(closure_2[7]).openLazy(_undefined(closure_2[9])(closure_2[8], closure_2.paths), "Hide Badges", {});
@@ -75,7 +75,7 @@ export default function UserProfileBadgesEditButton(badges) {
       obj4[0] = intl.formatToPlainString(tmp2(1236).t.AdyOTw, obj);
       obj[3] = obj4;
       obj[4] = tmp6;
-      return callback(tmp2(13833).UserProfileEditFormButton, obj);
+      return callback(tmp2(13832).UserProfileEditFormButton, obj);
     }
   }
   return null;

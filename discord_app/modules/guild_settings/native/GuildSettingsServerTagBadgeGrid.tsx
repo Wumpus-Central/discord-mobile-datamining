@@ -29,7 +29,7 @@ export default function GuildSettingsServerTagBadgeGrid(guildId) {
   guildId = guildId.guildId;
   ({ selectedBadge: importDefault, onSelectBadge: dependencyMap, cellSize: noop } = guildId);
   const tmp = createCacheKey();
-  ({ unlockedBadges, lockedBadges } = importDefault(16546)());
+  ({ unlockedBadges, lockedBadges } = importDefault(16545)());
   const items = [guildId];
   const callback = React.useCallback(() => {
     outer1_1(outer1_2[7])({ guildId, autoOpenPerkId: "guildTagsBadgePacks" });

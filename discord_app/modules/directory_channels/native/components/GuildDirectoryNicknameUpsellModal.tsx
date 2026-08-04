@@ -4,7 +4,7 @@ import Button from "Button";
 import get_ActivityIndicator from "module_8276";
 import createGuildRecordFromRust from "createGuildRecordFromRust";
 import { GuildPrompts } from "GuildPrompts";
-import jsxProd from "module_11931";
+import jsxProd from "module_11930";
 import createCacheKey from "createCacheKey";
 
 let c10;

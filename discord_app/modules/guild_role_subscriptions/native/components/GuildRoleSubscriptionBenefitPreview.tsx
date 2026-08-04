@@ -19,7 +19,7 @@ function BaseBenefitRow(isInteractive) {
   }
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.emojiContainer, children: callback(importDefault(14377), { guildId, id: emoji }) };
+  obj = { style: tmp.emojiContainer, children: callback(importDefault(14376), { guildId, id: emoji }) };
   const items = [callback(View, obj), , ];
   const items1 = [tmp.benefitColumn, contentStyle];
   items[1] = callback(View, { style: items1, children });
@@ -66,7 +66,7 @@ function ChannelBenefitRow(benefit) {
   benefit = benefit.benefit;
   ({ guildId, isInteractive } = benefit);
   const tmp = callback3();
-  let obj = require(14370) /* getUsedTemplateChannelsForGuild */;
+  let obj = require(14369) /* getUsedTemplateChannelsForGuild */;
   const channelWithTemplateFallback = obj.useChannelWithTemplateFallback(benefit.ref_id);
   let channelIcon = null;
   if (null != channelWithTemplateFallback) {

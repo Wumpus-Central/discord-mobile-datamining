@@ -20,9 +20,9 @@ function FamilyCenterActivitySectionHeader(displayType) {
   let obj = require(6961) /* getEmptyActivityFormatter */;
   const activityTypeTextConfigs = obj.getActivityTypeTextConfigs();
   const value = activityTypeTextConfigs.get(displayType);
-  const actionsForDisplayType = require(14045) /* useActionsForDisplayType */.useActionsForDisplayType(displayType);
-  const obj4 = require(14045) /* useActionsForDisplayType */;
-  const formattedTotalForDisplayType = require(14045) /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
+  const actionsForDisplayType = require(14044) /* useActionsForDisplayType */.useActionsForDisplayType(displayType);
+  const obj4 = require(14044) /* useActionsForDisplayType */;
+  const formattedTotalForDisplayType = require(14044) /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
   if (displayType === constants.PURCHASES) {
     let length = formattedTotalForDisplayType;
     let sectionHeaderResult;
@@ -83,9 +83,9 @@ export default function FamilyCenterActivitySection(displayType) {
   let loadMore;
   let dependencyMap;
   let loadMoreButton = callback3();
-  let obj = displayType(14045);
+  let obj = displayType(14044);
   const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
-  let obj1 = displayType(14045);
+  let obj1 = displayType(14044);
   const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
   let obj2 = displayType(11236);
   const familyCenterActions = obj2.useFamilyCenterActions({});
@@ -106,7 +106,7 @@ export default function FamilyCenterActivitySection(displayType) {
     obj[0] = loadMoreButton.container;
     obj1 = { displayType: null };
     obj1[0] = displayType;
-    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14051), { action }, action.event_id)), ];
+    const items1 = [callback2(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => callback(loadMore(14050), { action }, action.event_id)), ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj[1] = items1;

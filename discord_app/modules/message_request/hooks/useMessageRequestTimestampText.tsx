@@ -7,7 +7,7 @@ export const useMessageRequestTimestampText = function useMessageRequestTimestam
   let lastMessageId;
   let message;
   const _require = channel;
-  let obj = _require(11866);
+  let obj = _require(11865);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   obj = { lastMessageId: null };
   const items = [generateOldThreadCutoff];
@@ -36,7 +36,7 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
   let lastMessageId;
   let message;
   const _require = channel;
-  let obj = _require(11866);
+  let obj = _require(11865);
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
   obj = { lastMessageId: null };
   const items = [generateOldThreadCutoff];

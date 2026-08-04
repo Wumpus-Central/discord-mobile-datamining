@@ -93,7 +93,7 @@ let obj2 = { alignSelf: "flex-start", marginTop: require("Themes").space.PX_12 }
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/notification_center/native/NotificationCenterPermissionNudge.tsx");
 
 export default function NotificationCenterPermissionNudge() {
-  let obj = importDefault(14561);
+  let obj = importDefault(14560);
   const canSeePushNotificationNudge = require(11692) /* _requestPushNotificationPermission */.useCanSeePushNotificationNudge();
   const obj2 = require(11692) /* _requestPushNotificationPermission */;
   let prop = null;

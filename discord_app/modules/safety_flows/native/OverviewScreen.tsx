@@ -11,7 +11,7 @@ const result = require("createCacheKey").fileFinishedImporting("modules/safety_f
 
 export default function OverviewScreen() {
   let tmp = callback2();
-  let obj = task(16829);
+  let obj = task(16828);
   task = obj.useSafetyFlowTask().task;
   let obj1 = task(1480);
   const navigation = obj1.useNavigation();
@@ -49,7 +49,7 @@ export default function OverviewScreen() {
     if (tasks != null) {
       mapped = tasks.map((task_type) => {
         const obj = { tip: null, index: null };
-        obj[0] = task(16824).TASK_TYPE_TO_TITLE[task_type.task_type];
+        obj[0] = task(16823).TASK_TYPE_TO_TITLE[task_type.task_type];
         obj[1] = arg1 + 1;
         return callback(navigation(7764), obj, task_type.task_type);
       });
@@ -68,7 +68,7 @@ export default function OverviewScreen() {
   obj4[0] = closure_5(task(4693).Stack, obj);
   const items3 = [callback(task(7758).ModalContent, obj4), ];
   const obj6 = { children: null };
-  const items4 = [callback(navigation(16831), {}), ];
+  const items4 = [callback(navigation(16830), {}), ];
   const obj7 = { variant: "primary", text: null, onPress: null };
   const intl4 = tmp2(1236).intl;
   obj7[1] = intl4.string(navigation(2547).Ks6opt);

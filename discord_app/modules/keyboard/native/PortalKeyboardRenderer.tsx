@@ -24,7 +24,7 @@ function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
     obj[0] = arg1;
     obj[1] = arg2;
     obj[2] = arg3;
-    tmp5 = jsx(importDefault(15707), { item: null, state: null, cleanUp: null }, arg0);
+    tmp5 = jsx(importDefault(15706), { item: null, state: null, cleanUp: null }, arg0);
   }
   return tmp5;
 }

@@ -44,7 +44,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
   fn.__workletHash = 11417131685254;
   fn.__initData = closure_6;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  bounty(14188);
+  bounty(14187);
   if (visible) {
     obj = { style: null, children: null };
     const items = [tmp.container, animatedStyle];

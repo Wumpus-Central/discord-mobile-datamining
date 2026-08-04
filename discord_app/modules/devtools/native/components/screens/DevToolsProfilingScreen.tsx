@@ -84,7 +84,7 @@ export default function DevToolsProfilingScreen() {
     tmp8Result = tmp8(tmp4(5649).TableRowGroup, obj3);
   }
   const obj7 = { spacing: 16, children: null };
-  const items2 = [tmp8Result, closure_5(require(14879) /* DevToolsProfilingUseStateFromStores */.DevToolsProfilingUseStateFromStores, {})];
+  const items2 = [tmp8Result, closure_5(require(14878) /* DevToolsProfilingUseStateFromStores */.DevToolsProfilingUseStateFromStores, {})];
   obj7[1] = items2;
   obj[1] = closure_7(require(4693) /* Stack */.Stack, obj7);
   return closure_5(closure_4, obj);

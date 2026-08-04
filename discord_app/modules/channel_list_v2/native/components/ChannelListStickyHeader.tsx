@@ -97,7 +97,7 @@ export default function ChannelListStickyHeader(guild) {
       _undefined(outer1_2[10])(guild);
     }
   }, items);
-  const tmp10 = importDefault(15153)(guild);
+  const tmp10 = importDefault(15152)(guild);
   let tmp6Result = tmp6(5320);
   const iOSPressEffects = tmp6Result.useIOSPressEffects(4);
   ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
@@ -201,7 +201,7 @@ export default function ChannelListStickyHeader(guild) {
   const items6 = [tmp15Result, ];
   tmp24Result = null;
   if (isFavoritesGuildIdResult) {
-    tmp24Result = tmp24(tmp6(15158).FavoritesGuildHeaderActionButton, {});
+    tmp24Result = tmp24(tmp6(15157).FavoritesGuildHeaderActionButton, {});
   }
   items6[1] = tmp24Result;
   obj11[1] = items6;
@@ -225,7 +225,7 @@ export default function ChannelListStickyHeader(guild) {
     const obj14 = { targetRef: null, guild: null };
     obj14[0] = ref;
     obj14[1] = guild;
-    tmp24Result3 = tmp24(tmp(15163), obj14);
+    tmp24Result3 = tmp24(tmp(15162), obj14);
   }
   items7[3] = tmp24Result3;
   obj10[1] = items7;

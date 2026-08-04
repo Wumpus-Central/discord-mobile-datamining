@@ -21,7 +21,7 @@ export default function ActivityFeedbackActionSheet(activityApplication) {
     prop = embeddedActivityConfig.displays_advertisements;
   }
   let obj = { headerLabel: null, showHeaderCloseButton: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
-  const tmp2 = importDefault(16295)(true, true === prop);
+  const tmp2 = importDefault(16294)(true, true === prop);
   const intl = activityApplication(1236).intl;
   obj = { applicationName: activityApplication.name };
   obj[0] = intl.formatToPlainString(activityApplication(1236).t.QXYwoD, obj);

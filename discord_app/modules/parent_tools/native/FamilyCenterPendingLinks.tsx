@@ -34,7 +34,7 @@ function FamilyCenterPendingLinkRow(otherUser) {
       obj[3] = tmp.actionButton;
       const obj1 = { size: null, disableColor: true, source: null };
       obj1[0] = tmp5(1297).Icon.Sizes.SMALL;
-      obj1[2] = tmp2(14074);
+      obj1[2] = tmp2(14073);
       obj[4] = closure_5(tmp5(1297).Icon, obj1);
       let tmp8Result = tmp17(tmp5(4812).PressableOpacity, obj);
       let tmp14 = tmp17;
@@ -84,7 +84,7 @@ function FamilyCenterPendingLinkRow(otherUser) {
       obj5[3] = tmp.actionButton;
       const obj7 = { size: null, disableColor: true, source: null };
       obj7[0] = tmp5(1297).Icon.Sizes.SMALL;
-      obj7[2] = tmp2(14074);
+      obj7[2] = tmp2(14073);
       obj5[4] = tmp14(tmp5(1297).Icon, obj7);
       items1[1] = tmp14(tmp5(4812).PressableOpacity, obj5);
       obj4[0] = items1;
@@ -95,7 +95,7 @@ function FamilyCenterPendingLinkRow(otherUser) {
     const obj8 = { otherUser: null, actions: null };
     obj8[0] = str;
     obj8[1] = tmp8Result;
-    return tmp14(tmp2(14069), obj8);
+    return tmp14(tmp2(14068), obj8);
   }
   tmp4 = importDefault(7260)();
 }

@@ -61,7 +61,7 @@ let items = [
     label: "Blocked Domain",
     description: "Shows a warning for potentially malicious domains",
     show() {
-      return importDefault(12135).show("https://example-phishing-site.com/malicious-page");
+      return importDefault(12134).show("https://example-phishing-site.com/malicious-page");
     }
   },
   {
@@ -69,7 +69,7 @@ let items = [
     label: "Suspicious Download",
     description: "Warns users about potentially dangerous file downloads",
     show() {
-      return importDefault(12133).show("https://suspicious-file.com/dangerous-file.exe");
+      return importDefault(12132).show("https://suspicious-file.com/dangerous-file.exe");
     }
   },
   {
@@ -77,7 +77,7 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(14939, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
+      return importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(14938, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
     }
   }
 ];
@@ -87,7 +87,7 @@ let obj2 = {
   label: "Blocked Domain",
   description: "Shows a warning for potentially malicious domains",
   show() {
-    return importDefault(12135).show("https://example-phishing-site.com/malicious-page");
+    return importDefault(12134).show("https://example-phishing-site.com/malicious-page");
   }
 };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsActionSheetsScreen.tsx");

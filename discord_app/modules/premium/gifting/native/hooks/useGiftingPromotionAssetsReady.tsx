@@ -7,13 +7,13 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
     asset = asset.asset;
   }
   const themeAndReducedMotionAwareAssetUrl = obj.useThemeAndReducedMotionAwareAssetUrl(asset);
-  const status = importDefault(15898)(themeAndReducedMotionAwareAssetUrl).status;
+  const status = importDefault(15897)(themeAndReducedMotionAwareAssetUrl).status;
   let asset1;
   if (asset2 != null) {
     asset1 = asset2.asset;
   }
   const themeAndReducedMotionAwareAssetUrl1 = require(9958) /* useThemeAndReducedMotionAwareAssetUrl */.useThemeAndReducedMotionAwareAssetUrl(asset1);
-  const status2 = importDefault(15898)(themeAndReducedMotionAwareAssetUrl1).status;
+  const status2 = importDefault(15897)(themeAndReducedMotionAwareAssetUrl1).status;
   let tmp8 = "skipped" === status;
   if (!tmp8) {
     tmp8 = "preloaded" === status;

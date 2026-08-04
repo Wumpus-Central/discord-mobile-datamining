@@ -18,7 +18,7 @@ class FormattedMessage {
     obj = Object.create(new.target.prototype);
     obj.message = replaced;
     obj.hasMarkdown = importDefault;
-    tmp4 = new require("module_16170")(obj.message, arg1);
+    tmp4 = new require("module_16169")(obj.message, arg1);
     obj.intlMessage = tmp4;
     return obj;
   }
@@ -95,18 +95,18 @@ prototype["getContext"] = function getContext(arg0) {
   const items = [arg0, obj];
   return items;
 };
-const result = require("module_16170").fileFinishedImporting("../discord_common/js/packages/i18n/parse.tsx");
+const result = require("module_16169").fileFinishedImporting("../discord_common/js/packages/i18n/parse.tsx");
 
 export { FormattedMessage };
 export const setUpdateRules = function setUpdateRules(arg0) {
-  const rules = _require(16214).rules;
+  const rules = _require(16213).rules;
   _require = undefined;
   let importDefault;
   _require = importDefault(3984).parserFor(arg0(rules));
   const obj = importDefault(3984);
   const obj2 = importDefault(3984);
   importDefault = obj2.reactFor(importDefault(3984).ruleOutput(rules, "react"));
-  const f113053 = (arr, context, unsafeContext) => {
+  const f113048 = (arr, context, unsafeContext) => {
     const hasItem = arr.includes("\n\n");
     let text = arr;
     if (hasItem) {
@@ -118,22 +118,22 @@ export const setUpdateRules = function setUpdateRules(arg0) {
   };
   _require = undefined;
   const obj3 = importDefault(3984);
-  _require = importDefault(3984).parserFor(_require(16214).rules);
-  const f113054 = (arg0, context, unsafeContext) => callback(arg0 + "\n\n", { inline: false, context, unsafeContext });
+  _require = importDefault(3984).parserFor(_require(16213).rules);
+  const f113049 = (arg0, context, unsafeContext) => callback(arg0 + "\n\n", { inline: false, context, unsafeContext });
 };
 export const getMessage = function getMessage(str) {
   if (null == str) {
     return "";
   } else {
-    if (null == f113053) {
-      const rules = _require(16214).rules;
+    if (null == f113048) {
+      const rules = _require(16213).rules;
       _require = undefined;
       let importDefault;
       let obj = importDefault(3984);
-      _require = obj.parserFor(_require(16215).default(rules));
+      _require = obj.parserFor(_require(16214).default(rules));
       const obj2 = importDefault(3984);
       importDefault = obj2.reactFor(importDefault(3984).ruleOutput(rules, "react"));
-      f113053 = (arr, context, unsafeContext) => {
+      f113048 = (arr, context, unsafeContext) => {
         const hasItem = arr.includes("\n\n");
         let text = arr;
         if (hasItem) {
@@ -145,8 +145,8 @@ export const getMessage = function getMessage(str) {
       };
       _require = undefined;
       const obj3 = importDefault(3984);
-      _require = importDefault(3984).parserFor(_require(16214).rules);
-      const f113054 = (arg0, context, unsafeContext) => callback(arg0 + "\n\n", { inline: false, context, unsafeContext });
+      _require = importDefault(3984).parserFor(_require(16213).rules);
+      const f113049 = (arg0, context, unsafeContext) => callback(arg0 + "\n\n", { inline: false, context, unsafeContext });
       const obj4 = importDefault(3984);
     }
     const str2 = str.replace(/^\n+|\n+$/g, "");
@@ -163,7 +163,7 @@ export const getMessage = function getMessage(str) {
       obj = Object.create(FormattedMessage.prototype);
       obj.message = replaced;
       obj.hasMarkdown = isMatch1;
-      const tmp16 = new importDefault(16170)(obj.message, arg1);
+      const tmp16 = new importDefault(16169)(obj.message, arg1);
       obj.intlMessage = tmp16;
       let tmp5 = obj;
       const tmp6 = FormattedMessage;

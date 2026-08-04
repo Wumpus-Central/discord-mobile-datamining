@@ -11,7 +11,7 @@ export const ConnectionFineIcon = function ConnectionFineIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(15390) /* registerAsset */;
+  obj[0] = require(15389) /* registerAsset */;
   obj[1] = ICON_FEEDBACK_POSITIVE;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);

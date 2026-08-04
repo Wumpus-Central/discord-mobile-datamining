@@ -20,7 +20,7 @@ export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
   let closure_2;
-  let obj = guild(13216);
+  let obj = guild(13215);
   let canAccessSettings = obj.useGuildActionSheetPermissions(guild).canAccessSettings;
   const total = stateFromStores(4192)(guild.id).total;
   let obj1 = guild(589);

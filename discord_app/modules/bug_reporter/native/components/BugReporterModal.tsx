@@ -33,7 +33,7 @@ class BugCreateScreen {
     useRef = undefined;
     c10 = undefined;
     useState = undefined;
-    f83343 = undefined;
+    f83339 = undefined;
     c13 = undefined;
     useState = undefined;
     useCallback = undefined;
@@ -45,7 +45,7 @@ class BugCreateScreen {
     c21 = undefined;
     c22 = undefined;
     useRef = undefined;
-    f83344 = undefined;
+    f83340 = undefined;
     _handleAttachmentSelect = function _handleAttachmentSelect() {
       const self = this;
       const tmp = first(function*() {
@@ -161,7 +161,7 @@ class BugCreateScreen {
       closure_9.current = current;
       callback(current);
     }, []);
-    f83343 = callback;
+    f83339 = callback;
     tmp13 = c4(c5.useState(false), 2);
     first5 = tmp13[0];
     c13 = first5;
@@ -204,7 +204,7 @@ class BugCreateScreen {
       }
       return isStaffResult;
     });
-    f83344 = stateFromStores;
+    f83340 = stateFromStores;
     items1 = [];
     items1[0] = navigation;
     effect = c5.useEffect(() => {
@@ -298,7 +298,7 @@ class BugCreateScreen {
                       let closure_2 = arg2;
                       let c5 = 0;
                       let c6 = 0;
-                      return (/* F119601 */ function*() { ... })();
+                      return (/* F119596 */ function*() { ... })();
                     });
                     v0 = tmp;
                     const apply = tmp.apply;
@@ -572,7 +572,7 @@ class BugCreateScreen {
     }, items5);
     tmp31 = useState;
     tmp33 = c10;
-    tmp32 = f83343;
+    tmp32 = f83339;
     tmp34 = c7;
     obj = { spacing: 24, style: tmp.container, children: null };
     obj1 = { spacing: 8, children: null };

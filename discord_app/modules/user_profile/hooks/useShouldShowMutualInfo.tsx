@@ -11,6 +11,6 @@ export default function useShouldShowMutualInfo(id) {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp2 = importDefault(12181)(id);
-  return id !== id.id && !importDefault(12181)(id);
+  const tmp2 = importDefault(12180)(id);
+  return id !== id.id && !importDefault(12180)(id);
 };

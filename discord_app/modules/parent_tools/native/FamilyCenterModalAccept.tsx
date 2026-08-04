@@ -32,12 +32,12 @@ function FamilyCenterModalAcceptScreen(otherUser) {
   const obj2 = { otherUser, iconSrc: null, iconStyles: null };
   obj2[1] = acceptLinkRequest(4230);
   obj2[2] = tmp.icon;
-  const items1 = [callback(acceptLinkRequest(14073), obj2), , ];
+  const items1 = [callback(acceptLinkRequest(14072), obj2), , ];
   const obj3 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1236).intl;
   obj3[2] = intl.string(acceptLinkRequest(2285).rlNJwZ);
   items1[1] = callback(otherUser(4281).Text, obj3);
-  items1[2] = callback(acceptLinkRequest(14043), { user: otherUser });
+  items1[2] = callback(acceptLinkRequest(14042), { user: otherUser });
   obj1[1] = items1;
   const items2 = [callback2(View, obj1), callback(acceptLinkRequest(11238), {}), ];
   const obj4 = { style: tmp.disclaimer, variant: "text-xs/normal", color: "text-default", children: null };

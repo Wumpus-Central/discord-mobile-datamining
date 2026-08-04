@@ -58,7 +58,7 @@ export default function CaptchaModal(arg0) {
     }
     return str;
   }, items);
-  callback = onReject(16226)({ onReject, analyticsType: memo });
+  callback = onReject(16225)({ onReject, analyticsType: memo });
   const effect = React.useEffect(() => {
     closure_4.dismiss();
   }, []);

@@ -38,7 +38,7 @@ function Header(arg0) {
     application1 = integration.application;
   }
   if (null != application1) {
-    obj = { size: null, user: null, guildId: "Array" };
+    obj = { size: null, user: null, guildId: "disabled" };
     obj[0] = tmp3(1297).AvatarSizes.XSMALL;
     let bot;
     if (integration != null) {
@@ -61,7 +61,7 @@ function Header(arg0) {
       }
       let tmp11;
       if (null != bot1) {
-        obj = { size: null, user: null, guildId: "Array" };
+        obj = { size: null, user: null, guildId: "disabled" };
         obj[0] = tmp3(1297).AvatarSizes.XSMALL;
         obj[1] = getOrFetchApplicationBatched.bot;
         tmp11 = callback2(tmp3(1297).Avatar, obj);
@@ -207,7 +207,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(16598);
+  let obj = metadataField(16597);
   const realizedOperatorForResult = obj.realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   let value;
@@ -216,7 +216,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let tmpResult = tmp(16598);
+  let tmpResult = tmp(16597);
   str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
   str = str.toString();
   let mapped = React;
@@ -638,7 +638,7 @@ export default function GuildSettingsRoleEditConnectionConfiguration(configurati
     }
     if (configurationItems[0].configuration.connectionType === closure_11) {
       let obj = { hasIcons: true, children: null };
-      obj = { platform: null, integration: "a", applicationId: 131156.94153022772, onRemove: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000720718895621532, locked: -0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000616429016721421 };
+      obj = { platform: null, integration: "a", applicationId: "t", onRemove: "a", locked: "isArray" };
       obj[2] = applicationId;
       obj[3] = function onRemove() {
         return onConfigurationChange(null, configurationItems[0].index);

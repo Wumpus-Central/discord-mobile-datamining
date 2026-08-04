@@ -49,7 +49,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE,
   getComponent() {
-    return require(14399).default;
+    return require(14398).default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

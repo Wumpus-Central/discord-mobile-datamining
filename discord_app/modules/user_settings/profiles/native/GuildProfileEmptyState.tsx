@@ -17,7 +17,7 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/use
 export default function GuildProfileEmptyState() {
   const tmp = callback4();
   let obj = { contentContainerStyle: tmp.container, children: null };
-  obj = { style: tmp.image, children: callback2(importDefault(13864), obj) };
+  obj = { style: tmp.image, children: callback2(importDefault(13863), obj) };
   obj = { style: tmp.image };
   const items = [callback2(closure_5, obj), , , , ];
   let obj1 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };

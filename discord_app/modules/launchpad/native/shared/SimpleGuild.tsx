@@ -1,5 +1,5 @@
 import noop from "noop";
-import { View } from "module_15918";
+import { View } from "module_15917";
 import { getGuildIconSource } from "GuildNSFWContentLevel";
 import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
 import createGuildRecordFromRust from "createGuildRecordFromRust";

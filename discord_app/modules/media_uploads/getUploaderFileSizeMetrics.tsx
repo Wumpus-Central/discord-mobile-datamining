@@ -1,6 +1,3 @@
-function sum(arg0) {
-
-}
 const result = require("set").fileFinishedImporting("modules/media_uploads/getUploaderFileSizeMetrics.tsx");
 
 export const getUploaderChannelId = function getUploaderChannelId(file) {
@@ -34,9 +31,6 @@ export const getUploaderFileSizeMetrics = function getUploaderFileSizeMetrics(it
   if (items.totalPreCompressionSize > 0) {
     let totalPreCompressionSize = items.totalPreCompressionSize;
   } else {
-    if (typeof sum !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
     totalPreCompressionSize = mapped.reduce((arg0, arg1) => arg0 + arg1, 0);
   }
   obj[2] = totalPreCompressionSize;
@@ -47,9 +41,6 @@ export const getUploaderFileSizeMetrics = function getUploaderFileSizeMetrics(it
     obj[3] = totalPostCompressionSize;
     obj[4] = items.attachmentsCount > 0 ? items.attachmentsCount : items.length;
     return obj;
-  }
-  if (typeof sum !== "function") {
-    HermesBuiltin.throwTypeError();
   }
   totalPostCompressionSize = mapped1.reduce((arg0, arg1) => arg0 + arg1, 0);
 };

@@ -52,8 +52,8 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
       let obj = { children: null };
       obj = { showIconFirst: true };
       const merged = Object.assign(arg0);
-      obj[0] = callback2(callback(13291).MenuItem, obj);
-      return callback2(callback(13290).MenuGroup, obj, "chat-context-menu-group-" + arg1);
+      obj[0] = callback2(callback(13290).MenuItem, obj);
+      return callback2(callback(13289).MenuGroup, obj, "chat-context-menu-group-" + arg1);
     });
     return offset(menuItems(onRequestClose[6]).Menu, obj);
   }, items1);

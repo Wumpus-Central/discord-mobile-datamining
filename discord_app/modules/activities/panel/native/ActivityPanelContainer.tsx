@@ -43,9 +43,9 @@ const memoResult = require("noop").memo(function ActivityPanelContainer() {
     }
   }, [])) {
     obj = { children: null };
-    obj[0] = jsx(importDefault(15961), {});
-    tmp2 = jsx(importDefault(15952), { children: null });
-    const tmp5 = importDefault(15952);
+    obj[0] = jsx(importDefault(15960), {});
+    tmp2 = jsx(importDefault(15951), { children: null });
+    const tmp5 = importDefault(15951);
   }
   return tmp2;
 });

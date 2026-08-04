@@ -10,8 +10,8 @@ export default function _default() {
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.B6GPzA);
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl2.string(require(1236) /* getSystemLocale */.t["Tnrh/k"]);
-  obj[3] = importDefault(14415);
-  const items1 = [importDefault(14416), importDefault(14417), importDefault(14418), importDefault(14419), importDefault(14420)];
+  obj[3] = importDefault(14414);
+  const items1 = [importDefault(14415), importDefault(14416), importDefault(14417), importDefault(14418), importDefault(14419)];
   obj[4] = items1;
   const items2 = [obj, ];
   obj = { title: null, subtitle: null, kind: "voice-chat", image: null };
@@ -19,7 +19,7 @@ export default function _default() {
   obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.YAgqmE);
   const intl4 = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl4.string(require(1236) /* getSystemLocale */.t["9YJgal"]);
-  obj[3] = importDefault(14421);
+  obj[3] = importDefault(14420);
   items2[1] = obj;
   obj[2] = items2;
   items[1] = obj;
@@ -30,7 +30,7 @@ export default function _default() {
   obj1[3] = intl6.string(require(1236) /* getSystemLocale */.t["mK5Zd+"]);
   const intl7 = require(1236) /* getSystemLocale */.intl;
   obj1[4] = intl7.string(require(1236) /* getSystemLocale */.t.cvvVUV);
-  obj1[6] = importDefault(14422);
+  obj1[6] = importDefault(14421);
   items[2] = obj1;
   const obj2 = { id: "4", kind: "channel-row", timestamp: null, title: null, preview: null, isUnread: true, avatar1: null, avatar2: null };
   const intl8 = require(1236) /* getSystemLocale */.intl;
@@ -39,8 +39,8 @@ export default function _default() {
   obj2[3] = intl9.string(require(1236) /* getSystemLocale */.t.FpJH9k);
   const intl10 = require(1236) /* getSystemLocale */.intl;
   obj2[4] = intl10.string(require(1236) /* getSystemLocale */.t.F1WIrQ);
-  obj2[6] = importDefault(14423);
-  obj2[7] = importDefault(14424);
+  obj2[6] = importDefault(14422);
+  obj2[7] = importDefault(14423);
   items[3] = obj2;
   const obj3 = { id: "5", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, status: null };
   const intl11 = require(1236) /* getSystemLocale */.intl;
@@ -49,7 +49,7 @@ export default function _default() {
   obj3[3] = intl12.string(require(1236) /* getSystemLocale */.t.PHbyD7);
   const intl13 = require(1236) /* getSystemLocale */.intl;
   obj3[4] = intl13.string(require(1236) /* getSystemLocale */.t.GSuP1s);
-  obj3[5] = importDefault(13214);
+  obj3[5] = importDefault(13213);
   obj3[6] = StatusTypes.IDLE;
   items[4] = obj3;
   const obj4 = { id: "7", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, avatar2: null };
@@ -60,7 +60,7 @@ export default function _default() {
   const intl16 = require(1236) /* getSystemLocale */.intl;
   obj4[4] = intl16.string(require(1236) /* getSystemLocale */.t["VYL+vm"]);
   obj4[5] = importDefault(9751);
-  obj4[6] = importDefault(14418);
+  obj4[6] = importDefault(14417);
   items[5] = obj4;
   const obj5 = { id: "10", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
   const intl17 = require(1236) /* getSystemLocale */.intl;
@@ -69,7 +69,7 @@ export default function _default() {
   obj5[3] = intl18.string(require(1236) /* getSystemLocale */.t["z+f+zN"]);
   const intl19 = require(1236) /* getSystemLocale */.intl;
   obj5[4] = intl19.string(require(1236) /* getSystemLocale */.t.Wy2xnv);
-  obj5[5] = importDefault(14424);
+  obj5[5] = importDefault(14423);
   items[6] = obj5;
   const obj6 = { id: "11", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, avatar2: null };
   const intl20 = require(1236) /* getSystemLocale */.intl;
@@ -78,7 +78,7 @@ export default function _default() {
   obj6[3] = intl21.string(require(1236) /* getSystemLocale */.t["AYOqO/"]);
   const intl22 = require(1236) /* getSystemLocale */.intl;
   obj6[4] = intl22.string(require(1236) /* getSystemLocale */.t.OrbvPP);
-  obj6[5] = importDefault(14419);
+  obj6[5] = importDefault(14418);
   obj6[6] = importDefault(9751);
   items[7] = obj6;
   const obj7 = { id: "12", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, status: null };
@@ -88,7 +88,7 @@ export default function _default() {
   obj7[3] = intl24.string(require(1236) /* getSystemLocale */.t["86rWJp"]);
   const intl25 = require(1236) /* getSystemLocale */.intl;
   obj7[4] = intl25.string(require(1236) /* getSystemLocale */.t.dFT4dX);
-  obj7[5] = importDefault(14425);
+  obj7[5] = importDefault(14424);
   obj7[6] = StatusTypes.DND;
   items[8] = obj7;
   const obj8 = { id: "13", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
@@ -98,7 +98,7 @@ export default function _default() {
   obj8[3] = intl27.string(require(1236) /* getSystemLocale */.t["z3+vGV"]);
   const intl28 = require(1236) /* getSystemLocale */.intl;
   obj8[4] = intl28.string(require(1236) /* getSystemLocale */.t.Zj8Sl1);
-  obj8[5] = importDefault(14419);
+  obj8[5] = importDefault(14418);
   items[9] = obj8;
   const obj9 = { id: "15", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, status: null };
   const intl29 = require(1236) /* getSystemLocale */.intl;
@@ -107,7 +107,7 @@ export default function _default() {
   obj9[3] = intl30.string(require(1236) /* getSystemLocale */.t["8SENG2"]);
   const intl31 = require(1236) /* getSystemLocale */.intl;
   obj9[4] = intl31.string(require(1236) /* getSystemLocale */.t["2ziAWp"]);
-  obj9[5] = importDefault(14417);
+  obj9[5] = importDefault(14416);
   obj9[6] = StatusTypes.DND;
   items[10] = obj9;
   return items;

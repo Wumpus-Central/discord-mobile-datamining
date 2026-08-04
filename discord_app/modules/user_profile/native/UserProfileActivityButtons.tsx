@@ -104,8 +104,8 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
-    if (stateFromStores !== tmp(12222).ActivityJoinability.CANNOT_JOIN) {
-      if (stateFromStores === tmp(12222).ActivityJoinability.JOINED) {
+    if (stateFromStores !== tmp(12221).ActivityJoinability.CANNOT_JOIN) {
+      if (stateFromStores === tmp(12221).ActivityJoinability.JOINED) {
         const intl2 = tmp(1236).intl;
         let stringResult = intl2.string(tmp(1236).t.DPfdsq);
       } else {
@@ -114,7 +114,7 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
       }
       obj = { text: null, variant: "active", disabled: null, onPress: null };
       obj[0] = stringResult;
-      JOINED = tmp(12222).ActivityJoinability.JOINED;
+      JOINED = tmp(12221).ActivityJoinability.JOINED;
       obj[2] = stateFromStores === JOINED;
       obj[3] = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
@@ -235,7 +235,7 @@ export const WatchActivityButton = function WatchActivityButton(arg0) {
   let require;
   ({ activity, onAction: require } = arg0);
   let importDefault;
-  const tmp2 = importDefault(12224)(activity);
+  const tmp2 = importDefault(12223)(activity);
   importDefault = tmp2;
   let tmp3 = null;
   if (importDefault(8112)(activity)) {

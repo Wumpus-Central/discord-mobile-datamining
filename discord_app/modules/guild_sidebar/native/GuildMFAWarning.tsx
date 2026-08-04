@@ -103,7 +103,7 @@ export default function GuildMFAWarning() {
   const tmp = createCacheKey();
   let obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
   obj = { style: tmp.MFAWarningIcon, source: null };
-  obj[1] = importDefault(15206);
+  obj[1] = importDefault(15205);
   const items = [callback2(Image, obj), ];
   obj = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;

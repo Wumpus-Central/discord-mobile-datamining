@@ -9,7 +9,7 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   usePredicate() {
-    return require(14817) /* useIsInActivityPrivacyCopyExperiment */.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
+    return require(14816) /* useIsInActivityPrivacyCopyExperiment */.useIsInActivityPrivacyCopyExperiment("ActivityPrivacyDefaultSharingSetting");
   },
   useOptions() {
     return React.useMemo(() => {
@@ -42,17 +42,17 @@ createToggle = {
     const setting = DefaultGuildsActivityRestrictedV2.getSetting();
     const DefaultGuildsActivityRestrictedV22 = require(3958) /* explicitContentFromProto */.DefaultGuildsActivityRestrictedV2;
     DefaultGuildsActivityRestrictedV22.updateSetting(NumberResult);
-    let obj = require(14817) /* useIsInActivityPrivacyCopyExperiment */;
+    let obj = require(14816) /* useIsInActivityPrivacyCopyExperiment */;
     if (obj.getIsInActivityPrivacyUpsellExperiment("ActivityPrivacyDefaultSharingSetting")) {
-      let tmp2Result = tmp2(14002);
+      let tmp2Result = tmp2(14001);
       const affectedGuilds = tmp2Result.computeAffectedGuilds(setting, NumberResult);
       if (null != affectedGuilds) {
-        tmp2Result = tmp2(14002);
+        tmp2Result = tmp2(14001);
         const activityRestrictionSettingName = tmp2Result.getActivityRestrictionSettingName(NumberResult);
         obj = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5[0], affectedGuildIds: obj5[1] } = affectedGuilds);
         obj[2] = activityRestrictionSettingName;
-        importDefault(4253).openLazy(tmp2(1959)(14818, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        importDefault(4253).openLazy(tmp2(1959)(14817, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
         const obj4 = importDefault(4253);
       }
     }

@@ -11,5 +11,5 @@ export const openDetailsActionSheet = function openDetailsActionSheet(arg0) {
   const obj = importDefault(8835);
   importDefault(8835).feedItemActioned({ itemId: id, itemType: type, actionParameters: { actionGestureType: "press", actionTargetElement: "overflow_menu_button", actionIntentType: "open", actionDestinationType: null } });
   const obj2 = importDefault(8835);
-  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(15448, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
+  importDefault(4253).openLazy(require(1959) /* asyncRequireImpl */(15447, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
 };

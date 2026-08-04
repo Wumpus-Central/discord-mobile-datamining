@@ -251,8 +251,8 @@ export default function GuildWelcomeActionSheet(guildId) {
       obj1 = { style: null, guild: null, size: null, textScale: 2 };
       obj1[0] = tmp.guildIcon;
       obj1[1] = stateFromStores;
-      obj1[2] = onHide(11929).Sizes.MEDIUM;
-      const items9 = [callback(onHide(11929), obj1), , , , ];
+      obj1[2] = onHide(11928).Sizes.MEDIUM;
+      const items9 = [callback(onHide(11928), obj1), , , , ];
       const obj2 = { style: null, variant: "heading-xl/extrabold", color: "text-default", children: null };
       obj2[0] = tmp.header;
       const intl = tmp2(1236).intl;
@@ -270,7 +270,7 @@ export default function GuildWelcomeActionSheet(guildId) {
       const obj5 = { style: null, variant: "eyebrow", color: "text-default", children: null };
       obj5[0] = tmp.channelsTitle;
       const intl2 = tmp2(1236).intl;
-      const tmp17 = onHide(11929);
+      const tmp17 = onHide(11928);
       obj5[3] = intl2.string(tmp2(1236).t["haj5+i"]).toUpperCase();
       items9[3] = callback(tmp2(4281).Text, obj5);
       let welcome_channels = welcomeScreen.welcome_channels;

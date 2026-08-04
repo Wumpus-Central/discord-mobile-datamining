@@ -55,12 +55,12 @@ export default function HSVColorPicker(arg0) {
   obj[6] = saturationValueSelectorStyle;
   obj[7] = onPanUpdate;
   obj[8] = onPanFinalize;
-  const items = [closure_4(importDefault(13816), obj), ];
-  const tmp10 = importDefault(13816);
+  const items = [closure_4(importDefault(13815), obj), ];
+  const tmp10 = importDefault(13815);
   if (hue == null) {
     hue = sharedValue;
   }
-  items[1] = closure_4(tmp9(13817), { hue, style: huePickerStyle, colorBarInnerStyle: hueColorBarInnerStyle, sliderStyle: hueSliderStyle, onPanUpdate, onPanFinalize });
+  items[1] = closure_4(tmp9(13816), { hue, style: huePickerStyle, colorBarInnerStyle: hueColorBarInnerStyle, sliderStyle: hueSliderStyle, onPanUpdate, onPanFinalize });
   obj[1] = items;
   return tmp6(tmp7, obj);
 };

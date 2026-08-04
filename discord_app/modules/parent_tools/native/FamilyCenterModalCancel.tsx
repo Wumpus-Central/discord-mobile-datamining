@@ -33,12 +33,12 @@ function FamilyCenterModalCancelScreen(otherUser) {
   const obj2 = { otherUser, iconSrc: null };
   const tmp2 = cancelLinkRequest(7260)();
   obj2[1] = cancelLinkRequest(7837);
-  const items1 = [callback(cancelLinkRequest(14073), obj2), , ];
+  const items1 = [callback(cancelLinkRequest(14072), obj2), , ];
   const obj3 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1236).intl;
   obj3[2] = intl.string(cancelLinkRequest(2285).HynllX);
   items1[1] = callback(otherUser(4281).Text, obj3);
-  items1[2] = callback(cancelLinkRequest(14043), { user: otherUser });
+  items1[2] = callback(cancelLinkRequest(14042), { user: otherUser });
   obj1[1] = items1;
   obj[0] = callback2(View, obj1);
   const items2 = [callback(otherUser(7758).ModalContent, obj), ];

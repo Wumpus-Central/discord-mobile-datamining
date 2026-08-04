@@ -11,5 +11,5 @@ export default function UserSettingsSwipeRightToLeft() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(importDefault(13794), { node });
+  return jsx(importDefault(13793), { node });
 };

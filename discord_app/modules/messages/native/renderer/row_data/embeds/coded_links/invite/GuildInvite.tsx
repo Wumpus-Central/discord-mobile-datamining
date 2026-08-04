@@ -133,7 +133,7 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   obj.guildIcon = tmp11;
   const tmp16 = tmp11;
   const tmpResult = importDefault(1945);
-  obj.thumbnailUrl = require(7865) /* frozen */.getAssetUriForEmbed(importDefault(11993));
+  obj.thumbnailUrl = require(7865) /* frozen */.getAssetUriForEmbed(importDefault(11992));
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -152,7 +152,7 @@ export const createErroredGuildInvite = function createErroredGuildInvite(code, 
   let colors;
   ({ colors, baseColors } = importDefault(7863)(closure_2));
   inviteError = inviteError.getInviteError(code);
-  let obj = require(11992) /* getDescriptiveInviteError */;
+  let obj = require(11991) /* getDescriptiveInviteError */;
   code = undefined;
   if (inviteError != null) {
     code = inviteError.code;
@@ -241,7 +241,7 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
     guild = obj1.fromInviteGuild(invite.guild);
     flag2 = false;
   }
-  let obj2 = require(12506) /* getHeaderTextForInvite */;
+  let obj2 = require(12505) /* getHeaderTextForInvite */;
   let obj = { isVoiceChannel: tmp7, isOwnInvite, isHubGuild: null, isStream: null, isStage: null, isGuest: null };
   let flag3;
   if (guild != null) {

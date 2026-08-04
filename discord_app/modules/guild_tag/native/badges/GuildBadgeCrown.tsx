@@ -28,7 +28,7 @@ export const GuildBadgeCrown = function GuildBadgeCrown(width) {
   }
   ({ primaryTintColor, secondaryTintColor } = width);
   const merged = Object.assign(width, Object.create(null));
-  let obj = require(13172) /* getTransformedBadgeColors */;
+  let obj = require(13171) /* getTransformedBadgeColors */;
   obj = { primaryBaseColors: closure_4, primaryTintColor, primaryTintLuminances: closure_5, primaryLuminanceWeights: items, secondaryBaseColors: closure_7, secondaryTintColor, secondaryTintLuminances: closure_8, secondaryLuminanceWeights: items1 };
   const transformedBadgeColors = obj.getTransformedBadgeColors(obj);
   ({ primaryColorsTransformed, secondaryColorsTransformed } = transformedBadgeColors);

@@ -15,5 +15,5 @@ export default function CollectiblesShopViewAllCategoryItemsScreen() {
   obj = {};
   const obj2 = stackNavigation(1480);
   const merged = Object.assign(settingNavigationRoute.params);
-  return jsx(importDefault(14760), {});
+  return jsx(importDefault(14759), {});
 };

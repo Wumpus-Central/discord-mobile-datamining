@@ -59,7 +59,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCESSIBILITY,
   getComponent() {
-    return require(14465) /* SettingsAccessibilityScreen */.default;
+    return require(14464) /* SettingsAccessibilityScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -13,5 +13,5 @@ export default function AuthorizedAppScreen() {
     stackNavigation.setOptions({ title: settingNavigationRoute.params.oauth2Token.application.name, headerShown: true });
   }, items);
   obj = { oauth2Token: settingNavigationRoute.params.oauth2Token };
-  return jsx(stackNavigation(14092), { oauth2Token: settingNavigationRoute.params.oauth2Token });
+  return jsx(stackNavigation(14091), { oauth2Token: settingNavigationRoute.params.oauth2Token });
 };

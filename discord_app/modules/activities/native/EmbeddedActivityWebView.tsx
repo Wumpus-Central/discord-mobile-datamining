@@ -59,13 +59,13 @@ class BaseActivityWebView {
     channelId = global.channelId;
     guildId = global.guildId;
     activitySessionId = global.activitySessionId;
-    f85348 = undefined;
+    f85344 = undefined;
     c17 = undefined;
     c18 = undefined;
     useState = undefined;
     c20 = undefined;
     useState = undefined;
-    f85352 = undefined;
+    f85348 = undefined;
     queryParams = undefined;
     concat = undefined;
     useRef = undefined;
@@ -85,7 +85,7 @@ class BaseActivityWebView {
     context = applicationId.useContext(require("context").WebViewContext);
     tmp5 = hadInvalidUrlError;
     first = hadInvalidUrlError(applicationId.useState(() => callback()), 1)[0];
-    f85348 = first;
+    f85344 = first;
     first1 = hadInvalidUrlError(applicationId.useState(() => {
       if (null != webViewKey) {
         let v4Result = callback2();
@@ -141,7 +141,7 @@ class BaseActivityWebView {
       }
     }, items2);
     rect = require("useStableSafeAreaInsets")();
-    f85352 = rect;
+    f85348 = rect;
     obj3 = require("getConstants");
     obj = {};
     constants = obj3.getConstants();
@@ -387,8 +387,8 @@ class BaseActivityWebView {
     }, items9);
     HermesInternal = null;
     if (null == url) {
-      tmp30 = f85348;
-      closure_28 = f85348;
+      tmp30 = f85344;
+      closure_28 = f85344;
       flag = false;
       tmp5Result = tmp5(obj2.useState(false), 2);
       [tmp32, useState] = tmp5Result;
@@ -398,7 +398,7 @@ class BaseActivityWebView {
       c31 = tmp5Result1[1];
       items10 = [, ];
       items10[0] = applicationId;
-      items10[1] = f85348;
+      items10[1] = f85344;
       effect5 = obj2.useEffect(() => {
         if (closure_28) {
           function parseCsp(arg0, str) {
@@ -953,8 +953,8 @@ class BaseActivityWebView {
       }
       return null;
     } else {
-      tmp26 = f85348;
-      if (f85348) {
+      tmp26 = f85344;
+      if (f85344) {
         _HermesInternal2 = HermesInternal;
         str5 = "file://";
         combined1 = "file://" + str;

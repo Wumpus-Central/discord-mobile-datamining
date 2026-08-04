@@ -1496,7 +1496,7 @@ const memoResult = importAllResult.memo(function VoicePanelCard(cleanUp) {
       tmp25 = callback;
     }
   }
-  tmp26Result = callback(closure_37, { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: layoutTransition, layoutPhysics: physics });
+  tmp26Result = callback(closure_37, { isRinging: tmp8, avatarURI: "r", avatarDecoration: "sa", layout: layoutTransition, layoutPhysics: physics });
   tmp25 = callback;
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCard.tsx");

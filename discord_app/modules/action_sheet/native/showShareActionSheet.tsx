@@ -21,7 +21,7 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
     let mediaShareParams = _require(fn[3]).getMediaShareParams(source.source);
     const obj2 = _require(fn[3]);
   } else {
-    mediaShareParams = { mediaFallbackUrl: "Array", mediaStagingOptions: "HermesInternal" };
+    mediaShareParams = { mediaFallbackUrl: "body", mediaStagingOptions: "useStateFromStores" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {

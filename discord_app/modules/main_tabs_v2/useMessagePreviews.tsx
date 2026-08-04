@@ -60,7 +60,7 @@ export default function useMessagePreview(guild_id) {
     }
     disabled = tmp6;
   }
-  return importDefault(14455)(guild_id, disabled);
+  return importDefault(14454)(guild_id, disabled);
 };
 export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) {
   const _require = arg0;

@@ -60,16 +60,16 @@ const stageChannelAudioStore = new StageChannelAudioStore(require("dispatcher"),
             if (!isGuildStageVoiceResult) {
               let defaultSpeakerForGuildCall = channel.isGuildVoice();
               if (defaultSpeakerForGuildCall) {
-                defaultSpeakerForGuildCall = importDefault(16066).getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForGuildCall;
-                const obj2 = importDefault(16066);
+                defaultSpeakerForGuildCall = importDefault(16065).getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForGuildCall;
+                const obj2 = importDefault(16065);
               }
               isGuildStageVoiceResult = defaultSpeakerForGuildCall;
             }
             if (!isGuildStageVoiceResult) {
               let defaultSpeakerForDMCall = channel.isDM();
               if (defaultSpeakerForDMCall) {
-                defaultSpeakerForDMCall = importDefault(16066).getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForDMCall;
-                const obj3 = importDefault(16066);
+                defaultSpeakerForDMCall = importDefault(16065).getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForDMCall;
+                const obj3 = importDefault(16065);
               }
               isGuildStageVoiceResult = defaultSpeakerForDMCall;
             }

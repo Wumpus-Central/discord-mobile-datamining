@@ -16,7 +16,7 @@ const require = arg1;
 function EmptyState() {
   const tmp = createCacheKey();
   let obj = { style: tmp.emptyWrapper, children: null };
-  obj = { style: tmp.emptyStateImage, source: importDefault(12010) };
+  obj = { style: tmp.emptyStateImage, source: importDefault(12009) };
   const items = [callback2(closure_7, obj), ];
   obj = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;

@@ -100,7 +100,7 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
                 const tmpResult8 = tmp(4136);
               }
               if (tmp15) {
-                const obj6 = { channelId: null, guildId: null, messageId: null, replaceChannelAndFixRoot: "add" };
+                const obj6 = { channelId: null, guildId: null, messageId: null, replaceChannelAndFixRoot: "Array" };
                 obj6[0] = channelId;
                 obj6[1] = guildId;
                 obj6[2] = messageId;

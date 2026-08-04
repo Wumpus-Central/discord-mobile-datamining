@@ -15,7 +15,7 @@ export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGate
   if (!tmp2) {
     obj = { channelId: null };
     obj[0] = channel.id;
-    require(4625) /* useAlertStore */.openAlert(require(12575) /* VoicePanelSpoilerAlert */.VOICE_PANEL_SPOILER_KEY, jsx(importDefault(12575), { channelId: null }));
+    require(4625) /* useAlertStore */.openAlert(require(12574) /* VoicePanelSpoilerAlert */.VOICE_PANEL_SPOILER_KEY, jsx(importDefault(12574), { channelId: null }));
     flag = true;
     const obj2 = require(4625) /* useAlertStore */;
   }

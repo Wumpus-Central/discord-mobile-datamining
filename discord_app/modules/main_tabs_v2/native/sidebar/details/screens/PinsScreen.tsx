@@ -24,7 +24,7 @@ const memoResult = require("noop").memo(() => {
   });
   const obj2 = channelId(589);
   const channelDetailsSearchContext = channelId(11583).useChannelDetailsSearchContext(channelId, stateFromStores);
-  obj = { style: callback().container, children: jsx(importDefault(15671), obj) };
+  obj = { style: callback().container, children: jsx(importDefault(15670), obj) };
   obj = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
   return <View searchContext={channelDetailsSearchContext} isFocused tab={SearchTabs.PINS} />;
 });

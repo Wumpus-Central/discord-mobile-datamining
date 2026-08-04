@@ -212,7 +212,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
     const obj10 = { style: null, size: null, source: null, color: null };
     obj10[0] = tmp.rowArrow;
     obj10[1] = tmp2(1297).Icon.Sizes.LARGE;
-    obj10[2] = importDefault(isOpen ? 12740 : 12741);
+    obj10[2] = importDefault(isOpen ? 12739 : 12740);
     obj10[3] = tmp.arrow.color;
     items1[2] = tmp6(tmp2(1297).Icon, obj10);
     obj[1] = items1;
@@ -222,36 +222,36 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return importDefault(12489);
+    return importDefault(12488);
   } else if (tmp.CAKE === giftStyle) {
-    return importDefault(12491);
-  } else if (tmp.CHEST === giftStyle) {
-    return importDefault(12492);
-  } else if (tmp.COFFEE === giftStyle) {
     return importDefault(12490);
+  } else if (tmp.CHEST === giftStyle) {
+    return importDefault(12491);
+  } else if (tmp.COFFEE === giftStyle) {
+    return importDefault(12489);
   } else if (tmp.SEASONAL_STANDARD_BOX === giftStyle) {
-    return importDefault(12493);
+    return importDefault(12492);
   } else if (tmp.SEASONAL_CAKE === giftStyle) {
-    return importDefault(12494);
+    return importDefault(12493);
   } else if (tmp.SEASONAL_CHEST === giftStyle) {
-    return importDefault(12495);
+    return importDefault(12494);
   } else if (tmp.SEASONAL_COFFEE === giftStyle) {
-    return importDefault(12496);
+    return importDefault(12495);
   } else if (tmp.NITROWEEN_STANDARD === giftStyle) {
     const obj = { uri: null };
-    obj[0] = importDefault(12063);
+    obj[0] = importDefault(12062);
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return importDefault(12497);
+    return importDefault(12496);
   } else if (tmp3.TIER_1 === id) {
-    return importDefault(12500);
+    return importDefault(12499);
   } else {
     if (tmp3.TIER_2 !== id) {
       if (tmp3.LEGACY !== id) {
         return null;
       }
     }
-    return importDefault(12501);
+    return importDefault(12500);
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {

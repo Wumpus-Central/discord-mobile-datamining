@@ -12,7 +12,7 @@ function handlePress() {
   obj = { premiumGroupProductName: null };
   obj[0] = callback();
   obj[0] = intl.formatToPlainString(importDefault(2867)["5xN/C1"], obj);
-  obj.openLazy(require(1959) /* asyncRequireImpl */(12693, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(12692, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 let obj = { premiumGroupBanner: null, pgUnavailable: null, pgUnavailableText: null };

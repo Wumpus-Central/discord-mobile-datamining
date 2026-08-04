@@ -16,7 +16,7 @@ const memoResult = require("noop").memo(function MainTabs() {
   obj = { style: items, children: null };
   items = [callback3().container, { marginLeft: rect.left, marginRight: rect.right }];
   obj = { gradient: tmp, children: null };
-  const items1 = [callback(importDefault(4814), { absolute: true, mix: isCustomThemeActive }), callback(importDefault(15035), {})];
+  const items1 = [callback(importDefault(4814), { absolute: true, mix: isCustomThemeActive }), callback(importDefault(15034), {})];
   obj[1] = items1;
   obj[1] = callback2(require(3997) /* ManaContext */.ThemeContextProvider, obj);
   return callback(View, obj);

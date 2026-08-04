@@ -29,8 +29,8 @@ function QuestHomeOrbShopCarouselHeading(orbAmount) {
 function QuestHomeOrbShopCarouselPlaceholder() {
   const callback = React.useCallback(() => {
     const obj = { height: null };
-    obj[0] = callback(14229).QUEST_HOME_ORB_SHOP_REWARD_CARD_HEIGHT;
-    return callback3(callback2(14228), obj);
+    obj[0] = callback(14228).QUEST_HOME_ORB_SHOP_REWARD_CARD_HEIGHT;
+    return callback3(callback2(14227), obj);
   }, []);
   const callback1 = React.useCallback((arg0) => "placeholder-" + arg0, []);
   let obj = { horizontal: true, accessibilityRole: "list", accessibilityLabel: null, accessibilityState: null, data: null, keyExtractor: null, renderItem: null, decelerationRate: "fast", snapToInterval: null, showsHorizontalScrollIndicator: false, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null };
@@ -179,7 +179,7 @@ export const useQuestHomeOrbShopCarouselData = function useQuestHomeOrbShopCarou
     return num;
   });
   const obj2 = orbAmount(589);
-  const popularOrbShopProducts = orbAmount(14216).usePopularOrbShopProducts({ enabled, variation });
+  const popularOrbShopProducts = orbAmount(14215).usePopularOrbShopProducts({ enabled, variation });
   obj = { products: popularOrbShopProducts.products, obtainableOrbRewards: stateFromStores, showPlaceholderCarousel: popularOrbShopProducts.showPlaceholderCarousel };
   return obj;
 };

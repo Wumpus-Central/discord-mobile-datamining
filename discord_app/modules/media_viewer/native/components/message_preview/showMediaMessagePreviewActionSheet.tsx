@@ -17,7 +17,7 @@ export default function showMediaMessagePreviewActionSheet(message) {
         obj[1] = message;
         obj[2] = user;
         obj[3] = message.closeMediaModal;
-        obj.openLazy(require(1959) /* asyncRequireImpl */(12162, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj);
+        obj.openLazy(require(1959) /* asyncRequireImpl */(12161, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj);
       }
     }
   }

@@ -60,7 +60,7 @@ const memoResult = importAllResult.memo(() => {
     };
     const items1 = [tmp7(tmp3(5315).TableRow, obj1), , ];
     let obj3 = { icon: null, label: "Refresh Override", onPress: null, arrow: true };
-    obj3[0] = tmp7(tmp3(13755).RefreshIcon, {});
+    obj3[0] = tmp7(tmp3(13754).RefreshIcon, {});
     obj3[2] = tmp3(11100).refreshBuildOverride;
     items1[1] = tmp7(tmp3(5315).TableRow, obj3);
     const obj4 = { icon: null, label: "Clear Override", variant: "danger", onPress: null, arrow: true };

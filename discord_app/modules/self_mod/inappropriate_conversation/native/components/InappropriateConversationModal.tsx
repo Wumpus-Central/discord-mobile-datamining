@@ -82,7 +82,7 @@ function TakeActionScreen(arg0) {
   obj1[2] = intl2.string(require(1236) /* getSystemLocale */.t.S0XtKF);
   items[1] = callback2(require(4281) /* Text */.Text, obj1);
   obj[1] = items;
-  const items1 = [callback3(closure_7, obj), callback2(importDefault(14940), { senderId, channelId, isReported, setReported, trackAnalyticsEvent })];
+  const items1 = [callback3(closure_7, obj), callback2(importDefault(14939), { senderId, channelId, isReported, setReported, trackAnalyticsEvent })];
   obj[1] = items1;
   return callback3(closure_7, obj);
 }

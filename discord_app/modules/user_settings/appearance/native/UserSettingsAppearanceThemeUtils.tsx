@@ -26,7 +26,7 @@ export const handleSaveTheme = function handleSaveTheme(found, analyticsLocation
     obj[4] = analyticsLocations;
     obj.track(constants2.CLIENT_THEME_UPDATED, obj);
     if ("system" === found.theme) {
-      let tmpResult = tmp(14320);
+      let tmpResult = tmp(14319);
       const result = tmpResult.resetBackgroundGradientPreset();
       tmpResult = tmp(11267);
       tmpResult.resetCustomTheme();
@@ -35,8 +35,8 @@ export const handleSaveTheme = function handleSaveTheme(found, analyticsLocation
       let saveClientThemeResult = tmp(8620).saveClientTheme(obj);
       const tmpResult1 = tmp(8620);
     } else if (found.type === tmp(4099).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-      const result1 = tmp(14320).resetBackgroundGradientPreset();
-      const tmpResult2 = tmp(14320);
+      const result1 = tmp(14319).resetBackgroundGradientPreset();
+      const tmpResult2 = tmp(14319);
       tmp(11267).updateCustomTheme(found.customThemeSettings, found.theme);
       const tmpResult3 = tmp(11267);
       const obj1 = { customUserThemeSettings: null, theme: null };
@@ -46,8 +46,8 @@ export const handleSaveTheme = function handleSaveTheme(found, analyticsLocation
       tmpResult4.saveClientTheme(obj1);
       const tmpResult5 = tmp(3995);
     } else if (found.type === tmp(4099).ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
-      const result2 = tmp(14320).updateBackgroundGradientPreset(found.id);
-      const tmpResult6 = tmp(14320);
+      const result2 = tmp(14319).updateBackgroundGradientPreset(found.id);
+      const tmpResult6 = tmp(14319);
       tmp(11267).resetCustomTheme();
       const tmpResult7 = tmp(11267);
       ({ id: obj10[0], theme: obj10[1] } = found);
@@ -55,8 +55,8 @@ export const handleSaveTheme = function handleSaveTheme(found, analyticsLocation
       const obj2 = { backgroundGradientPresetId: null, theme: null };
       const tmpResult8 = tmp(8620);
     } else {
-      const result3 = tmp(14320).resetBackgroundGradientPreset();
-      const tmpResult9 = tmp(14320);
+      const result3 = tmp(14319).resetBackgroundGradientPreset();
+      const tmpResult9 = tmp(14319);
       tmp(11267).resetCustomTheme();
       const tmpResult10 = tmp(11267);
       const obj3 = { theme: null };

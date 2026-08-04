@@ -14,7 +14,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
   },
   onValueChange: function onVideoUploadQualitySettingValueChange(videoUploadQuality) {
-    let obj = require(14543) /* UserSettingsText */;
+    let obj = require(14542) /* UserSettingsText */;
     obj = { videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
     const ViewImageDescriptions = require(3958) /* explicitContentFromProto */.ViewImageDescriptions;
     obj[1] = ViewImageDescriptions.getSetting();

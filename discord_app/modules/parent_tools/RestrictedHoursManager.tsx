@@ -87,7 +87,7 @@ function checkAndUpdateModal() {
     obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: null };
     obj[1] = c6;
     obj.dispatch(obj);
-    const obj3 = require(16231) /* closeRestrictedHoursModal */;
+    const obj3 = require(16230) /* closeRestrictedHoursModal */;
     if (c6) {
       const result1 = obj3.openRestrictedHoursModal();
     } else {
@@ -116,7 +116,7 @@ function handleScheduleUpdate() {
     obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: null };
     obj[1] = c6;
     obj.dispatch(obj);
-    const obj3 = require(16231) /* closeRestrictedHoursModal */;
+    const obj3 = require(16230) /* closeRestrictedHoursModal */;
     if (c6) {
       const result1 = obj3.openRestrictedHoursModal();
     } else {
@@ -150,8 +150,8 @@ prototype["_initialize"] = function _initialize() {
   obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: closure_6 };
   obj.dispatch(obj);
   if (closure_6) {
-    const result = require(16231) /* closeRestrictedHoursModal */.openRestrictedHoursModal();
-    const obj3 = require(16231) /* closeRestrictedHoursModal */;
+    const result = require(16230) /* closeRestrictedHoursModal */.openRestrictedHoursModal();
+    const obj3 = require(16230) /* closeRestrictedHoursModal */;
   }
   const interval = setInterval(checkAndUpdateModal, 60000);
   scheduleUpcomingWarning();
@@ -168,7 +168,7 @@ prototype["_terminate"] = function _terminate() {
     c8 = null;
   }
   let c9 = null;
-  const result = require(16231) /* closeRestrictedHoursModal */.closeRestrictedHoursModal();
+  const result = require(16230) /* closeRestrictedHoursModal */.closeRestrictedHoursModal();
   let c6 = false;
 };
 const restrictedHoursManager = new RestrictedHoursManager();

@@ -601,7 +601,7 @@ prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
   this.updateNavigation(undefined, this.state);
   if (tmp2) {
-    let obj = importDefault(15760);
+    let obj = importDefault(15759);
     const regions = obj.fetchRegions(self.props.guild.id);
   }
   obj = { settings_type: "channel", destination_pane: constants6.CHANNEL_SETTINGS };
@@ -678,7 +678,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
     const GUILD_THREADS_ONLY = constants3.GUILD_THREADS_ONLY;
     hasItem = GUILD_THREADS_ONLY.has(channel.type);
   }
-  let obj = require(15762) /* getIsChannelNameSettingEditable */;
+  let obj = require(15761) /* getIsChannelNameSettingEditable */;
   const isChannelNameSettingEditable = obj.getIsChannelNameSettingEditable({ canManageThread, canManageChannels, canSendMessages, isForumPost, isThread, isChannelOwner });
   if (channel.isForumPost()) {
     const intl4 = tmp3(1236).intl;
@@ -784,7 +784,7 @@ prototype["renderSlowmode"] = function renderSlowmode() {
   if (channel.type !== constants2.GUILD_TEXT) {
     return null;
   }
-  let obj = require(15761) /* getSecondsSliderLabel */;
+  let obj = require(15760) /* getSecondsSliderLabel */;
   const intl = require(1236) /* getSystemLocale */.intl;
   const secondsSliderLabel = obj.getSecondsSliderLabel(channel.rateLimitPerUser, false, intl.string(require(1236) /* getSystemLocale */.t.zvDu4h));
   if (channel.isForumLikeChannel()) {
@@ -816,7 +816,7 @@ prototype["renderSlowmode"] = function renderSlowmode() {
   const intl5 = tmp5(1236).intl;
   obj3[5] = intl5.string(require(1236) /* getSystemLocale */.t.piZgKF);
   obj3[6] = { text: secondsSliderLabel };
-  items2[1] = callback3(require(13337) /* Slider */.Slider, obj3);
+  items2[1] = callback3(require(13336) /* Slider */.Slider, obj3);
   obj[1] = items2;
   obj[2] = callback4(require(5317) /* PressableCard */.Card, obj);
   items.push(callback3(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj, "slowmode-section"));
@@ -855,7 +855,7 @@ prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
       obj[2] = autoArchiveDuration;
       obj[3] = channel;
       obj[4] = this.handleAutoArchiveDurationChange;
-      return closure_43(tmp5(15763).AutoArchiveDurationOptions, obj);
+      return closure_43(tmp5(15762).AutoArchiveDurationOptions, obj);
     }
   }
   return null;
@@ -906,7 +906,7 @@ prototype["renderDefaultAutoArchiveDuration"] = function renderDefaultAutoArchiv
         stringResult = string(fyXclY.W3Noi9);
       }
       obj[4] = stringResult;
-      tmp2(require(15763) /* AutoArchiveDurationOptions */.AutoArchiveDurationOptions, obj);
+      tmp2(require(15762) /* AutoArchiveDurationOptions */.AutoArchiveDurationOptions, obj);
       isForumLikeChannelResult = channel.isForumLikeChannel();
     }
   }
@@ -1056,7 +1056,7 @@ prototype["renderBitrateSettings"] = function renderBitrateSettings() {
       obj5[2] = closure_24;
       obj5[3] = bitrateLimit;
       obj5[4] = this.handleBitRateChange;
-      items2[1] = callback3(require(13337) /* Slider */.Slider, obj5);
+      items2[1] = callback3(require(13336) /* Slider */.Slider, obj5);
       obj1[0] = items2;
       obj[2] = callback4(require(5317) /* PressableCard */.Card, obj1);
       items.push(callback3(require(5649) /* TableRowGroupTitle */.TableRowGroup, obj, "bitrate-section"));
@@ -1149,7 +1149,7 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj4[1] = Math.min(channel.userLimit, tmp10);
       obj4[3] = tmp10;
       obj4[4] = this.handleUserLimitChange;
-      items2[1] = closure_43(tmp7(13337).Slider, obj4);
+      items2[1] = closure_43(tmp7(13336).Slider, obj4);
       obj[0] = items2;
       obj[2] = callback4(tmp7(5317).Card, obj);
       items.push(closure_43(tmp7(5649).TableRowGroup, obj, "channel-user-limit"));
@@ -1345,7 +1345,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     obj1[0] = stringResult;
     obj[1] = closure_43(self(5315).TableRow.TrailingText, obj1);
     if (channel.defaultForumLayout === GridSquareIcon(1382).ForumLayout.GRID) {
-      GridSquareIcon = GridSquareIcon(15764).GridSquareIcon;
+      GridSquareIcon = GridSquareIcon(15763).GridSquareIcon;
       obj = {};
       let tmpResult = tmp(GridSquareIcon, obj);
     } else {
@@ -1730,7 +1730,7 @@ prototype["renderCategory"] = function renderCategory() {
         tmp7 = self;
       }
       obj = { icon: null, label: null, trailing: null, arrow: null, onPress: null };
-      obj[0] = callback3(tmp7(15162).FolderPlusIcon, {});
+      obj[0] = callback3(tmp7(15161).FolderPlusIcon, {});
       const intl2 = tmp7(1236).intl;
       obj[1] = intl2.string(tmp7(1236).t.vHCZwr);
       obj = { text: null };

@@ -4,7 +4,7 @@ const result = require("expandEventProperties").fileFinishedImporting("modules/a
 
 export default function trackFriendsListViewed(source) {
   let str = source.tab_opened;
-  const tmp = importDefault(15700)();
+  const tmp = importDefault(15699)();
   let obj = importDefault(698);
   obj = { tab_opened: str, source: source.source };
   const merged = Object.assign(tmp);

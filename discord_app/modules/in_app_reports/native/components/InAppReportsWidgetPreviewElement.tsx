@@ -33,7 +33,7 @@ export default function WidgetPreview(widget) {
       obj1[1] = widget;
       const items1 = [tmp3.card, tmp.card];
       obj1[3] = items1;
-      items[1] = callback(tmp4(12253).WidgetSection, obj1);
+      items[1] = callback(tmp4(12252).WidgetSection, obj1);
       obj[1] = items;
       tmp5 = callback2(View, obj);
       const str = intl.string(tmp4(1236).t.SpsnDY);

@@ -193,7 +193,7 @@ function handleRelationshipAddOrUpdate(relationship) {
     });
   }
 }
-let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
+let obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: "horse", notifCenterTabFocused: "horse_face" };
 let set = new Set();
 obj[6] = set;
 obj[7] = [];
@@ -375,7 +375,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
+    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: "horse", notifCenterTabFocused: "horse_face" };
     obj[6] = new Set();
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -506,7 +506,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
+    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: "horse", notifCenterTabFocused: "horse_face" };
     obj[6] = new Set();
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -663,7 +663,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
+    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: "horse", notifCenterTabFocused: "horse_face" };
     obj[6] = new Set();
     if (flag) {
       let prop = obj.notifCenterLocalItems;

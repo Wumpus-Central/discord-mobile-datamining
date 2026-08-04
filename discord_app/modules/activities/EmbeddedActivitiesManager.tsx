@@ -484,7 +484,7 @@ let c27;
 class EmbeddedActivitiesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f107665 = applyArgumentsResult;
+    f107661 = applyArgumentsResult;
     applyArgumentsResult.handleSelectedChannelUpdate = function handleSelectedChannelUpdate() {
       let _location;
       let applicationId;
@@ -564,9 +564,9 @@ class EmbeddedActivitiesManager extends tmp3 {
         const result = lib.showDevShelfOverrideEnabled();
       }
     };
-    f107665 = undefined;
+    f107661 = undefined;
     closure_1 = applyArgumentsResult;
-    f107665 = handleOpenEmbeddedActivity((arg0) => {
+    f107661 = handleOpenEmbeddedActivity((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -767,9 +767,9 @@ class EmbeddedActivitiesManager extends tmp3 {
         lib.leaveActivity(obj);
       }
     };
-    f107665 = undefined;
+    f107661 = undefined;
     closure_1 = applyArgumentsResult;
-    f107665 = handleOpenEmbeddedActivity((arg0) => {
+    f107661 = handleOpenEmbeddedActivity((arg0) => {
       let closure_0 = arg0;
       let c5 = 0;
       let c6 = 0;

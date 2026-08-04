@@ -7,10 +7,10 @@ const result = require("jsxProd").fileFinishedImporting("design/void/Checkbox/na
 export default function Checkbox(style) {
   const obj = { style: style.style, source: null };
   if (style.selected) {
-    obj[1] = tmp3(13246);
+    obj[1] = tmp3(13245);
     let tmp5 = obj;
   } else {
-    obj[1] = tmp3(13247);
+    obj[1] = tmp3(13246);
     tmp5 = obj;
   }
   return <Image {...tmp5} />;

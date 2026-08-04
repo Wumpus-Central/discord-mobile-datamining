@@ -16,7 +16,7 @@ const require = arg1;
 function NavigatorWithCaptchaHook() {
   let require;
   let tmp9;
-  let obj = require(15027) /* useIsHCaptchaModalOpenTracking */;
+  let obj = require(15026) /* useIsHCaptchaModalOpenTracking */;
   const isHCaptchaModalOpenTracking = obj.useIsHCaptchaModalOpenTracking();
   const tmp6 = callback3();
   const tmp5 = importDefault(8283)();
@@ -42,7 +42,7 @@ function NavigatorWithCaptchaHook() {
   const tmp15 = closure_10;
   const tmp16 = closure_9;
   const tmp8 = callback(importAllResult.useState(AuthStates.WELCOME), 2);
-  obj[0] = require(15028) /* registerAsset */;
+  obj[0] = require(15027) /* registerAsset */;
   const children = [callback2(importDefault(8313), obj), ];
   if (tmp5) {
     obj = { value: null, children: null };
@@ -192,11 +192,11 @@ const context = importAllResult.createContext(() => {
 let obj2 = { borderBottomWidth: 0, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function Auth() {
   const effect = importAllResult.useEffect(() => {
-    callback2(15029).initialize();
+    callback2(15028).initialize();
     return () => callback(table[21]).terminate();
   }, []);
   const layoutEffect = importAllResult.useLayoutEffect(() => callback(6843).trackAppUIViewed(), []);
-  importDefault(15033)();
+  importDefault(15032)();
   let closure_0 = importAllResult.useRef(undefined);
   return callback2(context.Provider, { value: importAllResult.useCallback(() => callback(outer1_2[7]).getTrackRegTransition(callback), [])(), children: callback2(NavigatorWithCaptchaHook, {}) });
 });

@@ -13,5 +13,5 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
       callback(table[0]).hideActionSheet(closure_3);
     }
   };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(16540, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(16539, dependencyMap.paths), GuildSettingsModalStickerInfoActionSheet, obj);
 };

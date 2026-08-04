@@ -17,7 +17,7 @@ function NitroAcquiredHeader(skuId) {
   const tmp = createCacheKey();
   let obj = { style: tmp.header, children: null };
   obj = { source: null };
-  obj[0] = importDefault(12075);
+  obj[0] = importDefault(12074);
   const items = [callback(importDefault(5236), obj), ];
   obj = { style: tmp.fractionNitroIcon, children: null };
   const obj1 = { skuId: skuId.skuId, width: null, height: null };

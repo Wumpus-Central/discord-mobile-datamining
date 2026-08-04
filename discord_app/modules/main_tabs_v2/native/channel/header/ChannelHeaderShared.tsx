@@ -1,5 +1,5 @@
 import _slicedToArray from "_slicedToArray";
-import module_12458 from "module_12458";
+import module_12457 from "module_12457";
 import { View } from "map";
 import upsertRelationship from "upsertRelationship";
 import mergeGuildAvatar from "mergeGuildAvatar";
@@ -105,7 +105,7 @@ function ChannelTitle(guildId) {
   tmp8Result = !disableArrow;
   if (!disableArrow) {
     const obj2 = { source: null, size: null, style: null };
-    obj2[0] = tmp(12457);
+    obj2[0] = tmp(12456);
     obj2[1] = require(1297) /* Button */.Icon.Sizes.REFRESH_SMALL_16;
     obj2[2] = tmp4.arrowIcon;
     tmp8Result = tmp8(require(1297) /* Button */.Icon, obj2);
@@ -138,7 +138,7 @@ function UserAvatar(user) {
   let status;
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: false, isMobileOnline: "done", isVROnline: "flowing", style: "hourglass", autoStatusCutout: "hours" };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: true, status: null, isMobileOnline: null, isVROnline: 279, style: null, autoStatusCutout: "\u{1F482}\u{1F3FF}\u200D\u2640\uFE0F" };
   obj[3] = require(1297) /* Button */.AvatarSizes.REFRESH_MEDIUM_32;
   let tmp3 = null;
   if (!user.isSystemUser()) {
@@ -209,7 +209,7 @@ function MemberCountText(arg0) {
     tmp9 = leadingAccessoryWidth;
   }
   obj[3] = tmp9;
-  const children = [closure_9(importDefault(12458), obj), ];
+  const children = [closure_9(importDefault(12457), obj), ];
   let tmp7Result = null;
   if (withSeparator) {
     let str3 = "text-xs/medium";

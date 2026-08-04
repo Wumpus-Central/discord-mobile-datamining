@@ -39,7 +39,7 @@ const memoResult = require("noop").memo(function GuildsBarItemUnavailableGuilds(
     obj[3] = tmp.unavailableGuilds;
     const obj1 = { style: null, source: null };
     obj1[0] = tmp.unavailableGuildsIcon;
-    obj1[1] = importDefault(15336);
+    obj1[1] = importDefault(15335);
     obj[4] = <closure_3 style={null} source={null} />;
     tmp5 = <closure_4 count={null} />;
   }

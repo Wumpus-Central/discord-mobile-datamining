@@ -9,5 +9,5 @@ export default function GuildRoleSubscriptionCancelSettingScreen() {
   const settingNavigationRoute = obj.useSettingNavigationRoute();
   obj = {};
   const merged = Object.assign(settingNavigationRoute.params);
-  return jsx(importDefault(14363), {});
+  return jsx(importDefault(14362), {});
 };

@@ -11,43 +11,43 @@ const require = arg1;
 let closure_9 = {
   mic(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require(16123) /* PTTButton */.MicButton, {}, arg0);
+    return jsx(require(16122) /* PTTButton */.MicButton, {}, arg0);
   },
   ptt(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require(16123) /* PTTButton */.PTTButton, {}, arg0);
+    return jsx(require(16122) /* PTTButton */.PTTButton, {}, arg0);
   },
   micConnected(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(require(16123) /* PTTButton */.MicButton, {}, arg0);
+    return jsx(require(16122) /* PTTButton */.MicButton, {}, arg0);
   },
   connect(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16126), {}, arg0);
+    return jsx(importDefault(16125), {}, arg0);
   },
   chat(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16132), {}, arg0);
+    return jsx(importDefault(16131), {}, arg0);
   },
   disconnectCancel(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16134), {}, arg0);
+    return jsx(importDefault(16133), {}, arg0);
   },
   video(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16136), {}, arg0);
+    return jsx(importDefault(16135), {}, arg0);
   },
   soundboard(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16138), {}, arg0);
+    return jsx(importDefault(16137), {}, arg0);
   },
   screenshare(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16140), {}, arg0);
+    return jsx(importDefault(16139), {}, arg0);
   },
   drawerToggle(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(importDefault(16143), {}, arg0);
+    return jsx(importDefault(16142), {}, arg0);
   }
 };
 let closure_10 = { code: "function useControlsButtonsTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea}=this.__closure;return getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);}" };
@@ -57,9 +57,9 @@ export default function useControlsButtons() {
   const context = treatment.useContext(safeArea(11557));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
-  const tmp2 = safeArea(15982)(context.channelId);
+  const tmp2 = safeArea(15981)(context.channelId);
   const dependencyMap = tmp2;
-  let obj = safeArea(16046);
+  let obj = safeArea(16045);
   treatment = obj.useConfig({ location: "VoicePanelControlButtons" }).treatment;
   let items = [stateFromStores];
   stateFromStores = windowDimensions(589).useStateFromStores(items, () => stateFromStores.getMode() === constants.PUSH_TO_TALK);
@@ -90,7 +90,7 @@ export default function useControlsButtons() {
           obj[2] = tmp6.micConnected;
           items.push(obj);
         }
-        if (treatment === callback(16046).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
+        if (treatment === callback(16045).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           const obj1 = { type: "icon-normal", key: "connected-screenshare", render: null };
           obj1[2] = tmp6.screenshare;
           items.push(obj1);
@@ -104,7 +104,7 @@ export default function useControlsButtons() {
           obj3[2] = tmp6.ptt;
           items.push(obj3);
         }
-        if (treatment === tmp10(16046).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (treatment === tmp10(16045).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: null };
           obj4[2] = tmp6.screenshare;
           items.push(obj4);

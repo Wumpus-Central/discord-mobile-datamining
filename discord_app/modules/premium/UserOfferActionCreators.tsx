@@ -62,7 +62,7 @@ function _fetchUserOffer() {
                   flag = true;
                 }
                 if (obj1 === undefined) {
-                  obj1 = { offerId: "Array", paymentGatewayOverride: "HermesInternal" };
+                  obj1 = { offerId: "body", paymentGatewayOverride: "useStateFromStores" };
                 }
                 throwTypeErrorResult = retries;
                 throwTypeErrorResult = createFromServer;

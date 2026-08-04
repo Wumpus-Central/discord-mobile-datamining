@@ -30,8 +30,8 @@ export default function FamilyCenterFeatureRows() {
   const intl6 = require(1236) /* getSystemLocale */.intl;
   obj = { icon: null, IconComponent: null, header: null, description: null };
   const ageSpecificText2 = obj2.useAgeSpecificText(intl5.string(importDefault(2285)["+pi4Yt"]), intl6.string(importDefault(2285)["1xPTwE"]));
-  obj[0] = importDefault(14037);
-  obj[1] = require(14038) /* ChatCheckIcon */.ChatCheckIcon;
+  obj[0] = importDefault(14036);
+  obj[1] = require(14037) /* ChatCheckIcon */.ChatCheckIcon;
   const intl7 = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl7.string(importDefault(2285)["001l3m"]);
   obj[3] = ageSpecificText;
@@ -41,7 +41,7 @@ export default function FamilyCenterFeatureRows() {
   obj[2] = intl8.string(importDefault(2285).yipAeP);
   obj[3] = ageSpecificText1;
   items[1] = obj;
-  obj1 = { icon: importDefault(9017), IconComponent: require(14033) /* QrCodeIcon */.QrCodeIcon, header: null, description: null };
+  obj1 = { icon: importDefault(9017), IconComponent: require(14032) /* QrCodeIcon */.QrCodeIcon, header: null, description: null };
   const intl9 = require(1236) /* getSystemLocale */.intl;
   obj1[2] = intl9.string(importDefault(2285).hhOuMe);
   obj1[3] = ageSpecificText2;

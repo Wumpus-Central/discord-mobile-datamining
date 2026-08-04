@@ -23,9 +23,9 @@ export default function UserSettingsEditUserProfile(arg0) {
     obj = { currentUser: null };
     obj[0] = stateFromStores;
     const merged = Object.assign(arg0);
-    obj[1] = jsx(importDefault(13805), { currentUser: null });
+    obj[1] = jsx(importDefault(13804), { currentUser: null });
     tmp7 = jsx(stateFromStores(5610).AnalyticsLocationProvider, { currentUser: null });
-    const tmpResult = importDefault(13805);
+    const tmpResult = importDefault(13804);
   }
   return tmp7;
 };

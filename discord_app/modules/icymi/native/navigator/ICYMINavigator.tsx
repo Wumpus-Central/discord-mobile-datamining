@@ -21,7 +21,7 @@ export default function ICYMINavigator() {
   obj = {
     name: "icymi-screen",
     getComponent() {
-      return callback(15440).ICYMITab;
+      return callback(15439).ICYMITab;
     }
   };
   const items = [
@@ -29,7 +29,7 @@ export default function ICYMINavigator() {
     callback(createNativeStackNavigator.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return callback(15391).ThemedNotificationsModal;
+        return callback(15390).ThemedNotificationsModal;
       }
     })
   ];

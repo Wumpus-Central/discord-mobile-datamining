@@ -45,7 +45,7 @@ export default function ICYMICustomScoresModal() {
       return obj;
     },
     getComponent() {
-      return lib(15446).default;
+      return lib(15445).default;
     }
   };
   const items = [
@@ -58,7 +58,7 @@ export default function ICYMICustomScoresModal() {
         return obj;
       },
       getComponent() {
-        return lib(15447).default;
+        return lib(15446).default;
       }
     })
   ];

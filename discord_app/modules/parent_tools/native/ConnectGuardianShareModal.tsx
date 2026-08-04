@@ -28,7 +28,7 @@ function ConnectGuardianShareScreen() {
   const effect = React.useEffect(() => {
     getLinkCode();
   }, []);
-  importDefault(14031)(importDefault(4490).pop);
+  importDefault(14030)(importDefault(4490).pop);
   obj = { spacing: null, children: null };
   obj[0] = importDefault(712).space.PX_40;
   obj = { spacing: null, children: null };
@@ -56,7 +56,7 @@ function ConnectGuardianShareScreen() {
       obj5[1] = stateFromStores;
       obj5[2] = stateFromStores1;
       obj5[3] = getLinkCode;
-      let tmp11Result = tmp11(tmp2(14032).ConnectGuardianCard, obj5);
+      let tmp11Result = tmp11(tmp2(14031).ConnectGuardianCard, obj5);
     }
     const obj6 = { children: null };
     const obj7 = { children: null };
@@ -68,7 +68,7 @@ function ConnectGuardianShareScreen() {
     obj6[0] = tmp11(getLinkCode(7758).ModalContent, obj7);
     return tmp11(getLinkCode(7757).ModalScreen, obj6);
   }
-  const tmp9 = importDefault(14031);
+  const tmp9 = importDefault(14030);
   tmp11Result = tmp11(View, { style: tmp.loading, children: callback(getLinkCode(5732).ActivityIndicator, {}) });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);

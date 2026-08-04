@@ -246,7 +246,7 @@ export const InlineHcaptcha = function InlineHcaptcha(siteKey) {
   };
   let obj2 = siteKey(514);
   const merged1 = Object.assign(merged);
-  return jsx(importDefault(16228), {
+  return jsx(importDefault(16227), {
     siteKey,
     onMessage(nativeEvent) {
       if (null != nativeEvent.nativeEvent.data) {

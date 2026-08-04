@@ -61,7 +61,7 @@ function useIOSCompletionStates(guild) {
   const items6 = [tmp8];
   const stateFromStores4 = _require(589).useStateFromStores(items6, () => outer1_6.getProgress(guild.id));
   if (stateFromStores) {
-    const ServerSetupBoostCtaExperiment = tmp(11860).ServerSetupBoostCtaExperiment;
+    const ServerSetupBoostCtaExperiment = tmp(11859).ServerSetupBoostCtaExperiment;
     const enabled = ServerSetupBoostCtaExperiment.getConfig({ location: "GuildProgress" }).enabled;
     const items7 = [guildPopulated, guildPersonalized, stateFromStores2];
     if (enabled) {

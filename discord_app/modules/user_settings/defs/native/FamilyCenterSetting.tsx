@@ -11,9 +11,9 @@ createToggle = {
   parent: null,
   IconComponent: require("GroupIcon").GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
-    let obj = require(14016) /* useIsParentalConsentBannerActive */;
+    let obj = require(14015) /* useIsParentalConsentBannerActive */;
     const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-    const parentalConsentWarning = require(14017) /* useParentalConsentWarning */.useParentalConsentWarning();
+    const parentalConsentWarning = require(14016) /* useParentalConsentWarning */.useParentalConsentWarning();
     let daysRemaining;
     if (parentalConsentWarning != null) {
       daysRemaining = parentalConsentWarning.daysRemaining;
@@ -42,7 +42,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER,
   getComponent() {
-    return require(14020) /* FamilyCenterLoading */.default;
+    return require(14019) /* FamilyCenterLoading */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

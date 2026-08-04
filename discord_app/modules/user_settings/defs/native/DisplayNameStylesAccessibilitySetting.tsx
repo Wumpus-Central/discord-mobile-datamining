@@ -7,7 +7,7 @@ function useValue() {
   return require(589) /* initialize */.useStateFromStores(items, () => obj.displayNameStylesEnabled);
 }
 function onValueChange(enabled) {
-  const result = require(13618) /* setFontSize */.setDisplayNameStylesEnabled(enabled);
+  const result = require(13617) /* setFontSize */.setDisplayNameStylesEnabled(enabled);
 }
 createToggle = {
   useTitle() {

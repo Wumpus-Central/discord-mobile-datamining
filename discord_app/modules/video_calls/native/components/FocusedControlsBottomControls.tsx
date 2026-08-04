@@ -223,7 +223,7 @@ class FocusedControlsBottomDrawer {
     height = undefined;
     c11 = undefined;
     c12 = undefined;
-    f107862 = undefined;
+    f107858 = undefined;
     handleOpen = function handleOpen() {
       if (!first) {
         if (onDrawerOpen != null) {
@@ -279,7 +279,7 @@ class FocusedControlsBottomDrawer {
     callback = onClose.useCallback(() => {
       const result = reveal(sum3[18]).UNSAFE_markDismissibleContentAsDismissed(reveal(sum3[19]).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
     }, []);
-    f107862 = callback;
+    f107858 = callback;
     items = [, , ];
     items[0] = sharedValue;
     items[1] = derivedValue;
@@ -527,7 +527,7 @@ class FocusedControlsBottomDrawer {
     }, items5);
     tmp19Result7 = require("ManaContext");
     theme = tmp19Result7.useThemeContext().theme;
-    tmp40 = f107862;
+    tmp40 = f107858;
     obj3 = { style: animatedStyle, pointerEvents: "box-none", children: null };
     obj4 = { gesture: tmp31[1], children: null };
     tmp41 = handleOpen;

@@ -78,7 +78,7 @@ export default function ForLaterCardActionButtons(savedMessage) {
     let obj2 = { label: null, IconComponent: null, action: null };
     obj2[0] = intl3.string(savedMessage.throttledNow > savedMessage.saveData.dueAt ? t.GtBCnz : t.vrbqs1);
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      let PencilIcon = tmp3(12471).BellZIcon;
+      let PencilIcon = tmp3(12470).BellZIcon;
     } else {
       PencilIcon = tmp3(9591).PencilIcon;
     }

@@ -87,13 +87,13 @@ export default function UserSettingsDesignSystemTabs() {
   let obj2 = first(4129);
   items1[1] = obj2.hexWithOpacity(token, 0);
   obj = { style: createCacheKey().container, onLayout: callback, children: null };
-  const items2 = [callback2(first(11886).Tabs, { state: segmentedControlState, grow: first1 }), ];
+  const items2 = [callback2(first(11885).Tabs, { state: segmentedControlState, grow: first1 }), ];
   let tmp20Result = first2;
   if (first2) {
     obj = { state: null, colors: null };
     obj[0] = segmentedControlState;
     obj[1] = items1;
-    tmp20Result = tmp20(first(12027), obj);
+    tmp20Result = tmp20(first(12026), obj);
   }
   obj1 = { children: null };
   obj2 = { spacing: 24, children: null };

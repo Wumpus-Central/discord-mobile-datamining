@@ -36,7 +36,7 @@ function VoiceUsers(arg0) {
       obj[2] = closure_0;
       return outer1_11(outer1_0(outer1_2[11]).Avatar, obj, id.id);
     });
-    obj[1] = callback(require(12215) /* AvatarPile */.AvatarPile, obj);
+    obj[1] = callback(require(12214) /* AvatarPile */.AvatarPile, obj);
     tmp = callback(View, obj);
   }
   return tmp;

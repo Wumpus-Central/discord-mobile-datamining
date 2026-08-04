@@ -24,7 +24,7 @@ export default function SettingsItemAppIcon(color) {
       obj = { style: null, id: null, size: 32 };
       obj[0] = tmp3.icon;
       obj[1] = currentAppIcon;
-      let tmp11 = jsx(importDefault(14606), { style: null, id: null, size: 32 });
+      let tmp11 = jsx(importDefault(14605), { style: null, id: null, size: 32 });
     }
     return tmp11;
   }

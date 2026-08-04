@@ -14,7 +14,7 @@ function BalanceWidgetMenuSection() {
   const tmp = callback4();
   let obj = { spacing: 16, style: tmp.container, children: null };
   obj = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" };
-  const items = [callback2(require(4281) /* Text */.Text, obj), callback2(importDefault(14913), {})];
+  const items = [callback2(require(4281) /* Text */.Text, obj), callback2(importDefault(14912), {})];
   obj[2] = items;
   return callback3(require(4693) /* Stack */.Stack, obj);
 }
@@ -76,7 +76,7 @@ function OrbsFlowTest() {
   let obj = { children: null };
   obj = { style: callback4().wrap, contentContainerStyle: obj, children: null };
   obj = { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right };
-  const items = [callback2(BalanceWidgetMenuSection, {}), callback2(BalanceWidgetPillSection, {}), callback2(importDefault(14915), {})];
+  const items = [callback2(BalanceWidgetMenuSection, {}), callback2(BalanceWidgetPillSection, {}), callback2(importDefault(14914), {})];
   obj[2] = items;
   obj[0] = callback3(closure_5, obj);
   return callback2(require(5597) /* Layer */.LayerScope, obj);

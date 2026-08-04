@@ -28,7 +28,7 @@ createToggle = {
     FriendSourceFlagsSetting2.updateSetting(addFlagResult);
   },
   useIsDisabled() {
-    return require(13975) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    return require(13974) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
   }
 };
 createToggle = createToggle.createToggle(createToggle);

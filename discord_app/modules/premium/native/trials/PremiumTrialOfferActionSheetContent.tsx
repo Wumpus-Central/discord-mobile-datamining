@@ -60,7 +60,7 @@ const memoResult = require("noop").memo(function PremiumTrialOfferActionSheetCon
   }
   obj3[3] = intl7.formatToPlainString(require(1236) /* getSystemLocale */.t.q8eMc0, { displayName: displayNameFromSku, duration: intervalDuration });
   items1[1] = callback(require(4281) /* Text */.Text, obj3);
-  items1[2] = callback(importDefault(14907), { perks: items });
+  items1[2] = callback(importDefault(14906), { perks: items });
   const obj4 = { style: tmp.buttonContainer, children: null };
   const obj5 = { size: "lg", text: null, onPress: null, grow: true, icon: null };
   const intl8 = tmp3(1236).intl;

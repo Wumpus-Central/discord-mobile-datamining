@@ -23,7 +23,7 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
     obj[0] = stateFromStores;
     tmp8 = tmp4(8955)(obj);
   }
-  obj[1] = jsx(voiceState(14432).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: importDefault(4475)(stateFromStores) });
+  obj[1] = jsx(voiceState(14431).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: importDefault(4475)(stateFromStores) });
   return <View style={callback().cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
@@ -39,7 +39,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     }
     const obj = { lineClamp: 1, children: null };
     obj[1] = tmp3;
-    return jsx(require(14432) /* HAPPENING_NOW_CARD_MARGIN_RIGHT */.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
+    return jsx(require(14431) /* HAPPENING_NOW_CARD_MARGIN_RIGHT */.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
   }
   if (null != activity.stream) {
     if (null != activity) {

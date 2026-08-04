@@ -24,41 +24,41 @@ const prototype = HolidayEventsManager.prototype;
 prototype["updateSoundpack"] = function updateSoundpack() {
   const soundpack = store.getSoundpack();
   const lastSoundpackExperimentId = store.getLastSoundpackExperimentId();
-  const experiment = importDefault(16328).experiment;
+  const experiment = importDefault(16327).experiment;
   if (experiment != null) {
     const name = experiment.definition.name;
   }
-  let isEligibleResult = importDefault(16331).isEligible();
+  let isEligibleResult = importDefault(16330).isEligible();
   if (isEligibleResult) {
     if (isEligibleResult) {
-      isEligibleResult = null != tmp3(16328).soundpack;
+      isEligibleResult = null != tmp3(16327).soundpack;
     }
     if (isEligibleResult) {
       isEligibleResult = name !== lastSoundpackExperimentId;
     }
     if (isEligibleResult) {
-      isEligibleResult = soundpack !== tmp3(16328).soundpack;
+      isEligibleResult = soundpack !== tmp3(16327).soundpack;
     }
     if (isEligibleResult) {
-      require(16332) /* setSoundpack */.setSoundpack(tmp3(16328).soundpack, name);
-      const obj3 = require(16332) /* setSoundpack */;
+      require(16331) /* setSoundpack */.setSoundpack(tmp3(16327).soundpack, name);
+      const obj3 = require(16331) /* setSoundpack */;
     }
   } else {
-    require(16332) /* setSoundpack */.setSoundpack(Soundpacks.CLASSIC, null);
-    const obj2 = require(16332) /* setSoundpack */;
+    require(16331) /* setSoundpack */.setSoundpack(Soundpacks.CLASSIC, null);
+    const obj2 = require(16331) /* setSoundpack */;
   }
 };
 prototype["updateRingtone"] = function updateRingtone() {
   if (obj.isEligible()) {
     const tmpResult = importDefault(9697);
     if (null != tmpResultResult.call_ringing) {
-      require(16333) /* setIncomingRingtone */.setIncomingRingtone("call_ringing", `${tmp7.call_ringing}.mp3`);
-      const obj3 = require(16333) /* setIncomingRingtone */;
+      require(16332) /* setIncomingRingtone */.setIncomingRingtone("call_ringing", `${tmp7.call_ringing}.mp3`);
+      const obj3 = require(16332) /* setIncomingRingtone */;
     }
     tmpResultResult = importDefault(9697)(store.getSoundpack());
   } else {
-    require(16333) /* setIncomingRingtone */.setIncomingRingtone("call_ringing", "call_ringing.mp3");
-    const obj2 = require(16333) /* setIncomingRingtone */;
+    require(16332) /* setIncomingRingtone */.setIncomingRingtone("call_ringing", "call_ringing.mp3");
+    const obj2 = require(16332) /* setIncomingRingtone */;
   }
 };
 const holidayEventsManager = new HolidayEventsManager();

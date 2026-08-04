@@ -9,7 +9,7 @@ const toggle = createToggle.createToggle({
   useValue: require("explicitContentFromProto").NativePhoneIntegrationEnabled.useSetting,
   onValueChange: require("explicitContentFromProto").NativePhoneIntegrationEnabled.updateSetting,
   usePredicate() {
-    let enabled = importDefault(14570).useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
+    let enabled = importDefault(14569).useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
     if (enabled) {
       enabled = require(500) /* set */.isIOS();
       const obj2 = require(500) /* set */;
@@ -26,7 +26,7 @@ const obj = {
   useValue: require("explicitContentFromProto").NativePhoneIntegrationEnabled.useSetting,
   onValueChange: require("explicitContentFromProto").NativePhoneIntegrationEnabled.updateSetting,
   usePredicate() {
-    let enabled = importDefault(14570).useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
+    let enabled = importDefault(14569).useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
     if (enabled) {
       enabled = require(500) /* set */.isIOS();
       const obj2 = require(500) /* set */;

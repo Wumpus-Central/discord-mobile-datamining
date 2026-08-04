@@ -93,7 +93,7 @@ export default function DevToolsTogglesScreen() {
   let tmp = createCacheKey();
   let tmp3 = callback(React.useState(""), 2);
   const first = tmp3[0];
-  let obj = first(14925);
+  let obj = first(14924);
   const manaTextMigrationHighlightRestartNotice = obj.useManaTextMigrationHighlightRestartNotice();
   let obj1 = first(589);
   const items = [getUserAgnosticState];
@@ -129,9 +129,9 @@ export default function DevToolsTogglesScreen() {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(14926).clearAll();
-        const obj = first(14926);
-        first(14908).clearAll();
+        first(14925).clearAll();
+        const obj = first(14925);
+        first(14907).clearAll();
       },
       arrow: true
     }),

@@ -8,8 +8,8 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/s
 export default function CollectiblesShopScreen() {
   let obj = require(6787) /* useSettingNavigationRoute */;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
-  const shopOrientationLock = require(14723) /* useShopOrientationLock */.useShopOrientationLock();
-  const obj2 = require(14723) /* useShopOrientationLock */;
+  const shopOrientationLock = require(14722) /* useShopOrientationLock */.useShopOrientationLock();
+  const obj2 = require(14722) /* useShopOrientationLock */;
   const tmp = require;
   const giftCardMobileConsumptionHalfsheet = require(5928) /* useGiftCardMobileConsumptionHalfsheet */.useGiftCardMobileConsumptionHalfsheet();
   const params = settingNavigationRoute.params;
@@ -35,5 +35,5 @@ export default function CollectiblesShopScreen() {
     onNavigateAway = params3.onNavigateAway;
   }
   obj[2] = onNavigateAway;
-  return jsx(tmp(14724).CollectiblesShopV2, { analyticsSource, screen, onNavigateAway: null });
+  return jsx(tmp(14723).CollectiblesShopV2, { analyticsSource, screen, onNavigateAway: null });
 };

@@ -20,7 +20,7 @@ const toggle = createToggle.createToggle({
     const tmp = importDefault;
     const tmpResult = importDefault(8835);
     obj = { enabled };
-    require(14616) /* toggleLabFeature */.toggleLabFeature(require(8836) /* apexExperiment */.ICYMI_LAB_FEATURE, obj);
+    require(14615) /* toggleLabFeature */.toggleLabFeature(require(8836) /* apexExperiment */.ICYMI_LAB_FEATURE, obj);
   },
   usePredicate: function useICYMIPredicate() {
     const ICYMIStaffOnlyExperiment = require(8836) /* apexExperiment */.ICYMIStaffOnlyExperiment;
@@ -47,7 +47,7 @@ let obj = {
     const tmp = importDefault;
     const tmpResult = importDefault(8835);
     obj = { enabled };
-    require(14616) /* toggleLabFeature */.toggleLabFeature(require(8836) /* apexExperiment */.ICYMI_LAB_FEATURE, obj);
+    require(14615) /* toggleLabFeature */.toggleLabFeature(require(8836) /* apexExperiment */.ICYMI_LAB_FEATURE, obj);
   },
   usePredicate: function useICYMIPredicate() {
     const ICYMIStaffOnlyExperiment = require(8836) /* apexExperiment */.ICYMIStaffOnlyExperiment;

@@ -312,7 +312,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
     },
     giftParams: { isGift: true, options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle } }
   };
-  closure_8 = tmp(12055)(obj);
+  closure_8 = tmp(12054)(obj);
   const items5 = [product];
   [tmp16, tmp17] = callback(obj.useMemo(() => {
     if (null == c5) {

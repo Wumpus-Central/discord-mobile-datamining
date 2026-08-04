@@ -15,11 +15,11 @@ const toggle = createToggle.createToggle({
     Quests3PDataOptedOut.updateSetting(!arg0);
   },
   useIsDisabled: function useDataToSupportQuests3PSettingIsDisabled() {
-    let adPersonalizationTogglesDisabled = require(14771) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
+    let adPersonalizationTogglesDisabled = require(14770) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
     const DropsOptedOut = require(3958) /* explicitContentFromProto */.DropsOptedOut;
     const setting = DropsOptedOut.useSetting();
-    const obj = require(14771) /* useAdPersonalizationTogglesDisabled */;
-    const isParentallyControlled = require(13975) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    const obj = require(14770) /* useAdPersonalizationTogglesDisabled */;
+    const isParentallyControlled = require(13974) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
     if (!adPersonalizationTogglesDisabled) {
       adPersonalizationTogglesDisabled = setting;
     }
@@ -44,11 +44,11 @@ let obj = {
     Quests3PDataOptedOut.updateSetting(!arg0);
   },
   useIsDisabled: function useDataToSupportQuests3PSettingIsDisabled() {
-    let adPersonalizationTogglesDisabled = require(14771) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
+    let adPersonalizationTogglesDisabled = require(14770) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
     const DropsOptedOut = require(3958) /* explicitContentFromProto */.DropsOptedOut;
     const setting = DropsOptedOut.useSetting();
-    const obj = require(14771) /* useAdPersonalizationTogglesDisabled */;
-    const isParentallyControlled = require(13975) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    const obj = require(14770) /* useAdPersonalizationTogglesDisabled */;
+    const isParentallyControlled = require(13974) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
     if (!adPersonalizationTogglesDisabled) {
       adPersonalizationTogglesDisabled = setting;
     }

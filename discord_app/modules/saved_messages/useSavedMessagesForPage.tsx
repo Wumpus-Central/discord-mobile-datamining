@@ -88,7 +88,7 @@ export default function useSavedMessagesForPage() {
       outer2_5.removeChangeListener(handleChange);
     };
   }, items);
-  importDefault(12467)();
+  importDefault(12466)();
   let tmp3 = callback(React.useState(() => {
     if (ALL(_undefined2[3]).SavedMessageSortTypes.BOOKMARK === ALL) {
       let messageBookmarks = outer1_5.getMessageBookmarks();

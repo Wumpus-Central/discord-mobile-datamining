@@ -27,7 +27,7 @@ export default function FamilyCenterRequestorDetails(otherUser) {
   obj[4] = otherUser.avatarDecoration;
   const items = [callback(require(1297) /* Button */.Avatar, obj), ];
   const obj1 = { style: tmp.detailsContainer, children: null };
-  const items1 = [callback(importDefault(14043), { user: otherUser }), callback(require(4281) /* Text */.Text, { variant: "text-xs/semibold", color: "text-muted", children: linkTimestampText })];
+  const items1 = [callback(importDefault(14042), { user: otherUser }), callback(require(4281) /* Text */.Text, { variant: "text-xs/semibold", color: "text-muted", children: linkTimestampText })];
   obj1[1] = items1;
   items[1] = callback2(View, obj1);
   obj[1] = items;

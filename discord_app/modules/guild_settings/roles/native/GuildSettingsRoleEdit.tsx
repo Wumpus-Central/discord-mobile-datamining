@@ -497,7 +497,7 @@ prototype["render"] = function render() {
     ({ handleNameChanged: obj3[6], handleMentionableChanged: obj3[7], handleHoistChanged: obj3[8] } = self);
     obj[9] = locked;
     obj[10] = newRole;
-    let tmp11Result = callback2(importDefault(16586), obj);
+    let tmp11Result = callback2(importDefault(16585), obj);
   } else if (tmp9.PERMISSIONS === effectiveSection) {
     obj = { guild: null, role: null, permissions: null, onPermissionsChanged: null, contentContainerStyle: null };
     obj[0] = guild;
@@ -505,7 +505,7 @@ prototype["render"] = function render() {
     obj[2] = permissions;
     obj[3] = self.handlePermissionsChanged;
     obj[4] = self.props.contentContainerStyle;
-    tmp11Result = callback2(importDefault(16593), obj);
+    tmp11Result = callback2(importDefault(16592), obj);
   } else if (tmp9.MEMBERS === effectiveSection) {
     obj = { guild: null, role: null, locked: null, contentContainerStyle: null };
     obj[0] = guild;
@@ -516,16 +516,16 @@ prototype["render"] = function render() {
     }
     obj[2] = tmp15;
     obj[3] = self.props.contentContainerStyle;
-    tmp11Result = callback2(importDefault(16595), obj);
+    tmp11Result = callback2(importDefault(16594), obj);
     const tmp11 = callback2;
-    const tmp14 = importDefault(16595);
+    const tmp14 = importDefault(16594);
   } else if (tmp9.VERIFICATIONS === effectiveSection) {
     const obj1 = { guild: null, role: null, locked: null, integrations: null };
     obj1[0] = guild;
     obj1[1] = role;
     obj1[2] = locked;
     obj1[3] = integrations;
-    tmp11Result = callback2(importDefault(16596), obj1);
+    tmp11Result = callback2(importDefault(16595), obj1);
   }
   const obj2 = { style: tmp.container, children: null };
   if (tmp2) {

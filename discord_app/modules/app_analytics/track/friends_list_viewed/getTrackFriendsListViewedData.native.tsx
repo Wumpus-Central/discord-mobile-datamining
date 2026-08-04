@@ -20,7 +20,7 @@ export default function getTrackFriendsListViewedData() {
   suggestionCount = suggestionCount.getSuggestionCount();
   obj = { num_friends: null };
   obj[0] = store2.getFriendCount();
-  const merged = Object.assign(importDefault(15701)());
+  const merged = Object.assign(importDefault(15700)());
   obj.num_outgoing_requests = store2.getOutgoingCount();
   obj.num_incoming_requests = store2.getPendingCount();
   obj.num_game_friends = store.getGameFriendCount();
@@ -29,7 +29,7 @@ export default function getTrackFriendsListViewedData() {
   obj.num_suggestions = suggestionCount;
   obj.was_dismissed = useContactSyncStore.getState().upsellCTADismissed;
   const hasFlagResult1 = require(1384) /* hasFlag */.hasFlag(setting, constants2.FIND_BY_EMAIL);
-  obj.contact_sync_is_enabled = require(11948) /* _uploadContacts */.isContactSyncEnabled(localAccount);
+  obj.contact_sync_is_enabled = require(11947) /* _uploadContacts */.isContactSyncEnabled(localAccount);
   obj.is_discoverable_email = hasFlagResult1;
   obj.is_discoverable_phone = hasFlagResult;
   return obj;

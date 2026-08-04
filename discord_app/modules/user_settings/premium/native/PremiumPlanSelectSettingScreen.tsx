@@ -9,5 +9,5 @@ export default function PremiumPlanSelectSettingScreen() {
   const settingNavigationRoute = obj.useSettingNavigationRoute();
   obj = {};
   const merged = Object.assign(settingNavigationRoute.params);
-  return jsx(importDefault(12719), {});
+  return jsx(importDefault(12718), {});
 };

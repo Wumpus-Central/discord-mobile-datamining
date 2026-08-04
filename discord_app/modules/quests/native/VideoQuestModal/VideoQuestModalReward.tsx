@@ -24,7 +24,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(withQuest
     str = size;
   }
   ({ withRewardTileAnimation, onTextBlockLayout } = withQuestName);
-  let obj = quest(14269);
+  let obj = quest(14268);
   quest = obj.useVideoQuestModalContext().quest;
   let obj1 = quest(10374);
   const items = [quest.id];
@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(withQuest
   obj[2] = importDefault(712).space.PX_24;
   obj[3] = withQuestName.style;
   obj = { hasConfetti: true, quest, size: str, progress: questTaskDetails.percentComplete, onPress: callback, withAnimation: withRewardTileAnimation };
-  const items1 = [callback(importDefault(14274), obj), ];
+  const items1 = [callback(importDefault(14273), obj), ];
   obj1 = { align: "center", spacing: null, onLayout: null, children: null };
   obj1[1] = importDefault(712).space.PX_4;
   obj1[2] = onTextBlockLayout;

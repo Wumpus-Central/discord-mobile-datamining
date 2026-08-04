@@ -90,7 +90,7 @@ prototype["isSelfStreamHidden"] = function isSelfStreamHidden(channelId) {
 };
 prototype["getLastActiveStream"] = function getLastActiveStream() {
   let tmp = null;
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     const _Array = Array;
     let arr = Array.from(map.values());
     arr = arr.pop();
@@ -102,7 +102,7 @@ prototype["getLastActiveStream"] = function getLastActiveStream() {
   return tmp;
 };
 prototype["getAllActiveStreams"] = function getAllActiveStreams() {
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     const _Array = Array;
     let items = Array.from(map.values());
   } else {
@@ -112,7 +112,7 @@ prototype["getAllActiveStreams"] = function getAllActiveStreams() {
 };
 prototype["getAllActiveStreamsForChannel"] = function getAllActiveStreamsForChannel(channelId) {
   let closure_0 = channelId;
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     const _Array = Array;
     let found = Array.from(map.values()).filter((channelId) => channelId.channelId === closure_0);
     const arr = Array.from(map.values());
@@ -123,7 +123,7 @@ prototype["getAllActiveStreamsForChannel"] = function getAllActiveStreamsForChan
 };
 prototype["getActiveStreamForStreamKey"] = function getActiveStreamForStreamKey(id) {
   let tmp = null;
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     let value = map.get(id);
     if (value == null) {
       value = null;
@@ -133,7 +133,7 @@ prototype["getActiveStreamForStreamKey"] = function getActiveStreamForStreamKey(
   return tmp;
 };
 prototype["getActiveStreamForApplicationStream"] = function getActiveStreamForApplicationStream(streamForUser) {
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     if (null != streamForUser) {
       const self = this;
       let activeStreamForStreamKey = this.getActiveStreamForStreamKey(require(4348) /* isStreamKey */.encodeStreamKey(streamForUser));
@@ -211,7 +211,7 @@ prototype["getIsActiveStreamPreviewDisabled"] = function getIsActiveStreamPrevie
   return flag;
 };
 prototype["getAnyStreamForUser"] = function getAnyStreamForUser(userId) {
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     let tmp4 = null;
     if (null != dependencyMap[userId]) {
       const _Object = Object;
@@ -249,7 +249,7 @@ prototype["getAnyStreamForUser"] = function getAnyStreamForUser(userId) {
   }
 };
 prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStreamForUser(arg0) {
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     let tmp4 = null;
     if (null != dependencyMap[arg0]) {
       const _Object = Object;
@@ -290,7 +290,7 @@ prototype["getAnyDiscoverableStreamForUser"] = function getAnyDiscoverableStream
   }
 };
 prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     let tmp5;
     if (dependencyMap[id] != null) {
       let tmp6 = guildId;
@@ -334,7 +334,7 @@ prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
 };
 prototype["getRTCStream"] = function getRTCStream(arg0) {
   let tmp = null;
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     let tmp4 = dependencyMap2[arg0];
     if (tmp4 == null) {
       tmp4 = null;
@@ -345,7 +345,7 @@ prototype["getRTCStream"] = function getRTCStream(arg0) {
 };
 prototype["getAllApplicationStreams"] = function getAllApplicationStreams() {
   const items = [];
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     for (const key10011 in closure_4) {
       let tmp5 = key10011;
       let tmp6 = dependencyMap;
@@ -389,7 +389,7 @@ prototype["getAllApplicationStreams"] = function getAllApplicationStreams() {
 prototype["getAllApplicationStreamsForChannel"] = function getAllApplicationStreamsForChannel(id) {
   let closure_0 = id;
   const items = [];
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     for (const key10012 in closure_4) {
       let tmp5 = key10012;
       let tmp6 = dependencyMap;
@@ -434,7 +434,7 @@ prototype["getAllApplicationStreamsForChannel"] = function getAllApplicationStre
   return found;
 };
 prototype["getViewerIds"] = function getViewerIds(currentUserActiveStream) {
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     let encodeStreamKeyResult = currentUserActiveStream;
     if (typeof currentUserActiveStream !== "string") {
       encodeStreamKeyResult = require(4348) /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
@@ -454,7 +454,7 @@ prototype["getCurrentAppIntent"] = function getCurrentAppIntent() {
 };
 prototype["getStreamingState"] = function getStreamingState() {
   const obj = { activeStreams: null, streamsByUserAndGuild: null, rtcStreams: null, streamerActiveStreamMetadatas: null };
-  if (importDefault(12974)(_detectH265HardwareDecode)) {
+  if (importDefault(12973)(_detectH265HardwareDecode)) {
     const _Array = Array;
     obj[0] = Array.from(map.entries());
     obj[1] = closure_4;
@@ -562,7 +562,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(require("dispatc
         pid = tmp20.pid;
       }
       if (tmp2) {
-        const tmp6 = importDefault(13087)(content);
+        const tmp6 = importDefault(13086)(content);
         let obj = { pid: null, id: null };
         obj[0] = pid;
         let id;
@@ -823,11 +823,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(require("dispatc
       } else if (reason === tmp3.SAFETY_GUILD_RATE_LIMITED) {
         let obj = guildId(4348);
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        guildId(1959)(13088, dependencyMap.paths).then((arg0) => {
+        guildId(1959)(13087, dependencyMap.paths).then((arg0) => {
           arg0.default(guildId);
         });
         FAILED = tmp22.ENDED;
-        const promise = guildId(1959)(13088, dependencyMap.paths);
+        const promise = guildId(1959)(13087, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = tmp22.FAILED;

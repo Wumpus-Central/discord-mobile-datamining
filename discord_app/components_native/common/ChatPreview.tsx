@@ -214,7 +214,7 @@ class ChatPreviewBase extends PureComponent {
         const jumpTargetId = tmp3.jumpTargetId;
         let tmp23;
         if (!tmp7) {
-          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "PX_16", shouldInitialScroll: "Array", animated: "user", scrollPosition: "2023-09_iar_user_reporting", focusTargetId: "Safety Experience IAR User Reporting" };
+          obj = { rows: null, scrollToMessageId: null, jumpTargetId: null, jumpType: "PX_16", shouldInitialScroll: "Array", animated: "2025-12-katsudon", scrollPosition: "user", focusTargetId: null };
           obj[0] = tmp22;
           obj[1] = jumpTargetId;
           obj[2] = jumpTargetId;
@@ -269,7 +269,7 @@ class ChatPreviewBase extends PureComponent {
         }
       }
       let obj = applyArgumentsResult(outer1_3[21]);
-      obj = { allowWithinModal: true, chatInputRef: "a", handleTransitionToThread: "Array", message: 40, messageChannel: null, selectedChannelId: "sm", tapLinkData: null };
+      obj = { allowWithinModal: true, chatInputRef: "a", handleTransitionToThread: "Array", message: "flex", messageChannel: 1, selectedChannelId: "100%", tapLinkData: "row" };
       obj[2] = function handleTransitionToThread(arg0, arg1, arg2) {
         const jumpToChatProps = props.props.jumpToChatProps;
         const onBeforeJumpToMessage = jumpToChatProps.onBeforeJumpToMessage;
@@ -492,7 +492,7 @@ prototype["render"] = function render() {
     if (null != guild_id1) {
       let obj1 = { guildId: null, channelId: null };
       ({ guild_id: obj7[0], id: obj7[1] } = channel);
-      tmp14 = callback(importDefault(11935), obj1);
+      tmp14 = callback(importDefault(11934), obj1);
     }
   }
   obj = { ref: self.chatRef, style: tmp.chat, inverted: true, onTapLink: self.handleTapLink, onTapChannel: self.handleTapChannel, onLongPressChannel: self.handleLongPressChannel, onLongPressLink: self.handleLongPressLink, onLongPressMessage: self.handleLongPressMessage, onLongPressReaction: self.handleLongPressReaction, onTapReaction: self.handleTapReaction, onTapImage: self.handleTapImage, onCompleteFirstLayout: null, onFirstLayout: null };

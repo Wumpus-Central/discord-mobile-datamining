@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo(function MessagesItemEmptyState() {
       }
     }
   }, []);
-  obj[1] = importDefault(15083);
+  obj[1] = importDefault(15082);
   obj[2] = tmp.image;
   obj[1] = callback(closure_4, obj);
   const items = [callback(closure_5, obj), , , ];

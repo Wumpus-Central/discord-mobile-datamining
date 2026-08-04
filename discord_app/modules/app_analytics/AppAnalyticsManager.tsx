@@ -121,7 +121,7 @@ prototype["_terminate"] = function _terminate() {
 prototype["getGameMetadata"] = function getGameMetadata() {
   const findActivityResult = filterPlayingActivities.findActivity((type) => type.type === constants.PLAYING);
   currentGameForAnalytics = currentGameForAnalytics.getCurrentGameForAnalytics();
-  const obj = { game_platform: importDefault(15692)(findActivityResult), game_name: null, game_exe_name: null, game_id: null, game_distributor: null, game_distributor_game_id: null, game_metadata: null };
+  const obj = { game_platform: importDefault(15691)(findActivityResult), game_name: null, game_exe_name: null, game_id: null, game_distributor: null, game_distributor_game_id: null, game_metadata: null };
   let name = null;
   if (null != findActivityResult) {
     name = findActivityResult.name;

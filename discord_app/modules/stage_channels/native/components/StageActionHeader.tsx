@@ -155,11 +155,11 @@ class StageSettingsButton {
 class StageInviteButton {
   constructor(arg0) {
     channelId = global.channelId;
-    f85688 = undefined;
-    f85689 = undefined;
+    f85684 = undefined;
+    f85685 = undefined;
     useActiveEvent = undefined;
     tmp2 = channelId;
-    tmp3 = f85689;
+    tmp3 = f85685;
     tmp = jsxs();
     obj = require("initialize");
     items = [];
@@ -167,7 +167,7 @@ class StageInviteButton {
     items1 = [];
     items1[0] = channelId;
     stateFromStores = obj.useStateFromStores(items, () => outer1_5.getChannel(channelId), items1);
-    f85688 = stateFromStores;
+    f85684 = stateFromStores;
     obj2 = require("initialize");
     items2 = [];
     items2[0] = View;
@@ -183,7 +183,7 @@ class StageInviteButton {
       }
       return outer1_7.getGuild(guild_id);
     }, items3);
-    f85689 = stateFromStores1;
+    f85685 = stateFromStores1;
     obj3 = require("useGuildEvents");
     useActiveEvent = obj3.useActiveEvent(channelId);
     tmp6 = null;
@@ -191,7 +191,7 @@ class StageInviteButton {
       tmp6 = null;
       if (null != stateFromStores1) {
         tmp7 = jsx;
-        tmp8 = f85688;
+        tmp8 = f85684;
         obj = { accessibilityLabel: null, containerStyle: null, source: null, IconComponent: null, onPress: null, disableBackground: true };
         tmp9 = require("ChannelCallNavigatorIcon");
         intl = require("getSystemLocale").intl;

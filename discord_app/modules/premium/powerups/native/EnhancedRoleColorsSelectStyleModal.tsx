@@ -59,7 +59,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
   dependencyMap = tmp3;
   let obj = require(4723) /* useHasEnhancedRoleColors */;
   hasEnhancedRoleColorsForRole = obj.useHasEnhancedRoleColorsForRole(guildId, role);
-  let obj1 = require(16590) /* useGuildSettingsRoleExampleMessage */;
+  let obj1 = require(16589) /* useGuildSettingsRoleExampleMessage */;
   let intl = require(1236) /* getSystemLocale */.intl;
   closure_4 = obj1.useGuildSettingsRoleExampleMessage(intl.string(require(1236) /* getSystemLocale */.t.Mi9Kbe));
   c5 = new importDefault(7851)();
@@ -110,7 +110,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
             const obj = outer2_0(1938);
             message.message.roleColors = outer2_0(7880).processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = outer2_1(12478);
+            message.message.avatarURL = outer2_1(12477);
           }
         };
         const items1 = [outer1_9(outer1_1(_undefined[16]), obj), ];

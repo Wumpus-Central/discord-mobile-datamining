@@ -126,7 +126,7 @@ export default importAllResult.memo((selectedEmoji) => {
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const found = frequentlyUsedReactionEmojis.filter((emoji) => {
     let obj = onPressEmoji(substr[15]);
-    obj = { emoji, channel: "Array", intention: true };
+    obj = { emoji, channel: "Array", intention: 8 };
     obj[2] = constants.DEFAULT_REACT_EMOJI;
     return !obj.isEmojiFilteredOrLocked(obj);
   });
@@ -161,7 +161,7 @@ export default importAllResult.memo((selectedEmoji) => {
     accessibilityRole: "button",
     onPress() {
       let obj = selectedEmoji(substr[17]);
-      obj = { onPressEmoji: maybeApplyNoTextColorForLightCustomTheme, channel: "r", pickerIntention: true, reactionType: "/assets/.cache/intl/bW9kdWxlcy9jaGVja291dC9tZXNzYWdlcw==", startExpanded: null };
+      obj = { onPressEmoji: maybeApplyNoTextColorForLightCustomTheme, channel: "r", pickerIntention: true, reactionType: "/assets/.cache/intl/bW9kdWxlcy9jb2xsZWN0aWJsZXMvd2Vi", startExpanded: null };
       obj[2] = outer1_8.DEFAULT_REACT_EMOJI;
       obj[3] = selectedEmoji(substr[18]).ReactionTypes.NORMAL;
       const result = obj.openEmojiPickerActionSheet(obj, "stack");

@@ -69,7 +69,7 @@ function UserIcon() {
   obj = { style: tmp.avatarInnerBorder };
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [callback(View, obj), ];
-  const obj1 = { size: null, user: null, guildId: "Array" };
+  const obj1 = { size: null, user: null, guildId: "disabled" };
   obj1[0] = require(1297) /* Button */.AvatarSizes.NORMAL;
   obj1[1] = stateFromStores;
   items1[1] = callback(require(1297) /* Button */.Avatar, obj1);
@@ -130,7 +130,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   obj7[0] = intl3.string(markAsDismissed(1236).t.ItuabN);
   const obj8 = { size: "sm", color: null };
   obj8[1] = importDefault(712).colors.WHITE;
-  obj7[1] = callback(markAsDismissed(12144).WindowLaunchIcon, obj8);
+  obj7[1] = callback(markAsDismissed(12143).WindowLaunchIcon, obj8);
   obj7[4] = function onPress() {
     let obj = outer1_1(outer1_2[13]);
     obj.hideActionSheet();
@@ -159,7 +159,7 @@ export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobl
   let fetchingAccounts;
   let hasRoloxAccount;
   const items = [initialize];
-  stateFromStores = stateFromStores(589).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(12879).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(589).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(12878).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(React.useState(false), 2);
   const first = tmp2[0];
   const dependencyMap = tmp2[1];

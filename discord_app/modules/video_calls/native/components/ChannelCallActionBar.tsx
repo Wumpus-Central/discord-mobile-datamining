@@ -159,7 +159,7 @@ class DisconnectCallButton {
 class DisconnectStreamButton {
   constructor(arg0) {
     channel = global.channel;
-    f85558 = undefined;
+    f85554 = undefined;
     channel = undefined;
     tmp = channel;
     tmp2 = closure_3;
@@ -167,7 +167,7 @@ class DisconnectStreamButton {
     items = [, ];
     items[0] = View;
     items[1] = View;
-    f85558 = obj.useStateFromStores(items, () => {
+    f85554 = obj.useStateFromStores(items, () => {
       const selectedParticipant = outer1_7.getSelectedParticipant(channel.id);
       if (null != selectedParticipant) {
         if (selectedParticipant.type !== outer1_13.ACTIVITY) {
@@ -197,7 +197,7 @@ class DisconnectStreamButton {
       tmp5 = jsx;
       tmp6 = channel;
       obj = { source: null, accessibilityLabel: null, isSmallSize: null, onPress: null };
-      tmp7 = f85558;
+      tmp7 = f85554;
       obj[0] = require("registerAsset");
       intl = require("getSystemLocale").intl;
       obj[1] = intl.string(require("getSystemLocale").t.q3O3J8);

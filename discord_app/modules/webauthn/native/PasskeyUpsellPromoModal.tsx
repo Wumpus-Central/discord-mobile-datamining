@@ -6,7 +6,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoModal.tsx");
 
 export default function PasskeyUpsellPromoModal(arg0) {
-  let obj = require(13875) /* getScreens */;
+  let obj = require(13874) /* getScreens */;
   obj = { name: WebAuthnScreens.NAME, params: null };
   obj = {};
   const screens = obj.getScreens({ isModal: true });

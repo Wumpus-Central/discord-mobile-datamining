@@ -30,7 +30,7 @@ function BountiesCtaDescription(isEmptyOrCompleted) {
   const tmp7 = callback(tmp5(4281).Text, obj);
   const intl2 = tmp5(1236).intl;
   obj = { onClick: null };
-  obj[0] = importDefault(14212);
+  obj[0] = importDefault(14211);
   const formatResult = intl2.format(tmp5(1236).t.fjSvsC, obj);
   if (isEmptyOrCompleted) {
     obj = { variant: "text-sm/medium", children: null };
@@ -78,7 +78,7 @@ function BountiesCtaHeaderInner(bounties) {
     _undefined(outer1_2[17]).showModal(obj);
   }, items3);
   obj = { uri: null, style: null, children: null };
-  obj[0] = importDefault(14233);
+  obj[0] = importDefault(14232);
   const items4 = [, ];
   ({ header: arr5[0], headerRoundedBottom: arr5[1] } = tmp);
   obj[1] = items4;
@@ -106,7 +106,7 @@ function BountiesCtaHeaderInner(bounties) {
   obj2[1] = items6;
   items5[1] = closure_11(closure_4, obj2);
   obj[2] = items5;
-  const items7 = [closure_11(importDefault(14232), obj), false];
+  const items7 = [closure_11(importDefault(14231), obj), false];
   obj[2] = items7;
   return closure_11(closure_4, obj);
 }
@@ -138,7 +138,7 @@ let closure_12 = createCacheKey.createStyles(() => {
 });
 const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
   const _require = isEmptyOrCompleted;
-  const tmp2 = containerRef(14226)();
+  const tmp2 = containerRef(14225)();
   containerRef = tmp2.containerRef;
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   let tmp3 = undefined !== isEmptyOrCompleted;

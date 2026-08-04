@@ -250,7 +250,7 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
     let obj = importDefault(709);
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "text-md/semibold" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "togglebutton" };
     obj = {};
     const merged = Object.assign(found);
     obj.status = _require(11758).GameServerStatus.STARTING;
@@ -266,7 +266,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
     let resolved = Promise.resolve();
   } else {
     let obj = importDefault(709);
-    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "text-md/semibold" };
+    obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "togglebutton" };
     obj = {};
     const merged = Object.assign(found);
     obj.name = name;

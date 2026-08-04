@@ -102,7 +102,7 @@ export default function FinishingTouchesScreen() {
       obj[6] = features.defaultMessageNotifications;
       first(8943).saveGuild(features.id, obj);
       if (removeResult !== everyoneRole.permissions) {
-        obj = guild(16585);
+        obj = guild(16584);
         const items = [obj];
         obj.saveRoleSettings(features.id, items);
       }
@@ -111,10 +111,10 @@ export default function FinishingTouchesScreen() {
   }, []);
   const tmp11 = callback(obj.useState(!closure_11.some((VIEW_CHANNEL) => outer1_2(outer1_3[11]).canEveryone(VIEW_CHANNEL, guild))), 2);
   const tmp8 = constants2;
-  const tmp19 = first(16627)();
-  const enableCommunitySharedStyles = guild(16626).useEnableCommunitySharedStyles();
+  const tmp19 = first(16626)();
+  const enableCommunitySharedStyles = guild(16625).useEnableCommunitySharedStyles();
   obj = { headerRef: ref, currentStep: null, onSuccess: null, disableNextStep: null, buttonText: null, children: null };
-  obj[1] = guild(16624).EnableCommunityModalSteps.STEP_3;
+  obj[1] = guild(16623).EnableCommunityModalSteps.STEP_3;
   obj[2] = callback1;
   obj[3] = !first1;
   const intl = tmp2(1236).intl;
@@ -138,7 +138,7 @@ export default function FinishingTouchesScreen() {
   const items3 = [callback3(closure_7, obj), , ];
   let obj5 = { spacing: 24, style: { paddingHorizontal: token }, children: null };
   const obj6 = { formSwitchDisabled: first === constants2.ONLY_MENTIONS, children: null };
-  let tmp4Result = tmp4(16636);
+  let tmp4Result = tmp4(16635);
   const obj7 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl5 = tmp2(1236).intl;
   obj7[0] = intl5.format(guild(1236).t.K8Eg4P, {
@@ -157,7 +157,7 @@ export default function FinishingTouchesScreen() {
   obj6[1] = callback2(guild(5650).TableSwitchRow, obj7);
   const items4 = [callback2(tmp4Result, obj6), ];
   const obj10 = { formSwitchDisabled: first2, children: null };
-  tmp4Result = tmp4(16636);
+  tmp4Result = tmp4(16635);
   const obj11 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl6 = tmp2(1236).intl;
   obj11[0] = intl6.format(guild(1236).t.v8qCoG, {
@@ -197,12 +197,12 @@ export default function FinishingTouchesScreen() {
       return null;
     }
   };
-  const tmp2Result = guild(16626);
+  const tmp2Result = guild(16625);
   obj16[0] = first(1945).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES);
   const tmp4Result1 = first(1945);
   obj16[1] = first(1945).getArticleURL(constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES);
   obj15[3] = intl9.format(guild(1236).t["BwbW/Q"], obj16);
   items3[2] = callback2(guild(4281).Text, obj15);
   obj[5] = items3;
-  return callback3(guild(16624).EnableCommunityModalScreen, obj);
+  return callback3(guild(16623).EnableCommunityModalScreen, obj);
 };

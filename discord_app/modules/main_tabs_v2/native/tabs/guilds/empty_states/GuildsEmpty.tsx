@@ -17,10 +17,10 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function handleJoinGuild() {
-  const result = importDefault(11976).openGuildJoinServerScreen();
+  const result = importDefault(11975).openGuildJoinServerScreen();
 }
 function handleCreateGuild() {
-  importDefault(11976).openCreateGuildModal();
+  importDefault(11975).openCreateGuildModal();
 }
 class GuildsEmptyContent {
   constructor(arg0) {
@@ -160,7 +160,7 @@ const memoResult = importAllResult.memo(function GuildsEmpty(arg0) {
   }, items1);
   let tmp2Result = tmp2(4815);
   const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  tmp2Result = tmp2(14246);
+  tmp2Result = tmp2(14245);
   let tmp14Result = null;
   if (stateFromStores) {
     obj = { style: null, children: null };

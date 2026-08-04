@@ -12,7 +12,7 @@ export default function getGamePlatform(type) {
     if (null != type.type) {
       tmp = null;
       if (type.type === constants.PLAYING) {
-        if (importDefault(12188)(type)) {
+        if (importDefault(12187)(type)) {
           let DESKTOP = constants2.XBOX;
         } else if (null != type.platform) {
           DESKTOP = type.platform;

@@ -13,5 +13,5 @@ export default function SearchIndexingScreen(searchContext) {
     obj.trackSearchIndexing(obj);
   }, items);
   const text = searchContext(11624).getIndexingErrorText(searchContext);
-  return jsx(importDefault(15596), { text });
+  return jsx(importDefault(15595), { text });
 };

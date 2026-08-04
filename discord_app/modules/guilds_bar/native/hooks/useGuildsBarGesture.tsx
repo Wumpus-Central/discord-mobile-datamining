@@ -641,7 +641,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state.setStateShallow({ dragSpecs: "Array", overSpecs: "HermesInternal" });
+    state.setStateShallow({ dragSpecs: "body", overSpecs: "useStateFromStores" });
     const value = gestureState.get();
     if (null != value.mode) {
       const obj5 = {};
@@ -775,7 +775,7 @@ export default function useGuildsBarGesture() {
             }
           }
         }
-        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: true };
+        const obj5 = { dragSpecs: null, overSpecs: "Array", windowSize: 8 };
         obj5[0] = obj;
         obj5[2] = sum;
         setStateShallow(obj5);

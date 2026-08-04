@@ -77,7 +77,7 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   }
   obj[6] = jsx(guild(11665).BaseChannelName, { name: string2Result, mode: SELECTED });
   obj1 = { mode: SELECTED, IconComponent: null };
-  obj1[1] = guild(13100).ChannelListMagnifyingGlassIcon;
+  obj1[1] = guild(13099).ChannelListMagnifyingGlassIcon;
   obj[7] = jsx(guild(11665).BaseChannelIcon, { mode: SELECTED, IconComponent: null });
   obj[8] = tmp11;
   return jsx(id(11665), { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null });

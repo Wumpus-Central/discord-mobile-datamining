@@ -1,3 +1,4 @@
+import module_16178 from "module_16178";
 import module_16179 from "module_16179";
 import module_16180 from "module_16180";
 import module_16181 from "module_16181";
@@ -25,11 +26,10 @@ import module_16202 from "module_16202";
 import module_16203 from "module_16203";
 import module_16204 from "module_16204";
 import module_16205 from "module_16205";
-import module_16206 from "module_16206";
 import { EventEmitter } from "EventEmitter";
 
 let require = arg1;
-global.IntlMessageFormat = require("module_16170");
+global.IntlMessageFormat = require("module_16169");
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
   require("_default2");
@@ -135,11 +135,11 @@ _instance_members_initializer_I18N_ = function() {
       return _createProxy(obj);
     } else {
       try {
-        obj = self(16212);
+        obj = self(16211);
         return obj.getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(16212).getMessage(tmp7, tmp);
+          return self(16211).getMessage(tmp7, tmp);
         } else {
           return "";
         }
@@ -168,7 +168,7 @@ class I18N extends EventEmitter {
       _Intl = Intl;
       tmp9 = closure_0;
       tmp10 = closure_1;
-      __addLocaleDataResult = Intl.__addLocaleData(require("module_16211"));
+      __addLocaleDataResult = Intl.__addLocaleData(require("module_16210"));
     }
     tmp6._languages = getLanguages();
     if (null != window.Proxy) {
@@ -212,7 +212,7 @@ prototype["setLocale"] = function setLocale(_requestedLocale) {
   }
 };
 prototype["setUpdateRules"] = function setUpdateRules(arg0) {
-  require(16212) /* format */.setUpdateRules(arg0);
+  require(16211) /* format */.setUpdateRules(arg0);
 };
 prototype["getLanguages"] = function getLanguages() {
   return this._languages;
@@ -346,7 +346,7 @@ prototype["_fetchMessages"] = function _fetchMessages(outer1_2) {
     return tmp();
   }
 };
-let result = require("module_16180").fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
+let result = require("module_16179").fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
 
 export const getSystemLocale = require("getSystemLocale").getSystemLocale;
 export { I18N };

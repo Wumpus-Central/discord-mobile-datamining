@@ -60,13 +60,13 @@ function ChannelContent(arg0) {
   }
   const obj2 = { style: { flexDirection: "row", paddingRight: num, alignItems: "center" }, children: null };
   const obj3 = { title: name, muted, unread, resolvedUnreadSetting: null, connected: null };
-  const tmp4 = importDefault(15922)();
+  const tmp4 = importDefault(15921)();
   if (resolvedUnreadSetting == null) {
     resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
   }
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
-  const items1 = [closure_7(importDefault(15928), obj3), , ];
+  const items1 = [closure_7(importDefault(15927), obj3), , ];
   tmp9Result = null;
   if (null != channelCategoryName) {
     const obj4 = { variant: "text-xs/bold", color: "text-muted", style: null, children: null };
@@ -108,7 +108,7 @@ function ChannelContent(arg0) {
     if (isSubscriptionGated) {
       const obj9 = { locked: null, isInMainTabsExperiment: true };
       obj9[0] = needSubscriptionToAccess;
-      isSubscriptionGated = tmp9(tmp2(15140), obj9);
+      isSubscriptionGated = tmp9(tmp2(15139), obj9);
     }
     items3[2] = isSubscriptionGated;
     obj5[1] = items3;

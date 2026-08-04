@@ -22,7 +22,7 @@ const memoResult = importAllResult.memo(function QuestDockContentCollapsed(child
     tmp = hideOnExpand;
   }
   const require = tmp;
-  const activeQuestDockMode = importAllResult.useContext(require(14242) /* QuestDockMode */.QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = importAllResult.useContext(require(14241) /* QuestDockMode */.QuestDockGestureContext).activeQuestDockMode;
   let obj = require(4146);
   const fn = function l() {
     let obj = tmp(outer1_2[8]);

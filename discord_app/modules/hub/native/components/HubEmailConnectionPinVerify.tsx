@@ -80,7 +80,7 @@ export default function HubEmailConnectionPinVerify(email) {
       outer1_1(outer1_2[10])();
     });
     return () => {
-      callback(12007).terminate();
+      callback(12006).terminate();
     };
   }, items);
   let obj = importDefault(onClose[11]);

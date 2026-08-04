@@ -8,7 +8,7 @@ const result = set.fileFinishedImporting("modules/user_profile/utils/getActivity
 
 export default function getActivityPlatform(session_id) {
   const importDefault = session_id;
-  const tmp3 = importDefault(12203)(session_id.session_id);
+  const tmp3 = importDefault(12202)(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
   } else if (tmp(9573)(session_id)) {
@@ -17,13 +17,13 @@ export default function getActivityPlatform(session_id) {
   } else if (tmp(8829)(session_id)) {
     tmpResult = tmp(4966);
     return tmpResult.get(PlatformTypes.CRUNCHYROLL);
-  } else if (tmp(12188)(session_id)) {
+  } else if (tmp(12187)(session_id)) {
     return tmp(4966).get(PlatformTypes.XBOX);
-  } else if (tmp(12189)(session_id)) {
+  } else if (tmp(12188)(session_id)) {
     return tmp(4966).get(PlatformTypes.PLAYSTATION);
   } else {
-    if (!tmp(12205)(session_id)) {
-      if (!tmp(12206)(session_id)) {
+    if (!tmp(12204)(session_id)) {
+      if (!tmp(12205)(session_id)) {
         const found = tmp(4966).find((name) => name.name === session_id.name);
         let tmp5 = null;
         if (null != found) {

@@ -82,7 +82,7 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     obj3[0] = obj3.getIsScreenLandscape() ? closure_7.LANDSCAPE : closure_7.PORTRAIT;
     return obj3;
   } else if (tmp.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === participantFromServer) {
-    obj2 = require(13639) /* activityInstanceConnectedParticipants */;
+    obj2 = require(13638) /* activityInstanceConnectedParticipants */;
     return obj2.activityInstanceConnectedParticipants();
   } else if (tmp.QUEST_ENROLLMENT_STATUS_UPDATE === participantFromServer) {
     const quest_id = c3.quest_id;

@@ -31,7 +31,7 @@ export default function QuestBottomSheetHeader(arg0) {
   let isScreenReaderEnabled;
   let ref;
   let tmp = hasWatchVideoOnMobileTasks();
-  let obj = isScreenReaderEnabled(14238);
+  let obj = isScreenReaderEnabled(14237);
   isScreenReaderEnabled = quest;
   ref = step;
   let dependencyMap;
@@ -69,8 +69,8 @@ export default function QuestBottomSheetHeader(arg0) {
     return obj.hasStreamOnDesktopTask(obj);
   }, items);
   const tmp2Result2 = isScreenReaderEnabled(10374);
-  hasWatchVideoOnMobileTasks = isScreenReaderEnabled(14237).useHasWatchVideoOnMobileTasks(quest.config);
-  const tmp2Result3 = isScreenReaderEnabled(14237);
+  hasWatchVideoOnMobileTasks = isScreenReaderEnabled(14236).useHasWatchVideoOnMobileTasks(quest.config);
+  const tmp2Result3 = isScreenReaderEnabled(14236);
   const items1 = [first];
   const stateFromStores = isScreenReaderEnabled(589).useStateFromStores(items1, () => first.getCurrentUser());
   const tmp2Result4 = isScreenReaderEnabled(589);

@@ -71,8 +71,8 @@ export default function CustomColorPickerActionSheet(arg0) {
   let sharedValue2;
   let callback;
   function updateInputHexValueFromHsv(h) {
-    const hsvToRgbWorkletResult = onSelect(13814).hsvToRgbWorklet(h);
-    const obj = onSelect(13814);
+    const hsvToRgbWorkletResult = onSelect(13813).hsvToRgbWorklet(h);
+    const obj = onSelect(13813);
     dependencyMap(onSelect(4129).rgbToHex(hsvToRgbWorkletResult[0], hsvToRgbWorkletResult[1], hsvToRgbWorkletResult[2]));
   }
   let obj = onSelect(688);
@@ -196,7 +196,7 @@ export default function CustomColorPickerActionSheet(arg0) {
       obj.runOnJS(updateInputHexValueFromHsv)(obj);
     }
   };
-  items3[2] = sharedValue2(tmp16(13815), obj5);
+  items3[2] = sharedValue2(tmp16(13814), obj5);
   obj2[1] = items3;
   obj[3] = tmp13(tmp14, obj2);
   return sharedValue2(onSelect(5338).BottomSheet, obj);

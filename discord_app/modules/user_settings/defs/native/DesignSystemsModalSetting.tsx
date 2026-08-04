@@ -10,7 +10,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_MODAL,
   getComponent() {
-    return require(14710) /* DemoModal */.default;
+    return require(14709) /* DemoModal */.default;
   }
 };
 const route = createToggle.createRoute(obj);

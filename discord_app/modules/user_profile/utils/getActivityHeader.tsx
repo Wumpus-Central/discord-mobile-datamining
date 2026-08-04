@@ -6,8 +6,8 @@ let c4;
 const result = require("PlatformTypes").fileFinishedImporting("modules/user_profile/utils/getActivityHeader.tsx");
 
 export default function getActivityHeader(session_id) {
-  const tmp3 = importDefault(12203)(session_id.session_id);
-  const tmp4 = importDefault(12204)(session_id);
+  const tmp3 = importDefault(12202)(session_id.session_id);
+  const tmp4 = importDefault(12203)(session_id);
   if (tmp4 != null) {
     const icon = tmp4.icon;
   }
@@ -157,7 +157,7 @@ export default function getActivityHeader(session_id) {
       obj11[2] = str;
       return obj11;
     }
-    tmp35 = tmp(12207)(tmp3, session_id);
+    tmp35 = tmp(12206)(tmp3, session_id);
   }
   if (session_id.type === constants.PLAYING) {
     const obj13 = { text: null, platformIcon: null, platformLabel: null };

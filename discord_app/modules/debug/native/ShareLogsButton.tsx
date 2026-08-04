@@ -12,7 +12,7 @@ const memoResult = require("noop").memo(function ShareLogsButton() {
     obj[0] = callback(7).stringify();
     return obj.showShareActionSheet(obj, "Debug Logs");
   };
-  obj[2] = jsx(require(12143) /* ShareIcon */.ShareIcon, {});
+  obj[2] = jsx(require(12142) /* ShareIcon */.ShareIcon, {});
   return jsx(require(4812) /* PressableBase */.PressableOpacity, { accessibilityLabel: null, onPress: null, children: null });
 });
 const result = require("PressableBase").fileFinishedImporting("modules/debug/native/ShareLogsButton.tsx");

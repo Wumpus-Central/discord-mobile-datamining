@@ -52,7 +52,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const tmp7Result = importDefault(6812)(num, closure_15);
-  let tmp4Result = tmp4(15751);
+  let tmp4Result = tmp4(15750);
   shouldShowExpiringTrialOfferCard = tmp4Result.useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {

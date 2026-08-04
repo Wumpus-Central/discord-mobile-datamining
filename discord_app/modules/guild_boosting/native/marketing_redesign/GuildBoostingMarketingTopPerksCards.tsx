@@ -30,7 +30,7 @@ let items = [
       return intl.string(require(1236) /* getSystemLocale */.t.HTvLGu);
     },
     getGraphic(style) {
-      return callback(closure_3, { style, source: importDefault(12780) });
+      return callback(closure_3, { style, source: importDefault(12779) });
     }
   },
   {
@@ -44,7 +44,7 @@ let items = [
     },
     getGraphic(arg0) {
       const obj = { source: null, autoPlay: null, style: null };
-      obj[0] = require(12781);
+      obj[0] = require(12780);
       obj[1] = !useReducedMotion.useReducedMotion;
       obj[2] = arg0;
       return callback(importDefault(5601), obj);
@@ -60,7 +60,7 @@ let items = [
       return intl.string(require(1236) /* getSystemLocale */.t.yCjoUC);
     },
     getGraphic(style) {
-      return callback(closure_3, { style, source: importDefault(12782) });
+      return callback(closure_3, { style, source: importDefault(12781) });
     }
   }
 ];
@@ -75,7 +75,7 @@ const obj2 = {
     return intl.string(require(1236) /* getSystemLocale */.t.HTvLGu);
   },
   getGraphic(style) {
-    return callback(closure_3, { style, source: importDefault(12780) });
+    return callback(closure_3, { style, source: importDefault(12779) });
   }
 };
 const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx");

@@ -12,7 +12,7 @@ function ChannelSubtitle(arg0) {
   let textProps;
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, layout, subtitle } = arg0);
-  let obj = require(15226) /* getChannelSubtitleData */;
+  let obj = require(15225) /* getChannelSubtitleData */;
   const channelSubtitleData = obj.getChannelSubtitleData(subtitle);
   if (null == channelSubtitleData) {
     return null;

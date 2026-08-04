@@ -26,7 +26,7 @@ function ExampleButton(arg0) {
   let enableLoadingState;
   let importDefault;
   let dependencyMap;
-  const tmp3 = importDefault(14672)();
+  const tmp3 = importDefault(14671)();
   enableLoadingState = tmp3.enableLoadingState;
   ({ buttonScale, buttonSize, iconPosition, showIcon, showDisabled } = tmp3);
   importDefault = React.useRef(null);
@@ -67,7 +67,7 @@ function ExampleButton(arg0) {
   obj[7] = buttonSize;
   let tmpResult;
   if (showIcon) {
-    tmpResult = importDefault(14673);
+    tmpResult = importDefault(14672);
   }
   obj[8] = tmpResult;
   obj[9] = iconPosition;
@@ -87,7 +87,7 @@ function ExampleIconButton(arg0) {
   let importDefault;
   let dependencyMap;
   let callback;
-  const tmp3 = importDefault(14672)();
+  const tmp3 = importDefault(14671)();
   enableLoadingState = tmp3.enableLoadingState;
   const showDisabled = tmp3.showDisabled;
   importDefault = React.useRef(null);
@@ -152,7 +152,7 @@ function ExampleImageButton(arg0) {
   let importDefault;
   let dependencyMap;
   let callback;
-  const tmp = importDefault(14672)();
+  const tmp = importDefault(14671)();
   enableLoadingState = tmp.enableLoadingState;
   const showDisabled = tmp.showDisabled;
   importDefault = React.useRef(null);
@@ -197,7 +197,7 @@ function ExampleToggleButton() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   const importDefault = tmp[1];
-  let obj = first(13324);
+  let obj = first(13323);
   obj = { on: null, off: null };
   obj = { text: "Unfollow", icon: importDefault(9648) };
   obj[0] = obj;
@@ -216,7 +216,7 @@ function ExampleIconToggleButton() {
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
   const importDefault = tmp[1];
-  let obj = first(13324);
+  let obj = first(13323);
   obj = { on: null, off: null };
   obj = { variant: "destructive", accessibilityLabel: "Mute", icon: importDefault(9109) };
   obj[0] = obj;

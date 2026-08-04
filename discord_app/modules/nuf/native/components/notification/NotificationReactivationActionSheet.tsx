@@ -37,14 +37,14 @@ export default function NotificationReactivationActionSheet(location) {
   }, items);
   const callback1 = React.useCallback(() => {
     let obj = outer1_1(outer1_2[7]);
-    obj = { action_type: outer1_6.SKIP_STEP, action_location: _location, permission_granted: "Array" };
+    obj = { action_type: outer1_6.SKIP_STEP, action_location: _location, permission_granted: "disabled" };
     obj.track(outer1_7.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
     outer1_1(outer1_2[9]).hideActionSheet();
   }, items1);
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, source: null, resizeMode: "contain" };
-  obj[1] = importDefault(16403);
+  obj[1] = importDefault(16402);
   const items2 = [callback(closure_5, obj), , , ];
   const obj1 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1236).intl;

@@ -27,7 +27,7 @@ export default function ResubscribedAlert(onClose) {
   obj[1] = onClose.onClose;
   obj[2] = tmp.container;
   obj = { style: tmp.body, children: null };
-  obj = { source: importDefault(14356), style: tmp.headerImage };
+  obj = { source: importDefault(14355), style: tmp.headerImage };
   const items = [callback(closure_4, obj), callback(require(1297) /* Button */.Spacer, { size: 27 }), , , ];
   const obj1 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;

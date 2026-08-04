@@ -14,7 +14,7 @@ function IntroDemo(isReminder) {
   let obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   obj = { style: tmp.messages, children: null };
   obj = { source: null, style: null };
-  obj[0] = { uri: importDefault(12478) };
+  obj[0] = { uri: importDefault(12477) };
   obj[1] = tmp.avatar;
   const items = [callback(closure_3, obj), ];
   const obj2 = { style: tmp.messageLines, children: null };
@@ -122,7 +122,7 @@ export default function ForLaterIntro(type) {
   const tmp4 = type.type === require(8192) /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER;
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: importDefault(12477), style: tmp.upsellImage };
+  obj = { source: importDefault(12476), style: tmp.upsellImage };
   const items = [callback(closure_3, obj), , ];
   const obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };

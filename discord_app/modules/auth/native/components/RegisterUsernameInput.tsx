@@ -24,7 +24,7 @@ function UsernameStatusMessage(arg0) {
   if (usernameStatus != null) {
     type = usernameStatus.type;
   }
-  if (type === require(13910) /* NameValidationState */.NameValidationState.ERROR) {
+  if (type === require(13909) /* NameValidationState */.NameValidationState.ERROR) {
     let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
     obj = { size: "xs", color: null };
     obj[1] = importDefault(712).colors.TEXT_FEEDBACK_CRITICAL;
@@ -44,7 +44,7 @@ function UsernameStatusMessage(arg0) {
       if (usernameStatus != null) {
         type1 = usernameStatus.type;
       }
-      if (type1 === tmp3(13910).NameValidationState.AVAILABLE) {
+      if (type1 === tmp3(13909).NameValidationState.AVAILABLE) {
         const obj2 = {};
         const merged2 = Object.assign(createCacheKey);
         const merged3 = Object.assign(createCacheKey);
@@ -103,7 +103,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     autoFocus = false;
   }
   obj[1] = autoFocus;
-  importDefault(14996)(obj);
+  importDefault(14995)(obj);
   const tmp5 = callback(obj.useState(true), 2);
   importDefault = tmp6;
   const tmp7 = callback2((errors) => errors.errors);
@@ -133,7 +133,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   const tmp11 = closure_10;
   const tmp12 = closure_11;
   const tmp14 = setUsername;
-  const tmp3 = importDefault(14996);
+  const tmp3 = importDefault(14995);
   obj[5] = setUsername(500).isAndroid();
   const obj4 = setUsername(500);
   let str = "default";
@@ -150,7 +150,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     type = usernameStatus.type;
   }
   let str2;
-  if (type === tmp14(13910).NameValidationState.ERROR) {
+  if (type === tmp14(13909).NameValidationState.ERROR) {
     str2 = "error";
   }
   const obj1 = { children: null };

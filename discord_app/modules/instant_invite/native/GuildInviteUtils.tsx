@@ -139,7 +139,7 @@ export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id
   obj.track(constants.OPEN_POPOUT, obj);
   const obj3 = importDefault(4253);
   obj = { recipientId: id, source: newestAnalyticsLocation };
-  obj3.openLazy(require(1959) /* asyncRequireImpl */(12405, dependencyMap.paths), "invite-to-guilds-" + id, obj);
+  obj3.openLazy(require(1959) /* asyncRequireImpl */(12404, dependencyMap.paths), "invite-to-guilds-" + id, obj);
 };
 export const useServerInviteRows = function useServerInviteRows(id, query) {
   const _require = id;

@@ -249,7 +249,7 @@ export const showUnauthenticatedReportModalForTida = function showUnauthenticate
 export const showUnauthenticatedReportModalForMessage = function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   let obj = importDefault(4479);
   obj = { report_type: require(7831) /* ReportNames */.UnauthenticatedReportNames.MESSAGE };
-  const merged = Object.assign({ message_id: "Array", channel_id: "HermesInternal" });
+  const merged = Object.assign({ message_id: "body", channel_id: "useStateFromStores" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
   const tmp = new hasFlag({});
   obj = { name: require(7831) /* ReportNames */.UnauthenticatedReportNames.MESSAGE, record: tmp };

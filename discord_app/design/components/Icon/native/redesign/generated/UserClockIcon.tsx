@@ -11,7 +11,7 @@ export const UserClockIcon = function UserClockIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(12429) /* registerAsset */;
+  obj[0] = require(12428) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);

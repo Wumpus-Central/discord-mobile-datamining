@@ -15,9 +15,9 @@ export default function FamilyCenterLinkRow(children) {
   let obj = { userId: otherUser.id, children: null };
   const tmp = callback3();
   obj = { otherUser, status: UserLinkStatus.PENDING };
-  const items = [callback(importDefault(14071), obj), ];
+  const items = [callback(importDefault(14070), obj), ];
   obj = { style: tmp.actionContainer, children: children.actions };
   items[1] = callback(View, obj);
   obj[1] = items;
-  return callback2(importDefault(14070), obj);
+  return callback2(importDefault(14069), obj);
 };

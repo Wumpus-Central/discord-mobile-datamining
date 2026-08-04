@@ -58,7 +58,7 @@ export default function getGameProfileWebsiteData(category) {
     const obj9 = { icon: null, action: null, title: null, url: null };
     const obj10 = { size: "md", color: null };
     obj10[1] = arg1;
-    obj9[0] = jsx(tmp(12102).BlueskyNeutralIcon, { size: "md", color: null });
+    obj9[0] = jsx(tmp(12101).BlueskyNeutralIcon, { size: "md", color: null });
     obj9[1] = tmp(9200).GameProfileTrackActionActions.BlueskyLink;
     const intl3 = tmp(1236).intl;
     obj9[2] = intl3.string(tmp(1236).t["D/PHq5"]);
@@ -68,7 +68,7 @@ export default function getGameProfileWebsiteData(category) {
     const obj11 = { icon: null, action: null, title: null, url: null };
     const obj12 = { size: "md", color: null };
     obj12[1] = arg1;
-    obj11[0] = jsx(tmp(12104).RedditNeutralIcon, { size: "md", color: null });
+    obj11[0] = jsx(tmp(12103).RedditNeutralIcon, { size: "md", color: null });
     obj11[1] = tmp(9200).GameProfileTrackActionActions.RedditLink;
     const intl2 = tmp(1236).intl;
     obj11[2] = intl2.string(tmp(1236).t["Hgb+fc"]);
@@ -78,7 +78,7 @@ export default function getGameProfileWebsiteData(category) {
     obj = { icon: null, action: null, title: null, url: null };
     const obj13 = { size: "md", color: null };
     obj13[1] = arg1;
-    obj[0] = jsx(tmp(12106).TwitchNeutralIcon, { size: "md", color: null });
+    obj[0] = jsx(tmp(12105).TwitchNeutralIcon, { size: "md", color: null });
     obj[1] = tmp(9200).GameProfileTrackActionActions.TwitchLink;
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t["7xtz4G"]);

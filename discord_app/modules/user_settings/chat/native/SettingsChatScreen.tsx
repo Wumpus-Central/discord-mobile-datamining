@@ -1,4 +1,4 @@
-import module_13794 from "module_13794";
+import module_13793 from "module_13793";
 import { View } from "dispatcher";
 import mergeGuildAvatar from "mergeGuildAvatar";
 import reset from "reset";
@@ -157,5 +157,5 @@ export default function SettingsChatScreen(route) {
     obj[1] = initialSetting;
     return obj.createList(obj);
   }, items);
-  return callback(importDefault(13794), { node });
+  return callback(importDefault(13793), { node });
 };

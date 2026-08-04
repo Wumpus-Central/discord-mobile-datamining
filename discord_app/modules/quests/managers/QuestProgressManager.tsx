@@ -77,7 +77,7 @@ getQuestLogger = getQuestLogger.getQuestLogger(getQuestLogger);
 class QuestProgressManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f113708 = applyArgumentsResult;
+    f113703 = applyArgumentsResult;
     obj = {};
     map = new Map();
     obj[require("set").FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP] = map;
@@ -309,9 +309,9 @@ class QuestProgressManager extends tmp4 {
       EMBEDDED_ACTIVITY_UPDATE_V2: null,
       QUEST_APPLICATION_START_TIMER: null
     };
-    f113708 = undefined;
+    f113703 = undefined;
     closure_1 = applyArgumentsResult;
-    f113708 = isQuestRobloxRelated((arg0) => {
+    f113703 = isQuestRobloxRelated((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;

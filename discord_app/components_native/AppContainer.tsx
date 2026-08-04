@@ -32,7 +32,7 @@ function GestureWrapper(children) {
     items[1] = rootBackgroundColor;
     return items;
   }, items);
-  return callback2(importDefault(13725), { style, children: children.children });
+  return callback2(importDefault(13724), { style, children: children.children });
 }
 function handleNavigationOnReady() {
   importDefault(4493).flush();
@@ -90,7 +90,7 @@ function AppNavigationContainer(children) {
         name = first.name;
       }
     }
-    callback(13729).log("Initial Screen: " + name);
+    callback(13728).log("Initial Screen: " + name);
     return tmp;
   }, []);
   _require = React.useRef(true);
@@ -169,7 +169,7 @@ try {
     const appEntryKey = children.appEntryKey;
     let riveAppStatePlaybackExperiment = appEntryKey;
     let memo1;
-    const requestGatewaySocket = riveAppStatePlaybackExperiment(13730).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = riveAppStatePlaybackExperiment(13729).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = React.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -199,10 +199,10 @@ try {
     riveRendererExperiment = undefined;
     riveAppStatePlaybackExperiment = undefined;
     memo1 = undefined;
-    let obj = riveAppStatePlaybackExperiment(13730);
-    riveRendererExperiment = riveAppStatePlaybackExperiment(14971).useRiveRendererExperiment("AppContainer");
-    let obj2 = riveAppStatePlaybackExperiment(14971);
-    riveAppStatePlaybackExperiment = riveAppStatePlaybackExperiment(14972).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = riveAppStatePlaybackExperiment(13729);
+    riveRendererExperiment = riveAppStatePlaybackExperiment(14970).useRiveRendererExperiment("AppContainer");
+    let obj2 = riveAppStatePlaybackExperiment(14970);
+    riveAppStatePlaybackExperiment = riveAppStatePlaybackExperiment(14971).useRiveAppStatePlaybackExperiment("AppContainer");
     let items = [riveRendererExperiment, riveAppStatePlaybackExperiment];
     const memo = React.useMemo(() => {
       const items = [];

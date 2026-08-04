@@ -21,7 +21,7 @@ function MainAreaCanUpload(arg0) {
   let obj = require(4180) /* formatSize */;
   obj = { onPress: openFilePicker, icon: null, label: null, subLabel: null, start: true, end: true, arrow: true };
   obj = { IconComponent: null };
-  obj[0] = require(13790) /* FileUpIcon */.FileUpIcon;
+  obj[0] = require(13789) /* FileUpIcon */.FileUpIcon;
   obj[1] = callback(require(5315) /* TableRowInner */.TableRow.Icon, obj);
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl.format(require(1236) /* getSystemLocale */.t["/2JwTv"], { maxValues });

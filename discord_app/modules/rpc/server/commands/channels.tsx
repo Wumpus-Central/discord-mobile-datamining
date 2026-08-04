@@ -83,7 +83,7 @@ const items1 = [require("set").OAuth2Scopes.GUILDS_MEMBERS_READ, require("set").
 obj3[RPC_SCOPE_CONFIG.ANY] = items1;
 obj2[0] = obj3;
 obj2[1] = function handler() {
-  const tmp3 = importDefault(13643)();
+  const tmp3 = importDefault(13642)();
   if (null == tmp3) {
     let obj = { errorCode: null };
     obj[0] = constants2.INVALID_CHANNEL;

@@ -56,7 +56,7 @@ export const StepModal = function StepModal(steps) {
     num = 0;
   }
   obj2[1] = num;
-  obj1[2] = callback2(steps(13334).ModalStepIndicator, obj2);
+  obj1[2] = callback2(steps(13333).ModalStepIndicator, obj2);
   items1[1] = callback2(View, obj1);
   obj[1] = items1;
   return closure_7(View, obj);

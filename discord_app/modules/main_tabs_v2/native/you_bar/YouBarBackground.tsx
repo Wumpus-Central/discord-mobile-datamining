@@ -45,9 +45,9 @@ function YouBarAnimatedBackground(arg0) {
   ({ barWidth, backgroundColor } = arg0);
   let obj = _require(3989);
   const token = obj.useToken(importDefault(712).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp3 = importDefault(14326)(token);
+  const tmp3 = importDefault(14325)(token);
   _require = tmp3;
-  const tmp4 = importDefault(14326)(token, YOU_BAR_HEIGHT / 2);
+  const tmp4 = importDefault(14325)(token, YOU_BAR_HEIGHT / 2);
   importDefault = tmp4;
   const tmp = callback3();
   const fn = function u() {

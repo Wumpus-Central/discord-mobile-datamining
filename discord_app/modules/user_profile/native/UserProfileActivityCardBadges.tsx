@@ -9,13 +9,13 @@ const result = require("ME").fileFinishedImporting("modules/user_profile/native/
 export default function UserProfileActivityCardBadges(activity) {
   activity = activity.activity;
   if (activity.type === ActivityTypes.PLAYING) {
-    const items = [activity(12191).PartyBadge, activity(12191).TimestampBadge];
+    const items = [activity(12190).PartyBadge, activity(12190).TimestampBadge];
     let items3 = items;
   } else if (activity.type === tmp.LISTENING) {
-    const items1 = [activity(12191).TimestampBadge];
+    const items1 = [activity(12190).TimestampBadge];
     items3 = items1;
   } else if (activity.type === tmp.WATCHING) {
-    const items2 = [activity(12191).TimestampBadge, activity(12191).EpisodeBadge];
+    const items2 = [activity(12190).TimestampBadge, activity(12190).EpisodeBadge];
     items3 = items2;
   } else {
     items3 = [];

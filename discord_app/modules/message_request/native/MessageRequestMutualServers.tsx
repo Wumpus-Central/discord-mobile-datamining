@@ -26,7 +26,7 @@ export default function MessageRequestMutualServers(textVariant) {
   }
   const suffix = textVariant.suffix;
   const tmp3 = callback2();
-  let obj = iconSize(15825);
+  let obj = iconSize(15824);
   const mutualGuildsForMessageRequests = obj.useMutualGuildsForMessageRequests(userId);
   const substr = mutualGuildsForMessageRequests.slice(0, 3);
   if (mutualGuildsForMessageRequests.length > 0) {
@@ -46,7 +46,7 @@ export default function MessageRequestMutualServers(textVariant) {
     obj1[0] = iconSize;
     obj1[1] = substr.map((name) => name.name);
     obj1[2] = substr.map((guild) => outer1_4(outer1_1(outer1_2[4]), { guild, size: iconSize }, guild.id));
-    tmp9 = callback(tmp4(11888).GuildIconPile, obj1);
+    tmp9 = callback(tmp4(11887).GuildIconPile, obj1);
   }
   const items1 = [tmp9, ];
   const obj2 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };

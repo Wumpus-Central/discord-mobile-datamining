@@ -9,7 +9,7 @@ let metroImportAll;
 const require = arg1;
 function createPollCreationImageForMedia(mediaURL, status) {
   const mediaAttachmentState = { status, mediaURL };
-  return { mediaAttachmentState, emoji: "Array", stickerId: "ti" };
+  return { mediaAttachmentState, emoji: "Array", stickerId: "isArray" };
 }
 ({ MAX_NUMBER_OF_ANSWERS_PER_POLL: error, MIN_NUMBER_OF_ANSWERS_PER_POLL: metroImportAll, PollDurations: c9 } = POLL_ATTACHMENT_FOLDER);
 let result = require("noop").fileFinishedImporting("modules/polls/useCreatePollFormData.tsx");
@@ -227,19 +227,19 @@ export default function useCreatePollCommonData(id, arg1, arg2, initialQuestion)
   const callback5 = obj.useCallback((arg0, arg1, arg2) => {
     const objectURL = URL.createObjectURL(arg2);
     callback3(arg0, arg1);
-    let obj = { mediaAttachmentState: null, emoji: "Array", stickerId: "ti" };
+    let obj = { mediaAttachmentState: null, emoji: "Array", stickerId: "isArray" };
     obj = { status: callback(initialQuestion[9]).PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL };
     obj[0] = obj;
     callback2(obj, arg1);
     const result = callback2(initialQuestion[7]).handlePollMediaAttachmentAdd(arg0, first[arg1].localCreationAnswerId, arg2);
-    obj = { mediaAttachmentState: null, emoji: "Array", stickerId: "ti" };
+    obj = { mediaAttachmentState: null, emoji: "Array", stickerId: "isArray" };
     const obj3 = callback2(initialQuestion[7]);
     obj[0] = { status: callback(initialQuestion[9]).PollMediaUploadAttachmentStatus.READY_TO_UPLOAD, mediaURL: objectURL };
     callback2(obj, arg1);
   }, items2);
   const callback6 = obj.useCallback((emoji) => {
     callback3(id, arg1);
-    callback2({ emoji, stickerId: "Array", mediaAttachmentState: "ti" }, arg1);
+    callback2({ emoji, stickerId: "Array", mediaAttachmentState: "isArray" }, arg1);
   }, items3);
   const items4 = [first.length < first1];
   const callback7 = obj.useCallback((arg0) => {

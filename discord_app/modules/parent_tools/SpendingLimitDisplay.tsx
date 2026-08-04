@@ -61,7 +61,7 @@ export const useSpendingLimitFromUserSettings = function useSpendingLimitFromUse
       tmp2 = obj;
     }
     return tmp2;
-  }, undefined, require(13978) /* spendingLimitEqual */.spendingLimitEqual);
+  }, undefined, require(13977) /* spendingLimitEqual */.spendingLimitEqual);
 };
 export const CLOSE_TO_LIMIT_THRESHOLD_MAJOR_UNITS = 10;
 export { getSpendingLimitDisplayState };

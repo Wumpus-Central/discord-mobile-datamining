@@ -98,7 +98,7 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
     setAddedPressed(true);
   }, items4);
   obj = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: false };
+  obj = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: true };
   obj[3] = height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32;
   const items5 = [callback2(height(suggestedFriend[18]).Avatar, obj), , ];
   obj1 = { style: tmp.textContainer, children: null };
@@ -151,7 +151,7 @@ const memoResult1 = importAllResult.memo((suggestedFriend) => {
 const memoResult2 = importAllResult.memo((arg0) => {
   let tmp2;
   let tmp3;
-  let obj = require(15072) /* toNativeHorizontalOffset */;
+  let obj = require(15071) /* toNativeHorizontalOffset */;
   obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false), 2);
   const merged = Object.assign(arg0);

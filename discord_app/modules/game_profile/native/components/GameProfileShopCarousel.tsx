@@ -22,9 +22,9 @@ function GameProfileShopCarouselContent(trackAction) {
   let gameProfileShopCollection;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = closeModal(12087);
+  let obj = closeModal(12086);
   gameProfileShopCollection = obj.useGameProfileShopCollection(collectionId);
-  let obj1 = closeModal(12088);
+  let obj1 = closeModal(12087);
   const fetchCollectiblesProducts = obj1.useFetchCollectiblesProducts(gameProfileShopCollection);
   let obj2 = closeModal(647);
   let items = [updateCategoriesAndProducts];

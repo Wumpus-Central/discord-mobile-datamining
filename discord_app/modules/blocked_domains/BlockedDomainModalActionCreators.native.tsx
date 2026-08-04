@@ -4,6 +4,6 @@ export default {
   show(url) {
     let obj = importDefault(4253);
     obj = { url };
-    obj.openLazy(require(1959) /* asyncRequireImpl */(12136, dependencyMap.paths), "blocked-domain", obj);
+    obj.openLazy(require(1959) /* asyncRequireImpl */(12135, dependencyMap.paths), "blocked-domain", obj);
   }
 };

@@ -1,4 +1,4 @@
-import { View } from "getSystemLocale";
+import { View } from "get ActivityIndicator";
 import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
 import jsxProd from "jsxProd";
 import createCacheKey from "createCacheKey";
@@ -18,69 +18,64 @@ function GuildPowerupsRecentActivityRow(row) {
   let obj = require(11851) /* useMaybeGetSortedBoosts */;
   const getBoostUserConfig = obj.useGetBoostUserConfig(boost);
   ({ roleColor, roleColorStrings, username } = getBoostUserConfig);
-  if (row.isExpiringBoostsEnabled) {
-    let tmp2Result = tmp2(3955);
-    const _Date = Date;
-    const date = new Date(sortKey);
-    let calendarFormatResult = tmp2Result.calendarFormat(date);
-  } else {
-    tmp2Result = tmp2(7022);
-    calendarFormatResult = tmp2Result.getRelativeTimestamp(sortKey, true);
-  }
+  let obj1 = require(3955) /* resetCache */;
+  const date = new Date(sortKey);
+  let obj2 = require(589) /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  const stateFromStores = require(589) /* initialize */.useStateFromStores(items, () => roleStyle.roleStyle);
+  const stateFromStores = obj2.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
     if (null != roleColor) {
       obj = { color: null };
       obj[0] = roleColor;
     }
-    const processColorStringsArray = tmp2(7880).useProcessColorStringsArray(roleColorStrings);
-    const tmp2Result3 = tmp2(7880);
-    const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result3.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
+    let tmp2Result = tmp2(7880);
+    const processColorStringsArray = tmp2Result.useProcessColorStringsArray(roleColorStrings);
+    tmp2Result = tmp2(7880);
+    const isRoleStyleAndRoleColorsEligibleForERC = tmp2Result.useIsRoleStyleAndRoleColorsEligibleForERC(boost.guildId, boost.userId, stateFromStores, processColorStringsArray);
     if ("gave" === phase) {
       let BoostGemSlashIcon = tmp2(7616).BoostGemIcon;
     } else if ("expiring" === phase) {
-      BoostGemSlashIcon = tmp2(11854).BoostTier1Icon;
+      BoostGemSlashIcon = tmp2(11853).BoostTier1Icon;
     } else {
-      BoostGemSlashIcon = tmp2(11856).BoostGemSlashIcon;
+      BoostGemSlashIcon = tmp2(11855).BoostGemSlashIcon;
     }
     obj = { style: null, children: null };
     obj[0] = tmp.boostRowContainer;
     if ("gave" === phase) {
-      const obj1 = { color: null, size: "sm" };
+      obj1 = { color: null, size: "sm" };
       obj1[0] = importDefault(712).unsafe_rawColors.GUILD_BOOSTING_PINK;
-      let obj2 = obj1;
+      obj2 = obj1;
     } else {
       obj2 = { size: "sm" };
     }
     const items1 = [closure_5(BoostGemSlashIcon, obj2), , ];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.boostMessage;
-    let tmp23Result = "dot" === stateFromStores;
-    if (tmp23Result) {
-      tmp23Result = null != roleColor;
+    let tmp18Result = "dot" === stateFromStores;
+    if (tmp18Result) {
+      tmp18Result = null != roleColor;
     }
-    if (tmp23Result) {
+    if (tmp18Result) {
       const obj4 = { size: "small", color: null, colors: null };
       obj4[1] = roleColor;
       obj4[2] = roleColorStrings;
-      tmp23Result = tmp23(tmp2(1297).RoleDot, obj4);
+      tmp18Result = tmp18(tmp2(1297).RoleDot, obj4);
     }
-    const items2 = [tmp23Result, , , ];
+    const items2 = [tmp18Result, , , ];
     const obj5 = { variant: "text-md/medium", color: "interactive-text-active", lineClamp: 1, style: null, gradientColors: null, children: null };
     const items3 = [tmp.username, {}];
     obj5[3] = items3;
-    let tmp27;
+    let tmp22;
     if (isRoleStyleAndRoleColorsEligibleForERC) {
-      tmp27 = processColorStringsArray;
+      tmp22 = processColorStringsArray;
     }
-    obj5[4] = tmp27;
+    obj5[4] = tmp22;
     obj5[5] = username;
     items2[1] = closure_5(tmp2(4281).Text, obj5);
     items2[2] = closure_5(tmp2(4281).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
     const obj6 = { variant: "text-md/medium", lineClamp: 1, style: null, children: null };
     obj6[2] = tmp.messageText;
-    obj6[3] = importDefault(11858)(row);
+    obj6[3] = importDefault(11857)(row);
     items2[3] = closure_5(tmp2(4281).Text, obj6);
     obj3[1] = items2;
     items1[1] = closure_6(View, obj3);
@@ -107,25 +102,22 @@ let obj1 = { gap: require("Themes").space.PX_12, marginTop: require("Themes").sp
 const result = require("jsxProd").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx");
 
 export default function GuildPowerupsRecentActivitySection(guildId) {
-  let _require;
   const tmp = callback3();
   const arr = importDefault(11851)(guildId.guildId, 10);
-  let obj = _require(11852);
-  _require = obj.useExpiringBoostsEnabled("GuildPowerupsRecentActivity");
-  let tmp4 = null;
+  let tmp3 = null;
   if (0 !== arr.length) {
-    obj = { style: null, children: null };
+    let obj = { style: null, children: null };
     obj[0] = tmp.sectionContainer;
     obj = { variant: "heading-lg/semibold", color: "text-subtle", children: null };
-    const intl = tmp3(1236).intl;
-    obj[2] = intl.string(tmp3(1236).t.yM9Krm);
-    const items = [callback(tmp3(4281).Text, obj), ];
-    const obj1 = { style: null, children: null };
-    obj1[0] = tmp.boostContainer;
-    obj1[1] = arr.map((boost) => outer1_5(outer1_8, { row: boost, isExpiringBoostsEnabled: closure_0 }, "boost-" + boost.boost.id));
-    items[1] = callback(View, obj1);
+    const intl = require(1236) /* getSystemLocale */.intl;
+    obj[2] = intl.string(require(1236) /* getSystemLocale */.t.yM9Krm);
+    const items = [callback(require(4281) /* Text */.Text, obj), ];
+    obj = { style: null, children: null };
+    obj[0] = tmp.boostContainer;
+    obj[1] = arr.map((boost) => callback(closure_8, { row: boost }, "boost-" + boost.boost.id));
+    items[1] = callback(View, obj);
     obj[1] = items;
-    tmp4 = callback2(View, obj);
+    tmp3 = callback2(View, obj);
   }
-  return tmp4;
+  return tmp3;
 };

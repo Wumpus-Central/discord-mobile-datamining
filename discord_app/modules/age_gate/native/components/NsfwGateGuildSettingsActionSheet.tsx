@@ -9,7 +9,7 @@ const result = require("MessageRequestRestrictedGuildPrivacyOption").fileFinishe
 
 export default function NsfwGateGuildSettingsActionSheet(guild) {
   guild = guild.guild;
-  let obj = guild(13164);
+  let obj = guild(13163);
   const messageRequestPrivacyOption = obj.useMessageRequestPrivacyOption({ guild });
   obj = { header: null, children: null };
   obj = { title: guild.name };
@@ -23,7 +23,7 @@ export default function NsfwGateGuildSettingsActionSheet(guild) {
     const obj = outer1_1(outer1_2[7]);
     outer1_1(outer1_2[8]).open(guild.id);
   };
-  const items = [callback(guild(5648).ActionSheetRow, obj2), callback(guild(13165).RestrictedGuildPrivacyOption, { guild }), messageRequestPrivacyOption, ];
+  const items = [callback(guild(5648).ActionSheetRow, obj2), callback(guild(13164).RestrictedGuildPrivacyOption, { guild }), messageRequestPrivacyOption, ];
   const obj3 = { variant: "danger", label: null, onPress: null };
   const intl2 = guild(1236).intl;
   obj3[1] = intl2.string(guild(1236).t.J2TBi3);

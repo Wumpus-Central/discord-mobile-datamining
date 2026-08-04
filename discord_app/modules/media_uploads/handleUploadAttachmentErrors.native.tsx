@@ -59,7 +59,7 @@ export const handleUploadMessageAttachmentsErrors = function handleUploadMessage
     obj2.show(obj3);
     return true;
   } else {
-    obj = require(12481) /* getAttachmentUploadAbortAlertContent */;
+    obj = require(12480) /* getAttachmentUploadAbortAlertContent */;
     const attachmentUploadAbortAlertContent = obj.getAttachmentUploadAbortAlertContent(code);
     let flag = null != attachmentUploadAbortAlertContent;
     if (flag) {

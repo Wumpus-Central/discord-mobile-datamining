@@ -7,7 +7,7 @@ import num2 from "num2";
 
 let require = arg1;
 function getDefaultWants(arg0) {
-  let obj = require(12979) /* getBrowserInvertedWantsConfig */;
+  let obj = require(12978) /* getBrowserInvertedWantsConfig */;
   if (obj.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.getDefaultWants").invertWants) {
     obj = {};
     const merged = Object.assign(obj);
@@ -690,7 +690,7 @@ prototype["reset"] = function reset() {
   this.framesReceived = {};
   this.streamIds = {};
   this.streamPixelCounts = {};
-  let obj = require(12979) /* getBrowserInvertedWantsConfig */;
+  let obj = require(12978) /* getBrowserInvertedWantsConfig */;
   if (obj.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.getDefaultWants").invertWants) {
     obj = {};
     const merged = Object.assign(obj);

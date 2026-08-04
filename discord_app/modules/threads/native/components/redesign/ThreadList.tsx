@@ -1,5 +1,5 @@
 import noop from "noop";
-import get_ActivityIndicator from "module_15662";
+import get_ActivityIndicator from "module_15661";
 import { jsx } from "jsxProd";
 import createCacheKey from "createCacheKey";
 import set from "jsxProd";
@@ -22,7 +22,7 @@ function renderItem(item) {
   } else if ("thread" === type) {
     obj = { threadId: null, onPress: null, start: null, end: null };
     ({ threadId: obj[0], onPress: obj[1], start: obj[2], end: obj[3] } = item);
-    return jsx(importDefault(15660), { threadId: null, onPress: null, start: null, end: null });
+    return jsx(importDefault(15659), { threadId: null, onPress: null, start: null, end: null });
   }
 }
 function keyExtractor(type) {

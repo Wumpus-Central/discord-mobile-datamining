@@ -28,7 +28,7 @@ export default function ContentInventoryEntryRow(content) {
             flag2 = false;
           }
           obj[2] = flag2;
-          return jsx(importDefault(15500), { content: null, renderForScreenshot: null, visible: null });
+          return jsx(importDefault(15499), { content: null, renderForScreenshot: null, visible: null });
         } else {
           return null;
         }
@@ -37,6 +37,6 @@ export default function ContentInventoryEntryRow(content) {
     obj = { content: null, renderForScreenshot: null };
     obj[0] = content;
     obj[1] = flag;
-    return jsx(importDefault(15491), { content: null, renderForScreenshot: null });
+    return jsx(importDefault(15490), { content: null, renderForScreenshot: null });
   }
 };

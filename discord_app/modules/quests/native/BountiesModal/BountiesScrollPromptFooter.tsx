@@ -82,7 +82,7 @@ const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedI
 export default function BountiesScrollPromptFooter(visible) {
   visible = visible.visible;
   let merged = Object.assign(visible, Object.create(null));
-  let obj = require(14157) /* apexExperiment */;
+  let obj = require(14156) /* apexExperiment */;
   const isBountiesModalTransitionsRefactorEnabled = obj.useIsBountiesModalTransitionsRefactorEnabled(QuestsExperimentLocations.VIDEO_MODAL_MOBILE);
   let obj1 = require(589) /* initialize */;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
@@ -94,7 +94,7 @@ export default function BountiesScrollPromptFooter(visible) {
     return callback(closure_12, obj);
   }, []);
   obj = { visible, entranceTiming: require(4289) /* timingNone */.timingStandard, exitTiming: require(4289) /* timingNone */.timingStandard };
-  const visibilityTransition = require(14158) /* useVisibilityTransition */.useVisibilityTransition(obj);
+  const visibilityTransition = require(14157) /* useVisibilityTransition */.useVisibilityTransition(obj);
   let shouldRender = visibilityTransition.shouldRender;
   if (isBountiesModalTransitionsRefactorEnabled) {
     obj = { useReducedMotion: null, item: null, entering: null, exiting: null, renderItem: null };

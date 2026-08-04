@@ -17,7 +17,7 @@ function ObscuredView(source) {
   let tmp4;
   let tmp5;
   source = source.source;
-  let obj = require(12152) /* useMediaItemSpoilerState */;
+  let obj = require(12151) /* useMediaItemSpoilerState */;
   [tmp4, tmp5] = callback(obj.useMediaItemSpoilerState(source.index), 2);
   require(3989) /* map */;
   let tmp10Result = null;

@@ -10,7 +10,7 @@ const pressable = createToggle.createPressable({
     return MobileSetting.SENSITIVE_CONTENT_FILTERS;
   },
   useTrailing: function useObscuredContentGuildsSettingValue() {
-    const obj = require(13971) /* useExplicitContentSettingOrDefault */;
+    const obj = require(13970) /* useExplicitContentSettingOrDefault */;
     return require(6968) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
   },
   onPress: function onObscuredContentGuildsOnPress() {
@@ -28,7 +28,7 @@ const pressable = createToggle.createPressable({
     const items = [require(1306) /* create */.ExplicitContentRedaction.BLOCK];
     obj[3] = items;
     obj[4] = obj.getExplicitContentSettingOrDefault().explicitContentGuilds;
-    const result = require(13972) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+    const result = require(13971) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
   },
   useSearchTerms: function getSearchTerms() {
     const intl = require(1236) /* getSystemLocale */.intl;

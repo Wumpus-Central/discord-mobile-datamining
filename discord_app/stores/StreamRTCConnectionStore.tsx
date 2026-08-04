@@ -36,7 +36,7 @@ prototype["getRTCConnection"] = function getRTCConnection(arg0) {
   return dependencyMap3[arg0];
 };
 prototype["getQuality"] = function getQuality(arg0) {
-  if (importDefault(12974)(closure_6)) {
+  if (importDefault(12973)(closure_6)) {
     if (null != arg0) {
       let quality;
       if (dependencyMap3[arg0] != null) {

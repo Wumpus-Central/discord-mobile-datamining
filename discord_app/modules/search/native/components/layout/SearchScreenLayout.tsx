@@ -19,7 +19,7 @@ function SearchFreezeContainer(visible) {
   obj = { style: items, "aria-hidden": !visible, children };
   items[1] = visible ? tmp.visible : tmp.hidden;
   obj[2] = closure_5(View, obj);
-  return closure_5(importDefault(15512), obj);
+  return closure_5(importDefault(15511), obj);
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ hidden: { opacity: 0 }, visible: { flex: 1 } });
@@ -31,8 +31,8 @@ const memoResult = require("noop").memo((width) => {
   const items1 = [searchContext];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.isAutocompleteVisible(searchContext), items1);
   obj = { children: null };
-  obj = { visible: !stateFromStores, containerStyle, children: callback(importDefault(15595), { searchContext, width: width.width }) };
-  const items2 = [callback(SearchFreezeContainer, obj), callback(SearchFreezeContainer, { visible: stateFromStores, containerStyle, children: callback(importDefault(15679), { searchContext }) })];
+  obj = { visible: !stateFromStores, containerStyle, children: callback(importDefault(15594), { searchContext, width: width.width }) };
+  const items2 = [callback(SearchFreezeContainer, obj), callback(SearchFreezeContainer, { visible: stateFromStores, containerStyle, children: callback(importDefault(15678), { searchContext }) })];
   obj[0] = items2;
   return callback2(closure_6, obj);
 });

@@ -94,7 +94,7 @@ function ProgressBarMarkerInnerContent(arg0) {
     const tmp14 = closure_4;
     const tmp15 = closure_7;
   } else if (isDisabled) {
-    let tmp18Result = tmp18(tmp3(11856).BoostGemSlashIcon, { size: "xxs", color: "currentColor" });
+    let tmp18Result = tmp18(tmp3(11855).BoostGemSlashIcon, { size: "xxs", color: "currentColor" });
   } else {
     obj1 = { source: null, style: null };
     obj1[0] = obj[tier];

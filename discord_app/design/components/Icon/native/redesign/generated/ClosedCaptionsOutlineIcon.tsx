@@ -11,7 +11,7 @@ export const ClosedCaptionsOutlineIcon = function ClosedCaptionsOutlineIcon(colo
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(14176) /* registerAsset */;
+  obj[0] = require(14175) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);

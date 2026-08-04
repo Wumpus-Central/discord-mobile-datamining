@@ -92,7 +92,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
         obj5[1] = intl.string(outer1_0(outer1_2[14]).t.VJEVbu);
         obj5[2] = function render(arg0) {
           const merged = Object.assign(arg0);
-          return callback3(callback2(12785), {});
+          return callback3(callback2(12784), {});
         };
         obj2[outer1_6.CONFIRMATION] = obj5;
         obj1[1] = obj2;

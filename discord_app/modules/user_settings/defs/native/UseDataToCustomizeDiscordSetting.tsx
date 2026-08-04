@@ -16,9 +16,9 @@ createToggle = {
   onValueChange: function handlePersonalizationChange(arg0) {
     if (arg0) {
       let items = [Consents.PERSONALIZATION];
-      const obj3 = require(14006) /* handleRequestSuccess */;
-      require(14006) /* handleRequestSuccess */.setConsents(items, []).catch((message) => callback(14007).showDataPrivacyRateLimitAlert(message.message));
-      const setConsentsResult = require(14006) /* handleRequestSuccess */.setConsents(items, []);
+      const obj3 = require(14005) /* handleRequestSuccess */;
+      require(14005) /* handleRequestSuccess */.setConsents(items, []).catch((message) => callback(14006).showDataPrivacyRateLimitAlert(message.message));
+      const setConsentsResult = require(14005) /* handleRequestSuccess */.setConsents(items, []);
     } else {
       let obj = importDefault(4623);
       obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null };
@@ -33,13 +33,13 @@ createToggle = {
       obj[4] = importDefault(4713).Colors.RED;
       obj[5] = function onConfirm() {
         const items = [constants.PERSONALIZATION];
-        return callback(14006).setConsents([], items);
+        return callback(14005).setConsents([], items);
       };
       obj.show(obj);
     }
   },
   useIsDisabled() {
-    return require(13975) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    return require(13974) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
   }
 };
 createToggle = createToggle.createToggle(createToggle);

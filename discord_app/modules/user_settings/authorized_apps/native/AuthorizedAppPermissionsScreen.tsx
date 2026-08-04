@@ -8,5 +8,5 @@ export default function AuthorizedAppPermissionsScreen() {
   let obj = require(6787) /* useSettingNavigationRoute */;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
   obj = { oauth2Token: settingNavigationRoute.params.oauth2Token };
-  return jsx(importDefault(14095), { oauth2Token: settingNavigationRoute.params.oauth2Token });
+  return jsx(importDefault(14094), { oauth2Token: settingNavigationRoute.params.oauth2Token });
 };

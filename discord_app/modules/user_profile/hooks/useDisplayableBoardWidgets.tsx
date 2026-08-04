@@ -16,8 +16,8 @@ function isNonEmptyBoardWidget(games) {
 const result = require("items").fileFinishedImporting("modules/user_profile/hooks/useDisplayableBoardWidgets.tsx");
 
 export const useDisplayableBoardWidgets = function useDisplayableBoardWidgets(id) {
-  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(12367).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
-  const tmp2 = importDefault(12368)(id);
+  isMobileGameCollectionExperimentEnabled = isMobileGameCollectionExperimentEnabled(12366).useIsMobileGameCollectionExperimentEnabled("UserProfileWidgetsBoard");
+  const tmp2 = importDefault(12367)(id);
   importDefault = tmp2;
   const items = [isMobileGameCollectionExperimentEnabled, tmp2];
   return React.useMemo(() => {

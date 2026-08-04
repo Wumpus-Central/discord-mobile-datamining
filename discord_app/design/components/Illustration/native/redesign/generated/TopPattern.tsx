@@ -9,13 +9,13 @@ export const getTopPatternSource = function getTopPatternSource(theme) {
   let obj = require(7544) /* getIllustrationSource */;
   obj = {
     dark() {
-      return callback(12697);
+      return callback(12696);
     },
     darker() {
-      return callback(12698);
+      return callback(12697);
     },
     light() {
-      return callback(12699);
+      return callback(12698);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -24,13 +24,13 @@ export const useTopPatternSource = function useTopPatternSource() {
   let obj = require(4131) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(12697);
+      return callback(12696);
     },
     darker() {
-      return callback(12698);
+      return callback(12697);
     },
     light() {
-      return callback(12699);
+      return callback(12698);
     }
   };
   return require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -39,13 +39,13 @@ export const TopPattern = function TopPattern(arg0) {
   let obj = require(4131) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(12697);
+      return callback(12696);
     },
     darker() {
-      return callback(12698);
+      return callback(12697);
     },
     light() {
-      return callback(12699);
+      return callback(12698);
     }
   };
   obj = {};

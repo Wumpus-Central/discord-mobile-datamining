@@ -98,12 +98,12 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     obj9[0] = AnalyticsObjects.ANIMATED_AVATAR;
     const intl7 = tmp2(1236).intl;
     obj9[1] = intl7.string(tmp2(1236).t.mr4K7D);
-    obj8[1] = tmp8(importDefault(13810), obj9);
+    obj8[1] = tmp8(importDefault(13809), obj9);
     items4[1] = tmp8(View, obj8);
     obj6[0] = items4;
     obj2[1] = tmp7(closure_8, obj6);
     showAnimatedAvatarUpsell = tmp8(tmp2(5315).TableRow, obj2);
-    const tmp5Result = importDefault(13810);
+    const tmp5Result = importDefault(13809);
   }
   items2[2] = showAnimatedAvatarUpsell;
   tmp8Result = null != handleEditAvatarDecorationSelect;

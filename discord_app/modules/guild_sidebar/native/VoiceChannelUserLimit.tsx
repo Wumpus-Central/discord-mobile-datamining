@@ -29,7 +29,7 @@ const memoResult = importAllResult.memo(function VoiceChannelUserLimit(videoLimi
   let tmp3 = null;
   if (videoLimit.videoLimit) {
     obj = { source: null, size: null, style: null };
-    obj[0] = importDefault(12964);
+    obj[0] = importDefault(12963);
     obj[1] = require(1297) /* Button */.Icon.Sizes.REFRESH_SMALL_16;
     obj[2] = rect.videoIcon;
     tmp3 = callback(require(1297) /* Button */.Icon, obj);

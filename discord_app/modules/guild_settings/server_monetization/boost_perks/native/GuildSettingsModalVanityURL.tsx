@@ -113,7 +113,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
   }
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  importDefault(16605).closeModal();
+  importDefault(16604).closeModal();
 };
 prototype["render"] = function render() {
   let errorDetails;
@@ -138,7 +138,7 @@ prototype["render"] = function render() {
   if (isEditing) {
     let errorMessageFromErrorCode;
     if (null != errorDetails) {
-      obj = require(16479) /* getErrorMessageFromErrorCode */;
+      obj = require(16478) /* getErrorMessageFromErrorCode */;
       errorMessageFromErrorCode = obj.getErrorMessageFromErrorCode(errorDetails.code);
     }
     let hasItem;
@@ -196,7 +196,7 @@ prototype["render"] = function render() {
     const obj9 = { style: null, children: null };
     obj9[0] = styles.center;
     const obj10 = { source: null, style: null, resizeMode: "contain" };
-    obj10[0] = importDefault(16606);
+    obj10[0] = importDefault(16605);
     obj10[1] = styles.image;
     obj9[1] = callback(closure_4, obj10);
     items3[1] = callback(closure_3, obj9);

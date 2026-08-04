@@ -35,7 +35,7 @@ export const openStageSettingsSheet = function openStageSettingsSheet(closure_0,
 export const openEndStageModal = function openEndStageModal(closure_0) {
   let obj = importDefault(4253);
   obj = { channel: closure_0 };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(12568, dependencyMap.paths), closure_8, obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(12567, dependencyMap.paths), closure_8, obj);
 };
 export const openStageChannel = function openStageChannel(outer1_0) {
   if (outer1_0.isGuildStageVoice()) {

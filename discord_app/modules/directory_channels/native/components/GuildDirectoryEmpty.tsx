@@ -41,7 +41,7 @@ export default function GuildDirectoryEmpty(guild) {
   items1[1] = obj;
   obj1 = { source: null, style: null };
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
-  obj1[0] = channel(12023);
+  obj1[0] = channel(12022);
   obj1[1] = tmp.header;
   const items2 = [callback(closure_3, obj1), , , , ];
   const obj2 = { style: tmp.title, accessibilityRole: "header", children: null };
@@ -61,7 +61,7 @@ export default function GuildDirectoryEmpty(guild) {
       obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: channel.id };
       return obj.open(obj);
     };
-    obj5[2] = tmp2(12024);
+    obj5[2] = tmp2(12023);
     const intl3 = tmp4(1236).intl;
     obj5[3] = intl3.string(tmp4(1236).t.hyK15i);
     tmp8Result = tmp8(tmp4(7777).FormCTA, obj5);
@@ -75,7 +75,7 @@ export default function GuildDirectoryEmpty(guild) {
     iconSource: null,
     title: null
   };
-  obj6[2] = channel(12025);
+  obj6[2] = channel(12024);
   const intl4 = tmp4(1236).intl;
   obj6[3] = intl4.string(guild(1236).t.L4bwJ9);
   items2[4] = callback(guild(7777).FormCTA, obj6);

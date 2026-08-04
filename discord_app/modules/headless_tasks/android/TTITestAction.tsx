@@ -312,7 +312,7 @@ function _apiLogin() {
               let obj = iter;
               obj = callback2(table[11]);
               callback2 = iter;
-              const f119484 = () => { ... };
+              const f119479 = () => { ... };
               function handler() { ... }
               const subscription = obj.subscribe(iter, handler);
             }
@@ -353,7 +353,7 @@ function subscribeOnce(subscribe) {
   let closure_2 = arg2;
   function handler(arg0) {
     obj.unsubscribe(closure_1, handler);
-    return f119484(arg0);
+    return f119479(arg0);
   }
   return subscribe.subscribe("LOGIN_SUCCESS", handler);
 }
@@ -400,7 +400,7 @@ let obj = {
     importDefault(4143).logToDevice(json);
   },
   () => {
-    let obj = importDefault(16356);
+    let obj = importDefault(16355);
     let report;
     if (obj != null) {
       report = obj.requestReport();
@@ -412,7 +412,7 @@ let obj = {
     importDefault(4143).logToDevice(json);
   },
   (multiplier) => {
-    let obj = importDefault(16356);
+    let obj = importDefault(16355);
     if (obj != null) {
       const result = obj.setJankHeuristicMultiplier(multiplier.multiplier);
     }
@@ -422,7 +422,7 @@ let obj = {
     importDefault(4143).logToDevice(json);
   },
   () => {
-    let obj = importDefault(16356);
+    let obj = importDefault(16355);
     if (obj != null) {
       obj.startTracking();
     }

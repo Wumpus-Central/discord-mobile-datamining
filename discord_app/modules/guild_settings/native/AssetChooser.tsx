@@ -136,7 +136,7 @@ prototype["render"] = function render() {
   obj[4] = disabled;
   let tmp9 = source;
   if (null == source) {
-    tmp9 = importDefault(16488);
+    tmp9 = importDefault(16487);
   }
   obj = { source: tmp9, style: tmp.asset, children: null };
   let tmp5Result = null;
@@ -145,7 +145,7 @@ prototype["render"] = function render() {
     obj[0] = tmp.uploadIconWrapper;
     const obj1 = { style: null, source: null };
     obj1[0] = tmp.uploadIcon;
-    obj1[1] = importDefault(16489);
+    obj1[1] = importDefault(16488);
     obj[1] = tmp5(closure_5, obj1);
     tmp5Result = tmp5(closure_4, obj);
   }

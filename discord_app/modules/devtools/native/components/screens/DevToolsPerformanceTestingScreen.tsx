@@ -16,7 +16,7 @@ const memoResult = require("noop").memo(function DevToolsPerformanceTestingScree
   obj[0] = importDefault(1581)().bottom + importDefault(712).space.PX_16;
   obj[1] = obj;
   const obj1 = { hasIcons: true, children: null };
-  const entries = Object.entries(_require(13752).PerformanceTestingScreens);
+  const entries = Object.entries(_require(13751).PerformanceTestingScreens);
   obj1[1] = entries.map((arg0) => {
     let tmp;
     [tmp, ] = arg0;

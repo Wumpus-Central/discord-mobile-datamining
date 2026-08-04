@@ -110,7 +110,7 @@ export default function ExistingUserAgeGateModal(source) {
         fn = () => {
           let obj = arr(5735);
           obj.closeAgeGateModal();
-          obj = { key: "AGE_GATE_AGE_VERIFIED", icon: callback(16245), content: null };
+          obj = { key: "AGE_GATE_AGE_VERIFIED", icon: callback(16244), content: null };
           const intl = arr(1236).intl;
           obj[2] = intl.string(arr(1236).t.gUiIGZ);
           callback(3986).open(obj);
@@ -139,7 +139,7 @@ export default function ExistingUserAgeGateModal(source) {
       obj2[2] = { existing_user: true };
       obj2[3] = function render(arg0) {
         const merged = Object.assign(arg0);
-        return callback3(callback2(15018), {});
+        return callback3(callback2(15017), {});
       };
       obj[outer1_7.Blocked] = obj2;
       const obj3 = { headerTitle: null, headerLeft: null, render: null };

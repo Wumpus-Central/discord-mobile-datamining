@@ -28,7 +28,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return callback(ref(15060).MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return callback(ref(15059).MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ buttonContainer: { position: "relative" } });
@@ -75,7 +75,7 @@ export default function MessageRequestsButton(alternateVariant) {
       const merged2 = Object.assign(merged);
       tmp21 = callback(tmp3(7672).IconButton, obj1);
     }
-    const items2 = [tmp21, str > 0 && tmp16(tmp3(12445).ButtonBadge, { badgePosition: "right" })];
+    const items2 = [tmp21, str > 0 && tmp16(tmp3(12444).ButtonBadge, { badgePosition: "right" })];
     obj[2] = items2;
     return closure_8(View, obj);
   } else {
@@ -91,7 +91,7 @@ export default function MessageRequestsButton(alternateVariant) {
     obj2[3] = str1;
     obj2[4] = str > 0;
     const merged3 = Object.assign(merged);
-    return callback(importDefault(12445), obj2);
+    return callback(importDefault(12444), obj2);
   }
   tmp2 = callback2();
 };

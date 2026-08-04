@@ -11,7 +11,7 @@ class ButtonBadge {
     if (str === undefined) {
       str = "left";
     }
-    tmp = f54356(false);
+    tmp = f54353(false);
     tmp2 = jsx;
     obj = { size: null, maskSize: 2, style: null, maskColor: null };
     tmp3 = require("DEFAULT_BADGE_SIZE");

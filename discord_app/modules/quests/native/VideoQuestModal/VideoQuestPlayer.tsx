@@ -188,7 +188,7 @@ const memoResult = importAllResult.memo((onLoad) => {
   let tmp = first2();
   obj = externallyPaused;
   ref = externallyPaused.useRef(null);
-  let obj1 = handleBufferAnalytics(14269);
+  let obj1 = handleBufferAnalytics(14268);
   const videoQuestModalContext = obj1.useVideoQuestModalContext();
   quest = videoQuestModalContext.quest;
   let obj2 = handleBufferAnalytics(10374);
@@ -377,7 +377,7 @@ const memoResult = importAllResult.memo((onLoad) => {
     };
   }, items2);
   obj1 = { duration: first, isQuestCompleted: tmp8, playerState: first1, questId: quest.id, videoSessionId: videoQuestModalContext.videoSessionId, videoAssetId: VIDEO_PLAYER_VIDEO, sourceQuestContent };
-  const tmp30 = ref1(14277)(obj1);
+  const tmp30 = ref1(14276)(obj1);
   ({ handleBufferAnalytics, handleEndAnalytics } = tmp30);
   handleErrorAnalytics = tmp30.handleErrorAnalytics;
   handleLoadAnalytics = tmp30.handleLoadAnalytics;
@@ -991,7 +991,7 @@ const memoResult = importAllResult.memo((onLoad) => {
     }
     obj7[3] = num6;
     obj6[3] = obj7;
-    items29[1] = targetSeconds(tmp3(14288).VideoQuestCaptions, obj6);
+    items29[1] = targetSeconds(tmp3(14287).VideoQuestCaptions, obj6);
     if (!tmp72) {
       items29[2] = tmp72;
       tmp80Result = !tmp39;
@@ -1023,7 +1023,7 @@ const memoResult = importAllResult.memo((onLoad) => {
             obj11[3] = tmp.controlButton;
             obj12 = { color: null };
             obj12[0] = tmp.iconDisabled.color;
-            obj11[4] = tmp80(tmp3(14177).TranscriptOutlineIcon, obj12);
+            obj11[4] = tmp80(tmp3(14176).TranscriptOutlineIcon, obj12);
             flag2 = tmp80(tmp3(4812).PressableOpacity, obj11);
           }
           items32[1] = flag2;
@@ -1042,7 +1042,7 @@ const memoResult = importAllResult.memo((onLoad) => {
           }
           const obj14 = { color: null };
           obj14[0] = color;
-          obj13[4] = tmp80(tmp3(14175).ClosedCaptionsOutlineIcon, obj14);
+          obj13[4] = tmp80(tmp3(14174).ClosedCaptionsOutlineIcon, obj14);
           tmp80(tmp3(4812).PressableOpacity, obj13);
         }
       }
@@ -1056,8 +1056,8 @@ const memoResult = importAllResult.memo((onLoad) => {
       obj16[3] = callbackResult;
       const obj17 = { color: null, width: 16, height: 16 };
       obj17[0] = tmp.icon.color;
-      obj16[4] = tmp80(tmp3(14180).SkipBackwardIcon, obj17);
-      const items34 = [tmp80(tmp3(14179).VideoQuestPlayerControlButton, obj16), , ];
+      obj16[4] = tmp80(tmp3(14179).SkipBackwardIcon, obj17);
+      const items34 = [tmp80(tmp3(14178).VideoQuestPlayerControlButton, obj16), , ];
       if (!tmp22) {
         if (first1 !== tmp17.ERRORED) {
           const t2 = tmp3(1236).t;
@@ -1076,7 +1076,7 @@ const memoResult = importAllResult.memo((onLoad) => {
             let tmp80Result2 = tmp80(PauseIcon, { size: "lg" });
           }
           obj18[3] = tmp80Result2;
-          items34[1] = tmp80(tmp3(14179).VideoQuestPlayerControlButton, obj18);
+          items34[1] = tmp80(tmp3(14178).VideoQuestPlayerControlButton, obj18);
           const obj19 = { disabled: null, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
           obj19[0] = tmp51;
           const intl5 = tmp3(1236).intl;
@@ -1084,8 +1084,8 @@ const memoResult = importAllResult.memo((onLoad) => {
           obj19[3] = callbackResult1;
           const obj20 = { color: null, width: 16, height: 16 };
           obj20[0] = tmp.icon.color;
-          obj19[4] = tmp80(tmp3(14181).SkipForwardIcon, obj20);
-          items34[2] = tmp80(tmp3(14179).VideoQuestPlayerControlButton, obj19);
+          obj19[4] = tmp80(tmp3(14180).SkipForwardIcon, obj20);
+          items34[2] = tmp80(tmp3(14178).VideoQuestPlayerControlButton, obj19);
           obj15[1] = items34;
           items33[1] = tmp82(tmp81, obj15);
           let tmp80Result3 = tmp80Result4;
@@ -1100,7 +1100,7 @@ const memoResult = importAllResult.memo((onLoad) => {
             obj22[1] = intl6.string(tmp3(1236).t.vKZT5t);
             obj22[2] = callback8;
             obj22[3] = tmp.controlButton;
-            obj22[4] = tmp80(tmp3(14182).FullscreenEnterIcon, {});
+            obj22[4] = tmp80(tmp3(14181).FullscreenEnterIcon, {});
             obj21[1] = tmp80(tmp3(4812).PressableOpacity, obj22);
             tmp80Result3 = tmp80(tmp81, obj21);
           }

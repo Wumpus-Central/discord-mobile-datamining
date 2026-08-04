@@ -15,7 +15,7 @@ export default function TypingSubtitle(arg0) {
   let text;
   ({ channel, channelName } = arg0);
   ({ guild, text } = arg0);
-  let obj = require(15322) /* styles */;
+  let obj = require(15321) /* styles */;
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {

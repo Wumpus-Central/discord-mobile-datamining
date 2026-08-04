@@ -61,7 +61,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj7 = { guild: null, theme: null };
     obj7[0] = stateFromStores;
     obj7[1] = tmp4;
-    items1[2] = callback(tmp2(12684), obj7);
+    items1[2] = callback(tmp2(12683), obj7);
     obj[4] = items1;
     tmp9 = callback2(tmp2Result, obj);
   }

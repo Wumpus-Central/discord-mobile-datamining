@@ -67,7 +67,7 @@ function ChannelContentComponent(arg0) {
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
   obj3[5] = layout;
-  const items1 = [closure_6(importDefault(15619), obj3), ];
+  const items1 = [closure_6(importDefault(15618), obj3), ];
   let tmp12Result = tmp10Result;
   if (!tmp10Result) {
     tmp12Result = isNSFWResult;
@@ -101,7 +101,7 @@ function ChannelContentComponent(arg0) {
     if (isSubscriptionGated) {
       const obj8 = { locked: null, isInMainTabsExperiment: true };
       obj8[0] = needSubscriptionToAccess;
-      isSubscriptionGated = tmp10(importDefault(15140), obj8);
+      isSubscriptionGated = tmp10(importDefault(15139), obj8);
     }
     items3[2] = isSubscriptionGated;
     obj4[1] = items3;

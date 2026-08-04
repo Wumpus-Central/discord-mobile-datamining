@@ -95,7 +95,7 @@ function getSegmentedControlItems() {
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t.K2sFfo);
   obj[1] = ThemeTypes.LIGHT;
-  obj[2] = callback(require(14404) /* ThemeLightIcon */.ThemeLightIcon, {});
+  obj[2] = callback(require(14403) /* ThemeLightIcon */.ThemeLightIcon, {});
   const items = [obj, , ];
   obj = { label: null, id: null, icon: null, page: null };
   const intl2 = require(1236) /* getSystemLocale */.intl;
@@ -107,7 +107,7 @@ function getSegmentedControlItems() {
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl3.string(require(1236) /* getSystemLocale */.t.pQwSpQ);
   obj[1] = ThemeTypes.MIDNIGHT;
-  obj[2] = callback(require(14406) /* ThemeMidnightIcon */.ThemeMidnightIcon, {});
+  obj[2] = callback(require(14405) /* ThemeMidnightIcon */.ThemeMidnightIcon, {});
   items[2] = obj;
   return items;
 }

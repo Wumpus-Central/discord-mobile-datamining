@@ -30,7 +30,7 @@ export default function GuildActionSheetProgress(guild) {
         obj = { guild: null, titleStyle: null, longPressDisabled: true, resume: true };
         obj[0] = guild;
         obj[1] = tmp.title;
-        obj[1] = jsx(importDefault(13230), { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
+        obj[1] = jsx(importDefault(13229), { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
         tmp5 = jsx(require(5317) /* PressableCard */.Card, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
       }
     }

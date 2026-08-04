@@ -13,7 +13,7 @@ createToggle = {
     return require(589) /* initialize */.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   },
   onValueChange: function onDataSavingModeSettingValueChange(arg0) {
-    let obj = require(14543) /* UserSettingsText */;
+    let obj = require(14542) /* UserSettingsText */;
     obj = { videoUploadQuality: CHANNEL_SIDEBAR_WIDTH.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
     const ViewImageDescriptions = require(3958) /* explicitContentFromProto */.ViewImageDescriptions;
     obj[1] = ViewImageDescriptions.getSetting();

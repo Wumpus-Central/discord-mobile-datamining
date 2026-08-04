@@ -58,7 +58,7 @@ export default function getTagProperties(arg0) {
         const intl6 = tmp2(1236).intl;
         stringResult2 = intl6.string(tmp2(1236).t.fyE8sH);
       }
-      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "ti", tagType: null, tagIconUrl: false, opTagText: false, opTagTextColor: false, opTagBackgroundColor: false };
+      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "paddingHorizontal", tagType: 995292225848286400000000000000000000000000000000000000000000000000000000000000000000000, tagIconUrl: 0.00000000000000000000000000000000000000000000000000000000000000000007424560562493925, opTagText: 37.693, opTagTextColor: -38.284, opTagBackgroundColor: null };
       obj[0] = stringResult;
       obj[1] = null;
       obj[2] = flag;

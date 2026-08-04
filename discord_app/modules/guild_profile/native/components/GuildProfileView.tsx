@@ -108,7 +108,7 @@ export default function GuildProfileView(guildProfile) {
     obj[2] = guildProfile.description;
     tmp5Result = tmp5(guildProfile(4281).Text, obj);
   }
-  const items2 = [tmp5Result, callback(importDefault(9188), { profile: guildProfile }), callback(importDefault(12119), { profile: guildProfile })];
+  const items2 = [tmp5Result, callback(importDefault(9188), { profile: guildProfile }), callback(importDefault(12118), { profile: guildProfile })];
   obj[1] = items2;
   items1[2] = closure_9(closure_4, obj);
   obj[1] = items1;

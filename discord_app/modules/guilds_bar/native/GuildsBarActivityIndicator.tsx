@@ -16,18 +16,18 @@ function getMediaIcon(closure_3) {
     tmp6 = obj;
   } else if (tmp3) {
     const obj1 = { icon: null, source: null };
-    obj1[0] = require(12093) /* ScreenIcon */.ScreenIcon;
-    obj1[1] = importDefault(15330);
+    obj1[0] = require(12092) /* ScreenIcon */.ScreenIcon;
+    obj1[1] = importDefault(15329);
     tmp6 = obj1;
   } else if (tmp2) {
     const obj2 = { icon: null, source: null };
     obj2[0] = require(7635) /* VideoIcon */.VideoIcon;
-    obj2[1] = importDefault(15331);
+    obj2[1] = importDefault(15330);
     tmp6 = obj2;
   } else if (tmp) {
     const obj3 = { icon: null, source: null };
     obj3[0] = require(4810) /* VoiceNormalIcon */.VoiceNormalIcon;
-    obj3[1] = importDefault(15332);
+    obj3[1] = importDefault(15331);
     tmp6 = obj3;
   } else {
     tmp6 = null;
@@ -99,7 +99,7 @@ const memoResult1 = importAllResult.memo(function GuildsBarGuildActivityIndicato
   let c0;
   let importDefault;
   ({ guildId, style } = arg0);
-  const tmp = importDefault(15327)(guildId);
+  const tmp = importDefault(15326)(guildId);
   c0 = tmp;
   const tmp2 = getMediaIcon(tmp);
   importDefault = tmp2;
@@ -149,7 +149,7 @@ export default memoResult1;
 export const GuildsBarActivityIndicatorBase = memoResult;
 export { getMediaIcon };
 export const useActivityIndicatorState = function useActivityIndicatorState(guildId) {
-  const tmp = importDefault(15327)(guildId);
+  const tmp = importDefault(15326)(guildId);
   const require = tmp;
   const tmp2 = getMediaIcon(tmp);
   importDefault = tmp2;

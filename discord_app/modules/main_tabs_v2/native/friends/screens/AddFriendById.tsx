@@ -252,7 +252,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const tmp7 = first(importAllResult.useState(""), 2);
   first2 = tmp7[0];
   closure_8 = tmp7[1];
-  let obj1 = importDefault(13111);
+  let obj1 = importDefault(13110);
   const enabled = obj1.useConfig({ location: "AddFriendbyId" }).enabled;
   const items = [first1];
   const items1 = [first1];

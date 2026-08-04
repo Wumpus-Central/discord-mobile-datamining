@@ -46,7 +46,7 @@ function Screenshot(setUri) {
   const tmp4 = ref(4132)();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = ref(15494);
+  const tmp6 = ref(15493);
   obj4[0] = setUri(4096).OverlayOpacity.LEVEL_7;
   obj4[1] = setUri(4096).OverlayOpacity.LEVEL_8;
   obj3[4] = obj4;
@@ -202,7 +202,7 @@ class ICYMIShareModal {
                     let closure_0 = arg0;
                     let c2 = 0;
                     let c1 = 0;
-                    return (/* F119567 */ function*() { ... })();
+                    return (/* F119562 */ function*() { ... })();
                   });
                   return function(arg0) {
                     const self = this;

@@ -17,9 +17,9 @@ let map1;
 const require = arg1;
 function YouAvatar(arg0) {
   const callback = React.useCallback(() => {
-    const result = callback(15742).trackYouTabAvatarPress();
-    const obj = callback(15742);
-    const result1 = callback(15363).showYouAccountActionSheet();
+    const result = callback(15741).trackYouTabAvatarPress();
+    const obj = callback(15741);
+    const result1 = callback(15362).showYouAccountActionSheet();
   }, []);
   let obj = require(500) /* set */;
   const isAndroidResult = obj.isAndroid();
@@ -53,7 +53,7 @@ function YouScreenWidgetsBoardContainer(containerBackground) {
     tmp4 = items;
   }
   obj = { style: tmp3.profileContent, children: null };
-  const items1 = [callback2(importDefault(12252), {}), callback2(importDefault(12253), { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: tmp4 })];
+  const items1 = [callback2(importDefault(12251), {}), callback2(importDefault(12252), { userId, isVisible: activeSection === UserProfileSections.WIDGETS, cardStyle: tmp4 })];
   obj[1] = items1;
   return callback3(closure_6, obj);
 }
@@ -99,12 +99,12 @@ function EditSection(navigateToProfileCustomization) {
     obj1[3] = intl.string(tmp4(1236).t.AAjhgi);
     obj1[4] = callback;
     obj[1] = callback2(tmp4(4695).Button, obj1);
-    const items2 = [callback2(tmp(12182), obj), ];
+    const items2 = [callback2(tmp(12181), obj), ];
     const obj3 = { targetRef: null, visible: null, markAsDismissed: null };
     obj3[0] = ref;
     obj3[1] = tmp13;
     obj3[2] = tmp11[1];
-    items2[1] = callback2(tmp(15750), obj3);
+    items2[1] = callback2(tmp(15749), obj3);
     obj[0] = items2;
     return callback3(closure_15, obj);
   }

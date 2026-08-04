@@ -26,7 +26,7 @@ export default function GuildMemberDashChannelRow(arg0) {
   let hasItem;
   const tmp = createCacheKey();
   id = guild.id;
-  let obj = id(15217);
+  let obj = id(15216);
   let num = obj.useSubmittedGuildJoinRequestTotal({ guildId: id });
   if (num == null) {
     num = 0;

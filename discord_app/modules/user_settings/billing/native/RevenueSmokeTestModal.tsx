@@ -36,7 +36,7 @@ const memoResult = require("noop").memo(function RevenueSmokeTestModal() {
     component: null
   };
   ({ Navigator, Screen } = createNativeStackNavigator);
-  obj1[2] = importDefault(14917).RunAllFlows;
+  obj1[2] = importDefault(14916).RunAllFlows;
   obj[1] = <Screen name="RunAllFlows" options={function options() {
     return { title: "Run All Payment Flows" };
   }} component={null} />;

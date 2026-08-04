@@ -128,7 +128,7 @@ export default function ChooseAccount() {
   let tmp = createCacheKey();
   let obj = _require(1480);
   _require = obj.useNavigation();
-  let obj1 = _require(14983);
+  let obj1 = _require(14982);
   const multiAccountUsers = obj1.useMultiAccountUsers().multiAccountUsers;
   obj = { headerText: null, subHeader: null, backgroundImageSource: null, backgroundImageCover: true, contentStyle: null, children: null };
   let intl = _require(1236).intl;
@@ -137,7 +137,7 @@ export default function ChooseAccount() {
   let intl2 = _require(1236).intl;
   obj[2] = intl2.string(_require(1236).t["0M5fN7"]);
   obj[1] = callback(_require(4281).Text, obj);
-  obj[2] = multiAccountUsers(13119);
+  obj[2] = multiAccountUsers(13118);
   obj[4] = tmp.container;
   obj1 = { style: tmp.mainCard, children: null };
   let items = [
@@ -213,7 +213,7 @@ export default function ChooseAccount() {
   let obj3 = { themedColor: null, size: null, source: null };
   obj3[0] = multiAccountUsers(712).colors.TEXT_LINK;
   obj3[1] = _require(1297).Icon.Sizes.SMALL_20;
-  obj3[2] = multiAccountUsers(14985);
+  obj3[2] = multiAccountUsers(14984);
   obj2[0] = callback(_require(7777).FormRow.Icon, obj3);
   let intl3 = _require(1236).intl;
   obj2[1] = intl3.string(_require(1236).t.bPP34Q);

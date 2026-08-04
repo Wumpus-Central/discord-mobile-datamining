@@ -19,7 +19,7 @@ export default function ResourcesRow(guildId) {
   let importDefault;
   const tmp = createCacheKey();
   importDefault = tmp;
-  const arr = importDefault(15549)(guildId);
+  const arr = importDefault(15548)(guildId);
   let obj = { horizontal: true, style: tmp.container, children: null };
   const substr = arr.slice(0, 2);
   const items = [

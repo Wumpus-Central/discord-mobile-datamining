@@ -292,7 +292,7 @@ let closure_16 = importAllResult.memo((user) => {
       if (user.isSpectating) {
         obj3 = { size: null, source: null, style: null };
         obj3[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-        obj3[1] = tmp5(12965);
+        obj3[1] = tmp5(12964);
         obj3[2] = tmp19;
         tmp20Result = tmp20(tmp8(1297).Icon, obj3);
       }
@@ -303,7 +303,7 @@ let closure_16 = importAllResult.memo((user) => {
         if (tmp14) {
           obj4 = { size: null, source: null, style: null };
           obj4[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-          obj4[1] = tmp5(12962);
+          obj4[1] = tmp5(12961);
           obj4[2] = tmp19;
           tmp20Result = tmp20(tmp8(1297).Icon, obj4);
         }
@@ -323,22 +323,22 @@ let closure_16 = importAllResult.memo((user) => {
           if (localVideoDisabled) {
             const obj6 = { size: null, source: null, style: null, disableColor: true };
             obj6[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-            obj6[1] = tmp5(12963);
+            obj6[1] = tmp5(12962);
             obj6[2] = tmp2.voiceStatusIconMargin;
             let obj7 = obj6;
           } else {
             obj7 = { size: null, source: null, style: null };
             obj7[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;
-            obj7[1] = tmp5(12964);
+            obj7[1] = tmp5(12963);
             obj7[2] = tmp19;
           }
           tmp20(tmp8(1297).Icon, obj7);
         }
       } else {
         if (tmp8Result.isThemeDark(stateFromStores)) {
-          let tmp5Result = tmp5(12960);
+          let tmp5Result = tmp5(12959);
         } else {
-          tmp5Result = tmp5(12961);
+          tmp5Result = tmp5(12960);
         }
         const obj8 = { size: null, source: null, style: null, color: null, disableColor: null };
         obj8[0] = tmp8(1297).Icon.Sizes.REFRESH_SMALL_16;

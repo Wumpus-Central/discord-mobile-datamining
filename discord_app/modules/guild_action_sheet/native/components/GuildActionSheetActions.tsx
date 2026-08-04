@@ -314,7 +314,7 @@ export const GuildUnreadAction = function GuildUnreadAction(guild) {
 };
 export const GuildActionSheetPrimaryActions = function GuildActionSheetPrimaryActions(guild) {
   guild = guild.guild;
-  let obj = guild(13216);
+  let obj = guild(13215);
   let obj1 = guild(589);
   const items = [createGuildRoleRecordFromRust];
   const items1 = [];
@@ -390,7 +390,7 @@ export const GuildActionSheetDirectoryActions = function GuildActionSheetDirecto
   items.push(callback2(NotificationAction, { guild }));
   items.push(callback2(ChangeIdentityOption, { guild, user: currentUser }));
   items.push(callback2(RestrictedGuildPrivacyOption, { guild }));
-  let obj = guild(13164);
+  let obj = guild(13163);
   const messageRequestPrivacyOption = obj.useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
@@ -457,7 +457,7 @@ export const GuildActionSheetSecondaryActions = function GuildActionSheetSeconda
   items.push(callback2(RestrictedGuildPrivacyOption, { guild }));
   const tmp12 = constants;
   const tmp2 = callback(guild, currentUser);
-  const messageRequestPrivacyOption = guild(13164).useMessageRequestPrivacyOption({ guild });
+  const messageRequestPrivacyOption = guild(13163).useMessageRequestPrivacyOption({ guild });
   if (null != messageRequestPrivacyOption) {
     items.push(messageRequestPrivacyOption);
   }

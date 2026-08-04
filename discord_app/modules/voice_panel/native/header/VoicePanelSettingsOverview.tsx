@@ -110,7 +110,7 @@ function ShareActivityLogsButton() {
   }, []);
   let obj = { onPress: callback, icon: null, label: null, trailing: null };
   obj = { IconComponent: null, source: null };
-  obj[0] = require(14643) /* WrenchIcon */.WrenchIcon;
+  obj[0] = require(14642) /* WrenchIcon */.WrenchIcon;
   obj[1] = importDefault(7828);
   obj[1] = callback(require(5321) /* TableRowIcon */.TableRowIcon, obj);
   let intl = require(1236) /* getSystemLocale */.intl;
@@ -129,7 +129,7 @@ function ActivityDebugToggle() {
   }, []);
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj = { IconComponent: null, source: null };
-  obj[0] = require(14643) /* WrenchIcon */.WrenchIcon;
+  obj[0] = require(14642) /* WrenchIcon */.WrenchIcon;
   obj[1] = importDefault(7828);
   obj[0] = callback(require(5321) /* TableRowIcon */.TableRowIcon, obj);
   const intl = require(1236) /* getSystemLocale */.intl;

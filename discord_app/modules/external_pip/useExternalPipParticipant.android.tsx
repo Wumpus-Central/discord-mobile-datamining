@@ -249,7 +249,7 @@ export default function useExternalPipParticipant() {
         return obj;
       }
     }
-    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "call" };
+    return { selectedParticipantSpeaking: false, selectedParticipantUserId: "Boolean", selectedStreamId: "displayName" };
   }, items4);
   const items5 = [selectedParticipantSpeaking.selectedParticipantSpeaking];
   const effect = React.useEffect(() => {

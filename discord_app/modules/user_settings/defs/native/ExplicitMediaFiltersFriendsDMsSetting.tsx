@@ -10,7 +10,7 @@ const pressable = createToggle.createPressable({
     return MobileSetting.SENSITIVE_CONTENT_FILTERS;
   },
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
-    const obj = require(13971) /* useExplicitContentSettingOrDefault */;
+    const obj = require(13970) /* useExplicitContentSettingOrDefault */;
     return require(6968) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
   },
   onPress: function onObscuredContentFriendsDmOnPress() {
@@ -26,7 +26,7 @@ const pressable = createToggle.createPressable({
       return obj.updateExplicitContentSetting(obj);
     };
     obj[3] = obj.getExplicitContentSettingOrDefault().explicitContentFriendDm;
-    const result = require(13972) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+    const result = require(13971) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
   },
   useSearchTerms: function getSearchTerms() {
     const intl = require(1236) /* getSystemLocale */.intl;
@@ -48,7 +48,7 @@ let obj = {
     return MobileSetting.SENSITIVE_CONTENT_FILTERS;
   },
   useTrailing: function useObscuredContentFriendsDmSettingValue() {
-    const obj = require(13971) /* useExplicitContentSettingOrDefault */;
+    const obj = require(13970) /* useExplicitContentSettingOrDefault */;
     return require(6968) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentFriendDm)();
   },
   onPress: function onObscuredContentFriendsDmOnPress() {
@@ -64,7 +64,7 @@ let obj = {
       return obj.updateExplicitContentSetting(obj);
     };
     obj[3] = obj.getExplicitContentSettingOrDefault().explicitContentFriendDm;
-    const result = require(13972) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+    const result = require(13971) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
   },
   useSearchTerms: function getSearchTerms() {
     const intl = require(1236) /* getSystemLocale */.intl;

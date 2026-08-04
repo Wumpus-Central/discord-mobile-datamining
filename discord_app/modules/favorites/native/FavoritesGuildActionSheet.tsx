@@ -5,9 +5,9 @@ let c3;
 let c4;
 let require = arg1;
 function FavoritesGuildActionSheet() {
-  const tmp2 = importDefault(15156)();
+  const tmp2 = importDefault(15155)();
   const require = tmp2;
-  const tmp3 = importDefault(15157)();
+  const tmp3 = importDefault(15156)();
   importDefault = tmp3;
   let obj = { header: null, children: null };
   obj = { title: null };

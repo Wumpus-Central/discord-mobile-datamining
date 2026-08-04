@@ -15,8 +15,8 @@ const toggle = createToggle.createToggle({
     DropsOptedOut.updateSetting(!arg0);
   },
   useIsDisabled() {
-    let adPersonalizationTogglesDisabled = require(14771) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
-    const obj = require(14771) /* useAdPersonalizationTogglesDisabled */;
+    let adPersonalizationTogglesDisabled = require(14770) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
+    const obj = require(14770) /* useAdPersonalizationTogglesDisabled */;
     if (!adPersonalizationTogglesDisabled) {
       adPersonalizationTogglesDisabled = obj2.useIsParentallyControlled();
     }
@@ -38,8 +38,8 @@ let obj = {
     DropsOptedOut.updateSetting(!arg0);
   },
   useIsDisabled() {
-    let adPersonalizationTogglesDisabled = require(14771) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
-    const obj = require(14771) /* useAdPersonalizationTogglesDisabled */;
+    let adPersonalizationTogglesDisabled = require(14770) /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
+    const obj = require(14770) /* useAdPersonalizationTogglesDisabled */;
     if (!adPersonalizationTogglesDisabled) {
       adPersonalizationTogglesDisabled = obj2.useIsParentallyControlled();
     }

@@ -6,7 +6,7 @@ export default {
     let bountyId;
     let sourceQuestContent;
     ({ bountyId, sourceQuestContent } = arg0);
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(14154, dependencyMap.paths), { bountyId, sourceQuestContent }, BOUNTIES_MODAL);
+    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(14153, dependencyMap.paths), { bountyId, sourceQuestContent }, BOUNTIES_MODAL);
   },
   hideModal() {
     importDefault(4490).popWithKey(BOUNTIES_MODAL);

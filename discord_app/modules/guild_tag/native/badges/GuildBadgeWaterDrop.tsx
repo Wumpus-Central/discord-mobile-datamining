@@ -20,7 +20,7 @@ export const GuildBadgeWaterDrop = function GuildBadgeWaterDrop(primaryTintColor
     num2 = 24;
   }
   const merged = Object.assign(primaryTintColor, Object.create(null));
-  let obj = require(13172) /* getTransformedBadgeColors */;
+  let obj = require(13171) /* getTransformedBadgeColors */;
   obj = { primaryBaseColors: closure_4, primaryTintColor: primaryTintColor.primaryTintColor, primaryTintLuminances: closure_5, primaryLuminanceWeights: items };
   const primaryColorsTransformed = obj.getTransformedBadgeColors(obj).primaryColorsTransformed;
   obj = {};

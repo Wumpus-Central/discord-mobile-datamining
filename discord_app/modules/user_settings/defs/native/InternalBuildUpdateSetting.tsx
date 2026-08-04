@@ -13,7 +13,7 @@ createToggle = {
     if (obj.useStateFromStores(items, () => null !== checkForNewerBuild.latestFetchedBuild().newBuild)) {
       let RefreshIcon = tmp(4235).DownloadIcon;
     } else {
-      RefreshIcon = tmp(13755).RefreshIcon;
+      RefreshIcon = tmp(13754).RefreshIcon;
     }
     return <RefreshIcon />;
   },
@@ -44,14 +44,14 @@ createToggle = {
     return str;
   },
   usePredicate: function useHasInternalBuildUpdateSetting() {
-    const obj = require(13993) /* useStaffOrDeveloperSettingPredicate */;
-    return checkForNewerBuild.hasUpdatesConfigured && require(13993) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
+    const obj = require(13992) /* useStaffOrDeveloperSettingPredicate */;
+    return checkForNewerBuild.hasUpdatesConfigured && require(13992) /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
   },
   onPress: function handleInstallNativeUpdateSettingPress() {
     const newBuild = checkForNewerBuild.latestFetchedBuild().newBuild;
     if (null !== newBuild) {
-      importAll(13161).openBuildInstaller(newBuild);
-      const obj2 = importAll(13161);
+      importAll(13160).openBuildInstaller(newBuild);
+      const obj2 = importAll(13160);
     } else {
       checkForNewerBuild.checkForNewerBuild();
     }

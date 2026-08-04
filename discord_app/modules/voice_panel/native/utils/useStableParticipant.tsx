@@ -33,7 +33,7 @@ export default function useStableParticipant(arg0, arg1, arg2) {
       if (null == participant) {
         const user = outer1_6.getUser(tmp);
         if (null != user) {
-          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_16", ringing: null, hasVideo: 1065.6, isSelf: -236.8 };
+          let obj = { type: null, id: null, user: null, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "PX_16", ringing: null, hasVideo: 0, isSelf: 2 };
           obj[0] = outer1_7.USER;
           obj[1] = tmp;
           obj[2] = user;

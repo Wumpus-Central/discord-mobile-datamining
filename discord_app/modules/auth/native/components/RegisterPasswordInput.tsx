@@ -27,17 +27,17 @@ function PasswordStrength(passwordScore) {
     if (isPasswordFocused) {
       if (0 !== password.length) {
         if (null == passwordError) {
-          if (passwordScore <= require(15002) /* PasswordScore */.PasswordScore.WEAK) {
+          if (passwordScore <= require(15001) /* PasswordScore */.PasswordScore.WEAK) {
             const intl2 = tmp9(1236).intl;
             let str = intl2.string(tmp9(1236).t["w/8TuV"]);
             let strong = tmp.weak;
-          } else if (passwordScore === tmp9(15002).PasswordScore.MEDIUM) {
+          } else if (passwordScore === tmp9(15001).PasswordScore.MEDIUM) {
             const intl = tmp9(1236).intl;
             str = intl.string(tmp9(1236).t["2fmTpT"]);
             strong = tmp.medium;
           } else {
             str = "";
-            if (passwordScore === tmp9(15002).PasswordScore.STRONG) {
+            if (passwordScore === tmp9(15001).PasswordScore.STRONG) {
               const intl4 = tmp9(1236).intl;
               str = intl4.string(tmp9(1236).t.Xraqqc);
               strong = tmp.strong;

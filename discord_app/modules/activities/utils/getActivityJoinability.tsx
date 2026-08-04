@@ -66,7 +66,7 @@ export default function getActivityJoinability(arg0) {
         }
       }
       if (!isEmbedded) {
-        if (importDefault(12223)(activity)) {
+        if (importDefault(12222)(activity)) {
           const obj2 = require(500) /* set */;
         }
         return obj.CANNOT_JOIN;

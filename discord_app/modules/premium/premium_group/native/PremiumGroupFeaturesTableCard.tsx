@@ -39,7 +39,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
   let subheaderString;
   ({ style, premiumGroupRole } = arg0);
   const tmp = callback3();
-  const tmp4 = importDefault(12663)(premiumGroupRole, false);
+  const tmp4 = importDefault(12662)(premiumGroupRole, false);
   if (null == tmp4) {
     return null;
   } else {

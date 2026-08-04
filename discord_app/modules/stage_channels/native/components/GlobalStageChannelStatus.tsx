@@ -15,7 +15,7 @@ class StageChannelRaiseHandAck {
   constructor(arg0) {
     channel = global.channel;
     _handleAcceptInvite = undefined;
-    f85435 = undefined;
+    f85431 = undefined;
     useState = undefined;
     _handleAcceptInvite = function _handleAcceptInvite(arg0) {
       const self = this;
@@ -125,7 +125,7 @@ class StageChannelRaiseHandAck {
     items1 = [];
     items1[0] = channel.id;
     stateFromStores = obj.useStateFromStores(items, () => outer1_9.getStageInstanceByChannel(channel.id), items1);
-    f85435 = stateFromStores;
+    f85431 = stateFromStores;
     tmp8 = require("useMountLayoutEffect")(() => {
       let obj = _undefined(_undefined2[14]);
       const intl = channel(_undefined2[8]).intl;

@@ -41,7 +41,7 @@ export default function GuildThemeMemberCoachmark(guildId) {
   const obj2 = guildId(589);
   guildPowerupBannerImage = guildId(11793).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(15177);
+    guildPowerupBannerImage = markAsDismissed(15176);
   }
   const diff = callback - markAsDismissed(4192)(guildId).available;
   c5 = diff;

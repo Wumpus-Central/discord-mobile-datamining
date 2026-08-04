@@ -426,30 +426,27 @@ function _setMomentLocale() {
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   let closure_0 = arg0;
   const importDefault = arg1;
-  return {
-    isLoading: false,
-    inProgressLocale: "Boolean",
-    error: "call",
-    localeData: importDefault(1948),
-    setLoadingStarted(closure_0) {
-      return callback({ isLoading: true, inProgressLocale: closure_0 });
-    },
-    setLoadingSucceeded(closure_0) {
-      if (callback2().inProgressLocale === closure_0) {
-        callback({ isLoading: false, inProgressLocale: "Boolean", error: "call" });
-      }
-    },
-    setLoadingFailed(arg0, closure_0) {
-      if (callback2().inProgressLocale === closure_0) {
-        const obj = { isLoading: false, inProgressLocale: "Array", error: 0 };
-        obj[2] = arg0;
-        callback(obj);
-      }
-    },
-    setLocaleData(closure_1) {
-      callback({ localeData: closure_1 });
+  let obj = { isLoading: false, inProgressLocale: "Boolean", error: "displayName", localeData: true, setLoadingStarted: true, setLoadingSucceeded: true, setLoadingFailed: true, setLocaleData: true };
+  obj[3] = importDefault(1948);
+  obj[4] = function setLoadingStarted(closure_0) {
+    return callback({ isLoading: true, inProgressLocale: closure_0 });
+  };
+  obj[5] = function setLoadingSucceeded(closure_0) {
+    if (callback2().inProgressLocale === closure_0) {
+      callback({ isLoading: false, inProgressLocale: "Boolean", error: "displayName" });
     }
   };
+  obj[6] = function setLoadingFailed(arg0, closure_0) {
+    if (callback2().inProgressLocale === closure_0) {
+      const obj = { isLoading: false, inProgressLocale: "Array", error: 0 };
+      obj[2] = arg0;
+      callback(obj);
+    }
+  };
+  obj[7] = function setLocaleData(closure_1) {
+    callback({ localeData: closure_1 });
+  };
+  return obj;
 });
 const result = require("code").fileFinishedImporting("intl/IntlLoaderStore.tsx");
 

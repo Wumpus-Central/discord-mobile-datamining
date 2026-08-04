@@ -37,7 +37,7 @@ export default function ConnectGuardianBottomSheet(arg0) {
   const callback = React.useCallback(() => {
     callback(table[8]).hideActionSheet(closure_6);
   }, []);
-  importDefault(14031)(callback);
+  importDefault(14030)(callback);
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.info, children: null };
   obj1 = { style: tmp.centered, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
@@ -67,7 +67,7 @@ export default function ConnectGuardianBottomSheet(arg0) {
   const obj5 = { startExpanded: true, children: null };
   obj4[1] = stateFromStores1;
   obj4[2] = onRefresh;
-  obj3[1] = closure_7(require(14032) /* ConnectGuardianCard */.ConnectGuardianCard, obj4);
+  obj3[1] = closure_7(require(14031) /* ConnectGuardianCard */.ConnectGuardianCard, obj4);
   items3[1] = closure_7(View, obj3);
   const obj6 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl3 = tmp2(1236).intl;

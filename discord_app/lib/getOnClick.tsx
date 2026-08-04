@@ -69,7 +69,7 @@ function _openInviteModal() {
               return obj;
             } else {
               let obj1 = callback(table[16]);
-              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "ti", invite_instance_id: "<string:2835349914>" };
+              obj1 = { type: "DISPLAYED_INVITE_SHOW", code: null, username: "Array", deeplinkAttemptId: "accessibilityRole", invite_instance_id: "iconsContainer" };
               obj1[1] = closure_0;
               obj1[4] = callback;
               c3 = 1;
@@ -338,7 +338,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== tmp3(tmp4[25]).CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = tmp3(tmp4[26]).parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "Array", skuId: "HermesInternal" };
+            result = { applicationId: "body", skuId: "useStateFromStores" };
           }
           const tmp3Result = tmp3(tmp4[26]);
         }

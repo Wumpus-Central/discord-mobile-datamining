@@ -9,7 +9,7 @@ let obj = {
     return obj.keys(obj);
   },
   handler(args) {
-    let obj = require(13684) /* toggleVoiceChannelChat */;
+    let obj = require(13683) /* toggleVoiceChannelChat */;
     const result = obj.toggleVoiceChannelChat(args.args.open);
     if (null == result) {
       obj = { errorCode: null };

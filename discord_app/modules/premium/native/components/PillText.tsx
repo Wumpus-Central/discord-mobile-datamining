@@ -14,9 +14,9 @@ export default function PillText(arg0) {
   let style;
   ({ pillText, style } = arg0);
   const tmp = callback();
-  let obj = { style: items, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: importDefault(12617)(), children: null };
+  let obj = { style: items, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: importDefault(12616)(), children: null };
   items = [tmp.pillTextContainer, style];
-  const tmp2 = importDefault(12617)();
+  const tmp2 = importDefault(12616)();
   obj = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText };
   obj[4] = jsx(require(4281) /* Text */.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
   return jsx(importDefault(4706), { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });

@@ -29,7 +29,7 @@ let closure_22;
 const require = arg1;
 function VideoStream(streamId) {
   streamId = streamId.streamId;
-  let obj = streamId(16027);
+  let obj = streamId(16026);
   setHasActiveVideoOutputSink = obj.useSetHasActiveVideoOutputSink(importAllResult.useContext(setHasActiveVideoOutputSink(11557)).streamOutputSinkStack);
   const items = [setHasActiveVideoOutputSink, streamId];
   const effect = importAllResult.useEffect(() => {
@@ -560,7 +560,7 @@ function Stream(participantId) {
   let callback2;
   let c9;
   let tmp = callback3();
-  let obj = transitionState(16037);
+  let obj = transitionState(16036);
   const mode = obj.usePIPState().mode;
   transitionCleanUp = mode;
   let obj1 = streamId;

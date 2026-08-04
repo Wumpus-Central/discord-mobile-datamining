@@ -23,5 +23,5 @@ export default function EnterEmailScreen() {
   obj = { children: null };
   obj[0] = jsx(_require(7713).TextInput, { label: "Email", value: tmp2, onChange: tmp3 });
   obj[3] = jsx(_require(4693).Stack, { children: null });
-  return jsx(importDefault(16833), { children: null });
+  return jsx(importDefault(16832), { children: null });
 };

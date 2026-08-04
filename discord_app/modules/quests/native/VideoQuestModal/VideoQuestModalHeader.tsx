@@ -30,7 +30,7 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
   const tmp2 = createCacheKey();
-  let obj = quest(14269);
+  let obj = quest(14268);
   quest = obj.useVideoQuestModalContext().quest;
   let obj1 = quest(10374);
   const questTaskDetails = obj1.useQuestTaskDetails(quest);
@@ -82,7 +82,7 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   obj3[4] = gamePublisher;
   items1[1] = closure_5(quest(4281).Text, obj3);
   obj[1] = items1;
-  const items3 = [closure_6(View, obj), closure_5(questTaskDetails(14292), { iconColor: closeButtonIconColor, onClose })];
+  const items3 = [closure_6(View, obj), closure_5(questTaskDetails(14291), { iconColor: closeButtonIconColor, onClose })];
   obj[1] = items3;
   return closure_6(View, obj);
 };

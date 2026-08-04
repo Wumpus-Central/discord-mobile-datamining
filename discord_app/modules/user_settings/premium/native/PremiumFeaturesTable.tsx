@@ -21,14 +21,14 @@ function CheckIcon() {
   const unsafe_rawColors = importDefault(712).unsafe_rawColors;
   const isThemeDarkResult = obj.isThemeDark(importDefault(4221)());
   obj = { source: null, color: null, size: null };
-  obj[0] = tmp(12654);
+  obj[0] = tmp(12653);
   obj[1] = obj.isThemeDark(importDefault(4221)()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   obj[2] = require(1297) /* Button */.IconSizes.SMALL;
   return callback2(require(1297) /* Button */.Icon, obj);
 }
 function CloseIcon() {
   const obj = { source: null, style: null, size: null };
-  obj[0] = importDefault(12655);
+  obj[0] = importDefault(12654);
   obj[1] = callback3().icon;
   obj[2] = require(1297) /* Button */.IconSizes.SMALL;
   return callback2(require(1297) /* Button */.Icon, obj);

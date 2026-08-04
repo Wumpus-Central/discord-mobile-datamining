@@ -124,7 +124,7 @@ function UserActionSheet(pool) {
   fetchFingerprint = React.useCallback((arg0) => {
     usersForPool(4253).hideActionSheet("generated-test-users");
     const obj = usersForPool(4253);
-    pool(13788).loginAsGeneratedUser(pool.id, arg0);
+    pool(13787).loginAsGeneratedUser(pool.id, arg0);
   }, items);
   let obj = { header: null, children: null };
   obj = { title: pool.summary, subtitle: null };

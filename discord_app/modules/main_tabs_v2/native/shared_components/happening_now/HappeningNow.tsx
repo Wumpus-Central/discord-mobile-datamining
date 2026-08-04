@@ -23,11 +23,11 @@ function renderCard(kind, fullWidth) {
       const merged = Object.assign(kind);
       const merged1 = Object.assign(fullWidth);
       obj.cardKey = keyExtractor(kind);
-      return jsx(importDefault(15101), {});
+      return jsx(importDefault(15100), {});
     }
   }
   obj = { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant };
-  return jsx(require(15098) /* HappeningNowCardPlaceholder */.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
+  return jsx(require(15097) /* HappeningNowCardPlaceholder */.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
 }
 function keyExtractor(voiceState) {
   let kind;
@@ -75,13 +75,11 @@ const memoResult = importAllResult.memo((listRef) => {
   obj = obj(isFocused[14]);
   isFocused = obj.useIsFocused();
   ref = isFocused;
-  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "Array", isFocused: "isArray" };
-  obj[3] = isFocused;
-  const tmp7 = callback(ref(isFocused[15])(listRef.cards, obj), 2);
+  const tmp7 = callback(ref(isFocused[15])(listRef.cards, { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "SubjectDistanceRange", isFocused }), 2);
   let first = tmp7[0];
   isFocused = first;
   callback = tmp8;
-  let obj2 = importAllResult;
+  let obj1 = importAllResult;
   ref = importAllResult.useRef(0);
   importAllResult = ref;
   obj = { data: first, isFocused, loading: tmp8 };
@@ -149,7 +147,7 @@ const memoResult = importAllResult.memo((listRef) => {
     num = sharedValue * findIndexResult;
   }
   const items2 = [findIndexResult, num];
-  callback = obj2.useCallback((arg0, arg1) => {
+  callback = obj1.useCallback((arg0, arg1) => {
     const sum = arg1 + arg0;
     if (sum < num) {
       let sum1 = sum / sharedValue | 0;
@@ -165,7 +163,7 @@ const memoResult = importAllResult.memo((listRef) => {
     const tmp20 = sharedValue;
   }
   const items3 = [first];
-  const memo = obj2.useMemo(() => {
+  const memo = obj1.useMemo(() => {
     obj = obj(isFocused[18]);
     const result = obj.filterHappeningNowCards(isFocused);
     return obj(isFocused[18]).sortHappeningNowCards(result);
@@ -173,17 +171,17 @@ const memoResult = importAllResult.memo((listRef) => {
   let tmp2Result = tmp2(tmp3[19]);
   const items4 = [tmp7[1]];
   const happeningNowScrollSnapping = tmp2Result.useHappeningNowScrollSnapping(listRef);
-  const callback1 = obj2.useCallback((index) => outer1_16(index.item, { index: index.index, loading: HappeningNowCardCreateChannel, panelVariant: true }), items4);
+  const callback1 = obj1.useCallback((index) => outer1_16(index.item, { index: index.index, loading: HappeningNowCardCreateChannel, panelVariant: true }), items4);
   tmp2Result = tmp2(tmp3[20]);
   sharedValue = tmp2Result.useSharedValue([]);
   const items5 = [sharedValue];
-  callback2 = obj2.useCallback((viewableItems) => {
+  callback2 = obj1.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     obj = obj(isFocused[21]);
     const result = obj.updateSharedValueArrayIfChanged(sharedValue, viewableItems.map((item) => callback(item.item)));
   }, items5);
   const items6 = [callback2];
-  const memo1 = obj2.useMemo(() => {
+  const memo1 = obj1.useMemo(() => {
     obj = obj(isFocused[22]);
     return obj.debounce(callback2, 130);
   }, items6);
@@ -193,31 +191,31 @@ const memoResult = importAllResult.memo((listRef) => {
     }
   }
   if (!tmp7[1]) {
-    const obj1 = { value: null, children: null };
-    obj1[0] = sharedValue;
-    obj2 = { value: null, children: null };
-    obj2[0] = tmp9(ref(isFocused[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
-    const obj3 = { ref: null, horizontal: true, renderScrollComponent: null, decelerationRate: "fast", onScroll: null, snapToInterval: null, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null };
-    obj3[0] = listRef;
-    obj3[2] = closure_15;
-    obj3[4] = tmp6Result[0];
-    obj3[5] = tmp20;
-    obj3[6] = happeningNowScrollSnapping;
+    obj = { value: null, children: null };
+    obj[0] = sharedValue;
+    obj1 = { value: null, children: null };
+    obj1[0] = tmp9(ref(isFocused[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
+    const obj2 = { ref: null, horizontal: true, renderScrollComponent: null, decelerationRate: "fast", onScroll: null, snapToInterval: null, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null };
+    obj2[0] = listRef;
+    obj2[2] = closure_15;
+    obj2[4] = tmp6Result[0];
+    obj2[5] = tmp20;
+    obj2[6] = happeningNowScrollSnapping;
     const intl = tmp2(tmp3[24]).intl;
-    obj3[8] = intl.string(tmp2(tmp3[24]).t["1+boPi"]);
-    obj3[9] = tmp.containerInner;
-    obj3[10] = memo;
-    obj3[11] = callback1;
-    obj3[12] = memo1;
-    obj3[13] = keyExtractor;
-    obj3[14] = getItemType;
-    obj2[1] = tmp29(tmp2(tmp3[23]).FlashList, obj3);
-    obj1[1] = tmp29(tmp2(tmp3[16]).AnalyticsLocationProvider, obj2);
-    tmp29(context.Provider, obj1);
+    obj2[8] = intl.string(tmp2(tmp3[24]).t["1+boPi"]);
+    obj2[9] = tmp.containerInner;
+    obj2[10] = memo;
+    obj2[11] = callback1;
+    obj2[12] = memo1;
+    obj2[13] = keyExtractor;
+    obj2[14] = getItemType;
+    obj1[1] = tmp29(tmp2(tmp3[23]).FlashList, obj2);
+    obj[1] = tmp29(tmp2(tmp3[16]).AnalyticsLocationProvider, obj1);
+    tmp29(context.Provider, obj);
   }
-  const obj4 = { style: tmp.loading, children: null };
+  const obj3 = { style: tmp.loading, children: null };
   first = renderCard(first.length > 0 ? first[0] : { kind: "placeholder", index: 0 }, { index: 0, loading: tmp8, fullwidth: true, panelVariant: true });
-  obj4[1] = first;
+  obj3[1] = first;
   <num style={tmp.loading}>{null}</num>;
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx");

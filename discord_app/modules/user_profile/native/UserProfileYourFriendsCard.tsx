@@ -47,7 +47,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   const items1 = [upsertRelationship];
   stateFromStoresArray1 = _require(589).useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
   const obj2 = _require(589);
-  gameRelationshipsByType = _require(12251).useGameRelationshipsByType(RelationshipTypes.FRIEND);
+  gameRelationshipsByType = _require(12250).useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
     const userAffinitiesV2 = _undefined(9003).fetchUserAffinitiesV2();
   }, []);

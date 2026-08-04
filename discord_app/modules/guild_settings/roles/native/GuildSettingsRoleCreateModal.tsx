@@ -99,13 +99,13 @@ function RoleCreateScene() {
               tmp3(3985).roleCreatedToast();
               const obj5 = tmp3(3985);
               const tmp13 = tmp3;
-              tmp3(16567).setRoleJustCreated(true);
+              tmp3(16566).setRoleJustCreated(true);
               let STEP_MEMBERS = outer1_25.STEP_PERMISSIONS;
               const guild2 = obj.getProps().guild;
               tmp32(38)(null != guild2, "shouldSkipPermissions: Guild cannot be null");
               const currentUser = outer1_11.getCurrentUser();
               const tmp23 = outer1_9(guild2, currentUser);
-              const obj6 = tmp3(16567);
+              const obj6 = tmp3(16566);
               const tmp18 = tmp32;
               obj = { permission: null, user: null, context: null };
               obj[0] = outer1_20.ADMINISTRATOR;

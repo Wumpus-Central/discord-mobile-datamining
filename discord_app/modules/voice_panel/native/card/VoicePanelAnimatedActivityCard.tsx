@@ -67,7 +67,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
-  let tmp8Result = tmp8(16088);
+  let tmp8Result = tmp8(16087);
   let guild_id1;
   if (stateFromStores != null) {
     guild_id1 = stateFromStores.guild_id;
@@ -119,7 +119,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
     if (stateFromStores1 != null) {
       const participants = stateFromStores1.participants;
       if (participants != null) {
-        found = participants.find((userId) => applicationId(13240).isActivityParticipantCurrentUserCurrentSession(userId));
+        found = participants.find((userId) => applicationId(13239).isActivityParticipantCurrentUserCurrentSession(userId));
       }
     }
     tmp21 = null != found;
@@ -357,10 +357,10 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       obj7[0] = stateFromStores;
       obj7[1] = tmp43;
       obj6[3] = focusedOrientationLockState(tmp4(10630), obj7, tmp3[0]);
-      const items13 = [focusedOrientationLockState(tmp4(16089), obj6), ];
+      const items13 = [focusedOrientationLockState(tmp4(16088), obj6), ];
       let tmp47Result = null;
       if (stateFromStores2) {
-        tmp47Result = tmp47(tmp4(16090), {});
+        tmp47Result = tmp47(tmp4(16089), {});
       }
       items13[1] = tmp47Result;
       obj5[3] = items13;
@@ -368,12 +368,12 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       tmp47Result = tmp47(tmp8(5368).GestureDetector, obj4);
       let tmp44 = tmp47;
       const tmp48 = c16;
-      const tmp4Result1 = tmp4(16089);
+      const tmp4Result1 = tmp4(16088);
     } else if (null == activityShelfItemData) {
       const obj8 = { activity: null, application: null };
       obj8[0] = stateFromStores1;
       obj8[1] = first;
-      tmp47Result = focusedOrientationLockState(tmp4(16091), obj8);
+      tmp47Result = focusedOrientationLockState(tmp4(16090), obj8);
       tmp44 = focusedOrientationLockState;
     } else {
       tmp44 = focusedOrientationLockState;
@@ -385,7 +385,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       obj10[2] = activityShelfItemData;
       obj10[3] = analyticsContext.location;
       obj10[4] = tmp2Result[0];
-      obj9[1] = focusedOrientationLockState(tmp4(16095), obj10);
+      obj9[1] = focusedOrientationLockState(tmp4(16094), obj10);
       tmp47Result = focusedOrientationLockState(tmp8(5368).GestureDetector, obj9);
     }
     const obj11 = { value: null, children: null };

@@ -34,7 +34,7 @@ function CreateThreadHeaderButton(channel) {
     const intl = tmp(1236).intl;
     obj[0] = intl.string(tmp(1236).t.rBIGBL);
     obj[1] = tmp4;
-    obj[2] = importDefault(12037);
+    obj[2] = importDefault(12036);
     tmp5 = callback(tmp(8193).HeaderIconButton, obj);
   }
   return tmp5;

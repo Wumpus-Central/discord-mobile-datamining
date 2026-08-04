@@ -85,7 +85,7 @@ function EditGuildProfileBanner(user) {
   let intl = tmp5(1236).intl;
   obj[8] = intl.string(user(1236).t["95hPAe"]);
   obj[9] = disabled;
-  obj[1] = closure_18(importDefault(13808), obj);
+  obj[1] = closure_18(importDefault(13807), obj);
   return closure_18(user(5610).AnalyticsLocationProvider, obj);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];

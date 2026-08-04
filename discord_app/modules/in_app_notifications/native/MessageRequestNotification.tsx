@@ -27,9 +27,9 @@ export default function MessageRequestInAppNotification(notification) {
     }
   }, []);
   let obj = { icon: null, header: null, children: null, onPress: null, notification: null };
-  obj = { user: author, size: null, guildId: "Array" };
+  obj = { user: author, size: null, guildId: "disabled" };
   obj[1] = author(1297).AvatarSizes.NORMAL;
-  obj[0] = jsx(author(1297).Avatar, { user: author, size: null, guildId: "Array" });
+  obj[0] = jsx(author(1297).Avatar, { user: author, size: null, guildId: "disabled" });
   obj[1] = memo;
   obj = { text: null };
   let intl = author(1236).intl;

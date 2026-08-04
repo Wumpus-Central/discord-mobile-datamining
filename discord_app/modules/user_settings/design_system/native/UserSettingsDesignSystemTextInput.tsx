@@ -72,7 +72,7 @@ function GhostInputUsername(defaultValue) {
     }
     closure_0(str);
   };
-  return closure_6(require(13329) /* GhostInput */.GhostInput, obj);
+  return closure_6(require(13328) /* GhostInput */.GhostInput, obj);
 }
 function GhostInputActionSheet() {
   let obj = { children: null };

@@ -15,7 +15,7 @@ function ChannelButtonIcons() {
   obj = { size: "xs", accessibilityLabel: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t.VHXh8a);
-  const items = [callback(require(12123) /* ShieldLockIcon */.ShieldLockIcon, obj), ];
+  const items = [callback(require(12122) /* ShieldLockIcon */.ShieldLockIcon, obj), ];
   obj = { source: null };
   obj[0] = importDefault(5324);
   items[1] = callback(require(4696) /* CollapsingText */.BaseTextButton.Icon, obj);
@@ -62,7 +62,7 @@ function StreamButton(arg0) {
   const intl2 = require(1236) /* getSystemLocale */.intl;
   obj[2] = intl2.formatToPlainString(require(1236) /* getSystemLocale */.t.I0mOAs, { username: name });
   obj[3] = name;
-  obj[4] = importDefault(16053);
+  obj[4] = importDefault(16052);
   obj[6] = onPress;
   return callback(require(8585) /* TwinButtons */.HeaderButton, obj);
 }
@@ -86,7 +86,7 @@ function ActivityButton(participant) {
   obj[2] = str;
   obj[3] = importDefault(7612);
   obj[5] = participant.onPress;
-  const items1 = [closure_9(participant(8585).HeaderButton, obj), closure_9(importDefault(15976), { applicationId: participant.applicationId })];
+  const items1 = [closure_9(participant(8585).HeaderButton, obj), closure_9(importDefault(15975), { applicationId: participant.applicationId })];
   obj[2] = items1;
   return closure_10(participant(4693).Stack, obj);
 }
@@ -99,7 +99,7 @@ function UserButton(participant) {
   let obj = importDefault(4474);
   const name = obj.useName(guildId, channelId, participant.user);
   const tmp = callback3();
-  const voicePanelHeaderUserStateIcons = require(16050) /* useVoicePanelHeaderUserStateIcons */.useVoicePanelHeaderUserStateIcons(participant, guildId, tmp.userIcons);
+  const voicePanelHeaderUserStateIcons = require(16049) /* useVoicePanelHeaderUserStateIcons */.useVoicePanelHeaderUserStateIcons(participant, guildId, tmp.userIcons);
   obj = { accessibilityRole: "button", accessibilityHint: null, icon: null, iconPosition: null, text: null, onPress: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[1] = intl.string(require(1236) /* getSystemLocale */.t["Y2b7+e"]);
@@ -160,7 +160,7 @@ const memoResult = importAllResult.memo(function VoicePanelTitleButton() {
     }
     return id;
   });
-  const tmp3 = channelId(16049)(derivedStateFromSharedValue, channelId, guildId);
+  const tmp3 = channelId(16048)(derivedStateFromSharedValue, channelId, guildId);
   const items = [guildId, channelId];
   const onPress = importAllResult.useCallback(() => {
     const result = guildId(outer1_2[28]).openVoicePanelSettingsActionSheet(guildId, channelId);

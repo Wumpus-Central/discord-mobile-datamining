@@ -276,7 +276,7 @@ export default function ChannelActions(channelId) {
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId: null };
     obj[0] = channelId;
-    let tmp4Result = tmp4(channelId(12446).ForumChannelCloseSearchButton, obj);
+    let tmp4Result = tmp4(channelId(12445).ForumChannelCloseSearchButton, obj);
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {
@@ -290,7 +290,7 @@ export default function ChannelActions(channelId) {
     const obj2 = { channelId: null, screenIndex: null };
     obj2[0] = channelId;
     obj2[1] = screenIndex;
-    tmp4Result = tmp4(importDefault(12448), obj2);
+    tmp4Result = tmp4(importDefault(12447), obj2);
   }
   obj[1] = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

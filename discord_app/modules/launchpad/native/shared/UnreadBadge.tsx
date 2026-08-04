@@ -12,7 +12,7 @@ const memoResult = require("noop").memo(function UnreadBadge(arg0) {
   let resolvedUnreadSetting;
   let unread;
   ({ unread, resolvedUnreadSetting, muted } = arg0);
-  const tmp4 = importDefault(15922)();
+  const tmp4 = importDefault(15921)();
   require(4701) /* getFontScale */;
   let tmp9Result = null;
   if (unread) {

@@ -18,7 +18,7 @@ function FreezeAfterLayoutPipView() {
       const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
     }
   }, []);
-  return jsx(importDefault(15948), { onLayout });
+  return jsx(importDefault(15947), { onLayout });
 }
 const result = require("module_8784").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
 

@@ -49,7 +49,7 @@ class ChannelCallModal {
   constructor(arg0) {
     channel = global.channel;
     obj = { channelId: channel.id, guildId: channel.guild_id };
-    return jsx(f49262, obj);
+    return jsx(f49260, obj);
   }
 }
 let c4 = importAllResult;

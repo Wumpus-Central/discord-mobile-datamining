@@ -184,7 +184,7 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
   let showLoadingIndicator;
   let slayerSdkApplications;
   const tmp = createCacheKey();
-  ({ showLoadingIndicator, slayerSdkApplications } = importDefault(14782)());
+  ({ showLoadingIndicator, slayerSdkApplications } = importDefault(14781)());
   if (showLoadingIndicator) {
     let obj = { style: null };
     obj[0] = tmp.loadingIndicator;
@@ -208,7 +208,7 @@ export const ConnectedGamesPage = function ConnectedGamesPage() {
   } else {
     obj = { node: null };
     obj[0] = tmp5;
-    tmp7 = callback2(tmp2(13794), obj);
+    tmp7 = callback2(tmp2(13793), obj);
   }
   return tmp7;
 };

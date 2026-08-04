@@ -33,7 +33,7 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
     obj1[0] = application.name;
     formatToPlainStringResult1 = formatToPlainString(t.QWGvxA, obj1);
   }
-  let tmp9 = importDefault(11870)(application.id);
+  let tmp9 = importDefault(11869)(application.id);
   if (tmp9) {
     const obj2 = { children: null };
     let tmp8Result = tmp8(10340);

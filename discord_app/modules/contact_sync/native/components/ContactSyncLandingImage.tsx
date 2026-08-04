@@ -17,11 +17,11 @@ export default function ContactSyncLandingImage() {
   const tmp = callback3();
   let obj = { children: null };
   obj = { style: tmp.leftContainer, children: null };
-  obj = { resizeMode: "contain", style: tmp.landingImageLeft, source: importDefault(11958) };
+  obj = { resizeMode: "contain", style: tmp.landingImageLeft, source: importDefault(11957) };
   obj[1] = callback(closure_2, obj);
   const items = [callback(closure_3, obj), ];
   const obj1 = { style: tmp.rightContainer, children: null };
-  obj1[1] = callback(closure_2, { resizeMode: "contain", style: tmp.landingImageRight, source: importDefault(11959) });
+  obj1[1] = callback(closure_2, { resizeMode: "contain", style: tmp.landingImageRight, source: importDefault(11958) });
   items[1] = callback(closure_3, obj1);
   obj[0] = items;
   return callback2(closure_5, obj);

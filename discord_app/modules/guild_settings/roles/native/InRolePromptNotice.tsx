@@ -27,7 +27,7 @@ export default function InRolePromptNotice(role) {
   } else {
     obj = { style: null, children: null };
     obj[0] = string.promptRow;
-    const tmpResult = tmp(16592);
+    const tmpResult = tmp(16591);
     let Icon = tmp(1297).Icon;
     if (isRolePowerfulResult) {
       obj = { style: null, source: null, color: null };
@@ -58,6 +58,6 @@ export default function InRolePromptNotice(role) {
       obj[1] = items1;
       tmp4Result = tmp4(tmp5, obj);
     }
-    isRolePowerfulResult = tmp(16592).isRolePowerful(role);
+    isRolePowerfulResult = tmp(16591).isRolePowerful(role);
   }
 };

@@ -26,7 +26,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.SWIPE_RIGHT_TO_LEFT,
   getComponent() {
-    return require(14554) /* UserSettingsSwipeRightToLeft */.default;
+    return require(14553) /* UserSettingsSwipeRightToLeft */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -25,7 +25,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     children: null
   };
   obj = { source: null };
-  obj[0] = importDefault(15248);
+  obj[0] = importDefault(15247);
   const items = [callback(importDefault(5236), obj), , , , ];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;

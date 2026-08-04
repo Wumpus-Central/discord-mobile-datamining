@@ -49,7 +49,7 @@ export default function handleDisableAccount() {
       tmp8 = obj;
       const str2 = intl2.string(tmp4(1236).t.jf5GGb);
     }
-    importDefault(13947)(tmp8);
+    importDefault(13946)(tmp8);
     const str = string(t["CIGa+7"]);
   }
 };

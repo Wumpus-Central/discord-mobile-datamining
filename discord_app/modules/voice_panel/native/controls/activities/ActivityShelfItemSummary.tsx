@@ -12,8 +12,8 @@ function ParticipantsSummary(arg0) {
   let applicationId;
   let channelId;
   ({ applicationId, channelId } = arg0);
-  const obj = { users: importDefault(16094)(applicationId, channelId), max: 5, avatarSize: null, withPlusCount: true, style: null, cutout: null };
-  const tmp = importDefault(16094)(applicationId, channelId);
+  const obj = { users: importDefault(16093)(applicationId, channelId), max: 5, avatarSize: null, withPlusCount: true, style: null, cutout: null };
+  const tmp = importDefault(16093)(applicationId, channelId);
   obj[2] = require(1297) /* Button */.AvatarSizes.REFRESH_MEDIUM_32;
   obj[4] = { marginBottom: 8 };
   obj[5] = { inset: -8 };

@@ -6,7 +6,7 @@ export default function YouSettingsCoachmark(buttonRef) {
   return null;
 };
 export const useYouSettingsCoachmark = function useYouSettingsCoachmark(disabled) {
-  let referralProgramCoachmark = require(15736) /* ReferralProgramCoachmarkImg */.useReferralProgramCoachmark({ disabled: disabled.disabled });
+  let referralProgramCoachmark = require(15735) /* ReferralProgramCoachmarkImg */.useReferralProgramCoachmark({ disabled: disabled.disabled });
   if (referralProgramCoachmark == null) {
     referralProgramCoachmark = null;
   }

@@ -8,11 +8,11 @@ const require = arg1;
 const result = require("GuildInfoHeader").fileFinishedImporting("modules/channel_list_v2/native/hooks/useChannelListSpecs.tsx");
 
 export default function useChannelListSpecs(banner) {
-  redesignGuildHeaderHeight = redesignGuildHeaderHeight(15152).useRedesignGuildHeaderHeight(banner);
+  redesignGuildHeaderHeight = redesignGuildHeaderHeight(15151).useRedesignGuildHeaderHeight(banner);
   height = height(1474)().height;
-  const tmp2 = height(15049)();
+  const tmp2 = height(15048)();
   const dependencyMap = tmp2;
-  const obj = redesignGuildHeaderHeight(15152);
+  const obj = redesignGuildHeaderHeight(15151);
   const fontScale = redesignGuildHeaderHeight(4701).useFontScale();
   let closure_4 = tmp4;
   const top = height(1581)().top;

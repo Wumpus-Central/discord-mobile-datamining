@@ -84,12 +84,12 @@ function AcceptInviteCardComponent(invite) {
     let obj = {};
     const merged = Object.assign(invite);
     obj.invite = invite;
-    return callback2(first(11986), obj);
+    return callback2(first(11985), obj);
   } else if (tmp22.ERROR === first) {
     obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return callback2(first(11989), obj);
+    return callback2(first(11988), obj);
   } else {
     return callback2(InviteResolving, {});
   }
@@ -125,7 +125,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = tmp3(11994);
+    let guildSplashSource = tmp3(11993);
   } else {
     obj = { id: null, splash: null, size: null };
     ({ id: obj3[0], splash: obj3[1] } = guild);

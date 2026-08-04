@@ -33,9 +33,9 @@ export default function ChannelHeader(channelId) {
     tmp4 = pressable;
   }
   if (channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
-    let tmp8Result = jsx(importDefault(12451), {});
+    let tmp8Result = jsx(importDefault(12450), {});
   } else if (channelId === tmp5.GUILD_HOME) {
-    tmp8Result = jsx(importDefault(12452), {});
+    tmp8Result = jsx(importDefault(12451), {});
   } else {
     let isPrivateResult;
     if (stateFromStores != null) {
@@ -46,7 +46,7 @@ export default function ChannelHeader(channelId) {
       obj[0] = channelId;
       obj[1] = tmp4;
       obj[2] = screenIndex;
-      tmp8Result = jsx(importDefault(12453), { channelId: null, pressable: null, screenIndex: null });
+      tmp8Result = jsx(importDefault(12452), { channelId: null, pressable: null, screenIndex: null });
     } else {
       let isForumLikeChannelResult;
       if (stateFromStores != null) {
@@ -56,7 +56,7 @@ export default function ChannelHeader(channelId) {
         obj = { channelId: null, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, searchPlaceholder: null };
         obj[0] = channelId;
         let guild_id;
-        let tmp9Result = tmp9(12459);
+        let tmp9Result = tmp9(12458);
         if (stateFromStores != null) {
           guild_id = stateFromStores.guild_id;
         }
@@ -76,7 +76,7 @@ export default function ChannelHeader(channelId) {
         const obj1 = { channelId: null, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, showCreateThread: null };
         obj1[0] = channelId;
         let guild_id1;
-        tmp9Result = tmp9(12461);
+        tmp9Result = tmp9(12460);
         if (stateFromStores != null) {
           guild_id1 = stateFromStores.guild_id;
         }

@@ -11,8 +11,8 @@ const require = arg1;
 class BaseChannelSubtitle {
   constructor(arg0) {
     ({ mode, subtitle } = global);
-    tmp = f51929;
-    if (mode !== f51929.UNREAD_IMPORTANT) {
+    tmp = f51927;
+    if (mode !== f51927.UNREAD_IMPORTANT) {
       if (mode !== tmp.RELEVANT) {
         if (mode !== tmp.SELECTED) {
           MUTED = tmp.MUTED;

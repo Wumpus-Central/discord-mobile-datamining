@@ -124,7 +124,7 @@ function PreviewItem(dragRegion) {
   const memo = gestureState.useMemo(() => {
     if ("convert-after" === overState) {
       if (null != overNode) {
-        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "paddingHorizontal", expanded: "getChannel", children: "r" };
+        const obj = { type: null, id: -1, parentId: "ct", name: "Array", color: "add", expanded: 409506539142844900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, children: 823258541627570700000000000000000000000000000000000000000000000 };
         obj[0] = listInsets.FOLDER;
         const items = [tmp2];
         obj[6] = items;
@@ -334,7 +334,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "HIDE_NATIVE_MENU", scrollPosition: null, dragRegion: "header", windowSize: "text-sm/medium", dropComplete: null, listInsets: "not_enough_content" };
+          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "contentEncoding", scrollPosition: "contentMediaType", dragRegion: "contentSchema", windowSize: "heading-sm/medium", dropComplete: 2, listInsets: null };
           ({ node: obj[0], itemSize: obj[1] } = dragSpecs);
           obj[2] = state;
           let node;

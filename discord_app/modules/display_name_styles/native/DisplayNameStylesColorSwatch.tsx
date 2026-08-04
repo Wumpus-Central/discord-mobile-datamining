@@ -20,7 +20,7 @@ export default function DisplayNameStylesColorSwatch(colors) {
       obj[0] = items;
       obj = { colors: null };
       obj[0] = colors;
-      obj[1] = jsx(importDefault(13832), { colors: null });
+      obj[1] = jsx(importDefault(13831), { colors: null });
       return <View colors={null} />;
     }
   }

@@ -457,8 +457,8 @@ prototype["renderChangeSummary"] = function renderChangeSummary() {
   const self = this;
   let renderChangeDetailsResult = null;
   if (this.props.expanded) {
-    renderChangeDetailsResult = self.renderChangeDetails(importAll(16494).getChangeStrings(tmp));
-    const obj = importAll(16494);
+    renderChangeDetailsResult = self.renderChangeDetails(importAll(16493).getChangeStrings(tmp));
+    const obj = importAll(16493);
   }
   return renderChangeDetailsResult;
 };
@@ -475,7 +475,7 @@ prototype["render"] = function render() {
   ({ log, expanded, guildId, channel: require } = props);
   const user = log.user;
   ({ containerStyle, theme } = props);
-  let obj = importAll(16494);
+  let obj = importAll(16493);
   const checkChangesToRenderResult = obj.checkChangesToRender(log);
   const timestampStart = log.timestampStart;
   const calendarResult = timestampStart.calendar();
@@ -519,7 +519,7 @@ prototype["render"] = function render() {
   obj1[3] = str3;
   obj1[4] = onHeaderClick;
   const obj2 = { style: tmp.rowContainer, children: null };
-  const items2 = [callback(user(16503), { action: log.action }), , , ];
+  const items2 = [callback(user(16502), { action: log.action }), , , ];
   const obj4 = { accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp10(1236).intl;
   obj4[1] = intl.string(tmp10(1236).t.iXAna6);
@@ -584,7 +584,7 @@ prototype["render"] = function render() {
           const items4 = [tmp.arrow, rotate90];
           obj8[0] = items4;
           obj8[1] = tmp10(1297).Icon.Sizes.CUSTOM;
-          obj8[2] = tmp18(13818);
+          obj8[2] = tmp18(13817);
           tmp17Result = tmp17(tmp10(1297).Icon, obj8);
         }
         items2[3] = tmp17Result;

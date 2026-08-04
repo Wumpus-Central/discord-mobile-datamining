@@ -19,5 +19,5 @@ export default function WebAuthnSuccessStep() {
   obj = { onGenerate: null, headerLabel: null };
   const intl = navigation(1236).intl;
   obj[1] = intl.format(navigation(1236).t.iVTs6i, {});
-  return jsx(importDefault(13894), { onGenerate: null, headerLabel: null });
+  return jsx(importDefault(13893), { onGenerate: null, headerLabel: null });
 };

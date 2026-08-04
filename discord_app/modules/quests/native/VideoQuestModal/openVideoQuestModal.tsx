@@ -22,6 +22,6 @@ export default function openVideoQuestModal(questId) {
     sourceQuestContent
   };
   const obj2 = sourceQuestContent(4490);
-  const tmp2 = questId(1959)(14268, dependencyMap.paths);
+  const tmp2 = questId(1959)(14267, dependencyMap.paths);
   return obj2.pushLazy(tmp2, obj, questId(10501).getVideoQuestModalKey(questId));
 };

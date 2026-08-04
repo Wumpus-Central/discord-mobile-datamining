@@ -83,10 +83,10 @@ export default function GameProfileView(arg0) {
   items2[5] = callback(importDefault(9249), { closeModal, game, onInviteResolved: onGuildInviteResolved, trackAction });
   items2[6] = callback(importDefault(9252), { gameId: game.id, invite, closeModal, trackAction, scrollOffsetRef });
   items2[7] = callback(importDefault(9261), { game, closeModal, trackAction });
-  items2[8] = callback(importDefault(12089), { gameId: game.id, trackAction });
-  items2[9] = callback(importDefault(12091), { game, viewId, source, trackAction });
+  items2[8] = callback(importDefault(12088), { gameId: game.id, trackAction });
+  items2[9] = callback(importDefault(12090), { game, viewId, source, trackAction });
   const obj5 = { style: tmp.buttonsContainer, children: null };
-  const items3 = [callback(importDefault(12108), { game, trackAction }), callback(importDefault(12109), { applicationId: game.id, trackAction })];
+  const items3 = [callback(importDefault(12107), { game, trackAction }), callback(importDefault(12108), { applicationId: game.id, trackAction })];
   obj5[1] = items3;
   items2[10] = closure_6(View, obj5);
   obj[2] = items2;

@@ -68,7 +68,7 @@ export default function Modal(route) {
   const layoutEffect = obj1.useLayoutEffect(() => modal(6843).trackAppUIViewed("ModalScreen"), []);
   const tmp6 = importDefault(9267);
   ({ left, right } = importDefault(1581)());
-  let tmp7Result = tmp7(15817);
+  let tmp7Result = tmp7(15816);
   const items = [absoluteFillObject.absoluteFillObject, ];
   let tmp16;
   if (!tmp7Result.shouldExcludeSafeAreaForModalKey(modal.key)) {
@@ -96,7 +96,7 @@ export default function Modal(route) {
   tmp7Result = tmp7(500);
   let isIOSResult = tmp7Result.isIOS();
   if (isIOSResult) {
-    isIOSResult = callback2(tmp7(15706).PortalKeyboardRenderer, { portal: false });
+    isIOSResult = callback2(tmp7(15705).PortalKeyboardRenderer, { portal: false });
   }
   items2[1] = isIOSResult;
   obj1[2] = items2;

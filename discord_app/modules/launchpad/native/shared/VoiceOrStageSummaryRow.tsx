@@ -31,7 +31,7 @@ const memoResult = require("noop").memo(function VoiceOrStageSummaryRow(arg0) {
   let dependencyMap;
   let closure_3;
   let c4;
-  let tmp3 = importDefault(15922)();
+  let tmp3 = importDefault(15921)();
   dependencyMap = tmp3;
   const size = tmp3.voiceOrStageSummaryRow.size;
   closure_3 = Math.max(users.length - max, 0);
@@ -101,7 +101,7 @@ const memoResult = require("noop").memo(function VoiceOrStageSummaryRow(arg0) {
     let obj2 = { size: null, style: null, source: null };
     obj2[0] = max(1297).Icon.Sizes.CUSTOM;
     obj2[1] = { height: 14, width: 14 };
-    obj2[2] = importDefault(15616);
+    obj2[2] = importDefault(15615);
     const items4 = [c4(max(1297).Icon, obj2), ];
     let obj3 = { variant: "text-sm/bold", style: null, children: null };
     obj3[1] = { marginLeft: 4 };

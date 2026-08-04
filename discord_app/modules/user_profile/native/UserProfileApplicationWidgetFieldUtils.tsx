@@ -66,7 +66,7 @@ export const FieldText = function FieldText(arg0) {
     let obj = { variant: null, widthChars: null };
     obj[0] = variant;
     obj[1] = skeletonWidthChars;
-    let tmp9Result = callback(require(12353) /* ImageSkeleton */.TextSkeleton, obj);
+    let tmp9Result = callback(require(12352) /* ImageSkeleton */.TextSkeleton, obj);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.fieldTextRow;

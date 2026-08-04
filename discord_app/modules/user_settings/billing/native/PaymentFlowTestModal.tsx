@@ -32,15 +32,15 @@ const memoResult = require("noop").memo(function PaymentFlowTestModal() {
     options() {
       return { title: "Payment Flow Test" };
     },
-    component: importDefault(14910)
+    component: importDefault(14909)
   };
   ({ Navigator, Screen } = createNativeStackNavigator);
   obj[1] = <Screen name="PaymentFlowTest" options={function options() {
     return { title: "Payment Flow Test" };
-  }} component={importDefault(14910)} />;
+  }} component={importDefault(14909)} />;
   return <Navigator name="PaymentFlowTest" options={function options() {
     return { title: "Payment Flow Test" };
-  }} component={importDefault(14910)} />;
+  }} component={importDefault(14909)} />;
 });
 const result = require("createNativeStackNavigator").fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTestModal.tsx");
 

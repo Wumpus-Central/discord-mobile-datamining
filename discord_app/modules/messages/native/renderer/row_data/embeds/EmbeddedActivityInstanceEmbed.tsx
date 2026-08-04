@@ -44,7 +44,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           embeddedActivitiesForChannelIncludingHidden = embeddedActivitiesForChannelIncludingHidden.getEmbeddedActivitiesForChannelIncludingHidden(str);
           const found = embeddedActivitiesForChannelIncludingHidden.find((applicationId) => applicationId.applicationId === id.id);
           const currentEmbeddedActivity = obj4.getCurrentEmbeddedActivity();
-          let tmp5Result = tmp5(12512);
+          let tmp5Result = tmp5(12511);
           let obj = { activity: null, applicationId: null, guildId: null, channelId: null };
           obj[0] = found;
           obj[1] = application.id;
@@ -67,7 +67,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
             }
             stringResult = details;
           }
-          tmp5Result = tmp5(12522);
+          tmp5Result = tmp5(12521);
           obj = { embeddedActivity: null, currentEmbeddedActivity: null, channel: null };
           obj[0] = found;
           obj[1] = currentEmbeddedActivity;

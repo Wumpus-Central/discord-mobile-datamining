@@ -36,7 +36,7 @@ const memoResult = require("noop").memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "call", type: "<string:37516097>" };
+    return { channelId: "call", type: null };
   });
   if ("private" === stateFromStoresObject.type) {
     obj = { style: null, children: null };
@@ -52,7 +52,7 @@ const memoResult = require("noop").memo(function LaunchPadMembers() {
     const obj2 = { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
     ({ channelId: obj5[0], guildId: obj5[1] } = stateFromStoresObject);
     obj2[2] = tmp.listStyle;
-    obj1[1] = jsx(importDefault(15644), { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
+    obj1[1] = jsx(importDefault(15643), { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
     tmp8 = <View style={null}>{null}</View>;
   } else if ("guild" === stateFromStoresObject.type) {
     const obj3 = { style: null, children: null };

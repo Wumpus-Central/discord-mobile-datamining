@@ -143,7 +143,7 @@ let closure_16 = importAllResult.memo(() => {
     activeOpacity: 0.5,
     children: null
   };
-  obj[4] = callback(require(14655) /* StaffBadgeIcon */.StaffBadgeIcon, { size: "md", color: "white" });
+  obj[4] = callback(require(14654) /* StaffBadgeIcon */.StaffBadgeIcon, { size: "md", color: "white" });
   return callback(require(4812) /* PressableBase */.PressableOpacity, obj);
 });
 let result = require("STORAGE_KEY_LOG_DISPATCHES").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
@@ -153,7 +153,7 @@ export default function DevWidget() {
   const sharedValue = obj.useSharedValue(initialize.devWidgetPosition.x);
   const sharedValue1 = require(4146).useSharedValue(initialize.devWidgetPosition.y);
   obj = { children: null };
-  const items = [callback(importDefault(14958), { x: sharedValue, y: sharedValue1 }), ];
+  const items = [callback(importDefault(14957), { x: sharedValue, y: sharedValue1 }), ];
   obj = {
     x: sharedValue,
     y: sharedValue1,

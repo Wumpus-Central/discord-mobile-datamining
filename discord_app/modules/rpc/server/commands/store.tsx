@@ -35,7 +35,7 @@ function _getSubscriptionSkusViaListings() {
           let closure_0 = arg0;
           let c2 = 0;
           let c1 = 0;
-          return (/* F119413 */ function*() { ... })();
+          return (/* F119408 */ function*() { ... })();
         });
         return function() {
           const self = this;
@@ -150,7 +150,7 @@ function _getSkusHandler() {
               obj1[0] = arg1;
               return obj1;
             } else {
-              const result = socket(13669).validateTransportType(socket.transport);
+              const result = socket(13668).validateTransportType(socket.transport);
               callback = socket.application.id;
               if (null == callback) {
                 const obj2 = { errorCode: null };
@@ -166,7 +166,7 @@ function _getSkusHandler() {
                   obj3[0] = tmp65Result.fetchTestSKUsForApplication(callback, false);
                   return obj3;
                 } else {
-                  tmp65Result = tmp65(13670);
+                  tmp65Result = tmp65(13669);
                   constants = 3;
                   c7 = 1;
                   const obj4 = { value: null, done: false };
@@ -175,7 +175,7 @@ function _getSkusHandler() {
                 }
                 obj18 = socket(7508);
               }
-              const obj17 = socket(13669);
+              const obj17 = socket(13668);
             }
           } else if (2 === tmp5) {
             if (arg0 === 1) {
@@ -272,7 +272,7 @@ function _getSkusHandler() {
 }
 function getEntitlementsHandler(socket) {
   socket = socket.socket;
-  let obj = require(13669) /* validateTransportType */;
+  let obj = require(13668) /* validateTransportType */;
   const result = obj.validateTransportType(socket.transport);
   const id = socket.application.id;
   if (null == id) {

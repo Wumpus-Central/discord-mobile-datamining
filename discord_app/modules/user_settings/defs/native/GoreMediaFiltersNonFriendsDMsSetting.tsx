@@ -1,7 +1,7 @@
 import createToggle from "createToggle";
 
 function useGoreContentNonFriendsDmSettingValue() {
-  const obj = require(13971) /* useExplicitContentSettingOrDefault */;
+  const obj = require(13970) /* useExplicitContentSettingOrDefault */;
   return require(6968) /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentNonFriendDm)();
 }
 function onGoreContentNonFriendsDmOnPress() {
@@ -17,7 +17,7 @@ function onGoreContentNonFriendsDmOnPress() {
     return obj.updateGoreContentSetting(obj);
   };
   obj[3] = obj.getGoreContentSettingOrDefault().goreContentNonFriendDm;
-  const result = require(13972) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+  const result = require(13971) /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
 }
 const pressable = createToggle.createPressable({
   useTitle: function getTitle() {

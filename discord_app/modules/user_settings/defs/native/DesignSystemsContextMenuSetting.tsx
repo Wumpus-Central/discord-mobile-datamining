@@ -10,7 +10,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_CONTEXT_MENU,
   getComponent() {
-    return require(14694) /* DemoContextMenu */.default;
+    return require(14693) /* DemoContextMenu */.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -111,10 +111,10 @@ export default function RestrictedMessageRequestPreview(channelId) {
       obj1 = { channel: null, user: null };
       obj1[0] = stateFromStores;
       obj1[1] = stateFromStores1;
-      const items8 = [callback(tmp2(15841), obj1), ];
+      const items8 = [callback(tmp2(15840), obj1), ];
       obj2 = { channelId: null };
       obj2[0] = channelId;
-      items8[1] = callback(tmp2(15843), obj2);
+      items8[1] = callback(tmp2(15842), obj2);
       obj[5] = items8;
       const items9 = [closure_11(closure_5, obj), ];
       const obj3 = { style: null, children: null };

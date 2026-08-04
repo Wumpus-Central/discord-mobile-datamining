@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.GUILD_BOOSTING,
   getComponent() {
-    return require(12677) /* componentDidMount */.default;
+    return require(12676) /* componentDidMount */.default;
   }
 };
 const route = createToggle.createRoute(obj);

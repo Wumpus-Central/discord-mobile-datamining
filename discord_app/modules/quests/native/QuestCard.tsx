@@ -521,7 +521,7 @@ const memoResult = importAllResult.memo((questContent) => {
                   obj = { questId: null, sourceQuestContent: null };
                   obj[0] = v0.id;
                   obj[1] = useAdContentImpressionTrackerProps;
-                  v0(14267)(obj);
+                  v0(14266)(obj);
                   dependencyMap = 3;
                 }
                 callback2();

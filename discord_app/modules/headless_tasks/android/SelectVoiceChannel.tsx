@@ -2,7 +2,7 @@ import ensureGuildLoaded from "ensureGuildLoaded";
 import createRTCConnection from "createRTCConnection";
 
 const require = arg1;
-let result = require("module_16890").fileFinishedImporting("modules/headless_tasks/android/SelectVoiceChannel.tsx");
+let result = require("module_16889").fileFinishedImporting("modules/headless_tasks/android/SelectVoiceChannel.tsx");
 
 export default (arg0) => {
   let importDefault;

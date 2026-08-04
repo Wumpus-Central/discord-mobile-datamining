@@ -12,5 +12,5 @@ export default function SearchTabsGradient(state) {
     const items = [token, token(outer1_2[4]).hexWithOpacity(token, 0)];
     return items;
   }, items);
-  return jsx(importDefault(12027), { state: state.state, colors });
+  return jsx(importDefault(12026), { state: state.state, colors });
 };

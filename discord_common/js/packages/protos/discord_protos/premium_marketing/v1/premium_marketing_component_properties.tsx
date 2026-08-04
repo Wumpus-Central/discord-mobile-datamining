@@ -201,9 +201,9 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   if (arg3 == null) {
     obj = self.create();
   }
-  if (pos.pos < pos.pos + arg1) {
-    [r10019, r10020] = callback(pos.tag(), 2);
-    const tmp3 = callback(pos.tag(), 2);
+  const sum = pos.pos + arg1;
+  if (pos.pos < sum) {
+    obj.isDefaultBase = pos.bool();
   }
   return obj;
 };

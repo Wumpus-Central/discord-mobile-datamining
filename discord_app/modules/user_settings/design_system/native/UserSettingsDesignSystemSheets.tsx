@@ -108,7 +108,7 @@ function DemoPromoSheet() {
     let obj2 = obj;
   } else {
     obj2 = { illustration: null, title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
-    obj2[0] = tmp4(tmp(12943), {});
+    obj2[0] = tmp4(tmp(12942), {});
     obj2[3] = tmp5;
   }
   return callback2(require(7654) /* PromoSheet */.PromoSheet, obj2);

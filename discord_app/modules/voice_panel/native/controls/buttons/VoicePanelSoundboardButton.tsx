@@ -21,10 +21,10 @@ export default function SoundboardButton(arg0) {
   let wrapperSpecs;
   ({ props, wrapperSpecs } = arg0);
   const tmp3 = createCacheKey();
-  let obj = require(16124) /* useVoicePanelButtonStyles */;
+  let obj = require(16123) /* useVoicePanelButtonStyles */;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
-  const tmp6 = importDefault(16139);
-  ({ disabled, handlePress, visible } = importDefault(16139)(React.useContext(importDefault(11557)).channelId, require(16139) /* useSoundboardConfig */.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
+  const tmp6 = importDefault(16138);
+  ({ disabled, handlePress, visible } = importDefault(16138)(React.useContext(importDefault(11557)).channelId, require(16138) /* useSoundboardConfig */.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
   if (disabled) {
     let color = tmp(712).colors.ICON_MUTED;
   } else {
@@ -36,7 +36,7 @@ export default function SoundboardButton(arg0) {
     obj[0] = handlePress;
     obj[1] = disabled;
     obj[2] = props;
-    let tmpResult = tmp(16125);
+    let tmpResult = tmp(16124);
     const intl = tmp4(1236).intl;
     obj[3] = intl.string(tmp4(1236).t["6EJvHt"]);
     obj = { style: null };

@@ -28,7 +28,7 @@ function GuildFolderSettingsScene(arg0) {
   const obj1 = { title: null, children: null };
   const intl3 = require(1236) /* getSystemLocale */.intl;
   obj1[0] = intl3.string(require(1236) /* getSystemLocale */.t.xpurRF);
-  obj1[1] = callback(importDefault(15288), { color, onChange: onColorChange });
+  obj1[1] = callback(importDefault(15287), { color, onChange: onColorChange });
   items[1] = callback(require(7777) /* Form */.FormSection, obj1);
   obj[0] = items;
   return callback2(require(7777) /* Form */.Form, obj);
@@ -93,10 +93,10 @@ export default function GuildFolderSettingsModal(folderId) {
       return tmp;
     }));
     let obj = folderId(8620);
-    const result = folderId(15285).hideGuildsBarFolderModal();
+    const result = folderId(15284).hideGuildsBarFolderModal();
   }, items2);
   callback1 = obj2.useCallback(() => {
-    const result = folderId(15285).hideGuildsBarFolderModal();
+    const result = folderId(15284).hideGuildsBarFolderModal();
   }, []);
   const items3 = [first1, first, first !== initialFolderName || first1 !== initialFolderColor, callback, callback1];
   const memo = obj2.useMemo(() => {

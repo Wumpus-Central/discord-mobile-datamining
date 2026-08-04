@@ -7,7 +7,7 @@ export const useYouBarTotalHeight = function useYouBarTotalHeight(arg0) {
   if (arg0 === undefined) {
     num = 0;
   }
-  const youBarBottomMargin = require(14243) /* useYouBarHorizontalMargin */.useYouBarBottomMargin();
-  const obj = require(14243) /* useYouBarHorizontalMargin */;
-  return youBarBottomMargin + YOU_BAR_HEIGHT + require(14247) /* useConnectionBannerHeight */.useConnectionBannerHeight() + num;
+  const youBarBottomMargin = require(14242) /* useYouBarHorizontalMargin */.useYouBarBottomMargin();
+  const obj = require(14242) /* useYouBarHorizontalMargin */;
+  return youBarBottomMargin + YOU_BAR_HEIGHT + require(14246) /* useConnectionBannerHeight */.useConnectionBannerHeight() + num;
 };

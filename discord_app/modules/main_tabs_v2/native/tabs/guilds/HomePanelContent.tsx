@@ -54,7 +54,7 @@ let closure_7 = createCacheKey.createStyles((width) => {
 let closure_8 = { code: "function HomePanelContentTsx1(){const{isGradientTheme,maxX,interpolateColor,panelSpringTranslateX,baseLowest,panelBg}=this.__closure;if(isGradientTheme||maxX<=0){return{backgroundColor:'transparent'};}return{backgroundColor:interpolateColor(panelSpringTranslateX.get(),[0,maxX],[baseLowest,panelBg])};}" };
 const memoResult = require("noop").memo(() => {
   const tmp = callback(DM_WIDTH);
-  let obj = require(15054) /* context */;
+  let obj = require(15053) /* context */;
   if (obj.useIsHomeDrawerEnabled()) {
     let tmp3Result = tmp3(HomeDrawerPanelContent, {});
   } else {
@@ -62,7 +62,7 @@ const memoResult = require("noop").memo(() => {
     obj[0] = tmp.container;
     obj = { style: null, children: null };
     obj[0] = tmp.guildLisetContainerDefault;
-    obj[1] = tmp3(importDefault(15279), {});
+    obj[1] = tmp3(importDefault(15278), {});
     obj[1] = tmp3(View, obj);
     tmp3Result = tmp3(View, obj);
   }

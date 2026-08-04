@@ -20,7 +20,7 @@ function VoicePanel(arg0) {
   const merged = Object.assign(arg0);
   obj.guildId = stateFromStores;
   obj.children = importAllResult.useMemo(() => callback2(callback(table[6]), {}), []);
-  return jsx(importDefault(15997), {});
+  return jsx(importDefault(15996), {});
 }
 function getChannelKey(arg0) {
   return arg0;

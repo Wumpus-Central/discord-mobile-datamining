@@ -50,10 +50,10 @@ function FavoriteChannels(arg0) {
   let guildChannels;
   let shouldShowEmptyState;
   let tmp = dependencyMap;
-  let obj = require(15269) /* getMissingFavoriteThreadIds */;
+  let obj = require(15268) /* getMissingFavoriteThreadIds */;
   const favoritesGuildChannelList = obj.useFavoritesGuildChannelList();
   ({ guildChannels, shouldShowEmptyState } = favoritesGuildChannelList);
-  let obj1 = require(15268) /* useShouldRenderChannelList */;
+  let obj1 = require(15267) /* useShouldRenderChannelList */;
   if (!obj1.useShouldRenderChannelList()) {
     return null;
   } else {
@@ -63,15 +63,15 @@ function FavoriteChannels(arg0) {
       ({ style: obj4[0], contentInset: obj4[1] } = guild);
       obj = { guild: null, showExtraButtons: false, canOpenGuildActionSheet: false };
       obj[0] = guild.guild;
-      const items = [callback(importDefault(15154), obj), ];
+      const items = [callback(importDefault(15153), obj), ];
       obj1 = { guild: null };
       guild = guild.guild;
       obj1[0] = guild;
-      tmp = callback(importDefault(15259), obj1);
+      tmp = callback(importDefault(15258), obj1);
       items[1] = tmp;
       obj[2] = items;
-      let tmp8 = callback2(importDefault(15244), obj);
-      const tmp11 = importDefault(15244);
+      let tmp8 = callback2(importDefault(15243), obj);
+      const tmp11 = importDefault(15243);
     } else {
       const obj2 = {};
       const merged = Object.assign(guild);
@@ -94,7 +94,7 @@ function ChannelsWrapper(selectedGuildId) {
   if (selectedGuildId === closure_13) {
     obj = { style: null };
     obj[0] = merged.style;
-    let tmp6Result = callback(importDefault(15270), obj);
+    let tmp6Result = callback(importDefault(15269), obj);
   } else {
     if (null != stateFromStores) {
       if (selectedGuildId !== closure_12) {
@@ -112,7 +112,7 @@ function ChannelsWrapper(selectedGuildId) {
             obj1 = { style: null, guildId: null };
             obj1[0] = merged.style;
             obj1[1] = selectedGuildId;
-            tmp6Result = tmp6(importDefault(15276), obj1);
+            tmp6Result = tmp6(importDefault(15275), obj1);
           } else {
             const obj2 = {};
             const merged2 = Object.assign(merged);
@@ -127,7 +127,7 @@ function ChannelsWrapper(selectedGuildId) {
     const obj3 = { style: null, selectedGuildId: null };
     obj3[0] = merged.style;
     obj3[1] = selectedGuildId;
-    tmp6Result = callback(importDefault(15272), obj3);
+    tmp6Result = callback(importDefault(15271), obj3);
   }
   return tmp6Result;
 }

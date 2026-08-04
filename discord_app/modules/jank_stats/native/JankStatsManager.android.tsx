@@ -64,7 +64,7 @@ prototype["scheduleReport"] = function scheduleReport() {
   }
 };
 prototype["sendReport"] = function sendReport(background) {
-  let obj = importDefault(16356);
+  let obj = importDefault(16355);
   let report;
   if (obj != null) {
     report = obj.requestReport();

@@ -21,7 +21,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.COMMUNITY_ALERTS,
   getComponent() {
-    return require(14600) /* UserSettingsCommunityNotifications */.default;
+    return require(14599) /* UserSettingsCommunityNotifications */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

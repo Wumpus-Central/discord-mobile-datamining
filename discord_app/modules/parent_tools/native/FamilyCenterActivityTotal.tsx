@@ -16,15 +16,15 @@ const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/na
 
 export default function FamilyCenterActivityTotal(displayType) {
   displayType = displayType.displayType;
-  let obj = require(14045) /* useActionsForDisplayType */;
+  let obj = require(14044) /* useActionsForDisplayType */;
   const actionTotalsForDisplayType = obj.useActionTotalsForDisplayType(displayType);
   const tmp = createCacheKey();
-  let num = require(14045) /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
+  let num = require(14044) /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
   let str = "text-muted";
   if (actionTotalsForDisplayType > 0) {
     str = "text-brand";
   }
-  const obj2 = require(14045) /* useActionsForDisplayType */;
+  const obj2 = require(14044) /* useActionsForDisplayType */;
   const activityTypeTextConfigs = require(6961) /* getEmptyActivityFormatter */.getActivityTypeTextConfigs();
   const value = activityTypeTextConfigs.get(displayType);
   let tooltipHeaderResult;

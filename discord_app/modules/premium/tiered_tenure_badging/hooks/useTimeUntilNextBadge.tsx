@@ -8,8 +8,8 @@ export const computeDaysUntilNextBadgeDate = function computeDaysUntilNextBadgeD
   return Math.max(0, importDefault(3867)(arg0).add(arg1, "months").add(1, "day").diff(importDefault(3867)(), "days"));
 };
 export const useTimeUntilNextBadge = function useTimeUntilNextBadge() {
-  nextTenureBadge = nextTenureBadge(12622).useNextTenureBadge();
-  let obj = nextTenureBadge(12622);
+  nextTenureBadge = nextTenureBadge(12621).useNextTenureBadge();
+  let obj = nextTenureBadge(12621);
   const premiumSince = nextTenureBadge(9428).usePremiumSince();
   const items = [nextTenureBadge, premiumSince];
   return useMemo(() => {

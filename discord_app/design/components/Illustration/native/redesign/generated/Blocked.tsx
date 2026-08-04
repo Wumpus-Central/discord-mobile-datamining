@@ -9,13 +9,13 @@ export const getBlockedSource = function getBlockedSource(theme) {
   let obj = require(7544) /* getIllustrationSource */;
   obj = {
     dark() {
-      return callback(13954);
+      return callback(13953);
     },
     darker() {
-      return callback(13955);
+      return callback(13954);
     },
     light() {
-      return callback(13956);
+      return callback(13955);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -24,13 +24,13 @@ export const useBlockedSource = function useBlockedSource() {
   let obj = require(4131) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(13954);
+      return callback(13953);
     },
     darker() {
-      return callback(13955);
+      return callback(13954);
     },
     light() {
-      return callback(13956);
+      return callback(13955);
     }
   };
   return require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -39,13 +39,13 @@ export const Blocked = function Blocked(arg0) {
   let obj = require(4131) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(13954);
+      return callback(13953);
     },
     darker() {
-      return callback(13955);
+      return callback(13954);
     },
     light() {
-      return callback(13956);
+      return callback(13955);
     }
   };
   obj = {};

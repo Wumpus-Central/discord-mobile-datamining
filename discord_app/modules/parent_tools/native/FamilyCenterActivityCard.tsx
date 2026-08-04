@@ -32,7 +32,7 @@ function FamilyCenterActivityCardPrefaceText() {
   if (!tmp4) {
     obj1 = { color: null, source: null, style: null };
     obj1[0] = tmp.icon.color;
-    obj1[1] = tmp2(14041);
+    obj1[1] = tmp2(14040);
     obj1[2] = tmp.icon;
     tmp12 = callback(tmp5(1297).Icon, obj1);
   }
@@ -94,10 +94,10 @@ class FamilyCenterActivityCardHeader {
         tmp3 = jsx;
         tmp4 = View;
         obj = { children: null };
-        tmp5 = f58464;
+        tmp5 = f58461;
         obj1 = { user: null };
         obj1[0] = selectedTeenUser;
-        obj[0] = jsx(f58464, obj1);
+        obj[0] = jsx(f58461, obj1);
         tmp6 = jsx(View, obj);
         tmp9 = tmp6;
       } else {
@@ -134,7 +134,7 @@ class FamilyCenterActivityCardAccountSelect {
     selectTeenUser = obj3.useFamilyCenterActions(obj).selectTeenUser;
     items = [];
     items[0] = activeLinkUsers;
-    f92785 = f92785.useMemo(() => activeLinkUsers.map((id) => {
+    f92781 = f92781.useMemo(() => activeLinkUsers.map((id) => {
       const obj = { label: null, value: null };
       const name = callback(4124).getName(id);
       const obj2 = callback(4124);
@@ -179,12 +179,12 @@ class FamilyCenterActivityCardAccountSelect {
           const tmp5 = activeLinkUsers(selectTeenUser[19])(selectTeenUser[27], selectTeenUser.paths);
         }
       };
-      tmp12 = f58464;
+      tmp12 = f58461;
       obj3 = { user: null, inSelector: true };
       obj3[0] = selectedTeenUser;
       tmp11 = require("render");
       items1 = [, ];
-      items1[0] = jsx(f58464, obj3);
+      items1[0] = jsx(f58461, obj3);
       obj4 = { style: null, size: null, source: null };
       obj4[0] = tmp.icon;
       obj4[1] = require("Button").Icon.Sizes.MEDIUM;
@@ -235,7 +235,7 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.avatarContainer, children: callback(tmp4(1297).Avatar, obj) };
-  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 53.5 };
+  obj = { avatarStyle: tmp.avatar, user, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: user.avatarDecoration, size: 24 };
   obj[5] = NORMAL;
   const items = [callback(View, obj), ];
   const items1 = [tmp.userHeader, ];
@@ -245,7 +245,7 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   const obj1 = { style: items1, children: null };
   items1[1] = nonSelectorHeader;
-  const items2 = [callback(importDefault(14043), { user }), callback(FamilyCenterHeaderSubText, {})];
+  const items2 = [callback(importDefault(14042), { user }), callback(FamilyCenterHeaderSubText, {})];
   obj1[1] = items2;
   items[1] = closure_9(View, obj1);
   obj[1] = items;
@@ -284,9 +284,9 @@ const result = require("items").fileFinishedImporting("modules/parent_tools/nati
 export default function FamilyCenterActivityCard() {
   const tmp = callback6();
   const require = tmp;
-  let obj = require(14044) /* useSelectedTeenUser */;
+  let obj = require(14043) /* useSelectedTeenUser */;
   const selectedTeenUser = obj.useSelectedTeenUser();
-  require(14045) /* useActionsForDisplayType */;
+  require(14044) /* useActionsForDisplayType */;
   if (undefined === selectedTeenUser) {
     return null;
   } else {
@@ -319,7 +319,7 @@ export default function FamilyCenterActivityCard() {
       }
       return outer1_8(outer1_4, { style: other, children: outer1_8(outer1_1(outer1_2[31]), { displayType: tmp }) }, "total-" + tmp);
     });
-    const items2 = [callback(View, obj3), callback(importDefault(14047), {}), ];
+    const items2 = [callback(View, obj3), callback(importDefault(14046), {}), ];
     let tmp11Result = null;
     if (tmp6) {
       const obj4 = { style: null, children: null };
@@ -338,7 +338,7 @@ export default function FamilyCenterActivityCard() {
     items[1] = closure_9(View, obj1);
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.settingsControls;
-    obj5[1] = callback(importDefault(14057), {});
+    obj5[1] = callback(importDefault(14056), {});
     items[2] = callback(View, obj5);
     obj[1] = items;
     return closure_9(View, obj);

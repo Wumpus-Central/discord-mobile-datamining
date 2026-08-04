@@ -22,7 +22,7 @@ const toggle = createToggle.createToggle({
     let obj = require(1384) /* hasFlag */;
     const hasFlagResult = obj.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_EMAIL);
     obj = { phone, email: hasFlagResult };
-    const result = importDefault(11952).updateDiscoverability(obj);
+    const result = importDefault(11951).updateDiscoverability(obj);
   }
 });
 let obj = {
@@ -46,7 +46,7 @@ let obj = {
     let obj = require(1384) /* hasFlag */;
     const hasFlagResult = obj.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_EMAIL);
     obj = { phone, email: hasFlagResult };
-    const result = importDefault(11952).updateDiscoverability(obj);
+    const result = importDefault(11951).updateDiscoverability(obj);
   }
 };
 let result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/DiscoveryByPhoneSetting.tsx");

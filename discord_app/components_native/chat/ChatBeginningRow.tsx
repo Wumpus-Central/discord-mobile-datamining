@@ -411,7 +411,7 @@ function DMSpamButton(channel) {
   channel = channel.channel;
   const user = channel.user;
   let message;
-  let obj = channel(11864);
+  let obj = channel(11863);
   const dMMessageToReport = obj.useDMMessageToReport(channel, user.id, true === user.bot);
   message = dMMessageToReport.message;
   if (!channel.showingSpamBanner) {
@@ -451,7 +451,7 @@ function ManageAppButton(application) {
       obj[2] = intl.string(tmp2(1236).t["5S3sQF"]);
       obj = { size: null, source: null, style: null };
       obj[0] = tmp2(1297).Icon.Sizes.SMALL;
-      obj[1] = importDefault(11868);
+      obj[1] = importDefault(11867);
       obj[2] = tmp.appDMButtonIcon;
       obj[3] = callback2(tmp2(1297).Icon, obj);
       obj[4] = function onPress() {
@@ -582,7 +582,7 @@ function ChatBeginningRowDM(channel) {
   if (id == null) {
     id = closure_29;
   }
-  let tmp4Result = user(11872)(id);
+  let tmp4Result = user(11871)(id);
   c4 = tmp4Result;
   let obj = channel(589);
   let items = [recomputeFromAppTokens];
@@ -607,7 +607,7 @@ function ChatBeginningRowDM(channel) {
     return mutualGuilds;
   }, items2);
   let items3 = [user, channel];
-  const tmp4 = user(11872);
+  const tmp4 = user(11871);
   const effect = authorizedAppsFetchState.useEffect(() => {
     let getAvatarURL;
     let id;
@@ -704,7 +704,7 @@ function ChatBeginningRowDM(channel) {
       let obj8 = { style: null, userId: null, iconSize: 14 };
       obj8[0] = tmp.provisionalAccountExplainer;
       obj8[1] = user.id;
-      tmp15Result = tmp15(tmp7(11897).ChatProvisionalAccountExplainerCard, obj8);
+      tmp15Result = tmp15(tmp7(11896).ChatProvisionalAccountExplainerCard, obj8);
     }
     items5[4] = tmp15Result;
     let tmp18Result;
@@ -745,7 +745,7 @@ function ChatBeginningRowDM(channel) {
           obj[1] = channel(_undefined[95]).GuildIconSizes.SMALL;
           return callback(user(_undefined[95]), obj, guild.id);
         });
-        const items6 = [tmp15(tmp7(11888).GuildIconPile, obj10), ];
+        const items6 = [tmp15(tmp7(11887).GuildIconPile, obj10), ];
         let obj11 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
         obj11[0] = tmp.mutualGuildsLabel;
         let intl5 = tmp7(1236).intl;
@@ -899,7 +899,7 @@ function ChatBeginningRowDM(channel) {
           } else {
             tmp4Result = null;
             if (tmp6.PENDING_OUTGOING === stateFromStores) {
-              const obj10 = { text: null, size: "sm", variant: "active", disabled: true, onPress: "accessibilityRole" };
+              const obj10 = { text: null, size: "sm", variant: "active", disabled: true, onPress: "accessible" };
               const intl9 = tmp(tmp2[29]).intl;
               obj10[0] = intl9.string(tmp(tmp2[29]).t.xMH6vD);
               tmp4Result = tmp4(tmp(tmp2[70]).Button, obj10);
@@ -1106,7 +1106,7 @@ function ChatBeginningRowGroupDM(channel) {
     if (channel.hasFlag(ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) {
       const obj6 = { channelId: null };
       obj6[0] = channel.id;
-      tmp15Result1 = tmp15(first(11901), obj6);
+      tmp15Result1 = tmp15(first(11900), obj6);
     }
     const obj7 = { children: null };
     items6[2] = tmp15Result1;
@@ -1429,7 +1429,7 @@ export default function ChatBeginningRow(channelId) {
       tmp19Result = tmp19(closure_7, obj1, channelId);
     }
     obj[1] = tmp19Result;
-    return callback2(importDefault(11905), obj);
+    return callback2(importDefault(11904), obj);
   } else if (THREAD_CHANNEL_TYPES.has(stateFromStores.type)) {
     obj2 = { channel: null };
     obj2[0] = stateFromStores;

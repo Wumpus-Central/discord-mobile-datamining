@@ -115,7 +115,7 @@ if (isBlockedDomain.isLibdiscoreInitialized()) {
   launchSignature = obj2.generateLaunchSignature(obj3.getGlobalObject());
 }
 function addBreadcrumb(arg0) {
-  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = require(13373) /* IGNORE_ANALYTICS_BREADCRUMB_EVENTS */.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
+  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = require(13372) /* IGNORE_ANALYTICS_BREADCRUMB_EVENTS */.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
   if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(arg0)) {
     let obj = importDefault(1208);
     obj = { category: "analytics", message: null };

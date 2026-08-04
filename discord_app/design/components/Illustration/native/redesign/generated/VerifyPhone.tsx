@@ -9,13 +9,13 @@ export const getVerifyPhoneSource = function getVerifyPhoneSource(theme) {
   let obj = require(7544) /* getIllustrationSource */;
   obj = {
     dark() {
-      return callback(16465);
+      return callback(16464);
     },
     darker() {
-      return callback(16466);
+      return callback(16465);
     },
     light() {
-      return callback(16467);
+      return callback(16466);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -24,13 +24,13 @@ export const useVerifyPhoneSource = function useVerifyPhoneSource() {
   let obj = require(4131) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(16465);
+      return callback(16464);
     },
     darker() {
-      return callback(16466);
+      return callback(16465);
     },
     light() {
-      return callback(16467);
+      return callback(16466);
     }
   };
   return require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -39,13 +39,13 @@ export const VerifyPhone = function VerifyPhone(arg0) {
   let obj = require(4131) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(16465);
+      return callback(16464);
     },
     darker() {
-      return callback(16466);
+      return callback(16465);
     },
     light() {
-      return callback(16467);
+      return callback(16466);
     }
   };
   obj = {};

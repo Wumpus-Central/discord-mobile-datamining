@@ -92,7 +92,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   obj = { style: tmp.graphicContainer, children: null };
   const obj1 = { source: null, style: null };
   const obj2 = { uri: null };
-  obj2[0] = importDefault(15884);
+  obj2[0] = importDefault(15883);
   obj1[0] = obj2;
   obj1[1] = tmp.newBadgeImage;
   obj[1] = callback(closure_4, obj1);

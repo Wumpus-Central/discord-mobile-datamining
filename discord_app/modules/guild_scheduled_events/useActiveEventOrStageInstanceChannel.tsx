@@ -5,7 +5,7 @@ const result = require("useLiveStageChannels").fileFinishedImporting("modules/gu
 
 export const useActiveEventOrStageInstanceChannel = function useActiveEventOrStageInstanceChannel(id) {
   let firstActiveEventChannel = require(8960) /* useGuildEvents */.useFirstActiveEventChannel(id);
-  const first = importDefault(15191)(id)[0];
+  const first = importDefault(15190)(id)[0];
   if (first != null) {
     id = first.id;
   }

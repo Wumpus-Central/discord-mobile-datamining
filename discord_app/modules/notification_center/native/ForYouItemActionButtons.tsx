@@ -361,7 +361,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(it
   const callback4 = React.useCallback(() => {
     const dMChannel = callback(navigation[22]).getDMChannel(id);
     dMChannel.then((arg0) => {
-      callback(13105)({ payload: callback(4266)("https://discord.com/channels/@me/" + arg0).payload, safe: true, navigationReplace: false });
+      callback(13104)({ payload: callback(4266)("https://discord.com/channels/@me/" + arg0).payload, safe: true, navigationReplace: false });
       let c0;
       let tmp3;
       if (null != arg0) {

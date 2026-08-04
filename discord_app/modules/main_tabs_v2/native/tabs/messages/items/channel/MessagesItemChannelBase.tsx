@@ -93,7 +93,7 @@ const memoResult = importAllResult.memo(function MessagesItemChannelBase(channel
       obj[0] = _undefined.getStatus(obj.getRecipientId());
       obj[1] = activities;
     } else {
-      obj = { status: "Array", activities: "HermesInternal" };
+      obj = { status: "body", activities: "useStateFromStores" };
     }
     return obj;
   });

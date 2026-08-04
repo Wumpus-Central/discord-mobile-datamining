@@ -299,9 +299,9 @@ obj[13] = function subscribeSearchQueryState(searchContext, arg1, arg2, arg3) {
   let closure_2 = arg2;
   let tmp = arg3;
   function callback() {
-    const tmp = f87752(callback.getManager(closure_0));
+    const tmp = f87748(callback.getManager(closure_0));
     if (null == obj) {
-      f87753(tmp, tmp);
+      f87749(tmp, tmp);
     }
   }
   const tmp2 = arg1(callback.getManager(searchContext));
@@ -318,8 +318,8 @@ obj[13] = function subscribeSearchQueryState(searchContext, arg1, arg2, arg3) {
 obj[14] = function subscribeTextInputValue(closure_0, debounceResult, arg2) {
   closure_0 = debounceResult;
   let flag = arg2;
-  const f87752 = (getTextInputValue) => ({ textInputValue: getTextInputValue.getTextInputValue(), textInputChangedFromInput: getTextInputValue.getTextValueChangedFromInput() });
-  const f87753 = (textInputValue, textInputValue2) => {
+  const f87748 = (getTextInputValue) => ({ textInputValue: getTextInputValue.getTextInputValue(), textInputChangedFromInput: getTextInputValue.getTextValueChangedFromInput() });
+  const f87749 = (textInputValue, textInputValue2) => {
     textInputValue = undefined;
     if (textInputValue2 != null) {
       textInputValue = textInputValue2.textInputValue;
@@ -327,9 +327,9 @@ obj[14] = function subscribeTextInputValue(closure_0, debounceResult, arg2) {
     closure_0(textInputValue.textInputValue, textInputValue, textInputValue.textInputChangedFromInput);
   };
   function callback() {
-    const tmp = f87752(callback.getManager(closure_0));
+    const tmp = f87748(callback.getManager(closure_0));
     if (null == obj) {
-      f87753(tmp, tmp);
+      f87749(tmp, tmp);
     }
   }
   let obj = callback;

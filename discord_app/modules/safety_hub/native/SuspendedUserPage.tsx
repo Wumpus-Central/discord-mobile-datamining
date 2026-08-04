@@ -50,7 +50,7 @@ export default function SuspendedUserSafetyHubPage() {
   obj2[4] = items1;
   items[1] = callback2(require(4281) /* Text */.Text, obj2);
   obj[1] = items;
-  const items2 = [callback2(View, obj), callback(importDefault(13900), { visible: true })];
+  const items2 = [callback2(View, obj), callback(importDefault(13899), { visible: true })];
   obj[1] = items2;
   obj[3] = callback2(View, obj);
   return callback(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);

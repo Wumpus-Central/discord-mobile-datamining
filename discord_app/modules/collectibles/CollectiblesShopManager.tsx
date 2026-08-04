@@ -39,7 +39,7 @@ function flushCollections() {
   for (const item10016 of tmp2) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    let obj = require(12416) /* _maybeFetchCollectionsWithProducts */;
+    let obj = require(12415) /* _maybeFetchCollectionsWithProducts */;
     obj = { collectionIds: null };
     obj[0] = item10016;
     let result = obj.maybeFetchCollectionsWithProducts(obj);

@@ -13,10 +13,10 @@ prototype["generateRsaKeyPair"] = function generateRsaKeyPair() {
   })();
 };
 prototype["serializePublicKey"] = function serializePublicKey(c3) {
-  return importDefault(15023).getEncodedPublicKey();
+  return importDefault(15022).getEncodedPublicKey();
 };
 prototype["publicKeyFingerprint"] = function publicKeyFingerprint(c3) {
-  return importDefault(15023).getPublicKeyFingerprint();
+  return importDefault(15022).getPublicKeyFingerprint();
 };
 prototype["decryptEncodedCiphertext"] = function decryptEncodedCiphertext(closure_0, closure_02) {
   closure_0 = closure_02;
@@ -40,7 +40,7 @@ prototype["decryptNonce"] = function decryptNonce(arg0, outer1_2) {
   })();
 };
 prototype["release"] = function release() {
-  importDefault(15023).releaseKeyPair();
+  importDefault(15022).releaseKeyPair();
 };
 const result = require("set").fileFinishedImporting("modules/remote_auth/RemoteAuthCrypto.android.tsx");
 

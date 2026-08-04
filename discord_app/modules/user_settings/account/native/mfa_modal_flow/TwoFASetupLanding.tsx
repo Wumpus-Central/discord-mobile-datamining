@@ -15,13 +15,13 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/a
 
 export default function TwoFASetupLanding() {
   const tmp = callback3();
-  let obj = require(13937) /* styles */;
+  let obj = require(13936) /* styles */;
   const twoFASetupStyles = obj.useTwoFASetupStyles();
   obj = { children: null };
   obj = { style: tmp.container, children: null };
   const obj1 = { bottom: true, style: tmp.container, children: null };
   const obj2 = { source: null, style: null };
-  obj2[0] = importDefault(13938);
+  obj2[0] = importDefault(13937);
   obj2[1] = tmp.authIcon;
   const items = [callback(closure_3, obj2), , ];
   const obj3 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
@@ -37,5 +37,5 @@ export default function TwoFASetupLanding() {
   obj1[2] = items;
   obj[1] = callback2(require(5272) /* SafeAreaPaddingView */.SafeAreaPaddingView, obj1);
   obj[0] = callback(closure_4, obj);
-  return callback(require(13933) /* TwoFAModalSetupSections */.TwoFASetupModalScreen, obj);
+  return callback(require(13932) /* TwoFAModalSetupSections */.TwoFASetupModalScreen, obj);
 };

@@ -29,7 +29,7 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
   const tmp = createCacheKey();
   obj = { header: jsx(require(5337) /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null }), startExpanded: true, children: null };
   obj = { style: tmp.templateContainer, children: null };
-  obj[1] = jsx(importDefault(16574), {
+  obj[1] = jsx(importDefault(16573), {
     onSelect(arg0) {
       let closure_0 = arg0;
       if (closure_0) {

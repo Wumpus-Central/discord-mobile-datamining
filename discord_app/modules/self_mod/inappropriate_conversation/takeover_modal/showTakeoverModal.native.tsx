@@ -15,7 +15,7 @@ export const showTakeoverModal = function showTakeoverModal(arg0) {
     obj[1] = warningType;
     obj[2] = senderId;
     obj[3] = channelId;
-    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(14939, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
+    importDefault(4490).pushLazy(require(1959) /* asyncRequireImpl */(14938, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
     const obj2 = importDefault(4490);
   }
 };

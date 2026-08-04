@@ -269,7 +269,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
     return items;
   }, items1);
   const ref = importAllResult.useRef(null);
-  const isForumChannelSearchActive = frame(12460).useIsForumChannelSearchActive(channelId);
+  const isForumChannelSearchActive = frame(12459).useIsForumChannelSearchActive(channelId);
   const isChatLockedOpen = tmp5(4139)().isChatLockedOpen;
   let tmp14 = !isChatLockedOpen;
   if (isChatLockedOpen) {
@@ -304,7 +304,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
             if (canSeeOnboardingHome) {
               obj2 = { guildId: null };
               obj2[0] = guildId;
-              tmp27Result = tmp27(tmp5(15540), obj2);
+              tmp27Result = tmp27(tmp5(15539), obj2);
             }
             obj1[1] = tmp27Result;
             items2[1] = tmp27(chatInputFloating, obj1);
@@ -313,7 +313,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
           } else if (channelId === tmp30.MEMBER_SAFETY) {
             const obj3 = { guildId: null };
             obj3[0] = guildId;
-            return tmp27(tmp5(15558), obj3);
+            return tmp27(tmp5(15557), obj3);
           } else if (showCreateThread) {
             const obj4 = { style: null, children: null };
             obj4[0] = memo1;
@@ -321,7 +321,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
             const obj5 = { channelId: null, screenIndex: null };
             obj5[0] = channelId;
             obj5[1] = screenIndex;
-            items3[1] = tmp27(tmp2(15575).CreateThreadView, obj5);
+            items3[1] = tmp27(tmp2(15574).CreateThreadView, obj5);
             obj4[1] = items3;
             return tmp31(chatInputFloating, obj4);
           } else {
@@ -345,7 +345,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
               obj9[2] = screenIndex;
               obj9[3] = tmp14;
               obj9[4] = tmp31Result;
-              tmp27Result = tmp27(tmp5(15579), obj9);
+              tmp27Result = tmp27(tmp5(15578), obj9);
             } else {
               const obj10 = { style: null, accessible: false, onAccessibilityEscape: null, children: null };
               obj10[0] = memo;
@@ -374,7 +374,7 @@ const memoResult = importAllResult.memo(function StandaloneChannelScreen(arg0) {
         tmp26 = channelId;
       }
       obj13[1] = tmp26;
-      items6[1] = callback(tmp5(15523), obj13);
+      items6[1] = callback(tmp5(15522), obj13);
       obj12[1] = items6;
       items5[1] = closure_12(chatInputFloating, obj12);
       obj11[1] = items5;

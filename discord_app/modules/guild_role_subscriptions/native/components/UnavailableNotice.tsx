@@ -30,7 +30,7 @@ export default function UnavailableNotice(brightTitle) {
   ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
   obj = { style: tmp.unavailableInfo, children: null };
   obj = { source: null };
-  obj[0] = importDefault(15248);
+  obj[0] = importDefault(15247);
   const items1 = [callback(importDefault(5236), obj), , ];
   const items2 = [tmp.joinCtaTitle, ];
   if (brightTitle) {

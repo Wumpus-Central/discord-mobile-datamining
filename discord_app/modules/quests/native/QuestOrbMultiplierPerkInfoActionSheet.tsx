@@ -148,6 +148,6 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   obj = { visible: orbMultiplierEligibility === multiplier(10394).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(10394).QuestOrbMultiplierEligibilityType.UPSELL, children: null };
   const tmp4 = orbMultiplierEligibility === multiplier(10394).QuestOrbMultiplierEligibilityType.NITRO || orbMultiplierEligibility === multiplier(10394).QuestOrbMultiplierEligibilityType.UPSELL;
   obj[1] = callback(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-  obj[4] = callback(orbMultiplierEligibility(14306), obj);
+  obj[4] = callback(orbMultiplierEligibility(14305), obj);
   return callback(multiplier(5338).BottomSheet, obj);
 };

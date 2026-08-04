@@ -15,7 +15,7 @@ export const SensitiveContentFiltersTeenNotice = function SensitiveContentFilter
     obj.openURL(outer1_1(outer1_2[7]).getArticleURL(closure_0));
   };
   obj[2] = SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE;
-  return jsx(importDefault(13898), { label: null, labelHook: null, noticeType: null });
+  return jsx(importDefault(13897), { label: null, labelHook: null, noticeType: null });
 };
 export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveContentFiltersAgeVerificationNotice() {
   let obj = { label: null, labelHook: null, noticeType: null };
@@ -26,5 +26,5 @@ export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveCo
     const result = obj.showAgeVerificationGetStartedModal(obj);
   };
   obj[2] = SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE;
-  return jsx(importDefault(13898), { label: null, labelHook: null, noticeType: null });
+  return jsx(importDefault(13897), { label: null, labelHook: null, noticeType: null });
 };

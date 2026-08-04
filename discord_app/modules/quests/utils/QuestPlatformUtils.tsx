@@ -180,9 +180,9 @@ export const getExpiredCredentialsHintMessage = function getExpiredCredentialsHi
 export const openGameLinkDirectly = function openGameLinkDirectly(quest, arg1) {
   let closure_1;
   let dependencyMap;
-  let f84917 = quest;
+  let f84913 = quest;
   const importDefault = arg1;
-  let obj = f84917(10396);
+  let obj = f84913(10396);
   let ctaLink = obj.getCtaLink(quest.config);
   const ctaConfig = quest.config.ctaConfig;
   let tmp4 = null;
@@ -221,7 +221,7 @@ export const openGameLinkDirectly = function openGameLinkDirectly(quest, arg1) {
       }
     })(ctaLink, v4Result);
   }
-  if (tmpResult1.shouldMigrateToAdAnalyticsInterface(f84917(9434).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_game_link_directly")) {
+  if (tmpResult1.shouldMigrateToAdAnalyticsInterface(f84913(9434).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_game_link_directly")) {
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null, clickId: null };
     obj[0] = tmp(9439).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA;
     obj[1] = tmp(7108).AdCreativeType.QUEST;
@@ -253,7 +253,7 @@ export const openGameLinkDirectly = function openGameLinkDirectly(quest, arg1) {
         const tmpResult4 = tmp(10396);
       }
       if (null != tmp13) {
-        f84917 = (event, arg1, time_spent_ms) => f84917(outer1_2[8]).trackAppStoreOverlayEvent(f84917, closure_1, arg1, event, time_spent_ms);
+        f84913 = (event, arg1, time_spent_ms) => f84913(outer1_2[8]).trackAppStoreOverlayEvent(f84913, closure_1, arg1, event, time_spent_ms);
         ({ clearAppStoreOverlayOpen: closure_1, setAppStoreOverlayOpen: dependencyMap } = tmp(10498));
         let str = tmp13.appId;
         str = undefined;
@@ -262,8 +262,8 @@ export const openGameLinkDirectly = function openGameLinkDirectly(quest, arg1) {
         }
         const result1 = tmp(4251).openPlayStoreInlineInstall(tmp13.url, str, (arg0) => {
           adCreativeType();
-          f84918(outer1_4.QUEST_APP_STORE_OVERLAY_CLOSED, str, arg0);
-          const ComponentDispatch = f84918(1231).ComponentDispatch;
+          f84914(outer1_4.QUEST_APP_STORE_OVERLAY_CLOSED, str, arg0);
+          const ComponentDispatch = f84914(1231).ComponentDispatch;
           ComponentDispatch.dispatch(outer1_5.QUEST_APP_STORE_OVERLAY_FINISHED);
         });
         const tmpResult5 = tmp(10498);
@@ -274,17 +274,17 @@ export const openGameLinkDirectly = function openGameLinkDirectly(quest, arg1) {
               return callback(QUEST_APP_STORE_OVERLAY_BACKGROUNDED, closure_3, arg1);
             };
             dependencyMap(obj);
-            f84918(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str);
+            f84914(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str);
           } else {
             adCreativeType();
-            f84918(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str);
-            const ComponentDispatch = f84918(1231).ComponentDispatch;
+            f84914(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str);
+            const ComponentDispatch = f84914(1231).ComponentDispatch;
             ComponentDispatch.dispatch(outer1_5.QUEST_APP_STORE_OVERLAY_FINISHED);
           }
         }).catch(() => {
           adCreativeType();
-          f84918(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str);
-          const ComponentDispatch = f84918(1231).ComponentDispatch;
+          f84914(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str);
+          const ComponentDispatch = f84914(1231).ComponentDispatch;
           ComponentDispatch.dispatch(outer1_5.QUEST_APP_STORE_OVERLAY_FINISHED);
         });
       }
@@ -296,7 +296,7 @@ export const openAdGameLinkDirectly = function openAdGameLinkDirectly(adContentI
   let adCreativeType;
   let closure_2;
   adContentId = adContentId.adContentId;
-  let f84918 = adContentId;
+  let f84914 = adContentId;
   adCreativeType = adContentId.adCreativeType;
   const cta = adContentId.cta;
   const dependencyMap = arg1;
@@ -305,8 +305,8 @@ export const openAdGameLinkDirectly = function openAdGameLinkDirectly(adContentI
   if (null != tmp) {
     url = tmp;
   }
-  let obj = f84918(9434);
-  if (obj.shouldMigrateToAdAnalyticsInterface(f84918(9434).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")) {
+  let obj = f84914(9434);
+  if (obj.shouldMigrateToAdAnalyticsInterface(f84914(9434).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")) {
     let tmp2Result = tmp2(9435);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
     obj[0] = tmp2(9439).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA;
@@ -329,9 +329,9 @@ export const openAdGameLinkDirectly = function openAdGameLinkDirectly(adContentI
     if (null != tmp) {
       const tmp11 = getInlineStoreParamsFromCta(cta);
       if (null != tmp11) {
-        f84918 = (event, arg1, time_spent_ms) => {
-          let obj = f84918(7097);
-          obj = { adContentId: f84918, adCreativeType };
+        f84914 = (event, arg1, time_spent_ms) => {
+          let obj = f84914(7097);
+          obj = { adContentId: f84914, adCreativeType };
           return obj.trackAdContentAppStoreOverlayEvent(obj, dependencyMap, arg1, event, time_spent_ms);
         };
         ({ clearAppStoreOverlayOpen: adCreativeType, setAppStoreOverlayOpen: closure_2 } = tmp2(10498));
@@ -342,8 +342,8 @@ export const openAdGameLinkDirectly = function openAdGameLinkDirectly(adContentI
         }
         const result1 = tmp2(4251).openPlayStoreInlineInstall(tmp11.url, str, (arg0) => {
           adCreativeType();
-          f84918(outer1_4.QUEST_APP_STORE_OVERLAY_CLOSED, str, arg0);
-          const ComponentDispatch = f84918(1231).ComponentDispatch;
+          f84914(outer1_4.QUEST_APP_STORE_OVERLAY_CLOSED, str, arg0);
+          const ComponentDispatch = f84914(1231).ComponentDispatch;
           ComponentDispatch.dispatch(outer1_5.QUEST_APP_STORE_OVERLAY_FINISHED);
         });
         const tmp2Result1 = tmp2(10498);
@@ -354,17 +354,17 @@ export const openAdGameLinkDirectly = function openAdGameLinkDirectly(adContentI
               return callback(QUEST_APP_STORE_OVERLAY_BACKGROUNDED, closure_3, arg1);
             };
             dependencyMap(obj);
-            f84918(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str);
+            f84914(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_SUCCEEDED, str);
           } else {
             adCreativeType();
-            f84918(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str);
-            const ComponentDispatch = f84918(1231).ComponentDispatch;
+            f84914(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str);
+            const ComponentDispatch = f84914(1231).ComponentDispatch;
             ComponentDispatch.dispatch(outer1_5.QUEST_APP_STORE_OVERLAY_FINISHED);
           }
         }).catch(() => {
           adCreativeType();
-          f84918(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str);
-          const ComponentDispatch = f84918(1231).ComponentDispatch;
+          f84914(outer1_4.QUEST_APP_STORE_OVERLAY_OPEN_FAILED, str);
+          const ComponentDispatch = f84914(1231).ComponentDispatch;
           ComponentDispatch.dispatch(outer1_5.QUEST_APP_STORE_OVERLAY_FINISHED);
         });
       }

@@ -9,7 +9,7 @@ createToggle = {
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: function useDMsMessagePreviewsValue() {
-    return require(14454) /* useMessagePreview */.useMessagePreviewSetting();
+    return require(14453) /* useMessagePreview */.useMessagePreviewSetting();
   },
   onValueChange: function onDMsMessagePreviewsValueChange(arg0) {
     const MessagePreviewSetting = require(3958) /* explicitContentFromProto */.MessagePreviewSetting;

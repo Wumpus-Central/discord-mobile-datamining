@@ -204,7 +204,7 @@ export default function DevToolsAnalyticsScreen() {
   const items2 = [callback2(trimmed(5650).TableSwitchRow, obj1), ];
   const obj2 = { arrow: true, variant: "danger", icon: null, label: "Clear Analytics Log", onPress: null };
   obj2[2] = callback2(trimmed(4244).TrashIcon, { color: "text-feedback-critical" });
-  obj2[4] = trimmed(13754).clearAnalyticsLog;
+  obj2[4] = trimmed(13753).clearAnalyticsLog;
   items2[1] = callback2(trimmed(5315).TableRow, obj2);
   obj[2] = items2;
   const items3 = [callback3(trimmed(5649).TableRowGroup, obj), , ];

@@ -584,7 +584,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(589).useStateFromStores(items1, () => obj.hidePersonalInformation);
   const obj3 = userId(589);
   const tmp2 = theme;
-  ({ connections, appIdentities } = theme(12383)(userId));
+  ({ connections, appIdentities } = theme(12382)(userId));
   if (!stateFromStores) {
     const items2 = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(connections.map((account) => outer1_13(outer1_19, { account, theme, locale: closure_2, userId }, account.id)), 0);
@@ -624,7 +624,7 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
   ({ userId, style } = arg0);
   const tmp = callback3();
   const tmp4 = importDefault(1348)("UserProfileConnections");
-  const arr = importDefault(12386)(userId);
+  const arr = importDefault(12385)(userId);
   let obj = require(589) /* initialize */;
   const items = [initialize];
   if (!obj.useStateFromStores(items, () => obj.hidePersonalInformation)) {

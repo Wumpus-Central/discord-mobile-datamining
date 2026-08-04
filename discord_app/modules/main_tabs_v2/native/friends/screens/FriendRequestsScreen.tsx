@@ -89,9 +89,9 @@ export default function FriendRequestsScreen() {
   }), 2);
   first = tmp9[0];
   dependencyMap = tmp11;
-  let obj2 = stateFromStoresArray(12251);
+  let obj2 = stateFromStoresArray(12250);
   gameRelationshipsByType = obj2.useGameRelationshipsByType(ignoredUsers.PENDING_INCOMING);
-  let obj3 = stateFromStoresArray(12251);
+  let obj3 = stateFromStoresArray(12250);
   gameRelationshipsByType1 = obj3.useGameRelationshipsByType(ignoredUsers.PENDING_OUTGOING);
   const items3 = [gameRelationshipsByType, gameRelationshipsByType1];
   const memo = gameRelationshipsByType1.useMemo(() => {

@@ -8,9 +8,9 @@ function BlockedUserRow(userRecord) {
   let analyticsLocations;
   analyticsLocations = analyticsLocations(5610)().analyticsLocations;
   let obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
-  obj = { user: userRecord, guildId: "Array", size: true };
+  obj = { user: userRecord, guildId: "Array", size: 8 };
   obj[2] = userRecord(1297).AvatarSizes.REFRESH_MEDIUM_32;
-  obj[0] = jsx(userRecord(1297).Avatar, { user: userRecord, guildId: "Array", size: true });
+  obj[0] = jsx(userRecord(1297).Avatar, { user: userRecord, guildId: "Array", size: 8 });
   let tmp4 = null != userRecord;
   if (tmp4) {
     let username = userRecord.globalName;

@@ -4,7 +4,7 @@ import createGuildRecordFromRust from "createGuildRecordFromRust";
 import getUncachedChannelPermissions from "getUncachedChannelPermissions";
 import handleFormInit from "handleFormInit";
 import ME from "ME";
-import jsxProd from "module_16622";
+import jsxProd from "module_16621";
 import createCacheKey from "createCacheKey";
 
 let c10;

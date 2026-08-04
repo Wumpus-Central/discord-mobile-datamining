@@ -15,11 +15,11 @@ const require = arg1;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
   const match = showHint(4484).match(showHint.usernameStatus);
-  let obj = { type: showHint(13910).NameValidationState.ERROR, message: null };
+  let obj = { type: showHint(13909).NameValidationState.ERROR, message: null };
   const P = showHint(4484).P;
   obj[1] = P.select();
   const str = showHint(4484);
-  obj = { type: showHint(13910).NameValidationState.AVAILABLE, message: null };
+  obj = { type: showHint(13909).NameValidationState.AVAILABLE, message: null };
   const P2 = showHint(4484).P;
   obj[1] = P2.select();
   const withResult = match.with(obj, (children) => callback(showHint(4281).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));

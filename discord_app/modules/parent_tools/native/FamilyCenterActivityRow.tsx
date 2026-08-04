@@ -174,7 +174,7 @@ export default function FamilyCenterActivityRow(action) {
     if (null != purchaseInfo) {
       obj = { skuId: null, subscriptionPlanId: null, total: null, currency: null };
       ({ sku_id: obj11[0], subscription_plan_id: obj11[1], total: obj11[2], currency: obj11[3] } = purchaseInfo);
-      tmp14 = callback(importDefault(14052), obj);
+      tmp14 = callback(importDefault(14051), obj);
     }
     return tmp14;
   } else {
@@ -183,7 +183,7 @@ export default function FamilyCenterActivityRow(action) {
       if (null == giftInfo) {
         return null;
       } else {
-        const giftRowDisplayInfo = tmp(14055).getGiftRowDisplayInfo(giftInfo);
+        const giftRowDisplayInfo = tmp(14054).getGiftRowDisplayInfo(giftInfo);
         ({ skuId, subscriptionPlanId, price, gifterUserId, claimed, offeredAt, claimedAt } = giftRowDisplayInfo);
         obj = { skuId: null, subscriptionPlanId: null, price: null, gifterUserId: null, claimed: null, offeredAt: null, claimedAt: null };
         obj[0] = skuId;
@@ -193,7 +193,7 @@ export default function FamilyCenterActivityRow(action) {
         obj[4] = claimed;
         obj[5] = offeredAt;
         obj[6] = claimedAt;
-        return callback(importDefault(14056), obj);
+        return callback(importDefault(14055), obj);
       }
     } else {
       if (tmpResult5.isUserAction(action)) {

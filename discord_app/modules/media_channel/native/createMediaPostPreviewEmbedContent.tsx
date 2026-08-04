@@ -93,7 +93,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
               if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
                 const obj2 = {};
                 const merged = Object.assign(mediaPostEmbedCommonData);
-                obj2.blurredCoverImage = closure_3.resolveAssetSource(tmp10(12540)).uri;
+                obj2.blurredCoverImage = closure_3.resolveAssetSource(tmp10(12539)).uri;
                 obj2.footer = formatToPartsResult;
                 obj2.ctaButtonColor = tmp11;
                 return obj2;

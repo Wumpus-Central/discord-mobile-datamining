@@ -210,5 +210,5 @@ export default function HubEmailConnectionSubmitSchool(arg0) {
   items2[2] = callback2(first, obj7);
   obj[2] = items2;
   obj5[0] = closure_10(tmp11, obj);
-  return callback2(require(11995) /* HubEmailConnectionModal */.HubEmailConnectionScreen, obj5);
+  return callback2(require(11994) /* HubEmailConnectionModal */.HubEmailConnectionScreen, obj5);
 };

@@ -47,5 +47,5 @@ export default function SettingsAgeGroupScreen() {
     obj[1] = closure_10;
     return obj.createList(obj);
   }, []);
-  return callback(importDefault(13794), { node });
+  return callback(importDefault(13793), { node });
 };

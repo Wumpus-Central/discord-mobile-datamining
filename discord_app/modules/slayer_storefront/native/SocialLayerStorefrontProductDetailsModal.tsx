@@ -400,7 +400,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   items6[2] = memo1;
   callback = obj5.useCallback((arg0) => {
     let obj = analyticsLocations(_undefined[32]);
-    obj = { slayer_storefront_session_id: "Array", sku_id: "a", guild_id: true, application_id: true, cta_type: 12, location_stack: 12 };
+    obj = { slayer_storefront_session_id: "Array", sku_id: "a", guild_id: true, application_id: true, cta_type: "SOURCE", location_stack: null };
     obj[1] = skuId;
     let applicationId;
     if (stateFromStores != null) {

@@ -255,8 +255,8 @@ prototype["render"] = function render() {
     obj[0] = obj1;
     const intl2 = tmp3(1236).intl;
     obj[1] = intl2.string(tmp3(1236).t["7+5GQa"]);
-    tmp2Result = tmp2(importDefault(15796), obj);
-    const tmp8Result = importDefault(15796);
+    tmp2Result = tmp2(importDefault(15795), obj);
+    const tmp8Result = importDefault(15795);
   }
   const items1 = [tmp2Result, , , , ];
   const obj2 = { label: null, value: null, onChange: null, errorMessage: null };

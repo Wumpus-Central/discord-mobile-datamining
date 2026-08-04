@@ -9,8 +9,8 @@ let error;
 let metroImportAll;
 const require = arg1;
 function close() {
-  importDefault(16472).terminate();
-  const obj = importDefault(16472);
+  importDefault(16471).terminate();
+  const obj = importDefault(16471);
   importDefault(8943).close();
 }
 ({ GuildSettingsSections: error, WebhookTypes: metroImportAll } = ME);

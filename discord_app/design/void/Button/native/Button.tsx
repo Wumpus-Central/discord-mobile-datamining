@@ -77,13 +77,13 @@ function getButtonStyles(shrink, button) {
     buttonShrink = button.buttonShrink;
   }
   items[1] = buttonShrink;
-  items[2] = require(11930) /* getClass */.getClass(button, "button", combined, disabled ? closure_14.DISABLED : closure_14.DEFAULT);
-  const obj2 = require(11930) /* getClass */;
+  items[2] = require(11929) /* getClass */.getClass(button, "button", combined, disabled ? closure_14.DISABLED : closure_14.DEFAULT);
+  const obj2 = require(11929) /* getClass */;
   const tmp2 = disabled ? closure_14.DISABLED : closure_14.DEFAULT;
   const tmp8 = require;
-  items[3] = require(11930) /* getClass */.getClass(button, "button", size);
-  const obj3 = require(11930) /* getClass */;
-  items[4] = require(11930) /* getClass */.getClass(button, "button", look);
+  items[3] = require(11929) /* getClass */.getClass(button, "button", size);
+  const obj3 = require(11929) /* getClass */;
+  items[4] = require(11929) /* getClass */.getClass(button, "button", look);
   let faded;
   if (!flag3) {
     if (!tmp8Result.isAndroid()) {

@@ -34,7 +34,7 @@ function ContactSyncNameInputScreen() {
         let closure_1 = tmp3;
         callback(true);
         let c3 = 1;
-        yield outer1_1(11952).updateName(callback);
+        yield outer1_1(11951).updateName(callback);
         if (1 === tmp7) {
           c3 = 0;
           const obj1 = outer1_1(3986);

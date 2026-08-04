@@ -22,7 +22,7 @@ function UserSettingsSessions() {
   let otherSessions;
   let tmp7;
   const tmp = createCacheKey();
-  let obj = otherSessions(13886);
+  let obj = otherSessions(13885);
   let authSessions = obj.useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
   let obj1 = otherSessions(589);
@@ -144,14 +144,14 @@ function SessionInfo(session) {
               let obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
               obj[1] = importDefault(10839);
-              obj[2] = session(14102).VrHeadsetIcon;
+              obj[2] = session(14101).VrHeadsetIcon;
               let tmp9 = session;
               let tmp10 = importDefault;
             } else {
               obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
-              obj[1] = importDefault(14101);
-              obj[2] = session(12093).ScreenIcon;
+              obj[1] = importDefault(14100);
+              obj[2] = session(12092).ScreenIcon;
               tmp9 = session;
               tmp10 = importDefault;
             }
@@ -167,8 +167,8 @@ function SessionInfo(session) {
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = obj);
       if (!current) {
-        formatDateResult = tmp9(13886).formatDate(session.approx_last_used_time);
-        const tmp9Result = tmp9(13886);
+        formatDateResult = tmp9(13885).formatDate(session.approx_last_used_time);
+        const tmp9Result = tmp9(13885);
       }
       const items = [text, platform];
       const found = items.filter(tmp9(1351).isNotNullish);
@@ -248,8 +248,8 @@ function SessionInfo(session) {
   const obj16 = { text: null, iconSource: null, IconComponent: null };
   const intl = session(1236).intl;
   obj16[0] = intl.string(session(1236).t.cDHCNY);
-  obj16[1] = importDefault(14101);
-  obj16[2] = session(12093).ScreenIcon;
+  obj16[1] = importDefault(14100);
+  obj16[2] = session(12092).ScreenIcon;
   tmp9 = session;
   tmp10 = importDefault;
   obj = obj16;

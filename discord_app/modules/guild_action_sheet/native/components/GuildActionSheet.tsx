@@ -32,9 +32,9 @@ const memoResult = require("noop").memo(function GuildActionSheet(arg0) {
     num = 16;
   }
   obj[2] = { paddingBottom: importDefault(1581)().bottom + num };
-  const items = [closure_4(importDefault(13222), { guild }), closure_4(importDefault(13228), { guild }), , ];
+  const items = [closure_4(importDefault(13221), { guild }), closure_4(importDefault(13227), { guild }), , ];
   const obj1 = { style: tmp.actions, children: null };
-  const items1 = [closure_4(require(13165) /* HideMutedChannelsOption */.GuildUnreadAction, { guild }), closure_4(importDefault(13229), { guild }), closure_4(require(13165) /* HideMutedChannelsOption */.GuildActionSheetPrimaryActions, { guild }), closure_4(require(13165) /* HideMutedChannelsOption */.GuildActionSheetSecondaryActions, { guild }), closure_4(require(13165) /* HideMutedChannelsOption */.GuildDeveloperOptionAction, { guild }), closure_4(importDefault(13232), { guildId: guild.id })];
+  const items1 = [closure_4(require(13164) /* HideMutedChannelsOption */.GuildUnreadAction, { guild }), closure_4(importDefault(13228), { guild }), closure_4(require(13164) /* HideMutedChannelsOption */.GuildActionSheetPrimaryActions, { guild }), closure_4(require(13164) /* HideMutedChannelsOption */.GuildActionSheetSecondaryActions, { guild }), closure_4(require(13164) /* HideMutedChannelsOption */.GuildDeveloperOptionAction, { guild }), closure_4(importDefault(13231), { guildId: guild.id })];
   obj1[1] = items1;
   items[2] = closure_5(View, obj1);
   items[3] = closure_4(require(5594) /* ActionSheetHeaderBar */.ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose });

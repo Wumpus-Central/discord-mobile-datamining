@@ -3,7 +3,7 @@ import module_1274 from "module_1274";
 
 const loader = module_1274.createLoader({
   () => {
-    const jsonAsset = require(1239) /* loadJsonAsset */.loadJsonAsset(require(13358) /* registerAsset */);
+    const jsonAsset = require(1239) /* loadJsonAsset */.loadJsonAsset(require(13357) /* registerAsset */);
     return jsonAsset.then((arg0) => ({ default: arg0 }));
   }
 }, "en-US");

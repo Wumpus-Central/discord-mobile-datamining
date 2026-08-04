@@ -60,11 +60,11 @@ function renderItem(item) {
     obj[0] = item.label;
     return <SearchListSectionSubLabel subLabel={null} />;
   } else if (tmp.SETTING_SEARCH_RESULT === type) {
-    return require(13798) /* GuildSelectDefaultIcon */.renderSettingSearchResultItem(item);
+    return require(13797) /* GuildSelectDefaultIcon */.renderSettingSearchResultItem(item);
   } else if (tmp.SECTION_ROW === type) {
-    return require(13798) /* GuildSelectDefaultIcon */.renderSettingItem(item);
+    return require(13797) /* GuildSelectDefaultIcon */.renderSettingItem(item);
   } else if (tmp.SECTION_ROW_PLACEHOLDER === type) {
-    obj = require(13798) /* GuildSelectDefaultIcon */;
+    obj = require(13797) /* GuildSelectDefaultIcon */;
     return obj.renderSettingSearchResultPlaceholderItem(item);
   }
 }
@@ -107,7 +107,7 @@ const memoResult = importAllResult.memo((node) => {
   const items = [field, node];
   const memo = importAllResult.useMemo(() => node(outer1_2[12]).toSettingListItems(node, field), items);
   const ref = importAllResult.useRef(null);
-  let obj = node(14826);
+  let obj = node(14825);
   obj.useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   obj = { style: tmp.container, children: null };
   obj = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };

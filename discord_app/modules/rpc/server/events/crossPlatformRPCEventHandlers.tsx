@@ -538,7 +538,7 @@ obj44[1] = function handler() {
     }
     let tmp8 = null;
     if (null != application) {
-      tmp8 = callback(13693)(application);
+      tmp8 = callback(13692)(application);
     }
     if (streamerActiveStreamMetadata != null) {
       const sourceName = streamerActiveStreamMetadata.sourceName;

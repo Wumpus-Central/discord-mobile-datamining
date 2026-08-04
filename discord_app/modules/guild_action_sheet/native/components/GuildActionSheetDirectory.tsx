@@ -24,9 +24,9 @@ export default function GuildActionSheetDirectory(arg0) {
   const tmp = createCacheKey();
   let obj = { scrollable: true, startExpanded: expanded, children: null };
   obj = { scrollsToTop: false, style: tmp.container, contentContainerStyle: { paddingBottom: importDefault(1581)().bottom }, children: null };
-  const items = [callback(importDefault(13222), { guild }), ];
+  const items = [callback(importDefault(13221), { guild }), ];
   obj = { style: tmp.actions, children: null };
-  const items1 = [callback(require(13165) /* HideMutedChannelsOption */.GuildActionSheetDirectoryActions, { guild }), callback(require(13165) /* HideMutedChannelsOption */.GuildDeveloperOptionAction, { guild })];
+  const items1 = [callback(require(13164) /* HideMutedChannelsOption */.GuildActionSheetDirectoryActions, { guild }), callback(require(13164) /* HideMutedChannelsOption */.GuildDeveloperOptionAction, { guild })];
   obj[1] = items1;
   items[1] = callback2(View, obj);
   obj[3] = items;

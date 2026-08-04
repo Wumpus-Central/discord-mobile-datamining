@@ -151,7 +151,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             }
             ({ items, item } = obj);
             const first = outer1_3(tenantMetadata.selectedOptions, 1)[0];
-            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "e", type: "Array", premiumType: "channelId", items: "cix", categorySkuId: null, isCategoryReward: null, prices: null, previewAssets: null, googleSkuIds: null, eligibleOffers: null, variants: null, bundledProducts: null, isFirstParty: null };
+            obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "e", type: "Array", premiumType: "call", items: "it", categorySkuId: null, isCategoryReward: "finger", prices: "hand", previewAssets: "index", googleSkuIds: "pointing", eligibleOffers: "poke", variants: "viewer", bundledProducts: "you", isFirstParty: "-1" };
             obj[0] = skus.name;
             obj[1] = first.id;
             let str;

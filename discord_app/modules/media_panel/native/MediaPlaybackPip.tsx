@@ -94,7 +94,7 @@ function MediaInfo(message) {
           obj2[0] = { flex: 1 };
           const obj3 = { spacing: 20, speed: 0.2, children: null };
           obj3[2] = tmp14;
-          const items3 = [tmp13(tmp2(16164).Marquee, obj3), ];
+          const items3 = [tmp13(tmp2(16163).Marquee, obj3), ];
           const obj4 = { start: null, end: null, locations: null, colors: null, style: null };
           obj4[0] = { x: 0, y: 0 };
           obj4[1] = { x: 1, y: 0 };

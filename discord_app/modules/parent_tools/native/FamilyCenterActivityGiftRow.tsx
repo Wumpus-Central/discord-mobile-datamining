@@ -28,9 +28,9 @@ export default function FamilyCenterActivityGiftRow(arg0) {
   ({ price, gifterUserId, claimed, offeredAt, claimedAt } = arg0);
   const tmp = createCacheKey();
   let product = importDefault(8088)(skuId).product;
-  let obj = require(14044) /* useSelectedTeenUser */;
+  let obj = require(14043) /* useSelectedTeenUser */;
   const teenUserForId = obj.useTeenUserForId(gifterUserId);
-  let obj1 = require(14053) /* getCollectibleTypeName */;
+  let obj1 = require(14052) /* getCollectibleTypeName */;
   let tmp7 = product;
   if (product == null) {
     tmp7 = null;
@@ -60,10 +60,10 @@ export default function FamilyCenterActivityGiftRow(arg0) {
     obj[4] = claimedAt;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const giftSubtext = tmp5(14055).getGiftSubtext(obj);
+    const giftSubtext = tmp5(14054).getGiftSubtext(obj);
     obj1 = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
     obj1[0] = displayName;
-    tmp2Result = tmp2(14054);
+    tmp2Result = tmp2(14053);
     if (product == null) {
       product = null;
     }

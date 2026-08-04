@@ -23,12 +23,12 @@ export default function ShopFlashList(initialScrollIndex) {
   initialScrollIndex = initialScrollIndex.initialScrollIndex;
   ({ data, renderItem, getItemType } = initialScrollIndex);
   const ref = React.useRef(null);
-  let obj = require(14730) /* INITIAL_SCROLL_DELAY_MS */;
+  let obj = require(14729) /* INITIAL_SCROLL_DELAY_MS */;
   let tmp5 = null != initialScrollIndex;
   if (tmp5) {
     tmp5 = initialScrollIndex > 0;
   }
-  obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: tmp3(14730).INITIAL_SCROLL_DELAY_MS };
+  obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: tmp3(14729).INITIAL_SCROLL_DELAY_MS };
   const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce(obj);
   obj = { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: createCacheKey().contentContainer };
   return jsx(require(7666) /* noop */.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: createCacheKey().contentContainer });

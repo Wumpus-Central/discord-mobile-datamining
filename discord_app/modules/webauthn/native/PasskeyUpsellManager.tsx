@@ -32,8 +32,8 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
                 currentUser = currentUser.getCurrentUser();
                 if (tmp6) {
                   if (obj3.hasFetchedCredentials()) {
-                    importDefault(13878).openPasskeyUpsell();
-                    const obj6 = importDefault(13878);
+                    importDefault(13877).openPasskeyUpsell();
+                    const obj6 = importDefault(13877);
                   } else if (!c7) {
                     c7 = true;
                     const webAuthnCredentials = tmp(5740).fetchWebAuthnCredentials();

@@ -35,6 +35,6 @@ export default function FamilyCenterParentalControlsContentAndSocial() {
   obj[0] = items1;
   obj4 = { children: null };
   const list = obj.createList(obj);
-  obj4[0] = jsx(importDefault(13794), { node: list });
+  obj4[0] = jsx(importDefault(13793), { node: list });
   return <View>{null}</View>;
 };

@@ -9,26 +9,26 @@ export const getScreens = function getScreens(isModal) {
   obj = {
     title: "",
     render() {
-      return callback2(callback(13876), {});
+      return callback2(callback(13875), {});
     }
   };
   obj = { title: null, render: null, headerLeft: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[0] = intl.string(require(1236) /* getSystemLocale */.t["0N1s81"]);
   obj[1] = function render() {
-    return callback2(callback(13883), {});
+    return callback2(callback(13882), {});
   };
   let headerCloseButton;
   if (isModal) {
     let tmp2Result = tmp2(5238);
-    headerCloseButton = tmp2Result.getHeaderCloseButton(importDefault(13878).closePasskeyUpsellModal);
+    headerCloseButton = tmp2Result.getHeaderCloseButton(importDefault(13877).closePasskeyUpsellModal);
   }
   obj[2] = headerCloseButton;
   obj[WebAuthnScreens.INIT] = obj;
   const obj1 = {
     render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(13888), {});
+      return callback2(callback(13887), {});
     },
     title: null
   };
@@ -37,7 +37,7 @@ export const getScreens = function getScreens(isModal) {
   obj[WebAuthnScreens.EDIT] = obj1;
   const obj2 = {
     render() {
-      return callback2(callback(13889), {});
+      return callback2(callback(13888), {});
     },
     title: null
   };
@@ -47,7 +47,7 @@ export const getScreens = function getScreens(isModal) {
   const obj3 = {
     render(arg0) {
       const merged = Object.assign(arg0);
-      return callback2(callback(13892), {});
+      return callback2(callback(13891), {});
     },
     title: null,
     headerLeft: null
@@ -57,13 +57,13 @@ export const getScreens = function getScreens(isModal) {
   let headerCloseButton1;
   if (isModal) {
     tmp2Result = tmp2(5238);
-    headerCloseButton1 = tmp2Result.getHeaderCloseButton(importDefault(13878).closePasskeyUpsellModal);
+    headerCloseButton1 = tmp2Result.getHeaderCloseButton(importDefault(13877).closePasskeyUpsellModal);
   }
   obj3[2] = headerCloseButton1;
   obj[WebAuthnScreens.NAME] = obj3;
   const obj4 = {
     render() {
-      return callback2(callback(13893), {});
+      return callback2(callback(13892), {});
     },
     title: null
   };

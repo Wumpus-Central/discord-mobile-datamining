@@ -19,7 +19,7 @@ function RestrictedAccountRedirect() {
     obj.openUserSettings(obj);
   };
   obj[2] = SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE;
-  return callback(importDefault(13898), obj);
+  return callback(importDefault(13897), obj);
 }
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);

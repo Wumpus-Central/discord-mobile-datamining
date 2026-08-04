@@ -11,7 +11,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
   const optional = chatInputRef.optional;
   let ref;
   const dependencyMap = arg1;
-  let obj = chatInputRef(15577);
+  let obj = chatInputRef(15576);
   obj = { content: threadSettingsDraft.name };
   ref = ref.useRef(threadSettingsDraft.name);
   const items = [threadSettingsDraft.parentChannelId];

@@ -9,7 +9,7 @@ const require = arg1;
 ({ getSelectedGuildId: c4, useUserSafetySettingsSelectedGuildStore: c5 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
 createToggle = {
   useTitle() {
-    const allowFriendsFromMutualGuildsOnly = require(14787) /* useAllowFriendsFromMutualGuildsOnly */.useAllowFriendsFromMutualGuildsOnly();
+    const allowFriendsFromMutualGuildsOnly = require(14786) /* useAllowFriendsFromMutualGuildsOnly */.useAllowFriendsFromMutualGuildsOnly();
     const intl = require(1236) /* getSystemLocale */.intl;
     const string = intl.string;
     const t = require(1236) /* getSystemLocale */.t;
@@ -21,7 +21,7 @@ createToggle = {
     return stringResult;
   },
   useDescription() {
-    const allowFriendsFromMutualGuildsOnly = require(14787) /* useAllowFriendsFromMutualGuildsOnly */.useAllowFriendsFromMutualGuildsOnly();
+    const allowFriendsFromMutualGuildsOnly = require(14786) /* useAllowFriendsFromMutualGuildsOnly */.useAllowFriendsFromMutualGuildsOnly();
     if (callback2().selectedGuildId === closure_6) {
       const intl2 = tmp(1236).intl;
       const string2 = intl2.string;
@@ -47,7 +47,7 @@ createToggle = {
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = callback2().selectedGuildId;
-    const obj = require(14786) /* useDefaultGuildsRestricted */;
+    const obj = require(14785) /* useDefaultGuildsRestricted */;
     const RestrictedGuildIds = require(3958) /* explicitContentFromProto */.RestrictedGuildIds;
     const setting = RestrictedGuildIds.useSetting();
     let tmp2 = !setting.includes(selectedGuildId);
@@ -102,7 +102,7 @@ createToggle = {
     }
   },
   useIsDisabled() {
-    let isParentallyControlled = require(13975) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    let isParentallyControlled = require(13974) /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
     if (isParentallyControlled) {
       isParentallyControlled = tmp2 === closure_6;
     }

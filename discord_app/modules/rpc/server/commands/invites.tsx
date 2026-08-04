@@ -104,7 +104,7 @@ obj[1] = function handler(arg0) {
                   obj8[0] = obj5.sendEmbeddedActivityInviteUser(obj6);
                   return obj8;
                 }
-                obj4 = outer1_0(13654);
+                obj4 = outer1_0(13653);
                 channel = obj4.validateOpenInviteDialog().channel;
               }
             }

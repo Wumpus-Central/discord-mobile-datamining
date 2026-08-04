@@ -14,7 +14,7 @@ obj = {
   handler(socket) {
     const result = require(10548) /* recurseReplaceContentTree */.validatePostMessageTransport(socket.socket.transport);
     const obj = require(10548) /* recurseReplaceContentTree */;
-    return require(13639) /* activityInstanceConnectedParticipants */.activityInstanceConnectedParticipants();
+    return require(13638) /* activityInstanceConnectedParticipants */.activityInstanceConnectedParticipants();
   }
 };
 obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = createRPCCommand.createRPCCommand(RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, obj);

@@ -100,7 +100,7 @@ export default function TwoFASetupSuccess() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.flex };
   const items = [callback2(closure_6, obj), , , , , , , ];
-  obj = { source: require(13943) /* registerAsset */, style: tmp.image };
+  obj = { source: require(13942) /* registerAsset */, style: tmp.image };
   items[1] = callback2(closure_7, obj);
   const obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = require(1236) /* getSystemLocale */.intl;
@@ -139,5 +139,5 @@ export default function TwoFASetupSuccess() {
   items[7] = callback2(closure_6, { style: tmp.flex });
   obj[1] = items;
   obj7[0] = closure_9(closure_6, obj);
-  return callback2(require(13933) /* TwoFAModalSetupSections */.TwoFASetupModalScreen, obj7);
+  return callback2(require(13932) /* TwoFAModalSetupSections */.TwoFASetupModalScreen, obj7);
 };

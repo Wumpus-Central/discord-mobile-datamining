@@ -206,7 +206,7 @@ export default function ActivityInviteSheet(activity) {
       obj7[2] = callback;
       obj7[3] = callback2;
       obj7[4] = callback1;
-      tmp17Result = tmp17(tmp2(15973), obj7);
+      tmp17Result = tmp17(tmp2(15972), obj7);
     }
     const obj8 = { children: null };
     items4[1] = tmp17Result;

@@ -19,6 +19,14 @@ let closure_17;
 let closure_6;
 let map1;
 const require = arg1;
+function canFollowIntoChannel(channel) {
+  channel = channel.channel;
+  let canResult = channel.type === constants.GUILD_TEXT;
+  if (canResult) {
+    canResult = getUncachedChannelPermissions.can(constants2.MANAGE_WEBHOOKS, channel);
+  }
+  return canResult;
+}
 ({ View: c5, ImageBackground: closure_6 } = get_ActivityIndicator);
 ({ AbortCodes: map1, ChannelTypes: closure_14, Permissions: closure_15 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
@@ -31,14 +39,6 @@ createCacheKey[6] = { flex: 1, textAlign: "center", marginBottom: 8 };
 createCacheKey[7] = { flex: 1, textAlign: "center", marginBottom: 8 };
 createCacheKey[8] = { height: 16, width: 16, opacity: 0.6 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-function canFollowIntoChannel(channel) {
-  channel = channel.channel;
-  let canResult = channel.type === constants.GUILD_TEXT;
-  if (canResult) {
-    canResult = getUncachedChannelPermissions.can(constants2.MANAGE_WEBHOOKS, channel);
-  }
-  return canResult;
-}
 let obj1 = { flex: 1, flexDirection: "row", minWidth: 160, paddingHorizontal: 8, paddingVertical: 6, borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_SELECTED };
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/channel_following/native/components/NewChannelFollower.tsx");
 

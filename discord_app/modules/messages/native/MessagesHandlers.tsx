@@ -68,7 +68,7 @@ let result = require("_slicedToArray").fileFinishedImporting("modules/messages/n
 class MessagesHandlers {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
-    f108000 = obj;
+    f107996 = obj;
     obj.getMessageData = function getMessageData(messageId) {
       if (null == messageId) {
         return null;
@@ -2256,8 +2256,8 @@ class MessagesHandlers {
       obj[2] = callback(closure_3[144]);
       callback(closure_3[142]).open(obj);
     };
-    f108000 = undefined;
-    f108000 = set((arg0) => {
+    f107996 = undefined;
+    f107996 = set((arg0) => {
       let closure_0 = arg0;
       let c2 = 0;
       let c1 = 0;
@@ -2379,7 +2379,7 @@ class MessagesHandlers {
       const obj = uiStore(closure_3[39]);
       callback(closure_3[50]).openLazy(uiStore(closure_3[38])(closure_3[172], closure_3.paths), "ExplicitMediaLearnMore", { messageId, channelId, attachmentId, embedId });
     };
-    f108000 = set((arg0) => {
+    f107996 = set((arg0) => {
       let closure_0 = arg0;
       let c3 = 0;
       let c4 = 0;

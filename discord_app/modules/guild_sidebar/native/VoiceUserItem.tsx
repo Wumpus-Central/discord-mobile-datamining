@@ -107,7 +107,7 @@ const memoResult = importAllResult.memo(function VoiceUserItem(arg0) {
     let obj4 = { variant: null, color: null };
     obj4[0] = c7;
     obj4[1] = c8;
-    let tmp8Result = tmp8(15146);
+    let tmp8Result = tmp8(15145);
     const merged = Object.assign(arg0);
     items2[1] = callback(tmp8Result, obj4);
     if (disabled) {
@@ -134,14 +134,14 @@ const memoResult = importAllResult.memo(function VoiceUserItem(arg0) {
           tmp9Result = tmp9(tmp2(1297).Icon, obj6);
         }
         items2[5] = tmp9Result;
-        tmp8Result = tmp8(12126);
+        tmp8Result = tmp8(12125);
         if (platform == null) {
           platform = "";
         }
         let tmp8Result1Result = tmp8Result(platform);
         if (tmp8Result1Result == null) {
-          tmp8Result1Result = tmp2(12126).getConsoleIconForVoicePlatform(voicePlatform);
-          const tmp2Result = tmp2(12126);
+          tmp8Result1Result = tmp2(12125).getConsoleIconForVoicePlatform(voicePlatform);
+          const tmp2Result = tmp2(12125);
         }
         let tmp9Result1 = null;
         if (null != tmp8Result1Result) {

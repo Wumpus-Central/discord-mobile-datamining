@@ -103,7 +103,7 @@ export default function SettingsSecureFramesVerificationsScreen() {
     navigation.setOptions(obj);
   });
   const obj4 = navigation(4124);
-  secureFramesUserVerifiedKeys = userId(14766).useSecureFramesUserVerifiedKeys(userId);
+  secureFramesUserVerifiedKeys = userId(14765).useSecureFramesUserVerifiedKeys(userId);
   const items1 = [userId, secureFramesUserVerifiedKeys];
   const items2 = [navigation, secureFramesUserVerifiedKeys];
   const memo = secureFramesUserVerifiedKeys.useMemo(() => {

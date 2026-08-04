@@ -14,7 +14,7 @@ export const AVErrorScreenshareOSErrorDefinition = {
           let combined = "" + str + " - your Mac may be low on disk space";
         }
         obj[1] = combined;
-        let tmpResult = tmp(16795);
+        let tmpResult = tmp(16794);
         tmpResult = tmp(4348);
         const merged = Object.assign(tmpResult.getStreamErrorContext(tmpResult.encodeStreamKey(errorCode)));
         return obj;

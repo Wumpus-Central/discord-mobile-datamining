@@ -8,7 +8,7 @@ let result = require("useIsConnectedToVoiceChannel").fileFinishedImporting("modu
 export default function useSoundboardConfig(arg0, arg1) {
   const _require = arg0;
   const importDefault = arg1;
-  const tmp = importDefault(15982)(arg0);
+  const tmp = importDefault(15981)(arg0);
   let obj = _require(4101);
   let tmp3 = tmp;
   if (tmp) {

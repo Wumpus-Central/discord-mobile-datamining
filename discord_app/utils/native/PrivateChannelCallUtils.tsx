@@ -161,7 +161,7 @@ export const maybeShowAgeGateModal = function maybeShowAgeGateModal(width) {
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(closure_0) {
   let obj = importDefault(4253);
   obj = { channel: closure_0 };
-  obj.openLazy(require(1959) /* asyncRequireImpl */(12938, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
+  obj.openLazy(require(1959) /* asyncRequireImpl */(12937, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(closure_0) {
   importDefault(4253).hideActionSheet("" + c17 + "-" + closure_0.id);

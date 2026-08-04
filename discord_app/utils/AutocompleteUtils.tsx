@@ -1975,15 +1975,21 @@ areArraysShallowlyEqual = {
     }
     channelTypes = channelTypes.channelTypes;
     let obj = { channels: null };
-    obj = { query: channelTypes.query, guildId: channel.getGuildId(), limit: "r", fuzzy: "HermesInternal", filter: 188, type: 335, allowEmptyQueries: null };
-    obj[4] = function filter(type) {
-      let hasItem = null == channelTypes;
-      if (!hasItem) {
-        hasItem = channelTypes.includes(type.type);
-      }
-      return hasItem;
+    obj = {
+      query: channelTypes.query,
+      guildId: channel.getGuildId(),
+      limit: "r",
+      fuzzy: "HermesInternal",
+      filter(type) {
+        let hasItem = null == channelTypes;
+        if (!hasItem) {
+          hasItem = channelTypes.includes(type.type);
+        }
+        return hasItem;
+      },
+      type,
+      allowEmptyQueries: null
     };
-    obj[5] = type;
     obj[0] = this.queryChannels(obj).map((record) => record.record);
     return obj;
   },

@@ -16,8 +16,8 @@ function handleInviteData(invite) {
       }
     }
     if (hasItem) {
-      importDefault(12576).onOpenHubInvite(invite.invite);
-      const obj5 = importDefault(12576);
+      importDefault(12575).onOpenHubInvite(invite.invite);
+      const obj5 = importDefault(12575);
     }
   }
   let new_member = invite.invite.new_member;
@@ -34,12 +34,12 @@ function handleInviteData(invite) {
     new_member = null != guild;
   }
   if (new_member) {
-    new_member = require(12577) /* inviteGuildHasPendingMemberDisabledVerification */.inviteGuildHasPendingMemberDisabledVerification(guild);
-    const obj3 = require(12577) /* inviteGuildHasPendingMemberDisabledVerification */;
+    new_member = require(12576) /* inviteGuildHasPendingMemberDisabledVerification */.inviteGuildHasPendingMemberDisabledVerification(guild);
+    const obj3 = require(12576) /* inviteGuildHasPendingMemberDisabledVerification */;
   }
   if (new_member) {
-    const result = require(12577) /* inviteGuildHasPendingMemberDisabledVerification */.openVerificationModalOrTransitionToApplication(guild.id);
-    const obj4 = require(12577) /* inviteGuildHasPendingMemberDisabledVerification */;
+    const result = require(12576) /* inviteGuildHasPendingMemberDisabledVerification */.openVerificationModalOrTransitionToApplication(guild.id);
+    const obj4 = require(12576) /* inviteGuildHasPendingMemberDisabledVerification */;
   }
 }
 let prototype = function GuildVerificationManager() {

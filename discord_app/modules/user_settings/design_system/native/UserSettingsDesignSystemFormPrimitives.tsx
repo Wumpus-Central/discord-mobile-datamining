@@ -124,7 +124,7 @@ function SliderDemo() {
   obj[0] = callback2(require(10748) /* VoiceXIcon */.VoiceXIcon, {});
   obj[1] = callback2(require(4810) /* VoiceNormalIcon */.VoiceNormalIcon, {});
   obj[2] = NOOP;
-  obj[3] = callback2(require(13337) /* Slider */.Slider, obj);
+  obj[3] = callback2(require(13336) /* Slider */.Slider, obj);
   items[1] = callback2(require(5315) /* TableRowInner */.TableRow, obj);
   obj[0] = items;
   return callback3(closure_8, obj);

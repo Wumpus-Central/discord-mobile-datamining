@@ -6,8 +6,8 @@ const result = require("experiment").fileFinishedImporting("modules/game_claim/u
 
 export const useCanShowGameClaimCoachmark = function useCanShowGameClaimCoachmark(id) {
   const _require = id;
-  let gameClaimCoachmarkEnabled = _require(15267).useGameClaimCoachmarkEnabled(id, "useCanShowGameClaimCoachmark");
-  const obj = _require(15267);
+  let gameClaimCoachmarkEnabled = _require(15266).useGameClaimCoachmarkEnabled(id, "useCanShowGameClaimCoachmark");
+  const obj = _require(15266);
   const tmp = _require;
   const items = [getUncachedChannelPermissions];
   const items1 = [id];

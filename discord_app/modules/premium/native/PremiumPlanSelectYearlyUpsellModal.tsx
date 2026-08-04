@@ -88,7 +88,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     obj[0] = tmp.container;
     obj1 = { style: null, source: null };
     obj1[0] = tmp.image;
-    obj1[1] = importDefault(12730);
+    obj1[1] = importDefault(12729);
     const items2 = [callback2(closure_5, obj1), , , , , ];
     obj2 = { style: null, accessibilityRole: "header", children: null };
     obj2[0] = tmp.header;

@@ -87,15 +87,15 @@ export const getSearchTokenIcon = function getSearchTokenIcon(searchTokenType) {
   } else if (tmp.FILTER_HAS === searchTokenType) {
     return require(9706) /* AttachmentIcon */.AttachmentIcon;
   } else if (tmp.FILTER_IN === searchTokenType) {
-    return require(13100) /* ChannelListMagnifyingGlassIcon */.ChannelListMagnifyingGlassIcon;
+    return require(13099) /* ChannelListMagnifyingGlassIcon */.ChannelListMagnifyingGlassIcon;
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
     return require(4799) /* AtIcon */.AtIcon;
   } else if (tmp.FILTER_ON === searchTokenType) {
     return require(8966) /* CalendarIcon */.CalendarIcon;
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    return require(15588) /* CalendarMinusIcon */.CalendarMinusIcon;
+    return require(15587) /* CalendarMinusIcon */.CalendarMinusIcon;
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    return require(15590) /* CalendarPlusIcon */.CalendarPlusIcon;
+    return require(15589) /* CalendarPlusIcon */.CalendarPlusIcon;
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
     return require(10456) /* RobotIcon */.RobotIcon;
   } else {

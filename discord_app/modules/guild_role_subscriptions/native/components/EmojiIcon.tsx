@@ -22,7 +22,7 @@ export default function EmojiIcon(size) {
   if (lineHeight === undefined) {
     lineHeight = num + 4;
   }
-  let obj = require(14378) /* useEmojiByIdOrName */;
+  let obj = require(14377) /* useEmojiByIdOrName */;
   const emojiByIdOrName = obj.useEmojiByIdOrName(guildId, id);
   if (null == emojiByIdOrName) {
     let tmp4 = null;

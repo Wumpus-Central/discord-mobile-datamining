@@ -12,7 +12,7 @@ const require = arg1;
 function QuestHomeHeaderTitle() {
   const tmp = createCacheKey();
   let obj = { style: tmp.headerTitleContainer, children: null };
-  const items = [callback(require(14145) /* QuestsIcon */.QuestsIcon, { size: "md", color: "icon-strong" }), ];
+  const items = [callback(require(14144) /* QuestsIcon */.QuestsIcon, { size: "md", color: "icon-strong" }), ];
   obj = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp.headerTitle, children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj[5] = intl.string(require(1236) /* getSystemLocale */.t.JALI2K);

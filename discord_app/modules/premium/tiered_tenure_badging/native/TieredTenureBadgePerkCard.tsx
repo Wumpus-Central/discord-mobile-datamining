@@ -17,7 +17,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
   tieredTenureBadgeData = obj.useTieredTenureBadgeData();
   let obj1 = tieredTenureBadgeData(9428);
   const premiumSince = obj1.usePremiumSince();
-  let obj2 = tieredTenureBadgeData(12621);
+  let obj2 = tieredTenureBadgeData(12620);
   const timeUntilNextBadge = obj2.useTimeUntilNextBadge();
   const tmp6 = callback3();
   let obj3 = tieredTenureBadgeData(589);
@@ -77,7 +77,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
             const date1 = new Date(premiumSince);
             obj[1] = date1;
             formatResult = intl3.format(tmp(1236).t.vwLvec, obj);
-            tmp14 = stateFromStores(12623);
+            tmp14 = stateFromStores(12622);
           }
         }
       }
@@ -117,7 +117,7 @@ export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
     const obj8 = { style: null, children: null };
     obj8[0] = tmp6.imageContainer;
     const items4 = [tmp6.image, ];
-    const tmp34 = stateFromStores(12597);
+    const tmp34 = stateFromStores(12596);
     const tmp35 = stateFromStores(5236);
     const obj9 = { resizeMode: "contain", style: null, source: null };
     items4[1] = tieredTenureBadgeData.status === tmp(9428).TieredTenureBadgeStatus.UPCOMING && tmp6.upcomingBadge;

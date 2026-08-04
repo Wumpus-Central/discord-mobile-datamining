@@ -28,7 +28,7 @@ obj = {
     const trendingType = require(8048) /* calculateTimestampDurations */.getTrendingType(entry);
     const obj = require(8048) /* calculateTimestampDurations */;
     const tmp = require;
-    return null != trendingType && trendingType !== require(12201) /* TrendingType */.TrendingType.TRENDING_TYPE_UNSPECIFIED;
+    return null != trendingType && trendingType !== require(12200) /* TrendingType */.TrendingType.TRENDING_TYPE_UNSPECIFIED;
   }
 };
 items[2] = obj;

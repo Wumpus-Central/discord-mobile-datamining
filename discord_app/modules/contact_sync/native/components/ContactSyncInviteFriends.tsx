@@ -27,7 +27,7 @@ export default function ContactSyncInviteFriends() {
   obj = { children: null };
   obj = { style: tmp.container, children: null };
   const obj1 = { style: tmp.art, source: null };
-  obj1[1] = importDefault(11969);
+  obj1[1] = importDefault(11968);
   const items1 = [callback(importDefault(5236), obj1), , ];
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = _require(1236).intl;

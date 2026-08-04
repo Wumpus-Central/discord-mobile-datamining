@@ -22,7 +22,7 @@ function showReviewRequestModal() {
         closure_9.revision = 1;
         const Storage = tmp(595).Storage;
         const result = Storage.set(RequestReviewStore, closure_9);
-        importDefault(12867)();
+        importDefault(12866)();
         let c10 = false;
         const obj5 = importDefault(698);
       }
@@ -35,7 +35,7 @@ function showReviewRequestModal() {
     clearTimeout(timeout);
     timeout = -1;
   }
-  const RequestReviewNoTTIExperiment = tmp(12866).RequestReviewNoTTIExperiment;
+  const RequestReviewNoTTIExperiment = tmp(12865).RequestReviewNoTTIExperiment;
   let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
   let tmp18 = c10;
   if (c10) {
@@ -78,7 +78,7 @@ RequestReviewStore.displayName = "RequestReviewStore";
 const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
-    let obj = require(12869) /* getFirstInstallTimeMillis */;
+    let obj = require(12868) /* getFirstInstallTimeMillis */;
     obj = { from: "authed", unit: require(4360) /* sleep */.TimeUnits.DAYS };
     let tmp3 = obj.getFirstInstallTimeElapsed(obj) >= 10;
     const someResult = guilds.some((member_count) => member_count.member_count >= 5);
@@ -105,7 +105,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = tmp(12866).RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = tmp(12865).RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp13 = c10;
     if (c10) {
@@ -129,7 +129,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = require(12866) /* apexExperiment */.RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = require(12865) /* apexExperiment */.RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp6 = c10;
     if (c10) {
@@ -156,7 +156,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = require(12866) /* apexExperiment */.RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = require(12865) /* apexExperiment */.RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp6 = c10;
     if (c10) {
@@ -181,7 +181,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
         clearTimeout(timeout);
         timeout = -1;
       }
-      const RequestReviewNoTTIExperiment = tmp(12866).RequestReviewNoTTIExperiment;
+      const RequestReviewNoTTIExperiment = tmp(12865).RequestReviewNoTTIExperiment;
       let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
       let tmp8 = c10;
       if (c10) {

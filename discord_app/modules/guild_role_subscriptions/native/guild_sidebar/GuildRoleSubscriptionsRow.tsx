@@ -52,7 +52,7 @@ export default function GuildRoleSubscriptionsRow(selected) {
   obj[1] = DEFAULT;
   obj[7] = jsx(tmp6(11665).BaseChannelName, { name: null, mode: null });
   obj = { disableColor: true, mode: DEFAULT, source: null };
-  obj[2] = importDefault(12043);
+  obj[2] = importDefault(12042);
   obj[8] = jsx(tmp6(11665).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: null });
   return jsx(importDefault(11665), { disableColor: true, mode: DEFAULT, source: null });
 };

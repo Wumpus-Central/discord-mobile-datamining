@@ -81,7 +81,7 @@ export default function GameProfileLinkAccount(trackAction) {
               items4[2] = tmp13(tmp12, obj7);
               obj4[1] = items4;
               items3[1] = tmp11(tmp12, obj4);
-              const obj8 = { size: null, user: null, guildId: "Array" };
+              const obj8 = { size: null, user: null, guildId: "disabled" };
               obj8[0] = tmp5(tmp3[12]).AvatarSizes.LARGE_48;
               obj8[1] = stateFromStores;
               items3[2] = tmp13(tmp5(tmp3[12]).Avatar, obj8);

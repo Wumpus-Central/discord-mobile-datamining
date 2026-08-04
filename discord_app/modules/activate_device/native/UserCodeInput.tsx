@@ -29,10 +29,10 @@ export const UserCodeInput = function UserCodeInput(prefilledUserCode) {
     str = "";
   }
   [arr, c0] = callback(React.useState(str), 2);
-  let obj = _require(13138);
+  let obj = _require(13137);
   const userCodeSubmit = obj.useUserCodeSubmit(arr, onUserCodeAccepted, onClose);
   obj = { children: null };
-  obj = { style: importDefault(13139).innerContent, children: null };
+  obj = { style: importDefault(13138).innerContent, children: null };
   ({ manualSubmit, error, submitting } = userCodeSubmit);
   const obj1 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = _require(1236).intl;

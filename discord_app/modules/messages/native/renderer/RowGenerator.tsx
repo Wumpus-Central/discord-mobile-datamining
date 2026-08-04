@@ -41,11 +41,11 @@ prototype["generate"] = function generate(rowType) {
                     require(1351) /* isDiscordFrontendDevelopment */.assertNever(rowType);
                   }
                 }
-                return require(12546) /* generateLoadingRowData */.generateLoadingRowData(rowType, theme);
+                return require(12545) /* generateLoadingRowData */.generateLoadingRowData(rowType, theme);
               }
             }
           }
-          return require(12545) /* generateSeparatorRowData */.generateSeparatorRowData(rowType, theme);
+          return require(12544) /* generateSeparatorRowData */.generateSeparatorRowData(rowType, theme);
         }
       }
     }

@@ -10,15 +10,15 @@ function updateEnabledState() {
   }
   let result = true === isStaffResult;
   if (!result) {
-    result = require(13364) /* apexExperiment */.isZoomedExperimentEnabled();
-    const obj2 = require(13364) /* apexExperiment */;
+    result = require(13363) /* apexExperiment */.isZoomedExperimentEnabled();
+    const obj2 = require(13363) /* apexExperiment */;
   }
   if (result) {
     if (!c4) {
       try {
-        importDefault(13719).enableTouchLogging();
+        importDefault(13718).enableTouchLogging();
         c4 = true;
-        const obj3 = importDefault(13719);
+        const obj3 = importDefault(13718);
       } catch (err) {
         c4 = false;
       }
@@ -27,9 +27,9 @@ function updateEnabledState() {
   if (!result) {
     if (c4) {
       try {
-        importDefault(13719).disableTouchLogging();
+        importDefault(13718).disableTouchLogging();
         c4 = false;
-        const obj4 = importDefault(13719);
+        const obj4 = importDefault(13718);
       } catch (err) {
       }
     }
@@ -47,9 +47,9 @@ prototype["_terminate"] = function _terminate() {
   mergeGuildAvatar.removeChangeListener(updateEnabledState);
   if (c4) {
     try {
-      importDefault(13719).disableTouchLogging();
+      importDefault(13718).disableTouchLogging();
       c4 = false;
-      const obj = importDefault(13719);
+      const obj = importDefault(13718);
     } catch (err) {
     }
   }

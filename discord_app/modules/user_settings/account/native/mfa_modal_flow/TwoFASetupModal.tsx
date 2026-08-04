@@ -28,17 +28,17 @@ export default function TwoFASetupModal(initialRouteName) {
       callback = obj.generateTotpSecret();
       obj = {};
       obj = { headerLeft: null, headerTitle: null, render: null };
-      obj[0] = callback(5238).getHeaderCloseButton(callback2(13932).close);
+      obj[0] = callback(5238).getHeaderCloseButton(callback2(13931).close);
       obj[1] = function headerTitle() {
-        return callback3(callback(13935).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
+        return callback3(callback(13934).PageMarker, { currentPage: dependencyMap2[constants.LANDING], numMarkers: Object.keys(dependencyMap2).length - 1 });
       };
       obj[2] = function render() {
-        return callback3(callback2(13936), {});
+        return callback3(callback2(13935), {});
       };
       obj[constants.LANDING] = obj;
       obj[constants.SCAN] = {
         headerTitle() {
-          return callback3(callback(13935).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return callback3(callback(13934).PageMarker, { currentPage: dependencyMap2[constants.SCAN], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return outer1_6(outer1_1(outer1_2[14]), { totpSecret: closure_0 });
@@ -46,7 +46,7 @@ export default function TwoFASetupModal(initialRouteName) {
       };
       obj[constants.ENTER_CODE] = {
         headerTitle() {
-          return callback3(callback(13935).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
+          return callback3(callback(13934).PageMarker, { currentPage: dependencyMap2[constants.ENTER_CODE], numMarkers: Object.keys(dependencyMap2).length - 1 });
         },
         render() {
           return outer1_6(outer1_1(outer1_2[15]), { totpSecret: closure_0 });
@@ -54,12 +54,12 @@ export default function TwoFASetupModal(initialRouteName) {
       };
       const obj1 = { headerLeft: null, headerTitle: null, render: null };
       const obj4 = callback(5238);
-      obj1[0] = callback(5238).getHeaderCloseButton(callback2(13932).close);
+      obj1[0] = callback(5238).getHeaderCloseButton(callback2(13931).close);
       obj1[1] = function headerTitle() {
         return null;
       };
       obj1[2] = function render() {
-        return callback3(callback2(13942), {});
+        return callback3(callback2(13941), {});
       };
       obj[constants.SUCCESS] = obj1;
       return obj;

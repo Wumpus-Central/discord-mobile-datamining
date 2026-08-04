@@ -2,7 +2,7 @@ import fetchFingerprint from "fetchFingerprint";
 
 const require = arg1;
 function getFirstInstallTimeMillis(arg0) {
-  const firstInstallTimeMillis = importDefault(12870).getFirstInstallTimeMillis();
+  const firstInstallTimeMillis = importDefault(12869).getFirstInstallTimeMillis();
   let str = "InstallTimeLaunch";
   if ("authed" === arg0.from) {
     str = "InstallTimeAuthed";

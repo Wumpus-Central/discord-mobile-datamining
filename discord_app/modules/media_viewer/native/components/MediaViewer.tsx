@@ -59,7 +59,7 @@ function MediaViewer(arg0) {
   let obj = _require(8787);
   const mediaViewerDimensions = obj.useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(12173)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(12172)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj1 = _require(4146);
   sharedValue = obj1.useSharedValue(0);
@@ -70,7 +70,7 @@ function MediaViewer(arg0) {
   c6 = tmp13;
   const viewerProps = useViewerProps();
   ({ ref, onScroll, onContentSizeChange, useItemVisible } = viewerProps);
-  let obj4 = _require(12168);
+  let obj4 = _require(12167);
   const mediaViewerPanGestureConfig = obj4.useMediaViewerPanGestureConfig(tmp9, swipeVelocityThreshold, onClose);
   ({ dismiss, translatePos } = mediaViewerPanGestureConfig);
   isClosing = mediaViewerPanGestureConfig.isClosing;

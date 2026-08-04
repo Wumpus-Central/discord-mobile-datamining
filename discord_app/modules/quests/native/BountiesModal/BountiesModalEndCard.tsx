@@ -57,7 +57,7 @@ export default function BountiesModalEndCard(visible) {
     const obj2 = { bounty: null, sourceQuestContent: null };
     obj2[0] = bounty;
     obj2[1] = sourceQuestContent;
-    items1[2] = callback(importDefault(14191), obj2);
+    items1[2] = callback(importDefault(14190), obj2);
     obj[2] = items1;
     visible = callback2(importDefault(4146).View, obj);
   }

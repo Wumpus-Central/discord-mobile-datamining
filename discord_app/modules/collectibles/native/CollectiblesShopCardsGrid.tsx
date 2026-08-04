@@ -49,7 +49,7 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   let cardWidth;
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   closure_5 = createCacheKey();
-  let obj = products(14740);
+  let obj = products(14739);
   const cardLayout = obj.useCardLayout();
   columns = cardLayout.columns;
   cardWidth = cardLayout.cardWidth;

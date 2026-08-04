@@ -48,7 +48,7 @@ function FriendRequestButton(user) {
     newestAnalyticsLocation = trackUserProfileAction(5610)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(12251);
+  let tmp3Result = tmp3(12250);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(589);
   const items = [upsertRelationship];
@@ -62,7 +62,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === tmp5.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(12428).UserClockIcon;
+          let UserPlusIcon = tmp3(12427).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4223).UserPlusIcon;
         }
@@ -94,8 +94,8 @@ function FriendRequestButton(user) {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
               outer1_1(outer1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
-            const result = user(11890).confirmCancelFriendRequest(obj);
-            const obj3 = user(11890);
+            const result = user(11889).confirmCancelFriendRequest(obj);
+            const obj3 = user(11889);
           } else {
             trackUserProfileAction({ action: "SEND_FRIEND_REQUEST" });
             obj = trackUserProfileAction(9161);

@@ -152,7 +152,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj1.badgeCount = toLocaleStringResult;
   const tmpResult1 = importDefault(8875);
-  obj1.badgeIcon = require(7865) /* frozen */.getAssetUriForEmbed(importDefault(12510));
+  obj1.badgeIcon = require(7865) /* frozen */.getAssetUriForEmbed(importDefault(12509));
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = tmp7(7865).getAssetUriForEmbed(eventLocationIconSource);

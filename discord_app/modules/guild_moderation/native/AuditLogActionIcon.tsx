@@ -44,13 +44,13 @@ function AuditIcons(action) {
   const tmp = createCacheKey();
   const tmp2 = callback(action);
   if (constants.CREATE === tmp2) {
-    let tmp4 = importDefault(16508);
+    let tmp4 = importDefault(16507);
   } else if (tmp3.UPDATE === tmp2) {
-    tmp4 = importDefault(16509);
+    tmp4 = importDefault(16508);
   } else {
     tmp4 = null;
     if (tmp3.DELETE === tmp2) {
-      tmp4 = importDefault(16510);
+      tmp4 = importDefault(16509);
     }
   }
   if (action === constants2.MESSAGE_DELETE) {

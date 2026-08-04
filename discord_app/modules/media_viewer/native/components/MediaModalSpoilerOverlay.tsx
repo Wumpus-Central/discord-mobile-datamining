@@ -33,7 +33,7 @@ export default require("noop").memo(function MediaModalSpoilerOverlay(source) {
   let stringResult = dependencyMap;
   let obj = require(3989) /* map */;
   const token = obj.useToken(importDefault(712).colors.SPOILER_HIDDEN_BACKGROUND);
-  let obj1 = require(12152) /* useMediaItemSpoilerState */;
+  let obj1 = require(12151) /* useMediaItemSpoilerState */;
   if (!tmp5[0]) {
     return null;
   } else {

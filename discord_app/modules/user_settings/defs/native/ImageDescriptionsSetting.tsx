@@ -3,7 +3,7 @@ import createToggle from "createToggle";
 
 const require = arg1;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
-  let obj = require(14543) /* UserSettingsText */;
+  let obj = require(14542) /* UserSettingsText */;
   obj = { videoUploadQuality: CHANNEL_SIDEBAR_WIDTH.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: CHANNEL_SIDEBAR_WIDTH.lowQualityImageMode, dataSavingMode: CHANNEL_SIDEBAR_WIDTH.dataSavingMode };
   obj.setImageDescriptions(obj);
 }

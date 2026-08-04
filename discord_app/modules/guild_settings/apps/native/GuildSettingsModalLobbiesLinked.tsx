@@ -61,7 +61,7 @@ export default function GuildSettingsModalLobbiesLinked(arg0) {
   ({ contentContainerStyle, guildId } = arg0);
   let obj = _require(3989);
   const token = obj.useToken(keys(712).modules.mobile.TABLE_ROW_PADDING);
-  let obj1 = _require(16480);
+  let obj1 = _require(16479);
   const channelsAllowedToUnlink = obj1.useChannelsAllowedToUnlink(guildId);
   let obj2 = keys(12);
   const groupByResult = obj2.groupBy(channelsAllowedToUnlink, (linkedLobby) => {

@@ -38,7 +38,7 @@ class Card {
     if (radius == null) {
       radius = obj.useToken(require("Themes").modules.mobile.CARD_DEFAULT_RADIUS);
     }
-    tmp3 = f35381(flag, flag2, str3, str, str2, radius);
+    tmp3 = f35380(flag, flag2, str3, str, str2, radius);
     items = [, , ];
     ({ spacing: arr[0], card: arr[1] } = tmp3);
     items[2] = merged.style;

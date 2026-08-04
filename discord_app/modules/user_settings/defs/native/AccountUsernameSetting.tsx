@@ -37,7 +37,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
   getComponent() {
-    return require(13909) /* UsernameStatusMessage */.default;
+    return require(13908) /* UsernameStatusMessage */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

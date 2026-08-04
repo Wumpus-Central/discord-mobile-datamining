@@ -81,7 +81,7 @@ export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeI
     } else {
       const intl2 = tmp(1236).intl;
       if (intl2.string(tmp(1236).t.WjkIKU) === text) {
-        return tmp(15681).WebhookIcon;
+        return tmp(15680).WebhookIcon;
       }
     }
   }

@@ -419,7 +419,7 @@ export default importAllResult.memo((guild) => {
   guild = guild.guild;
   let activeEventOrStageInstanceChannel;
   let guildActiveEvent;
-  let obj = activeEventOrStageInstanceChannel(15192);
+  let obj = activeEventOrStageInstanceChannel(15191);
   activeEventOrStageInstanceChannel = obj.useActiveEventOrStageInstanceChannel(guild.id);
   let obj1 = activeEventOrStageInstanceChannel(8960);
   guildActiveEvent = obj1.useGuildActiveEvent(guild.id);

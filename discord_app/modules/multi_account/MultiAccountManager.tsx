@@ -52,7 +52,7 @@ prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
   }
 };
 prototype["handleMultiAccountSwitchStart"] = function handleMultiAccountSwitchStart(targetUserId) {
-  const result = require(12808) /* noop */.setAccountSwitchUserId(targetUserId.targetUserId);
+  const result = require(12807) /* noop */.setAccountSwitchUserId(targetUserId.targetUserId);
 };
 let result = require("initialize").fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");
 

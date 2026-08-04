@@ -402,7 +402,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       if (0 !== tenantMetadata.tenantMetadata.socialLayer.carouselItems.length) {
         const first = tenantMetadata.tenantMetadata.socialLayer.carouselItems[0];
         if (null == first.labelIconAssetId) {
-          obj = { primaryIconAsset: "Array", primaryIconLabel: "HermesInternal" };
+          obj = { primaryIconAsset: "body", primaryIconLabel: "useStateFromStores" };
         } else {
           const obj3 = require(4522) /* _httpGetWithCountryCodeQuery */;
           const toURLSafeResult = importDefault(1467).toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
@@ -415,7 +415,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
       }
     }
   }
-  return { primaryIconAsset: "Array", primaryIconLabel: "HermesInternal" };
+  return { primaryIconAsset: "body", primaryIconLabel: "useStateFromStores" };
 };
 export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   let obj = arg1;

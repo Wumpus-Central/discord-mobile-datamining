@@ -59,7 +59,7 @@ export default function SelectedUserField(onPress) {
   if (null != selectedUser) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.userPill;
-    obj3 = { user: null, guildId: "Array", size: true };
+    obj3 = { user: null, guildId: "Array", size: 8 };
     obj3[0] = selectedUser;
     obj3[2] = tmp4(1297).AvatarSizes.XSMALL_20;
     const items2 = [tmp2(tmp4(1297).Avatar, obj3), ];

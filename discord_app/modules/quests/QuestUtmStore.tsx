@@ -1,19 +1,21 @@
 import keys from "keys";
 
-const obj = keys.create((arg0) => {
+let obj = keys.create((arg0) => {
   let closure_0 = arg0;
-  return {
+  const obj = {
     utmSourceCurrent: "r",
     utmMediumCurrent: "disabled",
-    utmCampaignCurrent: "runOnJS",
+    utmCampaignCurrent: "sk",
     utmContentCurrent: "isArray",
     setUtmCurrentContext(utmSourceCurrent) {
       return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
     },
-    getUtmCurrentContext() {
-      return state.getState();
-    }
+    getUtmCurrentContext: 1
   };
+  obj[5] = function getUtmCurrentContext() {
+    return state.getState();
+  };
+  return obj;
 });
 const result = require("set").fileFinishedImporting("modules/quests/QuestUtmStore.tsx");
 

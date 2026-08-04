@@ -6,7 +6,7 @@ obj = {
     return intl.string(require(1236) /* getSystemLocale */.t["C+DkPu"]);
   },
   usePredicate() {
-    return require(14556) /* useWebBrowserSettingOptions */.useWebBrowserSettingOptions().length > 1;
+    return require(14555) /* useWebBrowserSettingOptions */.useWebBrowserSettingOptions().length > 1;
   },
   parent: null,
   IconComponent: require("GlobeEarthIcon").GlobeEarthIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.BROWSER,
   getComponent() {
-    return require(14557).default;
+    return require(14556).default;
   }
 };
 const route = createToggle.createRoute(obj);

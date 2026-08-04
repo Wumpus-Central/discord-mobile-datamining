@@ -187,7 +187,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
   } else {
     let tmp21 = callback(currentTier);
     const tmp27 = callback(nextTier);
-    const giftingBadgeProgressPercent = tmp7(12750).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
+    const giftingBadgeProgressPercent = tmp7(12749).getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier);
     if (null != nextTier) {
       const intl2 = tmp7(1236).intl;
       obj = { count: null, nextTier: null };
@@ -309,7 +309,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     obj19[2] = intl5.string(tmp(2381).WZ4cXA);
     const items6 = [callback2(tmp7(4281).Text, obj19), ];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(12752).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(12751).ChevronSmallUpIcon;
     } else {
       ChevronSmallDownIcon = tmp7(9396).ChevronSmallDownIcon;
     }

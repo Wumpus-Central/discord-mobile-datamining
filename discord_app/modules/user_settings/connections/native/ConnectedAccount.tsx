@@ -156,7 +156,7 @@ const PureComponent = importAllResult.PureComponent;
 class ConnectedAccount extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f110115 = applyArgumentsResult;
+    f110111 = applyArgumentsResult;
     obj = { isVisible: 1 === applyArgumentsResult.props.account.visibility, isMetadataVisible: 1 === applyArgumentsResult.props.account.metadataVisibility, inProgressVisibility: null, inProgressMetadataVisibility: null, showActivity: applyArgumentsResult.props.account.showActivity, friendSync: applyArgumentsResult.props.account.friendSync, metadataRefreshing: false, metadataAlreadyRefreshed: false };
     applyArgumentsResult.state = obj;
     applyArgumentsResult.handleDisconnect = function handleDisconnect() {
@@ -203,9 +203,9 @@ class ConnectedAccount extends PureComponent {
       const account = lib.props.account;
       applyArgumentsResult(outer1_2[13]).disconnect(account.type, account.id);
     };
-    f110115 = undefined;
+    f110111 = undefined;
     closure_1 = applyArgumentsResult;
-    f110115 = RowSwitch((arg0) => {
+    f110111 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -263,9 +263,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f110115 = undefined;
+    f110111 = undefined;
     closure_1 = applyArgumentsResult;
-    f110115 = RowSwitch((arg0) => {
+    f110111 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -323,9 +323,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f110115 = undefined;
+    f110111 = undefined;
     closure_1 = applyArgumentsResult;
-    f110115 = RowSwitch((arg0) => {
+    f110111 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -364,9 +364,9 @@ class ConnectedAccount extends PureComponent {
       }
       return applyArgumentsResult;
     };
-    f110115 = undefined;
+    f110111 = undefined;
     closure_1 = applyArgumentsResult;
-    f110115 = RowSwitch((arg0) => {
+    f110111 = RowSwitch((arg0) => {
       let closure_0 = arg0;
       let c4 = 0;
       let c5 = 0;
@@ -443,11 +443,11 @@ prototype["renderUpsell"] = function renderUpsell() {
   if (account.twoWayLink) {
     return null;
   } else if (account.type === constants.XBOX) {
-    let tmp2 = callback3(require(14116) /* XboxTwoWayLinkUpsell */.XboxTwoWayLinkUpsell, {});
+    let tmp2 = callback3(require(14115) /* XboxTwoWayLinkUpsell */.XboxTwoWayLinkUpsell, {});
   } else {
     tmp2 = null;
     if (account.type === tmp.PLAYSTATION) {
-      tmp2 = callback3(require(14119) /* PlayStationTwoWayLinkUpsell */.PlayStationTwoWayLinkUpsell, {});
+      tmp2 = callback3(require(14118) /* PlayStationTwoWayLinkUpsell */.PlayStationTwoWayLinkUpsell, {});
     }
   }
 };
@@ -626,7 +626,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     if (self.state.metadataAlreadyRefreshed) {
       let tmp9Result = tmp9(9940);
     } else {
-      tmp9Result = tmp9(14121);
+      tmp9Result = tmp9(14120);
     }
     obj10[2] = tmp9Result;
     obj9[6] = callback3(tmp2(1297).Icon, obj10);

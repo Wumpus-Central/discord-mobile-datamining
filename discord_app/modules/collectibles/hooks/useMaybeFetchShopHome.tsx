@@ -93,7 +93,7 @@ export const useMaybeFetchCollectiblesShopHome = function useMaybeFetchCollectib
   if (tmp3[5] == null) {
     flag2 = false;
   }
-  hasExpiredShopBlocks = _require(14727).useHasExpiredShopBlocks(tmp4, flag2, flag);
+  hasExpiredShopBlocks = _require(14726).useHasExpiredShopBlocks(tmp4, flag2, flag);
   const items5 = [tmp5, hasExpiredShopBlocks];
   const tmp12Result = tmp12(() => {
     let tmp = !hasExpiredShopBlocks;

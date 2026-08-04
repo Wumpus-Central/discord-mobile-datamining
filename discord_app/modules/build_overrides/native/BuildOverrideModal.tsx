@@ -36,9 +36,9 @@ export default function BuildOverrideModal(overrideUrl) {
   const tmp = createCacheKey();
   let obj = str(4131);
   if (obj.isThemeDark(tmp4)) {
-    let tmp2Result = tmp2(13126);
+    let tmp2Result = tmp2(13125);
   } else {
-    tmp2Result = tmp2(13127);
+    tmp2Result = tmp2(13126);
   }
   tmp4 = stateFromStores(4221)();
   const items = [getCurrentBuildOverride];

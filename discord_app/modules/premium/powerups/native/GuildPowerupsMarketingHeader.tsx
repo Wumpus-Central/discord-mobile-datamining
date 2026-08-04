@@ -25,7 +25,7 @@ const result = require("calculateAppliedBoosts").fileFinishedImporting("modules/
 export default function GuildPowerupsMarketingHeader(guild) {
   guild = guild.guild;
   const tmp = createCacheKey();
-  const arr = importDefault(12756)(guild.id);
+  const arr = importDefault(12755)(guild.id);
   const items = [guild.id];
   const effect = React.useEffect(() => {
     if (outer1_5.shouldFetchCatalogForGuild(guild.id)) {
@@ -51,7 +51,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       if (null != arr) {
         str2 = "";
         if (0 !== arr.length) {
-          let first = tmp2(12757)(arr);
+          let first = tmp2(12756)(arr);
           if (1 === first.length) {
             obj = { powerup: null };
             first = first[0];

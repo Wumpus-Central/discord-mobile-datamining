@@ -23,7 +23,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.COLLECTIBLES_SHOP,
   getComponent() {
-    return require(14722) /* CollectiblesShopScreen */.default;
+    return require(14721) /* CollectiblesShopScreen */.default;
   }
 };
 const route = createToggle.createRoute(obj);

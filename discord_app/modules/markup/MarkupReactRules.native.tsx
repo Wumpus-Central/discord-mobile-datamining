@@ -542,7 +542,7 @@ function MarkupAttachmentLink(state) {
   let obj = { variant: str2, style: tmp.channelMentionText, children: null };
   obj = { themedColor: null, source: null, size: null };
   obj[0] = node(712).colors.MENTION_FOREGROUND;
-  obj[1] = node(13097);
+  obj[1] = node(13096);
   const fontScale = store.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1297).Icon.Sizes.EXTRA_SMALL_10;
@@ -1030,7 +1030,7 @@ export default function createRules() {
     },
     [closure_0(closure_2[44]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, key) {
-        return callback(str(13102), { node, state: key }, key.key);
+        return callback(str(13101), { node, state: key }, key.key);
       }
     },
     [closure_0(closure_2[44]).AST_KEY.TIMESTAMP]: {

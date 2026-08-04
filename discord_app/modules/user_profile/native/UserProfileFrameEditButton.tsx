@@ -145,7 +145,7 @@ export default function UserProfileFrameEditButton(arg0) {
       }
       obj2[5] = tmp19Result;
     }
-    return jsx(tmp2(13833).UserProfileEditFormButton, obj2);
+    return jsx(tmp2(13832).UserProfileEditFormButton, obj2);
   } else {
     return null;
   }

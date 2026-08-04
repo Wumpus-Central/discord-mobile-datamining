@@ -30,14 +30,14 @@ function ConnectionBannerIcon(state) {
     obj1[0] = tmp.leadingSlot;
     const obj2 = { size: "xs", color: null };
     obj2[1] = tmp5(712).colors.INTERACTIVE_ICON_DEFAULT;
-    obj1[1] = callback2(tmp2(15387).ConnectionUnknownIcon, obj2);
+    obj1[1] = callback2(tmp2(15386).ConnectionUnknownIcon, obj2);
     return callback2(closure_6, obj1);
   } else if (tmp7.BACK_ONLINE === state) {
     obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
     const obj3 = { size: "xs", color: null };
     obj3[1] = tmp5(712).colors.ICON_FEEDBACK_POSITIVE;
-    obj[1] = callback2(tmp2(15389).ConnectionFineIcon, obj3);
+    obj[1] = callback2(tmp2(15388).ConnectionFineIcon, obj3);
     return callback2(closure_6, obj);
   }
 }
@@ -202,11 +202,11 @@ let closure_26 = { code: "function ConnectionBannerTsx2(){const{progress,CONNECT
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/ConnectionBanner.tsx");
 
 export default function ConnectionBanner() {
-  const config = stateFromStores(12857).useConfig({ location: "ConnectionBanner" });
+  const config = stateFromStores(12856).useConfig({ location: "ConnectionBanner" });
   const hidden = config.hidden;
   stateFromStores = undefined;
   let dependencyMap;
-  let obj = stateFromStores(12857);
+  let obj = stateFromStores(12856);
   const items = [updateState];
   stateFromStores = hidden(589).useStateFromStores(items, () => state.getState());
   dependencyMap = React.useRef(null);

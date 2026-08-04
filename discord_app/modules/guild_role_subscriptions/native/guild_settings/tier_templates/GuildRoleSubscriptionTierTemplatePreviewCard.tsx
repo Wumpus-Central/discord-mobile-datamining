@@ -43,7 +43,7 @@ function ChannelBenefitShowCase(channel) {
   let name;
   let type;
   ({ description, type, name } = channel.channel);
-  let obj = require(16748) /* getPrivateChannelIconComponent */;
+  let obj = require(16747) /* getPrivateChannelIconComponent */;
   obj = { style: { flexDirection: "row", alignItems: "center" }, children: null };
   const items = [callback(obj.getPrivateChannelIconComponent(type), { size: "xs" }), callback(require(1297) /* Button */.Spacer, { size: 4 }), callback(require(4281) /* Text */.Text, { variant: "text-md/semibold", color: "text-default", children: name })];
   obj[1] = items;

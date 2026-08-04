@@ -53,7 +53,7 @@ export default function SafetyFlowTaskScreen(action) {
   children = [closure_4(require(7758) /* ModalContent */.ModalContent, obj), ];
   if (undefined === footer) {
     if (withLogout) {
-      withLogout = tmp7(importDefault(16831), {});
+      withLogout = tmp7(importDefault(16830), {});
     }
     const items3 = [withLogout, ];
     tmp7Result = null != action;

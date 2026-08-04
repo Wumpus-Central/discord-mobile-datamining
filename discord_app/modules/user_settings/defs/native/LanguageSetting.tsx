@@ -28,7 +28,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.LANGUAGE,
   getComponent() {
-    return require(14503) /* handleLanguageChange */.default;
+    return require(14502) /* handleLanguageChange */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

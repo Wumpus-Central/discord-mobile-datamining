@@ -291,7 +291,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     const obj8 = { noMargin: true, displayNameFont: null, children: null };
     obj8[1] = displayNameStylesFont;
     obj8[2] = userTitle;
-    items6[1] = tmp15(tmp6(14432).HappeningNowCardHeader, obj8);
+    items6[1] = tmp15(tmp6(14431).HappeningNowCardHeader, obj8);
     const state = activity.state;
     let num2;
     if (state != null) {
@@ -331,7 +331,7 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
     const obj14 = { noMargin: true, displayNameFont: null, children: null };
     obj14[1] = displayNameStylesFont;
     obj14[2] = userTitle;
-    const items8 = [tmp15(tmp6(14432).HappeningNowCardHeader, obj14), ];
+    const items8 = [tmp15(tmp6(14431).HappeningNowCardHeader, obj14), ];
     const obj15 = { ellipsizeMode: "tail", variant: "text-xs/medium", color: "text-default", lineClamp: null, maxFontSizeMultiplier: 2, children: null };
     obj15[3] = num;
     obj15[5] = gameMentionsAsPlainText;
@@ -343,5 +343,5 @@ export const CustomStatusActivityCard = function CustomStatusActivityCard(user) 
   }
   obj1[1] = tmp18Result;
   obj[5] = closure_12(closure_6, obj1);
-  return closure_12(activity(14432), obj);
+  return closure_12(activity(14431), obj);
 };

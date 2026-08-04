@@ -16,11 +16,11 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   joinRequestState = joinRequestState.joinRequestState;
   const tmp = createCacheKey();
   if (require(4105) /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-    let tmp4 = importDefault(15297);
+    let tmp4 = importDefault(15296);
   } else if (tmp2(4105).GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-    tmp4 = importDefault(15298);
+    tmp4 = importDefault(15297);
   } else if (tmp2(4105).GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-    tmp4 = importDefault(15299);
+    tmp4 = importDefault(15298);
   } else {
     tmp4 = null;
     if (tmp2(4105).GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {

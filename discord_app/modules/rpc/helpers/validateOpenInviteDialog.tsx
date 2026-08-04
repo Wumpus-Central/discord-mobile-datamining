@@ -9,11 +9,11 @@ const result = require("getUncachedChannelPermissions").fileFinishedImporting("m
 export const validateOpenInviteDialog = function validateOpenInviteDialog() {
   connectedFrame = connectedFrame.getConnectedFrame();
   if (null != connectedFrame) {
-    let obj = { frame: null, channel: "Array", guild: "ti" };
+    let obj = { frame: null, channel: "Array", guild: "isArray" };
     obj[0] = connectedFrame;
     return obj;
   } else {
-    const obj6 = importDefault(13643)();
+    const obj6 = importDefault(13642)();
     if (null == obj6) {
       obj = { errorCode: null };
       obj[0] = RPCErrors.INVALID_CHANNEL;

@@ -59,9 +59,9 @@ export default function MarketingPageBannerTile(bannerFields) {
   const tmp2Result = importDefault(9267);
   obj[2] = { component_type: helpArticleLinkProps(7568).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId };
   tmp2Result(obj);
-  let tmp4Result = tmp4(12583);
+  let tmp4Result = tmp4(12582);
   const formatStringWithCommonPremiumParams = tmp4Result.useFormatStringWithCommonPremiumParams(bannerFields.body);
-  tmp4Result = tmp4(12583);
+  tmp4Result = tmp4(12582);
   helpArticleLinkProps = tmp4Result.getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
   const obj2 = { style: items, children: null };
   items = [tmp.container, style];

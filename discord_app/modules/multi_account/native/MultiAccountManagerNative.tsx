@@ -123,7 +123,7 @@ prototype["onSwitchError"] = function onSwitchError(currentUser) {
   obj = { key: "SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", content: null, icon: null };
   const intl = obj(1236).intl;
   obj[1] = intl.string(obj(1236).t.pqvKWA);
-  obj[2] = importDefault(16374);
+  obj[2] = importDefault(16373);
   obj.open(obj);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {

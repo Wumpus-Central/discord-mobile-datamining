@@ -10,7 +10,7 @@ export default function getBoostRowMessageText(phase) {
     let endsAt = phase.boost.endsAt;
     if (endsAt == null) {
       const _Date = Date;
-      endsAt = new Date(phase.sortKey + require(11853) /* BOOST_EXPIRING_DISPLAY_WINDOW_DAYS */.BOOST_EXPIRING_DISPLAY_WINDOW_MS);
+      endsAt = new Date(phase.sortKey + require(11852) /* BOOST_EXPIRING_DISPLAY_WINDOW_DAYS */.BOOST_EXPIRING_DISPLAY_WINDOW_MS);
     }
     const obj = { date: null };
     obj[0] = endsAt;

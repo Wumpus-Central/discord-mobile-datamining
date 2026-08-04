@@ -31,7 +31,7 @@ const require = arg1;
 function ForYouFooter(loading) {
   let tmp = null;
   if (loading.loading) {
-    tmp = callback(require(15407) /* ForYouMentionPlaceholder */.ForYouMentionPlaceholder, {});
+    tmp = callback(require(15406) /* ForYouMentionPlaceholder */.ForYouMentionPlaceholder, {});
   }
   return tmp;
 }
@@ -274,7 +274,7 @@ function ApplicationName(applicationId) {
     obj = { application: null, textVariant: null, iconSize: 16 };
     obj[0] = stateFromStores;
     obj[1] = applicationId.textVariant;
-    tmp5 = callback(importDefault(11898), obj, stateFromStores.id);
+    tmp5 = callback(importDefault(11897), obj, stateFromStores.id);
   }
   return tmp5;
 }

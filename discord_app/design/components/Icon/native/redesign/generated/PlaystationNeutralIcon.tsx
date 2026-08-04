@@ -11,7 +11,7 @@ export const PlaystationNeutralIcon = function PlaystationNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(12096) /* registerAsset */;
+  obj[0] = require(12095) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);

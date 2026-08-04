@@ -277,7 +277,7 @@ function updateEmbeddedActivities(content_classification) {
       const _HermesInternal3 = HermesInternal;
       obj5.delete("" + application_id + ":" + tmp56);
     }
-    const someResult1 = mapped.some((userId) => application_id(13240).isActivityParticipantCurrentUserCurrentSession(userId));
+    const someResult1 = mapped.some((userId) => application_id(13239).isActivityParticipantCurrentUserCurrentSession(userId));
   }
 }
 ActivityPanelModes = ActivityPanelModes.ActivityPanelModes;

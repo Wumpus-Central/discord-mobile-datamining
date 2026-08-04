@@ -34,7 +34,7 @@ function ClickableGameIcon(game) {
       }
     }, items);
   }
-  return callback(onPressFallback(12112), { style, game, activityLevel, onPress });
+  return callback(onPressFallback(12111), { style, game, activityLevel, onPress });
 }
 function FavoriteGame(game) {
   let activityLevel;
@@ -149,7 +149,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/guild_profile/n
 
 export default function GuildProfileGames(profile) {
   profile = profile.profile;
-  const gamesToDisplay = importDefault(12116)(profile).gamesToDisplay;
+  const gamesToDisplay = importDefault(12115)(profile).gamesToDisplay;
   let tmp4 = null;
   if (null != gamesToDisplay) {
     tmp4 = null;

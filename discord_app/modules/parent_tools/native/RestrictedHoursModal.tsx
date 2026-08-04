@@ -198,7 +198,7 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/par
 export default function RestrictedHoursModal() {
   let _slicedToArray;
   let tmp4;
-  const tmp = importDefault(16235)();
+  const tmp = importDefault(16234)();
   let callback = tmp;
   importDefault = React.useRef(false);
   const dependencyMap = React.useRef(true);
@@ -242,8 +242,8 @@ export default function RestrictedHoursModal() {
       current = tmp4.current;
     }
     if (!current) {
-      const result = callback(16231).closeRestrictedHoursModal();
-      const obj = callback(16231);
+      const result = callback(16230).closeRestrictedHoursModal();
+      const obj = callback(16230);
     }
   }, items1);
   importDefault(4692)(() => true);

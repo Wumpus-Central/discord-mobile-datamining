@@ -226,7 +226,7 @@ let result = require("get ActivityIndicator").fileFinishedImporting("components_
 
 export default function PremiumSubscriptionPricingUpsell() {
   const tmp = callback3();
-  let obj = require(12598) /* getSubscriptionPlansLoaded */;
+  let obj = require(12597) /* getSubscriptionPlansLoaded */;
   obj = { style: tmp.pricingSection, children: null };
   const subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

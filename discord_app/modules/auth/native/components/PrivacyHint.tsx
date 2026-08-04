@@ -68,7 +68,7 @@ export default function PrivacyHint(arg0) {
     if (tmp2) {
       let obj = { style: null, children: null };
       obj[0] = items1.multiItem;
-      const items = [callback(importDefault(15017), {}), callback(PrivacyPolicyDescription, {})];
+      const items = [callback(importDefault(15016), {}), callback(PrivacyPolicyDescription, {})];
       obj[1] = items;
       return callback2(closure_3, obj);
     }
@@ -84,7 +84,7 @@ export default function PrivacyHint(arg0) {
     }
   }
   obj = { style: items1.multiItem, children: null };
-  items1 = [callback(importDefault(15017), {}), callback(PrivacyPolicyCheckbox, { consent, onToggleConsent, asCheckbox: true })];
+  items1 = [callback(importDefault(15016), {}), callback(PrivacyPolicyCheckbox, { consent, onToggleConsent, asCheckbox: true })];
   obj[1] = items1;
   tmp9Result = callback2(closure_3, obj);
 };

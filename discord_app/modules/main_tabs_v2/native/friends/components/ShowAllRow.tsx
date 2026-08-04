@@ -30,7 +30,7 @@ export default function ShowAllRow(users) {
     obj[1] = callback(1297).AvatarSizes.XSMALL_20;
     return callback2(callback(1297).Avatar, obj, arg1);
   });
-  const items = [callback(require(13336) /* AvatarDuoPile */.AvatarDuoPile, obj), ];
+  const items = [callback(require(13335) /* AvatarDuoPile */.AvatarDuoPile, obj), ];
   const obj1 = { style: tmp.showAllText, variant: "text-md/semibold", color: "text-brand", children: null };
   const intl = require(1236) /* getSystemLocale */.intl;
   obj1[3] = intl.format(require(1236) /* getSystemLocale */.t.NrzztX, { count });

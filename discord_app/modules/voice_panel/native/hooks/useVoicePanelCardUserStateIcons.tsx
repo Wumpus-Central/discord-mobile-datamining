@@ -67,7 +67,7 @@ export default function useVoicePanelCardUserStateIcons(arg0, id, guildId) {
     showTileVolumeIndicator = arg0 === tmp5.STREAM;
   }
   const tmp4Result1 = _require(647);
-  isRTCDisconnectedUIVisible = _require(15238).useIsRTCDisconnectedUIVisible(tmp, id);
+  isRTCDisconnectedUIVisible = _require(15237).useIsRTCDisconnectedUIVisible(tmp, id);
   const items3 = [setShowFloatingCTA];
   callback = obj.useCallback(() => {
 

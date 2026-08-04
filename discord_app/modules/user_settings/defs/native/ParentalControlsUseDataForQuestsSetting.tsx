@@ -10,12 +10,12 @@ createToggle = {
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToSupportQuestsSettingValue() {
     const selectedTeenId = store.getSelectedTeenId();
-    const ParentalControlledDropsOptedOut = require(13976) /* result */.ParentalControlledDropsOptedOut;
+    const ParentalControlledDropsOptedOut = require(13975) /* result */.ParentalControlledDropsOptedOut;
     return !ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
   },
   onValueChange: function onDataToSupportQuestsSettingValueChange(arg0) {
     const selectedTeenId = store.getSelectedTeenId();
-    const ParentalControlledDropsOptedOut = require(13976) /* result */.ParentalControlledDropsOptedOut;
+    const ParentalControlledDropsOptedOut = require(13975) /* result */.ParentalControlledDropsOptedOut;
     const result = ParentalControlledDropsOptedOut.updateControlledSetting(selectedTeenId, !arg0);
   },
   unsearchable: true

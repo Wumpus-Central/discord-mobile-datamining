@@ -16,7 +16,7 @@ const require = arg1;
 function OrbCheckoutModalContent(orbBalance) {
   let orbRedemptionError;
   let skuId;
-  let obj = require(12070) /* useOrbCheckoutModalContextProvider */;
+  let obj = require(12069) /* useOrbCheckoutModalContextProvider */;
   const orbCheckoutModalContext = obj.useOrbCheckoutModalContext();
   ({ orbRedemptionError, skuId } = orbCheckoutModalContext);
   let product = require(10029) /* useFetchCollectiblesProduct */.useFetchCollectiblesProduct(skuId).product;
@@ -24,21 +24,21 @@ function OrbCheckoutModalContent(orbBalance) {
   if (tmp6) {
     obj = { error: null };
     obj[0] = orbRedemptionError.message;
-    tmp6 = callback4(tmp(12071).OrbCheckoutErrorCard, obj);
+    tmp6 = callback4(tmp(12070).OrbCheckoutErrorCard, obj);
   }
   const items = [tmp6, , ];
   if (product == null) {
     product = null;
   }
   obj = { children: null };
-  items[1] = callback4(require(12071) /* OrbCheckoutErrorCard */.OrbCheckoutOrderSummary, { product });
-  items[2] = callback4(require(12071) /* OrbCheckoutErrorCard */.OrbCheckoutPaymentSourceDetails, { orbBalance: orbBalance.orbBalance });
+  items[1] = callback4(require(12070) /* OrbCheckoutErrorCard */.OrbCheckoutOrderSummary, { product });
+  items[2] = callback4(require(12070) /* OrbCheckoutErrorCard */.OrbCheckoutPaymentSourceDetails, { orbBalance: orbBalance.orbBalance });
   obj[0] = items;
   return closure_12(require(4693) /* Stack */.Stack, obj);
 }
 function OrbCheckoutModalFooter(onPress) {
   const obj = { children: null };
-  const items = [callback4(require(12071) /* OrbCheckoutErrorCard */.OrbCheckoutLegalFinePrint, {}), callback4(require(12071) /* OrbCheckoutErrorCard */.OrbCheckoutPurchaseButton, { onPress: onPress.onPress })];
+  const items = [callback4(require(12070) /* OrbCheckoutErrorCard */.OrbCheckoutLegalFinePrint, {}), callback4(require(12070) /* OrbCheckoutErrorCard */.OrbCheckoutPurchaseButton, { onPress: onPress.onPress })];
   obj[0] = items;
   return callback5(require(4693) /* Stack */.Stack, obj);
 }

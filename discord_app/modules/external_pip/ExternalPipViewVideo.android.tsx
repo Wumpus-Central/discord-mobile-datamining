@@ -190,7 +190,7 @@ const memoResult = importAllResult.memo(function ExternalPipViewVideo(onLayout) 
   let selectedParticipantSpeaking;
   let selectedParticipantStreamId;
   let selectedParticipantUserId;
-  const tmp2 = importDefault(15950)();
+  const tmp2 = importDefault(15949)();
   ({ selectedParticipantStreamId, selectedParticipantUserId, focusedParticipantType } = tmp2);
   const items = [selectedParticipantStreamId, selectedParticipantUserId, focusedParticipantType];
   ({ channelId, selectedParticipantSpeaking } = tmp2);

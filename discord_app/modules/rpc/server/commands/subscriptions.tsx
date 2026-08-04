@@ -54,7 +54,7 @@ let obj = {
                 let tmp35 = outer1_1(10543);
                 tmp35 = new tmp35(obj1, "Invalid event: " + dependencyMap);
                 throw tmp35;
-              } else if (outer1_1(13675)(outer1_1.authorization.scopes, tmp67.scope)) {
+              } else if (outer1_1(13674)(outer1_1.authorization.scopes, tmp67.scope)) {
                 const obj2 = { event: null, scope: null, application_id: null, socket_scope: null };
                 obj2[0] = dependencyMap;
                 if (typeof tmp67.scope === "object") {
@@ -105,7 +105,7 @@ let obj = {
           obj6[0] = initialSubscriptionPayload;
           obj6[1] = closure_1;
           closure_2 = c0.handler(obj6);
-          obj5 = outer1_0(13676);
+          obj5 = outer1_0(13675);
           initialSubscriptionPayload = obj5.getInitialSubscriptionPayload(closure_1, closure_2, initialSubscriptionPayload);
           const promise = new Promise((arg0) => {
             setImmediate(() => {

@@ -46,7 +46,7 @@ function MessagePreview(theme) {
   obj = { style: items1, children: null };
   items1 = [tmp.chatContainerInner, { backgroundColor: obj2.alpha(closure_10).hex() }];
   const obj1 = { source: null };
-  obj1[0] = importDefault(14419);
+  obj1[0] = importDefault(14418);
   const items2 = [callback(require(1297) /* Button */.Avatar, obj1), ];
   obj2 = { style: tmp.chatContent, children: null };
   const obj3 = { style: tmp.chatHeader, children: null };

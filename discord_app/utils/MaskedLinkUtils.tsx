@@ -216,7 +216,7 @@ export const handleClick = function handleClick(href, preventDefault) {
       }
       tmp3(8859).trackLinkClicked(tmp8);
       if (null == onClick) {
-        const obj3 = { skipExtensionCheck: "a", analyticsLocations: "a", messageId: "isArray", channelId: "slice" };
+        const obj3 = { skipExtensionCheck: "a", analyticsLocations: "arc", messageId: "csod\u00E1lkoz\u00F3", channelId: "d\u00F6bbent" };
         obj3[1] = items;
         obj3[2] = messageId;
         obj3[3] = channelId;
@@ -231,14 +231,14 @@ export const handleClick = function handleClick(href, preventDefault) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        tmp3(12135).show(tmp8);
+        tmp3(12134).show(tmp8);
       } else {
         let trustedResult = trusted;
         if (typeof trusted === "function") {
           trustedResult = trusted();
         }
         if (!trustedResult) {
-          const TRUSTED_URLS = _require(12139).TRUSTED_URLS;
+          const TRUSTED_URLS = _require(12138).TRUSTED_URLS;
           trustedResult = TRUSTED_URLS.has(tmp8);
         }
         const protocol = _require(8857).getProtocol(tmp8);
@@ -270,12 +270,12 @@ export const handleClick = function handleClick(href, preventDefault) {
           if (tmp56) {
             obj4 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: true, contextKey: null };
             obj4[0] = tmp8;
-            obj4[1] = tmp53(12142).trustProtocol;
+            obj4[1] = tmp53(12141).trustProtocol;
             obj4[2] = handleConfirm;
             obj4[3] = onCancel;
             obj4[5] = arg3;
-            tmp3(12140).show(obj4);
-            const tmp3Result4 = tmp3(12140);
+            tmp3(12139).show(obj4);
+            const tmp3Result4 = tmp3(12139);
           } else {
             const punycodeLinkResult = tmp53(4720).punycodeLink(tmp8);
             let displayTarget = tmp8;
@@ -285,12 +285,12 @@ export const handleClick = function handleClick(href, preventDefault) {
             const tmp53Result = tmp53(4720);
             const obj5 = { url: null, trustUrl: null, onConfirm: null, onCancel: null, isProtocol: false, contextKey: null };
             obj5[0] = displayTarget;
-            obj5[1] = tmp53(12142).trustDomain;
+            obj5[1] = tmp53(12141).trustDomain;
             obj5[2] = handleConfirm;
             obj5[3] = onCancel;
             obj5[5] = arg3;
-            tmp3(12140).show(obj5);
-            const tmp3Result5 = tmp3(12140);
+            tmp3(12139).show(obj5);
+            const tmp3Result5 = tmp3(12139);
           }
         }
         if (null == preventDefault) {

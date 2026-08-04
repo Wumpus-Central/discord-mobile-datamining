@@ -198,10 +198,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = createCacheKey();
   importDefault = tmp;
   const bottom = importDefault(1581)().bottom;
-  let obj = goToMessageRequestPreview(15830);
+  let obj = goToMessageRequestPreview(15829);
   dependencyMap = obj.useSpamMessageRequestCount();
-  arr = importDefault(15837)();
-  let obj1 = goToMessageRequestPreview(15828);
+  arr = importDefault(15836)();
+  let obj1 = goToMessageRequestPreview(15827);
   closure_4 = obj1.useListHasSingleSpamMessageRequest();
   importDefault(4711)(() => {
     let obj = _undefined(698);
@@ -214,7 +214,7 @@ export default function SpamMessageList(goToMessageRequestPreview) {
     obj = { bodyText: null };
     let intl = tmp4(1236).intl;
     obj[0] = intl.string(tmp4(1236).t.hasFPQ);
-    return callback(tmp2(15831), obj);
+    return callback(tmp2(15830), obj);
   } else {
     const items = ["header-section"];
     HermesBuiltin.arraySpread(arr, 1);

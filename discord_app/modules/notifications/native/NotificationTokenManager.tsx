@@ -130,13 +130,13 @@ prototype["registerListener"] = function registerListener() {
   }
 };
 prototype["registerNotificationCategories"] = function registerNotificationCategories(arg0) {
-  const declarativeNotifSettingsExperiment = require(13628) /* apexExperiment */.declarativeNotifSettingsExperiment;
+  const declarativeNotifSettingsExperiment = require(13627) /* apexExperiment */.declarativeNotifSettingsExperiment;
   const config = declarativeNotifSettingsExperiment.getConfig({ location: "registerNotificationCategories" });
   let flag = false;
   try {
     if (config.enabled) {
-      flag = importDefault(13629).registerDeclarativeNotificationCategories();
-      const obj = importDefault(13629);
+      flag = importDefault(13628).registerDeclarativeNotificationCategories();
+      const obj = importDefault(13628);
     }
     const self = this;
     if (flag) {
@@ -146,8 +146,8 @@ prototype["registerNotificationCategories"] = function registerNotificationCateg
         if (config.clearDeclarative) {
           importDefault(1208).addBreadcrumb({ message: "Clearing declarative notification categories" });
           const obj3 = importDefault(1208);
-          importDefault(13629).clear();
-          const obj4 = importDefault(13629);
+          importDefault(13628).clear();
+          const obj4 = importDefault(13628);
         }
         const result1 = self.registerLegacyNotificationCategories();
       } catch (tmp12) {
@@ -239,7 +239,7 @@ prototype["trackDisabledAndroidNotifChannels"] = function trackDisabledAndroidNo
     tmp.hasTrackedDisabledAndroidNotifChannels = true;
     let obj = set(500);
     if (obj.isAndroid()) {
-      const tmp5 = importDefault(13630);
+      const tmp5 = importDefault(13629);
       let prop;
       if (tmp5 != null) {
         prop = tmp5.getAndroidNotifChannelStates;

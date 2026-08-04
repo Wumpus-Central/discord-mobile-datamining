@@ -90,9 +90,9 @@ const memoResult = importAllResult.memo(function QuestDockUnenrolledBody() {
           const obj5 = { questId: null, sourceQuestContent: null };
           obj5[0] = outer1_0.id;
           obj5[1] = outer1_0(5131).QuestContent.QUEST_BAR_MOBILE;
-          v0(14267)(obj5);
+          v0(14266)(obj5);
           outer1_4(outer1_8.COLLAPSED);
-          const tmp12 = v0(14267);
+          const tmp12 = v0(14266);
         }
         dependencyMap = 3;
       }

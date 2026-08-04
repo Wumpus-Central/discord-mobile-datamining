@@ -9,13 +9,13 @@ export const getNoMutualServersSource = function getNoMutualServersSource(theme)
   let obj = require(7544) /* getIllustrationSource */;
   obj = {
     dark() {
-      return callback(11877);
+      return callback(11876);
     },
     darker() {
-      return callback(11878);
+      return callback(11877);
     },
     light() {
-      return callback(11879);
+      return callback(11878);
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -24,13 +24,13 @@ export const useNoMutualServersSource = function useNoMutualServersSource() {
   let obj = require(4131) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(11877);
+      return callback(11876);
     },
     darker() {
-      return callback(11878);
+      return callback(11877);
     },
     light() {
-      return callback(11879);
+      return callback(11878);
     }
   };
   return require(7544) /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -39,13 +39,13 @@ export const NoMutualServers = function NoMutualServers(arg0) {
   let obj = require(4131) /* AccessibilityAnnouncer */;
   obj = {
     dark() {
-      return callback(11877);
+      return callback(11876);
     },
     darker() {
-      return callback(11878);
+      return callback(11877);
     },
     light() {
-      return callback(11879);
+      return callback(11878);
     }
   };
   obj = {};

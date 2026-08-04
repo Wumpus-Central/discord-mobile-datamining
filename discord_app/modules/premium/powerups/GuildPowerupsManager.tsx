@@ -48,15 +48,15 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
         }
         tmp10Result = tmp10(11786);
         if (!tmp10Result.getHasAllocateBoostPermission(getUncachedChannelPermissions, guild)) {
-          let isCurrentUserEligibleForPowerupUpsells = tmp10(15174).getIsCurrentUserEligibleForPowerupUpsells();
+          let isCurrentUserEligibleForPowerupUpsells = tmp10(15173).getIsCurrentUserEligibleForPowerupUpsells();
           let isMobile = tmp10(4521).isMobile;
           if (isMobile) {
             isMobile = tmp10(4215).getServerThemeEnabled(guildId, "GuildPowerupsManager");
             const tmp10Result2 = tmp10(4215);
           }
           if (isMobile) {
-            isMobile = tmp10(15174).getIsCurrentUserEligibleForPowerupUpsells();
-            const tmp10Result3 = tmp10(15174);
+            isMobile = tmp10(15173).getIsCurrentUserEligibleForPowerupUpsells();
+            const tmp10Result3 = tmp10(15173);
           }
           if (isMobile) {
             isMobile = tmp10(4214).getServerThemeUserEnabled("GuildPowerupsManager");
@@ -64,8 +64,8 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
           }
           let showCoachmark = tmp10(4521).isMobile;
           if (showCoachmark) {
-            showCoachmark = tmp10(15174).getIsCurrentUserEligibleForPowerupUpsells();
-            const tmp10Result5 = tmp10(15174);
+            showCoachmark = tmp10(15173).getIsCurrentUserEligibleForPowerupUpsells();
+            const tmp10Result5 = tmp10(15173);
           }
           if (showCoachmark) {
             showCoachmark = importDefault(11775).getConfig({ location: "GuildPowerupsManager" }).showCoachmark;
@@ -77,7 +77,7 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
             }
             isCurrentUserEligibleForPowerupUpsells = isMobile;
           }
-          const tmp10Result1 = tmp10(15174);
+          const tmp10Result1 = tmp10(15173);
         }
         if (calculateAppliedBoosts.shouldFetchCatalogForGuild(guildId)) {
           const powerupCatalogForGuild = tmp10(11761).fetchPowerupCatalogForGuild(guildId);
@@ -100,15 +100,11 @@ prototype["handleAppliedBoostUpdate"] = function handleAppliedBoostUpdate(guildI
   this.refreshGuildPowerups(guildId.guildId);
 };
 prototype["refreshGuildPowerups"] = function refreshGuildPowerups(guildId) {
-  let obj = require(11786) /* useHasAllocateBoostPermission */;
   if (true === obj.getHasAllocateBoostPermission(getUncachedChannelPermissions, store.getGuild(guildId))) {
     let tmpResult = tmp(11761);
     const guildBoostEntitlements = tmpResult.fetchGuildBoostEntitlements(guildId);
     tmpResult = tmp(4181);
-    obj = { includeEnded: null };
-    obj[0] = importDefault(11852).getConfig({ location: "GuildPowerupsManager" }).enabled;
-    const appliedGuildBoostsForGuild = tmpResult.fetchAppliedGuildBoostsForGuild(guildId, obj);
-    const obj3 = importDefault(11852);
+    const appliedGuildBoostsForGuild = tmpResult.fetchAppliedGuildBoostsForGuild(guildId, { includeEnded: true });
   }
 };
 const guildPowerupsManager = new GuildPowerupsManager();

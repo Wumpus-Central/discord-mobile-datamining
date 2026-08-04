@@ -52,9 +52,9 @@ function MusicMuteButton(channelId) {
       obj[2] = function onPress() {
         return stateFromStores(outer1_2[33]).updateStageMusicMuted(!stateFromStores);
       };
-      closure_23(tmp(15980), obj);
+      closure_23(tmp(15979), obj);
       const tmp7 = closure_23;
-      const tmpResult = tmp(15980);
+      const tmpResult = tmp(15979);
     }
   }
   return tmp6;

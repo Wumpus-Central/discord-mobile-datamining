@@ -7,8 +7,8 @@ import createToggle from "createToggle";
 const require = arg1;
 createToggle = {
   useTitle: function getPremiumSettingTitle() {
-    const mobileNitroManageSubscriptionsSettingsExperiment = require(12595) /* apexExperiment */.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
-    const obj = require(12595) /* apexExperiment */;
+    const mobileNitroManageSubscriptionsSettingsExperiment = require(12594) /* apexExperiment */.getMobileNitroManageSubscriptionsSettingsExperiment({ location: "PremiumSetting" });
+    const obj = require(12594) /* apexExperiment */;
     currentUser = currentUser.getCurrentUser();
     const result = require(3931) /* getPremiumPlanItem */.hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription.getPremiumTypeSubscription());
     const intl = require(1236) /* getSystemLocale */.intl;
@@ -37,14 +37,14 @@ createToggle = {
     }, []);
   },
   useTrailing: function usePremiumSettingTrailing() {
-    return jsx(importDefault(14132), {});
+    return jsx(importDefault(14131), {});
   },
   screen: createToggle
 };
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM,
   getComponent() {
-    return require(14134) /* PremiumScreen */.default;
+    return require(14133) /* PremiumScreen */.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

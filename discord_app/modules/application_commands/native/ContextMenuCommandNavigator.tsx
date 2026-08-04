@@ -60,7 +60,7 @@ export default function ContextMenuCommandNavigator() {
   obj2[0] = intl.string(require(1236) /* getSystemLocale */.t.PHjkRE);
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
-    return tmp(15813).default;
+    return tmp(15812).default;
   };
   const items1 = [
     callback(Screen, obj1),
@@ -75,7 +75,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return tmp(15815).default;
+        return tmp(15814).default;
       }
     })
   ];

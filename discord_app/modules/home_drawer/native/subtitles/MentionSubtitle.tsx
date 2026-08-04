@@ -14,7 +14,7 @@ export default function MentionSubtitle(channel) {
   let guild;
   channel = channel.channel;
   ({ guild, channelName, count } = channel);
-  let obj = require(15322) /* styles */;
+  let obj = require(15321) /* styles */;
   const subtitleStyles = obj.useSubtitleStyles();
   let channelIconComponentWithGuild;
   if (null != channel) {

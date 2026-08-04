@@ -198,7 +198,7 @@ function _updateFriendSync() {
               let closure_3 = tmp5;
               if (null != callback) {
                 let c6 = 1;
-                let obj5 = callback2(11952);
+                let obj5 = callback2(11951);
                 const obj1 = { enabled: null };
                 obj1[0] = tmp38;
                 c7 = 2;
@@ -274,7 +274,7 @@ function _updateFriendSync() {
 let result = require("mergeGuildAvatar").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncSettings.tsx");
 
 export default function ContactSyncSettings() {
-  let obj = contactSyncAccount(11948);
+  let obj = contactSyncAccount(11947);
   contactSyncAccount = obj.useContactSyncAccount();
   let obj1 = contactSyncAccount(589);
   const items = [mergeGuildAvatar];
@@ -287,7 +287,7 @@ export default function ContactSyncSettings() {
   if (stateFromStores != null) {
     isStaffResult = stateFromStores.isStaff();
   }
-  let tmpResult = tmp(11948);
+  let tmpResult = tmp(11947);
   const FriendDiscoverySettings = tmp(3958).FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
   tmpResult = tmp(1384);
@@ -302,7 +302,7 @@ export default function ContactSyncSettings() {
   if (isStaffResult) {
     obj = { children: null };
     obj1 = { label: "STAFF ONLY - Find your friends deletion", value: true, onValueChange: null };
-    obj1[2] = tmp(11948).adminDeleteContactSync;
+    obj1[2] = tmp(11947).adminDeleteContactSync;
     const items1 = [callback2(tmp(7777).FormSwitchRow, obj1), callback2(tmp(7777).FormDivider, {})];
     obj[0] = items1;
     tmp10Result = tmp10(tmp11, obj);
@@ -352,7 +352,7 @@ export default function ContactSyncSettings() {
   const obj7 = { children: null };
   const intl4 = tmp(1236).intl;
   const obj8 = { onClick: null };
-  obj8[0] = contactSyncAccount(11948).handleOpenLearnMoreLink;
+  obj8[0] = contactSyncAccount(11947).handleOpenLearnMoreLink;
   obj7[0] = intl4.format(contactSyncAccount(1236).t.BoR0dO, obj8);
   items4[1] = callback2(contactSyncAccount(7777).FormHint, obj7);
   const obj9 = { children: null };
@@ -400,8 +400,8 @@ export const handleSyncContacts = function handleSyncContacts(localAccount, phon
     obj[0] = constants3.CONTACT_SYNC_MODAL;
     obj[1] = { page: "User Settings" };
     obj.track(constants.OPEN_MODAL, obj);
-    require(11944) /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, { page: "User Settings" });
-    const obj3 = require(11944) /* handleNameInputScreenOrSuggestions */;
+    require(11943) /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, { page: "User Settings" });
+    const obj3 = require(11943) /* handleNameInputScreenOrSuggestions */;
   } else {
     updateFriendSync(localAccount, phone, arg2);
   }

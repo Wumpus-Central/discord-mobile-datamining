@@ -11,7 +11,7 @@ export const MobilePhoneSettingsIcon = function MobilePhoneSettingsIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = require(14641) /* registerAsset */;
+  obj[0] = require(14640) /* registerAsset */;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);

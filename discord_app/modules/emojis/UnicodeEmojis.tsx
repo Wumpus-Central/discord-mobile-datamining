@@ -477,7 +477,7 @@ let obj = {
     }
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = require(13239)[key10009];
+      str = require(13238)[key10009];
     }
     let combined = str;
     if (flag) {
