@@ -258,7 +258,7 @@ class FeedbackWidget {
                 fileName = undefined;
                 uri = undefined;
                 if (uri._hasScreenshot()) {
-                  debug.setState({ filename: "Array", attachment: "call", attachmentUri: "alignItems" });
+                  debug.setState({ filename: "Array", attachment: "call", attachmentUri: "format" });
                 } else {
                   num2 = debug.props.imagePicker;
                   if (num2) {

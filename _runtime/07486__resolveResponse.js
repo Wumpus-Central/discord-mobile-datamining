@@ -251,7 +251,7 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
           callback = outer2_3((arg0) => {
             let closure_0 = arg0;
             let c1 = 0;
-            return (/* F119285 */ function*() { ... })();
+            return (/* F119280 */ function*() { ... })();
           });
           return callback.apply(outer2_0(outer2_1[5]).GLOBAL_OBJ, items).then(function(arg0) {
             const self = this;
@@ -324,7 +324,7 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
           callback = outer2_3((arg0) => {
             let closure_0 = arg0;
             let c1 = 0;
-            return (/* F119285 */ function*() { ... })();
+            return (/* F119280 */ function*() { ... })();
           });
           return callback.apply(outer2_0(outer2_1[5]).GLOBAL_OBJ, items).then(function(arg0) {
             const self = this;

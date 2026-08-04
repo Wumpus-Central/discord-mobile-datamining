@@ -1,6 +1,5 @@
 
-export default (arg0, arg1, arg2) => {
-  const obj = new require(13022) /* SemVer */(arg0, arg2);
-  const tmp = new require(13022) /* SemVer */(arg1, arg2);
-  return obj.compare(tmp) || obj.compareBuild(tmp);
+export default (arr) => {
+  let closure_0 = arg1;
+  return arr.sort((arg0, arg1) => callback(outer1_1[0])(arg0, arg1, callback));
 };

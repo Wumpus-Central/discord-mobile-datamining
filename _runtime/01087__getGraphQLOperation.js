@@ -56,7 +56,7 @@ function _getGraphQLOperation(obj) {
           obj = { operationType: null, operationName: "a" };
           obj[0] = match1[1];
         } else {
-          obj = { operationType: "Array", operationName: "HermesInternal" };
+          obj = { operationType: "body", operationName: "useStateFromStores" };
         }
       }
       let operationName2 = obj.operationName;
@@ -338,7 +338,7 @@ export const parseGraphQLQuery = function parseGraphQLQuery(str) {
       obj = { operationType: null, operationName: "a" };
       obj[0] = match1[1];
     } else {
-      obj = { operationType: "Array", operationName: "HermesInternal" };
+      obj = { operationType: "body", operationName: "useStateFromStores" };
     }
     return obj;
   }

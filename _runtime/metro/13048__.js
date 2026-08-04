@@ -1,658 +1,98 @@
 
-export default (obj, arg1, obj2) => {
-  switch (arg1) {
-    case "t":
-    break;
-    case "to":
-    break;
-    case "Date":
-    break;
-    case "TypeError":
-    break;
-    case "Error":
-    break;
-    case "HTTP":
-    break;
-    case "T":
-    break;
-    case "HermesInternal":
-    break;
-    case "Icon":
-    break;
-    case "IconComponent":
-    break;
-    case "c":
-    break;
-    case "p":
-    break;
-    case "LIGHT":
-    break;
-    case "LengthDelimited":
-    break;
-    case "limit":
-    break;
-    case "i":
-    break;
-    case "it":
-    break;
-    case "d":
-    break;
-    case "Map":
-    break;
-    case "Math":
-    break;
-    case "h":
-    break;
-    case "Number":
-    break;
-    case "Object":
-    break;
-    case "ct":
-    break;
-    case "PX_16":
-    break;
-    case "flex":
-    break;
-    case "flexDirection":
-    break;
-    case "PX_8":
-    break;
-    case "Path":
-    break;
-    case "Promise":
-    break;
-    case "s":
-    break;
-    case "Reflect":
-    break;
-    case "Set":
-    break;
-    case "format":
-    break;
-    case "formatToPlainString":
-    break;
-    case "String":
-    break;
-    case "Symbol":
-    break;
-    case "Text":
-    break;
-    case "x":
-    break;
-    case "View":
-    break;
-    case "w":
-    break;
-    case "WireType":
-    break;
-    case "__closure":
-    break;
-    case "__d":
-    break;
-    case "__esModule":
-    break;
-    case "__initData":
-    break;
-    case "filter":
-    break;
-    case "__packager_asset":
-    break;
-    case "k":
-    break;
-    case "set":
-    break;
-    case "__workletHash":
-    break;
-    case "_desired":
-    break;
-    case "_distance":
-    break;
-    case "st":
-    break;
-    case "accessibilityLabel":
-    break;
-    case "accessibilityRole":
-    break;
-    case "accessible":
-    break;
-    case "padding":
-    break;
-    case "paddingHorizontal":
-    break;
-    case "add":
-    break;
-    case "alignItems":
-    break;
-    case "ao":
-    break;
-    case "applicationId":
-    break;
-    case "ti":
-    break;
-    case "apply":
-    break;
-    case "backgroundColor":
-    break;
-    case "round":
-    break;
-    case "bm":
-    break;
-    case "body":
-    break;
-    case "borderRadius":
-    break;
-    case "bottom":
-    break;
-    case "call":
-    break;
-    case "channel":
-    break;
-    case "channelId":
-    break;
-    case "channel_id":
-      let version3 = obj;
-      if (typeof obj === "object") {
-        version3 = obj.version;
+export default (num) => {
+  if (num instanceof require(13021) /* SemVer */) {
+    return num;
+  } else {
+    let StringResult = num;
+    if (typeof num === "number") {
+      const _String = String;
+      StringResult = String(num);
+    }
+    if (typeof StringResult !== "string") {
+      return null;
+    } else {
+      let obj = arg1;
+      if (!arg1) {
+        obj = {};
       }
-      let version4 = obj2;
-      if (typeof obj2 === "object") {
-        version4 = obj2.version;
+      if (obj.rtl) {
+        const safeRe2 = tmp(13025).safeRe;
+        const t2 = tmp(13025).t;
+        if (obj.includePrerelease) {
+          let obj2 = safeRe2[t2.COERCERTLFULL];
+        } else {
+          obj2 = safeRe2[t2.COERCERTL];
+        }
+        let match = obj2.exec(StringResult);
+        let tmp6 = null;
+        let tmp8 = null;
+        if (match) {
+          while (true) {
+            let tmp9 = match;
+            let tmp10 = tmp6;
+            let tmp11 = tmp6;
+            if (tmp6) {
+              tmp11 = match.index + match[0].length === tmp10.index + tmp10[0].length;
+            }
+            if (!tmp11) {
+              tmp10 = match;
+            }
+            obj2.lastIndex = match.index + match[1].length + match[2].length;
+            let match1 = obj2.exec(StringResult);
+            tmp8 = tmp10;
+            if (!match1) {
+              break;
+            } else {
+              match = match1;
+              tmp6 = tmp10;
+              if (!tmp10) {
+                continue;
+              } else {
+                match = match1;
+                tmp6 = tmp10;
+                tmp8 = tmp10;
+                if (tmp10.index + tmp10[0].length === StringResult.length) {
+                  break;
+                }
+              }
+              continue;
+            }
+          }
+        }
+        obj2.lastIndex = -1;
+        let match2 = tmp8;
+      } else {
+        const safeRe = tmp(13025).safeRe;
+        const t = tmp(13025).t;
+        if (obj.includePrerelease) {
+          let tmp3 = safeRe[t.COERCEFULL];
+        } else {
+          tmp3 = safeRe[t.COERCE];
+        }
+        match2 = StringResult.match(tmp3);
       }
-      return version3 === version4;
-    case "id":
-    break;
-    case "children":
-      let version = obj;
-      if (typeof obj === "object") {
-        version = obj.version;
+      if (null === match2) {
+        return null;
+      } else {
+        let str2 = "";
+        if (obj.includePrerelease) {
+          str2 = "";
+          if (match2[5]) {
+            const _HermesInternal = HermesInternal;
+            str2 = "-" + match2[5];
+          }
+        }
+        let str4 = "";
+        if (obj.includePrerelease) {
+          str4 = "";
+          if (match2[6]) {
+            const _HermesInternal2 = HermesInternal;
+            str4 = "+" + match2[6];
+          }
+        }
+        const _HermesInternal3 = HermesInternal;
+        return require(13020) /* SemVer */("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
       }
-      let version2 = obj2;
-      if (typeof obj2 === "object") {
-        version2 = obj2.version;
-      }
-      return version !== version2;
-    case "cix":
-    break;
-    case "ix":
-      let tmp13 = require(13044) /* SemVer */;
-      let tmp13Result = tmp13(obj, obj2, arg3);
-      return tmp13Result;
-    case "unicodeVersion":
-    break;
-    case "code":
-      tmp13 = require(13044) /* SemVer */;
-      tmp13Result = tmp13(obj, obj2, arg3);
-      return tmp13Result;
-    case "color":
-    break;
-    case "colors":
-      tmp13 = require(13044) /* SemVer */;
-      tmp13Result = tmp13(obj, obj2, arg3);
-      return tmp13Result;
-    case "concat":
-    break;
-    case "constructor":
-      return require(13045) /* SemVer */(obj, obj2, arg3);
-    case "container":
-    break;
-    case "content":
-      return require(13042) /* SemVer */(obj, obj2, arg3);
-    case "context":
-    break;
-    case "text":
-      return require(13046) /* SemVer */(obj, obj2, arg3);
-    case "count":
-    break;
-    case "create":
-      return require(13043) /* SemVer */(obj, obj2, arg3);
-    case "createStyles":
-    break;
-    case "ty":
-      return require(13047) /* SemVer */(obj, obj2, arg3);
-    case "current":
-    break;
-    case "cursor":
-    break;
-    case "data":
-    break;
-    case "ddd":
-    break;
-    case "default":
-    break;
-    case "defineProperty":
-    break;
-    case "op":
-    break;
-    case "delete":
-    break;
-    case "description":
-    break;
-    case "ip":
-    break;
-    case "disabled":
-    break;
-    case "sa":
-    break;
-    case "dispatch":
-    break;
-    case "displayName":
-    break;
-    case "diversity":
-    break;
-    case "v":
-    break;
-    case "done":
-    break;
-    case "duration":
-    break;
-    case "enabled":
-    break;
-    case "end":
-    break;
-    case "enumerable":
-    break;
-    case "error":
-    break;
-    case "exports":
-    break;
-    case "fileFinishedImporting":
-    break;
-    case "fill":
-    break;
-    case "find":
-    break;
-    case "ind":
-    break;
-    case "flags":
-    break;
-    case "forEach":
-    break;
-    case "gap":
-    break;
-    case "get":
-    break;
-    case "getChannel":
-    break;
-    case "getCurrentUser":
-    break;
-    case "getGuild":
-    break;
-    case "guild":
-    break;
-    case "guildId":
-    break;
-    case "guild_id":
-    break;
-    case "has":
-    break;
-    case "hasDiversityParent":
-    break;
-    case "hash":
-    break;
-    case "hd":
-    break;
-    case "header":
-    break;
-    case "height":
-    break;
-    case "httpServerLocation":
-    break;
-    case "icon":
-    break;
-    case "includes":
-    break;
-    case "index":
-    break;
-    case "indexOf":
-    break;
-    case "intl":
-    break;
-    case "items":
-    break;
-    case "join":
-    break;
-    case "jsx":
-    break;
-    case "jsxs":
-    break;
-    case "justifyContent":
-    break;
-    case "key":
-    break;
-    case "keys":
-    break;
-    case "kind":
-    break;
-    case "ks":
-    break;
-    case "space":
-    break;
-    case "label":
-    break;
-    case "lc":
-    break;
-    case "left":
-    break;
-    case "length":
-    break;
-    case "lj":
-    break;
-    case "loadJsonAsset":
-    break;
-    case "location":
-    break;
-    case "map":
-    break;
-    case "marginTop":
-    break;
-    case "marginBottom":
-    break;
-    case "max":
-    break;
-    case "memo":
-    break;
-    case "message":
-    break;
-    case "messageId":
-    break;
-    case "method":
-    break;
-    case "methodobject":
-    break;
-    case "withTiming":
-    break;
-    case "min":
-    break;
-    case "ml":
-    break;
-    case "mn":
-    break;
-    case "mode":
-    break;
-    case "name":
-    break;
-    case "names":
-    break;
-    case "next":
-    break;
-    case "nm":
-    break;
-    case "no":
-    break;
-    case "now":
-    break;
-    case "np":
-    break;
-    case "track":
-    break;
-    case "onPress":
-    break;
-    case "opacity":
-    break;
-    case "options":
-    break;
-    case "parent":
-    break;
-    case "paths":
-    break;
-    case "pos":
-    break;
-    case "position":
-    break;
-    case "props":
-    break;
-    case "prototype":
-    break;
-    case "type":
-    break;
-    case "push":
-    break;
-    case "radii":
-    break;
-    case "raw":
-    break;
-    case "ref":
-    break;
-    case "registerAsset":
-    break;
-    case "rejectWithError":
-    break;
-    case "replace":
-    break;
-    case "resizeMode":
-    break;
-    case "size":
-    break;
-    case "resolve":
-    break;
-    case "result":
-    break;
-    case "right":
-    break;
-    case "runOnJS":
-    break;
-    case "scales":
-    break;
-    case "shapes":
-    break;
-    case "sk":
-    break;
-    case "skuId":
-    break;
-    case "slice":
-    break;
-    case "source":
-    break;
-    case "split":
-    break;
-    case "spriteIndex":
-    break;
-    case "sr":
-    break;
-    case "start":
-    break;
-    case "state":
-    break;
-    case "status":
-    break;
-    case "substring_i":
-    break;
-    case "string":
-    break;
-    case "style":
-    break;
-    case "surrogates":
-    break;
-    case "tag":
-    break;
-    case "test":
-    break;
-    case "then":
-    break;
-    case "title":
-    break;
-    case "toCharArray$esjava$1":
-    break;
-    case "toString":
-    break;
-    case "top":
-    break;
-    case "transform":
-    break;
-    case "uri":
-    break;
-    case "url":
-    break;
-    case "useCallback":
-    break;
-    case "useEffect":
-    break;
-    case "useMemo":
-    break;
-    case "useRef":
-    break;
-    case "useState":
-    break;
-    case "useStateFromStores":
-    break;
-    case "user":
-    break;
-    case "userId":
-    break;
-    case "value":
-    break;
-    case "values":
-    break;
-    case "variant":
-    break;
-    case "warn":
-    break;
-    case "width":
-    break;
-    case "window":
-    break;
-    case "withSpring":
-    break;
-    case "":
-    break;
-    case "isArrayBuffer":
-    break;
-    case "A":
-    break;
-    case "ay":
-    break;
-    case "getVoiceStateForChannel":
-    break;
-    case "woman_gesturing_no":
-    break;
-    case "woman_gesturing_no_dark_skin_tone":
-    break;
-    case "man_gesturing_no":
-    break;
-    case "man_gesturing_no_dark_skin_tone":
-    break;
-    case "firstChild":
-    break;
-    case "emojiLineHeight":
-    break;
-    case "$ZodBoolean":
-    break;
-    case "ZodBoolean":
-    break;
-    case "B":
-    break;
-    case "le":
-    break;
-    case "an":
-    break;
-    case "n":
-    break;
-    case "useActionBarPrimaryButton":
-    break;
-    case "ActionBarPrimaryButton":
-    break;
-    case "ary":
-    break;
-    case "u":
-    break;
-    case "tt":
-    break;
-    case "on":
-    break;
-    case "$ZodDate":
-    break;
-    case "ZodDate":
-    break;
-    case "D":
-    break;
-    case "DateParser":
-    break;
-    case "at":
-    break;
-    case "te":
-    break;
-    case "serializeDate":
-    break;
-    case "MarkupParserNodeTypeError":
-    break;
-    case "E":
-    break;
-    case "Err":
-    break;
-    case "ro":
-    break;
-    case "or":
-    break;
-    case "_createRenderMask":
-    break;
-    case "SEMANTIC_ATTRIBUTE_SENTRY_SOURCE":
-    break;
-    case "BOT_HTTP_INTERACTIONS":
-    break;
-    case "H":
-    break;
-    case "HT":
-    break;
-    case "TP":
-    break;
-    case "P":
-    break;
-    case "INTERACTIONS":
-    break;
-    case "NSFW_SPACE_WARNING_MODAL_CLICKED":
-    break;
-    case "rm":
-    break;
-    case "m":
-    break;
-    case "me":
-    break;
-    case "mes":
-    break;
-    case "I":
-    break;
-    case "InternalCard":
-    break;
-    case "ter":
-    break;
-    case "na":
-    break;
-    case "al":
-    break;
-    case "CardStyleInterpolators":
-    break;
-    case "pol":
-    break;
-    case "IdIcon":
-    break;
-    case "hasSameRoleAsUsername":
-    break;
-    case "getChannelIcon":
-    break;
-    case "getChannelIconComponent":
-    break;
-    case "getChannelIconComponentWithGuild":
-    break;
-    case "co":
-    break;
-    case "C":
-    break;
-    case "Component":
-    break;
-    case "om":
-    break;
-    case "mp":
-    break;
-    case "po":
-    break;
-    case "pon":
-    break;
-    case "one":
-    break;
-    default:
-      const _TypeError = TypeError;
-      const _HermesInternal = HermesInternal;
-      const typeError = new TypeError("Invalid operator: " + arg1);
-      throw typeError;
+    }
   }
 };

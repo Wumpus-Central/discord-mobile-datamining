@@ -1,9 +1,10 @@
 
-export default (arg0, arg1) => {
-  const tmp = require(13021) /* SemVer */(arg0, arg1);
+export default (str) => {
+  const tmp = require(13020) /* SemVer */;
+  const tmpResult = tmp(str.trim().replace(/^[=v]+/, ""), arg1);
   let version = null;
-  if (tmp) {
-    version = tmp.version;
+  if (tmpResult) {
+    version = tmpResult.version;
   }
   return version;
 };

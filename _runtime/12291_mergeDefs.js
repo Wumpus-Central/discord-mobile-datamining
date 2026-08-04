@@ -55,13 +55,13 @@ if (self2) {
       if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let closure_0 = { string: { unit: "tegn", verb: "havde" }, file: { unit: "bytes", verb: "havde" }, array: { unit: "elementer", verb: "indeholdt" }, set: { unit: "elementer", verb: "indeholdt" } };
-      let closure_1 = { regex: "input", email: "e-mailadresse", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO dato- og klokkesl\u00E6t", date: "ISO-dato", time: "ISO-klokkesl\u00E6t", duration: "ISO-varighed", ipv4: "IPv4-omr\u00E5de", ipv6: "IPv6-omr\u00E5de", cidrv4: "IPv4-spektrum", cidrv6: "IPv6-spektrum", base64: "base64-kodet streng", base64url: "base64url-kodet streng", json_string: "JSON-streng", e164: "E.164-nummer", jwt: "JWT", template_literal: "input" };
-      let closure_2 = { nan: "NaN", string: "streng", number: "tal", boolean: "boolean", array: "liste", object: "objekt", set: "s\u00E6t", file: "fil" };
+      let closure_0 = { string: { unit: "Zeichen", verb: "zu haben" }, file: { unit: "Bytes", verb: "zu haben" }, array: { unit: "Elemente", verb: "zu haben" }, set: { unit: "Elemente", verb: "zu haben" } };
+      let closure_1 = { regex: "Eingabe", email: "E-Mail-Adresse", url: "URL", emoji: "Emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO-Datum und -Uhrzeit", date: "ISO-Datum", time: "ISO-Uhrzeit", duration: "ISO-Dauer", ipv4: "IPv4-Adresse", ipv6: "IPv6-Adresse", cidrv4: "IPv4-Bereich", cidrv6: "IPv6-Bereich", base64: "Base64-codierter String", base64url: "Base64-URL-codierter String", json_string: "JSON-String", e164: "E.164-Nummer", jwt: "JWT", template_literal: "Eingabe" };
+      let closure_2 = { nan: "NaN", number: "Zahl", array: "Array" };
       return {
-        localeError: (code) => {
-          code = code.code;
-          switch (code) {
+        localeError: (arg0) => {
+          const combined = "Ung\u00FCltiger Wert in " + tmp.origin;
+          switch (combined) {
             case "t":
             break;
             case "to":
@@ -649,151 +649,43 @@ if (self2) {
             case "mes":
             break;
             case "I":
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp49 = closure_2[parsedTypeResult];
-              if (tmp49 == null) {
-                tmp49 = parsedTypeResult;
-              }
-              if (obj2.test(code.expected)) {
-                const _HermesInternal16 = HermesInternal;
-                let combined = "Ugyldigt input: forventede instanceof " + code.expected + ", fik " + tmp49;
-              } else {
-                const _HermesInternal15 = HermesInternal;
-                combined = "Ugyldigt input: forventede " + expected + ", fik " + tmp49;
-              }
-              return combined;
+            break;
             case "InternalCard":
             break;
             case "ter":
-              if (1 === code.values.length) {
-                const _HermesInternal14 = HermesInternal;
-                let combined1 = "Ugyldig v\u00E6rdi: forventede " + closure_2.stringifyPrimitive(code.values[0]);
-                const obj = closure_2;
-              } else {
-                const _HermesInternal13 = HermesInternal;
-                combined1 = "Ugyldigt valg: forventede en af f\u00F8lgende " + closure_2.joinValues(code.values, "|");
-              }
-              return combined1;
+            break;
             case "na":
             break;
             case "al":
-              let str32 = "<";
-              if (code.inclusive) {
-                str32 = "<=";
-              }
-              let tmp27 = dependencyMap[code.origin];
-              if (tmp27 == null) {
-                tmp27 = null;
-              }
-              let str33 = closure_2[code.origin];
-              if (str33 == null) {
-                str33 = code.origin;
-              }
-              if (tmp27) {
-                if (str33 == null) {
-                  str33 = "value";
-                }
-                const verb = tmp27.verb;
-                let str = code.maximum.toString();
-                let str40 = tmp27.unit;
-                if (str40 == null) {
-                  str40 = "elementer";
-                }
-                const _HermesInternal12 = HermesInternal;
-                let combined2 = "For stor: forventede " + str33 + " " + verb + " " + str32 + " " + str + " " + str40;
-                const str39 = code.maximum;
-              } else {
-                let str34 = str33;
-                if (str33 == null) {
-                  str34 = "value";
-                }
-                const _HermesInternal11 = HermesInternal;
-                combined2 = "For stor: forventede " + str34 + " havde " + str32 + " " + code.maximum.toString();
-                const str35 = code.maximum;
-              }
-              return combined2;
+            break;
             case "CardStyleInterpolators":
             break;
             case "pol":
-              let str20 = ">";
-              if (code.inclusive) {
-                str20 = ">=";
-              }
-              let tmp16 = dependencyMap[code.origin];
-              if (tmp16 == null) {
-                tmp16 = null;
-              }
-              let origin = closure_2[code.origin];
-              if (origin == null) {
-                origin = code.origin;
-              }
-              if (tmp16) {
-                const _HermesInternal10 = HermesInternal;
-                let combined3 = "For lille: forventede " + origin + " " + tmp16.verb + " " + str20 + " " + code.minimum.toString() + " " + tmp16.unit;
-                const str25 = code.minimum;
-              } else {
-                const _HermesInternal9 = HermesInternal;
-                combined3 = "For lille: forventede " + origin + " havde " + str20 + " " + code.minimum.toString();
-                const str21 = code.minimum;
-              }
-              return combined3;
+            break;
             case "IdIcon":
             break;
             case "hasSameRoleAsUsername":
-              if ("starts_with" === code.format) {
-                const _HermesInternal8 = HermesInternal;
-                let combined4 = "Ugyldig streng: skal starte med \"" + code.prefix + "\"";
-              } else if ("ends_with" === code.format) {
-                const _HermesInternal7 = HermesInternal;
-                combined4 = "Ugyldig streng: skal ende med \"" + code.suffix + "\"";
-              } else if ("includes" === code.format) {
-                const _HermesInternal6 = HermesInternal;
-                combined4 = "Ugyldig streng: skal indeholde \"" + code.includes + "\"";
-              } else if ("regex" === code.format) {
-                const _HermesInternal5 = HermesInternal;
-                combined4 = "Ugyldig streng: skal matche m\u00F8nsteret " + code.pattern;
-              } else {
-                let format = table[code.format];
-                if (format == null) {
-                  format = code.format;
-                }
-                const _HermesInternal4 = HermesInternal;
-                combined4 = "Ugyldig " + format;
-              }
-              return combined4;
+            break;
             case "getChannelIcon":
             break;
             case "getChannelIconComponent":
-              const _HermesInternal3 = HermesInternal;
-              return "Ugyldigt tal: skal v\u00E6re deleligt med " + code.divisor;
+            break;
             case "getChannelIconComponentWithGuild":
             break;
             case "co":
-              let str4 = "Ukendt n\u00F8gle";
-              if (code.keys.length > 1) {
-                str4 = "Ukendte n\u00F8gler";
-              }
-              return "" + str4 + ": " + closure_2.joinValues(code.keys, ", ");
+            break;
             case "C":
             break;
             case "Component":
-              const _HermesInternal2 = HermesInternal;
-              return "Ugyldig n\u00F8gle i " + code.origin;
+            break;
             case "om":
             break;
             case "mp":
-              return "Ugyldigt input: matcher ingen af de tilladte typer";
+            break;
             case "po":
             break;
             case "pon":
-              let _HermesInternal = HermesInternal;
-              str = "Ugyldig v\u00E6rdi i ";
-              let combined5 = "Ugyldig v\u00E6rdi i " + code.origin;
-              return combined5;
+            break;
             case "one":
             break;
             case "ne":
@@ -854,6 +746,8 @@ if (self2) {
             break;
             case "$ZodCheckGreaterThan":
             break;
+            case "fetchMediaPostEmbed":
+            break;
             case "ToIntlMathematicalValue":
             break;
             case "th":
@@ -900,31 +794,7 @@ if (self2) {
             break;
             case "_":
             break;
-            case "3AS4UM":
-            break;
-            case "UM":
-            break;
-            case "UMAX":
-            break;
-            case "MAX_AUDIENCE_ROW_LIMIT":
-            break;
-            case "AUD":
-            break;
-            case "AUDIENCE":
-            break;
-            case "mouse_three_button":
-            break;
-            case "three":
-            break;
-            case "three_button_mouse":
-            break;
-            case "mouse":
-            break;
-            case "mouse2":
-            break;
-            case "use2FARemoveDisableReason":
-            break;
-            case "useHasReachedEnd":
+            case "useICYMIEnabled":
             break;
             case "INVALID_PIN_MESSAGE_CHANNEL":
             break;
@@ -1338,15 +1208,9 @@ if (self2) {
             break;
             case "bel":
             break;
-            case "removeToken":
+            case "fetchClaimedQuests":
             break;
-            case "enableImagePrefetchingAndroid":
-            break;
-            case "fetching":
-            break;
-            case "toAST":
-            break;
-            case "STEAM_ITEM_COUNT_DOTA2":
+            case "SPACE_32":
             break;
             case "Role":
             break;
@@ -1371,7 +1235,7 @@ if (self2) {
             case "minWidth":
             break;
             case "pad":
-            break;
+              return combined;
             case "ad":
             break;
             case "adding":
@@ -1413,7 +1277,7 @@ if (self2) {
             case "REDDIT":
             break;
             case "REDDIT_GOLD":
-              return "Ugyldigt input: matcher ingen af de tilladte typer";
+            break;
             case "GOLDFISH_PINK":
             break;
             case "PINK_34":
@@ -1421,10 +1285,7 @@ if (self2) {
             case "ali":
             break;
             case "align":
-              _HermesInternal = HermesInternal;
-              str = "Ugyldig v\u00E6rdi i ";
-              combined5 = "Ugyldig v\u00E6rdi i " + code.origin;
-              return combined5;
+            break;
             case "alignItemsAtEnd":
             break;
             case "alignItemsAtEndPaddingEnabled":
@@ -1586,12 +1447,6 @@ if (self2) {
             case "Radius":
             break;
             case "iu":
-            break;
-            case "AgeVerificationModalVersion":
-            break;
-            case "allowEmpty":
-            break;
-            case "allowEmptyArrays":
             break;
             case "overflow_bottom":
             break;
@@ -1797,11 +1652,11 @@ if (self2) {
             break;
             case "maximumValue":
             break;
-            case "gru":
+            case "_isBackgrounded":
             break;
-            case "kangaroo":
+            case "isBackground":
             break;
-            case "rootProvider":
+            case "roundedNumber":
             break;
             case "_$esjava$cursor":
             break;
@@ -1963,10 +1818,6 @@ if (self2) {
             break;
             case "flag_et":
             break;
-            case "isCleaning":
-            break;
-            case "getIncrementalStickerCountForTier":
-            break;
             case "useFetchSocialLayerStorefrontProductDetailsEmbedData":
             break;
             case "div":
@@ -1982,7 +1833,7 @@ if (self2) {
             case "LhlgY9":
             break;
             case "toExpPos":
-              return "Ugyldigt input: matcher ingen af de tilladte typer";
+            break;
             case "do":
             break;
             case "don":
@@ -1990,17 +1841,8 @@ if (self2) {
             case "doneButton":
             break;
             case "doneButtonContainer":
-              _HermesInternal = HermesInternal;
-              str = "Ugyldig v\u00E6rdi i ";
-              combined5 = "Ugyldig v\u00E6rdi i " + code.origin;
-              return combined5;
-            case "fetchGuildJoinRequests":
             break;
-            case "fetchGuildJoinRequestsForUser":
-            break;
-            case "giftCount":
-            break;
-            case "trackedType":
+            case "unreadByType":
             break;
             case "__duration":
             break;
@@ -2214,6 +2056,8 @@ if (self2) {
             break;
             case "constraints":
             break;
+            case "USER_SAFETY_TOOLS_BLOCK_CANCEL":
+            break;
             case "_getGuildState":
             break;
             case "getGuildState":
@@ -2249,16 +2093,6 @@ if (self2) {
             case "DefaultGuildsRestricted":
             break;
             case "DefaultGuildsRestrictedV2":
-            break;
-            case "collectionId":
-            break;
-            case "collectionIds":
-            break;
-            case "spanToTransactionTraceContext":
-            break;
-            case "glow":
-            break;
-            case "glowColor":
             break;
             case "avatar_hash":
             break;
@@ -2321,12 +2155,6 @@ if (self2) {
             case "icons":
             break;
             case "iconsContainer":
-            break;
-            case "computeActivityFlags":
-            break;
-            case "ActivityFlags":
-            break;
-            case "subscribeTextInputValue":
             break;
             case "_include":
             break;
@@ -2403,6 +2231,12 @@ if (self2) {
             case "activeUnjoinedThreads":
             break;
             case "jo":
+            break;
+            case "setFocusMode":
+            break;
+            case "getMessageGiftIntentLastShownMap":
+            break;
+            case "applyFunctionToChildren":
             break;
             case "js":
             break;
@@ -2536,6 +2370,8 @@ if (self2) {
             break;
             case "mo":
             break;
+            case "promotionType":
+            break;
             case "effective_connection_speed":
             break;
             case "messageIds":
@@ -2554,50 +2390,8 @@ if (self2) {
             break;
             case "obj":
             break;
-            case "object":
-            break;
-            case "objectAssign":
-            break;
-            case "alwaysBounceVertical":
-            break;
-            case "appearance":
-            break;
-            case "ActionStatusSubLabel":
-            break;
-            case "onStatus":
-            break;
-            case "Status":
-            break;
-            case "SubLabel":
-            break;
-            case "lineHeight":
-            break;
-            case "SvgFromXml":
-            break;
-            case "ml-Mlym":
-            break;
-            case "NOTIFICATION_SETTINGS_PERMISSION_HEADER":
-            break;
-            case "HEADER_TITLE_TEXT_STYLE":
-            break;
-            case "useLegacyChatInput":
-            break;
-            case "ChatInputOmniButtonActionType":
-            break;
-            case "mni":
-            break;
-            case "ButtonAction":
-            break;
-            case "people_holding_hands_tone2_tone5":
-            break;
-            case "Ambient":
-            break;
-            case "Ambient_Lightmode":
-            break;
-            case "bie":
-            break;
             default:
-              return "Ugyldigt input";
+              return "Ung\u00FCltige Eingabe";
           }
         }
       };

@@ -41,7 +41,7 @@ class SvgAst {
     ({ ast, override } = global);
     if (ast) {
       tmp2 = SvgFromUri;
-      tmp3 = f81000;
+      tmp3 = f80997;
       ({ props, children } = ast);
       tmp4 = jsx;
       obj = {};

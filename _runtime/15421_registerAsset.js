@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 23, height: 29, scales: [1, 2], hash: "9b2d7ede4e6a66812c53739302a187c3", name: "ic_update_profile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 20, height: 20, scales: [2, 3], hash: "abac82ff1ac426da4eac76f9342c367b", name: "ic_person_waving", type: "png" });

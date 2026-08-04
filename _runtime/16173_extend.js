@@ -1,73 +1,34 @@
-const require = arg1;
-const dependencyMap = arg6;
-let tmp = (() => {
-  try {
-    const _Object = Object;
-    return Object.defineProperty({}, "a", {});
-  } catch (err) {
-    return false;
+arg5.extend = function extend(arg0) {
+  const call = slice.call;
+  if (typeof call === "unknown") {
+    let substr = slice(1);
+  } else {
+    substr = call(arguments, 1);
   }
-})();
-if (!tmp) {
-  let _Object = Object;
-}
-if (tmp) {
-  const _Object2 = Object;
-  let fn = Object.defineProperty;
-} else {
-  fn = (__defineGetter__, arg1, get) => {
-    if ("get" in get) {
-      if (__defineGetter__.__defineGetter__) {
-        __defineGetter__.__defineGetter__(arg1, get.get);
-      }
-    }
-    const hop = require(16174) /* extend */.hop;
-    const call = hop.call;
-    let tmp = typeof call === "unknown" ? hop(arg1) : call(__defineGetter__, arg1);
-    if (tmp) {
-      tmp = !("value" in get);
-    }
-    if (!tmp) {
-      __defineGetter__[arg1] = get.value;
-    }
-  };
-}
-arg5.defineProperty = fn;
-arg5.objCreate = Object.create || ((arg0, obj) => {
-  class F {
-    constructor() {
-      return;
-    }
-  }
-  F.prototype = arg0;
-  obj = Object.create(F.prototype);
-  for (const key10008 in arg1) {
-    let tmp5 = key10008;
-    let tmp6 = require;
-    class F {
-      constructor() {
-        return;
-      }
-    }
-    let hop = require(16174) /* extend */.hop;
-    let call = hop.call;
-    if (typeof call === "unknown") {
-      let hopResult = hop(key10008);
-    } else {
-      hopResult = call(arg1, key10008);
-    }
-    if (!hopResult) {
-      continue;
-    } else {
-      let tmp3 = fn;
-      let tmp4 = fn(obj, key10008, arg1[key10008]);
-      class F {
-        constructor() {
-          return;
+  for (let num2 = 0; num2 < length; num2 = num2 + 1) {
+    let tmp2 = substr[num2];
+    let tmp3 = num2;
+    if (tmp2) {
+      let tmp4 = tmp2;
+      for (const key10018 in tmp2) {
+        let tmp8 = key10018;
+        let tmp9 = hasOwnProperty;
+        let call2 = hasOwnProperty.call;
+        if (typeof call2 === "unknown") {
+          let call2Result = tmp9(key10018);
+        } else {
+          call2Result = call2(tmp2, key10018);
         }
+        if (!call2Result) {
+          continue;
+        } else {
+          arg0[key10018] = tmp2[key10018];
+          continue;
+        }
+        continue;
       }
     }
-    continue;
   }
-  return obj;
-});
+  return arg0;
+};
+arg5.hop = hasOwnProperty;

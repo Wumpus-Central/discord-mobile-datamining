@@ -8,10 +8,10 @@ let closure_6;
 const require = arg1;
 ({ useCallback: c3, useEffect: c4, useRef: c5, useState: closure_6 } = noop);
 
-export const useRiveProperty = function useRiveProperty(instance, FillColor, f28758) {
+export const useRiveProperty = function useRiveProperty(instance, FillColor, f28757) {
   const _require = instance;
   const dependencyMap = FillColor;
-  const callback = f28758;
+  const callback = f28757;
   let tmp = first(undefined);
   const callback2 = tmp;
   const items = [instance, FillColor];

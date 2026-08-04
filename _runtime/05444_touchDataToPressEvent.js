@@ -101,7 +101,7 @@ arg5.isTouchWithinInset = (width, right, locationX) => {
 arg5.gestureToPressableEvent = (handlerTag) => {
   const timestamp = Date.now();
   let nativeEvent = { identifier: handlerTag.handlerTag, locationX: handlerTag.x, locationY: handlerTag.y, pageX: handlerTag.absoluteX, pageY: handlerTag.absoluteY, target: 0, timestamp, touches: [], changedTouches: [] };
-  nativeEvent = { touches: items, changedTouches: items1, identifier: nativeEvent.identifier, locationX: handlerTag.x, locationY: handlerTag.y, pageX: handlerTag.absoluteX, pageY: handlerTag.absoluteY, target: 0, timestamp, force: "HermesInternal" };
+  nativeEvent = { touches: items, changedTouches: items1, identifier: nativeEvent.identifier, locationX: handlerTag.x, locationY: handlerTag.y, pageX: handlerTag.absoluteX, pageY: handlerTag.absoluteY, target: 0, timestamp, force: "o" };
   items = [nativeEvent];
   items1 = [nativeEvent];
   return { nativeEvent };
@@ -131,7 +131,7 @@ arg5.gestureTouchToPressableEvent = (handlerTag) => {
     pageY: null,
     target: 0,
     timestamp: null,
-    force: "HermesInternal"
+    force: "o"
   };
   ({ allTouches, changedTouches, allTouches: allTouches2 } = handlerTag);
   const atResult = allTouches2.at(0);

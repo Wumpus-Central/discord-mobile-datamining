@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 40, height: 23, scales: [1, 2], hash: "f508ffa8fec7b43f0c7e1765658cd955", name: "ic_message", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/main_tabs", width: 48, height: 48, scales: [1], hash: "af7e0b726a672f5506a1ba72e26e2adc", name: "NitroWheelIconWithGradient", type: "png" });

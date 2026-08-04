@@ -504,7 +504,7 @@ let fn = function t(exports, React) {
       items = [];
       items[0] = stripe;
       memo = options.useMemo(() => outer1_14(options), items);
-      f104374 = memo;
+      f104370 = memo;
       tmp2 = useMemo(options.useState(() => {
         let stripe = null;
         if ("sync" === memo.tag) {
@@ -520,7 +520,7 @@ let fn = function t(exports, React) {
         return obj;
       }), 2);
       first = tmp2[0];
-      f104375 = first;
+      f104371 = first;
       useMemo = tmp2[1];
       items1 = [, , ];
       items1[0] = memo;
@@ -774,7 +774,7 @@ let fn = function t(exports, React) {
         return { stripe, checkoutSdk: null };
       }), 2);
       first1 = tmp5[0];
-      f104381 = first1;
+      f104377 = first1;
       useAttachEvent = tmp5[1];
       safeSetContext = function safeSetContext(arg0, arg1) {
 

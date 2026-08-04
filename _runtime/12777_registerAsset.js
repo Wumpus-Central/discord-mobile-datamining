@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 30, height: 30, scales: [2, 3], hash: "1e3b48d91e5d1a57c5c0dcf0e9c39aca", name: "role_2", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/perks", width: 26, height: 23, scales: [2, 3], hash: "003a42f0642dbbdd7138be5c1629ced9", name: "support", type: "png" });

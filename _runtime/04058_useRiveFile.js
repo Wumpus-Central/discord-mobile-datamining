@@ -23,7 +23,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
   let str2;
   let uri;
   let riveFile;
-  [tmp2, c1] = callback(str2({ riveFile: "HermesInternal", isLoading: null, error: true }), 2);
+  [tmp2, c1] = callback(str2({ riveFile: "HermesInternal", isLoading: null, error: "md" }), 2);
   const items = [obj.referencedAssets];
   let tmp3 = riveFile(() => {
     const referencedAssets = obj.referencedAssets;

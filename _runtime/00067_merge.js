@@ -959,82 +959,82 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "$ZodCheckGreaterThan":
           break;
-          case "ToIntlMathematicalValue":
+          case "fetchMediaPostEmbed":
             obj2 = require;
             tmp48 = dependencyMap;
             tmp49 = require(81) /* resolveAssetSource */;
             _default1 = tmp49.default;
+          break;
+          case "ToIntlMathematicalValue":
           break;
           case "th":
+            obj2 = require;
+            tmp48 = dependencyMap;
+            tmp49 = require(81) /* resolveAssetSource */;
+            _default1 = tmp49.default;
           break;
           case "ValueSetter":
-            obj2 = require;
-            tmp48 = dependencyMap;
-            tmp49 = require(81) /* resolveAssetSource */;
-            _default1 = tmp49.default;
           break;
           case "$ZodCheckNumberFormat":
-          break;
-          case "N":
             obj2 = require;
             tmp48 = dependencyMap;
             tmp49 = require(81) /* resolveAssetSource */;
             _default1 = tmp49.default;
           break;
-          case "NumberFormat":
+          case "N":
           break;
-          case "um":
+          case "NumberFormat":
             obj2 = module;
             let tmp47 = dependencyMap;
             _default1 = module(55);
           break;
-          case "b":
+          case "um":
           break;
-          case "be":
+          case "b":
             obj2 = module;
             tmp47 = dependencyMap;
             _default1 = module(55);
           break;
-          case "$ZodObject":
+          case "be":
           break;
-          case "$ZodObjectJIT":
+          case "$ZodObject":
             obj2 = require;
             let tmp45 = dependencyMap;
             let tmp46 = require(54) /* _getFilterAmount */;
             _default1 = tmp46.default;
           break;
-          case "ZodObject":
+          case "$ZodObjectJIT":
           break;
-          case "O":
+          case "ZodObject":
             obj2 = require;
             tmp45 = dependencyMap;
             tmp46 = require(54) /* _getFilterAmount */;
             _default1 = tmp46.default;
           break;
-          case "j":
+          case "O":
           break;
-          case "je":
+          case "j":
             obj2 = require;
             let tmp44 = dependencyMap;
             _default1 = require(56) /* processColorStops */.default;
           break;
-          case "IT":
+          case "je":
           break;
-          case "MEDIA_PICKER_SEND_BUTTON_SPRING":
+          case "IT":
             obj2 = require;
             let tmp43 = dependencyMap;
             _default1 = require(58) /* getPositionFromCSSValue */.default;
           break;
-          case "marginHorizontal":
+          case "MEDIA_PICKER_SEND_BUTTON_SPRING":
           break;
-          case "Direction":
+          case "marginHorizontal":
             obj2 = require;
             let tmp42 = dependencyMap;
             _default1 = require(59) /* isBackgroundRepeatKeyword */.default;
           break;
-          case "rect":
+          case "Direction":
           break;
-          case "REGISTER_IDENTITY":
+          case "rect":
             obj2 = require;
             tmp40 = dependencyMap;
             tmp41 = require(57) /* getValidLengthPercentageSizeOrNull */;
@@ -1058,35 +1058,13 @@ arg5.default = function getNativeComponentAttributes(arg0) {
             obj2[0] = _default;
             obj1 = obj2;
           break;
+          case "REGISTER_IDENTITY":
+          break;
           case "PX_80":
           break;
           case "_":
           break;
-          case "3AS4UM":
-          break;
-          case "UM":
-          break;
-          case "UMAX":
-          break;
-          case "MAX_AUDIENCE_ROW_LIMIT":
-          break;
-          case "AUD":
-          break;
-          case "AUDIENCE":
-          break;
-          case "mouse_three_button":
-          break;
-          case "three":
-          break;
-          case "three_button_mouse":
-          break;
-          case "mouse":
-          break;
-          case "mouse2":
-          break;
-          case "use2FARemoveDisableReason":
-          break;
-          case "useHasReachedEnd":
+          case "useICYMIEnabled":
           break;
           case "INVALID_PIN_MESSAGE_CHANNEL":
           break;
@@ -1500,15 +1478,9 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "bel":
           break;
-          case "removeToken":
+          case "fetchClaimedQuests":
           break;
-          case "enableImagePrefetchingAndroid":
-          break;
-          case "fetching":
-          break;
-          case "toAST":
-          break;
-          case "STEAM_ITEM_COUNT_DOTA2":
+          case "SPACE_32":
           break;
           case "Role":
           break;
@@ -1746,12 +1718,6 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "iu":
           break;
-          case "AgeVerificationModalVersion":
-          break;
-          case "allowEmpty":
-          break;
-          case "allowEmptyArrays":
-          break;
           case "overflow_bottom":
           break;
           case "_bottom":
@@ -1956,11 +1922,11 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "maximumValue":
           break;
-          case "gru":
+          case "_isBackgrounded":
           break;
-          case "kangaroo":
+          case "isBackground":
           break;
-          case "rootProvider":
+          case "roundedNumber":
           break;
           case "_$esjava$cursor":
           break;
@@ -2122,10 +2088,6 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "flag_et":
           break;
-          case "isCleaning":
-          break;
-          case "getIncrementalStickerCountForTier":
-          break;
           case "useFetchSocialLayerStorefrontProductDetailsEmbedData":
           break;
           case "div":
@@ -2150,13 +2112,7 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "doneButtonContainer":
           break;
-          case "fetchGuildJoinRequests":
-          break;
-          case "fetchGuildJoinRequestsForUser":
-          break;
-          case "giftCount":
-          break;
-          case "trackedType":
+          case "unreadByType":
           break;
           case "__duration":
           break;
@@ -2370,6 +2326,8 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           break;
           case "constraints":
           break;
+          case "USER_SAFETY_TOOLS_BLOCK_CANCEL":
+          break;
           case "_getGuildState":
           break;
           case "getGuildState":
@@ -2405,16 +2363,6 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "DefaultGuildsRestricted":
           break;
           case "DefaultGuildsRestrictedV2":
-          break;
-          case "collectionId":
-          break;
-          case "collectionIds":
-          break;
-          case "spanToTransactionTraceContext":
-          break;
-          case "glow":
-          break;
-          case "glowColor":
           break;
           case "avatar_hash":
           break;
@@ -2477,12 +2425,6 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "icons":
           break;
           case "iconsContainer":
-          break;
-          case "computeActivityFlags":
-          break;
-          case "ActivityFlags":
-          break;
-          case "subscribeTextInputValue":
           break;
           case "_include":
           break;
@@ -2559,6 +2501,12 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "activeUnjoinedThreads":
           break;
           case "jo":
+          break;
+          case "setFocusMode":
+          break;
+          case "getMessageGiftIntentLastShownMap":
+          break;
+          case "applyFunctionToChildren":
           break;
           case "js":
           break;
@@ -2691,6 +2639,8 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "__memo":
           break;
           case "mo":
+          break;
+          case "promotionType":
           break;
           case "effective_connection_speed":
           break;
@@ -2907,6 +2857,56 @@ arg5.default = function getNativeComponentAttributes(arg0) {
           case "updateMLSExternalSender":
           break;
           case "updateMLSExternalSenderTimestamp":
+          break;
+          case "parseStackFrames":
+          break;
+          case "getSelectionScope":
+          break;
+          case "openForwardModal":
+          break;
+          case "_pushCells":
+          break;
+          case "pus":
+          break;
+          case "enableMuteWarning":
+          break;
+          case "DOMParser":
+          break;
+          case "rad":
+          break;
+          case "ii":
+          break;
+          case "animateDrawer":
+          break;
+          case "DrawerActions":
+          break;
+          case "aw":
+          break;
+          case "awe":
+          break;
+          case "verifiedBot":
+          break;
+          case "$ZodPrefault":
+          break;
+          case "ZodPrefault":
+          break;
+          case "reg":
+          break;
+          case "register":
+          break;
+          case "recipients":
+          break;
+          case "reject":
+          break;
+          case "eject":
+          break;
+          case "ErrorNumber":
+          break;
+          case "showUnread":
+          break;
+          case "__replaceAnimatedNodeWithValues":
+          break;
+          case "place":
           break;
         }
       }

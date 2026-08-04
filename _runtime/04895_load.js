@@ -231,7 +231,7 @@ function loadView(byteLength, then) {
   let xmpChunks;
   let obj = then;
   if (then === undefined) {
-    obj = { expanded: false, async: false, includeUnknown: false, domParser: "channel" };
+    obj = { expanded: false, async: false, includeUnknown: false, domParser: "call" };
   }
   let flag = obj.expanded;
   if (flag === undefined) {

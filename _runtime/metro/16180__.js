@@ -1,29 +1,22 @@
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "cs",
+  locale: "da",
   pluralRuleFunction(arg0, arg1) {
-    let tmp2;
-    let tmp3;
     const parts = String(arg0).split(".");
-    [tmp2, tmp3] = parts;
-    let str2 = "other";
-    if (!arg1) {
+    const first = parts[0];
+    if (arg1) {
+      let str3 = "other";
+    } else {
+      str3 = "one";
       if (1 != arg0) {
-        if (tmp2 >= 2) {
-          if (tmp2 <= 4) {
-            let str4 = "few";
-          }
-          let str3 = str4;
-        }
-        let str5 = "many";
         if (!tmp3) {
-          str5 = "other";
+          str3 = "one";
+          if (0 != first) {
+            str3 = "one";
+          }
         }
-        str4 = str5;
-      } else {
-        str3 = "one";
       }
-      str2 = str3;
     }
-    return str2;
+    return str3;
   }
 });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "da-GL", parentLocale: "da" });

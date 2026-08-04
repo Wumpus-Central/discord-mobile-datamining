@@ -1,21 +1,11 @@
+let closure_2 = require("call")([].concat);
 
-export default (arg0, arg1, arg2) => {
-  const arr = require(13519)(arg1);
-  for (let num = 0; num < arr.length; num = num + 1) {
-    let tmp3 = arr[num];
-    let tmp4 = require;
-    let tmp5 = dependencyMap;
-    let tmp6 = require(13501) /* call */(arg0, tmp3);
-    let tmp7 = num;
-    if (!tmp6) {
-      let tmp8 = arg2;
-      if (arg2) {
-        tmp8 = tmp4(13501)(arg2, tmp3);
-      }
-      tmp6 = tmp8;
-    }
-    if (!tmp6) {
-      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
-    }
+export default require("all")("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = require(13519) /* f */.f(require(13529) /* all */(arg0));
+  const f = require(13530).f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = callback(fResult, f(arg0));
   }
-};
+  return tmp2;
+});

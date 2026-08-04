@@ -1,4 +1,4 @@
-let closure_0 = { x: "Array", y: "HermesInternal" };
+let closure_0 = { x: "body", y: "useStateFromStores" };
 arg5.default = function pointsDiffer(arg0, arg1) {
   let point = arg0;
   if (!arg0) {

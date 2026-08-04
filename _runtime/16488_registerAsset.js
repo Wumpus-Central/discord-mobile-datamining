@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/guild_settings/overview", width: 343, height: 193, scales: [2, 3], hash: "14f8bd930afc02eff31d9dfb6640a712", name: "asset_gradient", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 32, height: 32, scales: [2, 3], hash: "d505051fb36c757db4674831cf82260a", name: "ic_image_upload", type: "png" });

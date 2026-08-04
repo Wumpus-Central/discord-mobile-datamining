@@ -7,7 +7,7 @@ let fn = function n(toValue, userConfig, callback) {
   let closure_2 = callback;
   let obj = _require(1646);
   const fn = function u() {
-    let obj = { damping: 10, mass: 1, stiffness: 100, overshootClamping: false, restDisplacementThreshold: 0.01, restSpeedThreshold: 2, velocity: 0, duration: 2000, dampingRatio: 0.5, reduceMotion: "call", clamp: "call" };
+    let obj = { damping: 10, mass: 1, stiffness: 100, overshootClamping: false, restDisplacementThreshold: 0.01, restSpeedThreshold: 2, velocity: 0, duration: 2000, dampingRatio: 0.5, reduceMotion: "call", clamp: "index" };
     const merged = Object.assign(userConfig);
     let duration;
     if (userConfig != null) {

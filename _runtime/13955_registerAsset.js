@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 433, height: 231, scales: [2, 3], hash: "a255589f0ef23e06a175ac0fc6767b9f", name: "blocked_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 433, height: 231.5, scales: [2, 3], hash: "91d00dd928cdd63a1c9619eb92ec080e", name: "blocked_light", type: "png" });

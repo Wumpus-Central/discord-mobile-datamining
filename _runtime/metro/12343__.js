@@ -51,31 +51,57 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    exports.parse = undefined;
-    exports.parseAsync = undefined;
-    exports.safeParse = undefined;
-    exports.safeParseAsync = undefined;
-    exports.encode = undefined;
-    exports.decode = undefined;
-    exports.encodeAsync = undefined;
-    exports.decodeAsync = undefined;
-    exports.safeEncode = undefined;
-    exports.safeDecode = undefined;
-    exports.safeEncodeAsync = undefined;
-    exports.safeDecodeAsync = undefined;
-    const fnResult = fn(require("module_12274"));
-    exports.parse = fnResult._parse(require("module_12344").ZodRealError);
-    exports.parseAsync = fnResult._parseAsync(require("module_12344").ZodRealError);
-    exports.safeParse = fnResult._safeParse(require("module_12344").ZodRealError);
-    exports.safeParseAsync = fnResult._safeParseAsync(require("module_12344").ZodRealError);
-    exports.encode = fnResult._encode(require("module_12344").ZodRealError);
-    exports.decode = fnResult._decode(require("module_12344").ZodRealError);
-    exports.encodeAsync = fnResult._encodeAsync(require("module_12344").ZodRealError);
-    exports.decodeAsync = fnResult._decodeAsync(require("module_12344").ZodRealError);
-    exports.safeEncode = fnResult._safeEncode(require("module_12344").ZodRealError);
-    exports.safeDecode = fnResult._safeDecode(require("module_12344").ZodRealError);
-    exports.safeEncodeAsync = fnResult._safeEncodeAsync(require("module_12344").ZodRealError);
-    exports.safeDecodeAsync = fnResult._safeDecodeAsync(require("module_12344").ZodRealError);
+    exports.ZodError = undefined;
+    exports.ZodRealError = undefined;
+    const fnResult = fn(require("module_12273"));
+    let c4 = fnResult;
+    let closure_5 = fn(require("mergeDefs"));
+    function initializer(prototype) {
+      const _require = prototype;
+      const $ZodError = _require(12273).$ZodError;
+      $ZodError.init(prototype, arg1);
+      prototype.name = "ZodError";
+      let obj = {
+        value(arg0) {
+          return outer1_4.formatError(closure_0, arg0);
+        }
+      };
+      obj = {
+        value(arg0) {
+          return outer1_4.flattenError(closure_0, arg0);
+        }
+      };
+      obj = {
+        value(arg0) {
+          const issues = prototype.issues;
+          issues.push(arg0);
+          prototype.message = JSON.stringify(prototype.issues, outer1_5.jsonStringifyReplacer, 2);
+        }
+      };
+      Object.defineProperties(prototype, {
+        format: obj,
+        flatten: obj,
+        addIssue: obj,
+        addIssues: {
+          value(arg0) {
+            const issues = prototype.issues;
+            const items = [...arg0];
+            issues.push.apply(items);
+            prototype.message = JSON.stringify(prototype.issues, outer1_5.jsonStringifyReplacer, 2);
+          }
+        },
+        isEmpty: {
+          get() {
+            return 0 === prototype.issues.length;
+          }
+        }
+      });
+    }
+    exports.ZodError = fnResult.$constructor("ZodError", initializer);
+    let obj = { Parent: null };
+    const _Error = Error;
+    obj[0] = Error;
+    exports.ZodRealError = fnResult.$constructor("ZodError", initializer, obj);
   } else {
     const _Object2 = Object;
   }

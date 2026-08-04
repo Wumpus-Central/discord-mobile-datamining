@@ -2586,9 +2586,9 @@ let fn = function t() {
       tmp16 = obj.millisecond || 0;
       for (const key10031 in obj) {
         tmp31 = key10031;
-        tmp32 = f72936;
-        call2 = f72936.call;
-        tmp33 = f72969;
+        tmp32 = f72933;
+        call2 = f72933.call;
+        tmp33 = f72966;
         if (typeof call2 === "unknown") {
           tmp32Result = tmp32(key10031);
         } else {
@@ -2621,13 +2621,13 @@ let fn = function t() {
       num = 0;
       flag2 = false;
       flag = true;
-      if (0 < f72969.length) {
+      if (0 < f72966.length) {
         while (true) {
-          arr = f72969;
+          arr = f72966;
           tmp18 = num;
           tmp19 = flag2;
           flag3 = flag2;
-          if (!obj[f72969[num]]) {
+          if (!obj[f72966[num]]) {
             sum = num + 1;
             flag2 = flag3;
             num = sum;

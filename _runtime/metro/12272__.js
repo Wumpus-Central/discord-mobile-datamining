@@ -81,12 +81,184 @@ if (self2) {
         }
       };
     }
+    let fn3 = self;
+    if (self) {
+      fn3 = self.__importDefault;
+    }
+    if (!fn3) {
+      fn3 = (__esModule) => {
+        if (!__esModule) {
+          const obj = { default: null };
+          obj[0] = __esModule;
+          let tmp = obj;
+        } else {
+          tmp = __esModule;
+        }
+        return tmp;
+      };
+    }
     const _Object3 = Object;
-    exports.z = undefined;
-    const fnResult = fn(require("module_12273"));
-    exports.z = fnResult;
-    fn2(require("module_12273"), exports);
-    exports.default = fnResult;
+    exports.core = undefined;
+    exports.globalRegistry = undefined;
+    exports.registry = undefined;
+    exports.config = undefined;
+    exports.$output = undefined;
+    exports.$input = undefined;
+    exports.$brand = undefined;
+    exports.clone = undefined;
+    exports.regexes = undefined;
+    exports.treeifyError = undefined;
+    exports.prettifyError = undefined;
+    exports.formatError = undefined;
+    exports.flattenError = undefined;
+    exports.TimePrecision = undefined;
+    exports.util = undefined;
+    exports.NEVER = undefined;
+    exports.toJSONSchema = undefined;
+    exports.fromJSONSchema = undefined;
+    exports.locales = undefined;
+    exports.ZodISODateTime = undefined;
+    exports.ZodISODate = undefined;
+    exports.ZodISOTime = undefined;
+    exports.ZodISODuration = undefined;
+    exports.iso = undefined;
+    exports.coerce = undefined;
+    exports.core = fn(require("module_12273"));
+    fn2(require("module_12339"), exports);
+    fn2(require("module_12340"), exports);
+    fn2(require("module_12343"), exports);
+    fn2(require("module_12342"), exports);
+    fn2(require("module_12344"), exports);
+    require("module_12273").config(fn3(require("mergeDefs")).default());
+    const _Object4 = Object;
+    let obj = { enumerable: true, get: null };
+    obj[1] = function get() {
+      return require(12273).globalRegistry;
+    };
+    Object.defineProperty(exports, "globalRegistry", obj);
+    const _Object5 = Object;
+    obj = { enumerable: true, get: null };
+    obj[1] = function get() {
+      return require(12273).registry;
+    };
+    Object.defineProperty(exports, "registry", obj);
+    const _Object6 = Object;
+    const obj1 = { enumerable: true, get: null };
+    obj1[1] = function get() {
+      return require(12273).config;
+    };
+    Object.defineProperty(exports, "config", obj1);
+    const _Object7 = Object;
+    const obj2 = { enumerable: true, get: null };
+    obj2[1] = function get() {
+      return require(12273).$output;
+    };
+    Object.defineProperty(exports, "$output", obj2);
+    const _Object8 = Object;
+    const obj3 = { enumerable: true, get: null };
+    obj3[1] = function get() {
+      return require(12273).$input;
+    };
+    Object.defineProperty(exports, "$input", obj3);
+    const _Object9 = Object;
+    const obj4 = { enumerable: true, get: null };
+    obj4[1] = function get() {
+      return require(12273).$brand;
+    };
+    Object.defineProperty(exports, "$brand", obj4);
+    const _Object10 = Object;
+    const obj5 = { enumerable: true, get: null };
+    obj5[1] = function get() {
+      return require(12273).clone;
+    };
+    Object.defineProperty(exports, "clone", obj5);
+    const _Object11 = Object;
+    const obj6 = { enumerable: true, get: null };
+    obj6[1] = function get() {
+      return require(12273).regexes;
+    };
+    Object.defineProperty(exports, "regexes", obj6);
+    const _Object12 = Object;
+    const obj7 = { enumerable: true, get: null };
+    obj7[1] = function get() {
+      return require(12273).treeifyError;
+    };
+    Object.defineProperty(exports, "treeifyError", obj7);
+    const _Object13 = Object;
+    const obj8 = { enumerable: true, get: null };
+    obj8[1] = function get() {
+      return require(12273).prettifyError;
+    };
+    Object.defineProperty(exports, "prettifyError", obj8);
+    const _Object14 = Object;
+    const obj9 = { enumerable: true, get: null };
+    obj9[1] = function get() {
+      return require(12273).formatError;
+    };
+    Object.defineProperty(exports, "formatError", obj9);
+    const _Object15 = Object;
+    const obj10 = { enumerable: true, get: null };
+    obj10[1] = function get() {
+      return require(12273).flattenError;
+    };
+    Object.defineProperty(exports, "flattenError", obj10);
+    const _Object16 = Object;
+    const obj11 = { enumerable: true, get: null };
+    obj11[1] = function get() {
+      return require(12273).TimePrecision;
+    };
+    Object.defineProperty(exports, "TimePrecision", obj11);
+    const _Object17 = Object;
+    const obj12 = { enumerable: true, get: null };
+    obj12[1] = function get() {
+      return require(12273).util;
+    };
+    Object.defineProperty(exports, "util", obj12);
+    const _Object18 = Object;
+    const obj13 = { enumerable: true, get: null };
+    obj13[1] = function get() {
+      return require(12273).NEVER;
+    };
+    Object.defineProperty(exports, "NEVER", obj13);
+    const _Object19 = Object;
+    const obj14 = { enumerable: true, get: null };
+    obj14[1] = function get() {
+      return require(12336) /* stringProcessor */.toJSONSchema;
+    };
+    Object.defineProperty(exports, "toJSONSchema", obj14);
+    const _Object20 = Object;
+    const obj15 = { enumerable: true, get: null };
+    obj15[1] = function get() {
+      return require(12345) /* convertBaseSchema */.fromJSONSchema;
+    };
+    Object.defineProperty(exports, "fromJSONSchema", obj15);
+    exports.locales = fn(require("module_12283"));
+    const _Object21 = Object;
+    const obj16 = { enumerable: true, get: null };
+    obj16[1] = function get() {
+      return require(12341).ZodISODateTime;
+    };
+    Object.defineProperty(exports, "ZodISODateTime", obj16);
+    const _Object22 = Object;
+    const obj17 = { enumerable: true, get: null };
+    obj17[1] = function get() {
+      return require(12341).ZodISODate;
+    };
+    Object.defineProperty(exports, "ZodISODate", obj17);
+    const _Object23 = Object;
+    const obj18 = { enumerable: true, get: null };
+    obj18[1] = function get() {
+      return require(12341).ZodISOTime;
+    };
+    Object.defineProperty(exports, "ZodISOTime", obj18);
+    const _Object24 = Object;
+    const obj19 = { enumerable: true, get: null };
+    obj19[1] = function get() {
+      return require(12341).ZodISODuration;
+    };
+    Object.defineProperty(exports, "ZodISODuration", obj19);
+    exports.iso = fn(require("module_12341"));
+    exports.coerce = fn(require("module_12346"));
   } else {
     const _Object2 = Object;
   }

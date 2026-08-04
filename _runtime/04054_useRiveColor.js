@@ -2,14 +2,14 @@ import _slicedToArray from "_slicedToArray";
 
 let require = arg1;
 require("noop").useCallback;
-const f28758 = (colorProperty) => colorProperty.colorProperty(arg1);
+const f28757 = (colorProperty) => colorProperty.colorProperty(arg1);
 
 export const useRiveColor = function useRiveColor(FillColor, instance) {
   let tmp5;
   let tmp6;
   let obj = require(4036) /* c */;
   const cResult = obj.c(8);
-  const tmp4 = callback(require(4049) /* useRiveProperty */.useRiveProperty(instance, FillColor, f28758), 3);
+  const tmp4 = callback(require(4049) /* useRiveProperty */.useRiveProperty(instance, FillColor, f28757), 3);
   [tmp5, tmp6] = tmp4;
   require = tmp6;
   if (cResult[0] !== tmp5) {

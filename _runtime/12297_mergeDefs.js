@@ -55,9 +55,9 @@ if (self2) {
       if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let closure_0 = { string: { unit: "merkki\u00E4", subject: "merkkijonon" }, file: { unit: "tavua", subject: "tiedoston" }, array: { unit: "alkiota", subject: "listan" }, set: { unit: "alkiota", subject: "joukon" }, number: { unit: "", subject: "luvun" }, bigint: { unit: "", subject: "suuren kokonaisluvun" }, int: { unit: "", subject: "kokonaisluvun" }, date: { unit: "", subject: "p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4n" } };
-      let closure_1 = { regex: "s\u00E4\u00E4nn\u00F6llinen lauseke", email: "s\u00E4hk\u00F6postiosoite", url: "URL-osoite", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO-aikaleima", date: "ISO-p\u00E4iv\u00E4m\u00E4\u00E4r\u00E4", time: "ISO-aika", duration: "ISO-kesto", ipv4: "IPv4-osoite", ipv6: "IPv6-osoite", cidrv4: "IPv4-alue", cidrv6: "IPv6-alue", base64: "base64-koodattu merkkijono", base64url: "base64url-koodattu merkkijono", json_string: "JSON-merkkijono", e164: "E.164-luku", jwt: "JWT", template_literal: "templaattimerkkijono" };
-      let closure_2 = { nan: "NaN" };
+      let closure_0 = { string: { unit: "caract\u00E8res", verb: "avoir" }, file: { unit: "octets", verb: "avoir" }, array: { unit: "\u00E9l\u00E9ments", verb: "avoir" }, set: { unit: "\u00E9l\u00E9ments", verb: "avoir" } };
+      let closure_1 = { regex: "entr\u00E9e", email: "adresse e-mail", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "date et heure ISO", date: "date ISO", time: "heure ISO", duration: "dur\u00E9e ISO", ipv4: "adresse IPv4", ipv6: "adresse IPv6", cidrv4: "plage IPv4", cidrv6: "plage IPv6", base64: "cha\u00EEne encod\u00E9e en base64", base64url: "cha\u00EEne encod\u00E9e en base64url", json_string: "cha\u00EEne JSON", e164: "num\u00E9ro E.164", jwt: "JWT", template_literal: "entr\u00E9e" };
+      let closure_2 = { nan: "NaN", number: "nombre", array: "tableau" };
       return {
         localeError: (code) => {
           switch (code.code) {
@@ -734,35 +734,6 @@ if (self2) {
             case "AppStartInfo":
             break;
             case "forModalPresentationIOS":
-              while (true) {
-                let str2 = "includes";
-                if ("includes" === code.format) {
-                  let tmp6 = globalThis;
-                  let _HermesInternal3 = HermesInternal;
-                  let str6 = "\"";
-                  let str7 = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"";
-                  let combined = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"" + code.includes + "\"";
-                } else {
-                  let str3 = "regex";
-                  if ("regex" === code.format) {
-                    let tmp5 = globalThis;
-                    let _HermesInternal2 = HermesInternal;
-                    let str5 = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta ";
-                    combined = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " + code.pattern;
-                  } else {
-                    let tmp = dependencyMap;
-                    let format = dependencyMap[code.format];
-                    let tmp2 = null;
-                    if (format == null) {
-                      format = code.format;
-                    }
-                    let tmp3 = globalThis;
-                    let _HermesInternal = HermesInternal;
-                    let str4 = "Virheellinen ";
-                    combined = "Virheellinen " + format;
-                  }
-                }
-              }
             break;
             case "$ZodMap":
             break;
@@ -773,6 +744,8 @@ if (self2) {
             case "ap":
             break;
             case "$ZodCheckGreaterThan":
+            break;
+            case "fetchMediaPostEmbed":
             break;
             case "ToIntlMathematicalValue":
             break;
@@ -820,31 +793,7 @@ if (self2) {
             break;
             case "_":
             break;
-            case "3AS4UM":
-            break;
-            case "UM":
-            break;
-            case "UMAX":
-            break;
-            case "MAX_AUDIENCE_ROW_LIMIT":
-            break;
-            case "AUD":
-            break;
-            case "AUDIENCE":
-            break;
-            case "mouse_three_button":
-            break;
-            case "three":
-            break;
-            case "three_button_mouse":
-            break;
-            case "mouse":
-            break;
-            case "mouse2":
-            break;
-            case "use2FARemoveDisableReason":
-            break;
-            case "useHasReachedEnd":
+            case "useICYMIEnabled":
             break;
             case "INVALID_PIN_MESSAGE_CHANNEL":
             break;
@@ -1258,15 +1207,9 @@ if (self2) {
             break;
             case "bel":
             break;
-            case "removeToken":
+            case "fetchClaimedQuests":
             break;
-            case "enableImagePrefetchingAndroid":
-            break;
-            case "fetching":
-            break;
-            case "toAST":
-            break;
-            case "STEAM_ITEM_COUNT_DOTA2":
+            case "SPACE_32":
             break;
             case "Role":
             break;
@@ -1421,35 +1364,6 @@ if (self2) {
             case "angry_face":
             break;
             case "face_palm":
-              while (true) {
-                str2 = "includes";
-                if ("includes" === code.format) {
-                  tmp6 = globalThis;
-                  _HermesInternal3 = HermesInternal;
-                  str6 = "\"";
-                  str7 = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"";
-                  combined = "Virheellinen sy\u00F6te: t\u00E4ytyy sis\u00E4lt\u00E4\u00E4 \"" + code.includes + "\"";
-                } else {
-                  str3 = "regex";
-                  if ("regex" === code.format) {
-                    tmp5 = globalThis;
-                    _HermesInternal2 = HermesInternal;
-                    str5 = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta ";
-                    combined = "Virheellinen sy\u00F6te: t\u00E4ytyy vastata s\u00E4\u00E4nn\u00F6llist\u00E4 lauseketta " + code.pattern;
-                  } else {
-                    tmp = dependencyMap;
-                    format = dependencyMap[code.format];
-                    tmp2 = null;
-                    if (format == null) {
-                      format = code.format;
-                    }
-                    tmp3 = globalThis;
-                    _HermesInternal = HermesInternal;
-                    str4 = "Virheellinen ";
-                    combined = "Virheellinen " + format;
-                  }
-                }
-              }
             break;
             case "face_palm_tone1":
             break;
@@ -1532,12 +1446,6 @@ if (self2) {
             case "Radius":
             break;
             case "iu":
-            break;
-            case "AgeVerificationModalVersion":
-            break;
-            case "allowEmpty":
-            break;
-            case "allowEmptyArrays":
             break;
             case "overflow_bottom":
             break;
@@ -1743,11 +1651,11 @@ if (self2) {
             break;
             case "maximumValue":
             break;
-            case "gru":
+            case "_isBackgrounded":
             break;
-            case "kangaroo":
+            case "isBackground":
             break;
-            case "rootProvider":
+            case "roundedNumber":
             break;
             case "_$esjava$cursor":
             break;
@@ -1904,14 +1812,12 @@ if (self2) {
             case "la":
             break;
             case "am":
-            break;
+              let _HermesInternal = HermesInternal;
+              let combined = "Valeur invalide dans " + code.origin;
+              return combined;
             case "internalBinaryRead":
             break;
             case "flag_et":
-            break;
-            case "isCleaning":
-            break;
-            case "getIncrementalStickerCountForTier":
             break;
             case "useFetchSocialLayerStorefrontProductDetailsEmbedData":
             break;
@@ -1937,13 +1843,7 @@ if (self2) {
             break;
             case "doneButtonContainer":
             break;
-            case "fetchGuildJoinRequests":
-            break;
-            case "fetchGuildJoinRequestsForUser":
-            break;
-            case "giftCount":
-            break;
-            case "trackedType":
+            case "unreadByType":
             break;
             case "__duration":
             break;
@@ -1960,7 +1860,7 @@ if (self2) {
             case "ratio":
             break;
             case "brx":
-              return "Virheellinen arvo joukossa";
+            break;
             case "rx":
             break;
             case "IN_GAME_FEATURES":
@@ -1982,7 +1882,7 @@ if (self2) {
             case "DELETE_SAFETY_WARNINGS":
             break;
             case "SPACE_4":
-              return "Virheellinen arvo joukossa";
+            break;
             case "SPACE_40":
             break;
             case "@braintree/extended-promise":
@@ -2157,6 +2057,8 @@ if (self2) {
             break;
             case "constraints":
             break;
+            case "USER_SAFETY_TOOLS_BLOCK_CANCEL":
+            break;
             case "_getGuildState":
             break;
             case "getGuildState":
@@ -2193,16 +2095,6 @@ if (self2) {
             break;
             case "DefaultGuildsRestrictedV2":
             break;
-            case "collectionId":
-            break;
-            case "collectionIds":
-            break;
-            case "spanToTransactionTraceContext":
-            break;
-            case "glow":
-            break;
-            case "glowColor":
-            break;
             case "avatar_hash":
             break;
             case "_hash":
@@ -2225,8 +2117,402 @@ if (self2) {
             break;
             case "head":
             break;
+            case "ade":
+            break;
+            case "shouldOpenGameProfile":
+            break;
+            case "GameProfileSources":
+            break;
+            case "player_height":
+            break;
+            case "hei":
+            break;
+            case "heightAverageWindow":
+            break;
+            case "eight":
+            break;
+            case "ht":
+            break;
+            case "withMutualGuilds":
+            break;
+            case "fieldText":
+            break;
+            case "fieldTextHook":
+            break;
+            case "http":
+            break;
+            case "oc":
+            break;
+            case "oca":
+            break;
+            case "NonConvert":
+            break;
+            case "Convert":
+            break;
+            case "ConvertEmoticons":
+            break;
+            case "mot":
+            break;
+            case "icons":
+            break;
+            case "iconsContainer":
+            break;
+            case "_include":
+            break;
+            case "inc":
+            break;
+            case "include":
+            break;
+            case "includesBounties":
+            break;
+            case "lu":
+            break;
+            case "lud":
+            break;
+            case "Bounties Scroll Indicator":
+            break;
+            case "originalBuffer":
+            break;
+            case "ferry":
+            break;
+            case "__internalInstanceHandle":
+            break;
+            case "_int":
+            break;
+            case "_internalInstanceHandle":
+            break;
+            case "internal":
+            break;
+            case "internalInstanceHandle":
+            break;
+            case "base64StringFromByteArray":
+            break;
+            case "indexOfSingleActiveTouch":
+            break;
+            case "TouchPad":
+            break;
+            case "deleteGuild":
+            break;
+            case "deleteGuildEvent":
+            break;
+            case "deleteGuildEventException":
+            break;
+            case "onReject":
+            break;
+            case "onRejectSuccess":
+            break;
+            case "durationThreshold":
+            break;
+            case "PortalSpotIllustration":
+            break;
+            case "varint32read":
+            break;
+            case "readUint":
+            break;
+            case "int":
+            break;
+            case "intlMessage":
+            break;
+            case "tl":
+            break;
+            case "getAnyDiscoverableStreamForUser":
+            break;
+            case "CaptchaEvent":
+            break;
+            case "EventActionLocation":
+            break;
+            case "activity_items":
+            break;
+            case "_items":
+            break;
+            case "_itemsForType":
+            break;
+            case "item":
+            break;
+            case "activeUnjoinedThreads":
+            break;
+            case "jo":
+            break;
+            case "setFocusMode":
+            break;
+            case "getMessageGiftIntentLastShownMap":
+            break;
+            case "applyFunctionToChildren":
+            break;
+            case "js":
+            break;
+            case "xs":
+            break;
+            case "GUILD_STREAM":
+            break;
+            case "isRendered":
+            break;
+            case "gradientOverlay":
+            break;
+            case "yOffset":
+            break;
+            case "hasInputText":
+            break;
+            case "targetHeight":
+            break;
+            case "getHeight":
+            break;
+            case "jus":
+            break;
+            case "justify":
+            break;
+            case "Content":
+            break;
+            case "PasskeysSpotIllustration":
+            break;
+            case "ke":
+            break;
+            case "selectedCount":
+            break;
+            case "pendingRetryItem":
+            break;
+            case "embedded_activity_location_kind":
+            break;
+            case "ki":
+            break;
+            case "kin":
+            break;
+            case "returnMentionIds":
+            break;
+            case "BuildingBlocksSpotIllustration":
+            break;
+            case "Backspace":
+            break;
+            case "BackspaceIcon":
+            break;
+            case "aria-label":
+            break;
+            case "aria-labelledby":
+            break;
+            case "lab":
+            break;
+            case "byAppEntry":
+            break;
+            case "tryGetLayout":
+            break;
+            case "Buf8":
+            break;
+            case "f8wNDl":
+            break;
+            case "DlcqlU":
+            break;
+            case "lcq":
+            break;
+            case "arrow_left":
+            break;
+            case "leftActions":
+            break;
+            case "_$esjava$I_length":
+            break;
+            case "I_length":
+            break;
+            case "_l":
+            break;
+            case "_length":
+            break;
+            case "len":
+            break;
+            case "lengthComputable":
+            break;
+            case "clj":
+            break;
+            case "MAX_VISIBLE_PAGES":
+            break;
+            case "getNames":
+            break;
+            case "load":
+            break;
+            case "J":
+            break;
+            case "setCurrentAnalyticsStep":
+            break;
+            case "stickersTransaction":
+            break;
+            case "action_location":
+            break;
+            case "loc":
+            break;
+            case "locationAnalyticsObject":
+            break;
+            case "AnalyticsObjects":
+            break;
+            case "__mapperRegistry":
+            break;
+            case "_map":
+            break;
+            case "mar":
+            break;
+            case "margin":
+            break;
+            case "arg":
+            break;
+            case "gi":
+            break;
+            case "heap_max":
+            break;
+            case "_max":
+              _HermesInternal = HermesInternal;
+              combined = "Valeur invalide dans " + code.origin;
+              return combined;
+            case "_maxListeners":
+            break;
+            case "maxListeners":
+            break;
+            case "shouldShowPopover":
+            break;
+            case "overflow":
+            break;
+            case "overflowBottom":
+            break;
+            case "__memo":
+            break;
+            case "mo":
+            break;
+            case "promotionType":
+            break;
+            case "effective_connection_speed":
+            break;
+            case "messageIds":
+            break;
+            case "sag":
+            break;
+            case "_$esjava$method":
+            break;
+            case "_$esjava$methodobject":
+            break;
+            case "ho":
+            break;
+            case "hod":
+            break;
+            case "dob":
+            break;
+            case "obj":
+            break;
+            case "object":
+            break;
+            case "objectAssign":
+            break;
+            case "alwaysBounceVertical":
+            break;
+            case "appearance":
+            break;
+            case "ActionStatusSubLabel":
+            break;
+            case "onStatus":
+            break;
+            case "Status":
+            break;
+            case "SubLabel":
+            break;
+            case "lineHeight":
+            break;
+            case "SvgFromXml":
+            break;
+            case "ml-Mlym":
+            break;
+            case "NOTIFICATION_SETTINGS_PERMISSION_HEADER":
+            break;
+            case "HEADER_TITLE_TEXT_STYLE":
+            break;
+            case "useLegacyChatInput":
+            break;
+            case "ChatInputOmniButtonActionType":
+            break;
+            case "mni":
+            break;
+            case "ButtonAction":
+            break;
+            case "people_holding_hands_tone2_tone5":
+            break;
+            case "Ambient":
+            break;
+            case "Ambient_Lightmode":
+            break;
+            case "bie":
+            break;
+            case "tm":
+            break;
+            case "mod":
+            break;
+            case "modeOptions":
+            break;
+            case "contact_names":
+            break;
+            case "nam":
+            break;
+            case "namesLegacy":
+            break;
+            case "AuditLogActions":
+            break;
+            case "getVoiceChannelBadgeExperiment":
+            break;
+            case "VoiceChannelBadgeExperiment":
+            break;
+            case "track_next":
+            break;
+            case "_nextChannelId":
+            break;
+            case "diffClamp":
+            break;
+            case "upcoming_server_event_notifications":
+            break;
+            case "PREMIUM_UPSELL_FILE_UPLOAD":
+            break;
+            case "FILE_UPLOAD_250_MB":
+            break;
+            case "messageDisplayCompact":
+            break;
+            case "activeSlideAlignment":
+            break;
+            case "Alignment":
+            break;
+            case "$ZodUnknown":
+            break;
+            case "ZodUnknown":
+            break;
+            case "Unknown":
+            break;
+            case "kn":
+            break;
+            case "$i":
+            break;
+            case "$input":
+            break;
+            case "inp":
+            break;
+            case "input":
+            break;
+            case "put":
+            break;
+            case "last4":
+            break;
+            case "cardholderName":
+            break;
+            case "expirationMonth":
+            break;
+            case "expirationYear":
+            break;
+            case "binData":
+            break;
+            case "CollectiblesVariantProductRecord":
+            break;
+            case "deaf":
+            break;
+            case "deaf_man":
+            break;
+            case "deaf_man_dark_skin_tone":
+            break;
+            case "next_track":
+            break;
+            case "_trackIfSessionMetadataExists":
+            break;
             default:
-              return "Virheellinen sy\u00F6te";
+              return "Entr\u00E9e invalide";
           }
         }
       };

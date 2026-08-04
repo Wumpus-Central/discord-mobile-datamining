@@ -55,17 +55,13 @@ if (self2) {
       if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let closure_0 = { string: { unit: { one: "\u0441\u0456\u043C\u0432\u0430\u043B", few: "\u0441\u0456\u043C\u0432\u0430\u043B\u044B", many: "\u0441\u0456\u043C\u0432\u0430\u043B\u0430\u045E" }, verb: "\u043C\u0435\u0446\u044C" }, array: { unit: { one: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442", few: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B", many: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430\u045E" }, verb: "\u043C\u0435\u0446\u044C" }, set: { unit: { one: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442", few: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u044B", many: "\u044D\u043B\u0435\u043C\u0435\u043D\u0442\u0430\u045E" }, verb: "\u043C\u0435\u0446\u044C" }, file: { unit: { one: "\u0431\u0430\u0439\u0442", few: "\u0431\u0430\u0439\u0442\u044B", many: "\u0431\u0430\u0439\u0442\u0430\u045E" }, verb: "\u043C\u0435\u0446\u044C" } };
-      let closure_1 = { regex: "\u0443\u0432\u043E\u0434", email: "email \u0430\u0434\u0440\u0430\u0441", url: "URL", emoji: "\u044D\u043C\u043E\u0434\u0437\u0456", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO \u0434\u0430\u0442\u0430 \u0456 \u0447\u0430\u0441", date: "ISO \u0434\u0430\u0442\u0430", time: "ISO \u0447\u0430\u0441", duration: "ISO \u043F\u0440\u0430\u0446\u044F\u0433\u043B\u0430\u0441\u0446\u044C", ipv4: "IPv4 \u0430\u0434\u0440\u0430\u0441", ipv6: "IPv6 \u0430\u0434\u0440\u0430\u0441", cidrv4: "IPv4 \u0434\u044B\u044F\u043F\u0430\u0437\u043E\u043D", cidrv6: "IPv6 \u0434\u044B\u044F\u043F\u0430\u0437\u043E\u043D", base64: "\u0440\u0430\u0434\u043E\u043A \u0443 \u0444\u0430\u0440\u043C\u0430\u0446\u0435 base64", base64url: "\u0440\u0430\u0434\u043E\u043A \u0443 \u0444\u0430\u0440\u043C\u0430\u0446\u0435 base64url", json_string: "JSON \u0440\u0430\u0434\u043E\u043A", e164: "\u043D\u0443\u043C\u0430\u0440 E.164", jwt: "JWT", template_literal: "\u0443\u0432\u043E\u0434" };
-      let closure_2 = { nan: "NaN", number: "\u043B\u0456\u043A", array: "\u043C\u0430\u0441\u0456\u045E" };
+      let closure_0 = { string: { unit: "\u0441\u0438\u043C\u0432\u043E\u043B\u0430", verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430" }, file: { unit: "\u0431\u0430\u0439\u0442\u0430", verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430" }, array: { unit: "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0430", verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430" }, set: { unit: "\u0435\u043B\u0435\u043C\u0435\u043D\u0442\u0430", verb: "\u0434\u0430 \u0441\u044A\u0434\u044A\u0440\u0436\u0430" } };
+      let closure_1 = { regex: "\u0432\u0445\u043E\u0434", email: "\u0438\u043C\u0435\u0439\u043B \u0430\u0434\u0440\u0435\u0441", url: "URL", emoji: "\u0435\u043C\u043E\u0434\u0436\u0438", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO \u0432\u0440\u0435\u043C\u0435", date: "ISO \u0434\u0430\u0442\u0430", time: "ISO \u0432\u0440\u0435\u043C\u0435", duration: "ISO \u043F\u0440\u043E\u0434\u044A\u043B\u0436\u0438\u0442\u0435\u043B\u043D\u043E\u0441\u0442", ipv4: "IPv4 \u0430\u0434\u0440\u0435\u0441", ipv6: "IPv6 \u0430\u0434\u0440\u0435\u0441", cidrv4: "IPv4 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D", cidrv6: "IPv6 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D", base64: "base64-\u043A\u043E\u0434\u0438\u0440\u0430\u043D \u043D\u0438\u0437", base64url: "base64url-\u043A\u043E\u0434\u0438\u0440\u0430\u043D \u043D\u0438\u0437", json_string: "JSON \u043D\u0438\u0437", e164: "E.164 \u043D\u043E\u043C\u0435\u0440", jwt: "JWT", template_literal: "\u0432\u0445\u043E\u0434" };
+      let closure_2 = { nan: "NaN", number: "\u0447\u0438\u0441\u043B\u043E", array: "\u043C\u0430\u0441\u0438\u0432" };
       return {
-        localeError: (code) => {
-          let minimum;
-          let minimum2;
-          let origin;
-          let origin2;
-          let str = code.code;
-          switch (str) {
+        localeError: (arg0) => {
+          const origin = tmp.origin;
+          switch ("\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430 \u0441\u0442\u043E\u0439\u043D\u043E\u0441\u0442 \u0432 ") {
             case "t":
             break;
             case "to":
@@ -727,7 +723,7 @@ if (self2) {
             case "lim":
             break;
             case "limited":
-            break;
+              return "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u043D\u0430 \u0441\u0442\u043E\u0439\u043D\u043E\u0441\u0442 \u0432 " + origin;
             case "limitedTimeBadge":
             break;
             case "mi":
@@ -750,6 +746,8 @@ if (self2) {
             break;
             case "$ZodCheckGreaterThan":
             break;
+            case "fetchMediaPostEmbed":
+            break;
             case "ToIntlMathematicalValue":
             break;
             case "th":
@@ -757,218 +755,46 @@ if (self2) {
             case "ValueSetter":
             break;
             case "$ZodCheckNumberFormat":
-              str = closure_2;
-              let expected = closure_2[code.expected];
-              if (expected == null) {
-                expected = code.expected;
-              }
-              const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp50 = str[parsedTypeResult];
-              if (tmp50 == null) {
-                tmp50 = parsedTypeResult;
-              }
-              if (obj.test(code.expected)) {
-                const _HermesInternal16 = HermesInternal;
-                let combined = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u045E\u0432\u043E\u0434: \u0447\u0430\u043A\u0430\u045E\u0441\u044F instanceof " + code.expected + ", \u0430\u0442\u0440\u044B\u043C\u0430\u043D\u0430 " + tmp50;
-              } else {
-                const _HermesInternal15 = HermesInternal;
-                combined = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u045E\u0432\u043E\u0434: \u0447\u0430\u043A\u0430\u045E\u0441\u044F " + expected + ", \u0430\u0442\u0440\u044B\u043C\u0430\u043D\u0430 " + tmp50;
-              }
-              return combined;
+            break;
             case "N":
             break;
             case "NumberFormat":
-              if (1 === code.values.length) {
-                const _HermesInternal14 = HermesInternal;
-                let combined1 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u045E\u0432\u043E\u0434: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F " + closure_2.stringifyPrimitive(code.values[0]);
-              } else {
-                const _HermesInternal13 = HermesInternal;
-                combined1 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u0432\u0430\u0440\u044B\u044F\u043D\u0442: \u0447\u0430\u043A\u0430\u045E\u0441\u044F \u0430\u0434\u0437\u0456\u043D \u0437 " + closure_2.joinValues(code.values, "|");
-              }
-              return combined1;
+            break;
             case "um":
             break;
             case "b":
-              let str26 = "<";
-              if (code.inclusive) {
-                str26 = "<=";
-              }
-              let tmp29 = table[code.origin];
-              if (tmp29 == null) {
-                tmp29 = null;
-              }
-              if (tmp29) {
-                const _Number2 = Number;
-                let one2 = tmp29.unit.one;
-                const many2 = tmp29.unit.many;
-                const _Math = Math;
-                const absolute = Math.abs(Number(code.maximum));
-                const result = absolute % 10;
-                const result1 = absolute % 100;
-                if (11 > result1) {
-                  if (1 !== result) {
-                    let few2 = many2;
-                    if (2 <= result) {
-                      few2 = many2;
-                      if (result <= 4) {
-                        few2 = tmp29.unit.few;
-                      }
-                    }
-                    one2 = few2;
-                  }
-                  let tmp38 = one2;
-                } else {
-                  tmp38 = many2;
-                }
-                let str31 = code.origin;
-                if (str31 == null) {
-                  str31 = "\u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435";
-                }
-                const _HermesInternal12 = HermesInternal;
-                return "\u0417\u0430\u043D\u0430\u0434\u0442\u0430 \u0432\u044F\u043B\u0456\u043A\u0456: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F, \u0448\u0442\u043E " + str31 + " \u043F\u0430\u0432\u0456\u043D\u043D\u0430 " + tmp29.verb + " " + str26 + code.maximum.toString() + " " + tmp38;
-              } else {
-                let str27 = code.origin;
-                if (str27 == null) {
-                  str27 = "\u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435";
-                }
-                const _HermesInternal11 = HermesInternal;
-                return "\u0417\u0430\u043D\u0430\u0434\u0442\u0430 \u0432\u044F\u043B\u0456\u043A\u0456: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F, \u0448\u0442\u043E " + str27 + " \u043F\u0430\u0432\u0456\u043D\u043D\u0430 \u0431\u044B\u0446\u044C " + str26 + code.maximum.toString();
-              }
             break;
             case "be":
             break;
             case "$ZodObject":
-              let str18 = ">";
-              if (code.inclusive) {
-                str18 = ">=";
-              }
-              str = table;
-              let tmp19 = str[code.origin];
-              if (tmp19 == null) {
-                tmp19 = null;
-              }
-              str = globalThis;
-              if (tmp19) {
-                const _Number = Number;
-                let one = tmp19.unit.one;
-                const many = tmp19.unit.many;
-                const absolute1 = Math.abs(Number(code.minimum));
-                const result2 = absolute1 % 10;
-                const result3 = absolute1 % 100;
-                if (11 > result3) {
-                  if (1 !== result2) {
-                    let few = many;
-                    if (2 <= result2) {
-                      few = many;
-                      if (result2 <= 4) {
-                        few = tmp19.unit.few;
-                      }
-                    }
-                    one = few;
-                  }
-                  let tmp25 = one;
-                } else {
-                  tmp25 = many;
-                }
-                ({ minimum: minimum2, origin: origin2 } = code);
-                return "\u0417\u0430\u043D\u0430\u0434\u0442\u0430 \u043C\u0430\u043B\u044B: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F, \u0448\u0442\u043E " + origin2 + " \u043F\u0430\u0432\u0456\u043D\u043D\u0430 " + tmp19.verb + " " + str18 + minimum2.toString() + " " + tmp25;
-              } else {
-                ({ minimum, origin } = code);
-                const _HermesInternal10 = HermesInternal;
-                return "\u0417\u0430\u043D\u0430\u0434\u0442\u0430 \u043C\u0430\u043B\u044B: \u0447\u0430\u043A\u0430\u043B\u0430\u0441\u044F, \u0448\u0442\u043E " + origin + " \u043F\u0430\u0432\u0456\u043D\u043D\u0430 \u0431\u044B\u0446\u044C " + str18 + minimum.toString();
-              }
             break;
             case "$ZodObjectJIT":
             break;
             case "ZodObject":
-              if ("starts_with" === code.format) {
-                const _HermesInternal9 = HermesInternal;
-                let combined2 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u0440\u0430\u0434\u043E\u043A: \u043F\u0430\u0432\u0456\u043D\u0435\u043D \u043F\u0430\u0447\u044B\u043D\u0430\u0446\u0446\u0430 \u0437 \"" + code.prefix + "\"";
-              } else {
-                str = "ends_with";
-                if (`ends_with` === code.format) {
-                  const _HermesInternal8 = HermesInternal;
-                  combined2 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u0440\u0430\u0434\u043E\u043A: \u043F\u0430\u0432\u0456\u043D\u0435\u043D \u0437\u0430\u043A\u0430\u043D\u0447\u0432\u0430\u0446\u0446\u0430 \u043D\u0430 \"" + code.suffix + "\"";
-                } else {
-                  str = "includes";
-                  if (`includes` === code.format) {
-                    const _HermesInternal7 = HermesInternal;
-                    combined2 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u0440\u0430\u0434\u043E\u043A: \u043F\u0430\u0432\u0456\u043D\u0435\u043D \u0437\u043C\u044F\u0448\u0447\u0430\u0446\u044C \"" + code.includes + "\"";
-                  } else if ("regex" === code.format) {
-                    const _HermesInternal6 = HermesInternal;
-                    combined2 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u0440\u0430\u0434\u043E\u043A: \u043F\u0430\u0432\u0456\u043D\u0435\u043D \u0430\u0434\u043F\u0430\u0432\u044F\u0434\u0430\u0446\u044C \u0448\u0430\u0431\u043B\u043E\u043D\u0443 " + code.pattern;
-                  } else {
-                    let format = table2[code.format];
-                    if (format == null) {
-                      format = code.format;
-                    }
-                    const _HermesInternal5 = HermesInternal;
-                    combined2 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B " + format;
-                  }
-                }
-              }
-              return combined2;
+            break;
             case "O":
             break;
             case "j":
-              const _HermesInternal4 = HermesInternal;
-              return "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u043B\u0456\u043A: \u043F\u0430\u0432\u0456\u043D\u0435\u043D \u0431\u044B\u0446\u044C \u043A\u0440\u0430\u0442\u043D\u044B\u043C " + code.divisor;
+            break;
             case "je":
             break;
             case "IT":
-              let tmp5 = code.keys.length > 1;
-              let str4 = "\u043A\u043B\u044E\u0447";
-              if (tmp5) {
-                str4 = "\u043A\u043B\u044E\u0447\u044B";
-              }
-              str = ", ";
-              let joinValuesResult = closure_2.joinValues(code.keys, `, `);
-              let _HermesInternal3 = HermesInternal;
-              let combined3 = "\u041D\u0435\u0440\u0430\u0441\u043F\u0430\u0437\u043D\u0430\u043D\u044B " + str4 + ": " + joinValuesResult;
-              return combined3;
+            break;
             case "MEDIA_PICKER_SEND_BUTTON_SPRING":
             break;
             case "marginHorizontal":
-              let _HermesInternal2 = HermesInternal;
-              let combined4 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u043A\u043B\u044E\u0447 \u0443 " + code.origin;
-              return combined4;
+            break;
             case "Direction":
             break;
             case "rect":
-              return "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u045E\u0432\u043E\u0434";
+            break;
             case "REGISTER_IDENTITY":
             break;
             case "PX_80":
-              let _HermesInternal = HermesInternal;
-              let combined5 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u0430\u0435 \u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435 \u045E " + code.origin;
-              return combined5;
+            break;
             case "_":
             break;
-            case "3AS4UM":
-            break;
-            case "UM":
-            break;
-            case "UMAX":
-            break;
-            case "MAX_AUDIENCE_ROW_LIMIT":
-            break;
-            case "AUD":
-            break;
-            case "AUDIENCE":
-            break;
-            case "mouse_three_button":
-            break;
-            case "three":
-            break;
-            case "three_button_mouse":
-            break;
-            case "mouse":
-            break;
-            case "mouse2":
-            break;
-            case "use2FARemoveDisableReason":
-            break;
-            case "useHasReachedEnd":
+            case "useICYMIEnabled":
             break;
             case "INVALID_PIN_MESSAGE_CHANNEL":
             break;
@@ -1382,15 +1208,9 @@ if (self2) {
             break;
             case "bel":
             break;
-            case "removeToken":
+            case "fetchClaimedQuests":
             break;
-            case "enableImagePrefetchingAndroid":
-            break;
-            case "fetching":
-            break;
-            case "toAST":
-            break;
-            case "STEAM_ITEM_COUNT_DOTA2":
+            case "SPACE_32":
             break;
             case "Role":
             break;
@@ -1609,22 +1429,11 @@ if (self2) {
             case "ASSET":
             break;
             case "omitGuildId":
-              tmp5 = code.keys.length > 1;
-              str4 = "\u043A\u043B\u044E\u0447";
-              if (tmp5) {
-                str4 = "\u043A\u043B\u044E\u0447\u044B";
-              }
-              str = ", ";
-              joinValuesResult = closure_2.joinValues(code.keys, `, `);
-              _HermesInternal3 = HermesInternal;
-              combined3 = "\u041D\u0435\u0440\u0430\u0441\u043F\u0430\u0437\u043D\u0430\u043D\u044B " + str4 + ": " + joinValuesResult;
-              return combined3;
+            break;
             case "_bodyArrayBuffer":
             break;
             case "dy":
-              _HermesInternal2 = HermesInternal;
-              combined4 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u043A\u043B\u044E\u0447 \u0443 " + code.origin;
-              return combined4;
+            break;
             case "safeAreaRight":
             break;
             case "bor":
@@ -1632,20 +1441,12 @@ if (self2) {
             case "border":
             break;
             case "order":
-              _HermesInternal = HermesInternal;
-              combined5 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u0430\u0435 \u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435 \u045E " + code.origin;
-              return combined5;
+            break;
             case "der":
             break;
             case "Radius":
             break;
             case "iu":
-            break;
-            case "AgeVerificationModalVersion":
-            break;
-            case "allowEmpty":
-            break;
-            case "allowEmptyArrays":
             break;
             case "overflow_bottom":
             break;
@@ -1851,11 +1652,11 @@ if (self2) {
             break;
             case "maximumValue":
             break;
-            case "gru":
+            case "_isBackgrounded":
             break;
-            case "kangaroo":
+            case "isBackground":
             break;
-            case "rootProvider":
+            case "roundedNumber":
             break;
             case "_$esjava$cursor":
             break;
@@ -2017,10 +1818,6 @@ if (self2) {
             break;
             case "flag_et":
             break;
-            case "isCleaning":
-            break;
-            case "getIncrementalStickerCountForTier":
-            break;
             case "useFetchSocialLayerStorefrontProductDetailsEmbedData":
             break;
             case "div":
@@ -2045,13 +1842,7 @@ if (self2) {
             break;
             case "doneButtonContainer":
             break;
-            case "fetchGuildJoinRequests":
-            break;
-            case "fetchGuildJoinRequestsForUser":
-            break;
-            case "giftCount":
-            break;
-            case "trackedType":
+            case "unreadByType":
             break;
             case "__duration":
             break;
@@ -2258,32 +2049,21 @@ if (self2) {
             case "StreamQualitiesToPremiumType":
             break;
             case "PremiumTypeToActivePremiumSubscriptionSKU":
-              tmp5 = code.keys.length > 1;
-              str4 = "\u043A\u043B\u044E\u0447";
-              if (tmp5) {
-                str4 = "\u043A\u043B\u044E\u0447\u044B";
-              }
-              str = ", ";
-              joinValuesResult = closure_2.joinValues(code.keys, `, `);
-              _HermesInternal3 = HermesInternal;
-              combined3 = "\u041D\u0435\u0440\u0430\u0441\u043F\u0430\u0437\u043D\u0430\u043D\u044B " + str4 + ": " + joinValuesResult;
-              return combined3;
+            break;
             case "PremiumSubscriptionSKUToPremiumType":
             break;
             case "PremiumTypeOrder":
-              _HermesInternal2 = HermesInternal;
-              combined4 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u043A\u043B\u044E\u0447 \u0443 " + code.origin;
-              return combined4;
+            break;
             case "constraints":
+            break;
+            case "USER_SAFETY_TOOLS_BLOCK_CANCEL":
             break;
             case "_getGuildState":
             break;
             case "getGuildState":
             break;
             case "G":
-              _HermesInternal = HermesInternal;
-              combined5 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u0430\u0435 \u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435 \u045E " + code.origin;
-              return combined5;
+            break;
             case "Guild":
             break;
             case "allowLogoutRedirect":
@@ -2313,16 +2093,8 @@ if (self2) {
             case "DefaultGuildsRestricted":
             break;
             case "DefaultGuildsRestrictedV2":
-            break;
-            case "collectionId":
-            break;
-            case "collectionIds":
-            break;
-            case "spanToTransactionTraceContext":
-            break;
-            case "glow":
-            break;
-            case "glowColor":
+              const _HermesInternal = HermesInternal;
+              const combined = "\u041D\u0435\u0440\u0430\u0437\u043F\u043E\u0437\u043D\u0430\u0442" + tmp2 + " \u043A\u043B\u044E\u0447" + tmp3 + ": " + origin(tmp.keys, ", ");
             break;
             case "avatar_hash":
             break;
@@ -2385,12 +2157,6 @@ if (self2) {
             case "icons":
             break;
             case "iconsContainer":
-            break;
-            case "computeActivityFlags":
-            break;
-            case "ActivityFlags":
-            break;
-            case "subscribeTextInputValue":
             break;
             case "_include":
             break;
@@ -2467,6 +2233,12 @@ if (self2) {
             case "activeUnjoinedThreads":
             break;
             case "jo":
+            break;
+            case "setFocusMode":
+            break;
+            case "getMessageGiftIntentLastShownMap":
+            break;
+            case "applyFunctionToChildren":
             break;
             case "js":
             break;
@@ -2599,6 +2371,8 @@ if (self2) {
             case "__memo":
             break;
             case "mo":
+            break;
+            case "promotionType":
             break;
             case "effective_connection_speed":
             break;
@@ -2826,263 +2600,8 @@ if (self2) {
             break;
             case "pus":
             break;
-            case "enableMuteWarning":
-            break;
-            case "DOMParser":
-            break;
-            case "rad":
-            break;
-            case "ii":
-            break;
-            case "animateDrawer":
-            break;
-            case "DrawerActions":
-            break;
-            case "aw":
-            break;
-            case "awe":
-            break;
-            case "verifiedBot":
-            break;
-            case "$ZodPrefault":
-            break;
-            case "ZodPrefault":
-            break;
-            case "reg":
-            break;
-            case "register":
-            break;
-            case "recipients":
-            break;
-            case "reject":
-            break;
-            case "eject":
-            break;
-            case "ErrorNumber":
-            break;
-            case "__replaceAnimatedNodeWithValues":
-            break;
-            case "place":
-            break;
-            case "lac":
-            break;
-            case "ace":
-            break;
-            case "lastReconciledDismissalAtMs":
-            break;
-            case "isCamera":
-            break;
-            case "kiss_person_person_medium_light_skin_tone_light_skin_tone":
-            break;
-            case "_resolve":
-            break;
-            case "_resolveEmpty":
-            break;
-            case "sol":
-            break;
-            case "AppsFlyer":
-            break;
-            case "_$esjava$result":
-              tmp5 = code.keys.length > 1;
-              str4 = "\u043A\u043B\u044E\u0447";
-              if (tmp5) {
-                str4 = "\u043A\u043B\u044E\u0447\u044B";
-              }
-              str = ", ";
-              joinValuesResult = closure_2.joinValues(code.keys, `, `);
-              _HermesInternal3 = HermesInternal;
-              combined3 = "\u041D\u0435\u0440\u0430\u0441\u043F\u0430\u0437\u043D\u0430\u043D\u044B " + str4 + ": " + joinValuesResult;
-              return combined3;
-            case "resultCount":
-            break;
-            case "sul":
-              _HermesInternal2 = HermesInternal;
-              combined4 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u043A\u043B\u044E\u0447 \u0443 " + code.origin;
-              return combined4;
-            case "getBrightness":
-            break;
-            case "BrightnessDown":
-            break;
-            case "ownerId":
-            break;
-            case "UnitType":
-              _HermesInternal = HermesInternal;
-              combined5 = "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u0430\u0435 \u0437\u043D\u0430\u0447\u044D\u043D\u043D\u0435 \u045E " + code.origin;
-              return combined5;
-            case "UnitTypeToKind":
-            break;
-            case "Kindle":
-            break;
-            case "Kindle Fire":
-            break;
-            case "_setStickyHeaderRef":
-            break;
-            case "unsync":
-            break;
-            case "addFrame":
-            break;
-            case "run":
-            break;
-            case "actionStatusAccessibilityLabel":
-            break;
-            case "scale":
-            break;
-            case "ale":
-            break;
-            case "handleCardVisibilityChange":
-            break;
-            case "overrideDCFLastDCDismissed":
-            break;
-            case "getPremiumTypeFromRawValue":
-            break;
-            case "shape":
-            break;
-            case "hap":
-            break;
-            case "ape":
-            break;
-            case "pes":
-            break;
-            case "ariaDescription":
-            break;
-            case "stringifyPrimitive":
-            break;
-            case "presentCommandCopied":
-            break;
-            case "sku":
-            break;
-            case "skuIds":
-            break;
-            case "shouldEnableYYTextReplacement":
-            break;
-            case "fromByteArray":
-            break;
-            case "sl":
-            break;
-            case "sliceBody":
-            break;
-            case "ice":
-            break;
-            case "FORWARD_BREADCRUMB":
-            break;
-            case "FORWARD_BREADCRUMB_CLICKED":
-            break;
-            case "GET_CHANNEL_PERMISSIONS":
-            break;
-            case "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS":
-            break;
-            case "SAFETY_TERMS_OF_SERVICE":
-            break;
-            case "SERVICE_TIMEOUT":
-            break;
-            case "canManageVibegrations":
-            break;
-            case "isPerformanceResourceTiming":
-            break;
-            case "PerformanceResourceTiming":
-            break;
-            case "PerformanceResourceTiming_public":
-            break;
-            case "sou":
-            break;
-            case "public_flags":
-            break;
-            case "newFlowAnalyticsLoadId":
-            break;
-            case "addYears":
-            break;
-            case "showBoostStep":
-            break;
-            case "_splitColorsIntoChannels":
-            break;
-            case "MMlhsr":
-            break;
-            case "sr-Cyrl":
-            break;
-            case "sr-Cyrl-BA":
-            break;
-            case "ClipsRecordingRestartNeeded":
-            break;
-            case "star":
-            break;
-            case "art":
-            break;
-            case "liveTag":
-            break;
-            case "client_app_state":
-            break;
-            case "app_state":
-            break;
-            case "_state":
-            break;
-            case "stat":
-            break;
-            case "stateActionComplete":
-            break;
-            case "woman_construction_worker_medium_dark_skin_tone":
-            break;
-            case "man_construction_worker_medium_dark_skin_tone":
-            break;
-            case "isASCIIAlpha":
-            break;
-            case "ASC":
-            break;
-            case "ASCII":
-            break;
-            case "Alphanumeric":
-            break;
-            case "numeric":
-            break;
-            case "appeal_status":
-            break;
-            case "_status":
-            break;
-            case "statusAllowsPerks":
-            break;
-            case "HandRequestDenyIcon":
-            break;
-            case "DenyIcon":
-            break;
-            case "_$esjava$s":
-            break;
-            case "_$esjava$substring_i":
-            break;
-            case "sub":
-            break;
-            case "subs":
-            break;
-            case "substr":
-            break;
-            case "substring":
-            break;
-            case "bs":
-            break;
-            case "bst":
-            break;
-            case "string_id":
-            break;
-            case "AUTO_MODERATION_MENTION_RAID_DETECTION":
-            break;
-            case "MENTION_RAID":
-            break;
-            case "RAID":
-            break;
-            case "NEUTRAL_76":
-            break;
-            case "DEPRECATED_style":
-            break;
-            case "_style":
-            break;
-            case "sty":
-            break;
-            case "styleAttr":
-            break;
-            case "surrogate":
-            break;
-            case "surrogatesFrame":
-            break;
             default:
-              return "\u041D\u044F\u043F\u0440\u0430\u0432\u0456\u043B\u044C\u043D\u044B \u045E\u0432\u043E\u0434";
+              return "\u041D\u0435\u0432\u0430\u043B\u0438\u0434\u0435\u043D \u0432\u0445\u043E\u0434";
           }
         }
       };

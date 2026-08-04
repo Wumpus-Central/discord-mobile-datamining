@@ -28,7 +28,7 @@ arg5.createLangChainCallbackHandler = function createLangChainCallbackHandler() 
     lc_namespace: ["langchain_core", "callbacks", "sentry"],
     lc_secrets: "r",
     lc_attributes: "accessibilityRole",
-    lc_aliases: "error",
+    lc_aliases: "forEach",
     lc_serializable_keys: "channelId",
     lc_id: ["langchain_core", "callbacks", "sentry"],
     lc_kwargs: {},

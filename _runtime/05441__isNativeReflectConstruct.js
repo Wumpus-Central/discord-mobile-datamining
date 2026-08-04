@@ -356,7 +356,7 @@ class Swipeable {
       tmp3Result.setState({ rowState: 0 });
     };
     value = new Animated.Value(0);
-    obj = { dragX: value, rowTranslation: null, rowState: 0, leftWidth: "call", rightOffset: "createStyles", rowWidth: "y" };
+    obj = { dragX: value, rowTranslation: null, rowState: 0, leftWidth: "call", rightOffset: "backgroundColor", rowWidth: "y" };
     value1 = new Animated.Value(0);
     obj[1] = value1;
     tmp3Result.state = obj;

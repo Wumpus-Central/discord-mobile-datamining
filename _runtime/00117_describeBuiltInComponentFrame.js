@@ -3,9 +3,9 @@ import { __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE } from 
 import closure_158 from "setUpDefaltReactNativeEnvironment";
 import closure_162 from "setUpDefaltReactNativeEnvironment";
 
-function describeBuiltInComponentFrame(Activity) {
+function describeBuiltInComponentFrame(type) {
   if (undefined !== str3) {
-    return "\n" + str3 + Activity + str5;
+    return "\n" + str3 + type + str5;
   } else {
     try {
       const _Error = Error;
@@ -34,10 +34,10 @@ function describeBuiltInComponentFrame(Activity) {
     }
   }
 }
-function describeNativeComponentFrame(displayName) {
-  let closure_0 = displayName;
+function describeNativeComponentFrame(type, arg1) {
+  let closure_0 = type;
   let closure_1 = arg1;
-  if (displayName) {
+  if (type) {
     if (!c8) {
       c8 = true;
       const _Error = Error;
@@ -231,13 +231,13 @@ function describeNativeComponentFrame(displayName) {
                   }
                   let str11 = `
   ${str8.replace(" at new ", " at ")}`;
-                  displayName = displayName.displayName;
+                  let displayName = type.displayName;
                   if (displayName) {
                     displayName = `
   ${str8.replace(" at new ", " at ")}`.includes("<anonymous>");
                   }
                   if (displayName) {
-                    str11 = str11.replace("<anonymous>", displayName.displayName);
+                    str11 = str11.replace("<anonymous>", type.displayName);
                   }
                   c8 = false;
                   const _Error4 = Error;
@@ -253,10 +253,10 @@ function describeNativeComponentFrame(displayName) {
         Error.prepareStackTrace = prepareStackTrace;
         let str6 = "";
         let str7 = "";
-        if (displayName) {
-          let name = displayName.displayName;
+        if (type) {
+          let name = type.displayName;
           if (!name) {
-            name = displayName.name;
+            name = type.name;
           }
           str7 = name;
         }
@@ -274,7 +274,86 @@ function describeNativeComponentFrame(displayName) {
   return "";
 }
 function describeFiber(_return, arg1) {
-  return describeBuiltInComponentFrame("Activity");
+  switch (_return.tag) {
+    case 0:
+      let tmp5 = describeNativeComponentFrame(_return.type, false);
+      return tmp5;
+    case 1:
+      return describeNativeComponentFrame(_return.type, true);
+    case 2:
+      return "";
+    case 3:
+      return "";
+    case 4:
+      return "";
+    case 5:
+      let tmp14 = describeBuiltInComponentFrame(_return.type);
+      return tmp14;
+    case 6:
+      return "";
+    case 7:
+      return "";
+    case 8:
+      return "";
+    case 9:
+      return "";
+    case 10:
+      return "";
+    case 11:
+      return describeNativeComponentFrame(_return.type.render, false);
+    case 12:
+      return "";
+    case 13:
+      if (_return.child !== arg1) {
+        if (null !== arg1) {
+          let tmp10 = describeBuiltInComponentFrame("Suspense Fallback");
+        }
+        return tmp10;
+      }
+      tmp10 = describeBuiltInComponentFrame("Suspense");
+    break;
+    case 14:
+      return "";
+    case 15:
+      tmp5 = describeNativeComponentFrame(_return.type, false);
+      return tmp5;
+    case 16:
+      return describeBuiltInComponentFrame("Lazy");
+    case 17:
+      return "";
+    case 18:
+      return "";
+    case 19:
+      return describeBuiltInComponentFrame("SuspenseList");
+    case 20:
+      return "";
+    case 21:
+      return "";
+    case 22:
+      return "";
+    case 23:
+      return "";
+    case 24:
+      return "";
+    case 25:
+      return "";
+    case 26:
+      tmp14 = describeBuiltInComponentFrame(_return.type);
+      return tmp14;
+    case 27:
+      tmp14 = describeBuiltInComponentFrame(_return.type);
+      return tmp14;
+    case 28:
+      return "";
+    case 29:
+      return "";
+    case 30:
+      return "";
+    case 31:
+      return describeBuiltInComponentFrame("Activity");
+    default:
+      return "";
+  }
 }
 function getStackByFiberInDevAndProd(current) {
   let _return = current;
@@ -13080,7 +13159,7 @@ __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S = (arg0, obj) 
         tmp5 = tmp6;
       }
       c124 = tmp5;
-      obj = { status: "pending", value: "Array", then: false };
+      obj = { status: "pending", value: "Array", then: "a" };
       obj[2] = function then(arg0) {
         items.push(arg0);
       };

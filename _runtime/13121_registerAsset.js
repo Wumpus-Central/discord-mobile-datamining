@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 120, height: 108, scales: [1, 2, 3], hash: "3ec4fb1a4fcdb736c4c87e7591f26daf", name: "img_remote_auth_succeeded", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 120, height: 100, scales: [1, 2, 3], hash: "284d56b6868426394c75beb20a31672d", name: "img_remote_auth_not_found", type: "png" });

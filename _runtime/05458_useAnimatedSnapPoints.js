@@ -96,7 +96,7 @@ arg5.useAnimatedSnapPoints = (snapPoints, containerHeight, contentHeight, handle
         length = items.length;
         tmp = !length;
         if (length) {
-          tmp = !items.find(/* F104862 */ function() { ... });
+          tmp = !items.find(/* F104858 */ function() { ... });
         }
         return !tmp;
       }

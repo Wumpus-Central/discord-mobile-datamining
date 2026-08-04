@@ -1,4 +1,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 181, height: 141, scales: [2, 3], hash: "ed03b4a3566d0ff2258e5577eb7c05bd", name: "empty_server_settings_emoji_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 272, height: 212, scales: [2, 3], hash: "d170615f8db6e5f7f55a15bde87cb516", name: "empty_server_settings_emoji_darker", type: "png" });

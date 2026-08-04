@@ -1,8 +1,2 @@
 
-export default (arg0) => {
-  try {
-    return arg0();
-  } catch (err) {
-    return true;
-  }
-};
+export default (arg0) => require(13483)(require(13487)(arg0));

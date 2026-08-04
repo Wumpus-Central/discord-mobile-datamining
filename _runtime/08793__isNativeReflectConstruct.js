@@ -62,11 +62,11 @@ const styles = StyleSheet.create({ base: { overflow: "hidden" } });
 class Video {
   constructor(arg0) {
     self = this;
-    tmp = _isNativeReflectConstruct(this, f115692);
+    tmp = _isNativeReflectConstruct(this, f115687);
     items = [];
     items[0] = global;
     tmp2 = _isNativeReflectConstruct;
-    obj = _isNativeReflectConstruct(f115692);
+    obj = _isNativeReflectConstruct(f115687);
     tmp3 = _isNativeReflectConstruct;
     if (_isNativeReflectConstruct()) {
       tmp5 = globalThis;
@@ -76,7 +76,7 @@ class Video {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    f115692 = tmp3Result;
+    f115687 = tmp3Result;
     tmp3Result.seek = (arg0) => {
       if (isNaN(arg0)) {
         const _Error = Error;
@@ -94,8 +94,8 @@ class Video {
     tmp3Result.dismissFullscreenPlayer = () => {
       store.setNativeProps({ fullscreen: false });
     };
-    f115692 = undefined;
-    f115692 = _isNativeReflectConstruct((arg0) => {
+    f115687 = undefined;
+    f115687 = _isNativeReflectConstruct((arg0) => {
       let closure_0 = arg0;
       let c2 = 0;
       let c1 = 0;

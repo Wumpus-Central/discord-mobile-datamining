@@ -56,11 +56,14 @@ if (self2) {
         HermesBuiltin.throwTypeError();
       }
       let closure_0 = { string: { unit: "caract\u00E8res", verb: "avoir" }, file: { unit: "octets", verb: "avoir" }, array: { unit: "\u00E9l\u00E9ments", verb: "avoir" }, set: { unit: "\u00E9l\u00E9ments", verb: "avoir" } };
-      let closure_1 = { regex: "entr\u00E9e", email: "adresse e-mail", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "date et heure ISO", date: "date ISO", time: "heure ISO", duration: "dur\u00E9e ISO", ipv4: "adresse IPv4", ipv6: "adresse IPv6", cidrv4: "plage IPv4", cidrv6: "plage IPv6", base64: "cha\u00EEne encod\u00E9e en base64", base64url: "cha\u00EEne encod\u00E9e en base64url", json_string: "cha\u00EEne JSON", e164: "num\u00E9ro E.164", jwt: "JWT", template_literal: "entr\u00E9e" };
-      let closure_2 = { nan: "NaN", number: "nombre", array: "tableau" };
+      let closure_1 = { regex: "entr\u00E9e", email: "adresse courriel", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "date-heure ISO", date: "date ISO", time: "heure ISO", duration: "dur\u00E9e ISO", ipv4: "adresse IPv4", ipv6: "adresse IPv6", cidrv4: "plage IPv4", cidrv6: "plage IPv6", base64: "cha\u00EEne encod\u00E9e en base64", base64url: "cha\u00EEne encod\u00E9e en base64url", json_string: "cha\u00EEne JSON", e164: "num\u00E9ro E.164", jwt: "JWT", template_literal: "entr\u00E9e" };
+      let closure_2 = { nan: "NaN" };
       return {
         localeError: (code) => {
-          switch (code.code) {
+          let minimum;
+          let origin;
+          code = code.code;
+          switch (code) {
             case "t":
             break;
             case "to":
@@ -608,43 +611,143 @@ if (self2) {
             case "at":
             break;
             case "te":
-            break;
+              let expected = closure_2[code.expected];
+              if (expected == null) {
+                expected = code.expected;
+              }
+              const parsedTypeResult = closure_2.parsedType(code.input);
+              let tmp47 = closure_2[parsedTypeResult];
+              if (tmp47 == null) {
+                tmp47 = parsedTypeResult;
+              }
+              if (obj.test(code.expected)) {
+                const _HermesInternal17 = HermesInternal;
+                let combined = "Entr\u00E9e invalide : attendu instanceof " + code.expected + ", re\u00E7u " + tmp47;
+              } else {
+                const _HermesInternal16 = HermesInternal;
+                combined = "Entr\u00E9e invalide : attendu " + expected + ", re\u00E7u " + tmp47;
+              }
+              return combined;
             case "serializeDate":
             break;
             case "MarkupParserNodeTypeError":
-            break;
+              if (1 === code.values.length) {
+                const _HermesInternal15 = HermesInternal;
+                let combined1 = "Entr\u00E9e invalide : attendu " + closure_2.stringifyPrimitive(code.values[0]);
+              } else {
+                const _HermesInternal14 = HermesInternal;
+                combined1 = "Option invalide : attendu l'une des valeurs suivantes " + closure_2.joinValues(code.values, "|");
+              }
+              return combined1;
             case "E":
             break;
             case "Err":
-            break;
+              let str27 = "<";
+              if (code.inclusive) {
+                str27 = "\u2264";
+              }
+              code = table;
+              let tmp29 = code[code.origin];
+              if (tmp29 == null) {
+                tmp29 = null;
+              }
+              let str28 = code.origin;
+              if (tmp29) {
+                if (str28 == null) {
+                  str28 = "la valeur";
+                }
+                const _HermesInternal13 = HermesInternal;
+                let combined2 = "Trop grand : attendu que " + str28 + " ait " + str27 + code.maximum.toString() + " " + tmp29.unit;
+                const str33 = code.maximum;
+              } else {
+                let str29 = str28;
+                if (str28 == null) {
+                  str29 = "la valeur";
+                }
+                const _HermesInternal12 = HermesInternal;
+                combined2 = "Trop grand : attendu que " + str29 + " soit " + str27 + code.maximum.toString();
+                const str30 = code.maximum;
+              }
+              return combined2;
             case "ro":
             break;
             case "or":
-            break;
+              let str21 = ">";
+              if (code.inclusive) {
+                str21 = "\u2265";
+              }
+              let tmp18 = table[code.origin];
+              if (tmp18 == null) {
+                tmp18 = null;
+              }
+              ({ origin, minimum } = code);
+              let str = minimum.toString();
+              if (tmp18) {
+                const _HermesInternal11 = HermesInternal;
+                let combined3 = "Trop petit : attendu que " + origin + " ait " + str21 + str + " " + tmp18.unit;
+              } else {
+                const _HermesInternal10 = HermesInternal;
+                combined3 = "Trop petit : attendu que " + origin + " soit " + str21 + str;
+              }
+              return combined3;
             case "_createRenderMask":
             break;
             case "SEMANTIC_ATTRIBUTE_SENTRY_SOURCE":
-            break;
+              if ("starts_with" === code.format) {
+                const _HermesInternal9 = HermesInternal;
+                let combined4 = "Cha\u00EEne invalide : doit commencer par \"" + code.prefix + "\"";
+              } else if ("ends_with" === code.format) {
+                const _HermesInternal8 = HermesInternal;
+                combined4 = "Cha\u00EEne invalide : doit se terminer par \"" + code.suffix + "\"";
+              } else if ("includes" === code.format) {
+                const _HermesInternal7 = HermesInternal;
+                combined4 = "Cha\u00EEne invalide : doit inclure \"" + code.includes + "\"";
+              } else if ("regex" === code.format) {
+                const _HermesInternal6 = HermesInternal;
+                combined4 = "Cha\u00EEne invalide : doit correspondre au motif " + code.pattern;
+              } else {
+                let format = table2[code.format];
+                if (format == null) {
+                  format = code.format;
+                }
+                const _HermesInternal5 = HermesInternal;
+                combined4 = "" + format + " invalide";
+              }
+              return combined4;
             case "BOT_HTTP_INTERACTIONS":
             break;
             case "H":
-            break;
+              const _HermesInternal4 = HermesInternal;
+              return "Nombre invalide : doit \u00EAtre un multiple de " + code.divisor;
             case "HT":
             break;
             case "TP":
-            break;
+              let str3 = "";
+              let str4 = "";
+              if (code.keys.length > 1) {
+                str4 = "s";
+              }
+              if (code.keys.length > 1) {
+                str3 = "s";
+              }
+              const _HermesInternal3 = HermesInternal;
+              return "Cl\u00E9" + str4 + " non reconnue" + str3 + " : " + closure_2.joinValues(code.keys, ", ");
             case "P":
             break;
             case "INTERACTIONS":
-            break;
+              const _HermesInternal2 = HermesInternal;
+              return "Cl\u00E9 invalide dans " + code.origin;
             case "NSFW_SPACE_WARNING_MODAL_CLICKED":
             break;
             case "rm":
-            break;
+              return "Entr\u00E9e invalide";
             case "m":
             break;
             case "me":
-            break;
+              let _HermesInternal = HermesInternal;
+              str = "Valeur invalide dans ";
+              let combined5 = "Valeur invalide dans " + code.origin;
+              return combined5;
             case "mes":
             break;
             case "I":
@@ -682,7 +785,10 @@ if (self2) {
             case "mp":
             break;
             case "po":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "Valeur invalide dans ";
+              combined5 = "Valeur invalide dans " + code.origin;
+              return combined5;
             case "pon":
             break;
             case "one":
@@ -745,6 +851,8 @@ if (self2) {
             break;
             case "$ZodCheckGreaterThan":
             break;
+            case "fetchMediaPostEmbed":
+            break;
             case "ToIntlMathematicalValue":
             break;
             case "th":
@@ -791,31 +899,7 @@ if (self2) {
             break;
             case "_":
             break;
-            case "3AS4UM":
-            break;
-            case "UM":
-            break;
-            case "UMAX":
-            break;
-            case "MAX_AUDIENCE_ROW_LIMIT":
-            break;
-            case "AUD":
-            break;
-            case "AUDIENCE":
-            break;
-            case "mouse_three_button":
-            break;
-            case "three":
-            break;
-            case "three_button_mouse":
-            break;
-            case "mouse":
-            break;
-            case "mouse2":
-            break;
-            case "use2FARemoveDisableReason":
-            break;
-            case "useHasReachedEnd":
+            case "useICYMIEnabled":
             break;
             case "INVALID_PIN_MESSAGE_CHANNEL":
             break;
@@ -1020,7 +1104,10 @@ if (self2) {
             case "START":
             break;
             case "IO":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "Valeur invalide dans ";
+              combined5 = "Valeur invalide dans " + code.origin;
+              return combined5;
             case "__":
             break;
             case "__c":
@@ -1050,7 +1137,10 @@ if (self2) {
             case "_data":
             break;
             case "__REMOTEDEV__":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "Valeur invalide dans ";
+              combined5 = "Valeur invalide dans " + code.origin;
+              return combined5;
             case "__DISCORD_WINDOW_ID":
             break;
             case "__iteratees__":
@@ -1072,7 +1162,10 @@ if (self2) {
             case "__BUNDLE_START_TIME__":
             break;
             case "__e":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "Valeur invalide dans ";
+              combined5 = "Valeur invalide dans " + code.origin;
+              return combined5;
             case "Mo":
             break;
             case "ModuleNotFoundError":
@@ -1229,15 +1322,9 @@ if (self2) {
             break;
             case "bel":
             break;
-            case "removeToken":
+            case "fetchClaimedQuests":
             break;
-            case "enableImagePrefetchingAndroid":
-            break;
-            case "fetching":
-            break;
-            case "toAST":
-            break;
-            case "STEAM_ITEM_COUNT_DOTA2":
+            case "SPACE_32":
             break;
             case "Role":
             break;
@@ -1475,12 +1562,6 @@ if (self2) {
             break;
             case "iu":
             break;
-            case "AgeVerificationModalVersion":
-            break;
-            case "allowEmpty":
-            break;
-            case "allowEmptyArrays":
-            break;
             case "overflow_bottom":
             break;
             case "_bottom":
@@ -1624,7 +1705,10 @@ if (self2) {
             case "_container":
             break;
             case "contain":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "Valeur invalide dans ";
+              combined5 = "Valeur invalide dans " + code.origin;
+              return combined5;
             case "containerBorderColor":
             break;
             case "ai":
@@ -1685,11 +1769,11 @@ if (self2) {
             break;
             case "maximumValue":
             break;
-            case "gru":
+            case "_isBackgrounded":
             break;
-            case "kangaroo":
+            case "isBackground":
             break;
-            case "rootProvider":
+            case "roundedNumber":
             break;
             case "_$esjava$cursor":
             break;
@@ -1812,9 +1896,7 @@ if (self2) {
             case "dispatchFrameUrl":
             break;
             case "spa":
-              let _HermesInternal = HermesInternal;
-              let combined = "Valeur invalide dans " + code.origin;
-              return combined;
+            break;
             case "pat":
             break;
             case "patch":
@@ -1853,10 +1935,6 @@ if (self2) {
             break;
             case "flag_et":
             break;
-            case "isCleaning":
-            break;
-            case "getIncrementalStickerCountForTier":
-            break;
             case "useFetchSocialLayerStorefrontProductDetailsEmbedData":
             break;
             case "div":
@@ -1881,13 +1959,7 @@ if (self2) {
             break;
             case "doneButtonContainer":
             break;
-            case "fetchGuildJoinRequests":
-            break;
-            case "fetchGuildJoinRequestsForUser":
-            break;
-            case "giftCount":
-            break;
-            case "trackedType":
+            case "unreadByType":
             break;
             case "__duration":
             break;
@@ -2101,6 +2173,8 @@ if (self2) {
             break;
             case "constraints":
             break;
+            case "USER_SAFETY_TOOLS_BLOCK_CANCEL":
+            break;
             case "_getGuildState":
             break;
             case "getGuildState":
@@ -2136,16 +2210,6 @@ if (self2) {
             case "DefaultGuildsRestricted":
             break;
             case "DefaultGuildsRestrictedV2":
-            break;
-            case "collectionId":
-            break;
-            case "collectionIds":
-            break;
-            case "spanToTransactionTraceContext":
-            break;
-            case "glow":
-            break;
-            case "glowColor":
             break;
             case "avatar_hash":
             break;
@@ -2209,12 +2273,6 @@ if (self2) {
             break;
             case "iconsContainer":
             break;
-            case "computeActivityFlags":
-            break;
-            case "ActivityFlags":
-            break;
-            case "subscribeTextInputValue":
-            break;
             case "_include":
             break;
             case "inc":
@@ -2264,7 +2322,10 @@ if (self2) {
             case "PortalSpotIllustration":
             break;
             case "varint32read":
-            break;
+              _HermesInternal = HermesInternal;
+              str = "Valeur invalide dans ";
+              combined5 = "Valeur invalide dans " + code.origin;
+              return combined5;
             case "readUint":
             break;
             case "int":
@@ -2290,6 +2351,12 @@ if (self2) {
             case "activeUnjoinedThreads":
             break;
             case "jo":
+            break;
+            case "setFocusMode":
+            break;
+            case "getMessageGiftIntentLastShownMap":
+            break;
+            case "applyFunctionToChildren":
             break;
             case "js":
             break;
@@ -2356,9 +2423,7 @@ if (self2) {
             case "lcq":
             break;
             case "arrow_left":
-              _HermesInternal = HermesInternal;
-              combined = "Valeur invalide dans " + code.origin;
-              return combined;
+            break;
             case "leftActions":
             break;
             case "_$esjava$I_length":
@@ -2396,120 +2461,6 @@ if (self2) {
             case "AnalyticsObjects":
             break;
             case "__mapperRegistry":
-            break;
-            case "_map":
-            break;
-            case "mar":
-            break;
-            case "margin":
-            break;
-            case "arg":
-            break;
-            case "gi":
-            break;
-            case "heap_max":
-            break;
-            case "_max":
-            break;
-            case "_maxListeners":
-            break;
-            case "maxListeners":
-            break;
-            case "shouldShowPopover":
-            break;
-            case "overflow":
-            break;
-            case "overflowBottom":
-            break;
-            case "__memo":
-            break;
-            case "mo":
-            break;
-            case "effective_connection_speed":
-            break;
-            case "messageIds":
-            break;
-            case "sag":
-            break;
-            case "_$esjava$method":
-            break;
-            case "_$esjava$methodobject":
-            break;
-            case "ho":
-            break;
-            case "hod":
-            break;
-            case "dob":
-            break;
-            case "obj":
-            break;
-            case "object":
-            break;
-            case "objectAssign":
-            break;
-            case "alwaysBounceVertical":
-            break;
-            case "appearance":
-            break;
-            case "ActionStatusSubLabel":
-            break;
-            case "onStatus":
-            break;
-            case "Status":
-            break;
-            case "SubLabel":
-            break;
-            case "lineHeight":
-            break;
-            case "SvgFromXml":
-            break;
-            case "ml-Mlym":
-            break;
-            case "NOTIFICATION_SETTINGS_PERMISSION_HEADER":
-            break;
-            case "HEADER_TITLE_TEXT_STYLE":
-            break;
-            case "useLegacyChatInput":
-            break;
-            case "ChatInputOmniButtonActionType":
-            break;
-            case "mni":
-            break;
-            case "ButtonAction":
-            break;
-            case "people_holding_hands_tone2_tone5":
-            break;
-            case "Ambient":
-            break;
-            case "Ambient_Lightmode":
-            break;
-            case "bie":
-            break;
-            case "tm":
-            break;
-            case "mod":
-            break;
-            case "modeOptions":
-            break;
-            case "contact_names":
-            break;
-            case "nam":
-            break;
-            case "namesLegacy":
-            break;
-            case "AuditLogActions":
-            break;
-            case "getVoiceChannelBadgeExperiment":
-            break;
-            case "VoiceChannelBadgeExperiment":
-            break;
-            case "track_next":
-            break;
-            case "_nextChannelId":
-            break;
-            case "diffClamp":
-            break;
-            case "upcoming_server_event_notifications":
             break;
             default:
               return "Entr\u00E9e invalide";
