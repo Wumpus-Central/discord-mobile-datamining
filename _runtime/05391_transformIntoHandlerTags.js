@@ -6,8 +6,8 @@ import { 05392__ } from "metro/05392__.js";
 let Platform;
 let c3;
 function transformIntoHandlerTags(arg0) {
-  const obj = toArray /* toArray */;
-  const mapped = toArray /* toArray */.toArray(arg0).map((current) => {
+  const obj = toArray;
+  const mapped = toArray.toArray(arg0).map((current) => {
     let num = callback(table[2]).handlerIDToTag[current];
     if (!num) {
       current = current.current;

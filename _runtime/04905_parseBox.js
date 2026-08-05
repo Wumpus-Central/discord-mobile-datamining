@@ -6,7 +6,7 @@ arg5.default = {
   isHeicFile(getUint32) {
     if (getUint32) {
       try {
-        let parseBoxResult = parseBox /* parseBox */.parseBox(getUint32, 0);
+        let parseBoxResult = parseBox.parseBox(getUint32, 0);
         if (parseBoxResult) {
           const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
           parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
@@ -20,6 +20,6 @@ arg5.default = {
     }
   },
   findHeicOffsets(byteLength) {
-    return parseBox /* parseBox */.findOffsets(byteLength);
+    return parseBox.findOffsets(byteLength);
   }
 };

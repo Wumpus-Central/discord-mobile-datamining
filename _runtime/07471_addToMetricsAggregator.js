@@ -21,11 +21,11 @@ function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
   }
   let client = obj.client;
   if (!client) {
-    client = getClient /* getClient */.getClient();
-    const obj2 = getClient /* getClient */;
+    client = getClient.getClient();
+    const obj2 = getClient;
   }
   if (client) {
-    const activeSpan = spanTimeInputToSeconds /* spanTimeInputToSeconds */.getActiveSpan();
+    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
     let rootSpan;
     if (activeSpan) {
       let tmp3Result = tmp3(7380);
@@ -49,13 +49,13 @@ function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
     if (description) {
       obj.transaction = description;
     }
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const logger = tmp3(7375).logger;
       const _HermesInternal = HermesInternal;
       logger.log("Adding value of " + arg3 + " to " + SET_METRIC_TYPE + " metric " + arg2);
     }
-    const obj3 = spanTimeInputToSeconds /* spanTimeInputToSeconds */;
-    const globalSingleton = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("globalMetricsAggregators", () => {
+    const obj3 = spanTimeInputToSeconds;
+    const globalSingleton = getGlobalSingleton.getGlobalSingleton("globalMetricsAggregators", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
@@ -72,7 +72,7 @@ function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
     const merged = Object.assign(obj);
     const merged1 = Object.assign(tags);
     value.add(SET_METRIC_TYPE, arg2, arg3, unit, obj, timestamp);
-    const tmp3Result1 = getGlobalSingleton /* getGlobalSingleton */;
+    const tmp3Result1 = getGlobalSingleton;
   }
 }
 
@@ -159,7 +159,7 @@ export const metrics = {
     }
   },
   getMetricsAggregatorForClient(on) {
-    const globalSingleton = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("globalMetricsAggregators", () => {
+    const globalSingleton = getGlobalSingleton.getGlobalSingleton("globalMetricsAggregators", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
@@ -174,6 +174,6 @@ export const metrics = {
       const result = globalSingleton.set(on, tmp6);
       return tmp6;
     }
-    const obj = getGlobalSingleton /* getGlobalSingleton */;
+    const obj = getGlobalSingleton;
   }
 };

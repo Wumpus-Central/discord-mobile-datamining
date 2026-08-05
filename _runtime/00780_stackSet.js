@@ -5,7 +5,7 @@ export default function stackSet(arg0, arg1) {
   const self = this;
   let __data__ = this.__data__;
   let obj = __data__;
-  if (__data__ instanceof ListCache /* ListCache */) {
+  if (__data__ instanceof ListCache) {
     __data__ = __data__.__data__;
     if (tmp(747)) {
       if (__data__.length >= 199) {

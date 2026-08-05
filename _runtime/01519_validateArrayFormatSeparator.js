@@ -12,7 +12,7 @@ function validateArrayFormatSeparator(arrayFormatSeparator) {
 function decode(arg0, decode) {
   let tmp = arg0;
   if (decode.decode) {
-    tmp = decodeComponents /* decodeComponents */(arg0);
+    tmp = decodeComponents(arg0);
   }
   return tmp;
 }

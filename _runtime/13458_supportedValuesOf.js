@@ -9,17 +9,17 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.supportedValuesOf = function supportedValuesOf(collation, locale) {
   if ("calendar" === collation) {
-    return getSupportedCalendars /* getSupportedCalendars */.getSupportedCalendars(locale);
+    return getSupportedCalendars.getSupportedCalendars(locale);
   } else if ("collation" === collation) {
-    return getSupportedCollations /* getSupportedCollations */.getSupportedCollations(locale);
+    return getSupportedCollations.getSupportedCollations(locale);
   } else if ("currency" === collation) {
-    return isSupportedCurrency /* isSupportedCurrency */.getSupportedCurrencies(locale);
+    return isSupportedCurrency.getSupportedCurrencies(locale);
   } else if ("numberingSystem" === collation) {
-    return getSupportedNumberingSystems /* getSupportedNumberingSystems */.getSupportedNumberingSystems(locale);
+    return getSupportedNumberingSystems.getSupportedNumberingSystems(locale);
   } else if ("timeZone" === collation) {
-    return getSupportedTimeZones /* getSupportedTimeZones */.getSupportedTimeZones(locale);
+    return getSupportedTimeZones.getSupportedTimeZones(locale);
   } else if ("unit" === collation) {
-    return getSupportedUnits /* getSupportedUnits */.getSupportedUnits(locale);
+    return getSupportedUnits.getSupportedUnits(locale);
   } else {
     const _RangeError = RangeError;
     throw RangeError("Invalid key: " + collation);

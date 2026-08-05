@@ -8,16 +8,16 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.setMeasurement = function setMeasurement(arg0, arg1, arg2) {
   let activeSpan = arg3;
   if (arg3 === undefined) {
-    let obj = spanToJSON /* spanToJSON */;
+    let obj = spanToJSON;
     activeSpan = obj.getActiveSpan();
   }
   let rootSpan = activeSpan;
   if (activeSpan) {
-    rootSpan = spanToJSON /* spanToJSON */.getRootSpan(activeSpan);
-    const obj3 = spanToJSON /* spanToJSON */;
+    rootSpan = spanToJSON.getRootSpan(activeSpan);
+    const obj3 = spanToJSON;
   }
   if (rootSpan) {
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = tmp9(824).debug;
       const _HermesInternal = HermesInternal;
       debug.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);

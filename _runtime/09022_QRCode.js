@@ -12,7 +12,7 @@ class QRCode {
 const prototype = QRCode.prototype;
 prototype.addData = function(arg0) {
   const dataList = this.dataList;
-  dataList.push(new QR8bitByte /* QR8bitByte */(arg0));
+  dataList.push(new QR8bitByte(arg0));
   this.dataCache = null;
 };
 prototype.isDark = function(arg0, arg1) {
@@ -40,11 +40,11 @@ prototype.make = function() {
     while (true) {
       let tmp = require;
       let tmp2 = dependencyMap;
-      let obj = QRRSBlock /* QRRSBlock */;
+      let obj = QRRSBlock;
       let rSBlocks = obj.getRSBlocks(num, self.errorCorrectLevel);
       let tmp3 = new.target;
       let tmp4 = new.target;
-      let obj2 = new QRBitBuffer /* QRBitBuffer */();
+      let obj2 = new QRBitBuffer();
       let tmp5 = num;
       let num2 = 0;
       let num3 = 0;
@@ -458,8 +458,8 @@ QRCode.createData = (arg0, arg1, arg2) => {
   let length;
   let length2;
   let result1;
-  const rSBlocks = QRRSBlock /* QRRSBlock */.getRSBlocks(arg0, arg1);
-  const obj2 = new QRBitBuffer /* QRBitBuffer */();
+  const rSBlocks = QRRSBlock.getRSBlocks(arg0, arg1);
+  const obj2 = new QRBitBuffer();
   let num = 0;
   if (0 < arg2.length) {
     do {
@@ -516,7 +516,7 @@ QRCode.createData = (arg0, arg1, arg2) => {
     }
     return QRCode.createBytes(obj2, rSBlocks);
   }
-  const obj = QRRSBlock /* QRRSBlock */;
+  const obj = QRRSBlock;
 };
 QRCode.createBytes = (arg0, arg1) => {
   let length2;
@@ -558,7 +558,7 @@ QRCode.createBytes = (arg0, arg1) => {
       let sum = num4 + dataCount;
       let obj = 09028__;
       let errorCorrectPolynomial = obj.getErrorCorrectPolynomial(diff);
-      let tmp16 = QRPolynomial /* QRPolynomial */;
+      let tmp16 = QRPolynomial;
       let tmp17 = new.target;
       let tmp18 = new.target;
       tmp16 = new tmp16(array[num], errorCorrectPolynomial.getLength() - 1);

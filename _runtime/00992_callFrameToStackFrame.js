@@ -20,15 +20,15 @@ arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
   const obj = { filename: replaced, module: arg2(replaced), function: null, colno: null, lineno: null, in_app: null };
   let UNKNOWN_FUNCTION = location.functionName;
   if (!UNKNOWN_FUNCTION) {
-    UNKNOWN_FUNCTION = createStackParser /* createStackParser */.UNKNOWN_FUNCTION;
+    UNKNOWN_FUNCTION = createStackParser.UNKNOWN_FUNCTION;
   }
   obj[2] = UNKNOWN_FUNCTION;
   obj[3] = sum;
   obj[4] = sum1;
   let filenameIsInAppResult;
   if (replaced) {
-    filenameIsInAppResult = filenameIsInApp /* filenameIsInApp */.filenameIsInApp(replaced);
-    const obj2 = filenameIsInApp /* filenameIsInApp */;
+    filenameIsInAppResult = filenameIsInApp.filenameIsInApp(replaced);
+    const obj2 = filenameIsInApp;
   }
   obj[5] = filenameIsInAppResult;
   return obj;

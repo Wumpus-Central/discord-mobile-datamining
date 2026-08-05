@@ -4,6 +4,6 @@ import { overRest } from "04432_overRest.js";
 import { flatten } from "04434_flatten.js";
 
 export default function flatRest(arg0) {
-  const tmp = shortOut /* shortOut */;
-  return tmp(overRest /* overRest */(arg0, undefined, flatten /* flatten */), "" + arg0);
+  const tmp = shortOut;
+  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
 };

@@ -28,7 +28,7 @@ function processColorStops(nextResult) {
       }
       let tmp3 = require;
       let tmp4 = dependencyMap;
-      obj = processColor /* processColor */;
+      obj = processColor;
       let defaultResult = obj.default(tmp.color);
       if (null == defaultResult) {
         break;
@@ -662,7 +662,7 @@ function parseColorStopsCSSString(items) {
         }
         let tmp21 = require;
         let tmp22 = dependencyMap;
-        let obj10 = processColor /* processColor */;
+        let obj10 = processColor;
         let defaultResult = obj10.default(tmp18);
         if (null == defaultResult) {
           return null;
@@ -691,7 +691,7 @@ function parseColorStopsCSSString(items) {
         }
         let tmp14 = require;
         let tmp15 = dependencyMap;
-        let obj6 = processColor /* processColor */;
+        let obj6 = processColor;
         let defaultResult1 = obj6.default(tmp12);
         if (null == defaultResult1) {
           return null;
@@ -736,7 +736,7 @@ function parseColorStopsCSSString(items) {
         } else {
           let tmp6 = require;
           let tmp7 = dependencyMap;
-          obj = processColor /* processColor */;
+          obj = processColor;
           let defaultResult2 = obj.default(match[0]);
           if (null == defaultResult2) {
             return null;

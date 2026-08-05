@@ -5,8 +5,8 @@ import { safeDateNow } from "00831_safeDateNow.js";
 function parseRetryAfterHeader(arg0) {
   let safeDateNowResult = arg1;
   if (arg1 === undefined) {
-    safeDateNowResult = safeDateNow /* safeDateNow */.safeDateNow();
-    const obj = safeDateNow /* safeDateNow */;
+    safeDateNowResult = safeDateNow.safeDateNow();
+    const obj = safeDateNow;
   }
   const parsed = parseInt("" + arg0, 10);
   if (isNaN(parsed)) {
@@ -32,8 +32,8 @@ export const disabledUntil = function disabledUntil(all) {
 export const isRateLimited = function isRateLimited(all) {
   let safeDateNowResult = arg2;
   if (arg2 === undefined) {
-    safeDateNowResult = safeDateNow /* safeDateNow */.safeDateNow();
-    const obj = safeDateNow /* safeDateNow */;
+    safeDateNowResult = safeDateNow.safeDateNow();
+    const obj = safeDateNow;
   }
   return (all[arg1] || all.all || 0) > safeDateNowResult;
 };
@@ -42,7 +42,7 @@ export const updateRateLimits = function updateRateLimits(arg0, headers) {
   headers = headers.headers;
   let safeDateNowResult = arg2;
   if (arg2 === undefined) {
-    let obj = safeDateNow /* safeDateNow */;
+    let obj = safeDateNow;
     safeDateNowResult = obj.safeDateNow();
   }
   obj = {};

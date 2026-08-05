@@ -5,7 +5,7 @@ import { 05376__ } from "metro/05376__.js";
 const require = arg1;
 const dependencyMap = arg6;
 function getHandler(arg0, onBegin) {
-  if (_isNativeReflectConstruct /* _isNativeReflectConstruct */.CALLBACK_TYPE.BEGAN === arg0) {
+  if (_isNativeReflectConstruct.CALLBACK_TYPE.BEGAN === arg0) {
     return onBegin.onBegin;
   } else if (tmp(5407).CALLBACK_TYPE.START === arg0) {
     return onBegin.onStart;
@@ -59,8 +59,8 @@ function runWorklet(arg0, arg1, arg2) {
     }
   } else if (tmp2) {
     const _console = console;
-    console.warn(toArray /* toArray */.tagMessage("Animated gesture callback must be a worklet"));
-    const obj = toArray /* toArray */;
+    console.warn(toArray.tagMessage("Animated gesture callback must be a worklet"));
+    const obj = toArray;
   }
 }
 obj = { getHandler, tagMessage: require("toArray").tagMessage };

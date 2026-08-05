@@ -6,9 +6,9 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.resourceTimingToSpanAttributes = function resourceTimingToSpanAttributes(nextHopProtocol) {
   let obj = {};
   if (null != nextHopProtocol.nextHopProtocol) {
-    const result = extractNetworkProtocol /* extractNetworkProtocol */.extractNetworkProtocol(nextHopProtocol.nextHopProtocol);
+    const result = extractNetworkProtocol.extractNetworkProtocol(nextHopProtocol.nextHopProtocol);
     ({ version: obj["network.protocol.version"], name: obj["network.protocol.name"] } = result);
-    const obj2 = extractNetworkProtocol /* extractNetworkProtocol */;
+    const obj2 = extractNetworkProtocol;
   }
   if (obj3.browserPerformanceTimeOrigin()) {
     obj = {};

@@ -16,7 +16,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
     let tmp9 = arg0;
     if (1 === arg0.length) {
       tmp9 = arg0;
-      if (arg0[0].semver === Comparator /* Comparator */.ANY) {
+      if (arg0[0].semver === Comparator.ANY) {
         if (1 === item10015.length) {
           if (item10015[0].semver === tmp6(13049).ANY) {
             return true;
@@ -30,7 +30,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
     let tmp13 = item10015;
     if (1 === item10015.length) {
       tmp13 = item10015;
-      if (item10015[0].semver === Comparator /* Comparator */.ANY) {
+      if (item10015[0].semver === Comparator.ANY) {
         if (includePrerelease.includePrerelease) {
           return true;
         } else {
@@ -73,7 +73,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
     } else {
       if (tmp) {
         if (tmp2) {
-          const tmp46 = SemVer /* SemVer */(tmp.semver, tmp2.semver, includePrerelease);
+          const tmp46 = SemVer(tmp.semver, tmp2.semver, includePrerelease);
           if (tmp46 > 0) {
             tmp = null;
             return null;
@@ -193,7 +193,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
                   tmp = dependencyMap;
                   let _String4 = String;
                   tmp = nextResult2;
-                  tmp = Range /* Range */;
+                  tmp = Range;
                   if (!tmp(tmp.semver, String(tmp97), includePrerelease)) {
                     tmp = iter3;
                     iter3.return();
@@ -255,7 +255,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
                   tmp = tmp2;
                   let _String5 = String;
                   tmp = nextResult2;
-                  tmp = Range /* Range */;
+                  tmp = Range;
                   if (!tmp(tmp2.semver, String(tmp97), includePrerelease)) {
                     tmp = iter3;
                     iter3.return();
@@ -328,7 +328,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
             iter2.return();
             return null;
           }
-          tmp57 = Range /* Range */;
+          tmp57 = Range;
         }
         if (tmp2) {
           const _String2 = String;
@@ -336,7 +336,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
             iter2.return();
             return null;
           }
-          tmp67 = Range /* Range */;
+          tmp67 = Range;
         }
         for (const item10134 of tmp13) {
           let tmp74 = require;
@@ -345,7 +345,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
           let tmp77 = dependencyMap;
           let tmp79 = nextResult1;
           let _String3 = String;
-          let tmp78 = Range /* Range */;
+          let tmp78 = Range;
           if (tmp78(tmp51, String(item10134), arg2)) {
             continue;
           } else {
@@ -366,7 +366,7 @@ function simpleSubset(arg0, item10015, includePrerelease) {
 }
 function higherGT(semver, semver2, includePrerelease) {
   if (semver) {
-    const tmp4 = SemVer /* SemVer */(semver.semver, semver2.semver, includePrerelease);
+    const tmp4 = SemVer(semver.semver, semver2.semver, includePrerelease);
     let tmp5 = semver;
     if (tmp4 <= 0) {
       if (tmp4 < 0) {
@@ -386,7 +386,7 @@ function higherGT(semver, semver2, includePrerelease) {
 }
 function lowerLT(semver, semver2, includePrerelease) {
   if (semver) {
-    const tmp4 = SemVer /* SemVer */(semver.semver, semver2.semver, includePrerelease);
+    const tmp4 = SemVer(semver.semver, semver2.semver, includePrerelease);
     let tmp5 = semver;
     if (tmp4 >= 0) {
       if (tmp4 > 0) {
@@ -413,8 +413,8 @@ export default (arg0, arg1, includePrerelease) => {
   if (arg0 === arg1) {
     return true;
   } else {
-    const tmp22 = new Range /* Range */(arg0, obj);
-    const tmp27 = new Range /* Range */(arg1, obj);
+    const tmp22 = new Range(arg0, obj);
+    const tmp27 = new Range(arg1, obj);
     let flag = false;
     const iter = tmp22.set[Symbol.iterator]();
     while (iter !== undefined) {

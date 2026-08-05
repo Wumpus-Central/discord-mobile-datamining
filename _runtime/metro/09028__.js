@@ -88,7 +88,7 @@ const obj = {
     }
   },
   getErrorCorrectPolynomial(diff) {
-    const tmp = new QRPolynomial /* QRPolynomial */([1], 0);
+    const tmp = new QRPolynomial([1], 0);
     let multiplyResult = tmp;
     let num = 0;
     let tmp2 = tmp;
@@ -96,7 +96,7 @@ const obj = {
       do {
         let tmp3 = require;
         let tmp4 = dependencyMap;
-        let tmp5 = QRPolynomial /* QRPolynomial */;
+        let tmp5 = QRPolynomial;
         let obj2 = 09030__;
         let items = [1, obj2.gexp(num)];
         let tmp6 = new.target;

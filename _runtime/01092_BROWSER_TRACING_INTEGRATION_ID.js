@@ -557,7 +557,7 @@ export const browserTracingIntegration = () => {
   return obj;
 };
 export const getMetaContent = function getMetaContent(arg0) {
-  const _document = ignoreNextOnError /* ignoreNextOnError */.WINDOW.document;
+  const _document = ignoreNextOnError.WINDOW.document;
   let element;
   if (_document != null) {
     const _HermesInternal = HermesInternal;
@@ -579,7 +579,7 @@ export const startBrowserTracingNavigationSpan = function startBrowserTracingNav
   ({ url, isRedirect } = obj);
   client.emit("beforeStartNavigationSpan", name, { isRedirect });
   client.emit("startNavigationSpan", name, { isRedirect });
-  const currentScope = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getCurrentScope();
+  const currentScope = registerSpanErrorInstrumentation.getCurrentScope();
   currentScope.setTransactionName(name.name);
   let tmp6 = url;
   if (url) {
@@ -588,17 +588,17 @@ export const startBrowserTracingNavigationSpan = function startBrowserTracingNav
   if (tmp6) {
     obj = { normalizedRequest: null };
     obj = {};
-    const merged = Object.assign(ignoreNextOnError /* ignoreNextOnError */.getHttpRequestData());
+    const merged = Object.assign(ignoreNextOnError.getHttpRequestData());
     obj.url = url;
     obj[0] = obj;
     const result = currentScope.setSDKProcessingMetadata(obj);
-    const tmp3Result = ignoreNextOnError /* ignoreNextOnError */;
+    const tmp3Result = ignoreNextOnError;
   }
   return client[_sentry_idleSpan];
 };
 export const startBrowserTracingPageLoadSpan = function startBrowserTracingPageLoadSpan(f102430, result) {
   f102430.emit("startPageLoadSpan", result, arg2);
-  const currentScope = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getCurrentScope();
+  const currentScope = registerSpanErrorInstrumentation.getCurrentScope();
   currentScope.setTransactionName(result.name);
   if (f102430[_sentry_idleSpan]) {
     f102430.emit("afterStartPageLoadSpan", tmp3);

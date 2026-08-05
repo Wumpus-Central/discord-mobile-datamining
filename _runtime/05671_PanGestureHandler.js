@@ -12,7 +12,7 @@ export const PanGestureHandler = function PanGestureHandler(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj.ref = ref;
-  obj[1] = jsx(Directions /* Directions */.PanGestureHandler, {});
+  obj[1] = jsx(Directions.PanGestureHandler, {});
   return jsx(noop.Provider, {});
 };
 export const GestureHandlerRootView = require("Directions").GestureHandlerRootView;

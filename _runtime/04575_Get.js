@@ -2,7 +2,7 @@
 import { isObject } from "04529_isObject.js";
 
 export default function Get(arg0, arg1) {
-  if (isObject /* isObject */(arg0)) {
+  if (isObject(arg0)) {
     if (tmp(4576)(arg1)) {
       return arg0[arg1];
     } else {

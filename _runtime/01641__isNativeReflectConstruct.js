@@ -879,7 +879,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
         if (!isJest) {
           if (exiting !== exiting2) {
             const self = this;
-            const obj = updateLayoutAnimations /* updateLayoutAnimations */;
+            const obj = updateLayoutAnimations;
             if (obj2.isFabric()) {
               if (EXITING === tmp5(1631).LayoutAnimationType.ENTERING) {
                 let reanimatedID = self.reanimatedID;
@@ -901,7 +901,7 @@ export const createAnimatedComponent = function createAnimatedComponent(fn) {
               const result = obj.updateLayoutAnimations(reanimatedID, EXITING, maybeBuildResult);
             }
             reanimatedID = self.getComponentViewTag();
-            obj2 = isJest /* isJest */;
+            obj2 = isJest;
           }
         }
       }

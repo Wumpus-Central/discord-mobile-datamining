@@ -82,11 +82,11 @@ function reportException(stack) {
     componentStack = stack.componentStack;
   }
   obj[3] = componentStack;
-  obj[4] = parseErrorStack /* parseErrorStack */.default(stack);
+  obj[4] = parseErrorStack.default(stack);
   obj[5] = sum;
   obj[6] = arg1;
   obj[7] = obj;
-  const defaultResult = parseErrorStack /* parseErrorStack */.default(stack);
+  const defaultResult = parseErrorStack.default(stack);
   const tmp = require;
   tmp10 = null != stack.cause && typeof stack.cause === "object";
   if (arg2) {
@@ -132,7 +132,7 @@ function reactConsoleErrorHandler() {
           stack = error.stack;
         }
         if (!stack) {
-          SyntheticError = replacer /* replacer */.default;
+          SyntheticError = replacer.default;
           const mapped = items.map((str) => {
             let tmp = str;
             if (typeof str !== "string") {

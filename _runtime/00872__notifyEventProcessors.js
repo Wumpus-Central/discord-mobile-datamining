@@ -961,11 +961,11 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
     if (obj.isThenable(tmp7)) {
       let resolvedSyncPromiseResult = tmp7;
     } else {
-      resolvedSyncPromiseResult = SyncPromise /* SyncPromise */.resolvedSyncPromise(tmp7);
-      const tmp10Result = SyncPromise /* SyncPromise */;
+      resolvedSyncPromiseResult = SyncPromise.resolvedSyncPromise(tmp7);
+      const tmp10Result = SyncPromise;
     }
     return resolvedSyncPromiseResult;
   } catch (tmp17) {
-    return SyncPromise /* SyncPromise */.rejectedSyncPromise(tmp17);
+    return SyncPromise.rejectedSyncPromise(tmp17);
   }
 };

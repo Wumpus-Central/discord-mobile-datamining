@@ -6,7 +6,7 @@ import { findDescendantWithExitingAnimation } from "01693_findDescendantWithExit
 const require = arg1;
 const dependencyMap = arg6;
 function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
-  if (ENTERING === isWorkletFunction /* isWorkletFunction */.LayoutAnimationType.ENTERING) {
+  if (ENTERING === isWorkletFunction.LayoutAnimationType.ENTERING) {
     let entering = props.entering;
   } else if (ENTERING === tmp(1631).LayoutAnimationType.EXITING) {
     entering = props.exiting;
@@ -57,12 +57,12 @@ function startWebLayoutAnimation(props, _componentDOMRef, ENTERING, easingY) {
     }
     const tmp8 = ENTERING === tmp(1631).LayoutAnimationType.LAYOUT || tmp5 || undefined !== entering.initialValues;
   }
-  const result = setElementAnimation /* setElementAnimation */.maybeModifyStyleForKeyframe(_componentDOMRef, props.entering);
+  const result = setElementAnimation.maybeModifyStyleForKeyframe(_componentDOMRef, props.entering);
   let animationName;
   if (processedConfig != null) {
     animationName = processedConfig.animationName;
   }
-  if (animationName in TransitionType /* TransitionType */.Animations) {
+  if (animationName in TransitionType.Animations) {
     let animationName1;
     if (processedConfig != null) {
       animationName1 = processedConfig.animationName;
@@ -107,7 +107,7 @@ arg5.startWebLayoutAnimation = startWebLayoutAnimation;
 arg5.tryActivateLayoutTransition = function tryActivateLayoutTransition(props, _componentDOMRef, arg2) {
   if (props.layout) {
     const size = _componentDOMRef.getBoundingClientRect();
-    let obj = findDescendantWithExitingAnimation /* findDescendantWithExitingAnimation */;
+    let obj = findDescendantWithExitingAnimation;
     if (!obj.areDOMRectsEqual(size, arg2)) {
       const enteringV = props.layout.enteringV;
       let presetName;

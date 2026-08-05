@@ -72,7 +72,7 @@ let c12 = 525600;
 export default function formatDistanceStrict(arg0, arg1, locale) {
   tmp15.default(2, arguments);
   locale = undefined;
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   if (null != locale) {
     locale = locale.locale;
   }

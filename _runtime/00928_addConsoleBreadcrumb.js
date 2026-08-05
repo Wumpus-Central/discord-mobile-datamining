@@ -7,7 +7,7 @@ import { 00821__ } from "metro/00821__.js";
 function addConsoleBreadcrumb(arg0, arguments) {
   obj = { category: "console", data: obj, level: null, message: null };
   obj = { arguments, logger: "console" };
-  obj[2] = severityLevelFromString /* severityLevelFromString */.severityLevelFromString(arg0);
+  obj[2] = severityLevelFromString.severityLevelFromString(arg0);
   if ("util" in 00821__.GLOBAL_OBJ) {
     if (typeof tmp(821).GLOBAL_OBJ.util.format === "function") {
       const util = tmp(821).GLOBAL_OBJ.util;
@@ -44,8 +44,8 @@ function addConsoleBreadcrumb(arg0, arguments) {
     obj[1] = arg0;
     tmpResult.addBreadcrumb(obj, obj);
   }
-  const obj3 = severityLevelFromString /* severityLevelFromString */;
-  applyResult = isMatchingPattern /* isMatchingPattern */.safeJoin(arguments, " ");
+  const obj3 = severityLevelFromString;
+  applyResult = isMatchingPattern.safeJoin(arguments, " ");
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

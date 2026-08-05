@@ -8,23 +8,23 @@ function validateTransformOrigin(arg0) {
   let obj2;
   let tmp30;
   if (3 !== arg0.length) {
-    const reanimatedError = new t /* t */.ReanimatedError("Transform origin must have exactly 3 values.");
+    const reanimatedError = new t.ReanimatedError("Transform origin must have exactly 3 values.");
     throw reanimatedError;
   } else {
     [obj, obj2, tmp30] = callback(arg0, 3);
     if (typeof obj !== "number") {
       const _HermesInternal = HermesInternal;
-      const reanimatedError1 = new t /* t */.ReanimatedError("Transform origin x-position must be a number or a percentage string. Passed value: " + obj + ".");
+      const reanimatedError1 = new t.ReanimatedError("Transform origin x-position must be a number or a percentage string. Passed value: " + obj + ".");
       throw reanimatedError1;
     }
     if (typeof obj2 !== "number") {
       const _HermesInternal2 = HermesInternal;
-      const reanimatedError2 = new t /* t */.ReanimatedError("Transform origin y-position must be a number or a percentage string. Passed value: " + obj2 + ".");
+      const reanimatedError2 = new t.ReanimatedError("Transform origin y-position must be a number or a percentage string. Passed value: " + obj2 + ".");
       throw reanimatedError2;
     }
     if (typeof tmp30 !== "number") {
       const _HermesInternal3 = HermesInternal;
-      const reanimatedError3 = new t /* t */.ReanimatedError("Transform origin z-position must be a number. Passed value: " + tmp30 + ".");
+      const reanimatedError3 = new t.ReanimatedError("Transform origin z-position must be a number. Passed value: " + tmp30 + ".");
       throw reanimatedError3;
     }
     const tmp29 = callback(arg0, 3);
@@ -63,7 +63,7 @@ function processTransformOrigin(str) {
                     let str4 = "Transform-origin value ";
                     let tmp13 = new.target;
                     let tmp14 = new.target;
-                    let reanimatedError = new t /* t */.ReanimatedError("Transform-origin value " + str + " cannot be used for z-position");
+                    let reanimatedError = new t.ReanimatedError("Transform-origin value " + str + " cannot be used for z-position");
                     let tmp16 = reanimatedError;
                     throw reanimatedError;
                   } else {
@@ -94,7 +94,7 @@ function processTransformOrigin(str) {
               let str8 = "Transform-origin ";
               let tmp26 = new.target;
               let tmp27 = new.target;
-              let reanimatedError1 = new t /* t */.ReanimatedError("Transform-origin " + str + " can only be used for y-position");
+              let reanimatedError1 = new t.ReanimatedError("Transform-origin " + str + " can only be used for y-position");
               let tmp29 = reanimatedError1;
               throw reanimatedError1;
             } else {
@@ -129,7 +129,7 @@ function processTransformOrigin(str) {
                     let str6 = "Could not parse transform-origin: ";
                     let tmp20 = new.target;
                     let tmp21 = new.target;
-                    let reanimatedError2 = new t /* t */.ReanimatedError("Could not parse transform-origin: " + str);
+                    let reanimatedError2 = new t.ReanimatedError("Could not parse transform-origin: " + str);
                     let tmp23 = reanimatedError2;
                     throw reanimatedError2;
                   }
@@ -149,7 +149,7 @@ function processTransformOrigin(str) {
           let str11 = "Transform-origin ";
           let tmp39 = new.target;
           let tmp40 = new.target;
-          let reanimatedError3 = new t /* t */.ReanimatedError("Transform-origin " + str + " can only be used for x-position");
+          let reanimatedError3 = new t.ReanimatedError("Transform-origin " + str + " can only be used for x-position");
           let tmp42 = reanimatedError3;
           throw reanimatedError3;
         } else {
@@ -162,14 +162,14 @@ function processTransformOrigin(str) {
         }
       }
       const _HermesInternal = HermesInternal;
-      const reanimatedError4 = new t /* t */.ReanimatedError("Invalid numeric value in transform-origin: " + str);
+      const reanimatedError4 = new t.ReanimatedError("Invalid numeric value in transform-origin: " + str);
       throw reanimatedError4;
     }
   }
   if (typeof str !== "string") {
     const _Array = Array;
     if (!Array.isArray(str)) {
-      const reanimatedError5 = new t /* t */.ReanimatedError("Invalid transformOrigin type: " + typeof str);
+      const reanimatedError5 = new t.ReanimatedError("Invalid transformOrigin type: " + typeof str);
       throw reanimatedError5;
     }
   }

@@ -7,6 +7,6 @@ arg5.CoerceOptionsToObject = function CoerceOptionsToObject(arg0) {
     const _Object = Object;
     return Object.create(null);
   } else {
-    return __exportStarResult32 /* __exportStarResult32 */.ToObject(arg0);
+    return __exportStarResult32.ToObject(arg0);
   }
 };

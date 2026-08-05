@@ -19,7 +19,7 @@ export default function toPrimitive(arg0, arg1) {
           const typeError = new TypeError("@@toPrimitive must return a primitive value.");
           throw typeError;
         }
-        tmpResult = _typeof /* _typeof */;
+        tmpResult = _typeof;
       } else {
         return "string" === str ? String : Number(arg0);
       }

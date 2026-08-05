@@ -9,7 +9,7 @@ if (hasPropertyDescriptors) {
 let closure_4 = require("callBoundIntrinsic")("Object.prototype.propertyIsEnumerable");
 
 export default function DefineOwnProperty(arg0, arg1, arg2, arg3, arg4, __Value__) {
-  if (flag /* flag */) {
+  if (flag) {
     if (hasPropertyDescriptors) {
       if ("length" === arg4) {
         if ("[[Value]]" in __Value__) {
@@ -23,9 +23,9 @@ export default function DefineOwnProperty(arg0, arg1, arg2, arg3, arg4, __Value_
         }
       }
     }
-    flag /* flag */(arg3, arg4, arg2(__Value__));
+    flag(arg3, arg4, arg2(__Value__));
     flag4 = true;
-    const tmpResult = flag /* flag */;
+    const tmpResult = flag;
   } else if (arg0(__Value__)) {
     if (__Value__["[[Configurable]]"]) {
       if (__Value__["[[Writable]]"]) {

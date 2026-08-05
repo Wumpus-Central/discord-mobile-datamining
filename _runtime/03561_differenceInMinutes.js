@@ -22,11 +22,11 @@ let c3 = tmp5;
 
 export default function differenceInMinutes(arg0, arg1, roundingMethod) {
   tmp5.default(2, arguments);
-  const result = tmp3.default(arg0, arg1) / keys /* keys */.millisecondsInMinute;
+  const result = tmp3.default(arg0, arg1) / keys.millisecondsInMinute;
   roundingMethod = undefined;
   if (null != roundingMethod) {
     roundingMethod = roundingMethod.roundingMethod;
   }
-  return getRoundingMethod /* getRoundingMethod */.getRoundingMethod(roundingMethod)(result);
+  return getRoundingMethod.getRoundingMethod(roundingMethod)(result);
 };
 export default exports.default;

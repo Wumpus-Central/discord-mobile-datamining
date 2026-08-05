@@ -53,7 +53,7 @@ const items = [
       fn.__closure = { callbackId };
       fn.__workletHash = 9182274559334;
       fn.__initData = closure_5;
-      isReanimated3 /* isReanimated3 */.runOnUI(fn)();
+      isReanimated3.runOnUI(fn)();
     }
   },
   {

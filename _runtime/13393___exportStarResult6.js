@@ -12,7 +12,7 @@ arg5.GetStringOrBooleanOption = function GetStringOrBooleanOption(result1, useGr
     if (false === Boolean(tmp)) {
       return arg4;
     } else {
-      let str = __exportStarResult32 /* __exportStarResult32 */.ToString(tmp);
+      let str = __exportStarResult32.ToString(tmp);
       str = "true";
       if ("true" !== str) {
         if ("false" !== str) {

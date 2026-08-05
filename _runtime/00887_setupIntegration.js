@@ -48,7 +48,7 @@ function setupIntegration(on, name) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let items = [];
 arg5.addIntegration = function addIntegration(name) {
-  const client = getClient /* getClient */.getClient();
+  const client = getClient.getClient();
   if (client) {
     client.addIntegration(name);
   } else if (tmp(823).DEBUG_BUILD) {

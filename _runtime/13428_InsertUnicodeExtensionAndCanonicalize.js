@@ -5,7 +5,7 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndCanonicalize(arr) {
   let length;
-  isMatched /* isMatched */.invariant(-1 === arr.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
+  isMatched.invariant(-1 === arr.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
   let num = 0;
   let str = "-u";
   let str2 = "-u";
@@ -39,7 +39,7 @@ arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndC
     } while (num2 < arg2.length);
   }
   if ("-u" === tmp3) {
-    return CanonicalizeUnicodeLocaleId /* CanonicalizeUnicodeLocaleId */.CanonicalizeUnicodeLocaleId(arr);
+    return CanonicalizeUnicodeLocaleId.CanonicalizeUnicodeLocaleId(arr);
   } else {
     const index = arr.indexOf("-x-");
     if (-1 === index) {
@@ -48,6 +48,6 @@ arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndC
       const sum3 = arr.slice(0, index) + tmp3;
       sum2 = sum3 + arr.slice(index);
     }
-    return CanonicalizeUnicodeLocaleId /* CanonicalizeUnicodeLocaleId */.CanonicalizeUnicodeLocaleId(sum2);
+    return CanonicalizeUnicodeLocaleId.CanonicalizeUnicodeLocaleId(sum2);
   }
 };

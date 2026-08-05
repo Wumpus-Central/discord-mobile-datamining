@@ -97,7 +97,7 @@ function processEvent(type, finishReasons, arg2, setStatus) {
       }
       if (flag) {
         let obj = { code: null, message: null };
-        obj[0] = getSpanStatusFromHttpCode /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
+        obj[0] = getSpanStatusFromHttpCode.SPAN_STATUS_ERROR;
         const error = type.error;
         let str2;
         if (error != null) {
@@ -110,10 +110,10 @@ function processEvent(type, finishReasons, arg2, setStatus) {
         setStatus.setStatus(obj);
         obj = { mechanism: null };
         obj[0] = { handled: false, type: "auto.ai.anthropic.anthropic_error" };
-        captureCheckIn /* captureCheckIn */.captureException(type.error, obj);
+        captureCheckIn.captureException(type.error, obj);
         flag = true;
         const tmp2 = require;
-        const tmp2Result = captureCheckIn /* captureCheckIn */;
+        const tmp2Result = captureCheckIn;
       }
       if (!flag) {
         let tmp7 = "message_delta" === type.type && type.usage;

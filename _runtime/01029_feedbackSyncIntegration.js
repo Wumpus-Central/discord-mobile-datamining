@@ -6,9 +6,9 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const feedbackSyncIntegration = mergeOptions.buildFeedbackIntegration({
   getModalIntegration() {
-    return mergeOptions /* mergeOptions */.feedbackModalIntegration;
+    return mergeOptions.feedbackModalIntegration;
   },
   getScreenshotIntegration() {
-    return mergeOptions /* mergeOptions */.feedbackScreenshotIntegration;
+    return mergeOptions.feedbackScreenshotIntegration;
   }
 });

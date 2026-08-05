@@ -41,7 +41,7 @@ arg5.getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrl
   return combined1;
 };
 arg5.getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
-  const url = dsnFromString /* dsnFromString */.makeDsn(arg0);
+  const url = dsnFromString.makeDsn(arg0);
   if (url) {
     let str = "";
     if (url.protocol) {
@@ -121,6 +121,6 @@ arg5.getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
   } else {
     return "";
   }
-  const obj = dsnFromString /* dsnFromString */;
+  const obj = dsnFromString;
   tmp2 = require;
 };

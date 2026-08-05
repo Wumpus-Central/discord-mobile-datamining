@@ -130,7 +130,7 @@ arg5.default = {
           let tmp34 = byteLength.getUint16(sum) === c25;
           if (tmp34) {
             let tmp35 = require;
-            let obj = getDataView /* getDataView */;
+            let obj = getDataView;
             let tmp36 = c6;
             tmp34 = obj.getStringFromDataView(byteLength, sum + c6, length) === tmp32;
           }
@@ -160,7 +160,7 @@ arg5.default = {
           let tmp40 = byteLength.getUint16(sum) === c26;
           if (tmp40) {
             let tmp41 = require;
-            let obj1 = getDataView /* getDataView */;
+            let obj1 = getDataView;
             let tmp42 = c6;
             tmp40 = obj1.getStringFromDataView(byteLength, sum + c6, length2) === tmp38;
           }
@@ -189,7 +189,7 @@ arg5.default = {
           if (tmp45) {
             let tmp46 = length3;
             let tmp47 = require;
-            let obj2 = getDataView /* getDataView */;
+            let obj2 = getDataView;
             let tmp48 = c6;
             tmp45 = obj2.getStringFromDataView(byteLength, sum + c6, length3.length) === length3;
           }
@@ -223,7 +223,7 @@ arg5.default = {
           if (tmp50) {
             let tmp51 = length4;
             let tmp52 = require;
-            let obj4 = getDataView /* getDataView */;
+            let obj4 = getDataView;
             let tmp53 = c6;
             tmp50 = obj4.getStringFromDataView(byteLength, sum + c6, length4.length) === length4;
           }
@@ -258,7 +258,7 @@ arg5.default = {
           let tmp56 = byteLength.getUint16(sum) === c28;
           if (tmp56) {
             let tmp57 = require;
-            let obj5 = getDataView /* getDataView */;
+            let obj5 = getDataView;
             let tmp58 = c6;
             tmp56 = obj5.getStringFromDataView(byteLength, sum + c6, length3) === tmp54;
           }
@@ -287,7 +287,7 @@ arg5.default = {
           let tmp62 = byteLength.getUint16(sum) === c27;
           if (tmp62) {
             let tmp63 = require;
-            let obj6 = getDataView /* getDataView */;
+            let obj6 = getDataView;
             let tmp64 = c6;
             tmp62 = obj6.getStringFromDataView(byteLength, sum + c6, length.length) === tmp60;
           }
@@ -417,7 +417,7 @@ arg5.default = {
           let tmp67 = byteLength.getUint16(sum) === c27;
           if (tmp67) {
             let tmp68 = require;
-            let obj7 = getDataView /* getDataView */;
+            let obj7 = getDataView;
             let tmp69 = c6;
             tmp67 = obj7.getStringFromDataView(byteLength, sum + c6, length2.length) === tmp65;
           }

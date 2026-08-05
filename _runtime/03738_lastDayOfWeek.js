@@ -30,7 +30,7 @@ let c4 = tmp7;
 
 export default function lastDayOfWeek(arg0, weekStartsOn) {
   tmp7.default(1, arguments);
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;

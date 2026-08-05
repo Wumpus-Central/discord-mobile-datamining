@@ -12,8 +12,8 @@ export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDi
   let timesResult;
   let tmp4;
   if (ZERO.isZero()) {
-    let repeatResult = getMultiInternalSlots /* getMultiInternalSlots */.repeat("0", maximumSignificantDigits);
-    let roundedNumber = TEN /* TEN */.ZERO;
+    let repeatResult = getMultiInternalSlots.repeat("0", maximumSignificantDigits);
+    let roundedNumber = TEN.ZERO;
     let roundingMagnitude = 0;
     let tmp16 = require;
   } else {
@@ -74,7 +74,7 @@ export const ToRawPrecision = function ToRawPrecision(ZERO, minimumSignificantDi
       floorResult1 = floorResult1.plus(1);
       continue;
     }
-    result = __exportStarResult11 /* __exportStarResult11 */.ApplyUnsignedRoundingMode(ZERO, timesResult, roundedNumber, result);
+    result = __exportStarResult11.ApplyUnsignedRoundingMode(ZERO, timesResult, roundedNumber, result);
     if (result.eq(timesResult)) {
       roundingMagnitude = ceilResult.toNumber();
       let str = floorResult;

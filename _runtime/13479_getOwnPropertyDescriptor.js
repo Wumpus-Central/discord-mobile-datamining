@@ -5,7 +5,7 @@ import { 13512__ } from "metro/13512__.js";
 if (!require("getOwnPropertyDescriptor")) {
   getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
     const tmp3 = 13482__(arg0);
-    const tmp4 = text /* text */(arg1);
+    const tmp4 = text(arg1);
     if (!13512__) {
       if (tmp(13500)(tmp3, tmp4)) {
         let tmpResult = tmp(13514);

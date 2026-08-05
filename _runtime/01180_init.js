@@ -277,7 +277,7 @@ export const wrap = function wrap(displayName, profilerProps) {
   };
 };
 export const nativeCrash = function nativeCrash() {
-  const NATIVE = NativeModules /* NativeModules */.NATIVE;
+  const NATIVE = NativeModules.NATIVE;
   NATIVE.nativeCrash();
 };
 export const flush = function flush() {

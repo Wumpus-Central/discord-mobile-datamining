@@ -6,7 +6,7 @@ arg5.default = {
   isAvifFile(getUint32) {
     if (getUint32) {
       try {
-        let parseBoxResult = parseBox /* parseBox */.parseBox(getUint32, 0);
+        let parseBoxResult = parseBox.parseBox(getUint32, 0);
         if (parseBoxResult) {
           parseBoxResult = "avif" === parseBoxResult.majorBrand;
         }
@@ -19,6 +19,6 @@ arg5.default = {
     }
   },
   findAvifOffsets(byteLength) {
-    return parseBox /* parseBox */.findOffsets(byteLength);
+    return parseBox.findOffsets(byteLength);
   }
 };

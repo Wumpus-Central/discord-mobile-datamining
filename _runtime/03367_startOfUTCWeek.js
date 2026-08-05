@@ -30,7 +30,7 @@ let c4 = tmp7;
 
 export default function startOfUTCWeek(arg0, weekStartsOn) {
   tmp5.default(1, arguments);
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;

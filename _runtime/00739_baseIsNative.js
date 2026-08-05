@@ -7,7 +7,7 @@ let closure_3 = RegExp(`^${typeof call === "unknown" ? toString() : call(hasOwnP
 
 export default function baseIsNative(arg0) {
   let tmp2 = dependencyMap;
-  const tmp3 = isObject /* isObject */(arg0);
+  const tmp3 = isObject(arg0);
   let tmp4 = !tmp3;
   if (tmp3) {
     tmp4 = tmp(740)(arg0);

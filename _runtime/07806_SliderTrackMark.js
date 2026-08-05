@@ -16,7 +16,7 @@ export const SliderTrackMark = function SliderTrackMark(arg0) {
   let thumbImage;
   ({ isTrue, thumbImage, StepMarker } = arg0);
   let obj = jsxProd;
-  obj = { style: styles /* styles */.styles.trackMarkContainer, children: null };
+  obj = { style: styles.styles.trackMarkContainer, children: null };
   ({ index, currentValue, min, max } = arg0);
   let jsxResult = null;
   if (StepMarker) {
@@ -44,5 +44,5 @@ export const SliderTrackMark = function SliderTrackMark(arg0) {
   }
   items[1] = jsxResult1;
   obj[1] = items;
-  return <get ActivityIndicator.View style={styles /* styles */.styles.trackMarkContainer}>{null}</get ActivityIndicator.View>;
+  return <get ActivityIndicator.View style={styles.styles.trackMarkContainer}>{null}</get ActivityIndicator.View>;
 };

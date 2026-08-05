@@ -6,7 +6,7 @@ import { addContextToFrame } from "00830_addContextToFrame.js";
 
 function exceptionFromError(arg0, name) {
   let obj = { type: name.name || name.constructor.name, value: null };
-  let isErrorResult = isInstanceOf /* isInstanceOf */.isError(name);
+  let isErrorResult = isInstanceOf.isError(name);
   if (isErrorResult) {
     isErrorResult = "__sentry_fetch_url_host__" in name;
   }
@@ -32,7 +32,7 @@ function exceptionFromError(arg0, name) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const _enhanceErrorWithSentryInfo = function _enhanceErrorWithSentryInfo(__sentry_fetch_url_host__) {
-  let isErrorResult = isInstanceOf /* isInstanceOf */.isError(__sentry_fetch_url_host__);
+  let isErrorResult = isInstanceOf.isError(__sentry_fetch_url_host__);
   if (isErrorResult) {
     isErrorResult = "__sentry_fetch_url_host__" in __sentry_fetch_url_host__;
   }
@@ -75,8 +75,8 @@ export const eventFromMessage = function eventFromMessage(arg0, message, arg2, e
         const items = [obj];
         obj[0] = items;
         obj.exception = obj;
-        const result = addContextToFrame /* addContextToFrame */.addExceptionMechanism(obj, { synthetic: true });
-        const obj5 = addContextToFrame /* addContextToFrame */;
+        const result = addContextToFrame.addExceptionMechanism(obj, { synthetic: true });
+        const obj5 = addContextToFrame;
       }
       const tmp3 = event_id.syntheticException.stack || "";
     }
@@ -89,7 +89,7 @@ export const eventFromMessage = function eventFromMessage(arg0, message, arg2, e
     obj.message = message;
     return obj;
   }
-  obj6 = isInstanceOf /* isInstanceOf */;
+  obj6 = isInstanceOf;
 };
 export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, arg1, name, data) {
   data = undefined;
@@ -102,7 +102,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
   if (!data) {
     data = { handled: true, type: "generic" };
   }
-  let obj1 = isInstanceOf /* isInstanceOf */;
+  let obj1 = isInstanceOf;
   if (obj1.isError(name)) {
     const items = [name, undefined];
     let items3 = items;
@@ -170,8 +170,8 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
             message = name.message;
           }
         }
-        const result = addNonEnumerableProperty /* addNonEnumerableProperty */.extractExceptionKeysForMessage(name);
-        const obj6 = addNonEnumerableProperty /* addNonEnumerableProperty */;
+        const result = addNonEnumerableProperty.extractExceptionKeysForMessage(name);
+        const obj6 = addNonEnumerableProperty;
         if (obj7.isErrorEvent(name)) {
           const _HermesInternal4 = HermesInternal;
           message = "Event `ErrorEvent` captured as exception with message `" + name.message + "`";
@@ -200,7 +200,7 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
           const _HermesInternal3 = HermesInternal;
           message = "" + str5 + " captured as exception with keys: " + result;
         }
-        obj7 = isInstanceOf /* isInstanceOf */;
+        obj7 = isInstanceOf;
       }
     } else {
       let syntheticException1;
@@ -225,9 +225,9 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
   if (tmp29[1]) {
     obj.extra = tmp30;
   }
-  const result1 = addContextToFrame /* addContextToFrame */.addExceptionTypeValue(obj, undefined, undefined);
-  const obj10 = addContextToFrame /* addContextToFrame */;
-  const result2 = addContextToFrame /* addContextToFrame */.addExceptionMechanism(obj, data);
+  const result1 = addContextToFrame.addExceptionTypeValue(obj, undefined, undefined);
+  const obj10 = addContextToFrame;
+  const result2 = addContextToFrame.addExceptionMechanism(obj, data);
   const obj2 = {};
   const merged = Object.assign(obj);
   let event_id;

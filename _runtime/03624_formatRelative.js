@@ -78,7 +78,7 @@ export default function formatRelative(arg0, arg1, locale) {
   tmp15.default(2, arguments);
   const defaultResult1 = tmp11.default(arg0);
   const defaultResult2 = tmp11.default(arg1);
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   locale = undefined;
   if (null != locale) {
     locale = locale.locale;

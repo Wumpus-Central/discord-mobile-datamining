@@ -324,7 +324,7 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
         }
         const flatResult = arr.flat();
         const tmp11 = setIfDefined;
-        const result = truncateTextByBytes /* truncateTextByBytes */.truncateGenAiMessages(mapped);
+        const result = truncateTextByBytes.truncateGenAiMessages(mapped);
         const tmp10 = asString(result);
         if (typeof tmp11 !== "function") {
           HermesBuiltin.throwTypeError();
@@ -332,7 +332,7 @@ arg5.extractChatModelRequestAttributes = function extractChatModelRequestAttribu
         if (null != tmp10) {
           tmpResult[tmp12(958).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp10;
         }
-        const tmp12Result = truncateTextByBytes /* truncateTextByBytes */;
+        const tmp12Result = truncateTextByBytes;
       }
     }
   }

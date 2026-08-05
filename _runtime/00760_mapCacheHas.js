@@ -2,5 +2,5 @@
 import { getMapData } from "00757_getMapData.js";
 
 export default function mapCacheHas(arg0) {
-  return getMapData /* getMapData */(this, arg0).has(arg0);
+  return getMapData(this, arg0).has(arg0);
 };

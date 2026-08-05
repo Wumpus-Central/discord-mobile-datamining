@@ -86,7 +86,7 @@ arg5.validateMcpServerInstance = function validateMcpServerInstance(obj) {
   }
   if (!flag) {
     flag = false;
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = tmp(824).debug;
       debug.warn("Did not patch MCP server. Interface is incompatible.");
       flag = false;

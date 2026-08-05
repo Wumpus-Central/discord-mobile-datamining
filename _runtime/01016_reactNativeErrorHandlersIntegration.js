@@ -73,13 +73,13 @@ if (!fn) {
 }
 let obj = {
   onUnhandled(id, originalException) {
-    let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+    let obj = registerSpanErrorInstrumentation;
     obj = { data: obj, originalException, syntheticException: null, mechanism: null };
     obj = { id };
     let syntheticError;
     if (!obj4.isErrorLike(originalException)) {
-      syntheticError = createSyntheticError /* createSyntheticError */.createSyntheticError();
-      const tmpResult = createSyntheticError /* createSyntheticError */;
+      syntheticError = createSyntheticError.createSyntheticError();
+      const tmpResult = createSyntheticError;
     }
     obj[2] = syntheticError;
     obj[3] = { handled: true, type: "onunhandledrejection" };

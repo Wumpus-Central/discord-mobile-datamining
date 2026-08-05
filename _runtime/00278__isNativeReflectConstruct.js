@@ -15,9 +15,9 @@ arg5.default = {
       } catch (err) {
       }
     } else if (typeof error === "string") {
-      let syntheticError = new _isNativeReflectConstruct /* _isNativeReflectConstruct */.SyntheticError(error);
+      let syntheticError = new _isNativeReflectConstruct.SyntheticError(error);
     } else {
-      syntheticError = new _isNativeReflectConstruct /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");
+      syntheticError = new _isNativeReflectConstruct.SyntheticError("Unspecified error");
     }
   }
 };

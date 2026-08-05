@@ -7,7 +7,7 @@ arg5.getColorScheme = function getColorScheme() {
   if (null == obj) {
     const tmp11 = new obj(89)();
     const require = tmp11;
-    const _default = Appearance /* Appearance */.default;
+    const _default = Appearance.default;
     if (null == _default) {
       obj = { NativeAppearance: null, appearance: null, eventEmitter: null };
       obj[2] = tmp11;
@@ -40,7 +40,7 @@ arg5.setColorScheme = function setColorScheme(arg0) {
   if (null == obj) {
     const tmp14 = new obj(89)();
     const require = tmp14;
-    const _default = Appearance /* Appearance */.default;
+    const _default = Appearance.default;
     if (null == _default) {
       obj = { NativeAppearance: null, appearance: null, eventEmitter: null };
       obj[2] = tmp14;
@@ -77,7 +77,7 @@ arg5.addChangeListener = function addChangeListener(onChange) {
   if (null == obj) {
     const tmp10 = new obj(89)();
     const require = tmp10;
-    const _default = Appearance /* Appearance */.default;
+    const _default = Appearance.default;
     if (null == _default) {
       obj = { NativeAppearance: null, appearance: null, eventEmitter: null };
       obj[2] = tmp10;

@@ -31,8 +31,8 @@ function spanTimeInputToSeconds(num) {
         }
         sum = result1;
       } else {
-        sum = dateTimestampInSeconds /* dateTimestampInSeconds */.timestampInSeconds();
-        const obj = dateTimestampInSeconds /* dateTimestampInSeconds */;
+        sum = dateTimestampInSeconds.timestampInSeconds();
+        const obj = dateTimestampInSeconds;
       }
     }
   }
@@ -70,8 +70,8 @@ function spanToJSON(getSpanJSON) {
         obj[7] = getStatusMessage(status);
         obj[8] = attributes[require(undefined, 7390).SEMANTIC_ATTRIBUTE_SENTRY_OP];
         obj[9] = attributes[require(undefined, 7390).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
-        const obj2 = addNonEnumerableProperty /* addNonEnumerableProperty */;
-        obj[10] = getMetricSummaryJsonForSpan /* getMetricSummaryJsonForSpan */.getMetricSummaryJsonForSpan(getSpanJSON);
+        const obj2 = addNonEnumerableProperty;
+        obj[10] = getMetricSummaryJsonForSpan.getMetricSummaryJsonForSpan(getSpanJSON);
         return obj2.dropUndefinedKeys(obj);
       } else {
         obj = { span_id: null, trace_id: null };
@@ -90,7 +90,7 @@ function spanIsSampled(spanContext) {
 }
 function getStatusMessage(code) {
   if (code) {
-    if (code.code !== getSpanStatusFromHttpCode /* getSpanStatusFromHttpCode */.SPAN_STATUS_UNSET) {
+    if (code.code !== getSpanStatusFromHttpCode.SPAN_STATUS_UNSET) {
       let str = "ok";
       if (code.code !== tmp(7392).SPAN_STATUS_OK) {
         str = code.message || "unknown_error";
@@ -111,7 +111,7 @@ arg5.addChildSpanToSpan = function addChildSpanToSpan(arg0, arg1) {
   if (!tmp2) {
     tmp2 = arg0;
   }
-  const result = addNonEnumerableProperty /* addNonEnumerableProperty */.addNonEnumerableProperty(arg1, _sentryRootSpan, tmp2);
+  const result = addNonEnumerableProperty.addNonEnumerableProperty(arg1, _sentryRootSpan, tmp2);
   if (arg0[_sentryChildSpans]) {
     arg0[tmp6].add(arg1);
     const obj3 = arg0[tmp6];
@@ -119,14 +119,14 @@ arg5.addChildSpanToSpan = function addChildSpanToSpan(arg0, arg1) {
     const _Set = Set;
     const items = [arg1];
     const set = new Set(items);
-    const result1 = addNonEnumerableProperty /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, tmp6, set);
-    const tmp3Result = addNonEnumerableProperty /* addNonEnumerableProperty */;
+    const result1 = addNonEnumerableProperty.addNonEnumerableProperty(arg0, tmp6, set);
+    const tmp3Result = addNonEnumerableProperty;
   }
 };
 arg5.getActiveSpan = function getActiveSpan() {
-  const mainCarrier = getMainCarrier /* getMainCarrier */.getMainCarrier();
-  const obj = getMainCarrier /* getMainCarrier */;
-  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getMainCarrier.getMainCarrier();
+  const obj = getMainCarrier;
+  const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.getActiveSpan) {
     let activeSpan = asyncContextStrategy.getActiveSpan();
   } else {
@@ -169,11 +169,11 @@ arg5.removeChildSpanFromSpan = function removeChildSpanFromSpan(arg0, arg1) {
 };
 arg5.showSpanDropWarning = function showSpanDropWarning() {
   if (!c2) {
-    consoleSandbox /* consoleSandbox */.consoleSandbox(() => {
+    consoleSandbox.consoleSandbox(() => {
       console.warn("[Sentry] Deprecation warning: Returning null from `beforeSendSpan` will be disallowed from SDK version 9.0.0 onwards. The callback will only support mutating spans. To drop certain spans, configure the respective integrations directly.");
     });
     c2 = true;
-    const obj = consoleSandbox /* consoleSandbox */;
+    const obj = consoleSandbox;
   }
 };
 arg5.spanIsSampled = spanIsSampled;
@@ -189,17 +189,17 @@ arg5.spanToTraceContext = function spanToTraceContext(spanContext) {
     parent_span_id = spanToJSON(spanContext).parent_span_id;
   }
   if (isRemote) {
-    span_id = generatePropagationContext /* generatePropagationContext */.generateSpanId();
-    const obj = generatePropagationContext /* generatePropagationContext */;
+    span_id = generatePropagationContext.generateSpanId();
+    const obj = generatePropagationContext;
   }
-  return addNonEnumerableProperty /* addNonEnumerableProperty */.dropUndefinedKeys({ parent_span_id, span_id, trace_id: trace_id.traceId });
+  return addNonEnumerableProperty.dropUndefinedKeys({ parent_span_id, span_id, trace_id: trace_id.traceId });
 };
 arg5.spanToTraceHeader = function spanToTraceHeader(spanContext) {
   let spanId;
   let traceId;
   ({ traceId, spanId } = spanContext.spanContext());
   const spanContextResult = spanContext.spanContext();
-  return regExp /* regExp */.generateSentryTraceHeader(traceId, spanId, 1 === spanContext.spanContext().traceFlags);
+  return regExp.generateSentryTraceHeader(traceId, spanId, 1 === spanContext.spanContext().traceFlags);
 };
 arg5.spanToTransactionTraceContext = function spanToTransactionTraceContext(spanContext) {
   let data;
@@ -213,12 +213,12 @@ arg5.spanToTransactionTraceContext = function spanToTransactionTraceContext(span
   const spanContextResult = spanContext.spanContext();
   ({ data, op, parent_span_id, status, origin } = spanToJSON(spanContext));
   const tmp2 = spanToJSON(spanContext);
-  return addNonEnumerableProperty /* addNonEnumerableProperty */.dropUndefinedKeys({ parent_span_id, span_id, trace_id, data, op, status, origin });
+  return addNonEnumerableProperty.dropUndefinedKeys({ parent_span_id, span_id, trace_id, data, op, status, origin });
 };
 arg5.updateMetricSummaryOnActiveSpan = function updateMetricSummaryOnActiveSpan(arg0, sanitizeMetricKeyResult, diff, sanitizeUnitResult, arg4, bucketKey) {
-  const mainCarrier = getMainCarrier /* getMainCarrier */.getMainCarrier();
-  const obj = getMainCarrier /* getMainCarrier */;
-  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getMainCarrier.getMainCarrier();
+  const obj = getMainCarrier;
+  const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.getActiveSpan) {
     let activeSpan = asyncContextStrategy.getActiveSpan();
   } else {

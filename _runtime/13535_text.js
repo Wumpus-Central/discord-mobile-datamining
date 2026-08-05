@@ -35,7 +35,7 @@ const fn = (toString, toString2) => {
   if (setter) {
     text2 = `set ${tmp4}`;
   }
-  const tmp8 = call /* call */(toString, "name");
+  const tmp8 = call(toString, "name");
   let tmp9 = !tmp8;
   if (tmp8) {
     tmp9 = tmp6(13537).CONFIGURABLE && toString.name !== text2;
@@ -94,10 +94,10 @@ const fn = (toString, toString2) => {
 };
 function toString() {
   const self = this;
-  let source = all /* all */(this);
+  let source = all(this);
   if (source) {
-    source = state /* state */.get(self).source;
-    const tmpResult = state /* state */;
+    source = state.get(self).source;
+    const tmpResult = state;
   }
   if (!source) {
     source = __core_js_shared__(self);

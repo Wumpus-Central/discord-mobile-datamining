@@ -26,8 +26,8 @@ function updateSession(ipAddress) {
   }
   let timestamp = obj.timestamp;
   if (!timestamp) {
-    timestamp = dateTimestampInSeconds /* dateTimestampInSeconds */.timestampInSeconds();
-    const obj2 = dateTimestampInSeconds /* dateTimestampInSeconds */;
+    timestamp = dateTimestampInSeconds.timestampInSeconds();
+    const obj2 = dateTimestampInSeconds;
   }
   ipAddress.timestamp = timestamp;
   if (obj.abnormal_mechanism) {
@@ -96,8 +96,8 @@ function updateSession(ipAddress) {
     if (32 === obj.sid.length) {
       let sid = obj.sid;
     } else {
-      sid = addContextToFrame /* addContextToFrame */.uuid4();
-      const obj3 = addContextToFrame /* addContextToFrame */;
+      sid = addContextToFrame.uuid4();
+      const obj3 = addContextToFrame;
     }
     ipAddress.sid = sid;
   }

@@ -4,7 +4,7 @@ import { 00541__ } from "metro/00541__.js";
 let closure_2 = require("getEvalledConstructor")("%Array.prototype%");
 
 export default function ArrayCreate(arg0) {
-  if (isInteger /* isInteger */(arg0)) {
+  if (isInteger(arg0)) {
     if (arg0 >= 0) {
       if (arg0 > tmp(4570)) {
         const tmp12 = new tmp(560)("length is greater than (2**32 - 1)");

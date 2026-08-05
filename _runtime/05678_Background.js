@@ -8,7 +8,7 @@ const require = arg1;
 
 export default function Background(style) {
   const merged = Object.assign(style, Object.create(null));
-  let obj = Link /* Link */;
+  let obj = Link;
   obj = {};
   const merged1 = Object.assign(merged);
   obj = { flex: 1, backgroundColor: obj.useTheme().colors.background };

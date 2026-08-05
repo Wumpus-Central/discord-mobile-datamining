@@ -27,7 +27,7 @@ function _extractErrorData(cause) {
         let tmp44 = require;
         let tmp45 = dependencyMap;
         let tmp46 = dependencyMap;
-        let obj5 = isInstanceOf /* isInstanceOf */;
+        let obj5 = isInstanceOf;
         if (!obj5.isError(tmp40)) {
           let tmp11 = tmp40;
           if (typeof tmp41 !== "string") {
@@ -63,7 +63,7 @@ function _extractErrorData(cause) {
         } else {
           obj.cause = cause.cause;
         }
-        obj6 = isInstanceOf /* isInstanceOf */;
+        obj6 = isInstanceOf;
       }
     }
     if (typeof cause.toJSON === "function") {
@@ -79,7 +79,7 @@ function _extractErrorData(cause) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
         let tmp29 = dependencyMap;
-        let obj4 = isInstanceOf /* isInstanceOf */;
+        let obj4 = isInstanceOf;
         let tmp30 = tmp24;
         if (obj4.isError(tmp24)) {
           str = str2.toString();
@@ -93,8 +93,8 @@ function _extractErrorData(cause) {
     }
     return obj;
   } catch (tmp32) {
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      const debug = consoleSandbox /* consoleSandbox */.debug;
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+      const debug = consoleSandbox.debug;
       debug.error("Unable to extract extra data from the Error object:", tmp32);
     }
     return null;

@@ -18,7 +18,7 @@ export default function hasNativeSymbols() {
         const SymbolResult = Symbol("bar");
         let tmp8 = typeof SymbolResult === "symbol";
         if (typeof SymbolResult === "symbol") {
-          tmp8 = hasSymbols /* hasSymbols */();
+          tmp8 = hasSymbols();
         }
         tmp3 = tmp8;
       }

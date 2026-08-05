@@ -182,7 +182,7 @@ function setElementAnimation(dummy, dummyAnimationConfig, arg2) {
 arg5.getReducedMotionFromConfig = function getReducedMotionFromConfig(entering) {
   if (entering.reduceMotionV) {
     const reduceMotionV = entering.reduceMotionV;
-    if (isWorkletFunction /* isWorkletFunction */.ReduceMotion.Never === reduceMotionV) {
+    if (isWorkletFunction.ReduceMotion.Never === reduceMotionV) {
       return false;
     } else if (tmp3(1631).ReduceMotion.Always === reduceMotionV) {
       return true;
@@ -190,13 +190,13 @@ arg5.getReducedMotionFromConfig = function getReducedMotionFromConfig(entering) 
       return tmp3(1647).ReducedMotionManager.jsValue;
     }
   } else {
-    return isReducedMotionEnabledInSystem /* isReducedMotionEnabledInSystem */.ReducedMotionManager.jsValue;
+    return isReducedMotionEnabledInSystem.ReducedMotionManager.jsValue;
   }
 };
 arg5.getProcessedConfig = function getProcessedConfig(animationWithInitialValues, animationType, entering) {
   const obj = { animationName: animationWithInitialValues, animationType, duration: null, delay: null, easing: null, callback: null, reversed: null };
   let num = 0.3;
-  if (animationWithInitialValues in TransitionType /* TransitionType */.Animations) {
+  if (animationWithInitialValues in TransitionType.Animations) {
     num = tmp(1662).Animations[animationWithInitialValues].duration;
   }
   if (undefined !== entering.durationV) {
@@ -256,7 +256,7 @@ arg5.getProcessedConfig = function getProcessedConfig(animationWithInitialValues
   }
 };
 arg5.maybeModifyStyleForKeyframe = function maybeModifyStyleForKeyframe(style, entering) {
-  if (entering instanceof BaseAnimationBuilder /* BaseAnimationBuilder */.Keyframe) {
+  if (entering instanceof BaseAnimationBuilder.Keyframe) {
     style.style.animationFillMode = "forwards";
     const _Object = Object;
     const values = Object.values(entering.definitions);
@@ -292,7 +292,7 @@ arg5.saveSnapshot = function saveSnapshot(_componentDOMRef) {
     }
   }
   obj[4] = obj;
-  const snapshots = weakMap /* weakMap */.snapshots;
+  const snapshots = weakMap.snapshots;
   const result = snapshots.set(_componentDOMRef, obj);
 };
 arg5.setElementAnimation = setElementAnimation;
@@ -300,22 +300,22 @@ arg5.handleLayoutTransition = function handleLayoutTransition(_componentDOMRef, 
   let dummyTransitionKeyframeName;
   const animationName = processedConfig.animationName;
   if ("LinearTransition" === animationName) {
-    let ENTRY_EXIT = TransitionType /* TransitionType */.TransitionType.LINEAR;
+    let ENTRY_EXIT = TransitionType.TransitionType.LINEAR;
     let tmp4 = require;
   } else if ("SequencedTransition" === animationName) {
-    ENTRY_EXIT = TransitionType /* TransitionType */.TransitionType.SEQUENCED;
+    ENTRY_EXIT = TransitionType.TransitionType.SEQUENCED;
     tmp4 = require;
   } else if ("FadingTransition" === animationName) {
-    ENTRY_EXIT = TransitionType /* TransitionType */.TransitionType.FADING;
+    ENTRY_EXIT = TransitionType.TransitionType.FADING;
     tmp4 = require;
   } else if ("JumpingTransition" === animationName) {
-    ENTRY_EXIT = TransitionType /* TransitionType */.TransitionType.JUMPING;
+    ENTRY_EXIT = TransitionType.TransitionType.JUMPING;
     tmp4 = require;
   } else if ("CurvedTransition" === animationName) {
-    ENTRY_EXIT = TransitionType /* TransitionType */.TransitionType.CURVED;
+    ENTRY_EXIT = TransitionType.TransitionType.CURVED;
     tmp4 = require;
   } else if ("EntryExitTransition" === animationName) {
-    ENTRY_EXIT = TransitionType /* TransitionType */.TransitionType.ENTRY_EXIT;
+    ENTRY_EXIT = TransitionType.TransitionType.ENTRY_EXIT;
     tmp4 = require;
   }
   let tmp4Result = tmp4(1694);

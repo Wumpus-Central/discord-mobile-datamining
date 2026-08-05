@@ -26,6 +26,6 @@ export default function differenceInWeeks(arg0, arg1, roundingMethod) {
   if (null != roundingMethod) {
     roundingMethod = roundingMethod.roundingMethod;
   }
-  return getRoundingMethod /* getRoundingMethod */.getRoundingMethod(roundingMethod)(result);
+  return getRoundingMethod.getRoundingMethod(roundingMethod)(result);
 };
 export default exports.default;

@@ -66,6 +66,6 @@ arg5.default = function parseErrorStack(arg0) {
         return obj;
       });
     }
-    obj2 = parse /* parse */;
+    obj2 = parse;
   }
 };

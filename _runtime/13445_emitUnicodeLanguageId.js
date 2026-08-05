@@ -11,11 +11,11 @@ arg5.emitUnicodeLanguageId = function emitUnicodeLanguageId(arg0) {
     if (!variants) {
       variants = [];
     }
-    const obj = e /* e */;
+    const obj = e;
     const _Boolean = Boolean;
-    const found = e /* e */.__spreadArray(items, variants, true).filter(Boolean);
+    const found = e.__spreadArray(items, variants, true).filter(Boolean);
     str = found.join("-");
-    const __spreadArrayResult = e /* e */.__spreadArray(items, variants, true);
+    const __spreadArrayResult = e.__spreadArray(items, variants, true);
   }
   return str;
 };
@@ -32,11 +32,11 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
     if (!variants) {
       variants = [];
     }
-    const obj = e /* e */;
+    const obj = e;
     const _Boolean = Boolean;
-    const found = e /* e */.__spreadArray(items, variants, true).filter(Boolean);
+    const found = e.__spreadArray(items, variants, true).filter(Boolean);
     str = found.join("-");
-    const __spreadArrayResult = e /* e */.__spreadArray(items, variants, true);
+    const __spreadArrayResult = e.__spreadArray(items, variants, true);
   }
   const items1 = [str];
   for (let num = 0; num < extensions.length; num = num + 1) {
@@ -48,8 +48,8 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
       let push2 = items1.push;
       let tmp10 = require;
       let tmp11 = dependencyMap;
-      let obj6 = e /* e */;
-      let obj7 = e /* e */;
+      let obj6 = e;
+      let obj7 = e;
       let keywords = iter.keywords;
       let __spreadArrayResult1 = obj7.__spreadArray([], iter.attributes, false);
       let applyResult = push2.apply(items1, obj6.__spreadArray(__spreadArrayResult1, keywords.reduce((arr) => arr.concat(arg1), []), false));
@@ -57,7 +57,7 @@ arg5.emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLocaleIdResu
       let push = items1.push;
       let tmp7 = require;
       let tmp8 = dependencyMap;
-      let obj3 = e /* e */;
+      let obj3 = e;
       let lang2 = iter.lang;
       let str3 = "";
       if (lang2) {

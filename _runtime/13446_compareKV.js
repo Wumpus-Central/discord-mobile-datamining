@@ -48,7 +48,7 @@ function canonicalizeUnicodeLanguageId(lang) {
       obj[2] = lang.region || result.region;
       const variants1 = lang.variants;
       const variants2 = result.variants;
-      const __spreadArrayResult = e /* e */.__spreadArray([], variants1, true);
+      const __spreadArrayResult = e.__spreadArray([], variants1, true);
       for (let num4 = 0; num4 < variants2.length; num4 = num4 + 1) {
         let tmp6 = variants2[num4];
         let tmp7 = num4;
@@ -58,7 +58,7 @@ function canonicalizeUnicodeLanguageId(lang) {
       }
       obj[3] = __spreadArrayResult;
       tmp = obj;
-      const tmp2Result = e /* e */;
+      const tmp2Result = e;
     }
   }
   let tmp9 = tmp;

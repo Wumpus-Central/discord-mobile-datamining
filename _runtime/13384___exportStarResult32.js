@@ -292,7 +292,7 @@ arg5.ToNumber = ToNumber;
 arg5.TimeClip = function TimeClip(isFinite) {
   if (isFinite.isFinite()) {
     if (absResult.greaterThan(8640000000000001)) {
-      const decimal = new digitsToString /* digitsToString */.Decimal(NaN);
+      const decimal = new digitsToString.Decimal(NaN);
       return decimal;
     } else {
       const obj2 = ToNumber(isFinite);
@@ -311,11 +311,11 @@ arg5.TimeClip = function TimeClip(isFinite) {
         }
         return ZERO;
       }
-      ZERO = TEN /* TEN */.ZERO;
+      ZERO = TEN.ZERO;
     }
     absResult = isFinite.abs();
   } else {
-    const decimal1 = new digitsToString /* digitsToString */.Decimal(NaN);
+    const decimal1 = new digitsToString.Decimal(NaN);
     return decimal1;
   }
 };

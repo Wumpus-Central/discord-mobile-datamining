@@ -18,18 +18,18 @@ arg5.getBodySize = function getBodySize(json) {
   if (json) {
     try {
       if (typeof json === "string") {
-        return encodeUTF8 /* encodeUTF8 */.encodeUTF8(json).length;
+        return encodeUTF8.encodeUTF8(json).length;
       } else {
         const _URLSearchParams = URLSearchParams;
         if (json instanceof URLSearchParams) {
-          return encodeUTF8 /* encodeUTF8 */.encodeUTF8(json.toString()).length;
+          return encodeUTF8.encodeUTF8(json.toString()).length;
         } else {
           const _FormData = FormData;
           if (json instanceof FormData) {
             const tmp = (function _serializeFormData(json) {
               return new URLSearchParams(json).toString();
             })(json);
-            return encodeUTF8 /* encodeUTF8 */.encodeUTF8(tmp).length;
+            return encodeUTF8.encodeUTF8(tmp).length;
           } else {
             const _Blob = Blob;
             if (json instanceof Blob) {

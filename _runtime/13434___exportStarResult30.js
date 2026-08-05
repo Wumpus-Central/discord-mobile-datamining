@@ -16,7 +16,7 @@ arg5.PartitionPattern = function PartitionPattern(arr) {
         let tmp4 = dependencyMap;
         let concat = "Invalid pattern ".concat;
         let tmp5 = index1 > index;
-        let invariantResult = getMultiInternalSlots /* getMultiInternalSlots */.invariant(tmp5, "Invalid pattern ".concat(arr));
+        let invariantResult = getMultiInternalSlots.invariant(tmp5, "Invalid pattern ".concat(arr));
         let tmp7 = num4;
         let tmp8 = index;
         if (index > num4) {

@@ -5095,7 +5095,7 @@ export () => ({
   }
 })
 export const getFeedback = function getFeedback() {
-  const client = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getClient();
+  const client = registerSpanErrorInstrumentation.getClient();
   let integrationByName;
   if (client != null) {
     integrationByName = client.getIntegrationByName("Feedback");

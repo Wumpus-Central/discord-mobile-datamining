@@ -17,13 +17,13 @@ arg5.captureFeedback = function captureFeedback(arg0) {
   }
   let currentScope = arg2;
   if (arg2 === undefined) {
-    currentScope = getClient /* getClient */.getCurrentScope();
-    const obj3 = getClient /* getClient */;
+    currentScope = getClient.getCurrentScope();
+    const obj3 = getClient;
   }
   obj = { contexts: null, type: "feedback", level: "info", tags: null };
   obj = { feedback: null };
   ({ message, name, email, url, source, associatedEventId, tags } = arg0);
-  obj[0] = addNonEnumerableProperty /* addNonEnumerableProperty */.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId });
+  obj[0] = addNonEnumerableProperty.dropUndefinedKeys({ contact_email: email, name, message, url, source, associated_event_id: associatedEventId });
   obj[0] = obj;
   obj[3] = tags;
   let client = currentScope;
@@ -31,8 +31,8 @@ arg5.captureFeedback = function captureFeedback(arg0) {
     client = currentScope.getClient();
   }
   if (!client) {
-    client = getClient /* getClient */.getClient();
-    const tmp3Result = getClient /* getClient */;
+    client = getClient.getClient();
+    const tmp3Result = getClient;
   }
   if (client) {
     client.emit("beforeSendFeedback", obj, obj);

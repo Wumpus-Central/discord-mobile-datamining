@@ -21,14 +21,14 @@ arg5.match = function match(arg0, arg1, arg2, algorithm) {
 let obj = {
   enumerable: true,
   get() {
-    return LookupSupportedLocales /* LookupSupportedLocales */.LookupSupportedLocales;
+    return LookupSupportedLocales.LookupSupportedLocales;
   }
 };
 Object.defineProperty(arg5, "LookupSupportedLocales", obj);
 obj = {
   enumerable: true,
   get() {
-    return ResolveLocale /* ResolveLocale */.ResolveLocale;
+    return ResolveLocale.ResolveLocale;
   }
 };
 Object.defineProperty(arg5, "ResolveLocale", obj);

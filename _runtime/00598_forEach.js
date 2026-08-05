@@ -8,5 +8,5 @@ export default function forEach(arg0, arg1) {
   } else {
     tmpResult = tmp(601);
   }
-  return tmpResult(arg0, castFunction /* castFunction */(arg1));
+  return tmpResult(arg0, castFunction(arg1));
 };

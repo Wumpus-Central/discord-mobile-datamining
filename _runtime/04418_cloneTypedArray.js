@@ -3,7 +3,7 @@ import { cloneArrayBuffer } from "04416_cloneArrayBuffer.js";
 
 export default function cloneTypedArray(buffer) {
   if (arg1) {
-    buffer = cloneArrayBuffer /* cloneArrayBuffer */(buffer.buffer);
+    buffer = cloneArrayBuffer(buffer.buffer);
   } else {
     buffer = buffer.buffer;
   }

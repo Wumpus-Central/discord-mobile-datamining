@@ -79,7 +79,7 @@ export default function HeaderBackButton(accessibilityLabel) {
   }
   let dependencyMap;
   ({ testID, style } = accessibilityLabel);
-  let obj = Link /* Link */;
+  let obj = Link;
   [tmp6, c2] = callback(React.useState(undefined), 2);
   if (undefined === tintColor) {
     tintColor = obj.useTheme().colors.text;

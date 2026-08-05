@@ -39,7 +39,7 @@ function checkSharedValueUsage(value, nextResult) {
         if (null !== value) {
           if (undefined !== value.value) {
             const _HermesInternal = HermesInternal;
-            const reanimatedError = new t /* t */.ReanimatedError("Invalid value passed to `" + nextResult + "`, maybe you forgot to use `.value`?");
+            const reanimatedError = new t.ReanimatedError("Invalid value passed to `" + nextResult + "`, maybe you forgot to use `.value`?");
             throw reanimatedError;
           }
         }

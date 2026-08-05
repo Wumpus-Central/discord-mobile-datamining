@@ -2,7 +2,7 @@
 import { isObject } from "00606_isObject.js";
 
 export default function isIterateeCall(arg0, num) {
-  if (isObject /* isObject */(arg2)) {
+  if (isObject(arg2)) {
     if (typeof num === "number") {
       let tmp5 = tmp(603)(arg2) && tmp(628)(num, arg2.length);
       const tmp4 = tmp(603)(arg2) && tmp(628)(num, arg2.length);

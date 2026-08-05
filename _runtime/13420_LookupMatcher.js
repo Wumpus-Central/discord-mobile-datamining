@@ -7,8 +7,8 @@ arg5.LookupMatcher = function LookupMatcher(arg0, arg1, arg2) {
   const obj = { locale: "" };
   let num = 0;
   if (0 < arg1.length) {
-    const replaced = str.replace(isMatched /* isMatched */.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
-    const BestAvailableLocaleResult = BestAvailableLocale /* BestAvailableLocale */.BestAvailableLocale(arg0, replaced);
+    const replaced = str.replace(isMatched.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    const BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
     while (!BestAvailableLocaleResult) {
       num = num + 1;
     }

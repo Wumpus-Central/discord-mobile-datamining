@@ -10,6 +10,6 @@ export default function _possibleConstructorReturn(arg0, fn) {
     const typeError = new TypeError("Derived constructors may only return object or undefined");
     throw typeError;
   } else {
-    return _assertThisInitialized /* _assertThisInitialized */(arg0);
+    return _assertThisInitialized(arg0);
   }
 };

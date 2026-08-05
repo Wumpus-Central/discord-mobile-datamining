@@ -72,14 +72,14 @@ RepeatType[2] = "UNPACKED";
 ScalarType.normalizeFieldInfo = function normalizeFieldInfo(localName) {
   localName = localName.localName;
   if (null === localName) {
-    localName = lowerCamelCase /* lowerCamelCase */.lowerCamelCase(localName.name);
-    const obj = lowerCamelCase /* lowerCamelCase */;
+    localName = lowerCamelCase.lowerCamelCase(localName.name);
+    const obj = lowerCamelCase;
   }
   localName.localName = localName;
   let jsonName = localName.jsonName;
   if (null === jsonName) {
-    jsonName = lowerCamelCase /* lowerCamelCase */.lowerCamelCase(localName.name);
-    const obj2 = lowerCamelCase /* lowerCamelCase */;
+    jsonName = lowerCamelCase.lowerCamelCase(localName.name);
+    const obj2 = lowerCamelCase;
   }
   localName.jsonName = jsonName;
   let NO = localName.repeat;

@@ -12,9 +12,9 @@ function getExtendedError(value, componentStack) {
     } catch (err) {
     }
   } else if (typeof value === "string") {
-    let syntheticError = new _isNativeReflectConstruct /* _isNativeReflectConstruct */.SyntheticError(value);
+    let syntheticError = new _isNativeReflectConstruct.SyntheticError(value);
   } else {
-    syntheticError = new _isNativeReflectConstruct /* _isNativeReflectConstruct */.SyntheticError("Unspecified error");
+    syntheticError = new _isNativeReflectConstruct.SyntheticError("Unspecified error");
   }
 }
 

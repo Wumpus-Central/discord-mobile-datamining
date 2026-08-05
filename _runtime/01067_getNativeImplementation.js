@@ -7,7 +7,7 @@ function getNativeImplementation(fetch) {
   if (table[fetch]) {
     return tmp6;
   } else {
-    const tmp9 = WINDOW /* WINDOW */.WINDOW[fetch];
+    const tmp9 = WINDOW.WINDOW[fetch];
     let obj = tmp9;
     if (obj2.isNativeFunction(tmp9)) {
       const bindResult = obj.bind(tmp7(1039).WINDOW);
@@ -50,7 +50,7 @@ function getNativeImplementation(fetch) {
       }
       return tmp24;
     }
-    obj2 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+    obj2 = registerSpanErrorInstrumentation;
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

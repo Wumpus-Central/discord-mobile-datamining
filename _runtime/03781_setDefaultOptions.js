@@ -13,7 +13,7 @@ if (!requiredArgs) {
 export default function setDefaultOptions(obj) {
   tmp3.default(1, arguments);
   obj = {};
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   for (const key10017 in defaultOptions) {
     let tmp8 = key10017;
     let _Object = Object;
@@ -54,6 +54,6 @@ export default function setDefaultOptions(obj) {
     }
     continue;
   }
-  getDefaultOptions /* getDefaultOptions */.setDefaultOptions(obj);
+  getDefaultOptions.setDefaultOptions(obj);
 };
 export default exports.default;

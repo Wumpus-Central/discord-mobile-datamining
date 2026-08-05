@@ -9,5 +9,5 @@ export default function reduce(arg0, arg1, arg2) {
   } else {
     tmpResult = tmp(4448);
   }
-  return tmpResult(arg0, baseIteratee /* baseIteratee */(arg1, 4), arg2, arguments.length < 3, baseForOwn /* baseForOwn */);
+  return tmpResult(arg0, baseIteratee(arg1, 4), arg2, arguments.length < 3, baseForOwn);
 };

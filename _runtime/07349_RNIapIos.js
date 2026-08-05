@@ -15,7 +15,7 @@ function checkNativeAndroidAvailable() {
   if (!RNIapModule) {
     if (!RNIapAmazonModule) {
       const _Error = Error;
-      const error = new Error(PurchaseError /* PurchaseError */.ErrorCode.E_IAP_NOT_AVAILABLE);
+      const error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
       throw error;
     }
   }
@@ -28,7 +28,7 @@ function getAndroidModule() {
   if (!RNIapModule) {
     if (!RNIapAmazonModule) {
       const _Error = Error;
-      const error = new Error(PurchaseError /* PurchaseError */.ErrorCode.E_IAP_NOT_AVAILABLE);
+      const error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
       throw error;
     }
   }
@@ -64,7 +64,7 @@ export const getAndroidModuleType = () => {
   if (!RNIapModule) {
     if (!RNIapAmazonModule) {
       const _Error = Error;
-      const error = new Error(PurchaseError /* PurchaseError */.ErrorCode.E_IAP_NOT_AVAILABLE);
+      const error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
       throw error;
     }
   }
@@ -95,7 +95,7 @@ export const getNativeModule = () => {
   if (!RNIapModule) {
     if (!RNIapAmazonModule) {
       const _Error = Error;
-      const error = new Error(PurchaseError /* PurchaseError */.ErrorCode.E_IAP_NOT_AVAILABLE);
+      const error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
       throw error;
     }
   }
@@ -159,7 +159,7 @@ export const getIosModule = () => {
     }
     if (!c6) {
       const _Error = Error;
-      const error = new Error(PurchaseError /* PurchaseError */.ErrorCode.E_IAP_NOT_AVAILABLE);
+      const error = new Error(PurchaseError.ErrorCode.E_IAP_NOT_AVAILABLE);
       throw error;
     }
   }

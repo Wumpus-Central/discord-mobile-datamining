@@ -6,7 +6,7 @@ export default function Type(arg0) {
   if (typeof arg0 !== "symbol") {
     let str2 = "BigInt";
     if (typeof arg0 !== "bigint") {
-      str2 = Type /* Type */(arg0);
+      str2 = Type(arg0);
     }
     str = str2;
   }

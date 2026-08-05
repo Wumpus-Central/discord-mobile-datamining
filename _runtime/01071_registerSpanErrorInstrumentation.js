@@ -5,7 +5,7 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.uiProfiler = {
   startProfiler() {
-    const client = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getClient();
+    const client = registerSpanErrorInstrumentation.getClient();
     if (client) {
       if (client.getIntegrationByName("BrowserProfiling")) {
         client.emit("startUIProfiler");
@@ -19,7 +19,7 @@ arg5.uiProfiler = {
     }
   },
   stopProfiler() {
-    const client = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getClient();
+    const client = registerSpanErrorInstrumentation.getClient();
     if (client) {
       if (client.getIntegrationByName("BrowserProfiling")) {
         client.emit("stopUIProfiler");

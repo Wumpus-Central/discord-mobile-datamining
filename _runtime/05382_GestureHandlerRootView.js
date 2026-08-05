@@ -12,7 +12,7 @@ const styles = StyleSheet.create({ container: { flex: 1 } });
 export default function GestureHandlerRootView(style) {
   let container = style.style;
   const merged = Object.assign(style, Object.create(null));
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const result = obj.maybeInitializeFabric();
   if (container == null) {
     container = container.container;

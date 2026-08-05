@@ -40,7 +40,7 @@ let c5 = tmp9;
 
 export default function setDay(arg0, arg1, weekStartsOn) {
   tmp9.default(2, arguments);
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;

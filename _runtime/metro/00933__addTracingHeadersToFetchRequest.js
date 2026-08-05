@@ -9,7 +9,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
   let tmp5;
   let traceparent;
   let tmp = propagateTraceparent;
-  let obj = getTraceData /* getTraceData */;
+  let obj = getTraceData;
   obj = { span, propagateTraceparent };
   const traceData = obj.getTraceData(obj);
   ({ sentry-trace: tmp5, baggage, traceparent } = traceData);
@@ -208,7 +208,7 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
   let url;
   if (fetchData.fetchData) {
     ({ method, url } = fetchData.fetchData);
-    obj = hasSpansEnabled /* hasSpansEnabled */;
+    obj = hasSpansEnabled;
     let hasSpansEnabledResult = obj.hasSpansEnabled();
     if (hasSpansEnabledResult) {
       hasSpansEnabledResult = arg1(url);
@@ -355,7 +355,7 @@ arg5.instrumentFetchRequest = function instrumentFetchRequest(fetchData, arg1, a
       const tmp27 = _addTracingHeadersToFetchRequest;
       tmp3Result8 = tmp3(855);
     }
-    const client = getClient /* getClient */.getClient();
+    const client = getClient.getClient();
     if (client) {
       ({ args: obj19[0], response: obj19[1], startTimestamp: obj19[2], endTimestamp: obj19[3] } = fetchData);
       client.emit("beforeOutgoingRequestSpan", sentryNonRecordingSpan, { input: null, response: null, startTimestamp: null, endTimestamp: null });

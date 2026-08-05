@@ -34,6 +34,6 @@ arg5.default = function v4(arg0, arg1, arg2) {
     } while (num4 < 16);
     return arg1;
   } else {
-    return unsafeStringify /* unsafeStringify */.unsafeStringify(random);
+    return unsafeStringify.unsafeStringify(random);
   }
 };

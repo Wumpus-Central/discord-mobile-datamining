@@ -21,11 +21,11 @@ function parseBezierKnot(dataView) {
     let str = (2130706432 & longAt) >>> 24;
     let _parseInt = parseInt;
     let tmp6 = require;
-    let obj2 = getDataView /* getDataView */;
+    let obj2 = getDataView;
     let str2 = longAt & parseInt(obj2.strRepeat("1", 24), 2);
-    let obj3 = getDataView /* getDataView */;
+    let obj3 = getDataView;
     let text = `${str.toString(2)}.`;
-    let obj4 = getDataView /* getDataView */;
+    let obj4 = getDataView;
     let result = num2 * obj3.parseFloatRadix(`${str.toString(2)}.` + obj4.padStart(str2.toString(2), 24, "0"), 2);
     let tmp2Result = tmp2(4914);
     let longAt1 = tmp2Result.getLongAt(dataView, sum + 4);
@@ -77,7 +77,7 @@ obj[2000] = {
 obj[2999] = {
   name: "ClippingPathName",
   description(getUint8) {
-    return callback(getDataView /* getDataView */.getPascalStringFromDataView(getUint8, 0), 2)[1];
+    return callback(getDataView.getPascalStringFromDataView(getUint8, 0), 2)[1];
   }
 };
 obj = {
@@ -123,11 +123,11 @@ let closure_4 = {
         num2 = 1;
       }
       const obj = 04914__;
-      const obj2 = getDataView /* getDataView */;
-      const str2 = longAt & parseInt(getDataView /* getDataView */.strRepeat("1", 24), 2);
+      const obj2 = getDataView;
+      const str2 = longAt & parseInt(getDataView.strRepeat("1", 24), 2);
       const text = `${str.toString(2)}.`;
-      const obj3 = getDataView /* getDataView */;
-      const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + getDataView /* getDataView */.padStart(str2.toString(2), 24, "0"), 2), , , ];
+      const obj3 = getDataView;
+      const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + getDataView.padStart(str2.toString(2), 24, "0"), 2), , , ];
       sum = sum + 4;
       let tmpResult = tmp(4914);
       const longAt1 = tmpResult.getLongAt(dataView, sum);
@@ -136,11 +136,11 @@ let closure_4 = {
         num3 = 1;
       }
       let tmp4Result = tmp4(4897);
-      const obj4 = getDataView /* getDataView */;
+      const obj4 = getDataView;
       tmp4Result = tmp4(4897);
       const text1 = `${str3.toString(2)}.`;
       const str4 = longAt1 & parseInt(tmp4Result.strRepeat("1", 24), 2);
-      items[1] = num3 * tmp4Result.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + getDataView /* getDataView */.padStart(str4.toString(2), 24, "0"), 2);
+      items[1] = num3 * tmp4Result.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + getDataView.padStart(str4.toString(2), 24, "0"), 2);
       const sum1 = sum + 8;
       tmpResult = tmp(4914);
       const longAt2 = tmpResult.getLongAt(dataView, sum1);
@@ -148,38 +148,38 @@ let closure_4 = {
       if (longAt2 >>> 31 === 0) {
         num4 = 1;
       }
-      const tmp4Result1 = getDataView /* getDataView */;
-      const tmp4Result2 = getDataView /* getDataView */;
-      const str6 = longAt2 & parseInt(getDataView /* getDataView */.strRepeat("1", 24), 2);
+      const tmp4Result1 = getDataView;
+      const tmp4Result2 = getDataView;
+      const str6 = longAt2 & parseInt(getDataView.strRepeat("1", 24), 2);
       const text2 = `${str5.toString(2)}.`;
-      const tmp4Result3 = getDataView /* getDataView */;
-      items[2] = num4 * tmp4Result3.parseFloatRadix(`${(2130706432 & longAt2) >>> 24.toString(2)}.` + getDataView /* getDataView */.padStart(str6.toString(2), 24, "0"), 2);
+      const tmp4Result3 = getDataView;
+      items[2] = num4 * tmp4Result3.parseFloatRadix(`${(2130706432 & longAt2) >>> 24.toString(2)}.` + getDataView.padStart(str6.toString(2), 24, "0"), 2);
       const sum2 = sum + 12;
-      const tmp4Result4 = getDataView /* getDataView */;
+      const tmp4Result4 = getDataView;
       const longAt3 = 04914__.getLongAt(dataView, sum2);
       let num5 = num;
       if (longAt3 >>> 31 === 0) {
         num5 = 1;
       }
       const tmpResult1 = 04914__;
-      const tmp4Result5 = getDataView /* getDataView */;
-      const str8 = longAt3 & parseInt(getDataView /* getDataView */.strRepeat("1", 24), 2);
+      const tmp4Result5 = getDataView;
+      const str8 = longAt3 & parseInt(getDataView.strRepeat("1", 24), 2);
       const text3 = `${str7.toString(2)}.`;
-      const tmp4Result6 = getDataView /* getDataView */;
-      items[3] = num5 * tmp4Result6.parseFloatRadix(`${(2130706432 & longAt3) >>> 24.toString(2)}.` + getDataView /* getDataView */.padStart(str8.toString(2), 24, "0"), 2);
+      const tmp4Result6 = getDataView;
+      items[3] = num5 * tmp4Result6.parseFloatRadix(`${(2130706432 & longAt3) >>> 24.toString(2)}.` + getDataView.padStart(str8.toString(2), 24, "0"), 2);
       const items1 = [items, ];
       const sum3 = sum + 16;
-      const tmp4Result7 = getDataView /* getDataView */;
+      const tmp4Result7 = getDataView;
       const longAt4 = 04914__.getLongAt(dataView, sum3);
       if (longAt4 >>> 31 === 0) {
         num = 1;
       }
       const tmpResult2 = 04914__;
-      const tmp4Result8 = getDataView /* getDataView */;
-      const str10 = longAt4 & parseInt(getDataView /* getDataView */.strRepeat("1", 24), 2);
+      const tmp4Result8 = getDataView;
+      const str10 = longAt4 & parseInt(getDataView.strRepeat("1", 24), 2);
       const text4 = `${str9.toString(2)}.`;
-      const tmp4Result9 = getDataView /* getDataView */;
-      items1[1] = num * tmp4Result9.parseFloatRadix(`${(2130706432 & longAt4) >>> 24.toString(2)}.` + getDataView /* getDataView */.padStart(str10.toString(2), 24, "0"), 2);
+      const tmp4Result9 = getDataView;
+      items1[1] = num * tmp4Result9.parseFloatRadix(`${(2130706432 & longAt4) >>> 24.toString(2)}.` + getDataView.padStart(str10.toString(2), 24, "0"), 2);
       return items1;
     }
   }

@@ -23,7 +23,7 @@ function createMcpSpan(arg0) {
   let name = method;
   ({ transport, extra, callback } = arg0);
   if ("request" === type) {
-    let obj = extractTargetInfo /* extractTargetInfo */;
+    let obj = extractTargetInfo;
     obj = params;
     if (!params) {
       obj = {};
@@ -37,14 +37,14 @@ function createMcpSpan(arg0) {
     name = combined;
   }
   obj = {};
-  const merged = Object.assign(extractClientInfo /* extractClientInfo */.buildTransportAttributes(transport, extra));
+  const merged = Object.assign(extractClientInfo.buildTransportAttributes(transport, extra));
   obj[00940__.MCP_METHOD_NAME_ATTRIBUTE] = method;
-  const obj4 = extractClientInfo /* extractClientInfo */;
+  const obj4 = extractClientInfo;
   let recordInputs;
   if (options != null) {
     recordInputs = options.recordInputs;
   }
-  const merged1 = Object.assign(getNotificationAttributes /* getNotificationAttributes */.buildTypeSpecificAttributes(type, message, params, recordInputs));
+  const merged1 = Object.assign(getNotificationAttributes.buildTypeSpecificAttributes(type, message, params, recordInputs));
   if ("request" === type) {
     let MCP_NOTIFICATION_SERVER_TO_CLIENT_OP_VALUE = tmp6(940).MCP_SERVER_OP_VALUE;
     let MCP_NOTIFICATION_ORIGIN_VALUE = tmp6(940).MCP_FUNCTION_ORIGIN_VALUE;
@@ -66,18 +66,18 @@ function createMcpSpan(arg0) {
   if (client != null) {
     sendDefaultPii = client.getOptions().sendDefaultPii;
   }
-  const obj5 = getNotificationAttributes /* getNotificationAttributes */;
+  const obj5 = getNotificationAttributes;
   tmp6Result = tmp6(944);
   const attributes = tmp6Result.filterMcpPiiFromSpanData(obj, Boolean(sendDefaultPii));
   const BooleanResult = Boolean(sendDefaultPii);
-  return createChildOrRootSpan /* createChildOrRootSpan */.startSpan({ name, forceTransaction: true, attributes }, callback);
+  return createChildOrRootSpan.startSpan({ name, forceTransaction: true, attributes }, callback);
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.buildMcpServerSpanConfig = function buildMcpServerSpanConfig(closure_1, self, closure_2, closure_0) {
   let method;
   let params;
   ({ method, params } = closure_1);
-  let obj = extractTargetInfo /* extractTargetInfo */;
+  let obj = extractTargetInfo;
   obj = params;
   if (!params) {
     obj = {};
@@ -103,15 +103,15 @@ arg5.buildMcpServerSpanConfig = function buildMcpServerSpanConfig(closure_1, sel
   obj1[00839__.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = 00940__.MCP_FUNCTION_ORIGIN_VALUE;
   obj1[00839__.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = 00940__.MCP_ROUTE_SOURCE_VALUE;
   const merged2 = Object.assign(obj1);
-  const client = getClient /* getClient */.getClient();
+  const client = getClient.getClient();
   let sendDefaultPii;
   if (client != null) {
     sendDefaultPii = client.getOptions().sendDefaultPii;
   }
-  const tmpResult1 = getClient /* getClient */;
+  const tmpResult1 = getClient;
   const BooleanResult = Boolean(sendDefaultPii);
   const obj2 = { name: combined, op: null, forceTransaction: true, attributes: null };
-  const result = set /* set */.filterMcpPiiFromSpanData(obj, BooleanResult);
+  const result = set.filterMcpPiiFromSpanData(obj, BooleanResult);
   obj2[1] = 00940__.MCP_SERVER_OP_VALUE;
   obj2[3] = result;
   return obj2;

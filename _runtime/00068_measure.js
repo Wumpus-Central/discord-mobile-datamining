@@ -11,7 +11,7 @@ const merged = Object.assign(_default);
 obj.measure = function measure(arg0, arg1) {
   if (arg0 % 2 === 0) {
     const tmp5 = nullthrows;
-    const tmp5Result = tmp5(getFabricUIManager /* getFabricUIManager */.getFabricUIManager());
+    const tmp5Result = tmp5(getFabricUIManager.getFabricUIManager());
     const result = tmp5Result.findShadowNodeByTag_DEPRECATED(arg0);
     if (result) {
       tmp5Result.measure(result, arg1);
@@ -21,7 +21,7 @@ obj.measure = function measure(arg0, arg1) {
       console.warn("measure cannot find view with tag #" + arg0);
       arg1();
     }
-    const obj = getFabricUIManager /* getFabricUIManager */;
+    const obj = getFabricUIManager;
   } else {
     _default.measure(arg0, arg1);
   }
@@ -29,7 +29,7 @@ obj.measure = function measure(arg0, arg1) {
 obj.measureInWindow = function measureInWindow(arg0, arg1) {
   if (arg0 % 2 === 0) {
     const tmp5 = nullthrows;
-    const tmp5Result = tmp5(getFabricUIManager /* getFabricUIManager */.getFabricUIManager());
+    const tmp5Result = tmp5(getFabricUIManager.getFabricUIManager());
     const result = tmp5Result.findShadowNodeByTag_DEPRECATED(arg0);
     if (result) {
       tmp5Result.measureInWindow(result, arg1);
@@ -39,7 +39,7 @@ obj.measureInWindow = function measureInWindow(arg0, arg1) {
       console.warn("measure cannot find view with tag #" + arg0);
       arg1();
     }
-    const obj = getFabricUIManager /* getFabricUIManager */;
+    const obj = getFabricUIManager;
   } else {
     _default.measureInWindow(arg0, arg1);
   }
@@ -47,7 +47,7 @@ obj.measureInWindow = function measureInWindow(arg0, arg1) {
 obj.measureLayout = function measureLayout(arg0, arg1, arg2, arg3) {
   if (arg0 % 2 === 0) {
     const tmp10 = nullthrows;
-    const tmp10Result = tmp10(getFabricUIManager /* getFabricUIManager */.getFabricUIManager());
+    const tmp10Result = tmp10(getFabricUIManager.getFabricUIManager());
     const result = tmp10Result.findShadowNodeByTag_DEPRECATED(arg0);
     const result1 = tmp10Result.findShadowNodeByTag_DEPRECATED(arg1);
     if (result) {
@@ -84,13 +84,13 @@ obj.dispatchViewManagerCommand = function dispatchViewManagerCommand(num) {
     throw error;
   } else if (num % 2 === 0) {
     const tmp5 = nullthrows;
-    const tmp5Result = tmp5(getFabricUIManager /* getFabricUIManager */.getFabricUIManager());
+    const tmp5Result = tmp5(getFabricUIManager.getFabricUIManager());
     const result = tmp5Result.findShadowNodeByTag_DEPRECATED(num);
     if (result) {
       const _HermesInternal = HermesInternal;
       tmp5Result.dispatchCommand(result, "" + arg1, arg2);
     }
-    const obj = getFabricUIManager /* getFabricUIManager */;
+    const obj = getFabricUIManager;
   } else {
     const result1 = _default.dispatchViewManagerCommand(num, arg1, arg2);
   }

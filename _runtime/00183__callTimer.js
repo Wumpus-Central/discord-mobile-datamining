@@ -40,8 +40,8 @@ function _callTimer(arg0, arg1) {
           }
           tmp23();
         } catch (tmp15) {
-          arr4.push(toError /* toError */.default(tmp15));
-          const obj2 = toError /* toError */;
+          arr4.push(toError.default(tmp15));
+          const obj2 = toError;
         }
       }
     }

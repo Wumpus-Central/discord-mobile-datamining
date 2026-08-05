@@ -59,7 +59,7 @@ export const useStoreWithEqualityFn = function useStoreWithEqualityFn(closure_4,
   if (arg1 === undefined) {
     tmp = identity;
   }
-  const syncExternalStoreWithSelector = is /* is */.useSyncExternalStoreWithSelector(closure_4.subscribe, closure_4.getState, closure_4.getInitialState, tmp, shallow);
+  const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(closure_4.subscribe, closure_4.getState, closure_4.getInitialState, tmp, shallow);
   const debugValue = noop.useDebugValue(syncExternalStoreWithSelector);
   return syncExternalStoreWithSelector;
 };

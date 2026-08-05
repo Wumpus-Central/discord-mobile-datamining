@@ -21,18 +21,18 @@ function _addMeasureSpans(activeSpan, entryType) {
   })(entryType)) {
     const items = ["mark", "measure"];
     if (!items.includes(entryType.entryType)) {
-      const navigationEntry = getNavigationEntry /* getNavigationEntry */.getNavigationEntry(false);
-      let obj2 = getNavigationEntry /* getNavigationEntry */;
+      const navigationEntry = getNavigationEntry.getNavigationEntry(false);
+      let obj2 = getNavigationEntry;
       let num = 0;
       if (navigationEntry) {
         num = navigationEntry.requestStart;
       }
       const _Math = Math;
-      const sum = arg4 + Math.max(arg2, extractNetworkProtocol /* extractNetworkProtocol */.msToSec(num));
+      const sum = arg4 + Math.max(arg2, extractNetworkProtocol.msToSec(num));
       const sum1 = arg4 + arg2;
       const sum2 = sum1 + arg3;
       let obj = {};
-      obj[registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.resource.browser.metrics";
+      obj[registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.resource.browser.metrics";
       if (sum !== sum1) {
         obj["sentry.browser.measure_happened_before_request"] = true;
         obj["sentry.browser.measure_start_time"] = sum;
@@ -90,9 +90,9 @@ function _addMeasureSpans(activeSpan, entryType) {
         obj[2] = obj;
         tmp4Result.startAndEndSpan(activeSpan, sum, sum2, obj);
       }
-      const obj3 = extractNetworkProtocol /* extractNetworkProtocol */;
+      const obj3 = extractNetworkProtocol;
     } else {
-      obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+      obj = registerSpanErrorInstrumentation;
     }
   }
 }
@@ -150,17 +150,17 @@ function _addPerformanceNavigationTiming(activeSpan, requestStart, domainLookup,
     tmp5 = tmp3;
   }
   if (tmp5) {
-    let obj = extractNetworkProtocol /* extractNetworkProtocol */;
-    let obj1 = extractNetworkProtocol /* extractNetworkProtocol */;
+    let obj = extractNetworkProtocol;
+    let obj1 = extractNetworkProtocol;
     const sum = arg3 + obj1.msToSec(tmp4);
-    let obj2 = extractNetworkProtocol /* extractNetworkProtocol */;
+    let obj2 = extractNetworkProtocol;
     const sum1 = arg3 + obj2.msToSec(tmp3);
     obj = { op: null, name: null, attributes: null };
     const _HermesInternal2 = HermesInternal;
     obj[0] = "browser." + tmp;
     obj[1] = redirectCount.name;
     obj = {};
-    obj[registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
+    obj[registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
     if ("redirect" !== domainLookup) {
       obj1 = {};
       const merged = Object.assign(obj1);
@@ -431,7 +431,7 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
   }
 };
 export const startTrackingInteractions = function startTrackingInteractions() {
-  const result = triggerHandlers /* triggerHandlers */.addPerformanceInstrumentationHandler("event", (arg0) => {
+  const result = triggerHandlers.addPerformanceInstrumentationHandler("event", (arg0) => {
     const entries = arg0.entries;
     let obj = callback(817);
     const activeSpan = obj.getActiveSpan();
@@ -564,7 +564,7 @@ export const startTrackingLongAnimationFrames = function startTrackingLongAnimat
   performanceObserver.observe({ type: "long-animation-frame", buffered: true });
 };
 export const startTrackingLongTasks = function startTrackingLongTasks() {
-  const result = triggerHandlers /* triggerHandlers */.addPerformanceInstrumentationHandler("longtask", (arg0) => {
+  const result = triggerHandlers.addPerformanceInstrumentationHandler("longtask", (arg0) => {
     const entries = arg0.entries;
     let obj = callback(817);
     const activeSpan = obj.getActiveSpan();

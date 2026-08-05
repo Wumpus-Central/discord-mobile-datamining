@@ -2,7 +2,7 @@
 import { isObject } from "04529_isObject.js";
 
 export default function CreateDataPropertyOrThrow(arg0, arg1, arg2) {
-  if (isObject /* isObject */(arg0)) {
+  if (isObject(arg0)) {
     if (tmp(4576)(arg1)) {
       if (!tmp(4591)(arg0, arg1, arg2)) {
         const tmp15 = new tmp(541)("unable to create data property");

@@ -6,7 +6,7 @@ const obj = { 1: "InteroperabilityIndex", 2: null, 4096: "RelatedImageFileFormat
 obj[2] = {
   name: "InteroperabilityVersion",
   description(value) {
-    return getStringValue /* getStringValue */.getStringValue(value);
+    return getStringValue.getStringValue(value);
   }
 };
 arg5.default = obj;

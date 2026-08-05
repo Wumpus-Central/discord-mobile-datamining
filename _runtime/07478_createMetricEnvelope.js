@@ -22,19 +22,19 @@ function createMetricEnvelope(arg0, arg1, sdk) {
     tmp = arg1;
   }
   if (tmp) {
-    obj.dsn = dsnFromString /* dsnFromString */.dsnToString(arg1);
-    const obj4 = dsnFromString /* dsnFromString */;
+    obj.dsn = dsnFromString.dsnToString(arg1);
+    const obj4 = dsnFromString;
   }
   const date = new Date();
-  const result = items /* items */.serializeMetricBuckets(arg0);
+  const result = items.serializeMetricBuckets(arg0);
   obj = { type: "statsd", length: result.length };
   const items = [obj, result];
-  const obj5 = items /* items */;
+  const obj5 = items;
   const items1 = [items];
-  return forEachEnvelopeItem /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return forEachEnvelopeItem.createEnvelope(obj, items1);
 }
 arg5.captureAggregateMetrics = function captureAggregateMetrics(_client, arr) {
-  const logger = consoleSandbox /* consoleSandbox */.logger;
+  const logger = consoleSandbox.logger;
   logger.log("Flushing aggregated metrics, number of metrics: " + arr.length);
   const dsn = _client.getDsn();
   const sdkMetadata = _client.getSdkMetadata();

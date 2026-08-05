@@ -3,7 +3,7 @@ import { safeDateNow } from "00831_safeDateNow.js";
 const require = arg1;
 const dependencyMap = arg6;
 function dateTimestampInSeconds() {
-  return safeDateNow /* safeDateNow */.safeDateNow() / 1000;
+  return safeDateNow.safeDateNow() / 1000;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c4 = null;

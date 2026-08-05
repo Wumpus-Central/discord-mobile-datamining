@@ -90,7 +90,7 @@ let c14 = 86400;
 export default function formatDistance(arg0, arg1, locale) {
   tmp19.default(2, arguments);
   locale = undefined;
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   if (null != locale) {
     locale = locale.locale;
   }

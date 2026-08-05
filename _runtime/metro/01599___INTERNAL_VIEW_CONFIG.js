@@ -9,7 +9,7 @@ const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onKeybo
 obj[2] = obj;
 obj = {
   synchronizeFocusedInputLayout(current) {
-    renderElement /* renderElement */.dispatchCommand(current, "synchronizeFocusedInputLayout", []);
+    renderElement.dispatchCommand(current, "synchronizeFocusedInputLayout", []);
   }
 };
 

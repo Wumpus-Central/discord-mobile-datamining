@@ -15,12 +15,12 @@ let closure_3 = ["enabled", "hasTwoStates"];
 export default function ScreenContainer(enabled) {
   enabled = enabled.enabled;
   if (undefined === enabled) {
-    let obj = isNativePlatformSupported /* isNativePlatformSupported */;
+    let obj = isNativePlatformSupported;
     enabled = obj.screensEnabled();
   }
   const tmp3 = callback(enabled, closure_3);
   if (enabled) {
-    if (isNativePlatformSupported /* isNativePlatformSupported */.isNativePlatformSupported) {
+    if (isNativePlatformSupported.isNativePlatformSupported) {
       if (enabled.hasTwoStates) {
         obj = {};
         const merged = Object.assign(tmp3);

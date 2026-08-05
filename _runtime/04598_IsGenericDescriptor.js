@@ -4,7 +4,7 @@ import { isPropertyDescriptor } from "04580_isPropertyDescriptor.js";
 export default function IsGenericDescriptor(arg0) {
   if (undefined === arg0) {
     return false;
-  } else if (isPropertyDescriptor /* isPropertyDescriptor */(arg0)) {
+  } else if (isPropertyDescriptor(arg0)) {
     const tmp7 = tmp(4593)(arg0);
     let tmp8 = !tmp7;
     if (!tmp7) {

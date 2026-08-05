@@ -6,7 +6,7 @@ const dependencyMap = arg6;
 arg5.default = function normalizeColor(obj) {
   if (typeof obj === "object") {
     if (null != obj) {
-      const normalizeColorObjectResult = PlatformColor /* PlatformColor */.normalizeColorObject(obj);
+      const normalizeColorObjectResult = PlatformColor.normalizeColorObject(obj);
       if (null != normalizeColorObjectResult) {
         return normalizeColorObjectResult;
       }

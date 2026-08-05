@@ -4,7 +4,7 @@ import { r } from "01716_r.js";
 const require = arg1;
 const dependencyMap = arg6;
 function unprocessProps(styleProps) {
-  const result = r /* r */.unprocessColorsInProps(styleProps);
+  const result = r.unprocessColorsInProps(styleProps);
   if (Array.isArray(styleProps.boxShadow)) {
     const boxShadow = styleProps.boxShadow;
     styleProps.boxShadow = boxShadow.map((color) => {
@@ -39,7 +39,7 @@ obj[4] = function unregisterView(portal) {
   }
 };
 obj[5] = function syncPropsBackToReact() {
-  const ReanimatedModule = ReanimatedModule /* ReanimatedModule */.ReanimatedModule;
+  const ReanimatedModule = ReanimatedModule.ReanimatedModule;
   const settledUpdates = ReanimatedModule.getSettledUpdates();
   const iter = settledUpdates[Symbol.iterator]();
   const nextResult = iter.next();

@@ -13,32 +13,32 @@ arg5.isOGG = undefined;
 arg5.isSWF = undefined;
 arg5.isWEBM = undefined;
 arg5.isAVI = function isAVI(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "avi");
 };
 arg5.isFLV = function isFLV(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "flv") && getFileChunk /* getFileChunk */.isFlvStringIncluded(fileChunk);
+  return FileTypes.checkByFileType(fileChunk, "flv") && getFileChunk.isFlvStringIncluded(fileChunk);
 };
 arg5.isM4V = function isM4V(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "m4v") && getFileChunk /* getFileChunk */.isftypStringIncluded(fileChunk);
+  return FileTypes.checkByFileType(fileChunk, "m4v") && getFileChunk.isftypStringIncluded(fileChunk);
 };
 arg5.isMKV = function isMKV(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk, 64);
+  fileChunk = getFileChunk.getFileChunk(fileChunk, 64);
   const FileTypes = 04870__.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === getFileChunk /* getFileChunk */.findMatroskaDocTypeElements(fileChunk);
+  return FileTypes.checkByFileType(fileChunk, "mkv") && "mkv" === getFileChunk.findMatroskaDocTypeElements(fileChunk);
 };
 arg5.isMOV = function isMOV(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "mov");
 };
 arg5.isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   let checkByFileTypeResult = FileTypes.checkByFileType(fileChunk, "mp4");
   if (!checkByFileTypeResult) {
@@ -58,17 +58,17 @@ arg5.isMP4 = function isMP4(fileChunk, excludeSimilarTypes) {
   return checkByFileTypeResult;
 };
 arg5.isOGG = function isOGG(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "ogg");
 };
 arg5.isSWF = function isSWF(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "swf");
 };
 arg5.isWEBM = function isWEBM(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk, 64);
+  fileChunk = getFileChunk.getFileChunk(fileChunk, 64);
   const FileTypes = 04870__.FileTypes;
-  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === getFileChunk /* getFileChunk */.findMatroskaDocTypeElements(fileChunk);
+  return FileTypes.checkByFileType(fileChunk, "webm") && "webm" === getFileChunk.findMatroskaDocTypeElements(fileChunk);
 };

@@ -88,7 +88,7 @@ arg5.baggageHeaderToDynamicSamplingContext = function baggageHeaderToDynamicSamp
         return arg0;
       }, {});
     }
-    obj = isInstanceOf /* isInstanceOf */;
+    obj = isInstanceOf;
   }
   if (undefined) {
     const _Object = Object;

@@ -3,7 +3,7 @@ import { getNative } from "00736_getNative.js";
 
 export default function hashHas(arg0) {
   const __data__ = this.__data__;
-  if (getNative /* getNative */) {
+  if (getNative) {
     let tmp2 = undefined !== __data__[arg0];
   } else {
     const call = hasOwnProperty.call;

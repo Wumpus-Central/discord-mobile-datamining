@@ -224,9 +224,9 @@ function parseFetchArgs(arg0) {
 }
 
 export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(arg0) {
-  addHandler /* addHandler */.addHandler("fetch-body-resolved", arg0);
-  let obj = addHandler /* addHandler */;
-  addHandler /* addHandler */.maybeInstrument("fetch-body-resolved", () => {
+  addHandler.addHandler("fetch-body-resolved", arg0);
+  let obj = addHandler;
+  addHandler.maybeInstrument("fetch-body-resolved", () => {
     const callback = closure_5;
     {
       callback(7381).fill(callback(7376).GLOBAL_OBJ, "fetch", (arg0) => {

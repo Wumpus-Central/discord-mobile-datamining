@@ -4,7 +4,7 @@ const require = arg1;
 const dependencyMap = arg6;
 function getDefaultSidecarUrl() {
   try {
-    const Devtools = TurboModuleRegistry /* TurboModuleRegistry */.ReactNativeLibraries.Devtools;
+    const Devtools = TurboModuleRegistry.ReactNativeLibraries.Devtools;
     let obj = Devtools;
     let devServer;
     if (null !== Devtools) {

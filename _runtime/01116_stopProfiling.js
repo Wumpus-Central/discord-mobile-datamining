@@ -3,7 +3,7 @@ import { Platform } from "get ActivityIndicator";
 import { NativeModules } from "01001_NativeModules.js";
 
 function stopProfiling(arg0) {
-  const NATIVE = NativeModules /* NativeModules */.NATIVE;
+  const NATIVE = NativeModules.NATIVE;
   const stopProfilingResult = NATIVE.stopProfiling();
   if (stopProfilingResult) {
     const _Date = Date;
@@ -351,7 +351,7 @@ export const hermesProfilingIntegration = () => {
   };
 };
 export const startProfiling = function startProfiling(arg0) {
-  const NATIVE = NativeModules /* NativeModules */.NATIVE;
+  const NATIVE = NativeModules.NATIVE;
   let result = null;
   if (NATIVE.startProfiling(arg0)) {
     const _Date = Date;

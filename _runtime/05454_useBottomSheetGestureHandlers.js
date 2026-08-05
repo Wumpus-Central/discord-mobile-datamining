@@ -4,7 +4,7 @@ import { createContext } from "05352_createContext.js";
 
 
 export const useBottomSheetGestureHandlers = () => {
-  const tmp = useContext(createContext /* createContext */.BottomSheetGestureHandlersContext);
+  const tmp = useContext(createContext.BottomSheetGestureHandlersContext);
   if (null === tmp) {
     throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
   } else {

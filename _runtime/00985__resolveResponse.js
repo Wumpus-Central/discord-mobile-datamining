@@ -206,7 +206,7 @@ function parseFetchArgs(arg0) {
         }
         tmp15 = str4 && typeof str4 === "object" && str4.method;
       }
-      obj3 = isInstanceOf /* isInstanceOf */;
+      obj3 = isInstanceOf;
     }
     obj[1] = str7;
     return obj;
@@ -258,16 +258,16 @@ function getHeadersFromFetchArgs(arg0) {
       const headers1 = new Headers(tmp2.headers);
       return headers1;
     }
-    obj = isInstanceOf /* isInstanceOf */;
+    obj = isInstanceOf;
   } catch (err) {
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(arg0) {
-  addHandler /* addHandler */.addHandler("fetch-body-resolved", arg0);
-  let obj = addHandler /* addHandler */;
-  addHandler /* addHandler */.maybeInstrument("fetch-body-resolved", () => {
+  addHandler.addHandler("fetch-body-resolved", arg0);
+  let obj = addHandler;
+  addHandler.maybeInstrument("fetch-body-resolved", () => {
     const callback = closure_5;
     {
       callback(822).fill(callback(821).GLOBAL_OBJ, "fetch", (arg0) => {

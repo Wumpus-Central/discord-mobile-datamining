@@ -50,6 +50,6 @@ export default function renderApplication(arg0) {
   const tmp5 = children;
   const obj1 = { element: tmp4Result, rootTag: null };
   const obj4 = importAll(114);
-  obj1[1] = RootTagContext /* RootTagContext */.createRootTag(rootTag);
+  obj1[1] = RootTagContext.createRootTag(rootTag);
   obj4.renderElement(obj1);
 };

@@ -15,7 +15,7 @@ export const useHandler = function useHandler(handler, items10) {
   const tmp = callback2(null);
   const require = tmp;
   if (null === tmp.current) {
-    let obj = freezeObjectInDev /* freezeObjectInDev */;
+    let obj = freezeObjectInDev;
     obj = { context: null, savedDependencies: null };
     obj[0] = obj.makeShareable({});
     obj[1] = [];
@@ -29,7 +29,7 @@ export const useHandler = function useHandler(handler, items10) {
     let tmp13 = key10024;
     let tmp14 = require;
     let tmp15 = dependencyMap;
-    let obj8 = isWorkletFunction /* isWorkletFunction */;
+    let obj8 = isWorkletFunction;
     if (obj8.isWorkletFunction(arg0[key10024])) {
       continue;
     } else {
@@ -41,13 +41,13 @@ export const useHandler = function useHandler(handler, items10) {
       throw reanimatedError;
     }
   }
-  const dependencies = isAnimated /* isAnimated */.buildDependencies(items10, handler);
-  const obj3 = isAnimated /* isAnimated */;
+  const dependencies = isAnimated.buildDependencies(items10, handler);
+  const obj3 = isAnimated;
   const tmp9 = require;
   tmp.current.savedDependencies = dependencies;
-  obj = { context, doDependenciesDiffer: !isAnimated /* isAnimated */.areDependenciesEqual(dependencies, savedDependencies), useWeb: null };
-  const obj4 = isAnimated /* isAnimated */;
-  let isWebResult = isJest /* isJest */.isWeb();
+  obj = { context, doDependenciesDiffer: !isAnimated.areDependenciesEqual(dependencies, savedDependencies), useWeb: null };
+  const obj4 = isAnimated;
+  let isWebResult = isJest.isWeb();
   if (!isWebResult) {
     isWebResult = tmp9(1609).isJest();
     const tmp9Result = tmp9(1609);

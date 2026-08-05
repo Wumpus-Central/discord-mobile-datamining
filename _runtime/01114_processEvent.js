@@ -16,14 +16,14 @@ function processEvent(tags, originalException) {
     tmp2 = originalException1;
   }
   const obj = { turbo_module: null, fabric: null, react_native_version: null, expo: null };
-  obj[0] = isHermesEnabled /* isHermesEnabled */.isTurboModuleEnabled();
-  const obj2 = isHermesEnabled /* isHermesEnabled */;
-  obj[1] = isHermesEnabled /* isHermesEnabled */.isFabricEnabled();
-  const obj3 = isHermesEnabled /* isHermesEnabled */;
-  obj[2] = isHermesEnabled /* isHermesEnabled */.getReactNativeVersion();
-  const obj4 = isHermesEnabled /* isHermesEnabled */;
-  obj[3] = isHermesEnabled /* isHermesEnabled */.isExpo();
-  const obj5 = isHermesEnabled /* isHermesEnabled */;
+  obj[0] = isHermesEnabled.isTurboModuleEnabled();
+  const obj2 = isHermesEnabled;
+  obj[1] = isHermesEnabled.isFabricEnabled();
+  const obj3 = isHermesEnabled;
+  obj[2] = isHermesEnabled.getReactNativeVersion();
+  const obj4 = isHermesEnabled;
+  obj[3] = isHermesEnabled.isExpo();
+  const obj5 = isHermesEnabled;
   if (obj6.isHermesEnabled()) {
     obj.js_engine = "hermes";
     let tmp4Result = tmp4(1002);
@@ -112,8 +112,8 @@ function processEvent(tags, originalException) {
   if (expoGoVersion) {
     obj.expo_go_version = expoGoVersion;
   }
-  obj6 = isHermesEnabled /* isHermesEnabled */;
-  const expoSdkVersion = isHermesEnabled /* isHermesEnabled */.getExpoSdkVersion();
+  obj6 = isHermesEnabled;
+  const expoSdkVersion = isHermesEnabled.getExpoSdkVersion();
   if (expoSdkVersion) {
     obj.expo_sdk_version = expoSdkVersion;
   }

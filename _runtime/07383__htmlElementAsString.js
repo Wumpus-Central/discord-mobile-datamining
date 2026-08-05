@@ -82,7 +82,7 @@ function _htmlElementAsString(tagName, arr) {
 arg5.getComponentName = function getComponentName(arg0) {
   let parentNode = arg0;
   let num = 0;
-  if (getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ.HTMLElement) {
+  if (getGlobalSingleton.GLOBAL_OBJ.HTMLElement) {
     while (parentNode) {
       if (parentNode instanceof globalThis.HTMLElement) {
         let dataset = parentNode.dataset;
@@ -108,7 +108,7 @@ arg5.getComponentName = function getComponentName(arg0) {
 };
 arg5.getDomElement = function getDomElement(arg0) {
   let element = null;
-  if (getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ.document) {
+  if (getGlobalSingleton.GLOBAL_OBJ.document) {
     element = null;
     if (tmp(7376).GLOBAL_OBJ.document.querySelector) {
       const _document = tmp(7376).GLOBAL_OBJ.document;
@@ -119,7 +119,7 @@ arg5.getDomElement = function getDomElement(arg0) {
 };
 arg5.getLocationHref = function getLocationHref() {
   try {
-    return getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ.document.location.href;
+    return getGlobalSingleton.GLOBAL_OBJ.document.location.href;
   } catch (err) {
     return "";
   }

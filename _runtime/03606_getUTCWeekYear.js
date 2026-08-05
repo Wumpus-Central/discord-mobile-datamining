@@ -42,7 +42,7 @@ export default function getUTCWeekYear(arg0, firstWeekContainsDate) {
   tmp5.default(1, arguments);
   const defaultResult1 = tmp3.default(arg0);
   const uTCFullYear = defaultResult1.getUTCFullYear();
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   let prop;
   if (null != firstWeekContainsDate) {
     prop = firstWeekContainsDate.firstWeekContainsDate;

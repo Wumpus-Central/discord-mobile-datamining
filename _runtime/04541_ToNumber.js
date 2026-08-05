@@ -4,7 +4,7 @@ let closure_2 = require("getEvalledConstructor")("%Number%");
 
 export default function ToNumber(arg0) {
   let tmp3 = arg0;
-  if (!isPrimitive /* isPrimitive */(arg0)) {
+  if (!isPrimitive(arg0)) {
     tmp3 = tmp(4543)(arg0, closure_2);
   }
   if (typeof tmp3 === "symbol") {

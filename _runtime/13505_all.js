@@ -6,7 +6,7 @@ export default (arg0, arg1) => {
   if (arguments.length < 2) {
     const tmp7 = 13477__[arg0];
     let tmp8;
-    if (all /* all */(tmp7)) {
+    if (all(tmp7)) {
       tmp8 = tmp7;
     }
     let tmp3 = tmp8;

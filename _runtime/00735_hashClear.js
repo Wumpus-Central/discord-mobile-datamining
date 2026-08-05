@@ -3,8 +3,8 @@ import { getNative } from "00736_getNative.js";
 
 export default function hashClear() {
   let obj = {};
-  if (getNative /* getNative */) {
-    obj = getNative /* getNative */(null);
+  if (getNative) {
+    obj = getNative(null);
   } else {
     obj = {};
   }

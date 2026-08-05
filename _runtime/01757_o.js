@@ -195,7 +195,7 @@ function processBoxShadow(boxShadow) {
       if (!Array.isArray(str)) {
         const _JSON = JSON;
         const _HermesInternal = HermesInternal;
-        const reanimatedError = new t /* t */.ReanimatedError("Box shadow value must be an array of shadow objects or a string. Received: " + JSON.stringify(str));
+        const reanimatedError = new t.ReanimatedError("Box shadow value must be an array of shadow objects or a string. Received: " + JSON.stringify(str));
         throw reanimatedError;
       }
     }

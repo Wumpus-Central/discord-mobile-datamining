@@ -7,12 +7,12 @@ import { 00237__ } from "00237__.js";
 import { 00239__ } from "00239__.js";
 import { 00240__ } from "00240__.js";
 const require = arg1;
-require("MessageQueue")("Systrace", () => isEnabled /* isEnabled */);
+require("MessageQueue")("Systrace", () => isEnabled);
 if (true !== global.RN$Bridgeless) {
-  require("MessageQueue")("JSTimers", () => _callTimer /* _callTimer */.default);
+  require("MessageQueue")("JSTimers", () => _callTimer.default);
 }
 require("MessageQueue")("RCTLog", () => 00237__.default);
-require("MessageQueue")("RCTDeviceEventEmitter", () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default);
-require("MessageQueue")("RCTNativeAppEventEmitter", () => _isNativeReflectConstruct /* _isNativeReflectConstruct */.default);
+require("MessageQueue")("RCTDeviceEventEmitter", () => _isNativeReflectConstruct.default);
+require("MessageQueue")("RCTNativeAppEventEmitter", () => _isNativeReflectConstruct.default);
 require("MessageQueue")("GlobalPerformanceLogger", () => 00239__.default);
 require("MessageQueue")("HMRClient", () => 00240__.default);

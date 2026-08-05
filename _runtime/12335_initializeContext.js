@@ -27,7 +27,7 @@ function initializeContext(target) {
     metadata = target.metadata;
   }
   if (metadata == null) {
-    metadata = $output /* $output */.globalRegistry;
+    metadata = $output.globalRegistry;
   }
   obj[1] = metadata;
   obj[2] = str;

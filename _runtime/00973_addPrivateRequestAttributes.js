@@ -15,7 +15,7 @@ function addPrivateRequestAttributes(setAttributes, config) {
   const items = [];
   if (systemInstruction) {
     const push = items.push;
-    let obj = contentUnionToMessages /* contentUnionToMessages */;
+    let obj = contentUnionToMessages;
     const items1 = [];
     HermesBuiltin.arraySpread(obj.contentUnionToMessages(config.config.systemInstruction, "system"), 0);
     HermesBuiltin.apply(items1, items);
@@ -23,31 +23,31 @@ function addPrivateRequestAttributes(setAttributes, config) {
   if ("history" in config) {
     const push2 = items.push;
     const items2 = [];
-    HermesBuiltin.arraySpread(contentUnionToMessages /* contentUnionToMessages */.contentUnionToMessages(config.history, "user"), 0);
+    HermesBuiltin.arraySpread(contentUnionToMessages.contentUnionToMessages(config.history, "user"), 0);
     HermesBuiltin.apply(items2, items);
-    const obj2 = contentUnionToMessages /* contentUnionToMessages */;
+    const obj2 = contentUnionToMessages;
   }
   if ("contents" in config) {
     const push3 = items.push;
     const items3 = [];
-    HermesBuiltin.arraySpread(contentUnionToMessages /* contentUnionToMessages */.contentUnionToMessages(config.contents, "user"), 0);
+    HermesBuiltin.arraySpread(contentUnionToMessages.contentUnionToMessages(config.contents, "user"), 0);
     HermesBuiltin.apply(items3, items);
-    const obj3 = contentUnionToMessages /* contentUnionToMessages */;
+    const obj3 = contentUnionToMessages;
   }
   if ("message" in config) {
     const push4 = items.push;
     const items4 = [];
-    HermesBuiltin.arraySpread(contentUnionToMessages /* contentUnionToMessages */.contentUnionToMessages(config.message, "user"), 0);
+    HermesBuiltin.arraySpread(contentUnionToMessages.contentUnionToMessages(config.message, "user"), 0);
     HermesBuiltin.apply(items4, items);
-    const obj4 = contentUnionToMessages /* contentUnionToMessages */;
+    const obj4 = contentUnionToMessages;
   }
   if (tmp33) {
     obj = {};
     obj[00958__.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = items.length;
     const _JSON = JSON;
-    obj[00958__.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = JSON.stringify(truncateTextByBytes /* truncateTextByBytes */.truncateGenAiMessages(items));
+    obj[00958__.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = JSON.stringify(truncateTextByBytes.truncateGenAiMessages(items));
     setAttributes.setAttributes(obj);
-    const obj6 = truncateTextByBytes /* truncateTextByBytes */;
+    const obj6 = truncateTextByBytes;
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

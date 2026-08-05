@@ -107,8 +107,8 @@ const items = [
     value: function getViewProp(arg0, arg1, self) {
       self = this;
       if (obj.isFabric()) {
-        const tmpResult = getShadowNodeWrapperFromRef /* getShadowNodeWrapperFromRef */;
-        const shadowNodeWrapperFromRef = getShadowNodeWrapperFromRef /* getShadowNodeWrapperFromRef */.getShadowNodeWrapperFromRef(self);
+        const tmpResult = getShadowNodeWrapperFromRef;
+        const shadowNodeWrapperFromRef = getShadowNodeWrapperFromRef.getShadowNodeWrapperFromRef(self);
         let viewProp = callback2(self, closure_6)[closure_6].getViewProp(shadowNodeWrapperFromRef, arg1, arg3);
         const obj4 = callback2(self, closure_6)[closure_6];
       } else {

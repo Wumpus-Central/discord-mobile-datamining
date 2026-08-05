@@ -14,7 +14,7 @@ arg5._INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatureFlagToA
     num = 10;
   }
   if (typeof value === "boolean") {
-    const activeSpan = spanToJSON /* spanToJSON */.getActiveSpan();
+    const activeSpan = spanToJSON.getActiveSpan();
     if (activeSpan) {
       const data = tmp6(819).spanToJSON(activeSpan).data;
       const _HermesInternal = HermesInternal;
@@ -31,12 +31,12 @@ arg5._INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatureFlagToA
       }
       const tmp6Result = tmp6(819);
     }
-    const obj2 = spanToJSON /* spanToJSON */;
+    const obj2 = spanToJSON;
     tmp6 = require;
   }
 };
 arg5._INTERNAL_copyFlagsFromScopeToEvent = function _INTERNAL_copyFlagsFromScopeToEvent(contexts) {
-  let obj = getClient /* getClient */;
+  let obj = getClient;
   const currentScope = obj.getCurrentScope();
   const flags = currentScope.getScopeData().contexts.flags;
   const arr = flags ? flags.values : [];

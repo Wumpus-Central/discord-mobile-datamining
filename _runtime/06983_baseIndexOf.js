@@ -5,10 +5,10 @@ import { baseIsNaN } from "06985_baseIsNaN.js";
 
 export default function baseIndexOf(arg0, arg1, arg2) {
   if (arg1 == arg1) {
-    let tmp3Result = strictIndexOf /* strictIndexOf */(arg0, arg1, arg2);
+    let tmp3Result = strictIndexOf(arg0, arg1, arg2);
   } else {
-    tmp3Result = baseFindIndex /* baseFindIndex */(arg0, baseIsNaN /* baseIsNaN */, arg2);
-    const tmp3 = baseFindIndex /* baseFindIndex */;
+    tmp3Result = baseFindIndex(arg0, baseIsNaN, arg2);
+    const tmp3 = baseFindIndex;
   }
   return tmp3Result;
 };

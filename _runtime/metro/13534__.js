@@ -11,7 +11,7 @@ export default (arg0, arg1, arg2, arg3) => {
   if (undefined !== obj.name) {
     name = obj.name;
   }
-  if (all /* all */(arg2)) {
+  if (all(arg2)) {
     tmp3(13535)(arg2, name, obj);
   }
   if (obj.global) {

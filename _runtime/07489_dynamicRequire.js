@@ -8,7 +8,7 @@ function dynamicRequire(require) {
 }
 arg5.dynamicRequire = dynamicRequire;
 arg5.isNodeEnv = function isNodeEnv() {
-  const isBrowserBundleResult = getSDKSource /* getSDKSource */.isBrowserBundle();
+  const isBrowserBundleResult = getSDKSource.isBrowserBundle();
   if (isBrowserBundleResult) {
     return !isBrowserBundleResult;
   } else {

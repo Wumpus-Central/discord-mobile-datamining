@@ -8,7 +8,7 @@ arg5.initMetric = (name) => {
   if (arg1 === undefined) {
     num = -1;
   }
-  let obj = getNavigationEntry /* getNavigationEntry */;
+  let obj = getNavigationEntry;
   const navigationEntry = obj.getNavigationEntry();
   let str = "navigate";
   let str2 = "navigate";

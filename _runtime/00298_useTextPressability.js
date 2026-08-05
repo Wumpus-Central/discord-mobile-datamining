@@ -429,14 +429,14 @@ let closure_10 = importAllResult.forwardRef(function PressableVirtualText_withRe
   obj.isHighlighted = tmp[0];
   obj.isPressable = true;
   obj.ref = ref;
-  return jsx(NativeText /* NativeText */.NativeVirtualText, {});
+  return jsx(NativeText.NativeVirtualText, {});
 });
 let closure_11 = importAllResult.forwardRef(function PressableText_withRef(textPressabilityProps, ref) {
   const tmp = callback(useTextPressability(textPressabilityProps.textPressabilityProps), 2);
   if (true === textPressabilityProps.selectable) {
-    let NativeText = NativeText /* NativeText */.NativeSelectableText;
+    let NativeText = NativeText.NativeSelectableText;
   } else {
-    NativeText = NativeText /* NativeText */.NativeText;
+    NativeText = NativeText.NativeText;
   }
   const obj = {};
   const merged = Object.assign(textPressabilityProps.textProps);

@@ -17,10 +17,10 @@ export default function baseGetTag(arg0) {
     if (toStringTag) {
       const _Object = Object;
       if (tmp in Object(arg0)) {
-        tmp5 = toStringTag /* toStringTag */(arg0);
+        tmp5 = toStringTag(arg0);
       }
     }
-    tmp5 = objectToString /* objectToString */(arg0);
+    tmp5 = objectToString(arg0);
   }
   return tmp5;
 };

@@ -42,7 +42,7 @@ export default function getWeekYear(arg0, firstWeekContainsDate) {
   tmp9.default(1, arguments);
   const defaultResult1 = tmp5.default(arg0);
   const fullYear = defaultResult1.getFullYear();
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   let prop;
   if (null != firstWeekContainsDate) {
     prop = firstWeekContainsDate.firstWeekContainsDate;

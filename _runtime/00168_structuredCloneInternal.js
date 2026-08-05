@@ -112,7 +112,7 @@ function structuredCloneInternal(style) {
                           const result6 = map.set(style, regExp);
                           return regExp;
                         } else {
-                          obj = setPlatformObject /* setPlatformObject */;
+                          obj = setPlatformObject;
                           const platformObjectClone = obj.getPlatformObjectClone(style);
                           if (null != platformObjectClone) {
                             const platformObjectCloneResult = platformObjectClone(style);

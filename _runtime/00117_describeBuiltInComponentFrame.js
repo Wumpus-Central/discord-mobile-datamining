@@ -1101,9 +1101,9 @@ function executeDispatchesAndReleaseTopLevel(isPropagationStopped) {
   }
 }
 function setIsStrictModeForDevtools(arg0) {
-  if (typeof peek /* peek */.log === "function") {
-    const result = peek /* peek */.unstable_setDisableYieldValue(arg0);
-    const tmpResult = peek /* peek */;
+  if (typeof peek.log === "function") {
+    const result = peek.unstable_setDisableYieldValue(arg0);
+    const tmpResult = peek;
   }
   if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
     if (typeof obj.setStrictMode === "function") {
@@ -2020,8 +2020,8 @@ function ensureRootIsScheduled(next) {
         }
       });
     } else {
-      const result = peek /* peek */.unstable_scheduleCallback(peek /* peek */.unstable_ImmediatePriority, processRootScheduleInImmediateTask);
-      const obj = peek /* peek */;
+      const result = peek.unstable_scheduleCallback(peek.unstable_ImmediatePriority, processRootScheduleInImmediateTask);
+      const obj = peek;
     }
   }
 }
@@ -2110,7 +2110,7 @@ function processRootScheduleInMicrotask() {
   let next;
   let c112 = false;
   let c113 = false;
-  peek /* peek */;
+  peek;
   let iter = c110;
   let tmp3 = null;
   if (null !== c110) {
@@ -2234,8 +2234,8 @@ function scheduleTaskForRootDuringMicrotask(iter, arg1) {
         if (3 & tmp10Result) {
           if (iter.pendingLanes & ~iter.suspendedLanes & ~iter.pingedLanes & tmp10Result) {
             if (null !== callbackNode) {
-              const result = peek /* peek */.unstable_cancelCallback(callbackNode);
-              const obj = peek /* peek */;
+              const result = peek.unstable_cancelCallback(callbackNode);
+              const obj = peek;
             }
             iter.callbackPriority = 2;
             iter.callbackNode = null;
@@ -2246,8 +2246,8 @@ function scheduleTaskForRootDuringMicrotask(iter, arg1) {
           return tmp18;
         } else {
           if (null !== callbackNode) {
-            const result1 = peek /* peek */.unstable_cancelCallback(callbackNode);
-            const obj2 = peek /* peek */;
+            const result1 = peek.unstable_cancelCallback(callbackNode);
+            const obj2 = peek;
           }
           let num3 = 2;
           if (2 < (tmp10Result & -tmp10Result)) {
@@ -2266,10 +2266,10 @@ function scheduleTaskForRootDuringMicrotask(iter, arg1) {
               if (32 !== num3) {
                 if (268435456 === num3) {
                   let tmp23 = require;
-                  let unstable_UserBlockingPriority = peek /* peek */.unstable_IdlePriority;
+                  let unstable_UserBlockingPriority = peek.unstable_IdlePriority;
                 }
               }
-              unstable_UserBlockingPriority = peek /* peek */.unstable_NormalPriority;
+              unstable_UserBlockingPriority = peek.unstable_NormalPriority;
               tmp23 = require;
             }
             const bindResult = performWorkOnRootViaSchedulerTask.bind(null, iter);
@@ -2277,15 +2277,15 @@ function scheduleTaskForRootDuringMicrotask(iter, arg1) {
             iter.callbackNode = tmp23(287).unstable_scheduleCallback(unstable_UserBlockingPriority, bindResult);
             return tmp18;
           }
-          unstable_UserBlockingPriority = peek /* peek */.unstable_UserBlockingPriority;
+          unstable_UserBlockingPriority = peek.unstable_UserBlockingPriority;
           tmp23 = require;
         }
       }
     }
   }
   if (null !== callbackNode) {
-    const result2 = peek /* peek */.unstable_cancelCallback(callbackNode);
-    const obj4 = peek /* peek */;
+    const result2 = peek.unstable_cancelCallback(callbackNode);
+    const obj4 = peek;
   }
   iter.callbackNode = null;
   iter.callbackPriority = 0;
@@ -2320,7 +2320,7 @@ function performWorkOnRootViaSchedulerTask(callbackNode) {
   let tmp8 = null;
   if (0 !== tmp5Result) {
     performWorkOnRoot(callbackNode, tmp5Result, arg1);
-    scheduleTaskForRootDuringMicrotask(callbackNode, peek /* peek */.unstable_now());
+    scheduleTaskForRootDuringMicrotask(callbackNode, peek.unstable_now());
     let bindResult = null;
     if (null != callbackNode.callbackNode) {
       bindResult = null;
@@ -2329,7 +2329,7 @@ function performWorkOnRootViaSchedulerTask(callbackNode) {
       }
     }
     tmp8 = bindResult;
-    const obj = peek /* peek */;
+    const obj = peek;
   }
   return tmp8;
 }
@@ -7227,8 +7227,8 @@ function recursivelyTraverseAtomicPassiveEffects(arg0, sibling) {
                 if (0 === cache.refCount) {
                   let tmp8 = require;
                   let tmp9 = dependencyMap;
-                  let obj = peek /* peek */;
-                  let result = obj.unstable_scheduleCallback(peek /* peek */.unstable_NormalPriority, () => {
+                  let obj = peek;
+                  let result = obj.unstable_scheduleCallback(peek.unstable_NormalPriority, () => {
                     const controller = pooledCache.controller;
                     controller.abort();
                   });
@@ -7733,8 +7733,8 @@ function scheduleUpdateOnFiber(cancelPendingCommit, _reactInternals, lane) {
           }
         });
       } else {
-        const result = peek /* peek */.unstable_scheduleCallback(peek /* peek */.unstable_ImmediatePriority, processRootScheduleInImmediateTask);
-        const obj = peek /* peek */;
+        const result = peek.unstable_scheduleCallback(peek.unstable_ImmediatePriority, processRootScheduleInImmediateTask);
+        const obj = peek;
       }
     }
     let tmp36 = 2 === lane;
@@ -7745,9 +7745,9 @@ function scheduleUpdateOnFiber(cancelPendingCommit, _reactInternals, lane) {
       tmp36 = !(1 & _reactInternals.mode);
     }
     if (tmp36) {
-      let closure_297 = peek /* peek */.unstable_now() + 500;
+      let closure_297 = peek.unstable_now() + 500;
       flushSyncWorkAcrossRoots_impl(0, true);
-      const obj2 = peek /* peek */;
+      const obj2 = peek;
     }
   }
 }
@@ -7945,8 +7945,8 @@ function commitRootWhenReady(current, subtreeFlags) {
       tmp5 = (4194048 & arg5) === arg5;
     }
     if (tmp5) {
-      peek /* peek */.unstable_now();
-      const obj = peek /* peek */;
+      peek.unstable_now();
+      const obj = peek;
     }
   }
   (function commitRoot(current, lanes, arg2, arg3, arg4, arg5, arg6, arg7, arg8) {
@@ -8510,14 +8510,14 @@ function workLoopConcurrentByScheduler() {
         } else {
           let tmp8 = require;
           let tmp9 = dependencyMap;
-          let obj = peek /* peek */;
+          let obj = peek;
           if (obj.unstable_shouldYield()) {
             break;
           }
         }
       }
     }
-    obj2 = peek /* peek */;
+    obj2 = peek;
   }
 }
 function replaySuspendedUnitOfWork(pendingProps) {
@@ -9115,7 +9115,7 @@ function flushSpawnedWork() {
   let length;
   let sum;
   let c300 = 0;
-  let obj = peek /* peek */;
+  let obj = peek;
   const result = obj.unstable_requestPaint();
   let tmp5 = c301;
   if (!(10256 & _null8.subtreeFlags)) {
@@ -9450,7 +9450,7 @@ function pingSuspendedRoot(pingCache) {
     } else {
       if (3 === tmp5) {
         if ((62914560 & c280) === c280) {
-          const obj = peek /* peek */;
+          const obj = peek;
         }
       }
       closure_290 = closure_290 | arg2;
@@ -9481,8 +9481,8 @@ function pingSuspendedRoot(pingCache) {
         }
       });
     } else {
-      const result = peek /* peek */.unstable_scheduleCallback(peek /* peek */.unstable_ImmediatePriority, processRootScheduleInImmediateTask);
-      const obj2 = peek /* peek */;
+      const result = peek.unstable_scheduleCallback(peek.unstable_ImmediatePriority, processRootScheduleInImmediateTask);
+      const obj2 = peek;
     }
   }
 }
@@ -9530,8 +9530,8 @@ function retryDehydratedSuspenseBoundary(memoizedState) {
           }
         });
       } else {
-        const result = peek /* peek */.unstable_scheduleCallback(peek /* peek */.unstable_ImmediatePriority, processRootScheduleInImmediateTask);
-        const obj = peek /* peek */;
+        const result = peek.unstable_scheduleCallback(peek.unstable_ImmediatePriority, processRootScheduleInImmediateTask);
+        const obj = peek;
       }
     }
     tmp4 = iter !== iter && null === iter.next;
@@ -9595,8 +9595,8 @@ function resolveRetryWakeable(tag) {
             }
           });
         } else {
-          const result = peek /* peek */.unstable_scheduleCallback(peek /* peek */.unstable_ImmediatePriority, processRootScheduleInImmediateTask);
-          const obj = peek /* peek */;
+          const result = peek.unstable_scheduleCallback(peek.unstable_ImmediatePriority, processRootScheduleInImmediateTask);
+          const obj = peek;
         }
       }
       tmp9 = iter !== iter && null === iter.next;
@@ -14383,17 +14383,17 @@ if (typeof require("get BatchedBridge").ReactFiberErrorDialog.showErrorDialog !=
     try {
       c277 = tmp2;
       if (0 === tmp2) {
-        let closure_297 = peek /* peek */.unstable_now() + 500;
+        let closure_297 = peek.unstable_now() + 500;
         flushSyncWorkAcrossRoots_impl(0, true);
-        const obj = peek /* peek */;
+        const obj = peek;
       }
       return arg0(arg1);
     } catch (tmp10) {
       c277 = tmp;
       if (0 === tmp) {
-        closure_297 = peek /* peek */.unstable_now() + 500;
+        closure_297 = peek.unstable_now() + 500;
         flushSyncWorkAcrossRoots_impl(0, true);
-        const obj2 = peek /* peek */;
+        const obj2 = peek;
       }
       throw tmp10;
     }

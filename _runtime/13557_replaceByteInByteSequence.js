@@ -22,7 +22,7 @@ function percentEncode(arg0) {
   return "%" + text;
 }
 function percentDecode(_Buffer) {
-  _Buffer = Buffer /* Buffer */.Buffer;
+  _Buffer = Buffer.Buffer;
   const allocResult = _Buffer.alloc(_Buffer.byteLength);
   let num = 0;
   let num2 = 0;
@@ -116,7 +116,7 @@ export default {
   percentEncode,
   percentDecode,
   parseUrlencoded(arg0) {
-    let _Buffer = Buffer /* Buffer */.Buffer;
+    let _Buffer = Buffer.Buffer;
     return (function parseUrlencoded(_Buffer) {
       let items = [];
       const iter = (function strictlySplitByteSequence(arr, arg1) {
@@ -201,7 +201,7 @@ export default {
       let tmp9 = serializeUrlencodedByte;
       let tmp10 = require;
       let tmp11 = dependencyMap;
-      let _Buffer = Buffer /* Buffer */.Buffer;
+      let _Buffer = Buffer.Buffer;
       let tmp12 = serializeUrlencodedByte(_Buffer.from(arr[0]));
       let name = arr[1];
       let tmp13 = arr.length > 2;

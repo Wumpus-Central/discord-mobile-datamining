@@ -40,7 +40,7 @@ arg5.getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCyclesPrefer
   if (!v001) {
     v001 = tmp2(13453).hourCycles["001"];
   }
-  return e /* e */.__spreadArray([], v001, true);
+  return e.__spreadArray([], v001, true);
 };
 arg5.getTimeZonePreferenceForRegion = function getTimeZonePreferenceForRegion(region) {
   const formatted = region.toLowerCase();

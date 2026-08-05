@@ -3,7 +3,7 @@ import { isSymbol } from "00638_isSymbol.js";
 
 export default function toKey(str) {
   if (typeof str !== "string") {
-    if (!isSymbol /* isSymbol */(str)) {
+    if (!isSymbol(str)) {
       const text = `${str}`;
       if ("0" !== `${str}`) {
         let str2 = text;

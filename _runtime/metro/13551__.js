@@ -8,7 +8,7 @@ let obj = {
   _mixedIntoPredicates: [],
   is(arg0) {
     if (arg0) {
-      if (obj.hasOwn(arg0, SymbolResult1 /* SymbolResult1 */.implSymbol)) {
+      if (obj.hasOwn(arg0, SymbolResult1.implSymbol)) {
         if (arg0[tmp(undefined, 13552).implSymbol] instanceof tmp(13553).implementation) {
           return true;
         }
@@ -22,13 +22,13 @@ let obj = {
           return true;
         }
       }
-      obj = SymbolResult1 /* SymbolResult1 */;
+      obj = SymbolResult1;
     }
     return false;
   },
   isImpl(arg0) {
     if (arg0) {
-      if (arg0 instanceof URLImpl /* URLImpl */.implementation) {
+      if (arg0 instanceof URLImpl.implementation) {
         return true;
       } else {
         const _mixedIntoPredicates = module.exports._mixedIntoPredicates;
@@ -57,7 +57,7 @@ let obj = {
     }
     const _exports = module.exports;
     if (_exports.is(arg0)) {
-      return SymbolResult1 /* SymbolResult1 */.implForWrapper(arg0);
+      return SymbolResult1.implForWrapper(arg0);
     } else {
       const _TypeError = TypeError;
       const _HermesInternal = HermesInternal;
@@ -85,7 +85,7 @@ let obj = {
   },
   createImpl(arg0, arg1, arg2) {
     obj = obj.create(arg0, arg1, arg2);
-    obj = SymbolResult1 /* SymbolResult1 */;
+    obj = SymbolResult1;
     return obj.implForWrapper(obj);
   },
   _internalSetup(arg0) {
@@ -103,11 +103,11 @@ let obj = {
     obj.wrapper = wrapper;
     obj._internalSetup(wrapper);
     obj = { value: null, configurable: true };
-    const implementation = new URLImpl /* URLImpl */.implementation(arg1, items, obj);
+    const implementation = new URLImpl.implementation(arg1, items, obj);
     obj[0] = implementation;
-    Object.defineProperty(wrapper, SymbolResult1 /* SymbolResult1 */.implSymbol, obj);
-    wrapper[require(undefined, 13552) /* SymbolResult1 */.implSymbol][SymbolResult1 /* SymbolResult1 */.wrapperSymbol] = wrapper;
-    if (URLImpl /* URLImpl */.init) {
+    Object.defineProperty(wrapper, SymbolResult1.implSymbol, obj);
+    wrapper[require(undefined, 13552) /* SymbolResult1 */.implSymbol][SymbolResult1.wrapperSymbol] = wrapper;
+    if (URLImpl.init) {
       tmp2(13553).init(wrapper[tmp2(undefined, 13552).implSymbol], obj);
       const tmp2Result = tmp2(13553);
     }

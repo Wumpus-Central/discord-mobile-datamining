@@ -3,7 +3,7 @@ import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
 const require = arg1;
 const dependencyMap = arg6;
 function supportsFetch() {
-  if ("fetch" in getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ) {
+  if ("fetch" in getGlobalSingleton.GLOBAL_OBJ) {
     try {
       const _Headers = Headers;
       const headers = new Headers();
@@ -57,7 +57,7 @@ arg5.supportsNativeFetch = function supportsNativeFetch() {
   if (typeof globalThis.EdgeRuntime === "string") {
     return true;
   } else if (supportsFetch()) {
-    if (isNativeFunction(getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ.fetch)) {
+    if (isNativeFunction(getGlobalSingleton.GLOBAL_OBJ.fetch)) {
       return true;
     } else {
       let flag2 = false;
@@ -108,5 +108,5 @@ arg5.supportsReferrerPolicy = function supportsReferrerPolicy() {
   }
 };
 arg5.supportsReportingObserver = function supportsReportingObserver() {
-  return "ReportingObserver" in getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ;
+  return "ReportingObserver" in getGlobalSingleton.GLOBAL_OBJ;
 };

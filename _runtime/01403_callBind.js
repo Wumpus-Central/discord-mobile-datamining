@@ -13,9 +13,9 @@ if (require("flag")) {
 export default function callBind(arg0) {
   const diff = arg0.length - (arguments.length - 1);
   let num = 0;
-  const tmp = callBindBasic /* callBindBasic */(arguments);
+  const tmp = callBindBasic(arguments);
   if (0 < diff) {
     num = diff;
   }
-  return setFunctionLength /* setFunctionLength */(tmp, 1 + num, true);
+  return setFunctionLength(tmp, 1 + num, true);
 };

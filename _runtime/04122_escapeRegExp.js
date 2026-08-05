@@ -4,7 +4,7 @@ const tmp = /[\\^$.*+?()[\]{}|]/g;
 let closure_3 = RegExp(tmp.source);
 
 export default function escapeRegExp(arg0) {
-  const str = toString /* toString */(arg0);
+  const str = toString(arg0);
   let replaced = str;
   if (str) {
     replaced = str;

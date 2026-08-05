@@ -36,7 +36,7 @@ arg5.installWorkletsSupport = function installWorkletsSupport() {
     fn3.__workletHash = 16222078380838;
     fn3.__initData = closure_4;
     obj[3] = fn3;
-    const result = getInstalledNitro /* getInstalledNitro */.registerCustomSerializable(obj);
+    const result = getInstalledNitro.registerCustomSerializable(obj);
   } catch (err) {
   }
 };

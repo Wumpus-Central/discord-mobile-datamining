@@ -18,7 +18,7 @@ export default {
   trigger() {
     let selection = arg0;
     if (arg0 === undefined) {
-      selection = isRingerSilent /* isRingerSilent */.HapticFeedbackTypes.selection;
+      selection = isRingerSilent.HapticFeedbackTypes.selection;
     }
     let obj = arg1;
     if (arg1 === undefined) {
@@ -87,7 +87,7 @@ export default {
   impact() {
     let impactMedium = arg0;
     if (arg0 === undefined) {
-      impactMedium = isRingerSilent /* isRingerSilent */.HapticFeedbackTypes.impactMedium;
+      impactMedium = isRingerSilent.HapticFeedbackTypes.impactMedium;
     }
     let obj = arg2;
     if (arg2 === undefined) {

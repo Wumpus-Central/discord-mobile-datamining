@@ -9,7 +9,7 @@ if (baseIsArguments((() => arguments)())) {
   let fn = require("baseIsArguments");
 } else {
   fn = (arg0) => {
-    const tmp = isObjectLike /* isObjectLike */(arg0);
+    const tmp = isObjectLike(arg0);
     if (!tmp) {
       if (!tmp) {
         return tmp;

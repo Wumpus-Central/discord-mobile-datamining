@@ -9,7 +9,7 @@ if (!require("all")) {
     let closure_6 = tmp;
     require("module_13522")[tmp] = true;
     let fn = function t(facade) {
-      if (call /* call */(facade, closure_6)) {
+      if (call(facade, closure_6)) {
         const typeError = new tmp(13477).TypeError("Object already initialized");
         throw typeError;
       } else {
@@ -21,11 +21,11 @@ if (!require("all")) {
     };
     let fn4 = fn;
     let fn2 = function n(arg0) {
-      return call /* call */(arg0, closure_6) ? arg0[closure_6] : {};
+      return call(arg0, closure_6) ? arg0[closure_6] : {};
     };
     let fn5 = fn2;
     let fn3 = function u(arg0) {
-      return call /* call */(arg0, closure_6);
+      return call(arg0, closure_6);
     };
     let fn6 = fn3;
   }

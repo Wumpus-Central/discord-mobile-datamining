@@ -5,7 +5,7 @@ function swizzle(arg0) {
   let num = 0;
   let tmp = items;
   if (0 < arg0.length) {
-    while (!isArrayish /* isArrayish */(arg0[num])) {
+    while (!isArrayish(arg0[num])) {
       let arr = items.push(tmp2);
       let tmp8 = items;
       num = num + 1;

@@ -27,7 +27,7 @@ arg5.reflectionCreate = function reflectionCreate(value) {
           let tmp9 = localName;
           let tmp10 = require;
           let tmp11 = dependencyMap;
-          let obj3 = reflectionScalarDefault /* reflectionScalarDefault */;
+          let obj3 = reflectionScalarDefault;
           let tmp12 = nextResult;
           obj[localName] = obj3.reflectionScalarDefault(tmp3.T, tmp3.L);
         } else if ("enum" === kind) {

@@ -10,16 +10,16 @@ obj[2] = obj;
 obj = {
   play(arg0, arg1, arg2) {
     const items = [arg1, arg2];
-    renderElement /* renderElement */.dispatchCommand(arg0, "play", items);
+    renderElement.dispatchCommand(arg0, "play", items);
   },
   reset(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "reset", []);
+    renderElement.dispatchCommand(arg0, "reset", []);
   },
   pause(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "pause", []);
+    renderElement.dispatchCommand(arg0, "pause", []);
   },
   resume(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "resume", []);
+    renderElement.dispatchCommand(arg0, "resume", []);
   }
 };
 

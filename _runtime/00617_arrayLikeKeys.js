@@ -77,7 +77,7 @@ export default function arrayLikeKeys(obj) {
           if (!tmp14) {
             let tmp19 = require;
             let tmp20 = dependencyMap;
-            tmp14 = isIndex /* isIndex */(key10033, tmp9);
+            tmp14 = isIndex(key10033, tmp9);
           }
           tmp13 = tmp14;
         }

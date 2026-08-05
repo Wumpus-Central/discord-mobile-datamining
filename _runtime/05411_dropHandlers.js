@@ -12,11 +12,11 @@ arg5.dropHandlers = function dropHandlers(closure_1) {
     let obj = module(5377);
     let dropGestureHandlerResult = obj.dropGestureHandler(item10006.handlerTag);
     let tmp5 = require;
-    let obj2 = map /* map */;
+    let obj2 = map;
     let unregisterHandlerResult = obj2.unregisterHandler(item10006.handlerTag, item10006.config.testId);
-    let MountRegistry = MountRegistry /* MountRegistry */.MountRegistry;
+    let MountRegistry = MountRegistry.MountRegistry;
     let gestureWillUnmountResult = MountRegistry.gestureWillUnmount(item10006);
     continue;
   }
-  const result = transformIntoHandlerTags /* transformIntoHandlerTags */.scheduleFlushOperations();
+  const result = transformIntoHandlerTags.scheduleFlushOperations();
 };

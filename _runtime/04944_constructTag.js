@@ -7,10 +7,10 @@ const dependencyMap = arg6;
 function constructTag(decompressResult, type, items2, items1) {
   let stringFromDataView = decompressResult;
   if (decompressResult instanceof DataView) {
-    let obj = getDataView /* getDataView */;
+    let obj = getDataView;
     stringFromDataView = obj.getStringFromDataView(decompressResult, 0, decompressResult.byteLength);
   }
-  const stringValueFromArray = getDataView /* getDataView */.getStringValueFromArray(items1);
+  const stringValueFromArray = getDataView.getStringValueFromArray(items1);
   let combined = stringValueFromArray;
   if (type !== 04904__.TYPE_TEXT) {
     combined = stringValueFromArray;

@@ -11,7 +11,7 @@ export default function isGeneratorFunction(fn) {
   } else if (callback(callback3(fn))) {
     return true;
   } else if (closure_4) {
-    if (getProto /* getProto */) {
+    if (getProto) {
       if (undefined === closure_2) {
         const tmp6 = (() => {
           if (closure_4) {

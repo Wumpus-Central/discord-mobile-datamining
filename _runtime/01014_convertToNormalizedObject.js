@@ -4,7 +4,7 @@ const require = arg1;
 const dependencyMap = arg6;
 const value = "value";
 arg5.convertToNormalizedObject = function convertToNormalizedObject(data) {
-  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  let obj = registerSpanErrorInstrumentation;
   const normalizeResult = obj.normalize(data);
   if (null !== normalizeResult) {
     if (typeof normalizeResult === "object") {

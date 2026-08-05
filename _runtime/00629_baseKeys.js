@@ -2,7 +2,7 @@
 import { isPrototype } from "00630_isPrototype.js";
 
 export default function baseKeys(arg0) {
-  if (isPrototype /* isPrototype */(arg0)) {
+  if (isPrototype(arg0)) {
     const items = [];
     const _Object = Object;
     for (const key10016 in Object(arg0)) {

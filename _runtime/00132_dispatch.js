@@ -22,12 +22,12 @@ function dispatch(self, bubbles) {
     }
     return items;
   })(self);
-  SymbolResult1 /* SymbolResult1 */.setComposedPath(bubbles, arr);
-  const obj = SymbolResult1 /* SymbolResult1 */;
+  SymbolResult1.setComposedPath(bubbles, arr);
+  const obj = SymbolResult1;
   const tmp2 = require;
   let tmp3 = require;
   let tmp4 = dependencyMap;
-  SymbolResult1 /* SymbolResult1 */.setTarget(bubbles, self);
+  SymbolResult1.setTarget(bubbles, self);
   let diff = arr.length - 1;
   if (0 <= diff) {
     if (!tmp3Result.getStopPropagationFlag(bubbles)) {
@@ -37,7 +37,7 @@ function dispatch(self, bubbles) {
         let tmp13 = dependencyMap;
         let tmp10 = require;
         let tmp11 = require;
-        let obj3 = SymbolResult1 /* SymbolResult1 */;
+        let obj3 = SymbolResult1;
         let tmp14 = diff;
         if (tmp9 === self) {
           let tmp18 = importDefault;
@@ -77,7 +77,7 @@ function dispatch(self, bubbles) {
     let tmp32 = dependencyMap;
     let tmp29 = require;
     let tmp30 = require;
-    let obj6 = SymbolResult1 /* SymbolResult1 */;
+    let obj6 = SymbolResult1;
     if (obj6.getStopPropagationFlag(arg1)) {
       let tmp49 = obj5;
       obj5.return();
@@ -119,27 +119,27 @@ function dispatch(self, bubbles) {
     let tmp51 = require;
     let tmp52 = dependencyMap;
     let tmp53 = dependencyMap;
-    let obj8 = SymbolResult1 /* SymbolResult1 */;
+    let obj8 = SymbolResult1;
     let tmp54 = importDefault;
     let tmp55 = importDefault;
     let setEventPhaseResult2 = obj8.setEventPhase(arg1, Event.NONE);
-    let obj9 = SymbolResult1 /* SymbolResult1 */;
+    let obj9 = SymbolResult1;
     let tmp57 = null;
     let setCurrentTargetResult = obj9.setCurrentTarget(arg1, null);
-    let obj10 = SymbolResult1 /* SymbolResult1 */;
+    let obj10 = SymbolResult1;
     let setComposedPathResult1 = obj10.setComposedPath(arg1, []);
     let tmp60 = setEventDispatchFlag;
     let flag = false;
     let tmp61 = setEventDispatchFlag(arg1, false);
-    let obj11 = SymbolResult1 /* SymbolResult1 */;
+    let obj11 = SymbolResult1;
     let result = obj11.setStopImmediatePropagationFlag(arg1, false);
-    let obj12 = SymbolResult1 /* SymbolResult1 */;
+    let obj12 = SymbolResult1;
     let result1 = obj12.setStopPropagationFlag(arg1, false);
   }
 }
 function invoke(arg0, type) {
   const tmp3 = arg2 === Event.CAPTURING_PHASE;
-  let obj = SymbolResult1 /* SymbolResult1 */;
+  let obj = SymbolResult1;
   obj.setCurrentTarget(type, arg0);
   if (obj2.enableNativeEventTargetEventDispatching()) {
     const tmp14 = arg0[tmp5(undefined, 135).EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY](type.type, tmp3);
@@ -366,7 +366,7 @@ let items = [
           throw error;
         } else {
           const self = this;
-          SymbolResult1 /* SymbolResult1 */.setIsTrusted(defaultPrevented, false);
+          SymbolResult1.setIsTrusted(defaultPrevented, false);
           dispatch(this, defaultPrevented);
           return !defaultPrevented.defaultPrevented;
         }

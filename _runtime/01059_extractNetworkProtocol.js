@@ -59,7 +59,7 @@ export const extractNetworkProtocol = function extractNetworkProtocol(nextHopPro
   }
 };
 export const getBrowserPerformanceAPI = function getBrowserPerformanceAPI() {
-  return WINDOW /* WINDOW */.WINDOW.addEventListener && WINDOW /* WINDOW */.WINDOW.performance;
+  return WINDOW.WINDOW.addEventListener && WINDOW.WINDOW.performance;
 };
 export const isMeasurementValue = function isMeasurementValue(deviceMemory) {
   let isFiniteResult = typeof deviceMemory === "number";
@@ -148,7 +148,7 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
   let sendDefaultPii;
   let startTime;
   let transaction;
-  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  let obj = registerSpanErrorInstrumentation;
   const client = obj.getClient();
   if (client) {
     ({ attributes, name, transaction, startTime } = arg0);

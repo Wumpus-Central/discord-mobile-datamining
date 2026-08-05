@@ -7,7 +7,7 @@ export default flatRest((arg0, arg1) => {
   if (null == arg0) {
     let obj = {};
   } else {
-    obj = basePick /* basePick */(arg0, arg1);
+    obj = basePick(arg0, arg1);
   }
   return obj;
 });

@@ -40,7 +40,7 @@ let c5 = tmp9;
 
 export default function startOfUTCWeekYear(arg0, firstWeekContainsDate) {
   tmp5.default(1, arguments);
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   let prop;
   if (null != firstWeekContainsDate) {
     prop = firstWeekContainsDate.firstWeekContainsDate;

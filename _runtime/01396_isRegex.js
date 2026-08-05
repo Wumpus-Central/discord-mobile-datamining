@@ -22,7 +22,7 @@ if (tmp) {
       if (typeof obj === "object") {
         const tmp8 = 00542__(obj, "lastIndex");
         if (tmp8) {
-          if (bind /* bind */(tmp8, "value")) {
+          if (bind(tmp8, "value")) {
             try {
               callback(obj, obj);
             } catch (tmp4) {

@@ -49,8 +49,8 @@ arg5.browserReplayIntegration = () => {
     const items1 = [".sentry-react-native-unmask:not(.sentry-react-native-mask *) > *"];
     HermesBuiltin.arraySpread(tmp8, 1);
     obj[1] = items1;
-    replayIntegrationResult = init /* init */.replayIntegration(Object.assign(merged, obj));
-    const tmpResult = init /* init */;
+    replayIntegrationResult = init.replayIntegration(Object.assign(merged, obj));
+    const tmpResult = init;
   }
   return replayIntegrationResult;
 };

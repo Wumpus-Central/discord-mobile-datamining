@@ -8,8 +8,8 @@ arg5.default = {
   isXMLFile(dataView) {
     let tmp = dataView;
     if (tmp) {
-      tmp = getDataView /* getDataView */.getStringFromDataView(dataView, c2, length.length) === length;
-      const obj = getDataView /* getDataView */;
+      tmp = getDataView.getStringFromDataView(dataView, c2, length.length) === length;
+      const obj = getDataView;
     }
     return tmp;
   },

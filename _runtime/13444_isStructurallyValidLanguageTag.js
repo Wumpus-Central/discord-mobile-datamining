@@ -26,7 +26,7 @@ export const getCanonicalLocales = function getCanonicalLocales(items) {
       do {
         let tmp = require;
         let tmp2 = dependencyMap;
-        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId /* emitUnicodeLanguageId */.emitUnicodeLocaleId(compareKV /* compareKV */.CanonicalizeUnicodeLocaleId(parseUnicodeLanguageId /* parseUnicodeLanguageId */.parseUnicodeLocaleId(arr3[num3])));
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(compareKV.CanonicalizeUnicodeLocaleId(parseUnicodeLanguageId.parseUnicodeLocaleId(arr3[num3])));
         let tmp4 = num3;
         if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
           let arr = items2.push(emitUnicodeLocaleIdResult);
@@ -38,9 +38,9 @@ export const getCanonicalLocales = function getCanonicalLocales(items) {
   }
   return items;
 };
-export const isStructurallyValidLanguageTag = parseUnicodeLanguageId /* parseUnicodeLanguageId */.isUnicodeLanguageSubtag;
-export const isUnicodeLanguageSubtag = parseUnicodeLanguageId /* parseUnicodeLanguageId */.isUnicodeLanguageSubtag;
-export const isUnicodeRegionSubtag = parseUnicodeLanguageId /* parseUnicodeLanguageId */.isUnicodeRegionSubtag;
-export const isUnicodeScriptSubtag = parseUnicodeLanguageId /* parseUnicodeLanguageId */.isUnicodeScriptSubtag;
-export const parseUnicodeLanguageId = parseUnicodeLanguageId /* parseUnicodeLanguageId */.parseUnicodeLanguageId;
-export const parseUnicodeLocaleId = parseUnicodeLanguageId /* parseUnicodeLanguageId */.parseUnicodeLocaleId;
+export const isStructurallyValidLanguageTag = parseUnicodeLanguageId.isUnicodeLanguageSubtag;
+export const isUnicodeLanguageSubtag = parseUnicodeLanguageId.isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = parseUnicodeLanguageId.isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = parseUnicodeLanguageId.isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = parseUnicodeLanguageId.parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = parseUnicodeLanguageId.parseUnicodeLocaleId;

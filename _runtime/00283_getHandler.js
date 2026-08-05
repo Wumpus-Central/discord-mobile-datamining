@@ -8,7 +8,7 @@ import { _isNativeReflectConstruct } from "00285__isNativeReflectConstruct.js";
 
 const require = arg1;
 function getHandler(arg0, arg1) {
-  const tmp = getInstanceHandle /* getInstanceHandle */.getCurrentProps(arg0)[arg1];
+  const tmp = getInstanceHandle.getCurrentProps(arg0)[arg1];
   return typeof tmp === "function" ? tmp : undefined;
 }
 function dispatchResponderEvent(nativeElementReference3, responderEnd, responderIgnoreScroll, self) {
@@ -21,7 +21,7 @@ function dispatchResponderEvent(nativeElementReference3, responderEnd, responder
       if (null != self) {
         tmp16 = self;
       }
-      SymbolResult1 /* SymbolResult1 */.setTarget(tmp14, tmp16);
+      SymbolResult1.setTarget(tmp14, tmp16);
       let tmp15Result = tmp15(134);
       tmp15Result.setCurrentTarget(tmp14, nativeElementReference3);
       try {
@@ -34,7 +34,7 @@ function dispatchResponderEvent(nativeElementReference3, responderEnd, responder
           let c8 = tmp21;
         }
       }
-      const obj = SymbolResult1 /* SymbolResult1 */;
+      const obj = SymbolResult1;
     }
   }
 }
@@ -136,7 +136,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
               } while (null != parentElement3);
             }
             const tmp34 = new _isNativeReflectConstruct(str13, { bubbles: true, cancelable: true }, responderIgnoreScroll, dependencyMap[str13], recordTouchStart.touchHistory);
-            SymbolResult1 /* SymbolResult1 */.setTarget(tmp34, tmp11);
+            SymbolResult1.setTarget(tmp34, tmp11);
             const phasedRegistrationNames = tmp25.phasedRegistrationNames;
             tmp21 = null;
             if (null != phasedRegistrationNames) {
@@ -147,7 +147,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                   tmp41 = items[num7];
                   tmp42 = require;
                   let tmp43 = dependencyMap;
-                  let obj2 = getInstanceHandle /* getInstanceHandle */;
+                  let obj2 = getInstanceHandle;
                   let tmp44 = obj2.getCurrentProps(tmp41)[tmp39];
                   let tmp45 = num7;
                   let tmp46;
@@ -175,7 +175,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                   tmp49 = items[diff];
                   tmp50 = require;
                   let tmp51 = dependencyMap;
-                  let obj4 = getInstanceHandle /* getInstanceHandle */;
+                  let obj4 = getInstanceHandle;
                   let tmp52 = obj4.getCurrentProps(tmp49)[tmp38];
                   let tmp53 = diff;
                   let tmp54;
@@ -201,7 +201,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
               tmp21 = null;
               const tmp40Result = tmp40(134);
             }
-            const obj = SymbolResult1 /* SymbolResult1 */;
+            const obj = SymbolResult1;
             tmp36 = require;
           }
         } else {
@@ -247,7 +247,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
               if (false !== nativeElementReference3(_null, "responderTerminationRequest", responderIgnoreScroll, tmp11)) {
                 const result = nativeElementReference3(tmp61, "responderTerminate", responderIgnoreScroll, tmp11);
                 _null = tmp21;
-                const fabricUIManager = getFabricUIManager /* getFabricUIManager */.getFabricUIManager();
+                const fabricUIManager = getFabricUIManager.getFabricUIManager();
                 if (null != _null) {
                   let tmp74Result = tmp74(136);
                   const nativeElementReference = tmp74Result.getNativeElementReference(tmp73);
@@ -266,7 +266,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                     }
                   }
                 }
-                const obj10 = getFabricUIManager /* getFabricUIManager */;
+                const obj10 = getFabricUIManager;
                 tmp73 = _null;
               } else {
                 const result1 = nativeElementReference3(tmp21, "responderReject", responderIgnoreScroll, tmp11);
@@ -276,7 +276,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
               nativeElementReference3 = require;
               nativeElementReference3 = dependencyMap;
               nativeElementReference3 = _null;
-              const fabricUIManager1 = getFabricUIManager /* getFabricUIManager */.getFabricUIManager();
+              const fabricUIManager1 = getFabricUIManager.getFabricUIManager();
               if (null != _null) {
                 const result2 = nativeElementReference3(136);
                 const nativeElementReference2 = result2.getNativeElementReference(nativeElementReference3);
@@ -295,7 +295,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                   }
                 }
               }
-              const obj19 = getFabricUIManager /* getFabricUIManager */;
+              const obj19 = getFabricUIManager;
             }
           }
         }
@@ -325,7 +325,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
             _null = null;
             nativeElementReference3 = require;
             nativeElementReference3 = dependencyMap;
-            const fabricUIManager2 = getFabricUIManager /* getFabricUIManager */.getFabricUIManager();
+            const fabricUIManager2 = getFabricUIManager.getFabricUIManager();
             if (null != _null) {
               const result4 = nativeElementReference3(136);
               nativeElementReference3 = result4.getNativeElementReference(tmp99);
@@ -335,7 +335,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                 }
               }
             }
-            const obj16 = getFabricUIManager /* getFabricUIManager */;
+            const obj16 = getFabricUIManager;
             tmp99 = _null;
           } else {
             const touches = responderIgnoreScroll.touches;
@@ -349,7 +349,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
             if (tmp87) {
               tmp82(nativeElementReference3, "responderRelease", responderIgnoreScroll, tmp11);
               _null = null;
-              const fabricUIManager3 = getFabricUIManager /* getFabricUIManager */.getFabricUIManager();
+              const fabricUIManager3 = getFabricUIManager.getFabricUIManager();
               if (null != _null) {
                 nativeElementReference3 = tmp93(136).getNativeElementReference(tmp92);
                 if (null != nativeElementReference3) {
@@ -359,7 +359,7 @@ export const processResponderEvent = function processResponderEvent(arg0, self, 
                 }
                 const tmp93Result = tmp93(136);
               }
-              const obj14 = getFabricUIManager /* getFabricUIManager */;
+              const obj14 = getFabricUIManager;
               tmp92 = _null;
               tmp93 = require;
             }

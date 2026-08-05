@@ -6,8 +6,8 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.default = {
   read(byteLength, sum, arg2, byteOrder) {
-    let obj = readTag /* readTag */;
-    const ifd = obj.readIfd(byteLength, importDefaultResult1 /* importDefaultResult1 */.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
+    let obj = readTag;
+    const ifd = obj.readIfd(byteLength, importDefaultResult1.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
     let tmp6 = ifd;
     if (ifd.ShotInfo) {
       const value = ifd.ShotInfo.value;
@@ -34,10 +34,10 @@ arg5.default = {
         obj[1] = str;
         obj.AutoRotate = obj;
       }
-      const tmp3Result = getDataView /* getDataView */;
+      const tmp3Result = getDataView;
       delete tmp[tmp2];
-      tmp6 = getDataView /* getDataView */.objectAssign({}, ifd, obj);
-      const objectAssignResult = getDataView /* getDataView */.objectAssign({}, ifd, obj);
+      tmp6 = getDataView.objectAssign({}, ifd, obj);
+      const objectAssignResult = getDataView.objectAssign({}, ifd, obj);
     }
     return tmp6;
   },

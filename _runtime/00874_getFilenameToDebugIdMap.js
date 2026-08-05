@@ -128,7 +128,7 @@ arg5.getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1
       let tmp8 = require;
       let tmp9 = dependencyMap;
       let tmp7 = nextResult;
-      let obj = createStackParser /* createStackParser */;
+      let obj = createStackParser;
       let result = obj.normalizeStackTracePath(nextResult);
       let tmp11 = result;
       if (result) {

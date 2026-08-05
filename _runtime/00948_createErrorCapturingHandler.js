@@ -41,26 +41,26 @@ function captureHandlerError(name, arg1, tool_name) {
               if (!message2.includes("timed out")) {
                 const message3 = name.message;
                 if (!message3.includes("timeout")) {
-                  captureError /* captureError */.captureError(name, "tool_execution", obj);
-                  const obj3 = captureError /* captureError */;
+                  captureError.captureError(name, "tool_execution", obj);
+                  const obj3 = captureError;
                 }
               }
             }
-            captureError /* captureError */.captureError(name, "timeout", obj);
-            const obj4 = captureError /* captureError */;
+            captureError.captureError(name, "timeout", obj);
+            const obj4 = captureError;
           }
         }
       }
-      captureError /* captureError */.captureError(name, "validation", obj);
-      const obj5 = captureError /* captureError */;
+      captureError.captureError(name, "validation", obj);
+      const obj5 = captureError;
     } else if ("resource" === arg1) {
       obj.resource_uri = tool_name;
-      captureError /* captureError */.captureError(name, "resource_execution", obj);
-      const obj2 = captureError /* captureError */;
+      captureError.captureError(name, "resource_execution", obj);
+      const obj2 = captureError;
     } else if ("prompt" === arg1) {
       obj.prompt_name = tool_name;
-      captureError /* captureError */.captureError(name, "prompt_execution", obj);
-      const obj6 = captureError /* captureError */;
+      captureError.captureError(name, "prompt_execution", obj);
+      const obj6 = captureError;
     }
   } catch (err) {
   }

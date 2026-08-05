@@ -12,22 +12,22 @@ function validateConfig(clamp) {
     if (Array.isArray(clamp.clamp)) {
       if (2 !== clamp.clamp.length) {
         const _HermesInternal3 = HermesInternal;
-        const reanimatedError = new t /* t */.ReanimatedError("`clamp array` must contain 2 items but is given " + clamp.clamp.length + ".");
+        const reanimatedError = new t.ReanimatedError("`clamp array` must contain 2 items but is given " + clamp.clamp.length + ".");
         throw reanimatedError;
       }
     } else {
       const _HermesInternal = HermesInternal;
-      const reanimatedError1 = new t /* t */.ReanimatedError("`config.clamp` must be an array but is " + typeof clamp.clamp + ".");
+      const reanimatedError1 = new t.ReanimatedError("`config.clamp` must be an array but is " + typeof clamp.clamp + ".");
       throw reanimatedError1;
     }
   }
   if (clamp.velocityFactor <= 0) {
     const _HermesInternal2 = HermesInternal;
-    const reanimatedError2 = new t /* t */.ReanimatedError("`config.velocityFactor` must be greater then 0 but is " + clamp.velocityFactor + ".");
+    const reanimatedError2 = new t.ReanimatedError("`config.velocityFactor` must be greater then 0 but is " + clamp.velocityFactor + ".");
     throw reanimatedError2;
   } else if (clamp.rubberBandEffect) {
     if (!clamp.clamp) {
-      const reanimatedError3 = new t /* t */.ReanimatedError("You need to set `clamp` property when using `rubberBandEffect`.");
+      const reanimatedError3 = new t.ReanimatedError("You need to set `clamp` property when using `rubberBandEffect`.");
       throw reanimatedError3;
     }
   }

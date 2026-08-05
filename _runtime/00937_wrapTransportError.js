@@ -6,7 +6,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const wrapTransportError = function wrapTransportError(closure_0) {
   if (closure_0.onerror) {
-    addNonEnumerableProperty /* addNonEnumerableProperty */.fill(closure_0, "onerror", (arg0) => {
+    addNonEnumerableProperty.fill(closure_0, "onerror", (arg0) => {
       let closure_0 = arg0;
       return function(error) {
         const self = this;
@@ -20,12 +20,12 @@ export const wrapTransportError = function wrapTransportError(closure_0) {
         return typeof call === "unknown" ? closure_0(error) : call(self, error);
       };
     });
-    const obj = addNonEnumerableProperty /* addNonEnumerableProperty */;
+    const obj = addNonEnumerableProperty;
   }
 };
 export const wrapTransportOnClose = function wrapTransportOnClose(closure_0) {
   if (closure_0.onclose) {
-    addNonEnumerableProperty /* addNonEnumerableProperty */.fill(closure_0, "onclose", (arg0) => {
+    addNonEnumerableProperty.fill(closure_0, "onclose", (arg0) => {
       let closure_0 = arg0;
       return function() {
         const items = [...arguments];
@@ -36,7 +36,7 @@ export const wrapTransportOnClose = function wrapTransportOnClose(closure_0) {
         return callback.call.apply(items1);
       };
     });
-    let obj = addNonEnumerableProperty /* addNonEnumerableProperty */;
+    let obj = addNonEnumerableProperty;
   }
 };
 export const wrapTransportOnMessage = function wrapTransportOnMessage(closure_0, closure_02) {

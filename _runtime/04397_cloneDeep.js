@@ -2,5 +2,5 @@
 import { baseClone } from "04398_baseClone.js";
 
 export default function cloneDeep(arg0) {
-  return baseClone /* baseClone */(arg0, 5);
+  return baseClone(arg0, 5);
 };

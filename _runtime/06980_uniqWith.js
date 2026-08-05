@@ -7,7 +7,7 @@ export default function uniqWith(arg0, fn) {
   }
   if (arg0) {
     if (arg0.length) {
-      baseUniq /* baseUniq */(arg0, undefined, tmp);
+      baseUniq(arg0, undefined, tmp);
     }
     return [];
   }

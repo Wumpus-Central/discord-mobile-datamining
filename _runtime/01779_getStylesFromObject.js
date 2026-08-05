@@ -393,7 +393,7 @@ function compareAndFormatDifferences(arg0, arg1) {
 let closure_8 = Math.round(1000 / obj.fps);
 if (!isJest.isJest()) {
   require = () => {
-    const reanimatedError = new t /* t */.ReanimatedError("`setUpTests` is available only in Jest environment.");
+    const reanimatedError = new t.ReanimatedError("`setUpTests` is available only in Jest environment.");
     throw reanimatedError;
   };
 }

@@ -126,7 +126,7 @@ if (arr.ViewManagerNames) {
   const ViewManagerNames = require("UIManager").getConstants().ViewManagerNames;
   let item = ViewManagerNames.forEach((arg0) => {
     let closure_0 = arg0;
-    let obj = defineLazyObjectProperty /* defineLazyObjectProperty */;
+    let obj = defineLazyObjectProperty;
     obj = {
       get() {
         return outer1_2(outer1_3[1])(outer1_2(outer1_3[0]).getConstantsForViewManager)(closure_0);
@@ -159,8 +159,8 @@ if (!global.nativeCallSyncHook) {
         console.warn("Accessing view manager configs directly off UIManager via UIManager['" + closure_0 + "'] is no longer supported. Use UIManager.getViewManagerConfig('" + closure_0 + "') instead.");
         return outer1_10.getViewManagerConfig(closure_0);
       };
-      defineLazyObjectProperty /* defineLazyObjectProperty */.default(UIManager, arg0, obj);
-      const tmpResult = defineLazyObjectProperty /* defineLazyObjectProperty */;
+      defineLazyObjectProperty.default(UIManager, arg0, obj);
+      const tmpResult = defineLazyObjectProperty;
     }
   });
 }

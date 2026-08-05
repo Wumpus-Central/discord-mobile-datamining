@@ -8,8 +8,8 @@ import noop from "noop";
 import { noop } from "01019_noop.js";
 
 function valuePromise(_55) {
-  let tmp = noop /* noop */;
-  tmp = new tmp(noop /* noop */._61);
+  let tmp = noop;
+  tmp = new tmp(noop._61);
   tmp._65 = 1;
   tmp._55 = _55;
   return tmp;
@@ -33,7 +33,7 @@ noop = new noop(require("noop")._61);
 noop._65 = 1;
 noop._55 = "";
 require("noop").resolve = (self) => {
-  if (self instanceof noop /* noop */) {
+  if (self instanceof noop) {
     return self;
   } else if (null === self) {
     return noop;

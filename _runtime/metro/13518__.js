@@ -5,7 +5,7 @@ import { 13530__ } from "13530__.js";
 let closure_2 = require("call")([].concat);
 
 export default require("all")("Reflect", "ownKeys") || (function ownKeys(arg0) {
-  const fResult = f /* f */.f(all /* all */(arg0));
+  const fResult = f.f(all(arg0));
   const f = 13530__.f;
   let tmp2 = fResult;
   if (f) {

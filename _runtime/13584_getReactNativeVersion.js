@@ -4,5 +4,5 @@ import { getReactNativeVersionWithModules } from "13585_getReactNativeVersionWit
 
 
 export default function getReactNativeVersion() {
-  return getReactNativeVersionWithModules /* getReactNativeVersionWithModules */.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
+  return getReactNativeVersionWithModules.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
 };

@@ -2,5 +2,5 @@
 import { ListCache } from "00748_ListCache.js";
 
 export default function stackClear() {
-  const obj = { __data__: new ListCache /* ListCache */(), size: 0 };
+  const obj = { __data__: new ListCache(), size: 0 };
 };

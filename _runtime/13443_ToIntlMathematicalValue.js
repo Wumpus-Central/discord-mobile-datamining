@@ -5,7 +5,7 @@ import { __exportStarResult32 } from "13384___exportStarResult32.js";
 
 
 export const ToIntlMathematicalValue = function ToIntlMathematicalValue(arg0) {
-  const ToPrimitiveResult = __exportStarResult32 /* __exportStarResult32 */.ToPrimitive(arg0, "number");
+  const ToPrimitiveResult = __exportStarResult32.ToPrimitive(arg0, "number");
   if (typeof ToPrimitiveResult === "bigint") {
     const _default = new digitsToString.default(ToPrimitiveResult);
     return _default;

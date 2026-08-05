@@ -123,7 +123,7 @@ const obj18 = {
         const error = new Error("Invalid non-string URL");
         throw error;
       } else {
-        return getHostFromUrl /* getHostFromUrl */.getHostFromUrl(scriptURL);
+        return getHostFromUrl.getHostFromUrl(scriptURL);
       }
       const _default = tmp13.default;
     } catch (tmp8) {

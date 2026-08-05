@@ -42,7 +42,7 @@ export const useKeyboardAnimation = () => {
       return KeyboardController.setDefaultMode();
     };
   }, []);
-  return NOOP /* NOOP */.useKeyboardContext().animated;
+  return NOOP.useKeyboardContext().animated;
 };
 export const useReanimatedKeyboardAnimation = () => {
   if (typeof useResizeMode !== "function") {
@@ -56,7 +56,7 @@ export const useReanimatedKeyboardAnimation = () => {
       return KeyboardController.setDefaultMode();
     };
   }, []);
-  return NOOP /* NOOP */.useKeyboardContext().reanimated;
+  return NOOP.useKeyboardContext().reanimated;
 };
 export const useGenericKeyboardHandler = function useGenericKeyboardHandler(handler, items10) {
   const _require = handler;
@@ -160,13 +160,13 @@ export const useKeyboardHandler = function useKeyboardHandler(handler, items) {
   }, items);
 };
 export const useKeyboardController = function useKeyboardController() {
-  let obj = NOOP /* NOOP */;
+  let obj = NOOP;
   const keyboardContext = obj.useKeyboardContext();
   obj = { setEnabled: keyboardContext.setEnabled, enabled: keyboardContext.enabled };
   return obj;
 };
 export const useReanimatedFocusedInput = function useReanimatedFocusedInput() {
-  let obj = NOOP /* NOOP */;
+  let obj = NOOP;
   const keyboardContext = obj.useKeyboardContext();
   obj = { input: keyboardContext.layout, update: keyboardContext.update };
   return obj;

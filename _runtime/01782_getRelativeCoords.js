@@ -3,7 +3,7 @@ import { measureFabric } from "01783_measureFabric.js";
 const require = arg1;
 const dependencyMap = arg6;
 function getRelativeCoords(arg0, arg1, arg2) {
-  let obj = measureFabric /* measureFabric */;
+  let obj = measureFabric;
   const measureResult = obj.measure(arg0);
   let tmp2 = null;
   if (null !== measureResult) {

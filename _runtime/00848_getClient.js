@@ -6,28 +6,28 @@ const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getClient = function getClient() {
-  const mainCarrier = getGlobalSingleton /* getGlobalSingleton */.getMainCarrier();
-  const obj = getGlobalSingleton /* getGlobalSingleton */;
-  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getGlobalSingleton.getMainCarrier();
+  const obj = getGlobalSingleton;
+  const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   const currentScope = asyncContextStrategy.getCurrentScope();
   return currentScope.getClient();
 };
 arg5.getCurrentScope = function getCurrentScope() {
-  const mainCarrier = getGlobalSingleton /* getGlobalSingleton */.getMainCarrier();
-  const obj = getGlobalSingleton /* getGlobalSingleton */;
-  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getGlobalSingleton.getMainCarrier();
+  const obj = getGlobalSingleton;
+  const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   return asyncContextStrategy.getCurrentScope();
 };
 arg5.getGlobalScope = function getGlobalScope() {
-  return getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("globalScope", () => {
+  return getGlobalSingleton.getGlobalSingleton("globalScope", () => {
     const scope = new callback(table[2]).Scope();
     return scope;
   });
 };
 arg5.getIsolationScope = function getIsolationScope() {
-  const mainCarrier = getGlobalSingleton /* getGlobalSingleton */.getMainCarrier();
-  const obj = getGlobalSingleton /* getGlobalSingleton */;
-  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getGlobalSingleton.getMainCarrier();
+  const obj = getGlobalSingleton;
+  const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   return asyncContextStrategy.getIsolationScope();
 };
 arg5.getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
@@ -36,8 +36,8 @@ arg5.getTraceContextFromScope = function getTraceContextFromScope(getPropagation
   const obj = { trace_id: propagationContext.traceId, span_id: null };
   let propagationSpanId = propagationContext.propagationSpanId;
   if (!propagationSpanId) {
-    propagationSpanId = generateSpanId /* generateSpanId */.generateSpanId();
-    const obj2 = generateSpanId /* generateSpanId */;
+    propagationSpanId = generateSpanId.generateSpanId();
+    const obj2 = generateSpanId;
   }
   obj[1] = propagationSpanId;
   if (parentSpanId) {
@@ -49,9 +49,9 @@ arg5.withIsolationScope = function withIsolationScope() {
   let tmp2;
   let tmp3;
   const items = [...arguments];
-  const mainCarrier = getGlobalSingleton /* getGlobalSingleton */.getMainCarrier();
-  const obj = getGlobalSingleton /* getGlobalSingleton */;
-  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getGlobalSingleton.getMainCarrier();
+  const obj = getGlobalSingleton;
+  const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   if (2 === items.length) {
     [tmp2, tmp3] = items;
     if (tmp2) {
@@ -63,15 +63,15 @@ arg5.withIsolationScope = function withIsolationScope() {
   } else {
     return asyncContextStrategy.withIsolationScope(items[0]);
   }
-  const obj2 = getAsyncContextStrategy /* getAsyncContextStrategy */;
+  const obj2 = getAsyncContextStrategy;
 };
 arg5.withScope = function withScope() {
   let tmp2;
   let tmp3;
   const items = [...arguments];
-  const mainCarrier = getGlobalSingleton /* getGlobalSingleton */.getMainCarrier();
-  const obj = getGlobalSingleton /* getGlobalSingleton */;
-  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getGlobalSingleton.getMainCarrier();
+  const obj = getGlobalSingleton;
+  const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   if (2 === items.length) {
     [tmp2, tmp3] = items;
     if (tmp2) {
@@ -83,5 +83,5 @@ arg5.withScope = function withScope() {
   } else {
     return asyncContextStrategy.withScope(items[0]);
   }
-  const obj2 = getAsyncContextStrategy /* getAsyncContextStrategy */;
+  const obj2 = getAsyncContextStrategy;
 };

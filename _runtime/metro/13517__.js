@@ -8,7 +8,7 @@ export default (arg0, arg1, arg2) => {
     let tmp3 = arr[num];
     let tmp4 = require;
     let tmp5 = dependencyMap;
-    let tmp6 = call /* call */(arg0, tmp3);
+    let tmp6 = call(arg0, tmp3);
     let tmp7 = num;
     if (!tmp6) {
       let tmp8 = arg2;

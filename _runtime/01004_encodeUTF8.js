@@ -4,10 +4,10 @@ import { globalEncodeFactory } from "01006_globalEncodeFactory.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.encodeUTF8 = function encodeUTF8(json) {
-  const sentryCarrier = getSentryCarrier /* getSentryCarrier */.getSentryCarrier();
+  const sentryCarrier = getSentryCarrier.getSentryCarrier();
   if (!sentryCarrier.encodePolyfill) {
-    const encodePolyfill = globalEncodeFactory /* globalEncodeFactory */.useEncodePolyfill();
-    const tmpResult = globalEncodeFactory /* globalEncodeFactory */;
+    const encodePolyfill = globalEncodeFactory.useEncodePolyfill();
+    const tmpResult = globalEncodeFactory;
   }
   return sentryCarrier.encodePolyfill(json);
 };

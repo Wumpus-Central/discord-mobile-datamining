@@ -7,7 +7,7 @@ import { isHermesEnabled } from "01002_isHermesEnabled.js";
 export const isModalSupported = function isModalSupported() {
   let major;
   let minor;
-  const ReactNativeVersion = TurboModuleRegistry /* TurboModuleRegistry */.ReactNativeLibraries.ReactNativeVersion;
+  const ReactNativeVersion = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion;
   let version;
   if (null !== ReactNativeVersion) {
     if (undefined !== ReactNativeVersion) {
@@ -18,7 +18,7 @@ export const isModalSupported = function isModalSupported() {
     version = {};
   }
   ({ minor, major } = version);
-  let isFabricEnabledResult = isHermesEnabled /* isHermesEnabled */.isFabricEnabled();
+  let isFabricEnabledResult = isHermesEnabled.isFabricEnabled();
   if (isFabricEnabledResult) {
     isFabricEnabledResult = 0 === major;
   }
@@ -33,7 +33,7 @@ export const isModalSupported = function isModalSupported() {
 export const isNativeDriverSupportedForColorAnimations = function isNativeDriverSupportedForColorAnimations() {
   let major;
   let minor;
-  const ReactNativeVersion = TurboModuleRegistry /* TurboModuleRegistry */.ReactNativeLibraries.ReactNativeVersion;
+  const ReactNativeVersion = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion;
   let version;
   if (null !== ReactNativeVersion) {
     if (undefined !== ReactNativeVersion) {
@@ -71,7 +71,7 @@ export const base64ToUint8Array = (closure_0) => {
       const uint8Array = new Uint8Array(items.map((str) => str.charCodeAt(0)));
       return uint8Array;
     }
-    obj = isHermesEnabled /* isHermesEnabled */;
+    obj = isHermesEnabled;
   }
   const error = new Error("atob is not available in this environment.");
   throw error;

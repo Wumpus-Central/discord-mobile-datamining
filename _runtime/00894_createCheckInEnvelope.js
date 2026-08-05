@@ -22,8 +22,8 @@ arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk) {
     tmp2 = arg4;
   }
   if (tmp2) {
-    obj.dsn = dsnFromString /* dsnFromString */.dsnToString(arg4);
-    const obj4 = dsnFromString /* dsnFromString */;
+    obj.dsn = dsnFromString.dsnToString(arg4);
+    const obj4 = dsnFromString;
   }
   if (trace) {
     obj.trace = trace;
@@ -31,5 +31,5 @@ arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk) {
   const items = [{ type: "check_in" }, arg0];
   const date = new Date();
   const items1 = [items];
-  return forEachEnvelopeItem /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return forEachEnvelopeItem.createEnvelope(obj, items1);
 };

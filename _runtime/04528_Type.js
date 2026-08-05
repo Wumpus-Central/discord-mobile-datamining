@@ -7,7 +7,7 @@ export default function Type(num) {
     let str2 = "Undefined";
     if (undefined !== num) {
       let str3 = "Object";
-      if (!isObject /* isObject */(num)) {
+      if (!isObject(num)) {
         let str4 = "Number";
         if (typeof num !== "number") {
           let str5 = "Boolean";

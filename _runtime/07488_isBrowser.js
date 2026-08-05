@@ -5,7 +5,7 @@ const dependencyMap = arg6;
 arg5.isBrowser = function isBrowser() {
   let tmp = typeof window !== "undefined";
   if (typeof window !== "undefined") {
-    const isNodeEnvResult = dynamicRequire /* dynamicRequire */.isNodeEnv();
+    const isNodeEnvResult = dynamicRequire.isNodeEnv();
     let tmp3 = !isNodeEnvResult;
     if (isNodeEnvResult) {
       const _process = tmp4(7376).GLOBAL_OBJ.process;
@@ -16,7 +16,7 @@ arg5.isBrowser = function isBrowser() {
       tmp3 = tmp2;
     }
     tmp = tmp3;
-    const obj = dynamicRequire /* dynamicRequire */;
+    const obj = dynamicRequire;
     tmp4 = require;
   }
   return tmp;

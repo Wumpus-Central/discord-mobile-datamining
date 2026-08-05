@@ -3,7 +3,7 @@ import { getTraceData } from "07446_getTraceData.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.getTraceMetaTags = function getTraceMetaTags() {
-  const entries = Object.entries(getTraceData /* getTraceData */.getTraceData());
+  const entries = Object.entries(getTraceData.getTraceData());
   const mapped = entries.map((arg0) => {
     let tmp;
     let tmp2;

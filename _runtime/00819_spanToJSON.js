@@ -60,8 +60,8 @@ function spanToJSON(getSpanJSON) {
             }
             sum = result1;
           } else {
-            sum = dateTimestampInSeconds /* dateTimestampInSeconds */.timestampInSeconds();
-            const obj3 = dateTimestampInSeconds /* dateTimestampInSeconds */;
+            sum = dateTimestampInSeconds.timestampInSeconds();
+            const obj3 = dateTimestampInSeconds;
           }
         }
       }
@@ -86,15 +86,15 @@ function spanToJSON(getSpanJSON) {
             }
             sum1 = result3;
           } else {
-            sum1 = dateTimestampInSeconds /* dateTimestampInSeconds */.timestampInSeconds();
-            const obj4 = dateTimestampInSeconds /* dateTimestampInSeconds */;
+            sum1 = dateTimestampInSeconds.timestampInSeconds();
+            const obj4 = dateTimestampInSeconds;
           }
         }
       }
       obj[6] = sum1;
       let tmp16;
       if (status) {
-        if (status.code !== getSpanStatusFromHttpCode /* getSpanStatusFromHttpCode */.SPAN_STATUS_UNSET) {
+        if (status.code !== getSpanStatusFromHttpCode.SPAN_STATUS_UNSET) {
           let str3 = "ok";
           if (status.code !== tmp17(840).SPAN_STATUS_OK) {
             str3 = status.message || "internal_error";
@@ -148,7 +148,7 @@ arg5.addChildSpanToSpan = function addChildSpanToSpan(arg0, arg1) {
   if (!tmp2) {
     tmp2 = arg0;
   }
-  const result = addNonEnumerableProperty /* addNonEnumerableProperty */.addNonEnumerableProperty(arg1, _sentryRootSpan, tmp2);
+  const result = addNonEnumerableProperty.addNonEnumerableProperty(arg1, _sentryRootSpan, tmp2);
   if (arg0[_sentryChildSpans]) {
     arg0[tmp6].add(arg1);
     const obj3 = arg0[tmp6];
@@ -156,8 +156,8 @@ arg5.addChildSpanToSpan = function addChildSpanToSpan(arg0, arg1) {
     const _Set = Set;
     const items = [arg1];
     const set = new Set(items);
-    const result1 = addNonEnumerableProperty /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, tmp6, set);
-    const tmp3Result = addNonEnumerableProperty /* addNonEnumerableProperty */;
+    const result1 = addNonEnumerableProperty.addNonEnumerableProperty(arg0, tmp6, set);
+    const tmp3Result = addNonEnumerableProperty;
   }
 };
 arg5.convertSpanLinksForEnvelope = function convertSpanLinksForEnvelope(_links) {
@@ -178,9 +178,9 @@ arg5.convertSpanLinksForEnvelope = function convertSpanLinksForEnvelope(_links) 
   return mapped;
 };
 arg5.getActiveSpan = function getActiveSpan() {
-  const mainCarrier = getGlobalSingleton /* getGlobalSingleton */.getMainCarrier();
-  const obj = getGlobalSingleton /* getGlobalSingleton */;
-  const asyncContextStrategy = getAsyncContextStrategy /* getAsyncContextStrategy */.getAsyncContextStrategy(mainCarrier);
+  const mainCarrier = getGlobalSingleton.getMainCarrier();
+  const obj = getGlobalSingleton;
+  const asyncContextStrategy = getAsyncContextStrategy.getAsyncContextStrategy(mainCarrier);
   if (asyncContextStrategy.getActiveSpan) {
     let activeSpan = asyncContextStrategy.getActiveSpan();
   } else {
@@ -216,7 +216,7 @@ arg5.getSpanDescendants = function getSpanDescendants(arg0) {
 };
 arg5.getStatusMessage = function getStatusMessage(code) {
   if (code) {
-    if (code.code !== getSpanStatusFromHttpCode /* getSpanStatusFromHttpCode */.SPAN_STATUS_UNSET) {
+    if (code.code !== getSpanStatusFromHttpCode.SPAN_STATUS_UNSET) {
       let str = "ok";
       if (code.code !== tmp(840).SPAN_STATUS_OK) {
         str = code.message || "internal_error";
@@ -235,11 +235,11 @@ arg5.removeChildSpanFromSpan = function removeChildSpanFromSpan(arg0, arg1) {
 };
 arg5.showSpanDropWarning = function showSpanDropWarning() {
   if (!c2) {
-    consoleSandbox /* consoleSandbox */.consoleSandbox(() => {
+    consoleSandbox.consoleSandbox(() => {
       console.warn("[Sentry] Returning null from `beforeSendSpan` is disallowed. To drop certain spans, configure the respective integrations directly or use `ignoreSpans`.");
     });
     c2 = true;
-    const obj = consoleSandbox /* consoleSandbox */;
+    const obj = consoleSandbox;
   }
 };
 arg5.spanIsSampled = spanIsSampled;
@@ -264,8 +264,8 @@ arg5.spanTimeInputToSeconds = function spanTimeInputToSeconds(num) {
         }
         sum = result1;
       } else {
-        sum = dateTimestampInSeconds /* dateTimestampInSeconds */.timestampInSeconds();
-        const obj = dateTimestampInSeconds /* dateTimestampInSeconds */;
+        sum = dateTimestampInSeconds.timestampInSeconds();
+        const obj = dateTimestampInSeconds;
       }
     }
   }
@@ -281,7 +281,7 @@ arg5.spanToTraceContext = function spanToTraceContext(spanContext) {
   if (!isRemote) {
     parent_span_id = spanToJSON(spanContext).parent_span_id;
   }
-  let obj = unwrapScopeFromWeakRef /* unwrapScopeFromWeakRef */;
+  let obj = unwrapScopeFromWeakRef;
   const scope = obj.getCapturedScopesOnSpan(spanContext).scope;
   obj = { parent_span_id, span_id: null, trace_id: null };
   if (isRemote) {
@@ -290,8 +290,8 @@ arg5.spanToTraceContext = function spanToTraceContext(spanContext) {
       propagationSpanId = scope.getPropagationContext().propagationSpanId;
     }
     if (!propagationSpanId) {
-      propagationSpanId = generateSpanId /* generateSpanId */.generateSpanId();
-      const tmp3Result = generateSpanId /* generateSpanId */;
+      propagationSpanId = generateSpanId.generateSpanId();
+      const tmp3Result = generateSpanId;
     }
     spanId = propagationSpanId;
   }
@@ -304,14 +304,14 @@ arg5.spanToTraceHeader = function spanToTraceHeader(spanContext) {
   let traceId;
   ({ traceId, spanId } = spanContext.spanContext());
   const spanContextResult = spanContext.spanContext();
-  return regExp /* regExp */.generateSentryTraceHeader(traceId, spanId, 1 === spanContext.spanContext().traceFlags);
+  return regExp.generateSentryTraceHeader(traceId, spanId, 1 === spanContext.spanContext().traceFlags);
 };
 arg5.spanToTraceparentHeader = function spanToTraceparentHeader(span) {
   let spanId;
   let traceId;
   ({ traceId, spanId } = span.spanContext());
   const spanContextResult = span.spanContext();
-  return regExp /* regExp */.generateTraceparentHeader(traceId, spanId, 1 === span.spanContext().traceFlags);
+  return regExp.generateTraceparentHeader(traceId, spanId, 1 === span.spanContext().traceFlags);
 };
 arg5.spanToTransactionTraceContext = function spanToTransactionTraceContext(spanContext) {
   let spanId;

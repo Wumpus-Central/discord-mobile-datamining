@@ -10,8 +10,8 @@ const fn = function t(arg0, arg1, arg2) {
       const items = [0, arg1];
       const _Math = Math;
       const items1 = [0, Math.max(arg1 - arg2, 0)];
-      interpolateResult = cancelAnimation /* cancelAnimation */.interpolate(arg0, items, items1);
-      const obj = cancelAnimation /* cancelAnimation */;
+      interpolateResult = cancelAnimation.interpolate(arg0, items, items1);
+      const obj = cancelAnimation;
     }
   }
   return interpolateResult;

@@ -12,7 +12,7 @@ import { getTraceData } from "../07446_getTraceData.js";
 function _addTracingHeadersToFetchRequest(headers, headers2, span) {
   let baggage;
   let tmp4;
-  let obj = getTraceData /* getTraceData */;
+  let obj = getTraceData;
   obj = { span };
   const traceData = obj.getTraceData(obj);
   ({ sentry-trace: tmp4, baggage } = traceData);
@@ -170,7 +170,7 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData)
   if (fetchData.fetchData) {
     let setHttpStatus = require;
     let headers = dependencyMap;
-    let obj = hasTracingEnabled /* hasTracingEnabled */;
+    let obj = hasTracingEnabled;
     let hasTracingEnabledResult = obj.hasTracingEnabled();
     if (hasTracingEnabledResult) {
       hasTracingEnabledResult = arg1(endResult.fetchData.url);

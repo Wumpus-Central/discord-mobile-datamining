@@ -3,7 +3,7 @@ import { getExpoConstants } from "01003_getExpoConstants.js";
 const require = arg1;
 const dependencyMap = arg6;
 function getExpoUpdatesContext() {
-  let obj = getExpoConstants /* getExpoConstants */;
+  let obj = getExpoConstants;
   const expoUpdates = obj.getExpoUpdates();
   if (expoUpdates) {
     obj = { is_enabled: null, is_embedded_launch: null, is_emergency_launch: null, is_using_embedded_assets: null };

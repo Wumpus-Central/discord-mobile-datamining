@@ -38,7 +38,7 @@ arg5.detectFile = function detectFile(uint8Array, chunkSize) {
   if (!num3) {
     num3 = 64;
   }
-  const fileChunk = getFileChunk /* getFileChunk */.getFileChunk(uint8Array, num3);
+  const fileChunk = getFileChunk.getFileChunk(uint8Array, num3);
   if (0 !== fileChunk.length) {
     const items = [];
     const items1 = [];

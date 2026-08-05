@@ -3,14 +3,14 @@ import { isPropertyKey } from "04576_isPropertyKey.js";
 import { Type } from "04596_Type.js";
 
 export default function ValidateAndApplyPropertyDescriptor(arg0, arg1, flag, __Configurable__) {
-  const tmp3 = Type /* Type */(arg0);
+  const tmp3 = Type(arg0);
   if (undefined !== arg0) {
     if (!tmp(4529)(arg0)) {
       const tmp6 = new tmp(541)("Assertion failed: O must be undefined or an Object");
       throw tmp6;
     }
   }
-  if (isPropertyKey /* isPropertyKey */(arg1)) {
+  if (isPropertyKey(arg1)) {
     if (typeof flag !== "boolean") {
       const tmp87 = new tmp(541)("Assertion failed: extensible must be a Boolean");
       throw tmp87;

@@ -7,7 +7,7 @@ let error;
 let length;
 const require = arg1;
 function getTagName(dataView, sum1) {
-  let obj = getDataView /* getDataView */;
+  let obj = getDataView;
   const tmp = callback(obj.getPascalStringFromDataView(dataView, sum1), 2);
   const first = tmp[0];
   obj = { tagName: tmp[1], tagNameSize: null };
@@ -26,15 +26,15 @@ let c6 = 4;
 
 export default {
   read(arg0, arg1) {
-    let obj = getDataView /* getDataView */;
+    let obj = getDataView;
     const uint8Array = new Uint8Array(arg0);
     const dataView = obj.getDataView(uint8Array.buffer);
     obj = {};
     let num = 0;
     if (0 < arg0.length) {
       const sum = num + closure_7;
-      const stringFromDataView = getDataView /* getDataView */.getStringFromDataView(dataView, num, closure_7);
-      const obj3 = getDataView /* getDataView */;
+      const stringFromDataView = getDataView.getStringFromDataView(dataView, num, closure_7);
+      const obj3 = getDataView;
       const shortAt = 04914__.getShortAt(dataView, sum);
       const sum1 = sum + c5;
       const tmp15 = getTagName(dataView, sum1);

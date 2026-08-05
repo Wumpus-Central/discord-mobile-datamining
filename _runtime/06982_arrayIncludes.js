@@ -8,7 +8,7 @@ export default function arrayIncludes(arg0, arg1) {
   }
   let tmp = num;
   if (tmp) {
-    tmp = baseIndexOf /* baseIndexOf */(arg0, arg1, 0) > -1;
+    tmp = baseIndexOf(arg0, arg1, 0) > -1;
   }
   return tmp;
 };

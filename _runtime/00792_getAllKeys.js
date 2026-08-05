@@ -4,6 +4,6 @@ import { baseGetAllKeys } from "00793_baseGetAllKeys.js";
 import { getOwnPropertySymbols } from "00795_getOwnPropertySymbols.js";
 
 export default function getAllKeys(arg0) {
-  const tmp = baseGetAllKeys /* baseGetAllKeys */;
-  return tmp(arg0, keys /* keys */, getOwnPropertySymbols /* getOwnPropertySymbols */);
+  const tmp = baseGetAllKeys;
+  return tmp(arg0, keys, getOwnPropertySymbols);
 };

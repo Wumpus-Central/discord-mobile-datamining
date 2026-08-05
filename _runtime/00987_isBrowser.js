@@ -6,7 +6,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.isBrowser = function isBrowser() {
   let tmp = typeof window !== "undefined";
   if (typeof window !== "undefined") {
-    const isNodeEnvResult = dynamicRequire /* dynamicRequire */.isNodeEnv();
+    const isNodeEnvResult = dynamicRequire.isNodeEnv();
     let tmp4 = !isNodeEnvResult;
     if (isNodeEnvResult) {
       const _process = tmp5(821).GLOBAL_OBJ.process;
@@ -17,7 +17,7 @@ arg5.isBrowser = function isBrowser() {
       tmp4 = "renderer" === type;
     }
     tmp = tmp4;
-    const obj = dynamicRequire /* dynamicRequire */;
+    const obj = dynamicRequire;
     tmp5 = require;
   }
   return tmp;

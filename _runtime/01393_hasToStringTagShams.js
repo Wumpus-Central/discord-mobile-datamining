@@ -2,7 +2,7 @@
 import { hasSymbols } from "00545_hasSymbols.js";
 
 export default function hasToStringTagShams() {
-  let toStringTag = hasSymbols /* hasSymbols */();
+  let toStringTag = hasSymbols();
   if (toStringTag) {
     const _Symbol = Symbol;
     toStringTag = Symbol.toStringTag;

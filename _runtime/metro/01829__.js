@@ -11,5 +11,5 @@ const require = arg1;
 const styles = StyleSheet.create({ flex: { flex: 1 } });
 
 export default function _default(children) {
-  return <closure_2 style={styles.flex} testID={TEST_ID_KEYBOARD_TOOLBAR /* TEST_ID_KEYBOARD_TOOLBAR */.TEST_ID_KEYBOARD_TOOLBAR_CONTENT}>{arg0.children}</closure_2>;
+  return <closure_2 style={styles.flex} testID={TEST_ID_KEYBOARD_TOOLBAR.TEST_ID_KEYBOARD_TOOLBAR_CONTENT}>{arg0.children}</closure_2>;
 };

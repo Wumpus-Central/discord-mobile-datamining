@@ -62,86 +62,86 @@ if (self2) {
   const _Object3 = Object;
   let obj = { enumerable: true, get: null };
   obj[1] = function get() {
-    return makeDataFormatters /* makeDataFormatters */.makeDataFormatters;
+    return makeDataFormatters.makeDataFormatters;
   };
   Object.defineProperty(exports, "makeDataFormatters", obj);
   const _Object4 = Object;
   obj = { enumerable: true, get: null };
   obj[1] = function get() {
-    return dataFormatterCache /* dataFormatterCache */.dataFormatterCache;
+    return dataFormatterCache.dataFormatterCache;
   };
   Object.defineProperty(exports, "dataFormatterCache", obj);
   const _Object5 = Object;
   obj = { enumerable: true, get: null };
   obj[1] = function get() {
-    return _isNativeReflectConstruct /* _isNativeReflectConstruct */.FormatBuilder;
+    return _isNativeReflectConstruct.FormatBuilder;
   };
   Object.defineProperty(exports, "FormatBuilder", obj);
   const _Object6 = Object;
   const obj1 = { enumerable: true, get: null };
   obj1[1] = function get() {
-    return _isNativeReflectConstruct /* _isNativeReflectConstruct */.bindFormatValues;
+    return _isNativeReflectConstruct.bindFormatValues;
   };
   Object.defineProperty(exports, "bindFormatValues", obj1);
   fn(require("module_1285"), exports);
   const _Object7 = Object;
   const obj2 = { enumerable: true, get: null };
   obj2[1] = function get() {
-    return runtimeHashMessageKey /* runtimeHashMessageKey */.runtimeHashMessageKey;
+    return runtimeHashMessageKey.runtimeHashMessageKey;
   };
   Object.defineProperty(exports, "runtimeHashMessageKey", obj2);
   const _Object8 = Object;
   const obj3 = { enumerable: true, get: null };
   obj3[1] = function get() {
-    return DEFAULT_LOCALE /* DEFAULT_LOCALE */.IntlManager;
+    return DEFAULT_LOCALE.IntlManager;
   };
   Object.defineProperty(exports, "IntlManager", obj3);
   const _Object9 = Object;
   const obj4 = { enumerable: true, get: null };
   obj4[1] = function get() {
-    return DEFAULT_LOCALE /* DEFAULT_LOCALE */.DEFAULT_LOCALE;
+    return DEFAULT_LOCALE.DEFAULT_LOCALE;
   };
   Object.defineProperty(exports, "DEFAULT_LOCALE", obj4);
   const _Object10 = Object;
   const obj5 = { enumerable: true, get: null };
   obj5[1] = function get() {
-    return serializeAst /* serializeAst */.InternalIntlMessage;
+    return serializeAst.InternalIntlMessage;
   };
   Object.defineProperty(exports, "InternalIntlMessage", obj5);
   const _Object11 = Object;
   const obj6 = { enumerable: true, get: null };
   obj6[1] = function get() {
-    return MessageLoader /* MessageLoader */.createLoader;
+    return MessageLoader.createLoader;
   };
   Object.defineProperty(exports, "createLoader", obj6);
   const _Object12 = Object;
   const obj7 = { enumerable: true, get: null };
   obj7[1] = function get() {
-    return MessageLoader /* MessageLoader */.loadAllMessagesInLocale;
+    return MessageLoader.loadAllMessagesInLocale;
   };
   Object.defineProperty(exports, "loadAllMessagesInLocale", obj7);
   const _Object13 = Object;
   const obj8 = { enumerable: true, get: null };
   obj8[1] = function get() {
-    return MessageLoader /* MessageLoader */.waitForAllDefaultIntlMessagesLoaded;
+    return MessageLoader.waitForAllDefaultIntlMessagesLoaded;
   };
   Object.defineProperty(exports, "waitForAllDefaultIntlMessagesLoaded", obj8);
   const _Object14 = Object;
   const obj9 = { enumerable: true, get: null };
   obj9[1] = function get() {
-    return MessageLoader /* MessageLoader */.MessageLoader;
+    return MessageLoader.MessageLoader;
   };
   Object.defineProperty(exports, "MessageLoader", obj9);
   const _Object15 = Object;
   const obj10 = { enumerable: true, get: null };
   obj10[1] = function get() {
-    return chainMessagesObjects /* chainMessagesObjects */.chainMessagesObjects;
+    return chainMessagesObjects.chainMessagesObjects;
   };
   Object.defineProperty(exports, "chainMessagesObjects", obj10);
   const _Object16 = Object;
   const obj11 = { enumerable: true, get: null };
   obj11[1] = function get() {
-    return chainMessagesObjects /* chainMessagesObjects */.makeMessagesProxy;
+    return chainMessagesObjects.makeMessagesProxy;
   };
   Object.defineProperty(exports, "makeMessagesProxy", obj11);
 } else {

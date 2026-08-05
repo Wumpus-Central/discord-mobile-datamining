@@ -43,8 +43,8 @@ export default (arg0, arg1, arg2, arg3) => {
         dependencyMap = null;
         let item = arr.forEach((semver) => {
           let tmp = semver;
-          if (semver.semver === Comparator /* Comparator */.ANY) {
-            tmp = new Comparator /* Comparator */(">=0.0.0");
+          if (semver.semver === Comparator.ANY) {
+            tmp = new Comparator(">=0.0.0");
           }
           let tmp6 = _null;
           if (!_null) {

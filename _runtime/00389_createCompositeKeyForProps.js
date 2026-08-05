@@ -40,7 +40,7 @@ function createCompositeKeyForProps(arg0, style) {
           if (!(arr2 instanceof _assertNativeAnimatedModule)) {
             let tmp8 = require;
             tmp46Result = arr2;
-            if (!(arr2 instanceof AnimatedEvent /* AnimatedEvent */.AnimatedEvent)) {
+            if (!(arr2 instanceof AnimatedEvent.AnimatedEvent)) {
               let _Array = Array;
               if (Array.isArray(arr2)) {
                 let tmp12 = arr2;
@@ -79,7 +79,7 @@ function createCompositeKeyForProps(arg0, style) {
                                   tmp27 = createCompositeKeyForArray(tmp22);
                                 } else {
                                   let tmp28 = require;
-                                  let obj3 = _isNativeReflectConstruct /* _isNativeReflectConstruct */;
+                                  let obj3 = _isNativeReflectConstruct;
                                   if (obj3.isPlainObject(tmp22)) {
                                     let tmp29 = createCompositeKeyForObject;
                                     tmp27 = createCompositeKeyForObject(tmp22);
@@ -108,7 +108,7 @@ function createCompositeKeyForProps(arg0, style) {
                           tmp17 = tmp21;
                         } else {
                           let tmp18 = require;
-                          let obj2 = _isNativeReflectConstruct /* _isNativeReflectConstruct */;
+                          let obj2 = _isNativeReflectConstruct;
                           if (obj2.isPlainObject(arr3)) {
                             let tmp19 = createCompositeKeyForObject;
                             tmp17 = createCompositeKeyForObject(arr3);
@@ -190,7 +190,7 @@ function createCompositeKeyForArray(arg0) {
           tmp8 = createCompositeKeyForArray(tmp3);
         } else {
           let tmp9 = require;
-          let obj = _isNativeReflectConstruct /* _isNativeReflectConstruct */;
+          let obj = _isNativeReflectConstruct;
           if (obj.isPlainObject(tmp3)) {
             let tmp10 = createCompositeKeyForObject;
             tmp8 = createCompositeKeyForObject(tmp3);
@@ -270,7 +270,7 @@ function createCompositeKeyForObject(arr2, D) {
                             tmp29 = createCompositeKeyForArray(tmp24);
                           } else {
                             let tmp30 = require;
-                            let obj3 = _isNativeReflectConstruct /* _isNativeReflectConstruct */;
+                            let obj3 = _isNativeReflectConstruct;
                             if (obj3.isPlainObject(tmp24)) {
                               let tmp31 = createCompositeKeyForObject;
                               tmp29 = createCompositeKeyForObject(tmp24);
@@ -299,7 +299,7 @@ function createCompositeKeyForObject(arr2, D) {
                     tmp19 = tmp23;
                   } else {
                     let tmp20 = require;
-                    let obj2 = _isNativeReflectConstruct /* _isNativeReflectConstruct */;
+                    let obj2 = _isNativeReflectConstruct;
                     if (obj2.isPlainObject(arr3)) {
                       let tmp21 = createCompositeKeyForObject;
                       tmp19 = createCompositeKeyForObject(arr3);
@@ -328,7 +328,7 @@ function createCompositeKeyForObject(arr2, D) {
             tmp10 = tmp14;
           } else {
             let tmp11 = require;
-            let obj = _isNativeReflectConstruct /* _isNativeReflectConstruct */;
+            let obj = _isNativeReflectConstruct;
             if (obj.isPlainObject(arr2)) {
               let tmp12 = createCompositeKeyForObject;
               tmp10 = createCompositeKeyForObject(arr2);
@@ -383,7 +383,7 @@ function areCompositeKeysEqual(arg0, D) {
                 let tmp7 = dependencyMap;
                 if (!(tmp4 instanceof _assertNativeAnimatedModule)) {
                   let tmp8 = require;
-                  if (!(tmp4 instanceof AnimatedEvent /* AnimatedEvent */.AnimatedEvent)) {
+                  if (!(tmp4 instanceof AnimatedEvent.AnimatedEvent)) {
                     if (null == arg2) {
                       if (tmp4 !== tmp5) {
                         let flag3 = false;
@@ -469,7 +469,7 @@ function areCompositeKeyComponentsEqual(arg0, arg1) {
       } else {
         return false;
       }
-      obj = _isNativeReflectConstruct /* _isNativeReflectConstruct */;
+      obj = _isNativeReflectConstruct;
       tmp5 = require;
     }
   }

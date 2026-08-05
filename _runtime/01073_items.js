@@ -22,11 +22,11 @@ let items = [
       const match1 = regex.exec(str);
       if (match1) {
         const tmp25 = _slicedToArray(match1, 4);
-        let UNKNOWN_FUNCTION3 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+        let UNKNOWN_FUNCTION3 = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
         obj = { filename: null, function: null, in_app: true };
         obj[0] = tmp25[1];
         if ("<anonymous>" === UNKNOWN_FUNCTION3) {
-          UNKNOWN_FUNCTION3 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+          UNKNOWN_FUNCTION3 = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
         }
         obj[1] = UNKNOWN_FUNCTION3;
         obj.lineno = +tmp25[2];
@@ -48,7 +48,7 @@ let items = [
           }
           let UNKNOWN_FUNCTION = match2[1];
           if (!UNKNOWN_FUNCTION) {
-            UNKNOWN_FUNCTION = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+            UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
           }
           if (typeof tmp8 !== "function") {
             HermesBuiltin.throwTypeError();
@@ -70,7 +70,7 @@ let items = [
               obj = { filename: null, function: null, in_app: true };
               obj[0] = tmp19[1];
               if ("<anonymous>" === UNKNOWN_FUNCTION2) {
-                UNKNOWN_FUNCTION2 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+                UNKNOWN_FUNCTION2 = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
               }
               obj[1] = UNKNOWN_FUNCTION2;
               if (undefined !== tmp20) {
@@ -85,7 +85,7 @@ let items = [
           if (-1 !== UNKNOWN_FUNCTION.indexOf("@")) {
             UNKNOWN_FUNCTION = UNKNOWN_FUNCTION.split("@")[0];
           } else {
-            UNKNOWN_FUNCTION = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+            UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
           }
           const items1 = [UNKNOWN_FUNCTION, ];
           const _HermesInternal = HermesInternal;
@@ -123,7 +123,7 @@ let items1 = [
       }
       let UNKNOWN_FUNCTION = match[1];
       if (!UNKNOWN_FUNCTION) {
-        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
       }
       if (typeof extractSafariExtensionDetails !== "function") {
         HermesBuiltin.throwTypeError();
@@ -145,7 +145,7 @@ let items1 = [
           const obj = { filename: null, function: null, in_app: true };
           obj[0] = tmp16[1];
           if ("<anonymous>" === UNKNOWN_FUNCTION2) {
-            UNKNOWN_FUNCTION2 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+            UNKNOWN_FUNCTION2 = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
           }
           obj[1] = UNKNOWN_FUNCTION2;
           if (undefined !== tmp17) {
@@ -160,7 +160,7 @@ let items1 = [
       if (-1 !== UNKNOWN_FUNCTION.indexOf("@")) {
         UNKNOWN_FUNCTION = UNKNOWN_FUNCTION.split("@")[0];
       } else {
-        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
       }
       const items1 = [UNKNOWN_FUNCTION, ];
       const _HermesInternal = HermesInternal;
@@ -182,7 +182,7 @@ const items2 = [
     if (match) {
       let UNKNOWN_FUNCTION = match[1];
       if (!UNKNOWN_FUNCTION) {
-        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
       }
       let tmp6;
       if (match[4]) {
@@ -191,7 +191,7 @@ const items2 = [
       const obj = { filename: null, function: null, in_app: true };
       obj[0] = match[2];
       if ("<anonymous>" === UNKNOWN_FUNCTION) {
-        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
       }
       obj[1] = UNKNOWN_FUNCTION;
       obj.lineno = +match[3];
@@ -214,12 +214,12 @@ const items3 = [
     if (match) {
       let UNKNOWN_FUNCTION = match[3];
       if (!UNKNOWN_FUNCTION) {
-        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
       }
       const obj = { filename: null, function: null, in_app: true };
       obj[0] = match[2];
       if ("<anonymous>" === UNKNOWN_FUNCTION) {
-        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
       }
       obj[1] = UNKNOWN_FUNCTION;
       obj.lineno = +match[1];
@@ -241,12 +241,12 @@ const items4 = [
         UNKNOWN_FUNCTION = match[4];
       }
       if (!UNKNOWN_FUNCTION) {
-        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
       }
       const obj = { filename: null, function: null, in_app: true };
       obj[0] = match[5];
       if ("<anonymous>" === UNKNOWN_FUNCTION) {
-        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.UNKNOWN_FUNCTION;
+        UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
       }
       obj[1] = UNKNOWN_FUNCTION;
       obj.lineno = +match[1];

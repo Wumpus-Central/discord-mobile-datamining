@@ -74,10 +74,10 @@ const items = [
   {
     key: "createFromOptions",
     value: function createFromOptions(_response) {
-      let obj = map /* map */;
+      let obj = map;
       obj.register(_response.blobId);
       let data = _response;
-      obj = Object.create(Blob /* Blob */.default.prototype);
+      obj = Object.create(Blob.default.prototype);
       if (null == _response.__collector) {
         obj = {};
         const merged = Object.assign(_response);
@@ -98,8 +98,8 @@ const items = [
       00038__(BlobModule, "NativeBlobModule is available.");
       const tmp = importDefault;
       const tmp3 = 00038__;
-      map /* map */.unregister(arg0);
-      const obj = map /* map */;
+      map.unregister(arg0);
+      const obj = map;
       if (!obj2.has(arg0)) {
         tmp(201).release(arg0);
         const tmpResult = tmp(201);

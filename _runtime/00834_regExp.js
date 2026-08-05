@@ -28,13 +28,13 @@ arg5.extractTraceparentData = function extractTraceparentData(str) {
 arg5.generateSentryTraceHeader = function generateSentryTraceHeader() {
   let traceId = arg0;
   if (arg0 === undefined) {
-    traceId = generateSpanId /* generateSpanId */.generateTraceId();
-    const obj = generateSpanId /* generateSpanId */;
+    traceId = generateSpanId.generateTraceId();
+    const obj = generateSpanId;
   }
   let spanId = arg1;
   if (arg1 === undefined) {
-    spanId = generateSpanId /* generateSpanId */.generateSpanId();
-    const obj2 = generateSpanId /* generateSpanId */;
+    spanId = generateSpanId.generateSpanId();
+    const obj2 = generateSpanId;
   }
   let str = "";
   if (undefined !== arg2) {
@@ -48,13 +48,13 @@ arg5.generateSentryTraceHeader = function generateSentryTraceHeader() {
 };
 arg5.generateTraceparentHeader = function generateTraceparentHeader(traceId, propagationSpanId2, sampled2) {
   if (traceId === undefined) {
-    traceId = generateSpanId /* generateSpanId */.generateTraceId();
-    const obj = generateSpanId /* generateSpanId */;
+    traceId = generateSpanId.generateTraceId();
+    const obj = generateSpanId;
   }
   let spanId = propagationSpanId2;
   if (propagationSpanId2 === undefined) {
-    spanId = generateSpanId /* generateSpanId */.generateSpanId();
-    const obj2 = generateSpanId /* generateSpanId */;
+    spanId = generateSpanId.generateSpanId();
+    const obj2 = generateSpanId;
   }
   let str = "00";
   if (sampled2) {
@@ -80,7 +80,7 @@ arg5.propagationContextFromHeaders = function propagationContextFromHeaders(str)
       tmp = obj;
     }
   }
-  let result = baggageHeaderToDynamicSamplingContext /* baggageHeaderToDynamicSamplingContext */.baggageHeaderToDynamicSamplingContext(arg1);
+  let result = baggageHeaderToDynamicSamplingContext.baggageHeaderToDynamicSamplingContext(arg1);
   let traceId;
   if (tmp != null) {
     traceId = tmp.traceId;
@@ -137,7 +137,7 @@ arg5.propagationContextFromHeaders = function propagationContextFromHeaders(str)
   }
 };
 arg5.shouldContinueTrace = function shouldContinueTrace(client, org_id) {
-  const result = dsnFromString /* dsnFromString */.extractOrgIdFromClient(client);
+  const result = dsnFromString.extractOrgIdFromClient(client);
   if (org_id) {
     if (result) {
       if (org_id !== result) {

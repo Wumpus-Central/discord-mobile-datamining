@@ -3,7 +3,7 @@ import { all } from "../13502_all.js";
 let closure_3 = require("withoutSetter")("toPrimitive");
 
 export default (arg0, arg1) => {
-  if (all /* all */(arg0)) {
+  if (all(arg0)) {
     if (!tmp(13504)(arg0)) {
       let str = arg1;
       const tmp4 = tmp(13507)(arg0, closure_3);

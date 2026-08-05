@@ -3,7 +3,7 @@ import { DeviceEventEmitter } from "get ActivityIndicator";
 import { map } from "05371_map.js";
 
 function onGestureHandlerEvent(handlerTag) {
-  let obj = map /* map */;
+  let obj = map;
   const findHandlerResult = obj.findHandler(handlerTag.handlerTag);
   if (findHandlerResult) {
     if (null != handlerTag.oldState) {

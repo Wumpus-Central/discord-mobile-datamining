@@ -10,11 +10,11 @@ arg5.breadcrumbsIntegration = () => {
   let _fetch = obj.fetch;
   const merged = Object.assign({ xhr: true, console: true, sentry: true }, obj);
   if (null === _fetch) {
-    _fetch = isHermesEnabled /* isHermesEnabled */.isWeb();
-    const obj2 = isHermesEnabled /* isHermesEnabled */;
+    _fetch = isHermesEnabled.isWeb();
+    const obj2 = isHermesEnabled;
   }
   obj = { fetch: _fetch, dom: null, history: null };
-  let isWebResult = isHermesEnabled /* isHermesEnabled */.isWeb();
+  let isWebResult = isHermesEnabled.isWeb();
   if (isWebResult) {
     const dom = obj.dom;
     isWebResult = null === dom || undefined === dom || dom;

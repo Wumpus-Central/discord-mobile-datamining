@@ -148,7 +148,7 @@ obj[1] = L;
 arg5.LogLevel = obj;
 arg5.DEFAULT_LOGGER_CONFIG = obj;
 arg5.logToLogBoxAndConsole = function logToLogBoxAndConsole(level) {
-  addLogBoxLog /* addLogBoxLog */.addLogBoxLog(level);
+  addLogBoxLog.addLogBoxLog(level);
   if (typeof logToConsole !== "function") {
     HermesBuiltin.throwTypeError();
   }

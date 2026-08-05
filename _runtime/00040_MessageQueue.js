@@ -163,7 +163,7 @@ let items = [
           const result = obj.nativeFlushQueueImmediate(self._queue);
         }
       }
-      isEnabled /* isEnabled */.counterEvent("pending_js_to_native_queue", self._queue[0].length);
+      isEnabled.counterEvent("pending_js_to_native_queue", self._queue[0].length);
       if (self.__spy) {
         obj = { type: 1, module: null, method: null, args: null };
         obj[1] = "" + closure_0;
@@ -213,13 +213,13 @@ let items = [
   {
     key: "__callReactNativeMicrotasks",
     value: function __callReactNativeMicrotasks() {
-      isEnabled /* isEnabled */.beginEvent("JSTimers.callReactNativeMicrotasks()");
+      isEnabled.beginEvent("JSTimers.callReactNativeMicrotasks()");
       try {
         const self = this;
         if (null != this._reactNativeMicrotasksCallback) {
           const result = self._reactNativeMicrotasksCallback();
         }
-        isEnabled /* isEnabled */.endEvent();
+        isEnabled.endEvent();
       } catch (tmp10) {
         tmp3(tmp[2]).endEvent();
         throw tmp10;
@@ -232,7 +232,7 @@ let items = [
       const self = this;
       this._lastFlush = Date.now();
       this._eventLoopStartTime = this._lastFlush;
-      const beginEvent = isEnabled /* isEnabled */.beginEvent;
+      const beginEvent = isEnabled.beginEvent;
       if (this.__spy) {
         const _HermesInternal2 = HermesInternal;
         beginEvent("" + closure_1 + "." + closure_2 + "(" + tmp4(48).default(closure_0) + ")");

@@ -28,7 +28,7 @@ arg5.default = {
     }
   },
   currentlyFocusedField() {
-    return renderElement /* renderElement */.findNodeHandle(c2);
+    return renderElement.findNodeHandle(c2);
   },
   focusField(arg0) {
 
@@ -49,7 +49,7 @@ arg5.default = {
             if (tmp4) {
               closure_2 = self;
             }
-            const Commands = Commands /* Commands */.Commands;
+            const Commands = Commands.Commands;
             Commands.focus(self);
             tmp4 = closure_2 !== self && null != self;
           }
@@ -73,7 +73,7 @@ arg5.default = {
       if (tmp4) {
         c2 = null;
       }
-      const Commands = Commands /* Commands */.Commands;
+      const Commands = Commands.Commands;
       Commands.blur(result);
     }
   },

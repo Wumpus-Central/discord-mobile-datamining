@@ -23,7 +23,7 @@ if (tmp) {
         __defineGetter__.__defineGetter__(arg1, get.get);
       }
     }
-    const hop = extend /* extend */.hop;
+    const hop = extend.hop;
     const call = hop.call;
     let tmp = typeof call === "unknown" ? hop(arg1) : call(__defineGetter__, arg1);
     if (tmp) {
@@ -51,7 +51,7 @@ arg5.objCreate = Object.create || ((arg0, obj) => {
         return;
       }
     }
-    let hop = extend /* extend */.hop;
+    let hop = extend.hop;
     let call = hop.call;
     if (typeof call === "unknown") {
       let hopResult = hop(key10008);

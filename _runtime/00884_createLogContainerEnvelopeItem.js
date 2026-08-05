@@ -25,11 +25,11 @@ arg5.createLogEnvelope = function createLogEnvelope(items, _metadata, tunnel, ds
     tmp2 = dsn;
   }
   if (tmp2) {
-    obj.dsn = dsnFromString /* dsnFromString */.dsnToString(dsn);
-    const obj3 = dsnFromString /* dsnFromString */;
+    obj.dsn = dsnFromString.dsnToString(dsn);
+    const obj3 = dsnFromString;
   }
   obj = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
   items = [obj, { items }];
   const items1 = [items];
-  return forEachEnvelopeItem /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return forEachEnvelopeItem.createEnvelope(obj, items1);
 };

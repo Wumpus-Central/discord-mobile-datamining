@@ -8,7 +8,7 @@ const map2 = new Map();
 arg5.handlerIDToTag = {};
 arg5.registerHandler = function registerHandler(handlerTag, item10022, testId) {
   const result = map.set(handlerTag, item10022);
-  const obj = toArray /* toArray */;
+  const obj = toArray;
   if (tmp2) {
     const result1 = map2.set(testId, handlerTag);
   }
@@ -21,7 +21,7 @@ arg5.unregisterOldGestureHandler = function unregisterOldGestureHandler(handlerT
 };
 arg5.unregisterHandler = function unregisterHandler(handlerTag, testId) {
   map.delete(handlerTag);
-  const obj = toArray /* toArray */;
+  const obj = toArray;
   if (tmp2) {
     map2.delete(testId);
   }

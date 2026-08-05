@@ -8,9 +8,9 @@ const writable = "writable";
 if (require("getOwnPropertyDescriptor")) {
   if (require("getOwnPropertyDescriptor")) {
     defineProperty = function defineProperty(fn, arg1, value) {
-      all /* all */(fn);
-      const tmp2 = text /* text */(arg1);
-      all /* all */(value);
+      all(fn);
+      const tmp2 = text(arg1);
+      all(value);
       let tmp4 = value;
       if (typeof fn === "function") {
         tmp4 = value;
@@ -44,9 +44,9 @@ if (require("getOwnPropertyDescriptor")) {
   let defineProperty2 = defineProperty;
 } else {
   defineProperty2 = function defineProperty(arg0, arg1, value) {
-    all /* all */(arg0);
-    const tmp2 = text /* text */(arg1);
-    all /* all */(value);
+    all(arg0);
+    const tmp2 = text(arg1);
+    all(value);
     if (!13512__) {
       if (!("get" in value)) {
         if (!("set" in value)) {

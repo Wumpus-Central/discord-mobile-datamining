@@ -11,7 +11,7 @@ function isSupportedCurrency(arr3, locale) {
   try {
     const obj = { style: "currency", currencyDisplay: "name", currency: null };
     obj[2] = arr3;
-    const memoizedNumberFormat = _formatToParts /* _formatToParts */.createMemoizedNumberFormat(str, obj);
+    const memoizedNumberFormat = _formatToParts.createMemoizedNumberFormat(str, obj);
     const str2 = memoizedNumberFormat.format(123);
     if (str2.substring(0, 3) !== arr3) {
       if (str3.substring(str3.length - 3) !== arr3) {

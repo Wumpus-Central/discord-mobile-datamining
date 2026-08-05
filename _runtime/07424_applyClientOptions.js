@@ -35,16 +35,16 @@ function applyClientOptions(environment, environment2) {
     environment.dist = dist;
   }
   if (environment.message) {
-    environment.message = isMatchingPattern /* isMatchingPattern */.truncate(environment.message, num);
-    const obj = isMatchingPattern /* isMatchingPattern */;
+    environment.message = isMatchingPattern.truncate(environment.message, num);
+    const obj = isMatchingPattern;
   }
   let value = iter;
   if (environment.exception && environment.exception.values && environment.exception.values[0]) {
     value = iter.value;
   }
   if (value) {
-    iter.value = isMatchingPattern /* isMatchingPattern */.truncate(iter.value, num);
-    const obj2 = isMatchingPattern /* isMatchingPattern */;
+    iter.value = isMatchingPattern.truncate(iter.value, num);
+    const obj2 = isMatchingPattern;
   }
   const request = environment.request;
   let url = request;
@@ -52,8 +52,8 @@ function applyClientOptions(environment, environment2) {
     url = request.url;
   }
   if (url) {
-    request.url = isMatchingPattern /* isMatchingPattern */.truncate(request.url, num);
-    const obj3 = isMatchingPattern /* isMatchingPattern */;
+    request.url = isMatchingPattern.truncate(request.url, num);
+    const obj3 = isMatchingPattern;
   }
 }
 function applyDebugIds(exception) {

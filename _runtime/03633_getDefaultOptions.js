@@ -11,6 +11,6 @@ if (!assign) {
 }
 
 export default function getDefaultOptions() {
-  return tmp3.default({}, getDefaultOptions /* getDefaultOptions */.getDefaultOptions());
+  return tmp3.default({}, getDefaultOptions.getDefaultOptions());
 };
 export default exports.default;

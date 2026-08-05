@@ -8,8 +8,8 @@ import noop from "noop";
 import { noop } from "00177_noop.js";
 
 function valuePromise(_z) {
-  let tmp = noop /* noop */;
-  tmp = new tmp(noop /* noop */._D);
+  let tmp = noop;
+  tmp = new tmp(noop._D);
   tmp._y = 1;
   tmp._z = _z;
   return tmp;
@@ -23,7 +23,7 @@ function onSettledReject(reason) {
 function mapAllSettled(value) {
   if (value) {
     if (typeof value === "object") {
-      if (value instanceof noop /* noop */) {
+      if (value instanceof noop) {
         if (value.then === tmp(177).prototype.then) {
           return value.then(onSettledFulfill, onSettledReject);
         }
@@ -57,7 +57,7 @@ noop = new noop(require("noop")._D);
 noop._y = 1;
 noop._z = "";
 require("noop").resolve = (self) => {
-  if (self instanceof noop /* noop */) {
+  if (self instanceof noop) {
     return self;
   } else if (null === self) {
     return noop;
@@ -178,7 +178,7 @@ require("noop").all = (arg0) => {
   });
 };
 require("noop").allSettled = (arg0) => {
-  const obj = noop /* noop */;
+  const obj = noop;
   return obj.all(iterableToArray(arg0).map(mapAllSettled));
 };
 require("noop").reject = (arg0) => {

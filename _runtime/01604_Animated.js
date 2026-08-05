@@ -54,19 +54,19 @@ export const KeyboardProvider = (enabled) => {
   const tmp4 = callback(sharedValue2(tmp), 2);
   const first = tmp4[0];
   callback = tmp4[1];
-  let obj = useEventHandlerRegistration /* useEventHandlerRegistration */;
+  let obj = useEventHandlerRegistration;
   const callback2 = obj.useAnimatedValue(0);
-  let obj1 = useEventHandlerRegistration /* useEventHandlerRegistration */;
+  let obj1 = useEventHandlerRegistration;
   const callback3 = obj1.useAnimatedValue(0);
-  let obj2 = cancelAnimation /* cancelAnimation */;
+  let obj2 = cancelAnimation;
   const sharedValue = obj2.useSharedValue(0);
-  let obj3 = cancelAnimation /* cancelAnimation */;
+  let obj3 = cancelAnimation;
   sharedValue1 = obj3.useSharedValue(0);
-  sharedValue2 = cancelAnimation /* cancelAnimation */.useSharedValue(null);
-  const obj5 = cancelAnimation /* cancelAnimation */;
-  const Animated = useEventHandlerRegistration /* useEventHandlerRegistration */.useEventHandlerRegistration(tmp3);
-  const obj6 = useEventHandlerRegistration /* useEventHandlerRegistration */;
-  let closure_10 = useEventHandlerRegistration /* useEventHandlerRegistration */.useEventHandlerRegistration(tmp3);
+  sharedValue2 = cancelAnimation.useSharedValue(null);
+  const obj5 = cancelAnimation;
+  const Animated = useEventHandlerRegistration.useEventHandlerRegistration(tmp3);
+  const obj6 = useEventHandlerRegistration;
+  let closure_10 = useEventHandlerRegistration.useEventHandlerRegistration(tmp3);
   let closure_11 = callback2(first(function*() {
     if (v0 === 2) {
       v0 = 3;
@@ -128,7 +128,7 @@ export const KeyboardProvider = (enabled) => {
     }
   }), []);
   let items = [first];
-  const obj7 = useEventHandlerRegistration /* useEventHandlerRegistration */;
+  const obj7 = useEventHandlerRegistration;
   const tmp9 = sharedValue(() => {
     let obj = { enabled: first, animated: null, reanimated: null, layout: null, update: null, setKeyboardHandlers: null, setInputHandlers: null, setEnabled: null };
     obj = { progress: closure_4, height: closure_9.multiply(closure_5, -1) };
@@ -236,8 +236,8 @@ export const KeyboardProvider = (enabled) => {
   fn3.__workletHash = 10129400155228;
   fn3.__initData = closure_20;
   obj[3] = fn3;
-  const obj9 = useAnimatedKeyboardHandler /* useAnimatedKeyboardHandler */;
-  const animatedKeyboardHandler = useAnimatedKeyboardHandler /* useAnimatedKeyboardHandler */.useAnimatedKeyboardHandler(obj, []);
+  const obj9 = useAnimatedKeyboardHandler;
+  const animatedKeyboardHandler = useAnimatedKeyboardHandler.useAnimatedKeyboardHandler(obj, []);
   obj1 = { onFocusedInputLayoutChanged: null };
   class I {
     constructor(arg0) {
@@ -257,7 +257,7 @@ export const KeyboardProvider = (enabled) => {
   I.__initData = closure_21;
   obj1[0] = I;
   let items1 = [undefined === preload || preload];
-  const obj11 = useAnimatedKeyboardHandler /* useAnimatedKeyboardHandler */;
+  const obj11 = useAnimatedKeyboardHandler;
   callback3(() => {
     if (tmp2) {
       const KeyboardController = tmp2(tmp3[10]).KeyboardController;
@@ -286,9 +286,9 @@ export const KeyboardProvider = (enabled) => {
   obj3[8] = tmp11;
   obj3[9] = tmp11;
   obj3[10] = tmp11;
-  obj3[11] = useAnimatedKeyboardHandler /* useAnimatedKeyboardHandler */.useFocusedInputLayoutHandler(obj1, []);
+  obj3[11] = useAnimatedKeyboardHandler.useFocusedInputLayoutHandler(obj1, []);
   obj3[12] = children;
   const items2 = [closure_10(closure_13, obj3), closure_10(Animated.View, { style: tmp10 })];
   obj2[1] = items2;
-  return closure_11(NOOP /* NOOP */.KeyboardContext.Provider, obj2);
+  return closure_11(NOOP.KeyboardContext.Provider, obj2);
 };

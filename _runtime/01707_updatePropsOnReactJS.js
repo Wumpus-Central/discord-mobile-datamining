@@ -9,7 +9,7 @@ import { validateTransformOrigin } from "01708_validateTransformOrigin.js";
 import { map } from "01709_map.js";
 
 function updatePropsOnReactJS(arg0, arg1) {
-  const ComponentRegistry = map /* map */.ComponentRegistry;
+  const ComponentRegistry = map.ComponentRegistry;
   const component = ComponentRegistry.getComponent(arg0);
   if (component) {
     const result = component._updateReanimatedProps(arg1);
@@ -49,10 +49,10 @@ if (isJest.shouldBeUseWeb()) {
       transformOrigin.lastUpdateByTag[tag.tag] = obj;
       transformOrigin.lastUpdateFrameTimeByTag[tag.tag] = transformOrigin.__frameTimestamp;
     });
-    call /* call */.processColorsInProps(transformOrigin);
+    call.processColorsInProps(transformOrigin);
     if ("transformOrigin" in transformOrigin) {
-      transformOrigin.transformOrigin = validateTransformOrigin /* validateTransformOrigin */.processTransformOrigin(transformOrigin.transformOrigin);
-      const tmp2Result = validateTransformOrigin /* validateTransformOrigin */;
+      transformOrigin.transformOrigin = validateTransformOrigin.processTransformOrigin(transformOrigin.transformOrigin);
+      const tmp2Result = validateTransformOrigin;
     }
     const UpdatePropsManager = _global.UpdatePropsManager;
     UpdatePropsManager.update(value, transformOrigin);
@@ -77,7 +77,7 @@ if (isJest.isFabric()) {
       if (__frameTimestamp) {
         if (tmp2) {
           if (__frameTimestamp - tmp2 >= 20) {
-            runWorkletOnJS /* runWorkletOnJS */.runOnJS(updatePropsOnReactJS)(arg0, tmp.lastUpdateByTag[arg0]);
+            runWorkletOnJS.runOnJS(updatePropsOnReactJS)(arg0, tmp.lastUpdateByTag[arg0]);
             tmp.lastUpdateByTag[arg0] = undefined;
           } else if (!obj[arg0]) {
             const _requestAnimationFrame = requestAnimationFrame;
@@ -171,7 +171,7 @@ if (isJest.shouldBeUseWeb()) {
       const reanimatedError = new tmp(1617).ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
       throw reanimatedError;
     }
-    obj = isJest /* isJest */;
+    obj = isJest;
     tmp = require;
   }
   const _Proxy = Proxy;
@@ -187,7 +187,7 @@ if (isJest.shouldBeUseWeb()) {
       const reanimatedError = new tmp(1617).ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
       throw reanimatedError;
     }
-    obj = isJest /* isJest */;
+    obj = isJest;
     tmp = require;
   };
   const proxy = new Proxy({}, obj5);

@@ -10,9 +10,9 @@ if (Object.getOwnPropertySymbols) {
       do {
         let tmp2 = require;
         let tmp3 = dependencyMap;
-        let tmp4 = arrayPush /* arrayPush */;
-        let tmp4Result = tmp4(items, getOwnPropertySymbols /* getOwnPropertySymbols */(tmp));
-        tmp = overArg /* overArg */(tmp);
+        let tmp4 = arrayPush;
+        let tmp4Result = tmp4(items, getOwnPropertySymbols(tmp));
+        tmp = overArg(tmp);
       } while (tmp);
     }
     return items;

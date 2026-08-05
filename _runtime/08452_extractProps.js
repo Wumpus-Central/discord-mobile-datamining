@@ -61,7 +61,7 @@ function extractProps(markerMid) {
   if (markerStart) {
     let tmp7;
     if (markerStart) {
-      const match = markerStart.match(pickNotNil /* pickNotNil */.idPattern);
+      const match = markerStart.match(pickNotNil.idPattern);
       let tmp10;
       if (match) {
         tmp10 = match[1];
@@ -73,7 +73,7 @@ function extractProps(markerMid) {
   if (str) {
     let tmp11;
     if (str) {
-      const match1 = str.match(pickNotNil /* pickNotNil */.idPattern);
+      const match1 = str.match(pickNotNil.idPattern);
       let tmp14;
       if (match1) {
         tmp14 = match1[1];
@@ -85,7 +85,7 @@ function extractProps(markerMid) {
   if (str2) {
     let tmp15;
     if (str2) {
-      const match2 = str2.match(pickNotNil /* pickNotNil */.idPattern);
+      const match2 = str2.match(pickNotNil.idPattern);
       let tmp18;
       if (match2) {
         tmp18 = match2[1];
@@ -115,7 +115,7 @@ function extractProps(markerMid) {
     obj.clipRule = num;
   }
   if (clipPath) {
-    const match3 = clipPath.match(pickNotNil /* pickNotNil */.idPattern);
+    const match3 = clipPath.match(pickNotNil.idPattern);
     if (match3) {
       obj.clipPath = match3[1];
     } else {
@@ -124,7 +124,7 @@ function extractProps(markerMid) {
     }
   }
   if (mask) {
-    const match4 = mask.match(pickNotNil /* pickNotNil */.idPattern);
+    const match4 = mask.match(pickNotNil.idPattern);
     if (match4) {
       obj.mask = match4[1];
     } else {
@@ -133,7 +133,7 @@ function extractProps(markerMid) {
     }
   }
   if (filter) {
-    const match5 = filter.match(pickNotNil /* pickNotNil */.idPattern);
+    const match5 = filter.match(pickNotNil.idPattern);
     if (match5) {
       obj.filter = match5[1];
     } else {

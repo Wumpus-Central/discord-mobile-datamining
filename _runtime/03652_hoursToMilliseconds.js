@@ -12,6 +12,6 @@ if (!requiredArgs) {
 
 export default function hoursToMilliseconds(arg0) {
   tmp3.default(1, arguments);
-  return Math.floor(arg0 * keys /* keys */.millisecondsInHour);
+  return Math.floor(arg0 * keys.millisecondsInHour);
 };
 export default exports.default;

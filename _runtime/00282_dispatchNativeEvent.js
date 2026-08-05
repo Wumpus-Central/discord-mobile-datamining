@@ -5,10 +5,10 @@ const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
 arg5.default = function dispatchNativeEvent(self, arg1, timeStamp) {
-  let obj = getHandler /* getHandler */;
+  let obj = getHandler;
   const result = obj.processResponderEvent(arg1, self, timeStamp);
-  let tmp4 = map /* map */.customBubblingEventTypes[arg1];
-  const tmp5 = map /* map */.customDirectEventTypes[arg1];
+  let tmp4 = map.customBubblingEventTypes[arg1];
+  const tmp5 = map.customDirectEventTypes[arg1];
   if (null != tmp4) {
     let tmp6 = null != tmp4;
     if (tmp6) {
@@ -34,5 +34,5 @@ arg5.default = function dispatchNativeEvent(self, arg1, timeStamp) {
     tmp(135).dispatchTrustedEvent(self, tmp9);
     const tmpResult1 = tmp(135);
   }
-  getHandler /* getHandler */.rethrowCaughtError();
+  getHandler.rethrowCaughtError();
 };

@@ -7,7 +7,7 @@ function globalEncodeFactory(arg0) {
   return (arg0) => new TextEncoder().encode(arg0);
 }
 function encodePolyfill(arr) {
-  const uint8Array = new Uint8Array(utf8ToBytes /* utf8ToBytes */.utf8ToBytes(arr));
+  const uint8Array = new Uint8Array(utf8ToBytes.utf8ToBytes(arr));
   return uint8Array;
 }
 arg5.useEncodePolyfill = () => {

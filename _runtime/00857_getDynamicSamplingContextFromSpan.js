@@ -7,7 +7,7 @@ import { 00858__ } from "metro/00858__.js";
 const require = arg1;
 const dependencyMap = arg6;
 function getDynamicSamplingContextFromSpan(spanContext) {
-  let obj = getClient /* getClient */;
+  let obj = getClient;
   const client = obj.getClient();
   if (client) {
     let tmpResult = tmp(819);
@@ -116,7 +116,7 @@ function getDynamicSamplingContextFromSpan(spanContext) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const _frozenDsc = "_frozenDsc";
 arg5.freezeDscOnSpan = function freezeDscOnSpan(arg0, arg1) {
-  const result = addNonEnumerableProperty /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _frozenDsc, arg1);
+  const result = addNonEnumerableProperty.addNonEnumerableProperty(arg0, _frozenDsc, arg1);
 };
 arg5.getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
   const options = getOptions.getOptions();
@@ -126,7 +126,7 @@ arg5.getDynamicSamplingContextFromClient = function getDynamicSamplingContextFro
   }
   const obj = { environment: DEFAULT_ENVIRONMENT, release: options.release, public_key: getOptions.getDsn() || {}.publicKey, trace_id, org_id: null };
   const tmp2 = getOptions.getDsn() || {};
-  obj[4] = dsnFromString /* dsnFromString */.extractOrgIdFromClient(getOptions);
+  obj[4] = dsnFromString.extractOrgIdFromClient(getOptions);
   getOptions.emit("createDsc", obj);
   return obj;
 };
@@ -145,15 +145,15 @@ arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFrom
     obj[2] = getOptions.getDsn() || {}.publicKey;
     obj[3] = propagationContext.traceId;
     const tmp4 = getOptions.getDsn() || {};
-    obj[4] = dsnFromString /* dsnFromString */.extractOrgIdFromClient(getOptions);
+    obj[4] = dsnFromString.extractOrgIdFromClient(getOptions);
     getOptions.emit("createDsc", obj);
     dsc = obj;
-    const obj2 = dsnFromString /* dsnFromString */;
+    const obj2 = dsnFromString;
   }
   return dsc;
 };
 arg5.getDynamicSamplingContextFromSpan = getDynamicSamplingContextFromSpan;
 arg5.spanToBaggageHeader = function spanToBaggageHeader(arg0) {
   const tmp = getDynamicSamplingContextFromSpan(arg0);
-  return baggageHeaderToDynamicSamplingContext /* baggageHeaderToDynamicSamplingContext */.dynamicSamplingContextToSentryBaggageHeader(tmp);
+  return baggageHeaderToDynamicSamplingContext.dynamicSamplingContextToSentryBaggageHeader(tmp);
 };

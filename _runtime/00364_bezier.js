@@ -79,7 +79,7 @@ const obj = {
     }
   },
   bezier(arg0, arg1, arg2, arg3) {
-    return bezier /* bezier */.default(arg0, arg1, arg2, arg3);
+    return bezier.default(arg0, arg1, arg2, arg3);
   },
   in(ease) {
     return ease;

@@ -22,8 +22,8 @@ function addGestureBreadcrumb(message, event) {
     }
     obj.data = obj;
   }
-  registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.addBreadcrumb(obj);
-  const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
+  registerSpanErrorInstrumentation.addBreadcrumb(obj);
+  const debug = registerSpanErrorInstrumentation.debug;
   debug.log("[GestureTracing] " + obj.message);
 }
 let gesture = "gesture";

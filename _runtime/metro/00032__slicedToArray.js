@@ -5,5 +5,5 @@ import { _unsupportedIterableToArray } from "../00035__unsupportedIterableToArra
 import { _nonIterableRest } from "../00037__nonIterableRest.js";
 
 export default function _slicedToArray(arg0, arg1) {
-  return _arrayWithHoles /* _arrayWithHoles */(arg0) || _iterableToArrayLimit /* _iterableToArrayLimit */(arg0, arg1) || _unsupportedIterableToArray /* _unsupportedIterableToArray */(arg0, arg1) || _nonIterableRest /* _nonIterableRest */();
+  return _arrayWithHoles(arg0) || _iterableToArrayLimit(arg0, arg1) || _unsupportedIterableToArray(arg0, arg1) || _nonIterableRest();
 };

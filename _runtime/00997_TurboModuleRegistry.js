@@ -11,7 +11,7 @@ let TurboModuleRegistry;
 obj = { Devtools: obj, Promise: require("finally"), Utilities: obj, ReactNativeVersion: null, TurboModuleRegistry: null, AppRegistry: null, ReactNative: null };
 obj = {
   parseErrorStack(arg0) {
-    const obj = parseErrorStack /* parseErrorStack */;
+    const obj = parseErrorStack;
     if (obj.default) {
       if (typeof obj.default === "function") {
         let defaultResult = obj.default(arg0);
@@ -21,7 +21,7 @@ obj = {
     defaultResult = obj(arg0);
   },
   symbolicateStackTrace(arg0, arg1) {
-    const obj = _symbolicateStackTrace /* _symbolicateStackTrace */;
+    const obj = _symbolicateStackTrace;
     if (obj.default) {
       if (typeof obj.default === "function") {
         let defaultResult = obj.default(arg0, arg1);
@@ -31,7 +31,7 @@ obj = {
     defaultResult = obj(arg0, arg1);
   },
   getDevServer() {
-    const obj = getDevServer /* getDevServer */;
+    const obj = getDevServer;
     if (obj.default) {
       if (typeof obj.default === "function") {
         let defaultResult = obj.default();
@@ -44,7 +44,7 @@ obj = {
 ({ AppRegistry, Platform, TurboModuleRegistry } = get_ActivityIndicator);
 obj = {
   polyfillGlobal(arg0, arg1) {
-    polyfillObjectProperty /* polyfillObjectProperty */.polyfillGlobal(arg0, arg1);
+    polyfillObjectProperty.polyfillGlobal(arg0, arg1);
   }
 };
 const constants = Platform.constants;

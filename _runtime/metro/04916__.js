@@ -11,8 +11,8 @@ arg5.default = {
   read(getUint16, sum) {
     const byteOrder = module(4902).getByteOrder(getUint16, sum);
     const obj = module(4902);
-    const obj2 = readTag /* readTag */;
-    const ifd = obj2.readIfd(getUint16, importDefaultResult1 /* importDefaultResult1 */.IFD_TYPE_0TH, sum, readTag /* readTag */.get0thIfdOffset(getUint16, sum, byteOrder), byteOrder, arg2);
+    const obj2 = readTag;
+    const ifd = obj2.readIfd(getUint16, importDefaultResult1.IFD_TYPE_0TH, sum, readTag.get0thIfdOffset(getUint16, sum, byteOrder), byteOrder, arg2);
     let objectAssignResult = ifd;
     if (undefined !== ifd[c3]) {
       let tmp3Result = tmp3(4897);

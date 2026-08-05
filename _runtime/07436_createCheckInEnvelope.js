@@ -21,15 +21,15 @@ arg5.createCheckInEnvelope = function createCheckInEnvelope(arg0, arg1, sdk) {
     tmp = arg4;
   }
   if (tmp) {
-    obj.dsn = dsnFromString /* dsnFromString */.dsnToString(arg4);
-    const obj4 = dsnFromString /* dsnFromString */;
+    obj.dsn = dsnFromString.dsnToString(arg4);
+    const obj4 = dsnFromString;
   }
   if (arg1) {
-    obj.trace = addNonEnumerableProperty /* addNonEnumerableProperty */.dropUndefinedKeys(arg1);
-    const obj5 = addNonEnumerableProperty /* addNonEnumerableProperty */;
+    obj.trace = addNonEnumerableProperty.dropUndefinedKeys(arg1);
+    const obj5 = addNonEnumerableProperty;
   }
   const items = [{ type: "check_in" }, arg0];
   const date = new Date();
   const items1 = [items];
-  return forEachEnvelopeItem /* forEachEnvelopeItem */.createEnvelope(obj, items1);
+  return forEachEnvelopeItem.createEnvelope(obj, items1);
 };

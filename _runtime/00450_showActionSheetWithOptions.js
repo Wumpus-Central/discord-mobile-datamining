@@ -35,11 +35,11 @@ export default {
     tmpResult = tmp(50);
     const defaultResult = tmpResult.default(tintColor);
     const tmp10 = callback(obj, closure_3);
-    const defaultResult1 = processColor /* processColor */.default(cancelButtonTintColor);
-    const tmpResult1 = processColor /* processColor */;
-    const defaultResult2 = processColor /* processColor */.default(disabledButtonTintColor);
+    const defaultResult1 = processColor.default(cancelButtonTintColor);
+    const tmpResult1 = processColor;
+    const defaultResult2 = processColor.default(disabledButtonTintColor);
     let tmp16 = null == defaultResult;
-    const tmpResult2 = processColor /* processColor */;
+    const tmpResult2 = processColor;
     if (!tmp16) {
       tmp16 = typeof defaultResult === "number";
     }

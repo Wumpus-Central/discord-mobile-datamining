@@ -102,7 +102,7 @@ export const observe = function observe(mutationObserverId) {
   ({ target, subtree } = mutationObserverId);
   if (null != NativeMutationObserverCxx) {
     if (null != map.get(mutationObserverId)) {
-      let obj = getInstanceHandle /* getInstanceHandle */;
+      let obj = getInstanceHandle;
       const nativeNodeReference = obj.getNativeNodeReference(target);
       if (null != nativeNodeReference) {
         if (!c7) {

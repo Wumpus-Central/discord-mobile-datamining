@@ -71,7 +71,7 @@ function _shouldCaptureResponse(failedRequestStatusCodes) {
   return someResult;
 }
 function _createEvent(error) {
-  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  let obj = registerSpanErrorInstrumentation;
   const client = obj.getClient();
   let stack;
   if (client) {
@@ -114,12 +114,12 @@ function _createEvent(error) {
   obj2[3] = parsed;
   obj[3] = { response: obj2 };
   const tmp = require;
-  const tmpResult = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  const tmpResult = registerSpanErrorInstrumentation;
   const result = tmpResult.addExceptionMechanism(obj, { type: "auto.http.client." + error.type, handled: false });
   return obj;
 }
 function _shouldSendDefaultPii() {
-  const client = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getClient();
+  const client = registerSpanErrorInstrumentation.getClient();
   let BooleanResult = client;
   if (BooleanResult) {
     const _Boolean = Boolean;

@@ -51,7 +51,7 @@ function parseHost(buffer, arg1) {
       let tmp27 = closure_4;
     } else {
       const substr = buffer.substring(1, buffer.length - 1);
-      const ucs22 = error /* error */.ucs2;
+      const ucs22 = error.ucs2;
       const decodeResult = ucs22.decode(substr);
       let num7 = 0;
       let num8 = null;
@@ -293,7 +293,7 @@ function parseHost(buffer, arg1) {
     if (-1 !== buffer.search(/\u0000|\u0009|\u000A|\u000D|\u0020|#|\/|:|\?|@|\[|\\|\]/)) {
       let str5 = closure_4;
     } else {
-      const ucs2 = error /* error */.ucs2;
+      const ucs2 = error.ucs2;
       const decodeResult1 = ucs2.decode(buffer);
       let num5 = 0;
       let str4 = "";
@@ -313,7 +313,7 @@ function parseHost(buffer, arg1) {
           if (tmp8) {
             let tmp12 = require;
             let tmp13 = dependencyMap;
-            let _Buffer2 = Buffer /* Buffer */.Buffer;
+            let _Buffer2 = Buffer.Buffer;
             let fromResult = _Buffer2.from(fromCodePointResult2);
             let num4 = 0;
             let str2 = "";
@@ -322,7 +322,7 @@ function parseHost(buffer, arg1) {
               do {
                 let tmp14 = require;
                 let tmp15 = dependencyMap;
-                let obj3 = replaceByteInByteSequence /* replaceByteInByteSequence */;
+                let obj3 = replaceByteInByteSequence;
                 str2 = `${obj3.percentEncode(arr[num4])}`;
                 num4 = num4 + 1;
                 str3 = str2;
@@ -339,8 +339,8 @@ function parseHost(buffer, arg1) {
     }
     return str5;
   } else {
-    const _Buffer = Buffer /* Buffer */.Buffer;
-    let str = replaceByteInByteSequence /* replaceByteInByteSequence */.percentDecode(_Buffer.from(buffer));
+    const _Buffer = Buffer.Buffer;
+    let str = replaceByteInByteSequence.percentDecode(_Buffer.from(buffer));
     str = str.toString();
     if (null === str) {
       str = closure_4;
@@ -414,7 +414,7 @@ function parseHost(buffer, arg1) {
       }
       return str;
     }
-    const obj = replaceByteInByteSequence /* replaceByteInByteSequence */;
+    const obj = replaceByteInByteSequence;
   }
 }
 function serializeHost(host) {
@@ -2153,7 +2153,7 @@ exports.exports.basicURLParse = (input) => {
 };
 exports.exports.setTheUsername = (username) => {
   username.username = "";
-  const ucs2 = error /* error */.ucs2;
+  const ucs2 = error.ucs2;
   const decodeResult = ucs2.decode(arg1);
   for (let num = 0; num < decodeResult.length; num = num + 1) {
     let tmp = decodeResult[num];
@@ -2180,7 +2180,7 @@ exports.exports.setTheUsername = (username) => {
     if (hasItem) {
       let tmp9 = require;
       let tmp10 = dependencyMap;
-      let _Buffer = Buffer /* Buffer */.Buffer;
+      let _Buffer = Buffer.Buffer;
       let fromResult = _Buffer.from(fromCodePointResult);
       let num2 = 0;
       let str = "";
@@ -2189,7 +2189,7 @@ exports.exports.setTheUsername = (username) => {
         do {
           let tmp11 = require;
           let tmp12 = dependencyMap;
-          let obj = replaceByteInByteSequence /* replaceByteInByteSequence */;
+          let obj = replaceByteInByteSequence;
           str = `${obj.percentEncode(arr2[num2])}`;
           num2 = num2 + 1;
           str2 = str;
@@ -2203,7 +2203,7 @@ exports.exports.setTheUsername = (username) => {
 };
 exports.exports.setThePassword = (password) => {
   password.password = "";
-  const ucs2 = error /* error */.ucs2;
+  const ucs2 = error.ucs2;
   const decodeResult = ucs2.decode(arg1);
   for (let num = 0; num < decodeResult.length; num = num + 1) {
     let tmp = decodeResult[num];
@@ -2230,7 +2230,7 @@ exports.exports.setThePassword = (password) => {
     if (hasItem) {
       let tmp9 = require;
       let tmp10 = dependencyMap;
-      let _Buffer = Buffer /* Buffer */.Buffer;
+      let _Buffer = Buffer.Buffer;
       let fromResult = _Buffer.from(fromCodePointResult);
       let num2 = 0;
       let str = "";
@@ -2239,7 +2239,7 @@ exports.exports.setThePassword = (password) => {
         do {
           let tmp11 = require;
           let tmp12 = dependencyMap;
-          let obj = replaceByteInByteSequence /* replaceByteInByteSequence */;
+          let obj = replaceByteInByteSequence;
           str = `${obj.percentEncode(arr2[num2])}`;
           num2 = num2 + 1;
           str2 = str;

@@ -81,7 +81,7 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
             let warnResult = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
             let tmp17 = require;
             let tmp18 = dependencyMap;
-            let obj4 = get64BitValue /* get64BitValue */;
+            let obj4 = get64BitValue;
             num4 = obj4.get64BitValue(getUint8, sum4);
           }
         }
@@ -111,7 +111,7 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
                 let warnResult1 = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
                 let tmp31 = require;
                 let tmp32 = dependencyMap;
-                let obj7 = get64BitValue /* get64BitValue */;
+                let obj7 = get64BitValue;
                 num7 = obj7.get64BitValue(getUint8, sum7);
               }
             }
@@ -126,7 +126,7 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
                 let warnResult2 = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
                 let tmp35 = require;
                 let tmp36 = dependencyMap;
-                let obj8 = get64BitValue /* get64BitValue */;
+                let obj8 = get64BitValue;
                 num8 = obj8.get64BitValue(getUint8, sum8);
               }
             }
@@ -147,7 +147,7 @@ arg5.parseItemLocationBox = function parseItemLocationBox(getUint8, uint8, arg2,
               let warnResult3 = console.warn("This file uses an 8-bit offset which is currently not supported by ExifReader. Contact the maintainer to get it fixed.");
               let tmp26 = require;
               let tmp27 = dependencyMap;
-              let obj5 = get64BitValue /* get64BitValue */;
+              let obj5 = get64BitValue;
               num6 = obj5.get64BitValue(getUint8, sum6);
             }
           }

@@ -2,7 +2,7 @@
 import { _isNativeReflectConstruct } from "../00161__isNativeReflectConstruct.js";
 
 export default function _construct(bind) {
-  if (_isNativeReflectConstruct /* _isNativeReflectConstruct */()) {
+  if (_isNativeReflectConstruct()) {
     const _Reflect = Reflect;
     const apply = construct.apply;
     if (typeof apply === "unknown") {

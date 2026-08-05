@@ -7,7 +7,7 @@ arg5.isMatchingPattern = function isMatchingPattern(arr, test) {
   if (arg2 === undefined) {
     flag = false;
   }
-  const isStringResult = isInstanceOf /* isInstanceOf */.isString(arr);
+  const isStringResult = isInstanceOf.isString(arr);
   if (!isStringResult) {
     return isStringResult;
   } else {
@@ -41,7 +41,7 @@ arg5.safeJoin = function safeJoin(arg0, arg1) {
           arr = push(String(tmp2));
         }
         num = num + 1;
-        obj = isInstanceOf /* isInstanceOf */;
+        obj = isInstanceOf;
       } catch (err) {
         arr.push(tmp);
       }

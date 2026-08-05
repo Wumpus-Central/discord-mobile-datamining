@@ -14,7 +14,7 @@ if (require("get Version").isDisableAnimations) {
 const obj = {};
 Object.defineProperty(obj, "FlatList", { get: () => 00400__.default, set: undefined });
 Object.defineProperty(obj, "Image", { get: () => 00401__.default, set: undefined });
-Object.defineProperty(obj, "ScrollView", { get: () => AnimatedScrollViewWithInvertedRefreshControl /* AnimatedScrollViewWithInvertedRefreshControl */.default, set: undefined });
+Object.defineProperty(obj, "ScrollView", { get: () => AnimatedScrollViewWithInvertedRefreshControl.default, set: undefined });
 Object.defineProperty(obj, "SectionList", { get: () => 00405__.default, set: undefined });
 Object.defineProperty(obj, "Text", { get: () => 00407__.default, set: undefined });
 Object.defineProperty(obj, "View", { get: () => 00408__.default, set: undefined });

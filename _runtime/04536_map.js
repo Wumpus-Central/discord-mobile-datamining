@@ -12,7 +12,7 @@ if (!tmp2) {
 let closure_3 = require("callBoundIntrinsic")("String.prototype.split");
 
 export default function map(arg0) {
-  const tmp3 = ToObject /* ToObject */(this);
+  const tmp3 = ToObject(this);
   let arr = tmp3;
   if (closure_2) {
     arr = tmp3;
@@ -20,8 +20,8 @@ export default function map(arg0) {
       arr = callback(tmp3, "");
     }
   }
-  const tmp5 = ToUint32 /* ToUint32 */(arr.length);
-  if (apply /* apply */(arg0)) {
+  const tmp5 = ToUint32(arr.length);
+  if (apply(arg0)) {
     if (arguments.length > 1) {
       const tmp11 = arguments[1];
     }
@@ -29,9 +29,9 @@ export default function map(arg0) {
     for (let num2 = 0; num2 < tmp5; num2 = num2 + 1) {
       let tmp13 = require;
       let tmp14 = dependencyMap;
-      let tmp15 = ToString /* ToString */(num2);
+      let tmp15 = ToString(num2);
       let tmp16 = num2;
-      if (HasProperty /* HasProperty */(tmp3, tmp15)) {
+      if (HasProperty(tmp3, tmp15)) {
         let tmp17 = tmp13(4575)(tmp3, tmp15);
         let items = [tmp17, num2, tmp3];
         let tmp18 = tmp13(4589)(arg0, tmp11, items);

@@ -3,7 +3,7 @@ import { SemVer } from "../13020_SemVer.js";
 import { SemVer } from "../13021_SemVer.js";
 
 export default (num) => {
-  if (num instanceof SemVer /* SemVer */) {
+  if (num instanceof SemVer) {
     return num;
   } else {
     let StringResult = num;
@@ -94,7 +94,7 @@ export default (num) => {
           }
         }
         const _HermesInternal3 = HermesInternal;
-        return SemVer /* SemVer */("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
+        return SemVer("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
       }
     }
   }

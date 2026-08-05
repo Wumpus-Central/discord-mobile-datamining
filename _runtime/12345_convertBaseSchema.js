@@ -760,7 +760,7 @@ if (self2) {
           registry = defaultTarget.registry;
         }
         if (registry == null) {
-          registry = $output /* $output */.globalRegistry;
+          registry = $output.globalRegistry;
         }
         obj[5] = registry;
         return convertSchema(flag, obj);

@@ -9,7 +9,7 @@ if (typeof Symbol === "function") {
 
 export default function ToPrimitive(arg0) {
   let tmp22;
-  if (isPrimitive /* isPrimitive */(arg0)) {
+  if (isPrimitive(arg0)) {
     return arg0;
   } else {
     let str2 = "default";
@@ -55,7 +55,7 @@ export default function ToPrimitive(arg0) {
                 let tmp19 = require;
                 let tmp20 = dependencyMap;
                 let tmp21 = num2;
-                if (apply /* apply */(tmp18)) {
+                if (apply(tmp18)) {
                   let call = tmp18.call;
                   tmp22 = typeof call === "unknown" ? tmp18() : call(arg0);
                   if (tmp19(4545)(tmp22)) {

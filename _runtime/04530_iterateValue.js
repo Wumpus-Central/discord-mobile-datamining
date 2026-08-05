@@ -2,7 +2,7 @@
 import { getIterator } from "04531_getIterator.js";
 
 export default function iterateValue(arg0) {
-  const tmp3 = getIterator /* getIterator */(arg0);
+  const tmp3 = getIterator(arg0);
   if (tmp3) {
     if (arguments.length > 1) {
       let tmp9 = tmp(4532)(tmp3, arguments[1]);

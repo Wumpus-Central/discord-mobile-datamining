@@ -8,9 +8,9 @@ const require = arg1;
 export const renderElement = function renderElement(rootTag) {
   let obj = ReactFabric;
   obj = { onCaughtError: null, onUncaughtError: null, onRecoverableError: null };
-  obj[0] = getExtendedError /* getExtendedError */.onCaughtError;
-  obj[1] = getExtendedError /* getExtendedError */.onUncaughtError;
-  obj[2] = getExtendedError /* getExtendedError */.onRecoverableError;
+  obj[0] = getExtendedError.onCaughtError;
+  obj[1] = getExtendedError.onUncaughtError;
+  obj[2] = getExtendedError.onRecoverableError;
   obj.render(rootTag.element, Number(rootTag.rootTag), null, true, obj);
 };
 export const dispatchCommand = require("ReactFabric").dispatchCommand;

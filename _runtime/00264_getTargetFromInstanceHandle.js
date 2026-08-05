@@ -130,7 +130,7 @@ export const observe = function observe(arg0) {
       console.error("IntersectionObserverManager: could not start observing target because IntersectionObserver with ID " + intersectionObserverId + " was not registered.");
       return false;
     } else {
-      const nativeNodeReference = getInstanceHandle /* getInstanceHandle */.getNativeNodeReference(target);
+      const nativeNodeReference = getInstanceHandle.getNativeNodeReference(target);
       if (null == nativeNodeReference) {
         return false;
       } else {
@@ -171,7 +171,7 @@ export const observe = function observe(arg0) {
           return true;
         }
       }
-      const obj4 = getInstanceHandle /* getInstanceHandle */;
+      const obj4 = getInstanceHandle;
     }
   }
 };

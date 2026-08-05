@@ -48,7 +48,7 @@ function setupIntegration(on, name) {
 let items = [];
 
 export const addIntegration = function addIntegration(name) {
-  const client = getClient /* getClient */.getClient();
+  const client = getClient.getClient();
   if (client) {
     client.addIntegration(name);
   } else if (tmp(7403).DEBUG_BUILD) {

@@ -8,7 +8,7 @@ function addLikelySubtags(locale) {
   let region;
   let script;
   let variants;
-  const parseUnicodeLocaleIdResult = isStructurallyValidLanguageTag /* isStructurallyValidLanguageTag */.parseUnicodeLocaleId(locale);
+  const parseUnicodeLocaleIdResult = isStructurallyValidLanguageTag.parseUnicodeLocaleId(locale);
   ({ lang, script, region, variants } = parseUnicodeLocaleIdResult.lang);
   if (script) {
     if (region) {

@@ -16,7 +16,7 @@ function createChildOrRootSpan(arg0) {
   let traceId;
   let traceId2;
   ({ parentSpan, spanArguments, forceTransaction, scope } = arg0);
-  let obj = hasSpansEnabled /* hasSpansEnabled */;
+  let obj = hasSpansEnabled;
   if (obj.hasSpansEnabled()) {
     let tmpResult = tmp(848);
     const isolationScope = tmpResult.getIsolationScope();
@@ -108,7 +108,7 @@ function _startRootSpan(name, getPropagationContext) {
   let tmp10;
   let tmp11;
   let tmp9;
-  let obj = getClient /* getClient */;
+  let obj = getClient;
   const client = obj.getClient();
   let options;
   if (client != null) {

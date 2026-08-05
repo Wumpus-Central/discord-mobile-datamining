@@ -2,7 +2,7 @@
 import { isObject } from "04529_isObject.js";
 
 export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
-  if (isObject /* isObject */(arg0)) {
+  if (isObject(arg0)) {
     if (tmp(4576)(arg1)) {
       if (tmp(4580)(__Writable__)) {
         if (tmp(542)) {

@@ -4,7 +4,7 @@ const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.logSpanEnd = function logSpanEnd(spanContext) {
-  if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+  if (__SENTRY_DEBUG__.DEBUG_BUILD) {
     let tmpResult = tmp(819);
     const spanToJSONResult = tmpResult.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
@@ -32,7 +32,7 @@ arg5.logSpanEnd = function logSpanEnd(spanContext) {
 arg5.logSpanStart = function logSpanStart(spanContext) {
   let description2;
   let op2;
-  if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+  if (__SENTRY_DEBUG__.DEBUG_BUILD) {
     let tmpResult = tmp(819);
     const spanToJSONResult = tmpResult.spanToJSON(spanContext);
     const description = spanToJSONResult.description;

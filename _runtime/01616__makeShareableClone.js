@@ -4,15 +4,15 @@ import { t } from "01617_t.js";
 
 const require = arg1;
 global._makeShareableClone = () => {
-  const reanimatedError = new t /* t */.ReanimatedError("`_makeShareableClone` should never be called from React runtime.");
+  const reanimatedError = new t.ReanimatedError("`_makeShareableClone` should never be called from React runtime.");
   throw reanimatedError;
 };
 global._scheduleHostFunctionOnJS = () => {
-  const reanimatedError = new t /* t */.ReanimatedError("`_scheduleOnJS` should never be called from React runtime.");
+  const reanimatedError = new t.ReanimatedError("`_scheduleOnJS` should never be called from React runtime.");
   throw reanimatedError;
 };
 global._scheduleOnRuntime = () => {
-  const reanimatedError = new t /* t */.ReanimatedError("`_scheduleOnRuntime` should never be called from React runtime.");
+  const reanimatedError = new t.ReanimatedError("`_scheduleOnRuntime` should never be called from React runtime.");
   throw reanimatedError;
 };
 function setNativeProps(arg0, arg1, arg2) {

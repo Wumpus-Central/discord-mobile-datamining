@@ -41,7 +41,7 @@ try {
     const _module1 = require("polyfillObjectProperty");
     _module1.polyfillGlobal("regeneratorRuntime", () => {
       delete tmp2[tmp];
-      return define /* define */;
+      return define;
     });
   }
 } catch (err) {

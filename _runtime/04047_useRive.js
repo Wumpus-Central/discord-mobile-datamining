@@ -12,7 +12,7 @@ let require = arg1;
 export const useRive = function useRive() {
   let dependencyMap;
   let tmp4;
-  let obj = c /* c */;
+  let obj = c;
   const cResult = obj.c(4);
   const tmp2 = callback2(null);
   require = tmp2;

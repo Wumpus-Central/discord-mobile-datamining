@@ -3,7 +3,7 @@ import { getNative } from "00736_getNative.js";
 
 export default function hashGet(arg0) {
   const __data__ = this.__data__;
-  if (getNative /* getNative */) {
+  if (getNative) {
     let tmp4;
     if ("__lodash_hash_undefined__" !== __data__[arg0]) {
       tmp4 = tmp3;

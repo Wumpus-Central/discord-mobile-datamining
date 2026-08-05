@@ -8,7 +8,7 @@ function shouldUpdateDetector(arg0, handlerTag) {
   if (undefined === arg0) {
     return false;
   } else {
-    const result = transformIntoHandlerTags /* transformIntoHandlerTags */.transformIntoHandlerTags(arg0);
+    const result = transformIntoHandlerTags.transformIntoHandlerTags(arg0);
     for (const item10012 of result) {
       if (item10012 === arg1.handlerTag) {
         let tmp6 = obj2;

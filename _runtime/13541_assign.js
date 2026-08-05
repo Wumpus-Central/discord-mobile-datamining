@@ -25,7 +25,7 @@ if (!assign) {
         let tmp9 = arr[num2];
         let tmp10 = require;
         let tmp11 = dependencyMap;
-        let tmp12 = getOwnPropertyDescriptor /* getOwnPropertyDescriptor */;
+        let tmp12 = getOwnPropertyDescriptor;
         let tmp13 = num2;
         if (tmp12) {
           tmp12 = !tmp10(13510)(tmp2, tmp5, tmp9);

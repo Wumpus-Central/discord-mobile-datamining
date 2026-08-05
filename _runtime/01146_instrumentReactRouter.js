@@ -218,7 +218,7 @@ export const reactRouterV4BrowserTracingIntegration = function reactRouterV4Brow
   let dependencyMap;
   let instrumentPageLoad;
   let noop;
-  let obj = feedbackAsyncIntegration /* feedbackAsyncIntegration */;
+  let obj = feedbackAsyncIntegration;
   obj = {};
   const merged = Object.assign(instrumentNavigation);
   obj.instrumentPageLoad = false;
@@ -242,7 +242,7 @@ export const reactRouterV5BrowserTracingIntegration = function reactRouterV5Brow
   let dependencyMap;
   let instrumentPageLoad;
   let noop;
-  let obj = feedbackAsyncIntegration /* feedbackAsyncIntegration */;
+  let obj = feedbackAsyncIntegration;
   obj = {};
   const merged = Object.assign(instrumentNavigation);
   obj.instrumentPageLoad = false;

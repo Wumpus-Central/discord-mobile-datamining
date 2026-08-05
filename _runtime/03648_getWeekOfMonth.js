@@ -49,7 +49,7 @@ let closure_6 = tmp11;
 
 export default function getWeekOfMonth(arg0, weekStartsOn) {
   tmp9.default(1, arguments);
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;

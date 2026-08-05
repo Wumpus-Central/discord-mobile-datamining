@@ -12,6 +12,6 @@ if (!requiredArgs) {
 
 export default function quartersToYears(arg0) {
   tmp3.default(1, arguments);
-  return Math.floor(arg0 / keys /* keys */.quartersInYear);
+  return Math.floor(arg0 / keys.quartersInYear);
 };
 export default exports.default;

@@ -2,7 +2,7 @@
 import { apply } from "01402_apply.js";
 
 export default function forEach(str, call) {
-  if (apply /* apply */(call)) {
+  if (apply(call)) {
     call = toString.call;
     if ("[object Array]" === (typeof call === "unknown" ? toString() : call(str))) {
       let num4 = 0;

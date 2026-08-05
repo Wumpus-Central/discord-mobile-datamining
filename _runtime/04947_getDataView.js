@@ -6,7 +6,7 @@ arg5.default = {
   read(byteLength) {
     let tmp;
     if (6 <= byteLength.byteLength) {
-      let obj = getDataView /* getDataView */;
+      let obj = getDataView;
       const stringFromDataView = obj.getStringFromDataView(byteLength, 3, 3);
       obj = { value: null, description: null };
       obj[0] = stringFromDataView;

@@ -8,7 +8,7 @@ export default function callBindBasic(items) {
   if (items.length >= 1) {
     if (typeof items[0] === "function") {
       const tmp4 = 00552__;
-      return tmp4(bind /* bind */, 00556__, items);
+      return tmp4(bind, 00556__, items);
     }
   }
   throw new 00541__("a function is required");

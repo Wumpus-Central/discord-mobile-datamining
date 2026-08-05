@@ -21,7 +21,7 @@ if (!hasOwnPropertyResult) {
   const item = keys.forEach((key10009) => {
     if ("default" === key10009) {
       if (!tmp) {
-        exports[key10009] = feedbackAsyncIntegration /* feedbackAsyncIntegration */[key10009];
+        exports[key10009] = feedbackAsyncIntegration[key10009];
       }
     } else {
       const _Object = Object;

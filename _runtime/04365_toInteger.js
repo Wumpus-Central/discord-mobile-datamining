@@ -2,7 +2,7 @@
 import { toFinite } from "04366_toFinite.js";
 
 export default function toInteger(arg0) {
-  const tmp = toFinite /* toFinite */(arg0);
+  const tmp = toFinite(arg0);
   const result = tmp % 1;
   let num = 0;
   if (tmp == tmp) {

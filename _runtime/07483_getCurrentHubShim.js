@@ -10,12 +10,12 @@ function getCurrentHubShim() {
       const currentScope = callback(7402).getCurrentScope();
       currentScope.setClient(arg0);
     },
-    withScope: getClient /* getClient */.withScope,
+    withScope: getClient.withScope,
     getClient() {
       return callback(7402).getClient();
     },
-    getScope: getClient /* getClient */.getCurrentScope,
-    getIsolationScope: getClient /* getClient */.getIsolationScope,
+    getScope: getClient.getCurrentScope,
+    getIsolationScope: getClient.getIsolationScope,
     captureException(arg0, arg1) {
       const currentScope = callback(7402).getCurrentScope();
       return currentScope.captureException(arg0, arg1);
@@ -24,14 +24,14 @@ function getCurrentHubShim() {
       const currentScope = callback(7402).getCurrentScope();
       return currentScope.captureMessage(arg0, arg1, arg2);
     },
-    captureEvent: _flush /* _flush */.captureEvent,
-    addBreadcrumb: addBreadcrumb /* addBreadcrumb */.addBreadcrumb,
-    setUser: _flush /* _flush */.setUser,
-    setTags: _flush /* _flush */.setTags,
-    setTag: _flush /* _flush */.setTag,
-    setExtra: _flush /* _flush */.setExtra,
-    setExtras: _flush /* _flush */.setExtras,
-    setContext: _flush /* _flush */.setContext,
+    captureEvent: _flush.captureEvent,
+    addBreadcrumb: addBreadcrumb.addBreadcrumb,
+    setUser: _flush.setUser,
+    setTags: _flush.setTags,
+    setTag: _flush.setTag,
+    setExtra: _flush.setExtra,
+    setExtras: _flush.setExtras,
+    setContext: _flush.setContext,
     getIntegration(id) {
       const client = callback(7402).getClient();
       let integrationByName = client;
@@ -43,8 +43,8 @@ function getCurrentHubShim() {
       }
       return integrationByName;
     },
-    startSession: _flush /* _flush */.startSession,
-    endSession: _flush /* _flush */.endSession,
+    startSession: _flush.startSession,
+    endSession: _flush.endSession,
     captureSession(arg0) {
       if (arg0) {
         let tmpResult = tmp(tmp2[1]);

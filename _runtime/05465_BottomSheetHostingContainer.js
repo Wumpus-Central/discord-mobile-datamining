@@ -33,7 +33,7 @@ const memoResult = noop.memo(function BottomSheetHostingContainerComponent(botto
   const tmp = num(null);
   c6 = tmp;
   let items = [style, detached, topInset, num];
-  let obj = useBottomSheet /* useBottomSheet */;
+  let obj = useBottomSheet;
   obj = { ref: tmp, pointerEvents: "box-none", onLayout: null, style: null, collapsable: true, children: null };
   let stableCallback;
   if (flag) {

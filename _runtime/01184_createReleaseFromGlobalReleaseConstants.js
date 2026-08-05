@@ -6,7 +6,7 @@ const dependencyMap = arg6;
 arg5.createReleaseFromGlobalReleaseConstants = function createReleaseFromGlobalReleaseConstants() {
   let name;
   let version;
-  const SENTRY_RELEASE = RN_GLOBAL_OBJ /* RN_GLOBAL_OBJ */.RN_GLOBAL_OBJ.SENTRY_RELEASE;
+  const SENTRY_RELEASE = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.SENTRY_RELEASE;
   if (SENTRY_RELEASE) {
     ({ name, version } = SENTRY_RELEASE);
     if (name) {
@@ -34,6 +34,6 @@ arg5.getDefaultRelease = function getDefaultRelease() {
     }
     return combined;
   }
-  obj = isHermesEnabled /* isHermesEnabled */;
+  obj = isHermesEnabled;
   tmp = require;
 };

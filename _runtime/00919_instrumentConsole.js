@@ -6,7 +6,7 @@ const require = arg1;
 const dependencyMap = arg6;
 function instrumentConsole() {
   if ("console" in 00821__.GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = consoleSandbox /* consoleSandbox */.CONSOLE_LEVELS;
+    const CONSOLE_LEVELS = consoleSandbox.CONSOLE_LEVELS;
     const item = CONSOLE_LEVELS.forEach((arg0) => {
       const callback = arg0;
       if (arg0 in callback(table[1]).GLOBAL_OBJ.console) {
@@ -28,7 +28,7 @@ function instrumentConsole() {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(arg0) {
-  addHandler /* addHandler */.addHandler("console", arg0);
-  const obj = addHandler /* addHandler */;
-  addHandler /* addHandler */.maybeInstrument("console", instrumentConsole);
+  addHandler.addHandler("console", arg0);
+  const obj = addHandler;
+  addHandler.maybeInstrument("console", instrumentConsole);
 };

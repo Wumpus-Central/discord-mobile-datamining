@@ -55,14 +55,14 @@ if (!getNative) {
 }
 if (getNative) {
   toStringTag = function v(_module6) {
-    const tmp3 = toStringTag /* toStringTag */(_module6);
+    const tmp3 = toStringTag(_module6);
     let constructor;
     if ("[object Object]" == tmp3) {
       constructor = _module6.constructor;
     }
     let str = "";
     if (constructor) {
-      str = toSource /* toSource */(constructor);
+      str = toSource(constructor);
     }
     if (str) {
       if (getNative === str) {

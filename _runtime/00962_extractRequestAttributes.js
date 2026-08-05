@@ -7,7 +7,7 @@ import { 00958__ } from "metro/00958__.js";
 
 function extractRequestAttributes(first, outer1_1) {
   let obj = { [closure_0(closure_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "openai" };
-  obj[00958__.GEN_AI_OPERATION_NAME_ATTRIBUTE] = getOperationName /* getOperationName */.getOperationName(outer1_1);
+  obj[00958__.GEN_AI_OPERATION_NAME_ATTRIBUTE] = getOperationName.getOperationName(outer1_1);
   obj[00839__.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.openai";
   if (first.length > 0) {
     if (typeof first[0] === "object") {
@@ -52,12 +52,12 @@ function addRequestAttributes(setAttribute, input) {
   }
   if (input) {
     if (0 !== length) {
-      const truncatedJsonString = buildMethodPath /* buildMethodPath */.getTruncatedJsonString(input);
+      const truncatedJsonString = buildMethodPath.getTruncatedJsonString(input);
       const attr = setAttribute.setAttribute(00958__.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE, truncatedJsonString);
       if (length) {
         const attr1 = setAttribute.setAttribute(tmp2(958).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE, length);
       }
-      const obj = buildMethodPath /* buildMethodPath */;
+      const obj = buildMethodPath;
       tmp2 = require;
     }
   }

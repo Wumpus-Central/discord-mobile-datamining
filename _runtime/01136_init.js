@@ -8,10 +8,10 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 export const init = function init(arg0) {
   let obj = {};
   const merged = Object.assign(arg0);
-  registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.applySdkMetadata(obj, "react");
-  const obj2 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  registerSpanErrorInstrumentation.applySdkMetadata(obj, "react");
+  const obj2 = registerSpanErrorInstrumentation;
   obj = { version: noop.version };
-  feedbackAsyncIntegration /* feedbackAsyncIntegration */.setContext("react", obj);
-  const obj3 = feedbackAsyncIntegration /* feedbackAsyncIntegration */;
-  return feedbackAsyncIntegration /* feedbackAsyncIntegration */.init(obj);
+  feedbackAsyncIntegration.setContext("react", obj);
+  const obj3 = feedbackAsyncIntegration;
+  return feedbackAsyncIntegration.init(obj);
 };

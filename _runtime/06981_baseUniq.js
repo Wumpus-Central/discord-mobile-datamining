@@ -2,7 +2,7 @@
 import { arrayIncludes } from "06982_arrayIncludes.js";
 
 export default function baseUniq(arg0, arg1, arg2) {
-  let tmpResult = arrayIncludes /* arrayIncludes */;
+  let tmpResult = arrayIncludes;
   const items = [];
   if (arg2) {
     tmpResult = tmp(6986);

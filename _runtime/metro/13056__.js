@@ -5,8 +5,8 @@ import { Range } from "../13050_Range.js";
 
 export default (arg0, arg1) => {
   let require;
-  let obj = new Range /* Range */(arg0, arg1);
-  const tmp3 = new SemVer /* SemVer */("0.0.0");
+  let obj = new Range(arg0, arg1);
+  const tmp3 = new SemVer("0.0.0");
   if (obj.test(tmp3)) {
     return tmp3;
   } else {
@@ -62,7 +62,7 @@ export default (arg0, arg1) => {
               let tmp17 = require;
               let tmp18 = dependencyMap;
               let tmp19 = require;
-              tmp16 = !SemVer /* SemVer */(tmp14, require);
+              tmp16 = !SemVer(tmp14, require);
             }
             tmp13 = tmp16;
           }

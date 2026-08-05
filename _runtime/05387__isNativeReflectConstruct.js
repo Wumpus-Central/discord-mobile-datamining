@@ -290,7 +290,7 @@ export default function createHandler(name) {
           }
           const props2 = self.props;
           const items = [];
-          const obj2 = transformIntoHandlerTags /* transformIntoHandlerTags */;
+          const obj2 = transformIntoHandlerTags;
           HermesBuiltin.arraySpread(customNativeProps, HermesBuiltin.arraySpread(allowedProps, 0));
           self.createGestureHandler(obj2.filterConfig(outer1_3 ? outer1_3(props2) : props2, items, config));
           if (self.viewNode) {

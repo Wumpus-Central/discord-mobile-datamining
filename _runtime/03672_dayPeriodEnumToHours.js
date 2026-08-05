@@ -241,9 +241,9 @@ arg5.parseTimezonePattern = function parseTimezonePattern(basic, str) {
         num6 = parseInt(match[5], 10);
       }
       obj = { value: null, rest: null };
-      const result = num2 * keys /* keys */.millisecondsInHour;
-      const sum = result + num4 * keys /* keys */.millisecondsInMinute;
-      obj[0] = num * (sum + num6 * keys /* keys */.millisecondsInSecond);
+      const result = num2 * keys.millisecondsInHour;
+      const sum = result + num4 * keys.millisecondsInMinute;
+      obj[0] = num * (sum + num6 * keys.millisecondsInSecond);
       obj[1] = str.slice(match[0].length);
       return obj;
     }

@@ -40,7 +40,7 @@ let c5 = tmp9;
 
 export default function startOfWeekYear(arg0, firstWeekContainsDate) {
   tmp9.default(1, arguments);
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   let prop;
   if (null != firstWeekContainsDate) {
     prop = firstWeekContainsDate.firstWeekContainsDate;

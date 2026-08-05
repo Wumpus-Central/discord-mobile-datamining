@@ -180,7 +180,7 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
           if (!tmp19) {
             let tmp16 = require;
             let tmp17 = dependencyMap;
-            let tmp18 = IFD_TYPE_0TH === importDefaultResult1 /* importDefaultResult1 */.IFD_TYPE_PENTAX && "LevelInfo" === tmp13.name;
+            let tmp18 = IFD_TYPE_0TH === importDefaultResult1.IFD_TYPE_PENTAX && "LevelInfo" === tmp13.name;
             tmp19 = tmp18;
           }
           if (tmp19) {
@@ -210,10 +210,10 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5, arg6) {
       const longAt = tmp23Result.getLongAt(byteLength, tmp5, byteOrder);
       let tmp26 = 0 !== longAt;
       if (tmp26) {
-        tmp26 = IFD_TYPE_0TH === importDefaultResult1 /* importDefaultResult1 */.IFD_TYPE_0TH;
+        tmp26 = IFD_TYPE_0TH === importDefaultResult1.IFD_TYPE_0TH;
       }
       if (tmp26) {
-        obj.Thumbnail = readIfd(byteLength, importDefaultResult1 /* importDefaultResult1 */.IFD_TYPE_1ST, sum, sum + longAt, byteOrder, arg5);
+        obj.Thumbnail = readIfd(byteLength, importDefaultResult1.IFD_TYPE_1ST, sum, sum + longAt, byteOrder, arg5);
       }
     }
   }

@@ -992,7 +992,7 @@ arg5.default = {
     return obj;
   },
   event(items, useNativeDriver) {
-    const animatedEvent = new AnimatedEvent /* AnimatedEvent */.AnimatedEvent(items, useNativeDriver);
+    const animatedEvent = new AnimatedEvent.AnimatedEvent(items, useNativeDriver);
     let __getHandlerResult = animatedEvent;
     if (!animatedEvent.__isNative) {
       __getHandlerResult = animatedEvent.__getHandler();
@@ -1024,7 +1024,7 @@ arg5.default = {
   unforkEvent: function unforkEventImpl(__removeListener) {
     let tmp = __removeListener;
     if (__removeListener) {
-      tmp = __removeListener instanceof AnimatedEvent /* AnimatedEvent */.AnimatedEvent;
+      tmp = __removeListener instanceof AnimatedEvent.AnimatedEvent;
     }
     if (tmp) {
       __removeListener.__removeListener(arg1);

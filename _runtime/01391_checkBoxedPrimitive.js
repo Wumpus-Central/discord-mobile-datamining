@@ -143,7 +143,7 @@ export const isArrayBufferView = function isArrayBufferView(arg0) {
     }
     return isViewResult;
   }
-  isViewResult = isTypedArray /* isTypedArray */(arg0);
+  isViewResult = isTypedArray(arg0);
   if (!isViewResult) {
     const _DataView = DataView;
     if (typeof DataView === "undefined") {

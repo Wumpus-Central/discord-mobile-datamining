@@ -104,12 +104,12 @@ const items = [
       if (flag === undefined) {
         flag = false;
       }
-      if (this._defaultTransitionType === isWorkletFunction /* isWorkletFunction */.SharedTransitionType.ANIMATION) {
+      if (this._defaultTransitionType === isWorkletFunction.SharedTransitionType.ANIMATION) {
         let SHARED_ELEMENT_TRANSITION_PROGRESS = tmp(1631).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
       } else {
         SHARED_ELEMENT_TRANSITION_PROGRESS = tmp(1631).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS;
       }
-      const result = updateLayoutAnimations /* updateLayoutAnimations */.updateLayoutAnimations(componentViewTag, SHARED_ELEMENT_TRANSITION_PROGRESS, undefined, undefined, flag);
+      const result = updateLayoutAnimations.updateLayoutAnimations(componentViewTag, SHARED_ELEMENT_TRANSITION_PROGRESS, undefined, undefined, flag);
       const _progressTransitionManager = SharedTransition._progressTransitionManager;
       const result1 = _progressTransitionManager.removeProgressAnimation(componentViewTag, flag);
     }
@@ -302,7 +302,7 @@ obj = {
     obj._customAnimationFactory = null;
     obj._animation = null;
     obj._transitionDuration = 500;
-    obj._reduceMotion = isWorkletFunction /* isWorkletFunction */.ReduceMotion.System;
+    obj._reduceMotion = isWorkletFunction.ReduceMotion.System;
     obj._customProgressAnimation = undefined;
     obj._progressAnimation = undefined;
     obj._defaultTransitionType = undefined;
@@ -319,7 +319,7 @@ const items1 = [
       obj._customAnimationFactory = null;
       obj._animation = null;
       obj._transitionDuration = 500;
-      obj._reduceMotion = isWorkletFunction /* isWorkletFunction */.ReduceMotion.System;
+      obj._reduceMotion = isWorkletFunction.ReduceMotion.System;
       obj._customProgressAnimation = undefined;
       obj._progressAnimation = undefined;
       obj._defaultTransitionType = undefined;
@@ -334,7 +334,7 @@ const items1 = [
       obj._customAnimationFactory = null;
       obj._animation = null;
       obj._transitionDuration = 500;
-      obj._reduceMotion = isWorkletFunction /* isWorkletFunction */.ReduceMotion.System;
+      obj._reduceMotion = isWorkletFunction.ReduceMotion.System;
       obj._customProgressAnimation = undefined;
       obj._progressAnimation = undefined;
       obj._defaultTransitionType = undefined;
@@ -349,7 +349,7 @@ const items1 = [
       obj._customAnimationFactory = null;
       obj._animation = null;
       obj._transitionDuration = 500;
-      obj._reduceMotion = isWorkletFunction /* isWorkletFunction */.ReduceMotion.System;
+      obj._reduceMotion = isWorkletFunction.ReduceMotion.System;
       obj._customProgressAnimation = undefined;
       obj._progressAnimation = undefined;
       obj._defaultTransitionType = undefined;
@@ -364,7 +364,7 @@ const items1 = [
       obj._customAnimationFactory = null;
       obj._animation = null;
       obj._transitionDuration = 500;
-      obj._reduceMotion = isWorkletFunction /* isWorkletFunction */.ReduceMotion.System;
+      obj._reduceMotion = isWorkletFunction.ReduceMotion.System;
       obj._customProgressAnimation = undefined;
       obj._progressAnimation = undefined;
       obj._defaultTransitionType = undefined;

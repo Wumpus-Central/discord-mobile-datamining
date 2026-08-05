@@ -7,7 +7,7 @@ export default function flatten(arg0) {
     num = arg0.length;
   }
   if (num) {
-    let items = baseFlatten /* baseFlatten */(arg0, 1);
+    let items = baseFlatten(arg0, 1);
   } else {
     items = [];
   }

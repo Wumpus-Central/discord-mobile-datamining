@@ -291,7 +291,7 @@ function instrumentSupabaseClient(auth) {
       }
     })(auth);
   } else {
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = tmp(824).debug;
       debug.warn("Supabase integration was not installed because no Supabase client was provided.");
     }

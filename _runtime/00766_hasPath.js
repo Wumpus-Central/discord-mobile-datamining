@@ -5,7 +5,7 @@ import { castPath } from "00728_castPath.js";
 export default function hasPath(arg0, arg1, arg2) {
   let tmp4;
   let tmp = require;
-  const arr = castPath /* castPath */(arg1, arg0);
+  const arr = castPath(arg1, arg0);
   let num = 0;
   let tmp3 = arg0;
   let flag = false;
@@ -15,7 +15,7 @@ export default function hasPath(arg0, arg1, arg2) {
     while (true) {
       let tmp5 = require;
       let tmp6 = dependencyMap;
-      let tmp7 = toKey /* toKey */(arr[num]);
+      let tmp7 = toKey(arr[num]);
       let tmp8 = null != tmp3;
       let tmp9 = num;
       let tmp10 = tmp3;

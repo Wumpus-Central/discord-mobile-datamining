@@ -8,7 +8,7 @@ arg5.getNavigationEntry = () => {
   if (arg0 === undefined) {
     flag = true;
   }
-  const _performance = WINDOW /* WINDOW */.WINDOW.performance;
+  const _performance = WINDOW.WINDOW.performance;
   let first;
   if (_performance != null) {
     const getEntriesByType = _performance.getEntriesByType;

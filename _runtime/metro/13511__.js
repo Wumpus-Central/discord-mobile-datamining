@@ -4,7 +4,7 @@ import { all } from "../13503_all.js";
 export default (arg0, arg1) => {
   if ("string" === arg1) {
     const toString = arg0.toString;
-    if (all /* all */(toString)) {
+    if (all(toString)) {
       const tmp4 = tmp(13510)(toString, arg0);
       if (!tmpResult(tmp4)) {
         return tmp4;
@@ -13,7 +13,7 @@ export default (arg0, arg1) => {
     }
   }
   const valueOf = arg0.valueOf;
-  if (all /* all */(valueOf)) {
+  if (all(valueOf)) {
     let tmp5Result = tmp5(13502);
     const tmp8 = tmp5(13510)(valueOf, arg0);
     if (!tmp5Result(tmp8)) {

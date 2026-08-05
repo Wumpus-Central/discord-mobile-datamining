@@ -52,7 +52,7 @@ function maybeScheduleNextFrame(scrollAnimation, arg1, onFinishAnimation, transl
     if (arg4) {
       result = bound / 2;
     }
-    const RNScreensTurboModule = RNScreensTurboModule /* RNScreensTurboModule */.RNScreensTurboModule;
+    const RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
     RNScreensTurboModule.updateTransition(onFinishAnimation.stackTag, result);
     const _requestAnimationFrame = requestAnimationFrame;
     const animationFrame = requestAnimationFrame(scrollAnimation);

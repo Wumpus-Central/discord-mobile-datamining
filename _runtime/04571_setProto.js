@@ -3,7 +3,7 @@ import { setPrototypeOf } from "04572_setPrototypeOf.js";
 import { 04574__ } from "metro/04574__.js";
 if (require("setPrototypeOf")) {
   function setProto(arg0, arg1) {
-    if (setPrototypeOf /* setPrototypeOf */(arg0, arg1)) {
+    if (setPrototypeOf(arg0, arg1)) {
       return arg0;
     } else {
       const tmp5 = new tmp(541)("Reflect.setPrototypeOf: failed to set [[Prototype]]");

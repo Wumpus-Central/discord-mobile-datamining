@@ -403,7 +403,7 @@ export const clearNavigationContext = function clearNavigationContext(c1) {
   }
 };
 export const getActiveRootSpan = function getActiveRootSpan() {
-  const activeSpan = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getActiveSpan();
+  const activeSpan = registerSpanErrorInstrumentation.getActiveSpan();
   let rootSpan;
   if (activeSpan) {
     let tmpResult = tmp(817);
@@ -417,7 +417,7 @@ export const getActiveRootSpan = function getActiveRootSpan() {
     }
     return tmp5;
   }
-  const obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  const obj = registerSpanErrorInstrumentation;
 };
 export const getNavigationContext = function getNavigationContext() {
   let tmp2 = null;
@@ -477,7 +477,7 @@ export { routeIsDescendant };
 export const setNavigationContext = function setNavigationContext(outer1_1, outer1_2) {
   let arr = closure_5;
   if (closure_5.length >= 10) {
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = tmp(817).debug;
       debug.warn("[React Router] Navigation context stack overflow - removing oldest context");
     }

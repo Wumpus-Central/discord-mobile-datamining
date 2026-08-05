@@ -4,7 +4,7 @@ import { 00541__ } from "metro/00541__.js";
 let closure_2 = require("getEvalledConstructor")("%Symbol.species%", true);
 
 export default function ArraySpeciesCreate(arg0, arg1) {
-  if (isInteger /* isInteger */(arg1)) {
+  if (isInteger(arg1)) {
     if (arg1 >= 0) {
       if (tmp(4567)(arg0)) {
         const tmp3 = tmp(4575)(arg0, "constructor");

@@ -427,7 +427,7 @@ export default (arg0, allowEmptyArrays) => {
           const sorted = filter.sort(arr.sort);
         }
         const items = [];
-        const tmp25 = getSideChannel /* getSideChannel */();
+        const tmp25 = getSideChannel();
         for (let num3 = 0; num3 < filter.length; num3 = num3 + 1) {
           let tmp26 = filter[num3];
           let tmp27 = found[tmp26];

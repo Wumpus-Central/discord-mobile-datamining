@@ -106,8 +106,8 @@ arg5.default = function v1(arg0, arg1, arg2) {
       num10 = num10 + 1;
     } while (num10 < 6);
     if (!unsafeStringifyResult) {
-      unsafeStringifyResult = unsafeStringify /* unsafeStringify */.unsafeStringify(array);
-      const obj2 = unsafeStringify /* unsafeStringify */;
+      unsafeStringifyResult = unsafeStringify.unsafeStringify(array);
+      const obj2 = unsafeStringify;
     }
     return unsafeStringifyResult;
   }

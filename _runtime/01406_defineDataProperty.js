@@ -54,7 +54,7 @@ export default function defineDataProperty(obj, str) {
       tmp5 = arguments[5];
     }
     const tmp9 = 00542__ && 00542__(obj, str);
-    if (flag /* flag */) {
+    if (flag) {
       if (null === tmp5) {
         if (tmp9) {
           let configurable = tmp9.configurable;

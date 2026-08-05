@@ -17,13 +17,13 @@ if (isJest.isWeb()) {
 const obj = { jsValue: prop, uiValue: null, setEnabled: null };
 function isReducedMotionEnabledInSystem() {
   if (obj.isWeb()) {
-    let matches = isJest /* isJest */.isWindowAvailable();
+    let matches = isJest.isWindowAvailable();
     if (matches) {
       const _window = window;
       matches = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     }
     let prop = matches;
-    const tmpResult = isJest /* isJest */;
+    const tmpResult = isJest;
   } else {
     prop = global._REANIMATED_IS_REDUCED_MOTION;
   }

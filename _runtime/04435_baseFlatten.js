@@ -4,7 +4,7 @@ import { isConcatSpreadable } from "04436_isConcatSpreadable.js";
 function baseFlatten(arg0, arg1, arg2, arg3, arg4) {
   let tmp = arg2;
   if (!arg2) {
-    tmp = isConcatSpreadable /* isConcatSpreadable */;
+    tmp = isConcatSpreadable;
   }
   let items = arg4;
   if (!arg4) {
@@ -27,7 +27,7 @@ function baseFlatten(arg0, arg1, arg2, arg3, arg4) {
           } else {
             let tmp6 = require;
             let tmp7 = dependencyMap;
-            let tmp8 = arrayPush /* arrayPush */(items, tmp4);
+            let tmp8 = arrayPush(items, tmp4);
           }
           num = num + 1;
           if (num >= length) {

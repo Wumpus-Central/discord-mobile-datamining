@@ -5,7 +5,7 @@ const dependencyMap = arg6;
 arg5.CurrencyDigits = function CurrencyDigits(currency, currencyDigitsData) {
   currencyDigitsData = currencyDigitsData.currencyDigitsData;
   let num = 2;
-  if (__exportStarResult32 /* __exportStarResult32 */.HasOwnProperty(currencyDigitsData, currency)) {
+  if (__exportStarResult32.HasOwnProperty(currencyDigitsData, currency)) {
     num = currencyDigitsData[currency];
   }
   return num;

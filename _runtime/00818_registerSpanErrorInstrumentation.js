@@ -28,9 +28,9 @@ arg5.registerSpanErrorInstrumentation = function registerSpanErrorInstrumentatio
     }
     errorCallback.tag = "sentry_tracingErrorCallback";
     c2 = true;
-    const result = instrumentError /* instrumentError */.addGlobalErrorInstrumentationHandler(errorCallback);
-    let obj = instrumentError /* instrumentError */;
-    const result1 = instrumentUnhandledRejection /* instrumentUnhandledRejection */.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
-    const obj2 = instrumentUnhandledRejection /* instrumentUnhandledRejection */;
+    const result = instrumentError.addGlobalErrorInstrumentationHandler(errorCallback);
+    let obj = instrumentError;
+    const result1 = instrumentUnhandledRejection.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
+    const obj2 = instrumentUnhandledRejection;
   }
 };

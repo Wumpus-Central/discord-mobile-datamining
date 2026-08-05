@@ -8,8 +8,8 @@ const dependencyMap = arg6;
 function onVercelAiSpanStart(setAttribute) {
   let data;
   let description;
-  const obj = spanToJSON /* spanToJSON */;
-  ({ data, description } = spanToJSON /* spanToJSON */.spanToJSON(setAttribute));
+  const obj = spanToJSON;
+  ({ data, description } = spanToJSON.spanToJSON(setAttribute));
   if (description) {
     if (data[tmp3(undefined, 956).AI_TOOL_CALL_NAME_ATTRIBUTE]) {
       if (data[tmp3(undefined, 956).AI_TOOL_CALL_ID_ATTRIBUTE]) {
@@ -109,7 +109,7 @@ function vercelAiEventProcessor(type) {
         let tmp9 = processEndedVercelAiSpan(item10015);
         let tmp10 = require;
         let tmp11 = dependencyMap;
-        let obj = convertPromptToMessages /* convertPromptToMessages */;
+        let obj = convertPromptToMessages;
         let result = obj.accumulateTokensForParent(item10015, map);
         continue;
       }
@@ -120,7 +120,7 @@ function vercelAiEventProcessor(type) {
         if ("gen_ai.invoke_agent" === nextResult.op) {
           let tmp18 = require;
           let tmp19 = dependencyMap;
-          let obj2 = convertPromptToMessages /* convertPromptToMessages */;
+          let obj2 = convertPromptToMessages;
           let tmp20 = nextResult;
           let result1 = obj2.applyAccumulatedTokens(tmp17, map);
         }
@@ -136,8 +136,8 @@ function vercelAiEventProcessor(type) {
         tmp24 = "gen_ai.invoke_agent" === trace.op;
       }
       if (tmp24) {
-        const result2 = convertPromptToMessages /* convertPromptToMessages */.applyAccumulatedTokens(trace, map);
-        const obj3 = convertPromptToMessages /* convertPromptToMessages */;
+        const result2 = convertPromptToMessages.applyAccumulatedTokens(trace, map);
+        const obj3 = convertPromptToMessages;
       }
     }
   }

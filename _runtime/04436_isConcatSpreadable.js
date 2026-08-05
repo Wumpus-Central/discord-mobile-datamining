@@ -7,7 +7,7 @@ if (require("module_608")) {
 }
 
 export default function isFlattenable(arg0) {
-  let tmp3 = 00599__(arg0) || baseIsArguments /* baseIsArguments */(arg0);
+  let tmp3 = 00599__(arg0) || baseIsArguments(arg0);
   if (!tmp3) {
     let tmp5 = isConcatSpreadable;
     if (isConcatSpreadable) {

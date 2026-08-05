@@ -9,16 +9,16 @@ import { CarouselLayout } from "../09975_CarouselLayout.js";
 const require = arg1;
 
 export default require("noop").forwardRef((defaultIndex, ref) => {
-  let obj = useInitProps /* useInitProps */;
+  let obj = useInitProps;
   const initProps = obj.useInitProps(defaultIndex);
-  let obj1 = useCommonVariables /* useCommonVariables */;
+  let obj1 = useCommonVariables;
   const commonVariables = obj1.useCommonVariables(initProps);
   obj = {};
   const merged = Object.assign(initProps);
   obj.dataLength = initProps.dataLength;
-  const propsErrorBoundary = usePropsErrorBoundary /* usePropsErrorBoundary */.usePropsErrorBoundary(obj);
+  const propsErrorBoundary = usePropsErrorBoundary.usePropsErrorBoundary(obj);
   obj = { value: { props: initProps, common: commonVariables }, children: null };
   obj1 = { ref };
-  obj[1] = jsx(CarouselLayout /* CarouselLayout */.CarouselLayout, { ref });
-  return jsx(context /* context */.GlobalStateProvider, { value: { props: initProps, common: commonVariables }, children: null });
+  obj[1] = jsx(CarouselLayout.CarouselLayout, { ref });
+  return jsx(context.GlobalStateProvider, { value: { props: initProps, common: commonVariables }, children: null });
 });

@@ -3,7 +3,7 @@ import { Range } from "13050_Range.js";
 
 export default (arg0, arg1, arg2) => {
   try {
-    const tmp7 = new Range /* Range */(arg1, arg2);
+    const tmp7 = new Range(arg1, arg2);
     return tmp7.test(arg0);
   } catch (err) {
     return false;

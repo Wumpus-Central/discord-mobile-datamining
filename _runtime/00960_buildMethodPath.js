@@ -56,12 +56,12 @@ arg5.getSpanOperation = function getSpanOperation(arr) {
 };
 arg5.getTruncatedJsonString = function getTruncatedJsonString(arr) {
   if (typeof arr === "string") {
-    return truncateTextByBytes /* truncateTextByBytes */.truncateGenAiStringInput(arr);
+    return truncateTextByBytes.truncateGenAiStringInput(arr);
   } else {
     const _Array = Array;
     if (Array.isArray(arr)) {
       const _JSON2 = JSON;
-      return JSON.stringify(truncateTextByBytes /* truncateTextByBytes */.truncateGenAiMessages(arr));
+      return JSON.stringify(truncateTextByBytes.truncateGenAiMessages(arr));
     } else {
       const _JSON = JSON;
       return JSON.stringify(arr);

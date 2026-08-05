@@ -4,7 +4,7 @@ import { addClsInstrumentationHandler } from "01033_addClsInstrumentationHandler
 const require = arg1;
 const dependencyMap = arg6;
 function shouldAttachHeaders(str) {
-  const locationHref = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getLocationHref();
+  const locationHref = registerSpanErrorInstrumentation.getLocationHref();
   if (locationHref) {
     try {
       const _URL = URL;
@@ -81,7 +81,7 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
       return type;
     });
     if (trackFetchStreamPerformance) {
-      let result = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.addFetchEndInstrumentationHandler((response) => {
+      let result = registerSpanErrorInstrumentation.addFetchEndInstrumentationHandler((response) => {
         if (response.response) {
           const value = closure_2.get(response.response);
           let endTimestamp = value;
@@ -93,9 +93,9 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
           }
         }
       });
-      let obj2 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+      let obj2 = registerSpanErrorInstrumentation;
     }
-    let result1 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.addFetchInstrumentationHandler((response) => {
+    let result1 = registerSpanErrorInstrumentation.addFetchInstrumentationHandler((response) => {
       let obj = outer1_0(outer1_1[0]);
       obj = { propagateTraceparent, onRequestSpanEnd: closure_3 };
       const result = obj.instrumentFetchRequest(response, shouldCreateSpanForRequest, shouldAttachHeadersWithTargets, closure_6, obj);
@@ -152,10 +152,10 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
         }
       }
     });
-    let obj3 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+    let obj3 = registerSpanErrorInstrumentation;
   }
   if (traceXHR) {
-    const result2 = addClsInstrumentationHandler /* addClsInstrumentationHandler */.addXhrInstrumentationHandler((xhr) => {
+    const result2 = addClsInstrumentationHandler.addXhrInstrumentationHandler((xhr) => {
       let baggage;
       let method;
       let tmp65;
@@ -380,7 +380,7 @@ arg5.instrumentOutgoingRequests = function instrumentOutgoingRequests(getOptions
         }
       }
     });
-    let obj4 = addClsInstrumentationHandler /* addClsInstrumentationHandler */;
+    let obj4 = addClsInstrumentationHandler;
   }
 };
 arg5.shouldAttachHeaders = shouldAttachHeaders;

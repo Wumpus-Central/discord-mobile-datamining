@@ -9,7 +9,7 @@ export default function baseIteratee(fn) {
   if (typeof fn === "function") {
     return tmp;
   } else if (null == tmp) {
-    let tmp8 = identity /* identity */;
+    let tmp8 = identity;
   } else if (typeof tmp === "object") {
     let tmp2 = require;
     if (00599__(tmp)) {
@@ -21,6 +21,6 @@ export default function baseIteratee(fn) {
     }
     tmp3 = dependencyMap;
   } else {
-    tmp8 = property /* property */(tmp);
+    tmp8 = property(tmp);
   }
 };

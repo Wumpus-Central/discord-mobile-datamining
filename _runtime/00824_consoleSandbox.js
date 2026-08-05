@@ -58,27 +58,27 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let obj = {};
 obj = {
   enable() {
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      let globalSingleton = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
-      const tmpResult = getGlobalSingleton /* getGlobalSingleton */;
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+      let globalSingleton = getGlobalSingleton.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
+      const tmpResult = getGlobalSingleton;
     } else {
       globalSingleton = { enabled: false };
     }
     globalSingleton.enabled = true;
   },
   disable() {
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      let globalSingleton = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
-      const tmpResult = getGlobalSingleton /* getGlobalSingleton */;
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+      let globalSingleton = getGlobalSingleton.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
+      const tmpResult = getGlobalSingleton;
     } else {
       globalSingleton = { enabled: false };
     }
     globalSingleton.enabled = false;
   },
   isEnabled() {
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      let globalSingleton = getGlobalSingleton /* getGlobalSingleton */.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
-      const tmpResult = getGlobalSingleton /* getGlobalSingleton */;
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+      let globalSingleton = getGlobalSingleton.getGlobalSingleton("loggerSettings", () => ({ enabled: false }));
+      const tmpResult = getGlobalSingleton;
     } else {
       globalSingleton = { enabled: false };
     }

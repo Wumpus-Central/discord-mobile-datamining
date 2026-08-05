@@ -2,7 +2,7 @@
 import { isObject } from "04529_isObject.js";
 
 export default function ToPropertyDescriptor(enumerable) {
-  if (isObject /* isObject */(enumerable)) {
+  if (isObject(enumerable)) {
     const obj = {};
     if (tmp(573)(enumerable, "enumerable")) {
       obj["[[Enumerable]]"] = tmp(4582)(enumerable.enumerable);

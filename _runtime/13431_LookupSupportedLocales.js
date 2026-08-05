@@ -9,8 +9,8 @@ arg5.LookupSupportedLocales = function LookupSupportedLocales(arg0, arg1) {
     let str = arg1[num];
     let tmp = require;
     let tmp2 = dependencyMap;
-    let replaced = str.replace(isMatched /* isMatched */.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
-    let BestAvailableLocaleResult = BestAvailableLocale /* BestAvailableLocale */.BestAvailableLocale(arg0, replaced);
+    let replaced = str.replace(isMatched.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    let BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
     let tmp5 = num;
     if (BestAvailableLocaleResult) {
       let arr = items.push(BestAvailableLocaleResult);

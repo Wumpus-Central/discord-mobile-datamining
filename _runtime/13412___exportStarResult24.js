@@ -26,19 +26,19 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
     let num3 = 0;
     let timesResult1 = isNaN;
     if (!isNaN.isZero()) {
-      getMultiInternalSlots /* getMultiInternalSlots */.invariant(isNaN.isFinite(), "Input must be a mathematical value");
+      getMultiInternalSlots.invariant(isNaN.isFinite(), "Input must be a mathematical value");
       let timesResult = isNaN;
       if ("percent" == internalSlots.style) {
         timesResult = isNaN.times(100);
       }
-      [tmp7, num4] = __exportStarResult13 /* __exportStarResult13 */.ComputeExponent(internalSlots, timesResult);
+      [tmp7, num4] = __exportStarResult13.ComputeExponent(internalSlots, timesResult);
       timesResult1 = timesResult.times(digitsToString.default.pow(10, -tmp7));
       num3 = tmp7;
-      const ComputeExponentResult = __exportStarResult13 /* __exportStarResult13 */.ComputeExponent(internalSlots, timesResult);
+      const ComputeExponentResult = __exportStarResult13.ComputeExponent(internalSlots, timesResult);
       const _default = digitsToString.default;
       const tmp3 = require;
     }
-    const result = __exportStarResult21 /* __exportStarResult21 */.FormatNumericToString(internalSlots, timesResult1);
+    const result = __exportStarResult21.FormatNumericToString(internalSlots, timesResult1);
     ({ formattedString, roundedNumber } = result);
     num = num3;
     num2 = num4;
@@ -76,7 +76,7 @@ export const PartitionNumberPattern = function PartitionNumberPattern(internalSl
       }
       num7 = num9;
     } else {
-      getMultiInternalSlots /* getMultiInternalSlots */.invariant("negative" === signDisplay, "signDisplay must be \"negative\"");
+      getMultiInternalSlots.invariant("negative" === signDisplay, "signDisplay must be \"negative\"");
       let num8 = 0;
       if (roundedNumber.isNegative()) {
         num8 = 0;

@@ -19,77 +19,77 @@ arg5.isTTF = undefined;
 arg5.isDOC = undefined;
 arg5.isPCAP = undefined;
 arg5.isBLEND = function isBLEND(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "blend");
 };
 arg5.isELF = function isELF(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "elf");
 };
 arg5.isEXE = function isEXE(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "exe");
 };
 arg5.isMACHO = function isMACHO(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "macho");
 };
 arg5.isINDD = function isINDD(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "indd");
 };
 arg5.isORC = function isORC(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "orc");
 };
 arg5.isPARQUET = function isPARQUET(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "parquet");
 };
 arg5.isPDF = function isPDF(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "pdf");
 };
 arg5.isPS = function isPS(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "ps");
 };
 arg5.isRTF = function isRTF(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "rtf");
 };
 arg5.isSQLITE = function isSQLITE(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "sqlite");
 };
 arg5.isSTL = function isSTL(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "stl");
 };
 arg5.isTTF = function isTTF(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "ttf");
 };
 arg5.isDOC = function isDOC(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "doc");
 };
 arg5.isPCAP = function isPCAP(fileChunk) {
-  fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk);
+  fileChunk = getFileChunk.getFileChunk(fileChunk);
   const FileTypes = 04870__.FileTypes;
   return FileTypes.checkByFileType(fileChunk, "pcap");
 };

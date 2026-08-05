@@ -14,7 +14,7 @@ function triggerHandlers(arg0, arg1) {
       try {
         tmp14(arg1);
       } catch (tmp17) {
-        if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+        if (__SENTRY_DEBUG__.DEBUG_BUILD) {
           const debug = tmp18(817).debug;
           debug.error(tmp2 + tmp6 + tmp3 + tmp18(817).getFunctionName(tmp7) + tmp4, tmp17);
           const tmp18Result = tmp18(817);

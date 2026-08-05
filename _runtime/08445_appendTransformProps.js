@@ -16,7 +16,7 @@ function appendTransformProps(arg0) {
   let y;
   ({ originX, originY } = arg0);
   ({ x, y, scaleX, scaleY, rotation, skewX, skewY } = arg0);
-  append /* append */.appendTransform(x + originX, y + originY, scaleX, scaleY, rotation, skewX, skewY, originX, originY);
+  append.appendTransform(x + originX, y + originY, scaleX, scaleY, rotation, skewX, skewY, originX, originY);
 }
 function universal2axis(num) {
   let num2 = num;
@@ -182,7 +182,7 @@ function transformToMatrix(arg0, arr) {
       return null;
     }
   }
-  append /* append */.reset();
+  append.reset();
   if (arg0) {
     appendTransformProps(arg0);
   }
@@ -215,8 +215,8 @@ function transformToMatrix(arg0, arr) {
       }
     }
   }
-  const obj = append /* append */;
-  return append /* append */.toArray();
+  const obj = append;
+  return append.toArray();
 }
 arg5.default = function extractTransform(arr) {
   if (Array.isArray(arr)) {
@@ -226,14 +226,14 @@ arg5.default = function extractTransform(arr) {
   }
   if (typeof arr === "string") {
     try {
-      const parsed = peg$SyntaxError /* peg$SyntaxError */.parse(arr);
+      const parsed = peg$SyntaxError.parse(arr);
       const items = [, , , , , ];
       [arr[0], arr[2], arr[4], arr[1], arr[3], arr[5]] = parsed;
       return items;
     } catch (tmp6) {
       const _console = tmp.console;
       _console.error(tmp6);
-      return append /* append */.identity;
+      return append.identity;
     }
   } else {
     let transform;
@@ -248,8 +248,8 @@ arg5.props2transform = props2transform;
 arg5.transformToMatrix = transformToMatrix;
 arg5.extractTransformSvgView = function extractTransformSvgView(transform) {
   if (typeof transform.transform === "string") {
-    transform = peg$SyntaxError /* peg$SyntaxError */.parse(transform.transform);
-    const obj = peg$SyntaxError /* peg$SyntaxError */;
+    transform = peg$SyntaxError.parse(transform.transform);
+    const obj = peg$SyntaxError;
   } else {
     transform = transform.transform;
   }

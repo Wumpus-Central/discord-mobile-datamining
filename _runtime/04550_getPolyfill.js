@@ -18,5 +18,5 @@ export default function getPolyfill() {
       }
     }
   }
-  trim5 = trim /* trim */;
+  trim5 = trim;
 };

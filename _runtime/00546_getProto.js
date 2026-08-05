@@ -4,7 +4,7 @@ import { 00548__ } from "metro/00548__.js";
 import { 00550__ } from "metro/00550__.js";
 if (require("getPrototypeOf")) {
   function getProto(arg0) {
-    return getPrototypeOf /* getPrototypeOf */(arg0);
+    return getPrototypeOf(arg0);
   }
 } else if (require("module_548")) {
   getProto = function getProto(obj) {

@@ -7,7 +7,7 @@ obj = {};
 Object.defineProperty(obj, "hairlineWidth", {
   get: () => {
     if (null == closure_3) {
-      const _default = PixelRatio /* PixelRatio */.default;
+      const _default = PixelRatio.default;
       const roundToNearestPixelResult = _default.roundToNearestPixel(0.4);
       closure_3 = roundToNearestPixelResult;
       if (0 === roundToNearestPixelResult) {

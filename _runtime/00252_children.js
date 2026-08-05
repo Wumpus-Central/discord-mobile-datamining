@@ -20,11 +20,11 @@ export default function _default(rootTag) {
     tmp2 = <WrapperComponent initialProps={null}>{null}</WrapperComponent>;
   }
   obj = { value: null, children: null };
-  obj[0] = RootTagContext /* RootTagContext */.createRootTag(rootTag.rootTag);
-  const obj3 = RootTagContext /* RootTagContext */;
+  obj[0] = RootTagContext.createRootTag(rootTag.rootTag);
+  const obj3 = RootTagContext;
   if (!rootViewStyle) {
     rootViewStyle = root.root;
   }
   obj[1] = jsx(View, { style: rootViewStyle, pointerEvents: "box-none", children: tmp2 });
-  return jsx(RootTagContext /* RootTagContext */.RootTagContext.Provider, { value: null, children: null });
+  return jsx(RootTagContext.RootTagContext.Provider, { value: null, children: null });
 };

@@ -16,6 +16,6 @@ export default function _inherits(value, fn) {
   value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
   Object.defineProperty(value, "prototype", { writable: false });
   if (fn) {
-    _setPrototypeOf /* _setPrototypeOf */(value, fn);
+    _setPrototypeOf(value, fn);
   }
 };

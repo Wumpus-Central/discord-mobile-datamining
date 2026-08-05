@@ -9,7 +9,7 @@ function startIdleSpan(name) {
   let finalTimeout;
   let idleTimeout;
   ({ finalTimeout, idleTimeout } = arg1);
-  let obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  let obj = registerSpanErrorInstrumentation;
   const client = obj.getClient();
   if (client) {
     if ("background" === AppState.currentState) {
@@ -66,9 +66,9 @@ export const startIdleNavigationSpan = (arg0) => {
   if (flag === undefined) {
     flag = false;
   }
-  let obj1 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  let obj1 = registerSpanErrorInstrumentation;
   const client = obj1.getClient();
-  const obj3 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  const obj3 = registerSpanErrorInstrumentation;
   if (client) {
     const activeSpan = obj3.getActiveSpan();
     let isRootSpanResult = activeSpan;
@@ -132,13 +132,13 @@ export const startIdleNavigationSpan = (arg0) => {
 export { startIdleSpan };
 export const getDefaultIdleNavigationSpanOptions = function getDefaultIdleNavigationSpanOptions() {
   const obj = { name: c3, op: "navigation", forceTransaction: true, scope: null };
-  obj[3] = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getCurrentScope();
+  obj[3] = registerSpanErrorInstrumentation.getCurrentScope();
   return obj;
 };
 export const isSentryInteractionSpan = function isSentryInteractionSpan(activeSpan) {
   const items = [01158__.SPAN_ORIGIN_AUTO_INTERACTION, 01158__.SPAN_ORIGIN_MANUAL_INTERACTION];
-  const obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
-  return items.includes(registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.spanToJSON(activeSpan).origin || "");
+  const obj = registerSpanErrorInstrumentation;
+  return items.includes(registerSpanErrorInstrumentation.spanToJSON(activeSpan).origin || "");
 };
 export const SCOPE_SPAN_FIELD = "_sentrySpan";
 export const clearActiveSpanFromScope = function clearActiveSpanFromScope(currentScope) {

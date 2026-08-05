@@ -2,7 +2,7 @@
 import { SemVer } from "13020_SemVer.js";
 
 export default (arg0, arg1) => {
-  const tmp = SemVer /* SemVer */(arg0, arg1);
+  const tmp = SemVer(arg0, arg1);
   let prerelease = null;
   if (tmp) {
     prerelease = null;

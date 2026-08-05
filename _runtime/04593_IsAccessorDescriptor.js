@@ -4,7 +4,7 @@ import { isPropertyDescriptor } from "04580_isPropertyDescriptor.js";
 export default function IsAccessorDescriptor(arg0) {
   if (undefined === arg0) {
     return false;
-  } else if (isPropertyDescriptor /* isPropertyDescriptor */(arg0)) {
+  } else if (isPropertyDescriptor(arg0)) {
     const tmp7 = tmp(573)(arg0, "[[Get]]");
     let tmp8 = !tmp7;
     if (!tmp7) {

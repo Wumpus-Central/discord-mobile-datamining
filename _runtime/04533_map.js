@@ -6,7 +6,7 @@ import { RequireObjectCoercible } from "04538_RequireObjectCoercible.js";
 let closure_2 = callBind.apply(require("getPolyfill")());
 let closure_3 = require("callBoundIntrinsic")("Array.prototype.slice");
 function map(arg0, arg1) {
-  RequireObjectCoercible /* RequireObjectCoercible */(arg0);
+  RequireObjectCoercible(arg0);
   return callback(arg0, callback2(arguments, 1));
 }
 const obj = { getPolyfill: null, implementation: null, shim: null };

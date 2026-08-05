@@ -316,10 +316,10 @@ function doEval(arg0) {
     const tmp12 = doEval("%AsyncGenerator%");
     let tmp3 = tmp12;
     if (tmp12) {
-      tmp3 = getProto /* getProto */;
+      tmp3 = getProto;
     }
     if (tmp3) {
-      prototype = getProto /* getProto */(tmp12.prototype);
+      prototype = getProto(tmp12.prototype);
     }
   }
   obj[arg0] = prototype;

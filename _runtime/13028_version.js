@@ -2,7 +2,7 @@
 import { SemVer } from "13020_SemVer.js";
 
 export default (str) => {
-  const tmp = SemVer /* SemVer */;
+  const tmp = SemVer;
   const tmpResult = tmp(str.trim().replace(/^[=v]+/, ""), arg1);
   let version = null;
   if (tmpResult) {

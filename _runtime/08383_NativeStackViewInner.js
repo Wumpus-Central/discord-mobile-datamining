@@ -440,5 +440,5 @@ export default function NativeStackView(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj[0] = callback2(NativeStackViewInner, obj);
-  return callback2(Background /* Background */.SafeAreaProviderCompat, obj);
+  return callback2(Background.SafeAreaProviderCompat, obj);
 };

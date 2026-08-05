@@ -26,7 +26,7 @@ export default function extractBrush(str) {
       obj[1] = match[1];
       return obj;
     } else {
-      obj = percentTo255 /* percentTo255 */;
+      obj = percentTo255;
       const tmp4 = processColor(obj.convertPercentageColor(str));
       if (typeof tmp4 === "number") {
         obj = { type: 0, payload: null };

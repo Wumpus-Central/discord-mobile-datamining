@@ -9,8 +9,8 @@ export default (version, pre, major2) => {
     tmp2 = major2;
   }
   try {
-    let tmp7 = SemVer /* SemVer */;
-    if (version instanceof SemVer /* SemVer */) {
+    let tmp7 = SemVer;
+    if (version instanceof SemVer) {
       version = version.version;
     }
     tmp7 = new tmp7(version, tmp3);

@@ -5,7 +5,7 @@ import { 13488__ } from "13488__.js";
 export default (arg0, arg1) => {
   let tmp4;
   if (!13488__(arg0[arg1])) {
-    tmp4 = all /* all */(tmp);
+    tmp4 = all(tmp);
   }
   return tmp4;
 };

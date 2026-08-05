@@ -228,13 +228,13 @@ if (self2) {
     const _Object19 = Object;
     const obj14 = { enumerable: true, get: null };
     obj14[1] = function get() {
-      return stringProcessor /* stringProcessor */.toJSONSchema;
+      return stringProcessor.toJSONSchema;
     };
     Object.defineProperty(exports, "toJSONSchema", obj14);
     const _Object20 = Object;
     const obj15 = { enumerable: true, get: null };
     obj15[1] = function get() {
-      return convertBaseSchema /* convertBaseSchema */.fromJSONSchema;
+      return convertBaseSchema.fromJSONSchema;
     };
     Object.defineProperty(exports, "fromJSONSchema", obj15);
     exports.locales = fn(require("module_12283"));

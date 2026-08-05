@@ -5,7 +5,7 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.captureError = function captureError(error, prompt_execution, arg2) {
   try {
-    let obj = getClient /* getClient */;
+    let obj = getClient;
     if (obj.getClient()) {
       let tmpResult = tmp(819);
       const activeSpan = tmpResult.getActiveSpan();

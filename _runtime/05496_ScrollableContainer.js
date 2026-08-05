@@ -21,7 +21,7 @@ export const ScrollableContainer = require("noop").forwardRef(function Scrollabl
   obj = { ref };
   const merged1 = Object.assign(merged);
   obj[1] = <ScrollableComponent ref={arg1} />;
-  const tmp6 = jsx(BottomSheetDraggableScrollable /* BottomSheetDraggableScrollable */.BottomSheetDraggableScrollable, { ref });
+  const tmp6 = jsx(BottomSheetDraggableScrollable.BottomSheetDraggableScrollable, { ref });
   let tmp2Result = tmp6;
   if (onRefresh) {
     obj = { scrollableGesture: null, refreshing: null, progressViewOffset: null, onRefresh: null, style: null, children: null };
@@ -29,7 +29,7 @@ export const ScrollableContainer = require("noop").forwardRef(function Scrollabl
     obj[1] = refreshing;
     obj[2] = progressViewOffset;
     obj[3] = onRefresh;
-    obj[4] = styles /* styles */.styles.container;
+    obj[4] = styles.styles.container;
     obj[5] = tmp6;
     tmp2Result = jsx(memo, { scrollableGesture: null, refreshing: null, progressViewOffset: null, onRefresh: null, style: null, children: null });
     const tmp9 = memo;

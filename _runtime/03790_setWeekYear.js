@@ -49,7 +49,7 @@ let closure_6 = tmp11;
 
 export default function setWeekYear(arg0, arg1, firstWeekContainsDate) {
   tmp11.default(2, arguments);
-  const defaultOptions = getDefaultOptions /* getDefaultOptions */.getDefaultOptions();
+  const defaultOptions = getDefaultOptions.getDefaultOptions();
   let prop;
   if (null != firstWeekContainsDate) {
     prop = firstWeekContainsDate.firstWeekContainsDate;

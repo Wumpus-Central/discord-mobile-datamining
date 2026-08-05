@@ -30,7 +30,7 @@ export const addItemToEnvelope = function addItemToEnvelope(arg0, arg1) {
 export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeItem(data) {
   if (typeof data.data === "string") {
     data = data.data;
-    let obj = getGlobalSingleton /* getGlobalSingleton */;
+    let obj = getGlobalSingleton;
     const sentryCarrier = obj.getSentryCarrier(00821__.GLOBAL_OBJ);
     if (sentryCarrier.encodePolyfill) {
       let encodePolyfillResult = sentryCarrier.encodePolyfill(data);
@@ -74,9 +74,9 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
   let tmp4 = arg2 && arg3;
   if (tmp4) {
     obj = { dsn: null };
-    obj[0] = dsnFromString /* dsnFromString */.dsnToString(arg3);
+    obj[0] = dsnFromString.dsnToString(arg3);
     tmp4 = obj;
-    const obj5 = dsnFromString /* dsnFromString */;
+    const obj5 = dsnFromString;
   }
   const merged1 = Object.assign(tmp4);
   let tmp8 = prop;

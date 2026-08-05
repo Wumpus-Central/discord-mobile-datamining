@@ -26,19 +26,19 @@ const memoResult = memo((rootHostName) => {
   if (flag === undefined) {
     flag = true;
   }
-  [tmp4, tmp5] = callback(callback2(registerHost /* registerHost */.reducer, 04160__.INITIAL_STATE), 2);
+  [tmp4, tmp5] = callback(callback2(registerHost.reducer, 04160__.INITIAL_STATE), 2);
   let obj = { value: tmp5, children: null };
   obj = { value: tmp4, children: null };
   const items = [rootHostName.children, ];
   if (flag) {
     obj = { name: null };
     obj[0] = str;
-    flag = tmp6(PortalHost /* PortalHost */.PortalHost, obj);
+    flag = tmp6(PortalHost.PortalHost, obj);
   }
   items[1] = flag;
   obj[1] = items;
-  obj[1] = closure_5(createContext /* createContext */.PortalStateContext.Provider, obj);
-  return closure_4(createContext /* createContext */.PortalDispatchContext.Provider, obj);
+  obj[1] = closure_5(createContext.PortalStateContext.Provider, obj);
+  return closure_4(createContext.PortalDispatchContext.Provider, obj);
 });
 memoResult.displayName = "PortalProvider";
 

@@ -5,9 +5,9 @@ const require = arg1;
 const dependencyMap = arg6;
 arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise) {
   const items = [];
-  let obj = isHermesEnabled /* isHermesEnabled */;
+  let obj = isHermesEnabled;
   const push = items.push;
-  const obj2 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  const obj2 = debugSymbolicatorIntegration;
   if (notWebResult) {
     obj = { patchGlobalPromise: null };
     obj[0] = patchGlobalPromise.patchGlobalPromise;
@@ -26,25 +26,25 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     const tmpResult1 = tmp(811);
   }
   notWebResult = obj.notWeb();
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.inboundFiltersIntegration());
-  const tmpResult3 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.functionToStringIntegration());
-  const tmpResult4 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.breadcrumbsIntegration());
-  const tmpResult5 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.dedupeIntegration());
-  const tmpResult6 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.httpContextIntegration());
-  const tmpResult7 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.nativeReleaseIntegration());
-  const tmpResult8 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.eventOriginIntegration());
-  const tmpResult9 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.sdkInfoIntegration());
-  const tmpResult10 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.reactNativeInfoIntegration());
-  const tmpResult11 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.createReactNativeRewriteFrames());
+  items.push(debugSymbolicatorIntegration.inboundFiltersIntegration());
+  const tmpResult3 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.functionToStringIntegration());
+  const tmpResult4 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.breadcrumbsIntegration());
+  const tmpResult5 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.dedupeIntegration());
+  const tmpResult6 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.httpContextIntegration());
+  const tmpResult7 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.nativeReleaseIntegration());
+  const tmpResult8 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.eventOriginIntegration());
+  const tmpResult9 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.sdkInfoIntegration());
+  const tmpResult10 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.reactNativeInfoIntegration());
+  const tmpResult11 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.createReactNativeRewriteFrames());
   if (patchGlobalPromise.enableNative) {
     items.push(tmp(811).deviceContextIntegration());
     const tmpResult13 = tmp(811);
@@ -89,7 +89,7 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     items.push(tmp(811).appStartIntegration());
     const tmpResult20 = tmp(811);
   }
-  const tmpResult12 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
+  const tmpResult12 = debugSymbolicatorIntegration;
   let enableNative2 = tmp26;
   if (tmp26) {
     enableNative2 = patchGlobalPromise.enableNativeFramesTracking;
@@ -97,7 +97,7 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
   if (enableNative2) {
     enableNative2 = patchGlobalPromise.enableNative;
   }
-  const nativeFramesIntegrations = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.createNativeFramesIntegrations(enableNative2);
+  const nativeFramesIntegrations = debugSymbolicatorIntegration.createNativeFramesIntegrations(enableNative2);
   if (nativeFramesIntegrations) {
     items.push(nativeFramesIntegrations);
   }
@@ -135,8 +135,8 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     items.push(tmp(811).httpClientIntegration());
     const tmpResult27 = tmp(811);
   }
-  const tmpResult21 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.expoContextIntegration());
+  const tmpResult21 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.expoContextIntegration());
   if (patchGlobalPromise.spotlight) {
     let spotlight;
     if (typeof patchGlobalPromise.spotlight === "string") {
@@ -190,7 +190,7 @@ arg5.getDefaultIntegrations = function getDefaultIntegrations(patchGlobalPromise
     items.push(tmp(811).mobileReplayIntegration());
     const tmpResult31 = tmp(811);
   }
-  const tmpResult28 = debugSymbolicatorIntegration /* debugSymbolicatorIntegration */;
-  items.push(debugSymbolicatorIntegration /* debugSymbolicatorIntegration */.primitiveTagIntegration());
+  const tmpResult28 = debugSymbolicatorIntegration;
+  items.push(debugSymbolicatorIntegration.primitiveTagIntegration());
   return items;
 };

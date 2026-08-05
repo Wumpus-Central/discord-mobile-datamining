@@ -18,7 +18,7 @@ function rubberBandDecay(current, lastTimestamp, deceleration) {
     num2 = current - deceleration.clamp[num];
   }
   const result = -1 - deceleration.deceleration * (lastTimestamp - startTimestamp);
-  const diff = velocity * Math.exp(result * isValidRubberBandConfig /* isValidRubberBandConfig */.SLOPE_FACTOR) - num2 * deceleration.rubberBandFactor;
+  const diff = velocity * Math.exp(result * isValidRubberBandConfig.SLOPE_FACTOR) - num2 * deceleration.rubberBandFactor;
   if (Math.abs(num2) > 0.1) {
     current.springActive = true;
   } else if (current.springActive) {
@@ -27,7 +27,7 @@ function rubberBandDecay(current, lastTimestamp, deceleration) {
   } else {
     const _Math = Math;
     const absolute1 = Math.abs(diff);
-    if (absolute1 < isValidRubberBandConfig /* isValidRubberBandConfig */.VELOCITY_EPS) {
+    if (absolute1 < isValidRubberBandConfig.VELOCITY_EPS) {
       return true;
     }
   }

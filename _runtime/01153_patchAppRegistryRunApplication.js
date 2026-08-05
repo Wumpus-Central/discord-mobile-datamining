@@ -60,8 +60,8 @@ arg5.patchAppRegistryRunApplication = patchAppRegistryRunApplication;
 arg5.getAppRegistryIntegration = () => {
   let client = arg0;
   if (arg0 === undefined) {
-    client = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getClient();
-    const obj2 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+    client = registerSpanErrorInstrumentation.getClient();
+    const obj2 = registerSpanErrorInstrumentation;
   }
   if (client) {
     return client.getIntegrationByName(AppRegistry);

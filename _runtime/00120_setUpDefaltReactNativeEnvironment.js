@@ -19,20 +19,20 @@ let c2 = false;
 arg5.default = function setUpDefaltReactNativeEnvironment() {
   if (!c2) {
     c2 = true;
-    env /* env */;
-    setUpDOM /* setUpDOM */.default();
-    NativePerformanceCxx /* NativePerformanceCxx */;
-    polyfillObjectProperty /* polyfillObjectProperty */;
+    env;
+    setUpDOM.default();
+    NativePerformanceCxx;
+    polyfillObjectProperty;
     00179__;
     00188__;
     00195__;
     00198__;
-    Alert /* Alert */;
-    polyfillObjectProperty /* polyfillObjectProperty */;
+    Alert;
+    polyfillObjectProperty;
     00235__;
-    __fetchSegment /* __fetchSegment */;
-    AppRegistry /* AppRegistry */;
-    const obj = setUpDOM /* setUpDOM */;
+    __fetchSegment;
+    AppRegistry;
+    const obj = setUpDOM;
     if (obj2.enableIntersectionObserverByDefault()) {
       let tmpResult = tmp(262);
       tmpResult.default();
@@ -42,6 +42,6 @@ arg5.default = function setUpDefaltReactNativeEnvironment() {
       tmp(267).default();
       const tmpResult1 = tmp(267);
     }
-    obj2 = javaScriptFlagGetter /* javaScriptFlagGetter */;
+    obj2 = javaScriptFlagGetter;
   }
 };

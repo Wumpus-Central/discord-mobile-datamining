@@ -5,10 +5,10 @@ import { captureCheckIn } from "00869_captureCheckIn.js";
 import { handleResponseError } from "00970_handleResponseError.js";
 
 function addPrivateRequestAttributes(setAttributes, prompt) {
-  let obj = handleResponseError /* handleResponseError */;
+  let obj = handleResponseError;
   const messagesFromParamsResult = obj.messagesFromParams(prompt);
   const tmp = require;
-  handleResponseError /* handleResponseError */.setMessagesAttribute(setAttributes, messagesFromParamsResult);
+  handleResponseError.setMessagesAttribute(setAttributes, messagesFromParamsResult);
   if ("prompt" in prompt) {
     obj = {};
     const _JSON = JSON;
@@ -17,12 +17,12 @@ function addPrivateRequestAttributes(setAttributes, prompt) {
   }
 }
 function handleStreamingError(arg0, isRecording, arg2) {
-  let obj = captureCheckIn /* captureCheckIn */;
+  let obj = captureCheckIn;
   obj = { function: arg2 };
   obj.captureException(arg0, { mechanism: { handled: false, type: "auto.ai.anthropic", data: obj } });
   if (isRecording.isRecording()) {
     obj = { code: null, message: "internal_error" };
-    obj[0] = getSpanStatusFromHttpCode /* getSpanStatusFromHttpCode */.SPAN_STATUS_ERROR;
+    obj[0] = getSpanStatusFromHttpCode.SPAN_STATUS_ERROR;
     isRecording.setStatus(obj);
     isRecording.end();
   }

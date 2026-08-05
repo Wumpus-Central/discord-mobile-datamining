@@ -14,7 +14,7 @@ export const ORIGINAL_REQ_BODY = forResult;
 export const getBodyString = function getBodyString(fetchRequestArgBody, closure_133) {
   let debug = closure_133;
   if (closure_133 === undefined) {
-    debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
+    debug = registerSpanErrorInstrumentation.debug;
   }
   try {
     if (typeof fetchRequestArgBody === "string") {
@@ -31,7 +31,7 @@ export const getBodyString = function getBodyString(fetchRequestArgBody, closure
           const items2 = [serializeFormData(fetchRequestArgBody)];
           return items2;
         } else if (fetchRequestArgBody) {
-          if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
             debug.log("Skipping network body because of body type", fetchRequestArgBody);
           }
           const items3 = [undefined, "UNPARSEABLE_BODY_TYPE"];
@@ -43,7 +43,7 @@ export const getBodyString = function getBodyString(fetchRequestArgBody, closure
       }
     }
   } catch (tmp9) {
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       obj.error(tmp9, "Failed to serialize body", tmp2);
     }
     const items5 = [tmp, "BODY_PARSE_ERROR"];
@@ -93,8 +93,8 @@ export const parseXhrResponseHeaders = function parseXhrResponseHeaders(xhr) {
     }
     return reduced;
   } catch (tmp5) {
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      const debug = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.debug;
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+      const debug = registerSpanErrorInstrumentation.debug;
       debug.error(tmp5, "Failed to get xhr response headers", tmp2);
     }
     return {};

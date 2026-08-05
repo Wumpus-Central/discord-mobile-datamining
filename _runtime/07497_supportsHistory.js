@@ -3,7 +3,7 @@ import { getGlobalSingleton } from "07376_getGlobalSingleton.js";
 const require = arg1;
 const dependencyMap = arg6;
 arg5.supportsHistory = function supportsHistory() {
-  const chrome = getGlobalSingleton /* getGlobalSingleton */.GLOBAL_OBJ.chrome;
+  const chrome = getGlobalSingleton.GLOBAL_OBJ.chrome;
   let runtime = chrome;
   if (chrome) {
     runtime = chrome.app;

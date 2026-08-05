@@ -8,7 +8,7 @@ arg5.reactRouterV3BrowserTracingIntegration = function reactRouterV3BrowserTraci
   let closure_3;
   let dependencyMap;
   let instrumentPageLoad;
-  let obj = feedbackAsyncIntegration /* feedbackAsyncIntegration */;
+  let obj = feedbackAsyncIntegration;
   obj = {};
   const merged = Object.assign(instrumentNavigation);
   obj.instrumentPageLoad = false;

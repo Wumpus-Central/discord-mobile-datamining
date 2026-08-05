@@ -9,7 +9,7 @@ arg5.hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
     }
   }
   let tmp = tracesSampler;
-  const client = getClient /* getClient */.getClient();
+  const client = getClient.getClient();
   if (!tracesSampler) {
     let options = client;
     if (client) {

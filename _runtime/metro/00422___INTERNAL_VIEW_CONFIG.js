@@ -12,7 +12,7 @@ obj[2] = obj;
 obj = {
   setNativeValue(current, arg1) {
     const items = [arg1];
-    renderElement /* renderElement */.dispatchCommand(current, "setNativeValue", items);
+    renderElement.dispatchCommand(current, "setNativeValue", items);
   }
 };
 

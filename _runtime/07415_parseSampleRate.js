@@ -23,8 +23,8 @@ arg5.parseSampleRate = function parseSampleRate(flag) {
         }
       }
     }
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
-      const logger = consoleSandbox /* consoleSandbox */.logger;
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+      const logger = consoleSandbox.logger;
       const _JSON = JSON;
       const json = JSON.stringify(flag);
       const _JSON2 = JSON;

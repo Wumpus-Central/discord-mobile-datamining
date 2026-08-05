@@ -16,9 +16,9 @@ arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
   if (location.location.lineNumber) {
     sum1 = location.location.lineNumber + 1;
   }
-  let obj = addNonEnumerableProperty /* addNonEnumerableProperty */;
+  let obj = addNonEnumerableProperty;
   obj = { filename: replaced, module: arg2(replaced), function: null, colno: null, lineno: null, in_app: null };
-  obj[2] = location.functionName || createStackParser /* createStackParser */.UNKNOWN_FUNCTION;
+  obj[2] = location.functionName || createStackParser.UNKNOWN_FUNCTION;
   obj[3] = sum;
   obj[4] = sum1;
   let filenameIsInAppResult;

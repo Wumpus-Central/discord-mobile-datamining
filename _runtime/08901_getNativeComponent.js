@@ -16,7 +16,7 @@ export const getNativeComponent = () => {
       return null;
     } else {
       const _Error = Error;
-      throw Error(getInstallationErrorMessage /* getInstallationErrorMessage */.getInstallationErrorMessage());
+      throw Error(getInstallationErrorMessage.getInstallationErrorMessage());
     }
   }
 };
@@ -33,7 +33,7 @@ export const getNativeModule = () => {
       return null;
     } else {
       const _Error = Error;
-      throw Error(getInstallationErrorMessage /* getInstallationErrorMessage */.getInstallationErrorMessage());
+      throw Error(getInstallationErrorMessage.getInstallationErrorMessage());
     }
   }
 };

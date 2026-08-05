@@ -104,7 +104,7 @@ function getNotificationAttributes(arg0, requestId) {
       const _String = String;
       obj[00940__.MCP_RESOURCE_URI_ATTRIBUTE] = String(requestId.uri);
       const _String2 = String;
-      const result = getHttpSpanDetailsFromUrlObject /* getHttpSpanDetailsFromUrlObject */.parseStringToURLObject(String(requestId.uri));
+      const result = getHttpSpanDetailsFromUrlObject.parseStringToURLObject(String(requestId.uri));
       let tmp7 = result;
       if (result) {
         tmp7 = !tmp3(900).isURLObjectRelative(result);
@@ -114,7 +114,7 @@ function getNotificationAttributes(arg0, requestId) {
         obj["mcp.resource.protocol"] = result.protocol.replace(":", "");
         const str2 = result.protocol;
       }
-      const obj2 = getHttpSpanDetailsFromUrlObject /* getHttpSpanDetailsFromUrlObject */;
+      const obj2 = getHttpSpanDetailsFromUrlObject;
       tmp3 = require;
     }
   } else if ("notifications/initialized" === arg0) {
@@ -127,7 +127,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.buildTypeSpecificAttributes = function buildTypeSpecificAttributes(request, message, params, recordInputs) {
   let obj = params;
   if ("request" === request) {
-    let obj2 = extractTargetInfo /* extractTargetInfo */;
+    let obj2 = extractTargetInfo;
     if (!obj) {
       obj = {};
     }

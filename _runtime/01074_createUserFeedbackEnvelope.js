@@ -25,13 +25,13 @@ arg5.createUserFeedbackEnvelope = function createUserFeedbackEnvelope(event_id, 
   let tmp3 = tunnel.tunnel && dsn;
   if (tmp3) {
     const obj1 = { dsn: null };
-    obj1[0] = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.dsnToString(dsn);
+    obj1[0] = registerSpanErrorInstrumentation.dsnToString(dsn);
     tmp3 = obj1;
-    const obj6 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+    const obj6 = registerSpanErrorInstrumentation;
   }
   const merged1 = Object.assign(tmp3);
   const items = [{ type: "user_report" }, event_id];
   const date = new Date();
   const items1 = [items];
-  return registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.createEnvelope(obj, items1);
+  return registerSpanErrorInstrumentation.createEnvelope(obj, items1);
 };

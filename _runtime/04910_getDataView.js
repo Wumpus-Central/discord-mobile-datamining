@@ -7,12 +7,12 @@ arg5.default = {
   isWebpFile(dataView) {
     let tmp = dataView;
     if (tmp) {
-      tmp = getDataView /* getDataView */.getStringFromDataView(dataView, 0, 4) === "RIFF";
-      const obj = getDataView /* getDataView */;
+      tmp = getDataView.getStringFromDataView(dataView, 0, 4) === "RIFF";
+      const obj = getDataView;
     }
     if (tmp) {
-      tmp = getDataView /* getDataView */.getStringFromDataView(dataView, 8, 4) === "WEBP";
-      const obj2 = getDataView /* getDataView */;
+      tmp = getDataView.getStringFromDataView(dataView, 8, 4) === "WEBP";
+      const obj2 = getDataView;
     }
     return tmp;
   },
@@ -28,7 +28,7 @@ arg5.default = {
       while (true) {
         let tmp10 = dependencyMap;
         let tmp9 = require;
-        let obj = getDataView /* getDataView */;
+        let obj = getDataView;
         let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
         let uint32 = byteLength.getUint32(num + 4, true);
         let tmp13 = module;

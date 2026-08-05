@@ -10,9 +10,9 @@ export default function truncate(num) {
     }
   }
   if (num < 0) {
-    let tmp3 = -floor /* floor */(-num);
+    let tmp3 = -floor(-num);
   } else {
-    tmp3 = floor /* floor */(num);
+    tmp3 = floor(num);
   }
   num = 0;
   if (0 !== tmp3) {

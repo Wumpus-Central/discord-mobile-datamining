@@ -3,10 +3,10 @@ import { registerSpanErrorInstrumentation } from "00817_registerSpanErrorInstrum
 const require = arg1;
 const dependencyMap = arg6;
 arg5.isSentrySpan = function isSentrySpan(c4) {
-  return c4 instanceof registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.SentrySpan;
+  return c4 instanceof registerSpanErrorInstrumentation.SentrySpan;
 };
 arg5.isRootSpan = function isRootSpan(activeSpan) {
-  return activeSpan === registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.getRootSpan(activeSpan);
+  return activeSpan === registerSpanErrorInstrumentation.getRootSpan(activeSpan);
 };
 arg5.setEndTimeValue = function setEndTimeValue(outer1_2, _endTime) {
   outer1_2._endTime = _endTime;

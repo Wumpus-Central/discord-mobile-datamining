@@ -11,14 +11,14 @@ export const useScrollable = () => {
   const tmp = callback2(null);
   const require = tmp;
   const dependencyMap = callback2(null);
-  let obj = cancelAnimation /* cancelAnimation */;
-  const sharedValue = obj.useSharedValue(GESTURE_SOURCE /* GESTURE_SOURCE */.SCROLLABLE_TYPE.UNDETERMINED);
-  const sharedValue1 = cancelAnimation /* cancelAnimation */.useSharedValue(0);
-  const obj2 = cancelAnimation /* cancelAnimation */;
-  const sharedValue2 = cancelAnimation /* cancelAnimation */.useSharedValue(GESTURE_SOURCE /* GESTURE_SOURCE */.SCROLLABLE_STATE.UNDETERMINED);
-  const obj3 = cancelAnimation /* cancelAnimation */;
-  const sharedValue3 = cancelAnimation /* cancelAnimation */.useSharedValue(false);
-  const obj4 = cancelAnimation /* cancelAnimation */;
+  let obj = cancelAnimation;
+  const sharedValue = obj.useSharedValue(GESTURE_SOURCE.SCROLLABLE_TYPE.UNDETERMINED);
+  const sharedValue1 = cancelAnimation.useSharedValue(0);
+  const obj2 = cancelAnimation;
+  const sharedValue2 = cancelAnimation.useSharedValue(GESTURE_SOURCE.SCROLLABLE_STATE.UNDETERMINED);
+  const obj3 = cancelAnimation;
+  const sharedValue3 = cancelAnimation.useSharedValue(false);
+  const obj4 = cancelAnimation;
   obj = {
     scrollableRef: tmp,
     animatedScrollableType: sharedValue,

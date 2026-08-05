@@ -11,10 +11,10 @@ require("_isNativeReflectConstruct").addListener("hardwareBackPress", (timeStamp
   }
   const obj = {};
   if (null != timeStamp) {
-    const result = SymbolResult1 /* SymbolResult1 */.setEventInitTimeStamp(obj, timeStamp);
-    const obj2 = SymbolResult1 /* SymbolResult1 */;
+    const result = SymbolResult1.setEventInitTimeStamp(obj, timeStamp);
+    const obj2 = SymbolResult1;
   }
-  const hardwareBackPressEvent = new _isNativeReflectConstruct /* _isNativeReflectConstruct */.HardwareBackPressEvent(obj);
+  const hardwareBackPressEvent = new _isNativeReflectConstruct.HardwareBackPressEvent(obj);
   let diff = closure_3.length - 1;
   if (0 <= diff) {
     while (true) {

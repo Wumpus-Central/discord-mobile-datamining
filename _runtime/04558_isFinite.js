@@ -7,7 +7,7 @@ export default function isFinite(num) {
     tmp = typeof num === "bigint";
   }
   if (tmp) {
-    tmp = !isNaN /* isNaN */(num);
+    tmp = !isNaN(num);
   }
   if (tmp) {
     tmp = num !== Infinity;

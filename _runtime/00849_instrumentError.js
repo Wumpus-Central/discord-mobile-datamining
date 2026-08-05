@@ -25,7 +25,7 @@ function instrumentError() {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let c2 = null;
 arg5.addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(arg0) {
-  addHandler /* addHandler */.addHandler("error", arg0);
-  const obj = addHandler /* addHandler */;
-  addHandler /* addHandler */.maybeInstrument("error", instrumentError);
+  addHandler.addHandler("error", arg0);
+  const obj = addHandler;
+  addHandler.maybeInstrument("error", instrumentError);
 };

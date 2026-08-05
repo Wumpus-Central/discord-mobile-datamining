@@ -14,7 +14,7 @@ const fn = function n(arg0) {
   }
   ({ overrideReduceMotion, onComplete } = arg0);
   if (!configs) {
-    configs = GESTURE_SOURCE /* GESTURE_SOURCE */.ANIMATION_CONFIGS;
+    configs = GESTURE_SOURCE.ANIMATION_CONFIGS;
   }
   if (overrideReduceMotion) {
     configs.reduceMotion = overrideReduceMotion;
@@ -22,7 +22,7 @@ const fn = function n(arg0) {
   if (!("duration" in configs)) {
     if (!("easing" in configs)) {
       let tmp3 = require;
-      let TIMING = GESTURE_SOURCE /* GESTURE_SOURCE */.ANIMATION_METHOD.SPRING;
+      let TIMING = GESTURE_SOURCE.ANIMATION_METHOD.SPRING;
     }
     if (TIMING === tmp3(5341).ANIMATION_METHOD.TIMING) {
       let tmp3Result = tmp3(1606);
@@ -36,7 +36,7 @@ const fn = function n(arg0) {
     }
     return withTimingResult;
   }
-  TIMING = GESTURE_SOURCE /* GESTURE_SOURCE */.ANIMATION_METHOD.TIMING;
+  TIMING = GESTURE_SOURCE.ANIMATION_METHOD.TIMING;
   tmp3 = require;
 };
 fn.__closure = { ANIMATION_CONFIGS: require("GESTURE_SOURCE").ANIMATION_CONFIGS, ANIMATION_METHOD: require("GESTURE_SOURCE").ANIMATION_METHOD, withTiming: require("cancelAnimation").withTiming, withSpring: require("cancelAnimation").withSpring };

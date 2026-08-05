@@ -11,7 +11,7 @@ export default (arg0, arg1) => {
     let tmp11 = key10010;
     let tmp12 = require;
     let tmp13 = dependencyMap;
-    let tmp14 = call /* call */;
+    let tmp14 = call;
     let tmp14Result = tmp14(13522__, key10010);
     let tmp2 = !tmp14Result;
     if (!tmp14Result) {
@@ -31,7 +31,7 @@ export default (arg0, arg1) => {
     let tmp6 = dependencyMap;
     let tmp7 = arg1[num];
     let tmp8 = num;
-    if (call /* call */(tmp, tmp7)) {
+    if (call(tmp, tmp7)) {
       let tmp5Result = tmp5(13523);
       if (!~tmp5Result.indexOf(items, tmp7)) {
         let tmp9 = callback;

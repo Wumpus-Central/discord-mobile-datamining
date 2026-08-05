@@ -22,10 +22,10 @@ function shouldSkipNavigation(locationKey, arg1, arr) {
     if (locationKey.locationKey === arg1) {
       let result = locationKey.routeName;
       if (result) {
-        let obj = pickSplat /* pickSplat */;
+        let obj = pickSplat;
         result = obj.transactionNameHasWildcard(locationKey.routeName);
       }
-      const result1 = pickSplat /* pickSplat */.transactionNameHasWildcard(arr);
+      const result1 = pickSplat.transactionNameHasWildcard(arr);
       let routeName = locationKey.routeName;
       if (routeName) {
         routeName = locationKey.routeName;
@@ -115,11 +115,11 @@ function processResolvedRoutes(arr, children, arg2, activeRootSpan) {
     }
   }
   if (activeRootSpan == null) {
-    let obj = pickSplat /* pickSplat */;
+    let obj = pickSplat;
     activeRootSpan = obj.getActiveRootSpan();
   }
   if (activeRootSpan) {
-    let obj1 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+    let obj1 = registerSpanErrorInstrumentation;
     const spanToJSONResult = obj1.spanToJSON(activeRootSpan);
     if (spanToJSONResult.timestamp) {
       if (tmp12(1142).DEBUG_BUILD) {
@@ -175,7 +175,7 @@ function updateNavigationSpan(activeRootSpan, _location, arg2, arg3, closure_8) 
   if (arg3 === undefined) {
     flag = false;
   }
-  const spanToJSONResult = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.spanToJSON(activeRootSpan);
+  const spanToJSONResult = registerSpanErrorInstrumentation.spanToJSON(activeRootSpan);
   const description = spanToJSONResult.description;
   let prop;
   if (activeRootSpan != null) {
@@ -620,7 +620,7 @@ function handleNavigation(arg0) {
     tmp4Result = closure_8(tmp5, _location, basename);
     const tmp4 = closure_8;
   }
-  let obj1 = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
+  let obj1 = registerSpanErrorInstrumentation;
   const client = obj1.getClient();
   if (client) {
     if (weakSet.has(client)) {
@@ -1025,7 +1025,7 @@ function tryUpdateSpanNameBeforeEnd(updateName, data, description, _location, ar
     }
     if ("route" === tmp4) {
       if (description) {
-        let obj = pickSplat /* pickSplat */;
+        let obj = pickSplat;
       }
     }
     let tmp15 = arg4;
@@ -1036,7 +1036,7 @@ function tryUpdateSpanNameBeforeEnd(updateName, data, description, _location, ar
     }
     const tmp23 = callback(tmp15, _location, basename);
     if (tmp23) {
-      let obj2 = pickSplat /* pickSplat */;
+      let obj2 = pickSplat;
       const tmp37 = _slicedToArray(obj2.resolveRouteNameAndSource(_location, tmp21, tmp21, tmp24, basename), 2);
       const first = tmp37[0];
       let tmp46 = (function shouldUpdateWildcardSpanName(description, arg1, first, arg3, arg4) {
@@ -1083,12 +1083,12 @@ function tryUpdateSpanNameBeforeEnd(updateName, data, description, _location, ar
       }
       if (tmp46) {
         updateName.updateName(first);
-        const attr = updateName.setAttribute(registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, tmp40);
+        const attr = updateName.setAttribute(registerSpanErrorInstrumentation.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, tmp40);
       }
     }
     tmp10 = tmp4;
   } catch (tmp54) {
-    if (__SENTRY_DEBUG__ /* __SENTRY_DEBUG__ */.DEBUG_BUILD) {
+    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
       const debug = tmp55(817).debug;
       const _HermesInternal = HermesInternal;
       debug.warn("Error updating span details before ending: " + tmp54);

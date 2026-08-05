@@ -32,11 +32,11 @@ function convertPromptToMessages(data) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5._INTERNAL_cleanupToolCallSpan = function _INTERNAL_cleanupToolCallSpan(arg0) {
-  const toolCallSpanMap = map /* map */.toolCallSpanMap;
+  const toolCallSpanMap = map.toolCallSpanMap;
   toolCallSpanMap.delete(arg0);
 };
 arg5._INTERNAL_getSpanForToolCallId = function _INTERNAL_getSpanForToolCallId(arg0) {
-  const toolCallSpanMap = map /* map */.toolCallSpanMap;
+  const toolCallSpanMap = map.toolCallSpanMap;
   return toolCallSpanMap.get(arg0);
 };
 arg5.accumulateTokensForParent = function accumulateTokensForParent(item10015, map) {

@@ -10,7 +10,7 @@ function rigidDecay(initialVelocity, lastTimestamp, deceleration) {
   ({ startTimestamp, current, velocity } = initialVelocity);
   const bound = Math.min(Math.max(lastTimestamp - initialVelocity.lastTimestamp, 0), 64);
   const result = -1 - deceleration.deceleration * (lastTimestamp - startTimestamp);
-  const result1 = velocity * Math.exp(result * isValidRubberBandConfig /* isValidRubberBandConfig */.SLOPE_FACTOR);
+  const result1 = velocity * Math.exp(result * isValidRubberBandConfig.SLOPE_FACTOR);
   initialVelocity.current = current + result1 * deceleration.velocityFactor * bound / 1000;
   initialVelocity.velocity = result1;
   initialVelocity.lastTimestamp = lastTimestamp;
@@ -29,7 +29,7 @@ function rigidDecay(initialVelocity, lastTimestamp, deceleration) {
     }
   }
   const absolute = Math.abs(result1);
-  return absolute < isValidRubberBandConfig /* isValidRubberBandConfig */.VELOCITY_EPS;
+  return absolute < isValidRubberBandConfig.VELOCITY_EPS;
 }
 rigidDecay.__closure = { SLOPE_FACTOR: require("isValidRubberBandConfig").SLOPE_FACTOR, VELOCITY_EPS: require("isValidRubberBandConfig").VELOCITY_EPS };
 rigidDecay.__workletHash = 6356485112123;

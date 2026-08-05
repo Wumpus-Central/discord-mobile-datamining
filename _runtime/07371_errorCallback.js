@@ -5,7 +5,7 @@ import { spanTimeInputToSeconds } from "07380_spanTimeInputToSeconds.js";
 const require = arg1;
 const dependencyMap = arg6;
 function errorCallback() {
-  let obj = spanTimeInputToSeconds /* spanTimeInputToSeconds */;
+  let obj = spanTimeInputToSeconds;
   const activeSpan = obj.getActiveSpan();
   let rootSpan = activeSpan;
   if (activeSpan) {
@@ -28,9 +28,9 @@ errorCallback.tag = "sentry_tracingErrorCallback";
 arg5.registerSpanErrorInstrumentation = function registerSpanErrorInstrumentation() {
   if (!c2) {
     c2 = true;
-    const result = instrumentError /* instrumentError */.addGlobalErrorInstrumentationHandler(errorCallback);
-    const obj = instrumentError /* instrumentError */;
-    const result1 = instrumentUnhandledRejection /* instrumentUnhandledRejection */.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
-    const obj2 = instrumentUnhandledRejection /* instrumentUnhandledRejection */;
+    const result = instrumentError.addGlobalErrorInstrumentationHandler(errorCallback);
+    const obj = instrumentError;
+    const result1 = instrumentUnhandledRejection.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
+    const obj2 = instrumentUnhandledRejection;
   }
 };

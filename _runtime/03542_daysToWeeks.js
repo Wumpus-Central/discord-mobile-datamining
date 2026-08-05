@@ -12,6 +12,6 @@ if (!requiredArgs) {
 
 export default function daysToWeeks(arg0) {
   tmp3.default(1, arguments);
-  return Math.floor(arg0 / keys /* keys */.daysInWeek);
+  return Math.floor(arg0 / keys.daysInWeek);
 };
 export default exports.default;

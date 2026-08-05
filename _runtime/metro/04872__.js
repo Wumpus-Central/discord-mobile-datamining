@@ -165,7 +165,7 @@ if (self2) {
     if (!num2) {
       num2 = 64;
     }
-    fileChunk = getFileChunk /* getFileChunk */.getFileChunk(fileChunk, num2);
+    fileChunk = getFileChunk.getFileChunk(fileChunk, num2);
     const FileTypes4 = 04870__.FileTypes;
     const detectSignatureResult = FileTypes4.detectSignature(fileChunk, items2);
     require = detectSignatureResult;

@@ -6,8 +6,8 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getTraceMetaTags = function getTraceMetaTags(arg0) {
   let traceData = arg0;
   if (!arg0) {
-    traceData = getTraceData /* getTraceData */.getTraceData();
-    const obj = getTraceData /* getTraceData */;
+    traceData = getTraceData.getTraceData();
+    const obj = getTraceData;
   }
   const entries = Object.entries(traceData);
   const mapped = entries.map((arg0) => {

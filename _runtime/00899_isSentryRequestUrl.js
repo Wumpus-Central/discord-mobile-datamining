@@ -10,7 +10,7 @@ arg5.isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
   if (getDsn != null) {
     const tunnel = getDsn.getOptions().tunnel;
   }
-  const result = getHttpSpanDetailsFromUrlObject /* getHttpSpanDetailsFromUrlObject */.parseStringToURLObject(arr);
+  const result = getHttpSpanDetailsFromUrlObject.parseStringToURLObject(arr);
   let flag = false;
   if (result) {
     flag = false;
@@ -27,7 +27,7 @@ arg5.isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
       }
       flag = tmp5;
     }
-    tmp2Result = getHttpSpanDetailsFromUrlObject /* getHttpSpanDetailsFromUrlObject */;
+    tmp2Result = getHttpSpanDetailsFromUrlObject;
   }
   if (!flag) {
     let flag2 = false;

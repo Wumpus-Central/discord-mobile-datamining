@@ -5,17 +5,17 @@ const require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.getAsyncContextStrategy = function getAsyncContextStrategy(arg0) {
-  const sentryCarrier = getGlobalSingleton /* getGlobalSingleton */.getSentryCarrier(arg0);
+  const sentryCarrier = getGlobalSingleton.getSentryCarrier(arg0);
   if (sentryCarrier.acs) {
     let acs = sentryCarrier.acs;
   } else {
-    acs = withScope /* withScope */.getStackAsyncContextStrategy();
-    const tmpResult = withScope /* withScope */;
+    acs = withScope.getStackAsyncContextStrategy();
+    const tmpResult = withScope;
   }
   return acs;
 };
 arg5.setAsyncContextStrategy = function setAsyncContextStrategy(acs) {
-  const mainCarrier = getGlobalSingleton /* getGlobalSingleton */.getMainCarrier();
-  const obj = getGlobalSingleton /* getGlobalSingleton */;
-  getGlobalSingleton /* getGlobalSingleton */.getSentryCarrier(mainCarrier).acs = acs;
+  const mainCarrier = getGlobalSingleton.getMainCarrier();
+  const obj = getGlobalSingleton;
+  getGlobalSingleton.getSentryCarrier(mainCarrier).acs = acs;
 };

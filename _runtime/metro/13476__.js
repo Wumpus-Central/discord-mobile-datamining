@@ -32,7 +32,7 @@ export default (dontCallGetSet, obj) => {
       if (arg0.dontCallGetSet) {
         let tmp8 = require;
         let tmp9 = dependencyMap;
-        obj = getOwnPropertyDescriptor /* getOwnPropertyDescriptor */;
+        obj = getOwnPropertyDescriptor;
         let iter = obj.f(prototype, key10024);
         let value = iter;
         if (iter) {
@@ -45,7 +45,7 @@ export default (dontCallGetSet, obj) => {
       let tmp10 = require;
       let tmp11 = dependencyMap;
       let sum = key10024;
-      let tmp12 = isForced /* isForced */;
+      let tmp12 = isForced;
       if (!_global) {
         let str4 = "#";
         if (stat) {

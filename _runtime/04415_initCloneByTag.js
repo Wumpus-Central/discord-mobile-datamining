@@ -109,7 +109,7 @@ export default function initCloneByTag(arg0, arg1, arg2) {
     case "paddingHorizontal":
     break;
     case "add":
-      return cloneArrayBuffer /* cloneArrayBuffer */(arg0);
+      return cloneArrayBuffer(arg0);
     case "alignItems":
     break;
     case "ao":
@@ -125,59 +125,59 @@ export default function initCloneByTag(arg0, arg1, arg2) {
     case "apply":
     break;
     case "backgroundColor":
-      return cloneDataView /* cloneDataView */(arg0, arg2);
+      return cloneDataView(arg0, arg2);
     case "round":
     break;
     case "bm":
-      let tmp16 = cloneTypedArray /* cloneTypedArray */;
+      let tmp16 = cloneTypedArray;
       let tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "body":
     break;
     case "borderRadius":
-      tmp16 = cloneTypedArray /* cloneTypedArray */;
+      tmp16 = cloneTypedArray;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "bottom":
     break;
     case "call":
-      tmp16 = cloneTypedArray /* cloneTypedArray */;
+      tmp16 = cloneTypedArray;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "channel":
     break;
     case "channelId":
-      tmp16 = cloneTypedArray /* cloneTypedArray */;
+      tmp16 = cloneTypedArray;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "channel_id":
     break;
     case "id":
-      tmp16 = cloneTypedArray /* cloneTypedArray */;
+      tmp16 = cloneTypedArray;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "children":
     break;
     case "cix":
-      tmp16 = cloneTypedArray /* cloneTypedArray */;
+      tmp16 = cloneTypedArray;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "ix":
     break;
     case "unicodeVersion":
-      tmp16 = cloneTypedArray /* cloneTypedArray */;
+      tmp16 = cloneTypedArray;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "code":
     break;
     case "color":
-      tmp16 = cloneTypedArray /* cloneTypedArray */;
+      tmp16 = cloneTypedArray;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "colors":
     break;
     case "concat":
-      tmp16 = cloneTypedArray /* cloneTypedArray */;
+      tmp16 = cloneTypedArray;
       tmp16Result = tmp16(arg0, arg2);
       return tmp16Result;
     case "constructor":
@@ -203,11 +203,11 @@ export default function initCloneByTag(arg0, arg1, arg2) {
     case "ty":
     break;
     case "current":
-      return cloneRegExp /* cloneRegExp */(arg0);
+      return cloneRegExp(arg0);
     case "cursor":
     break;
     case "data":
-      return valueOf /* valueOf */(arg0);
+      return valueOf(arg0);
     case "ddd":
     break;
     case "default":

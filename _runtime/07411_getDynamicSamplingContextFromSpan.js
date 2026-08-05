@@ -6,7 +6,7 @@ import { 07412__ } from "metro/07412__.js";
 const require = arg1;
 const dependencyMap = arg6;
 function getDynamicSamplingContextFromSpan(spanContext) {
-  let obj = getClient /* getClient */;
+  let obj = getClient;
   const client = obj.getClient();
   if (client) {
     let tmpResult = tmp(7380);
@@ -69,11 +69,11 @@ function getDynamicSamplingContextFromSpan(spanContext) {
 }
 const _frozenDsc = "_frozenDsc";
 arg5.freezeDscOnSpan = function freezeDscOnSpan(arg0, arg1) {
-  const result = addNonEnumerableProperty /* addNonEnumerableProperty */.addNonEnumerableProperty(arg0, _frozenDsc, arg1);
+  const result = addNonEnumerableProperty.addNonEnumerableProperty(arg0, _frozenDsc, arg1);
 };
 arg5.getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
   const options = getOptions.getOptions();
-  let obj = addNonEnumerableProperty /* addNonEnumerableProperty */;
+  let obj = addNonEnumerableProperty;
   let DEFAULT_ENVIRONMENT = options.environment;
   if (!DEFAULT_ENVIRONMENT) {
     DEFAULT_ENVIRONMENT = 07412__.DEFAULT_ENVIRONMENT;
@@ -88,7 +88,7 @@ arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFrom
   let dsc = propagationContext.dsc;
   if (!dsc) {
     const options = getOptions.getOptions();
-    let obj = addNonEnumerableProperty /* addNonEnumerableProperty */;
+    let obj = addNonEnumerableProperty;
     let DEFAULT_ENVIRONMENT = options.environment;
     if (!DEFAULT_ENVIRONMENT) {
       DEFAULT_ENVIRONMENT = tmp5(7412).DEFAULT_ENVIRONMENT;
@@ -109,5 +109,5 @@ arg5.getDynamicSamplingContextFromScope = function getDynamicSamplingContextFrom
 arg5.getDynamicSamplingContextFromSpan = getDynamicSamplingContextFromSpan;
 arg5.spanToBaggageHeader = function spanToBaggageHeader(arg0) {
   const tmp = getDynamicSamplingContextFromSpan(arg0);
-  return baggageHeaderToDynamicSamplingContext /* baggageHeaderToDynamicSamplingContext */.dynamicSamplingContextToSentryBaggageHeader(tmp);
+  return baggageHeaderToDynamicSamplingContext.dynamicSamplingContextToSentryBaggageHeader(tmp);
 };

@@ -31,15 +31,15 @@ arg5.getShadowNodeWrapperFromRef = function getShadowNodeWrapperFromRef(self, fi
   if (prop == null) {
     let __internalInstanceHandle = self._reactInternals;
     if (__internalInstanceHandle) {
-      __internalInstanceHandle = findHostInstance /* findHostInstance */.findHostInstance(self).__internalInstanceHandle;
-      const obj = findHostInstance /* findHostInstance */;
+      __internalInstanceHandle = findHostInstance.findHostInstance(self).__internalInstanceHandle;
+      const obj = findHostInstance;
     }
     prop = __internalInstanceHandle;
   }
   if (prop) {
     return prop.stateNode.node;
   } else {
-    const reanimatedError = new t /* t */.ReanimatedError("Failed to find host instance for a ref.");
+    const reanimatedError = new t.ReanimatedError("Failed to find host instance for a ref.");
     throw reanimatedError;
   }
 };

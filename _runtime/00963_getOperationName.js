@@ -336,6 +336,6 @@ arg5.setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes) {
   }
 };
 arg5.shouldInstrument = function shouldInstrument(arg0) {
-  const INSTRUMENTED_METHODS = items /* items */.INSTRUMENTED_METHODS;
+  const INSTRUMENTED_METHODS = items.INSTRUMENTED_METHODS;
   return INSTRUMENTED_METHODS.includes(arg0);
 };

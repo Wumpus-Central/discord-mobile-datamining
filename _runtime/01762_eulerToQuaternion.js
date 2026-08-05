@@ -28,7 +28,7 @@ function adjustRotationToInterfaceOrientation(pitch) {
   let yaw;
   let yaw2;
   ({ interfaceOrientation, pitch, roll, yaw } = pitch);
-  if (interfaceOrientation === isWorkletFunction /* isWorkletFunction */.InterfaceOrientation.ROTATION_90) {
+  if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_90) {
     pitch.pitch = roll;
     pitch.roll = -pitch;
     const _Math2 = Math;
@@ -66,7 +66,7 @@ function adjustVectorToInterfaceOrientation(arg0) {
   let x;
   let y;
   ({ interfaceOrientation, x, y } = arg0);
-  if (interfaceOrientation === isWorkletFunction /* isWorkletFunction */.InterfaceOrientation.ROTATION_90) {
+  if (interfaceOrientation === isWorkletFunction.InterfaceOrientation.ROTATION_90) {
     arg0.x = -y;
     arg0.y = x;
   } else if (interfaceOrientation === tmp(1631).InterfaceOrientation.ROTATION_270) {

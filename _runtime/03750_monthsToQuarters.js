@@ -12,6 +12,6 @@ if (!requiredArgs) {
 
 export default function monthsToQuarters(arg0) {
   tmp3.default(1, arguments);
-  return Math.floor(arg0 / keys /* keys */.monthsInQuarter);
+  return Math.floor(arg0 / keys.monthsInQuarter);
 };
 export default exports.default;

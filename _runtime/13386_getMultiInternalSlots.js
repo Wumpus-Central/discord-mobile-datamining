@@ -111,8 +111,8 @@ export const createMemoizedNumberFormat = require("monadic").memoize(() => {
   }
   const bind = NumberFormat.bind;
   const items1 = [undefined];
-  const obj = e /* e */;
-  return new bind.apply(NumberFormat, e /* e */.__spreadArray(items1, items, false))();
+  const obj = e;
+  return new bind.apply(NumberFormat, e.__spreadArray(items1, items, false))();
 }, obj);
 export const createMemoizedDateTimeFormat = require("monadic").memoize(() => {
   let length;
@@ -127,8 +127,8 @@ export const createMemoizedDateTimeFormat = require("monadic").memoize(() => {
   }
   const bind = DateTimeFormat.bind;
   const items1 = [undefined];
-  const obj = e /* e */;
-  return new bind.apply(DateTimeFormat, e /* e */.__spreadArray(items1, items, false))();
+  const obj = e;
+  return new bind.apply(DateTimeFormat, e.__spreadArray(items1, items, false))();
 }, obj);
 export const createMemoizedPluralRules = require("monadic").memoize(() => {
   let length;
@@ -143,8 +143,8 @@ export const createMemoizedPluralRules = require("monadic").memoize(() => {
   }
   const bind = PluralRules.bind;
   const items1 = [undefined];
-  const obj = e /* e */;
-  return new bind.apply(PluralRules, e /* e */.__spreadArray(items1, items, false))();
+  const obj = e;
+  return new bind.apply(PluralRules, e.__spreadArray(items1, items, false))();
 }, obj);
 export const createMemoizedLocale = require("monadic").memoize(() => {
   let length;
@@ -159,8 +159,8 @@ export const createMemoizedLocale = require("monadic").memoize(() => {
   }
   const bind = Locale.bind;
   const items1 = [undefined];
-  const obj = e /* e */;
-  return new bind.apply(Locale, e /* e */.__spreadArray(items1, items, false))();
+  const obj = e;
+  return new bind.apply(Locale, e.__spreadArray(items1, items, false))();
 }, obj1);
 export const createMemoizedListFormat = require("monadic").memoize(() => {
   let length;
@@ -175,6 +175,6 @@ export const createMemoizedListFormat = require("monadic").memoize(() => {
   }
   const bind = ListFormat.bind;
   const items1 = [undefined];
-  const obj = e /* e */;
-  return new bind.apply(ListFormat, e /* e */.__spreadArray(items1, items, false))();
+  const obj = e;
+  return new bind.apply(ListFormat, e.__spreadArray(items1, items, false))();
 }, obj2);

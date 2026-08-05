@@ -32,8 +32,8 @@ function onVisibilityUpdate(type) {
         if ("visibilitychange" === type.type) {
           num2 = type.timeStamp;
         }
-        addPageListener /* addPageListener */.removePageListener("prerenderingchange", onVisibilityUpdate, true);
-        const obj = addPageListener /* addPageListener */;
+        addPageListener.removePageListener("prerenderingchange", onVisibilityUpdate, true);
+        const obj = addPageListener;
       }
     }
   }

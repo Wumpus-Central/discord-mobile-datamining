@@ -11,7 +11,7 @@ export default function hashSet(arg0, arg1) {
     num = 0;
   }
   self.size = size + num;
-  if (!getNative /* getNative */) {
+  if (!getNative) {
     let str = arg1;
   } else {
     str = "__lodash_hash_undefined__";

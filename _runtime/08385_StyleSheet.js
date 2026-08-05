@@ -60,7 +60,7 @@ export default function HeaderConfig(arg0) {
   }
   ({ headerBackVisible, headerShadowVisible, headerLargeTitle, headerBackground, headerLeft, headerRight, headerTintColor, headerTitle, headerTitleAlign, headerTransparent, headerSearchBarOptions, UNSTABLE_headerInsets, canGoBack } = arg0);
   ({ headerLargeStyle, headerLargeTitleShadowVisible, headerLargeTitleStyle, headerShown, headerStyle, headerBlurEffect, headerTitleStyle, headerTopInsetEnabled, route, title } = arg0);
-  let obj = Link /* Link */;
+  let obj = Link;
   const colors = obj.useTheme().colors;
   let text = headerTintColor;
   if (headerTintColor == null) {
@@ -161,7 +161,7 @@ export default function HeaderConfig(arg0) {
     backgroundColor = str3;
   }
   obj3[1] = backgroundColor;
-  if (enableScreens /* enableScreens */.isNewBackTitleImplementation) {
+  if (enableScreens.isNewBackTitleImplementation) {
     let str4 = headerBackTitle;
   } else {
     str4 = " ";
@@ -302,5 +302,5 @@ export default function HeaderConfig(arg0) {
   }
   items3[3] = tmp48;
   obj3[31] = items3;
-  return closure_9(enableScreens /* enableScreens */.ScreenStackHeaderConfig, obj3);
+  return closure_9(enableScreens.ScreenStackHeaderConfig, obj3);
 };

@@ -2,8 +2,8 @@
 import { SemVer } from "13020_SemVer.js";
 
 export default (arg0, arg1) => {
-  const obj = SemVer /* SemVer */(arg0, null, true);
-  const tmp = SemVer /* SemVer */(arg1, null, true);
+  const obj = SemVer(arg0, null, true);
+  const tmp = SemVer(arg1, null, true);
   const compareResult = obj.compare(tmp);
   if (0 === compareResult) {
     return null;

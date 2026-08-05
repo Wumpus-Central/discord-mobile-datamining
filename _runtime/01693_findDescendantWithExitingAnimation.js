@@ -108,11 +108,11 @@ arg5.insertWebAnimation = function insertWebAnimation(name, result) {
           let result1 = map.set(arr[num3], value + 1);
           num3 = num3 + 1;
         }
-        const reanimatedError = new t /* t */.ReanimatedError("Failed to obtain animation index.");
+        const reanimatedError = new t.ReanimatedError("Failed to obtain animation index.");
         throw reanimatedError;
       }
     } else {
-      const logger = addLogBoxLog /* addLogBoxLog */.logger;
+      const logger = addLogBoxLog.logger;
       logger.error("Failed to create layout animations stylesheet.");
     }
   }
@@ -153,8 +153,8 @@ arg5.scheduleAnimationCleanup = function scheduleAnimationCleanup(animationName,
 arg5.addHTMLMutationObserver = function addHTMLMutationObserver() {
   let isWindowAvailableResult = !c6;
   if (!c6) {
-    isWindowAvailableResult = isJest /* isJest */.isWindowAvailable();
-    const obj = isJest /* isJest */;
+    isWindowAvailableResult = isJest.isWindowAvailable();
+    const obj = isJest;
   }
   if (isWindowAvailableResult) {
     c6 = true;

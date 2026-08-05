@@ -222,7 +222,7 @@ arg5.setResponseAttributes = function setResponseAttributes(setAttribute, c2, cl
           const _JSON = JSON;
           const attr = setAttribute.setAttribute(00958__.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE, JSON.stringify(tmp34));
         }
-        const result = asString /* asString */.normalizeLangChainMessages(substr);
+        const result = asString.normalizeLangChainMessages(substr);
         const _JSON2 = JSON;
         const attr1 = setAttribute.setAttribute(00958__.GEN_AI_RESPONSE_TEXT_ATTRIBUTE, JSON.stringify(result));
         let num3 = 0;
@@ -250,7 +250,7 @@ arg5.setResponseAttributes = function setResponseAttributes(setAttribute, c2, cl
         if (num5 > 0) {
           const attr4 = setAttribute.setAttribute(00958__.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE, num5);
         }
-        const obj = asString /* asString */;
+        const obj = asString;
       }
     }
   }

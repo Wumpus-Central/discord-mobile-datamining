@@ -13,24 +13,24 @@ const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSearc
 obj[2] = obj;
 obj = {
   blur(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "blur", []);
+    renderElement.dispatchCommand(arg0, "blur", []);
   },
   focus(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "focus", []);
+    renderElement.dispatchCommand(arg0, "focus", []);
   },
   clearText(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "clearText", []);
+    renderElement.dispatchCommand(arg0, "clearText", []);
   },
   toggleCancelButton(arg0, arg1) {
     const items = [arg1];
-    renderElement /* renderElement */.dispatchCommand(arg0, "toggleCancelButton", items);
+    renderElement.dispatchCommand(arg0, "toggleCancelButton", items);
   },
   setText(arg0, arg1) {
     const items = [arg1];
-    renderElement /* renderElement */.dispatchCommand(arg0, "setText", items);
+    renderElement.dispatchCommand(arg0, "setText", items);
   },
   cancelSearch(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "cancelSearch", []);
+    renderElement.dispatchCommand(arg0, "cancelSearch", []);
   }
 };
 

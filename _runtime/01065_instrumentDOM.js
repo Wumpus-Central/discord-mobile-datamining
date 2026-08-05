@@ -4,7 +4,7 @@ import { WINDOW } from "01039_WINDOW.js";
 let require = arg1;
 let dependencyMap = arg6;
 function instrumentDOM() {
-  if (WINDOW /* WINDOW */.WINDOW.document) {
+  if (WINDOW.WINDOW.document) {
     const bindResult = tmp(817).triggerHandlers.bind(null, "dom");
     require = bindResult;
     require = bindResult;
@@ -292,8 +292,8 @@ function makeDOMEventHandler(arg0) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 arg5.addClickKeypressInstrumentationHandler = function addClickKeypressInstrumentationHandler(arg0) {
-  registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.addHandler("dom", arg0);
-  const obj = registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */;
-  registerSpanErrorInstrumentation /* registerSpanErrorInstrumentation */.maybeInstrument("dom", instrumentDOM);
+  registerSpanErrorInstrumentation.addHandler("dom", arg0);
+  const obj = registerSpanErrorInstrumentation;
+  registerSpanErrorInstrumentation.maybeInstrument("dom", instrumentDOM);
 };
 arg5.instrumentDOM = instrumentDOM;

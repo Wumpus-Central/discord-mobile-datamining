@@ -9,7 +9,7 @@ export default function isPropertyDescriptor(obj) {
         let tmp11 = key10001;
         let tmp12 = require;
         let tmp13 = dependencyMap;
-        if (!bind /* bind */(arg0, key10001)) {
+        if (!bind(arg0, key10001)) {
           continue;
         } else {
           let tmp = table;
@@ -22,7 +22,7 @@ export default function isPropertyDescriptor(obj) {
         }
         continue;
       }
-      let tmp4 = bind /* bind */(obj, "[[Value]]");
+      let tmp4 = bind(obj, "[[Value]]");
       if (!tmp4) {
         tmp4 = tmp2(573)(obj, "[[Writable]]");
       }

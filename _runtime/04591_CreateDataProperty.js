@@ -2,7 +2,7 @@
 import { isObject } from "04529_isObject.js";
 
 export default function CreateDataProperty(arg0, arg1, arg2) {
-  if (isObject /* isObject */(arg0)) {
+  if (isObject(arg0)) {
     if (tmp(4576)(arg1)) {
       const obj = { "[[Configurable]]": true, "[[Enumerable]]": true, "[[Value]]": null, "[[Writable]]": true };
       obj[2] = arg2;

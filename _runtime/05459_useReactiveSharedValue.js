@@ -21,13 +21,13 @@ export const useReactiveSharedValue = (obj) => {
     if (null === tmp2.current) {
       tmp.current = obj;
       if (typeof obj === "object") {
-        obj = cancelAnimation /* cancelAnimation */;
+        obj = cancelAnimation;
         obj = {};
         const merged = Object.assign(obj);
         let mutable = obj.makeMutable(obj);
       } else {
-        mutable = cancelAnimation /* cancelAnimation */.makeMutable(obj);
-        const obj3 = cancelAnimation /* cancelAnimation */;
+        mutable = cancelAnimation.makeMutable(obj);
+        const obj3 = cancelAnimation;
       }
       tmp2.current = mutable;
     } else if (tmp.current !== obj) {

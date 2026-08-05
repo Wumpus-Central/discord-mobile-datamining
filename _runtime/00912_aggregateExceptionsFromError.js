@@ -88,7 +88,7 @@ arg5.applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(arg0, ar
           exception.exception.values = aggregateExceptionsFromError(arg0, arg1, arg3, originalException.originalException, arg2, exception.exception.values, tmp6, 0);
         }
       }
-      obj = isInstanceOf /* isInstanceOf */;
+      obj = isInstanceOf;
     }
   }
 };

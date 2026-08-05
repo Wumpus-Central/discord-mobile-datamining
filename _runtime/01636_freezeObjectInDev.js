@@ -378,7 +378,7 @@ export const makeShareable = isJest ? (function makeShareableJS(arg0) {
   return arg0;
 }) : (function makeShareableNative(arg0) {
   let closure_0 = arg0;
-  const shareableMappingCache = weakMap /* weakMap */.shareableMappingCache;
+  const shareableMappingCache = weakMap.shareableMappingCache;
   if (shareableMappingCache.get(arg0)) {
     return arg0;
   } else {

@@ -15,12 +15,12 @@ export const AnimatedScrollView = isReactRendering.componentWithRef((scrollViewO
   scrollViewOffset = scrollViewOffset.scrollViewOffset;
   const tmp2 = callback(scrollViewOffset, closure_2);
   if (null === arg1) {
-    let obj = useAnimatedGestureHandler /* useAnimatedGestureHandler */;
+    let obj = useAnimatedGestureHandler;
     animatedRef = obj.useAnimatedRef();
   }
   if (scrollViewOffset) {
-    scrollViewOffset = useAnimatedGestureHandler /* useAnimatedGestureHandler */.useScrollViewOffset(animatedRef, scrollViewOffset);
-    const obj2 = useAnimatedGestureHandler /* useAnimatedGestureHandler */;
+    scrollViewOffset = useAnimatedGestureHandler.useScrollViewOffset(animatedRef, scrollViewOffset);
+    const obj2 = useAnimatedGestureHandler;
   }
   if (!("scrollEventThrottle" in tmp2)) {
     tmp2.scrollEventThrottle = 1;

@@ -19,7 +19,7 @@ const forwardRefResult = require("noop").forwardRef((disableLeftInsetApplication
   let consumeRightInset;
   let headerLeftBarButtonItems;
   let headerRightBarButtonItems;
-  let obj = context /* context */;
+  let obj = context;
   let flag = disableLeftInsetApplication.disableLeftInsetApplication;
   if (flag == null) {
     flag = false;

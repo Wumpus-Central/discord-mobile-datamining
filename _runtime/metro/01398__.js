@@ -29,7 +29,7 @@ if (tmp) {
       require("forEach")(tmp2, (arg0) => {
         const tmp = new global[arg0]();
         if (Symbol.toStringTag in tmp) {
-          if (getProto /* getProto */) {
+          if (getProto) {
             const tmp4 = tmp2(546)(tmp);
             const _Symbol = Symbol;
             const tmp5 = tmp2(542)(tmp4, Symbol.toStringTag);
@@ -102,6 +102,6 @@ require("forEach")(tmp2, (arg0) => {
   const arr = new global[arg0]();
   if (arr.slice || arr.set) {
     const text = `$${arg0}`;
-    closure_8[`$${arg0}`] = callBind /* callBind */(tmp);
+    closure_8[`$${arg0}`] = callBind(tmp);
   }
 });

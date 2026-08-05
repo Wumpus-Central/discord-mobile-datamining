@@ -7,7 +7,7 @@ const re4 = /^0o[0-7]+$/i;
 export default function toNumber(num) {
   if (typeof num === "number") {
     return num;
-  } else if (isSymbol /* isSymbol */(num)) {
+  } else if (isSymbol(num)) {
     return NaN;
   } else {
     let tmp = num;

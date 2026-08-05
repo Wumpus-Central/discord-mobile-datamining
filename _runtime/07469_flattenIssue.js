@@ -70,7 +70,7 @@ function formatIssueMessage(issues) {
     return "Failed to validate " + str4;
   } else {
     const _HermesInternal = HermesInternal;
-    return "Failed to validate keys: " + isMatchingPattern /* isMatchingPattern */.truncate(arr.join(", "), 100);
+    return "Failed to validate keys: " + isMatchingPattern.truncate(arr.join(", "), 100);
   }
   tmp = issues.issues[Symbol.iterator]();
 }

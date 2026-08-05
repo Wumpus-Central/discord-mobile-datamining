@@ -5,9 +5,9 @@ const dependencyMap = arg6;
 arg5.reflectionScalarDefault = function reflectionScalarDefault(T, L) {
   let STRING = L;
   if (L === undefined) {
-    STRING = RepeatType /* RepeatType */.LongType.STRING;
+    STRING = RepeatType.LongType.STRING;
   }
-  if (RepeatType /* RepeatType */.ScalarType.BOOL === T) {
+  if (RepeatType.ScalarType.BOOL === T) {
     return false;
   } else {
     if (tmp3(1320).ScalarType.UINT64 !== T) {

@@ -171,7 +171,7 @@ arg5.buildTransportAttributes = function buildTransportAttributes(transport, ext
     obj = { mcpTransport: "unknown", networkTransport: "unknown" };
   }
   ({ mcpTransport, networkTransport } = obj);
-  let obj4 = weakMap /* weakMap */;
+  let obj4 = weakMap;
   const clientInfoForTransport = obj4.getClientInfoForTransport(transport);
   let name1;
   if (clientInfoForTransport != null) {
@@ -283,7 +283,7 @@ arg5.extractSessionDataFromInitializeRequest = function extractSessionDataFromIn
         }
       }
       obj.clientInfo = obj;
-      tmpResult = isJsonRpcNotification /* isJsonRpcNotification */;
+      tmpResult = isJsonRpcNotification;
     }
   }
   return obj;
@@ -309,13 +309,13 @@ arg5.extractSessionDataFromInitializeResponse = function extractSessionDataFromI
         }
       }
       obj.serverInfo = obj;
-      tmpResult = isJsonRpcNotification /* isJsonRpcNotification */;
+      tmpResult = isJsonRpcNotification;
     }
   }
   return obj;
 };
 arg5.getClientAttributes = function getClientAttributes(transport) {
-  let obj = weakMap /* weakMap */;
+  let obj = weakMap;
   const clientInfoForTransport = obj.getClientInfoForTransport(transport);
   let name;
   if (clientInfoForTransport != null) {
@@ -342,7 +342,7 @@ arg5.getClientAttributes = function getClientAttributes(transport) {
   return obj;
 };
 arg5.getServerAttributes = function getServerAttributes(transport) {
-  let obj = weakMap /* weakMap */;
+  let obj = weakMap;
   const sessionDataForTransport = obj.getSessionDataForTransport(transport);
   let serverInfo;
   if (sessionDataForTransport != null) {

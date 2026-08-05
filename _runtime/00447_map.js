@@ -123,7 +123,7 @@ arg5.default = {
     module(279)(arg0, "focus");
   },
   sendAccessibilityEvent(arg0, arg1) {
-    const result = renderElement /* renderElement */.sendAccessibilityEvent(arg0, arg1);
+    const result = renderElement.sendAccessibilityEvent(arg0, arg1);
   },
   announceForAccessibility(intl) {
     const obj = module(448);

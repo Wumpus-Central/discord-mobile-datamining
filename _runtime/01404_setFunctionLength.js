@@ -49,7 +49,7 @@ export default function setFunctionLength(fn, num) {
               flag2 = !tmp;
             }
             if (flag2) {
-              const tmp10 = defineDataProperty /* defineDataProperty */;
+              const tmp10 = defineDataProperty;
               if (closure_2) {
                 tmp10(fn, "length", num, true, true);
               } else {

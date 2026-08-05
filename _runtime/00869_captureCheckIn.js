@@ -6,9 +6,9 @@ import { applyClientOptions } from "00870_applyClientOptions.js";
 import { 00821__ } from "metro/00821__.js";
 
 function captureCheckIn(arg0, arg1) {
-  const currentScope = getClient /* getClient */.getCurrentScope();
-  const obj = getClient /* getClient */;
-  const client = getClient /* getClient */.getClient();
+  const currentScope = getClient.getCurrentScope();
+  const obj = getClient;
+  const client = getClient.getClient();
   if (client) {
     if (client.captureCheckIn) {
       return client.captureCheckIn(arg0, arg1, currentScope);
@@ -20,8 +20,8 @@ function captureCheckIn(arg0, arg1) {
     const debug = tmp(824).debug;
     debug.warn("Cannot capture check-in. No client defined.");
   }
-  const obj2 = getClient /* getClient */;
-  return addContextToFrame /* addContextToFrame */.uuid4();
+  const obj2 = getClient;
+  return addContextToFrame.uuid4();
 }
 function _flush() {
   const self = this;
@@ -148,18 +148,18 @@ function _close() {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const addEventProcessor = function addEventProcessor(arg0) {
-  const isolationScope = getClient /* getClient */.getIsolationScope();
+  const isolationScope = getClient.getIsolationScope();
   isolationScope.addEventProcessor(arg0);
 };
 export { captureCheckIn };
 export const captureEvent = function captureEvent(arg0, arg1) {
-  const currentScope = getClient /* getClient */.getCurrentScope();
+  const currentScope = getClient.getCurrentScope();
   return currentScope.captureEvent(arg0, arg1);
 };
 export const captureException = function captureException(arg0, arg1) {
-  const currentScope = getClient /* getClient */.getCurrentScope();
-  const obj = getClient /* getClient */;
-  return currentScope.captureException(arg0, applyClientOptions /* applyClientOptions */.parseEventHintOrCaptureContext(arg1));
+  const currentScope = getClient.getCurrentScope();
+  const obj = getClient;
+  return currentScope.captureException(arg0, applyClientOptions.parseEventHintOrCaptureContext(arg1));
 };
 export const captureMessage = function captureMessage(arg0, str) {
   let tmp;
@@ -172,7 +172,7 @@ export const captureMessage = function captureMessage(arg0, str) {
     obj[0] = str;
     tmp2 = obj;
   }
-  obj = getClient /* getClient */;
+  obj = getClient;
   const currentScope = obj.getCurrentScope();
   return currentScope.captureMessage(arg0, tmp, tmp2);
 };
@@ -181,8 +181,8 @@ export const captureSession = function captureSession() {
   if (arg0 === undefined) {
     flag = false;
   }
-  const isolationScope = getClient /* getClient */.getIsolationScope();
-  const obj3 = getClient /* getClient */;
+  const isolationScope = getClient.getIsolationScope();
+  const obj3 = getClient;
   if (flag) {
     const currentScope = obj3.getCurrentScope();
     const tmp6 = currentScope.getSession() || isolationScope.getSession();
@@ -226,9 +226,9 @@ export const close = function close(arg0) {
   return applyArgumentsResult;
 };
 export const endSession = function endSession() {
-  const isolationScope = getClient /* getClient */.getIsolationScope();
-  const obj = getClient /* getClient */;
-  const currentScope = getClient /* getClient */.getCurrentScope();
+  const isolationScope = getClient.getIsolationScope();
+  const obj = getClient;
+  const currentScope = getClient.getCurrentScope();
   const tmp3 = currentScope.getSession() || isolationScope.getSession();
   if (tmp3) {
     let tmpResult = tmp(845);
@@ -236,8 +236,8 @@ export const endSession = function endSession() {
   }
   tmpResult = tmp(848);
   const isolationScope1 = tmpResult.getIsolationScope();
-  const obj3 = getClient /* getClient */;
-  const client = getClient /* getClient */.getClient();
+  const obj3 = getClient;
+  const client = getClient.getClient();
   const session = isolationScope1.getSession();
   let tmp6 = session;
   if (session) {
@@ -259,7 +259,7 @@ export const flush = function flush(arg0) {
   return applyArgumentsResult;
 };
 export const isEnabled = function isEnabled() {
-  const client = getClient /* getClient */.getClient();
+  const client = getClient.getClient();
   let enabled;
   if (client != null) {
     enabled = client.getOptions().enabled;
@@ -275,41 +275,41 @@ export const isEnabled = function isEnabled() {
   return tmp2;
 };
 export const isInitialized = function isInitialized() {
-  return getClient /* getClient */.getClient();
+  return getClient.getClient();
 };
 export const lastEventId = function lastEventId() {
-  const isolationScope = getClient /* getClient */.getIsolationScope();
+  const isolationScope = getClient.getIsolationScope();
   return isolationScope.lastEventId();
 };
 export const setContext = function setContext(arg0, arg1) {
-  const isolationScope = getClient /* getClient */.getIsolationScope();
+  const isolationScope = getClient.getIsolationScope();
   isolationScope.setContext(arg0, arg1);
 };
 export const setExtra = function setExtra(arg0, arg1) {
-  const isolationScope = getClient /* getClient */.getIsolationScope();
+  const isolationScope = getClient.getIsolationScope();
   isolationScope.setExtra(arg0, arg1);
 };
 export const setExtras = function setExtras(arg0) {
-  const isolationScope = getClient /* getClient */.getIsolationScope();
+  const isolationScope = getClient.getIsolationScope();
   isolationScope.setExtras(arg0);
 };
 export const setTag = function setTag(arg0, arg1) {
-  const isolationScope = getClient /* getClient */.getIsolationScope();
+  const isolationScope = getClient.getIsolationScope();
   isolationScope.setTag(arg0, arg1);
 };
 export const setTags = function setTags(arg0) {
-  const isolationScope = getClient /* getClient */.getIsolationScope();
+  const isolationScope = getClient.getIsolationScope();
   isolationScope.setTags(arg0);
 };
 export const setUser = function setUser(arg0) {
-  const isolationScope = getClient /* getClient */.getIsolationScope();
+  const isolationScope = getClient.getIsolationScope();
   isolationScope.setUser(arg0);
 };
 export const startSession = function startSession(arg0) {
-  let obj = getClient /* getClient */;
+  let obj = getClient;
   const isolationScope = obj.getIsolationScope();
-  const currentScope = getClient /* getClient */.getCurrentScope();
-  const obj3 = getClient /* getClient */;
+  const currentScope = getClient.getCurrentScope();
+  const obj3 = getClient;
   const userAgent = 00821__.GLOBAL_OBJ.navigator || {}.userAgent;
   let tmpResult = tmp(845);
   const tmp3 = 00821__.GLOBAL_OBJ.navigator || {};
@@ -333,18 +333,18 @@ export const startSession = function startSession(arg0) {
     tmpResult.updateSession(session1, { status: "exited" });
   }
   const tmp4 = currentScope.getUser() || isolationScope.getUser();
-  const isolationScope1 = getClient /* getClient */.getIsolationScope();
-  const tmpResult1 = getClient /* getClient */;
-  const currentScope1 = getClient /* getClient */.getCurrentScope();
+  const isolationScope1 = getClient.getIsolationScope();
+  const tmpResult1 = getClient;
+  const currentScope1 = getClient.getCurrentScope();
   const tmp12 = currentScope1.getSession() || isolationScope1.getSession();
   if (tmp12) {
     tmp(845).closeSession(tmp12);
     const tmpResult3 = tmp(845);
   }
-  const tmpResult2 = getClient /* getClient */;
-  const isolationScope2 = getClient /* getClient */.getIsolationScope();
-  const tmpResult4 = getClient /* getClient */;
-  const client = getClient /* getClient */.getClient();
+  const tmpResult2 = getClient;
+  const isolationScope2 = getClient.getIsolationScope();
+  const tmpResult4 = getClient;
+  const client = getClient.getClient();
   const session2 = isolationScope2.getSession();
   let tmp15 = session2;
   if (session2) {

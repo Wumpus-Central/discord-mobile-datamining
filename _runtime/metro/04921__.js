@@ -23,7 +23,7 @@ obj[34864] = {
 obj[36864] = {
   name: "ExifVersion",
   description(value) {
-    return getStringValue /* getStringValue */.getStringValue(value);
+    return getStringValue.getStringValue(value);
   }
 };
 const obj1 = { name: "ExposureProgram", description: require("module_4920").ExposureProgram };

@@ -60,7 +60,7 @@ export const ReanimatedFlatList = isReactRendering.componentWithRef((skipEnterin
   if (undefined !== skipEnteringExitingAnimations.skipEnteringExitingAnimations) {
     obj = { skipEntering: true, skipExiting: true, children: null };
     obj[2] = tmp7;
-    tmp5Result = jsx(_isNativeReflectConstruct /* _isNativeReflectConstruct */.LayoutAnimationConfig, { skipEntering: true, skipExiting: true, children: null });
+    tmp5Result = jsx(_isNativeReflectConstruct.LayoutAnimationConfig, { skipEntering: true, skipExiting: true, children: null });
   }
   return tmp5Result;
 });

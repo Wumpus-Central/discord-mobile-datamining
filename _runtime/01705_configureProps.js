@@ -24,7 +24,7 @@ function configureProps() {
     }
   }
   const keys = Object.keys(01619__.PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
-  isReanimated3 /* isReanimated3 */.jsiConfigureProps(keys, Object.keys(01619__.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST));
+  isReanimated3.jsiConfigureProps(keys, Object.keys(01619__.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST));
 }
 isJest = isJest.shouldBeUseWeb();
 const set = new Set();
@@ -48,7 +48,7 @@ export const addWhitelistedUIProps = function addWhitelistedUIProps(arg0) {
   }
 };
 export const configureReanimatedLogger = function configureReanimatedLogger(level) {
-  addLogBoxLog /* addLogBoxLog */.updateLoggerConfig(level);
+  addLogBoxLog.updateLoggerConfig(level);
   if (!isJest) {
     tmp(1650).executeOnUIRuntimeSync(tmp(1610).updateLoggerConfig)(level);
     const tmpResult = tmp(1650);

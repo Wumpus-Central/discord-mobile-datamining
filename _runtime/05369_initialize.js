@@ -6,10 +6,10 @@ const module = arg2;
 const dependencyMap = arg6;
 let c3 = false;
 arg5.initialize = function initialize() {
-  onGestureHandlerEvent /* onGestureHandlerEvent */.startListening();
+  onGestureHandlerEvent.startListening();
 };
 arg5.maybeInitializeFabric = function maybeInitializeFabric() {
-  let isFabricResult = toArray /* toArray */.isFabric();
+  let isFabricResult = toArray.isFabric();
   if (isFabricResult) {
     isFabricResult = !c3;
   }

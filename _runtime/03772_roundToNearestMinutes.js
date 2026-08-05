@@ -47,7 +47,7 @@ export default function roundToNearestMinutes(arg0, nearestTo) {
           roundingMethod = nearestTo.roundingMethod;
         }
         const _Math = Math;
-        const result = getRoundingMethod /* getRoundingMethod */.getRoundingMethod(roundingMethod)(sum / defaultResult) * defaultResult;
+        const result = getRoundingMethod.getRoundingMethod(roundingMethod)(sum / defaultResult) * defaultResult;
         const _Date = Date;
         const result1 = Math.round(sum % defaultResult / defaultResult) * defaultResult;
         const fullYear = defaultResult1.getFullYear();
