@@ -1,9 +1,12 @@
 // _runtime/08495__isNativeReflectConstruct.js
-import FeMergeNode from "_classCallCheck";
+import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import "noop";
+import { jsx } from "jsxProd";
 
+const Pattern = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -23,44 +26,87 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeMergeNode {
+class Pattern {
   constructor() {
     self = this;
-    items = [...arguments];
-    apply = undefined;
-    tmp = FeMergeNode(this, apply);
-    items1 = [...items];
+    tmp = _isNativeReflectConstruct(this, Pattern);
     tmp2 = __esModule;
-    obj = __esModule(apply);
+    obj = __esModule(Pattern);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
-    tmp3Result.setNativeProps = () => {
-      const parent = _undefined.props.parent;
-      if (parent) {
-        parent.forceUpdate();
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeMergeNode, require("_isNativeReflectConstruct"));
-let items = [
+require("_inherits")(Pattern, require("_isNativeReflectConstruct"));
+const items = [
   {
     key: "render",
     value: function render() {
-      return null;
+      let children;
+      let height;
+      let id;
+      let patternContentUnits;
+      let patternTransform;
+      let patternUnits;
+      let preserveAspectRatio;
+      let transform;
+      let viewBox;
+      let width;
+      let x;
+      let y;
+      const self = this;
+      const props = this.props;
+      ({ patternTransform, patternUnits, patternContentUnits } = props);
+      ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
+      if (!patternTransform) {
+        patternTransform = transform;
+      }
+      if (!patternTransform) {
+        patternTransform = props;
+      }
+      const tmp3Result = self(8417)(patternTransform);
+      let obj = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
+      let num = patternUnits;
+      if (patternUnits) {
+        num = tmp(8487)[patternUnits];
+      }
+      if (!num) {
+        num = 0;
+      }
+      obj[7] = num;
+      let num2 = 1;
+      if (patternContentUnits) {
+        num2 = tmp(8487)[patternContentUnits];
+      }
+      obj[8] = num2;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const tmp3 = self(8417);
+      const merged = Object.assign(obj);
+      const merged1 = Object.assign(tmp(8422)({ viewBox, preserveAspectRatio }));
+      obj.children = children;
+      return jsx(self(8496), {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(FeMergeNode, items);
-importDefaultResultResult.displayName = "FeMergeNode";
+const importDefaultResultResult = importDefaultResult(Pattern, items);
+importDefaultResultResult.displayName = "Pattern";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

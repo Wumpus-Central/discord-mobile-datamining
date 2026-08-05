@@ -49,7 +49,7 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
             let closure_3 = tmp2;
             closure_0 = closure_1;
             closure_1 = closure_2;
-            yield "ct";
+            yield "PX_8";
             const call = self.call;
             const items = [closure_5, closure_0];
             HermesBuiltin.arraySpread(closure_1, 2);

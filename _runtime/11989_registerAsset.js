@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 121, height: 80, scales: [1, 2], hash: "03d3616a833b9606b61838a277c7b0cf", name: "link_expired", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/nuf/native/images", width: 221, height: 195, scales: [1, 2, 3], hash: "3a31ec2d5aeb0eedce9411671227bdc1", name: "discoverability-header", type: "png" });

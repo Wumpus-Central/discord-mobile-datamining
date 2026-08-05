@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 16, height: 16, scales: [2, 3], hash: "d082de3975b39d41cd3c34c609bd917a", name: "ic_launch", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/user_settings", width: 224, height: 104, scales: [2, 3], hash: "a2009aeba6d9e049dbc8c9ac25b7dc92", name: "crunchyroll_link_success", type: "png" });

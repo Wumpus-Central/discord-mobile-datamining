@@ -1,10 +1,10 @@
 // _runtime/05386_items1.js
-const items = ["maxDurationMs", "maxDelayMs", "numberOfTaps", "maxDeltaX", "maxDeltaY", "maxDist", "minPointers"];
-const obj = { name: "TapGestureHandler", allowedProps: null, config: null };
+const items = ["numberOfPointers", "direction"];
+const obj = { name: "FlingGestureHandler", allowedProps: null, config: null };
 const items1 = [...items];
 obj[1] = items1;
-obj[2] = { shouldCancelWhenOutside: true };
+obj[2] = {};
 
-export const tapGestureHandlerProps = items;
-export const tapHandlerName = "TapGestureHandler";
-export const TapGestureHandler = require("_isNativeReflectConstruct")(obj);
+export const flingGestureHandlerProps = items;
+export const flingHandlerName = "FlingGestureHandler";
+export const FlingGestureHandler = require("_isNativeReflectConstruct")(obj);

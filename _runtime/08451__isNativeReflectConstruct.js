@@ -3,11 +3,8 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import { extractProps } from "08452_extractProps.js";
 
-let closure_0 = arg1;
+const FeComponentTransfer = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,80 +24,39 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class G {
+class FeComponentTransfer {
   constructor() {
     self = this;
-    items = [...arguments];
-    apply = undefined;
-    tmp = _isNativeReflectConstruct(this, apply);
-    items1 = [...items];
+    tmp = _isNativeReflectConstruct(this, FeComponentTransfer);
     tmp2 = __esModule;
-    obj = __esModule(apply);
+    obj = __esModule(FeComponentTransfer);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = outer1_1(outer1_2[7])(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const root = _undefined.root;
-      if (root != null) {
-        root.setNativeProps(matrix);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-closure_0 = G;
-require("_inherits")(G, require("_isNativeReflectConstruct"));
-let items = [
-  {
-    key: "render",
-    value: function render() {
-      const self = this;
-      const props = this.props;
-      let obj = self(8452);
-      const propsAndStylesResult = obj.propsAndStyles(props);
-      const tmp5 = extractProps(propsAndStylesResult, this);
-      const obj2 = self(8459);
-      const tmp4 = importDefault;
-      if (typeof hasProps !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      const keys = Object.keys();
-      if (keys !== undefined) {
-        let flag = true;
-        if (flag) {
-          tmp5.font = extractFontResult;
-        }
-        obj = { ref: null };
-        obj[0] = function ref(arg0) {
-          return self.refMethod(arg0);
-        };
-        const merged = Object.assign(tmp5);
-        obj.children = props.children;
-        return jsx(tmp4(8460), { ref: null });
-      }
-      flag = false;
-    }
+require("_inherits")(FeComponentTransfer, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeComponentTransfer(8425).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(G, items);
-importDefaultResultResult.displayName = "G";
-function hasProps(arg0) {
-
-}
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeComponentTransfer, items);
+importDefaultResultResult.displayName = "FeComponentTransfer";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

@@ -3,8 +3,10 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import "noop";
+import { jsx } from "jsxProd";
 
-const FePointLight = arg1;
+const Polyline = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,38 +26,60 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FePointLight {
+class Polyline {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FePointLight);
+    items = [...arguments];
+    apply = undefined;
+    tmp = _isNativeReflectConstruct(this, apply);
+    items1 = [...items];
     tmp2 = __esModule;
-    obj = __esModule(FePointLight);
+    obj = __esModule(apply);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    apply = tmp3Result;
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + _undefined(outer1_1[7])(points);
+      }
+      if (_undefined.root) {
+        const root = _undefined.root;
+        root.setNativeProps(points);
+      }
+    };
+    return tmp3Result;
   }
 }
-require("_inherits")(FePointLight, require("noop").Component);
-const items = [
+require("_inherits")(Polyline, require("_isNativeReflectConstruct"));
+let items = [
   {
     key: "render",
     value: function render() {
-      const result = FePointLight(8453).warnUnimplementedFilter();
-      return null;
+      const props = this.props;
+      const points = props.points;
+      const obj = { ref: this.refMethod, d: null };
+      let combined = points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        combined = "M" + Polyline(8498)(points);
+      }
+      obj[1] = combined;
+      const merged = Object.assign(props);
+      return jsx(Polyline(8493), { ref: this.refMethod, d: null });
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(FePointLight, items);
-importDefaultResultResult.displayName = "FePointLight";
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = importDefaultResult(Polyline, items);
+importDefaultResultResult.displayName = "Polyline";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

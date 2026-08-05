@@ -56,10 +56,10 @@ if (self2) {
       if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let closure_0 = { string: { unit: "znak\u016F", verb: "m\u00EDt" }, file: { unit: "bajt\u016F", verb: "m\u00EDt" }, array: { unit: "prvk\u016F", verb: "m\u00EDt" }, set: { unit: "prvk\u016F", verb: "m\u00EDt" } };
-      let closure_1 = { regex: "regul\u00E1rn\u00ED v\u00FDraz", email: "e-mailov\u00E1 adresa", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "datum a \u010Das ve form\u00E1tu ISO", date: "datum ve form\u00E1tu ISO", time: "\u010Das ve form\u00E1tu ISO", duration: "doba trv\u00E1n\u00ED ISO", ipv4: "IPv4 adresa", ipv6: "IPv6 adresa", cidrv4: "rozsah IPv4", cidrv6: "rozsah IPv6", base64: "\u0159et\u011Bzec zak\u00F3dovan\u00FD ve form\u00E1tu base64", base64url: "\u0159et\u011Bzec zak\u00F3dovan\u00FD ve form\u00E1tu base64url", json_string: "\u0159et\u011Bzec ve form\u00E1tu JSON", e164: "\u010D\u00EDslo E.164", jwt: "JWT", template_literal: "vstup" };
-      let closure_2 = { nan: "NaN", number: "\u010D\u00EDslo", string: "\u0159et\u011Bzec", function: "funkce", array: "pole" };
-      return { localeError: (arg0) => "Neplatn\u00E1 hodnota v " + tmp.origin };
+      let closure_0 = { string: { unit: "znak\u00F3w", verb: "mie\u0107" }, file: { unit: "bajt\u00F3w", verb: "mie\u0107" }, array: { unit: "element\u00F3w", verb: "mie\u0107" }, set: { unit: "element\u00F3w", verb: "mie\u0107" } };
+      let closure_1 = { regex: "wyra\u017Cenie", email: "adres email", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "data i godzina w formacie ISO", date: "data w formacie ISO", time: "godzina w formacie ISO", duration: "czas trwania ISO", ipv4: "adres IPv4", ipv6: "adres IPv6", cidrv4: "zakres IPv4", cidrv6: "zakres IPv6", base64: "ci\u0105g znak\u00F3w zakodowany w formacie base64", base64url: "ci\u0105g znak\u00F3w zakodowany w formacie base64url", json_string: "ci\u0105g znak\u00F3w w formacie JSON", e164: "liczba E.164", jwt: "JWT", template_literal: "wej\u015Bcie" };
+      let closure_2 = { nan: "NaN", number: "liczba", array: "tablica" };
+      return { localeError: (arg0) => "Nieprawid\u0142owa warto\u015B\u0107 w " + tmp.origin };
     };
     let closure_2 = fn(require("mergeDefs"));
     function error() {

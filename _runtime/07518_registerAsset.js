@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "1e7b4b86ff7b632a5724a01e406c1753", name: "img_subheader_error_mobile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 180, height: 108, scales: [2, 3], hash: "b78926d791a6ae551c895470cfd808a1", name: "img_what_you_lose_profile_tier1_darker", type: "png" });

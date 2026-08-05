@@ -77,10 +77,10 @@ let fn = function n(userConfig, callback) {
       callback: table,
       velocity: null,
       initialVelocity: 0,
-      current: "sa",
+      current: "dispatch",
       lastTimestamp: null,
-      startTimestamp: 72,
-      reduceMotion: 4
+      startTimestamp: "chat_list_android",
+      reduceMotion: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN"
     };
     let num = obj.velocity;
     if (num == null) {

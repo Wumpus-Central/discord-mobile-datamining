@@ -1,13 +1,9 @@
 // _runtime/08467__isNativeReflectConstruct.js
-import _classCallCheck from "_classCallCheck";
+import FeMergeNode from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "metro/08468___INTERNAL_VIEW_CONFIG.js";
 
-const ClipPath = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,41 +23,44 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ClipPath {
+class FeMergeNode {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, ClipPath);
+    items = [...arguments];
+    apply = undefined;
+    tmp = FeMergeNode(this, apply);
+    items1 = [...items];
     tmp2 = __esModule;
-    obj = __esModule(ClipPath);
+    obj = __esModule(apply);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    apply = tmp3Result;
+    tmp3Result.setNativeProps = () => {
+      const parent = _undefined.props.parent;
+      if (parent) {
+        parent.forceUpdate();
+      }
+    };
+    return tmp3Result;
   }
 }
-require("_inherits")(ClipPath, require("_isNativeReflectConstruct"));
-const items = [
+require("_inherits")(FeMergeNode, require("_isNativeReflectConstruct"));
+let items = [
   {
     key: "render",
     value: function render() {
-      const props = this.props;
-      const obj = { ref: this.refMethod };
-      const tmp = __INTERNAL_VIEW_CONFIG;
-      const merged = Object.assign(ClipPath(8452).extract(this, props));
-      obj.children = props.children;
-      return <tmp ref={this.refMethod} />;
+      return null;
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(ClipPath, items);
-importDefaultResultResult.displayName = "ClipPath";
+const importDefaultResultResult = importDefaultResult(FeMergeNode, items);
+importDefaultResultResult.displayName = "FeMergeNode";
 
 export default importDefaultResultResult;

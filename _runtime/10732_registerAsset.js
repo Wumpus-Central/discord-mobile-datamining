@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f32d9237628628dc39ab04879ac15862", name: "ScreenArrowIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 195, height: 92, scales: [1, 2, 3], hash: "6d3bdfffed77899f44fd075e4ef2e92a", name: "krisp_logo_dark", type: "png" });

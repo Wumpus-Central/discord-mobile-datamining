@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/create_guild/native/images", width: 161, height: 105, scales: [1, 2, 3], hash: "15df55e98006c5e50dacb86d466b47d8", name: "invite-wumpus-ticket", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hub/native/images", width: 120, height: 80, scales: [2, 3], hash: "8a1b4cbcf69c94f39bb256787c4e1df8", name: "search_empty_state", type: "png" });

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_home/native/images", width: 24, height: 24, scales: [2, 3], hash: "993926a8b2d3f46d31ad06ea07adc917", name: "ic_feed_more", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/application_streaming", width: 300, height: 120, scales: [2, 3], hash: "af3947e9ef22aa54f0b32942d9a564e5", name: "img_preview_not_available_dark", type: "png" });

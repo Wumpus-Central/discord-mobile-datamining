@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/user_settings/account/native/images", width: 121, height: 90, scales: [1, 2, 3], hash: "6fbfa0aa2194635b21a8ebd068b44d0c", name: "lock", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 433, height: 231, scales: [2, 3], hash: "a255589f0ef23e06a175ac0fc6767b9f", name: "blocked_darker", type: "png" });

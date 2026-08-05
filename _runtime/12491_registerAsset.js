@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/gifting/standard", width: 144, height: 150, scales: [1], hash: "8ea6c899915dc4dfb91fde69307aaf42", name: "chest_idle", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/quests/images", width: 608, height: 608, scales: [2, 3], hash: "6936c050862daceed7175a327466cd4a", name: "quests_embed_mobile_missing", type: "png" });

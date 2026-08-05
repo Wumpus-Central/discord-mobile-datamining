@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_identity/images", width: 303, height: 198, scales: [2, 3], hash: "af6f5b1f2e3f6f41820436ec96e0f065", name: "guild_identity_education_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 80, height: 64, scales: [2, 3], hash: "c274903a313d0e918f497d328c38b8dd", name: "img_search_empty_light", type: "png" });

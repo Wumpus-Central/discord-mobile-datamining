@@ -107,7 +107,7 @@ class MessageLoader {
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
             } else {
               try {
@@ -140,7 +140,7 @@ class MessageLoader {
                 } else {
                   closure_1._parseCache = {};
                   c3 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "T", done: null };
                 }
               } catch (tmp8) {
                 c3 = tmp;
@@ -298,7 +298,7 @@ let items = [
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } else {
             try {
@@ -484,7 +484,7 @@ let items = [
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } else {
             try {
@@ -510,7 +510,7 @@ let items = [
                   ref = undefined;
                   c5 = 1;
                   c6 = 1;
-                  return { value: "ct", done: "Array" };
+                  return { value: "PX_8", done: "Array" };
                 }
               } else {
                 if (1 === tmp5) {
@@ -553,7 +553,7 @@ let items = [
                   return obj;
                 }
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
             } catch (tmp17) {
               c6 = tmp;
@@ -581,7 +581,7 @@ let items = [
           if (closure_1 === undefined) {
             flag = false;
           }
-          yield "ct";
+          yield "PX_8";
           return closure_3.waitForLocaleLoaded(closure_3.defaultLocale, flag);
         })();
         iter.next();
@@ -606,7 +606,7 @@ export const loadAllMessagesInLocale = function loadAllMessagesInLocale(closure_
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -637,7 +637,7 @@ export const loadAllMessagesInLocale = function loadAllMessagesInLocale(closure_
           return obj;
         } else {
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp7) {
         c0 = tmp;
@@ -659,7 +659,7 @@ export const waitForAllDefaultIntlMessagesLoaded = function waitForAllDefaultInt
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -690,7 +690,7 @@ export const waitForAllDefaultIntlMessagesLoaded = function waitForAllDefaultInt
           return obj;
         } else {
           c0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp7) {
         c0 = tmp;

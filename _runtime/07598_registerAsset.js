@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/GalaxyIcon", width: 60, height: 60, scales: [2, 3], hash: "2bb189919203a7299ceda12e2b9f8582", name: "GalaxyIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3eb74a78606f69449db155f70f2ac217", name: "NitroWheelIcon", type: "png" });

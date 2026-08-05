@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ExtendedYearParser, Parser) {
+function _setPrototypeOf(TimestampMillisecondsParser, Parser) {
   let _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ExtendedYearParser, Parser) {
-      ExtendedYearParser.__proto__ = Parser;
-      return ExtendedYearParser;
+    _setPrototypeOf = function _setPrototypeOf(TimestampMillisecondsParser, Parser) {
+      TimestampMillisecondsParser.__proto__ = Parser;
+      return TimestampMillisecondsParser;
     };
   }
-  return _setPrototypeOf(ExtendedYearParser, Parser);
+  return _setPrototypeOf(TimestampMillisecondsParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -55,7 +55,7 @@ function _getPrototypeOf(arg0) {
   return _getPrototypeOf(arg0);
 }
 _createSuperInternal = undefined;
-class ExtendedYearParser {
+class TimestampMillisecondsParser {
   constructor() {
     if (this instanceof c1) {
       length = arguments.length;
@@ -82,7 +82,7 @@ class ExtendedYearParser {
       if (tmp13) {
         _ReferenceError2 = ReferenceError;
         tmp20 = new.target;
-        str5 = "this hasn't been initialised - super() hasn't been called";
+        str6 = "this hasn't been initialised - super() hasn't been called";
         tmp21 = new.target;
         referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
         tmp23 = referenceError;
@@ -91,29 +91,27 @@ class ExtendedYearParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 130, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 20, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 130;
-          applyResult.priority = 130;
+          num3 = 20;
+          applyResult.priority = 20;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
           tmp16 = new.target;
-          str4 = "this hasn't been initialised - super() hasn't been called";
+          str5 = "this hasn't been initialised - super() hasn't been called";
           tmp17 = new.target;
           referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["G", "y", "Y", "R", "w", "I", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
-            obj = { value: null, enumerable: true, configurable: true, writable: true };
-            obj[0] = items1;
-            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", obj);
+            definePropertyResult1 = Object.defineProperty(applyResult, "incompatibleTokens", { value: "*", enumerable: true, configurable: true, writable: true });
           } else {
-            applyResult.incompatibleTokens = items1;
+            str4 = "*";
+            applyResult.incompatibleTokens = "*";
           }
           return applyResult;
         }
@@ -129,7 +127,7 @@ class ExtendedYearParser {
     }
   }
 }
-closure_1 = ExtendedYearParser;
+closure_1 = TimestampMillisecondsParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -141,12 +139,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-let obj = { value: ExtendedYearParser, writable: true, configurable: true };
-ExtendedYearParser.prototype = Object.create(prototype, { constructor: obj });
+let obj = { value: TimestampMillisecondsParser, writable: true, configurable: true };
+TimestampMillisecondsParser.prototype = Object.create(prototype, { constructor: obj });
 if (Parser) {
-  _setPrototypeOf(ExtendedYearParser, Parser);
+  _setPrototypeOf(TimestampMillisecondsParser, Parser);
 }
-_createSuperInternal = ExtendedYearParser;
+_createSuperInternal = TimestampMillisecondsParser;
 let num = 0;
 closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
@@ -206,23 +204,17 @@ _createSuperInternal = function _createSuperInternal() {
 };
 obj = {
   key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("u" === arg1) {
-      let parseNDigitsSignedResult = _createSuperInternal(3672).parseNDigitsSigned(4, arg0);
-    } else {
-      parseNDigitsSignedResult = _createSuperInternal(3672).parseNDigitsSigned(arg1.length, arg0);
-    }
-    return parseNDigitsSignedResult;
+  value: function parse(arg0) {
+    return _createSuperInternal(table[0]).parseAnyDigitsSigned(arg0);
   }
 };
 let items = [
   obj,
   {
     key: "set",
-    value: function set(setUTCFullYear) {
-      setUTCFullYear.setUTCFullYear(arg2, 0, 1);
-      setUTCFullYear.setUTCHours(0, 0, 0, 0);
-      return setUTCFullYear;
+    value: function set(arg0, arg1, arg2) {
+      const items = [new Date(arg2), { timestampIsSet: true }];
+      return items;
     }
   }
 ];
@@ -245,4 +237,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { ExtendedYearParser };
+export { TimestampMillisecondsParser };

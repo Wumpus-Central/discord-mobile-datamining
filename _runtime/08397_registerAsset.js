@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "be0ebbe0444cf9ea073becdc22f65ec9", name: "DenyIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/wumpus", width: 84, height: 66, scales: [1], hash: "ba11c4394297d005e32400d962515cfe", name: "wumpus-luigi", type: "png" });

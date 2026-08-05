@@ -3,10 +3,8 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
-import "noop";
-import { jsx } from "jsxProd";
 
-const Defs = importDefault;
+const FeImage = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,12 +24,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Defs {
+class FeImage {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Defs);
+    tmp = _isNativeReflectConstruct(this, FeImage);
     tmp2 = __esModule;
-    obj = __esModule(Defs);
+    obj = __esModule(FeImage);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -46,16 +44,19 @@ class Defs {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Defs, require("noop").Component);
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      return jsx(Defs(8470), { children: this.props.children });
-    }
+require("_inherits")(FeImage, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    const result = FeImage(8425).warnUnimplementedFilter();
+    return null;
   }
-];
-const importDefaultResultResult = importDefaultResult(Defs, items);
-importDefaultResultResult.displayName = "Defs";
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeImage, items);
+importDefaultResultResult.displayName = "FeImage";
+obj = {};
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

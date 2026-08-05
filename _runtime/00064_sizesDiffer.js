@@ -1,5 +1,5 @@
 // _runtime/00064_sizesDiffer.js
-let closure_0 = { width: "body", height: "useStateFromStores" };
+let closure_0 = { width: "Array", height: "PX_8" };
 arg5.default = function sizesDiffer(arg0, arg1) {
   let size = arg0;
   if (!arg0) {

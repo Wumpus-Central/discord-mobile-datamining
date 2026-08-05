@@ -1,9 +1,13 @@
 // _runtime/metro/13498__.js
-const tmp = require("module_13477").navigator && require("module_13477").navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
-}
+import { 13499__ } from "13499__.js";
 
-export default str;
+export default (arg0) => {
+  let num = 0;
+  {
+    num = 0;
+    if (0 !== tmp) {
+      num = 13499__(tmp);
+    }
+  }
+  return num;
+};

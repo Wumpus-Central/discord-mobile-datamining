@@ -3,7 +3,7 @@ import noop from "noop";
 import { Platform } from "get ActivityIndicator";
 
 const require = arg1;
-const f23484 = (state) => {
+const f23465 = (state) => {
   state = undefined;
   if (state != null) {
     state = state.state;
@@ -20,7 +20,7 @@ const f23484 = (state) => {
       ({ screen: obj[0], params: obj[1] } = state);
       let tmp3;
       if (state.screen) {
-        tmp3 = f23484(state.params);
+        tmp3 = f23465(state.params);
       }
       obj = { routes: null };
       obj[2] = tmp3;

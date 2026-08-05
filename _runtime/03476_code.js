@@ -3,7 +3,7 @@ import formatDistance from "formatDistance";
 import buildFormatLongFn from "buildFormatLongFn";
 import formatRelative from "formatRelative";
 import buildLocalizeFn from "buildLocalizeFn";
-import 03481__ from "metro/03481__.js";
+import 03779__ from "metro/03779__.js";
 
 if (!formatDistance) {
   let obj = { default: null };
@@ -33,13 +33,13 @@ if (!buildLocalizeFn) {
 } else {
   tmp9 = buildLocalizeFn;
 }
-if (!module_3481) {
+if (!module_3779) {
   const obj2 = { default: null };
-  obj2[0] = module_3481;
+  obj2[0] = module_3779;
   let tmp11 = obj2;
 } else {
-  tmp11 = module_3481;
+  tmp11 = module_3779;
 }
 
-export default { code: "ro", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

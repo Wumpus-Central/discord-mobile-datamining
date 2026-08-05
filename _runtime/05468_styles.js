@@ -1,5 +1,8 @@
 // _runtime/05468_styles.js
 import { StyleSheet } from "get ActivityIndicator";
 
+let obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
+obj = { alignSelf: "center", width: 7.5 * require("GESTURE_SOURCE").WINDOW_WIDTH / 100, height: 4, borderRadius: 4, backgroundColor: "rgba(0, 0, 0, 0.75)" };
+obj[1] = obj;
 
-export const styles = StyleSheet.create({ container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 } });
+export const styles = StyleSheet.create(obj);

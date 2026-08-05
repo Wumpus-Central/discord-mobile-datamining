@@ -17,7 +17,7 @@ function processEvent(arg0, arg1, arg2) {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {

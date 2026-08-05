@@ -1,9 +1,12 @@
 // _runtime/08476__isNativeReflectConstruct.js
-import FilterPrimitive from "_classCallCheck";
+import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import "noop";
+import { jsx } from "jsxProd";
 
+const Filter = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -23,40 +26,51 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FilterPrimitive {
+class Filter {
   constructor() {
     self = this;
-    items = [...arguments];
-    apply = undefined;
-    tmp = FilterPrimitive(this, apply);
-    items1 = [...items];
+    tmp = _isNativeReflectConstruct(this, Filter);
     tmp2 = __esModule;
-    obj = __esModule(apply);
+    obj = __esModule(Filter);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp5 = globalThis;
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    apply = tmp3Result;
-    tmp3Result.root = null;
-    tmp3Result.refMethod = (root) => {
-      c0.root = root;
-    };
-    tmp3Result.setNativeProps = (arg0) => {
-      const root = _undefined.root;
-      if (root != null) {
-        root.setNativeProps(arg0);
-      }
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FilterPrimitive, require("noop").Component);
-const importDefaultResultResult = importDefaultResult(FilterPrimitive);
-importDefaultResultResult.defaultPrimitiveProps = {};
+require("_inherits")(Filter, require("_isNativeReflectConstruct"));
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let obj = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const merged = Object.assign(obj);
+      obj.children = this.props.children;
+      return jsx(self(8477), {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
+    }
+  }
+];
+const importDefaultResultResult = importDefaultResult(Filter, items);
+importDefaultResultResult.displayName = "Filter";
+importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
 
 export default importDefaultResultResult;

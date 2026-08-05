@@ -1,32 +1,15 @@
 // _runtime/metro/13490__.js
-import { all } from "../13502_all.js";
-let closure_3 = require("withoutSetter")("toPrimitive");
+import { f } from "../13491_f.js";
+import { all } from "../13501_all.js";
+import { 13502__ } from "13502__.js";
+let closure_2 = require("call")([].concat);
 
-export default (arg0, arg1) => {
-  if (all(arg0)) {
-    if (!tmp(13504)(arg0)) {
-      let str = arg1;
-      const tmp4 = tmp(13507)(arg0, closure_3);
-      if (tmp4) {
-        if (undefined === str) {
-          str = "default";
-        }
-        const tmp5 = tmp(13510)(tmp4, arg0, str);
-        if (tmp(13502)(tmp5)) {
-          if (!tmp(13504)(tmp5)) {
-            const tmp9 = new TypeError("Can't convert object to primitive value");
-            throw tmp9;
-          }
-        }
-        return tmp5;
-      } else {
-        let str2 = str;
-        if (undefined === str) {
-          str2 = "number";
-        }
-        return tmp(13511)(arg0, str2);
-      }
-    }
+export default require("all")("Reflect", "ownKeys") || (function ownKeys(arg0) {
+  const fResult = f.f(all(arg0));
+  const f = 13502__.f;
+  let tmp2 = fResult;
+  if (f) {
+    tmp2 = callback(fResult, f(arg0));
   }
-  return arg0;
-};
+  return tmp2;
+});

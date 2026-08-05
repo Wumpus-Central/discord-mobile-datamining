@@ -1,46 +1,23 @@
 // _runtime/metro/04886__.js
-const self = this;
-let self2 = this;
-if (this) {
-  self2 = self.__createBinding;
-}
-if (self2) {
-  let fn = self;
-  if (self) {
-    fn = self.__exportStar;
+const module = arg2;
+const dependencyMap = arg6;
+arg5.default = {
+  isTiffFile(byteLength) {
+    let tmp = byteLength;
+    if (tmp) {
+      tmp = byteLength.byteLength >= 4;
+    }
+    if (tmp) {
+      const uint16 = byteLength.getUint16(0);
+      tmp = byteLength.getUint16(2, uint16 === module(4887).LITTLE_ENDIAN) === 42;
+    }
+    return tmp;
+  },
+  findTiffOffsets() {
+    if (module(4885).USE_EXIF) {
+      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
+    } else {
+      return {};
+    }
   }
-  if (!fn) {
-    fn = (obj, exports) => {
-      for (const key10007 in arg0) {
-        let tmp5 = key10007;
-        let tmp6 = "default" === key10007;
-        if (tmp6) {
-          if (tmp6) {
-            continue;
-          } else {
-            let tmp3 = self2;
-            let tmp4 = self2(arg1, arg0, key10007);
-            continue;
-          }
-          continue;
-        } else {
-          let _Object = Object;
-          let call = hasOwnProperty.call;
-          if (typeof call === "unknown") {
-            let hasOwnPropertyResult = hasOwnProperty(key10007);
-          } else {
-            hasOwnPropertyResult = call(arg1, key10007);
-          }
-          let tmp2 = hasOwnPropertyResult;
-        }
-      }
-    };
-  }
-  const _Object2 = Object;
-  fn(require("module_4887"), exports);
-  fn(require("module_4888"), exports);
-  fn(require("module_4889"), exports);
-  fn(require("module_4890"), exports);
-} else {
-  let _Object = Object;
-}
+};

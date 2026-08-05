@@ -26,7 +26,7 @@ function _queryCache() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -63,7 +63,7 @@ function _queryCache() {
   return applyArgumentsResult;
 }
 let c6 = 1;
-let closure_8 = { uri: "Array", width: "call", height: "format" };
+let closure_8 = { uri: "Array", width: "channel", height: "d" };
 function _BaseImage(arg0) {
   let accessibilityLabel;
   let accessibilityLabelledBy;

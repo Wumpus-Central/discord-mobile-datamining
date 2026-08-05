@@ -4,119 +4,70 @@ import "noop";
 import { jsx } from "jsxProd";
 
 let c3;
-let c4;
-let c5;
 let memo;
-({ useCallback: c3, useMemo: c4, useRef: c5, memo } = noop);
-const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneousHandlers) {
-  let animatedIndex;
-  let animatedPosition;
-  let handleIndicatorStyle;
-  let handleStyle;
-  simultaneousHandlers = simultaneousHandlers.simultaneousHandlers;
-  let DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = simultaneousHandlers.enableHandlePanningGesture;
-  ({ animatedIndex, animatedPosition } = simultaneousHandlers);
-  if (DEFAULT_ENABLE_HANDLE_PANNING_GESTURE === undefined) {
-    DEFAULT_ENABLE_HANDLE_PANNING_GESTURE = simultaneousHandlers(handleHeight[2]).DEFAULT_ENABLE_HANDLE_PANNING_GESTURE;
-  }
-  handleHeight = simultaneousHandlers.handleHeight;
-  let handleComponent = simultaneousHandlers.handleComponent;
-  let activeOffsetX;
-  let activeOffsetY;
-  let failOffsetX;
-  let failOffsetY;
-  let waitFor;
-  let simultaneousHandlers2;
-  let handlePanGestureHandler;
-  let c10;
-  ({ handleStyle, handleIndicatorStyle } = simultaneousHandlers);
-  const tmp3 = failOffsetX(null);
-  let obj = simultaneousHandlers(handleHeight[3]);
+let obj1;
+({ useContext: obj1, useMemo: c3, memo } = noop);
+let closure_5 = require("cancelAnimation").createAnimatedComponent(require("get ActivityIndicator").RefreshControl);
+let closure_6 = { code: "function pnpm_BottomSheetRefreshControlAndroidTsx1(){const{animatedScrollableState,SCROLLABLE_STATE}=this.__closure;return{enabled:animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED};}" };
+const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
+  let onRefresh;
+  let scrollableGesture;
+  ({ onRefresh, scrollableGesture } = arg0);
+  const merged = Object.assign(arg0, Object.create(null));
+  let dependencyMap;
+  let iter;
+  const tmp4 = iter(scrollableGesture(5337).BottomSheetDraggableContext);
+  dependencyMap = tmp4;
+  let obj = scrollableGesture(5330);
   const bottomSheetInternal = obj.useBottomSheetInternal();
-  activeOffsetX = bottomSheetInternal.activeOffsetX;
-  activeOffsetY = bottomSheetInternal.activeOffsetY;
-  failOffsetX = bottomSheetInternal.failOffsetX;
-  failOffsetY = bottomSheetInternal.failOffsetY;
-  waitFor = bottomSheetInternal.waitFor;
-  simultaneousHandlers2 = bottomSheetInternal.simultaneousHandlers;
-  handlePanGestureHandler = simultaneousHandlers(handleHeight[3]).useBottomSheetGestureHandlers().handlePanGestureHandler;
-  let items = [simultaneousHandlers2, simultaneousHandlers];
-  const tmp7 = activeOffsetY(() => {
-    const items = [];
-    if (simultaneousHandlers) {
-      items.push(tmp);
+  iter = bottomSheetInternal.animatedScrollableState;
+  if (!tmp4) {
+    if (bottomSheetInternal.enableContentPanningGesture) {
+      throw "'BottomSheetRefreshControl' cannot be used out of the BottomSheet!";
     }
-    if (simultaneousHandlers2) {
-      const _Array = Array;
-      const push = items.push;
-      if (Array.isArray(tmp3)) {
-        const items1 = [];
-        HermesBuiltin.arraySpread(tmp3, 0);
-        HermesBuiltin.apply(items1, items);
-      } else {
-        push(tmp3);
-      }
-    }
-    return items;
-  }, items);
-  c10 = tmp7;
-  let items1 = [activeOffsetX, activeOffsetY, DEFAULT_ENABLE_HANDLE_PANNING_GESTURE, failOffsetX, failOffsetY, tmp7, waitFor, , , , ];
-  ({ handleOnChange: arr2[7], handleOnEnd: arr2[8], handleOnFinalize: arr2[9], handleOnStart: arr2[10] } = handlePanGestureHandler);
-  const items2 = [handleHeight];
-  const obj2 = simultaneousHandlers(handleHeight[3]);
-  const tmp4 = simultaneousHandlers;
-  const items3 = [handleHeight];
-  const tmp8 = activeOffsetY(() => {
-    const Gesture = simultaneousHandlers(handleHeight[4]).Gesture;
-    const PanResult = Gesture.Pan();
-    const result = Gesture.Pan().enabled(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE).shouldCancelWhenOutside(false);
-    const enabledResult = Gesture.Pan().enabled(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE);
-    const runOnJSResult = result.runOnJS(false);
-    const onStartResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart);
-    const onChangeResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart).onChange(handlePanGestureHandler.handleOnChange);
-    const onFinalizeResult = result.runOnJS(false).onStart(handlePanGestureHandler.handleOnStart).onChange(handlePanGestureHandler.handleOnChange).onEnd(handlePanGestureHandler.handleOnEnd).onFinalize(handlePanGestureHandler.handleOnFinalize);
-    let result1 = onFinalizeResult;
-    if (waitFor) {
-      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
-    }
-    let result2 = result1;
-    if (c10) {
-      result2 = result1.simultaneousWithExternalGesture(tmp2);
-    }
-    let activeOffsetXResult = result2;
-    if (activeOffsetX) {
-      activeOffsetXResult = result2.activeOffsetX(tmp3);
-    }
-    let activeOffsetYResult = activeOffsetXResult;
-    if (activeOffsetY) {
-      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
-    }
-    let failOffsetXResult = activeOffsetYResult;
-    if (failOffsetX) {
-      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
-    }
-    let failOffsetYResult = failOffsetXResult;
-    if (failOffsetY) {
-      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
-    }
-    return failOffsetYResult;
-  }, items1);
-  const tmp9 = activeOffsetX(function handleContainerLayout(nativeEvent) {
-    handleHeight.value = nativeEvent.nativeEvent.layout.height;
-  }, items2);
-  const tmp10 = activeOffsetX((height) => {
-    handleHeight.value = height.height;
-  }, items3);
-  const boundingClientRect = simultaneousHandlers(handleHeight[3]).useBoundingClientRect(tmp3, tmp10);
-  if (handleComponent == null) {
-    handleComponent = DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(tmp5[5]);
   }
-  obj = { gesture: tmp8, children: null };
-  obj = { ref: tmp3, onLayout: tmp9, children: null };
-  obj[2] = failOffsetY(handleComponent, { animatedIndex, animatedPosition, style: handleStyle, indicatorStyle: handleIndicatorStyle });
-  obj[1] = failOffsetY(DEFAULT_ENABLE_HANDLE_PANNING_GESTURE(handleHeight[6]).View, obj, "BottomSheetHandleContainer");
-  return failOffsetY(tmp4(handleHeight[4]).GestureDetector, obj);
+  const fn = function f() {
+    return { enabled: iter.value === scrollableGesture(_undefined[6]).SCROLLABLE_STATE.UNLOCKED };
+  };
+  obj = { animatedScrollableState: iter, SCROLLABLE_STATE: tmp2(5326).SCROLLABLE_STATE };
+  fn.__closure = obj;
+  fn.__workletHash = 8403038560398;
+  fn.__initData = closure_6;
+  let items = [iter.value];
+  const animatedProps = scrollableGesture(1606).useAnimatedProps(fn, items);
+  const items1 = [tmp4, scrollableGesture];
+  const tmp7 = callback(() => {
+    let result;
+    if (_undefined) {
+      const Gesture = scrollableGesture(_undefined[7]).Gesture;
+      const NativeResult = Gesture.Native();
+      const simultaneousWithExternalGesture = NativeResult.simultaneousWithExternalGesture;
+      const items = [];
+      let arraySpreadResult = HermesBuiltin.arraySpread(_undefined.toGestureArray(), 0);
+      arraySpreadResult = HermesBuiltin.arraySpread(scrollableGesture.toGestureArray(), arraySpreadResult);
+      result = HermesBuiltin.apply(items, NativeResult).shouldCancelWhenOutside(true);
+      const applyResult = HermesBuiltin.apply(items, NativeResult);
+    }
+    return result;
+  }, items1);
+  if (tmp7) {
+    obj = { gesture: null, children: null };
+    obj[0] = tmp7;
+    const obj1 = {};
+    const merged1 = Object.assign(merged);
+    obj1.onRefresh = onRefresh;
+    obj1.animatedProps = animatedProps;
+    obj[1] = tmp8(closure_5, obj1);
+    let tmp8Result = tmp8(tmp2(5353).GestureDetector, obj);
+  } else {
+    const obj2 = {};
+    const merged2 = Object.assign(merged);
+    obj2.onRefresh = onRefresh;
+    obj2.animatedProps = animatedProps;
+    tmp8Result = tmp8(closure_5, obj2);
+  }
+  return tmp8Result;
 });
-memoResult.displayName = "BottomSheetHandleContainer";
+memoResult.displayName = "BottomSheetRefreshControl";
 
 export default memoResult;

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "3cb1cd2fa7a6da13fc0880992d84830f", name: "ChevronLargeDownIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting", width: 203, height: 120, scales: [1, 2, 3], hash: "0c52217e1b36f758b126e56747a120ea", name: "guild_subscription_removal_light", type: "png" });

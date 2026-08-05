@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "409fe2e37775c47f20538750422d7e2c", name: "img_account_sync_instagram_light_and_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 256, height: 256, scales: [1], hash: "18bf95267062a719213a10081e62b607", name: "img_amazon_music", type: "png" });

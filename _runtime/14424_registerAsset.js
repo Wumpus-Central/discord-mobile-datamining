@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 161, height: 161, scales: [1], hash: "f06539dd2236c72b26d5b18fa1a5f589", name: "amanda_2", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "80a1b67e775ddb8de80fde27e63a5302", name: "CircleMinusIcon-secondary", type: "png" });

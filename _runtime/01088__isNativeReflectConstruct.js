@@ -4950,7 +4950,7 @@ function initObservers(doc) {
                     } catch (tmp7) {
                       if (outer1_79) {
                         if (true === tmp8(tmp7)) {
-                          return /* F102265 */ function() { ... };
+                          return /* F102205 */ function() { ... };
                         }
                       }
                       throw tmp7;
@@ -6118,7 +6118,7 @@ function getLargestContentfulPaint(arg0) {
   let obj = registerSpanErrorInstrumentation;
   const result = ((obj.browserPerformanceTimeOrigin() || registerSpanErrorInstrumentation.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   obj = { type: "web-vital", name: "largest-contentful-paint", start: result, end: result, data: null };
-  obj = { value, size: value, rating, nodeIds: null, attributions: "find" };
+  obj = { value, size: value, rating, nodeIds: null, attributions: "ind" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((arg0) => {
@@ -6192,7 +6192,7 @@ function getInteractionToNextPaint(arg0) {
   let obj = registerSpanErrorInstrumentation;
   const result = ((obj.browserPerformanceTimeOrigin() || registerSpanErrorInstrumentation.GLOBAL_OBJ.performance.timeOrigin) + value) / 1000;
   obj = { type: "web-vital", name: "interaction-to-next-paint", start: result, end: result, data: null };
-  obj = { value, size: value, rating, nodeIds: null, attributions: "find" };
+  obj = { value, size: value, rating, nodeIds: null, attributions: "ind" };
   let mapped;
   if (tmp3) {
     mapped = tmp3.map((arg0) => {
@@ -6473,7 +6473,7 @@ function _addEvent3() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -6537,7 +6537,7 @@ function _addEvent3() {
                 } else {
                   c6 = 0;
                   c8 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "T", done: null };
                 }
               }
               c8 = 3;
@@ -6608,7 +6608,7 @@ function _addEvent3() {
             return obj;
           } else {
             c8 = 3;
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } catch (tmp42) {
           client = tmp42;
@@ -6735,7 +6735,7 @@ function mergeWarning(_meta) {
     _meta._meta = obj;
     return _meta;
   } else {
-    obj = { headers: null, size: "Array", _meta: 8 };
+    obj = { headers: null, size: "Array", _meta: true };
     obj[0] = obj;
     obj = { warnings: null };
     const items1 = [arg1];
@@ -6946,7 +6946,7 @@ function _prepareFetchData2() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -7207,7 +7207,7 @@ function _prepareFetchData2() {
                           tmp23._meta = obj8;
                           let obj9 = tmp23;
                         } else {
-                          obj9 = { headers: null, size: "Array", _meta: 8 };
+                          obj9 = { headers: null, size: "Array", _meta: true };
                           obj9[0] = obj8;
                           const obj10 = { warnings: null };
                           const items1 = [tmp21];
@@ -7319,7 +7319,7 @@ function _getResponseInfo2() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -7351,7 +7351,7 @@ function _getResponseInfo2() {
               let closure_10;
               v0 = 1;
               dependencyMap = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -7489,7 +7489,7 @@ function _parseFetchResponseBody2() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -7648,7 +7648,7 @@ function _captureXhrBreadcrumbToReplay() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -8005,7 +8005,7 @@ function _captureXhrBreadcrumbToReplay() {
                               tmp22._meta = obj6;
                               let obj7 = tmp22;
                             } else {
-                              obj7 = { headers: null, size: "Array", _meta: 8 };
+                              obj7 = { headers: null, size: "Array", _meta: true };
                               obj7[0] = obj6;
                               const obj8 = { warnings: null };
                               let items2 = [tmp17];
@@ -8024,7 +8024,7 @@ function _captureXhrBreadcrumbToReplay() {
                             tmp18._meta = obj9;
                             let obj10 = tmp18;
                           } else {
-                            obj10 = { headers: null, size: "Array", _meta: 8 };
+                            obj10 = { headers: null, size: "Array", _meta: true };
                             obj10[0] = obj9;
                             const obj11 = { warnings: null };
                             let items4 = [tmp14];
@@ -8269,7 +8269,7 @@ function _addMemoryEntry() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -8441,7 +8441,7 @@ function _prepareReplayEvent() {
       let c3;
       const dependencyMap = tmp2;
       ({ client: c0, scope: c1, replayId: c2, event: c3 } = store);
-      yield "ct";
+      yield "PX_8";
       const obj2 = { event_id: null, integrations: null };
       obj2[0] = c2;
       if (typeof store._integrations === "object") {
@@ -8531,7 +8531,7 @@ function _sendReplayRequest() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -8573,7 +8573,7 @@ function _sendReplayRequest() {
               let closure_20;
               c5 = 1;
               c6 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp10) {
             if (arg0 === 1) {
@@ -8829,7 +8829,7 @@ function _sendReplay() {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -8855,7 +8855,7 @@ function _sendReplay() {
               let error;
               c6 = 1;
               c7 = 1;
-              return { value: "ct", done: "Array" };
+              return { value: "PX_8", done: "Array" };
             }
           } else if (1 === tmp9) {
             if (arg0 === 1) {
@@ -8887,7 +8887,7 @@ function _sendReplay() {
                 return obj3;
               } else {
                 c7 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
             }
           } else {

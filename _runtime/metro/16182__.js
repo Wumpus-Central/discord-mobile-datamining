@@ -1,6 +1,6 @@
 // _runtime/metro/16182__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "el",
+  locale: "tr",
   pluralRuleFunction(arg0, arg1) {
     let str = "other";
     let str2 = "other";
@@ -13,4 +13,4 @@ globalThis.IntlMessageFormat.__addLocaleData({
     return str2;
   }
 });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "el-CY", parentLocale: "el" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "tr-CY", parentLocale: "tr" });

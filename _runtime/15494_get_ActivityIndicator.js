@@ -1,3 +1,0 @@
-// _runtime/15494_get_ActivityIndicator.js
-
-export default require("get ActivityIndicator").NativeModules.RNViewShot;

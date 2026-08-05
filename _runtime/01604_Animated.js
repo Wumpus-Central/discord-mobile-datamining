@@ -79,7 +79,7 @@ export const KeyboardProvider = (enabled) => {
         obj[0] = arg1;
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        return { value: "T", done: null };
       }
     } else {
       try {
@@ -119,7 +119,7 @@ export const KeyboardProvider = (enabled) => {
           return obj;
         } else {
           v0 = 3;
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } catch (tmp14) {
         v0 = tmp;
@@ -265,7 +265,7 @@ export const KeyboardProvider = (enabled) => {
     }
   }, items1);
   obj2 = { value: tmp9, children: null };
-  obj3 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "function pnpm_indexTs1(event){const{handler}=this.__closure;if(event.eventName.endsWith(\"onKeyboardMoveStart\")){var _handler$onStart,_handler;(_handler$onStart=(_handler=handler).onStart)===null||_handler$onStart===void 0||_handler$onStart.call(_handler,event);}if(event.eventName.endsWith(\"onKeyboardMove\")){var _handler$onMove,_handler2;(_handler$onMove=(_handler2=handler).onMove)===null||_handler$onMove===void 0||_handler$onMove.call(_handler2,event);}if(event.eventName.endsWith(\"onKeyboardMoveEnd\")){var _handler$onEnd,_handler3;(_handler$onEnd=(_handler3=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler3,event);}if(event.eventName.endsWith(\"onKeyboardMoveInteractive\")){var _handler$onInteractiv,_handler4;(_handler$onInteractiv=(_handler4=handler).onInteractive)===null||_handler$onInteractiv===void 0||_handler$onInteractiv.call(_handler4,event);}}", onKeyboardMoveInteractive: "function pnpm_indexTs2(event){const{handler}=this.__closure;if(event.eventName.endsWith(\"onFocusedInputTextChanged\")){var _handler$onChangeText,_handler;(_handler$onChangeText=(_handler=handler).onChangeText)===null||_handler$onChangeText===void 0||_handler$onChangeText.call(_handler,event);}if(event.eventName.endsWith(\"onFocusedInputSelectionChanged\")){var _handler$onSelectionC,_handler2;(_handler$onSelectionC=(_handler2=handler).onSelectionChange)===null||_handler$onSelectionC===void 0||_handler$onSelectionC.call(_handler2,event);}}", onKeyboardMoveEnd: "M1.99999 9H2.99999V8H1.99999V9Z", onFocusedInputLayoutChangedReanimated: "white", children: 563165519675457.9 };
+  obj3 = { ref: tmp3, enabled: first, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "image/png", onKeyboardMoveInteractive: "mobile", onKeyboardMoveEnd: null, onFocusedInputLayoutChangedReanimated: "brev med hjerte", children: "k\u00E6restebrev" };
   let tmp18 = fn;
   let tmp19 = fn;
   if (!fn) {

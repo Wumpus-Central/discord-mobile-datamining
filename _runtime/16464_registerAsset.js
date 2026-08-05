@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/verification", width: 180, height: 160, scales: [1], hash: "39e83a7f9fd6f4ad0c8041d592ca008c", name: "img_verify_phone_dark_theme", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images", width: 24, height: 24, scales: [2, 3], hash: "0ad684cb154c8b73e2d19dd6933251ad", name: "ic_premium_perk_money_24px", type: "png" });

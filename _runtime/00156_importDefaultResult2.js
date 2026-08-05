@@ -19,8 +19,8 @@ const Performance = arg1;
 let closure_6 = ["mark", "measure"];
 const error = importDefaultResult2Result;
 ({ reportMark: metroImportAll, reportMeasure: c9, getMarkTime: c10, clearMarks: unpackModuleId, clearMeasures: closure_12 } = importDefaultResult2Result);
-let closure_13 = { startTime: 0, detail: "channel" };
-let closure_14 = { name: "", startTime: 0, duration: 0, detail: "disabled" };
+let closure_13 = { startTime: 0, detail: "channelId" };
+let closure_14 = { name: "", startTime: 0, duration: 0, detail: "sa" };
 function getMarkTimeForMeasure(arg0) {
 
 }

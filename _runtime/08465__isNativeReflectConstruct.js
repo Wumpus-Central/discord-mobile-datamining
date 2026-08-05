@@ -7,7 +7,7 @@ import "noop";
 import { jsx } from "jsxProd";
 import { __INTERNAL_VIEW_CONFIG } from "metro/08466___INTERNAL_VIEW_CONFIG.js";
 
-const Circle = arg1;
+const FeMerge = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class Circle {
+class FeMerge {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, Circle);
+    tmp = _isNativeReflectConstruct(this, FeMerge);
     tmp2 = __esModule;
-    obj = __esModule(Circle);
+    obj = __esModule(FeMerge);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,39 +47,30 @@ class Circle {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(Circle, require("_isNativeReflectConstruct"));
-const items = [
-  {
-    key: "render",
-    value: function render() {
-      let cx;
-      let cy;
-      let r;
-      const self = this;
-      const props = this.props;
-      let obj = {};
-      ({ cx, cy, r } = props);
-      const merged = Object.assign(self(8452).extract(this, props));
-      obj.cx = cx;
-      obj.cy = cy;
-      obj.r = r;
-      obj = {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      };
-      const obj2 = self(8452);
-      const merged1 = Object.assign(obj);
-      return jsx(__INTERNAL_VIEW_CONFIG, {
-        ref(arg0) {
-          return self.refMethod(arg0);
-        }
-      });
-    }
+require("_inherits")(FeMerge, require("_isNativeReflectConstruct"));
+let obj = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      }
+    };
+    const tmp = __INTERNAL_VIEW_CONFIG;
+    const merged = Object.assign(self(8447).extractFilter(this.props));
+    const obj2 = self(8447);
+    const merged1 = Object.assign(self(8447).extractFeMerge(this.props, this));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
-];
-const importDefaultResultResult = importDefaultResult(Circle, items);
-importDefaultResultResult.displayName = "Circle";
-importDefaultResultResult.defaultProps = { cx: 0, cy: 0, r: 0 };
+};
+const items = [obj];
+const importDefaultResultResult = importDefaultResult(FeMerge, items);
+importDefaultResultResult.displayName = "FeMerge";
+obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

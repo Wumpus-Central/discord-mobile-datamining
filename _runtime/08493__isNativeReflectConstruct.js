@@ -7,7 +7,7 @@ import "noop";
 import { jsx } from "jsxProd";
 import { __INTERNAL_VIEW_CONFIG } from "metro/08494___INTERNAL_VIEW_CONFIG.js";
 
-const FeMerge = arg1;
+const Path = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,12 +27,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeMerge {
+class Path {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeMerge);
+    tmp = _isNativeReflectConstruct(this, Path);
     tmp2 = __esModule;
-    obj = __esModule(FeMerge);
+    obj = __esModule(Path);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
       tmp7 = globalThis;
@@ -47,30 +47,32 @@ class FeMerge {
     return tmp3(self, constructResult);
   }
 }
-require("_inherits")(FeMerge, require("_isNativeReflectConstruct"));
-let obj = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const tmp = __INTERNAL_VIEW_CONFIG;
-    const merged = Object.assign(self(8475).extractFilter(this.props));
-    const obj2 = self(8475);
-    const merged1 = Object.assign(self(8475).extractFeMerge(this.props, this));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+require("_inherits")(Path, require("_isNativeReflectConstruct"));
+const items = [
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let obj = {};
+      const merged = Object.assign(self(8424).extract(this, props));
+      obj.d = props.d;
+      obj = {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      };
+      const obj2 = self(8424);
+      const merged1 = Object.assign(obj);
+      return jsx(__INTERNAL_VIEW_CONFIG, {
+        ref(arg0) {
+          return self.refMethod(arg0);
+        }
+      });
+    }
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeMerge, items);
-importDefaultResultResult.displayName = "FeMerge";
-obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(Path, items);
+importDefaultResultResult.displayName = "Path";
 
 export default importDefaultResultResult;

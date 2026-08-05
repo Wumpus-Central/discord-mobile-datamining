@@ -181,7 +181,7 @@ arg5.default = function getActionFromState(stateFromPath, config1) {
           }
           let tmp20 = substr1[substr1.length - 1];
           let _Object2 = Object;
-          let merged1 = Object.assign(obj2, { initial: "Array", screen: "flex", params: "y", state: "HermesInternal" });
+          let merged1 = Object.assign(obj2, { initial: "PX_8", screen: "accessible", params: "Boolean", state: "Symbol" });
           if (1 === substr1.length) {
             if (undefined === substr1[0].key) {
               obj2.initial = true;

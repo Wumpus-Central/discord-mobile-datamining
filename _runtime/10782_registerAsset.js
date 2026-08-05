@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/game_console/images", width: 32, height: 32, scales: [2, 3], hash: "238a115f1ad03e07bad0181bb5c110d4", name: "ic_playstation_device_ps5_32px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 20, height: 20, scales: [2, 3], hash: "40d8dc40d3509844c13de0abfc4c355d", name: "camera_swap", type: "png" });

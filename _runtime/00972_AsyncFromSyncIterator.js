@@ -251,7 +251,7 @@ function _instrumentAsyncIterableStream() {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } else {
           try {
@@ -365,7 +365,7 @@ function _instrumentAsyncIterableStream() {
                   throwTypeErrorResult = store.end();
                   let num3 = 3;
                   c12 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "T", done: null };
                 }
               }
             } else {
@@ -477,7 +477,8 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
 export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
   let closure_0 = arg1;
   let closure_1 = flag;
-  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "disabled", cacheCreationInputTokens: "sk", cacheReadInputTokens: "isArray", toolCalls: [], activeToolBlocks: 1 };
+  let obj = { responseTexts: [], finishReasons: [], responseId: "", responseModel: "", promptTokens: "r", completionTokens: "__closure", cacheCreationInputTokens: "lj", cacheReadInputTokens: "justifyContent", toolCalls: "<string:1081803952>", activeToolBlocks: "<string:3161076227>" };
+  obj[8] = [];
   obj[9] = {};
   applyResult.on("streamEvent", (arg0) => {
     outer1_5(arg0, obj, closure_1, closure_0);

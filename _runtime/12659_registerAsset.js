@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 51, height: 12, scales: [2, 3], hash: "dfce4abe2b63753703cd28b1bd0f9f1d", name: "img_logo_nitro_small_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored", width: 48, height: 48, scales: [2, 3], hash: "434b4bb837ba9a9866eda02df308d953", name: "tier_0_48px_light", type: "png" });

@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9oYW5nb3V0X3dpbmRvdw==", scales: [1], hash: "e7f80db929522398610bdc8b328162d5", name: "bg.messages.e7f80db929522398610bdc8b328162d5.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/hangout_window", scales: [1], hash: "0ffaf58e78768b3ade273f3634f7892a", name: "HangoutWindow.compiled.messages", type: "jsona" });

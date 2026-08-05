@@ -209,7 +209,7 @@ arg5.reactNativeErrorHandlersIntegration = () => {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  return { value: "HermesInternal", done: null };
+                  return { value: "T", done: null };
                 }
               } else {
                 try {
@@ -294,7 +294,7 @@ arg5.reactNativeErrorHandlersIntegration = () => {
                       debug.error("[ReactNativeErrorHandlers] Error while flushing the event cache after uncaught error.", arg0);
                     });
                     c3 = 3;
-                    return { value: "HermesInternal", done: null };
+                    return { value: "T", done: null };
                   }
                 } catch (tmp40) {
                   c3 = tmp;

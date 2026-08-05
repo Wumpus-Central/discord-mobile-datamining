@@ -1,46 +1,52 @@
 // _runtime/metro/16177__.js
-arg5.default = {
-  locale: "en",
+let obj = {
+  locale: "pt",
   pluralRuleFunction(arg0, arg1) {
-    const parts = String(arg0).split(".");
-    let substr1 = Number(parts[0]) == arg0;
-    let substr = substr1;
-    if (substr1) {
-      const first = parts[0];
-      substr = first.slice(-1);
-    }
-    if (substr1) {
-      const first1 = parts[0];
-      substr1 = first1.slice(-2);
-    }
-    if (arg1) {
-      if (1 != substr) {
-        if (2 != substr) {
-          let str7 = "other";
-          if (3 == substr) {
-            str7 = "other";
-            if (13 != substr1) {
-              str7 = "few";
+    String(arg0);
+    let str = "other";
+    if (!arg1) {
+      let str2 = "other";
+      if (tmp2) {
+        str2 = "other";
+        if (arg0 >= 0) {
+          str2 = "other";
+          if (arg0 <= 2) {
+            str2 = "other";
+            if (2 != arg0) {
+              str2 = "one";
             }
           }
-          let str5 = str7;
-        } else {
-          str5 = "two";
         }
-        let str4 = str5;
-      } else {
-        str4 = "one";
       }
-      let str3 = str4;
-    } else {
-      str3 = "other";
+      str = str2;
+    }
+    return str;
+  }
+};
+globalThis.IntlMessageFormat.__addLocaleData(obj);
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-AO", parentLocale: "pt-PT" });
+obj = {
+  locale: "pt-PT",
+  parentLocale: "pt",
+  pluralRuleFunction(arg0, arg1) {
+    let str2 = "other";
+    if (!arg1) {
+      let str3 = "other";
       if (1 == arg0) {
         str3 = "other";
-        if (!parts[1]) {
+        if (!str.split(".")[1]) {
           str3 = "one";
         }
       }
+      str2 = str3;
     }
-    return str3;
+    return str2;
   }
 };
+globalThis.IntlMessageFormat.__addLocaleData(obj);
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-CV", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-GW", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-MO", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-MZ", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-ST", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-TL", parentLocale: "pt-PT" });

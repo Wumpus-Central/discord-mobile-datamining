@@ -56,10 +56,18 @@ if (self2) {
       if (typeof error !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      let closure_0 = { string: { unit: "karaktrojn", verb: "havi" }, file: { unit: "bajtojn", verb: "havi" }, array: { unit: "elementojn", verb: "havi" }, set: { unit: "elementojn", verb: "havi" } };
-      let closure_1 = { regex: "enigo", email: "retadreso", url: "URL", emoji: "emo\u011Dio", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO-datotempo", date: "ISO-dato", time: "ISO-tempo", duration: "ISO-da\u016Dro", ipv4: "IPv4-adreso", ipv6: "IPv6-adreso", cidrv4: "IPv4-rango", cidrv6: "IPv6-rango", base64: "64-ume kodita karaktraro", base64url: "URL-64-ume kodita karaktraro", json_string: "JSON-karaktraro", e164: "E.164-nombro", jwt: "JWT", template_literal: "enigo" };
-      let closure_2 = { nan: "NaN", number: "nombro", array: "tabelo", null: "senvalora" };
-      return { localeError: (arg0) => "Nevalida valoro en " + tmp.origin };
+      let closure_0 = { string: { unit: "tecken", verb: "att ha" }, file: { unit: "bytes", verb: "att ha" }, array: { unit: "objekt", verb: "att inneh\u00E5lla" }, set: { unit: "objekt", verb: "att inneh\u00E5lla" } };
+      let closure_1 = { regex: "regulj\u00E4rt uttryck", email: "e-postadress", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO-datum och tid", date: "ISO-datum", time: "ISO-tid", duration: "ISO-varaktighet", ipv4: "IPv4-intervall", ipv6: "IPv6-intervall", cidrv4: "IPv4-spektrum", cidrv6: "IPv6-spektrum", base64: "base64-kodad str\u00E4ng", base64url: "base64url-kodad str\u00E4ng", json_string: "JSON-str\u00E4ng", e164: "E.164-nummer", jwt: "JWT", template_literal: "mall-literal" };
+      let closure_2 = { nan: "NaN", number: "antal", array: "lista" };
+      return {
+        localeError: (arg0) => {
+          let str = tmp.origin;
+          if (str == null) {
+            str = "v\u00E4rdet";
+          }
+          return "Ogiltigt v\u00E4rde i " + str;
+        }
+      };
     };
     let closure_2 = fn(require("mergeDefs"));
     function error() {

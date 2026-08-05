@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/CamoIcon", width: 60, height: 60, scales: [2, 3], hash: "4e81188cb8befe97a7c2fb2d0b3c1c42", name: "CamoIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium_marketing/native/images", width: 300, height: 180, scales: [2, 3], hash: "1e5063c49fcc72c328279886065f1480", name: "img_super_reactions", type: "png" });

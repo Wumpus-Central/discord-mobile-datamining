@@ -150,7 +150,7 @@ function y$1(span, arg1, formTitle) {
       }
     }
   }
-  obj = { type: span, props: obj, key: tmp5, ref: tmp4, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "NEUTRAL_73", __u: 1 };
+  obj = { type: span, props: obj, key: tmp5, ref: tmp4, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
   const sum = c14 + 1;
   c14 = sum;
   obj[11] = sum;
@@ -627,7 +627,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
                       let tmp17 = g$1;
                       let obj = { children: null };
                       obj[0] = vnodeResult2;
-                      obj = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "NEUTRAL_73", __u: 1 };
+                      obj = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
                       obj[0] = g$1;
                       obj[1] = obj;
                       let tmp18 = c14;
@@ -651,7 +651,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
                             ref = vnodeResult2.ref;
                           }
                           let __v = vnodeResult2.__v;
-                          obj = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "NEUTRAL_73", __u: 1 };
+                          obj = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
                           obj[0] = type2;
                           obj[1] = props;
                           obj[2] = key2;
@@ -683,7 +683,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
                 }
               }
             }
-            let obj1 = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "NEUTRAL_73", __u: 1 };
+            let obj1 = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
             obj1[1] = vnodeResult2;
             let tmp21 = vnodeResult2;
             if (null == vnodeResult2) {
@@ -2362,7 +2362,7 @@ function Form(onSubmitError) {
   let defaultName;
   let emailLabel;
   let emailPlaceholder;
-  let f102091;
+  let f102031;
   let messagePlaceholder;
   let namePlaceholder;
   let onFormClose;
@@ -2375,7 +2375,7 @@ function Form(onSubmitError) {
   let tmp12;
   let tmp5;
   let tmp7;
-  ({ options, defaultEmail, defaultName, onSubmit: f102091, onSubmitSuccess } = onSubmitError);
+  ({ options, defaultEmail, defaultName, onSubmit: f102031, onSubmitSuccess } = onSubmitError);
   onSubmitError = onSubmitError.onSubmitError;
   let screenshotInput = onSubmitError.screenshotInput;
   c4 = undefined;
@@ -2417,13 +2417,13 @@ function Form(onSubmitError) {
   c46 = 1;
   const tmp6 = onSubmitError(fn(D, null), 2);
   [tmp12, c14] = tmp3(tmp(tmp2, null), 2);
-  f102091 = (arg0) => {
+  f102031 = (arg0) => {
     _undefined2(arg0);
     callback(false);
   };
   c46 = 8;
   let items = [emailLabel, isEmailRequired, isNameRequired, messageLabel, nameLabel];
-  f102091 = (name) => {
+  f102031 = (name) => {
     let tmp2 = isEmailRequired;
     let tmp3 = isNameRequired;
     if (isNameRequired) {
@@ -2453,9 +2453,9 @@ function Form(onSubmitError) {
   c46 = 8;
   const tmp13 = fn2;
   const tmp3Result = tmp3(tmp(tmp2, null), 2);
-  closure_15 = fn2(() => f67864, items);
-  f102091 = undefined;
-  f102091 = screenshotInput((arg0) => {
+  closure_15 = fn2(() => f67831, items);
+  f102031 = undefined;
+  f102031 = screenshotInput((arg0) => {
     let closure_0 = arg0;
     let c5 = 0;
     let c6 = 0;
@@ -2472,7 +2472,7 @@ function Form(onSubmitError) {
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -2514,7 +2514,7 @@ function Form(onSubmitError) {
                 c4 = 0;
                 outer1_10(false);
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
               tmp88 = formData;
             }
@@ -2564,7 +2564,7 @@ function Form(onSubmitError) {
                 c4 = 0;
                 outer1_10(false);
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
             }
           } else {
@@ -2572,7 +2572,7 @@ function Form(onSubmitError) {
               c4 = 1;
               c4 = closure_3;
               if (messageLabel) {
-                const debug = f102091(onSubmitSuccess[2]).debug;
+                const debug = f102031(onSubmitSuccess[2]).debug;
                 debug.error(c4);
               }
               outer1_11(c4);
@@ -2613,9 +2613,9 @@ function Form(onSubmitError) {
     screenshotInput = first;
   }
   const items1 = [screenshotInput, onSubmitSuccess, onSubmitError];
-  f102091 = function(arg0) {
+  f102031 = function(arg0) {
     const self = this;
-    const apply = f102091.apply;
+    const apply = f102031.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -2624,7 +2624,7 @@ function Form(onSubmitError) {
     return applyArgumentsResult;
   };
   c46 = 8;
-  let obj = { class: "form", onSubmit: tmp13(() => f67864, items1) };
+  let obj = { class: "form", onSubmit: tmp13(() => f67831, items1) };
   let tmp15Result = null;
   if (input) {
     tmp15Result = null;
@@ -2671,7 +2671,7 @@ function Form(onSubmitError) {
     obj6[1] = defaultEmail;
     tmp15Result4 = tmp15("input", obj6);
   }
-  tmp14 = fn2(() => f67864, []);
+  tmp14 = fn2(() => f67831, []);
   const tmp15Result5 = y$1(LabelText, { label: messageLabel, isRequiredLabel, isRequired: true });
   let tmp15Result9 = null;
   if (input) {
@@ -2706,7 +2706,7 @@ function LabelText(arg0) {
 }
 function Dialog(onFormSubmitted) {
   onFormSubmitted = onFormSubmitted.onFormSubmitted;
-  let f67864 = onFormSubmitted;
+  let f67831 = onFormSubmitted;
   const merged = Object.assign(onFormSubmitted, Object.create(null));
   let first;
   let closure_3;
@@ -2716,17 +2716,17 @@ function Dialog(onFormSubmitted) {
   first = tmp3[0];
   closure_3 = tmp3[1];
   const items = [first];
-  f67864 = () => {
+  f67831 = () => {
     if (first) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp);
       callback(null);
     }
-    f67864();
+    f67831();
   };
   c46 = 8;
   [][0] = onFormSubmitted;
-  f67864 = (arg0, arg1) => {
+  f67831 = (arg0, arg1) => {
     merged.onSubmitSuccess(arg0, arg1);
     callback(setTimeout(() => {
       callback();
@@ -3121,7 +3121,7 @@ const fn3 = function p(__getInternalProperties) {
 const fn4 = function x(arg0, arg1) {
   let closure_0 = arg0;
   let c46 = 8;
-  return fn2(() => f67864, arg1);
+  return fn2(() => f67831, arg1);
 };
 obj = Object.create(null);
 obj[0] = fn4;
@@ -3570,7 +3570,7 @@ export const buildFeedbackIntegration = (arg0) => {
             obj[0] = arg1;
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            return { value: "T", done: null };
           }
         } else {
           try {
@@ -3838,7 +3838,7 @@ export const buildFeedbackIntegration = (arg0) => {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } else {
             try {
@@ -4224,7 +4224,7 @@ export const buildFeedbackIntegration = (arg0) => {
               obj[0] = arg1;
               return obj;
             } else {
-              return { value: "HermesInternal", done: null };
+              return { value: "T", done: null };
             }
           } else {
             try {
@@ -4621,7 +4621,7 @@ export () => ({
                 obj[0] = arg1;
                 return obj;
               } else {
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
             } else {
               try {
@@ -4683,7 +4683,7 @@ export () => ({
                 } else {
                   v0();
                   c3 = 3;
-                  return { value: "HermesInternal", done: null };
+                  return { value: "T", done: null };
                 }
               } catch (tmp17) {
                 c3 = tmp;
@@ -5007,7 +5007,7 @@ export () => ({
           obj[0] = arg1;
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          return { value: "T", done: null };
         }
       } else {
         try {
@@ -5054,7 +5054,7 @@ export () => ({
                 return obj3;
               } else {
                 c4 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: "T", done: null };
               }
             }
           } else if (arg0 === 1) {

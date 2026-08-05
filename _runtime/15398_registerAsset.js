@@ -2,4 +2,4 @@
 import registerAsset from "registerAsset";
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/notifications/images", width: 24, height: 24, scales: [1], hash: "0ca8431ba26e114a3e93aa8dc5cdf521", name: "ic_bell_on", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "55929208ca176923ba23d97478360818", name: "ic_guild_grid_24px", type: "png" });

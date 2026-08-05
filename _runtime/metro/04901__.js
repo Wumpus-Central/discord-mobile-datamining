@@ -1,23 +1,35 @@
 // _runtime/metro/04901__.js
+import { readTag } from "../04902_readTag.js";
+import { importDefaultResult1 } from "../04903_importDefaultResult1.js";
+const require = arg1;
 const module = arg2;
 const dependencyMap = arg6;
+let c3 = "Exif IFD Pointer";
+let c4 = "GPS Info IFD Pointer";
+let c5 = "Interoperability IFD Pointer";
 arg5.default = {
-  isTiffFile(byteLength) {
-    let tmp = byteLength;
-    if (tmp) {
-      tmp = byteLength.byteLength >= 4;
+  read(getUint16, sum) {
+    const byteOrder = module(4887).getByteOrder(getUint16, sum);
+    const obj = module(4887);
+    const obj2 = readTag;
+    const ifd = obj2.readIfd(getUint16, importDefaultResult1.IFD_TYPE_0TH, sum, readTag.get0thIfdOffset(getUint16, sum, byteOrder), byteOrder, arg2);
+    let objectAssignResult = ifd;
+    if (undefined !== ifd[c3]) {
+      let tmp3Result = tmp3(4882);
+      tmp3Result = tmp3(4902);
+      objectAssignResult = tmp3Result.objectAssign(ifd, tmp3Result.readIfd(getUint16, tmp3(4903).IFD_TYPE_EXIF, sum, sum + ifd[tmp5].value, byteOrder, arg2));
     }
-    if (tmp) {
-      const uint16 = byteLength.getUint16(0);
-      tmp = byteLength.getUint16(2, uint16 === module(4902).LITTLE_ENDIAN) === 42;
+    if (undefined !== objectAssignResult[c4]) {
+      const tmp3Result2 = tmp3(4902);
+      objectAssignResult = tmp3(4882).objectAssign(objectAssignResult, tmp3Result2.readIfd(getUint16, tmp3(4903).IFD_TYPE_GPS, sum, sum + objectAssignResult[tmp12].value, byteOrder, arg2));
+      const tmp3Result1 = tmp3(4882);
     }
-    return tmp;
-  },
-  findTiffOffsets() {
-    if (module(4900).USE_EXIF) {
-      return { hasAppMarkers: true, tiffHeaderOffset: 0 };
-    } else {
-      return {};
+    let objectAssignResult1 = objectAssignResult;
+    if (undefined !== objectAssignResult[c5]) {
+      const tmp3Result4 = tmp3(4902);
+      objectAssignResult1 = tmp3(4882).objectAssign(objectAssignResult, tmp3Result4.readIfd(getUint16, tmp3(4903).IFD_TYPE_INTEROPERABILITY, sum, sum + objectAssignResult[tmp19].value, byteOrder, arg2));
+      const tmp3Result3 = tmp3(4882);
     }
+    return { tags: objectAssignResult1, byteOrder };
   }
 };

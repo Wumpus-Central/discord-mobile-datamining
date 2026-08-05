@@ -3,8 +3,10 @@ import _classCallCheck from "_classCallCheck";
 import _possibleConstructorReturn from "_possibleConstructorReturn";
 import _getPrototypeOf from "_getPrototypeOf";
 import importDefaultResult from "_createClass";
+import "noop";
+import { jsx } from "jsxProd";
 
-const FeImage = arg1;
+const Polygon = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,39 +26,60 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class FeImage {
+class Polygon {
   constructor() {
     self = this;
-    tmp = _isNativeReflectConstruct(this, FeImage);
+    items = [...arguments];
+    apply = undefined;
+    tmp = _isNativeReflectConstruct(this, apply);
+    items1 = [...items];
     tmp2 = __esModule;
-    obj = __esModule(FeImage);
+    obj = __esModule(apply);
     tmp3 = __esModule;
     if (_isNativeReflectConstruct()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    apply = tmp3Result;
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + _undefined(outer1_1[7])(points) + "z";
+      }
+      if (_undefined.root) {
+        const root = _undefined.root;
+        root.setNativeProps(points);
+      }
+    };
+    return tmp3Result;
   }
 }
-require("_inherits")(FeImage, require("_isNativeReflectConstruct"));
-let obj = {
-  key: "render",
-  value: function render() {
-    const result = FeImage(8453).warnUnimplementedFilter();
-    return null;
+require("_inherits")(Polygon, require("_isNativeReflectConstruct"));
+let items = [
+  {
+    key: "render",
+    value: function render() {
+      const props = this.props;
+      const points = props.points;
+      const obj = { ref: this.refMethod, d: null };
+      let combined = points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        combined = "M" + Polygon(8498)(points) + "z";
+      }
+      obj[1] = combined;
+      const merged = Object.assign(props);
+      return jsx(Polygon(8493), { ref: this.refMethod, d: null });
+    }
   }
-};
-const items = [obj];
-const importDefaultResultResult = importDefaultResult(FeImage, items);
-importDefaultResultResult.displayName = "FeImage";
-obj = {};
-const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-importDefaultResultResult.defaultProps = obj;
+];
+const importDefaultResultResult = importDefaultResult(Polygon, items);
+importDefaultResultResult.displayName = "Polygon";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;
