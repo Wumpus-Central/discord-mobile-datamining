@@ -42,13 +42,13 @@ function SearchListPrivateChannel(channel) {
     obj[0] = tmp.gdmIcon;
     obj = { channel: null, size: null };
     obj[0] = channel;
-    obj[1] = Button /* Button */.AvatarSizes.SIZE_16;
+    obj[1] = Button.AvatarSizes.SIZE_16;
     obj[1] = callback(FacepileGroupDMAvatar, obj);
     const items = [callback(tmp6, obj), ];
     const obj1 = { style: null, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
     obj1[0] = tmp.channelName;
     obj1[4] = tmp4;
-    items[1] = callback(Text /* Text */.Text, obj1);
+    items[1] = callback(Text.Text, obj1);
     obj[1] = items;
     let tmp5Result = tmp5(tmp6, obj);
     const tmp2Result = FacepileGroupDMAvatar;
@@ -56,11 +56,11 @@ function SearchListPrivateChannel(channel) {
     obj[0] = tmp.privateChannelIcon;
     const obj2 = { style: null, size: "xs", color: "interactive-text-default" };
     obj2[0] = tmp.icon;
-    const items1 = [callback(ForumIcon /* ForumIcon */.ForumIcon, obj2), ];
+    const items1 = [callback(ForumIcon.ForumIcon, obj2), ];
     const obj3 = { variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj3[3] = intl.string(getSystemLocale /* getSystemLocale */.t.ACgJhM);
-    items1[1] = callback(Text /* Text */.Text, obj3);
+    const intl = getSystemLocale.intl;
+    obj3[3] = intl.string(getSystemLocale.t.ACgJhM);
+    items1[1] = callback(Text.Text, obj3);
     obj[1] = items1;
     tmp5Result = tmp5(tmp6, obj);
   }
@@ -114,7 +114,7 @@ export const SearchListCardContainer = function SearchListCardContainer(arg0) {
   let onPress;
   ({ children, onPress, containerStyle } = arg0);
   const style = [createCacheKey().container, containerStyle];
-  return callback(PressableCard /* PressableCard */.Card, { shadow: "low", border: "subtle", onPress, style, children });
+  return callback(PressableCard.Card, { shadow: "low", border: "subtle", onPress, style, children });
 };
 export const SearchListCardThumbnail = function SearchListCardThumbnail(children) {
   return callback(View, { style: createCacheKey().thumbnail, children: children.thumbnail });
@@ -128,14 +128,14 @@ export const SearchListCardContent = function SearchListCardContent(arg0) {
   if (typeof label === "string") {
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
     obj[3] = label;
-    tmp3 = callback(Text /* Text */.Text, obj);
+    tmp3 = callback(Text.Text, obj);
   }
   const items = [tmp3, ];
   let tmp4 = subLabel;
   if (typeof subLabel === "string") {
     obj = { variant: "text-sm/normal", color: "text-default", lineClamp: 1, children: null };
     obj[3] = subLabel;
-    tmp4 = callback(Text /* Text */.Text, obj);
+    tmp4 = callback(Text.Text, obj);
   }
   items[1] = tmp4;
   obj[1] = items;

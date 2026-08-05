@@ -71,9 +71,9 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
     flag = false;
   }
   const tmp2 = callback2(useIsMobileVisualRefreshExperimentEnabled("TagListInputTag"));
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   let obj = { text: tag.text };
-  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["0Vb9FQ"], obj);
+  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["0Vb9FQ"], obj);
   ({ onAccessibilityAction, accessibilityActions } = useAccessibilityPress(() => callback("remove"), formatToPlainStringResult));
   const items = [tmp2.tagWrapper, , , ];
   let prop;
@@ -117,7 +117,7 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   }
   obj1[3] = str;
   obj1[4] = tag.text;
-  items1[1] = callback(Text /* Text */.Text, obj1);
+  items1[1] = callback(Text.Text, obj1);
   obj[6] = items1;
-  return closure_5(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return closure_5(PressableBase.PressableOpacity, obj);
 };

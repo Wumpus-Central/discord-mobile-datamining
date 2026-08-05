@@ -11,7 +11,7 @@ const result = require("participantFromServer").fileFinishedImporting("modules/a
 
 export const trackActivityThermalStateNoticeShown = function trackActivityThermalStateNoticeShown() {
   currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
-  let obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
+  let obj = getEmbeddedActivityLocationChannelId;
   let _location;
   if (currentEmbeddedActivity != null) {
     _location = currentEmbeddedActivity.location;

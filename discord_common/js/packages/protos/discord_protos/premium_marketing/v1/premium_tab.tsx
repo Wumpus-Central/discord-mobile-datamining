@@ -70,7 +70,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (5 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let LocalizedString2 = create /* create */.LocalizedString;
+        let LocalizedString2 = create.LocalizedString;
         let tmp29 = LocalizedString2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -78,7 +78,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (6 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let LocalizedString = create /* create */.LocalizedString;
+        let LocalizedString = create.LocalizedString;
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -137,13 +137,13 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(badgeLabel, tag,
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
   }
   if (badgeLabel.badgeLabelLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined = LocalizedString.internalBinaryWrite(badgeLabel.badgeLabelLocalized, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(badgeLabel.badgeLabelLocalized, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (badgeLabel.acknowledgedBadgeLabelLocalized) {
-    const LocalizedString2 = create /* create */.LocalizedString;
+    const LocalizedString2 = create.LocalizedString;
     const tagResult5 = tag.tag(6, 01307__.WireType.LengthDelimited);
     const joined1 = LocalizedString2.internalBinaryWrite(badgeLabel.acknowledgedBadgeLabelLocalized, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(badgeLabel.acknowledgedBadgeLabelLocalized, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

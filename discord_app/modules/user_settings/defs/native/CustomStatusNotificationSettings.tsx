@@ -8,8 +8,8 @@ import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 function onChange(custom_status_push_notifications) {
-  const CustomStatusPushNotifications = explicitContentFromProto /* explicitContentFromProto */.CustomStatusPushNotifications;
-  const CustomStatusPushNotificationType = create /* create */.CustomStatusPushNotificationType;
+  const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;
+  const CustomStatusPushNotificationType = create.CustomStatusPushNotificationType;
   CustomStatusPushNotifications.updateSetting(custom_status_push_notifications ? CustomStatusPushNotificationType.STATUS_PUSH_ENABLED : CustomStatusPushNotificationType.STATUS_PUSH_DISABLED);
   let obj = expandEventProperties;
   obj = { update_type: constants.ACCOUNT, custom_status_push_notifications };
@@ -17,35 +17,35 @@ function onChange(custom_status_push_notifications) {
 }
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.PTtxi9);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.PTtxi9);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["/+OQEs"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/+OQEs"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue() {
-    const CustomStatusPushNotifications = explicitContentFromProto /* explicitContentFromProto */.CustomStatusPushNotifications;
+    const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;
     const setting = CustomStatusPushNotifications.useSetting();
-    return setting !== create /* create */.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
+    return setting !== create.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
   },
   onValueChange: onChange
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.PTtxi9);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.PTtxi9);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["/+OQEs"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/+OQEs"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue() {
-    const CustomStatusPushNotifications = explicitContentFromProto /* explicitContentFromProto */.CustomStatusPushNotifications;
+    const CustomStatusPushNotifications = explicitContentFromProto.CustomStatusPushNotifications;
     const setting = CustomStatusPushNotifications.useSetting();
-    return setting !== create /* create */.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
+    return setting !== create.CustomStatusPushNotificationType.STATUS_PUSH_DISABLED;
   },
   onValueChange: onChange
 };

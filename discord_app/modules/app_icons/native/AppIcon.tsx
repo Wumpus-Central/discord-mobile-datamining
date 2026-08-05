@@ -25,7 +25,7 @@ export default function AppIcon(size) {
   }
   const tmp = createCacheKey();
   const tmp2 = useTheme();
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   let num2 = 1;
   if (obj.isThemeDark(tmp2)) {
     num2 = 0;

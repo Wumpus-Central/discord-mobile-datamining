@@ -43,7 +43,7 @@ export default function useGuildPowerupBoostLevelProgress(arg0) {
   return num + tmp.available;
 };
 export const getGuildPowerupBoostLevelProgress = function getGuildPowerupBoostLevelProgress(id) {
-  const guildPowerupsBoostCount = useGuildAppliedBoostCount /* useGuildAppliedBoostCount */.getGuildPowerupsBoostCount(id);
+  const guildPowerupsBoostCount = useGuildAppliedBoostCount.getGuildPowerupsBoostCount(id);
   guild = guild.getGuild(id);
   let premiumTier;
   if (guild != null) {

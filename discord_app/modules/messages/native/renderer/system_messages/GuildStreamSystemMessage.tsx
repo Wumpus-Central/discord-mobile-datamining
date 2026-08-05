@@ -18,14 +18,14 @@ export const createGuildStreamSystemMessage = function createGuildStreamSystemMe
   }
   ({ channel_id, guild_id } = messageReference);
   const tmp3 = getHumanizedCallDuration(message);
-  let obj1 = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+  let obj1 = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj1.getMessageAuthorWithProcessedColor(message);
   let obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj = { streamType: StreamTypes.GUILD, channelId: channel_id, ownerId: message.author.id, guildId: guild_id };
   obj1 = { ended: tmp4, content: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const formatToParts = intl.formatToParts;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (null != tmp3) {
     const obj2 = {};
     const merged = Object.assign(obj);

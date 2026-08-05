@@ -355,7 +355,7 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, isIterable /* isIterable */.shallow);
+  }, isIterable.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

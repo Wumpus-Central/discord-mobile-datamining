@@ -13,7 +13,7 @@ const prototype = MobileMuxWrapper.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
   try {
-    const mobileCustomMuxIntegration = new logger /* logger */.MobileCustomMuxIntegration(self.config);
+    const mobileCustomMuxIntegration = new logger.MobileCustomMuxIntegration(self.config);
     self.muxIntegration = mobileCustomMuxIntegration;
     const muxIntegration = self.muxIntegration;
     muxIntegration.initialize();

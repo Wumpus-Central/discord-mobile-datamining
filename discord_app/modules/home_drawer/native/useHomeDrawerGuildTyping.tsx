@@ -9,8 +9,8 @@ const require = arg1;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {
   let result = typingChannelId.typingChannelId === typingChannelId2.typingChannelId && typingChannelId.typingChannelName === typingChannelId2.typingChannelName;
   if (result) {
-    result = shallowEqual /* shallowEqual */.areArraysShallowEqual(typingChannelId.typingUserIds, typingChannelId2.typingUserIds);
-    const obj = shallowEqual /* shallowEqual */;
+    result = shallowEqual.areArraysShallowEqual(typingChannelId.typingUserIds, typingChannelId2.typingUserIds);
+    const obj = shallowEqual;
   }
   return result;
 }

@@ -7,7 +7,7 @@ import { getRootNavigationRef } from "../../../main_tabs_v2/RootNavigationRef.na
 const result = require("getRootNavigationRef").fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 
 export const openUserSettings = (screen) => {
-  let obj = getRootNavigationRef /* getRootNavigationRef */;
+  let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (tmp2) {
     screen = undefined;

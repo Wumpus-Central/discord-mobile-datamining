@@ -24,13 +24,13 @@ export default function PollBadge(style) {
   let obj = { style: items, children: null };
   items = [tmp.container, style.style];
   obj = { size: null, source: null };
-  obj[0] = Button /* Button */.IconSizes.EXTRA_SMALL_10;
+  obj[0] = Button.IconSizes.EXTRA_SMALL_10;
   obj[1] = registerAsset;
-  const items1 = [callback(Button /* Button */.Icon, obj), ];
+  const items1 = [callback(Button.Icon, obj), ];
   obj = { style: tmp.text, variant: "text-xs/semibold", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.RgIi2B);
-  items1[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.RgIi2B);
+  items1[1] = callback(Text.Text, obj);
   obj[1] = items1;
   return callback2(View, obj);
 };

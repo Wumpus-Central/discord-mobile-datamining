@@ -47,7 +47,7 @@ export const getDevicePushProvider = function getDevicePushProvider() {
     if (!obj.isAndroid()) {
       str = str2;
     }
-    obj = set /* set */;
+    obj = set;
   }
   return str;
 };

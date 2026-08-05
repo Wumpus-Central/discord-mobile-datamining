@@ -33,7 +33,7 @@ let unpackModuleId;
 const require = arg1;
 function AlwaysCompressImagesSwitch(isKestrelTreatment) {
   const tmp = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [CHANNEL_SIDEBAR_WIDTH];
   const stateFromStores = obj.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   const callback = React.useCallback((dataSavingMode) => {
@@ -68,14 +68,14 @@ function PremiumUpsellImage(arg0) {
   let style;
   let useReducedMotion;
   ({ image, style, useReducedMotion } = arg0);
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isAndroid()) {
     if (!useReducedMotion) {
       if (null != image.uri) {
         obj = { url: null, style: null, autoplay: true };
         obj[0] = image.uri;
         obj[1] = style;
-        let tmp5 = callback2(useAPNGPlayerControls /* useAPNGPlayerControls */.APNGPlayer, obj);
+        let tmp5 = callback2(useAPNGPlayerControls.APNGPlayer, obj);
       }
       return tmp5;
     }

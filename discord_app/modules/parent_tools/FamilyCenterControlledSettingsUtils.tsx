@@ -5,7 +5,7 @@ import { result } from "../user_settings/family_center/ParentalControlledUserSet
 function getGoreContentSettingOrDefault(arg0) {
   let goreContentFriendDm;
   let goreContentNonFriendDm;
-  const ParentalControlledGoreContent = result /* result */.ParentalControlledGoreContent;
+  const ParentalControlledGoreContent = result.ParentalControlledGoreContent;
   let controlledSetting = ParentalControlledGoreContent.getControlledSetting(arg0);
   if (controlledSetting == null) {
     controlledSetting = {};
@@ -16,19 +16,19 @@ function getGoreContentSettingOrDefault(arg0) {
     goreContentNonFriendDm = tmpResult.resolveGoreSettingWithDefaultsForTeen({ isDm: true });
   }
   const obj = { goreContentNonFriendDm, goreContentFriendDm: null, goreContentGuilds: null };
-  tmp3 = null != goreContentNonFriendDm && goreContentNonFriendDm !== create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+  tmp3 = null != goreContentNonFriendDm && goreContentNonFriendDm !== create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   if (!tmp4) {
     tmpResult = tmp(5826);
     goreContentFriendDm = tmpResult.resolveGoreSettingWithDefaultsForTeen({ isDm: true, isFriend: true });
   }
   obj[1] = goreContentFriendDm;
-  obj[2] = create /* create */.ExplicitContentRedaction.BLUR;
+  obj[2] = create.ExplicitContentRedaction.BLUR;
   return obj;
 }
 function getExplicitContentSettingOrDefault(teenId) {
   let isFriend;
   let setting;
-  const ParentalControlledExplicitContent = result /* result */.ParentalControlledExplicitContent;
+  const ParentalControlledExplicitContent = result.ParentalControlledExplicitContent;
   const controlledSetting = ParentalControlledExplicitContent.getControlledSetting(teenId);
   let obj = { teenId, setting: null };
   let prop;
@@ -72,13 +72,13 @@ let result = require("resolveGoreSettingWithDefaults").fileFinishedImporting("mo
 export const isSetAndNotDefault = function isSetAndNotDefault(goreContentFriendDm) {
   let tmp = null != goreContentFriendDm;
   if (tmp) {
-    tmp = goreContentFriendDm !== create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    tmp = goreContentFriendDm !== create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   return tmp;
 };
 export { getGoreContentSettingOrDefault };
 export const updateGoreContentSetting = function updateGoreContentSetting(selectedTeenId) {
-  const ParentalControlledGoreContent = result /* result */.ParentalControlledGoreContent;
+  const ParentalControlledGoreContent = result.ParentalControlledGoreContent;
   const merged = Object.assign(getGoreContentSettingOrDefault(selectedTeenId));
   const merged1 = Object.assign(arg1);
   const result = ParentalControlledGoreContent.updateControlledSetting(selectedTeenId, {});
@@ -92,14 +92,14 @@ export const resolveExplicitContentSettingWithDefaultsForTeen = function resolve
   }
   let tmp = null != setting;
   if (tmp) {
-    tmp = setting !== create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    tmp = setting !== create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   if (tmp) {
     return setting;
   } else {
-    const ParentalControlledLegacyExplicitContent = result /* result */.ParentalControlledLegacyExplicitContent;
+    const ParentalControlledLegacyExplicitContent = result.ParentalControlledLegacyExplicitContent;
     const controlledSetting = ParentalControlledLegacyExplicitContent.getControlledSetting(teenId.teenId);
-    const tmp7 = resolveExplicitContentSettingWithDefaults /* resolveExplicitContentSettingWithDefaults */;
+    const tmp7 = resolveExplicitContentSettingWithDefaults;
     if (isFriend) {
       let tmp8 = tmp7.TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM[controlledSetting];
     } else {
@@ -110,7 +110,7 @@ export const resolveExplicitContentSettingWithDefaultsForTeen = function resolve
 };
 export { getExplicitContentSettingOrDefault };
 export const updateExplicitContentSetting = function updateExplicitContentSetting(selectedTeenId) {
-  const ParentalControlledExplicitContent = result /* result */.ParentalControlledExplicitContent;
+  const ParentalControlledExplicitContent = result.ParentalControlledExplicitContent;
   const merged = Object.assign(getExplicitContentSettingOrDefault(selectedTeenId));
   const merged1 = Object.assign(arg1);
   const result = ParentalControlledExplicitContent.updateControlledSetting(selectedTeenId, {});

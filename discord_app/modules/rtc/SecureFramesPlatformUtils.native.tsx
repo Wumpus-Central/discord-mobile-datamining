@@ -24,7 +24,7 @@ export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
     let obj = ACTION_SHEET_HEIGHT_HALF;
     obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(9146, dependencyMap.paths), closure_6, obj);
+    obj.openLazy(asyncRequireImpl(9146, dependencyMap.paths), closure_6, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, arg2) {
     if (arg2()) {
@@ -32,7 +32,7 @@ export default {
       obj = { userId: null, channelId: null };
       obj[0] = id;
       obj[1] = id2;
-      obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(9136, dependencyMap.paths), obj, closure_7);
+      obj.pushLazy(asyncRequireImpl(9136, dependencyMap.paths), obj, closure_7);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -78,15 +78,15 @@ export default {
         obj[1] = channelId;
         obj[2] = guildId;
         obj[3] = fingerprint;
-        ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(9149, dependencyMap.paths), closure_5, obj);
+        ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9149, dependencyMap.paths), closure_5, obj);
         const obj4 = ACTION_SHEET_HEIGHT_HALF;
       }
     }
     obj = { title: null, body: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["5ICxE6"]);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["v1eXp/"]);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t["5ICxE6"]);
+    const intl2 = getSystemLocale.intl;
+    obj[1] = intl2.string(getSystemLocale.t["v1eXp/"]);
     AlertActionCreators.show(obj);
   }
 };

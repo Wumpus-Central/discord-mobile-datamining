@@ -7,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/ads/hooks/useAdPers
 
 export const useAdPersonalizationTogglesDisabled = function useAdPersonalizationTogglesDisabled() {
   const items = [reset];
-  return initialize /* initialize */.useStateFromStores(items, () => togglesDisabled.isTogglesDisabled());
+  return initialize.useStateFromStores(items, () => togglesDisabled.isTogglesDisabled());
 };

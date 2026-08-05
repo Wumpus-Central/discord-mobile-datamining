@@ -91,7 +91,7 @@ const guildDirectoryStore = new GuildDirectoryStore(require("dispatcher"), {
   },
   GUILD_DIRECTORY_ENTRY_CREATE: function handleCreateEntry(channelId) {
     channelId = channelId.channelId;
-    let obj = guildDirectoryEntryFromServer /* guildDirectoryEntryFromServer */;
+    let obj = guildDirectoryEntryFromServer;
     const result = obj.guildDirectoryEntryFromServer(channelId.entry);
     if (null != result) {
       let tmp2;
@@ -177,7 +177,7 @@ const guildDirectoryStore = new GuildDirectoryStore(require("dispatcher"), {
   },
   GUILD_DIRECTORY_ENTRY_UPDATE: function handleUpdateEntry(channelId) {
     channelId = channelId.channelId;
-    let obj = guildDirectoryEntryFromServer /* guildDirectoryEntryFromServer */;
+    let obj = guildDirectoryEntryFromServer;
     const result = obj.guildDirectoryEntryFromServer(channelId.entry);
     let tmp6;
     if (dependencyMap[channelId] != null) {

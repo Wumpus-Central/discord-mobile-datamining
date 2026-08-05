@@ -43,12 +43,12 @@ export default function FamilyCenterTopGuildsBottomSheet(topGuildActivities) {
   topGuildActivities = topGuildActivities.topGuildActivities;
   let obj = { children: null };
   obj = { variant: "text-md/bold", style: createCacheKey().header, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxy.Lq9Set);
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const items = [callback(Text.Text, obj), ];
   obj = { hasIcons: true, children: null };
   obj[1] = topGuildActivities.map((guildActivity) => callback(closure_7, { guildActivity }, guildActivity.guild_id));
-  items[1] = callback(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);
   obj[0] = items;
-  return callback2(ActionSheet /* ActionSheet */.ActionSheet, obj);
+  return callback2(ActionSheet.ActionSheet, obj);
 };

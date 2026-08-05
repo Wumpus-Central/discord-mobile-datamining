@@ -7,9 +7,9 @@ const require = arg1;
 const result = require("t").fileFinishedImporting("../discord_common/js/packages/i18n/updateRules.web.tsx");
 
 export default function updateRules(paragraph) {
-  paragraph.heading = t /* t */.defaultRules.heading;
-  paragraph.lheading = t /* t */.defaultRules.lheading;
-  paragraph.list = t /* t */.defaultRules.list;
+  paragraph.heading = t.defaultRules.heading;
+  paragraph.lheading = t.defaultRules.lheading;
+  paragraph.list = t.defaultRules.list;
   let obj = {};
   let merged = Object.assign(paragraph.paragraph);
   obj.react = function react(content, arg1, key) {

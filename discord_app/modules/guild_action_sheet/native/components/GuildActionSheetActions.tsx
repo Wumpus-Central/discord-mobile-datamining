@@ -393,7 +393,7 @@ export const handleLeaveServer = function handleLeaveServer(guild) {
   obj.hideActionSheet();
   const lazyResult = React.lazy(() => callback(paths[28])(paths[57], paths.paths));
   obj = { guild };
-  useAlertStore /* useAlertStore */.openAlert("guild-action-sheet-leave-server", callback2(lazyResult, obj));
+  useAlertStore.openAlert("guild-action-sheet-leave-server", callback2(lazyResult, obj));
 };
 export const GuildActionSheetDirectoryActions = function GuildActionSheetDirectoryActions(guild) {
   guild = guild.guild;

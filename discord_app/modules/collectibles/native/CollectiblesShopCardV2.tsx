@@ -438,7 +438,7 @@ const memoResult = importAllResult.memo(function CollectiblesShopCardV2(arg0) {
     obj = {};
     const merged1 = Object.assign(merged);
     obj[1] = callback(CollectiblesShopCardV2Inner, obj);
-    return callback(context /* context */.CollectiblesAnalyticsProvider, obj);
+    return callback(context.CollectiblesAnalyticsProvider, obj);
   }
 });
 let result = require("handleThemeChange").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardV2.tsx");

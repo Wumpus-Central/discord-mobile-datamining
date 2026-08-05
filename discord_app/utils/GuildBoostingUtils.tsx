@@ -83,7 +83,7 @@ export const getTotalStickerCountForTier = function getTotalStickerCountForTier(
     const features = guild.features;
     if (features.has(closure_11.MORE_STICKERS)) {
       if (premiumTier === BoostedGuildTiers.TIER_3) {
-        let MAX_STICKER_SLOTS = PremiumGuildOverrides /* PremiumGuildOverrides */.PremiumGuildOverrides.MAX_STICKER_SLOTS;
+        let MAX_STICKER_SLOTS = PremiumGuildOverrides.PremiumGuildOverrides.MAX_STICKER_SLOTS;
       }
       return MAX_STICKER_SLOTS;
     }
@@ -113,24 +113,24 @@ export const getIncrementalSoundboardSoundCountForTier = function getIncremental
 export const getTiers = (arg0) => {
   let obj = { tier: BoostedGuildTiers.TIER_1, title: null, perks: null };
   const tmp2 = require;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["lK+WOT"]);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["lK+WOT"]);
   obj = { title: null, description: null, icon: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   obj = { adding: dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji - dependencyMap[BoostedGuildTiers.NONE].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji };
-  obj[0] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.dnLAwl, obj);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t["/Guvxs"]);
+  obj[0] = intl2.formatToPlainString(getSystemLocale.t.dnLAwl, obj);
+  const intl3 = getSystemLocale.intl;
+  obj[1] = intl3.string(getSystemLocale.t["/Guvxs"]);
   obj[2] = obj.EMOJI;
   const items = [obj, , , , , , ];
   const obj1 = { title: null, description: null, icon: null };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[0] = intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_1], total: dependencyMap4[BoostedGuildTiers.TIER_1] });
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[1] = intl5.string(getSystemLocale /* getSystemLocale */.t.JfsnDQ);
+  const intl4 = getSystemLocale.intl;
+  obj1[0] = intl4.formatToPlainString(getSystemLocale.t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_1], total: dependencyMap4[BoostedGuildTiers.TIER_1] });
+  const intl5 = getSystemLocale.intl;
+  obj1[1] = intl5.string(getSystemLocale.t.JfsnDQ);
   obj1[2] = obj.STICKER;
   items[1] = obj1;
-  const intl6 = getSystemLocale /* getSystemLocale */.intl;
+  const intl6 = getSystemLocale.intl;
   const TIER_1 = BoostedGuildTiers.TIER_1;
   if (TIER_1 === BoostedGuildTiers.NONE) {
     let diff = dependencyMap3[TIER_1];
@@ -139,7 +139,7 @@ export const getTiers = (arg0) => {
     tmp9 = dependencyMap3;
     diff = dependencyMap3[TIER_1] - dependencyMap3[items[items.indexOf(items, TIER_1) - 1]];
   }
-  const obj3 = { title: intl6.formatToPlainString(getSystemLocale /* getSystemLocale */.t.NRuk5m, obj4), description: null, icon: null };
+  const obj3 = { title: intl6.formatToPlainString(getSystemLocale.t.NRuk5m, obj4), description: null, icon: null };
   const intl7 = tmp2(1236).intl;
   obj3[1] = intl7.string(tmp2(1236).t.Oq7OVl);
   obj3[2] = obj.SOUNDBOARD;
@@ -347,9 +347,9 @@ export const getTierName = function getTierName(tier, arg1) {
   }
   const useLevels = obj.useLevels;
   if (BoostedGuildTiers.NONE === tier) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    const intl4 = getSystemLocale.intl;
     const string = intl4.string;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (tmp) {
       let stringResult = string(t.LcKgJd);
     } else {
@@ -357,14 +357,14 @@ export const getTierName = function getTierName(tier, arg1) {
     }
     return stringResult;
   } else if (tmp2.TIER_1 === tier) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.nzXtaS);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.nzXtaS);
   } else if (tmp2.TIER_2 === tier) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t["h33/uW"]);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t["h33/uW"]);
   } else if (tmp2.TIER_3 === tier) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.BfF6ED);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.BfF6ED);
   } else {
     const _Error = Error;
     const error = new Error("Not a valid tier type");
@@ -374,17 +374,17 @@ export const getTierName = function getTierName(tier, arg1) {
 };
 export const getShortenedTierName = function getShortenedTierName(arg0) {
   if (BoostedGuildTiers.NONE === arg0) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t.LcKgJd);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.LcKgJd);
   } else if (tmp.TIER_1 === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.xRjU1V);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.xRjU1V);
   } else if (tmp.TIER_2 === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.C7e2Bo);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.C7e2Bo);
   } else if (tmp.TIER_3 === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.avGxmk);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.avGxmk);
   } else {
     const _Error = Error;
     const error = new Error("Not a valid tier type");
@@ -480,8 +480,8 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
   currentUser = currentUser.getCurrentUser();
   if (!tmp3) {
-    const guildBoostSlots = _fetchAppliedGuildBoostsForGuild /* _fetchAppliedGuildBoostsForGuild */.fetchGuildBoostSlots();
-    const obj2 = _fetchAppliedGuildBoostsForGuild /* _fetchAppliedGuildBoostsForGuild */;
+    const guildBoostSlots = _fetchAppliedGuildBoostsForGuild.fetchGuildBoostSlots();
+    const obj2 = _fetchAppliedGuildBoostsForGuild;
   }
   let values = apply.values(tmp2.boostSlots);
   let prop;
@@ -492,8 +492,8 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   if (prop) {
     if (fractionalState.fractionalState === constants3.NONE) {
       if (!tmp11) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        return intl.string(getSystemLocale /* getSystemLocale */.t.mOWsF1);
+        const intl = getSystemLocale.intl;
+        return intl.string(getSystemLocale.t.mOWsF1);
       }
     }
   }
@@ -502,7 +502,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
     isPremiumGroupMemberResult = currentUser.isPremiumGroupMember();
   }
   if (isPremiumGroupMemberResult) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    const intl7 = getSystemLocale.intl;
     const obj = { premiumGroupProductName: null };
     obj[0] = callback();
     return intl7.formatToPlainString(tmp7(2867)["5xN/C1"], obj);
@@ -526,25 +526,25 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
     if (null != premiumTypeSubscription) {
       if (reduced.numAvailableGuildBoostSlots <= 0) {
         if (premiumTypeSubscription.status === constants2.PAST_DUE) {
-          const intl6 = getSystemLocale /* getSystemLocale */.intl;
-          return intl6.string(getSystemLocale /* getSystemLocale */.t.De4Vm6);
+          const intl6 = getSystemLocale.intl;
+          return intl6.string(getSystemLocale.t.De4Vm6);
         } else if (premiumTypeSubscription.status === tmp26.ACCOUNT_HOLD) {
-          const intl5 = getSystemLocale /* getSystemLocale */.intl;
-          return intl5.string(getSystemLocale /* getSystemLocale */.t.JakNQ8);
+          const intl5 = getSystemLocale.intl;
+          return intl5.string(getSystemLocale.t.JakNQ8);
         } else if (tmp17 > 0) {
-          const intl4 = getSystemLocale /* getSystemLocale */.intl;
-          return intl4.string(getSystemLocale /* getSystemLocale */.t.x25mZR);
+          const intl4 = getSystemLocale.intl;
+          return intl4.string(getSystemLocale.t.x25mZR);
         } else if (null == premiumTypeSubscription.renewalMutations) {
           return null;
         } else {
           const numPremiumGuildSubscriptions = importAll(3931).getNumPremiumGuildSubscriptions(premiumTypeSubscription.renewalMutations.additionalPlans);
           const obj5 = importAll(3931);
           if (obj6.getNumPremiumGuildSubscriptions(premiumTypeSubscription.additionalPlans) > numPremiumGuildSubscriptions) {
-            const intl3 = getSystemLocale /* getSystemLocale */.intl;
-            let stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t.x25mZR);
+            const intl3 = getSystemLocale.intl;
+            let stringResult = intl3.string(getSystemLocale.t.x25mZR);
           } else {
-            const intl2 = getSystemLocale /* getSystemLocale */.intl;
-            stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["W/bb8f"]);
+            const intl2 = getSystemLocale.intl;
+            stringResult = intl2.string(getSystemLocale.t["W/bb8f"]);
           }
           return stringResult;
         }
@@ -752,7 +752,7 @@ export const getMaxEmojiSlots = function getMaxEmojiSlots(stateFromStores) {
   return Math.max(tmp, sum);
 };
 export const getNumberOfAppliedBoostsNeededForTier = function getNumberOfAppliedBoostsNeededForTier(id) {
-  return Math.max(0, AppliedGuildBoostsRequiredForBoostedGuildTier[arg1] - useGuildAppliedBoostCount /* useGuildAppliedBoostCount */.getGuildPowerupsBoostCount(id.id).available);
+  return Math.max(0, AppliedGuildBoostsRequiredForBoostedGuildTier[arg1] - useGuildAppliedBoostCount.getGuildPowerupsBoostCount(id.id).available);
 };
 export const isGuildBoostSlotCanceled = function isGuildBoostSlotCanceled(subscription) {
   subscription = subscription.subscription;

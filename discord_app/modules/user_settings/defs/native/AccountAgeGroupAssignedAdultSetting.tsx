@@ -6,14 +6,14 @@ import { SettingsAgeGroupHeader } from "../../age_group/native/SettingsAgeGroupS
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.piqs0o);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.piqs0o);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return "" + intl.string(getSystemLocale /* getSystemLocale */.t.XxRj7f) + " \u2022 " + intl2.string(messagesProxy.FTawSP);
+    const intl = getSystemLocale.intl;
+    const intl2 = getSystemLocale.intl;
+    return "" + intl.string(getSystemLocale.t.XxRj7f) + " \u2022 " + intl2.string(messagesProxy.FTawSP);
   },
   usePredicate: require("useAgeVerificationRunner").useShowAssignedAgeGroupSettings,
   screen: obj
@@ -21,7 +21,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.AGE_GROUP,
   getComponent() {
-    return SettingsAgeGroupHeader /* SettingsAgeGroupHeader */.default;
+    return SettingsAgeGroupHeader.default;
   }
 };
 const route = createToggle.createRoute(obj);

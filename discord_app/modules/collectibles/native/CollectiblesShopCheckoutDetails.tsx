@@ -121,7 +121,7 @@ function BundleAssetPreview(height) {
   return callback(rounded, obj);
 }
 function NameplateAssetPreview(item) {
-  let obj = getNameplateData /* getNameplateData */;
+  let obj = getNameplateData;
   const nameplateData = obj.getNameplateData(item.item);
   obj = { nameplate: nameplateData, fullOpacity: true, isSquarePreview: true, style: createCacheKey().nameplate };
   return callback(NameplateInner, obj);
@@ -130,7 +130,7 @@ function CollectibleProductPreview(arg0) {
   let product;
   let recipientUser;
   ({ product, recipientUser } = arg0);
-  if (product.type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT) {
+  if (product.type === CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
     let num = 42;
   } else {
     num = 55;
@@ -149,7 +149,7 @@ function CollectibleProductPreviewContent(userAvatarSource) {
   let product;
   let width;
   ({ product, width, height } = userAvatarSource);
-  const ALL = set /* set */.FractionalPremiumSKUsSets.ALL;
+  const ALL = set.FractionalPremiumSKUsSets.ALL;
   if (ALL.has(product.skuId)) {
     let obj = { skuId: null, width: null, height: null };
     obj[0] = product.skuId;
@@ -238,7 +238,7 @@ function ProductDetails(product) {
     obj[0] = tmp.productDetails;
     obj = { variant: "text-md/semibold", children: null };
     obj[1] = product.name;
-    obj[1] = callback(Text /* Text */.Text, obj);
+    obj[1] = callback(Text.Text, obj);
     let tmp7 = callback(View, obj);
   } else {
     obj = { style: null, children: null };
@@ -251,10 +251,10 @@ function ProductDetails(product) {
     obj2[0] = tmp.productDetailsTextContainer;
     const obj3 = { variant: "text-md/semibold", children: null };
     obj3[1] = product.name;
-    const items2 = [callback(Text /* Text */.Text, obj3), ];
+    const items2 = [callback(Text.Text, obj3), ];
     const obj4 = { variant: "text-sm/medium", children: null };
     obj4[1] = memo;
-    items2[1] = callback(Text /* Text */.Text, obj4);
+    items2[1] = callback(Text.Text, obj4);
     obj2[1] = items2;
     items1[1] = callback2(View, obj2);
     obj[1] = items1;
@@ -358,7 +358,7 @@ export default function CollectiblesShopCheckoutDetails(recipientUser) {
   }
   let dependencyMap;
   const tmp = createCacheKey();
-  let obj = useCurrentUser /* useCurrentUser */;
+  let obj = useCurrentUser;
   const currentUser = obj.useCurrentUser();
   let obj1 = flag2(3931);
   const canUseShopDiscountsResult = obj1.canUseShopDiscounts(currentUser);

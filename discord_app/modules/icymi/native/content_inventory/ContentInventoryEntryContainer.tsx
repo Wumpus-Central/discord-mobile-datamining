@@ -38,7 +38,7 @@ const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
     num4 = -1;
   }
   obj[5] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 6, marginBottom: num4, marginTop: 2 };
-  obj4 = set /* set */;
+  obj4 = set;
   const tmp = importDefault;
   obj[6] = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_8 };
   return obj;

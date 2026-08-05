@@ -69,7 +69,7 @@ function handleFormInit(location) {
     closure_44 = {};
     location = location.location;
     if (section === constants.TAG) {
-      obj = canUseMobileServerTagSettings /* canUseMobileServerTagSettings */;
+      obj = canUseMobileServerTagSettings;
       if (!obj.canUseMobileServerTagSettings(guildId)) {
         obj2 = undefined;
       }
@@ -104,8 +104,8 @@ function _createInvite(code) {
   obj[4] = callback(code.channel);
   let fromInviteGuildResult = null;
   if (null != code.guild) {
-    fromInviteGuildResult = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(code.guild);
-    const obj2 = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
+    fromInviteGuildResult = fromGuildPropertiesWithAdditionalFields.fromInviteGuild(code.guild);
+    const obj2 = fromGuildPropertiesWithAdditionalFields;
   }
   obj[5] = fromInviteGuildResult;
   ({ uses: obj[6], max_uses: obj[7], max_age: obj[8] } = code);
@@ -126,8 +126,8 @@ function handleIntegrationsUpdate(type) {
       tmp5 = type.guildId === user.id;
     }
     if (tmp5) {
-      const guildIntegrationsApplications = _fetchGuildIntegrationsApplications /* _fetchGuildIntegrationsApplications */.fetchGuildIntegrationsApplications(user.id);
-      const obj = _fetchGuildIntegrationsApplications /* _fetchGuildIntegrationsApplications */;
+      const guildIntegrationsApplications = _fetchGuildIntegrationsApplications.fetchGuildIntegrationsApplications(user.id);
+      const obj = _fetchGuildIntegrationsApplications;
     }
     tmp = tmp5;
   }
@@ -237,7 +237,7 @@ prototype["getGuildId"] = function getGuildId() {
   return id;
 };
 prototype["showPublicSuccessModal"] = function showPublicSuccessModal() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   return !Storage.get(closure_28);
 };
 prototype["getGuild"] = function getGuild() {
@@ -410,16 +410,16 @@ obj = {
       tmp = user.id === guild.guild.id;
     }
     if (tmp) {
-      fromGuildResult = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */.fromGuild(guild.guild, fromGuildResult);
+      fromGuildResult = fromGuildPropertiesWithAdditionalFields.fromGuild(guild.guild, fromGuildResult);
       user = fromGuildResult;
-      const obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
+      const obj = fromGuildPropertiesWithAdditionalFields;
     }
   },
   GUILD_SETTINGS_SUBMIT_FAILURE: function handleFormSubmitFailure(errors) {
     const OPEN = FormStates.OPEN;
     if (defaultGuildSettingsSection == null) {
-      defaultGuildSettingsSection = getDefaultGuildSettingsSection /* getDefaultGuildSettingsSection */.getDefaultGuildSettingsSection();
-      const obj = getDefaultGuildSettingsSection /* getDefaultGuildSettingsSection */;
+      defaultGuildSettingsSection = getDefaultGuildSettingsSection.getDefaultGuildSettingsSection();
+      const obj = getDefaultGuildSettingsSection;
     }
     let c4 = null;
     errors = errors.errors;
@@ -441,8 +441,8 @@ obj = {
               if (closure_3 === tmp27.MEMBERS) {
                 let c10 = getGuildEveryoneRoleId(user);
               } else if (closure_3 === tmp27.VANITY_URL) {
-                const vanityUrl = fetchVanityUrl /* fetchVanityUrl */.fetchVanityUrl(user.id);
-                const obj2 = fetchVanityUrl /* fetchVanityUrl */;
+                const vanityUrl = fetchVanityUrl.fetchVanityUrl(user.id);
+                const obj2 = fetchVanityUrl;
               } else if (closure_3 === tmp27.SAFETY) {
                 if (null == closure_4) {
                   let SAFETY_OVERVIEW = constants2.SAFETY_OVERVIEW;
@@ -468,8 +468,8 @@ obj = {
                 tmp13 = section.guildId === user.id;
               }
               if (tmp13) {
-                const guildIntegrationsApplications = _fetchGuildIntegrationsApplications /* _fetchGuildIntegrationsApplications */.fetchGuildIntegrationsApplications(user.id);
-                const obj3 = _fetchGuildIntegrationsApplications /* _fetchGuildIntegrationsApplications */;
+                const guildIntegrationsApplications = _fetchGuildIntegrationsApplications.fetchGuildIntegrationsApplications(user.id);
+                const obj3 = _fetchGuildIntegrationsApplications;
               }
               tmp12 = tmp13;
             }
@@ -477,7 +477,7 @@ obj = {
           }
         }
       }
-      const HTTP = sendRequest /* sendRequest */.HTTP;
+      const HTTP = sendRequest.HTTP;
       obj = { url: null, oldFormErrors: true, rejectWithError: true };
       obj[0] = closure_25.GUILD_INSTANT_INVITES(user.id);
       const value = HTTP.get(obj);
@@ -767,9 +767,9 @@ obj = {
     }
     let tmp2 = profile.id === id;
     if (tmp2) {
-      const result = canUseMobileServerTagSettings /* canUseMobileServerTagSettings */.isServerTagDraftDirty(profile, profile);
+      const result = canUseMobileServerTagSettings.isServerTagDraftDirty(profile, profile);
       tmp2 = !result;
-      const obj = canUseMobileServerTagSettings /* canUseMobileServerTagSettings */;
+      const obj = canUseMobileServerTagSettings;
       const tmp8 = !result;
     }
     return tmp2;

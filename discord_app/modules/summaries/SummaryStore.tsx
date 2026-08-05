@@ -182,7 +182,7 @@ prototype["shouldFetch"] = function shouldFetch(arg0, arg1) {
   } else {
     return false;
   }
-  obj = canSeeChannelSummaries /* canSeeChannelSummaries */;
+  obj = canSeeChannelSummaries;
 };
 prototype["channelAffinities"] = function channelAffinities() {
   return closure_21;

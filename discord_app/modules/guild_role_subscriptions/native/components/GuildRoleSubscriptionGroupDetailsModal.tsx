@@ -77,10 +77,10 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   }
   let obj = { title: null, description: null, canProceedToNextStep: null, nextStep: null };
   const tmp = callback(usePriceTiers.useGroupCoverState(), 2);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.EPOLQD);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["LeAm+L"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.EPOLQD);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t["LeAm+L"]);
   obj[2] = tmp5;
   obj[3] = constants.DETAILS;
   const merged = Object.assign(arg0);

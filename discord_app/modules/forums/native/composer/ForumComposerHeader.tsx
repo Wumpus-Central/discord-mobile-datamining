@@ -45,22 +45,22 @@ export default function ForumComposerHeader(height) {
   const tmp = callback2(height.height);
   let obj = { style: tmp.headerBar, children: null };
   obj = { style: tmp.button, accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
   obj[3] = submitting;
   obj[4] = function onPress() {
     return callback(false);
   };
-  obj[5] = callback(XSmallIcon /* XSmallIcon */.XSmallIcon, {});
-  const items = [callback(PressableBase /* PressableBase */.PressableOpacity, obj), , , ];
+  obj[5] = callback(XSmallIcon.XSmallIcon, {});
+  const items = [callback(PressableBase.PressableOpacity, obj), , , ];
   obj = { style: tmp.headerBarContent, children: null };
-  const items1 = [callback(ForumIcon /* ForumIcon */.ForumIcon, { size: "sm" }), ];
+  const items1 = [callback(ForumIcon.ForumIcon, { size: "sm" }), ];
   const obj1 = { style: tmp.headerBarText, children: null };
   if ("" === title) {
     const intl2 = tmp7(1236).intl;
     title = intl2.string(tmp7(1236).t["7EjFCk"]);
   }
-  const items2 = [callback(Text /* Text */.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), callback(Text /* Text */.Text, { variant: "text-xs/medium", color: "text-default", children: computeChannelName(channel) })];
+  const items2 = [callback(Text.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), callback(Text.Text, { variant: "text-xs/medium", color: "text-default", children: computeChannelName(channel) })];
   obj1[1] = items2;
   items1[1] = closure_6(closure_4, obj1);
   obj[1] = items1;

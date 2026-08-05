@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_STACK,
   getComponent() {
-    return StackBlock /* StackBlock */.default;
+    return StackBlock.default;
   }
 };
 const route = createToggle.createRoute(obj);

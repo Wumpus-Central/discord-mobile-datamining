@@ -9,7 +9,7 @@ const result = require("AdCreativeType").fileFinishedImporting("modules/quests/n
 
 export const getDeliveredQuest = function getDeliveredQuest(mobileQuestDock) {
   let quest = null;
-  if (mobileQuestDock.type === AdCreativeType /* AdCreativeType */.AdCreativeType.QUEST) {
+  if (mobileQuestDock.type === AdCreativeType.AdCreativeType.QUEST) {
     quest = mobileQuestDock.quest;
   }
   return quest;

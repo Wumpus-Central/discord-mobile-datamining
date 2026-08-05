@@ -110,8 +110,8 @@ export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
     let channelIconWithGuild = registerAsset;
   } else {
-    channelIconWithGuild = getChannelIcon /* getChannelIcon */.getChannelIconWithGuild(channel, guild);
-    const obj = getChannelIcon /* getChannelIcon */;
+    channelIconWithGuild = getChannelIcon.getChannelIconWithGuild(channel, guild);
+    const obj = getChannelIcon;
   }
   return channelIconWithGuild;
 };

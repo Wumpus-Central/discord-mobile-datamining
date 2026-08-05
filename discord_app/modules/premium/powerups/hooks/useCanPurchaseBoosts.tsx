@@ -9,8 +9,8 @@ const result = require("calculateFractionalPremiumInfo").fileFinishedImporting("
 
 export default function useCanPurchaseBoosts() {
   const items = [mergeGuildAvatar];
-  const obj = initialize /* initialize */;
-  return calculateFractionalPremiumInfo().fractionalState === FractionalPremiumStates.NONE && !initialize /* initialize */.useStateFromStores(items, () => {
+  const obj = initialize;
+  return calculateFractionalPremiumInfo().fractionalState === FractionalPremiumStates.NONE && !initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let isPremiumGroupMemberResult;
     if (currentUser != null) {

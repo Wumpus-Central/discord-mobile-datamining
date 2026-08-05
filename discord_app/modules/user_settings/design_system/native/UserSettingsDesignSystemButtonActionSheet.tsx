@@ -60,7 +60,7 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
     });
   }, []);
   let obj = { children: null };
-  items = [callback(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: "Button Settings" }), ];
+  items = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: "Button Settings" }), ];
   obj = { children: null };
   obj = { title: "Button Size", accessibilityRole: "radiogroup", children: null };
   obj[2] = items.map((label) => {
@@ -78,10 +78,10 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
     obj[0] = items;
     return callback2(React.Fragment, obj, value);
   });
-  const items1 = [callback(Form /* Form */.FormSection, obj), , , , , ];
+  const items1 = [callback(Form.FormSection, obj), , , , , ];
   const obj1 = { title: "Button Scale", accessibilityRole: "radiogroup", children: null };
   const items2 = [
-    callback(Form /* Form */.FormHint, { children: "The amount in pixels that the button width will scale when pressed" }),
+    callback(Form.FormHint, { children: "The amount in pixels that the button width will scale when pressed" }),
     items1.map((label) => {
       const value = label.value;
       let obj = { children: null };
@@ -99,27 +99,27 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
     })
   ];
   obj1[2] = items2;
-  items1[1] = callback2(Form /* Form */.FormSection, obj1);
+  items1[1] = callback2(Form.FormSection, obj1);
   const obj2 = { children: null };
-  obj2[0] = callback(Form /* Form */.FormSwitchRow, {
+  obj2[0] = callback(Form.FormSwitchRow, {
     label: "Disabled",
     value: tmp.showDisabled,
     onValueChange(arg0) {
       return React(arg0);
     }
   });
-  items1[2] = callback(Form /* Form */.FormSection, obj2);
+  items1[2] = callback(Form.FormSection, obj2);
   const obj4 = { children: null };
-  obj4[0] = callback(Form /* Form */.FormSwitchRow, {
+  obj4[0] = callback(Form.FormSwitchRow, {
     label: "Show Icons",
     value: tmp.showIcon,
     onValueChange(arg0) {
       return callback(arg0);
     }
   });
-  items1[3] = callback(Form /* Form */.FormSection, obj4);
+  items1[3] = callback(Form.FormSection, obj4);
   const obj6 = { title: "Icon Position", accessibilityRole: "radiogroup", children: null };
-  const items3 = [callback(Form /* Form */.FormHint, { children: "Whether to show the example icon on the left (default) or right." }), ];
+  const items3 = [callback(Form.FormHint, { children: "Whether to show the example icon on the left (default) or right." }), ];
   const items4 = ["start", "end"];
   items3[1] = items4.map((label) => {
     let obj = { children: null };
@@ -136,9 +136,9 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
     return callback2(React.Fragment, obj, label);
   });
   obj6[2] = items3;
-  items1[4] = callback2(Form /* Form */.FormSection, obj6);
+  items1[4] = callback2(Form.FormSection, obj6);
   const obj7 = { title: "Loading state", accessibilityRole: "radiogroup", children: null };
-  const items5 = [callback(Form /* Form */.FormHint, { children: "Whether or not to show a loading state when a button is pressed" }), ];
+  const items5 = [callback(Form.FormHint, { children: "Whether or not to show a loading state when a button is pressed" }), ];
   const items6 = [true, false];
   items5[1] = items6.map((arg0) => {
     let tmp = arg0;
@@ -162,9 +162,9 @@ export default function UserSettingsDesignSystemButtonActionSheet() {
     return tmp(React.Fragment, obj, str2);
   });
   obj7[2] = items5;
-  items1[5] = callback2(Form /* Form */.FormSection, obj7);
+  items1[5] = callback2(Form.FormSection, obj7);
   obj[0] = items1;
-  items[1] = callback2(Form /* Form */.Form, obj);
+  items[1] = callback2(Form.Form, obj);
   obj[0] = items;
-  return callback2(Background /* Background */.BottomSheet, obj);
+  return callback2(Background.BottomSheet, obj);
 };

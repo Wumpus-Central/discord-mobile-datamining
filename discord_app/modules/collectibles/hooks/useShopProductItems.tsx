@@ -14,25 +14,25 @@ class ItemsSortingHat {
 const prototype = ItemsSortingHat.prototype;
 Object.defineProperty(prototype, "firstAvatarDecoration", {
   get: function firstAvatarDecoration(first) {
-    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION);
+    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstProfileEffect", {
   get: function firstProfileEffect() {
-    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT);
+    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstNameplate", {
   get: function firstNameplate(first) {
-    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE);
+    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.NAMEPLATE);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "firstProfileFrame", {
   get: function firstProfileFrame(first) {
-    return this.getFirstItemByType(CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME);
+    return this.getFirstItemByType(CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME);
   },
   set: undefined
 });
@@ -74,12 +74,12 @@ export const useShopProductItems = function useShopProductItems(product) {
   }, items);
 };
 export const getBundleItemNames = function getBundleItemNames(bundledProducts) {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["7v0T9P"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  let stringResult1 = intl2.string(getSystemLocale /* getSystemLocale */.t.wR5wOo);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  let stringResult2 = intl3.string(getSystemLocale /* getSystemLocale */.t.x5CoXR);
+  const intl = getSystemLocale.intl;
+  let stringResult = intl.string(getSystemLocale.t["7v0T9P"]);
+  const intl2 = getSystemLocale.intl;
+  let stringResult1 = intl2.string(getSystemLocale.t.wR5wOo);
+  const intl3 = getSystemLocale.intl;
+  let stringResult2 = intl3.string(getSystemLocale.t.x5CoXR);
   let itemThreeName = stringResult2;
   let itemTwoName = stringResult1;
   let itemOneName = stringResult;

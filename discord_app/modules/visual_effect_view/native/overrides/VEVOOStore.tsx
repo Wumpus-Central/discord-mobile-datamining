@@ -17,5 +17,5 @@ export const setVisualEffectViewOverides = function setVisualEffectViewOverides(
   _batchUpdates.batchUpdates(() => outer1_3.setState(closure_0));
 };
 export const clearVisualEffectViewOverrides = function clearVisualEffectViewOverrides() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState(closure_2));
+  batchUpdates.batchUpdates(() => state.setState(closure_2));
 };

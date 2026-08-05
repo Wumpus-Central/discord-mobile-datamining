@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/
 
 export default function useUserIsConsideredAdult() {
   const items = [mergeGuildAvatar];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {

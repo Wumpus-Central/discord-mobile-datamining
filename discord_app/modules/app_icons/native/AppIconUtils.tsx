@@ -387,10 +387,10 @@ export const useAppIcons = function useAppIcons() {
   return { officialAppIcons, limitedTimeAppIcons, currentAppIcon: currentAppIcon[0] };
 };
 export const navigateToAppIconSettings = function navigateToAppIconSettings() {
-  let obj = openUserSettings /* openUserSettings */;
+  let obj = openUserSettings;
   obj = { screen: constants.APP_ICONS };
   obj.openUserSettings(obj);
 };
 export const isAppIconsSupported = function isAppIconsSupported() {
-  return !isMetaQuest /* isMetaQuest */.isMetaQuest();
+  return !isMetaQuest.isMetaQuest();
 };

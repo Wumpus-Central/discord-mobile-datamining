@@ -7,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/us
 
 export default function useCurrentEmbeddedActivity() {
   const items = [participantFromServer];
-  return initialize /* initialize */.useStateFromStores(items, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
+  return initialize.useStateFromStores(items, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
 };

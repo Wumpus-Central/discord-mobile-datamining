@@ -21,14 +21,14 @@ export const hasCrepeMonthlyOrbsPerk = function hasCrepeMonthlyOrbsPerk(currentU
       }
       return hasItem;
     }
-    obj2 = getPremiumPlanItem /* getPremiumPlanItem */;
+    obj2 = getPremiumPlanItem;
   }
   return false;
 };
 export const useHasXboxMonthlyOrbsPerk = function useHasXboxMonthlyOrbsPerk() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize;
   let flag = false;
   if (obj2.canUseMonthlyOrbs(stateFromStores)) {
     let tmpResult = tmp(3931);

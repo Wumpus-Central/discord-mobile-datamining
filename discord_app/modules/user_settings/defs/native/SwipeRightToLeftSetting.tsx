@@ -7,14 +7,14 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["D/Dkcd"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["D/Dkcd"]);
   },
   parent: require("MobileSetting").MobileSetting.CHAT,
   useTrailing: function useSwipeRightToLeftSettingTrailing() {
-    const SwipeRightToLeftModeSetting = explicitContentFromProto /* explicitContentFromProto */.SwipeRightToLeftModeSetting;
+    const SwipeRightToLeftModeSetting = explicitContentFromProto.SwipeRightToLeftModeSetting;
     const setting = SwipeRightToLeftModeSetting.useSetting();
-    if (setting === create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
+    if (setting === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
       const intl2 = tmp(1236).intl;
       let stringResult = intl2.string(tmp(1236).t["3tYNDS"]);
     } else {
@@ -31,7 +31,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.SWIPE_RIGHT_TO_LEFT,
   getComponent() {
-    return UserSettingsSwipeRightToLeft /* UserSettingsSwipeRightToLeft */.default;
+    return UserSettingsSwipeRightToLeft.default;
   }
 };
 const route = createToggle.createRoute(obj);

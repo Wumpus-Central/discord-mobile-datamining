@@ -9,8 +9,8 @@ import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.IqlCSq);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.IqlCSq);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsMutualFriendsSettingValue() {
@@ -23,9 +23,9 @@ createToggle = {
   onValueChange: function onFriendRequestsMutualFriendsSettingValueChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const ParentalControlledFriendSourceFlags = result /* result */.ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = result.ParentalControlledFriendSourceFlags;
       const controlledSetting = ParentalControlledFriendSourceFlags.getControlledSetting(selectedTeenId);
-      const ParentalControlledFriendSourceFlags2 = result /* result */.ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags2 = result.ParentalControlledFriendSourceFlags;
       const obj = importAll(1384);
       if (arg0) {
         let addFlagResult = obj.addFlag(controlledSetting, FriendSourceFlags.MUTUAL_FRIENDS);

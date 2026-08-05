@@ -19,7 +19,7 @@ const memoResult = require("noop").memo((arg0) => {
   let searchPlaceholder;
   ({ channelId, guildId } = arg0);
   ({ screenIndex, pressable, isGuildMemberCountVisible, isNavigationScreen, searchPlaceholder } = arg0);
-  let obj = useIsForumChannelSearchActive /* useIsForumChannelSearchActive */;
+  let obj = useIsForumChannelSearchActive;
   if (obj.useIsForumChannelSearchActive(channelId)) {
     obj = { style: null, children: null };
     obj[0] = tmp.search;
@@ -27,7 +27,7 @@ const memoResult = require("noop").memo((arg0) => {
     obj[0] = channelId;
     obj[1] = guildId;
     obj[2] = searchPlaceholder;
-    obj[1] = tmp4(ForumChannelCloseSearchButton /* ForumChannelCloseSearchButton */.ForumChannelSearchInput, obj);
+    obj[1] = tmp4(ForumChannelCloseSearchButton.ForumChannelSearchInput, obj);
     let tmp4Result = tmp4(View, obj);
   } else {
     const obj1 = { channelId: null, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null };

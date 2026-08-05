@@ -30,7 +30,7 @@ function audienceAckRequestToSpeak(channel, suppress) {
   00038__(null != guildId, "This channel cannot be guildless.");
   let obj = require;
   voiceStateForChannel = voiceStateForChannel.getVoiceStateForChannel(channel.id);
-  let obj1 = useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */;
+  let obj1 = useAudienceRequestToSpeakState;
   const audienceRequestToSpeakState = obj1.getAudienceRequestToSpeakState(voiceStateForChannel);
   if (!suppress) {
     let objResult = obj(5107);
@@ -299,13 +299,13 @@ export const toggleRequestToSpeak = function toggleRequestToSpeak(channel_id, ar
   const guildId = channel_id.getGuildId();
   00038__(null != guildId, "This channel cannot be guildless.");
   if (arg1) {
-    let obj = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+    let obj = collectGuildAnalyticsMetadata;
     obj = {};
-    const merged = Object.assign(fillChunk /* fillChunk */.getStageChannelMetadata(channel_id));
+    const merged = Object.assign(fillChunk.getStageChannelMetadata(channel_id));
     obj.trackWithMetadata(constants.REQUEST_TO_SPEAK_INITIATED, obj);
-    const obj3 = fillChunk /* fillChunk */;
+    const obj3 = fillChunk;
   }
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId), body: null, rejectWithError: null };
   let toISOStringResult = null;
   if (arg1) {
@@ -314,21 +314,21 @@ export const toggleRequestToSpeak = function toggleRequestToSpeak(channel_id, ar
     toISOStringResult = date.toISOString();
   }
   obj[1] = { request_to_speak_timestamp: toISOStringResult, channel_id: channel_id.id };
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.patch(obj);
 };
 export const inviteUserToStage = function inviteUserToStage(voiceChannel, id) {
   const guildId = voiceChannel.getGuildId();
   00038__(null != guildId, "This channel cannot be guildless.");
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   let obj = { url: closure_9.UPDATE_VOICE_STATE(guildId, id), body: null, rejectWithError: null };
   obj = { suppress: false, request_to_speak_timestamp: null, channel_id: null };
   obj[1] = new Date().toISOString();
   obj[2] = voiceChannel.id;
   obj[1] = obj;
   const date = new Date();
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
-  const obj4 = sendRequest /* sendRequest */;
+  obj[2] = sendRequest.rejectWithMigratedError();
+  const obj4 = sendRequest;
   return HTTP.patch(obj).catch((code) => {
     if (code.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
       callback(table[9]).showFailedToast(constants2.GENERIC_ERROR);
@@ -344,20 +344,20 @@ export const moveSelfToAudience = function moveSelfToAudience(channel_id) {
     guildId = channel_id.getGuildId();
   }
   00038__(null != guildId, "This channel cannot be guildless.");
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId), body: obj, rejectWithError: null };
   obj = { suppress: true, channel_id: channel_id.id, self_video: false, self_stream: false };
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.patch(obj);
 };
 export const setUserSuppress = function setUserSuppress(closure_0, id, suppress) {
   const guildId = closure_0.getGuildId();
   00038__(null != guildId, "This channel cannot be guildless.");
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: closure_9.UPDATE_VOICE_STATE(guildId, id), body: obj, rejectWithError: null };
   obj = { suppress, channel_id: closure_0.id };
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
-  const obj3 = sendRequest /* sendRequest */;
+  obj[2] = sendRequest.rejectWithMigratedError();
+  const obj3 = sendRequest;
   return HTTP.patch(obj).catch((code) => {
     if (code.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
       callback(table[9]).showFailedToast(constants2.GENERIC_ERROR);
@@ -373,14 +373,14 @@ export const moveUserToAudience = function moveUserToAudience(user, voiceChannel
       00038__(null != guildId, "This channel cannot be guildless.");
       const guildId1 = voiceChannel.getGuildId();
       00038__(null != guildId1, "This channel cannot be guildless.");
-      const HTTP = sendRequest /* sendRequest */.HTTP;
+      const HTTP = sendRequest.HTTP;
       let obj = { url: null, body: null, rejectWithError: null };
       obj[0] = closure_9.UPDATE_VOICE_STATE(guildId1, user.id);
       obj = { suppress: true, channel_id: null };
       obj[1] = voiceChannel.id;
       obj[1] = obj;
-      obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
-      const obj3 = sendRequest /* sendRequest */;
+      obj[2] = sendRequest.rejectWithMigratedError();
+      const obj3 = sendRequest;
       HTTP.patch(obj).catch((code) => {
         if (code.code === constants.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK) {
           callback(table[9]).showFailedToast(constants2.GENERIC_ERROR);
@@ -388,14 +388,14 @@ export const moveUserToAudience = function moveUserToAudience(user, voiceChannel
         }
         return code;
       });
-      const HTTP2 = sendRequest /* sendRequest */.HTTP;
+      const HTTP2 = sendRequest.HTTP;
       obj = { url: null, body: null, rejectWithError: null };
       obj[0] = closure_9.UPDATE_VOICE_STATE(guildId, user.id);
       const obj1 = { suppress: true, channel_id: null, self_video: false, self_stream: false };
       obj1[1] = voiceChannel.id;
       obj[1] = obj1;
       const patchResult = HTTP.patch(obj);
-      obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+      obj[2] = sendRequest.rejectWithMigratedError();
       return HTTP2.patch(obj);
     }
   }
@@ -413,7 +413,7 @@ export const removeUserFromChannel = function removeUserFromChannel(id, getGuild
 export const setEveryoneRolePermissionAllowed = function setEveryoneRolePermissionAllowed(getGuildId, REQUEST_TO_SPEAK, arg2) {
   const guildId = getGuildId.getGuildId();
   00038__(null != guildId, "Channel cannot be guildless");
-  const obj = { id: guildId, type: PermissionOverwriteType /* PermissionOverwriteType */.PermissionOverwriteType.ROLE, allow: importAll(3918).NONE, deny: importAll(3918).NONE };
+  const obj = { id: guildId, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, allow: importAll(3918).NONE, deny: importAll(3918).NONE };
   const merged = Object.assign(getGuildId.permissionOverwrites[guildId]);
   const obj2 = importAll(506);
   if (arg2) {

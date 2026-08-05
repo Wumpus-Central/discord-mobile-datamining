@@ -86,7 +86,7 @@ function GuildSettingsRoleSubscription(arg0) {
   let guildId;
   ({ guildId, children } = arg0);
   const tmp = callback3();
-  let obj = useGroupListingsFetchContext /* useGroupListingsFetchContext */;
+  let obj = useGroupListingsFetchContext;
   if (obj.useGroupListingsFetchContext()) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
@@ -114,6 +114,6 @@ export default function GuildSettingsRoleSubscriptionContainer(guildId) {
   obj = {};
   const merged = Object.assign(guildId);
   obj[1] = callback(GuildSettingsRoleSubscription, obj);
-  obj[2] = callback(useRoleSubscriptionSettingsDisabled /* useRoleSubscriptionSettingsDisabled */.RoleSubscriptionSettingsDisabledContextProvider, obj);
-  return callback(useGroupListingsFetchContext /* useGroupListingsFetchContext */.GroupListingsFetchContextProvider, obj);
+  obj[2] = callback(useRoleSubscriptionSettingsDisabled.RoleSubscriptionSettingsDisabledContextProvider, obj);
+  return callback(useGroupListingsFetchContext.GroupListingsFetchContextProvider, obj);
 };

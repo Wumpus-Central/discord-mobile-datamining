@@ -25,8 +25,8 @@ const memoResult = require("noop").memo((accessibilityLabel) => {
   accessibilityLabel = accessibilityLabel.accessibilityLabel;
   ({ onPress, overlay } = accessibilityLabel);
   if (accessibilityLabel === undefined) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    accessibilityLabel = intl.string(getSystemLocale /* getSystemLocale */.t.WAI6xu);
+    const intl = getSystemLocale.intl;
+    accessibilityLabel = intl.string(getSystemLocale.t.WAI6xu);
   }
   const animatedBarStyles = accessibilityLabel.animatedBarStyles;
   const tmp3 = callback();

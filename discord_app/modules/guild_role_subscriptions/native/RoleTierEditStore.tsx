@@ -139,19 +139,19 @@ export const useGroupCoverState = function useGroupCoverState() {
     const items = [, ];
     ({ groupCover: arr[0], setGroupCover: arr[1] } = arg0);
     return items;
-  }, isIterable /* isIterable */.shallow);
+  }, isIterable.shallow);
 };
 export const useGroupDescriptionState = function useGroupDescriptionState() {
   return withEqualityFn((arg0) => {
     const items = [, ];
     ({ groupDescription: arr[0], setGroupDescription: arr[1] } = arg0);
     return items;
-  }, isIterable /* isIterable */.shallow);
+  }, isIterable.shallow);
 };
 export const useGroupIsFullGateState = function useGroupIsFullGateState() {
   return withEqualityFn((arg0) => {
     const items = [, ];
     ({ groupIsFullGate: arr[0], setGroupIsFullGate: arr[1] } = arg0);
     return items;
-  }, isIterable /* isIterable */.shallow);
+  }, isIterable.shallow);
 };

@@ -13,7 +13,7 @@ const memoResult = require("noop").memo((row) => {
   ({ channel: require, participants } = row);
   let THIRD;
   const tmp = callback();
-  let obj = getIsScreenLandscape /* getIsScreenLandscape */;
+  let obj = getIsScreenLandscape;
   let containerLandscape = obj.useIsScreenLandscape();
   let num = 3;
   if (0 === row.row) {

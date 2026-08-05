@@ -40,10 +40,10 @@ export default {
     let result = this.startAnnouncementQueue();
   },
   updateNativeColors() {
-    updateSaturation /* updateSaturation */.updateSaturation(maybeApplyNoTextColorForLightCustomTheme.saturation);
+    updateSaturation.updateSaturation(maybeApplyNoTextColorForLightCustomTheme.saturation);
   },
   updateMotionSettings() {
-    u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, { reduceMotion: maybeApplyNoTextColorForLightCustomTheme.useReducedMotion, prefersCrossfades: maybeApplyNoTextColorForLightCustomTheme.systemPrefersCrossfades });
+    u(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, { reduceMotion: maybeApplyNoTextColorForLightCustomTheme.useReducedMotion, prefersCrossfades: maybeApplyNoTextColorForLightCustomTheme.systemPrefersCrossfades });
   },
   checkScreenreaderEnabled() {
     const self = this;
@@ -105,7 +105,7 @@ export default {
     })();
   },
   updateScreenReaderEnabled(screenReaderEnabled) {
-    u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, { screenReaderEnabled });
+    u(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, { screenReaderEnabled });
   },
   updateSystemAppearance(colorScheme) {
     let DARK = SystemTheme.NO_PREFERENCE;
@@ -115,7 +115,7 @@ export default {
     } else if ("dark" === colorScheme) {
       DARK = tmp.DARK;
     }
-    setSystemTheme /* setSystemTheme */.setSystemTheme(DARK);
+    setSystemTheme.setSystemTheme(DARK);
   },
   startAnnouncementQueue() {
     const set = new Set();

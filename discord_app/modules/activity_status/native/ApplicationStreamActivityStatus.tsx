@@ -45,14 +45,14 @@ export default function ApplicationStreamActivityStatus(hideText) {
     tmp2 = name1;
   }
   if (null != tmp2) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     let obj = { name: null };
     obj[0] = tmp2;
-    let formatResult = intl2.format(getSystemLocale /* getSystemLocale */.t["0wJXSh"], obj);
+    let formatResult = intl2.format(getSystemLocale.t["0wJXSh"], obj);
     let tmp7 = require;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    formatResult = intl.string(getSystemLocale /* getSystemLocale */.t.eXan7B);
+    const intl = getSystemLocale.intl;
+    formatResult = intl.string(getSystemLocale.t.eXan7B);
     tmp7 = require;
   }
   let tmp12 = !hideIcon;

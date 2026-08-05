@@ -7,7 +7,7 @@ import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/go_live/GoLiveNotificationUtils.tsx");
 
 export const onGoLiveNotificationSettingsChanged = function onGoLiveNotificationSettingsChanged(go_live_notifications) {
-  const StreamNotificationsEnabled = explicitContentFromProto /* explicitContentFromProto */.StreamNotificationsEnabled;
+  const StreamNotificationsEnabled = explicitContentFromProto.StreamNotificationsEnabled;
   StreamNotificationsEnabled.updateSetting(go_live_notifications);
   let obj = expandEventProperties;
   obj = { update_type: constants.ACCOUNT, go_live_notifications };

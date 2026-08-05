@@ -20,7 +20,7 @@ export const RoleLabel = function RoleLabel(color) {
   color = color.color;
   ({ name, colors } = color);
   const tmp = callback2();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   let tmp5 = "username" === stateFromStores;
@@ -43,7 +43,7 @@ export const RoleLabel = function RoleLabel(color) {
     obj1[2] = tmp.roleDot;
     tmp10 = callback(tmp2(1297).RoleDot, obj1);
   }
-  const items1 = [tmp10, callback(Form /* Form */.FormLabel, { style: {}, text: name })];
+  const items1 = [tmp10, callback(Form.FormLabel, { style: {}, text: name })];
   obj[1] = items1;
   return closure_5(View, obj);
 };

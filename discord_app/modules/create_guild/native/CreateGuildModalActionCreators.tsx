@@ -13,7 +13,7 @@ export default {
   openCreateGuildModal(onSuccess) {
     let obj = ModalActionCreators;
     obj = { onSuccess };
-    obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(11976, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(11976, dependencyMap.paths), obj, closure_4);
   },
   closeCreateGuildModal() {
     ModalActionCreators.popWithKey(closure_4);
@@ -21,16 +21,16 @@ export default {
   closeCreateGuildOnboardingModal() {
     ModalActionCreators.popWithKey(closure_4);
     const obj = ModalActionCreators;
-    _startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */.nextOnboardingStep({});
+    _startContactSyncForDiscoverability.nextOnboardingStep({});
   },
   openGuildInviteScreen(channel) {
     let obj = ModalActionCreators;
     obj = { channel };
-    obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(11976, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(11976, dependencyMap.paths), obj, closure_4);
   },
   openGuildJoinServerScreen() {
     let obj = ModalActionCreators;
     obj = { initialState: constants.JOIN_SERVER };
-    obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(11976, dependencyMap.paths), obj, closure_4);
+    obj.pushLazy(asyncRequireImpl(11976, dependencyMap.paths), obj, closure_4);
   }
 };

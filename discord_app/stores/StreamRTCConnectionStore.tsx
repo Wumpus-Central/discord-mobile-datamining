@@ -224,8 +224,8 @@ if (importDefaultResult.isSupported()) {
     } else {
       GUILD = StreamTypes.GUILD;
     }
-    const encodeStreamKeyResult = isStreamKey /* isStreamKey */.encodeStreamKey({ streamType: GUILD, guildId, channelId, ownerId: userId });
-    let tmp6 = context === BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM;
+    const encodeStreamKeyResult = isStreamKey.encodeStreamKey({ streamType: GUILD, guildId, channelId, ownerId: userId });
+    let tmp6 = context === BaseConnectionEvent.MediaEngineContextTypes.STREAM;
     if (tmp6) {
       tmp6 = null != dependencyMap3[encodeStreamKeyResult];
     }
@@ -325,7 +325,7 @@ if (importDefaultResult.isSupported()) {
     ({ streamKey, rtcServerId, viewerIds } = arg0);
     let obj = dependencyMap3[streamKey];
     ({ rtcChannelId, region } = arg0);
-    let obj1 = isStreamKey /* isStreamKey */;
+    let obj1 = isStreamKey;
     let tmp7 = null == obj;
     if (tmp7) {
       tmp7 = null != rtcServerId;

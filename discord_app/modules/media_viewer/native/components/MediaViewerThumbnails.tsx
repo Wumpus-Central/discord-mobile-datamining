@@ -21,9 +21,9 @@ function ObscuredView(source) {
   let tmp4;
   let tmp5;
   source = source.source;
-  let obj = useMediaItemSpoilerState /* useMediaItemSpoilerState */;
+  let obj = useMediaItemSpoilerState;
   [tmp4, tmp5] = callback(obj.useMediaItemSpoilerState(source.index), 2);
-  map /* map */;
+  map;
   let tmp10Result = null;
   if (tmp4) {
     if (source.spoiler) {
@@ -42,7 +42,7 @@ function ObscuredView(source) {
       obj[2] = tmp8;
       obj[1] = closure_8(tmp7Result, obj);
       tmp10Result = tmp10(tmp7(4146).View, obj);
-      tmpResult = set /* set */;
+      tmpResult = set;
     } else {
       tmp10Result = null;
     }

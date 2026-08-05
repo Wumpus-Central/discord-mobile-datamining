@@ -61,10 +61,10 @@ export default function VoiceChatHeaderIcon(disabled) {
   items[1] = disabledOpacity;
   obj[5] = items;
   obj = { source, color: tmp.badge.backgroundColor, size: null };
-  obj[2] = Button /* Button */.Icon.Sizes.SMALL_20;
-  const items1 = [callback(Button /* Button */.Icon, obj), children];
+  obj[2] = Button.Icon.Sizes.SMALL_20;
+  const items1 = [callback(Button.Icon, obj), children];
   obj[6] = items1;
-  return closure_7(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return closure_7(PressableBase.PressableOpacity, obj);
 };
 export const useVoiceChatMentions = function useVoiceChatMentions(arg0) {
   const _require = arg0;
@@ -77,5 +77,5 @@ export const VoiceChatCallScreenHeaderIcon = function VoiceChatCallScreenHeaderI
   obj = {};
   const merged = Object.assign(arg0);
   obj[1] = callback(VoiceChatCallScreenHeaderIconInner, obj);
-  return callback(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+  return callback(ManaContext.ThemeContextProvider, obj);
 };

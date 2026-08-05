@@ -18,7 +18,7 @@ let obj = { UNDECIDED: 0, [0]: "UNDECIDED", OPTIN: 1, [1]: "OPTIN", OPTOUT: 2, [
 const result = require("ME").fileFinishedImporting("utils/UserSettingsUtils.tsx");
 
 export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuilds() {
-  const RestrictedGuildIds = explicitContentFromProto /* explicitContentFromProto */.RestrictedGuildIds;
+  const RestrictedGuildIds = explicitContentFromProto.RestrictedGuildIds;
   const setting = RestrictedGuildIds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -27,7 +27,7 @@ export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuild
   return new Set(found);
 };
 export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedMessageRequestRestrictedGuilds() {
-  const MessageRequestRestrictedGuildIds = explicitContentFromProto /* explicitContentFromProto */.MessageRequestRestrictedGuildIds;
+  const MessageRequestRestrictedGuildIds = explicitContentFromProto.MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -36,7 +36,7 @@ export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedM
   return new Set(found);
 };
 export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivityRestrictedGuilds() {
-  const ActivityRestrictedGuilds = explicitContentFromProto /* explicitContentFromProto */.ActivityRestrictedGuilds;
+  const ActivityRestrictedGuilds = explicitContentFromProto.ActivityRestrictedGuilds;
   const setting = ActivityRestrictedGuilds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -45,7 +45,7 @@ export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivit
   return new Set(found);
 };
 export const getSanitizedActivityJoiningRestrictedGuilds = function getSanitizedActivityJoiningRestrictedGuilds() {
-  const ActivityJoiningRestrictedGuilds = explicitContentFromProto /* explicitContentFromProto */.ActivityJoiningRestrictedGuilds;
+  const ActivityJoiningRestrictedGuilds = explicitContentFromProto.ActivityJoiningRestrictedGuilds;
   const setting = ActivityJoiningRestrictedGuilds.getSetting();
   let found = setting;
   if (0 === handleConnectionOpen.totalUnavailableGuilds) {
@@ -80,29 +80,29 @@ export const NonSpamRetrainingOptInOptions = obj;
 export const NonSpamRetrainingOptInOptionsToValue = { [obj.UNDECIDED]: undefined, [obj.OPTIN]: true, [obj.OPTOUT]: false };
 export const generateNonSpamRetrainingOptInSettingOptions = function generateNonSpamRetrainingOptInSettingOptions() {
   let obj = { name: null, desc: null, value: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["/yLMRQ"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["3fzkPq"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["/yLMRQ"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t["3fzkPq"]);
   obj[2] = obj.OPTIN;
   const items = [obj, , ];
   obj = { name: null, desc: null, value: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t["21fP2b"]);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.ggJ9jR);
+  const intl3 = getSystemLocale.intl;
+  obj[0] = intl3.string(getSystemLocale.t["21fP2b"]);
+  const intl4 = getSystemLocale.intl;
+  obj[1] = intl4.string(getSystemLocale.t.ggJ9jR);
   obj[2] = obj.OPTOUT;
   items[1] = obj;
   obj = { name: null, desc: null, value: null };
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl5.string(getSystemLocale /* getSystemLocale */.t.OWIo8w);
-  const intl6 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl6.string(getSystemLocale /* getSystemLocale */.t.HqYXpw);
+  const intl5 = getSystemLocale.intl;
+  obj[0] = intl5.string(getSystemLocale.t.OWIo8w);
+  const intl6 = getSystemLocale.intl;
+  obj[1] = intl6.string(getSystemLocale.t.HqYXpw);
   obj[2] = obj.UNDECIDED;
   items[2] = obj;
   return items;
 };
 export const shakeUserSettings = function shakeUserSettings(arg0) {
-  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch.dispatch(constants3.SHAKE_SETTINGS_MODAL, arg0);
 };

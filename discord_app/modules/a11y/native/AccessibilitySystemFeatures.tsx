@@ -42,7 +42,7 @@ export default {
     return NONE;
   },
   handleReduceMotionChanged(arg0) {
-    let obj = setFontSize /* setFontSize */;
+    let obj = setFontSize;
     let str = "no-preference";
     if (arg0) {
       str = "reduce";
@@ -55,7 +55,7 @@ export default {
     } else {
       closure_8 = tmp4 & ~REDUCED_MOTION;
     }
-    const tmp5 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_MOTION];
+    const tmp5 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[REDUCED_MOTION];
     if (null != tmp5) {
       obj = {};
       obj[tmp5] = useReducedMotion;
@@ -70,11 +70,11 @@ export default {
     } else {
       closure_8 = tmp & ~REDUCED_TRANSPARENCY;
     }
-    const tmp4 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_TRANSPARENCY];
+    const tmp4 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[REDUCED_TRANSPARENCY];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
+      u(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, obj);
       const tmp6 = u;
     }
   },
@@ -85,11 +85,11 @@ export default {
     } else {
       closure_8 = tmp & ~BOLD_TEXT;
     }
-    const tmp4 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[BOLD_TEXT];
+    const tmp4 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[BOLD_TEXT];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
+      u(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, obj);
       const tmp6 = u;
     }
   },
@@ -100,11 +100,11 @@ export default {
     } else {
       closure_8 = tmp & ~GRAYSCALE;
     }
-    const tmp4 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[GRAYSCALE];
+    const tmp4 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[GRAYSCALE];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
+      u(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, obj);
       const tmp6 = u;
     }
   },
@@ -115,11 +115,11 @@ export default {
     } else {
       closure_8 = tmp & ~INVERT_COLORS;
     }
-    const tmp4 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[INVERT_COLORS];
+    const tmp4 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[INVERT_COLORS];
     if (null != tmp4) {
       const obj = {};
       obj[tmp4] = arg0;
-      u(A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.accessibilityPreferencesSharedValue, obj);
+      u(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, obj);
       const tmp6 = u;
     }
   },
@@ -128,7 +128,7 @@ export default {
     if ("dark" === colorScheme) {
       const PREFERS_COLOR_SCHEME_LIGHT3 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_LIGHT3;
-      const tmp21 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT3];
+      const tmp21 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT3];
       if (null != tmp21) {
         let obj = {};
         obj[tmp21] = false;
@@ -137,7 +137,7 @@ export default {
       }
       const PREFERS_COLOR_SCHEME_DARK2 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK;
       closure_8 = closure_8 | PREFERS_COLOR_SCHEME_DARK2;
-      const tmp27 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK2];
+      const tmp27 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK2];
       if (null != tmp27) {
         obj = {};
         obj[tmp27] = true;
@@ -148,7 +148,7 @@ export default {
     } else if ("light" === colorScheme) {
       const PREFERS_COLOR_SCHEME_DARK = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_DARK;
-      const tmp10 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK];
+      const tmp10 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK];
       if (null != tmp10) {
         const obj1 = {};
         obj1[tmp10] = false;
@@ -157,7 +157,7 @@ export default {
       }
       const PREFERS_COLOR_SCHEME_LIGHT2 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT;
       closure_8 = closure_8 | PREFERS_COLOR_SCHEME_LIGHT2;
-      const tmp16 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT2];
+      const tmp16 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT2];
       if (null != tmp16) {
         const obj2 = {};
         obj2[tmp16] = true;
@@ -168,7 +168,7 @@ export default {
     } else {
       const PREFERS_COLOR_SCHEME_DARK3 = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_DARK;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_DARK3;
-      const tmp35 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK3];
+      const tmp35 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_DARK3];
       if (null != tmp35) {
         obj = {};
         obj[tmp35] = false;
@@ -177,7 +177,7 @@ export default {
       }
       const PREFERS_COLOR_SCHEME_LIGHT = AccessibilityFeatureFlags.PREFERS_COLOR_SCHEME_LIGHT;
       closure_8 = closure_8 & ~PREFERS_COLOR_SCHEME_LIGHT;
-      const tmp5 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT];
+      const tmp5 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[PREFERS_COLOR_SCHEME_LIGHT];
       if (null != tmp5) {
         const obj3 = {};
         obj3[tmp5] = false;
@@ -195,7 +195,7 @@ export default {
     } else {
       closure_8 = tmp3 & ~REDUCED_MOTION;
     }
-    const tmp6 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_MOTION];
+    const tmp6 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[REDUCED_MOTION];
     if (null != tmp6) {
       let obj = {};
       obj[tmp6] = useReducedMotion;
@@ -208,7 +208,7 @@ export default {
     } else {
       closure_8 = tmp11 & ~REDUCED_MOTION_FROM_USER_SETTINGS;
     }
-    const tmp12 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[REDUCED_MOTION_FROM_USER_SETTINGS];
+    const tmp12 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[REDUCED_MOTION_FROM_USER_SETTINGS];
     if (null != tmp12) {
       obj = {};
       obj[tmp12] = tmp10;
@@ -221,7 +221,7 @@ export default {
     } else {
       closure_8 = tmp17 & ~SATURATION_LEVEL_DECREASED;
     }
-    const tmp18 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[SATURATION_LEVEL_DECREASED];
+    const tmp18 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[SATURATION_LEVEL_DECREASED];
     if (null != tmp18) {
       obj = {};
       obj[tmp18] = tmp16;
@@ -234,7 +234,7 @@ export default {
     } else {
       closure_8 = tmp23 & ~CONTRAST_LEVEL_DECREASED;
     }
-    const tmp24 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[CONTRAST_LEVEL_DECREASED];
+    const tmp24 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[CONTRAST_LEVEL_DECREASED];
     if (null != tmp24) {
       const obj1 = {};
       obj1[tmp24] = tmp22;
@@ -247,7 +247,7 @@ export default {
     } else {
       closure_8 = tmp29 & ~CONTRAST_LEVEL_INCREASED;
     }
-    const tmp30 = A11Y_FEATURE_MAP /* A11Y_FEATURE_MAP */.A11Y_FEATURE_MAP[CONTRAST_LEVEL_INCREASED];
+    const tmp30 = A11Y_FEATURE_MAP.A11Y_FEATURE_MAP[CONTRAST_LEVEL_INCREASED];
     if (null != tmp30) {
       const obj2 = {};
       obj2[tmp30] = tmp28;

@@ -21,9 +21,9 @@ export const updateClientPremiumTypeOverride = function updateClientPremiumTypeO
     tmp2Result.dispatch(obj);
     tmp2Result = tmp2(709);
     const obj1 = { type: "CURRENT_USER_UPDATE", user: null };
-    obj1[1] = createMessage /* createMessage */.userRecordToServer(currentUser);
+    obj1[1] = createMessage.userRecordToServer(currentUser);
     tmp2Result.dispatch(obj1);
-    const obj7 = createMessage /* createMessage */;
+    const obj7 = createMessage;
   }
 };
 export const updateClientCreatedAtOverride = function updateClientCreatedAtOverride(createdAt) {

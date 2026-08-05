@@ -12,10 +12,10 @@ export default {
     let code;
     let secret;
     ({ code, secret } = arg0);
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     let obj = { url: Endpoints.MFA_TOTP_ENABLE, body: { code, secret }, oldFormErrors: true, rejectWithError: null };
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj2 = sendRequest /* sendRequest */;
+    obj[3] = sendRequest.rejectWithMigratedError();
+    const obj2 = sendRequest;
     return HTTP.post(obj).then((body) => {
       let obj = callback(table[3]);
       obj = { type: "MFA_ENABLE_SUCCESS", token: body.body.token, codes: body.body.backup_codes };
@@ -23,19 +23,19 @@ export default {
     });
   },
   disable() {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj = { url: Endpoints.MFA_TOTP_DISABLE, oldFormErrors: true, rejectWithError: null };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj2 = sendRequest /* sendRequest */;
+    obj[2] = sendRequest.rejectWithMigratedError();
+    const obj2 = sendRequest;
     HTTP.post(obj).then((token) => callback(table[3]).dispatch({ type: "MFA_DISABLE_SUCCESS", token: token.body.token }));
   },
   enableSMS() {
     let obj = dispatcher;
     obj.dispatch({ type: "MFA_SMS_TOGGLE" });
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: Endpoints.MFA_SMS_ENABLE, oldFormErrors: true, rejectWithError: null };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj3 = sendRequest /* sendRequest */;
+    obj[2] = sendRequest.rejectWithMigratedError();
+    const obj3 = sendRequest;
     return HTTP.post(obj).then((arg0) => {
       callback(709).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
       return arg0;
@@ -47,11 +47,11 @@ export default {
   disableSMS(password) {
     let obj = dispatcher;
     obj.dispatch({ type: "MFA_SMS_TOGGLE" });
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: Endpoints.MFA_SMS_DISABLE, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { password };
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj4 = sendRequest /* sendRequest */;
+    obj[3] = sendRequest.rejectWithMigratedError();
+    const obj4 = sendRequest;
     return HTTP.post(obj).then((arg0) => {
       callback(709).dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" });
       return arg0;
@@ -61,11 +61,11 @@ export default {
     });
   },
   sendMFABackupCodesVerificationKeyEmail(password) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: Endpoints.MFA_SEND_VERIFICATION_KEY, body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { password };
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj3 = sendRequest /* sendRequest */;
+    obj[3] = sendRequest.rejectWithMigratedError();
+    const obj3 = sendRequest;
     return HTTP.post(obj).then((body) => {
       let nonces = callback(table[3]);
       nonces = { viewNonce: body.body.nonce, regenerateNonce: body.body.regenerate_nonce };

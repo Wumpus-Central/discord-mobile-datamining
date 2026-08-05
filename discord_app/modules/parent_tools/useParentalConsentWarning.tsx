@@ -7,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/usePar
 
 export const useParentalConsentWarning = function useParentalConsentWarning() {
   const items = [initialize];
-  return initialize /* initialize */.useStateFromStores(items, () => warning.getWarning());
+  return initialize.useStateFromStores(items, () => warning.getWarning());
 };

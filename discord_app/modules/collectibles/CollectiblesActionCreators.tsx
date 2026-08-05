@@ -32,7 +32,7 @@ function openCollectiblesShopMobile(screen) {
   obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(screen);
   obj.dispatch(obj);
-  let obj2 = getRootNavigationRef /* getRootNavigationRef */;
+  let obj2 = getRootNavigationRef;
   const rootNavigationRef = obj2.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -69,7 +69,7 @@ function openCollectiblesShopMobile(screen) {
 function closeCollectiblesShop() {
   dispatcher.dispatch({ type: "COLLECTIBLES_SHOP_CLOSE" });
   const obj = dispatcher;
-  pushLayer /* pushLayer */.popLayer();
+  pushLayer.popLayer();
 }
 function _fetchCollectiblesCategories() {
   const self = this;
@@ -1422,7 +1422,7 @@ export const maybeFetchCollectiblesProduct = function maybeFetchCollectiblesProd
 };
 export const seedCollectiblesProductFromStandaloneLoad = function seedCollectiblesProductFromStandaloneLoad(memo) {
   const timestamp = Date.now();
-  let obj = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
+  let obj = getItemRecordsFromPurchases;
   const items = [memo];
   const result = obj.extendVariantsProducts(items);
   const iter = result[Symbol.iterator]();

@@ -51,10 +51,10 @@ prototype["getUserVoiceSettingsStats"] = function getUserVoiceSettingsStats(arg0
   set.delete(this.userId);
   const obj = { num_local_voice_user_mutes: null, num_local_voice_volumes: null };
   let arr = Array.from(set);
-  obj[0] = apply /* apply */.intersection(arr, Array.from(this.totalParticipants)).length;
-  const obj4 = apply /* apply */;
+  obj[0] = apply.intersection(arr, Array.from(this.totalParticipants)).length;
+  const obj4 = apply;
   arr = Array.from(set1);
-  obj[1] = apply /* apply */.intersection(arr, Array.from(this.totalParticipants)).length;
+  obj[1] = apply.intersection(arr, Array.from(this.totalParticipants)).length;
   return obj;
 };
 prototype["setSpeaking"] = function setSpeaking(userId, speaking) {

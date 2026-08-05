@@ -11,8 +11,8 @@ let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 require("get ActivityIndicator").NativeModules.IntentsHandler;
 identity = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.J8foZq);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.J8foZq);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useIOSConversationSuggestionsSettingValue() {
@@ -23,7 +23,7 @@ identity = {
         callback(table[4]).batchUpdates(() => outer1_4.setState({ isEnabled: closure_0 }));
       });
     }, []);
-    return callback((isEnabled) => isEnabled.isEnabled, isIterable /* isIterable */.shallow);
+    return callback((isEnabled) => isEnabled.isEnabled, isIterable.shallow);
   },
   onValueChange: function onIOSConversationSuggestionsSettingValueChange(arg0) {
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
@@ -35,7 +35,7 @@ identity = {
     });
   },
   usePredicate: function useHasIOSConversationSuggestionsSetting() {
-    return !set /* set */.isAndroid();
+    return !set.isAndroid();
   }
 };
 identity = createToggle.createToggle(identity);

@@ -275,7 +275,7 @@ function _getSkusHandler() {
 }
 function getEntitlementsHandler(socket) {
   socket = socket.socket;
-  let obj = validateTransportType /* validateTransportType */;
+  let obj = validateTransportType;
   const result = obj.validateTransportType(socket.transport);
   const id = socket.application.id;
   if (null == id) {

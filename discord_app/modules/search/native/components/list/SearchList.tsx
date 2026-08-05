@@ -222,8 +222,8 @@ const memoResult = importAllResult.memo(function SearchList(arg0) {
     obj = { style: null, children: null };
     obj[0] = absoluteFill.absoluteFill;
     obj = { text: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.V6nAfF);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.V6nAfF);
     obj[1] = callback(tmp3(15595), obj);
     tmp8 = callback(tmp7, obj);
     const tmp3Result = tmp3(15595);
@@ -251,7 +251,7 @@ const memoResult = importAllResult.memo(function SearchList(arg0) {
   obj1[13] = ListFooterComponent;
   obj1[14] = ItemSeparatorComponent;
   obj1[15] = numColumns;
-  items[1] = tmp13(noop /* noop */.AnimatedFlashList, obj1);
+  items[1] = tmp13(noop.AnimatedFlashList, obj1);
   obj[1] = items;
   return tmp6(closure_4, obj);
 });

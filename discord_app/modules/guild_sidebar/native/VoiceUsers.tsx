@@ -23,14 +23,14 @@ function AudienceItem(arg0) {
   const tmp2 = callback2(useIsUsingClientTheme());
   let formatToPlainStringResult = audienceCount;
   if (!collapsed) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     let obj = { count: null };
     obj[0] = audienceCount;
-    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["+v2pN2"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["+v2pN2"], obj);
   }
   obj = { style: collapsed ? tmp2.listenersCollapsed : tmp2.listeners, children: null };
-  obj = { style: tmp2.listenersIconWrapper, children: callback(HeadphonesIcon /* HeadphonesIcon */.HeadphonesIcon, obj1) };
-  const items = [callback(View, obj), callback(Text /* Text */.Text, { style: tmp2.listenersText, variant: c7, color: "redesign-channel-name-muted-text", children: formatToPlainStringResult })];
+  obj = { style: tmp2.listenersIconWrapper, children: callback(HeadphonesIcon.HeadphonesIcon, obj1) };
+  const items = [callback(View, obj), callback(Text.Text, { style: tmp2.listenersText, variant: c7, color: "redesign-channel-name-muted-text", children: formatToPlainStringResult })];
   obj[1] = items;
   return closure_6(View, obj);
 }
@@ -48,12 +48,12 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   const round = tmp4(712).radii.round;
   let obj = { listeners: { display: "flex", flexDirection: "row", alignItems: "center", padding: 4, marginTop: 4, marginLeft: -8 }, listenersCollapsed: { flexDirection: "row", alignItems: "center", backgroundColor: BACKGROUND_BASE_LOWEST, borderRadius: round, marginLeft: -16, marginTop: 4, paddingLeft: 2, paddingRight: 6 }, listenersIconWrapper: null, listenersText: null, userCollapsedOverlap: null, headphonesIcon: null };
   obj = { alignItems: "center", justifyContent: "center", backgroundColor: BACKGROUND_BASE_LOWEST, marginRight: 8, marginLeft: 4, borderRadius: round };
-  const merged = Object.assign(getLayoutStyles /* getLayoutStyles */.makeSizeStyle(20));
+  const merged = Object.assign(getLayoutStyles.makeSizeStyle(20));
   obj[2] = obj;
   obj[3] = { marginRight: 4 };
   obj[4] = { marginLeft: -20 };
-  const obj3 = getLayoutStyles /* getLayoutStyles */;
-  obj[5] = getLayoutStyles /* getLayoutStyles */.makeSizeStyle(14);
+  const obj3 = getLayoutStyles;
+  obj[5] = getLayoutStyles.makeSizeStyle(14);
   return obj;
 });
 let closure_9 = require("noop").memo((voiceState) => {
@@ -124,5 +124,5 @@ export default function VoiceUsers(collapsed) {
   return tmp;
 };
 export const getAudienceItemHeight = function getAudienceItemHeight(fontScale) {
-  return 8 + Math.max(20, map /* map */.scaleTextLineHeight(c7, fontScale));
+  return 8 + Math.max(20, map.scaleTextLineHeight(c7, fontScale));
 };

@@ -52,27 +52,27 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     flag = false;
   }
   const tmp = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj1 = getPremiumPlanItem;
   let isPremiumResult = obj1.isPremium(stateFromStores);
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.lqaIxI);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.lqaIxI);
   if (isPremiumResult) {
     isPremiumResult = tmp8(tmp2(7625).NitroWheelIcon, {});
   }
   obj[1] = isPremiumResult;
   ({ titleWrapper: obj3[2], titleContainer: obj3[3] } = tmp);
-  const items1 = [closure_6(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj), ];
+  const items1 = [closure_6(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), ];
   obj = { label: null, subLabel: null, onPress: null };
   const intl2 = tmp2(1236).intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["MsUY/S"]);
+  obj[0] = intl2.string(getSystemLocale.t["MsUY/S"]);
   const intl3 = tmp2(1236).intl;
-  obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.r5hKOy);
+  obj[1] = intl3.string(getSystemLocale.t.r5hKOy);
   obj[2] = handleUploadAvatarSelect;
-  const items2 = [closure_6(TableRowInner /* TableRowInner */.TableRow, obj), , , , ];
+  const items2 = [closure_6(TableRowInner.TableRow, obj), , , , ];
   let tmp8Result = null != handleUploadGIFAvatarSelect && !showAnimatedAvatarUpsell;
   if (tmp8Result) {
     obj1 = { label: null, onPress: null };
@@ -143,7 +143,7 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
   }
   const obj15 = { children: null };
   items2[4] = flag;
-  items1[1] = closure_7(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: items2 });
+  items1[1] = closure_7(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: items2 });
   obj15[0] = items1;
-  return closure_7(ActionSheet /* ActionSheet */.ActionSheet, obj15);
+  return closure_7(ActionSheet.ActionSheet, obj15);
 };

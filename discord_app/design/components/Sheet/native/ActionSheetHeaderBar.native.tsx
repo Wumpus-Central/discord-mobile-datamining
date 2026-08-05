@@ -59,16 +59,16 @@ export const ActionSheetHeaderBar = function ActionSheetHeaderBar(accessibilityL
   let variant;
   accessibilityLabel = accessibilityLabel.accessibilityLabel;
   if (accessibilityLabel === undefined) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    accessibilityLabel = intl.string(getSystemLocale /* getSystemLocale */.t.WAI6xu);
+    const intl = getSystemLocale.intl;
+    accessibilityLabel = intl.string(getSystemLocale.t.WAI6xu);
   }
   ({ onPress, variant, style, tabStyle } = accessibilityLabel);
   if (variant === undefined) {
     variant = "default";
   }
-  let obj = map /* map */;
+  let obj = map;
   const tmp3 = callback3(variant, useWindowDimensions().height, obj.useToken(Themes.modules.mobile.SHEET_HANDLE_MARGIN_BOTTOM));
-  let obj1 = SCREEN_READER_ENABLED_GETTER /* SCREEN_READER_ENABLED_GETTER */;
+  let obj1 = SCREEN_READER_ENABLED_GETTER;
   obj = { onPress, onAccessibilityEscape: onPress, "aria-hidden": true, children: null };
   obj = { style: items, children: null };
   items = [tmp3.header, style];

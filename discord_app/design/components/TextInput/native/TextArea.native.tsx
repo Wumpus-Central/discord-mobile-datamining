@@ -10,8 +10,8 @@ const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
   obj = { ref };
   const merged1 = Object.assign(arg0);
-  obj.children = jsx(TextAreaField /* TextAreaField */.TextAreaField, { ref });
-  return jsx(Input /* Input */.Input, { ref });
+  obj.children = jsx(TextAreaField.TextAreaField, { ref });
+  return jsx(Input.Input, { ref });
 });
 const result = require("Input").fileFinishedImporting("design/components/TextInput/native/TextArea.native.tsx");
 

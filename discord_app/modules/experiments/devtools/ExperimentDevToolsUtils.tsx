@@ -4,7 +4,7 @@ const obj = { id: -1, label: "Not Eligible", shortLabel: "Not Eligible", type: r
 const result = require("set").fileFinishedImporting("modules/experiments/devtools/ExperimentDevToolsUtils.tsx");
 
 export const getExperimentVariantsForDevTools = function getExperimentVariantsForDevTools(experiment) {
-  if (experiment.system !== trackExposureToExperiment /* trackExposureToExperiment */.ExperimentSystem.APEX) {
+  if (experiment.system !== trackExposureToExperiment.ExperimentSystem.APEX) {
     let variants = experiment.variants;
   } else {
     const items = [obj];

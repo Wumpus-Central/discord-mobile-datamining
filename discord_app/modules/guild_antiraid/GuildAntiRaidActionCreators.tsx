@@ -342,11 +342,11 @@ export const trackReportRaidViewed = function trackReportRaidViewed(onChange, on
   if (0 !== items.length) {
     let obj = expandEventProperties;
     obj = {};
-    const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(onChange));
+    const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(onChange));
     obj.guild_id = onChange;
     obj.raid_types = items;
     obj.track(constants.GUILD_RAID_REPORTED, obj);
-    const obj3 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+    const obj3 = collectGuildAnalyticsMetadata;
   }
 };
 export const setGuildRaidAlerts = function setGuildRaidAlerts() {

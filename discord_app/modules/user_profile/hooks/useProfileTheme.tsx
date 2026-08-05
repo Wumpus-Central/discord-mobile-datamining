@@ -20,7 +20,7 @@ export default function useProfileTheme(arg0) {
   ({ pendingThemeColors, isPreview, forceUserTheme } = arg0);
   const tmp2 = useTheme();
   const tmp3 = useEffectiveThemeOverride();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
   if (pendingAvatarSrc == null) {

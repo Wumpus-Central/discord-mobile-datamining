@@ -684,13 +684,13 @@ function TrialOfferSheetExample() {
   return closure_18(premiumTrialOffer(5649).TableRowGroup, obj);
 }
 function PremiumToggles() {
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [getUserAgnosticState];
   const stateFromStores = obj.useStateFromStores(items, () => getUserAgnosticState.allByCategory(constants.PREMIUM).filter((arg0) => {
     let tmp;
     [tmp] = arg0;
     return "force_mock_iap" !== tmp;
-  }), [], defaultAreStatesEqual /* defaultAreStatesEqual */.statesWillNeverBeEqual);
+  }), [], defaultAreStatesEqual.statesWillNeverBeEqual);
   obj = { title: "Premium Toggles", hasIcons: false, children: null };
   obj[2] = stateFromStores.map((arg0) => {
     let tmp;
@@ -705,13 +705,13 @@ function PremiumToggles() {
       }
     }, tmp);
   });
-  return callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 function ForceMockIAP() {
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [getUserAgnosticState];
   const stateFromStores = obj.useStateFromStores(items, () => getUserAgnosticState.get("force_mock_iap"));
-  let result = serializePurchaseResponse /* serializePurchaseResponse */.shouldMockIAPForceEnable();
+  let result = serializePurchaseResponse.shouldMockIAPForceEnable();
   let str = "Replaces StoreKit with hardcoded fixture data. App will restart when toggled.";
   if (result) {
     str = "Forced on - the current device can't fetch real StoreKit products.";
@@ -721,7 +721,7 @@ function ForceMockIAP() {
   if (!result) {
     tmp4 = stateFromStores;
   }
-  obj = { title: "iOS IAP Mock", hasIcons: false, children: tmp3(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj) };
+  obj = { title: "iOS IAP Mock", hasIcons: false, children: tmp3(TableSwitchRow.TableSwitchRow, obj) };
   obj[2] = tmp4;
   obj[3] = result;
   obj[4] = function onValueChange(arg0) {
@@ -730,7 +730,7 @@ function ForceMockIAP() {
     const obj = callback(14907);
     const result = callback2(11102).checkForUpdateAndReload();
   };
-  return closure_17(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  return closure_17(TableRowGroupTitle.TableRowGroup, obj);
 }
 function PaymentFlowTest() {
   let obj = { title: "Payment Flow Test", hasIcons: false, children: null };
@@ -741,9 +741,9 @@ function PaymentFlowTest() {
     },
     trailing: null
   };
-  obj[2] = callback2(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
-  obj[2] = callback2(TableRowInner /* TableRowInner */.TableRow, obj);
-  return callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[2] = callback2(TableRowArrow.TableRowArrow, {});
+  obj[2] = callback2(TableRowInner.TableRow, obj);
+  return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 function Orbs() {
   let obj = { title: "Orbs", hasIcons: false, children: null };
@@ -754,9 +754,9 @@ function Orbs() {
     },
     trailing: null
   };
-  obj[2] = callback2(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
-  obj[2] = callback2(TableRowInner /* TableRowInner */.TableRow, obj);
-  return callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[2] = callback2(TableRowArrow.TableRowArrow, {});
+  obj[2] = callback2(TableRowInner.TableRow, obj);
+  return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 function RevenueSmokeTests() {
   let obj = { title: "Revenue Smoke Tests", hasIcons: false, children: null };
@@ -767,9 +767,9 @@ function RevenueSmokeTests() {
     },
     trailing: null
   };
-  obj[2] = callback2(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
-  obj[2] = callback2(TableRowInner /* TableRowInner */.TableRow, obj);
-  return callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[2] = callback2(TableRowArrow.TableRowArrow, {});
+  obj[2] = callback2(TableRowInner.TableRow, obj);
+  return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 function GuildPowerups() {
   let obj = { title: "Guild Powerups", hasIcons: false, children: null };
@@ -780,9 +780,9 @@ function GuildPowerups() {
     },
     trailing: null
   };
-  obj[2] = callback2(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
-  obj[2] = callback2(TableRowInner /* TableRowInner */.TableRow, obj);
-  return callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[2] = callback2(TableRowArrow.TableRowArrow, {});
+  obj[2] = callback2(TableRowInner.TableRow, obj);
+  return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 function GuildTagBadges() {
   let obj = { title: "Guild Tag Badges", hasIcons: false, children: null };
@@ -794,9 +794,9 @@ function GuildTagBadges() {
     },
     trailing: null
   };
-  obj[3] = callback2(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
-  obj[2] = callback2(TableRowInner /* TableRowInner */.TableRow, obj);
-  return callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[3] = callback2(TableRowArrow.TableRowArrow, {});
+  obj[2] = callback2(TableRowInner.TableRow, obj);
+  return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 ({ GiftIntentType: closure_15, PremiumTypes: closure_16 } = GuildFeatures);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
@@ -817,35 +817,35 @@ export default function DevToolsRevenuePlaygroundScreen() {
   const items = [callback2(TrialOfferSheetExample, {}), , , , , , , , , , , , , , , , ];
   obj = { size: null };
   obj[0] = Themes.space.PX_16;
-  items[1] = callback2(Button /* Button */.Spacer, obj);
+  items[1] = callback2(Button.Spacer, obj);
   items[2] = callback2(PremiumToggles, {});
   obj = { size: null };
   obj[0] = Themes.space.PX_16;
-  items[3] = callback2(Button /* Button */.Spacer, obj);
+  items[3] = callback2(Button.Spacer, obj);
   items[4] = callback2(ForceMockIAP, {});
   const obj1 = { size: null };
   obj1[0] = Themes.space.PX_16;
-  items[5] = callback2(Button /* Button */.Spacer, obj1);
+  items[5] = callback2(Button.Spacer, obj1);
   items[6] = callback2(PaymentFlowTest, {});
   const obj2 = { size: null };
   obj2[0] = Themes.space.PX_16;
-  items[7] = callback2(Button /* Button */.Spacer, obj2);
+  items[7] = callback2(Button.Spacer, obj2);
   items[8] = callback2(Orbs, {});
   const obj3 = { size: null };
   obj3[0] = Themes.space.PX_16;
-  items[9] = callback2(Button /* Button */.Spacer, obj3);
+  items[9] = callback2(Button.Spacer, obj3);
   items[10] = callback2(RevenueSmokeTests, {});
   const obj4 = { size: null };
   obj4[0] = Themes.space.PX_16;
-  items[11] = callback2(Button /* Button */.Spacer, obj4);
+  items[11] = callback2(Button.Spacer, obj4);
   items[12] = callback2(GuildPowerups, {});
   const obj5 = { size: null };
   obj5[0] = Themes.space.PX_16;
-  items[13] = callback2(Button /* Button */.Spacer, obj5);
+  items[13] = callback2(Button.Spacer, obj5);
   items[14] = callback2(GuildTagBadges, {});
   const obj6 = { size: null };
   obj6[0] = Themes.space.PX_16;
-  items[15] = callback2(Button /* Button */.Spacer, obj6);
+  items[15] = callback2(Button.Spacer, obj6);
   items[16] = callback2(FriendAnniversary, {});
   obj[2] = items;
   return callback3(ScrollView, obj);

@@ -17,37 +17,37 @@ export const getReferralTrialOfferExpirationCopy = function getReferralTrialOffe
   const diff = arg0 - Date.now();
   const result = diff / set.Millis.HOUR;
   if (result > 24) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     let obj = { numDays: null };
     const _Math3 = Math;
     obj[0] = Math.floor(result / 24);
-    let formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t["g9s+dA"], obj);
+    let formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t["g9s+dA"], obj);
   } else if (result >= 1) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     obj = { numHours: null };
     const _Math2 = Math;
     obj[0] = Math.floor(result);
-    formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.k9v33y, obj);
+    formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t.k9v33y, obj);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { numMinutes: null };
     const _Math = Math;
     obj[0] = Math.floor(60 * result);
-    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["/d0GmT"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["/d0GmT"], obj);
   }
   return formatToPlainStringResult;
 };
 export const useIsReferralProgramEntrypointBadgeAcknowledged = function useIsReferralProgramEntrypointBadgeAcknowledged() {
-  return UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE);
+  return UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE);
 };
 export const markReferralProgramEntrypointBadgeAcknowledged = function markReferralProgramEntrypointBadgeAcknowledged() {
-  const result = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE);
+  const result = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_TAB_BADGE);
 };
 export const isReferralProgramBadgeAcknowledged = function isReferralProgramBadgeAcknowledged() {
-  return UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_isDismissibleContentDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
+  return UNSAFE_isDismissibleContentDismissed.UNSAFE_isDismissibleContentDismissed(DismissibleContent.DismissibleContent.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
 };
 export const markReferralProgramBadgeAcknowledged = function markReferralProgramBadgeAcknowledged() {
-  const result = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
+  const result = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
 };
 export const useIsReferralProgramBadgeShowable = function useIsReferralProgramBadgeShowable(trialOffer) {
   trialOffer = trialOffer.trialOffer;
@@ -72,25 +72,25 @@ export const markReferralProgramPopoverSeen = function markReferralProgramPopove
   if (null != promotionId) {
     let obj = { dismissAction: null };
     obj[0] = ContentDismissActionType.INDIRECT_ACTION;
-    const result = addVersionedDismissedContent /* addVersionedDismissedContent */.markSnowflakeBoundDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, promotionId, obj);
-    const obj2 = addVersionedDismissedContent /* addVersionedDismissedContent */;
+    const result = addVersionedDismissedContent.markSnowflakeBoundDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.REFERRAL_PROGRAM_POPOVER_V2, promotionId, obj);
+    const obj2 = addVersionedDismissedContent;
   } else {
-    obj = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
-    const result1 = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_POPOVER);
+    obj = UNSAFE_isDismissibleContentDismissed;
+    const result1 = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.REFERRAL_PROGRAM_POPOVER);
   }
 };
 export const isReferralProgramPopoverSeen = function isReferralProgramPopoverSeen() {
-  return UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_isDismissibleContentDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.REFERRAL_PROGRAM_POPOVER);
+  return UNSAFE_isDismissibleContentDismissed.UNSAFE_isDismissibleContentDismissed(DismissibleContent.DismissibleContent.REFERRAL_PROGRAM_POPOVER);
 };
 export const useIsReferralProgramPopoverShowable = function useIsReferralProgramPopoverShowable() {
-  let isEligibleSenderForReferralProgram = useIsEligibleSenderForReferralProgram /* useIsEligibleSenderForReferralProgram */.useIsEligibleSenderForReferralProgram(false);
-  const obj = useIsEligibleSenderForReferralProgram /* useIsEligibleSenderForReferralProgram */;
+  let isEligibleSenderForReferralProgram = useIsEligibleSenderForReferralProgram.useIsEligibleSenderForReferralProgram(false);
+  const obj = useIsEligibleSenderForReferralProgram;
   const items = [emitChanges];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => store.getReferralsRemaining());
-  const obj2 = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => store.getReferralsRemaining());
+  const obj2 = initialize;
   const items1 = [emitChanges];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => store.getReminderStateId());
-  const obj3 = initialize /* initialize */;
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => store.getReminderStateId());
+  const obj3 = initialize;
   if (obj4.useIsReferralReminderDCExperimentEnabled({ location: "ReferralProgramUtils" })) {
     let tmp8 = null != stateFromStores1;
     if (tmp8) {

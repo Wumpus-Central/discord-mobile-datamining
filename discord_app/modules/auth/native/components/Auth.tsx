@@ -24,14 +24,14 @@ const require = arg1;
 function NavigatorWithCaptchaHook() {
   let require;
   let tmp9;
-  let obj = useIsHCaptchaModalOpenTracking /* useIsHCaptchaModalOpenTracking */;
+  let obj = useIsHCaptchaModalOpenTracking;
   const isHCaptchaModalOpenTracking = obj.useIsHCaptchaModalOpenTracking();
   const tmp6 = callback3();
   const tmp5 = useWideAuthView();
   [tmp9, require] = callback(importAllResult.useState(AuthStates.WELCOME), 2);
   const tmp10 = callback(importAllResult.useState(false), 2);
   importDefault = tmp11;
-  let obj1 = KeyboardChatScrollView /* KeyboardChatScrollView */;
+  let obj1 = KeyboardChatScrollView;
   const keyboardState = obj1.useKeyboardState((height) => height.height);
   callback = importAllResult.useCallback((arg0) => {
     let name;
@@ -50,7 +50,7 @@ function NavigatorWithCaptchaHook() {
   const tmp15 = closure_10;
   const tmp16 = closure_9;
   const tmp8 = callback(importAllResult.useState(AuthStates.WELCOME), 2);
-  obj[0] = registerAsset /* registerAsset */;
+  obj[0] = registerAsset;
   const children = [callback2(BackgroundImage, obj), ];
   if (tmp5) {
     obj = { value: null, children: null };
@@ -173,7 +173,7 @@ let closure_12 = Object.fromEntries(headerTitle.map((arg0) => {
   let tmp8 = null;
   if (set.has(tmp)) {
     const obj1 = { cardStyleInterpolator: null };
-    obj1[0] = createStackNavigator /* createStackNavigator */.CardStyleInterpolators.forFadeFromCenter;
+    obj1[0] = createStackNavigator.CardStyleInterpolators.forFadeFromCenter;
     tmp8 = obj1;
   }
   const merged3 = Object.assign(tmp8);

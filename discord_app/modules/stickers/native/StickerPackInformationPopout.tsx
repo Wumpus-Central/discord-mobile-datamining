@@ -80,7 +80,7 @@ export default function StickerPackInformationPopout(stickerPack) {
 };
 export const doesStickerPackHavePopoutInformation = function doesStickerPackHavePopoutInformation(stickerPack) {
   const items = [];
-  let obj = getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */;
+  let obj = getStickerExtensionFromFormatType;
   if (obj.isStickerPackAnimated(stickerPack)) {
     obj = { key: "animated", description: null };
     const intl = tmp(1236).intl;

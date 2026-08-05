@@ -14,7 +14,7 @@ export default function transitionToStream(channelId) {
     const obj = ACTION_SHEET_HEIGHT_HALF;
     ModalActionCreators.popAll();
     const obj2 = ModalActionCreators;
-    openChannelCallModal /* openChannelCallModal */.openGuildVoiceModal(channel, "Go Live");
-    const obj3 = openChannelCallModal /* openChannelCallModal */;
+    openChannelCallModal.openGuildVoiceModal(channel, "Go Live");
+    const obj3 = openChannelCallModal;
   }
 };

@@ -13,7 +13,7 @@ function emitMWRCSentryErrorOnFailure(arg0, source, load_id) {
   try {
     const _HermesInternal = HermesInternal;
     tmp2.error("Failed to open mobile web popout to " + tmp5 + ", error response: ", tmp4);
-    let obj1 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG /* MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG */;
+    let obj1 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG;
     const _Error = Error;
     const error = new Error("Mobile web redirect checkout mobile app to web popout failed");
     obj = { extra: null };
@@ -27,8 +27,8 @@ function emitMWRCSentryErrorOnFailure(arg0, source, load_id) {
     const error1 = new Error("Mobile web redirect checkout mobile app to web popout failed");
     obj1 = { extra: null };
     obj1[0] = tmp3;
-    const result1 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG /* MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG */.captureMobileWebRedirectCheckoutSentryError(error1, tmp2, obj1);
-    const obj5 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG /* MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG */;
+    const result1 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG.captureMobileWebRedirectCheckoutSentryError(error1, tmp2, obj1);
+    const obj5 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG;
   }
 }
 let c5 = new require("MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG")("BillingStandaloneNativeUtils");

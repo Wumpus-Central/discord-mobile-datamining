@@ -32,12 +32,12 @@ export const harvestDisabled = function harvestDisabled(created_at, stateFromSto
 export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   let require;
   let tmp3;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [harvestType];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => harvestType.harvestType);
-  const obj3 = initialize /* initialize */;
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => harvestType.harvestType);
+  const obj3 = initialize;
   [tmp3, require] = callback(React.useState(() => Date.now()), 2);
   let sum = tmp3;
   if (null != stateFromStores1) {

@@ -15,12 +15,12 @@ let metroImportAll;
 const require = arg1;
 function GetButton(onPress) {
   const obj = { variant: "primary", size: "sm", text: null, onPress: null, accessibilityLabel: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.l8JeHg);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.l8JeHg);
   obj[3] = onPress.onPress;
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.Vsxqmz);
-  return callback(Button /* Button */.Button, obj);
+  const intl2 = getSystemLocale.intl;
+  obj[4] = intl2.string(getSystemLocale.t.Vsxqmz);
+  return callback(Button.Button, obj);
 }
 ({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);

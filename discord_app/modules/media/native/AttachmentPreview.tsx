@@ -55,7 +55,7 @@ function FilenameText(fileName) {
     obj = { style: null, ellipsizeMode: "middle", lineClamp: 1, variant: "text-xs/medium", color: "mobile-text-heading-primary", children: null };
     obj[0] = tmp.attachmentFileName;
     obj[5] = fileName;
-    tmp5 = callback(Text /* Text */.Text, obj);
+    tmp5 = callback(Text.Text, obj);
   }
   const items = [tmp5, ];
   obj = { style: tmp.attachmentFileName, lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -69,7 +69,7 @@ function FilenameText(fileName) {
   }
   const obj1 = { children: null };
   obj[4] = str3;
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj1[0] = items;
   return closure_7(closure_5, obj1);
 }
@@ -114,7 +114,7 @@ let closure_13 = importAllResult.memo((borderRadius) => {
     isMatch = obj2.test(fileName);
   }
   if (isMatch) {
-    let isIOSResult = set /* set */.isIOS();
+    let isIOSResult = set.isIOS();
     if (isIOSResult) {
       isIOSResult = uri.startsWith("ph://");
     }
@@ -127,7 +127,7 @@ let closure_13 = importAllResult.memo((borderRadius) => {
       const tmp2Result = tmp2(500);
     }
     isMatch = isIOSResult;
-    const obj4 = set /* set */;
+    const obj4 = set;
     tmp2 = require;
   }
   obj = { style: items, children: null };
@@ -145,7 +145,7 @@ let closure_13 = importAllResult.memo((borderRadius) => {
     obj2[0] = items2;
     obj2[1] = obj;
     obj2[2] = obj;
-    obj[1] = tmp6(Button /* Button */.ThumbnailImage, obj2);
+    obj[1] = tmp6(Button.ThumbnailImage, obj2);
     tmp10 = obj;
   }
   return closure_6(closure_5, tmp10);
@@ -196,7 +196,7 @@ export default function AttachmentPreview(height) {
     let tmp9 = callback(closure_13, obj);
   } else {
     if (!isVideo) {
-      let obj2 = set /* set */;
+      let obj2 = set;
       if (obj2.isIOS()) {
         let tmp6 = tmp8;
         let CirclePlayIcon = tmp7;
@@ -223,7 +223,7 @@ export default function AttachmentPreview(height) {
       tmp8 = dependencyMap;
     } else {
       tmp6 = dependencyMap;
-      obj1 = set /* set */;
+      obj1 = set;
       CirclePlayIcon = require;
     }
     if (flag) {

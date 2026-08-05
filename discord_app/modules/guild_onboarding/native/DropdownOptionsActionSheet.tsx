@@ -113,10 +113,10 @@ export default function DropdownOptionsActionSheet(arg0) {
   let require;
   ({ guildId: require, promptId: importDefault, canBeNew: dependencyMap, onSelect: Button } = arg0);
   let closure_4;
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [handleUpdate];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getOnboardingPrompt(closure_1));
-  let obj1 = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj1 = defaultAreStatesEqual;
   const items1 = [handleUpdate];
   closure_4 = obj1.useStateFromStoresArray(items1, () => outer1_6.getOnboardingResponsesForPrompt(closure_0, closure_1));
   if (null == stateFromStores) {

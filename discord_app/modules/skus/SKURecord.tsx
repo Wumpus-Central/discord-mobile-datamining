@@ -252,7 +252,7 @@ Object.defineProperty(prototype, "isTheGameAwardsWinner", {
 });
 Object.defineProperty(prototype, "available", {
   get: function available() {
-    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
+    let hasFlagResult = hasFlag.hasFlag(this.flags, constants2.AVAILABLE);
     if (!hasFlagResult) {
       hasFlagResult = null != this.externalPurchaseUrl;
     }
@@ -273,27 +273,27 @@ prototype["isAvailableForDistribution"] = function isAvailableForDistribution() 
     const premium = self.premium;
     let hasFlagResult = !premium;
     if (premium) {
-      hasFlagResult = hasFlag /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
-      const obj = hasFlag /* hasFlag */;
+      hasFlagResult = hasFlag.hasFlag(self.flags, constants2.PREMIUM_AND_DISTRIBUTION);
+      const obj = hasFlag;
     }
     available = hasFlagResult;
   }
   return available;
 };
 prototype["isAvailable"] = function isAvailable() {
-  return hasFlag /* hasFlag */.hasFlag(this.flags, constants2.AVAILABLE);
+  return hasFlag.hasFlag(this.flags, constants2.AVAILABLE);
 };
 prototype["isPremiumPerk"] = function isPremiumPerk() {
   const self = this;
   let premium = this.premium;
   if (premium) {
-    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
+    let hasFlagResult = hasFlag.hasFlag(self.flags, constants2.PREMIUM_PURCHASE);
     if (!hasFlagResult) {
       hasFlagResult = tmp(1384).hasFlag(self.flags, tmp3.PREMIUM_AND_DISTRIBUTION);
       const tmpResult = tmp(1384);
     }
     premium = hasFlagResult;
-    const obj = hasFlag /* hasFlag */;
+    const obj = hasFlag;
     tmp = require;
     tmp3 = constants2;
   }

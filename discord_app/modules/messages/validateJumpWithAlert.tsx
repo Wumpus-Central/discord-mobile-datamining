@@ -14,30 +14,30 @@ export default function validateJumpWithAlert(author) {
   let obj = blockedForMessage;
   if (blockedForMessage.isBlockedForMessage(author)) {
     obj = { title: null, body: null, confirmText: null };
-    const intl11 = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl11.string(getSystemLocale /* getSystemLocale */.t["j7eA/g"]);
-    const intl12 = getSystemLocale /* getSystemLocale */.intl;
+    const intl11 = getSystemLocale.intl;
+    obj[0] = intl11.string(getSystemLocale.t["j7eA/g"]);
+    const intl12 = getSystemLocale.intl;
     obj = { name: null };
     obj[0] = author.author.username;
-    obj[1] = intl12.formatToPlainString(getSystemLocale /* getSystemLocale */.t.dTNNgr, obj);
-    const intl13 = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl13.string(getSystemLocale /* getSystemLocale */.t.BddRzS);
+    obj[1] = intl12.formatToPlainString(getSystemLocale.t.dTNNgr, obj);
+    const intl13 = getSystemLocale.intl;
+    obj[2] = intl13.string(getSystemLocale.t.BddRzS);
     set.show(obj);
     return false;
   } else if (obj.isIgnoredForMessage(author)) {
     let obj1 = { title: null, body: null, confirmText: null };
-    const intl8 = getSystemLocale /* getSystemLocale */.intl;
-    obj1[0] = intl8.string(getSystemLocale /* getSystemLocale */.t.XyWoKV);
-    const intl9 = getSystemLocale /* getSystemLocale */.intl;
+    const intl8 = getSystemLocale.intl;
+    obj1[0] = intl8.string(getSystemLocale.t.XyWoKV);
+    const intl9 = getSystemLocale.intl;
     const obj2 = { name: null };
     obj2[0] = author.author.username;
-    obj1[1] = intl9.formatToPlainString(getSystemLocale /* getSystemLocale */.t["8t8doK"], obj2);
-    const intl10 = getSystemLocale /* getSystemLocale */.intl;
-    obj1[2] = intl10.string(getSystemLocale /* getSystemLocale */.t.BddRzS);
+    obj1[1] = intl9.formatToPlainString(getSystemLocale.t["8t8doK"], obj2);
+    const intl10 = getSystemLocale.intl;
+    obj1[2] = intl10.string(getSystemLocale.t.BddRzS);
     set.show(obj1);
     return false;
   } else {
-    obj1 = isSpamSupported /* isSpamSupported */;
+    obj1 = isSpamSupported;
     if (obj1.isSpam(author)) {
       channel = channel.getChannel(author.channel_id);
       let isPrivateResult;

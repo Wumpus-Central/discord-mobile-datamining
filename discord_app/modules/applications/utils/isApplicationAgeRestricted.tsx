@@ -13,7 +13,7 @@ export default function isApplicationAgeRestricted(arg0) {
     if (application != null) {
       prop = application.contentClassification;
     }
-    return isAgeRestrictedContentClassification /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(prop);
+    return isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(prop);
   } else {
     return false;
   }

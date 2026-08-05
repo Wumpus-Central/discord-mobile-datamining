@@ -118,7 +118,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
       DEFAULT = tmp.DEFAULT;
       tmp2 = tmp;
     }
-    let obj = isPremiumGiftingSupported /* isPremiumGiftingSupported */;
+    let obj = isPremiumGiftingSupported;
     if (obj.isGooglePlayBillingSupported()) {
       if (DEFAULT === tmp2.MOBILE) {
         googleSkuIds = googleSkuIds.googleSkuIds;
@@ -153,7 +153,7 @@ export const getFormattedPriceForCollectiblesProduct = function getFormattedPric
   }
 };
 export const extractPriceByPurchaseTypes = function extractPriceByPurchaseTypes(googleSkuIds) {
-  let obj = isPremiumGiftingSupported /* isPremiumGiftingSupported */;
+  let obj = isPremiumGiftingSupported;
   if (obj.isGooglePlayBillingSupported()) {
     if (arg1 !== closure_3.MOBILE) {
       if (arg1 !== closure_3.MOBILE_PREMIUM_TIER_2) {
@@ -303,7 +303,7 @@ export const isGPlaySynced = function isGPlaySynced(variants) {
     const tmp2Result = updateProduct;
     return null != product && null != updateProduct.getProduct(tmp7);
   }
-  obj = getProductOrbPrice /* getProductOrbPrice */;
+  obj = getProductOrbPrice;
 };
 export const filterGPlaySyncedCategories = function filterGPlaySyncedCategories(items) {
   if (null == items) {
@@ -340,5 +340,5 @@ export const filterHiddenCategories = function filterHiddenCategories(result) {
   });
 };
 export const createOrbProfileBadge = function createOrbProfileBadge() {
-  return { id: BalanceWidgetMode /* BalanceWidgetMode */.OrbBadges.ORB_PROFILE_BADGE, icon: BalanceWidgetMode /* BalanceWidgetMode */.OrbBadges.ORB_PROFILE_BADGE, iconSrc: metadata, description: "", isPreviewMode: true };
+  return { id: BalanceWidgetMode.OrbBadges.ORB_PROFILE_BADGE, icon: BalanceWidgetMode.OrbBadges.ORB_PROFILE_BADGE, iconSrc: metadata, description: "", isPreviewMode: true };
 };

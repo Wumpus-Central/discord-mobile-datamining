@@ -27,16 +27,16 @@ export default function ParagraphField(field) {
   let str = field.response;
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.formHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label };
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const items = [callback(Text.Text, obj), ];
   obj = { maxLength: closure_3, value: null, placeholder: null, onChange: null };
   if (str == null) {
     str = "";
   }
   obj[1] = str;
   const intl = tmp5(1236).intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["Sqn+Wh"]);
+  obj[2] = intl.string(getSystemLocale.t["Sqn+Wh"]);
   obj[3] = field.onChange;
-  items[1] = callback(TextArea /* TextArea */.TextArea, obj);
+  items[1] = callback(TextArea.TextArea, obj);
   obj[1] = items;
   return closure_5(View, obj);
 };

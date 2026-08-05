@@ -10,6 +10,6 @@ const result = require("set").fileFinishedImporting("modules/keyboard/native/Ani
 
 export const AnimatedKeyboardExperiment = apexExperiment;
 export const isAnimatedAndroidKeyboard = function isAnimatedAndroidKeyboard() {
-  const obj = set /* set */;
-  return set /* set */.isAndroid() && enabled;
+  const obj = set;
+  return set.isAndroid() && enabled;
 };

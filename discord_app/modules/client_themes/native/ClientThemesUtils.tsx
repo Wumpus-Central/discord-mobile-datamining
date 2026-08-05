@@ -44,7 +44,7 @@ function getGradientColorByPercentage(type, END) {
   tmp = colors;
 }
 function getBottomColorWithOpacity(type, hexToRgbResult, arg2) {
-  if (type.type === ClientThemeType /* ClientThemeType */.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+  if (type.type === ClientThemeType.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
     let gradientAngle = type.angle;
   } else {
     gradientAngle = type.customThemeSettings.gradientAngle;
@@ -57,7 +57,7 @@ function getBottomColorWithOpacity(type, hexToRgbResult, arg2) {
   const tmpResult = getGradientColorByPercentage(type, START);
   const tmp = getGradientColorByPercentage;
   const tmp2 = require;
-  const tmp2Result = hexToRgba /* hexToRgba */;
+  const tmp2Result = hexToRgba;
   const tmp7 = new hslToRgb(tmpResult.r, tmpResult.g, tmpResult.b, arg2);
   const mixColorsResult = tmp2Result.mixColors(tmp7, new hslToRgb(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2));
   const tmp8 = new hslToRgb(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2);
@@ -65,7 +65,7 @@ function getBottomColorWithOpacity(type, hexToRgbResult, arg2) {
   return n.rgb(mixColorsResult.red, mixColorsResult.green, mixColorsResult.blue).hex("rgb");
 }
 function getTopColorWithOpacity(type, hexToRgbResult, arg2) {
-  if (type.type === ClientThemeType /* ClientThemeType */.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+  if (type.type === ClientThemeType.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
     let gradientAngle = type.angle;
   } else {
     gradientAngle = type.customThemeSettings.gradientAngle;
@@ -78,7 +78,7 @@ function getTopColorWithOpacity(type, hexToRgbResult, arg2) {
   const tmpResult = getGradientColorByPercentage(type, END);
   const tmp = getGradientColorByPercentage;
   const tmp2 = require;
-  const tmp2Result = hexToRgba /* hexToRgba */;
+  const tmp2Result = hexToRgba;
   const tmp7 = new hslToRgb(tmpResult.r, tmpResult.g, tmpResult.b, arg2);
   const mixColorsResult = tmp2Result.mixColors(tmp7, new hslToRgb(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2));
   const tmp8 = new hslToRgb(hexToRgbResult.r, hexToRgbResult.g, hexToRgbResult.b, 1 - arg2);
@@ -86,15 +86,15 @@ function getTopColorWithOpacity(type, hexToRgbResult, arg2) {
   return n.rgb(mixColorsResult.red, mixColorsResult.green, mixColorsResult.blue).hex("rgb");
 }
 function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme) {
-  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const obj = AccessibilityAnnouncer;
   const isThemeDarkResult = obj.isThemeDark(theme);
-  const hexToRgb = hexToRgba /* hexToRgba */.hexToRgb;
+  const hexToRgb = hexToRgba.hexToRgb;
   if (isThemeDarkResult) {
     let hexToRgbResult = hexToRgb(tmp5.DARK);
   } else {
     hexToRgbResult = hexToRgb(tmp5.LIGHT);
   }
-  if (customBackgroundGradient.type === ClientThemeType /* ClientThemeType */.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+  if (customBackgroundGradient.type === ClientThemeType.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
     let MID2 = customBackgroundGradient.midpointPercentage;
     if (MID2 == null) {
       MID2 = obj.MID;
@@ -107,7 +107,7 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme)
   if (END == null) {
     tmp10 = MID;
   }
-  if (customBackgroundGradient.type === ClientThemeType /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+  if (customBackgroundGradient.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
     if (arg3 != null) {
       let tmp11 = arg3;
     } else {
@@ -126,7 +126,7 @@ function calculateGradientValueWithOpacity(customBackgroundGradient, END, theme)
       tmpResult.isThemeDark(theme) ? obj.LEVEL_2 : obj.LEVEL_4;
     }
   }
-  if (customBackgroundGradient.type === ClientThemeType /* ClientThemeType */.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+  if (customBackgroundGradient.type === ClientThemeType.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
     let gradientAngle = customBackgroundGradient.angle;
   } else {
     gradientAngle = customBackgroundGradient.customThemeSettings.gradientAngle;
@@ -188,7 +188,7 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
     if (null != gradient) {
       const tmp11 = calculateGradientValueWithOpacity(gradient, obj.START, gradient.theme);
       const tmp13 = calculateGradientValueWithOpacity(gradient, obj.END, gradient.theme);
-      if (gradient.type === ClientThemeType /* ClientThemeType */.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+      if (gradient.type === ClientThemeType.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
         let gradientAngle = gradient.angle;
       } else {
         gradientAngle = gradient.customThemeSettings.gradientAngle;
@@ -201,7 +201,7 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
       if (gradientAngle > c8) {
         tmp3 = tmp13;
       }
-      if (gradient.type === ClientThemeType /* ClientThemeType */.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
+      if (gradient.type === ClientThemeType.ClientThemeType.BACKGROUND_GRADIENT_PRESET) {
         const colors = gradient.colors;
         let mapped = colors.map((arg0) => callback(712).unsafe_rawColors[arg0.token]);
       } else {
@@ -209,7 +209,7 @@ export const getGradientThemeMetadata = function getGradientThemeMetadata(gradie
       }
       let first = mapped[0];
       let tmp5 = mapped[mapped.length - 1];
-      if (gradient.type === ClientThemeType /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+      if (gradient.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
         const colors1 = gradient.customThemeSettings.colors;
         const mapped1 = colors1.map((arg0) => callback(689)(arg0).luminance());
         const _Math = Math;
@@ -317,7 +317,7 @@ export const useGradientValue = function useGradientValue(END) {
   }, items);
 };
 export const getEmbedScrollGradientBackground = function getEmbedScrollGradientBackground() {
-  let customBackgroundGradient = getCustomThemesName /* getCustomThemesName */.getCustomBackgroundGradient();
+  let customBackgroundGradient = getCustomThemesName.getCustomBackgroundGradient();
   if (customBackgroundGradient == null) {
     customBackgroundGradient = isSyncedModeThemesEnabled.gradientPreset;
   }
@@ -336,8 +336,8 @@ export const getEmbedBackground = function getEmbedBackground() {
       return null;
     }
   }
-  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const obj = AccessibilityAnnouncer;
   const tmp = require;
   const tmp4 = obj.isThemeDark(theme.theme) ? obj.DARK : obj.LIGHT;
-  return hexToRgba /* hexToRgba */.hexWithOpacity(tmp4, obj.LEVEL_1);
+  return hexToRgba.hexWithOpacity(tmp4, obj.LEVEL_1);
 };

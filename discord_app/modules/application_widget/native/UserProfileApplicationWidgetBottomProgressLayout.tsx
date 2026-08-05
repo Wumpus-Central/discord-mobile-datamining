@@ -40,24 +40,24 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   if (objective != null) {
     image = objective.fields.image;
   }
-  const items = [resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
+  const items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
-  let obj = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj = resolvedValuesFromUserApplicationIdentityProfile;
   const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(objective, "name", resolveFieldValue);
-  let obj1 = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj1 = resolvedValuesFromUserApplicationIdentityProfile;
   const singleStringOrSkeleton1 = obj1.resolveSingleStringOrSkeleton(objective, "description", resolveFieldValue);
   const progress = bottomConfig.components.progress;
   let current;
   if (progress != null) {
     current = progress.fields.current;
   }
-  const items1 = [resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.NUMBER];
+  const items1 = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.NUMBER];
   let iter = resolveFieldValue(current, items1);
   let max;
   if (progress != null) {
     max = progress.fields.max;
   }
-  const items2 = [resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.NUMBER];
+  const items2 = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.NUMBER];
   let iter2 = resolveFieldValue(max, items2);
   let tmp3Result = tmp3(12264);
   obj = { style: tmp.root, children: null };

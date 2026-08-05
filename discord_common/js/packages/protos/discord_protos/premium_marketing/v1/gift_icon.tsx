@@ -59,7 +59,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (4 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let Gradient = create /* create */.Gradient;
+        let Gradient = create.Gradient;
         let tmp24 = Gradient;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -114,7 +114,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(boxAnimationUrl,
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
   }
   if (boxAnimationUrl.gradient) {
-    const Gradient = create /* create */.Gradient;
+    const Gradient = create.Gradient;
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Gradient.internalBinaryWrite(boxAnimationUrl.gradient, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

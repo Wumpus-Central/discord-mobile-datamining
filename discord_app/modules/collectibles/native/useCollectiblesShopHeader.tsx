@@ -17,7 +17,7 @@ const require = arg1;
 function CollectiblesShopHeaderTitle(currentScreen) {
   const tmp = createCacheKey();
   let obj = { style: tmp.headerTitleContainer, children: null };
-  const items = [callback(ShopIcon /* ShopIcon */.ShopIcon, { size: "md", color: "icon-strong" }), ];
+  const items = [callback(ShopIcon.ShopIcon, { size: "md", color: "icon-strong" }), ];
   obj = { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", maxFontSizeMultiplier: 2, lineClamp: 1, style: tmp.headerTitle, children: null };
   if (currentScreen.currentScreen === constants.ORBS) {
     const intl2 = tmp5(1236).intl;
@@ -27,7 +27,7 @@ function CollectiblesShopHeaderTitle(currentScreen) {
     stringResult = intl.string(tmp5(1236).t.pWG4ze);
   }
   obj[5] = stringResult;
-  items[1] = callback(Text /* Text */.Heading, obj);
+  items[1] = callback(Text.Heading, obj);
   obj[1] = items;
   return closure_11(View, obj);
 }

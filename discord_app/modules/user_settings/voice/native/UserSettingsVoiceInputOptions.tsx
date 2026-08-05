@@ -14,22 +14,22 @@ let error;
 let metroImportAll;
 const require = arg1;
 function handleInputModePress() {
-  let obj = showSimpleActionSheet /* showSimpleActionSheet */;
+  let obj = showSimpleActionSheet;
   obj = { key: "InputMode", header: null, options: null, hasIcons: false };
   obj = { title: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["pS+K2L"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["pS+K2L"]);
   obj[1] = obj;
   const obj1 = { label: null, onPress: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.Q8gkVL);
+  const intl2 = getSystemLocale.intl;
+  obj1[0] = intl2.string(getSystemLocale.t.Q8gkVL);
   obj1[1] = function onPress() {
     callback(9077).setMode(constants.PUSH_TO_TALK);
   };
   const items = [obj1, ];
   const obj2 = { label: null, onPress: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.cHCEOJ);
+  const intl3 = getSystemLocale.intl;
+  obj2[0] = intl3.string(getSystemLocale.t.cHCEOJ);
   obj2[1] = function onPress() {
     callback(9077).setMode(constants.VOICE_ACTIVITY);
   };

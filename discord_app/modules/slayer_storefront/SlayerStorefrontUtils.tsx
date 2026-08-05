@@ -136,7 +136,7 @@ function getSKUShareURL(arg0, applicationId) {
   if (null != arg0) {
     const _location2 = location;
     const _location3 = location;
-    const parsed = keysSorter /* keysSorter */.parse(location.search);
+    const parsed = keysSorter.parse(location.search);
     const skuId = parsed.skuId;
     ({ tab, applicationId } = parsed);
     let tmp3 = pathname.indexOf(closure_13.COLLECTIBLES_SHOP) >= 0;
@@ -179,7 +179,7 @@ function isOnCollectiblesShopGameShopPage(arr) {
   let applicationId;
   let skuId;
   let tab;
-  const parsed = keysSorter /* keysSorter */.parse(arg1);
+  const parsed = keysSorter.parse(arg1);
   ({ tab, applicationId, skuId } = parsed);
   let tmp2 = arr.indexOf(closure_13.COLLECTIBLES_SHOP) >= 0;
   if (tmp2) {
@@ -372,8 +372,8 @@ export const transformSlayerApplicationStorefrontServer = function transformSlay
   obj[8] = fromServer;
   let result;
   if (null != body.storefront_pricing) {
-    result = useSKUPrice /* useSKUPrice */.transformStorefrontPricesServer(body.storefront_pricing);
-    const obj4 = useSKUPrice /* useSKUPrice */;
+    result = useSKUPrice.transformStorefrontPricesServer(body.storefront_pricing);
+    const obj4 = useSKUPrice;
   }
   obj[9] = result;
   const obj3 = apply;
@@ -412,7 +412,7 @@ export const getPrimaryCarouselItemInfo = function getPrimaryCarouselItemInfo(te
         if (null == first.labelIconAssetId) {
           obj = { primaryIconAsset: "body", primaryIconLabel: "useStateFromStores" };
         } else {
-          const obj3 = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
+          const obj3 = _httpGetWithCountryCodeQuery;
           const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(obj3.getAssetURL(arg1, first.labelIconAssetId, num, "webp"));
           obj = { primaryIconAsset: null, primaryIconLabel: null };
           obj[0] = toURLSafeResult;
@@ -437,7 +437,7 @@ export const getGameItemThumbnailUrl = function getGameItemThumbnailUrl(error) {
   }
   if (null != error) {
     if (null != error.thumbnailAssetId) {
-      const obj3 = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
+      const obj3 = _httpGetWithCountryCodeQuery;
       return isDiscordProxiedAssetUrl.toURLSafe(obj3.getAssetURL(error.applicationId, error.thumbnailAssetId, num, "webp"));
     }
   }
@@ -474,7 +474,7 @@ export const getCardImageURL = function getCardImageURL(sku, arg1) {
   }
   if (null != cardImageAssetId) {
     if (null != applicationId) {
-      const obj3 = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
+      const obj3 = _httpGetWithCountryCodeQuery;
       return isDiscordProxiedAssetUrl.toURLSafe(obj3.getAssetURL(applicationId, cardImageAssetId, num, "webp"));
     }
   }
@@ -505,7 +505,7 @@ export const getCardBackgroundImageURL = function getCardBackgroundImageURL(sku,
       applicationId = sku.applicationId;
     }
     if (null != applicationId) {
-      const obj3 = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
+      const obj3 = _httpGetWithCountryCodeQuery;
       return isDiscordProxiedAssetUrl.toURLSafe(obj3.getAssetURL(sku.applicationId, sku.tenantMetadata.socialLayer.cardBackgroundImageAssetId, num, str));
     }
   }
@@ -574,7 +574,7 @@ export const getHasWishlistOrPopularRecommendations = function getHasWishlistOrP
 export const isOnSocialLayerStorefrontPage = function isOnSocialLayerStorefrontPage(arr) {
   let applicationId;
   let tab;
-  const parsed = keysSorter /* keysSorter */.parse(arg1);
+  const parsed = keysSorter.parse(arg1);
   ({ tab, applicationId } = parsed);
   let tmp2 = arr.indexOf(closure_13.COLLECTIBLES_SHOP) >= 0;
   if (tmp2) {
@@ -608,7 +608,7 @@ export const isOnSocialLayerStorefrontSkuPage = function isOnSocialLayerStorefro
     pageIndex = 0;
   }
   ({ guildId, skuId } = applicationId);
-  const parsed = keysSorter /* keysSorter */.parse(applicationId.search);
+  const parsed = keysSorter.parse(applicationId.search);
   ({ tab, applicationId, skuId: skuId2 } = parsed);
   let tmp2 = pathname.indexOf(closure_13.COLLECTIBLES_SHOP) >= 0;
   if (tmp2) {

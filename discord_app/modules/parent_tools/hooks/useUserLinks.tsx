@@ -182,10 +182,10 @@ export const useHasActiveParentLinks = function useHasActiveParentLinks() {
 };
 export const useUserQRLinkUrl = function useUserQRLinkUrl() {
   const items = [freshTeenActivityWithMap];
-  const stateFromStores = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => linkCode.getLinkCode());
-  const obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  const stateFromStores = defaultAreStatesEqual.useStateFromStores(items, () => linkCode.getLinkCode());
+  const obj = defaultAreStatesEqual;
   const items1 = [mergeGuildAvatar];
-  const stateFromStores1 = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items1, () => currentUser.getCurrentUser());
+  const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

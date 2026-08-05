@@ -27,7 +27,7 @@ export default function MessageRequestsNavigator() {
   let Screen;
   const tmp = createNativeStackNavigator();
   const require = tmp;
-  let obj = NavigationStack /* NavigationStack */;
+  let obj = NavigationStack;
   const importDefault = obj.useAccessibilityNativeStackOptions();
   const layoutEffect = React.useLayoutEffect(() => tmp(6843).trackAppUIViewed(), []);
   const rect = useSafeAreaInsets();
@@ -55,8 +55,8 @@ export default function MessageRequestsNavigator() {
   const obj1 = { name: "root", options: null, getComponent: null };
   const obj2 = { title: null };
   ({ Navigator, Screen } = createNativeStackNavigator);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj2[0] = intl.string(getSystemLocale /* getSystemLocale */.t.e7GWjQ);
+  const intl = getSystemLocale.intl;
+  obj2[0] = intl.string(getSystemLocale.t.e7GWjQ);
   let merged = Object.assign(getNavigationModalPresentation());
   obj1[1] = obj2;
   obj1[2] = function getComponent() {
@@ -65,8 +65,8 @@ export default function MessageRequestsNavigator() {
   const items1 = [callback(Screen, obj1), , ];
   const obj3 = { name: "spam", options: null, getComponent: null };
   const obj4 = { title: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.ulKXHp);
+  const intl2 = getSystemLocale.intl;
+  obj4[0] = intl2.string(getSystemLocale.t.ulKXHp);
   let merged1 = Object.assign(getNavigationModalPresentation());
   obj3[1] = obj4;
   obj3[2] = function getComponent() {
@@ -75,8 +75,8 @@ export default function MessageRequestsNavigator() {
   items1[1] = callback(createNativeStackNavigator.Screen, obj3);
   const obj5 = { name: "preview", options: null, getComponent: null };
   const obj6 = { title: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj6[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.iilwGH);
+  const intl3 = getSystemLocale.intl;
+  obj6[0] = intl3.string(getSystemLocale.t.iilwGH);
   const merged2 = Object.assign(getNavigationModalPresentation());
   obj5[1] = obj6;
   obj5[2] = function getComponent() {

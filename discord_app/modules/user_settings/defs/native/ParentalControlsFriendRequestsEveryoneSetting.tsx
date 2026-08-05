@@ -12,8 +12,8 @@ const require = arg1;
 ({ AllFriendSourceFlags: c4, FriendSourceFlags: c5 } = ME);
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.mGr3CX);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.mGr3CX);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useFriendRequestsEveryoneSettingValue() {
@@ -26,7 +26,7 @@ createToggle = {
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const ParentalControlledFriendSourceFlags = result /* result */.ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = result.ParentalControlledFriendSourceFlags;
       if (arg0) {
         let tmp7 = tmp5;
       } else {

@@ -30,12 +30,12 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let items = [
   {
     getHeadingCopy() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.y4ft4D);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.y4ft4D);
     },
     getBodyCopy() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.HTvLGu);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.HTvLGu);
     },
     getGraphic(style) {
       return callback(closure_3, { style, source: registerAsset });
@@ -43,12 +43,12 @@ let items = [
   },
   {
     getHeadingCopy() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.PbAyub);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.PbAyub);
     },
     getBodyCopy() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.wOYbTv);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.wOYbTv);
     },
     getGraphic(arg0) {
       const obj = { source: null, autoPlay: null, style: null };
@@ -60,12 +60,12 @@ let items = [
   },
   {
     getHeadingCopy() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["/bX4Jn"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["/bX4Jn"]);
     },
     getBodyCopy() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.yCjoUC);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.yCjoUC);
     },
     getGraphic(style) {
       return callback(closure_3, { style, source: registerAsset });
@@ -75,12 +75,12 @@ let items = [
 const obj1 = { borderRadius: require("Themes").radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
 const obj2 = {
   getHeadingCopy() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.y4ft4D);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.y4ft4D);
   },
   getBodyCopy() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.HTvLGu);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.HTvLGu);
   },
   getGraphic(style) {
     return callback(closure_3, { style, source: registerAsset });
@@ -93,9 +93,9 @@ export default function GuildBoostingMarketingTopPerksCards() {
   const require = tmp;
   let obj = { style: tmp.wrapper, children: null };
   obj = { style: tmp.heading, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.aGdB3E);
-  let items = [callback(Text /* Text */.Heading, obj), ];
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.aGdB3E);
+  let items = [callback(Text.Heading, obj), ];
   obj = { itemCount: items.length, cardWidth: 324, cardMarginRight: 16, contentContainerStyle: tmp.scrollerContent, children: null };
   obj[4] = items.map((getGraphic) => {
     const items = [tmp.card, ];
@@ -115,7 +115,7 @@ export default function GuildBoostingMarketingTopPerksCards() {
     obj[1] = items1;
     return outer1_7(outer1_4, obj, arg1);
   });
-  items[1] = callback(items /* items */.MarketingCardsScroller, obj);
+  items[1] = callback(items.MarketingCardsScroller, obj);
   obj[1] = items;
   return callback2(closure_4, obj);
 };

@@ -184,14 +184,14 @@ function _saveProfileChanges() {
 const result = require("ME").fileFinishedImporting("modules/user_profile/UserProfileActionCreators.tsx");
 
 export const notifyUnsavedUserProfileChangesInModal = function notifyUnsavedUserProfileChangesInModal() {
-  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch.dispatch(constants.SHAKE_PROFILE_MODAL);
-  const ComponentDispatch2 = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch2 = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch2.dispatch(constants.EMPHASIZE_NOTICE);
-  const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  AccessibilityAnnouncer.announce("" + intl.string(getSystemLocale /* getSystemLocale */.t.GP7JLE) + " " + intl2.string(getSystemLocale /* getSystemLocale */.t.gKoO1D));
+  const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
+  const intl = getSystemLocale.intl;
+  const intl2 = getSystemLocale.intl;
+  AccessibilityAnnouncer.announce("" + intl.string(getSystemLocale.t.GP7JLE) + " " + intl2.string(getSystemLocale.t.gKoO1D));
 };
 export const saveProfileChanges = function saveProfileChanges(outer1_8, id2, c7) {
   const self = this;

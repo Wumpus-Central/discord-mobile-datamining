@@ -7,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/message_request/hoo
 
 export const useSpamMessageRequestCount = function useSpamMessageRequestCount() {
   const items = [processChannel];
-  return initialize /* initialize */.useStateFromStores(items, () => spamChannelsCount.getSpamChannelsCount());
+  return initialize.useStateFromStores(items, () => spamChannelsCount.getSpamChannelsCount());
 };

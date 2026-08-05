@@ -120,7 +120,7 @@ if (isBlockedDomain.isLibdiscoreInitialized()) {
   launchSignature = obj2.generateLaunchSignature(obj3.getGlobalObject());
 }
 function addBreadcrumb(arg0) {
-  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = IGNORE_ANALYTICS_BREADCRUMB_EVENTS /* IGNORE_ANALYTICS_BREADCRUMB_EVENTS */.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
+  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = IGNORE_ANALYTICS_BREADCRUMB_EVENTS.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
   if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(arg0)) {
     let obj = SentryUtils.native;
     obj = { category: "analytics", message: null };
@@ -752,6 +752,6 @@ export const trackNetworkAction = function trackNetworkAction(event, arg1) {
   callback5(event, tmp2);
 };
 export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
-  return v1 /* v1 */.v4();
+  return v1.v4();
 };
 export const AnalyticsSchema = require("ME");

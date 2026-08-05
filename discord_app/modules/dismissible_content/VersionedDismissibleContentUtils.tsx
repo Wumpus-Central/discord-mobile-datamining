@@ -7,7 +7,7 @@ const require = arg1;
 const result = require("DismissibleContent").fileFinishedImporting("modules/dismissible_content/VersionedDismissibleContentUtils.tsx");
 
 export const getVersionedDismissibleContentCurrentVersion = function getVersionedDismissibleContentCurrentVersion(closure_0) {
-  if (DismissibleContent /* DismissibleContent */.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING === closure_0) {
+  if (DismissibleContent.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING === closure_0) {
     marketingBySurface = marketingBySurface.getMarketingBySurface(tmp(13240).CollectiblesMarketingSurface.MOBILE_SHOP_BUTTON);
     let num5;
     if (marketingBySurface != null) {

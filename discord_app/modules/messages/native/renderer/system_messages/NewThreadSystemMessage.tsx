@@ -11,7 +11,7 @@ const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messag
 
 export const createNewThreadSystemMessage = function createNewThreadSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+  let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const messageReference = message.messageReference;
   let channel_id;

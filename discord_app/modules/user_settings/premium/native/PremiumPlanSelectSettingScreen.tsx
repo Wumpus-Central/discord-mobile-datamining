@@ -8,7 +8,7 @@ const require = arg1;
 const result = require("useSettingNavigationRoute").fileFinishedImporting("modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx");
 
 export default function PremiumPlanSelectSettingScreen() {
-  let obj = useSettingNavigationRoute /* useSettingNavigationRoute */;
+  let obj = useSettingNavigationRoute;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
   obj = {};
   const merged = Object.assign(settingNavigationRoute.params);

@@ -15,7 +15,7 @@ createToggle = {
   parent: null,
   IconComponent: require("RefreshIcon").RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
-    let obj = initialize /* initialize */;
+    let obj = initialize;
     const items = [getCurrentBuildOverride];
     const stateFromStores = obj.useStateFromStores(items, () => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
@@ -32,16 +32,16 @@ createToggle = {
     if (null != stateFromStores) {
       obj = { label: "Build override: ", value: null };
       obj[1] = stateFromStores;
-      tmp4 = jsx(DevToolsContentSortButtons /* DevToolsContentSortButtons */.DevToolsContentSubLabel, { label: "Build override: ", value: null });
+      tmp4 = jsx(DevToolsContentSortButtons.DevToolsContentSubLabel, { label: "Build override: ", value: null });
     }
     return tmp4;
   },
   usePredicate: function useHasBuildOverrideActive() {
-    const staffOrDeveloperSettingPredicate = useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
-    const obj = useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */;
+    const staffOrDeveloperSettingPredicate = useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
+    const obj = useStaffOrDeveloperSettingPredicate;
     const items = [getCurrentBuildOverride];
-    const obj2 = initialize /* initialize */;
-    return null != initialize /* initialize */.useStateFromStores(items, () => {
+    const obj2 = initialize;
+    return null != initialize.useStateFromStores(items, () => {
       const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
       let id;
       if (overrides != null) {
@@ -54,7 +54,7 @@ createToggle = {
     }) && staffOrDeveloperSettingPredicate;
   },
   onPress: function handleBuildOverrideActivePress() {
-    navigateToDevTools /* navigateToDevTools */.navigateToDevTools({ screenKey: "buildOverride" });
+    navigateToDevTools.navigateToDevTools({ screenKey: "buildOverride" });
   },
   withArrow: true
 };

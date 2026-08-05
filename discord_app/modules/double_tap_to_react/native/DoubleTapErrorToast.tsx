@@ -13,7 +13,7 @@ function DoubleTapErrorToastIcon() {
   let obj = { style: createCacheKey().icon, "aria-hidden": true, children: null };
   obj = { color: null, size: "xs" };
   obj[0] = Themes.colors.WHITE;
-  obj[2] = jsx(XSmallBoldIcon /* XSmallBoldIcon */.XSmallBoldIcon, { color: null, size: "xs" });
+  obj[2] = jsx(XSmallBoldIcon.XSmallBoldIcon, { color: null, size: "xs" });
   return <View color={null} size="xs" />;
 }
 createCacheKey = { icon: null };

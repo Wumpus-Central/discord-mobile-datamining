@@ -67,7 +67,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (4 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let LocalizedString2 = create /* create */.LocalizedString;
+        let LocalizedString2 = create.LocalizedString;
         let tmp29 = LocalizedString2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -75,7 +75,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (5 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let LocalizedString = create /* create */.LocalizedString;
+        let LocalizedString = create.LocalizedString;
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -130,13 +130,13 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
   }
   if (assetUrl.headerLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.bodyLocalized) {
-    const LocalizedString2 = create /* create */.LocalizedString;
+    const LocalizedString2 = create.LocalizedString;
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined1 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

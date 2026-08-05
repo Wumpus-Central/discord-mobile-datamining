@@ -37,7 +37,7 @@ function trackCommunicationDisabled(guildId, tmp10Result) {
         closure_19[joined] = sum;
       }
     }
-    obj2 = isCommunicationDisabled /* isCommunicationDisabled */;
+    obj2 = isCommunicationDisabled;
     tmp10 = require;
   }
   removeCommunicationDisabled(guildId, tmp10Result.userId);
@@ -104,7 +104,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
         if (!doesRoleSortHigherResult) {
           let tmp9 = require;
           let tmp10 = dependencyMap;
-          let obj = compareGuildRoles /* compareGuildRoles */;
+          let obj = compareGuildRoles;
           let tmp11 = tmp7;
           let tmp12 = tmp4;
           doesRoleSortHigherResult = obj.doesRoleSortHigher(tmp8, tmp4);
@@ -120,7 +120,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
           if (!doesRoleSortHigherResult1) {
             let tmp18 = require;
             let tmp19 = dependencyMap;
-            let obj2 = compareGuildRoles /* compareGuildRoles */;
+            let obj2 = compareGuildRoles;
             let tmp20 = tmp7;
             let tmp21 = tmp;
             doesRoleSortHigherResult1 = obj2.doesRoleSortHigher(tmp8, tmp);
@@ -138,7 +138,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
           if (!doesRoleSortHigherResult2) {
             let tmp25 = require;
             let tmp26 = dependencyMap;
-            let obj3 = compareGuildRoles /* compareGuildRoles */;
+            let obj3 = compareGuildRoles;
             let tmp27 = tmp7;
             let tmp28 = tmp2;
             doesRoleSortHigherResult2 = obj3.doesRoleSortHigher(tmp8, tmp2);
@@ -160,7 +160,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
           if (!doesRoleSortHigherResult3) {
             let tmp34 = require;
             let tmp35 = dependencyMap;
-            let obj4 = compareGuildRoles /* compareGuildRoles */;
+            let obj4 = compareGuildRoles;
             let tmp36 = tmp7;
             let tmp37 = tmp3;
             doesRoleSortHigherResult3 = obj4.doesRoleSortHigher(tmp8, tmp3);
@@ -274,7 +274,7 @@ function createMember(guildRoles) {
     }
     return obj;
   }
-  obj2 = hasFlag /* hasFlag */;
+  obj2 = hasFlag;
   tmp4 = require;
   tmp5 = GuildMemberFlags;
 }
@@ -337,7 +337,7 @@ function handleGuildMemberUpdate(arg0) {
       obj[1] = tmp;
       obj[2] = guildId;
       obj[3] = tmp2;
-      obj[4] = parseAvatarDecorationData /* parseAvatarDecorationData */.parseAvatarDecorationData(tmp3);
+      obj[4] = parseAvatarDecorationData.parseAvatarDecorationData(tmp3);
       obj[5] = store3.getUnsafeMutableRoles(guild.id);
       obj[6] = tmp4;
       obj[7] = tmp5;
@@ -375,7 +375,7 @@ function handleGuildMemberUpdate(arg0) {
         }
       }
       removeCommunicationDisabled(guildId, tmp13[user.id].userId);
-      const obj3 = parseAvatarDecorationData /* parseAvatarDecorationData */;
+      const obj3 = parseAvatarDecorationData;
       const tmp31 = createMember;
     }
   }
@@ -444,7 +444,7 @@ function batchUpdateGuildMembers(guildId, members) {
   }
 }
 function getAvatarDecorationFromServerMember(nextResult) {
-  return parseAvatarDecorationData /* parseAvatarDecorationData */.parseAvatarDecorationData(nextResult.avatar_decoration_data);
+  return parseAvatarDecorationData.parseAvatarDecorationData(nextResult.avatar_decoration_data);
 }
 function buildMembers(guild) {
   let unusual_dm_activity_until;
@@ -494,10 +494,10 @@ function buildMembers(guild) {
       obj[13] = unusual_dm_activity_until;
       let tmp17 = require;
       let tmp18 = dependencyMap;
-      let obj2 = parseSkuIdFromServerData /* parseSkuIdFromServerData */;
+      let obj2 = parseSkuIdFromServerData;
       let tmp19 = nextResult;
       obj[14] = obj2.parseServerUserCollectibles(tmp6.collectibles);
-      let obj3 = items /* items */;
+      let obj3 = items;
       obj[15] = obj3.parseServerDisplayNameStyles(tmp6.display_name_styles);
       let tmp10Result = tmp10(obj);
       let tmp21 = id2;
@@ -904,8 +904,8 @@ prototype["isCurrentUserGuest"] = function isCurrentUserGuest(guild_id) {
         const flags = tmp4[id].flags;
         let hasFlagResult = null != flags;
         if (hasFlagResult) {
-          hasFlagResult = hasFlag /* hasFlag */.hasFlag(flags, GuildMemberFlags.IS_GUEST);
-          const obj = hasFlag /* hasFlag */;
+          hasFlagResult = hasFlag.hasFlag(flags, GuildMemberFlags.IS_GUEST);
+          const obj = hasFlag;
         }
         return hasFlagResult;
       }
@@ -1588,15 +1588,15 @@ const guildMemberStore = new GuildMemberStore(require("dispatcher"), {
         obj[1] = guildMember.nick;
         obj[2] = guildId;
         obj[3] = guildMember.avatar;
-        obj[4] = parseAvatarDecorationData /* parseAvatarDecorationData */.parseAvatarDecorationData(guildMember.avatar_decoration_data);
+        obj[4] = parseAvatarDecorationData.parseAvatarDecorationData(guildMember.avatar_decoration_data);
         obj[5] = store3.getUnsafeMutableRoles(guild.id);
         ({ roles: obj2[6], premium_since: obj2[7], pending: obj2[8], joined_at: obj2[9], communication_disabled_until: obj2[10], unusual_dm_activity_until: obj2[11], flags: obj2[12] } = guildMember);
         const _Date = Date;
         obj[13] = Date.now();
-        const obj3 = parseAvatarDecorationData /* parseAvatarDecorationData */;
-        obj[14] = parseSkuIdFromServerData /* parseSkuIdFromServerData */.parseServerUserCollectibles(guildMember.collectibles);
-        const obj4 = parseSkuIdFromServerData /* parseSkuIdFromServerData */;
-        obj[15] = items /* items */.parseServerDisplayNameStyles(guildMember.display_name_styles);
+        const obj3 = parseAvatarDecorationData;
+        obj[14] = parseSkuIdFromServerData.parseServerUserCollectibles(guildMember.collectibles);
+        const obj4 = parseSkuIdFromServerData;
+        obj[15] = items.parseServerDisplayNameStyles(guildMember.display_name_styles);
         tmp[guildMember.user.id] = createMember(obj);
         if (null != tmp[guildMember.user.id].communicationDisabledUntil) {
           let tmp18Result = tmp18(3902);
@@ -1619,7 +1619,7 @@ const guildMemberStore = new GuildMemberStore(require("dispatcher"), {
           }
         }
         removeCommunicationDisabled(guildId, tmp[guildMember.user.id].userId);
-        const obj5 = items /* items */;
+        const obj5 = items;
       }
     }
   },
@@ -1816,7 +1816,7 @@ const guildMemberStore = new GuildMemberStore(require("dispatcher"), {
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
     instance = instance.instance;
-    let obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
+    let obj = getEmbeddedActivityLocationChannelId;
     const embeddedActivityLocationGuildId = obj.getEmbeddedActivityLocationGuildId(instance.location);
     let tmp3 = null != embeddedActivityLocationGuildId;
     if (tmp3) {
@@ -2417,15 +2417,15 @@ let obj = {
         obj[1] = guildMember.nick;
         obj[2] = guildId;
         obj[3] = guildMember.avatar;
-        obj[4] = parseAvatarDecorationData /* parseAvatarDecorationData */.parseAvatarDecorationData(guildMember.avatar_decoration_data);
+        obj[4] = parseAvatarDecorationData.parseAvatarDecorationData(guildMember.avatar_decoration_data);
         obj[5] = store3.getUnsafeMutableRoles(guild.id);
         ({ roles: obj2[6], premium_since: obj2[7], pending: obj2[8], joined_at: obj2[9], communication_disabled_until: obj2[10], unusual_dm_activity_until: obj2[11], flags: obj2[12] } = guildMember);
         const _Date = Date;
         obj[13] = Date.now();
-        const obj3 = parseAvatarDecorationData /* parseAvatarDecorationData */;
-        obj[14] = parseSkuIdFromServerData /* parseSkuIdFromServerData */.parseServerUserCollectibles(guildMember.collectibles);
-        const obj4 = parseSkuIdFromServerData /* parseSkuIdFromServerData */;
-        obj[15] = items /* items */.parseServerDisplayNameStyles(guildMember.display_name_styles);
+        const obj3 = parseAvatarDecorationData;
+        obj[14] = parseSkuIdFromServerData.parseServerUserCollectibles(guildMember.collectibles);
+        const obj4 = parseSkuIdFromServerData;
+        obj[15] = items.parseServerDisplayNameStyles(guildMember.display_name_styles);
         tmp[guildMember.user.id] = createMember(obj);
         if (null != tmp[guildMember.user.id].communicationDisabledUntil) {
           let tmp18Result = tmp18(3902);
@@ -2448,7 +2448,7 @@ let obj = {
           }
         }
         removeCommunicationDisabled(guildId, tmp[guildMember.user.id].userId);
-        const obj5 = items /* items */;
+        const obj5 = items;
       }
     }
   },
@@ -2645,7 +2645,7 @@ let obj = {
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
     instance = instance.instance;
-    let obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
+    let obj = getEmbeddedActivityLocationChannelId;
     const embeddedActivityLocationGuildId = obj.getEmbeddedActivityLocationGuildId(instance.location);
     let tmp3 = null != embeddedActivityLocationGuildId;
     if (tmp3) {

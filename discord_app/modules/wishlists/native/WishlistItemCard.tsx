@@ -17,7 +17,7 @@ export default function WishlistItemCard(arg0) {
   let wishlistOwnerId;
   ({ sku, isOwned, source, wishlistOwnerId } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  apexExperiment /* apexExperiment */;
+  apexExperiment;
   const productLine = sku.productLine;
   if (SKUProductLines.COLLECTIBLES === productLine) {
     let obj = { sku: null, isOwned: null, source: null, wishlistOwnerId: null };

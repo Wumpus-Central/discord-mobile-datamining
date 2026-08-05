@@ -3,7 +3,7 @@ import { ShopBlockType } from "../../../../discord_common/js/shared/shared-const
 let prototype;
 prototype = function GameServerHostingBannerBlockRecord(is_dismissible) {
   const obj = Object.create(new.target.prototype);
-  obj.type = ShopBlockType /* ShopBlockType */.ShopBlockType.GAME_SERVER_HOSTING_BANNER;
+  obj.type = ShopBlockType.ShopBlockType.GAME_SERVER_HOSTING_BANNER;
   obj.isDismissible = is_dismissible.is_dismissible;
   return obj;
 }.prototype;
@@ -12,7 +12,7 @@ prototype["fromServer"] = function fromServer(is_dismissible) {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.type = ShopBlockType /* ShopBlockType */.ShopBlockType.GAME_SERVER_HOSTING_BANNER;
+  obj.type = ShopBlockType.ShopBlockType.GAME_SERVER_HOSTING_BANNER;
   obj.isDismissible = is_dismissible.is_dismissible;
   return obj;
 };

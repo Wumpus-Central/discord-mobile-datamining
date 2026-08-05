@@ -32,13 +32,13 @@ function BalanceWidget(arg0) {
   let obj = { onPress, style: items, accessible: true, accessibilityRole: "button", accessibilityLabel, accessibilityState, activeOpacity: 0.8, children: null };
   items = [tmp.pressable, style];
   obj = { variant: "text-sm/semibold", color: "text-default", style: tmp.label, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.gGtZpz);
-  const items1 = [callback(Text /* Text */.Text, obj), ];
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.gGtZpz);
+  const items1 = [callback(Text.Text, obj), ];
   obj = { style: tmp.pill, children };
   items1[1] = callback(View, obj);
   obj[7] = items1;
-  return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return callback2(PressableBase.PressableOpacity, obj);
 }
 class OrbsOnboardingMenuDismissibleContent {
   constructor(arg0) {
@@ -152,7 +152,7 @@ let result = require("ME").fileFinishedImporting("modules/virtual_currency/nativ
 export default function BalanceWidgetMenuWrapper(style) {
   let obj = index;
   const balance = obj.useFetchVirtualCurrencyBalance().balance;
-  UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
+  UNSAFE_isDismissibleContentDismissed;
   if (null == balance) {
     obj = { onPress: null, style: null, accessibilityLabel: null, accessibilityState: null, children: null };
     obj[0] = function onPress() {

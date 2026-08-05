@@ -41,5 +41,5 @@ export default function BuyNitroMarketingFooter(arg0) {
   obj[4] = onPaymentDismiss;
   obj[2] = jsx(BuyNitroPurchaseButton, { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
   obj[1] = <closure_4 location={null} planSelection={null} applicationId={null} onPaymentSuccess={null} onPaymentDismiss={null} />;
-  return jsx(Directions /* Directions */.GestureDetector, { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
+  return jsx(Directions.GestureDetector, { location: null, planSelection: null, applicationId: null, onPaymentSuccess: null, onPaymentDismiss: null });
 };

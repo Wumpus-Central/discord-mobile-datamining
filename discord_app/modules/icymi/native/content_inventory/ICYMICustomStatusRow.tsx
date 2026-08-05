@@ -21,12 +21,12 @@ function UploadPlaceholder() {
   let obj = { style: callback3(false).uploadContainer, children: null };
   obj = { source: null, size: null };
   obj[0] = registerAsset;
-  obj[1] = Button /* Button */.IconSizes.SMALL;
-  const items = [callback(Button /* Button */.Icon, obj), ];
+  obj[1] = Button.IconSizes.SMALL;
+  const items = [callback(Button.Icon, obj), ];
   obj = { variant: "text-md/normal", color: "text-strong", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["3UB9ad"]);
-  items[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["3UB9ad"]);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

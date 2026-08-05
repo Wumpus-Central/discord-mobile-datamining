@@ -16,7 +16,7 @@ export const getIncomingFriendRequestCount = function getIncomingFriendRequestCo
 };
 export const useIncomingFriendRequestCount = function useIncomingFriendRequestCount() {
   let items = [upsertRelationship, recountRelationshipTypes];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     let obj;
     let obj2;
     const items = [upsertRelationship, recountRelationshipTypes];

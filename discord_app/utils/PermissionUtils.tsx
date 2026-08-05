@@ -89,7 +89,7 @@ function applyOverwrites(id, member, closure_23, overwrites) {
     const hasItem = importAll(506).has(addResult4, Permissions.ADMINISTRATOR);
     const tmp19Result1 = importAll(506);
     const tmp28 = require;
-    const result = GuildMemberFlags /* GuildMemberFlags */.hasAutomodQuarantinedProfile(member);
+    const result = GuildMemberFlags.hasAutomodQuarantinedProfile(member);
     let tmp31 = result;
     if (result) {
       tmp31 = !hasItem;
@@ -99,7 +99,7 @@ function applyOverwrites(id, member, closure_23, overwrites) {
       found = tmp19(506).filter(addResult4, closure_29);
       const tmp19Result2 = tmp19(506);
     }
-    const obj10 = GuildMemberFlags /* GuildMemberFlags */;
+    const obj10 = GuildMemberFlags;
     const tmp28Result = tmp28(3902);
     found1 = found;
     if (tmp34) {
@@ -560,8 +560,8 @@ export const isRoleHigher = function isRoleHigher(arg0, arg1, guildId, id) {
     if (tmp6) {
       let doesRoleSortHigherResult = null == id;
       if (!doesRoleSortHigherResult) {
-        doesRoleSortHigherResult = compareGuildRoles /* compareGuildRoles */.doesRoleSortHigher(guildId, id);
-        const obj = compareGuildRoles /* compareGuildRoles */;
+        doesRoleSortHigherResult = compareGuildRoles.doesRoleSortHigher(guildId, id);
+        const obj = compareGuildRoles;
       }
       tmp6 = doesRoleSortHigherResult;
     }
@@ -587,7 +587,7 @@ export const getHighestHoistedRole = function getHighestHoistedRole(id, hoistRol
   return role;
 };
 export const makeEveryoneOverwrite = function makeEveryoneOverwrite(guild_id) {
-  return { id: guild_id, type: PermissionOverwriteType /* PermissionOverwriteType */.PermissionOverwriteType.ROLE, allow: closure_23, deny: closure_23 };
+  return { id: guild_id, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, allow: closure_23, deny: closure_23 };
 };
 export const canManageACategory = function canManageACategory(currentUser, guild, _categories) {
   let context;

@@ -26,7 +26,7 @@ function trackImpression(type, arg1, arg2) {
     flag2 = false;
   }
   ({ name, type, properties } = type);
-  if (type.type === encodeProperties /* encodeProperties */.ImpressionTypes.MODAL) {
+  if (type.type === encodeProperties.ImpressionTypes.MODAL) {
     if (null == type.name) {
       let obj = callback4();
     }
@@ -52,7 +52,7 @@ function trackImpression(type, arg1, arg2) {
   obj = { impression_type: type, location: callback3() };
   tmpResult = tmp(4479);
   const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guild_id));
-  const merged1 = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectChannelAnalyticsMetadata(channel.getChannel(channel_id)));
+  const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel.getChannel(channel_id)));
   const merged2 = Object.assign(properties);
   const result = tmpResult.expandEventProperties(obj);
   if (flag) {

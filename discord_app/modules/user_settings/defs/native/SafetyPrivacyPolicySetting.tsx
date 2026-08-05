@@ -6,8 +6,8 @@ import { Linking } from "../../../../lib/native/Linking.tsx";
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.KGFTww);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.KGFTww);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {
@@ -17,8 +17,8 @@ const pressable = createToggle.createPressable({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.KGFTww);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.KGFTww);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   onPress: function onPrivacyPolicyPress() {

@@ -16,7 +16,7 @@ function ChannelSubtitle(arg0) {
   let textProps;
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, layout, subtitle } = arg0);
-  let obj = getChannelSubtitleData /* getChannelSubtitleData */;
+  let obj = getChannelSubtitleData;
   const channelSubtitleData = obj.getChannelSubtitleData(subtitle);
   if (null == channelSubtitleData) {
     return null;
@@ -47,12 +47,12 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
     return null;
   } else {
     let obj = { variant: null, color: "text-muted", lineClamp: 1, maxFontSizeMultiplier: 1.75 };
-    obj[0] = getLayoutStyles /* getLayoutStyles */.getLayoutStyles(layout).messagePreview.text.variant;
+    obj[0] = getLayoutStyles.getLayoutStyles(layout).messagePreview.text.variant;
     if (typeof subtitle === "string") {
       obj = {};
       const merged = Object.assign(obj);
       obj.children = subtitle;
-      let tmp9 = jsx(Text /* Text */.Text, {});
+      let tmp9 = jsx(Text.Text, {});
     } else {
       obj = { channelId: null, guildId: null, layout: null, subtitle: null, muted: null, connected: null, textProps: null };
       obj[0] = tmp2;

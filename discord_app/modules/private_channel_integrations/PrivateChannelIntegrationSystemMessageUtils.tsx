@@ -21,22 +21,22 @@ export const getPrivateChannelIntegrationAddedSystemMessageContent = function ge
     applicationNameHook = closure_4;
   }
   if (null != application) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     let obj = { username: null, otherUsername: null, usernameHook: null, otherUsernameHook: null, helpCenterLink: null };
     obj[0] = username;
     obj[1] = application.name;
     obj[2] = usernameHook;
     obj[3] = applicationNameHook;
     obj[4] = combined.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
-    let formatResult = intl2.format(getSystemLocale /* getSystemLocale */.t.J8SaGy, obj);
+    let formatResult = intl2.format(getSystemLocale.t.J8SaGy, obj);
     const obj4 = combined;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { username: null, usernameHook: null, helpCenterLink: null };
     obj[0] = username;
     obj[1] = usernameHook;
     obj[2] = combined.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
-    formatResult = intl.format(getSystemLocale /* getSystemLocale */.t["+6V2sd"], obj);
+    formatResult = intl.format(getSystemLocale.t["+6V2sd"], obj);
     const obj2 = combined;
   }
   return formatResult;
@@ -54,22 +54,22 @@ export const getPrivateChannelIntegrationRemovedSystemMessageContent = function 
     applicationNameHook = closure_4;
   }
   if (null != application) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     let obj = { username: null, otherUsername: null, usernameHook: null, otherUsernameHook: null, helpCenterLink: null };
     obj[0] = username;
     obj[1] = application.name;
     obj[2] = usernameHook;
     obj[3] = applicationNameHook;
     obj[4] = combined.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
-    let formatResult = intl2.format(getSystemLocale /* getSystemLocale */.t.eGCDak, obj);
+    let formatResult = intl2.format(getSystemLocale.t.eGCDak, obj);
     const obj4 = combined;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { username: null, usernameHook: null, helpCenterLink: null };
     obj[0] = username;
     obj[1] = usernameHook;
     obj[2] = combined.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
-    formatResult = intl.format(getSystemLocale /* getSystemLocale */.t.sAX6rs, obj);
+    formatResult = intl.format(getSystemLocale.t.sAX6rs, obj);
     const obj2 = combined;
   }
   return formatResult;
@@ -81,7 +81,7 @@ export const getPrivateChannelIntegrationAddedSystemMessageASTContent = function
   let usernameOnClick;
   ({ application, username, usernameOnClick, medium } = arg0);
   if (null != application) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     let obj = { username: null, otherUsername: null, usernameOnClick: null, otherUsernameOnClick: null, medium: null, helpCenterLink: null };
     obj[0] = username;
     obj[1] = application.name;
@@ -91,10 +91,10 @@ export const getPrivateChannelIntegrationAddedSystemMessageASTContent = function
     obj = { url: null };
     obj[0] = combined.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     obj[5] = obj;
-    let formatToPartsResult = intl.formatToParts(getSystemLocale /* getSystemLocale */.t["8r+Z+I"], obj);
+    let formatToPartsResult = intl.formatToParts(getSystemLocale.t["8r+Z+I"], obj);
     const obj3 = combined;
   } else {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     obj = { username: null, usernameOnClick: null, medium: null, helpCenterLink: null };
     obj[0] = username;
     obj[1] = usernameOnClick;
@@ -102,7 +102,7 @@ export const getPrivateChannelIntegrationAddedSystemMessageASTContent = function
     const obj1 = { url: null };
     obj1[0] = combined.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     obj[3] = obj1;
-    formatToPartsResult = intl2.formatToParts(getSystemLocale /* getSystemLocale */.t.ojysqe, obj);
+    formatToPartsResult = intl2.formatToParts(getSystemLocale.t.ojysqe, obj);
     const obj6 = combined;
   }
   return formatToPartsResult;
@@ -114,7 +114,7 @@ export const getPrivateChannelIntegrationRemovedSystemMessageASTContent = functi
   let usernameOnClick;
   ({ application, username, usernameOnClick, medium } = arg0);
   if (null != application) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     let obj = { username: null, otherUsername: null, usernameOnClick: null, otherUsernameOnClick: null, medium: null, helpCenterLink: null };
     obj[0] = username;
     obj[1] = application.name;
@@ -124,10 +124,10 @@ export const getPrivateChannelIntegrationRemovedSystemMessageASTContent = functi
     obj = { url: null };
     obj[0] = combined.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     obj[5] = obj;
-    let formatToPartsResult = intl.formatToParts(getSystemLocale /* getSystemLocale */.t.zmc0mq, obj);
+    let formatToPartsResult = intl.formatToParts(getSystemLocale.t.zmc0mq, obj);
     const obj3 = combined;
   } else {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     obj = { username: null, usernameOnClick: null, medium: null, helpCenterLink: null };
     obj[0] = username;
     obj[1] = usernameOnClick;
@@ -135,7 +135,7 @@ export const getPrivateChannelIntegrationRemovedSystemMessageASTContent = functi
     const obj1 = { url: null };
     obj1[0] = combined.getArticleURL(constants.PRIVATE_CHANNEL_INTEGRATIONS);
     obj[3] = obj1;
-    formatToPartsResult = intl2.formatToParts(getSystemLocale /* getSystemLocale */.t["x2CN/Z"], obj);
+    formatToPartsResult = intl2.formatToParts(getSystemLocale.t["x2CN/Z"], obj);
     const obj6 = combined;
   }
   return formatToPartsResult;

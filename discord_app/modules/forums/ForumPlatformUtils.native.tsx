@@ -4,7 +4,7 @@ const result = require("set").fileFinishedImporting("modules/forums/ForumPlatfor
 
 export default {
   getForumChannelPermissionText() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.LG9VAi);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.LG9VAi);
   }
 };

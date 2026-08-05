@@ -62,7 +62,7 @@ export default function SafetyHubAccountStandingSubwayMarker(arg0) {
     selectedIcon = tmp10(tmp9, obj1);
   }
   const items = [selectedIcon, ];
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   items[1] = intl.format(status, {
     hook(arg0, arg1) {
       if (isSelected) {

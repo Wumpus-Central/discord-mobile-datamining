@@ -25,13 +25,13 @@ function OverlappingSchedulesWarning(conflictingEntries) {
   let tmp = null;
   if (0 !== conflictingEntries.length) {
     let obj = { messageType: null, borderRadius: null, children: null };
-    obj[0] = Button /* Button */.HelpMessageTypes.WARNING;
+    obj[0] = Button.HelpMessageTypes.WARNING;
     obj[1] = Themes.radii.md;
     obj = { spacing: 8, children: null };
     obj = { variant: "text-sm/medium", children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj[1] = intl.string(messagesProxy["26A0Df"]);
-    const items = [callback2(Text /* Text */.Text, obj), ];
+    const items = [callback2(Text.Text, obj), ];
     const obj1 = { spacing: 4, children: null };
     obj1[1] = conflictingEntries.map((dayLabel) => {
       dayLabel = dayLabel.dayLabel;
@@ -39,10 +39,10 @@ function OverlappingSchedulesWarning(conflictingEntries) {
       obj[1] = "" + dayLabel + "  " + dayLabel.timeRange;
       return callback2(callback(table[14]).Text, obj, dayLabel);
     });
-    items[1] = callback2(Stack /* Stack */.Stack, obj1);
+    items[1] = callback2(Stack.Stack, obj1);
     obj[1] = items;
-    obj[2] = callback3(Stack /* Stack */.Stack, obj);
-    tmp = callback2(Button /* Button */.HelpMessage, obj);
+    obj[2] = callback3(Stack.Stack, obj);
+    tmp = callback2(Button.HelpMessage, obj);
   }
   return tmp;
 }

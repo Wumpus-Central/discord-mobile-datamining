@@ -248,7 +248,7 @@ let closure_10 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4, arg5
     BORDER_SUBTLE = BACKGROUND_SURFACE_HIGH;
   }
   const card = {};
-  const merged = Object.assign(createCardShadowToken /* createCardShadowToken */.createCardShadowToken(arg3));
+  const merged = Object.assign(createCardShadowToken.createCardShadowToken(arg3));
   let tmp21;
   if (arg0) {
     tmp21 = arg5;

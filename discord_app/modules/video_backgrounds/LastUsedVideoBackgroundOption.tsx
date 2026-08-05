@@ -14,8 +14,8 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
   if (voiceAndVideo != null) {
     prop = voiceAndVideo.videoBackgroundFilterDesktop;
   }
-  const videoBackgroundOptionFromProto = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
-  const obj = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */;
+  const videoBackgroundOptionFromProto = isAnimatedBackgroundOption.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+  const obj = isAnimatedBackgroundOption;
   const tmp2 = require;
   if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
     if (typeof videoBackgroundOptionFromProto !== "number") {

@@ -28,8 +28,8 @@ function updateRegion(encodeStreamKeyResult, preferredRegion) {
     tmp3 = preferredRegion !== store.getRegion(hostname.getHostname(encodeStreamKeyResult));
   }
   if (tmp3) {
-    watchStream /* watchStream */.changeStreamRegion(encodeStreamKeyResult, preferredRegion);
-    const obj = watchStream /* watchStream */;
+    watchStream.changeStreamRegion(encodeStreamKeyResult, preferredRegion);
+    const obj = watchStream;
   }
 }
 ({ GO_LIVE_NOTIFY_FRIENDS_MIN_MEMBER_COUNT, STREAM_NOTIFY_GUILD_MAX_SIZE } = StreamIssueReportReasons);

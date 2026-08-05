@@ -26,7 +26,7 @@ export default function ForumPostGridFooter(parentChannel) {
   let thread;
   ({ thread, firstMessage, hasUnreads } = parentChannel);
   const tmp = createCacheKey();
-  let obj = useTypingUserIds /* useTypingUserIds */;
+  let obj = useTypingUserIds;
   const typingUserIds = obj.useTypingUserIds(thread.id);
   let tmp5Result = typingUserIds.length > 0;
   obj = { style: tmp.footer, children: null };
@@ -52,7 +52,7 @@ export default function ForumPostGridFooter(parentChannel) {
     obj3[1] = firstMessage;
     obj3[2] = parentChannel.parentChannel;
     obj3[3] = AnalyticsObjects.FORUM_GRID_ITEM_FOOTER;
-    tmp7Result = tmp7(MaxForumPostReactions /* MaxForumPostReactions */.MostCommonForumPostReaction, obj3);
+    tmp7Result = tmp7(MaxForumPostReactions.MostCommonForumPostReaction, obj3);
   }
   items[2] = tmp7Result;
   obj[1] = items;

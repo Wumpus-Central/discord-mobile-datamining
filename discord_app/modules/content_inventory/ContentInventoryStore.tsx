@@ -55,7 +55,7 @@ prototype["getMatchingInboxEntry"] = function getMatchingInboxEntry(feedId) {
         }
         return items1;
       }, []);
-      return isMatchingListeningActivity /* isMatchingListeningActivity */.findMatchingEntry(reduced, activity);
+      return isMatchingListeningActivity.findMatchingEntry(reduced, activity);
     }
   }
 };

@@ -23,7 +23,7 @@ let require = arg1;
 function ConnectionBannerIcon(state) {
   state = state.state;
   const tmp = createCacheKey();
-  map /* map */;
+  map;
   if (constants.WAITING_FOR_NETWORK === state) {
     let obj = { style: null, children: null };
     obj[0] = tmp.leadingSlot;
@@ -68,7 +68,7 @@ function ConnectionBannerContent(state) {
     stringResult = intl3.string(tmp4(1236).t.j8lYE2);
   }
   obj[3] = stringResult;
-  items[1] = callback2(Text /* Text */.Text, obj);
+  items[1] = callback2(Text.Text, obj);
   obj[1] = items;
   return closure_13(closure_6, obj);
 }

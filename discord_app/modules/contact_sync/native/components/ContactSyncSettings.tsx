@@ -403,8 +403,8 @@ export const handleSyncContacts = function handleSyncContacts(localAccount, phon
     obj[0] = constants3.CONTACT_SYNC_MODAL;
     obj[1] = { page: "User Settings" };
     obj.track(constants.OPEN_MODAL, obj);
-    handleNameInputScreenOrSuggestions /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, { page: "User Settings" });
-    const obj3 = handleNameInputScreenOrSuggestions /* handleNameInputScreenOrSuggestions */;
+    handleNameInputScreenOrSuggestions.openContactSyncModal({}, { page: "User Settings" });
+    const obj3 = handleNameInputScreenOrSuggestions;
   } else {
     updateFriendSync(localAccount, phone, arg2);
   }

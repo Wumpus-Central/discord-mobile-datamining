@@ -17,7 +17,7 @@ export default function FramePanelController(children) {
   let hasConnectedActivity;
   let mode;
   let orientationLockStateForApp;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [map, addApplication];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let obj = store;
@@ -50,5 +50,5 @@ export default function FramePanelController(children) {
   obj[5] = currentApp;
   obj[6] = _launchFrameOnNative.updateFramePanelMode;
   obj[7] = children.children;
-  return jsx(BaseActivityPanelController /* BaseActivityPanelController */.BaseActivityPanelController, { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null });
+  return jsx(BaseActivityPanelController.BaseActivityPanelController, { context: null, orientationLockStateForApp: null, mode: null, hasConnectedActivity: null, connectedActivityAppId: null, currentApp: null, updateActivityPanelMode: null, children: null });
 };

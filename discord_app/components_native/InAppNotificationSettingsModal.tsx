@@ -70,18 +70,18 @@ prototype["renderGroupDMNotificationSettings"] = function renderGroupDMNotificat
   if (null == channel) {
     return null;
   } else {
-    let obj = computeChannelName /* computeChannelName */;
+    let obj = computeChannelName;
     const channelName = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
     obj = { children: null };
     obj = { label: null, value: null, onValueChange: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj1 = { name: null };
     obj1[0] = channelName;
-    obj[0] = intl.format(getSystemLocale /* getSystemLocale */.t["u/rEuc"], obj1);
+    obj[0] = intl.format(getSystemLocale.t["u/rEuc"], obj1);
     obj[1] = tmp2;
     obj[2] = tmp.handleGroupDMMute;
-    obj[0] = callback(Form /* Form */.FormSwitchRow, obj);
-    return callback(Form /* Form */.FormSection, obj);
+    obj[0] = callback(Form.FormSwitchRow, obj);
+    return callback(Form.FormSection, obj);
   }
 };
 prototype["renderTextChannelNotificationSettings"] = function renderTextChannelNotificationSettings() {
@@ -117,21 +117,21 @@ prototype["render"] = function render() {
   let obj = { children: null };
   const items = [this.renderChannelNotificationSettings(), , ];
   obj = { title: null, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.clE4PU);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.clE4PU);
   obj = { label: null, onPress: null, trailing: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.cHMaba);
+  const intl2 = getSystemLocale.intl;
+  obj[0] = intl2.string(getSystemLocale.t.cHMaba);
   obj[1] = this.handleOpenUserSettings;
-  obj[2] = callback(Form /* Form */.FormRow.Arrow, {});
-  obj[1] = callback(Form /* Form */.FormRow, obj);
-  items[1] = callback(Form /* Form */.FormSection, obj);
+  obj[2] = callback(Form.FormRow.Arrow, {});
+  obj[1] = callback(Form.FormRow, obj);
+  items[1] = callback(Form.FormSection, obj);
   const obj1 = { children: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.avgbp1);
-  items[2] = callback(Form /* Form */.FormHint, obj1);
+  const intl3 = getSystemLocale.intl;
+  obj1[0] = intl3.string(getSystemLocale.t.avgbp1);
+  items[2] = callback(Form.FormHint, obj1);
   obj[0] = items;
-  return callback2(Form /* Form */.Form, obj);
+  return callback2(Form.Form, obj);
 };
 const memoResult = importAllResult.memo((channelId) => {
   channelId = channelId.channelId;

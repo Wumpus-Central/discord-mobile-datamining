@@ -21,7 +21,7 @@ function maybePresentModal(daysRemaining) {
   if (daysRemaining != null) {
     const surfaces = daysRemaining.surfaces;
     if (surfaces != null) {
-      hasItem = surfaces.includes(frozen /* frozen */.ParentalConsentWarningSurface.MODAL);
+      hasItem = surfaces.includes(frozen.ParentalConsentWarningSurface.MODAL);
     }
   }
   let tmp5 = true === hasItem && null != daysRemaining;
@@ -48,7 +48,7 @@ function maybePresentModal(daysRemaining) {
   if (tmp5) {
     const obj = { daysRemaining: null };
     obj[0] = daysRemaining;
-    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(16416, dependencyMap.paths), "ParentalConsentWarningModal", obj);
+    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(16416, dependencyMap.paths), "ParentalConsentWarningModal", obj);
     const obj2 = ACTION_SHEET_HEIGHT_HALF;
   }
 }

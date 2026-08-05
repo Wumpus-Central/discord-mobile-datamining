@@ -37,7 +37,7 @@ export const RoleDot = function RoleDot(background) {
   }
   ({ containerStyles, guildId } = background);
   const tmp = createCacheKey();
-  let obj = getFontScale /* getFontScale */;
+  let obj = getFontScale;
   const fontScale = obj.useFontScale();
   if (null == color) {
     if (null == colors) {

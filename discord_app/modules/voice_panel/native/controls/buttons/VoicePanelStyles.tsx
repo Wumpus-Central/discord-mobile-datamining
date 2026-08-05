@@ -33,6 +33,6 @@ let closure_3 = createCacheKey.createStyles((arg0, arg1) => {
 const result = require("map").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelStyles.tsx");
 
 export const useVoicePanelButtonStyles = function useVoicePanelButtonStyles(wrapperSpecs) {
-  const derivedStateFromSharedValue = map /* map */.useDerivedStateFromSharedValue(wrapperSpecs, (drawerMode) => drawerMode.drawerMode);
+  const derivedStateFromSharedValue = map.useDerivedStateFromSharedValue(wrapperSpecs, (drawerMode) => drawerMode.drawerMode);
   return callback(derivedStateFromSharedValue, useIsMobileVisualRefreshExperimentEnabled("VoicePanelStyles"));
 };

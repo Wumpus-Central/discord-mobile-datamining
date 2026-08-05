@@ -435,10 +435,10 @@ export const fetchBountyPreview = function fetchBountyPreview(arr, c3) {
   return applyArgumentsResult;
 };
 export const setBountyVideoProgress = function setBountyVideoProgress(bountyId, arg1) {
-  let obj = getOrRefreshAdSession /* getOrRefreshAdSession */;
+  let obj = getOrRefreshAdSession;
   if (null != obj.getCurrentAdSession()) {
-    const orRefreshAdSession = getOrRefreshAdSession /* getOrRefreshAdSession */.getOrRefreshAdSession(true);
-    const tmpResult = getOrRefreshAdSession /* getOrRefreshAdSession */;
+    const orRefreshAdSession = getOrRefreshAdSession.getOrRefreshAdSession(true);
+    const tmpResult = getOrRefreshAdSession;
     obj = { type: "BOUNTIES_VIDEO_PROGRESS_UPDATE", bountyId: null, timestampSec: null, maxTimestampSec: null, duration: null };
     obj[1] = bountyId;
     ({ timestampSec: obj4[2], maxTimestampSec: obj4[3], duration: obj4[4] } = arg1);

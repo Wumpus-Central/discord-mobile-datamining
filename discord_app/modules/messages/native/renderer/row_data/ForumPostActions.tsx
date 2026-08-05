@@ -13,7 +13,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
   let emojiId;
   let emojiName;
   ({ defaultReactionEmoji, customGuildEmoji } = arg0);
-  let obj = apexExperiment /* apexExperiment */;
+  let obj = apexExperiment;
   const result = obj.shouldSkipAccessibilityLabels();
   let tmp4;
   if (null != defaultReactionEmoji) {
@@ -80,7 +80,7 @@ export const createForumPostActions = function createForumPostActions(arg0) {
   let showMediaPostSharePrompt;
   ({ isFollowing, defaultReaction } = arg0);
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
-  const getAssetUriForEmbed = frozen /* frozen */.getAssetUriForEmbed;
+  const getAssetUriForEmbed = frozen.getAssetUriForEmbed;
   if (isFollowing) {
     let assetUriForEmbed = getAssetUriForEmbed(tmp4(4238));
     let tmp6 = tmp4;

@@ -70,8 +70,8 @@ export const isStaffEnvRawData = function isStaffEnvRawData(flags) {
     if (tmp9) {
       let tmp10 = null == flags.flags;
       if (!tmp10) {
-        tmp10 = !hasFlag /* hasFlag */.hasFlag(flags.flags, constants.STAFF);
-        const obj = hasFlag /* hasFlag */;
+        tmp10 = !hasFlag.hasFlag(flags.flags, constants.STAFF);
+        const obj = hasFlag;
       }
       let tmp14 = !tmp10;
       if (tmp10) {

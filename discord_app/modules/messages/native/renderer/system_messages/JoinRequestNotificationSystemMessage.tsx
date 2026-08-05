@@ -48,43 +48,43 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
   }
   if (MessageTypes.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION === type) {
     if (null == username) {
-      const intl5 = getSystemLocale /* getSystemLocale */.intl;
-      let stringResult = intl5.string(getSystemLocale /* getSystemLocale */.t["2VLV0d"]);
+      const intl5 = getSystemLocale.intl;
+      let stringResult = intl5.string(getSystemLocale.t["2VLV0d"]);
     }
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    const intl6 = getSystemLocale.intl;
     obj = { username: null, guildName: null };
     obj[0] = username;
     obj[1] = name;
-    stringResult = intl6.formatToParts(getSystemLocale /* getSystemLocale */.t.EloBG4, obj);
+    stringResult = intl6.formatToParts(getSystemLocale.t.EloBG4, obj);
   } else {
     if (tmp13.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION === type) {
       if (null != username) {
         if (null != name) {
-          const intl4 = getSystemLocale /* getSystemLocale */.intl;
+          const intl4 = getSystemLocale.intl;
           obj = { username: null, guildName: null };
           obj[0] = username;
           obj[1] = name;
-          let formatToPartsResult = intl4.formatToParts(getSystemLocale /* getSystemLocale */.t["UGN/Yy"], obj);
+          let formatToPartsResult = intl4.formatToParts(getSystemLocale.t["UGN/Yy"], obj);
         }
         let str = formatToPartsResult;
       }
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      formatToPartsResult = intl3.string(getSystemLocale /* getSystemLocale */.t.FVF6qU);
+      const intl3 = getSystemLocale.intl;
+      formatToPartsResult = intl3.string(getSystemLocale.t.FVF6qU);
     } else {
       str = "";
       if (tmp13.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION === type) {
         if (null != username) {
           if (null != name) {
-            const intl2 = getSystemLocale /* getSystemLocale */.intl;
+            const intl2 = getSystemLocale.intl;
             const obj1 = { username: null, guildName: null };
             obj1[0] = username;
             obj1[1] = name;
-            let formatToPartsResult1 = intl2.formatToParts(getSystemLocale /* getSystemLocale */.t.u4movT, obj1);
+            let formatToPartsResult1 = intl2.formatToParts(getSystemLocale.t.u4movT, obj1);
           }
           str = formatToPartsResult1;
         }
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        formatToPartsResult1 = intl.string(getSystemLocale /* getSystemLocale */.t.BMlbE7);
+        const intl = getSystemLocale.intl;
+        formatToPartsResult1 = intl.string(getSystemLocale.t.BMlbE7);
       }
     }
     const obj2 = { content: null };

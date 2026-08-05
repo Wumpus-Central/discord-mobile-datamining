@@ -19,7 +19,7 @@ export const getNotSupportedSentence = function getNotSupportedSentence(id) {
   }
   let str = "";
   if (0 !== arr.length) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj = { platforms: null, count: null };
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(_getSystemLocale.locale);
@@ -30,7 +30,7 @@ export const getNotSupportedSentence = function getNotSupportedSentence(id) {
   return str;
 };
 export const getCheckoutDisclaimerMessageForApplication = function getCheckoutDisclaimerMessageForApplication(id) {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   id = undefined;
   if (id != null) {
     id = id.id;
@@ -43,7 +43,7 @@ export const getCheckoutDisclaimerMessageForApplication = function getCheckoutDi
   }
   let platforms_info = "";
   if (0 !== arr.length) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj = { platforms: null, count: null };
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(_getSystemLocale.locale);
@@ -61,7 +61,7 @@ export const getFinePrintMessageForApplication = function getFinePrintMessageFor
   if (str == null) {
     str = "game's";
   }
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const format = intl.format;
   if (shouldAppendDisclaimer.shouldAppendDisclaimer) {
     let obj = { applicationName: null, platforms_info: null };
@@ -108,7 +108,7 @@ export const getMobileFinePrintMessageForApplication = function getMobileFinePri
     str = "game's";
   }
   let obj = { buyButtonLabel: stringResult, paidServiceTermURL: MarketingURLs.PAID_TERMS, applicationName: str };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const format = intl.format;
   const tmp4 = messagesProxy;
   if (shouldAppendDisclaimer.shouldAppendDisclaimer) {
@@ -144,7 +144,7 @@ export const getMobileFinePrintMessageForApplication = function getMobileFinePri
   return items1;
 };
 export const getRedeemPurchaseDescriptionForApplication = function getRedeemPurchaseDescriptionForApplication(applicationName) {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   let obj = { applicationName: applicationName.name, platforms_info: null };
   const id = applicationName.id;
   if (null == id) {
@@ -155,7 +155,7 @@ export const getRedeemPurchaseDescriptionForApplication = function getRedeemPurc
   }
   let str = "";
   if (0 !== arr.length) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     obj = { platforms: null, count: null };
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(_getSystemLocale.locale);
@@ -175,7 +175,7 @@ export const getGiftLinkAccountDescriptionForApplication = function getGiftLinkA
     vyAtfo = tmp3.vyAtfo;
     tmp4 = tmp;
   }
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   let obj = { applicationName: applicationName.name, platforms_info: null };
   const id = applicationName.id;
   if (null == id) {
@@ -186,7 +186,7 @@ export const getGiftLinkAccountDescriptionForApplication = function getGiftLinkA
   }
   let str = "";
   if (0 !== arr.length) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     obj = { platforms: null, count: null };
     const _Intl = Intl;
     const listFormat = new Intl.ListFormat(_getSystemLocale.locale);

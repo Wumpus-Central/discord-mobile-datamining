@@ -7,15 +7,15 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/guild_s
 
 export const showGuildSettingsStickerError = function showGuildSettingsStickerError() {
   let obj = dispatcher;
-  obj = { key: "GUILD_SETTINGS_STICKER_ERROR", IconComponent: CircleErrorIcon /* CircleErrorIcon */.CircleErrorIcon, content: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["5NMPSS"]);
+  obj = { key: "GUILD_SETTINGS_STICKER_ERROR", IconComponent: CircleErrorIcon.CircleErrorIcon, content: null };
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["5NMPSS"]);
   obj.open(obj);
 };
 export const showGuildSettingsStickerSuccess = function showGuildSettingsStickerSuccess() {
   let obj = dispatcher;
-  obj = { key: "GUILD_SETTINGS_STICKER_SUCCESS", IconComponent: CircleInformationIcon /* CircleInformationIcon */.CircleInformationIcon, content: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["+c5xtT"]);
+  obj = { key: "GUILD_SETTINGS_STICKER_SUCCESS", IconComponent: CircleInformationIcon.CircleInformationIcon, content: null };
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["+c5xtT"]);
   obj.open(obj);
 };

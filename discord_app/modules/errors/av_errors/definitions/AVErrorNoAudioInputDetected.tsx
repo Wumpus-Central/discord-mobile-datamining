@@ -37,8 +37,8 @@ export const AVErrorNoAudioInputDetectedDefinition = {
                   if (!isGuildStageVoiceResult) {
                     if (!obj5.isSelfMute()) {
                       const obj = { type: null };
-                      obj[0] = mapped /* mapped */.AVError.NO_AUDIO_INPUT_DETECTED;
-                      const merged = Object.assign(getVoiceChannelErrorContext /* getVoiceChannelErrorContext */.getVoiceChannelErrorContext());
+                      obj[0] = mapped.AVError.NO_AUDIO_INPUT_DETECTED;
+                      const merged = Object.assign(getVoiceChannelErrorContext.getVoiceChannelErrorContext());
                       const items = [obj];
                       return items;
                     }

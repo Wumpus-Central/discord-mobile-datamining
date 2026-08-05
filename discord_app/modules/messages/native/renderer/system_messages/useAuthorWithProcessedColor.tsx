@@ -8,7 +8,7 @@ const result = require("processColorStrings").fileFinishedImporting("modules/mes
 export const getMessageAuthorWithProcessedColor = function getMessageAuthorWithProcessedColor(message) {
   let colorStrings;
   let guildId;
-  let obj = useNullableMessageAuthor /* useNullableMessageAuthor */;
+  let obj = useNullableMessageAuthor;
   const messageAuthor = obj.getMessageAuthor(message);
   const colorString = messageAuthor.colorString;
   obj = { nick: messageAuthor.nick, colorString: null, colorStrings: null, guildId: null };
@@ -18,14 +18,14 @@ export const getMessageAuthorWithProcessedColor = function getMessageAuthorWithP
     tmp4 = processColor(colorString);
   }
   obj[1] = tmp4;
-  obj[2] = processColorStrings /* processColorStrings */.processColorStrings(colorStrings);
+  obj[2] = processColorStrings.processColorStrings(colorStrings);
   obj[3] = guildId;
   return obj;
 };
 export const getUserAuthorWithProcessedColor = function getUserAuthorWithProcessedColor(user, channel) {
   let colorStrings;
   let guildId;
-  let obj = useNullableMessageAuthor /* useNullableMessageAuthor */;
+  let obj = useNullableMessageAuthor;
   const userAuthor = obj.getUserAuthor(user, channel);
   const colorString = userAuthor.colorString;
   obj = { nick: userAuthor.nick, colorString: null, colorStrings: null, guildId: null };
@@ -35,7 +35,7 @@ export const getUserAuthorWithProcessedColor = function getUserAuthorWithProcess
     tmp4 = processColor(colorString);
   }
   obj[1] = tmp4;
-  obj[2] = processColorStrings /* processColorStrings */.processColorStrings(colorStrings);
+  obj[2] = processColorStrings.processColorStrings(colorStrings);
   obj[3] = guildId;
   return obj;
 };

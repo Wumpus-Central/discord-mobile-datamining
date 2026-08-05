@@ -16,38 +16,38 @@ import { hexToRgba } from "../../../../../../utils/ColorUtils.tsx";
 
 const require = arg1;
 const result = createCacheKey.experimental_createToken((theme) => {
-  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const obj = AccessibilityAnnouncer;
   const unsafe_rawColors = Themes.unsafe_rawColors;
-  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
+  return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
 const result1 = createCacheKey.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
     let PRIMARY_600 = Themes.unsafe_rawColors.PRIMARY_600;
   } else {
-    PRIMARY_600 = hexToRgba /* hexToRgba */.hexWithOpacity(Themes.unsafe_rawColors.PRIMARY_500, 0.3);
-    const tmpResult = hexToRgba /* hexToRgba */;
+    PRIMARY_600 = hexToRgba.hexWithOpacity(Themes.unsafe_rawColors.PRIMARY_500, 0.3);
+    const tmpResult = hexToRgba;
   }
   return PRIMARY_600;
 });
 const result2 = createCacheKey.experimental_createToken((theme) => {
-  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const obj = AccessibilityAnnouncer;
   const unsafe_rawColors = Themes.unsafe_rawColors;
-  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
+  return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
 const result3 = createCacheKey.experimental_createToken((theme) => {
-  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const obj = AccessibilityAnnouncer;
   const unsafe_rawColors = Themes.unsafe_rawColors;
-  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
+  return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_400;
 });
 const result4 = createCacheKey.experimental_createToken((theme) => {
-  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const obj = AccessibilityAnnouncer;
   const unsafe_rawColors = Themes.unsafe_rawColors;
-  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_100;
+  return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_100;
 });
 const result5 = createCacheKey.experimental_createToken((theme) => {
-  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
-  const isThemeDarkResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme);
-  const hexWithOpacity = hexToRgba /* hexToRgba */.hexWithOpacity;
+  const obj = AccessibilityAnnouncer;
+  const isThemeDarkResult = AccessibilityAnnouncer.isThemeDark(theme.theme);
+  const hexWithOpacity = hexToRgba.hexWithOpacity;
   const unsafe_rawColors = Themes.unsafe_rawColors;
   if (isThemeDarkResult) {
     let hexWithOpacityResult = hexWithOpacity(unsafe_rawColors.WHITE, 0.06);
@@ -57,9 +57,9 @@ const result5 = createCacheKey.experimental_createToken((theme) => {
   return hexWithOpacityResult;
 });
 const result6 = createCacheKey.experimental_createToken((theme) => {
-  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const obj = AccessibilityAnnouncer;
   const unsafe_rawColors = Themes.unsafe_rawColors;
-  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.PRIMARY_100;
+  return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_600 : unsafe_rawColors.PRIMARY_100;
 });
 const result7 = createCacheKey.experimental_createToken((theme) => {
   let str = "#666b73";
@@ -72,8 +72,8 @@ const result8 = createCacheKey.experimental_createToken((theme) => {
   if (obj.isThemeDark(theme.theme)) {
     let PRIMARY_600 = Themes.unsafe_rawColors.PRIMARY_600;
   } else {
-    PRIMARY_600 = hexToRgba /* hexToRgba */.hexWithOpacity(Themes.unsafe_rawColors.PRIMARY_200, 0.3);
-    const tmpResult = hexToRgba /* hexToRgba */;
+    PRIMARY_600 = hexToRgba.hexWithOpacity(Themes.unsafe_rawColors.PRIMARY_200, 0.3);
+    const tmpResult = hexToRgba;
   }
   return PRIMARY_600;
 });

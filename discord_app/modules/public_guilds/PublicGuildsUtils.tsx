@@ -32,6 +32,6 @@ export const getPublicSystemMessageAvatar = function getPublicSystemMessageAvata
 export const trackEnableCommunityFlow = function trackEnableCommunityFlow(fromStep) {
   let obj = expandEventProperties;
   obj = { flow_type: closure_5, from_step: fromStep.fromStep, to_step: fromStep.toStep };
-  const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(fromStep.guildId));
+  const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(fromStep.guildId));
   obj.track(AnalyticEvents.USER_FLOW_TRANSITION, obj);
 };

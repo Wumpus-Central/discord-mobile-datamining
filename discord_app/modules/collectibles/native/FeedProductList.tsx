@@ -35,7 +35,7 @@ function SkeletonGrid(accessibilityLabel) {
     obj[1] = arr.map((arg0, arg1) => {
       let obj = { width: num, style: null };
       obj = { marginBottom: null };
-      obj[0] = CollectiblesShopCardInternalV2 /* CollectiblesShopCardInternalV2 */.COLLECTIBLES_SHOP_CARD_GAP;
+      obj[0] = CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP;
       obj[1] = obj;
       return jsx(sharedValue, { marginBottom: null }, "" + num + "-" + arg1);
     });

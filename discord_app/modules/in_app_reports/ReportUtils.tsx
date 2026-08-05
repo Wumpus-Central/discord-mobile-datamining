@@ -337,21 +337,21 @@ function _submitReportSecondLook() {
 }
 function getUnauthenticatedReportNameSafely(name) {
   name = name.name;
-  const values = Object.values(ReportNames /* ReportNames */.UnauthenticatedReportNames);
+  const values = Object.values(ReportNames.UnauthenticatedReportNames);
   const hasItem = values.includes(name);
   00038__(hasItem, "Invalid report type " + name.name);
   return name;
 }
 function getReportNameSafely(name) {
   name = name.name;
-  const values = Object.values(ReportNames /* ReportNames */.ReportNames);
+  const values = Object.values(ReportNames.ReportNames);
   const hasItem = values.includes(name);
   00038__(hasItem, "Invalid report type " + name.name);
   return name;
 }
 function getModeratorReportNameSafely(name) {
   name = name.name;
-  const values = Object.values(ReportNames /* ReportNames */.ModeratorReportNames);
+  const values = Object.values(ReportNames.ModeratorReportNames);
   const hasItem = values.includes(name);
   00038__(hasItem, "Invalid report type " + name.name);
   return name;
@@ -400,7 +400,7 @@ function genSubmitData(version, name, arr, email_token) {
     })));
     return obj;
   }, {});
-  if (name.name !== ReportNames /* ReportNames */.ReportNames.MESSAGE) {
+  if (name.name !== ReportNames.ReportNames.MESSAGE) {
     if (name.name !== tmp(7831).ReportNames.FIRST_DM) {
       if (name.name !== tmp(7831).ReportNames.GUILD) {
         if (name.name !== tmp(7831).ReportNames.GUILD_DISCOVERY) {
@@ -552,7 +552,7 @@ export const submitReport = function submitReport(language, name, arr) {
   if (store.get("iar_skip_api_report_submit")) {
     let resolved = Promise.resolve();
   } else {
-    const REPORT_TO_MOD = set /* set */.ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = set.ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
       let obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
@@ -664,11 +664,11 @@ export const submitUnauthenticatedReport = function submitUnauthenticatedReport(
   } else {
     name = name.name;
     const _Object = Object;
-    const values = Object.values(ReportNames /* ReportNames */.UnauthenticatedReportNames);
+    const values = Object.values(ReportNames.UnauthenticatedReportNames);
     const _HermesInternal = HermesInternal;
     const hasItem = values.includes(name);
     00038__(hasItem, "Invalid report type " + name.name);
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj = { url: null, body: null, rejectWithError: true };
     obj[0] = closure_7.SUBMIT_UNAUTHENTICATED_REPORT_MENU(name);
     obj[1] = genSubmitData(version, name, arr, email_token);
@@ -677,7 +677,7 @@ export const submitUnauthenticatedReport = function submitUnauthenticatedReport(
 };
 export const sendUnauthenticatedReportPincode = function sendUnauthenticatedReportPincode(name, email) {
   let length;
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   let num = 5381;
   let num2 = 0;
   let num3 = 5381;
@@ -738,10 +738,10 @@ export { getUnauthenticatedReportNameSafely };
 export { getReportNameSafely };
 export { getModeratorReportNameSafely };
 export const getModeratorReportEndpointSafely = function getModeratorReportEndpointSafely(name) {
-  const REPORT_TO_MOD = set /* set */.ReportMenuTypeSets.REPORT_TO_MOD;
+  const REPORT_TO_MOD = set.ReportMenuTypeSets.REPORT_TO_MOD;
   const hasItem = REPORT_TO_MOD.has(name.name);
   00038__(hasItem, "Invalid report type " + name.name);
-  if (name.name === ReportNames /* ReportNames */.ModeratorReportNames.MESSAGE) {
+  if (name.name === ReportNames.ModeratorReportNames.MESSAGE) {
     return closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id);
   } else {
     const _Error = Error;
@@ -754,21 +754,21 @@ export const getModeratorReportEndpointSafely = function getModeratorReportEndpo
 export const trackCloseReportModalAnalytics = function trackCloseReportModalAnalytics(_onSubmit, c12, first) {
   let obj = collectGuildAnalyticsMetadata;
   obj = { report_type: _onSubmit.name, report_id: first, navigation_history: c12, message_id: null, stage_instance_id: null, guild_scheduled_event_id: null, guild_id: null, channel_id: null, application_id: null };
-  if (_onSubmit.name === ReportNames /* ReportNames */.ReportNames.MESSAGE) {
+  if (_onSubmit.name === ReportNames.ReportNames.MESSAGE) {
     let id = _onSubmit.record.id;
   }
   obj[3] = id;
   id = undefined;
-  if (_onSubmit.name === ReportNames /* ReportNames */.ReportNames.STAGE_CHANNEL) {
+  if (_onSubmit.name === ReportNames.ReportNames.STAGE_CHANNEL) {
     id = _onSubmit.record.id;
   }
   obj[4] = id;
   let id1;
-  if (_onSubmit.name === ReportNames /* ReportNames */.ReportNames.GUILD_SCHEDULED_EVENT) {
+  if (_onSubmit.name === ReportNames.ReportNames.GUILD_SCHEDULED_EVENT) {
     id1 = _onSubmit.record.id;
   }
   obj[5] = id1;
-  if (_onSubmit.name !== ReportNames /* ReportNames */.ReportNames.GUILD) {
+  if (_onSubmit.name !== ReportNames.ReportNames.GUILD) {
     if (_onSubmit.name !== tmp2(7831).ReportNames.GUILD_DISCOVERY) {
       if (_onSubmit.name === tmp2(7831).ReportNames.GUILD_DIRECTORY_ENTRY) {
         let id2 = _onSubmit.record.guildId;

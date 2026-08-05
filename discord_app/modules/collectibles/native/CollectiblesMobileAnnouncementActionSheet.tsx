@@ -59,7 +59,7 @@ function FeatureRow(arg0) {
   let obj = { style: tmp.featureRow, children: null };
   const items = [icon, ];
   obj = { variant: "text-sm/medium", color: "text-subtle", style: tmp.featureText, children: text };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(closure_5, obj);
 }

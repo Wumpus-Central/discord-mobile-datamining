@@ -112,7 +112,7 @@ let closure_13 = createCacheKey.createStyles(() => {
 });
 let fn = function n(value) {
   const obj = { opacity: null };
-  obj[0] = CONFIG_NEVER_ANIMATE_TIMING /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, timingNone /* timingNone */.timingStandard, "respect-motion-settings");
+  obj[0] = CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, timingNone.timingStandard, "respect-motion-settings");
   return obj;
 };
 let obj = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, timingStandard: require("timingNone").timingStandard };
@@ -121,7 +121,7 @@ fn.__workletHash = 2981824910249;
 fn.__initData = { code: "function BountiesModalAdvertiserCtaTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}" };
 const fn2 = function s(value, fn2) {
   const obj = { opacity: null };
-  obj[0] = CONFIG_NEVER_ANIMATE_TIMING /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, timingNone /* timingNone */.timingFast, "respect-motion-settings", fn2);
+  obj[0] = CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, timingNone.timingFast, "respect-motion-settings", fn2);
   return obj;
 };
 obj = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, timingFast: require("timingNone").timingFast };

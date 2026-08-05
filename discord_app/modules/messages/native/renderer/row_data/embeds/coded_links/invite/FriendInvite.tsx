@@ -15,9 +15,9 @@ export const createFriendInvite = function createFriendInvite(inviter) {
   let baseColors;
   let colors;
   ({ colors, baseColors } = getEmbedThemeColors(arg3));
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (arg1) {
     let str = string(t.eQyu1F);
     let tmp5 = tmp4;

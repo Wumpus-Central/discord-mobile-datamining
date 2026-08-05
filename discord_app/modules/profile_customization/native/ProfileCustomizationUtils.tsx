@@ -9,7 +9,7 @@ export const useEditBannerSource = function useEditBannerSource(arg0) {
   let pendingBanner;
   ({ displayProfile, pendingBanner } = arg0);
   if (null != pendingBanner) {
-    return useDominantRGBFromImage /* useDominantRGBFromImage */.memoizedImageSource(pendingBanner);
+    return useDominantRGBFromImage.memoizedImageSource(pendingBanner);
   } else {
     if (null === pendingBanner) {
       let result;
@@ -27,8 +27,8 @@ export const useEditBannerSource = function useEditBannerSource(arg0) {
           if (displayProfile != null) {
             bannerURL = displayProfile.getBannerURL({ size: 600, canAnimate: true });
           }
-          source = getAvatarURL /* getAvatarURL */.makeSource(bannerURL);
-          const obj = getAvatarURL /* getAvatarURL */;
+          source = getAvatarURL.makeSource(bannerURL);
+          const obj = getAvatarURL;
         }
         return source;
       }
@@ -39,8 +39,8 @@ export const useEditBannerSource = function useEditBannerSource(arg0) {
     }
     let source1 = null;
     if (null != previewBanner) {
-      source1 = getAvatarURL /* getAvatarURL */.makeSource(previewBanner);
-      const obj2 = getAvatarURL /* getAvatarURL */;
+      source1 = getAvatarURL.makeSource(previewBanner);
+      const obj2 = getAvatarURL;
     }
     return source1;
   }
@@ -51,11 +51,11 @@ export const useUserProfileBannerBackgroundColor = function useUserProfileBanner
   let user;
   ({ user, pendingAvatarSrc, displayProfile } = arg0);
   if (null == user) {
-    const obj3 = useDominantRGBFromImage /* useDominantRGBFromImage */;
-    const memoizedImageSourceResult = useDominantRGBFromImage /* useDominantRGBFromImage */.memoizedImageSource(null);
-    const obj4 = int2hslRaw /* int2hslRaw */;
+    const obj3 = useDominantRGBFromImage;
+    const memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(null);
+    const obj4 = int2hslRaw;
     let primaryColor;
-    const obj5 = useDominantRGBFromImage /* useDominantRGBFromImage */;
+    const obj5 = useDominantRGBFromImage;
     if (displayProfile != null) {
       primaryColor = displayProfile.primaryColor;
     }
@@ -66,7 +66,7 @@ export const useUserProfileBannerBackgroundColor = function useUserProfileBanner
   } else if (null == pendingAvatarSrc) {
     pendingAvatarSrc = user.getAvatarURL(tmp, 80);
   } else if (pendingAvatarSrc == null) {
-    let obj = getAvatarURL /* getAvatarURL */;
+    let obj = getAvatarURL;
     obj = {};
     const merged = Object.assign(user);
     obj.avatar = null;
@@ -79,11 +79,11 @@ export const getAvatarSource = function getAvatarSource(getAvatarURL) {
   } else {
     let userAvatarURL = arg2;
     if (undefined === arg2) {
-      let memoizedImageSourceResult = useDominantRGBFromImage /* useDominantRGBFromImage */.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
-      const obj4 = useDominantRGBFromImage /* useDominantRGBFromImage */;
+      let memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
+      const obj4 = useDominantRGBFromImage;
       const tmp2 = !arg3;
     } else {
-      let obj = useDominantRGBFromImage /* useDominantRGBFromImage */;
+      let obj = useDominantRGBFromImage;
       if (userAvatarURL == null) {
         obj = {};
         const merged = Object.assign(getAvatarURL);

@@ -19,13 +19,13 @@ export const getExistingRsvp = function getExistingRsvp(id, outer1_1) {
 export const ResponseOptions = obj;
 export const getResponseOptions = function getResponseOptions() {
   let obj = { name: null, value: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.uoorxi);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.uoorxi);
   obj[1] = obj.SERIES;
   const items = [obj, ];
   obj = { name: null, value: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.lwZCFT);
+  const intl2 = getSystemLocale.intl;
+  obj[0] = intl2.string(getSystemLocale.t.lwZCFT);
   obj[1] = obj.RECURRENCE;
   items[1] = obj;
   return items;
@@ -39,8 +39,8 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
   ({ eventId, recurrenceId, guildId, updateRsvp, onRsvp } = openRsvpPicker);
   const guildScheduledEvent = store2.getGuildScheduledEvent(eventId);
   if (null != guildScheduledEvent) {
-    const eventException = useEventException /* useEventException */.getEventException(recurrenceId, eventId);
-    const obj4 = useEventException /* useEventException */;
+    const eventException = useEventException.getEventException(recurrenceId, eventId);
+    const obj4 = useEventException;
     let scheduled_start_time;
     if (guildScheduledEvent != null) {
       scheduled_start_time = guildScheduledEvent.scheduled_start_time;
@@ -89,6 +89,6 @@ export const handleRsvp = function handleRsvp(openRsvpPicker) {
     } else {
       openRsvpPicker.openRsvpPicker(guildScheduledEvent, tmp12);
     }
-    obj5 = useEventSchedule /* useEventSchedule */;
+    obj5 = useEventSchedule;
   }
 };

@@ -14,7 +14,7 @@ let c5;
 let closure_6;
 const require = arg1;
 function DCDChatList() {
-  let obj = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */;
+  let obj = useIsMobileVisualRefreshExperimentEnabled;
   const memo = importAllResult.useMemo(() => {
     const Gesture = callback(table[5]).Gesture;
     const NativeResult = Gesture.Native();
@@ -23,15 +23,15 @@ function DCDChatList() {
   obj = { gesture: memo, children: null };
   obj = { style: callback3().chatList, floatingChatInputEnabled: obj.useMobileVisualRefreshConfig({ location: "DCDChatList" }).chatInputFloating, children: null };
   const tmp = callback3();
-  obj[2] = callback(TTIFirstContentfulPaint /* TTIFirstContentfulPaint */.TTIFirstContentfulPaint, { label: "chat_list_android" });
+  obj[2] = callback(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "chat_list_android" });
   obj[1] = callback(__INTERNAL_VIEW_CONFIG, obj);
-  return callback(Directions /* Directions */.GestureDetector, obj);
+  return callback(Directions.GestureDetector, obj);
 }
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ chatList: { flex: 1 } });
 const forwardRefResult = importAllResult.forwardRef((children, ref) => {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   obj = {};

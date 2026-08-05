@@ -11,7 +11,7 @@ const result = require("GuildFeatures").fileFinishedImporting("modules/premium/n
 
 export default function GiftBoxAnimation(giftStyle) {
   giftStyle = giftStyle.giftStyle;
-  initialize /* initialize */;
+  initialize;
   [][0] = maybeApplyNoTextColorForLightCustomTheme;
   if (null == giftStyle) {
     return null;

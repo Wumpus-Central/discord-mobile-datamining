@@ -421,5 +421,5 @@ export default function SimpleCreateOTPActionSheetWrapper(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj[2] = callback2(SimpleRequestOTPActionSheet, obj);
-  return callback2(NativePaymentContextProvider /* NativePaymentContextProvider */.NativePaymentContextProvider, obj);
+  return callback2(NativePaymentContextProvider.NativePaymentContextProvider, obj);
 };

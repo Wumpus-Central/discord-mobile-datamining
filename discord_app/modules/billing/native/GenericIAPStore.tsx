@@ -19,7 +19,7 @@ prototype["genericProductsLoaded"] = function genericProductsLoaded() {
     tmp = apply.filter(c3, (identifier) => {
       const GenericProductIds = callback(table[2]).GenericProductIds;
       return GenericProductIds.includes(identifier.identifier);
-    }).length === SubscriptionPlans /* SubscriptionPlans */.GenericProductIds.length;
+    }).length === SubscriptionPlans.GenericProductIds.length;
     const arr = apply;
   }
   return tmp;

@@ -17,21 +17,21 @@ function callback(arg0, arg1) {
   if (arg2 === undefined) {
     flag = false;
   }
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   let obj = { url: closure_6.CONNECTIONS_CALLBACK(arg0), body: null, oldFormErrors: true, rejectWithError: null };
   obj = {};
   const merged = Object.assign(arg1);
   obj.insecure = flag;
   obj.friend_sync = set.has(arg0);
   obj[1] = obj;
-  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[3] = sendRequest.rejectWithMigratedError();
   return HTTP.post(obj);
 }
 ({ AbortCodes: c5, Endpoints: closure_6, FRIEND_SYNC_PLATFORM_TYPES: error, AnalyticEvents: metroImportAll } = ME);
 let c9 = new require("timestamp")("ConnectedAccounts");
 let obj = {
   fetch() {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const value = HTTP.get({ url: closure_6.CONNECTIONS, oldFormErrors: true, rejectWithError: true });
     return value.then((accounts) => {
       let obj = callback(709);
@@ -113,23 +113,23 @@ let obj = {
     obj[1] = friend_sync;
     obj[1] = obj;
     obj[2] = { location };
-    const obj1 = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
+    const obj1 = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
     obj1[1] = { name, friend_sync: set.has(arg0) };
     obj[4] = obj1;
     const obj2 = { name, friend_sync: set.has(arg0) };
-    obj[5] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[5] = sendRequest.rejectWithMigratedError();
     return obj.put(obj);
   },
   disconnect(arg0, arg1) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj = { url: closure_6.CONNECTION(arg0, arg1), oldFormErrors: true, rejectWithError: null };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   refresh(arg0, arg1) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj = { url: closure_6.CONNECTION_REFRESH(arg0, arg1), oldFormErrors: true, rejectWithError: null };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   setVisibility(type, id, inProgressVisibility) {
@@ -147,11 +147,11 @@ let obj = {
   update(arg0, arg1, body) {
     let obj = TrackedHTTPUtils;
     obj = { url: closure_6.CONNECTION(arg0, arg1), body, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
+    obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE, properties: null };
     const merged = Object.assign(body);
     obj[1] = {};
     obj[3] = obj;
-    obj[4] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[4] = sendRequest.rejectWithMigratedError();
     return obj.patch(obj);
   },
   joinServer(id, arg1) {
@@ -274,12 +274,12 @@ let obj = {
     })();
   },
   linkDispatchAuthCallback(arg0, arg1) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     let obj = { url: closure_6.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(arg0), body: null, oldFormErrors: true, rejectWithError: null };
     obj = {};
     const merged = Object.assign(arg1);
     obj[1] = obj;
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   completeTwoWayLink(outer1_2, location, closure_0, outer1_1) {
@@ -365,10 +365,10 @@ let obj = {
     })();
   },
   sessionHandoff(arg0, state, code, openid_params, iss) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_6.CONNECTIONS_SESSION_HANDOFF(arg0), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { state, code, openid_params, iss };
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   getHandoffStatus(arg0, state) {
@@ -376,7 +376,7 @@ let obj = {
     str.append("state", state);
     const result = closure_6.CONNECTIONS_SESSION_HANDOFF(arg0);
     const url = "" + result + "?" + str.toString();
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const body = { state };
     return HTTP.get({ url, body, rejectWithError: true });
   }

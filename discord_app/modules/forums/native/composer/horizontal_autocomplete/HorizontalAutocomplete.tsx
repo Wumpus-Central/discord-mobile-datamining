@@ -76,15 +76,15 @@ let obj3 = {
     ({ user, nick } = arg0);
     ({ status, guildId, onPress } = arg0);
     const tmp = createCacheKey();
-    let obj = initialize /* initialize */;
+    let obj = initialize;
     const items = [maybeApplyNoTextColorForLightCustomTheme];
     obj = { onPress, children: null };
     const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
     obj = { status, statusStyle: tmp.status, user, size: null, guildId: null, animate: null };
-    obj[3] = Button /* Button */.AvatarSizes.SMALL;
+    obj[3] = Button.AvatarSizes.SMALL;
     obj[4] = guildId;
     obj[5] = !stateFromStores;
-    const items1 = [callback(Button /* Button */.Avatar, obj), ];
+    const items1 = [callback(Button.Avatar, obj), ];
     const obj1 = { style: { marginLeft: 8, height: 56, flex: 1, flexDirection: "column", justifyContent: "center" }, children: null };
     const obj2 = { style: items2, variant: "text-sm/semibold", children: null };
     items2 = [tmp.nickname];
@@ -93,11 +93,11 @@ let obj3 = {
       const obj6 = nameFromUser;
     }
     obj2[2] = nick;
-    const items3 = [callback(Text /* Text */.Text, obj2), ];
+    const items3 = [callback(Text.Text, obj2), ];
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const items4 = ["@", nameFromUser.getUserTag(user, { decoration: "never" })];
     obj3[2] = items4;
-    items3[1] = closure_12(Text /* Text */.Text, obj3);
+    items3[1] = closure_12(Text.Text, obj3);
     obj1[1] = items3;
     items1[1] = closure_12(closure_4, obj1);
     obj[1] = items1;
@@ -110,7 +110,7 @@ let obj3 = {
     let require;
     ({ guildId: require, name, id: importDefault, colorString } = onPress);
     const tmp = createCacheKey();
-    let obj = initialize /* initialize */;
+    let obj = initialize;
     const items = [createGuildRoleRecordFromRust];
     const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getRole(closure_0, closure_1));
     let roleIconData = null;
@@ -147,7 +147,7 @@ let obj3 = {
       tmp15 = obj3;
     }
     items2[1] = tmp15;
-    items1[1] = closure_11(Button /* Button */.LegacyText, { style: items2, children: "@" + name });
+    items1[1] = closure_11(Button.LegacyText, { style: items2, children: "@" + name });
     obj[1] = items1;
     return closure_12(HorizontalAutocompleteOption, obj);
   },
@@ -194,14 +194,14 @@ let obj3 = {
       ({ emoji: arr[0], emojiText: arr[1] } = tmp);
       obj[0] = items1;
       obj[2] = surrogates;
-      tmp5 = callback(Button /* Button */.LegacyText, obj);
+      tmp5 = callback(Button.LegacyText, obj);
       tmp6 = callback;
     }
     const obj1 = { onPress, children: null };
     const items2 = [tmp6(closure_4, { children: tmp5 }), ];
     const obj2 = { style: tmp.emojiName, variant: "text-sm/semibold", children: null };
     obj2[2] = ":" + name + ":";
-    items2[1] = tmp6(Text /* Text */.Text, obj2);
+    items2[1] = tmp6(Text.Text, obj2);
     obj1[1] = items2;
     return callback2(HorizontalAutocompleteOption, obj1);
   }

@@ -5,8 +5,8 @@ import { PremiumPlanSelectSettingScreen } from "../../premium/native/PremiumMana
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["8jmdON"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["8jmdON"]);
   },
   parent: require("MobileSetting").MobileSetting.PREMIUM,
   screen: obj
@@ -14,7 +14,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
-    return PremiumPlanSelectSettingScreen /* PremiumPlanSelectSettingScreen */.default;
+    return PremiumPlanSelectSettingScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);

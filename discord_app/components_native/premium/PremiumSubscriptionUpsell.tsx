@@ -46,7 +46,7 @@ export default function PremiumSubscriptionUpsell(arg0) {
   ({ onLearnMorePremium, style } = arg0);
   let tmp = createCacheKey();
   let stringResult = dependencyMap;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj1 = getPremiumPlanItem;

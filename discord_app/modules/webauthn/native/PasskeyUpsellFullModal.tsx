@@ -9,8 +9,8 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellFullModal.tsx");
 
 export default function PasskeyUpsellFullModal() {
-  let obj = getScreens /* getScreens */;
+  let obj = getScreens;
   const screens = obj.getScreens({ isModal: true });
   obj = { screens, initialRouteName: WebAuthnScreens.MODAL_UPSELL };
-  return jsx(Modal /* Modal */.Modal, { screens, initialRouteName: WebAuthnScreens.MODAL_UPSELL });
+  return jsx(Modal.Modal, { screens, initialRouteName: WebAuthnScreens.MODAL_UPSELL });
 };

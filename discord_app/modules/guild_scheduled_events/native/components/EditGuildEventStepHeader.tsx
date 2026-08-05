@@ -17,7 +17,7 @@ export default function EditGuildEventStepHeader(children) {
   const tmp = callback2();
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: children.title };
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const items = [callback(Text.Text, obj), ];
   let tmp4Result = null;
   if (null != subtitle) {
     tmp4Result = null;
@@ -25,7 +25,7 @@ export default function EditGuildEventStepHeader(children) {
       obj = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
       obj[0] = tmp.headerSubtitle;
       obj[3] = subtitle;
-      tmp4Result = callback(Text /* Text */.Text, obj);
+      tmp4Result = callback(Text.Text, obj);
     }
   }
   items[1] = tmp4Result;

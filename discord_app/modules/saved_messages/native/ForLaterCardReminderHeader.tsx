@@ -23,7 +23,7 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
   savedMessage = savedMessage.savedMessage;
   ({ throttledNow, actions } = savedMessage);
   const tmp = callback3();
-  let obj = _savedMessageJumpToMessage /* _savedMessageJumpToMessage */;
+  let obj = _savedMessageJumpToMessage;
   let dueAt;
   if (savedMessage != null) {
     dueAt = savedMessage.saveData.dueAt;

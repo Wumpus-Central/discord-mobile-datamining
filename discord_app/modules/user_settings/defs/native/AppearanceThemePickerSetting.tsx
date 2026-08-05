@@ -8,8 +8,8 @@ import { ThemeTypes } from "../../appearance/native/SettingsAppearanceThemePicke
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Ksh3ik);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Ksh3ik);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate: function useIsSingleThemePickerVisible() {
@@ -27,7 +27,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
   getComponent() {
-    return ThemeTypes /* ThemeTypes */.default;
+    return ThemeTypes.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

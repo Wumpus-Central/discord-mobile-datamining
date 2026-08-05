@@ -16,7 +16,7 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     if (null != apiResponseTimestamp.apiResponseTimestamp) {
       diff = apiResponseTimestamp.apiResponseTimestamp - apiResponseTimestamp.initialSendTimestamp;
     }
-    let obj = receiveNetworkInfoformation /* receiveNetworkInfoformation */;
+    let obj = receiveNetworkInfoformation;
     const signalStrength = obj.getSignalStrength();
     obj = {};
     const merged = Object.assign(getDeviceMetadata());
@@ -56,9 +56,9 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     obj.transition_case = transition_case;
     const obj2 = expandEventProperties;
     const tmp2 = require;
-    obj.is_foregrounded = isForegrounded /* isForegrounded */.isForegrounded();
+    obj.is_foregrounded = isForegrounded.isForegrounded();
     obj2.track(AnalyticEvents.QUEST_DECISION_ROUNDTRIP, obj);
-    const tmp2Result = isForegrounded /* isForegrounded */;
+    const tmp2Result = isForegrounded;
   }
 }
 class QuestDecisionRoundtripTracker {

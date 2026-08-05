@@ -113,7 +113,7 @@ function YouStatusRadioGroup() {
 }
 function ThemeRadioGroup() {
   const tmp2 = useIsMobileVisualRefreshExperimentEnabled("ThemeRadioGroup");
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [handleThemeChange];
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   const callback = importAllResult.useCallback((arg0) => {
@@ -124,16 +124,16 @@ function ThemeRadioGroup() {
     callback2(8620).updateTheme(arg0);
   }, []);
   obj = { title: null, onChange: null, defaultValue: null, hasIcons: true, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.Ksh3ik);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.Ksh3ik);
   obj[1] = callback;
   obj[2] = stateFromStores;
   obj = { icon: null, label: null, value: null };
-  obj[0] = callback(ThemeLightIcon /* ThemeLightIcon */.ThemeLightIcon, {});
-  let obj3 = getThemeForColor /* getThemeForColor */;
+  obj[0] = callback(ThemeLightIcon.ThemeLightIcon, {});
+  let obj3 = getThemeForColor;
   obj[1] = obj3.getThemeName(constants.LIGHT, tmp2);
   obj[2] = constants.LIGHT;
-  const items1 = [callback(TableRadioRow /* TableRadioRow */.TableRadioRow, obj), , , ];
+  const items1 = [callback(TableRadioRow.TableRadioRow, obj), , , ];
   let tmp6Result = tmp2;
   if (tmp2) {
     const obj1 = { icon: null, label: null, value: null };
@@ -146,18 +146,18 @@ function ThemeRadioGroup() {
   let obj2 = { children: null };
   items1[1] = tmp6Result;
   obj3 = { icon: null, label: null, value: null };
-  obj3[0] = callback(ThemeDarkIcon /* ThemeDarkIcon */.ThemeDarkIcon, {});
+  obj3[0] = callback(ThemeDarkIcon.ThemeDarkIcon, {});
   tmp3Result = tmp3(4128);
   obj3[1] = tmp3Result.getThemeName(constants.DARKER, tmp2);
   obj3[2] = constants.DARKER;
-  items1[2] = callback(TableRadioRow /* TableRadioRow */.TableRadioRow, obj3);
+  items1[2] = callback(TableRadioRow.TableRadioRow, obj3);
   const obj4 = { icon: null, label: null, value: null };
-  obj4[0] = callback(ThemeMidnightIcon /* ThemeMidnightIcon */.ThemeMidnightIcon, {});
-  obj4[1] = getThemeForColor /* getThemeForColor */.getThemeName(constants.MIDNIGHT, tmp2);
+  obj4[0] = callback(ThemeMidnightIcon.ThemeMidnightIcon, {});
+  obj4[1] = getThemeForColor.getThemeName(constants.MIDNIGHT, tmp2);
   obj4[2] = constants.MIDNIGHT;
-  items1[3] = callback(TableRadioRow /* TableRadioRow */.TableRadioRow, obj4);
+  items1[3] = callback(TableRadioRow.TableRadioRow, obj4);
   obj[4] = items1;
-  obj2[0] = closure_20(context /* context */.TableRadioGroup, obj);
+  obj2[0] = closure_20(context.TableRadioGroup, obj);
   return callback(closure_5, obj2);
 }
 function YouAccountRadioGroup() {
@@ -240,9 +240,9 @@ function YouAccountRadioGroup() {
 function FocusModeSetting() {
   let currentLocale = require;
   let toLocaleStringResult = dependencyMap;
-  let tmp5Result = useFocusModeEnabled /* useFocusModeEnabled */;
+  let tmp5Result = useFocusModeEnabled;
   const focusModeEnabled = tmp5Result.useFocusModeEnabled();
-  const FocusModeExpiresAtSetting = explicitContentFromProto /* explicitContentFromProto */.FocusModeExpiresAtSetting;
+  const FocusModeExpiresAtSetting = explicitContentFromProto.FocusModeExpiresAtSetting;
   let setting = FocusModeExpiresAtSetting.useSetting();
   if (!focusModeEnabled) {
     return null;
@@ -298,9 +298,9 @@ function FocusModeSetting() {
 }
 function CustomStatus() {
   const tmp = callback2();
-  let obj = _activityFromSetting /* _activityFromSetting */;
+  let obj = _activityFromSetting;
   const customStatusActivity = obj.useCustomStatusActivity();
-  let obj1 = map /* map */;
+  let obj1 = map;
   let state;
   const token = obj1.useToken(Themes.modules.mobile.TABLE_ROW_ICON_SIZE);
   if (customStatusActivity != null) {
@@ -321,7 +321,7 @@ function CustomStatus() {
   if (customStatusActivity != null) {
     state1 = customStatusActivity.state;
   }
-  let gameMentionsAsPlainText = useGameMentionsAsPlainText /* useGameMentionsAsPlainText */.useGameMentionsAsPlainText(state1);
+  let gameMentionsAsPlainText = useGameMentionsAsPlainText.useGameMentionsAsPlainText(state1);
   obj = { shadow: "none", border: "none", style: tmp.customStatusRow, children: null };
   obj = { style: tmp.customStatusEditButton, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, onPress: null, children: null };
   const intl = tmp2(1236).intl;
@@ -379,9 +379,9 @@ function CustomStatus() {
     gameMentionsAsPlainText = intl3.string(tmp2(1236).t["/UonHN"]);
   }
   obj4[4] = gameMentionsAsPlainText;
-  items[1] = closure_19(Text /* Text */.Text, obj4);
+  items[1] = closure_19(Text.Text, obj4);
   obj[5] = items;
-  const items1 = [closure_20(PressableBase /* PressableBase */.PressableOpacity, obj), ];
+  const items1 = [closure_20(PressableBase.PressableOpacity, obj), ];
   tmp12Result = null;
   if (null != customStatusActivity) {
     const obj5 = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, style: null, children: null };
@@ -398,10 +398,10 @@ function CustomStatus() {
     obj5[4] = tmp12(closure_6, obj6);
     tmp12Result = tmp12(tmp2(4812).PressableOpacity, obj5);
   }
-  const tmp2Result = useGameMentionsAsPlainText /* useGameMentionsAsPlainText */;
+  const tmp2Result = useGameMentionsAsPlainText;
   items1[1] = tmp12Result;
   obj[3] = items1;
-  return closure_19(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: closure_20(PressableCard /* PressableCard */.Card, obj) });
+  return closure_19(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: closure_20(PressableCard.Card, obj) });
 }
 let c4 = importAllResult;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
@@ -423,16 +423,16 @@ const memoResult = importAllResult.memo((statusOnly) => {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [initialize];
   const stateFromStores = obj.useStateFromStores(items, () => canUseMultiAccountMobile.getCanUseMultiAccountMobile());
   const tmp5 = useDesignToggle("theme_setting_in_account_sheet");
   const items1 = [init];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => isDeveloper.isDeveloper);
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => isDeveloper.isDeveloper);
   obj = { startExpanded: stateFromStores, header: null, showGradient: true, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (flag) {
     let stringResult = string(t["3Uj+2p"]);
   } else if (stateFromStores) {
@@ -440,7 +440,7 @@ const memoResult = importAllResult.memo((statusOnly) => {
   } else {
     stringResult = string(t["qP/i6k"]);
   }
-  obj[1] = closure_19(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: stringResult });
+  obj[1] = closure_19(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: stringResult });
   let tmp7Result = tmp5;
   if (tmp5) {
     tmp7Result = tmp7(ThemeRadioGroup, {});
@@ -462,8 +462,8 @@ const memoResult = importAllResult.memo((statusOnly) => {
     tmp7Result1 = tmp7(DevToolsContentSortButtons, { title: "Developer Tools", embedded: true });
   }
   items2[5] = tmp7Result1;
-  obj[3] = closure_20(Stack /* Stack */.Stack, { spacing: 24, children: items2 });
-  return closure_19(ActionSheet /* ActionSheet */.ActionSheet, obj);
+  obj[3] = closure_20(Stack.Stack, { spacing: 24, children: items2 });
+  return closure_19(ActionSheet.ActionSheet, obj);
 });
 let result = require("initialize").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouAccountActionSheet.tsx");
 

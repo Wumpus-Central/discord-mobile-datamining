@@ -8,7 +8,7 @@ import { commonTriggerPointConfiguration } from "trigger_points/ConnectionOpenTr
 
 const require = arg1;
 function handleConnectionOpen() {
-  const ConnectionOpenTriggerPoint = commonTriggerPointConfiguration /* commonTriggerPointConfiguration */.ConnectionOpenTriggerPoint;
+  const ConnectionOpenTriggerPoint = commonTriggerPointConfiguration.ConnectionOpenTriggerPoint;
   ConnectionOpenTriggerPoint.trigger();
 }
 class ExperimentTriggerPointStore extends Store {

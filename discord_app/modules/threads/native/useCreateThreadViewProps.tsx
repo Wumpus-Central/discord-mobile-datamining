@@ -9,7 +9,7 @@ const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/t
 export default function useCreateThreadViewProps(arg0) {
   const tmp = useGetThreadDraftSettings(arg0);
   const require = tmp;
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [ensureGuildLoaded];
   const items1 = [tmp];
   const stateFromStores = obj.useStateFromStores(items, () => {

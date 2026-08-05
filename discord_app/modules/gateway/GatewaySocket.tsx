@@ -176,7 +176,7 @@ prototype["handleUpdateTimeSpentSessionId"] = function handleUpdateTimeSpentSess
     obj[0] = createdAtTimestamp;
     obj[1] = uuid;
     obj[2] = clientLaunchId;
-    self.send(presenceUpdate /* presenceUpdate */.Opcode.UPDATE_TIME_SPENT_SESSION_ID, obj);
+    self.send(presenceUpdate.Opcode.UPDATE_TIME_SPENT_SESSION_ID, obj);
     self._sendHeartbeat();
   }
 };
@@ -469,10 +469,10 @@ prototype["_handleHello"] = function _handleHello(d) {
   this.heartbeatInterval = heartbeat_interval;
   const timestamp = Date.now();
   const diff = timestamp - this.connectionStartTime;
-  let obj = prettyPrintTrace_ /* prettyPrintTrace_ */;
+  let obj = prettyPrintTrace_;
   tmp3.verbose("[HELLO] via " + obj.getConnectionPath(d) + ", heartbeat interval: " + heartbeat_interval + ", took " + diff + " ms");
   obj = { socket: this, altGateway: this.altGateway, gatewayUrl: this._getGatewayUrl(), now: timestamp };
-  prettyPrintTrace_ /* prettyPrintTrace_ */.logGatewayConnected(obj);
+  prettyPrintTrace_.logGatewayConnected(obj);
   this.receivedHelloThisAttempt = true;
   this.failedConnectAttempts = 0;
   this.firstConnectAttemptStartTime = 0;
@@ -503,8 +503,8 @@ prototype["_handleDispatch"] = function _handleDispatch(d, type, arg2) {
   if ("READY" === type) {
     const session_id = d.session_id;
     self.sessionId = session_id;
-    const connectionPath = prettyPrintTrace_ /* prettyPrintTrace_ */.getConnectionPath(d);
-    const obj = prettyPrintTrace_ /* prettyPrintTrace_ */;
+    const connectionPath = prettyPrintTrace_.getConnectionPath(d);
+    const obj = prettyPrintTrace_;
     isTracing.setServerTrace(connectionPath);
     const _HermesInternal2 = HermesInternal;
     tmp3.info("[READY] took " + diff + "ms, as " + session_id);
@@ -528,14 +528,14 @@ prototype["_handleDispatch"] = function _handleDispatch(d, type, arg2) {
     const altGateway = self.altGateway;
     altGateway.recordSuccess();
   } else if ("RESUMED" === type) {
-    tmp3.verbose(prettyPrintTrace_ /* prettyPrintTrace_ */.getConnectionPath(d));
+    tmp3.verbose(prettyPrintTrace_.getConnectionPath(d));
     self.connectionState = CLOSED.SESSION_ESTABLISHED;
     const gatewayBackoff3 = self.gatewayBackoff;
     gatewayBackoff3.succeed();
     self.iosGoingAwayEventCount = 0;
     const altGateway3 = self.altGateway;
     altGateway3.recordSuccess();
-    const obj3 = prettyPrintTrace_ /* prettyPrintTrace_ */;
+    const obj3 = prettyPrintTrace_;
   }
   const dispatcher = self.dispatcher;
   dispatcher.receiveDispatch(d, type, arg2);
@@ -784,12 +784,12 @@ prototype["_cleanup"] = function _cleanup(arg0) {
   const gatewayBackoff = self.gatewayBackoff;
   gatewayBackoff.cancel();
   self.compressionHandler.close();
-  self.compressionHandler = items /* items */.getCompressionHandler(closure_10);
+  self.compressionHandler = items.getCompressionHandler(closure_10);
 };
 prototype["_doResume"] = function _doResume() {
   const self = this;
   this.connectionState = CLOSED.RESUMING;
-  let obj = prettyPrintTrace_ /* prettyPrintTrace_ */;
+  let obj = prettyPrintTrace_;
   this.dispatcher.resumeAnalytics = obj.createResumeAnalytics(Date.now() - this.connectionStartTime);
   let str = this.sessionId;
   if (str == null) {
@@ -797,7 +797,7 @@ prototype["_doResume"] = function _doResume() {
   }
   tmp3.info("[RESUME] resuming session " + str + ", seq: " + self.seq);
   obj = { token: self.token, session_id: self.sessionId, seq: self.seq };
-  self.send(presenceUpdate /* presenceUpdate */.Opcode.RESUME, obj, false);
+  self.send(presenceUpdate.Opcode.RESUME, obj, false);
 };
 prototype["_doIdentify"] = function _doIdentify() {
   const self = this;
@@ -1009,7 +1009,7 @@ prototype["_consumeQOSPayload"] = function _consumeQOSPayload() {
 };
 prototype["_sendHeartbeat"] = function _sendHeartbeat() {
   const _consumeQOSPayloadResult = this._consumeQOSPayload();
-  this.send(presenceUpdate /* presenceUpdate */.Opcode.QOS_HEARTBEAT, { seq: this.seq, qos: this._consumeQOSPayload() }, false);
+  this.send(presenceUpdate.Opcode.QOS_HEARTBEAT, { seq: this.seq, qos: this._consumeQOSPayload() }, false);
   this.lastHeartbeatTime = Date.now();
 };
 prototype["getLogger"] = function getLogger() {

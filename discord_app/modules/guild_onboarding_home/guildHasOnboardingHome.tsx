@@ -13,8 +13,8 @@ export default function guildHasOnboardingHome(id) {
     isFavoritesGuildIdResult = id.id === closure_3;
   }
   if (!isFavoritesGuildIdResult) {
-    isFavoritesGuildIdResult = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(id.id);
-    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+    isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(id.id);
+    const obj = getFavoritesAwareGuildName;
   }
   if (!isFavoritesGuildIdResult) {
     const features = id.features;

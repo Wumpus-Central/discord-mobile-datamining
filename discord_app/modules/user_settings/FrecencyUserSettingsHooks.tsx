@@ -12,5 +12,5 @@ export const useFrecencySettings = function useFrecencySettings() {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
   }, []);
   const items = [handleConnectionClosedOrResumed];
-  return initialize /* initialize */.useStateFromStores(items, () => obj.frecencyWithoutFetchingLatest);
+  return initialize.useStateFromStores(items, () => obj.frecencyWithoutFetchingLatest);
 };

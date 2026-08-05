@@ -155,8 +155,8 @@ export const isRatelimitedInChannel = function isRatelimitedInChannel(channel, o
     tmp = channel.rateLimitPerUser > 0;
   }
   if (tmp) {
-    tmp = !canBypassSlowmodeHelper /* canBypassSlowmodeHelper */.canBypassSlowmodeHelper(channel, outer1_6);
-    const obj = canBypassSlowmodeHelper /* canBypassSlowmodeHelper */;
+    tmp = !canBypassSlowmodeHelper.canBypassSlowmodeHelper(channel, outer1_6);
+    const obj = canBypassSlowmodeHelper;
   }
   return tmp;
 };

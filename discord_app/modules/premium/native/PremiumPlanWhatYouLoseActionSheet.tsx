@@ -18,7 +18,7 @@ function WhatYouLoseItem(arg0) {
   let obj = { style: tmp.item, children: null };
   const items = [callback(preload, { source: imageSource }), ];
   obj = { variant: "text-md/medium", style: tmp.itemLabel, children: text };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

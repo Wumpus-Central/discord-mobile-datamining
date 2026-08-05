@@ -8,7 +8,7 @@ export default {
   showModal(userCode) {
     let obj = ModalActionCreators;
     obj = { userCode };
-    obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(13128, dependencyMap.paths), obj, ACTIVATE_DEVICE_MODAL_KEY);
+    obj.pushLazy(asyncRequireImpl(13128, dependencyMap.paths), obj, ACTIVATE_DEVICE_MODAL_KEY);
   },
   hideModal() {
     ModalActionCreators.popWithKey(ACTIVATE_DEVICE_MODAL_KEY);

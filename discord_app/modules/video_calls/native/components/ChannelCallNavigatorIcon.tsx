@@ -102,6 +102,6 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
   obj[1] = items1;
   const items2 = [closure_7(closure_3, obj), children];
   obj[5] = items2;
-  obj[1] = closure_7(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[1] = closure_7(PressableBase.PressableOpacity, obj);
   return closure_6(closure_3, obj);
 };

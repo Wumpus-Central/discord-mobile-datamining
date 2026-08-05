@@ -14,18 +14,18 @@ const require = arg1;
 let closure_4 = createCacheKey.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     let obj = { paddingHorizontal: null, paddingVertical: null };
-    obj[0] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.SMALL_BUTTON_PADDING;
-    obj[1] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.SMALL_BUTTON_PADDING;
+    obj[0] = MINIMUM_HIT_AREA.SMALL_BUTTON_PADDING;
+    obj[1] = MINIMUM_HIT_AREA.SMALL_BUTTON_PADDING;
   } else if ("md" === arg1) {
     obj = { paddingHorizontal: null, paddingVertical: null };
-    obj[0] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.MEDIUM_BUTTON_PADDING;
-    obj[1] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.MEDIUM_BUTTON_PADDING;
+    obj[0] = MINIMUM_HIT_AREA.MEDIUM_BUTTON_PADDING;
+    obj[1] = MINIMUM_HIT_AREA.MEDIUM_BUTTON_PADDING;
   } else {
     obj = {};
     if ("lg" === arg1) {
       const obj1 = { paddingHorizontal: null, paddingVertical: null };
-      obj1[0] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.LARGE_BUTTON_PADDING;
-      obj1[1] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.LARGE_BUTTON_PADDING;
+      obj1[0] = MINIMUM_HIT_AREA.LARGE_BUTTON_PADDING;
+      obj1[1] = MINIMUM_HIT_AREA.LARGE_BUTTON_PADDING;
       obj = obj1;
     }
   }
@@ -49,7 +49,7 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
   }
   let DEFAULT_BUTTON_SIZE = variant.size;
   if (undefined === DEFAULT_BUTTON_SIZE) {
-    DEFAULT_BUTTON_SIZE = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.DEFAULT_BUTTON_SIZE;
+    DEFAULT_BUTTON_SIZE = MINIMUM_HIT_AREA.DEFAULT_BUTTON_SIZE;
   }
   ({ icon, scaleAmountInPx } = variant);
   let num = 4;
@@ -60,10 +60,10 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
   const tmp3 = callback(str, DEFAULT_BUTTON_SIZE);
   let obj = ReanimatedRexport;
   const sharedValue = obj.useSharedValue(0);
-  let obj1 = styleProperties /* styleProperties */;
+  let obj1 = styleProperties;
   const iconTintStyles = obj1.useIconTintStyles(str);
-  const iconSizeStyles = styleProperties /* styleProperties */.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
-  let MEDIUM_BUTTON_HEIGHT = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.LARGE_BUTTON_HEIGHT;
+  const iconSizeStyles = styleProperties.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
+  let MEDIUM_BUTTON_HEIGHT = MINIMUM_HIT_AREA.LARGE_BUTTON_HEIGHT;
   if ("sm" === DEFAULT_BUTTON_SIZE) {
     MEDIUM_BUTTON_HEIGHT = tmp4(4699).SMALL_BUTTON_HEIGHT;
   } else if ("md" === DEFAULT_BUTTON_SIZE) {
@@ -95,8 +95,8 @@ const forwardRefResult = importAllResult.forwardRef((variant, ref) => {
     tmp10Result = tmp10(IconSizes, obj1);
   }
   obj[6] = tmp10Result;
-  obj.children = jsx(PillWrapper /* PillWrapper */.ButtonPill, { style: items1, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
-  return jsx(BaseButton /* BaseButton */.BaseButton, { style: items1, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
+  obj.children = jsx(PillWrapper.ButtonPill, { style: items1, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
+  return jsx(BaseButton.BaseButton, { style: items1, variant: str, size: DEFAULT_BUTTON_SIZE, loading, loaderSize: null, pressed: null, children: null });
 });
 const result = require("createCacheKey").fileFinishedImporting("design/components/Button/native/BaseIconButton.native.tsx");
 

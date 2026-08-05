@@ -24,11 +24,11 @@ function handleTouch() {
   closure_7.dismiss();
 }
 function handleMoreActions() {
-  let obj = showSimpleActionSheet /* showSimpleActionSheet */;
+  let obj = showSimpleActionSheet;
   obj = { key: "NewTermsModalMore", options: null, hasIcons: false };
   obj = { label: null, isDestructive: true, onPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["2jxGer"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["2jxGer"]);
   obj[2] = function onPress() {
     return callback(table[11]).logout("new_terms_modal");
   };

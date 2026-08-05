@@ -2190,7 +2190,7 @@ function _submitModal() {
 let result = require("noop").fileFinishedImporting("modules/interaction_components/InteractionModalUtils.tsx");
 
 export const useIsFirstTextInputInModal = function useIsFirstTextInputInModal(id) {
-  const componentStateContext = isInteractionComponent /* isInteractionComponent */.useComponentStateContext();
+  const componentStateContext = isInteractionComponent.useComponentStateContext();
   let first;
   if (componentStateContext != null) {
     const modal = componentStateContext.modal;

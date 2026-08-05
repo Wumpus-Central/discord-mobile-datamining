@@ -22,15 +22,15 @@ export default {
     ({ searchContext, searchLocation } = arg0);
     let obj = _initialize;
     obj.initialize(searchContext, searchLocation);
-    const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+    const channelIdFromSearchContext = SearchTokenTypes.getChannelIdFromSearchContext(searchContext);
     const channel = store.getChannel(channelIdFromSearchContext);
-    const obj2 = SearchTokenTypes /* SearchTokenTypes */;
+    const obj2 = SearchTokenTypes;
     obj = { search_session_id: null, search_location: null, guild_id: null, channel_id: null, channel_type: null };
     const obj3 = collectGuildAnalyticsMetadata;
     obj[0] = _initialize.getSessionId(searchContext);
     obj[1] = searchLocation;
     const obj5 = _initialize;
-    obj[2] = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
+    obj[2] = SearchTokenTypes.getGuildIdFromSearchContext(searchContext);
     obj[3] = channelIdFromSearchContext;
     let type;
     if (channel != null) {
@@ -45,9 +45,9 @@ export default {
     if (!prototype.isInitialSearchQuery(searchContext)) {
       _initialize.refreshQueryId(searchContext);
       const obj2 = _initialize;
-      const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+      const channelIdFromSearchContext = SearchTokenTypes.getChannelIdFromSearchContext(searchContext);
       const channel = store.getChannel(channelIdFromSearchContext);
-      const obj3 = SearchTokenTypes /* SearchTokenTypes */;
+      const obj3 = SearchTokenTypes;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
       obj = { search_session_id: null, search_query_id: null, search_location: null, guild_id: null, channel_id: null, channel_type: null, search_query_length: null, search_query_content_length: null };
@@ -58,7 +58,7 @@ export default {
       const obj7 = _initialize;
       obj[2] = _initialize.getLocation(searchContext);
       const obj8 = _initialize;
-      obj[3] = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
+      obj[3] = SearchTokenTypes.getGuildIdFromSearchContext(searchContext);
       obj[4] = channelIdFromSearchContext;
       let type;
       if (channel != null) {
@@ -68,7 +68,7 @@ export default {
       obj[6] = str.trim().length;
       obj[7] = str2.trim().length;
       obj4.trackWithMetadata(closure_7.SEARCH_STARTED_MOBILE, obj);
-      const obj9 = SearchTokenTypes /* SearchTokenTypes */;
+      const obj9 = SearchTokenTypes;
     }
   },
   trackSearchResultClicked(arg0) {
@@ -82,12 +82,12 @@ export default {
     let obj = prototype;
     ({ index, messageId, userId, entityType } = arg0);
     if (!prototype.isInitialSearchQuery(searchContext)) {
-      const guildIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
-      const obj2 = SearchTokenTypes /* SearchTokenTypes */;
-      const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+      const guildIdFromSearchContext = SearchTokenTypes.getGuildIdFromSearchContext(searchContext);
+      const obj2 = SearchTokenTypes;
+      const channelIdFromSearchContext = SearchTokenTypes.getChannelIdFromSearchContext(searchContext);
       const channel = store.getChannel(channelIdFromSearchContext);
       const channel1 = store.getChannel(channelId);
-      const obj3 = SearchTokenTypes /* SearchTokenTypes */;
+      const obj3 = SearchTokenTypes;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
       obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, search_tab_selected: null, search_result_index: null, search_result_click_id: null, search_result_content_entity_type: null, search_result_user_id: null, search_result_message_id: null, search_result_channel_id: null, search_result_guild_id: null, search_result_channel_type: null, guild_id: null, channel_id: null, channel_type: null };
@@ -103,7 +103,7 @@ export default {
       obj[5] = _initialize.getSelectedTab(searchContext);
       obj[6] = index;
       const obj9 = _initialize;
-      obj[7] = v1 /* v1 */.v4();
+      obj[7] = v1.v4();
       obj[8] = entityType;
       obj[9] = userId;
       obj[10] = messageId;
@@ -122,7 +122,7 @@ export default {
       }
       obj[16] = type1;
       obj4.trackWithMetadata(closure_7.SEARCH_RESULT_CLICKED_MOBILE, obj);
-      const obj10 = v1 /* v1 */;
+      const obj10 = v1;
     }
   },
   trackSearchResultReturned(searchContext) {
@@ -138,11 +138,11 @@ export default {
     let obj = prototype;
     ({ searchResultTotalCount, numMemberTabReturnedResults, numChannelTabReturnedResults, numPeopleTabReturnedResults, numMessageTabReturnedResults, numMediaTabReturnedResults, numFileTabReturnedResults, numLinkTabReturnedResults } = searchContext);
     if (!prototype.isInitialSearchQuery(searchContext)) {
-      const guildIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
-      const obj2 = SearchTokenTypes /* SearchTokenTypes */;
-      const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+      const guildIdFromSearchContext = SearchTokenTypes.getGuildIdFromSearchContext(searchContext);
+      const obj2 = SearchTokenTypes;
+      const channelIdFromSearchContext = SearchTokenTypes.getChannelIdFromSearchContext(searchContext);
       const channel = store.getChannel(channelIdFromSearchContext);
-      const obj3 = SearchTokenTypes /* SearchTokenTypes */;
+      const obj3 = SearchTokenTypes;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
       obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, search_result_total_count: null, num_member_tab_returned_results: null, num_channel_tab_returned_results: null, num_people_tab_returned_results: null, num_message_tab_returned_results: null, num_media_tab_returned_results: null, num_file_tab_returned_results: null, num_link_tab_returned_results: null, exact_search_result_count_setting_enabled: null, guild_id: null, channel_id: null, channel_type: null };
@@ -163,7 +163,7 @@ export default {
       obj[11] = numFileTabReturnedResults;
       obj[12] = numLinkTabReturnedResults;
       const obj8 = _initialize;
-      obj[13] = explicitContentFromProto /* explicitContentFromProto */.SearchResultExactCountEnabled.getSetting();
+      obj[13] = explicitContentFromProto.SearchResultExactCountEnabled.getSetting();
       obj[14] = guildIdFromSearchContext;
       obj[15] = channelIdFromSearchContext;
       let type;
@@ -172,18 +172,18 @@ export default {
       }
       obj[16] = type;
       obj4.trackWithMetadata(closure_7.SEARCH_RESULT_RETURNED_MOBILE, obj);
-      const SearchResultExactCountEnabled = explicitContentFromProto /* explicitContentFromProto */.SearchResultExactCountEnabled;
+      const SearchResultExactCountEnabled = explicitContentFromProto.SearchResultExactCountEnabled;
     }
   },
   trackSearchEmptyResult(searchContext) {
     searchContext = searchContext.searchContext;
     let obj = prototype;
     if (!prototype.isInitialSearchQuery(searchContext)) {
-      const guildIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
-      const obj2 = SearchTokenTypes /* SearchTokenTypes */;
-      const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+      const guildIdFromSearchContext = SearchTokenTypes.getGuildIdFromSearchContext(searchContext);
+      const obj2 = SearchTokenTypes;
+      const channelIdFromSearchContext = SearchTokenTypes.getChannelIdFromSearchContext(searchContext);
       const channel = store.getChannel(channelIdFromSearchContext);
-      const obj3 = SearchTokenTypes /* SearchTokenTypes */;
+      const obj3 = SearchTokenTypes;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
       obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, guild_id: null, channel_id: null, channel_type: null };
@@ -210,11 +210,11 @@ export default {
     searchContext = searchContext.searchContext;
     let obj = prototype;
     if (!prototype.isInitialSearchQuery(searchContext)) {
-      const guildIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getGuildIdFromSearchContext(searchContext);
-      const obj2 = SearchTokenTypes /* SearchTokenTypes */;
-      const channelIdFromSearchContext = SearchTokenTypes /* SearchTokenTypes */.getChannelIdFromSearchContext(searchContext);
+      const guildIdFromSearchContext = SearchTokenTypes.getGuildIdFromSearchContext(searchContext);
+      const obj2 = SearchTokenTypes;
+      const channelIdFromSearchContext = SearchTokenTypes.getChannelIdFromSearchContext(searchContext);
       const channel = store.getChannel(channelIdFromSearchContext);
-      const obj3 = SearchTokenTypes /* SearchTokenTypes */;
+      const obj3 = SearchTokenTypes;
       const str = obj.getQueryString(searchContext);
       const str2 = obj.getTextInputValue(searchContext);
       obj = { search_session_id: null, search_location: null, search_query_id: null, search_query_length: null, search_query_content_length: null, guild_id: null, channel_id: null, channel_type: null };

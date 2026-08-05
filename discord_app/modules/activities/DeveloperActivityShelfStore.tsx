@@ -22,7 +22,7 @@ prototype["getState"] = function getState() {
   return closure_3;
 };
 prototype["getIsEnabled"] = function getIsEnabled() {
-  const DeveloperMode = explicitContentFromProto /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = explicitContentFromProto.DeveloperMode;
   let setting = DeveloperMode.getSetting();
   if (setting) {
     setting = closure_6.length > 0;

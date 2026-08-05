@@ -26,7 +26,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   if (arg1) {
     let DIVIDER_BACKGROUND = Themes.colors.BORDER_SUBTLE;
   } else {
-    DIVIDER_BACKGROUND = result /* result */.DIVIDER_BACKGROUND;
+    DIVIDER_BACKGROUND = result.DIVIDER_BACKGROUND;
   }
   obj[1] = DIVIDER_BACKGROUND;
   obj[1] = obj;
@@ -39,7 +39,7 @@ export const TableRowDivider = function TableRowDivider(adjustSpacingForIcon) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = map /* map */;
+  let obj = map;
   const tmp2 = callback(flag, useIsMobileVisualRefreshExperimentEnabled("TableRowDivider"), obj.useToken(Themes.modules.mobile.TABLE_ROW_DIVIDER_PADDING));
   obj = { style: tmp2.container, children: <View {...obj} /> };
   obj = { style: tmp2.divider };

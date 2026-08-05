@@ -13,11 +13,11 @@ export default function VideoQuestModalCloseButton(iconColor) {
     MOBILE_TEXT_HEADING_PRIMARY = Themes.colors.MOBILE_TEXT_HEADING_PRIMARY;
   }
   const obj = { accessibilityLabel: null, accessibilityRole: "button", hitSlop: 12, onPress: null, style: null, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.cpT0Cq);
   obj[3] = iconColor.onClose;
   const items = [{ flexShrink: 0, minWidth: 24, minHeight: 24 }, iconColor.style];
   obj[4] = items;
-  obj[5] = jsx(XSmallIcon /* XSmallIcon */.XSmallIcon, { color: MOBILE_TEXT_HEADING_PRIMARY });
-  return jsx(PressableBase /* PressableBase */.PressableOpacity, { accessibilityLabel: null, accessibilityRole: "button", hitSlop: 12, onPress: null, style: null, children: null });
+  obj[5] = jsx(XSmallIcon.XSmallIcon, { color: MOBILE_TEXT_HEADING_PRIMARY });
+  return jsx(PressableBase.PressableOpacity, { accessibilityLabel: null, accessibilityRole: "button", hitSlop: 12, onPress: null, style: null, children: null });
 };

@@ -348,10 +348,10 @@ const memoResult = importAllResult.memo((arg0) => {
   let width;
   ({ channel, pipParticipant, selfParticipant } = arg0);
   const tmp = callback4();
-  let obj = useIsViewingActivity /* useIsViewingActivity */;
+  let obj = useIsViewingActivity;
   obj = { channelId: channel.id };
   const isViewingActivity = obj.useIsViewingActivity(obj);
-  let obj2 = useShouldForcePipOrientation /* useShouldForcePipOrientation */;
+  let obj2 = useShouldForcePipOrientation;
   const shouldForcePipOrientation = obj2.useShouldForcePipOrientation({ channel });
   obj = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
   const tmp6 = usePipDimensions(obj);
@@ -389,7 +389,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj5[2] = selfParticipant;
     tmp8Result = tmp8(closure_20, obj5);
   }
-  tmp2Result = set /* set */;
+  tmp2Result = set;
   obj2[1] = tmp8Result;
   obj1[1] = closure_16(tmp10, { activeOpacity: 0.7, children: closure_16(closure_5, obj2) });
   return closure_16(closure_5, obj1);

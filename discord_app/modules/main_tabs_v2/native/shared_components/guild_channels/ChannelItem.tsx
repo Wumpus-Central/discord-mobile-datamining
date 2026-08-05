@@ -76,8 +76,8 @@ export const getChannelAccessibilityProps = function getChannelAccessibilityProp
   ({ unread, mentionCount, voiceStates, embeddedActivitiesCount } = channel);
   if (channel.isGuildVoice()) {
     obj = { accessibilityHint: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["9C444m"]);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t["9C444m"]);
     const tmp2 = obj;
   }
   const merged = Object.assign(tmp2);
@@ -135,17 +135,17 @@ export const renderChannelItem = function renderChannelItem(unread) {
   if (null != latestMessageTimestamp) {
     relativeTimestamp = null;
     if (!flag3) {
-      let obj = getRelativeTimestamp /* getRelativeTimestamp */;
+      let obj = getRelativeTimestamp;
       relativeTimestamp = obj.getRelativeTimestamp(latestMessageTimestamp);
     }
   }
-  let obj1 = getLayoutStyles /* getLayoutStyles */;
+  let obj1 = getLayoutStyles;
   const layoutStyles = obj1.getLayoutStyles(layout);
-  let obj2 = renderChannelWrapper /* renderChannelWrapper */;
+  let obj2 = renderChannelWrapper;
   const children = [unreadBadge, , , ];
   obj = { style: null, children: null };
   obj = { position: "relative", borderRadius: Themes.radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
-  const merged = Object.assign(getLayoutStyles /* getLayoutStyles */.makeSizeStyle(layoutStyles.icon.wrapper.size));
+  const merged = Object.assign(getLayoutStyles.makeSizeStyle(layoutStyles.icon.wrapper.size));
   const merged1 = Object.assign(layoutStyles.icon.margin);
   obj[0] = obj;
   if (channel.isGroupDM()) {

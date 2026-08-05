@@ -5,34 +5,34 @@ import { apexExperiment } from "../../../notifications/profile_updates/ProfileUp
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.VxBO2F);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.VxBO2F);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.F4VeBe);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.F4VeBe);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableProfileUpdatesNotifications.useSetting,
   onValueChange: require("onProfileUpdatesNotificationSettingsChanged").onProfileUpdatesNotificationSettingsChanged,
   usePredicate: function useExperiment() {
-    return apexExperiment /* apexExperiment */.useProfileUpdatesNotificationExperiment("tabsV2Settings").showSettingsToggle;
+    return apexExperiment.useProfileUpdatesNotificationExperiment("tabsV2Settings").showSettingsToggle;
   }
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.VxBO2F);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.VxBO2F);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.F4VeBe);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.F4VeBe);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableProfileUpdatesNotifications.useSetting,
   onValueChange: require("onProfileUpdatesNotificationSettingsChanged").onProfileUpdatesNotificationSettingsChanged,
   usePredicate: function useExperiment() {
-    return apexExperiment /* apexExperiment */.useProfileUpdatesNotificationExperiment("tabsV2Settings").showSettingsToggle;
+    return apexExperiment.useProfileUpdatesNotificationExperiment("tabsV2Settings").showSettingsToggle;
   }
 };
 const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/ProfileUpdatesNotificationSetting.tsx");

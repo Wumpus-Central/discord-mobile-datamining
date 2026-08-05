@@ -35,7 +35,7 @@ function serializePurchaseResponse(originalTransactionDate) {
   return obj;
 }
 function convertToUUID(arg0) {
-  return v1 /* v1 */.v5(arg0, NAMESPACE_SNOWFLAKE_UUID);
+  return v1.v5(arg0, NAMESPACE_SNOWFLAKE_UUID);
 }
 function _restorePurchases() {
   const self = this;
@@ -239,7 +239,7 @@ function _restorePurchases() {
   return applyArgumentsResult;
 }
 function isStorekit2Available() {
-  let isIOSResult = set /* set */.isIOS();
+  let isIOSResult = set.isIOS();
   if (isIOSResult) {
     let isAvailableResult;
     if (closure_12 != null) {
@@ -253,7 +253,7 @@ function isStorekit2Available() {
 function remapStorefront(countryCode) {
   const country = convertToAlpha2(countryCode.countryCode);
   if (null == countryCode.currency) {
-    if (null == GeneratedPaymentCurrencies /* GeneratedPaymentCurrencies */.GeneratedPaymentCurrenciesSets.APPLE_STORE_COUNTRY_CURRENCIES[country]) {
+    if (null == GeneratedPaymentCurrencies.GeneratedPaymentCurrenciesSets.APPLE_STORE_COUNTRY_CURRENCIES[country]) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
       const error = new Error("Unable to get currency from countryCode " + countryCode.countryCode);
@@ -574,14 +574,14 @@ if (set) {
   _default = require("items").default;
 }
 function shouldMockIAPForceEnable() {
-  let isIOSResult = set /* set */.isIOS();
+  let isIOSResult = set.isIOS();
   if (isIOSResult) {
     const Identifier = importAll(1578).getConstants().Identifier;
     const _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = DCDDeviceManager /* DCDDeviceManager */.getIsRunningOnSimulator();
-      const tmpResult = DCDDeviceManager /* DCDDeviceManager */;
+      isRunningOnSimulator = DCDDeviceManager.getIsRunningOnSimulator();
+      const tmpResult = DCDDeviceManager;
     }
     isIOSResult = isRunningOnSimulator;
     const obj2 = importAll(1578);
@@ -754,7 +754,7 @@ export const useCanPurchaseIAP = function useCanPurchaseIAP(productId) {
 export { isStorekit2Available };
 export { remapStorefront };
 export const manageSubscription = function manageSubscription() {
-  let isIOSResult = set /* set */.isIOS();
+  let isIOSResult = set.isIOS();
   if (isIOSResult) {
     let isAvailableResult;
     if (closure_12 != null) {

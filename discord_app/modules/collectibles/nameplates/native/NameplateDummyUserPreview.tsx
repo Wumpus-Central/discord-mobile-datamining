@@ -57,14 +57,14 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   }
   let NORMAL = hideAvatar.avatarSize;
   if (NORMAL === undefined) {
-    NORMAL = Button /* Button */.AvatarSizes.NORMAL;
+    NORMAL = Button.AvatarSizes.NORMAL;
   }
   ({ animate, nameplate, style } = hideAvatar);
   if (animate === undefined) {
     animate = false;
   }
   const tmp3 = callback2(NORMAL, flag);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [handleThemeChange];
   obj = { style: items1, children: null };
   items1 = [tmp3.container, style];
@@ -76,7 +76,7 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   obj2[0] = importDefault(stateFromStores ? 9310 : 9311);
   obj2[1] = NORMAL;
   obj2[3] = tmp3.avatar;
-  obj1[1] = callback(Button /* Button */.Avatar, obj2);
+  obj1[1] = callback(Button.Avatar, obj2);
   items2[1] = callback(View, obj1);
   const items3 = [tmp3.placeholderBar, { width: hideAvatar.width }];
   items2[2] = callback(View, { style: items3 });

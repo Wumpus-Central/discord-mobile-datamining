@@ -27,7 +27,7 @@ function YouAvatar(arg0) {
     const obj = callback(15741);
     const result1 = callback(15362).showYouAccountActionSheet();
   }, []);
-  let obj = set /* set */;
+  let obj = set;
   const isAndroidResult = obj.isAndroid();
   obj = {};
   const merged = Object.assign(arg0);

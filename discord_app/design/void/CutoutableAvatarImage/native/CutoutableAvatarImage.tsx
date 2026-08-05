@@ -124,7 +124,7 @@ function CutoutAvatarImage(arg0) {
   }
   let Circle = require;
   let obj = dependencyMap;
-  let obj1 = v1 /* v1 */;
+  let obj1 = v1;
   const v4Result = obj1.v4();
   const tintColor = closure_4.flatten(style).tintColor;
   if (null != source) {
@@ -287,7 +287,7 @@ const memoResult = importAllResult.memo((style) => {
   } else if (null != user) {
     avatarSource = user.getAvatarSource(tmp6, animate2, size2);
   } else if (null != channel) {
-    let obj1 = getChannelIconURL /* getChannelIconURL */;
+    let obj1 = getChannelIconURL;
     const channelIconURL = obj1.getChannelIconURL(channel, size2);
     let tmp13 = channelIconURL;
     if (typeof channelIconURL !== "number") {

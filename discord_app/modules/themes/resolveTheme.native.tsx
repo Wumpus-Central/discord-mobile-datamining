@@ -49,6 +49,6 @@ export default function resolveTheme(arg0, arg1) {
       tmp10 = tmp14(1348).isMobileVisualRefreshEnabled("resolveTheme") ? closure_7 : closure_6[theme1];
       const tmp14Result = tmp14(1348);
     }
-    obj2 = getToken /* getToken */;
+    obj2 = getToken;
   }
 };

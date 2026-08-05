@@ -22,7 +22,7 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
     } else if (tmp10.FRECENCY === id) {
       return getAvatarURL.makeSource(registerAsset);
     } else {
-      if (section.type === ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandSectionType.APPLICATION) {
+      if (section.type === ApplicationCommandSectionType.ApplicationCommandSectionType.APPLICATION) {
         let obj = getAvatarURL;
         obj = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
         ({ id: obj2[0], icon: obj2[1], application } = section);

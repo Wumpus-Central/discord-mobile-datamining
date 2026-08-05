@@ -60,15 +60,15 @@ function canWatchStream(basicChannel1, closure_17, closure_12, closure_14, updat
     let isInChannelResult = closure_17.isInChannel(basicChannel1.id);
     let isChannelFullResult = basicChannel1 instanceof ChannelRecordBase;
     if (isChannelFullResult) {
-      obj = allowChannelAccess /* allowChannelAccess */;
+      obj = allowChannelAccess;
       isChannelFullResult = obj.isChannelFull(basicChannel1, closure_17, closure_12);
     }
     let tmp9 = canJoinVoiceChannel(basicChannel1, closure_14);
     const tmp10 = null != updateVoiceState.getAwaitingRemoteSessionInfo() || null != updateVoiceState.getRemoteSessionId();
-    let result = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.shouldAgeVerifyForAgeGate();
+    let result = shouldShowAgeGateForVoiceChannel.shouldAgeVerifyForAgeGate();
     if (result) {
-      result = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.shouldShowAgeGateForChannelId(basicChannel1.id);
-      const tmp11Result = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+      result = shouldShowAgeGateForVoiceChannel.shouldShowAgeGateForChannelId(basicChannel1.id);
+      const tmp11Result = shouldShowAgeGateForVoiceChannel;
     }
     if (tmp10) {
       let CHANNEL_FULL = obj.REMOTE_MODE;
@@ -111,48 +111,48 @@ let result = require("comparator").fileFinishedImporting("modules/go_live/utils/
 export { canStreamInChannel };
 export const getStreamCTAString = function getStreamCTAString(arg0) {
   if (obj.REMOTE_MODE === arg0) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    return intl5.string(getSystemLocale /* getSystemLocale */.t["1i3tSY"]);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t["1i3tSY"]);
   } else if (tmp.CHANNEL_FULL === arg0) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t.elyVbv);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.elyVbv);
   } else if (tmp.NO_PERMISSION === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.pgUTZC);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.pgUTZC);
   } else if (tmp.AGE_RESTRICTED === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.b5FqhF);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.b5FqhF);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["7Xq/nV"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["7Xq/nV"]);
   }
 };
 export const getStreamCTAAriaLabel = function getStreamCTAAriaLabel(arg0) {
   if (obj.REMOTE_MODE === arg0) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
-    const intl8 = getSystemLocale /* getSystemLocale */.intl;
+    const intl7 = getSystemLocale.intl;
+    const intl8 = getSystemLocale.intl;
     const _HermesInternal4 = HermesInternal;
-    return "" + intl7.string(getSystemLocale /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl8.string(getSystemLocale /* getSystemLocale */.t["1i3tSY"]);
+    return "" + intl7.string(getSystemLocale.t["7Xq/nV"]) + ": " + intl8.string(getSystemLocale.t["1i3tSY"]);
   } else if (tmp.CHANNEL_FULL === arg0) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    const intl5 = getSystemLocale.intl;
+    const intl6 = getSystemLocale.intl;
     const _HermesInternal3 = HermesInternal;
-    return "" + intl5.string(getSystemLocale /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl6.string(getSystemLocale /* getSystemLocale */.t.elyVbv);
+    return "" + intl5.string(getSystemLocale.t["7Xq/nV"]) + ": " + intl6.string(getSystemLocale.t.elyVbv);
   } else if (tmp.NO_PERMISSION === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
+    const intl4 = getSystemLocale.intl;
     const _HermesInternal2 = HermesInternal;
-    return "" + intl3.string(getSystemLocale /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl4.string(getSystemLocale /* getSystemLocale */.t.pgUTZC);
+    return "" + intl3.string(getSystemLocale.t["7Xq/nV"]) + ": " + intl4.string(getSystemLocale.t.pgUTZC);
   } else if (tmp.AGE_RESTRICTED === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
+    const intl2 = getSystemLocale.intl;
     const _HermesInternal = HermesInternal;
-    return "" + intl.string(getSystemLocale /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl2.string(getSystemLocale /* getSystemLocale */.t.b5FqhF);
+    return "" + intl.string(getSystemLocale.t["7Xq/nV"]) + ": " + intl2.string(getSystemLocale.t.b5FqhF);
   } else {
-    const intl9 = getSystemLocale /* getSystemLocale */.intl;
-    const intl10 = getSystemLocale /* getSystemLocale */.intl;
+    const intl9 = getSystemLocale.intl;
+    const intl10 = getSystemLocale.intl;
     const _HermesInternal5 = HermesInternal;
-    return "" + intl9.string(getSystemLocale /* getSystemLocale */.t["7Xq/nV"]) + ": " + intl10.string(getSystemLocale /* getSystemLocale */.t["9C444m"]);
+    return "" + intl9.string(getSystemLocale.t["7Xq/nV"]) + ": " + intl10.string(getSystemLocale.t["9C444m"]);
   }
 };
 export const StreamUnavailableReasons = obj;

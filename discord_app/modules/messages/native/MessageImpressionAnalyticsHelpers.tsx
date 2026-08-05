@@ -47,7 +47,7 @@ function getVoiceInviteEmbedRenderInfo(state) {
               return tmp4;
             }
           }
-          obj5 = InviteTypes /* InviteTypes */;
+          obj5 = InviteTypes;
         }
       }
     }

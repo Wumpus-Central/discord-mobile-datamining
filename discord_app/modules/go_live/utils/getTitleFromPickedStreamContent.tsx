@@ -14,8 +14,8 @@ export default function getTitleFromPickedStreamContent(windows) {
   } else {
     joined = null;
     if (windows.displays.length > 0) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      joined = intl.string(getSystemLocale /* getSystemLocale */.t.R4wpLN);
+      const intl = getSystemLocale.intl;
+      joined = intl.string(getSystemLocale.t.R4wpLN);
     }
   }
   return joined;

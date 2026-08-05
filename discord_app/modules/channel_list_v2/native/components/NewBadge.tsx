@@ -12,7 +12,7 @@ import { useIsUsingClientTheme } from "../../../client_themes/native/useIsUsingC
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((arg0, arg1) => {
-  let obj = set /* set */;
+  let obj = set;
   let num = 0;
   if (obj.isIOS()) {
     num = 1;
@@ -44,7 +44,7 @@ export default function NewBadge() {
   }
   obj[2] = str;
   const intl = tmp7(1236).intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
-  obj[1] = jsx(Text /* Text */.Text, { variant: "text-xxs/bold", style: tmp4.text, color: null, children: null });
+  obj[3] = intl.string(getSystemLocale.t.y2b7CA);
+  obj[1] = jsx(Text.Text, { variant: "text-xxs/bold", style: tmp4.text, color: null, children: null });
   return <View variant="text-xxs/bold" style={tmp4.text} color={null}>{null}</View>;
 };

@@ -7,24 +7,24 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.CyLYKZ);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.CyLYKZ);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   useValue: function useDataToSupportQuests3PSettingValue() {
-    const Quests3PDataOptedOut = explicitContentFromProto /* explicitContentFromProto */.Quests3PDataOptedOut;
+    const Quests3PDataOptedOut = explicitContentFromProto.Quests3PDataOptedOut;
     return !Quests3PDataOptedOut.useSetting();
   },
   onValueChange: function onDataToSupportQuests3PSettingValueChange(arg0) {
-    const Quests3PDataOptedOut = explicitContentFromProto /* explicitContentFromProto */.Quests3PDataOptedOut;
+    const Quests3PDataOptedOut = explicitContentFromProto.Quests3PDataOptedOut;
     Quests3PDataOptedOut.updateSetting(!arg0);
   },
   useIsDisabled: function useDataToSupportQuests3PSettingIsDisabled() {
-    let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
-    const DropsOptedOut = explicitContentFromProto /* explicitContentFromProto */.DropsOptedOut;
+    let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
+    const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
     const setting = DropsOptedOut.useSetting();
-    const obj = useAdPersonalizationTogglesDisabled /* useAdPersonalizationTogglesDisabled */;
-    const isParentallyControlled = useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    const obj = useAdPersonalizationTogglesDisabled;
+    const isParentallyControlled = useParentalControlledExplicitContentSettings.useIsParentallyControlled();
     if (!adPersonalizationTogglesDisabled) {
       adPersonalizationTogglesDisabled = setting;
     }
@@ -36,24 +36,24 @@ const toggle = createToggle.createToggle({
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.CyLYKZ);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.CyLYKZ);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   useValue: function useDataToSupportQuests3PSettingValue() {
-    const Quests3PDataOptedOut = explicitContentFromProto /* explicitContentFromProto */.Quests3PDataOptedOut;
+    const Quests3PDataOptedOut = explicitContentFromProto.Quests3PDataOptedOut;
     return !Quests3PDataOptedOut.useSetting();
   },
   onValueChange: function onDataToSupportQuests3PSettingValueChange(arg0) {
-    const Quests3PDataOptedOut = explicitContentFromProto /* explicitContentFromProto */.Quests3PDataOptedOut;
+    const Quests3PDataOptedOut = explicitContentFromProto.Quests3PDataOptedOut;
     Quests3PDataOptedOut.updateSetting(!arg0);
   },
   useIsDisabled: function useDataToSupportQuests3PSettingIsDisabled() {
-    let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
-    const DropsOptedOut = explicitContentFromProto /* explicitContentFromProto */.DropsOptedOut;
+    let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
+    const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
     const setting = DropsOptedOut.useSetting();
-    const obj = useAdPersonalizationTogglesDisabled /* useAdPersonalizationTogglesDisabled */;
-    const isParentallyControlled = useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    const obj = useAdPersonalizationTogglesDisabled;
+    const isParentallyControlled = useParentalControlledExplicitContentSettings.useIsParentallyControlled();
     if (!adPersonalizationTogglesDisabled) {
       adPersonalizationTogglesDisabled = setting;
     }

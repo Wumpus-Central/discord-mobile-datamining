@@ -9,7 +9,7 @@ const result = require("map").fileFinishedImporting("modules/main_tabs_v2/native
 export default function usePressUnderlayColor(arr) {
   const tmp2 = useTheme();
   const tmp3 = require;
-  const token = map /* map */.useToken(Themes.colors.INTERACTIVE_BACKGROUND_ACTIVE);
+  const token = map.useToken(Themes.colors.INTERACTIVE_BACKGROUND_ACTIVE);
   let substr;
   if (arr != null) {
     substr = arr.slice(0, arr.length - 2);

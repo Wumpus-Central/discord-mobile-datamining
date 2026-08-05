@@ -5,8 +5,8 @@ const result = require("set").fileFinishedImporting("modules/main_tabs_v2/naviga
 export default function getNavigatorCurrentRoute() {
   let rootNavigationRef = arg0;
   if (arg0 === undefined) {
-    rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
-    const obj2 = getRootNavigationRef /* getRootNavigationRef */;
+    rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+    const obj2 = getRootNavigationRef;
   }
   let isReadyResult;
   if (rootNavigationRef != null) {

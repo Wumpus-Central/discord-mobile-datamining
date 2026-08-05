@@ -223,8 +223,8 @@ class DisconnectStreamButton {
 }
 function LeaveActivityButton(isSmallSize) {
   let obj = { accessibilityLabel: null, onPress: null, source: null, isSmallSize: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.k0Aph0);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.k0Aph0);
   obj[1] = function onPress() {
     currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
     let obj = callback(table[30]);
@@ -246,7 +246,7 @@ function LeaveActivityButton(isSmallSize) {
 }
 function useActionBarSecondButton(channel) {
   channel = channel.channel;
-  let obj = useIsConnectedToVoiceChannel /* useIsConnectedToVoiceChannel */;
+  let obj = useIsConnectedToVoiceChannel;
   let isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   const tmp2 = useIsRemote();
   let tmp4 = isConnectedToVoiceChannel;
@@ -351,7 +351,7 @@ export default function ChannelCallActionBar(arg0) {
     END_REMOTE = tmp6[tmp7.END_ACTIVITY] ? tmp7.END_ACTIVITY : tmp7.END_CALL;
   }
   const tmp4 = useIsRemote();
-  let obj = useIsFiveButtonLayout /* useIsFiveButtonLayout */;
+  let obj = useIsFiveButtonLayout;
   const isFiveButtonLayout = obj.useIsFiveButtonLayout(channel.id);
   obj = { value: context(tmp2(5630).CHANNEL_CALL_ACTION_BAR).analyticsLocations, children: null };
   obj = { pointerEvents: "box-none", style: isFiveButtonLayout ? tmp.containerForFiveButtonLayout : tmp.container, children: null };
@@ -422,7 +422,7 @@ export default function ChannelCallActionBar(arg0) {
   }
   obj[2] = tmp13Result;
   obj[1] = closure_14(View, obj);
-  return closure_14(context /* context */.AnalyticsLocationProvider, obj);
+  return closure_14(context.AnalyticsLocationProvider, obj);
 };
 export { VideoButton };
 export { ScreenshareButton };
@@ -432,7 +432,7 @@ export { DisconnectStreamButton };
 export const ActionBarSecondButton = obj2;
 export const useActionBarSecondButtons = function useActionBarSecondButtons(channel) {
   channel = channel.channel;
-  let obj = useIsConnectedToVoiceChannel /* useIsConnectedToVoiceChannel */;
+  let obj = useIsConnectedToVoiceChannel;
   let isConnectedToVoiceChannel = obj.useIsConnectedToVoiceChannel(channel);
   const tmp2 = useIsRemote();
   let tmp4 = isConnectedToVoiceChannel;

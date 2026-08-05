@@ -45,8 +45,8 @@ export const trackForwardSent = function trackForwardSent(arg0) {
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guild_id));
-    const obj5 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+    const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guild_id));
+    const obj5 = collectGuildAnalyticsMetadata;
     const merged1 = Object.assign(tmp13(4479).collectChannelAnalyticsMetadata(channel));
     tmpResult.track(AnalyticEvents.MESSAGE_SHORTCUT_ACTION_SENT, obj);
     const tmp13Result = tmp13(4479);

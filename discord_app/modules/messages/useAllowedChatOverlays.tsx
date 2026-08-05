@@ -28,12 +28,12 @@ obj[ActivityPanelModes.ACTIVITY_POPOUT_WINDOW] = items4;
 const result = require("ChatOverlays").fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
 
 export default function useAllowedChatOverlays() {
-  const obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  const obj = defaultAreStatesEqual;
   const items = [participantFromServer];
   const stateFromStores = obj.useStateFromStores(items, () => store.getCurrentEmbeddedActivity());
   const items1 = [participantFromServer];
-  const stateFromStores1 = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items1, () => store.getActivityPanelMode());
-  getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
+  const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => store.getActivityPanelMode());
+  getEmbeddedActivityLocationChannelId;
   if (stateFromStores != null) {
     const _location = stateFromStores.location;
   }

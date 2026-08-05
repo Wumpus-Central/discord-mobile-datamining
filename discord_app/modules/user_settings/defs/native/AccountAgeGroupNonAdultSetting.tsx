@@ -8,14 +8,14 @@ import { isFeatureAgeGated } from "../../../regional_feature_config/RegionalFeat
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["/52UYy"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/52UYy"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing: function useAccountAgeGroupNonAdultSettingTrailing() {
-    const isAgeVerified = useAgeVerificationRunner /* useAgeVerificationRunner */.useIsAgeVerified();
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.lKDPGA);
+    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
+    const intl = getSystemLocale.intl;
+    let stringResult = intl.string(getSystemLocale.t.lKDPGA);
     if (isAgeVerified) {
       const intl2 = tmp(1236).intl;
       stringResult = intl2.string(tmp(1236).t.sK0dmH);
@@ -24,16 +24,16 @@ const pressable = createToggle.createPressable({
   },
   onPress: function onAccountAgeGroupNonAdultSettingPress() {
     let obj = openIncodeAgeVerificationModal;
-    obj = { entryPoint: AgeVerificationModalEntryPoint /* AgeVerificationModalEntryPoint */.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
+    obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   },
   withArrow: true,
   usePredicate: function AccountAgeGroupNonAdultSettingPredicate() {
-    const isAgeVerified = useAgeVerificationRunner /* useAgeVerificationRunner */.useIsAgeVerified();
-    const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
-    const isVerifiedTeen = useAgeVerificationRunner /* useAgeVerificationRunner */.useIsVerifiedTeen();
-    const obj2 = useAgeVerificationRunner /* useAgeVerificationRunner */;
-    let hasTeenDefaults = isFeatureAgeGated /* isFeatureAgeGated */.useHasTeenDefaults();
+    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
+    const obj = useAgeVerificationRunner;
+    const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
+    const obj2 = useAgeVerificationRunner;
+    let hasTeenDefaults = isFeatureAgeGated.useHasTeenDefaults();
     if (hasTeenDefaults) {
       let tmp4 = !isAgeVerified;
       if (isAgeVerified) {
@@ -46,14 +46,14 @@ const pressable = createToggle.createPressable({
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["/52UYy"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/52UYy"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing: function useAccountAgeGroupNonAdultSettingTrailing() {
-    const isAgeVerified = useAgeVerificationRunner /* useAgeVerificationRunner */.useIsAgeVerified();
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.lKDPGA);
+    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
+    const intl = getSystemLocale.intl;
+    let stringResult = intl.string(getSystemLocale.t.lKDPGA);
     if (isAgeVerified) {
       const intl2 = tmp(1236).intl;
       stringResult = intl2.string(tmp(1236).t.sK0dmH);
@@ -62,16 +62,16 @@ let obj = {
   },
   onPress: function onAccountAgeGroupNonAdultSettingPress() {
     let obj = openIncodeAgeVerificationModal;
-    obj = { entryPoint: AgeVerificationModalEntryPoint /* AgeVerificationModalEntryPoint */.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
+    obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   },
   withArrow: true,
   usePredicate: function AccountAgeGroupNonAdultSettingPredicate() {
-    const isAgeVerified = useAgeVerificationRunner /* useAgeVerificationRunner */.useIsAgeVerified();
-    const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
-    const isVerifiedTeen = useAgeVerificationRunner /* useAgeVerificationRunner */.useIsVerifiedTeen();
-    const obj2 = useAgeVerificationRunner /* useAgeVerificationRunner */;
-    let hasTeenDefaults = isFeatureAgeGated /* isFeatureAgeGated */.useHasTeenDefaults();
+    const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
+    const obj = useAgeVerificationRunner;
+    const isVerifiedTeen = useAgeVerificationRunner.useIsVerifiedTeen();
+    const obj2 = useAgeVerificationRunner;
+    let hasTeenDefaults = isFeatureAgeGated.useHasTeenDefaults();
     if (hasTeenDefaults) {
       let tmp4 = !isAgeVerified;
       if (isAgeVerified) {

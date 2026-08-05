@@ -7,7 +7,7 @@ const items = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_
 obj[require("RPC_SCOPE_CONFIG").RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function handler() {
-  return validateSocketClient /* validateSocketClient */.getDeprecatedVoiceSettings();
+  return validateSocketClient.getDeprecatedVoiceSettings();
 };
 obj[require("ME").RPCCommands.GET_VOICE_SETTINGS] = obj;
 const result = require("set").fileFinishedImporting("modules/rpc/native/server/commands/voiceSettings.tsx");

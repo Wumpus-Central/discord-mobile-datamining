@@ -24,21 +24,21 @@ function ColorSwatch(color) {
   color = color.color;
   ({ label, accessibilityLabel, onPress, style } = color);
   const tmp = createCacheKey();
-  let obj = int2hslRaw /* int2hslRaw */;
+  let obj = int2hslRaw;
   const int2hexResult = obj.int2hex(color);
-  let obj1 = getHigherContrastColor /* getHigherContrastColor */;
+  let obj1 = getHigherContrastColor;
   const items = [WHITE, PRIMARY_530];
   obj = { style: tmp.colorSwatchContainer, children: null };
   const higherContrastColor = obj1.getHigherContrastColor({ backgroundColor: int2hexResult, colors: items });
   obj = { accessibilityRole: "button", accessibilityLabel, accessibilityHint: null, style: null, onPress: null, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.Qp04hK);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.Qp04hK);
   const items1 = [tmp.colorSwatch, { backgroundColor: int2hexResult }, style];
   obj[3] = items1;
   obj[4] = onPress;
   obj1 = { size: "xs", color: higherContrastColor, style: tmp.dropperIcon };
-  obj[5] = callback(PencilIcon /* PencilIcon */.PencilIcon, obj1);
-  const items2 = [callback(PressableBase /* PressableBase */.PressableOpacity, obj, color), callback(Text /* Text */.Text, { variant: "text-sm/normal", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: label })];
+  obj[5] = callback(PencilIcon.PencilIcon, obj1);
+  const items2 = [callback(PressableBase.PressableOpacity, obj, color), callback(Text.Text, { variant: "text-sm/normal", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: label })];
   obj[1] = items2;
   return callback2(View, obj);
 }
@@ -144,8 +144,8 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         }
       };
       obj5[0] = () => {
-        let obj = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
-        const result = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
+        let obj = UNSAFE_isDismissibleContentDismissed;
+        const result = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
         obj = { color: secondaryColor, onSelect: f92377, suggestedColors: closure_4 };
         showCustomColorPickerActionSheet(obj);
       };
@@ -177,8 +177,8 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         }
       };
       obj7[1] = () => {
-        let obj = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
-        const result = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
+        let obj = UNSAFE_isDismissibleContentDismissed;
+        const result = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
         obj = { color: secondaryColor, onSelect: f92377, suggestedColors: closure_4 };
         showCustomColorPickerActionSheet(obj);
       };

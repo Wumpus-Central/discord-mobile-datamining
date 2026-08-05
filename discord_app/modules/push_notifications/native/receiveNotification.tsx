@@ -27,8 +27,8 @@ const require = arg1;
 function onStageConnectionError() {
   let obj = dispatcher;
   obj = { key: "STAGE_DISCOVERY_CONNECTION_ERROR_GENERIC", content: null, icon: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.ah3RLk);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.ah3RLk);
   obj[2] = registerAsset;
   obj.open(obj);
 }

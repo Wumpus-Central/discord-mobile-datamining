@@ -15,7 +15,7 @@ export const isFabric = function isFabric() {
   return flag;
 };
 export const isIosFabric = function isIosFabric() {
-  let isIOSResult = set /* set */.isIOS();
+  let isIOSResult = set.isIOS();
   if (isIOSResult) {
     const obj2 = enforcing;
     let flag;

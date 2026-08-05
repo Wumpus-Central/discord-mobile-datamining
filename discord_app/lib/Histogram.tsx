@@ -21,7 +21,7 @@ prototype["addSample"] = function addSample(currentCPUUsagePercent, diff) {
   this.total = this.total + currentCPUUsagePercent * num;
   this.totalWeight = this.totalWeight + num;
   this.samples = this.samples + 1;
-  const push = TDigest /* TDigest */.TDigest.prototype.push;
+  const push = TDigest.TDigest.prototype.push;
   const call = push.call;
   const digest = this.digest;
   if (typeof call === "unknown") {

@@ -25,7 +25,7 @@ export default function UserProfilePrivateBanner(primaryColor) {
   let tmp3 = null != primaryColor;
   if (tmp3) {
     let obj = { backgroundColor: null };
-    let obj1 = int2hslRaw /* int2hslRaw */;
+    let obj1 = int2hslRaw;
     obj[0] = obj1.int2hex(primaryColor);
     tmp3 = obj;
   }
@@ -33,11 +33,11 @@ export default function UserProfilePrivateBanner(primaryColor) {
   items[1] = tmp3;
   obj = { size: "xs", color: null };
   obj[1] = Themes.colors.TEXT_DEFAULT;
-  const items1 = [callback(LockIcon /* LockIcon */.LockIcon, obj), ];
+  const items1 = [callback(LockIcon.LockIcon, obj), ];
   obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[2] = intl.string(getSystemLocale /* getSystemLocale */.t.KPnd2O);
-  items1[1] = callback(Text /* Text */.Text, obj1);
+  const intl = getSystemLocale.intl;
+  obj1[2] = intl.string(getSystemLocale.t.KPnd2O);
+  items1[1] = callback(Text.Text, obj1);
   obj[1] = items1;
   return closure_5(View, obj);
 };

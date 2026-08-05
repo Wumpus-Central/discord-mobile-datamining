@@ -6,7 +6,7 @@ import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
 const result = require("QuestRewardTypes").fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 
 export const getDurationStringOfFractionalPremium = function getDurationStringOfFractionalPremium(arr) {
-  let obj = getPremiumPlanItem /* getPremiumPlanItem */;
+  let obj = getPremiumPlanItem;
   const fractionalPremiumUnitsHoursFromSkuIds = obj.getFractionalPremiumUnitsHoursFromSkuIds(arr.map((skuId) => skuId.skuId));
   if (fractionalPremiumUnitsHoursFromSkuIds % 24 === 0) {
     const intl2 = tmp(1236).intl;
@@ -30,15 +30,15 @@ export const getFractionalPremiumQuestRewardName = function getFractionalPremium
   const found = rewards.filter((type) => type.type === callback(table[2]).QuestRewardTypes.FRACTIONAL_PREMIUM);
   const flatMapResult = found.flatMap((quantity) => Array(quantity.quantity).fill(quantity.skuId));
   let obj = { days: null, hours: null, minutes: null };
-  const fractionalPremiumUnitsHoursFromSkuIds = getPremiumPlanItem /* getPremiumPlanItem */.getFractionalPremiumUnitsHoursFromSkuIds(flatMapResult);
-  obj[0] = getSystemLocale /* getSystemLocale */.t.fYmirx;
-  obj[1] = getSystemLocale /* getSystemLocale */.t["C3RO+g"];
-  obj[2] = getSystemLocale /* getSystemLocale */.t.r77oHc;
-  const obj2 = getPremiumPlanItem /* getPremiumPlanItem */;
-  const obj4 = resetCache /* resetCache */;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const fractionalPremiumUnitsHoursFromSkuIds = getPremiumPlanItem.getFractionalPremiumUnitsHoursFromSkuIds(flatMapResult);
+  obj[0] = getSystemLocale.t.fYmirx;
+  obj[1] = getSystemLocale.t["C3RO+g"];
+  obj[2] = getSystemLocale.t.r77oHc;
+  const obj2 = getPremiumPlanItem;
+  const obj4 = resetCache;
+  const intl = getSystemLocale.intl;
   obj = { time: null };
-  const diffAsUnitsResult = resetCache /* resetCache */.diffAsUnits(0, fractionalPremiumUnitsHoursFromSkuIds * set.Millis.HOUR);
-  obj[0] = resetCache /* resetCache */.unitsAsStrings(diffAsUnitsResult, obj);
-  return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["4SqnVD"], obj);
+  const diffAsUnitsResult = resetCache.diffAsUnits(0, fractionalPremiumUnitsHoursFromSkuIds * set.Millis.HOUR);
+  obj[0] = resetCache.unitsAsStrings(diffAsUnitsResult, obj);
+  return intl.formatToPlainString(getSystemLocale.t["4SqnVD"], obj);
 };

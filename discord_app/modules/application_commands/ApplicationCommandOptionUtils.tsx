@@ -338,7 +338,7 @@ export const normalizeNumericString = function normalizeNumericString(locale, tr
   let group;
   if (locale !== closure_5) {
     closure_5 = locale;
-    en_US = numberParts /* numberParts */.numberParts[locale];
+    en_US = numberParts.numberParts[locale];
     if (en_US == null) {
       en_US = tmp11(9912).numberParts["en-US"];
     }

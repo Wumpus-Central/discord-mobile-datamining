@@ -126,7 +126,7 @@ export const useForLaterLimit = function useForLaterLimit(ForLaterScreen, arg1) 
   const config = store2.useConfig(obj);
   obj = { location: ForLaterScreen };
   const config1 = store.useConfig(obj);
-  const hasForLaterPremiumType = hasForLaterPremiumType /* hasForLaterPremiumType */.useHasForLaterPremiumType();
+  const hasForLaterPremiumType = hasForLaterPremiumType.useHasForLaterPremiumType();
   if (!config.enabled) {
     let num = 0;
     if (tmp4) {

@@ -61,7 +61,7 @@ function AuditIcons(action) {
     }
   }
   if (action === constants2.MESSAGE_DELETE) {
-    let RobotIcon = ChatIcon /* ChatIcon */.ChatIcon;
+    let RobotIcon = ChatIcon.ChatIcon;
   } else {
     if (action !== tmp12.AUTO_MODERATION_BLOCK_MESSAGE) {
       if (action !== tmp12.AUTO_MODERATION_FLAG_TO_CHANNEL) {
@@ -72,7 +72,7 @@ function AuditIcons(action) {
         }
       }
     }
-    RobotIcon = RobotIcon /* RobotIcon */.RobotIcon;
+    RobotIcon = RobotIcon.RobotIcon;
   }
   let obj = { style: tmp.actionImageContainer, children: null };
   obj = { size: "custom", style: tmp.iconComponent };
@@ -81,7 +81,7 @@ function AuditIcons(action) {
   ({ actionImageOverlay: arr2[0], actionImage: arr2[1] } = tmp);
   items[1] = callback2(View, { style: items1 });
   obj = { style: tmp.actionImage, source: tmp4, disableColor: true };
-  items[2] = callback2(Button /* Button */.Icon, obj);
+  items[2] = callback2(Button.Icon, obj);
   obj[1] = items;
   return callback3(View, obj);
 }

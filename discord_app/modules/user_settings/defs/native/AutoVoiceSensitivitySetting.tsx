@@ -8,13 +8,13 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Z4oaN0);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Z4oaN0);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue: function useAutoVoiceSensitivitySettingValue() {
     const items = [_detectH265HardwareDecode];
-    return initialize /* initialize */.useStateFromStores(items, () => modeOptions.getModeOptions().autoThreshold);
+    return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().autoThreshold);
   },
   onValueChange: function onAutoVoiceSensitivitySettingValueChange(autoThreshold) {
     mode = mode.getMode();
@@ -23,8 +23,8 @@ createToggle = {
     obj.setMode(mode, obj);
   },
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.nuFtHH)];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t.nuFtHH)];
     return items;
   }
 };

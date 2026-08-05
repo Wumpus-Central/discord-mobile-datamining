@@ -169,7 +169,7 @@ obj5.storageKey = "searchResultsFeedback";
 obj5.feedbackType = FeedbackType.SEARCH_RESULTS;
 const items1 = [
   function searchResultsEligibilityCheck() {
-    return useIsSearchResultsFeedbackExperimentEnabled /* useIsSearchResultsFeedbackExperimentEnabled */.getIsSearchResultsFeedbackExperimentEnabled({ location: "FeedbackManager" });
+    return useIsSearchResultsFeedbackExperimentEnabled.getIsSearchResultsFeedbackExperimentEnabled({ location: "FeedbackManager" });
   }
 ];
 obj5.eligibilityChecks = items1;

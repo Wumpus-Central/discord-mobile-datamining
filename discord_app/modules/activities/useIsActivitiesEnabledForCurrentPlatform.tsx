@@ -3,8 +3,8 @@ import { isTablet } from "../../../discord_common/js/shared/lib/PlatformUtils.ts
 const result = require("set").fileFinishedImporting("modules/activities/useIsActivitiesEnabledForCurrentPlatform.tsx");
 
 export const useIsActivitiesEnabledForCurrentPlatform = function useIsActivitiesEnabledForCurrentPlatform() {
-  return !isTablet /* isTablet */.isTablet;
+  return !isTablet.isTablet;
 };
 export const getIsActivitiesEnabledForCurrentPlatform = function getIsActivitiesEnabledForCurrentPlatform() {
-  return !isTablet /* isTablet */.isTablet;
+  return !isTablet.isTablet;
 };

@@ -70,12 +70,12 @@ function PlaceholderUser(end) {
   let obj = { icon: null, label: null, start: null, end: null };
   obj = { source: obj, size: null, "aria-hidden": true };
   obj = { uri: user.avatarSrc };
-  obj[1] = Button /* Button */.AvatarSizes.NORMAL;
-  obj[0] = callback(Button /* Button */.Avatar, obj);
+  obj[1] = Button.AvatarSizes.NORMAL;
+  obj[0] = callback(Button.Avatar, obj);
   obj[1] = user.name;
   obj[2] = start;
   obj[3] = flag;
-  return callback(TableRowInner /* TableRowInner */.TableRow, obj);
+  return callback(TableRowInner.TableRow, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" }, memberListContainer: null, memberListTitle: null, memberListGradient: null };
@@ -92,12 +92,12 @@ export default function NameplateProductPreview(product) {
   let firstAvatarDecoration;
   let firstNameplate;
   const tmp = createCacheKey();
-  let obj = firstAvatarDecoration /* firstAvatarDecoration */;
+  let obj = firstAvatarDecoration;
   const shopProductItems = obj.useShopProductItems(product.product);
   ({ firstNameplate, firstAvatarDecoration } = shopProductItems);
-  let obj1 = getNameplateData /* getNameplateData */;
+  let obj1 = getNameplateData;
   const nameplateData = obj1.getNameplateData(firstNameplate);
-  let obj2 = getNameplateData /* getNameplateData */;
+  let obj2 = getNameplateData;
   const nameplateSampleUsers = obj2.getNameplateSampleUsers();
   let tmp7 = null;
   if (null != nameplateData) {

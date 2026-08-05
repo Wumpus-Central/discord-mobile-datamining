@@ -10,5 +10,5 @@ export default function MentionsBadge(arg0) {
   let isMentionLowImportance;
   let mentionsCount;
   ({ mentionsCount, isMentionLowImportance } = arg0);
-  return jsx(Button /* Button */.Badge, { value, isMentionLowImportance });
+  return jsx(Button.Badge, { value, isMentionLowImportance });
 };

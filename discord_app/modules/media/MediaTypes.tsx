@@ -5,7 +5,7 @@ import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
 import { urlMatchesFileExtension } from "../messages/MediaFormatTesters.tsx";
 
 function messageAttachmentToUnfurledMediaItem(flags) {
-  let obj = hasFlag /* hasFlag */;
+  let obj = hasFlag;
   let num = flags.flags;
   if (num == null) {
     num = 0;
@@ -76,7 +76,7 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(conten
       }
     }
     str = str3;
-    tmpResult = urlMatchesFileExtension /* urlMatchesFileExtension */;
+    tmpResult = urlMatchesFileExtension;
   }
   return str;
 };
@@ -90,7 +90,7 @@ export const messageAttachmentToMediaItem = function messageAttachmentToMediaIte
       str2 = "VIDEO";
     }
     str = str2;
-    tmp2Result = urlMatchesFileExtension /* urlMatchesFileExtension */;
+    tmp2Result = urlMatchesFileExtension;
   }
   obj.type = str;
   obj.alt = found2.description;

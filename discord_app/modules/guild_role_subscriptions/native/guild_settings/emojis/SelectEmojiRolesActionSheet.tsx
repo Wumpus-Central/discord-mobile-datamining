@@ -66,7 +66,7 @@ export default function SelectEmojiRolesActionSheet(arg0) {
   }), 2);
   first = tmp2[0];
   React = tmp2[1];
-  let obj = useFetchListingsForGuild /* useFetchListingsForGuild */;
+  let obj = useFetchListingsForGuild;
   subscriptionListingsForGuild = obj.useSubscriptionListingsForGuild(guildId, { includeSoftDeleted: true, sortDeletedListingsLast: true });
   obj = {
     onPress() {
@@ -91,13 +91,13 @@ export default function SelectEmojiRolesActionSheet(arg0) {
     stringResult = intl.string(tmp5(1236).t["R3BPH+"]);
   }
   obj[1] = stringResult;
-  obj[3] = closure_6(Button /* Button */.LegacyText, obj);
-  let tmp7Result = tmp7(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[3] = closure_6(Button.LegacyText, obj);
+  let tmp7Result = tmp7(PressableBase.PressableOpacity, obj);
   let obj1 = { title: null, subtitle: null, trailing: null };
   const intl3 = tmp5(1236).intl;
-  obj1[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.JPU0EF);
+  obj1[0] = intl3.string(getSystemLocale.t.JPU0EF);
   const intl4 = tmp5(1236).intl;
-  obj1[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.MZusPv);
+  obj1[1] = intl4.string(getSystemLocale.t.MZusPv);
   obj1[2] = tmp7Result;
   tmp7Result = tmp7(tmp5(5337).BottomSheetTitleHeader, obj1);
   let obj2 = { scrollable: true, header: tmp7Result, startExpanded: true, onDismiss: onCancel, children: null };
@@ -156,5 +156,5 @@ export default function SelectEmojiRolesActionSheet(arg0) {
       return outer1_7(outer1_8, { children });
     }
   });
-  return closure_6(ActionSheet /* ActionSheet */.ActionSheet, obj2);
+  return closure_6(ActionSheet.ActionSheet, obj2);
 };

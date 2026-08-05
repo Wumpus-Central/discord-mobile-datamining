@@ -36,9 +36,9 @@ let closure_10 = importAllResult.memo((arg0) => {
   ({ channel, openTab } = arg0);
   const channelId = importAllResult.useContext(dismissPanel).channelId;
   const tmp2 = useIsConnectedToVoiceChannel(channelId);
-  let obj = getEmbeddedActivityLaunchability /* getEmbeddedActivityLaunchability */;
+  let obj = getEmbeddedActivityLaunchability;
   const embeddedActivityLaunchability = obj.useEmbeddedActivityLaunchability(channelId);
-  const DeveloperMode = explicitContentFromProto /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = explicitContentFromProto.DeveloperMode;
   const setting = DeveloperMode.useSetting();
   let obj1 = apexExperiment;
   const treatment = obj1.useConfig({ location: "VoicePanelVoiceControls" }).treatment;

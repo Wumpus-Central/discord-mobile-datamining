@@ -1120,8 +1120,8 @@ prototype["getMentionGames"] = function getMentionGames() {
 };
 prototype["buildGameMentionNode"] = function buildGameMentionNode(game) {
   const styles = this.styles;
-  const obj = { type: addRule /* addRule */.ChatInputNodeType.GAME_HIGHLIGHT, style: styles.gameMention(), deleteNodeOnBackspace: true, editDisabled: true };
-  const merged = Object.assign(findGameMentionTokens /* findGameMentionTokens */.buildGameMentionResult(game));
+  const obj = { type: addRule.ChatInputNodeType.GAME_HIGHLIGHT, style: styles.gameMention(), deleteNodeOnBackspace: true, editDisabled: true };
+  const merged = Object.assign(findGameMentionTokens.buildGameMentionResult(game));
   return obj;
 };
 prototype["setPreferredOptionValue"] = function setPreferredOptionValue(id, name, displayText) {

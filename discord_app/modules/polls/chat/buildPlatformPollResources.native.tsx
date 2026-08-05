@@ -49,5 +49,5 @@ export const buildPlatformPollResources = function buildPlatformPollResources(th
   return obj;
 };
 export const getAvatarUrl = function getAvatarUrl(currentUser, guildId) {
-  return ensureAvatarSource /* ensureAvatarSource */.ensureAvatarSource(currentUser.getAvatarSource(guildId, false)).uri;
+  return ensureAvatarSource.ensureAvatarSource(currentUser.getAvatarSource(guildId, false)).uri;
 };

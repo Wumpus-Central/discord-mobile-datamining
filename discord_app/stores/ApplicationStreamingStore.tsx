@@ -46,7 +46,7 @@ function handleStreamUpdate(streamKey) {
     map1.delete(streamKey);
   }
   const obj = {};
-  const merged = Object.assign(isStreamKey /* isStreamKey */.decodeStreamKey(streamKey));
+  const merged = Object.assign(isStreamKey.decodeStreamKey(streamKey));
   obj.state = paused ? closure_18.PAUSED : closure_18.ACTIVE;
   const result = map.set(streamKey, obj);
   closure_5[streamKey] = { streamKey, region, viewerIds };
@@ -141,7 +141,7 @@ prototype["getActiveStreamForApplicationStream"] = function getActiveStreamForAp
   if (canSpectate(_detectH265HardwareDecode)) {
     if (null != streamForUser) {
       const self = this;
-      let activeStreamForStreamKey = this.getActiveStreamForStreamKey(isStreamKey /* isStreamKey */.encodeStreamKey(streamForUser));
+      let activeStreamForStreamKey = this.getActiveStreamForStreamKey(isStreamKey.encodeStreamKey(streamForUser));
       if (activeStreamForStreamKey == null) {
         activeStreamForStreamKey = null;
       }
@@ -188,7 +188,7 @@ prototype["getStreamerActiveStreamMetadata"] = function getStreamerActiveStreamM
     const activeStreamForUser = this.getActiveStreamForUser(id, channel.getGuildId());
     let tmp4 = null;
     if (null != activeStreamForUser) {
-      const obj2 = isStreamKey /* isStreamKey */;
+      const obj2 = isStreamKey;
       let tmp8 = dependencyMap3[obj2.encodeStreamKey(obj2, activeStreamForUser)];
       if (tmp8 == null) {
         tmp8 = null;
@@ -320,7 +320,7 @@ prototype["getStreamForUser"] = function getStreamForUser(id, guildId) {
         const basicChannel1 = obj.getBasicChannel(tmp5.channelId);
         let first = null != basicChannel1;
         if (first) {
-          const obj2 = canStreamInChannel /* canStreamInChannel */;
+          const obj2 = canStreamInChannel;
           first = obj2.canWatchStream(basicChannel1, updateVoiceState, createGuildRecordFromRust, getUncachedChannelPermissions, set)[0];
         }
         flag = first;
@@ -442,8 +442,8 @@ prototype["getViewerIds"] = function getViewerIds(currentUserActiveStream) {
   if (canSpectate(_detectH265HardwareDecode)) {
     let encodeStreamKeyResult = currentUserActiveStream;
     if (typeof currentUserActiveStream !== "string") {
-      encodeStreamKeyResult = isStreamKey /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
-      const obj = isStreamKey /* isStreamKey */;
+      encodeStreamKeyResult = isStreamKey.encodeStreamKey(currentUserActiveStream);
+      const obj = isStreamKey;
     }
     let tmp5 = null;
     if (null != encodeStreamKeyResult) {
@@ -710,7 +710,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(require("dispatc
   },
   STREAM_WATCH: function handleStreamWatch(streamKey) {
     streamKey = streamKey.streamKey;
-    let obj = isStreamKey /* isStreamKey */;
+    let obj = isStreamKey;
     const decodeStreamKeyResult = obj.decodeStreamKey(streamKey);
     map.delete(streamKey);
     obj = {};
@@ -859,7 +859,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(require("dispatc
     let channelId;
     let selfStreamHidden;
     ({ channelId, selfStreamHidden } = arg0);
-    let isStreamKeyResult = isStreamKey /* isStreamKey */.isStreamKey(c24);
+    let isStreamKeyResult = isStreamKey.isStreamKey(c24);
     if (isStreamKeyResult) {
       let hasItem;
       if (c24 != null) {
@@ -946,8 +946,8 @@ const applicationStreamingStore = new ApplicationStreamingStore(require("dispatc
     });
     let isStreamKeyResult = null != id;
     if (isStreamKeyResult) {
-      isStreamKeyResult = isStreamKey /* isStreamKey */.isStreamKey(id);
-      const obj = isStreamKey /* isStreamKey */;
+      isStreamKeyResult = isStreamKey.isStreamKey(id);
+      const obj = isStreamKey;
     }
     if (isStreamKeyResult) {
       isStreamKeyResult = id.includes(store2.getId());

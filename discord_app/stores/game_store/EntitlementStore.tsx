@@ -202,8 +202,8 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationI
     }
     let tmp13 = null == libraryApplication || libraryApplication.sku.id !== arg1;
     if (!tmp13) {
-      tmp13 = !getComboId /* getComboId */.isUserEntitledToLibraryApplication(libraryApplication);
-      const obj3 = getComboId /* getComboId */;
+      tmp13 = !getComboId.isUserEntitledToLibraryApplication(libraryApplication);
+      const obj3 = getComboId;
     }
     let tmp16 = !tmp13;
     if (tmp13) {

@@ -24,10 +24,10 @@ function _formatMessageCountLabel(count, iTS3Xe, id) {
     }
   }
   if ("0" === str) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.eXHkhl);
+    const intl2 = getSystemLocale.intl;
+    let stringResult = intl2.string(getSystemLocale.t.eXHkhl);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj = { count: null };
     obj[0] = str;
     stringResult = intl.formatToPlainString(iTS3Xe, obj);
@@ -59,8 +59,8 @@ export const getMessageCountText = function getMessageCountText(stateFromStores,
   return "0";
 };
 export const formatMobileMessageCountLabel = function formatMobileMessageCountLabel(count, id) {
-  return _formatMessageCountLabel(count, getSystemLocale /* getSystemLocale */.t.iTS3Xe, id);
+  return _formatMessageCountLabel(count, getSystemLocale.t.iTS3Xe, id);
 };
 export const formatMessageCountLabel = function formatMessageCountLabel(count, id) {
-  return _formatMessageCountLabel(count, getSystemLocale /* getSystemLocale */.t.rfAXDV, id);
+  return _formatMessageCountLabel(count, getSystemLocale.t.rfAXDV, id);
 };

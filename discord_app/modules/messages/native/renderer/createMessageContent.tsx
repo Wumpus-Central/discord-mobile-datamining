@@ -42,17 +42,17 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
     if (message.hasFlag(constants3.HAS_THREAD)) {
       if (null != channel1) {
         let string2Result = dependencyMap;
-        const channelName = computeChannelName /* computeChannelName */.computeChannelName(channel1, mergeGuildAvatar, upsertRelationship);
+        const channelName = computeChannelName.computeChannelName(channel1, mergeGuildAvatar, upsertRelationship);
         const backgroundColor = getEmbedThemeColors(arg5).baseColors.backgroundColor;
-        const obj11 = computeChannelName /* computeChannelName */;
+        const obj11 = computeChannelName;
         const tmp19 = importDefault;
         const mostRecentMessage = store3.getMostRecentMessage(DISCORD_EPOCH.castMessageIdAsChannelId(message.id));
         const obj12 = DISCORD_EPOCH;
         const count = store3.getCount(DISCORD_EPOCH.castMessageIdAsChannelId(message.id));
         const obj13 = DISCORD_EPOCH;
-        let intl5 = _formatMessageCountLabel /* _formatMessageCountLabel */.formatMobileMessageCountLabel(count, channel1.id);
-        const obj14 = _formatMessageCountLabel /* _formatMessageCountLabel */;
-        let string2 = _formatMessageCountLabel /* _formatMessageCountLabel */.formatMessageCountLabel(count, channel1.id);
+        let intl5 = _formatMessageCountLabel.formatMobileMessageCountLabel(count, channel1.id);
+        const obj14 = _formatMessageCountLabel;
+        let string2 = _formatMessageCountLabel.formatMessageCountLabel(count, channel1.id);
         if (null != count) {
           if (count > 0) {
             let tmp15Result = tmp15(5853);
@@ -140,7 +140,7 @@ function createThreadEmbed(message, roleStyle, isInlineReplyPreview, channel1, o
         obj[1] = intl5;
         obj[2] = string2;
         const intl = tmp15(1236).intl;
-        obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.HYtNyE);
+        obj[3] = intl.string(getSystemLocale.t.HYtNyE);
         obj[5] = backgroundColor;
         return obj;
       }

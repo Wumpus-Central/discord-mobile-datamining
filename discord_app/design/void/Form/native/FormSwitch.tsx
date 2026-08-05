@@ -35,7 +35,7 @@ export default function FormSwitch(value) {
     color = tmp4.track.color;
   }
   if (null == borderColor) {
-    let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+    let obj = AccessibilityAnnouncer;
     if (obj.isThemeDark(tmp7)) {
       borderColor = Themes.unsafe_rawColors.PRIMARY_400;
     }

@@ -23,7 +23,7 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
   ({ startDateTimeString, diffMinutes, currentOrPastEvent, upcomingEvent } = eventTimeData.eventTimeData);
   ({ event, recurrenceId } = eventTimeData);
   ({ isStage, theme, isCanceled } = eventTimeData);
-  let obj = getRRule /* getRRule */;
+  let obj = getRRule;
   if (null != recurrenceId) {
     let tmp5 = obj.getNextRecurrenceIdInEvent(event) === recurrenceId;
     if (tmp5) {

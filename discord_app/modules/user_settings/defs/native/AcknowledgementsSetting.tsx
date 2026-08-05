@@ -6,8 +6,8 @@ import { Linking } from "../../../../lib/native/Linking.tsx";
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["0nUKy3"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["0nUKy3"]);
   },
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,
@@ -18,8 +18,8 @@ const pressable = createToggle.createPressable({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["0nUKy3"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["0nUKy3"]);
   },
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,

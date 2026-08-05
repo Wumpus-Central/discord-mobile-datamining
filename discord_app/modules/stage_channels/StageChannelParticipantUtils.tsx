@@ -46,5 +46,5 @@ export const participantMemberInfo = function participantMemberInfo(participant)
     }
     return stringResult;
   }
-  obj = nameFromUser /* nameFromUser */;
+  obj = nameFromUser;
 };

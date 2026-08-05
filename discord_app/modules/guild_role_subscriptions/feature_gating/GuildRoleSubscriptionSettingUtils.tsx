@@ -149,7 +149,7 @@ export const getGuildRoleSubscriptionSettingsVisibility = function getGuildRoleS
       canResult = getUncachedChannelPermissions.can(constants2.ADMINISTRATOR, guild);
     }
     obj[2] = canResult;
-    obj = set /* set */;
+    obj = set;
     obj[3] = obj.isUserInCreatorMonetizationEligibleCountry();
     const features = guild.features;
     obj[4] = features.has(constants.CREATOR_MONETIZABLE_RESTRICTED);

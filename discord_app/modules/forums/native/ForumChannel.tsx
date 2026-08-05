@@ -40,14 +40,14 @@ function forumKeyExtractor(arg0, arg1) {
 }
 function ArchivedSection() {
   const tmp = createCacheKey();
-  let obj = useGradientBottom /* useGradientBottom */;
+  let obj = useGradientBottom;
   obj = { style: null, children: null };
   const items = [tmp.section, obj.useClientThemesOverride()];
   obj[0] = items;
   obj = { style: tmp.divider, variant: "text-xs/bold", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["3+LO1w"]);
-  obj[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["3+LO1w"]);
+  obj[1] = callback(Text.Text, obj);
   return callback(View, obj);
 }
 function SearchSection(numPosts) {
@@ -66,25 +66,25 @@ function SearchSection(numPosts) {
     stringResult = intl.formatToPlainString(tmp4(1236).t["tBz/8b"], obj);
   }
   obj[3] = stringResult;
-  obj[1] = closure_15(Text /* Text */.Text, obj);
+  obj[1] = closure_15(Text.Text, obj);
   return closure_15(View, obj);
 }
 function ArchivedMissingReadHistoryPermission(channelName) {
   const tmp = createCacheKey();
   let obj = { style: tmp.missingPermissionContainer, children: null };
   obj = { style: tmp.missingPermissionText, variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.TycmzM, { channelName: channelName.channelName });
-  obj[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.format(getSystemLocale.t.TycmzM, { channelName: channelName.channelName });
+  obj[1] = callback(Text.Text, obj);
   return callback(View, obj);
 }
 function SearchMissingReadHistoryPermission(channelName) {
   const tmp = createCacheKey();
   let obj = { style: tmp.section, children: null };
   obj = { style: tmp.missingPermissionText, variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.OWZJdS, { channelName: channelName.channelName });
-  obj[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.format(getSystemLocale.t.OWZJdS, { channelName: channelName.channelName });
+  obj[1] = callback(Text.Text, obj);
   return callback(View, obj);
 }
 function SortAndViewOptions(channel) {
@@ -480,8 +480,8 @@ function ForumChannelContent(channel) {
 function onCreatePostWithoutPermission() {
   let obj = dispatcher;
   obj = { key: "FORUM_NO_POST_PERMISSION_HELP", content: null, icon: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.iyzwnD);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.iyzwnD);
   obj[2] = registerAsset;
   obj.open(obj);
 }

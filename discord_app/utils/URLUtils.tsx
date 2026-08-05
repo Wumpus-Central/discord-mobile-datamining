@@ -13,7 +13,7 @@ function isDiscordProxiedAssetUrl(url, arg1, arg2) {
       url = isDiscordProxiedAssetUrl.toURLSafe(url);
       let tmp9 = null != url;
       if (tmp9) {
-        const result = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
+        const result = isDiscordFrontendDevelopment.isDiscordBackendDevelopment();
         let tmp5 = !result;
         if (result) {
           let tmp6 = "localhost" !== url.hostname;
@@ -30,7 +30,7 @@ function isDiscordProxiedAssetUrl(url, arg1, arg2) {
           isMatch = regex3.test(url.hostname);
         }
         tmp9 = isMatch;
-        const obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+        const obj = isDiscordFrontendDevelopment;
       }
       return tmp9;
     }
@@ -164,7 +164,7 @@ export default {
       const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(shareURI);
       let tmp9 = null != toURLSafeResult;
       if (tmp9) {
-        const result = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
+        const result = isDiscordFrontendDevelopment.isDiscordBackendDevelopment();
         let tmp3 = !result;
         if (result) {
           let tmp4 = "localhost" !== toURLSafeResult.hostname;
@@ -183,7 +183,7 @@ export default {
           tmp5 = isMatch;
         }
         tmp9 = tmp5;
-        const obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+        const obj = isDiscordFrontendDevelopment;
       }
       return tmp9;
     }
@@ -207,7 +207,7 @@ export default {
       const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(url);
       let tmp4 = null != toURLSafeResult;
       if (tmp4) {
-        const result = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isDiscordBackendDevelopment();
+        const result = isDiscordFrontendDevelopment.isDiscordBackendDevelopment();
         let tmp7 = !result;
         if (result) {
           let tmp8 = "localhost" !== toURLSafeResult.hostname;
@@ -226,7 +226,7 @@ export default {
           tmp9 = isMatch;
         }
         tmp4 = tmp9;
-        const obj2 = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+        const obj2 = isDiscordFrontendDevelopment;
       }
       flag = tmp4;
       const obj = isDiscordProxiedAssetUrl;

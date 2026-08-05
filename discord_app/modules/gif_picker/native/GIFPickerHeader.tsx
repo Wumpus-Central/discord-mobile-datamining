@@ -142,7 +142,7 @@ const memoResult = importAllResult.memo(function GIFPickerHeader(arg0) {
   ({ categoryType, onQueryClear } = arg0);
   ({ columnWidth, onQueryChange, onFavoritesQueryChange, searchInputRef } = arg0);
   const tmp = callback();
-  GIF_PROVIDER /* GIF_PROVIDER */;
+  GIF_PROVIDER;
   let obj = { style: tmp.container, children: null };
   if (categoryType === GIFPickerResultTypes.SEARCH) {
     obj = { size: "md", onChange: null, placeholder: null, onClear: null, ref: null, isRound: true };

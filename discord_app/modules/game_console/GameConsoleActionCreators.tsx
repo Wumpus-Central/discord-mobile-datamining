@@ -197,7 +197,7 @@ function _getConnectNonce() {
   return applyArgumentsResult;
 }
 function cancelConnectRequest(arg0) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   return HTTP.del({ url: closure_8.CONNECT_REQUEST(arg0), rejectWithError: false });
 }
 function _fetchDevices() {
@@ -711,7 +711,7 @@ export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
   disconnectRemote();
 };
 export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sessionId, arg1, first) {
-  let obj = snapVolumeToDefault /* snapVolumeToDefault */;
+  let obj = snapVolumeToDefault;
   const result = obj.coerceAudioContextForProto(first);
   if (null != result) {
     obj = { type: "REMOTE_COMMAND", sessionId: null, payload: null };

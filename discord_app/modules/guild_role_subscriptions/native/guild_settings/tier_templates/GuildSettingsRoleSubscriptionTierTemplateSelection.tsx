@@ -213,5 +213,5 @@ export default function GuildSettingsRoleSubscriptionTierTemplateSelection(guild
   obj = {};
   const merged = Object.assign(guildId);
   obj[1] = callback(GuildSettingsRoleSubscriptionTierTemplateSelectionComponent, obj);
-  return callback(useGroupListingsFetchContext /* useGroupListingsFetchContext */.GroupListingsFetchContextProvider, obj);
+  return callback(useGroupListingsFetchContext.GroupListingsFetchContextProvider, obj);
 };

@@ -6,9 +6,9 @@ const result = require("set").fileFinishedImporting("modules/guild_products/Guil
 export const openGuildProductLink = function openGuildProductLink(closure_0, closure_1) {
   let obj = AlertActionCreators;
   obj = { body: null, confirmText: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["mYlo/T"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.BddRzS);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["mYlo/T"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.BddRzS);
   obj.show(obj);
 };

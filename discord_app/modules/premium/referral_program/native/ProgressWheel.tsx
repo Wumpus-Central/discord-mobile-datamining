@@ -20,12 +20,12 @@ const result = require("createCacheKey").fileFinishedImporting("modules/premium/
 export default function ProgressWheel(nReferralsSent) {
   nReferralsSent = nReferralsSent.nReferralsSent;
   const tmp = callback2();
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.BACKGROUND_MOD_STRONG);
-  let obj1 = map /* map */;
+  let obj1 = map;
   obj = { style: tmp.progressCircleContainer, children: null };
   const token1 = obj1.useToken(Themes.colors.BACKGROUND_SURFACE_HIGH);
-  let tmp9 = nReferralsSent === MAX_REFERRALS_SENT /* MAX_REFERRALS_SENT */.MAX_REFERRALS_SENT;
+  let tmp9 = nReferralsSent === MAX_REFERRALS_SENT.MAX_REFERRALS_SENT;
   if (tmp9) {
     obj = { source: null, style: null };
     let tmp4Result = tmp4(5236);
@@ -36,7 +36,7 @@ export default function ProgressWheel(nReferralsSent) {
   const items = [tmp9, , ];
   obj1 = { width: c6, height: c6, children: null };
   tmp4Result = tmp4(8437);
-  const items1 = [callback(inlineStyles /* inlineStyles */.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }), callback(inlineStyles /* inlineStyles */.Circle, { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray: closure_7, strokeDashoffset: closure_7 * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" })];
+  const items1 = [callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: token, strokeWidth: 6, fill: token1 }), callback(inlineStyles.Circle, { cx: 80, cy: 80, r: 77, stroke: "#53ac66", strokeWidth: 6, fill: "transparent", strokeDasharray: closure_7, strokeDashoffset: closure_7 * (1 - 33.3 * nReferralsSent / 100), strokeLinecap: "round", rotation: -90, origin: "80, 80" })];
   obj1[2] = items1;
   items[1] = closure_5(tmp4Result, obj1);
   const obj3 = { source: null, style: null };

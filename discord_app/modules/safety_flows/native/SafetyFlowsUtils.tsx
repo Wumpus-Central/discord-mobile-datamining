@@ -49,15 +49,15 @@ function _fetchAndUpdateTask() {
 function navigateToScreenForTask(closure_1, closure_0) {
   if (null == closure_0) {
     let obj = ModalActionCreators;
-    obj.popWithKey(SAFETY_FLOWS_MODAL_KEY /* SAFETY_FLOWS_MODAL_KEY */.SAFETY_FLOWS_MODAL_KEY);
+    obj.popWithKey(SAFETY_FLOWS_MODAL_KEY.SAFETY_FLOWS_MODAL_KEY);
     obj = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: null, content: null };
     obj[1] = registerAsset;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj[2] = intl.string(messagesProxy["/fHz9S"]);
     dispatcher.open(obj);
   } else {
     const task_type = closure_0.task_type;
-    const tmp16 = TaskType /* TaskType */.TASK_TYPE_TO_SCREENS[task_type];
+    const tmp16 = TaskType.TASK_TYPE_TO_SCREENS[task_type];
     let tmp5 = null;
     if (null != tmp16) {
       let tmp = tmp16;
@@ -85,7 +85,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/safety_flows/native/SafetyFlowsUtils.tsx");
 
 export const getScreensForTaskType = function getScreensForTaskType(task_type) {
-  const tmp3 = TaskType /* TaskType */.TASK_TYPE_TO_SCREENS[task_type];
+  const tmp3 = TaskType.TASK_TYPE_TO_SCREENS[task_type];
   let tmp4 = null;
   if (null != tmp3) {
     let tmp5 = tmp3;

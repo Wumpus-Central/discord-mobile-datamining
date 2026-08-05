@@ -62,5 +62,5 @@ export const LayerScope = function LayerScope(arg0) {
   };
   const items = [children, callback2(Layer, { zIndex })];
   obj[1] = items;
-  return callback3(add /* add */.LayerContext.Provider, obj);
+  return callback3(add.LayerContext.Provider, obj);
 };

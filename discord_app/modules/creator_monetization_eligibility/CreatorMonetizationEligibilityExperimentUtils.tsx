@@ -11,7 +11,7 @@ const result = set.fileFinishedImporting("modules/creator_monetization_eligibili
 
 export const useIsUserInCreatorMonetizationEligibleCountry = function useIsUserInCreatorMonetizationEligibleCountry() {
   const items = [mergeGuildAvatar, handlePaymentSourceCreateEnd];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let country;
     if (currentUser != null) {

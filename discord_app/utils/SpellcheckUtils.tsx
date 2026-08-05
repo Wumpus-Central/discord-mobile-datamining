@@ -485,7 +485,7 @@ if (set) {
 }
 let c4 = installResult;
 function isSupported() {
-  let isDesktopResult = set /* set */.isDesktop();
+  let isDesktopResult = set.isDesktop();
   if (isDesktopResult) {
     const tmp4 = set;
     let spellCheck;

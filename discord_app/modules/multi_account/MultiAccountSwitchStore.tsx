@@ -52,10 +52,10 @@ const multiAccountSwitchStore = new MultiAccountSwitchStore(require("dispatcher"
       let obj = { current_user_id: null, expected_user_id: null, fast_connect_user_id: null, switch_origin: null };
       obj[0] = c7;
       obj[1] = c9;
-      obj[2] = createFastConnectSocket /* createFastConnectSocket */.getLastFastConnectIdentifyUserId();
+      obj[2] = createFastConnectSocket.getLastFastConnectIdentifyUserId();
       obj[3] = c10;
       tmp2.log("logout from account switch", obj);
-      const obj3 = createFastConnectSocket /* createFastConnectSocket */;
+      const obj3 = createFastConnectSocket;
     } else {
       goHomeAfterSwitching = false;
       obj = importAll(707);
@@ -276,10 +276,10 @@ let obj = {
       let obj = { current_user_id: null, expected_user_id: null, fast_connect_user_id: null, switch_origin: null };
       obj[0] = c7;
       obj[1] = c9;
-      obj[2] = createFastConnectSocket /* createFastConnectSocket */.getLastFastConnectIdentifyUserId();
+      obj[2] = createFastConnectSocket.getLastFastConnectIdentifyUserId();
       obj[3] = c10;
       tmp2.log("logout from account switch", obj);
-      const obj3 = createFastConnectSocket /* createFastConnectSocket */;
+      const obj3 = createFastConnectSocket;
     } else {
       goHomeAfterSwitching = false;
       obj = importAll(707);

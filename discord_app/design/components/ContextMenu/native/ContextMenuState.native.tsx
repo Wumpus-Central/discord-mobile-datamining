@@ -35,8 +35,8 @@ function updateContextMenuState(absoluteX, absoluteY, closure_17) {
     if (activeIndex.get() !== result1) {
       const result2 = activeIndex.set(result1);
       const obj = ReanimatedRexport;
-      ReanimatedRexport.runOnJS(HapticFeedbackTypes /* HapticFeedbackTypes */.triggerHapticFeedback)(HapticFeedbackTypes /* HapticFeedbackTypes */.HapticFeedbackTypes.IMPACT_LIGHT);
-      const runOnJSResult = ReanimatedRexport.runOnJS(HapticFeedbackTypes /* HapticFeedbackTypes */.triggerHapticFeedback);
+      ReanimatedRexport.runOnJS(HapticFeedbackTypes.triggerHapticFeedback)(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_LIGHT);
+      const runOnJSResult = ReanimatedRexport.runOnJS(HapticFeedbackTypes.triggerHapticFeedback);
     }
   }
   const result3 = activeIndex.set(-1);
@@ -58,7 +58,7 @@ export const showContextMenu = function showContextMenu(arg0) {
   _batchUpdates.batchUpdates(() => outer1_3.setState({ menu: closure_0 }));
 };
 export const hideContextMenu = function hideContextMenu() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     state.setState((menu) => {
       let obj = menu;
       if (null != menu.menu) {

@@ -101,8 +101,8 @@ export default {
   },
   clearPushNotificationLogs() {
     if (obj.isAndroid()) {
-      enforcing /* enforcing */.default.clearLogs();
-      const _default = enforcing /* enforcing */.default;
+      enforcing.default.clearLogs();
+      const _default = enforcing.default;
     }
   },
   setApplicationIconBadgeNumber(arg0) {

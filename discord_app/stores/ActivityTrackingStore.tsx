@@ -28,7 +28,7 @@ function stopActivity(applicationId, flag) {
     delete tmp3[tmp2];
   }
   delete tmp3[tmp];
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set(ActivityTrackingStore, obj);
 }
 function updateActivity(applicationId) {
@@ -109,7 +109,7 @@ function handleRunningGamesChange(flag) {
         obj[2] = tmp3.distributor;
         let tmp10 = require;
         let tmp11 = dependencyMap;
-        let obj3 = removeExecutablePathPrefix /* removeExecutablePathPrefix */;
+        let obj3 = removeExecutablePathPrefix;
         let str = tmp3.exePath;
         if (str == null) {
           str = "";
@@ -195,7 +195,7 @@ obj = {
       return false;
     } else {
       tmp3.token = tmp;
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       const result = Storage.set(ActivityTrackingStore, tmp2);
     }
   },
@@ -205,7 +205,7 @@ obj = {
     } else {
       tmp2.token = null;
       tmp2.updatedAt = null;
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       const result = Storage.set(ActivityTrackingStore, tmp);
     }
   }

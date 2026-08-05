@@ -30,6 +30,6 @@ export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErr
       obj.open(obj);
     }
   }
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  message = intl.string(getSystemLocale /* getSystemLocale */.t.uLjCfn);
+  const intl = getSystemLocale.intl;
+  message = intl.string(getSystemLocale.t.uLjCfn);
 };

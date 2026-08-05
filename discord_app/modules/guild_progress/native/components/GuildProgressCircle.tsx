@@ -30,7 +30,7 @@ export default function GuildProgressCircle(size) {
   items = [tmp.wrapper, style, obj];
   obj = { style: items1, size: num, strokeWidth: 4, percent: 100, color: null };
   items1 = [tmp.circle, obj];
-  obj[4] = useIOSCompletionStates /* useIOSCompletionStates */.PROGRESS_BACKGROUND_COLOR;
+  obj[4] = useIOSCompletionStates.PROGRESS_BACKGROUND_COLOR;
   const items2 = [callback(renderCircle, obj), ];
   const items3 = [tmp.circle, obj];
   items2[1] = callback(renderCircle, { style: items3, size: num, strokeWidth: 4, color: tmp.progressCircle.color, percent });

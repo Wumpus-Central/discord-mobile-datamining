@@ -8,19 +8,19 @@ import { useNSFWAllowed } from "../../content_and_social/useNSFWAllowed.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.VGWIAo);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.VGWIAo);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["J4zza/"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["J4zza/"]);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useViewNsfwDmCommandsSettingValue() {
-    return resolveNsfwTogglesWithDefaults /* resolveNsfwTogglesWithDefaults */.useViewNsfwCommandsOrDefault();
+    return resolveNsfwTogglesWithDefaults.useViewNsfwCommandsOrDefault();
   },
   onValueChange: function handleValueChange(arg0) {
-    let obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+    let obj = shouldShowAgeGateForVoiceChannel;
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
@@ -33,9 +33,9 @@ const toggle = createToggle.createToggle({
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {
-    let shouldAgeVerifyForSettingsToggles = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.useShouldAgeVerifyForSettingsToggles();
-    const obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
-    let flag = useNSFWAllowed /* useNSFWAllowed */.useNSFWAllowed();
+    let shouldAgeVerifyForSettingsToggles = shouldShowAgeGateForVoiceChannel.useShouldAgeVerifyForSettingsToggles();
+    const obj = shouldShowAgeGateForVoiceChannel;
+    let flag = useNSFWAllowed.useNSFWAllowed();
     if (flag == null) {
       flag = true;
     }
@@ -55,19 +55,19 @@ const toggle = createToggle.createToggle({
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.VGWIAo);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.VGWIAo);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["J4zza/"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["J4zza/"]);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useViewNsfwDmCommandsSettingValue() {
-    return resolveNsfwTogglesWithDefaults /* resolveNsfwTogglesWithDefaults */.useViewNsfwCommandsOrDefault();
+    return resolveNsfwTogglesWithDefaults.useViewNsfwCommandsOrDefault();
   },
   onValueChange: function handleValueChange(arg0) {
-    let obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+    let obj = shouldShowAgeGateForVoiceChannel;
     if (obj.shouldAgeVerifyForSettingsToggles()) {
       if (arg0) {
         obj = { entryPoint: null };
@@ -80,9 +80,9 @@ let obj = {
     ViewNsfwCommands.updateSetting(arg0);
   },
   usePredicate() {
-    let shouldAgeVerifyForSettingsToggles = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.useShouldAgeVerifyForSettingsToggles();
-    const obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
-    let flag = useNSFWAllowed /* useNSFWAllowed */.useNSFWAllowed();
+    let shouldAgeVerifyForSettingsToggles = shouldShowAgeGateForVoiceChannel.useShouldAgeVerifyForSettingsToggles();
+    const obj = shouldShowAgeGateForVoiceChannel;
+    let flag = useNSFWAllowed.useNSFWAllowed();
     if (flag == null) {
       flag = true;
     }

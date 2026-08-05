@@ -21,7 +21,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
   if (arg3 === undefined) {
     flag = false;
   }
-  let obj = getMediaPostEmbedCommonData /* getMediaPostEmbedCommonData */;
+  let obj = getMediaPostEmbedCommonData;
   const mediaPostEmbedChannelId = obj.getMediaPostEmbedChannelId(url);
   if (null == mediaPostEmbedChannelId) {
     return null;

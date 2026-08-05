@@ -463,13 +463,13 @@ let obj = { mass: 0.3, damping: 80, stiffness: 150 };
 function layoutTransition(originX) {
   let obj = { animations: null, initialValues: null };
   obj = { originX: null, originY: null, width: null, height: null };
-  obj[0] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginX, obj);
-  const obj3 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
-  obj[1] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetOriginY, obj);
-  const obj4 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
-  obj[2] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetWidth, obj);
-  const obj5 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
-  obj[3] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetHeight, obj);
+  obj[0] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetOriginX, obj);
+  const obj3 = CONFIG_NEVER_ANIMATE;
+  obj[1] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetOriginY, obj);
+  const obj4 = CONFIG_NEVER_ANIMATE;
+  obj[2] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetWidth, obj);
+  const obj5 = CONFIG_NEVER_ANIMATE;
+  obj[3] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetHeight, obj);
   obj[0] = obj;
   obj[1] = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
   return obj;
@@ -585,7 +585,7 @@ let closure_36 = importAllResult.memo((transitionState) => {
 const memoResult = importAllResult.memo(function VoicePanelPIPWrapper() {
   let mode;
   let showSecondaryPIP;
-  let obj = context /* context */;
+  let obj = context;
   const pIPState = obj.usePIPState();
   ({ mode, showSecondaryPIP } = pIPState);
   if (null != mode) {
@@ -594,7 +594,7 @@ const memoResult = importAllResult.memo(function VoicePanelPIPWrapper() {
     const tmp3 = obj;
   }
   obj = { item: tmp3, renderItem: renderPIPWrapper };
-  return closure_15(wrapChildrenDefault /* wrapChildrenDefault */.TransitionItem, obj);
+  return closure_15(wrapChildrenDefault.TransitionItem, obj);
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIP.tsx");
 

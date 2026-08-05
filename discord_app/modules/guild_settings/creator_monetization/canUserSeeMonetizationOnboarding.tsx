@@ -13,12 +13,12 @@ export const canUserSeeMonetizationOnboarding = function canUserSeeMonetizationO
   if (currentUser != null) {
     id = currentUser.id;
   }
-  let obj = computeGuildRoleSubscriptionSettingsVisibility /* computeGuildRoleSubscriptionSettingsVisibility */;
+  let obj = computeGuildRoleSubscriptionSettingsVisibility;
   obj = { guild: mergeGuildAvatar, isOwner: mergeGuildAvatar.ownerId === id, canManageGuildRoleSubscriptions: null, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
-  obj[2] = computeGuildRoleSubscriptionSettingsVisibility /* computeGuildRoleSubscriptionSettingsVisibility */.canManageGuildRoleSubscriptions(mergeGuildAvatar);
-  const obj3 = computeGuildRoleSubscriptionSettingsVisibility /* computeGuildRoleSubscriptionSettingsVisibility */;
-  obj[3] = set /* set */.isUserInCreatorMonetizationEligibleCountry();
-  const obj4 = set /* set */;
-  obj[4] = isRestrictedFromShowingGuildPurchaseEntryPoints /* isRestrictedFromShowingGuildPurchaseEntryPoints */.shouldRestrictUpdatingCreatorMonetizationSettings(mergeGuildAvatar.id);
+  obj[2] = computeGuildRoleSubscriptionSettingsVisibility.canManageGuildRoleSubscriptions(mergeGuildAvatar);
+  const obj3 = computeGuildRoleSubscriptionSettingsVisibility;
+  obj[3] = set.isUserInCreatorMonetizationEligibleCountry();
+  const obj4 = set;
+  obj[4] = isRestrictedFromShowingGuildPurchaseEntryPoints.shouldRestrictUpdatingCreatorMonetizationSettings(mergeGuildAvatar.id);
   return obj.canSeeGuildRoleSubscriptionSettings(obj);
 };

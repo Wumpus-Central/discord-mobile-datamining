@@ -53,11 +53,11 @@ obj[1] = function handler(socket) {
           let tmp22 = require;
           let tmp23 = dependencyMap;
           let tmp24 = dependencyMap;
-          let obj5 = recurseReplaceContentTree /* recurseReplaceContentTree */;
+          let obj5 = recurseReplaceContentTree;
           let tmp25 = tmp15;
           let tmp26 = user;
           let result = obj5.transformBaseRelationship(tmp16, tmp21);
-          let obj6 = recurseReplaceContentTree /* recurseReplaceContentTree */;
+          let obj6 = recurseReplaceContentTree;
           let arr = items.push(obj6.transformApplicationRelationship(result, socket.socket.application.id));
         }
       }

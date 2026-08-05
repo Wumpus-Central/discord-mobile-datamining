@@ -73,9 +73,9 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
   } else if (tmp.CHANNEL === type) {
     channel = type.channel;
     if (channel.isThread()) {
-      const obj3 = computeChannelName /* computeChannelName */;
+      const obj3 = computeChannelName;
       const _HermesInternal6 = HermesInternal;
-      return "#\"" + obj3.escapeChannelName(computeChannelName /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship)) + "\"";
+      return "#\"" + obj3.escapeChannelName(computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship)) + "\"";
     } else {
       channel2 = type.channel;
       const guildId = channel2.getGuildId();
@@ -87,15 +87,15 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
             name = tmp16.name;
           }
           if (name == null) {
-            name = computeChannelName /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
-            const obj2 = computeChannelName /* computeChannelName */;
+            name = computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
+            const obj2 = computeChannelName;
           }
           const _HermesInternal5 = HermesInternal;
           return "" + closure_11 + name;
         }
       }
       const _HermesInternal4 = HermesInternal;
-      return "" + closure_11 + computeChannelName /* computeChannelName */.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
+      return "" + closure_11 + computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, upsertRelationship);
     }
   } else if (tmp.GAME_MENTION === type) {
     const _HermesInternal3 = HermesInternal;

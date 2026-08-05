@@ -15,7 +15,7 @@ class ATTManager extends tmp2 {
 const prototype = ATTManager.prototype;
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   try {
-    const adUser = _fetchAdUser /* _fetchAdUser */.fetchAdUser("post_connection_open");
+    const adUser = _fetchAdUser.fetchAdUser("post_connection_open");
   } catch (tmp4) {
     SentryUtils.native.captureException(tmp4);
     const obj2 = SentryUtils.native;

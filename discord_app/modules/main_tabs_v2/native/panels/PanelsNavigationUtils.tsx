@@ -3,7 +3,7 @@ import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 const result = require("CommonActions").fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
 
 export const convertPortraitToLandscapeScreens = function convertPortraitToLandscapeScreens() {
-  let obj = getRootNavigationRef /* getRootNavigationRef */;
+  let obj = getRootNavigationRef;
   const store = obj.getRootNavigationRef();
   if (null != store) {
     let state = store.getState();
@@ -58,7 +58,7 @@ export const convertPortraitToLandscapeScreens = function convertPortraitToLands
   }
 };
 export const convertLandscapeToPortraitScreens = function convertLandscapeToPortraitScreens() {
-  let obj = getRootNavigationRef /* getRootNavigationRef */;
+  let obj = getRootNavigationRef;
   const store = obj.getRootNavigationRef();
   if (null != store) {
     let state = store.getState();

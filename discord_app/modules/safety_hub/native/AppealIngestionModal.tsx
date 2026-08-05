@@ -157,7 +157,7 @@ export const AppealIngestionModalHeader = function AppealIngestionModalHeader(ar
     obj = { style: null, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
     obj[0] = tmp.header;
     obj[4] = headerText;
-    tmp4 = callback2(Text /* Text */.Text, obj);
+    tmp4 = callback2(Text.Text, obj);
   }
   const items = [tmp4, ];
   let tmp8 = null;
@@ -167,7 +167,7 @@ export const AppealIngestionModalHeader = function AppealIngestionModalHeader(ar
       obj = { style: null, variant: "text-md/medium", color: "text-default", children: null };
       obj[0] = tmp.subheader;
       obj[3] = subHeaderText;
-      tmp8 = callback2(Text /* Text */.Text, obj);
+      tmp8 = callback2(Text.Text, obj);
     }
   }
   items[1] = tmp8;

@@ -24,7 +24,7 @@ export default function ConversationPreviewBlockedMessage(reason) {
   const intl = tmp2(1236).intl;
   const t = tmp2(1236).t;
   obj = { variant: "text-md/normal", color: "text-muted", children: intl.string(tmp6 ? t["WPe+xL"] : t.uxrh1O) };
-  items[1] = closure_3(Text /* Text */.Text, obj);
+  items[1] = closure_3(Text.Text, obj);
   obj[3] = items;
-  return closure_4(Stack /* Stack */.Stack, obj);
+  return closure_4(Stack.Stack, obj);
 };

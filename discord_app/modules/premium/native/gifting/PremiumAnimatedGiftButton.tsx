@@ -35,21 +35,21 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   let style;
   ({ active, disabled, accessibilityState } = arg0);
   ({ style, activeStyle, channelId, animationDataUrl, onAnimationFinished, loop } = arg0);
-  let obj = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */;
+  let obj = useIsMobileVisualRefreshExperimentEnabled;
   const enabled = obj.useMobileVisualRefreshConfig({ location: "PremiumAnimatedGiftButton" }).enabled;
-  let obj1 = map /* map */;
+  let obj1 = map;
   const token = obj1.useToken(stateFromStores(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  let obj2 = map /* map */;
+  let obj2 = map;
   const token1 = obj2.useToken(stateFromStores(712).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-  const token2 = map /* map */.useToken(stateFromStores(712).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  const token2 = map.useToken(stateFromStores(712).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   const tmp7 = callback(token, token1);
   const bound = Math.max(0, (token2 - token) / 2);
   const tmp9 = useRef(null);
   require = tmp9;
-  const obj4 = map /* map */;
+  const obj4 = map;
   const tmp3 = stateFromStores;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  stateFromStores = initialize /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const items1 = [channelId, stateFromStores];
   const effect = React.useEffect(() => {
     if (!stateFromStores) {
@@ -95,6 +95,6 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   const merged1 = Object.assign(arg0);
   obj2 = { ref: tmp9, style: enabled ? tmp7.animationRefresh : tmp7.animation, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished };
   obj.children = jsx(tmp3(5601), { ref: tmp9, style: enabled ? tmp7.animationRefresh : tmp7.animation, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
-  obj[1] = jsx(PressableBase /* PressableBase */.PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
+  obj[1] = jsx(PressableBase.PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
   return jsx(stateFromStores(4146).View, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
 };

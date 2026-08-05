@@ -326,7 +326,7 @@ let closure_17 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
 let result = require("noop").fileFinishedImporting("modules/icymi/native/ICYMIServerRecommendationRow.tsx");
 
 export const ICYMIServerRecommendationRow = function ICYMIServerRecommendationRow() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [filterStaffGuild];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => discoverableGuilds.getDiscoverableGuilds());
   const tmp3 = callback5();

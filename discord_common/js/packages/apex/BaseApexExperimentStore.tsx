@@ -140,7 +140,7 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
     while (iter !== undefined) {
       let tmp5 = require;
       let tmp6 = dependencyMap;
-      let tmp7 = UnitType /* UnitType */.UnitTypeToKind[nextResult];
+      let tmp7 = UnitType.UnitTypeToKind[nextResult];
       let tmp8 = apexExperiments.assignments[nextResult];
       let tmp9 = tmp8;
       if (null != tmp8) {
@@ -187,11 +187,11 @@ prototype["setExperimentAssignments"] = function setExperimentAssignments(apexEx
               let tmp27 = num;
               let tmp28 = require;
               let tmp29 = dependencyMap;
-              obj[3] = num & UnitType /* UnitType */.ExperimentFlags.IsOverride;
+              obj[3] = num & UnitType.ExperimentFlags.IsOverride;
               let tmp30 = tmp20;
               obj[4] = tmp20;
-              obj[5] = num & UnitType /* UnitType */.ExperimentFlags.ExposureTrackingEnabled;
-              obj[6] = num & UnitType /* UnitType */.ExperimentFlags.UseAsEligibility;
+              obj[5] = num & UnitType.ExperimentFlags.ExposureTrackingEnabled;
+              obj[6] = num & UnitType.ExperimentFlags.UseAsEligibility;
               let tmp31 = tmp22;
               obj[7] = tmp22;
               tmp10.assignments[tmp17] = obj;
@@ -254,11 +254,11 @@ prototype["setGuildExperimentAssignments"] = function setGuildExperimentAssignme
       let tmp23 = num;
       let tmp24 = require;
       let tmp25 = dependencyMap;
-      obj[3] = num & UnitType /* UnitType */.ExperimentFlags.IsOverride;
+      obj[3] = num & UnitType.ExperimentFlags.IsOverride;
       let tmp26 = tmp18;
       obj[4] = tmp18;
-      obj[5] = num & UnitType /* UnitType */.ExperimentFlags.ExposureTrackingEnabled;
-      obj[6] = num & UnitType /* UnitType */.ExperimentFlags.UseAsEligibility;
+      obj[5] = num & UnitType.ExperimentFlags.ExposureTrackingEnabled;
+      obj[6] = num & UnitType.ExperimentFlags.UseAsEligibility;
       let tmp27 = obj;
       tmp9.assignments[tmp15] = obj;
       continue;
@@ -328,7 +328,7 @@ prototype["handleLogout"] = function handleLogout(arg0) {
     const result = self.clearUserServerAssignments();
     const result1 = self.clearSessionOverrides();
   }
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   Storage.remove(apexTrackedExposures);
   const result2 = self.clearAllTrackedExposures();
 };
@@ -402,7 +402,7 @@ prototype["getEvaluationAndAssignment"] = function getEvaluationAndAssignment(re
   } else {
     let LOGGED_OUT_USER_ID_SENTINEL = closure_2;
     if (closure_2 == null) {
-      LOGGED_OUT_USER_ID_SENTINEL = UnitType /* UnitType */.LOGGED_OUT_USER_ID_SENTINEL;
+      LOGGED_OUT_USER_ID_SENTINEL = UnitType.LOGGED_OUT_USER_ID_SENTINEL;
     }
     [r10021, tmp8] = tmp(self.getEvaluationAndAssignmentInner("user", LOGGED_OUT_USER_ID_SENTINEL, _slicedToArray), 2);
     if (null == tmp8) {
@@ -567,7 +567,7 @@ prototype["shouldTrackExposure"] = function shouldTrackExposure(arg0) {
   return tmp2;
 };
 prototype["loadTrackedExposures"] = function loadTrackedExposures() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const value = Storage.get(apexTrackedExposures);
   if (null != value) {
     if (2 === value.version) {
@@ -603,7 +603,7 @@ prototype["loadTrackedExposures"] = function loadTrackedExposures() {
 };
 prototype["saveTrackedExposures"] = function saveTrackedExposures(closure_19) {
   try {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     let obj = { version: 2, exposures: null };
     obj[1] = closure_19;
     const result = Storage.set(apexTrackedExposures, obj);

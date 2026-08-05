@@ -16,7 +16,7 @@ export const getNoiseCancellationDeferredToSystem = function getNoiseCancellatio
 };
 export const useNoiseCancellationDeferredToSystem = function useNoiseCancellationDeferredToSystem() {
   const items = [_detectH265HardwareDecode];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     systemMicrophoneMode = systemMicrophoneMode.getSystemMicrophoneMode();
     return !callback(table[1])(true, systemMicrophoneMode);
   });

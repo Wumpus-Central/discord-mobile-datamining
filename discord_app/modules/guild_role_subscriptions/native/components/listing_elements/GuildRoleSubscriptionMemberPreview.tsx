@@ -29,13 +29,13 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
   let textStyle;
   content = content.content;
   if (content === undefined) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    content = intl.string(getSystemLocale /* getSystemLocale */.t["6OSasb"]);
+    const intl = getSystemLocale.intl;
+    content = intl.string(getSystemLocale.t["6OSasb"]);
   }
   ({ guildId, role } = content);
   ({ style, textStyle } = content);
   const tmp3 = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   getNickname;

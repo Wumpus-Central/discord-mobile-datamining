@@ -11,9 +11,9 @@ export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
   let isVoiceChannel;
   ({ isOwnInvite, isGuest, isStage, isStream } = arg0);
   ({ isVoiceChannel, isHubGuild } = arg0);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  let N85DCl = getSystemLocale /* getSystemLocale */.t;
+  let N85DCl = getSystemLocale.t;
   if (isVoiceChannel) {
     if (!isOwnInvite) {
       if (isStream) {

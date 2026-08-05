@@ -39,8 +39,8 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
     name = application.name;
   }
   if (name == null) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    let str = intl.string(getSystemLocale /* getSystemLocale */.t.vyaWs7);
+    const intl = getSystemLocale.intl;
+    let str = intl.string(getSystemLocale.t.vyaWs7);
     name = str.toUpperCase();
   }
   if (!isFetchingResult) {
@@ -50,9 +50,9 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
       if (null != application) {
         if (tmp(10916)(application)) {
           if ("guild" !== guildOrApplication.type) {
-            const result1 = useSKUPrice /* useSKUPrice */.isSlayerSkuAvailableOnThisPlatform(value);
-            const obj4 = useSKUPrice /* useSKUPrice */;
-            const str4 = getPrice /* getPrice */.getCardImageURL(value);
+            const result1 = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(value);
+            const obj4 = useSKUPrice;
+            const str4 = getPrice.getCardImageURL(value);
             str = undefined;
             if (str4 != null) {
               str = str4.toString();
@@ -67,7 +67,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
             obj.titleText = value.name;
             obj.titleColor = colors.titleColor;
             const intl2 = tmp12(1236).intl;
-            obj.subtitle = intl2.string(getSystemLocale /* getSystemLocale */.t.V91tvy);
+            obj.subtitle = intl2.string(getSystemLocale.t.V91tvy);
             obj.subtitleColor = colors.subtitleColor;
             obj.thumbnailUrl = str;
             obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;

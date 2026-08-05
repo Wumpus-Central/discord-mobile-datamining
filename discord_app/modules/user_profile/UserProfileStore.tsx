@@ -16,7 +16,7 @@ import { parseUserProfileCollectibles } from "utils/parseUserProfileCollectibles
 const require = arg1;
 function createUserWidgetFromServer(data) {
   const type = data.data.type;
-  if (WidgetType /* WidgetType */.WidgetType.CURRENT_GAMES !== type) {
+  if (WidgetType.WidgetType.CURRENT_GAMES !== type) {
     if (tmp(6990).WidgetType.FAVORITE_GAMES !== type) {
       if (tmp(6990).WidgetType.PLAYED_GAMES !== type) {
         if (tmp(6990).WidgetType.WANT_TO_PLAY_GAMES !== type) {
@@ -615,7 +615,7 @@ function handleWidgetsUpdateSuccess(arg0) {
     obj = {};
     const merged = Object.assign(value);
     const mapped = widgets.map(createUserWidgetFromServer);
-    obj.widgets = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    obj.widgets = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
     const result = obj.set(userId, obj);
   }
 }

@@ -46,7 +46,7 @@ function PriceTag(accessibilityLabel) {
   const obj = { children: null };
   const items = [icon, ];
   const items1 = [createCacheKey().priceTag, style];
-  items[1] = callback(Text /* Text */.Text, { variant, style: items1, color: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: priceFormatted });
+  items[1] = callback(Text.Text, { variant, style: items1, color: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: priceFormatted });
   obj[0] = items;
   return callback2(closure_10, obj);
 }
@@ -63,7 +63,7 @@ function OrbsPriceTag(arg0) {
   if (null == vcData.price) {
     return null;
   } else {
-    let result = product.type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.BUNDLE;
+    let result = product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE;
     if (result) {
       let tmp16Result = tmp16(6921);
       result = tmp16Result.isOrbsExclusiveProduct(product);
@@ -141,13 +141,13 @@ function OrbsPriceTag(arg0) {
 function BundleDiscountV2(discountPercentage) {
   discountPercentage = discountPercentage.discountPercentage;
   let tmp4 = null;
-  if (discountPercentage >= getItemRecordsFromPurchases /* getItemRecordsFromPurchases */.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD) {
+  if (discountPercentage >= getItemRecordsFromPurchases.DISCOUNT_DISPLAY_MINIMUM_THRESHOLD) {
     let obj = { style: null, children: null };
     obj[0] = tmp.discount;
     obj = { variant: "text-md/normal", color: "text-feedback-positive", children: null };
     const items = ["-", discountPercentage, "%"];
     obj[2] = items;
-    obj[1] = callback2(Text /* Text */.Text, obj);
+    obj[1] = callback2(Text.Text, obj);
     tmp4 = callback(closure_4, obj);
   }
   return tmp4;
@@ -169,7 +169,7 @@ let closure_15 = createCacheKey.createStyles(() => {
     num = 0;
   }
   discount[6] = num;
-  obj2 = set /* set */;
+  obj2 = set;
   const tmp2 = require;
   let num2;
   if (tmp2Result.isAndroid()) {
@@ -188,23 +188,23 @@ export default function InlinePriceTag(arg0) {
   let dependencyMap;
   const tmp = createCacheKey();
   importDefault = tmp;
-  let obj = useCurrentUser /* useCurrentUser */;
+  let obj = useCurrentUser;
   const currentUser = obj.useCurrentUser();
-  let obj1 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
+  let obj1 = getItemRecordsFromPurchases;
   const shopDiscountSource = obj1.getShopDiscountSource(currentUser);
   let obj2 = getPremiumPlanItem;
   const canUseShopDiscountsResult = obj2.canUseShopDiscounts(currentUser);
   dependencyMap = useOpenNitroSubscribeActionSheet(constants.SHOP_PRODUCT_DETAILS);
-  let obj3 = useProductDisableState /* useProductDisableState */;
+  let obj3 = useProductDisableState;
   const isDisabled = obj3.useProductDisableState(product.skuId).isDisabled;
-  let obj4 = hasAtLeastOneGPlaySynced /* hasAtLeastOneGPlaySynced */;
+  let obj4 = hasAtLeastOneGPlaySynced;
   const formattedPriceForCollectiblesProduct = obj4.getFormattedPriceForCollectiblesProduct(product, false, true);
-  let obj5 = useVirtualCurrencyData /* useVirtualCurrencyData */;
+  let obj5 = useVirtualCurrencyData;
   const virtualCurrencyData = obj5.useVirtualCurrencyData(product, canUseShopDiscountsResult);
-  let obj6 = initialize /* initialize */;
+  let obj6 = initialize;
   const items = [updateProduct];
   const stateFromStores = obj6.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
-  let obj7 = useCanPurchaseFrames /* useCanPurchaseFrames */;
+  let obj7 = useCanPurchaseFrames;
   const isProfileFramesEarlyAccessPhase = obj7.useIsProfileFramesEarlyAccessPhase("InlinePriceTag");
   if (stateFromStores) {
     if (null == formattedPriceForCollectiblesProduct) {

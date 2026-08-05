@@ -4,8 +4,8 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.cSb1ub);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.cSb1ub);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: require("explicitContentFromProto").HappeningNowCardsDisabled.useSetting,
@@ -13,8 +13,8 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.cSb1ub);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.cSb1ub);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: require("explicitContentFromProto").HappeningNowCardsDisabled.useSetting,

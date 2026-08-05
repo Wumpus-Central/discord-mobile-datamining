@@ -17,7 +17,7 @@ let metroImportAll;
 const require = arg1;
 function getSectionLabel(category) {
   const type = category.category.categoryInfo.type;
-  if (SoundButtonOverlay /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD === type) {
+  if (SoundButtonOverlay.SoundboardSoundGridSectionType.GUILD === type) {
     return category.category.categoryInfo.guild.name;
   } else if (tmp(4737).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl3 = tmp(1236).intl;

@@ -26,14 +26,14 @@ function handleRelationshipAddError(arg0, arg1, substr) {
   if (429 === status) {
     if (arg1 === obj.SHOW_ALWAYS) {
       obj = { title: null, body: null, confirmText: null };
-      const intl7 = getSystemLocale /* getSystemLocale */.intl;
-      obj[0] = intl7.string(getSystemLocale /* getSystemLocale */.t["3D5eox"]);
-      const intl8 = getSystemLocale /* getSystemLocale */.intl;
-      obj[1] = intl8.string(getSystemLocale /* getSystemLocale */.t.TuJriJ);
-      const intl9 = getSystemLocale /* getSystemLocale */.intl;
-      obj[2] = intl9.string(getSystemLocale /* getSystemLocale */.t.DppXIx);
-      openContextMenu /* openContextMenu */.closeContextMenu();
-      const obj11 = openContextMenu /* openContextMenu */;
+      const intl7 = getSystemLocale.intl;
+      obj[0] = intl7.string(getSystemLocale.t["3D5eox"]);
+      const intl8 = getSystemLocale.intl;
+      obj[1] = intl8.string(getSystemLocale.t.TuJriJ);
+      const intl9 = getSystemLocale.intl;
+      obj[2] = intl9.string(getSystemLocale.t.DppXIx);
+      openContextMenu.closeContextMenu();
+      const obj11 = openContextMenu;
       set.show(obj);
       const obj12 = set;
     }
@@ -41,25 +41,25 @@ function handleRelationshipAddError(arg0, arg1, substr) {
     if (403 === status) {
       if (num === constants.EMAIL_VERIFICATION_REQUIRED) {
         obj = { title: null, body: null, confirmText: null, onConfirm: null };
-        const intl4 = getSystemLocale /* getSystemLocale */.intl;
-        obj[0] = intl4.string(getSystemLocale /* getSystemLocale */.t.Gqf33E);
-        const intl5 = getSystemLocale /* getSystemLocale */.intl;
-        obj[1] = intl5.string(getSystemLocale /* getSystemLocale */.t.GHOBdx);
-        const intl6 = getSystemLocale /* getSystemLocale */.intl;
-        obj[2] = intl6.string(getSystemLocale /* getSystemLocale */.t.HbTSE6);
+        const intl4 = getSystemLocale.intl;
+        obj[0] = intl4.string(getSystemLocale.t.Gqf33E);
+        const intl5 = getSystemLocale.intl;
+        obj[1] = intl5.string(getSystemLocale.t.GHOBdx);
+        const intl6 = getSystemLocale.intl;
+        obj[2] = intl6.string(getSystemLocale.t.HbTSE6);
         obj[3] = function onConfirm() {
           const result = callback(table[8]).openClaimAccountModal();
         };
-        openContextMenu /* openContextMenu */.closeContextMenu();
-        const obj7 = openContextMenu /* openContextMenu */;
+        openContextMenu.closeContextMenu();
+        const obj7 = openContextMenu;
         set.show(obj);
         const obj8 = set;
       }
     }
     if (num === constants.USER_QUARANTINED) {
-      openContextMenu /* openContextMenu */.closeContextMenu();
+      openContextMenu.closeContextMenu();
       openQuarantineModeInfoModal();
-      const obj5 = openContextMenu /* openContextMenu */;
+      const obj5 = openContextMenu;
     } else {
       if (!obj9.isLimitedAccessErrorCode(status, num)) {
         if (num !== tmp2.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
@@ -87,7 +87,7 @@ function handleRelationshipAddError(arg0, arg1, substr) {
           }
         }
       }
-      obj9 = isLimitedAccessErrorCode /* isLimitedAccessErrorCode */;
+      obj9 = isLimitedAccessErrorCode;
     }
   }
   throw arg0;
@@ -209,14 +209,14 @@ obj = {
     });
   },
   updateRelationship(userId, c0) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_6.USER_RELATIONSHIP(userId), body: obj, rejectWithError: null };
     obj = { nickname: c0 };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   fetchRelationships() {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const value = HTTP.get({ url: closure_6.USER_RELATIONSHIPS(), oldFormErrors: true, rejectWithError: true });
     value.then((body) => {
       let obj = callback(709);
@@ -228,11 +228,11 @@ obj = {
     openClearAllIncomingRequestsConfirmationModal(arg0);
   },
   clearPendingRelationships() {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_6.USER_RELATIONSHIPS(), query: obj, rejectWithError: null };
     obj = { relationship_type: constants2.PENDING_INCOMING };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj3 = sendRequest /* sendRequest */;
+    obj[2] = sendRequest.rejectWithMigratedError();
+    const obj3 = sendRequest;
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
       callback2(709).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
@@ -243,13 +243,13 @@ obj = {
     });
   },
   clearPendingSpamAndIgnored() {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_6.USER_RELATIONSHIPS(), query: obj, body: { filters: items }, rejectWithError: null };
     obj = { relationship_type: constants2.PENDING_INCOMING };
     items = [, ];
     ({ SPAM: arr[0], IGNORED: arr[1] } = ClearFriendRequestFilters);
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj3 = sendRequest /* sendRequest */;
+    obj[3] = sendRequest.rejectWithMigratedError();
+    const obj3 = sendRequest;
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
       callback2(709).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });

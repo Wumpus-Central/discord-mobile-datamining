@@ -8,14 +8,14 @@ import { _fetchUserOffer } from "../../UserOfferActionCreators.tsx";
 
 const require = arg1;
 function handleReferralMessages(type) {
-  if (type.type === set /* set */.MessageTypes.PREMIUM_REFERRAL) {
+  if (type.type === set.MessageTypes.PREMIUM_REFERRAL) {
     if (null != type.content) {
       if (obj3.isProbablyAValidSnowflake(type.content)) {
         premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
         const tmp9Result = tmp9(11);
         if (tmp6) {
-          const userOffer = _fetchUserOffer /* _fetchUserOffer */.fetchUserOffer("ReferralMessageManager");
-          const tmpResult = _fetchUserOffer /* _fetchUserOffer */;
+          const userOffer = _fetchUserOffer.fetchUserOffer("ReferralMessageManager");
+          const tmpResult = _fetchUserOffer;
         }
         tmp6 = null == premiumTypeSubscription && emitChanges.shouldFetchReferralOffer(tmp9(11).extractTimestamp(type.content));
       }

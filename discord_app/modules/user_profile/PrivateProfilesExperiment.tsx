@@ -9,10 +9,10 @@ const result = require("apexExperiment").fileFinishedImporting("modules/user_pro
 export const PrivateProfilesExperiment = apexExperiment;
 export const useIsInPrivateProfilesExperiment = function useIsInPrivateProfilesExperiment(UserProfilePrivacyNotice) {
   let enabled = apexExperiment.useConfig({ location: UserProfilePrivacyNotice }).enabled;
-  const isInPrivateProfilesStrictExperiment = apexExperiment /* apexExperiment */.useIsInPrivateProfilesStrictExperiment(UserProfilePrivacyNotice);
+  const isInPrivateProfilesStrictExperiment = apexExperiment.useIsInPrivateProfilesStrictExperiment(UserProfilePrivacyNotice);
   const obj = { location: UserProfilePrivacyNotice };
-  const obj2 = apexExperiment /* apexExperiment */;
-  const isInPrivateProfilesStrictGbExperiment = apexExperiment /* apexExperiment */.useIsInPrivateProfilesStrictGbExperiment(UserProfilePrivacyNotice);
+  const obj2 = apexExperiment;
+  const isInPrivateProfilesStrictGbExperiment = apexExperiment.useIsInPrivateProfilesStrictGbExperiment(UserProfilePrivacyNotice);
   if (!enabled) {
     enabled = isInPrivateProfilesStrictExperiment;
   }
@@ -24,12 +24,12 @@ export const useIsInPrivateProfilesExperiment = function useIsInPrivateProfilesE
 export const getIsInPrivateProfilesExperiment = function getIsInPrivateProfilesExperiment(ProfilePrivacySetting) {
   let enabled = apexExperiment.getConfig({ location: ProfilePrivacySetting }).enabled;
   if (!enabled) {
-    enabled = apexExperiment /* apexExperiment */.getIsInPrivateProfilesStrictExperiment(ProfilePrivacySetting);
-    const obj2 = apexExperiment /* apexExperiment */;
+    enabled = apexExperiment.getIsInPrivateProfilesStrictExperiment(ProfilePrivacySetting);
+    const obj2 = apexExperiment;
   }
   if (!enabled) {
-    enabled = apexExperiment /* apexExperiment */.getIsInPrivateProfilesStrictGbExperiment(ProfilePrivacySetting);
-    const obj3 = apexExperiment /* apexExperiment */;
+    enabled = apexExperiment.getIsInPrivateProfilesStrictGbExperiment(ProfilePrivacySetting);
+    const obj3 = apexExperiment;
   }
   return enabled;
 };

@@ -22,13 +22,13 @@ export const SoundPlayer = require("MuteDeafen");
 export const MainViewTooltipActionSheetsV2 = require("trackActionSheetImpression");
 export const ToastContainer = require("AnimatedToast");
 export const PictureInPictureGlobalContainer = function PictureInPictureGlobalContainer() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [ensureGuildLoaded, createRTCConnection];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
-  const hasPipParticipant = usePipVideoOrStream /* usePipVideoOrStream */.useHasPipParticipant({ isActivityViewFocused: false });
-  const obj2 = usePipVideoOrStream /* usePipVideoOrStream */;
-  const isModalOpen = navigationToRootTabHelper /* navigationToRootTabHelper */.useIsModalOpen();
-  isVoicePanelEnabled /* isVoicePanelEnabled */;
+  const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant({ isActivityViewFocused: false });
+  const obj2 = usePipVideoOrStream;
+  const isModalOpen = navigationToRootTabHelper.useIsModalOpen();
+  isVoicePanelEnabled;
   let tmp7 = null;
   if (null != stateFromStores) {
     tmp7 = null;
@@ -64,7 +64,7 @@ export const useAppKeyCommands = function useAppKeyCommands() {
     const items = [obj];
     return items;
   }, []);
-  const keyCommands = KeyCommandsView /* KeyCommandsView */.useKeyCommands(memo);
+  const keyCommands = KeyCommandsView.useKeyCommands(memo);
 };
 export const useScreenReaderEnabled = function useScreenReaderEnabled() {
   const effect = React.useEffect(() => {

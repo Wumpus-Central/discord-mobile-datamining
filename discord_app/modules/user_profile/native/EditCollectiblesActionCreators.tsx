@@ -5,7 +5,7 @@ import { openUserSettings } from "../../user_settings/core/native/openUserSettin
 const result = require("set").fileFinishedImporting("modules/user_profile/native/EditCollectiblesActionCreators.tsx");
 
 export const navigateToNitroManagement = function navigateToNitroManagement() {
-  let obj = openUserSettings /* openUserSettings */;
+  let obj = openUserSettings;
   obj = { screen: UserSettingsSections.PREMIUM };
   obj.openUserSettings(obj);
 };

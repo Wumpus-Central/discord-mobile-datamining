@@ -20,10 +20,10 @@ let closure_6;
 const require = arg1;
 function SectionSeparator() {
   let obj = { children: null };
-  const items = [callback(Button /* Button */.Spacer, { size: 24 }), , ];
+  const items = [callback(Button.Spacer, { size: 24 }), , ];
   obj = { style: createCacheKey().separator };
   items[1] = callback(View, obj);
-  items[2] = callback(Button /* Button */.Spacer, { size: 24 });
+  items[2] = callback(Button.Spacer, { size: 24 });
   obj[0] = items;
   return callback2(closure_5, obj);
 }
@@ -40,7 +40,7 @@ function BenefitRow(description) {
     const obj1 = { style: null, variant: "text-sm/normal", color: "interactive-text-default", children: null };
     obj1[0] = tmp.benefitDescription;
     obj1[3] = description;
-    tmp4Result = callback(Text /* Text */.Text, obj1);
+    tmp4Result = callback(Text.Text, obj1);
   }
   items1[1] = tmp4Result;
   obj[1] = items1;
@@ -53,7 +53,7 @@ function BenefitSection(arg0) {
   let sectionTitle;
   const obj = { children: null };
   ({ sectionTitle, children } = arg0);
-  const items = [callback(SectionTitle /* SectionTitle */.SectionTitle, { children: sectionTitle }), callback(Button /* Button */.Spacer, { size: 14 }), children];
+  const items = [callback(SectionTitle.SectionTitle, { children: sectionTitle }), callback(Button.Spacer, { size: 14 }), children];
   obj[0] = items;
   return callback2(closure_5, obj);
 }

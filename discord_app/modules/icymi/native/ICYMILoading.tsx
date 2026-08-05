@@ -64,7 +64,7 @@ function ICYMILoadingItem() {
   items6[2] = tmp2;
   items3[3] = callback(ReanimatedRexport.View, { style: items6 });
   obj[1] = items3;
-  const items7 = [callback2(View, obj), callback(Separator /* Separator */.Separator, {})];
+  const items7 = [callback2(View, obj), callback(Separator.Separator, {})];
   obj[0] = items7;
   return callback2(closure_7, obj);
 }

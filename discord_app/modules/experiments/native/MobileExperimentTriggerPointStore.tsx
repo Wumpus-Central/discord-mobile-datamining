@@ -7,7 +7,7 @@ import { commonTriggerPointConfiguration } from "../trigger_points/native/Mobile
 
 const require = arg1;
 function handleConnectionOpen() {
-  const MobileConnectionOpenTriggerPoint = commonTriggerPointConfiguration /* commonTriggerPointConfiguration */.MobileConnectionOpenTriggerPoint;
+  const MobileConnectionOpenTriggerPoint = commonTriggerPointConfiguration.MobileConnectionOpenTriggerPoint;
   MobileConnectionOpenTriggerPoint.trigger();
 }
 class MobileExperimentTriggerPointStore extends Store {

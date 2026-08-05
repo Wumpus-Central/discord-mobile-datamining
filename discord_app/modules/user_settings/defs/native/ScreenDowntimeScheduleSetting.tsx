@@ -8,24 +8,24 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.dxlHN2);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.dxlHN2);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["/071J7"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/071J7"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableScreenDowntimeScheduleNotifications.useSetting,
   onValueChange(arg0) {
-    const EnableScreenDowntimeScheduleNotifications = explicitContentFromProto /* explicitContentFromProto */.EnableScreenDowntimeScheduleNotifications;
+    const EnableScreenDowntimeScheduleNotifications = explicitContentFromProto.EnableScreenDowntimeScheduleNotifications;
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = apexExperiment /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
-    const obj = apexExperiment /* apexExperiment */;
+    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
+    const obj = apexExperiment;
     const tmp2 = useUserIsTeenAgeGroup();
-    const hasActiveParentLinks = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
+    const hasActiveParentLinks = useUserIdsForLinkStatus.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
     }
@@ -37,24 +37,24 @@ const toggle = createToggle.createToggle({
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.dxlHN2);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.dxlHN2);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["/071J7"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/071J7"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableScreenDowntimeScheduleNotifications.useSetting,
   onValueChange(arg0) {
-    const EnableScreenDowntimeScheduleNotifications = explicitContentFromProto /* explicitContentFromProto */.EnableScreenDowntimeScheduleNotifications;
+    const EnableScreenDowntimeScheduleNotifications = explicitContentFromProto.EnableScreenDowntimeScheduleNotifications;
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = apexExperiment /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
-    const obj = apexExperiment /* apexExperiment */;
+    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
+    const obj = apexExperiment;
     const tmp2 = useUserIsTeenAgeGroup();
-    const hasActiveParentLinks = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
+    const hasActiveParentLinks = useUserIdsForLinkStatus.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
     }

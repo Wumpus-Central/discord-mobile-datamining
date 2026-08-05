@@ -16,7 +16,7 @@ export default function isVoiceEmbeddedActivity(arg0) {
   const channel = obj.getChannel(arg0);
   let tmp3 = null != channel;
   if (tmp3) {
-    let tmp6 = channel.type === set /* set */.ChannelTypes.GUILD_VOICE;
+    let tmp6 = channel.type === set.ChannelTypes.GUILD_VOICE;
     if (!tmp6) {
       let isPrivateResult = channel.isPrivate();
       if (isPrivateResult) {

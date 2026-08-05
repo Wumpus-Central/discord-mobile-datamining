@@ -223,7 +223,7 @@ export const setStickerAutocomplete = function setStickerAutocomplete(enabled) {
   obj = { enabled, location: obj };
   obj = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
   obj.track(constants.STICKERS_IN_AUTOCOMPLETE_TOGGLED, obj);
-  const IncludeStickersInAutocomplete = explicitContentFromProto /* explicitContentFromProto */.IncludeStickersInAutocomplete;
+  const IncludeStickersInAutocomplete = explicitContentFromProto.IncludeStickersInAutocomplete;
   IncludeStickersInAutocomplete.updateSetting(enabled);
 };
 export const setLowQualityImageMode = function setLowQualityImageMode(lowQualityImageMode) {
@@ -263,6 +263,6 @@ export const setImageDescriptions = function setImageDescriptions(viewImageDescr
   viewImageDescriptions = viewImageDescriptions.viewImageDescriptions;
   ({ videoUploadQuality, lowQualityImageMode, dataSavingMode } = viewImageDescriptions);
   expandEventProperties.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" });
-  const ViewImageDescriptions = explicitContentFromProto /* explicitContentFromProto */.ViewImageDescriptions;
+  const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
   ViewImageDescriptions.updateSetting(viewImageDescriptions);
 };

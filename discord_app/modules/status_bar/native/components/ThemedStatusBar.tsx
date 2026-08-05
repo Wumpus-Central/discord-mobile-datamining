@@ -12,15 +12,15 @@ const require = arg1;
 const result = require("fetchFingerprint").fileFinishedImporting("modules/status_bar/native/components/ThemedStatusBar.tsx");
 
 export default function ThemedStatusBar() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [fetchFingerprint];
   const stateFromStores = obj.useStateFromStores(items, () => authenticated.isAuthenticated());
-  const isModalOpen = navigationToRootTabHelper /* navigationToRootTabHelper */.useIsModalOpen();
-  const obj2 = navigationToRootTabHelper /* navigationToRootTabHelper */;
+  const isModalOpen = navigationToRootTabHelper.useIsModalOpen();
+  const obj2 = navigationToRootTabHelper;
   const items1 = [handleThemeChange];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => callback(table[6]).isThemeDark(theme.theme));
-  const obj3 = initialize /* initialize */;
-  const globalStatusIndicatorState = useGlobalStatusIndicatorState /* useGlobalStatusIndicatorState */.useGlobalStatusIndicatorState();
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => callback(table[6]).isThemeDark(theme.theme));
+  const obj3 = initialize;
+  const globalStatusIndicatorState = useGlobalStatusIndicatorState.useGlobalStatusIndicatorState();
   if (!stateFromStores) {
     obj = { barStyle: null };
     obj[0] = "light-content";

@@ -61,7 +61,7 @@ function calculateFractionalPremiumInfo(isFetching) {
         const obj1 = { entitlementIds: null };
         obj1[0] = mapped;
         obj[0] = obj1;
-        const result = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */.captureBillingMessage("fractional redemption entitlements should have startsAt/endsAt", obj);
+        const result = _createGatewayCheckoutContext.captureBillingMessage("fractional redemption entitlements should have startsAt/endsAt", obj);
         const _Error = Error;
         const error = new Error("fractional redemption entitlements should have startsAt/endsAt");
         throw error;
@@ -88,7 +88,7 @@ function calculateFractionalPremiumInfo(isFetching) {
         }
         obj2[2] = tmp11;
         if (null != first) {
-          const obj4 = getPremiumPlanItem /* getPremiumPlanItem */;
+          const obj4 = getPremiumPlanItem;
           let tmp2ResultResult = tmp2(3867)(obj4.extendDateWithUnconsumedFractionalPremium(first.endsAt, unactivatedFractionalPremiumUnits, undefined, excludeReverseTrialFromCountdown));
           const tmp2Result = tmp2(3867);
         } else {

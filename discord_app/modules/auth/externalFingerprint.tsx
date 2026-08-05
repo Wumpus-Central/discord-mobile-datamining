@@ -8,14 +8,14 @@ const result = require("dispatcher").fileFinishedImporting("modules/auth/externa
 
 export default function externalFingerprint(arg0) {
   if (!authenticated.isAuthenticated()) {
-    let obj = keysSorter /* keysSorter */;
-    const fingerprint = obj.parse(keysSorter /* keysSorter */.extract(arg0)).fingerprint;
+    let obj = keysSorter;
+    const fingerprint = obj.parse(keysSorter.extract(arg0)).fingerprint;
     if (null != fingerprint) {
       obj = { type: "FINGERPRINT", fingerprint: null };
       obj[1] = fingerprint;
       dispatcher.dispatch(obj);
       const obj3 = dispatcher;
     }
-    const obj2 = keysSorter /* keysSorter */;
+    const obj2 = keysSorter;
   }
 };

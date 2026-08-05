@@ -41,7 +41,7 @@ PageIndicator.prototype["render"] = function render() {
       obj = { style: null, children: "\u2022" };
       items1[1] = num === tmp2 ? tmp.activeIndicator : tmp.inactiveIndicator;
       obj[0] = items1;
-      let arr = children.push(tmp4(Button /* Button */.LegacyText, obj, num));
+      let arr = children.push(tmp4(Button.LegacyText, obj, num));
       num = num + 1;
     } while (num < count);
   }

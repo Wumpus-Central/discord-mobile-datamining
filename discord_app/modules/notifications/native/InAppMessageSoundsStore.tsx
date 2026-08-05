@@ -5,7 +5,7 @@ import { Storage } from "../../../../discord_common/js/packages/storage/Storage.
 
 const InAppMessageSoundsEnabled = "InAppMessageSoundsEnabled";
 let closure_3 = identity.createWithEqualityFn(() => {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   let isEnabled = Storage.get(InAppMessageSoundsEnabled);
   if (isEnabled == null) {
     isEnabled = true;
@@ -18,10 +18,10 @@ export const isInAppMessageSoundsEnabled = function isInAppMessageSoundsEnabled(
   return store.getState().isEnabled;
 };
 export const setInAppMessageSoundsEnabled = function setInAppMessageSoundsEnabled(isEnabled) {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set(InAppMessageSoundsEnabled, isEnabled);
   store.setState({ isEnabled });
 };
 export const useInAppMessageSoundsEnabled = function useInAppMessageSoundsEnabled() {
-  return store((isEnabled) => isEnabled.isEnabled, isIterable /* isIterable */.shallow);
+  return store((isEnabled) => isEnabled.isEnabled, isIterable.shallow);
 };

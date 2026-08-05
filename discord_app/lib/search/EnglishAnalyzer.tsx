@@ -26,7 +26,7 @@ function shouldHighlight(arg0, set) {
   } else if (isStopWord(tmp)) {
     return false;
   } else {
-    const snowballStemResult = snowballStem /* snowballStem */.snowballStem(tmp);
+    const snowballStemResult = snowballStem.snowballStem(tmp);
     if (flag) {
       const values = set.values();
       for (const item10025 of values) {
@@ -41,7 +41,7 @@ function shouldHighlight(arg0, set) {
     } else {
       return set.has(snowballStemResult);
     }
-    const obj = snowballStem /* snowballStem */;
+    const obj = snowballStem;
   }
 }
 function highlightAST(content, arg1, arg2) {
@@ -113,7 +113,7 @@ export const analyze = function analyze(str) {
   const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);
-  return mapped1.reject(isStopWord).map(snowballStem /* snowballStem */.snowballStem).value();
+  return mapped1.reject(isStopWord).map(snowballStem.snowballStem).value();
 };
 export { shouldHighlight };
 export { highlightAST };

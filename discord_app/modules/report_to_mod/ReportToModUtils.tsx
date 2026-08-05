@@ -30,7 +30,7 @@ export const canReportMessageToMods = function canReportMessageToMods(message) {
   } else {
     return false;
   }
-  obj = canReportUser /* canReportUser */;
+  obj = canReportUser;
 };
 export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
   let tmp = arg1;
@@ -38,7 +38,7 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
     const items = [createGuildRecordFromRust, mergeGuildAvatar];
     tmp = items;
   }
-  let obj = getContextForPermission /* getContextForPermission */;
+  let obj = getContextForPermission;
   const contextForPermission = obj.getContextForPermission(arg0, tmp);
   if (null == contextForPermission) {
     return false;
@@ -189,7 +189,7 @@ export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransit
     } else {
       return true;
     }
-    obj3 = isCurrentUserTeen /* isCurrentUserTeen */;
+    obj3 = isCurrentUserTeen;
   }
 };
 export const isModeratorReportThreadStarterMessage = function isModeratorReportThreadStarterMessage(isFirstMessageInForumPost, isModeratorReportChannel) {

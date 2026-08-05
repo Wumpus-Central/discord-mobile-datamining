@@ -160,8 +160,8 @@ let result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/ta
 export default memoResult;
 export const getMessagesHeaderHeight = function getMessagesHeaderHeight(fontScale, closure_2) {
   const bound = Math.min(fontScale, 1.75);
-  const refreshToken = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(Themes.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM, closure_2);
-  const obj = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */;
-  const sum = map /* map */.scaleTextLineHeight("redesign/heading-18/bold", bound) + PX_8;
-  return sum + MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + PX_16 + refreshToken;
+  const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(Themes.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM, closure_2);
+  const obj = useIsMobileVisualRefreshExperimentEnabled;
+  const sum = map.scaleTextLineHeight("redesign/heading-18/bold", bound) + PX_8;
+  return sum + MINIMUM_HIT_AREA.SMALL_BUTTON_HEIGHT + PX_16 + refreshToken;
 };

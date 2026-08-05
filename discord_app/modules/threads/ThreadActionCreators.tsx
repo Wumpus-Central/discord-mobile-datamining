@@ -744,23 +744,23 @@ export default {
       obj[3] = store.getId();
       obj.dispatch(obj);
     }
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_12.THREAD_MEMBER(channel.id), query: obj1, rejectWithError: null };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   removeMember(id, outer1_1, location) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_12.THREAD_MEMBER(id, outer1_1), query: obj, rejectWithError: null };
     obj = { location };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   setAutoArchiveDuration(id, auto_archive_duration) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_12.CHANNEL(id.id), body: obj, rejectWithError: null };
     obj = { auto_archive_duration };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   pin(thread) {
@@ -973,7 +973,7 @@ export default {
     })();
   },
   openThreadCreationForMobile(channel, id, Message) {
-    let obj = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+    let obj = collectGuildAnalyticsMetadata;
     obj = { location: Message, channel_id: channel.id, guild_id: channel.guild_id };
     obj.trackWithMetadata(constants.THREAD_CREATION_STARTED, obj);
     obj = { parentMessageId: id, isPrivate: false, location: Message };
@@ -981,8 +981,8 @@ export default {
     if (null == id) {
       const obj1 = { channelId: null, command: null, section: null };
       obj1[0] = channel.id;
-      setActiveCommand /* setActiveCommand */.setActiveCommand(obj1);
-      const tmpResult = setActiveCommand /* setActiveCommand */;
+      setActiveCommand.setActiveCommand(obj1);
+      const tmpResult = setActiveCommand;
     }
   },
   setNotificationSettings(channel, muteSettings) {

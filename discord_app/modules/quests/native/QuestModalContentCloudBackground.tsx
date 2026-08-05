@@ -69,8 +69,8 @@ export default function QuestModalContentCloudBackground(align) {
     str2 = resizeMode;
   }
   const tmp = callback("bottom" === str);
-  let obj = isThemeLight /* isThemeLight */;
-  let obj1 = useTheme /* useTheme */;
+  let obj = isThemeLight;
+  let obj1 = useTheme;
   const isThemeDarkResult = obj.isThemeDark(obj1.useTheme());
   obj = { style: items, children: null };
   items = [tmp.wrapper, style];

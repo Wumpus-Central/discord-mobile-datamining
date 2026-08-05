@@ -21,9 +21,9 @@ export default function GuildPowerupsDisabledWarning(children) {
   let obj = { style: tmp.container, children: null };
   obj = { color: null, size: "md" };
   obj[0] = Themes.colors.TEXT_FEEDBACK_WARNING;
-  const items = [callback(WarningIcon /* WarningIcon */.WarningIcon, obj), ];
+  const items = [callback(WarningIcon.WarningIcon, obj), ];
   obj = { style: tmp.text, variant: "text-md/semibold", color: "text-feedback-warning", children: children.text };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

@@ -7,8 +7,8 @@ import { useUserRoleSubscriptionRelationship } from "../../../guild_role_subscri
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.trSpHX);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.trSpHX);
   },
   parent: require("MobileSetting").MobileSetting.PREMIUM,
   IconComponent: require("TicketIcon").TicketIcon,
@@ -20,7 +20,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS,
   getComponent() {
-    return GuildRoleSubscriptionsSectionHeader /* GuildRoleSubscriptionsSectionHeader */.default;
+    return GuildRoleSubscriptionsSectionHeader.default;
   }
 };
 const route = createToggle.createRoute(obj);

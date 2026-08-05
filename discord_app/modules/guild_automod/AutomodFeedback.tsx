@@ -7,13 +7,13 @@ const result = require("set").fileFinishedImporting("modules/guild_automod/Autom
 export const Feedback = obj;
 export const generateFeedbackOptions = function generateFeedbackOptions() {
   let obj = { name: null, value: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["+MbOX4"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["+MbOX4"]);
   obj[1] = obj.BUG;
   const items = [obj, ];
   obj = { name: null, value: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.CRsCRC);
+  const intl2 = getSystemLocale.intl;
+  obj[0] = intl2.string(getSystemLocale.t.CRsCRC);
   obj[1] = obj.ALLOWED;
   items[1] = obj;
   return items;

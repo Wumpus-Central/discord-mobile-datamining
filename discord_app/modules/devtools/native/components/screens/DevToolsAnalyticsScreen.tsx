@@ -17,7 +17,7 @@ function CommonProperty(arg0) {
   let name;
   ({ name, children } = arg0);
   const obj = { style: createCacheKey().commonProperty, children: null };
-  const items = [callback2(Text /* Text */.Text, { variant: "text-sm/semibold", color: "text-default", children: name }), children];
+  const items = [callback2(Text.Text, { variant: "text-sm/semibold", color: "text-default", children: name }), children];
   obj[1] = items;
   return callback3(View, obj);
 }

@@ -27,7 +27,7 @@ function productSK2ToIAPProduct(subscription) {
   if (null == subscription.subscription.introductoryOffer) {
     const _Number = Number;
     const price = subscription.price;
-    const NumberResult = Number(price.toFixed(CurrencyCodes /* CurrencyCodes */.CurrencyExponents[subscription.currency.toLowerCase(subscription.currency)]));
+    const NumberResult = Number(price.toFixed(CurrencyCodes.CurrencyExponents[subscription.currency.toLowerCase(subscription.currency)]));
     let obj = { identifier: null, price: null, currencySymbol: null, currencyCode: null, priceString: null, countryCode: "", downloadable: false, description: null, title: null, discounts: null };
     const _String = String;
     obj[0] = String(subscription.id);

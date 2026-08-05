@@ -13,11 +13,11 @@ export const openChangelog = function openChangelog() {
   }
   let isModalOpenResult = !flag;
   if (!flag) {
-    isModalOpenResult = navigationToRootTabHelper /* navigationToRootTabHelper */.isModalOpen();
-    const obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
+    isModalOpenResult = navigationToRootTabHelper.isModalOpen();
+    const obj = navigationToRootTabHelper;
   }
   if (!isModalOpenResult) {
-    ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(14622, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl(14622, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
     const obj2 = ModalActionCreators;
   }
 };

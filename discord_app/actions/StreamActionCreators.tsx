@@ -29,7 +29,7 @@ function watchStream(stream, forceMultiple) {
   if (null == remoteSessionId.getRemoteSessionId()) {
     const channelId = stream.channelId;
     if (null == stream.guildId) {
-      const encodeStreamKeyResult = isStreamKey /* isStreamKey */.encodeStreamKey(stream);
+      const encodeStreamKeyResult = isStreamKey.encodeStreamKey(stream);
       forceMultiple = undefined;
       if (forceMultiple != null) {
         forceMultiple = forceMultiple.forceMultiple;
@@ -38,7 +38,7 @@ function watchStream(stream, forceMultiple) {
         const allActiveStreamsForChannel = authStore.getAllActiveStreamsForChannel(channelId);
         forceMultiple = allActiveStreamsForChannel.filter((ownerId) => ownerId.ownerId !== id.getId()).length >= MAX_VALUE;
       }
-      const obj2 = isStreamKey /* isStreamKey */;
+      const obj2 = isStreamKey;
       const tmp18 = importDefault;
       let obj = { type: "STREAM_WATCH", streamKey: null, allowMultiple: null };
       obj[1] = encodeStreamKeyResult;
@@ -70,7 +70,7 @@ function watchStream(stream, forceMultiple) {
       const isInChannelResult = updateVoiceState.isInChannel(channelId);
       let isChannelFullResult = !isInChannelResult;
       if (!isInChannelResult) {
-        obj = allowChannelAccess /* allowChannelAccess */;
+        obj = allowChannelAccess;
         isChannelFullResult = obj.isChannelFull(channel, tmp6, createGuildRecordFromRust);
       }
       tmp6 = updateVoiceState;
@@ -259,7 +259,7 @@ export const startStream = function startStream(guildId, channelId) {
   obj.dispatch(obj);
 };
 export const setStreamPaused = function setStreamPaused(currentUserActiveStream, paused) {
-  let obj = isStreamKey /* isStreamKey */;
+  let obj = isStreamKey;
   const encodeStreamKeyResult = obj.encodeStreamKey(currentUserActiveStream);
   obj = { type: "STREAM_SET_PAUSED", streamKey: encodeStreamKeyResult, paused };
   dispatcher.dispatch(obj);
@@ -287,8 +287,8 @@ export const watchStreamAndTransitionToStream = function watchStreamAndTransitio
     const isInChannelResult = updateVoiceState.isInChannel(channelId);
     let isChannelFullResult = !isInChannelResult;
     if (!isInChannelResult) {
-      isChannelFullResult = allowChannelAccess /* allowChannelAccess */.isChannelFull(channel, tmp6, createGuildRecordFromRust);
-      const obj = allowChannelAccess /* allowChannelAccess */;
+      isChannelFullResult = allowChannelAccess.isChannelFull(channel, tmp6, createGuildRecordFromRust);
+      const obj = allowChannelAccess;
     }
     tmp6 = updateVoiceState;
   }
@@ -351,7 +351,7 @@ export const notifyStreamStart = function notifyStreamStart() {
 };
 export const updateStreamSettings = function updateStreamSettings(noTrack) {
   if (true !== noTrack.noTrack) {
-    let obj = isPremiumResolution /* isPremiumResolution */;
+    let obj = isPremiumResolution;
     const result = obj.trackStreamSettingsUpdate(noTrack.preset, noTrack.resolution, noTrack.frameRate, noTrack.soundshareEnabled);
   }
   obj = { type: "STREAM_UPDATE_SETTINGS" };
@@ -359,7 +359,7 @@ export const updateStreamSettings = function updateStreamSettings(noTrack) {
   dispatcher.dispatch(obj);
 };
 export const changeStreamRegion = function changeStreamRegion(encodeStreamKeyResult, preferredRegion) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: closure_13.STREAM(encodeStreamKeyResult), body: obj, oldFormErrors: true, rejectWithError: true };
   obj = { region: preferredRegion };
   HTTP.patch(obj);
@@ -371,7 +371,7 @@ export const stopOwnStream = function stopOwnStream(arg0) {
   }
   const currentUserActiveStream = authStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    const encodeStreamKeyResult = isStreamKey /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
+    const encodeStreamKeyResult = isStreamKey.encodeStreamKey(currentUserActiveStream);
     if (flag === undefined) {
       flag = true;
     }
@@ -383,7 +383,7 @@ export const stopOwnStream = function stopOwnStream(arg0) {
     obj[1] = encodeStreamKeyResult;
     obj[2] = flag;
     obj.dispatch(obj);
-    const obj5 = isStreamKey /* isStreamKey */;
+    const obj5 = isStreamKey;
     obj = { type: "STREAM_STOP", streamKey: null, appContext: null };
     obj[1] = encodeStreamKeyResult;
     obj[2] = constants.APP;

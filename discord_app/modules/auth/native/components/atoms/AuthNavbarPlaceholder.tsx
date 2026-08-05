@@ -13,5 +13,5 @@ const result = require("createCacheKey").fileFinishedImporting("modules/auth/nat
 
 export default function AuthNavbarPlaceholder() {
   const tmp = createCacheKey();
-  return jsx(HeaderBackImage /* HeaderBackImage */.FauxHeader, { style: createCacheKey().navBar, children: null });
+  return jsx(HeaderBackImage.FauxHeader, { style: createCacheKey().navBar, children: null });
 };

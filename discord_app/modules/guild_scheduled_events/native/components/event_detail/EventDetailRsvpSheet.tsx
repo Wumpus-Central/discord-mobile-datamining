@@ -33,17 +33,17 @@ function EmptyDisplay(arg0) {
 function FetchErrorDisplay(style) {
   let obj = { style: style.style, children: null };
   obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.obChXk);
-  obj[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.obChXk);
+  obj[1] = callback(Text.Text, obj);
   return callback(EmptyDisplay, obj);
 }
 function NoUsersDisplay(style) {
   let obj = { style: style.style, children: null };
   obj = { style: callback3().emptyDisplayTitle, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.hW0mBR);
-  obj[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.hW0mBR);
+  obj[1] = callback(Text.Text, obj);
   return callback(EmptyDisplay, obj);
 }
 function RemainingUsersRow(remainingUsersGroup) {
@@ -55,9 +55,9 @@ function RemainingUsersRow(remainingUsersGroup) {
   obj[1] = tmp.remainingUsersIcon;
   obj[1] = callback(preload, obj);
   obj[1] = callback(View, obj);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.BdQTfR, { userRemainCount: remainingUsersGroup.remainingUsersGroup.count });
-  return callback(Form /* Form */.FormRow, obj, "userRemaining");
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.formatToPlainString(getSystemLocale.t.BdQTfR, { userRemainCount: remainingUsersGroup.remainingUsersGroup.count });
+  return callback(Form.FormRow, obj, "userRemaining");
 }
 function keyExtractor(count) {
   if (obj.isRemainingUsersGroup(count)) {

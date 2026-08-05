@@ -20,7 +20,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVari
   }
   obj.variant = str;
   obj.maxFontSizeMultiplier = 2;
-  obj[3] = jsx(IconButton /* IconButton */.IconButton, {});
+  obj[3] = jsx(IconButton.IconButton, {});
   return jsx(ReanimatedNativeView, {});
 }));
 const result = require("module_7819").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelIconButton.tsx");

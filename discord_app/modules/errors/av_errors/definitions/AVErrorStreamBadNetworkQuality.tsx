@@ -20,7 +20,7 @@ export const AVErrorStreamBadNetworkQualityDefinition = {
       }
       return tmp;
     });
-    return mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    return mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;

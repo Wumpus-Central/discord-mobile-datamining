@@ -21,7 +21,7 @@ export default function QuestHomeOrbShopRewardCard(product) {
   product = product.product;
   const require = product;
   let stateFromStores;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   stateFromStores = obj.useStateFromStores(items, () => stateFromStores(table[8]).canUseShopDiscounts(currentUser.getCurrentUser()));
   const items1 = [product, stateFromStores];
@@ -30,7 +30,7 @@ export default function QuestHomeOrbShopRewardCard(product) {
     obj = { product: closure_0, hasShopDiscount: stateFromStores };
     return obj.getProductOrbPrice(obj);
   }, items1);
-  getProductName /* getProductName */;
+  getProductName;
   let tmp7 = null;
   if (null != memo) {
     obj = { style: null, accessible: true, accessibilityRole: "text", accessibilityLabel: null, children: null };

@@ -10,11 +10,11 @@ obj[2] = obj;
 obj = {
   zoomTo(arg0, arg1, arg2, arg3, arg4) {
     const items = [arg1, arg2, arg3, arg4];
-    renderElement /* renderElement */.dispatchCommand(arg0, "zoomTo", items);
+    renderElement.dispatchCommand(arg0, "zoomTo", items);
   },
   unzoom(arg0, arg1) {
     const items = [arg1];
-    renderElement /* renderElement */.dispatchCommand(arg0, "unzoom", items);
+    renderElement.dispatchCommand(arg0, "unzoom", items);
   }
 };
 const value = setRuntimeConfigProvider.get("DCDZoomLayoutAndroid", () => obj);

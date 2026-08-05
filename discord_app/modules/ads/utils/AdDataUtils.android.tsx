@@ -13,8 +13,8 @@ export const getAdUser = function getAdUser(questContentName) {
   if (null == adUser) {
     if (!adUser.hasFetchFailed) {
       if (!adUser.isFetching) {
-        adUser = _fetchAdUser /* _fetchAdUser */.fetchAdUser(questContentName);
-        const obj = _fetchAdUser /* _fetchAdUser */;
+        adUser = _fetchAdUser.fetchAdUser(questContentName);
+        const obj = _fetchAdUser;
       }
       let resolved = new Promise((arg0) => {
         let closure_0 = arg0;

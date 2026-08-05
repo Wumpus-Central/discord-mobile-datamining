@@ -199,7 +199,7 @@ export const deleteEmoji = function deleteEmoji(c0, id) {
   let obj = dispatcher;
   obj = { type: "EMOJI_DELETE", guildId: c0, emojiId: id };
   obj.dispatch(obj);
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: Endpoints.GUILD_EMOJI(c0, id), body: null, oldFormErrors: true, rejectWithError: null };
   let tmp4;
   if (null != arg2) {
@@ -208,9 +208,9 @@ export const deleteEmoji = function deleteEmoji(c0, id) {
     tmp4 = obj1;
   }
   obj[1] = tmp4;
-  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[3] = sendRequest.rejectWithMigratedError();
   const tmp3 = require;
-  const tmp3Result = sendRequest /* sendRequest */;
+  const tmp3Result = sendRequest;
   return HTTP.del(obj).then(() => {
     const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
     const intl = callback(1236).intl;
@@ -246,7 +246,7 @@ export const favoriteEmoji = function favoriteEmoji(customEmojiFromJoinedGuild) 
   }
   const require = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = updateUserGuildSettings.FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", (emojis) => {
       emojis = emojis.emojis;
       let tmp = emojis;
@@ -313,7 +313,7 @@ export const unfavoriteEmoji = function unfavoriteEmoji(customEmojiFromJoinedGui
   }
   const require = tmp;
   if (null != tmp) {
-    const FrecencyUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = updateUserGuildSettings.FrecencyUserSettingsActionCreators;
     FrecencyUserSettingsActionCreators.updateAsync("favoriteEmojis", (emojis) => {
       emojis = emojis.emojis;
       let tmp = emojis;

@@ -32,16 +32,16 @@ let require = arg1;
 function FamilyCenterActivityCardPrefaceText() {
   const tmp = callback3();
   const tmp4 = useIsInAdultAgeGroup();
-  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
+  let obj = useUserIdsForLinkStatus;
   const activeLinkUserIds = obj.useActiveLinkUserIds();
-  let obj1 = getEmptyActivityFormatter /* getEmptyActivityFormatter */;
+  let obj1 = getEmptyActivityFormatter;
   const activityWindowTimestampFormatter = obj1.getActivityWindowTimestampFormatter(tmp4);
-  let obj2 = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
+  let obj2 = useUserIdsForLinkStatus;
   const activityWindowTimeStamp = obj2.useActivityWindowTimeStamp(activityWindowTimestampFormatter);
-  let obj3 = useAgeSpecificText /* useAgeSpecificText */;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  let obj3 = useAgeSpecificText;
+  const intl = getSystemLocale.intl;
   obj = { activeLinks: activeLinkUserIds.length };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   const ageSpecificText = obj3.useAgeSpecificText(intl.formatToPlainString(messagesProxy.tazvHQ, obj), intl2.string(messagesProxy.KrLnkE));
   obj = { style: tmp.container, children: null };
   let tmp12 = null;
@@ -62,7 +62,7 @@ function FamilyCenterActivityCardPrefaceText() {
     }
   }
   obj2[3] = tmp15;
-  items[1] = callback(Text /* Text */.Text, obj2);
+  items[1] = callback(Text.Text, obj2);
   obj3 = {
     onPress() {
       callback2(paths[17]).pushLazy(callback(paths[19])(paths[18], paths.paths));
@@ -74,23 +74,23 @@ function FamilyCenterActivityCardPrefaceText() {
   const tmp11 = View;
   const obj4 = { color: tmp.icon.color, source: null, size: null, style: null };
   obj4[1] = registerAsset;
-  obj4[2] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
+  obj4[2] = Button.Icon.Sizes.EXTRA_SMALL;
   obj4[3] = tmp.icon;
-  obj3[1] = callback(Button /* Button */.Icon, obj4);
+  obj3[1] = callback(Button.Icon, obj4);
   items[2] = callback(render, obj3);
   obj[1] = items;
   return tmp10(tmp11, obj);
 }
 function FamilyCenterHeaderSubText() {
   const tmp2 = useIsInAdultAgeGroup();
-  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
+  let obj = useUserIdsForLinkStatus;
   const activeLinkUserIds = obj.useActiveLinkUserIds();
-  const activityWindowTimestampFormatter = getEmptyActivityFormatter /* getEmptyActivityFormatter */.getActivityWindowTimestampFormatter(tmp2);
-  useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
+  const activityWindowTimestampFormatter = getEmptyActivityFormatter.getActivityWindowTimestampFormatter(tmp2);
+  useUserIdsForLinkStatus;
   if (!tmp2) {
     obj = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj[2] = tmp6;
-    let tmp7 = callback(Text /* Text */.Text, obj);
+    let tmp7 = callback(Text.Text, obj);
   } else {
     tmp7 = null;
   }
@@ -241,7 +241,7 @@ const memoResult = importAllResult.memo((arg0) => {
   let user;
   ({ user, inSelector } = arg0);
   const tmp = callback4();
-  const AvatarSizes = Button /* Button */.AvatarSizes;
+  const AvatarSizes = Button.AvatarSizes;
   if (inSelector) {
     let NORMAL = AvatarSizes.SMALL;
     let tmp4 = tmp2;
@@ -300,9 +300,9 @@ const result = require("items").fileFinishedImporting("modules/parent_tools/nati
 export default function FamilyCenterActivityCard() {
   const tmp = callback6();
   const require = tmp;
-  let obj = useSelectedTeenUser /* useSelectedTeenUser */;
+  let obj = useSelectedTeenUser;
   const selectedTeenUser = obj.useSelectedTeenUser();
-  useActionsForDisplayType /* useActionsForDisplayType */;
+  useActionsForDisplayType;
   if (undefined === selectedTeenUser) {
     return null;
   } else {

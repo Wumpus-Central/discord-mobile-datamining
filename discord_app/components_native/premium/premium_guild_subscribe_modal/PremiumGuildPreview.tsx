@@ -38,7 +38,7 @@ function PremiumGuildTierPill(arg0) {
       tmp22 = tmp21;
     }
     let tmp7 = tmp22;
-    obj5 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+    obj5 = AccessibilityAnnouncer;
   } else if (tmp6.TIER_1 === tier) {
     let tmp17 = registerAsset;
     const tmp16 = registerAsset;
@@ -46,7 +46,7 @@ function PremiumGuildTierPill(arg0) {
       tmp17 = tmp16;
     }
     tmp7 = tmp17;
-    obj4 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+    obj4 = AccessibilityAnnouncer;
   } else if (tmp6.TIER_2 === tier) {
     let tmp12 = registerAsset;
     const tmp11 = registerAsset;
@@ -54,7 +54,7 @@ function PremiumGuildTierPill(arg0) {
       tmp12 = tmp11;
     }
     tmp7 = tmp12;
-    obj3 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+    obj3 = AccessibilityAnnouncer;
   } else if (tmp6.TIER_3 === tier) {
     let tmp8 = registerAsset;
     const tmp26 = registerAsset;
@@ -62,13 +62,13 @@ function PremiumGuildTierPill(arg0) {
       tmp8 = tmp26;
     }
     tmp7 = tmp8;
-    obj8 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+    obj8 = AccessibilityAnnouncer;
   }
   obj[1] = tmp7;
   const items = [closure_7(closure_4, obj), ];
   obj = { style: tmp.tierPillText, children: null };
-  obj[1] = getGuildTierFromGuild /* getGuildTierFromGuild */.getTierName(tier);
-  items[1] = closure_7(Button /* Button */.LegacyText, obj);
+  obj[1] = getGuildTierFromGuild.getTierName(tier);
+  items[1] = closure_7(Button.LegacyText, obj);
   obj[1] = items;
   return closure_8(closure_3, obj);
 }
@@ -91,16 +91,16 @@ const result = require("handleThemeChange").fileFinishedImporting("components_na
 export default function PremiumGuildPreview(guild) {
   guild = guild.guild;
   const tmp = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [handleThemeChange];
   obj = { style: items1, children: null };
   items1 = [tmp.guild, guild.style];
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   obj = { guild, size: null, selected: false };
-  obj[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.LARGE;
+  obj[1] = GuildIconSizes.GuildIconSizes.LARGE;
   const items2 = [callback(GuildIconSizes, obj), ];
   const obj1 = { style: tmp.guildInfo, children: null };
-  const items3 = [callback(Button /* Button */.LegacyText, { style: tmp.guildName, children: guild.name }), callback(PremiumGuildTierPill, { tier: guild.premiumTier, theme: stateFromStores })];
+  const items3 = [callback(Button.LegacyText, { style: tmp.guildName, children: guild.name }), callback(PremiumGuildTierPill, { tier: guild.premiumTier, theme: stateFromStores })];
   obj1[1] = items3;
   items2[1] = callback2(closure_3, obj1);
   obj[1] = items2;

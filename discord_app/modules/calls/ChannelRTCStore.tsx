@@ -224,9 +224,9 @@ function setSelectedParticipantId(channelId, arg1) {
   }
 }
 function hasVideo(size) {
-  let hasEmbeddedActivityResult = size.size(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.STREAM) > 0;
+  let hasEmbeddedActivityResult = size.size(sortKey.ChannelRTCParticipantsIndexes.STREAM) > 0;
   if (!hasEmbeddedActivityResult) {
-    hasEmbeddedActivityResult = size.size(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.VIDEO) > 0;
+    hasEmbeddedActivityResult = size.size(sortKey.ChannelRTCParticipantsIndexes.VIDEO) > 0;
   }
   if (!hasEmbeddedActivityResult) {
     hasEmbeddedActivityResult = size.hasEmbeddedActivity();
@@ -1192,7 +1192,7 @@ prototype["getSpeakingParticipants"] = function getSpeakingParticipants(id) {
     tmp[id] = tmp7;
     obj = tmp7;
   }
-  let toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.SPEAKING);
+  let toArrayResult = obj.toArray(sortKey.ChannelRTCParticipantsIndexes.SPEAKING);
   if (toArrayResult == null) {
     toArrayResult = frozen;
   }
@@ -1207,11 +1207,11 @@ prototype["getFilteredParticipants"] = function getFilteredParticipants(closure_
   }
   if (dependencyMap5[closure_0] != null) {
     if (tmp9) {
-      let toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.FILTERED);
+      let toArrayResult = obj.toArray(sortKey.ChannelRTCParticipantsIndexes.FILTERED);
     }
     return toArrayResult;
   }
-  toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.NOT_POPPED_OUT);
+  toArrayResult = obj.toArray(sortKey.ChannelRTCParticipantsIndexes.NOT_POPPED_OUT);
 };
 prototype["getVideoParticipants"] = function getVideoParticipants(channelId) {
   let obj = dependencyMap[channelId];
@@ -1220,7 +1220,7 @@ prototype["getVideoParticipants"] = function getVideoParticipants(channelId) {
     tmp[channelId] = tmp7;
     obj = tmp7;
   }
-  let toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.VIDEO);
+  let toArrayResult = obj.toArray(sortKey.ChannelRTCParticipantsIndexes.VIDEO);
   if (toArrayResult == null) {
     toArrayResult = frozen;
   }
@@ -1233,7 +1233,7 @@ prototype["getStreamParticipants"] = function getStreamParticipants(id) {
     tmp[id] = tmp7;
     obj = tmp7;
   }
-  let toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.STREAM);
+  let toArrayResult = obj.toArray(sortKey.ChannelRTCParticipantsIndexes.STREAM);
   if (toArrayResult == null) {
     toArrayResult = frozen;
   }
@@ -1246,7 +1246,7 @@ prototype["getActivityParticipants"] = function getActivityParticipants(channelI
     tmp[channelId] = tmp7;
     obj = tmp7;
   }
-  let toArrayResult = obj.toArray(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.ACTIVITY);
+  let toArrayResult = obj.toArray(sortKey.ChannelRTCParticipantsIndexes.ACTIVITY);
   if (toArrayResult == null) {
     toArrayResult = frozen;
   }
@@ -1268,8 +1268,8 @@ prototype["getUserParticipantCount"] = function getUserParticipantCount(id) {
     tmp[id] = tmp7;
     obj = tmp7;
   }
-  const diff = obj.size() - obj.size(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.STREAM);
-  return diff - obj.size(sortKey /* sortKey */.ChannelRTCParticipantsIndexes.ACTIVITY);
+  const diff = obj.size() - obj.size(sortKey.ChannelRTCParticipantsIndexes.STREAM);
+  return diff - obj.size(sortKey.ChannelRTCParticipantsIndexes.ACTIVITY);
 };
 prototype["getParticipantsOpen"] = function getParticipantsOpen(arg0) {
   let flag = table2[arg0];

@@ -5,9 +5,9 @@ import { presentAddedFriendToast } from "../../toast/native/ToastUtils.tsx";
 const result = require("presentAddedFriendToast").fileFinishedImporting("modules/channel/native/ChannelActionSheetUtils.tsx");
 
 export const copyGuildChannelOrThreadLink = function copyGuildChannelOrThreadLink(guild_id, id) {
-  const channelPermalink = allowChannelAccess /* allowChannelAccess */.getChannelPermalink(guild_id, id);
-  const obj = allowChannelAccess /* allowChannelAccess */;
-  _copy /* _copy */.copy(channelPermalink);
-  const obj2 = _copy /* _copy */;
-  presentAddedFriendToast /* presentAddedFriendToast */.presentLinkCopied();
+  const channelPermalink = allowChannelAccess.getChannelPermalink(guild_id, id);
+  const obj = allowChannelAccess;
+  _copy.copy(channelPermalink);
+  const obj2 = _copy;
+  presentAddedFriendToast.presentLinkCopied();
 };

@@ -71,7 +71,7 @@ class ApexExperimentStore extends tmp2 {
 const prototype = ApexExperimentStore.prototype;
 prototype["initialize"] = function initialize(version) {
   this.waitFor(fetchFingerprint);
-  const storedState = this.loadStoredState(version, Version /* Version */.getBuildOverrideExperiments());
+  const storedState = this.loadStoredState(version, Version.getBuildOverrideExperiments());
 };
 prototype["maybeEmitDebugExperimentEvent"] = function maybeEmitDebugExperimentEvent() {
   const self = this;

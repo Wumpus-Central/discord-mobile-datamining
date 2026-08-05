@@ -43,11 +43,11 @@ function ChannelTitleContent(arg0) {
     let tmp4 = icon;
     if (!importAllResult.isValidElement(icon)) {
       let obj = { size: null, source: null, style: null, color: null };
-      obj[0] = Button /* Button */.Icon.Sizes.CUSTOM;
+      obj[0] = Button.Icon.Sizes.CUSTOM;
       obj[1] = icon;
       obj[2] = tmp.channelIcon;
       obj[3] = tmp.channelIconColor.color;
-      tmp4 = callback(Button /* Button */.Icon, obj);
+      tmp4 = callback(Button.Icon, obj);
     }
     tmp2 = tmp4;
   }
@@ -59,7 +59,7 @@ function ChannelTitleContent(arg0) {
     obj[0] = tmp.channelName;
     obj[4] = accessibleTitle;
     obj[7] = title;
-    obj[1] = callback(Text /* Text */.Text, obj);
+    obj[1] = callback(Text.Text, obj);
     tmp8 = callback(View, obj);
   }
   const obj1 = { style: tmp.flexRow, children: null };
@@ -75,14 +75,14 @@ function ChannelTitleContent(arg0) {
 function ParentChannelSubTitle(parentChannel) {
   parentChannel = parentChannel.parentChannel;
   let obj = { lineClamp: 1, style: callback3().navbarTitleSecondaryText, accessibilityLabel: null, maxFontSizeMultiplier: 1, variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { channelName: null };
   const tmp = callback3();
-  obj[0] = computeChannelName /* computeChannelName */.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship);
-  obj[2] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.BjYvHO, obj);
-  const obj3 = computeChannelName /* computeChannelName */;
-  obj[6] = computeChannelName /* computeChannelName */.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship, true);
-  return callback(Text /* Text */.Text, obj);
+  obj[0] = computeChannelName.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship);
+  obj[2] = intl.formatToPlainString(getSystemLocale.t.BjYvHO, obj);
+  const obj3 = computeChannelName;
+  obj[6] = computeChannelName.computeChannelName(parentChannel, mergeGuildAvatar, upsertRelationship, true);
+  return callback(Text.Text, obj);
 }
 function DMChannelName(style) {
   const userId = style.userId;
@@ -168,7 +168,7 @@ function ChannelTitleWrapper(arg0) {
       return null;
     };
     obj[4] = children;
-    tmp5 = callback(PressableBase /* PressableBase */.PressableOpacity, obj);
+    tmp5 = callback(PressableBase.PressableOpacity, obj);
   }
   return tmp5;
 }
@@ -422,15 +422,15 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   let require;
   ({ onPressTitle, channelId: require } = arg0);
   const tmp = callback3();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getChannel(closure_0));
-  let obj2 = initialize /* initialize */;
+  let obj2 = initialize;
   const items1 = [_handleConnectionOpen];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => connected.isConnected());
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (stateFromStores1) {
     let stringResult = string(t.ai6Lbr);
   } else {

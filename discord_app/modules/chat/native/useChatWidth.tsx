@@ -11,7 +11,7 @@ const result = require("useBaseAppContainerDimensions").fileFinishedImporting("m
 export default function useChatWidth(arg0) {
   let context = React.useContext(context);
   const width = useBaseAppContainerDimensions().width;
-  sum /* sum */;
+  sum;
   if (null == context) {
     if (null == arg0) {
       let diff = width;
@@ -27,9 +27,9 @@ export default function useChatWidth(arg0) {
   return context;
 };
 export const getChatWidth = function getChatWidth(arg0) {
-  const obj = useChatLayout /* useChatLayout */;
+  const obj = useChatLayout;
   const tmp = require;
-  const width = useBaseAppContainerDimensions /* useBaseAppContainerDimensions */.getBaseAppContainerDimensions().width;
+  const width = useBaseAppContainerDimensions.getBaseAppContainerDimensions().width;
   if (null == arg0) {
     let diff = width;
     if (obj.getChatLayout().isChatLockedOpen) {

@@ -29,7 +29,7 @@ export const getActiveTextChannels = function getActiveTextChannels(guildId) {
   }
   mutedChannels = obj2.getMutedChannels(guildId);
   const mapped = items.map((arg0) => store.getChannel(arg0));
-  const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
   return found.filter((hasFlag) => {
     let hasFlagResult;
     if (hasFlag != null) {

@@ -122,7 +122,7 @@ obj = {
         darkSidebar = appearance.darkSidebar;
       }
       if (!darkSidebar) {
-        const PreloadedUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
+        const PreloadedUserSettingsActionCreators = updateUserGuildSettings.PreloadedUserSettingsActionCreators;
         PreloadedUserSettingsActionCreators.updateAsync("appearance", (arg0) => {
           arg0.darkSidebar = true;
         }, UserSettingsDelay.INFREQUENT_USER_ACTION);

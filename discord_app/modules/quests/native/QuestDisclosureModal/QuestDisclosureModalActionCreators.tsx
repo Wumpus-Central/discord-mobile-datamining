@@ -14,9 +14,9 @@ export default {
     let trackingCtx;
     ({ quest, trackingCtx } = isTargetedDisclosure);
     ({ gamePublisher, gameTitle } = quest.config.messages);
-    let obj = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
-    let obj1 = apexExperiment /* apexExperiment */;
-    if (obj1.shouldMigrateToAdAnalyticsInterface(apexExperiment /* apexExperiment */.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_disclosure_modal")) {
+    let obj = getApplicationIdsByTaskTypes;
+    let obj1 = apexExperiment;
+    if (obj1.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_disclosure_modal")) {
       let tmpResult = tmp(9435);
       obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null };
       obj[0] = tmp(9439).AdUserActionType.CLICK_INTERNAL;
@@ -42,7 +42,7 @@ export default {
     }
     obj1[3] = name;
     obj1[4] = hasWatchVideoTasksResult;
-    obj7.pushLazy(asyncRequireImpl /* asyncRequireImpl */(14251, tmp2.paths), obj1, QUEST_DISCLOSURE_MODAL);
+    obj7.pushLazy(asyncRequireImpl(14251, tmp2.paths), obj1, QUEST_DISCLOSURE_MODAL);
   },
   hideModal() {
     ModalActionCreators.popWithKey(QUEST_DISCLOSURE_MODAL);

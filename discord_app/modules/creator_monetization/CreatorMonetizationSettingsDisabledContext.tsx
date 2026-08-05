@@ -22,7 +22,7 @@ export const CreatorMonetizationSettingsDisabledContextProvider = function Creat
   let children;
   let guildId;
   ({ guildId, children } = arg0);
-  let obj = useShouldHideGuildPurchaseEntryPoints /* useShouldHideGuildPurchaseEntryPoints */;
+  let obj = useShouldHideGuildPurchaseEntryPoints;
   obj = { value: obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings, children };
   return <context.Provider value={obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings}>{children}</context.Provider>;
 };

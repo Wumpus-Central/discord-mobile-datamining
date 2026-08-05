@@ -24,7 +24,7 @@ export default function MobileQuestPreviewContainer(title) {
     obj = { variant: "text-lg/semibold", color: "text-default", style: null, children: null };
     obj[2] = tmp.title;
     obj[3] = title;
-    tmp4 = callback(Text /* Text */.Text, obj);
+    tmp4 = callback(Text.Text, obj);
   }
   const items = [tmp4, title.children];
   obj[1] = items;

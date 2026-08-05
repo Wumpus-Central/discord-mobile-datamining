@@ -43,7 +43,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
     let tmp7 = key10011;
     let tmp8 = require;
     let tmp9 = dependencyMap;
-    let obj3 = parseEncoder /* parseEncoder */;
+    let obj3 = parseEncoder;
     let parseEncoderResult = obj3.parseEncoder(key10011);
     let num = map.get(parseEncoderResult);
     if (num == null) {
@@ -54,7 +54,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   }
   const obj = {};
   const merged = Object.assign(arg0);
-  let num2 = map.get(parseEncoder /* parseEncoder */.Encoders.NVIDIA_CUDA);
+  let num2 = map.get(parseEncoder.Encoders.NVIDIA_CUDA);
   if (num2 == null) {
     num2 = 0;
   }
@@ -196,7 +196,7 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
 };
 export const getClipContextProperties = function getClipContextProperties(trackClipsShared) {
   const obj = { clip_runtime: null, current_clip_session_id: null };
-  obj[0] = apexExperiment /* apexExperiment */.getClipsRuntime(trackClipsShared);
+  obj[0] = apexExperiment.getClipsRuntime(trackClipsShared);
   const currentClipsSession = store.getCurrentClipsSession();
   let id;
   if (currentClipsSession != null) {
@@ -210,7 +210,7 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
   let rTCConnection = null;
   if (null != currentUserActiveStream) {
-    let obj = isStreamKey /* isStreamKey */;
+    let obj = isStreamKey;
     rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(currentUserActiveStream));
   }
   decision = decision.decision;
@@ -237,7 +237,7 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   obj = { clip_type: str, num_clip_participants: decision.users.length, clip_session_id: decision.gameSessionId, is_candidate: decision.isCandidate };
   const merged = Object.assign(obj);
   const obj1 = { clip_runtime: null, current_clip_session_id: null };
-  obj1[0] = apexExperiment /* apexExperiment */.getClipsRuntime("getPreSaveClipAnalytics");
+  obj1[0] = apexExperiment.getClipsRuntime("getPreSaveClipAnalytics");
   const currentClipsSession = store.getCurrentClipsSession();
   let id;
   if (currentClipsSession != null) {
@@ -408,7 +408,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   if (!values.every((arg0) => null == arg0)) {
     obj = { clip_runtime: null, current_clip_session_id: null };
     const obj3 = expandEventProperties;
-    obj[0] = apexExperiment /* apexExperiment */.getClipsRuntime("updateClipMetadata");
+    obj[0] = apexExperiment.getClipsRuntime("updateClipMetadata");
     const currentClipsSession = store.getCurrentClipsSession();
     let id;
     if (currentClipsSession != null) {
@@ -420,6 +420,6 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
     obj.clip_uuid = editMetadata.id;
     const merged1 = Object.assign(obj);
     obj3.track(AnalyticEvents.CLIP_EDITED, obj);
-    const obj5 = apexExperiment /* apexExperiment */;
+    const obj5 = apexExperiment;
   }
 };

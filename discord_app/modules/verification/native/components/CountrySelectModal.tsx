@@ -29,5 +29,5 @@ export default function CountrySelectModal() {
   const effect = React.useEffect(() => () => {
     callback(5730).runAfterInteractions(callback(8354).setCountrySelectorClosed, 400);
   }, []);
-  return jsx(NavigationStack /* NavigationStack */.Navigator, { screens, initialRouteName: "COUNTRY_SELECT" });
+  return jsx(NavigationStack.Navigator, { screens, initialRouteName: "COUNTRY_SELECT" });
 };

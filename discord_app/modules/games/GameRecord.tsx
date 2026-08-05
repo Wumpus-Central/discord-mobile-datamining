@@ -153,7 +153,7 @@ prototype["getCoverURL"] = function getCoverURL(size) {
     cover = media.cover;
   }
   let str = "png";
-  if (getAvatarURL /* getAvatarURL */.SUPPORTS_WEBP) {
+  if (getAvatarURL.SUPPORTS_WEBP) {
     str = "webp";
   }
   return getGameMediaRefURL(this.id, cover, { keepAspectRatio: true, format: str, size });

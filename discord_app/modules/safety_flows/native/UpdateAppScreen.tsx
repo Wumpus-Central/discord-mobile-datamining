@@ -25,13 +25,13 @@ export default function UpdateAppScreen() {
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
   obj = { variant: "heading-lg/semibold", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj[1] = intl.string(messagesProxy.yxqMCD);
-  const items = [callback(Text /* Text */.Text, obj), , ];
+  const items = [callback(Text.Text, obj), , ];
   obj = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(messagesProxy.VBZJJg);
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   const obj1 = { style: tmp.buttonContainer, children: null };
   const obj2 = {
     onPress() {
@@ -42,9 +42,9 @@ export default function UpdateAppScreen() {
     variant: "primary",
     size: "md"
   };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  const intl3 = getSystemLocale.intl;
   obj2[1] = intl3.string(messagesProxy.o4D6fm);
-  obj1[1] = callback(Button /* Button */.Button, obj2);
+  obj1[1] = callback(Button.Button, obj2);
   items[2] = callback(closure_4, obj1);
   obj[1] = items;
   return callback2(closure_4, obj);

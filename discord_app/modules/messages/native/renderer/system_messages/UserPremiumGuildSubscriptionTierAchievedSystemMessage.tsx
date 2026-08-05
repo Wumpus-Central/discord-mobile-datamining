@@ -14,14 +14,14 @@ export const createUserPremiumGuildSubscriptionTierAchievedSystemMessage = funct
   message = message.message;
   channel = channel.getChannel(message.getChannelId());
   if (null == channel) {
-    return createUserPremiumGuildSubscriptionSystemMessage /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
+    return createUserPremiumGuildSubscriptionSystemMessage.createUserPremiumGuildSubscriptionSystemMessage(message);
   } else {
     guild = guild.getGuild(channel.getGuildId());
     if (null == guild) {
-      return createUserPremiumGuildSubscriptionSystemMessage /* createUserPremiumGuildSubscriptionSystemMessage */.createUserPremiumGuildSubscriptionSystemMessage(message);
+      return createUserPremiumGuildSubscriptionSystemMessage.createUserPremiumGuildSubscriptionSystemMessage(message);
     } else {
       const tmp13 = getNumSubscriptionsPurchasedFromSystemMessage(message);
-      const messageAuthorWithProcessedColor = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */.getMessageAuthorWithProcessedColor(message);
+      const messageAuthorWithProcessedColor = getMessageAuthorWithProcessedColor.getMessageAuthorWithProcessedColor(message);
       let obj = { message: null, author: null, roleStyle: null };
       obj[0] = message;
       obj[1] = messageAuthorWithProcessedColor;

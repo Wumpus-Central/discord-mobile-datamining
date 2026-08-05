@@ -23,7 +23,7 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
   let wrapperOffset;
   ({ landscape, setMode } = arg0);
   ({ pipState, wrapperOffset } = arg0);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [map];
   const stateFromStores = obj.useStateFromStores(items, () => connectedFrame.getConnectedFrame(), []);
   let applicationId;
@@ -103,7 +103,7 @@ let closure_8 = importAllResult.memo(function FramePanelHeaderContentInner(arg0)
   }
 });
 const memoResult = importAllResult.memo(() => {
-  let obj = useBaseActivityPanelHeaderContent /* useBaseActivityPanelHeaderContent */;
+  let obj = useBaseActivityPanelHeaderContent;
   obj = { context: context };
   const baseActivityPanelHeader = obj.useBaseActivityPanelHeader(obj);
   obj = { style: baseActivityPanelHeader.headerStyles, children: callback2(closure_8, obj1) };

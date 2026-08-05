@@ -49,7 +49,7 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       if (null != first) {
         tmp8 = tmp3;
         if (null != tmp7) {
-          let obj = getProfileTheme /* getProfileTheme */;
+          let obj = getProfileTheme;
           let profileTheme = obj.getProfileTheme(first);
           if (profileTheme == null) {
             profileTheme = tmp3;
@@ -71,8 +71,8 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
     if (themeType !== ThemeTypes.DARK) {
       let isThemeLightResult = themeType === tmp11.DARK;
       if (isThemeLightResult) {
-        isThemeLightResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(tmp3);
-        const obj3 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+        isThemeLightResult = AccessibilityAnnouncer.isThemeLight(tmp3);
+        const obj3 = AccessibilityAnnouncer;
       }
       let DARKER = themeType;
       if (isThemeLightResult) {
@@ -80,7 +80,7 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       }
     } else {
       DARKER = tmp3;
-      const obj2 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+      const obj2 = AccessibilityAnnouncer;
     }
     obj = { theme: null, primaryColor: null, secondaryColor: null };
     obj[0] = DARKER;

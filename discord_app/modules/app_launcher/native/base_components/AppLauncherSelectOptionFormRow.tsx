@@ -24,7 +24,7 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
   ({ selected, selectedItemName: require, unselectedSubLabel } = arg0);
   ({ style, option, autoFocus } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = useAnimationDelayedAutoFocus /* useAnimationDelayedAutoFocus */;
+  let obj = useAnimationDelayedAutoFocus;
   const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, merged.onPress);
   obj = { start: true, end: true, style: items, label: null, subLabel: null, trailing: null };
   items = [createCacheKey().formRow, style];
@@ -39,7 +39,7 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
   }
   obj[1] = str2;
   obj[3] = option.displayName;
-  obj[3] = jsx(Text /* Text */.Text, { variant: str, color: null, lineClamp: 1, children: null });
+  obj[3] = jsx(Text.Text, { variant: str, color: null, lineClamp: 1, children: null });
   if (selected) {
     let fn = () => outer1_3(outer1_0(outer1_2[6]).Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: closure_0 });
   } else {
@@ -51,8 +51,8 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
   obj[4] = fn;
   const obj1 = { source: null, size: null };
   obj1[0] = unselectedSubLabel(5324);
-  obj1[1] = Button /* Button */.IconSizes.SMALL_20;
-  obj[5] = jsx(Button /* Button */.Icon, { source: null, size: null });
+  obj1[1] = Button.IconSizes.SMALL_20;
+  obj[5] = jsx(Button.Icon, { source: null, size: null });
   const merged1 = Object.assign(merged);
-  return jsx(Form /* Form */.FormRow, { variant: str, color: null, lineClamp: 1, children: null });
+  return jsx(Form.FormRow, { variant: str, color: null, lineClamp: 1, children: null });
 };

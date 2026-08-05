@@ -28,5 +28,5 @@ export const shouldAnimate = function shouldAnimate(start, current) {
   }
 };
 export const calculateProfileEffectHeight = function calculateProfileEffectHeight(layerConfig, width) {
-  return width / DEFAULT_PROFILE_EFFECT_WH_RATIO /* DEFAULT_PROFILE_EFFECT_WH_RATIO */.getAssetWHRatio(layerConfig);
+  return width / DEFAULT_PROFILE_EFFECT_WH_RATIO.getAssetWHRatio(layerConfig);
 };

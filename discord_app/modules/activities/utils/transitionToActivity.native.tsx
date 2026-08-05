@@ -9,7 +9,7 @@ import { getEmbeddedActivityLocationChannelId } from "embeddedActivityLocationUt
 let result = require("ActivityPanelModes").fileFinishedImporting("modules/activities/utils/transitionToActivity.native.tsx");
 
 export default function transitionToActivity(arg0, _location) {
-  let obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
+  let obj = getEmbeddedActivityLocationChannelId;
   const embeddedActivityLocationChannelId = obj.getEmbeddedActivityLocationChannelId(_location);
   if (null != embeddedActivityLocationChannelId) {
     let tmpResult = tmp(4136);

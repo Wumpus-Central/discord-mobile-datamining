@@ -125,8 +125,8 @@ function _handleUploadDebugLogSettingPress() {
 let closure_7 = keys.create(() => ({ isDisabled: false, isUploading: false }));
 keys = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.aY1OH2);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.aY1OH2);
   },
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,

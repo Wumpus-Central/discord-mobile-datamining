@@ -91,8 +91,8 @@ export default function UserSettingsDesignSystemTooltip() {
   let obj = { style: callback4().flex, bottom: true, children: null };
   obj = { children: null };
   obj[0] = callback2(Content, {});
-  obj[2] = callback2(Layer /* Layer */.LayerScope, obj);
-  return callback2(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  obj[2] = callback2(Layer.LayerScope, obj);
+  return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 };
 export const useCanRotate = function useCanRotate() {
   const tmp = callback(React.useState(false), 2);

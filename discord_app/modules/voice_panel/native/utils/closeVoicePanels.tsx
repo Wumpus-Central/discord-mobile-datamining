@@ -5,6 +5,6 @@ import { ComponentDispatcher } from "../../../../utils/ComponentDispatchUtils.ts
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/closeVoicePanels.tsx");
 
 export default function closeVoicePanels() {
-  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.VOICE_PANEL_CLOSE);
 };

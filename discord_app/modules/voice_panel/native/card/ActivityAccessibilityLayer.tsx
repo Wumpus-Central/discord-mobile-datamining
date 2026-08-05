@@ -92,7 +92,7 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/voi
 
 export default function ActivityAccessibilityLayer(isActivityFocused) {
   const merged = Object.assign(isActivityFocused, Object.create(null));
-  let obj = SCREEN_READER_ENABLED_GETTER /* SCREEN_READER_ENABLED_GETTER */;
+  let obj = SCREEN_READER_ENABLED_GETTER;
   if (IS_IOS) {
     if (obj.useIsScreenReaderEnabled()) {
       if (isActivityFocused.isActivityFocused) {

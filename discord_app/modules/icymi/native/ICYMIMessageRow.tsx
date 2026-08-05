@@ -214,7 +214,7 @@ let closure_18 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   let obj = { pressable: null, messagePreview: null, replyPreview: null, replyInner: null, afterMessage: null, media: null, footer: null };
   obj = { flex: 1, paddingLeft: paddingLeft.inset, gap: Themes.space.PX_8 };
   obj[0] = obj;
-  let obj2 = set /* set */;
+  let obj2 = set;
   let num = 0;
   if (obj2.isAndroid()) {
     num = -2;

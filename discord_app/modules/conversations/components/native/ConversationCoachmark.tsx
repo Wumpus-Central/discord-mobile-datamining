@@ -12,9 +12,9 @@ const require = arg1;
 function NewBadge() {
   let obj = { style: createCacheKey().badge, children: null };
   obj = { variant: "text-sm/bold", color: "text-default", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.c2GSIl);
-  obj[1] = jsx(Text /* Text */.Text, { variant: "text-sm/bold", color: "text-default", children: null });
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.c2GSIl);
+  obj[1] = jsx(Text.Text, { variant: "text-sm/bold", color: "text-default", children: null });
   return <View variant="text-sm/bold" color="text-default">{null}</View>;
 }
 const TOPICAL_NAVIGATION_HEADER_COACHMARK = require("DismissibleContent").DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;

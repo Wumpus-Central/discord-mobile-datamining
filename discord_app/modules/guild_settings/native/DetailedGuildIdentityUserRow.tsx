@@ -39,10 +39,10 @@ const memoResult = importAllResult.memo((height) => {
     let tmp8Result = null;
     if (hasAvatarForGuildResult) {
       const obj1 = { size: null, style: null, user: null, guildId: "Array" };
-      obj1[0] = Button /* Button */.AvatarSizes.SIZE_16;
+      obj1[0] = Button.AvatarSizes.SIZE_16;
       obj1[1] = tmp.primaryAvatar;
       obj1[2] = user;
-      tmp8Result = tmp8(Button /* Button */.Avatar, obj1);
+      tmp8Result = tmp8(Button.Avatar, obj1);
     }
     const items1 = [tmp8Result, ];
     const obj2 = { user: null, usernameStyle: null, hideBotTag: true };
@@ -81,7 +81,7 @@ const memoResult1 = importAllResult.memo(function DetailedGuildIdentityUserRow(a
   ({ disabled, guildId, leading, onPress, trailing, userId: require, subLabel, accessibilityRole, accessibilityState } = arrow);
   let SMALL = dependencyMap;
   ({ end, start } = arrow);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getUser(closure_0));
   if (null == stateFromStores) {

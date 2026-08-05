@@ -42,9 +42,9 @@ function Item(arg0) {
   _slicedToArray = callback2();
   React = React.useMemo(() => 100 * Math.random() + 50, []);
   const tmp2 = 00038__;
-  const match = t /* t */.match(item);
+  const match = t.match(item);
   let obj = { type: tmp3.CHOICE };
-  const str = t /* t */;
+  const str = t;
   obj = { type: tmp3.LABEL };
   const withResult = match.with(obj, (children) => {
     let closure_0 = children;
@@ -130,9 +130,9 @@ function AutocompleteFailedEmptyState() {
   const obj = { style: callback2().emptyState, lightSource: null, darkSource: null, title: null };
   obj[1] = registerAsset;
   obj[2] = registerAsset;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.rTAbPn);
-  return callback(Button /* Button */.EmptyState, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.rTAbPn);
+  return callback(Button.EmptyState, obj);
 }
 require("ME").AutoCompleteResultTypes;
 ({ jsx: c9, jsxs: c10 } = jsxProd);

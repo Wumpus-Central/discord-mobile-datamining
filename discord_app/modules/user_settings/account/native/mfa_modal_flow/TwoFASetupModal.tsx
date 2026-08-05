@@ -71,9 +71,9 @@ export default function TwoFASetupModal(initialRouteName) {
     headerBackTitle: null,
     headerTitleAlign: "center"
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
-  return callback(NavigationStack /* NavigationStack */.Navigator, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
+  return callback(NavigationStack.Navigator, obj);
 };
 export const TwoFASetupModalScreen = function TwoFASetupModalScreen(children) {
   let navigation;

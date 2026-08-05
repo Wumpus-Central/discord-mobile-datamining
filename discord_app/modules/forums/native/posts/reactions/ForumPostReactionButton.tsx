@@ -156,14 +156,14 @@ export const AdditionalReactionCount = function AdditionalReactionCount(arg0) {
   let threadId;
   ({ count, threadId, containerStyle } = arg0);
   const obj = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.N8hbZB);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.N8hbZB);
   const items = [createCacheKey().container, containerStyle];
   obj[2] = items;
   obj[3] = useNativeForumPostHandlers({ threadId }).onTapReactionCount;
   const items1 = ["+", count];
-  obj[4] = callback(Text /* Text */.Text, { variant: "heading-sm/medium", color: "interactive-text-default", children: items1 });
-  return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback(Text.Text, { variant: "heading-sm/medium", color: "interactive-text-default", children: items1 });
+  return callback2(PressableBase.PressableOpacity, obj);
 };
 export const AddReactionButton = function AddReactionButton(reactionType) {
   let containerStyle;
@@ -171,15 +171,15 @@ export const AddReactionButton = function AddReactionButton(reactionType) {
   let NORMAL = reactionType.reactionType;
   ({ threadId, containerStyle } = reactionType);
   if (NORMAL === undefined) {
-    NORMAL = ReactionTypes /* ReactionTypes */.ReactionTypes.NORMAL;
+    NORMAL = ReactionTypes.ReactionTypes.NORMAL;
   }
   const obj = { style: items, accessible: true, accessibilityLabel: null, onPress: null, children: null };
   items = [createCacheKey().container, containerStyle];
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.lfIHs4);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.lfIHs4);
   obj[3] = useNativeForumPostHandlers({ threadId, reactionType: NORMAL }).onTapAddReaction;
-  obj[4] = callback2(handleOutOfSuperReactions /* handleOutOfSuperReactions */.ADD_REACTION_ICON_COMPONENTS[NORMAL], { size: "xs" });
-  return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback2(handleOutOfSuperReactions.ADD_REACTION_ICON_COMPONENTS[NORMAL], { size: "xs" });
+  return callback2(PressableBase.PressableOpacity, obj);
 };
 export const ForumPostReactionButton = function ForumPostReactionButton(emojiSize) {
   let animateCount;

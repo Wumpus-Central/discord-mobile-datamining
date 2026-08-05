@@ -6,5 +6,5 @@ const result = require("set").fileFinishedImporting("modules/forwarding/native/F
 
 export default function ForwardingIcon(arg0) {
   const merged = Object.assign(arg0);
-  return jsx(ArrowAngleRightUpIcon /* ArrowAngleRightUpIcon */.ArrowAngleRightUpIcon, {});
+  return jsx(ArrowAngleRightUpIcon.ArrowAngleRightUpIcon, {});
 };

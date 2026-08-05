@@ -22,10 +22,10 @@ const result = require("handleSafetyHubRequestAgeVerificationResetModalAction").
 export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   isDsaEligible = isDsaEligible.isDsaEligible;
   const tmp = callback2();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
   let stateFromStores = obj.useStateFromStores(items, () => store.getAppealClassificationId());
-  let obj1 = useSafetyHubClassifications /* useSafetyHubClassifications */;
+  let obj1 = useSafetyHubClassifications;
   if (stateFromStores == null) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
   }
@@ -46,14 +46,14 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   }
   const intl = tmp2(1236).intl;
   const intl2 = tmp2(1236).intl;
-  const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["C5q+pW"]);
-  const items3 = [callback(AppealIngestionModal /* AppealIngestionModal */.AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(getSystemLocale /* getSystemLocale */.t["G2g/g5"]) }), ];
+  const stringResult = intl.string(getSystemLocale.t["C5q+pW"]);
+  const items3 = [callback(AppealIngestionModal.AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl2.string(getSystemLocale.t["G2g/g5"]) }), ];
   obj = { style: tmp.container, children: null };
   obj = { reasons: null };
-  const stringResult1 = intl2.string(getSystemLocale /* getSystemLocale */.t["G2g/g5"]);
+  const stringResult1 = intl2.string(getSystemLocale.t["G2g/g5"]);
   const tmp12 = View;
   const tmp14 = AppealIngestionBreadcrumbs;
-  const items4 = [parseMessageEmbedForProps /* parseMessageEmbedForProps */.getAppealSignalDisplayText(stateFromStores1), stateFromStores2];
+  const items4 = [parseMessageEmbedForProps.getAppealSignalDisplayText(stateFromStores1), stateFromStores2];
   obj[0] = items4.filter((arg0) => arg0.length > 0);
   const items5 = [callback(tmp14, obj), , , ];
   if (!isDsaEligible) {

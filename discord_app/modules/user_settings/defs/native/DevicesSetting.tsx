@@ -5,8 +5,8 @@ import { UserSettingsSessions } from "../../devices/native/UserSettingsSessions.
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["+1h0k/"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["+1h0k/"]);
   },
   parent: null,
   IconComponent: require("LaptopPhoneIcon").LaptopPhoneIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.SESSIONS,
   getComponent() {
-    return UserSettingsSessions /* UserSettingsSessions */.default;
+    return UserSettingsSessions.default;
   }
 };
 const route = createToggle.createRoute(obj);

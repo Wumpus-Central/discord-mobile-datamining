@@ -445,19 +445,19 @@ prototype["renderSubScreenButtons"] = function renderSubScreenButtons() {
 prototype["renderDeleteButton"] = function renderDeleteButton() {
   let obj = { hasIcons: false, children: null };
   obj = { variant: "danger", label: null, onPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.c9ej8n);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.c9ej8n);
   obj[2] = this.handleDeleteRole;
-  obj[1] = callback2(TableRowInner /* TableRowInner */.TableRow, obj);
-  return callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[1] = callback2(TableRowInner.TableRow, obj);
+  return callback2(TableRowGroupTitle.TableRowGroup, obj);
 };
 prototype["renderManagedRoleWarningText"] = function renderManagedRoleWarningText() {
   let obj = { style: createCacheKey(this.context).managedRolesWarningContainer, children: null };
   obj = { messageType: null, children: null };
-  obj[0] = Button /* Button */.HelpMessageTypes.WARNING;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.k5d7DJ);
-  obj[1] = callback2(Button /* Button */.HelpMessage, obj);
+  obj[0] = Button.HelpMessageTypes.WARNING;
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.k5d7DJ);
+  obj[1] = callback2(Button.HelpMessage, obj);
   return callback2(View, obj);
 };
 prototype["render"] = function render() {

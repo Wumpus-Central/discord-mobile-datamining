@@ -469,7 +469,7 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
     let guildId;
     let memberSupplementals;
     ({ guildId, memberSupplementals } = arg0);
-    const result = hasMemberSupplemental /* hasMemberSupplemental */.syncMemberSupplemental(guildId, memberSupplementals);
+    const result = hasMemberSupplemental.syncMemberSupplemental(guildId, memberSupplementals);
     if (result) {
       if (null == dependencyMap[guildId]) {
         const tmp8 = new closure_8(guildId);
@@ -504,9 +504,9 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
       return memberIds;
     }, { memberIds: [], memberSupplementals: [] });
     let memberIds = reduced.memberIds;
-    let obj1 = hasMemberSupplemental /* hasMemberSupplemental */;
+    let obj1 = hasMemberSupplemental;
     let result = obj1.syncMemberSupplemental(guildId, reduced.memberSupplementals);
-    let obj2 = createFetchKeys /* createFetchKeys */;
+    let obj2 = createFetchKeys;
     const result1 = obj2.registerFetchedSupplementals(guildId, memberIds);
     let tmp14;
     let first;

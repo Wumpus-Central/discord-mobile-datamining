@@ -89,7 +89,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     obj.additionalTermsLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), arg2, obj.additionalTermsLocalized);
   }
   return obj;
@@ -112,7 +112,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
   }
   if (assetUrl.gradient) {
-    const Gradient = create /* create */.Gradient;
+    const Gradient = create.Gradient;
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -126,31 +126,31 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult6 = tag.tag(7, 01307__.WireType.LengthDelimited);
   }
   if (assetUrl.asset) {
-    const ThemeAwareAsset = create /* create */.ThemeAwareAsset;
+    const ThemeAwareAsset = create.ThemeAwareAsset;
     const tagResult7 = tag.tag(8, 01307__.WireType.LengthDelimited);
     const joined1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.backgroundAsset) {
-    const ThemeAwareAsset2 = create /* create */.ThemeAwareAsset;
+    const ThemeAwareAsset2 = create.ThemeAwareAsset;
     const tagResult8 = tag.tag(9, 01307__.WireType.LengthDelimited);
     const joined2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.headerLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult9 = tag.tag(10, 01307__.WireType.LengthDelimited);
     const joined3 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.bodyLocalized) {
-    const LocalizedString2 = create /* create */.LocalizedString;
+    const LocalizedString2 = create.LocalizedString;
     const tagResult10 = tag.tag(11, 01307__.WireType.LengthDelimited);
     const joined4 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult4 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.additionalTermsLocalized) {
-    const LocalizedString3 = create /* create */.LocalizedString;
+    const LocalizedString3 = create.LocalizedString;
     const tagResult11 = tag.tag(12, 01307__.WireType.LengthDelimited);
     const joined5 = LocalizedString3.internalBinaryWrite(assetUrl.additionalTermsLocalized, tag.tag(12, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = LocalizedString3.internalBinaryWrite(assetUrl.additionalTermsLocalized, tag.tag(12, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

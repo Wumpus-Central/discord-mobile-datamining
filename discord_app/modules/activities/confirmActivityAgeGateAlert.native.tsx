@@ -17,7 +17,7 @@ function ConfirmActivityGateContent(children) {
   let obj = { style: tmp.alertContainer, children: null };
   const items = [callback(SvgComponent, {}), ];
   obj = { style: tmp.alertBodyText, variant: "text-md/normal", children: children.description };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -33,19 +33,19 @@ export const confirmActivityAgeGateAlert = function confirmActivityAgeGateAlert(
   let onAgree;
   let onDisagree;
   ({ application, onAgree, onDisagree } = arg0);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   let obj = { applicationName: application.name };
-  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.OgmIqy, obj);
+  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.OgmIqy, obj);
   obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, confirmColor: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.SSDPOF);
+  const intl2 = getSystemLocale.intl;
+  obj[0] = intl2.string(getSystemLocale.t.SSDPOF);
   obj[1] = callback(ConfirmActivityGateContent, { description: formatToPlainStringResult });
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.hg1uxn);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.wVq7uo);
+  const intl3 = getSystemLocale.intl;
+  obj[2] = intl3.string(getSystemLocale.t.hg1uxn);
+  const intl4 = getSystemLocale.intl;
+  obj[3] = intl4.string(getSystemLocale.t.wVq7uo);
   obj[4] = onAgree;
   obj[5] = onDisagree;
-  obj[6] = Button /* Button */.ButtonColors.RED;
+  obj[6] = Button.ButtonColors.RED;
   return Promise.resolve(set.show(obj));
 };

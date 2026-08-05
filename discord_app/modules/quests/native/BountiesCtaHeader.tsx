@@ -25,7 +25,7 @@ let unpackModuleId;
 const require = arg1;
 function BountiesCtaDescription(isEmptyOrCompleted) {
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (isEmptyOrCompleted) {
     let AZGGo1 = t.q4wlOE;
     let tmp5 = tmp2;

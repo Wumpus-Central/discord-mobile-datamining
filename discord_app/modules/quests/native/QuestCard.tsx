@@ -49,7 +49,7 @@ let result1 = createCacheKey.experimental_createToken((theme) => {
   if (isThemeDarkResult) {
     num = 0.8;
   }
-  return hexToRgba /* hexToRgba */.hexOpacityToRgba(semanticColor, num);
+  return hexToRgba.hexOpacityToRgba(semanticColor, num);
 });
 let result2 = createCacheKey.experimental_createToken((theme) => {
   const obj = shared;

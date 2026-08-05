@@ -12,21 +12,21 @@ const result = require("getAlertModalItemKey").fileFinishedImporting("modules/us
 
 export default function UserProfileConfirmVideoUnstableConnection(onConfirm) {
   let obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.m2Hyj0);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.EhaK6B);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.m2Hyj0);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.EhaK6B);
   obj = { children: null };
   obj = { text: null, onPress: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.ND1my3);
+  const intl3 = getSystemLocale.intl;
+  obj[0] = intl3.string(getSystemLocale.t.ND1my3);
   obj[1] = onConfirm.onConfirm;
-  const items = [callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
   const obj1 = { variant: "secondary", text: null };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.jEqEhy);
-  items[1] = callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj1, "cancel");
+  const intl4 = getSystemLocale.intl;
+  obj1[1] = intl4.string(getSystemLocale.t.jEqEhy);
+  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "cancel");
   obj[0] = items;
-  obj[2] = callback2(getAlertModalItemKey /* getAlertModalItemKey */.AlertActions, obj);
-  return callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, obj);
+  obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
+  return callback(getAlertModalItemKey.AlertModal, obj);
 };

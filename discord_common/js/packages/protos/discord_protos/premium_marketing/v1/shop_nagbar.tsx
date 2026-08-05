@@ -96,7 +96,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (5 === tmp5) {
         let tmp37 = require;
         let tmp38 = dependencyMap;
-        let HelpArticle = create /* create */.HelpArticle;
+        let HelpArticle = create.HelpArticle;
         let tmp39 = HelpArticle;
         let tmp40 = pos;
         let tmp41 = readUnknownField;
@@ -104,7 +104,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (6 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let LocalizedString2 = create /* create */.LocalizedString;
+        let LocalizedString2 = create.LocalizedString;
         let tmp34 = LocalizedString2;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -112,7 +112,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (7 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let LocalizedString = create /* create */.LocalizedString;
+        let LocalizedString = create.LocalizedString;
         let tmp29 = LocalizedString;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -120,7 +120,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (8 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+        let UInt64Value = defineProperty.UInt64Value;
         let tmp24 = UInt64Value;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -179,25 +179,25 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(body, tag, write
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
   }
   if (body.helpArticle) {
-    const HelpArticle = create /* create */.HelpArticle;
+    const HelpArticle = create.HelpArticle;
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined = HelpArticle.internalBinaryWrite(body.helpArticle, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = HelpArticle.internalBinaryWrite(body.helpArticle, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (body.bodyLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult5 = tag.tag(6, 01307__.WireType.LengthDelimited);
     const joined1 = LocalizedString.internalBinaryWrite(body.bodyLocalized, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(body.bodyLocalized, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (body.ctaLabelLocalized) {
-    const LocalizedString2 = create /* create */.LocalizedString;
+    const LocalizedString2 = create.LocalizedString;
     const tagResult6 = tag.tag(7, 01307__.WireType.LengthDelimited);
     const joined2 = LocalizedString2.internalBinaryWrite(body.ctaLabelLocalized, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(body.ctaLabelLocalized, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (body.navigableStorefrontApplicationId) {
-    const UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+    const UInt64Value = defineProperty.UInt64Value;
     const tagResult7 = tag.tag(8, 01307__.WireType.LengthDelimited);
     const joined3 = UInt64Value.internalBinaryWrite(body.navigableStorefrontApplicationId, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = UInt64Value.internalBinaryWrite(body.navigableStorefrontApplicationId, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

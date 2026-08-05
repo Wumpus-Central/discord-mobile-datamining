@@ -44,9 +44,9 @@ function MoreTipsModalScreen(learnMore) {
   const items1 = [closure_9(closure_4, obj), , ];
   const obj2 = { children: null };
   const obj3 = { variant: "eyebrow", color: "text-default", style: tmp.header, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj3[3] = intl.string(getSystemLocale /* getSystemLocale */.t.K5FKtc);
-  const items2 = [callback(Text /* Text */.Text, obj3), actionItems];
+  const intl = getSystemLocale.intl;
+  obj3[3] = intl.string(getSystemLocale.t.K5FKtc);
+  const items2 = [callback(Text.Text, obj3), actionItems];
   obj2[0] = items2;
   items1[1] = closure_9(closure_4, obj2);
   items1[2] = callback(WasThisHelpfulSection, { channelId, warningId, senderId });

@@ -31,7 +31,7 @@ obj = {
         const Commands = tmp5(10923).Commands;
         Commands.scrollTo(arg0, arg1, tmp, tmp2, TOP);
       }
-      obj2 = set /* set */;
+      obj2 = set;
       tmp5 = require;
     }
   },
@@ -47,7 +47,7 @@ obj = {
         const Commands = tmp2(10923).Commands;
         Commands.scrollToBottom(arg0, arg1);
       }
-      obj = set /* set */;
+      obj = set;
       tmp2 = require;
     }
   },
@@ -60,7 +60,7 @@ obj = {
           DCDChatManager.scrollToTop(tmp4, arg1);
         }
       }
-      obj = set /* set */;
+      obj = set;
     }
   },
   scrollToRelativeOffset(arg0, arg1, arg2) {
@@ -72,7 +72,7 @@ obj = {
           const result = DCDChatManager.scrollToRelativeOffset(tmp4, arg1, arg2);
         }
       }
-      obj = set /* set */;
+      obj = set;
     }
   },
   scrollIntoView(arg0, arg1, arg2) {
@@ -93,7 +93,7 @@ obj = {
         const Commands = tmp4(10923).Commands;
         Commands.scrollIntoView(arg0, arg1, tmp, tmp2);
       }
-      obj2 = set /* set */;
+      obj2 = set;
       tmp4 = require;
     }
   },
@@ -176,7 +176,7 @@ obj = {
         DCDChatManager.updateRows(tmp2, json1, isLoadingAtTop, json2, andIncrementChangesetIdForChat1, flag, flag2, flag3);
         const tmp35Result2 = tmp35(10924);
       }
-      obj7 = set /* set */;
+      obj7 = set;
     }
   },
   clearRows(arg0) {
@@ -200,7 +200,7 @@ obj = {
         DCDChatManager.clearRows(tmp2, tmp7(10924).getAndIncrementChangesetIdForChat(arg0));
         const tmp7Result2 = tmp7(10924);
       }
-      obj5 = set /* set */;
+      obj5 = set;
     }
   },
   fadeIn(arg0) {
@@ -218,7 +218,7 @@ obj = {
         }
         tmpResult = tmp(4149);
       }
-      obj = set /* set */;
+      obj = set;
     }
   },
   focus(arg0, arg1) {

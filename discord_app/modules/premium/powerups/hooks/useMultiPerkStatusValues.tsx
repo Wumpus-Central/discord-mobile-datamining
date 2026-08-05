@@ -7,7 +7,7 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/premium
 
 export default function useMultiPerkStatusValues(powerups) {
   powerups = powerups.powerups;
-  let obj = usePowerupActiveStatus /* usePowerupActiveStatus */;
+  let obj = usePowerupActiveStatus;
   const powerupsActiveStatuses = obj.usePowerupsActiveStatuses(powerups.guildId, powerups);
   const someResult = powerupsActiveStatuses.some((type) => type.type !== constants.INACTIVE);
   if (powerups.length <= 0) {

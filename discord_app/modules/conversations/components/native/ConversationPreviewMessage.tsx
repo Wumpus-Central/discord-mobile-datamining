@@ -11,7 +11,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function modifyRow(arg0) {
-  arg0.contextType = MediaGalleryItemType /* MediaGalleryItemType */.MessageContextType.SEARCH;
+  arg0.contextType = MediaGalleryItemType.MessageContextType.SEARCH;
   arg0.renderContentOnly = true;
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);

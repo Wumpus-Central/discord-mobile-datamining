@@ -225,7 +225,7 @@ export const getBestActiveInputForChannelId = function getBestActiveInputForChan
 };
 export { getBestActiveInput };
 export const dismissKeyboard = function dismissKeyboard() {
-  let obj = dismissGlobalKeyboard /* dismissGlobalKeyboard */;
+  let obj = dismissGlobalKeyboard;
   const result = obj.dismissGlobalKeyboard();
   const obj2 = getBestActiveInput();
   if (null != obj2) {
@@ -233,11 +233,11 @@ export const dismissKeyboard = function dismissKeyboard() {
   }
   let tmpResult = tmp(4151);
   const keyboardType = tmpResult.getKeyboardType();
-  if (keyboardType !== KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
+  if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     tmpResult = tmp(1478);
     obj = { type: null };
     obj[0] = tmp(1579).KeyboardTypes.SYSTEM;
     tmpResult.setKeyboardType(obj);
   }
-  const result1 = zustandStore /* zustandStore */.closePortalKeyboardRequest();
+  const result1 = zustandStore.closePortalKeyboardRequest();
 };

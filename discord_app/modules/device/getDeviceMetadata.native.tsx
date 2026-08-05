@@ -3,5 +3,5 @@ import { getDeviceMetadata } from "../tti_analytics/native/TTIAnalyticsUtils.tsx
 const result = require("set").fileFinishedImporting("modules/device/getDeviceMetadata.native.tsx");
 
 export default function getDeviceMetadata() {
-  return getDeviceMetadata /* getDeviceMetadata */.getDeviceMetadata();
+  return getDeviceMetadata.getDeviceMetadata();
 };

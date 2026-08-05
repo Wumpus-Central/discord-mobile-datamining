@@ -78,7 +78,7 @@ prototype["_trackStartSpeaking"] = function _trackStartSpeaking() {
   if (this._currentUserSpeaking) {
     const channelId = store.getChannelId();
     const guildId = store.getGuildId();
-    let obj = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+    let obj = collectGuildAnalyticsMetadata;
     obj = { mode: null, priority: null, channel: null, server: null, channel_id: null, guild_id: null, rtc_connection_id: null, media_session_id: null, voice_state_count: null };
     obj[0] = _detectH265HardwareDecode.getMode();
     obj[1] = anyoneHasFlagInContext.isCurrentUserPrioritySpeaking();
@@ -112,8 +112,8 @@ prototype["_trackStartListening"] = function _trackStartListening() {
       obj[7] = store.getMediaSessionId();
       obj[8] = getVoiceStatesForGuild.countVoiceStatesForChannel(self._voiceChannelId);
       const merged = Object.assign(self.getGameMetadata());
-      collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.START_LISTENING, obj);
-      const obj2 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+      collectGuildAnalyticsMetadata.trackWithMetadata(constants.START_LISTENING, obj);
+      const obj2 = collectGuildAnalyticsMetadata;
     }
   }
 };
@@ -153,8 +153,8 @@ prototype["getGameMetadata"] = function getGameMetadata() {
   obj[5] = sku;
   let subgameMetadata = null;
   if (null != currentGameForAnalytics) {
-    subgameMetadata = _openRobloxURLWithRootPlaceId /* _openRobloxURLWithRootPlaceId */.getSubgameMetadata(currentGameForAnalytics);
-    const obj2 = _openRobloxURLWithRootPlaceId /* _openRobloxURLWithRootPlaceId */;
+    subgameMetadata = _openRobloxURLWithRootPlaceId.getSubgameMetadata(currentGameForAnalytics);
+    const obj2 = _openRobloxURLWithRootPlaceId;
   }
   obj[6] = subgameMetadata;
   return obj;

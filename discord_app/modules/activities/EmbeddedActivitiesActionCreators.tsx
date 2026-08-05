@@ -2367,8 +2367,8 @@ export const dismissNewActivityIndicator = function dismissNewActivityIndicator(
   if (arg0 === undefined) {
     INDIRECT_ACTION = ContentDismissActionType.INDIRECT_ACTION;
   }
-  const obj = addVersionedDismissedContent /* addVersionedDismissedContent */;
-  const result = obj.markVersionedDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE, Math.floor(new Date().getTime() / 1000), { dismissAction: INDIRECT_ACTION });
+  const obj = addVersionedDismissedContent;
+  const result = obj.markVersionedDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.ACTIVITIES_VOICE_LAUNCHER_BADGE, Math.floor(new Date().getTime() / 1000), { dismissAction: INDIRECT_ACTION });
 };
 export const validateTestMode = function validateTestMode() {
   const self = this;

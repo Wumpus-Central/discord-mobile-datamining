@@ -24,7 +24,7 @@ export default function InstantInviteAgeText(style) {
     canEditInvite = true;
   }
   ({ onEdit: View, source: updateWithLatestInvite } = style);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [updateWithLatestInvite];
   const stateFromStores = obj.useStateFromStores(items, () => inviteSettings.getInviteSettings());
   let tmp6Result = null;

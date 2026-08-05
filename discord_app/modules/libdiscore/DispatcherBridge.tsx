@@ -285,7 +285,7 @@ prototype["handleFatalError"] = function handleFatalError(error, type) {
   obj = { actionType: type, hasAuthoritativeStore: result };
   SentryUtils.native.captureException(error, { extra: obj, tags: { source: "libdiscore", errorKind: "fatal_dispatch" } });
   if (result) {
-    const result1 = items /* items */.clearLibdiscoreExperimentCache();
+    const result1 = items.clearLibdiscoreExperimentCache();
     throw error;
   } else {
     obj.warn("Disabling DispatcherBridge until restart");
@@ -323,9 +323,9 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   SentryUtils.native.captureException(error, { extra: { actionType: type, storeName: name, storeMode: mode }, tags: { source: "libdiscore", errorKind: "store_dispatch" } });
   if ("typescript-libdiscore-dual-read" !== mode) {
     if ("libdiscore" === mode) {
-      const result = items /* items */.clearLibdiscoreExperimentCache();
+      const result = items.clearLibdiscoreExperimentCache();
       let error1 = error;
-      const obj5 = items /* items */;
+      const obj5 = items;
     } else {
       const _Error = Error;
       const _HermesInternal3 = HermesInternal;

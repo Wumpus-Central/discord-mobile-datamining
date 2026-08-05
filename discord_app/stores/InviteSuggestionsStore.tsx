@@ -101,7 +101,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(require("dispatcher"),
     }
     const applicationId = guild.applicationId;
     const blockedOrIgnoredIDs = upsertRelationship.getBlockedOrIgnoredIDs();
-    let obj = isGuildMember /* isGuildMember */;
+    let obj = isGuildMember;
     obj = { channel, applicationId, inviteTargetType };
     const usersAlreadyJoined = obj.getUsersAlreadyJoined(obj);
     const items = [...usersAlreadyJoined];

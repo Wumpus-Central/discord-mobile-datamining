@@ -75,8 +75,8 @@ function handleUnknownChannel(guildId, channelId, messageId, arg3, originalLink)
     if (id !== arg3) {
       obj = { type: "guild", guildId: null, content: null, icon: null };
       obj[1] = guild.id;
-      obj[2] = isNullOrEmpty /* isNullOrEmpty */.truncateText(guild.name, 32);
-      const obj5 = isNullOrEmpty /* isNullOrEmpty */;
+      obj[2] = isNullOrEmpty.truncateText(guild.name, 32);
+      const obj5 = isNullOrEmpty;
       obj = { id: null, icon: null, size: 40 };
       ({ id: obj7[0], icon: obj7[1] } = guild);
       obj[3] = getAvatarURL.getGuildIconURL(obj);
@@ -86,9 +86,9 @@ function handleUnknownChannel(guildId, channelId, messageId, arg3, originalLink)
     }
   }
   obj[5] = tmp2;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const formatted = intl.string(getSystemLocale /* getSystemLocale */.t.zLZPmk).toLowerCase();
-  let obj1 = isNullOrEmpty /* isNullOrEmpty */;
+  const intl = getSystemLocale.intl;
+  const formatted = intl.string(getSystemLocale.t.zLZPmk).toLowerCase();
+  let obj1 = isNullOrEmpty;
   obj1 = { type: "text", content: obj1.truncateText(formatted, 32) };
   const items1 = [obj1];
   const items2 = [{ type: "em", content: items1 }];
@@ -109,7 +109,7 @@ function parseChannel(canViewChannel) {
           obj = {};
           const merged = Object.assign(obj);
           obj.guildId = closure_10;
-          let obj19 = isNullOrEmpty /* isNullOrEmpty */;
+          let obj19 = isNullOrEmpty;
           const obj1 = { type: "text", content: null };
           obj1[1] = obj19.truncateText(canViewChannel.name, 32);
           const obj2 = { type: "channel", content: null, channelType: null, iconType: null };
@@ -134,10 +134,10 @@ function parseChannel(canViewChannel) {
           obj4[2] = arg3;
           obj6 = obj4;
         } else {
-          const intl2 = getSystemLocale /* getSystemLocale */.intl;
+          const intl2 = getSystemLocale.intl;
           const _HermesInternal2 = HermesInternal;
           obj6 = { type: "text", content: null };
-          obj6[1] = "#" + intl2.string(getSystemLocale /* getSystemLocale */.t.J90oLW);
+          obj6[1] = "#" + intl2.string(getSystemLocale.t.J90oLW);
         }
         return obj6;
       } else {
@@ -145,14 +145,14 @@ function parseChannel(canViewChannel) {
         const merged1 = Object.assign(obj);
         const obj8 = { type: "guild", guildId: null, content: null, icon: null };
         obj8[1] = guild.id;
-        obj8[2] = isNullOrEmpty /* isNullOrEmpty */.truncateText(guild.name, 32);
-        const obj26 = isNullOrEmpty /* isNullOrEmpty */;
+        obj8[2] = isNullOrEmpty.truncateText(guild.name, 32);
+        const obj26 = isNullOrEmpty;
         ({ id: obj28[0], icon: obj28[1] } = guild);
         obj8[3] = getAvatarURL.getGuildIconURL({ id: null, icon: null, size: 40 });
         const obj27 = getAvatarURL;
         const obj9 = { id: null, icon: null, size: 40 };
         const obj10 = { type: "text", content: null };
-        obj10[1] = isNullOrEmpty /* isNullOrEmpty */.truncateText(canViewChannel.name, 32);
+        obj10[1] = isNullOrEmpty.truncateText(canViewChannel.name, 32);
         const obj11 = { type: "channel", content: null, channelType: null, iconType: null };
         const items5 = [obj10];
         obj11[1] = items5;
@@ -235,7 +235,7 @@ function parseChannel(canViewChannel) {
           }
         }
         obj18 = tmp12;
-        const obj29 = isNullOrEmpty /* isNullOrEmpty */;
+        const obj29 = isNullOrEmpty;
       }
     } else {
       const _HermesInternal = HermesInternal;
@@ -247,8 +247,8 @@ function parseChannel(canViewChannel) {
     if (canViewChannel.roleSubscriptionGated) {
       let name = canViewChannel.name;
     } else {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      name = intl.string(getSystemLocale /* getSystemLocale */.t["/YzI63"]);
+      const intl = getSystemLocale.intl;
+      name = intl.string(getSystemLocale.t["/YzI63"]);
     }
     obj = { type: "channel", content: null, channelType: null, iconType: "locked" };
     const obj21 = { type: "text", content: null };
@@ -310,7 +310,7 @@ obj = {
   order: require("t").defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
-    const CHANNEL_OR_MESSAGES_URL_RE = ME /* ME */.CHANNEL_OR_MESSAGES_URL_RE;
+    const CHANNEL_OR_MESSAGES_URL_RE = ME.CHANNEL_OR_MESSAGES_URL_RE;
     const match = CHANNEL_OR_MESSAGES_URL_RE.exec(arg0);
     if (null != match) {
       if (null != match[2]) {
@@ -370,7 +370,7 @@ obj[2] = {
   order: require("t").defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
-    const MEDIA_POST_URL_RE = ME /* ME */.MEDIA_POST_URL_RE;
+    const MEDIA_POST_URL_RE = ME.MEDIA_POST_URL_RE;
     return MEDIA_POST_URL_RE.exec(arg0);
   },
   parse(arg0, arg1, channelId) {
@@ -422,7 +422,7 @@ let obj1 = {
   order: require("t").defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
-    const MEDIA_POST_URL_RE = ME /* ME */.MEDIA_POST_URL_RE;
+    const MEDIA_POST_URL_RE = ME.MEDIA_POST_URL_RE;
     return MEDIA_POST_URL_RE.exec(arg0);
   },
   parse(arg0, arg1, channelId) {

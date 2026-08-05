@@ -16,18 +16,18 @@ export const trackUserAvatarUpdated = function trackUserAvatarUpdated(isGuildPro
   }
   let NEW_ASSET = isGuildProfile.avatarAssetOrigin;
   if (NEW_ASSET === undefined) {
-    NEW_ASSET = AssetOriginTypes /* AssetOriginTypes */.AssetOriginTypes.NEW_ASSET;
+    NEW_ASSET = AssetOriginTypes.AssetOriginTypes.NEW_ASSET;
   }
   let obj = expandEventProperties;
   obj = { animated: null, is_guild_profile: null, recent_avatar_id: null, is_edited_recent_avatar: null };
-  obj[0] = getAvatarURL /* getAvatarURL */.isAnimatedIconHash(avatarHash);
+  obj[0] = getAvatarURL.isAnimatedIconHash(avatarHash);
   obj[1] = flag;
   let NumberResult;
-  if (NEW_ASSET === AssetOriginTypes /* AssetOriginTypes */.AssetOriginTypes.ARCHIVED_ASSET) {
+  if (NEW_ASSET === AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
     const _Number = Number;
     NumberResult = Number(avatarId);
   }
   obj[2] = NumberResult;
-  obj[3] = NEW_ASSET === AssetOriginTypes /* AssetOriginTypes */.AssetOriginTypes.EDITED_ARCHIVED_ASSET;
+  obj[3] = NEW_ASSET === AssetOriginTypes.AssetOriginTypes.EDITED_ARCHIVED_ASSET;
   obj.track(AnalyticEvents.USER_AVATAR_UPDATED, obj);
 };

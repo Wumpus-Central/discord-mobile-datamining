@@ -40,11 +40,11 @@ function getGuildBadgeSource(guild, flag) {
             hasItem = Boolean(hasItem1);
           }
         }
-        obj2 = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
+        obj2 = fromGuildPropertiesWithAdditionalFields;
       }
     }
   } else {
-    obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
+    obj = fromGuildPropertiesWithAdditionalFields;
     if (obj.isGuildRecord(has)) {
       const features3 = has.features;
       let hasItem2 = features3.has(VERIFIED);

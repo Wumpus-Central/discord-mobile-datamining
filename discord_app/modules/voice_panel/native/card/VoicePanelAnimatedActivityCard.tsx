@@ -418,7 +418,7 @@ const memoResult = importAllResult.memo(function VoicePanelAnimatedActivityCard(
   obj = {};
   const merged = Object.assign(arg0);
   obj[1] = callback(VoicePanelAnimatedActivityCardInner, obj);
-  return callback(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+  return callback(ManaContext.ThemeContextProvider, obj);
 });
 const result = require("participantFromServer").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelAnimatedActivityCard.tsx");
 

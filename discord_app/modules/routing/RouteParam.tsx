@@ -30,7 +30,7 @@ export const RouteParam = {
     if (flag2) {
       str2 = "?";
     }
-    const unescapedPathParam = new getAuthenticationPath /* getAuthenticationPath */.UnescapedPathParam(":" + escapeRegExp(str) + "(" + combined + ")" + str2);
+    const unescapedPathParam = new getAuthenticationPath.UnescapedPathParam(":" + escapeRegExp(str) + "(" + combined + ")" + str2);
     return unescapedPathParam;
   },
   channelId() {
@@ -57,7 +57,7 @@ export const RouteParam = {
     if (flag2) {
       str2 = "?";
     }
-    const unescapedPathParam = new getAuthenticationPath /* getAuthenticationPath */.UnescapedPathParam(":" + escapeRegExp(str) + "(" + combined + ")" + str2);
+    const unescapedPathParam = new getAuthenticationPath.UnescapedPathParam(":" + escapeRegExp(str) + "(" + combined + ")" + str2);
     return unescapedPathParam;
   }
 };

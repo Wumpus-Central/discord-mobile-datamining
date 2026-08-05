@@ -32,13 +32,13 @@ export default function SuspendedUserSafetyHubPage() {
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.header, children: null };
   const obj1 = { variant: "destructive", accessibilityLabel: null, onPress: null, icon: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[1] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
+  const intl = getSystemLocale.intl;
+  obj1[1] = intl.string(getSystemLocale.t.cpT0Cq);
   obj1[2] = function onPress() {
     callback(5736).closeSuspendedUser();
   };
   obj1[3] = registerAsset;
-  const items = [callback(IconButton /* IconButton */.IconButton, obj1), ];
+  const items = [callback(IconButton.IconButton, obj1), ];
   const obj2 = {
     style: tmp.text,
     onPress() {
@@ -48,17 +48,17 @@ export default function SuspendedUserSafetyHubPage() {
     color: "control-critical-primary-text-default",
     children: null
   };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  const items1 = [intl2.string(getSystemLocale /* getSystemLocale */.t["MG+Bzb"]), " ", ];
+  const intl2 = getSystemLocale.intl;
+  const items1 = [intl2.string(getSystemLocale.t["MG+Bzb"]), " ", ];
   const obj3 = { style: tmp.link, variant: "text-xs/medium", color: "control-critical-primary-text-default", children: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj3[3] = intl3.string(getSystemLocale /* getSystemLocale */.t["9JceHN"]);
-  items1[2] = callback(Text /* Text */.Text, obj3);
+  const intl3 = getSystemLocale.intl;
+  obj3[3] = intl3.string(getSystemLocale.t["9JceHN"]);
+  items1[2] = callback(Text.Text, obj3);
   obj2[4] = items1;
-  items[1] = callback2(Text /* Text */.Text, obj2);
+  items[1] = callback2(Text.Text, obj2);
   obj[1] = items;
   const items2 = [callback2(View, obj), callback(AutomatedUnderageAppealStatus, { visible: true })];
   obj[1] = items2;
   obj[3] = callback2(View, obj);
-  return callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 };

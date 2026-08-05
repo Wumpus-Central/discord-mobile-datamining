@@ -15,8 +15,8 @@ export default function formatClearAfterValue(arg0) {
     const date = new Date();
     const _Date12 = Date;
     const date1 = new Date(sum);
-    const obj8 = resetCache /* resetCache */;
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    const obj8 = resetCache;
+    const intl5 = getSystemLocale.intl;
     if (isSameDayResult) {
       const data8 = intl5.data;
       let formatTimeResult = data8.formatTime(sum, { format: "short" });
@@ -35,8 +35,8 @@ export default function formatClearAfterValue(arg0) {
     const date2 = new Date();
     const _Date9 = Date;
     const date3 = new Date(sum1);
-    const obj6 = resetCache /* resetCache */;
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    const obj6 = resetCache;
+    const intl4 = getSystemLocale.intl;
     if (isSameDayResult1) {
       const data6 = intl4.data;
       let formatTimeResult1 = data6.formatTime(sum1, { format: "short" });
@@ -54,8 +54,8 @@ export default function formatClearAfterValue(arg0) {
     const date4 = new Date();
     const _Date6 = Date;
     const date5 = new Date(sum2);
-    const obj4 = resetCache /* resetCache */;
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const obj4 = resetCache;
+    const intl3 = getSystemLocale.intl;
     if (isSameDayResult2) {
       const data4 = intl3.data;
       let formatTimeResult2 = data4.formatTime(sum2, { format: "short" });
@@ -70,12 +70,12 @@ export default function formatClearAfterValue(arg0) {
     const _Date = Date;
     const result1 = 30 * set.Millis.MINUTE;
     const sum3 = Date.now() + result1;
-    obj1 = resetCache /* resetCache */;
+    obj1 = resetCache;
     const _Date2 = Date;
     const date6 = new Date();
     const _Date3 = Date;
     const date7 = new Date(sum3);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     if (isSameDayResult3) {
       const data2 = intl2.data;
       let formatTimeResult3 = data2.formatTime(sum3, { format: "short" });
@@ -87,10 +87,10 @@ export default function formatClearAfterValue(arg0) {
     }
     return formatTimeResult3;
   } else if (tmp.DONT_CLEAR === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.bRn8cq);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.bRn8cq);
   } else {
-    obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+    obj = isDiscordFrontendDevelopment;
     obj.assertNever(arg0);
   }
 };

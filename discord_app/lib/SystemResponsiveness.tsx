@@ -34,11 +34,11 @@ class SystemResponsiveness {
 const prototype = SystemResponsiveness.prototype;
 prototype["start"] = function start() {
   const connection = this.connection;
-  connection.on(BaseConnectionEvent /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.on(BaseConnectionEvent.BaseConnectionEvent.Stats, this.sampleStats);
 };
 prototype["stop"] = function stop() {
   const connection = this.connection;
-  connection.off(BaseConnectionEvent /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.off(BaseConnectionEvent.BaseConnectionEvent.Stats, this.sampleStats);
 };
 prototype["getPttQueueLatencyStats"] = function getPttQueueLatencyStats() {
   const pttQueueLatencyHistogram = this.pttQueueLatencyHistogram;

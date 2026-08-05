@@ -66,16 +66,16 @@ const result = require("items").fileFinishedImporting("modules/parent_tools/nati
 
 export default function FamilyCenterAcceptedLinks() {
   const tmp = createCacheKey();
-  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
+  let obj = useUserIdsForLinkStatus;
   const activeLinkUsers = obj.useActiveLinkUsers();
   obj = { count: activeLinkUsers.length, max: useIsInAdultAgeGroup() ? closure_4 : closure_5 };
   const tmp4 = useIsInAdultAgeGroup();
   const intl = tmp5(1236).intl;
-  const tmp5Result = useAgeSpecificText /* useAgeSpecificText */;
+  const tmp5Result = useAgeSpecificText;
   const intl2 = tmp5(1236).intl;
   obj = { style: tmp.container, children: null };
   const ageSpecificText = tmp5Result.useAgeSpecificText(intl.formatToPlainString(messagesProxy["+tnO34"], obj), intl2.formatToPlainString(tmp2(2285)["pu6/U0"], obj));
-  const items = [callback(Text /* Text */.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
+  const items = [callback(Text.Text, { style: tmp.header, variant: "eyebrow", color: "text-default", children: ageSpecificText }), ];
   const obj2 = { style: tmp.content, children: null };
   if (0 === activeLinkUsers.length) {
     const obj3 = { style: null, children: null };

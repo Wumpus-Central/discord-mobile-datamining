@@ -21,7 +21,7 @@ let closure_11 = createCacheKey.createStyles((arg0, marginLeft) => {
   obj[2] = { display: "flex", flexDirection: "row" };
   obj[3] = { display: "flex", flexDirection: "row" };
   obj[4] = { marginLeft: -marginLeft };
-  obj = { backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: Button /* Button */.AVATAR_SIZE_MAP[arg0], minWidth: Button /* Button */.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 };
+  obj = { backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: Button.AVATAR_SIZE_MAP[arg0], minWidth: Button.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 };
   obj[5] = obj;
   obj[6] = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "flex-end", overflow: "hidden", marginLeft: -4 - marginLeft };
   obj[7] = { borderColor: Themes.colors.CARD_SECONDARY_BG };

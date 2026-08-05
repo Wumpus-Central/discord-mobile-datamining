@@ -10,10 +10,10 @@ export default {
     if (arg2 === undefined) {
       flag = true;
     }
-    sanitizeURLPart /* sanitizeURLPart */.default(arg0, arg1, { allowExternal: flag });
+    sanitizeURLPart.default(arg0, arg1, { allowExternal: flag });
   },
   openURLExternally(href, SAFARI) {
-    sanitizeURLPart /* sanitizeURLPart */.default(href, SAFARI, { forceExternalBrowser: true });
+    sanitizeURLPart.default(href, SAFARI, { forceExternalBrowser: true });
   },
   performURLNavigation(href) {
     Linking.openURL(href).catch(() => {

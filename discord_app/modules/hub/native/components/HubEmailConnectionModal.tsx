@@ -25,7 +25,7 @@ export default function HubEmailConnectionModal(arg0) {
   let screens;
   ({ isNestedNavigator: require, onCloseExtra: importDefault, invite: dependencyMap, displayStudentPrompt: HubEmailConnectionSteps } = arg0);
   let jsx;
-  let obj = useNavigation /* useNavigation */;
+  let obj = useNavigation;
   jsx = obj.useNavigation();
   ({ screens, initialRouteStack } = useInitialValue(() => {
     function handleClose() {
@@ -151,11 +151,11 @@ export default function HubEmailConnectionModal(arg0) {
     return obj1;
   }));
   obj = { screens, initialRouteStack, headerBackTitle: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
-  return jsx(NavigationStack /* NavigationStack */.Navigator, { screens, initialRouteStack, headerBackTitle: null });
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
+  return jsx(NavigationStack.Navigator, { screens, initialRouteStack, headerBackTitle: null });
 };
 export const HubEmailConnectionScreen = function HubEmailConnectionScreen(children) {
   const tmp = createCacheKey();
-  return jsx(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, { top: true, style: createCacheKey().safeArea, children: children.children });
+  return jsx(SafeAreaPaddingView.SafeAreaPaddingView, { top: true, style: createCacheKey().safeArea, children: children.children });
 };

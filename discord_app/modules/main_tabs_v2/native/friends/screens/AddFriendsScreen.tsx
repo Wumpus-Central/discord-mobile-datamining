@@ -23,7 +23,7 @@ let error;
 let map1;
 const require = arg1;
 function handleFindFriends() {
-  handleNameInputScreenOrSuggestions /* handleNameInputScreenOrSuggestions */.openContactSyncModal({}, constants.FRIENDS_ADD_FRIENDS_MODAL);
+  handleNameInputScreenOrSuggestions.openContactSyncModal({}, constants.FRIENDS_ADD_FRIENDS_MODAL);
 }
 function handleShare() {
   const self = this;

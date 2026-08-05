@@ -41,7 +41,7 @@ const fn = (arg0) => {
   } else {
     tmp._decoder = null;
   }
-  tmp._stream = supportsZstd /* supportsZstd */.createZstdContextWeb();
+  tmp._stream = supportsZstd.createZstdContextWeb();
   return tmp;
 };
 const prototype2 = fn.prototype;
@@ -269,7 +269,7 @@ class fn4 extends BaseGatewayCompressionHandler {
 }
 fn4["canUse"] = function canUse() {
   if (obj.isAndroid()) {
-    let tmp5 = null != enforcing /* enforcing */.default;
+    let tmp5 = null != enforcing.default;
   } else {
     tmp5 = null != NativeModules.DCDCompressionManager;
   }
@@ -279,9 +279,9 @@ prototype5["bindWebSocket"] = function bindWebSocket(_socketId) {
   const self = this;
   this.close();
   this._socketId = _socketId._socketId;
-  const obj = supportsZstd /* supportsZstd */;
-  const supportsZstdResult = supportsZstd /* supportsZstd */.supportsZstd();
-  const isAndroidResult = set /* set */.isAndroid();
+  const obj = supportsZstd;
+  const supportsZstdResult = supportsZstd.supportsZstd();
+  const isAndroidResult = set.isAndroid();
   if (supportsZstdResult) {
     if (isAndroidResult) {
       const _default2 = tmp2(12825).default;
@@ -335,7 +335,7 @@ prototype5["close"] = function close() {
       const DCDCompressionManager = NativeModules.DCDCompressionManager;
       const result1 = DCDCompressionManager.disableZlibStreamSupport(_socketId);
     }
-    obj = set /* set */;
+    obj = set;
     tmp = require;
   }
 };
@@ -369,7 +369,7 @@ items.push(NullGatewayCompressionHandler);
 let result = require("module_12826").fileFinishedImporting("modules/gateway/GatewayCompressionHandler.tsx");
 
 export const getCompressionHandler = function getCompressionHandler(closure_10) {
-  const ProcessArgs = get /* get */.ProcessArgs;
+  const ProcessArgs = get.ProcessArgs;
   if (ProcessArgs.isDiscordGatewayPlaintextSet()) {
     return new NullGatewayCompressionHandler(closure_10);
   } else {

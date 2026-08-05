@@ -4,7 +4,7 @@ const result = require("set").fileFinishedImporting("utils/native/IAPUtils.mock.
 
 export default {
   loadProducts() {
-    return Promise.resolve(items /* items */.copiedIAPProducts);
+    return Promise.resolve(items.copiedIAPProducts);
   },
   purchaseProduct() {
     const error = new Error("IAPUtils is mocked \u2014 purchases cannot be completed in this build.");

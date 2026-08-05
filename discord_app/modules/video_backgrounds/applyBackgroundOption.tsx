@@ -37,7 +37,7 @@ function _getFilterBlob() {
   return applyArgumentsResult;
 }
 function applyBackgroundMediaFilterSettings(arg0, target, graph, image, blob) {
-  let obj = _fetchVideoFilterAssets /* _fetchVideoFilterAssets */;
+  let obj = _fetchVideoFilterAssets;
   obj = { graph, target, image, blob };
   const result = obj.applyMediaFilterSettings({ [arg0]: obj });
 }
@@ -457,7 +457,7 @@ export const applyBackgroundOptionPreview = function applyBackgroundOptionPrevie
 export const applyInitialVideoBackgroundOption = function applyInitialVideoBackgroundOption() {
   currentUser = currentUser.getCurrentUser();
   if (null != currentUser) {
-    const lastUsedVideoBackgroundOption = getLastUsedVideoBackgroundOption /* getLastUsedVideoBackgroundOption */.getLastUsedVideoBackgroundOption(currentUser);
+    const lastUsedVideoBackgroundOption = getLastUsedVideoBackgroundOption.getLastUsedVideoBackgroundOption(currentUser);
     let tmp6 = isVideoBackgroundSupported();
     if (tmp6) {
       tmp6 = !hasBeenApplied.hasBeenApplied;
@@ -469,6 +469,6 @@ export const applyInitialVideoBackgroundOption = function applyInitialVideoBackg
       applyBackgroundOptionLive(lastUsedVideoBackgroundOption, { track: false }).catch(NOOP);
       const promise = applyBackgroundOptionLive(lastUsedVideoBackgroundOption, { track: false });
     }
-    const obj = getLastUsedVideoBackgroundOption /* getLastUsedVideoBackgroundOption */;
+    const obj = getLastUsedVideoBackgroundOption;
   }
 };

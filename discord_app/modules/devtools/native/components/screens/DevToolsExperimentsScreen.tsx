@@ -31,7 +31,7 @@ function UserExperimentDebugView(id) {
   const installationForTracking = store2.getInstallationForTracking();
   let maybeExtractIdResult = null;
   if (null != installationForTracking) {
-    let obj = extractId /* extractId */;
+    let obj = extractId;
     maybeExtractIdResult = obj.maybeExtractId(installationForTracking);
   }
   let tmp7 = id;
@@ -41,9 +41,9 @@ function UserExperimentDebugView(id) {
       tmp7 = maybeExtractIdResult;
     }
   }
-  let obj1 = useExperimentAssignment /* useExperimentAssignment */;
+  let obj1 = useExperimentAssignment;
   const experimentAssignment = obj1.useExperimentAssignment(experiment, tmp7);
-  let obj2 = useExperimentAssignment /* useExperimentAssignment */;
+  let obj2 = useExperimentAssignment;
   const experimentServerAssignment = obj2.useExperimentServerAssignment(experiment, tmp7);
   let obj3 = apply;
   const tmp = callback3();
@@ -57,7 +57,7 @@ function UserExperimentDebugView(id) {
     [tmp, tmp2] = arg0;
     return "" + new Date(tmp2).toLocaleString() + " (" + tmp + ")";
   });
-  if (experiment.system === trackExposureToExperiment /* trackExposureToExperiment */.ExperimentSystem.LEGACY) {
+  if (experiment.system === trackExposureToExperiment.ExperimentSystem.LEGACY) {
     let NOT_ELIGIBLE = experimentAssignment;
     if (experimentAssignment == null) {
       NOT_ELIGIBLE = constants.NOT_ELIGIBLE;
@@ -79,7 +79,7 @@ function UserExperimentDebugView(id) {
   }
   obj1 = { title: "Overview", hasIcons: false, children: tmp17(tmp8(5315).TableRow, obj) };
   obj[1] = str4;
-  const items = [closure_11(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj1), closure_11(Button /* Button */.Spacer, { size: 16 }), , , , , ];
+  const items = [closure_11(TableRowGroupTitle.TableRowGroup, obj1), closure_11(Button.Spacer, { size: 16 }), , , , , ];
   let str5 = "None";
   let str6 = "None";
   if (null != experimentServerAssignment) {
@@ -87,16 +87,16 @@ function UserExperimentDebugView(id) {
     str6 = JSON.stringify(experimentServerAssignment, undefined, 2);
   }
   obj2 = { title: "Server Descriptor", hasIcons: false, children: tmp17(tmp8(5315).TableRow, { label: str6 }) };
-  items[2] = closure_11(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj2);
-  items[3] = closure_11(Button /* Button */.Spacer, { size: 16 });
+  items[2] = closure_11(TableRowGroupTitle.TableRowGroup, obj2);
+  items[3] = closure_11(Button.Spacer, { size: 16 });
   let json = str5;
   if (null != override) {
     const _JSON2 = JSON;
     json = JSON.stringify(override.originalDescriptor, undefined, 2);
   }
   obj3 = { title: "Override Descriptor", hasIcons: false, children: tmp17(tmp8(5315).TableRow, { label: json }) };
-  items[4] = closure_11(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj3);
-  items[5] = closure_11(Button /* Button */.Spacer, { size: 16 });
+  items[4] = closure_11(TableRowGroupTitle.TableRowGroup, obj3);
+  items[5] = closure_11(Button.Spacer, { size: 16 });
   if (0 !== mapped.length) {
     str5 = mapped.join("\n");
   }
@@ -107,7 +107,7 @@ function UserExperimentDebugView(id) {
   });
   const tmp15 = closure_12;
   const tmp16 = View;
-  items[6] = closure_11(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: closure_11(TableRowInner /* TableRowInner */.TableRow, { label: str5 }) });
+  items[6] = closure_11(TableRowGroupTitle.TableRowGroup, { title: "Recent Exposures", hasIcons: false, children: closure_11(TableRowInner.TableRow, { label: str5 }) });
   obj[1] = items;
   return tmp15(tmp16, obj);
 }
@@ -291,9 +291,9 @@ function ExperimentActionSheet(arg0) {
   ({ override, options, onCopyLink } = arg0);
   let obj = { header: null, children: null };
   obj = { title: experiment.title, subtitle: id };
-  obj[0] = callback(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  obj[0] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
   obj[1] = callback(ExperimentDetails, { experiment, override, id, options, onCopyLink });
-  return callback(Background /* Background */.BottomSheet, obj);
+  return callback(Background.BottomSheet, obj);
 }
 let c4 = importAllResult;
 ({ ExperimentBuckets: c9, ExperimentTypes: c10 } = ExperimentBuckets);

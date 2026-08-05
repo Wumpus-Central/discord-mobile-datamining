@@ -80,7 +80,7 @@ export default function FormTitle(thinTitle) {
     formatted = title.toUpperCase();
   }
   obj[3] = formatted;
-  const items2 = [closure_3(Button /* Button */.LegacyText, obj), icon];
+  const items2 = [closure_3(Button.LegacyText, obj), icon];
   obj[1] = items2;
   return closure_4(closure_2, obj);
 };

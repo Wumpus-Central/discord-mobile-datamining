@@ -33,13 +33,13 @@ export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRo
   let textStyle;
   content = content.content;
   if (content === undefined) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    content = intl.string(getSystemLocale /* getSystemLocale */.t["6OSasb"]);
+    const intl = getSystemLocale.intl;
+    content = intl.string(getSystemLocale.t["6OSasb"]);
   }
   const roleImage = content.roleImage;
   ({ style, textStyle, roleColor, roleName, guildId } = content);
   const tmp3 = createCacheKey();
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj1 = getNickname;
@@ -55,9 +55,9 @@ export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRo
   obj4[0] = importAll(688).int2hex(roleColor);
   obj3[2] = obj4;
   obj3[3] = name;
-  const items3 = [callback(Text /* Text */.Text, obj3), callback(Button /* Button */.Spacer, { size: 4 }), callback(RoleIcon, { name: roleName, source: { uri: roleImage }, size: 16 }), callback(Button /* Button */.Spacer, { size: 8 }), callback(Text /* Text */.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" })];
+  const items3 = [callback(Text.Text, obj3), callback(Button.Spacer, { size: 4 }), callback(RoleIcon, { name: roleName, source: { uri: roleImage }, size: 16 }), callback(Button.Spacer, { size: 8 }), callback(Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" })];
   obj2[1] = items3;
-  const items4 = [callback2(View, obj2), callback(Text /* Text */.Text, { variant: "text-md/normal", color: "text-default", style: textStyle, children: content })];
+  const items4 = [callback2(View, obj2), callback(Text.Text, { variant: "text-md/normal", color: "text-default", style: textStyle, children: content })];
   obj1[1] = items4;
   items2[1] = callback2(View, obj1);
   obj[1] = items2;

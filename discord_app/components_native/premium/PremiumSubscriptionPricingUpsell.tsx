@@ -230,13 +230,13 @@ let result = require("get ActivityIndicator").fileFinishedImporting("components_
 
 export default function PremiumSubscriptionPricingUpsell() {
   const tmp = callback3();
-  let obj = getSubscriptionPlansLoaded /* getSubscriptionPlansLoaded */;
+  let obj = getSubscriptionPlansLoaded;
   obj = { style: tmp.pricingSection, children: null };
   const subscriptionPlansLoaded = obj.useSubscriptionPlansLoaded();
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t["3x1PFE"]);
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const intl = getSystemLocale.intl;
+  obj[4] = intl.string(getSystemLocale.t["3x1PFE"]);
+  const items = [callback(Text.Text, obj), ];
   let tmp5Result = null;
   if (subscriptionPlansLoaded) {
     tmp5Result = callback(PricingSubheadingCopy, {});

@@ -62,7 +62,7 @@ function ProfileFramePreview(arg0) {
   let profileFrame;
   let width;
   ({ profileFrame, width, handlePreviewPress, onTrackPress } = arg0);
-  let obj = useCurrentUser /* useCurrentUser */;
+  let obj = useCurrentUser;
   obj = { handlePreviewPress, onTrackPress, children: null };
   const currentUser = obj.useCurrentUser();
   obj = { profileFrame, user: currentUser, maxWidth: width, style: createCacheKey().profilePreview };
@@ -120,7 +120,7 @@ export const IndividualProductPreview = function IndividualProductPreview(arg0) 
   let width;
   ({ product, width, handlePreviewPress, onTrackPress } = arg0);
   const type = product.type;
-  if (CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE === type) {
+  if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
     let obj = { product: null };
     obj[0] = product;
     return callback(NameplatePreview, obj);

@@ -19,7 +19,7 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       ephemerality_reason = interactionMetadata.ephemerality_reason;
     }
     if (null != ephemerality_reason) {
-      let obj1 = getEphemeralReasonMessage /* getEphemeralReasonMessage */;
+      let obj1 = getEphemeralReasonMessage;
       const interactionMetadata2 = message.interactionMetadata;
       let ephemerality_reason1;
       if (interactionMetadata2 != null) {
@@ -33,22 +33,22 @@ export const createEphemeralIndication = function createEphemeralIndication(mess
       obj1[1] = message;
       obj[0] = obj1;
       obj[1] = ephemeralReasonMessage;
-      obj[0] = intl2.formatToParts(getSystemLocale /* getSystemLocale */.t.xgCMRQ, obj);
+      obj[0] = intl2.formatToParts(getSystemLocale.t.xgCMRQ, obj);
       obj[1] = combined.getArticleURL(constants.USING_APPS_FAQ);
       const intl3 = tmp3(1236).intl;
-      obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.OIWSJe);
+      obj[2] = intl3.string(getSystemLocale.t.OIWSJe);
       return obj;
     } else {
       const obj2 = { content: null, helpArticleLink: null, helpButtonAccessibilityLabel: null };
-      const intl4 = getSystemLocale /* getSystemLocale */.intl;
+      const intl4 = getSystemLocale.intl;
       const obj3 = { count: 1, countMessages: 1, handleDelete: null };
       const obj4 = { action: "bindDismissMessage", message: null };
       obj4[1] = message;
       obj3[2] = obj4;
-      obj2[0] = intl4.formatToParts(getSystemLocale /* getSystemLocale */.t.uX3ecL, obj3);
+      obj2[0] = intl4.formatToParts(getSystemLocale.t.uX3ecL, obj3);
       obj2[1] = combined.getAppsSupportURL(constants.EPHEMERAL_MESSAGES);
-      const intl5 = getSystemLocale /* getSystemLocale */.intl;
-      obj2[2] = intl5.string(getSystemLocale /* getSystemLocale */.t.htHOrp);
+      const intl5 = getSystemLocale.intl;
+      obj2[2] = intl5.string(getSystemLocale.t.htHOrp);
       if (null != message.getMessage(message.id)) {
         obj2.helpArticleLink = combined.getArticleURL(constants.GUILD_AUTOMOD_BLOCKED_MESSAGE);
         const intl = tmp9(1236).intl;

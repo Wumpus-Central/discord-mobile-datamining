@@ -60,10 +60,10 @@ function BackgroundImageGradient(uri) {
   const items = [tmp.backgroundImage];
   const items1 = [callback2(preload, { source: { uri: uri.splashUrl }, style: items, resizeMode: "cover" }), ];
   obj = { style: tmp.backgroundColorGradient, start: null, end: null, colors: null };
-  obj[1] = keys /* keys */.VerticalGradient.START;
-  obj[2] = keys /* keys */.VerticalGradient.END;
+  obj[1] = keys.VerticalGradient.START;
+  obj[2] = keys.VerticalGradient.END;
   const tmp2 = LinearGradient;
-  const items2 = [hexToRgba /* hexToRgba */.hexWithOpacity(color, 0.16), color];
+  const items2 = [hexToRgba.hexWithOpacity(color, 0.16), color];
   obj[3] = items2;
   items1[1] = callback2(tmp2, obj);
   obj[0] = items1;

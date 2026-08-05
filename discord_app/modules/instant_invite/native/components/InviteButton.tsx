@@ -16,8 +16,8 @@ const memoResult = require("noop").memo(function InviteButton(onPress) {
   if (disabled === undefined) {
     disabled = false;
   }
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  intl.string(getSystemLocale /* getSystemLocale */.t.jYnGPG);
+  const intl = getSystemLocale.intl;
+  intl.string(getSystemLocale.t.jYnGPG);
   if (InviteSendStates.SENDING === sendState) {
     const intl5 = tmp2(1236).intl;
     let stringResult1 = intl5.string(tmp2(1236).t.jYnGPG);
@@ -44,7 +44,7 @@ const memoResult = require("noop").memo(function InviteButton(onPress) {
     disabled = flag;
   }
   obj[5] = disabled;
-  obj[1] = jsx(Button /* Button */.Button, { accessibilityRole: "none", size: "sm", variant: "secondary", text: stringResult1, onPress: onPress.onPressSend, disabled: null, grow: true });
+  obj[1] = jsx(Button.Button, { accessibilityRole: "none", size: "sm", variant: "secondary", text: stringResult1, onPress: onPress.onPressSend, disabled: null, grow: true });
   return <View accessibilityRole="none" size="sm" variant="secondary" text={stringResult1} onPress={arg0.onPressSend} disabled={null} grow />;
 });
 const result = require("InviteSendStates").fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");

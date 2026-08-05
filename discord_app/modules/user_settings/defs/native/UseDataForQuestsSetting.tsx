@@ -6,21 +6,21 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.sJYh5t);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.sJYh5t);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   useValue: function useDataToSupportQuestsSettingValue() {
-    const DropsOptedOut = explicitContentFromProto /* explicitContentFromProto */.DropsOptedOut;
+    const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
     return !DropsOptedOut.useSetting();
   },
   onValueChange: function onDataToSupportQuestsSettingValueChange(arg0) {
-    const DropsOptedOut = explicitContentFromProto /* explicitContentFromProto */.DropsOptedOut;
+    const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
     DropsOptedOut.updateSetting(!arg0);
   },
   useIsDisabled() {
-    let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
-    const obj = useAdPersonalizationTogglesDisabled /* useAdPersonalizationTogglesDisabled */;
+    let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
+    const obj = useAdPersonalizationTogglesDisabled;
     if (!adPersonalizationTogglesDisabled) {
       adPersonalizationTogglesDisabled = obj2.useIsParentallyControlled();
     }
@@ -29,21 +29,21 @@ const toggle = createToggle.createToggle({
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.sJYh5t);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.sJYh5t);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   useValue: function useDataToSupportQuestsSettingValue() {
-    const DropsOptedOut = explicitContentFromProto /* explicitContentFromProto */.DropsOptedOut;
+    const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
     return !DropsOptedOut.useSetting();
   },
   onValueChange: function onDataToSupportQuestsSettingValueChange(arg0) {
-    const DropsOptedOut = explicitContentFromProto /* explicitContentFromProto */.DropsOptedOut;
+    const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
     DropsOptedOut.updateSetting(!arg0);
   },
   useIsDisabled() {
-    let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled /* useAdPersonalizationTogglesDisabled */.useAdPersonalizationTogglesDisabled();
-    const obj = useAdPersonalizationTogglesDisabled /* useAdPersonalizationTogglesDisabled */;
+    let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
+    const obj = useAdPersonalizationTogglesDisabled;
     if (!adPersonalizationTogglesDisabled) {
       adPersonalizationTogglesDisabled = obj2.useIsParentallyControlled();
     }

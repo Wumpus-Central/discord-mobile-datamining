@@ -8,21 +8,21 @@ import { apexExperiment } from "../../../media_engine/MobileAudioOutputExperimen
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.xPHVBs);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.xPHVBs);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   maximum: 200,
   useValue: function useOutputVolumeSettingValue() {
     const items = [_detectH265HardwareDecode];
-    return initialize /* initialize */.useStateFromStores(items, () => outputVolume.getOutputVolume());
+    return initialize.useStateFromStores(items, () => outputVolume.getOutputVolume());
   },
   onValueChange: require("trackDeviceChanged").setOutputVolume,
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t["3182VD"]), ];
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["DGq/PR"]);
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t["3182VD"]), ];
+    const intl2 = getSystemLocale.intl;
+    items[1] = intl2.string(getSystemLocale.t["DGq/PR"]);
     return items;
   },
   usePredicate() {

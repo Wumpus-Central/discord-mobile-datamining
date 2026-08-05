@@ -9,7 +9,7 @@ export default function getGuildBarNeighbors(arg0) {
   guildsTree = guildsTree.getGuildsTree();
   const node = guildsTree.getNode(arg0);
   if (null != node) {
-    if (node.type === GuildsNodeType /* GuildsNodeType */.GuildsNodeType.GUILD) {
+    if (node.type === GuildsNodeType.GuildsNodeType.GUILD) {
       if (null != node.parentId) {
         let root = guildsTree.getNode(node.parentId);
       } else {

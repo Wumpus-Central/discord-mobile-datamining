@@ -201,10 +201,10 @@ export const getAssetURL = function getAssetURL(closure_7, mimeType, arg2, mp4) 
   }
   let sum = combined;
   if (null != arg2) {
-    const obj = handleImageLoad /* handleImageLoad */;
+    const obj = handleImageLoad;
     const _HermesInternal3 = HermesInternal;
-    sum = combined + "?size=" + obj.getBestMediaProxySize(arg2 * handleImageLoad /* handleImageLoad */.getDevicePixelRatio());
-    const obj2 = handleImageLoad /* handleImageLoad */;
+    sum = combined + "?size=" + obj.getBestMediaProxySize(arg2 * handleImageLoad.getDevicePixelRatio());
+    const obj2 = handleImageLoad;
   }
   return sum;
 };
@@ -219,7 +219,7 @@ export const httpGetWithCountryCodeQuery = function httpGetWithCountryCodeQuery(
   return applyArgumentsResult;
 };
 export const nativePlatformTypeToSKUOperatingSystem = function nativePlatformTypeToSKUOperatingSystem(platform) {
-  if (set /* set */.PlatformTypes.WINDOWS === platform) {
+  if (set.PlatformTypes.WINDOWS === platform) {
     return constants.WINDOWS;
   } else if (tmp(500).PlatformTypes.OSX === platform) {
     return constants.MACOS;
@@ -231,14 +231,14 @@ export const nativePlatformTypeToSKUOperatingSystem = function nativePlatformTyp
 };
 export const skuOperatingSystemToText = function skuOperatingSystemToText(arg0) {
   if (constants.WINDOWS === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t["0/xHFO"]);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t["0/xHFO"]);
   } else if (tmp.MACOS === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.E4u4n5);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.E4u4n5);
   } else if (tmp.LINUX === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.tcawo3);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.tcawo3);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;

@@ -19,7 +19,7 @@ export default function VoicePanelLockedIcon() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.icon, source: null, size: null };
   obj[1] = registerAsset;
-  obj[2] = Button /* Button */.IconSizes.LARGE;
-  obj[1] = jsx(Button /* Button */.Icon, { style: tmp.icon, source: null, size: null });
+  obj[2] = Button.IconSizes.LARGE;
+  obj[1] = jsx(Button.Icon, { style: tmp.icon, source: null, size: null });
   return jsx(set, { style: tmp.icon, source: null, size: null });
 };

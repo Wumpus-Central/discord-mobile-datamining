@@ -39,9 +39,9 @@ function HubEmailConnectionGuildSelectHeader() {
   const tmp = createCacheKey();
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.mOMeiR);
-  obj[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[4] = intl.string(getSystemLocale.t.mOMeiR);
+  obj[1] = callback(Text.Text, obj);
   return callback(closure_6, obj);
 }
 function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
@@ -56,10 +56,10 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
   obj[0] = items;
   obj = { style: tmp.footerContainer, children: null };
   const obj1 = { variant: "secondary", loading, disabled: loading, grow: true, text: null, onPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[4] = intl.string(getSystemLocale /* getSystemLocale */.t.G3Zk7V);
+  const intl = getSystemLocale.intl;
+  obj1[4] = intl.string(getSystemLocale.t.G3Zk7V);
   obj1[5] = onFooterButtonPressed.onFooterButtonPressed;
-  const items1 = [callback(Button /* Button */.Button, obj1), ];
+  const items1 = [callback(Button.Button, obj1), ];
   let tmp3Result = null != errors;
   if (tmp3Result) {
     const obj2 = { style: null, children: null };
@@ -69,7 +69,7 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
       anyErrorMessage = errors.getAnyErrorMessage();
     }
     obj2[1] = anyErrorMessage;
-    tmp3Result = tmp3(Button /* Button */.LegacyText, obj2);
+    tmp3Result = tmp3(Button.LegacyText, obj2);
   }
   items1[1] = tmp3Result;
   obj[1] = items1;

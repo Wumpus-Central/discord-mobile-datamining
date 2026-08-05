@@ -37,7 +37,7 @@ function handleUpdateActivity() {
             const features = guild.features;
             tmp2 = null;
             if (features.has(constants.DISCOVERABLE)) {
-              let obj2 = unpackStageChannelParty /* unpackStageChannelParty */;
+              let obj2 = unpackStageChannelParty;
               const result = obj2.packStageChannelPartyId(channel, stageInstanceByChannel);
               let id;
               if (_null != null) {

@@ -69,7 +69,7 @@ prototype["isActiveAt"] = function isActiveAt(closure_0, c1) {
             }
           }
           if (sum > sum1) {
-            if (closure_0 === create /* create */.DayOfWeek.MONDAY) {
+            if (closure_0 === create.DayOfWeek.MONDAY) {
               let SUNDAY = tmp6(1892).DayOfWeek.SUNDAY;
             } else {
               SUNDAY = closure_0 - 1;

@@ -5,8 +5,8 @@ import { UserSettingsSensitiveContentFilters } from "../../family_center/native/
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["Hj/But"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Hj/But"]);
   },
   IconComponent: require("ImageWarningIcon").ImageWarningIcon,
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   getComponent() {
-    return UserSettingsSensitiveContentFilters /* UserSettingsSensitiveContentFilters */.default;
+    return UserSettingsSensitiveContentFilters.default;
   }
 };
 const route = createToggle.createRoute(obj);

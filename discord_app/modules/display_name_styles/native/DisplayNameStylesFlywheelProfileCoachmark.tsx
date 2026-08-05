@@ -14,9 +14,9 @@ const require = arg1;
 function CoachmarkImage() {
   const tmp = createCacheKey();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
-  const items = [callback(AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" }), ];
+  const items = [callback(AccountAgeTier10LargeBadge.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" }), ];
   obj = { style: tmp.betaTag };
-  items[1] = callback(Button /* Button */.BetaTag, obj);
+  items[1] = callback(Button.BetaTag, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

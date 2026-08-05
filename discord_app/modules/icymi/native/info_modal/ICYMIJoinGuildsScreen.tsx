@@ -36,7 +36,7 @@ function SelectedServerIcon(guild) {
     obj = { style: null, guild: null, size: null };
     obj[0] = tmp.guildIconBorder;
     obj[1] = guild;
-    obj[2] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.LARGE;
+    obj[2] = GuildIconSizes.GuildIconSizes.LARGE;
     let tmp3Result = tmp3(GuildIconSizes, obj);
     const tmp12 = GuildIconSizes;
   } else {
@@ -44,7 +44,7 @@ function SelectedServerIcon(guild) {
     if (tmp2) {
       obj = { size: "md", color: null };
       obj[1] = Themes.colors.ICON_MUTED;
-      tmp3Result = tmp3(ServerIcon /* ServerIcon */.ServerIcon, obj);
+      tmp3Result = tmp3(ServerIcon.ServerIcon, obj);
     }
   }
   obj[1] = tmp3Result;

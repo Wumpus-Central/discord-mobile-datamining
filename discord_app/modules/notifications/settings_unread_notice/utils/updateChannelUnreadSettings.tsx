@@ -13,8 +13,8 @@ let result = require("ReadStateTypes").fileFinishedImporting("modules/notificati
 export default function updateChannelUnreadSettings(closure_0, id, UNREADS_ONLY_MENTIONS) {
   let obj = NotificationSettingsModalActionCreators;
   obj = { flags: null };
-  obj[0] = resetGuildUnreadFlags /* resetGuildUnreadFlags */.withChannelUnreadFlags(channelIdFlags.getChannelIdFlags(closure_0, id), UNREADS_ONLY_MENTIONS);
-  const NotificationLabel = UserNotificationSettings /* UserNotificationSettings */.NotificationLabel;
+  obj[0] = resetGuildUnreadFlags.withChannelUnreadFlags(channelIdFlags.getChannelIdFlags(closure_0, id), UNREADS_ONLY_MENTIONS);
+  const NotificationLabel = UserNotificationSettings.NotificationLabel;
   if (UNREADS_ONLY_MENTIONS === constants.UNREADS_ALL_MESSAGES) {
     let ONLY_MENTIONS = UnreadSetting.ALL_MESSAGES;
   } else {

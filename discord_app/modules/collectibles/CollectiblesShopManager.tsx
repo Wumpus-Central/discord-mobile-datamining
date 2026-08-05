@@ -28,7 +28,7 @@ function flushProducts() {
   for (const item10016 of tmp2) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    let obj = _maybeFetchProductsWithSkus /* _maybeFetchProductsWithSkus */;
+    let obj = _maybeFetchProductsWithSkus;
     obj = { skuIds: null };
     obj[0] = item10016;
     let result = obj.maybeFetchProductsBySkuIds(obj);
@@ -42,7 +42,7 @@ function flushCollections() {
   for (const item10016 of tmp2) {
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    let obj = _maybeFetchCollectionsWithProducts /* _maybeFetchCollectionsWithProducts */;
+    let obj = _maybeFetchCollectionsWithProducts;
     obj = { collectionIds: null };
     obj[0] = item10016;
     let result = obj.maybeFetchCollectionsWithProducts(obj);

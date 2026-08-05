@@ -9,9 +9,9 @@ function getJoinOrStartButtonState(channel) {
   let joinability;
   ({ embeddedActivity, joinability, currentEmbeddedActivity } = channel);
   let obj = { disabled: false, isJoinAction: !tmp, text: null, tooltip: "Array" };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (null == embeddedActivity) {
     let stringResult = string(t.RscU7I);
     let tmp6 = tmp2;

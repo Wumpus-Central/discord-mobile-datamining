@@ -16,9 +16,9 @@ export const FavoritesGuildHeaderActionButton = function FavoritesGuildHeaderAct
   const obj = { variant: "secondary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 };
   obj[2] = importDefault(isPreview ? 5271 : 11496);
   if (!isPreview) {
-    exitPreview = handleAddToFavorites /* handleAddToFavorites */.openFavoritesGuildAddActionSheet;
+    exitPreview = handleAddToFavorites.openFavoritesGuildAddActionSheet;
   }
   obj[3] = exitPreview;
   obj[4] = label;
-  return jsx(IconButton /* IconButton */.IconButton, { variant: "secondary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
+  return jsx(IconButton.IconButton, { variant: "secondary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 1 });
 };

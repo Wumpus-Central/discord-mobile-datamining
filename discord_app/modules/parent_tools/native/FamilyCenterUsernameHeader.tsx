@@ -21,8 +21,8 @@ export default function FamilyCenterUsernameHeader(user) {
   obj = { style: tmp.container, children: null };
   const combined = " (@" + nameFromUser.getUserTag(user, { decoration: "never" }) + ")";
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
-  const items = [name, callback(Text /* Text */.Text, { variant: "text-md/medium", color: "text-muted", lineClamp: 1, children: combined })];
+  const items = [name, callback(Text.Text, { variant: "text-md/medium", color: "text-muted", lineClamp: 1, children: combined })];
   obj[3] = items;
-  obj[1] = callback2(Text /* Text */.Text, obj);
+  obj[1] = callback2(Text.Text, obj);
   return callback(View, obj);
 };

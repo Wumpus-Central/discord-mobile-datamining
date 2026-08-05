@@ -35,7 +35,7 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[1] = str;
   obj[1] = obj;
   const obj1 = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOWER, height: null };
-  obj1[1] = Themes.space.PX_8 + Radius /* Radius */.Radius.lg;
+  obj1[1] = Themes.space.PX_8 + Radius.Radius.lg;
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj1.top = undefined;
   obj[2] = obj1;
@@ -120,13 +120,13 @@ export default function ChatInputGuard(type) {
     obj5[2] = buttonPrimaryText;
     obj5[3] = buttonPrimaryOnPress;
     obj5[5] = buttonPrimaryVariant;
-    const tmp15 = callback(Button /* Button */.Button, obj5);
+    const tmp15 = callback(Button.Button, obj5);
     const obj6 = { style: null, children: null };
     obj6[0] = tmp3.wrapper;
     const obj7 = { style: null, variant: "text-sm/semibold", children: null };
     obj7[0] = tmp3.text;
     obj7[2] = message2;
-    const items1 = [callback(Text /* Text */.Text, obj7), , , ];
+    const items1 = [callback(Text.Text, obj7), , , ];
     let tmp13Result = null;
     if (null != subtext2) {
       tmp13Result = null;
@@ -159,7 +159,7 @@ export default function ChatInputGuard(type) {
     }
     const obj10 = { children: null };
     obj10[0] = tmp16Result;
-    items1[2] = callback(ButtonGroup /* ButtonGroup */.ButtonGroup, obj10);
+    items1[2] = callback(ButtonGroup.ButtonGroup, obj10);
     tmp13Result = null;
     if (null != countdown2) {
       const obj11 = { style: null, deadline: null };

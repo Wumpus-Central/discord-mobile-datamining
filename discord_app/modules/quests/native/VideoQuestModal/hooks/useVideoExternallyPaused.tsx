@@ -11,18 +11,18 @@ const require = arg1;
 const result = require("navigationToRootTabHelper").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx");
 
 export const useVideoExternallyPaused = function useVideoExternallyPaused(id, arg1) {
-  const activeContextMenu = updateContextMenuState /* updateContextMenuState */.useActiveContextMenu();
-  const obj = updateContextMenuState /* updateContextMenuState */;
-  const openModalKey = navigationToRootTabHelper /* navigationToRootTabHelper */.useOpenModalKey();
-  const obj2 = navigationToRootTabHelper /* navigationToRootTabHelper */;
-  const videoQuestModalKey = getVideoQuestWatchCtaText /* getVideoQuestWatchCtaText */.getVideoQuestModalKey(id);
-  const obj3 = getVideoQuestWatchCtaText /* getVideoQuestWatchCtaText */;
+  const activeContextMenu = updateContextMenuState.useActiveContextMenu();
+  const obj = updateContextMenuState;
+  const openModalKey = navigationToRootTabHelper.useOpenModalKey();
+  const obj2 = navigationToRootTabHelper;
+  const videoQuestModalKey = getVideoQuestWatchCtaText.getVideoQuestModalKey(id);
+  const obj3 = getVideoQuestWatchCtaText;
   const items = [setContent];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => key.getKey());
-  const obj4 = initialize /* initialize */;
-  const obj5 = useAlertStore /* useAlertStore */;
-  const tmp5 = useAlertStore /* useAlertStore */.useAlertStore((alerts) => alerts.alerts).length > 0;
-  let tmp6 = set /* set */.isIOS() && arg1;
+  const stateFromStores = initialize.useStateFromStores(items, () => key.getKey());
+  const obj4 = initialize;
+  const obj5 = useAlertStore;
+  const tmp5 = useAlertStore.useAlertStore((alerts) => alerts.alerts).length > 0;
+  let tmp6 = set.isIOS() && arg1;
   if (!tmp6) {
     tmp6 = null != stateFromStores;
   }

@@ -26,7 +26,7 @@ export default function GuildSettingsServerTagPickerCell(accessibilityLabel) {
   }
   ({ onPress, children } = accessibilityLabel);
   const tmp = createCacheKey();
-  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative;
   let radioA11yNative = obj.useRadioA11yNative({ selected });
   if ("button" === accessibilityRole) {
     obj = { accessibilityRole: "button", accessibilityState: null };

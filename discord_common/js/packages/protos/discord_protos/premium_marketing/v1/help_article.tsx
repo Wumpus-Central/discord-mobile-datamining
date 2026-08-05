@@ -56,7 +56,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let LocalizedString = create /* create */.LocalizedString;
+        let LocalizedString = create.LocalizedString;
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -107,7 +107,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
   }
   if (id.linkTextLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

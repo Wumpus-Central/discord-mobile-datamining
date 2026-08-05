@@ -40,12 +40,12 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   const innerWidth = profileFrame.innerWidth;
   const result = previewWidth.previewWidth * innerWidth / (innerWidth + 2 * profileFrame.overflowHorizontal);
   ({ overflowTop, overflowBottom, overflowHorizontal } = scaleProfileFrame(profileFrame, result));
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(profileBackgroundColor);
   obj = { frame: profileFrame, filterLayer, profileThemeType: UserProfileThemeTypes.PREVIEW, frameOrder: null, containerWidth: null, containerHeight: null };
   const tmp5 = scaleProfileFrame(profileFrame, result);
   const tmp6 = require;
-  obj[3] = ProfileFrameLayerOrder /* ProfileFrameLayerOrder */.ProfileFrameLayerOrder.BACK;
+  obj[3] = ProfileFrameLayerOrder.ProfileFrameLayerOrder.BACK;
   obj[4] = result;
   obj[5] = previewHeight;
   let tmp12 = callback(ProfileFrameLayer, obj);

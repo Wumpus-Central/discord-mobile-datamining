@@ -43,7 +43,7 @@ export default function ViewEmptyState(arg0) {
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.emptyLabel;
     obj1[1] = label.toUpperCase();
-    tmp2Result = tmp2(Button /* Button */.LegacyText, obj1);
+    tmp2Result = tmp2(Button.LegacyText, obj1);
   }
   items1[1] = tmp2Result;
   tmp2Result = null;
@@ -53,7 +53,7 @@ export default function ViewEmptyState(arg0) {
     ({ emptyLabel: arr3[0], emptyText: arr3[1] } = tmp);
     obj2[0] = items2;
     obj2[1] = text;
-    tmp2Result = tmp2(Button /* Button */.LegacyText, obj2);
+    tmp2Result = tmp2(Button.LegacyText, obj2);
   }
   items1[2] = tmp2Result;
   obj[1] = items1;

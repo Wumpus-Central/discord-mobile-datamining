@@ -9,42 +9,42 @@ const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onChang
 obj[2] = obj;
 obj = {
   backspace(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "backspace", []);
+    renderElement.dispatchCommand(arg0, "backspace", []);
   },
   blur(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "blur", []);
+    renderElement.dispatchCommand(arg0, "blur", []);
   },
   focus(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "focus", []);
+    renderElement.dispatchCommand(arg0, "focus", []);
   },
   openCustomKeyboard(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "openCustomKeyboard", []);
+    renderElement.dispatchCommand(arg0, "openCustomKeyboard", []);
   },
   closeCustomKeyboard(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "closeCustomKeyboard", []);
+    renderElement.dispatchCommand(arg0, "closeCustomKeyboard", []);
   },
   openSystemKeyboard(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "openSystemKeyboard", []);
+    renderElement.dispatchCommand(arg0, "openSystemKeyboard", []);
   },
   replaceRange(arg0, arg1, arg2, arg3, arg4, arg5, arg6) {
     const items = [arg1, arg2, arg3, arg4, arg5, arg6];
-    renderElement /* renderElement */.dispatchCommand(arg0, "replaceRange", items);
+    renderElement.dispatchCommand(arg0, "replaceRange", items);
   },
   setSelectedRange(arg0, arg1, arg2) {
     const items = [arg1, arg2];
-    renderElement /* renderElement */.dispatchCommand(arg0, "setSelectedRange", items);
+    renderElement.dispatchCommand(arg0, "setSelectedRange", items);
   },
   setText(arg0, arg1) {
     const items = [arg1];
-    renderElement /* renderElement */.dispatchCommand(arg0, "setText", items);
+    renderElement.dispatchCommand(arg0, "setText", items);
   },
   flushText(arg0, arg1) {
     const items = [arg1];
-    renderElement /* renderElement */.dispatchCommand(arg0, "flushText", items);
+    renderElement.dispatchCommand(arg0, "flushText", items);
   },
   updateTextBlocks(arg0, arg1, arg2) {
     const items = [arg1, arg2];
-    renderElement /* renderElement */.dispatchCommand(arg0, "updateTextBlocks", items);
+    renderElement.dispatchCommand(arg0, "updateTextBlocks", items);
   }
 };
 const value = setRuntimeConfigProvider.get("DCDChatInput", () => obj);

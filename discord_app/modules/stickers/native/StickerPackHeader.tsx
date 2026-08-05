@@ -53,8 +53,8 @@ const memoResult = importAllResult.memo((withDescription) => {
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.headline, children: null };
   obj = { style: tmp.label, lineClamp: 1, variant: "text-md/bold", color: "mobile-text-heading-primary", children: stickerPack.name };
-  const items = [callback(Text /* Text */.Text, obj), , ];
-  let obj3 = getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */;
+  const items = [callback(Text.Text, obj), , ];
+  let obj3 = getStickerExtensionFromFormatType;
   let result = obj3.isStickerPackAnimated(stickerPack);
   if (result) {
     const obj1 = { style: null, children: null };
@@ -72,9 +72,9 @@ const memoResult = importAllResult.memo((withDescription) => {
   const obj4 = { source: null, style: null, size: null, color: null };
   obj4[0] = registerAsset;
   obj4[1] = tmp.premiumIcon;
-  obj4[2] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
+  obj4[2] = Button.Icon.Sizes.EXTRA_SMALL;
   obj4[3] = tmp.icon.color;
-  obj3[1] = callback(Button /* Button */.Icon, obj4);
+  obj3[1] = callback(Button.Icon, obj4);
   items[2] = callback(View, obj3);
   obj[1] = items;
   obj[1] = closure_5(View, obj);
@@ -91,8 +91,8 @@ const memoResult = importAllResult.memo((withDescription) => {
   items1[1] = flag;
   const obj7 = { lineClamp: 1, variant: "text-xs/medium", color: "text-default", children: null };
   const intl = tmp6(1236).intl;
-  obj7[3] = intl.format(getSystemLocale /* getSystemLocale */.t["0S3JpO"], { numStickers: stickerPack.stickers.length });
-  items1[2] = callback(Text /* Text */.Text, obj7);
+  obj7[3] = intl.format(getSystemLocale.t["0S3JpO"], { numStickers: stickerPack.stickers.length });
+  items1[2] = callback(Text.Text, obj7);
   obj6[0] = items1;
   const tmp2Result = closure_5(closure_6, obj6);
   if (withBanner) {

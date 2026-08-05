@@ -11,7 +11,7 @@ const result = require("useSafeAreaInsets").fileFinishedImporting("design/compon
 export const Modal = function Modal(arg0) {
   let obj = {};
   const merged = Object.assign(arg0);
-  obj = { height: NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + useSafeAreaInsets().top };
+  obj = { height: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + useSafeAreaInsets().top };
   obj.headerStyle = obj;
-  return jsx(NavigationStack /* NavigationStack */.Navigator, { height: NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + useSafeAreaInsets().top });
+  return jsx(NavigationStack.Navigator, { height: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + useSafeAreaInsets().top });
 };

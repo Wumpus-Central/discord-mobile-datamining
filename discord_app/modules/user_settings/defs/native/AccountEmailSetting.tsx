@@ -8,13 +8,13 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["w/qqKK"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["w/qqKK"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing: function useAccountEmailSettingTrailing() {
     const items = [mergeGuildAvatar];
-    return initialize /* initialize */.useStateFromStores(items, () => {
+    return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let email;
       if (currentUser != null) {

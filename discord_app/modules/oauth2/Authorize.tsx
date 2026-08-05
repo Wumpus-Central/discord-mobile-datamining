@@ -17,7 +17,7 @@ export const filterScopes = function filterScopes(items) {
     const RemovedScopes = callback(table[3]).RemovedScopes;
     return !RemovedScopes.includes(arg0);
   });
-  let hasItem = found.includes(set /* set */.OAuth2Scopes.BOT);
+  let hasItem = found.includes(set.OAuth2Scopes.BOT);
   if (hasItem) {
     hasItem = !found.includes(tmp(8824).OAuth2Scopes.APPLICATIONS_COMMANDS);
   }
@@ -29,7 +29,7 @@ export const filterScopes = function filterScopes(items) {
 export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(query) {
   let channel_id;
   let guild_id;
-  let obj = keysSorter /* keysSorter */;
+  let obj = keysSorter;
   const parsed = obj.parse(query, { arrayFormat: "bracket" });
   const NONE = importAll(3918).NONE;
   try {

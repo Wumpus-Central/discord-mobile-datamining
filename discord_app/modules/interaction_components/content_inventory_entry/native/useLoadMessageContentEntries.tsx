@@ -731,7 +731,7 @@ function isMessageRenderable(arg0) {
     let tmp2 = nextResult;
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    if (nextResult.type === PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.CONTENT_INVENTORY_ENTRY) {
+    if (nextResult.type === PermissionOverwriteType.ComponentType.CONTENT_INVENTORY_ENTRY) {
       let tmp3Result = tmp3(8043);
       let obj = { component: null, message: null };
       obj = { contentInventoryEntry: null };

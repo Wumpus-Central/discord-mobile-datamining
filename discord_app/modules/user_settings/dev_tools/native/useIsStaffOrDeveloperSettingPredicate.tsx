@@ -7,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/user_settings/dev_t
 
 export const useStaffOrDeveloperSettingPredicate = function useStaffOrDeveloperSettingPredicate() {
   const items = [init];
-  return initialize /* initialize */.useStateFromStores(items, () => isDeveloper.isDeveloper);
+  return initialize.useStateFromStores(items, () => isDeveloper.isDeveloper);
 };

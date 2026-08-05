@@ -201,14 +201,14 @@ const memoResult = importAllResult.memo((arg0) => {
   const bannerSize = config.bannerSize;
   let tmp5Result = null;
   if (config.enabled) {
-    let tmp8 = bannerSize === apexExperiment /* apexExperiment */.MobileAccountLinkingBannerSize.LARGE;
+    let tmp8 = bannerSize === apexExperiment.MobileAccountLinkingBannerSize.LARGE;
     if (tmp8) {
       obj = {};
       const merged = Object.assign(arg0);
       tmp8 = callback(AccountLinkLargeBanner, obj);
     }
     const items = [tmp8, ];
-    let tmp14 = bannerSize === apexExperiment /* apexExperiment */.MobileAccountLinkingBannerSize.MEDIUM;
+    let tmp14 = bannerSize === apexExperiment.MobileAccountLinkingBannerSize.MEDIUM;
     if (tmp14) {
       obj = {};
       const merged1 = Object.assign(arg0);
@@ -235,7 +235,7 @@ export const getScaledAccountLinkBannerHeight = function getScaledAccountLinkBan
   const bannerSize = config.bannerSize;
   if (!config.enabled) {
     return 0;
-  } else if (bannerSize === apexExperiment /* apexExperiment */.MobileAccountLinkingBannerSize.LARGE) {
+  } else if (bannerSize === apexExperiment.MobileAccountLinkingBannerSize.LARGE) {
     const sum = PX_8 + PX_12 + closure_16 + PX_16;
     let tmp3Result = tmp3(9370);
     const sum1 = sum + tmp3Result.scaleTextLineHeight(c17, fontScale) + PX_4;

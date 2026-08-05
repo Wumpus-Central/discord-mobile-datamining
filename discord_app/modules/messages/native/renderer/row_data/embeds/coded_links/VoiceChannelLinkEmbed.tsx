@@ -59,7 +59,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             }
             obj.headerText = str;
             obj.headerColor = colors.headerColor;
-            obj5 = set /* set */;
+            obj5 = set;
             const intl = tmp16(1236).intl;
             const string = intl.string;
             const t = tmp16(1236).t;
@@ -96,7 +96,7 @@ export const createVoiceChannelLinkEmbed = function createVoiceChannelLinkEmbed(
             const intl2 = tmp16(1236).intl;
             const obj1 = { guildName: null };
             obj1[0] = guild.name;
-            obj.channelName = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["2wimj5"], obj1);
+            obj.channelName = intl2.formatToPlainString(getSystemLocale.t["2wimj5"], obj1);
             obj.subtitle = "";
             obj.type = InviteTypes.GUILD;
             obj.inviteSplash = undefined;

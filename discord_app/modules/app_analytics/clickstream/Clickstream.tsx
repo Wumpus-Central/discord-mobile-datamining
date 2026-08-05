@@ -19,8 +19,8 @@ function isClickstreamEnabled(flag) {
       c7 = extractTimestampResult;
     }
     const obj = DISCORD_EPOCH;
-    let closure_8 = clickstreamExperimentEnabled /* clickstreamExperimentEnabled */.clickstreamExperimentEnabled();
-    const obj2 = clickstreamExperimentEnabled /* clickstreamExperimentEnabled */;
+    let closure_8 = clickstreamExperimentEnabled.clickstreamExperimentEnabled();
+    const obj2 = clickstreamExperimentEnabled;
   }
   return closure_8;
 }
@@ -38,7 +38,7 @@ function drainClickstream(flag) {
       let tmp11 = dependencyMap;
       let obj2 = expandEventProperties;
       let tmp12 = require;
-      let obj3 = getClickstreamDrainEvent /* getClickstreamDrainEvent */;
+      let obj3 = getClickstreamDrainEvent;
       let trackResult = obj2.track(first, obj3.getClickstreamDrainEvent(first, tmp8[1]));
       continue;
     }
@@ -59,7 +59,7 @@ export const trackClickstream = function trackClickstream(GUILD_VIEWED_CLICKSTRE
     drainClickstream(false);
     c7 = extractTimestampResult;
   }
-  const result = clickstreamExperimentEnabled /* clickstreamExperimentEnabled */.clickstreamExperimentEnabled();
+  const result = clickstreamExperimentEnabled.clickstreamExperimentEnabled();
   let c8 = result;
   if (result) {
     if (!map.has(GUILD_VIEWED_CLICKSTREAM)) {

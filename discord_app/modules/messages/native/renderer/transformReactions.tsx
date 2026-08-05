@@ -7,8 +7,8 @@ export default function transformReactions(arg0) {
   let require;
   ({ reactions, animateEmoji: require } = arg0);
   let closure_1;
-  closure_1 = apexExperiment /* apexExperiment */.shouldSkipAccessibilityLabels();
-  let obj = apexExperiment /* apexExperiment */;
+  closure_1 = apexExperiment.shouldSkipAccessibilityLabels();
+  let obj = apexExperiment;
   return reactions.flatMap((emoji) => {
     emoji = emoji.emoji;
     const merged = Object.assign(emoji, Object.create(null));

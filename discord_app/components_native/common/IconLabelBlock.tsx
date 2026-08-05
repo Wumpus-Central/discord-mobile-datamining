@@ -36,7 +36,7 @@ prototype["renderLabel"] = function renderLabel() {
     const items = [tmp.label, tmp2];
     obj[0] = items;
     obj[1] = label;
-    tmp3 = callback2(Button /* Button */.LegacyText, obj);
+    tmp3 = callback2(Button.LegacyText, obj);
   }
   return tmp3;
 };
@@ -49,7 +49,7 @@ prototype["renderText"] = function renderText() {
     obj[2] = items;
     obj[3] = tmp3;
     obj[4] = text;
-    tmp4 = callback2(Text /* Text */.Text, obj);
+    tmp4 = callback2(Text.Text, obj);
   }
   return tmp4;
 };
@@ -78,14 +78,14 @@ prototype["renderIcon"] = function renderIcon() {
       obj1[0] = items1;
       const merged1 = Object.assign(errorProps);
       obj1.children = error;
-      tmp14Result = tmp14(Button /* Button */.LegacyText, obj1);
+      tmp14Result = tmp14(Button.LegacyText, obj1);
     }
     items[1] = tmp14Result;
     obj[1] = items;
     return tmp12(tmp13, obj);
   } else {
     if (null == source) {
-      obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+      obj = AccessibilityAnnouncer;
       if (obj.isThemeLight(this.context.theme)) {
         darkSource = tmp2;
       }

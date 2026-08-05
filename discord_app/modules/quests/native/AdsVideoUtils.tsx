@@ -17,7 +17,7 @@ export const isSourceError = function isSourceError(error) {
     }
     let isIOSResult = hasItem;
   } else {
-    isIOSResult = set /* set */.isIOS();
+    isIOSResult = set.isIOS();
     if (isIOSResult) {
       let hasItem1 = null != code;
       if (hasItem1) {
@@ -25,7 +25,7 @@ export const isSourceError = function isSourceError(error) {
       }
       isIOSResult = hasItem1;
     }
-    const tmpResult = set /* set */;
+    const tmpResult = set;
   }
   return isIOSResult;
 };

@@ -4,7 +4,7 @@ import { fetchStore } from "UserApplicationIdentityActionCreators.tsx";
 
 const require = arg1;
 function handleUserApplicationIdentityGatewayEvent(user_id) {
-  const useUserApplicationIdentities = fetchStore /* fetchStore */.useUserApplicationIdentities;
+  const useUserApplicationIdentities = fetchStore.useUserApplicationIdentities;
   useUserApplicationIdentities.refetch(user_id.user_id);
 }
 let prototype = function UserApplicationIdentityManager() {

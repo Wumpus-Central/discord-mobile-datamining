@@ -91,7 +91,7 @@ function CodeFieldInner(loading) {
   obj = { style: tmp2.container, children: null };
   [tmp4, tmp5] = callback(React.useState(""), 2);
   obj = { style: tmp2.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items1 = [callback2(Text /* Text */.Text, obj), callback2(Text /* Text */.Text, { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), , ];
+  const items1 = [callback2(Text.Text, obj), callback2(Text.Text, { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), , ];
   const obj1 = { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
   const tmp3 = callback(React.useState(""), 2);
   items1[2] = callback2(closure_5, { style: tmp2.inputContainer, children: callback2(SingleCodeInput, { loading: flag, error, count: num, onCodeEntered, codeType: NUMERIC, disabled, code: tmp4, setCode: tmp5 }) });

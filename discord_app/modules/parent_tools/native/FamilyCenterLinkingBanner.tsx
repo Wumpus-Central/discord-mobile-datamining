@@ -22,29 +22,29 @@ const require = arg1;
 function FamilyCenterLinkingBannerParentContent() {
   let obj = { style: callback3().container, children: null };
   obj = { index: 1, header: null, description: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj[1] = intl.string(messagesProxy["7xxAni"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(messagesProxy["1M9So2"]);
   const items = [callback(FamilyCenterLinkingInstructionsRow, obj), , , ];
   obj = { index: 2, header: null, description: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(messagesProxy["AXgx+a"]);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  const intl4 = getSystemLocale.intl;
   obj[2] = intl4.string(messagesProxy.GzMFnb);
   items[1] = callback(FamilyCenterLinkingInstructionsRow, obj);
   const obj1 = { index: 3, header: null, description: null, isLast: true };
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
+  const intl5 = getSystemLocale.intl;
   obj1[1] = intl5.string(messagesProxy.MZn1tG);
-  const intl6 = getSystemLocale /* getSystemLocale */.intl;
+  const intl6 = getSystemLocale.intl;
   obj1[2] = intl6.string(messagesProxy["8rLBxD"]);
   items[2] = callback(FamilyCenterLinkingInstructionsRow, obj1);
-  items[3] = callback(FamilyCenterTeenQRCodeButtonInner /* FamilyCenterTeenQRCodeButtonInner */.FamilyCenterParentQRCodeButton, {});
+  items[3] = callback(FamilyCenterTeenQRCodeButtonInner.FamilyCenterParentQRCodeButton, {});
   obj[1] = items;
   return callback2(closure_3, obj);
 }
 function FamilyCenterLinkingBannerTeenContent() {
-  return callback(closure_3, { style: createCacheKey().container, children: callback(FamilyCenterTeenQRCodeButtonInner /* FamilyCenterTeenQRCodeButtonInner */.FamilyCenterTeenQRCodeButton, {}) });
+  return callback(closure_3, { style: createCacheKey().container, children: callback(FamilyCenterTeenQRCodeButtonInner.FamilyCenterTeenQRCodeButton, {}) });
 }
 function FamilyCenterLinkingInstructionsRow(arg0) {
   let description;
@@ -54,7 +54,7 @@ function FamilyCenterLinkingInstructionsRow(arg0) {
   ({ header, description, index, isLast } = arg0);
   const tmp = callback4();
   let obj = { style: tmp.row, children: null };
-  obj = { style: tmp.circle, children: callback(Text /* Text */.Text, { variant: "heading-md/semibold", color: "text-brand", children: index }) };
+  obj = { style: tmp.circle, children: callback(Text.Text, { variant: "heading-md/semibold", color: "text-brand", children: index }) };
   const items = [callback(closure_3, obj), ];
   const items1 = [tmp.rowContent, ];
   let gap = null;
@@ -63,7 +63,7 @@ function FamilyCenterLinkingInstructionsRow(arg0) {
   }
   obj = { style: items1, children: null };
   items1[1] = gap;
-  const items2 = [callback(Text /* Text */.Text, { variant: "heading-sm/bold", children: header }), callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-muted", children: description })];
+  const items2 = [callback(Text.Text, { variant: "heading-sm/bold", children: header }), callback(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: description })];
   obj[1] = items2;
   items[1] = closure_6(closure_3, obj);
   obj[1] = items;
@@ -98,15 +98,15 @@ const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/na
 
 export default function FamilyCenterLinkingBanner() {
   const tmp = createCacheKey();
-  let obj = useAgeSpecificText /* useAgeSpecificText */;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  let obj = useAgeSpecificText;
+  const intl = getSystemLocale.intl;
   const tmp2 = useIsInAdultAgeGroup();
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   const ageSpecificText = obj.useAgeSpecificText(intl.string(messagesProxy.zUCWEL), intl2.string(messagesProxy.B0NPbp));
-  let obj1 = useAgeSpecificText /* useAgeSpecificText */;
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  let obj1 = useAgeSpecificText;
+  const intl3 = getSystemLocale.intl;
   const stringResult = intl.string(messagesProxy.zUCWEL);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  const intl4 = getSystemLocale.intl;
   obj = { style: tmp.container, children: null };
   obj = { source: null, style: null, resizeMethod: "resize" };
   const ageSpecificText1 = obj1.useAgeSpecificText(intl3.format(messagesProxy.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }), intl4.string(messagesProxy.JsAEDi));
@@ -114,7 +114,7 @@ export default function FamilyCenterLinkingBanner() {
   obj[1] = tmp.art;
   const items = [callback(closure_4, obj), , ];
   obj1 = { style: tmp.content, children: null };
-  const items1 = [callback(Text /* Text */.Text, { style: tmp.header, variant: "heading-lg/semibold", children: ageSpecificText }), callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 })];
+  const items1 = [callback(Text.Text, { style: tmp.header, variant: "heading-lg/semibold", children: ageSpecificText }), callback(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 })];
   obj1[1] = items1;
   items[1] = callback2(closure_3, obj1);
   items[2] = callback(tmp2 ? FamilyCenterLinkingBannerParentContent : FamilyCenterLinkingBannerTeenContent, {});

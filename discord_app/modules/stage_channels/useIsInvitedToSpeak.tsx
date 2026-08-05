@@ -9,10 +9,10 @@ const result = require("initialize").fileFinishedImporting("modules/stage_channe
 
 export default function useIsInvitedToSpeak() {
   const items = [handleConnectionOpen];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
-  const obj = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
+  const obj = initialize;
   const items1 = [fetchFingerprint];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => id.getId());
-  const obj2 = initialize /* initialize */;
-  return useAudienceRequestToSpeakState(stateFromStores1, stateFromStores) === useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => id.getId());
+  const obj2 = initialize;
+  return useAudienceRequestToSpeakState(stateFromStores1, stateFromStores) === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 };

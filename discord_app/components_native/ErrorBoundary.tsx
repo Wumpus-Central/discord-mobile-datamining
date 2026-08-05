@@ -139,11 +139,11 @@ prototype["render"] = function render() {
   const error = this.state.error;
   if (null !== error) {
     let obj = { Illustration: null, title: null, body: null, titleStyle: null, bodyStyle: null, children: null };
-    obj[0] = getAppCrashSource /* getAppCrashSource */.AppCrash;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.tx8CkI);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.CvQlAH);
+    obj[0] = getAppCrashSource.AppCrash;
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.tx8CkI);
+    const intl2 = getSystemLocale.intl;
+    obj[2] = intl2.string(getSystemLocale.t.CvQlAH);
     ({ text: obj[3], text: obj[4] } = tmp);
     obj = { style: null, variant: "text-sm/medium", color: "text-muted", children: null };
     obj[0] = tmp.error;
@@ -162,20 +162,20 @@ prototype["render"] = function render() {
       str = "Unknown Error";
     }
     obj[3] = str;
-    const items = [closure_9(Text /* Text */.Text, obj), , ];
+    const items = [closure_9(Text.Text, obj), , ];
     obj = { style: null, children: null };
     obj[0] = tmp.buttons;
     const items1 = [closure_9(MaybeClearBuildOverride, {}), ];
     const obj1 = { text: null, onPress: null };
     const intl3 = tmp3(1236).intl;
-    obj1[0] = intl3.string(getSystemLocale /* getSystemLocale */.t["4n8OJn"]);
+    obj1[0] = intl3.string(getSystemLocale.t["4n8OJn"]);
     obj1[1] = self.handleReload;
-    items1[1] = closure_9(Button /* Button */.Button, obj1);
+    items1[1] = closure_9(Button.Button, obj1);
     obj[1] = items1;
     items[1] = closure_10(closure_7, obj);
     items[2] = null;
     obj[5] = items;
-    let children = tmp2(Button /* Button */.EmptyState, obj);
+    let children = tmp2(Button.EmptyState, obj);
   } else {
     children = self.props.children;
   }

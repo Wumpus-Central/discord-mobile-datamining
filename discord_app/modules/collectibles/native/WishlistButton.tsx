@@ -406,13 +406,13 @@ let closure_17 = createCacheKey.createStyles((arg0) => {
   obj = { width: obj[arg0], height: obj[arg0], display: "flex", alignItems: "center", justifyContent: "center", borderRadius: Themes.radii.round, borderWidth: 1, borderColor: Themes.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
   obj[0] = obj;
   obj = { backgroundColor: null };
-  let obj3 = ManaContext /* ManaContext */;
+  let obj3 = ManaContext;
   obj[0] = obj3.setColorOpacity("white", 0.72);
   obj[1] = obj;
   const obj1 = { backgroundColor: null };
-  obj1[0] = ManaContext /* ManaContext */.setColorOpacity("white", 0.62);
+  obj1[0] = ManaContext.setColorOpacity("white", 0.62);
   obj[2] = obj1;
-  const obj6 = ManaContext /* ManaContext */;
+  const obj6 = ManaContext;
   obj[3] = { backgroundColor: Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
   obj3 = { backgroundColor: Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE };
   obj[4] = obj3;
@@ -433,8 +433,8 @@ export default function CollectiblesWishlistButton(selectedProduct) {
   selectedProduct = selectedProduct.selectedProduct;
   let tmp = null;
   const merged = Object.assign(selectedProduct, Object.create(null));
-  let obj = getProductPurchaseState /* getProductPurchaseState */;
-  getProductNameAndTypeFromSku /* getProductNameAndTypeFromSku */;
+  let obj = getProductPurchaseState;
+  getProductNameAndTypeFromSku;
   if (!obj.useProductPurchaseState(selectedProduct).isPurchased) {
     obj = { skuId: null, product: null, disabled: null, onTrackPress: null };
     obj[0] = selectedProduct.skuId;

@@ -9,7 +9,7 @@ const result = require("Button").fileFinishedImporting("modules/message_request/
 
 export default function MessageRequestEmpty(bodyText) {
   const obj = { Illustration: null, body: null };
-  obj[0] = getPendingSource /* getPendingSource */.Pending;
+  obj[0] = getPendingSource.Pending;
   obj[1] = bodyText.bodyText;
-  return jsx(Button /* Button */.EmptyState, { Illustration: null, body: null });
+  return jsx(Button.EmptyState, { Illustration: null, body: null });
 };

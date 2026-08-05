@@ -17,14 +17,14 @@ const require = arg1;
 function TermsAndConditionsActionSheet(termsAndConditions) {
   let obj = { header: null, children: null };
   obj = { title: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.PdKWVT);
-  obj[0] = callback2(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.PdKWVT);
+  obj[0] = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
   obj = { style: createCacheKey().termsAndConditionsText, variant: "text-sm/medium", children: null };
   const tmp = createCacheKey();
   obj[2] = require("../../modules/markup/MarkupUtils.tsx") /* get defaultRules */.parse(termsAndConditions.termsAndConditions, false, { allowLinks: true });
-  obj[1] = callback2(Text /* Text */.Text, obj);
-  return callback2(Background /* Background */.BottomSheet, obj);
+  obj[1] = callback2(Text.Text, obj);
+  return callback2(Background.BottomSheet, obj);
 }
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);

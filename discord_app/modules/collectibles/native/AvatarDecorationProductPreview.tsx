@@ -11,9 +11,9 @@ let closure_4 = createCacheKey.createStyles({ fullSizePreview: { flex: 1, alignI
 const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/AvatarDecorationProductPreview.tsx");
 
 export default function AvatarDecorationProductPreview(product) {
-  let obj = useCurrentUser /* useCurrentUser */;
+  let obj = useCurrentUser;
   const currentUser = obj.useCurrentUser();
-  let obj1 = firstAvatarDecoration /* firstAvatarDecoration */;
+  let obj1 = firstAvatarDecoration;
   const firstAvatarDecoration = obj1.useShopProductItems(product.product).firstAvatarDecoration;
   let tmp5 = null;
   if (null != firstAvatarDecoration) {

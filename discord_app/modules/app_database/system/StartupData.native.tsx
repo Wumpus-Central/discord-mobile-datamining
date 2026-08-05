@@ -20,7 +20,7 @@ export const getUserId = function getUserId() {
     }
     return userId;
   }
-  obj = set /* set */;
+  obj = set;
 };
 export const setUserId = function setUserId(id) {
   if (obj.isAndroid()) {

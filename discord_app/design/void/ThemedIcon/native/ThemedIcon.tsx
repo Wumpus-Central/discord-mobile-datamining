@@ -9,7 +9,7 @@ const result = require("map").fileFinishedImporting("design/void/ThemedIcon/nati
 
 export default function ThemedIcon(themedColor) {
   const merged = Object.assign(themedColor, Object.create(null));
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(themedColor.themedColor);
   obj = { color: token };
   const merged1 = Object.assign(merged);

@@ -14,12 +14,12 @@ import { styles } from "../../base_components/AppLauncherOptionIcon.tsx";
 const require = arg1;
 function MentionableIcon(mentionable) {
   mentionable = mentionable.mentionable;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { icon: null, wrapperStyle: null };
   const tmp = createCacheKey();
-  obj[0] = jsx(UserCircleIcon /* UserCircleIcon */.UserCircleIcon, { size: "sm", color: "interactive-text-default" });
+  obj[0] = jsx(UserCircleIcon.UserCircleIcon, { size: "sm", color: "interactive-text-default" });
   obj[1] = tmp.iconWrapper;
   const tmp7 = jsx(styles, { icon: null, wrapperStyle: null });
   if (null == mentionable) {

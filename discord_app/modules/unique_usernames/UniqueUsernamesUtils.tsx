@@ -3,11 +3,11 @@ import { t } from "../../../_runtime/04484_t.js";
 const result = require("getSystemLocale").fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
 
 export const formatUsernameLiveCheckValidation = function formatUsernameLiveCheckValidation(arg0) {
-  const match = t /* t */.match(arg0);
-  const str = t /* t */;
+  const match = t.match(arg0);
+  const str = t;
   let obj = { error: null };
-  const P = t /* t */.P;
-  obj[0] = P.not(t /* t */.P.nullish);
+  const P = t.P;
+  obj[0] = P.not(t.P.nullish);
   const withResult = match.with({ rateLimited: true }, () => {
     const obj = { type: callback(13909).NameValidationState.RATE_LIMIT, message: null };
     const intl = callback(1236).intl;
@@ -31,7 +31,7 @@ export const formatUsernameLiveCheckValidation = function formatUsernameLiveChec
     obj[1] = intl.string(callback(1236).t.PgfBSx);
     return obj;
   });
-  obj = { error: t /* t */.P.nullish };
+  obj = { error: t.P.nullish };
   const withResult3 = match.with({ rateLimited: true }, () => {
     const obj = { type: callback(13909).NameValidationState.RATE_LIMIT, message: null };
     const intl = callback(1236).intl;

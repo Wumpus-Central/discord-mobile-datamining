@@ -154,15 +154,15 @@ function explicitContentFromProto(arg0) {
   }
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = obj);
   if (explicitContentGuilds == null) {
-    explicitContentGuilds = create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    explicitContentGuilds = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   obj = { explicitContentGuilds, explicitContentFriendDm: null, explicitContentNonFriendDm: null };
   if (explicitContentFriendDm == null) {
-    explicitContentFriendDm = create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    explicitContentFriendDm = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   obj[1] = explicitContentFriendDm;
   if (explicitContentNonFriendDm == null) {
-    explicitContentNonFriendDm = create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    explicitContentNonFriendDm = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   obj[2] = explicitContentNonFriendDm;
   return obj;
@@ -186,15 +186,15 @@ function goreContentFromProto(arg0) {
   }
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = obj);
   if (goreContentGuilds == null) {
-    goreContentGuilds = create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    goreContentGuilds = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   obj = { goreContentGuilds, goreContentFriendDm: null, goreContentNonFriendDm: null };
   if (goreContentFriendDm == null) {
-    goreContentFriendDm = create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    goreContentFriendDm = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   obj[1] = goreContentFriendDm;
   if (goreContentNonFriendDm == null) {
-    goreContentNonFriendDm = create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    goreContentNonFriendDm = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
   }
   obj[2] = goreContentNonFriendDm;
   return obj;
@@ -221,7 +221,7 @@ const defineProtoSettingResult = set.defineProtoSetting("textAndImages", "useLeg
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult1 = defineProtoSetting.defineProtoSetting("textAndImages", "useRichChatInput", (value) => {
@@ -234,7 +234,7 @@ const defineProtoSettingResult1 = defineProtoSetting.defineProtoSetting("textAnd
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult2 = defineProtoSetting.defineProtoSetting("textAndImages", "includeStickersInAutocomplete", (value) => {
@@ -247,7 +247,7 @@ const defineProtoSettingResult2 = defineProtoSetting.defineProtoSetting("textAnd
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult3 = defineProtoSetting.defineProtoSetting("textAndImages", "includeSoundmojiInAutocomplete", (value) => {
@@ -260,7 +260,7 @@ const defineProtoSettingResult3 = defineProtoSetting.defineProtoSetting("textAnd
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult4 = defineProtoSetting.defineProtoSetting("textAndImages", "includeGameMentionsInAutocomplete", (value) => {
@@ -273,7 +273,7 @@ const defineProtoSettingResult4 = defineProtoSetting.defineProtoSetting("textAnd
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult5 = defineProtoSetting.defineProtoSetting("textAndImages", "renderSpoilers", (value) => {
@@ -286,7 +286,7 @@ const defineProtoSettingResult5 = defineProtoSetting.defineProtoSetting("textAnd
   }
   return ON_CLICK;
 }, (value) => {
-  const StringValue = defineProperty /* defineProperty */.StringValue;
+  const StringValue = defineProperty.StringValue;
   return StringValue.create({ value });
 });
 const defineProtoSettingResult6 = defineProtoSetting.defineProtoSetting("textAndImages", "useThreadSidebar", (value) => {
@@ -299,7 +299,7 @@ const defineProtoSettingResult6 = defineProtoSetting.defineProtoSetting("textAnd
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult7 = defineProtoSetting.defineProtoSetting("notifications", "showInAppNotifications", (value) => {
@@ -312,20 +312,20 @@ const defineProtoSettingResult7 = defineProtoSetting.defineProtoSetting("notific
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult8 = defineProtoSetting.defineProtoSetting("notifications", "reactionNotifications", (arg0) => {
   let NOTIFICATIONS_ENABLED = arg0;
   if (arg0 == null) {
-    NOTIFICATIONS_ENABLED = create /* create */.ReactionNotificationType.NOTIFICATIONS_ENABLED;
+    NOTIFICATIONS_ENABLED = create.ReactionNotificationType.NOTIFICATIONS_ENABLED;
   }
   return NOTIFICATIONS_ENABLED;
 }, (arg0) => arg0);
 const defineProtoSettingResult9 = defineProtoSetting.defineProtoSetting("notifications", "customStatusPushNotifications", (arg0) => {
   let STATUS_PUSH_UNSET = arg0;
   if (arg0 == null) {
-    STATUS_PUSH_UNSET = create /* create */.CustomStatusPushNotificationType.STATUS_PUSH_UNSET;
+    STATUS_PUSH_UNSET = create.CustomStatusPushNotificationType.STATUS_PUSH_UNSET;
   }
   return STATUS_PUSH_UNSET;
 }, (arg0) => arg0);
@@ -339,7 +339,7 @@ const defineProtoSettingResult10 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult11 = defineProtoSetting.defineProtoSetting("notifications", "enableScreenDowntimeScheduleNotifications", (value) => {
@@ -352,7 +352,7 @@ const defineProtoSettingResult11 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult12 = defineProtoSetting.defineProtoSetting("notifications", "enableVoiceActivityNotifications", (value) => {
@@ -365,7 +365,7 @@ const defineProtoSettingResult12 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult13 = defineProtoSetting.defineProtoSetting("notifications", "enableFriendOnlineNotifications", (value) => {
@@ -378,7 +378,7 @@ const defineProtoSettingResult13 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult14 = defineProtoSetting.defineProtoSetting("notifications", "enableFriendAnniversaryNotifications", (value) => {
@@ -391,7 +391,7 @@ const defineProtoSettingResult14 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult15 = defineProtoSetting.defineProtoSetting("notifications", "enableServerTrendingNotifications", (value) => {
@@ -404,7 +404,7 @@ const defineProtoSettingResult15 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult16 = defineProtoSetting.defineProtoSetting("notifications", "enableProfileUpdatesNotifications", (value) => {
@@ -417,7 +417,7 @@ const defineProtoSettingResult16 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult17 = defineProtoSetting.defineProtoSetting("notifications", "enableFriendGamingActivityNotifications", (value) => {
@@ -430,7 +430,7 @@ const defineProtoSettingResult17 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult18 = defineProtoSetting.defineProtoSetting("notifications", "enableUpcomingServerEventNotifications", (value) => {
@@ -443,7 +443,7 @@ const defineProtoSettingResult18 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 let closure_9 = [];
@@ -457,7 +457,7 @@ const defineProtoSettingResult19 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult20 = defineProtoSetting.defineProtoSetting("notifications", "focusModeExpiresAtMs", (arg0) => {
@@ -498,7 +498,7 @@ const defineProtoSettingResult24 = defineProtoSetting.defineProtoSetting("textAn
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult25 = defineProtoSetting.defineProtoSetting("textAndImages", "showCommandSuggestions", (value) => {
@@ -511,7 +511,7 @@ const defineProtoSettingResult25 = defineProtoSetting.defineProtoSetting("textAn
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult26 = defineProtoSetting.defineProtoSetting("voiceAndVideo", "alwaysPreviewVideo", (value) => {
@@ -524,7 +524,7 @@ const defineProtoSettingResult26 = defineProtoSetting.defineProtoSetting("voiceA
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult27 = defineProtoSetting.defineProtoSetting("voiceAndVideo", "disableStreamPreviews", (value) => {
@@ -534,7 +534,7 @@ const defineProtoSettingResult27 = defineProtoSetting.defineProtoSetting("voiceA
   }
   return value;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult28 = defineProtoSetting.defineProtoSetting("notifications", "notifyFriendsOnGoLive", (value) => {
@@ -544,7 +544,7 @@ const defineProtoSettingResult28 = defineProtoSetting.defineProtoSetting("notifi
   }
   return value;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult29 = defineProtoSetting.defineProtoSetting("notifications", "notifyFriendsOnComeOnline", (value) => {
@@ -557,7 +557,7 @@ const defineProtoSettingResult29 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult30 = defineProtoSetting.defineProtoSetting("notifications", "notifyFriendsOnProfileUpdate", (value) => {
@@ -570,7 +570,7 @@ const defineProtoSettingResult30 = defineProtoSetting.defineProtoSetting("notifi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult31 = defineProtoSetting.defineProtoSetting("notifications", "notificationCenterAckedBeforeId", (arg0) => {
@@ -590,7 +590,7 @@ const defineProtoSettingResult32 = defineProtoSetting.defineProtoSetting("gameLi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult33 = defineProtoSetting.defineProtoSetting("gameLibrary", "installShortcutStartMenu", (value) => {
@@ -603,7 +603,7 @@ const defineProtoSettingResult33 = defineProtoSetting.defineProtoSetting("gameLi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 let closure_10 = [];
@@ -617,7 +617,7 @@ const defineProtoSettingResult34 = defineProtoSetting.defineProtoSetting("privac
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult35 = defineProtoSetting.defineProtoSetting("privacy", "allowActivityPartyPrivacyVoiceChannel", (value) => {
@@ -630,7 +630,7 @@ const defineProtoSettingResult35 = defineProtoSetting.defineProtoSetting("privac
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult36 = defineProtoSetting.defineProtoSetting("privacy", "messageRequestRestrictedGuildIds", (arg0) => {
@@ -647,7 +647,7 @@ const defineProtoSettingResult37 = defineProtoSetting.defineProtoSetting("privac
   }
   return value;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult38 = defineProtoSetting.defineProtoSetting("privacy", "nonSpamRetrainingOptIn", (value) => {
@@ -659,7 +659,7 @@ const defineProtoSettingResult38 = defineProtoSetting.defineProtoSetting("privac
 }, (arg0) => {
   let obj;
   if (null != arg0) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     obj = { value: null };
     obj[0] = arg0;
     obj = BoolValue.create(obj);
@@ -676,7 +676,7 @@ const defineProtoSettingResult39 = defineProtoSetting.defineProtoSetting("privac
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult40 = defineProtoSetting.defineProtoSetting("privacy", "defaultGuildsRestricted", (arg0) => {
@@ -693,7 +693,7 @@ const defineProtoSettingResult41 = defineProtoSetting.defineProtoSetting("privac
   }
   return value;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult42 = defineProtoSetting.defineProtoSetting("privacy", "restrictedGuildIds", (arg0) => {
@@ -713,7 +713,7 @@ const defineProtoSettingResult43 = defineProtoSetting.defineProtoSetting("privac
   }
   return num;
 }, (value) => {
-  const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+  const UInt32Value = defineProperty.UInt32Value;
   return UInt32Value.create({ value });
 });
 const defineProtoSettingResult44 = defineProtoSetting.defineProtoSetting("privacy", "friendSourceFlags", (value) => {
@@ -726,7 +726,7 @@ const defineProtoSettingResult44 = defineProtoSetting.defineProtoSetting("privac
   }
   return value;
 }, (value) => {
-  const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+  const UInt32Value = defineProperty.UInt32Value;
   return UInt32Value.create({ value });
 });
 const defineProtoSettingResult45 = defineProtoSetting.defineProtoSetting("debug", "rtcPanelShowVoiceStates", (value) => {
@@ -739,7 +739,7 @@ const defineProtoSettingResult45 = defineProtoSetting.defineProtoSetting("debug"
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult46 = defineProtoSetting.defineProtoSetting("textAndImages", "convertEmoticons", (value) => {
@@ -752,7 +752,7 @@ const defineProtoSettingResult46 = defineProtoSetting.defineProtoSetting("textAn
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult47 = defineProtoSetting.defineProtoSetting("textAndImages", "messageDisplayCompact", (value) => {
@@ -765,7 +765,7 @@ const defineProtoSettingResult47 = defineProtoSetting.defineProtoSetting("textAn
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult48 = defineProtoSetting.defineProtoSetting("voiceAndVideo", "soundboardSettings", (arg0) => arg0, (arg0) => arg0);
@@ -779,7 +779,7 @@ const defineProtoSettingResult49 = defineProtoSetting.defineProtoSetting("voiceA
   }
   return num;
 }, (value) => {
-  const FloatValue = defineProperty /* defineProperty */.FloatValue;
+  const FloatValue = defineProperty.FloatValue;
   return FloatValue.create({ value });
 });
 const defineProtoSettingResult50 = defineProtoSetting.defineProtoSetting("voiceAndVideo", "streamNotificationsEnabled", (value) => {
@@ -792,7 +792,7 @@ const defineProtoSettingResult50 = defineProtoSetting.defineProtoSetting("voiceA
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult51 = defineProtoSetting.defineProtoSetting("privacy", "dropsOptedOut", (value) => {
@@ -805,7 +805,7 @@ const defineProtoSettingResult51 = defineProtoSetting.defineProtoSetting("privac
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult52 = defineProtoSetting.defineProtoSetting("privacy", "quests3PDataOptedOut", (value) => {
@@ -818,7 +818,7 @@ const defineProtoSettingResult52 = defineProtoSetting.defineProtoSetting("privac
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult53 = defineProtoSetting.defineProtoSetting("voiceAndVideo", "nativePhoneIntegrationEnabled", (value) => {
@@ -831,7 +831,7 @@ const defineProtoSettingResult53 = defineProtoSetting.defineProtoSetting("voiceA
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult54 = defineProtoSetting.defineProtoSetting("voiceAndVideo", "afkTimeout", (value) => {
@@ -844,7 +844,7 @@ const defineProtoSettingResult54 = defineProtoSetting.defineProtoSetting("voiceA
   }
   return num;
 }, (value) => {
-  const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+  const UInt32Value = defineProperty.UInt32Value;
   return UInt32Value.create({ value });
 });
 const defineProtoSettingResult55 = defineProtoSetting.defineProtoSetting("textAndImages", "viewNsfwGuilds", (value) => {
@@ -857,7 +857,7 @@ const defineProtoSettingResult55 = defineProtoSetting.defineProtoSetting("textAn
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult56 = defineProtoSetting.defineProtoSetting("textAndImages", "viewNsfwCommands", (value) => {
@@ -870,7 +870,7 @@ const defineProtoSettingResult56 = defineProtoSetting.defineProtoSetting("textAn
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult57 = defineProtoSetting.defineProtoSetting("privacy", "detectPlatformAccounts", (value) => {
@@ -883,7 +883,7 @@ const defineProtoSettingResult57 = defineProtoSetting.defineProtoSetting("privac
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult58 = defineProtoSetting.defineProtoSetting("gameLibrary", "disableGamesTab", (value) => {
@@ -896,7 +896,7 @@ const defineProtoSettingResult58 = defineProtoSetting.defineProtoSetting("gameLi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult59 = defineProtoSetting.defineProtoSetting("textAndImages", "enableTtsCommand", (value) => {
@@ -909,7 +909,7 @@ const defineProtoSettingResult59 = defineProtoSetting.defineProtoSetting("textAn
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult60 = defineProtoSetting.defineProtoSetting("textAndImages", "explicitContentFilter", (value) => {
@@ -922,7 +922,7 @@ const defineProtoSettingResult60 = defineProtoSetting.defineProtoSetting("textAn
   }
   return NON_FRIENDS;
 }, (value) => {
-  const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+  const UInt32Value = defineProperty.UInt32Value;
   return UInt32Value.create({ value });
 });
 const defineProtoSettingResult61 = defineProtoSetting.defineProtoSetting("textAndImages", "dmSpamFilter", (value) => {
@@ -935,13 +935,13 @@ const defineProtoSettingResult61 = defineProtoSetting.defineProtoSetting("textAn
   }
   return NON_FRIENDS;
 }, (value) => {
-  const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+  const UInt32Value = defineProperty.UInt32Value;
   return UInt32Value.create({ value });
 });
 const defineProtoSettingResult62 = defineProtoSetting.defineProtoSetting("textAndImages", "dmSpamFilterV2", (arg0) => {
   let DEFAULT_UNSET = arg0;
   if (arg0 == null) {
-    DEFAULT_UNSET = create /* create */.DmSpamFilterV2.DEFAULT_UNSET;
+    DEFAULT_UNSET = create.DmSpamFilterV2.DEFAULT_UNSET;
   }
   return DEFAULT_UNSET;
 }, (arg0) => arg0);
@@ -955,7 +955,7 @@ const defineProtoSettingResult63 = defineProtoSetting.defineProtoSetting("status
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 const defineProtoSettingResult64 = defineProtoSetting.defineProtoSetting("privacy", "recentGamesEnabled", (value) => {
@@ -968,14 +968,14 @@ const defineProtoSettingResult64 = defineProtoSetting.defineProtoSetting("privac
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 set = new Set(Object.values(StatusTypes));
 const defineProtoSettingResult65 = defineProtoSetting.defineProtoSetting("privacy", "profileVisibility", (arg0) => {
   let FRIENDS_AND_ALL_GUILDS = arg0;
   if (null == arg0) {
-    FRIENDS_AND_ALL_GUILDS = create /* create */.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
+    FRIENDS_AND_ALL_GUILDS = create.ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
   }
   return FRIENDS_AND_ALL_GUILDS;
 }, (arg0) => arg0);
@@ -988,7 +988,7 @@ const defineProtoSettingResult66 = defineProtoSetting.defineProtoSetting("status
   }
   UNKNOWN = StatusTypes.UNKNOWN;
 }, (value) => {
-  const StringValue = defineProperty /* defineProperty */.StringValue;
+  const StringValue = defineProperty.StringValue;
   return StringValue.create({ value });
 });
 const defineProtoSettingResult67 = defineProtoSetting.defineProtoSetting("status", "statusExpiresAtMs", (arg0) => {
@@ -1010,7 +1010,7 @@ const result = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSet
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 }), "text", "inlineAttachmentMedia");
 const result1 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSetting.defineProtoSetting("textAndImages", "inlineEmbedMedia", (value) => {
@@ -1023,7 +1023,7 @@ const result1 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSe
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 }), "text", "inlineEmbedMedia");
 const result2 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSetting.defineProtoSetting("textAndImages", "renderEmbeds", (value) => {
@@ -1036,7 +1036,7 @@ const result2 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSe
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 }), "text", "renderEmbeds");
 const result3 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSetting.defineProtoSetting("textAndImages", "renderReactions", (value) => {
@@ -1049,7 +1049,7 @@ const result3 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSe
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 }), "text", "renderReactions");
 set = { comparator: require("shallowEqual") };
@@ -1095,13 +1095,13 @@ const result4 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSe
   let emojiName;
   const obj = { emojiId: null, emojiName: null, animated: null, disableDoubleTap: null };
   ({ emojiId, emojiName, animated, disableDoubleTap } = arg0);
-  const UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+  const UInt64Value = defineProperty.UInt64Value;
   obj[0] = UInt64Value.create({ value: emojiId });
-  const StringValue = defineProperty /* defineProperty */.StringValue;
+  const StringValue = defineProperty.StringValue;
   obj[1] = StringValue.create({ value: emojiName });
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   obj[2] = BoolValue.create({ value: animated });
-  const BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue2 = defineProperty.BoolValue;
   obj[3] = BoolValue2.create({ value: disableDoubleTap });
   return obj;
 }, set), "text", "defaultReactionEmoji");
@@ -1116,7 +1116,7 @@ const defineProtoSettingResult70 = defineProtoSetting.defineProtoSetting("clips"
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 items[1] = require("ChannelListLayoutTypes").ChannelListLayoutTypes.COZY;
@@ -1133,7 +1133,7 @@ const defineProtoSettingResult71 = defineProtoSetting.defineProtoSetting("locali
   return value;
 }, (arg0) => {
   let value = arg0;
-  const Int32Value = defineProperty /* defineProperty */.Int32Value;
+  const Int32Value = defineProperty.Int32Value;
   if (arg0 == null) {
     value = 0;
   }
@@ -1148,9 +1148,9 @@ const defineProtoSettingResult72 = defineProtoSetting.defineProtoSetting("appear
     }
     return COZY;
   }
-  COZY = ChannelListLayoutTypes /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COZY;
+  COZY = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
 }, (value) => {
-  const StringValue = defineProperty /* defineProperty */.StringValue;
+  const StringValue = defineProperty.StringValue;
   return StringValue.create({ value });
 });
 const result5 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSetting.defineProtoSetting("appearance", "developerMode", (arg0) => {
@@ -1167,9 +1167,9 @@ const defineProtoSettingResult73 = defineProtoSetting.defineProtoSetting("appear
     }
     return ALL;
   }
-  ALL = ChannelListLayoutTypes /* ChannelListLayoutTypes */.MessagePreviewTypes.ALL;
+  ALL = ChannelListLayoutTypes.MessagePreviewTypes.ALL;
 }, (value) => {
-  const StringValue = defineProperty /* defineProperty */.StringValue;
+  const StringValue = defineProperty.StringValue;
   return StringValue.create({ value });
 });
 set = { comparator: require("isFeatureAgeGated").isEqual };
@@ -1190,7 +1190,7 @@ const result6 = defineProtoSetting.wrapSettingWithOverride(defineProtoSetting.wr
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 }), "text", "gifAutoPlay"), "gifAutoPlay", () => {
   const iter = store.getOverride("gifAutoPlay");
@@ -1201,7 +1201,7 @@ const result6 = defineProtoSetting.wrapSettingWithOverride(defineProtoSetting.wr
   return value;
 }, () => {
   const items = [updateExistingSettings];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     const iter = override.getOverride("gifAutoPlay");
     let value;
     if (iter != null) {
@@ -1220,7 +1220,7 @@ const result7 = defineProtoSetting.wrapSettingWithOverride(defineProtoSetting.wr
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 }), "text", "animateEmoji"), "animateEmoji", () => {
   const iter = store.getOverride("animateEmoji");
@@ -1231,7 +1231,7 @@ const result7 = defineProtoSetting.wrapSettingWithOverride(defineProtoSetting.wr
   return value;
 }, () => {
   const items = [updateExistingSettings];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     const iter = override.getOverride("animateEmoji");
     let value;
     if (iter != null) {
@@ -1251,7 +1251,7 @@ const result8 = defineProtoSetting.wrapSettingWithOverride(defineProtoSetting.wr
   }
   return ALWAYS_ANIMATE;
 }, (value) => {
-  const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+  const UInt32Value = defineProperty.UInt32Value;
   return UInt32Value.create({ value });
 }), "text", "animateStickers"), "animateStickers", () => {
   const iter = store.getOverride("animateStickers");
@@ -1262,7 +1262,7 @@ const result8 = defineProtoSetting.wrapSettingWithOverride(defineProtoSetting.wr
   return value;
 }, () => {
   const items = [updateExistingSettings];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     const iter = override.getOverride("animateStickers");
     let value;
     if (iter != null) {
@@ -1297,7 +1297,7 @@ const defineProtoSettingResult75 = defineProtoSetting.defineProtoSetting("appear
 }, (backgroundGradientPresetId) => {
   let obj;
   if (null != backgroundGradientPresetId.backgroundGradientPresetId) {
-    const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+    const UInt32Value = defineProperty.UInt32Value;
     obj = { value: null };
     obj[0] = backgroundGradientPresetId.backgroundGradientPresetId;
     obj = UInt32Value.create(obj);
@@ -1335,44 +1335,44 @@ set = { baseSetting: null, isEligible: null, useIsEligible: null, ineligibleDefa
 set[0] = set.defineProtoSetting("privacy", "defaultGuildsActivityRestricted", (arg0) => arg0, (arg0) => {
   let OFF = arg0;
   if (arg0 == null) {
-    OFF = create /* create */.GuildActivityStatusRestrictionDefault.OFF;
+    OFF = create.GuildActivityStatusRestrictionDefault.OFF;
   }
   return OFF;
 });
 set[1] = function isEligible() {
-  return isFeatureAgeGated /* isFeatureAgeGated */.isSettingTeenByDefault(SettingsDefaultFeature /* SettingsDefaultFeature */.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
+  return isFeatureAgeGated.isSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
 };
 set[2] = function useIsEligible() {
-  return isFeatureAgeGated /* isFeatureAgeGated */.useIsSettingTeenByDefault(SettingsDefaultFeature /* SettingsDefaultFeature */.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
+  return isFeatureAgeGated.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
 };
 set[3] = require("create").GuildActivityStatusRestrictionDefault.OFF;
 set[4] = function eligibleDefault() {
-  return create /* create */.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS;
+  return create.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS;
 };
 defineProtoSetting = set.wrapSettingWithExperimentDefaults(set);
 set = { baseSetting: null, isEligible: null, useIsEligible: null, ineligibleDefault: null, eligibleDefault: null };
 set[0] = set.defineProtoSetting("privacy", "defaultGuildsActivityRestrictedV2", (arg0) => {
   let tmp = null;
-  if (arg0 !== create /* create */.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_UNSET) {
+  if (arg0 !== create.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_UNSET) {
     tmp = arg0;
   }
   return tmp;
 }, (arg0) => {
   let ACTIVITY_STATUS_OFF = arg0;
   if (arg0 == null) {
-    ACTIVITY_STATUS_OFF = create /* create */.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
+    ACTIVITY_STATUS_OFF = create.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
   }
   return ACTIVITY_STATUS_OFF;
 });
 set[1] = function isEligible() {
-  return isFeatureAgeGated /* isFeatureAgeGated */.isSettingTeenByDefault(SettingsDefaultFeature /* SettingsDefaultFeature */.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
+  return isFeatureAgeGated.isSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
 };
 set[2] = function useIsEligible() {
-  return isFeatureAgeGated /* isFeatureAgeGated */.useIsSettingTeenByDefault(SettingsDefaultFeature /* SettingsDefaultFeature */.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
+  return isFeatureAgeGated.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.GUILD_ACTIVITY_STATUS);
 };
 set[3] = require("create").GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
 set[4] = function eligibleDefault() {
-  return create /* create */.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS;
+  return create.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS;
 };
 defineProtoSetting = set.wrapSettingWithExperimentDefaults(set);
 const defineProtoSettingResult78 = set.defineProtoSetting("privacy", "activityJoiningRestrictedGuildIds", (arg0) => {
@@ -1389,7 +1389,7 @@ const defineProtoSettingResult79 = set.defineProtoSetting("privacy", "familyCent
   }
   return value;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 let definePropertyResult = set.defineProtoSetting("privacy", "allowGameFriendDmsInDiscord", (value) => {
@@ -1402,13 +1402,13 @@ let definePropertyResult = set.defineProtoSetting("privacy", "allowGameFriendDms
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 definePropertyResult = set.defineProtoSetting("privacy", "slayerSdkReceiveDmsInGame", (arg0) => {
   let SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET = arg0;
   if (arg0 == null) {
-    SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET = create /* create */.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET;
+    SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET = create.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET;
   }
   return SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET;
 }, (arg0) => arg0);
@@ -1431,7 +1431,7 @@ definePropertyResult = set.defineProtoSetting("appearance", "searchResultExactCo
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 definePropertyResult = set.defineProtoSetting("appearance", "happeningNowCardsDisabled", (value) => {
@@ -1444,13 +1444,13 @@ definePropertyResult = set.defineProtoSetting("appearance", "happeningNowCardsDi
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 definePropertyResult = set.defineProtoSetting("appearance", "timestampHourCycle", (arg0) => {
   let AUTO = arg0;
   if (arg0 == null) {
-    AUTO = create /* create */.TimestampHourCycle.AUTO;
+    AUTO = create.TimestampHourCycle.AUTO;
   }
   return AUTO;
 }, (arg0) => arg0);
@@ -1458,14 +1458,14 @@ definePropertyResult = set.defineProtoSetting("appearance", "defaultGuildThemePr
 definePropertyResult = set.defineProtoSetting("appearance", "launchPadMode", (arg0) => {
   let LAUNCH_PAD_DISABLED = arg0;
   if (arg0 == null) {
-    LAUNCH_PAD_DISABLED = create /* create */.LaunchPadMode.LAUNCH_PAD_DISABLED;
+    LAUNCH_PAD_DISABLED = create.LaunchPadMode.LAUNCH_PAD_DISABLED;
   }
   return LAUNCH_PAD_DISABLED;
 }, (arg0) => arg0);
 definePropertyResult = set.defineProtoSetting("appearance", "swipeRightToLeftMode", (arg0) => {
   let SWIPE_RIGHT_TO_LEFT_UNSET = arg0;
   if (arg0 == null) {
-    SWIPE_RIGHT_TO_LEFT_UNSET = create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_UNSET;
+    SWIPE_RIGHT_TO_LEFT_UNSET = create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_UNSET;
   }
   return SWIPE_RIGHT_TO_LEFT_UNSET;
 }, (arg0) => arg0);
@@ -1485,7 +1485,7 @@ definePropertyResult = set.defineProtoSetting("safetySettings", "ignoreProfileSp
 }, (arg0) => arg0);
 definePropertyResult = set.defineProtoSetting("appearance", "uiDensity", (arg0) => {
   let DEFAULT = arg0;
-  if (arg0 === create /* create */.UIDensity.UNSET_UI_DENSITY) {
+  if (arg0 === create.UIDensity.UNSET_UI_DENSITY) {
     DEFAULT = tmp(1306).UIDensity.DEFAULT;
   } else if (DEFAULT == null) {
     DEFAULT = tmp(1306).UIDensity.DEFAULT;
@@ -1498,7 +1498,7 @@ definePropertyResult = set.defineProtoSetting("inAppFeedbackSettings", "inAppFee
   if (arg0 == null) {
     obj = {};
   }
-  return apply /* apply */.mapValues(obj, (arg0) => callback(table[10]).mapValues(arg0, (value) => {
+  return apply.mapValues(obj, (arg0) => callback(table[10]).mapValues(arg0, (value) => {
     value = undefined;
     if (value != null) {
       value = value.value;
@@ -1510,7 +1510,7 @@ definePropertyResult = set.defineProtoSetting("inAppFeedbackSettings", "inAppFee
     }
     return NumberResult;
   }));
-}, (arg0) => apply /* apply */.mapValues(arg0, (arg0) => callback(table[10]).mapValues(arg0, (arg0) => {
+}, (arg0) => apply.mapValues(arg0, (arg0) => callback(table[10]).mapValues(arg0, (arg0) => {
   const UInt64Value = callback(table[6]).UInt64Value;
   let value;
   if (null != arg0) {
@@ -1529,7 +1529,7 @@ definePropertyResult = set.defineProtoSetting("textAndImages", "isCrossDmSearchE
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 definePropertyResult = set.defineProtoSetting("privacy", "hideFriendRequestNotes", (value) => {
@@ -1542,7 +1542,7 @@ definePropertyResult = set.defineProtoSetting("privacy", "hideFriendRequestNotes
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 definePropertyResult = set.fileFinishedImporting("modules/user_settings/UserSettings.tsx");
@@ -1651,7 +1651,7 @@ export const LegacyUsernameDisabled = set.defineProtoSetting("privacy", "hideLeg
   }
   return flag;
 }, (value) => {
-  const BoolValue = defineProperty /* defineProperty */.BoolValue;
+  const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 });
 export const AllowGameFriendDmsInDiscord = definePropertyResult;

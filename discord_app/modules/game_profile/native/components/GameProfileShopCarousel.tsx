@@ -11,7 +11,7 @@ let error;
 const require = arg1;
 function HorizontalSpacing() {
   let obj = { style: null };
-  obj = { width: CollectiblesShopCardInternalV2 /* CollectiblesShopCardInternalV2 */.COLLECTIBLES_SHOP_CARD_GAP };
+  obj = { width: CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP };
   obj[0] = obj;
   return callback(View, obj);
 }

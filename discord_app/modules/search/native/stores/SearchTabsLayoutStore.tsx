@@ -16,7 +16,7 @@ let unpackModuleId;
 const require = arg1;
 function handleSearchQuery(searchContext) {
   searchContext = searchContext.searchContext;
-  let obj = SearchTokenTypes /* SearchTokenTypes */;
+  let obj = SearchTokenTypes;
   const searchContextId = obj.getSearchContextId(searchContext);
   let value = map.get(searchContextId);
   if (value == null) {
@@ -179,7 +179,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, computeLayoutForAll);
 };
 prototype["getCandidateTabs"] = function getCandidateTabs(searchContext) {
-  let obj = SearchTokenTypes /* SearchTokenTypes */;
+  let obj = SearchTokenTypes;
   let value = map.get(obj.getSearchContextId(searchContext));
   if (value == null) {
     obj = { searchContext: null, wasInitialSearchQuery: true, candidateTabs: null, visibleTabs: null, visibleTabCounts: null };
@@ -191,7 +191,7 @@ prototype["getCandidateTabs"] = function getCandidateTabs(searchContext) {
   return value.candidateTabs;
 };
 prototype["getVisibleTabs"] = function getVisibleTabs(searchContext) {
-  let obj = SearchTokenTypes /* SearchTokenTypes */;
+  let obj = SearchTokenTypes;
   let value = map.get(obj.getSearchContextId(searchContext));
   if (value == null) {
     obj = { searchContext: null, wasInitialSearchQuery: true, candidateTabs: null, visibleTabs: null, visibleTabCounts: null };
@@ -203,7 +203,7 @@ prototype["getVisibleTabs"] = function getVisibleTabs(searchContext) {
   return value.visibleTabs;
 };
 prototype["getVisibleTabCounts"] = function getVisibleTabCounts(searchContext) {
-  let obj = SearchTokenTypes /* SearchTokenTypes */;
+  let obj = SearchTokenTypes;
   let value = map.get(obj.getSearchContextId(searchContext));
   if (value == null) {
     obj = { searchContext: null, wasInitialSearchQuery: true, candidateTabs: null, visibleTabs: null, visibleTabCounts: null };

@@ -26,9 +26,9 @@ prototype["getDiscoveryCategories"] = function getDiscoveryCategories() {
     return closure_9.find((categoryId) => categoryId.categoryId === closure_0);
   });
   const obj = { categoryId: closure_5, name: null };
-  const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.Ym2Ri6);
+  const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.Ym2Ri6);
   const items = [obj, ...found];
   return items;
 };
@@ -38,9 +38,9 @@ prototype["getClanDiscoveryCategories"] = function getClanDiscoveryCategories() 
     return closure_9.find((categoryId) => categoryId.categoryId === closure_0);
   });
   const obj = { categoryId: closure_5, name: null };
-  const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.QToH29);
+  const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.QToH29);
   const items = [obj, ...found];
   return items;
 };
@@ -52,8 +52,8 @@ prototype["getFetchedLocale"] = function getFetchedLocale() {
 };
 prototype["getCategoryName"] = function getCategoryName(arg0) {
   if (arg0 === closure_5) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.Ym2Ri6);
+    const intl = getSystemLocale.intl;
+    let stringResult = intl.string(getSystemLocale.t.Ym2Ri6);
   } else {
     stringResult = table[arg0];
   }

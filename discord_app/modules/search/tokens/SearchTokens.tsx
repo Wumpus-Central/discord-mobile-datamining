@@ -29,8 +29,8 @@ let closure_6;
 const require = arg1;
 function getShortcuts() {
   let obj = {};
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl.string(getSystemLocale /* getSystemLocale */.t.HYiVEQ)] = () => {
+  const intl = getSystemLocale.intl;
+  obj[intl.string(getSystemLocale.t.HYiVEQ)] = () => {
     const obj = callback(3867)();
     const addResult = callback(3867)().startOf("day").add(0, "day");
     const items = [addResult, ];
@@ -38,8 +38,8 @@ function getShortcuts() {
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl2.string(getSystemLocale /* getSystemLocale */.t.cu86KC)] = () => {
+  const intl2 = getSystemLocale.intl;
+  obj[intl2.string(getSystemLocale.t.cu86KC)] = () => {
     const obj = callback(3867)();
     const addResult = callback(3867)().startOf("day").add(-1, "day");
     const items = [addResult, ];
@@ -47,8 +47,8 @@ function getShortcuts() {
     items[1] = addResult.clone().add(1, "day");
     return items;
   };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl3.string(getSystemLocale /* getSystemLocale */.t["FvBj/6"])] = () => {
+  const intl3 = getSystemLocale.intl;
+  obj[intl3.string(getSystemLocale.t["FvBj/6"])] = () => {
     const obj = callback(3867)();
     const addResult = callback(3867)().startOf("week").add(0, "week");
     const items = [addResult, ];
@@ -56,8 +56,8 @@ function getShortcuts() {
     items[1] = addResult.clone().add(1, "week");
     return items;
   };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl4.string(getSystemLocale /* getSystemLocale */.t["20uWCw"])] = () => {
+  const intl4 = getSystemLocale.intl;
+  obj[intl4.string(getSystemLocale.t["20uWCw"])] = () => {
     const obj = callback(3867)();
     const addResult = callback(3867)().startOf("month").add(0, "month");
     const items = [addResult, ];
@@ -65,8 +65,8 @@ function getShortcuts() {
     items[1] = addResult.clone().add(1, "month");
     return items;
   };
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl5.string(getSystemLocale /* getSystemLocale */.t["dXC/hn"])] = () => {
+  const intl5 = getSystemLocale.intl;
+  obj[intl5.string(getSystemLocale.t["dXC/hn"])] = () => {
     const obj = callback(3867)();
     const addResult = callback(3867)().startOf("year").add(0, "year");
     const items = [addResult, ];
@@ -310,38 +310,38 @@ function isValidChannelAutocomplete(token, guildId) {
 }
 function getHasMap() {
   const obj = {};
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl.string(getSystemLocale /* getSystemLocale */.t.ZNR2fi)] = "link";
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl2.string(getSystemLocale /* getSystemLocale */.t["20uQR3"])] = "embed";
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl3.string(getSystemLocale /* getSystemLocale */.t.L4lxyE)] = "poll";
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl4.string(getSystemLocale /* getSystemLocale */.t.nrpA5E)] = "snapshot";
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl5.string(getSystemLocale /* getSystemLocale */.t["AV/v6i"])] = "file";
-  const intl6 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl6.string(getSystemLocale /* getSystemLocale */.t.XM9XGP)] = "video";
-  const intl7 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl7.string(getSystemLocale /* getSystemLocale */.t.TNLcpx)] = "image";
-  const intl8 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl8.string(getSystemLocale /* getSystemLocale */.t.F8Wf0e)] = "sound";
-  const intl9 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl9.string(getSystemLocale /* getSystemLocale */.t.PJgX2h)] = "sticker";
+  const intl = getSystemLocale.intl;
+  obj[intl.string(getSystemLocale.t.ZNR2fi)] = "link";
+  const intl2 = getSystemLocale.intl;
+  obj[intl2.string(getSystemLocale.t["20uQR3"])] = "embed";
+  const intl3 = getSystemLocale.intl;
+  obj[intl3.string(getSystemLocale.t.L4lxyE)] = "poll";
+  const intl4 = getSystemLocale.intl;
+  obj[intl4.string(getSystemLocale.t.nrpA5E)] = "snapshot";
+  const intl5 = getSystemLocale.intl;
+  obj[intl5.string(getSystemLocale.t["AV/v6i"])] = "file";
+  const intl6 = getSystemLocale.intl;
+  obj[intl6.string(getSystemLocale.t.XM9XGP)] = "video";
+  const intl7 = getSystemLocale.intl;
+  obj[intl7.string(getSystemLocale.t.TNLcpx)] = "image";
+  const intl8 = getSystemLocale.intl;
+  obj[intl8.string(getSystemLocale.t.F8Wf0e)] = "sound";
+  const intl9 = getSystemLocale.intl;
+  obj[intl9.string(getSystemLocale.t.PJgX2h)] = "sticker";
   return obj;
 }
 function isValidHasAutocomplete(token) {
-  return ANSWER_IN_REGEX /* ANSWER_IN_REGEX */.validateForMapWithNegation("has", getHasMap(), token);
+  return ANSWER_IN_REGEX.validateForMapWithNegation("has", getHasMap(), token);
 }
 function isValidAuthorTypeAutocomplete(token) {
-  let obj = ANSWER_IN_REGEX /* ANSWER_IN_REGEX */;
+  let obj = ANSWER_IN_REGEX;
   obj = {};
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl.string(getSystemLocale /* getSystemLocale */.t.tPZo4p)] = "user";
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl2.string(getSystemLocale /* getSystemLocale */.t.JL7sRS)] = "bot";
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[intl3.string(getSystemLocale /* getSystemLocale */.t.WjkIKU)] = "webhook";
+  const intl = getSystemLocale.intl;
+  obj[intl.string(getSystemLocale.t.tPZo4p)] = "user";
+  const intl2 = getSystemLocale.intl;
+  obj[intl2.string(getSystemLocale.t.JL7sRS)] = "bot";
+  const intl3 = getSystemLocale.intl;
+  obj[intl3.string(getSystemLocale.t.WjkIKU)] = "webhook";
   return obj.validateForMapWithNegation("author_type", obj, token);
 }
 function isValidPinnedAutocomplete(getMatch) {
@@ -1160,9 +1160,9 @@ export const isMeAutcompleteAnswer = function isMeAutcompleteAnswer(str) {
     return false;
   } else {
     const replaced = str.toLowerCase().replace(/^@/, "");
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     str = str.toLowerCase();
-    let startsWithResult = intl.string(getSystemLocale /* getSystemLocale */.t.Qf3ptv).startsWith(replaced);
+    let startsWithResult = intl.string(getSystemLocale.t.Qf3ptv).startsWith(replaced);
     if (!startsWithResult) {
       const substr = closure_14.substring(1);
       startsWithResult = substr.startsWith(replaced);
@@ -1176,7 +1176,7 @@ export const isValidFilterAnswerForSubmit = function isValidFilterAnswerForSubmi
   } else {
     const _HermesInternal = HermesInternal;
     const items = ["filter:" + trimmed, trimmed];
-    const token = new getMatch /* getMatch */.Token(items, tmp);
+    const token = new getMatch.Token(items, tmp);
     if (SearchTokenTypes.ANSWER_HAS === tmp) {
       let tmp7Result = tmp7(11628);
       return tmp7Result.validateForMapWithNegation("has", getHasMap(), token);

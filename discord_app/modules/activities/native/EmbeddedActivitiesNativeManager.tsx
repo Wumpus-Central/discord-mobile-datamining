@@ -259,31 +259,31 @@ prototype["showErrorModal"] = function showErrorModal(reason, id) {
   ({ code, message } = reason);
   let obj = AlertActionCreators;
   obj = { title: null, body: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.hbiAO6, { code });
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.formatToPlainString(getSystemLocale.t.hbiAO6, { code });
   obj[1] = message;
   obj.show(obj);
 };
 prototype["showLaunchErrorModal"] = function showLaunchErrorModal(message) {
   let obj = AlertActionCreators;
   obj = { title: null, body: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.PtobXW);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.PtobXW);
   obj[1] = message;
   obj.show(obj);
 };
 prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled() {
   let obj = dispatcher;
   obj = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.JfA7IK);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.JfA7IK);
   obj[2] = registerAsset;
   obj.open(obj);
 };
 prototype["releaseWebView"] = function releaseWebView() {
   const releaseIframeIdResult = this.releaseIframeId();
   if (null != releaseIframeIdResult) {
-    const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+    const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
     const obj = { id: null };
     obj[0] = releaseIframeIdResult;
     ComponentDispatch.dispatch(constants.IFRAME_UNMOUNT, obj);
@@ -299,8 +299,8 @@ prototype["leaveActivity"] = function leaveActivity(arg0) {
   ({ location: _location, applicationId, showFeedback } = arg0);
   let isNotNullishResult = null != _location;
   if (isNotNullishResult) {
-    isNotNullishResult = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish(applicationId);
-    const obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+    isNotNullishResult = isDiscordFrontendDevelopment.isNotNullish(applicationId);
+    const obj = isDiscordFrontendDevelopment;
   }
   if (isNotNullishResult) {
     let tmp5 = null != releaseWebViewResult;
@@ -316,7 +316,7 @@ prototype["hidePIPEmbed"] = function hidePIPEmbed(arg0) {
   }
 };
 prototype["clearEmbeddedActivityState"] = function clearEmbeddedActivityState(_location, applicationId, showFeedback) {
-  let obj = _runPrimaryAppCommandOrJoinEmbeddedActivity /* _runPrimaryAppCommandOrJoinEmbeddedActivity */;
+  let obj = _runPrimaryAppCommandOrJoinEmbeddedActivity;
   obj = { location: _location, applicationId, showFeedback };
   obj.stopEmbeddedActivity(obj);
   obj = { type: "EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE", applicationId, lockState: null, pictureInPictureLockState: null };
@@ -334,7 +334,7 @@ prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
   if (null != iframeId) {
     return iframeId;
   } else {
-    const v4Result = v1 /* v1 */.v4();
+    const v4Result = v1.v4();
     tmp.iframeId = v4Result;
     return v4Result;
   }

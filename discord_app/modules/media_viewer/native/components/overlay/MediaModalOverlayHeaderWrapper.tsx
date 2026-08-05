@@ -9,7 +9,7 @@ import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.nativ
 const require = arg1;
 let closure_5 = createCacheKey.createStyles((paddingTop) => {
   let obj = { bar: null };
-  obj = { flexDirection: "row", alignItems: "center", height: NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + paddingTop, paddingTop, paddingLeft: arg1 + 6, paddingRight: arg2 + 6 };
+  obj = { flexDirection: "row", alignItems: "center", height: NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + paddingTop, paddingTop, paddingLeft: arg1 + 6, paddingRight: arg2 + 6 };
   obj[0] = obj;
   return obj;
 });

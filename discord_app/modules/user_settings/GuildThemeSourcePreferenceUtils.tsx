@@ -3,7 +3,7 @@ import { create } from "../../../discord_common/js/packages/protos/discord_proto
 const result = require("set").fileFinishedImporting("modules/user_settings/GuildThemeSourcePreferenceUtils.tsx");
 
 export const resolveDefaultGuildThemePreference = function resolveDefaultGuildThemePreference(arg0) {
-  if (arg0 === create /* create */.GuildThemeSourcePreference.PERSONAL) {
+  if (arg0 === create.GuildThemeSourcePreference.PERSONAL) {
     let GUILD = tmp(1306).GuildThemeSourcePreference.PERSONAL;
   } else {
     GUILD = tmp(1306).GuildThemeSourcePreference.GUILD;
@@ -13,7 +13,7 @@ export const resolveDefaultGuildThemePreference = function resolveDefaultGuildTh
 export const resolveGuildThemeSourcePreference = function resolveGuildThemeSourcePreference(arg0, arg1) {
   let GuildThemeSourcePreference = dependencyMap;
   let tmp2 = arg0;
-  if (arg0 !== create /* create */.GuildThemeSourcePreference.GUILD) {
+  if (arg0 !== create.GuildThemeSourcePreference.GUILD) {
     tmp2 = arg0;
     if (arg0 !== tmp(1306).GuildThemeSourcePreference.PERSONAL) {
       if (arg1 === tmp(1306).GuildThemeSourcePreference.PERSONAL) {

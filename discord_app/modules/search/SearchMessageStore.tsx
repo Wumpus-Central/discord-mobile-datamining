@@ -60,7 +60,7 @@ prototype["handleSearchFailure"] = function handleSearchFailure(arg0) {
   this.isIndexing = false;
   this.isInitialFetchComplete = true;
   this.isHistoricalIndexing = false;
-  const aPIError = new V6OrEarlierAPIError /* V6OrEarlierAPIError */.APIError(arg0);
+  const aPIError = new V6OrEarlierAPIError.APIError(arg0);
   this.error = aPIError;
   this.analyticsId = null;
   this.documentsIndexed = 0;
@@ -392,7 +392,7 @@ const searchMessageStore = new SearchMessageStore(require("dispatcher"), {
       if (null == value) {
         return false;
       } else {
-        const result = map1.set(id, createMinimalMessageRecord /* createMinimalMessageRecord */.updateMessageRecord(value, message.message));
+        const result = map1.set(id, createMinimalMessageRecord.updateMessageRecord(value, message.message));
       }
     }
   },

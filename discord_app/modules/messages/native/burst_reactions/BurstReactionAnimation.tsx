@@ -23,9 +23,9 @@ export default function BurstReactionAnimation(arg0) {
     withFadeOut = true;
   }
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = _generateAnimationSource /* _generateAnimationSource */;
+  let obj = _generateAnimationSource;
   const burstReactionAnimationSource = obj.useBurstReactionAnimationSource({ emoji, messageId, channelId, isFullscreen });
-  initialize /* initialize */;
+  initialize;
   [][0] = maybeApplyNoTextColorForLightCustomTheme;
   if (null == burstReactionAnimationSource) {
     return null;

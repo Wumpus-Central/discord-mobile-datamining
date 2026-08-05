@@ -29,7 +29,7 @@ function handleTapShowAltText(description) {
   openMediaModalOverlayAltTextSheet({ description: description.nativeEvent.description });
 }
 function handleMediaPlayFinishedAnalytics(nativeEvent) {
-  const result = getVisibleMessages /* getVisibleMessages */.handleMediaPlayFinishedAnalytics(nativeEvent.nativeEvent);
+  const result = getVisibleMessages.handleMediaPlayFinishedAnalytics(nativeEvent.nativeEvent);
 }
 function isLoadingAtTop(arg0, arg1) {
   if (arg1) {

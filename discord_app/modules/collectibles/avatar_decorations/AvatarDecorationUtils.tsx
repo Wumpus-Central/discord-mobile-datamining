@@ -6,7 +6,7 @@ let result = require("set").fileFinishedImporting("modules/collectibles/avatar_d
 export const parseAvatarDecorationData = function parseAvatarDecorationData(avatar_decoration_data) {
   if (typeof avatar_decoration_data === "object") {
     if (null != avatar_decoration_data) {
-      let obj = parseSkuIdFromServerData /* parseSkuIdFromServerData */;
+      let obj = parseSkuIdFromServerData;
       const result = obj.parseSkuIdFromServerData(avatar_decoration_data);
       if (null == result) {
         return null;
@@ -98,8 +98,8 @@ export const isEqualAvatarDecoration = function isEqualAvatarDecoration(avatarDe
           }
         }
       }
-      let isEqualResult = apply /* apply */.isEqual(tmp2, tmp6);
-      const obj5 = apply /* apply */;
+      let isEqualResult = apply.isEqual(tmp2, tmp6);
+      const obj5 = apply;
     }
     return isEqualResult;
   }

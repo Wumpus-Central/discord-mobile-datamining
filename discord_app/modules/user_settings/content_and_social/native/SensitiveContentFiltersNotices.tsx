@@ -23,7 +23,7 @@ export const SensitiveContentFiltersTeenNotice = function SensitiveContentFilter
 };
 export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveContentFiltersAgeVerificationNotice() {
   let obj = { label: null, labelHook: null, noticeType: null };
-  obj[0] = getSystemLocale /* getSystemLocale */.t.OX4ybh;
+  obj[0] = getSystemLocale.t.OX4ybh;
   obj[1] = function labelHook() {
     let obj = callback2(7720);
     obj = { entryPoint: callback(7722).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };

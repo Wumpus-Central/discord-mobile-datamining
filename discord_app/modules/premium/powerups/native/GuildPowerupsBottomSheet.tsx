@@ -33,7 +33,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   ({ guildId, powerup } = arg0);
   const tmp = callback3();
   const tmp4 = usePowerupActiveStatus(guildId, powerup);
-  let obj = useCalculatePowerupCardStatus /* useCalculatePowerupCardStatus */;
+  let obj = useCalculatePowerupCardStatus;
   const calculatePowerupCardStatus = obj.useCalculatePowerupCardStatus(powerup, tmp4, useGuildPowerupRollbackEnabled(guildId, powerup, "GuildPowerupsBottomSheet"));
   let str = useGetGuildPowerupBannerImage(powerup, true);
   if (str == null) {
@@ -42,7 +42,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   const tmp5 = useGuildPowerupRollbackEnabled(guildId, powerup, "GuildPowerupsBottomSheet");
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   let str2;
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (powerup.skuId === closure_7) {
     str2 = "+";
   }
@@ -71,7 +71,7 @@ function GuildPowerupsBottomSheetHeader(arg0) {
   const obj4 = { children: null };
   const items1 = [tmp15, ];
   const obj5 = { style: tmp.headerContainer, children: null };
-  const items2 = [tmp14(Text /* Text */.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: powerup.title }), tmp14(GuildPowerupCardFooterActive /* GuildPowerupCardFooterActive */.GuildPowerupsCardFooter, { cost: powerup.cost, costDecorator: str2, status: calculatePowerupCardStatus, style: tmp.statusContainer })];
+  const items2 = [tmp14(Text.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: powerup.title }), tmp14(GuildPowerupCardFooterActive.GuildPowerupsCardFooter, { cost: powerup.cost, costDecorator: str2, status: calculatePowerupCardStatus, style: tmp.statusContainer })];
   obj5[1] = items2;
   items1[1] = closure_9(View, obj5);
   obj4[0] = items1;
@@ -103,7 +103,7 @@ function GuildPowerupsBottomSheetBody(powerup) {
     let obj = { style: null, variant: "text-md/medium", children: null };
     obj[0] = tmp.description;
     obj[2] = powerup.description;
-    const items = [callback(Text /* Text */.Text, obj), ];
+    const items = [callback(Text.Text, obj), ];
     let tmp5Result = null != powerup.deactivationCooldownPeriodDays;
     if (tmp5Result) {
       tmp5Result = powerup.deactivationCooldownPeriodDays > 0;
@@ -283,12 +283,12 @@ export default function GuildPowerupsBottomSheet(arg0) {
   let guildId;
   let powerup;
   ({ guildId, powerup } = arg0);
-  let obj = ModalType /* ModalType */;
-  const logPowerupModalOpened = obj.useLogPowerupModalOpened(guildId, powerup, ModalType /* ModalType */.ModalType.DETAIL);
+  let obj = ModalType;
+  const logPowerupModalOpened = obj.useLogPowerupModalOpened(guildId, powerup, ModalType.ModalType.DETAIL);
   obj = { startExpanded: true, children: null };
   obj = { style: callback3().container, children: null };
   const items = [callback(GuildPowerupsBottomSheetHeader, { guildId, powerup }), callback(GuildPowerupsBottomSheetBody, { guildId, powerup }), callback(GuildPowerupsBottomSheetFooter, { guildId, powerup })];
   obj[1] = items;
   obj[1] = callback2(View, obj);
-  return callback(Background /* Background */.BottomSheet, obj);
+  return callback(Background.BottomSheet, obj);
 };

@@ -4,8 +4,8 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["9ptHSs"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["9ptHSs"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: require("explicitContentFromProto").GifAutoPlay.useSetting,
@@ -13,8 +13,8 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["9ptHSs"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["9ptHSs"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: require("explicitContentFromProto").GifAutoPlay.useSetting,

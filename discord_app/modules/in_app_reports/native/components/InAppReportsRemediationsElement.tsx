@@ -16,9 +16,9 @@ const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/
 export default function RemediationsElement(children) {
   let obj = { style: createCacheKey().container, children: null };
   obj = { title: null, hasIcons: true, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["k+QA9N"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["k+QA9N"]);
   obj[2] = children.children;
-  obj[1] = jsx(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { title: null, hasIcons: true, children: null });
+  obj[1] = jsx(TableRowGroupTitle.TableRowGroup, { title: null, hasIcons: true, children: null });
   return <View title={null} hasIcons>{null}</View>;
 };

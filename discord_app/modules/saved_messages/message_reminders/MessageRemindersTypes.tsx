@@ -8,8 +8,8 @@ const items = [
       return t().add(30, "minutes").toDate();
     },
     getLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["OV8l/H"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["OV8l/H"]);
     }
   },
   {
@@ -18,8 +18,8 @@ const items = [
       return t().add(1, "hour").toDate();
     },
     getLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["zf0R+0"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["zf0R+0"]);
     }
   },
   {
@@ -28,8 +28,8 @@ const items = [
       return t().add(4, "hour").toDate();
     },
     getLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["5gztZN"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["5gztZN"]);
     }
   },
   {
@@ -47,11 +47,11 @@ const items = [
     },
     getLabel() {
       if (obj.hour() >= 9) {
-        const intl2 = getSystemLocale /* getSystemLocale */.intl;
-        let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["7MKr2P"]);
+        const intl2 = getSystemLocale.intl;
+        let stringResult = intl2.string(getSystemLocale.t["7MKr2P"]);
       } else {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.FnFI3m);
+        const intl = getSystemLocale.intl;
+        stringResult = intl.string(getSystemLocale.t.FnFI3m);
       }
       return stringResult;
     }
@@ -77,8 +77,8 @@ const items = [
       return t().day(num3).startOf("day").add(9, "hours").toDate();
     },
     getLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["q+Ls05"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["q+Ls05"]);
     }
   }
 ];

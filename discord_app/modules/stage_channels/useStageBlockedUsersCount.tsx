@@ -31,14 +31,14 @@ export const useStageIgnoredUsersCount = function useStageIgnoredUsersCount(id1)
   }, items1);
 };
 export const getStageBlockedUsersCount = function getStageBlockedUsersCount(id) {
-  let num = store.getParticipantCount(id, sortKey /* sortKey */.StageChannelParticipantNamedIndex.BLOCKED);
+  let num = store.getParticipantCount(id, sortKey.StageChannelParticipantNamedIndex.BLOCKED);
   if (num == null) {
     num = 0;
   }
   return num;
 };
 export const getStageIgnoredUsersCount = function getStageIgnoredUsersCount(id) {
-  let num = store.getParticipantCount(id, sortKey /* sortKey */.StageChannelParticipantNamedIndex.IGNORED);
+  let num = store.getParticipantCount(id, sortKey.StageChannelParticipantNamedIndex.IGNORED);
   if (num == null) {
     num = 0;
   }

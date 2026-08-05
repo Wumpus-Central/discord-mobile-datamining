@@ -99,32 +99,32 @@ export const acceptMessageRequest = function acceptMessageRequest(arg0) {
   return applyArgumentsResult;
 };
 export const clearMessageRequestState = function clearMessageRequestState(id) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   let obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: null, rejectWithError: null };
-  obj = { consent_status: MessageRequestConsentStatusTypes /* MessageRequestConsentStatusTypes */.MessageRequestConsentStatusTypes.UNSPECIFIED };
+  obj = { consent_status: MessageRequestConsentStatusTypes.MessageRequestConsentStatusTypes.UNSPECIFIED };
   obj[1] = obj;
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.put(obj);
 };
 export const markAsMessageRequest = function markAsMessageRequest(id) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   let obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: null, rejectWithError: null };
-  obj = { consent_status: MessageRequestConsentStatusTypes /* MessageRequestConsentStatusTypes */.MessageRequestConsentStatusTypes.PENDING };
+  obj = { consent_status: MessageRequestConsentStatusTypes.MessageRequestConsentStatusTypes.PENDING };
   obj[1] = obj;
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.put(obj);
 };
 export const rejectMessageRequest = function rejectMessageRequest(closure_0) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   const obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(closure_0), rejectWithError: null };
-  obj[1] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[1] = sendRequest.rejectWithMigratedError();
   return HTTP.del(obj);
 };
 export const rejectMessageRequestBatch = function rejectMessageRequestBatch(closure_0) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: Endpoints.CHANNEL_RECIPIENT_REJECT_BATCH(), body: obj, rejectWithError: null };
   obj = { channel_ids: closure_0 };
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.put(obj);
 };
 export const fetchUserCountryCode = function fetchUserCountryCode() {

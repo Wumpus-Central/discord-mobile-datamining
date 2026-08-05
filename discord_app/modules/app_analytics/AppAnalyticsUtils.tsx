@@ -338,17 +338,17 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
         obj3[5] = channel.isSpoilerChannel();
         obj3[6] = updateUserGuildSettingsInternal.resolveUnreadSetting(channel);
         const unreadSetting = updateUserGuildSettingsInternal.resolveUnreadSetting(channel);
-        obj3[7] = Presets /* Presets */.presetFromSettings(unreadSetting, updateUserGuildSettingsInternal.resolvedMessageNotifications(channel));
+        obj3[7] = Presets.presetFromSettings(unreadSetting, updateUserGuildSettingsInternal.resolvedMessageNotifications(channel));
         obj3[8] = channel.guild_id;
         ({ guildUnread: obj6[9], guildMentionCount: obj6[10] } = snapshot);
         obj3[11] = updateUserGuildSettingsInternal.isMuted(channel.guild_id);
         obj3[12] = updateUserGuildSettingsInternal.resolveGuildUnreadSetting(guild);
-        const obj7 = Presets /* Presets */;
+        const obj7 = Presets;
         const guildUnreadSetting = updateUserGuildSettingsInternal.resolveGuildUnreadSetting(guild);
-        obj3[13] = Presets /* Presets */.presetFromSettings(guildUnreadSetting, updateUserGuildSettingsInternal.getMessageNotifications(channel.guild_id));
+        obj3[13] = Presets.presetFromSettings(guildUnreadSetting, updateUserGuildSettingsInternal.getMessageNotifications(channel.guild_id));
         ({ parent_id: obj6[14], parentChannelThreadType: obj6[15] } = channel);
-        const obj8 = Presets /* Presets */;
-        obj3[16] = hasPendingMemberAction /* hasPendingMemberAction */.hasPendingMemberAction(channel.guild_id, selectedChannelId);
+        const obj8 = Presets;
+        obj3[16] = hasPendingMemberAction.hasPendingMemberAction(channel.guild_id, selectedChannelId);
         obj3[17] = store3.can(constants3.SEND_MESSAGES, channel);
         return obj3;
       }

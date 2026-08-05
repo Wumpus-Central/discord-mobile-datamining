@@ -27,7 +27,7 @@ export const setActiveCommand = function setActiveCommand(command) {
   command = command.command;
   ({ channelId, section, location: _location, initialValues, triggerSection, queryLength, sectionName, query, searchResultsPosition, source, commandOrigin } = command);
   if (null != command) {
-    00038__(command.inputType !== ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder");
+    00038__(command.inputType !== ApplicationCommandSectionType.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder");
     const tmp3 = 00038__;
   }
   dispatcher.dispatch({ type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND", channelId, command, section, initialValues, location: _location, triggerSection, queryLength, sectionName, query, searchResultsPosition, source, commandOrigin });
@@ -69,7 +69,7 @@ export const updateChannelState = function updateChannelState(arg0) {
   dispatcher.dispatch({ type: "APPLICATION_COMMAND_UPDATE_CHANNEL_STATE", channelId, command, section, preferredCommandId, location: _location, changedOptionStates });
 };
 export const updateApplicationGuildCommandPermissions = function updateApplicationGuildCommandPermissions(arg0, arg1, arg2, permissions) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { body: obj, url: Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(arg0, arg1, arg2), rejectWithError: false };
   obj = { permissions };
   return HTTP.put(obj);
@@ -90,11 +90,11 @@ export const performAutocomplete = function performAutocomplete(c0, closure_2, a
     obj[4] = name;
     dispatcher.dispatch(obj);
     if (null == autocompleteChoices.getAutocompleteChoices(closure_2.channel.id, name, query)) {
-      const HTTP = sendRequest /* sendRequest */.HTTP;
+      const HTTP = sendRequest.HTTP;
       obj = { url: null, body: null, timeout: 3000, rejectWithError: true };
       obj[0] = Endpoints.INTERACTIONS;
       const obj1 = { type: null, application_id: null, guild_id: null, channel_id: null, session_id: null, data: null, nonce: null };
-      obj1[0] = PermissionOverwriteType /* PermissionOverwriteType */.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE;
+      obj1[0] = PermissionOverwriteType.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE;
       obj1[1] = c0.applicationId;
       const guild = closure_2.guild;
       let id;
@@ -141,7 +141,7 @@ export const updateRegistry = function updateRegistry(commands, applications, ch
 };
 export const setAppLauncherActiveCommand = function setAppLauncherActiveCommand(id, command) {
   if (null != command) {
-    00038__(command.inputType !== ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder");
+    00038__(command.inputType !== ApplicationCommandSectionType.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder");
     const tmp3 = 00038__;
   }
   let obj = dispatcher;

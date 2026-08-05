@@ -44,9 +44,9 @@ function CancelButton(arg0) {
     accessibilityLabel: null,
     labelVisible: false
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
-  return callback(Background /* Background */.HeaderBackButton, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
+  return callback(Background.HeaderBackButton, obj);
 }
 function ProductPurchaseGradientBackground(product) {
   product = product.product;
@@ -118,17 +118,17 @@ let closure_16 = createCacheKey.createStyles((arg0) => {
   obj[6] = { position: "absolute", backgroundColor: Themes.colors.BLACK, top: 0, bottom: 0, left: 0, right: 0 };
   obj[7] = { flexGrow: 1, flexDirection: "column", justifyContent: "center" };
   let num = 0;
-  if (arg0 === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION) {
+  if (arg0 === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
     num = 1;
   }
   const obj2 = { flexDirection: "row", justifyContent: "center", alignItems: "center", flex: num, marginTop: null, marginHorizontal: null };
   let str = 0;
-  if (arg0 === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION) {
+  if (arg0 === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION) {
     str = "20%";
   }
   obj2[4] = str;
   let PX_32;
-  if (arg0 === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE) {
+  if (arg0 === CollectiblesItemType.CollectiblesItemType.NAMEPLATE) {
     PX_32 = tmp(712).space.PX_32;
   }
   obj2[5] = PX_32;

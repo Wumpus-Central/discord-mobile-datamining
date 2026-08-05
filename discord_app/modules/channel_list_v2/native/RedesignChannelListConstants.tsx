@@ -40,16 +40,16 @@ export const CATEGORY_MARGIN_TOP = 12;
 export const CATEGORY_MARGIN_BOTTOM = 4;
 export const CATEGORY_VERTICAL_PADDING = 4;
 export const getScaledChannelSubtitleHeight = function getScaledChannelSubtitleHeight(fontScale) {
-  return map /* map */.scaleTextLineHeight(c2, fontScale);
+  return map.scaleTextLineHeight(c2, fontScale);
 };
 export const getScaledCategoryRowHeight = function getScaledCategoryRowHeight(fontScale) {
-  return map /* map */.scaleTextLineHeight(c5, fontScale) + 8 + 4;
+  return map.scaleTextLineHeight(c5, fontScale) + 8 + 4;
 };
 export const getScaledChannelRowHeight = function getScaledChannelRowHeight(arg0) {
   const sum = 8 + hairlineWidth;
-  return 2 * sum + map /* map */.scaleLineHeight(num, arg0);
+  return 2 * sum + map.scaleLineHeight(num, arg0);
 };
 export const getScaledSearchBarHeight = function getScaledSearchBarHeight(fontScale) {
-  return 24 + map /* map */.scaleTextLineHeight(c4, fontScale);
+  return 24 + map.scaleTextLineHeight(c4, fontScale);
 };
 export const VIEWABILITY_CONFIG = frozen;

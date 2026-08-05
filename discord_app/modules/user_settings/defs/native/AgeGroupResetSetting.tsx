@@ -8,32 +8,32 @@ import { SettingsAgeGroupResetAlert } from "../../age_group/native/SettingsAgeGr
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy["bD//cU"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.Gn0SAj);
   },
   onPress() {
-    useAlertStore /* useAlertStore */.openAlert(SettingsAgeGroupResetAlert /* SettingsAgeGroupResetAlert */.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(SettingsAgeGroupResetAlert /* SettingsAgeGroupResetAlert */.default, {}));
+    useAlertStore.openAlert(SettingsAgeGroupResetAlert.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(SettingsAgeGroupResetAlert.default, {}));
   },
   withArrow: true,
   usePredicate: require("useAgeVerificationRunner").useShowAssignedAgeGroupSettings
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy["bD//cU"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.Gn0SAj);
   },
   onPress() {
-    useAlertStore /* useAlertStore */.openAlert(SettingsAgeGroupResetAlert /* SettingsAgeGroupResetAlert */.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(SettingsAgeGroupResetAlert /* SettingsAgeGroupResetAlert */.default, {}));
+    useAlertStore.openAlert(SettingsAgeGroupResetAlert.SETTINGS_AGE_GROUP_RESET_ALERT_ID, jsx(SettingsAgeGroupResetAlert.default, {}));
   },
   withArrow: true,
   usePredicate: require("useAgeVerificationRunner").useShowAssignedAgeGroupSettings

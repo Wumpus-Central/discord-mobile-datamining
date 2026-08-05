@@ -20,7 +20,7 @@ export default function validateComponent(type, arg1, modal) {
     00038__(values.type === type.type, "component type matches state");
   }
   type = type.type;
-  if (PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.BUTTON === type) {
+  if (PermissionOverwriteType.ComponentType.BUTTON === type) {
     return null;
   } else {
     if (tmp4(1906).ComponentType.STRING_SELECT !== type) {

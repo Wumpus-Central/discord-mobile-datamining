@@ -13,17 +13,17 @@ const result = require("ME").fileFinishedImporting("modules/guild_role_subscript
 
 export default {
   title() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.aTFQKh);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.aTFQKh);
   },
   description() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.oTbFQg);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.oTbFQg);
   },
   canCreateGuild: false,
   useIsGuildSupported() {
     const items = [getHash, getUncachedChannelPermissions];
-    return initialize /* initialize */.useStateFromStores(items, () => (features) => {
+    return initialize.useStateFromStores(items, () => (features) => {
       features = features.features;
       let hasItem = features.has(constants.ROLE_SUBSCRIPTIONS_ENABLED);
       if (hasItem) {

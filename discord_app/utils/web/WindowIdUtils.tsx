@@ -6,7 +6,7 @@ export const getWindowId = function getWindowId(defaultView) {
   return defaultView.__DISCORD_WINDOW_ID;
 };
 export const setupWindowId = function setupWindowId(arg0) {
-  const uniqueIdResult = apply /* apply */.uniqueId("window-");
+  const uniqueIdResult = apply.uniqueId("window-");
   arg0.__DISCORD_WINDOW_ID = uniqueIdResult;
   return uniqueIdResult;
 };

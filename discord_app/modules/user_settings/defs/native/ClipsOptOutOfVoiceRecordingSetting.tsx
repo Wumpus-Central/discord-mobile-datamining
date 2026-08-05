@@ -77,12 +77,12 @@ function _updateClipsAllowVoiceRecording() {
 }
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.AGDDkH);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.AGDDkH);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["wW9/zQ"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["wW9/zQ"]);
   },
   parent: require("MobileSetting").MobileSetting.CLIPS,
   useValue: require("explicitContentFromProto").ClipsAllowVoiceRecording.useSetting,

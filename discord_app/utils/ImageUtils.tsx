@@ -378,7 +378,7 @@ export const makeCssUrlString = function makeCssUrlString(arg0) {
 };
 export { getPalette };
 export const getPaletteForAvatar = function getPaletteForAvatar(closure_0) {
-  return getSrcWithWidthAndHeight /* getSrcWithWidthAndHeight */.default.getPaletteForAvatarMobile(closure_0);
+  return getSrcWithWidthAndHeight.default.getPaletteForAvatarMobile(closure_0);
 };
 export const readFileAsBase64 = function readFileAsBase64(arg0) {
   let closure_0 = arg0;

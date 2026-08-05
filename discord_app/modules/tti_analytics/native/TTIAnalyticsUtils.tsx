@@ -24,30 +24,30 @@ const require = arg1;
 function getDeviceMetadata() {
   if (null == obj) {
     obj = { device_model: null, device_brand: null, device_product: null, device_manufacturer: null, smallest_screen_width_dp: null, device_performance_class: null, soc_name: null, ram_size: null, max_cpu_freq: null };
-    obj[0] = DCDDeviceManager /* DCDDeviceManager */.getDeviceModel();
-    const obj2 = DCDDeviceManager /* DCDDeviceManager */;
-    obj[1] = DCDDeviceManager /* DCDDeviceManager */.getDeviceBrand();
-    const obj3 = DCDDeviceManager /* DCDDeviceManager */;
-    obj[2] = DCDDeviceManager /* DCDDeviceManager */.getDeviceProduct();
-    const obj4 = DCDDeviceManager /* DCDDeviceManager */;
-    obj[3] = DCDDeviceManager /* DCDDeviceManager */.getDeviceManufacturer();
-    const obj5 = DCDDeviceManager /* DCDDeviceManager */;
-    obj[4] = DCDDeviceManager /* DCDDeviceManager */.getSmallestScreenWidthDp();
+    obj[0] = DCDDeviceManager.getDeviceModel();
+    const obj2 = DCDDeviceManager;
+    obj[1] = DCDDeviceManager.getDeviceBrand();
+    const obj3 = DCDDeviceManager;
+    obj[2] = DCDDeviceManager.getDeviceProduct();
+    const obj4 = DCDDeviceManager;
+    obj[3] = DCDDeviceManager.getDeviceManufacturer();
+    const obj5 = DCDDeviceManager;
+    obj[4] = DCDDeviceManager.getSmallestScreenWidthDp();
     obj[5] = getMediaPerformanceClass();
-    const obj6 = DCDDeviceManager /* DCDDeviceManager */;
-    obj[6] = DCDDeviceManager /* DCDDeviceManager */.getSocName();
-    const obj7 = DCDDeviceManager /* DCDDeviceManager */;
-    obj[7] = DCDDeviceManager /* DCDDeviceManager */.getRamSize();
-    const obj8 = DCDDeviceManager /* DCDDeviceManager */;
-    obj[8] = DCDDeviceManager /* DCDDeviceManager */.getMaxCpuFreq();
-    const obj9 = DCDDeviceManager /* DCDDeviceManager */;
+    const obj6 = DCDDeviceManager;
+    obj[6] = DCDDeviceManager.getSocName();
+    const obj7 = DCDDeviceManager;
+    obj[7] = DCDDeviceManager.getRamSize();
+    const obj8 = DCDDeviceManager;
+    obj[8] = DCDDeviceManager.getMaxCpuFreq();
+    const obj9 = DCDDeviceManager;
   }
   return obj;
 }
 function getRedesignScreenName() {
   let name;
   let params;
-  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   let currentRoute;
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -103,7 +103,7 @@ function getRedesignScreenName() {
     }
     tmpResult = tmp(4136);
   }
-  const obj = getRootNavigationRef /* getRootNavigationRef */;
+  const obj = getRootNavigationRef;
   tmp = require;
 }
 function sharedProperties(screen_name, has_cached_data) {
@@ -701,7 +701,7 @@ export const trackAppUIViewed = function trackAppUIViewed(ModalScreen, arg1, has
   if (hasCacheResult === undefined) {
     hasCacheResult = handleClearCaches.hasCache();
   }
-  const AppStartInfo = AppStartInfo /* AppStartInfo */.AppStartInfo;
+  const AppStartInfo = AppStartInfo.AppStartInfo;
   if (!AppStartInfo.getAppUIViewed()) {
     (function trackAppUIViewedAsync(ModalScreen, arg1, hasCacheResult) {
       const self = this;

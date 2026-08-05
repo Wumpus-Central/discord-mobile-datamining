@@ -6,13 +6,13 @@ const result = require("set").fileFinishedImporting("modules/quests/QuestHomeHer
 export const questHomeHeroFromServer = function questHomeHeroFromServer(c7) {
   const creative_content = c7.creative_content;
   let obj = { id: creative_content.id, labelTitle: creative_content.label_title, labelSubtitle: creative_content.label_subtitle, heroImage: null, heroVideo: null, sponsorImage: null, cta: null, questIds: null, questHomeEntrypoint: null, shelfImage: null, shelfVideo: null, startsAt: null, endsAt: null };
-  obj[3] = resolveAsset /* resolveAsset */.resolveAdCreativeCdnUrl(creative_content.hero_image);
-  const obj2 = resolveAsset /* resolveAsset */;
-  obj[4] = resolveAsset /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.hero_video);
-  const obj3 = resolveAsset /* resolveAsset */;
-  obj[5] = resolveAsset /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.sponsor_image);
-  const obj4 = resolveAsset /* resolveAsset */;
-  obj[6] = questHomeHeroCtaFromServer /* questHomeHeroCtaFromServer */.questHomeHeroCtaFromServer(creative_content.cta);
+  obj[3] = resolveAsset.resolveAdCreativeCdnUrl(creative_content.hero_image);
+  const obj2 = resolveAsset;
+  obj[4] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.hero_video);
+  const obj3 = resolveAsset;
+  obj[5] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.sponsor_image);
+  const obj4 = resolveAsset;
+  obj[6] = questHomeHeroCtaFromServer.questHomeHeroCtaFromServer(creative_content.cta);
   obj[7] = creative_content.quest_ids;
   let tmp3;
   if (null != creative_content.quest_home_entrypoint) {
@@ -27,10 +27,10 @@ export const questHomeHeroFromServer = function questHomeHeroFromServer(c7) {
     tmp3 = obj;
   }
   obj[8] = tmp3;
-  const obj5 = questHomeHeroCtaFromServer /* questHomeHeroCtaFromServer */;
-  obj[9] = resolveAsset /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.shelf_image);
-  const tmpResult1 = resolveAsset /* resolveAsset */;
-  obj[10] = resolveAsset /* resolveAsset */.resolveOptionalAdCreativeCdnUrl(creative_content.shelf_video);
+  const obj5 = questHomeHeroCtaFromServer;
+  obj[9] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.shelf_image);
+  const tmpResult1 = resolveAsset;
+  obj[10] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.shelf_video);
   ({ starts_at: obj[11], ends_at: obj[12] } = c7);
   return obj;
 };

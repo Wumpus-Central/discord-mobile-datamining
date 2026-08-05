@@ -10,8 +10,8 @@ BlockedDomainManager.prototype["_initialize"] = function _initialize() {
     const _window = window;
     const _HermesInternal = HermesInternal;
     const combined = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/bad-hash-delta";
-    const result = isBlockedDomain /* isBlockedDomain */.startFetchingBlockedDomains(combined);
-    const tmpResult = isBlockedDomain /* isBlockedDomain */;
+    const result = isBlockedDomain.startFetchingBlockedDomains(combined);
+    const tmpResult = isBlockedDomain;
   }
 };
 const blockedDomainManager = new BlockedDomainManager();

@@ -196,7 +196,7 @@ function _redeemGiftCode() {
 function openGiftCodeRedeemModal(code) {
   let obj = ModalActionCreators;
   obj = { code };
-  obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10330, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
+  obj.pushLazy(asyncRequireImpl(10330, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
 ({ Endpoints: c4, AnalyticEvents: c5 } = ME);
 let closure_6 = Object.freeze({});

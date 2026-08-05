@@ -190,6 +190,6 @@ export default function VibingWumpusModal() {
       return callback(closure_16, {});
     }
   };
-  return callback(NavigationStack /* NavigationStack */.Navigator, { screens: { VIBING_WUMPUS }, initialRouteName: "VIBING_WUMPUS" });
+  return callback(NavigationStack.Navigator, { screens: { VIBING_WUMPUS }, initialRouteName: "VIBING_WUMPUS" });
 };
 export { VibingWumpusScreen };

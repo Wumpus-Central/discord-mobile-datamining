@@ -26,7 +26,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
       referrer_id = relevantUserTrialOffer.referrer_id;
     }
     if (referrer_id === id) {
-      const obj3 = createReferralTrialEmbedRedeemable /* createReferralTrialEmbedRedeemable */;
+      const obj3 = createReferralTrialEmbedRedeemable;
       const referralTrialEmbedRedeemable = obj3.createReferralTrialEmbedRedeemable(message, theme, id, relevantUserTrialOffer);
       if (null == referralTrialEmbedRedeemable) {
         return null;
@@ -41,7 +41,7 @@ export const createReferralSystemMessage = function createReferralSystemMessage(
       }
       tmp8 = require;
     } else {
-      const obj6 = createReferralTrialEmbedRedesign /* createReferralTrialEmbedRedesign */;
+      const obj6 = createReferralTrialEmbedRedesign;
       const referralTrialEmbedRedesign = obj6.createReferralTrialEmbedRedesign(message, theme, id, relevantUserTrialOffer);
       if (null == referralTrialEmbedRedesign) {
         return null;

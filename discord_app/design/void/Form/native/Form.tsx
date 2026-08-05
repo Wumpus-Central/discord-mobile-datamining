@@ -28,7 +28,7 @@ const forwardRefResult = importAllResult.forwardRef((keyboardShouldPersistTaps, 
   }
   ({ contentContainerStyle, onScroll, scrollsToTop, onLayout } = keyboardShouldPersistTaps);
   const tmp = callback();
-  let redesign = importAllResult.useContext(context /* context */.RedesignCompatContext);
+  let redesign = importAllResult.useContext(context.RedesignCompatContext);
   let obj = { value: { isForm: true }, children: null };
   obj = { ref, onLayout, scrollsToTop, style: null, contentContainerStyle: null, contentInset: null, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: null, alwaysBounceVertical: null, onScroll: null, children: null };
   const items = [tmp.form, style, ];

@@ -35,7 +35,7 @@ export const updateRegistrationOptions = function updateRegistrationOptions(arg0
   });
 };
 export const resetRegistration = function resetRegistration() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     state.setState({ errors: {}, registrationOptions: {}, submitting: false });
   });
 };

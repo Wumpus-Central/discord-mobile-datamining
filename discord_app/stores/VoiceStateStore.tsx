@@ -351,8 +351,8 @@ prototype["getVoicePlatformForChannel"] = function getVoicePlatformForChannel(ch
   }
   if (id === closure_3) {
     if (channelId === tmp) {
-      isMetaQuest /* isMetaQuest */.isMetaQuest() ? VoicePlatforms.QUEST : VoicePlatforms.MOBILE;
-      const obj = isMetaQuest /* isMetaQuest */;
+      isMetaQuest.isMetaQuest() ? VoicePlatforms.QUEST : VoicePlatforms.MOBILE;
+      const obj = isMetaQuest;
     }
   }
   return table["" + id + ":" + channelId];

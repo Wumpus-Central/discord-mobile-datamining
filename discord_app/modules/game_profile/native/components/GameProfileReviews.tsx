@@ -229,7 +229,7 @@ export default function GameProfileReviews(arg0) {
   let trackAction;
   ({ game, trackAction } = arg0);
   const tmp = createCacheKey();
-  let obj = buildSteamStoreUrl /* buildSteamStoreUrl */;
+  let obj = buildSteamStoreUrl;
   let id;
   if (game != null) {
     id = game.id;

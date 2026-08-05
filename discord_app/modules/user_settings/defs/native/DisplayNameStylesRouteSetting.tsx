@@ -6,7 +6,7 @@ import { ApplyButton } from "../../../display_name_styles/native/DisplayNameStyl
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.ZPMAlX);
   },
   parent: null,
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DISPLAY_NAME_STYLES,
   getComponent() {
-    return ApplyButton /* ApplyButton */.default;
+    return ApplyButton.default;
   }
 };
 const route = createToggle.createRoute(obj);

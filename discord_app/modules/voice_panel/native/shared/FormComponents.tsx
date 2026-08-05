@@ -24,9 +24,9 @@ function VoiceBadges(arg0) {
     let tmp3Result = tmp3(5663);
     obj = { state: null, size: null, style: null };
     obj[0] = muteDeafenIconState;
-    obj[1] = Button /* Button */.IconSizes.SMALL;
+    obj[1] = Button.IconSizes.SMALL;
     obj[2] = tmp.icon;
-    obj[1] = callback(VideoDisabledSvgIcon /* VideoDisabledSvgIcon */.MuteDeafenIcon, obj);
+    obj[1] = callback(VideoDisabledSvgIcon.MuteDeafenIcon, obj);
     tmp6 = callback(tmp3Result, obj);
   }
   const items = [tmp6, ];
@@ -37,9 +37,9 @@ function VoiceBadges(arg0) {
     tmp3Result = tmp3(5663);
     const obj2 = { state: null, size: null, style: null };
     obj2[0] = videoIconState;
-    obj2[1] = Button /* Button */.IconSizes.SMALL;
+    obj2[1] = Button.IconSizes.SMALL;
     obj2[2] = tmp.icon;
-    obj1[1] = callback(VideoDisabledSvgIcon /* VideoDisabledSvgIcon */.VideoIcon, obj2);
+    obj1[1] = callback(VideoDisabledSvgIcon.VideoIcon, obj2);
     tmp10 = callback(tmp3Result, obj1);
   }
   items[1] = tmp10;
@@ -64,7 +64,7 @@ export const VoicePanelFormSection = function VoicePanelFormSection(style) {
   const tmp2 = createCacheKey();
   obj = {};
   const merged1 = Object.assign(merged);
-  obj[1] = callback(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[1] = callback(TableRowGroupTitle.TableRowGroup, obj);
   return callback(set, obj);
 };
 export const MemberRowItem = function MemberRowItem(user) {

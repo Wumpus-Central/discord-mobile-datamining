@@ -164,7 +164,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
   return false;
 };
 prototype["isFulfilled"] = function isFulfilled() {
-  return this.fulfillmentStatus === set /* set */.EntitlementTenantFulfillmentStatus.FULFILLED;
+  return this.fulfillmentStatus === set.EntitlementTenantFulfillmentStatus.FULFILLED;
 };
 const result = require("createdAt").fileFinishedImporting("records/EntitlementRecord.tsx");
 

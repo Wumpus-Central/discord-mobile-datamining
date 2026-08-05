@@ -10,26 +10,26 @@ obj[2] = obj;
 obj = {
   scrollTo(arg0, arg1, arg2, arg3, arg4) {
     const items = [arg1, arg2, arg3, arg4];
-    renderElement /* renderElement */.dispatchCommand(arg0, "scrollTo", items);
+    renderElement.dispatchCommand(arg0, "scrollTo", items);
   },
   scrollToBottom(arg0, arg1) {
     const items = [arg1];
-    renderElement /* renderElement */.dispatchCommand(arg0, "scrollToBottom", items);
+    renderElement.dispatchCommand(arg0, "scrollToBottom", items);
   },
   scrollIntoView(arg0, arg1, arg2, arg3) {
     const items = [arg1, arg2, arg3];
-    renderElement /* renderElement */.dispatchCommand(arg0, "scrollIntoView", items);
+    renderElement.dispatchCommand(arg0, "scrollIntoView", items);
   },
   updateRows(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
     const items = [arg1, arg2, arg3, arg4, arg5, arg6, arg7];
-    renderElement /* renderElement */.dispatchCommand(arg0, "updateRows", items);
+    renderElement.dispatchCommand(arg0, "updateRows", items);
   },
   clearRows(arg0, arg1) {
     const items = [arg1];
-    renderElement /* renderElement */.dispatchCommand(arg0, "clearRows", items);
+    renderElement.dispatchCommand(arg0, "clearRows", items);
   },
   fadeIn(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "fadeIn", []);
+    renderElement.dispatchCommand(arg0, "fadeIn", []);
   }
 };
 const value = setRuntimeConfigProvider.get("DCDChat", () => obj);

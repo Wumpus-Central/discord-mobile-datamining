@@ -5,7 +5,7 @@ import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
 
 const require = arg1;
 function getPurchaseToken() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const value = Storage.get(purchase_token);
   if (null != value) {
     const _Date = Date;
@@ -13,10 +13,10 @@ function getPurchaseToken() {
       return value.purchaseToken;
     }
   }
-  const v4Result = v1 /* v1 */.v4();
+  const v4Result = v1.v4();
   const Storage2 = tmp(595).Storage;
   const tmp3 = purchase_token;
-  const tmpResult = v1 /* v1 */;
+  const tmpResult = v1;
   const result = Storage2.set(tmp3, { purchaseToken: v4Result, expires: Date.now() + closure_4 });
   return v4Result;
 }

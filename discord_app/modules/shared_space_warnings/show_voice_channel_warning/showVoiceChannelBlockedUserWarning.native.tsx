@@ -13,7 +13,7 @@ const result = require("GdmWarningMedium").fileFinishedImporting("modules/shared
 
 export const showVoiceChannelBlockedUserWarning = function showVoiceChannelBlockedUserWarning(channelId, id) {
   state = state.getState();
-  if (state === keys /* keys */.AppStates.ACTIVE) {
+  if (state === keys.AppStates.ACTIVE) {
     callback2();
     let obj = ACTION_SHEET_HEIGHT_HALF;
     obj = { channelId: null, blockedUserId: null, impressionName: null, impressionProperties: null };

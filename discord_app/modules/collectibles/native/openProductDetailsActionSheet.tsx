@@ -17,7 +17,7 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
     initialVariantIndex = 0;
   }
   ({ analyticsLocations, shopAnalyticsContext } = arg0);
-  let obj = getProductOrbPrice /* getProductOrbPrice */;
+  let obj = getProductOrbPrice;
   const isVariantProduct = obj.getIsVariantProduct(product);
   let num = 0;
   if (isVariantProduct) {
@@ -31,9 +31,9 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   } else {
     skuId = product.skuId;
   }
-  openCollectiblesShop /* openCollectiblesShop */.productDetailsOpened(skuId);
+  openCollectiblesShop.productDetailsOpened(skuId);
   const tmp2 = dependencyMap;
-  const tmpResult = openCollectiblesShop /* openCollectiblesShop */;
+  const tmpResult = openCollectiblesShop;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(9353, tmp2.paths), c3, obj, stack);
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9353, tmp2.paths), c3, obj, stack);
 };

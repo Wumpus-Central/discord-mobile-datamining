@@ -25,5 +25,5 @@ export default function RecommendationAppRow(onPress) {
   let obj = getAvatarURL;
   obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
   const iconSource = obj.getApplicationIconSource(obj);
-  return jsx(AppRowLabel /* AppRowLabel */.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });
+  return jsx(AppRowLabel.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });
 };

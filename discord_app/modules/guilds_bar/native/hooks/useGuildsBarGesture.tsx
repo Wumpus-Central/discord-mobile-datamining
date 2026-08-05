@@ -65,26 +65,26 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
         name = guild.name;
       }
       if (name == null) {
-        const intl11 = getSystemLocale /* getSystemLocale */.intl;
-        name = intl11.string(getSystemLocale /* getSystemLocale */.t.fKYRlM);
+        const intl11 = getSystemLocale.intl;
+        name = intl11.string(getSystemLocale.t.fKYRlM);
       }
       let tmp39 = name;
     } else if (tmp38.FOLDER === type4) {
       let name4 = node.name;
       if (name4 == null) {
-        const intl10 = getSystemLocale /* getSystemLocale */.intl;
-        name4 = intl10.string(getSystemLocale /* getSystemLocale */.t.ebAnWE);
+        const intl10 = getSystemLocale.intl;
+        name4 = intl10.string(getSystemLocale.t.ebAnWE);
       }
       tmp39 = name4;
     }
     if (null != tmp39) {
-      const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-      const intl12 = getSystemLocale /* getSystemLocale */.intl;
+      const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
+      const intl12 = getSystemLocale.intl;
       let obj = { itemName: null };
       obj[0] = tmp39;
-      AccessibilityAnnouncer.announce(intl12.formatToPlainString(getSystemLocale /* getSystemLocale */.t["vHD/Je"], obj));
+      AccessibilityAnnouncer.announce(intl12.formatToPlainString(getSystemLocale.t["vHD/Je"], obj));
     }
-    lib(HapticFeedbackTypes /* HapticFeedbackTypes */.HapticFeedbackTypes.DRAG_AND_DROP_START);
+    lib(HapticFeedbackTypes.HapticFeedbackTypes.DRAG_AND_DROP_START);
     lib.flush();
   } else if ("drag-move" === type) {
     type = undefined;
@@ -119,7 +119,7 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
     }
     if (tmp7 !== tmp8Result) {
       let fKYRlM = dependencyMap;
-      lib(HapticFeedbackTypes /* HapticFeedbackTypes */.HapticFeedbackTypes.DRAG_AND_DROP_MOVE);
+      lib(HapticFeedbackTypes.HapticFeedbackTypes.DRAG_AND_DROP_MOVE);
       ({ dragNode, overNode, overState: overState2 } = type);
       if ("convert-before" !== overState2) {
         if ("convert-after" !== overState2) {
@@ -212,7 +212,7 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
       }
       overNode = { itemName: null };
       overNode[0] = tmp33;
-      intl7.formatToPlainString(getSystemLocale /* getSystemLocale */.t.qiQ0QI, overNode);
+      intl7.formatToPlainString(getSystemLocale.t.qiQ0QI, overNode);
     } else {
       const overState = type.overState;
       let startsWithResult = null != overState;
@@ -226,12 +226,12 @@ function triggerHapticsAndAnnouncementsIfNecessary(type) {
     }
     tmp8Result = tmp8(type.dragNode, type.overNode, type.overState);
   } else if ("drag-drop" === type) {
-    lib(HapticFeedbackTypes /* HapticFeedbackTypes */.HapticFeedbackTypes.DRAG_AND_DROP_END);
+    lib(HapticFeedbackTypes.HapticFeedbackTypes.DRAG_AND_DROP_END);
     lib.flush();
     lib2.flush();
-    const AccessibilityAnnouncer2 = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl13 = getSystemLocale /* getSystemLocale */.intl;
-    AccessibilityAnnouncer2.announce(intl13.string(getSystemLocale /* getSystemLocale */.t.lMkmz7));
+    const AccessibilityAnnouncer2 = AccessibilityAnnouncer.AccessibilityAnnouncer;
+    const intl13 = getSystemLocale.intl;
+    AccessibilityAnnouncer2.announce(intl13.string(getSystemLocale.t.lMkmz7));
   }
   let tmp57;
   if ("drag-drop" !== type.type) {
@@ -277,7 +277,7 @@ function getItemAndNodeFromTouchEvent(arg0, arg1, current) {
         GUILDS = store2.getFastListGuildFolders()[item.section - tmp8.GUILDS];
         if (null != GUILDS) {
           const type = item.type;
-          if (renderDefaultEmpty /* renderDefaultEmpty */.FastListItemTypes.SECTION !== type) {
+          if (renderDefaultEmpty.FastListItemTypes.SECTION !== type) {
             if (tmp10(7818).FastListItemTypes.ITEM === type) {
               if (GUILDS.type !== GuildsNodeType.ROOT) {
                 let tmp13 = GUILDS;
@@ -310,7 +310,7 @@ obj[1] = module_4146.makeMutable([]);
 obj[2] = require("module_4294967295");
 let closure_16 = require("debounce")(require("HapticFeedbackTypes").triggerHapticFeedback, 16);
 let closure_17 = require("debounce")((intl) => {
-  const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
 }, 500);
 let closure_18 = apply.throttle((data) => {

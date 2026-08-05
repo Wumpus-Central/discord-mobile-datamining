@@ -12,31 +12,31 @@ import { useParentalControlledExplicitContentSettings } from "../../../parent_to
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.MNKzyg);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.MNKzyg);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   useValue: function useDataToCustomizeDiscordSettingValue() {
     const items = [hasConsented];
-    return initialize /* initialize */.useStateFromStores(items, () => hasConsented.hasConsented(constants.PERSONALIZATION));
+    return initialize.useStateFromStores(items, () => hasConsented.hasConsented(constants.PERSONALIZATION));
   },
   onValueChange: function handlePersonalizationChange(arg0) {
     if (arg0) {
       let items = [Consents.PERSONALIZATION];
-      const obj3 = handleRequestSuccess /* handleRequestSuccess */;
-      handleRequestSuccess /* handleRequestSuccess */.setConsents(items, []).catch((message) => callback(14006).showDataPrivacyRateLimitAlert(message.message));
-      const setConsentsResult = handleRequestSuccess /* handleRequestSuccess */.setConsents(items, []);
+      const obj3 = handleRequestSuccess;
+      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14006).showDataPrivacyRateLimitAlert(message.message));
+      const setConsentsResult = handleRequestSuccess.setConsents(items, []);
     } else {
       let obj = set;
       obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null };
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["9SNpzv"]);
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.gJvDDh);
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["9g5UGw"]);
-      const intl4 = getSystemLocale /* getSystemLocale */.intl;
-      obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t["+ZLPw9"]);
+      const intl = getSystemLocale.intl;
+      obj[0] = intl.string(getSystemLocale.t["9SNpzv"]);
+      const intl2 = getSystemLocale.intl;
+      obj[1] = intl2.string(getSystemLocale.t.gJvDDh);
+      const intl3 = getSystemLocale.intl;
+      obj[2] = intl3.string(getSystemLocale.t["9g5UGw"]);
+      const intl4 = getSystemLocale.intl;
+      obj[3] = intl4.string(getSystemLocale.t["+ZLPw9"]);
       obj[4] = componentDidMount.Colors.RED;
       obj[5] = function onConfirm() {
         const items = [constants.PERSONALIZATION];
@@ -46,7 +46,7 @@ createToggle = {
     }
   },
   useIsDisabled() {
-    return useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    return useParentalControlledExplicitContentSettings.useIsParentallyControlled();
   }
 };
 createToggle = createToggle.createToggle(createToggle);

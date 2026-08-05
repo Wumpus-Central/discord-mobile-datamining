@@ -6,5 +6,5 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/people
 export default function openClearAllIncomingRequestsConfirmationModal(incomingPendingRequestCount) {
   let obj = ModalActionCreators;
   obj = { incomingPendingRequestCount };
-  obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(9168, dependencyMap.paths), obj);
+  obj.pushLazy(asyncRequireImpl(9168, dependencyMap.paths), obj);
 };

@@ -18,7 +18,7 @@ export default function VoicePanelAccessibilityView(pointerEvents) {
   let accessibilityViewIsModal = pointerEvents.accessibilityViewIsModal;
   ({ nativeID, onAccessibilityEscape } = pointerEvents);
   const merged = Object.assign(pointerEvents, Object.create(null));
-  let obj = context /* context */;
+  let obj = context;
   obj = { style: pointerEvents.style, pointerEvents: str, nativeID, accessibilityViewIsModal: null, onAccessibilityEscape: null };
   if (accessibilityViewIsModal) {
     accessibilityViewIsModal = obj.usePIPState().mode !== VoicePanelPIPModes.IN_APP;

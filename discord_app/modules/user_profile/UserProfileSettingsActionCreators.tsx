@@ -296,7 +296,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       }
     }
     if ("primaryGuildId" in merged) {
-      guildId = guildHasTag /* guildHasTag */.getUserPrimaryGuild(currentUser.primaryGuild).guildId;
+      guildId = guildHasTag.getUserPrimaryGuild(currentUser.primaryGuild).guildId;
       if (guildId == null) {
         guildId = null;
       }
@@ -305,7 +305,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       } else {
         obj.pendingPrimaryGuildId = merged.primaryGuildId;
       }
-      const obj2 = guildHasTag /* guildHasTag */;
+      const obj2 = guildHasTag;
     }
     if ("legacyUsernameDisabled" in merged) {
       obj.pendingLegacyUsernameDisabled = merged.legacyUsernameDisabled;

@@ -25,7 +25,7 @@ prototype["handleSearchStart"] = function handleSearchStart() {
 prototype["handleSearchFailure"] = function handleSearchFailure(arg0) {
   this.isFetching = false;
   this.isInitialFetchComplete = true;
-  const aPIError = new V6OrEarlierAPIError /* V6OrEarlierAPIError */.APIError(arg0);
+  const aPIError = new V6OrEarlierAPIError.APIError(arg0);
   this.error = aPIError;
 };
 prototype["handleSearchSuccess"] = function handleSearchSuccess(arg0) {

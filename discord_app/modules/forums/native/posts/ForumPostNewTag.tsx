@@ -13,5 +13,5 @@ const result = require("createCacheKey").fileFinishedImporting("modules/forums/n
 
 export default function ForumPostNewTag(containerStyle) {
   containerStyle = [containerStyle.containerStyle, createCacheKey().container];
-  return jsx(Button /* Button */.NewTag, { containerStyle, variant: "text-xs/bold", color: "badge-text-brand" });
+  return jsx(Button.NewTag, { containerStyle, variant: "text-xs/bold", color: "badge-text-brand" });
 };

@@ -21,5 +21,5 @@ export default function FormHeader(children) {
   const items = [createCacheKey().fieldHeader, merged.style];
   obj.style = items;
   obj.children = children.children;
-  return jsx(Button /* Button */.LegacyText, {});
+  return jsx(Button.LegacyText, {});
 };

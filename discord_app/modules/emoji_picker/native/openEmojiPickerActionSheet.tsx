@@ -9,7 +9,7 @@ let result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/
 
 export const EMOJI_PICKER_ACTION_SHEET_KEY = "EmojiPickerActionSheet";
 export const openEmojiPickerActionSheet = function openEmojiPickerActionSheet(arg0, stack) {
-  const result = toggleGuildExpandedState /* toggleGuildExpandedState */.initiateEmojiInteraction(EmojiInteractionPoint.EmojiPickerActionSheetOpened);
-  const obj = toggleGuildExpandedState /* toggleGuildExpandedState */;
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(8561, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
+  const result = toggleGuildExpandedState.initiateEmojiInteraction(EmojiInteractionPoint.EmojiPickerActionSheetOpened);
+  const obj = toggleGuildExpandedState;
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(8561, dependencyMap.paths), EmojiPickerActionSheet, arg0, stack);
 };

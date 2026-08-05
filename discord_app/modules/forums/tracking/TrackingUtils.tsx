@@ -82,7 +82,7 @@ export const getForumChannelSessionId = function getForumChannelSessionId(arg0) 
   return getForumChannelSessionId.getForumChannelSessionId(arg0);
 };
 export const convertSortOrderToReadableString = function convertSortOrderToReadableString(sortOrder) {
-  if (set /* set */.ThreadSortOrder.CREATION_DATE === sortOrder) {
+  if (set.ThreadSortOrder.CREATION_DATE === sortOrder) {
     return constants.CREATION_DATE;
   } else if (tmp(1381).ThreadSortOrder.LATEST_ACTIVITY === sortOrder) {
     return constants.LATEST_ACTIVITY;

@@ -46,5 +46,5 @@ const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/na
 
 export default forwardRefResult;
 export const useAppLauncherFlashListProps = function useAppLauncherFlashListProps(arg0) {
-  return importAllResult.useContext(context /* context */.ControlsGestureScrollLock)(arg0);
+  return importAllResult.useContext(context.ControlsGestureScrollLock)(arg0);
 };

@@ -12,7 +12,7 @@ import { dispatcher } from "../Dispatcher.tsx";
 
 const require = arg1;
 function makeTwitchRequest(arg0, query) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   let obj = { url: "https://api.twitch.tv/helix" + arg0, query, headers: null, rejectWithError: false };
   obj = { "Client-ID": "33kozedd0zs6fbauka98psnc7zwom2s", Authorization: "Bearer " + arg2 };
   obj[2] = obj;

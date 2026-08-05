@@ -22,10 +22,10 @@ export default function PostCallDisconnectNudge(arg0) {
   let onHide;
   ({ markAsDismissed, onHide } = arg0);
   const obj = { title: null, body: null, actionLocation: null, surface: null, markAsDismissed: null, onHide: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.pJbYq1);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.vegtFT);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.pJbYq1);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.vegtFT);
   obj[2] = constants.CALL_DISCONNECT;
   obj[3] = constants2.CALL_DISCONNECT_BOTTOM_SHEET;
   obj[4] = markAsDismissed;

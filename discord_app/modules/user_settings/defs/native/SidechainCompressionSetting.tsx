@@ -9,8 +9,8 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["/jwMtn"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/jwMtn"]);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   usePredicate() {
@@ -18,14 +18,14 @@ createToggle = {
   },
   useValue: function useSidechainCompressionSettingValue() {
     const items = [_detectH265HardwareDecode];
-    return initialize /* initialize */.useStateFromStores(items, () => sidechainCompression.getSidechainCompression());
+    return initialize.useStateFromStores(items, () => sidechainCompression.getSidechainCompression());
   },
   onValueChange(arg0) {
     return trackDeviceChanged.setSidechainCompression(arg0);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.zlA23F);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.zlA23F);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

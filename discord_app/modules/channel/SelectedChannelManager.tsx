@@ -29,8 +29,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   const channelId = store.getChannelId(closure_9);
   const voiceChannelId = store.getVoiceChannelId();
   if (guild.id === channelId) {
-    transitionToGuild /* transitionToGuild */.transitionToGuild(guild.id);
-    const obj = transitionToGuild /* transitionToGuild */;
+    transitionToGuild.transitionToGuild(guild.id);
+    const obj = transitionToGuild;
   }
   let tmp6 = guild.id === voiceChannelId;
   if (tmp6) {
@@ -50,8 +50,8 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const originChannelId = channel.originChannelId;
     const channelId = store.getChannelId(closure_10);
     if (tmp) {
-      transitionTo /* transitionTo */.transitionTo(closure_8.CHANNEL(closure_9, channel.id));
-      const obj = transitionTo /* transitionTo */;
+      transitionTo.transitionTo(closure_8.CHANNEL(closure_9, channel.id));
+      const obj = transitionTo;
     }
     const obj3 = store;
     tmp = null == guildId.getGuildId() && null != originChannelId && originChannelId === channelId;

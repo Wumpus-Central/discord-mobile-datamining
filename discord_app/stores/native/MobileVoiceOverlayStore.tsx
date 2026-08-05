@@ -22,10 +22,10 @@ prototype["initialize"] = function initialize(enabled) {
   }
 };
 prototype["getEnabled"] = function getEnabled() {
-  let isAndroidResult = set /* set */.isAndroid();
+  let isAndroidResult = set.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = !isMetaQuest /* isMetaQuest */.isMetaQuest();
-    const tmpResult = isMetaQuest /* isMetaQuest */;
+    isAndroidResult = !isMetaQuest.isMetaQuest();
+    const tmpResult = isMetaQuest;
   }
   if (isAndroidResult) {
     isAndroidResult = c4;
@@ -46,10 +46,10 @@ const result = require("set").fileFinishedImporting("stores/native/MobileVoiceOv
 
 export default mobileVoiceOverlayStore;
 export const isMobileOverlaySupported = function isMobileOverlaySupported() {
-  let isAndroidResult = set /* set */.isAndroid();
+  let isAndroidResult = set.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = !isMetaQuest /* isMetaQuest */.isMetaQuest();
-    const tmpResult = isMetaQuest /* isMetaQuest */;
+    isAndroidResult = !isMetaQuest.isMetaQuest();
+    const tmpResult = isMetaQuest;
   }
   return isAndroidResult;
 };

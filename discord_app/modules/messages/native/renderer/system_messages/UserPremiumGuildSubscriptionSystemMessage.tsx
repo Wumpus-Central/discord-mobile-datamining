@@ -8,7 +8,7 @@ const result = require("formatUsernameOnClick").fileFinishedImporting("modules/m
 export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const tmp3 = getNumSubscriptionsPurchasedFromSystemMessage(message);
-  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+  let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const tmp6 = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   if (tmp3 > 1) {

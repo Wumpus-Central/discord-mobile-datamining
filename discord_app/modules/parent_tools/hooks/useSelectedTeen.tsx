@@ -21,5 +21,5 @@ export const useSelectedTeen = function useSelectedTeen() {
 };
 export const useSelectedTeenId = function useSelectedTeenId() {
   const items = [freshTeenActivityWithMap];
-  return defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
+  return defaultAreStatesEqual.useStateFromStores(items, () => selectedTeenId.getSelectedTeenId());
 };

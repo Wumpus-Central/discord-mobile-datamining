@@ -10,7 +10,7 @@ export const useThemeAndReducedMotionAwareAssetUrl = function useThemeAndReduced
   const tmp2 = useTheme();
   const tmp3 = require;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (null == asset) {
     return null;
   } else {

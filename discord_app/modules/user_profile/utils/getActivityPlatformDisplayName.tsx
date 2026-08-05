@@ -7,15 +7,15 @@ const result = require("isOnMetaHorizon").fileFinishedImporting("modules/user_pr
 export default function getActivityPlatformDisplayName(type) {
   type = type.type;
   if (PlatformTypes.XBOX === type) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.Nfvo72);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.Nfvo72);
   } else if (tmp.PLAYSTATION === type) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.fFl4jo);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.fFl4jo);
   } else if (tmp.META_QUEST_OR_HORIZON === type) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const string = intl.string;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (tmp5) {
       let stringResult = string(t.BrHQaq);
     } else {

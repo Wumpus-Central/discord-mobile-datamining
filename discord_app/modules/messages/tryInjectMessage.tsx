@@ -23,14 +23,14 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
     obj[4] = constants.EPHEMERAL;
     obj[5] = constants2.SENT;
     const tmp19 = createMessage(obj);
-    const messageRecord = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(tmp19);
+    const messageRecord = createMinimalMessageRecord.createMessageRecord(tmp19);
     ({ applicationId: tmp21.applicationId, timestamp: tmp21.timestamp } = id);
     let tmp4 = messageRecord;
-    const obj9 = createMinimalMessageRecord /* createMinimalMessageRecord */;
+    const obj9 = createMinimalMessageRecord;
   } else {
     tmp4 = null;
     if (null != id.applicationId) {
-      let obj1 = hasFlag /* hasFlag */;
+      let obj1 = hasFlag;
       tmp4 = null;
       if (obj1.hasFlag(id.flags, constants.SENT_BY_SOCIAL_LAYER_INTEGRATION)) {
         tmp4 = null;

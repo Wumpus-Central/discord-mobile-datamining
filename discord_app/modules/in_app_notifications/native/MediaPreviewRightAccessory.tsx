@@ -31,19 +31,19 @@ let metroImportAll;
 const require = arg1;
 function VideoBadge() {
   const tmp = createCacheKey();
-  obj = { style: tmp.badge, children: callback(PlayIcon /* PlayIcon */.PlayIcon, obj) };
+  obj = { style: tmp.badge, children: callback(PlayIcon.PlayIcon, obj) };
   obj = { style: tmp.icon, size: "custom", color: "white" };
   return callback(View, obj);
 }
 function CountBadge(children) {
-  return callback(View, { style: callback3().badge, children: callback(Text /* Text */.Text, { variant: "text-xs/semibold", color: "text-default", children: children.total }) });
+  return callback(View, { style: callback3().badge, children: callback(Text.Text, { variant: "text-xs/semibold", color: "text-default", children: children.total }) });
 }
 function ObscuredMediaOverlay(isSpoiler) {
   let children;
   let isObscured;
   ({ isObscured, children } = isSpoiler);
   const tmp = createCacheKey();
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.SPOILER_HIDDEN_BACKGROUND);
   if (!isObscured) {
     if (!isSpoiler.isSpoiler) {
@@ -97,15 +97,15 @@ function SinglePreviewableMedia(arg0) {
   let width;
   ({ previewableMedia, size, message } = arg0);
   const tmp = createCacheKey();
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   ({ type, media, icon } = previewableMedia);
-  let obj1 = redactionSettingToRenderedString /* redactionSettingToRenderedString */;
+  let obj1 = redactionSettingToRenderedString;
   const shouldAgeVerifyForExplicitMedia = obj1.useShouldAgeVerifyForExplicitMedia();
-  let obj2 = useEnabledHarmTypesBitmaskForChannelAndAuthorId /* useEnabledHarmTypesBitmaskForChannelAndAuthorId */;
+  let obj2 = useEnabledHarmTypesBitmaskForChannelAndAuthorId;
   const enabledHarmTypesBitmaskForMessage = obj2.useEnabledHarmTypesBitmaskForMessage(message);
-  if (VoiceMessageIcon /* VoiceMessageIcon */.PreviewableMediaTypes.VOICE_MESSAGE === type) {
+  if (VoiceMessageIcon.PreviewableMediaTypes.VOICE_MESSAGE === type) {
     obj = { style: null, children: null };
     obj = { width: null, height: null };
     obj[0] = size;
@@ -382,7 +382,7 @@ export const MediaPreviewRightAccessory = function MediaPreviewRightAccessory(ar
   let accessoryExitProgressSV;
   let message;
   ({ message, accessoryExitProgressSV } = arg0);
-  let obj = VoiceMessageIcon /* VoiceMessageIcon */;
+  let obj = VoiceMessageIcon;
   const previewableMedia = obj.usePreviewableMedia(message);
   if (0 === previewableMedia.length) {
     return null;

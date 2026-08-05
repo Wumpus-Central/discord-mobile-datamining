@@ -39,7 +39,7 @@ export const canSeeExperimentEmbeds = function canSeeExperimentEmbeds() {
 };
 export const useCanSeeExperimentEmbeds = function useCanSeeExperimentEmbeds() {
   const items = [mergeGuildAvatar];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     const items = [stateFromStores2];
     const first = stateFromStoresObject1(items, 1)[0];
     const currentUser = first.getCurrentUser();

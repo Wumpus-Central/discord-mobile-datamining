@@ -13,7 +13,7 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
   if (paymentGateway != null) {
     paymentGateway = paymentGateway.paymentGateway;
   }
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [getUserAgnosticState];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ noCache: store.get("shop_disable_cache"), includeUnpublished: store.get("shop_include_unpublished") }));
   ({ noCache, includeUnpublished } = stateFromStoresObject);
@@ -32,5 +32,5 @@ export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
   if (paymentGateway != null) {
     noOp = paymentGateway.noOp;
   }
-  return useMaybeFetchCollectiblesCategoriesShared /* useMaybeFetchCollectiblesCategoriesShared */.useMaybeFetchCollectiblesCategoriesShared(obj, noOp, arg1);
+  return useMaybeFetchCollectiblesCategoriesShared.useMaybeFetchCollectiblesCategoriesShared(obj, noOp, arg1);
 };

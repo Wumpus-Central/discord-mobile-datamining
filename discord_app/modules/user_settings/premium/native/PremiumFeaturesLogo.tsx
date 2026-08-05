@@ -20,7 +20,7 @@ export default function PremiumFeaturesLogo(premiumType) {
   }
   const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, resizeMode: "contain", source: null };
   const tmpResult = tmp(5236);
-  obj[1] = getPremiumPlanItem /* getPremiumPlanItem */.getPremiumTypeDisplayName(premiumType);
+  obj[1] = getPremiumPlanItem.getPremiumTypeDisplayName(premiumType);
   obj[3] = premiumType.style;
   obj[5] = tmp3;
   return <tmpResult accessible accessibilityLabel={null} accessibilityRole="header" style={null} resizeMode="contain" source={null} />;

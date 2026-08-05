@@ -12,7 +12,7 @@ export const showInvite = function showInvite(code, username, arg2) {
     obj = {};
   }
   ({ deeplinkAttemptId, location: _location } = obj);
-  getDisplayedInviteCode /* getDisplayedInviteCode */;
+  getDisplayedInviteCode;
   obj = { type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId };
   dispatcher.dispatch(obj);
   const obj2 = dispatcher;

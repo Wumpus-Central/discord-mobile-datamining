@@ -8,21 +8,21 @@ import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.RAQUSN);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.RAQUSN);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.wbYDfT);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.wbYDfT);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
-    return !useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useDefaultGuildsRestricted();
+    return !useParentalControlledExplicitContentSettings.useDefaultGuildsRestricted();
   },
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const ParentalControlledDefaultGuildsRestrictedV2 = result /* result */.ParentalControlledDefaultGuildsRestrictedV2;
+      const ParentalControlledDefaultGuildsRestrictedV2 = result.ParentalControlledDefaultGuildsRestrictedV2;
       const result = ParentalControlledDefaultGuildsRestrictedV2.updateControlledSetting(selectedTeenId, !arg0);
     }
   },

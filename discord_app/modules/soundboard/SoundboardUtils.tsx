@@ -93,7 +93,7 @@ function canUseSoundboardSound(closure_0, closure_1, channel) {
   return result;
 }
 function canMakeSound(channel) {
-  let obj = getMuteStates /* getMuteStates */;
+  let obj = getMuteStates;
   obj = { channel };
   const muteStates = obj.getMuteStates(obj);
   const mute = muteStates.mute;
@@ -227,7 +227,7 @@ function _maybePlayCustomJoinSound() {
 let result = require("createChannelRecord").fileFinishedImporting("modules/soundboard/SoundboardUtils.tsx");
 
 export const getAmplitudinalSoundboardVolume = function getAmplitudinalSoundboardVolume() {
-  const SoundboardSettings = explicitContentFromProto /* explicitContentFromProto */.SoundboardSettings;
+  const SoundboardSettings = explicitContentFromProto.SoundboardSettings;
   const setting = SoundboardSettings.getSetting();
   let num;
   if (setting != null) {
@@ -242,10 +242,10 @@ export { hasPermissionToPlaySound };
 export { canUseSoundboardSound };
 export { canMakeSound };
 export const playSound = function playSound(soundId, channelId) {
-  let obj = _fetchDefaultSoundsFromApi2 /* _fetchDefaultSoundsFromApi2 */;
-  obj.playSoundLocally(channelId, soundId, SoundButtonOverlay /* SoundButtonOverlay */.LocalSoundTrigger.SOUNDBOARD);
-  const result = VoiceChannelEffectSentLocation /* VoiceChannelEffectSentLocation */.sendVoiceChannelSoundboardEffect(channelId, soundId, false, arg2, arg3);
-  const obj2 = VoiceChannelEffectSentLocation /* VoiceChannelEffectSentLocation */;
+  let obj = _fetchDefaultSoundsFromApi2;
+  obj.playSoundLocally(channelId, soundId, SoundButtonOverlay.LocalSoundTrigger.SOUNDBOARD);
+  const result = VoiceChannelEffectSentLocation.sendVoiceChannelSoundboardEffect(channelId, soundId, false, arg2, arg3);
+  const obj2 = VoiceChannelEffectSentLocation;
   obj = { type: "SOUNDBOARD_TRACK_USAGE", soundId: soundId.soundId };
   dispatcher.dispatch(obj);
 };
@@ -277,7 +277,7 @@ export const useSoundBoardDismissContentTypes = function useSoundBoardDismissCon
     flag = false;
   }
   const items = [mergeGuildAvatar];
-  const stateFromStores = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = defaultAreStatesEqual.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [];
   if (!flag) {
     let guilds = handleConnectionClosedOrResumed.settings.guilds;

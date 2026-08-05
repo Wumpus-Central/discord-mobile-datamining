@@ -107,37 +107,37 @@ export default function TwoFASetupSuccess() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.flex };
   const items = [callback2(closure_6, obj), , , , , , , ];
-  obj = { source: registerAsset /* registerAsset */, style: tmp.image };
+  obj = { source: registerAsset, style: tmp.image };
   items[1] = callback2(closure_7, obj);
   const obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t.Awk3Gw);
-  items[2] = callback2(Text /* Text */.Text, obj1);
+  let intl = getSystemLocale.intl;
+  obj1[3] = intl.string(getSystemLocale.t.Awk3Gw);
+  items[2] = callback2(Text.Text, obj1);
   const obj2 = { style: tmp.successBody, children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["0d1bXM"]);
-  items[3] = callback2(Button /* Button */.LegacyText, obj2);
+  const intl2 = getSystemLocale.intl;
+  obj2[1] = intl2.string(getSystemLocale.t["0d1bXM"]);
+  items[3] = callback2(Button.LegacyText, obj2);
   items[4] = callback2(closure_6, { style: tmp.divider });
   const obj4 = { style: tmp.ctaDescription, children: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.okgGTu);
-  items[5] = callback2(Button /* Button */.LegacyText, obj4);
+  const intl3 = getSystemLocale.intl;
+  obj4[1] = intl3.string(getSystemLocale.t.okgGTu);
+  items[5] = callback2(Button.LegacyText, obj4);
   const obj5 = { style: tmp.buttonWrapper, children: null };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  const intl4 = getSystemLocale.intl;
   const string = intl4.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (tmp3) {
     let stringResult = string(t.wePEBF);
   } else {
     stringResult = string(t.NIFmCJ);
   }
-  const items1 = [callback2(Button /* Button */.Button, { text: stringResult, onPress: callback, disabled: tmp3, loading: tmp3, grow: true }), ];
+  const items1 = [callback2(Button.Button, { text: stringResult, onPress: callback, disabled: tmp3, loading: tmp3, grow: true }), ];
   let tmp7Result = "" !== tmp5;
   if (tmp7Result) {
     const obj6 = { style: null, children: null };
     obj6[0] = tmp.errorText;
     obj6[1] = tmp5;
-    tmp7Result = tmp7(Button /* Button */.LegacyText, obj6);
+    tmp7Result = tmp7(Button.LegacyText, obj6);
   }
   const obj7 = { children: null };
   items1[1] = tmp7Result;
@@ -146,5 +146,5 @@ export default function TwoFASetupSuccess() {
   items[7] = callback2(closure_6, { style: tmp.flex });
   obj[1] = items;
   obj7[0] = closure_9(closure_6, obj);
-  return callback2(TwoFAModalSetupSections /* TwoFAModalSetupSections */.TwoFASetupModalScreen, obj7);
+  return callback2(TwoFAModalSetupSections.TwoFASetupModalScreen, obj7);
 };

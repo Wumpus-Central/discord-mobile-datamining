@@ -13,9 +13,9 @@ function CloseButton() {
   obj[1] = function onPress() {
     return callback(table[5]).hideModal();
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
-  return jsx(HeaderActionButton /* HeaderActionButton */.HeaderActionButton, { source: null, onPress: null, accessibilityLabel: null });
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
+  return jsx(HeaderActionButton.HeaderActionButton, { source: null, onPress: null, accessibilityLabel: null });
 }
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkModal.tsx");
 

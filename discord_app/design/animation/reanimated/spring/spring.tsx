@@ -8,7 +8,7 @@ function withSpring(value, SUBTLE_SPRING, fn, fn2) {
   if (fn === undefined) {
     str = "respect-motion-settings";
   }
-  const accessibilityPreferencesSharedValue = mutable /* mutable */.accessibilityPreferencesSharedValue;
+  const accessibilityPreferencesSharedValue = mutable.accessibilityPreferencesSharedValue;
   if ("animate-always" === str) {
     let tmp7 = SUBTLE_SPRING;
     if (tmp4) {

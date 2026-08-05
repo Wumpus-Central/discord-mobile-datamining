@@ -9,11 +9,11 @@ let c4;
 let c5;
 const require = arg1;
 function showRequestFailedAlert(arg0) {
-  const aPIError = new V6OrEarlierAPIError /* V6OrEarlierAPIError */.APIError(arg0);
+  const aPIError = new V6OrEarlierAPIError.APIError(arg0);
   let anyErrorMessage = aPIError.getAnyErrorMessage();
   const obj = { title: null, body: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["328j/I"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["328j/I"]);
   if (null == anyErrorMessage) {
     const intl2 = tmp(1236).intl;
     anyErrorMessage = intl2.string(tmp(1236).t.fEptJP);

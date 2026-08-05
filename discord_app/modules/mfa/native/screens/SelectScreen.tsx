@@ -17,11 +17,11 @@ const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((arg0) => {
   const obj = { container: { marginLeft: 16, marginRight: 16 }, selectContainer: null };
-  const NAV_BAR_HEIGHT = NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT;
+  const NAV_BAR_HEIGHT = NAV_BAR_HEIGHT.NAV_BAR_HEIGHT;
   if (arg0) {
     let diff = NAV_BAR_HEIGHT;
   } else {
-    diff = NAV_BAR_HEIGHT - NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.STATUS_BAR_HEIGHT;
+    diff = NAV_BAR_HEIGHT - NAV_BAR_HEIGHT.STATUS_BAR_HEIGHT;
   }
   obj[1] = { marginTop: diff, marginLeft: 16, marginRight: 16, display: "flex", alignItems: "center" };
   return obj;

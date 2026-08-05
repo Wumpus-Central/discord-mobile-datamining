@@ -42,7 +42,7 @@ function computeRolesForGuild(guildId) {
           let tmp15 = nextResult;
           let tmp16 = require;
           let tmp17 = dependencyMap;
-          let obj2 = isSubscriptionRole /* isSubscriptionRole */;
+          let obj2 = isSubscriptionRole;
           if (obj2.isSubscriptionRole(nextResult)) {
             let tmp18 = nextResult;
             let addResult = set.add(tmp15.id);

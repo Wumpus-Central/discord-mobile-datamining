@@ -84,7 +84,7 @@ function PriceText(fractionalPremiumInfo) {
   const tmp4 = usePremiumPlanPrice(premiumItem.basePlanId);
   let obj = getPremiumPlanItem;
   const intervalStringAsNoun = obj.getIntervalStringAsNoun(premiumItem.interval);
-  let obj1 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+  let obj1 = formatSingleCurrencyPrice;
   let priceString;
   if (tmp4 != null) {
     priceString = tmp4.priceString;
@@ -234,10 +234,10 @@ function PriceText(fractionalPremiumInfo) {
   if (priceString3 == null) {
     priceString3 = closure_11;
   }
-  const items = [callback2(Text /* Text */.Text, { variant: "text-md/bold", color: "text-overlay-light", children: priceString3 }), ];
+  const items = [callback2(Text.Text, { variant: "text-md/bold", color: "text-overlay-light", children: priceString3 }), ];
   const obj9 = { variant: "text-md/normal", color: "text-overlay-light", children: null };
   obj9[2] = " / " + intervalStringAsNoun;
-  items[1] = callback2(Text /* Text */.Text, obj9);
+  items[1] = callback2(Text.Text, obj9);
   obj8[2] = items;
   tmp11Result = closure_19(View, obj8);
 }

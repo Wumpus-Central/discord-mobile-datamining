@@ -68,10 +68,10 @@ export default function AccountSwitcherListItem(arg0) {
   ({ sortHandlers, trailing } = arg0);
   ({ delayLongPress, leading } = arg0);
   const tmp = callback2();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [initialize];
   const stateFromStores = obj.useStateFromStores(items, () => obj.hidePersonalInformation);
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items1 = [mergeGuildAvatar];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let id;

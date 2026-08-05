@@ -11,7 +11,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/na
 export default function ActivitiesBanner(context) {
   let tmp4;
   let tmp5;
-  let obj = useActivityApplications /* useActivityApplications */;
+  let obj = useActivityApplications;
   obj = { guildId: context.context.channel.guild_id, fetchesShelf: false };
   [tmp4, tmp5] = callback(obj.useActivityApplications(obj), 2);
   let tmp6Result = null;

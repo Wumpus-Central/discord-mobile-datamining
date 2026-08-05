@@ -28,7 +28,7 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
   if (null == guild.guild) {
     return false;
   } else {
-    const features = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */.fromInviteGuild(guild.guild).features;
+    const features = fromGuildPropertiesWithAdditionalFields.fromInviteGuild(guild.guild).features;
     if (features.has(GuildFeatures.HUB)) {
       return false;
     } else {
@@ -46,6 +46,6 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
       }
       return !isGuildVoiceOrThreadResult;
     }
-    const obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
+    const obj = fromGuildPropertiesWithAdditionalFields;
   }
 };

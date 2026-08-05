@@ -20,14 +20,14 @@ function ConnectionIcon(arg0) {
   let theme;
   ({ platform, theme } = arg0);
   const tmp = createCacheKey();
-  let obj = isThemeLight /* isThemeLight */;
+  let obj = isThemeLight;
   const isThemeDarkResult = obj.isThemeDark(theme);
   const tmp2 = require;
   const icon = platform.icon;
   obj = { style: tmp.iconContainer, children: null };
-  const source = getAvatarURL /* getAvatarURL */.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
+  const source = getAvatarURL.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
   obj = { size: null, source: null, disableColor: true, style: null };
-  const obj2 = getAvatarURL /* getAvatarURL */;
+  const obj2 = getAvatarURL;
   obj[0] = tmp2(4697).IconSizes.CUSTOM;
   obj[1] = source;
   obj[3] = tmp.connectionIcon;
@@ -41,7 +41,7 @@ function ApplicationIcon(application) {
   if (null != application) {
     obj = { game: null, size: null };
     obj[0] = application;
-    obj[1] = GameIcon /* GameIcon */.GameIconSizes.NORMAL;
+    obj[1] = GameIcon.GameIconSizes.NORMAL;
     tmpResult = tmp(GameIcon, obj);
     const tmp6 = GameIcon;
   }

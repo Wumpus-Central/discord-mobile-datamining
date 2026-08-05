@@ -14,7 +14,7 @@ let result = require("apply").fileFinishedImporting("design/tokens/native/useTok
 export const useToken = function useToken(BACKGROUND_BASE_LOW, theme) {
   let obj = require;
   let result = dependencyMap;
-  const themeContext = ManaContext /* ManaContext */.useThemeContext();
+  const themeContext = ManaContext.useThemeContext();
   let tmp3 = null;
   if (theme == null) {
     theme = themeContext.theme;

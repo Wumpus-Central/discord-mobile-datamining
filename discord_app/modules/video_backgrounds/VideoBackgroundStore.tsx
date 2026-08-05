@@ -22,7 +22,7 @@ function handleSyncedStoresUpdate() {
     if (voiceAndVideo != null) {
       prop = voiceAndVideo.videoBackgroundFilterDesktop;
     }
-    const videoBackgroundOptionFromProto = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+    const videoBackgroundOptionFromProto = isAnimatedBackgroundOption.getVideoBackgroundOptionFromProto(prop, currentUser.id);
     let isVideoEnabledResult = null != obj.getVoiceChannelId();
     if (isVideoEnabledResult) {
       isVideoEnabledResult = _detectH265HardwareDecode.isVideoEnabled();
@@ -31,7 +31,7 @@ function handleSyncedStoresUpdate() {
       isVideoEnabledResult = null != videoBackgroundOptionFromProto;
     }
     flag2 = isVideoEnabledResult;
-    const obj2 = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */;
+    const obj2 = isAnimatedBackgroundOption;
   }
   if (flag2) {
     c8 = true;
@@ -115,8 +115,8 @@ const videoBackgroundStore = new VideoBackgroundStore(require("dispatcher"), {
         if (voiceAndVideo != null) {
           prop = voiceAndVideo.videoBackgroundFilterDesktop;
         }
-        backgroundOption = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */.getVideoBackgroundOptionFromProto(prop, currentUser.id);
-        const obj = isAnimatedBackgroundOption /* isAnimatedBackgroundOption */;
+        backgroundOption = isAnimatedBackgroundOption.getVideoBackgroundOptionFromProto(prop, currentUser.id);
+        const obj = isAnimatedBackgroundOption;
       }
       let isVideoEnabledResult = null != store.getVoiceChannelId();
       if (isVideoEnabledResult) {
@@ -133,11 +133,11 @@ const videoBackgroundStore = new VideoBackgroundStore(require("dispatcher"), {
   },
   MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function handleApplyMediaFilterSettings(settings) {
     settings = settings.settings;
-    if (BaseConnectionEvent /* BaseConnectionEvent */.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in settings) {
+    if (BaseConnectionEvent.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in settings) {
       let c6 = true;
       let c10 = false;
     }
-    if (BaseConnectionEvent /* BaseConnectionEvent */.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW in settings) {
+    if (BaseConnectionEvent.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW in settings) {
       let c11 = false;
     }
   },

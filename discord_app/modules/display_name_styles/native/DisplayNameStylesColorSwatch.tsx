@@ -16,7 +16,7 @@ const result = require("createCacheKey").fileFinishedImporting("modules/display_
 export default function DisplayNameStylesColorSwatch(colors) {
   colors = colors.colors;
   const tmp = callback();
-  if (colors.effectId === DisplayNameEffect /* DisplayNameEffect */.DisplayNameEffect.GUMMY) {
+  if (colors.effectId === DisplayNameEffect.DisplayNameEffect.GUMMY) {
     if (colors.length > 0) {
       let obj = { style: null, children: null };
       const items = [, ];

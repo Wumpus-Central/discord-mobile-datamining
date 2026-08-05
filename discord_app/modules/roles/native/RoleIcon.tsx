@@ -28,7 +28,7 @@ export default function RoleIcon(arg0) {
       const items = [obj, { fontFamily: "System", fontSize: size, marginBottom: -2 }];
       obj[1] = items;
       obj[2] = unicodeEmoji.surrogates;
-      tmp = jsx(Button /* Button */.LegacyText, { adjustsFontSizeToFit: true, style: null, children: null });
+      tmp = jsx(Button.LegacyText, { adjustsFontSizeToFit: true, style: null, children: null });
     }
   }
   return tmp;

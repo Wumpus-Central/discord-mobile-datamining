@@ -39,20 +39,20 @@ function AppRowLabel(renderedName) {
     obj = { style: null, variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
     obj[0] = tmp.appRowLabelWithPromotedTextContainer;
     obj[4] = renderedName;
-    const items = [callback2(Text /* Text */.Text, obj), ];
+    const items = [callback2(Text.Text, obj), ];
     const obj1 = { style: null, children: null };
     obj1[0] = tmp.promotedLabel;
     const obj2 = { variant: "text-xxs/semibold", color: "text-muted", children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj2[2] = intl.string(getSystemLocale /* getSystemLocale */.t["/eVltv"]);
-    obj1[1] = callback2(Text /* Text */.Text, obj2);
+    const intl = getSystemLocale.intl;
+    obj2[2] = intl.string(getSystemLocale.t["/eVltv"]);
+    obj1[1] = callback2(Text.Text, obj2);
     items[1] = callback2(closure_6, obj1);
     obj[1] = items;
     let tmp5 = callback3(closure_6, obj);
   } else {
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
     obj[3] = renderedName;
-    tmp5 = callback2(Text /* Text */.Text, obj);
+    tmp5 = callback2(Text.Text, obj);
   }
   return tmp5;
 }
@@ -138,7 +138,7 @@ function AppRow(isLastRow) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = handleApplicationSelected /* handleApplicationSelected */;
+  let obj = handleApplicationSelected;
   obj = { application: section.application, iconSource: obj.getAppLauncherIconSource(section.application), onPress: isLastRow.onPress, isFirstRow, isLastRow: flag };
   return callback2(BaseAppRow, obj);
 }
@@ -500,7 +500,7 @@ function RecommendationSectionHeader(arg0) {
     obj = { marginTop: 24 };
   }
   style[1] = obj;
-  return closure_19(Text /* Text */.Text, { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style, children });
+  return closure_19(Text.Text, { accessibilityRole: "header", variant: "heading-lg/bold", color: "mobile-text-heading-primary", style, children });
 }
 function getRecommendationItemsWithViewAll(arr) {
   const _require = arg1;

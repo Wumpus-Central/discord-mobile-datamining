@@ -334,7 +334,7 @@ prototype["isMobilePushEnabled"] = function isMobilePushEnabled(closure_2) {
 };
 prototype["isMuted"] = function isMuted(arg0) {
   if (dependencyMap[arg0] != null) {
-    const obj = reset /* reset */;
+    const obj = reset;
     return obj.computeIsMuted(tmp);
   } else {
     let guild = store2.getGuild(arg0);
@@ -348,7 +348,7 @@ prototype["isMuted"] = function isMuted(arg0) {
 };
 prototype["isTemporarilyMuted"] = function isTemporarilyMuted(arg0) {
   if (dependencyMap[arg0] != null) {
-    const obj = reset /* reset */;
+    const obj = reset;
     return obj.isTemporarilyMuted(tmp);
   } else {
     let guild = store2.getGuild(arg0);

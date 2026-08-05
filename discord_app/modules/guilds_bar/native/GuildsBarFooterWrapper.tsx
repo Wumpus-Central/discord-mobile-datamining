@@ -14,13 +14,13 @@ let closure_5 = createCacheKey.createStyles(obj);
 const result = require("createCacheKey").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
 
 export default function GuildsBarFooterWrapper(children) {
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp2 = callback();
-  const isHomeDrawerEnabled = context /* context */.useIsHomeDrawerEnabled();
+  const isHomeDrawerEnabled = context.useIsHomeDrawerEnabled();
   const style = [tmp2.footerWrapper, ];
   let tmp6 = null;
-  const obj2 = context /* context */;
+  const obj2 = context;
   const tmp4 = jsx;
   if (!isHomeDrawerEnabled) {
     obj = { width: null };

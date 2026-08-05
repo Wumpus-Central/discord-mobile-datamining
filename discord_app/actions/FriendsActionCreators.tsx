@@ -19,7 +19,7 @@ export default {
       tmp(1222).transitionTo(tmp3.FRIENDS);
       const tmpResult = tmp(1222);
     }
-    obj2 = transitionTo /* transitionTo */;
+    obj2 = transitionTo;
     tmp = require;
     const tmp5 = importDefault;
     obj = { type: "FRIENDS_SET_SECTION", section: PENDING };

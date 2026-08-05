@@ -168,7 +168,7 @@ let closure_19 = importAllResult.memo(function ActivityPanelHeaderContentInner(w
   ({ landscape, setMode } = wrapperOffset);
   let obj = { landscape, setMode, wrapperOffset: wrapperOffset.wrapperOffset, pipState: wrapperOffset.pipState };
   ({ gesture, headerWrapperStyles, headerStyles } = useBaseActivityPanelHeaderContent(obj));
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items = [participantFromServer];
   const stateFromStores = obj1.useStateFromStores(items, () => store.getSelfEmbeddedActivityForLocation(store.getConnectedActivityLocation()), []);
   let applicationId;

@@ -18,7 +18,7 @@ export default {
     if (arg4 === undefined) {
       APP = AppContext.APP;
     }
-    let obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
+    let obj = navigationToRootTabHelper;
     obj = { key: tmp, modal: getDeprecatedModalData(modal, {}, props, tmp) };
     const merged = Object.assign(arg3);
     obj.pushModal(obj);
@@ -59,22 +59,22 @@ export default {
     obj.dispatch(obj);
   },
   pop() {
-    navigationToRootTabHelper /* navigationToRootTabHelper */.popModal();
-    const obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
+    navigationToRootTabHelper.popModal();
+    const obj = navigationToRootTabHelper;
     dispatcher.dispatch({ type: "MODAL_POP" });
   },
   popWithKey(c3, onExited) {
-    let obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
+    let obj = navigationToRootTabHelper;
     obj.popModal(c3, onExited);
     obj = { type: "MODAL_POP", key: c3, onExited };
     dispatcher.dispatch(obj);
   },
   popAboveKey(voiceChannelKey) {
-    return navigationToRootTabHelper /* navigationToRootTabHelper */.popModalsAboveKey(voiceChannelKey);
+    return navigationToRootTabHelper.popModalsAboveKey(voiceChannelKey);
   },
   popAll() {
-    navigationToRootTabHelper /* navigationToRootTabHelper */.popAllModals();
-    const obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
+    navigationToRootTabHelper.popAllModals();
+    const obj = navigationToRootTabHelper;
     dispatcher.dispatch({ type: "MODAL_POP_ALL" });
     const obj2 = dispatcher;
     dispatcher.dispatch({ type: "EMAIL_VERIFICATION_MODAL_CLOSE" });

@@ -165,8 +165,8 @@ prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason
   ({ code, message } = reason);
   let obj = AlertActionCreators;
   obj = { title: null, body: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.hbiAO6, { code });
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.formatToPlainString(getSystemLocale.t.hbiAO6, { code });
   obj[1] = message;
   obj.show(obj);
 };
@@ -174,7 +174,7 @@ prototype["leaveFrame"] = function leaveFrame(applicationId) {
   const self = this;
   applicationId = applicationId.applicationId;
   this.releaseWebView();
-  let obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+  let obj = isDiscordFrontendDevelopment;
   if (obj.isNotNullish(applicationId)) {
     obj = { applicationId: null };
     obj[0] = applicationId;
@@ -190,7 +190,7 @@ prototype["clearFrameState"] = function clearFrameState(applicationId) {
 prototype["releaseWebView"] = function releaseWebView() {
   const releaseIframeIdResult = this.releaseIframeId();
   if (null != releaseIframeIdResult) {
-    const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+    const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
     const obj = { id: null };
     obj[0] = releaseIframeIdResult;
     ComponentDispatch.dispatch(ComponentActions.IFRAME_UNMOUNT, obj);
@@ -210,7 +210,7 @@ prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
   if (null != iframeId) {
     return iframeId;
   } else {
-    const v4Result = v1 /* v1 */.v4();
+    const v4Result = v1.v4();
     tmp.iframeId = v4Result;
     return v4Result;
   }

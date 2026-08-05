@@ -21,12 +21,12 @@ function FamilyCenterActivitySectionHeader(displayType) {
   displayType = displayType.displayType;
   const tmp = createCacheKey();
   let flag = useIsInAdultAgeGroup();
-  let obj = getEmptyActivityFormatter /* getEmptyActivityFormatter */;
+  let obj = getEmptyActivityFormatter;
   const activityTypeTextConfigs = obj.getActivityTypeTextConfigs();
   const value = activityTypeTextConfigs.get(displayType);
-  const actionsForDisplayType = useActionsForDisplayType /* useActionsForDisplayType */.useActionsForDisplayType(displayType);
-  const obj4 = useActionsForDisplayType /* useActionsForDisplayType */;
-  const formattedTotalForDisplayType = useActionsForDisplayType /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
+  const actionsForDisplayType = useActionsForDisplayType.useActionsForDisplayType(displayType);
+  const obj4 = useActionsForDisplayType;
+  const formattedTotalForDisplayType = useActionsForDisplayType.useFormattedTotalForDisplayType(displayType);
   if (displayType === constants.PURCHASES) {
     let length = formattedTotalForDisplayType;
     let sectionHeaderResult;

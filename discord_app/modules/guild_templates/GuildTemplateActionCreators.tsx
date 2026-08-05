@@ -254,9 +254,9 @@ export default {
     tmp = importDefault;
   },
   loadTemplatesForGuild(arg0) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     let obj = { url: closure_3.GUILD_TEMPLATES(arg0), oldFormErrors: true, rejectWithError: null };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest.rejectWithMigratedError();
     const value = HTTP.get(obj);
     return value.then((body) => {
       let obj = callback(table[1]);
@@ -266,11 +266,11 @@ export default {
     });
   },
   createGuildTemplate(arg0, name, description) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_3.GUILD_TEMPLATES(arg0), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { name, description };
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj3 = sendRequest /* sendRequest */;
+    obj[3] = sendRequest.rejectWithMigratedError();
+    const obj3 = sendRequest;
     return HTTP.post(obj).then((body) => {
       let obj = callback(table[1]);
       obj = { type: "GUILD_TEMPLATE_CREATE_SUCCESS", guildTemplate: body.body, code: body.body.code };

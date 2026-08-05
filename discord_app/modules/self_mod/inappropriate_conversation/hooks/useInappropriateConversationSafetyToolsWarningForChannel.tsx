@@ -5,11 +5,11 @@ import { useSafetyAlertsSettingOrDefault } from "useSafetyAlertsSettingOrDefault
 const result = require("useInappropriateConversationWarningsForChannel").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationSafetyToolsWarningForChannel.tsx");
 
 export const useInappropriateConversationSafetyToolsWarningForChannel = function useInappropriateConversationSafetyToolsWarningForChannel(channelId) {
-  const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment /* InappropriateConversationExperiment */.useIsEligibleForInappropriateConversationWarning({ location: "safety-tools-button" });
-  const obj = InappropriateConversationExperiment /* InappropriateConversationExperiment */;
-  const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault /* useSafetyAlertsSettingOrDefault */.useSafetyAlertsSettingOrDefault();
-  const obj2 = useSafetyAlertsSettingOrDefault /* useSafetyAlertsSettingOrDefault */;
-  const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel /* useInappropriateConversationWarningsForChannel */.useInappropriateConversationWarningsForChannel(channelId);
+  const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "safety-tools-button" });
+  const obj = InappropriateConversationExperiment;
+  const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault();
+  const obj2 = useSafetyAlertsSettingOrDefault;
+  const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId);
   if (isEligibleForInappropriateConversationWarning) {
     if (safetyAlertsSettingOrDefault) {
       const found = inappropriateConversationWarningsForChannel.filter((dismiss_timestamp) => null != dismiss_timestamp.dismiss_timestamp);

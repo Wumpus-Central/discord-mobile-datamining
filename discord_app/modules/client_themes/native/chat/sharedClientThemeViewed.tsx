@@ -4,7 +4,7 @@ import { trackImpression } from "../../../app_analytics/useTrackImpression.tsx";
 const result = require("set").fileFinishedImporting("modules/client_themes/native/chat/sharedClientThemeViewed.tsx");
 
 export const handleSharedClientThemeViewed = function handleSharedClientThemeViewed() {
-  let obj = trackImpression /* trackImpression */;
-  obj = { type: encodeProperties /* encodeProperties */.ImpressionTypes.VIEW, name: encodeProperties /* encodeProperties */.ImpressionNames.CUSTOM_THEME_SHARE, properties: {} };
+  let obj = trackImpression;
+  obj = { type: encodeProperties.ImpressionTypes.VIEW, name: encodeProperties.ImpressionNames.CUSTOM_THEME_SHARE, properties: {} };
   obj.trackImpression(obj);
 };

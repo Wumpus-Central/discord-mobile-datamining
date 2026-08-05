@@ -205,7 +205,7 @@ class RTCConnectionStore extends Store {
 const prototype = RTCConnectionStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(fetchFingerprint, set, getVoiceStatesForGuild);
-  const result = trackVideoToggle /* trackVideoToggle */.setVideoToggleAnalyticsParams(this.getRTCConnectionId, this.getMediaSessionId);
+  const result = trackVideoToggle.setVideoToggleAnalyticsParams(this.getRTCConnectionId, this.getMediaSessionId);
 };
 prototype["getRTCConnection"] = function getRTCConnection() {
   return closure_3;
@@ -428,16 +428,16 @@ const rTCConnectionStore = new RTCConnectionStore(require("dispatcher"), {
     if (state.state === constants.RTC_CONNECTED) {
       let c19 = true;
       if (null != closure_3) {
-        let closure_20 = sleep /* sleep */.now();
-        const obj = sleep /* sleep */;
+        let closure_20 = sleep.now();
+        const obj = sleep;
       }
     }
     return true;
   },
   RTC_CONNECTION_PING: function handleRtcConnectionPing() {
     if (null != closure_3) {
-      let closure_20 = sleep /* sleep */.now();
-      const obj = sleep /* sleep */;
+      let closure_20 = sleep.now();
+      const obj = sleep;
     }
     return true;
   },
@@ -626,8 +626,8 @@ const rTCConnectionStore = new RTCConnectionStore(require("dispatcher"), {
         flag = false;
       }
       if (flag) {
-        flag = useIsSpatialAudioAvailable /* useIsSpatialAudioAvailable */.isSpatialAudioAvailable("RTCConnectionStore");
-        const obj = useIsSpatialAudioAvailable /* useIsSpatialAudioAvailable */;
+        flag = useIsSpatialAudioAvailable.isSpatialAudioAvailable("RTCConnectionStore");
+        const obj = useIsSpatialAudioAvailable;
       }
       if (closure_3 != null) {
         const result = closure_3.setSpatialAudioEnabled(flag);
@@ -726,16 +726,16 @@ let obj = {
     if (state.state === constants.RTC_CONNECTED) {
       let c19 = true;
       if (null != closure_3) {
-        let closure_20 = sleep /* sleep */.now();
-        const obj = sleep /* sleep */;
+        let closure_20 = sleep.now();
+        const obj = sleep;
       }
     }
     return true;
   },
   RTC_CONNECTION_PING: function handleRtcConnectionPing() {
     if (null != closure_3) {
-      let closure_20 = sleep /* sleep */.now();
-      const obj = sleep /* sleep */;
+      let closure_20 = sleep.now();
+      const obj = sleep;
     }
     return true;
   },
@@ -924,8 +924,8 @@ let obj = {
         flag = false;
       }
       if (flag) {
-        flag = useIsSpatialAudioAvailable /* useIsSpatialAudioAvailable */.isSpatialAudioAvailable("RTCConnectionStore");
-        const obj = useIsSpatialAudioAvailable /* useIsSpatialAudioAvailable */;
+        flag = useIsSpatialAudioAvailable.isSpatialAudioAvailable("RTCConnectionStore");
+        const obj = useIsSpatialAudioAvailable;
       }
       if (closure_3 != null) {
         const result = closure_3.setSpatialAudioEnabled(flag);

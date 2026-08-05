@@ -27,7 +27,7 @@ let result = require("mergeGuildAvatar").fileFinishedImporting("modules/notifica
 
 export default function NotificationSettingsMockMessage(notificationSetting) {
   const tmp = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj1 = sharedValue(4124);
@@ -87,14 +87,14 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   const obj6 = { children: null };
   const obj7 = { source: null, size: null };
   obj7[0] = sharedValue(9751);
-  obj7[1] = Button /* Button */.AvatarSizes.LARGE_48;
-  obj6[0] = tmp12(Button /* Button */.Avatar, obj7);
+  obj7[1] = Button.AvatarSizes.LARGE_48;
+  obj6[0] = tmp12(Button.Avatar, obj7);
   const items4 = [tmp12(View, obj6), ];
   const obj8 = { style: tmp.cardMessage, children: null };
   const obj9 = { variant: "text-sm/semibold", children: null };
   const intl2 = tmp2(1236).intl;
-  obj9[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.qSq0tD);
-  const items5 = [tmp12(Text /* Text */.Text, obj9), tmp11];
+  obj9[1] = intl2.string(getSystemLocale.t.qSq0tD);
+  const items5 = [tmp12(Text.Text, obj9), tmp11];
   obj8[1] = items5;
   items4[1] = callback2(View, obj8);
   obj5[1] = items4;

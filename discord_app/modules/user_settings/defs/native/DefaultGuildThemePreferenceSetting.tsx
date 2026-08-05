@@ -8,13 +8,13 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Q7mm4g);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Q7mm4g);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: require("explicitContentFromProto").DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
-    const DefaultGuildThemePreference = explicitContentFromProto /* explicitContentFromProto */.DefaultGuildThemePreference;
+    const DefaultGuildThemePreference = explicitContentFromProto.DefaultGuildThemePreference;
     DefaultGuildThemePreference.updateSetting(Number(arg0));
   },
   useOptions: function useDefaultGuildThemePreferenceOptions() {
@@ -33,7 +33,7 @@ createToggle = {
     }, []);
   },
   usePredicate() {
-    return apexExperiment /* apexExperiment */.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
+    return apexExperiment.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
   }
 };
 createToggle = createToggle.createRadio(createToggle);

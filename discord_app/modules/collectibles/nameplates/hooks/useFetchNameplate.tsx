@@ -5,7 +5,7 @@ import { getNameplateData } from "../utils.tsx";
 const result = require("getNameplateData").fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
 
 export const useFetchNameplate = function useFetchNameplate(skuId) {
-  let obj = useFetchCollectiblesProduct /* useFetchCollectiblesProduct */;
+  let obj = useFetchCollectiblesProduct;
   const fetchCollectiblesProduct = obj.useFetchCollectiblesProduct(skuId);
   const product = fetchCollectiblesProduct.product;
   let type;
@@ -16,11 +16,11 @@ export const useFetchNameplate = function useFetchNameplate(skuId) {
     }
   }
   let first1;
-  if (type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE) {
+  if (type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE) {
     first1 = product.items[0];
   }
   obj = { nameplateProduct: product, nameplateRecord: first1, nameplateData: null, isFetching: null };
-  obj[2] = getNameplateData /* getNameplateData */.getNameplateData(first1);
+  obj[2] = getNameplateData.getNameplateData(first1);
   obj[3] = fetchCollectiblesProduct.isFetching;
   return obj;
 };

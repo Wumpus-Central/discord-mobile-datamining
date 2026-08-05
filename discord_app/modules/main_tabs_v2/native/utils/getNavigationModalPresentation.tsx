@@ -42,7 +42,7 @@ export default function getNavigationModalPresentation() {
   obj = { presentation, orientation: null };
   let tmp4;
   if (lockOrientation) {
-    const orientationLock = handleOrientationChange /* handleOrientationChange */.getOrientationLock();
+    const orientationLock = handleOrientationChange.getOrientationLock();
     let str2 = "landscape";
     let str4 = "landscape";
     if ("LANDSCAPE" !== orientationLock) {
@@ -55,7 +55,7 @@ export default function getNavigationModalPresentation() {
       str4 = str2;
     }
     tmp4 = str4;
-    const obj2 = handleOrientationChange /* handleOrientationChange */;
+    const obj2 = handleOrientationChange;
   }
   obj[1] = tmp4;
   return obj;

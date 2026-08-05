@@ -16,7 +16,7 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
   ({ message, theme } = message);
   channel = channel.getChannel(message.getChannelId());
   id = id.getId();
-  let obj = createPremiumGroupInviteEmbed /* createPremiumGroupInviteEmbed */;
+  let obj = createPremiumGroupInviteEmbed;
   const premiumGroupInviteEmbed = obj.createPremiumGroupInviteEmbed(message, theme, id, channel);
   if (null == premiumGroupInviteEmbed) {
     return null;

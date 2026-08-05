@@ -235,7 +235,7 @@ obj = {
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    let obj = snapVolumeToDefault /* snapVolumeToDefault */;
+    let obj = snapVolumeToDefault;
     const snapVolumeToDefaultResult = obj.snapVolumeToDefault(USER, DEFAULT);
     obj = { type: "AUDIO_SET_LOCAL_VOLUME", context: DEFAULT, userId, volume: snapVolumeToDefaultResult };
     dispatcher.dispatch(obj);
@@ -757,7 +757,7 @@ obj = {
     })();
   },
   setVideoEnabled(enabled) {
-    let obj = _getFilterBlob /* _getFilterBlob */;
+    let obj = _getFilterBlob;
     const result = obj.applyInitialVideoBackgroundOption();
     obj = { type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled };
     dispatcher.dispatch(obj);
@@ -768,7 +768,7 @@ obj = {
       qualityOptions = qualityOptions.qualityOptions;
     }
     if (null != qualityOptions) {
-      let obj = isPremiumResolution /* isPremiumResolution */;
+      let obj = isPremiumResolution;
       const preset = qualityOptions.qualityOptions.preset;
       const resolution = qualityOptions.qualityOptions.resolution;
       const frameRate = qualityOptions.qualityOptions.frameRate;

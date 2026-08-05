@@ -27,7 +27,7 @@ prototype["open"] = function open(arg0, arg1) {
   });
 };
 prototype["openSyncUnsafe"] = function openSyncUnsafe(database, invalidateDisabledHandles) {
-  const KV_RAW = set /* set */.KV_RAW;
+  const KV_RAW = set.KV_RAW;
   const obj = { database, invalidateDisabledHandles: null };
   let flag;
   if (invalidateDisabledHandles != null) {
@@ -67,7 +67,7 @@ prototype["optimize"] = function optimize(arg0) {
   });
 };
 prototype["raise"] = function raise(arg0) {
-  const KV_RAW = set /* set */.KV_RAW;
+  const KV_RAW = set.KV_RAW;
   KV_RAW.raise(arg0);
 };
 

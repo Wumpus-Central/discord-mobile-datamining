@@ -7,13 +7,13 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.iWTwu6);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.iWTwu6);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue: function useEchoCancellationSettingValue() {
     const items = [_detectH265HardwareDecode];
-    return initialize /* initialize */.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
+    return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
   },
   onValueChange: require("handleAutomaticGainControlChange").handleEchoCancellationChange
 };

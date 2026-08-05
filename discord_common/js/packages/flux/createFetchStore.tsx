@@ -14,8 +14,8 @@ function areStatesEqual(items, current) {
   if (Array.isArray(items)) {
     const _Array = Array;
     if (Array.isArray(current)) {
-      let result = shallowEqual /* shallowEqual */.areArraysShallowEqual(items, current);
-      const obj = shallowEqual /* shallowEqual */;
+      let result = shallowEqual.areArraysShallowEqual(items, current);
+      const obj = shallowEqual;
     }
     return result;
   }

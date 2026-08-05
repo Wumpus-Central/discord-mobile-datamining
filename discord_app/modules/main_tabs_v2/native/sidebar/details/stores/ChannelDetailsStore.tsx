@@ -12,7 +12,7 @@ let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/s
 
 export const useChannelDetailsStore = obj;
 export const deleteChannelStates = function deleteChannelStates() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     const obj = { states: null };
     obj[0] = new Map();
     return state.setState(obj);

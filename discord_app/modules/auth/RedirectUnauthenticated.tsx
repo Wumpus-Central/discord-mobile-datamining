@@ -13,17 +13,17 @@ export default function RedirectUnauthenticated() {
   if (CONFERENCE_MODE_ENABLED) {
     let to = Routes.REGISTER;
   } else {
-    to = getAuthenticationPath /* getAuthenticationPath */.getLoginPath(tmp4, false);
-    const tmp2Result = getAuthenticationPath /* getAuthenticationPath */;
+    to = getAuthenticationPath.getLoginPath(tmp4, false);
+    const tmp2Result = getAuthenticationPath;
   }
-  return jsx(_extends /* _extends */.Redirect, { to });
+  return jsx(_extends.Redirect, { to });
 };
 export const getRedirectPath = function getRedirectPath() {
   if (CONFERENCE_MODE_ENABLED) {
     let REGISTER = Routes.REGISTER;
   } else {
-    REGISTER = getAuthenticationPath /* getAuthenticationPath */.getLoginPath(tmp, false);
-    const obj = getAuthenticationPath /* getAuthenticationPath */;
+    REGISTER = getAuthenticationPath.getLoginPath(tmp, false);
+    const obj = getAuthenticationPath;
   }
   return REGISTER;
 };

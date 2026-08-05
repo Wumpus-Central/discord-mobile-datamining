@@ -143,13 +143,13 @@ Object.defineProperty(prototype, "premiumSubscriptionType", {
 });
 Object.defineProperty(prototype, "isSelfRedeemable", {
   get: function isSelfRedeemable() {
-    return !hasFlag /* hasFlag */.hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
+    return !hasFlag.hasFlag(this.flags, frozen.NOT_SELF_REDEEMABLE);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isExistingPremiumSubscriptionDisallowed", {
   get: function isExistingPremiumSubscriptionDisallowed() {
-    return hasFlag /* hasFlag */.hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+    return hasFlag.hasFlag(this.flags, frozen.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
   },
   set: undefined
 });

@@ -90,7 +90,7 @@ function handleGuild() {
 }
 let c3 = 10000000000000;
 const secondaryIndexMap = new require("version").SecondaryIndexMap((saveData) => {
-  const items = [SavedMessageSortTypes /* SavedMessageSortTypes */.SavedMessageSortTypes.ALL, ];
+  const items = [SavedMessageSortTypes.SavedMessageSortTypes.ALL, ];
   if (null != saveData.saveData.dueAt) {
     let BOOKMARK = tmp(8192).SavedMessageSortTypes.REMINDER;
   } else {
@@ -119,16 +119,16 @@ prototype["initialize"] = function initialize() {
   this.waitFor(mergeGuildAvatar);
 };
 prototype["getSavedMessages"] = function getSavedMessages() {
-  return secondaryIndexMap.values(SavedMessageSortTypes /* SavedMessageSortTypes */.SavedMessageSortTypes.ALL);
+  return secondaryIndexMap.values(SavedMessageSortTypes.SavedMessageSortTypes.ALL);
 };
 prototype["getSavedMessage"] = function getSavedMessage(channelId, messageId) {
   return secondaryIndexMap.get("" + channelId + "-" + messageId);
 };
 prototype["getMessageBookmarks"] = function getMessageBookmarks() {
-  return secondaryIndexMap.values(SavedMessageSortTypes /* SavedMessageSortTypes */.SavedMessageSortTypes.BOOKMARK);
+  return secondaryIndexMap.values(SavedMessageSortTypes.SavedMessageSortTypes.BOOKMARK);
 };
 prototype["getMessageReminders"] = function getMessageReminders() {
-  return secondaryIndexMap.values(SavedMessageSortTypes /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER);
+  return secondaryIndexMap.values(SavedMessageSortTypes.SavedMessageSortTypes.REMINDER);
 };
 prototype["getOverdueMessageReminderCount"] = function getOverdueMessageReminderCount() {
   return set.size;
@@ -139,7 +139,7 @@ prototype["hasOverdueReminder"] = function hasOverdueReminder() {
 prototype["getMostRecentOverdueDueAt"] = function getMostRecentOverdueDueAt() {
   let num = 0;
   const timestamp = Date.now();
-  const values = secondaryIndexMap.values(SavedMessageSortTypes /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER);
+  const values = secondaryIndexMap.values(SavedMessageSortTypes.SavedMessageSortTypes.REMINDER);
   for (const item10021 of values) {
     let tmp3 = getTimeSafe;
     let tmp4 = getTimeSafe(item10021.saveData.dueAt);
@@ -259,7 +259,7 @@ const savedMessagesStore = new SavedMessagesStore(require("dispatcher"), {
         } else {
           const obj = {};
           const merged = Object.assign(value);
-          obj.message = createMinimalMessageRecord /* createMinimalMessageRecord */.updateMessageRecord(value.message, message);
+          obj.message = createMinimalMessageRecord.updateMessageRecord(value.message, message);
           const result = obj3.set(combined, obj);
         }
         obj3 = secondaryIndexMap;

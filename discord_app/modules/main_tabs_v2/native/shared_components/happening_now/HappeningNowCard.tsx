@@ -149,7 +149,7 @@ export default function HappeningNowCard(IconComponent) {
   }
   items1[1] = tmp10Result;
   obj[9] = items1;
-  return closure_19(PressableCard /* PressableCard */.Card, obj);
+  return closure_19(PressableCard.Card, obj);
 };
 export const HappeningNowCardHeader = function HappeningNowCardHeader(displayNameFont) {
   let children;
@@ -178,7 +178,7 @@ export const HappeningNowCardHeader = function HappeningNowCardHeader(displayNam
   obj[4] = items;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return closure_18(Text /* Text */.Text, obj);
+  return closure_18(Text.Text, obj);
 };
 export const HappeningNowCardSubtitle = function HappeningNowCardSubtitle(variant) {
   variant = variant.variant;
@@ -199,5 +199,5 @@ export const HappeningNowCardSubtitle = function HappeningNowCardSubtitle(varian
   obj[1] = str2;
   const merged1 = Object.assign(merged);
   obj.children = variant.children;
-  return closure_18(Text /* Text */.Text, obj);
+  return closure_18(Text.Text, obj);
 };

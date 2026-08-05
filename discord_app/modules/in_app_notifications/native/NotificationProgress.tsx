@@ -105,7 +105,7 @@ export default function NotificationProgress(percent) {
   let type;
   percent = percent.percent;
   ({ canExpand, type } = percent);
-  let obj = context /* context */;
+  let obj = context;
   const inAppNotificationContext = obj.useInAppNotificationContext();
   if (canExpand) {
     obj = { percent: null, hideProgress: null, type: null };

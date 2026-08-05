@@ -41,24 +41,24 @@ function getSystemLocale(arg0) {
 const normalizedLocale = getAvailableLocales.getNormalizedLocale(str, "en-US");
 obj = {
   $i(children) {
-    return jsx(Button /* Button */.LegacyText, { style: closure_3.italic, children }, arg1);
+    return jsx(Button.LegacyText, { style: closure_3.italic, children }, arg1);
   },
   $b(children) {
-    return jsx(Button /* Button */.LegacyText, { style: closure_3.strong, children }, arg1);
+    return jsx(Button.LegacyText, { style: closure_3.strong, children }, arg1);
   },
   $del(children) {
-    return jsx(Button /* Button */.LegacyText, { style: closure_3.del, children }, arg1);
+    return jsx(Button.LegacyText, { style: closure_3.del, children }, arg1);
   },
   $p(children) {
-    return jsx(Button /* Button */.LegacyText, { children }, arg1);
+    return jsx(Button.LegacyText, { children }, arg1);
   },
   $code(children) {
-    return jsx(Button /* Button */.LegacyText, { style: closure_3.code, children }, arg1);
+    return jsx(Button.LegacyText, { style: closure_3.code, children }, arg1);
   },
   $link(children) {
     let tmp;
     [tmp] = arg2;
-    return jsx(IntlLink /* IntlLink */.IntlLink, { target: tmp, children }, arg1);
+    return jsx(IntlLink.IntlLink, { target: tmp, children }, arg1);
   }
 };
 const reactFormatter = module_1274.makeReactFormatter(obj);
@@ -72,7 +72,7 @@ export { getSystemLocale };
 export const getAvailableLocales = require("getAvailableLocales").getAvailableLocales;
 export const getLanguages = require("getAvailableLocales").getLanguages;
 export const useSyncMessages = function useSyncMessages(arg0) {
-  return getAvailableLocales /* getAvailableLocales */.useSyncMessages(arg0, set);
+  return getAvailableLocales.useSyncMessages(arg0, set);
 };
 export const t = require("_defaultMessages")._defaultMessages;
 export const international = require("messagesProxy");

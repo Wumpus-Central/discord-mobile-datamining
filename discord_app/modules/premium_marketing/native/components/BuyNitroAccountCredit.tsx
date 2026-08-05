@@ -16,7 +16,7 @@ obj = { borderRadius: require("Themes").modules.mobile.TABLE_ROW_BORDER_RADIUS }
 obj[0] = obj;
 let closure_8 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(function BuyNitroAccountCredit() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [addEntitlement];
   const stateFromStores = obj.useStateFromStores(items, () => {
     forApplication = forApplication.getForApplication(closure_6);
@@ -25,13 +25,13 @@ const memoResult = require("noop").memo(function BuyNitroAccountCredit() {
       forApplication = new Set();
     }
     return forApplication;
-  }, [], areSetsEqual /* areSetsEqual */.areSetsEqual);
+  }, [], areSetsEqual.areSetsEqual);
   const tmp = callback();
   const items1 = [reset];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  const obj2 = initialize /* initialize */;
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const obj2 = initialize;
   const items2 = [mergeGuildAvatar];
-  const stateFromStores2 = initialize /* initialize */.useStateFromStores(items2, () => {
+  const stateFromStores2 = initialize.useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {

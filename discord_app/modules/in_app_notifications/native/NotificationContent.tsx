@@ -223,7 +223,7 @@ export default function NotificationContent(arg0) {
   } else {
     const obj4 = {};
     const merged1 = Object.assign(header);
-    tmp10Result = tmp10(LocationText /* LocationText */.SimpleNotificationHeader, obj4);
+    tmp10Result = tmp10(LocationText.SimpleNotificationHeader, obj4);
   }
   obj2[1] = tmp10Result;
   items2[1] = callback2(closure_6, obj2);

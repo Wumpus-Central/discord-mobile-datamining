@@ -40,7 +40,7 @@ export default function MFAOptionScreen(arg0) {
   if (tmp9) {
     tmp9 = headerImage;
   }
-  const items = [tmp9, callback(Text /* Text */.Text, { variant: "heading-xl/extrabold", style: screenStyles.mfaContainerHeaderText, children: headerText }), , ];
+  const items = [tmp9, callback(Text.Text, { variant: "heading-xl/extrabold", style: screenStyles.mfaContainerHeaderText, children: headerText }), , ];
   let tmp10Result = null != subtitle;
   if (tmp10Result) {
     const obj2 = { variant: "heading-sm/normal", color: "text-default", children: null };
@@ -58,9 +58,9 @@ export default function MFAOptionScreen(arg0) {
   const obj4 = { children: null };
   items[3] = tmp10Result;
   obj[2] = items;
-  const items1 = [closure_5(Stack /* Stack */.Stack, obj), input];
+  const items1 = [closure_5(Stack.Stack, obj), input];
   obj4[0] = items1;
-  const items2 = [closure_5(Stack /* Stack */.Stack, obj4), content, ];
+  const items2 = [closure_5(Stack.Stack, obj4), content, ];
   const obj5 = { style: screenStyles.submit, children: null };
   const items3 = [submit, ];
   if (tmp10Result1) {
@@ -70,9 +70,9 @@ export default function MFAOptionScreen(arg0) {
   }
   items3[1] = tmp10Result1;
   obj5[1] = items3;
-  items2[2] = closure_5(Stack /* Stack */.Stack, obj5);
+  items2[2] = closure_5(Stack.Stack, obj5);
   obj[3] = items2;
-  const tmp7Result = closure_5(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  const tmp7Result = closure_5(SafeAreaPaddingView.SafeAreaPaddingView, obj);
   const children = [callback(BackgroundImage, { backgroundImageCover: false }), ];
   let tmp10Result2 = tmp7Result;
   if (tmp3) {

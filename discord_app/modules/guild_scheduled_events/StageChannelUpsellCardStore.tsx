@@ -23,5 +23,5 @@ export const useStageChannelUpsellCardStore = function useStageChannelUpsellCard
     const items = [, ];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
-  }, isIterable /* isIterable */.shallow);
+  }, isIterable.shallow);
 };

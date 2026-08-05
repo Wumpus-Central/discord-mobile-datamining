@@ -36,14 +36,14 @@ function validateOnboardingConnection(connection_type) {
     if (obj3.isNullOrEmpty(connection_type.application_id)) {
       items.push("Application ID is required for application connections");
     }
-    obj3 = isNullOrEmpty /* isNullOrEmpty */;
+    obj3 = isNullOrEmpty;
     const tmp9 = require;
     if (!tmp9Result.isNullOrEmpty(connection_type.provider_id)) {
       items.push("Platform ID not allowed for application connections");
     }
-    tmp9Result = isNullOrEmpty /* isNullOrEmpty */;
+    tmp9Result = isNullOrEmpty;
   } else if (tmp.PROVIDER_CONNECTED_ACCOUNT === connection_type) {
-    obj = isNullOrEmpty /* isNullOrEmpty */;
+    obj = isNullOrEmpty;
     if (obj.isNullOrEmpty(connection_type.provider_id)) {
       items.push("Platform ID is required for platform connections");
     } else if (!closure_11.includes(connection_type.provider_id)) {
@@ -53,7 +53,7 @@ function validateOnboardingConnection(connection_type) {
       items.push("Application ID not allowed for platform connections");
     }
     const tmp3 = require;
-    tmp3Result = isNullOrEmpty /* isNullOrEmpty */;
+    tmp3Result = isNullOrEmpty;
   } else {
     const connection_type2 = connection_type.connection_type;
     items.push("Invalid connection type");
@@ -103,8 +103,8 @@ export const isDefaultPrompt = function isDefaultPrompt(options) {
     const _String = String;
     const _Date = Date;
     obj[0] = String(Date.now());
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.vY91C9);
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.vY91C9);
     obj[2] = [];
     obj[6] = obj.MULTIPLE_CHOICE;
     const id = obj.id;
@@ -115,8 +115,8 @@ export const isDefaultPrompt = function isDefaultPrompt(options) {
 };
 export const getDefaultPrompt = function getDefaultPrompt() {
   const obj = { id: String(Date.now()), title: null, options: null, singleSelect: false, required: false, inOnboarding: true, type: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.vY91C9);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.vY91C9);
   obj[2] = [];
   obj[6] = obj.MULTIPLE_CHOICE;
   return obj;

@@ -9,7 +9,7 @@ const result = require("getApplicationCommand").fileFinishedImporting("modules/m
 
 export const createApplicationCommandSourceSystemMessage = function createApplicationCommandSourceSystemMessage(message) {
   message = message.message;
-  let obj = getApplicationCommand /* getApplicationCommand */;
+  let obj = getApplicationCommand;
   const applicationCommand = obj.getApplicationCommand(message.content);
   const application = message.application;
   if (application != null) {

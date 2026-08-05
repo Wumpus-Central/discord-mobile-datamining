@@ -155,8 +155,8 @@ prototype["subscribeUser"] = function subscribeUser(closure_0, userId) {
     tmp = "undefined" !== closure_0;
   }
   if (tmp) {
-    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(closure_0);
-    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName.isFavoritesGuildId(closure_0);
+    const obj = getFavoritesAwareGuildName;
   }
   if (tmp) {
     const self = this;
@@ -176,8 +176,8 @@ prototype["unsubscribeUser"] = function unsubscribeUser(closure_0, userId) {
     tmp = "undefined" !== closure_0;
   }
   if (tmp) {
-    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(closure_0);
-    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName.isFavoritesGuildId(closure_0);
+    const obj = getFavoritesAwareGuildName;
   }
   if (tmp) {
     const self = this;
@@ -197,8 +197,8 @@ prototype["subscribeChannel"] = function subscribeChannel(guildId) {
     tmp = "undefined" !== guildId;
   }
   if (tmp) {
-    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName.isFavoritesGuildId(guildId);
+    const obj = getFavoritesAwareGuildName;
   }
   let subscription = tmp;
   if (subscription) {
@@ -220,8 +220,8 @@ prototype["subscribeToMemberUpdates"] = function subscribeToMemberUpdates(guildI
     tmp = "undefined" !== guildId;
   }
   if (tmp) {
-    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName.isFavoritesGuildId(guildId);
+    const obj = getFavoritesAwareGuildName;
   }
   if (tmp) {
     const self = this;
@@ -244,8 +244,8 @@ prototype["unsubscribeFromMemberUpdates"] = function unsubscribeFromMemberUpdate
     tmp = "undefined" !== guildId;
   }
   if (tmp) {
-    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName.isFavoritesGuildId(guildId);
+    const obj = getFavoritesAwareGuildName;
   }
   if (tmp) {
     const self = this;
@@ -266,8 +266,8 @@ prototype["subscribeThreadMemberList"] = function subscribeThreadMemberList(guil
     tmp = "undefined" !== guildId;
   }
   if (tmp) {
-    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName.isFavoritesGuildId(guildId);
+    const obj = getFavoritesAwareGuildName;
   }
   let subscription = tmp;
   if (subscription) {
@@ -289,8 +289,8 @@ prototype["unsubscribeThreadMemberList"] = function unsubscribeThreadMemberList(
     tmp = "undefined" !== guild_id;
   }
   if (tmp) {
-    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guild_id);
-    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName.isFavoritesGuildId(guild_id);
+    const obj = getFavoritesAwareGuildName;
   }
   let unsubscribeResult = tmp;
   if (unsubscribeResult) {
@@ -317,8 +317,8 @@ prototype["_subscribeToFeature"] = function _subscribeToFeature(guildId, _activi
     tmp = "undefined" !== guildId;
   }
   if (tmp) {
-    tmp = !getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-    const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+    tmp = !getFavoritesAwareGuildName.isFavoritesGuildId(guildId);
+    const obj = getFavoritesAwareGuildName;
   }
   if (tmp) {
     if (!_activities.has(guildId)) {

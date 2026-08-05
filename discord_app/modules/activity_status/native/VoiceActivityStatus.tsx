@@ -49,9 +49,9 @@ export default function VoiceActivityStatus(hideText) {
           obj = { style: null, maxFontSizeMultiplier: null, children: null };
           obj[0] = textStyle;
           obj[1] = maxFontSizeMultiplier;
-          const intl = getSystemLocale /* getSystemLocale */.intl;
+          const intl = getSystemLocale.intl;
           const string = intl.string;
-          const t = getSystemLocale /* getSystemLocale */.t;
+          const t = getSystemLocale.t;
           if (isGuildStageVoiceResult) {
             obj[2] = string(t.QygGCN);
             let tmp11Result = tmp11(tmp14, obj);
@@ -66,8 +66,8 @@ export default function VoiceActivityStatus(hideText) {
       obj1[0] = textStyle;
       obj1[1] = maxFontSizeMultiplier;
       textStyle = require;
-      maxFontSizeMultiplier = getSystemLocale /* getSystemLocale */.intl;
-      obj1[2] = maxFontSizeMultiplier.string(getSystemLocale /* getSystemLocale */.t["9FaEzi"]);
+      maxFontSizeMultiplier = getSystemLocale.intl;
+      obj1[2] = maxFontSizeMultiplier.string(getSystemLocale.t["9FaEzi"]);
       tmp11Result = callback(ActivityStatusText, obj1);
       const tmp20 = ActivityStatusText;
     }

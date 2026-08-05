@@ -18,7 +18,7 @@ export const useActionTotalsForDisplayType = function useActionTotalsForDisplayT
 };
 export const useHasActionForAnyDisplayType = function useHasActionForAnyDisplayType() {
   const items = [freshTeenActivityWithMap];
-  return defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return defaultAreStatesEqual.useStateFromStores(items, () => {
     const values = Object.values(closure_3);
     return values.some((closure_0) => totalForDisplayType.getTotalForDisplayType(closure_0) > 0);
   });

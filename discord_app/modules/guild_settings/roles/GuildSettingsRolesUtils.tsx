@@ -205,7 +205,7 @@ export const getSectionAnalyticsName = function getSectionAnalyticsName(DISPLAY)
   } else if (tmp.VERIFICATIONS === DISPLAY) {
     return "Connections";
   } else {
-    isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(DISPLAY);
+    isDiscordFrontendDevelopment.assertNever(DISPLAY);
   }
 };
 export const filterRole = function filterRole(name, str) {

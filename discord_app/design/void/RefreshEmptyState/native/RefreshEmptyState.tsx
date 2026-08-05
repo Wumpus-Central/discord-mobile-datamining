@@ -94,7 +94,7 @@ export default EmptyState;
 export const ThemedEmptyState = function ThemedEmptyState(darkSource) {
   let lightSource = darkSource.darkSource;
   const merged = Object.assign(darkSource, Object.create(null));
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   if (obj2.isThemeLight(obj.useThemeContext().theme)) {
     lightSource = darkSource.lightSource;
   }

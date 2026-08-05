@@ -228,9 +228,9 @@ function ForwardButton(disabled) {
   obj[1] = items;
   obj[3] = disabled;
   const intl = tmp3(1236).intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.xIUfJS);
+  obj[4] = intl.string(getSystemLocale.t.xIUfJS);
   obj[5] = closure_16(ForwardingIcon, { size: "sm" });
-  return closure_16(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return closure_16(PressableBase.PressableOpacity, obj);
 }
 function ReplyButton(disabled) {
   disabled = disabled.disabled;
@@ -246,9 +246,9 @@ function ReplyButton(disabled) {
   obj[1] = items;
   obj[3] = disabled;
   const intl = tmp3(1236).intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t["5NwaNY"]);
-  obj[5] = closure_16(ArrowAngleLeftUpIcon /* ArrowAngleLeftUpIcon */.ArrowAngleLeftUpIcon, { size: "sm" });
-  return closure_16(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[4] = intl.string(getSystemLocale.t["5NwaNY"]);
+  obj[5] = closure_16(ArrowAngleLeftUpIcon.ArrowAngleLeftUpIcon, { size: "sm" });
+  return closure_16(PressableBase.PressableOpacity, obj);
 }
 function ThreadAsCommentsButton(parentMessage) {
   let handleItemInteracted;
@@ -326,7 +326,7 @@ let closure_20 = createCacheKey.createStyles(() => {
   obj[8] = { opacity: 0.4 };
   obj = { width: c19, height: c19 };
   obj[9] = obj;
-  let obj3 = set /* set */;
+  let obj3 = set;
   let num = 16;
   if (!obj3.isAndroid()) {
     num = tmp3;
@@ -336,12 +336,12 @@ let closure_20 = createCacheKey.createStyles(() => {
   obj[12] = { alignSelf: "flex-end", paddingBottom: 4.5 };
   obj[13] = { resizeMode: "contain", width: c19, height: c19 };
   const obj1 = { borderColor: Themes.unsafe_rawColors.BRAND_560, borderWidth: 1, paddingHorizontal: 7, backgroundColor: null };
-  obj1[3] = hexToRgba /* hexToRgba */.hexWithOpacity(Themes.unsafe_rawColors.BRAND_500, 0.3);
+  obj1[3] = hexToRgba.hexWithOpacity(Themes.unsafe_rawColors.BRAND_500, 0.3);
   obj[14] = obj1;
   obj[15] = { position: "absolute", right: 0, top: 0, bottom: 0, width: 48 };
   obj[16] = { position: "absolute", right: 0 };
   const tmp4 = require;
-  const tmp4Result = hexToRgba /* hexToRgba */;
+  const tmp4Result = hexToRgba;
   obj[17] = { paddingVertical: 6, paddingHorizontal: 8, backgroundColor: Themes.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: Themes.radii.sm, display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
   obj[18] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, justifySelf: "end" };
   obj3 = { width: 20, height: 20, tintColor: tmp(712).colors.INTERACTIVE_TEXT_DEFAULT };
@@ -677,11 +677,11 @@ export default function ICYMICardInteractionRow(message) {
 };
 export const onAddReaction = function onAddReaction(arg0, arg1, byName) {
   if (null != byName) {
-    let obj = MAX_REACTIONS /* MAX_REACTIONS */;
-    const obj2 = checkReactionResponse /* checkReactionResponse */;
+    let obj = MAX_REACTIONS;
+    const obj2 = checkReactionResponse;
     obj = { burst: null };
     obj[0] = arg3;
-    obj2.addReaction(arg0, arg1, obj.toReactionEmoji(byName), checkReactionResponse /* checkReactionResponse */.ReactionLocations.MESSAGE, obj);
+    obj2.addReaction(arg0, arg1, obj.toReactionEmoji(byName), checkReactionResponse.ReactionLocations.MESSAGE, obj);
     const toReactionEmojiResult = obj.toReactionEmoji(byName);
   }
 };

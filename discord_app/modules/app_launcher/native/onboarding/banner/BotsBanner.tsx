@@ -10,7 +10,7 @@ const result = require("useBannerBots").fileFinishedImporting("modules/app_launc
 export default function BotsBanner(context) {
   let firstBotApplication;
   let secondBotApplication;
-  let obj = useBannerBots /* useBannerBots */;
+  let obj = useBannerBots;
   const bannerBots = obj.useBannerBots({ context: context.context });
   ({ firstBotApplication, secondBotApplication } = bannerBots);
   let tmp4Result = null;

@@ -94,7 +94,7 @@ const aVErrorStore = new AVErrorStore(require("dispatcher"), {
           continue;
         }
       }
-      obj = areSetsEqual /* areSetsEqual */;
+      obj = areSetsEqual;
     } else {
       return false;
     }

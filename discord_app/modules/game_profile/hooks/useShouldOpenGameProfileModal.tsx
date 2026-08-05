@@ -98,7 +98,7 @@ export const gameIsAcceptable = function gameIsAcceptable(gameFlags) {
     let arr = items;
   } else {
     const items1 = [];
-    if (obj2.hasFlag(gameFlags.gameFlags, GameFlags /* GameFlags */.GameFlags.GAME_PROFILE_DISABLED)) {
+    if (obj2.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
       arr = items1.push(closure_7.Disabled);
     }
     obj2 = importAll(1384);
@@ -108,7 +108,7 @@ export const gameIsAcceptable = function gameIsAcceptable(gameFlags) {
       arr = items1.push(closure_7.NSFW);
       arr = items1;
     }
-    tmp8Result = isAgeRestrictedContentClassification /* isAgeRestrictedContentClassification */;
+    tmp8Result = isAgeRestrictedContentClassification;
   }
   return 0 === arr.length;
 };
@@ -119,7 +119,7 @@ export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
     let arr = items;
   } else {
     const items1 = [];
-    if (obj2.hasFlag(game.gameFlags, GameFlags /* GameFlags */.GameFlags.GAME_PROFILE_DISABLED)) {
+    if (obj2.hasFlag(game.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
       arr = items1.push(closure_7.Disabled);
     }
     obj2 = importAll(1384);
@@ -129,7 +129,7 @@ export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
       arr = items1.push(closure_7.NSFW);
       arr = items1;
     }
-    tmp9Result = isAgeRestrictedContentClassification /* isAgeRestrictedContentClassification */;
+    tmp9Result = isAgeRestrictedContentClassification;
   }
   return 0 === arr.length;
 };

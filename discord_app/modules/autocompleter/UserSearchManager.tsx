@@ -920,12 +920,12 @@ prototype2["rebootWebworker"] = function rebootWebworker() {
     _worker.terminate();
     self._worker = null;
   }
-  self._worker = UserSearchWorkerManager /* UserSearchWorkerManager */;
+  self._worker = UserSearchWorkerManager;
 };
 prototype2["updateUsers"] = function updateUsers(arr) {
   const _worker = this._worker;
   if (null != _worker) {
-    const found = arr.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    const found = arr.filter(isDiscordFrontendDevelopment.isNotNullish);
     for (const item10007 of found) {
       let tmp2 = item10007;
       let id;

@@ -529,7 +529,7 @@ export const getForumPostAuthor = function getForumPostAuthor(ownerId) {
   if (author == null) {
     author = user;
   }
-  obj[1] = useNullableMessageAuthor /* useNullableMessageAuthor */.getUserAuthor(author, ownerId);
+  obj[1] = useNullableMessageAuthor.getUserAuthor(author, ownerId);
   return obj;
 };
 export const useForumPostFirstMessageMarkup = function useForumPostFirstMessageMarkup(firstMessage) {

@@ -38,7 +38,7 @@ function OrbsBalance(balance) {
   obj = { size: "xs", color: null, style: null };
   obj[1] = Themes.colors.WHITE;
   obj[2] = tmp.orbsIcon;
-  const items = [callback3(OrbsIcon /* OrbsIcon */.OrbsIcon, obj), , ];
+  const items = [callback3(OrbsIcon.OrbsIcon, obj), , ];
   obj = { style: tmp.spacer };
   items[1] = callback3(closure_8, obj);
   items[2] = balance.balance;
@@ -60,10 +60,10 @@ function CancelButton() {
     labelVisible: false,
     style: null
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
   obj[4] = tmp.closeButton;
-  return callback3(Background /* Background */.HeaderBackButton, obj);
+  return callback3(Background.HeaderBackButton, obj);
 }
 function StaticOrb() {
   let obj = { style: { width: "100%", height: "100%" }, children: null };
@@ -225,7 +225,7 @@ let closure_25 = importAllResult.memo((animate) => {
   if (flag === undefined) {
     flag = true;
   }
-  let obj = PlatformTypes /* PlatformTypes */;
+  let obj = PlatformTypes;
   obj = { style, renderToHardwareTextureAndroid: true, needsOffscreenAlphaCompositing: true, children: callback3(obj.isAndroid() ? closure_24 : closure_23, { uri, onLoad, animate: flag }) };
   return callback3(closure_8, obj);
 });
@@ -255,7 +255,7 @@ let closure_26 = importAllResult.memo((arg0) => {
     obj[0] = obj1;
     obj[1] = style;
     obj[3] = onAnimatedBgLoad;
-    tmp2Result = callback3(VideoComponent /* VideoComponent */.VideoComponent, obj);
+    tmp2Result = callback3(VideoComponent.VideoComponent, obj);
   }
   children[1] = tmp2Result;
   return closure_16(importAllResult.Fragment, { children });

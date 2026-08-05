@@ -50,9 +50,9 @@ DefaultRouteStore.displayName = "DefaultRouteStore";
 DefaultRouteStore.persistKey = "DefaultRouteStore";
 const items = [
   () => {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const lastViewedPath = Storage.get(LAST_VIEWED_PATH, null);
-    const Storage2 = Storage /* Storage */.Storage;
+    const Storage2 = Storage.Storage;
     Storage2.remove(LAST_VIEWED_PATH);
     return { lastViewedPath };
   }

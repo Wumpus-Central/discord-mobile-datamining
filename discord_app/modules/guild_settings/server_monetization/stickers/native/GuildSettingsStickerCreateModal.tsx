@@ -17,7 +17,7 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   ({ onGoBack: c2, ref: c3 } = stickerId(9594)());
   const tmp2 = stickerId(9594)();
   const tmp3 = c3;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   if (null != stickerId) {
   } else {
   }

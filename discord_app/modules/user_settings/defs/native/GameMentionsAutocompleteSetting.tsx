@@ -5,12 +5,12 @@ import { apexExperiment } from "../../../game_mentions/GameMentionsMobileExperim
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.c0oFDw);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.c0oFDw);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate() {
-    const GameMentionsMobileExperiment = apexExperiment /* apexExperiment */.GameMentionsMobileExperiment;
+    const GameMentionsMobileExperiment = apexExperiment.GameMentionsMobileExperiment;
     return GameMentionsMobileExperiment.useConfig({ location: "GameMentionsInAutocomplete" }).enabled;
   },
   useValue: require("explicitContentFromProto").IncludeGameMentionsInAutocomplete.useSetting,
@@ -18,12 +18,12 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.c0oFDw);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.c0oFDw);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate() {
-    const GameMentionsMobileExperiment = apexExperiment /* apexExperiment */.GameMentionsMobileExperiment;
+    const GameMentionsMobileExperiment = apexExperiment.GameMentionsMobileExperiment;
     return GameMentionsMobileExperiment.useConfig({ location: "GameMentionsInAutocomplete" }).enabled;
   },
   useValue: require("explicitContentFromProto").IncludeGameMentionsInAutocomplete.useSetting,

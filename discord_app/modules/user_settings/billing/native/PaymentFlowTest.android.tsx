@@ -92,7 +92,7 @@ const memoResult = importAllResult.memo(function PaymentFlowTest() {
   obj = { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right };
   obj[2] = callback(TestView, {});
   obj[2] = callback(ScrollView, obj);
-  return callback(NativePaymentContextProvider /* NativePaymentContextProvider */.NativePaymentContextProvider, obj);
+  return callback(NativePaymentContextProvider.NativePaymentContextProvider, obj);
 });
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/billing/native/PaymentFlowTest.android.tsx");
 

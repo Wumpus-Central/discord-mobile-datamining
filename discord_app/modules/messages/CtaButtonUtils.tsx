@@ -10,7 +10,7 @@ let result = require("useAgeVerificationRunner").fileFinishedImporting("modules/
 
 export const CtaButtonType = obj;
 export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
-  const obj = shouldRenderReportFalsePositiveButton /* shouldRenderReportFalsePositiveButton */;
+  const obj = shouldRenderReportFalsePositiveButton;
   if (obj.shouldRenderReportFalsePositiveButton(id)) {
     let CONNECT_TO_TEEN = obj.MARK_AS_FALSE_POSITIVE;
   } else {
@@ -27,13 +27,13 @@ export const getCtaButtonType = function getCtaButtonType(id, channel_id) {
   return CONNECT_TO_TEEN;
 };
 export const useCtaButtonType = function useCtaButtonType(id, channel_id) {
-  const obj = shouldRenderReportFalsePositiveButton /* shouldRenderReportFalsePositiveButton */;
+  const obj = shouldRenderReportFalsePositiveButton;
   const shouldRenderReportFalsePositiveButton = obj.useShouldRenderReportFalsePositiveButton(id);
-  const result = useAgeVerificationRunner /* useAgeVerificationRunner */.isAgeVerificationMessageWithRetryCta(channel_id, id);
-  const obj2 = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  const result = useAgeVerificationRunner.isAgeVerificationMessageWithRetryCta(channel_id, id);
+  const obj2 = useAgeVerificationRunner;
   const tmp = require;
   const items = [initialize];
-  let result1 = null != initialize /* initialize */.useStateFromStores(items, () => pendingConnection.getPendingConnection());
+  let result1 = null != initialize.useStateFromStores(items, () => pendingConnection.getPendingConnection());
   if (result1) {
     result1 = tmp(4500).isAgeVerificationMessageWithConnectToTeenCta(channel_id, id);
     const tmpResult = tmp(4500);

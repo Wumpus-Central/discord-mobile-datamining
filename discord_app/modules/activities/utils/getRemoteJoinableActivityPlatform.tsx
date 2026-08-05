@@ -63,7 +63,7 @@ export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActiv
         }
         return tmp4;
       }
-      obj5 = hasFlag /* hasFlag */;
+      obj5 = hasFlag;
       tmp = constants;
     }
     return null;

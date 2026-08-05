@@ -3,5 +3,5 @@ import { useParentalControlledExplicitContentSettings } from "../../parent_tools
 const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useSensitiveMediaSettingDisabled.tsx");
 
 export const useSensitiveMediaSettingDisabled = function useSensitiveMediaSettingDisabled() {
-  return useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+  return useParentalControlledExplicitContentSettings.useIsParentallyControlled();
 };

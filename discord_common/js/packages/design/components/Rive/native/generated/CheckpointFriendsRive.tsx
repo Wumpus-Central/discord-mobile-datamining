@@ -18,8 +18,8 @@ let closure_9 = {
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     let prop60 = require;
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive /* BaseRive */;
+    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = BaseRive;
     let twoFriends;
     if (dataBinding != null) {
       twoFriends = dataBinding.twoFriends;
@@ -28,8 +28,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       twoFriends1 = onDataBindingChange.twoFriends;
     }
-    const booleanBinding1 = BaseRive /* BaseRive */.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
-    const obj2 = BaseRive /* BaseRive */;
+    const booleanBinding1 = BaseRive.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
+    const obj2 = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -408,8 +408,8 @@ let closure_9 = {
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     let prop60 = require;
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive /* BaseRive */;
+    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = BaseRive;
     let twoFriends;
     if (dataBinding != null) {
       twoFriends = dataBinding.twoFriends;
@@ -418,8 +418,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       twoFriends1 = onDataBindingChange.twoFriends;
     }
-    const booleanBinding1 = BaseRive /* BaseRive */.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
-    const obj2 = BaseRive /* BaseRive */;
+    const booleanBinding1 = BaseRive.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
+    const obj2 = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -805,7 +805,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       ShadowVisibility1 = onDataBindingChange.ShadowVisibility;
     }
-    const numberBinding = BaseRive /* BaseRive */.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
+    const numberBinding = BaseRive.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
     let tmpResult = tmp(4014);
     let StrokeVisibility;
     if (dataBinding != null) {
@@ -826,7 +826,7 @@ let closure_9 = {
       UsernameVisibility1 = onDataBindingChange.UsernameVisibility;
     }
     const numberBinding2 = tmpResult.useNumberBinding("UsernameVisibility", instance, UsernameVisibility, UsernameVisibility1, playIfNeeded);
-    const obj = BaseRive /* BaseRive */;
+    const obj = BaseRive;
     let Stroke;
     if (dataBinding != null) {
       Stroke = dataBinding.Stroke;
@@ -835,8 +835,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Stroke1 = onDataBindingChange.Stroke;
     }
-    const colorBinding = BaseRive /* BaseRive */.useColorBinding("Stroke", instance, Stroke, Stroke1, playIfNeeded);
-    const tmpResult1 = BaseRive /* BaseRive */;
+    const colorBinding = BaseRive.useColorBinding("Stroke", instance, Stroke, Stroke1, playIfNeeded);
+    const tmpResult1 = BaseRive;
     let Fill;
     if (dataBinding != null) {
       Fill = dataBinding.Fill;
@@ -845,8 +845,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Fill1 = onDataBindingChange.Fill;
     }
-    const colorBinding1 = BaseRive /* BaseRive */.useColorBinding("Fill", instance, Fill, Fill1, playIfNeeded);
-    const tmpResult2 = BaseRive /* BaseRive */;
+    const colorBinding1 = BaseRive.useColorBinding("Fill", instance, Fill, Fill1, playIfNeeded);
+    const tmpResult2 = BaseRive;
     let Username;
     if (dataBinding != null) {
       Username = dataBinding.Username;
@@ -855,8 +855,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Username1 = onDataBindingChange.Username;
     }
-    const stringBinding = BaseRive /* BaseRive */.useStringBinding("Username", instance, Username, Username1, playIfNeeded);
-    const tmpResult3 = BaseRive /* BaseRive */;
+    const stringBinding = BaseRive.useStringBinding("Username", instance, Username, Username1, playIfNeeded);
+    const tmpResult3 = BaseRive;
     let img;
     if (dataBinding != null) {
       img = dataBinding.img;
@@ -865,7 +865,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       img1 = onDataBindingChange.img;
     }
-    const imageBinding = BaseRive /* BaseRive */.useImageBinding("img", instance, img, img1, playIfNeeded);
+    const imageBinding = BaseRive.useImageBinding("img", instance, img, img1, playIfNeeded);
     return null;
   },
   Username: function UsernameBindings(arg0) {
@@ -882,7 +882,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       ShadowVisibility1 = onDataBindingChange.ShadowVisibility;
     }
-    const numberBinding = BaseRive /* BaseRive */.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
+    const numberBinding = BaseRive.useNumberBinding("ShadowVisibility", instance, ShadowVisibility, ShadowVisibility1, playIfNeeded);
     let tmpResult = tmp(4014);
     let StrokeVisibility;
     if (dataBinding != null) {
@@ -903,7 +903,7 @@ let closure_9 = {
       UsernameVisibility1 = onDataBindingChange.UsernameVisibility;
     }
     const numberBinding2 = tmpResult.useNumberBinding("UsernameVisibility", instance, UsernameVisibility, UsernameVisibility1, playIfNeeded);
-    const obj = BaseRive /* BaseRive */;
+    const obj = BaseRive;
     let Stroke;
     if (dataBinding != null) {
       Stroke = dataBinding.Stroke;
@@ -912,8 +912,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Stroke1 = onDataBindingChange.Stroke;
     }
-    const colorBinding = BaseRive /* BaseRive */.useColorBinding("Stroke", instance, Stroke, Stroke1, playIfNeeded);
-    const tmpResult1 = BaseRive /* BaseRive */;
+    const colorBinding = BaseRive.useColorBinding("Stroke", instance, Stroke, Stroke1, playIfNeeded);
+    const tmpResult1 = BaseRive;
     let Fill;
     if (dataBinding != null) {
       Fill = dataBinding.Fill;
@@ -922,8 +922,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Fill1 = onDataBindingChange.Fill;
     }
-    const colorBinding1 = BaseRive /* BaseRive */.useColorBinding("Fill", instance, Fill, Fill1, playIfNeeded);
-    const tmpResult2 = BaseRive /* BaseRive */;
+    const colorBinding1 = BaseRive.useColorBinding("Fill", instance, Fill, Fill1, playIfNeeded);
+    const tmpResult2 = BaseRive;
     let Username;
     if (dataBinding != null) {
       Username = dataBinding.Username;
@@ -932,8 +932,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       Username1 = onDataBindingChange.Username;
     }
-    const stringBinding = BaseRive /* BaseRive */.useStringBinding("Username", instance, Username, Username1, playIfNeeded);
-    const tmpResult3 = BaseRive /* BaseRive */;
+    const stringBinding = BaseRive.useStringBinding("Username", instance, Username, Username1, playIfNeeded);
+    const tmpResult3 = BaseRive;
     let img;
     if (dataBinding != null) {
       img = dataBinding.img;
@@ -942,7 +942,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       img1 = onDataBindingChange.img;
     }
-    const imageBinding = BaseRive /* BaseRive */.useImageBinding("img", instance, img, img1, playIfNeeded);
+    const imageBinding = BaseRive.useImageBinding("img", instance, img, img1, playIfNeeded);
     return null;
   },
   "Friends 01 Rotation": function Friends01RotationBindings(reducedMotionEnabled) {
@@ -952,8 +952,8 @@ let closure_9 = {
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     let prop60 = require;
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive /* BaseRive */;
+    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = BaseRive;
     let twoFriends;
     if (dataBinding != null) {
       twoFriends = dataBinding.twoFriends;
@@ -962,8 +962,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       twoFriends1 = onDataBindingChange.twoFriends;
     }
-    const booleanBinding1 = BaseRive /* BaseRive */.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
-    const obj2 = BaseRive /* BaseRive */;
+    const booleanBinding1 = BaseRive.useBooleanBinding("twoFriends", instance, twoFriends, twoFriends1, playIfNeeded);
+    const obj2 = BaseRive;
     let AnimationState;
     if (dataBinding != null) {
       AnimationState = dataBinding.AnimationState;
@@ -1379,7 +1379,7 @@ const forwardRefResult = importAllResult.forwardRef(function CheckpointFriendsRi
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_10 ref={arg1} />;
-  return jsx(getDerivedStateFromError /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CheckpointFriendsRive.tsx");
 

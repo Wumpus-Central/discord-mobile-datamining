@@ -7,7 +7,7 @@ const prototype = function DiscordImageFactory() {
 }.prototype;
 prototype["create"] = function create(byteLength) {
   const uint8Array = new Uint8Array(byteLength, 0, Math.min(64, byteLength.byteLength));
-  let obj = detectFile /* detectFile */;
+  let obj = detectFile;
   const detectFileResult = obj.detectFile(uint8Array);
   let mimeType;
   if (detectFileResult != null) {
@@ -15,7 +15,7 @@ prototype["create"] = function create(byteLength) {
   }
   obj = null;
   if ("image/png" === mimeType) {
-    const DiscordImagePng = create /* create */.DiscordImagePng;
+    const DiscordImagePng = create.DiscordImagePng;
     obj = DiscordImagePng.create(byteLength);
   }
   return obj;

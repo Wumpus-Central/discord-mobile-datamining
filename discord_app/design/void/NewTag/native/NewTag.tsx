@@ -64,9 +64,9 @@ export default function NewTag(color) {
     const merged1 = Object.assign(merged);
     const items2 = [tmp6.tagText, textStyle];
     obj2.style = items2;
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj2.children = intl2.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
-    obj1[1] = tmp7(Text /* Text */.Text, obj2);
+    const intl2 = getSystemLocale.intl;
+    obj2.children = intl2.string(getSystemLocale.t.y2b7CA);
+    obj1[1] = tmp7(Text.Text, obj2);
     obj[4] = tmp7(closure_3, obj1);
     let tmp7Result = tmp7(LinearGradient, obj);
     const tmp17 = LinearGradient;
@@ -80,9 +80,9 @@ export default function NewTag(color) {
     const merged2 = Object.assign(merged);
     const items4 = [tmp6.tagText, textStyle];
     obj3.style = items4;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj3.children = intl.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
-    obj[1] = tmp7(Text /* Text */.Text, obj3);
+    const intl = getSystemLocale.intl;
+    obj3.children = intl.string(getSystemLocale.t.y2b7CA);
+    obj[1] = tmp7(Text.Text, obj3);
     tmp7Result = tmp7(closure_3, obj);
   }
   return tmp7Result;

@@ -70,12 +70,12 @@ export default function CaptchaModal(arg0) {
     closure_4.dismiss();
   }, []);
   let obj = { style: tmp2.contentContainer, spacing: 12, children: null };
-  const items1 = [callback(AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */.DisguiseSpotIllustration, { scale: 0.5 }), , ];
+  const items1 = [callback(AccountAgeTier10LargeBadge.DisguiseSpotIllustration, { scale: 0.5 }), , ];
   if (headerText == null) {
     const intl = tmp7(1236).intl;
     headerText = intl.string(tmp7(1236).t.FpoiHe);
   }
-  const items2 = [callback(Text /* Text */.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: headerText }), ];
+  const items2 = [callback(Text.Text, { variant: "heading-xl/bold", accessibilityRole: "header", children: headerText }), ];
   obj = { variant: "text-md/medium", color: "text-subtle", style: tmp2.description, children: null };
   if (bodyText == null) {
     const intl2 = tmp7(1236).intl;
@@ -84,7 +84,7 @@ export default function CaptchaModal(arg0) {
   obj = { startHeight: 900, startExpanded: true, children: null };
   const obj1 = { children: null };
   obj[3] = bodyText;
-  items2[1] = callback(Text /* Text */.Text, obj);
+  items2[1] = callback(Text.Text, obj);
   obj1[0] = items2;
   items1[1] = closure_10(closure_5, obj1);
   let obj2 = {
@@ -130,9 +130,9 @@ export default function CaptchaModal(arg0) {
     text: null
   };
   const intl3 = tmp7(1236).intl;
-  obj2[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["cY+Oob"]);
-  items1[2] = callback(Button /* Button */.Button, obj2);
+  obj2[2] = intl3.string(getSystemLocale.t["cY+Oob"]);
+  items1[2] = callback(Button.Button, obj2);
   obj[2] = items1;
-  obj[2] = closure_10(Stack /* Stack */.Stack, obj);
-  return callback(Background /* Background */.BottomSheet, obj);
+  obj[2] = closure_10(Stack.Stack, obj);
+  return callback(Background.BottomSheet, obj);
 };

@@ -3,7 +3,7 @@ import { ShopBlockType } from "../../../../discord_common/js/shared/shared-const
 let prototype;
 prototype = function ImmersiveBannerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);
-  obj.type = ShopBlockType /* ShopBlockType */.ShopBlockType.IMMERSIVE_BANNER;
+  obj.type = ShopBlockType.ShopBlockType.IMMERSIVE_BANNER;
   ({ title: tmp.title, body: tmp.body, help_center_url: tmp.helpCenterUrl, text_color: tmp.textColor } = end_time);
   let date;
   if (null != end_time.end_time) {
@@ -19,7 +19,7 @@ prototype["fromServer"] = function fromServer(end_time) {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.type = ShopBlockType /* ShopBlockType */.ShopBlockType.IMMERSIVE_BANNER;
+  obj.type = ShopBlockType.ShopBlockType.IMMERSIVE_BANNER;
   ({ title: tmp2.title, body: tmp2.body, help_center_url: tmp2.helpCenterUrl, text_color: tmp2.textColor } = end_time);
   let date;
   if (null != end_time.end_time) {

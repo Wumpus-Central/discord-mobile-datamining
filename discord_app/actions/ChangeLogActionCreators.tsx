@@ -28,7 +28,7 @@ export default {
     let obj = dispatcher;
     obj = { type: "CHANGE_LOG_MARK_SEEN", changelogId: id, changelogDate: date };
     obj.dispatch(obj);
-    const LastReceivedChangelogId = explicitContentFromProto /* explicitContentFromProto */.LastReceivedChangelogId;
+    const LastReceivedChangelogId = explicitContentFromProto.LastReceivedChangelogId;
     LastReceivedChangelogId.updateSetting(id);
   },
   setChangelogOverride(id) {
@@ -41,13 +41,13 @@ export default {
     }
   },
   sendChangelogMessage(changelog_id) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: Endpoints.CHANGELOG_MESSAGES, body: obj, rejectWithError: true };
     obj = { changelog_id };
     HTTP.post(obj);
   },
   fetchChangelogConfig() {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj = { url: null, rejectWithError: true };
     obj[0] = "https://cdn.discordapp.com/changelogs/config_" + ChangelogPlatforms.MOBILE + ".json?" + "x=" + Math.floor(new Date().getMinutes() / 5);
     return HTTP.get(obj);

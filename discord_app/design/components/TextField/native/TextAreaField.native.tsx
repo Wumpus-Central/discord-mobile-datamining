@@ -23,15 +23,15 @@ const forwardRefResult = require("noop").forwardRef((isDisabled, ref) => {
   let state;
   let label = isDisabled;
   let obj = dependencyMap;
-  let obj1 = useInputStyles /* useInputStyles */;
+  let obj1 = useInputStyles;
   obj = { size: "lg", isRound: false, isDisabled: isDisabled.isDisabled };
   const inputStyles = obj1.useInputStyles(obj);
   const tmp2 = callback2();
   const maxLength = isDisabled.maxLength;
-  let obj3 = useTextFieldState /* useTextFieldState */;
+  let obj3 = useTextFieldState;
   const textField = obj3.useTextField(isDisabled, ref);
   ({ state, inputProps, innerRef } = textField);
-  let obj4 = getNodeText /* getNodeText */;
+  let obj4 = getNodeText;
   const focus = obj4.useFocus();
   let diff;
   ({ focusProps, isFocused } = focus);

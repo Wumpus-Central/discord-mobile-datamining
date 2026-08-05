@@ -74,9 +74,9 @@ function GuildChannelMessageRowHeader(channel) {
 function MessageRowIcon(guildId) {
   const message = guildId.message;
   const obj = { user: message.author, guildId: guildId.channel.guild_id, size: null, avatarDecoration: null };
-  obj[2] = Button /* Button */.AvatarSizes.LARGE_48;
+  obj[2] = Button.AvatarSizes.LARGE_48;
   obj[3] = message.author.avatarDecoration;
-  return callback(Button /* Button */.Avatar, obj);
+  return callback(Button.Avatar, obj);
 }
 function PrivateChannelMessageRowLabel(message) {
   let timestamp;
@@ -144,7 +144,7 @@ function GuildChannelMessageRowLabel(arg0) {
   let timestampAccessibilityLabel;
   ({ message, channel } = arg0);
   const tmp = callback2();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   ({ colorString, colorStrings } = useNullableMessageAuthor(message));

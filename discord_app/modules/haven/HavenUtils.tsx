@@ -17,7 +17,7 @@ export const parseRoom = function parseRoom(roomId) {
   return { roomId: roomId.room_id, participants: participants.map(parseParticipant), seats: seats.map(parseSeat) };
 };
 export const getHavenSoundControlName = function getHavenSoundControlName(arg0) {
-  if (HavenGenres /* HavenGenres */.HavenSoundKeys.RADIO === arg0) {
+  if (HavenGenres.HavenSoundKeys.RADIO === arg0) {
     const intl3 = tmp(1236).intl;
     return intl3.string(messagesProxy.AjiGKB);
   } else if (tmp(12932).HavenSoundKeys.ENVIRONMENT === arg0) {

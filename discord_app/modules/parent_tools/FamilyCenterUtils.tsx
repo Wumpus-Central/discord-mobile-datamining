@@ -20,16 +20,16 @@ let result = require("getSystemLocale").fileFinishedImporting("modules/parent_to
 
 export const getEmptyActivityFormatter = function getEmptyActivityFormatter() {
   const obj = { today: null, yesterday: null, days: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj[0] = intl.string(messagesProxy.VjIAQQ);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(messagesProxy["2a8xHY"]);
   obj[2] = messagesProxy.Xt6oND;
   return obj;
 };
 export const getActivityWindowTimestampFormatter = function getActivityWindowTimestampFormatter(arg0) {
   const obj = { today: null, yesterday: null, days: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
   const tmp4 = messagesProxy;
   if (arg0) {
@@ -58,7 +58,7 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
     yesterday = tmp3.yesterday;
   } else {
     let num = arg2;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const _Math = Math;
     const rounded = Math.floor(diffResult / tmp5);
     if (arg2 == null) {
@@ -78,13 +78,13 @@ export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMES
   if (diffResult < 60) {
     let yesterday = tmp3.seconds;
   } else if (diffResult < 3600) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    const intl4 = getSystemLocale.intl;
     obj = { count: null };
     const _Math3 = Math;
     obj[0] = Math.floor(diffResult / 60);
     yesterday = intl4.formatToPlainString(tmp3.minutes, obj);
   } else if (diffResult < c10) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     obj = { count: null };
     const _Math2 = Math;
     obj[0] = Math.floor(diffResult / 3600);
@@ -92,13 +92,13 @@ export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMES
   } else if (diffResult < c11) {
     yesterday = tmp3.yesterday;
   } else if (diffResult < 604800) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj1 = { count: null };
     const _Math = Math;
     obj1[0] = Math.floor(diffResult / tmp13);
     yesterday = intl2.formatToPlainString(tmp3.days, obj1);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj2 = { date: null };
     obj2[0] = tmp5;
     yesterday = intl.formatToPlainString(tmp3.date, obj2);
@@ -192,7 +192,7 @@ export const isParentallyControlled = function isParentallyControlled() {
 export const getTopUserOrGuildDescription = function getTopUserOrGuildDescription(dms_sent, call_count) {
   if (call_count > 0) {
     if (0 === dms_sent) {
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      const intl3 = getSystemLocale.intl;
       let obj = { callCount: null };
       obj[0] = call_count;
       let formatToPlainStringResult = intl3.formatToPlainString(messagesProxy["L/Cj7S"], obj);
@@ -201,13 +201,13 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
   }
   if (dms_sent > 0) {
     if (0 === call_count) {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      const intl2 = getSystemLocale.intl;
       obj = { messageCount: null };
       obj[0] = dms_sent;
       formatToPlainStringResult = intl2.formatToPlainString(messagesProxy["6X1F0i"], obj);
     }
   }
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { messageCount: dms_sent, callCount: call_count };
   formatToPlainStringResult = intl.formatToPlainString(messagesProxy.IYqGMG, obj);
 };

@@ -12,14 +12,14 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx");
 
 export default function UserSettingsDesignSystemText() {
-  let obj = map /* map */;
+  let obj = map;
   obj = { children: null };
   const token = obj.useToken(Themes.modules.mobile.TABLE_ROW_PADDING);
   obj = { spacing: null, style: null, children: null };
   obj[0] = Themes.space.PX_24;
   obj[1] = { paddingHorizontal: token };
   const obj1 = { title: "Text Variants", hasIcons: false, children: null };
-  const TEXT_VARIANT = TEXT_VARIANT /* TEXT_VARIANT */.TEXT_VARIANT;
+  const TEXT_VARIANT = TEXT_VARIANT.TEXT_VARIANT;
   obj1[2] = TEXT_VARIANT.map((arg0) => {
     let tmp = null;
     if ("code" !== arg0) {
@@ -32,7 +32,7 @@ export default function UserSettingsDesignSystemText() {
     }
     return tmp;
   });
-  obj[2] = jsx(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { title: "Text Variants", hasIcons: false, children: null });
-  obj[0] = jsx(Stack /* Stack */.Stack, { spacing: null, style: null, children: null });
+  obj[2] = jsx(TableRowGroupTitle.TableRowGroup, { title: "Text Variants", hasIcons: false, children: null });
+  obj[0] = jsx(Stack.Stack, { spacing: null, style: null, children: null });
   return <ScrollView spacing={null} style={null}>{null}</ScrollView>;
 };

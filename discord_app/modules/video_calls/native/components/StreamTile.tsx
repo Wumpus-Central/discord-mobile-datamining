@@ -168,10 +168,10 @@ let closure_16 = importAllResult.memo((arg0) => {
   items = [callback2().statusWrapper, style];
   obj = { source: null, size: null, color: null };
   obj[0] = registerAsset;
-  obj[1] = Button /* Button */.Icon.Sizes.SMALL;
+  obj[1] = Button.Icon.Sizes.SMALL;
   obj[2] = Themes.unsafe_rawColors.WHITE;
-  obj[4] = callback(Button /* Button */.Icon, obj);
-  return callback(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback(Button.Icon, obj);
+  return callback(PressableBase.PressableOpacity, obj);
 });
 let obj2 = { color: require("Themes").unsafe_rawColors.PRIMARY_300, fontSize: 14, lineHeight: 18, textAlign: "center" };
 const result = require("reset").fileFinishedImporting("modules/video_calls/native/components/StreamTile.tsx");

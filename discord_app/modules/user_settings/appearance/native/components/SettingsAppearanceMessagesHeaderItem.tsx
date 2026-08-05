@@ -16,8 +16,8 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/a
 export default function MessagesHeaderItem(animatedStyles) {
   let obj = { style: createCacheKey().messagesHeaderContainer, children: null };
   obj = { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.OIgYlQ);
-  obj[1] = jsx(Text /* Text */.Text, { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null });
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.OIgYlQ);
+  obj[1] = jsx(Text.Text, { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null });
   return <View animated style={arg0.animatedStyles.textNormal} variant="text-lg/bold">{null}</View>;
 };

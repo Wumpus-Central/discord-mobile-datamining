@@ -60,10 +60,10 @@ function FavoriteChannels(arg0) {
   let guildChannels;
   let shouldShowEmptyState;
   let tmp = dependencyMap;
-  let obj = getMissingFavoriteThreadIds /* getMissingFavoriteThreadIds */;
+  let obj = getMissingFavoriteThreadIds;
   const favoritesGuildChannelList = obj.useFavoritesGuildChannelList();
   ({ guildChannels, shouldShowEmptyState } = favoritesGuildChannelList);
-  let obj1 = useShouldRenderChannelList /* useShouldRenderChannelList */;
+  let obj1 = useShouldRenderChannelList;
   if (!obj1.useShouldRenderChannelList()) {
     return null;
   } else {
@@ -417,7 +417,7 @@ const memoResult = importAllResult.memo((arg0) => {
   let obj = { children: null };
   obj = {};
   const merged = Object.assign(arg0);
-  const items = [callback(ChannelsWrapper, obj), callback(TTIFirstContentfulPaint /* TTIFirstContentfulPaint */.TTIFirstContentfulPaint, { label: "channel-list", checkFocusedScreen: "guilds" })];
+  const items = [callback(ChannelsWrapper, obj), callback(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "channel-list", checkFocusedScreen: "guilds" })];
   obj[0] = items;
   return callback2(closure_16, obj);
 });

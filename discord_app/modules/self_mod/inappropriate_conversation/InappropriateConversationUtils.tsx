@@ -23,7 +23,7 @@ export const getSafetyAlertsSettingOrDefault = function getSafetyAlertsSettingOr
   if (flag == null) {
     flag = true;
   }
-  let userIsTeen = trackViewedEvent /* trackViewedEvent */.getUserIsTeen();
+  let userIsTeen = trackViewedEvent.getUserIsTeen();
   if (!userIsTeen) {
     userIsTeen = true === isStaffResult;
   }

@@ -63,12 +63,12 @@ function FocusedControlsHeaderGradient() {
   obj = { height: "100%", width, children: null };
   obj = { children: null };
   const obj1 = { id: "grad", y1: "0%", x1: "0", x2: "0", y2: "100%", children: null };
-  const items1 = [callback(inlineStyles /* inlineStyles */.Stop, { offset: "0%", stopColor: "black", stopOpacity: ".8" }), callback(inlineStyles /* inlineStyles */.Stop, { offset: "66%", stopColor: "black", stopOpacity: ".51" }), callback(inlineStyles /* inlineStyles */.Stop, { offset: "100%", stopColor: "black", stopOpacity: "0" })];
+  const items1 = [callback(inlineStyles.Stop, { offset: "0%", stopColor: "black", stopOpacity: ".8" }), callback(inlineStyles.Stop, { offset: "66%", stopColor: "black", stopOpacity: ".51" }), callback(inlineStyles.Stop, { offset: "100%", stopColor: "black", stopOpacity: "0" })];
   obj1[5] = items1;
-  obj[0] = callback2(inlineStyles /* inlineStyles */.LinearGradient, obj1);
-  const items2 = [callback(inlineStyles /* inlineStyles */.Defs, obj), callback(inlineStyles /* inlineStyles */.Rect, { height: "100%", width, fill: "url(#grad)" })];
+  obj[0] = callback2(inlineStyles.LinearGradient, obj1);
+  const items2 = [callback(inlineStyles.Defs, obj), callback(inlineStyles.Rect, { height: "100%", width, fill: "url(#grad)" })];
   obj[2] = items2;
-  obj[1] = callback2(inlineStyles /* inlineStyles */.Svg, obj);
+  obj[1] = callback2(inlineStyles.Svg, obj);
   return callback(closure_5, obj);
 }
 let c3 = importAllResult;
@@ -111,14 +111,14 @@ const memoResult = importAllResult.memo((disableGradient) => {
   let analyticsLocations;
   let callback;
   ({ omitPTT, bottomHeader, onDrawerClose, isTouchingLeftScreenEdge } = disableGradient);
-  let obj = useGlobalStatusIndicatorState /* useGlobalStatusIndicatorState */;
+  let obj = useGlobalStatusIndicatorState;
   const globalStatusIndicatorState = obj.useGlobalStatusIndicatorState();
-  let obj1 = nativeEventEmitter /* nativeEventEmitter */;
+  let obj1 = nativeEventEmitter;
   globalStatusIndicatorHeightSharedValue = obj1.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
   const tmp6 = globalStatusIndicatorHeightSharedValue(10659)();
   dependencyMap = tmp6;
-  reveal = reveal.useContext(useRevealProviderValue /* useRevealProviderValue */.RevealContext).reveal;
-  const isScreenReaderEnabled = SCREEN_READER_ENABLED_GETTER /* SCREEN_READER_ENABLED_GETTER */.useIsScreenReaderEnabled();
+  reveal = reveal.useContext(useRevealProviderValue.RevealContext).reveal;
+  const isScreenReaderEnabled = SCREEN_READER_ENABLED_GETTER.useIsScreenReaderEnabled();
   if (!reveal) {
     reveal = forceReveal;
   }
@@ -154,7 +154,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
   F.__workletHash = 15022275245977;
   F.__initData = closure_16;
   derivedValue1 = tmpResult.useDerivedValue(F);
-  const obj3 = SCREEN_READER_ENABLED_GETTER /* SCREEN_READER_ENABLED_GETTER */;
+  const obj3 = SCREEN_READER_ENABLED_GETTER;
   const fn = function y() {
     const obj = { top: null, opacity: null };
     obj[0] = outer1_0(_undefined[8]).withTiming(derivedValue.get(), outer1_10);

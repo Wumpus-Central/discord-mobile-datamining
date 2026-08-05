@@ -7,7 +7,7 @@ export default function getChannelDetailsFromRoute(currentRoute) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const coerceChannelRouteResult = navigationToRootTabHelper /* navigationToRootTabHelper */.coerceChannelRoute(currentRoute);
+  const coerceChannelRouteResult = navigationToRootTabHelper.coerceChannelRoute(currentRoute);
   if (null != coerceChannelRouteResult) {
     const items = [coerceChannelRouteResult.params.guildId, coerceChannelRouteResult.params.channelId];
     return items;
@@ -35,6 +35,6 @@ export default function getChannelDetailsFromRoute(currentRoute) {
     const items3 = [undefined, undefined];
     return items3;
   }
-  const obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
+  const obj = navigationToRootTabHelper;
   tmp = require;
 };

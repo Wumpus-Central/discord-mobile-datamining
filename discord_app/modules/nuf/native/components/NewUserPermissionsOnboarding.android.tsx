@@ -53,7 +53,7 @@ export default function NewUserPermissionsOnboarding(showSkip) {
   const items = [header, ];
   const obj1 = { style: tmp.alert, children: null };
   const obj2 = { style: tmp.alertContent, children: null };
-  const items1 = [callback(Text /* Text */.Text, { style: tmp.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title }), callback(Text /* Text */.Text, { style: tmp.alertSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle }), , ];
+  const items1 = [callback(Text.Text, { style: tmp.alertTitle, variant: "heading-lg/bold", color: "text-default", children: title }), callback(Text.Text, { style: tmp.alertSubtitle, variant: "text-sm/medium", color: "text-default", children: subtitle }), , ];
   const items2 = [tmp.buttonWrapper, ];
   let primaryButtonContainer = flag;
   if (flag) {
@@ -63,10 +63,10 @@ export default function NewUserPermissionsOnboarding(showSkip) {
   items2[1] = primaryButtonContainer;
   const obj6 = { variant: "primary", size: "md", text: null, onPress: null, loading: null, grow: true };
   const intl = tmp6(1236).intl;
-  obj6[2] = intl.string(getSystemLocale /* getSystemLocale */.t["2nYlT2"]);
+  obj6[2] = intl.string(getSystemLocale.t["2nYlT2"]);
   obj6[3] = onAllow;
   obj6[4] = loading;
-  obj5[1] = callback(Button /* Button */.Button, obj6);
+  obj5[1] = callback(Button.Button, obj6);
   items1[2] = callback(closure_2, obj5);
   if (flag) {
     const obj7 = { style: null, children: null };

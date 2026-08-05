@@ -7,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecure
 
 export const useSecureFramesVerifiedUserIds = function useSecureFramesVerifiedUserIds() {
   const items = [initialize];
-  return initialize /* initialize */.useStateFromStoresArray(items, () => userIds.getUserIds());
+  return initialize.useStateFromStoresArray(items, () => userIds.getUserIds());
 };

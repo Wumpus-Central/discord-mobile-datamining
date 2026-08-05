@@ -27,13 +27,13 @@ function DefaultState() {
   obj = { style: tmp.emptyStateImage, source: registerAsset };
   const items = [callback(closure_7, obj), ];
   obj = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.aYLd8O, {
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.format(getSystemLocale.t.aYLd8O, {
     protipHook(children) {
       return outer1_12(tmp(outer1_3[12]).LegacyText, { style: tmp.proTip, children }, "protip");
     }
   });
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(closure_6, obj);
 }

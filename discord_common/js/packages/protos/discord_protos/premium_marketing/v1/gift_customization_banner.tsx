@@ -97,7 +97,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     obj.mobileBodyLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), arg2, obj.mobileBodyLocalized);
   }
   return obj;
@@ -116,7 +116,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
   }
   if (assetUrl.gradient) {
-    const Gradient = create /* create */.Gradient;
+    const Gradient = create.Gradient;
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Gradient.internalBinaryWrite(assetUrl.gradient, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -126,19 +126,19 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
   }
   if (assetUrl.asset) {
-    const ThemeAwareAsset = create /* create */.ThemeAwareAsset;
+    const ThemeAwareAsset = create.ThemeAwareAsset;
     const tagResult5 = tag.tag(6, 01307__.WireType.LengthDelimited);
     const joined1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = ThemeAwareAsset.internalBinaryWrite(assetUrl.asset, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.backgroundAsset) {
-    const ThemeAwareAsset2 = create /* create */.ThemeAwareAsset;
+    const ThemeAwareAsset2 = create.ThemeAwareAsset;
     const tagResult6 = tag.tag(7, 01307__.WireType.LengthDelimited);
     const joined2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = ThemeAwareAsset2.internalBinaryWrite(assetUrl.backgroundAsset, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.mobileBackgroundAsset) {
-    const ThemeAwareAsset3 = create /* create */.ThemeAwareAsset;
+    const ThemeAwareAsset3 = create.ThemeAwareAsset;
     const tagResult7 = tag.tag(8, 01307__.WireType.LengthDelimited);
     const joined3 = ThemeAwareAsset3.internalBinaryWrite(assetUrl.mobileBackgroundAsset, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = ThemeAwareAsset3.internalBinaryWrite(assetUrl.mobileBackgroundAsset, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -148,13 +148,13 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult8 = tag.tag(9, 01307__.WireType.Varint);
   }
   if (assetUrl.desktopBodyLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult9 = tag.tag(10, 01307__.WireType.LengthDelimited);
     const joined4 = LocalizedString.internalBinaryWrite(assetUrl.desktopBodyLocalized, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult4 = LocalizedString.internalBinaryWrite(assetUrl.desktopBodyLocalized, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.mobileBodyLocalized) {
-    const LocalizedString2 = create /* create */.LocalizedString;
+    const LocalizedString2 = create.LocalizedString;
     const tagResult10 = tag.tag(11, 01307__.WireType.LengthDelimited);
     const joined5 = LocalizedString2.internalBinaryWrite(assetUrl.mobileBodyLocalized, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = LocalizedString2.internalBinaryWrite(assetUrl.mobileBodyLocalized, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

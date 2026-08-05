@@ -23,7 +23,7 @@ function AccountCreditTier(arg0) {
   ({ planId, currentSubscription } = arg0);
   ({ months, shouldAddDivider, unconsumedFractionalPremiumUnits, hasPremiumGroup } = arg0);
   const tmp = createCacheKey();
-  let obj = getPremiumPlanItem /* getPremiumPlanItem */;
+  let obj = getPremiumPlanItem;
   let obj1 = getPremiumPlanItem;
   const result = obj.castPremiumSubscriptionAsSkuId(obj1.getSkuIdForPlan(planId));
   let obj2 = getPremiumPlanItem;
@@ -66,14 +66,14 @@ function AccountCreditTier(arg0) {
   obj1 = { style: items, children: null };
   items[1] = divider;
   obj2 = { size: null, skuId: null };
-  obj2[0] = GameIcon /* GameIcon */.GameIconSizes.SMALL;
+  obj2[0] = GameIcon.GameIconSizes.SMALL;
   obj2[1] = result;
   const items1 = [callback(GameIcon, obj2), , ];
   const obj3 = { style: tmp.textContainer, children: null };
   const obj4 = { style: tmp.headerText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl4 = tmp2(1236).intl;
-  obj4[3] = intl4.format(getSystemLocale /* getSystemLocale */.t.LzobT9, { planName: tierDisplayNameByPlanId });
-  const items2 = [callback(Text /* Text */.Text, obj4), ];
+  obj4[3] = intl4.format(getSystemLocale.t.LzobT9, { planName: tierDisplayNameByPlanId });
+  const items2 = [callback(Text.Text, obj4), ];
   let tmp21Result = !tmp17;
   if (!(null != currentSubscription && currentSubscription.isPurchasedExternally)) {
     const obj5 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
@@ -86,8 +86,8 @@ function AccountCreditTier(arg0) {
   items1[1] = closure_7(View, obj3);
   const obj6 = { style: tmp.timeText, variant: "text-md/medium", color: "text-default", children: null };
   const intl5 = tmp2(1236).intl;
-  obj6[3] = intl5.format(getSystemLocale /* getSystemLocale */.t["ess/xl"], { count: months });
-  items1[2] = callback(Text /* Text */.Text, obj6);
+  obj6[3] = intl5.format(getSystemLocale.t["ess/xl"], { count: months });
+  items1[2] = callback(Text.Text, obj6);
   obj1[1] = items1;
   return closure_7(View, obj1);
 }

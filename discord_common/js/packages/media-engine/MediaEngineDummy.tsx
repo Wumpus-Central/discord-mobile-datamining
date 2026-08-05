@@ -24,7 +24,7 @@ class MediaEngineDummy extends tmp3 {
 }
 const prototype = MediaEngineDummy.prototype;
 prototype["destroy"] = function destroy() {
-  this.emit(BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineEvent.Destroy);
+  this.emit(BaseConnectionEvent.MediaEngineEvent.Destroy);
   this.removeAllListeners();
 };
 prototype["interact"] = function interact() {

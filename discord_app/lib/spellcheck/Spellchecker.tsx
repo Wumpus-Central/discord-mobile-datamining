@@ -14,7 +14,7 @@ function normalizeLocale(arg0) {
   if (str == null) {
     str = arg0;
   }
-  const parsed = parse /* parse */.parse(str.replace(/[_-]/g, "-"));
+  const parsed = parse.parse(str.replace(/[_-]/g, "-"));
   if (null != parsed) {
     if (null != parsed.langtag.language) {
       if (null != parsed.langtag.region) {
@@ -189,7 +189,7 @@ let closure_10 = require("apply").debounce((detectLanguage, hasAttribute) => {
       }
     }
     textContent = hasAttribute.value;
-    obj = set /* set */;
+    obj = set;
   }
   if (null != textContent) {
     detectLanguage.detectLanguage(textContent);

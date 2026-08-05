@@ -119,94 +119,94 @@ const result = require("registerAsset").fileFinishedImporting("modules/asset_jso
 
 export const jsonAssets = {
   i18n_bg() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_cs() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_da() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_de() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_el() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_enGB() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_esES() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_es419() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_fi() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_fr() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_hr() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_hu() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_it() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_ja() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_ko() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_lt() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_nl() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_no() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_pl() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_ptBR() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_ro() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_ru() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_svSE() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_th() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_tr() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_uk() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_vi() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_zhCN() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_zhTW() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   },
   i18n_hi() {
-    return loadJsonAsset(registerAsset /* registerAsset */);
+    return loadJsonAsset(registerAsset);
   }
 };
 export { loadJsonAsset };

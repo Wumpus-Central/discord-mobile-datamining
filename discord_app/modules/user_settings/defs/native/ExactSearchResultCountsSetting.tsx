@@ -4,28 +4,28 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.aP91Ud);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.aP91Ud);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: require("explicitContentFromProto").SearchResultExactCountEnabled.useSetting,
   onValueChange: require("explicitContentFromProto").SearchResultExactCountEnabled.updateSetting,
   useDescription: function useSearchResultExactCountDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.qx4cha);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.qx4cha);
   }
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.aP91Ud);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.aP91Ud);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: require("explicitContentFromProto").SearchResultExactCountEnabled.useSetting,
   onValueChange: require("explicitContentFromProto").SearchResultExactCountEnabled.updateSetting,
   useDescription: function useSearchResultExactCountDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.qx4cha);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.qx4cha);
   }
 };
 const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/ExactSearchResultCountsSetting.tsx");

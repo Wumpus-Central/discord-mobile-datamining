@@ -12,7 +12,7 @@ export const createConnectionsRoleTag = function createConnectionsRoleTag(merged
     colorString = DEFAULT_ROLE_COLOR_HEX;
   }
   let PRIMARY_630 = Themes.unsafe_rawColors.WHITE;
-  let obj = int2hslRaw /* int2hslRaw */;
+  let obj = int2hslRaw;
   const hex2intResult = obj.hex2int(colorString);
   const tmp = importDefault;
   if (obj2.getDarkness(hex2intResult) < 0.3) {

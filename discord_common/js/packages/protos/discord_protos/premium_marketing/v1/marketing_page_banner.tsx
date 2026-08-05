@@ -98,7 +98,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (5 === tmp5) {
         let tmp37 = require;
         let tmp38 = dependencyMap;
-        let CTAButton = create /* create */.CTAButton;
+        let CTAButton = create.CTAButton;
         let tmp39 = CTAButton;
         let tmp40 = pos;
         let tmp41 = readUnknownField;
@@ -106,7 +106,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (6 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let HelpArticle = create /* create */.HelpArticle;
+        let HelpArticle = create.HelpArticle;
         let tmp34 = HelpArticle;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -114,7 +114,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (7 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let LocalizedString2 = create /* create */.LocalizedString;
+        let LocalizedString2 = create.LocalizedString;
         let tmp29 = LocalizedString2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -122,7 +122,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (8 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let LocalizedString = create /* create */.LocalizedString;
+        let LocalizedString = create.LocalizedString;
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -183,25 +183,25 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(assetUrl, tag, w
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
   }
   if (assetUrl.button) {
-    const CTAButton = create /* create */.CTAButton;
+    const CTAButton = create.CTAButton;
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined = CTAButton.internalBinaryWrite(assetUrl.button, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = CTAButton.internalBinaryWrite(assetUrl.button, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.helpArticle) {
-    const HelpArticle = create /* create */.HelpArticle;
+    const HelpArticle = create.HelpArticle;
     const tagResult5 = tag.tag(6, 01307__.WireType.LengthDelimited);
     const joined1 = HelpArticle.internalBinaryWrite(assetUrl.helpArticle, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = HelpArticle.internalBinaryWrite(assetUrl.helpArticle, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.headerLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult6 = tag.tag(7, 01307__.WireType.LengthDelimited);
     const joined2 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = LocalizedString.internalBinaryWrite(assetUrl.headerLocalized, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (assetUrl.bodyLocalized) {
-    const LocalizedString2 = create /* create */.LocalizedString;
+    const LocalizedString2 = create.LocalizedString;
     const tagResult7 = tag.tag(8, 01307__.WireType.LengthDelimited);
     const joined3 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = LocalizedString2.internalBinaryWrite(assetUrl.bodyLocalized, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

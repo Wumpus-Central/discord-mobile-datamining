@@ -74,8 +74,8 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
     obj[10] = onPaymentSuccess;
     obj[11] = onPaymentDismiss;
     const obj3 = flag2(4490);
-    obj3.pushLazy(asyncRequireImpl /* asyncRequireImpl */(6783, dependencyMap.paths), obj, PremiumModal /* PremiumModal */.PREMIUM_KEY);
-    const tmp7 = asyncRequireImpl /* asyncRequireImpl */(6783, dependencyMap.paths);
+    obj3.pushLazy(asyncRequireImpl(6783, dependencyMap.paths), obj, PremiumModal.PREMIUM_KEY);
+    const tmp7 = asyncRequireImpl(6783, dependencyMap.paths);
   }
-  let result = getSanitizedRestrictedGuilds /* getSanitizedRestrictedGuilds */.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
+  let result = getSanitizedRestrictedGuilds.trackUserSettingsPaneViewed({ destinationPane: PREMIUM_PLAN_SELECT });
 };

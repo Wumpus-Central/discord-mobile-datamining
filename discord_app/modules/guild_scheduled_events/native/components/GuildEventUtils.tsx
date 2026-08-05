@@ -9,7 +9,7 @@ export const getEventLocationIconSource = function getEventLocationIconSource(ev
   } else {
     tmp4 = null;
     if (null != channel) {
-      const tmpResult = getChannelIcon /* getChannelIcon */;
+      const tmpResult = getChannelIcon;
       if (stateFromStores2) {
         let channelIcon = tmpResult.getChannelIcon(channel);
       } else {

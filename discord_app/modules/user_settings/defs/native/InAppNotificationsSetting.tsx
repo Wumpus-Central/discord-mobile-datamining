@@ -7,14 +7,14 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.rqEZdu);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.rqEZdu);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: function useInAppNotificationsSettingValue() {
-    const FocusMode = explicitContentFromProto /* explicitContentFromProto */.FocusMode;
+    const FocusMode = explicitContentFromProto.FocusMode;
     const setting = FocusMode.useSetting();
-    const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
+    const ShowInAppNotifications = explicitContentFromProto.ShowInAppNotifications;
     let setting1 = !setting;
     if (!setting) {
       setting1 = ShowInAppNotifications.useSetting();
@@ -22,7 +22,7 @@ const toggle = createToggle.createToggle({
     return setting1;
   },
   onValueChange: function updateInAppNotificationSettings(notifications_in_app_enabled) {
-    const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
+    const ShowInAppNotifications = explicitContentFromProto.ShowInAppNotifications;
     ShowInAppNotifications.updateSetting(notifications_in_app_enabled);
     let obj = expandEventProperties;
     obj = { notifications_in_app_enabled };
@@ -40,14 +40,14 @@ const toggle = createToggle.createToggle({
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.rqEZdu);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.rqEZdu);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: function useInAppNotificationsSettingValue() {
-    const FocusMode = explicitContentFromProto /* explicitContentFromProto */.FocusMode;
+    const FocusMode = explicitContentFromProto.FocusMode;
     const setting = FocusMode.useSetting();
-    const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
+    const ShowInAppNotifications = explicitContentFromProto.ShowInAppNotifications;
     let setting1 = !setting;
     if (!setting) {
       setting1 = ShowInAppNotifications.useSetting();
@@ -55,7 +55,7 @@ let obj = {
     return setting1;
   },
   onValueChange: function updateInAppNotificationSettings(notifications_in_app_enabled) {
-    const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
+    const ShowInAppNotifications = explicitContentFromProto.ShowInAppNotifications;
     ShowInAppNotifications.updateSetting(notifications_in_app_enabled);
     let obj = expandEventProperties;
     obj = { notifications_in_app_enabled };

@@ -8,9 +8,9 @@ const result = require("useIsUserProfileObfuscated").fileFinishedImporting("modu
 
 export default function useShouldShowMutualInfo(id) {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   id = undefined;
-  const obj = initialize /* initialize */;
+  const obj = initialize;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }

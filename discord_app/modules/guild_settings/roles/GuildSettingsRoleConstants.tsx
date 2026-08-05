@@ -27,18 +27,18 @@ obj = { key: "template_cosmetic", color: null, permissions: null, title: null, d
 obj[1] = unsafe_getRawColor.unsafe_getRawColor("BRAND_500");
 obj[2] = require("applyOverwrites").NONE;
 obj[3] = function title() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t.M8jQyg);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t.M8jQyg);
 };
 obj[4] = function description() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t["7nF/S/"]);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t["7nF/S/"]);
 };
 obj[5] = function contents() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const items = [intl.string(getSystemLocale /* getSystemLocale */.t.uwLDAb), ];
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.gqngN7);
+  const intl = getSystemLocale.intl;
+  const items = [intl.string(getSystemLocale.t.uwLDAb), ];
+  const intl2 = getSystemLocale.intl;
+  items[1] = intl2.string(getSystemLocale.t.gqngN7);
   return items;
 };
 obj[6] = function contentPreface() {
@@ -50,20 +50,20 @@ obj1[1] = unsafe_getRawColor.unsafe_getRawColor("GREEN_360");
 obj1[2] = require("applyOverwrites").DEFAULT;
 obj1[3] = removeResult;
 obj1[4] = function title() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t["9BsHzh"]);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t["9BsHzh"]);
 };
 obj1[5] = function description() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t.ywKYtw);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t.ywKYtw);
 };
 obj1[6] = function contents() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const items = [intl.string(getSystemLocale /* getSystemLocale */.t["9Vhbnl"]), , ];
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["0xn+w1"]);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  items[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.ieWVpB);
+  const intl = getSystemLocale.intl;
+  const items = [intl.string(getSystemLocale.t["9Vhbnl"]), , ];
+  const intl2 = getSystemLocale.intl;
+  items[1] = intl2.string(getSystemLocale.t["0xn+w1"]);
+  const intl3 = getSystemLocale.intl;
+  items[2] = intl3.string(getSystemLocale.t.ieWVpB);
   return items;
 };
 obj1[7] = function contentPreface() {
@@ -74,27 +74,27 @@ const obj2 = { key: "template_moderator", color: null, permissions: null, title:
 obj2[1] = unsafe_getRawColor.unsafe_getRawColor("YELLOW_300");
 obj2[2] = combineResult;
 obj2[3] = function title() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t["m/GC8z"]);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t["m/GC8z"]);
 };
 obj2[4] = function description() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t.ERrMJZ);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t.ERrMJZ);
 };
 obj2[5] = function contents() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const items = [intl.string(getSystemLocale /* getSystemLocale */.t.YOSxcd), , , ];
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.q9H4Fm);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  items[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["9nHnCj"]);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  items[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.iqwXvc);
+  const intl = getSystemLocale.intl;
+  const items = [intl.string(getSystemLocale.t.YOSxcd), , , ];
+  const intl2 = getSystemLocale.intl;
+  items[1] = intl2.string(getSystemLocale.t.q9H4Fm);
+  const intl3 = getSystemLocale.intl;
+  items[2] = intl3.string(getSystemLocale.t["9nHnCj"]);
+  const intl4 = getSystemLocale.intl;
+  items[3] = intl4.string(getSystemLocale.t.iqwXvc);
   return items;
 };
 obj2[6] = function contentPreface() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t.amGM7K);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t.amGM7K);
 };
 obj[obj.MODERATOR] = obj2;
 const obj3 = { key: "template_manager", color: null, permissions: null, communityPermissions: null, title: null, description: null, contents: null, contentPreface: null };
@@ -102,27 +102,27 @@ obj3[1] = unsafe_getRawColor.unsafe_getRawColor("RED_400");
 obj3[2] = combineResult1;
 obj3[3] = require("fromString").add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);
 obj3[4] = function title() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t.qKmu3w);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t.qKmu3w);
 };
 obj3[5] = function description() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t.WxWPYV);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t.WxWPYV);
 };
 obj3[6] = function contents() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const items = [intl.string(getSystemLocale /* getSystemLocale */.t.Hx1Vox), , , ];
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["aUZ/zD"]);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  items[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["8lQujv"]);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  items[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.cUP4pl);
+  const intl = getSystemLocale.intl;
+  const items = [intl.string(getSystemLocale.t.Hx1Vox), , , ];
+  const intl2 = getSystemLocale.intl;
+  items[1] = intl2.string(getSystemLocale.t["aUZ/zD"]);
+  const intl3 = getSystemLocale.intl;
+  items[2] = intl3.string(getSystemLocale.t["8lQujv"]);
+  const intl4 = getSystemLocale.intl;
+  items[3] = intl4.string(getSystemLocale.t.cUP4pl);
   return items;
 };
 obj3[7] = function contentPreface() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t["7Dkb62"]);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t["7Dkb62"]);
 };
 obj[obj.MANAGER] = obj3;
 const addResult = require("fromString").add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);

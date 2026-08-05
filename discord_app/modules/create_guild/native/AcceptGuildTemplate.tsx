@@ -27,7 +27,7 @@ let metroImportAll;
 let unpackModuleId;
 const require = arg1;
 function GuildTemplateResolving() {
-  return callback(closure_4, { style: createCacheKey().resolvingContainer, children: callback(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, {}) });
+  return callback(closure_4, { style: createCacheKey().resolvingContainer, children: callback(ActivityIndicator.ActivityIndicator, {}) });
 }
 function GuildTemplateResolved(guildTemplate) {
   let chooseIcon;

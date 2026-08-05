@@ -34,7 +34,7 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
     navigates = true;
   }
   entrypoint = entrypoint.entrypoint;
-  let obj = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+  let obj = collectGuildAnalyticsMetadata;
   obj = { location: _location, section: null, application_id: null, section_name: null, query: null, search_results_position: null, source: null };
   if (application.id === BuiltInSectionId.BUILT_IN) {
     let APP = tmp(6891).ApplicationCommandTriggerSections.BUILT_IN;
@@ -76,8 +76,8 @@ export const handleViewAllSelected = function handleViewAllSelected(arg0) {
   let title;
   ({ navigation, sectionName, applications, sectionItemType, commands } = arg0);
   ({ location: _location, context, sectionOverallPosition, sectionDescriptors, title, promotedApplicationIds } = arg0);
-  let obj = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
-  obj = { section_name: sectionName, num: sectionItemType === Placeholder /* Placeholder */.SectionItemType.APPS ? applications.length : commands.length };
+  let obj = collectGuildAnalyticsMetadata;
+  obj = { section_name: sectionName, num: sectionItemType === Placeholder.SectionItemType.APPS ? applications.length : commands.length };
   obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_SECTION_VIEW_MORE, obj);
   navigation.navigate(constants.APP_LIST_VIEW, { analyticsLocation: _location, context, sectionName, sectionOverallPosition, applications, sectionItemType, commands, sectionDescriptors, title, promotedApplicationIds });
 };
@@ -263,7 +263,7 @@ export const getAppLauncherIconSource = function getAppLauncherIconSource(applic
   if (null == application) {
     let applicationIconSource = registerAsset;
   } else {
-    let obj = getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */;
+    let obj = getShelfBadgeTypeIfActive;
     const obj2 = getAvatarURL;
     if (isRealApplicationResult) {
       obj = { id: null, icon: null, bot: null, botIconFirst: false };

@@ -28,29 +28,29 @@ export const renderChannelBadge = function renderChannelBadge(newChannel) {
       let obj = { value: null, isMentionLowImportance: null };
       obj[0] = num;
       obj[1] = tmp;
-      let tmp2 = jsx(Button /* Button */.Badge, { value: null, isMentionLowImportance: null });
+      let tmp2 = jsx(Button.Badge, { value: null, isMentionLowImportance: null });
     }
     return tmp2;
   }
   if (flag) {
-    tmp2 = jsx(renderChannelBadge /* renderChannelBadge */.NewBadge, {});
+    tmp2 = jsx(renderChannelBadge.NewBadge, {});
   } else {
     if (null != newPostCount) {
       if (newPostCount > 0) {
         obj = { variant: "text-xs/bold", color: "text-brand", children: null };
-        const intl = getSystemLocale /* getSystemLocale */.intl;
+        const intl = getSystemLocale.intl;
         const obj1 = { count: null };
-        obj1[0] = shortenAndLocalizeNumber /* shortenAndLocalizeNumber */.humanizeValue(newPostCount, newChannel.locale);
-        obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t.GkAbqY, obj1);
-        tmp2 = jsx(Text /* Text */.Text, { variant: "text-xs/bold", color: "text-brand", children: null });
-        const obj5 = shortenAndLocalizeNumber /* shortenAndLocalizeNumber */;
+        obj1[0] = shortenAndLocalizeNumber.humanizeValue(newPostCount, newChannel.locale);
+        obj[2] = intl.format(getSystemLocale.t.GkAbqY, obj1);
+        tmp2 = jsx(Text.Text, { variant: "text-xs/bold", color: "text-brand", children: null });
+        const obj5 = shortenAndLocalizeNumber;
       }
     }
     if (null != postsWithUnreadsCount) {
       if (postsWithUnreadsCount > 0) {
         const obj2 = { variant: "text-xs/bold", color: "text-muted", children: null };
         obj2[2] = postsWithUnreadsCount;
-        tmp2 = jsx(Text /* Text */.Text, { variant: "text-xs/bold", color: "text-muted", children: null });
+        tmp2 = jsx(Text.Text, { variant: "text-xs/bold", color: "text-muted", children: null });
       }
     }
     tmp2 = null;
@@ -59,7 +59,7 @@ export const renderChannelBadge = function renderChannelBadge(newChannel) {
       if (eventsMentionCount > 0) {
         obj = { value: null, eventsMentionBadge: true };
         obj[0] = eventsMentionCount;
-        tmp2 = jsx(Button /* Button */.Badge, { value: null, eventsMentionBadge: true });
+        tmp2 = jsx(Button.Badge, { value: null, eventsMentionBadge: true });
       }
     }
   }

@@ -11,7 +11,7 @@ const require = arg1;
 const result = require("_handleConnectionOpen").fileFinishedImporting("modules/share/useShareSearchResults.tsx");
 
 export const makeAutocompleterSearchParams = function makeAutocompleterSearchParams(arg0) {
-  const query = trackClose /* trackClose */.getQuickSwitcherOptions(arg0);
+  const query = trackClose.getQuickSwitcherOptions(arg0);
   let queryMode = query.queryMode;
   let resultTypes = ALLOWED_TYPES;
   let hasItem = null != queryMode;

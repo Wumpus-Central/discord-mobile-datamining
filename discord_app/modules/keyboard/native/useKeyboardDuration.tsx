@@ -6,7 +6,7 @@ const result = require("computeEntryState").fileFinishedImporting("modules/keybo
 export const getKeyboardDuration = function getKeyboardDuration() {
   let DEFAULT_APP_ENTRY_KEY = arg0;
   if (arg0 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
   }
   let num = 300;
   if (!obj.isAndroid()) {

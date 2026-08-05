@@ -31,13 +31,13 @@ export default function UserProfileEditFormTextField(inputRef) {
     obj = { ref: null };
     obj[0] = inputRef;
     const merged2 = Object.assign(obj);
-    let tmp9 = jsx(TextArea /* TextArea */.TextArea, { ref: null });
+    let tmp9 = jsx(TextArea.TextArea, { ref: null });
   } else {
     obj = { ref: null };
     obj[0] = inputRef;
     const merged3 = Object.assign(obj);
     obj.isClearable = true;
-    tmp9 = jsx(TextInput /* TextInput */.TextInput, { ref: null });
+    tmp9 = jsx(TextInput.TextInput, { ref: null });
   }
   return tmp9;
 };

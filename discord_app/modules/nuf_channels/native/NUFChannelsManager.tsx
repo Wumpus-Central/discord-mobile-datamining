@@ -112,7 +112,7 @@ class NUFChannelsManager extends tmp2 {
 }
 const prototype = NUFChannelsManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const value = Storage.get(c9);
   let isNewUserResult = !value;
   if (!value) {
@@ -129,7 +129,7 @@ prototype["_initialize"] = function _initialize() {
   }
 };
 prototype["_terminate"] = function _terminate() {
-  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   if (rootNavigationRef != null) {
     const self = this;
     rootNavigationRef.removeListener("state", this.handleNavigationStateChanged);

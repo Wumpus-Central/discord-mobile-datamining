@@ -26,17 +26,17 @@ const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/na
 
 export default function EmptyState() {
   const tmp = createCacheKey();
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
   const tmp4Result = importDefault(obj.isThemeLight(useTheme()) ? 11413 : 11414);
-  const logAppLauncherEmptyStateView = handleApplicationSelected /* handleApplicationSelected */.useLogAppLauncherEmptyStateView(tmp2(9467).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
+  const logAppLauncherEmptyStateView = handleApplicationSelected.useLogAppLauncherEmptyStateView(tmp2(9467).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, resizeMode: "contain", source: tmp4Result };
   const items = [callback(closure_4, obj), ];
   const obj1 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = tmp2(1236).intl;
-  obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t.uDnXXj);
-  items[1] = callback(Text /* Text */.Text, obj1);
+  obj1[3] = intl.string(getSystemLocale.t.uDnXXj);
+  items[1] = callback(Text.Text, obj1);
   obj[1] = items;
   return callback2(closure_3, obj);
 };

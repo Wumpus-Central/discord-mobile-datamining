@@ -17,9 +17,9 @@ export const PremiumReferralTrialPill = (hasExtraMargin) => {
   let obj = { style: hasExtraMargin.hasExtraMargin ? tmp.pillParentExtraMargin : tmp.pillParent, children: null };
   obj = { style: tmp.pillContainer, children: null };
   obj = { variant: "text-xs/bold", style: tmp.text, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.Y1q7js).toUpperCase();
-  obj[1] = jsx(Text /* Text */.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.Y1q7js).toUpperCase();
+  obj[1] = jsx(Text.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
   obj[1] = <View variant="text-xs/bold" style={tmp.text}>{null}</View>;
   return <View variant="text-xs/bold" style={tmp.text}>{null}</View>;
 };

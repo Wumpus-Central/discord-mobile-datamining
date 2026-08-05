@@ -23,7 +23,7 @@ createToggle = {
   },
   useDescription: function useInternalBuildUpdateDescription() {
     const items = [checkForNewerBuild];
-    const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
+    const stateFromStores = initialize.useStateFromStores(items, () => {
       const newBuild = checkForNewerBuild.latestFetchedBuild().newBuild;
       let build;
       if (newBuild != null) {
@@ -31,9 +31,9 @@ createToggle = {
       }
       return build;
     });
-    const obj = initialize /* initialize */;
+    const obj = initialize;
     const items1 = [checkForNewerBuild];
-    const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => checkForNewerBuild.latestFetchedBuild().lastCheck);
+    const stateFromStores1 = initialize.useStateFromStores(items1, () => checkForNewerBuild.latestFetchedBuild().lastCheck);
     if (null != stateFromStores) {
       const _HermesInternal2 = HermesInternal;
       let str = "Open build " + stateFromStores + " installer in a browser";
@@ -48,8 +48,8 @@ createToggle = {
     return str;
   },
   usePredicate: function useHasInternalBuildUpdateSetting() {
-    const obj = useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */;
-    return checkForNewerBuild.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
+    const obj = useStaffOrDeveloperSettingPredicate;
+    return checkForNewerBuild.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   },
   onPress: function handleInstallNativeUpdateSettingPress() {
     const newBuild = checkForNewerBuild.latestFetchedBuild().newBuild;

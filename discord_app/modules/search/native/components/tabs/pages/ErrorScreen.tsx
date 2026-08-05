@@ -18,7 +18,7 @@ const memoResult = importAllResult.memo((text) => {
     const AccessibilityAnnouncer = text(outer1_2[5]).AccessibilityAnnouncer;
     AccessibilityAnnouncer.announce(closure_0, "polite");
   }, items);
-  obj = { style: items1, children: jsx(Text /* Text */.Text, obj) };
+  obj = { style: items1, children: jsx(Text.Text, obj) };
   items1 = [tmp.container, { paddingBottom: useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets.bottom }];
   obj = { variant: "text-sm/medium", color: "text-muted", style: tmp.text, children: text };
   return <View variant="text-sm/medium" color="text-muted" style={tmp.text}>{text}</View>;

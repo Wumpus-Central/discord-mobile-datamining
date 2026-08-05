@@ -17,7 +17,7 @@ function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChanne
     return items;
   } else {
     const type = media.type;
-    if (isMediaAttachment /* isMediaAttachment */.ForumPostMediaTypes.EMBED === type) {
+    if (isMediaAttachment.ForumPostMediaTypes.EMBED === type) {
       let obj = { type: null, media: null };
       obj[0] = tmp4(5823).ObscuredMediaTypes.Embed;
       obj[1] = media;
@@ -75,11 +75,11 @@ export const getObscureReasonForAttachment = function getObscureReasonForAttachm
   if (undefined !== flags) {
     num = flags;
   }
-  let obj = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
-  obj = { type: ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment, media: attachment };
+  let obj = getEligibleHarmTypesConfigsForContext;
+  obj = { type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: attachment };
   const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, enabledHarmTypesBitmaskForChannelAndAuthorId);
-  getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
-  obj = { type: ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment, media: attachment };
+  getEligibleHarmTypesConfigsForContext;
+  obj = { type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: attachment };
   if (mediaObscuredReasonFromBitmask.length > 0) {
     let first = mediaObscuredReasonFromBitmask[0];
   } else if (tmp4) {
@@ -94,8 +94,8 @@ export const getObscureReasonForAttachment = function getObscureReasonForAttachm
   return first;
 };
 export const getObscureReasonForEmbed = function getObscureReasonForEmbed(embed, message, flag2, getUncachedChannelPermissions) {
-  let obj = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
-  obj = { type: ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.Embed, media: embed };
+  let obj = getEligibleHarmTypesConfigsForContext;
+  obj = { type: ContentHarmTypeChannel.ObscuredMediaTypes.Embed, media: embed };
   const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, getUncachedChannelPermissions);
   const bot = message.author.bot;
   let isMediaScanPendingResult = !bot;
@@ -127,8 +127,8 @@ export const getObscureReasonForUnfurledMediaItem = function getObscureReasonFor
   if (isBot === undefined) {
     flag2 = false;
   }
-  let obj = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
-  obj = { type: ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.GenericMedia, media };
+  let obj = getEligibleHarmTypesConfigsForContext;
+  obj = { type: ContentHarmTypeChannel.ObscuredMediaTypes.GenericMedia, media };
   const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
   let isMediaScanPendingResult = !flag2;
   if (!flag2) {
@@ -138,7 +138,7 @@ export const getObscureReasonForUnfurledMediaItem = function getObscureReasonFor
     isMediaScanPendingResult = tmp(5818).isMediaScanPending(obj, enabledContentHarmTypeFlags);
     const tmpResult = tmp(5818);
   }
-  if (mediaObscuredReasonFromBitmask.includes(ObscureReason /* ObscureReason */.ObscureReason.EXPLICIT_CONTENT)) {
+  if (mediaObscuredReasonFromBitmask.includes(ObscureReason.ObscureReason.EXPLICIT_CONTENT)) {
     let EXPLICIT_CONTENT = tmp(5822).ObscureReason.EXPLICIT_CONTENT;
   } else if (mediaObscuredReasonFromBitmask.includes(tmp(5822).ObscureReason.GORE_CONTENT)) {
     EXPLICIT_CONTENT = tmp(5822).ObscureReason.GORE_CONTENT;
@@ -172,7 +172,7 @@ export const useShouldObscure = function useShouldObscure(channel) {
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplay(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 };
 export const getObscuredAlt = function getObscuredAlt(obscureReason) {
-  if (ObscureReason /* ObscureReason */.ObscureReason.EXPLICIT_CONTENT !== obscureReason) {
+  if (ObscureReason.ObscureReason.EXPLICIT_CONTENT !== obscureReason) {
     if (tmp(5822).ObscureReason.GORE_CONTENT !== obscureReason) {
       if (tmp(5822).ObscureReason.SELF_HARM_CONTENT !== obscureReason) {
         if (tmp(5822).ObscureReason.SPOILER === obscureReason) {
@@ -183,5 +183,5 @@ export const getObscuredAlt = function getObscuredAlt(obscureReason) {
     }
   }
   const intl2 = tmp(1236).intl;
-  return intl2.string(getSystemLocale /* getSystemLocale */.t.SEgHFh);
+  return intl2.string(getSystemLocale.t.SEgHFh);
 };

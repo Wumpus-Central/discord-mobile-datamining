@@ -13,7 +13,7 @@ const require = arg1;
 let closure_6 = require("module_4146").createAnimatedComponent(require("get ActivityIndicator").Pressable);
 let closure_7 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, containerRefresh: null, roundedTop: null, roundedBottom: null, border: null, pressed: null, icon: null, label: null, trailingIndicator: null };
-  obj = { padding: CONTEXT_MENU_LONG_PRESS_DURATION_MS /* CONTEXT_MENU_LONG_PRESS_DURATION_MS */.CONTEXT_MENU_ITEM_PADDING, minHeight: CONTEXT_MENU_LONG_PRESS_DURATION_MS /* CONTEXT_MENU_LONG_PRESS_DURATION_MS */.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
+  obj = { padding: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_PADDING, minHeight: CONTEXT_MENU_LONG_PRESS_DURATION_MS.CONTEXT_MENU_ITEM_BASE_HEIGHT, flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: 8 };
   obj[0] = obj;
   obj[1] = { justifyContent: "flex-start" };
   obj = { borderTopLeftRadius: Themes.radii.lg, borderTopRightRadius: Themes.radii.lg };

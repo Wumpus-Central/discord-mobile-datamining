@@ -23,19 +23,19 @@ const result = require("jsxProd").fileFinishedImporting("modules/premium/native/
 
 export default function PremiumGiftDMSuccessBody() {
   const tmp = createCacheKey();
-  let obj = NativeGiftContextProvider /* NativeGiftContextProvider */;
+  let obj = NativeGiftContextProvider;
   obj = { children: null };
   obj = { children: null };
   obj[0] = callback(PremiumGiftBackgroundAnimation, { giftStyle: obj.useNativeGiftContext().giftStyle });
   const items = [callback(View, obj), , ];
   const obj1 = { style: tmp.title, variant: "heading-lg/bold", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[2] = intl.string(getSystemLocale /* getSystemLocale */.t.MqZXbv);
-  items[1] = callback(Text /* Text */.Text, obj1);
+  const intl = getSystemLocale.intl;
+  obj1[2] = intl.string(getSystemLocale.t.MqZXbv);
+  items[1] = callback(Text.Text, obj1);
   const obj2 = { style: tmp.description, variant: "text-md/medium", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.Y1keV0);
-  items[2] = callback(Text /* Text */.Text, obj2);
+  const intl2 = getSystemLocale.intl;
+  obj2[2] = intl2.string(getSystemLocale.t.Y1keV0);
+  items[2] = callback(Text.Text, obj2);
   obj[0] = items;
   return callback2(closure_6, obj);
 };

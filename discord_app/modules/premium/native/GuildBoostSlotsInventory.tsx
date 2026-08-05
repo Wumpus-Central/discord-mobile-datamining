@@ -58,7 +58,7 @@ function GuildBoostSlotsInventoryRow(arg0) {
   let obj = { style: tmp.subscriptionSlot, children: null };
   obj = { style: tmp.subscriptionSlotInner, children: null };
   obj = { style: tmp.subscriptionSlotInfo, children: null };
-  const items = [callback(Text /* Text */.Text, { style: tmp.subscriptionSlotInfoTitle, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: title }), subtitle];
+  const items = [callback(Text.Text, { style: tmp.subscriptionSlotInfoTitle, lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: title }), subtitle];
   obj[1] = items;
   const items1 = [callback2(closure_5, obj), action];
   obj[1] = items1;
@@ -201,14 +201,14 @@ function BoostedGuildInfo(guild) {
     obj[0] = tmp.guildInfoIcon;
     obj = { guild: null, size: null, selected: false };
     obj[0] = guild;
-    obj[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.NORMAL;
+    obj[1] = GuildIconSizes.GuildIconSizes.NORMAL;
     obj[1] = callback(GuildIconSizes, obj);
     const items = [callback(closure_5, obj), ];
     const obj1 = { children: null };
     const obj2 = { style: null, variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
     obj2[0] = tmp.guildInfoName;
     obj2[3] = guild.name;
-    const items1 = [callback(Text /* Text */.Text, obj2), ];
+    const items1 = [callback(Text.Text, obj2), ];
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.guildInfoRowBottom;
     const obj4 = { source: null, style: null };
@@ -217,11 +217,11 @@ function BoostedGuildInfo(guild) {
     const items2 = [callback(closure_6, obj4), ];
     const obj5 = { style: null, variant: "text-xs/semibold", color: "interactive-text-active", children: null };
     obj5[0] = tmp.guildInfoSubscriptionCount;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj6 = { numSubscriptions: null };
     obj6[0] = guild.numGuildBoostSlots;
-    obj5[3] = intl.format(getSystemLocale /* getSystemLocale */.t.bexfNy, obj6);
-    items2[1] = callback(Text /* Text */.Text, obj5);
+    obj5[3] = intl.format(getSystemLocale.t.bexfNy, obj6);
+    items2[1] = callback(Text.Text, obj5);
     obj3[1] = items2;
     items1[1] = callback2(closure_5, obj3);
     obj1[0] = items1;
@@ -238,10 +238,10 @@ function BoostedGuild(arg0) {
   ({ guildId: require, guildBoostSlots } = arg0);
   let stateFromStores;
   const tmp = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [createGuildRecordFromRust];
   stateFromStores = obj.useStateFromStores(items, () => outer1_8.getGuild(closure_0));
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items1 = [handleThemeChange];
   let guildBannerSource = null;
   const stateFromStores1 = obj1.useStateFromStores(items1, () => theme.theme);
@@ -252,7 +252,7 @@ function BoostedGuild(arg0) {
       guildBannerSource = obj2.getGuildBannerSource(stateFromStores);
     }
   }
-  let subscriptionPlaceholderPatternSource = getSubscriptionPlaceholderPatternSource /* getSubscriptionPlaceholderPatternSource */.useSubscriptionPlaceholderPatternSource();
+  let subscriptionPlaceholderPatternSource = getSubscriptionPlaceholderPatternSource.useSubscriptionPlaceholderPatternSource();
   if (null != guildBannerSource) {
     subscriptionPlaceholderPatternSource = guildBannerSource;
   }
@@ -283,7 +283,7 @@ function BoostedGuild(arg0) {
   const obj4 = { guild: stateFromStores, numGuildBoostSlots: guildBoostSlots.length };
   const tmp12 = closure_6;
   const tmp2 = require;
-  const tmp2Result = getSubscriptionPlaceholderPatternSource /* getSubscriptionPlaceholderPatternSource */;
+  const tmp2Result = getSubscriptionPlaceholderPatternSource;
   items5[1] = closure_11(closure_5, { children: guildBoostSlots.map((guildBoostSlot) => outer1_11(outer1_17, { guild: stateFromStores, guildBoostSlot, isLast: arg1 === guildBoostSlots.length - 1 }, guildBoostSlot.id)) });
   obj[1] = items5;
   return closure_12(closure_5, obj);
@@ -329,10 +329,10 @@ export default function GuildBoostSlotsInventory() {
     const obj = callback(4604);
     const guildBoostSlots = valueResult(4181).fetchGuildBoostSlots();
   }, []);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [reset];
   const stateFromStores = obj.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items1 = [handleGuildBoostsUpdate];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => boostSlots.boostSlots);
   let obj2 = apply(stateFromStores1);

@@ -30,7 +30,7 @@ function FeatureCard(arg0) {
   obj = { style: tmp.featureIcon, children: icon() };
   const items = [callback(closure_4, obj), ];
   obj = { style: tmp.featureDescription, children: null };
-  const items1 = [callback(Text /* Text */.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header }), callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-default", children: body })];
+  const items1 = [callback(Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: header }), callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: body })];
   obj[1] = items1;
   items[1] = callback2(closure_4, obj);
   obj[1] = items;

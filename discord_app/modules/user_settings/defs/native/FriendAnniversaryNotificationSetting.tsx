@@ -5,14 +5,14 @@ import { apexExperiment } from "../../../premium/gifting/native/MobileFriendAnni
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.BVO96v);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.BVO96v);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableFriendAnniversaryNotifications.useSetting,
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["00TNo7"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["00TNo7"]);
   },
   onValueChange: require("onFriendAnniversaryNotificationSettingsChanged").onFriendAnniversaryNotificationSettingsChanged,
   usePredicate() {
@@ -21,14 +21,14 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.BVO96v);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.BVO96v);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableFriendAnniversaryNotifications.useSetting,
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["00TNo7"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["00TNo7"]);
   },
   onValueChange: require("onFriendAnniversaryNotificationSettingsChanged").onFriendAnniversaryNotificationSettingsChanged,
   usePredicate() {

@@ -134,7 +134,7 @@ obj[1] = function validation(number) {
   obj[12] = number.number().default(constants2.PLAYING).valid(constants2.PLAYING, constants2.LISTENING, constants2.WATCHING, constants2.COMPETING);
   const defaultResult1 = number.number().default(constants2.PLAYING);
   const numberResult6 = number.number();
-  obj[13] = number.number().optional().valid(StatusDisplayTypes /* StatusDisplayTypes */.StatusDisplayTypes.NAME, StatusDisplayTypes /* StatusDisplayTypes */.StatusDisplayTypes.STATE, StatusDisplayTypes /* StatusDisplayTypes */.StatusDisplayTypes.DETAILS);
+  obj[13] = number.number().optional().valid(StatusDisplayTypes.StatusDisplayTypes.NAME, StatusDisplayTypes.StatusDisplayTypes.STATE, StatusDisplayTypes.StatusDisplayTypes.DETAILS);
   const keys = obj4.keys(obj);
   obj[1] = keys.allow(null);
   return requiredResult.keys(obj);

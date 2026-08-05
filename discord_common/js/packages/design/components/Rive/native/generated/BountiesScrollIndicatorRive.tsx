@@ -25,7 +25,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       startAnimation1 = onDataBindingChange.startAnimation;
     }
-    const triggerBinding = BaseRive /* BaseRive */.useTriggerBinding("startAnimation", instance, startAnimation, startAnimation1, playIfNeeded);
+    const triggerBinding = BaseRive.useTriggerBinding("startAnimation", instance, startAnimation, startAnimation1, playIfNeeded);
     let tmpResult = tmp(4014);
     let looping;
     if (dataBinding != null) {
@@ -92,7 +92,7 @@ const forwardRefResult = importAllResult.forwardRef(function BountiesScrollIndic
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_10 ref={arg1} />;
-  return jsx(getDerivedStateFromError /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollIndicatorRive.tsx");
 

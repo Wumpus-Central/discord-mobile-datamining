@@ -13,14 +13,14 @@ import { UserSettingsAppIcons } from "../../app_icon/native/UserSettingsAppIcons
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.N4YDao);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.N4YDao);
   },
   parent: null,
   IconComponent: require("SettingsItemAppIcon"),
   useTrailing: function useAppIconSettingTrailing() {
     const obj = { dismissibleContent: null, newPremiumStyle: true };
-    obj[0] = DismissibleContent /* DismissibleContent */.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE;
+    obj[0] = DismissibleContent.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE;
     return jsx(DismissibleNewTag, { dismissibleContent: null, newPremiumStyle: true });
   },
   usePreNavigationAction: function useAppIconSettingPreNavigationAction() {
@@ -37,7 +37,7 @@ createToggle = {
     }, items1);
   },
   usePredicate() {
-    return fetchCurrentAppIcon /* fetchCurrentAppIcon */.isAppIconsSupported();
+    return fetchCurrentAppIcon.isAppIconsSupported();
   },
   screen: createToggle
 };

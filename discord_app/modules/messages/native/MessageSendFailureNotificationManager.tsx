@@ -22,10 +22,10 @@ function handleMessageSendFailure(shouldNotify) {
     if ("active" !== state.getState()) {
       let obj = NativeModules;
       obj = { category: "local", alertTitle: null, alertBody: null, userInfo: null };
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.LdlH2M);
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.xxRPOT);
+      const intl = getSystemLocale.intl;
+      obj[1] = intl.string(getSystemLocale.t.LdlH2M);
+      const intl2 = getSystemLocale.intl;
+      obj[2] = intl2.string(getSystemLocale.t.xxRPOT);
       obj = { channelId: null, messageId: null, type: null };
       obj[0] = channelId;
       obj[1] = messageId;
@@ -34,8 +34,8 @@ function handleMessageSendFailure(shouldNotify) {
       const result = obj.presentLocalNotification(obj);
     } else if (channelId !== channelId.getChannelId(guildId.getGuildId())) {
       const MESSAGE_FAILED_TO_SEND = constants.MESSAGE_FAILED_TO_SEND;
-      const notificationDuration = extractMetadataFromNotification /* extractMetadataFromNotification */.getNotificationDuration(MESSAGE_FAILED_TO_SEND);
-      const obj4 = extractMetadataFromNotification /* extractMetadataFromNotification */;
+      const notificationDuration = extractMetadataFromNotification.getNotificationDuration(MESSAGE_FAILED_TO_SEND);
+      const obj4 = extractMetadataFromNotification;
       const obj1 = { type: null, channelId: null, messageId: null, key: null, duration: null, onDismiss: null, inAppNotificationId: null };
       obj1[0] = MESSAGE_FAILED_TO_SEND;
       obj1[1] = channelId;
@@ -46,9 +46,9 @@ function handleMessageSendFailure(shouldNotify) {
         callback(table[7]).clearNotification();
       };
       const obj5 = dispatcher;
-      obj1[6] = extractMetadataFromNotification /* extractMetadataFromNotification */.generateInAppNotificationId();
+      obj1[6] = extractMetadataFromNotification.generateInAppNotificationId();
       obj5.enqueueNotification(obj1);
-      const obj7 = extractMetadataFromNotification /* extractMetadataFromNotification */;
+      const obj7 = extractMetadataFromNotification;
     }
   }
 }

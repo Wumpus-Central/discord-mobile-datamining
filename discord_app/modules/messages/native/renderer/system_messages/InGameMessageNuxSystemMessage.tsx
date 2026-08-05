@@ -21,7 +21,7 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
   if (null == application) {
     return null;
   } else {
-    let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+    let obj = getMessageAuthorWithProcessedColor;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = { username: null, usernameOnClick: null, gameName: null, urlOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
@@ -36,8 +36,8 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     obj1[2] = tmp3.linkColor;
     obj[3] = obj1;
     const obj2 = { content: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj2[0] = intl.formatToParts(getSystemLocale /* getSystemLocale */.t["92erOB"], obj);
+    const intl = getSystemLocale.intl;
+    obj2[0] = intl.formatToParts(getSystemLocale.t["92erOB"], obj);
     const merged = Object.assign(tmp(7882)(message));
     return obj2;
   }

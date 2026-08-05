@@ -32,7 +32,7 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
       tmp4 = icon;
       if (!icon.startsWith("data:")) {
         let str2 = "png";
-        if (getAvatarURL /* getAvatarURL */.SUPPORTS_WEBP) {
+        if (getAvatarURL.SUPPORTS_WEBP) {
           str2 = "webp";
         }
         let str3 = "quality=lossless";
@@ -66,8 +66,8 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
   }
 };
 export const replaceRoleIconSourceSize = function replaceRoleIconSourceSize(str) {
-  const obj = handleImageLoad /* handleImageLoad */;
-  return str.replace(/size=[0-9]+/g, "size=" + obj.getBestMediaProxySize(arg1 * handleImageLoad /* handleImageLoad */.getDevicePixelRatio()));
+  const obj = handleImageLoad;
+  return str.replace(/size=[0-9]+/g, "size=" + obj.getBestMediaProxySize(arg1 * handleImageLoad.getDevicePixelRatio()));
 };
 export const isRoleIconAssetUrl = function isRoleIconAssetUrl(str) {
   let startsWithResult = str.startsWith(closure_5);

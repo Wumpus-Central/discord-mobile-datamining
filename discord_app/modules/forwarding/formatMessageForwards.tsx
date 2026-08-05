@@ -47,7 +47,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
     obj3 = getGuild;
   }
   ({ snapshotIndex, parentMessage } = this);
-  let obj4 = resetCache /* resetCache */;
+  let obj4 = resetCache;
   const result = obj4.calendarFormatCompact(this.messageSnapshot.message.timestamp);
   const channel = obj.getChannel(this.parentMessage.channel_id);
   if (null != channel) {

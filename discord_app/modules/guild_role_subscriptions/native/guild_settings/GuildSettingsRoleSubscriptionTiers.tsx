@@ -29,27 +29,27 @@ function DraftBadge() {
   const tmp = createCacheKey();
   let obj = { style: tmp.draftBadge, children: null };
   obj = { style: tmp.draftBadgeLabel, variant: "text-xs/semibold", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.vosPk5);
-  obj[1] = callback2(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.vosPk5);
+  obj[1] = callback2(Text.Text, obj);
   return callback2(closure_7, obj);
 }
 function ArchivedBadge() {
   const tmp = createCacheKey();
   let obj = { style: tmp.archiveBadge, children: null };
   obj = { style: tmp.archiveBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.nhbtEl);
-  obj[1] = callback2(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.nhbtEl);
+  obj[1] = callback2(Text.Text, obj);
   return callback2(closure_7, obj);
 }
 function UnsavedBadge() {
   const tmp = createCacheKey();
   let obj = { style: tmp.unsavedBadge, children: null };
   obj = { style: tmp.unsavedBadgeLabel, variant: "text-xs/semibold", color: "text-overlay-light", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.aiwXeq);
-  obj[1] = callback2(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.aiwXeq);
+  obj[1] = callback2(Text.Text, obj);
   return callback2(closure_7, obj);
 }
 function Row(disabled) {

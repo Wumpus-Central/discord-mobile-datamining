@@ -4,7 +4,7 @@ import { defaultReactFn } from "MarkupMessagePreviewReactRules.tsx";
 const result = require("set").fileFinishedImporting("modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx");
 
 export const createSearchResultLinkPreviewReactRules = function createSearchResultLinkPreviewReactRules() {
-  let obj = defaultReactFn /* defaultReactFn */;
-  obj = { iconColor: "mobile-text-heading-primary", iconSize: "xs", channelIconSize: Button /* Button */.IconSizes.SMALL_14, customEmojiSize: 16 };
+  let obj = defaultReactFn;
+  obj = { iconColor: "mobile-text-heading-primary", iconSize: "xs", channelIconSize: Button.IconSizes.SMALL_14, customEmojiSize: 16 };
   return obj.createMessagePreviewReactRules(obj);
 };

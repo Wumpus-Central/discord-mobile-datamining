@@ -12,11 +12,11 @@ const result = require("GuildFeatures").fileFinishedImporting("modules/main_tabs
 
 export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpiringTrialOfferCard() {
   const items = [clearDismissUntil];
-  const stateFromStores = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => noticeType.getNoticeType());
-  const obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
-  const premiumTrialOffer = usePremiumTrialOffer /* usePremiumTrialOffer */.usePremiumTrialOffer();
+  const stateFromStores = defaultAreStatesEqual.useStateFromStores(items, () => noticeType.getNoticeType());
+  const obj = defaultAreStatesEqual;
+  const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let num = 0;
-  const obj2 = usePremiumTrialOffer /* usePremiumTrialOffer */;
+  const obj2 = usePremiumTrialOffer;
   if (null != premiumTrialOffer) {
     num = 0;
     if (null != premiumTrialOffer.expires_at) {

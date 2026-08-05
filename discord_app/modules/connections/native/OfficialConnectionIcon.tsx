@@ -32,7 +32,7 @@ export default function OfficialConnectionIcon(arg0) {
   ({ guildId, displayRoleIcon } = arg0);
   const tmp = callback3();
   let obj = { width: size, height: size };
-  let obj1 = useRoleIcon /* useRoleIcon */;
+  let obj1 = useRoleIcon;
   obj = { guildId, roleId: null, size: null };
   if (roleId == null) {
     let id;
@@ -76,16 +76,16 @@ export default function OfficialConnectionIcon(arg0) {
   items1 = [style, obj];
   const obj2 = { style: items2, size: null, source: null, color: null };
   items2 = [tmp.verifiedCheck, obj];
-  obj2[1] = Button /* Button */.Icon.Sizes.CUSTOM;
+  obj2[1] = Button.Icon.Sizes.CUSTOM;
   obj2[2] = registerAsset;
   obj2[3] = roleColor;
-  const items3 = [callback(Button /* Button */.Icon, obj2), ];
+  const items3 = [callback(Button.Icon, obj2), ];
   const obj3 = { style: items4, size: null, source: null, color: null };
   items4 = [tmp.verifiedCheck, obj];
-  obj3[1] = Button /* Button */.Icon.Sizes.CUSTOM;
+  obj3[1] = Button.Icon.Sizes.CUSTOM;
   obj3[2] = registerAsset;
   obj3[3] = PRIMARY_630;
-  items3[1] = callback(Button /* Button */.Icon, obj3);
+  items3[1] = callback(Button.Icon, obj3);
   obj1[1] = items3;
   return callback2(View, obj1);
 };

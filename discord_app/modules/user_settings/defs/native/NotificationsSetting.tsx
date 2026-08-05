@@ -5,8 +5,8 @@ import { SystemNotificationsSubLabel } from "../../notifications/native/Settings
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.HcoRu0);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.HcoRu0);
   },
   parent: null,
   IconComponent: require("BellIcon").BellIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.NOTIFICATIONS,
   getComponent() {
-    return SystemNotificationsSubLabel /* SystemNotificationsSubLabel */.default;
+    return SystemNotificationsSubLabel.default;
   }
 };
 const route = createToggle.createRoute(obj);

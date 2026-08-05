@@ -5,8 +5,8 @@ import { GuildRoleSubscriptionCancelSettingScreen } from "../../billing/native/G
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["7j5bMU"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["7j5bMU"]);
   },
   parent: require("MobileSetting").MobileSetting.PREMIUM,
   unsearchable: true,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS_CANCEL,
   getComponent() {
-    return GuildRoleSubscriptionCancelSettingScreen /* GuildRoleSubscriptionCancelSettingScreen */.default;
+    return GuildRoleSubscriptionCancelSettingScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);

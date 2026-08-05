@@ -8,13 +8,13 @@ import { ProfileCustomizationSubsection } from "../../profiles/native/ProfileCus
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["9AjdkD"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["9AjdkD"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing: function useAccountDisplayNameSettingTrailing() {
     const items = [mergeGuildAvatar];
-    return initialize /* initialize */.useStateFromStores(items, () => {
+    return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let globalName;
       if (currentUser != null) {
@@ -28,7 +28,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
-    return ProfileCustomizationSubsection /* ProfileCustomizationSubsection */.default;
+    return ProfileCustomizationSubsection.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

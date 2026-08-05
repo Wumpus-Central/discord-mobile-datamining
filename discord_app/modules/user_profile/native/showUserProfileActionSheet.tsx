@@ -8,7 +8,7 @@ import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 const require = arg1;
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   const timestamp = Date.now();
-  const IgnoreProfileSpeedbumpDisabled = explicitContentFromProto /* explicitContentFromProto */.IgnoreProfileSpeedbumpDisabled;
+  const IgnoreProfileSpeedbumpDisabled = explicitContentFromProto.IgnoreProfileSpeedbumpDisabled;
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
     const isBlockedResult = upsertRelationship.isBlocked(ignoreBlockedSpeedBump.userId);
     const isIgnoredResult = upsertRelationship.isIgnored(ignoreBlockedSpeedBump.userId);
@@ -27,7 +27,7 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
       obj.openLazy(tmp2(1959)(8706, tmp3.paths), combined, obj);
     }
   }
-  const tmp15 = asyncRequireImpl /* asyncRequireImpl */(8718, dependencyMap.paths);
+  const tmp15 = asyncRequireImpl(8718, dependencyMap.paths);
   const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
   obj = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);

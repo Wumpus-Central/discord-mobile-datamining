@@ -7,15 +7,15 @@ const require = arg1;
 let result = require("transitionTo").fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
 
 export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
-  let obj = collectThreadMetadata /* collectThreadMetadata */;
+  let obj = collectThreadMetadata;
   const result = obj.collectThreadMetadata(channel.getChannel(selectedChannelId), true);
   let _location;
   if (result != null) {
     _location = result.location;
   }
   if (_location == null) {
-    _location = transitionTo /* transitionTo */.getLastRouteChangeSource();
-    const tmpResult = transitionTo /* transitionTo */;
+    _location = transitionTo.getLastRouteChangeSource();
+    const tmpResult = transitionTo;
   }
   obj = result;
   if (result == null) {

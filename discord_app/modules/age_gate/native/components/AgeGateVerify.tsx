@@ -29,17 +29,17 @@ export default function AgeGateVerify(source) {
   let verifyTitle;
   source = source.source;
   const tmp = createCacheKey();
-  let obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+  let obj = shouldShowAgeGateForVoiceChannel;
   const ageGateVerifyContent = obj.useAgeGateVerifyContent(source);
   ({ verifyAgreementButtonText, verifyGateDescription, verifyTitle } = ageGateVerifyContent);
-  let obj1 = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  let obj1 = useAgeVerificationRunner;
   const maybePerformReactiveCheckForSource = obj1.useMaybePerformReactiveCheckForSource(source);
   obj = { top: true, style: tmp.container, children: null };
-  const items = [callback(AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */.ShieldSpotIllustration, {}), , , ];
+  const items = [callback(AccountAgeTier10LargeBadge.ShieldSpotIllustration, {}), , , ];
   obj = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: verifyTitle };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj1 = { style: tmp.body, variant: "text-md/medium", color: "interactive-text-default", children: verifyGateDescription };
-  items[2] = callback(Text /* Text */.Text, obj1);
+  items[2] = callback(Text.Text, obj1);
   let tmp7Result = null != verifyAgreementButtonText;
   if (tmp7Result) {
     const obj2 = { style: null, children: null };
@@ -51,10 +51,10 @@ export default function AgeGateVerify(source) {
       obj = { entryPoint: callback(7722).AgeVerificationModalEntryPoint.NSFW_AGE_GATE };
       const result = obj.showAgeVerificationGetStartedModal(obj);
     };
-    obj2[1] = tmp7(Button /* Button */.Button, obj3);
+    obj2[1] = tmp7(Button.Button, obj3);
     tmp7Result = tmp7(View, obj2);
   }
   items[3] = tmp7Result;
   obj[2] = items;
-  return closure_5(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return closure_5(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 };

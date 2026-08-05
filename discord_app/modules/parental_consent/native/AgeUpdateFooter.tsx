@@ -12,7 +12,7 @@ const result = require("createCacheKey").fileFinishedImporting("modules/parental
 
 export default function AgeUpdateFooter() {
   let obj = { variant: "text-md/medium", color: "text-muted", style: callback().text, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = {
     handleAgeVerifyHook() {
       let obj = callback2(7720);
@@ -21,7 +21,7 @@ export default function AgeUpdateFooter() {
     }
   };
   obj[3] = intl.format(messagesProxy.ifObbX, obj);
-  return jsx(Text /* Text */.Text, {
+  return jsx(Text.Text, {
     handleAgeVerifyHook() {
       let obj = callback2(7720);
       obj = { entryPoint: callback(7722).AgeVerificationModalEntryPoint.PARENTAL_CONSENT_LOCKOUT };

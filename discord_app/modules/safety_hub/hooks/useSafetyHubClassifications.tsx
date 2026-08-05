@@ -9,7 +9,7 @@ const result = require("SafetyHubView").fileFinishedImporting("modules/safety_hu
 
 export const useSafetyHubClassifications = function useSafetyHubClassifications() {
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
-  const stateFromStoresArray = initialize /* initialize */.useStateFromStoresArray(items, () => classifications.getClassifications());
+  const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => classifications.getClassifications());
   return stateFromStoresArray.sort((id, id2) => {
     const obj = callback(11);
     const extractTimestampResult = callback(11).extractTimestamp(id2.id);
@@ -99,5 +99,5 @@ export const useExpiredSafetyHubClassifications = function useExpiredSafetyHubCl
 };
 export const useSafetyHubAppealSignal = function useSafetyHubAppealSignal() {
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
-  return initialize /* initialize */.useStateFromStores(items, () => appealSignal.getAppealSignal());
+  return initialize.useStateFromStores(items, () => appealSignal.getAppealSignal());
 };

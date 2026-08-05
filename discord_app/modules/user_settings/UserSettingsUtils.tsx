@@ -50,7 +50,7 @@ export const b64ToProtoWithType = function b64ToProtoWithType(type, proto) {
 };
 export { b64ToProto };
 export const b64ToPreloadedUserSettingsProto = function b64ToPreloadedUserSettingsProto(settings) {
-  return b64ToProto(create /* create */.PreloadedUserSettings, settings);
+  return b64ToProto(create.PreloadedUserSettings, settings);
 };
 export const protoToB64WithType = function protoToB64WithType(arg0, favoriteGifs) {
   return 01307__.base64encode(obj[arg0].toBinary(favoriteGifs));
@@ -71,7 +71,7 @@ export const mergeTopLevelFields = function mergeTopLevelFields(ProtoClass, prot
 };
 export const mutateUserGuildSettings = function mutateUserGuildSettings(guilds) {
   if (null == guilds.guilds) {
-    const AllGuildSettings = create /* create */.AllGuildSettings;
+    const AllGuildSettings = create.AllGuildSettings;
     guilds.guilds = AllGuildSettings.create();
   }
   let tmp3 = arg1;
@@ -84,7 +84,7 @@ export const mutateUserGuildSettings = function mutateUserGuildSettings(guilds) 
     tmp3 = ZERO_STRING_GUILD_ID;
   }
   if (!(tmp3 in guilds.guilds)) {
-    const GuildSettings = create /* create */.GuildSettings;
+    const GuildSettings = create.GuildSettings;
     guilds.guilds[tmp3] = GuildSettings.create();
   }
   return arg2(guilds.guilds[tmp3]);
@@ -99,14 +99,14 @@ export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsI
     tmp = ZERO_STRING_GUILD_ID;
   }
   if (!(tmp in guilds.guilds)) {
-    const GuildSettings = create /* create */.GuildSettings;
+    const GuildSettings = create.GuildSettings;
     guilds.guilds[tmp] = GuildSettings.create();
   }
   return f69402(guilds.guilds[tmp]);
 };
 export const mutateUserChannelSettings = function mutateUserChannelSettings(guilds, arg1, id, arg3) {
   if (null == guilds.guilds) {
-    const AllGuildSettings = create /* create */.AllGuildSettings;
+    const AllGuildSettings = create.AllGuildSettings;
     guilds.guilds = AllGuildSettings.create();
   }
   let tmp3 = arg1;
@@ -119,25 +119,25 @@ export const mutateUserChannelSettings = function mutateUserChannelSettings(guil
     tmp3 = ZERO_STRING_GUILD_ID;
   }
   if (!(tmp3 in guilds.guilds)) {
-    const GuildSettings = create /* create */.GuildSettings;
+    const GuildSettings = create.GuildSettings;
     guilds.guilds[tmp3] = GuildSettings.create();
   }
   if (!(id in guilds.guilds[tmp3].channels)) {
-    const ChannelSettings = create /* create */.ChannelSettings;
+    const ChannelSettings = create.ChannelSettings;
     tmp7.channels[id] = ChannelSettings.create();
   }
   return arg3(guilds.guilds[tmp3].channels[id]);
 };
 export const mutateUserChannelSettingsInternal = function mutateUserChannelSettingsInternal(channels, closure_0, f69402) {
   if (!(closure_0 in channels.channels)) {
-    const ChannelSettings = create /* create */.ChannelSettings;
+    const ChannelSettings = create.ChannelSettings;
     channels.channels[closure_0] = ChannelSettings.create();
   }
   return f69402(channels.channels[closure_0]);
 };
 export const runMigrations = function runMigrations(closure_1, closure_2) {
   if (null == closure_1.versions) {
-    const Versions = create /* create */.Versions;
+    const Versions = create.Versions;
     closure_1.versions = Versions.create();
   }
   let num = 0;
@@ -226,7 +226,7 @@ export const serializeUsageHistory = function serializeUsageHistory(usageHistory
     let tmp9 = tmp8[1];
     let tmp10 = require;
     let tmp11 = dependencyMap;
-    let FrecencyItem = create /* create */.FrecencyItem;
+    let FrecencyItem = create.FrecencyItem;
     obj = FrecencyItem.create();
     ({ frecency: tmp12.frecency, recentUses } = tmp9);
     let found = recentUses.filter((arg0) => {

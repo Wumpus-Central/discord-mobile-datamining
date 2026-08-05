@@ -167,7 +167,7 @@ export const useSharedMediaProps = function useSharedMediaProps(arg0) {
   let channel;
   let media;
   ({ channel, media } = arg0);
-  let obj = getForumPostShouldObscure /* getForumPostShouldObscure */;
+  let obj = getForumPostShouldObscure;
   const tmp3 = callback(obj.useShouldObscure({ media, channel }), 2);
   obj = { shouldObscure: tmp3[0], obscureReason: tmp3[1], blurTheme: null, format: null };
   let str = "light";
@@ -175,7 +175,7 @@ export const useSharedMediaProps = function useSharedMediaProps(arg0) {
     str = "dark";
   }
   obj[2] = str;
-  const GifAutoPlay = explicitContentFromProto /* explicitContentFromProto */.GifAutoPlay;
+  const GifAutoPlay = explicitContentFromProto.GifAutoPlay;
   let tmp4 = "png";
   if (GifAutoPlay.useSetting()) {
     tmp4 = null;

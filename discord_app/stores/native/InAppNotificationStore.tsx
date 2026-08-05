@@ -91,7 +91,7 @@ function handleEnqueueNotification(notification) {
   let guildId;
   let messageId;
   notification = notification.notification;
-  let obj = extractMetadataFromNotification /* extractMetadataFromNotification */;
+  let obj = extractMetadataFromNotification;
   const result = obj.extractMetadataFromNotification(notification);
   ({ guildId, channelId, messageId } = result);
   const trackWithMetadata = collectGuildAnalyticsMetadata.trackWithMetadata;
@@ -125,7 +125,7 @@ function trackDismissed(type) {
   let channelId;
   let guildId;
   let messageId;
-  let obj = extractMetadataFromNotification /* extractMetadataFromNotification */;
+  let obj = extractMetadataFromNotification;
   const result = obj.extractMetadataFromNotification(type);
   ({ guildId, channelId, messageId } = result);
   obj = { type: type.type, guild_id: guildId, channel_id: channelId, message_id: messageId, dismiss_reason: "rejected_from_queue", in_app_notification_id: type.inAppNotificationId };
@@ -152,7 +152,7 @@ prototype["key"] = function key(guild) {
 };
 prototype["dismissNotification"] = function dismissNotification(guild) {
   guild = guild.guild;
-  let obj = DATE_CONFIG /* DATE_CONFIG */;
+  let obj = DATE_CONFIG;
   const incidentAlertType = obj.getIncidentAlertType(store.getGuildIncident(guild.id));
   if (null != incidentAlertType) {
     const self = this;
@@ -166,7 +166,7 @@ prototype["dismissNotification"] = function dismissNotification(guild) {
 };
 prototype["wasRecentlyDismissed"] = function wasRecentlyDismissed(guild) {
   guild = guild.guild;
-  let obj = DATE_CONFIG /* DATE_CONFIG */;
+  let obj = DATE_CONFIG;
   const incidentAlertType = obj.getIncidentAlertType(store.getGuildIncident(guild.id));
   if (null == incidentAlertType) {
     return false;
@@ -209,7 +209,7 @@ prototype2["enqueue"] = function enqueue(arg0) {
     const queue = self.queue;
     let arr = queue.shift();
     if (null != arr) {
-      let obj = extractMetadataFromNotification /* extractMetadataFromNotification */;
+      let obj = extractMetadataFromNotification;
       const result = obj.extractMetadataFromNotification(arr);
       ({ guildId, channelId, messageId } = result);
       obj = { type: null, guild_id: null, channel_id: null, message_id: null, dismiss_reason: "evicted_from_queue", in_app_notification_id: null };
@@ -272,12 +272,12 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
         tmp3 = restrictedSchedule;
       }
     }
-    let closure_25 = isOnlyDayLoss /* isOnlyDayLoss */.toScheduleSnapshot(tmp3);
+    let closure_25 = isOnlyDayLoss.toScheduleSnapshot(tmp3);
     handleAlertMessage();
   },
   LOGOUT: function handleLogout() {
     let c24 = false;
-    const EMPTY_SCHEDULE_SNAPSHOT = isOnlyDayLoss /* isOnlyDayLoss */.EMPTY_SCHEDULE_SNAPSHOT;
+    const EMPTY_SCHEDULE_SNAPSHOT = isOnlyDayLoss.EMPTY_SCHEDULE_SNAPSHOT;
     let c21 = null;
     obj1.removeAll(() => true);
   },
@@ -285,7 +285,7 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
   MESSAGE_CREATE: function handleIncomingMessage(message) {
     message = message.message;
     const channel_id = message.channel_id;
-    let obj = canViewPotentiallyNSFWChannel /* canViewPotentiallyNSFWChannel */;
+    let obj = canViewPotentiallyNSFWChannel;
     if (obj.canViewPotentiallyNSFWChannel(channel_id)) {
       let tmpResult = tmp(5853);
       if (tmpResult.shouldShowSpoilerGateForChannelId(channel_id)) {
@@ -369,12 +369,12 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
         obj[2] = triggeringUserId.numMutualGuilds;
         const _HermesInternal = HermesInternal;
         obj[3] = "message-request-" + triggeringUserId;
-        obj[4] = extractMetadataFromNotification /* extractMetadataFromNotification */.getNotificationDuration(MESSAGE_REQUEST);
+        obj[4] = extractMetadataFromNotification.getNotificationDuration(MESSAGE_REQUEST);
         obj[5] = function onDismiss() {
           callback(table[27]).clearNotification();
         };
-        const obj4 = extractMetadataFromNotification /* extractMetadataFromNotification */;
-        obj[6] = extractMetadataFromNotification /* extractMetadataFromNotification */.generateInAppNotificationId();
+        const obj4 = extractMetadataFromNotification;
+        obj[6] = extractMetadataFromNotification.generateInAppNotificationId();
         obj[0] = obj;
         handleEnqueueNotification(obj);
       }
@@ -556,7 +556,7 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
   },
   MESSAGE_REMINDER_DUE: function handleMessageReminderDue(savedMessage) {
     savedMessage = savedMessage.savedMessage;
-    let obj = ForLaterFreemiumConfig /* ForLaterFreemiumConfig */;
+    let obj = ForLaterFreemiumConfig;
     if (obj.isForLaterExperimentOn("inAppNotificationStore")) {
       if (null != savedMessage.message) {
         const channel = store2.getChannel(savedMessage.saveData.channelId);
@@ -587,7 +587,7 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
     let subtitle;
     let title;
     ({ title, subtitle } = arg0);
-    let obj = apexExperiment /* apexExperiment */;
+    let obj = apexExperiment;
     if (obj.getIsFamilyCenterV3Enabled({ location: "InAppNotificationStore" })) {
       if (obj.screenDowntimeReminder) {
         const RESTRICTED_HOURS_WARNING = constants3.RESTRICTED_HOURS_WARNING;
@@ -619,9 +619,9 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
     isInRestrictedHours = isInRestrictedHours.isInRestrictedHours;
     if (isInRestrictedHours) {
       if (null != _null) {
-        const result = extractMetadataFromNotification /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
+        const result = extractMetadataFromNotification.extractMetadataFromNotification(_null);
         ({ guildId, channelId, messageId } = result);
-        const obj2 = extractMetadataFromNotification /* extractMetadataFromNotification */;
+        const obj2 = extractMetadataFromNotification;
         let obj = { type: null, guild_id: null, channel_id: null, message_id: null, dismiss_reason: "restricted_hours", in_app_notification_id: null };
         obj[0] = _null.type;
         obj[1] = guildId;
@@ -822,14 +822,14 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
     let channelId;
     let guildId;
     let messageId;
-    let obj = shouldNotifyBase /* shouldNotifyBase */;
+    let obj = shouldNotifyBase;
     const result = obj.allowInAppNotifications();
     let flag = !result;
     if (!result) {
       if (null != _null) {
-        const result1 = extractMetadataFromNotification /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
+        const result1 = extractMetadataFromNotification.extractMetadataFromNotification(_null);
         ({ guildId, channelId, messageId } = result1);
-        const tmpResult = extractMetadataFromNotification /* extractMetadataFromNotification */;
+        const tmpResult = extractMetadataFromNotification;
         obj = { type: null, guild_id: null, channel_id: null, message_id: null, dismiss_reason: "settings_updated", in_app_notification_id: null };
         obj[0] = _null.type;
         obj[1] = guildId;
@@ -847,7 +847,7 @@ const inAppNotificationStore = new InAppNotificationStore(require("dispatcher"),
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate() {
     if (c24) {
-      let obj = apexExperiment /* apexExperiment */;
+      let obj = apexExperiment;
       if (obj.getIsFamilyCenterV3Enabled({ location: "InAppNotificationStore" })) {
         let tmpResult = tmp(9669);
         const currentUser = authStore.getCurrentUser();
@@ -918,12 +918,12 @@ let obj2 = {
         tmp3 = restrictedSchedule;
       }
     }
-    let closure_25 = isOnlyDayLoss /* isOnlyDayLoss */.toScheduleSnapshot(tmp3);
+    let closure_25 = isOnlyDayLoss.toScheduleSnapshot(tmp3);
     handleAlertMessage();
   },
   LOGOUT: function handleLogout() {
     let c24 = false;
-    const EMPTY_SCHEDULE_SNAPSHOT = isOnlyDayLoss /* isOnlyDayLoss */.EMPTY_SCHEDULE_SNAPSHOT;
+    const EMPTY_SCHEDULE_SNAPSHOT = isOnlyDayLoss.EMPTY_SCHEDULE_SNAPSHOT;
     let c21 = null;
     obj1.removeAll(() => true);
   },
@@ -931,7 +931,7 @@ let obj2 = {
   MESSAGE_CREATE: function handleIncomingMessage(message) {
     message = message.message;
     const channel_id = message.channel_id;
-    let obj = canViewPotentiallyNSFWChannel /* canViewPotentiallyNSFWChannel */;
+    let obj = canViewPotentiallyNSFWChannel;
     if (obj.canViewPotentiallyNSFWChannel(channel_id)) {
       let tmpResult = tmp(5853);
       if (tmpResult.shouldShowSpoilerGateForChannelId(channel_id)) {
@@ -1015,12 +1015,12 @@ let obj2 = {
         obj[2] = triggeringUserId.numMutualGuilds;
         const _HermesInternal = HermesInternal;
         obj[3] = "message-request-" + triggeringUserId;
-        obj[4] = extractMetadataFromNotification /* extractMetadataFromNotification */.getNotificationDuration(MESSAGE_REQUEST);
+        obj[4] = extractMetadataFromNotification.getNotificationDuration(MESSAGE_REQUEST);
         obj[5] = function onDismiss() {
           callback(table[27]).clearNotification();
         };
-        const obj4 = extractMetadataFromNotification /* extractMetadataFromNotification */;
-        obj[6] = extractMetadataFromNotification /* extractMetadataFromNotification */.generateInAppNotificationId();
+        const obj4 = extractMetadataFromNotification;
+        obj[6] = extractMetadataFromNotification.generateInAppNotificationId();
         obj[0] = obj;
         handleEnqueueNotification(obj);
       }
@@ -1202,7 +1202,7 @@ let obj2 = {
   },
   MESSAGE_REMINDER_DUE: function handleMessageReminderDue(savedMessage) {
     savedMessage = savedMessage.savedMessage;
-    let obj = ForLaterFreemiumConfig /* ForLaterFreemiumConfig */;
+    let obj = ForLaterFreemiumConfig;
     if (obj.isForLaterExperimentOn("inAppNotificationStore")) {
       if (null != savedMessage.message) {
         const channel = store2.getChannel(savedMessage.saveData.channelId);
@@ -1233,7 +1233,7 @@ let obj2 = {
     let subtitle;
     let title;
     ({ title, subtitle } = arg0);
-    let obj = apexExperiment /* apexExperiment */;
+    let obj = apexExperiment;
     if (obj.getIsFamilyCenterV3Enabled({ location: "InAppNotificationStore" })) {
       if (obj.screenDowntimeReminder) {
         const RESTRICTED_HOURS_WARNING = constants3.RESTRICTED_HOURS_WARNING;
@@ -1265,9 +1265,9 @@ let obj2 = {
     isInRestrictedHours = isInRestrictedHours.isInRestrictedHours;
     if (isInRestrictedHours) {
       if (null != _null) {
-        const result = extractMetadataFromNotification /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
+        const result = extractMetadataFromNotification.extractMetadataFromNotification(_null);
         ({ guildId, channelId, messageId } = result);
-        const obj2 = extractMetadataFromNotification /* extractMetadataFromNotification */;
+        const obj2 = extractMetadataFromNotification;
         let obj = { type: null, guild_id: null, channel_id: null, message_id: null, dismiss_reason: "restricted_hours", in_app_notification_id: null };
         obj[0] = _null.type;
         obj[1] = guildId;
@@ -1468,14 +1468,14 @@ let obj2 = {
     let channelId;
     let guildId;
     let messageId;
-    let obj = shouldNotifyBase /* shouldNotifyBase */;
+    let obj = shouldNotifyBase;
     const result = obj.allowInAppNotifications();
     let flag = !result;
     if (!result) {
       if (null != _null) {
-        const result1 = extractMetadataFromNotification /* extractMetadataFromNotification */.extractMetadataFromNotification(_null);
+        const result1 = extractMetadataFromNotification.extractMetadataFromNotification(_null);
         ({ guildId, channelId, messageId } = result1);
-        const tmpResult = extractMetadataFromNotification /* extractMetadataFromNotification */;
+        const tmpResult = extractMetadataFromNotification;
         obj = { type: null, guild_id: null, channel_id: null, message_id: null, dismiss_reason: "settings_updated", in_app_notification_id: null };
         obj[0] = _null.type;
         obj[1] = guildId;
@@ -1493,7 +1493,7 @@ let obj2 = {
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate() {
     if (c24) {
-      let obj = apexExperiment /* apexExperiment */;
+      let obj = apexExperiment;
       if (obj.getIsFamilyCenterV3Enabled({ location: "InAppNotificationStore" })) {
         let tmpResult = tmp(9669);
         const currentUser = authStore.getCurrentUser();

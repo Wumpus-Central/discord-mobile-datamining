@@ -161,10 +161,10 @@ let obj = {
     let guildId;
     let level;
     ({ guildId, level } = updateMFALevelResult);
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     let obj = { url: closure_10.GUILD_MFA(guildId), body: { level }, oldFormErrors: true, rejectWithError: null };
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj2 = sendRequest /* sendRequest */;
+    obj[3] = sendRequest.rejectWithMigratedError();
+    const obj2 = sendRequest;
     return HTTP.post(obj).then((body) => {
       let obj = callback(table[9]);
       obj = { type: "GUILD_SETTINGS_SET_MFA_SUCCESS", level: body.body.level };
@@ -338,9 +338,9 @@ let obj = {
     let obj = TrackedHTTPUtils;
     obj = { url: closure_10.GUILD(id), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { owner_id: id2, code: tmp2 };
-    obj[3] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
-    const obj1 = { event: encodeProperties /* encodeProperties */.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
-    obj[4] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[3] = { event: encodeProperties.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
+    const obj1 = { event: encodeProperties.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP, properties: obj2 };
+    obj[4] = sendRequest.rejectWithMigratedError();
     return obj.patch(obj);
   },
   sendTransferOwnershipPincode(id, arg1) {
@@ -350,16 +350,16 @@ let obj = {
     }
     let obj = TrackedHTTPUtils;
     obj = { url: closure_10.GUILD_PINCODE(id), oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { event: encodeProperties /* encodeProperties */.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: obj1 };
+    obj = { event: encodeProperties.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE, properties: obj1 };
     obj[2] = obj;
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest.rejectWithMigratedError();
     return obj.put(obj);
   },
   deleteGuild(arg0) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj = { url: closure_10.GUILD_DELETE(arg0), oldFormErrors: true, rejectWithError: null };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj2 = sendRequest /* sendRequest */;
+    obj[2] = sendRequest.rejectWithMigratedError();
+    const obj2 = sendRequest;
     return HTTP.post(obj).then(() => {
       closure_16.close();
     });
@@ -549,29 +549,29 @@ let obj = {
     });
   },
   enableIntegration(id, type, id2) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_10.GUILD_INTEGRATIONS(id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { type, id: id2 };
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   disableIntegration(id, id2) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj = { url: closure_10.GUILD_INTEGRATION(id, id2), oldFormErrors: true, rejectWithError: null };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   updateIntegration(guildId, id, expire_behavior, expire_grace_period, enable_emoticons) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_10.GUILD_INTEGRATION(guildId, id), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { expire_behavior, expire_grace_period, enable_emoticons };
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.patch(obj);
   },
   syncIntegration(guildId, id) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj = { url: closure_10.GUILD_INTEGRATION_SYNC(guildId, id), oldFormErrors: true, rejectWithError: null };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest.rejectWithMigratedError();
     HTTP.post(obj);
   },
   migratePinPermission(outer1_0) {

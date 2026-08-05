@@ -20,18 +20,18 @@ function formatMessagePreview(type, isBlocked) {
   let otherUserNick;
   if (isBlocked.isBlocked) {
     let obj = { type: "text", text: null };
-    const intl29 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl29.string(getSystemLocale /* getSystemLocale */.t.XAkOo2);
+    const intl29 = getSystemLocale.intl;
+    obj[1] = intl29.string(getSystemLocale.t.XAkOo2);
     return obj;
   } else if (tmp) {
     obj = { type: "text", text: null };
-    const intl28 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl28.string(getSystemLocale /* getSystemLocale */.t["G7p6v/"]);
+    const intl28 = getSystemLocale.intl;
+    obj[1] = intl28.string(getSystemLocale.t["G7p6v/"]);
     return obj;
   } else {
     type = type.type;
     const tmp4 = require;
-    if (set /* set */.MessageTypes.DEFAULT !== type) {
+    if (set.MessageTypes.DEFAULT !== type) {
       if (tmp4(686).MessageTypes.CHANGELOG !== type) {
         if (tmp4(686).MessageTypes.REPLY !== type) {
           if (tmp4(686).MessageTypes.CHAT_INPUT_COMMAND !== type) {
@@ -393,7 +393,7 @@ const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messag
 
 export const isMessageContentPreviewable = function isMessageContentPreviewable(messageRecord) {
   const type = messageRecord.type;
-  if (set /* set */.MessageTypes.DEFAULT !== type) {
+  if (set.MessageTypes.DEFAULT !== type) {
     if (tmp(686).MessageTypes.CHANGELOG !== type) {
       if (tmp(686).MessageTypes.REPLY !== type) {
         if (tmp(686).MessageTypes.CHAT_INPUT_COMMAND !== type) {

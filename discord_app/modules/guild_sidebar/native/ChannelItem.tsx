@@ -25,24 +25,24 @@ function getChannelMode(selected) {
   let unread;
   ({ unread, channel } = selected);
   if (selected.selected) {
-    const ChannelModes = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes;
+    const ChannelModes = BaseChannelSubtitle.ChannelModes;
     if (!isGuildVocalResult) {
       const SELECTED = ChannelModes.SELECTED;
     }
     isGuildVocalResult = channel.isGuildVocal();
   } else {
     if (tmp2) {
-      let DEFAULT = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes.LOCKED;
+      let DEFAULT = BaseChannelSubtitle.ChannelModes.LOCKED;
     } else if (tmp) {
-      DEFAULT = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes.MUTED;
+      DEFAULT = BaseChannelSubtitle.ChannelModes.MUTED;
     } else if (unread) {
       if (selected.resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES) {
-        let UNREAD_LESS_IMPORTANT = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes.UNREAD_IMPORTANT;
+        let UNREAD_LESS_IMPORTANT = BaseChannelSubtitle.ChannelModes.UNREAD_IMPORTANT;
       } else {
-        UNREAD_LESS_IMPORTANT = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes.UNREAD_LESS_IMPORTANT;
+        UNREAD_LESS_IMPORTANT = BaseChannelSubtitle.ChannelModes.UNREAD_LESS_IMPORTANT;
       }
     } else {
-      DEFAULT = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes.DEFAULT;
+      DEFAULT = BaseChannelSubtitle.ChannelModes.DEFAULT;
     }
     return DEFAULT;
   }
@@ -79,15 +79,15 @@ function ChannelIcon(arg0) {
     }
     if (tmp2) {
       let tmp12 = registerAsset;
-      let BookCheckIcon = BookCheckIcon /* BookCheckIcon */.BookCheckIcon;
+      let BookCheckIcon = BookCheckIcon.BookCheckIcon;
       let tmp9 = require;
     } else {
       tmp9 = require;
-      let obj2 = getChannelIcon /* getChannelIcon */;
+      let obj2 = getChannelIcon;
       obj2 = { isRulesChannel: false, locked: null };
       obj2[1] = locked;
       const channelIcon = obj2.getChannelIcon(channel, obj2);
-      let obj4 = getChannelIcon /* getChannelIcon */;
+      let obj4 = getChannelIcon;
       const obj3 = { isRulesChannel: false, locked: null };
       obj3[1] = locked;
       BookCheckIcon = obj4.getChannelIconComponent(channel, obj3);

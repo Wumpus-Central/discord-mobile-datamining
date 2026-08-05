@@ -19,7 +19,7 @@ function checkIdleAFK() {
       tmp2 = c12;
     }
     if (!tmp2) {
-      let obj = set /* set */;
+      let obj = set;
       tmp2 = obj.isAndroid() && c13;
       const tmp5 = obj.isAndroid() && c13;
     }
@@ -29,7 +29,7 @@ function checkIdleAFK() {
         const obj2 = dispatcher;
       }
     }
-    const AfkTimeout = explicitContentFromProto /* explicitContentFromProto */.AfkTimeout;
+    const AfkTimeout = explicitContentFromProto.AfkTimeout;
     const setting = AfkTimeout.getSetting();
     if (0 !== setting) {
       if (null == closure_3) {

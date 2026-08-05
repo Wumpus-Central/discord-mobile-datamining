@@ -27,7 +27,7 @@ export default function ChannelIndicator(arg0) {
   let unread;
   ({ unread, resolvedUnreadSetting, style } = arg0);
   const tmp = callback();
-  map /* map */;
+  map;
   if (resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES) {
     let CHANNELS_DEFAULT = Themes.colors.INTERACTIVE_TEXT_ACTIVE;
   } else {

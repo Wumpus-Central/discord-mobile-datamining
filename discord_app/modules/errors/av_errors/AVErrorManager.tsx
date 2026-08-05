@@ -26,7 +26,7 @@ function setDifference(set, set2) {
   return set;
 }
 function makeErrorKey(item10044) {
-  const obj = ErrorDefinitions /* ErrorDefinitions */.ErrorDefinitions[item10044.type];
+  const obj = ErrorDefinitions.ErrorDefinitions[item10044.type];
   let errorContextKey;
   if (obj != null) {
     errorContextKey = obj.makeErrorContextKey(item10044);
@@ -59,7 +59,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
   }
   allActiveStreams = allActiveStreams.getAllActiveStreams();
   const map = new Map();
-  const values = Object.values(ErrorDefinitions /* ErrorDefinitions */.ErrorDefinitions);
+  const values = Object.values(ErrorDefinitions.ErrorDefinitions);
   const iter = values[Symbol.iterator]();
   while (iter !== undefined) {
     let obj = { voiceChannelId: null, voiceState: null, activeStreams: null };
@@ -92,7 +92,7 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
           if (null != value) {
             let tmp29 = require;
             let tmp30 = dependencyMap;
-            let obj5 = mapped /* mapped */;
+            let obj5 = mapped;
             let tmp31 = value;
             let reportAVErrorResult = obj5.reportAVError(tmp28);
           }
@@ -133,7 +133,7 @@ prototype["handleReportAVError"] = function handleReportAVError(arg0) {
   let context;
   let error;
   ({ error, context } = arg0);
-  const result = getCurrentScreenshareCaptureMethod /* getCurrentScreenshareCaptureMethod */.sendAVErrorAnalyticsEvent(error, context);
+  const result = getCurrentScreenshareCaptureMethod.sendAVErrorAnalyticsEvent(error, context);
 };
 const aVErrorManager = new AVErrorManager();
 let tmp2 = new require("updateVoiceState")("AVErrorManager");

@@ -70,9 +70,9 @@ prototype["initialize"] = function initialize(selectedGuildTimestampMillis) {
     lastSelectedGuildId = null;
   }
   const obj = { path: null };
-  const RouteParam = RouteParam /* RouteParam */.RouteParam;
+  const RouteParam = RouteParam.RouteParam;
   obj[0] = closure_7.CHANNEL(RouteParam.guildId());
-  const matchPathResult = matchPath /* matchPath */.matchPath(initialize.lastNonVoiceRoute, obj);
+  const matchPathResult = matchPath.matchPath(initialize.lastNonVoiceRoute, obj);
   let guildId;
   if (matchPathResult != null) {
     const params = matchPathResult.params;
@@ -197,15 +197,15 @@ const selectedGuildStore = new SelectedGuildStore(require("dispatcher"), {
         })(guildId);
         if (null == tmp3) {
           c8 = null;
-          transitionTo /* transitionTo */.replaceWith(closure_7.ME);
+          transitionTo.replaceWith(closure_7.ME);
           flag = true;
-          const obj = transitionTo /* transitionTo */;
+          const obj = transitionTo;
         }
       }
       c8 = tmp3;
-      transitionTo /* transitionTo */.replaceWith(closure_7.CHANNEL(tmp3));
+      transitionTo.replaceWith(closure_7.CHANNEL(tmp3));
       flag = true;
-      const obj2 = transitionTo /* transitionTo */;
+      const obj2 = transitionTo;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -269,15 +269,15 @@ const selectedGuildStore = new SelectedGuildStore(require("dispatcher"), {
         })(id);
         if (null == tmp8) {
           c8 = null;
-          transitionTo /* transitionTo */.replaceWith(closure_7.ME);
+          transitionTo.replaceWith(closure_7.ME);
           flag = true;
-          const obj = transitionTo /* transitionTo */;
+          const obj = transitionTo;
         }
       }
       c8 = tmp8;
-      transitionTo /* transitionTo */.replaceWith(closure_7.CHANNEL(tmp8));
+      transitionTo.replaceWith(closure_7.CHANNEL(tmp8));
       flag = true;
-      const obj2 = transitionTo /* transitionTo */;
+      const obj2 = transitionTo;
     }
   },
   LOGOUT: function handleLogout() {

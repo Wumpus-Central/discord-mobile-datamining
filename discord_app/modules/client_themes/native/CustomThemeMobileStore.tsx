@@ -17,10 +17,10 @@ function reset() {
   let c4;
 }
 function handleSyncedModeChange() {
-  return isPerModeThemingActive /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
+  return isPerModeThemingActive.isPerModeThemingActive(isSyncedModeThemesEnabled);
 }
 function handleSameAsDeviceThemeToggle() {
-  return useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
+  return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
 }
 function loadFromProtoSettings() {
   if (initialize.shouldSync("appearance")) {
@@ -28,7 +28,7 @@ function loadFromProtoSettings() {
     if (null != appearance) {
       let UNSET = appearance.theme;
       if (UNSET == null) {
-        UNSET = create /* create */.Theme.UNSET;
+        UNSET = create.Theme.UNSET;
       }
       let closure_2 = PROTO_THEME_MAP_MOBILE[UNSET];
       const clientThemeSettings = appearance.clientThemeSettings;
@@ -45,7 +45,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
     if (null != appearance) {
       let UNSET = appearance.theme;
       if (UNSET == null) {
-        UNSET = create /* create */.Theme.UNSET;
+        UNSET = create.Theme.UNSET;
       }
       let closure_2 = PROTO_THEME_MAP_MOBILE[UNSET];
       const clientThemeSettings = appearance.clientThemeSettings;
@@ -57,7 +57,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
   }
 }
 function isSyncedModeThemesEnabled() {
-  return useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
+  return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
 }
 class CustomThemeMobileStore extends PersistedStore {
 }
@@ -87,7 +87,7 @@ prototype["getState"] = function getState() {
   return obj;
 };
 prototype["getCustomTheme"] = function getCustomTheme() {
-  let obj = isPerModeThemingActive /* isPerModeThemingActive */;
+  let obj = isPerModeThemingActive;
   obj = { baseTheme: null, customTheme: null };
   if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
     obj[0] = store.theme;
@@ -115,7 +115,7 @@ prototype["getCustomTheme"] = function getCustomTheme() {
   return customTheme;
 };
 prototype["getBaseTheme"] = function getBaseTheme() {
-  let obj = isPerModeThemingActive /* isPerModeThemingActive */;
+  let obj = isPerModeThemingActive;
   obj = { baseTheme: null, customTheme: null };
   if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
     obj[0] = store.theme;
@@ -179,7 +179,7 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
   }
 };
 prototype["hasCustomTheme"] = function hasCustomTheme() {
-  let obj = isPerModeThemingActive /* isPerModeThemingActive */;
+  let obj = isPerModeThemingActive;
   obj = { baseTheme: null, customTheme: null };
   if (obj.isPerModeThemingActive(isSyncedModeThemesEnabled)) {
     obj[0] = store.theme;
@@ -239,7 +239,7 @@ const customThemeMobileStore = new CustomThemeMobileStore(require("dispatcher"),
       if (null != tmp3) {
         let UNSET = tmp3.theme;
         if (UNSET == null) {
-          UNSET = create /* create */.Theme.UNSET;
+          UNSET = create.Theme.UNSET;
         }
         let closure_2 = PROTO_THEME_MAP_MOBILE[UNSET];
         const clientThemeSettings = tmp3.clientThemeSettings;

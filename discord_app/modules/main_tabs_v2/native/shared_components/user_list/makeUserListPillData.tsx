@@ -11,7 +11,7 @@ export default function makeUserListPillData(id) {
   let obj = { id: id.id, text: null, icon: null };
   obj[1] = nameFromUser.getName(id);
   obj = { user: id, guildId: "Array", size: 8 };
-  obj[2] = Button /* Button */.AvatarSizes.XXSMALL;
-  obj[2] = jsx(Button /* Button */.Avatar, { user: id, guildId: "Array", size: 8 });
+  obj[2] = Button.AvatarSizes.XXSMALL;
+  obj[2] = jsx(Button.Avatar, { user: id, guildId: "Array", size: 8 });
   return obj;
 };

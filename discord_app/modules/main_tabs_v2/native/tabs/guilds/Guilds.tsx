@@ -15,19 +15,19 @@ let c5;
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const memoResult = require("noop").memo(function GuildsOnly() {
-  let obj = trackTabPressed /* trackTabPressed */;
+  let obj = trackTabPressed;
   const trackTabPerformance = obj.useTrackTabPerformance(YouBarNavigatorScreens.GUILDS);
   const tmp3 = importDefault;
   const tmp4 = getGuildThemeName();
-  let isEligibleForQuests = getIsEligibleForQuests /* getIsEligibleForQuests */.getIsEligibleForQuests();
+  let isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   obj = { gradient: tmp4, children: null };
   const items = [callback(LeftPanelContent, {}), callback(YouBar, {}), ];
   if (isEligibleForQuests) {
     isEligibleForQuests = tmp6(tmp3(14324), {});
   }
   items[2] = isEligibleForQuests;
-  obj[1] = closure_5(QuestDockMode /* QuestDockMode */.QuestDockExternalCoordinationContextProvider, { children: items });
-  return callback(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+  obj[1] = closure_5(QuestDockMode.QuestDockExternalCoordinationContextProvider, { children: items });
+  return callback(ManaContext.ThemeContextProvider, obj);
 }, () => true);
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/Guilds.tsx");
 

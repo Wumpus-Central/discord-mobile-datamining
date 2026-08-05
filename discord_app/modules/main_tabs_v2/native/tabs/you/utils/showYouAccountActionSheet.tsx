@@ -14,5 +14,5 @@ export const showYouAccountActionSheet = function showYouAccountActionSheet() {
   if (arg1 === undefined) {
     flag2 = true;
   }
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(15364, dependencyMap.paths), closure_3, { statusOnly: flag, disableHapticOnOpen: flag2 });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(15364, dependencyMap.paths), closure_3, { statusOnly: flag, disableHapticOnOpen: flag2 });
 };

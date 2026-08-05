@@ -97,7 +97,7 @@ function isCountableChannel(channel, mentionCount, arg2) {
         }
       }
       if (!channel.isPrivate()) {
-        let result1 = useOptInEnabledForGuild /* useOptInEnabledForGuild */.isOptInEnabledForGuild(channel.guild_id);
+        let result1 = useOptInEnabledForGuild.isOptInEnabledForGuild(channel.guild_id);
         let tmp11 = null != channel.guild_id;
         if (tmp11) {
           if (result1) {
@@ -117,7 +117,7 @@ function isCountableChannel(channel, mentionCount, arg2) {
         } else if (!getUncachedChannelPermissions.can(channel.accessPermissions, channel)) {
           return false;
         }
-        const obj = useOptInEnabledForGuild /* useOptInEnabledForGuild */;
+        const obj = useOptInEnabledForGuild;
       }
       let tmp16 = num > 0;
       if (!tmp16) {
@@ -462,7 +462,7 @@ function recountGuild(guildId) {
       }
       const mutedChannels = obj11.getMutedChannels(tmp2);
       const channelOverrides = obj11.getChannelOverrides(tmp2);
-      let obj2 = useOptInEnabledForGuild /* useOptInEnabledForGuild */;
+      let obj2 = useOptInEnabledForGuild;
       const result = obj2.isOptInEnabledForGuild(tmp2);
       const mutableBasicGuildChannelsForGuild = store2.getMutableBasicGuildChannelsForGuild(tmp2);
       for (const key10034 in mutableBasicGuildChannelsForGuild) {
@@ -901,7 +901,7 @@ function handleChannelSelect(arg0) {
   let channelId;
   let guildId;
   ({ channelId, guildId } = arg0);
-  const isFavoritesGuildIdResult = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
+  const isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(guildId);
   let tmp2 = !isFavoritesGuildIdResult;
   if (!isFavoritesGuildIdResult) {
     let tmp4 = null != channelId;
@@ -955,7 +955,7 @@ function handleThreadMemberUpdate(id) {
   return recountChannels(id.guildId, items);
 }
 function handleThreadMembersUpdate(id) {
-  let result = doesThreadMembersActionAffectMe /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(id);
+  let result = doesThreadMembersActionAffectMe.doesThreadMembersActionAffectMe(id);
   if (result) {
     const items = [id.id];
     result = recountChannels(id.guildId, items);

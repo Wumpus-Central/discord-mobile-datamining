@@ -49,13 +49,13 @@ function delayUntilNavigationComplete(arg0) {
 }
 function getUrlIcon(target) {
   if (null == target) {
-    return LinkIcon /* LinkIcon */.LinkIcon;
+    return LinkIcon.LinkIcon;
   } else {
     if (null == obj.safeParseWithQuery(target)) {
-      return LinkIcon /* LinkIcon */.LinkIcon;
+      return LinkIcon.LinkIcon;
     } else {
       if (tmp10Result.isDiscordUrl(target)) {
-        return ClydeIcon /* ClydeIcon */.ClydeIcon;
+        return ClydeIcon.ClydeIcon;
       } else {
         let num = 0;
         if (0 < length.length) {
@@ -65,7 +65,7 @@ function getUrlIcon(target) {
           }
           return length[num].Icon;
         }
-        return LinkIcon /* LinkIcon */.LinkIcon;
+        return LinkIcon.LinkIcon;
       }
       tmp10Result = tmp10(1467);
     }
@@ -223,10 +223,10 @@ function fetchInitialMessages(closure_0) {
 }
 function syncAutocomplete(closure_0) {
   const queryString = store2.getQueryString(closure_0, true);
-  let obj = SearchTokenTypes /* SearchTokenTypes */;
+  let obj = SearchTokenTypes;
   const tokenizeQueryResult = obj.tokenizeQuery(queryString);
-  const selectionScope = SearchTokenTypes /* SearchTokenTypes */.getSelectionScope(tokenizeQueryResult, queryString.length - 1, queryString.length - 1);
-  const obj2 = SearchTokenTypes /* SearchTokenTypes */;
+  const selectionScope = SearchTokenTypes.getSelectionScope(tokenizeQueryResult, queryString.length - 1, queryString.length - 1);
+  const obj2 = SearchTokenTypes;
   obj = { searchContext: closure_0, tokens: tokenizeQueryResult, cursorScope: selectionScope, queryString };
   const result = SearchActionCreators.updateAutocompleteQuery(obj);
 }

@@ -32,9 +32,9 @@ export default function FamilyCenterActivityGiftRow(arg0) {
   ({ price, gifterUserId, claimed, offeredAt, claimedAt } = arg0);
   const tmp = createCacheKey();
   let product = useCollectiblesData(skuId).product;
-  let obj = useSelectedTeenUser /* useSelectedTeenUser */;
+  let obj = useSelectedTeenUser;
   const teenUserForId = obj.useTeenUserForId(gifterUserId);
-  let obj1 = getCollectibleTypeName /* getCollectibleTypeName */;
+  let obj1 = getCollectibleTypeName;
   let tmp7 = product;
   if (product == null) {
     tmp7 = null;

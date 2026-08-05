@@ -187,7 +187,7 @@ const memoResult = importAllResult.memo(function VoicePanelAudioOutputActionShee
   let isConnectedToVoiceChannel;
   let require;
   ({ channelId: require, isConnectedToVoiceChannel } = arg0);
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getChannel(closure_0));
   let tmp5Result = null;

@@ -23,7 +23,7 @@ function storeMessagePreview(id, arg1) {
     if (true) {
       let messageRecord = null;
       if (!flag2) {
-        let obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
+        let obj = createMinimalMessageRecord;
         messageRecord = obj.createMessageRecord(null);
       }
       obj = { loaded: true, error: null, message: null };
@@ -104,7 +104,7 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(require("dispa
         if (null == message) {
           let messageRecord = null;
           if (null != message) {
-            let obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
+            let obj = createMinimalMessageRecord;
             messageRecord = obj.createMessageRecord(message);
           }
           obj = { loaded: true, error: null, message: null };
@@ -130,9 +130,9 @@ const messageRequestPreviewStore = new MessageRequestPreviewStore(require("dispa
         if (null != tmp2.message) {
           const obj = {};
           const merged = Object.assign(tmp2);
-          obj.message = createMinimalMessageRecord /* createMinimalMessageRecord */.updateMessageRecord(tmp2.message, message.message);
+          obj.message = createMinimalMessageRecord.updateMessageRecord(tmp2.message, message.message);
           dependencyMap[channel_id] = obj;
-          const obj2 = createMinimalMessageRecord /* createMinimalMessageRecord */;
+          const obj2 = createMinimalMessageRecord;
         }
         tmp3 = tmp4;
       }

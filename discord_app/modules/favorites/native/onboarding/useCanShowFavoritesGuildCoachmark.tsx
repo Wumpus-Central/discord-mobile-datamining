@@ -9,13 +9,13 @@ const result = require("initialize").fileFinishedImporting("modules/favorites/na
 
 export default function useCanShowFavoritesGuildCoachmark() {
   const items = [handleConnectionOpen];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => null != voiceChannelId.getVoiceChannelId());
-  const obj = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => null != voiceChannelId.getVoiceChannelId());
+  const obj = initialize;
   const items1 = [setContent];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => open.isOpen());
-  const obj2 = initialize /* initialize */;
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => open.isOpen());
+  const obj2 = initialize;
   let tmp4 = !stateFromStores;
-  const isModalOpen = navigationToRootTabHelper /* navigationToRootTabHelper */.useIsModalOpen();
+  const isModalOpen = navigationToRootTabHelper.useIsModalOpen();
   if (!stateFromStores) {
     tmp4 = !stateFromStores1;
   }

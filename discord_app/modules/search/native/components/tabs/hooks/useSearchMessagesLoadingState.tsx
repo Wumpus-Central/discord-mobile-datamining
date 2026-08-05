@@ -16,10 +16,10 @@ export const useSearchMessagesLoadingState = function useSearchMessagesLoadingSt
   ({ searchContext: require, tab: dependencyMap } = arg0);
   let handleReaction;
   ({ placeholderHeight, numColumns } = arg0);
-  handleReaction = useFullscreenPlaceholderCount /* useFullscreenPlaceholderCount */.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
-  let obj = useFullscreenPlaceholderCount /* useFullscreenPlaceholderCount */;
+  handleReaction = useFullscreenPlaceholderCount.useFullscreenPlaceholderCount({ placeholderHeight, numColumns });
+  let obj = useFullscreenPlaceholderCount;
   const items = [prototype, handleReaction];
-  return initialize /* initialize */.useStateFromStoresObject(items, () => {
+  return initialize.useStateFromStoresObject(items, () => {
     let obj = outer1_0(outer1_1[5]);
     const searchTabFetchId = obj.getSearchTabFetchId(closure_0, closure_1, outer1_3.getSearchResultsQuery(closure_0));
     const isInitialFetchComplete = store.getIsInitialFetchComplete(searchTabFetchId);

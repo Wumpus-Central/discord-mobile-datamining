@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/premium/ReverseTria
 
 export const useIsInReverseTrial = function useIsInReverseTrial() {
   const items = [mergeGuildAvatar];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {

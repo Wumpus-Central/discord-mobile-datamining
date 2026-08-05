@@ -39,7 +39,7 @@ export default function ErrorResult(error) {
     error = intl.string(tmp3(1236).t.mqn873);
   }
   obj1[2] = error;
-  items[1] = callback(Text /* Text */.Text, obj1);
+  items[1] = callback(Text.Text, obj1);
   obj[1] = items;
   const items1 = [closure_6(closure_4, obj), ];
   let tmp6Result = null;
@@ -54,5 +54,5 @@ export default function ErrorResult(error) {
   }
   items1[1] = tmp6Result;
   obj[2] = items1;
-  return closure_6(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return closure_6(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 };

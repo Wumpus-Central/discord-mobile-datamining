@@ -51,10 +51,10 @@ function ExternalPipViewVideoUser(arg0) {
   let require;
   let speaking;
   ({ userId: require, channelId: importDefault, speaking } = arg0);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_9.getUser(closure_0));
-  initialize /* initialize */;
+  initialize;
   [][0] = ensureGuildLoaded;
   obj = { style: callback3().user, children: null };
   let tmp7Result = null;

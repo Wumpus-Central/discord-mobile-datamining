@@ -4,16 +4,16 @@ import { getSystemLocale } from "../../intl/index.native.tsx";
 import { resolveExplicitContentSettingWithDefaults } from "../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx";
 let obj = {
   getTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["Gtck/t"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Gtck/t"]);
   },
   getDisabledTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.E6UmXa);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.E6UmXa);
   },
   getDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.jcRSp6);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.jcRSp6);
   },
   eligibleReportSubtypes: null,
   onApply: null,
@@ -25,17 +25,17 @@ obj[4] = function onApply() {
   let explicitContentFriendDm;
   let explicitContentGuilds;
   let explicitContentNonFriendDm;
-  let obj = resolveExplicitContentSettingWithDefaults /* resolveExplicitContentSettingWithDefaults */;
-  const explicitContentSettingOrDefault = resolveExplicitContentSettingWithDefaults /* resolveExplicitContentSettingWithDefaults */.getExplicitContentSettingOrDefault();
+  let obj = resolveExplicitContentSettingWithDefaults;
+  const explicitContentSettingOrDefault = resolveExplicitContentSettingWithDefaults.getExplicitContentSettingOrDefault();
   obj = {};
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
-  if (explicitContentGuilds === create /* create */.ExplicitContentRedaction.SHOW) {
+  if (explicitContentGuilds === create.ExplicitContentRedaction.SHOW) {
     obj.explicitContentGuilds = tmp(1306).ExplicitContentRedaction.BLUR;
   }
-  if (explicitContentFriendDm === create /* create */.ExplicitContentRedaction.SHOW) {
+  if (explicitContentFriendDm === create.ExplicitContentRedaction.SHOW) {
     obj.explicitContentFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
   }
-  if (explicitContentNonFriendDm === create /* create */.ExplicitContentRedaction.SHOW) {
+  if (explicitContentNonFriendDm === create.ExplicitContentRedaction.SHOW) {
     obj.explicitContentNonFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
   }
   return obj.updateExplicitContentSetting(obj);
@@ -44,10 +44,10 @@ obj[5] = function predicate() {
   let explicitContentFriendDm;
   let explicitContentGuilds;
   let explicitContentNonFriendDm;
-  const explicitContentSettingOrDefault = resolveExplicitContentSettingWithDefaults /* resolveExplicitContentSettingWithDefaults */.getExplicitContentSettingOrDefault();
+  const explicitContentSettingOrDefault = resolveExplicitContentSettingWithDefaults.getExplicitContentSettingOrDefault();
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
-  const obj = resolveExplicitContentSettingWithDefaults /* resolveExplicitContentSettingWithDefaults */;
-  return explicitContentGuilds === create /* create */.ExplicitContentRedaction.SHOW || explicitContentFriendDm === create /* create */.ExplicitContentRedaction.SHOW || explicitContentNonFriendDm === create /* create */.ExplicitContentRedaction.SHOW;
+  const obj = resolveExplicitContentSettingWithDefaults;
+  return explicitContentGuilds === create.ExplicitContentRedaction.SHOW || explicitContentFriendDm === create.ExplicitContentRedaction.SHOW || explicitContentNonFriendDm === create.ExplicitContentRedaction.SHOW;
 };
 const result = require("getSystemLocale").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersSexualMedia.tsx");
 

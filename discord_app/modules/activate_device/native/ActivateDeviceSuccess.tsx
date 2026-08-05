@@ -23,20 +23,20 @@ export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) 
   let successImage;
   ({ data, successImage } = onComplete);
   if (null != data.twoWayLinkCode) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.QhATl2);
+    const intl2 = getSystemLocale.intl;
+    let stringResult = intl2.string(getSystemLocale.t.QhATl2);
   } else {
     const scopes = data.scopes;
     stringResult = null;
     if (scopes.some((arg0) => callback(table[5]).isSocialLayerUmbrellaScope(arg0))) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.vBPvK3);
+      const intl = getSystemLocale.intl;
+      stringResult = intl.string(getSystemLocale.t.vBPvK3);
     }
   }
   let tmp9 = null;
   if (null != successImage) {
     let obj = { source: null, style: null, resizeMode: "contain" };
-    let obj1 = getAvatarURL /* getAvatarURL */;
+    let obj1 = getAvatarURL;
     obj[0] = obj1.makeSource(successImage);
     obj[1] = tmp.image;
     tmp9 = callback(preload, obj);
@@ -46,9 +46,9 @@ export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) 
   obj = { style: innerContent.innerContent, children: null };
   obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
   obj[2] = innerContent.centerText;
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl3.string(getSystemLocale /* getSystemLocale */.t.qDtJmD);
-  const items1 = [callback(Text /* Text */.Text, obj), ];
+  const intl3 = getSystemLocale.intl;
+  obj[3] = intl3.string(getSystemLocale.t.qDtJmD);
+  const items1 = [callback(Text.Text, obj), ];
   let tmp18Result = null;
   if (null != stringResult) {
     obj1 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
@@ -62,9 +62,9 @@ export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) 
   items[1] = closure_5(View, obj);
   const obj3 = { size: "lg", text: null, onPress: null, grow: true };
   const intl4 = tmp19(1236).intl;
-  obj3[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
+  obj3[1] = intl4.string(getSystemLocale.t.cpT0Cq);
   obj3[2] = onComplete.onComplete;
-  items[2] = callback(Button /* Button */.Button, obj3);
+  items[2] = callback(Button.Button, obj3);
   obj2[0] = items;
   return closure_5(closure_6, obj2);
 };

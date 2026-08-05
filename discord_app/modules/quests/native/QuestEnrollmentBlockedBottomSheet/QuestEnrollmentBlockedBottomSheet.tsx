@@ -34,21 +34,21 @@ function QuestEnrollmentBlockedBottomSheet(questEnrollmentBlockedUntil) {
     obj = { style: null, children: null };
     obj[0] = tmp.heading;
     const obj1 = { variant: "heading-xl/bold", children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj1[1] = intl.string(getSystemLocale /* getSystemLocale */.t["XEHDT/"]);
-    obj[1] = jsx(Text /* Text */.Text, { variant: "heading-xl/bold", children: null });
+    const intl = getSystemLocale.intl;
+    obj1[1] = intl.string(getSystemLocale.t["XEHDT/"]);
+    obj[1] = jsx(Text.Text, { variant: "heading-xl/bold", children: null });
     obj[0] = <View style={null}>{null}</View>;
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.container;
     const obj3 = { variant: "text-md/normal", children: null };
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj4 = { countdownString: null };
     const _HermesInternal = HermesInternal;
     obj4[0] = "" + padStartResult + ":" + padStartResult1 + ":" + padStartResult2;
-    obj3[1] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["+5XVH+"], obj4);
-    obj2[1] = jsx(Text /* Text */.Text, { variant: "text-md/normal", children: null });
+    obj3[1] = intl2.formatToPlainString(getSystemLocale.t["+5XVH+"], obj4);
+    obj2[1] = jsx(Text.Text, { variant: "text-md/normal", children: null });
     obj[3] = <View style={null}>{null}</View>;
-    tmp12 = jsx(Background /* Background */.BottomSheet, { style: null, children: null });
+    tmp12 = jsx(Background.BottomSheet, { style: null, children: null });
   }
   return tmp12;
 }

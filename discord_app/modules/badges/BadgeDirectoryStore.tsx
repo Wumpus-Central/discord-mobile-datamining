@@ -241,8 +241,8 @@ const badgeDirectoryStore = new BadgeDirectoryStore(require("dispatcher"), {
           const _Date2 = Date;
           const timestamp = Date.now();
           const result1 = obj3.set(id, timestamp + value.fail());
-          const badgeDirectory = urlUserId /* urlUserId */.fetchBadgeDirectory(id);
-          const obj5 = urlUserId /* urlUserId */;
+          const badgeDirectory = urlUserId.fetchBadgeDirectory(id);
+          const obj5 = urlUserId;
           const obj6 = map2;
         }
         obj3 = map3;

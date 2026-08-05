@@ -27,5 +27,5 @@ export const ButtonGroup = function ButtonGroup(size) {
   const items = [callback().container, style];
   obj.style = items;
   obj.children = children;
-  return jsx(Stack /* Stack */.Stack, {});
+  return jsx(Stack.Stack, {});
 };

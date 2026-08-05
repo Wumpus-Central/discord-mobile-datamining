@@ -20,11 +20,11 @@ export default function setCustomStatus(arg0) {
   const trimmed = text.trim();
   if (trimmed.length <= 0) {
     if (null == emojiInfo) {
-      const CustomStatusSetting = explicitContentFromProto /* explicitContentFromProto */.CustomStatusSetting;
+      const CustomStatusSetting = explicitContentFromProto.CustomStatusSetting;
       return CustomStatusSetting.updateSetting(undefined);
     }
   }
-  const CustomStatusSetting2 = explicitContentFromProto /* explicitContentFromProto */.CustomStatusSetting;
+  const CustomStatusSetting2 = explicitContentFromProto.CustomStatusSetting;
   let str = "";
   if (trimmed.length > 0) {
     str = trimmed;

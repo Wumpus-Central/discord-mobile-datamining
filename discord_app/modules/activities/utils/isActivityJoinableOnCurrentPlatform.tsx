@@ -57,7 +57,7 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
       }
       return hasItem;
     }
-    obj = PlatformTypes /* PlatformTypes */;
+    obj = PlatformTypes;
   } else {
     return false;
   }

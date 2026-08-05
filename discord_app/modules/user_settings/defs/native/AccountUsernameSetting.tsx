@@ -12,16 +12,16 @@ import { UsernameStatusMessage } from "../../account/native/UserSettingsChangeUs
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.IEpCBQ);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.IEpCBQ);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing: function useAccountUsernameSettingTrailing() {
     const items = [mergeGuildAvatar];
-    return initialize /* initialize */.useStateFromStores(items, () => callback(table[6]).getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
+    return initialize.useStateFromStores(items, () => callback(table[6]).getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
   },
   useDescription: function useAccountUsernameSettingDescription() {
-    let obj = useCurrentUserHasAutomodQuarantinedProfile /* useCurrentUserHasAutomodQuarantinedProfile */;
+    let obj = useCurrentUserHasAutomodQuarantinedProfile;
     const guildAutomodProfileQuarantineErrors = obj.useGuildAutomodProfileQuarantineErrors();
     let first;
     if (guildAutomodProfileQuarantineErrors != null) {
@@ -34,7 +34,7 @@ createToggle = {
     if (null != first) {
       obj = { variant: "text-xs/medium", color: "text-feedback-warning", children: null };
       obj[2] = first;
-      tmp5 = jsx(Text /* Text */.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: null });
+      tmp5 = jsx(Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: null });
     }
     return tmp5;
   },
@@ -43,7 +43,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
   getComponent() {
-    return UsernameStatusMessage /* UsernameStatusMessage */.default;
+    return UsernameStatusMessage.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

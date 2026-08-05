@@ -90,7 +90,7 @@ export default function renderChannelItem(unread) {
   if (null != latestMessageTimestamp) {
     relativeTimestamp = null;
     if (!flag3) {
-      let obj = getRelativeTimestamp /* getRelativeTimestamp */;
+      let obj = getRelativeTimestamp;
       relativeTimestamp = obj.getRelativeTimestamp(latestMessageTimestamp);
     }
   }
@@ -119,8 +119,8 @@ export default function renderChannelItem(unread) {
   const tmp8 = renderChannelWrapper;
   const tmp9 = closure_10;
   if (channelName == null) {
-    channelName = computeChannelName /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
-    const obj6 = computeChannelName /* computeChannelName */;
+    channelName = computeChannelName.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    const obj6 = computeChannelName;
   }
   children[2] = ChannelContent({ name: channelName, subtitle, unread: flag, resolvedUnreadSetting: ONLY_MENTIONS, muted: flag3, lastMessageTimestampString: relativeTimestamp, channel, channelCategoryName, locked, connected, live: flag2, mentionCount, mentionBadge, isSubscriptionGated, needSubscriptionToAccess: flag4 });
   tmp11Result = null;

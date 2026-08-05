@@ -11,45 +11,45 @@ import { useUserIsTeen } from "../../../self_mod/hooks/useUserIsTeen.tsx";
 
 const pressable = createToggle.createPressable({
   useTitle: function getTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["FP+a42"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["FP+a42"]);
   },
   parent() {
     return MobileSetting.SENSITIVE_CONTENT_FILTERS;
   },
   useTrailing: function useObscuredContentGuildsSettingValue() {
-    const obj = useExplicitContentSettingOrDefault /* useExplicitContentSettingOrDefault */;
-    return redactionSettingToRenderedString /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
+    const obj = useExplicitContentSettingOrDefault;
+    return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
   },
   onPress: function onObscuredContentGuildsOnPress() {
-    let obj = resolveExplicitContentSettingWithDefaults /* resolveExplicitContentSettingWithDefaults */;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.GYpoAq);
+    let obj = resolveExplicitContentSettingWithDefaults;
+    const intl = getSystemLocale.intl;
+    const stringResult = intl.string(getSystemLocale.t.GYpoAq);
     obj = { title: stringResult, subtitle: null, handlePress: null, excluded: null, currentValue: null };
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["FP+a42"]);
+    const intl2 = getSystemLocale.intl;
+    obj[1] = intl2.string(getSystemLocale.t["FP+a42"]);
     obj[2] = function handlePress(explicitContentGuilds) {
       let obj = callback(table[5]);
       obj = { explicitContentGuilds };
       return obj.updateExplicitContentSetting(obj);
     };
-    const items = [create /* create */.ExplicitContentRedaction.BLOCK];
+    const items = [create.ExplicitContentRedaction.BLOCK];
     obj[3] = items;
     obj[4] = obj.getExplicitContentSettingOrDefault().explicitContentGuilds;
-    const result = handleSensitiveMediaFilterPress /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+    const result = handleSensitiveMediaFilterPress.handleSensitiveMediaFilterPress(obj);
   },
   useSearchTerms: function getSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t["N/oRI+"]), , ];
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.QVdYsK);
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    items[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["5mnTa7"]);
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
+    const intl2 = getSystemLocale.intl;
+    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
+    const intl3 = getSystemLocale.intl;
+    items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
     return items;
   },
   useIsDisabled() {
-    let userIsTeen = useUserIsTeen /* useUserIsTeen */.useUserIsTeen();
-    const obj = useUserIsTeen /* useUserIsTeen */;
+    let userIsTeen = useUserIsTeen.useUserIsTeen();
+    const obj = useUserIsTeen;
     if (!userIsTeen) {
       userIsTeen = obj2.useIsParentallyControlled();
     }

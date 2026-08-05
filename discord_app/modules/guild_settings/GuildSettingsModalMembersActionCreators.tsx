@@ -28,7 +28,7 @@ export default {
     }
     let obj = dispatcher;
     obj.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE" });
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_3.GUILD_MEMBER(guildId, outer1_1), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { roles };
     HTTP.patch(obj).then(onEnd, onEnd);

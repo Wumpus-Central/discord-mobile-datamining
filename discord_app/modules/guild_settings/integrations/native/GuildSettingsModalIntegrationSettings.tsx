@@ -36,29 +36,29 @@ function ForceSyncIcon(isSyncing) {
     let tmp2Result = tmp2(closure_4, { animating: true, size: "small" });
   } else {
     let obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["+Josox"]);
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t["+Josox"]);
     obj[2] = tmp;
     obj = { source: null };
     obj[0] = registerAsset;
-    obj[3] = tmp2(TableRowInner /* TableRowInner */.TableRow.Icon, obj);
-    tmp2Result = tmp2(PressableBase /* PressableBase */.PressableOpacity, obj);
+    obj[3] = tmp2(TableRowInner.TableRow.Icon, obj);
+    tmp2Result = tmp2(PressableBase.PressableOpacity, obj);
   }
   return tmp2Result;
 }
 function TwitchEmoticonsRow(integration) {
   integration = integration.integration;
   let obj = { helperText: null, hasIcons: false, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["7r4OKg"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["7r4OKg"]);
   obj = { label: null, value: null, onValueChange: null, disabled: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.bZBLBs);
+  const intl2 = getSystemLocale.intl;
+  obj[0] = intl2.string(getSystemLocale.t.bZBLBs);
   obj[1] = Boolean(integration.enable_emoticons);
   obj[2] = integration.onPress;
   obj[3] = integration.syncing;
-  obj[2] = callback(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj);
-  return callback(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[2] = callback(TableSwitchRow.TableSwitchRow, obj);
+  return callback(TableRowGroupTitle.TableRowGroup, obj);
 }
 ({ Image: c3, ActivityIndicator: c4 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);

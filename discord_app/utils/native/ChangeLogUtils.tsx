@@ -83,7 +83,7 @@ function ChangeLogParagraph(state) {
     Paragraph = components.Paragraph;
   }
   if (Paragraph == null) {
-    Paragraph = Text /* Text */.Text;
+    Paragraph = Text.Text;
   }
   const tmp = createCacheKey();
   return <Paragraph key={state.key} variant="text-sm/normal" style={createCacheKey().text}>{output(node.content, state)}</Paragraph>;
@@ -107,7 +107,7 @@ function ChangeLogBlockQuote(state) {
   let obj = { style: tmp.container, children: null };
   obj = { variant: "text-sm/normal", style: tmp.text, children: null };
   obj[2] = output(node.content, state);
-  obj[1] = jsx(Text /* Text */.Text, { variant: "text-sm/normal", style: tmp.text, children: null });
+  obj[1] = jsx(Text.Text, { variant: "text-sm/normal", style: tmp.text, children: null });
   return <closure_3 key={state.key} variant="text-sm/normal" style={tmp.text}>{null}</closure_3>;
 }
 ({ View: c3, Image: c4 } = get_ActivityIndicator);

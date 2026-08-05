@@ -8,7 +8,7 @@ const result = require("AppLauncherEntrypoint").fileFinishedImporting("modules/a
 export const useDefaultAppLauncherWidth = function useDefaultAppLauncherWidth(TEXT) {
   const width = useWindowDimensions().width;
   let bound = width;
-  if (TEXT !== AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEntrypoint.TEXT) {
+  if (TEXT !== AppLauncherEntrypoint.AppLauncherEntrypoint.TEXT) {
     const _Math = Math;
     bound = Math.min(width, ACTION_SHEET_MAX_WIDTH);
   }

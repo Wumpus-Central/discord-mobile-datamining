@@ -44,9 +44,9 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
     tmp6 = tmp4 | constants.CONTEXTLESS;
   }
   if (flag2) {
-    const AllowActivityPartyPrivacyFriends2 = explicitContentFromProto /* explicitContentFromProto */.AllowActivityPartyPrivacyFriends;
+    const AllowActivityPartyPrivacyFriends2 = explicitContentFromProto.AllowActivityPartyPrivacyFriends;
     const setting = AllowActivityPartyPrivacyFriends2.getSetting();
-    const AllowActivityPartyPrivacyVoiceChannel2 = explicitContentFromProto /* explicitContentFromProto */.AllowActivityPartyPrivacyVoiceChannel;
+    const AllowActivityPartyPrivacyVoiceChannel2 = explicitContentFromProto.AllowActivityPartyPrivacyVoiceChannel;
     const PARTY_PRIVACY_FRIENDS2 = constants.PARTY_PRIVACY_FRIENDS;
     const setting1 = AllowActivityPartyPrivacyVoiceChannel2.getSetting();
     if (setting) {
@@ -64,15 +64,15 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
   } else {
     let value = PRIVATE === constants2.PUBLIC;
     if (!value) {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       value = Storage.get("ACTIVITIES_FORCE_PUBLIC");
     }
     if (!value) {
       return tmp6;
     } else {
-      const AllowActivityPartyPrivacyFriends = explicitContentFromProto /* explicitContentFromProto */.AllowActivityPartyPrivacyFriends;
+      const AllowActivityPartyPrivacyFriends = explicitContentFromProto.AllowActivityPartyPrivacyFriends;
       const setting2 = AllowActivityPartyPrivacyFriends.getSetting();
-      const AllowActivityPartyPrivacyVoiceChannel = explicitContentFromProto /* explicitContentFromProto */.AllowActivityPartyPrivacyVoiceChannel;
+      const AllowActivityPartyPrivacyVoiceChannel = explicitContentFromProto.AllowActivityPartyPrivacyVoiceChannel;
       const PARTY_PRIVACY_FRIENDS = constants.PARTY_PRIVACY_FRIENDS;
       const setting3 = AllowActivityPartyPrivacyVoiceChannel.getSetting();
       if (setting2) {
@@ -99,7 +99,7 @@ export const isContextlessEmbeddedActivity = function isContextlessEmbeddedActiv
   if (num == null) {
     num = 0;
   }
-  let hasFlagResult = hasFlag /* hasFlag */.hasFlag(num, constants.CONTEXTLESS);
+  let hasFlagResult = hasFlag.hasFlag(num, constants.CONTEXTLESS);
   if (hasFlagResult) {
     hasFlagResult = isEmbeddedActivity(remoteApplicationActivity);
   }

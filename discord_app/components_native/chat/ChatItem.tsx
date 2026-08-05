@@ -28,7 +28,7 @@ function DCDChatItem(message) {
     const merged1 = Object.assign(merged);
     let tmp3Result = callback(_default3, obj);
   } else {
-    const AUTOMOD_INCIDENT_ACTIONS = set /* set */.MessageTypesSets.AUTOMOD_INCIDENT_ACTIONS;
+    const AUTOMOD_INCIDENT_ACTIONS = set.MessageTypesSets.AUTOMOD_INCIDENT_ACTIONS;
     if (AUTOMOD_INCIDENT_ACTIONS.has(message.type)) {
       obj = {};
       const merged2 = Object.assign(merged);

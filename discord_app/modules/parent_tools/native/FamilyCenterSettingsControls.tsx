@@ -310,7 +310,7 @@ let obj5 = { color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
 const result = require("items").fileFinishedImporting("modules/parent_tools/native/FamilyCenterSettingsControls.tsx");
 
 export default function FamilyCenterSettingsControls() {
-  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
+  let obj = useUserIdsForLinkStatus;
   if (0 === obj.useActiveLinkUserIds().length) {
     return null;
   } else {

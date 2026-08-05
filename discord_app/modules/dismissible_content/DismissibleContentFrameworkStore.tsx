@@ -69,13 +69,13 @@ prototype["getRenderedAtTimestamp"] = function getRenderedAtTimestamp(closure_0)
 };
 prototype["hasUserHitDCCap"] = function hasUserHitDCCap(PASSWORDLESS_UPSELL, closure_1) {
   if (null != PASSWORDLESS_UPSELL) {
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set /* set */.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     return false;
   }
   if (null != PASSWORDLESS_UPSELL) {
     let result = null != closure_1;
     if (result) {
-      const obj = isSingleUseDismissibleContent /* isSingleUseDismissibleContent */;
+      const obj = isSingleUseDismissibleContent;
       result = obj.isGuildDismissibleContent(PASSWORDLESS_UPSELL);
     }
     if (result) {
@@ -138,10 +138,10 @@ obj = {
     ({ dismissibleContent, guildId } = arg0);
     const renderedAtTimestamps = obj.renderedAtTimestamps;
     const result = renderedAtTimestamps.set(dismissibleContent, new Date().getTime());
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set /* set */.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = set.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(dismissibleContent)) {
       if (!obj.dailyCapOverridden) {
-        let result1 = isSingleUseDismissibleContent /* isSingleUseDismissibleContent */.isGuildDismissibleContent(dismissibleContent);
+        let result1 = isSingleUseDismissibleContent.isGuildDismissibleContent(dismissibleContent);
         if (result1) {
           result1 = null != guildId;
         }
@@ -183,7 +183,7 @@ obj = {
         } else {
           const dismissibleContentSeenDuringSession = obj.dismissibleContentSeenDuringSession;
         }
-        const tmp2Result = isSingleUseDismissibleContent /* isSingleUseDismissibleContent */;
+        const tmp2Result = isSingleUseDismissibleContent;
       }
     }
   },

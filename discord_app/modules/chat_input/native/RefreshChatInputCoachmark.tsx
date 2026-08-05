@@ -10,7 +10,7 @@ const result = require("ContentDismissActionType").fileFinishedImporting("module
 
 export default function RefreshChatInputCoachmark(buttonRef) {
   const merged = Object.assign(buttonRef, Object.create(null));
-  const coachmark = useCoachmark /* useCoachmark */.useCoachmark(buttonRef.buttonRef, merged);
+  const coachmark = useCoachmark.useCoachmark(buttonRef.buttonRef, merged);
   return null;
 };
 export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmark(disabled) {

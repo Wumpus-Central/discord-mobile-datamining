@@ -17,10 +17,10 @@ let metroImportAll;
 const require = arg1;
 function SystemNotificationsSubLabel() {
   const tmp = callback2();
-  let obj = _requestPushNotificationPermission /* _requestPushNotificationPermission */;
+  let obj = _requestPushNotificationPermission;
   let showReactivationPrompt = obj.useShowReactivationPrompt();
   let obj1 = apexExperiment;
-  let obj2 = hasAndroidNotificationChannels /* hasAndroidNotificationChannels */;
+  let obj2 = hasAndroidNotificationChannels;
   let result = obj2.hasAndroidNotificationChannels();
   if (result) {
     obj = { variant: "text-sm/medium", color: "text-muted", children: null };

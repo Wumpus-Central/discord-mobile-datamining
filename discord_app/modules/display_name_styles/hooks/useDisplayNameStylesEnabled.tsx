@@ -8,9 +8,9 @@ const result = require("initialize").fileFinishedImporting("modules/display_name
 
 export const useDisplayNameStylesEnabled = function useDisplayNameStylesEnabled(arg0) {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  let overrideSettings = initialize /* initialize */.useStateFromStores(items, () => obj.displayNameStylesEnabled);
+  let overrideSettings = initialize.useStateFromStores(items, () => obj.displayNameStylesEnabled);
   if (!overrideSettings) {
-    overrideSettings = useContext(context /* context */.DisplayNameStylesContext).overrideSettings;
+    overrideSettings = useContext(context.DisplayNameStylesContext).overrideSettings;
   }
   return overrideSettings;
 };

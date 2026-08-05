@@ -13,7 +13,7 @@ const require = arg1;
 let result = require("UNSAFE_isDismissibleContentDismissed").fileFinishedImporting("modules/video_calls/native/useOnConnectToConsole.tsx");
 
 export const onConnectToConsole = function onConnectToConsole(channel, closure_0) {
-  const result = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.DONUT_MOBILE_NUX);
+  const result = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.DONUT_MOBILE_NUX);
   if (closure_0.twoWayLink) {
     if (!closure_0.revoked) {
       tmp(10772).beginConsoleTransfer(channel, closure_0.type);
@@ -27,7 +27,7 @@ export const onConnectToConsole = function onConnectToConsole(channel, closure_0
     const items1 = [constants.CHANNEL_CALL];
     return PlayStationLinkModalActionCreators.showModal(items1, closure_0.type);
   }
-  const obj = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
+  const obj = UNSAFE_isDismissibleContentDismissed;
   tmp = require;
 };
 export const useOnConnectToConsole = function useOnConnectToConsole(channel, account) {

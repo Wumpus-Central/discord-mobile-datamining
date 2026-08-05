@@ -31,7 +31,7 @@ export const getAvailableLocales = function getAvailableLocales() {
   });
 };
 export const getLanguages = function getLanguages() {
-  return items /* items */;
+  return items;
 };
 export const getNormalizedLocale = function getNormalizedLocale(str, arg1) {
   const found = parts(1296).filter((enabled) => enabled.enabled);

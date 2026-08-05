@@ -50,17 +50,17 @@ function GuildProfileBackground(guildProfile) {
 }
 function GuildProfileGradient(guildProfile) {
   const tmp = createCacheKey();
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.BACKGROUND_BASE_LOWEST);
   const tmp2 = useTheme();
-  const profilePrimaryColor = useProfilePrimaryColor /* useProfilePrimaryColor */.useProfilePrimaryColor(guildProfile.guildProfile, token);
+  const profilePrimaryColor = useProfilePrimaryColor.useProfilePrimaryColor(guildProfile.guildProfile, token);
   obj = { style: tmp.colorBanner, start: frozen.START, end: frozen.END, colors: null };
   const items = [profilePrimaryColor, ];
-  const obj2 = useProfilePrimaryColor /* useProfilePrimaryColor */;
+  const obj2 = useProfilePrimaryColor;
   const tmp5 = closure_8;
   const tmp6 = LinearGradient;
-  const obj4 = isThemeLight /* isThemeLight */;
-  const obj5 = ManaContext /* ManaContext */;
+  const obj4 = isThemeLight;
+  const obj5 = ManaContext;
   if (isThemeDarkResult) {
     let brightenColorResult = obj5.brightenColor(profilePrimaryColor, 0.8);
   } else {
@@ -128,8 +128,8 @@ export default function GuildProfileView(guildProfile) {
 };
 export const getBackgroundForProfile = function getBackgroundForProfile(closure_2, token) {
   const items = [token, ];
-  const obj = isThemeLight /* isThemeLight */;
-  const obj2 = ManaContext /* ManaContext */;
+  const obj = isThemeLight;
+  const obj2 = ManaContext;
   if (isThemeDarkResult) {
     let brightenColorResult = obj2.brightenColor(token, 0.8);
   } else {

@@ -13,8 +13,8 @@ export const getFavoritesAwareGuildName = function getFavoritesAwareGuildName(gu
       tmp2 = id === FAVORITES;
     }
     if (tmp2) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      let name = intl.string(getSystemLocale /* getSystemLocale */.t.wMWyci);
+      const intl = getSystemLocale.intl;
+      let name = intl.string(getSystemLocale.t.wMWyci);
     } else {
       name = guild.name;
     }

@@ -8,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/stage_channe
 
 export default function useMyCurrentStageChannel() {
   const items = [handleConnectionOpen, ensureGuildLoaded];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     voiceChannelId = voiceChannelId.getVoiceChannelId();
     if (null != voiceChannelId) {
       channel = channel.getChannel(voiceChannelId);

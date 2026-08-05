@@ -83,9 +83,9 @@ export default function DevToolsAgeVerificationScreen() {
   obj[1] = items;
   obj = { title: "Quick Actions", hasIcons: true, children: null };
   const obj1 = { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: null, trailing: null };
-  obj1[2] = callback2(KeyIcon /* KeyIcon */.KeyIcon, {});
-  obj1[3] = callback2(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
-  const items1 = [callback2(TableRowInner /* TableRowInner */.TableRow, obj1), ];
+  obj1[2] = callback2(KeyIcon.KeyIcon, {});
+  obj1[3] = callback2(TableRowArrow.TableRowArrow, {});
+  const items1 = [callback2(TableRowInner.TableRow, obj1), ];
   const obj2 = {
     label: "Launch Age Verification Modal",
     onPress() {
@@ -96,10 +96,10 @@ export default function DevToolsAgeVerificationScreen() {
     icon: null,
     trailing: null
   };
-  obj2[2] = callback2(KeyIcon /* KeyIcon */.KeyIcon, {});
-  obj2[3] = callback2(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
-  items1[1] = callback2(TableRowInner /* TableRowInner */.TableRow, obj2);
+  obj2[2] = callback2(KeyIcon.KeyIcon, {});
+  obj2[3] = callback2(TableRowArrow.TableRowArrow, {});
+  items1[1] = callback2(TableRowInner.TableRow, obj2);
   obj[2] = items1;
-  obj[2] = callback3(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  obj[2] = callback3(TableRowGroupTitle.TableRowGroup, obj);
   return callback2(ScrollView, obj);
 };

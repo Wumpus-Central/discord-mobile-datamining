@@ -148,7 +148,7 @@ let obj = {
     }
     const canUseMultiAccountNotifications = obj.canUseMultiAccountNotifications;
     tmp4.log("Registering push notification token: " + token + ", is voip:" + flag + ", multi-account:" + canUseMultiAccountNotifications);
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const result = Storage.set(flag ? closure_8 : closure_7, token);
     if (canUseMultiAccountNotifications) {
       const self = this;
@@ -262,7 +262,7 @@ let obj = {
     obj = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
     obj = { provider: callback2(), token };
     obj[1] = obj;
-    obj[2] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
+    obj[2] = { event: encodeProperties.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
     return obj.delete(obj);
   }
 };

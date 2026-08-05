@@ -31,8 +31,8 @@ export const CutoutBackgroundProvider = function CutoutBackgroundProvider(childr
     let value = token;
     if (1 !== obj2.alpha()) {
       if (null != context) {
-        value = flattenColorOverOpaqueBackground /* flattenColorOverOpaqueBackground */.flattenColorOverOpaqueBackground(token, context);
-        const tmp6Result = flattenColorOverOpaqueBackground /* flattenColorOverOpaqueBackground */;
+        value = flattenColorOverOpaqueBackground.flattenColorOverOpaqueBackground(token, context);
+        const tmp6Result = flattenColorOverOpaqueBackground;
       }
     }
     obj2 = n(token);

@@ -985,7 +985,7 @@ prototype["clearCall"] = function clearCall(channelId) {
 };
 prototype["startRingtone"] = function startRingtone() {
   const self = this;
-  let isMetaQuestResult = isMetaQuest /* isMetaQuest */.isMetaQuest();
+  let isMetaQuestResult = isMetaQuest.isMetaQuest();
   if (isMetaQuestResult) {
     isMetaQuestResult = null == self.ringtone;
   }
@@ -995,10 +995,10 @@ prototype["startRingtone"] = function startRingtone() {
       disableSounds = soundDisabled.isSoundDisabled("call_ringing");
     }
     if (!disableSounds) {
-      self.ringtone = createSoundForPack /* createSoundForPack */.createSoundForPack("call_ringing", soundpack.getSoundpack());
+      self.ringtone = createSoundForPack.createSoundForPack("call_ringing", soundpack.getSoundpack());
       const ringtone = self.ringtone;
       ringtone.loop();
-      const tmpResult = createSoundForPack /* createSoundForPack */;
+      const tmpResult = createSoundForPack;
     }
   }
 };

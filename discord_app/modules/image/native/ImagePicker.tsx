@@ -15,7 +15,7 @@ export default {
     if ("any" !== mediaType.mediaType) {
       let str = mediaType.mediaType;
     } else {
-      let obj = set /* set */;
+      let obj = set;
       str = "mixed";
     }
     let selections = mediaType.selections;
@@ -27,7 +27,7 @@ export default {
       str2 = "pageSheet";
     }
     let tmp4Result = tmp4(4839);
-    obj2 = set /* set */;
+    obj2 = set;
     const tmp3 = !mediaType.disableNewIOSPicker;
     tmp4Result = tmp4(4840);
     obj = {};
@@ -75,7 +75,7 @@ export default {
     });
   },
   launchCamera(arg0, arg1) {
-    launchCamera /* launchCamera */.launchCamera(arg0, arg1);
+    launchCamera.launchCamera(arg0, arg1);
   },
   launchCameraAsync(arg0) {
     let closure_0 = arg0;
@@ -109,21 +109,21 @@ export default {
     const semanticColor5 = internal6.resolveSemanticColor(theme, Themes.colors.TEXT_DEFAULT);
     let obj = openPicker;
     obj = { mediaType: "photo", path: uri, width, height, includeBase64, mimeType, freeStyleCropEnabled, cropperStatusBarLight: theme === ThemeTypes.LIGHT, cropperNavigationBarLight: theme === ThemeTypes.LIGHT, cropperActiveWidgetColor: semanticColor2, cropperInactiveWidgetColor: semanticColor3, cropperControlsColor: semanticColor1, cropperControlsBarColor: semanticColor, cropperChooseColor: semanticColor4, cropperChooseText: null, cropperCancelColor: null, cropperCancelText: null, cropperToolbarColor: null, cropperToolbarWidgetColor: null, cropperToolbarTitle: null, cropperRotateByAngleAccessibilityLabel: null, cropperResetRotationAccessibilityLabel: null, cropperClampButtonAccessibilityLabel: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[14] = intl.string(getSystemLocale /* getSystemLocale */.t["1Qm822"]);
+    const intl = getSystemLocale.intl;
+    obj[14] = intl.string(getSystemLocale.t["1Qm822"]);
     obj[15] = semanticColor5;
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[16] = intl2.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
+    const intl2 = getSystemLocale.intl;
+    obj[16] = intl2.string(getSystemLocale.t["ETE/oC"]);
     obj[17] = semanticColor;
     obj[18] = semanticColor2;
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    obj[19] = intl3.string(getSystemLocale /* getSystemLocale */.t.b0y3DL);
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    obj[20] = intl4.string(getSystemLocale /* getSystemLocale */.t.Izf9u1);
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    obj[21] = intl5.string(getSystemLocale /* getSystemLocale */.t.iz4w1M);
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
-    obj[22] = intl6.string(getSystemLocale /* getSystemLocale */.t.QHvDTL);
+    const intl3 = getSystemLocale.intl;
+    obj[19] = intl3.string(getSystemLocale.t.b0y3DL);
+    const intl4 = getSystemLocale.intl;
+    obj[20] = intl4.string(getSystemLocale.t.Izf9u1);
+    const intl5 = getSystemLocale.intl;
+    obj[21] = intl5.string(getSystemLocale.t.iz4w1M);
+    const intl6 = getSystemLocale.intl;
+    obj[22] = intl6.string(getSystemLocale.t.QHvDTL);
     return obj.openCropper(obj);
   }
 };

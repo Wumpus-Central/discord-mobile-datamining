@@ -33,19 +33,19 @@ export default {
       obj = {};
     } else {
       obj = { inlineAttachmentMedia: null, inlineEmbedMedia: null, renderEmbeds: null, renderReactions: null, animateEmoji: null, animateStickers: null, gifAutoPlay: null };
-      const InlineAttachmentMedia = explicitContentFromProto /* explicitContentFromProto */.InlineAttachmentMedia;
+      const InlineAttachmentMedia = explicitContentFromProto.InlineAttachmentMedia;
       obj[0] = InlineAttachmentMedia.getSetting();
-      const InlineEmbedMedia = explicitContentFromProto /* explicitContentFromProto */.InlineEmbedMedia;
+      const InlineEmbedMedia = explicitContentFromProto.InlineEmbedMedia;
       obj[1] = InlineEmbedMedia.getSetting();
-      const RenderEmbeds = explicitContentFromProto /* explicitContentFromProto */.RenderEmbeds;
+      const RenderEmbeds = explicitContentFromProto.RenderEmbeds;
       obj[2] = RenderEmbeds.getSetting();
-      const RenderReactions = explicitContentFromProto /* explicitContentFromProto */.RenderReactions;
+      const RenderReactions = explicitContentFromProto.RenderReactions;
       obj[3] = RenderReactions.getSetting();
-      const AnimateEmoji = explicitContentFromProto /* explicitContentFromProto */.AnimateEmoji;
+      const AnimateEmoji = explicitContentFromProto.AnimateEmoji;
       obj[4] = AnimateEmoji.getSetting();
-      const AnimateStickers = explicitContentFromProto /* explicitContentFromProto */.AnimateStickers;
+      const AnimateStickers = explicitContentFromProto.AnimateStickers;
       obj[5] = AnimateStickers.getSetting();
-      const GifAutoPlay = explicitContentFromProto /* explicitContentFromProto */.GifAutoPlay;
+      const GifAutoPlay = explicitContentFromProto.GifAutoPlay;
       obj[6] = GifAutoPlay.getSetting();
     }
     obj[1] = obj;

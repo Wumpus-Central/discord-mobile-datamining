@@ -74,16 +74,16 @@ const prototype = UserSettingsPremiumGuildSubscriptions.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
   if (!this.props.hasFetchedSlots) {
-    const guildBoostSlots = _fetchAppliedGuildBoostsForGuild /* _fetchAppliedGuildBoostsForGuild */.fetchGuildBoostSlots();
-    const obj = _fetchAppliedGuildBoostsForGuild /* _fetchAppliedGuildBoostsForGuild */;
+    const guildBoostSlots = _fetchAppliedGuildBoostsForGuild.fetchGuildBoostSlots();
+    const obj = _fetchAppliedGuildBoostsForGuild;
   }
   if (tmp4) {
-    const premiumSubscriptionPlans = fetchSubscriptionPlansForSKU /* fetchSubscriptionPlansForSKU */.fetchPremiumSubscriptionPlans();
-    const obj2 = fetchSubscriptionPlansForSKU /* fetchSubscriptionPlansForSKU */;
+    const premiumSubscriptionPlans = fetchSubscriptionPlansForSKU.fetchPremiumSubscriptionPlans();
+    const obj2 = fetchSubscriptionPlansForSKU;
   }
   if (!self.props.isFetchingPaymentSources) {
-    const paymentSources = _deletePaymentSource /* _deletePaymentSource */.fetchPaymentSources();
-    const obj3 = _deletePaymentSource /* _deletePaymentSource */;
+    const paymentSources = _deletePaymentSource.fetchPaymentSources();
+    const obj3 = _deletePaymentSource;
   }
 };
 prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscriptions() {
@@ -98,16 +98,16 @@ prototype["renderPremiumGuildSubscriptions"] = function renderPremiumGuildSubscr
     const items = [, ];
     ({ blurb: arr[0], blurbNotLast: arr[1] } = tmp);
     obj[0] = items;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.GwnFO5);
-    const items1 = [callback(Text /* Text */.Text, obj), , ];
+    const intl = getSystemLocale.intl;
+    obj[3] = intl.string(getSystemLocale.t.GwnFO5);
+    const items1 = [callback(Text.Text, obj), , ];
     obj = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
     obj[0] = tmp.blurb;
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj1 = { helpdeskArticle: null };
     obj1[0] = combined.getArticleURL(constants.GUILD_SUBSCRIPTIONS);
-    obj[3] = intl2.format(getSystemLocale /* getSystemLocale */.t.A4UTjH, obj1);
-    items1[1] = callback(Text /* Text */.Text, obj);
+    obj[3] = intl2.format(getSystemLocale.t.A4UTjH, obj1);
+    items1[1] = callback(Text.Text, obj);
     let tmp6Result = null != externalManagementMessage;
     if (tmp6Result) {
       const obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
@@ -140,7 +140,7 @@ prototype["render"] = function render() {
   const props = this.props;
   ({ fractionalState, isInReverseTrial } = props);
   ({ hasFetchedSubscriptionPlans, hasAvailableSlots, fpDurationText, premiumGroupRole } = props);
-  if (premiumGroupRole === create /* create */.PremiumSubscriptionGroupRole.MEMBER) {
+  if (premiumGroupRole === create.PremiumSubscriptionGroupRole.MEMBER) {
     let obj = { style: null };
     obj[0] = tmp.boostingUnavailablePill;
     let tmp5 = callback(handlePress, obj);
@@ -157,7 +157,7 @@ prototype["render"] = function render() {
   obj = { style: tmp.scroller, children: null };
   const items = [tmp5, self.renderPremiumGuildSubscriptions(), ];
   const obj1 = { style: tmp.upsellSection, children: null };
-  const items1 = [callback(getTopPatternSource /* getTopPatternSource */.TopPattern, { style: tmp.background }), ];
+  const items1 = [callback(getTopPatternSource.TopPattern, { style: tmp.background }), ];
   let tmp13Result = null;
   if (hasFetchedSubscriptionPlans) {
     const obj3 = { onLearnMorePremium: null, fractionalState: null, isInReverseTrial: null, hasAvailableSlots: null };

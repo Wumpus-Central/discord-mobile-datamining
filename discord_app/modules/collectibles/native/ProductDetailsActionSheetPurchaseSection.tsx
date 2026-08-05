@@ -222,7 +222,7 @@ function PurchaseDisclaimer(arg0) {
   let product;
   ({ product, buyButtonLabel } = arg0);
   let obj = { style: createCacheKey().disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: null };
-  let formatResult = product.type !== CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.EXTERNAL_SKU;
+  let formatResult = product.type !== CollectiblesItemType.CollectiblesItemType.EXTERNAL_SKU;
   if (formatResult) {
     const intl = tmp3(1236).intl;
     obj = { buyButtonLabel: null, paidServiceTermURL: null };
@@ -231,7 +231,7 @@ function PurchaseDisclaimer(arg0) {
     formatResult = intl.format(tmp3(1236).t.iIglwJ, obj);
   }
   obj[3] = formatResult;
-  return closure_16(Text /* Text */.Text, obj);
+  return closure_16(Text.Text, obj);
 }
 ({ EXTERNAL_PRODUCT_SKU_IDS: metroImportAll, ShopCtaEnum: c9 } = items);
 ({ HelpdeskArticles: c10, MarketingURLs: unpackModuleId, UserSettingsSections: closure_12 } = ME);
@@ -277,33 +277,33 @@ export default function ProductDetailsActionSheetPurchaseSection(onBuy) {
   let handleClaim;
   const tmp = createCacheKey();
   const tmp5 = require;
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   const isThemeDarkResult = obj.isThemeDark(onTrackPress(4221)());
-  let obj1 = map /* map */;
+  let obj1 = map;
   const token = obj1.useToken(onTrackPress(712).colors.MOBILE_ACTIONSHEET_BACKGROUND);
-  let obj2 = useCurrentUser /* useCurrentUser */;
+  let obj2 = useCurrentUser;
   const currentUser = obj2.useCurrentUser();
-  let obj3 = getProductPurchaseState /* getProductPurchaseState */;
+  let obj3 = getProductPurchaseState;
   const productPurchaseState = obj3.useProductPurchaseState(product);
   ({ isPurchased, isPartiallyOwnedBundle } = productPurchaseState);
-  let obj4 = initialize /* initialize */;
+  let obj4 = initialize;
   let items = [map];
   const items1 = [product];
-  let obj5 = useIsPremiumSubscriber /* useIsPremiumSubscriber */;
+  let obj5 = useIsPremiumSubscriber;
   const isPremiumSubscriber = obj5.useIsPremiumSubscriber(TIER_2.TIER_2);
   let obj6 = onTrackPress(3931);
   const canUseShopDiscountsResult = obj6.canUseShopDiscounts(currentUser);
-  let obj7 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
+  let obj7 = getItemRecordsFromPurchases;
   const result = obj7.isPremiumCollectiblesProduct(product);
-  let obj8 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
+  let obj8 = getItemRecordsFromPurchases;
   const result1 = obj8.isFreeCollectiblesProduct(product);
-  let obj9 = getProductOrbPrice /* getProductOrbPrice */;
+  let obj9 = getProductOrbPrice;
   const result2 = obj9.isOrbsExclusiveProduct(product);
   let obj10 = index;
   const balance = obj10.useFetchVirtualCurrencyBalance().balance;
-  let obj11 = useVirtualCurrencyData /* useVirtualCurrencyData */;
+  let obj11 = useVirtualCurrencyData;
   const canAfford = obj11.useVirtualCurrencyData(product, canUseShopDiscountsResult).canAfford;
-  let obj12 = useHandleUseNow /* useHandleUseNow */;
+  let obj12 = useHandleUseNow;
   const handleUseNow = obj12.useHandleUseNow({ product, analyticsLocations });
   ({ handleUseNow: c2, handleEditProfile: c3 } = handleUseNow);
   ({ isApplying, canUseNow } = handleUseNow);

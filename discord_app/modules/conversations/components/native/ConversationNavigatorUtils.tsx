@@ -4,12 +4,12 @@ import { transitionToChannel } from "../../../routing/transitionToChannel.tsx";
 const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorUtils.tsx");
 
 export const closeConversationsAndJumpToMessage = function closeConversationsAndJumpToMessage(channelId, id) {
-  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   if (rootNavigationRef != null) {
     rootNavigationRef.goBack();
   }
-  const obj = getRootNavigationRef /* getRootNavigationRef */;
+  const obj = getRootNavigationRef;
   const tmp = require;
-  transitionToChannel /* transitionToChannel */.transitionToMessage(channelId, id, { navigationReplace: true });
+  transitionToChannel.transitionToMessage(channelId, id, { navigationReplace: true });
 };
 export const ConversationNavigatorScreens = { LIST: "conversation_list", FOCUS: "conversation_focus" };

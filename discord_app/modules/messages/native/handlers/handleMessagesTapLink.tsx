@@ -32,7 +32,7 @@ function handleMessagesTapURLLink(data, channelId) {
     const node = data.node;
     let flag2 = false;
     if (null != node) {
-      let obj = isLinkTrusted /* isLinkTrusted */;
+      let obj = isLinkTrusted;
       flag2 = false;
       if (obj.isLinkTrusted(node)) {
         const payload = parseQuery(tmp).payload;
@@ -75,7 +75,7 @@ function handleMessagesTapURLLink(data, channelId) {
         }
         obj = { gameId: null, source: null, sourceUserId: null, gameProfileModalChecks: null };
         obj[0] = gameId;
-        obj[1] = GameProfileEmbedAction /* GameProfileEmbedAction */.GameProfileSources.Deeplink;
+        obj[1] = GameProfileEmbedAction.GameProfileSources.Deeplink;
         obj[2] = tmp13;
         obj = { shouldOpenGameProfile: true, gameId: null };
         obj[1] = gameId;
@@ -98,9 +98,9 @@ function handleMessagesTapURLLink(data, channelId) {
       obj1[1] = isLinkTrustedResult;
       obj1[2] = data.messageId;
       obj1[3] = channelId;
-      isLinkTrusted /* isLinkTrusted */.handleClick(obj1);
+      isLinkTrusted.handleClick(obj1);
       flag = true;
-      const obj5 = isLinkTrusted /* isLinkTrusted */;
+      const obj5 = isLinkTrusted;
       tmp19 = require;
     }
   }
@@ -138,6 +138,6 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
     }
     tmp4 = handleMessagesTapURLLink;
   } else {
-    const obj = isAlertOrActionSheetOpen /* isAlertOrActionSheetOpen */;
+    const obj = isAlertOrActionSheetOpen;
   }
 };

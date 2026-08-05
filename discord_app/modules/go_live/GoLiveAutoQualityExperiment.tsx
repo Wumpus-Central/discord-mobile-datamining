@@ -33,7 +33,7 @@ export const useGoLiveAutoQualityExperimentConfig = function useGoLiveAutoQualit
   return location(589).useStateFromStores(items, () => outer1_6.getConfig({ location }));
 };
 export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   let num = Storage.get(GoLiveAutoQualityMigrationVersion);
   if (num == null) {
     num = 0;

@@ -4,7 +4,7 @@ import { V6OrEarlierAPIError } from "../../../errors/index.tsx";
 const result = require("useUserIdsForLinkStatus").fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
 
 export const isSpendingLimitError = function isSpendingLimitError(billingError) {
-  let tmp3 = billingError instanceof V6OrEarlierAPIError /* V6OrEarlierAPIError */.BillingError;
+  let tmp3 = billingError instanceof V6OrEarlierAPIError.BillingError;
   if (tmp3) {
     let tmp4 = billingError.code === tmp(3953).ErrorCodes.BILLING_SPENDING_LIMIT_REACHED;
     if (!tmp4) {

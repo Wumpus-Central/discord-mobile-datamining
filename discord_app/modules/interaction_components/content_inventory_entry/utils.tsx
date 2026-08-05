@@ -9,5 +9,5 @@ export const isContentInventoryFallbackEmbed = function isContentInventoryFallba
   if (num == null) {
     num = 0;
   }
-  return hasFlag /* hasFlag */.hasFlag(num, MessageEmbedFlags.IS_CONTENT_INVENTORY_ENTRY);
+  return hasFlag.hasFlag(num, MessageEmbedFlags.IS_CONTENT_INVENTORY_ENTRY);
 };

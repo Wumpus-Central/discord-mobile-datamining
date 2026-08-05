@@ -125,7 +125,7 @@ const result = require("ME").fileFinishedImporting("modules/in_app_notifications
 export const isReactionMilestoneNotification = function isReactionMilestoneNotification(reactions, type) {
   if (null != type) {
     if (type !== constants2.GUILD_ANNOUNCEMENT) {
-      return REACTION_MILESTONE_COUNTS.has(apply /* apply */.sumBy(reactions, (count_details) => {
+      return REACTION_MILESTONE_COUNTS.has(apply.sumBy(reactions, (count_details) => {
         count_details = count_details.count_details;
         let num;
         if (count_details != null) {
@@ -148,7 +148,7 @@ export const isReactionMilestoneNotification = function isReactionMilestoneNotif
   return false;
 };
 export const generateInAppNotificationId = function generateInAppNotificationId() {
-  return v1 /* v1 */.v4();
+  return v1.v4();
 };
 export const getMessagePreviewTextVariant = function getMessagePreviewTextVariant() {
   let str = "text-md/medium";

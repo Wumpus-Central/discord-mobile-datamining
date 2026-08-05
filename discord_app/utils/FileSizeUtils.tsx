@@ -15,9 +15,9 @@ function formatSize(result, arg1) {
   }
   const rounded = Math.ceil(result / num2);
   if (rounded < num) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const formatToPlainString2 = intl2.formatToPlainString;
-    const t2 = getSystemLocale /* getSystemLocale */.t;
+    const t2 = getSystemLocale.t;
     if (tmp.useSpace) {
       let obj = { size: null };
       obj[0] = rounded;
@@ -36,9 +36,9 @@ function formatSize(result, arg1) {
     } else {
       result1 = round(result);
     }
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const formatToPlainString = intl.formatToPlainString;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (tmp.useSpace) {
       const obj1 = { size: null };
       obj1[0] = result1;
@@ -75,9 +75,9 @@ export const formatKbSize = function formatKbSize(MAX_STICKER_FILE_SIZE, arg1) {
   if (1 <= result / num) {
     let formatToPlainStringResult = formatSize(result, tmp);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const formatToPlainString = intl.formatToPlainString;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (tmp.useSpace) {
       let obj = { size: null };
       const _Math2 = Math;

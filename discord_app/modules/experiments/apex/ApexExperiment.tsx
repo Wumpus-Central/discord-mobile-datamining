@@ -14,18 +14,18 @@ function getUnitId(arg0, guildId) {
   } else if ("user" === arg0) {
     return store.getId();
   } else if ("installation" === arg0) {
-    let str2 = extractId /* extractId */.maybeExtractId(store.getInstallationForTracking());
+    let str2 = extractId.maybeExtractId(store.getInstallationForTracking());
     if (str2 == null) {
       str2 = "";
     }
     return str2;
   } else {
-    isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(arg0);
+    isDiscordFrontendDevelopment.assertNever(arg0);
   }
 }
 function useUnitId(arg0, guildId) {
   let items = [fetchFingerprint];
-  callback(initialize /* initialize */.useStateFromStoresArray(items, () => {
+  callback(initialize.useStateFromStoresArray(items, () => {
     const items = [store.getId(), store.getInstallationForTracking()];
     return items;
   }), 2);
@@ -44,7 +44,7 @@ function useUnitId(arg0, guildId) {
     tmpResult = tmp(1351);
     tmpResult.assertNever(arg0);
   }
-  const obj = initialize /* initialize */;
+  const obj = initialize;
 }
 const result = require("initialize").fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
 

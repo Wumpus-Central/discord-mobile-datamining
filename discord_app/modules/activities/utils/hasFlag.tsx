@@ -13,8 +13,8 @@ export default function hasFlag(flags) {
       if (num == null) {
         num = 0;
       }
-      hasFlagResult = hasFlag /* hasFlag */.hasFlag(num, arg1);
-      const obj = hasFlag /* hasFlag */;
+      hasFlagResult = hasFlag.hasFlag(num, arg1);
+      const obj = hasFlag;
     }
     tmp = hasFlagResult;
   }

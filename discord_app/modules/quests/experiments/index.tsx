@@ -50,9 +50,9 @@ export const MutedVideoQuestNewDefaultsVariant = obj2;
 export const MutedVideoQuestNewDefaultsExperiment = apexExperiment4;
 export const useQuestOrbsMultiplierMarketing = function useQuestOrbsMultiplierMarketing(location) {
   let obj = { location };
-  const questOrbMultiplierEligibility = getQuestOrbMultiplierEligibilityForUser /* getQuestOrbMultiplierEligibilityForUser */.useQuestOrbMultiplierEligibility();
-  const obj2 = getQuestOrbMultiplierEligibilityForUser /* getQuestOrbMultiplierEligibilityForUser */;
-  obj = { shouldShowBonusOrbsUX: questOrbMultiplierEligibility !== items /* items */.QuestOrbMultiplierEligibilityType.INELIGIBLE && questOrbMultiplierEligibility !== items /* items */.QuestOrbMultiplierEligibilityType.CREPE && closure_2.useConfig(obj).enabled, multiplier: tmp(10500).QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100 };
+  const questOrbMultiplierEligibility = getQuestOrbMultiplierEligibilityForUser.useQuestOrbMultiplierEligibility();
+  const obj2 = getQuestOrbMultiplierEligibilityForUser;
+  obj = { shouldShowBonusOrbsUX: questOrbMultiplierEligibility !== items.QuestOrbMultiplierEligibilityType.INELIGIBLE && questOrbMultiplierEligibility !== items.QuestOrbMultiplierEligibilityType.CREPE && closure_2.useConfig(obj).enabled, multiplier: tmp(10500).QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100 };
   return obj;
 };
 export const VideoQuestPlayerRefactorExperiment = apexExperiment5;

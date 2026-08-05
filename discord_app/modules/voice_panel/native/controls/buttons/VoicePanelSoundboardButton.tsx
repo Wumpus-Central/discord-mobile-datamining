@@ -25,10 +25,10 @@ export default function SoundboardButton(arg0) {
   let wrapperSpecs;
   ({ props, wrapperSpecs } = arg0);
   const tmp3 = createCacheKey();
-  let obj = useVoicePanelButtonStyles /* useVoicePanelButtonStyles */;
+  let obj = useVoicePanelButtonStyles;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
   const tmp6 = useSoundboardConfig;
-  ({ disabled, handlePress, visible } = useSoundboardConfig(React.useContext(dismissPanel).channelId, useSoundboardConfig /* useSoundboardConfig */.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
+  ({ disabled, handlePress, visible } = useSoundboardConfig(React.useContext(dismissPanel).channelId, useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
   if (disabled) {
     let color = tmp(712).colors.ICON_MUTED;
   } else {

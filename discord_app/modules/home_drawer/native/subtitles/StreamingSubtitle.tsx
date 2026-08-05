@@ -13,9 +13,9 @@ export default function StreamingSubtitle(arg0) {
   let streamingUser;
   ({ guildId, streamingUser } = arg0);
   let obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { username: null };
   obj[0] = getNickname.getName(guildId, null, streamingUser);
-  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.k5IKep, obj);
-  return jsx(Text /* Text */.Text, { username: null });
+  obj[3] = intl.format(getSystemLocale.t.k5IKep, obj);
+  return jsx(Text.Text, { username: null });
 };

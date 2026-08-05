@@ -21,7 +21,7 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(c0) {
   if (null == guild) {
     return false;
   } else {
-    const result = useIsCreatorMonetizationEnabledGuild /* useIsCreatorMonetizationEnabledGuild */.isCreatorMonetizationEnabledGuild(guild);
+    const result = useIsCreatorMonetizationEnabledGuild.isCreatorMonetizationEnabledGuild(guild);
     const features = guild.features;
     let tmp9 = !result;
     if (result) {
@@ -39,8 +39,8 @@ let result = require("ME").fileFinishedImporting("modules/guild_role_subscriptio
 export const areRoleSubscriptionsVisibleInGuild = function areRoleSubscriptionsVisibleInGuild(c0, initialize) {
   let hasRoleSubscriptionsInGuild = computeCanEveryoneInGuildSeeRoleSubscriptions(c0);
   if (!hasRoleSubscriptionsInGuild) {
-    hasRoleSubscriptionsInGuild = computeHasRoleSubscriptionsInGuild /* computeHasRoleSubscriptionsInGuild */.computeHasRoleSubscriptionsInGuild(c0, initialize);
-    const obj = computeHasRoleSubscriptionsInGuild /* computeHasRoleSubscriptionsInGuild */;
+    hasRoleSubscriptionsInGuild = computeHasRoleSubscriptionsInGuild.computeHasRoleSubscriptionsInGuild(c0, initialize);
+    const obj = computeHasRoleSubscriptionsInGuild;
   }
   return hasRoleSubscriptionsInGuild;
 };

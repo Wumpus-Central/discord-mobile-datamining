@@ -28,7 +28,7 @@ export const ModalActionButton = function ModalActionButton(variant) {
   const merged1 = Object.assign(merged);
   obj.variant = variant;
   obj.size = "lg";
-  items[1] = callback(Button /* Button */.Button, obj);
+  items[1] = callback(Button.Button, obj);
   obj[0] = items;
   return closure_5(closure_4, obj);
 };

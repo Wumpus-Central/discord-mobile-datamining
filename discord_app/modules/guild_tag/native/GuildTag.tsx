@@ -45,8 +45,8 @@ const memoResult = importAllResult.memo((arg0) => {
   if (null != source) {
     let obj = { source: null, alt: null, style: null };
     obj[0] = source;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.HHYPgJ);
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.HHYPgJ);
     obj = { width: null, height: null };
     obj[0] = size;
     obj[1] = size;

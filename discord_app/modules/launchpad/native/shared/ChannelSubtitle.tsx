@@ -16,7 +16,7 @@ function ChannelSubtitle(arg0) {
   let textProps;
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, subtitle } = arg0);
-  let obj = getChannelSubtitleData /* getChannelSubtitleData */;
+  let obj = getChannelSubtitleData;
   const channelSubtitleData = obj.getChannelSubtitleData(subtitle);
   if (null == channelSubtitleData) {
     return null;
@@ -64,7 +64,7 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
       obj = {};
       const merged = Object.assign(obj);
       obj.children = subtitle;
-      let tmp9 = jsx(Text /* Text */.Text, {});
+      let tmp9 = jsx(Text.Text, {});
     } else {
       const obj1 = { channelId: null, guildId: null, subtitle: null, muted: null, connected: null, textProps: null };
       obj1[0] = tmp;

@@ -14,9 +14,9 @@ const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/notifications/FocusModeUtils.tsx");
 
 export const useFocusModeEnabled = function useFocusModeEnabled() {
-  const FocusMode = explicitContentFromProto /* explicitContentFromProto */.FocusMode;
+  const FocusMode = explicitContentFromProto.FocusMode;
   let setting = FocusMode.useSetting();
-  const FocusModeExpiresAtSetting = explicitContentFromProto /* explicitContentFromProto */.FocusModeExpiresAtSetting;
+  const FocusModeExpiresAtSetting = explicitContentFromProto.FocusModeExpiresAtSetting;
   const setting1 = FocusModeExpiresAtSetting.useSetting();
   if (setting) {
     let tmp3 = "0" === setting1;
@@ -34,9 +34,9 @@ export const useFocusModeEnabled = function useFocusModeEnabled() {
   return setting;
 };
 export const getFocusModeEnabled = function getFocusModeEnabled() {
-  const FocusMode = explicitContentFromProto /* explicitContentFromProto */.FocusMode;
+  const FocusMode = explicitContentFromProto.FocusMode;
   let setting = FocusMode.getSetting();
-  const FocusModeExpiresAtSetting = explicitContentFromProto /* explicitContentFromProto */.FocusModeExpiresAtSetting;
+  const FocusModeExpiresAtSetting = explicitContentFromProto.FocusModeExpiresAtSetting;
   const setting1 = FocusModeExpiresAtSetting.getSetting();
   if (setting) {
     setting = null != setting1;

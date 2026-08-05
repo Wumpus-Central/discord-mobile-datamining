@@ -32,11 +32,11 @@ export default function RestrictedBlockedMessageGroup(arg0) {
   }, []);
   let obj = { style: tmp.toggle, accessibilityRole: "button", accessibilityState: { expanded: mapped }, onPress: callback, children: null };
   obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { count: messages.length };
-  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t["+FcYM/"], obj);
-  obj[4] = callback2(Text /* Text */.Text, obj);
-  const children = [callback2(PressableBase /* PressableBase */.PressableOpacity, obj), ];
+  obj[2] = intl.format(getSystemLocale.t["+FcYM/"], obj);
+  obj[4] = callback2(Text.Text, obj);
+  const children = [callback2(PressableBase.PressableOpacity, obj), ];
   if (mapped) {
     mapped = messages.map((id) => outer1_5(outer1_4, { children: callback(id) }, id.id));
   }

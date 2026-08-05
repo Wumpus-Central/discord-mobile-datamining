@@ -27,9 +27,9 @@ export default function ICYMIHeader() {
   obj = { style: tmp.separator };
   const items = [callback(View, obj), ];
   obj = { style: tmp.text, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["jnXV/V"]);
-  items[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["jnXV/V"]);
+  items[1] = callback(Text.Text, obj);
   obj[0] = items;
   return callback2(closure_5, obj);
 };

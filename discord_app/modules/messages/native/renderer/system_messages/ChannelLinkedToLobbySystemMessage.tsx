@@ -22,7 +22,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
   if (null == application) {
     return null;
   } else {
-    let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+    let obj = getMessageAuthorWithProcessedColor;
     const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
     obj = { username: null, usernameOnClick: null, applicationName: null, applicationNameOnClick: null, urlOnClick: null };
     obj[0] = messageAuthorWithProcessedColor.nick;
@@ -40,8 +40,8 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     obj2[2] = tmp3.linkColor;
     obj[4] = obj2;
     const obj3 = { content: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj3[0] = intl.formatToParts(getSystemLocale /* getSystemLocale */.t.gZfhOw, obj);
+    const intl = getSystemLocale.intl;
+    obj3[0] = intl.formatToParts(getSystemLocale.t.gZfhOw, obj);
     const merged = Object.assign(tmp(7882)(message));
     return obj3;
   }

@@ -95,7 +95,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (6 === tmp5) {
         let tmp37 = require;
         let tmp38 = dependencyMap;
-        let LocalizedString3 = create /* create */.LocalizedString;
+        let LocalizedString3 = create.LocalizedString;
         let tmp39 = LocalizedString3;
         let tmp40 = pos;
         let tmp41 = readUnknownField;
@@ -103,7 +103,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (7 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let LocalizedString2 = create /* create */.LocalizedString;
+        let LocalizedString2 = create.LocalizedString;
         let tmp34 = LocalizedString2;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -111,7 +111,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (8 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let LocalizedString = create /* create */.LocalizedString;
+        let LocalizedString = create.LocalizedString;
         let tmp29 = LocalizedString;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -119,7 +119,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (9 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let HelpArticle = create /* create */.HelpArticle;
+        let HelpArticle = create.HelpArticle;
         let tmp24 = HelpArticle;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -182,25 +182,25 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
   }
   if (header.headerLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult5 = tag.tag(6, 01307__.WireType.LengthDelimited);
     const joined = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.pillLocalized) {
-    const LocalizedString2 = create /* create */.LocalizedString;
+    const LocalizedString2 = create.LocalizedString;
     const tagResult6 = tag.tag(7, 01307__.WireType.LengthDelimited);
     const joined1 = LocalizedString2.internalBinaryWrite(header.pillLocalized, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = LocalizedString2.internalBinaryWrite(header.pillLocalized, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.bodyLocalized) {
-    const LocalizedString3 = create /* create */.LocalizedString;
+    const LocalizedString3 = create.LocalizedString;
     const tagResult7 = tag.tag(8, 01307__.WireType.LengthDelimited);
     const joined2 = LocalizedString3.internalBinaryWrite(header.bodyLocalized, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = LocalizedString3.internalBinaryWrite(header.bodyLocalized, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.helpArticle) {
-    const HelpArticle = create /* create */.HelpArticle;
+    const HelpArticle = create.HelpArticle;
     const tagResult8 = tag.tag(9, 01307__.WireType.LengthDelimited);
     const joined3 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -242,7 +242,7 @@ let items = [
     name: "body_localized",
     kind: "message",
     T() {
-      return create /* create */.LocalizedString;
+      return create.LocalizedString;
     }
   },
   {
@@ -665,7 +665,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (2 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let HelpArticle = create /* create */.HelpArticle;
+        let HelpArticle = create.HelpArticle;
         let tmp29 = HelpArticle;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -673,7 +673,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let LocalizedString = create /* create */.LocalizedString;
+        let LocalizedString = create.LocalizedString;
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -720,13 +720,13 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(disclaimerText,
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   if (disclaimerText.disclaimerHelpArticle) {
-    const HelpArticle = create /* create */.HelpArticle;
+    const HelpArticle = create.HelpArticle;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined = HelpArticle.internalBinaryWrite(disclaimerText.disclaimerHelpArticle, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = HelpArticle.internalBinaryWrite(disclaimerText.disclaimerHelpArticle, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (disclaimerText.disclaimerTextLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined1 = LocalizedString.internalBinaryWrite(disclaimerText.disclaimerTextLocalized, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(disclaimerText.disclaimerTextLocalized, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -748,7 +748,7 @@ const items3 = [
     name: "disclaimer_help_article",
     kind: "message",
     T() {
-      return create /* create */.HelpArticle;
+      return create.HelpArticle;
     }
   },
   {
@@ -911,7 +911,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
     } while (num5 < length);
   }
   if (header.button) {
-    const CTAButton = create /* create */.CTAButton;
+    const CTAButton = create.CTAButton;
     const tagResult5 = tag.tag(6, 01307__.WireType.LengthDelimited);
     const joined1 = CTAButton.internalBinaryWrite(header.button, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(header.button, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -956,25 +956,25 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wr
     const internalBinaryWriteResult4 = subtitleType.internalBinaryWrite(header.disclaimer, tag.tag(15, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.helpArticle) {
-    const HelpArticle = create /* create */.HelpArticle;
+    const HelpArticle = create.HelpArticle;
     const tagResult13 = tag.tag(18, 01307__.WireType.LengthDelimited);
     const joined5 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(18, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(18, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.headerLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult14 = tag.tag(19, 01307__.WireType.LengthDelimited);
     const joined6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult6 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.subheaderLocalized) {
-    const LocalizedString2 = create /* create */.LocalizedString;
+    const LocalizedString2 = create.LocalizedString;
     const tagResult15 = tag.tag(20, 01307__.WireType.LengthDelimited);
     const joined7 = LocalizedString2.internalBinaryWrite(header.subheaderLocalized, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult7 = LocalizedString2.internalBinaryWrite(header.subheaderLocalized, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.modalTopPillLocalized) {
-    const LocalizedString3 = create /* create */.LocalizedString;
+    const LocalizedString3 = create.LocalizedString;
     const tagResult16 = tag.tag(21, 01307__.WireType.LengthDelimited);
     const joined8 = LocalizedString3.internalBinaryWrite(header.modalTopPillLocalized, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult8 = LocalizedString3.internalBinaryWrite(header.modalTopPillLocalized, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

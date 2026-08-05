@@ -7,14 +7,14 @@ const result = require("formatUsernameOnClick").fileFinishedImporting("modules/m
 
 export const createStageTopicSystemMessage = function createStageTopicSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+  let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   obj = { content: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, topic: null };
   obj[1] = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   obj[2] = message.content;
-  obj[0] = intl.formatToParts(getSystemLocale /* getSystemLocale */.t.ro3RM0, obj);
+  obj[0] = intl.formatToParts(getSystemLocale.t.ro3RM0, obj);
   const merged = Object.assign(createCommonMessage(roleStyle));
   return obj;
 };

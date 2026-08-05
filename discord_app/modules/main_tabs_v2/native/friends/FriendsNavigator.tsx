@@ -21,9 +21,9 @@ function RequestsSettingsModalButton(onPress) {
   obj = { source: null, onPress: null, accessibilityLabel: null };
   obj[0] = registerAsset;
   obj[1] = onPress.onPress;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["3D5yo/"]);
-  obj[1] = callback(GenericHeaderTitle /* GenericHeaderTitle */.HeaderIconButton, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["3D5yo/"]);
+  obj[1] = callback(GenericHeaderTitle.HeaderIconButton, obj);
   return callback(PressableNavigatorButtonWrapper, obj);
 }
 function FriendsNavigator() {
@@ -225,5 +225,5 @@ export default function ThemedFriendsNavigator() {
   items = [createNativeStackNavigator().container, { paddingLeft: left, paddingRight: right }];
   obj[1] = callback(FriendsNavigator, {});
   obj[1] = callback(View, obj);
-  return callback(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+  return callback(ManaContext.ThemeContextProvider, obj);
 };

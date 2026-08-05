@@ -6,33 +6,33 @@ import { getClientInfo } from "CopyClientInfoSetting.tsx";
 
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["+ynK0W"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["+ynK0W"]);
   },
   parent: null,
   IconComponent: require("MobilePhoneSettingsIcon").MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
-    const obj = getClientInfo /* getClientInfo */;
-    const clientInfoString = obj.getClientInfoString(DCDDeviceManager /* DCDDeviceManager */.getDeviceInfo());
-    const obj2 = DCDDeviceManager /* DCDDeviceManager */;
-    const obj3 = getClientInfo /* getClientInfo */;
-    return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager /* DCDDeviceManager */.getSystemVersion()) + ")";
+    const obj = getClientInfo;
+    const clientInfoString = obj.getClientInfoString(DCDDeviceManager.getDeviceInfo());
+    const obj2 = DCDDeviceManager;
+    const obj3 = getClientInfo;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager.getSystemVersion()) + ")";
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
 };
 const createStaticResult = createToggle.createStatic({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["+ynK0W"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["+ynK0W"]);
   },
   parent: null,
   IconComponent: require("MobilePhoneSettingsIcon").MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
-    const obj = getClientInfo /* getClientInfo */;
-    const clientInfoString = obj.getClientInfoString(DCDDeviceManager /* DCDDeviceManager */.getDeviceInfo());
-    const obj2 = DCDDeviceManager /* DCDDeviceManager */;
-    const obj3 = getClientInfo /* getClientInfo */;
-    return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager /* DCDDeviceManager */.getSystemVersion()) + ")";
+    const obj = getClientInfo;
+    const clientInfoString = obj.getClientInfoString(DCDDeviceManager.getDeviceInfo());
+    const obj2 = DCDDeviceManager;
+    const obj3 = getClientInfo;
+    return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager.getSystemVersion()) + ")";
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
 });

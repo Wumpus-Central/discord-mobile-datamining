@@ -16,7 +16,7 @@ export const renderChannelWrapper = function renderChannelWrapper(children, font
   if (panelVariant === undefined) {
     panelVariant = false;
   }
-  let obj = getLayoutStyles /* getLayoutStyles */;
+  let obj = getLayoutStyles;
   let isThreadResult;
   if (channel != null) {
     isThreadResult = channel.isThread();
@@ -25,7 +25,7 @@ export const renderChannelWrapper = function renderChannelWrapper(children, font
     isThreadResult = !launchpad;
   }
   const scaledChannelRowHeight = obj.getScaledChannelRowHeight(fontScale.fontScale, layout, isThreadResult);
-  const layoutStyles = getLayoutStyles /* getLayoutStyles */.getLayoutStyles(layout, launchpad);
+  const layoutStyles = getLayoutStyles.getLayoutStyles(layout, launchpad);
   const items = [{ flex: 1, flexDirection: "row", alignItems: "center", position: "relative" }, , ];
   let isThreadResult1;
   if (channel != null) {

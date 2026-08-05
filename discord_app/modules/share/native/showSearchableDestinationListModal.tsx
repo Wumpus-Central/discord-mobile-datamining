@@ -4,7 +4,7 @@ import { getBestActiveInput } from "../../../utils/native/ChatInputUtils.tsx";
 const result = require("set").fileFinishedImporting("modules/share/native/showSearchableDestinationListModal.tsx");
 
 export default function showSearchableDestinationListModal(outer1_1, closure_0, closure_4) {
-  let obj = getBestActiveInput /* getBestActiveInput */;
+  let obj = getBestActiveInput;
   obj.dismissKeyboard();
   const obj2 = ModalActionCreators;
   const tmp = require;

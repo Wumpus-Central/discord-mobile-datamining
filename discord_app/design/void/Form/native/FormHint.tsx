@@ -23,7 +23,7 @@ export default function FormHint(inset) {
   }
   ({ style, children } = inset);
   const tmp = createCacheKey();
-  if (React.useContext(context /* context */.RedesignCompatContext)) {
+  if (React.useContext(context.RedesignCompatContext)) {
     let redesignHorizontalPadding = !flag;
     if (!flag) {
       redesignHorizontalPadding = tmp.redesignHorizontalPadding;

@@ -173,5 +173,5 @@ export default function InviteSettingsModal() {
     obj[constants.ADVANCED] = obj;
     return obj;
   }, []);
-  return jsx(NavigationStack /* NavigationStack */.Navigator, { screens: memo, initialRouteName: constants.ADVANCED });
+  return jsx(NavigationStack.Navigator, { screens: memo, initialRouteName: constants.ADVANCED });
 };

@@ -612,7 +612,7 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
   const value = dependencyMap2[maxAge].value;
   const type = dependencyMap2[maxAge].type;
   if (minutes === type) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    const intl4 = getSystemLocale.intl;
     if (tmp2) {
       let stringResult = intl4.string(tmp12(1236).t["/WbTXD"]);
     } else {
@@ -622,9 +622,9 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     }
     return stringResult;
   } else if (hours === type) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     const formatToPlainString2 = intl3.formatToPlainString;
-    const t2 = getSystemLocale /* getSystemLocale */.t;
+    const t2 = getSystemLocale.t;
     if (tmp2) {
       obj = { numHours: null };
       obj[0] = value;
@@ -637,9 +637,9 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     }
     return formatToPlainString2Result;
   } else if (days === type) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const formatToPlainString = intl2.formatToPlainString;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (tmp2) {
       const obj2 = { numDays: null };
       obj2[0] = value;
@@ -652,7 +652,7 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
     }
     return formatToPlainStringResult;
   } else if (never === type) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     if (tmp2) {
       let stringResult1 = intl.string(tmp3(1236).t.QrHBnC);
     } else {
@@ -667,36 +667,36 @@ export const maxAgeString = function maxAgeString(maxAge, maxUses) {
 };
 export const urgentShareMessageString = function urgentShareMessageString(arg0, arg1) {
   if (null == arg0) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    const intl5 = getSystemLocale.intl;
     let obj = { link: null };
     obj[0] = arg1;
-    return intl5.formatToPlainString(getSystemLocale /* getSystemLocale */.t.RHbY6K, obj);
+    return intl5.formatToPlainString(getSystemLocale.t.RHbY6K, obj);
   } else {
     const value = dependencyMap2[arg0].value;
     const type = dependencyMap2[arg0].type;
     if (minutes === type) {
-      const intl4 = getSystemLocale /* getSystemLocale */.intl;
+      const intl4 = getSystemLocale.intl;
       obj = { numMinutes: null, link: null };
       obj[0] = value;
       obj[1] = arg1;
-      return intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.N3VHkw, obj);
+      return intl4.formatToPlainString(getSystemLocale.t.N3VHkw, obj);
     } else if (hours === type) {
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      const intl3 = getSystemLocale.intl;
       const obj1 = { numHours: null, link: null };
       obj1[0] = value;
       obj1[1] = arg1;
-      return intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t["3d9BlG"], obj1);
+      return intl3.formatToPlainString(getSystemLocale.t["3d9BlG"], obj1);
     } else if (days === type) {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      const intl2 = getSystemLocale.intl;
       const obj2 = { numDays: null, link: null };
       obj2[0] = value;
       obj2[1] = arg1;
-      return intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.gLIlkb, obj2);
+      return intl2.formatToPlainString(getSystemLocale.t.gLIlkb, obj2);
     } else {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
+      const intl = getSystemLocale.intl;
       obj = { link: null };
       obj[0] = arg1;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.RHbY6K, obj);
+      return intl.formatToPlainString(getSystemLocale.t.RHbY6K, obj);
     }
   }
 };

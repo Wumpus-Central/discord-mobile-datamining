@@ -28,21 +28,21 @@ export const getSafetyToolsActionSheetKey = function getSafetyToolsActionSheetKe
   return "SAFETY_TOOLS_ACTION_SHEET_" + arg0;
 };
 export const getStrangerDangerSafetyTips = function getStrangerDangerSafetyTips() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const items = [intl.string(getSystemLocale /* getSystemLocale */.t["26fDv4"]), , ];
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.togDfk);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  items[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.O4Ljca);
+  const intl = getSystemLocale.intl;
+  const items = [intl.string(getSystemLocale.t["26fDv4"]), , ];
+  const intl2 = getSystemLocale.intl;
+  items[1] = intl2.string(getSystemLocale.t.togDfk);
+  const intl3 = getSystemLocale.intl;
+  items[2] = intl3.string(getSystemLocale.t.O4Ljca);
   return items;
 };
 export const getInappropriateConversationsSafetyTips = function getInappropriateConversationsSafetyTips() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const items = [intl.string(getSystemLocale /* getSystemLocale */.t.bCWw8l), , ];
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.mzSucz);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  items[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.ZkmC7s);
+  const intl = getSystemLocale.intl;
+  const items = [intl.string(getSystemLocale.t.bCWw8l), , ];
+  const intl2 = getSystemLocale.intl;
+  items[1] = intl2.string(getSystemLocale.t.mzSucz);
+  const intl3 = getSystemLocale.intl;
+  items[2] = intl3.string(getSystemLocale.t.ZkmC7s);
   return items;
 };
 export const SAFETY_TOOLS_IGNORED_USER_TOAST_KEY = "SAFETY_TOOLS_IGNORED_USER_CONFIRMED";

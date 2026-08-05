@@ -17,11 +17,11 @@ export default function useConsoleConnectingInfo(arg0) {
   if (tmp3 != null) {
     channelId = tmp3.channelId;
   }
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [set];
   const stateFromStores = obj.useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   const items1 = [handleUpdate];
-  const stateFromStores1 = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items1, () => {
+  const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => {
     let str;
     if (tmp3 != null) {
       str = tmp3.sessionId;
@@ -46,7 +46,7 @@ export default function useConsoleConnectingInfo(arg0) {
     str = "";
   }
   let channelId1;
-  const obj2 = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  const obj2 = defaultAreStatesEqual;
   const tmp5 = require;
   if (stateFromStores != null) {
     channelId1 = stateFromStores.channelId;

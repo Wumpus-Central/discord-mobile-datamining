@@ -18,7 +18,7 @@ function getURL(name) {
     let str = "asset:/emoji-" + convert.toCodePoint(name) + ".png";
   } else {
     str = "";
-    const obj = set /* set */;
+    const obj = set;
   }
   return str;
 }
@@ -343,7 +343,7 @@ obj[4] = function triggerFullscreenAnimation(arg0) {
   let emoji;
   let messageId;
   ({ channelId, messageId, emoji } = arg0);
-  const result = onDismiss /* onDismiss */.openBurstReactionFirstSendActionSheet({ channelId, messageId, emoji });
+  const result = onDismiss.openBurstReactionFirstSendActionSheet({ channelId, messageId, emoji });
 };
 let result = require("get ActivityIndicator").fileFinishedImporting("utils/EmojiUtilsPlatformed.native.tsx");
 

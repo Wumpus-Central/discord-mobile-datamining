@@ -9,7 +9,7 @@ let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("m
 
 export const useIsHomeDrawerChannelMuted = function useIsHomeDrawerChannelMuted() {
   const items = [storeThread, updateUserGuildSettingsInternal];
-  return initialize /* initialize */.useStateFromStores(items, () => (type) => {
+  return initialize.useStateFromStores(items, () => (type) => {
     const tmp = callback(type.type);
     if (tmp) {
       if (muted.isMuted(type.id)) {
@@ -22,5 +22,5 @@ export const useIsHomeDrawerChannelMuted = function useIsHomeDrawerChannelMuted(
       result = guildOrCategoryOrChannelMuted.isGuildOrCategoryOrChannelMuted(type.guild_id, tmp3);
     }
     return result;
-  }, [], initialize /* initialize */.statesWillNeverBeEqual);
+  }, [], initialize.statesWillNeverBeEqual);
 };

@@ -20,7 +20,7 @@ export const getButtonActionHandler = function getButtonActionHandler(arg0) {
   let importDefault;
   let require;
   ({ buttonAction, applicationId: require, analyticsLocations: importDefault, analyticsPage: dependencyMap, onPaymentSuccess: createEmptyPromotionsByType, onPaymentDismiss: PremiumTypes } = arg0);
-  if (create /* create */.ButtonAction.OPEN_SOCIAL_LAYER_STOREFRONT === buttonAction) {
+  if (create.ButtonAction.OPEN_SOCIAL_LAYER_STOREFRONT === buttonAction) {
     return () => {
       if (null != closure_0) {
         const obj = { applicationId: null };

@@ -218,7 +218,7 @@ export default {
     let tokens;
     ({ queryString, searchContext, tokens, cursorScope } = arg0);
     if (queryString.trim().length > 0) {
-      const FrecencyUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = updateUserGuildSettings.FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     }
     dispatcher.dispatch({ type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE", searchContext, tokens, cursorScope });

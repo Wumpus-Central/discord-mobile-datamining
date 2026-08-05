@@ -6,8 +6,8 @@ import { apexExperiment } from "../../../voice_calls/CallKitMetricCollectionExpe
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.V6D0wU);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.V6D0wU);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").NativePhoneIntegrationEnabled.useSetting,
@@ -15,16 +15,16 @@ const toggle = createToggle.createToggle({
   usePredicate() {
     let enabled = apexExperiment.useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
     if (enabled) {
-      enabled = set /* set */.isIOS();
-      const obj2 = set /* set */;
+      enabled = set.isIOS();
+      const obj2 = set;
     }
     return enabled;
   }
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.V6D0wU);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.V6D0wU);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").NativePhoneIntegrationEnabled.useSetting,
@@ -32,8 +32,8 @@ const obj = {
   usePredicate() {
     let enabled = apexExperiment.useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
     if (enabled) {
-      enabled = set /* set */.isIOS();
-      const obj2 = set /* set */;
+      enabled = set.isIOS();
+      const obj2 = set;
     }
     return enabled;
   }

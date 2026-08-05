@@ -19,13 +19,13 @@ let error;
 const require = arg1;
 function EmptyGuildList() {
   const obj = { containerStyle: createCacheKey().emptyStateContainer, title: null, body: null, darkSource: null, lightSource: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["2bfiLk"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.V6nAfF);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["2bfiLk"]);
+  const intl2 = getSystemLocale.intl;
+  obj[2] = intl2.string(getSystemLocale.t.V6nAfF);
   obj[3] = registerAsset;
   obj[4] = registerAsset;
-  return callback2(Button /* Button */.ThemedEmptyState, obj);
+  return callback2(Button.ThemedEmptyState, obj);
 }
 function GuildList(recipientId) {
   let arr;

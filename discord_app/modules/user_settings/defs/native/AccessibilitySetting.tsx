@@ -12,14 +12,14 @@ const require = arg1;
 let items = [require("DismissibleContent").DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.G0neg7);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.G0neg7);
   },
   parent: null,
   IconComponent: require("AccessibilityIcon").AccessibilityIcon,
   useTrailing() {
     let tmp4;
-    let obj = useSelectedDismissibleContent /* useSelectedDismissibleContent */;
+    let obj = useSelectedDismissibleContent;
     [tmp4, r10012] = callback(obj.useSelectedDismissibleContent(items), 2);
     let tmp5 = null;
     if (null != tmp4) {
@@ -63,7 +63,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.ACCESSIBILITY,
   getComponent() {
-    return SettingsAccessibilityScreen /* SettingsAccessibilityScreen */.default;
+    return SettingsAccessibilityScreen.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

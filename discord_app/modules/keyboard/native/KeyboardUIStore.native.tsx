@@ -28,7 +28,7 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   if (keyboardHeight == null) {
     keyboardHeight = tmp.keyboardHeight;
   }
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isAndroid()) {
     let obj1 = enforcing;
     let num2 = obj1.getImeInsets(false, DEFAULT_APP_ENTRY_KEY);
@@ -66,7 +66,7 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   if (num4 == null) {
     num4 = 253;
   }
-  if (type === KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
+  if (type === KeyboardTypes.KeyboardTypes.SYSTEM) {
     if (0 !== num2) {
       if (tmp2Result1.getIsAnyChatInputFocused()) {
         const _Math = Math;
@@ -173,8 +173,8 @@ function computeEntryState(arg0, keyboardDuration, DEFAULT_APP_ENTRY_KEY) {
   tmp12 = num4;
 }
 function createInitialEntryState(main) {
-  const SYSTEM = KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
-  const Storage = Storage /* Storage */.Storage;
+  const SYSTEM = KeyboardTypes.KeyboardTypes.SYSTEM;
+  const Storage = Storage.Storage;
   let num = Storage.get(customKeyboardHeight, 253);
   if (num == null) {
     num = 253;
@@ -208,8 +208,8 @@ function createInitialEntryState(main) {
     num4 = 0;
   }
   obj[5] = num4;
-  obj[7] = KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
-  obj[8] = KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
+  obj[7] = KeyboardTypes.KeyboardTypes.SYSTEM;
+  obj[8] = KeyboardTypes.KeyboardTypes.SYSTEM;
   return obj;
 }
 const customKeyboardHeight = "customKeyboardHeight";

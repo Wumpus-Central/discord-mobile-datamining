@@ -20,7 +20,7 @@ export default function FamilyCenterEmpty(children) {
   const tmp = callback3();
   let obj = { style: tmp.empty, children: null };
   obj = { source: registerAsset, style: tmp.art, resizeMethod: "scale" };
-  const items = [callback(closure_4, obj), callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
+  const items = [callback(closure_4, obj), callback(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
   obj[1] = items;
   return callback2(closure_3, obj);
 };

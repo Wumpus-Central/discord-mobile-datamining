@@ -82,14 +82,14 @@ export const getKeyboardIsOpen = function getKeyboardIsOpen(arg0) {
   }
   let DEFAULT_APP_ENTRY_KEY = tmp.appEntryKey;
   if (DEFAULT_APP_ENTRY_KEY === undefined) {
-    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
   }
   const tmp5 = computeEntryState.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY];
   const systemKeyboardOpen = tmp5.systemKeyboardOpen;
   if (flag) {
     let tmp7 = systemKeyboardOpen;
     if (!systemKeyboardOpen) {
-      tmp7 = tmp5.keyboardType !== KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
+      tmp7 = tmp5.keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
     }
     let tmp6 = tmp7;
   } else {

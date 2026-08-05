@@ -51,7 +51,7 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
         dispatcher.dispatch(obj1);
         const obj4 = dispatcher;
       }
-      obj6 = isCommunicationDisabled /* isCommunicationDisabled */;
+      obj6 = isCommunicationDisabled;
     }
   }
 }

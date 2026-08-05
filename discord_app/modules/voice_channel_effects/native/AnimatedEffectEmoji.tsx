@@ -24,7 +24,7 @@ function Emoji(url) {
     const items1 = [tmp.textEmoji];
     obj[0] = items1;
     obj[2] = url.surrogates;
-    tmp5 = jsx(Button /* Button */.LegacyText, { style: null, allowFontScaling: false, children: null });
+    tmp5 = jsx(Button.LegacyText, { style: null, allowFontScaling: false, children: null });
   }
   return tmp5;
 }

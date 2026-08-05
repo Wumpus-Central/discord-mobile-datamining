@@ -14,7 +14,7 @@ function EducationCoachmarkImg() {
   let obj = { style: createCacheKey().upsellImageContainer, children: null };
   obj = { color: null, size: "md" };
   obj[0] = Themes.colors.WHITE;
-  obj[1] = jsx(SuperReactionIcon /* SuperReactionIcon */.SuperReactionIcon, { color: null, size: "md" });
+  obj[1] = jsx(SuperReactionIcon.SuperReactionIcon, { color: null, size: "md" });
   return <View color={null} size="md" />;
 }
 let closure_9 = require("DismissibleContent").DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;

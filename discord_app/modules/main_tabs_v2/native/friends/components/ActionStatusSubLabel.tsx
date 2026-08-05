@@ -9,7 +9,7 @@ let c3;
 let c4;
 const require = arg1;
 function announceActioned(intl) {
-  const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
+  const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
 }
 ({ jsx: c3, jsxs: c4 } = jsxProd);

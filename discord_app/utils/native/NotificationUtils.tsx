@@ -106,6 +106,6 @@ export default {
     if (arg1 === undefined) {
       num = 1;
     }
-    createSoundForPack /* createSoundForPack */.playSound(arg0, num, undefined, arg2);
+    createSoundForPack.playSound(arg0, num, undefined, arg2);
   }
 };

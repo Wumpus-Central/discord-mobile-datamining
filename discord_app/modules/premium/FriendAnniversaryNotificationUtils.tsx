@@ -7,7 +7,7 @@ import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/premium/FriendAnniversaryNotificationUtils.tsx");
 
 export const onFriendAnniversaryNotificationSettingsChanged = function onFriendAnniversaryNotificationSettingsChanged(friend_anniversary_notifications) {
-  const EnableFriendAnniversaryNotifications = explicitContentFromProto /* explicitContentFromProto */.EnableFriendAnniversaryNotifications;
+  const EnableFriendAnniversaryNotifications = explicitContentFromProto.EnableFriendAnniversaryNotifications;
   EnableFriendAnniversaryNotifications.updateSetting(friend_anniversary_notifications);
   let obj = expandEventProperties;
   obj = { update_type: constants.ACCOUNT, friend_anniversary_notifications };

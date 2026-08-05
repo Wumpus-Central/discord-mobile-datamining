@@ -475,7 +475,7 @@ prototype2["handleAdyenConfirmation"] = function handleAdyenConfirmation() {
   const self = this;
   const adyen_redirect_url = this.payment.adyen_redirect_url;
   if (null == adyen_redirect_url) {
-    throw _validatePaymentSourceBillingAddress /* _validatePaymentSourceBillingAddress */.dispatchConfirmationError("redirect url cannot be null on a redirect for adyen.");
+    throw _validatePaymentSourceBillingAddress.dispatchConfirmationError("redirect url cannot be null on a redirect for adyen.");
   } else {
     if (set.has(self.paymentSource.type)) {
       self.performRedirect(adyen_redirect_url);

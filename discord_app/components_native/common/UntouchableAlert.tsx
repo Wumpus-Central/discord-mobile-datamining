@@ -36,7 +36,7 @@ prototype["render"] = function render() {
   if (this.props.loading) {
     const obj = { style: null, children: null };
     obj[0] = tmp.container;
-    obj[1] = jsx(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, {});
+    obj[1] = jsx(ActivityIndicator.ActivityIndicator, {});
     tmp2 = <View style={null}>{null}</View>;
   }
   return tmp2;

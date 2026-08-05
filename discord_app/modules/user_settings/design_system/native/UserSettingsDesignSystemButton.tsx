@@ -277,7 +277,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/u
 export default function UserSettingsDesignSystemButton() {
   const tmp = createCacheKey();
   const require = tmp;
-  let obj = useNavigation /* useNavigation */;
+  let obj = useNavigation;
   const navigation = obj.useNavigation();
   const importDefault = React.useCallback(() => {
     callback(paths[18]).openLazy(tmp(paths[20])(paths[19], paths.paths), "UserSettingsDesignSystemButtonActionSheet");
@@ -295,9 +295,9 @@ export default function UserSettingsDesignSystemButton() {
   const obj2 = { spacing: 24, children: null };
   const obj3 = { children: null };
   const obj4 = { style: tmp.container, children: null };
-  obj4[1] = callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Hierarchical buttons" });
+  obj4[1] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Hierarchical buttons" });
   let items = [
-    callback2(Stack /* Stack */.Stack, obj4),
+    callback2(Stack.Stack, obj4),
     callback2(closure_5, {
       children: closure_12.map((variant) => {
         obj = { style: tmp.buttonContainer, children: outer1_9(outer1_17, obj) };
@@ -307,11 +307,11 @@ export default function UserSettingsDesignSystemButton() {
     })
   ];
   obj3[0] = items;
-  const items1 = [callback3(Stack /* Stack */.Stack, obj3), , , , , , , , , , , , , , , , , , , ];
+  const items1 = [callback3(Stack.Stack, obj3), , , , , , , , , , , , , , , , , , , ];
   const obj6 = { children: null };
   const obj7 = { style: tmp.container, children: null };
-  obj7[1] = callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Sentiment buttons" });
-  const items2 = [callback2(Stack /* Stack */.Stack, obj7), ];
+  obj7[1] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Sentiment buttons" });
+  const items2 = [callback2(Stack.Stack, obj7), ];
   const obj5 = {
     children: closure_12.map((variant) => {
       obj = { style: tmp.buttonContainer, children: outer1_9(outer1_17, obj) };
@@ -327,11 +327,11 @@ export default function UserSettingsDesignSystemButton() {
     })
   });
   obj6[0] = items2;
-  items1[1] = callback3(Stack /* Stack */.Stack, obj6);
+  items1[1] = callback3(Stack.Stack, obj6);
   const obj9 = { children: null };
   const obj10 = { style: tmp.container, children: null };
-  obj10[1] = callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Expressive buttons" });
-  const items3 = [callback2(Stack /* Stack */.Stack, obj10), ];
+  obj10[1] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Expressive buttons" });
+  const items3 = [callback2(Stack.Stack, obj10), ];
   const obj8 = {
     children: closure_14.map((variant) => {
       obj = { style: tmp.buttonContainer, children: outer1_9(outer1_17, obj) };
@@ -347,11 +347,11 @@ export default function UserSettingsDesignSystemButton() {
     })
   });
   obj9[0] = items3;
-  items1[2] = callback3(Stack /* Stack */.Stack, obj9);
+  items1[2] = callback3(Stack.Stack, obj9);
   const obj12 = { children: null };
   const obj13 = { style: tmp.container, children: null };
-  obj13[1] = callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Experimental premium buttons" });
-  const items4 = [callback2(Stack /* Stack */.Stack, obj13), ];
+  obj13[1] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Experimental premium buttons" });
+  const items4 = [callback2(Stack.Stack, obj13), ];
   const obj11 = {
     children: closure_15.map((variant) => {
       obj = { style: tmp.buttonContainer, children: outer1_9(outer1_17, obj) };
@@ -367,12 +367,12 @@ export default function UserSettingsDesignSystemButton() {
     })
   });
   obj12[0] = items4;
-  items1[3] = callback3(Stack /* Stack */.Stack, obj12);
+  items1[3] = callback3(Stack.Stack, obj12);
   const obj15 = { children: null };
   const obj16 = { style: tmp.container, children: null };
-  const items5 = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Overlay buttons" }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "Overlay buttons are meant to be used overlayed on top of an image or background color. They do not change colors with the theme." })];
+  const items5 = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Overlay buttons" }), callback2(Text.Text, { variant: "text-sm/normal", children: "Overlay buttons are meant to be used overlayed on top of an image or background color. They do not change colors with the theme." })];
   obj16[1] = items5;
-  const items6 = [callback3(Stack /* Stack */.Stack, obj16), ];
+  const items6 = [callback3(Stack.Stack, obj16), ];
   const obj14 = {
     children: closure_16.map((variant) => {
       obj = { style: tmp.buttonContainer, children: outer1_9(outer1_17, obj) };
@@ -390,12 +390,12 @@ export default function UserSettingsDesignSystemButton() {
     })
   });
   obj15[0] = items6;
-  items1[4] = callback3(Stack /* Stack */.Stack, obj15);
+  items1[4] = callback3(Stack.Stack, obj15);
   const obj18 = { children: null };
   const obj19 = { style: tmp.container, children: null };
-  const items7 = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Custom color icons" }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "If a button needs to have an icon which has its own custom color, then create your own Button.Icon to pass as the icon prop." })];
+  const items7 = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Custom color icons" }), callback2(Text.Text, { variant: "text-sm/normal", children: "If a button needs to have an icon which has its own custom color, then create your own Button.Icon to pass as the icon prop." })];
   obj19[1] = items7;
-  const items8 = [callback3(Stack /* Stack */.Stack, obj19), ];
+  const items8 = [callback3(Stack.Stack, obj19), ];
   const obj20 = { children: null };
   const obj21 = { style: tmp.buttonContainer, children: null };
   const obj22 = {
@@ -409,8 +409,8 @@ export default function UserSettingsDesignSystemButton() {
   };
   const obj23 = { source: null };
   obj23[0] = registerAsset;
-  obj22[4] = callback2(Button /* Button */.Button.Icon, obj23);
-  obj21[1] = callback2(Button /* Button */.Button, obj22);
+  obj22[4] = callback2(Button.Button.Icon, obj23);
+  obj21[1] = callback2(Button.Button, obj22);
   const items9 = [callback2(closure_5, obj21), ];
   const obj24 = { style: tmp.buttonContainer, children: null };
   const obj25 = {
@@ -424,17 +424,17 @@ export default function UserSettingsDesignSystemButton() {
   };
   const obj26 = { variant: "entity", source: null };
   obj26[1] = registerAsset;
-  obj25[4] = callback2(Button /* Button */.Button.Icon, obj26);
-  obj24[1] = callback2(Button /* Button */.Button, obj25);
+  obj25[4] = callback2(Button.Button.Icon, obj26);
+  obj24[1] = callback2(Button.Button, obj25);
   items9[1] = callback2(closure_5, obj24);
   obj20[0] = items9;
   items8[1] = callback3(closure_5, obj20);
   obj18[0] = items8;
-  items1[5] = callback3(Stack /* Stack */.Stack, obj18);
+  items1[5] = callback3(Stack.Stack, obj18);
   const obj27 = { children: null };
   const obj28 = { style: tmp.container, children: null };
-  obj28[1] = callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Buttons with various text lengths" });
-  const items10 = [callback2(Stack /* Stack */.Stack, obj28), ];
+  obj28[1] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Buttons with various text lengths" });
+  const items10 = [callback2(Stack.Stack, obj28), ];
   const obj29 = { children: null };
   const obj30 = { style: tmp.buttonContainer, children: null };
   const obj31 = {
@@ -447,7 +447,7 @@ export default function UserSettingsDesignSystemButton() {
     icon: null
   };
   obj31[4] = registerAsset;
-  obj30[1] = callback2(Button /* Button */.Button, obj31);
+  obj30[1] = callback2(Button.Button, obj31);
   const items11 = [callback2(closure_5, obj30), , , ];
   const obj32 = { style: tmp.buttonContainer, children: null };
   const obj33 = {
@@ -461,7 +461,7 @@ export default function UserSettingsDesignSystemButton() {
     iconPosition: "end"
   };
   obj33[4] = registerAsset;
-  obj32[1] = callback2(Button /* Button */.Button, obj33);
+  obj32[1] = callback2(Button.Button, obj33);
   items11[1] = callback2(closure_5, obj32);
   const obj17 = {
     children: closure_13.map((variant) => {
@@ -472,32 +472,32 @@ export default function UserSettingsDesignSystemButton() {
       return outer1_9(outer1_5, obj, variant);
     })
   };
-  items11[2] = callback2(closure_5, { style: tmp.buttonContainer, children: callback2(Button /* Button */.Button, obj35) });
-  const obj34 = { style: tmp.buttonContainer, children: callback2(Button /* Button */.Button, obj35) };
-  items11[3] = callback2(closure_5, { style: tmp.buttonContainer, children: callback2(Button /* Button */.Button, obj37) });
+  items11[2] = callback2(closure_5, { style: tmp.buttonContainer, children: callback2(Button.Button, obj35) });
+  const obj34 = { style: tmp.buttonContainer, children: callback2(Button.Button, obj35) };
+  items11[3] = callback2(closure_5, { style: tmp.buttonContainer, children: callback2(Button.Button, obj37) });
   obj29[0] = items11;
   items10[1] = callback3(closure_5, obj29);
   obj27[0] = items10;
-  items1[6] = callback3(Stack /* Stack */.Stack, obj27);
+  items1[6] = callback3(Stack.Stack, obj27);
   const obj38 = { children: null };
   const obj39 = { style: tmp.container, children: null };
-  const items12 = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Toggling button states" }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "Use the useToggleButtonProps hook or the useToggleIconButtonProps hook to toggle a button between two states." }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "This hook changes the button presentation and adds some important accessibility attributes for a toggle button." })];
+  const items12 = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Toggling button states" }), callback2(Text.Text, { variant: "text-sm/normal", children: "Use the useToggleButtonProps hook or the useToggleIconButtonProps hook to toggle a button between two states." }), callback2(Text.Text, { variant: "text-sm/normal", children: "This hook changes the button presentation and adds some important accessibility attributes for a toggle button." })];
   obj39[1] = items12;
-  const items13 = [callback3(Stack /* Stack */.Stack, obj39), ];
+  const items13 = [callback3(Stack.Stack, obj39), ];
   const obj40 = { children: null };
-  const obj36 = { style: tmp.buttonContainer, children: callback2(Button /* Button */.Button, obj37) };
+  const obj36 = { style: tmp.buttonContainer, children: callback2(Button.Button, obj37) };
   const items14 = [callback2(closure_5, { style: tmp.buttonContainer, children: callback2(ExampleToggleButton, {}) }), ];
   const obj41 = { style: tmp.buttonContainer, children: callback2(ExampleToggleButton, {}) };
   items14[1] = callback2(closure_5, { style: tmp.buttonContainer, children: callback2(ExampleIconToggleButton, {}) });
   obj40[0] = items14;
   items13[1] = callback3(closure_5, obj40);
   obj38[0] = items13;
-  items1[7] = callback3(Stack /* Stack */.Stack, obj38);
+  items1[7] = callback3(Stack.Stack, obj38);
   const obj43 = { children: null };
   const obj44 = { style: tmp.container, children: null };
-  const items15 = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Hierarchical icon buttons" }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "While the primary variants of IconButton are supported, these should be used very rarely." }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "An icon button usually has a secondary function and should use the secondary variants." })];
+  const items15 = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Hierarchical icon buttons" }), callback2(Text.Text, { variant: "text-sm/normal", children: "While the primary variants of IconButton are supported, these should be used very rarely." }), callback2(Text.Text, { variant: "text-sm/normal", children: "An icon button usually has a secondary function and should use the secondary variants." })];
   obj44[1] = items15;
-  const items16 = [callback3(Stack /* Stack */.Stack, obj44), ];
+  const items16 = [callback3(Stack.Stack, obj44), ];
   const obj42 = { style: tmp.buttonContainer, children: callback2(ExampleIconToggleButton, {}) };
   items16[1] = callback2(closure_5, {
     children: closure_12.map((variant) => {
@@ -507,11 +507,11 @@ export default function UserSettingsDesignSystemButton() {
     })
   });
   obj43[0] = items16;
-  items1[8] = callback3(Stack /* Stack */.Stack, obj43);
+  items1[8] = callback3(Stack.Stack, obj43);
   const obj46 = { children: null };
   const obj47 = { style: tmp.container, children: null };
-  obj47[1] = callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Sentiment icon buttons" });
-  const items17 = [callback2(Stack /* Stack */.Stack, obj47), ];
+  obj47[1] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Sentiment icon buttons" });
+  const items17 = [callback2(Stack.Stack, obj47), ];
   const obj45 = {
     children: closure_12.map((variant) => {
       obj = { style: tmp.buttonContainer, children: outer1_9(outer1_18, obj) };
@@ -527,11 +527,11 @@ export default function UserSettingsDesignSystemButton() {
     })
   });
   obj46[0] = items17;
-  items1[9] = callback3(Stack /* Stack */.Stack, obj46);
+  items1[9] = callback3(Stack.Stack, obj46);
   const obj49 = { children: null };
   const obj50 = { style: tmp.container, children: null };
-  obj50[1] = callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Overlay icon buttons" });
-  const items18 = [callback2(Stack /* Stack */.Stack, obj50), ];
+  obj50[1] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Overlay icon buttons" });
+  const items18 = [callback2(Stack.Stack, obj50), ];
   const obj48 = {
     children: closure_14.map((variant) => {
       obj = { style: tmp.buttonContainer, children: outer1_9(outer1_18, obj) };
@@ -549,12 +549,12 @@ export default function UserSettingsDesignSystemButton() {
     })
   });
   obj49[0] = items18;
-  items1[10] = callback3(Stack /* Stack */.Stack, obj49);
+  items1[10] = callback3(Stack.Stack, obj49);
   const obj52 = { children: null };
   const obj53 = { style: tmp.container, children: null };
-  const items19 = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Image buttons" }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "Image buttons are rereserved for more branded buttons, like social media sharing buttons." })];
+  const items19 = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Image buttons" }), callback2(Text.Text, { variant: "text-sm/normal", children: "Image buttons are rereserved for more branded buttons, like social media sharing buttons." })];
   obj53[1] = items19;
-  const items20 = [callback3(Stack /* Stack */.Stack, obj53), ];
+  const items20 = [callback3(Stack.Stack, obj53), ];
   const obj54 = { children: null };
   const obj55 = { style: items21, children: null };
   items21 = [tmp.buttonContainer];
@@ -582,16 +582,16 @@ export default function UserSettingsDesignSystemButton() {
   obj54[0] = items22;
   items20[1] = callback3(closure_5, obj54);
   obj52[0] = items20;
-  items1[11] = callback3(Stack /* Stack */.Stack, obj52);
+  items1[11] = callback3(Stack.Stack, obj52);
   const obj61 = { spacing: 24, children: null };
   const obj62 = { style: tmp.container, children: null };
-  const items25 = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "IconButton with a label" }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "Icon buttons with a label require a different combination of props and will only appear in the 'lg' size." }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "It is highly recommended that a list of these buttons appear wrapped in a ScrollView, so that they will horizontally scroll when there are many buttons, when the text is longer through internationalization, or the text is larger through OS font size settings." })];
+  const items25 = [callback2(Text.Text, { variant: "heading-lg/bold", children: "IconButton with a label" }), callback2(Text.Text, { variant: "text-sm/normal", children: "Icon buttons with a label require a different combination of props and will only appear in the 'lg' size." }), callback2(Text.Text, { variant: "text-sm/normal", children: "It is highly recommended that a list of these buttons appear wrapped in a ScrollView, so that they will horizontally scroll when there are many buttons, when the text is longer through internationalization, or the text is larger through OS font size settings." })];
   obj62[1] = items25;
-  const items26 = [callback3(Stack /* Stack */.Stack, obj62), , ];
+  const items26 = [callback3(Stack.Stack, obj62), , ];
   const obj63 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
   const obj64 = { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: null };
   obj64[3] = closure_12.map((variant) => callback2(closure_18, { variant, showLabel: true }, variant));
-  obj63[2] = callback2(Stack /* Stack */.Stack, obj64);
+  obj63[2] = callback2(Stack.Stack, obj64);
   items26[1] = callback2(closure_6, obj63);
   const obj65 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
   const obj66 = { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: null };
@@ -600,28 +600,28 @@ export default function UserSettingsDesignSystemButton() {
   obj67[4] = function onPress() {
 
   };
-  const items27 = [callback2(IconButton /* IconButton */.IconButton, obj67), , ];
+  const items27 = [callback2(IconButton.IconButton, obj67), , ];
   const obj68 = { variant: "secondary", icon: null, label: "Supercalifragilisticexpialidocious", grow: true, onPress: null };
   obj68[1] = registerAsset;
   obj68[4] = function onPress() {
 
   };
-  items27[1] = callback2(IconButton /* IconButton */.IconButton, obj68);
+  items27[1] = callback2(IconButton.IconButton, obj68);
   const obj69 = { variant: "secondary", icon: null, label: "Supercalifragilisticexpialidocious", grow: true, onPress: null };
   obj69[1] = registerAsset;
   obj69[4] = function onPress() {
 
   };
-  items27[2] = callback2(IconButton /* IconButton */.IconButton, obj69);
+  items27[2] = callback2(IconButton.IconButton, obj69);
   obj66[3] = items27;
-  obj65[2] = callback3(Stack /* Stack */.Stack, obj66);
+  obj65[2] = callback3(Stack.Stack, obj66);
   items26[2] = callback2(closure_6, obj65);
   obj61[1] = items26;
-  items1[12] = callback3(Stack /* Stack */.Stack, obj61);
+  items1[12] = callback3(Stack.Stack, obj61);
   const obj70 = { spacing: 24, children: null };
   const obj71 = { style: tmp.container, children: null };
-  obj71[1] = callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "ImageButton with a label" });
-  const items28 = [callback2(Stack /* Stack */.Stack, obj71), , ];
+  obj71[1] = callback2(Text.Text, { variant: "heading-lg/bold", children: "ImageButton with a label" });
+  const items28 = [callback2(Stack.Stack, obj71), , ];
   const obj72 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
   const obj73 = { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: null };
   const obj74 = { image: null, label: "Label", showLabel: true };
@@ -632,7 +632,7 @@ export default function UserSettingsDesignSystemButton() {
   const obj75 = { image: registerAsset, label: "Label", showLabel: true };
   items29[2] = callback2(ExampleImageButton, { image: registerAsset, label: "Label", showLabel: true });
   obj73[3] = items29;
-  obj72[2] = callback3(Stack /* Stack */.Stack, obj73);
+  obj72[2] = callback3(Stack.Stack, obj73);
   items28[1] = callback2(closure_6, obj72);
   const obj77 = { horizontal: true, contentContainerStyle: { minWidth: "100%" }, children: null };
   const obj78 = { direction: "horizontal", justify: "center", style: tmp.buttonContainer, children: null };
@@ -644,29 +644,29 @@ export default function UserSettingsDesignSystemButton() {
   const obj80 = { image: registerAsset, label: "Supercalifragilisticexpialidocious", showLabel: true };
   items30[2] = callback2(ExampleImageButton, { image: registerAsset, label: "Supercalifragilisticexpialidocious", showLabel: true });
   obj78[3] = items30;
-  obj77[2] = callback3(Stack /* Stack */.Stack, obj78);
+  obj77[2] = callback3(Stack.Stack, obj78);
   items28[2] = callback2(closure_6, obj77);
   obj70[1] = items28;
-  items1[13] = callback3(Stack /* Stack */.Stack, obj70);
+  items1[13] = callback3(Stack.Stack, obj70);
   const obj82 = { spacing: 24, children: null };
   const obj83 = { style: tmp.container, children: null };
-  obj83[1] = callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Mixing buttons" });
-  const items31 = [callback2(Stack /* Stack */.Stack, obj83), ];
+  obj83[1] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Mixing buttons" });
+  const items31 = [callback2(Stack.Stack, obj83), ];
   const obj84 = { direction: "horizontal", style: tmp.container, children: null };
   const items32 = [callback2(ExampleButton, { variant: "secondary", text: "Search", grow: true }), callback2(ExampleIconButton, { variant: "secondary" })];
   obj84[2] = items32;
-  items31[1] = callback3(ButtonGroup /* ButtonGroup */.ButtonGroup, obj84);
+  items31[1] = callback3(ButtonGroup.ButtonGroup, obj84);
   obj82[1] = items31;
-  items1[14] = callback3(Stack /* Stack */.Stack, obj82);
+  items1[14] = callback3(Stack.Stack, obj82);
   const obj85 = { children: null };
   const obj86 = { style: tmp.container, children: null };
-  const items33 = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Light Profile Themes" }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "All buttons as they appear on a light profile theme" })];
+  const items33 = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Light Profile Themes" }), callback2(Text.Text, { variant: "text-sm/normal", children: "All buttons as they appear on a light profile theme" })];
   obj86[1] = items33;
-  const items34 = [callback3(Stack /* Stack */.Stack, obj86), ];
+  const items34 = [callback3(Stack.Stack, obj86), ];
   const obj87 = { theme: "light", primaryColor: null, secondaryColor: null, children: null };
-  let obj91 = int2hslRaw /* int2hslRaw */;
+  let obj91 = int2hslRaw;
   obj87[1] = obj91.hex2int("#ffae70");
-  let obj92 = int2hslRaw /* int2hslRaw */;
+  let obj92 = int2hslRaw;
   obj87[2] = obj92.hex2int("#cc2300");
   const obj88 = { style: { padding: 16 }, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: ["#ffae70", "#cc2300"], children: null };
   const obj81 = { image: registerAsset, label: "Supercalifragilisticexpialidocious", showLabel: true };
@@ -674,21 +674,21 @@ export default function UserSettingsDesignSystemButton() {
   const obj90 = { spacing: 16, children: null };
   const items35 = [closure_12.map((variant) => callback2(closure_17, { variant }, variant)), closure_14.map((variant) => callback2(closure_17, { variant }, variant))];
   obj90[1] = items35;
-  obj89[0] = callback3(Stack /* Stack */.Stack, obj90);
-  obj88[4] = callback2(PressableCard /* PressableCard */.Card, obj89);
+  obj89[0] = callback3(Stack.Stack, obj90);
+  obj88[4] = callback2(PressableCard.Card, obj89);
   obj87[3] = callback2(LinearGradient, obj88);
-  items34[1] = callback2(ManaContext /* ManaContext */.ThemeContextProvider, obj87);
+  items34[1] = callback2(ManaContext.ThemeContextProvider, obj87);
   obj85[0] = items34;
-  items1[15] = callback3(Stack /* Stack */.Stack, obj85);
+  items1[15] = callback3(Stack.Stack, obj85);
   obj91 = { children: null };
   obj92 = { style: tmp.container, children: null };
-  const items36 = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Dark Profile Themes" }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "All buttons as they appear on a dark profile theme" })];
+  const items36 = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Dark Profile Themes" }), callback2(Text.Text, { variant: "text-sm/normal", children: "All buttons as they appear on a dark profile theme" })];
   obj92[1] = items36;
-  const items37 = [callback3(Stack /* Stack */.Stack, obj92), ];
+  const items37 = [callback3(Stack.Stack, obj92), ];
   const obj93 = { theme: "dark", primaryColor: null, secondaryColor: null, children: null };
-  obj = int2hslRaw /* int2hslRaw */;
+  obj = int2hslRaw;
   obj93[1] = obj.hex2int("#490000");
-  obj = int2hslRaw /* int2hslRaw */;
+  obj = int2hslRaw;
   obj93[2] = obj.hex2int("#cc2300");
   obj = { style: { padding: 16 }, start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: ["#490000", "#cc2300"], children: null };
   const tmp3 = LinearGradient;
@@ -696,80 +696,80 @@ export default function UserSettingsDesignSystemButton() {
   obj = { spacing: 16, children: null };
   const items38 = [closure_12.map((variant) => callback2(closure_17, { variant }, variant)), closure_14.map((variant) => callback2(closure_17, { variant }, variant))];
   obj[1] = items38;
-  obj[0] = callback3(Stack /* Stack */.Stack, obj);
-  obj[4] = callback2(PressableCard /* PressableCard */.Card, obj);
+  obj[0] = callback3(Stack.Stack, obj);
+  obj[4] = callback2(PressableCard.Card, obj);
   obj93[3] = callback2(LinearGradient, obj);
-  items37[1] = callback2(ManaContext /* ManaContext */.ThemeContextProvider, obj93);
+  items37[1] = callback2(ManaContext.ThemeContextProvider, obj93);
   obj91[0] = items37;
-  items1[16] = callback3(Stack /* Stack */.Stack, obj91);
+  items1[16] = callback3(Stack.Stack, obj91);
   obj = { children: null };
   obj = { style: tmp.container, children: null };
-  const items39 = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Light Client Theme" }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "All buttons as they appear on a light client theme" })];
+  const items39 = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Light Client Theme" }), callback2(Text.Text, { variant: "text-sm/normal", children: "All buttons as they appear on a light client theme" })];
   obj[1] = items39;
-  const items40 = [callback3(Stack /* Stack */.Stack, obj), ];
+  const items40 = [callback3(Stack.Stack, obj), ];
   obj = { theme: 32.theme, gradient: 32, flags: null, children: null };
-  obj = ManaContext /* ManaContext */;
-  obj[2] = obj.setThemeFlag(0, ManaContext /* ManaContext */.ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED);
+  obj = ManaContext;
+  obj[2] = obj.setThemeFlag(0, ManaContext.ThemeContextFlags.MOBILE_LIGHT_GRADIENT_THEME_ENABLED);
   obj = { style: { position: "relative", padding: 16 }, children: null };
   obj = { absolute: true, gradient: 32 };
-  const items41 = [callback2(getMixedGradientColor /* getMixedGradientColor */.Gradient, obj), ];
+  const items41 = [callback2(getMixedGradientColor.Gradient, obj), ];
   obj = { style: null, children: null };
   obj = { backgroundColor: null, padding: 16, borderRadius: 16 };
-  obj = ManaContext /* ManaContext */;
+  obj = ManaContext;
   obj[0] = obj.setColorOpacity("white", 0.7);
   obj[0] = obj;
   obj = { spacing: 16, children: null };
   const items42 = [closure_12.map((variant) => callback2(closure_17, { variant }, variant)), closure_14.map((variant) => callback2(closure_17, { variant }, variant))];
   obj[1] = items42;
-  obj[1] = callback3(Stack /* Stack */.Stack, obj);
+  obj[1] = callback3(Stack.Stack, obj);
   items41[1] = callback2(closure_5, obj);
   obj[1] = items41;
   obj[3] = callback3(closure_5, obj);
-  items40[1] = callback2(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+  items40[1] = callback2(ManaContext.ThemeContextProvider, obj);
   obj[0] = items40;
-  items1[17] = callback3(Stack /* Stack */.Stack, obj);
+  items1[17] = callback3(Stack.Stack, obj);
   obj = { children: null };
   obj = { style: tmp.container, children: null };
-  const items43 = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Dark Client Theme" }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "All buttons as they appear on a dark client theme" })];
+  const items43 = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Dark Client Theme" }), callback2(Text.Text, { variant: "text-sm/normal", children: "All buttons as they appear on a dark client theme" })];
   obj[1] = items43;
-  const items44 = [callback3(Stack /* Stack */.Stack, obj), ];
+  const items44 = [callback3(Stack.Stack, obj), ];
   obj = { theme: 32.theme, gradient: 32, flags: null, children: null };
-  obj = ManaContext /* ManaContext */;
-  obj[2] = obj.setThemeFlag(0, ManaContext /* ManaContext */.ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
+  obj = ManaContext;
+  obj[2] = obj.setThemeFlag(0, ManaContext.ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
   obj = { style: { position: "relative", padding: 16 }, children: null };
   obj = { absolute: true, gradient: 32 };
-  const items45 = [callback2(getMixedGradientColor /* getMixedGradientColor */.Gradient, obj), ];
+  const items45 = [callback2(getMixedGradientColor.Gradient, obj), ];
   obj = { style: null, children: null };
   obj = { backgroundColor: null, padding: 16, borderRadius: 16 };
-  obj = ManaContext /* ManaContext */;
+  obj = ManaContext;
   obj[0] = obj.setColorOpacity("black", 0.7);
   obj[0] = obj;
   obj = { spacing: 16, children: null };
   const items46 = [closure_12.map((variant) => callback2(closure_17, { variant }, variant)), closure_14.map((variant) => callback2(closure_17, { variant }, variant))];
   obj[1] = items46;
-  obj[1] = callback3(Stack /* Stack */.Stack, obj);
+  obj[1] = callback3(Stack.Stack, obj);
   items45[1] = callback2(closure_5, obj);
   obj[1] = items45;
   obj[3] = callback3(closure_5, obj);
-  items44[1] = callback2(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+  items44[1] = callback2(ManaContext.ThemeContextProvider, obj);
   obj[0] = items44;
-  items1[18] = callback3(Stack /* Stack */.Stack, obj);
+  items1[18] = callback3(Stack.Stack, obj);
   obj = { children: null };
   obj = { style: tmp.container, children: null };
-  const items47 = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Floating Action Button" }), callback2(Text /* Text */.Text, { variant: "text-sm/normal", children: "An ever-present icon button, giving the most important call to action in a compact way." })];
+  const items47 = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Floating Action Button" }), callback2(Text.Text, { variant: "text-sm/normal", children: "An ever-present icon button, giving the most important call to action in a compact way." })];
   obj[1] = items47;
-  const items48 = [callback3(Stack /* Stack */.Stack, obj), callback2(closure_5, { style: { padding: 48 } })];
+  const items48 = [callback3(Stack.Stack, obj), callback2(closure_5, { style: { padding: 48 } })];
   obj[0] = items48;
-  items1[19] = callback3(Stack /* Stack */.Stack, obj);
+  items1[19] = callback3(Stack.Stack, obj);
   obj2[1] = items1;
-  obj1[0] = callback3(Stack /* Stack */.Stack, obj2);
+  obj1[0] = callback3(Stack.Stack, obj2);
   const items49 = [callback2(closure_6, obj1), ];
   obj = { icon: null, onPress: null, positionBottom: 32, accessibilityLabel: "Floating Action Button" };
   obj[0] = registerAsset;
   obj[1] = function onPress() {
 
   };
-  items49[1] = callback2(styles /* styles */.FloatingActionButton, obj);
+  items49[1] = callback2(styles.FloatingActionButton, obj);
   obj[0] = items49;
   return callback3(closure_11, obj);
 };

@@ -16,7 +16,7 @@ prototype["_terminate"] = function _terminate() {
   dispatcher.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  let obj = apexExperiment /* apexExperiment */;
+  let obj = apexExperiment;
   if (obj.getICYMIEnabled("ICYMIManager")) {
     obj = { isInitialLoad: null };
     obj[0] = true;

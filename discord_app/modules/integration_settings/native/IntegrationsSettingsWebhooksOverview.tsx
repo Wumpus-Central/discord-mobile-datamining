@@ -80,7 +80,7 @@ function ConnectedWebhookItem(arg0) {
   let require;
   ({ channelId: require, user: importDefault } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let id;
@@ -91,7 +91,7 @@ function ConnectedWebhookItem(arg0) {
   });
   const items1 = [ensureGuildLoaded];
   obj = {};
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => outer1_5.getChannel(closure_0));
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => outer1_5.getChannel(closure_0));
   const merged1 = Object.assign(merged);
   obj.user = stateFromStores;
   obj.channel = stateFromStores1;
@@ -221,16 +221,16 @@ class WebhooksOverview extends PureComponent {
 const prototype = WebhooksOverview.prototype;
 prototype["getHelpText"] = function getHelpText() {
   if (this.props.webhookType === constants2.CHANNEL_FOLLOWER) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     let obj = { helpdeskArticle: null };
     obj[0] = combined.getArticleURL(constants.CHANNEL_FOLLOWING);
-    let formatResult = intl2.format(getSystemLocale /* getSystemLocale */.t["5u+aV1"], obj);
+    let formatResult = intl2.format(getSystemLocale.t["5u+aV1"], obj);
     const obj4 = combined;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { articleURL: null };
     obj[0] = combined.getArticleURL(constants.WEBHOOKS_INTRODUCTION);
-    formatResult = intl.format(getSystemLocale /* getSystemLocale */.t["3hX7G+"], obj);
+    formatResult = intl.format(getSystemLocale.t["3hX7G+"], obj);
     const obj2 = combined;
   }
   return formatResult;
@@ -303,8 +303,8 @@ prototype["render"] = function render() {
   obj[0] = Themes.space.PX_24;
   obj[1] = tmp.content;
   obj[2] = this.renderWebhooks();
-  obj[2] = callback(Stack /* Stack */.Stack, obj);
-  const items = [callback(Form /* Form */.Form, obj), callback(NavScrim /* NavScrim */.NavScrim, {})];
+  obj[2] = callback(Stack.Stack, obj);
+  const items = [callback(Form.Form, obj), callback(NavScrim.NavScrim, {})];
   obj[0] = items;
   return callback2(closure_19, obj);
 };

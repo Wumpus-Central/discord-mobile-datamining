@@ -15,7 +15,7 @@ function setLibraryApplications(libraryApplications) {
     let fromServer = createFromServer.createFromServer(tmp2);
     let tmp5 = require;
     let tmp6 = dependencyMap;
-    let obj = getComboId /* getComboId */;
+    let obj = getComboId;
     let tmp7 = closure_9;
     closure_9[obj.getComboId(fromServer.id, fromServer.branchId)] = fromServer;
     continue;
@@ -23,7 +23,7 @@ function setLibraryApplications(libraryApplications) {
 }
 function handleLibraryApplicationUpdate(libraryApplication) {
   const fromServer = createFromServer.createFromServer(libraryApplication.libraryApplication);
-  const comboId = getComboId /* getComboId */.getComboId(fromServer.id, fromServer.branchId);
+  const comboId = getComboId.getComboId(fromServer.id, fromServer.branchId);
   closure_9[comboId] = fromServer;
   set.delete(comboId);
 }
@@ -40,7 +40,7 @@ class LibraryApplicationStore extends Store {
 const prototype = LibraryApplicationStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(fetchFingerprint);
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   let value = Storage.get(LibraryApplicationStore);
   if (null != value) {
     if (null == value.activeLaunchOptionIds) {
@@ -103,7 +103,7 @@ prototype["hasApplication"] = function hasApplication(arg0, arg1) {
   if (arg2 === undefined) {
     flag = false;
   }
-  const comboId = getComboId /* getComboId */.getComboId(arg0, arg1);
+  const comboId = getComboId.getComboId(arg0, arg1);
   let obj2 = dependencyMap[comboId];
   if (obj2 == null) {
     obj2 = dependencyMap2[comboId];
@@ -116,8 +116,8 @@ prototype["hasApplication"] = function hasApplication(arg0, arg1) {
     }
     let result = !isHiddenResult;
     if (!isHiddenResult) {
-      result = getComboId /* getComboId */.isUserEntitledToLibraryApplication(obj2);
-      const tmpResult = getComboId /* getComboId */;
+      result = getComboId.isUserEntitledToLibraryApplication(obj2);
+      const tmpResult = getComboId;
     }
     tmp5 = result;
   }
@@ -128,7 +128,7 @@ prototype["getLibraryApplication"] = function getLibraryApplication(applicationI
   if (arg2 === undefined) {
     flag = false;
   }
-  const comboId = getComboId /* getComboId */.getComboId(applicationId, arg1);
+  const comboId = getComboId.getComboId(applicationId, arg1);
   let tmp4 = dependencyMap[comboId];
   if (tmp4 == null) {
     tmp4 = dependencyMap2[comboId];
@@ -142,7 +142,7 @@ prototype["getLibraryApplication"] = function getLibraryApplication(applicationI
         tmp7 = tmp4;
       }
       tmp6 = tmp7;
-      tmpResult = getComboId /* getComboId */;
+      tmpResult = getComboId;
     }
   }
   return tmp6;
@@ -153,7 +153,7 @@ prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(
     flag = false;
   }
   if (null != dependencyMap3[id]) {
-    let obj = getComboId /* getComboId */;
+    let obj = getComboId;
     const comboId = obj.getComboId(id, tmp);
     let obj2 = dependencyMap[comboId];
     if (obj2 == null) {
@@ -178,7 +178,7 @@ prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(
       let obj5 = obj[key10030];
       let tmp9 = require;
       let tmp10 = dependencyMap;
-      let obj6 = getComboId /* getComboId */;
+      let obj6 = getComboId;
       if (!obj6.isUserEntitledToLibraryApplication(obj5)) {
         continue;
       } else {
@@ -190,10 +190,10 @@ prototype["getActiveLibraryApplication"] = function getActiveLibraryApplication(
   }
 };
 prototype["isUpdatingFlags"] = function isUpdatingFlags(arg0, arg1) {
-  return set.has(getComboId /* getComboId */.getComboId(arg0, arg1));
+  return set.has(getComboId.getComboId(arg0, arg1));
 };
 prototype["getActiveLaunchOptionId"] = function getActiveLaunchOptionId(arg0, arg1) {
-  const obj = getComboId /* getComboId */;
+  const obj = getComboId;
   return table[obj.getComboId(obj, arg0, arg1)];
 };
 Object.defineProperty(prototype, "fetched", {
@@ -248,9 +248,9 @@ const libraryApplicationStore = new LibraryApplicationStore(require("dispatcher"
     let applicationId;
     let branchId;
     ({ applicationId, branchId } = flags);
-    const comboId = getComboId /* getComboId */.getComboId(applicationId, branchId);
-    const obj = getComboId /* getComboId */;
-    const comboId1 = getComboId /* getComboId */.getComboId(applicationId, branchId);
+    const comboId = getComboId.getComboId(applicationId, branchId);
+    const obj = getComboId;
+    const comboId1 = getComboId.getComboId(applicationId, branchId);
     let obj3 = dependencyMap[comboId1];
     if (obj3 == null) {
       obj3 = dependencyMap2[comboId1];
@@ -272,10 +272,10 @@ const libraryApplicationStore = new LibraryApplicationStore(require("dispatcher"
     let branchId;
     let launchOptionId;
     ({ applicationId, branchId, launchOptionId } = arg0);
-    let obj = getComboId /* getComboId */;
+    let obj = getComboId;
     closure_13[obj.getComboId(applicationId, branchId)] = launchOptionId;
-    const Storage = Storage /* Storage */.Storage;
-    const Storage2 = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
+    const Storage2 = Storage.Storage;
     obj = Storage2.get(LibraryApplicationStore);
     if (obj == null) {
       obj = {};
@@ -293,8 +293,8 @@ const libraryApplicationStore = new LibraryApplicationStore(require("dispatcher"
       return false;
     } else {
       dependencyMap3[applicationId] = branchId;
-      const Storage = Storage /* Storage */.Storage;
-      const Storage2 = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
+      const Storage2 = Storage.Storage;
       let obj = Storage2.get(LibraryApplicationStore);
       if (obj == null) {
         obj = {};
@@ -309,7 +309,7 @@ const libraryApplicationStore = new LibraryApplicationStore(require("dispatcher"
     for (const item10006 of tmp) {
       let tmp2 = require;
       let tmp3 = dependencyMap;
-      let obj = getComboId /* getComboId */;
+      let obj = getComboId;
       let tmp4 = closure_10;
       closure_10[obj.getComboId(item10006.id, item10006.branchId)] = item10006;
       continue;

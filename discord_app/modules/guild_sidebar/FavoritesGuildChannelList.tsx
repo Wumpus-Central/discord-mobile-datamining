@@ -41,7 +41,7 @@ function getMissingFavoriteThreadIds(includeLoading) {
       let tmp11 = favoriteChannels[key10013];
       let tmp12 = require;
       let tmp13 = dependencyMap;
-      if (tmp11.type !== create /* create */.FavoriteChannelType.REFERENCE_ORIGINAL) {
+      if (tmp11.type !== create.FavoriteChannelType.REFERENCE_ORIGINAL) {
         continue;
       } else {
         if (null == tmp11.channelType) {

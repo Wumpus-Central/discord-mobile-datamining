@@ -171,7 +171,7 @@ export const parseV8BillingAddressSkemaErrorToBillingError = function parseV8Bil
         code = body.code;
       }
     }
-    if (code === sendRequest /* sendRequest */.INVALID_FORM_BODY_ERROR_CODE) {
+    if (code === sendRequest.INVALID_FORM_BODY_ERROR_CODE) {
       let errors;
       if (c8 != null) {
         const body2 = c8.body;
@@ -208,8 +208,8 @@ export const parseV8BillingAddressSkemaErrorToBillingError = function parseV8Bil
         errors1 = body4.errors;
       }
       if (null != errors1) {
-        c8.body = sendRequest /* sendRequest */.convertSkemaError(c8.body.errors);
-        const obj = sendRequest /* sendRequest */;
+        c8.body = sendRequest.convertSkemaError(c8.body.errors);
+        const obj = sendRequest;
       }
     }
   }

@@ -5,13 +5,13 @@ import { apexExperiment } from "QuestHomeBountiesExperiment.tsx";
 const result = require("apexExperiment").fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");
 
 export const useBountiesExperience = function useBountiesExperience(VIDEO_MODAL_MOBILE) {
-  const BountiesVerticalScrollExperiment = apexExperiment /* apexExperiment */.BountiesVerticalScrollExperiment;
+  const BountiesVerticalScrollExperiment = apexExperiment.BountiesVerticalScrollExperiment;
   let obj = { location: VIDEO_MODAL_MOBILE };
   const config = BountiesVerticalScrollExperiment.useConfig(obj);
-  const BountiesStage1Experiment = apexExperiment /* apexExperiment */.BountiesStage1Experiment;
+  const BountiesStage1Experiment = apexExperiment.BountiesStage1Experiment;
   obj = { location: VIDEO_MODAL_MOBILE };
   const config1 = BountiesStage1Experiment.useConfig(obj);
-  const QuestHomeBountiesExperiment = apexExperiment /* apexExperiment */.QuestHomeBountiesExperiment;
+  const QuestHomeBountiesExperiment = apexExperiment.QuestHomeBountiesExperiment;
   obj = { location: VIDEO_MODAL_MOBILE };
   let num = 50;
   const config2 = QuestHomeBountiesExperiment.useConfig(obj);

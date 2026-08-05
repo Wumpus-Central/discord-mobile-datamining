@@ -37,11 +37,11 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
   let overrideBackgroundHighlight = canShowImages.overrideBackgroundHighlight;
   obj = { type: RowType.MESSAGE, message: createThreadEmbed(obj), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
   obj = { options, message, roleStyle, isFirst, isEditing, canShowImages: undefined === canShowImages || canShowImages, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.lfIHs4);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.lfIHs4);
   obj[4] = reactionsTheme;
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[5] = intl2.string(getSystemLocale /* getSystemLocale */.t["IOS/dU"]);
+  const intl2 = getSystemLocale.intl;
+  obj[5] = intl2.string(getSystemLocale.t["IOS/dU"]);
   obj[6] = renderContentOnly;
   obj[7] = separatorBefore;
   obj[8] = changeType;
@@ -64,11 +64,11 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
   }
   obj[12] = tmp4Result.createSwipeActions(canReply, options.enableSwipeActions && canShowImages.canEdit);
   const intl3 = tmp6(1236).intl;
-  obj[13] = intl3.string(getSystemLocale /* getSystemLocale */.t["5IEsGx"]);
+  obj[13] = intl3.string(getSystemLocale.t["5IEsGx"]);
   const intl4 = tmp6(1236).intl;
-  obj[14] = intl4.string(getSystemLocale /* getSystemLocale */.t.I3ltXO);
+  obj[14] = intl4.string(getSystemLocale.t.I3ltXO);
   const intl5 = tmp6(1236).intl;
-  obj[15] = intl5.string(getSystemLocale /* getSystemLocale */.t.rBIGBL);
+  obj[15] = intl5.string(getSystemLocale.t.rBIGBL);
   const forcedTheme = options.forcedTheme;
   obj[16] = forcedTheme;
   return obj;

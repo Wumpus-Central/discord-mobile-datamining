@@ -104,13 +104,13 @@ export const ModeratorStatus = memoResult1;
 export const BlockedStatus = function BlockedStatus() {
   const obj = { style: callback().restricted, source: null, size: null, color: null };
   obj[1] = registerAsset;
-  obj[2] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
+  obj[2] = Button.Icon.Sizes.EXTRA_SMALL;
   obj[3] = Themes.unsafe_rawColors.RED_400;
-  return jsx(Button /* Button */.Icon, { style: callback().restricted, source: null, size: null, color: null });
+  return jsx(Button.Icon, { style: callback().restricted, source: null, size: null, color: null });
 };
 export const IgnoredStatus = function IgnoredStatus() {
   const obj = { style: callback().restricted, source: null, size: null };
   obj[1] = registerAsset;
-  obj[2] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
-  return jsx(Button /* Button */.Icon, { style: callback().restricted, source: null, size: null });
+  obj[2] = Button.Icon.Sizes.EXTRA_SMALL;
+  return jsx(Button.Icon, { style: callback().restricted, source: null, size: null });
 };

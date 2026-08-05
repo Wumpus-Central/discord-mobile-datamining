@@ -33,13 +33,13 @@ function questDockHeaderLayoutAnimation(currentOriginX) {
   obj = { initialValues: obj, animations: null };
   obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
   obj = { originX: null, originY: null, height: null, width: null };
-  obj[0] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(currentOriginX.targetOriginX, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
-  const obj4 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
-  obj[1] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(currentOriginX.targetOriginY, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
-  const obj5 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
-  obj[2] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(currentOriginX.targetHeight, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
-  const obj6 = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
-  obj[3] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(currentOriginX.targetWidth, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
+  obj[0] = CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetOriginX, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
+  const obj4 = CONFIG_NEVER_ANIMATE;
+  obj[1] = CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetOriginY, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
+  const obj5 = CONFIG_NEVER_ANIMATE;
+  obj[2] = CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetHeight, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
+  const obj6 = CONFIG_NEVER_ANIMATE;
+  obj[3] = CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetWidth, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED);
   obj[1] = obj;
   return obj;
 }

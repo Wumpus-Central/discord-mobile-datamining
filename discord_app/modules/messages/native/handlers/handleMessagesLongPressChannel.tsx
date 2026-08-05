@@ -11,7 +11,7 @@ export const handleMessagesLongPressChannel = function handleMessagesLongPressCh
   ({ guildId, channelId, messageId, originalLink } = data.data);
   if (null != channelId) {
     if (originalLink == null) {
-      let obj = allowChannelAccess /* allowChannelAccess */;
+      let obj = allowChannelAccess;
       originalLink = obj.getChannelPermalink(guildId, channelId, messageId);
     }
     if (null != originalLink) {

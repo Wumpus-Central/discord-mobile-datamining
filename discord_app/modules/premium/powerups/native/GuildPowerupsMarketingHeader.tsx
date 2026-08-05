@@ -10,7 +10,7 @@ import { set } from "../hooks/useMarketablePowerupPerks.tsx";
 
 const require = arg1;
 function PerkText(children) {
-  return jsx(Text /* Text */.Text, { color: "text-overlay-light", variant: "text-sm/semibold", children: children.powerup.title });
+  return jsx(Text.Text, { color: "text-overlay-light", variant: "text-sm/semibold", children: children.powerup.title });
 }
 createCacheKey = { container: null, text: null };
 createCacheKey = { padding: require("Themes").space.PX_12, backgroundColor: null };

@@ -22,13 +22,13 @@ function Navbar(onClose) {
   let obj = { top: true, style: tmp.header, children: null };
   obj = { style: tmp.closeButtonContainer, children: null };
   obj = { accessibilityLabel: null, onPress: null, source: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.cpT0Cq);
   obj[1] = onClose.onClose;
   obj[2] = registerAsset;
-  obj[1] = callback2(HeaderActionButton /* HeaderActionButton */.HeaderActionButton, obj);
+  obj[1] = callback2(HeaderActionButton.HeaderActionButton, obj);
   obj[2] = callback2(View, obj);
-  return callback2(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 function SubmitFeedbackScreen(onSubmit) {
   let importDefault;
@@ -38,17 +38,17 @@ function SubmitFeedbackScreen(onSubmit) {
   let feedbackOptions;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = Feedback /* Feedback */;
+  let obj = Feedback;
   feedbackOptions = obj.generateFeedbackOptions();
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.headerTitle, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["7bdzNo"]);
-  const items = [callback2(Text /* Text */.Text, obj), , , ];
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["7bdzNo"]);
+  const items = [callback2(Text.Text, obj), , , ];
   const obj1 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.Lbpk6m);
-  items[1] = callback2(Text /* Text */.Text, obj1);
+  const intl2 = getSystemLocale.intl;
+  obj1[3] = intl2.string(getSystemLocale.t.Lbpk6m);
+  items[1] = callback2(Text.Text, obj1);
   items[2] = callback2(View, {
     style: tmp.formBody,
     children: feedbackOptions.map((children) => {
@@ -93,10 +93,10 @@ function SubmitFeedbackScreen(onSubmit) {
   };
   items1[1] = { paddingBottom: useSafeAreaInsets().bottom + 16 };
   const obj5 = { size: "md", text: null, onPress: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj5[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.Z6DZZ6);
+  const intl3 = getSystemLocale.intl;
+  obj5[1] = intl3.string(getSystemLocale.t.Z6DZZ6);
   obj5[2] = onSubmit.onSubmit;
-  obj3[1] = callback2(Button /* Button */.Button, obj5);
+  obj3[1] = callback2(Button.Button, obj5);
   items[3] = callback2(View, obj3);
   obj[1] = items;
   return callback3(View, obj);

@@ -140,8 +140,8 @@ export default function PremiumGuildSubscribeModal(arg0) {
     return flag;
   }, items));
   let obj = { screens: tmp.screens, initialRouteStack: initialStack, headerBackTitle: null, onStateChange: null };
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
+  let intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
   obj[3] = function onStateChange(arg0) {
     let tmp;
     if (arg0 != null) {
@@ -151,5 +151,5 @@ export default function PremiumGuildSubscribeModal(arg0) {
       callback(tmp.name);
     }
   };
-  return jsx(NavigationStack /* NavigationStack */.Navigator, { screens: tmp.screens, initialRouteStack: initialStack, headerBackTitle: null, onStateChange: null });
+  return jsx(NavigationStack.Navigator, { screens: tmp.screens, initialRouteStack: initialStack, headerBackTitle: null, onStateChange: null });
 };

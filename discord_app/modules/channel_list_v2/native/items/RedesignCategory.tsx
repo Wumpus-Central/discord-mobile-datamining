@@ -173,7 +173,7 @@ const styles = createCacheKey.createStyles(() => {
   const merged1 = Object.assign(flag ? { marginLeft: 4 } : { marginRight: 3 });
   obj[3] = {};
   const obj1 = {};
-  obj4 = set /* set */;
+  obj4 = set;
   const tmp = flag ? { flexShrink: 1 } : { flex: 1 };
   const tmp4 = flag ? { marginLeft: 4 } : { marginRight: 3 };
   obj[4] = { paddingLeft: Themes.space.PX_8, marginLeft: "auto" };

@@ -56,5 +56,5 @@ export const getEmbeddedActivityParticipantAvatarUris = function getEmbeddedActi
     }
     return "" + avatarURL;
   });
-  return mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+  return mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
 };

@@ -83,7 +83,7 @@ function RadioBar(arg0) {
   ({ style, size, onPress } = arg0);
   const tmp = callback2();
   const tmp3 = callback(RadioIndicator, { size, active: checked });
-  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative;
   const radioA11yNative = obj.useRadioA11yNative({ selected: checked, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   obj = { accessibilityRole, accessibilityState, disabled, onPress: null, DEPRECATED_style: null, label: null, subLabel: null, trailing: null, leading: null };

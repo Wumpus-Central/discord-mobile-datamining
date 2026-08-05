@@ -268,8 +268,8 @@ export const selectHomeResourceChannel = function selectHomeResourceChannel(clos
       obj.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj);
     }
     if (flag) {
-      transitionToChannel /* transitionToChannel */.transitionToChannel(channelId, { navigationReplace: false });
-      const obj3 = transitionToChannel /* transitionToChannel */;
+      transitionToChannel.transitionToChannel(channelId, { navigationReplace: false });
+      const obj3 = transitionToChannel;
     }
   }
 };
@@ -294,7 +294,7 @@ export const selectNewMemberActionChannel = function selectNewMemberActionChanne
     obj[3] = actionForChannel.actionType;
     obj.track(constants.SERVER_GUIDE_CHANNEL_SELECTED, obj);
   }
-  transitionToChannel /* transitionToChannel */.transitionToChannel(id);
+  transitionToChannel.transitionToChannel(id);
 };
 export const completeNewMemberAction = function completeNewMemberAction(c0, c1) {
   let obj = dispatcher;

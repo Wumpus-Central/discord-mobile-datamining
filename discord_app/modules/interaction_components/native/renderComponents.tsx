@@ -19,7 +19,7 @@ function renderComponents(components) {
 }
 function renderComponent(component, arg1) {
   const type = component.type;
-  if (PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.ACTION_ROW === type) {
+  if (PermissionOverwriteType.ComponentType.ACTION_ROW === type) {
     let obj = {};
     const merged = Object.assign(component);
     obj.renderComponents = renderComponents;

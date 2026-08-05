@@ -135,18 +135,18 @@ prototype["render"] = function render() {
   if (null != vanityURLCode) {
     if ("" !== vanityURLCode) {
       let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl6 = getSystemLocale /* getSystemLocale */.intl;
+      const intl6 = getSystemLocale.intl;
       obj = { url: null };
       obj[0] = getInviteURL(vanityURLCode);
-      obj[2] = intl6.format(getSystemLocale /* getSystemLocale */.t.FcGpNU, obj);
+      obj[2] = intl6.format(getSystemLocale.t.FcGpNU, obj);
       const tmp24 = getInviteURL(vanityURLCode);
-      const tmp = callback(Text /* Text */.Text, obj);
+      const tmp = callback(Text.Text, obj);
     }
   }
   if (isEditing) {
     let errorMessageFromErrorCode;
     if (null != errorDetails) {
-      obj = getErrorMessageFromErrorCode /* getErrorMessageFromErrorCode */;
+      obj = getErrorMessageFromErrorCode;
       errorMessageFromErrorCode = obj.getErrorMessageFromErrorCode(errorDetails.code);
     }
     let hasItem;
@@ -174,21 +174,21 @@ prototype["render"] = function render() {
     obj3[2] = self.handleChange;
     obj3[3] = isEditing;
     obj3[4] = errorMessageFromErrorCode;
-    const items1 = [callback(TextInput /* TextInput */.TextInput, obj3), ];
+    const items1 = [callback(TextInput.TextInput, obj3), ];
     const obj4 = { style: null, children: null };
     obj4[0] = styles.hints;
     const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj5[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.IhWDcu);
-    const items2 = [callback(Text /* Text */.Text, obj5), , , , ];
+    const intl2 = getSystemLocale.intl;
+    obj5[2] = intl2.string(getSystemLocale.t.IhWDcu);
+    const items2 = [callback(Text.Text, obj5), , , , ];
     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    obj6[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["1mRkFr"]);
-    items2[1] = callback(Text /* Text */.Text, obj6);
+    const intl3 = getSystemLocale.intl;
+    obj6[2] = intl3.string(getSystemLocale.t["1mRkFr"]);
+    items2[1] = callback(Text.Text, obj6);
     const obj7 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    obj7[2] = intl4.string(getSystemLocale /* getSystemLocale */.t["eH/HMz"]);
-    items2[2] = callback(Text /* Text */.Text, obj7);
+    const intl4 = getSystemLocale.intl;
+    obj7[2] = intl4.string(getSystemLocale.t["eH/HMz"]);
+    items2[2] = callback(Text.Text, obj7);
     if (tmp17Result) {
       const obj8 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl5 = tmp18(1236).intl;
@@ -214,8 +214,8 @@ prototype["render"] = function render() {
     const _HermesInternal = HermesInternal;
     let combined = "discord.gg/" + vanityURLCode;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    combined = intl.string(getSystemLocale /* getSystemLocale */.t["FaXGO/"]);
+    const intl = getSystemLocale.intl;
+    combined = intl.string(getSystemLocale.t["FaXGO/"]);
   }
 };
 let obj2 = { marginTop: require("Themes").space.PX_8, gap: require("Themes").space.PX_4 };

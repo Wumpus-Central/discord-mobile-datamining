@@ -205,21 +205,21 @@ export const shouldShowOutboundPromotionNotice = function shouldShowOutboundProm
   }
   let tmp6 = null != id;
   if (tmp6) {
-    tmp6 = !addVersionedDismissedContent /* addVersionedDismissedContent */.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, id, { cooldownDurationMs: 259200000 });
-    let obj = addVersionedDismissedContent /* addVersionedDismissedContent */;
+    tmp6 = !addVersionedDismissedContent.isTimeRecurringSnowflakeBoundDismissibleContentDismissed(DismissibleContent.DismissibleContent.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, id, { cooldownDurationMs: 259200000 });
+    let obj = addVersionedDismissedContent;
   }
   return tmp6;
 };
 export const isDedicatedSurfacePromotion = function isDedicatedSurfacePromotion(promotion) {
   let hasItem = null != promotion.partnerId;
   if (hasItem) {
-    const DEDICATED_SURFACE_PARTNER_IDS = CountryListMode /* CountryListMode */.DEDICATED_SURFACE_PARTNER_IDS;
+    const DEDICATED_SURFACE_PARTNER_IDS = CountryListMode.DEDICATED_SURFACE_PARTNER_IDS;
     hasItem = DEDICATED_SURFACE_PARTNER_IDS.has(promotion.partnerId);
   }
   return hasItem;
 };
 export const shouldShowOutboundPromotionOnPlatform = function shouldShowOutboundPromotionOnPlatform(promotion) {
-  const isIOSResult = set /* set */.isIOS();
+  const isIOSResult = set.isIOS();
   let tmp2 = !isIOSResult;
   if (isIOSResult) {
     tmp2 = !promotion.hasFlag(PromotionFlags.IS_BLOCKED_IOS);
@@ -266,5 +266,5 @@ export const getClaimedEndedOutboundPromotions = function getClaimedEndedOutboun
   });
 };
 export const isRecurringPromotion = function isRecurringPromotion(promotionType) {
-  return promotionType.promotionType === CountryListMode /* CountryListMode */.PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING;
+  return promotionType.promotionType === CountryListMode.PromotionTypes.THIRD_PARTY_OUTBOUND_RECURRING;
 };

@@ -8,20 +8,20 @@ import { useParentalControlledExplicitContentSettings } from "../../../parent_to
 const require = arg1;
 createToggle = {
   useTitle: function getTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["+uI23H"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["+uI23H"]);
   },
   parent: require("MobileSetting").MobileSetting.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentFriendsDmSettingValue() {
-    const parentalControlledGoreContentSettings = useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useParentalControlledGoreContentSettings();
+    const parentalControlledGoreContentSettings = useParentalControlledExplicitContentSettings.useParentalControlledGoreContentSettings();
     let goreContentFriendDm;
     if (parentalControlledGoreContentSettings != null) {
       goreContentFriendDm = parentalControlledGoreContentSettings.goreContentFriendDm;
     }
     let tmp5 = null;
     if (null != goreContentFriendDm) {
-      tmp5 = redactionSettingToRenderedString /* redactionSettingToRenderedString */.redactionSettingToRenderedString(goreContentFriendDm)();
-      const tmpResult = redactionSettingToRenderedString /* redactionSettingToRenderedString */;
+      tmp5 = redactionSettingToRenderedString.redactionSettingToRenderedString(goreContentFriendDm)();
+      const tmpResult = redactionSettingToRenderedString;
     }
     return tmp5;
   },

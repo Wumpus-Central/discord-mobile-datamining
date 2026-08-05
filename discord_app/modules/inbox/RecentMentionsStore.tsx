@@ -29,8 +29,8 @@ function findOrCreateMessageRecord(channel_id) {
   } else {
     let message = store2.getMessage(channel_id.channel_id, channel_id.id);
     if (null == message) {
-      message = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(channel_id);
-      const obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
+      message = createMinimalMessageRecord.createMessageRecord(channel_id);
+      const obj = createMinimalMessageRecord;
     }
     return message;
   }
@@ -69,7 +69,7 @@ function hasMentionNotificationEnabled(channel_id) {
             return false;
           }
         }
-        obj2 = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+        obj2 = shouldShowAgeGateForVoiceChannel;
       }
     }
   }
@@ -105,8 +105,8 @@ function parseMessage(message, channelId) {
           if (!(message instanceof hasFlag)) {
             message = store2.getMessage(message.channel_id, message.id);
             if (null == message) {
-              message = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(message);
-              const obj2 = createMinimalMessageRecord /* createMinimalMessageRecord */;
+              message = createMinimalMessageRecord.createMessageRecord(message);
+              const obj2 = createMinimalMessageRecord;
             }
             tmp12 = message;
           }
@@ -473,7 +473,7 @@ obj = {
     });
     let c21 = false;
     const tmpResult = apply;
-    let closure_25 = sleep /* sleep */.now();
+    let closure_25 = sleep.now();
     let c24 = true;
   },
   LOAD_RECENT_MENTIONS_FAILURE: function handleLoadMentionsFailure() {
@@ -587,7 +587,7 @@ obj = {
     message = message.message;
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
-      let obj = isMentioned /* isMentioned */;
+      let obj = isMentioned;
       obj = { rawMessage: null, userId: null, suppressRoles: false, suppressEveryone: false };
       obj[0] = message;
       obj[1] = currentUser.id;

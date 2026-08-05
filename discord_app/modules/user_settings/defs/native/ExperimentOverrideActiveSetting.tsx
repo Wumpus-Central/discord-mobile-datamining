@@ -16,27 +16,27 @@ createToggle = {
   parent: null,
   IconComponent: require("BeakerIcon").BeakerIcon,
   useDescription: function useExperimentOverrideActiveDescription() {
-    let obj = initialize /* initialize */;
+    let obj = initialize;
     const items = [getHash];
     const stateFromStores = obj.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
     const items1 = [initialize];
-    const obj2 = initialize /* initialize */;
+    const obj2 = initialize;
     obj = { label: "Experiments overridden: ", value: null };
-    obj[1] = stateFromStores + initialize /* initialize */.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length).toString();
-    return jsx(DevToolsContentSortButtons /* DevToolsContentSortButtons */.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: null });
+    obj[1] = stateFromStores + initialize.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length).toString();
+    return jsx(DevToolsContentSortButtons.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: null });
   },
   usePredicate: function useHasExperimentOverrideActive() {
-    const staffOrDeveloperSettingPredicate = useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
-    const obj = useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */;
+    const staffOrDeveloperSettingPredicate = useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
+    const obj = useStaffOrDeveloperSettingPredicate;
     const items = [getHash];
-    const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
-    const obj2 = initialize /* initialize */;
+    const stateFromStores = initialize.useStateFromStores(items, () => Object.keys(allExperimentOverrideDescriptors.getAllExperimentOverrideDescriptors()).length);
+    const obj2 = initialize;
     const items1 = [initialize];
-    const obj3 = initialize /* initialize */;
-    return stateFromStores + initialize /* initialize */.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length) > 0 && staffOrDeveloperSettingPredicate;
+    const obj3 = initialize;
+    return stateFromStores + initialize.useStateFromStores(items1, () => Object.keys(clientOverrides.getClientOverrides()).length) > 0 && staffOrDeveloperSettingPredicate;
   },
   onPress: function handleExperimentOverrideActivePress() {
-    navigateToDevTools /* navigateToDevTools */.navigateToDevTools({ screenKey: "experiments" });
+    navigateToDevTools.navigateToDevTools({ screenKey: "experiments" });
   },
   withArrow: true
 };

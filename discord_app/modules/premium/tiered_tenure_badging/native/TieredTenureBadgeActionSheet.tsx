@@ -22,7 +22,7 @@ function TieredTenureBadgeItem(arg0) {
   let premiumSince;
   ({ badge, isUsersBadge, premiumSince } = arg0);
   const tmp = createCacheKey();
-  let obj = useMobileTenureBadgeImages /* useMobileTenureBadgeImages */;
+  let obj = useMobileTenureBadgeImages;
   const mobileTenureBadgeImages = obj.useMobileTenureBadgeImages(badge);
   if (mobileTenureBadgeImages != null) {
     const small = mobileTenureBadgeImages.small;

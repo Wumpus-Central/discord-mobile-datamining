@@ -15,9 +15,9 @@ export default function UserProfileWidgetReportButton(arg0) {
   let require;
   ({ userId: require, widget: importDefault } = arg0);
   let obj = { label: null, variant: "destructive", IconComponent: null, action: null };
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.D4GvHE);
-  obj[2] = FlagIcon /* FlagIcon */.FlagIcon;
+  let intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.D4GvHE);
+  obj[2] = FlagIcon.FlagIcon;
   obj[3] = function action() {
     return outer1_0(outer1_2[5]).showReportModalForWidget(closure_0, closure_1);
   };
@@ -37,7 +37,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       return callback3(closure_3, obj);
     }
   };
-  return jsx(ContextMenu /* ContextMenu */.ContextMenu, {
+  return jsx(ContextMenu.ContextMenu, {
     items,
     children(ref) {
       let obj = { ref: ref.ref };

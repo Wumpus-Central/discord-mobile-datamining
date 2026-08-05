@@ -24,9 +24,9 @@ const memoResult = require("noop").memo(function ThemedHeaderBackgroundGradient(
   }
   const tmp3 = callback();
   const tmp4 = importDefault;
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(BACKGROUND_BASE_LOWEST);
-  let obj1 = int2hslRaw /* int2hslRaw */;
+  let obj1 = int2hslRaw;
   let str = obj1.hex2rgb(token, 0);
   if (str == null) {
     str = "transparent";

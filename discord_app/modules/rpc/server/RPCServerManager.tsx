@@ -492,7 +492,7 @@ class RPCServerManager {
 const prototype = RPCServerManager.prototype;
 prototype["loadServer"] = function loadServer() {
   const self = this;
-  if (set /* set */.isPlatformEmbedded) {
+  if (set.isPlatformEmbedded) {
     const result = self.registerTransportsForEmbeddedPlatform();
   }
   for (const item10013 of tmp2) {

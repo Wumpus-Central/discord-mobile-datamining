@@ -95,7 +95,7 @@ function withEllipsisAnimation(arg0, value) {
   const obj = ReanimatedRexport;
   const result = 166.66666666666666 * arg0;
   const obj2 = ReanimatedRexport;
-  return obj.withDelay(result, obj2.withRepeat(CONFIG_NEVER_ANIMATE_TIMING /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(value, obj, "animate-always"), -1, true));
+  return obj.withDelay(result, obj2.withRepeat(CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, obj, "animate-always"), -1, true));
 }
 obj = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: require("module_4146").withDelay, withRepeat: require("module_4146").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, ELLIPSIS_APPEAR_TIMING: obj };
 withEllipsisAnimation.__closure = obj;

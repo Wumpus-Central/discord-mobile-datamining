@@ -100,8 +100,8 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/n
 
 export default function NotificationCenterPermissionNudge() {
   let obj = apexExperiment;
-  const canSeePushNotificationNudge = _requestPushNotificationPermission /* _requestPushNotificationPermission */.useCanSeePushNotificationNudge();
-  const obj2 = _requestPushNotificationPermission /* _requestPushNotificationPermission */;
+  const canSeePushNotificationNudge = _requestPushNotificationPermission.useCanSeePushNotificationNudge();
+  const obj2 = _requestPushNotificationPermission;
   let prop = null;
   if (!obj.useConfig({ location: "NotificationCenterPermissionNudge" }).inHoldout) {
     prop = null;
@@ -109,12 +109,12 @@ export default function NotificationCenterPermissionNudge() {
       prop = tmp2(1358).DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER;
     }
   }
-  const tmp5 = callback(useSelectedDismissibleContent /* useSelectedDismissibleContent */.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 604800000 }), 2);
+  const tmp5 = callback(useSelectedDismissibleContent.useSelectedTimeRecurringDismissibleContent(prop, { cooldownDurationMs: 604800000 }), 2);
   require = tmp6;
   const items = [tmp5[1]];
-  const obj3 = useSelectedDismissibleContent /* useSelectedDismissibleContent */;
+  const obj3 = useSelectedDismissibleContent;
   let tmp8 = null;
-  if (tmp5[0] === DismissibleContent /* DismissibleContent */.DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER) {
+  if (tmp5[0] === DismissibleContent.DismissibleContent.NOTIFICATION_NUDGE_NOTIFICATION_CENTER_BANNER) {
     obj = { onDismiss: null };
     obj[0] = tmp7;
     tmp8 = callback4(NotificationCenterBannerImpl, obj);

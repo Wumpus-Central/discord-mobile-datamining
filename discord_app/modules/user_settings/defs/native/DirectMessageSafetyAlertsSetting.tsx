@@ -8,8 +8,8 @@ import { InappropriateConversationExperiment } from "../../../self_mod/inappropr
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.qFsx5q);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.qFsx5q);
   },
   parent() {
     return MobileSetting.CONTENT_AND_SOCIAL;
@@ -21,10 +21,10 @@ const toggle = createToggle.createToggle({
     if (flag == null) {
       flag = true;
     }
-    const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment /* InappropriateConversationExperiment */.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
-    const obj = InappropriateConversationExperiment /* InappropriateConversationExperiment */;
+    const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
+    const obj = InappropriateConversationExperiment;
     let tmp4 = !flag;
-    const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn /* InappropriateConversationsDefaultOn */.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
+    const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
     if (!flag) {
       tmp4 = isEligibleForInappropriateConversationWarning;
     }
@@ -36,8 +36,8 @@ const toggle = createToggle.createToggle({
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.qFsx5q);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.qFsx5q);
   },
   parent() {
     return MobileSetting.CONTENT_AND_SOCIAL;
@@ -49,10 +49,10 @@ let obj = {
     if (flag == null) {
       flag = true;
     }
-    const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment /* InappropriateConversationExperiment */.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
-    const obj = InappropriateConversationExperiment /* InappropriateConversationExperiment */;
+    const isEligibleForInappropriateConversationWarning = InappropriateConversationExperiment.useIsEligibleForInappropriateConversationWarning({ location: "user_settings_mobile_redesign" });
+    const obj = InappropriateConversationExperiment;
     let tmp4 = !flag;
-    const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn /* InappropriateConversationsDefaultOn */.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
+    const isEligibleForInappropriateConversationDefaultOn = InappropriateConversationsDefaultOn.useIsEligibleForInappropriateConversationDefaultOn({ location: "user_settings_mobile_redesign" });
     if (!flag) {
       tmp4 = isEligibleForInappropriateConversationWarning;
     }

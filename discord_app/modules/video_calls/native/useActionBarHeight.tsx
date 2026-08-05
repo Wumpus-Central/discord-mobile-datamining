@@ -11,12 +11,12 @@ let sum = 2 * require("ActionButton").SMALL_ACTION_BUTTON_DIMENSIONS.buttonRadiu
 const result = require("ACTION_SHEET_START_HEIGHT_RATIO").fileFinishedImporting("modules/video_calls/native/useActionBarHeight.tsx");
 
 export default function useActionBarHeight(id) {
-  const isFiveButtonLayout = useIsFiveButtonLayout /* useIsFiveButtonLayout */.useIsFiveButtonLayout(id);
-  const obj = useIsFiveButtonLayout /* useIsFiveButtonLayout */;
+  const isFiveButtonLayout = useIsFiveButtonLayout.useIsFiveButtonLayout(id);
+  const obj = useIsFiveButtonLayout;
   const tmp2 = useCanCurrentUserSpeakInChannel(id);
   const items = [_detectH265HardwareDecode];
   let num = 88;
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => mode.getMode() === constants.PUSH_TO_TALK);
+  const stateFromStores = initialize.useStateFromStores(items, () => mode.getMode() === constants.PUSH_TO_TALK);
   if (isFiveButtonLayout) {
     num = closure_6;
   }

@@ -27,7 +27,7 @@ function ForumPostUsername(arg0) {
   ({ containerStyle, roleDotStyle, textStyle, suffix, hasUnreads } = arg0);
   const tmp = callback2();
   let num = 158;
-  if (useForumChannelStore(thread.parent_id).layoutType === set /* set */.ForumLayout.GRID) {
+  if (useForumChannelStore(thread.parent_id).layoutType === set.ForumLayout.GRID) {
     num = 72;
   }
   const diff = useChatWidth() - tmp2(11309).GRID_HORIZONTAL_PADDING - num;
@@ -95,7 +95,7 @@ export const ForumPostAuthor = function ForumPostAuthor(thread) {
   let user;
   thread = thread.thread;
   ({ hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
-  let obj = useLoadForumUnreadCounts /* useLoadForumUnreadCounts */;
+  let obj = useLoadForumUnreadCounts;
   const forumPostAuthor = obj.useForumPostAuthor(thread);
   ({ user, author } = forumPostAuthor);
   let nick;
@@ -150,7 +150,7 @@ export const ForumPostMessageAuthor = function ForumPostMessageAuthor(thread) {
   let textStyle;
   thread = thread.thread;
   ({ message, hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
-  let obj = useLoadForumUnreadCounts /* useLoadForumUnreadCounts */;
+  let obj = useLoadForumUnreadCounts;
   const forumPostMessageAuthor = obj.useForumPostMessageAuthor(message, thread);
   const user = forumPostMessageAuthor.user;
   obj = { thread, authorId: null, authorName: null, authorColor: null, authorColors: null, suffix: null, containerStyle: null, roleDotStyle: null, textStyle: null, hasUnreads: null };

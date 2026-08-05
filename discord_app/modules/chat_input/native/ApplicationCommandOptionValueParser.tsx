@@ -30,7 +30,7 @@ function getUsers(getGuildId) {
     mapped = apply([]);
   }
   const mapped1 = mapped.map((userId) => user.getUser(userId.userId));
-  const found = mapped1.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = mapped1.filter(isDiscordFrontendDevelopment.isNotNullish);
   return found.map((id) => ({ id: id.id, text: id.tag }));
 }
 function getChannels(getGuildId, arr) {
@@ -282,7 +282,7 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
   } else {
     let obj = {};
     const options = activeCommand.options;
-    const parserState = rebuild /* rebuild */.createParserState(channel);
+    const parserState = rebuild.createParserState(channel);
     const iter = options[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
@@ -296,7 +296,7 @@ export const parseOptionValuesForSend = function parseOptionValuesForSend(channe
           let tmp23 = require;
           let tmp24 = dependencyMap;
           let tmp25 = dependencyMap;
-          if (tmp4.type === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.STRING) {
+          if (tmp4.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING) {
             let tmp7 = nextResult;
             if (null == tmp4.choices) {
               let tmp8 = nextResult;

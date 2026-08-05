@@ -4,15 +4,15 @@ import { getSystemLocale } from "../../intl/index.native.tsx";
 let obj = { RIBBON: "ribbon", THUMBS_UP: "thumbsUp", THUMBS_DOWN: "thumbsDown", FRIENDS: "friends" };
 obj = {
   getText() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.jbIRBE);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.jbIRBE);
   },
   iconRole: obj.RIBBON
 };
 obj = {
   getText() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.xcFFv6);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.xcFFv6);
   },
   iconRole: obj.RIBBON
 };
@@ -21,85 +21,85 @@ let closure_2 = {
   [WidgetGameTag.WidgetGameTag.CASUAL]: obj,
   [WidgetGameTag.WidgetGameTag.INTERMEDIATE]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["A/mIs/"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["A/mIs/"]);
     },
     iconRole: obj.RIBBON
   },
   [WidgetGameTag.WidgetGameTag.EXPERT]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.RIOFc2);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.RIOFc2);
     },
     iconRole: obj.RIBBON
   },
   [WidgetGameTag.WidgetGameTag.OBSESSED]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.isPJDu);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.isPJDu);
     },
     iconRole: obj.THUMBS_UP
   },
   [WidgetGameTag.WidgetGameTag.LOVE_IT]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["1rN7BF"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["1rN7BF"]);
     },
     iconRole: obj.THUMBS_UP
   },
   [WidgetGameTag.WidgetGameTag.KIND_OF_LOVE_IT]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.bCBpVg);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.bCBpVg);
     },
     iconRole: obj.THUMBS_UP
   },
   [WidgetGameTag.WidgetGameTag.KIND_OF_HATE_IT]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["/WcmcP"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["/WcmcP"]);
     },
     iconRole: obj.THUMBS_DOWN
   },
   [WidgetGameTag.WidgetGameTag.RAGE_QUITTING]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["NXZ/MZ"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["NXZ/MZ"]);
     },
     iconRole: obj.THUMBS_DOWN
   },
   [WidgetGameTag.WidgetGameTag.OPEN_TO_PLAY]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.q30PoH);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.q30PoH);
     },
     iconRole: obj.FRIENDS
   },
   [WidgetGameTag.WidgetGameTag.LOOKING_FOR_GROUP]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.DWWAAQ);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.DWWAAQ);
     },
     iconRole: obj.FRIENDS
   },
   [WidgetGameTag.WidgetGameTag.LOOKING_FOR_TIPS]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.KQDVvH);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.KQDVvH);
     },
     iconRole: obj.FRIENDS
   },
   [WidgetGameTag.WidgetGameTag.OPEN_TO_TEACH]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["5HhQo+"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["5HhQo+"]);
     },
     iconRole: obj.FRIENDS
   },
   [WidgetGameTag.WidgetGameTag.LOOKING_TO_DISCUSS]: {
     getText() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.GipOCq);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.GipOCq);
     },
     iconRole: obj.FRIENDS
   }

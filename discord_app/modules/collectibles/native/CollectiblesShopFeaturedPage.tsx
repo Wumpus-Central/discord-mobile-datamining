@@ -26,9 +26,9 @@ export default function _default(shopBlock) {
   }
   obj = { style: callback().container, children: null };
   obj = { style: { marginTop: 42 }, Illustration: null, body: null };
-  obj[1] = getNoResultsSource /* getNoResultsSource */.NoResults;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.eAn6z2);
-  obj[1] = jsx(Button /* Button */.EmptyState, { style: { marginTop: 42 }, Illustration: null, body: null });
+  obj[1] = getNoResultsSource.NoResults;
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.eAn6z2);
+  obj[1] = jsx(Button.EmptyState, { style: { marginTop: 42 }, Illustration: null, body: null });
   tmp6 = <View style={{ marginTop: 42 }} Illustration={null} body={null} />;
 };

@@ -28,10 +28,10 @@ function Separator() {
 }
 function LegalDisclaimer() {
   let obj = { variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { termsURL: constants3.TERMS, paidURL: constants3.PAID_TERMS };
-  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t.FSPTDI, obj);
-  return callback(Text /* Text */.Text, obj);
+  obj[2] = intl.format(getSystemLocale.t.FSPTDI, obj);
+  return callback(Text.Text, obj);
 }
 function SocialBadge(onPress) {
   let iconSource;
@@ -48,12 +48,12 @@ function SocialBadge(onPress) {
   obj[1] = num;
   obj[2] = onPress;
   obj = { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true };
-  const items = [callback(Button /* Button */.Icon, obj), callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
+  const items = [callback(Button.Icon, obj), callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
     obj = { source: null, style: null };
     obj[0] = registerAsset;
     obj[1] = tmp.socialBadgeArrow;
-    tmp5Result = callback(Button /* Button */.Icon, obj);
+    tmp5Result = callback(Button.Icon, obj);
   }
   items[2] = tmp5Result;
   obj[3] = items;

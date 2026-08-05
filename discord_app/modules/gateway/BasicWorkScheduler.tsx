@@ -27,7 +27,7 @@ prototype["_trackAppBackgrounded"] = function _trackAppBackgrounded(_isBackgroun
     self._isBackgrounded = _isBackgrounded;
     if (tmp) {
       const telemetry = self.telemetry;
-      telemetry.track(WorkSchedulerTelemetryEvent /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryEvent.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED);
+      telemetry.track(WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryEvent.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED);
       self._processWorkCallback();
     }
     tmp = self._isBackgrounded && self.hasWorkScheduled;
@@ -55,9 +55,9 @@ prototype["_processWorkCallback"] = function _processWorkCallback(arg0) {
       self._workCallbackFn();
       self.clearWorkTimeout();
       const telemetry2 = self.telemetry;
-      telemetry2.measure(WorkSchedulerTelemetryEvent /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, self._consecutiveFlushesBeforeQueueEmpty);
+      telemetry2.measure(WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, self._consecutiveFlushesBeforeQueueEmpty);
       const telemetry3 = self.telemetry;
-      telemetry3.track(WorkSchedulerTelemetryEvent /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryEvent.EXCEEDED_MAX_CONSECUTIVE_FLUSHES);
+      telemetry3.track(WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryEvent.EXCEEDED_MAX_CONSECUTIVE_FLUSHES);
       self._consecutiveFlushesBeforeQueueEmpty = 0;
       self._nextDispatchTimeout = closure_6;
     } else {
@@ -73,7 +73,7 @@ prototype["_processWorkCallback"] = function _processWorkCallback(arg0) {
           const telemetry = self.telemetry;
           const _parseInt = parseInt;
           const _HermesInternal = HermesInternal;
-          telemetry.measure(WorkSchedulerTelemetryEvent /* WorkSchedulerTelemetryEvent */.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, parseInt("" + self._consecutiveFlushesBeforeQueueEmpty));
+          telemetry.measure(WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryMeasurement.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, parseInt("" + self._consecutiveFlushesBeforeQueueEmpty));
         }
         self._consecutiveFlushesBeforeQueueEmpty = 0;
         self._criticalWorkScheduled = false;

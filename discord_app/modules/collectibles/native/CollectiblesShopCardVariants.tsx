@@ -16,7 +16,7 @@ const require = arg1;
 function VariantOption(variant) {
   variant = variant.variant;
   const tmp = callback3(variant.isSelected);
-  let obj = getProductPurchaseState /* getProductPurchaseState */;
+  let obj = getProductPurchaseState;
   let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
   obj = { style: items, children: null };
   items = [tmp.variantOption, { zIndex: variant.zIndex }];
@@ -35,7 +35,7 @@ function VariantCheckmark(variant) {
   const colors = Themes.colors;
   const tmp = useIsVariantColorLight(variant.variant);
   const tmp2 = closure_4;
-  return tmp2(CheckmarkSmallIcon /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: useIsVariantColorLight(variant.variant) ? colors.BLACK : colors.WHITE, size: "xxs" });
+  return tmp2(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: useIsVariantColorLight(variant.variant) ? colors.BLACK : colors.WHITE, size: "xxs" });
 }
 function VariantOverflowOption(isSelected) {
   const tmp = callback3(isSelected.isSelected);
@@ -46,7 +46,7 @@ function VariantOverflowOption(isSelected) {
   ({ variantOptionInner: arr2[0], variantOverflowInner: arr2[1] } = tmp);
   obj = { color: null, size: "xxs" };
   obj[0] = Themes.colors.WHITE;
-  obj[1] = callback(PlusSmallIcon /* PlusSmallIcon */.PlusSmallIcon, obj);
+  obj[1] = callback(PlusSmallIcon.PlusSmallIcon, obj);
   obj[1] = callback(View, obj);
   return callback(View, obj);
 }

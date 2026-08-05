@@ -22,7 +22,7 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
       if (perks != null) {
         perks = perks.perks;
       }
-      const perkSource = parseServerPerkConfigKind /* parseServerPerkConfigKind */.getPerkSource(perks, tmp4(1892).Perk.MORE_QUEST_ORBS);
+      const perkSource = parseServerPerkConfigKind.getPerkSource(perks, tmp4(1892).Perk.MORE_QUEST_ORBS);
       let hasItem;
       if (perkSource != null) {
         hasItem = perkSource.includes(tmp4(1892).PerkSource.SOURCE_NITRO);

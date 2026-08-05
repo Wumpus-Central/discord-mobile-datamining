@@ -4,30 +4,30 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.XpBObB);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.XpBObB);
   },
   parent: require("MobileSetting").MobileSetting.CONNECTED_GAMES,
   useValue: require("explicitContentFromProto").AllowGameFriendDmsInDiscord.useSetting,
   onValueChange: require("explicitContentFromProto").AllowGameFriendDmsInDiscord.updateSetting,
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.XpBObB)];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t.XpBObB)];
     return items;
   },
   usePredicate: require("useIsAllowGameFriendDMsSettingVisible").useIsAllowGameFriendDMsSettingVisible
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.XpBObB);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.XpBObB);
   },
   parent: require("MobileSetting").MobileSetting.CONNECTED_GAMES,
   useValue: require("explicitContentFromProto").AllowGameFriendDmsInDiscord.useSetting,
   onValueChange: require("explicitContentFromProto").AllowGameFriendDmsInDiscord.updateSetting,
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.XpBObB)];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t.XpBObB)];
     return items;
   },
   usePredicate: require("useIsAllowGameFriendDMsSettingVisible").useIsAllowGameFriendDMsSettingVisible

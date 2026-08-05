@@ -72,7 +72,7 @@ const items = [
       }
     },
     transitionToStep() {
-      const result = _startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */.transitionToHubEmailConnectionModal(keys /* keys */.ModalAnimation.SLIDE_IN, true);
+      const result = _startContactSyncForDiscoverability.transitionToHubEmailConnectionModal(keys.ModalAnimation.SLIDE_IN, true);
     }
   },
   {
@@ -81,7 +81,7 @@ const items = [
       return store2.getType() === NewUserTypes.ORGANIC_REGISTERED;
     },
     transitionToStep() {
-      return _startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */.transitionToNUFGuildTemplatesModal(keys /* keys */.ModalAnimation.SLIDE_IN);
+      return _startContactSyncForDiscoverability.transitionToNUFGuildTemplatesModal(keys.ModalAnimation.SLIDE_IN);
     }
   },
 

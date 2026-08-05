@@ -27,9 +27,9 @@ export default function TermsField(field) {
   }
   obj = { start: true, end: true, checked: flag, label: null, onPress: null };
   const intl = tmp5(1236).intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["2EXfGJ"]);
+  obj[3] = intl.string(getSystemLocale.t["2EXfGJ"]);
   obj[4] = onChange;
-  items[1] = callback(TableCheckboxRow /* TableCheckboxRow */.TableCheckboxRow, obj);
+  items[1] = callback(TableCheckboxRow.TableCheckboxRow, obj);
   obj[1] = items;
   return closure_5(View, obj);
 };

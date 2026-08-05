@@ -98,7 +98,7 @@ export default function ChannelHeader(channelId) {
   return tmp8Result;
 };
 export const navigateToChannelDetails = function navigateToChannelDetails(channelId, screenIndex, arg2) {
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isIOS()) {
     let tmpResult = tmp(4144);
     const chatInputRef = tmpResult.getChatInputRef(channelId, screenIndex);

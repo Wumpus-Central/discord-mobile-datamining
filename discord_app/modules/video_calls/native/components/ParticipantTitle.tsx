@@ -20,5 +20,5 @@ export default function ParticipantTitle(arg0) {
   const obj = { style: items, numberOfLines: 1, children: null };
   items = [createCacheKey().usernameText, style];
   obj[2] = getParticipantTitle(channel, participant);
-  return jsx(Button /* Button */.LegacyText, { style: items, numberOfLines: 1, children: null });
+  return jsx(Button.LegacyText, { style: items, numberOfLines: 1, children: null });
 };

@@ -6,11 +6,11 @@ import { QuestHomeSetting } from "../../../quests/native/QuestHomeSetting.tsx";
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.JALI2K);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.JALI2K);
   },
   usePredicate() {
-    return getIsEligibleForQuests /* getIsEligibleForQuests */.getIsEligibleForQuests();
+    return getIsEligibleForQuests.getIsEligibleForQuests();
   },
   parent: null,
   IconComponent: require("QuestsIcon").QuestsIcon,
@@ -27,7 +27,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.QUESTS,
   getComponent() {
-    return QuestHomeSetting /* QuestHomeSetting */.default;
+    return QuestHomeSetting.default;
   }
 };
 const route = createToggle.createRoute(obj);

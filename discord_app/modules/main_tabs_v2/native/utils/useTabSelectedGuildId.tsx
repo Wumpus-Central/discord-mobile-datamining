@@ -8,7 +8,7 @@ const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/m
 
 export default function useTabSelectedGuildId() {
   const items = [handleConnectionOpen, insertUnsortedGuilds];
-  return defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return defaultAreStatesEqual.useStateFromStores(items, () => {
     let guildId = store.getGuildId();
     const lastSelectedGuildId = store.getLastSelectedGuildId();
     if (guildId == null) {

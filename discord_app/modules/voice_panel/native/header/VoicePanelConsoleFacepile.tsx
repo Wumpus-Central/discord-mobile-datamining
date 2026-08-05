@@ -16,19 +16,19 @@ function getConsoleInfo(type) {
     let obj = { icon: null, color: null, connectLabel: null, connectSublabel: null };
     obj[0] = getConsoleIcon(type.type);
     obj[1] = Themes.unsafe_rawColors.PLATFORM_XBOX;
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.QN7HXV);
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t["M/Ld86"]);
+    const intl3 = getSystemLocale.intl;
+    obj[2] = intl3.string(getSystemLocale.t.QN7HXV);
+    const intl4 = getSystemLocale.intl;
+    obj[3] = intl4.string(getSystemLocale.t["M/Ld86"]);
     return obj;
   } else if (tmp.PLAYSTATION === type) {
     obj = { icon: null, color: null, connectLabel: null, connectSublabel: null };
     obj[0] = getConsoleIcon(type.type);
     obj[1] = Themes.unsafe_rawColors.PLATFORM_PLAYSTATION;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["3qLlTS"]);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["/uR9x1"]);
+    const intl = getSystemLocale.intl;
+    obj[2] = intl.string(getSystemLocale.t["3qLlTS"]);
+    const intl2 = getSystemLocale.intl;
+    obj[3] = intl2.string(getSystemLocale.t["/uR9x1"]);
     return obj;
   } else {
     return null;
@@ -63,6 +63,6 @@ export default function VoicePanelConsoleFacepile() {
     obj[1] = outer1_5(tmp(outer1_2[10]).Icon, obj);
     return outer1_5(tmp, obj);
   }, items1);
-  return jsx(Button /* Button */.SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
+  return jsx(Button.SummarizedIconRow, { items, renderItem, offsetAmount: -3 });
 };
 export { getConsoleInfo };

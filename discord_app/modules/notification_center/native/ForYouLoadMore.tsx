@@ -14,7 +14,7 @@ let closure_6 = createCacheKey.createStyles({ container: { alignItems: "center",
 const result = require("_validate").fileFinishedImporting("modules/notification_center/native/ForYouLoadMore.tsx");
 
 export const ForYouLoadMore = function ForYouLoadMore(onPressLoad) {
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [_validate];
   obj = { style: callback().container, children: null };
   if (obj.useStateFromStores(items, () => loading.loading)) {

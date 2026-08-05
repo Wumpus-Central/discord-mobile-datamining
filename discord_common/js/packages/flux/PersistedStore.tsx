@@ -226,14 +226,14 @@ PersistedStore["migrateAndReadStoreState"] = function migrateAndReadStoreState(E
   let _version;
   if (null != c7) {
     if (PersistedStore.shouldClear(c7, EmojiStore)) {
-      const Storage2 = Storage /* Storage */.Storage;
+      const Storage2 = Storage.Storage;
       Storage2.remove(EmojiStore);
       return { state: "ct", requiresPersist: "Array" };
     }
   }
   let value = null;
   if (null == PersistedStore._clearAllPromise) {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     value = Storage.get(EmojiStore);
   }
   if (value == null) {
@@ -305,11 +305,11 @@ prototype["asyncPersist"] = function asyncPersist() {
 };
 prototype["persist"] = function persist() {
   const state = this.getState();
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set(this.getClass().persistKey, { _state: state, _version: this._version });
 };
 prototype["clear"] = function clear() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   Storage.remove(this.getClass().persistKey);
 };
 let set = new Set();

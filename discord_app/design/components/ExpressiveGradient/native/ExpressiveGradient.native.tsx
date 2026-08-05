@@ -55,11 +55,11 @@ export const ExpressiveGradient = function ExpressiveGradient(color) {
   } else {
     tmp3 = str;
   }
-  obj = map /* map */;
+  obj = map;
   const token = obj.useToken(tmp3.start);
-  let obj1 = map /* map */;
+  let obj1 = map;
   const token1 = obj1.useToken(tmp3.end);
-  let obj2 = map /* map */;
+  let obj2 = map;
   const token2 = obj2.useToken(backgroundColor);
   let obj3 = n(token2);
   obj = { style: items, children: null };

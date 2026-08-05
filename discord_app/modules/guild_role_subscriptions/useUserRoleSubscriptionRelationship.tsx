@@ -8,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/guild_role_s
 
 export default function useUserRoleSubscriptionRelationship() {
   let items = [computeRolesForGuild];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     let obj;
     const items = [computeRolesForGuild];
     [obj] = items;

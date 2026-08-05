@@ -155,15 +155,15 @@ prototype["renderServerSettings"] = function renderServerSettings() {
     obj = { children: null };
     const obj1 = { guildId: null };
     obj1[0] = self.props.guildId;
-    const items = [callback2(NotificationSettingsPresets /* NotificationSettingsPresets */.NotificationSettingsGuildPresets, obj1), , ];
+    const items = [callback2(NotificationSettingsPresets.NotificationSettingsGuildPresets, obj1), , ];
     const obj2 = { style: null, guildId: null };
     obj2[0] = { marginTop: 24 };
     obj2[1] = self.props.guildId;
-    items[1] = callback2(NotificationSettingsMessageNotification /* NotificationSettingsMessageNotification */.NotificationSettingsGuildMessageNotification, obj2);
+    items[1] = callback2(NotificationSettingsMessageNotification.NotificationSettingsGuildMessageNotification, obj2);
     const obj3 = { style: null, guildId: null };
     obj3[0] = { marginTop: 24 };
     obj3[1] = self.props.guildId;
-    items[2] = callback2(NotificationSettingsMessageUnread /* NotificationSettingsMessageUnread */.NotificationSettingsGuildMessageUnread, obj3);
+    items[2] = callback2(NotificationSettingsMessageUnread.NotificationSettingsGuildMessageUnread, obj3);
     obj[0] = items;
     const items1 = [tmp2(View, obj), ];
     const obj4 = { style: null };
@@ -173,13 +173,13 @@ prototype["renderServerSettings"] = function renderServerSettings() {
     let tmp2Result = tmp2(closure_28, obj);
   } else {
     obj = { title: null, value: null, onChange: null, hasIcons: false, children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.lprV7V);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.lprV7V);
     obj[1] = messageNotifications;
     obj[2] = self.handleTypeChange;
     const obj5 = { label: null, disabled: null, value: null, subLabel: null };
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj5[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["n/bTaY"]);
+    const intl2 = getSystemLocale.intl;
+    obj5[0] = intl2.string(getSystemLocale.t["n/bTaY"]);
     obj5[1] = muted;
     obj5[2] = constants2.ALL_MESSAGES;
     let stringResult = null;
@@ -191,21 +191,21 @@ prototype["renderServerSettings"] = function renderServerSettings() {
       }
     }
     obj5[3] = stringResult;
-    const items2 = [callback2(TableRadioRow /* TableRadioRow */.TableRadioRow, obj5), , ];
+    const items2 = [callback2(TableRadioRow.TableRadioRow, obj5), , ];
     const obj6 = { label: null, value: null, disabled: null };
     const intl4 = tmp3(1236).intl;
-    obj6[0] = intl4.format(getSystemLocale /* getSystemLocale */.t.L2hmYy, {});
+    obj6[0] = intl4.format(getSystemLocale.t.L2hmYy, {});
     obj6[1] = constants2.ONLY_MENTIONS;
     obj6[2] = muted;
-    items2[1] = callback2(TableRadioRow /* TableRadioRow */.TableRadioRow, obj6);
+    items2[1] = callback2(TableRadioRow.TableRadioRow, obj6);
     const obj7 = { label: null, value: null, disabled: null };
     const intl5 = tmp3(1236).intl;
-    obj7[0] = intl5.string(getSystemLocale /* getSystemLocale */.t.CtVGyQ);
+    obj7[0] = intl5.string(getSystemLocale.t.CtVGyQ);
     obj7[1] = constants2.NO_MESSAGES;
     obj7[2] = muted;
-    items2[2] = callback2(TableRadioRow /* TableRadioRow */.TableRadioRow, obj7);
+    items2[2] = callback2(TableRadioRow.TableRadioRow, obj7);
     obj[4] = items2;
-    tmp2Result = tmp2(context /* context */.TableRadioGroup, obj);
+    tmp2Result = tmp2(context.TableRadioGroup, obj);
   }
   return tmp2Result;
 };
@@ -220,8 +220,8 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
   const props = this.props;
   ({ muted, suppressEveryone, suppressRoles, mobilePush, muteEvents, guildId: require } = props);
   let obj = { label: null, value: null, onValueChange: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.format(getSystemLocale /* getSystemLocale */.t.OWiWAp, {});
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.format(getSystemLocale.t.OWiWAp, {});
   if (suppressEveryone == null) {
     suppressEveryone = false;
   }
@@ -230,10 +230,10 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = outer1_0(outer1_2[22]).NotificationLabel;
     self.handleToggleChange("suppress_everyone", arg0, NotificationLabel.suppressEveryone(arg0));
   };
-  const items = [closure_26(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj), , ];
+  const items = [closure_26(TableSwitchRow.TableSwitchRow, obj), , ];
   obj = { label: null, value: null, onValueChange: null };
   const intl2 = tmp5(1236).intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["O/QdoD"]);
+  obj[0] = intl2.string(getSystemLocale.t["O/QdoD"]);
   if (suppressRoles == null) {
     suppressRoles = false;
   }
@@ -242,10 +242,10 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = outer1_0(outer1_2[22]).NotificationLabel;
     self.handleToggleChange("suppress_roles", arg0, NotificationLabel.suppressRoles(arg0));
   };
-  items[1] = closure_26(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj);
+  items[1] = closure_26(TableSwitchRow.TableSwitchRow, obj);
   obj = { disabled: muted, label: null, value: null, onValueChange: null };
   const intl3 = tmp5(1236).intl;
-  obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.gPuteJ);
+  obj[1] = intl3.string(getSystemLocale.t.gPuteJ);
   let tmp8 = muted;
   if (!muted) {
     tmp8 = props.notifyHighlights === constants6.DISABLED;
@@ -259,13 +259,13 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = outer1_0(outer1_2[22]).NotificationLabel;
     const result = obj.updateGuildNotificationSettings(closure_0, obj, NotificationLabel.highlights(!arg0));
   };
-  items[2] = closure_26(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj);
+  items[2] = closure_26(TableSwitchRow.TableSwitchRow, obj);
   obj2[1] = items;
-  const items1 = [closure_27(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj2), , ];
+  const items1 = [closure_27(TableRowGroupTitle.TableRowGroup, obj2), , ];
   const obj3 = { variant: "text-sm/medium", color: "text-muted", style: { marginTop: 8 }, children: null };
   const intl4 = tmp5(1236).intl;
-  obj3[3] = intl4.string(getSystemLocale /* getSystemLocale */.t["Vw/Xn8"]);
-  items1[1] = closure_26(Text /* Text */.Text, obj3);
+  obj3[3] = intl4.string(getSystemLocale.t["Vw/Xn8"]);
+  items1[1] = closure_26(Text.Text, obj3);
   const obj4 = {
     style: createCacheKey(this.context).highlightsLearnMore,
     accessibilityRole: "link",
@@ -276,13 +276,13 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     children: null
   };
   const intl5 = tmp5(1236).intl;
-  obj4[3] = intl5.string(getSystemLocale /* getSystemLocale */.t.PRBn9K);
-  items1[2] = closure_26(Button /* Button */.LegacyText, obj4);
+  obj4[3] = intl5.string(getSystemLocale.t.PRBn9K);
+  items1[2] = closure_26(Button.LegacyText, obj4);
   obj1[0] = items1;
   const items2 = [closure_27(View, obj1), ];
   const obj5 = { label: null, value: null, onValueChange: null };
   const intl6 = tmp5(1236).intl;
-  obj5[0] = intl6.string(getSystemLocale /* getSystemLocale */.t.ONG3Yz);
+  obj5[0] = intl6.string(getSystemLocale.t.ONG3Yz);
   if (muteEvents == null) {
     muteEvents = false;
   }
@@ -291,10 +291,10 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = outer1_0(outer1_2[22]).NotificationLabel;
     self.handleToggleChange("mute_scheduled_events", arg0, NotificationLabel.mutedEvents(arg0));
   };
-  const items3 = [closure_26(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj5), ];
+  const items3 = [closure_26(TableSwitchRow.TableSwitchRow, obj5), ];
   const obj6 = { disabled: muted, label: null, value: null, onValueChange: null };
   const intl7 = tmp5(1236).intl;
-  obj6[1] = intl7.string(getSystemLocale /* getSystemLocale */.t.h1DL66);
+  obj6[1] = intl7.string(getSystemLocale.t.h1DL66);
   let tmp10 = !muted;
   if (!muted) {
     if (mobilePush == null) {
@@ -309,9 +309,9 @@ prototype["renderNotificationOptions"] = function renderNotificationOptions() {
     const NotificationLabel = outer1_0(outer1_2[22]).NotificationLabel;
     self.handleToggleChange("mobile_push", arg0, NotificationLabel.mobilePush(arg0));
   };
-  items3[1] = closure_26(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj6);
+  items3[1] = closure_26(TableSwitchRow.TableSwitchRow, obj6);
   obj8[1] = items3;
-  items2[1] = closure_27(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj8);
+  items2[1] = closure_27(TableRowGroupTitle.TableRowGroup, obj8);
   obj7[0] = items2;
   return closure_27(closure_28, obj7);
 };
@@ -326,19 +326,19 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     let tmp15 = null;
     if (muted) {
       let obj = { title: null, subtitle: null, style: null, onPressUnmute: null };
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.ZSkXJY);
-      obj[1] = NotificationSettingsMuteBanner /* NotificationSettingsMuteBanner */.getMuteBannerSubtitleFromConfig(muteConfig);
+      const intl3 = getSystemLocale.intl;
+      obj[0] = intl3.string(getSystemLocale.t.ZSkXJY);
+      obj[1] = NotificationSettingsMuteBanner.getMuteBannerSubtitleFromConfig(muteConfig);
       obj[2] = { marginBottom: 16 };
       obj[3] = self.handleMutePress;
-      tmp15 = callback2(NotificationSettingsMuteBanner /* NotificationSettingsMuteBanner */.NotificationSettingsMuteBanner, obj);
-      const obj7 = NotificationSettingsMuteBanner /* NotificationSettingsMuteBanner */;
+      tmp15 = callback2(NotificationSettingsMuteBanner.NotificationSettingsMuteBanner, obj);
+      const obj7 = NotificationSettingsMuteBanner;
     }
     return tmp15;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const format = intl.format;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (muted) {
       let name;
       if (guild != null) {
@@ -465,7 +465,7 @@ prototype["render"] = function render() {
     const features = guild.features;
     hasItem = features.has(constants5.HUB);
   }
-  const Form = Form /* Form */.Form;
+  const Form = Form.Form;
   let obj = { contentContainerStyle: { paddingTop: 16 }, children: null };
   if (hasItem) {
     obj = { spacing: null, style: null, children: null };
@@ -506,7 +506,7 @@ let obj2 = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDI
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/notification_settings/native/NotificationSettingsModal.native.tsx");
 
 export default function NotificationSettingsModal() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [FormStates];
   let stateFromStores = obj.useStateFromStores(items, () => props.getProps().guildId);
   const memo = importAllResult.useMemo(() => {
@@ -547,6 +547,6 @@ export default function NotificationSettingsModal() {
   obj[1] = { guildId: stateFromStores };
   const items1 = [obj];
   obj[1] = items1;
-  return closure_26(NavigationStack /* NavigationStack */.Navigator, obj);
+  return closure_26(NavigationStack.Navigator, obj);
 };
 export { NotificationSettings };

@@ -24,9 +24,9 @@ function ContentHeader(arg0) {
   const tmp = createCacheKey();
   let obj = { variant: "text-xs/bold", color: "text-muted", style: tmp.contentHeader, children: null };
   obj = { variant: "text-xs/bold", color: "text-default", style: tmp.contentHeader, children: count };
-  const items = [callback(Text /* Text */.Text, obj), " ", title];
+  const items = [callback(Text.Text, obj), " ", title];
   obj[3] = items;
-  return callback2(Text /* Text */.Text, obj);
+  return callback2(Text.Text, obj);
 }
 function Separator() {
   return callback(closure_6, { style: createCacheKey().separator });
@@ -37,10 +37,10 @@ function BenefitShowCase(children) {
   if (typeof title === "string") {
     let obj = { variant: "text-md/semibold", color: "text-default", children: null };
     obj[2] = title;
-    tmp3 = callback(Text /* Text */.Text, obj);
+    tmp3 = callback(Text.Text, obj);
   }
   obj = { children: null };
-  const items = [tmp3, callback(Button /* Button */.Spacer, { size: 2 }), callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: children.description })];
+  const items = [tmp3, callback(Button.Spacer, { size: 2 }), callback(Text.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: children.description })];
   obj[0] = items;
   return closure_10(closure_6, obj);
 }
@@ -49,9 +49,9 @@ function ChannelBenefitShowCase(channel) {
   let name;
   let type;
   ({ description, type, name } = channel.channel);
-  let obj = getPrivateChannelIconComponent /* getPrivateChannelIconComponent */;
+  let obj = getPrivateChannelIconComponent;
   obj = { style: { flexDirection: "row", alignItems: "center" }, children: null };
-  const items = [callback(obj.getPrivateChannelIconComponent(type), { size: "xs" }), callback(Button /* Button */.Spacer, { size: 4 }), callback(Text /* Text */.Text, { variant: "text-md/semibold", color: "text-default", children: name })];
+  const items = [callback(obj.getPrivateChannelIconComponent(type), { size: "xs" }), callback(Button.Spacer, { size: 4 }), callback(Text.Text, { variant: "text-md/semibold", color: "text-default", children: name })];
   obj[1] = items;
   obj = { title: callback2(closure_6, obj), description };
   return callback(BenefitShowCase, obj);
@@ -61,18 +61,18 @@ function ViewEntireTemplateFooter() {
   let obj = { style: tmp.viewEntireTemplateFooter, children: null };
   obj = { children: null };
   obj = { variant: "text-sm/semibold", color: "interactive-text-hover", style: { marginTop: -1 }, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.kejaOD);
-  const items = [callback(Text /* Text */.Text, obj), callback(Button /* Button */.Spacer, { size: 3 }), callback(closure_6, { style: tmp.viewEntireTemplateFooterUnderline })];
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.kejaOD);
+  const items = [callback(Text.Text, obj), callback(Button.Spacer, { size: 3 }), callback(closure_6, { style: tmp.viewEntireTemplateFooterUnderline })];
   obj[0] = items;
   const items1 = [callback2(closure_6, obj), ];
   const obj2 = { children: null };
   const obj3 = { size: null, source: null, style: null };
-  obj3[0] = Button /* Button */.Icon.Sizes.REFRESH_SMALL_16;
+  obj3[0] = Button.Icon.Sizes.REFRESH_SMALL_16;
   obj3[1] = registerAsset;
   const items2 = [{ rotate: "180deg" }];
   obj3[2] = { transform: items2 };
-  obj2[0] = callback(Button /* Button */.Icon, obj3);
+  obj2[0] = callback(Button.Icon, obj3);
   items1[1] = callback(closure_6, obj2);
   obj[1] = items1;
   return callback2(closure_6, obj);

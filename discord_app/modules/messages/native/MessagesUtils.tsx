@@ -295,7 +295,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       ({ url: obj8[3], content_type } = tmp13);
       obj[4] = content_type;
       tmp17 = obj;
-      obj9 = urlMatchesFileExtension /* urlMatchesFileExtension */;
+      obj9 = urlMatchesFileExtension;
     }
     return tmp17;
   } else if ("embed" === mediaType) {
@@ -363,8 +363,8 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
     if (null == tmpResult) {
       return null;
     } else {
-      const obj12 = flattenComponents /* flattenComponents */;
-      const value = flattenComponents /* flattenComponents */.flattenComponents(obj.components).get(tmpResult);
+      const obj12 = flattenComponents;
+      const value = flattenComponents.flattenComponents(obj.components).get(tmpResult);
       if (null == value) {
         return null;
       } else if (value.type === tmp20(1906).ComponentType.MEDIA_GALLERY) {
@@ -387,7 +387,7 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
       } else {
         return null;
       }
-      const flattenComponentsResult = flattenComponents /* flattenComponents */.flattenComponents(obj.components);
+      const flattenComponentsResult = flattenComponents.flattenComponents(obj.components);
     }
   } else {
     return null;
@@ -396,14 +396,14 @@ export const getLongPressSelectedMedia = function getLongPressSelectedMedia(mess
 export const toObscuredMedia = function toObscuredMedia(sourceType) {
   if ("attachment" === sourceType.sourceType) {
     let obj = { type: null, media: null };
-    obj[0] = ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment;
+    obj[0] = ContentHarmTypeChannel.ObscuredMediaTypes.Attachment;
     obj[1] = sourceType.source;
     let tmp = obj;
   } else {
     tmp = null;
     if ("embed" === sourceType.sourceType) {
       obj = { type: null, media: null };
-      obj[0] = ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.Embed;
+      obj[0] = ContentHarmTypeChannel.ObscuredMediaTypes.Embed;
       obj[1] = sourceType.source;
       tmp = obj;
     }
@@ -416,7 +416,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     flag = false;
   }
   if (MESSAGE === undefined) {
-    MESSAGE = checkReactionResponse /* checkReactionResponse */.ReactionLocations.MESSAGE;
+    MESSAGE = checkReactionResponse.ReactionLocations.MESSAGE;
   }
   const guildId = channel.getGuildId();
   currentUser = currentUser.getCurrentUser();
@@ -429,7 +429,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
   }
   let result = null != guildId;
   if (result) {
-    let obj = shouldShowMembershipVerificationGate /* shouldShowMembershipVerificationGate */;
+    let obj = shouldShowMembershipVerificationGate;
     result = obj.shouldShowMembershipVerificationGate(guildId);
   }
   let member = null;
@@ -440,7 +440,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
     }
   }
   let tmp36Result = dependencyMap;
-  let obj1 = isCommunicationDisabled /* isCommunicationDisabled */;
+  let obj1 = isCommunicationDisabled;
   const result1 = obj1.isMemberCommunicationDisabled(member);
   if (channel.isArchivedLockedThread()) {
     const obj15 = dispatcher;
@@ -514,7 +514,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
   }
 };
 export const handleToggleFollowForumPost = function handleToggleFollowForumPost(channel, outer1_19) {
-  const result = HapticFeedbackTypes /* HapticFeedbackTypes */.triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
+  const result = HapticFeedbackTypes.triggerHapticFeedback(IMPACT_LIGHT.IMPACT_LIGHT);
   const obj2 = patchThread;
   if (outer1_19) {
     obj2.leaveThread(channel, "iOS Forum Toolbar");
@@ -537,7 +537,7 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
     flag = false;
   }
   let obj = { postId: id, location };
-  const result = trackForumChannelSeenBatch /* trackForumChannelSeenBatch */.trackForumPostLinkCopied(obj);
+  const result = trackForumChannelSeenBatch.trackForumPostLinkCopied(obj);
   if (flag) {
     let tmp4Result = tmp4(4479);
     obj = { media_post_id: null };
@@ -560,13 +560,13 @@ export const handleCopyLinkForumPost = function handleCopyLinkForumPost(guildId,
     tmp4Result3.copy(tmp4(4467).getChannelLinkToCopy(channel, channel1));
     const tmp4Result4 = tmp4(4467);
   }
-  const obj2 = trackForumChannelSeenBatch /* trackForumChannelSeenBatch */;
+  const obj2 = trackForumChannelSeenBatch;
   tmp9 = importDefault;
-  presentAddedFriendToast /* presentAddedFriendToast */.presentLinkCopied();
+  presentAddedFriendToast.presentLinkCopied();
 };
 export const findMessageIndex = function findMessageIndex(previousRows, ChatTTITracker) {
   if (null != ChatTTITracker) {
-    return computeScrollData /* computeScrollData */.findMessageRowIndex(previousRows, ChatTTITracker);
+    return computeScrollData.findMessageRowIndex(previousRows, ChatTTITracker);
   }
 };
 export { getVisibleMessages };
@@ -606,7 +606,7 @@ export const recordTimings = function recordTimings(channelId, closure_0) {
 };
 export const findMessageIndexInRows = function findMessageIndexInRows(ChatTTITracker, previousRows) {
   if (null != ChatTTITracker) {
-    return computeScrollData /* computeScrollData */.findMessageRowIndex(previousRows, ChatTTITracker);
+    return computeScrollData.findMessageRowIndex(previousRows, ChatTTITracker);
   }
 };
 export { getMessage };
@@ -631,9 +631,9 @@ export const isLoadingAtTop = function isLoadingAtTop(arg0, arg1) {
   }
 };
 export const handleTapTableView = function handleTapTableView(current) {
-  let isIOSResult = set /* set */.isIOS();
+  let isIOSResult = set.isIOS();
   if (isIOSResult) {
-    isIOSResult = arg1 !== KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
+    isIOSResult = arg1 !== KeyboardTypes.KeyboardTypes.SYSTEM;
   }
   if (isIOSResult) {
     current = current.current;
@@ -747,10 +747,10 @@ export const clearRows = function clearRows(current, clear) {
   ChatScrollPosition.clearRows(current.current);
 };
 export const handleFirstLayout = function handleFirstLayout(arg0, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
-  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT });
+  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT });
 };
 export const handleMessageVisibilityChanged = function handleMessageVisibilityChanged(arg0, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible) {
-  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
+  arg0({ firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, source: QuestsVisibleMessagesChangedSource.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
 };
 export const handleLongPressSticker = function handleLongPressSticker(arg0, arg1, arg2) {
   const items = [arg0];
@@ -1001,16 +1001,16 @@ export const handleVisibleMessagesChange = function handleVisibleMessagesChange(
             obj = { visibleMessages: null, source: null };
             obj[0] = arr;
             obj[1] = tmp;
-            const result = _manuallyStartConsoleQuest /* _manuallyStartConsoleQuest */.questsVisibleMobileMessagesChanged(obj);
-            const obj4 = getVoiceInviteEmbedRenderInfo /* getVoiceInviteEmbedRenderInfo */;
+            const result = _manuallyStartConsoleQuest.questsVisibleMobileMessagesChanged(obj);
+            const obj4 = getVoiceInviteEmbedRenderInfo;
             const result1 = obj4.handleAnnouncementMessageViewTracking(arr, shouldTrackAnnouncementMessageViews, guildId, channel);
-            const obj5 = getVoiceInviteEmbedRenderInfo /* getVoiceInviteEmbedRenderInfo */;
+            const obj5 = getVoiceInviteEmbedRenderInfo;
             const result2 = obj5.handleOfficialMessageViewTracking(arr, shouldTrackOfficialMessageViews, guildId, channel);
-            const obj6 = getVoiceInviteEmbedRenderInfo /* getVoiceInviteEmbedRenderInfo */;
+            const obj6 = getVoiceInviteEmbedRenderInfo;
             const result3 = obj6.handleRichPresenceInviteEmbedViewTracking(arr, shouldTrackRichPresenceInviteEmbedViews, guildId, channel);
-            const obj7 = getVoiceInviteEmbedRenderInfo /* getVoiceInviteEmbedRenderInfo */;
+            const obj7 = getVoiceInviteEmbedRenderInfo;
             const result4 = obj7.handleVoiceInviteEmbedViewTracking(arr, shouldTrackVoiceInviteEmbedViews, guildId, channel);
-            const obj2 = _manuallyStartConsoleQuest /* _manuallyStartConsoleQuest */;
+            const obj2 = _manuallyStartConsoleQuest;
           }
         }
       }

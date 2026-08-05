@@ -107,14 +107,14 @@ export const ArrowButton = function ArrowButton(arg0) {
   const tmp = createCacheKey();
   let obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
   obj = { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text };
-  const items = [callback2(Text /* Text */.Text, obj), ];
+  const items = [callback2(Text.Text, obj), ];
   obj = { size: null, source: null, style: null };
-  obj[0] = Button /* Button */.Icon.Sizes.SMALL;
+  obj[0] = Button.Icon.Sizes.SMALL;
   obj[1] = registerAsset;
   obj[2] = tmp.arrowButtonIcon;
-  items[1] = callback2(Button /* Button */.Icon, obj);
+  items[1] = callback2(Button.Icon, obj);
   obj[3] = items;
-  return callback3(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return callback3(PressableBase.PressableOpacity, obj);
 };
 export const useFormattedSubscriptionPlan = function useFormattedSubscriptionPlan(listingId) {
   const obj = notSupported;

@@ -99,11 +99,11 @@ export const accountDetailsClose = function accountDetailsClose() {
   dispatcher.dispatch({ type: "USER_PROFILE_SETTINGS_CLOSE" });
 };
 export const disableAccount = function disableAccount(password, arg1) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT, body: obj, oldFormErrors: true, rejectWithError: null };
   obj = { password };
-  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
-  const obj3 = sendRequest /* sendRequest */;
+  obj[3] = sendRequest.rejectWithMigratedError();
+  const obj3 = sendRequest;
   const tmp2 = arg1 ? closure_4.DELETE_ACCOUNT : closure_4.DISABLE_ACCOUNT;
   return HTTP.post(obj).then(() => {
     callback2(5736).logoutInternal();
@@ -206,16 +206,16 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   });
 };
 export const getHarvestStatus = function getHarvestStatus() {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   const obj = { url: constants.USER_HARVEST, oldFormErrors: true, rejectWithError: null };
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.get(obj);
 };
 export const requestHarvest = function requestHarvest(backends) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: constants.USER_HARVEST, body: obj, oldFormErrors: true, rejectWithError: null };
   obj = { backends };
-  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[3] = sendRequest.rejectWithMigratedError();
   return HTTP.post(obj);
 };
 export const clearErrors = function clearErrors() {

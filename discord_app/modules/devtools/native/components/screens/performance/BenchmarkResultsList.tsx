@@ -45,9 +45,9 @@ export default function BenchmarkResultsList(results) {
     ];
     obj = { label: "Clear results", variant: "danger", arrow: true, onPress: null };
     obj[3] = tmp;
-    items[1] = callback(TableRowInner /* TableRowInner */.TableRow, obj);
+    items[1] = callback(TableRowInner.TableRow, obj);
     obj[2] = items;
-    tmp2 = callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+    tmp2 = callback2(TableRowGroupTitle.TableRowGroup, obj);
   }
   return tmp2;
 };

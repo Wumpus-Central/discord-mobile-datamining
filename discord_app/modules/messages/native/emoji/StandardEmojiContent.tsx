@@ -17,7 +17,7 @@ function Emoji(surrogate) {
   surrogate = surrogate.surrogate;
   let obj = {};
   const merged = Object.assign(createCacheKey());
-  let obj1 = styles /* styles */;
+  let obj1 = styles;
   const merged1 = Object.assign(obj1.useSharedMessageEmojiStyles());
   let obj2 = getEmojiUnavailableReason;
   const uRL = obj2.getURL(surrogate);
@@ -33,7 +33,7 @@ function Emoji(surrogate) {
     obj2 = { style: null, variant: "text-md/medium", children: null };
     obj2[0] = obj.emojiSurrogate;
     obj2[2] = surrogate;
-    tmp7Result = tmp7(Text /* Text */.Text, obj2);
+    tmp7Result = tmp7(Text.Text, obj2);
   }
   obj[1] = tmp7Result;
   return closure_6(View, obj);

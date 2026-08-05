@@ -138,9 +138,9 @@ function sortApplicationFreceny(id, id2) {
   return store.getScoreWithoutLoadingLatest(id2.id) - scoreWithoutLoadingLatest;
 }
 function sortApplicationAlpha(FAKE_BUILT_IN_APP, FAKE_BUILT_IN_APP) {
-  const sectionName = getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP);
-  const obj = getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */;
-  return callback(sectionName, getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */.getSectionName(FAKE_BUILT_IN_APP));
+  const sectionName = getShelfBadgeTypeIfActive.getSectionName(FAKE_BUILT_IN_APP);
+  const obj = getShelfBadgeTypeIfActive;
+  return callback(sectionName, getShelfBadgeTypeIfActive.getSectionName(FAKE_BUILT_IN_APP));
 }
 function sortCommandsAlpha(displayName, displayName2) {
   return callback(displayName.displayName, displayName2.displayName);

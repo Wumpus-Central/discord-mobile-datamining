@@ -8,5 +8,5 @@ const result = require("Button").fileFinishedImporting("modules/mfa/native/compo
 
 export default function MFAButton(arg0) {
   const merged = Object.assign(arg0);
-  return jsx(Button /* Button */.Button, { size: "lg" });
+  return jsx(Button.Button, { size: "lg" });
 };

@@ -15,33 +15,33 @@ const result = require("MAX_FAVORITES").fileFinishedImporting("modules/notificat
 
 export const getMuteTimeOptions = function getMuteTimeOptions() {
   let obj = { id: "15-minutes", label: null, value: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["8ot6gv"]);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["8ot6gv"]);
   obj[2] = closure_6.MINUTES_15;
   const items = [obj, , , , , ];
   obj = { id: "1-hour", label: null, value: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.UMWBZr);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.UMWBZr);
   obj[2] = closure_6.HOURS_1;
   items[1] = obj;
   obj = { id: "3-hours", label: null, value: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.QmYWtu);
+  const intl3 = getSystemLocale.intl;
+  obj[1] = intl3.string(getSystemLocale.t.QmYWtu);
   obj[2] = closure_6.HOURS_3;
   items[2] = obj;
   const obj1 = { id: "8-hours", label: null, value: null };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.EpAXPC);
+  const intl4 = getSystemLocale.intl;
+  obj1[1] = intl4.string(getSystemLocale.t.EpAXPC);
   obj1[2] = closure_6.HOURS_8;
   items[3] = obj1;
   const obj2 = { id: "24-hours", label: null, value: null };
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[1] = intl5.string(getSystemLocale /* getSystemLocale */.t["755t4q"]);
+  const intl5 = getSystemLocale.intl;
+  obj2[1] = intl5.string(getSystemLocale.t["755t4q"]);
   obj2[2] = closure_6.HOURS_24;
   items[4] = obj2;
   const obj3 = { id: "forever", label: null, value: null };
-  const intl6 = getSystemLocale /* getSystemLocale */.intl;
-  obj3[1] = intl6.string(getSystemLocale /* getSystemLocale */.t.r3LawO);
+  const intl6 = getSystemLocale.intl;
+  obj3[1] = intl6.string(getSystemLocale.t.r3LawO);
   obj3[2] = closure_6.ALWAYS;
   items[5] = obj3;
   return items;
@@ -95,7 +95,7 @@ export const filterOverrides = function filterOverrides(channelOverrides, arg1) 
 };
 export const useShouldUseNewNotificationSystem = function useShouldUseNewNotificationSystem(GuildUnreadAction) {
   const items = [updateUserGuildSettingsInternal];
-  return initialize /* initialize */.useStateFromStores(items, () => useNewNotifications.useNewNotifications);
+  return initialize.useStateFromStores(items, () => useNewNotifications.useNewNotifications);
 };
 export const shouldShowUseNewNotificationSystem = function shouldShowUseNewNotificationSystem(GuildPopoutMenu) {
   return useNewNotifications.useNewNotifications;

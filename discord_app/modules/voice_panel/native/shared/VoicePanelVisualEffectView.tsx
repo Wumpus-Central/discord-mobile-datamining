@@ -30,7 +30,7 @@ const memoResult = require("noop").memo(function VoicePanelVisualEffectViewInner
   if (flag === undefined) {
     flag = false;
   }
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.THEME_LOCKED_BLUR_FALLBACK);
   const tmp2 = callback2();
   obj = { blurTheme: str, android_fallbackColor: null };
@@ -39,7 +39,7 @@ const memoResult = require("noop").memo(function VoicePanelVisualEffectViewInner
     tmp5 = token;
   }
   obj[1] = tmp5;
-  const tmp4Result = closure_4(TwinButtons /* TwinButtons */.BackgroundBlurFill, obj);
+  const tmp4Result = closure_4(TwinButtons.BackgroundBlurFill, obj);
   let tmp7 = tmp4Result;
   if (tmp3) {
     obj = { style: null, children: null };

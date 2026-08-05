@@ -17,15 +17,15 @@ function updateSocialRpcNetworkConfig() {
   if (NativeCacheModule != null) {
     const _JSON = JSON;
     obj = { apiBaseUrl: null, headers: null };
-    obj[0] = sendRequest /* sendRequest */.getAPIBaseURL();
+    obj[0] = sendRequest.getAPIBaseURL();
     obj[1] = obj;
     const result = NativeCacheModule.setItem("socialRpcNetworkRequest", JSON.stringify(obj));
-    const obj4 = sendRequest /* sendRequest */;
+    const obj4 = sendRequest;
   }
 }
 let prototype = function SocialRpcNetworkConfigManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.handleUpdate = set /* set */.isAndroid() ? updateSocialRpcNetworkConfig : (() => {
+  applyArgumentsResult.handleUpdate = set.isAndroid() ? updateSocialRpcNetworkConfig : (() => {
 
   });
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };

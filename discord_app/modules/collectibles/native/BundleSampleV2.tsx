@@ -123,8 +123,8 @@ function BundleSampleV2Composed(arg0) {
   const tmp = callback2(size);
   let nameplateData;
   if (null != nameplate) {
-    00038__(nameplate.type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.NAMEPLATE, "Item must be Nameplate");
-    let obj = getNameplateData /* getNameplateData */;
+    00038__(nameplate.type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE, "Item must be Nameplate");
+    let obj = getNameplateData;
     nameplateData = obj.getNameplateData(nameplate);
     const tmp5 = 00038__;
   }
@@ -159,7 +159,7 @@ function BundleSampleV2Composed(arg0) {
       }
       obj3[1] = XSMALL_20;
       obj3[2] = nameplateData;
-      obj3 = tmp22(NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG /* NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG */.NameplateDummyUserPreview, obj3);
+      obj3 = tmp22(NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG.NameplateDummyUserPreview, obj3);
       obj2[1] = obj3;
       callback(tmp11, obj2);
     }
@@ -183,7 +183,7 @@ function BundleSampleV2StaticPreview(composedFallbackProps) {
   let targetSize;
   composedFallbackProps = composedFallbackProps.composedFallbackProps;
   ({ previewAssets, disableStaticBackground, mutedStaticBackground, targetSize, exposureLocation } = composedFallbackProps);
-  let obj = useCollectiblesMobileFlexibleBundlesExperiment /* useCollectiblesMobileFlexibleBundlesExperiment */;
+  let obj = useCollectiblesMobileFlexibleBundlesExperiment;
   if (obj.useCollectiblesMobileFlexibleBundlesExperiment(exposureLocation).enabled) {
     obj = { previewAssets: null, disableBackground: null, mutedBackground: null, targetSize: null };
     obj[0] = previewAssets;

@@ -31,7 +31,7 @@ function PasswordStrength(passwordScore) {
     if (isPasswordFocused) {
       if (0 !== password.length) {
         if (null == passwordError) {
-          if (passwordScore <= PasswordScore /* PasswordScore */.PasswordScore.WEAK) {
+          if (passwordScore <= PasswordScore.PasswordScore.WEAK) {
             const intl2 = tmp9(1236).intl;
             let str = intl2.string(tmp9(1236).t["w/8TuV"]);
             let strong = tmp.weak;
@@ -55,9 +55,9 @@ function PasswordStrength(passwordScore) {
           obj.style = items;
           obj.animated = true;
           const intl3 = tmp9(1236).intl;
-          const items1 = [intl3.string(getSystemLocale /* getSystemLocale */.t["5gbdUX"]), ": ", str];
+          const items1 = [intl3.string(getSystemLocale.t["5gbdUX"]), ": ", str];
           obj.children = items1;
-          return callback2(Text /* Text */.Text, obj);
+          return callback2(Text.Text, obj);
         }
       }
     }

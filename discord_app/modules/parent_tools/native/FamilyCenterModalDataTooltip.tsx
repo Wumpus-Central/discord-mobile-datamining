@@ -39,7 +39,7 @@ function Row(arg0) {
   obj = { style: tmp.icon };
   const items = [callback(View, obj), ];
   const obj1 = { style: tmp.content, children: null };
-  const items1 = [callback(Text /* Text */.Text, { style: tmp.header, variant: "text-sm/bold", color: "mobile-text-heading-primary", children: header }), callback(Text /* Text */.Text, { variant: "text-xs/medium", color: "text-default", children: description })];
+  const items1 = [callback(Text.Text, { style: tmp.header, variant: "text-sm/bold", color: "mobile-text-heading-primary", children: header }), callback(Text.Text, { variant: "text-xs/medium", color: "text-default", children: description })];
   obj1[1] = items1;
   items[1] = callback2(View, obj1);
   obj[1] = items;
@@ -118,7 +118,7 @@ export default function FamilyCenterModalDataTooltip() {
     return obj;
   }, []);
   let obj = { initialRouteName: "DATA_TOOLTIP", screens: memo, headerBackTitle: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
-  return callback(Modal /* Modal */.Modal, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
+  return callback(Modal.Modal, obj);
 };

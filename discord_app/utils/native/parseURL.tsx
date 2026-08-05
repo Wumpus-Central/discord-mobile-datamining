@@ -102,7 +102,7 @@ export default function parseURL(arg0) {
     let tmp87Result = tmp87(str);
     ({ fingerprint, attemptId, installationId, referrer_id, sort, filter } = tmp87Result);
     ({ username, custom_id, link_id } = tmp87Result);
-    let obj1 = getPathsFromURL /* getPathsFromURL */;
+    let obj1 = getPathsFromURL;
     const findCodedLinkResult = obj1.findCodedLink(sanitizeUrlResult);
     if (null != findCodedLinkResult) {
       const type = findCodedLinkResult.type;
@@ -224,7 +224,7 @@ export default function parseURL(arg0) {
         return obj11;
       }
     }
-    const findGiftCodesResult = _resolveGiftCode /* _resolveGiftCode */.findGiftCodes(sanitizeUrlResult);
+    const findGiftCodesResult = _resolveGiftCode.findGiftCodes(sanitizeUrlResult);
     if (findGiftCodesResult.length > 0) {
       const obj13 = { fingerprint: null, attemptId: null, installationId: null, payload: null };
       obj13[0] = fingerprint;

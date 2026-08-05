@@ -23,7 +23,7 @@ export default function ChannelDetailsLinkedLobby(channel) {
   let divider = createCacheKey();
   let BPDKoA = require;
   let getArticleURL = dependencyMap;
-  let obj = useGetOrFetchApplications /* useGetOrFetchApplications */;
+  let obj = useGetOrFetchApplications;
   const linkedLobby = channel.linkedLobby;
   let application_id;
   if (linkedLobby != null) {

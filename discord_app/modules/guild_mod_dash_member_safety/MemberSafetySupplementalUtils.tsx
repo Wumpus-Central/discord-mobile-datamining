@@ -181,59 +181,59 @@ export const getJoinSourceTypeLabel = function getJoinSourceTypeLabel(arg0) {
     flag = false;
   }
   if (obj.BOT === arg0) {
-    const intl10 = getSystemLocale /* getSystemLocale */.intl;
-    return intl10.string(getSystemLocale /* getSystemLocale */.t.HumZAi);
+    const intl10 = getSystemLocale.intl;
+    return intl10.string(getSystemLocale.t.HumZAi);
   } else if (tmp2.INTEGRATION === arg0) {
-    const intl9 = getSystemLocale /* getSystemLocale */.intl;
-    return intl9.string(getSystemLocale /* getSystemLocale */.t.gmCUFw);
+    const intl9 = getSystemLocale.intl;
+    return intl9.string(getSystemLocale.t.gmCUFw);
   } else if (tmp2.DISCOVERY === arg0) {
-    const intl8 = getSystemLocale /* getSystemLocale */.intl;
-    return intl8.string(getSystemLocale /* getSystemLocale */.t["Ql/e9Y"]);
+    const intl8 = getSystemLocale.intl;
+    return intl8.string(getSystemLocale.t["Ql/e9Y"]);
   } else if (tmp2.HUB === arg0) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
-    return intl7.string(getSystemLocale /* getSystemLocale */.t.Op8B3O);
+    const intl7 = getSystemLocale.intl;
+    return intl7.string(getSystemLocale.t.Op8B3O);
   } else if (tmp2.INVITE === arg0) {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
-    return intl6.string(getSystemLocale /* getSystemLocale */.t["/3vIRd"]);
+    const intl6 = getSystemLocale.intl;
+    return intl6.string(getSystemLocale.t["/3vIRd"]);
   } else if (tmp2.VANITY_URL === arg0) {
     if (null != tmp) {
       if (!flag) {
-        const intl4 = getSystemLocale /* getSystemLocale */.intl;
+        const intl4 = getSystemLocale.intl;
         obj = { vanityUrl: null };
         obj[0] = tmp;
-        let formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.EIUjRy, obj);
+        let formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale.t.EIUjRy, obj);
       }
       return formatToPlainStringResult;
     }
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    formatToPlainStringResult = intl5.string(getSystemLocale /* getSystemLocale */.t.dGiD1O);
+    const intl5 = getSystemLocale.intl;
+    formatToPlainStringResult = intl5.string(getSystemLocale.t.dGiD1O);
   } else if (tmp2.MANUAL_MEMBER_VERIFICATION === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.vdu7oS);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.vdu7oS);
   } else if (tmp2.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t["9/ZreX"]);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t["9/ZreX"]);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.DvMBkS);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.DvMBkS);
   }
 };
 export const IntegrationType = obj;
 export const getIntegrationLabel = function getIntegrationLabel(arg0) {
   if (obj.TWITCH === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.AVGAkw);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.AVGAkw);
   } else if (tmp.YOUTUBE === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.PHSAsn);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.PHSAsn);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.gmCUFw);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.gmCUFw);
   }
 };
 export const useGetIntegrationIconString = function useGetIntegrationIconString(arg0) {
   const obj = getPlatformUserUrl;
-  const value = obj.get(PlatformTypes /* PlatformTypes */.useLegacyPlatformType(arg0));
+  const value = obj.get(PlatformTypes.useLegacyPlatformType(arg0));
   let tmp5 = null;
   if (null != value) {
     const items = [, ];
@@ -242,10 +242,10 @@ export const useGetIntegrationIconString = function useGetIntegrationIconString(
     if (items.includes(arg0)) {
       let str = value.icon;
       const _HermesInternal = HermesInternal;
-      const tmp2Result = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+      const tmp2Result = AccessibilityAnnouncer;
       str = "url('";
-      const combined = "url('" + AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG + "')";
-      const tmp7 = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG;
+      const combined = "url('" + AccessibilityAnnouncer.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG + "')";
+      const tmp7 = AccessibilityAnnouncer.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG;
     }
   }
   return tmp5;

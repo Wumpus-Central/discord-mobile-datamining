@@ -74,7 +74,7 @@ export const processColorStringsArray = function processColorStringsArray(colorS
   } else {
     const items = [, , ];
     ({ primaryColor: arr[0], secondaryColor: arr[1], tertiaryColor: arr[2] } = processColorStrings(colorStrings));
-    return items.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    return items.filter(isDiscordFrontendDevelopment.isNotNullish);
   }
 };
 export const useProcessColorStringsArray = function useProcessColorStringsArray(colorStrings) {
@@ -107,7 +107,7 @@ export const useProcessColorStringsArray = function useProcessColorStringsArray(
   }, items);
 };
 export const isNativeMessageEligibleForEnhancedRoleColors = function isNativeMessageEligibleForEnhancedRoleColors(guildId, id) {
-  return useHasEnhancedRoleColors /* useHasEnhancedRoleColors */.getHasEnhancedRoleColors(guildId, id);
+  return useHasEnhancedRoleColors.getHasEnhancedRoleColors(guildId, id);
 };
 export const useIsRoleStyleAndRoleColorsEligibleForERC = function useIsRoleStyleAndRoleColorsEligibleForERC(guildId, id, stateFromStores, processColorStringsArray) {
   let tmp = useHasEnhancedRoleColors(guildId, id);

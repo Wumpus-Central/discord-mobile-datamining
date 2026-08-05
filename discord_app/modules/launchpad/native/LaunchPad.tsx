@@ -56,11 +56,11 @@ function TabButton(selected) {
   obj[4] = { selected };
   const colors = Themes.colors;
   obj[5] = icon(selected ? colors.INTERACTIVE_TEXT_ACTIVE : colors.INTERACTIVE_TEXT_DEFAULT);
-  return closure_27(PressableBase /* PressableBase */.PressableHighlight, obj);
+  return closure_27(PressableBase.PressableHighlight, obj);
 }
 function TabHeader(children) {
   const tmp = callback3();
-  return callback2(Text /* Text */.Text, { style: callback3().subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
+  return callback2(Text.Text, { style: callback3().subheader, variant: "heading-md/extrabold", maxFontSizeMultiplier: 1.75, accessibilityRole: "header", children: children.text });
 }
 function createAndAppendChannel(arg0, has, arr) {
   if (!has.has(arg0)) {

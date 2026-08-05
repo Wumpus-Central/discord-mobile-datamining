@@ -26,12 +26,12 @@ export default {
   showCaptcha() {
     let RECAPTCHA = arg0;
     if (arg0 === undefined) {
-      RECAPTCHA = convertStringArrayToSkemaErrorItems /* convertStringArrayToSkemaErrorItems */.CaptchaTypes.RECAPTCHA;
+      RECAPTCHA = convertStringArrayToSkemaErrorItems.CaptchaTypes.RECAPTCHA;
     }
     const self = this;
     closure_4.dismiss();
     expandEventProperties.track(constants.OPEN_MODAL, { type: "CAPTCHA" });
-    if (RECAPTCHA === convertStringArrayToSkemaErrorItems /* convertStringArrayToSkemaErrorItems */.CaptchaTypes.HCAPTCHA) {
+    if (RECAPTCHA === convertStringArrayToSkemaErrorItems.CaptchaTypes.HCAPTCHA) {
       if (null != arg1) {
         let showHcaptchaResult = self.showHcaptcha(arg1, arg2);
       }

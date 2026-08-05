@@ -634,8 +634,8 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
       let str4 = "";
       if (typeof applyResult === "number") {
         const _HermesInternal3 = HermesInternal;
-        str4 = "?size=" + handleImageLoad /* handleImageLoad */.getBestMediaProxySize(applyResult);
-        const obj4 = handleImageLoad /* handleImageLoad */;
+        str4 = "?size=" + handleImageLoad.getBestMediaProxySize(applyResult);
+        const obj4 = handleImageLoad;
       }
       const _window = window;
       if (null != window.GLOBAL_ENV.CDN_HOST) {
@@ -645,8 +645,8 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
         let combined = "" + location.protocol + "//" + window.GLOBAL_ENV.CDN_HOST + "/app-assets/" + application_id + "/" + media_assets_large_image + "." + str + str4;
       } else {
         const _HermesInternal = HermesInternal;
-        combined = "" + sendRequest /* sendRequest */.getAPIBaseURL() + "/applications/" + application_id + "/app-assets/" + media_assets_large_image + "." + str + str4;
-        const obj = sendRequest /* sendRequest */;
+        combined = "" + sendRequest.getAPIBaseURL() + "/applications/" + application_id + "/app-assets/" + media_assets_large_image + "." + str + str4;
+        const obj = sendRequest;
       }
       return combined;
     }

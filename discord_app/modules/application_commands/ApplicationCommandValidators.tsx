@@ -15,30 +15,30 @@ function validateNumericOptionRange(NumberResult, minValue, _8Y5zsp, CyRLmH, VD3
   if (null != minValue.maxValue) {
     if (null != minValue.minValue) {
       let obj = { success: false, error: null };
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      const intl3 = getSystemLocale.intl;
       obj = { minimum: null, maximum: null };
       const minValue2 = minValue.minValue;
-      obj[0] = minValue2.toLocaleString(getSystemLocale /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
+      obj[0] = minValue2.toLocaleString(getSystemLocale.intl.currentLocale, { useGrouping: false });
       const maxValue2 = minValue.maxValue;
-      obj[1] = maxValue2.toLocaleString(getSystemLocale /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
+      obj[1] = maxValue2.toLocaleString(getSystemLocale.intl.currentLocale, { useGrouping: false });
       obj[1] = intl3.formatToPlainString(_8Y5zsp, obj);
       return obj;
     }
   }
   if (null != minValue.minValue) {
     const obj1 = { success: false, error: null };
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj2 = { minimum: null };
     minValue = minValue.minValue;
-    obj2[0] = minValue.toLocaleString(getSystemLocale /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
+    obj2[0] = minValue.toLocaleString(getSystemLocale.intl.currentLocale, { useGrouping: false });
     obj1[1] = intl2.formatToPlainString(CyRLmH, obj2);
     return obj1;
   } else if (null != minValue.maxValue) {
     obj = { success: false, error: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj3 = { maximum: null };
     const maxValue = minValue.maxValue;
-    obj3[0] = maxValue.toLocaleString(getSystemLocale /* getSystemLocale */.intl.currentLocale, { useGrouping: false });
+    obj3[0] = maxValue.toLocaleString(getSystemLocale.intl.currentLocale, { useGrouping: false });
     obj[1] = intl.formatToPlainString(VD3Q_S, obj3);
     return obj;
   }
@@ -52,12 +52,12 @@ let obj = {
     } else {
       const obj = { success: null };
       const trimmed = type.text.trim();
-      obj[0] = null != toChoiceBooleanValue /* toChoiceBooleanValue */.toChoiceBooleanValue(trimmed);
+      obj[0] = null != toChoiceBooleanValue.toChoiceBooleanValue(trimmed);
       return obj;
     }
   },
   [arg1(1906).ApplicationCommandOptionType.STRING]: (type, type2, id) => {
-    00038__(type2.type === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.STRING, "option type must match validator type");
+    00038__(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING, "option type must match validator type");
     type = type.type;
     if ("emoji" === type) {
       let surrogate = type.surrogate;
@@ -141,7 +141,7 @@ let obj = {
     const tmp2 = 00038__;
   },
   [arg1(1906).ApplicationCommandOptionType.INTEGER]: (type, type2, id) => {
-    00038__(type2.type === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.INTEGER, "option type must match validator type");
+    00038__(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.INTEGER, "option type must match validator type");
     let trimmed = null;
     if ("text" === type.type) {
       trimmed = type.text.trim();
@@ -184,7 +184,7 @@ let obj = {
     return { success: false };
   },
   [arg1(1906).ApplicationCommandOptionType.NUMBER]: (type, type2, id) => {
-    00038__(type2.type === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.NUMBER, "option type must match validator type");
+    00038__(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.NUMBER, "option type must match validator type");
     let trimmed = null;
     if ("text" === type.type) {
       trimmed = type.text.trim();
@@ -239,7 +239,7 @@ let obj = {
         obj[0] = "userMention" === type;
         return obj;
       }
-      obj2 = buildCommand /* buildCommand */;
+      obj2 = buildCommand;
       tmp = require;
     } else {
       obj = { success: null };
@@ -261,7 +261,7 @@ let obj = {
         obj[0] = "channelMention" === type;
         return obj;
       }
-      obj2 = buildCommand /* buildCommand */;
+      obj2 = buildCommand;
       tmp = require;
     } else {
       obj = { success: null };
@@ -284,7 +284,7 @@ let obj = {
         obj[0] = "roleMention" === type;
         return obj;
       }
-      obj2 = buildCommand /* buildCommand */;
+      obj2 = buildCommand;
       tmp3 = require;
     } else {
       let tmp = "roleMention" === type.type;
@@ -326,7 +326,7 @@ let obj = {
         obj[0] = tmp10;
         return obj;
       }
-      obj2 = buildCommand /* buildCommand */;
+      obj2 = buildCommand;
       tmp4 = require;
     } else {
       let tmp = "userMention" === type.type;
@@ -350,7 +350,7 @@ let obj = {
     if ("text" !== type.type) {
       return { success: false };
     } else {
-      let obj = buildCommand /* buildCommand */;
+      let obj = buildCommand;
       upload = upload.getUpload(channelId, name.name, obj.getCommandAttachmentDraftType(closure_10));
       obj = { success: null };
       obj[0] = null != upload && upload.filename === type.text;

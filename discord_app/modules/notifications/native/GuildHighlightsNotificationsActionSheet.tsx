@@ -22,7 +22,7 @@ function GuildPill(guild) {
   const tmp = callback3();
   let obj = { style: tmp.guildPill, children: null };
   obj = { guild, size: null, animate: true };
-  obj[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.SMALL_32;
+  obj[1] = GuildIconSizes.GuildIconSizes.SMALL_32;
   const items = [callback(GuildIconSizes, obj), ];
   obj = { style: tmp.guildName, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   let name;
@@ -30,7 +30,7 @@ function GuildPill(guild) {
     name = guild.name;
   }
   obj[3] = name;
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return closure_12(View, obj);
 }

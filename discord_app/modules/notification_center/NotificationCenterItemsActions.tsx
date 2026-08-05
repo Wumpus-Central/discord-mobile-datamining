@@ -431,7 +431,7 @@ export const markNotificationCenterItemAcked = function markNotificationCenterIt
     dispatcher.dispatch(obj);
     const obj4 = dispatcher;
   } else {
-    obj = getRelativeTimestamp /* getRelativeTimestamp */;
+    obj = getRelativeTimestamp;
     if (obj.isMentionItem(local_id)) {
       obj = { type: "NOTIFICATION_CENTER_ITEMS_ACK", optimistic: true, ids: null };
       const items1 = [local_id.id];

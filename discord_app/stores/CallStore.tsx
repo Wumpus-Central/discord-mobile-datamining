@@ -132,7 +132,7 @@ const callStore = new CallStore(require("dispatcher"), {
       if (1 !== dependencyMap2[channelId].indexOf("all")) {
         tmp3 = null;
       }
-      const HTTP = sendRequest /* sendRequest */.HTTP;
+      const HTTP = sendRequest.HTTP;
       obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
       obj[0] = Endpoints.CALL_RING(channelId);
       obj = { recipients: null };

@@ -18,19 +18,19 @@ const require = arg1;
 function QuestCollectibleRewardModalMessages(quest) {
   quest = quest.quest;
   const tmp = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = _getDefaultRewardName /* _getDefaultRewardName */;
+  let obj1 = _getDefaultRewardName;
   const defaultRewardNameWithArticle = obj1.getDefaultRewardNameWithArticle(quest.config, stateFromStores);
   obj = { children: null };
-  const claimedCollectibleRewardMessage = useQuests /* useQuests */.useClaimedCollectibleRewardMessage(quest.config);
+  const claimedCollectibleRewardMessage = useQuests.useClaimedCollectibleRewardMessage(quest.config);
   obj = { variant: "heading-xl/bold", style: tmp.title, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t.YNaxMp, { itemName: defaultRewardNameWithArticle });
-  const items1 = [callback(Text /* Text */.Text, obj), ];
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.format(getSystemLocale.t.YNaxMp, { itemName: defaultRewardNameWithArticle });
+  const items1 = [callback(Text.Text, obj), ];
   obj1 = { variant: "text-md/medium", style: tmp.title, children: claimedCollectibleRewardMessage };
-  items1[1] = callback(Text /* Text */.Text, obj1);
+  items1[1] = callback(Text.Text, obj1);
   obj[0] = items1;
   return callback2(closure_6, obj);
 }
@@ -45,7 +45,7 @@ export const openQuestCollectibleRewardModal = function openQuestCollectibleRewa
   let product;
   let require;
   ({ quest: require, product } = onSuccess);
-  let obj = getQuestLogger /* getQuestLogger */;
+  let obj = getQuestLogger;
   obj = { location: QuestsExperimentLocations.QUEST_HOME_MOBILE };
   const questLogger = obj.getQuestLogger(obj);
   if (null != product) {

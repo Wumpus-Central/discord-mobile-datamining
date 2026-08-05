@@ -11,14 +11,14 @@ export default {
     if (versionRequired) {
       let obj = set;
       obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.GQZdmI);
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.Fizu9y);
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.UefCDS);
-      const intl4 = getSystemLocale /* getSystemLocale */.intl;
-      obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t["1SzcG6"]);
+      const intl = getSystemLocale.intl;
+      obj[0] = intl.string(getSystemLocale.t.GQZdmI);
+      const intl2 = getSystemLocale.intl;
+      obj[1] = intl2.string(getSystemLocale.t.Fizu9y);
+      const intl3 = getSystemLocale.intl;
+      obj[2] = intl3.string(getSystemLocale.t.UefCDS);
+      const intl4 = getSystemLocale.intl;
+      obj[3] = intl4.string(getSystemLocale.t["1SzcG6"]);
       obj[4] = function onConfirm() {
         BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
         return BundleUpdaterManager.reload();

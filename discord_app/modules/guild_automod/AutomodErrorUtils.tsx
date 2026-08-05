@@ -24,8 +24,8 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
           isThreadResult = channel.isThread();
         }
         if (isThreadResult) {
-          const intl3 = getSystemLocale /* getSystemLocale */.intl;
-          return intl3.string(getSystemLocale /* getSystemLocale */.t.DVdG9E);
+          const intl3 = getSystemLocale.intl;
+          return intl3.string(getSystemLocale.t.DVdG9E);
         } else {
           let isForumPostResult;
           if (channel != null) {
@@ -33,11 +33,11 @@ function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
           }
           if (isForumPostResult) {
             if (code === AbortCodes.AUTOMOD_TITLE_BLOCKED) {
-              const intl2 = getSystemLocale /* getSystemLocale */.intl;
-              return intl2.string(getSystemLocale /* getSystemLocale */.t.ipgKDg);
+              const intl2 = getSystemLocale.intl;
+              return intl2.string(getSystemLocale.t.ipgKDg);
             } else if (code === tmp4.AUTOMOD_MESSAGE_BLOCKED) {
-              const intl = getSystemLocale /* getSystemLocale */.intl;
-              return intl.string(getSystemLocale /* getSystemLocale */.t.ipgKDg);
+              const intl = getSystemLocale.intl;
+              return intl.string(getSystemLocale.t.ipgKDg);
             }
           } else {
             let isForumLikeChannelResult;
@@ -109,8 +109,8 @@ export const getAutomodErrorMessage = function getAutomodErrorMessage(messageDat
   if (null != tmp) {
     return tmp;
   } else if (null == messageData) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.zQ69pv);
+    const intl = getSystemLocale.intl;
+    let stringResult = intl.string(getSystemLocale.t.zQ69pv);
   } else {
     stringResult = getAutomodErrorMessageFromMessageData(messageData);
   }

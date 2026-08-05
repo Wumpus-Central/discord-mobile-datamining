@@ -11,7 +11,7 @@ const result = require("createGiftIntentEmbed").fileFinishedImporting("modules/m
 export const createGiftIntentSystemMessage = function createGiftIntentSystemMessage(message) {
   let theme;
   ({ message, theme } = message);
-  let obj = createGiftIntentEmbed /* createGiftIntentEmbed */;
+  let obj = createGiftIntentEmbed;
   const giftIntentEmbed = obj.createGiftIntentEmbed(message, theme);
   if (null == giftIntentEmbed) {
     return null;

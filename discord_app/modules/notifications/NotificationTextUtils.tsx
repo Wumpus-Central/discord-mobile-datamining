@@ -103,15 +103,15 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
       }
       return tmp6;
     }
-    obj2 = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+    obj2 = shouldShowAgeGateForVoiceChannel;
     tmp2 = require;
   }
 }
 function renderTitle(channelName, channel, channel) {
-  const obj = FSI /* FSI */;
-  const isolateResult = FSI /* FSI */.isolate(channelName);
-  const obj2 = FSI /* FSI */;
-  const obj3 = computeChannelName /* computeChannelName */;
+  const obj = FSI;
+  const isolateResult = FSI.isolate(channelName);
+  const obj2 = FSI;
+  const obj3 = computeChannelName;
   const tmp4 = mergeGuildAvatar;
   const tmp5 = upsertRelationship;
   let str = "";
@@ -121,7 +121,7 @@ function renderTitle(channelName, channel, channel) {
     const _HermesInternal = HermesInternal;
     str = ", " + tmpResult.isolate(tmpResult.computeChannelName(channel, tmp4, tmp5));
   }
-  return "" + isolateResult + " (" + obj2.isolate(computeChannelName /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true)) + str + ")";
+  return "" + isolateResult + " (" + obj2.isolate(computeChannelName.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true)) + str + ")";
 }
 function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
   type = type.type;
@@ -152,7 +152,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
     flag2 = false;
   }
   if (null != message.flags) {
-    let obj = hasFlag /* hasFlag */;
+    let obj = hasFlag;
     if (obj.hasFlag(message.flags, constants3.SUPPRESS_NOTIFICATIONS)) {
       return false;
     }
@@ -200,7 +200,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
               if (obj5.isChannelCurrentlyVisible(channel1.id)) {
                 return false;
               }
-              obj5 = isChannelCurrentlyVisible /* isChannelCurrentlyVisible */;
+              obj5 = isChannelCurrentlyVisible;
             }
             if (upsertRelationship.isBlockedOrIgnoredForMessage(message)) {
               return false;
@@ -228,7 +228,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                 if (muted.isMuted(channel1.id)) {
                   return false;
                 } else {
-                  const threadNotificationSetting = computeThreadNotificationSetting /* computeThreadNotificationSetting */.computeThreadNotificationSetting(channel1);
+                  const threadNotificationSetting = computeThreadNotificationSetting.computeThreadNotificationSetting(channel1);
                   let tmp39 = threadNotificationSetting !== ThreadMemberFlags.NO_MESSAGES;
                   if (tmp39) {
                     result = threadNotificationSetting === ThreadMemberFlags.ALL_MESSAGES;
@@ -236,8 +236,8 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                       obj = { rawMessage: null, userId: null, suppressEveryone: false, suppressRoles: false };
                       obj[0] = message;
                       obj[1] = currentUser.id;
-                      result = isMentioned /* isMentioned */.isRawMessageMentioned(obj);
-                      const tmp36Result = isMentioned /* isMentioned */;
+                      result = isMentioned.isRawMessageMentioned(obj);
+                      const tmp36Result = isMentioned;
                     }
                     tmp39 = result;
                   }
@@ -261,7 +261,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                 obj1[1] = currentUser.id;
                 obj1[2] = result1;
                 obj1[3] = result2;
-                return isMentioned /* isMentioned */.isRawMessageMentioned(obj1);
+                return isMentioned.isRawMessageMentioned(obj1);
               }
             }
           }
@@ -309,7 +309,7 @@ export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedCh
             if (tmp16) {
               let tmp19 = store3.getStatus() !== constants6.DND;
               if (tmp19) {
-                const FocusMode = explicitContentFromProto /* explicitContentFromProto */.FocusMode;
+                const FocusMode = explicitContentFromProto.FocusMode;
                 const setting = FocusMode.getSetting();
                 let tmp23 = !setting;
                 if (!setting) {
@@ -352,8 +352,8 @@ export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumT
       if (!result) {
         let result1 = !flag;
         if (!flag) {
-          result1 = isChannelCurrentlyVisible /* isChannelCurrentlyVisible */.isChannelCurrentlyVisible(channel2.id);
-          const obj3 = isChannelCurrentlyVisible /* isChannelCurrentlyVisible */;
+          result1 = isChannelCurrentlyVisible.isChannelCurrentlyVisible(channel2.id);
+          const obj3 = isChannelCurrentlyVisible;
         }
         let newForumThreadsCreated = !result1;
         if (!result1) {
@@ -392,8 +392,8 @@ export const shouldNotifyForReaction = function shouldNotifyForReaction(arg0) {
       if (tmp11) {
         let result = !includeSelectedChannel;
         if (!includeSelectedChannel) {
-          result = isChannelCurrentlyVisible /* isChannelCurrentlyVisible */.isChannelCurrentlyVisible(channel.id);
-          const obj = isChannelCurrentlyVisible /* isChannelCurrentlyVisible */;
+          result = isChannelCurrentlyVisible.isChannelCurrentlyVisible(channel.id);
+          const obj = isChannelCurrentlyVisible;
         }
         tmp11 = !result;
       }
@@ -408,14 +408,14 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
   let flag = true;
   if (!state.isVoicePanelFullscreen()) {
     if (null == store.getConnectedActivityLocation()) {
-      const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+      const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
       let tmp5 = null == rootNavigationRef || !rootNavigationRef.isReady();
       if (!tmp5) {
         tmp5 = !tmp3(9677).isChannelFocused();
         const tmp3Result = tmp3(9677);
       }
       flag = tmp5;
-      const obj3 = getRootNavigationRef /* getRootNavigationRef */;
+      const obj3 = getRootNavigationRef;
       tmp3 = require;
     } else {
       flag = true;
@@ -440,7 +440,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               if (tmp4.GROUP_DM === type) {
                 let tmp6 = getGuildId.isManaged() && bot.bot;
                 if (tmp6) {
-                  let obj1 = computeChannelName /* computeChannelName */;
+                  let obj1 = computeChannelName;
                   tmp6 = name === obj1.computeChannelName(getGuildId, mergeGuildAvatar, upsertRelationship);
                 }
                 tmp5 = name;
@@ -469,33 +469,33 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               sticker_items = "stickerItems" in content ? content.stickerItems : content.stickers;
             }
             if ("message_reference" in content) {
-              let obj4 = isForwardMessage /* isForwardMessage */;
+              let obj4 = isForwardMessage;
               let result = obj4.isForwardServerMessage(content);
             } else {
               result = tmp(5827)(content);
             }
             const items = [];
             if (result) {
-              const intl8 = getSystemLocale /* getSystemLocale */.intl;
-              let stringResult = intl8.string(getSystemLocale /* getSystemLocale */.t["9ddYKt"]);
+              const intl8 = getSystemLocale.intl;
+              let stringResult = intl8.string(getSystemLocale.t["9ddYKt"]);
               let tmp26 = items;
             } else {
               if (null != content.activity) {
                 if (null != content.application) {
                   if (content.activity.type === constants.JOIN) {
-                    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+                    const intl7 = getSystemLocale.intl;
                     obj = { user: null, game: null };
                     obj[0] = name;
                     obj[1] = content.application.name;
-                    let str7 = intl7.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale /* getSystemLocale */.t.E8CgCh, getSystemLocale /* getSystemLocale */.t.c6KHWJ, getSystemLocale /* getSystemLocale */.t.Fy7rJN), obj);
+                    let str7 = intl7.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t.E8CgCh, getSystemLocale.t.c6KHWJ, getSystemLocale.t.Fy7rJN), obj);
                   } else {
                     str7 = "";
                     if (content.activity.type === tmp44.JOIN_REQUEST) {
-                      const intl9 = getSystemLocale /* getSystemLocale */.intl;
+                      const intl9 = getSystemLocale.intl;
                       obj1 = { user: null, game: null };
                       obj1[0] = name;
                       obj1[1] = content.application.name;
-                      str7 = intl9.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale /* getSystemLocale */.t["/TD0la"], getSystemLocale /* getSystemLocale */.t["/TD0la"], getSystemLocale /* getSystemLocale */.t["/TD0la"]), obj1);
+                      str7 = intl9.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t["/TD0la"], getSystemLocale.t["/TD0la"], getSystemLocale.t["/TD0la"]), obj1);
                     }
                   }
                   stringResult = str7;
@@ -504,35 +504,35 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               }
               if (null != content.activity) {
                 if (content.activity.type === constants.LISTEN) {
-                  const intl6 = getSystemLocale /* getSystemLocale */.intl;
+                  const intl6 = getSystemLocale.intl;
                   let obj2 = { user: null };
                   obj2[0] = name;
-                  stringResult = intl6.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale /* getSystemLocale */.t.SaDdmN, getSystemLocale /* getSystemLocale */.t.qsODhp, getSystemLocale /* getSystemLocale */.t.WeiMTW), obj2);
+                  stringResult = intl6.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t.SaDdmN, getSystemLocale.t.qsODhp, getSystemLocale.t.WeiMTW), obj2);
                   tmp26 = items;
-                  const tmp43 = getInviteEmbedFormatString(getGuildId, getSystemLocale /* getSystemLocale */.t.SaDdmN, getSystemLocale /* getSystemLocale */.t.qsODhp, getSystemLocale /* getSystemLocale */.t.WeiMTW);
+                  const tmp43 = getInviteEmbedFormatString(getGuildId, getSystemLocale.t.SaDdmN, getSystemLocale.t.qsODhp, getSystemLocale.t.WeiMTW);
                 }
               }
               if (null != sticker_items) {
                 if (sticker_items.length > 0) {
-                  const intl5 = getSystemLocale /* getSystemLocale */.intl;
+                  const intl5 = getSystemLocale.intl;
                   const obj3 = { stickerName: null };
                   obj3[0] = sticker_items[0].name;
-                  stringResult = intl5.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zY4v1B, obj3);
+                  stringResult = intl5.formatToPlainString(getSystemLocale.t.zY4v1B, obj3);
                   tmp26 = items;
                 }
               }
               if (content.type === constants4.PREMIUM_REFERRAL) {
-                const intl4 = getSystemLocale /* getSystemLocale */.intl;
+                const intl4 = getSystemLocale.intl;
                 obj4 = { username: null };
                 tmpResult = tmp(4124);
                 obj4[0] = tmpResult.getName(bot);
-                stringResult = intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.lieTqU, obj4);
+                stringResult = intl4.formatToPlainString(getSystemLocale.t.lieTqU, obj4);
                 tmp26 = items;
               } else if (null != content.poll) {
-                const intl3 = getSystemLocale /* getSystemLocale */.intl;
+                const intl3 = getSystemLocale.intl;
                 const obj5 = { question: null };
                 obj5[0] = content.poll.question.text;
-                stringResult = intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.ImizdM, obj5);
+                stringResult = intl3.formatToPlainString(getSystemLocale.t.ImizdM, obj5);
                 tmp26 = items;
               } else if (content.type === tmp23.POLL_RESULT) {
                 const embeds = content.embeds;
@@ -547,16 +547,16 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                   }
                 }
                 if (null == found) {
-                  let intl2 = getSystemLocale /* getSystemLocale */.intl;
+                  let intl2 = getSystemLocale.intl;
                   const obj6 = { question: null };
                   obj6[0] = "";
-                  stringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["9WrecI"], obj6);
+                  stringResult = intl2.formatToPlainString(getSystemLocale.t["9WrecI"], obj6);
                   tmp26 = items;
                 }
               } else {
                 if (null != content.components) {
                   if (content.components.length > 0) {
-                    if (content.components[0].type === PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.CHECKPOINT_CARD) {
+                    if (content.components[0].type === PermissionOverwriteType.ComponentType.CHECKPOINT_CARD) {
                       let intl = tmp24(1236).intl;
                       stringResult = intl.string(tmp24(1236).t.HWnMTQ);
                       tmp26 = items;
@@ -670,7 +670,7 @@ export const allowInAppNotifications = function allowInAppNotifications() {
   if (handleRequiredAction.hasAction()) {
     return false;
   } else {
-    const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
+    const ShowInAppNotifications = explicitContentFromProto.ShowInAppNotifications;
     let setting = ShowInAppNotifications.getSetting();
     if (setting) {
       setting = !obj.getFocusModeEnabled();
@@ -679,12 +679,12 @@ export const allowInAppNotifications = function allowInAppNotifications() {
   }
 };
 export const useAllowInAppNotifications = function useAllowInAppNotifications() {
-  const ShowInAppNotifications = explicitContentFromProto /* explicitContentFromProto */.ShowInAppNotifications;
+  const ShowInAppNotifications = explicitContentFromProto.ShowInAppNotifications;
   const setting = ShowInAppNotifications.useSetting();
-  const focusModeEnabled = useFocusModeEnabled /* useFocusModeEnabled */.useFocusModeEnabled();
-  const obj = useFocusModeEnabled /* useFocusModeEnabled */;
+  const focusModeEnabled = useFocusModeEnabled.useFocusModeEnabled();
+  const obj = useFocusModeEnabled;
   const items = [handleRequiredAction];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => handleRequiredAction.hasAction());
+  const stateFromStores = initialize.useStateFromStores(items, () => handleRequiredAction.hasAction());
   let tmp4 = !stateFromStores;
   if (!stateFromStores) {
     tmp4 = setting;

@@ -21,18 +21,18 @@ function ReferredFriendAvatar(user) {
   let obj = { style: createCacheKey().referredFriendAvatar, children: null };
   obj = { source: null, size: null };
   obj[0] = user.getAvatarSource(undefined, false, 24);
-  obj[1] = Button /* Button */.AvatarSizes.XSMALL;
-  obj[1] = callback(Button /* Button */.Avatar, obj);
+  obj[1] = Button.AvatarSizes.XSMALL;
+  obj[1] = callback(Button.Avatar, obj);
   return callback(View, obj);
 }
 function AvailableReferralSlot(children) {
-  return callback(View, { style: createCacheKey().availableReferralSlot, children: callback(Text /* Text */.Text, { variant: "text-xs/medium", color: "text-strong", children: children.slotIndex }) });
+  return callback(View, { style: createCacheKey().availableReferralSlot, children: callback(Text.Text, { variant: "text-xs/medium", color: "text-strong", children: children.slotIndex }) });
 }
 function ProgressIndicator(referralSentUsers) {
   referralSentUsers = referralSentUsers.referralSentUsers;
   const items = [];
   let num = 0;
-  if (0 < MAX_REFERRALS_SENT /* MAX_REFERRALS_SENT */.MAX_REFERRALS_SENT) {
+  if (0 < MAX_REFERRALS_SENT.MAX_REFERRALS_SENT) {
     do {
       let tmp2 = num;
       if (null != referralSentUsers[num]) {
@@ -51,7 +51,7 @@ function ProgressIndicator(referralSentUsers) {
       num = num + 1;
       let tmp9 = require;
       let tmp10 = dependencyMap;
-    } while (num < MAX_REFERRALS_SENT /* MAX_REFERRALS_SENT */.MAX_REFERRALS_SENT);
+    } while (num < MAX_REFERRALS_SENT.MAX_REFERRALS_SENT);
   }
   obj = { style: createCacheKey().progressIndicatorContainer, children: items };
   return callback(View, obj);

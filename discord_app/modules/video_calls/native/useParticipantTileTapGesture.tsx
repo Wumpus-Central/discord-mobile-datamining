@@ -6,12 +6,12 @@ export default function useParticipantTileTapGesture(arg0) {
   let onDoubleTapStart;
   let onSingleTapStart;
   ({ onSingleTapStart, onDoubleTapStart } = arg0);
-  const Gesture = Directions /* Directions */.Gesture;
+  const Gesture = Directions.Gesture;
   const TapResult = Gesture.Tap();
-  const Gesture2 = Directions /* Directions */.Gesture;
+  const Gesture2 = Directions.Gesture;
   const onStartResult = Gesture.Tap().onStart(onSingleTapStart);
   const TapResult1 = Gesture2.Tap();
   const onStartResult1 = Gesture2.Tap().onStart(onDoubleTapStart);
-  const Gesture3 = Directions /* Directions */.Gesture;
+  const Gesture3 = Directions.Gesture;
   return Gesture3.Exclusive(Gesture2.Tap().onStart(onDoubleTapStart).numberOfTaps(2), onStartResult);
 };

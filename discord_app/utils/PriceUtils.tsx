@@ -32,8 +32,8 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
     obj.currencyDisplay = "code";
   }
   if (isWindowsResult) {
-    isWindowsResult = set /* set */.isWindows();
-    const obj3 = set /* set */;
+    isWindowsResult = set.isWindows();
+    const obj3 = set;
   }
   if (isWindowsResult) {
     isWindowsResult = "en-GB" === _getSystemLocale.systemLocale;
@@ -44,13 +44,13 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   if (tmp11) {
     obj.minimumFractionDigits = 0;
   }
-  return CurrencyCodes /* CurrencyCodes */.formatPrice(result, BGN, localeOverride, obj);
+  return CurrencyCodes.formatPrice(result, BGN, localeOverride, obj);
 }
 function formatPrice(amount, currency, localeOverride, localeOverride) {
   const timestamp = Date.now();
   let flag = false;
   if (timestamp < date.getTime()) {
-    const platformName = set /* set */.getPlatformName();
+    const platformName = set.getPlatformName();
     if ("android" === platformName) {
       let ipCountryCode = tmp2(5767).default.getUserCountry();
       const _default2 = tmp2(5767).default;
@@ -74,7 +74,7 @@ function formatPrice(amount, currency, localeOverride, localeOverride) {
       tmp9 = formatted === CurrencyCodes.EUR;
     }
     flag = tmp9;
-    const obj2 = set /* set */;
+    const obj2 = set;
   }
   if (flag) {
     const tmp13Result = tmp13(amount, CurrencyCodes.EUR, localeOverride);
@@ -87,26 +87,26 @@ function formatPrice(amount, currency, localeOverride, localeOverride) {
 }
 function formatRate(priceString, interval, intervalCount) {
   if (interval === SubscriptionIntervalTypes.YEAR) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     let obj = { price: null };
     obj[0] = priceString;
-    return intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t["rS8FA+"], obj);
+    return intl3.formatToPlainString(getSystemLocale.t["rS8FA+"], obj);
   } else {
     if (interval === tmp.MONTH) {
       if (1 === intervalCount) {
-        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        const intl2 = getSystemLocale.intl;
         obj = { price: null };
         obj[0] = priceString;
-        return intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.AbOLNu, obj);
+        return intl2.formatToPlainString(getSystemLocale.t.AbOLNu, obj);
       }
     }
     if (interval === tmp.MONTH) {
       if (intervalCount > 1) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
+        const intl = getSystemLocale.intl;
         obj = { price: null, intervalCount: null };
         obj[0] = priceString;
         obj[1] = intervalCount;
-        return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["Qc+9ww"], obj);
+        return intl.formatToPlainString(getSystemLocale.t["Qc+9ww"], obj);
       }
     }
     const _Error = Error;
@@ -128,7 +128,7 @@ export const formatPercent = function formatPercent(arg0, arg1) {
   return Intl.NumberFormat(arg0, { style: "percent", minimumFractionDigits: 0 }).format(arg1);
 };
 export const formatSubscriptionPlanRate = function formatSubscriptionPlanRate(interval_count) {
-  const price = getPremiumPlanItem /* getPremiumPlanItem */.getPrice(interval_count.id);
+  const price = getPremiumPlanItem.getPrice(interval_count.id);
   return formatRate(formatPrice(price.amount, price.currency), interval_count.interval, "interval_count" in interval_count ? interval_count.interval_count : interval_count.intervalCount);
 };
 export const maybeShortenPrice = function maybeShortenPrice(str) {

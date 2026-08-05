@@ -9,14 +9,14 @@ export const useShouldUseFabricChatInput = function useShouldUseFabricChatInput(
   if (null != closure_3) {
     let isAndroidResult = closure_3;
   } else {
-    isAndroidResult = set /* set */.isAndroid();
+    isAndroidResult = set.isAndroid();
     if (!isAndroidResult) {
       const tmp4Result = tmp4(4149);
       isAndroidResult = tmp4(4149).isIosFabric() && tmp3;
       const tmp6 = tmp4(4149).isIosFabric() && tmp3;
     }
     closure_3 = isAndroidResult;
-    const obj = set /* set */;
+    const obj = set;
     tmp4 = require;
   }
   return isAndroidResult;
@@ -25,7 +25,7 @@ export const shouldUseFabricChatInput = function shouldUseFabricChatInput() {
   if (null != closure_3) {
     let isAndroidResult = closure_3;
   } else {
-    isAndroidResult = set /* set */.isAndroid();
+    isAndroidResult = set.isAndroid();
     let enabled = !isAndroidResult;
     if (!isAndroidResult) {
       let obj = apexExperiment;
@@ -45,7 +45,7 @@ export const shouldUseFabricChatInput = function shouldUseFabricChatInput() {
       }
       closure_3 = isAndroidResult;
     }
-    const obj5 = set /* set */;
+    const obj5 = set;
   }
   return isAndroidResult;
 };

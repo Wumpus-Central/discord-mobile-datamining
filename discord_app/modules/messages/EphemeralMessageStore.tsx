@@ -70,7 +70,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(require("dispatcher"), {
     } else {
       return false;
     }
-    obj = hasFlag /* hasFlag */;
+    obj = hasFlag;
     tmp = require;
   },
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
@@ -88,7 +88,7 @@ const ephemeralMessageStore = new EphemeralMessageStore(require("dispatcher"), {
           if (null == value) {
             return false;
           } else {
-            const result = value.set(id, createMinimalMessageRecord /* createMinimalMessageRecord */.updateMessageRecord(value, message));
+            const result = value.set(id, createMinimalMessageRecord.updateMessageRecord(value, message));
           }
         }
       }

@@ -22,14 +22,14 @@ function ICYMIMessageRowPreview(pointerEvents) {
   let setting;
   let setting1;
   let setting2;
-  let obj = createCacheKey /* createCacheKey */;
+  let obj = createCacheKey;
   obj = { seeMoreLabelColor: messageOptions(712).colors.TEXT_DEFAULT };
   dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4221)());
-  const RenderEmbeds = explicitContentFromProto /* explicitContentFromProto */.RenderEmbeds;
+  const RenderEmbeds = explicitContentFromProto.RenderEmbeds;
   setting = RenderEmbeds.getSetting();
-  const InlineEmbedMedia = explicitContentFromProto /* explicitContentFromProto */.InlineEmbedMedia;
+  const InlineEmbedMedia = explicitContentFromProto.InlineEmbedMedia;
   setting1 = InlineEmbedMedia.getSetting();
-  const InlineAttachmentMedia = explicitContentFromProto /* explicitContentFromProto */.InlineAttachmentMedia;
+  const InlineAttachmentMedia = explicitContentFromProto.InlineAttachmentMedia;
   setting2 = InlineAttachmentMedia.getSetting();
   const items = [setting, setting1, setting2, messageOptions];
   const memo = setting.useMemo(() => {

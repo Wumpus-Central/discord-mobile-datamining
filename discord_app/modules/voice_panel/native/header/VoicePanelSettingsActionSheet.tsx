@@ -17,9 +17,9 @@ const memoResult = require("noop").memo(function VoicePanelSettingsActionSheet(a
   obj = { children: null };
   obj = { bottom: true, style: callback().wrapper, children: null };
   obj[2] = jsx(VoicePanelSettingsOverviewHeader, { guildId, channelId });
-  obj[0] = jsx(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, style: callback().wrapper, children: null });
-  obj[2] = jsx(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, { bottom: true, style: callback().wrapper, children: null });
-  return jsx(Background /* Background */.BottomSheet, { bottom: true, style: callback().wrapper, children: null });
+  obj[0] = jsx(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, style: callback().wrapper, children: null });
+  obj[2] = jsx(BottomSheetModal.BottomSheetScrollView, { bottom: true, style: callback().wrapper, children: null });
+  return jsx(Background.BottomSheet, { bottom: true, style: callback().wrapper, children: null });
 });
 const result = require("createCacheKey").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx");
 

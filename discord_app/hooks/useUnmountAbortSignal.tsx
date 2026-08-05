@@ -9,7 +9,7 @@ export default function useUnmountAbortSignal() {
     return abortController;
   });
   const require = tmp;
-  const unmountEffect = useMountLayoutEffect /* useMountLayoutEffect */.useUnmountEffect(() => {
+  const unmountEffect = useMountLayoutEffect.useUnmountEffect(() => {
     tmp.abort();
   });
   return tmp.signal;

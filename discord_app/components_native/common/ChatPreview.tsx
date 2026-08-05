@@ -504,7 +504,7 @@ prototype["render"] = function render() {
     }
   }
   obj = { ref: self.chatRef, style: tmp.chat, inverted: true, onTapLink: self.handleTapLink, onTapChannel: self.handleTapChannel, onLongPressChannel: self.handleLongPressChannel, onLongPressLink: self.handleLongPressLink, onLongPressMessage: self.handleLongPressMessage, onLongPressReaction: self.handleLongPressReaction, onTapReaction: self.handleTapReaction, onTapImage: self.handleTapImage, onCompleteFirstLayout: null, onFirstLayout: null };
-  obj1 = set /* set */;
+  obj1 = set;
   let prop;
   if (obj1.isIOS()) {
     prop = self.handleCompleteFirstLayout;
@@ -519,8 +519,8 @@ prototype["render"] = function render() {
   tmp6Result = tmp6(tmp8, obj);
   const obj2 = { bottom: true, style: tmp.jumpToChatButtonContainer, children: null };
   const obj3 = { accessibilityRole: "button", style: tmp.jumpToChatButton, onPress: self.handleJumpToChat, children: null };
-  obj3[3] = callback(Text /* Text */.Text, { style: tmp.jumpToChatText, variant: "text-md/medium", color: "interactive-text-default", children: self.props.jumpToChatProps.jumpToChatText });
-  obj2[2] = callback(PressableBase /* PressableBase */.PressableOpacity, obj3);
+  obj3[3] = callback(Text.Text, { style: tmp.jumpToChatText, variant: "text-md/medium", color: "interactive-text-default", children: self.props.jumpToChatProps.jumpToChatText });
+  obj2[2] = callback(PressableBase.PressableOpacity, obj3);
   tmp6Result = tmp6(tmp9(5272).SafeAreaPaddingView, obj2);
   tmp14 = tmp6Result;
 };

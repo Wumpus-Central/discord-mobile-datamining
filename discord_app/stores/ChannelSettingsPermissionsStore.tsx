@@ -264,7 +264,7 @@ const channelSettingsPermissionsStore = new ChannelSettingsPermissionsStore(requ
   },
   CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function handleSetAdvancedMode(advancedMode) {
     advancedMode = advancedMode.advancedMode;
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const result = Storage.set(ADVANCED_MODE_ON_KEY, advancedMode);
   }
 });

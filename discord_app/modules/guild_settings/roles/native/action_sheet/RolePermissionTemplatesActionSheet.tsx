@@ -29,10 +29,10 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
     obj.track(constants.OPEN_POPOUT, obj);
   }, []);
   let obj = { title: null };
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.KgCkoQ);
+  let intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.KgCkoQ);
   const tmp = createCacheKey();
-  obj = { header: jsx(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null }), startExpanded: true, children: null };
+  obj = { header: jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: null }), startExpanded: true, children: null };
   obj = { style: tmp.templateContainer, children: null };
   obj[1] = jsx(width, {
     onSelect(arg0) {
@@ -70,5 +70,5 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
     guildId: guildId.guildId
   });
   obj[2] = <View style={tmp.templateContainer}>{null}</View>;
-  return jsx(ActionSheet /* ActionSheet */.ActionSheet, { style: tmp.templateContainer, children: null });
+  return jsx(ActionSheet.ActionSheet, { style: tmp.templateContainer, children: null });
 };

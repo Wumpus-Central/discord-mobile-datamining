@@ -74,5 +74,5 @@ export const useStateFromStoresObject = function useStateFromStoresObject(items,
   return useStateFromStores(items, getCurrentRestrictedHoursState, items1, shallowEqual);
 };
 export const useStateFromStoresArray = function useStateFromStoresArray(items, getCurrentRestrictedHoursState, items1) {
-  return useStateFromStores(items, getCurrentRestrictedHoursState, items1, shallowEqual /* shallowEqual */.areArraysShallowEqual);
+  return useStateFromStores(items, getCurrentRestrictedHoursState, items1, shallowEqual.areArraysShallowEqual);
 };

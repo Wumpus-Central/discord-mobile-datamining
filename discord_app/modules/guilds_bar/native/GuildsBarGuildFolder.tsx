@@ -28,10 +28,10 @@ function MiniGuildIcon(arg0) {
   let require;
   let selected;
   ({ guildId: require, position, selected } = arg0);
-  let obj = map /* map */;
+  let obj = map;
   const tmp4 = callback3(false, obj.useToken(Themes.modules.mobile.GUILD_BAR_ITEM_SIZE));
   const items = [createGuildRecordFromRust];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => outer1_5.getGuild(closure_0));
+  const stateFromStores = initialize.useStateFromStores(items, () => outer1_5.getGuild(closure_0));
   if (0 === position) {
     let guildPreview3 = tmp4.guildPreview0;
   } else if (1 === position) {
@@ -43,7 +43,7 @@ function MiniGuildIcon(arg0) {
   }
   const items1 = [tmp4.guildPreviewIcon, , ];
   let prop;
-  const obj2 = initialize /* initialize */;
+  const obj2 = initialize;
   const tmp = require;
   const tmp3 = importDefault;
   const tmp6 = closure_14;

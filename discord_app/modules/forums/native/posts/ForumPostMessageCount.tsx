@@ -44,7 +44,7 @@ export default function ForumPostMessageCount(hasUnreads) {
   hasUnreads = hasUnreads.hasUnreads;
   ({ thread, containerStyle } = hasUnreads);
   const tmp = createCacheKey();
-  let obj = useLoadForumUnreadCounts /* useLoadForumUnreadCounts */;
+  let obj = useLoadForumUnreadCounts;
   messageCount = obj.useMessageCount(thread);
   ({ messageCountText, unreadCount } = messageCount);
   let str = "text-muted";
@@ -55,14 +55,14 @@ export default function ForumPostMessageCount(hasUnreads) {
   obj = { style: items, accessibilityLabel: null, children: null };
   items = [tmp.container, containerStyle];
   const intl = tmp2(1236).intl;
-  obj[1] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["8M0DrB"], { count: messageCountText });
+  obj[1] = intl.formatToPlainString(getSystemLocale.t["8M0DrB"], { count: messageCountText });
   obj = { size: "xs", style: hasUnreads ? tmp.iconUnread : tmp.iconRead, color: null };
   let str2 = "icon-muted";
   if (hasUnreads) {
     str2 = "interactive-text-default";
   }
   obj[2] = str2;
-  const items1 = [closure_4(ChatIcon /* ChatIcon */.ChatIcon, obj), , ];
+  const items1 = [closure_4(ChatIcon.ChatIcon, obj), , ];
   if (isMaxMessageCount) {
     const obj1 = { variant: "text-sm/semibold", color: null, children: null };
     obj1[1] = str;

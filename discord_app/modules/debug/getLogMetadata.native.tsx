@@ -23,8 +23,8 @@ export default function getLogMetadata() {
   obj[6] = importAll(1578).getBuildNumberLabel();
   obj[7] = DeviceVendorID;
   const obj4 = importAll(1578);
-  obj[8] = DCDDeviceManager /* DCDDeviceManager */.getDeviceInfo();
-  const obj5 = DCDDeviceManager /* DCDDeviceManager */;
-  obj[9] = DCDDeviceManager /* DCDDeviceManager */.getSystemVersion();
+  obj[8] = DCDDeviceManager.getDeviceInfo();
+  const obj5 = DCDDeviceManager;
+  obj[9] = DCDDeviceManager.getSystemVersion();
   return obj;
 };

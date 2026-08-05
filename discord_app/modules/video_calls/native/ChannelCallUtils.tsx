@@ -20,8 +20,8 @@ let result = require("ME").fileFinishedImporting("modules/video_calls/native/Cha
 
 export const voiceSettings = function voiceSettings() {
   let obj = { label: null, icon: null, onPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.NiTd0e);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.NiTd0e);
   obj[1] = registerAsset;
   obj[2] = function onPress() {
     let obj = callback(5925);
@@ -145,8 +145,8 @@ export const rtcDebugPanel = function rtcDebugPanel(arg0) {
 };
 export const shareActivityLogs = function shareActivityLogs() {
   let obj = { label: null, icon: null, onPress: null };
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.iQzQs3);
+  let intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.iQzQs3);
   obj[1] = registerAsset;
   obj[2] = function onPress() {
     let obj = callback(table[19]);

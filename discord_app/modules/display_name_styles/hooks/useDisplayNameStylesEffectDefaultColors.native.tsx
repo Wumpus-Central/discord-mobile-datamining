@@ -13,8 +13,8 @@ let require = arg1;
 const result = require("int2hslRaw").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEffectDefaultColors.native.tsx");
 
 export default function useDisplayNameStylesEffectDefaultColors() {
-  let obj = int2hslRaw /* int2hslRaw */;
-  const hex2intResult = obj.hex2int(map /* map */.useToken(Themes.colors.TEXT_DEFAULT));
+  let obj = int2hslRaw;
+  const hex2intResult = obj.hex2int(map.useToken(Themes.colors.TEXT_DEFAULT));
   require = hex2intResult;
   let items = [hex2intResult];
   return React.useMemo(() => {

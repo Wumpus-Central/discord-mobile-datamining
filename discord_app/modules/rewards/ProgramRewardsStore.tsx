@@ -325,8 +325,8 @@ prototype["isReady"] = function isReady() {
   if (!isFetchingResult) {
     let hasCachedValueResult = self.hasCachedValue();
     if (!hasCachedValueResult) {
-      hasCachedValueResult = !canFetchNitroProgramReward /* canFetchNitroProgramReward */.canFetchAnyProgramReward("ProgramRewardsStore");
-      const obj = canFetchNitroProgramReward /* canFetchNitroProgramReward */;
+      hasCachedValueResult = !canFetchNitroProgramReward.canFetchAnyProgramReward("ProgramRewardsStore");
+      const obj = canFetchNitroProgramReward;
     }
     if (!hasCachedValueResult) {
       hasCachedValueResult = self.isError();
@@ -336,7 +336,7 @@ prototype["isReady"] = function isReady() {
   return tmp2;
 };
 prototype["shouldFetch"] = function shouldFetch() {
-  let obj = canFetchNitroProgramReward /* canFetchNitroProgramReward */;
+  let obj = canFetchNitroProgramReward;
   if (obj.canFetchAnyProgramReward("ProgramRewardsStore.shouldFetch")) {
     if (networkTtlCache.shouldFetch()) {
       obj = { shouldFetch: true };

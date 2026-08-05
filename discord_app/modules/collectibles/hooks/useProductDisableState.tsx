@@ -7,7 +7,7 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
 export const useProductDisableState = function useProductDisableState(skuId) {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [reset];
   const stateFromStores = obj.useStateFromStores(items, () => {
     premiumSubscription = premiumSubscription.getPremiumSubscription();
@@ -17,7 +17,7 @@ export const useProductDisableState = function useProductDisableState(skuId) {
     }
     return true === prop;
   });
-  const ALL = set /* set */.FractionalPremiumSKUsSets.ALL;
+  const ALL = set.FractionalPremiumSKUsSets.ALL;
   if (ALL.has(skuId)) {
     obj = { isDisabled: null, disabledReason: null };
     obj[0] = stateFromStores;

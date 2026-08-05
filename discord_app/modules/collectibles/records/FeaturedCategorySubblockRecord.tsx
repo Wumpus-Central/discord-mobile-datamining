@@ -3,7 +3,7 @@ import { FeaturedSubblockType } from "../../../../discord_common/js/shared/share
 let prototype;
 prototype = function FeaturedCategorySubblockRecord(unpublished_at) {
   const obj = Object.create(new.target.prototype);
-  obj.type = FeaturedSubblockType /* FeaturedSubblockType */.FeaturedSubblockType.CATEGORY;
+  obj.type = FeaturedSubblockType.FeaturedSubblockType.CATEGORY;
   ({ category_store_listing_id: tmp.categoryStoreListingId, name: tmp.name } = unpublished_at);
   let date = null;
   if (null != unpublished_at.unpublished_at) {
@@ -19,7 +19,7 @@ prototype["fromServer"] = function fromServer(unpublished_at) {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(prototype.prototype);
-  obj.type = FeaturedSubblockType /* FeaturedSubblockType */.FeaturedSubblockType.CATEGORY;
+  obj.type = FeaturedSubblockType.FeaturedSubblockType.CATEGORY;
   ({ category_store_listing_id: tmp2.categoryStoreListingId, name: tmp2.name } = unpublished_at);
   let date = null;
   if (null != unpublished_at.unpublished_at) {

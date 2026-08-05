@@ -8,7 +8,7 @@ export default function useShouldShowPremiumProfileFrameCTA(location) {
   const _location = location.location;
   let tmp2 = useShouldShowPremiumProfileFrameEA(_location) && !useCanPurchaseFrames(_location);
   if (tmp2) {
-    tmp2 = location.product.type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME;
+    tmp2 = location.product.type === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
   }
   return tmp2;
 };

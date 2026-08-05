@@ -145,7 +145,7 @@ const result = require("map").fileFinishedImporting("modules/premium/gifting/nat
 
 export default function GiftingBadgesCoachmarkActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [map];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let getCurrentTier;

@@ -7,7 +7,7 @@ import { getIsEligibleForQuests } from "lib/QuestsEligibility.tsx";
 let c3;
 let c4;
 function maybeRefreshAd(fetchedAt, QUEST_HOME_BANNER_DESKTOP) {
-  let isEligibleForQuests = getIsEligibleForQuests /* getIsEligibleForQuests */.getIsEligibleForQuests();
+  let isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     let tmp5 = null != fetchedAt;
     if (tmp5) {

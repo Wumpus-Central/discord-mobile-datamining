@@ -26,5 +26,5 @@ export const getIllustrationSource = function getIllustrationSource(theme, light
   return lightResult;
 };
 export const useIllustrationSource = function useIllustrationSource(arg0) {
-  return arg0(ManaContext /* ManaContext */.useThemeContext().theme);
+  return arg0(ManaContext.useThemeContext().theme);
 };

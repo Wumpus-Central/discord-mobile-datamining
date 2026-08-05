@@ -8,28 +8,28 @@ import { handleSensitiveMediaFilterPress } from "../../../explicit_media_redacti
 import { resolveExplicitContentSettingWithDefaults } from "../../../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx";
 
 function useObscuredContentNonFriendsDmSettingValue() {
-  const obj = useExplicitContentSettingOrDefault /* useExplicitContentSettingOrDefault */;
-  return redactionSettingToRenderedString /* redactionSettingToRenderedString */.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentNonFriendDm)();
+  const obj = useExplicitContentSettingOrDefault;
+  return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentNonFriendDm)();
 }
 function onObscuredContentNonFriendsDmOnPress() {
-  let obj = resolveExplicitContentSettingWithDefaults /* resolveExplicitContentSettingWithDefaults */;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.GYpoAq);
+  let obj = resolveExplicitContentSettingWithDefaults;
+  const intl = getSystemLocale.intl;
+  const stringResult = intl.string(getSystemLocale.t.GYpoAq);
   obj = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["Yh+HX1"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t["Yh+HX1"]);
   obj[2] = function handlePress(explicitContentNonFriendDm) {
     let obj = callback(table[3]);
     obj = { explicitContentNonFriendDm };
     return obj.updateExplicitContentSetting(obj);
   };
   obj[3] = obj.getExplicitContentSettingOrDefault().explicitContentNonFriendDm;
-  const result = handleSensitiveMediaFilterPress /* handleSensitiveMediaFilterPress */.handleSensitiveMediaFilterPress(obj);
+  const result = handleSensitiveMediaFilterPress.handleSensitiveMediaFilterPress(obj);
 }
 const pressable = createToggle.createPressable({
   useTitle: function getTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["Yh+HX1"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Yh+HX1"]);
   },
   parent() {
     return MobileSetting.SENSITIVE_CONTENT_FILTERS;
@@ -37,20 +37,20 @@ const pressable = createToggle.createPressable({
   useTrailing: useObscuredContentNonFriendsDmSettingValue,
   onPress: onObscuredContentNonFriendsDmOnPress,
   useSearchTerms: function getSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t["N/oRI+"]), , ];
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.QVdYsK);
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    items[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["5mnTa7"]);
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
+    const intl2 = getSystemLocale.intl;
+    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
+    const intl3 = getSystemLocale.intl;
+    items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
     return items;
   },
   useIsDisabled: require("useSensitiveMediaSettingDisabled").useSensitiveMediaSettingDisabled
 });
 let obj = {
   useTitle: function getTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["Yh+HX1"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Yh+HX1"]);
   },
   parent() {
     return MobileSetting.SENSITIVE_CONTENT_FILTERS;
@@ -58,12 +58,12 @@ let obj = {
   useTrailing: useObscuredContentNonFriendsDmSettingValue,
   onPress: onObscuredContentNonFriendsDmOnPress,
   useSearchTerms: function getSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t["N/oRI+"]), , ];
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.QVdYsK);
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    items[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["5mnTa7"]);
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
+    const intl2 = getSystemLocale.intl;
+    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
+    const intl3 = getSystemLocale.intl;
+    items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
     return items;
   },
   useIsDisabled: require("useSensitiveMediaSettingDisabled").useSensitiveMediaSettingDisabled

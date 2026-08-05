@@ -17,14 +17,14 @@ export const NativeCheckoutStoreContextOrNull = context;
 export const useNativeCheckoutStore = function useNativeCheckoutStore(arg0) {
   let shallow = arg1;
   if (arg1 === undefined) {
-    shallow = isIterable /* isIterable */.shallow;
+    shallow = isIterable.shallow;
   }
   return callback()(arg0, shallow);
 };
 export const useNativeCheckoutStoreOrNull = function useNativeCheckoutStoreOrNull(arg0) {
   let shallow = arg1;
   if (arg1 === undefined) {
-    shallow = isIterable /* isIterable */.shallow;
+    shallow = isIterable.shallow;
   }
   context = importAllResult.useContext(context);
   let contextResult = null;
@@ -42,7 +42,7 @@ export const createNativeStore = function createNativeStore(arg0) {
   let importDefault;
   let require;
   ({ order: require, checkoutInitParameters: importDefault, contextMetadata: dependencyMap, paymentGateway: isIterable, orderRequired: closure_4, onOrderRetryCancellation: createFromOrder, initialSubscriptionFacet: closure_6 } = arg0);
-  return identity /* identity */.createWithEqualityFn((arg0, arg1) => {
+  return identity.createWithEqualityFn((arg0, arg1) => {
     let closure_0 = arg0;
     let closure_1 = arg1;
     function runPatchOrderLineItems() {
@@ -556,6 +556,6 @@ export const createNativeStore = function createNativeStore(arg0) {
     };
     obj[12] = _runRecreateOrder;
     return obj;
-  }, isIterable /* isIterable */.shallow);
+  }, isIterable.shallow);
 };
 export const NativeCheckoutStoreContext = importDefaultResultResult[0];

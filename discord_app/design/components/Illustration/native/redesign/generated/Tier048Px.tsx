@@ -9,7 +9,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/Tier048Px.tsx");
 
 export const getTier048PxSource = function getTier048PxSource(theme) {
-  let obj = getIllustrationSource /* getIllustrationSource */;
+  let obj = getIllustrationSource;
   obj = {
     dark() {
       return callback(12685);
@@ -24,7 +24,7 @@ export const getTier048PxSource = function getTier048PxSource(theme) {
   return obj.getIllustrationSource(theme, obj);
 };
 export const useTier048PxSource = function useTier048PxSource() {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
       return callback(12685);
@@ -36,10 +36,10 @@ export const useTier048PxSource = function useTier048PxSource() {
       return callback(12687);
     }
   };
-  return getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const Tier048Px = function Tier048Px(arg0) {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
       return callback(12685);
@@ -52,7 +52,7 @@ export const Tier048Px = function Tier048Px(arg0) {
     }
   };
   obj = {};
-  const illustrationSource = getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

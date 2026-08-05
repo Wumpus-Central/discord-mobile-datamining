@@ -9,12 +9,12 @@ import { useParentalControlledExplicitContentSettings } from "../../../parent_to
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.XuADY2);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.XuADY2);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToImproveDiscordSettingValue() {
-    return useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useParentalControlledConsent(Consents.USAGE_STATISTICS).hasConsented;
+    return useParentalControlledExplicitContentSettings.useParentalControlledConsent(Consents.USAGE_STATISTICS).hasConsented;
   },
   onValueChange: function handleUsageStatisticsChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();

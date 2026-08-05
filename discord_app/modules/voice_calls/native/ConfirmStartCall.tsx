@@ -10,29 +10,29 @@ let obj1;
 const require = arg1;
 function ConfirmStartCall(onConfirm) {
   let obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.HlAPoq);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["cRW4D/"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.HlAPoq);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t["cRW4D/"]);
   obj = { children: null };
   obj = { variant: "active", text: null, onPress: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.rimG2R);
+  const intl3 = getSystemLocale.intl;
+  obj[1] = intl3.string(getSystemLocale.t.rimG2R);
   obj[2] = onConfirm.onConfirm;
-  const items = [callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
   const obj1 = { variant: "secondary", text: null };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[1] = intl4.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
-  items[1] = callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj1, "cancel");
+  const intl4 = getSystemLocale.intl;
+  obj1[1] = intl4.string(getSystemLocale.t["ETE/oC"]);
+  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "cancel");
   obj[0] = items;
-  obj[2] = callback2(getAlertModalItemKey /* getAlertModalItemKey */.AlertActions, obj);
-  return callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, obj);
+  obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
+  return callback(getAlertModalItemKey.AlertModal, obj);
 }
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 const result = require("getAlertModalItemKey").fileFinishedImporting("modules/voice_calls/native/ConfirmStartCall.tsx");
 
 export const confirmStartCall = function confirmStartCall(fn) {
-  let obj = useAlertStore /* useAlertStore */;
+  let obj = useAlertStore;
   obj = { onConfirm: fn };
   obj.openAlert("start-voice-call", callback(ConfirmStartCall, obj));
 };

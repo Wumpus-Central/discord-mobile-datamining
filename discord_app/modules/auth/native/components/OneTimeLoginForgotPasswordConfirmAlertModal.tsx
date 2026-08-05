@@ -9,15 +9,15 @@ const result = require("getAlertModalItemKey").fileFinishedImporting("modules/au
 
 export default function OneTimeLoginForgotPasswordConfirmAlertModal() {
   let obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["6Ecyts"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.iAcrqV);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["6Ecyts"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.iAcrqV);
   obj = { children: null };
   obj = { text: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.BddRzS);
-  obj[0] = jsx(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, { text: null }, "okay");
-  obj[2] = jsx(getAlertModalItemKey /* getAlertModalItemKey */.AlertActions, { text: null });
-  return jsx(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, { text: null });
+  const intl3 = getSystemLocale.intl;
+  obj[0] = intl3.string(getSystemLocale.t.BddRzS);
+  obj[0] = jsx(getAlertModalItemKey.AlertActionButton, { text: null }, "okay");
+  obj[2] = jsx(getAlertModalItemKey.AlertActions, { text: null });
+  return jsx(getAlertModalItemKey.AlertModal, { text: null });
 };

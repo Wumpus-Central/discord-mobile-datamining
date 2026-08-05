@@ -317,94 +317,94 @@ hexToRgbaString.__initData = { code: "function hexToRgbaString_ColorUtilsTsx2(he
 let obj = {};
 obj = {
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.fBawRj);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.fBawRj);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.hvv3QR);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.hvv3QR);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.JwX6Jd);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.JwX6Jd);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.H3xljj);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.H3xljj);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.X9izyR);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.X9izyR);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Kw7K2z);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Kw7K2z);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.z5AZKW);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.z5AZKW);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.JqBqKz);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.JqBqKz);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.edPgnK);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.edPgnK);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.ti7gsS);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.ti7gsS);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["H9jz+S"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["H9jz+S"]);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.UmsfHL);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.UmsfHL);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.GoDlAC);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.GoDlAC);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["9GpDYK"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["9GpDYK"]);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.lwrNQG);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.lwrNQG);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Lf10GG);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Lf10GG);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["H+AjY7"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["H+AjY7"]);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.XTkdex);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.XTkdex);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Ve0Lip);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Ve0Lip);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.BwbOAO);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.BwbOAO);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["/po5rJ"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/po5rJ"]);
   }
 };
 const merged = Object.assign(obj);
 obj["#5865f2"] = () => {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t["Cn/LJ4"]);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t["Cn/LJ4"]);
 };
 let result = require("getSystemLocale").fileFinishedImporting("utils/ColorUtils.tsx");
 
@@ -457,10 +457,10 @@ export { hslToHex };
 export const hexToColorName = function hexToColorName(tmp2Result, arg1) {
   if (null == obj[tmp2Result]) {
     if (arg1) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
+      const intl = getSystemLocale.intl;
       obj = { color: null };
       obj[0] = tmp2Result;
-      let str4 = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["7BFCRR"], obj);
+      let str4 = intl.formatToPlainString(getSystemLocale.t["7BFCRR"], obj);
     } else {
       obj = new timestamp("ColorUtils");
       const _HermesInternal = HermesInternal;

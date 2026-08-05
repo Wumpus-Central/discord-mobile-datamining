@@ -40,13 +40,13 @@ export default function MemberVerificationAlert(arg0) {
   }
   const items = [tmp7, , , ];
   obj = { style: tmp2.header, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: header };
-  items[1] = callback(Text /* Text */.Heading, obj);
+  items[1] = callback(Text.Heading, obj);
   let tmp10Result = null;
   if (null != subtitle) {
     const obj1 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj1[0] = tmp2.subtitle;
     obj1[3] = subtitle;
-    tmp10Result = tmp10(Text /* Text */.Text, obj1);
+    tmp10Result = tmp10(Text.Text, obj1);
   }
   items[2] = tmp10Result;
   items[3] = callback(View, { style: tmp2.buttons, children: buttons });

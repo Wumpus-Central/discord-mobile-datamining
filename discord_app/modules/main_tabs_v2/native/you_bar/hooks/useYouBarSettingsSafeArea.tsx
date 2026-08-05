@@ -6,7 +6,7 @@ const result = require("PlatformTypes").fileFinishedImporting("modules/main_tabs
 
 export const useYouBarSettingsCustomHeaderPaddingTop = function useYouBarSettingsCustomHeaderPaddingTop() {
   const tmp = useIsWindowLarge();
-  const obj = PlatformTypes /* PlatformTypes */;
+  const obj = PlatformTypes;
   let num = 16;
   if (!tmp2) {
     num = useSafeAreaInsets().top;
@@ -15,6 +15,6 @@ export const useYouBarSettingsCustomHeaderPaddingTop = function useYouBarSetting
 };
 export const useYouBarSettingsOutsideSafeAreaTop = function useYouBarSettingsOutsideSafeAreaTop() {
   const tmp = useIsWindowLarge();
-  const obj = PlatformTypes /* PlatformTypes */;
-  return PlatformTypes /* PlatformTypes */.isIOS() || tmp;
+  const obj = PlatformTypes;
+  return PlatformTypes.isIOS() || tmp;
 };

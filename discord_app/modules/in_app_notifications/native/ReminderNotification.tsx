@@ -31,13 +31,13 @@ function NotificationAvatar(arg0) {
   const tmp = callback3();
   let obj = { style: tmp.avatarContainer, children: null };
   obj = { user, guildId, size: null, cutout: null };
-  obj[2] = Button /* Button */.AvatarSizes.NORMAL;
+  obj[2] = Button.AvatarSizes.NORMAL;
   obj[3] = obj;
-  const items = [callback(Button /* Button */.Avatar, obj), ];
+  const items = [callback(Button.Avatar, obj), ];
   obj = { style: tmp.cutoutIconContainer, children: null };
   const obj1 = { size: "xs", color: null };
   obj1[1] = Themes.colors.ICON_SUBTLE;
-  obj[1] = callback(ClockIcon /* ClockIcon */.ClockIcon, obj1);
+  obj[1] = callback(ClockIcon.ClockIcon, obj1);
   items[1] = callback(View, obj);
   obj[1] = items;
   return callback2(View, obj);
@@ -93,14 +93,14 @@ let closure_13 = createCacheKey.createStyles({ cutoutIconContainer: { position: 
 let obj = { direction: require("Button").CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
 let closure_16 = importAllResult.memo((message) => {
   message = message.message;
-  let obj = extractMetadataFromNotification /* extractMetadataFromNotification */;
+  let obj = extractMetadataFromNotification;
   let tmp4 = null;
   if (obj.useHasPreviewableMedia(message)) {
     obj = { style: null, children: null };
     obj[0] = tmp.rightAccessoryContainer;
     obj = { message: null };
     obj[0] = message;
-    obj[1] = callback(VideoBadge /* VideoBadge */.MediaPreviewRightAccessory, obj);
+    obj[1] = callback(VideoBadge.MediaPreviewRightAccessory, obj);
     tmp4 = callback(View, obj);
   }
   return tmp4;

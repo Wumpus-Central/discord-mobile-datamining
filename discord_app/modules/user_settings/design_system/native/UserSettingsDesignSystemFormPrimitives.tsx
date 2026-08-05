@@ -24,11 +24,11 @@ let metroImportAll;
 const require = arg1;
 function Radio() {
   let obj = { children: null };
-  const items = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Radio" }), callback2(Text /* Text */.Text, { variant: "text-md/normal", children: "Select a single option from a short list of multiple options" }), ];
+  const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Radio" }), callback2(Text.Text, { variant: "text-md/normal", children: "Select a single option from a short list of multiple options" }), ];
   obj = { title: "Role Colors", hasIcons: false, defaultValue: "color-in-names", onChange: NOOP, children: null };
-  const items1 = [callback2(TableRadioRow /* TableRadioRow */.TableRadioRow, { label: "Show role colors in names", value: "color-in-names" }), callback2(TableRadioRow /* TableRadioRow */.TableRadioRow, { label: "Show role colors next to names", value: "color-next-to-names" }), callback2(TableRadioRow /* TableRadioRow */.TableRadioRow, { label: "Don't show role colors", value: "no-color" }), callback2(TableRadioRow /* TableRadioRow */.TableRadioRow, { label: "Disabled Item", subLabel: "This should not be selectable", value: "option4", disabled: true })];
+  const items1 = [callback2(TableRadioRow.TableRadioRow, { label: "Show role colors in names", value: "color-in-names" }), callback2(TableRadioRow.TableRadioRow, { label: "Show role colors next to names", value: "color-next-to-names" }), callback2(TableRadioRow.TableRadioRow, { label: "Don't show role colors", value: "no-color" }), callback2(TableRadioRow.TableRadioRow, { label: "Disabled Item", subLabel: "This should not be selectable", value: "option4", disabled: true })];
   obj[4] = items1;
-  items[2] = callback3(context /* context */.TableRadioGroup, obj);
+  items[2] = callback3(context.TableRadioGroup, obj);
   obj[0] = items;
   return callback3(closure_8, obj);
 }
@@ -114,31 +114,31 @@ function InlineCheckbox(startChecked) {
 }
 function InlineCheckboxDemo() {
   const obj = { children: null };
-  const items = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Inline Checkbox" }), callback2(InlineCheckbox, { label: "Checkbox label", description: "This is a description", startChecked: true }), callback2(InlineCheckbox, { label: "Trust google.com links from now on" }), callback2(InlineCheckbox, { label: "I agree to the Terms of Service", required: true })];
+  const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Inline Checkbox" }), callback2(InlineCheckbox, { label: "Checkbox label", description: "This is a description", startChecked: true }), callback2(InlineCheckbox, { label: "Trust google.com links from now on" }), callback2(InlineCheckbox, { label: "I agree to the Terms of Service", required: true })];
   obj[0] = items;
   return callback3(closure_8, obj);
 }
 function CheckboxRowDemo() {
   let obj = { children: null };
-  const items = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Checkbox" }), callback2(Text /* Text */.Text, { variant: "text-md/normal", children: "Select one or more options from a short list of options" }), ];
+  const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Checkbox" }), callback2(Text.Text, { variant: "text-md/normal", children: "Select one or more options from a short list of options" }), ];
   obj = { title: "Who can send you a friend request?", hasIcons: false, children: null };
   obj = { label: "Everyone", subLabel: "Anyone can send you a friend request", checked: false, onPress: NOOP };
-  const items1 = [callback2(TableCheckboxRow /* TableCheckboxRow */.TableCheckboxRow, obj), callback2(TableCheckboxRow /* TableCheckboxRow */.TableCheckboxRow, { label: "Friends of Friends", subLabel: "Anyone who is friends with your friends can send you a friend request", checked: true, onPress: NOOP }), callback2(TableCheckboxRow /* TableCheckboxRow */.TableCheckboxRow, { label: "Server Members", subLabel: "Anyone who is in a server with you can send you a friend request", checked: true, onPress: NOOP })];
+  const items1 = [callback2(TableCheckboxRow.TableCheckboxRow, obj), callback2(TableCheckboxRow.TableCheckboxRow, { label: "Friends of Friends", subLabel: "Anyone who is friends with your friends can send you a friend request", checked: true, onPress: NOOP }), callback2(TableCheckboxRow.TableCheckboxRow, { label: "Server Members", subLabel: "Anyone who is in a server with you can send you a friend request", checked: true, onPress: NOOP })];
   obj[2] = items1;
-  items[2] = callback3(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  items[2] = callback3(TableRowGroupTitle.TableRowGroup, obj);
   obj[0] = items;
   return callback3(closure_8, obj);
 }
 function SliderDemo() {
   let obj = { children: null };
-  const items = [callback2(Text /* Text */.Text, { variant: "heading-lg/bold", children: "Slider" }), ];
+  const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Slider" }), ];
   obj = { start: true, end: true, label: "Volume", subLabel: null };
   obj = { startIcon: null, endIcon: null, onValueChange: null };
-  obj[0] = callback2(VoiceXIcon /* VoiceXIcon */.VoiceXIcon, {});
-  obj[1] = callback2(VoiceNormalIcon /* VoiceNormalIcon */.VoiceNormalIcon, {});
+  obj[0] = callback2(VoiceXIcon.VoiceXIcon, {});
+  obj[1] = callback2(VoiceNormalIcon.VoiceNormalIcon, {});
   obj[2] = NOOP;
-  obj[3] = callback2(Slider /* Slider */.Slider, obj);
-  items[1] = callback2(TableRowInner /* TableRowInner */.TableRow, obj);
+  obj[3] = callback2(Slider.Slider, obj);
+  items[1] = callback2(TableRowInner.TableRow, obj);
   obj[0] = items;
   return callback3(closure_8, obj);
 }
@@ -151,6 +151,6 @@ export default function UserSettingsDesignSystemFormPrimitives() {
   obj = { spacing: 24, style: callback4().container, children: null };
   const items = [callback2(Radio, {}), callback2(Switch, {}), callback2(CheckboxRowDemo, {}), callback2(InlineCheckboxDemo, {}), callback2(SliderDemo, {})];
   obj[2] = items;
-  obj[0] = callback3(Stack /* Stack */.Stack, obj);
+  obj[0] = callback3(Stack.Stack, obj);
   return callback2(ScrollView, obj);
 };

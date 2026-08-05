@@ -18,7 +18,7 @@ function handleGatewayJoinRequestUpdate(arg0) {
         return false;
       }
     }
-    obj = isActionedApplicationStatus /* isActionedApplicationStatus */;
+    obj = isActionedApplicationStatus;
     if (obj.isApprovedAndAcked(obj)) {
       delete tmp[tmp2];
       if (c3 === guildId) {
@@ -56,8 +56,8 @@ prototype["computeGuildIds"] = function computeGuildIds() {
 prototype["getJoinRequestGuild"] = function getJoinRequestGuild(guildId) {
   let fromGuildBasicResult = null;
   if (null != dependencyMap[guildId]) {
-    fromGuildBasicResult = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */.fromGuildBasic(dependencyMap[guildId]);
-    const obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
+    fromGuildBasicResult = fromGuildPropertiesWithAdditionalFields.fromGuildBasic(dependencyMap[guildId]);
+    const obj = fromGuildPropertiesWithAdditionalFields;
   }
   return fromGuildBasicResult;
 };
@@ -109,7 +109,7 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(require("dispatc
       } else {
         tmp8[guildId] = obj;
       }
-      obj2 = isActionedApplicationStatus /* isActionedApplicationStatus */;
+      obj2 = isActionedApplicationStatus;
     } else {
       delete tmp3[tmp2];
       if (c3 === guildId) {

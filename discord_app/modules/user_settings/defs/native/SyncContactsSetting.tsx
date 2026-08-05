@@ -10,14 +10,14 @@ import { _uploadContacts } from "../../../contact_sync/native/ContactSyncUtils.t
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.uSvEy7);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.uSvEy7);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useContactSyncSettingValue() {
-    const contactSyncAccount = _uploadContacts /* _uploadContacts */.useContactSyncAccount();
-    const obj = _uploadContacts /* _uploadContacts */;
-    return _uploadContacts /* _uploadContacts */.isContactSyncEnabled(contactSyncAccount);
+    const contactSyncAccount = _uploadContacts.useContactSyncAccount();
+    const obj = _uploadContacts;
+    return _uploadContacts.isContactSyncEnabled(contactSyncAccount);
   },
   onValueChange: function onContactSyncSettingValueChange(arg0) {
     localAccount = localAccount.getLocalAccount(PlatformTypes.CONTACTS);
@@ -26,7 +26,7 @@ createToggle = {
     if (currentUser != null) {
       phone = currentUser.phone;
     }
-    syncContacts /* syncContacts */.handleSyncContacts(localAccount, phone, arg0);
+    syncContacts.handleSyncContacts(localAccount, phone, arg0);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

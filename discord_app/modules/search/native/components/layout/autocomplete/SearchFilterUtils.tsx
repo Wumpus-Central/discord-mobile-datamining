@@ -23,35 +23,35 @@ let result = require("ME").fileFinishedImporting("modules/search/native/componen
 
 export const getSearchTokenLabel = function getSearchTokenLabel(closure_0, searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
-    const intl9 = getSystemLocale /* getSystemLocale */.intl;
-    return intl9.string(getSystemLocale /* getSystemLocale */.t["6iuVMn"]);
+    const intl9 = getSystemLocale.intl;
+    return intl9.string(getSystemLocale.t["6iuVMn"]);
   } else if (tmp.FILTER_HAS === searchTokenType) {
-    const intl8 = getSystemLocale /* getSystemLocale */.intl;
-    return intl8.string(getSystemLocale /* getSystemLocale */.t.DMAzx8);
+    const intl8 = getSystemLocale.intl;
+    return intl8.string(getSystemLocale.t.DMAzx8);
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
-    return intl7.string(getSystemLocale /* getSystemLocale */.t.CMKzQx);
+    const intl7 = getSystemLocale.intl;
+    return intl7.string(getSystemLocale.t.CMKzQx);
   } else if (tmp.FILTER_IN === searchTokenType) {
     if (closure_0.type === constants2.DMS) {
-      const intl6 = getSystemLocale /* getSystemLocale */.intl;
-      let stringResult = intl6.string(getSystemLocale /* getSystemLocale */.t["8Fmo42"]);
+      const intl6 = getSystemLocale.intl;
+      let stringResult = intl6.string(getSystemLocale.t["8Fmo42"]);
     } else {
-      const intl5 = getSystemLocale /* getSystemLocale */.intl;
-      stringResult = intl5.string(getSystemLocale /* getSystemLocale */.t.cdPmq8);
+      const intl5 = getSystemLocale.intl;
+      stringResult = intl5.string(getSystemLocale.t.cdPmq8);
     }
     return stringResult;
   } else if (tmp.FILTER_ON === searchTokenType) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t.h4qGfp);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.h4qGfp);
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.c9qSBR);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.c9qSBR);
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.hcMwDW);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.hcMwDW);
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.C4r6xL);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.C4r6xL);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -61,29 +61,29 @@ export const getSearchTokenLabel = function getSearchTokenLabel(closure_0, searc
 };
 export const getSearchTokenSubLabel = function getSearchTokenSubLabel(searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
-    const intl8 = getSystemLocale /* getSystemLocale */.intl;
-    return intl8.string(getSystemLocale /* getSystemLocale */.t.kkGlww);
+    const intl8 = getSystemLocale.intl;
+    return intl8.string(getSystemLocale.t.kkGlww);
   } else if (tmp.FILTER_HAS === searchTokenType) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
-    return intl7.string(getSystemLocale /* getSystemLocale */.t.gUfZa2);
+    const intl7 = getSystemLocale.intl;
+    return intl7.string(getSystemLocale.t.gUfZa2);
   } else if (tmp.FILTER_IN === searchTokenType) {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
-    return intl6.string(getSystemLocale /* getSystemLocale */.t.qDUdlT);
+    const intl6 = getSystemLocale.intl;
+    return intl6.string(getSystemLocale.t.qDUdlT);
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    return intl5.string(getSystemLocale /* getSystemLocale */.t.ILtwK5);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t.ILtwK5);
   } else if (tmp.FILTER_ON === searchTokenType) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t.t8bWvr);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.t8bWvr);
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.YEN3uU);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.YEN3uU);
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.hwbB7s);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.hwbB7s);
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.tJPdhZ);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.tJPdhZ);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -93,21 +93,21 @@ export const getSearchTokenSubLabel = function getSearchTokenSubLabel(searchToke
 };
 export const getSearchTokenIcon = function getSearchTokenIcon(searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
-    return UserIcon /* UserIcon */.UserIcon;
+    return UserIcon.UserIcon;
   } else if (tmp.FILTER_HAS === searchTokenType) {
-    return AttachmentIcon /* AttachmentIcon */.AttachmentIcon;
+    return AttachmentIcon.AttachmentIcon;
   } else if (tmp.FILTER_IN === searchTokenType) {
-    return ChannelListMagnifyingGlassIcon /* ChannelListMagnifyingGlassIcon */.ChannelListMagnifyingGlassIcon;
+    return ChannelListMagnifyingGlassIcon.ChannelListMagnifyingGlassIcon;
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    return AtIcon /* AtIcon */.AtIcon;
+    return AtIcon.AtIcon;
   } else if (tmp.FILTER_ON === searchTokenType) {
-    return CalendarIcon /* CalendarIcon */.CalendarIcon;
+    return CalendarIcon.CalendarIcon;
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    return CalendarMinusIcon /* CalendarMinusIcon */.CalendarMinusIcon;
+    return CalendarMinusIcon.CalendarMinusIcon;
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    return CalendarPlusIcon /* CalendarPlusIcon */.CalendarPlusIcon;
+    return CalendarPlusIcon.CalendarPlusIcon;
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    return RobotIcon /* RobotIcon */.RobotIcon;
+    return RobotIcon.RobotIcon;
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;

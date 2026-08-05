@@ -8,13 +8,13 @@ import { useSafetyAlertsSettingOrDefault } from "useSafetyAlertsSettingOrDefault
 const result = require("useSafetyAlertsSettingOrDefault").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx");
 
 export const useInappropriateConversationBannerForChannel = function useInappropriateConversationBannerForChannel(channelId, LOCATION_CONTEXT_MOBILE) {
-  let obj = InappropriateConversationExperiment /* InappropriateConversationExperiment */;
+  let obj = InappropriateConversationExperiment;
   obj = { location: LOCATION_CONTEXT_MOBILE };
   const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning(obj);
-  const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault /* useSafetyAlertsSettingOrDefault */.useSafetyAlertsSettingOrDefault();
-  const obj3 = useSafetyAlertsSettingOrDefault /* useSafetyAlertsSettingOrDefault */;
-  const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel /* useInappropriateConversationWarningsForChannel */.useInappropriateConversationWarningsForChannel(channelId);
-  useChannelSafetyWarning /* useChannelSafetyWarning */;
+  const safetyAlertsSettingOrDefault = useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault();
+  const obj3 = useSafetyAlertsSettingOrDefault;
+  const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId);
+  useChannelSafetyWarning;
   if (isEligibleForInappropriateConversationWarning) {
     if (safetyAlertsSettingOrDefault) {
       if (0 !== inappropriateConversationWarningsForChannel.length) {

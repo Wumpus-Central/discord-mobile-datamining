@@ -21,18 +21,18 @@ export const XboxTwoWayLinkUpsell = function XboxTwoWayLinkUpsell() {
   let obj = combined;
   const articleURL = obj.getArticleURL(constants.XBOX_CONNECTION);
   obj = { title: null, body: null, img: null, newIndicatorDismissibleContent: null, onPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["2okkZV"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.format(getSystemLocale /* getSystemLocale */.t.OnERSS, { help_article: articleURL });
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["2okkZV"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.format(getSystemLocale.t.OnERSS, { help_article: articleURL });
   obj = { style: callback().upsellImage, source: null, resizeMode: "contain" };
   const tmp = callback();
   obj[1] = registerAsset;
   obj[2] = jsx(preload, { style: callback().upsellImage, source: null, resizeMode: "contain" });
-  obj[3] = DismissibleContent /* DismissibleContent */.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
+  obj[3] = DismissibleContent.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
   obj[4] = function onPress() {
     const items = [constants.RELINK_UPSELL];
     return callback(table[10]).showModal(items);
   };
-  return jsx(OneWayToTwoWayNewTag /* OneWayToTwoWayNewTag */.OneWayToTwoWayLinkUpsell, { style: callback().upsellImage, source: null, resizeMode: "contain" });
+  return jsx(OneWayToTwoWayNewTag.OneWayToTwoWayLinkUpsell, { style: callback().upsellImage, source: null, resizeMode: "contain" });
 };

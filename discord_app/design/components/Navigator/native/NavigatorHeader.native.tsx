@@ -93,7 +93,7 @@ function HeaderTextButton(text) {
     tmp5 = text;
   }
   obj.accessibilityLabel = tmp5;
-  return closure_6(Background /* Background */.HeaderBackButton, obj);
+  return closure_6(Background.HeaderBackButton, obj);
 }
 ({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -125,7 +125,7 @@ export const NavigatorHeader = function NavigatorHeader(subtitle) {
   const tmp = createCacheKey();
   let obj = { style: tmp.navigatorHeaderContainer, children: null };
   obj = { style: tmp.navigatorHeaderTitleContainer, children: null };
-  const items = [icon, callback(Text /* Text */.Text, { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: title })];
+  const items = [icon, callback(Text.Text, { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: title })];
   obj[1] = items;
   const items1 = [callback2(closure_4, obj), , ];
   let tmp6Result = null != subtitle;
@@ -136,7 +136,7 @@ export const NavigatorHeader = function NavigatorHeader(subtitle) {
     obj = { lineClamp: 1, style: null, variant: "text-xs/medium", color: "text-muted", children: null };
     obj[1] = tmp.navigatorHeaderSubtitle;
     obj[4] = subtitle;
-    tmp6Result = callback(Text /* Text */.Text, obj);
+    tmp6Result = callback(Text.Text, obj);
   }
   items1[1] = tmp6Result;
   items1[2] = useHeaderDebugOverlay("js-stack");
@@ -287,7 +287,7 @@ export const FauxHeader = function FauxHeader(arg0) {
   const top = useSafeAreaInsets().top;
   let obj = { style: null, children: null };
   const items = [createCacheKey().fauxHeaderWrapper, , ];
-  obj = { paddingTop: top, height: top + NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT };
+  obj = { paddingTop: top, height: top + NAV_BAR_HEIGHT.NAV_BAR_HEIGHT };
   items[1] = obj;
   items[2] = style;
   obj[0] = items;

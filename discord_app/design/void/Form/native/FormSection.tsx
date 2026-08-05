@@ -58,7 +58,7 @@ export default function FormSection(arg0) {
   ({ titleViewStyle, titleTextStyle, sectionBodyStyle, wrapperStyle } = arg0);
   const tmp2 = createCacheKey();
   let obj = React;
-  if (React.useContext(context /* context */.RedesignCompatContext)) {
+  if (React.useContext(context.RedesignCompatContext)) {
     const Children = obj.Children;
     const toArrayResult = Children.toArray(children);
     const found = toArrayResult.filter((type) => {

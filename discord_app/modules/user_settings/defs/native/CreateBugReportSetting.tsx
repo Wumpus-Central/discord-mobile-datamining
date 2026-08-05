@@ -9,13 +9,13 @@ import { showNotification } from "../../../bug_reporter/native/BugReportManager.
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.aIkGJD);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.aIkGJD);
   },
   parent: null,
   IconComponent: require("WrenchIcon").WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
-    const setDeveloperOptionSettings = setDeveloperOptionSettings /* setDeveloperOptionSettings */.setDeveloperOptionSettings;
+    const setDeveloperOptionSettings = setDeveloperOptionSettings.setDeveloperOptionSettings;
     if (arg0) {
       const result = setDeveloperOptionSettings({ bugReporterEnabled: true });
       showNotification.initialize();
@@ -28,7 +28,7 @@ createToggle = {
   },
   useValue: function useCreateBugReportSettingToggleValue() {
     const items = [refreshSourceMapCookie];
-    return initialize /* initialize */.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
+    return initialize.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
   },
   useDescription: function useCreateBugReportSettingDescription() {
     return "Photo permission is required";

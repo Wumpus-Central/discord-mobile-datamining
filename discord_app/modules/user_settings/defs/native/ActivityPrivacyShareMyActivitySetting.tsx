@@ -5,11 +5,11 @@ import { messagesProxy } from "../../../activity_privacy/ActivityPrivacy.message
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.WhdCGP);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.UQ9RHJ);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
@@ -18,11 +18,11 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.WhdCGP);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.UQ9RHJ);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,

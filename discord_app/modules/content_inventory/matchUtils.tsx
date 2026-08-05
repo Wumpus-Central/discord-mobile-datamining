@@ -59,7 +59,7 @@ export const isSpotifyEntry = function isSpotifyEntry(extra) {
   return isTopArtistEntryResult;
 };
 export const isCrunchyrollEntry = function isCrunchyrollEntry(extra) {
-  let isWatchedMediaEntryResult = isPlayedGameEntry /* isPlayedGameEntry */.isWatchedMediaEntry(extra);
+  let isWatchedMediaEntryResult = isPlayedGameEntry.isWatchedMediaEntry(extra);
   if (isWatchedMediaEntryResult) {
     isWatchedMediaEntryResult = extra.extra.application_id === CRUNCHYROLL_CLIENT_ID;
   }
@@ -87,12 +87,12 @@ export const isMatchingWatchActivity = function isMatchingWatchActivity(closure_
   const tmp2 = isCrunchyrollActivity(details);
   let tmp3 = !tmp2;
   if (tmp2) {
-    let isWatchedMediaEntryResult = isPlayedGameEntry /* isPlayedGameEntry */.isWatchedMediaEntry(closure_0);
+    let isWatchedMediaEntryResult = isPlayedGameEntry.isWatchedMediaEntry(closure_0);
     if (isWatchedMediaEntryResult) {
       isWatchedMediaEntryResult = closure_0.extra.application_id === CRUNCHYROLL_CLIENT_ID;
     }
     tmp3 = !isWatchedMediaEntryResult;
-    const obj = isPlayedGameEntry /* isPlayedGameEntry */;
+    const obj = isPlayedGameEntry;
   }
   let tmp7 = !tmp3;
   if (!tmp3) {

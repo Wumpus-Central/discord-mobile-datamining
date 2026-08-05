@@ -31,9 +31,9 @@ prototype["update"] = function update(current) {
     const history = self.history;
     const obj = { state: null, startTime: null };
     obj[0] = current;
-    obj[1] = sleep /* sleep */.now();
+    obj[1] = sleep.now();
     history.push(obj);
-    const obj2 = sleep /* sleep */;
+    const obj2 = sleep;
   }
 };
 prototype["getVoiceConnectionSuccessStats"] = function getVoiceConnectionSuccessStats(nowResult) {

@@ -26,17 +26,17 @@ export default function GuildProfileEmptyState() {
   obj = { style: tmp.image };
   const items = [callback2(closure_5, obj), , , , ];
   let obj1 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t.Z1OZCV);
-  items[1] = callback2(Text /* Text */.Text, obj1);
+  const intl = getSystemLocale.intl;
+  obj1[3] = intl.string(getSystemLocale.t.Z1OZCV);
+  items[1] = callback2(Text.Text, obj1);
   const obj2 = { style: tmp.header, variant: "text-sm/normal", color: "text-default", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.UEmBq7);
-  items[2] = callback2(Text /* Text */.Text, obj2);
+  const intl2 = getSystemLocale.intl;
+  obj2[3] = intl2.string(getSystemLocale.t.UEmBq7);
+  items[2] = callback2(Text.Text, obj2);
   const obj3 = { style: tmp.createButton, children: null };
   const obj4 = { text: null, onPress: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[0] = intl3.string(getSystemLocale /* getSystemLocale */.t["6dIB4R"]);
+  const intl3 = getSystemLocale.intl;
+  obj4[0] = intl3.string(getSystemLocale.t["6dIB4R"]);
   obj4[1] = callback(function*() {
     if (v0 === 2) {
       v0 = 3;
@@ -89,11 +89,11 @@ export default function GuildProfileEmptyState() {
       }
     }
   });
-  obj3[1] = callback2(Button /* Button */.Button, obj4);
+  obj3[1] = callback2(Button.Button, obj4);
   items[3] = callback2(closure_5, obj3);
   const obj5 = { text: null, variant: "secondary", onPress: null };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj5[0] = intl4.string(getSystemLocale /* getSystemLocale */.t.yRjK4p);
+  const intl4 = getSystemLocale.intl;
+  obj5[0] = intl4.string(getSystemLocale.t.yRjK4p);
   obj5[2] = callback(function*() {
     if (v0 === 2) {
       v0 = 3;
@@ -146,7 +146,7 @@ export default function GuildProfileEmptyState() {
       }
     }
   });
-  items[4] = callback2(Button /* Button */.Button, obj5);
+  items[4] = callback2(Button.Button, obj5);
   obj[1] = items;
   return callback3(closure_4, obj);
 };

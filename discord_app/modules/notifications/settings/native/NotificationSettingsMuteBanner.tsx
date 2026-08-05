@@ -23,14 +23,14 @@ export const NotificationSettingsMuteBanner = function NotificationSettingsMuteB
   obj[0] = items;
   obj = { style: { flex: 1, marginRight: 8 }, children: null };
   obj = { variant: "text-md/semibold", color: "text-overlay-light", children: children.title };
-  const items1 = [callback(Text /* Text */.Text, obj), callback(Text /* Text */.Text, { variant: "text-xs/medium", color: "text-overlay-light", children: children.subtitle })];
+  const items1 = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-xs/medium", color: "text-overlay-light", children: children.subtitle })];
   obj[1] = items1;
   const items2 = [callback2(View, obj), ];
   const obj2 = { text: null, onPress: null, variant: "primary-overlay" };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj2[0] = intl.string(getSystemLocale /* getSystemLocale */.t.YqAjXy);
+  const intl = getSystemLocale.intl;
+  obj2[0] = intl.string(getSystemLocale.t.YqAjXy);
   obj2[1] = children.onPressUnmute;
-  items2[1] = callback(Button /* Button */.Button, obj2);
+  items2[1] = callback(Button.Button, obj2);
   obj[1] = items2;
   return callback2(View, obj);
 };
@@ -40,15 +40,15 @@ export const getMuteBannerSubtitleFromConfig = function getMuteBannerSubtitleFro
     end_time = config.end_time;
   }
   if (null == end_time) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["tFqP/P"]);
+    const intl = getSystemLocale.intl;
+    let stringResult = intl.string(getSystemLocale.t["tFqP/P"]);
   } else {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj = { endTime: null };
     const _Date = Date;
     const date = new Date(config.end_time);
-    obj[0] = date.toLocaleString(getSystemLocale /* getSystemLocale */.intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
-    stringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.C7m4oh, obj);
+    obj[0] = date.toLocaleString(getSystemLocale.intl.currentLocale, { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" });
+    stringResult = intl2.formatToPlainString(getSystemLocale.t.C7m4oh, obj);
   }
   return stringResult;
 };

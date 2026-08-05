@@ -63,11 +63,11 @@ const prototype = TransitionGroup.prototype;
 TransitionGroup["getDerivedStateFromProps"] = function getDerivedStateFromProps(children) {
   let firstRender;
   ({ children, firstRender } = arg1);
-  const childMapping = getChildMapping /* getChildMapping */.getChildMapping(children.children);
+  const childMapping = getChildMapping.getChildMapping(children.children);
   children = childMapping;
   if (!firstRender) {
-    children = getChildMapping /* getChildMapping */.mergeChildMappings(children, childMapping);
-    const tmpResult = getChildMapping /* getChildMapping */;
+    children = getChildMapping.mergeChildMappings(children, childMapping);
+    const tmpResult = getChildMapping;
   }
   return { children, firstRender: false };
 };
@@ -107,7 +107,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
       const item1 = _keysToLeave.forEach(self.performLeave, self);
     }
   }
-  let obj = getChildMapping /* getChildMapping */;
+  let obj = getChildMapping;
   const childMapping = obj.getChildMapping(self.props.children);
   children = children2.children;
   if (self.props.transitionEnter) {
@@ -122,7 +122,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
     const items = [];
     _enqueueTransitions(children, childMapping, items);
     let num4 = 0;
-    const tmp3Result = getChildMapping /* getChildMapping */;
+    const tmp3Result = getChildMapping;
     if (0 < items.length) {
       do {
         let tmp9 = items[num4];
@@ -138,7 +138,7 @@ prototype["componentDidUpdate"] = function componentDidUpdate(children, children
     if (self._keysToLeave.length > 0) {
       self._keysToLeave = [];
     }
-    mergeChildMappingsResult = getChildMapping /* getChildMapping */.mergeChildMappings(children, childMapping);
+    mergeChildMappingsResult = getChildMapping.mergeChildMappings(children, childMapping);
   }
 };
 prototype["_enqueueTransitions"] = function _enqueueTransitions(children, childMapping, _keysToEnter) {

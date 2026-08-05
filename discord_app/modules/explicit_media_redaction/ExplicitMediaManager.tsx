@@ -32,7 +32,7 @@ function maybeCancelTimeout(message, UPDATE) {
       const combined = "" + message.channel_id + ":" + message.id;
       if (null != dependencyMap[combined]) {
         ({ timeout, setAt } = dependencyMap[combined]);
-        if (UPDATE === redactionSettingToRenderedString /* redactionSettingToRenderedString */.TimeoutCancelSource.UPDATE) {
+        if (UPDATE === redactionSettingToRenderedString.TimeoutCancelSource.UPDATE) {
           let attachments = message.attachments;
           if (attachments == null) {
             attachments = [];
@@ -430,7 +430,7 @@ function handleMessageUpdate(message) {
         }
         return tmp18;
       }
-      obj6 = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
+      obj6 = getEligibleHarmTypesConfigsForContext;
     }
   }
   return false;
@@ -478,7 +478,7 @@ function handleMessageCreate(optimistic) {
           }
           return tmp3Result;
         }
-        obj2 = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
+        obj2 = getEligibleHarmTypesConfigsForContext;
       }
     }
   }

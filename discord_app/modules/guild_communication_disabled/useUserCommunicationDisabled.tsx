@@ -83,6 +83,6 @@ export const userCommunicationDisabled = function userCommunicationDisabled(id, 
   if (prop == null) {
     prop = null;
   }
-  const items = [prop, isCommunicationDisabled /* isCommunicationDisabled */.isMemberCommunicationDisabled(member)];
+  const items = [prop, isCommunicationDisabled.isMemberCommunicationDisabled(member)];
   return items;
 };

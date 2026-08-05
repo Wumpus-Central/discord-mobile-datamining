@@ -30,7 +30,7 @@ export default {
     dispatcher.dispatch({ type: "CHANNEL_SELECT", guildId: tmp, channelId, messageId, jumpType, source, skipMessageFetch });
   },
   selectPrivateChannel(id) {
-    transitionTo /* transitionTo */.transitionTo(closure_8.CHANNEL(closure_7, id));
+    transitionTo.transitionTo(closure_8.CHANNEL(closure_7, id));
   },
   selectVoiceChannel(id, c1, flag2) {
     let flag = c1;
@@ -53,7 +53,7 @@ export default {
         const mediaEngine = supported.getMediaEngine();
         mediaEngine.interact();
       }
-      const obj5 = selectVoiceChannelAdditional /* selectVoiceChannelAdditional */;
+      const obj5 = selectVoiceChannelAdditional;
       const voiceChannelAdditional = obj5.selectVoiceChannelAdditional(id, guildId, flag, flag2, obj);
     }
   },

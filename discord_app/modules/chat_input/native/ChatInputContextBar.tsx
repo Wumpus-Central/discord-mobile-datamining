@@ -25,11 +25,11 @@ let unpackModuleId;
 const require = arg1;
 function ChatInputReplyBarNoAuthor(onCancelReplying) {
   onCancelReplying = onCancelReplying.onCancelReplying;
-  let obj = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */;
+  let obj = useIsMobileVisualRefreshExperimentEnabled;
   const tmp3 = callback3();
-  let obj1 = map /* map */;
+  let obj1 = map;
   const token = obj1.useToken(Themes.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
-  let obj2 = map /* map */;
+  let obj2 = map;
   const bound = Math.max(0, (token - obj2.useToken(Themes.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE)) / 2);
   if (obj.useMobileVisualRefreshConfig({ location: "ChatInputContextBar" }).chatInputFloating) {
     obj = { style: null, children: null };
@@ -416,12 +416,12 @@ class ChatInputReplyBar {
   }
 }
 function ChatInputEditBar(onCancelEditing) {
-  let obj = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */;
+  let obj = useIsMobileVisualRefreshExperimentEnabled;
   const chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "ChatInputContextBar" }).chatInputFloating;
   const tmp3 = callback3();
-  let obj1 = map /* map */;
+  let obj1 = map;
   const token = obj1.useToken(Themes.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
-  let obj2 = map /* map */;
+  let obj2 = map;
   const bound = Math.max(0, (token - obj2.useToken(Themes.modules.mobile.CHAT_INPUT_REPLY_MENTION_ICON_SIZE)) / 2);
   let str = "text-sm/medium";
   if (chatInputFloating) {
@@ -435,11 +435,11 @@ function ChatInputEditBar(onCancelEditing) {
   obj[2] = str2;
   obj[3] = chatInputFloating ? tmp3.floatingReplyTextWrapper : tmp3.contextButtonText;
   const intl = tmp(1236).intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.rtNXxN);
-  let tmp7Result = tmp7(Text /* Text */.Text, obj);
+  obj[4] = intl.string(getSystemLocale.t.rtNXxN);
+  let tmp7Result = tmp7(Text.Text, obj);
   obj = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.5, hitSlop: null, style: null, onPress: null, children: null };
   const intl2 = tmp(1236).intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.qv9j1K);
+  obj[1] = intl2.string(getSystemLocale.t.qv9j1K);
   let tmp9;
   if (chatInputFloating) {
     if (bound > 0) {
@@ -462,7 +462,7 @@ function ChatInputEditBar(onCancelEditing) {
     floatingCloseIcon = tmp3.floatingCloseIcon;
   }
   obj1[2] = floatingCloseIcon;
-  obj[6] = closure_10(Button /* Button */.Icon, obj1);
+  obj[6] = closure_10(Button.Icon, obj1);
   tmp7Result = tmp7(tmp(4812).PressableOpacity, obj);
   obj2 = { style: tmp3.contextBarRow, children: null };
   const obj3 = { children: null };

@@ -562,7 +562,7 @@ export const fetchIsSpotifyProtocolRegistered = function fetchIsSpotifyProtocolR
       });
       const isProtocolRegisteredResult = set.isProtocolRegistered(closure_4);
     }
-    obj = set /* set */;
+    obj = set;
   }
 };
 export const setActiveDevice = function setActiveDevice(accountId, deviceId) {

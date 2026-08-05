@@ -32,13 +32,13 @@ export default function ExpressionPickerActionSheet(arg0) {
   ({ hideGifFavorites, onDismiss, visibleTabs, initialGifQuery } = arg0);
   let obj = ReanimatedRexport;
   const sharedValue = obj.useSharedValue(-1);
-  let obj1 = useKeyboardType /* useKeyboardType */;
-  const keyboardContextForType = obj1.useKeyboardContextForType(KeyboardTypes /* KeyboardTypes */.KeyboardTypes.EXPRESSION);
-  let obj2 = initialize /* initialize */;
+  let obj1 = useKeyboardType;
+  const keyboardContextForType = obj1.useKeyboardContextForType(KeyboardTypes.KeyboardTypes.EXPRESSION);
+  let obj2 = initialize;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj2.useStateFromStores(items, () => outer1_4.getChannel(closure_0));
   const height = useWindowDimensions({ ignoreKeyboard: true }).height;
-  const diff = height - NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsets().top;
+  const diff = height - NAV_BAR_HEIGHT.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsets().top;
   let tmp15Result = null;
   if (undefined !== stateFromStores) {
     let isIOSResult = tmp2(500).isIOS();

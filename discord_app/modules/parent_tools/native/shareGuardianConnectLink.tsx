@@ -11,9 +11,9 @@ export const shareGuardianConnectLink = function shareGuardianConnectLink(global
   if (username == null) {
     username = globalName.username;
   }
-  let obj = showShareActionSheet /* showShareActionSheet */;
+  let obj = showShareActionSheet;
   obj = { message: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj[0] = intl.formatToPlainString(messagesProxy.lVD5Nd, { username, url: callback(globalName.id, closure_2) });
   obj.showShareActionSheet(obj, "Family Center Connect Guardian");
 };

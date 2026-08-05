@@ -700,7 +700,7 @@ prototype5["recordRender"] = function recordRender(length, outer1_6) {
 prototype5["recordMessageRender"] = function recordMessageRender(channelId, mapped, hasFetched, hasMoreAfter) {
   let self = this;
   self = this;
-  const _default = DISCORD_EPOCH /* DISCORD_EPOCH */.default;
+  const _default = DISCORD_EPOCH.default;
   const renderLatestMessages = this.renderLatestMessages;
   if (!renderLatestMessages.hasData()) {
     const renderMessages = self.renderMessages;
@@ -808,8 +808,8 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
   let loadIndex;
   const self = this;
   const startTime = this.getStartTime(c3);
-  const tmp2 = apply /* apply */;
-  const found = apply /* apply */(isTracing.logGroups[0].logs).filter((log) => {
+  const tmp2 = apply;
+  const found = apply(isTracing.logGroups[0].logs).filter((log) => {
     log = log.log;
     return log.startsWith("Require ");
   });
@@ -820,7 +820,7 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
     }
     return num;
   });
-  const tmp2Result = apply /* apply */(isTracing.logGroups[0].logs);
+  const tmp2Result = apply(isTracing.logGroups[0].logs);
   const result = this.serializeAppStartupMetrics();
   const obj = {};
   const merged = Object.assign(this.extraProperties);

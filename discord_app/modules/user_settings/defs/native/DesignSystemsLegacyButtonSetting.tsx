@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_LEGACY_BUTTON,
   getComponent() {
-    return ComparisonRow /* ComparisonRow */.default;
+    return ComparisonRow.default;
   }
 };
 const route = createToggle.createRoute(obj);

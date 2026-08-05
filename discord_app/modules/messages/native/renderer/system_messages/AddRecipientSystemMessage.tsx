@@ -19,13 +19,13 @@ export const createAddRecipientSystemMessage = function createAddRecipientSystem
   if (hasItem) {
     hasItem = THREAD_CHANNEL_TYPES.has(channel.type);
   }
-  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+  let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const userAuthorWithProcessedColor = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */.getUserAuthorWithProcessedColor(user, channel);
+  const userAuthorWithProcessedColor = getMessageAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle }), otherUsername: userAuthorWithProcessedColor.nick, otherUsernameOnClick: formatUsernameOnClick({ userId: first, message, author: userAuthorWithProcessedColor, roleStyle }) };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const formatToParts = intl.formatToParts;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (hasItem) {
     let formatToPartsResult = formatToParts(t.Vej1Nw, obj);
   } else {

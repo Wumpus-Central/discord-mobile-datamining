@@ -5,8 +5,8 @@ import { UserSettingsAuthedApps } from "../../authorized_apps/native/UserSetting
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["f6kk+r"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["f6kk+r"]);
   },
   parent: null,
   IconComponent: require("KeyIcon").KeyIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.AUTHORIZED_APPS,
   getComponent() {
-    return UserSettingsAuthedApps /* UserSettingsAuthedApps */.default;
+    return UserSettingsAuthedApps.default;
   }
 };
 const route = createToggle.createRoute(obj);

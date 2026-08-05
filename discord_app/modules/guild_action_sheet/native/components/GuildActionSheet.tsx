@@ -33,7 +33,7 @@ const memoResult = require("noop").memo(function GuildActionSheet(arg0) {
     expanded = false;
   }
   const tmp = callback();
-  let obj = useBottomSheetRef /* useBottomSheetRef */;
+  let obj = useBottomSheetRef;
   bottomSheetRef = obj.useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
   obj = { ref: bottomSheetRef, handleDisabled: true, showGradient: true, scrollable: true, startExpanded: expanded, children: null };
@@ -45,13 +45,13 @@ const memoResult = require("noop").memo(function GuildActionSheet(arg0) {
   obj[2] = { paddingBottom: useSafeAreaInsets().bottom + num };
   const items = [closure_4(CommunityPill, { guild }), closure_4(GuildActionSheetTabItems, { guild }), , ];
   const obj1 = { style: tmp.actions, children: null };
-  const items1 = [closure_4(HideMutedChannelsOption /* HideMutedChannelsOption */.GuildUnreadAction, { guild }), closure_4(GuildActionSheetProgress, { guild }), closure_4(HideMutedChannelsOption /* HideMutedChannelsOption */.GuildActionSheetPrimaryActions, { guild }), closure_4(HideMutedChannelsOption /* HideMutedChannelsOption */.GuildActionSheetSecondaryActions, { guild }), closure_4(HideMutedChannelsOption /* HideMutedChannelsOption */.GuildDeveloperOptionAction, { guild }), closure_4(GuildActionSheetEmojiSection, { guildId: guild.id })];
+  const items1 = [closure_4(HideMutedChannelsOption.GuildUnreadAction, { guild }), closure_4(GuildActionSheetProgress, { guild }), closure_4(HideMutedChannelsOption.GuildActionSheetPrimaryActions, { guild }), closure_4(HideMutedChannelsOption.GuildActionSheetSecondaryActions, { guild }), closure_4(HideMutedChannelsOption.GuildDeveloperOptionAction, { guild }), closure_4(GuildActionSheetEmojiSection, { guildId: guild.id })];
   obj1[1] = items1;
   items[2] = closure_5(View, obj1);
-  items[3] = closure_4(ActionSheetHeaderBar /* ActionSheetHeaderBar */.ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose });
+  items[3] = closure_4(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose });
   obj[3] = items;
-  obj[5] = closure_5(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, obj);
-  return closure_4(Background /* Background */.BottomSheet, obj);
+  obj[5] = closure_5(BottomSheetModal.BottomSheetScrollView, obj);
+  return closure_4(Background.BottomSheet, obj);
 });
 const result = require("jsxProd").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheet.tsx");
 

@@ -19,32 +19,32 @@ const require = arg1;
 const memoResult = require("noop").memo(function EmojiPickerCategoryIcon(id) {
   id = id.id;
   if (EmojiCategories.TOP_GUILD_EMOJI === id) {
-    return jsx(TrophyIcon /* TrophyIcon */.TrophyIcon, {});
+    return jsx(TrophyIcon.TrophyIcon, {});
   } else if (tmp.FAVORITES === id) {
-    return jsx(StarIcon /* StarIcon */.StarIcon, {});
+    return jsx(StarIcon.StarIcon, {});
   } else if (tmp.RECENT === id) {
-    return jsx(ClockIcon /* ClockIcon */.ClockIcon, {});
+    return jsx(ClockIcon.ClockIcon, {});
   } else if (tmp.PEOPLE === id) {
-    return jsx(ReactionIcon /* ReactionIcon */.ReactionIcon, {});
+    return jsx(ReactionIcon.ReactionIcon, {});
   } else if (tmp.NATURE === id) {
-    return jsx(NatureIcon /* NatureIcon */.NatureIcon, {});
+    return jsx(NatureIcon.NatureIcon, {});
   } else if (tmp.FOOD === id) {
-    return jsx(FoodIcon /* FoodIcon */.FoodIcon, {});
+    return jsx(FoodIcon.FoodIcon, {});
   } else if (tmp.ACTIVITY === id) {
-    return jsx(GameControllerIcon /* GameControllerIcon */.GameControllerIcon, {});
+    return jsx(GameControllerIcon.GameControllerIcon, {});
   } else if (tmp.TRAVEL === id) {
-    return jsx(BicycleIcon /* BicycleIcon */.BicycleIcon, {});
+    return jsx(BicycleIcon.BicycleIcon, {});
   } else if (tmp.OBJECTS === id) {
-    return jsx(ObjectIcon /* ObjectIcon */.ObjectIcon, {});
+    return jsx(ObjectIcon.ObjectIcon, {});
   } else if (tmp.SYMBOLS === id) {
-    return jsx(HeartIcon /* HeartIcon */.HeartIcon, {});
+    return jsx(HeartIcon.HeartIcon, {});
   } else if (tmp.FLAGS === id) {
-    return jsx(FlagIcon /* FlagIcon */.FlagIcon, {});
+    return jsx(FlagIcon.FlagIcon, {});
   } else {
     if (tmp.CUSTOM !== id) {
       const PREMIUM_UPSELL = tmp.PREMIUM_UPSELL;
     }
-    return jsx(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, {});
+    return jsx(NitroWheelIcon.NitroWheelIcon, {});
   }
 });
 const result = require("jsxProd").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx");

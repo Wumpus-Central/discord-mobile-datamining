@@ -22,6 +22,6 @@ export default function ForumPostPinIcon(containerStyle) {
   obj = { source: null, style: null };
   obj[0] = registerAsset;
   obj[1] = tmp.pinIcon;
-  obj[1] = jsx(Button /* Button */.Icon, { source: null, style: null });
+  obj[1] = jsx(Button.Icon, { source: null, style: null });
   return <View source={null} style={null} />;
 };

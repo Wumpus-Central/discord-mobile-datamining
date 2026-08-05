@@ -78,15 +78,15 @@ function formatTimestampToA11yLabel(hours) {
   const items = [];
   ({ minutes, seconds } = hours);
   if (hours > 0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj = { hours: null };
     obj[0] = hours;
-    items.push(intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.xCjYxK, obj));
+    items.push(intl.formatToPlainString(getSystemLocale.t.xCjYxK, obj));
   }
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  items.push(intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iXLF9W, { minutes }));
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  items.push(intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.geSp4K, { seconds }));
+  const intl2 = getSystemLocale.intl;
+  items.push(intl2.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes }));
+  const intl3 = getSystemLocale.intl;
+  items.push(intl3.formatToPlainString(getSystemLocale.t.geSp4K, { seconds }));
   return items.join(", ");
 }
 function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
@@ -124,28 +124,28 @@ function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
 }
 let closure_6 = {
   secondsAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.EOrEJl, { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.EOrEJl, { count });
   },
   minutesAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.LRNgHp, { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.LRNgHp, { count });
   },
   hoursAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.raJpz3, { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.raJpz3, { count });
   },
   daysAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.KkvKhi, { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.KkvKhi, { count });
   },
   weeksAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.sDtO6D, { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.sDtO6D, { count });
   },
   monthsAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.ITymou, { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.ITymou, { count });
   }
 };
 let result = require("getSystemLocale").fileFinishedImporting("modules/content_inventory/utils.tsx");
@@ -228,28 +228,28 @@ export const formatActiveA11yTimestamp = function formatActiveA11yTimestamp(end,
 };
 export const A11Y_FORMAT_SET = {
   secondsAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.jfUoRQ, { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.jfUoRQ, { count });
   },
   minutesAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.DmvRVO, { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.DmvRVO, { count });
   },
   hoursAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.AfXezt, { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.AfXezt, { count });
   },
   daysAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.Lru1rV, { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.Lru1rV, { count });
   },
   weeksAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["jovF+x"], { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t["jovF+x"], { count });
   },
   monthsAgo(count) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.nmSbST, { count });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.nmSbST, { count });
   }
 };
 export { formatEndedTimestamp };
@@ -430,7 +430,7 @@ export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(
     }
   }
   obj[2] = num5;
-  return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.NXBtjF, obj);
+  return intl.formatToPlainString(getSystemLocale.t.NXBtjF, obj);
 };
 export const getEpisodeBadgeText = function getEpisodeBadgeText(large_text) {
   if (null != large_text) {
@@ -438,11 +438,11 @@ export const getEpisodeBadgeText = function getEpisodeBadgeText(large_text) {
       const match = /\w+ (\d+), \w+ (\d+)/.exec(large_text);
       let formatToPlainStringResult = null;
       if (null != match) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
+        const intl = getSystemLocale.intl;
         const obj = { seasonNum: null, episodeNum: null };
         obj[0] = match[1];
         obj[1] = match[2];
-        formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.ijVm6y, obj);
+        formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.ijVm6y, obj);
       }
       return formatToPlainStringResult;
     }
@@ -468,11 +468,11 @@ export const getRichGameStateBadgeText = function getRichGameStateBadgeText(stat
     if (null != tmp2) {
       if (first > 0) {
         if (tmp2 > 0) {
-          const intl2 = getSystemLocale /* getSystemLocale */.intl;
+          const intl2 = getSystemLocale.intl;
           let obj = { count: null, max: null };
           obj[0] = first;
           obj[1] = tmp2;
-          let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.wmUSiy, obj);
+          let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t.wmUSiy, obj);
         }
         if (null != formatToPlainStringResult) {
           if (null != state) {
@@ -493,14 +493,14 @@ export const getRichGameStateBadgeText = function getRichGameStateBadgeText(stat
     tmp3 = first > 0;
   }
   if (tmp3) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { count: null };
     obj[0] = first;
-    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.UTYMsa, obj);
+    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.UTYMsa, obj);
   }
 };
 export const isEntryTopGame = function isEntryTopGame(contentInventoryEntry) {
-  return contentInventoryEntry.content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.TOP_GAME;
+  return contentInventoryEntry.content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME;
 };
 export const getStreakCount = function getStreakCount(entry) {
   STREAK_DAYS = STREAK_DAYS(8049).ContentInventoryTraitType.STREAK_DAYS;

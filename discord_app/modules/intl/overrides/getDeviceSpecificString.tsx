@@ -14,6 +14,6 @@ export const getDeviceSpecificString = function getDeviceSpecificString(arg0, _2
   if (tmp3 == null) {
     tmp3 = _2Yp7dF;
   }
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   return intl.string(tmp3);
 };

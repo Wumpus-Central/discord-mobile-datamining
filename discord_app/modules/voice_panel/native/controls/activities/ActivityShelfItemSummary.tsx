@@ -22,7 +22,7 @@ function ParticipantsSummary(arg0) {
   ({ applicationId, channelId } = arg0);
   const obj = { users: useActivityUsers(applicationId, channelId), max: 5, avatarSize: null, withPlusCount: true, style: null, cutout: null };
   const tmp = useActivityUsers(applicationId, channelId);
-  obj[2] = Button /* Button */.AvatarSizes.REFRESH_MEDIUM_32;
+  obj[2] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   obj[4] = { marginBottom: 8 };
   obj[5] = { inset: -8 };
   return callback2(UserSummaryItem, obj);
@@ -49,15 +49,15 @@ export default function ActivityShelfItemSummary(submitting) {
     flag = false;
   }
   const tmp = createCacheKey();
-  let obj = PillWrapper /* PillWrapper */;
+  let obj = PillWrapper;
   obj = { style: tmp.ongoingActivityContainer, children: null };
   obj = { style: tmp.overlayActivityName, children: null };
   let tmp7Result = flag;
-  const items = [closure_5(Text /* Text */.Text, { variant: "text-md/semibold", style: flag ? tmp.loadingTextColor : tmp.overlayActivityNameText, lineClamp: 2, children: applicationName }), ];
+  const items = [closure_5(Text.Text, { variant: "text-md/semibold", style: flag ? tmp.loadingTextColor : tmp.overlayActivityNameText, lineClamp: 2, children: applicationName }), ];
   const obj2 = { style: items1, children: null };
   items1 = [tmp.ellipsis, callback(obj.useLoadingStyles(flag, "md"), 2)[1]];
   if (tmp7Result) {
-    tmp7Result = tmp7(EllipsisCircle /* EllipsisCircle */.Ellipsis, { variant: "active", size: "md" });
+    tmp7Result = tmp7(EllipsisCircle.Ellipsis, { variant: "active", size: "md" });
   }
   obj2[1] = tmp7Result;
   items[1] = closure_5(ReanimatedRexport.View, obj2);

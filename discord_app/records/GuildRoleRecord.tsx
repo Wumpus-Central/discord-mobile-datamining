@@ -10,10 +10,10 @@ export const isEveryoneRole = function isEveryoneRole(role) {
   return role.id === role.guildId;
 };
 export const hasPermission = function hasPermission(permissions) {
-  return fromString /* fromString */.has(permissions.permissions, arg1);
+  return fromString.has(permissions.permissions, arg1);
 };
 export const hasAnyPermission = function hasAnyPermission(permissions) {
-  return fromString /* fromString */.hasAny(permissions.permissions, arg1);
+  return fromString.hasAny(permissions.permissions, arg1);
 };
 export const isRoleEqual = function isRoleEqual(pickResult, arg1) {
   return apply.isEqualWith(pickResult, arg1, (arg0, arg1, arg2) => {

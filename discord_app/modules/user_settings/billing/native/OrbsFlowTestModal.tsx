@@ -22,9 +22,9 @@ function BalanceWidgetMenuSection() {
   const tmp = callback4();
   let obj = { spacing: 16, style: tmp.container, children: null };
   obj = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" };
-  const items = [callback2(Text /* Text */.Text, obj), callback2(BalanceWidget, {})];
+  const items = [callback2(Text.Text, obj), callback2(BalanceWidget, {})];
   obj[2] = items;
-  return callback3(Stack /* Stack */.Stack, obj);
+  return callback3(Stack.Stack, obj);
 }
 function BalanceWidgetPillSection() {
   const tmp = callback4();
@@ -87,7 +87,7 @@ function OrbsFlowTest() {
   const items = [callback2(BalanceWidgetMenuSection, {}), callback2(BalanceWidgetPillSection, {}), callback2(OrbCheckoutMenu, {})];
   obj[2] = items;
   obj[0] = callback3(closure_5, obj);
-  return callback2(Layer /* Layer */.LayerScope, obj);
+  return callback2(Layer.LayerScope, obj);
 }
 let c4 = importAllResult;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);

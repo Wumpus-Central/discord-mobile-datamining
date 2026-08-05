@@ -85,7 +85,7 @@ export default function QuestRewardDetailsBottomSheetConnected(questId) {
     const obj = callback(11080);
     callback2(4253).hideActionSheet();
   }, []);
-  let obj = useQuests /* useQuests */;
+  let obj = useQuests;
   const nonNullableQuest = obj.useNonNullableQuest(questId.questId, callback);
   let tmp3 = null;
   if (null != nonNullableQuest) {

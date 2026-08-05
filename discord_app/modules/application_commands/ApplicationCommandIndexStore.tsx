@@ -1160,14 +1160,14 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
     let tmp23 = require;
     let tmp24 = tmp18;
     let hasAccessResult = obj3.hasAccess(nextResult, permissionContext, obj);
-    if (hasAccessResult === computeAllowedForUser /* computeAllowedForUser */.HasAccessResult.ALLOWED) {
+    if (hasAccessResult === computeAllowedForUser.HasAccessResult.ALLOWED) {
       let tmp25 = nextResult;
       let arr = items.push(tmp16);
     }
     continue;
   }
   let arr2 = items;
-  if (scoreMethod !== ScoreMethod /* ScoreMethod */.ScoreMethod.NONE) {
+  if (scoreMethod !== ScoreMethod.ScoreMethod.NONE) {
     arr2 = items;
     if (null != query) {
       arr2 = items;
@@ -1215,7 +1215,7 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
     obj[0] = descriptor;
     obj[1] = arr2;
     let tmp36 = obj;
-    tmp39 = scoreMethod !== ScoreMethod /* ScoreMethod */.ScoreMethod.NONE && scoreMethod !== tmp27(8158).ScoreMethod.APPLICATION_ONLY;
+    tmp39 = scoreMethod !== ScoreMethod.ScoreMethod.NONE && scoreMethod !== tmp27(8158).ScoreMethod.APPLICATION_ONLY;
   } else {
     tmp36 = null;
   }
@@ -1299,7 +1299,7 @@ function toServerPermissions(permissions, id) {
   const items = [];
   if (null != permissions.user) {
     let obj = { type: null, id: null, permission: null };
-    obj[0] = ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER;
+    obj[0] = ApplicationCommandSectionType.ApplicationCommandPermissionType.USER;
     obj[1] = id;
     obj[2] = permissions.user;
     items.push(obj);
@@ -1315,7 +1315,7 @@ function toServerPermissions(permissions, id) {
       let tmp12 = require;
       let tmp13 = dependencyMap;
       [tmp10, tmp11] = tmp9;
-      obj[0] = ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL;
+      obj[0] = ApplicationCommandSectionType.ApplicationCommandPermissionType.CHANNEL;
       obj[1] = tmp10;
       obj[2] = tmp11;
       let arr = items.push(obj);
@@ -1333,7 +1333,7 @@ function toServerPermissions(permissions, id) {
       let tmp22 = require;
       let tmp23 = dependencyMap;
       [tmp20, tmp21] = tmp19;
-      obj[0] = ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE;
+      obj[0] = ApplicationCommandSectionType.ApplicationCommandPermissionType.ROLE;
       obj[1] = tmp20;
       obj[2] = tmp21;
       let arr1 = items.push(obj);
@@ -1614,7 +1614,7 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
     const userState = this.getUserState();
     const applicationState = this.getApplicationState(applicationId.applicationId);
     let applicationStates = this.getApplicationStates();
-    let obj1 = computePermissions /* computePermissions */;
+    let obj1 = computePermissions;
     const permissionContext = obj1.buildPermissionContext(channel, commandTypes.commandTypes);
     let tmp11 = null == channel;
     let guild_id = channel;
@@ -1789,10 +1789,10 @@ prototype["queryInstallOnDemandApp"] = function queryInstallOnDemandApp(arg0, id
     }
     channel = arg0;
     obj = { commandTypes: null };
-    const items = [PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandType.CHAT];
+    const items = [PermissionOverwriteType.ApplicationCommandType.CHAT];
     obj[0] = items;
     const obj1 = { placeholderCount: 5, scoreMethod: null, applicationId: null, allowFetch: true };
-    obj1[1] = ScoreMethod /* ScoreMethod */.ScoreMethod.COMMAND_ONLY;
+    obj1[1] = ScoreMethod.ScoreMethod.COMMAND_ONLY;
     obj1[2] = arg0;
     const query = this.query(obj, obj, obj1);
   }
@@ -2497,9 +2497,9 @@ export const appLauncherOnlyCompareNames = function appLauncherOnlyCompareNames(
 export const getSection = function getSection(type, applicationId) {
   if (applicationId === constants.BUILT_IN) {
     let obj = { descriptor: null, sectionCommands: null, isGuildInstalled: true, isUserInstalled: true };
-    obj[0] = getOptionValue /* getOptionValue */.BUILT_IN_SECTIONS[tmp2.BUILT_IN];
-    const items = [PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandType.CHAT];
-    obj[1] = getOptionValue /* getOptionValue */.getBuiltInCommands(items, true, false);
+    obj[0] = getOptionValue.BUILT_IN_SECTIONS[tmp2.BUILT_IN];
+    const items = [PermissionOverwriteType.ApplicationCommandType.CHAT];
+    obj[1] = getOptionValue.getBuiltInCommands(items, true, false);
     return obj;
   } else {
     const contextState = applicationCommandIndexStore.getContextState(type);

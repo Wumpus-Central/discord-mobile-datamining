@@ -19,7 +19,7 @@ export default function HeroMedia(width) {
   ({ applicationId, containerHeight } = width);
   const tmp = callback();
   width = { width: width.width }.width;
-  useDefaultAppLauncherWidth /* useDefaultAppLauncherWidth */;
+  useDefaultAppLauncherWidth;
   let bound = width;
   if (width == null) {
     let tmp8 = width;
@@ -110,7 +110,7 @@ export const useHeroMediaDimensions = function useHeroMediaDimensions(arg0) {
     obj = {};
   }
   const width = obj.width;
-  useDefaultAppLauncherWidth /* useDefaultAppLauncherWidth */;
+  useDefaultAppLauncherWidth;
   let bound = width;
   if (width == null) {
     let tmp5 = width;

@@ -5,34 +5,34 @@ import { apexExperiment } from "../../../notifications/upcoming_server_event/Upc
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.MCVmjA);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.MCVmjA);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.R0VpSW);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.R0VpSW);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableUpcomingServerEventNotifications.useSetting,
   onValueChange: require("onUpcomingServerEventNotificationSettingsChanged").onUpcomingServerEventNotificationSettingsChanged,
   usePredicate: function useExperiment() {
-    return apexExperiment /* apexExperiment */.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
+    return apexExperiment.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
   }
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.MCVmjA);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.MCVmjA);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.R0VpSW);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.R0VpSW);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableUpcomingServerEventNotifications.useSetting,
   onValueChange: require("onUpcomingServerEventNotificationSettingsChanged").onUpcomingServerEventNotificationSettingsChanged,
   usePredicate: function useExperiment() {
-    return apexExperiment /* apexExperiment */.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
+    return apexExperiment.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
   }
 };
 const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/UpcomingServerEventNotificationSetting.tsx");

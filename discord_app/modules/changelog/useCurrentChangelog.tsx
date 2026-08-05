@@ -83,16 +83,16 @@ export const useCurrentChangelog = function useCurrentChangelog() {
   let changelog2;
   let loaded;
   let loaded2;
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   const items1 = [handleUserSettingsProtoStoreChange];
-  const stateFromStores1 = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items1, () => handleUserSettingsProtoStoreChange.latestChangelogId());
-  const obj2 = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => handleUserSettingsProtoStoreChange.latestChangelogId());
+  const obj2 = defaultAreStatesEqual;
   const tmp = require;
   const tmp4 = handleUserSettingsProtoStoreChange;
   const items2 = [handleUserSettingsProtoStoreChange];
-  const stateFromStores2 = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items2, () => handleUserSettingsProtoStoreChange.getConfig());
+  const stateFromStores2 = defaultAreStatesEqual.useStateFromStores(items2, () => handleUserSettingsProtoStoreChange.getConfig());
   let tmp7 = null != stateFromStores2;
   if (tmp7) {
     const _Object = Object;
@@ -106,7 +106,7 @@ export const useCurrentChangelog = function useCurrentChangelog() {
   if (tmp9) {
     tmp9 = null == stateFromStores1;
   }
-  const obj3 = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  const obj3 = defaultAreStatesEqual;
   const items3 = [tmp4];
   const stateFromStores3 = tmp(647).useStateFromStores(items3, () => handleUserSettingsProtoStoreChange.overrideId());
   const tmpResult = tmp(647);

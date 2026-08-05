@@ -171,8 +171,8 @@ prototype["shouldShowTrialOfferReminder"] = function shouldShowTrialOfferReminde
   const hasItem = closure_13.includes(trial_id.trial_id);
   let result = !hasItem;
   if (hasItem) {
-    result = apexExperiment /* apexExperiment */.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
-    const obj = apexExperiment /* apexExperiment */;
+    result = apexExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
+    const obj = apexExperiment;
   }
   return result;
 };
@@ -220,8 +220,8 @@ prototype["shouldShowDiscountOfferReminder"] = function shouldShowDiscountOfferR
   const hasItem = closure_8.includes(discountId.discountId);
   let result = !hasItem;
   if (hasItem) {
-    result = apexExperiment /* apexExperiment */.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
-    const obj = apexExperiment /* apexExperiment */;
+    result = apexExperiment.isPremiumOfferReminderExperimentEnabled({ location: "user_offer_store" });
+    const obj = apexExperiment;
   }
   return result;
 };
@@ -280,7 +280,7 @@ prototype["getAcknowledgedOffers"] = function getAcknowledgedOffers(arg0) {
 };
 prototype["getUnacknowledgedDiscountOffers"] = function getUnacknowledgedDiscountOffers() {
   const currentUser = authStore.getCurrentUser();
-  const obj = getPremiumPlanItem /* getPremiumPlanItem */;
+  const obj = getPremiumPlanItem;
   if (obj.isPremium(currentUser)) {
     const self = this;
     if (!this.canFractionalPremiumUserUseOffer()) {

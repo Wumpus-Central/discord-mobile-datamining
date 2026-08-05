@@ -9,17 +9,17 @@ let result = require("getSystemLocale").fileFinishedImporting("modules/guild_rol
 
 export default {
   title() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["KzCF/6"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["KzCF/6"]);
   },
   description() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.xMW8FH);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.xMW8FH);
   },
   canCreateGuild: false,
   useIsGuildSupported() {
     const items = [getHash];
-    return initialize /* initialize */.useStateFromStores(items, () => (id) => {
+    return initialize.useStateFromStores(items, () => (id) => {
       let result = callback2(id, arg1);
       if (result) {
         let obj = callback(5789);
@@ -32,6 +32,6 @@ export default {
         const obj4 = callback(3906);
       }
       return result;
-    }, [], initialize /* initialize */.statesWillNeverBeEqual);
+    }, [], initialize.statesWillNeverBeEqual);
   }
 };

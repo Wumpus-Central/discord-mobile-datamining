@@ -121,16 +121,16 @@ prototype["renderGenerateGiftCodeRow"] = function renderGenerateGiftCodeRow() {
   let obj = { style: items, children: null };
   items[1] = prop;
   obj = { variant: "text-xs/medium", color: "text-subtle", style: tmp.generateGiftRowText, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.lELyPj);
-  const items1 = [callback(Text /* Text */.Text, obj), ];
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.lELyPj);
+  const items1 = [callback(Text.Text, obj), ];
   obj = { style: tmp.generateButtonContainer, children: null };
   const obj1 = { style: tmp.generateGiftButton, children: null };
   const obj2 = { text: null, size: "sm", onPress: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["w4+/BA"]);
+  const intl2 = getSystemLocale.intl;
+  obj2[0] = intl2.string(getSystemLocale.t["w4+/BA"]);
   obj2[2] = this.handleGenerateGiftCode;
-  obj1[1] = callback(Button /* Button */.Button, obj2);
+  obj1[1] = callback(Button.Button, obj2);
   obj[1] = callback(closure_4, obj1);
   items1[1] = callback(closure_4, obj);
   obj[1] = items1;
@@ -145,7 +145,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   const isOpen = this.state.isOpen;
   ({ entitlements, application, sku, isRefreshEnabled } = this.props);
   let obj = dependencyMap;
-  let obj1 = getPrice /* getPrice */;
+  let obj1 = getPrice;
   let isGameItemSKUResult = obj1.isGameItemSKU(sku);
   if (isGameItemSKUResult) {
     isGameItemSKUResult = null != application;
@@ -183,7 +183,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   }
   const items1 = [tmp6Result, , ];
   const obj3 = { style: tmp.titleContainer, children: null };
-  const items2 = [closure_14(Text /* Text */.Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children }), ];
+  const items2 = [closure_14(Text.Text, { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", accessibilityRole: "header", children }), ];
   let socialLayerSubtitleContainer = isGameItemSKUResult;
   if (isGameItemSKUResult) {
     socialLayerSubtitleContainer = tmp.socialLayerSubtitleContainer;
@@ -215,7 +215,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
     formatResult = format(t.zMcvcA, obj9);
   }
   obj7[3] = formatResult;
-  items4[1] = closure_14(Text /* Text */.Text, obj7);
+  items4[1] = closure_14(Text.Text, obj7);
   obj5[1] = items4;
   items2[1] = closure_15(closure_4, obj5);
   obj3[1] = items2;
@@ -289,7 +289,7 @@ prototype["renderCardHeader"] = function renderCardHeader(sku) {
     if (null == subscriptionPlan) {
       return null;
     } else {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
+      const intl = getSystemLocale.intl;
       if (subscriptionPlan.interval === constants.MONTH) {
         let Vd3Iu8 = tmp4(1236).t.rCJvqo;
       } else {
@@ -377,7 +377,7 @@ let tmp11 = require("initialize").connectStores(items, (arg0) => {
     obj[3] = importDefaultResult.getApplication(value.applicationId);
     let orFetchSubscriptionPlan = null;
     if (null != subscriptionPlanId) {
-      obj = getSubscriptionPlans /* getSubscriptionPlans */;
+      obj = getSubscriptionPlans;
       orFetchSubscriptionPlan = obj.getOrFetchSubscriptionPlan(subscriptionPlanId);
     }
     obj[4] = orFetchSubscriptionPlan;

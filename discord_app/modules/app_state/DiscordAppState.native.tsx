@@ -14,6 +14,6 @@ export default {
   },
   useCanUIRequestGatewaySocket() {
     const items = [getState];
-    return initialize /* initialize */.useStateFromStores(items, () => "active" === state.getState());
+    return initialize.useStateFromStores(items, () => "active" === state.getState());
   }
 };

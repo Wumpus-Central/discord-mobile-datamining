@@ -14,8 +14,8 @@ const result = require("createCollectiblesItemFromServerResponse").fileFinishedI
 
 export const createNitroSuggestedSku = function createNitroSuggestedSku() {
   const obj = { id: PremiumSubscriptionSKUs.TIER_2, productLine: SKUProductLines.PREMIUM, name: null, features: null, genres: null, manifests: null, availableRegions: null, locales: null, bundledSkuIds: null, selectedOptions: null, eligibleOffers: null, prices: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.lG6a5x);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.lG6a5x);
   obj[3] = new Set();
   const set = new Set();
   obj[4] = new Set();
@@ -36,8 +36,8 @@ export const isEligibleWishlistItemOnMobile = function isEligibleWishlistItemOnM
       let prop = isWishlistOwner.isSocialLayerStorefrontMobilePurchasingEnabled;
       if (prop) {
         if (!isWishlistOwner) {
-          isWishlistOwner = useSKUPrice /* useSKUPrice */.isSlayerSkuAvailableOnThisPlatform(sku.sku);
-          const obj = useSKUPrice /* useSKUPrice */;
+          isWishlistOwner = useSKUPrice.isSlayerSkuAvailableOnThisPlatform(sku.sku);
+          const obj = useSKUPrice;
         }
         prop = isWishlistOwner;
       }

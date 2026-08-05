@@ -11,7 +11,7 @@ let c5;
 let closure_6;
 const require = arg1;
 function onClose() {
-  openAgeGateModal /* openAgeGateModal */.closeAgeGateModal();
+  openAgeGateModal.closeAgeGateModal();
 }
 function renderHeaderTitle() {
   return null;

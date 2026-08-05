@@ -238,7 +238,7 @@ prototype["getSettings"] = function getSettings() {
 prototype["getEnableAutoclipping"] = function getEnableAutoclipping() {
   let enabled = closure_31.clipsSettings.enableAutoclipping;
   if (enabled == null) {
-    const AutoclippingDefaultOverrideExperiment = apexExperiment /* apexExperiment */.AutoclippingDefaultOverrideExperiment;
+    const AutoclippingDefaultOverrideExperiment = apexExperiment.AutoclippingDefaultOverrideExperiment;
     enabled = AutoclippingDefaultOverrideExperiment.getConfig({ location: "getAutoclippingDefault" }).enabled;
   }
   return enabled;
@@ -413,7 +413,7 @@ let items = [
     return obj;
   },
   (clipsSettings) => {
-    const _default = _detectH265HardwareDecode /* _detectH265HardwareDecode */.default;
+    const _default = _detectH265HardwareDecode.default;
     let hardwareEncoding;
     if (_default != null) {
       hardwareEncoding = _default.getHardwareEncoding();
@@ -663,7 +663,7 @@ obj = {
     let pid;
     let sourceName;
     ({ sourceName, pid } = arg0);
-    let obj = isClipsEnabled /* isClipsEnabled */;
+    let obj = isClipsEnabled;
     if (obj.isClipsEnabled()) {
       let tmp2 = sourceName;
       if (null != pid) {
@@ -692,7 +692,7 @@ obj = {
   STREAM_STOP: function handleStreamStop(arg0) {
     let tmp2 = null != _null;
     if (tmp2) {
-      let obj = isStreamKey /* isStreamKey */;
+      let obj = isStreamKey;
       const tmp6 = obj.decodeStreamKey(tmp).ownerId === store.getId();
       if (tmp6) {
         let tmp8 = null;
@@ -794,11 +794,11 @@ obj = {
   },
   RTC_CONNECTION_FLAGS: function handleRTCConnectionFlagsUpdate(flags) {
     const obj = { clipsEnabled: null, allowVoiceRecording: null, allowAnyViewerClips: null };
-    obj[0] = hasFlag /* hasFlag */.hasFlag(flags.flags, VoiceFlags.CLIPS_ENABLED);
-    const obj2 = hasFlag /* hasFlag */;
-    obj[1] = hasFlag /* hasFlag */.hasFlag(flags.flags, VoiceFlags.ALLOW_VOICE_RECORDING);
-    const obj3 = hasFlag /* hasFlag */;
-    obj[2] = hasFlag /* hasFlag */.hasFlag(flags.flags, VoiceFlags.ALLOW_ANY_VIEWER_CLIPS);
+    obj[0] = hasFlag.hasFlag(flags.flags, VoiceFlags.CLIPS_ENABLED);
+    const obj2 = hasFlag;
+    obj[1] = hasFlag.hasFlag(flags.flags, VoiceFlags.ALLOW_VOICE_RECORDING);
+    const obj3 = hasFlag;
+    obj[2] = hasFlag.hasFlag(flags.flags, VoiceFlags.ALLOW_ANY_VIEWER_CLIPS);
     closure_25[flags.userId] = obj;
   },
   CLIPS_SHOW_CALL_WARNING: function handleShowCallWarning(channelId) {
@@ -827,7 +827,7 @@ obj = {
   },
   CLIPS_INIT: function handleClipsInit(applicationName) {
     let c26 = null;
-    let obj = isClipsEnabled /* isClipsEnabled */;
+    let obj = isClipsEnabled;
     if (obj.isClipsEnabled()) {
       obj = { applicationName: null, newClipIds: null, ended: false };
       obj[0] = applicationName.applicationName;

@@ -214,7 +214,7 @@ function RoleRow(onDelete) {
   ({ name, colorString, colorStrings } = role);
   const tmp = isEveryoneRole(role);
   let obj = { label: null, arrow: null, icon: null, onPress: null };
-  obj[0] = callback(RoleLabel /* RoleLabel */.RoleLabel, { name, color: colorString, colors: colorStrings });
+  obj[0] = callback(RoleLabel.RoleLabel, { name, color: colorString, colors: colorStrings });
   obj[1] = !isEditing;
   let tmp2Result = null;
   if (isEditing) {
@@ -236,7 +236,7 @@ function RoleRow(onDelete) {
     }
   }
   obj[3] = onDelete;
-  return callback(TableRowInner /* TableRowInner */.TableRow, obj);
+  return callback(TableRowInner.TableRow, obj);
 }
 function RoleOverwrites(guild) {
   let dependencyMap;
@@ -299,9 +299,9 @@ function MemberRow(arg0) {
   if (isEditing) {
     obj = { color: null, accessibilityLabel: null };
     obj[0] = Themes.colors.ICON_FEEDBACK_CRITICAL;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.N86XcP);
-    tmpResult = tmp(CircleMinusIcon /* CircleMinusIcon */.CircleMinusIcon, obj);
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.N86XcP);
+    tmpResult = tmp(CircleMinusIcon.CircleMinusIcon, obj);
   }
   obj[4] = tmpResult;
   return closure_16(memoResult1, obj);

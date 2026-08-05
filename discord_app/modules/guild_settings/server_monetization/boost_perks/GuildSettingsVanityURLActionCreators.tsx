@@ -6,7 +6,7 @@ import { dispatcher } from "../../../../Dispatcher.tsx";
 const result = require("dispatcher").fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx");
 
 export const fetchVanityUrl = function fetchVanityUrl(id) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   const value = HTTP.get({ url: Endpoints.GUILD_VANITY_URL(id), oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
     let code;

@@ -11,9 +11,9 @@ function updateApiRequestConfig() {
   if (NativeCacheModule != null) {
     const _JSON = JSON;
     let obj = { apiBaseUrl: null, headers: null };
-    obj[0] = sendRequest /* sendRequest */.getAPIBaseURL();
+    obj[0] = sendRequest.getAPIBaseURL();
     obj = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null };
-    const obj2 = sendRequest /* sendRequest */;
+    const obj2 = sendRequest;
     obj[0] = expandEventProperties.getSuperPropertiesBase64();
     obj[1] = store.getFingerprint();
     obj[2] = store.getInstallationForTracking();
@@ -24,7 +24,7 @@ function updateApiRequestConfig() {
 }
 let prototype = function ApiRequestConfigManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.handleUpdate = set /* set */.isAndroid() ? updateApiRequestConfig : (() => {
+  applyArgumentsResult.handleUpdate = set.isAndroid() ? updateApiRequestConfig : (() => {
 
   });
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate, APP_STATE_UPDATE: applyArgumentsResult.handleUpdate };

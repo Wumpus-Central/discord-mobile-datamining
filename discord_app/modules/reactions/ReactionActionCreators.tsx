@@ -42,15 +42,15 @@ function checkReactionResponse(arg0, arg1, isRetry) {
       if (constants.TOO_MANY_REACTIONS === code) {
         let obj = set;
         obj = { title: null, body: null, confirmText: null };
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.lFddsR);
-        const intl2 = getSystemLocale /* getSystemLocale */.intl;
-        obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.h27eIm);
-        const intl3 = getSystemLocale /* getSystemLocale */.intl;
-        obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.BddRzS);
+        const intl = getSystemLocale.intl;
+        obj[0] = intl.string(getSystemLocale.t.lFddsR);
+        const intl2 = getSystemLocale.intl;
+        obj[1] = intl2.string(getSystemLocale.t.h27eIm);
+        const intl3 = getSystemLocale.intl;
+        obj[2] = intl3.string(getSystemLocale.t.BddRzS);
         obj.show(obj);
       } else if (tmp3.REACTION_BLOCKED === code) {
-        const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+        const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
         ComponentDispatch.dispatch(constants2.SHAKE_APP, { duration: 200, intensity: 2 });
       }
     } else if (!isRetry.isRetry) {
@@ -74,7 +74,7 @@ function optimisticDispatch(type, channelId, messageId, arg3, userId) {
     colors = [];
   }
   obj[6] = colors;
-  const ReactionTypes = ReactionTypes /* ReactionTypes */.ReactionTypes;
+  const ReactionTypes = ReactionTypes.ReactionTypes;
   obj[7] = userId.burst ? ReactionTypes.BURST : ReactionTypes.NORMAL;
   obj.dispatch(obj);
 }
@@ -90,7 +90,7 @@ function makeURL(type) {
   }
   let NORMAL = type.type;
   if (NORMAL === undefined) {
-    NORMAL = ReactionTypes /* ReactionTypes */.ReactionTypes.NORMAL;
+    NORMAL = ReactionTypes.ReactionTypes.NORMAL;
   }
   if (null != emoji.id) {
     const _HermesInternal = HermesInternal;

@@ -252,7 +252,7 @@ let c4 = importAllResult;
 let closure_18 = require("module_4146").createAnimatedComponent(require("Button").Icon);
 let closure_19 = require("module_4146").createAnimatedComponent(require("PressableBase").PressableOpacity);
 let closure_20 = require("module_4146").createAnimatedComponent(require("Text").Text);
-let closure_21 = require("Button").memoize(() => ReanimatedRexport.createAnimatedComponent(inlineStyles /* inlineStyles */.Ellipse));
+let closure_21 = require("Button").memoize(() => ReanimatedRexport.createAnimatedComponent(inlineStyles.Ellipse));
 let c22 = 68;
 let c23 = 56;
 let closure_24 = createCacheKey.createStyles((width) => {
@@ -277,8 +277,8 @@ let closure_24 = createCacheKey.createStyles((width) => {
   const obj5 = { tintColor: Themes.colors.CHAT_INPUT_SEND_BUTTON_ICON_ACTIVE_TINT };
   obj[9] = { flex: 1, height: Themes.modules.mobile.VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_HEIGHT, marginRight: Themes.modules.mobile.VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_MARGIN_RIGHT, alignItems: "flex-end" };
   const obj6 = { flex: 1, height: Themes.modules.mobile.VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_HEIGHT, marginRight: Themes.modules.mobile.VOICE_MESSAGE_RECORDING_CHAT_CONTAINER_MARGIN_RIGHT, alignItems: "flex-end" };
-  obj[10] = { height: c22, width: c23, borderRadius: Themes.modules.button.BORDER_RADIUS, display: "flex", alignItems: "center", flexDirection: "column", elevation: 12, shadowColor: Themes.colors.BLACK, shadowOffset: { width: 0, height: 12 }, shadowOpacity: 0.12, shadowRadius: 36, borderWidth: result /* result */.DARK_0_LIGHT_1, borderStyle: "solid", borderColor: "rgba(0, 0, 0, 0.08)" };
-  const obj7 = { height: c22, width: c23, borderRadius: Themes.modules.button.BORDER_RADIUS, display: "flex", alignItems: "center", flexDirection: "column", elevation: 12, shadowColor: Themes.colors.BLACK, shadowOffset: { width: 0, height: 12 }, shadowOpacity: 0.12, shadowRadius: 36, borderWidth: result /* result */.DARK_0_LIGHT_1, borderStyle: "solid", borderColor: "rgba(0, 0, 0, 0.08)" };
+  obj[10] = { height: c22, width: c23, borderRadius: Themes.modules.button.BORDER_RADIUS, display: "flex", alignItems: "center", flexDirection: "column", elevation: 12, shadowColor: Themes.colors.BLACK, shadowOffset: { width: 0, height: 12 }, shadowOpacity: 0.12, shadowRadius: 36, borderWidth: result.DARK_0_LIGHT_1, borderStyle: "solid", borderColor: "rgba(0, 0, 0, 0.08)" };
+  const obj7 = { height: c22, width: c23, borderRadius: Themes.modules.button.BORDER_RADIUS, display: "flex", alignItems: "center", flexDirection: "column", elevation: 12, shadowColor: Themes.colors.BLACK, shadowOffset: { width: 0, height: 12 }, shadowOpacity: 0.12, shadowRadius: 36, borderWidth: result.DARK_0_LIGHT_1, borderStyle: "solid", borderColor: "rgba(0, 0, 0, 0.08)" };
   obj[11] = { position: "absolute", right: Themes.modules.mobile.VOICE_MESSAGE_RECORDING_LOCK_PILL_OFFSET_RIGHT, width: Themes.modules.mobile.VOICE_MESSAGE_RECORDING_LOCK_PILL_WIDTH };
   const obj8 = { position: "absolute", right: Themes.modules.mobile.VOICE_MESSAGE_RECORDING_LOCK_PILL_OFFSET_RIGHT, width: Themes.modules.mobile.VOICE_MESSAGE_RECORDING_LOCK_PILL_WIDTH };
   obj[12] = { height: 16, width: 16, marginTop: 8, tintColor: Themes.colors.ICON_SUBTLE };

@@ -103,7 +103,7 @@ let closure_10 = { code: "function PremiumGiftBackgroundSelectTsx1(){const{STAND
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelect.tsx");
 
 export default function PremiumGiftBackgroundSelect() {
-  let obj = NativeGiftContextProvider /* NativeGiftContextProvider */;
+  let obj = NativeGiftContextProvider;
   const nativeGiftContext = obj.useNativeGiftContext();
   obj = { giftStyle: nativeGiftContext.giftStyle, setGiftStyle: nativeGiftContext.setGiftStyle };
   return callback2(GiftBackgroundSelect, obj);

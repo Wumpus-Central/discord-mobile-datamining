@@ -18,7 +18,7 @@ function VariantOption(onPress) {
   let variant;
   ({ variant, isSelected } = onPress);
   const tmp = callback2(isSelected);
-  let obj = getProductPurchaseState /* getProductPurchaseState */;
+  let obj = getProductPurchaseState;
   let isPurchased = obj.useProductPurchaseState(variant).isPurchased;
   if (isPurchased) {
     const intl = tmp2(1236).intl;
@@ -38,13 +38,13 @@ function VariantOption(onPress) {
   }
   obj1[1] = isPurchased;
   obj[5] = closure_4(View, obj1);
-  return closure_4(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return closure_4(PressableBase.PressableOpacity, obj);
 }
 function VariantCheckmark(variant) {
   const colors = Themes.colors;
   const tmp = useIsVariantColorLight(variant.variant);
   const tmp2 = closure_4;
-  return tmp2(CheckmarkSmallIcon /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: useIsVariantColorLight(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
+  return tmp2(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: useIsVariantColorLight(variant.variant) ? colors.BLACK : colors.WHITE, size: "md" });
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, headerRow: null, variantsContainer: null, text: null };

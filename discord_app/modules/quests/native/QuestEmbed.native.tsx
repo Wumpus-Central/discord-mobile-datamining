@@ -25,7 +25,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
   let acceptBlurpleLabelBackgroundColor = dependencyMap;
   ({ theme, currentUser } = questId);
   let acceptLabelGreenColor = getEmbedThemeColors(theme);
-  let obj = isMetaQuest /* isMetaQuest */;
+  let obj = isMetaQuest;
   if (obj.isMetaQuest()) {
     const intl9 = tmp2(1236).intl;
     const intl10 = tmp2(1236).intl;

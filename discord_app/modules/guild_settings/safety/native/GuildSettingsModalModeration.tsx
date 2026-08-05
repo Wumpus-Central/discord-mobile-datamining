@@ -31,7 +31,7 @@ function GuildSettingsOwnerConfiguredContentLevel(guild) {
   if (DEFAULT2 == null) {
     DEFAULT2 = constants3.DEFAULT;
   }
-  let obj = useUserIsTeen /* useUserIsTeen */;
+  let obj = useUserIsTeen;
   let tmp7 = DEFAULT === constants3.AGE_RESTRICTED;
   const userIsTeen = obj.useUserIsTeen();
   if (tmp7) {
@@ -210,8 +210,8 @@ prototype["render"] = function render() {
   const obj1 = { children: null };
   items1[2] = canManageGuild;
   obj[2] = items1;
-  obj[1] = closure_11(Stack /* Stack */.Stack, obj);
-  const items2 = [closure_10(Form /* Form */.Form, obj), closure_10(NavScrim /* NavScrim */.NavScrim, {})];
+  obj[1] = closure_11(Stack.Stack, obj);
+  const items2 = [closure_10(Form.Form, obj), closure_10(NavScrim.NavScrim, {})];
   obj1[0] = items2;
   return closure_11(closure_12, obj1);
 };

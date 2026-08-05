@@ -15,7 +15,7 @@ export const isVoiceChannelsSection = function isVoiceChannelsSection(section, g
   return section === guildChannels.voiceChannelsSectionNumber;
 };
 export const isNamedCategorySection = function isNamedCategorySection(section) {
-  return section >= computeSubtitle /* computeSubtitle */.SECTION_INDEX_FIRST_NAMED_CATEGORY;
+  return section >= computeSubtitle.SECTION_INDEX_FIRST_NAMED_CATEGORY;
 };
 export const logChannelListEndReached = function logChannelListEndReached() {
   collectGuildAnalyticsMetadata.trackWithMetadata(AnalyticEvents.CHANNEL_LIST_END_REACHED);

@@ -57,7 +57,7 @@ function fetchMessages(arg0) {
           let obj2 = mergeMessage;
           const orCreate = obj2.getOrCreate(channelId);
           let orCreate1 = orCreate;
-          if (orCreate.some(shouldRefreshAttachmentUrl /* shouldRefreshAttachmentUrl */.messageHasExpiredAttachmentUrl)) {
+          if (orCreate.some(shouldRefreshAttachmentUrl.messageHasExpiredAttachmentUrl)) {
             tmp3.log("Found expired attachment link, clearing messages");
             let tmp9Result = tmp9(4955);
             tmp9Result.clear(channelId);
@@ -125,7 +125,7 @@ function fetchMessages(arg0) {
                         }
                         continue;
                       }
-                      const Storage2 = Storage /* Storage */.Storage;
+                      const Storage2 = Storage.Storage;
                       const result = Storage2.set(viewedThreadIds, obj);
                       flag2 = true;
                     }
@@ -240,10 +240,10 @@ function handleConnectionOpen() {
     const channel1 = store2.getChannel(channelId);
     if (null != channel1) {
       const id2 = channel1.id;
-      const obj7 = matchPath /* matchPath */;
+      const obj7 = matchPath;
       obj = { path: null, exact: true };
       obj[0] = closure_17.CHANNEL(":guild", ":channel", ":message");
-      const matchPathResult = obj7.matchPath(transitionTo /* transitionTo */.getHistory().location.pathname, obj);
+      const matchPathResult = obj7.matchPath(transitionTo.getHistory().location.pathname, obj);
       let message;
       if (matchPathResult != null) {
         const params = matchPathResult.params;
@@ -268,7 +268,7 @@ function handleConnectionOpen() {
         tmp7(obj2);
       }
       obj5 = store;
-      const obj8 = transitionTo /* transitionTo */;
+      const obj8 = transitionTo;
       tmp7 = fetchMessages;
     }
   }
@@ -354,7 +354,7 @@ function handleChannelSectionStoreChange() {
       if (sidebarState != null) {
         type = sidebarState.type;
       }
-      if (type !== SidebarType /* SidebarType */.SidebarType.VIEW_CHANNEL) {
+      if (type !== SidebarType.SidebarType.VIEW_CHANNEL) {
         const currentSidebarChannelId = obj2.getCurrentSidebarChannelId(channelId);
         if (null != currentSidebarChannelId) {
           const obj = { guildId: null, channelId: null, messageId: null };
@@ -412,13 +412,13 @@ function handleMessageEditEnd(response) {
         if (null != retry_after) {
           let obj = set;
           obj = { title: null, body: null };
-          const intl = getSystemLocale /* getSystemLocale */.intl;
-          obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.Whhv4w);
-          const intl2 = getSystemLocale /* getSystemLocale */.intl;
+          const intl = getSystemLocale.intl;
+          obj[0] = intl.string(getSystemLocale.t.Whhv4w);
+          const intl2 = getSystemLocale.intl;
           obj = { retryAfterMinutes: null };
           const _Math = Math;
           obj[0] = Math.ceil(retry_after / 60);
-          obj[1] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.qoxdQB, obj);
+          obj[1] = intl2.formatToPlainString(getSystemLocale.t.qoxdQB, obj);
           obj.show(obj);
         }
       }
@@ -456,10 +456,10 @@ function handleLoadMessagesSuccess(jump) {
         let obj = trackInvite;
         obj = { channelId: null, limit: null, jump: null };
         obj[0] = channelId;
-        obj[1] = getMessageLimit /* getMessageLimit */.getMessageLimit("MessageManager.staleFetch");
+        obj[1] = getMessageLimit.getMessageLimit("MessageManager.staleFetch");
         obj[2] = jump.jump;
         const messages = obj.fetchMessages(obj);
-        const obj3 = getMessageLimit /* getMessageLimit */;
+        const obj3 = getMessageLimit;
       }
     }
     tmp = table;

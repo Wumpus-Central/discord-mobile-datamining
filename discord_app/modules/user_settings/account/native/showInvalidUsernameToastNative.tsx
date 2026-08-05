@@ -7,8 +7,8 @@ const result = require("registerAsset").fileFinishedImporting("modules/user_sett
 export const showInvalidUsernameToast = function showInvalidUsernameToast() {
   let obj = dispatcher;
   obj = { key: "USER_SETTINGS_UPDATE_FAILURE", content: null, icon: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["TGg/2k"]);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["TGg/2k"]);
   obj[2] = registerAsset;
   obj.open(obj);
 };

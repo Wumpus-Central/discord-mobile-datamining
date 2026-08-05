@@ -32,7 +32,7 @@ const require = arg1;
 function filterStaffGuild(data) {
   if (closure_19.filterStaffContent()) {
     if (obj.isGuildItem(data)) {
-      if (data.data.guild_id === MessageEmbedTypes /* MessageEmbedTypes */.GAME_CONTENT_GUILD_ID) {
+      if (data.data.guild_id === MessageEmbedTypes.GAME_CONTENT_GUILD_ID) {
         return true;
       } else {
         const guild = store2.getGuild(data.data.guild_id);
@@ -80,7 +80,7 @@ function injectRecommendedGuildsRow() {
       }
     }
     const obj = { id: "recommendedGuilds", type: null, score: 50 };
-    obj[1] = MessageEmbedTypes /* MessageEmbedTypes */.ICYMIItemTypes.RECOMMENDED_GUILDS;
+    obj[1] = MessageEmbedTypes.ICYMIItemTypes.RECOMMENDED_GUILDS;
     closure_34[obj.id] = obj;
     closure_33[obj.id] = obj;
     if (0 === items1.length) {
@@ -426,7 +426,7 @@ function getNewUnreadItems(arr9, channelId) {
     let tmp2 = nextResult;
     let tmp3 = require;
     let tmp4 = dependencyMap;
-    if (nextResult.type !== MessageEmbedTypes /* MessageEmbedTypes */.ICYMIItemTypes.RECOMMENDED_GUILDS) {
+    if (nextResult.type !== MessageEmbedTypes.ICYMIItemTypes.RECOMMENDED_GUILDS) {
       let tmp15 = nextResult;
       if (!set.has(tmp2.id)) {
         let tmp5 = store3;
@@ -563,7 +563,7 @@ function handleReaction(colors) {
   ({ emoji, reactionType } = colors);
   if (null == dependencyMap[colors.messageId]) {
     return false;
-  } else if (tmp3.type !== MessageEmbedTypes /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE) {
+  } else if (tmp3.type !== MessageEmbedTypes.ICYMIItemTypes.MESSAGE) {
     return false;
   } else {
     const tmp5 = store.getId() === tmp2;
@@ -765,7 +765,7 @@ prototype["getMessage"] = function getMessage(arg0) {
   let message = null;
   if (null != dependencyMap[arg0]) {
     message = null;
-    if (tmp.type === MessageEmbedTypes /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE) {
+    if (tmp.type === MessageEmbedTypes.ICYMIItemTypes.MESSAGE) {
       message = tmp.message;
     }
   }
@@ -792,22 +792,22 @@ prototype["getMissingItems"] = function getMissingItems() {
 prototype["customMuted"] = function customMuted(id, id) {
   const self = this;
   const customGuildScore = this.getCustomGuildScore(id);
-  let tmp4 = customGuildScore === generateHydrationId /* generateHydrationId */.ICYMICustomScore.MUTED;
+  let tmp4 = customGuildScore === generateHydrationId.ICYMICustomScore.MUTED;
   if (!tmp4) {
     const customChannelScore = self.getCustomChannelScore(id, id);
-    tmp4 = customChannelScore === generateHydrationId /* generateHydrationId */.ICYMICustomScore.MUTED;
+    tmp4 = customChannelScore === generateHydrationId.ICYMICustomScore.MUTED;
   }
   return tmp4;
 };
 prototype["getCustomChannelScore"] = function getCustomChannelScore(guild_id, id) {
   if (null != dependencyMap2[guild_id]) {
     if (null != dependencyMap2[guild_id][id]) {
-      let UNKNOWN = generateHydrationId /* generateHydrationId */.numberToCustomScore(dependencyMap2[guild_id][id]);
-      const obj = generateHydrationId /* generateHydrationId */;
+      let UNKNOWN = generateHydrationId.numberToCustomScore(dependencyMap2[guild_id][id]);
+      const obj = generateHydrationId;
     }
     return UNKNOWN;
   }
-  UNKNOWN = generateHydrationId /* generateHydrationId */.ICYMICustomScore.UNKNOWN;
+  UNKNOWN = generateHydrationId.ICYMICustomScore.UNKNOWN;
 };
 prototype["getCustomGuildScore"] = function getCustomGuildScore(id) {
   let num = table2[id];
@@ -1322,7 +1322,7 @@ const iCYMIStore = new ICYMIStore(require("dispatcher"), {
   MESSAGE_REACTION_ADD_MANY: function handleReactionBatch(arg0) {
     if (null == dependencyMap[arg0.messageId]) {
       return false;
-    } else if (tmp2.type !== MessageEmbedTypes /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE) {
+    } else if (tmp2.type !== MessageEmbedTypes.ICYMIItemTypes.MESSAGE) {
       return false;
     } else {
       const message = tmp2.message;
@@ -1333,7 +1333,7 @@ const iCYMIStore = new ICYMIStore(require("dispatcher"), {
   MESSAGE_REACTION_REMOVE_ALL: function handleRemoveAllReactions(arg0) {
     let tmp2 = null != tmp;
     if (tmp2) {
-      const tmp5 = tmp.type === MessageEmbedTypes /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE;
+      const tmp5 = tmp.type === MessageEmbedTypes.ICYMIItemTypes.MESSAGE;
       if (tmp5) {
         const message = tmp.message;
         tmp.message = message.set("reactions", []);
@@ -1345,7 +1345,7 @@ const iCYMIStore = new ICYMIStore(require("dispatcher"), {
   MESSAGE_REACTION_REMOVE_EMOJI: function handleRemoveEmojiReactions(arg0) {
     let tmp3 = null != tmp2;
     if (tmp3) {
-      const tmp6 = tmp2.type === MessageEmbedTypes /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE;
+      const tmp6 = tmp2.type === MessageEmbedTypes.ICYMIItemTypes.MESSAGE;
       if (tmp6) {
         const message = tmp2.message;
         tmp2.message = message.removeReactionsForEmoji(tmp);

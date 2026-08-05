@@ -11,5 +11,5 @@ export default function FreeFormLabel(arg0) {
   let nativeID;
   let style;
   ({ children, style, nativeID } = arg0);
-  return jsx(Text /* Text */.Text, { style, variant: "text-sm/semibold", color: "text-muted", nativeID, children });
+  return jsx(Text.Text, { style, variant: "text-sm/semibold", color: "text-muted", nativeID, children });
 };

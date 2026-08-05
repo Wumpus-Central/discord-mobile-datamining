@@ -103,7 +103,7 @@ class QuestFetchManager extends tmp2 {
   }
 }
 QuestFetchManager.prototype["_fetch"] = function _fetch(arg0) {
-  let obj = getIsEligibleForQuests /* getIsEligibleForQuests */;
+  let obj = getIsEligibleForQuests;
   let isEligibleForQuests = obj.getIsEligibleForQuests();
   if (isEligibleForQuests) {
     isEligibleForQuests = !initializeState.isFetchingCurrentQuests;

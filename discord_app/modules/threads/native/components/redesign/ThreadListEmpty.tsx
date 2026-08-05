@@ -25,17 +25,17 @@ const memoResult = require("noop").memo((onCreateThreadPress) => {
   obj = { style: tmp.iconWrapper, children: null };
   obj = { source: null, size: null };
   obj[0] = registerAsset;
-  obj[1] = Button /* Button */.Icon.Sizes.MEDIUM;
-  obj[1] = callback(Button /* Button */.Icon, obj);
+  obj[1] = Button.Icon.Sizes.MEDIUM;
+  obj[1] = callback(Button.Icon, obj);
   const items = [callback(View, obj), , , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[5] = intl.string(getSystemLocale /* getSystemLocale */.t.HgTQ8p);
-  items[1] = callback(Text /* Text */.Text, obj1);
+  const intl = getSystemLocale.intl;
+  obj1[5] = intl.string(getSystemLocale.t.HgTQ8p);
+  items[1] = callback(Text.Text, obj1);
   const obj2 = { style: tmp.subtext, maxFontSizeMultiplier: 2, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.jmq9GC);
-  items[2] = callback(Text /* Text */.Text, obj2);
+  const intl2 = getSystemLocale.intl;
+  obj2[4] = intl2.string(getSystemLocale.t.jmq9GC);
+  items[2] = callback(Text.Text, obj2);
   let tmp4Result = null != onCreateThreadPress;
   if (tmp4Result) {
     const obj3 = { onPress: null, text: null };

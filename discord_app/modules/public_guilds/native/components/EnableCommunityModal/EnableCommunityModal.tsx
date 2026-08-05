@@ -13,13 +13,13 @@ function onModalClose() {
   EnableCommunityModalActionCreators.close();
 }
 function HeaderBackButton(arg0) {
-  useNavigatorBackPressHandler /* useNavigatorBackPressHandler */.useNavigatorBackPressHandler(() => {
+  useNavigatorBackPressHandler.useNavigatorBackPressHandler(() => {
     callback(table[2]).close();
     return true;
   });
-  const obj = useNavigatorBackPressHandler /* useNavigatorBackPressHandler */;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return HeaderBackImage /* HeaderBackImage */.getHeaderTextButton(intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]), onModalClose)(arg0);
+  const obj = useNavigatorBackPressHandler;
+  const intl = getSystemLocale.intl;
+  return HeaderBackImage.getHeaderTextButton(intl.string(getSystemLocale.t["13/7kX"]), onModalClose)(arg0);
 }
 const result = require("module_16621").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/EnableCommunityModal.tsx");
 
@@ -64,8 +64,8 @@ export default function EnableCommunityModal() {
     return { [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_1]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_2]: obj, [closure_0(closure_2[8]).EnableCommunityModalSteps.STEP_3]: obj };
   }, []);
   let obj = { screens: memo, initialRouteName: null, headerBackTitle: null };
-  obj[1] = EnableCommunityModalSteps /* EnableCommunityModalSteps */.EnableCommunityModalSteps.STEP_1;
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
-  return jsx(NavigationStack /* NavigationStack */.Navigator, { screens: memo, initialRouteName: null, headerBackTitle: null });
+  obj[1] = EnableCommunityModalSteps.EnableCommunityModalSteps.STEP_1;
+  let intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
+  return jsx(NavigationStack.Navigator, { screens: memo, initialRouteName: null, headerBackTitle: null });
 };

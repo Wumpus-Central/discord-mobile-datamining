@@ -46,7 +46,7 @@ const memoResult = importAllResult.memo((arg0) => {
   let onFocusMessage;
   let setMessagePosition;
   ({ onFocusMessage, setMessagePosition } = arg0);
-  let obj = NativeGiftContextProvider /* NativeGiftContextProvider */;
+  let obj = NativeGiftContextProvider;
   const nativeGiftContext = obj.useNativeGiftContext();
   obj = { onFocusMessage, setMessagePosition, customGiftMessage: nativeGiftContext.customGiftMessage, setCustomGiftMessage: nativeGiftContext.setCustomGiftMessage };
   return <GiftCustomMessage onFocusMessage={onFocusMessage} setMessagePosition={setMessagePosition} customGiftMessage={nativeGiftContext.customGiftMessage} setCustomGiftMessage={nativeGiftContext.setCustomGiftMessage} />;

@@ -32,8 +32,8 @@ function buildStageChannelUserRoles(id, closure_0, flag) {
       if (channel.isGuildStageVoice()) {
         let obj = {};
         voiceStateForChannel = voiceStateForChannel.getVoiceStateForChannel(closure_0, id);
-        const audienceRequestToSpeakState = useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.getAudienceRequestToSpeakState(voiceStateForChannel);
-        obj[obj.SPEAKER] = audienceRequestToSpeakState === useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.RequestToSpeakStates.ON_STAGE;
+        const audienceRequestToSpeakState = useAudienceRequestToSpeakState.getAudienceRequestToSpeakState(voiceStateForChannel);
+        obj[obj.SPEAKER] = audienceRequestToSpeakState === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;
         let canResult = null;
         if (flag) {
           obj = { permission: null, user: null, context: null, overwrites: null, roles: null };
@@ -47,7 +47,7 @@ function buildStageChannelUserRoles(id, closure_0, flag) {
         }
         obj[obj.MODERATOR] = canResult;
         let tmp4 = obj;
-        const obj3 = useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */;
+        const obj3 = useAudienceRequestToSpeakState;
         tmp8 = require;
       }
       dependencyMap[closure_0][id] = tmp4;
@@ -155,7 +155,7 @@ prototype["getPermissionsForUser"] = function getPermissionsForUser(id, closure_
         id = currentUser.id;
       }
       if (id === id) {
-        const obj = useIsStageSpeakingDisabledForCurrentUser /* useIsStageSpeakingDisabledForCurrentUser */;
+        const obj = useIsStageSpeakingDisabledForCurrentUser;
         if (obj.isStageSpeakingDisabledForCurrentUser()) {
           return obj;
         }

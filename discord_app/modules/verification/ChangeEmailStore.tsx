@@ -50,5 +50,5 @@ export const setEmailToken = function setEmailToken(arg0) {
   _batchUpdates.batchUpdates(() => outer1_3.setState({ emailToken: closure_0 }));
 };
 export const resetChangeEmailStore = function resetChangeEmailStore() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState(closure_2, true));
+  batchUpdates.batchUpdates(() => state.setState(closure_2, true));
 };

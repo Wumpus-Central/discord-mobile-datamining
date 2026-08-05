@@ -296,7 +296,7 @@ function MarkupBlockQuote(state) {
     textColor = state.textColor;
   }
   obj[1] = textColor;
-  obj[2] = smartOutput /* smartOutput */.smartOutput(node, output, state);
+  obj[2] = smartOutput.smartOutput(node, output, state);
   return closure_16(MarkupText, obj, state.key);
 }
 function MarkupInlineCode(arg0) {
@@ -362,7 +362,7 @@ function MarkupCodeBlock(state) {
     textColor = state.textColor;
   }
   obj[1] = textColor;
-  const items = [smartOutput /* smartOutput */.smartOutput(node, output, state), "\n"];
+  const items = [smartOutput.smartOutput(node, output, state), "\n"];
   obj[2] = items;
   return closure_17(MarkupText, obj, state.key);
 }
@@ -370,9 +370,9 @@ function MarkupCustomEmoji(styles) {
   let node;
   let state;
   ({ state, node } = styles);
-  const AnimateEmoji = explicitContentFromProto /* explicitContentFromProto */.AnimateEmoji;
+  const AnimateEmoji = explicitContentFromProto.AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (node.src) {
@@ -1251,8 +1251,8 @@ export const plainMentionRenderer = function plainMentionRenderer(content, outpu
   if (typeof content.content === "string") {
     content = content.content;
   } else {
-    content = smartOutput /* smartOutput */.smartOutput(content, output, state);
-    const obj = smartOutput /* smartOutput */;
+    content = smartOutput.smartOutput(content, output, state);
+    const obj = smartOutput;
   }
   return content;
 };

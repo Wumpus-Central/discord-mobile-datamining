@@ -34,7 +34,7 @@ export const areClipsAvailable = function areClipsAvailable() {
 export const useIsClipsAvailable = function useIsClipsAvailable() {
   const tmp = isClientClipsCapable(_detectH265HardwareDecode);
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let premiumType;
     if (currentUser != null) {
@@ -42,7 +42,7 @@ export const useIsClipsAvailable = function useIsClipsAvailable() {
     }
     return callback(table[6]).isPremiumAtLeast(premiumType, TIER_2.TIER_2);
   });
-  const obj = initialize /* initialize */;
+  const obj = initialize;
   return (apexExperiment.getConfig({ location: "useEnableClips" }).enableClips || stateFromStores) && tmp;
 };
 export const isUserPremiumTypeForClipsEarlyAccess = function isUserPremiumTypeForClipsEarlyAccess(premiumType) {

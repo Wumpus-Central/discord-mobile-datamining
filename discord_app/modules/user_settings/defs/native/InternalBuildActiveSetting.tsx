@@ -14,8 +14,8 @@ createToggle = {
     return "Build installed from builds.discord.tools";
   },
   usePredicate: function useHasCheckNativeUpdateSetting() {
-    const obj = useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */;
-    return hasUpdatesConfigured.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate /* useStaffOrDeveloperSettingPredicate */.useStaffOrDeveloperSettingPredicate();
+    const obj = useStaffOrDeveloperSettingPredicate;
+    return hasUpdatesConfigured.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   }
 };
 createToggle = createToggle.createStatic(createToggle);

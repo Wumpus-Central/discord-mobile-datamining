@@ -10,9 +10,9 @@ export const dismissChannelSafetyWarnings = function dismissChannelSafetyWarning
   let obj = dispatcher;
   obj = { type: "DISMISS_CHANNEL_SAFETY_WARNINGS", channelId, warningIds: items };
   obj.dispatch(obj);
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(channelId), body: obj1, oldFormErrors: true, rejectWithError: null };
-  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[3] = sendRequest.rejectWithMigratedError();
   return HTTP.post(obj);
 };
 export const setChannelSafetyWarningFeedback = function setChannelSafetyWarningFeedback(channelId, warningId, feedbackType) {
@@ -31,15 +31,15 @@ export const acknowledgeChannelSafetyWarningTooltip = function acknowledgeChanne
   obj.dispatch(obj);
 };
 export const reportFalsePositive = function reportFalsePositive(arg0) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   const obj = { url: Endpoints.SAFETY_WARNING_FALSE_POSITIVE(arg0), rejectWithError: null };
-  obj[1] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[1] = sendRequest.rejectWithMigratedError();
   return HTTP.post(obj);
 };
 export const markAsStrangerDanger = function markAsStrangerDanger(id) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: Endpoints.ADD_SAFETY_WARNING(id), body: obj, rejectWithError: null };
   obj = { safety_warning_type: SafetyWarningTypes.STRANGER_DANGER };
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.post(obj);
 };

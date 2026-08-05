@@ -50,7 +50,7 @@ function Tags(tags) {
     obj = { size: "sm", style: null };
     obj[1] = tmp.tagIcon;
     let items = [
-      callback(TagIcon /* TagIcon */.TagIcon, obj),
+      callback(TagIcon.TagIcon, obj),
       tags.map((id) => {
           let tmp2 = 0 !== arg1;
           if (tmp2) {

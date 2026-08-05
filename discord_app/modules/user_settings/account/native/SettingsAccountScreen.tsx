@@ -136,7 +136,7 @@ function AccountSecurityPage() {
   return callback2(SettingLayout, { node });
 }
 function AccountStandingPage() {
-  return callback2(AutomatedUnderageAppealStatus /* AutomatedUnderageAppealStatus */.default, { visible: true });
+  return callback2(AutomatedUnderageAppealStatus.default, { visible: true });
 }
 let c4 = importAllResult;
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
@@ -158,7 +158,7 @@ const memoResult = importAllResult.memo(() => {
   callback = importAllResult.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj = useSettingNavigationRoute /* useSettingNavigationRoute */;
+  let obj = useSettingNavigationRoute;
   const params = obj.useSettingNavigationRoute().params;
   let initialTab;
   if (params != null) {
@@ -168,15 +168,15 @@ const memoResult = importAllResult.memo(() => {
   obj = { items: null, pageWidth: null, defaultIndex: null, onSetActiveIndex: null };
   obj = { label: null, id: null, page: null };
   const intl = tmp5(1236).intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.Am9YHi);
+  obj[0] = intl.string(getSystemLocale.t.Am9YHi);
   obj[1] = AccountSettingsTabs.SECURITY;
   obj[2] = callback2(AccountSecurityPage, {});
   const items = [obj, ];
   const obj1 = { label: null, id: null, page: null };
   const intl2 = tmp5(1236).intl;
-  obj1[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["00Sfl/"]);
+  obj1[0] = intl2.string(getSystemLocale.t["00Sfl/"]);
   obj1[1] = AccountSettingsTabs.STANDING;
-  const tmp5Result = useSegmentedControlState /* useSegmentedControlState */;
+  const tmp5Result = useSegmentedControlState;
   obj1[2] = callback2(View, { style: tmp.standingPage, children: callback2(AccountStandingPage, {}) });
   items[1] = obj1;
   obj[0] = items;
@@ -197,9 +197,9 @@ const memoResult = importAllResult.memo(() => {
   const segmentedControlState = tmp5Result.useSegmentedControlState(obj);
   const obj3 = { children: null };
   const obj2 = { style: tmp.standingPage, children: callback2(AccountStandingPage, {}) };
-  const items1 = [callback2(View, { style: tmp.controlContainer, onLayout: callback, children: callback2(SegmentedControl /* SegmentedControl */.SegmentedControl, { state: segmentedControlState }) }), ];
-  const obj4 = { style: tmp.controlContainer, onLayout: callback, children: callback2(SegmentedControl /* SegmentedControl */.SegmentedControl, { state: segmentedControlState }) };
-  items1[1] = callback2(View, { style: tmp.pageContainer, children: callback2(SegmentedControlPage /* SegmentedControlPage */.SegmentedControlPages, { state: segmentedControlState }) });
+  const items1 = [callback2(View, { style: tmp.controlContainer, onLayout: callback, children: callback2(SegmentedControl.SegmentedControl, { state: segmentedControlState }) }), ];
+  const obj4 = { style: tmp.controlContainer, onLayout: callback, children: callback2(SegmentedControl.SegmentedControl, { state: segmentedControlState }) };
+  items1[1] = callback2(View, { style: tmp.pageContainer, children: callback2(SegmentedControlPage.SegmentedControlPages, { state: segmentedControlState }) });
   obj3[0] = items1;
   return callback3(closure_13, obj3);
 });

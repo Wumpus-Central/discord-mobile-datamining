@@ -28,7 +28,7 @@ const require = arg1;
 ({ PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID: closure_6, PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID: error, PREMIUM_TIER_2_ANNUAL_V2_20_PERCENT_DISCOUNT_ID: metroImportAll, PREMIUM_TIER_2_ANNUAL_V2_30_PERCENT_DISCOUNT_ID: c9, PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: c10, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: unpackModuleId, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID: closure_12, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID: map1, PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID: closure_14, PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID: closure_15, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID: closure_16, PREMIUM_GROUP_30_PERCENT_3_MONTH_DISCOUNT_ID: closure_17 } = GuildFeatures);
 function useHasDiscountApplied() {
   const items = [reset];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => store.getPremiumTypeSubscription());
+  const stateFromStores = initialize.useStateFromStores(items, () => store.getPremiumTypeSubscription());
   let prop;
   if (stateFromStores != null) {
     const metadata = stateFromStores.metadata;
@@ -48,18 +48,18 @@ function useHasDiscountApplied() {
 const result = require("reset").fileFinishedImporting("modules/premium/PremiumSubscriptionOfferUtil.tsx");
 
 export const useIsInPremiumOfferExperience = function useIsInPremiumOfferExperience() {
-  const premiumTrialOffer = usePremiumTrialOffer /* usePremiumTrialOffer */.usePremiumTrialOffer();
-  const obj = usePremiumTrialOffer /* usePremiumTrialOffer */;
+  const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
+  const obj = usePremiumTrialOffer;
   const tmp = require;
-  const hasActiveTrial = useHasActiveTrial /* useHasActiveTrial */.useHasActiveTrial();
-  const obj2 = useHasActiveTrial /* useHasActiveTrial */;
-  const premiumDiscountOffer = usePremiumDiscountOffer /* usePremiumDiscountOffer */.usePremiumDiscountOffer();
-  const obj3 = usePremiumDiscountOffer /* usePremiumDiscountOffer */;
-  const premiumGroupDiscountOffer = usePremiumDiscountOffer /* usePremiumDiscountOffer */.usePremiumGroupDiscountOffer();
+  const hasActiveTrial = useHasActiveTrial.useHasActiveTrial();
+  const obj2 = useHasActiveTrial;
+  const premiumDiscountOffer = usePremiumDiscountOffer.usePremiumDiscountOffer();
+  const obj3 = usePremiumDiscountOffer;
+  const premiumGroupDiscountOffer = usePremiumDiscountOffer.usePremiumGroupDiscountOffer();
   if (typeof useHasDiscountApplied !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj4 = usePremiumDiscountOffer /* usePremiumDiscountOffer */;
+  const obj4 = usePremiumDiscountOffer;
   const items = [reset];
   const stateFromStores = tmp(589).useStateFromStores(items, () => store.getPremiumTypeSubscription());
   let prop;
@@ -80,7 +80,7 @@ export const useIsInPremiumOfferExperience = function useIsInPremiumOfferExperie
 };
 export { useHasDiscountApplied };
 export const useActiveDiscountInfo = function useActiveDiscountInfo() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [reset];
   const stateFromStores = obj.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
   let discountId;
@@ -171,7 +171,7 @@ export const useFetchChurnUserDiscountOffer = function useFetchChurnUserDiscount
     }
     if (!tmp11) {
       tmp8(true);
-      obj = _fetchUserOffer /* _fetchUserOffer */;
+      obj = _fetchUserOffer;
       const churnDiscountOffer = obj.fetchChurnDiscountOffer();
       churnDiscountOffer.then((arg0) => {
         callback2(arg0);
@@ -196,15 +196,15 @@ export const useFetchChurnUserDiscountOffer = function useFetchChurnUserDiscount
 };
 export const useShouldFetchChurnOffer = function useShouldFetchChurnOffer() {
   const items = [reset];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => store.getPremiumTypeSubscription());
+  const stateFromStores = initialize.useStateFromStores(items, () => store.getPremiumTypeSubscription());
   if (typeof useHasDiscountApplied !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj = initialize /* initialize */;
+  const obj = initialize;
   const tmp = require;
   const tmp3 = reset;
   const items1 = [tmp3];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => store.getPremiumTypeSubscription());
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => store.getPremiumTypeSubscription());
   let prop;
   if (stateFromStores1 != null) {
     const metadata = stateFromStores1.metadata;
@@ -262,5 +262,5 @@ export const renewalInvoiceChurnDiscountInfo = function renewalInvoiceChurnDisco
   return null;
 };
 export const useIsNUXEligible = function useIsNUXEligible() {
-  return useIsInReverseTrial /* useIsInReverseTrial */.useIsInReverseTrial();
+  return useIsInReverseTrial.useIsInReverseTrial();
 };

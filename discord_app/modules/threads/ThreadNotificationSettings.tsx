@@ -53,7 +53,7 @@ function computeThreadNotificationSetting(channel) {
         }
       }
     }
-    obj6 = hasFlag /* hasFlag */;
+    obj6 = hasFlag;
   }
 }
 let result = require("storeThread").fileFinishedImporting("modules/threads/ThreadNotificationSettings.tsx");

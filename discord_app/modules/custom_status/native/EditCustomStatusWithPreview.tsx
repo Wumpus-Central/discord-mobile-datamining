@@ -24,16 +24,16 @@ let unpackModuleId;
 const require = arg1;
 function ClearInputButton(onPress) {
   let obj = { style: { borderRadius: 10, paddingLeft: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.VkKicb);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.VkKicb);
   obj[3] = onPress.onPress;
   obj[4] = { top: 8, bottom: 8, right: 8 };
   obj = { source: null, style: null, size: null };
   obj[0] = registerAsset;
   obj[1] = createCacheKey().closeIcon;
-  obj[2] = Button /* Button */.Icon.Sizes.SMALL;
-  obj[5] = callback(Button /* Button */.Icon, obj);
-  return callback(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[2] = Button.Icon.Sizes.SMALL;
+  obj[5] = callback(Button.Icon, obj);
+  return callback(PressableBase.PressableOpacity, obj);
 }
 function EditCustomStatusWithPreview(navigation) {
   navigation = navigation.navigation;

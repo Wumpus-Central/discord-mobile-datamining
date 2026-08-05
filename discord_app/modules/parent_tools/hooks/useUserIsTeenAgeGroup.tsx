@@ -7,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/
 
 export default function useUserIsTeenAgeGroup() {
   const items = [freshTeenActivityWithMap];
-  return "teen" === initialize /* initialize */.useStateFromStores(items, () => ageGroup.getAgeGroup());
+  return "teen" === initialize.useStateFromStores(items, () => ageGroup.getAgeGroup());
 };

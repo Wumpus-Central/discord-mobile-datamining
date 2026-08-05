@@ -35,7 +35,7 @@ export const isMidjourneyOnboardingFlow = function isMidjourneyOnboardingFlow() 
 };
 export const useIsMidjourneyOnboardingFlow = function useIsMidjourneyOnboardingFlow() {
   const items = [createGuildRecordFromRust];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     let guildStore = { guildStore: createGuildRecordFromRust }.guildStore;
     if (guildStore == null) {
       guildStore = createGuildRecordFromRust;

@@ -75,19 +75,19 @@ export const EditCollectiblesListItemNone = function EditCollectiblesListItemNon
   const merged = Object.assign(asDefault);
   obj = { source: null, size: null };
   obj[0] = registerAsset;
-  obj[1] = Button /* Button */.IconSizes.LARGE;
-  const items = [callback(Button /* Button */.Icon, obj), ];
+  obj[1] = Button.IconSizes.LARGE;
+  const items = [callback(Button.Icon, obj), ];
   obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (asDefault.asDefault) {
     let stringResult = string(t.CHf9iJ);
   } else {
     stringResult = string(t.PoWNfe);
   }
   obj[3] = stringResult;
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj.children = items;
   return closure_8(EditCollectibleListItem, obj);
 };
@@ -131,16 +131,16 @@ export const EditCollectiblesListItemProduct = function EditCollectiblesListItem
   ({ isSelected, isTryItOut, children } = skuId);
   const merged = Object.assign(skuId, Object.create(null));
   const tmp2 = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj1 = getPremiumPlanItem;
   const canUseCollectiblesResult = obj1.canUseCollectibles(stateFromStores);
   ({ purchase, product } = useCollectiblesData(skuId));
   const tmp7 = useCollectiblesData(skuId);
-  const isProductNewResult = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */.isProductNew(skuId);
-  const obj3 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
-  let result = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */.isPremiumCollectiblesProduct(product);
+  const isProductNewResult = getItemRecordsFromPurchases.isProductNew(skuId);
+  const obj3 = getItemRecordsFromPurchases;
+  let result = getItemRecordsFromPurchases.isPremiumCollectiblesProduct(product);
   if (!result) {
     result = tmp3(6922).isPremiumCollectiblesPurchase(purchase);
     const tmp3Result = tmp3(6922);

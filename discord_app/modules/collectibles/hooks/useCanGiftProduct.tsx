@@ -8,17 +8,17 @@ import { useCurrentUser } from "useCurrentUser.tsx";
 let result = require("getItemRecordsFromPurchases").fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 
 export const useCanGiftProduct = function useCanGiftProduct(product) {
-  const currentUser = useCurrentUser /* useCurrentUser */.useCurrentUser();
-  const obj = useCurrentUser /* useCurrentUser */;
-  const isProfileFrameGiftingEnabled = apexExperiment /* apexExperiment */.useIsProfileFrameGiftingEnabled("useCanGiftProduct");
-  const obj2 = apexExperiment /* apexExperiment */;
-  let result = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */.isPremiumCollectiblesProduct(product);
-  const obj3 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
-  const result1 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */.isFreeCollectiblesProduct(product);
-  const obj4 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
-  const result2 = getProductOrbPrice /* getProductOrbPrice */.isOrbsExclusiveProduct(product);
-  const obj5 = getProductOrbPrice /* getProductOrbPrice */;
-  const tmp8 = product.type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_FRAME && !isProfileFrameGiftingEnabled;
+  const currentUser = useCurrentUser.useCurrentUser();
+  const obj = useCurrentUser;
+  const isProfileFrameGiftingEnabled = apexExperiment.useIsProfileFrameGiftingEnabled("useCanGiftProduct");
+  const obj2 = apexExperiment;
+  let result = getItemRecordsFromPurchases.isPremiumCollectiblesProduct(product);
+  const obj3 = getItemRecordsFromPurchases;
+  const result1 = getItemRecordsFromPurchases.isFreeCollectiblesProduct(product);
+  const obj4 = getItemRecordsFromPurchases;
+  const result2 = getProductOrbPrice.isOrbsExclusiveProduct(product);
+  const obj5 = getProductOrbPrice;
+  const tmp8 = product.type === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME && !isProfileFrameGiftingEnabled;
   const obj6 = getPremiumPlanItem;
   let tmpResult = tmp(6922);
   const defaultPriceSetAssignmentPurchaseType = tmpResult.getDefaultPriceSetAssignmentPurchaseType(getPremiumPlanItem.canUseShopDiscounts(currentUser));

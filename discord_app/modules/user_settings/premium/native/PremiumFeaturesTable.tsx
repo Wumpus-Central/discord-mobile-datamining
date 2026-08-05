@@ -24,7 +24,7 @@ let metroImportAll;
 let unpackModuleId;
 const require = arg1;
 function CheckIcon() {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   const tmp = importDefault;
   const tmp3 = useTheme();
   const unsafe_rawColors = Themes.unsafe_rawColors;
@@ -32,18 +32,18 @@ function CheckIcon() {
   obj = { source: null, color: null, size: null };
   obj[0] = tmp(12653);
   obj[1] = obj.isThemeDark(useTheme()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
-  obj[2] = Button /* Button */.IconSizes.SMALL;
-  return callback2(Button /* Button */.Icon, obj);
+  obj[2] = Button.IconSizes.SMALL;
+  return callback2(Button.Icon, obj);
 }
 function CloseIcon() {
   const obj = { source: null, style: null, size: null };
   obj[0] = registerAsset;
   obj[1] = callback3().icon;
-  obj[2] = Button /* Button */.IconSizes.SMALL;
-  return callback2(Button /* Button */.Icon, obj);
+  obj[2] = Button.IconSizes.SMALL;
+  return callback2(Button.Icon, obj);
 }
 function CellText(children) {
-  return callback2(Text /* Text */.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.text });
+  return callback2(Text.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.text });
 }
 function Row(withTopBorderRadius) {
   let column1;

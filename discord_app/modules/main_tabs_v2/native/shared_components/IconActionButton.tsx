@@ -51,7 +51,7 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   obj[8] = { position: "absolute", right: -2, top: -1 };
   obj = { color: tmp4(712).colors.BACKGROUND_BASE_LOW };
   obj[9] = obj;
-  obj3 = set /* set */;
+  obj3 = set;
   obj[10] = { position: "relative", marginLeft: Themes.space.PX_8 };
   return obj;
 });
@@ -110,7 +110,7 @@ export default function IconActionButton(variant) {
   ({ noMargin, hitSlop, disabled, onPress, onLongPress } = variant);
   const tmp2 = useIsMobileVisualRefreshExperimentEnabled("IconActionButton");
   const tmp3 = callback2(tmp2);
-  getFontScale /* getFontScale */;
+  getFontScale;
   let tmp11Result = null != buttonText;
   if (tmp11Result) {
     tmp11Result = tmp6 <= 1.2;
@@ -152,7 +152,7 @@ export default function IconActionButton(variant) {
   }
   items1[3] = badge;
   obj[7] = items1;
-  return closure_5(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return closure_5(PressableBase.PressableOpacity, obj);
 };
 export const ICON_ACTION_BUTTON_SIZE = 32;
 export { ButtonBadge };

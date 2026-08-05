@@ -55,8 +55,8 @@ export default function FormCTA(arg0) {
     const items1 = [tmp.icon, iconStyle];
     obj[0] = items1;
     obj[1] = iconSource;
-    obj[2] = Button /* Button */.Icon.Sizes.CUSTOM;
-    obj[1] = jsx(Button /* Button */.Icon, { style: null, source: null, size: null, disableColor: true });
+    obj[2] = Button.Icon.Sizes.CUSTOM;
+    obj[1] = jsx(Button.Icon, { style: null, source: null, size: null, disableColor: true });
     tmp3Result = tmp3(View, obj);
     const tmp4 = View;
   }
@@ -104,7 +104,7 @@ export default function FormCTA(arg0) {
     }
     obj1[6] = trailing;
     obj1[7] = tmp3Result;
-    jsx(RowButtonWrapper /* RowButtonWrapper */.RowButton, { arrow: false, onPress: null, onLongPress: null, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null });
+    jsx(RowButtonWrapper.RowButton, { arrow: false, onPress: null, onLongPress: null, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null });
     tmp17 = importDefault;
   } else {
     const obj5 = { start: true, end: true, variant: null, onPress: null, onLongPress: null, DEPRECATED_style: null, accessibilityState: null, label: null, subLabel: null, trailing: null, leading: null };
@@ -129,7 +129,7 @@ export default function FormCTA(arg0) {
     obj5[7] = jsx(FormRow.Label, { style: null, text: null });
     obj5[8] = tmp9Result;
     if (completed) {
-      let tmp20Result = tmp20(FormCheckbox /* FormCheckbox */.FormCheckbox, { checked: true });
+      let tmp20Result = tmp20(FormCheckbox.FormCheckbox, { checked: true });
     } else {
       tmp20Result = trailing;
       if (trailing == null) {

@@ -36,8 +36,8 @@ export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
   const application = store.getApplication(appId);
   if (null == application) {
     if (false === obj.isFetchingApplication(appId)) {
-      const application1 = fetchApplication /* fetchApplication */.fetchApplication(appId);
-      const obj6 = fetchApplication /* fetchApplication */;
+      const application1 = fetchApplication.fetchApplication(appId);
+      const obj6 = fetchApplication;
     }
     return { state: "unavailable" };
   } else {
@@ -47,9 +47,9 @@ export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
       nsfwAllowed = currentUser.nsfwAllowed;
     }
     let messageResult = dependencyMap;
-    let obj1 = ContentClassificationVisibility /* ContentClassificationVisibility */;
+    let obj1 = ContentClassificationVisibility;
     const contentClassificationVisibility = obj1.getContentClassificationVisibility(application.contentClassification, channel, nsfwAllowed);
-    if (contentClassificationVisibility !== ContentClassificationVisibility /* ContentClassificationVisibility */.ContentClassificationVisibility.DISPLAY) {
+    if (contentClassificationVisibility !== ContentClassificationVisibility.ContentClassificationVisibility.DISPLAY) {
       let intl = getEmbedThemeColors(theme).baseColors;
       if (contentClassificationVisibility === tmp3(11260).ContentClassificationVisibility.BLOCK_UNDERAGE) {
         const intl3 = tmp3(1236).intl;
@@ -106,7 +106,7 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
   const baseColors = getEmbedThemeColors(theme).baseColors;
   ({ id, tags, maxParticipants, icon } = app);
   ({ name, bot } = app);
-  let obj = getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */;
+  let obj = getShelfBadgeTypeIfActive;
   const isEmbeddedAppResult = obj.isEmbeddedApp(app);
   if (isEmbeddedAppResult) {
     applicationAssetFetchState = applicationAssetFetchState.getApplicationAssetFetchState(id);
@@ -252,8 +252,8 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
     obj[2] = items;
     obj[3] = id;
     obj[4] = value;
-    const result = _joinOrStartActivityInChannel /* _joinOrStartActivityInChannel */.joinOrStartActivityInChannel(obj);
-    const obj11 = _joinOrStartActivityInChannel /* _joinOrStartActivityInChannel */;
+    const result = _joinOrStartActivityInChannel.joinOrStartActivityInChannel(obj);
+    const obj11 = _joinOrStartActivityInChannel;
   } else if ("play_in_dm" === actionId) {
     let bot;
     if (application != null) {
@@ -265,11 +265,11 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
       obj[1] = application.bot.id;
       const items1 = [tmp2(5630).APP_MESSAGE_EMBED];
       obj[2] = items1;
-      obj[3] = ApplicationCommandSectionType /* ApplicationCommandSectionType */.CommandOrigin.APP_MESSAGE_EMBED;
+      obj[3] = ApplicationCommandSectionType.CommandOrigin.APP_MESSAGE_EMBED;
       obj[4] = id;
       obj[5] = value;
-      const result1 = _launchActivityInBotDM /* _launchActivityInBotDM */.launchActivityInBotDM(obj);
-      const obj15 = _launchActivityInBotDM /* _launchActivityInBotDM */;
+      const result1 = _launchActivityInBotDM.launchActivityInBotDM(obj);
+      const obj15 = _launchActivityInBotDM;
     }
   } else if ("play_frame" === actionId) {
     let obj1 = { applicationId: null };
@@ -277,7 +277,7 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
     tmp2(10510).launchFrame(obj1);
     const tmp2Result = tmp2(10510);
   } else if ("view_in_app_launcher" === actionId) {
-    const bestActiveInput = getBestActiveInput /* getBestActiveInput */.getBestActiveInput();
+    const bestActiveInput = getBestActiveInput.getBestActiveInput();
     if (bestActiveInput != null) {
       let obj2 = { type: null, context: null };
       obj2[0] = tmp14(1579).KeyboardTypes.APP_LAUNCHER;
@@ -289,22 +289,22 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
       obj2[1] = obj3;
       bestActiveInput.openCustomKeyboard(obj2);
     }
-    const obj7 = getBestActiveInput /* getBestActiveInput */;
+    const obj7 = getBestActiveInput;
     tmp14 = require;
   } else if ("add_app" === actionId) {
     if (null != application) {
-      let obj4 = installApplication /* installApplication */;
+      let obj4 = installApplication;
       obj4 = { applicationId: null, customInstallUrl: null, installParams: null, integrationTypesConfig: null, source: "app_message_embed" };
       ({ id: obj6[0], customInstallUrl: obj6[1], installParams: obj6[2], integrationTypesConfig: obj6[3] } = application);
       obj4.installApplication(obj4);
     }
   } else if ("link_copied" === actionId) {
-    obj2 = _copy /* _copy */;
+    obj2 = _copy;
     obj2.copy(appId.embedUrl);
-    obj3 = presentAddedFriendToast /* presentAddedFriendToast */;
+    obj3 = presentAddedFriendToast;
     obj3.presentLinkCopied();
   } else {
-    obj1 = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+    obj1 = isDiscordFrontendDevelopment;
     obj1.assertNever(appId.actionId);
   }
 };

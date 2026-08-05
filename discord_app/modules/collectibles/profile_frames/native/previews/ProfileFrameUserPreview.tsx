@@ -12,13 +12,13 @@ export default function ProfileFrameUserPreview(profileFrame) {
   const merged = Object.assign(profileFrame, Object.create(null));
   let obj = { profileFrameOverride: profileFrame, accessibilityLabel: null };
   if (null != profileFrame) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     obj = { a11y_text: null };
     obj[0] = profileFrame.label;
-    let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["DT/PwH"], obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t["DT/PwH"], obj);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    formatToPlainStringResult = intl.string(getSystemLocale /* getSystemLocale */.t.vQx51z);
+    const intl = getSystemLocale.intl;
+    formatToPlainStringResult = intl.string(getSystemLocale.t.vQx51z);
   }
   obj[1] = formatToPlainStringResult;
   const merged1 = Object.assign(merged);

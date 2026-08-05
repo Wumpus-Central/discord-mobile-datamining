@@ -9,11 +9,11 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/user_se
 
 export default function getSettingsOverrideReason(arg0) {
   if (constants.REDUCED_MOTION === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.format(getSystemLocale /* getSystemLocale */.t["1dT9V4"], {});
+    const intl2 = getSystemLocale.intl;
+    return intl2.format(getSystemLocale.t["1dT9V4"], {});
   } else if (tmp.REDUCED_MOTION_STICKERS === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["2ExvRu"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["2ExvRu"]);
   }
 };
 export const useSettingsOverrideReason = function useSettingsOverrideReason(arg0) {

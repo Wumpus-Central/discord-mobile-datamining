@@ -311,10 +311,10 @@ const memoResult = importAllResult.memo((onOpenRTCDebugOverlay) => {
   if (fullscreenStream) {
     obj = { channel: null };
     obj[0] = channel;
-    fullscreenStream = tmp7(CameraButton /* CameraButton */.GridButton, obj);
+    fullscreenStream = tmp7(CameraButton.GridButton, obj);
   }
   items[3] = fullscreenStream;
-  items[4] = callback(CameraButton /* CameraButton */.CameraButton, {});
+  items[4] = callback(CameraButton.CameraButton, {});
   items[5] = callback(StageInviteButton, { channelId: channel.id });
   items[6] = callback(StageSettingsButton, { channelId: channel.id, onOpenRTCDebugOverlay: onOpenRTCDebugOverlay.onOpenRTCDebugOverlay });
   obj[2] = items;
@@ -326,13 +326,13 @@ export default memoResult;
 export const closeStageModal = function closeStageModal(id) {
   let obj = expandEventProperties;
   obj = { video_layout: "pop out" };
-  const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectVoiceAnalyticsMetadata(id.id));
+  const merged = Object.assign(collectGuildAnalyticsMetadata.collectVoiceAnalyticsMetadata(id.id));
   obj.track(constants.VIDEO_LAYOUT_TOGGLED, obj);
-  const obj3 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+  const obj3 = collectGuildAnalyticsMetadata;
   componentDidMount.setHidden(false);
   const obj4 = componentDidMount;
   const obj5 = ModalActionCreators;
-  obj5.popWithKey(openChannelCallModal /* openChannelCallModal */.getVoiceChannelKey(id.id));
+  obj5.popWithKey(openChannelCallModal.getVoiceChannelKey(id.id));
 };
 export { HideStageChannelCallIcon };
 export { StageChannelCallHeader };

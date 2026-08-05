@@ -24,9 +24,9 @@ const memoResult = require("noop").memo(function ChannelUnreadBadge(panelVariant
     flag = false;
   }
   const tmp = callback();
-  let obj = getLayoutStyles /* getLayoutStyles */;
+  let obj = getLayoutStyles;
   const layoutStyles = obj.getLayoutStyles(layout, launchpad);
-  getFontScale /* getFontScale */;
+  getFontScale;
   let tmp8Result = null;
   if (unread) {
     const items = [tmp.unreadBadge, , , ];

@@ -42,7 +42,7 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
   if (flag == null) {
     flag = false;
   }
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (!tmp2) {
     let obj = { content: null, formatParams: null };
     obj[0] = flag ? t.mPTTdv : t.mYjFFx;
@@ -96,14 +96,14 @@ export const getRoleSubscriptionPurchaseSystemMessageFormattedContent = function
   let content;
   let formatParams;
   ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({ username: username.username, usernameOnClickHandler: username.usernameOnClickHandler, roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler, guildId: username.guildId, roleSubscriptionData: username.roleSubscriptionData }));
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   return intl.format(content, formatParams);
 };
 export const getRoleSubscriptionPurchaseSystemMessageAstFormattedContent = function getRoleSubscriptionPurchaseSystemMessageAstFormattedContent(username) {
   let content;
   let formatParams;
   ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({ username: username.username, usernameOnClickHandler: username.usernameOnClickHandler, roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler, guildId: username.guildId, roleSubscriptionData: username.roleSubscriptionData }));
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   return intl.formatToParts(content, formatParams);
 };
 export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function getRoleSubscriptionPurchaseSystemMessageContentMobile(usernameOnClickHandler) {
@@ -131,7 +131,7 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function ge
   if (flag == null) {
     flag = false;
   }
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (tmp2) {
     if (flag) {
       _N9bxq = t.OQ0OUy;
@@ -168,7 +168,7 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function ge
   }
 };
 export const isEligibleForRoleSubscriptionPurchaseSystemMessageSettings = function isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild) {
-  return useIsCreatorMonetizationEnabledGuild /* useIsCreatorMonetizationEnabledGuild */.isCreatorMonetizationEnabledGuild(guild);
+  return useIsCreatorMonetizationEnabledGuild.isCreatorMonetizationEnabledGuild(guild);
 };
 export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleSubscriptionPurchaseMessageTierClick(guild_id) {
   let obj = collectGuildAnalyticsMetadata;

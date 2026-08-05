@@ -36,10 +36,10 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function getStickersItemLayout(arg0, arg1) {
-  const obj = { length: AutocompleteLabel /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE, offset: null, index: null };
-  const result = arg1 * (AutocompleteLabel /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE + AutocompleteLabel /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN);
+  const obj = { length: AutocompleteLabel.AUTOCOMPLETE_STICKER_NODE_SIZE, offset: null, index: null };
+  const result = arg1 * (AutocompleteLabel.AUTOCOMPLETE_STICKER_NODE_SIZE + AutocompleteLabel.AUTOCOMPLETE_STICKER_NODE_MARGIN);
   const diff = arg1 - 1;
-  obj[1] = result + diff * AutocompleteLabel /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN;
+  obj[1] = result + diff * AutocompleteLabel.AUTOCOMPLETE_STICKER_NODE_MARGIN;
   obj[2] = arg1;
   return obj;
 }
@@ -53,7 +53,7 @@ let c27 = "text-sm/semibold";
 const hairlineWidth = StyleSheet.hairlineWidth;
 let closure_29 = createCacheKey.createStyles((borderRadius, borderWidth, borderTopWidth, marginHorizontal, marginBottom) => {
   let obj = { autocompletePositionRelative: { position: "relative" }, autocompleteWrapper: null, autocompleteWrapperAbsolute: null, autocompleteContainer: null, autocomplete: null, sectionDivider: null, sectionTitle: null, stickersAutocompleteList: null, newTag: null };
-  let obj1 = set /* set */;
+  let obj1 = set;
   let str = "absolute";
   if (obj1.isAndroid()) {
     str = "relative";
@@ -68,8 +68,8 @@ let closure_29 = createCacheKey.createStyles((borderRadius, borderWidth, borderT
   obj[5] = obj1;
   obj[6] = { backgroundColor: Themes.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingLeft: 12, marginVertical: 12, justifyContent: "center" };
   const obj2 = { backgroundColor: Themes.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingLeft: 12, marginVertical: 12, justifyContent: "center" };
-  obj[7] = { paddingLeft: 12 - AutocompleteLabel /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN, marginBottom: 12, height: AutocompleteLabel /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE, flexShrink: 0 };
-  const obj3 = { paddingLeft: 12 - AutocompleteLabel /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_MARGIN, marginBottom: 12, height: AutocompleteLabel /* AutocompleteLabel */.AUTOCOMPLETE_STICKER_NODE_SIZE, flexShrink: 0 };
+  obj[7] = { paddingLeft: 12 - AutocompleteLabel.AUTOCOMPLETE_STICKER_NODE_MARGIN, marginBottom: 12, height: AutocompleteLabel.AUTOCOMPLETE_STICKER_NODE_SIZE, flexShrink: 0 };
+  const obj3 = { paddingLeft: 12 - AutocompleteLabel.AUTOCOMPLETE_STICKER_NODE_MARGIN, marginBottom: 12, height: AutocompleteLabel.AUTOCOMPLETE_STICKER_NODE_SIZE, flexShrink: 0 };
   obj[8] = { backgroundColor: Themes.colors.BADGE_BACKGROUND_BRAND };
   return obj;
 });

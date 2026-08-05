@@ -8,7 +8,7 @@ import { Button } from "../../native.tsx";
 const require = arg1;
 let closure_3 = createCacheKey.createStyles((arg0) => {
   let obj = { primary: null, text: null };
-  obj = { color: result /* result */.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+  obj = { color: result.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
   obj[0] = obj;
   let num = 16;
   if ("small" === arg0) {
@@ -52,7 +52,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   items[2] = size.style;
   obj[1] = items;
   obj[2] = size.children;
-  return jsx(Button /* Button */.LegacyText, { ref, style: null, children: null });
+  return jsx(Button.LegacyText, { ref, style: null, children: null });
 });
 const result = require("createCacheKey").fileFinishedImporting("design/void/Form/native/FormText.tsx");
 

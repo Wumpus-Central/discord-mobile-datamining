@@ -21,17 +21,17 @@ function ConfirmActivityGateContent(activityName) {
   obj = { source: registerAsset, style: tmp.announcementBirb };
   const items = [callback(closure_3, obj), , , ];
   obj = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["06YebE"]);
-  items[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["06YebE"]);
+  items[1] = callback(Text.Text, obj);
   const obj1 = { style: tmp.alertTitleText, variant: "heading-lg/bold", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[2] = intl2.format(getSystemLocale /* getSystemLocale */.t["Z/eMDT"], { activityName: activityName.application.name });
-  items[2] = callback(Text /* Text */.Text, obj1);
+  const intl2 = getSystemLocale.intl;
+  obj1[2] = intl2.format(getSystemLocale.t["Z/eMDT"], { activityName: activityName.application.name });
+  items[2] = callback(Text.Text, obj1);
   const obj3 = { style: tmp.alertSubtitleText, variant: "text-sm/normal", children: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj3[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.z81WwD);
-  items[3] = callback(Text /* Text */.Text, obj3);
+  const intl3 = getSystemLocale.intl;
+  obj3[2] = intl3.string(getSystemLocale.t.z81WwD);
+  items[3] = callback(Text.Text, obj3);
   obj[1] = items;
   return callback2(closure_4, obj);
 }
@@ -45,9 +45,9 @@ function LinkButton() {
     },
     text: null
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.E0gf5l);
-  obj[1] = callback(Button /* Button */.Button, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.E0gf5l);
+  obj[1] = callback(Button.Button, obj);
   return callback(closure_4, obj);
 }
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
@@ -62,11 +62,11 @@ export const confirmExternalAppLaunchAlert = function confirmExternalAppLaunchAl
   ({ application, onConfirm, onCancel } = arg0);
   let obj = set;
   obj = { title: "", children: callback(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["3PatSz"]);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["3PatSz"]);
   obj[4] = onCancel;
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[5] = intl2.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
+  const intl2 = getSystemLocale.intl;
+  obj[5] = intl2.string(getSystemLocale.t["ETE/oC"]);
   obj[6] = callback(LinkButton, {});
   return Promise.resolve(obj.show(obj));
 };

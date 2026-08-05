@@ -230,7 +230,7 @@ function validateClientSession(version) {
   let tmp = null;
   if (null != version) {
     let tmp4 = version;
-    if (version.version !== result /* result */.CLIENT_SESSION_STORAGE_VERSION) {
+    if (version.version !== result.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
       tmp3.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(6840).CLIENT_SESSION_STORAGE_VERSION);
       tmp4 = null;
@@ -328,7 +328,7 @@ function _forceDispatchSessionIdUpdate() {
 function handleAuthenticationChange() {
   const token = importDefaultResult.getToken();
   if (token !== token) {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     Storage.remove(LAST_CLIENT_HEARTBEAT_SESSION);
     let closure_20 = { state: "loaded", session: null };
     if (null == _null) {
@@ -362,7 +362,7 @@ function handleWindowFocus(focused) {
   }
 }
 function handleLocationChange() {
-  const isActiveUserRouteResult = isActiveUserRoute /* isActiveUserRoute */.isActiveUserRoute();
+  const isActiveUserRouteResult = isActiveUserRoute.isActiveUserRoute();
   if (isActiveUserRoute !== isActiveUserRouteResult) {
     isActiveUserRoute = isActiveUserRouteResult;
     scheduleHeartbeatTracking();
@@ -376,9 +376,9 @@ function handleAppStateUpdate(state) {
 }
 function handleFluxInitialized() {
   const state = importDefaultResult1.getState();
-  let closure_22 = isForegrounded /* isForegrounded */.isForegrounded();
-  const obj = isForegrounded /* isForegrounded */;
-  let closure_23 = isActiveUserRoute /* isActiveUserRoute */.isActiveUserRoute();
+  let closure_22 = isForegrounded.isForegrounded();
+  const obj = isForegrounded;
+  let closure_23 = isActiveUserRoute.isActiveUserRoute();
   handleAuthenticationChange();
 }
 function getSession() {
@@ -560,7 +560,7 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
   const obj3 = dispatcher;
   const subscription2 = dispatcher.subscribe("CONNECTION_OPEN", forceDispatchSessionIdUpdate);
   const obj4 = dispatcher;
-  let result = isActiveUserRoute /* isActiveUserRoute */.subscribeToLocationChanges(handleLocationChange);
+  let result = isActiveUserRoute.subscribeToLocationChanges(handleLocationChange);
   scheduleHeartbeatTracking();
   if (null == obj) {
     obj = { id: null, type: "interval" };
@@ -586,7 +586,7 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
 export { getSession };
 export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
   if ("uninitialized" === closure_20.state) {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const value = Storage.get(LAST_CLIENT_HEARTBEAT_SESSION);
     let tmp7 = null;
     if (null != value) {
@@ -608,7 +608,7 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
     if (!obj.isSessionExpired(session)) {
       tmp12 = session;
     }
-    obj = result /* result */;
+    obj = result;
   }
   return tmp12;
 };

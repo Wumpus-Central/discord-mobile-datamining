@@ -52,8 +52,8 @@ const analyticsLogStore = new AnalyticsLogStore(require("dispatcher"), {
       obj[1] = tmp;
       obj[2] = tmp2;
       if (null != fingerprint) {
-        let extractIdResult = extractId /* extractId */.extractId(fingerprint);
-        const obj2 = extractId /* extractId */;
+        let extractIdResult = extractId.extractId(fingerprint);
+        const obj2 = extractId;
       } else {
         extractIdResult = id.getId();
       }
@@ -85,7 +85,7 @@ const analyticsLogStore = new AnalyticsLogStore(require("dispatcher"), {
       const items = [];
       const obj = { key: null, experimentId: null, descriptor: null, exposureType: null, excluded: null, location: null, previouslyTracked: null, timestamp: null };
       const arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
-      obj[0] = v1 /* v1 */.v4();
+      obj[0] = v1.v4();
       obj[1] = experimentId;
       obj[2] = descriptor;
       obj[3] = exposureType;
@@ -97,7 +97,7 @@ const analyticsLogStore = new AnalyticsLogStore(require("dispatcher"), {
       obj[7] = date;
       items[arraySpreadResult] = obj;
       isDeveloper = items.length > 500;
-      const obj2 = v1 /* v1 */;
+      const obj2 = v1;
     }
     if (isDeveloper) {
       items.shift();

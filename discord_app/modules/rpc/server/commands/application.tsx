@@ -29,9 +29,9 @@ let obj = {
     let socket;
     ({ socket, args } = arg0);
     const event_properties = args.event_properties;
-    let obj = recurseReplaceContentTree /* recurseReplaceContentTree */;
+    let obj = recurseReplaceContentTree;
     const result = obj.validatePostMessageTransport(socket.transport);
-    let obj1 = recurseReplaceContentTree /* recurseReplaceContentTree */;
+    let obj1 = recurseReplaceContentTree;
     obj1.validateApplication(socket.application);
     const id = socket.application.id;
     const obj3 = getCurrentEmbeddedActivityChannel();
@@ -78,13 +78,13 @@ obj = {
       const tmp7 = new prototype(obj, "No application.");
       throw tmp7;
     } else {
-      const HTTP = sendRequest /* sendRequest */.HTTP;
+      const HTTP = sendRequest.HTTP;
       obj = { url: null, body: null, retries: 3, oldFormErrors: true, rejectWithError: false };
       obj[0] = closure_5.APPLICATION_TICKET(id);
       obj = { test_mode: null };
-      obj[0] = isTestModeForApplication /* isTestModeForApplication */.isTestModeForApplication(id);
+      obj[0] = isTestModeForApplication.isTestModeForApplication(id);
       obj[1] = obj;
-      const obj4 = isTestModeForApplication /* isTestModeForApplication */;
+      const obj4 = isTestModeForApplication;
       return HTTP.post(obj).then((body) => body.body);
     }
   }

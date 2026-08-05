@@ -23,7 +23,7 @@ const require = arg1;
 ({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error, Fragment: metroImportAll } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
-  const sum = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.SMALL_BUTTON_PADDING + 2;
+  const sum = MINIMUM_HIT_AREA.SMALL_BUTTON_HEIGHT + MINIMUM_HIT_AREA.SMALL_BUTTON_PADDING + 2;
   let obj = { fakeButton: null, glowMask: null, glowLottie: null, trinketsLottie: null, glowAnimation: null };
   obj = { zIndex: 3, borderWidth: 1.5, borderColor: Themes.colors.BACKGROUND_BRAND, borderRadius: Themes.radii.round, alignItems: "center", justifyContent: "center", width: sum, height: sum, marginLeft: 4 };
   obj[0] = obj;
@@ -67,10 +67,10 @@ const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedI
 export const APP_LAUNCHER_ONBOARDING_CHAT_INPUT_BUTTON_ANIMATION_DURATION_MS = 7000;
 export const AppLauncherOnboardingChatInputButtonAnimation = function AppLauncherOnboardingChatInputButtonAnimation(channelId) {
   const tmp = callback3();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = useGradientBottom /* useGradientBottom */;
+  let obj1 = useGradientBottom;
   const gradientBottom = obj1.useGradientBottom();
   useAppLauncherOnboardingContent({ channelId: channelId.channelId });
   obj = { children: null };

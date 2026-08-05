@@ -7,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/message_request/hoo
 
 export const useMessageRequestsCount = function useMessageRequestsCount() {
   const items = [processChannel];
-  return initialize /* initialize */.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
+  return initialize.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
 };

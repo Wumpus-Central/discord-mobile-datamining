@@ -8,15 +8,15 @@ import { setFontSize } from "../../../a11y/AccessibilityActionCreators.tsx";
 const require = arg1;
 function useShowLinkDecorationsSettingValue() {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  return initialize /* initialize */.useStateFromStores(items, () => obj.alwaysShowLinkDecorations);
+  return initialize.useStateFromStores(items, () => obj.alwaysShowLinkDecorations);
 }
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
-  const result = setFontSize /* setFontSize */.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
+  const result = setFontSize.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.OLZFB8);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.OLZFB8);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: useShowLinkDecorationsSettingValue,

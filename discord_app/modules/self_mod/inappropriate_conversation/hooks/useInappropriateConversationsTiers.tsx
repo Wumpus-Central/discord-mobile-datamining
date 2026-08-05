@@ -9,12 +9,12 @@ const require = arg1;
 const result = require("InappropriateConversationExperiment").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationsTiers.tsx");
 
 export const useInappropriateConversationsTiers = function useInappropriateConversationsTiers(channel) {
-  let obj = InappropriateConversationExperiment /* InappropriateConversationExperiment */;
+  let obj = InappropriateConversationExperiment;
   const isEligibleForInappropriateConversationWarning = obj.useIsEligibleForInappropriateConversationWarning({ location: "context-menu-item" });
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj2 = initialize /* initialize */;
-  const inappropriateConversationBannerForChannel = useInappropriateConversationBannerForChannel /* useInappropriateConversationBannerForChannel */.useInappropriateConversationBannerForChannel(channel.id, "context-menu-item");
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj2 = initialize;
+  const inappropriateConversationBannerForChannel = useInappropriateConversationBannerForChannel.useInappropriateConversationBannerForChannel(channel.id, "context-menu-item");
   let isStaffResult;
   if (stateFromStores != null) {
     isStaffResult = stateFromStores.isStaff();

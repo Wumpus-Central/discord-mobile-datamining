@@ -328,9 +328,9 @@ UnsyncedUserSettingsStore.displayName = "UnsyncedUserSettingsStore";
 UnsyncedUserSettingsStore.persistKey = "UnsyncedUserSettingsStore";
 const items = [
   () => {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const value = Storage.get("UserSettingsStore");
-    const Storage2 = Storage /* Storage */.Storage;
+    const Storage2 = Storage.Storage;
     Storage2.remove("UserSettingsStore");
     return apply.pick(value, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHardwareMuteSilenceAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations");
   },

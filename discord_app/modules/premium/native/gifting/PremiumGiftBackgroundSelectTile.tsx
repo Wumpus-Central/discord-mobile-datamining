@@ -59,9 +59,9 @@ export default function GiftBackgroundSelectTile(index) {
   let tmp4Result = null;
   if (null != obj[giftStyle]) {
     obj = { "aria-label": null, "aria-selected": null, style: null, onPress: null, children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { giftStyle: null };
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(GIFT_STYLE_DESCRIPTIONS[giftStyle]);
     obj[0] = intl.formatToPlainString(messagesProxy["+utqaz"], obj);
     obj[1] = selected;

@@ -23,10 +23,10 @@ function contextMenuButton(arg0) {
   const merged = Object.assign(arg0);
   obj.icon = registerAsset;
   obj.variant = "secondary-overlay";
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj.accessibilityLabel = intl.string(getSystemLocale /* getSystemLocale */.t["UKOtz+"]);
+  const intl = getSystemLocale.intl;
+  obj.accessibilityLabel = intl.string(getSystemLocale.t["UKOtz+"]);
   obj.size = "sm";
-  return callback2(IconButton /* IconButton */.IconButton, obj);
+  return callback2(IconButton.IconButton, obj);
 }
 function QuestProgressBottomSheet(quest) {
   let claim;

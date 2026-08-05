@@ -74,8 +74,8 @@ const localPushNotificationStore = new LocalPushNotificationStore(require("dispa
               obj[0] = obj;
               obj[1] = obj.format(closure_6);
               obj[2] = guild.name;
-              const intl = getSystemLocale /* getSystemLocale */.intl;
-              obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["hrDBa+"]);
+              const intl = getSystemLocale.intl;
+              obj[3] = intl.string(getSystemLocale.t["hrDBa+"]);
               const result = tmp15(10668).scheduleLocalNotification(obj);
               const tmp15Result = tmp15(10668);
             }

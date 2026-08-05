@@ -11,21 +11,21 @@ prototype["isSessionActive"] = function isSessionActive() {
   return null != this.searchSessionId;
 };
 prototype["initialize"] = function initialize() {
-  this.searchSessionId = v1 /* v1 */.v4();
+  this.searchSessionId = v1.v4();
   this.searchSessionStartTime = Date.now();
   this.isQueryEnteredTracked = false;
 };
 prototype["maybeTrackQueryEntered"] = function maybeTrackQueryEntered() {
   if (!this.isQueryEnteredTracked) {
-    const result = trackSettingSearchInputFocused /* trackSettingSearchInputFocused */.trackSettingSearchQueryEntered();
+    const result = trackSettingSearchInputFocused.trackSettingSearchQueryEntered();
     tmp.isQueryEnteredTracked = true;
-    const obj = trackSettingSearchInputFocused /* trackSettingSearchInputFocused */;
+    const obj = trackSettingSearchInputFocused;
   }
 };
 prototype["terminate"] = function terminate() {
   const self = this;
   if (tmp) {
-    let obj = trackSettingSearchInputFocused /* trackSettingSearchInputFocused */;
+    let obj = trackSettingSearchInputFocused;
     obj = { searchSessionDuration: null };
     const _Date = Date;
     obj[0] = Date.now() - self.searchSessionStartTime;

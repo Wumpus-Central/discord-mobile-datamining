@@ -29,5 +29,5 @@ export default function FeaturedBlock(featuredBlock) {
   obj = { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock };
   obj[1] = <Subblocks featuredBlock={arg0.featuredBlock} style={tmp.featuredSubblock} />;
   obj[1] = <View featuredBlock={arg0.featuredBlock} style={tmp.featuredSubblock} />;
-  return jsx(context /* context */.AnalyticsLocationProvider, { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock });
+  return jsx(context.AnalyticsLocationProvider, { featuredBlock: featuredBlock.featuredBlock, style: tmp.featuredSubblock });
 };

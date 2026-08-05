@@ -4,7 +4,7 @@ import { useThemeAndReducedMotionAwareAssetUrl } from "../../../promotions/Marke
 const result = require("set").fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
 
 export default function useGiftingPromotionAssetsReady(asset, asset2) {
-  let obj = useThemeAndReducedMotionAwareAssetUrl /* useThemeAndReducedMotionAwareAssetUrl */;
+  let obj = useThemeAndReducedMotionAwareAssetUrl;
   asset = undefined;
   if (asset != null) {
     asset = asset.asset;
@@ -15,7 +15,7 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
   if (asset2 != null) {
     asset1 = asset2.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl1 = useThemeAndReducedMotionAwareAssetUrl /* useThemeAndReducedMotionAwareAssetUrl */.useThemeAndReducedMotionAwareAssetUrl(asset1);
+  const themeAndReducedMotionAwareAssetUrl1 = useThemeAndReducedMotionAwareAssetUrl.useThemeAndReducedMotionAwareAssetUrl(asset1);
   const status2 = usePreloadedAsset(themeAndReducedMotionAwareAssetUrl1).status;
   let tmp8 = "skipped" === status;
   if (!tmp8) {

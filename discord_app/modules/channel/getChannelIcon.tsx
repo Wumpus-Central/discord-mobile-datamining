@@ -17,7 +17,7 @@ export const getChannelIconURL = function getChannelIconURL(type) {
   if (ChannelTypes.DM === type) {
     const recipients = type.recipients;
     const mapped = recipients.map(mergeGuildAvatar.getUser);
-    const first = callback(mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish), 1)[0];
+    const first = callback(mapped.filter(isDiscordFrontendDevelopment.isNotNullish), 1)[0];
     let avatarURL = null;
     if (null != first) {
       avatarURL = first.getAvatarURL(undefined, num, arg2);
@@ -37,7 +37,7 @@ export const getChannelIconSource = function getChannelIconSource(type) {
   if (ChannelTypes.DM === type) {
     const recipients = type.recipients;
     const mapped = recipients.map(mergeGuildAvatar.getUser);
-    const first = callback(mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish), 1)[0];
+    const first = callback(mapped.filter(isDiscordFrontendDevelopment.isNotNullish), 1)[0];
     let avatarSource = null;
     if (null != first) {
       avatarSource = first.getAvatarSource(undefined);

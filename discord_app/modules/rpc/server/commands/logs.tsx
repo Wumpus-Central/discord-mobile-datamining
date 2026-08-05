@@ -24,7 +24,7 @@ let obj = {
     let socket;
     ({ socket, args } = arg0);
     const level = args.level;
-    const result = recurseReplaceContentTree /* recurseReplaceContentTree */.validatePostMessageTransport(socket.transport);
+    const result = recurseReplaceContentTree.validatePostMessageTransport(socket.transport);
     const combined = "" + socket.application.id + " - " + args.message;
     if ("log" === level) {
       tmp3.log(combined);

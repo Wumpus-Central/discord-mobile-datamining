@@ -5,7 +5,7 @@ import { getNavigatorCurrentRoute } from "../navigator/getNavigatorCurrentRoute.
 const result = require("transitionToChannel").fileFinishedImporting("modules/main_tabs_v2/native/navigateToLastChannel.tsx");
 
 export default function navigateToLastChannel() {
-  const coerceGuildsRouteResult = navigationToRootTabHelper /* navigationToRootTabHelper */.coerceGuildsRoute(getNavigatorCurrentRoute());
+  const coerceGuildsRouteResult = navigationToRootTabHelper.coerceGuildsRoute(getNavigatorCurrentRoute());
   let tmp4 = null != coerceGuildsRouteResult;
   if (tmp4) {
     const params = coerceGuildsRouteResult.params;
@@ -21,7 +21,7 @@ export default function navigateToLastChannel() {
     if (params2 != null) {
       channelId1 = params2.channelId;
     }
-    transitionToChannel /* transitionToChannel */.transitionToChannel(channelId1);
-    const tmpResult = transitionToChannel /* transitionToChannel */;
+    transitionToChannel.transitionToChannel(channelId1);
+    const tmpResult = transitionToChannel;
   }
 };

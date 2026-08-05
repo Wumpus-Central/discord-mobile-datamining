@@ -61,13 +61,13 @@ export default function AppIconRows(onSelect) {
   let limitedTimeAppIcons;
   let officialAppIcons;
   onSelect = onSelect.onSelect;
-  let obj = fetchCurrentAppIcon /* fetchCurrentAppIcon */;
+  let obj = fetchCurrentAppIcon;
   const appIcons = obj.useAppIcons();
   ({ limitedTimeAppIcons, currentAppIcon, officialAppIcons } = appIcons);
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj2 = isPremiumAtLeast /* isPremiumAtLeast */;
+  let obj2 = isPremiumAtLeast;
   const isPremiumResult = obj2.isPremium(stateFromStores);
   const tmp7 = limitedTimeAppIcons.length > 0 && limitedTimeAppIcons.filter((isHidden) => !isHidden.isHidden).length > 0;
   let tmp10 = null;

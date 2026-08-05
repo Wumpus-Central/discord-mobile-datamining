@@ -47,7 +47,7 @@ export const getSelectedNoiseSuppressionOption = function getSelectedNoiseSuppre
 };
 export const useSelectedNoiseSuppressionOption = function useSelectedNoiseSuppressionOption() {
   const items = [_detectH265HardwareDecode];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     const noiseSuppression = store.getNoiseSuppression();
     const noiseCancellation = store.getNoiseCancellation();
     if (noiseCancellation) {

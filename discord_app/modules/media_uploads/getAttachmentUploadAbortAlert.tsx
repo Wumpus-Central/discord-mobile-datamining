@@ -5,8 +5,8 @@ import { getSystemLocale } from "../../intl/index.native.tsx";
 const result = require("items").fileFinishedImporting("modules/media_uploads/getAttachmentUploadAbortAlert.tsx");
 
 export const getAttachmentUploadAbortAlertContent = function getAttachmentUploadAbortAlertContent(code) {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.B3vFdU);
+  const intl = getSystemLocale.intl;
+  const stringResult = intl.string(getSystemLocale.t.B3vFdU);
   if (AbortCodes.TOTAL_ATTACHMENT_SIZE_TOO_LARGE === code) {
     let obj = { title: null, body: null };
     obj[0] = stringResult;

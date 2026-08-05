@@ -19,7 +19,7 @@ prototype["getRulesPrompt"] = function getRulesPrompt(guildId) {
   if (dependencyMap[guildId] != null) {
     formFields = tmp2.formFields;
   }
-  return apply.find(formFields, MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.isTermsFormField);
+  return apply.find(formFields, MAX_RESULTS_PER_PAGE.isTermsFormField);
 };
 MemberVerificationFormStore.displayName = "MemberVerificationFormStore";
 obj = {

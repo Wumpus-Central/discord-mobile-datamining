@@ -37,12 +37,12 @@ Object.defineProperty(prototype, "channelId", {
   set: undefined
 });
 prototype["computeVoiceFlags"] = function computeVoiceFlags() {
-  const ClipsAllowVoiceRecording = explicitContentFromProto /* explicitContentFromProto */.ClipsAllowVoiceRecording;
+  const ClipsAllowVoiceRecording = explicitContentFromProto.ClipsAllowVoiceRecording;
   const setting = ClipsAllowVoiceRecording.getSetting();
-  const obj = hasFlag /* hasFlag */;
+  const obj = hasFlag;
   const tmp4 = constants3;
-  const setFlagResult = hasFlag /* hasFlag */.setFlag(0, constants3.ALLOW_VOICE_RECORDING, setting);
-  let isClipsEnabledResult = isClipsEnabled /* isClipsEnabled */.isClipsEnabled();
+  const setFlagResult = hasFlag.setFlag(0, constants3.ALLOW_VOICE_RECORDING, setting);
+  let isClipsEnabledResult = isClipsEnabled.isClipsEnabled();
   if (isClipsEnabledResult) {
     currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
     let state;

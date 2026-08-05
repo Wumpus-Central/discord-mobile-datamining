@@ -35,7 +35,7 @@ export default function AppLauncherBooleanOption(arg0) {
   first = tmp2[0];
   React = tmp2[1];
   const items = [createCacheKey().container, style];
-  return jsx(Form /* Form */.FormCheckboxRow, {
+  return jsx(Form.FormCheckboxRow, {
     start: true,
     end: true,
     style: items,

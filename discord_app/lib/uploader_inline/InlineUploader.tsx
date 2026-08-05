@@ -95,7 +95,7 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
   if (null != tmp) {
     const obj = {};
     const merged = Object.assign(buildHeadersForMd5);
-    obj[ORIGINAL_MD5_HEADER /* ORIGINAL_MD5_HEADER */.ORIGINAL_MD5_HEADER] = tmp;
+    obj[ORIGINAL_MD5_HEADER.ORIGINAL_MD5_HEADER] = tmp;
     tmp2 = obj;
   }
   return tmp2;

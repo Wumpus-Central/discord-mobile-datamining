@@ -3,6 +3,6 @@ import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useClickOnHomeActivityOpensAppDetails.tsx");
 
 export const useClickOnHomeActivityOpensAppDetails = function useClickOnHomeActivityOpensAppDetails() {
-  const DeveloperMode = explicitContentFromProto /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = explicitContentFromProto.DeveloperMode;
   return DeveloperMode.useSetting();
 };

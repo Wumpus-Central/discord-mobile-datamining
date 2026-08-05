@@ -7,7 +7,7 @@ import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/notifications/friend_gaming_activity/FriendGamingActivityNotificationUtils.tsx");
 
 export const onFriendGamingActivityNotificationSettingsChanged = function onFriendGamingActivityNotificationSettingsChanged(friend_gaming_activity_notifications) {
-  const EnableFriendGamingActivityNotifications = explicitContentFromProto /* explicitContentFromProto */.EnableFriendGamingActivityNotifications;
+  const EnableFriendGamingActivityNotifications = explicitContentFromProto.EnableFriendGamingActivityNotifications;
   EnableFriendGamingActivityNotifications.updateSetting(friend_gaming_activity_notifications);
   let obj = expandEventProperties;
   obj = { update_type: constants.ACCOUNT, friend_gaming_activity_notifications };

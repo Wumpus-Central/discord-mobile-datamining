@@ -27,13 +27,13 @@ export default function FormArrow(arg0) {
     obj[0] = tmp.wrapper;
     obj = { maxFontSizeMultiplier: 1.5, variant: "text-md/medium", color: "text-muted", children: null };
     obj[3] = label;
-    const items = [callback(Text /* Text */.Text, obj), ];
+    const items = [callback(Text.Text, obj), ];
     const obj1 = { style: null, source: null, size: null };
     const items1 = [tmp.icon, style];
     obj1[0] = items1;
     obj1[1] = registerAsset;
-    obj1[2] = Button /* Button */.Icon.Sizes.MEDIUM;
-    items[1] = callback(Button /* Button */.Icon, obj1);
+    obj1[2] = Button.Icon.Sizes.MEDIUM;
+    items[1] = callback(Button.Icon, obj1);
     obj[1] = items;
     let tmp6 = callback2(View, obj);
   } else {
@@ -41,8 +41,8 @@ export default function FormArrow(arg0) {
     const items2 = [tmp.icon, style];
     obj[0] = items2;
     obj[1] = registerAsset;
-    obj[2] = Button /* Button */.Icon.Sizes.MEDIUM;
-    tmp6 = callback(Button /* Button */.Icon, obj);
+    obj[2] = Button.Icon.Sizes.MEDIUM;
+    tmp6 = callback(Button.Icon, obj);
   }
   return tmp6;
 };

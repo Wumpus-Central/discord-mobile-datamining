@@ -45,7 +45,7 @@ function getInviteState(invite) {
                       if (tmp4.APP_OPENED !== state) {
                         if (tmp4.APP_OPENING !== state) {
                           if (tmp4.ACCEPTING !== state) {
-                            isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(state);
+                            isDiscordFrontendDevelopment.assertNever(state);
                           }
                         }
                       }
@@ -65,7 +65,7 @@ function getInviteState(invite) {
   return constants.LOADING;
 }
 function InviteResolving() {
-  let obj = map /* map */;
+  let obj = map;
   obj = { style: createCacheKey().resolvingContainer, children: null };
   obj = { color: obj.useToken(Themes.colors.INTERACTIVE_TEXT_DEFAULT), size: "large" };
   obj[1] = callback2(closure_5, obj);
@@ -136,7 +136,7 @@ export default function AcceptInvite(invite) {
   } else {
     obj = { id: null, splash: null, size: null };
     ({ id: obj3[0], splash: obj3[1] } = guild);
-    let obj3 = handleImageLoad /* handleImageLoad */;
+    let obj3 = handleImageLoad;
     obj[2] = width * obj3.getDevicePixelRatio();
     guildSplashSource = tmp3(1416).getGuildSplashSource(obj);
     const tmp3Result = tmp3(1416);
@@ -149,7 +149,7 @@ export default function AcceptInvite(invite) {
   const merged1 = Object.assign(merged);
   obj3[1] = callback2(AcceptInviteCardComponent, { invite });
   obj2[1] = callback2(closure_7, obj3);
-  items1[1] = callback2(PressableCard /* PressableCard */.Card, obj2);
+  items1[1] = callback2(PressableCard.Card, obj2);
   obj[1] = items1;
   return callback3(closure_7, obj);
 };

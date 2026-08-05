@@ -11,9 +11,9 @@ const result = require("createCacheKey").fileFinishedImporting("modules/guild_ro
 
 export const GuildPremiumRoleSubscribeButton = function GuildPremiumRoleSubscribeButton(onPress) {
   const obj = { text: null, onPress: null, style: null, disabled: true };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.BEeXib);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.BEeXib);
   obj[1] = onPress.onPress;
   obj[2] = callback().crButton;
-  return jsx(CreatorRevenueButton /* CreatorRevenueButton */.CreatorRevenueButton, { text: null, onPress: null, style: null, disabled: true });
+  return jsx(CreatorRevenueButton.CreatorRevenueButton, { text: null, onPress: null, style: null, disabled: true });
 };

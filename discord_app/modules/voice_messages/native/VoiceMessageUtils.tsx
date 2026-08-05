@@ -139,7 +139,7 @@ function _startAudioRecording() {
 }
 function resetAudioRecording() {
   mediaEngine = mediaEngine.getMediaEngine();
-  mediaEngine.removeListener(BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineEvent.VoiceActivity, closure_21);
+  mediaEngine.removeListener(BaseConnectionEvent.MediaEngineEvent.VoiceActivity, closure_21);
   callback3();
 }
 function stopAndGetAudioRecording() {
@@ -395,8 +395,8 @@ export const emitVoiceMessageRecorded = function emitVoiceMessageRecorded(CANCEL
   }
 };
 export const triggerHaptic = function triggerHaptic() {
-  const obj = HapticFeedbackTypes /* HapticFeedbackTypes */;
-  const obj2 = set /* set */;
-  const HapticFeedbackTypes = HapticFeedbackTypes /* HapticFeedbackTypes */.HapticFeedbackTypes;
-  const result = obj.triggerHapticFeedback(set /* set */.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
+  const obj = HapticFeedbackTypes;
+  const obj2 = set;
+  const HapticFeedbackTypes = HapticFeedbackTypes.HapticFeedbackTypes;
+  const result = obj.triggerHapticFeedback(set.isAndroid() ? HapticFeedbackTypes.IMPACT_LIGHT : HapticFeedbackTypes.IMPACT_MEDIUM);
 };

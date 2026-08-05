@@ -198,7 +198,7 @@ obj = {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items2 },
   handler(socket) {
     socket = socket.socket;
-    let obj = recurseReplaceContentTree /* recurseReplaceContentTree */;
+    let obj = recurseReplaceContentTree;
     const result = obj.validatePostMessageTransport(socket.transport);
     if (set.has(obj2.validateApplication(socket.application))) {
       obj = { screen: null };
@@ -210,7 +210,7 @@ obj = {
       const tmp9 = new prototype(obj, "Command not available for this application");
       throw tmp9;
     }
-    obj2 = recurseReplaceContentTree /* recurseReplaceContentTree */;
+    obj2 = recurseReplaceContentTree;
     tmp = require;
   }
 };
@@ -227,9 +227,9 @@ obj[RPCCommands.SHARE_LINK] = createRPCCommand.createRPCCommand(RPCCommands.SHAR
     ({ socket, args } = arg0);
     ({ custom_id: require, message: importDefault, link_id: dependencyMap } = args);
     let c3;
-    let obj = recurseReplaceContentTree /* recurseReplaceContentTree */;
+    let obj = recurseReplaceContentTree;
     let result = obj.validatePostMessageTransport(socket.transport);
-    const validateApplicationResult = recurseReplaceContentTree /* recurseReplaceContentTree */.validateApplication(socket.application);
+    const validateApplicationResult = recurseReplaceContentTree.validateApplication(socket.application);
     c3 = validateApplicationResult;
     if (null == validateApplicationResult) {
       obj = { errorCode: null };
@@ -265,7 +265,7 @@ obj[RPCCommands.SHARE_LINK] = createRPCCommand.createRPCCommand(RPCCommands.SHAR
       }
       tmpResult = tmp(7510);
     }
-    const obj2 = recurseReplaceContentTree /* recurseReplaceContentTree */;
+    const obj2 = recurseReplaceContentTree;
     tmp = require;
   }
 });

@@ -65,7 +65,7 @@ const shareStore = new ShareStore(require("dispatcher"), {
             recipients = [];
           }
           const mapped = recipients.map(getUser.getUser);
-          obj.recipients = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+          obj.recipients = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
           json1 = JSON.stringify(obj);
         }
         enforcing.setSelectedChannel(json1, json);
@@ -77,8 +77,8 @@ const shareStore = new ShareStore(require("dispatcher"), {
     if (null != c5) {
       obj = { client_app_state: null };
       obj[0] = state;
-      const result = encodeProperties /* encodeProperties */.extendSuperProperties(obj);
-      const obj4 = encodeProperties /* encodeProperties */;
+      const result = encodeProperties.extendSuperProperties(obj);
+      const obj4 = encodeProperties;
       const obj6 = enforcing;
       const result1 = obj6.setAuthenticationToken(c5, expandEventProperties.getSuperPropertiesBase64());
       if (state === AppStates.INACTIVE) {

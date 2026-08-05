@@ -8,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/game_console
 
 export default function useGameConsoleAccounts() {
   let items = [set];
-  return initialize /* initialize */.useStateFromStoresArray(items, () => {
+  return initialize.useStateFromStoresArray(items, () => {
     const items = [store.getAccount(null, constants.XBOX), store.getAccount(null, constants.PLAYSTATION), store.getAccount(null, constants.PLAYSTATION_STAGING)];
     return items.filter(callback(table[3]).isNotNullish);
   });

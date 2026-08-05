@@ -8,7 +8,7 @@ import { getSystemTheme } from "../../../themes/getSystemTheme.native.tsx";
 
 const require = arg1;
 function getMaxColors() {
-  const allMobileThemes = getCustomThemesName /* getCustomThemesName */.getAllMobileThemes();
+  const allMobileThemes = getCustomThemesName.getAllMobileThemes();
   let num = 0;
   const iter = allMobileThemes[Symbol.iterator]();
   const nextResult = iter.next();
@@ -19,7 +19,7 @@ function getMaxColors() {
     let tmp5 = require;
     let tmp6 = dependencyMap;
     let tmp7 = dependencyMap;
-    if (ClientThemeType /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
+    if (ClientThemeType.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
       let _Math3 = Math;
       let tmp14 = num;
       num = Math.max(1, num);
@@ -233,7 +233,7 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
     let tmp6 = require;
     let tmp7 = dependencyMap;
     let tmp8 = dependencyMap;
-    if (ClientThemeType /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
+    if (ClientThemeType.ClientThemeType.STANDARD_BACKGROUND_THEME === type) {
       let tmp17 = convertStandardThemeToAnimatedTheme;
       let tmp18 = nextResult;
       let arr = items1.push(convertStandardThemeToAnimatedTheme(tmp5, items, BACKGROUND_SURFACE_HIGH));

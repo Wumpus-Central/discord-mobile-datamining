@@ -30,9 +30,9 @@ function makeSearchItem(channel, guild, flag) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = computeChannelName /* computeChannelName */;
+  let obj = computeChannelName;
   const channelName = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
-  const channelName1 = computeChannelName /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, false);
+  const channelName1 = computeChannelName.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, false);
   const items = [channelName, channelName1];
   if (channel.isGuildVocal()) {
     const _HermesInternal = HermesInternal;
@@ -69,8 +69,8 @@ function makeSearchItem(channel, guild, flag) {
   }
   const CHANNELResult = closure_14.CHANNEL(id, channel.id);
   obj = { id: CHANNELResult, relatedUniqueIdentifier: CHANNELResult, type: "url", title: sum, displayName: sum, thumbnailURL: null, rankingHint: null, keywords: null, alternateNames: null, isUpdate: null };
-  const obj2 = computeChannelName /* computeChannelName */;
-  const channelIconURL = getChannelIconURL /* getChannelIconURL */.getChannelIconURL(channel, 128, false);
+  const obj2 = computeChannelName;
+  const channelIconURL = getChannelIconURL.getChannelIconURL(channel, 128, false);
   let startsWithResult;
   if (channelIconURL != null) {
     const startsWith = channelIconURL.startsWith;
@@ -168,7 +168,7 @@ function setChannelActivity(channelId) {
     }
     if (null != channel) {
       const guild = store.getGuild(channel.guild_id);
-      const obj5 = computeChannelName /* computeChannelName */;
+      const obj5 = computeChannelName;
       const channelName = obj5.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
       let str2 = "";
       if (null != guild) {

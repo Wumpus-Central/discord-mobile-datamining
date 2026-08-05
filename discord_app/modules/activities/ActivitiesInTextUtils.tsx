@@ -17,10 +17,10 @@ function isActivityInTextSupportedForChannel(channel) {
       if (channel != null) {
         type = channel.type;
       }
-      hasItem = type === set /* set */.ChannelTypes.GUILD_CATEGORY;
+      hasItem = type === set.ChannelTypes.GUILD_CATEGORY;
     }
     if (hasItem) {
-      const items = [set /* set */.ChannelTypes.GUILD_TEXT, set /* set */.ChannelTypes.GUILD_VOICE, set /* set */.ChannelTypes.GROUP_DM, set /* set */.ChannelTypes.DM];
+      const items = [set.ChannelTypes.GUILD_TEXT, set.ChannelTypes.GUILD_VOICE, set.ChannelTypes.GROUP_DM, set.ChannelTypes.DM];
       hasItem = items.includes(channel.type);
     }
     return hasItem;

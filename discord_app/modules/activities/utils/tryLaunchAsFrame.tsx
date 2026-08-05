@@ -11,7 +11,7 @@ export const tryLaunchAsFrame = function tryLaunchAsFrame(applicationId) {
   application = application.getApplication(applicationId);
   let tmp2 = null == application;
   if (!tmp2) {
-    let obj = canLaunchFrame /* canLaunchFrame */;
+    let obj = canLaunchFrame;
     tmp2 = !obj.canLaunchFrame(application);
   }
   let flag = !tmp2;

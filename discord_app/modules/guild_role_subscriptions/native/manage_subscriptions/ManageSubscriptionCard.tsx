@@ -29,21 +29,21 @@ function HeaderStatus(arg0) {
   ({ isCancelled, isTrial, isPastDue } = arg0);
   const tmp = createCacheKey();
   if (isCancelled) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    let str = intl3.string(getSystemLocale /* getSystemLocale */.t["7uFZGt"]);
+    const intl3 = getSystemLocale.intl;
+    let str = intl3.string(getSystemLocale.t["7uFZGt"]);
     let headerStatusPastDue = tmp.headerStatusCancel;
     let flag = true;
   } else if (isTrial) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    str = intl2.string(getSystemLocale /* getSystemLocale */.t["6anton"]);
+    const intl2 = getSystemLocale.intl;
+    str = intl2.string(getSystemLocale.t["6anton"]);
     headerStatusPastDue = tmp.headerStatusTrial;
     flag = true;
   } else {
     str = "";
     flag = true;
     if (isPastDue) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      str = intl.string(getSystemLocale /* getSystemLocale */.t.uENdgb);
+      const intl = getSystemLocale.intl;
+      str = intl.string(getSystemLocale.t.uENdgb);
       headerStatusPastDue = tmp.headerStatusPastDue;
       flag = false;
     }
@@ -60,7 +60,7 @@ function HeaderStatus(arg0) {
     obj = { variant: "text-xs/semibold", color: null, children: null };
     obj[1] = str2;
     obj[2] = str;
-    obj[1] = closure_11(Text /* Text */.Text, obj);
+    obj[1] = closure_11(Text.Text, obj);
     tmp9Result = tmp9(View, obj);
     const tmp10 = View;
   }
@@ -82,7 +82,7 @@ function Header(arg0) {
   obj = { style: tmp.headerContent, children: null };
   const items1 = [callback2(GuildIconSizes, { guild }), , ];
   obj = { style: tmp.headerTitlesContainer, children: null };
-  const items2 = [callback2(Text /* Text */.Text, { ellipsizeMode: "tail", lineClamp: 2, variant: "text-md/semibold", color: "interactive-text-active", children: listing.name }), callback2(Button /* Button */.Spacer, { size: 2 }), ];
+  const items2 = [callback2(Text.Text, { ellipsizeMode: "tail", lineClamp: 2, variant: "text-md/semibold", color: "interactive-text-active", children: listing.name }), callback2(Button.Spacer, { size: 2 }), ];
   let name;
   if (guild != null) {
     name = guild.name;
@@ -91,7 +91,7 @@ function Header(arg0) {
     const intl = tmp3(1236).intl;
     name = intl.string(tmp3(1236).t["He+cmd"]);
   }
-  items2[2] = callback2(Text /* Text */.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: name });
+  items2[2] = callback2(Text.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: name });
   obj[1] = items2;
   items1[1] = closure_12(View, obj);
   const items3 = [tmp.expandIcon, ];
@@ -99,11 +99,11 @@ function Header(arg0) {
     expanded = tmp.expandIconExpanded;
   }
   items3[1] = expanded;
-  items1[2] = callback2(Button /* Button */.Icon, { style: items3, size: Button /* Button */.Icon.Sizes.MEDIUM, source: registerAsset });
+  items1[2] = callback2(Button.Icon, { style: items3, size: Button.Icon.Sizes.MEDIUM, source: registerAsset });
   obj[1] = items1;
   items[1] = closure_12(View, obj);
   obj[2] = items;
-  return closure_12(PressableBase /* PressableBase */.PressableHighlight, obj);
+  return closure_12(PressableBase.PressableHighlight, obj);
 }
 function Separator() {
   const tmp = createCacheKey();

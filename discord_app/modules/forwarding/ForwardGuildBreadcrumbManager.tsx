@@ -12,8 +12,8 @@ function fetchForwardReferencedGuilds(message_reference) {
   if (type === MessageReferenceTypes.FORWARD) {
     const guild_id = message_reference.message_reference.guild_id;
     if (null != guild_id) {
-      const basicGuild = _fetchBasicGuild /* _fetchBasicGuild */.fetchBasicGuild(guild_id);
-      const obj = _fetchBasicGuild /* _fetchBasicGuild */;
+      const basicGuild = _fetchBasicGuild.fetchBasicGuild(guild_id);
+      const obj = _fetchBasicGuild;
     }
   }
 }

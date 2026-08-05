@@ -20,12 +20,12 @@ export const openTierCreationModal = function openTierCreationModal(arg0) {
   const obj2 = ModalActionCreators;
   const merged = Object.assign(arg0);
   obj.editStateId = NEW_LISTING_EDIT_STATE_ID;
-  obj2.pushLazy(asyncRequireImpl /* asyncRequireImpl */(16700, dependencyMap.paths), obj, closure_5);
+  obj2.pushLazy(asyncRequireImpl(16700, dependencyMap.paths), obj, closure_5);
 };
 export const openGroupSetupModal = function openGroupSetupModal(guildId) {
   usePriceTiers.resetImperatively();
   let obj = importAll(14363);
   obj.clearEditState(NEW_LISTING_EDIT_STATE_ID);
   obj = { guildId, editStateId: NEW_LISTING_EDIT_STATE_ID };
-  ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(16732, dependencyMap.paths), obj, closure_6);
+  ModalActionCreators.pushLazy(asyncRequireImpl(16732, dependencyMap.paths), obj, closure_6);
 };

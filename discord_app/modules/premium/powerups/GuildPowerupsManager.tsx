@@ -93,7 +93,7 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
         obj9 = calculateAppliedBoosts;
       }
     }
-    obj12 = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+    obj12 = getFavoritesAwareGuildName;
   }
 };
 prototype["handleEntitlementUpdate"] = function handleEntitlementUpdate(guildId) {

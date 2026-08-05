@@ -36,7 +36,7 @@ export default {
     })();
   },
   ignore(id) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     HTTP.del({ url: Endpoints.FRIEND_SUGGESTION(id), rejectWithError: true });
   }
 };

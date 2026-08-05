@@ -13,11 +13,11 @@ function validateOptionContent(allowEmptyValues) {
   let option;
   ({ option, content, guildId, channelId, commandOrigin } = allowEmptyValues);
   if (commandOrigin === undefined) {
-    commandOrigin = ApplicationCommandSectionType /* ApplicationCommandSectionType */.CommandOrigin.CHAT;
+    commandOrigin = ApplicationCommandSectionType.CommandOrigin.CHAT;
   }
   let str = "";
   if (null != content) {
-    let obj = getString /* getString */;
+    let obj = getString;
     obj = { content: null };
     obj[0] = content;
     str = obj.getString(obj, "content").trim();
@@ -27,8 +27,8 @@ function validateOptionContent(allowEmptyValues) {
   if (null == content) {
     if (required) {
       obj = { success: false, error: null };
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.JZJQL2);
+      const intl2 = getSystemLocale.intl;
+      obj[1] = intl2.string(getSystemLocale.t.JZJQL2);
       let obj1 = obj;
     } else {
       obj1 = { success: true };
@@ -40,8 +40,8 @@ function validateOptionContent(allowEmptyValues) {
     } else {
       const obj3 = { success: false, error: null };
       if (required) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        obj3[1] = intl.string(getSystemLocale /* getSystemLocale */.t.JZJQL2);
+        const intl = getSystemLocale.intl;
+        obj3[1] = intl.string(getSystemLocale.t.JZJQL2);
         obj2 = obj3;
       } else {
         obj3[1] = getValidationErrorText(option);

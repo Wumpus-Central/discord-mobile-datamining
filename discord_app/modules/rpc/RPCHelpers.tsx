@@ -78,8 +78,8 @@ function transformInternalTextMessage(message) {
   }
   let userAuthor;
   if (null != message.author) {
-    userAuthor = useNullableMessageAuthor /* useNullableMessageAuthor */.getUserAuthor(tmp4, channel);
-    const obj3 = useNullableMessageAuthor /* useNullableMessageAuthor */;
+    userAuthor = useNullableMessageAuthor.getUserAuthor(tmp4, channel);
+    const obj3 = useNullableMessageAuthor;
   }
   obj = { id: message.id, blocked: message.blocked, bot: message.bot, content: message.content, content_parsed: null, nick: null, author_color: null, edited_timestamp: null, timestamp: null, tts: null, mentions: null, mention_everyone: null, mention_roles: null, embeds: null, attachments: null, author: null, pinned: null, type: null };
   let tmp10;
@@ -111,7 +111,7 @@ function transformInternalTextMessage(message) {
   return obj;
 }
 function fetchApplicationRPC(arg0) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   const value = HTTP.get({ url: closure_19.APPLICATION_RPC(arg0), oldFormErrors: true, retries: 3, rejectWithError: true });
   return value.then((body) => body.body, () => {
     throw new callback(table[26])({ closeCode: constants.INVALID_CLIENTID }, "Invalid Client ID");
@@ -574,7 +574,7 @@ export const hasMessageReadPermission = function hasMessageReadPermission(channe
   }
   let tmp2 = application_id === id;
   if (!tmp2) {
-    tmp2 = scopes.indexOf(set /* set */.OAuth2Scopes.MESSAGES_READ) > -1;
+    tmp2 = scopes.indexOf(set.OAuth2Scopes.MESSAGES_READ) > -1;
   }
   return tmp2;
 };

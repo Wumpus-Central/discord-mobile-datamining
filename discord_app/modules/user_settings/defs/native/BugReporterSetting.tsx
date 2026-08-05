@@ -12,15 +12,15 @@ function useBugReporterExperimentSettingPredicate() {
 }
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["/tZh0A"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/tZh0A"]);
   },
   parent: null,
   IconComponent: require("BugIcon").BugIcon,
   onPress: function handleBugReporterSettingPress() {
     if (!field.getField("isReportOpen")) {
       field.setState({ isReportOpen: true });
-      ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(9782, dependencyMap.paths));
+      ModalActionCreators.pushLazy(asyncRequireImpl(9782, dependencyMap.paths));
       const obj2 = ModalActionCreators;
     }
   },

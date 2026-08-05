@@ -29,9 +29,9 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (null != channel) {
     flag = true;
   }
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (arg1) {
     let str = string(t.qmtuXE);
     let tmp8 = tmp7;

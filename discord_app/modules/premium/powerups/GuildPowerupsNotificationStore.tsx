@@ -51,7 +51,7 @@ const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(requir
     }
     const stateForGuild = stateForGuild2.getStateForGuild(guildId);
     const stateForGuild1 = stateForGuild.getStateForGuild(guildId);
-    let obj = getExpiringGuildEntitlements /* getExpiringGuildEntitlements */;
+    let obj = getExpiringGuildEntitlements;
     let unlockedPowerups;
     if (stateForGuild != null) {
       unlockedPowerups = stateForGuild.unlockedPowerups;

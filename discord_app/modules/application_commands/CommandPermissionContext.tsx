@@ -70,7 +70,7 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
     }
   }
   if (null == obj) {
-    let viewNsfwCommandsOrDefault = resolveNsfwTogglesWithDefaults /* resolveNsfwTogglesWithDefaults */.getViewNsfwCommandsOrDefault();
+    let viewNsfwCommandsOrDefault = resolveNsfwTogglesWithDefaults.getViewNsfwCommandsOrDefault();
     id = id.getId();
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -94,7 +94,7 @@ export const buildPermissionContext = function buildPermissionContext(channel, i
       items = [];
     }
     let isThreadResult = channel instanceof tmp;
-    const obj2 = resolveNsfwTogglesWithDefaults /* resolveNsfwTogglesWithDefaults */;
+    const obj2 = resolveNsfwTogglesWithDefaults;
     if (isThreadResult) {
       isThreadResult = channel.isThread();
     }
@@ -222,17 +222,17 @@ export const computeCommandContextType = function computeCommandContextType(chan
         type = channel.type;
       }
       if (type !== constants.DM) {
-        const PRIVATE_CHANNEL = PermissionOverwriteType /* PermissionOverwriteType */.InteractionContextType.PRIVATE_CHANNEL;
+        const PRIVATE_CHANNEL = PermissionOverwriteType.InteractionContextType.PRIVATE_CHANNEL;
       } else {
         let recipientId;
         if (channel != null) {
           recipientId = channel.getRecipientId();
         }
       }
-      const BOT_DM = PermissionOverwriteType /* PermissionOverwriteType */.InteractionContextType.BOT_DM;
+      const BOT_DM = PermissionOverwriteType.InteractionContextType.BOT_DM;
     }
   }
-  return PermissionOverwriteType /* PermissionOverwriteType */.InteractionContextType.GUILD;
+  return PermissionOverwriteType.InteractionContextType.GUILD;
 };
 export const getContextGuildId = function getContextGuildId(context) {
   return context instanceof ChannelRecordBase ? context.guild_id : context.id;

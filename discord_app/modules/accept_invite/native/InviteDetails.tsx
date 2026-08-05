@@ -93,7 +93,7 @@ function InviteDestinationIcon(invite) {
 function InviteHeader(invite) {
   invite = invite.invite;
   const tmp = createCacheKey();
-  let obj = InviteTypes /* InviteTypes */;
+  let obj = InviteTypes;
   if (obj.isGroupDMInvite(invite)) {
     const channel = invite.channel;
     let name;
@@ -280,11 +280,11 @@ function InviteMemberCounts(invite) {
           obj1[0] = tmp.dotOnline;
           const items = [callback2(tmp18, obj1), ];
           const obj2 = { variant: "text-xs/medium", color: "text-default", children: null };
-          const intl = getSystemLocale /* getSystemLocale */.intl;
+          const intl = getSystemLocale.intl;
           const obj3 = { membersOnline: null };
           obj3[0] = tmp2.onlineCount;
-          obj2[2] = intl.format(getSystemLocale /* getSystemLocale */.t["LC+S+m"], obj3);
-          items[1] = callback2(Text /* Text */.Text, obj2);
+          obj2[2] = intl.format(getSystemLocale.t["LC+S+m"], obj3);
+          items[1] = callback2(Text.Text, obj2);
           obj[0] = items;
           tmp17Result = tmp17(closure_14, obj);
         }
@@ -296,11 +296,11 @@ function InviteMemberCounts(invite) {
           obj5[0] = tmp.dotOffline;
           const items2 = [callback2(tmp18, obj5), ];
           const obj6 = { variant: "text-xs/medium", color: "text-default", children: null };
-          const intl2 = getSystemLocale /* getSystemLocale */.intl;
+          const intl2 = getSystemLocale.intl;
           const obj7 = { count: null };
           obj7[0] = tmp2.memberCount;
-          obj6[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.zRl6XR, obj7);
-          items2[1] = callback2(Text /* Text */.Text, obj6);
+          obj6[2] = intl2.format(getSystemLocale.t.zRl6XR, obj7);
+          items2[1] = callback2(Text.Text, obj6);
           obj4[0] = items2;
           tmp17Result = tmp17(closure_14, obj4);
         }

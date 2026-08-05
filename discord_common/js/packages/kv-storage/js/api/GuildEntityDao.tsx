@@ -32,7 +32,7 @@ prototype["withoutLogging"] = function withoutLogging() {
   const obj = Object.create(GuildEntityDao.prototype);
   obj.originalPrefix = originalPrefix;
   const items = [originalPrefix];
-  const table = new fromDatabaseTransaction /* fromDatabaseTransaction */.Table(items, this.table.tableId, this.table.database, false);
+  const table = new fromDatabaseTransaction.Table(items, this.table.tableId, this.table.database, false);
   obj.table = table;
   return obj;
 };
@@ -156,7 +156,7 @@ class GuildEntityDaoTransaction {
 }
 const prototype2 = GuildEntityDaoTransaction.prototype;
 GuildEntityDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new fromDatabaseTransaction /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
+  const tableTransaction = new fromDatabaseTransaction.TableTransaction(prefix, tableId, transaction);
   if (typeof GuildEntityDaoTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -167,14 +167,14 @@ GuildEntityDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTran
 prototype2["put"] = function put(arg0, arg1) {
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = TableId /* TableId */.ConflictOptions.Replace;
+    Replace = TableId.ConflictOptions.Replace;
   }
   return this.putWithGeneration(arg0, arg1, null, Replace);
 };
 prototype2["putWithGeneration"] = function putWithGeneration(arg0, arg1, arg2) {
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = TableId /* TableId */.ConflictOptions.Replace;
+    Replace = TableId.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
   return transaction.put(GuildEntityDao.cell(arg0, arg1, arg2), Replace);

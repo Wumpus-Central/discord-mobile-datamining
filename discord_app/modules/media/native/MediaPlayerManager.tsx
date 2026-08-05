@@ -68,7 +68,7 @@ prototype["_initialize"] = function _initialize() {
   this.subscriptions = items;
   let MediaPlayerManager = closure_4.MediaPlayerManager;
   const result = MediaPlayerManager.subscribeToPlaybackEvents();
-  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   if (rootNavigationRef != null) {
     rootNavigationRef.addListener("state", self.updateDisplayState);
   }
@@ -76,7 +76,7 @@ prototype["_initialize"] = function _initialize() {
   participantFromServer.addChangeListener(self.handleEmbeddedActivitiesUpdated);
   ensureGuildLoaded.addChangeListener(self.updateMediaPermissions);
   getUncachedChannelPermissions.addChangeListener(self.updateMediaPermissions);
-  const obj2 = getRootNavigationRef /* getRootNavigationRef */;
+  const obj2 = getRootNavigationRef;
   const tmp2 = require;
   const subscription = dispatcher.subscribe("LOGOUT", self.userDidClosePip);
   const obj4 = dispatcher;
@@ -128,7 +128,7 @@ prototype["_terminate"] = function _terminate() {
   const subscriptions = this.subscriptions;
   const item = subscriptions.forEach((remove) => remove.remove());
   this.subscriptions = [];
-  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   if (rootNavigationRef != null) {
     rootNavigationRef.removeListener("state", self.updateDisplayState);
   }
@@ -143,7 +143,7 @@ prototype["_terminate"] = function _terminate() {
   participantFromServer.removeChangeListener(self.handleEmbeddedActivitiesUpdated);
   ensureGuildLoaded.removeChangeListener(self.updateMediaPermissions);
   getUncachedChannelPermissions.removeChangeListener(self.updateMediaPermissions);
-  const obj = getRootNavigationRef /* getRootNavigationRef */;
+  const obj = getRootNavigationRef;
   dispatcher.unsubscribe("LOGOUT", self.userDidClosePip);
 };
 prototype["pauseCurrentPlayer"] = function pauseCurrentPlayer(arg0) {
@@ -155,7 +155,7 @@ prototype["playCurrentPlayer"] = function playCurrentPlayer() {
   MediaPlayerManager.playCurrentPlayer();
 };
 prototype["userDidClosePip"] = function userDidClosePip() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState({ wasPipClosedByUser: true, showPip: false }));
+  batchUpdates.batchUpdates(() => state.setState({ wasPipClosedByUser: true, showPip: false }));
 };
 prototype["pauseAndClosePip"] = function pauseAndClosePip() {
   const self = this;
@@ -233,7 +233,7 @@ prototype["handleMediaPlayerPlaybackProgressUpdated"] = function handleMediaPlay
   let importDefault;
   let require;
   ({ source: require, time: importDefault, duration: dependencyMap } = arg0);
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     let obj = outer1_17;
     const state = outer1_17.getState();
     if (tmp2(state.activeMediaPlayerSource, closure_0)) {
@@ -406,7 +406,7 @@ prototype["handleMediaPlayerViewDidDisappear"] = function handleMediaPlayerViewD
   });
 };
 function updateDisplayState(MediaPlayerManager, arg1, arg2, prototype, MediaPlayerManager2, arg5, require) {
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     let activeMediaPlayerSource;
     let displayedMediaItemIdsPerChannel;
     let isPlaying;

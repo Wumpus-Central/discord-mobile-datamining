@@ -7,7 +7,7 @@ import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/notifications/server_trending/ServerTrendingNotificationUtils.tsx");
 
 export const onServerTrendingNotificationSettingsChanged = function onServerTrendingNotificationSettingsChanged(server_trending_notifications) {
-  const EnableServerTrendingNotifications = explicitContentFromProto /* explicitContentFromProto */.EnableServerTrendingNotifications;
+  const EnableServerTrendingNotifications = explicitContentFromProto.EnableServerTrendingNotifications;
   EnableServerTrendingNotifications.updateSetting(server_trending_notifications);
   let obj = expandEventProperties;
   obj = { update_type: constants.ACCOUNT, server_trending_notifications };

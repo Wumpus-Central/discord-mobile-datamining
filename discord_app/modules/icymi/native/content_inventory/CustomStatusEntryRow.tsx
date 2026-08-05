@@ -14,7 +14,7 @@ export default function CustomStatusEntryRow(content) {
   let visible;
   content = content.content;
   ({ renderForScreenshot, visible } = content);
-  let obj = useReplyActions /* useReplyActions */;
+  let obj = useReplyActions;
   const replyActions = obj.useReplyActions({ content });
   ({ openEmojiPicker, openReplyActionSheet } = replyActions);
   obj = { id: content.id, userId: content.author_id, customStatusExtra: content.extra, renderForScreenshot, visible, variant: { kind: "otherUserStatus", handlePressPrimary: openReplyActionSheet, handlePressSecondary: openEmojiPicker } };

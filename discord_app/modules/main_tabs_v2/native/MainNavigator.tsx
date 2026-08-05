@@ -31,7 +31,7 @@ let metroImportAll;
 let unpackModuleId;
 let require = arg1;
 function getAuthComponent() {
-  return NavigatorWithCaptchaHook /* NavigatorWithCaptchaHook */.default;
+  return NavigatorWithCaptchaHook.default;
 }
 function getTabsComponent() {
   return MainTabs.default;
@@ -40,40 +40,40 @@ function getChannelComponent() {
   return View;
 }
 function WrappedAutoAnalytics() {
-  return callback2(componentDidMount /* componentDidMount */.default, {});
+  return callback2(componentDidMount.default, {});
 }
 function getMemberVerificationComponent() {
-  return Loading /* Loading */.default;
+  return Loading.default;
 }
 function getFriendsNavigatorComponent() {
-  return RequestsSettingsModalButton /* RequestsSettingsModalButton */.default;
+  return RequestsSettingsModalButton.default;
 }
 function getYouComponent() {
   return YouScreenContainer.default;
 }
 function getChannelDetailsComponent() {
-  return ConnectedCreateThreadHeaderButton /* ConnectedCreateThreadHeaderButton */.default;
+  return ConnectedCreateThreadHeaderButton.default;
 }
 function getConversationsComponent() {
-  return HeaderWithBorder /* HeaderWithBorder */.default;
+  return HeaderWithBorder.default;
 }
 function getSearchComponent() {
   return SearchNavigator.default;
 }
 function getContextMenuCommandNavigatorComponent() {
-  return ContextMenuCommandNavigator /* ContextMenuCommandNavigator */.default;
+  return ContextMenuCommandNavigator.default;
 }
 function getModalComponent() {
-  return Modal /* Modal */.default;
+  return Modal.default;
 }
 function getMessageRequestsComponent() {
-  return MessageRequestsNavigator /* MessageRequestsNavigator */.default;
+  return MessageRequestsNavigator.default;
 }
 function getSettingsComponent() {
-  return Settings /* Settings */.default;
+  return Settings.default;
 }
 function getAccountStanding() {
-  return SuspendedUserSafetyHubPage /* SuspendedUserSafetyHubPage */.default;
+  return SuspendedUserSafetyHubPage.default;
 }
 let c4 = importAllResult;
 ({ AnalyticEvents: metroImportAll, DrawerSourceTypes: c9 } = ME);

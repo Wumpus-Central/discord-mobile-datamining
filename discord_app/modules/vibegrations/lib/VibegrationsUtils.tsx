@@ -63,7 +63,7 @@ export const findVibegrationChannelId = function findVibegrationChannelId(arg0, 
   return null;
 };
 export const canManageVibegrations = function canManageVibegrations(comparator, isAccessibleChannelOrThreadPath) {
-  let obj = useIsVibegrationsGuildEnabled /* useIsVibegrationsGuildEnabled */;
+  let obj = useIsVibegrationsGuildEnabled;
   obj = { guildId: comparator.id, location: isAccessibleChannelOrThreadPath };
   let result = obj.isVibegrationsGuildEnabled(obj);
   if (result) {
@@ -131,7 +131,7 @@ export const isVibegrationsChannelCandidate = function isVibegrationsChannelCand
     result = !hasItem;
   }
   if (result) {
-    let obj = useIsVibegrationsGuildEnabled /* useIsVibegrationsGuildEnabled */;
+    let obj = useIsVibegrationsGuildEnabled;
     let guild_id1;
     if (channel != null) {
       guild_id1 = channel.guild_id;

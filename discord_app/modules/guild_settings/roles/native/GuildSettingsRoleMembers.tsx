@@ -16,8 +16,8 @@ const require = arg1;
 function onMembersLoadFail() {
   let obj = dispatcher;
   obj = { key: "ERROR_OCCURRED_TRY_AGAIN", icon: registerAsset, content: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.fEptJP);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.fEptJP);
   obj.open(obj);
 }
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);

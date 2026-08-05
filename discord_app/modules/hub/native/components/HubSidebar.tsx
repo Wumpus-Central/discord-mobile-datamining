@@ -19,7 +19,7 @@ function HubItem(arg0) {
   let unreadCount;
   ({ label, unreadCount } = arg0);
   ({ IconComponent, handleItemClick, active } = arg0);
-  const ChannelModes = BaseChannelSubtitle /* BaseChannelSubtitle */.ChannelModes;
+  const ChannelModes = BaseChannelSubtitle.ChannelModes;
   if (active) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp5 = tmp2;

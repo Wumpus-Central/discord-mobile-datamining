@@ -80,7 +80,7 @@ const regionalFeatureConfigStore = new RegionalFeatureConfigStore(require("dispa
     }
     let fromConnectionOpenResult = null;
     if (null != countryCode.regionalFeatureConfig) {
-      const RegionalFeatureConfig = isFeatureTeenByDefault /* isFeatureTeenByDefault */.RegionalFeatureConfig;
+      const RegionalFeatureConfig = isFeatureTeenByDefault.RegionalFeatureConfig;
       fromConnectionOpenResult = RegionalFeatureConfig.fromConnectionOpen(countryCode.regionalFeatureConfig);
     }
     let c4 = fromConnectionOpenResult;

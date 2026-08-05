@@ -9,8 +9,8 @@ export const getCoverImageURI = function getCoverImageURI(subscriptionsSettings)
   applicationIdForGuild = applicationIdForGuild.getApplicationIdForGuild(subscriptionsSettings.guild_id);
   let uri = "";
   if (tmp2) {
-    uri = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */.getAssetURL(applicationIdForGuild, subscriptionsSettings.cover_image_asset, 1024);
-    const obj = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
+    uri = _httpGetWithCountryCodeQuery.getAssetURL(applicationIdForGuild, subscriptionsSettings.cover_image_asset, 1024);
+    const obj = _httpGetWithCountryCodeQuery;
   }
   return { uri };
 };

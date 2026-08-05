@@ -18,16 +18,16 @@ function sleep(num) {
 }
 let c4 = 3600000;
 function now() {
-  const _performance = u /* u */.performance;
-  return Math.floor(u /* u */.timeOrigin + _performance.now());
+  const _performance = u.performance;
+  return Math.floor(u.timeOrigin + _performance.now());
 }
 const fn = () => Object.create(new.target.prototype);
 fn.prototype["now"] = function now() {
   if (typeof now !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const _performance = u /* u */.performance;
-  return Math.floor(u /* u */.timeOrigin + _performance.now());
+  const _performance = u.performance;
+  return Math.floor(u.timeOrigin + _performance.now());
 };
 let obj = Object.create(fn.prototype);
 let TimeSpan;

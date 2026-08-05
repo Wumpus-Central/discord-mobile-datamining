@@ -146,7 +146,7 @@ export const getMatchedOptionsWithValue = (length2, activeCommand) => {
                 let obj1 = { type: null, option: null };
                 let tmp13 = require;
                 let tmp14 = dependencyMap;
-                obj1[0] = addRule /* addRule */.ChatInputParseResultDataType.COMMAND_OPTION;
+                obj1[0] = addRule.ChatInputParseResultDataType.COMMAND_OPTION;
                 obj1[1] = options[num];
                 obj[2] = obj1;
                 let addResult = set.add(num);
@@ -226,7 +226,7 @@ export const getMatchedOptions = (arg0, activeCommand) => {
                 obj = { type: null, option: null };
                 let tmp5 = require;
                 let tmp6 = dependencyMap;
-                obj[0] = addRule /* addRule */.ChatInputParseResultDataType.COMMAND_OPTION;
+                obj[0] = addRule.ChatInputParseResultDataType.COMMAND_OPTION;
                 obj[1] = options[num];
                 obj[2] = obj;
                 let arr = items.push(obj);

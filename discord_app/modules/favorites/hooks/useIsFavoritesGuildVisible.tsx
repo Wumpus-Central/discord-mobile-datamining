@@ -44,9 +44,9 @@ export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
   let hasAccess;
   let isExperimentEnabled;
   let isFreemium;
-  const favoritesAccess = useFavoritesAccess /* useFavoritesAccess */.getFavoritesAccess();
+  const favoritesAccess = useFavoritesAccess.getFavoritesAccess();
   ({ isExperimentEnabled, isFreemium, hasAccess } = favoritesAccess);
-  const obj = useFavoritesAccess /* useFavoritesAccess */;
+  const obj = useFavoritesAccess;
   const obj2 = handleConnectionOpen;
   const tmp4 = initializeFromUserSettings;
   let tmp5 = isExperimentEnabled;

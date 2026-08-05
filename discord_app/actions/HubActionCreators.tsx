@@ -14,7 +14,7 @@ export default {
     obj = { url: Endpoints.HUB_WAITLIST_SIGNUP, body: obj, trackedActionData: null, rejectWithError: null };
     obj = { email, school };
     obj[2] = {
-      event: encodeProperties /* encodeProperties */.NetworkActionNames.HUB_WAITLIST_SIGNUP,
+      event: encodeProperties.NetworkActionNames.HUB_WAITLIST_SIGNUP,
       properties(body) {
         let email_domain;
         if (body != null) {
@@ -32,7 +32,7 @@ export default {
       }
     };
     const obj1 = {
-      event: encodeProperties /* encodeProperties */.NetworkActionNames.HUB_WAITLIST_SIGNUP,
+      event: encodeProperties.NetworkActionNames.HUB_WAITLIST_SIGNUP,
       properties(body) {
         let email_domain;
         if (body != null) {
@@ -49,7 +49,7 @@ export default {
         return callback(table[4]).exact({ is_edu_email });
       }
     };
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest.rejectWithMigratedError();
     return obj.post(obj);
   },
   sendVerificationEmail(outer1_0, arg1, outer1_02) {

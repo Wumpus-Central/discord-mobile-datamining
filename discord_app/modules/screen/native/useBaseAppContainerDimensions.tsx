@@ -19,10 +19,10 @@ export default function useBaseAppContainerDimensions() {
 export const getBaseAppContainerDimensions = function getBaseAppContainerDimensions() {
   let height;
   let width;
-  let obj = useWindowDimensions /* useWindowDimensions */;
+  let obj = useWindowDimensions;
   const windowDimensions = obj.getWindowDimensions();
   ({ width, height } = windowDimensions);
-  const rect = useSafeAreaInsets /* useSafeAreaInsets */.getSafeAreaInsets();
+  const rect = useSafeAreaInsets.getSafeAreaInsets();
   obj = { width: width - rect.left - rect.right, height };
   return obj;
 };

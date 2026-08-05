@@ -40,9 +40,9 @@ export const NewBadge = function NewBadge(style) {
   let obj = { style: items, children: null };
   items = [tmp.newIconBadge, style.style];
   obj = { variant: "text-sm/bold", color: "text-overlay-light", style: tmp.badgeTextUppercase, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
-  obj[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.y2b7CA);
+  obj[1] = callback(Text.Text, obj);
   return callback(View, obj);
 };
 export const LockBadge = function LockBadge(isNew) {
@@ -59,12 +59,12 @@ export const LockBadge = function LockBadge(isNew) {
     obj[1] = items;
     obj = { size: "xxs", color: null };
     obj[1] = Themes.colors.WHITE;
-    const items1 = [callback(LockIcon /* LockIcon */.LockIcon, obj), ];
+    const items1 = [callback(LockIcon.LockIcon, obj), ];
     const obj1 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
     obj1[2] = tmp.badgeTextUppercase;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
-    items1[1] = callback(Text /* Text */.Text, obj1);
+    const intl = getSystemLocale.intl;
+    obj1[3] = intl.string(getSystemLocale.t.y2b7CA);
+    items1[1] = callback(Text.Text, obj1);
     obj[2] = items1;
     let tmp7 = callback2(PremiumFeaturesBackground, obj);
     const tmp11 = PremiumFeaturesBackground;
@@ -74,7 +74,7 @@ export const LockBadge = function LockBadge(isNew) {
     obj[0] = items2;
     const obj2 = { size: "sm", color: null };
     obj2[1] = Themes.colors.WHITE;
-    obj[1] = callback(LockIcon /* LockIcon */.LockIcon, obj2);
+    obj[1] = callback(LockIcon.LockIcon, obj2);
     tmp7 = callback(View, obj);
   }
   return tmp7;
@@ -93,12 +93,12 @@ export const PremiumBadge = function PremiumBadge(isNew) {
     obj[1] = items;
     obj = { size: "xxs", color: null };
     obj[1] = Themes.colors.WHITE;
-    const items1 = [callback(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, obj), ];
+    const items1 = [callback(NitroWheelIcon.NitroWheelIcon, obj), ];
     const obj1 = { variant: "text-xs/bold", color: "text-overlay-light", style: null, children: null };
     obj1[2] = tmp.badgeTextUppercase;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
-    items1[1] = callback(Text /* Text */.Text, obj1);
+    const intl = getSystemLocale.intl;
+    obj1[3] = intl.string(getSystemLocale.t.y2b7CA);
+    items1[1] = callback(Text.Text, obj1);
     obj[2] = items1;
     let tmp7 = callback2(PremiumFeaturesBackground, obj);
     const tmp11 = PremiumFeaturesBackground;
@@ -108,7 +108,7 @@ export const PremiumBadge = function PremiumBadge(isNew) {
     obj[0] = items2;
     const obj2 = { size: "sm", color: null };
     obj2[1] = Themes.colors.WHITE;
-    obj[1] = callback(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, obj2);
+    obj[1] = callback(NitroWheelIcon.NitroWheelIcon, obj2);
     tmp7 = callback(View, obj);
   }
   return tmp7;
@@ -118,9 +118,9 @@ export const LimitedTimeBadge = function LimitedTimeBadge(style) {
   let obj = { style: items, children: null };
   items = [tmp.limitedTimeBadge, style.style];
   obj = { variant: "text-xs/bold", color: "text-overlay-dark", style: tmp.badgeTextUppercase, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["h/uBCR"]);
-  obj[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["h/uBCR"]);
+  obj[1] = callback(Text.Text, obj);
   return callback(View, obj);
 };
 export const IconBadgePill = function IconBadgePill(isDark) {
@@ -158,7 +158,7 @@ export const IconTextBadge = function IconTextBadge(isDark) {
     str2 = "text-overlay-dark";
   }
   obj = { variant: "text-xs/bold", color: str2, style: tmp.badgeTextUppercase, children: label };
-  items1[1] = closure_5(Text /* Text */.Text, obj);
+  items1[1] = closure_5(Text.Text, obj);
   obj[1] = items1;
   return closure_6(View, obj);
 };

@@ -12,7 +12,7 @@ const memoResult = require("noop").memo(function ModalStackNavigator(children) {
   let screenKey;
   ({ screenKey, title: require, titleIcon: importDefault } = children);
   let dependencyMap;
-  let obj = NavigationStack /* NavigationStack */;
+  let obj = NavigationStack;
   dependencyMap = obj.useAccessibilityNativeStackOptions();
   obj = {
     initialRouteName: screenKey,

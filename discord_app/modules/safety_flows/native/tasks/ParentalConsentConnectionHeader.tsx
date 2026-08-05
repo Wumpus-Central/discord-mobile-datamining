@@ -24,7 +24,7 @@ const result = require("mergeGuildAvatar").fileFinishedImporting("modules/safety
 
 export const ParentalConsentConnectionNavbar = function ParentalConsentConnectionNavbar() {
   const tmp = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -46,14 +46,14 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
     },
     children: null
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj1[5] = intl.string(messagesProxy["3HuGuY"]);
-  const items1 = [callback(Text /* Text */.Text, obj1), ];
+  const items1 = [callback(Text.Text, obj1), ];
   let tmp5Result = null != stateFromStores;
   if (tmp5Result) {
     const obj2 = { accessibilityRole: "header", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj2[3] = stateFromStores;
-    tmp5Result = tmp5(Text /* Text */.Text, obj2);
+    tmp5Result = tmp5(Text.Text, obj2);
   }
   items1[1] = tmp5Result;
   obj[1] = items1;

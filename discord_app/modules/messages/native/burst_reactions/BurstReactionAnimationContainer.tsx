@@ -161,5 +161,5 @@ export default function BurstReactionAnimationContainer() {
   const obj = { theme: null, children: null };
   obj[0] = Themes.themes.DARKER;
   obj[1] = callback(BurstReactionAnimationContainerInner, {});
-  return callback(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+  return callback(ManaContext.ThemeContextProvider, obj);
 };

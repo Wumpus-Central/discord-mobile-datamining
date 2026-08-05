@@ -95,8 +95,8 @@ prototype["onLocaleChanged"] = function onLocaleChanged() {
     tmp = createEmptyPromotionsByType.lastFetchedActivePromotionsLocale !== locale.locale;
   }
   if (tmp) {
-    const result = fetchActivePromotions /* fetchActivePromotions */.maybeFetchActivePromotions(false);
-    const obj = fetchActivePromotions /* fetchActivePromotions */;
+    const result = fetchActivePromotions.maybeFetchActivePromotions(false);
+    const obj = fetchActivePromotions;
   }
 };
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
@@ -177,8 +177,8 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
       if (createEmptyPromotionsByType.isFetchingActivePromotions) {
         self.hasPendingSubscriptionRefetch = true;
       } else {
-        const result = fetchActivePromotions /* fetchActivePromotions */.maybeFetchActivePromotions(false);
-        const obj3 = fetchActivePromotions /* fetchActivePromotions */;
+        const result = fetchActivePromotions.maybeFetchActivePromotions(false);
+        const obj3 = fetchActivePromotions;
       }
     }
   }
@@ -187,22 +187,22 @@ prototype["onPromotionsFetchSettled"] = function onPromotionsFetchSettled() {
   if (this.hasPendingSubscriptionRefetch) {
     if (!createEmptyPromotionsByType.isFetchingActivePromotions) {
       tmp.hasPendingSubscriptionRefetch = false;
-      const result = fetchActivePromotions /* fetchActivePromotions */.maybeFetchActivePromotions(false);
-      const obj = fetchActivePromotions /* fetchActivePromotions */;
+      const result = fetchActivePromotions.maybeFetchActivePromotions(false);
+      const obj = fetchActivePromotions;
     }
   }
 };
 prototype["onMobilePurchaseSuccess"] = function onMobilePurchaseSuccess() {
-  const result = fetchActivePromotions /* fetchActivePromotions */.maybeFetchActivePromotions(false);
+  const result = fetchActivePromotions.maybeFetchActivePromotions(false);
 };
 prototype["onOfferUpdated"] = function onOfferUpdated() {
-  const result = fetchActivePromotions /* fetchActivePromotions */.maybeFetchActivePromotions(false);
+  const result = fetchActivePromotions.maybeFetchActivePromotions(false);
 };
 prototype["onVCRedeemed"] = function onVCRedeemed(entitlements) {
   entitlements = entitlements.entitlements;
   if (entitlements.some((type) => type.type === constants.FRACTIONAL_REDEMPTION)) {
-    const result = fetchActivePromotions /* fetchActivePromotions */.maybeFetchActivePromotions(false);
-    const obj = fetchActivePromotions /* fetchActivePromotions */;
+    const result = fetchActivePromotions.maybeFetchActivePromotions(false);
+    const obj = fetchActivePromotions;
   }
 };
 const promotionsManager = new PromotionsManager();

@@ -25,12 +25,12 @@ function VoiceSettingsActionSheet() {
   let obj = { scrollable: true, children: null };
   obj = { children: null };
   obj[0] = callback(UserSettingsVoice, {});
-  obj[1] = callback(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, obj);
-  return callback(Background /* Background */.BottomSheet, obj);
+  obj[1] = callback(BottomSheetModal.BottomSheetScrollView, obj);
+  return callback(Background.BottomSheet, obj);
 }
 function JoinMutedButton(channel) {
   const tmp = useTheme();
-  return callback(ChannelCallMicButton /* ChannelCallMicButton */.ChannelCallMicButton, { channel: channel.channel, disableTint: "light" === useTheme(), isSmallSize: false });
+  return callback(ChannelCallMicButton.ChannelCallMicButton, { channel: channel.channel, disableTint: "light" === useTheme(), isSmallSize: false });
 }
 function JoinVoiceButton(channel) {
   channel = channel.channel;

@@ -144,7 +144,7 @@ const memoResult = importAllResult.memo((arg0) => {
 const memoResult1 = importAllResult.memo((suggestedFriend) => {
   let tmp2;
   let tmp3;
-  let obj = noop /* noop */;
+  let obj = noop;
   const items = [suggestedFriend.suggestedFriend.user.id];
   obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false, items), 2);
@@ -156,7 +156,7 @@ const memoResult1 = importAllResult.memo((suggestedFriend) => {
 const memoResult2 = importAllResult.memo((arg0) => {
   let tmp2;
   let tmp3;
-  let obj = toNativeHorizontalOffset /* toNativeHorizontalOffset */;
+  let obj = toNativeHorizontalOffset;
   obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false), 2);
   const merged = Object.assign(arg0);
@@ -167,9 +167,9 @@ const memoResult2 = importAllResult.memo((arg0) => {
 const result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriend.tsx");
 
 export const getMessagesItemSuggestedFriendHeight = function getMessagesItemSuggestedFriendHeight(fontScale) {
-  const obj = map /* map */;
-  const scaleTextLineHeightResult = map /* map */.scaleTextLineHeight("redesign/channel-title/semibold", fontScale);
-  const sum = scaleTextLineHeightResult + map /* map */.scaleTextLineHeight("text-xs/medium", fontScale);
+  const obj = map;
+  const scaleTextLineHeightResult = map.scaleTextLineHeight("redesign/channel-title/semibold", fontScale);
+  const sum = scaleTextLineHeightResult + map.scaleTextLineHeight("text-xs/medium", fontScale);
   return sum + Themes.space.PX_16;
 };
 export const MessagesItemSuggestedFriendFast = memoResult;

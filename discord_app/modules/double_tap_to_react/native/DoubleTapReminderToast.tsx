@@ -12,15 +12,15 @@ import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 const require = arg1;
 function DoubleTapReminderContent(emoji) {
   let obj = { variant: "text-sm/normal", style: createCacheKey().toastText, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = {
     protipHook(children) {
       return callback2(callback(table[5]).Text, { variant: "text-sm/bold", color: "text-feedback-info", children }, "doubleTapReminder");
     },
     emojiName: emoji.emoji.name
   };
-  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t.C2tQIV, obj);
-  return jsx(Text /* Text */.Text, {
+  obj[2] = intl.format(getSystemLocale.t.C2tQIV, obj);
+  return jsx(Text.Text, {
     protipHook(children) {
       return callback2(callback(table[5]).Text, { variant: "text-sm/bold", color: "text-feedback-info", children }, "doubleTapReminder");
     },

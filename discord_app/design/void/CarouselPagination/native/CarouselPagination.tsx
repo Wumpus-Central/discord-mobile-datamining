@@ -63,5 +63,5 @@ export default function CarouselPagination(arg0) {
   const tmp2 = <closure_8 />;
   const tmp = callback();
   const items = [tmp.container, containerStyle];
-  return <View style={items}>{jsx(Pagination /* Pagination */.Pagination, { dotElement: tmp2, inactiveDotElement: tmp2, dotsLength: numberOfItems, activeDotIndex: currentIndex })}</View>;
+  return <View style={items}>{jsx(Pagination.Pagination, { dotElement: tmp2, inactiveDotElement: tmp2, dotsLength: numberOfItems, activeDotIndex: currentIndex })}</View>;
 };

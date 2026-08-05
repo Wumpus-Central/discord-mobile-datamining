@@ -13,7 +13,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/video_calls/nat
 export const CameraButton = function CameraButton() {
   let importDefault;
   let require;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [_detectH265HardwareDecode];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isVideoEnabled: store.isVideoEnabled(), videoDeviceId: store.getVideoDeviceId(), videoDevices: store.getVideoDevices() }));
   ({ videoDeviceId: require, videoDevices: importDefault } = stateFromStoresObject);

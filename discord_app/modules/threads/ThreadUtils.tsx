@@ -18,9 +18,9 @@ let c10;
 let c9;
 const require = arg1;
 function getAccessibilityLabelFormatter() {
-  const obj = { minutes: getSystemLocale /* getSystemLocale */.t["1Rcf/h"], hours: getSystemLocale /* getSystemLocale */.t.vgnx51, days: getSystemLocale /* getSystemLocale */.t.fNvE50, month: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.P7Gygz);
+  const obj = { minutes: getSystemLocale.t["1Rcf/h"], hours: getSystemLocale.t.vgnx51, days: getSystemLocale.t.fNvE50, month: null };
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.P7Gygz);
   return obj;
 }
 let closure_3 = ["can_send_message", "parent_channel_type"];
@@ -32,14 +32,14 @@ export const getTimestampAccessibilityLabel = function getTimestampAccessibility
   return getTimestampString(extractTimestampResult, getAccessibilityLabelFormatter);
 };
 export const trackThreadBrowserTab = function trackThreadBrowserTab() {
-  collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.THREAD_BROWSER_TAB_CHANGED);
+  collectGuildAnalyticsMetadata.trackWithMetadata(constants.THREAD_BROWSER_TAB_CHANGED);
 };
 export const trackThreadBrowserOpened = function trackThreadBrowserOpened() {
   let str = arg0;
   if (arg0 === undefined) {
     str = "Modal";
   }
-  collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.trackWithMetadata(constants.OPEN_MODAL, { type: "Thread Browser", location_section: str });
+  collectGuildAnalyticsMetadata.trackWithMetadata(constants.OPEN_MODAL, { type: "Thread Browser", location_section: str });
 };
 export const trackActiveThreadsPopoutOpened = function trackActiveThreadsPopoutOpened() {
   expandEventProperties.track(constants.OPEN_POPOUT, { type: "Active Threads Popout" });
@@ -47,7 +47,7 @@ export const trackActiveThreadsPopoutOpened = function trackActiveThreadsPopoutO
 export const trackThreadNotificationSettingsUpdated = function trackThreadNotificationSettingsUpdated(outer1_0, c1) {
   let can_send_message;
   let parent_channel_type;
-  let obj = collectThreadMetadata /* collectThreadMetadata */;
+  let obj = collectThreadMetadata;
   const result = obj.collectThreadMetadata(outer1_0);
   if (null != result) {
     const guildId = outer1_0.getGuildId();

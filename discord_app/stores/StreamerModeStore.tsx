@@ -102,7 +102,7 @@ Object.defineProperty(prototype, "enableContentProtection", {
   set: undefined
 });
 prototype["isOverlayWidgetDisabled"] = function isOverlayWidgetDisabled(arg0) {
-  const obj = apexExperiment /* apexExperiment */;
+  const obj = apexExperiment;
   let enabled = obj.getOverlayStreamerModeConfig("StreamerModeStore").enabled;
   if (enabled) {
     const self = this;

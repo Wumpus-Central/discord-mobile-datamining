@@ -33,7 +33,7 @@ function FlatFriendButton(label) {
   obj[2] = label;
   obj[3] = str;
   const merged1 = Object.assign(merged);
-  return callback(Button /* Button */.Button, obj);
+  return callback(Button.Button, obj);
 }
 function FriendRequestButton(user) {
   let ButtonComponent;

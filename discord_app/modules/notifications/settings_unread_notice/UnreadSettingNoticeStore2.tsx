@@ -75,8 +75,8 @@ function shouldTrackChannel(channelId) {
                 if (!tmp9) {
                   let tmp11 = null == tmp7.flags;
                   if (!tmp11) {
-                    tmp11 = !hasFlag /* hasFlag */.hasAnyFlag(tmp7.flags, constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS);
-                    const obj2 = hasFlag /* hasFlag */;
+                    tmp11 = !hasFlag.hasAnyFlag(tmp7.flags, constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS);
+                    const obj2 = hasFlag;
                   }
                   tmp9 = !tmp11;
                 }
@@ -100,8 +100,8 @@ function shouldTrackChannel(channelId) {
                   if (!tmp18) {
                     let tmp20 = null == tmp16.flags;
                     if (!tmp20) {
-                      tmp20 = !hasFlag /* hasFlag */.hasAnyFlag(tmp16.flags, constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS);
-                      const obj3 = hasFlag /* hasFlag */;
+                      tmp20 = !hasFlag.hasAnyFlag(tmp16.flags, constants.UNREADS_ALL_MESSAGES | constants.UNREADS_ONLY_MENTIONS);
+                      const obj3 = hasFlag;
                     }
                     tmp18 = !tmp20;
                   }
@@ -210,9 +210,9 @@ prototype["maybeAutoUpgradeChannel"] = function maybeAutoUpgradeChannel(id) {
         const channels = closure_14.channels;
         delete tmp[tmp2];
         set.add(id);
-        const result = useChannelPresetSettings /* useChannelPresetSettings */.updateChannelUnreadSetting(basicChannel.guild_id, basicChannel.id, UnreadSetting.ALL_MESSAGES);
+        const result = useChannelPresetSettings.updateChannelUnreadSetting(basicChannel.guild_id, basicChannel.id, UnreadSetting.ALL_MESSAGES);
         flag2 = true;
-        let obj = useChannelPresetSettings /* useChannelPresetSettings */;
+        let obj = useChannelPresetSettings;
       }
       tmp6 = flag2;
     }

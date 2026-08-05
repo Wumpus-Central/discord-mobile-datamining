@@ -16,7 +16,7 @@ let closure_6 = { code: "function AnimatedKeyboardProviderControllerTsx1(e){cons
 let closure_7 = { code: "function AnimatedKeyboardProviderControllerTsx2(e){const{animatedKeyboardHeight}=this.__closure;animatedKeyboardHeight.set(e.height);}" };
 let closure_8 = { code: "function AnimatedKeyboardProviderControllerTsx3(e){const{animatedKeyboardState,KeyboardState,animatedKeyboardHeight}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);animatedKeyboardHeight.set(e.height);}" };
 let closure_9 = require("noop").memo(() => {
-  let obj = KeyboardChatScrollView /* KeyboardChatScrollView */;
+  let obj = KeyboardChatScrollView;
   obj = { onStart: null, onMove: null, onEnd: null };
   const fn = function o(height) {
     if (0 === height.height) {
@@ -59,7 +59,7 @@ let obj = {
     const obj = { enabled: true, navigationBarTranslucent: true, preserveEdgeToEdge: true, statusBarTranslucent: true, children: null };
     const items = [children.children, callback(closure_9, {})];
     obj[4] = items;
-    return callback2(KeyboardChatScrollView /* KeyboardChatScrollView */.KeyboardProvider, obj);
+    return callback2(KeyboardChatScrollView.KeyboardProvider, obj);
   },
   animatedKeyboardHeight: mutable,
   animatedKeyboardState: mutable1

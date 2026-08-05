@@ -10,7 +10,7 @@ import { renderActivityOrPIP } from "ActivityPanelUI.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function ActivityPanelContainer() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [participantFromServer, ensureGuildLoaded, handleConnectionOpen];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => {

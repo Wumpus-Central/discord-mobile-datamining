@@ -32,13 +32,13 @@ prototype["handleMessageCreate"] = function handleMessageCreate(message) {
       tmp2 = "run bg sync" === message.content;
     }
     if (tmp2) {
-      _backgroundSync /* _backgroundSync */.backgroundSync({ force: true });
-      const obj2 = _backgroundSync /* _backgroundSync */;
+      _backgroundSync.backgroundSync({ force: true });
+      const obj2 = _backgroundSync;
     }
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  _backgroundSync /* _backgroundSync */.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
+  _backgroundSync.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
 };
 const backgroundSyncManager = new BackgroundSyncManager();
 const result = require("initialize").fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");

@@ -5,8 +5,8 @@ import { PasswordlessUpsell } from "../../account/native/SettingsAccountScreen.t
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["ldCE/p"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["ldCE/p"]);
   },
   parent: null,
   IconComponent: require("UserCircleIcon").UserCircleIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.ACCOUNT,
   getComponent() {
-    return PasswordlessUpsell /* PasswordlessUpsell */.default;
+    return PasswordlessUpsell.default;
   }
 };
 const route = createToggle.createRoute(obj);

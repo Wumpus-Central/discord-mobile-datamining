@@ -7,15 +7,15 @@ import { useParentalControlledExplicitContentSettings } from "../../../parent_to
 
 const require = arg1;
 function useObscuredContentNonFriendsDmSettingValue() {
-  const parentalControlledExplicitContentSettings = useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useParentalControlledExplicitContentSettings();
+  const parentalControlledExplicitContentSettings = useParentalControlledExplicitContentSettings.useParentalControlledExplicitContentSettings();
   let prop;
   if (parentalControlledExplicitContentSettings != null) {
     prop = parentalControlledExplicitContentSettings.explicitContentNonFriendDm;
   }
   let tmp5 = null;
   if (null != prop) {
-    tmp5 = redactionSettingToRenderedString /* redactionSettingToRenderedString */.redactionSettingToRenderedString(prop)();
-    const tmpResult = redactionSettingToRenderedString /* redactionSettingToRenderedString */;
+    tmp5 = redactionSettingToRenderedString.redactionSettingToRenderedString(prop)();
+    const tmpResult = redactionSettingToRenderedString;
   }
   return tmp5;
 }
@@ -43,8 +43,8 @@ function onObscuredContentNonFriendsDmOnPress() {
 }
 createToggle = {
   useTitle: function getTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["Yh+HX1"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Yh+HX1"]);
   },
   parent: require("MobileSetting").MobileSetting.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: useObscuredContentNonFriendsDmSettingValue,

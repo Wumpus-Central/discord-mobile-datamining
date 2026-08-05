@@ -76,21 +76,21 @@ export const ContextMenuCommandLoadingItem = function ContextMenuCommandLoadingI
   obj[1] = <View style={items1} />;
   obj[2] = start;
   obj[3] = end;
-  return jsx(TableRowInner /* TableRowInner */.TableRow, { width: null });
+  return jsx(TableRowInner.TableRow, { width: null });
 };
 export const ContextMenuCommandEmptyItem = function ContextMenuCommandEmptyItem(arg0) {
   let end;
   let start;
   ({ start, end } = arg0);
   const obj = { label: null, icon: null, start: null, end: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.YSNlV2);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.YSNlV2);
   const items = [, ];
   ({ commandIcon: arr[0], loadingIcon: arr[1] } = createCacheKey());
   obj[1] = <View style={items} />;
   obj[2] = start;
   obj[3] = end;
-  return jsx(TableRowInner /* TableRowInner */.TableRow, { label: null, icon: null, start: null, end: null });
+  return jsx(TableRowInner.TableRow, { label: null, icon: null, start: null, end: null });
 };
 export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(section) {
   let end;
@@ -98,7 +98,7 @@ export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(sect
   let start;
   section = section.section;
   ({ onPress, start, end } = section);
-  let obj = getApplicationCommandsIconSource /* getApplicationCommandsIconSource */;
+  let obj = getApplicationCommandsIconSource;
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
   obj = { onPress, label: section.name, icon: null, start: null, end: null, arrow: true };
   let tmp4Result = null != applicationCommandsIconSource;
@@ -111,5 +111,5 @@ export const ContextMenuCommandAppItem = function ContextMenuCommandAppItem(sect
   obj[2] = tmp4Result;
   obj[3] = start;
   obj[4] = end;
-  return jsx(TableRowInner /* TableRowInner */.TableRow, { onPress, label: section.name, icon: null, start: null, end: null, arrow: true });
+  return jsx(TableRowInner.TableRow, { onPress, label: section.name, icon: null, start: null, end: null, arrow: true });
 };

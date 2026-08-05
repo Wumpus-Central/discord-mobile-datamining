@@ -33,13 +33,13 @@ function isAnimatedBackgroundOption(closure_0) {
     }
     hasItem = tmp3;
     if (hasItem) {
-      let isAnimatedIconHashResult = getAvatarURL /* getAvatarURL */.isAnimatedIconHash(closure_0.asset);
+      let isAnimatedIconHashResult = getAvatarURL.isAnimatedIconHash(closure_0.asset);
       if (!isAnimatedIconHashResult) {
         isAnimatedIconHashResult = tmp6(1416).isVideoAssetHash(closure_0.asset);
         const tmp6Result = tmp6(1416);
       }
       hasItem = isAnimatedIconHashResult;
-      const obj = getAvatarURL /* getAvatarURL */;
+      const obj = getAvatarURL;
       tmp6 = require;
     }
   }
@@ -136,8 +136,8 @@ export const trackBackgroundOptionUpdated = function trackBackgroundOptionUpdate
   const guildId = store.getGuildId();
   const channelId = store.getChannelId();
   channel = channel.getChannel(channelId);
-  const voiceStateMetadata = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.getVoiceStateMetadata(guildId, channelId, true);
-  const obj2 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+  const voiceStateMetadata = collectGuildAnalyticsMetadata.getVoiceStateMetadata(guildId, channelId, true);
+  const obj2 = collectGuildAnalyticsMetadata;
   obj = { location, effect_type: null, effect_detail: null, effect_state: null, channel_id: null, channel_type: null, guild_id: null, voice_state_count: null, video_stream_count: null, media_session_id: null, rtc_connection_id: null, is_animated: null };
   let str = "None";
   if (null != closure_0) {

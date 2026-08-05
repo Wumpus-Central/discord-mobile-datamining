@@ -35,9 +35,9 @@ export default function SearchableDestinationListHeader(arg0) {
     headerRight: null,
     headerStatusBarHeight: null
   };
-  obj[4] = HeaderBackImage /* HeaderBackImage */.getHeaderCloseButton(onClose);
+  obj[4] = HeaderBackImage.getHeaderCloseButton(onClose);
   obj[5] = headerRight;
-  const obj3 = HeaderBackImage /* HeaderBackImage */;
+  const obj3 = HeaderBackImage;
   const tmp3 = View;
   const tmp4 = require;
   let num;
@@ -48,7 +48,7 @@ export default function SearchableDestinationListHeader(arg0) {
     tmp4Result = tmp4(7562);
   }
   obj[6] = num;
-  obj[1] = jsx(Background /* Background */.Header, {
+  obj[1] = jsx(Background.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

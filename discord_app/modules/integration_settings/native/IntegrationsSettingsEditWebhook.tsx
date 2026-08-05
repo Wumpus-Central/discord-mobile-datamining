@@ -323,11 +323,11 @@ let obj1 = { padding: require("Themes").modules.mobile.TABLE_ROW_PADDING };
 const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsEditWebhook.tsx");
 
 export default function ConnectedEditWebhook(arg0) {
-  let obj = useNavigation /* useNavigation */;
+  let obj = useNavigation;
   obj = { children: null };
   obj = { navigation: obj.useNavigation() };
   const merged = Object.assign(arg0);
-  const items = [callback(EditWebhook, obj), callback(NavScrim /* NavScrim */.NavScrim, {})];
+  const items = [callback(EditWebhook, obj), callback(NavScrim.NavScrim, {})];
   obj[0] = items;
   return callback2(closure_13, obj);
 };

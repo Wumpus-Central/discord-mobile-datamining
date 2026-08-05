@@ -22,15 +22,15 @@ prototype["checkForNewerBuild"] = function checkForNewerBuild() {
   if (true !== checking.checking) {
     dispatcher.dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_STARTED" });
     let obj = dispatcher;
-    const obj2 = _checkForNewerBuild /* _checkForNewerBuild */;
-    _checkForNewerBuild /* _checkForNewerBuild */.checkForNewerBuild().then((newBuild) => {
+    const obj2 = _checkForNewerBuild;
+    _checkForNewerBuild.checkForNewerBuild().then((newBuild) => {
       let obj = callback(709);
       obj = { type: "MOBILE_NATIVE_UPDATE_CHECK_FINISHED", newBuild };
       obj.dispatch(obj);
     }, () => {
       callback(709).dispatch({ type: "MOBILE_NATIVE_UPDATE_CHECK_FAILED" });
     });
-    const checkForNewerBuildResult = _checkForNewerBuild /* _checkForNewerBuild */.checkForNewerBuild();
+    const checkForNewerBuildResult = _checkForNewerBuild.checkForNewerBuild();
   }
 };
 prototype["ensureInitialized"] = function ensureInitialized() {

@@ -2755,11 +2755,11 @@ prototype4["render"] = function render() {
   const props = this.props;
   ({ manualRef, onScroll, onScrollEnd, onLayout, renderHeader, renderFooter, renderSection, renderItem, renderSectionFooter, getRecyclerKey, onEndReached, endReachedThreshold, headerSize, footerSize, sectionSize, sectionFooterSize, itemSize, sections, scrollPosValue, batchesToRender, optimizeListItemRender, initialScrollSection, initialScrollItem, initialScrollOrientation, initialScrollStart, getAnchorIdFromIndex, getAnchorIndexFromId, EXPERIMENTAL_enableAnchorWhileScrolling, chunkBase, disableContentWrappers, childrenWrapper, stickyHeaderFooter, stickySectionsVariant, persistantKeys, disableRecyclingOnFullCompute, disableLegacyGestureHandling, viewabilityConfig, onViewableItemsChanged, debugLayout, renderAccessory, removeClippedSubviews } = props);
   if (undefined === removeClippedSubviews) {
-    let obj = set /* set */;
+    let obj = set;
     removeClippedSubviews = obj.isAndroid();
   }
   if (props.inActionSheet) {
-    let BottomSheetScrollView = BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView;
+    let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
   } else {
     BottomSheetScrollView = closure_8;
   }

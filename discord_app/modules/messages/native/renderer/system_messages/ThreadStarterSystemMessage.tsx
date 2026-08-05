@@ -16,8 +16,8 @@ export const createThreadStarterSystemMessage = function createThreadStarterSyst
   let tmp5 = null;
   if (messageByReference.getMessageByReference(message.messageReference).state !== ReferencedMessageState.LOADED) {
     const obj = { content: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.OCs36J);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.OCs36J);
     const merged = Object.assign(createCommonMessage(message));
     tmp5 = obj;
   }

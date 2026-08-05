@@ -591,9 +591,9 @@ export default function createChannelStream(forceRender) {
     arr[1] = forceRender ? closure_6.UPDATE : closure_6.NOOP;
     arr[2] = roleStyle;
     arr[3] = messages.loadingMore;
-    roleStyle = getSystemLocale /* getSystemLocale */.intl;
+    roleStyle = getSystemLocale.intl;
     messages = roleStyle.string;
-    arr[4] = messages(getSystemLocale /* getSystemLocale */.t.XBlaiC);
+    arr[4] = messages(getSystemLocale.t.XBlaiC);
     arr = items.push(arr);
   }
 };

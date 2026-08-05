@@ -6,11 +6,11 @@ import { useWebBrowserSettingOptions } from "SelectWebBrowserSetting.tsx";
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["C+DkPu"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["C+DkPu"]);
   },
   usePredicate() {
-    return useWebBrowserSettingOptions /* useWebBrowserSettingOptions */.useWebBrowserSettingOptions().length > 1;
+    return useWebBrowserSettingOptions.useWebBrowserSettingOptions().length > 1;
   },
   parent: null,
   IconComponent: require("GlobeEarthIcon").GlobeEarthIcon,

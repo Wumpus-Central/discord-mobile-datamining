@@ -54,8 +54,8 @@ function canForwardMessage(state) {
       hasItem = null == state.activityInstance;
     }
     if (hasItem) {
-      hasItem = 0 === hasFlag /* hasFlag */.removeFlag(state.flags, closure_10);
-      const obj5 = hasFlag /* hasFlag */;
+      hasItem = 0 === hasFlag.removeFlag(state.flags, closure_10);
+      const obj5 = hasFlag;
     }
     if (hasItem) {
       const channel = obj3.getChannel(state.channel_id);

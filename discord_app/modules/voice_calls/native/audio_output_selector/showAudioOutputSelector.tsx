@@ -8,12 +8,12 @@ import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionShe
 const result = require("set").fileFinishedImporting("modules/voice_calls/native/audio_output_selector/showAudioOutputSelector.tsx");
 
 export const showAudioOutputSelector = function showAudioOutputSelector(channelId, closure_1) {
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isAndroid()) {
     obj = { channelId: null, isConnectedToVoiceChannel: null };
     obj[0] = channelId;
     obj[1] = closure_1;
-    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(9097, dependencyMap.paths), closure_4, obj);
+    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9097, dependencyMap.paths), closure_4, obj);
     const obj2 = ACTION_SHEET_HEIGHT_HALF;
   } else {
     const AudioRoutePicker = NativeModules.AudioRoutePicker;

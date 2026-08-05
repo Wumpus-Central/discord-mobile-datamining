@@ -169,7 +169,7 @@ export const combinePromotionStyles = function combinePromotionStyles(background
   return tmp;
 };
 export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
-  const GiftPromotionReminderExperiment = apexExperiment /* apexExperiment */.GiftPromotionReminderExperiment;
+  const GiftPromotionReminderExperiment = apexExperiment.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
     if (null == marketingComponentByType.getMarketingComponentByType(tmp(7568).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
       return false;

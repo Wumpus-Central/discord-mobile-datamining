@@ -73,7 +73,7 @@ export const useEnabledHarmTypesBitmaskForMessage = function useEnabledHarmTypes
   if (null == stateFromStores) {
     let channelIdAndAuthorIdFromMessage = {};
   } else {
-    channelIdAndAuthorIdFromMessage = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
+    channelIdAndAuthorIdFromMessage = getEligibleHarmTypesConfigsForContext;
     channelIdAndAuthorIdFromMessage = channelIdAndAuthorIdFromMessage.getChannelIdAndAuthorIdFromMessage(stateFromStores);
   }
   return useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelIdAndAuthorIdFromMessage.channelId, channelIdAndAuthorIdFromMessage.authorId);

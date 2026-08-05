@@ -885,7 +885,7 @@ export default {
   },
   setSelectedGuildJoinRequest(guildId, request) {
     if (null != request) {
-      let obj = trackMemberApplicationViewed /* trackMemberApplicationViewed */;
+      let obj = trackMemberApplicationViewed;
       obj = { guildId: null, applicationStatus: null, applicationUserId: null };
       obj[0] = guildId;
       ({ applicationStatus: obj2[1], userId: obj2[2] } = request);

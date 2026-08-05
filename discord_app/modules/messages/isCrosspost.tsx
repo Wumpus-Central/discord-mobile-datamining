@@ -11,8 +11,8 @@ const result = require("set").fileFinishedImporting("modules/messages/isCrosspos
 export default function isCrosspost(type) {
   let hasFlagResult = type.type === constants3.DEFAULT;
   if (hasFlagResult) {
-    hasFlagResult = hasFlag /* hasFlag */.hasFlag(type.flags, constants.IS_CROSSPOST);
-    const obj = hasFlag /* hasFlag */;
+    hasFlagResult = hasFlag.hasFlag(type.flags, constants.IS_CROSSPOST);
+    const obj = hasFlag;
   }
   if (hasFlagResult) {
     hasFlagResult = null != type.messageReference;

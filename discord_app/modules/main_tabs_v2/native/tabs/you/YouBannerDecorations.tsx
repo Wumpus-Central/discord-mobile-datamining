@@ -34,7 +34,7 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, color) => {
   const merged1 = Object.assign(closure_6.absoluteFillObject);
   obj.color = color;
   obj[1] = obj;
-  const obj4 = PlatformTypes /* PlatformTypes */;
+  const obj4 = PlatformTypes;
   const tmp3 = require;
   const space = Themes.space;
   if (isIOSResult) {
@@ -45,7 +45,7 @@ let closure_13 = createCacheKey.createStyles((arg0, arg1, color) => {
     tmp8 = tmp6;
   }
   const obj1 = { marginBottom: PX_24, paddingVertical: tmp8(712).space.PX_8, paddingHorizontal: tmp8(712).space.PX_24, borderRadius: null, backgroundColor: null, flexDirection: "row", borderColor: null, borderWidth: 1 };
-  isIOSResult = PlatformTypes /* PlatformTypes */.isIOS();
+  isIOSResult = PlatformTypes.isIOS();
   const result = tmp3(1348).isMobileVisualRefreshEnabled("YouBannerDecorations");
   const radii = tmp8(712).radii;
   let BACKGROUND_SURFACE_HIGH = arg1;
@@ -268,11 +268,11 @@ let result = require("mergeGuildAvatar").fileFinishedImporting("modules/main_tab
 
 export default memoResult;
 export const useHasSettingsBadge = function useHasSettingsBadge() {
-  let tmp = useEligibleActiveOutboundPromotions /* useEligibleActiveOutboundPromotions */.useUnseenOutboundPromotions().length > 0;
-  const obj = useEligibleActiveOutboundPromotions /* useEligibleActiveOutboundPromotions */;
-  const obj2 = hasUserTrialOfferExpired /* hasUserTrialOfferExpired */;
-  const tmp2 = null != hasUserTrialOfferExpired /* hasUserTrialOfferExpired */.useTrialOffer(closure_9);
-  const result = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent /* DismissibleContent */.DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
+  let tmp = useEligibleActiveOutboundPromotions.useUnseenOutboundPromotions().length > 0;
+  const obj = useEligibleActiveOutboundPromotions;
+  const obj2 = hasUserTrialOfferExpired;
+  const tmp2 = null != hasUserTrialOfferExpired.useTrialOffer(closure_9);
+  const result = UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.TRIAL_FOR_ALL_2026_SETTINGS_BADGE);
   let tmp4 = !result;
   if (!result) {
     tmp4 = tmp2;

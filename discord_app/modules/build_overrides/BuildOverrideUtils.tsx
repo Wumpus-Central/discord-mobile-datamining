@@ -33,7 +33,7 @@ function manualOverrideLinkMeta(str) {
   const match = str.match(regExp1);
   if (null != match) {
     if (2 === match.length) {
-      let obj = set /* set */;
+      let obj = set;
       obj = { targetBuildOverride: null, validForUserIds: null, expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT" };
       obj = {};
       const _HermesInternal = HermesInternal;
@@ -65,7 +65,7 @@ export const getBuildOverride = function getBuildOverride() {
     if (Version) {
       safeParseWithQueryResult.query.version = tmp3;
     }
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: null, oldFormErrors: true, rejectWithError: false };
     obj[0] = importAll(1469).format(safeParseWithQueryResult);
     const value = HTTP.get(obj);
@@ -90,11 +90,11 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
         const _HermesInternal = HermesInternal;
         const obj1 = { type: "branch", id: null };
         obj1[1] = match[1];
-        obj["discord_" + set /* set */.getNativePlatform()] = obj1;
+        obj["discord_" + set.getNativePlatform()] = obj1;
         obj[0] = obj;
         obj[1] = [];
         tmp13 = obj;
-        const obj4 = set /* set */;
+        const obj4 = set;
       }
     }
     return Promise.resolve(tmp13);
@@ -111,7 +111,7 @@ export const getBuildOverrideMeta = function getBuildOverrideMeta(url) {
       }
       const _window = window;
       safeParseWithQueryResult.host = window.location.host;
-      const HTTP = sendRequest /* sendRequest */.HTTP;
+      const HTTP = sendRequest.HTTP;
       let obj2 = { url: null, oldFormErrors: true, rejectWithError: false };
       obj2 = importAll(1469);
       obj2[0] = obj2.format(safeParseWithQueryResult);

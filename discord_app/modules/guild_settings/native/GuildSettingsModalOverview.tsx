@@ -55,36 +55,36 @@ let items = [
   {
     value: 60,
     label() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iXLF9W, { minutes: 1 });
+      const intl = getSystemLocale.intl;
+      return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes: 1 });
     }
   },
   {
     value: 300,
     label() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iXLF9W, { minutes: 5 });
+      const intl = getSystemLocale.intl;
+      return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes: 5 });
     }
   },
   {
     value: 900,
     label() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iXLF9W, { minutes: 15 });
+      const intl = getSystemLocale.intl;
+      return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes: 15 });
     }
   },
   {
     value: 1800,
     label() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iXLF9W, { minutes: 30 });
+      const intl = getSystemLocale.intl;
+      return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes: 30 });
     }
   },
   {
     value: 3600,
     label() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.xCjYxK, { hours: 1 });
+      const intl = getSystemLocale.intl;
+      return intl.formatToPlainString(getSystemLocale.t.xCjYxK, { hours: 1 });
     }
   }
 ];
@@ -267,8 +267,8 @@ prototype["componentDidUpdate"] = function componentDidUpdate(errors) {
     tmp2 = null != errors.message;
   }
   if (tmp2) {
-    presentAddedFriendToast /* presentAddedFriendToast */.presentError(errors.message);
-    const obj = presentAddedFriendToast /* presentAddedFriendToast */;
+    presentAddedFriendToast.presentError(errors.message);
+    const obj = presentAddedFriendToast;
   }
 };
 prototype["updateNavigator"] = function updateNavigator(submitting) {
@@ -313,8 +313,8 @@ prototype["getError"] = function getError(arg0) {
   return first;
 };
 prototype["handleSystemChannelFlagsChange"] = function handleSystemChannelFlagsChange(SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, arg1) {
-  const obj = hasFlag /* hasFlag */;
-  const setFlagResult = hasFlag /* hasFlag */.setFlag(this.props.guild.systemChannelFlags, SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, arg1);
+  const obj = hasFlag;
+  const setFlagResult = hasFlag.setFlag(this.props.guild.systemChannelFlags, SUPPRESS_GUILD_REMINDER_NOTIFICATIONS, arg1);
   GuildSettingsActionCreators.updateGuild({ systemChannelFlags: setFlagResult });
 };
 prototype["handleDefaultNotificationsChange"] = function handleDefaultNotificationsChange(defaultMessageNotifications) {
@@ -327,13 +327,13 @@ prototype["renderGuildName"] = function renderGuildName() {
   let guild;
   ({ guild, canManage } = this.props);
   const obj = { label: null, value: null, isDisabled: null, onChange: null, errorMessage: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.dBih7e);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.dBih7e);
   obj[1] = guild.name;
   obj[2] = !canManage;
   obj[3] = this.handleNameChange;
   obj[4] = this.getError("name");
-  return callback2(TextInput /* TextInput */.TextInput, obj);
+  return callback2(TextInput.TextInput, obj);
 };
 prototype["renderAFKSettings"] = function renderAFKSettings() {
   let afkChannel;
@@ -394,13 +394,13 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   const self = this;
   ({ guild, canManage, systemChannel } = this.props);
   if (null != systemChannel) {
-    let obj = computeChannelName /* computeChannelName */;
+    let obj = computeChannelName;
     let channelName = obj.computeChannelName(systemChannel, mergeGuildAvatar, upsertRelationship);
     let tmp = require;
   } else {
     tmp = require;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    channelName = intl.string(getSystemLocale /* getSystemLocale */.t.ibUhoa);
+    const intl = getSystemLocale.intl;
+    channelName = intl.string(getSystemLocale.t.ibUhoa);
   }
   let tmpResult = tmp(7909);
   const result = tmpResult.isEligibleForRoleSubscriptionPurchaseSystemMessageSettings(guild);
@@ -540,7 +540,7 @@ prototype["renderBoostProgressBar"] = function renderBoostProgressBar() {
   let canManage;
   let guild;
   ({ guild, canManage } = this.props);
-  let obj = apexExperiment /* apexExperiment */;
+  let obj = apexExperiment;
   let tmp3 = null;
   if (obj.getMobileBoostProgressBarEnabled("GuildSettingsModalOverview")) {
     obj = { title: null, description: null, hasIcons: false, children: null };
@@ -567,14 +567,14 @@ prototype["renderSplash"] = function renderSplash() {
   let tmp = null;
   if (features.has(constants2.INVITE_SPLASH)) {
     let obj = { title: null, description: null, helperText: null, hasIcons: false, hasTrailingText: null, children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.tzGY0q);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.FEFkkG);
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.tzGY0q);
+    const intl2 = getSystemLocale.intl;
+    obj[1] = intl2.string(getSystemLocale.t.FEFkkG);
+    const intl3 = getSystemLocale.intl;
     obj = { articleURL: null };
     obj[0] = combined.getArticleURL(constants3.GUILD_INVITE_SPLASH);
-    obj[2] = intl3.format(getSystemLocale /* getSystemLocale */.t.ZYA9PV, obj);
+    obj[2] = intl3.format(getSystemLocale.t.ZYA9PV, obj);
     obj[4] = null != guild.splash && canManage;
     obj = { disabled: null, guild: null, rawSource: null, getSource: null, onChooseAsset: null, size: null };
     obj[0] = !canManage;
@@ -588,7 +588,7 @@ prototype["renderSplash"] = function renderSplash() {
     obj[4] = this.handleSplashChange;
     obj[5] = { width: 1920, height: 1080 };
     obj[5] = closure_19(getSource, obj);
-    tmp = tmp2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+    tmp = tmp2(TableRowGroupTitle.TableRowGroup, obj);
     const obj3 = combined;
     const tmp5 = importDefault;
   }
@@ -597,7 +597,7 @@ prototype["renderSplash"] = function renderSplash() {
 prototype["renderSummaries"] = function renderSummaries() {
   const props = this.props;
   const guild = props.guild;
-  let obj = canSeeChannelSummaries /* canSeeChannelSummaries */;
+  let obj = canSeeChannelSummaries;
   if (obj.canGuildUseConversationSummaries(guild, false)) {
     const intl = tmp(1236).intl;
     obj = { helpdeskArticle: null };
@@ -626,11 +626,11 @@ prototype["renderDescription"] = function renderDescription() {
   let guild;
   ({ guild, canManage } = this.props);
   const obj = { label: null, description: null, maxLength: null, value: null, isDisabled: null, onChange: null, placeholder: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["RSfm+i"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["/B6PRw"]);
-  obj[2] = MAX_TRAITS /* MAX_TRAITS */.MAX_DESCRIPTION_LENGTH;
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["RSfm+i"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t["/B6PRw"]);
+  obj[2] = MAX_TRAITS.MAX_DESCRIPTION_LENGTH;
   let str = guild.description;
   if (str == null) {
     str = "";
@@ -639,8 +639,8 @@ prototype["renderDescription"] = function renderDescription() {
   obj[4] = !canManage;
   obj[5] = this.handleDescriptionChange;
   const intl3 = tmp2(1236).intl;
-  obj[6] = intl3.string(getSystemLocale /* getSystemLocale */.t.Nvfowl);
-  return closure_19(TextArea /* TextArea */.TextArea, obj);
+  obj[6] = intl3.string(getSystemLocale.t.Nvfowl);
+  return closure_19(TextArea.TextArea, obj);
 };
 prototype["renderBanner"] = function renderBanner() {
   let canManage;
@@ -649,14 +649,14 @@ prototype["renderBanner"] = function renderBanner() {
   let features = guild.features;
   if (features.has(constants2.BANNER)) {
     let obj = { title: null, description: null, helperText: null, hasIcons: false, hasTrailingText: null, children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["0r0AzF"]);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.UfqmIb);
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t["0r0AzF"]);
+    const intl2 = getSystemLocale.intl;
+    obj[1] = intl2.string(getSystemLocale.t.UfqmIb);
+    const intl3 = getSystemLocale.intl;
     obj = { articleURL: null };
     obj[0] = combined.getArticleURL(constants3.GUILD_BANNER_SPLASH);
-    obj[2] = intl3.format(getSystemLocale /* getSystemLocale */.t.vBcWUv, obj);
+    obj[2] = intl3.format(getSystemLocale.t.vBcWUv, obj);
     obj[4] = null != guild.banner && canManage;
     obj = { disabled: null, guild: null, rawSource: null, getSource: null, onChooseAsset: null, size: null };
     obj[0] = !canManage;
@@ -670,7 +670,7 @@ prototype["renderBanner"] = function renderBanner() {
     obj[4] = this.handleBannerChange;
     obj[5] = { width: 960, height: 540 };
     obj[5] = closure_19(getSource, obj);
-    return closure_19(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+    return closure_19(TableRowGroupTitle.TableRowGroup, obj);
   } else {
     return null;
   }
@@ -683,11 +683,11 @@ prototype["renderDeleteGuild"] = function renderDeleteGuild() {
     if (callback(this.props.guild, currentUser)) {
       let obj = { hasIcons: false, children: null };
       obj = { variant: "danger", label: null, onPress: null };
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.l3hWP6);
+      const intl = getSystemLocale.intl;
+      obj[1] = intl.string(getSystemLocale.t.l3hWP6);
       obj[2] = this.handleDeleteServer;
-      obj[1] = callback2(TableRowInner /* TableRowInner */.TableRow, obj);
-      tmp2 = callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+      obj[1] = callback2(TableRowInner.TableRow, obj);
+      tmp2 = callback2(TableRowGroupTitle.TableRowGroup, obj);
     }
   }
   return tmp2;
@@ -701,8 +701,8 @@ prototype["render"] = function render() {
   obj[1] = Themes.space.PX_24;
   const items1 = [this.renderGuildName(), this.renderSummaries(), this.renderAFKSettings(), this.renderSystemMessageSettings(), this.renderDefaultNotificationSettings(), this.renderBoostProgressBar(), this.renderDescription(), this.renderBanner(), this.renderSplash(), this.renderDeleteGuild()];
   obj[2] = items1;
-  obj[2] = callback3(Stack /* Stack */.Stack, obj);
-  const items2 = [callback2(Form /* Form */.Form, obj), callback2(NavScrim /* NavScrim */.NavScrim, {})];
+  obj[2] = callback3(Stack.Stack, obj);
+  const items2 = [callback2(Form.Form, obj), callback2(NavScrim.NavScrim, {})];
   obj[0] = items2;
   return callback3(closure_21, obj);
 };
@@ -710,8 +710,8 @@ GuildSettingsModalOverview.contextType = require("ManaContext").ThemeContext;
 let obj1 = {
   value: 60,
   label() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iXLF9W, { minutes: 1 });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.iXLF9W, { minutes: 1 });
   }
 };
 let result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalOverview.tsx");

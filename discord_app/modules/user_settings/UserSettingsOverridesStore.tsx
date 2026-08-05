@@ -62,12 +62,12 @@ UserSettingsOverridesStore.displayName = "UserSettingsOverridesStore";
 UserSettingsOverridesStore.persistKey = "UserSettingsOverridesStore";
 let items = [
   () => {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     let obj = Storage.get("UserSettingsStoreOverrides");
     if (obj == null) {
       obj = {};
     }
-    const Storage2 = Storage /* Storage */.Storage;
+    const Storage2 = Storage.Storage;
     Storage2.remove("UserSettingsStoreOverrides");
     return obj;
   }

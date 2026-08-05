@@ -29,10 +29,10 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
   let onClose;
   ({ guildId, onClose } = arg0);
   const tmp = createCacheKey();
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   let obj = { helpdeskArticle: closure_4 };
   guild = guild.getGuild(guildId);
-  let formatResult1 = intl.format(getSystemLocale /* getSystemLocale */.t.ZqkXsC, obj);
+  let formatResult1 = intl.format(getSystemLocale.t.ZqkXsC, obj);
   if (null != guild) {
     const intl2 = tmp2(1236).intl;
     obj = { guildName: null, helpdeskArticle: null };
@@ -41,12 +41,12 @@ export default function GuildLimitedAccessInfoAlert(arg0) {
     formatResult1 = intl2.format(tmp2(1236).t.jn0Xyx, obj);
   }
   obj = { onClose, children: null };
-  const formatResult = intl.format(getSystemLocale /* getSystemLocale */.t.ZqkXsC, obj);
+  const formatResult = intl.format(getSystemLocale.t.ZqkXsC, obj);
   tmp4 = closure_4;
   const obj1 = { style: tmp.header, children: null };
   const intl3 = tmp2(1236).intl;
-  obj1[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.kJwpBW);
-  const items = [callback(Button /* Button */.LegacyText, obj1), callback(Text /* Text */.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
+  obj1[1] = intl3.string(getSystemLocale.t.kJwpBW);
+  const items = [callback(Button.LegacyText, obj1), callback(Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
   obj[1] = items;
   return callback2(componentDidMount, obj);
 };

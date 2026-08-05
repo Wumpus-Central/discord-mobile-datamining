@@ -27,9 +27,9 @@ function PlaceholderCommandRow(isFirstRow) {
     flag2 = false;
   }
   const tmp = createCacheKey();
-  let obj = usePlaceholderWidth /* usePlaceholderWidth */;
+  let obj = usePlaceholderWidth;
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  let obj1 = usePlaceholderWidth /* usePlaceholderWidth */;
+  let obj1 = usePlaceholderWidth;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
   obj = { label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null };
   obj = { style: null };
@@ -45,7 +45,7 @@ function PlaceholderCommandRow(isFirstRow) {
   obj[1] = callback2(View, obj2);
   obj[3] = flag;
   obj[4] = flag2;
-  return callback2(TableRowInner /* TableRowInner */.TableRow, obj);
+  return callback2(TableRowInner.TableRow, obj);
 }
 class CommandRow {
   constructor(arg0) {

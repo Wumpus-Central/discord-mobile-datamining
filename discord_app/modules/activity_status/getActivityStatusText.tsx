@@ -62,7 +62,7 @@ export default function getActivityStatusText(name) {
   if (name != null) {
     status_display_type = name.status_display_type;
   }
-  if (status_display_type !== StatusDisplayTypes /* StatusDisplayTypes */.StatusDisplayTypes.NAME) {
+  if (status_display_type !== StatusDisplayTypes.StatusDisplayTypes.NAME) {
     let status_display_type1;
     if (name != null) {
       status_display_type1 = name.status_display_type;

@@ -26,8 +26,8 @@ function _getPresenceActivityInviteCoverImageURL(messageId) {
     }
     let assetImage = null;
     if (null != invite_cover_image) {
-      assetImage = updateAssets /* updateAssets */.getAssetImage(presenceActivity.application_id, presenceActivity.assets.invite_cover_image, result);
-      const obj2 = updateAssets /* updateAssets */;
+      assetImage = updateAssets.getAssetImage(presenceActivity.application_id, presenceActivity.assets.invite_cover_image, result);
+      const obj2 = updateAssets;
     }
     if (assetImage == null) {
       assetImage = coverImageURL;

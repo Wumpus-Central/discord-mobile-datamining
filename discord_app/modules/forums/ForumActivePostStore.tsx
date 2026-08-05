@@ -31,8 +31,8 @@ function maybeRebuildState() {
   let c3 = null;
   let c12 = null;
   const set = new Set();
-  const LATEST_ACTIVITY = set /* set */.ThreadSortOrder.LATEST_ACTIVITY;
-  const MATCH_SOME = set /* set */.ThreadSearchTagSetting.MATCH_SOME;
+  const LATEST_ACTIVITY = set.ThreadSortOrder.LATEST_ACTIVITY;
+  const MATCH_SOME = set.ThreadSearchTagSetting.MATCH_SOME;
   let c16 = 0;
   let closure_19 = [];
   let closure_20 = apply.chain(items);
@@ -222,7 +222,7 @@ prototype["getCanAckThreads"] = function getCanAckThreads() {
   return c18;
 };
 prototype["getThreadIds"] = function getThreadIds(id, closure_1, closure_2, closure_3) {
-  const areSetsEqualResult = areSetsEqual /* areSetsEqual */.areSetsEqual(closure_2, closure_13);
+  const areSetsEqualResult = areSetsEqual.areSetsEqual(closure_2, closure_13);
   let tmp2 = !areSetsEqualResult;
   let closure_12 = id;
   closure_13 = closure_2;
@@ -267,8 +267,8 @@ const forumActivePostStore = new ForumActivePostStore(require("dispatcher"), {
         c12 = null;
         const _Set = Set;
         const set = new Set();
-        const LATEST_ACTIVITY = set /* set */.ThreadSortOrder.LATEST_ACTIVITY;
-        const MATCH_SOME = set /* set */.ThreadSearchTagSetting.MATCH_SOME;
+        const LATEST_ACTIVITY = set.ThreadSortOrder.LATEST_ACTIVITY;
+        const MATCH_SOME = set.ThreadSearchTagSetting.MATCH_SOME;
         let c16 = 0;
         let closure_19 = [];
         let closure_20 = apply.chain(items);
@@ -317,7 +317,7 @@ const forumActivePostStore = new ForumActivePostStore(require("dispatcher"), {
     channel = channel.channel;
     if (null != channel.parent_id) {
       if (channel.parent_id === c12) {
-        const isForumPostPinnedResult = getCreationDefaultFormatter /* getCreationDefaultFormatter */.isForumPostPinned(channel.id);
+        const isForumPostPinnedResult = getCreationDefaultFormatter.isForumPostPinned(channel.id);
         const hasItem = set2.has(channel.id);
         if (isForumPostPinnedResult) {
           if (!hasItem) {

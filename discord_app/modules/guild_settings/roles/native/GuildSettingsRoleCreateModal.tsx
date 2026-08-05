@@ -473,9 +473,9 @@ let closure_27 = importAllResult.memo((step) => {
   let obj = { style: closure_23.titleContainer, children: null };
   const sum = keys.indexOf(step.step) + 1;
   obj = { style: closure_23.title, accessibilityRole: "header", variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl.format(getSystemLocale /* getSystemLocale */.t["8v/u0i"], { number: sum, total: keys.length });
-  obj[1] = callback3(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[4] = intl.format(getSystemLocale.t["8v/u0i"], { number: sum, total: keys.length });
+  obj[1] = callback3(Text.Text, obj);
   return callback3(closure_7, obj);
 });
 let closure_32 = {

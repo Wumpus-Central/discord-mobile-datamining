@@ -18,12 +18,12 @@ function BadgedIcon(arg0) {
   let showRedDot;
   let type;
   ({ type, showRedDot } = arg0);
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.INTERACTIVE_TEXT_DEFAULT, useTheme());
   const tmp6 = callback2();
-  let obj1 = styleProperties /* styleProperties */;
+  let obj1 = styleProperties;
   const iconSizeStyles = obj1.useIconSizeStyles("sm", true, 2);
-  if (type === SavedMessageSortTypes /* SavedMessageSortTypes */.SavedMessageSortTypes.REMINDER) {
+  if (type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
     let BookmarkIcon = tmp4(4249).ClockIcon;
   } else {
     BookmarkIcon = tmp4(10191).BookmarkIcon;

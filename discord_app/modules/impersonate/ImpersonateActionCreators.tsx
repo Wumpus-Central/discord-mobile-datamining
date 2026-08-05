@@ -25,10 +25,10 @@ function updateImpersonating(closure_0, type) {
     obj = { num_roles: null };
     const _Object = Object;
     obj[0] = Object.keys(data.roles).length;
-    const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(closure_0));
-    obj.is_viewing_as_member = data.type === ImpersonateType /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
+    const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(closure_0));
+    obj.is_viewing_as_member = data.type === ImpersonateType.ImpersonateType.NEW_MEMBER;
     obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj);
-    const obj3 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+    const obj3 = collectGuildAnalyticsMetadata;
     const tmp7 = require;
     obj = { type: "IMPERSONATE_UPDATE", guildId: null, data: null };
     obj[1] = closure_0;
@@ -56,10 +56,10 @@ let result = require("trackCommunicationDisabled").fileFinishedImporting("module
 export const startImpersonating = function startImpersonating(guildId, data) {
   let obj = expandEventProperties;
   obj = { num_roles: Object.keys(data.roles).length };
-  const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
-  obj.is_viewing_as_member = data.type === ImpersonateType /* ImpersonateType */.ImpersonateType.NEW_MEMBER;
+  const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
+  obj.is_viewing_as_member = data.type === ImpersonateType.ImpersonateType.NEW_MEMBER;
   obj.track(constants2.VIEW_AS_ROLES_SELECTED, obj);
-  const obj3 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+  const obj3 = collectGuildAnalyticsMetadata;
   const tmp2 = require;
   obj = { type: "IMPERSONATE_UPDATE", guildId, data };
   dispatcher.dispatch(obj);
@@ -127,10 +127,10 @@ export const updateImpersonatedRoles = function updateImpersonatedRoles(guildId,
     obj[item10013.id] = item10013;
     continue;
   }
-  obj = { type: ImpersonateType /* ImpersonateType */.ImpersonateType.NEW_MEMBER, roles: obj };
+  obj = { type: ImpersonateType.ImpersonateType.NEW_MEMBER, roles: obj };
   updateImpersonating(guildId, obj);
 };
 export const updateImpersonatedData = function updateImpersonatedData(closure_0, arg1) {
   const merged = Object.assign(arg1);
-  updateImpersonating(closure_0, { type: ImpersonateType /* ImpersonateType */.ImpersonateType.NEW_MEMBER });
+  updateImpersonating(closure_0, { type: ImpersonateType.ImpersonateType.NEW_MEMBER });
 };

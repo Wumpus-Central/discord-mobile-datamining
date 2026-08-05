@@ -9,27 +9,27 @@ import { UserListItem } from "../../privacy_and_safety/native/SettingsSecureFram
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.x8U2eC);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.x8U2eC);
   },
   useDescription: function useSecureFramesEncryptionDescription() {
-    let obj = useSecureFramesVerifiedUserIds /* useSecureFramesVerifiedUserIds */;
+    let obj = useSecureFramesVerifiedUserIds;
     const secureFramesVerifiedUserIds = obj.useSecureFramesVerifiedUserIds();
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { count: secureFramesVerifiedUserIds.length };
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["6vrePS"], obj);
+    return intl.formatToPlainString(getSystemLocale.t["6vrePS"], obj);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   usePredicate: function useSecureFramesPersistentCodesValue() {
     const items = [items];
-    return initialize /* initialize */.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
+    return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
   },
   screen: createToggle
 };
 createToggle = {
   route: require("ME").UserSettingsSections.SECURE_FRAMES,
   getComponent() {
-    return UserListItem /* UserListItem */.default;
+    return UserListItem.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

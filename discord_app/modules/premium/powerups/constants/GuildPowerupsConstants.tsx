@@ -51,12 +51,12 @@ const obj1 = { boostPrice: 5, includedInLevel: BoostedGuildTiers.TIER_3 };
 let obj2 = {
   boostPrice: 4,
   isEnabled(guildId) {
-    const FileUploadPowerupHoldoutExperiment = apexExperiment /* apexExperiment */.FileUploadPowerupHoldoutExperiment;
+    const FileUploadPowerupHoldoutExperiment = apexExperiment.FileUploadPowerupHoldoutExperiment;
     const enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "GuildPowerupsConstants" }).enabled;
     let fileUpload250MbPowerupEnabled = !enabled;
     if (!enabled) {
-      fileUpload250MbPowerupEnabled = experiment /* experiment */.getFileUpload250MbPowerupEnabled(guildId, "GuildPowerupsConstants");
-      const tmpResult = experiment /* experiment */;
+      fileUpload250MbPowerupEnabled = experiment.getFileUpload250MbPowerupEnabled(guildId, "GuildPowerupsConstants");
+      const tmpResult = experiment;
     }
     return fileUpload250MbPowerupEnabled;
   }
@@ -64,10 +64,10 @@ let obj2 = {
 let obj3 = {
   boostPrice: 3,
   isEnabled(guildId) {
-    let serverThemeUserEnabled = apexExperiment /* apexExperiment */.getServerThemeUserEnabled("GuildPowerupsConstants");
+    let serverThemeUserEnabled = apexExperiment.getServerThemeUserEnabled("GuildPowerupsConstants");
     if (serverThemeUserEnabled) {
-      serverThemeUserEnabled = experiment /* experiment */.getServerThemeEnabled(guildId, "GuildPowerupsConstants");
-      const tmpResult = experiment /* experiment */;
+      serverThemeUserEnabled = experiment.getServerThemeEnabled(guildId, "GuildPowerupsConstants");
+      const tmpResult = experiment;
     }
     return serverThemeUserEnabled;
   }
@@ -75,7 +75,7 @@ let obj3 = {
 let obj4 = {
   boostPrice: 3,
   isEnabled(c0) {
-    return experiment /* experiment */.getGameServerEnabled(c0, "GuildPowerupsConstants");
+    return experiment.getGameServerEnabled(c0, "GuildPowerupsConstants");
   }
 };
 const set3 = new Set(items11);
@@ -118,59 +118,59 @@ export const GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP = set2;
 export const GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE = set3;
 export const GUILD_FEATURE_TO_PERK = () => {
   let obj = {};
-  obj = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.STREAM, description: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.y4ft4D);
+  obj = { perkIcon: getGuildTierFromGuild.PerkIcons.STREAM, description: null };
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.y4ft4D);
   obj[GuildFeatures.VIDEO_QUALITY_1080_60FPS] = obj;
-  obj = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.AUDIO, description: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zoT1ZE, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 });
+  obj = { perkIcon: getGuildTierFromGuild.PerkIcons.AUDIO, description: null };
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.formatToPlainString(getSystemLocale.t.zoT1ZE, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 });
   obj[GuildFeatures.AUDIO_BITRATE_128_KBPS] = obj;
-  const obj2 = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.CUSTOMIZATION, description: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.Qwlpov);
+  const obj2 = { perkIcon: getGuildTierFromGuild.PerkIcons.CUSTOMIZATION, description: null };
+  const intl3 = getSystemLocale.intl;
+  obj2[1] = intl3.string(getSystemLocale.t.Qwlpov);
   obj[GuildFeatures.INVITE_SPLASH] = obj2;
-  const obj3 = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.ANIMATED, description: null };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj3[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.PbAyub);
+  const obj3 = { perkIcon: getGuildTierFromGuild.PerkIcons.ANIMATED, description: null };
+  const intl4 = getSystemLocale.intl;
+  obj3[1] = intl4.string(getSystemLocale.t.PbAyub);
   obj[GuildFeatures.ANIMATED_ICON] = obj3;
-  const obj4 = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.AUDIO, description: null };
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[1] = intl5.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zoT1ZE, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 });
+  const obj4 = { perkIcon: getGuildTierFromGuild.PerkIcons.AUDIO, description: null };
+  const intl5 = getSystemLocale.intl;
+  obj4[1] = intl5.formatToPlainString(getSystemLocale.t.zoT1ZE, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 });
   obj[GuildFeatures.AUDIO_BITRATE_256_KBPS] = obj4;
-  const obj6 = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.CUSTOM_ROLE_ICON, description: null };
-  const intl6 = getSystemLocale /* getSystemLocale */.intl;
-  obj6[1] = intl6.string(getSystemLocale /* getSystemLocale */.t["6PV6Qc"]);
+  const obj6 = { perkIcon: getGuildTierFromGuild.PerkIcons.CUSTOM_ROLE_ICON, description: null };
+  const intl6 = getSystemLocale.intl;
+  obj6[1] = intl6.string(getSystemLocale.t["6PV6Qc"]);
   obj[GuildFeatures.ROLE_ICONS] = obj6;
-  const obj7 = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.UPLOAD, description: null };
-  const intl7 = getSystemLocale /* getSystemLocale */.intl;
+  const obj7 = { perkIcon: getGuildTierFromGuild.PerkIcons.UPLOAD, description: null };
+  const intl7 = getSystemLocale.intl;
   const obj8 = { uploadSizeLimit: null };
-  const intl8 = getSystemLocale /* getSystemLocale */.intl;
-  obj8[0] = intl8.string(getSystemLocale /* getSystemLocale */.t.M6qV8j);
-  obj7[1] = intl7.formatToPlainString(getSystemLocale /* getSystemLocale */.t.aFRl53, obj8);
+  const intl8 = getSystemLocale.intl;
+  obj8[0] = intl8.string(getSystemLocale.t.M6qV8j);
+  obj7[1] = intl7.formatToPlainString(getSystemLocale.t.aFRl53, obj8);
   obj[GuildFeatures.MAX_FILE_SIZE_50_MB] = obj7;
-  const obj9 = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.CUSTOMIZATION, description: null };
-  const intl9 = getSystemLocale /* getSystemLocale */.intl;
-  obj9[1] = intl9.string(getSystemLocale /* getSystemLocale */.t["1a5rjl"]);
+  const obj9 = { perkIcon: getGuildTierFromGuild.PerkIcons.CUSTOMIZATION, description: null };
+  const intl9 = getSystemLocale.intl;
+  obj9[1] = intl9.string(getSystemLocale.t["1a5rjl"]);
   obj[GuildFeatures.BANNER] = obj9;
-  const obj10 = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.ANIMATED, description: null };
-  const intl10 = getSystemLocale /* getSystemLocale */.intl;
-  obj10[1] = intl10.string(getSystemLocale /* getSystemLocale */.t["1+Vmh9"]);
+  const obj10 = { perkIcon: getGuildTierFromGuild.PerkIcons.ANIMATED, description: null };
+  const intl10 = getSystemLocale.intl;
+  obj10[1] = intl10.string(getSystemLocale.t["1+Vmh9"]);
   obj[GuildFeatures.ANIMATED_BANNER] = obj10;
-  const obj11 = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.AUDIO, description: null };
-  const intl11 = getSystemLocale /* getSystemLocale */.intl;
-  obj11[1] = intl11.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zoT1ZE, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 });
+  const obj11 = { perkIcon: getGuildTierFromGuild.PerkIcons.AUDIO, description: null };
+  const intl11 = getSystemLocale.intl;
+  obj11[1] = intl11.formatToPlainString(getSystemLocale.t.zoT1ZE, { bitrate: BoostedGuildFeatures[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 });
   obj[GuildFeatures.AUDIO_BITRATE_384_KBPS] = obj11;
-  const obj13 = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.VANITY, description: null };
-  const intl12 = getSystemLocale /* getSystemLocale */.intl;
-  obj13[1] = intl12.string(getSystemLocale /* getSystemLocale */.t["5XZKy/"]);
+  const obj13 = { perkIcon: getGuildTierFromGuild.PerkIcons.VANITY, description: null };
+  const intl12 = getSystemLocale.intl;
+  obj13[1] = intl12.string(getSystemLocale.t["5XZKy/"]);
   obj[GuildFeatures.VANITY_URL] = obj13;
-  const obj14 = { perkIcon: getGuildTierFromGuild /* getGuildTierFromGuild */.PerkIcons.UPLOAD, description: null };
-  const intl13 = getSystemLocale /* getSystemLocale */.intl;
+  const obj14 = { perkIcon: getGuildTierFromGuild.PerkIcons.UPLOAD, description: null };
+  const intl13 = getSystemLocale.intl;
   const obj15 = { uploadSizeLimit: null };
-  const intl14 = getSystemLocale /* getSystemLocale */.intl;
-  obj15[0] = intl14.string(getSystemLocale /* getSystemLocale */.t.yMOW8D);
-  obj14[1] = intl13.formatToPlainString(getSystemLocale /* getSystemLocale */.t.aFRl53, obj15);
+  const intl14 = getSystemLocale.intl;
+  obj15[0] = intl14.string(getSystemLocale.t.yMOW8D);
+  obj14[1] = intl13.formatToPlainString(getSystemLocale.t.aFRl53, obj15);
   obj[GuildFeatures.MAX_FILE_SIZE_100_MB] = obj14;
   return obj;
 };

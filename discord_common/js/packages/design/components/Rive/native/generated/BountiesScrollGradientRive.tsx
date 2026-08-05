@@ -31,14 +31,14 @@ let closure_8 = importAllResult.forwardRef(function BountiesScrollGradientRiveIn
   obj[5] = tmp;
   obj[6] = defaultViewModelInstance.stateMachine;
   const merged = Object.assign(callback(defaultViewModelInstance, closure_3));
-  return jsx(BaseRive /* BaseRive */.BaseRive, { ref, src: null, artboard: null, artboardProperties: null, artboardViewModelInstances: null, defaultViewModelInstance: null, stateMachine: null });
+  return jsx(BaseRive.BaseRive, { ref, src: null, artboard: null, artboardProperties: null, artboardViewModelInstances: null, defaultViewModelInstance: null, stateMachine: null });
 });
 const forwardRefResult = importAllResult.forwardRef(function BountiesScrollGradientRiveWithBoundary(fallback, ref) {
   let obj = { fallback: fallback.fallback, children: null };
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_8 ref={arg1} />;
-  return jsx(getDerivedStateFromError /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollGradientRive.tsx");
 

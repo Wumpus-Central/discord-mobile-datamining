@@ -346,12 +346,12 @@ function NoResults() {
   const items = [closure_14(tmp8, obj), , ];
   obj = { style: tmp.noResultsTitle, variant: "heading-md/bold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp9(1236).intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.vhQK3o);
-  items[1] = closure_14(Text /* Text */.Text, obj);
+  obj[3] = intl.string(getSystemLocale.t.vhQK3o);
+  items[1] = closure_14(Text.Text, obj);
   const obj1 = { style: tmp.noResultsSubtitle, variant: "text-sm/semibold", color: "text-default", children: null };
   const intl2 = tmp9(1236).intl;
-  obj1[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.bwytdh);
-  items[2] = closure_14(Text /* Text */.Text, obj1);
+  obj1[3] = intl2.string(getSystemLocale.t.bwytdh);
+  items[2] = closure_14(Text.Text, obj1);
   obj[1] = items;
   return tmp5(tmp6, obj);
 }

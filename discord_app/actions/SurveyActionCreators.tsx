@@ -47,7 +47,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
   }
   obj = { url: closure_7.USER_SURVEY, query: obj, trackedActionData: null, rejectWithError: null };
   obj = {
-    event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_SURVEY_FETCH,
+    event: encodeProperties.NetworkActionNames.USER_SURVEY_FETCH,
     properties(body) {
       let survey;
       if (body != null) {
@@ -65,7 +65,7 @@ export const surveyFetch = function surveyFetch(surveyOverride, disable_auto_see
   };
   obj[2] = obj;
   const obj2 = TrackedHTTPUtils;
-  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[3] = sendRequest.rejectWithMigratedError();
   const value = obj2.get(obj);
   return value.then((body) => {
     let survey;

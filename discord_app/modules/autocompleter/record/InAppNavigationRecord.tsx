@@ -101,7 +101,7 @@ prototype["fromType"] = function fromType(arg0) {
     throwTypeErrorResult = arg2;
     if (tmp7.SETTINGS === arg0) {
       if (settingsPathToRouteResult == null) {
-        obj2 = settingsPathToRoute /* settingsPathToRoute */;
+        obj2 = settingsPathToRoute;
         settingsPathToRouteResult = obj2.settingsPathToRoute(UserSettingsPath.ACCOUNT);
       }
       const obj3 = { path: null, label: null, type: null };

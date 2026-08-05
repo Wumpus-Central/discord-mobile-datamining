@@ -15,7 +15,7 @@ export const canLaunchFrame = function canLaunchFrame(application) {
       }
       return hasApplicationFlagResult;
     }
-    obj = getShelfBadgeTypeIfActive /* getShelfBadgeTypeIfActive */;
+    obj = getShelfBadgeTypeIfActive;
   }
   return false;
 };

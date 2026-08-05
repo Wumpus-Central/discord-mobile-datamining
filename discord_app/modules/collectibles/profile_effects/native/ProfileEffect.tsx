@@ -257,11 +257,11 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/c
 export default function WrappedProfileEffect(skuId) {
   let useThumbnail;
   let thumbnailUrlOverride = skuId;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp = useProfileEffect(skuId.skuId);
-  useThumbnail = sortEffectLayers /* sortEffectLayers */.usePotentiallyRandomizedProfileEffect(tmp);
+  useThumbnail = sortEffectLayers.usePotentiallyRandomizedProfileEffect(tmp);
   if (null == useThumbnail) {
     return null;
   } else {

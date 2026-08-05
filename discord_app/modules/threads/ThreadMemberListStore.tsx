@@ -547,7 +547,7 @@ const threadMemberListStore = new ThreadMemberListStore(require("dispatcher"), {
       }
       return id;
     });
-    const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
     const arr = apply(presences.presences);
     let flag = false;
     let flag2 = false;

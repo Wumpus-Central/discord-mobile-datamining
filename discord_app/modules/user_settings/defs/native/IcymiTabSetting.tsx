@@ -8,12 +8,12 @@ import { useLabFeature } from "../../../labs/useLabFeature.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.D4clKq);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.D4clKq);
   },
   parent: require("MobileSetting").MobileSetting.ADVANCED,
   useValue: function useICYMISettingValue() {
-    return useLabFeature(apexExperiment /* apexExperiment */.ICYMI_LAB_FEATURE);
+    return useLabFeature(apexExperiment.ICYMI_LAB_FEATURE);
   },
   onValueChange: function onICYMISettingValueChange(enabled) {
     let obj = ICYMIActionCreators;
@@ -26,21 +26,21 @@ const toggle = createToggle.createToggle({
     const tmp = importDefault;
     const tmpResult = ICYMIActionCreators;
     obj = { enabled };
-    toggleLabFeature /* toggleLabFeature */.toggleLabFeature(apexExperiment /* apexExperiment */.ICYMI_LAB_FEATURE, obj);
+    toggleLabFeature.toggleLabFeature(apexExperiment.ICYMI_LAB_FEATURE, obj);
   },
   usePredicate: function useICYMIPredicate() {
-    const ICYMIStaffOnlyExperiment = apexExperiment /* apexExperiment */.ICYMIStaffOnlyExperiment;
+    const ICYMIStaffOnlyExperiment = apexExperiment.ICYMIStaffOnlyExperiment;
     return ICYMIStaffOnlyExperiment.useConfig({ location: "settings" }).enabled;
   }
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.D4clKq);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.D4clKq);
   },
   parent: require("MobileSetting").MobileSetting.ADVANCED,
   useValue: function useICYMISettingValue() {
-    return useLabFeature(apexExperiment /* apexExperiment */.ICYMI_LAB_FEATURE);
+    return useLabFeature(apexExperiment.ICYMI_LAB_FEATURE);
   },
   onValueChange: function onICYMISettingValueChange(enabled) {
     let obj = ICYMIActionCreators;
@@ -53,10 +53,10 @@ let obj = {
     const tmp = importDefault;
     const tmpResult = ICYMIActionCreators;
     obj = { enabled };
-    toggleLabFeature /* toggleLabFeature */.toggleLabFeature(apexExperiment /* apexExperiment */.ICYMI_LAB_FEATURE, obj);
+    toggleLabFeature.toggleLabFeature(apexExperiment.ICYMI_LAB_FEATURE, obj);
   },
   usePredicate: function useICYMIPredicate() {
-    const ICYMIStaffOnlyExperiment = apexExperiment /* apexExperiment */.ICYMIStaffOnlyExperiment;
+    const ICYMIStaffOnlyExperiment = apexExperiment.ICYMIStaffOnlyExperiment;
     return ICYMIStaffOnlyExperiment.useConfig({ location: "settings" }).enabled;
   }
 };

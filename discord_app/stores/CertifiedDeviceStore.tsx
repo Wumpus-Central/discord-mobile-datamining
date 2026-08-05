@@ -12,7 +12,7 @@ class CertifiedDeviceStore extends Store {
 }
 const prototype = CertifiedDeviceStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const value = Storage.get(CertifiedDeviceStore);
   if (null != value) {
     let item = apply.forEach(value, (arr) => {
@@ -121,7 +121,7 @@ const certifiedDeviceStore = new CertifiedDeviceStore(require("dispatcher"), {
       closure_6[id.id] = id;
       return id;
     });
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const result = Storage.set(CertifiedDeviceStore, tmp);
     closure_7 = closure_7 + 1;
   }

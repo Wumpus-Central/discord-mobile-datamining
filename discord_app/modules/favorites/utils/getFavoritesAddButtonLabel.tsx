@@ -5,12 +5,12 @@ const result = require("set").fileFinishedImporting("modules/favorites/utils/get
 
 export const getFavoritesAddButtonLabel = function getFavoritesAddButtonLabel(length) {
   if (length >= 2) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj = { count: null };
     obj[0] = length;
     let formatToPlainStringResult = intl2.formatToPlainString(messagesProxy.LbCa8x, obj);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     formatToPlainStringResult = intl.string(messagesProxy.xKXcSu);
   }
   return formatToPlainStringResult;

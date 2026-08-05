@@ -67,7 +67,7 @@ const editMessageStore = new EditMessageStore(require("dispatcher"), {
     let source;
     ({ channelId, content } = arg0);
     ({ messageId, source } = arg0);
-    const UseLegacyChatInput = explicitContentFromProto /* explicitContentFromProto */.UseLegacyChatInput;
+    const UseLegacyChatInput = explicitContentFromProto.UseLegacyChatInput;
     const setting = UseLegacyChatInput.getSetting();
     let obj = rebuild;
     const unparseResult = obj.unparse(content, channelId);
@@ -75,7 +75,7 @@ const editMessageStore = new EditMessageStore(require("dispatcher"), {
     if (setting) {
       content = unparseResult;
     }
-    obj[3] = createEmptyState /* createEmptyState */.toRichValue(content);
+    obj[3] = createEmptyState.toRichValue(content);
     closure_4[channelId] = obj;
     closure_5[channelId] = source;
   },

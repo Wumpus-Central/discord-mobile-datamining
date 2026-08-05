@@ -14,7 +14,7 @@ export default function getSoundmojiASTFromString(soundId, guildId) {
   let messageId;
   let soundboardSounds;
   ({ channelId, messageId, soundboardSounds } = guildId);
-  let obj = getSoundmojiRenderingExperiment /* getSoundmojiRenderingExperiment */;
+  let obj = getSoundmojiRenderingExperiment;
   let tmp5;
   if (obj.getSoundmojiRenderingExperiment({ location: "getSoundmojiASTFromString" })) {
     const soundById = store.getSoundById(tmp2);

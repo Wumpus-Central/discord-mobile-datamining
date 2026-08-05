@@ -4,13 +4,13 @@ import { _openSafetyFlow } from "openSafetyFlow.native.tsx";
 
 const require = arg1;
 function handleConnectionOpenSupplemental() {
-  _openSafetyFlow /* _openSafetyFlow */.openSafetyFlow();
+  _openSafetyFlow.openSafetyFlow();
 }
 function handleSafetyFlowsModalOpen() {
-  _openSafetyFlow /* _openSafetyFlow */.openSafetyFlow();
+  _openSafetyFlow.openSafetyFlow();
 }
 function handleUserRequiredActionUpdate(requiredAction) {
-  _openSafetyFlow /* _openSafetyFlow */.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
+  _openSafetyFlow.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
 }
 let prototype = function SafetyFlowsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

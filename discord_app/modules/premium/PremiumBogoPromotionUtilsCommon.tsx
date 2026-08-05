@@ -71,13 +71,13 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
       }
       const hasPremiumAtLeastResult = premiumSubscription.hasPremiumAtLeast(closure_10.TIER_2);
       tmp22 = closure_10;
-      let isAndroidResult = set /* set */.isAndroid();
+      let isAndroidResult = set.isAndroid();
       if (isAndroidResult) {
         isAndroidResult = premiumSubscription.paymentGateway !== constants.GOOGLE;
       }
       return false;
     }
-    const isMobile = isTablet /* isTablet */.isMobile;
+    const isMobile = isTablet.isMobile;
     let tmp20 = !isMobile;
     if (isMobile) {
       tmp20 = !fractionalPremiumActive.isFractionalPremiumActive();
@@ -375,27 +375,27 @@ export const useIsEligibleForBogoPromotion = function useIsEligibleForBogoPromot
   if (arg0 === undefined) {
     flag = true;
   }
-  const isPaymentsBlocked = useBlockedPaymentsConfig /* useBlockedPaymentsConfig */.useIsPaymentsBlocked();
-  const obj = useBlockedPaymentsConfig /* useBlockedPaymentsConfig */;
-  const promotion = useEligibleActiveOutboundPromotions /* useEligibleActiveOutboundPromotions */.useBogoPromotion().promotion;
-  const obj2 = useEligibleActiveOutboundPromotions /* useEligibleActiveOutboundPromotions */;
-  const bogoPromotionGateEnabled = apexExperiment /* apexExperiment */.useBogoPromotionGateEnabled("bogo eligibility hook");
-  const obj3 = apexExperiment /* apexExperiment */;
+  const isPaymentsBlocked = useBlockedPaymentsConfig.useIsPaymentsBlocked();
+  const obj = useBlockedPaymentsConfig;
+  const promotion = useEligibleActiveOutboundPromotions.useBogoPromotion().promotion;
+  const obj2 = useEligibleActiveOutboundPromotions;
+  const bogoPromotionGateEnabled = apexExperiment.useBogoPromotionGateEnabled("bogo eligibility hook");
+  const obj3 = apexExperiment;
   const items = [reset];
-  const stateFromStoresObject = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStoresObject(items, () => ({ mostRecentSubscription: store.getMostRecentPremiumTypeSubscription(), premiumSubscription: store.getPremiumTypeSubscription(), previousPremiumSubscription: store.getPreviousPremiumTypeSubscription() }));
+  const stateFromStoresObject = defaultAreStatesEqual.useStateFromStoresObject(items, () => ({ mostRecentSubscription: store.getMostRecentPremiumTypeSubscription(), premiumSubscription: store.getPremiumTypeSubscription(), previousPremiumSubscription: store.getPreviousPremiumTypeSubscription() }));
   ({ mostRecentSubscription, premiumSubscription, previousPremiumSubscription } = stateFromStoresObject);
-  const obj4 = defaultAreStatesEqual /* defaultAreStatesEqual */;
-  const premiumTrialOffer = usePremiumTrialOffer /* usePremiumTrialOffer */.usePremiumTrialOffer();
-  const obj5 = usePremiumTrialOffer /* usePremiumTrialOffer */;
+  const obj4 = defaultAreStatesEqual;
+  const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
+  const obj5 = usePremiumTrialOffer;
   let num;
-  const premiumDiscountOffer = usePremiumDiscountOffer /* usePremiumDiscountOffer */.usePremiumDiscountOffer();
+  const premiumDiscountOffer = usePremiumDiscountOffer.usePremiumDiscountOffer();
   if (promotion != null) {
     num = promotion.endDate;
   }
   if (num == null) {
     num = 0;
   }
-  const obj6 = usePremiumDiscountOffer /* usePremiumDiscountOffer */;
+  const obj6 = usePremiumDiscountOffer;
   const valueOfResult = new Date(num).valueOf();
   const timestamp = Date.now();
   let num2 = -1;

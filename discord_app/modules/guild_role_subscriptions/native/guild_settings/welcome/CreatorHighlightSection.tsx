@@ -25,17 +25,17 @@ function GuildServerSubscriberCount(arg0) {
   ({ horizontalContainer: arr[0], subscriberCountContainer: arr[1] } = tmp);
   items[2] = style;
   obj = { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount };
-  const items1 = [callback(Text /* Text */.Text, obj), , ];
+  const items1 = [callback(Text.Text, obj), , ];
   obj = { size: null, color: null, style: null, source: null };
-  obj[0] = Button /* Button */.Icon.Sizes.SMALL;
+  obj[0] = Button.Icon.Sizes.SMALL;
   obj[1] = Themes.unsafe_rawColors.WHITE;
   obj[2] = tmp.subscriberCountIcon;
   obj[3] = registerAsset;
-  items1[1] = callback(Button /* Button */.Icon, obj);
+  items1[1] = callback(Button.Icon, obj);
   const obj1 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[2] = intl.string(getSystemLocale /* getSystemLocale */.t["3NNXPW"]);
-  items1[2] = callback(Text /* Text */.Text, obj1);
+  const intl = getSystemLocale.intl;
+  obj1[2] = intl.string(getSystemLocale.t["3NNXPW"]);
+  items1[2] = callback(Text.Text, obj1);
   obj[1] = items1;
   return callback2(closure_4, obj);
 }

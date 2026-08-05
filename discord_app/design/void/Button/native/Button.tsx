@@ -72,7 +72,7 @@ function getButtonStyles(shrink, button) {
       const _HermesInternal = HermesInternal;
       combined = "" + color + "Dark";
     }
-    obj = set /* set */;
+    obj = set;
   }
   const items = [button.button, , , , , , ];
   let buttonShrink = null;
@@ -80,13 +80,13 @@ function getButtonStyles(shrink, button) {
     buttonShrink = button.buttonShrink;
   }
   items[1] = buttonShrink;
-  items[2] = getClass /* getClass */.getClass(button, "button", combined, disabled ? closure_14.DISABLED : closure_14.DEFAULT);
-  const obj2 = getClass /* getClass */;
+  items[2] = getClass.getClass(button, "button", combined, disabled ? closure_14.DISABLED : closure_14.DEFAULT);
+  const obj2 = getClass;
   const tmp2 = disabled ? closure_14.DISABLED : closure_14.DEFAULT;
   const tmp8 = require;
-  items[3] = getClass /* getClass */.getClass(button, "button", size);
-  const obj3 = getClass /* getClass */;
-  items[4] = getClass /* getClass */.getClass(button, "button", look);
+  items[3] = getClass.getClass(button, "button", size);
+  const obj3 = getClass;
+  items[4] = getClass.getClass(button, "button", look);
   let faded;
   if (!flag3) {
     if (!tmp8Result.isAndroid()) {

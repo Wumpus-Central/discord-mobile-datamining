@@ -46,25 +46,25 @@ prototype["updateSoundpack"] = function updateSoundpack() {
       isEligibleResult = soundpack !== tmp3(16327).soundpack;
     }
     if (isEligibleResult) {
-      setSoundpack /* setSoundpack */.setSoundpack(tmp3(16327).soundpack, name);
-      const obj3 = setSoundpack /* setSoundpack */;
+      setSoundpack.setSoundpack(tmp3(16327).soundpack, name);
+      const obj3 = setSoundpack;
     }
   } else {
-    setSoundpack /* setSoundpack */.setSoundpack(Soundpacks.CLASSIC, null);
-    const obj2 = setSoundpack /* setSoundpack */;
+    setSoundpack.setSoundpack(Soundpacks.CLASSIC, null);
+    const obj2 = setSoundpack;
   }
 };
 prototype["updateRingtone"] = function updateRingtone() {
   if (obj.isEligible()) {
     const tmpResult = getSoundPack;
     if (null != tmpResultResult.call_ringing) {
-      setIncomingRingtone /* setIncomingRingtone */.setIncomingRingtone("call_ringing", `${tmp7.call_ringing}.mp3`);
-      const obj3 = setIncomingRingtone /* setIncomingRingtone */;
+      setIncomingRingtone.setIncomingRingtone("call_ringing", `${tmp7.call_ringing}.mp3`);
+      const obj3 = setIncomingRingtone;
     }
     tmpResultResult = getSoundPack(store.getSoundpack());
   } else {
-    setIncomingRingtone /* setIncomingRingtone */.setIncomingRingtone("call_ringing", "call_ringing.mp3");
-    const obj2 = setIncomingRingtone /* setIncomingRingtone */;
+    setIncomingRingtone.setIncomingRingtone("call_ringing", "call_ringing.mp3");
+    const obj2 = setIncomingRingtone;
   }
 };
 const holidayEventsManager = new HolidayEventsManager();

@@ -162,7 +162,7 @@ prototype["render"] = function render() {
     padStartResult = seconds;
   }
   const children = [str, str5, padStartResult];
-  return jsxs(Button /* Button */.LegacyText, { style, accessibilityRole: "timer", children });
+  return jsxs(Button.LegacyText, { style, accessibilityRole: "timer", children });
 };
 Timer.defaultProps = { hideMinutes: false, hideHours: false };
 let result = require("apply").fileFinishedImporting("modules/voice_calls/native/components/Timer.tsx");

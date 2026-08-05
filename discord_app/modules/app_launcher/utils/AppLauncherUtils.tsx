@@ -23,14 +23,14 @@ function getShelfBadgeTypeIfActive(application) {
   if (application.id !== BuiltInSectionId.BUILT_IN) {
     let hasApplicationFlagResult = application.id !== tmp.BUILT_IN;
     if (hasApplicationFlagResult) {
-      hasApplicationFlagResult = getApplicationFlags /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
-      const obj = getApplicationFlags /* getApplicationFlags */;
+      hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
+      const obj = getApplicationFlags;
     }
     tmp2 = null;
   }
   let tmp9;
   if (tmp2 != null) {
-    const obj2 = set /* set */;
+    const obj2 = set;
     tmp9 = tmp2.client_platform_config[getPlatform(undefined, obj2.getOS(obj2))];
     const tmp12 = getPlatform;
   }
@@ -54,7 +54,7 @@ function getShelfBadgeTypeIfActive(application) {
             label_type = tmp9.label_type;
           }
           if (label_type == null) {
-            label_type = PermissionOverwriteType /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NONE;
+            label_type = PermissionOverwriteType.EmbeddedActivityLabelTypes.NONE;
           }
           let NONE = label_type;
         }
@@ -62,7 +62,7 @@ function getShelfBadgeTypeIfActive(application) {
       }
     }
   }
-  NONE = PermissionOverwriteType /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NONE;
+  NONE = PermissionOverwriteType.EmbeddedActivityLabelTypes.NONE;
 }
 let closure_3 = ["fakeAppIconURL"];
 let result = require("getIndexKey").fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
@@ -75,8 +75,8 @@ export const getSectionName = function getSectionName(FAKE_BUILT_IN_APP) {
   if (FAKE_BUILT_IN_APP.id !== BuiltInSectionId.BUILT_IN) {
     let name = FAKE_BUILT_IN_APP.name;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    name = intl.string(getSystemLocale /* getSystemLocale */.t.UB2gG2);
+    const intl = getSystemLocale.intl;
+    name = intl.string(getSystemLocale.t.UB2gG2);
   }
   return name;
 };
@@ -84,39 +84,39 @@ export const getSectionDescription = function getSectionDescription(FAKE_BUILT_I
   if (FAKE_BUILT_IN_APP.id !== BuiltInSectionId.BUILT_IN) {
     let description = FAKE_BUILT_IN_APP.description;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    description = intl.string(getSystemLocale /* getSystemLocale */.t.X9fusn);
+    const intl = getSystemLocale.intl;
+    description = intl.string(getSystemLocale.t.X9fusn);
   }
   return description;
 };
 export const isEmbeddedApp = function isEmbeddedApp(application) {
   let hasApplicationFlagResult = application.id !== BuiltInSectionId.BUILT_IN;
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = getApplicationFlags /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
-    const obj = getApplicationFlags /* getApplicationFlags */;
+    hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
+    const obj = getApplicationFlags;
   }
   return hasApplicationFlagResult;
 };
 export const isPartnerApplication = function isPartnerApplication(application) {
   let hasApplicationFlagResult = application.id !== BuiltInSectionId.BUILT_IN;
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = getApplicationFlags /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.PARTNER);
-    const obj = getApplicationFlags /* getApplicationFlags */;
+    hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.PARTNER);
+    const obj = getApplicationFlags;
   }
   return hasApplicationFlagResult;
 };
 export const isPromotedApplication = function isPromotedApplication(FAKE_BUILT_IN_APP2) {
   let hasApplicationFlagResult = FAKE_BUILT_IN_APP2.id !== BuiltInSectionId.BUILT_IN;
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = getApplicationFlags /* getApplicationFlags */.hasApplicationFlag(FAKE_BUILT_IN_APP2, ApplicationFlags.PROMOTED);
-    const obj = getApplicationFlags /* getApplicationFlags */;
+    hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(FAKE_BUILT_IN_APP2, ApplicationFlags.PROMOTED);
+    const obj = getApplicationFlags;
   }
   return hasApplicationFlagResult;
 };
 export { getShelfBadgeTypeIfActive };
 export const getShelfBadgeNameIfActive = function getShelfBadgeNameIfActive(application) {
   const tmp = getShelfBadgeTypeIfActive(application);
-  if (PermissionOverwriteType /* PermissionOverwriteType */.EmbeddedActivityLabelTypes.NEW === tmp) {
+  if (PermissionOverwriteType.EmbeddedActivityLabelTypes.NEW === tmp) {
     return "New";
   } else if (tmp2(1906).EmbeddedActivityLabelTypes.UPDATED === tmp) {
     return "Updated";
@@ -130,8 +130,8 @@ export const getEmbeddedActivityConfig = function getEmbeddedActivityConfig(id) 
   if (id.id !== BuiltInSectionId.BUILT_IN) {
     let hasApplicationFlagResult = id.id !== tmp.BUILT_IN;
     if (hasApplicationFlagResult) {
-      hasApplicationFlagResult = getApplicationFlags /* getApplicationFlags */.hasApplicationFlag(id, ApplicationFlags.EMBEDDED);
-      const obj = getApplicationFlags /* getApplicationFlags */;
+      hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(id, ApplicationFlags.EMBEDDED);
+      const obj = getApplicationFlags;
     }
     tmp2 = null;
   }
@@ -296,10 +296,10 @@ export const getApplicationDetails = function getApplicationDetails(id, guildMem
     }
     obj1 = { iconURL: null, name: null, description: null };
     obj1[0] = fakeAppIconURL;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj1[1] = intl.string(getSystemLocale /* getSystemLocale */.t.UB2gG2);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj1[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.X9fusn);
+    const intl = getSystemLocale.intl;
+    obj1[1] = intl.string(getSystemLocale.t.UB2gG2);
+    const intl2 = getSystemLocale.intl;
+    obj1[2] = intl2.string(getSystemLocale.t.X9fusn);
   }
   return obj1;
 };
@@ -313,15 +313,15 @@ export const isApplicationAdSupported = function isApplicationAdSupported(applic
   if (application.id !== BuiltInSectionId.BUILT_IN) {
     let hasApplicationFlagResult = application.id !== tmp.BUILT_IN;
     if (hasApplicationFlagResult) {
-      hasApplicationFlagResult = getApplicationFlags /* getApplicationFlags */.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
-      const obj = getApplicationFlags /* getApplicationFlags */;
+      hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.EMBEDDED);
+      const obj = getApplicationFlags;
     }
     tmp2 = null;
   }
   return null != tmp2 && tmp2.displays_advertisements;
 };
 export const appLauncherShowsRecommendations = function appLauncherShowsRecommendations(entrypoint) {
-  return entrypoint === AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEntrypoint.TEXT;
+  return entrypoint === AppLauncherEntrypoint.AppLauncherEntrypoint.TEXT;
 };
 export const formatPrimaryEntryPointCommandName = function formatPrimaryEntryPointCommandName(displayName) {
   let str = "";
@@ -387,9 +387,9 @@ export const isAppAvailableInAppLauncher = function isAppAvailableInAppLauncher(
   }
   let result = null != guildState;
   if (result) {
-    result = buildCommand /* buildCommand */.hasCommandIndexForApp(id.id, guildState);
-    const obj = buildCommand /* buildCommand */;
+    result = buildCommand.hasCommandIndexForApp(id.id, guildState);
+    const obj = buildCommand;
   }
-  const obj2 = canInstallApplication /* canInstallApplication */;
-  return canInstallApplication /* canInstallApplication */.isAppUserInstallable(id) || result;
+  const obj2 = canInstallApplication;
+  return canInstallApplication.isAppUserInstallable(id) || result;
 };

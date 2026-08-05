@@ -77,7 +77,7 @@ let items = [
         return false;
       } else {
         if (null == favoriteGifs.favoriteGifs) {
-          const FavoriteGIFs = create /* create */.FavoriteGIFs;
+          const FavoriteGIFs = create.FavoriteGIFs;
           favoriteGifs.favoriteGifs = FavoriteGIFs.create();
         }
         favoriteGifs.favoriteGifs.gifs = {};
@@ -131,7 +131,7 @@ let items = [
       } else {
         let flag = false;
         if (state.favorites.length > 0) {
-          const FavoriteStickers = create /* create */.FavoriteStickers;
+          const FavoriteStickers = create.FavoriteStickers;
           favoriteStickers.favoriteStickers = FavoriteStickers.create();
           let tmpResult = tmp(12);
           favoriteStickers.favoriteStickers.stickerIds = tmpResult.uniq(state.favorites).slice(0, closure_3);
@@ -140,17 +140,17 @@ let items = [
         }
         tmpResult = tmp(12);
         if (tmpResult.size(state.usageHistory) > 0) {
-          const StickerFrecency = create /* create */.StickerFrecency;
+          const StickerFrecency = create.StickerFrecency;
           favoriteStickers.stickerFrecency = StickerFrecency.create();
-          favoriteStickers.stickerFrecency.stickers = b64ToProto /* b64ToProto */.serializeUsageHistory(state.usageHistory, 100);
+          favoriteStickers.stickerFrecency.stickers = b64ToProto.serializeUsageHistory(state.usageHistory, 100);
           flag = true;
-          const obj3 = b64ToProto /* b64ToProto */;
+          const obj3 = b64ToProto;
         }
         return flag;
       }
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("StickersPersistedStore");
     }
   },
@@ -175,7 +175,7 @@ let items = [
         }
         let flag = false;
         if (tmp3) {
-          const FavoriteEmojis = create /* create */.FavoriteEmojis;
+          const FavoriteEmojis = create.FavoriteEmojis;
           favoriteEmojis.favoriteEmojis = FavoriteEmojis.create();
           let tmpResult = tmp(12);
           favoriteEmojis.favoriteEmojis.emojis = tmpResult.uniq(state.favorites).slice(0, closure_3);
@@ -184,21 +184,21 @@ let items = [
         }
         tmpResult = tmp(12);
         if (tmpResult.size(state.usageHistory) > 0) {
-          const EmojiFrecency = create /* create */.EmojiFrecency;
+          const EmojiFrecency = create.EmojiFrecency;
           favoriteEmojis.emojiFrecency = EmojiFrecency.create();
-          favoriteEmojis.emojiFrecency.emojis = b64ToProto /* b64ToProto */.serializeUsageHistory(state.usageHistory, 100);
+          favoriteEmojis.emojiFrecency.emojis = b64ToProto.serializeUsageHistory(state.usageHistory, 100);
           flag = true;
-          const obj3 = b64ToProto /* b64ToProto */;
+          const obj3 = b64ToProto;
         }
         return flag;
       }
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("EmojiStore");
-      const Storage2 = Storage /* Storage */.Storage;
+      const Storage2 = Storage.Storage;
       Storage2.remove("EmojiUsageHistory");
-      const Storage3 = Storage /* Storage */.Storage;
+      const Storage3 = Storage.Storage;
       Storage3.remove("EmojiDiversitySurrogate");
     }
   },
@@ -306,18 +306,18 @@ let items = [
       } else {
         let flag = false;
         if (tmpResult.size(state.usageHistory) > 0) {
-          const ApplicationCommandFrecency = create /* create */.ApplicationCommandFrecency;
+          const ApplicationCommandFrecency = create.ApplicationCommandFrecency;
           applicationCommandFrecency.applicationCommandFrecency = ApplicationCommandFrecency.create();
-          applicationCommandFrecency.applicationCommandFrecency.applicationCommands = b64ToProto /* b64ToProto */.serializeUsageHistory(state.usageHistory, 500);
+          applicationCommandFrecency.applicationCommandFrecency.applicationCommands = b64ToProto.serializeUsageHistory(state.usageHistory, 500);
           flag = true;
-          const obj = b64ToProto /* b64ToProto */;
+          const obj = b64ToProto;
         }
         return flag;
       }
       const tmp = importDefault;
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("ApplicationCommandFrecency");
     }
   },
@@ -352,14 +352,14 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("SoundboardFavoriteStore");
     }
   },
   {
     version: 9,
     run(guildAndChannelFrecency) {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       const value = Storage.get(selectedChannelGuildFrecency);
       if (null == value) {
         return false;
@@ -375,14 +375,14 @@ let items = [
           }
           continue;
         }
-        const GuildAndChannelFrecency = create /* create */.GuildAndChannelFrecency;
+        const GuildAndChannelFrecency = create.GuildAndChannelFrecency;
         guildAndChannelFrecency.guildAndChannelFrecency = GuildAndChannelFrecency.create();
-        guildAndChannelFrecency.guildAndChannelFrecency.guildAndChannels = b64ToProto /* b64ToProto */.serializeUsageHistory(value, 100);
+        guildAndChannelFrecency.guildAndChannelFrecency.guildAndChannels = b64ToProto.serializeUsageHistory(value, 100);
         return true;
       }
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove(selectedChannelGuildFrecency);
     }
   },
@@ -398,9 +398,9 @@ let items = [
         }
         let flag = false;
         if (obj2.size(emojis) > 0) {
-          const EmojiFrecency = create /* create */.EmojiFrecency;
+          const EmojiFrecency = create.EmojiFrecency;
           const obj = EmojiFrecency.create();
-          const EmojiFrecency2 = create /* create */.EmojiFrecency;
+          const EmojiFrecency2 = create.EmojiFrecency;
           EmojiFrecency2.mergePartial(obj, emojiFrecency.emojiFrecency);
           if (null != emojiFrecency.emojiReactionFrecency) {
             const EmojiFrecency3 = tmp3(1341).EmojiFrecency;
@@ -443,7 +443,7 @@ let items = [
                 }
                 let tmp3 = require;
                 let tmp4 = dependencyMap;
-                let isMatch = tmp9.format !== create /* create */.GIFType.IMAGE;
+                let isMatch = tmp9.format !== create.GIFType.IMAGE;
                 if (isMatch) {
                   let obj = /\.(webp|avif|gif)(\?|$)/i;
                   isMatch = obj.test(tmp9.src);

@@ -14,11 +14,11 @@ let c4;
 function handlePress() {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { aboutText: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { premiumGroupProductName: null };
   obj[0] = callback();
   obj[0] = intl.formatToPlainString(messagesProxy["5xN/C1"], obj);
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(12692, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(12692, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 let obj = { premiumGroupBanner: null, pgUnavailable: null, pgUnavailableText: null };
@@ -36,9 +36,9 @@ export default function BoostingUnavailablePill(style) {
   items = [tmp.premiumGroupBanner, style.style];
   obj = { style: tmp.pgUnavailable, children: null };
   const obj1 = { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t["5nrJDO"]);
-  obj[1] = jsx(Text /* Text */.Text, { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null });
+  const intl = getSystemLocale.intl;
+  obj1[3] = intl.string(getSystemLocale.t["5nrJDO"]);
+  obj[1] = jsx(Text.Text, { variant: "text-md/normal", color: "interactive-text-active", style: tmp.pgUnavailableText, children: null });
   obj[1] = <closure_4 style={tmp.pgUnavailable}>{null}</closure_4>;
   obj[2] = <closure_4 style={tmp.pgUnavailable}>{null}</closure_4>;
   return <closure_3 style={tmp.pgUnavailable}>{null}</closure_3>;

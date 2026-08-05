@@ -12,7 +12,7 @@ let c5;
 const require = arg1;
 function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   guild = guild.guild;
-  let obj = useNavigation /* useNavigation */;
+  let obj = useNavigation;
   const str = obj.useNavigation();
   if (tmp3.loading) {
     let tmp7 = jsx(tmp2(16640), {});

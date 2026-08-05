@@ -11,14 +11,14 @@ let result = set.fileFinishedImporting("modules/coded_links/ApplicationCodedLink
 
 export const APP_LINK_CODED_TYPES = set;
 export const isApplicationCodedLink = function isApplicationCodedLink(type) {
-  return isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isInSet(type, set);
+  return isDiscordFrontendDevelopment.isInSet(type, set);
 };
 export const APP_LINK_CODED_TYPES_MOBILE_SUPPORT = set1;
 export const isApplicationCodedLinkMobileSupported = function isApplicationCodedLinkMobileSupported(type) {
-  return isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isInSet(type, set1);
+  return isDiscordFrontendDevelopment.isInSet(type, set1);
 };
 export const getApplicationCodedLinkData = function getApplicationCodedLinkData(type, code, url) {
-  if (CodedLinkType /* CodedLinkType */.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
+  if (CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE !== type) {
     if (tmp(4274).CodedLinkType.APP_OAUTH2_LINK !== type) {
       if (tmp(4274).CodedLinkType.APP_DIRECTORY_STOREFRONT !== type) {
         if (tmp(4274).CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU === type) {

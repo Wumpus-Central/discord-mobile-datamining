@@ -17,10 +17,10 @@ export default function GuildRoleSubscriptionGroupGatingModal(arg0) {
   [tmp2, tmp3] = callback(usePriceTiers.useGroupIsFullGateState(), 2);
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
   const tmp = callback(usePriceTiers.useGroupIsFullGateState(), 2);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.N38nNP);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.csJWVI);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.N38nNP);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.csJWVI);
   obj[3] = constants.GROUP;
   const merged = Object.assign(arg0);
   obj.children = jsx(FormGuildGatingModeSelector, { isFullServerGating: tmp2, onChange: tmp3 });

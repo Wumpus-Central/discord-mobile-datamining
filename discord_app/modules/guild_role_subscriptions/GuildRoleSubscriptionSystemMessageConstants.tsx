@@ -13,17 +13,17 @@ const obj2 = { id: "813951723822645278", format_type: require("StickerFormat").S
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageConstants.tsx");
 
 export const getJoinButtonLabels = function getJoinButtonLabels() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const items = [intl.string(getSystemLocale /* getSystemLocale */.t.b6wEe6), ];
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.i8o9hX);
+  const intl = getSystemLocale.intl;
+  const items = [intl.string(getSystemLocale.t.b6wEe6), ];
+  const intl2 = getSystemLocale.intl;
+  items[1] = intl2.string(getSystemLocale.t.i8o9hX);
   return items;
 };
 export const getRenewButtonLabels = function getRenewButtonLabels() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const items = [intl.string(getSystemLocale /* getSystemLocale */.t.vqnToc), ];
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["9yh+dM"]);
+  const intl = getSystemLocale.intl;
+  const items = [intl.string(getSystemLocale.t.vqnToc), ];
+  const intl2 = getSystemLocale.intl;
+  items[1] = intl2.string(getSystemLocale.t["9yh+dM"]);
   return items;
 };
 export const STICKERS = items;

@@ -92,7 +92,7 @@ function BaseTextButtonIcon(arg0) {
   let size;
   let style;
   ({ icon, size, iconPosition, iconOpticalOffsetMargin, style } = arg0);
-  let obj = styleProperties /* styleProperties */;
+  let obj = styleProperties;
   const iconSizeStyles = obj.useIconSizeStyles(size);
   obj = { source: icon, style: null };
   const items = [style, iconSizeStyles, callback5(iconPosition, iconOpticalOffsetMargin).offset];
@@ -406,7 +406,7 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
       flag = true;
     }
     const context = importAllResult.useContext(closure_13);
-    let obj = styleProperties /* styleProperties */;
+    let obj = styleProperties;
     obj = { source: source.source, disableColor: flag, style: obj.useIconSizeStyles(context) };
     const tmp4 = callback(IconSizes, obj);
     let tmp3Result = tmp4;
@@ -430,7 +430,7 @@ let obj5 = {
       flag = true;
     }
     const context = importAllResult.useContext(closure_13);
-    let obj = styleProperties /* styleProperties */;
+    let obj = styleProperties;
     obj = { source: source.source, disableColor: flag, style: obj.useIconSizeStyles(context) };
     const tmp4 = callback(IconSizes, obj);
     let tmp3Result = tmp4;

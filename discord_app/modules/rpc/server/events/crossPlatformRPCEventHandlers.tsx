@@ -46,7 +46,7 @@ function messageEvents(args) {
       }
       tmp13Result = tmp13(4498);
     }
-    obj4 = recurseReplaceContentTree /* recurseReplaceContentTree */;
+    obj4 = recurseReplaceContentTree;
     tmp13 = require;
   }
   obj = { errorCode: constants2.INVALID_CHANNEL };

@@ -8,20 +8,20 @@ import { setFontSize } from "../../../a11y/AccessibilityActionCreators.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.e3TR1b);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.e3TR1b);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: function useReducedMotionSettingValue() {
     const items = [maybeApplyNoTextColorForLightCustomTheme];
-    return initialize /* initialize */.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+    return initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   },
   onValueChange: function onReducedMotionSettingValueChange(arg0) {
     let str = "no-preference";
     if (arg0) {
       str = "reduce";
     }
-    const result = setFontSize /* setFontSize */.setPrefersReducedMotion(str);
+    const result = setFontSize.setPrefersReducedMotion(str);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

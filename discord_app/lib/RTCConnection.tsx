@@ -54,7 +54,7 @@ let closure_30;
 let require = arg1;
 function getEventHistoryString() {
   const items = [];
-  sleep /* sleep */;
+  sleep;
   for (const item10012 of closure_34) {
     let obj = {};
     let tmp3 = obj;
@@ -420,7 +420,7 @@ prototype["recordEvent"] = function recordEvent(arg0) {
   let length;
   const obj = {};
   const merged = Object.assign(arg0);
-  obj.t = sleep /* sleep */.now();
+  obj.t = sleep.now();
   obj.n = this._connectionSerial;
   arr = arr.push(obj);
   if (arr.length > 50) {
@@ -520,8 +520,8 @@ prototype["connect"] = function connect(endpoint, token) {
       self._cleanupSocket();
       self._mediaSessionId = null;
       if (null != endpoint) {
-        self._rtcConnectionId = v1 /* v1 */.v4();
-        const obj2 = v1 /* v1 */;
+        self._rtcConnectionId = v1.v4();
+        const obj2 = v1;
         obj = { type: "RTC_CONNECTION_UPDATE_ID", connection: null };
         obj[1] = self;
         dispatcher.dispatch(obj);
@@ -539,64 +539,64 @@ prototype["connect"] = function connect(endpoint, token) {
       const obj5 = new noop(self.endpoint, self.context);
       self._socket = obj5;
       const _handleConnecting = self._handleConnecting;
-      obj5.on(noop /* noop */.SocketEvent.Connecting, _handleConnecting.bind(self, obj5));
+      obj5.on(noop.SocketEvent.Connecting, _handleConnecting.bind(self, obj5));
       const _handleConnect = self._handleConnect;
-      obj5.on(noop /* noop */.SocketEvent.Connect, _handleConnect.bind(self, obj5));
+      obj5.on(noop.SocketEvent.Connect, _handleConnect.bind(self, obj5));
       const _handleDisconnect = self._handleDisconnect;
-      obj5.on(noop /* noop */.SocketEvent.Disconnect, _handleDisconnect.bind(self, obj5));
+      obj5.on(noop.SocketEvent.Disconnect, _handleDisconnect.bind(self, obj5));
       const _handleResuming = self._handleResuming;
-      obj5.on(noop /* noop */.SocketEvent.Resuming, _handleResuming.bind(self, obj5));
+      obj5.on(noop.SocketEvent.Resuming, _handleResuming.bind(self, obj5));
       const _handleReady = self._handleReady;
-      obj5.on(noop /* noop */.SocketEvent.Ready, _handleReady.bind(self, obj5));
+      obj5.on(noop.SocketEvent.Ready, _handleReady.bind(self, obj5));
       const _handleSfuUpdate = self._handleSfuUpdate;
-      obj5.on(noop /* noop */.SocketEvent.SfuUpdate, _handleSfuUpdate.bind(self, obj5));
+      obj5.on(noop.SocketEvent.SfuUpdate, _handleSfuUpdate.bind(self, obj5));
       const _handleSpeaking = self._handleSpeaking;
-      obj5.on(noop /* noop */.SocketEvent.Speaking, _handleSpeaking.bind(self, obj5));
+      obj5.on(noop.SocketEvent.Speaking, _handleSpeaking.bind(self, obj5));
       const _handleVideo = self._handleVideo;
-      obj5.on(noop /* noop */.SocketEvent.Video, _handleVideo.bind(self, obj5));
+      obj5.on(noop.SocketEvent.Video, _handleVideo.bind(self, obj5));
       const _handleControlPing = self._handleControlPing;
-      obj5.on(noop /* noop */.SocketEvent.Ping, _handleControlPing.bind(self));
+      obj5.on(noop.SocketEvent.Ping, _handleControlPing.bind(self));
       const _handleClientDisconnect = self._handleClientDisconnect;
-      obj5.on(noop /* noop */.SocketEvent.ClientDisconnect, _handleClientDisconnect.bind(self));
+      obj5.on(noop.SocketEvent.ClientDisconnect, _handleClientDisconnect.bind(self));
       const _handleClientConnect = self._handleClientConnect;
-      obj5.on(noop /* noop */.SocketEvent.ClientConnect, _handleClientConnect.bind(self));
+      obj5.on(noop.SocketEvent.ClientConnect, _handleClientConnect.bind(self));
       const _handleCodecs = self._handleCodecs;
-      obj5.on(noop /* noop */.SocketEvent.Codecs, _handleCodecs.bind(self));
+      obj5.on(noop.SocketEvent.Codecs, _handleCodecs.bind(self));
       const _handleMediaSessionId = self._handleMediaSessionId;
-      obj5.on(noop /* noop */.SocketEvent.MediaSessionId, _handleMediaSessionId.bind(self));
+      obj5.on(noop.SocketEvent.MediaSessionId, _handleMediaSessionId.bind(self));
       const _handleMediaSinkWants = self._handleMediaSinkWants;
-      obj5.on(noop /* noop */.SocketEvent.MediaSinkWants, _handleMediaSinkWants.bind(self));
+      obj5.on(noop.SocketEvent.MediaSinkWants, _handleMediaSinkWants.bind(self));
       const _handleCodeVersion = self._handleCodeVersion;
-      obj5.on(noop /* noop */.SocketEvent.VoiceBackendVersion, _handleCodeVersion.bind(self));
+      obj5.on(noop.SocketEvent.VoiceBackendVersion, _handleCodeVersion.bind(self));
       const _handleKeyframeInterval = self._handleKeyframeInterval;
-      obj5.on(noop /* noop */.SocketEvent.KeyframeInterval, _handleKeyframeInterval.bind(self));
+      obj5.on(noop.SocketEvent.KeyframeInterval, _handleKeyframeInterval.bind(self));
       const handleFlags = self.handleFlags;
-      obj5.on(noop /* noop */.SocketEvent.Flags, handleFlags.bind(self));
+      obj5.on(noop.SocketEvent.Flags, handleFlags.bind(self));
       const handlePlatform = self.handlePlatform;
-      obj5.on(noop /* noop */.SocketEvent.Platform, handlePlatform.bind(self));
+      obj5.on(noop.SocketEvent.Platform, handlePlatform.bind(self));
       const _handleBandwidthEstimationExperiment = self._handleBandwidthEstimationExperiment;
-      obj5.on(noop /* noop */.SocketEvent.BandwidthEstimationExperiment, _handleBandwidthEstimationExperiment.bind(self));
+      obj5.on(noop.SocketEvent.BandwidthEstimationExperiment, _handleBandwidthEstimationExperiment.bind(self));
       const _handleSecureFramesInit = self._handleSecureFramesInit;
-      obj5.on(noop /* noop */.SocketEvent.SecureFramesInit, _handleSecureFramesInit.bind(self));
+      obj5.on(noop.SocketEvent.SecureFramesInit, _handleSecureFramesInit.bind(self));
       const _handleSecureFramesPrepareTransition = self._handleSecureFramesPrepareTransition;
-      obj5.on(noop /* noop */.SocketEvent.SecureFramesPrepareTransition, _handleSecureFramesPrepareTransition.bind(self));
+      obj5.on(noop.SocketEvent.SecureFramesPrepareTransition, _handleSecureFramesPrepareTransition.bind(self));
       const _handleSecureFramesPrepareEpoch = self._handleSecureFramesPrepareEpoch;
-      obj5.on(noop /* noop */.SocketEvent.SecureFramesPrepareEpoch, _handleSecureFramesPrepareEpoch.bind(self));
+      obj5.on(noop.SocketEvent.SecureFramesPrepareEpoch, _handleSecureFramesPrepareEpoch.bind(self));
       const _handleSecureFramesExecuteTransition = self._handleSecureFramesExecuteTransition;
-      obj5.on(noop /* noop */.SocketEvent.SecureFramesExecuteTransition, _handleSecureFramesExecuteTransition.bind(self));
+      obj5.on(noop.SocketEvent.SecureFramesExecuteTransition, _handleSecureFramesExecuteTransition.bind(self));
       const _handleMLSExternalSenderPackage = self._handleMLSExternalSenderPackage;
-      obj5.on(noop /* noop */.SocketEvent.MLSExternalSenderPackage, _handleMLSExternalSenderPackage.bind(self));
+      obj5.on(noop.SocketEvent.MLSExternalSenderPackage, _handleMLSExternalSenderPackage.bind(self));
       const _handleMLSProposals = self._handleMLSProposals;
-      obj5.on(noop /* noop */.SocketEvent.MLSProposals, _handleMLSProposals.bind(self, obj5));
+      obj5.on(noop.SocketEvent.MLSProposals, _handleMLSProposals.bind(self, obj5));
       const _handleMLSPrepareCommitTransition = self._handleMLSPrepareCommitTransition;
-      obj5.on(noop /* noop */.SocketEvent.MLSPrepareCommitTransition, _handleMLSPrepareCommitTransition.bind(self));
+      obj5.on(noop.SocketEvent.MLSPrepareCommitTransition, _handleMLSPrepareCommitTransition.bind(self));
       const _handleMLSWelcome = self._handleMLSWelcome;
-      obj5.on(noop /* noop */.SocketEvent.MLSWelcome, _handleMLSWelcome.bind(self));
+      obj5.on(noop.SocketEvent.MLSWelcome, _handleMLSWelcome.bind(self));
       const _recordMessageEvent = self._recordMessageEvent;
-      obj5.on(noop /* noop */.SocketEvent.ReceiveMessage, _recordMessageEvent.bind(self, tmp3.MESSAGE_RECEIVE));
+      obj5.on(noop.SocketEvent.ReceiveMessage, _recordMessageEvent.bind(self, tmp3.MESSAGE_RECEIVE));
       const _recordMessageEvent2 = self._recordMessageEvent;
-      obj5.on(noop /* noop */.SocketEvent.SendMessage, _recordMessageEvent2.bind(self, tmp3.MESSAGE_SEND));
-      self._connectStartTime = sleep /* sleep */.now();
+      obj5.on(noop.SocketEvent.SendMessage, _recordMessageEvent2.bind(self, tmp3.MESSAGE_SEND));
+      self._connectStartTime = sleep.now();
       self._connectCount = self._connectCount + 1;
       self._connecting = true;
       self._voiceConnectionSuccessTracked = false;
@@ -605,7 +605,7 @@ prototype["connect"] = function connect(endpoint, token) {
         self._encountered_socket_failure = false;
         obj5.connect();
       }
-      const obj6 = sleep /* sleep */;
+      const obj6 = sleep;
     } else {
       self.setState(constants3.AWAITING_ENDPOINT);
     }
@@ -649,9 +649,9 @@ prototype["destroy"] = function destroy() {
   obj = { c: constants9.CONNECTION_DESTROY };
   self.recordEvent(obj);
   const WindowVisibilityVideoManager = tmp5(10607).WindowVisibilityVideoManager;
-  WindowVisibilityVideoManager.off(isIncomingVideoEnabled /* isIncomingVideoEnabled */.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
+  WindowVisibilityVideoManager.off(isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
   const WindowVisibilityVideoManager2 = tmp5(10607).WindowVisibilityVideoManager;
-  WindowVisibilityVideoManager2.off(isIncomingVideoEnabled /* isIncomingVideoEnabled */.WindowVisibilityEvent.WindowVisibilityChanged, self.windowVisibilityChanged);
+  WindowVisibilityVideoManager2.off(isIncomingVideoEnabled.WindowVisibilityEvent.WindowVisibilityChanged, self.windowVisibilityChanged);
   self._cancelReconnect();
   self._cleanupSocket();
   const _voiceQuality = self._voiceQuality;
@@ -719,7 +719,7 @@ prototype["shouldSendSpeaking"] = function shouldSendSpeaking(_lastSentSpeakingS
     }
     return tmp7;
   }
-  obj = set /* set */;
+  obj = set;
 };
 prototype["sendSpeaking"] = function sendSpeaking(_lastSentSpeakingStatus, _lastSentSSRC) {
   const self = this;
@@ -788,8 +788,8 @@ prototype["getRtcWorkerVersion"] = function getRtcWorkerVersion() {
 prototype["getDuration"] = function getDuration() {
   let num = 0;
   if (this._connectCompletedTime > 0) {
-    num = sleep /* sleep */.now() - tmp._connectCompletedTime;
-    const obj = sleep /* sleep */;
+    num = sleep.now() - tmp._connectCompletedTime;
+    const obj = sleep;
   }
   let num2 = 0;
   if (num > 0) {
@@ -906,7 +906,7 @@ prototype["setState"] = function setState(s) {
   const stateHistory = this.stateHistory;
   stateHistory.update(this.state);
   obj = { hostname: this.hostname, channelId: this.trueChannelId, context: this.context };
-  this.emit(RTCConnectionEvent /* RTCConnectionEvent */.RTCConnectionEvent.State, s, obj, obj);
+  this.emit(RTCConnectionEvent.RTCConnectionEvent.State, s, obj, obj);
 };
 prototype["expeditedHeartbeat"] = function expeditedHeartbeat(arg0) {
   let str = arg1;
@@ -987,12 +987,12 @@ prototype["setSimulcastDebugOverride"] = function setSimulcastDebugOverride(arg0
 prototype["setVideoSize"] = function setVideoSize(arg0, width) {
   let isAndroidResult = null == width;
   if (!isAndroidResult) {
-    isAndroidResult = set /* set */.isAndroid();
-    const obj = set /* set */;
+    isAndroidResult = set.isAndroid();
+    const obj = set;
   }
   if (!isAndroidResult) {
-    isAndroidResult = set /* set */.isIOS();
-    const obj2 = set /* set */;
+    isAndroidResult = set.isIOS();
+    const obj2 = set;
   }
   const self = this;
   if (!isAndroidResult) {
@@ -1094,7 +1094,7 @@ prototype["_chooseExperiments"] = function _chooseExperiments(items) {
   }
   const obj = getUnitId;
   const tmp3 = importDefault;
-  let enabled = set /* set */.isWeb();
+  let enabled = set.isWeb();
   if (enabled) {
     const BrowserTransceiverPaddingRemovalExperiment = tmp8(12982).BrowserTransceiverPaddingRemovalExperiment;
     enabled = BrowserTransceiverPaddingRemovalExperiment.getConfig({ location: "RTCConnection" }).enabled;
@@ -2170,13 +2170,13 @@ prototype["_handleSpeaking"] = function _handleSpeaking(arg0, userId, audioSSRC)
   }
 };
 prototype["handleFlags"] = function handleFlags(arg0, arg1) {
-  this.emit(RTCConnectionEvent /* RTCConnectionEvent */.RTCConnectionEvent.Flags, arg0, arg1);
+  this.emit(RTCConnectionEvent.RTCConnectionEvent.Flags, arg0, arg1);
 };
 prototype["handlePlatform"] = function handlePlatform(arg0, arg1) {
-  this.emit(RTCConnectionEvent /* RTCConnectionEvent */.RTCConnectionEvent.Platform, arg0, arg1, this.channelId);
+  this.emit(RTCConnectionEvent.RTCConnectionEvent.Platform, arg0, arg1, this.channelId);
 };
 prototype["handleUsersMerged"] = function handleUsersMerged(arr) {
-  this.emit(RTCConnectionEvent /* RTCConnectionEvent */.RTCConnectionEvent.UsersMerged, arr.map((id) => id.id), this.context);
+  this.emit(RTCConnectionEvent.RTCConnectionEvent.UsersMerged, arr.map((id) => id.id), this.context);
 };
 prototype["getOrCreateVideoQuality"] = function getOrCreateVideoQuality() {
   let allowedPoorFpsRatio;
@@ -2305,7 +2305,7 @@ prototype["_handleLocalVideoDisabled"] = function _handleLocalVideoDisabled(user
   }
 };
 prototype["_handleRemoteStreamsReady"] = function _handleRemoteStreamsReady(number_of_users) {
-  let obj = sleep /* sleep */;
+  let obj = sleep;
   const diff = obj.now() - this._connectStartTime;
   obj = {};
   const merged = Object.assign(this._getAnalyticsProperties());
@@ -2403,7 +2403,7 @@ prototype["_handlePing"] = function _handlePing(arg0) {
     if (arg0 > 500) {
       self._pingBadCount = self._pingBadCount + 1;
     }
-    self.emit(RTCConnectionEvent /* RTCConnectionEvent */.RTCConnectionEvent.Ping, self._pings, self.quality);
+    self.emit(RTCConnectionEvent.RTCConnectionEvent.Ping, self._pings, self.quality);
   }
 };
 prototype["_handlePingTimeout"] = function _handlePingTimeout(arg0, arg1) {
@@ -2423,7 +2423,7 @@ prototype["_handlePingTimeout"] = function _handlePingTimeout(arg0, arg1) {
 };
 prototype["_handleOutboundLossRate"] = function _handleOutboundLossRate(_outboundLossRate) {
   this._outboundLossRate = _outboundLossRate;
-  this.emit(RTCConnectionEvent /* RTCConnectionEvent */.RTCConnectionEvent.OutboundLossRate, _outboundLossRate);
+  this.emit(RTCConnectionEvent.RTCConnectionEvent.OutboundLossRate, _outboundLossRate);
 };
 prototype["_getAnalyticsProperties"] = function _getAnalyticsProperties() {
   const self = this;
@@ -2507,7 +2507,7 @@ prototype["_handleClientDisconnect"] = function _handleClientDisconnect(sender_u
   }
   const _userIds = self._userIds;
   _userIds.delete(sender_user_id);
-  self.emit(RTCConnectionEvent /* RTCConnectionEvent */.RTCConnectionEvent.ClientDisconnect, sender_user_id);
+  self.emit(RTCConnectionEvent.RTCConnectionEvent.ClientDisconnect, sender_user_id);
   const _localMediaSinkWantsManager2 = self._localMediaSinkWantsManager;
   if (_localMediaSinkWantsManager2 != null) {
     _localMediaSinkWantsManager2.updateCallUserIds(self._userIds);
@@ -2517,8 +2517,8 @@ prototype["_handleClientDisconnect"] = function _handleClientDisconnect(sender_u
     const result = _videoQuality2.updateCallUserIdsCount(self._userIds.size);
   }
   if (1 === self._userIds.size) {
-    self._secureFramesLastBecameAloneTime = sleep /* sleep */.now();
-    const tmp22Result = sleep /* sleep */;
+    self._secureFramesLastBecameAloneTime = sleep.now();
+    const tmp22Result = sleep;
   }
 };
 prototype["_handleCodecs"] = function _handleCodecs(OPUS, H264) {
@@ -2588,7 +2588,7 @@ prototype["_trackVoiceConnectionSuccess"] = function _trackVoiceConnectionSucces
         const obj3 = expandEventProperties;
         const tmp11 = constants;
         const tmp9 = importDefault;
-        obj.connect_time = sleep /* sleep */.now() - (1 === self._connectCount ? self._createdTime : self._connectStartTime);
+        obj.connect_time = sleep.now() - (1 === self._connectCount ? self._createdTime : self._connectStartTime);
         obj.connect_count = self._connectCount;
         const mediaEngine = obj2.getMediaEngine();
         obj.audio_subsystem = mediaEngine.getAudioSubsystem();
@@ -2609,7 +2609,7 @@ prototype["_trackVoiceConnectionSuccess"] = function _trackVoiceConnectionSucces
         obj3.track(constants.VOICE_CONNECTION_SUCCESS, obj);
         const _performance = performance;
         const nowResult = performance.now();
-        const obj5 = sleep /* sleep */;
+        const obj5 = sleep;
         obj = { rtc_connection_id: null, hostname: null, address_family: null, time_1_creation_to_connect: null, time_2_media_engine_connect: null, time_3_media_engine_create_native_connection: null, time_4_media_engine_connect_to_socket: null, time_5_scheduling_connected_callback: null, time_6_state_connected_to_end_measure: null, connect_count: null, rtc_connecting_native_connect: null, rtc_connecting_native_codecs: null, rtc_connecting_native_crypto_modes: null };
         obj[0] = result.rtc_connection_id;
         obj[1] = self.hostname;
@@ -2894,7 +2894,7 @@ prototype["_trackSecureFrameTransition"] = function _trackSecureFrameTransition(
     obj.execute_duration = diff12;
     ({ executeError: obj3.execute_error, incomplete: obj3.incomplete } = value);
     obj.active_transition_count = self._secureFramesTransitionStates.size;
-    obj = sleep /* sleep */;
+    obj = sleep;
     obj.time_since_creation = obj.now() - value.creationTime;
     ({ usersAdded: obj3.users_added_count, usersRemoved: obj3.users_removed_count, rosterSizeAfter: obj3.roster_size_after, executeFinishedTime: executeFinishedTime2, initReceivedTime: initReceivedTime2 } = value);
     let diff13;
@@ -2923,9 +2923,9 @@ prototype["_storeSecureFrameNextTransitionData"] = function _storeSecureFrameNex
   const self = this;
   if (null == this._secureFramesNextTransitionState) {
     let obj = { creationTime: null };
-    obj[0] = sleep /* sleep */.now();
+    obj[0] = sleep.now();
     self._secureFramesNextTransitionState = obj;
-    const obj2 = sleep /* sleep */;
+    const obj2 = sleep;
   }
   obj = {};
   const merged = Object.assign(self._secureFramesNextTransitionState);
@@ -2951,7 +2951,7 @@ prototype["_handleSecureFramesInit"] = function _handleSecureFramesInit(v) {
   let self = this;
   self = this;
   let closure_1 = v;
-  let obj = sleep /* sleep */;
+  let obj = sleep;
   const nowResult = obj.now();
   require = nowResult;
   obj = { c: constants9.SECURE_FRAMES_INIT, v };
@@ -2968,13 +2968,13 @@ prototype["_handleSecureFramesInit"] = function _handleSecureFramesInit(v) {
     self._sendMLSKeyPackage();
     obj = { initReceivedTime: null, initFinishedTime: null, protocolVersion: null };
     obj[0] = nowResult;
-    obj[1] = sleep /* sleep */.now();
+    obj[1] = sleep.now();
     obj[2] = v;
     let result1 = self._storeSecureFrameNextTransitionData(obj);
     const obj1 = { c: null };
     obj1[0] = constants9.MLS_INIT;
     self.recordEvent(obj1);
-    const tmpResult = sleep /* sleep */;
+    const tmpResult = sleep;
   } else {
     let _connection = self._connection;
     if (_connection != null) {
@@ -3058,7 +3058,7 @@ prototype["_handleSecureFramesPrepareEpoch"] = function _handleSecureFramesPrepa
     const result = _connection.prepareSecureFramesEpoch(str, v, self.trueChannelId);
   }
   if ("1" === str) {
-    let obj = sleep /* sleep */;
+    let obj = sleep;
     self._mlsInitReceivedTime = obj.now();
     self._sendMLSKeyPackage();
     obj = { c: null };
@@ -3091,9 +3091,9 @@ prototype["_maybeSendSecureFramesTransitionReady"] = function _maybeSendSecureFr
       const result = _socket.secureFramesReadyForTransition(closure_1);
     }
     const obj = { readyTime: null };
-    obj[0] = sleep /* sleep */.now();
+    obj[0] = sleep.now();
     const result1 = self._storeSecureFrameTransitionData(closure_1, obj);
-    const obj2 = sleep /* sleep */;
+    const obj2 = sleep;
   }
 };
 prototype["_handleSecureFramesExecuteTransition"] = function _handleSecureFramesExecuteTransition(transition_id) {
@@ -3101,7 +3101,7 @@ prototype["_handleSecureFramesExecuteTransition"] = function _handleSecureFrames
   const logger = this.logger;
   logger.info("Executing DAVE protocol transition: " + transition_id);
   this._secureFramesTransitionExecuteCount = this._secureFramesTransitionExecuteCount + 1;
-  sleep /* sleep */;
+  sleep;
   try {
     const _connection = self._connection;
     if (_connection != null) {
@@ -3110,7 +3110,7 @@ prototype["_handleSecureFramesExecuteTransition"] = function _handleSecureFrames
     let flag = false;
     let obj = { executeReceivedTime: null, executeFinishedTime: null, executeError: null };
     obj[0] = tmp7;
-    obj[1] = sleep /* sleep */.now();
+    obj[1] = sleep.now();
     obj[2] = flag;
     const result1 = self._storeSecureFrameTransitionData(transition_id, obj);
     const result2 = self._trackSecureFrameTransition(transition_id);
@@ -3281,7 +3281,7 @@ prototype["_flagMLSInvalidCommitWelcome"] = function _flagMLSInvalidCommitWelcom
 };
 prototype["_handleMLSFailure"] = function _handleMLSFailure(arr, reason) {
   const self = this;
-  let obj = sleep /* sleep */;
+  let obj = sleep;
   const nowResult = obj.now();
   this._nextFailureId = +this._nextFailureId + 1;
   obj = { c: constants9.MLS_FAILURE, i: tmp4 };
@@ -3325,7 +3325,7 @@ prototype["_trackMLSFailures"] = function _trackMLSFailures(arg0) {
   let timeSinceInit;
   const self = this;
   ({ recovered, downgraded } = arg0);
-  let obj = sleep /* sleep */;
+  let obj = sleep;
   const nowResult = obj.now();
   const mediaSessionId = this.getMediaSessionId();
   if (null != this._mlsSessionResetStartTime) {

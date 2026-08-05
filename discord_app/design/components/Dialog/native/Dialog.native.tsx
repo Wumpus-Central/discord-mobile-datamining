@@ -21,5 +21,5 @@ export const Dialog = function Dialog(dialogKey) {
   }
   obj[3] = dialogKey;
   const merged1 = Object.assign(merged);
-  return jsx(AccessibilityView /* AccessibilityView */.AccessibilityView, { style: items, accessibilityViewIsModal: true, onAccessibilityEscape: onDismiss, nativeID: null });
+  return jsx(AccessibilityView.AccessibilityView, { style: items, accessibilityViewIsModal: true, onAccessibilityEscape: onDismiss, nativeID: null });
 };

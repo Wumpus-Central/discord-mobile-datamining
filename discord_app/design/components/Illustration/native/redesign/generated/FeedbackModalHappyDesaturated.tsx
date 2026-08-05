@@ -9,7 +9,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/FeedbackModalHappyDesaturated.tsx");
 
 export const getFeedbackModalHappyDesaturatedSource = function getFeedbackModalHappyDesaturatedSource(theme) {
-  let obj = getIllustrationSource /* getIllustrationSource */;
+  let obj = getIllustrationSource;
   obj = {
     dark() {
       return callback(11018);
@@ -24,7 +24,7 @@ export const getFeedbackModalHappyDesaturatedSource = function getFeedbackModalH
   return obj.getIllustrationSource(theme, obj);
 };
 export const useFeedbackModalHappyDesaturatedSource = function useFeedbackModalHappyDesaturatedSource() {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
       return callback(11018);
@@ -36,10 +36,10 @@ export const useFeedbackModalHappyDesaturatedSource = function useFeedbackModalH
       return callback(11020);
     }
   };
-  return getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const FeedbackModalHappyDesaturated = function FeedbackModalHappyDesaturated(arg0) {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
       return callback(11018);
@@ -52,7 +52,7 @@ export const FeedbackModalHappyDesaturated = function FeedbackModalHappyDesatura
     }
   };
   obj = {};
-  const illustrationSource = getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

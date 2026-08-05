@@ -7,8 +7,8 @@ import { DataAndPrivacySettings } from "../../privacy_and_safety/native/DataAndP
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.OAuOHD);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.OAuOHD);
   },
   parent: null,
   IconComponent: require("ShieldLockIcon").ShieldLockIcon,
@@ -25,7 +25,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.DATA_AND_PRIVACY,
   getComponent() {
-    return DataAndPrivacySettings /* DataAndPrivacySettings */.default;
+    return DataAndPrivacySettings.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

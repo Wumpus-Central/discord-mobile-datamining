@@ -12,15 +12,15 @@ const result = require("explicitContentFromProto").fileFinishedImporting("module
 
 export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilterSettingValue() {
   let DmSpamFilterV2 = dependencyMap;
-  const DmSpamFilterV22 = explicitContentFromProto /* explicitContentFromProto */.DmSpamFilterV2;
+  const DmSpamFilterV22 = explicitContentFromProto.DmSpamFilterV2;
   const setting = DmSpamFilterV22.useSetting();
-  const ExplicitContentFilter = explicitContentFromProto /* explicitContentFromProto */.ExplicitContentFilter;
+  const ExplicitContentFilter = explicitContentFromProto.ExplicitContentFilter;
   const setting1 = ExplicitContentFilter.useSetting();
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize /* initialize */;
-  const isSettingTeenByDefault = isFeatureAgeGated /* isFeatureAgeGated */.useIsSettingTeenByDefault(SettingsDefaultFeature /* SettingsDefaultFeature */.SettingsDefaultFeature.SPAM_FILTERS);
-  if (setting !== create /* create */.DmSpamFilterV2.DEFAULT_UNSET) {
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize;
+  const isSettingTeenByDefault = isFeatureAgeGated.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SPAM_FILTERS);
+  if (setting !== create.DmSpamFilterV2.DEFAULT_UNSET) {
     return setting;
   } else {
     let nsfwAllowed;

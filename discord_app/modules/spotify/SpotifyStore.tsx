@@ -179,7 +179,7 @@ function activitySync(userId, activity, arg2) {
               }
               const tmp14Result = closure_13(type);
               if (null != tmp14Result) {
-                const obj4 = apiRequest /* apiRequest */;
+                const obj4 = apiRequest;
                 obj = { position: null, deviceId: null, repeat: null };
                 obj[0] = +bound;
                 obj[1] = device.id;
@@ -266,8 +266,8 @@ function handleUserActivitySyncStop() {
   if (null != tmp11) {
     const socket = tmp11.socket;
     if (tmp18) {
-      apiRequest /* apiRequest */.pause(socket.accountId, socket.accessToken);
-      const obj4 = apiRequest /* apiRequest */;
+      apiRequest.pause(socket.accountId, socket.accessToken);
+      const obj4 = apiRequest;
     }
     tmp18 = null != dependencyMap3[socket.accountId] && dependencyMap3[socket.accountId].track.id === trackId;
   }
@@ -313,7 +313,7 @@ function handleUserConnectionsUpdate() {
         if (null == tmp10.accessToken) {
           let tmp22 = require;
           let tmp23 = dependencyMap;
-          let obj2 = apiRequest /* apiRequest */;
+          let obj2 = apiRequest;
           let tmp24 = item10030;
           let accessToken = obj2.getAccessToken(tmp10.id);
         } else {
@@ -363,8 +363,8 @@ function autoPause() {
     if (null != tmp2) {
       const socket = tmp2.socket;
       let c43 = true;
-      apiRequest /* apiRequest */.pause(socket.accountId, socket.accessToken);
-      const obj2 = apiRequest /* apiRequest */;
+      apiRequest.pause(socket.accountId, socket.accessToken);
+      const obj2 = apiRequest;
       expandEventProperties.track(constants4.SPOTIFY_AUTO_PAUSED);
       tmp4.info("Playback auto paused");
       const obj3 = expandEventProperties;
@@ -816,8 +816,8 @@ prototype["handleMessage"] = function handleMessage(data) {
         if (uri.startsWith(c22)) {
           const _decodeURIComponent = decodeURIComponent;
           self.connectionId = decodeURIComponent(uri.split(tmp15)[1]);
-          const result = apiRequest /* apiRequest */.subscribePlayerStateNotifications(self.accountId, self.accessToken, self.connectionId);
-          const obj = apiRequest /* apiRequest */;
+          const result = apiRequest.subscribePlayerStateNotifications(self.accountId, self.accessToken, self.connectionId);
+          const obj = apiRequest;
         }
         tmp15 = c22;
       }
@@ -966,7 +966,7 @@ prototype2["initialize"] = function initialize() {
     }
     return flag;
   });
-  const isSpotifyProtocolRegistered = apiRequest /* apiRequest */.fetchIsSpotifyProtocolRegistered();
+  const isSpotifyProtocolRegistered = apiRequest.fetchIsSpotifyProtocolRegistered();
 };
 prototype2["hasConnectedAccount"] = function hasConnectedAccount() {
   return Object.keys(closure_40).length > 0;
@@ -1145,7 +1145,7 @@ prototype2["getActivity"] = function getActivity() {
     }
     let assetFromImageURL = null;
     if (null != album.image) {
-      let obj1 = updateAssets /* updateAssets */;
+      let obj1 = updateAssets;
       assetFromImageURL = obj1.getAssetFromImageURL(PlatformTypes.SPOTIFY, album.image.url);
     }
     let obj = {};
@@ -1467,7 +1467,7 @@ const spotifyStore = new SpotifyStore(require("dispatcher"), {
           handleUserActivitySyncStop();
         }
         if (null != metadata) {
-          const obj2 = apiRequest /* apiRequest */;
+          const obj2 = apiRequest;
           ({ accountId, accessToken } = socket);
           let TRACK = metadata.type;
           if (TRACK == null) {
@@ -1503,7 +1503,7 @@ const spotifyStore = new SpotifyStore(require("dispatcher"), {
     userId = userId.userId;
     if (userId === store.getId()) {
       const result = updateVoiceState.isCurrentClientInVoiceChannel();
-      let obj = useIsSpeaking /* useIsSpeaking */;
+      let obj = useIsSpeaking;
       obj = { userId: null, checkSoundSharing: true, checkSoundboardSounds: false };
       obj[0] = userId;
       if (result) {
@@ -1558,7 +1558,7 @@ const spotifyStore = new SpotifyStore(require("dispatcher"), {
       if (null != sourceId) {
         if (observedAppNameForWindow.getObservedAppNameForWindow(sourceId) === user.name) {
           if (tmp5) {
-            const interval = new start /* start */.Interval();
+            const interval = new start.Interval();
             c44 = interval;
             interval.start(closure_24, autoPause);
           }

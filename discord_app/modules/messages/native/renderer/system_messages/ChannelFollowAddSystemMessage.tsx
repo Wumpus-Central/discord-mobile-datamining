@@ -7,15 +7,15 @@ const result = require("formatUsernameOnClick").fileFinishedImporting("modules/m
 
 export const createChannelFollowAddSystemMessage = function createChannelFollowAddSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+  let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   obj = { content: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, webhookName: null, webhookNameOnClick: null };
   obj[1] = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   obj[2] = message.content;
   obj[3] = { action: "bindGuildMenu", messageReference: message.messageReference, medium: true };
-  obj[0] = intl.formatToParts(getSystemLocale /* getSystemLocale */.t.xH8qGO, obj);
+  obj[0] = intl.formatToParts(getSystemLocale.t.xH8qGO, obj);
   const merged = Object.assign(createCommonMessage(roleStyle));
   return obj;
 };

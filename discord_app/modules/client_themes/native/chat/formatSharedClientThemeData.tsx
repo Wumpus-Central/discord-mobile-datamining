@@ -18,11 +18,11 @@ export const formatSharedClientThemeData = function formatSharedClientThemeData(
     }
     obj[3] = str2;
     obj[4] = Image.resolveAssetSource(registerAsset).uri;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[5] = intl.string(getSystemLocale /* getSystemLocale */.t.SKNnqq);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
+    obj[5] = intl.string(getSystemLocale.t.SKNnqq);
+    const intl2 = getSystemLocale.intl;
     obj[6] = intl2.string(messagesProxy.yl1iMm);
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     const _HermesInternal = HermesInternal;
     obj[7] = "" + intl3.format(messagesProxy.fQPSEf, { username: "__USERNAME__" });
     return obj;

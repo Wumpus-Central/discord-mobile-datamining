@@ -15,7 +15,7 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
   let tmp6;
   let tmp7;
   const visible = startAnimation.visible;
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.TEXT_DEFAULT);
   const tmp = callback2();
   const tmp2 = require;

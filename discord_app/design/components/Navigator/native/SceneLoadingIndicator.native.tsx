@@ -15,7 +15,7 @@ const result = require("jsxProd").fileFinishedImporting("design/components/Navig
 
 export const SceneLoadingIndicator = function SceneLoadingIndicator() {
   const obj = { style: callback3().loadingContainer, children: null };
-  const items = [callback(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, {}), callback(NavScrim /* NavScrim */.NavScrim, {})];
+  const items = [callback(ActivityIndicator.ActivityIndicator, {}), callback(NavScrim.NavScrim, {})];
   obj[1] = items;
   return callback2(View, obj);
 };

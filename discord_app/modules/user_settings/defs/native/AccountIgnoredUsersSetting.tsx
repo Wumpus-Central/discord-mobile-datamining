@@ -9,16 +9,16 @@ const require = arg1;
 createToggle = {
   IconComponent: require("EyeSlashIcon").EyeSlashIcon,
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["93ZDWE"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["93ZDWE"]);
   },
   useDescription: function useAccountIgnoredUsersSettingDescription() {
-    let obj = initialize /* initialize */;
+    let obj = initialize;
     const items = [upsertRelationship];
     const stateFromStoresArray = obj.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs());
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { numberOfIgnoredUsers: stateFromStoresArray.length };
-    return intl.format(getSystemLocale /* getSystemLocale */.t.rXUeOl, obj);
+    return intl.format(getSystemLocale.t.rXUeOl, obj);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   screen: createToggle
@@ -26,7 +26,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.IGNORED_USERS,
   getComponent() {
-    return IgnoredUsersList /* IgnoredUsersList */.default;
+    return IgnoredUsersList.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

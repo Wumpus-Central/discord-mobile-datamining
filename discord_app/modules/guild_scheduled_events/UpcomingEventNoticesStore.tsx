@@ -77,7 +77,7 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(require("dispatc
       if (null != guildScheduledEvent) {
         if (guildScheduledEvent.status === constants.SCHEDULED) {
           if (null == obj[guildEventId]) {
-            obj = getNextShownUpcomingEventNoticeType /* getNextShownUpcomingEventNoticeType */;
+            obj = getNextShownUpcomingEventNoticeType;
             if (obj.getNextShownUpcomingEventNoticeType(guildScheduledEvent, undefined, dependencyMap[guildEventId], false) === constants2.NEW_EVENT) {
               obj = {};
               const merged = Object.assign(obj);

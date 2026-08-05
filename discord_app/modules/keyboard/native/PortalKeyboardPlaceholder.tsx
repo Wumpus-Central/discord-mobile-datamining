@@ -21,7 +21,7 @@ function PortalKeyboardPlaceholderInner(keyboardType) {
   const rect = useSafeAreaInsets();
   const tmp = useIsWindowLarge();
   const tmp2 = useWindowDimensions();
-  let obj = useGradientBottom /* useGradientBottom */;
+  let obj = useGradientBottom;
   obj = { style: null };
   const items = [callback(keyboardType.keyboardType, useWindowDimensions().width - rect.left - rect.right, useCustomKeyboardHeight(), tmp).container, obj.useGradientBottom()];
   obj[0] = items;
@@ -29,7 +29,7 @@ function PortalKeyboardPlaceholderInner(keyboardType) {
 }
 ({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
 let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
-  let container = set /* set */;
+  let container = set;
   let absoluteFillObject = null;
   if (container.isIOS()) {
     absoluteFillObject = closure_4.absoluteFillObject;
@@ -76,10 +76,10 @@ const jsxResult = jsx(function PortalKeyboardPlaceholder() {
   const tmp2 = useKeyboardType();
   let isAndroidResult = useSystemKeyboardHeight() > 0;
   if (isAndroidResult) {
-    let obj = set /* set */;
+    let obj = set;
     isAndroidResult = obj.isAndroid();
   }
-  if (tmp2 !== KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
+  if (tmp2 !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     let tmp6 = null;
     if (!isAndroidResult) {
       obj = { keyboardType: null };
@@ -88,7 +88,7 @@ const jsxResult = jsx(function PortalKeyboardPlaceholder() {
     }
   } else {
     tmp6 = null;
-    const tmp5Result = set /* set */;
+    const tmp5Result = set;
   }
   return tmp6;
 }, {});

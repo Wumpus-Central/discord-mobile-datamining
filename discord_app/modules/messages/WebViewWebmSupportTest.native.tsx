@@ -35,6 +35,6 @@ export const isIOSWithWebM = function isIOSWithWebM() {
   } else {
     return false;
   }
-  obj = set /* set */;
+  obj = set;
   tmp = require;
 };

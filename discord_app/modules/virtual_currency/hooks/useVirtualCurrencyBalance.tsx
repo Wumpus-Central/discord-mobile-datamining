@@ -7,7 +7,7 @@ const result = require("set").fileFinishedImporting("modules/virtual_currency/ho
 
 export const useVirtualCurrencyBalance = function useVirtualCurrencyBalance() {
   const items = [redeemError];
-  return initialize /* initialize */.useStateFromStores(items, () => balance.balance);
+  return initialize.useStateFromStores(items, () => balance.balance);
 };
 export const useHasEnoughVirtualCurrency = function useHasEnoughVirtualCurrency(arg0) {
   const _require = arg0;

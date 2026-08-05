@@ -52,34 +52,34 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
       if (photosEmpty.photosEmpty) {
         if (photoPermissionStatus === tmp3.LIMITED) {
           let obj = { actionIcon: null, actionLabel: null, actionPress: null, imageSource: null, label: null };
-          obj[0] = callback(SettingsIcon /* SettingsIcon */.SettingsIcon, { color: "white", size: "sm" });
-          const intl3 = getSystemLocale /* getSystemLocale */.intl;
-          obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.JuXTi6);
+          obj[0] = callback(SettingsIcon.SettingsIcon, { color: "white", size: "sm" });
+          const intl3 = getSystemLocale.intl;
+          obj[1] = intl3.string(getSystemLocale.t.JuXTi6);
           obj[2] = tmp2;
           obj[3] = registerAsset;
-          const intl4 = getSystemLocale /* getSystemLocale */.intl;
-          obj[4] = intl4.string(getSystemLocale /* getSystemLocale */.t["5g7NcN"]);
+          const intl4 = getSystemLocale.intl;
+          obj[4] = intl4.string(getSystemLocale.t["5g7NcN"]);
           return callback(MediaKeyboardEmptyState, obj);
         } else if (showCameraButton) {
           obj = { actionIcon: null, actionLabel: null, actionPress: null, imageSource: null, label: null };
-          obj[0] = callback(CameraIcon /* CameraIcon */.CameraIcon, { color: "white", size: "sm" });
-          const intl = getSystemLocale /* getSystemLocale */.intl;
-          obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.tpoWUd);
+          obj[0] = callback(CameraIcon.CameraIcon, { color: "white", size: "sm" });
+          const intl = getSystemLocale.intl;
+          obj[1] = intl.string(getSystemLocale.t.tpoWUd);
           obj[2] = tmp;
           obj[3] = registerAsset;
-          const intl2 = getSystemLocale /* getSystemLocale */.intl;
-          obj[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.YOvRBZ);
+          const intl2 = getSystemLocale.intl;
+          obj[4] = intl2.string(getSystemLocale.t.YOvRBZ);
           return callback(MediaKeyboardEmptyState, obj);
         }
       }
     }
   }
-  obj = { actionIcon: callback(SettingsIcon /* SettingsIcon */.SettingsIcon, { color: "white", size: "sm" }), actionLabel: null, actionPress: null, imageSource: null, label: null };
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl5.string(getSystemLocale /* getSystemLocale */.t["457oeG"]);
+  obj = { actionIcon: callback(SettingsIcon.SettingsIcon, { color: "white", size: "sm" }), actionLabel: null, actionPress: null, imageSource: null, label: null };
+  const intl5 = getSystemLocale.intl;
+  obj[1] = intl5.string(getSystemLocale.t["457oeG"]);
   obj[2] = photosEmpty.onPressPrivacySettings;
   obj[3] = registerAsset;
-  const intl6 = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl6.string(getSystemLocale /* getSystemLocale */.t["8p9jGu"]);
+  const intl6 = getSystemLocale.intl;
+  obj[4] = intl6.string(getSystemLocale.t["8p9jGu"]);
   return callback(MediaKeyboardEmptyState, obj);
 };

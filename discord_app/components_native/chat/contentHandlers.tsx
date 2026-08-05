@@ -212,19 +212,19 @@ obj[3] = function onTapMention(closure_0) {
   }
 };
 obj[4] = function onTapTimestamp(nativeEvent) {
-  presentAddedFriendToast /* presentAddedFriendToast */.presentTimestamp(nativeEvent.nativeEvent.node.full);
+  presentAddedFriendToast.presentTimestamp(nativeEvent.nativeEvent.node.full);
 };
 obj[5] = function onTapInlineCode(nativeEvent) {
   const node = nativeEvent.nativeEvent.node;
   if (tmp) {
-    _copy /* _copy */.copy(node.content);
-    const obj = _copy /* _copy */;
-    const result = presentAddedFriendToast /* presentAddedFriendToast */.presentCopiedToClipboard();
-    const obj2 = presentAddedFriendToast /* presentAddedFriendToast */;
+    _copy.copy(node.content);
+    const obj = _copy;
+    const result = presentAddedFriendToast.presentCopiedToClipboard();
+    const obj2 = presentAddedFriendToast;
   }
 };
 obj[6] = function onTapEmoji(emojiNode) {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(8656, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(8656, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
 let result = require("shouldRefreshAttachmentUrl").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
 

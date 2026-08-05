@@ -8,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/guild_tag/us
 
 export const useUserAvailableGuildsWithTags = function useUserAvailableGuildsWithTags() {
   const items = [createGuildRecordFromRust, trackCommunicationDisabled];
-  return initialize /* initialize */.useStateFromStoresArray(items, () => {
+  return initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
     return guildsArray.filter((id) => {
       selfMember = selfMember.getSelfMember(id.id);

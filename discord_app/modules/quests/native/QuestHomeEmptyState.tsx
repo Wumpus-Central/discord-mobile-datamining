@@ -36,25 +36,25 @@ export default function QuestHomeEmptyState(subtitle) {
   let title;
   ({ action, title } = subtitle);
   if (title === undefined) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    title = intl.string(getSystemLocale /* getSystemLocale */.t.SdlRnK);
+    const intl = getSystemLocale.intl;
+    title = intl.string(getSystemLocale.t.SdlRnK);
   }
   subtitle = subtitle.subtitle;
   if (subtitle === undefined) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    subtitle = intl2.string(getSystemLocale /* getSystemLocale */.t["R7mv+G"]);
+    const intl2 = getSystemLocale.intl;
+    subtitle = intl2.string(getSystemLocale.t["R7mv+G"]);
   }
   const tmp5 = createCacheKey();
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.BACKGROUND_BASE_LOWER);
   obj = { bottom: null, style: null, children: null };
-  let obj2 = set /* set */;
+  let obj2 = set;
   obj[0] = obj2.isAndroid();
   obj[1] = tmp5.container;
   obj = { style: tmp5.container, children: null };
   const obj1 = { style: tmp5.emptyStateContainer, children: null };
   obj2 = { style: tmp5.emptyStateContentContainer, children: null };
-  const items = [callback(Text /* Text */.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.emptyStateContentTitle, children: title }), callback(Text /* Text */.Text, { variant: "text-md/normal", color: "text-default", style: tmp5.emptyStateContentDescription, children: subtitle }), ];
+  const items = [callback(Text.Text, { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp5.emptyStateContentTitle, children: title }), callback(Text.Text, { variant: "text-md/normal", color: "text-default", style: tmp5.emptyStateContentDescription, children: subtitle }), ];
   let tmp9Result = null != action;
   if (tmp9Result) {
     const obj5 = { style: null, children: null };
@@ -85,5 +85,5 @@ export default function QuestHomeEmptyState(subtitle) {
   obj1[1] = items1;
   obj[1] = closure_7(closure_3, obj1);
   obj[2] = callback(closure_3, obj);
-  return callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 };

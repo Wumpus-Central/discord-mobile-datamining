@@ -15,7 +15,7 @@ const styles = createCacheKey.createStyles(() => {
   obj = {};
   const merged = Object.assign(Themes.shadows.SHADOW_HIGH);
   obj[0] = obj;
-  obj = { minWidth: MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.FAB_BUTTON_SIZE, minHeight: MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.FAB_BUTTON_SIZE, padding: 0 };
+  obj = { minWidth: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE, minHeight: MINIMUM_HIT_AREA.FAB_BUTTON_SIZE, padding: 0 };
   if (flag) {
     const obj1 = { borderRadius: null };
     obj1[0] = Themes.radii.lg;

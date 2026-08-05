@@ -491,7 +491,7 @@ prototype["getOrCreate"] = function getOrCreate(arg0) {
   const remote = this.remote;
   if (!remote.has(arg0)) {
     const remote2 = self.remote;
-    const remoteFetchData = new FetchStatus /* FetchStatus */.RemoteFetchData();
+    const remoteFetchData = new FetchStatus.RemoteFetchData();
     const result = remote2.set(arg0, remoteFetchData);
   }
   const remote3 = self.remote;

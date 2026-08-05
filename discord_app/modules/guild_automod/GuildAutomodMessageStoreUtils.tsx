@@ -4,5 +4,5 @@ const result = require("set").fileFinishedImporting("modules/guild_automod/Guild
 
 export const isNotAutomodEmbed = function isNotAutomodEmbed(type) {
   type = type.type;
-  return type !== MessageEmbedTypes /* MessageEmbedTypes */.MessageEmbedTypes.AUTO_MODERATION_MESSAGE && type !== MessageEmbedTypes /* MessageEmbedTypes */.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION;
+  return type !== MessageEmbedTypes.MessageEmbedTypes.AUTO_MODERATION_MESSAGE && type !== MessageEmbedTypes.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION;
 };

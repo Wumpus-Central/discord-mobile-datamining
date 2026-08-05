@@ -15,19 +15,19 @@ let c5;
 function ProductNameAndDescription(product) {
   product = product.product;
   const tmp = callback3();
-  let obj = getBundleDescription /* getBundleDescription */;
+  let obj = getBundleDescription;
   obj = { style: tmp.description, children: null };
   const productDescription = obj.useProductDescription(product);
   obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: product.name };
-  const items = [callback(Text /* Text */.Text, obj), callback(Text /* Text */.Text, { variant: "text-md/medium", color: "text-default", children: productDescription })];
+  const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-md/medium", color: "text-default", children: productDescription })];
   obj[1] = items;
   return callback2(View, obj);
 }
 function ProductPurchaseStatus(product) {
   product = product.product;
-  let obj = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
+  let obj = getItemRecordsFromPurchases;
   const result = obj.isPremiumCollectiblesProduct(product);
-  let obj1 = getProductPurchaseState /* getProductPurchaseState */;
+  let obj1 = getProductPurchaseState;
   const productPurchaseState = obj1.useProductPurchaseState(product);
   if (productPurchaseState.isPurchased) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
@@ -53,7 +53,7 @@ function ProductPurchaseStatus(product) {
 function BundleProductDetailsActionSheetInfo(onTrackPress) {
   const product = onTrackPress.product;
   const tmp = callback3();
-  let obj = useCollectiblesMobileFlexibleBundlesExperiment /* useCollectiblesMobileFlexibleBundlesExperiment */;
+  let obj = useCollectiblesMobileFlexibleBundlesExperiment;
   const enabled = obj.useCollectiblesMobileFlexibleBundlesExperiment("BundleProductDetailsActionSheetInfo").enabled;
   const items = [tmp.body, ];
   let bundleBody = enabled;
@@ -85,7 +85,7 @@ export default function ProductDetailsActionSheetInfo(arg0) {
   let onTrackPress;
   let product;
   ({ product, onTrackPress } = arg0);
-  if (product.type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.BUNDLE) {
+  if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
     let obj = { product: null, onTrackPress: null };
     obj[0] = product;
     obj[1] = onTrackPress;

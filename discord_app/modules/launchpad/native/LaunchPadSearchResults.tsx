@@ -33,7 +33,7 @@ function renderItemJSX(result) {
     return null;
   } else {
     const type = result.type;
-    if (sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.GUILD === type) {
+    if (sortByMatchScore.AutocompleterResultTypes.GUILD === type) {
       let obj = { guild: null };
       obj[0] = result.record;
       return callback(closure_14, obj);
@@ -67,8 +67,8 @@ function renderItemJSX(result) {
 }
 function renderSearchResultsSection() {
   const obj = { name: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["zkoeq/"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["zkoeq/"]);
   return callback(closure_16, obj);
 }
 let c3 = importAllResult;
@@ -124,11 +124,11 @@ let closure_16 = importAllResult.memo((arg0) => {
   let note;
   let onPress;
   ({ name, onPress, note } = arg0);
-  let obj = renderCategoryItem /* renderCategoryItem */;
+  let obj = renderCategoryItem;
   const categoryStyles = obj.useCategoryStyles();
   const tmp = callback3();
   const tmp3 = useIsMobileVisualRefreshExperimentEnabled("WrappedCategoryItem");
-  obj = { style: tmp.categoryWrapper, children: renderCategoryItem /* renderCategoryItem */.renderCategoryItem({ name, onPress, note, styles: categoryStyles, isRefreshEnabled: tmp3 }) };
+  obj = { style: tmp.categoryWrapper, children: renderCategoryItem.renderCategoryItem({ name, onPress, note, styles: categoryStyles, isRefreshEnabled: tmp3 }) };
   return callback(View, obj);
 });
 let obj2 = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE };

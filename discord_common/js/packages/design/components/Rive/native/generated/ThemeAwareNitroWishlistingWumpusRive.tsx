@@ -17,8 +17,8 @@ let closure_9 = {
     let onDataBindingChange;
     let playIfNeeded;
     ({ instance, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
-    const obj = BaseRive /* BaseRive */;
+    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
+    const obj = BaseRive;
     let logoColor;
     if (dataBinding != null) {
       logoColor = dataBinding.logoColor;
@@ -27,7 +27,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       logoColor1 = onDataBindingChange.logoColor;
     }
-    const colorBinding = BaseRive /* BaseRive */.useColorBinding("logoColor", instance, logoColor, logoColor1, playIfNeeded);
+    const colorBinding = BaseRive.useColorBinding("logoColor", instance, logoColor, logoColor1, playIfNeeded);
     return null;
   }
 };
@@ -74,7 +74,7 @@ const forwardRefResult = importAllResult.forwardRef(function ThemeAwareNitroWish
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_10 ref={arg1} />;
-  return jsx(getDerivedStateFromError /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/ThemeAwareNitroWishlistingWumpusRive.tsx");
 

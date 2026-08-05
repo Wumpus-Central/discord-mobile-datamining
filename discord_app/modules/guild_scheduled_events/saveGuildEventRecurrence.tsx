@@ -5,7 +5,7 @@ import { getRRule } from "utils/ScheduleUtils.tsx";
 let result = require("DISCORD_EPOCH").fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
 
 export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_exception_id) {
-  let obj = getRRule /* getRRule */;
+  let obj = getRRule;
   const baseScheduleForRecurrence = obj.getBaseScheduleForRecurrence(c2, guild_id);
   startDate = null;
   if (!obj2.areDatesIdentical(baseScheduleForRecurrence.startDate, startDate.startDate)) {
@@ -57,5 +57,5 @@ export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_
     obj[2] = toISOStringResult3;
     return GuildScheduledEventsActionCreators.createGuildEventException(obj, guild_id.guild_id, guild_id.id);
   }
-  obj2 = getRRule /* getRRule */;
+  obj2 = getRRule;
 };

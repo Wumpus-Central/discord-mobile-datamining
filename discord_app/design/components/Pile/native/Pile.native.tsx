@@ -23,8 +23,8 @@ export const Pile = function Pile(aria_label) {
   let Children = React.Children;
   const tmp = callback();
   const tmp2 = React;
-  length = Children.toArray(children).filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish).length;
-  let obj = apply /* apply */;
+  length = Children.toArray(children).filter(isDiscordFrontendDevelopment.isNotNullish).length;
+  let obj = apply;
   if (obj.isArray(size)) {
     if (size.length !== length) {
       const _Error = Error;

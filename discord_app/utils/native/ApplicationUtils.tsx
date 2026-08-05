@@ -161,12 +161,12 @@ export const installPrivateChannelIntegration = function installPrivateChannelIn
   ({ applicationId, channelId, callback } = arg0);
   let obj = ModalActionCreators;
   obj = { clientId: applicationId, scopes: null, channelId: null, dismissOAuthModal: null, disableGuildSelect: true, callback: null };
-  const items = [set /* set */.OAuth2Scopes.APPLICATIONS_COMMANDS];
+  const items = [set.OAuth2Scopes.APPLICATIONS_COMMANDS];
   obj[1] = items;
   obj[2] = channelId;
   obj[3] = function dismissOAuthModal() {
     return callback(table[7]).popWithKey(closure_5);
   };
   obj[5] = callback;
-  obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10852, dependencyMap.paths), obj, closure_5);
+  obj.pushLazy(asyncRequireImpl(10852, dependencyMap.paths), obj, closure_5);
 };

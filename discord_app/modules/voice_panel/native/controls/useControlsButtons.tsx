@@ -20,15 +20,15 @@ const require = arg1;
 let closure_9 = {
   mic(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(PTTButton /* PTTButton */.MicButton, {}, arg0);
+    return jsx(PTTButton.MicButton, {}, arg0);
   },
   ptt(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(PTTButton /* PTTButton */.PTTButton, {}, arg0);
+    return jsx(PTTButton.PTTButton, {}, arg0);
   },
   micConnected(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(PTTButton /* PTTButton */.MicButton, {}, arg0);
+    return jsx(PTTButton.MicButton, {}, arg0);
   },
   connect(arg0, arg1) {
     const merged = Object.assign(arg1);

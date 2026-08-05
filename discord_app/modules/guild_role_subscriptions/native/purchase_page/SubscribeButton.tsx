@@ -14,7 +14,7 @@ let closure_12;
 let map1;
 const require = arg1;
 function emphasisHook(children) {
-  return callback3(Text /* Text */.Text, { variant: "text-xs/semibold", color: "text-default", children });
+  return callback3(Text.Text, { variant: "text-xs/semibold", color: "text-default", children });
 }
 function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;

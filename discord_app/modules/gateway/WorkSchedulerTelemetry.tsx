@@ -27,13 +27,13 @@ class WorkSchedulerTelemetry {
 }
 const prototype = WorkSchedulerTelemetry.prototype;
 prototype["reset"] = function reset() {
-  this._timeTracking = apply /* apply */.cloneDeep(closure_3);
-  const obj = apply /* apply */;
-  this._timingStats = apply /* apply */.cloneDeep(closure_4);
-  const obj2 = apply /* apply */;
-  this._measurements = apply /* apply */.cloneDeep(closure_5);
-  const obj3 = apply /* apply */;
-  this._eventCounts = apply /* apply */.cloneDeep(closure_6);
+  this._timeTracking = apply.cloneDeep(closure_3);
+  const obj = apply;
+  this._timingStats = apply.cloneDeep(closure_4);
+  const obj2 = apply;
+  this._measurements = apply.cloneDeep(closure_5);
+  const obj3 = apply;
+  this._eventCounts = apply.cloneDeep(closure_6);
 };
 prototype["clearTime"] = function clearTime(arg0) {
   this._timeTracking[arg0] = null;

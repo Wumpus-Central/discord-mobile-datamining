@@ -22,7 +22,7 @@ function trackRoundtrip(channelId) {
       if (null != channelId.gatewaySeenTimestamp) {
         diff1 = channelId.gatewaySeenTimestamp - channelId.initialSendTimestamp;
       }
-      let obj = receiveNetworkInfoformation /* receiveNetworkInfoformation */;
+      let obj = receiveNetworkInfoformation;
       const signalStrength = obj.getSignalStrength();
       obj = {};
       const merged = Object.assign(getDeviceMetadata());

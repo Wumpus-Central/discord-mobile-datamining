@@ -11,14 +11,14 @@ export default function useEventSchedule(recurrence_rule, nextRecurrenceIdInEven
   let endDate;
   let startDate;
   if (nextRecurrenceIdInEvent == null) {
-    let obj = getRRule /* getRRule */;
+    let obj = getRRule;
     nextRecurrenceIdInEvent = obj.getNextRecurrenceIdInEvent(recurrence_rule);
   }
   if (null != recurrence_rule.recurrence_rule) {
     if (null != nextRecurrenceIdInEvent) {
-      const baseScheduleForRecurrence = getRRule /* getRRule */.getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, recurrence_rule);
-      const obj2 = getRRule /* getRRule */;
-      const scheduleForRecurrenceWithException = getRRule /* getRRule */.getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp5);
+      const baseScheduleForRecurrence = getRRule.getBaseScheduleForRecurrence(nextRecurrenceIdInEvent, recurrence_rule);
+      const obj2 = getRRule;
+      const scheduleForRecurrenceWithException = getRRule.getScheduleForRecurrenceWithException(baseScheduleForRecurrence, tmp5);
       ({ startDate, endDate } = scheduleForRecurrenceWithException);
       obj = { startTime: null, endTime: null };
       obj[0] = startDate.toDate();
@@ -27,7 +27,7 @@ export default function useEventSchedule(recurrence_rule, nextRecurrenceIdInEven
         toDateResult = endDate.toDate();
       }
       obj[1] = toDateResult;
-      const obj3 = getRRule /* getRRule */;
+      const obj3 = getRRule;
     }
     return obj;
   }
@@ -93,7 +93,7 @@ export const useEventScheduleById = function useEventScheduleById(guildEventId, 
 export const getEventSchedule = function getEventSchedule(guildEvent, recurrenceId) {
   let endDate;
   let startDate;
-  useEventException /* useEventException */;
+  useEventException;
   if (null != guildEvent.recurrence_rule) {
     if (null != recurrenceId) {
       let tmpResult = tmp(8864);

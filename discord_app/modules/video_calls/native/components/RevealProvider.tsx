@@ -18,14 +18,14 @@ let require = arg1;
 function useRevealProviderValue(arg0, channel) {
   let tmp = arg0;
   const items = [setContent];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => null != key.getKey());
-  const obj = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => null != key.getKey());
+  const obj = initialize;
   const tmp2 = require;
   const tmp5 = areParticipantStatesEqual(channel);
   const tmp6 = callback2();
   const items1 = [set];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
-  const obj2 = initialize /* initialize */;
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
+  const obj2 = initialize;
   if (!arg0) {
     tmp = stateFromStores;
   }

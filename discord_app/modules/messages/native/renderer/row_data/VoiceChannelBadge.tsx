@@ -9,7 +9,7 @@ import { experiment } from "../../../../channel/VoiceChannelBadgeExperiment.tsx"
 let result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 
 export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId) {
-  let obj = experiment /* experiment */;
+  let obj = experiment;
   if (obj.getVoiceChannelBadgeExperiment({ guildId, location: "VoiceChannelBadgeNative" }).enabled) {
     if (null != guildId) {
       discoverableVoiceState = discoverableVoiceState.getDiscoverableVoiceState(guildId, id);

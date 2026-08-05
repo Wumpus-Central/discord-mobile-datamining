@@ -27,7 +27,7 @@ export default function EmojiIcon(size) {
   if (lineHeight === undefined) {
     lineHeight = num + 4;
   }
-  let obj = useEmojiByIdOrName /* useEmojiByIdOrName */;
+  let obj = useEmojiByIdOrName;
   const emojiByIdOrName = obj.useEmojiByIdOrName(guildId, id);
   if (null == emojiByIdOrName) {
     let tmp4 = null;

@@ -17,7 +17,7 @@ export const ChatTTITracker = function ChatTTITracker(messages) {
       const displayMessagesWithCache = callback(9).displayMessagesWithCache;
       displayMessagesWithCache.record(nativeEvent.nativeEvent.timestamp);
     };
-    tmp3 = callback(TTIMeasurementView /* TTIMeasurementView */.TTIMeasurementView, obj, "cached_messages_tti");
+    tmp3 = callback(TTIMeasurementView.TTIMeasurementView, obj, "cached_messages_tti");
   }
   const children = [tmp3, ];
   if (messages.hasFetched) {
@@ -26,7 +26,7 @@ export const ChatTTITracker = function ChatTTITracker(messages) {
       const displayLatestMessages = callback(9).displayLatestMessages;
       displayLatestMessages.record(nativeEvent.nativeEvent.timestamp);
     };
-    let tmp7 = callback(TTIMeasurementView /* TTIMeasurementView */.TTIMeasurementView, obj, "latest_messages_tti");
+    let tmp7 = callback(TTIMeasurementView.TTIMeasurementView, obj, "latest_messages_tti");
   } else {
     tmp7 = null;
     if (messages.ready) {

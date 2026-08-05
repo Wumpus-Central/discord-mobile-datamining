@@ -21,7 +21,7 @@ let unpackModuleId;
 const require = arg1;
 function handleInviteDisabledPress() {
   const lazyResult = importAllResult.lazy(() => callback(paths[12])(paths[11], paths.paths));
-  useAlertStore /* useAlertStore */.openAlert("invites-disabled", callback(lazyResult, {}));
+  useAlertStore.openAlert("invites-disabled", callback(lazyResult, {}));
 }
 function GuildSearchAndInvite(guildId) {
   let onPressIn;

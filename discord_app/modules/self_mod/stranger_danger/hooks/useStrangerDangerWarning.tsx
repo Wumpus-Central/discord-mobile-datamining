@@ -12,20 +12,20 @@ const result = require("initialize").fileFinishedImporting("modules/self_mod/str
 
 export const useStrangerDangerWarning = function useStrangerDangerWarning(id) {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize;
   const tmp = require;
-  const isSpamMessageRequest = useIsSpamMessageRequest /* useIsSpamMessageRequest */.useIsSpamMessageRequest(id);
-  const obj3 = useIsSpamMessageRequest /* useIsSpamMessageRequest */;
-  const isMessageRequest = useIsMessageRequest /* useIsMessageRequest */.useIsMessageRequest(id);
-  const obj4 = useIsMessageRequest /* useIsMessageRequest */;
-  const channelSafetyWarning = useChannelSafetyWarning /* useChannelSafetyWarning */.useChannelSafetyWarning(id, SafetyWarningTypes.STRANGER_DANGER);
-  const obj5 = useChannelSafetyWarning /* useChannelSafetyWarning */;
-  const userIsTeen = useUserIsTeen /* useUserIsTeen */.useUserIsTeen();
+  const isSpamMessageRequest = useIsSpamMessageRequest.useIsSpamMessageRequest(id);
+  const obj3 = useIsSpamMessageRequest;
+  const isMessageRequest = useIsMessageRequest.useIsMessageRequest(id);
+  const obj4 = useIsMessageRequest;
+  const channelSafetyWarning = useChannelSafetyWarning.useChannelSafetyWarning(id, SafetyWarningTypes.STRANGER_DANGER);
+  const obj5 = useChannelSafetyWarning;
+  const userIsTeen = useUserIsTeen.useUserIsTeen();
   if (stateFromStores != null) {
     const isStaffResult = stateFromStores.isStaff();
   }
-  const obj6 = useUserIsTeen /* useUserIsTeen */;
+  const obj6 = useUserIsTeen;
   if (userIsTeen) {
     if (!isSpamMessageRequest) {
       if (!isMessageRequest) {

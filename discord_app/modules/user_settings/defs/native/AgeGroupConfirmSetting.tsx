@@ -7,17 +7,17 @@ import { AgeVerificationModalEntryPoint } from "../../../age_assurance/AgeVerifi
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.SH6Tcv);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
     let obj = openIncodeAgeVerificationModal;
-    obj = { entryPoint: AgeVerificationModalEntryPoint /* AgeVerificationModalEntryPoint */.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
+    obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   },
   withArrow: true,
@@ -25,17 +25,17 @@ const pressable = createToggle.createPressable({
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.SH6Tcv);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT_AGE_GROUP_ASSIGNED_ADULT,
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
     let obj = openIncodeAgeVerificationModal;
-    obj = { entryPoint: AgeVerificationModalEntryPoint /* AgeVerificationModalEntryPoint */.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
+    obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   },
   withArrow: true,

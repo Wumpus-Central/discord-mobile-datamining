@@ -123,7 +123,7 @@ function AddAvatarScreen() {
   const first = tmp4[0];
   let dependencyMap = tmp6;
   const bottom = first(1581)().bottom;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [handleFormOpen];
   let pendingImage;
   const stateFromStores = obj.useStateFromStores(items, () => pendingChanges.getPendingChanges().pendingAvatar);
@@ -145,7 +145,7 @@ function AddAvatarScreen() {
   }
   const items1 = [tmp.container, ];
   let num = 16;
-  const tmp9Result1 = useDominantRGBFromImage /* useDominantRGBFromImage */;
+  const tmp9Result1 = useDominantRGBFromImage;
   if (bottom > 0) {
     num = bottom;
   }
@@ -155,17 +155,17 @@ function AddAvatarScreen() {
   let obj2 = { children: null };
   let obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp9(1236).intl;
-  obj3[4] = intl.string(getSystemLocale /* getSystemLocale */.t.XQRWvR);
-  const items2 = [callback(Text /* Text */.Text, obj3), ];
+  obj3[4] = intl.string(getSystemLocale.t.XQRWvR);
+  const items2 = [callback(Text.Text, obj3), ];
   let obj4 = { style: tmp.subtitle, variant: "heading-deprecated-12/medium", color: "text-default", children: null };
   const intl2 = tmp9(1236).intl;
-  obj4[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.fH9TLT);
-  items2[1] = callback(Text /* Text */.Text, obj4);
+  obj4[3] = intl2.string(getSystemLocale.t.fH9TLT);
+  items2[1] = callback(Text.Text, obj4);
   obj2[0] = items2;
   const items3 = [closure_10(View, obj2), , ];
-  const memoizedImageSourceResult = useDominantRGBFromImage /* useDominantRGBFromImage */.memoizedImageSource(imageUri);
+  const memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(imageUri);
   items3[1] = callback(first(16389), {
-    avatarSource: useDominantRGBFromImage /* useDominantRGBFromImage */.memoizedImageSource(imageUri),
+    avatarSource: useDominantRGBFromImage.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
       const self = this;
@@ -185,19 +185,19 @@ function AddAvatarScreen() {
     stringResult = intl3.string(tmp9(1236).t.XyLlVm);
   }
   obj7[1] = stringResult;
-  obj6[1] = callback(Button /* Button */.LegacyText, obj7);
+  obj6[1] = callback(Button.LegacyText, obj7);
   items3[2] = callback(View, obj6);
   obj1[1] = items3;
   const items4 = [closure_10(View, obj1), callback(first(16380), { onAvatarSelect: tmp4[1], selectedAvatar: first }), ];
   const obj8 = { style: tmp.buttonContainer, children: null };
   const obj9 = { text: null, grow: true, onPress: null, disabled: null };
   const intl4 = tmp9(1236).intl;
-  obj9[0] = intl4.string(getSystemLocale /* getSystemLocale */.t.PDTjLN);
+  obj9[0] = intl4.string(getSystemLocale.t.PDTjLN);
   obj9[2] = function onPress() {
     return outer1_0(tmp6[24]).handlePressNext(pendingImage, first);
   };
   obj9[3] = null == pendingImage;
-  obj8[1] = callback(Button /* Button */.Button, obj9);
+  obj8[1] = callback(Button.Button, obj9);
   items4[2] = callback(View, obj8);
   obj[1] = items4;
   return closure_10(View, obj);

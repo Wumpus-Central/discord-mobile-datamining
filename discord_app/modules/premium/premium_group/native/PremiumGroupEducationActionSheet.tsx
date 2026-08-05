@@ -26,14 +26,14 @@ export default function PremiumGroupEducationActionSheet(children) {
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.aboutContainer, children: null };
-  const items = [callback(CircleErrorIcon /* CircleErrorIcon */.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), callback(View, { style: tmp.aboutTextContainer, children: callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
+  const items = [callback(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), callback(View, { style: tmp.aboutTextContainer, children: callback(Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
   obj[1] = items;
   const items1 = [callback2(View, obj), ];
   const obj3 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj3[3] = intl.format(messagesProxy.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
-  items1[1] = callback(Text /* Text */.Text, obj3);
+  items1[1] = callback(Text.Text, obj3);
   obj[1] = items1;
   obj[0] = callback2(View, obj);
-  return callback(Background /* Background */.BottomSheet, obj);
+  return callback(Background.BottomSheet, obj);
 };

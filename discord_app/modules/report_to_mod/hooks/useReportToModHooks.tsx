@@ -47,10 +47,10 @@ export const useReportToModChannelId = function useReportToModChannelId(arg0) {
   });
 };
 export const useIsModeratorReportOrPostChannel = function useIsModeratorReportOrPostChannel(isModeratorReportChannel) {
-  return canReportMessageToMods /* canReportMessageToMods */.isModeratorReportOrPostChannel(isModeratorReportChannel);
+  return canReportMessageToMods.isModeratorReportOrPostChannel(isModeratorReportChannel);
 };
 export const useIsModeratorReportPostChannel = function useIsModeratorReportPostChannel(isModeratorReportChannel) {
-  return canReportMessageToMods /* canReportMessageToMods */.isModeratorReportPostChannel(isModeratorReportChannel);
+  return canReportMessageToMods.isModeratorReportPostChannel(isModeratorReportChannel);
 };
 export const useLoadReportedMessage = function useLoadReportedMessage(messageReference) {
   messageReference = messageReference.messageReference;
@@ -91,7 +91,7 @@ export const loadOriginalAuthorFromSnapshot = function loadOriginalAuthorFromSna
     }
   }
   if (null != reported_user_id) {
-    const user = _fetchProfile /* _fetchProfile */.getUser(reported_user_id);
-    const obj = _fetchProfile /* _fetchProfile */;
+    const user = _fetchProfile.getUser(reported_user_id);
+    const obj = _fetchProfile;
   }
 };

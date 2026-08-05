@@ -8,7 +8,7 @@ function withTiming(value, timingStandard, fn, fn2) {
   if (fn === undefined) {
     str = "respect-motion-settings";
   }
-  const accessibilityPreferencesSharedValue = mutable /* mutable */.accessibilityPreferencesSharedValue;
+  const accessibilityPreferencesSharedValue = mutable.accessibilityPreferencesSharedValue;
   if ("animate-always" === str) {
     let tmp7 = timingStandard;
     if (tmp4) {

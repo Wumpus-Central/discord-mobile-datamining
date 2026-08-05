@@ -28,13 +28,13 @@ let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(function MediaKeyboardBottomSheetHandle(onPress) {
   onPress = onPress.onPress;
   const tmp = callback();
-  let obj = useGradientBottom /* useGradientBottom */;
+  let obj = useGradientBottom;
   const gradientBottom = obj.useGradientBottom();
-  let obj1 = map /* map */;
+  let obj1 = map;
   const derivedStateFromSharedValue = obj1.useDerivedStateFromSharedValue(onPress.animatedIndex, (arg0) => arg0 > 0);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (derivedStateFromSharedValue) {
     let stringResult = string(t.iTcuma);
   } else {
@@ -45,7 +45,7 @@ const memoResult = require("noop").memo(function MediaKeyboardBottomSheetHandle(
     obj[0] = onPress;
     obj[1] = stringResult;
     obj[2] = null == onPress;
-    let tmp8Result = tmp8(TwinButtons /* TwinButtons */.ActionSheetDragHandle, obj);
+    let tmp8Result = tmp8(TwinButtons.ActionSheetDragHandle, obj);
   } else {
     obj = { accessibilityLabel: null, accessibilityRole: "button", "aria-hidden": null, style: null, onPress: null, children: null };
     obj[0] = stringResult;

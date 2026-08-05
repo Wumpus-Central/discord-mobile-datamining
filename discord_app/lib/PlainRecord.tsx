@@ -17,16 +17,16 @@ function isValueEqual(items, current) {
           if (items instanceof Set) {
             const _Set2 = Set;
             if (current instanceof Set) {
-              let areSetsEqualResult = areSetsEqual /* areSetsEqual */.areSetsEqual(items, current);
-              const obj2 = areSetsEqual /* areSetsEqual */;
+              let areSetsEqualResult = areSetsEqual.areSetsEqual(items, current);
+              const obj2 = areSetsEqual;
             }
           }
           const _Array = Array;
           if (Array.isArray(items)) {
             const _Array2 = Array;
             if (Array.isArray(current)) {
-              areSetsEqualResult = shallowEqual /* shallowEqual */.areArraysShallowEqual(items, current);
-              const obj = shallowEqual /* shallowEqual */;
+              areSetsEqualResult = shallowEqual.areArraysShallowEqual(items, current);
+              const obj = shallowEqual;
             }
           }
           areSetsEqualResult = typeof items === "object";

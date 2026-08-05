@@ -24,7 +24,7 @@ let QuestsExperimentLocations;
 let closure_12;
 const require = arg1;
 function isQuestProgressable(item10046) {
-  const isQuestExpiredResult = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */.isQuestExpired(item10046);
+  const isQuestExpiredResult = getQuestDeliveryDataForPlacement.isQuestExpired(item10046);
   let tmp2 = !isQuestExpiredResult;
   if (!isQuestExpiredResult) {
     tmp2 = null != item10046.userStatus;
@@ -38,7 +38,7 @@ function isQuestProgressable(item10046) {
   return tmp2;
 }
 function handleEmbeddedActivityLaunchSuccess(applicationId) {
-  let obj = questMatchesActivity /* questMatchesActivity */;
+  let obj = questMatchesActivity;
   const eligibleQuestsForApplicationId = obj.getEligibleQuestsForApplicationId(initializeState.quests, applicationId);
   for (const item10020 of eligibleQuestsForApplicationId) {
     if (tmp) {
@@ -48,7 +48,7 @@ function handleEmbeddedActivityLaunchSuccess(applicationId) {
       let tmp8 = dependencyMap;
       let tmp5 = require;
       let tmp7 = dependencyMap;
-      if (features.includes(QuestVariants /* QuestVariants */.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
+      if (features.includes(QuestVariants.QuestVariants.MOBILE_ACTIVITY_QUEST)) {
         let tmp9 = tmp5;
         let tmp10 = tmp7;
         let tmp6Result = tmp6(10376);
@@ -70,8 +70,8 @@ function isQuestRobloxRelated(arr, distributor) {
   if (tmp) {
     let someResult = arr.some((arg0) => arg0 === callback(table[19]).ROBLOX_APPLICATION_ID);
     if (someResult) {
-      someResult = _openRobloxURLWithRootPlaceId /* _openRobloxURLWithRootPlaceId */.isRobloxSubgame(distributor);
-      const obj = _openRobloxURLWithRootPlaceId /* _openRobloxURLWithRootPlaceId */;
+      someResult = _openRobloxURLWithRootPlaceId.isRobloxSubgame(distributor);
+      const obj = _openRobloxURLWithRootPlaceId;
     }
     tmp = someResult;
   }
@@ -458,7 +458,7 @@ prototype["syncHeartbeats"] = function syncHeartbeats(items, EMBEDDED_ACTIVITY_U
 };
 prototype["getActivelyProgressingQuests"] = function getActivelyProgressingQuests(closure_1) {
   const self = this;
-  if (set /* set */.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
+  if (set.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingPlayOnDesktopQuests();
   } else if (tmp(5135).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === closure_1) {
     return self.getActivelyProgressingStreamOnDesktopQuests();
@@ -600,7 +600,7 @@ prototype["getActivelyProgressingStreamOnDesktopQuests"] = function getActivelyP
           let tmp6 = require;
           let tmp7 = dependencyMap;
           let tmp5 = nextResult;
-          let obj3 = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+          let obj3 = getApplicationIdsByTaskTypes;
           let streamingApplicationId = obj3.getStreamingApplicationId(nextResult);
           let tmp9 = isQuestProgressable;
           let tmp10 = isQuestProgressable(nextResult);
@@ -649,7 +649,7 @@ prototype["getActivelyProgressingActivityQuests"] = function getActivelyProgress
         let tmp11 = require;
         let tmp12 = dependencyMap;
         let tmp10 = item10046;
-        let obj4 = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+        let obj4 = getApplicationIdsByTaskTypes;
         let playActivityApplicationId = obj4.getPlayActivityApplicationId(item10046);
         let tmp14 = isQuestProgressable;
         let tmp15 = isQuestProgressable(item10046);
@@ -680,7 +680,7 @@ prototype["getActivelyProgressingActivityQuests"] = function getActivelyProgress
       if (result1) {
         let tmp28 = require;
         let tmp29 = dependencyMap;
-        let obj6 = isSponsoredPlayQuest /* isSponsoredPlayQuest */;
+        let obj6 = isSponsoredPlayQuest;
         let tmp30 = item10073;
         result1 = obj6.isPlayAnyActivityQuest(tmp25);
       }

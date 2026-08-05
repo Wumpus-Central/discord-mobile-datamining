@@ -20,7 +20,7 @@ import { getThemeForColor } from "ClientThemesUtils.tsx";
 
 const require = arg1;
 function isSyncedModeThemesEnabled() {
-  return useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
+  return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
 }
 function reset() {
   if (c14) {
@@ -39,7 +39,7 @@ function handleUserStoreChange() {
 }
 function handleSelectivelySyncedStoreChange() {
   if (initialize.shouldSync("appearance")) {
-    const ClientThemeSettings = explicitContentFromProto /* explicitContentFromProto */.ClientThemeSettings;
+    const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
     const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
     if (null == backgroundGradientPresetId) {
       if (null == c3) {
@@ -57,14 +57,14 @@ function handleSelectivelySyncedStoreChange() {
   }
 }
 function handleSyncedModeChange() {
-  return isPerModeThemingActive /* isPerModeThemingActive */.isPerModeThemingActive(isSyncedModeThemesEnabled);
+  return isPerModeThemingActive.isPerModeThemingActive(isSyncedModeThemesEnabled);
 }
 function handleSameAsDeviceThemeToggle() {
-  return useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
+  return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
 }
 function handleUserSettingsProtoStoreUpdate() {
   if (initialize.shouldSync("appearance")) {
-    const ClientThemeSettings = explicitContentFromProto /* explicitContentFromProto */.ClientThemeSettings;
+    const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
     const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
     let result = useSystemTheme.useSystemTheme !== SystemThemeState.ON;
     if (!result) {
@@ -74,8 +74,8 @@ function handleUserSettingsProtoStoreUpdate() {
       result = handleThemeChange.isSameAsDeviceThemeEnabled();
     }
     if (!result) {
-      setSystemTheme /* setSystemTheme */.setUseSystemTheme(SystemThemeState.OFF);
-      const tmpResult = setSystemTheme /* setSystemTheme */;
+      setSystemTheme.setUseSystemTheme(SystemThemeState.OFF);
+      const tmpResult = setSystemTheme;
     }
     if (null != backgroundGradientPresetId) {
       let tmp13 = null == tmp12;
@@ -168,15 +168,15 @@ Object.defineProperty(prototype, "gradientPreset", {
     } else {
       return closure_3;
     }
-    obj = isPerModeThemingActive /* isPerModeThemingActive */;
+    obj = isPerModeThemingActive;
   },
   set: undefined
 });
 prototype["getLinearGradient"] = function getLinearGradient() {
   let linearGradientForBackgroundGradient = null;
   if (null != this.gradientPreset) {
-    linearGradientForBackgroundGradient = getThemeForColor /* getThemeForColor */.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
-    const obj = getThemeForColor /* getThemeForColor */;
+    linearGradientForBackgroundGradient = getThemeForColor.getLinearGradientForBackgroundGradient(tmp.gradientPreset);
+    const obj = getThemeForColor;
   }
   return linearGradientForBackgroundGradient;
 };
@@ -225,7 +225,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
     channelId = channelId.channelId;
     if (null != channelId) {
       if (null != channelId.guildId) {
-        if (!obj2.UNSAFE_isDismissibleContentDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.CLIENT_THEMES_COACHMARK)) {
+        if (!obj2.UNSAFE_isDismissibleContentDismissed(DismissibleContent.DismissibleContent.CLIENT_THEMES_COACHMARK)) {
           if (tmp6Result.ageEligibleForPremiumUpsell(tmp)) {
             channel = channel.getChannel(channelId);
             let tmp4 = null != channel;
@@ -238,7 +238,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
           }
           tmp6Result = tmp6(4124);
         }
-        obj2 = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
+        obj2 = UNSAFE_isDismissibleContentDismissed;
         tmp6 = require;
       }
     }

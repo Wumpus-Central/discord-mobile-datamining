@@ -109,8 +109,8 @@ prototype["getComboScore"] = function getComboScore(arg0, arg1) {
   const value = secondaryIndexMap.get("" + arg0 + "-" + arg1);
   let num = 0;
   if (null != value) {
-    num = getComboShakeIntensity /* getComboShakeIntensity */.getComboScore(value);
-    const obj = getComboShakeIntensity /* getComboShakeIntensity */;
+    num = getComboShakeIntensity.getComboScore(value);
+    const obj = getComboShakeIntensity;
   }
   return num;
 };
@@ -156,8 +156,8 @@ prototype["getUserComboShakeIntensity"] = function getUserComboShakeIntensity(id
   const userCombo = this.getUserCombo(id, throwTypeErrorResult);
   let num = 0;
   if (null != userCombo) {
-    num = getComboShakeIntensity /* getComboShakeIntensity */.getComboShakeIntensity(userCombo, LEVEL_4) * arg2;
-    const obj = getComboShakeIntensity /* getComboShakeIntensity */;
+    num = getComboShakeIntensity.getComboShakeIntensity(userCombo, LEVEL_4) * arg2;
+    const obj = getComboShakeIntensity;
   }
   return num;
 };

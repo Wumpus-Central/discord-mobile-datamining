@@ -5,8 +5,8 @@ import { handleDisableAccount } from "../../account/native/handleDisableAccount.
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["8lQ2rR"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["8lQ2rR"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   variant: "danger",
@@ -16,8 +16,8 @@ const pressable = createToggle.createPressable({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["8lQ2rR"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["8lQ2rR"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   variant: "danger",

@@ -155,8 +155,8 @@ function EnrolledBodyPlayStreamTask(quest) {
   let stepActions;
   quest = quest.quest;
   const tmp = callback3();
-  let obj = QuestBottomSheet /* QuestBottomSheet */;
-  obj = { quest, location: constants.QUESTS_BAR_MOBILE, sourceQuestContent: QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestContent.QUEST_BAR_MOBILE };
+  let obj = QuestBottomSheet;
+  obj = { quest, location: constants.QUESTS_BAR_MOBILE, sourceQuestContent: QuestsVisibleMessagesChangedSource.QuestContent.QUEST_BAR_MOBILE };
   const enrolledQuestContentProps = obj.useEnrolledQuestContentProps(obj);
   ({ step, defibrillator, stepActions } = enrolledQuestContentProps);
   obj = { children: null };
@@ -164,13 +164,13 @@ function EnrolledBodyPlayStreamTask(quest) {
   const items = [callback(View, { style: tmp.headerWrapper, children: callback(QuestBottomSheetHeader, obj2) }), , ];
   const obj3 = { style: tmp.contentWrapper, children: null };
   const obj4 = { defibrillator, quest, handleTaskSelect, location: constants.QUESTS_BAR_MOBILE, showMicrophone, step, sourceQuestContent: null };
-  obj4[6] = QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestContent.QUEST_BAR_MOBILE;
-  obj3[1] = callback(QuestBottomSheet /* QuestBottomSheet */.QuestBottomSheetContent, obj4);
+  obj4[6] = QuestsVisibleMessagesChangedSource.QuestContent.QUEST_BAR_MOBILE;
+  obj3[1] = callback(QuestBottomSheet.QuestBottomSheetContent, obj4);
   items[1] = callback(View, obj3);
   const obj5 = { style: tmp.footerWrapper, children: null };
   const obj6 = { quest, step, isDefibrilating: defibrillator.isActive, onBack: stepActions.onBack, onDefib: defibrillator.start, onConnectConsoleNext: stepActions.onNext, style: tmp.footer, withSafeArea: false, sourceQuestContent: null };
   const obj1 = { style: tmp.headerWrapper, children: callback(QuestBottomSheetHeader, obj2) };
-  obj6[8] = QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestContent.QUEST_BAR_MOBILE;
+  obj6[8] = QuestsVisibleMessagesChangedSource.QuestContent.QUEST_BAR_MOBILE;
   obj5[1] = callback(useQuestRewardClaimHandler, obj6);
   items[2] = callback(View, obj5);
   obj[0] = items;

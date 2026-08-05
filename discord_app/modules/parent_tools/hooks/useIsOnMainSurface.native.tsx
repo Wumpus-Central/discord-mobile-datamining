@@ -10,7 +10,7 @@ function getIsOnMainSurface() {
   let index2;
   let routes;
   let routes2;
-  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();

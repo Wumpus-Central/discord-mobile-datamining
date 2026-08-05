@@ -38,7 +38,7 @@ export const getPaymentFlowStepAnalyticsFields = function getPaymentFlowStepAnal
   return {};
 };
 export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
-  return v1 /* v1 */.v4();
+  return v1.v4();
 };
 export const CancellationFlowSteps = obj;
 export const STEP_ANALYTICS_NAMES = { [obj.WHAT_YOU_LOSE]: "What You're Losing", [obj.DOWNGRADE_TO_TIER_0]: "Downgrade To Tier 0", [obj.CONFIRM]: "Confirm Cancellation", [obj.PREVIEW]: "Preview Updated Subscription", [obj.MOBILE_SUBSCRIPTION_MANAGE]: "Mobile Subscription Manage" };
@@ -57,13 +57,13 @@ export const trackPremiumSubscriptionCancellationStarted = function trackPremium
   obj[1] = type;
   let tmp4;
   if (null != closure_0) {
-    const premiumPlanItem = getPremiumPlanItem /* getPremiumPlanItem */.getPremiumPlanItem(closure_0);
+    const premiumPlanItem = getPremiumPlanItem.getPremiumPlanItem(closure_0);
     let id1;
     if (premiumPlanItem != null) {
       id1 = premiumPlanItem.id;
     }
     tmp4 = id1;
-    const obj4 = getPremiumPlanItem /* getPremiumPlanItem */;
+    const obj4 = getPremiumPlanItem;
   }
   obj[2] = tmp4;
   let paymentGatewayPlanId;
@@ -99,13 +99,13 @@ export const trackPremiumSubscriptionCancellationFlowStep = function trackPremiu
   obj[1] = type;
   let tmp4;
   if (null != subscription) {
-    const premiumPlanItem = getPremiumPlanItem /* getPremiumPlanItem */.getPremiumPlanItem(subscription);
+    const premiumPlanItem = getPremiumPlanItem.getPremiumPlanItem(subscription);
     let id1;
     if (premiumPlanItem != null) {
       id1 = premiumPlanItem.id;
     }
     tmp4 = id1;
-    const obj4 = getPremiumPlanItem /* getPremiumPlanItem */;
+    const obj4 = getPremiumPlanItem;
   }
   obj[2] = tmp4;
   let paymentGatewayPlanId;

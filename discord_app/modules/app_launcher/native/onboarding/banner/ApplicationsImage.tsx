@@ -31,12 +31,12 @@ export default function ApplicationsImage(arg0) {
   const tmp = createCacheKey();
   let appLauncherIconSource = null;
   if (null != firstApplication) {
-    let obj = handleApplicationSelected /* handleApplicationSelected */;
+    let obj = handleApplicationSelected;
     appLauncherIconSource = obj.getAppLauncherIconSource(firstApplication);
   }
   let appLauncherIconSource1 = null;
   if (null != secondApplication) {
-    let obj1 = handleApplicationSelected /* handleApplicationSelected */;
+    let obj1 = handleApplicationSelected;
     appLauncherIconSource1 = obj1.getAppLauncherIconSource(secondApplication);
   }
   let tmp8 = null != appLauncherIconSource;

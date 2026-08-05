@@ -100,7 +100,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       if (1 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let Timestamp = now /* now */.Timestamp;
+        let Timestamp = now.Timestamp;
         let tmp24 = Timestamp;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -143,7 +143,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype2["internalBinaryWrite"] = function internalBinaryWrite(restrictedUntil, tag, writeUnknownFields) {
   if (restrictedUntil.restrictedUntil) {
-    const Timestamp = now /* now */.Timestamp;
+    const Timestamp = now.Timestamp;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = Timestamp.internalBinaryWrite(restrictedUntil.restrictedUntil, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Timestamp.internalBinaryWrite(restrictedUntil.restrictedUntil, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -215,7 +215,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       if (1 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let Timestamp = now /* now */.Timestamp;
+        let Timestamp = now.Timestamp;
         let tmp24 = Timestamp;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -258,7 +258,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype3["internalBinaryWrite"] = function internalBinaryWrite(actionDeferredUntil, tag, writeUnknownFields) {
   if (actionDeferredUntil.actionDeferredUntil) {
-    const Timestamp = now /* now */.Timestamp;
+    const Timestamp = now.Timestamp;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = Timestamp.internalBinaryWrite(actionDeferredUntil.actionDeferredUntil, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Timestamp.internalBinaryWrite(actionDeferredUntil.actionDeferredUntil, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -348,7 +348,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       if (1 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let Timestamp2 = now /* now */.Timestamp;
+        let Timestamp2 = now.Timestamp;
         let tmp34 = Timestamp2;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -372,7 +372,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let Timestamp = now /* now */.Timestamp;
+        let Timestamp = now.Timestamp;
         let tmp24 = Timestamp;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -416,7 +416,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 prototype4["internalBinaryWrite"] = function internalBinaryWrite(bannedUntil, tag, writeUnknownFields) {
   let length;
   if (bannedUntil.bannedUntil) {
-    const Timestamp = now /* now */.Timestamp;
+    const Timestamp = now.Timestamp;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = Timestamp.internalBinaryWrite(bannedUntil.bannedUntil, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Timestamp.internalBinaryWrite(bannedUntil.bannedUntil, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -435,7 +435,7 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(bannedUntil, ta
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
   }
   if (bannedUntil.bannedAt) {
-    const Timestamp2 = now /* now */.Timestamp;
+    const Timestamp2 = now.Timestamp;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined2 = Timestamp2.internalBinaryWrite(bannedUntil.bannedAt, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = Timestamp2.internalBinaryWrite(bannedUntil.bannedAt, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -465,7 +465,7 @@ const items2 = [
     kind: "enum",
     repeat: 1,
     T() {
-      const items = ["discord_protos.safety_common.v1.ClassificationType", ClassificationType /* ClassificationType */.ClassificationType];
+      const items = ["discord_protos.safety_common.v1.ClassificationType", ClassificationType.ClassificationType];
       return items;
     }
   },
@@ -554,7 +554,7 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (2 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let Timestamp = now /* now */.Timestamp;
+        let Timestamp = now.Timestamp;
         let tmp24 = Timestamp;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -611,7 +611,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(classificationT
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   if (classificationTypes.bannedAt) {
-    const Timestamp = now /* now */.Timestamp;
+    const Timestamp = now.Timestamp;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = Timestamp.internalBinaryWrite(classificationTypes.bannedAt, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Timestamp.internalBinaryWrite(classificationTypes.bannedAt, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -818,7 +818,7 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+        let UInt64Value = defineProperty.UInt64Value;
         let tmp24 = UInt64Value;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -904,7 +904,7 @@ prototype6["internalBinaryWrite"] = function internalBinaryWrite(state, tag, wri
     const tagResult6 = tag.tag(2, 01307__.WireType.LengthDelimited);
   }
   if (state.lastMutationId) {
-    const UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+    const UInt64Value = defineProperty.UInt64Value;
     const tagResult7 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined6 = UInt64Value.internalBinaryWrite(state.lastMutationId, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = UInt64Value.internalBinaryWrite(state.lastMutationId, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

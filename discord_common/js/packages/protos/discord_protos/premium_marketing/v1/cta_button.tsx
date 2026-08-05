@@ -77,7 +77,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (4 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let LocalizedString = create /* create */.LocalizedString;
+        let LocalizedString = create.LocalizedString;
         let tmp29 = LocalizedString;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -85,7 +85,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (5 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+        let UInt64Value = defineProperty.UInt64Value;
         let tmp24 = UInt64Value;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -140,13 +140,13 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(copy, tag, write
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
   }
   if (copy.copyLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined = LocalizedString.internalBinaryWrite(copy.copyLocalized, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(copy.copyLocalized, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (copy.navigableStorefrontApplicationId) {
-    const UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+    const UInt64Value = defineProperty.UInt64Value;
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined1 = UInt64Value.internalBinaryWrite(copy.navigableStorefrontApplicationId, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = UInt64Value.internalBinaryWrite(copy.navigableStorefrontApplicationId, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

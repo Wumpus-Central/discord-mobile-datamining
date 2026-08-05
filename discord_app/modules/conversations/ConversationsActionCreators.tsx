@@ -420,10 +420,10 @@ export const setConversationFeedbackRating = function setConversationFeedbackRat
 };
 export { fetchConversationMessages };
 export const trackTopicalNavigationEntrypointImpression = function trackTopicalNavigationEntrypointImpression(id, stateFromStores1) {
-  const ConversationsAnalytics = ConversationsAnalytics /* ConversationsAnalytics */.ConversationsAnalytics;
+  const ConversationsAnalytics = ConversationsAnalytics.ConversationsAnalytics;
   const result = ConversationsAnalytics.trackEntrypointImpression({ channelId: id, conversationCount: stateFromStores1 });
   if (initialize.shouldTriggerOnNextExposure()) {
-    fetchSurveyDetails.fireSurveyAction(SurveyActionTypes /* SurveyActionTypes */.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
+    fetchSurveyDetails.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
     const obj2 = fetchSurveyDetails;
   }
   dispatcher.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });

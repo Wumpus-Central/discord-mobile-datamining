@@ -127,15 +127,15 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
     obj[5] = tmp6;
     obj[6] = flag3;
     obj[7] = flag3;
-    const merged = Object.assign(getInitialParserState /* getInitialParserState */.renderMessageMarkupToAST(message, obj));
+    const merged = Object.assign(getInitialParserState.renderMessageMarkupToAST(message, obj));
     obj.isInlineReplyPreview = flag;
     result = obj1.set(message, obj);
-    const obj3 = getInitialParserState /* getInitialParserState */;
+    const obj3 = getInitialParserState;
   }
   const obj6 = require("../../../markup/MarkupUtils.tsx") /* get defaultRules */;
   obj1 = { hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
   flag = flag2;
-  const obj7 = LHeading /* LHeading */;
+  const obj7 = LHeading;
   if (!flag2) {
     flag = obj;
   }
@@ -143,7 +143,7 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   if (!flag2) {
     flag2 = obj;
   }
-  obj = { content: obj6.astParserFor(LHeading /* LHeading */.changelogRules(message.changelogId, true))(message.content, false, obj1), isInlineReplyPreview: false, hasSpoilerEmbeds: false, hasBailedAst: false };
+  obj = { content: obj6.astParserFor(LHeading.changelogRules(message.changelogId, true))(message.content, false, obj1), isInlineReplyPreview: false, hasSpoilerEmbeds: false, hasBailedAst: false };
   obj1[3] = flag2;
   obj1[4] = flag3;
   obj1[5] = flag3;

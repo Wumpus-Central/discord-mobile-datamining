@@ -15,9 +15,9 @@ export const UserIcon = function UserIcon(color) {
   }
   const merged = Object.assign(color, Object.create(null));
   const obj = { source: null, color: null, style: null };
-  obj[0] = registerAsset /* registerAsset */;
+  obj[0] = registerAsset;
   obj[1] = INTERACTIVE_ICON_DEFAULT;
   obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage /* BaseIconImage */.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(BaseIconImage.BaseIconImage, { source: null, color: null, style: null });
 };

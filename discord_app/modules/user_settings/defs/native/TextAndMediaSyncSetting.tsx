@@ -7,13 +7,13 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["3340dY"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["3340dY"]);
   },
   parent: require("MobileSetting").MobileSetting.CHAT,
   useValue: function useTextAndMediaSyncSettingValue() {
     const items = [initialize];
-    return initialize /* initialize */.useStateFromStores(items, () => initialize.shouldSync("text"));
+    return initialize.useStateFromStores(items, () => initialize.shouldSync("text"));
   },
   onValueChange: require("saveGuildFolders").setShouldSyncTextSettings
 };

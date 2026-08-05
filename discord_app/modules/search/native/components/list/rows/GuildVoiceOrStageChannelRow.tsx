@@ -278,7 +278,7 @@ function GuildVoiceChannelExtras(arg0) {
   let users;
   ({ channel, users } = arg0);
   const tmp = callback();
-  useStageParticipants /* useStageParticipants */;
+  useStageParticipants;
   let obj = { style: tmp.subtitle, children: null };
   let tmp5Result = 0 !== users.length;
   if (tmp5Result) {

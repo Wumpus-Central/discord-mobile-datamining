@@ -22,7 +22,7 @@ function EmojiIcon(arg0) {
   let require;
   ({ emojiId: require, emojiName } = arg0);
   const tmp = callback4();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [getEmojiToGroupId];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let usableCustomEmojiById = null;

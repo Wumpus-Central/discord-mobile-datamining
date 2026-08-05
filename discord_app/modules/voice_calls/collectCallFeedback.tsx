@@ -31,7 +31,7 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
         obj[4] = obj1.getDuration();
         obj[5] = obj1.getMediaSessionId();
         const guildId = obj1.getGuildId();
-        const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.getVoiceStateMetadata(guildId, obj1.getChannelId(), videoEnabled));
+        const merged = Object.assign(collectGuildAnalyticsMetadata.getVoiceStateMetadata(guildId, obj1.getChannelId(), videoEnabled));
         let duration_muted_ms;
         if (voiceDurationStats != null) {
           duration_muted_ms = voiceDurationStats.duration_muted_ms;
@@ -72,7 +72,7 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
           dispatcher.dispatch(obj3);
           const obj6 = dispatcher;
         }
-        const obj5 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+        const obj5 = collectGuildAnalyticsMetadata;
       }
     }
   }

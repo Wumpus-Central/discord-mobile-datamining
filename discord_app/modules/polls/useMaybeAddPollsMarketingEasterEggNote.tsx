@@ -6,7 +6,7 @@ const require = arg1;
 const result = require("getSystemLocale").fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
 
 export default function useMaybeAddPollsMarketingEasterEggNote(arg0) {
-  initialize /* initialize */;
+  initialize;
   [][0] = _getSystemLocale;
   let formatToPlainStringResult = arg0;
   if (":pizza:" === arg0) {

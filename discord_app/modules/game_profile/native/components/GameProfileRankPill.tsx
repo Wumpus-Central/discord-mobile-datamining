@@ -31,10 +31,10 @@ export default function GameProfileRankPill(arg0) {
   obj = { style: tmp.gameRankPill, children: null };
   obj = { size: "xxs", color: null };
   obj[1] = Themes.colors.BLACK;
-  const items = [callback(TrophyIcon /* TrophyIcon */.TrophyIcon, obj), ];
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const items = [callback(TrophyIcon.TrophyIcon, obj), ];
+  const intl = getSystemLocale.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (compact) {
     const obj1 = { rank: null };
     obj1[0] = rank;
@@ -44,7 +44,7 @@ export default function GameProfileRankPill(arg0) {
     obj2[0] = rank;
     str = formatToPlainString(t.ehZXlZ, obj2);
   }
-  items[1] = callback(Text /* Text */.Text, { variant: "text-xs/bold", color: "text-overlay-dark", children: str.toUpperCase() });
+  items[1] = callback(Text.Text, { variant: "text-xs/bold", color: "text-overlay-dark", children: str.toUpperCase() });
   obj[1] = items;
   obj[1] = closure_5(View, obj);
   return callback(View, obj);

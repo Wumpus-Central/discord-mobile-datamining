@@ -27,11 +27,11 @@ const prototype = GuildMemberSafetyPageStore.prototype;
 prototype["getSearchIndex"] = function getSearchIndex() {
   if (null != this._search) {
     if (!this._search.hasDefaultQuery) {
-      let CURRENT_GUILD_MEMBER = getGuildMemberSecondaryIndexes /* getGuildMemberSecondaryIndexes */.MemberSafetySecondaryIndex.INCLUDED_IN_SEARCH_RESULTS;
+      let CURRENT_GUILD_MEMBER = getGuildMemberSecondaryIndexes.MemberSafetySecondaryIndex.INCLUDED_IN_SEARCH_RESULTS;
     }
     return CURRENT_GUILD_MEMBER;
   }
-  CURRENT_GUILD_MEMBER = getGuildMemberSecondaryIndexes /* getGuildMemberSecondaryIndexes */.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER;
+  CURRENT_GUILD_MEMBER = getGuildMemberSecondaryIndexes.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER;
 };
 prototype["initialize"] = function initialize() {
   let _members;
@@ -42,12 +42,12 @@ prototype["initialize"] = function initialize() {
     self.lastCursorTimestamp = Date.now();
   } else {
     self._initialized = true;
-    const guildMemberSafetySearch = new hasStringMatch /* hasStringMatch */.GuildMemberSafetySearch(self.guildId);
+    const guildMemberSafetySearch = new hasStringMatch.GuildMemberSafetySearch(self.guildId);
     self._search = guildMemberSafetySearch;
-    const guildMemberSafetyMembers = new getGuildMemberSecondaryIndexes /* getGuildMemberSecondaryIndexes */.GuildMemberSafetyMembers(self.guildId);
+    const guildMemberSafetyMembers = new getGuildMemberSecondaryIndexes.GuildMemberSafetyMembers(self.guildId);
     self._members = guildMemberSafetyMembers;
     ({ guildId, _members } = self);
-    const guildMemberSafetyPagination = new items /* items */.GuildMemberSafetyPagination(guildId, _members.values(self.getSearchIndex()));
+    const guildMemberSafetyPagination = new items.GuildMemberSafetyPagination(guildId, _members.values(self.getSearchIndex()));
     self._pagination = guildMemberSafetyPagination;
   }
 };
@@ -89,8 +89,8 @@ Object.defineProperty(prototype, "searchChunkSize", {
       num = 0;
       if (self._initialized) {
         const _pagination = self._pagination;
-        num = items /* items */.getSearchChunkLimit(_pagination.getPaginationState());
-        const obj = items /* items */;
+        num = items.getSearchChunkLimit(_pagination.getPaginationState());
+        const obj = items;
       }
     }
     return num;
@@ -322,7 +322,7 @@ prototype["updateClientMembers"] = function updateClientMembers(items, requiresU
           if (flag2) {
             let tmp11 = require;
             let tmp12 = dependencyMap;
-            let obj2 = getJoinedAtDateFormatter /* getJoinedAtDateFormatter */;
+            let obj2 = getJoinedAtDateFormatter;
             let tmp13 = nextResult;
             obj = {};
             let tmp15 = tmp10;
@@ -506,9 +506,9 @@ prototype["refreshNewMembersAndSearchResults"] = function refreshNewMembersAndSe
         const _Date = Date;
         const NumberResult = Number(Date.now());
         self._scheduleRefresh(NumberResult);
-        let obj = apply /* apply */;
+        let obj = apply;
         const _members = self._members;
-        const cloneDeepResult = obj.cloneDeep(_members.values(getGuildMemberSecondaryIndexes /* getGuildMemberSecondaryIndexes */.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER));
+        const cloneDeepResult = obj.cloneDeep(_members.values(getGuildMemberSecondaryIndexes.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER));
         let flag2 = false;
         for (const item10031 of cloneDeepResult) {
           let _members2 = self._members;
@@ -575,9 +575,9 @@ prototype["updateSearchState"] = function updateSearchState(selectedSort) {
             return self.updatePaginationChunks();
           }
         }
-        let obj = apply /* apply */;
+        let obj = apply;
         const _members = self._members;
-        const cloneDeepResult = obj.cloneDeep(_members.values(getGuildMemberSecondaryIndexes /* getGuildMemberSecondaryIndexes */.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER));
+        const cloneDeepResult = obj.cloneDeep(_members.values(getGuildMemberSecondaryIndexes.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER));
         let flag2 = BooleanResult !== self._search.hasDefaultQuery;
         for (const item10048 of cloneDeepResult) {
           let tmp11 = item10048;
@@ -618,7 +618,7 @@ prototype["getSearchState"] = function getSearchState() {
     }
     return searchState;
   }
-  searchState = hasStringMatch /* hasStringMatch */.getDefaultSearchState();
+  searchState = hasStringMatch.getDefaultSearchState();
 };
 prototype["hasDefaultSearchState"] = function hasDefaultSearchState() {
   const self = this;
@@ -690,7 +690,7 @@ prototype["getPaginationState"] = function getPaginationState() {
     }
     return paginationState;
   }
-  paginationState = items /* items */.createDefaultMemberSafetyPaginationState();
+  paginationState = items.createDefaultMemberSafetyPaginationState();
 };
 prototype["getPaginatedMembers"] = function getPaginatedMembers() {
   const self = this;

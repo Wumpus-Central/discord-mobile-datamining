@@ -171,7 +171,7 @@ obj[2] = function updateRolesLocal(guildId, items2, differenceResult1) {
     roles = [];
   }
   if (initialize.isViewingRoles(guildId)) {
-    const obj5 = updateImpersonating /* updateImpersonating */;
+    const obj5 = updateImpersonating;
     const obj6 = apply;
     const result = obj5.updateImpersonatedRoles(guildId, obj6.difference(apply.union(roles, items2), differenceResult1));
     const obj7 = apply;

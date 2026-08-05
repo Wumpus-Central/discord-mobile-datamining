@@ -16,7 +16,7 @@ export const scaleLineHeight = function scaleLineHeight(arg0, arg1) {
   return value;
 };
 export const scaleTextLineHeight = function scaleTextLineHeight(c7, fontScale) {
-  const lineHeight = Text /* Text */.TextStyleSheet[c7].lineHeight;
+  const lineHeight = Text.TextStyleSheet[c7].lineHeight;
   let value = map.get(lineHeight);
   if (null == value) {
     const scaledHeightForText = enforcing.getScaledHeightForText(lineHeight);
@@ -27,8 +27,8 @@ export const scaleTextLineHeight = function scaleTextLineHeight(c7, fontScale) {
   return value;
 };
 export const useScaledTextLineHeight = function useScaledTextLineHeight(c3) {
-  const fontScale = getFontScale /* getFontScale */.useFontScale();
-  const lineHeight = Text /* Text */.TextStyleSheet[c3].lineHeight;
+  const fontScale = getFontScale.useFontScale();
+  const lineHeight = Text.TextStyleSheet[c3].lineHeight;
   let value = map.get(lineHeight);
   if (null == value) {
     const scaledHeightForText = enforcing.getScaledHeightForText(lineHeight);

@@ -118,7 +118,7 @@ identity = {
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: function useIsFindYourFriendsDeletionDisabled() {
-    return callback2((isLoading) => isLoading.isLoading, isIterable /* isIterable */.shallow);
+    return callback2((isLoading) => isLoading.isLoading, isIterable.shallow);
   },
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -133,7 +133,7 @@ identity = {
   usePredicate: require("useStaffOrDeveloperSettingPredicate").useStaffOrDeveloperSettingPredicate,
   useTrailing: function useIsFindYourFriendsDeletionTrailing() {
     let tmp = null;
-    if (callback2((isLoading) => isLoading.isLoading, isIterable /* isIterable */.shallow)) {
+    if (callback2((isLoading) => isLoading.isLoading, isIterable.shallow)) {
       tmp = <ActivityIndicator />;
     }
     return tmp;

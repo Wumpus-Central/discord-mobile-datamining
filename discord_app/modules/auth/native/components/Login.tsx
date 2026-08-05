@@ -35,14 +35,14 @@ class LinkButton {
 function handlePressPasswordManagerHint() {
   let obj = AlertActionCreators;
   obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.lzsy7t);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["TYqh/t"]);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["9x0iKe"]);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.lzsy7t);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t["TYqh/t"]);
+  const intl3 = getSystemLocale.intl;
+  obj[2] = intl3.string(getSystemLocale.t["9x0iKe"]);
+  const intl4 = getSystemLocale.intl;
+  obj[3] = intl4.string(getSystemLocale.t["ETE/oC"]);
   obj[4] = function onConfirm() {
     if (obj.isAndroid()) {
       const result = callback2(table[14]).openAccessibilitySettings();

@@ -6,14 +6,14 @@ import { useUserProfileWidgets } from "useUserProfileWidgets.tsx";
 
 const require = arg1;
 function isNonEmptyBoardWidget(games) {
-  let tmp3 = games instanceof toSubmission /* toSubmission */.ApplicationWidget;
+  let tmp3 = games instanceof toSubmission.ApplicationWidget;
   if (!tmp3) {
-    let isGameWidgetResult = items /* items */.isGameWidget(games);
+    let isGameWidgetResult = items.isGameWidget(games);
     if (isGameWidgetResult) {
       isGameWidgetResult = games.games.length > 0;
     }
     tmp3 = isGameWidgetResult;
-    const tmpResult = items /* items */;
+    const tmpResult = items;
   }
   return tmp3;
 }

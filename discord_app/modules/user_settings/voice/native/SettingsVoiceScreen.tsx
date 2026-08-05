@@ -23,7 +23,7 @@ let unpackModuleId;
 const require = arg1;
 function KrispLogo() {
   const tmp = callback3();
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   if (obj.isThemeLight(tmp4)) {
     let tmp2Result = tmp2(10759);
   } else {
@@ -32,22 +32,22 @@ function KrispLogo() {
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };
   const intl = tmp5(1236).intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.vFiCSx);
+  obj[2] = intl.string(getSystemLocale.t.vFiCSx);
   const items = [callback(closure_5, obj), ];
   const obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = tmp5(1236).intl;
-  obj1[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.hvVgAZ);
-  obj1[2] = handleKrispLinkPressed /* handleKrispLinkPressed */.handleKrispLinkPressed;
+  obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
+  obj1[2] = handleKrispLinkPressed.handleKrispLinkPressed;
   const obj2 = { variant: "text-sm/medium", color: "text-link", children: null };
   const intl3 = tmp5(1236).intl;
-  obj2[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.hvVgAZ);
-  obj1[3] = callback(Text /* Text */.Text, obj2);
-  items[1] = callback(Directions /* Directions */.Pressable, obj1);
+  obj2[2] = intl3.string(getSystemLocale.t.hvVgAZ);
+  obj1[3] = callback(Text.Text, obj2);
+  items[1] = callback(Directions.Pressable, obj1);
   obj[1] = items;
   return callback2(closure_4, obj);
 }
 function SystemProcessingSubLabel() {
-  let obj = getNoiseCancellationDeferredToSystem /* getNoiseCancellationDeferredToSystem */;
+  let obj = getNoiseCancellationDeferredToSystem;
   let tmp3 = null;
   if (obj.useNoiseCancellationDeferredToSystem()) {
     obj = { variant: "text-sm/medium", children: null };

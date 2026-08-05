@@ -9,7 +9,7 @@ export default function useSafeAreaInsets() {
 };
 export const getSafeAreaInsets = function getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY) {
   if (DEFAULT_APP_ENTRY_KEY === undefined) {
-    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
   }
   return SafeAreaStore.native.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].safeAreaInsets;
 };

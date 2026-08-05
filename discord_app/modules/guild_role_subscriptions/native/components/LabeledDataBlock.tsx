@@ -34,7 +34,7 @@ export default function LabeledDataBlock(arg0) {
   items = [tmp.container, style];
   obj = { style: tmp.titleSection, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "text-sm/medium", color: "interactive-text-default", children: title };
-  const items1 = [callback(Text /* Text */.Text, obj), ];
+  const items1 = [callback(Text.Text, obj), ];
   let tmp4Result = null != icon;
   if (tmp4Result) {
     const obj1 = { accessibilityRole: "button", onPress: null, children: null };

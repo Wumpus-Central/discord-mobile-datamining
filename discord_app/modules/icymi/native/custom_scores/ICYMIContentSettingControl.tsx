@@ -28,46 +28,46 @@ function ContentSettingsControl(initialValue) {
   const tmp = createCacheKey();
   [tmp3, c1] = callback(React.useState(initialValue.initialValue), 2);
   let obj = { label: null, id: "-1", icon: null, page: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.rdt65I);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.rdt65I);
   obj = { source: null, style: null };
   obj[0] = registerAsset;
   const items = [tmp.icon, ];
   let iconSelected = null;
-  if (tmp3 === generateHydrationId /* generateHydrationId */.ICYMICustomScore.LESS) {
+  if (tmp3 === generateHydrationId.ICYMICustomScore.LESS) {
     iconSelected = tmp.iconSelected;
   }
   items[1] = iconSelected;
   obj[1] = items;
-  obj[2] = closure_8(Button /* Button */.Icon, obj);
+  obj[2] = closure_8(Button.Icon, obj);
   const items1 = [obj, , ];
   obj = { label: null, id: "0", icon: null, page: null };
   const intl2 = tmp4(1236).intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.SnrG00);
+  obj[0] = intl2.string(getSystemLocale.t.SnrG00);
   const obj1 = { source: null, style: null };
   obj1[0] = registerAsset;
   const items2 = [tmp.icon, ];
   let iconSelected1 = null;
-  if (tmp3 === generateHydrationId /* generateHydrationId */.ICYMICustomScore.DEFAULT) {
+  if (tmp3 === generateHydrationId.ICYMICustomScore.DEFAULT) {
     iconSelected1 = tmp.iconSelected;
   }
   items2[1] = iconSelected1;
   obj1[1] = items2;
-  obj[2] = closure_8(Button /* Button */.Icon, obj1);
+  obj[2] = closure_8(Button.Icon, obj1);
   items1[1] = obj;
   const obj2 = { label: null, id: "1", icon: null, page: null };
   const intl3 = tmp4(1236).intl;
-  obj2[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.Rxe3jF);
+  obj2[0] = intl3.string(getSystemLocale.t.Rxe3jF);
   const obj3 = { source: null, style: null };
   obj3[0] = registerAsset;
   const items3 = [tmp.icon, ];
   let iconSelected2 = null;
-  if (tmp3 === generateHydrationId /* generateHydrationId */.ICYMICustomScore.MORE) {
+  if (tmp3 === generateHydrationId.ICYMICustomScore.MORE) {
     iconSelected2 = tmp.iconSelected;
   }
   items3[1] = iconSelected2;
   obj3[1] = items3;
-  obj2[2] = closure_8(Button /* Button */.Icon, obj3);
+  obj2[2] = closure_8(Button.Icon, obj3);
   items1[2] = obj2;
   const tmp2 = callback(React.useState(initialValue.initialValue), 2);
   const obj4 = {
@@ -86,7 +86,7 @@ function ContentSettingsControl(initialValue) {
     defaultIndex: null
   };
   let num = 0;
-  if (generateHydrationId /* generateHydrationId */.ICYMICustomScore.LESS !== tmp3) {
+  if (generateHydrationId.ICYMICustomScore.LESS !== tmp3) {
     num = 1;
     if (tmp4(8834).ICYMICustomScore.MORE === tmp3) {
       num = 2;
@@ -94,7 +94,7 @@ function ContentSettingsControl(initialValue) {
   }
   obj4[3] = num;
   let obj5 = null;
-  const segmentedControlState = useSegmentedControlState /* useSegmentedControlState */.useSegmentedControlState(obj4);
+  const segmentedControlState = useSegmentedControlState.useSegmentedControlState(obj4);
   if (disabled) {
     obj5 = { opacity: 0.7 };
   }
@@ -104,7 +104,7 @@ function ContentSettingsControl(initialValue) {
     str = "none";
   }
   obj6[1] = str;
-  obj6[2] = closure_8(SegmentedControl /* SegmentedControl */.SegmentedControl, { variant: "experimental_Large", state: segmentedControlState });
+  obj6[2] = closure_8(SegmentedControl.SegmentedControl, { variant: "experimental_Large", state: segmentedControlState });
   return closure_8(View, obj6);
 }
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);

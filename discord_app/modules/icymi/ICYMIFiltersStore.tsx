@@ -19,7 +19,7 @@ prototype["filterStaffContent"] = function filterStaffContent() {
 prototype["getDoubleTapBehavior"] = function getDoubleTapBehavior() {
   let DEFAULT = closure_2.doubleTapBehavior;
   if (DEFAULT == null) {
-    DEFAULT = MessageEmbedTypes /* MessageEmbedTypes */.GravityICYMIDoubleTapBehavior.DEFAULT;
+    DEFAULT = MessageEmbedTypes.GravityICYMIDoubleTapBehavior.DEFAULT;
   }
   return DEFAULT;
 };

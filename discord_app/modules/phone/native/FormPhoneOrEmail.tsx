@@ -32,13 +32,13 @@ function CountryCodeSelector(alpha2) {
     obj[1] = tmp.selectorPressable;
     obj[2] = { borderless: true };
     obj[4] = combined;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[5] = intl.string(getSystemLocale /* getSystemLocale */.t.GwAW3k);
+    const intl = getSystemLocale.intl;
+    obj[5] = intl.string(getSystemLocale.t.GwAW3k);
     const obj1 = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.selectorText;
     obj1[3] = combined;
-    obj[6] = callback(Text /* Text */.Text, obj1);
-    const items = [callback(PressableBase /* PressableBase */.PressableOpacity, obj), ];
+    obj[6] = callback(Text.Text, obj1);
+    const items = [callback(PressableBase.PressableOpacity, obj), ];
     const obj2 = { style: null };
     obj2[0] = tmp.separator;
     items[1] = callback(View, obj2);

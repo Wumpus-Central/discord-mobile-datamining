@@ -143,7 +143,7 @@ export default function navigateToSocialLayerStorefront(arg0) {
   }
   let socialLayerStorefrontGuildId = guildId;
   if (guildId == null) {
-    let obj = getPrice /* getPrice */;
+    let obj = getPrice;
     socialLayerStorefrontGuildId = obj.getSocialLayerStorefrontGuildId(applicationId);
   }
   if (null == applicationIdFromGuildId) {
@@ -155,8 +155,8 @@ export default function navigateToSocialLayerStorefront(arg0) {
     }
   }
   if (null != applicationIdFromGuildId) {
-    resolved = Promise.resolve(transitionTo /* transitionTo */.transitionTo(closure_7.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug)));
-    const obj3 = transitionTo /* transitionTo */;
+    resolved = Promise.resolve(transitionTo.transitionTo(closure_7.COLLECTIBLES_SHOP_GAME_SHOP(applicationIdFromGuildId, pageIndex, skuId, slug)));
+    const obj3 = transitionTo;
   } else {
     obj = { guildId: null, pageIndex: null, invite: null, skuId: null, slug: null };
     obj[0] = socialLayerStorefrontGuildId;
@@ -180,7 +180,7 @@ export const eagerNavigateToSocialLayerStorefront = function eagerNavigateToSoci
     guildId = id;
   }
   if (null != guildId) {
-    let obj = _fetchSocialLayerStorefront /* _fetchSocialLayerStorefront */;
+    let obj = _fetchSocialLayerStorefront;
     obj = { eager: true, forceFetch: null };
     obj[1] = forceFetch.forceFetch;
     const socialLayerStorefront = obj.fetchSocialLayerStorefront(guildId, obj);
@@ -190,6 +190,6 @@ export const eagerNavigateToSocialLayerStorefrontForApplication = function eager
   let applicationId;
   let forceFetch;
   ({ applicationId, forceFetch } = arg0);
-  const socialLayerStorefrontForApplication = _fetchSocialLayerStorefront /* _fetchSocialLayerStorefront */.fetchSocialLayerStorefrontForApplication(applicationId, { eager: true, forceFetch });
+  const socialLayerStorefrontForApplication = _fetchSocialLayerStorefront.fetchSocialLayerStorefrontForApplication(applicationId, { eager: true, forceFetch });
 };
 export { navigateToSocialLayerStorefrontWithGuildPreview };

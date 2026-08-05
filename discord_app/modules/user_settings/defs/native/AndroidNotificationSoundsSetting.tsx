@@ -9,8 +9,8 @@ let setAndroidNotificationSoundsEnabled;
 ({ useAndroidNotificationSoundsEnabled: obj1, setAndroidNotificationSoundsEnabled } = _initializeAndroidNotificationSettingsStore);
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["1CWknJ"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["1CWknJ"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: function useAndroidNotificationSoundsSettingValue() {
@@ -24,7 +24,7 @@ const toggle = createToggle.createToggle({
   usePredicate: function useHasAndroidNotificationSoundsSetting() {
     const tmp = callback();
     const tmp2 = require;
-    const isIOSResult = set /* set */.isIOS();
+    const isIOSResult = set.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
       tmp5 = !tmp2(14561).hasAndroidNotificationChannels();
@@ -38,8 +38,8 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["1CWknJ"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["1CWknJ"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: function useAndroidNotificationSoundsSettingValue() {
@@ -53,7 +53,7 @@ const obj = {
   usePredicate: function useHasAndroidNotificationSoundsSetting() {
     const tmp = callback();
     const tmp2 = require;
-    const isIOSResult = set /* set */.isIOS();
+    const isIOSResult = set.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
       tmp5 = !tmp2(14561).hasAndroidNotificationChannels();

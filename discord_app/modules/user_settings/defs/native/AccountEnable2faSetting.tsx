@@ -9,8 +9,8 @@ import { useIs2FAEnabled } from "../../account/native/SettingsAccountUtils.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.cDgKte);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.cDgKte);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   onPress: function onAccountEnable2FASettingPress() {
@@ -26,15 +26,15 @@ createToggle = {
       }
     }
     obj = { title: null, body: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.v740sh);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.uggF7o);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.v740sh);
+    const intl2 = getSystemLocale.intl;
+    obj[1] = intl2.string(getSystemLocale.t.uggF7o);
     set.show(obj);
   },
   withArrow: true,
   usePredicate: function useHasAccountEnable2FASetting() {
-    return !useIs2FAEnabled /* useIs2FAEnabled */.useIsTOTPEnabled();
+    return !useIs2FAEnabled.useIsTOTPEnabled();
   }
 };
 createToggle = createToggle.createPressable(createToggle);

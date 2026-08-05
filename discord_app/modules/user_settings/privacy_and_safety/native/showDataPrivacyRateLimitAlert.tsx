@@ -6,10 +6,10 @@ const result = require("set").fileFinishedImporting("modules/user_settings/priva
 export const showDataPrivacyRateLimitAlert = function showDataPrivacyRateLimitAlert(message) {
   let obj = set;
   obj = { title: null, body: null, confirmText: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["43LbVL"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["43LbVL"]);
   obj[1] = message;
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.BddRzS);
+  const intl2 = getSystemLocale.intl;
+  obj[2] = intl2.string(getSystemLocale.t.BddRzS);
   obj.show(obj);
 };

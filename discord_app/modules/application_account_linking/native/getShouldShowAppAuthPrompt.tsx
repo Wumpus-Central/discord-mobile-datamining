@@ -12,7 +12,7 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
     return false;
   } else {
     let response = dependencyMap;
-    const authorizationApp = getAuthorizationApp /* getAuthorizationApp */.getAuthorizationApp(application);
+    const authorizationApp = getAuthorizationApp.getAuthorizationApp(application);
     if (null == authorizationApp) {
       return false;
     } else {
@@ -47,6 +47,6 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
         return false;
       }
     }
-    const obj3 = getAuthorizationApp /* getAuthorizationApp */;
+    const obj3 = getAuthorizationApp;
   }
 };

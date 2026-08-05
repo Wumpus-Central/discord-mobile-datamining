@@ -8,12 +8,12 @@ import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/exper
 const require = arg1;
 function useEnableSwitchIconsSettingValue() {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  return initialize /* initialize */.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
+  return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["S3z+pV"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["S3z+pV"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,

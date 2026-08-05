@@ -116,7 +116,7 @@ let closure_12 = createCacheKey.createStyles({ title: { flexDirection: "row", al
 const result = require("createChannelRecord").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDM.tsx");
 
 export default function HomeDrawerDMExpandedChildrenWrapper(channel) {
-  const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment.MobileHomeDrawerExperiment;
   let tmp2 = null;
   if (MobileHomeDrawerExperiment.useConfig({ location: "dm-expanded-children" }).enableHome) {
     tmp2 = null;

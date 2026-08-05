@@ -51,5 +51,5 @@ export const openFailureAgeGateModal = function openFailureAgeGateModal(source) 
 export const closeFailedAgeGate = function closeFailedAgeGate() {
   handleLogout.logoutInternal();
   const obj = handleLogout;
-  transitionTo /* transitionTo */.transitionTo(constants.LOGIN, { source: "age_gate_modal" });
+  transitionTo.transitionTo(constants.LOGIN, { source: "age_gate_modal" });
 };

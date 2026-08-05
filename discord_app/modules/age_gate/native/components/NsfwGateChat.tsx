@@ -33,9 +33,9 @@ export default function NsfwGateChat() {
   obj = { style: tmp.container, children: null };
   const items1 = [callback(closure_4, { source: registerAsset }), ];
   const obj2 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj2[3] = intl.string(getSystemLocale /* getSystemLocale */.t.W4Qyxr);
-  items1[1] = callback(Text /* Text */.Text, obj2);
+  const intl = getSystemLocale.intl;
+  obj2[3] = intl.string(getSystemLocale.t.W4Qyxr);
+  items1[1] = callback(Text.Text, obj2);
   obj[1] = items1;
   items[1] = callback2(closure_3, obj);
   obj[0] = items;

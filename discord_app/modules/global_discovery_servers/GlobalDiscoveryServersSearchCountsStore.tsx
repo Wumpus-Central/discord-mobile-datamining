@@ -17,7 +17,7 @@ prototype["handleSearchCountSuccess"] = function handleSearchCountSuccess(catego
   this.isInitialFetchComplete = true;
 };
 prototype["handleSearchCountFailure"] = function handleSearchCountFailure(error) {
-  const aPIError = new V6OrEarlierAPIError /* V6OrEarlierAPIError */.APIError(error);
+  const aPIError = new V6OrEarlierAPIError.APIError(error);
   this.error = aPIError;
   this.isFetching = false;
 };

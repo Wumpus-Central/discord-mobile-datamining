@@ -22,6 +22,6 @@ export default function PillText(arg0) {
   items = [tmp.pillTextContainer, style];
   const tmp2 = usePremiumPrimaryGradientColors();
   obj = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText };
-  obj[4] = jsx(Text /* Text */.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
+  obj[4] = jsx(Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
   return jsx(LinearGradient, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
 };

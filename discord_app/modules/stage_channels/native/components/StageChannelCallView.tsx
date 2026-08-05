@@ -18,8 +18,8 @@ function StageChannelCallBackground(arg0) {
   let channelId;
   let children;
   ({ children, channelId } = arg0);
-  let obj = useStageActionBarAnimation /* useStageActionBarAnimation */;
-  const stageActionBarAnimation = obj.useStageActionBarAnimation(channelId, FocusedControlsHeader /* FocusedControlsHeader */.FOCUSED_CONTROLS_HEADER_HEIGHT + useSafeAreaInsets().top);
+  let obj = useStageActionBarAnimation;
+  const stageActionBarAnimation = obj.useStageActionBarAnimation(channelId, FocusedControlsHeader.FOCUSED_CONTROLS_HEADER_HEIGHT + useSafeAreaInsets().top);
   obj = { children: null };
   const tmp = callback3();
   const items = [tmp.container, stageActionBarAnimation];

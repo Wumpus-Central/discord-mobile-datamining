@@ -5,5 +5,5 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/applic
 
 export default function showExecutedApplicationCommandPopout(messageId) {
   const obj = ACTION_SHEET_HEIGHT_HALF;
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(10996, dependencyMap.paths), "ExecutedCommandPopout:" + messageId.messageId, messageId);
+  obj.openLazy(asyncRequireImpl(10996, dependencyMap.paths), "ExecutedCommandPopout:" + messageId.messageId, messageId);
 };

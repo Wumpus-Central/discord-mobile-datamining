@@ -45,7 +45,7 @@ function CarouselCard(arg0) {
   const tmp = callback4();
   let obj = { style, children: null };
   obj = { variant: "heading-md/extrabold", color: "text-overlay-light", style: tmp.cardTitle, children: title };
-  const items = [callback2(Text /* Text */.Text, obj), ];
+  const items = [callback2(Text.Text, obj), ];
   const items1 = [tmp.image, imageStyle];
   items[1] = callback2(preload, { source: imageSrc, style: items1, resizeMode: "contain" });
   obj[1] = items;

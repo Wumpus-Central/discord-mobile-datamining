@@ -47,8 +47,8 @@ function InviteCard(invite) {
       let obj = { guild: null };
       obj[0] = guild;
       let tmp14 = callback(render, obj);
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["3rE1P8"]);
+      const intl2 = getSystemLocale.intl;
+      let stringResult = intl2.string(getSystemLocale.t["3rE1P8"]);
       let name = guild.name;
       let tmp17 = require;
       let tmp18 = callback;
@@ -57,9 +57,9 @@ function InviteCard(invite) {
       obj = { user: null, guildId: "a" };
       const tmp12 = new createdAt(inviter);
       obj[0] = tmp12;
-      tmp14 = callback(Button /* Button */.Avatar, obj);
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.OsdY8B);
+      tmp14 = callback(Button.Avatar, obj);
+      const intl = getSystemLocale.intl;
+      stringResult = intl.string(getSystemLocale.t.OsdY8B);
       let obj1 = nameFromUser;
       name = obj1.getFormattedName(inviter);
       tmp17 = require;
@@ -70,9 +70,9 @@ function InviteCard(invite) {
       obj = { user: null, guildId: "a" };
       const tmp33 = new createdAt(inviter);
       obj[0] = tmp33;
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t["+ITYkQ"]);
-      const tmp35 = callback(Button /* Button */.Avatar, obj);
+      const intl3 = getSystemLocale.intl;
+      stringResult = intl3.string(getSystemLocale.t["+ITYkQ"]);
+      const tmp35 = callback(Button.Avatar, obj);
       name = nameFromUser.getFormattedName(inviter, true);
       tmp14 = tmp35;
       tmp17 = require;
@@ -108,9 +108,9 @@ function GuildTemplateCard(arg0) {
   const items1 = [callback(closure_5, obj), ];
   obj = { style: tmp.text, children: null };
   const obj1 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[2] = intl.string(getSystemLocale /* getSystemLocale */.t.QzUORX);
-  const items2 = [callback(Text /* Text */.Text, obj1), callback(Text /* Text */.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guildTemplate.name })];
+  const intl = getSystemLocale.intl;
+  obj1[2] = intl.string(getSystemLocale.t.QzUORX);
+  const items2 = [callback(Text.Text, obj1), callback(Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guildTemplate.name })];
   obj[1] = items2;
   items1[1] = callback2(closure_4, obj);
   obj[1] = items1;
@@ -129,7 +129,7 @@ function Centerpiece(inlineButtons) {
   let obj = { style: items, children: null };
   items = [tmp3.centerpieceContainer];
   obj = { alwaysBounceVertical: false, contentContainerStyle: tmp3.scrollViewContainer, children: null };
-  obj = { style: tmp3.logo, source: registerAsset /* registerAsset */ };
+  obj = { style: tmp3.logo, source: registerAsset };
   const items1 = [callback(closure_5, obj), , ];
   const obj1 = { style: tmp3.header, lineClamp: null, variant: "display-md", color: "text-overlay-light", maxFontSizeMultiplier: 1, children: null };
   let num = 2;
@@ -138,8 +138,8 @@ function Centerpiece(inlineButtons) {
   }
   obj1[1] = num;
   const intl = tmp4(1236).intl;
-  obj1[5] = intl.string(getSystemLocale /* getSystemLocale */.t["3S2xmm"]);
-  const items2 = [callback(Text /* Text */.Heading, obj1), , , ];
+  obj1[5] = intl.string(getSystemLocale.t["3S2xmm"]);
+  const items2 = [callback(Text.Heading, obj1), , , ];
   const items3 = [tmp3.subHeader, ];
   if (null != invite) {
     let subHeaderWithInvite = tmp3.subHeaderWithInvite;
@@ -149,8 +149,8 @@ function Centerpiece(inlineButtons) {
   const obj2 = { variant: "text-md/medium", color: "text-overlay-light", style: items3, maxFontSizeMultiplier: 3, children: null };
   items3[1] = subHeaderWithInvite;
   const intl2 = tmp4(1236).intl;
-  obj2[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.Gtcthl);
-  items2[1] = callback(Text /* Text */.Text, obj2);
+  obj2[4] = intl2.string(getSystemLocale.t.Gtcthl);
+  items2[1] = callback(Text.Text, obj2);
   let tmp9Result = null;
   if (null != invite) {
     const obj3 = { invite: null };

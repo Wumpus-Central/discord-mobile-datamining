@@ -22,7 +22,7 @@ export default function getDeviceMediaPhotos(arg0) {
       callback(table[2]).captureException(arg0, { tags: { source: "DEVICE_MEDIA" } });
     };
   }
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isIOS()) {
     const obj3 = require("DCDPhotos.tsx") /* get ActivityIndicator */;
     if (obj3 != null) {

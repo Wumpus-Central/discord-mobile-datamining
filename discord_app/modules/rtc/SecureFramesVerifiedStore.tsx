@@ -55,7 +55,7 @@ function handleUserUpdate(userId) {
       }
       flag = isKeyVerifiedResult !== map.get(userId);
       const result = map.set(userId, isKeyVerifiedResult);
-      obj = getCurrentUserSigningKey /* getCurrentUserSigningKey */;
+      obj = getCurrentUserSigningKey;
     }
     const allActiveStreamKeys = store2.getAllActiveStreamKeys();
     const reduced = allActiveStreamKeys.reduce((arg0, streamKey) => {
@@ -116,7 +116,7 @@ const secureFramesVerifiedStore = new SecureFramesVerifiedStore(require("dispatc
     if (state.state !== RTCConnectionStates.DISCONNECTED) {
       return false;
     } else {
-      if (BaseConnectionEvent /* BaseConnectionEvent */.MediaEngineContextTypes.STREAM === context) {
+      if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === context) {
         let tmp6 = null != streamKey;
         if (tmp6) {
           map1.delete(streamKey);

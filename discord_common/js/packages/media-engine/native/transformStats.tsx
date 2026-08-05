@@ -218,9 +218,9 @@ function transformOutboundVideoStats(substreams, id) {
       }
       return arg0 + (sum + num4 + num);
     }, 0);
-    obj[2] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantStat(id, found.ssrc, true);
-    const obj2 = formatSinkWantStat /* formatSinkWantStat */;
-    obj[3] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantAsInt(id, found.ssrc);
+    obj[2] = formatSinkWantStat.formatSinkWantStat(id, found.ssrc, true);
+    const obj2 = formatSinkWantStat;
+    obj[3] = formatSinkWantStat.formatSinkWantAsInt(id, found.ssrc);
     obj = { id: null, name: null };
     ({ codecPayloadType: obj4[0], codecName: obj4[1] } = substreams);
     obj[4] = obj;
@@ -429,13 +429,13 @@ function transformInboundVideoStats(height, id, id) {
   let obj = { type: "video", ssrc: height.ssrc, sinkWant: null, sinkWantAsInt: null, sinkWantLocal: null, sinkWantLocalAsInt: null, codec: null, bytesReceived: null, packetsReceived: null, packetsLost: null, fractionLost: null, bitrate: null, jitterBuffer: null, currentDelay: null, targetDelay: null, minPlayoutDelay: null, renderDelay: null, averageDecodeTime: null, totalDecodeTime: null, resolution: null, decoderImplementationName: null, framesDecoded: null, framesDropped: null, framesDecodeErrors: null, framesReceived: null, networkFramesDropped: null, keyFramesDecoded: null, frameRateDecode: null, frameRateNetwork: null, frameRateRender: null, firCount: null, nackCount: null, pliCount: null, qpSum: null, freezeCount: null, pauseCount: null, totalFreezesDuration: null, totalPausesDuration: null, totalFramesDuration: null, sumOfSquaredFramesDurations: null, passthroughCount: null, decryptSuccessCount: null, decryptFailureCount: null, decryptDuration: null, decryptAttempts: null, decryptMissingKeyCount: null, decryptInvalidNonceCount: null, minResolutionWidth: null, minResolutionHeight: null };
   const sum1 = sum + num4 + num;
   const tmp = sumBytes(height.rtpStats);
-  obj[2] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantStat(id, height.ssrc, true);
-  const obj2 = formatSinkWantStat /* formatSinkWantStat */;
-  obj[3] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantAsInt(id, height.ssrc);
-  const obj3 = formatSinkWantStat /* formatSinkWantStat */;
-  obj[4] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantStat(id, height.ssrc, true);
-  const obj4 = formatSinkWantStat /* formatSinkWantStat */;
-  obj[5] = formatSinkWantStat /* formatSinkWantStat */.formatSinkWantAsInt(id, height.ssrc);
+  obj[2] = formatSinkWantStat.formatSinkWantStat(id, height.ssrc, true);
+  const obj2 = formatSinkWantStat;
+  obj[3] = formatSinkWantStat.formatSinkWantAsInt(id, height.ssrc);
+  const obj3 = formatSinkWantStat;
+  obj[4] = formatSinkWantStat.formatSinkWantStat(id, height.ssrc, true);
+  const obj4 = formatSinkWantStat;
+  obj[5] = formatSinkWantStat.formatSinkWantAsInt(id, height.ssrc);
   obj[6] = { id: height.codecPayloadType, name: height.codecName };
   obj[7] = tmp;
   obj[8] = sum1;

@@ -26,9 +26,9 @@ function QuestHomeOrbShopCarouselHeading(orbAmount) {
   obj = { paddingHorizontal: Themes.space.PX_16, marginBottom: Themes.space.PX_16 };
   obj[0] = obj;
   obj = { variant: "text-md/semibold", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.format(getSystemLocale /* getSystemLocale */.t.CXlsRP, { orbAmount: orbAmount.orbRewardAmount });
-  obj[1] = callback(Text /* Text */.Heading, obj);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.format(getSystemLocale.t.CXlsRP, { orbAmount: orbAmount.orbRewardAmount });
+  obj[1] = callback(Text.Heading, obj);
   return callback(View, obj);
 }
 function QuestHomeOrbShopCarouselPlaceholder() {
@@ -39,8 +39,8 @@ function QuestHomeOrbShopCarouselPlaceholder() {
   }, []);
   const callback1 = React.useCallback((arg0) => "placeholder-" + arg0, []);
   let obj = { horizontal: true, accessibilityRole: "list", accessibilityLabel: null, accessibilityState: null, data: null, keyExtractor: null, renderItem: null, decelerationRate: "fast", snapToInterval: null, showsHorizontalScrollIndicator: false, ListHeaderComponent: null, ListFooterComponent: null, ItemSeparatorComponent: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.hVV8Wi);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.hVV8Wi);
   obj[3] = { busy: true };
   obj[4] = closure_15;
   obj[5] = callback1;
@@ -49,7 +49,7 @@ function QuestHomeOrbShopCarouselPlaceholder() {
   obj[10] = ListEdgeSpacer;
   obj[11] = ListEdgeSpacer;
   obj[12] = ItemSeparator;
-  return callback(noop /* noop */.FlashList, obj);
+  return callback(noop.FlashList, obj);
 }
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
 const PX_16 = require("Themes").space.PX_16;

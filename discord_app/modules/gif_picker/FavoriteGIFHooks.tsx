@@ -7,7 +7,7 @@ let closure_4 = {};
 const result = require("apply").fileFinishedImporting("modules/gif_picker/FavoriteGIFHooks.tsx");
 
 export const useFavoriteGIFs = function useFavoriteGIFs() {
-  const favoriteGifs = useFrecencySettings /* useFrecencySettings */.useFrecencySettings().favoriteGifs;
+  const favoriteGifs = useFrecencySettings.useFrecencySettings().favoriteGifs;
   let gifs;
   if (favoriteGifs != null) {
     gifs = favoriteGifs.gifs;
@@ -49,7 +49,7 @@ export const useSortedFavoriteGIFs = function useSortedFavoriteGIFs(transformFav
   }, items);
 };
 export const useShouldShowTooltipOnFavorite = function useShouldShowTooltipOnFavorite() {
-  const favoriteGifs = useFrecencySettings /* useFrecencySettings */.useFrecencySettings().favoriteGifs;
+  const favoriteGifs = useFrecencySettings.useFrecencySettings().favoriteGifs;
   let flag;
   if (favoriteGifs != null) {
     flag = favoriteGifs.hideTooltip;
@@ -60,7 +60,7 @@ export const useShouldShowTooltipOnFavorite = function useShouldShowTooltipOnFav
   return flag;
 };
 export const useIsFavoriteGIF = function useIsFavoriteGIF(arg0) {
-  const favoriteGifs = useFrecencySettings /* useFrecencySettings */.useFrecencySettings().favoriteGifs;
+  const favoriteGifs = useFrecencySettings.useFrecencySettings().favoriteGifs;
   let gifs;
   if (favoriteGifs != null) {
     gifs = favoriteGifs.gifs;

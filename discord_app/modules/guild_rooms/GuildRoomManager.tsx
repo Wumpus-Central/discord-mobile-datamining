@@ -59,7 +59,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
           if (isExperimentEnabledResult) {
             let tmp16 = require;
             let tmp17 = dependencyMap;
-            let obj3 = _guildRoomConnect /* _guildRoomConnect */;
+            let obj3 = _guildRoomConnect;
             let tmp18 = guildId;
             let tmp19 = channelId;
             let guildRoomDisconnectResult = obj3.guildRoomDisconnect(guildId, channelId);
@@ -74,7 +74,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
               if (self.isExperimentEnabled(guildId, "VOICE_STATE_UPDATE")) {
                 let tmp26 = require;
                 let tmp27 = dependencyMap;
-                let obj4 = _guildRoomConnect /* _guildRoomConnect */;
+                let obj4 = _guildRoomConnect;
                 let tmp28 = guildId;
                 let tmp29 = channelId;
                 let tmp30 = pendingPosition;
@@ -97,7 +97,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
       if (tmp4) {
         let tmp7 = require;
         let tmp8 = dependencyMap;
-        let obj2 = _guildRoomConnect /* _guildRoomConnect */;
+        let obj2 = _guildRoomConnect;
         let tmp9 = userId;
         let tmp10 = oldChannelId;
         let result = obj2.guildRoomLocalDisconnect(tmp2, oldChannelId);
@@ -118,8 +118,8 @@ prototype["handleEmbeddedActivityLaunchSuccess"] = function handleEmbeddedActivi
       isExperimentEnabledResult = handleSelectedChannelStoreChange.isVisible(channelId.channelId);
     }
     if (isExperimentEnabledResult) {
-      const result = _guildRoomConnect /* _guildRoomConnect */.guildRoomToggleLayout(channelId.channelId, true);
-      const obj = _guildRoomConnect /* _guildRoomConnect */;
+      const result = _guildRoomConnect.guildRoomToggleLayout(channelId.channelId, true);
+      const obj = _guildRoomConnect;
     }
   }
 };

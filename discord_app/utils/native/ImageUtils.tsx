@@ -60,9 +60,9 @@ function getSrcWithWidthAndHeight(animated) {
       obj[1] = targetHeight;
       obj[2] = sourceWidth;
       obj[3] = sourceHeight;
-      obj[4] = items /* items */.ATTACHMENT_LADDER_MAX_UPSCALE;
-      let size = items /* items */.snapAttachmentDimensions(obj);
-      const obj2 = items /* items */;
+      obj[4] = items.ATTACHMENT_LADDER_MAX_UPSCALE;
+      let size = items.snapAttachmentDimensions(obj);
+      const obj2 = items;
     } else {
       size = { width: null, height: null };
       size[0] = targetWidth;
@@ -94,7 +94,7 @@ function getMobileOptimizedSrc(proxy_url, width, height, png) {
   if (tmp3.test(proxy_url)) {
     num = 0.3;
   }
-  let obj = useWindowDimensions /* useWindowDimensions */;
+  let obj = useWindowDimensions;
   const size = obj.getWindowDimensions();
   const result = store.getPixelSizeForLayoutSize(size.width) * num;
   const bound = Math.min(width > height ? result / width : store.getPixelSizeForLayoutSize(size.height / 2) * num / height, 1);
@@ -110,9 +110,9 @@ function getMobileOptimizedSrc(proxy_url, width, height, png) {
   return getSrcWithWidthAndHeight(obj);
 }
 function getPaletteForAvatarMobile(closure_0) {
-  const obj = ensureAvatarSource /* ensureAvatarSource */;
+  const obj = ensureAvatarSource;
   ImageManager = ImageManager.ImageManager;
-  return ImageManager.getDominantColors(obj.ensureAvatarSource(getAvatarURL /* getAvatarURL */.makeSource(closure_0)));
+  return ImageManager.getDominantColors(obj.ensureAvatarSource(getAvatarURL.makeSource(closure_0)));
 }
 ({ NativeModules: c4, PixelRatio: c5 } = get_ActivityIndicator);
 const tmp3 = /\.(gif)$/i;

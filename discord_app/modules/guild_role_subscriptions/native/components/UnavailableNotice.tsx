@@ -41,8 +41,8 @@ export default function UnavailableNotice(brightTitle) {
     brightTitle = tmp.brightTitle;
   }
   items2[1] = brightTitle;
-  items1[1] = callback(Text /* Text */.Text, { variant: "heading-lg/extrabold", color: "text-default", style: items2, children: title });
-  items1[2] = callback(Text /* Text */.Text, { style: tmp.unavailableDescription, variant: "text-sm/medium", color: "text-default", children: description });
+  items1[1] = callback(Text.Text, { variant: "heading-lg/extrabold", color: "text-default", style: items2, children: title });
+  items1[2] = callback(Text.Text, { style: tmp.unavailableDescription, variant: "text-sm/medium", color: "text-default", children: description });
   obj[1] = items1;
   obj[1] = closure_5(View, obj);
   return callback(View, obj);

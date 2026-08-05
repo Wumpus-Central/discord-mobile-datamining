@@ -12,7 +12,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function getQuestDeliveryDataForPlacement(arg0, adContentId) {
-  if (arg0 === QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.AdPlacement.QUEST_HOME_MOBILE_CAROUSEL) {
+  if (arg0 === QuestsVisibleMessagesChangedSource.AdPlacement.QUEST_HOME_MOBILE_CAROUSEL) {
     let tmp3 = null;
     if (null != adContentId) {
       adDecisionByPlacementAndAdCreativeId = adDecisionByPlacementAndAdCreativeId.getAdDecisionByPlacementAndAdCreativeId(arg0, adContentId);
@@ -121,11 +121,11 @@ export const findQuestOrReplacement = function findQuestOrReplacement(questId, q
 };
 export const isDismissible = function isDismissible(closure_1) {
   const keys = Object.keys(closure_6);
-  return keys.includes(QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestContent[closure_1]);
+  return keys.includes(QuestsVisibleMessagesChangedSource.QuestContent[closure_1]);
 };
 export const isDismissed = function isDismissed(dismissedQuestContent) {
   const keys = Object.keys(closure_6);
-  if (keys.includes(QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestContent[arg1])) {
+  if (keys.includes(QuestsVisibleMessagesChangedSource.QuestContent[arg1])) {
     return tmp2(1384).hasFlag(dismissedQuestContent.dismissedQuestContent, tmp[tmp2(undefined, 5131).QuestContent[arg1]]);
   } else {
     return false;

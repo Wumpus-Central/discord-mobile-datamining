@@ -412,7 +412,7 @@ obj = {
       let closure_0 = arg0;
       return closure_25.find((id) => id.id === closure_0);
     });
-    closure_25 = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    closure_25 = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
     let c24 = true;
     callback();
   },

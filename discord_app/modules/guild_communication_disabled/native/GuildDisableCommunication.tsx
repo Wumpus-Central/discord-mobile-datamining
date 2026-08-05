@@ -33,8 +33,8 @@ let c5 = importAllResult;
 let obj = {
   value: DisableCommunicationDuration.DURATION_60_SEC,
   getLabel() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iruf5E, { minutes: 1 });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.iruf5E, { minutes: 1 });
   }
 };
 let items = [
@@ -42,36 +42,36 @@ let items = [
   {
     value: DisableCommunicationDuration.DURATION_5_MIN,
     getLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iruf5E, { minutes: 5 });
+      const intl = getSystemLocale.intl;
+      return intl.formatToPlainString(getSystemLocale.t.iruf5E, { minutes: 5 });
     }
   },
   {
     value: DisableCommunicationDuration.DURATION_10_MIN,
     getLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iruf5E, { minutes: 10 });
+      const intl = getSystemLocale.intl;
+      return intl.formatToPlainString(getSystemLocale.t.iruf5E, { minutes: 10 });
     }
   },
   {
     value: DisableCommunicationDuration.DURATION_1_HOUR,
     getLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.LnvrA3, { hours: 1 });
+      const intl = getSystemLocale.intl;
+      return intl.formatToPlainString(getSystemLocale.t.LnvrA3, { hours: 1 });
     }
   },
   {
     value: DisableCommunicationDuration.DURATION_1_DAY,
     getLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.jzH70Z, { days: 1 });
+      const intl = getSystemLocale.intl;
+      return intl.formatToPlainString(getSystemLocale.t.jzH70Z, { days: 1 });
     }
   },
   {
     value: DisableCommunicationDuration.DURATION_1_WEEK,
     getLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iVZYyl, { weeks: 1 });
+      const intl = getSystemLocale.intl;
+      return intl.formatToPlainString(getSystemLocale.t.iVZYyl, { weeks: 1 });
     }
   }
 ];
@@ -192,12 +192,12 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
   let obj2 = { marginVertical: null };
   obj2[0] = Themes.space.PX_16;
   obj1[0] = obj2;
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[2] = intl.format(getSystemLocale /* getSystemLocale */.t.Ns83GT, { helpdeskArticle: closure_8 });
-  const items1 = [callback2(Text /* Text */.Text, obj1), , , ];
+  let intl = getSystemLocale.intl;
+  obj1[2] = intl.format(getSystemLocale.t.Ns83GT, { helpdeskArticle: closure_8 });
+  const items1 = [callback2(Text.Text, obj1), , , ];
   const obj4 = { title: null, defaultValue: 0, onChange: null, hasIcons: false, children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["9XsExm"]);
+  const intl2 = getSystemLocale.intl;
+  obj4[0] = intl2.string(getSystemLocale.t["9XsExm"]);
   obj4[2] = function onChange(arg0) {
     _undefined2(arg0);
   };
@@ -206,20 +206,20 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
     obj[1] = getLabel.getLabel();
     return callback(lib(table[20]).TableRadioRow, obj, value);
   });
-  items1[1] = callback2(context /* context */.TableRadioGroup, obj4);
+  items1[1] = callback2(context.TableRadioGroup, obj4);
   const obj5 = { ref: ref1, containerStyle: tmp.reasonTextArea, placeholder: null, label: null, maxLength: 512, onChange: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj5[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.GakiH1);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj5[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.ewHW15);
+  const intl3 = getSystemLocale.intl;
+  obj5[2] = intl3.string(getSystemLocale.t.GakiH1);
+  const intl4 = getSystemLocale.intl;
+  obj5[3] = intl4.string(getSystemLocale.t.ewHW15);
   obj5[5] = function onChange(current) {
     closure_5.current = current;
   };
-  items1[2] = callback2(TextArea /* TextArea */.TextArea, obj5);
+  items1[2] = callback2(TextArea.TextArea, obj5);
   const obj6 = { style: tmp.buttonContainer, children: null };
   const obj7 = { variant: "primary", text: null, onPress: null };
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
-  obj7[1] = intl5.string(getSystemLocale /* getSystemLocale */.t.MlPTIi);
+  const intl5 = getSystemLocale.intl;
+  obj7[1] = intl5.string(getSystemLocale.t.MlPTIi);
   obj7[2] = function handleSubmitButtonPressed() {
     const self = this;
     const apply = _handleSubmitButtonPressed.apply;
@@ -230,7 +230,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
     }
     return applyArgumentsResult;
   };
-  obj6[1] = callback2(Button /* Button */.Button, obj7);
+  obj6[1] = callback2(Button.Button, obj7);
   items1[3] = callback2(_handleSubmitButtonPressed, obj6);
   obj[0] = items1;
   obj[3] = callback3(closure_12, obj);

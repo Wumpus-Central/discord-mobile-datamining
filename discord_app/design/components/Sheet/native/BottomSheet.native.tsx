@@ -74,7 +74,7 @@ let closure_18 = createCacheKey.createStyles((arg0) => {
   }
   obj1[3] = num2;
   obj[3] = obj1;
-  let obj4 = isFabric /* isFabric */;
+  let obj4 = isFabric;
   let str2;
   if (obj4.isIosFabric()) {
     str2 = "hidden";

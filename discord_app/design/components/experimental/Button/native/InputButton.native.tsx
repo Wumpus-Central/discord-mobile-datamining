@@ -37,10 +37,10 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   }
   ({ accessibilityLabel, accessibilityValue, maxFontSizeMultiplier } = size);
   if (undefined === maxFontSizeMultiplier) {
-    maxFontSizeMultiplier = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
+    maxFontSizeMultiplier = MINIMUM_HIT_AREA.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
   }
   const tmp4 = callback(size, closure_2);
-  let obj = useInputStyles /* useInputStyles */;
+  let obj = useInputStyles;
   const inputStyles = obj.useInputStyles({ size: str, isRound: undefined !== isRound && isRound, hasLeadingIcon: tmp7 });
   const tmp9 = callback2();
   if (null != icon) {
@@ -87,7 +87,7 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
     }
     obj4[3] = value;
     obj2.textElement = <Text style={null} numberOfLines={1} maxFontSizeMultiplier={null}>{null}</Text>;
-    return jsx(CollapsingText /* CollapsingText */.BaseTextButton, {});
+    return jsx(CollapsingText.BaseTextButton, {});
   }
 });
 const result = require("get ActivityIndicator").fileFinishedImporting("design/components/experimental/Button/native/InputButton.native.tsx");

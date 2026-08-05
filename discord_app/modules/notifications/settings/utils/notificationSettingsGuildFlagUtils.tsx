@@ -11,7 +11,7 @@ let result = require("MAX_FAVORITES").fileFinishedImporting("modules/notificatio
 
 export const updateGuildPreset = function updateGuildPreset(guildId, arg1) {
   guildFlags = guildFlags.getGuildFlags(guildId);
-  if (arg1 === Presets /* Presets */.Presets.ALL_MESSAGES) {
+  if (arg1 === Presets.Presets.ALL_MESSAGES) {
     let obj = { message_notifications: null, flags: null };
     obj[0] = UserNotificationSettings.ALL_MESSAGES;
     let tmp2Result = tmp2(9742);

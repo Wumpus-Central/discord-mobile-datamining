@@ -8,18 +8,18 @@ export const getApplicationSubscriptionSystemMessageASTContent = function getApp
   let usernameOnClick;
   ({ application, username, usernameOnClick } = arg0);
   if (null != application) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     let obj = { username: null, applicationName: null, usernameOnClick: null };
     obj[0] = username;
     obj[1] = application.name;
     obj[2] = usernameOnClick;
-    let formatToPartsResult = intl2.formatToParts(getSystemLocale /* getSystemLocale */.t.Tes5Ou, obj);
+    let formatToPartsResult = intl2.formatToParts(getSystemLocale.t.Tes5Ou, obj);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { username: null, usernameOnClick: null };
     obj[0] = username;
     obj[1] = usernameOnClick;
-    formatToPartsResult = intl.formatToParts(getSystemLocale /* getSystemLocale */.t.PUJtgi, obj);
+    formatToPartsResult = intl.formatToParts(getSystemLocale.t.PUJtgi, obj);
   }
   return formatToPartsResult;
 };

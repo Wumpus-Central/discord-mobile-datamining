@@ -10,7 +10,7 @@ export default function useCustomKeyboardHeight() {
 export const getCustomKeyboardHeight = function getCustomKeyboardHeight(arg0) {
   let DEFAULT_APP_ENTRY_KEY = arg0;
   if (arg0 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
   }
   return computeEntryState.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].customKeyboardHeight;
 };

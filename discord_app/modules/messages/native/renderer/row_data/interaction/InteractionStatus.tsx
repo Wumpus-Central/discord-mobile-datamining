@@ -4,9 +4,9 @@ let closure_2 = { LOADING: 0, [0]: "LOADING", FAILED: 1, [1]: "FAILED", EPHEMERA
 const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx");
 
 export const createInteractionStatus = function createInteractionStatus(message, interaction) {
-  let obj = _executeMessageComponentInteraction /* _executeMessageComponentInteraction */;
+  let obj = _executeMessageComponentInteraction;
   const interactionStatusViewState = obj.getInteractionStatusViewState(message, interaction);
-  if (_executeMessageComponentInteraction /* _executeMessageComponentInteraction */.InteractionStatusViewState.SENDING === interactionStatusViewState) {
+  if (_executeMessageComponentInteraction.InteractionStatusViewState.SENDING === interactionStatusViewState) {
     obj = { text: null, state: null };
     const intl4 = tmp(1236).intl;
     obj[0] = intl4.string(tmp(1236).t.RiLfBY);

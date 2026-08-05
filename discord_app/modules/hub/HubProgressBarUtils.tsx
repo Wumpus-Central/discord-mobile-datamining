@@ -10,7 +10,7 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");
 
 export const getHubProgressTitleForStep = function getHubProgressTitleForStep(nextHubProgressStep) {
-  if (create /* create */.HubProgressStep.JOIN_GUILD === nextHubProgressStep) {
+  if (create.HubProgressStep.JOIN_GUILD === nextHubProgressStep) {
     const intl3 = tmp(1236).intl;
     return intl3.string(tmp(1236).t.iNR25n);
   } else if (tmp(1306).HubProgressStep.INVITE_USER === nextHubProgressStep) {

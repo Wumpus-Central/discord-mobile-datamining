@@ -934,7 +934,7 @@ prototype2["reset"] = function reset() {
   this.save();
 };
 prototype2["save"] = function save() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set(c15, this.keyMap);
 };
 prototype2["getLayoutMap"] = function getLayoutMap() {

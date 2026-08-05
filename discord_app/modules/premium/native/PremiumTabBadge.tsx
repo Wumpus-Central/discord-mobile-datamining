@@ -26,7 +26,7 @@ let metroImportAll;
 const require = arg1;
 function ThemedTabBadge(children) {
   const tmp = createCacheKey();
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   const isThemeDarkResult = obj.isThemeDark(useTheme());
   const items = [tmp.badge, ];
   obj = { style: items, children: null };
@@ -36,7 +36,7 @@ function ThemedTabBadge(children) {
     str = "text-overlay-dark";
   }
   obj = { variant: "eyebrow", color: str, style: tmp.text, children: children.label };
-  obj[1] = closure_8(Text /* Text */.Text, obj);
+  obj[1] = closure_8(Text.Text, obj);
   return closure_8(View, obj);
 }
 function OfferBadge(componentId) {
@@ -47,9 +47,9 @@ function OfferBadge(componentId) {
   ({ acked, badgeCopy, ackedBadgeCopy } = componentId);
   const tmp = createCacheKey();
   let obj = { type: null, name: null, properties: null };
-  obj[0] = encodeProperties /* encodeProperties */.ImpressionTypes.VIEW;
-  obj[1] = encodeProperties /* encodeProperties */.ImpressionNames.PREMIUM_MARKETING_COMPONENT;
-  obj = { component_type: MarketingComponentType /* MarketingComponentType */.MarketingComponentType.PREMIUM_TAB, component_id: componentId };
+  obj[0] = encodeProperties.ImpressionTypes.VIEW;
+  obj[1] = encodeProperties.ImpressionNames.PREMIUM_MARKETING_COMPONENT;
+  obj = { component_type: MarketingComponentType.MarketingComponentType.PREMIUM_TAB, component_id: componentId };
   obj[2] = obj;
   obj = { disableTrack: null == componentId };
   trackImpression(obj, obj);
@@ -101,14 +101,14 @@ export default function PremiumTabBadge() {
   let tmp14;
   let tmp18;
   let tmp = createCacheKey();
-  let obj = usePremiumTrialOffer /* usePremiumTrialOffer */;
+  let obj = usePremiumTrialOffer;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
-  let obj1 = usePremiumDiscountOffer /* usePremiumDiscountOffer */;
+  let obj1 = usePremiumDiscountOffer;
   const premiumDiscountOffer = obj1.usePremiumDiscountOffer();
-  let obj3 = getPremiumPlanItem /* getPremiumPlanItem */;
+  let obj3 = getPremiumPlanItem;
   const hasTier2Premium = obj3.useHasTier2Premium();
-  let obj4 = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
-  const result = obj4.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent /* DismissibleContent */.DismissibleContent.MOBILE_NITRO_HOME_SETTINGS_BADGE);
+  let obj4 = UNSAFE_isDismissibleContentDismissed;
+  const result = obj4.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.MOBILE_NITRO_HOME_SETTINGS_BADGE);
   let tmp7 = !result;
   if (!result) {
     tmp7 = hasTier2Premium;

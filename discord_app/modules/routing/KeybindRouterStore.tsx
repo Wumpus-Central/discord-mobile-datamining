@@ -9,7 +9,7 @@ function getMatchData(pathname) {
   let channelId;
   let guildId;
   let str = pathname;
-  let obj = matchPath /* matchPath */;
+  let obj = matchPath;
   let str2 = pathname;
   if (pathname == null) {
     str2 = "";

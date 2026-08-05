@@ -28,7 +28,7 @@ function ApplicationDetailsEntry(children) {
   }
   const items = [iconComponentResult, ];
   obj = { variant: "text-sm/normal", color: "text-default", style: tmp.entryText, children: children.text };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return closure_5(View, obj);
 }
@@ -51,7 +51,7 @@ export default function ApplicationDetails(arg0) {
   ({ isEmbeddedFlow, connectedAccount } = arg0);
   let obj = DISCORD_EPOCH;
   const tmp2 = createCacheKey();
-  let obj1 = items /* items */;
+  let obj1 = items;
   let joined = null;
   const securityMessage = obj1.getSecurityMessage(scopes);
   if (null != redirectUri) {
@@ -80,11 +80,11 @@ export default function ApplicationDetails(arg0) {
     tmp15 = callback(ApplicationDetailsEntry, obj);
   }
   const items = [tmp15, , , , , , ];
-  const obj2 = { iconComponent: LockIcon /* LockIcon */.LockIcon, text: null };
+  const obj2 = { iconComponent: LockIcon.LockIcon, text: null };
   const date = new Date(obj.extractTimestamp(application.id));
   const tmp13 = closure_5;
   const tmp14 = View;
-  obj2[1] = getApplicationDetailsText /* getApplicationDetailsText */.getApplicationDetailsText(application);
+  obj2[1] = getApplicationDetailsText.getApplicationDetailsText(application);
   items[1] = callback(ApplicationDetailsEntry, obj2);
   let tmp18Result = null;
   if (null != connectedAccount) {
@@ -95,12 +95,12 @@ export default function ApplicationDetails(arg0) {
     tmp18Result = tmp18(tmp19, obj3);
   }
   items[2] = tmp18Result;
-  const obj4 = { iconComponent: ClockIcon /* ClockIcon */.ClockIcon, text: null };
+  const obj4 = { iconComponent: ClockIcon.ClockIcon, text: null };
   const intl3 = tmp5(1236).intl;
-  obj4[1] = intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t["+1bjc8"], { date });
+  obj4[1] = intl3.formatToPlainString(getSystemLocale.t["+1bjc8"], { date });
   items[3] = callback(ApplicationDetailsEntry, obj4);
   tmp18Result = null;
-  if (scopes.includes(set /* set */.OAuth2Scopes.BOT)) {
+  if (scopes.includes(set.OAuth2Scopes.BOT)) {
     tmp18Result = null;
     if (null != approximateGuildCount) {
       const obj5 = { iconComponent: null, text: null };
@@ -113,8 +113,8 @@ export default function ApplicationDetails(arg0) {
     }
   }
   items[4] = tmp18Result;
-  const tmp5Result = getApplicationDetailsText /* getApplicationDetailsText */;
-  items[5] = callback(ApplicationDetailsEntry, { iconComponent: ShieldIcon /* ShieldIcon */.ShieldIcon, text: securityMessage });
+  const tmp5Result = getApplicationDetailsText;
+  items[5] = callback(ApplicationDetailsEntry, { iconComponent: ShieldIcon.ShieldIcon, text: securityMessage });
   let mapped = null;
   if (null != disclosures) {
     mapped = disclosures.map((toFixed) => {

@@ -17,11 +17,11 @@ const result = require("recountRelationshipTypes").fileFinishedImporting("module
 
 export default function getTrackFriendsListViewedData() {
   localAccount = localAccount.getLocalAccount(constants.CONTACTS);
-  const FriendDiscoverySettings = explicitContentFromProto /* explicitContentFromProto */.FriendDiscoverySettings;
+  const FriendDiscoverySettings = explicitContentFromProto.FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.getSetting();
-  let obj = hasFlag /* hasFlag */;
+  let obj = hasFlag;
   const hasFlagResult = obj.hasFlag(setting, constants2.FIND_BY_PHONE);
-  const obj2 = hasFlag /* hasFlag */;
+  const obj2 = hasFlag;
   suggestionCount = suggestionCount.getSuggestionCount();
   obj = { num_friends: null };
   obj[0] = store2.getFriendCount();
@@ -33,8 +33,8 @@ export default function getTrackFriendsListViewedData() {
   obj.num_game_incoming_requests = store.getPendingIncomingCount();
   obj.num_suggestions = suggestionCount;
   obj.was_dismissed = useContactSyncStore.getState().upsellCTADismissed;
-  const hasFlagResult1 = hasFlag /* hasFlag */.hasFlag(setting, constants2.FIND_BY_EMAIL);
-  obj.contact_sync_is_enabled = _uploadContacts /* _uploadContacts */.isContactSyncEnabled(localAccount);
+  const hasFlagResult1 = hasFlag.hasFlag(setting, constants2.FIND_BY_EMAIL);
+  obj.contact_sync_is_enabled = _uploadContacts.isContactSyncEnabled(localAccount);
   obj.is_discoverable_email = hasFlagResult1;
   obj.is_discoverable_phone = hasFlagResult;
   return obj;

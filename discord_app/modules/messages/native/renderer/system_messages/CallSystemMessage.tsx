@@ -19,7 +19,7 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
   userVoiceChannelId = userVoiceChannelId.getUserVoiceChannelId(ME, id);
   const tmp6 = getHumanizedCallDuration(message);
   participants = participants.getParticipants(channelId);
-  let obj = useIsCallActive /* useIsCallActive */;
+  let obj = useIsCallActive;
   const checkIsCallActiveResult = obj.checkIsCallActive(channelId, message.id);
   let tmp9 = !checkIsCallActiveResult;
   if (!checkIsCallActiveResult) {

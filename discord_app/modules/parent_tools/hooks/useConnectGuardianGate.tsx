@@ -13,7 +13,7 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
   let linkCode;
   let require;
   let tmp3;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [freshTeenActivityWithMap];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ linkCode: store.getLinkCode(), expiresAt: store.getLinkCodeExpiresAt() }));
   ({ linkCode, expiresAt } = stateFromStoresObject);

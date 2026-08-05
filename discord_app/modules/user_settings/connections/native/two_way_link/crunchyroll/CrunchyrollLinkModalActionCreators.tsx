@@ -8,7 +8,7 @@ export default {
   showModal(locationStack) {
     let obj = ModalActionCreators;
     obj = { locationStack };
-    obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10484, dependencyMap.paths), obj, c3);
+    obj.pushLazy(asyncRequireImpl(10484, dependencyMap.paths), obj, c3);
   },
   hideModal() {
     ModalActionCreators.popWithKey(c3);

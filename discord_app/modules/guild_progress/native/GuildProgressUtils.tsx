@@ -114,7 +114,7 @@ export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export const openActionSheet = function openActionSheet(guild) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { guild };
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(11749, dependencyMap.paths), "guild-progress-" + guild.id, obj);
+  obj.openLazy(asyncRequireImpl(11749, dependencyMap.paths), "guild-progress-" + guild.id, obj);
 };
 export const hideActionSheet = function hideActionSheet(arg0) {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet("guild-progress-" + arg0);
@@ -137,47 +137,47 @@ export const useGuildProgressStep = function useGuildProgressStep(guild) {
   let stringResult = null;
   ({ guildPersonalized, guildMessaged, guildBoosted, showBoostStep, completed } = tmp);
   if (!tmp.guildPopulated) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.q9n0Ta);
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t.q9n0Ta);
   }
   const items = [stringResult, , ];
   let stringResult1 = null;
   if (!guildPersonalized) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    stringResult1 = intl2.string(getSystemLocale /* getSystemLocale */.t.DWB2YZ);
+    const intl2 = getSystemLocale.intl;
+    stringResult1 = intl2.string(getSystemLocale.t.DWB2YZ);
   }
   items[1] = stringResult1;
   let stringResult2 = null;
   if (!guildMessaged) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    stringResult2 = intl3.string(getSystemLocale /* getSystemLocale */.t.dNktpr);
+    const intl3 = getSystemLocale.intl;
+    stringResult2 = intl3.string(getSystemLocale.t.dNktpr);
   }
   items[2] = stringResult2;
   if (showBoostStep) {
     let stringResult3 = null;
     if (!guildBoosted) {
-      const intl4 = getSystemLocale /* getSystemLocale */.intl;
-      stringResult3 = intl4.string(getSystemLocale /* getSystemLocale */.t["6Qbqxw"]);
+      const intl4 = getSystemLocale.intl;
+      stringResult3 = intl4.string(getSystemLocale.t["6Qbqxw"]);
     }
     items.push(stringResult3);
   }
   const length = items.filter((arg0) => null == arg0).length;
   let found = items.find((arg0) => null != arg0);
   if (found == null) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    found = intl5.string(getSystemLocale /* getSystemLocale */.t["+Gyklt"]);
+    const intl5 = getSystemLocale.intl;
+    found = intl5.string(getSystemLocale.t["+Gyklt"]);
   }
   let obj = { percentComplete: Math.max(3, 100 * length / totalSteps), subtitle: null, completed: null };
   if (length < totalSteps) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    const intl7 = getSystemLocale.intl;
     obj = { currStep: null, total: null, step: null };
     obj[0] = length + 1;
     obj[1] = totalSteps;
     obj[2] = found;
-    let formatToPlainStringResult = intl7.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zhHW5c, obj);
+    let formatToPlainStringResult = intl7.formatToPlainString(getSystemLocale.t.zhHW5c, obj);
   } else {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
-    formatToPlainStringResult = intl6.string(getSystemLocale /* getSystemLocale */.t["+Gyklt"]);
+    const intl6 = getSystemLocale.intl;
+    formatToPlainStringResult = intl6.string(getSystemLocale.t["+Gyklt"]);
   }
   obj[1] = formatToPlainStringResult;
   obj[2] = completed;

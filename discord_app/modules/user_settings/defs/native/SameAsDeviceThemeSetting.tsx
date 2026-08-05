@@ -9,8 +9,8 @@ import { handleSaveTheme } from "../../appearance/native/UserSettingsAppearanceT
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.c445ix);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.c445ix);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate() {
@@ -18,10 +18,10 @@ createToggle = {
   },
   useValue: function useSameAsDeviceThemeValue() {
     const items = [handleThemeChange];
-    return initialize /* initialize */.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
+    return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   onValueChange: function onSameAsDeviceThemeValueChange(arg0) {
-    const obj = handleSaveTheme /* handleSaveTheme */;
+    const obj = handleSaveTheme;
     if (arg0) {
       const result = obj.enableSameAsDeviceTheme();
     } else {
@@ -29,8 +29,8 @@ createToggle = {
     }
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["+tBsvs"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["+tBsvs"]);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

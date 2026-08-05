@@ -25,7 +25,7 @@ function PriceOptionRow(selected) {
   selected = selected.selected;
   ({ price, onPress } = selected);
   const tmp = createCacheKey();
-  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative;
   const radioA11yNative = obj.useRadioA11yNative({ selected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const items = [tmp.rowContainer, ];
@@ -47,8 +47,8 @@ function PriceOptionRow(selected) {
   obj2[0] = tmp2Result.formatPrice(price, CurrencyCodes.USD);
   tmp2Result = tmp2(14367);
   obj2[1] = tmp2Result.formatPlanInterval({ interval: SubscriptionIntervalTypes.MONTH, interval_count: 1 });
-  obj1[2] = intl.format(getSystemLocale /* getSystemLocale */.t.CgmBaG, obj2);
-  items1[1] = closure_9(Text /* Text */.Text, obj1);
+  obj1[2] = intl.format(getSystemLocale.t.CgmBaG, obj2);
+  items1[1] = closure_9(Text.Text, obj1);
   obj[4] = items1;
   return tmp5(tmp7, obj);
 }

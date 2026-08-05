@@ -7,13 +7,13 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["sSY+mD"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["sSY+mD"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: function useProfileColorsSettingValue() {
     const items = [maybeApplyNoTextColorForLightCustomTheme];
-    return initialize /* initialize */.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
+    return initialize.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
   },
   onValueChange: require("setFontSize").toggleSyncProfileThemeWithUserTheme
 };

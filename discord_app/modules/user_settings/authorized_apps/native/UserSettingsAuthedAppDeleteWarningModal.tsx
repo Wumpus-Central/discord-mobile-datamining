@@ -16,9 +16,9 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
   let scopes;
   application = application.application;
   ({ scopes, onDelete } = application);
-  let obj = isSocialLayerApplication /* isSocialLayerApplication */;
+  let obj = isSocialLayerApplication;
   const result = obj.isSocialLayerSDKAuthorization(application, scopes);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   if (result) {
     obj = { applicationName: null };
     obj[0] = application.name;
@@ -63,14 +63,14 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
   const obj6 = { children: null };
   const obj7 = { variant: "destructive", text: null, onPress: null };
   const intl5 = tmp(1236).intl;
-  obj7[1] = intl5.string(getSystemLocale /* getSystemLocale */.t.xUqheM);
+  obj7[1] = intl5.string(getSystemLocale.t.xUqheM);
   obj7[2] = onDelete;
-  const items1 = [callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj7, "confirm"), ];
+  const items1 = [callback(getAlertModalItemKey.AlertActionButton, obj7, "confirm"), ];
   const obj8 = { variant: "secondary", text: null };
   const intl6 = tmp(1236).intl;
-  obj8[1] = intl6.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
-  items1[1] = callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj8, "cancel");
+  obj8[1] = intl6.string(getSystemLocale.t["ETE/oC"]);
+  items1[1] = callback(getAlertModalItemKey.AlertActionButton, obj8, "cancel");
   obj6[0] = items1;
   obj5[3] = closure_5(closure_4, obj6);
-  return callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, obj5);
+  return callback(getAlertModalItemKey.AlertModal, obj5);
 };

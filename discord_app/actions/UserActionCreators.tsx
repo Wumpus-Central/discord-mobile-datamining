@@ -381,11 +381,11 @@ export const acceptAgreements = function acceptAgreements() {
   }
   let obj = TrackedHTTPUtils;
   obj = { url: Endpoints.USER_AGREEMENTS, trackedActionData: null, body: null, oldFormErrors: true, rejectWithError: null };
-  obj = { event: ImpressionNames /* ImpressionNames */.NetworkActionNames.USER_ACCEPT_AGREEMENTS };
+  obj = { event: ImpressionNames.NetworkActionNames.USER_ACCEPT_AGREEMENTS };
   obj[1] = obj;
   obj[2] = { terms: flag, privacy: flag2 };
-  obj[4] = sendRequest /* sendRequest */.rejectWithMigratedError();
-  const obj4 = sendRequest /* sendRequest */;
+  obj[4] = sendRequest.rejectWithMigratedError();
+  const obj4 = sendRequest;
   return obj.patch(obj).then(() => true, () => false);
 };
 export const setFlag = function setFlag(arg0, arg1) {
@@ -397,9 +397,9 @@ export const setFlag = function setFlag(arg0, arg1) {
   } else {
     tmp4 = flags & ~arg0;
   }
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   const obj = { url: Endpoints.ME, oldFormErrors: true, body: { flags: tmp4 }, rejectWithError: null };
-  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[3] = sendRequest.rejectWithMigratedError();
   return HTTP.patch(obj);
 };
 export const getUser = function getUser(arg0) {

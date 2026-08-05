@@ -54,10 +54,10 @@ const result = require("get ActivityIndicator").fileFinishedImporting("component
 export default function PremiumBillingInfo(subscription) {
   subscription = subscription.subscription;
   const tmp = createCacheKey();
-  let obj = createSubscriptionInvoicePreview /* createSubscriptionInvoicePreview */;
+  let obj = createSubscriptionInvoicePreview;
   obj = { subscriptionId: subscription.id, renewal: true, applyEntitlements: true, analyticsLocations: context(), analyticsLocation: QUICK_SWITCHER.PREMIUM_BILLING_INFO };
   const first = callback(obj.useFetchSubscriptionInvoicePreview(obj), 1)[0];
-  createSubscriptionInvoicePreview /* createSubscriptionInvoicePreview */;
+  createSubscriptionInvoicePreview;
   if (null == first) {
     return null;
   } else {

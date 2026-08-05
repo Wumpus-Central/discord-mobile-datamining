@@ -21,7 +21,7 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
       let tmp4 = require;
       let tmp5 = dependencyMap;
       let tmp6 = nextResult;
-      let tmp7 = knownExperimentConfigs /* knownExperimentConfigs */.knownExperimentConfigs[tmp3.experiment];
+      let tmp7 = knownExperimentConfigs.knownExperimentConfigs[tmp3.experiment];
       let obj2 = tmp7;
       if (tmp7.definition.name !== tmp3.experiment) {
         let _Error = Error;

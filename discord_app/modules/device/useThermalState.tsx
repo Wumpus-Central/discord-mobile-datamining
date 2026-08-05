@@ -40,7 +40,7 @@ export default function useThermalState() {
       }
       tmp11Result = tmp11(500);
     }
-    obj3 = set /* set */;
+    obj3 = set;
     tmp11 = require;
   }
   return UNHANDLED;
@@ -82,7 +82,7 @@ export const getThermalState = function getThermalState() {
       }
       tmp11Result = tmp11(500);
     }
-    obj3 = set /* set */;
+    obj3 = set;
     tmp11 = require;
   }
   return UNHANDLED;

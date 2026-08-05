@@ -11,7 +11,7 @@ const memoResult = importAllResult.memo(() => {
   let wrapperDimensions;
   const context = importAllResult.useContext(context);
   ({ mode, wrapperDimensions } = context);
-  return jsx(BaseActivityPanelSystemUIManager /* BaseActivityPanelSystemUIManager */.BaseActivityPanelSystemUIManager, { mode, isWindowLandscape: wrapperDimensions.isWindowLandscape });
+  return jsx(BaseActivityPanelSystemUIManager.BaseActivityPanelSystemUIManager, { mode, isWindowLandscape: wrapperDimensions.isWindowLandscape });
 });
 const result = require("context").fileFinishedImporting("modules/frames/panel/native/FramePanelSystemUIManager.tsx");
 

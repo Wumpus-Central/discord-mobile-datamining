@@ -14,7 +14,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
   getComponent() {
-    return CollectiblesShopViewAllCategoryItemsScreen /* CollectiblesShopViewAllCategoryItemsScreen */.default;
+    return CollectiblesShopViewAllCategoryItemsScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);

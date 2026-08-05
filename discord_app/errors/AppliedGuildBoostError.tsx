@@ -16,10 +16,10 @@ class AppliedGuildBoostError extends tmp2 {
   }
 }
 AppliedGuildBoostError.prototype["_getMessageFromRateLimit"] = function _getMessageFromRateLimit(body) {
-  let obj = resetCache /* resetCache */;
+  let obj = resetCache;
   const diffAsUnitsResult = obj.diffAsUnits(0, body.body.retry_after * set.Millis.SECOND);
-  obj = { days: getSystemLocale /* getSystemLocale */.t["iXc/Ib"], hours: getSystemLocale /* getSystemLocale */.t.WW9P57, minutes: getSystemLocale /* getSystemLocale */.t.I7rYev };
-  return resetCache /* resetCache */.unitsAsStrings(diffAsUnitsResult, obj);
+  obj = { days: getSystemLocale.t["iXc/Ib"], hours: getSystemLocale.t.WW9P57, minutes: getSystemLocale.t.I7rYev };
+  return resetCache.unitsAsStrings(diffAsUnitsResult, obj);
 };
 const result = require("set").fileFinishedImporting("errors/AppliedGuildBoostError.tsx");
 

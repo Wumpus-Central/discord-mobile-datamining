@@ -42,7 +42,7 @@ export const getGuildIdAndVerifiedFromInvite = function getGuildIdAndVerifiedFro
   return obj;
 };
 export const generateViewId = function generateViewId() {
-  return v1 /* v1 */.v4();
+  return v1.v4();
 };
 export const trackGameProfileOpen = function trackGameProfileOpen(viewId) {
   let authorId;

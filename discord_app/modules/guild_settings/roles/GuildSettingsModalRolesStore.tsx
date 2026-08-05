@@ -111,16 +111,16 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(require("d
       const moveItemFromToResult = calculatePositionDeltas.moveItemFromTo(_null, from, to);
       _null = moveItemFromToResult;
       if (moveItemFromToResult[from] !== _null[from]) {
-        const AccessibilityAnnouncer2 = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        const AccessibilityAnnouncer2 = AccessibilityAnnouncer.AccessibilityAnnouncer;
+        const intl2 = getSystemLocale.intl;
         const obj = { from: null, to: null };
         obj[0] = from + 1;
         obj[1] = to + 1;
-        AccessibilityAnnouncer2.announce(intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["+tmElp"], obj));
+        AccessibilityAnnouncer2.announce(intl2.formatToPlainString(getSystemLocale.t["+tmElp"], obj));
       } else {
-        const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        AccessibilityAnnouncer.announce(intl.string(getSystemLocale /* getSystemLocale */.t.WaxXjc));
+        const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
+        const intl = getSystemLocale.intl;
+        AccessibilityAnnouncer.announce(intl.string(getSystemLocale.t.WaxXjc));
       }
     }
   },

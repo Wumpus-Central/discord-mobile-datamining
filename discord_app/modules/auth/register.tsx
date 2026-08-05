@@ -297,7 +297,7 @@ function registerFull(giftCodeSKUId) {
   }
   obj2[11] = checked;
   obj1[1] = obj2;
-  let obj3 = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_REGISTER, properties: null };
+  let obj3 = { event: encodeProperties.NetworkActionNames.USER_REGISTER, properties: null };
   const obj4 = { invite_code: invite, used_username_suggestion: prop, promotional_email_opt_in: null, promotional_email_pre_checked: null, was_unique_username: true };
   let checked1;
   if (promoEmailConsent != null) {

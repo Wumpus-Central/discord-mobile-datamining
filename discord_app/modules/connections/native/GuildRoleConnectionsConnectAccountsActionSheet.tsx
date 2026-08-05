@@ -52,16 +52,16 @@ function PlatformIcon(platformType) {
   const value = obj.get(platformType.platformType);
   const tmp3 = useTheme();
   const tmp5 = require;
-  const obj2 = getAvatarURL /* getAvatarURL */;
+  const obj2 = getAvatarURL;
   const icon = value.icon;
-  const source = obj2.makeSource(AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(tmp3) ? icon.lightPNG : icon.darkPNG);
+  const source = obj2.makeSource(AccessibilityAnnouncer.isThemeLight(tmp3) ? icon.lightPNG : icon.darkPNG);
   obj = { source, style: tmp.platformIcon, disableColor: true };
   return callback2(tmp5(1297).Icon, obj);
 }
 function ChannelName(channel) {
   channel = channel.channel;
   const tmp = createCacheKey();
-  let obj = getChannelIcon /* getChannelIcon */;
+  let obj = getChannelIcon;
   const channelIcon = obj.getChannelIcon(channel);
   obj = { style: items, children: null };
   items = [tmp.channelName, channel.style];
@@ -76,7 +76,7 @@ function ChannelName(channel) {
   const tmp5 = computeChannelName(channel);
   const tmp6 = closure_30;
   const tmp7 = closure_8;
-  items1[1] = callback2(Text /* Text */.Text, { variant: "heading-lg/semibold", color: "text-default", style: tmp.channelNameText, lineClamp: 1, children: computeChannelName(channel) });
+  items1[1] = callback2(Text.Text, { variant: "heading-lg/semibold", color: "text-default", style: tmp.channelNameText, lineClamp: 1, children: computeChannelName(channel) });
   obj[1] = items1;
   return tmp6(tmp7, obj);
 }
@@ -92,23 +92,23 @@ function ConnectionsCheck(result) {
   } else {
     if (null != description) {
       if (constants2.LESS_THAN === operator) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
+        const intl = getSystemLocale.intl;
         let obj = { description: null, count: null };
         obj[0] = description;
         const _Math = Math;
         const _Number = Number;
         obj[1] = Math.max(0, Number(value) - 1);
-        let formatResult = intl.format(getSystemLocale /* getSystemLocale */.t["2p7dA3"], obj);
+        let formatResult = intl.format(getSystemLocale.t["2p7dA3"], obj);
       } else {
         formatResult = description;
         if (tmp16.GREATER_THAN === operator) {
-          const intl2 = getSystemLocale /* getSystemLocale */.intl;
+          const intl2 = getSystemLocale.intl;
           obj = { description: null, count: null };
           obj[0] = description;
           const _Math2 = Math;
           const _Number2 = Number;
           obj[1] = Math.max(0, Number(value) + 1);
-          formatResult = intl2.format(getSystemLocale /* getSystemLocale */.t["2p7dA3"], obj);
+          formatResult = intl2.format(getSystemLocale.t["2p7dA3"], obj);
         }
       }
     } else {
@@ -126,7 +126,7 @@ function ConnectionsCheck(result) {
       } else {
         return null;
       }
-      obj = officialApplicationIds /* officialApplicationIds */;
+      obj = officialApplicationIds;
       const obj1 = { connectionType: null, connectionMetadataField: null, operator: null, operatorText: null, value: null };
       obj1[0] = connectionType;
       obj1[1] = connectionMetadataField;
@@ -145,7 +145,7 @@ function ConnectionsCheck(result) {
       obj2[1] = str;
       obj2[2] = tmp.connectionsCheck;
       obj2[3] = formatResult;
-      tmp21Result = closure_29(Text /* Text */.Text, obj2);
+      tmp21Result = closure_29(Text.Text, obj2);
       const tmp21 = closure_29;
     }
     return tmp21Result;

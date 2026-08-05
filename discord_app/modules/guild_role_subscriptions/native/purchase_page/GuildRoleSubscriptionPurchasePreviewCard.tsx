@@ -23,9 +23,9 @@ function ContentHeader(arg0) {
   const tmp = createCacheKey();
   let obj = { variant: "text-xs/bold", color: "text-muted", style: tmp.contentHeader, children: null };
   obj = { variant: "text-xs/bold", color: "text-default", style: tmp.contentHeader, children: count };
-  const items = [callback2(Text /* Text */.Text, obj), " ", title];
+  const items = [callback2(Text.Text, obj), " ", title];
   obj[3] = items;
-  return callback3(Text /* Text */.Text, obj);
+  return callback3(Text.Text, obj);
 }
 function Separator() {
   return callback2(closure_6, { style: createCacheKey().separator });
@@ -47,11 +47,11 @@ function EmojiGallery(arg0) {
     obj = { variant: "text-sm/bold", color: "text-default", children: null };
     const items1 = ["+", diff];
     obj[2] = items1;
-    obj[1] = callback3(Text /* Text */.Text, obj);
+    obj[1] = callback3(Text.Text, obj);
     tmp3Result = tmp3(tmp4, obj, "andMore");
   }
   items[tmp7] = tmp3Result;
-  obj[1] = closure_8(GappedList /* GappedList */.GappedList, { gap: 18, children: items });
+  obj[1] = closure_8(GappedList.GappedList, { gap: 18, children: items });
   return closure_8(closure_6, obj);
 }
 function BenefitShowCase(arg0) {
@@ -62,16 +62,16 @@ function BenefitShowCase(arg0) {
   if (typeof title === "string") {
     let obj = { variant: "text-md/semibold", color: "text-default", children: null };
     obj[2] = title;
-    tmp3 = callback2(Text /* Text */.Text, obj);
+    tmp3 = callback2(Text.Text, obj);
   }
   const children = [tmp3, ];
   let tmpResult = null != description;
   if (tmpResult) {
     obj = { children: null };
-    const items1 = [callback2(Button /* Button */.Spacer, { size: 2 }), ];
+    const items1 = [callback2(Button.Spacer, { size: 2 }), ];
     obj = { variant: "text-sm/medium", color: "interactive-text-default", children: null };
     obj[2] = description;
-    items1[1] = callback2(Text /* Text */.Text, obj);
+    items1[1] = callback2(Text.Text, obj);
     obj[0] = items1;
     tmpResult = tmp(closure_10, obj);
   }
@@ -107,9 +107,9 @@ function ShowAllButton(onPress) {
   let obj = { onPress: onPress.onPress, style: tmp.showAllButton, activeOpacity: 0.5, children: null };
   obj = { children: null };
   obj = { variant: "text-sm/semibold", color: "interactive-text-hover", style: { marginTop: -1 }, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["hub6t/"]);
-  const items = [callback2(Text /* Text */.Text, obj), callback2(Button /* Button */.Spacer, { size: 3 }), callback2(closure_6, { style: tmp.showAllButtonUnderline })];
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["hub6t/"]);
+  const items = [callback2(Text.Text, obj), callback2(Button.Spacer, { size: 3 }), callback2(closure_6, { style: tmp.showAllButtonUnderline })];
   obj[0] = items;
   obj[3] = callback3(closure_6, obj);
   return callback2(closure_5, obj);

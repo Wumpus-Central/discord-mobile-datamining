@@ -154,7 +154,7 @@ let closure_14 = importAllResult.memo((joinRequest) => {
   joinRequest = joinRequest.joinRequest;
   ({ actionedAt, actionedByUser, rejectionReason, applicationStatus } = joinRequest);
   const tmp = callback3();
-  if (applicationStatus === MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.SUBMITTED) {
+  if (applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED) {
     if (null != joinRequest.interviewChannelId) {
       let obj = { style: null, children: null };
       obj[0] = tmp.statusContainer;
@@ -180,7 +180,7 @@ let closure_14 = importAllResult.memo((joinRequest) => {
       return callback2(View, obj);
     }
   }
-  if (MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
+  if (MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
     const obj5 = { style: null, children: null };
     obj5[0] = tmp.statusContainer;
     const obj6 = { style: null, children: null };
@@ -354,7 +354,7 @@ let closure_16 = importAllResult.memo((arg0) => {
   ({ field, isLastField } = arg0);
   const tmp = callback3();
   const field_type = field.field_type;
-  if (MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.VerificationFormFieldTypes.TERMS === field_type) {
+  if (MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS === field_type) {
     const items = [, , ];
     ({ termsField: arr3[0], formResponse: arr3[1] } = tmp);
     let formResponseMargin = null;
@@ -426,33 +426,33 @@ let closure_17 = importAllResult.memo((arg0) => {
   const tmp = callback3();
   let obj = { children: null };
   obj = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.accountInfoLabel, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["ldCE/p"]);
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["ldCE/p"]);
+  const items = [callback(Text.Text, obj), ];
   obj = { style: tmp.accountInfoContainer, children: null };
   const obj1 = { style: tmp.accountInfoRow, children: null };
   const obj2 = { variant: "text-sm/semibold", color: "text-strong", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.SaDIpL);
-  const items1 = [callback(Text /* Text */.Text, obj2), ];
+  const intl2 = getSystemLocale.intl;
+  obj2[2] = intl2.string(getSystemLocale.t.SaDIpL);
+  const items1 = [callback(Text.Text, obj2), ];
   const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: null };
-  let obj6 = resetCache /* resetCache */;
+  let obj6 = resetCache;
   let obj7 = DISCORD_EPOCH;
   obj3[2] = obj6.dateFormat(new Date(obj7.extractTimestamp(user.id)), "LL");
-  items1[1] = callback(Text /* Text */.Text, obj3);
+  items1[1] = callback(Text.Text, obj3);
   obj1[1] = items1;
   const items2 = [callback2(View, obj1), callback(View, { style: tmp.divider }), ];
   const obj5 = { style: tmp.accountInfoRow, children: null };
   obj6 = { variant: "text-sm/semibold", color: "text-strong", children: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj6[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["Vt4cn+"]);
-  const items3 = [callback(Text /* Text */.Text, obj6), ];
+  const intl3 = getSystemLocale.intl;
+  obj6[2] = intl3.string(getSystemLocale.t["Vt4cn+"]);
+  const items3 = [callback(Text.Text, obj6), ];
   obj7 = { variant: "text-sm/normal", color: "text-subtle", children: null };
   const date = new Date(obj7.extractTimestamp(user.id));
   const obj4 = { style: tmp.divider };
-  const obj13 = resetCache /* resetCache */;
+  const obj13 = resetCache;
   obj7[2] = obj13.dateFormat(new Date(joinRequest.createdAt), "LL");
-  items3[1] = callback(Text /* Text */.Text, obj7);
+  items3[1] = callback(Text.Text, obj7);
   obj5[1] = items3;
   items2[2] = callback2(View, obj5);
   obj[1] = items2;

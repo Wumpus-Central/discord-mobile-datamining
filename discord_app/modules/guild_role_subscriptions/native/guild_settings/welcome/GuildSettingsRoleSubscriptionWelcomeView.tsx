@@ -38,14 +38,14 @@ function ApplicationStatusNotice(arg0) {
     return callback(closure_6, obj);
   } else {
     if (isApplicationPending) {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      requestRejectedNoticeText = intl2.string(getSystemLocale /* getSystemLocale */.t.OrkTBn);
+      const intl2 = getSystemLocale.intl;
+      requestRejectedNoticeText = intl2.string(getSystemLocale.t.OrkTBn);
     } else if (null == requestRejectedNoticeText) {
       requestRejectedNoticeText = null;
       if (null != reapplyNoticeText) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
+        const intl = getSystemLocale.intl;
         requestRejectedNoticeText = reapplyNoticeText;
-        const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["YKw/NQ"]);
+        const stringResult = intl.string(getSystemLocale.t["YKw/NQ"]);
       }
     }
     let tmp7 = null;

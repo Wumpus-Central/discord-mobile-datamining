@@ -324,7 +324,7 @@ const mediaEngineStatsStore = new MediaEngineStatsStore(require("dispatcher"), {
       if (null == mediaEngineConnectionId) {
         return false;
       } else {
-        const ownerId = isStreamKey /* isStreamKey */.decodeStreamKey(streamKey).ownerId;
+        const ownerId = isStreamKey.decodeStreamKey(streamKey).ownerId;
         let tmp11;
         if (dependencyMap2[mediaEngineConnectionId] != null) {
           tmp11 = tmp10[ownerId];

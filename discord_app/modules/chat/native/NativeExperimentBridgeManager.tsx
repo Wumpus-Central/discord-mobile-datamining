@@ -15,8 +15,8 @@ function syncYYTextReplacementExperiment() {
     if (NSUserDefaultsBridge != null) {
       const setShouldEnableYYTextReplacement = NSUserDefaultsBridge.setShouldEnableYYTextReplacement;
       if (setShouldEnableYYTextReplacement != null) {
-        const result = setShouldEnableYYTextReplacement(shouldEnableYYTextReplacement /* shouldEnableYYTextReplacement */.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
-        const tmpResult = shouldEnableYYTextReplacement /* shouldEnableYYTextReplacement */;
+        const result = setShouldEnableYYTextReplacement(shouldEnableYYTextReplacement.shouldEnableYYTextReplacement({ location: "NativeExperimentBridgeManager" }));
+        const tmpResult = shouldEnableYYTextReplacement;
       }
     }
   }
@@ -40,7 +40,7 @@ function updateIOSExperiments() {
       const result1 = setShouldFixPushNotificationRawPayload(tmpResult.isIOSPushNotificationRawPayloadFixExperimentEnabled());
     }
   }
-  obj = set /* set */;
+  obj = set;
   if (obj4.getConfig({ location: "NativeExperimentBridgeManager" }).enabled) {
     const RNVVideo = tmp6.RNVVideo;
     if (RNVVideo != null) {
@@ -68,25 +68,25 @@ function updateAndroidExperiments() {
     obj[0] = obj;
     obj[1] = obj3.getId();
     obj[2] = tmp3;
-    obj[3] = sendRequest /* sendRequest */.getAPIBaseURL();
+    obj[3] = sendRequest.getAPIBaseURL();
     const _HermesInternal = HermesInternal;
     obj[4] = "?limit=" + tmp4;
     obj[5] = tmp5;
     obj[6] = tmp6;
     const result = NativeCacheModule.setItem("notificationNetworkRequest", JSON.stringify(obj));
-    const obj6 = sendRequest /* sendRequest */;
+    const obj6 = sendRequest;
   }
 }
 let prototype = function NativeExperimentBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isIOS()) {
     let tmp5 = updateIOSExperiments;
   } else {
-    tmp5 = set /* set */.isAndroid() ? updateAndroidExperiments : (() => {
+    tmp5 = set.isAndroid() ? updateAndroidExperiments : (() => {
 
     });
-    const tmp3Result = set /* set */;
+    const tmp3Result = set;
   }
   applyArgumentsResult.handleUpdate = tmp5;
   obj = { APP_STATE_UPDATE: syncYYTextReplacementExperiment, POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };

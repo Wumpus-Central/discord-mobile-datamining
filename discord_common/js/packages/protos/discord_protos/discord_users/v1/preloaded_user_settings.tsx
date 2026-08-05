@@ -329,7 +329,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
 prototype["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, writeUnknownFields) {
   if (versions.versions) {
     let joined25 = require;
-    const Versions = create /* create */.Versions;
+    const Versions = create.Versions;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = Versions.internalBinaryWrite(versions.versions, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Versions.internalBinaryWrite(versions.versions, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -1083,7 +1083,7 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(channels, tag, 
     const tagResult4 = tag.tag(3, 01307__.WireType.Varint);
   }
   if (channels.guildRecentsDismissedAt) {
-    const Timestamp = now /* now */.Timestamp;
+    const Timestamp = now.Timestamp;
     const tagResult5 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined2 = Timestamp.internalBinaryWrite(channels.guildRecentsDismissedAt, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = Timestamp.internalBinaryWrite(channels.guildRecentsDismissedAt, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -1215,7 +1215,7 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       if (1 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let UInt64Value2 = defineProperty /* defineProperty */.UInt64Value;
+        let UInt64Value2 = defineProperty.UInt64Value;
         let tmp34 = UInt64Value2;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -1223,7 +1223,7 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (2 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let StringValue = defineProperty /* defineProperty */.StringValue;
+        let StringValue = defineProperty.StringValue;
         let tmp29 = StringValue;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -1231,7 +1231,7 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+        let UInt64Value = defineProperty.UInt64Value;
         let tmp24 = UInt64Value;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -1274,19 +1274,19 @@ prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype6["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUnknownFields) {
   if (id.id) {
-    const UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+    const UInt64Value = defineProperty.UInt64Value;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = UInt64Value.internalBinaryWrite(id.id, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = UInt64Value.internalBinaryWrite(id.id, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (id.name) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = StringValue.internalBinaryWrite(id.name, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = StringValue.internalBinaryWrite(id.name, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (id.color) {
-    const UInt64Value2 = defineProperty /* defineProperty */.UInt64Value;
+    const UInt64Value2 = defineProperty.UInt64Value;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined2 = UInt64Value2.internalBinaryWrite(id.color, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = UInt64Value2.internalBinaryWrite(id.color, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -1315,7 +1315,7 @@ const items3 = [
     name: "name",
     kind: "message",
     T() {
-      return defineProperty /* defineProperty */.StringValue;
+      return defineProperty.StringValue;
     }
   },
   {
@@ -1524,7 +1524,7 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       if (1 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let StringValue = defineProperty /* defineProperty */.StringValue;
+        let StringValue = defineProperty.StringValue;
         let tmp24 = StringValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -1567,7 +1567,7 @@ prototype8["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
 };
 prototype8["internalBinaryWrite"] = function internalBinaryWrite(notificationSoundPackId, tag, writeUnknownFields) {
   if (notificationSoundPackId.notificationSoundPackId) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = StringValue.internalBinaryWrite(notificationSoundPackId.notificationSoundPackId, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = StringValue.internalBinaryWrite(notificationSoundPackId.notificationSoundPackId, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -1797,7 +1797,7 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         let tmp38 = require;
         let tmp39 = dependencyMap;
-        let StringValue = defineProperty /* defineProperty */.StringValue;
+        let StringValue = defineProperty.StringValue;
         let tmp40 = StringValue;
         let tmp41 = pos;
         let tmp42 = readUnknownField;
@@ -1805,7 +1805,7 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (3 === tmp5) {
         let tmp33 = require;
         let tmp34 = dependencyMap;
-        let Timestamp3 = now /* now */.Timestamp;
+        let Timestamp3 = now.Timestamp;
         let tmp35 = Timestamp3;
         let tmp36 = pos;
         let tmp37 = readUnknownField;
@@ -1813,7 +1813,7 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (4 === tmp5) {
         let tmp28 = require;
         let tmp29 = dependencyMap;
-        let Timestamp2 = now /* now */.Timestamp;
+        let Timestamp2 = now.Timestamp;
         let tmp30 = Timestamp2;
         let tmp31 = pos;
         let tmp32 = readUnknownField;
@@ -1821,7 +1821,7 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (5 === tmp5) {
         let tmp23 = require;
         let tmp24 = dependencyMap;
-        let Timestamp = now /* now */.Timestamp;
+        let Timestamp = now.Timestamp;
         let tmp25 = Timestamp;
         let tmp26 = pos;
         let tmp27 = readUnknownField;
@@ -1914,25 +1914,25 @@ prototype10["internalBinaryWrite"] = function internalBinaryWrite(dismissedConte
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   if (dismissedContents.lastDismissedOutboundPromotionStartDate) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined = StringValue.internalBinaryWrite(dismissedContents.lastDismissedOutboundPromotionStartDate, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = StringValue.internalBinaryWrite(dismissedContents.lastDismissedOutboundPromotionStartDate, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (dismissedContents.premiumTier0ModalDismissedAt) {
-    const Timestamp = now /* now */.Timestamp;
+    const Timestamp = now.Timestamp;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined1 = Timestamp.internalBinaryWrite(dismissedContents.premiumTier0ModalDismissedAt, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = Timestamp.internalBinaryWrite(dismissedContents.premiumTier0ModalDismissedAt, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (dismissedContents.guildOnboardingUpsellDismissedAt) {
-    const Timestamp2 = now /* now */.Timestamp;
+    const Timestamp2 = now.Timestamp;
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined2 = Timestamp2.internalBinaryWrite(dismissedContents.guildOnboardingUpsellDismissedAt, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = Timestamp2.internalBinaryWrite(dismissedContents.guildOnboardingUpsellDismissedAt, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (dismissedContents.safetyUserSentimentNoticeDismissedAt) {
-    const Timestamp3 = now /* now */.Timestamp;
+    const Timestamp3 = now.Timestamp;
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined3 = Timestamp3.internalBinaryWrite(dismissedContents.safetyUserSentimentNoticeDismissedAt, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = Timestamp3.internalBinaryWrite(dismissedContents.safetyUserSentimentNoticeDismissedAt, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -2322,7 +2322,7 @@ prototype13["internalBinaryRead"] = function internalBinaryRead(pos) {
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
-    const FloatValue = defineProperty /* defineProperty */.FloatValue;
+    const FloatValue = defineProperty.FloatValue;
     obj.soundmojiVolume = FloatValue.internalBinaryRead(pos, pos.uint32(), arg2, obj.soundmojiVolume);
   }
   return obj;
@@ -2343,25 +2343,25 @@ prototype13["internalBinaryWrite"] = function internalBinaryWrite(videoBackgroun
     const internalBinaryWriteResult1 = tmp18.internalBinaryWrite(videoBackgroundFilterDesktop.videoBackgroundFilterDesktop.customAsset, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (videoBackgroundFilterDesktop.alwaysPreviewVideo) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult3 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined2 = BoolValue.internalBinaryWrite(videoBackgroundFilterDesktop.alwaysPreviewVideo, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = BoolValue.internalBinaryWrite(videoBackgroundFilterDesktop.alwaysPreviewVideo, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (videoBackgroundFilterDesktop.afkTimeout) {
-    const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+    const UInt32Value = defineProperty.UInt32Value;
     const tagResult4 = tag.tag(6, 01307__.WireType.LengthDelimited);
     const joined3 = UInt32Value.internalBinaryWrite(videoBackgroundFilterDesktop.afkTimeout, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = UInt32Value.internalBinaryWrite(videoBackgroundFilterDesktop.afkTimeout, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (videoBackgroundFilterDesktop.streamNotificationsEnabled) {
-    const BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue2 = defineProperty.BoolValue;
     const tagResult5 = tag.tag(7, 01307__.WireType.LengthDelimited);
     const joined4 = BoolValue2.internalBinaryWrite(videoBackgroundFilterDesktop.streamNotificationsEnabled, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult4 = BoolValue2.internalBinaryWrite(videoBackgroundFilterDesktop.streamNotificationsEnabled, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (videoBackgroundFilterDesktop.nativePhoneIntegrationEnabled) {
-    const BoolValue3 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue3 = defineProperty.BoolValue;
     const tagResult6 = tag.tag(8, 01307__.WireType.LengthDelimited);
     const joined5 = BoolValue3.internalBinaryWrite(videoBackgroundFilterDesktop.nativePhoneIntegrationEnabled, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = BoolValue3.internalBinaryWrite(videoBackgroundFilterDesktop.nativePhoneIntegrationEnabled, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -2372,13 +2372,13 @@ prototype13["internalBinaryWrite"] = function internalBinaryWrite(videoBackgroun
     const internalBinaryWriteResult6 = tmp44.internalBinaryWrite(videoBackgroundFilterDesktop.soundboardSettings, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (videoBackgroundFilterDesktop.disableStreamPreviews) {
-    const BoolValue4 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue4 = defineProperty.BoolValue;
     const tagResult8 = tag.tag(10, 01307__.WireType.LengthDelimited);
     const joined7 = BoolValue4.internalBinaryWrite(videoBackgroundFilterDesktop.disableStreamPreviews, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult7 = BoolValue4.internalBinaryWrite(videoBackgroundFilterDesktop.disableStreamPreviews, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (videoBackgroundFilterDesktop.soundmojiVolume) {
-    const FloatValue = defineProperty /* defineProperty */.FloatValue;
+    const FloatValue = defineProperty.FloatValue;
     const tagResult9 = tag.tag(11, 01307__.WireType.LengthDelimited);
     const joined8 = FloatValue.internalBinaryWrite(videoBackgroundFilterDesktop.soundmojiVolume, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult8 = FloatValue.internalBinaryWrite(videoBackgroundFilterDesktop.soundmojiVolume, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -2458,7 +2458,7 @@ const items10 = [
     name: "disable_stream_previews",
     kind: "message",
     T() {
-      return defineProperty /* defineProperty */.BoolValue;
+      return defineProperty.BoolValue;
     }
   },
   {
@@ -3015,7 +3015,7 @@ prototype17["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let BoolValue3 = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue3 = defineProperty.BoolValue;
         let tmp34 = BoolValue3;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -3023,7 +3023,7 @@ prototype17["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue2 = defineProperty.BoolValue;
         let tmp29 = BoolValue2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -3031,7 +3031,7 @@ prototype17["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let BoolValue = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue = defineProperty.BoolValue;
         let tmp24 = BoolValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -3074,19 +3074,19 @@ prototype17["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 };
 prototype17["internalBinaryWrite"] = function internalBinaryWrite(profanity, tag, writeUnknownFields) {
   if (profanity.profanity) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = BoolValue.internalBinaryWrite(profanity.profanity, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = BoolValue.internalBinaryWrite(profanity.profanity, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (profanity.sexualContent) {
-    const BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue2 = defineProperty.BoolValue;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = BoolValue2.internalBinaryWrite(profanity.sexualContent, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = BoolValue2.internalBinaryWrite(profanity.sexualContent, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (profanity.slurs) {
-    const BoolValue3 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue3 = defineProperty.BoolValue;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined2 = BoolValue3.internalBinaryWrite(profanity.slurs, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = BoolValue3.internalBinaryWrite(profanity.slurs, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3115,7 +3115,7 @@ const items14 = [
     name: "sexual_content",
     kind: "message",
     T() {
-      return defineProperty /* defineProperty */.BoolValue;
+      return defineProperty.BoolValue;
     }
   },
   {
@@ -3444,7 +3444,7 @@ prototype18["internalBinaryRead"] = function internalBinaryRead(pos) {
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     obj.includeGameMentionsInAutocomplete = BoolValue.internalBinaryRead(pos, pos.uint32(), arg2, obj.includeGameMentionsInAutocomplete);
   }
   return obj;
@@ -3455,25 +3455,25 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
   let length3;
   if (diversitySurrogate.diversitySurrogate) {
     let joined27 = require;
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = StringValue.internalBinaryWrite(diversitySurrogate.diversitySurrogate, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = StringValue.internalBinaryWrite(diversitySurrogate.diversitySurrogate, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.useRichChatInput) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = BoolValue.internalBinaryWrite(diversitySurrogate.useRichChatInput, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = BoolValue.internalBinaryWrite(diversitySurrogate.useRichChatInput, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.useThreadSidebar) {
-    const BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue2 = defineProperty.BoolValue;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined2 = BoolValue2.internalBinaryWrite(diversitySurrogate.useThreadSidebar, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = BoolValue2.internalBinaryWrite(diversitySurrogate.useThreadSidebar, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.renderSpoilers) {
-    const StringValue2 = defineProperty /* defineProperty */.StringValue;
+    const StringValue2 = defineProperty.StringValue;
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined3 = StringValue2.internalBinaryWrite(diversitySurrogate.renderSpoilers, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = StringValue2.internalBinaryWrite(diversitySurrogate.renderSpoilers, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3501,103 +3501,103 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
     } while (num6 < length2);
   }
   if (diversitySurrogate.viewImageDescriptions) {
-    const BoolValue3 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue3 = defineProperty.BoolValue;
     const tagResult6 = tag.tag(7, 01307__.WireType.LengthDelimited);
     const joined4 = BoolValue3.internalBinaryWrite(diversitySurrogate.viewImageDescriptions, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult4 = BoolValue3.internalBinaryWrite(diversitySurrogate.viewImageDescriptions, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.showCommandSuggestions) {
-    const BoolValue4 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue4 = defineProperty.BoolValue;
     const tagResult7 = tag.tag(8, 01307__.WireType.LengthDelimited);
     const joined5 = BoolValue4.internalBinaryWrite(diversitySurrogate.showCommandSuggestions, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = BoolValue4.internalBinaryWrite(diversitySurrogate.showCommandSuggestions, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.inlineAttachmentMedia) {
-    const BoolValue5 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue5 = defineProperty.BoolValue;
     const tagResult8 = tag.tag(9, 01307__.WireType.LengthDelimited);
     const joined6 = BoolValue5.internalBinaryWrite(diversitySurrogate.inlineAttachmentMedia, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult6 = BoolValue5.internalBinaryWrite(diversitySurrogate.inlineAttachmentMedia, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.inlineEmbedMedia) {
-    const BoolValue6 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue6 = defineProperty.BoolValue;
     const tagResult9 = tag.tag(10, 01307__.WireType.LengthDelimited);
     const joined7 = BoolValue6.internalBinaryWrite(diversitySurrogate.inlineEmbedMedia, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult7 = BoolValue6.internalBinaryWrite(diversitySurrogate.inlineEmbedMedia, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.gifAutoPlay) {
-    const BoolValue7 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue7 = defineProperty.BoolValue;
     const tagResult10 = tag.tag(11, 01307__.WireType.LengthDelimited);
     const joined8 = BoolValue7.internalBinaryWrite(diversitySurrogate.gifAutoPlay, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult8 = BoolValue7.internalBinaryWrite(diversitySurrogate.gifAutoPlay, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.renderEmbeds) {
-    const BoolValue8 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue8 = defineProperty.BoolValue;
     const tagResult11 = tag.tag(12, 01307__.WireType.LengthDelimited);
     const joined9 = BoolValue8.internalBinaryWrite(diversitySurrogate.renderEmbeds, tag.tag(12, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult9 = BoolValue8.internalBinaryWrite(diversitySurrogate.renderEmbeds, tag.tag(12, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.renderReactions) {
-    const BoolValue9 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue9 = defineProperty.BoolValue;
     const tagResult12 = tag.tag(13, 01307__.WireType.LengthDelimited);
     const joined10 = BoolValue9.internalBinaryWrite(diversitySurrogate.renderReactions, tag.tag(13, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult10 = BoolValue9.internalBinaryWrite(diversitySurrogate.renderReactions, tag.tag(13, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.animateEmoji) {
-    const BoolValue10 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue10 = defineProperty.BoolValue;
     const tagResult13 = tag.tag(14, 01307__.WireType.LengthDelimited);
     const joined11 = BoolValue10.internalBinaryWrite(diversitySurrogate.animateEmoji, tag.tag(14, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult11 = BoolValue10.internalBinaryWrite(diversitySurrogate.animateEmoji, tag.tag(14, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.animateStickers) {
-    const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+    const UInt32Value = defineProperty.UInt32Value;
     const tagResult14 = tag.tag(15, 01307__.WireType.LengthDelimited);
     const joined12 = UInt32Value.internalBinaryWrite(diversitySurrogate.animateStickers, tag.tag(15, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult12 = UInt32Value.internalBinaryWrite(diversitySurrogate.animateStickers, tag.tag(15, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.enableTtsCommand) {
-    const BoolValue11 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue11 = defineProperty.BoolValue;
     const tagResult15 = tag.tag(16, 01307__.WireType.LengthDelimited);
     const joined13 = BoolValue11.internalBinaryWrite(diversitySurrogate.enableTtsCommand, tag.tag(16, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult13 = BoolValue11.internalBinaryWrite(diversitySurrogate.enableTtsCommand, tag.tag(16, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.messageDisplayCompact) {
-    const BoolValue12 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue12 = defineProperty.BoolValue;
     const tagResult16 = tag.tag(17, 01307__.WireType.LengthDelimited);
     const joined14 = BoolValue12.internalBinaryWrite(diversitySurrogate.messageDisplayCompact, tag.tag(17, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult14 = BoolValue12.internalBinaryWrite(diversitySurrogate.messageDisplayCompact, tag.tag(17, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.explicitContentFilter) {
-    const UInt32Value2 = defineProperty /* defineProperty */.UInt32Value;
+    const UInt32Value2 = defineProperty.UInt32Value;
     const tagResult17 = tag.tag(19, 01307__.WireType.LengthDelimited);
     const joined15 = UInt32Value2.internalBinaryWrite(diversitySurrogate.explicitContentFilter, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult15 = UInt32Value2.internalBinaryWrite(diversitySurrogate.explicitContentFilter, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.viewNsfwGuilds) {
-    const BoolValue13 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue13 = defineProperty.BoolValue;
     const tagResult18 = tag.tag(20, 01307__.WireType.LengthDelimited);
     const joined16 = BoolValue13.internalBinaryWrite(diversitySurrogate.viewNsfwGuilds, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult16 = BoolValue13.internalBinaryWrite(diversitySurrogate.viewNsfwGuilds, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.convertEmoticons) {
-    const BoolValue14 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue14 = defineProperty.BoolValue;
     const tagResult19 = tag.tag(21, 01307__.WireType.LengthDelimited);
     const joined17 = BoolValue14.internalBinaryWrite(diversitySurrogate.convertEmoticons, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult17 = BoolValue14.internalBinaryWrite(diversitySurrogate.convertEmoticons, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.expressionSuggestionsEnabled) {
-    const BoolValue15 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue15 = defineProperty.BoolValue;
     const tagResult20 = tag.tag(22, 01307__.WireType.LengthDelimited);
     const joined18 = BoolValue15.internalBinaryWrite(diversitySurrogate.expressionSuggestionsEnabled, tag.tag(22, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult18 = BoolValue15.internalBinaryWrite(diversitySurrogate.expressionSuggestionsEnabled, tag.tag(22, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.viewNsfwCommands) {
-    const BoolValue16 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue16 = defineProperty.BoolValue;
     const tagResult21 = tag.tag(23, 01307__.WireType.LengthDelimited);
     const joined19 = BoolValue16.internalBinaryWrite(diversitySurrogate.viewNsfwCommands, tag.tag(23, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult19 = BoolValue16.internalBinaryWrite(diversitySurrogate.viewNsfwCommands, tag.tag(23, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.useLegacyChatInput) {
-    const BoolValue17 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue17 = defineProperty.BoolValue;
     const tagResult22 = tag.tag(24, 01307__.WireType.LengthDelimited);
     const joined20 = BoolValue17.internalBinaryWrite(diversitySurrogate.useLegacyChatInput, tag.tag(24, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult20 = BoolValue17.internalBinaryWrite(diversitySurrogate.useLegacyChatInput, tag.tag(24, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3614,7 +3614,7 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
     } while (num24 < length3);
   }
   if (diversitySurrogate.dmSpamFilter) {
-    const UInt32Value3 = defineProperty /* defineProperty */.UInt32Value;
+    const UInt32Value3 = defineProperty.UInt32Value;
     const tagResult24 = tag.tag(26, 01307__.WireType.LengthDelimited);
     const joined21 = UInt32Value3.internalBinaryWrite(diversitySurrogate.dmSpamFilter, tag.tag(26, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult21 = UInt32Value3.internalBinaryWrite(diversitySurrogate.dmSpamFilter, tag.tag(26, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3624,7 +3624,7 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
     const tagResult25 = tag.tag(27, 01307__.WireType.Varint);
   }
   if (diversitySurrogate.includeStickersInAutocomplete) {
-    const BoolValue18 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue18 = defineProperty.BoolValue;
     const tagResult26 = tag.tag(28, 01307__.WireType.LengthDelimited);
     const joined22 = BoolValue18.internalBinaryWrite(diversitySurrogate.includeStickersInAutocomplete, tag.tag(28, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult22 = BoolValue18.internalBinaryWrite(diversitySurrogate.includeStickersInAutocomplete, tag.tag(28, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3640,7 +3640,7 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
     const internalBinaryWriteResult24 = tmp24.internalBinaryWrite(diversitySurrogate.keywordFilterSettings, tag.tag(30, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (diversitySurrogate.includeSoundmojiInAutocomplete) {
-    const BoolValue19 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue19 = defineProperty.BoolValue;
     const tagResult29 = tag.tag(31, 01307__.WireType.LengthDelimited);
     const joined25 = BoolValue19.internalBinaryWrite(diversitySurrogate.includeSoundmojiInAutocomplete, tag.tag(31, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult25 = BoolValue19.internalBinaryWrite(diversitySurrogate.includeSoundmojiInAutocomplete, tag.tag(31, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3658,7 +3658,7 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
   if (diversitySurrogate.showMentionSuggestions) {
     joined27 = require;
     joined27 = dependencyMap;
-    const BoolValue20 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue20 = defineProperty.BoolValue;
     const tagResult32 = tag.tag(34, 01307__.WireType.LengthDelimited);
     joined27 = BoolValue20.internalBinaryWrite(diversitySurrogate.showMentionSuggestions, tag.tag(34, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult28 = BoolValue20.internalBinaryWrite(diversitySurrogate.showMentionSuggestions, tag.tag(34, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3674,7 +3674,7 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
   if (diversitySurrogate.isCrossDmSearchEnabled) {
     joined27 = require;
     joined27 = dependencyMap;
-    const BoolValue21 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue21 = defineProperty.BoolValue;
     const tagResult34 = tag.tag(36, 01307__.WireType.LengthDelimited);
     joined27 = BoolValue21.internalBinaryWrite(diversitySurrogate.isCrossDmSearchEnabled, tag.tag(36, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult30 = BoolValue21.internalBinaryWrite(diversitySurrogate.isCrossDmSearchEnabled, tag.tag(36, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3688,7 +3688,7 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
   if (diversitySurrogate.customSearchUrl) {
     joined27 = require;
     joined27 = dependencyMap;
-    const StringValue3 = defineProperty /* defineProperty */.StringValue;
+    const StringValue3 = defineProperty.StringValue;
     const tagResult36 = tag.tag(38, 01307__.WireType.LengthDelimited);
     joined27 = StringValue3.internalBinaryWrite(diversitySurrogate.customSearchUrl, tag.tag(38, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult31 = StringValue3.internalBinaryWrite(diversitySurrogate.customSearchUrl, tag.tag(38, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3696,7 +3696,7 @@ prototype18["internalBinaryWrite"] = function internalBinaryWrite(diversitySurro
   if (diversitySurrogate.includeGameMentionsInAutocomplete) {
     joined27 = require;
     joined27 = dependencyMap;
-    const BoolValue22 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue22 = defineProperty.BoolValue;
     const tagResult37 = tag.tag(39, 01307__.WireType.LengthDelimited);
     joined27 = BoolValue22.internalBinaryWrite(diversitySurrogate.includeGameMentionsInAutocomplete, tag.tag(39, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult32 = BoolValue22.internalBinaryWrite(diversitySurrogate.includeGameMentionsInAutocomplete, tag.tag(39, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3932,20 +3932,20 @@ prototype19["internalBinaryRead"] = function internalBinaryRead(pos) {
   }
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     obj.notifyFriendsOnComeOnline = BoolValue.internalBinaryRead(pos, pos.uint32(), arg2, obj.notifyFriendsOnComeOnline);
   }
   return obj;
 };
 prototype19["internalBinaryWrite"] = function internalBinaryWrite(showInAppNotifications, tag, writeUnknownFields) {
   if (showInAppNotifications.showInAppNotifications) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = BoolValue.internalBinaryWrite(showInAppNotifications.showInAppNotifications, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = BoolValue.internalBinaryWrite(showInAppNotifications.showInAppNotifications, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.notifyFriendsOnGoLive) {
-    const BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue2 = defineProperty.BoolValue;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = BoolValue2.internalBinaryWrite(showInAppNotifications.notifyFriendsOnGoLive, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = BoolValue2.internalBinaryWrite(showInAppNotifications.notifyFriendsOnGoLive, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3955,13 +3955,13 @@ prototype19["internalBinaryWrite"] = function internalBinaryWrite(showInAppNotif
     const tagResult2 = tag.tag(3, 01307__.WireType.Bit64);
   }
   if (showInAppNotifications.enableBurstReactionNotifications) {
-    const BoolValue3 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue3 = defineProperty.BoolValue;
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined2 = BoolValue3.internalBinaryWrite(showInAppNotifications.enableBurstReactionNotifications, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = BoolValue3.internalBinaryWrite(showInAppNotifications.enableBurstReactionNotifications, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.quietMode) {
-    const BoolValue4 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue4 = defineProperty.BoolValue;
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined3 = BoolValue4.internalBinaryWrite(showInAppNotifications.quietMode, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = BoolValue4.internalBinaryWrite(showInAppNotifications.quietMode, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -3983,97 +3983,97 @@ prototype19["internalBinaryWrite"] = function internalBinaryWrite(showInAppNotif
     const tagResult8 = tag.tag(9, 01307__.WireType.Varint);
   }
   if (showInAppNotifications.gameActivityExcludeSteamNotifications) {
-    const BoolValue5 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue5 = defineProperty.BoolValue;
     const tagResult9 = tag.tag(10, 01307__.WireType.LengthDelimited);
     const joined4 = BoolValue5.internalBinaryWrite(showInAppNotifications.gameActivityExcludeSteamNotifications, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult4 = BoolValue5.internalBinaryWrite(showInAppNotifications.gameActivityExcludeSteamNotifications, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableVoiceActivityNotifications) {
-    const BoolValue6 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue6 = defineProperty.BoolValue;
     const tagResult10 = tag.tag(11, 01307__.WireType.LengthDelimited);
     const joined5 = BoolValue6.internalBinaryWrite(showInAppNotifications.enableVoiceActivityNotifications, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = BoolValue6.internalBinaryWrite(showInAppNotifications.enableVoiceActivityNotifications, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableFriendOnlineNotifications) {
-    const BoolValue7 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue7 = defineProperty.BoolValue;
     const tagResult11 = tag.tag(12, 01307__.WireType.LengthDelimited);
     const joined6 = BoolValue7.internalBinaryWrite(showInAppNotifications.enableFriendOnlineNotifications, tag.tag(12, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult6 = BoolValue7.internalBinaryWrite(showInAppNotifications.enableFriendOnlineNotifications, tag.tag(12, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableUserResurrectionNotifications) {
-    const BoolValue8 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue8 = defineProperty.BoolValue;
     const tagResult12 = tag.tag(13, 01307__.WireType.LengthDelimited);
     const joined7 = BoolValue8.internalBinaryWrite(showInAppNotifications.enableUserResurrectionNotifications, tag.tag(13, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult7 = BoolValue8.internalBinaryWrite(showInAppNotifications.enableUserResurrectionNotifications, tag.tag(13, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableFriendAnniversaryNotifications) {
-    const BoolValue9 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue9 = defineProperty.BoolValue;
     const tagResult13 = tag.tag(14, 01307__.WireType.LengthDelimited);
     const joined8 = BoolValue9.internalBinaryWrite(showInAppNotifications.enableFriendAnniversaryNotifications, tag.tag(14, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult8 = BoolValue9.internalBinaryWrite(showInAppNotifications.enableFriendAnniversaryNotifications, tag.tag(14, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableGameUpdateNotifications) {
-    const BoolValue10 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue10 = defineProperty.BoolValue;
     const tagResult14 = tag.tag(15, 01307__.WireType.LengthDelimited);
     const joined9 = BoolValue10.internalBinaryWrite(showInAppNotifications.enableGameUpdateNotifications, tag.tag(15, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult9 = BoolValue10.internalBinaryWrite(showInAppNotifications.enableGameUpdateNotifications, tag.tag(15, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableProfileUpdatesNotifications) {
-    const BoolValue11 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue11 = defineProperty.BoolValue;
     const tagResult15 = tag.tag(16, 01307__.WireType.LengthDelimited);
     const joined10 = BoolValue11.internalBinaryWrite(showInAppNotifications.enableProfileUpdatesNotifications, tag.tag(16, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult10 = BoolValue11.internalBinaryWrite(showInAppNotifications.enableProfileUpdatesNotifications, tag.tag(16, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableServerTrendingNotifications) {
-    const BoolValue12 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue12 = defineProperty.BoolValue;
     const tagResult16 = tag.tag(17, 01307__.WireType.LengthDelimited);
     const joined11 = BoolValue12.internalBinaryWrite(showInAppNotifications.enableServerTrendingNotifications, tag.tag(17, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult11 = BoolValue12.internalBinaryWrite(showInAppNotifications.enableServerTrendingNotifications, tag.tag(17, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableDmReplyNudgeReminders) {
-    const BoolValue13 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue13 = defineProperty.BoolValue;
     const tagResult17 = tag.tag(18, 01307__.WireType.LengthDelimited);
     const joined12 = BoolValue13.internalBinaryWrite(showInAppNotifications.enableDmReplyNudgeReminders, tag.tag(18, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult12 = BoolValue13.internalBinaryWrite(showInAppNotifications.enableDmReplyNudgeReminders, tag.tag(18, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableSummaryReminderNotifications) {
-    const BoolValue14 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue14 = defineProperty.BoolValue;
     const tagResult18 = tag.tag(19, 01307__.WireType.LengthDelimited);
     const joined13 = BoolValue14.internalBinaryWrite(showInAppNotifications.enableSummaryReminderNotifications, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult13 = BoolValue14.internalBinaryWrite(showInAppNotifications.enableSummaryReminderNotifications, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableGdmAllReactionNotifications) {
-    const BoolValue15 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue15 = defineProperty.BoolValue;
     const tagResult19 = tag.tag(20, 01307__.WireType.LengthDelimited);
     const joined14 = BoolValue15.internalBinaryWrite(showInAppNotifications.enableGdmAllReactionNotifications, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult14 = BoolValue15.internalBinaryWrite(showInAppNotifications.enableGdmAllReactionNotifications, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableFriendGamingActivityNotifications) {
-    const BoolValue16 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue16 = defineProperty.BoolValue;
     const tagResult20 = tag.tag(21, 01307__.WireType.LengthDelimited);
     const joined15 = BoolValue16.internalBinaryWrite(showInAppNotifications.enableFriendGamingActivityNotifications, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult15 = BoolValue16.internalBinaryWrite(showInAppNotifications.enableFriendGamingActivityNotifications, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableUpcomingServerEventNotifications) {
-    const BoolValue17 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue17 = defineProperty.BoolValue;
     const tagResult21 = tag.tag(22, 01307__.WireType.LengthDelimited);
     const joined16 = BoolValue17.internalBinaryWrite(showInAppNotifications.enableUpcomingServerEventNotifications, tag.tag(22, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult16 = BoolValue17.internalBinaryWrite(showInAppNotifications.enableUpcomingServerEventNotifications, tag.tag(22, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.enableScreenDowntimeScheduleNotifications) {
-    const BoolValue18 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue18 = defineProperty.BoolValue;
     const tagResult22 = tag.tag(23, 01307__.WireType.LengthDelimited);
     const joined17 = BoolValue18.internalBinaryWrite(showInAppNotifications.enableScreenDowntimeScheduleNotifications, tag.tag(23, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult17 = BoolValue18.internalBinaryWrite(showInAppNotifications.enableScreenDowntimeScheduleNotifications, tag.tag(23, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.notifyFriendsOnProfileUpdate) {
-    const BoolValue19 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue19 = defineProperty.BoolValue;
     const tagResult23 = tag.tag(24, 01307__.WireType.LengthDelimited);
     const joined18 = BoolValue19.internalBinaryWrite(showInAppNotifications.notifyFriendsOnProfileUpdate, tag.tag(24, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult18 = BoolValue19.internalBinaryWrite(showInAppNotifications.notifyFriendsOnProfileUpdate, tag.tag(24, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (showInAppNotifications.notifyFriendsOnComeOnline) {
-    const BoolValue20 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue20 = defineProperty.BoolValue;
     const tagResult24 = tag.tag(25, 01307__.WireType.LengthDelimited);
     const joined19 = BoolValue20.internalBinaryWrite(showInAppNotifications.notifyFriendsOnComeOnline, tag.tag(25, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult19 = BoolValue20.internalBinaryWrite(showInAppNotifications.notifyFriendsOnComeOnline, tag.tag(25, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -4343,13 +4343,13 @@ prototype20["internalBinaryWrite"] = function internalBinaryWrite(allowActivityP
   let length4;
   if (allowActivityPartyPrivacyFriends.allowActivityPartyPrivacyFriends) {
     let joined23 = require;
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = BoolValue.internalBinaryWrite(allowActivityPartyPrivacyFriends.allowActivityPartyPrivacyFriends, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = BoolValue.internalBinaryWrite(allowActivityPartyPrivacyFriends.allowActivityPartyPrivacyFriends, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.allowActivityPartyPrivacyVoiceChannel) {
-    const BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue2 = defineProperty.BoolValue;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = BoolValue2.internalBinaryWrite(allowActivityPartyPrivacyFriends.allowActivityPartyPrivacyVoiceChannel, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = BoolValue2.internalBinaryWrite(allowActivityPartyPrivacyFriends.allowActivityPartyPrivacyVoiceChannel, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -4376,31 +4376,31 @@ prototype20["internalBinaryWrite"] = function internalBinaryWrite(allowActivityP
     const tagResult4 = tag.tag(7, 01307__.WireType.Varint);
   }
   if (allowActivityPartyPrivacyFriends.detectPlatformAccounts) {
-    const BoolValue3 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue3 = defineProperty.BoolValue;
     const tagResult5 = tag.tag(8, 01307__.WireType.LengthDelimited);
     const joined3 = BoolValue3.internalBinaryWrite(allowActivityPartyPrivacyFriends.detectPlatformAccounts, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = BoolValue3.internalBinaryWrite(allowActivityPartyPrivacyFriends.detectPlatformAccounts, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.passwordless) {
-    const BoolValue4 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue4 = defineProperty.BoolValue;
     const tagResult6 = tag.tag(9, 01307__.WireType.LengthDelimited);
     const joined4 = BoolValue4.internalBinaryWrite(allowActivityPartyPrivacyFriends.passwordless, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = BoolValue4.internalBinaryWrite(allowActivityPartyPrivacyFriends.passwordless, tag.tag(9, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.contactSyncEnabled) {
-    const BoolValue5 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue5 = defineProperty.BoolValue;
     const tagResult7 = tag.tag(10, 01307__.WireType.LengthDelimited);
     const joined5 = BoolValue5.internalBinaryWrite(allowActivityPartyPrivacyFriends.contactSyncEnabled, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult4 = BoolValue5.internalBinaryWrite(allowActivityPartyPrivacyFriends.contactSyncEnabled, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.friendSourceFlags) {
-    const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+    const UInt32Value = defineProperty.UInt32Value;
     const tagResult8 = tag.tag(11, 01307__.WireType.LengthDelimited);
     const joined6 = UInt32Value.internalBinaryWrite(allowActivityPartyPrivacyFriends.friendSourceFlags, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult5 = UInt32Value.internalBinaryWrite(allowActivityPartyPrivacyFriends.friendSourceFlags, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.friendDiscoveryFlags) {
-    const UInt32Value2 = defineProperty /* defineProperty */.UInt32Value;
+    const UInt32Value2 = defineProperty.UInt32Value;
     const tagResult9 = tag.tag(12, 01307__.WireType.LengthDelimited);
     const joined7 = UInt32Value2.internalBinaryWrite(allowActivityPartyPrivacyFriends.friendDiscoveryFlags, tag.tag(12, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult6 = UInt32Value2.internalBinaryWrite(allowActivityPartyPrivacyFriends.friendDiscoveryFlags, tag.tag(12, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -4449,49 +4449,49 @@ prototype20["internalBinaryWrite"] = function internalBinaryWrite(allowActivityP
     const tagResult13 = tag.tag(16, 01307__.WireType.LengthDelimited);
   }
   if (allowActivityPartyPrivacyFriends.defaultMessageRequestRestricted) {
-    const BoolValue6 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue6 = defineProperty.BoolValue;
     const tagResult14 = tag.tag(17, 01307__.WireType.LengthDelimited);
     const joined11 = BoolValue6.internalBinaryWrite(allowActivityPartyPrivacyFriends.defaultMessageRequestRestricted, tag.tag(17, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult7 = BoolValue6.internalBinaryWrite(allowActivityPartyPrivacyFriends.defaultMessageRequestRestricted, tag.tag(17, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.dropsOptedOut) {
-    const BoolValue7 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue7 = defineProperty.BoolValue;
     const tagResult15 = tag.tag(18, 01307__.WireType.LengthDelimited);
     const joined12 = BoolValue7.internalBinaryWrite(allowActivityPartyPrivacyFriends.dropsOptedOut, tag.tag(18, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult8 = BoolValue7.internalBinaryWrite(allowActivityPartyPrivacyFriends.dropsOptedOut, tag.tag(18, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.nonSpamRetrainingOptIn) {
-    const BoolValue8 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue8 = defineProperty.BoolValue;
     const tagResult16 = tag.tag(19, 01307__.WireType.LengthDelimited);
     const joined13 = BoolValue8.internalBinaryWrite(allowActivityPartyPrivacyFriends.nonSpamRetrainingOptIn, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult9 = BoolValue8.internalBinaryWrite(allowActivityPartyPrivacyFriends.nonSpamRetrainingOptIn, tag.tag(19, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.familyCenterEnabled) {
-    const BoolValue9 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue9 = defineProperty.BoolValue;
     const tagResult17 = tag.tag(20, 01307__.WireType.LengthDelimited);
     const joined14 = BoolValue9.internalBinaryWrite(allowActivityPartyPrivacyFriends.familyCenterEnabled, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult10 = BoolValue9.internalBinaryWrite(allowActivityPartyPrivacyFriends.familyCenterEnabled, tag.tag(20, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.familyCenterEnabledV2) {
-    const BoolValue10 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue10 = defineProperty.BoolValue;
     const tagResult18 = tag.tag(21, 01307__.WireType.LengthDelimited);
     const joined15 = BoolValue10.internalBinaryWrite(allowActivityPartyPrivacyFriends.familyCenterEnabledV2, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult11 = BoolValue10.internalBinaryWrite(allowActivityPartyPrivacyFriends.familyCenterEnabledV2, tag.tag(21, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.hideLegacyUsername) {
-    const BoolValue11 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue11 = defineProperty.BoolValue;
     const tagResult19 = tag.tag(22, 01307__.WireType.LengthDelimited);
     const joined16 = BoolValue11.internalBinaryWrite(allowActivityPartyPrivacyFriends.hideLegacyUsername, tag.tag(22, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult12 = BoolValue11.internalBinaryWrite(allowActivityPartyPrivacyFriends.hideLegacyUsername, tag.tag(22, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.inappropriateConversationWarnings) {
-    const BoolValue12 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue12 = defineProperty.BoolValue;
     const tagResult20 = tag.tag(23, 01307__.WireType.LengthDelimited);
     const joined17 = BoolValue12.internalBinaryWrite(allowActivityPartyPrivacyFriends.inappropriateConversationWarnings, tag.tag(23, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult13 = BoolValue12.internalBinaryWrite(allowActivityPartyPrivacyFriends.inappropriateConversationWarnings, tag.tag(23, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.recentGamesEnabled) {
-    const BoolValue13 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue13 = defineProperty.BoolValue;
     const tagResult21 = tag.tag(24, 01307__.WireType.LengthDelimited);
     const joined18 = BoolValue13.internalBinaryWrite(allowActivityPartyPrivacyFriends.recentGamesEnabled, tag.tag(24, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult14 = BoolValue13.internalBinaryWrite(allowActivityPartyPrivacyFriends.recentGamesEnabled, tag.tag(24, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -4501,13 +4501,13 @@ prototype20["internalBinaryWrite"] = function internalBinaryWrite(allowActivityP
     const tagResult22 = tag.tag(25, 01307__.WireType.Varint);
   }
   if (allowActivityPartyPrivacyFriends.allowGameFriendDmsInDiscord) {
-    const BoolValue14 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue14 = defineProperty.BoolValue;
     const tagResult23 = tag.tag(26, 01307__.WireType.LengthDelimited);
     const joined19 = BoolValue14.internalBinaryWrite(allowActivityPartyPrivacyFriends.allowGameFriendDmsInDiscord, tag.tag(26, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult15 = BoolValue14.internalBinaryWrite(allowActivityPartyPrivacyFriends.allowGameFriendDmsInDiscord, tag.tag(26, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.defaultGuildsRestrictedV2) {
-    const BoolValue15 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue15 = defineProperty.BoolValue;
     const tagResult24 = tag.tag(27, 01307__.WireType.LengthDelimited);
     const joined20 = BoolValue15.internalBinaryWrite(allowActivityPartyPrivacyFriends.defaultGuildsRestrictedV2, tag.tag(27, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult16 = BoolValue15.internalBinaryWrite(allowActivityPartyPrivacyFriends.defaultGuildsRestrictedV2, tag.tag(27, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -4521,13 +4521,13 @@ prototype20["internalBinaryWrite"] = function internalBinaryWrite(allowActivityP
     const tagResult26 = tag.tag(29, 01307__.WireType.Varint);
   }
   if (allowActivityPartyPrivacyFriends.quests3PDataOptedOut) {
-    const BoolValue16 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue16 = defineProperty.BoolValue;
     const tagResult27 = tag.tag(30, 01307__.WireType.LengthDelimited);
     const joined21 = BoolValue16.internalBinaryWrite(allowActivityPartyPrivacyFriends.quests3PDataOptedOut, tag.tag(30, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult17 = BoolValue16.internalBinaryWrite(allowActivityPartyPrivacyFriends.quests3PDataOptedOut, tag.tag(30, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (allowActivityPartyPrivacyFriends.showLocalTime) {
-    const BoolValue17 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue17 = defineProperty.BoolValue;
     const tagResult28 = tag.tag(31, 01307__.WireType.LengthDelimited);
     const joined22 = BoolValue17.internalBinaryWrite(allowActivityPartyPrivacyFriends.showLocalTime, tag.tag(31, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult18 = BoolValue17.internalBinaryWrite(allowActivityPartyPrivacyFriends.showLocalTime, tag.tag(31, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -4538,7 +4538,7 @@ prototype20["internalBinaryWrite"] = function internalBinaryWrite(allowActivityP
   }
   if (allowActivityPartyPrivacyFriends.hideFriendRequestNotes) {
     joined23 = dependencyMap;
-    const BoolValue18 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue18 = defineProperty.BoolValue;
     const tagResult30 = tag.tag(33, 01307__.WireType.LengthDelimited);
     joined23 = BoolValue18.internalBinaryWrite(allowActivityPartyPrivacyFriends.hideFriendRequestNotes, tag.tag(33, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult19 = BoolValue18.internalBinaryWrite(allowActivityPartyPrivacyFriends.hideFriendRequestNotes, tag.tag(33, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -4602,7 +4602,7 @@ prototype21["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let BoolValue = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue = defineProperty.BoolValue;
         let tmp24 = BoolValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -4645,7 +4645,7 @@ prototype21["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 };
 prototype21["internalBinaryWrite"] = function internalBinaryWrite(rtcPanelShowVoiceStates, tag, writeUnknownFields) {
   if (rtcPanelShowVoiceStates.rtcPanelShowVoiceStates) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = BoolValue.internalBinaryWrite(rtcPanelShowVoiceStates.rtcPanelShowVoiceStates, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = BoolValue.internalBinaryWrite(rtcPanelShowVoiceStates.rtcPanelShowVoiceStates, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -4735,7 +4735,7 @@ prototype22["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let BoolValue3 = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue3 = defineProperty.BoolValue;
         let tmp34 = BoolValue3;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -4743,7 +4743,7 @@ prototype22["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue2 = defineProperty.BoolValue;
         let tmp29 = BoolValue2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -4751,7 +4751,7 @@ prototype22["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let BoolValue = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue = defineProperty.BoolValue;
         let tmp24 = BoolValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -4794,19 +4794,19 @@ prototype22["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 };
 prototype22["internalBinaryWrite"] = function internalBinaryWrite(installShortcutDesktop, tag, writeUnknownFields) {
   if (installShortcutDesktop.installShortcutDesktop) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = BoolValue.internalBinaryWrite(installShortcutDesktop.installShortcutDesktop, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = BoolValue.internalBinaryWrite(installShortcutDesktop.installShortcutDesktop, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (installShortcutDesktop.installShortcutStartMenu) {
-    const BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue2 = defineProperty.BoolValue;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = BoolValue2.internalBinaryWrite(installShortcutDesktop.installShortcutStartMenu, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = BoolValue2.internalBinaryWrite(installShortcutDesktop.installShortcutStartMenu, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (installShortcutDesktop.disableGamesTab) {
-    const BoolValue3 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue3 = defineProperty.BoolValue;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined2 = BoolValue3.internalBinaryWrite(installShortcutDesktop.disableGamesTab, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = BoolValue3.internalBinaryWrite(installShortcutDesktop.disableGamesTab, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -4835,7 +4835,7 @@ const items16 = [
     name: "install_shortcut_start_menu",
     kind: "message",
     T() {
-      return defineProperty /* defineProperty */.BoolValue;
+      return defineProperty.BoolValue;
     }
   },
   {
@@ -4921,7 +4921,7 @@ prototype23["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         let tmp36 = require;
         let tmp37 = dependencyMap;
-        let StringValue = defineProperty /* defineProperty */.StringValue;
+        let StringValue = defineProperty.StringValue;
         let tmp38 = StringValue;
         let tmp39 = pos;
         let tmp40 = readUnknownField;
@@ -4935,7 +4935,7 @@ prototype23["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (3 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let BoolValue = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue = defineProperty.BoolValue;
         let tmp29 = BoolValue;
         let tmp30 = pos;
         tmp31 = readUnknownField;
@@ -4946,7 +4946,7 @@ prototype23["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (5 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+        let UInt64Value = defineProperty.UInt64Value;
         let tmp24 = UInt64Value;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -4989,7 +4989,7 @@ prototype23["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 };
 prototype23["internalBinaryWrite"] = function internalBinaryWrite(status, tag, writeUnknownFields) {
   if (status.status) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = StringValue.internalBinaryWrite(status.status, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = StringValue.internalBinaryWrite(status.status, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -5000,7 +5000,7 @@ prototype23["internalBinaryWrite"] = function internalBinaryWrite(status, tag, w
     const internalBinaryWriteResult1 = tmp31.internalBinaryWrite(status.customStatus, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (status.showCurrentGame) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined2 = BoolValue.internalBinaryWrite(status.showCurrentGame, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = BoolValue.internalBinaryWrite(status.showCurrentGame, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -5010,7 +5010,7 @@ prototype23["internalBinaryWrite"] = function internalBinaryWrite(status, tag, w
     const tagResult3 = tag.tag(4, 01307__.WireType.Bit64);
   }
   if (status.statusCreatedAtMs) {
-    const UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+    const UInt64Value = defineProperty.UInt64Value;
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined3 = UInt64Value.internalBinaryWrite(status.statusCreatedAtMs, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = UInt64Value.internalBinaryWrite(status.statusCreatedAtMs, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -5047,7 +5047,7 @@ const items17 = [
     name: "show_current_game",
     kind: "message",
     T() {
-      return defineProperty /* defineProperty */.BoolValue;
+      return defineProperty.BoolValue;
     }
   },
   { no: 4, name: "status_expires_at_ms", kind: "scalar", T: 6 },
@@ -5126,7 +5126,7 @@ prototype24["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (6 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let StringValue = defineProperty /* defineProperty */.StringValue;
+        let StringValue = defineProperty.StringValue;
         let tmp24 = StringValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -5189,7 +5189,7 @@ prototype24["internalBinaryWrite"] = function internalBinaryWrite(text, tag, wri
     const tagResult4 = tag.tag(5, 01307__.WireType.Bit64);
   }
   if (text.label) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult5 = tag.tag(6, 01307__.WireType.LengthDelimited);
     const joined = StringValue.internalBinaryWrite(text.label, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = StringValue.internalBinaryWrite(text.label, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -5284,7 +5284,7 @@ prototype25["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let StringValue2 = defineProperty /* defineProperty */.StringValue;
+        let StringValue2 = defineProperty.StringValue;
         let tmp34 = StringValue2;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -5292,7 +5292,7 @@ prototype25["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let Int32Value = defineProperty /* defineProperty */.Int32Value;
+        let Int32Value = defineProperty.Int32Value;
         let tmp29 = Int32Value;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -5300,7 +5300,7 @@ prototype25["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let StringValue = defineProperty /* defineProperty */.StringValue;
+        let StringValue = defineProperty.StringValue;
         let tmp24 = StringValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -5343,19 +5343,19 @@ prototype25["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 };
 prototype25["internalBinaryWrite"] = function internalBinaryWrite(locale, tag, writeUnknownFields) {
   if (locale.locale) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = StringValue.internalBinaryWrite(locale.locale, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = StringValue.internalBinaryWrite(locale.locale, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (locale.timezoneOffset) {
-    const Int32Value = defineProperty /* defineProperty */.Int32Value;
+    const Int32Value = defineProperty.Int32Value;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = Int32Value.internalBinaryWrite(locale.timezoneOffset, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = Int32Value.internalBinaryWrite(locale.timezoneOffset, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (locale.timezoneName) {
-    const StringValue2 = defineProperty /* defineProperty */.StringValue;
+    const StringValue2 = defineProperty.StringValue;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined2 = StringValue2.internalBinaryWrite(locale.timezoneName, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = StringValue2.internalBinaryWrite(locale.timezoneName, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -5384,7 +5384,7 @@ const items19 = [
     name: "timezone_offset",
     kind: "message",
     T() {
-      return defineProperty /* defineProperty */.Int32Value;
+      return defineProperty.Int32Value;
     }
   },
   {
@@ -5453,7 +5453,7 @@ prototype26["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let StringValue2 = defineProperty /* defineProperty */.StringValue;
+        let StringValue2 = defineProperty.StringValue;
         let tmp29 = StringValue2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -5461,7 +5461,7 @@ prototype26["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let StringValue = defineProperty /* defineProperty */.StringValue;
+        let StringValue = defineProperty.StringValue;
         let tmp24 = StringValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -5504,13 +5504,13 @@ prototype26["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 };
 prototype26["internalBinaryWrite"] = function internalBinaryWrite(layout, tag, writeUnknownFields) {
   if (layout.layout) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = StringValue.internalBinaryWrite(layout.layout, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = StringValue.internalBinaryWrite(layout.layout, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (layout.messagePreviews) {
-    const StringValue2 = defineProperty /* defineProperty */.StringValue;
+    const StringValue2 = defineProperty.StringValue;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = StringValue2.internalBinaryWrite(layout.messagePreviews, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = StringValue2.internalBinaryWrite(layout.messagePreviews, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -5696,19 +5696,19 @@ prototype27["internalBinaryWrite"] = function internalBinaryWrite(theme, tag, wr
     const tagResult3 = tag.tag(4, 01307__.WireType.Varint);
   }
   if (theme.channelListLayout) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult4 = tag.tag(6, 01307__.WireType.LengthDelimited);
     const joined1 = StringValue.internalBinaryWrite(theme.channelListLayout, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = StringValue.internalBinaryWrite(theme.channelListLayout, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (theme.messagePreviews) {
-    const StringValue2 = defineProperty /* defineProperty */.StringValue;
+    const StringValue2 = defineProperty.StringValue;
     const tagResult5 = tag.tag(7, 01307__.WireType.LengthDelimited);
     const joined2 = StringValue2.internalBinaryWrite(theme.messagePreviews, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = StringValue2.internalBinaryWrite(theme.messagePreviews, tag.tag(7, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (theme.searchResultExactCountEnabled) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult6 = tag.tag(8, 01307__.WireType.LengthDelimited);
     const joined3 = BoolValue.internalBinaryWrite(theme.searchResultExactCountEnabled, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = BoolValue.internalBinaryWrite(theme.searchResultExactCountEnabled, tag.tag(8, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -5718,7 +5718,7 @@ prototype27["internalBinaryWrite"] = function internalBinaryWrite(theme, tag, wr
     const tagResult7 = tag.tag(9, 01307__.WireType.Varint);
   }
   if (theme.happeningNowCardsDisabled) {
-    const BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue2 = defineProperty.BoolValue;
     const tagResult8 = tag.tag(10, 01307__.WireType.LengthDelimited);
     const joined4 = BoolValue2.internalBinaryWrite(theme.happeningNowCardsDisabled, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult4 = BoolValue2.internalBinaryWrite(theme.happeningNowCardsDisabled, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -5954,7 +5954,7 @@ prototype29["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (2 === tmp5) {
         let tmp26 = require;
         let tmp27 = dependencyMap;
-        let UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+        let UInt32Value = defineProperty.UInt32Value;
         let tmp28 = UInt32Value;
         let tmp29 = pos;
         let tmp30 = readUnknownField;
@@ -6003,7 +6003,7 @@ prototype29["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 };
 prototype29["internalBinaryWrite"] = function internalBinaryWrite(backgroundGradientPresetId, tag, writeUnknownFields) {
   if (backgroundGradientPresetId.backgroundGradientPresetId) {
-    const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+    const UInt32Value = defineProperty.UInt32Value;
     const tagResult = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined = UInt32Value.internalBinaryWrite(backgroundGradientPresetId.backgroundGradientPresetId, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = UInt32Value.internalBinaryWrite(backgroundGradientPresetId.backgroundGradientPresetId, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -6281,7 +6281,7 @@ prototype31["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let Int64Value = defineProperty /* defineProperty */.Int64Value;
+        let Int64Value = defineProperty.Int64Value;
         let tmp34 = Int64Value;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -6289,7 +6289,7 @@ prototype31["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (3 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let StringValue = defineProperty /* defineProperty */.StringValue;
+        let StringValue = defineProperty.StringValue;
         let tmp29 = StringValue;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -6297,7 +6297,7 @@ prototype31["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (4 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+        let UInt64Value = defineProperty.UInt64Value;
         let tmp24 = UInt64Value;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -6354,19 +6354,19 @@ prototype31["internalBinaryWrite"] = function internalBinaryWrite(guildIds, tag,
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
   }
   if (guildIds.id) {
-    const Int64Value = defineProperty /* defineProperty */.Int64Value;
+    const Int64Value = defineProperty.Int64Value;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = Int64Value.internalBinaryWrite(guildIds.id, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Int64Value.internalBinaryWrite(guildIds.id, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (guildIds.name) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined2 = StringValue.internalBinaryWrite(guildIds.name, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = StringValue.internalBinaryWrite(guildIds.name, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (guildIds.color) {
-    const UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+    const UInt64Value = defineProperty.UInt64Value;
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined3 = UInt64Value.internalBinaryWrite(guildIds.color, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = UInt64Value.internalBinaryWrite(guildIds.color, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -6396,7 +6396,7 @@ const items24 = [
     name: "name",
     kind: "message",
     T() {
-      return defineProperty /* defineProperty */.StringValue;
+      return defineProperty.StringValue;
     }
   },
   {
@@ -6471,7 +6471,7 @@ prototype32["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (3 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let BoolValue = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue = defineProperty.BoolValue;
         let tmp24 = BoolValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -6574,7 +6574,7 @@ prototype32["internalBinaryWrite"] = function internalBinaryWrite(favoriteChanne
     const tagResult3 = tag.tag(2, 01307__.WireType.Varint);
   }
   if (favoriteChannels.guildVisible) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult4 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined2 = BoolValue.internalBinaryWrite(favoriteChannels.guildVisible, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = BoolValue.internalBinaryWrite(favoriteChannels.guildVisible, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -6683,7 +6683,7 @@ prototype33["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (5 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+        let UInt32Value = defineProperty.UInt32Value;
         let tmp24 = UInt32Value;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -6744,7 +6744,7 @@ prototype33["internalBinaryWrite"] = function internalBinaryWrite(nickname, tag,
     const tagResult3 = tag.tag(4, 01307__.WireType.Bit64);
   }
   if (nickname.channelType) {
-    const UInt32Value = defineProperty /* defineProperty */.UInt32Value;
+    const UInt32Value = defineProperty.UInt32Value;
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined = UInt32Value.internalBinaryWrite(nickname.channelType, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = UInt32Value.internalBinaryWrite(nickname.channelType, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -7190,7 +7190,7 @@ prototype36["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let BoolValue = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue = defineProperty.BoolValue;
         let tmp24 = BoolValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -7233,7 +7233,7 @@ prototype36["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 };
 prototype36["internalBinaryWrite"] = function internalBinaryWrite(disableHomeAutoNav, tag, writeUnknownFields) {
   if (disableHomeAutoNav.disableHomeAutoNav) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = BoolValue.internalBinaryWrite(disableHomeAutoNav.disableHomeAutoNav, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = BoolValue.internalBinaryWrite(disableHomeAutoNav.disableHomeAutoNav, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -7510,7 +7510,7 @@ prototype39["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         let tmp37 = require;
         let tmp38 = dependencyMap;
-        let BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue2 = defineProperty.BoolValue;
         let tmp39 = BoolValue2;
         let tmp40 = pos;
         let tmp41 = readUnknownField;
@@ -7554,7 +7554,7 @@ prototype39["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (4 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let BoolValue = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue = defineProperty.BoolValue;
         let tmp24 = BoolValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -7599,7 +7599,7 @@ prototype39["internalBinaryWrite"] = function internalBinaryWrite(allowFriends, 
   let length;
   let length2;
   if (allowFriends.allowFriends) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = BoolValue.internalBinaryWrite(allowFriends.allowFriends, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = BoolValue.internalBinaryWrite(allowFriends.allowFriends, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -7631,7 +7631,7 @@ prototype39["internalBinaryWrite"] = function internalBinaryWrite(allowFriends, 
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
   }
   if (allowFriends.autoBroadcast) {
-    const BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue2 = defineProperty.BoolValue;
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined3 = BoolValue2.internalBinaryWrite(allowFriends.autoBroadcast, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = BoolValue2.internalBinaryWrite(allowFriends.autoBroadcast, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -7715,7 +7715,7 @@ prototype40["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let BoolValue = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue = defineProperty.BoolValue;
         let tmp24 = BoolValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -7758,7 +7758,7 @@ prototype40["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 };
 prototype40["internalBinaryWrite"] = function internalBinaryWrite(allowVoiceRecording, tag, writeUnknownFields) {
   if (allowVoiceRecording.allowVoiceRecording) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = BoolValue.internalBinaryWrite(allowVoiceRecording.allowVoiceRecording, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = BoolValue.internalBinaryWrite(allowVoiceRecording.allowVoiceRecording, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -8984,7 +8984,7 @@ prototype51["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let UInt64Value2 = defineProperty /* defineProperty */.UInt64Value;
+        let UInt64Value2 = defineProperty.UInt64Value;
         let tmp29 = UInt64Value2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -8992,7 +8992,7 @@ prototype51["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+        let UInt64Value = defineProperty.UInt64Value;
         let tmp24 = UInt64Value;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -9035,13 +9035,13 @@ prototype51["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 };
 prototype51["internalBinaryWrite"] = function internalBinaryWrite(lastImpressionTime, tag, writeUnknownFields) {
   if (lastImpressionTime.lastImpressionTime) {
-    const UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+    const UInt64Value = defineProperty.UInt64Value;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = UInt64Value.internalBinaryWrite(lastImpressionTime.lastImpressionTime, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = UInt64Value.internalBinaryWrite(lastImpressionTime.lastImpressionTime, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (lastImpressionTime.optOutExpiryTime) {
-    const UInt64Value2 = defineProperty /* defineProperty */.UInt64Value;
+    const UInt64Value2 = defineProperty.UInt64Value;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = UInt64Value2.internalBinaryWrite(lastImpressionTime.optOutExpiryTime, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = UInt64Value2.internalBinaryWrite(lastImpressionTime.optOutExpiryTime, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -9149,7 +9149,7 @@ prototype52["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       if (1 === tmp5) {
         let tmp37 = require;
         let tmp38 = dependencyMap;
-        let UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+        let UInt64Value = defineProperty.UInt64Value;
         let tmp39 = UInt64Value;
         let tmp40 = pos;
         let tmp41 = readUnknownField;
@@ -9157,7 +9157,7 @@ prototype52["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (2 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let StringValue = defineProperty /* defineProperty */.StringValue;
+        let StringValue = defineProperty.StringValue;
         let tmp34 = StringValue;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -9165,7 +9165,7 @@ prototype52["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (3 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue2 = defineProperty.BoolValue;
         let tmp29 = BoolValue2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -9173,7 +9173,7 @@ prototype52["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
       } else if (4 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let BoolValue = defineProperty /* defineProperty */.BoolValue;
+        let BoolValue = defineProperty.BoolValue;
         let tmp24 = BoolValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -9216,25 +9216,25 @@ prototype52["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
 };
 prototype52["internalBinaryWrite"] = function internalBinaryWrite(emojiId, tag, writeUnknownFields) {
   if (emojiId.emojiId) {
-    const UInt64Value = defineProperty /* defineProperty */.UInt64Value;
+    const UInt64Value = defineProperty.UInt64Value;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = UInt64Value.internalBinaryWrite(emojiId.emojiId, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = UInt64Value.internalBinaryWrite(emojiId.emojiId, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (emojiId.emojiName) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined1 = StringValue.internalBinaryWrite(emojiId.emojiName, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = StringValue.internalBinaryWrite(emojiId.emojiName, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (emojiId.animated) {
-    const BoolValue = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue = defineProperty.BoolValue;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined2 = BoolValue.internalBinaryWrite(emojiId.animated, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = BoolValue.internalBinaryWrite(emojiId.animated, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (emojiId.disableDoubleTap) {
-    const BoolValue2 = defineProperty /* defineProperty */.BoolValue;
+    const BoolValue2 = defineProperty.BoolValue;
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined3 = BoolValue2.internalBinaryWrite(emojiId.disableDoubleTap, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = BoolValue2.internalBinaryWrite(emojiId.disableDoubleTap, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -9271,7 +9271,7 @@ const items45 = [
     name: "animated",
     kind: "message",
     T() {
-      return defineProperty /* defineProperty */.BoolValue;
+      return defineProperty.BoolValue;
     }
   },
 

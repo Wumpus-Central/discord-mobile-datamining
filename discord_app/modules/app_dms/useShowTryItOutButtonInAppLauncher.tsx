@@ -8,7 +8,7 @@ export default function useShowTryItOutButtonInAppLauncher(arg0) {
   let botUserId;
   let context;
   ({ context, application, botUserId } = arg0);
-  let obj = _getPrimaryAppCommand /* _getPrimaryAppCommand */;
+  let obj = _getPrimaryAppCommand;
   obj = { context, applicationId: application.id, botUserId };
   let isPrimaryAppCommandUsableInAppDM = obj.useIsPrimaryAppCommandUsableInAppDM(obj);
   let channel;

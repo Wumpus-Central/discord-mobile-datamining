@@ -14,7 +14,7 @@ export default function BurstReactionAnimationPreview(arg0) {
   let reactionType;
   ({ channelId, emoji, messageId, reactionType } = arg0);
   let tmp2 = null;
-  if (reactionType === ReactionTypes /* ReactionTypes */.ReactionTypes.BURST) {
+  if (reactionType === ReactionTypes.ReactionTypes.BURST) {
     const obj = { isFullscreen: true, channelId: null, messageId: null, emoji: null };
     obj[1] = channelId;
     obj[2] = messageId;

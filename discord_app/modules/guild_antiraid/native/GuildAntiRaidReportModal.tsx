@@ -36,9 +36,9 @@ function ReportModal(onSubmit) {
     callback(_undefined[9]).openURL(closure_6);
   }, []);
   obj = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.Hg8Ee7, { onClick: callback });
-  const items1 = [callback2(Text /* Text */.Text, obj), , ];
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.format(getSystemLocale.t.Hg8Ee7, { onClick: callback });
+  const items1 = [callback2(Text.Text, obj), , ];
   obj = { style: tmp.formBody, children: null };
   const obj1 = { hasIcons: false, children: null };
   obj1[1] = closure_8.map((arg0, arg1) => {
@@ -51,15 +51,15 @@ function ReportModal(onSubmit) {
     };
     return outer1_9(outer1_0(_undefined[12]).TableCheckboxRow, obj, arg0);
   });
-  obj[1] = callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj1);
+  obj[1] = callback2(TableRowGroupTitle.TableRowGroup, obj1);
   items1[1] = callback2(View, obj);
   const obj2 = { style: items2, children: null };
   items2 = [tmp.submitButtonContainer, { paddingBottom: useSafeAreaInsets().bottom + 16 }];
   const obj4 = { size: "md", text: null, onPress: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.geKm7t);
+  const intl2 = getSystemLocale.intl;
+  obj4[1] = intl2.string(getSystemLocale.t.geKm7t);
   obj4[2] = onSubmit.onSubmit;
-  obj2[1] = callback2(Button /* Button */.Button, obj4);
+  obj2[1] = callback2(Button.Button, obj4);
   items1[2] = callback2(View, obj2);
   obj[1] = items1;
   return callback3(View, obj);

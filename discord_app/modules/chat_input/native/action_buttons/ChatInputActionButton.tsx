@@ -51,15 +51,15 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
     flag = false;
   }
   ({ style, disabled, accessibilityState, activeStyle, activeIconStyle, onPress, accessible, accessibilityLabel, accessibilityHint, accessibilityActions, onAccessibilityAction, IconComponent } = active);
-  let obj = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */;
+  let obj = useIsMobileVisualRefreshExperimentEnabled;
   const mobileVisualRefreshConfig = obj.useMobileVisualRefreshConfig({ location: "ChatInputActionButton" });
   ({ enabled, chatInputFloating } = mobileVisualRefreshConfig);
-  const token = map /* map */.useToken(Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  const obj2 = map /* map */;
+  const token = map.useToken(Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const obj2 = map;
   const tmp = require;
-  const token1 = map /* map */.useToken(Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-  const obj3 = map /* map */;
-  const token2 = map /* map */.useToken(Themes.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  const token1 = map.useToken(Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const obj3 = map;
+  const token2 = map.useToken(Themes.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   const tmp7 = callback(enabled, token, token1);
   let tmp8;
   if (chatInputFloating) {

@@ -10,11 +10,11 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
   let primaryColor2;
   let saturation;
   let secondaryColor;
-  let obj = getGradientThemeFromFlags /* getGradientThemeFromFlags */;
+  let obj = getGradientThemeFromFlags;
   const primaryColor = themeContext.primaryColor;
   const gradientThemeFromFlags = obj.getGradientThemeFromFlags(themeContext);
   ({ contrast, saturation, enabledExperiments } = themeContext);
-  let obj1 = getGradientColorByPercentage /* getGradientColorByPercentage */;
+  let obj1 = getGradientColorByPercentage;
   let gradientThemeMetadata = obj1.getGradientThemeMetadata(gradientThemeFromFlags, themeContext.gradient);
   if (null != primaryColor) {
     ({ primaryColor: primaryColor2, secondaryColor } = themeContext);

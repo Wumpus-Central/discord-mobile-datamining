@@ -39,7 +39,7 @@ export default function UserSettingsSensitiveContentFilters() {
     return obj.createList(obj);
   }, []);
   obj = { screen: null };
-  obj[0] = items /* items */.SettingsScreen.SENSITIVE_CONTENT_FILTERS;
+  obj[0] = items.SettingsScreen.SENSITIVE_CONTENT_FILTERS;
   let items = [callback(items, obj), callback(SettingLayout, { node: memo })];
   obj[0] = items;
   return callback2(closure_6, obj);

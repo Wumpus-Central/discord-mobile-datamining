@@ -329,7 +329,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
             }
             return tmp5;
           }
-          obj6 = hasFlag /* hasFlag */;
+          obj6 = hasFlag;
           tmp23 = require;
         }
         return false;

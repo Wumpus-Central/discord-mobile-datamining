@@ -119,14 +119,14 @@ function _getOrResolveChannelIdFromDestinationId() {
   return applyArgumentsResult;
 }
 function canShareToChannel(type) {
-  if (type.type === sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.USER) {
+  if (type.type === sortByMatchScore.AutocompleterResultTypes.USER) {
     let tmp8 = arg1;
     if (!arg1) {
       tmp8 = null != authStore.getDMChannelFromUserId(type.record.id);
     }
     let tmp7 = tmp8;
   } else {
-    tmp7 = type.type === sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.GROUP_DM;
+    tmp7 = type.type === sortByMatchScore.AutocompleterResultTypes.GROUP_DM;
     if (!tmp7) {
       let tmp4 = type.record.type !== constants2.GUILD_FORUM && type.record.type !== tmp3.GUILD_MEDIA;
       if (tmp4) {
@@ -158,7 +158,7 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
       let tmp19 = nextResult;
       let tmp20 = require;
       let tmp21 = dependencyMap;
-      if (tmp9.type === sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.HEADER) {
+      if (tmp9.type === sortByMatchScore.AutocompleterResultTypes.HEADER) {
         let tmp = nextResult;
       } else {
         let tmp10 = nextResult;

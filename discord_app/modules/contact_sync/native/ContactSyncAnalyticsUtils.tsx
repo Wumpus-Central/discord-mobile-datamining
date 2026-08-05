@@ -73,8 +73,8 @@ export const trackFlowStep = function trackFlowStep(LANDING, skip, back, locatio
   if (tmp) {
     obj = { skip: null };
     obj[0] = skip;
-    trackNUFStep /* trackNUFStep */.trackNUFStep(closure_8, LANDING, obj);
-    const obj3 = trackNUFStep /* trackNUFStep */;
+    trackNUFStep.trackNUFStep(closure_8, LANDING, obj);
+    const obj3 = trackNUFStep;
   }
   closure_8 = LANDING;
 };

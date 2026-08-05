@@ -16,7 +16,7 @@ export const isAlertOrActionSheetOpen = function isAlertOrActionSheetOpen(select
     obj2 = getAlert;
   }
   let tmp = null != obj.getContent();
-  const useAlertStore = useAlertStore /* useAlertStore */.useAlertStore;
+  const useAlertStore = useAlertStore.useAlertStore;
   const tmp2 = null != obj2.getAlert();
   if (!tmp) {
     tmp = tmp2;

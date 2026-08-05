@@ -366,10 +366,10 @@ const result = require("handleConnectionOpen").fileFinishedImporting("modules/oa
 
 export { getLocationContextServer };
 export const acceptWhitelist = function acceptWhitelist(token) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: obj.OAUTH2_WHITELIST_ACCEPT, query: obj, oldFormErrors: true, rejectWithError: null };
   obj = { token };
-  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[3] = sendRequest.rejectWithMigratedError();
   return HTTP.post(obj);
 };
 export const authorize = function authorize() {
@@ -414,7 +414,7 @@ export const fetchChannels = function fetchChannels(closure_0) {
 };
 export const logoutWithRedirect = function logoutWithRedirect(pathname, login_required_account_manager) {
   const obj = handleLogout;
-  obj.logout(login_required_account_manager, getAuthenticationPath /* getAuthenticationPath */.getLoginPath(pathname.pathname + pathname.search, false));
+  obj.logout(login_required_account_manager, getAuthenticationPath.getLoginPath(pathname.pathname + pathname.search, false));
 };
 export const verifyUserCode = function verifyUserCode(outer1_0) {
   const self = this;

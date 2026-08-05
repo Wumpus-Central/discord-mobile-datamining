@@ -11,15 +11,15 @@ obj[4] = require("ApplicationCommandSectionType").ApplicationCommandInputType.BU
 obj[5] = require("TRUE_OPTION_NAME").BuiltInSectionId.BUILT_IN;
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["26C4oi"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["26C4oi"]);
   },
   set: undefined
 });
 Object.defineProperty(obj, "displayDescription", {
   get: () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["26C4oi"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["26C4oi"]);
   },
   set: undefined
 });

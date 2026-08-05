@@ -16,7 +16,7 @@ function handleLoadThreadsSuccess(arg0) {
     return true;
   });
   if (mostRecentMessages != null) {
-    const found = mostRecentMessages.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    const found = mostRecentMessages.filter(isDiscordFrontendDevelopment.isNotNullish);
     const item1 = found.forEach((channel_id) => {
       let messageRecord = null;
       if (null != channel_id) {
@@ -81,8 +81,8 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
           const message3 = tmp.message;
           let messageRecord = null;
           if (null != message3) {
-            messageRecord = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(message3);
-            const obj4 = createMinimalMessageRecord /* createMinimalMessageRecord */;
+            messageRecord = createMinimalMessageRecord.createMessageRecord(message3);
+            const obj4 = createMinimalMessageRecord;
           }
           let obj = { loaded: true, message: null };
           obj[1] = messageRecord;
@@ -133,9 +133,9 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
         if (tmp16) {
           const obj = {};
           const merged = Object.assign(tmp12);
-          obj.message = createMinimalMessageRecord /* createMinimalMessageRecord */.updateMessageRecord(message, message.message);
+          obj.message = createMinimalMessageRecord.updateMessageRecord(message, message.message);
           dependencyMap[channel_id] = obj;
-          const obj4 = createMinimalMessageRecord /* createMinimalMessageRecord */;
+          const obj4 = createMinimalMessageRecord;
         }
         tmp16 = null != dependencyMap[channel_id] && null != message;
       }
@@ -168,7 +168,7 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
       if (null != most_recent_message) {
         let tmp = require;
         let tmp2 = dependencyMap;
-        let obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
+        let obj = createMinimalMessageRecord;
         messageRecord = obj.createMessageRecord(most_recent_message);
       }
       let tmp4 = closure_5;

@@ -10,16 +10,16 @@ import { useSystemKeyboardHeight } from "../../keyboard/native/useSystemKeyboard
 
 const require = arg1;
 function getChatInputMaxHeight() {
-  let systemKeyboardHeight = useSystemKeyboardHeight /* useSystemKeyboardHeight */.getSystemKeyboardHeight();
-  const obj = useSystemKeyboardHeight /* useSystemKeyboardHeight */;
+  let systemKeyboardHeight = useSystemKeyboardHeight.getSystemKeyboardHeight();
+  const obj = useSystemKeyboardHeight;
   const tmp = require;
-  const customKeyboardHeight = useCustomKeyboardHeight /* useCustomKeyboardHeight */.getCustomKeyboardHeight();
-  const obj2 = useCustomKeyboardHeight /* useCustomKeyboardHeight */;
-  const keyboardType = useKeyboardType /* useKeyboardType */.getKeyboardType();
-  if (keyboardType !== KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
+  const customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
+  const obj2 = useCustomKeyboardHeight;
+  const keyboardType = useKeyboardType.getKeyboardType();
+  if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     systemKeyboardHeight = customKeyboardHeight;
   }
-  const obj3 = useKeyboardType /* useKeyboardType */;
+  const obj3 = useKeyboardType;
   return Math.min(200, Math.max(2 * closure_6, tmp(1474).getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - 200));
 }
 const result = require("subscribeToKeyboardUIStore").fileFinishedImporting("modules/chat_input/native/useChatInputMaxHeight.tsx");
@@ -69,12 +69,12 @@ export function getChatInputMinHeight() {
 }
 export { getChatInputMaxHeight };
 export const getChatInputHeightAnimationTiming = function getChatInputHeightAnimationTiming(height) {
-  let obj = useSystemKeyboardHeight /* useSystemKeyboardHeight */;
+  let obj = useSystemKeyboardHeight;
   let systemKeyboardHeight = obj.getSystemKeyboardHeight();
-  const customKeyboardHeight = useCustomKeyboardHeight /* useCustomKeyboardHeight */.getCustomKeyboardHeight();
-  const obj2 = useCustomKeyboardHeight /* useCustomKeyboardHeight */;
-  const keyboardType = useKeyboardType /* useKeyboardType */.getKeyboardType();
-  if (keyboardType !== KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM) {
+  const customKeyboardHeight = useCustomKeyboardHeight.getCustomKeyboardHeight();
+  const obj2 = useCustomKeyboardHeight;
+  const keyboardType = useKeyboardType.getKeyboardType();
+  if (keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM) {
     systemKeyboardHeight = customKeyboardHeight;
   }
   let tmpResult = tmp(1474);

@@ -4,10 +4,10 @@ import { map } from "../../../design/tokens/native/useToken.tsx";
 const result = require("set").fileFinishedImporting("modules/premium/native/usePremiumPrimaryGradientColors.tsx");
 
 export default function usePremiumPrimaryGradientColors() {
-  const items = [map /* map */.useToken(Themes.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), , ];
-  const obj = map /* map */;
-  items[1] = map /* map */.useToken(Themes.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
-  const obj2 = map /* map */;
-  items[2] = map /* map */.useToken(Themes.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
+  const items = [map.useToken(Themes.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), , ];
+  const obj = map;
+  items[1] = map.useToken(Themes.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
+  const obj2 = map;
+  items[2] = map.useToken(Themes.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
   return items;
 };

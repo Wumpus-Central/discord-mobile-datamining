@@ -464,7 +464,7 @@ function anyThreadsNSFW(guild_id, parent_id) {
         let tmp10 = key10006;
         let tmp11 = require;
         let tmp12 = dependencyMap;
-        let obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+        let obj = shouldShowAgeGateForVoiceChannel;
         if (!obj.isChannelContentGated(tmp[key10006].channel)) {
           continue;
         } else {
@@ -482,7 +482,7 @@ function anyThreadsNSFW(guild_id, parent_id) {
         let tmp13 = key10015;
         let tmp14 = require;
         let tmp15 = dependencyMap;
-        let obj2 = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+        let obj2 = shouldShowAgeGateForVoiceChannel;
         if (!obj2.isChannelContentGated(tmp5[key10015])) {
           continue;
         } else {
@@ -1121,7 +1121,7 @@ obj = {
     while (iter !== undefined) {
       let tmp2 = require;
       let tmp3 = dependencyMap;
-      let obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+      let obj = shouldShowAgeGateForVoiceChannel;
       let tmp5 = anyThreadsNSFW;
       let result = obj.isChannelContentGated(nextResult);
       if (result !== anyThreadsNSFW(nextResult.guild_id, nextResult.parent_id)) {

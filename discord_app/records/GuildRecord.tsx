@@ -54,7 +54,7 @@ export const getGuildIconSource = function getGuildIconSource(arg0, arg1, flag) 
   });
 };
 export const getGuildAcronym = function getGuildAcronym(guild) {
-  return isNullOrEmpty /* isNullOrEmpty */.getAcronym(guild.name);
+  return isNullOrEmpty.getAcronym(guild.name);
 };
 export const isGuildOwner = function isGuildOwner(guild, currentUser) {
   let tmp = currentUser;
@@ -120,6 +120,6 @@ export const isGuildNSFW = function isGuildNSFW(guild) {
       }
       hasItem = has(DEFAULT);
     }
-    obj = apexExperiment /* apexExperiment */;
+    obj = apexExperiment;
   }
 };

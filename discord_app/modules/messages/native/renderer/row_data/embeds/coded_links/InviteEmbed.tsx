@@ -23,25 +23,25 @@ export const createInviteEmbed = function createInviteEmbed(closure_0, code, upd
       let id = currentUser.id;
     }
     if (invite.state === constants.RESOLVING) {
-      return createResolvingGuildInvite /* createResolvingGuildInvite */.createResolvingGuildInvite(updateInvite);
+      return createResolvingGuildInvite.createResolvingGuildInvite(updateInvite);
     } else {
       if (invite.state !== tmp5.EXPIRED) {
         if (invite.state !== tmp5.BANNED) {
           if (invite.state === tmp5.ERROR) {
             const inviteError = obj.getInviteError(code);
             if (null == inviteError) {
-              let erroredGuildInvite = createResolvingGuildInvite /* createResolvingGuildInvite */.createErroredGuildInvite(code, tmp28, updateInvite);
-              const obj15 = createResolvingGuildInvite /* createResolvingGuildInvite */;
+              let erroredGuildInvite = createResolvingGuildInvite.createErroredGuildInvite(code, tmp28, updateInvite);
+              const obj15 = createResolvingGuildInvite;
             } else if (inviteError.code === constants2.INVITES_DISABLED) {
-              erroredGuildInvite = createResolvingGuildInvite /* createResolvingGuildInvite */.createDisabledGuildInvite(invite, updateInvite);
-              const obj14 = createResolvingGuildInvite /* createResolvingGuildInvite */;
+              erroredGuildInvite = createResolvingGuildInvite.createDisabledGuildInvite(invite, updateInvite);
+              const obj14 = createResolvingGuildInvite;
             } else {
-              erroredGuildInvite = createResolvingGuildInvite /* createResolvingGuildInvite */.createErroredGuildInvite(code, tmp28, updateInvite);
-              const obj13 = createResolvingGuildInvite /* createResolvingGuildInvite */;
+              erroredGuildInvite = createResolvingGuildInvite.createErroredGuildInvite(code, tmp28, updateInvite);
+              const obj13 = createResolvingGuildInvite;
             }
             return erroredGuildInvite;
           } else {
-            const inviteType = InviteTypes /* InviteTypes */.getInviteType(invite);
+            const inviteType = InviteTypes.getInviteType(invite);
             if (InviteTypes.GROUP_DM === inviteType) {
               let tmp29Result = tmp29(12506);
               return tmp29Result.createGroupDMInvite(invite, tmp28, updateInvite);
@@ -83,11 +83,11 @@ export const createInviteEmbed = function createInviteEmbed(closure_0, code, upd
               }
               const tmp29Result1 = tmp29(7115);
             }
-            const obj18 = InviteTypes /* InviteTypes */;
+            const obj18 = InviteTypes;
           }
         }
       }
-      return createResolvingGuildInvite /* createResolvingGuildInvite */.createExpiredGuildInvite(closure_0, id === tmp4, updateInvite);
+      return createResolvingGuildInvite.createExpiredGuildInvite(closure_0, id === tmp4, updateInvite);
     }
   }
 };

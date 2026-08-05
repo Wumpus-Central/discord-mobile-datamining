@@ -34,7 +34,7 @@ export default function DiscordTag(arg0) {
     obj = { variant: "text-md/semibold", maxFontSizeMultiplier: 2, style: null, lineClamp: 1, children: null };
     obj[2] = nicknameStyle;
     obj[4] = nick;
-    let tmp2Result = callback(Text /* Text */.Text, obj);
+    let tmp2Result = callback(Text.Text, obj);
   } else {
     tmp2Result = null;
     if (null != user) {
@@ -52,7 +52,7 @@ export default function DiscordTag(arg0) {
       }
       items[1] = tmp2Result;
       obj[4] = items;
-      tmp2Result = tmp2(Text /* Text */.Text, obj);
+      tmp2Result = tmp2(Text.Text, obj);
       tmp4 = require;
     }
   }

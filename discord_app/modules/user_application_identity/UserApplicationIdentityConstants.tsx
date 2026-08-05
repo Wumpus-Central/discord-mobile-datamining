@@ -4,12 +4,12 @@ let obj = { RIOT_GAMES: "1443033465766281327", BATTLENET: "1356665549089800303" 
 obj = {
   applicationId: obj.RIOT_GAMES,
   getMigrationExperimentEnabled(location) {
-    let obj = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = useIsRiotSocialSDKMigrationEnabled;
     obj = { location };
     return obj.getIsRiotSocialSDKMigrationEnabled(obj);
   },
   useMigrationExperimentEnabled(location) {
-    let obj = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = useIsRiotSocialSDKMigrationEnabled;
     obj = { location };
     return obj.useIsRiotSocialSDKMigrationEnabled(obj);
   }
@@ -18,12 +18,12 @@ const items = [obj];
 obj = {
   applicationId: obj.RIOT_GAMES,
   getMigrationExperimentEnabled(location) {
-    let obj = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = useIsRiotSocialSDKMigrationEnabled;
     obj = { location };
     return obj.getIsRiotSocialSDKMigrationEnabled(obj);
   },
   useMigrationExperimentEnabled(location) {
-    let obj = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */;
+    let obj = useIsRiotSocialSDKMigrationEnabled;
     obj = { location };
     return obj.useIsRiotSocialSDKMigrationEnabled(obj);
   }
@@ -33,11 +33,11 @@ const items1 = [
   {
     applicationId: obj.BATTLENET,
     getMigrationExperimentEnabled(location) {
-      const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
+      const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled.battlenetSocialSDKMigrationExperiment;
       return battlenetSocialSDKMigrationExperiment.getConfig({ location }).enabled;
     },
     useMigrationExperimentEnabled(location) {
-      const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
+      const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled.battlenetSocialSDKMigrationExperiment;
       return battlenetSocialSDKMigrationExperiment.useConfig({ location }).enabled;
     }
   }
@@ -46,12 +46,12 @@ const items2 = [
   {
     applicationId: obj.RIOT_GAMES,
     getMigrationExperimentEnabled(location) {
-      let obj = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */;
+      let obj = useIsRiotSocialSDKMigrationEnabled;
       obj = { location };
       return obj.getIsRiotSocialSDKMigrationEnabled(obj);
     },
     useMigrationExperimentEnabled(location) {
-      let obj = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */;
+      let obj = useIsRiotSocialSDKMigrationEnabled;
       obj = { location };
       return obj.useIsRiotSocialSDKMigrationEnabled(obj);
     }
@@ -59,11 +59,11 @@ const items2 = [
   {
     applicationId: obj.BATTLENET,
     getMigrationExperimentEnabled(location) {
-      const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
+      const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled.battlenetSocialSDKMigrationExperiment;
       return battlenetSocialSDKMigrationExperiment.getConfig({ location }).enabled;
     },
     useMigrationExperimentEnabled(location) {
-      const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled /* useIsRiotSocialSDKMigrationEnabled */.battlenetSocialSDKMigrationExperiment;
+      const battlenetSocialSDKMigrationExperiment = useIsRiotSocialSDKMigrationEnabled.battlenetSocialSDKMigrationExperiment;
       return battlenetSocialSDKMigrationExperiment.useConfig({ location }).enabled;
     }
   }

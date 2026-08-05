@@ -78,19 +78,19 @@ export default function GiftingBadgeProgress(title) {
   if (tmp12) {
     const obj1 = { variant: "text-md/semibold", children: null };
     obj1[1] = title;
-    tmp12 = callback2(Text /* Text */.Text, obj1);
+    tmp12 = callback2(Text.Text, obj1);
   }
   const items1 = [tmp12, callback2(GiftingBadgeProgressBar, { percent: num2 }), ];
   const obj2 = { style: tmp.labels, children: null };
   let tmp16Result = null != nextTier;
   if (tmp16Result) {
     const obj3 = { variant: "text-xs/normal", color: "text-muted", children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj4 = { count: null, threshold: null };
     obj4[0] = progress;
     obj4[1] = tmp2;
     obj3[2] = intl.format(messagesProxy.iIpfQe, obj4);
-    tmp16Result = tmp16(Text /* Text */.Text, obj3);
+    tmp16Result = tmp16(Text.Text, obj3);
   }
   obj2[1] = tmp16Result;
   items1[2] = callback2(View, obj2);

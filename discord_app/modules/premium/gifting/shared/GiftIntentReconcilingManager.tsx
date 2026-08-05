@@ -76,7 +76,7 @@ prototype["maybeReconcileServerDismissals"] = function maybeReconcileServerDismi
 prototype["isReconcileEligible"] = function isReconcileEligible(maybeReconcileServerDismissals) {
   let enabled = 0 !== store.getFriendAnniversaries().length;
   if (enabled) {
-    const FriendshipAnniversaryBackendPersistenceExperiment = apexExperiment /* apexExperiment */.FriendshipAnniversaryBackendPersistenceExperiment;
+    const FriendshipAnniversaryBackendPersistenceExperiment = apexExperiment.FriendshipAnniversaryBackendPersistenceExperiment;
     const obj = { location: null };
     obj[0] = maybeReconcileServerDismissals;
     enabled = FriendshipAnniversaryBackendPersistenceExperiment.getConfig(obj).enabled;
@@ -99,8 +99,8 @@ prototype["attemptReconcileFetch"] = function attemptReconcileFetch() {
   const serverDismissalTimestampMs = this.getServerDismissalTimestampMs();
   if (!tmp2) {
     self.isReconciling = true;
-    const andReconcileGiftIntentDismissals = fetchAndReconcileGiftIntentDismissals /* fetchAndReconcileGiftIntentDismissals */.fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs);
-    const obj = fetchAndReconcileGiftIntentDismissals /* fetchAndReconcileGiftIntentDismissals */;
+    const andReconcileGiftIntentDismissals = fetchAndReconcileGiftIntentDismissals.fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs);
+    const obj = fetchAndReconcileGiftIntentDismissals;
   }
 };
 prototype["onReconcileSuccess"] = function onReconcileSuccess(dismissals) {
@@ -201,7 +201,7 @@ prototype["maybeRetryHeldGiftingPromptSystemMessage"] = function maybeRetryHeldG
   }
 };
 prototype["shouldHoldGiftingPromptSystemMessageForServerReconcile"] = function shouldHoldGiftingPromptSystemMessageForServerReconcile(location) {
-  const FriendshipAnniversaryBackendPersistenceExperiment = apexExperiment /* apexExperiment */.FriendshipAnniversaryBackendPersistenceExperiment;
+  const FriendshipAnniversaryBackendPersistenceExperiment = apexExperiment.FriendshipAnniversaryBackendPersistenceExperiment;
   let enabled = FriendshipAnniversaryBackendPersistenceExperiment.getConfig({ location }).enabled;
   if (enabled) {
     const self = this;

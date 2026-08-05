@@ -36,9 +36,9 @@ let closure_22;
 let closure_23;
 const require = arg1;
 function handleNewUserOnboarding() {
-  setNewUser /* setNewUser */.setNewUser(NewUserTypes.ORGANIC_REGISTERED);
-  const obj = setNewUser /* setNewUser */;
-  dispatcher.wait(_startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */.startOnboarding);
+  setNewUser.setNewUser(NewUserTypes.ORGANIC_REGISTERED);
+  const obj = setNewUser;
+  dispatcher.wait(_startContactSyncForDiscoverability.startOnboarding);
 }
 function handleThemeChange(arg0) {
   saveGuildFolders.updateTheme(arg0 ? ThemeTypes.LIGHT : ThemeTypes.DARK);
@@ -48,12 +48,12 @@ function handleReducedMotionChange(arg0) {
   if (arg0) {
     str = "reduce";
   }
-  const result = setFontSize /* setFontSize */.setPrefersReducedMotion(str);
+  const result = setFontSize.setPrefersReducedMotion(str);
 }
 function handleLaunchWelcomeReset() {
-  const result = updateUserGuildSettings /* updateUserGuildSettings */.removeDismissedContent(DismissibleContent /* DismissibleContent */.DismissibleContent.SEEN_LAUNCH_WELCOME);
-  const obj = updateUserGuildSettings /* updateUserGuildSettings */;
-  const result1 = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.SEEN_OLD_DESIGN);
+  const result = updateUserGuildSettings.removeDismissedContent(DismissibleContent.DismissibleContent.SEEN_LAUNCH_WELCOME);
+  const obj = updateUserGuildSettings;
+  const result1 = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.SEEN_OLD_DESIGN);
 }
 function showVibingWumpus() {
   let obj = ModalActionCreators;
@@ -62,23 +62,23 @@ function showVibingWumpus() {
 
     }
   };
-  obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10298, dependencyMap.paths), obj, VIBING_WUMPUS_MODAL_KEY);
+  obj.pushLazy(asyncRequireImpl(10298, dependencyMap.paths), obj, VIBING_WUMPUS_MODAL_KEY);
 }
 function handleResetDoubleTapState() {
-  const result = updateUserGuildSettings /* updateUserGuildSettings */.removeDismissedContent(DismissibleContent /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_UPSELL);
-  const obj = updateUserGuildSettings /* updateUserGuildSettings */;
-  const result1 = updateUserGuildSettings /* updateUserGuildSettings */.removeDismissedContent(DismissibleContent /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER);
-  const obj2 = updateUserGuildSettings /* updateUserGuildSettings */;
-  const result2 = updateUserGuildSettings /* updateUserGuildSettings */.removeDismissedContent(DismissibleContent /* DismissibleContent */.DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL);
-  const PreloadedUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.PreloadedUserSettingsActionCreators;
+  const result = updateUserGuildSettings.removeDismissedContent(DismissibleContent.DismissibleContent.DOUBLE_TAP_TO_REACT_UPSELL);
+  const obj = updateUserGuildSettings;
+  const result1 = updateUserGuildSettings.removeDismissedContent(DismissibleContent.DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER);
+  const obj2 = updateUserGuildSettings;
+  const result2 = updateUserGuildSettings.removeDismissedContent(DismissibleContent.DismissibleContent.DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL);
+  const PreloadedUserSettingsActionCreators = updateUserGuildSettings.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("textAndImages", (arg0) => {
     arg0.defaultReactionEmoji = undefined;
-  }, updateUserGuildSettings /* updateUserGuildSettings */.UserSettingsDelay.INFREQUENT_USER_ACTION);
+  }, updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 function launchTotpSetupSuccess() {
   let arr = ModalActionCreators;
   arr = arr.pop();
-  const items = [asyncRequireImpl /* asyncRequireImpl */(13931, dependencyMap.paths), asyncRequireImpl /* asyncRequireImpl */(13933, dependencyMap.paths)];
+  const items = [asyncRequireImpl(13931, dependencyMap.paths), asyncRequireImpl(13933, dependencyMap.paths)];
   Promise.all(items).then((arg0) => {
     const iter = arg0[Symbol.iterator]();
     let nextResult;
@@ -197,7 +197,7 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 function launchMFA() {
   let arr = ModalActionCreators;
   arr = arr.pop();
-  asyncRequireImpl /* asyncRequireImpl */(14881, dependencyMap.paths).then((openMFAModal) => {
+  asyncRequireImpl(14881, dependencyMap.paths).then((openMFAModal) => {
     const items = [{ type: "webauthn", challenge: "{}" }, { type: "totp" }, { type: "backup" }, { type: "sms" }, { type: "password" }];
     openMFAModal.openMFAModal({ ticket: "ticket", methods: items }, () => {
 

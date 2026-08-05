@@ -92,14 +92,14 @@ export default function ChannelsAndRolesModal(arg0) {
   let importDefault;
   let require;
   ({ guildId: require, defaultTab: importDefault } = arg0);
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [createGuildRecordFromRust];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getGuild(closure_0));
   const tmp2 = useGuildOnboardingAvailable(stateFromStores);
   const tmp3 = closure_8;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (tmp2) {
     let stringResult = string(t.h9mGOP);
   } else {

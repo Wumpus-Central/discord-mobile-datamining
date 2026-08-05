@@ -57,7 +57,7 @@ function getEmbeddedActivityLaunchability(arg0) {
     } else {
       return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS;
     }
-    obj2 = useIsActivitiesEnabledForCurrentPlatform /* useIsActivitiesEnabledForCurrentPlatform */;
+    obj2 = useIsActivitiesEnabledForCurrentPlatform;
   } else {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }
@@ -78,13 +78,13 @@ export const useEmbeddedActivityLaunchability = function useEmbeddedActivityLaun
 };
 export const getEmbeddedActivityLaunchabilityLabel = function getEmbeddedActivityLaunchabilityLabel(arg0) {
   if (obj.CAN_LAUNCH === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.qJvTKQ);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.qJvTKQ);
   } else if (tmp.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.hHGrWz);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.hHGrWz);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.j29zCr);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.j29zCr);
   }
 };

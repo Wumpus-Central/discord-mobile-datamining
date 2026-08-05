@@ -51,8 +51,8 @@ const familyCenterControlledSettingsStore = new FamilyCenterControlledSettingsSt
     let userId;
     ({ userId, settings, consents } = arg0);
     if (null != settings) {
-      closure_3[userId] = b64ToProto /* b64ToProto */.b64ToPreloadedUserSettingsProto(settings);
-      const obj = b64ToProto /* b64ToProto */;
+      closure_3[userId] = b64ToProto.b64ToPreloadedUserSettingsProto(settings);
+      const obj = b64ToProto;
     }
     if (null != consents) {
       closure_4[userId] = consents;
@@ -64,9 +64,9 @@ const familyCenterControlledSettingsStore = new FamilyCenterControlledSettingsSt
   },
   FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS: function handleTeenUpdateSettingsSuccess(userId) {
     userId = userId.userId;
-    const result = b64ToProto /* b64ToProto */.b64ToPreloadedUserSettingsProto(userId.settings);
-    const obj = b64ToProto /* b64ToProto */;
-    dependencyMap[userId] = b64ToProto /* b64ToProto */.mergeTopLevelFields(create /* create */.PreloadedUserSettings, dependencyMap[userId], result);
+    const result = b64ToProto.b64ToPreloadedUserSettingsProto(userId.settings);
+    const obj = b64ToProto;
+    dependencyMap[userId] = b64ToProto.mergeTopLevelFields(create.PreloadedUserSettings, dependencyMap[userId], result);
   },
   LOGOUT: function handleLogout() {
     let closure_3 = {};

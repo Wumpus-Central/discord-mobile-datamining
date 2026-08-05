@@ -10,7 +10,7 @@ const require = arg1;
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles((height) => {
   let obj = { container: null, gifImage: null, gifImageSelected: null };
-  obj = { paddingBottom: transformFavoriteGifUrl /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: transformFavoriteGifUrl /* transformFavoriteGifUrl */.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: Themes.radii.xs, width: "100%", height, flex: 1 };
+  obj = { paddingBottom: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: Themes.radii.xs, width: "100%", height, flex: 1 };
   obj[0] = obj;
   obj = { backgroundColor: Themes.colors.BORDER_SUBTLE, borderRadius: Themes.radii.xs, flex: 1 };
   obj[1] = obj;

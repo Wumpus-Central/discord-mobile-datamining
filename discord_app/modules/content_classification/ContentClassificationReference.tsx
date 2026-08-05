@@ -9,8 +9,8 @@ export const isAgeRestrictedClassificationReference = function isAgeRestrictedCl
   }
   let result = !loaded;
   if (loaded) {
-    result = isAgeRestrictedContentClassification /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(contentClassification.data);
-    const obj = isAgeRestrictedContentClassification /* isAgeRestrictedContentClassification */;
+    result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(contentClassification.data);
+    const obj = isAgeRestrictedContentClassification;
   }
   return result;
 };

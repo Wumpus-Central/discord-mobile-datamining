@@ -43,9 +43,9 @@ let closure_15 = createCacheKey.createStyles(obj3);
 let closure_18 = importAllResult.memo(() => {
   let obj = { style: callback2().empty, children: null };
   obj = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.LJuFRG);
-  obj[1] = jsx(Text /* Text */.Text, { variant: "text-md/normal", color: "text-muted", children: null });
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.LJuFRG);
+  obj[1] = jsx(Text.Text, { variant: "text-md/normal", color: "text-muted", children: null });
   return <closure_7 variant="text-md/normal" color="text-muted">{null}</closure_7>;
 });
 let obj4 = { paddingVertical: require("Themes").space.PX_24, paddingHorizontal: require("Themes").space.PX_16 };

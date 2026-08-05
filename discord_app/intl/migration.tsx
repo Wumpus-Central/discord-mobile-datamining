@@ -6,7 +6,7 @@ const result = require("set").fileFinishedImporting("intl/migration.tsx");
 export const improperGetEnglishIntlMessageText = function newGetEnglishMessageText(code) {
   let intl;
   let t;
-  ({ intl, t } = getSystemLocale /* getSystemLocale */);
+  ({ intl, t } = getSystemLocale);
   const obj = 01274__;
   intl.currentLocale = intl.currentLocale;
   return intl.string(t[obj.runtimeHashMessageKey(obj, code)]);

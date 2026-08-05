@@ -27,17 +27,17 @@ const result = require("ApplicationCommandSectionType").fileFinishedImporting("m
 
 export const commandName = function commandName(arg0) {
   let text = arg1;
-  if (arg0 === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandType.CHAT) {
+  if (arg0 === PermissionOverwriteType.ApplicationCommandType.CHAT) {
     text = `/${arg1}`;
   }
   return text;
 };
 export const commandPermissionChannels = function commandPermissionChannels(arg0) {
-  const items = [ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.CHANNEL];
+  const items = [ApplicationCommandSectionType.ApplicationCommandPermissionType.CHANNEL];
   return commandPermissions(arg0, items);
 };
 export const commandPermissionMembersRoles = function commandPermissionMembersRoles(arg0) {
-  const items = [ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE, ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER];
+  const items = [ApplicationCommandSectionType.ApplicationCommandPermissionType.ROLE, ApplicationCommandSectionType.ApplicationCommandPermissionType.USER];
   return commandPermissions(arg0, items);
 };
 export const toPermissionKey = function toPermissionKey(allChannelsSentinelResult, CHANNEL) {

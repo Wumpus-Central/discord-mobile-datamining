@@ -82,8 +82,8 @@ function getEmbeddedActivityJoinability(arg0) {
                   return obj.IS_AFK_CHANNEL;
                 } else {
                   const currentClientVoiceChannelId = VoiceStateStore.getCurrentClientVoiceChannelId(channel.getGuildId());
-                  const obj2 = allowChannelAccess /* allowChannelAccess */;
-                  const isChannelFullResult = allowChannelAccess /* allowChannelAccess */.isChannelFull(channel, VoiceStateStore, GuildStore);
+                  const obj2 = allowChannelAccess;
+                  const isChannelFullResult = allowChannelAccess.isChannelFull(channel, VoiceStateStore, GuildStore);
                   if (PermissionStore.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel)) {
                     if (channel.isVocal()) {
                       if (currentClientVoiceChannelId !== tmp10) {

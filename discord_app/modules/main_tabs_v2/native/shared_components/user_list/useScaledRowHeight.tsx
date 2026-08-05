@@ -5,19 +5,19 @@ import { getFontScale } from "../../../../screen/native/useFontScale.tsx";
 let result = require("Themes").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx");
 
 export default function useScaledRowHeight() {
-  const fontScale = getFontScale /* getFontScale */.useFontScale();
-  const obj = getFontScale /* getFontScale */;
-  const token = map /* map */.useToken(Themes.modules.mobile.TABLE_ROW_HEIGHT);
-  const obj2 = map /* map */;
-  const token1 = map /* map */.useToken(Themes.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
+  const fontScale = getFontScale.useFontScale();
+  const obj = getFontScale;
+  const token = map.useToken(Themes.modules.mobile.TABLE_ROW_HEIGHT);
+  const obj2 = map;
+  const token1 = map.useToken(Themes.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
   return token + Math.max(fontScale * token1 - token1, 0);
 };
 export const useScaledRowHeightData = function useScaledRowHeightData() {
-  let obj = getFontScale /* getFontScale */;
+  let obj = getFontScale;
   const fontScale = obj.useFontScale();
-  const token = map /* map */.useToken(Themes.modules.mobile.TABLE_ROW_HEIGHT);
-  const obj2 = map /* map */;
-  const token1 = map /* map */.useToken(Themes.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
+  const token = map.useToken(Themes.modules.mobile.TABLE_ROW_HEIGHT);
+  const obj2 = map;
+  const token1 = map.useToken(Themes.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
   const result = fontScale * token1;
   obj = { rowHeight: token + Math.max(result - token1, 0), rowContentHeight: result };
   return obj;

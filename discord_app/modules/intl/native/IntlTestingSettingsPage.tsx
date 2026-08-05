@@ -105,7 +105,7 @@ function TestLocaleSelector() {
 function LocaleInfo() {
   let require;
   let tmp4;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   let items = [closure_9];
   const tmp = callback(obj.useStateFromStoresArray(items, () => {
     const items = [, ];
@@ -122,30 +122,30 @@ function LocaleInfo() {
   }, items1);
   let obj1 = t;
   obj = { label: "Active System", trailing: null };
-  obj[1] = callback3(TableRowInner /* TableRowInner */.TableRow.TrailingText, { text: "@discord/intl" });
-  const items2 = [callback3(TableRowInner /* TableRowInner */.TableRow, obj), , , , ];
+  obj[1] = callback3(TableRowInner.TableRow.TrailingText, { text: "@discord/intl" });
+  const items2 = [callback3(TableRowInner.TableRow, obj), , , , ];
   obj = { label: "App locale", trailing: null };
-  obj[1] = callback3(TableRowInner /* TableRowInner */.TableRow.TrailingText, { text: first });
-  items2[1] = callback3(TableRowInner /* TableRowInner */.TableRow, obj);
+  obj[1] = callback3(TableRowInner.TableRow.TrailingText, { text: first });
+  items2[1] = callback3(TableRowInner.TableRow, obj);
   obj1 = { label: "System locale", trailing: null };
-  obj1[1] = callback3(TableRowInner /* TableRowInner */.TableRow.TrailingText, { text: tmp[1] });
-  items2[2] = callback3(TableRowInner /* TableRowInner */.TableRow, obj1);
+  obj1[1] = callback3(TableRowInner.TableRow.TrailingText, { text: tmp[1] });
+  items2[2] = callback3(TableRowInner.TableRow, obj1);
   const obj2 = { label: "@discord/intl locale", trailing: null };
   const obj3 = { text: null };
-  obj3[0] = getSystemLocale /* getSystemLocale */.intl.currentLocale;
-  obj2[1] = callback3(TableRowInner /* TableRowInner */.TableRow.TrailingText, obj3);
-  items2[3] = callback3(TableRowInner /* TableRowInner */.TableRow, obj2);
+  obj3[0] = getSystemLocale.intl.currentLocale;
+  obj2[1] = callback3(TableRowInner.TableRow.TrailingText, obj3);
+  items2[3] = callback3(TableRowInner.TableRow, obj2);
   const obj4 = { label: "Moment locale", trailing: null, subLabel: null };
-  obj4[1] = callback3(TableRowInner /* TableRowInner */.TableRow.TrailingText, { text: tmp4 });
+  obj4[1] = callback3(TableRowInner.TableRow.TrailingText, { text: tmp4 });
   let str = "Locale data does not match";
   if (tmp4 === obj1.localeData()._abbr) {
     str = "Locale data matches current locale";
   }
   const obj5 = { hasIcons: false, children: null };
   obj4[2] = str;
-  items2[4] = callback3(TableRowInner /* TableRowInner */.TableRow, obj4);
+  items2[4] = callback3(TableRowInner.TableRow, obj4);
   obj5[1] = items2;
-  return closure_11(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj5);
+  return closure_11(TableRowGroupTitle.TableRowGroup, obj5);
 }
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);

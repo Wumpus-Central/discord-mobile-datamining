@@ -10,9 +10,9 @@ const require = arg1;
 const result = require("ME").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
 
 export default function useFavoritesGuildResetAction() {
-  const DeveloperMode = explicitContentFromProto /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = explicitContentFromProto.DeveloperMode;
   let hasAccess = DeveloperMode.useSetting();
-  let obj = useFavoritesAccess /* useFavoritesAccess */;
+  let obj = useFavoritesAccess;
   const callback = React.useCallback(() => {
     if (obj.isFavoritesGuildId(guildId.getGuildId())) {
       let tmpResult = tmp(tmp2[6]);

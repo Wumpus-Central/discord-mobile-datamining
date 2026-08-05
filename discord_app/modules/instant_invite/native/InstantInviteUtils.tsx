@@ -42,7 +42,7 @@ function showInstantInviteActionSheet(channel, source) {
     stream = source.stream;
     obj.targetType = InviteTargetTypes.STREAM;
     obj.targetUserId = stream.ownerId;
-    const streamerApplication = _findPlayingActivity /* _findPlayingActivity */.getStreamerApplication(stream, sortActivity);
+    const streamerApplication = _findPlayingActivity.getStreamerApplication(stream, sortActivity);
     let tmpResult = tmp(698);
     obj = { type: "Send Stream Invite", location: null, other_user_id: null, application_id: null, application_name: null, game_id: null };
     obj[1] = obj.location;
@@ -63,7 +63,7 @@ function showInstantInviteActionSheet(channel, source) {
     }
     obj[5] = id1;
     tmpResult.track(constants.OPEN_MODAL, obj);
-    const obj3 = _findPlayingActivity /* _findPlayingActivity */;
+    const obj3 = _findPlayingActivity;
   } else {
     let targetApplicationId;
     if (source != null) {
@@ -119,7 +119,7 @@ function showInstantInviteActionSheet(channel, source) {
   openInstantInviteActionSheet(obj1);
 }
 function trackOptionClicked(code, channel, COPY, _location) {
-  let obj = readSnowflake /* readSnowflake */;
+  let obj = readSnowflake;
   const invite = store3.getInvite(obj.parseExtraDataFromInviteKey(code).baseCode);
   obj = { invite_type: COPY, guild_id: null, channel_id: null, invite_code: null, invite_channel_type: null, invite_inviter_id: null, location: null, application_id: null };
   if (channel instanceof ChannelRecordBase) {
@@ -142,7 +142,7 @@ function trackOptionClicked(code, channel, COPY, _location) {
   obj[2] = id1;
   const obj2 = expandEventProperties;
   const tmp = require;
-  obj[3] = readSnowflake /* readSnowflake */.parseInviteCodeFromInviteKey(code);
+  obj[3] = readSnowflake.parseInviteCodeFromInviteKey(code);
   let type;
   if (channel != null) {
     type = channel.type;
@@ -204,9 +204,9 @@ export const handleOpenShareSheet = function handleOpenShareSheet(code, channel,
     flag = true;
   }
   if (null != code) {
-    const result = readSnowflake /* readSnowflake */.parseExtraDataFromInviteKey(code);
+    const result = readSnowflake.parseExtraDataFromInviteKey(code);
     const invite = store3.getInvite(result.baseCode);
-    const obj6 = readSnowflake /* readSnowflake */;
+    const obj6 = readSnowflake;
     const tmp21 = require;
     const tmp26 = importDefault;
     if (channel instanceof ChannelRecordBase) {
@@ -282,13 +282,13 @@ export const handleCopy = function handleCopy(code, channel, GROUP_DM, arg3) {
     flag = true;
   }
   if (null != code) {
-    const result = readSnowflake /* readSnowflake */.parseExtraDataFromInviteKey(code);
-    const obj4 = readSnowflake /* readSnowflake */;
+    const result = readSnowflake.parseExtraDataFromInviteKey(code);
+    const obj4 = readSnowflake;
     const tmp13 = require;
     const tmp17 = getInviteURL(code);
-    _copy /* _copy */.copy(tmp17);
+    _copy.copy(tmp17);
     const invite = store3.getInvite(result.baseCode);
-    const obj5 = _copy /* _copy */;
+    const obj5 = _copy;
     if (channel instanceof ChannelRecordBase) {
       let guild_id = channel.guild_id;
     } else {
@@ -362,7 +362,7 @@ export const handlePressSettings = function handlePressSettings(channel, closure
   });
 };
 export const isAppInstalled = function isAppInstalled(handleGuildTemplateResolveSuccess) {
-  return sendSMS /* sendSMS */.canOpenUrlScheme(handleGuildTemplateResolveSuccess);
+  return sendSMS.canOpenUrlScheme(handleGuildTemplateResolveSuccess);
 };
 export const handleOpenInviteActionsheet = function handleOpenInviteActionsheet(guild, id, channels, GUILD_HEADER) {
   let obj = store;

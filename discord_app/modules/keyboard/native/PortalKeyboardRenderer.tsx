@@ -11,7 +11,7 @@ function transitionGroupGetItemKey(id) {
 }
 let closure_6 = [];
 function transitionGroupRenderItem(arg0, arg1, arg2, arg3) {
-  let isAndroidResult = arg2 === wrapChildrenDefault /* wrapChildrenDefault */.TransitionStates.YEETED;
+  let isAndroidResult = arg2 === wrapChildrenDefault.TransitionStates.YEETED;
   if (isAndroidResult) {
     let tmpResult = tmp(4151);
     const keyboardType = tmpResult.getKeyboardType();

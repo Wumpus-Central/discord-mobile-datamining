@@ -28,10 +28,10 @@ export default function UserProfileSection(title) {
   ({ headerIcon, trailingIcon, showContainer, children, style } = title);
   const merged = Object.assign(title, Object.create(null));
   const tmp2 = createCacheKey();
-  let obj = ManaContext /* ManaContext */;
+  let obj = ManaContext;
   const themeContext = obj.useThemeContext();
   ({ theme, primaryColor } = themeContext);
-  let obj1 = useProfileThemeValues /* useProfileThemeValues */;
+  let obj1 = useProfileThemeValues;
   const profileThemeValues = obj1.useProfileThemeValues(theme);
   obj = {};
   const merged1 = Object.assign(tmp2.contentContainer);

@@ -221,10 +221,10 @@ prototype["openAlertModal"] = function openAlertModal(arg0) {
   let body;
   let onConfirm;
   ({ body, onConfirm } = arg0);
-  let obj = useAlertStore /* useAlertStore */;
+  let obj = useAlertStore;
   obj = { title: null, body: null, onConfirm: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.sMFVrS);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.sMFVrS);
   obj[1] = body;
   obj[2] = onConfirm;
   obj.openAlert("permission-denied", jsx(React.lazy(() => callback(paths[11])(paths[10], paths.paths)), { title: null, body: null, onConfirm: null }));

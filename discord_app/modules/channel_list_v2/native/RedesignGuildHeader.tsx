@@ -240,15 +240,15 @@ export default memoResult;
 export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeight(id) {
   let isThemeDarkResult = useIsUsingClientTheme();
   if (!isThemeDarkResult) {
-    isThemeDarkResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(tmp4);
-    const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+    isThemeDarkResult = AccessibilityAnnouncer.isThemeDark(tmp4);
+    const obj = AccessibilityAnnouncer;
   }
-  const fontScale = getFontScale /* getFontScale */.useFontScale();
-  const obj2 = getFontScale /* getFontScale */;
+  const fontScale = getFontScale.useFontScale();
+  const obj2 = getFontScale;
   const tmp8 = null != useStickyServerHeaderSubtitle(id);
-  const isFavoritesGuildIdResult = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(id.id);
-  const obj3 = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
-  const scaleTextLineHeightResult = map /* map */.scaleTextLineHeight("redesign/heading-18/bold", fontScale);
+  const isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(id.id);
+  const obj3 = getFavoritesAwareGuildName;
+  const scaleTextLineHeightResult = map.scaleTextLineHeight("redesign/heading-18/bold", fontScale);
   let num = 0;
   if (isThemeDarkResult) {
     num = 1;

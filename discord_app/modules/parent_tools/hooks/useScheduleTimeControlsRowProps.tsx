@@ -10,17 +10,17 @@ export default function useScheduleTimeControlsRowProps(arr) {
   if (0 === arr.length) {
     let obj = { subLabel: null, trailing: "a" };
     obj = { variant: "text-xs/medium", color: "text-muted", children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj[2] = intl.string(messagesProxy.fOBIZH);
-    obj[0] = jsx(Text /* Text */.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
+    obj[0] = jsx(Text.Text, { variant: "text-xs/medium", color: "text-muted", children: null });
     return obj;
   } else {
     const obj1 = { subLabel: null, trailing: null };
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj2 = { count: null };
     obj2[0] = arr.length;
     obj1[0] = intl2.formatToPlainString(messagesProxy.XfwcpX, obj2);
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     const string = intl3.string;
     const tmp11 = messagesProxy;
     if (someResult) {
@@ -30,7 +30,7 @@ export default function useScheduleTimeControlsRowProps(arr) {
     }
     obj = { variant: "text-sm/medium", color: "text-muted", children: null };
     obj[2] = stringResult;
-    obj1[1] = jsx(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-muted", children: null });
+    obj1[1] = jsx(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: null });
     return obj1;
   }
 };

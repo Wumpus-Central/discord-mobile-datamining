@@ -15,9 +15,9 @@ let obj = {};
 obj = {
   scope: require("activityInstanceConnectedParticipants").activityInstanceConnectedParticipantsScope,
   handler(socket) {
-    const result = recurseReplaceContentTree /* recurseReplaceContentTree */.validatePostMessageTransport(socket.socket.transport);
-    const obj = recurseReplaceContentTree /* recurseReplaceContentTree */;
-    return activityInstanceConnectedParticipants /* activityInstanceConnectedParticipants */.activityInstanceConnectedParticipants();
+    const result = recurseReplaceContentTree.validatePostMessageTransport(socket.socket.transport);
+    const obj = recurseReplaceContentTree;
+    return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 };
 obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = createRPCCommand.createRPCCommand(RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, obj);

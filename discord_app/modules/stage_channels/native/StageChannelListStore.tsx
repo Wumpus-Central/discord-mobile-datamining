@@ -50,5 +50,5 @@ export const useActiveSpeakerPillState = function useActiveSpeakerPillState() {
     const items = [, ];
     ({ showActiveSpeakerPill: arr[0], setShowActiveSpeakerPill: arr[1] } = arg0);
     return items;
-  }, isIterable /* isIterable */.shallow);
+  }, isIterable.shallow);
 };

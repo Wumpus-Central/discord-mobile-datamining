@@ -66,14 +66,14 @@ export const inviteRoleToDisplayData = function inviteRoleToDisplayData(id, id) 
   const obj = { id: id.id, name: id.name, guildId: id, colorString: null, colorStrings: null, icon: null, unicodeEmoji: null };
   let int2hexResult = null;
   if (0 !== id.color) {
-    int2hexResult = int2hslRaw /* int2hslRaw */.int2hex(id.color);
-    const obj2 = int2hslRaw /* int2hslRaw */;
+    int2hexResult = int2hslRaw.int2hex(id.color);
+    const obj2 = int2hslRaw;
   }
   obj[3] = int2hexResult;
   let result = null;
   if (null != id.colors) {
-    result = extractColorStringsFromServerColors /* extractColorStringsFromServerColors */.extractColorStringsFromServerColors(id.colors);
-    const obj3 = extractColorStringsFromServerColors /* extractColorStringsFromServerColors */;
+    result = extractColorStringsFromServerColors.extractColorStringsFromServerColors(id.colors);
+    const obj3 = extractColorStringsFromServerColors;
   }
   obj[4] = result;
   let icon = id.icon;

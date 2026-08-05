@@ -194,7 +194,7 @@ prototype["setHasRequiredAction"] = function setHasRequiredAction() {
 DismissibleContentShownStateStore.displayName = "DismissibleContentShownStateStore";
 identity = {
   CONNECTION_OPEN() {
-    batchUpdates /* batchUpdates */.batchUpdates(() => {
+    batchUpdates.batchUpdates(() => {
       state.setState(() => {
         const obj = { candidates: null, shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: null, currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         obj[0] = new Map();
@@ -210,7 +210,7 @@ identity = {
     taskRunner.unschedule();
   },
   LOGOUT() {
-    batchUpdates /* batchUpdates */.batchUpdates(() => {
+    batchUpdates.batchUpdates(() => {
       state.setState(() => {
         const obj = { candidates: null, shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: null, currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         obj[0] = new Map();
@@ -391,7 +391,7 @@ export const getCurrentlyShownCounts = function getCurrentlyShownCounts() {
   return items1;
 };
 export const reset = function reset() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     state.setState(() => {
       const obj = { candidates: null, shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: null, currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
       obj[0] = new Map();
@@ -407,7 +407,7 @@ export const reset = function reset() {
   taskRunner.unschedule();
 };
 export const resetFatigueCooldown = function resetFatigueCooldown() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);

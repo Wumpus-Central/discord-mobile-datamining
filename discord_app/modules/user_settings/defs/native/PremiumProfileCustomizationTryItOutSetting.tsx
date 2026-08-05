@@ -5,8 +5,8 @@ import { ProfileCustomizationTryItOutSettingScreen } from "../../premium/native/
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.gMlDNd);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.gMlDNd);
   },
   parent: require("MobileSetting").MobileSetting.PREMIUM,
   unsearchable: true,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION_TRY_IT_OUT,
   getComponent() {
-    return ProfileCustomizationTryItOutSettingScreen /* ProfileCustomizationTryItOutSettingScreen */.default;
+    return ProfileCustomizationTryItOutSettingScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -5,7 +5,7 @@ let c3 = "create-poll-modal";
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/polls/native/PollCreationModalActionCreators.tsx");
 
 export const openCreatePollModal = function openCreatePollModal(closure_0) {
-  ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(11495, dependencyMap.paths), closure_0, c3);
+  ModalActionCreators.pushLazy(asyncRequireImpl(11495, dependencyMap.paths), closure_0, c3);
 };
 export const closeCreatePollModal = function closeCreatePollModal() {
   ModalActionCreators.popWithKey(c3);

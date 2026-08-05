@@ -80,7 +80,7 @@ export const useIsGameInvitePostVoiceEnabled = function useIsGameInvitePostVoice
   }) && !appliedTags.some((name) => name.name === closure_11);
 };
 export const useFirstMessage = function useFirstMessage(stateFromStores, enabled) {
-  let obj = loadForumPostData /* loadForumPostData */;
+  let obj = loadForumPostData;
   obj = { enabled, allowArchived: true };
   return obj.useFirstForumPostMessage(stateFromStores, obj);
 };

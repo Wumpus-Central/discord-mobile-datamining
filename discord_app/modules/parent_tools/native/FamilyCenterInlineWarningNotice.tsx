@@ -28,9 +28,9 @@ export default function FamilyCenterInlineWarningNotice(arg0) {
   items = [tmp.container, style];
   obj = { size: "sm", color: null };
   obj[1] = Themes.colors.ICON_FEEDBACK_WARNING;
-  const items1 = [callback(WarningIcon /* WarningIcon */.WarningIcon, obj), ];
+  const items1 = [callback(WarningIcon.WarningIcon, obj), ];
   obj = { variant: "text-sm/medium", color: "text-strong", style: tmp.text, children: text };
-  items1[1] = callback(Text /* Text */.Text, obj);
+  items1[1] = callback(Text.Text, obj);
   obj[1] = items1;
   return callback2(View, obj);
 };

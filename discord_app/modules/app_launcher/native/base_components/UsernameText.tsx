@@ -23,7 +23,7 @@ export default function UsernameText(color) {
     str = "text-default";
   }
   let obj = { variant, color: str };
-  let obj1 = getNickname /* getNickname */;
+  let obj1 = getNickname;
   const name = obj1.getName(color.guildId, null, user);
   if (user.hasUniqueUsername()) {
     str = user.toString();
@@ -55,5 +55,5 @@ export default function UsernameText(color) {
     tmp13 = callback(closure_3, obj2);
   }
   obj1.children = tmp13;
-  return closure_4(Text /* Text */.Text, obj1);
+  return closure_4(Text.Text, obj1);
 };

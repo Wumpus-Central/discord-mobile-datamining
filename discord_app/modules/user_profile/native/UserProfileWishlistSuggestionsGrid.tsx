@@ -227,7 +227,7 @@ let obj3 = { marginTop: require("Themes").space.PX_16, marginHorizontal: "auto" 
 let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/user_profile/native/UserProfileWishlistSuggestionsGrid.tsx");
 
 export default function UserProfileWishlistSuggestionsGrid(arg0) {
-  let obj = useIsMobileWishlistSuggestionsEnabled /* useIsMobileWishlistSuggestionsEnabled */;
+  let obj = useIsMobileWishlistSuggestionsEnabled;
   let tmp = null;
   if (obj.useIsMobileWishlistSuggestionsEnabled("user_profile_wishlist_suggestions_grid")) {
     obj = {};

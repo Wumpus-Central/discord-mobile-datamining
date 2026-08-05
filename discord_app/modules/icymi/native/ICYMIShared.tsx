@@ -37,8 +37,8 @@ function CutoutGuildIconWithUser(guild) {
   guild = guild.guild;
   let obj = { guild, icon: null };
   obj = { animate: true, style: callback3().authorIcon, guildId: guild.id, user: guild.author, size: null };
-  obj[4] = Button /* Button */.AvatarSizes.XSMALL;
-  obj[1] = callback(Button /* Button */.Avatar, obj);
+  obj[4] = Button.AvatarSizes.XSMALL;
+  obj[1] = callback(Button.Avatar, obj);
   return callback(CutoutGuildIcon, obj);
 }
 class CutoutGuildIcon {
@@ -146,7 +146,7 @@ class GuildContentPost {
 ({ AnalyticsObjects: c10, AnalyticsObjectTypes: unpackModuleId, AnalyticsPages: closure_12, DEFAULT_ROLE_COLOR_HEX: map1, MAX_MESSAGES_FOR_JUMP: closure_14, MessageFlags: closure_15, Permissions: closure_16, Routes: closure_17 } = ME);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 let closure_21 = createICYMIStyles.createICYMIStyles((paddingBottom) => {
-  let obj = set /* set */;
+  let obj = set;
   let num = 0;
   if (obj.isAndroid()) {
     num = -2;
@@ -161,7 +161,7 @@ let closure_21 = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   obj[2] = obj;
   obj[3] = { position: "absolute", right: -4, bottom: -2 };
   const tmp = require;
-  tmpResult = set /* set */;
+  tmpResult = set;
   obj[4] = { tintColor: Themes.colors.TEXT_MUTED };
   obj[5] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: paddingBottom.margin, marginHorizontal: paddingBottom.margin };
   obj[6] = { flexDirection: "column", paddingBottom: paddingBottom.margin, marginHorizontal: paddingBottom.margin };

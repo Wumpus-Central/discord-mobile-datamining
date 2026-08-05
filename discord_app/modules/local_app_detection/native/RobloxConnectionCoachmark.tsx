@@ -24,7 +24,7 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function RobloxIcon(theme) {
-  let obj = isThemeLight /* isThemeLight */;
+  let obj = isThemeLight;
   const isThemeDarkResult = obj.isThemeDark(theme.theme);
   const tmp = createCacheKey();
   let str = "white";
@@ -36,11 +36,11 @@ function RobloxIcon(theme) {
   const icon = value.icon;
   obj = { style: items, children: null };
   items = [tmp.robloxIconContainer, { backgroundColor: str }];
-  const source = getAvatarURL /* getAvatarURL */.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
+  const source = getAvatarURL.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
   obj = { size: null, source: null, disableColor: true };
-  obj[0] = Button /* Button */.IconSizes.LARGE;
+  obj[0] = Button.IconSizes.LARGE;
   obj[1] = source;
-  obj[1] = callback(Button /* Button */.Icon, obj);
+  obj[1] = callback(Button.Icon, obj);
   return callback(View, obj);
 }
 class UnionIcon {
@@ -71,16 +71,16 @@ class UnionIcon {
 }
 function UserIcon() {
   const tmp = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   obj = { style: tmp.avatarContainer, children: null };
   obj = { style: tmp.avatarInnerBorder };
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [callback(View, obj), ];
   const obj1 = { size: null, user: null, guildId: "disabled" };
-  obj1[0] = Button /* Button */.AvatarSizes.NORMAL;
+  obj1[0] = Button.AvatarSizes.NORMAL;
   obj1[1] = stateFromStores;
-  items1[1] = callback(Button /* Button */.Avatar, obj1);
+  items1[1] = callback(Button.Avatar, obj1);
   obj[1] = items1;
   return callback2(View, obj);
 }

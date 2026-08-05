@@ -11,5 +11,5 @@ export default function ScrollHandlingActionSheet(children) {
   const obj = { startExpanded: true };
   const merged1 = Object.assign(merged);
   obj.children = children.children;
-  return jsx(Background /* Background */.BottomSheet, { startExpanded: true });
+  return jsx(Background.BottomSheet, { startExpanded: true });
 };

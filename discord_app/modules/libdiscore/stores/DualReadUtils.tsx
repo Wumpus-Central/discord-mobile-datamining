@@ -34,7 +34,7 @@ function deepEqualImpl(set, set1, map, arg3) {
               if (set instanceof Set) {
                 const _Set2 = Set;
                 if (set1 instanceof Set) {
-                  return areSetsEqual /* areSetsEqual */.areSetsEqual(set, set1);
+                  return areSetsEqual.areSetsEqual(set, set1);
                 }
               }
               const _Array = Array;

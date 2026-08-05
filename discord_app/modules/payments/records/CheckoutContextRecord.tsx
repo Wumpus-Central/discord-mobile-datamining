@@ -102,7 +102,7 @@ prototype["matchesItems"] = function matchesItems(closure_0) {
 };
 prototype["getPriceString"] = function getPriceString() {
   const total = this.total;
-  const obj = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+  const obj = formatSingleCurrencyPrice;
   const obj2 = new add(total.amount);
   return obj.formatPrice(new add(total.amount).dividedBy(10 ** total.exponent).toNumber(), total.currency, { convertToMajorUnits: false });
 };

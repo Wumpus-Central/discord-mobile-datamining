@@ -358,8 +358,8 @@ function QuestDockModeChangeTracker(arg0) {
   let mode;
   let questId;
   ({ mode, questId } = arg0);
-  let obj = useQuests /* useQuests */;
-  obj = { mode, questContent: QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestContent.QUEST_BAR_MOBILE, questId, sourceQuestContent: QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestContent.QUEST_BAR_MOBILE };
+  let obj = useQuests;
+  obj = { mode, questContent: QuestsVisibleMessagesChangedSource.QuestContent.QUEST_BAR_MOBILE, questId, sourceQuestContent: QuestsVisibleMessagesChangedSource.QuestContent.QUEST_BAR_MOBILE };
   const questBarOrDockModeChangeTracking = obj.useQuestBarOrDockModeChangeTracking(obj);
   return null;
 }

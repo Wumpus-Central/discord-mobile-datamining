@@ -73,7 +73,7 @@ function getQuestByActivity(result, arg1) {
     if (questMatchesActivity(arg1, tmp4)) {
       let tmp7 = require;
       let tmp8 = dependencyMap;
-      let obj2 = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */;
+      let obj2 = getQuestDeliveryDataForPlacement;
       let tmp9 = tmp4;
       if (!obj2.isQuestExpired(tmp5)) {
         let tmp10 = tmp4;
@@ -108,7 +108,7 @@ export const getQuestByApplicationId = function getQuestByApplicationId(arg0, ar
     if (questMatchesApplicationId(arg1, tmp5)) {
       let tmp8 = require;
       let tmp9 = dependencyMap;
-      let obj2 = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */;
+      let obj2 = getQuestDeliveryDataForPlacement;
       let tmp10 = tmp5;
       if (!obj2.isQuestExpired(tmp6)) {
         let tmp = tmp5;

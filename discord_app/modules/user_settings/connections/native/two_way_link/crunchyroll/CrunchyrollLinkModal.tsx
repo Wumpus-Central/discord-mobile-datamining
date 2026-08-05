@@ -14,9 +14,9 @@ function CloseButton() {
   obj[1] = function onPress() {
     return callback(table[6]).hideModal();
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
-  return jsx(HeaderActionButton /* HeaderActionButton */.HeaderActionButton, { source: null, onPress: null, accessibilityLabel: null });
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
+  return jsx(HeaderActionButton.HeaderActionButton, { source: null, onPress: null, accessibilityLabel: null });
 }
 const result = require("ME").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkModal.tsx");
 

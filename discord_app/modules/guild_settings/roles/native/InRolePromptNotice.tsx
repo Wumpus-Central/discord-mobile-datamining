@@ -25,7 +25,7 @@ export default function InRolePromptNotice(role) {
   role = role.role;
   let string = createCacheKey();
   let stringResult = dependencyMap;
-  let obj = hasFlag /* hasFlag */;
+  let obj = hasFlag;
   if (!obj.hasFlag(role.flags, RoleFlags.IN_PROMPT)) {
     return null;
   } else {

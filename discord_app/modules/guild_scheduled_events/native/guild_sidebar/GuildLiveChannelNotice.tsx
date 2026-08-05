@@ -210,7 +210,7 @@ function GuildVoiceEventNotice(channel) {
 }
 function GuildExternalEventNotice(guildEvent) {
   guildEvent = guildEvent.guildEvent;
-  let obj = getChannelFromEvent /* getChannelFromEvent */;
+  let obj = getChannelFromEvent;
   const locationFromEvent = obj.getLocationFromEvent(guildEvent);
   let tmp4 = null;
   if (null != locationFromEvent) {
@@ -313,8 +313,8 @@ obj.guild = {
     if (typeof content.content === "string") {
       content = content.content;
     } else {
-      content = smartOutput /* smartOutput */.smartOutput(content, output, state);
-      const obj = smartOutput /* smartOutput */;
+      content = smartOutput.smartOutput(content, output, state);
+      const obj = smartOutput;
     }
     return content;
   }
@@ -382,9 +382,9 @@ let closure_31 = importAllResult.memo((arg0) => {
   items1[1] = isLiveStreaming;
   obj1[2] = items1;
   obj1[3] = heading;
-  items[1] = tmp4(Text /* Text */.Text, obj1);
+  items[1] = tmp4(Text.Text, obj1);
   obj[1] = items;
-  const items2 = [closure_14(View, obj), voiceUsers, tmp4(Text /* Text */.Text, { style: tmp.topic, lineClamp: 1, variant: c22, color: "redesign-channel-name-text", children: topic }), , ];
+  const items2 = [closure_14(View, obj), voiceUsers, tmp4(Text.Text, { style: tmp.topic, lineClamp: 1, variant: c22, color: "redesign-channel-name-text", children: topic }), , ];
   const obj3 = { style: items3, children: null };
   items3 = [, ];
   ({ row: arr4[0], infoRow: arr4[1] } = tmp);
@@ -525,7 +525,7 @@ export const getScaledLiveChannelNoticeHeight = function getScaledLiveChannelNot
   let hasSpeakers;
   let hasStream;
   ({ hasSpeakers, hasButton, hasAudience, hasStream } = guildLiveChannelNoticeInfo);
-  map /* map */;
+  map;
   if (!hasSpeakers) {
     if (!hasAudience) {
       let num = 0;

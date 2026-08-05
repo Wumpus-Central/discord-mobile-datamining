@@ -41,7 +41,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subs
 
 export default function MessageBlock(children) {
   const tmp = callback(children.color);
-  obj = { style: tmp.container, children: jsx(Button /* Button */.LegacyText, obj) };
+  obj = { style: tmp.container, children: jsx(Button.LegacyText, obj) };
   obj = { style: tmp.text, children: children.children };
   return <View style={tmp.text}>{arg0.children}</View>;
 };

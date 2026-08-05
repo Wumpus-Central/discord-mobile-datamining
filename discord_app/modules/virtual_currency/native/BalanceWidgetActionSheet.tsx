@@ -26,7 +26,7 @@ let closure_12 = createCacheKey.createStyles((color) => {
   obj = { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: Themes.space.PX_8, flexWrap: "wrap" };
   obj[1] = obj;
   const obj1 = { color, fontSize: 36, lineHeight: null, textAlignVertical: "center" };
-  let obj4 = set /* set */;
+  let obj4 = set;
   let num = 44;
   if (obj4.isAndroid()) {
     num = 36;

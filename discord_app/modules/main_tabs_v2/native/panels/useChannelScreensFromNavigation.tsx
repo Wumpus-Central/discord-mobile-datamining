@@ -45,7 +45,7 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
         obj[2] = coerceTabsRouteResult.params.params;
         return obj;
       } else {
-        obj = getRootNavigationRef /* getRootNavigationRef */;
+        obj = getRootNavigationRef;
         const rootNavigationRef = obj.getRootNavigationRef();
         let isReadyResult;
         if (rootNavigationRef != null) {
@@ -59,7 +59,7 @@ function getActiveTabsRoute(coerceTabsRouteResult) {
   }
 }
 function resolveBackgroundScreen(index) {
-  let obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
+  let obj = navigationToRootTabHelper;
   const coerceTabsRouteResult = obj.coerceTabsRoute(index.routes[0]);
   if (null == coerceTabsRouteResult) {
     return [];
@@ -68,7 +68,7 @@ function resolveBackgroundScreen(index) {
     if (null == tmp11) {
       return [];
     } else {
-      const coerceGuildsRouteResult = navigationToRootTabHelper /* navigationToRootTabHelper */.coerceGuildsRoute(tmp11);
+      const coerceGuildsRouteResult = navigationToRootTabHelper.coerceGuildsRoute(tmp11);
       if (null == coerceGuildsRouteResult) {
         return [];
       } else {
@@ -108,7 +108,7 @@ function resolveBackgroundScreen(index) {
           BACKGROUND_SAVED = obj.BACKGROUND_SAVED;
         }
       }
-      const tmpResult = navigationToRootTabHelper /* navigationToRootTabHelper */;
+      const tmpResult = navigationToRootTabHelper;
     }
   }
 }
@@ -243,7 +243,7 @@ export default function useChannelScreensFromNavigation(arg0) {
 export const ChannelScreenType = obj;
 export { getActiveTabsRoute };
 export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {
-  const coerceTabsRouteResult = navigationToRootTabHelper /* navigationToRootTabHelper */.coerceTabsRoute(state.routes[0]);
+  const coerceTabsRouteResult = navigationToRootTabHelper.coerceTabsRoute(state.routes[0]);
   if (null == coerceTabsRouteResult) {
     return false;
   } else {
@@ -255,6 +255,6 @@ export const isActiveTabsGuilds = function isActiveTabsGuilds(state) {
     }
     return tmp6;
   }
-  const obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
+  const obj = navigationToRootTabHelper;
   tmp = require;
 };

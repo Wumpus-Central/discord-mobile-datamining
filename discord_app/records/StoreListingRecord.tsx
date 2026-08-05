@@ -103,7 +103,7 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
   let mapped3 = null;
   if (null != id.assets) {
     const assets = id.assets;
-    mapped3 = assets.map(transformStoreAssetFromServer /* transformStoreAssetFromServer */.transformStoreAssetFromServer);
+    mapped3 = assets.map(transformStoreAssetFromServer.transformStoreAssetFromServer);
   }
   obj[11] = mapped3;
   let tmp8 = null;
@@ -131,50 +131,50 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
   obj[13] = tmp13;
   let result = null;
   if (null != id.thumbnail) {
-    result = transformStoreAssetFromServer /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.thumbnail);
-    const obj4 = transformStoreAssetFromServer /* transformStoreAssetFromServer */;
+    result = transformStoreAssetFromServer.transformStoreAssetFromServer(id.thumbnail);
+    const obj4 = transformStoreAssetFromServer;
   }
   obj[14] = result;
   let result1 = null;
   if (null != id.preview_video) {
-    result1 = transformStoreAssetFromServer /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.preview_video);
-    const obj5 = transformStoreAssetFromServer /* transformStoreAssetFromServer */;
+    result1 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.preview_video);
+    const obj5 = transformStoreAssetFromServer;
   }
   obj[15] = result1;
   let result2 = null;
   if (null != id.header_background) {
-    result2 = transformStoreAssetFromServer /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.header_background);
-    const obj6 = transformStoreAssetFromServer /* transformStoreAssetFromServer */;
+    result2 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.header_background);
+    const obj6 = transformStoreAssetFromServer;
   }
   obj[16] = result2;
   let result3 = null;
   if (null != id.header_logo_dark_theme) {
-    result3 = transformStoreAssetFromServer /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.header_logo_dark_theme);
-    const obj7 = transformStoreAssetFromServer /* transformStoreAssetFromServer */;
+    result3 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.header_logo_dark_theme);
+    const obj7 = transformStoreAssetFromServer;
   }
   obj[17] = result3;
   let result4 = null;
   if (null != id.header_logo_light_theme) {
-    result4 = transformStoreAssetFromServer /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.header_logo_light_theme);
-    const obj8 = transformStoreAssetFromServer /* transformStoreAssetFromServer */;
+    result4 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.header_logo_light_theme);
+    const obj8 = transformStoreAssetFromServer;
   }
   obj[18] = result4;
   let result5 = null;
   if (null != id.box_art) {
-    result5 = transformStoreAssetFromServer /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.box_art);
-    const obj9 = transformStoreAssetFromServer /* transformStoreAssetFromServer */;
+    result5 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.box_art);
+    const obj9 = transformStoreAssetFromServer;
   }
   obj[19] = result5;
   let result6 = null;
   if (null != id.hero_background) {
-    result6 = transformStoreAssetFromServer /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.hero_background);
-    const obj10 = transformStoreAssetFromServer /* transformStoreAssetFromServer */;
+    result6 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.hero_background);
+    const obj10 = transformStoreAssetFromServer;
   }
   obj[20] = result6;
   let result7 = null;
   if (null != id.hero_video) {
-    result7 = transformStoreAssetFromServer /* transformStoreAssetFromServer */.transformStoreAssetFromServer(id.hero_video);
-    const obj11 = transformStoreAssetFromServer /* transformStoreAssetFromServer */;
+    result7 = transformStoreAssetFromServer.transformStoreAssetFromServer(id.hero_video);
+    const obj11 = transformStoreAssetFromServer;
   }
   obj[21] = result7;
   ({ entitlement_branch_id: obj[22], benefits: obj[23], published: obj[24] } = id);

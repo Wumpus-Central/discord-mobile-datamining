@@ -137,13 +137,13 @@ export default function IconUploader(disabled) {
       obj[0] = iconStyle;
       obj[1] = fnResult;
       obj[2] = name;
-      obj[3] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.XLARGE;
+      obj[3] = GuildIconSizes.GuildIconSizes.XLARGE;
       let tmp7 = callback(GuildIconSizes, obj);
       const tmp12 = GuildIconSizes;
     }
     tmp8 = null == icon && null == name;
   } else {
-    let obj1 = getAvatarURL /* getAvatarURL */;
+    let obj1 = getAvatarURL;
     obj = { style: null, source: null };
     const items = [tmp.avatar, iconStyle];
     obj[0] = items;
@@ -165,8 +165,8 @@ export default function IconUploader(disabled) {
     let obj2 = { style: null, children: null };
     obj2[0] = disabled.style;
     const obj3 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj3[1] = intl.string(getSystemLocale /* getSystemLocale */.t["MsUY/S"]);
+    const intl = getSystemLocale.intl;
+    obj3[1] = intl.string(getSystemLocale.t["MsUY/S"]);
     obj3[2] = function handleChangeIcon() {
       const self = this;
       const apply = _handleChangeIcon.apply;
@@ -178,7 +178,7 @@ export default function IconUploader(disabled) {
       return applyArgumentsResult;
     };
     obj3[3] = tmp14Result;
-    obj2[1] = callback(PressableBase /* PressableBase */.PressableOpacity, obj3);
+    obj2[1] = callback(PressableBase.PressableOpacity, obj3);
     tmp22 = callback(closure_5, obj2);
   }
   return tmp22;

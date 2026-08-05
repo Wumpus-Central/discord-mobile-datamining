@@ -5,9 +5,9 @@ import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUti
 const result = require("dispatcher").fileFinishedImporting("actions/GuildAffinitiesActionCreators.tsx");
 
 export const fetchGuildAffinities = function fetchGuildAffinities() {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   const obj = { url: Endpoints.GUILD_AFFINITIES, oldFormErrors: true, rejectWithError: null };
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest.rejectWithMigratedError();
   const value = HTTP.get(obj);
   return value.then((guildAffinities) => {
     callback(709).dispatch({ type: "LOAD_GUILD_AFFINITIES_SUCCESS", guildAffinities: guildAffinities.body.guild_affinities });

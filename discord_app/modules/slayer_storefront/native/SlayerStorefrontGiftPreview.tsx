@@ -25,9 +25,9 @@ function WarningBox(application) {
     let name = importDefault;
     let BMMo2K = dependencyMap;
     let obj = { look: null, style: null, children: null };
-    obj[0] = InfoBox /* InfoBox */.InfoBoxLooks.WARNING;
+    obj[0] = InfoBox.InfoBoxLooks.WARNING;
     obj[1] = tmp.warningBox;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     if (mobileAccountLinkingDisabled) {
       BMMo2K = name(3223).BMMo2K;
       tmp2 = application == tmp2;
@@ -85,7 +85,7 @@ export default function SlayerStorefrontGiftPreview(arg0) {
     const items = [callback(SlayerStorefrontItemCard, obj), , ];
     obj = { variant: "heading-md/normal", color: "mobile-text-heading-primary", style: null, children: null };
     obj[2] = tmp.text;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj1 = { sender: null, skuName: null, applicationName: null };
     obj1[0] = sender;
     obj1[1] = sku.name;
@@ -94,8 +94,8 @@ export default function SlayerStorefrontGiftPreview(arg0) {
       name = application.name;
     }
     obj1[2] = name;
-    obj[3] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["2tBYtA"], obj1);
-    items[1] = callback(Text /* Text */.Text, obj);
+    obj[3] = intl.formatToPlainString(getSystemLocale.t["2tBYtA"], obj1);
+    items[1] = callback(Text.Text, obj);
     const obj2 = { canStartAuthorization: null, hasAccountLinked: null, mobileAccountLinkingDisabled: null, sku: null, application: null };
     obj2[0] = canStartAuthorization;
     obj2[1] = hasAccountLinked;

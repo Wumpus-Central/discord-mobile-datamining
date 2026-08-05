@@ -17,7 +17,7 @@ export const getCanJoin = function getCanJoin(currentUserId) {
     return { canJoin: false, remoteJoinPlatform: null };
   } else {
     if (result(presenceActivity, message, tmp2.id)) {
-      let obj = getPartySize /* getPartySize */;
+      let obj = getPartySize;
       const partySize = obj.getPartySize(presenceActivity);
       if (obj2.hasPartySize(partySize)) {
         let tmp6Result = tmp6(11070);
@@ -79,7 +79,7 @@ export const getCanSync = function getCanSync(activity, tmp8Result, arg2, id) {
     if (tmp6) {
       let tmp8 = tmp4(5837)(activity, constants2.SYNC);
       if (tmp8) {
-        let isPlatformEmbedded = set /* set */.isPlatformEmbedded;
+        let isPlatformEmbedded = set.isPlatformEmbedded;
         if (isPlatformEmbedded) {
           isPlatformEmbedded = !tmp9(11071).getIsInParty(tmp8Result, activity);
           const tmp9Result = tmp9(11071);

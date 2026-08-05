@@ -15,7 +15,7 @@ export default function StickerPackBanner(arg0) {
   let stickerPack;
   let style;
   ({ containerStyle, style, stickerPack } = arg0);
-  let obj = getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */;
+  let obj = getStickerExtensionFromFormatType;
   const stickerPackBannerAssetUrl = obj.getStickerPackBannerAssetUrl(stickerPack, 1024);
   let tmp2 = null;
   if (null != stickerPackBannerAssetUrl) {

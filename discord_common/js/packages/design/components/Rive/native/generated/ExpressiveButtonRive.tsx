@@ -25,7 +25,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       posy1 = onDataBindingChange.posy;
     }
-    const numberBinding = BaseRive /* BaseRive */.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
+    const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
     let tmpResult = tmp(4014);
     let posx;
     if (dataBinding != null) {
@@ -46,7 +46,7 @@ let closure_9 = {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
     const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
-    const obj = BaseRive /* BaseRive */;
+    const obj = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -55,8 +55,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
-    const numberBinding2 = BaseRive /* BaseRive */.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
-    const tmpResult1 = BaseRive /* BaseRive */;
+    const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
+    const tmpResult1 = BaseRive;
     let pressed;
     if (dataBinding != null) {
       pressed = dataBinding.pressed;
@@ -65,7 +65,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       pressed1 = onDataBindingChange.pressed;
     }
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("pressed", instance, pressed, pressed1, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding("pressed", instance, pressed, pressed1, playIfNeeded);
     return null;
   },
   Ambient_Lightmode: function AmbientLightmodeBindings(arg0) {
@@ -82,7 +82,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       posy1 = onDataBindingChange.posy;
     }
-    const numberBinding = BaseRive /* BaseRive */.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
+    const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
     let tmpResult = tmp(4014);
     let posx;
     if (dataBinding != null) {
@@ -103,7 +103,7 @@ let closure_9 = {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
     const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
-    const obj = BaseRive /* BaseRive */;
+    const obj = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -112,8 +112,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
-    const numberBinding2 = BaseRive /* BaseRive */.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
-    const tmpResult1 = BaseRive /* BaseRive */;
+    const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
+    const tmpResult1 = BaseRive;
     let pressed;
     if (dataBinding != null) {
       pressed = dataBinding.pressed;
@@ -122,7 +122,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       pressed1 = onDataBindingChange.pressed;
     }
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("pressed", instance, pressed, pressed1, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding("pressed", instance, pressed, pressed1, playIfNeeded);
     return null;
   },
   "Mobile Expressive Button Dark Mode": function MobileExpressiveButtonDarkModeBindings(arg0) {
@@ -139,7 +139,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       posy1 = onDataBindingChange.posy;
     }
-    const numberBinding = BaseRive /* BaseRive */.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
+    const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
     let tmpResult = tmp(4014);
     let posx;
     if (dataBinding != null) {
@@ -160,7 +160,7 @@ let closure_9 = {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
     const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
-    const obj = BaseRive /* BaseRive */;
+    const obj = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -169,8 +169,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
-    const numberBinding2 = BaseRive /* BaseRive */.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
-    const tmpResult1 = BaseRive /* BaseRive */;
+    const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
+    const tmpResult1 = BaseRive;
     let pressed;
     if (dataBinding != null) {
       pressed = dataBinding.pressed;
@@ -179,7 +179,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       pressed1 = onDataBindingChange.pressed;
     }
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("pressed", instance, pressed, pressed1, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding("pressed", instance, pressed, pressed1, playIfNeeded);
     return null;
   },
   Ambient: function AmbientBindings(arg0) {
@@ -196,7 +196,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       posy1 = onDataBindingChange.posy;
     }
-    const numberBinding = BaseRive /* BaseRive */.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
+    const numberBinding = BaseRive.useNumberBinding("posy", instance, posy, posy1, playIfNeeded);
     let tmpResult = tmp(4014);
     let posx;
     if (dataBinding != null) {
@@ -217,7 +217,7 @@ let closure_9 = {
       buttonColor1 = onDataBindingChange.buttonColor;
     }
     const colorBinding = tmpResult.useColorBinding("buttonColor", instance, buttonColor, buttonColor1, playIfNeeded);
-    const obj = BaseRive /* BaseRive */;
+    const obj = BaseRive;
     let cornerRadius;
     if (dataBinding != null) {
       cornerRadius = dataBinding.cornerRadius;
@@ -226,8 +226,8 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       cornerRadius1 = onDataBindingChange.cornerRadius;
     }
-    const numberBinding2 = BaseRive /* BaseRive */.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
-    const tmpResult1 = BaseRive /* BaseRive */;
+    const numberBinding2 = BaseRive.useNumberBinding("cornerRadius", instance, cornerRadius, cornerRadius1, playIfNeeded);
+    const tmpResult1 = BaseRive;
     let pressed;
     if (dataBinding != null) {
       pressed = dataBinding.pressed;
@@ -236,7 +236,7 @@ let closure_9 = {
     if (onDataBindingChange != null) {
       pressed1 = onDataBindingChange.pressed;
     }
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("pressed", instance, pressed, pressed1, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding("pressed", instance, pressed, pressed1, playIfNeeded);
     return null;
   }
 };
@@ -283,7 +283,7 @@ const forwardRefResult = importAllResult.forwardRef(function ExpressiveButtonRiv
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_10 ref={arg1} />;
-  return jsx(getDerivedStateFromError /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/ExpressiveButtonRive.tsx");
 

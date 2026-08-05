@@ -35,18 +35,18 @@ export default function UserSettingsVoice() {
   items[1] = nonContextualStreamOutputPresent;
   obj = { style: tmp.tableRow, variant: "text-sm/medium", children: null };
   const intl = tmp7(1236).intl;
-  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t["V+B3FH"], { guideURL: closure_5 });
-  items[2] = callback(Text /* Text */.Text, obj);
+  obj[2] = intl.format(getSystemLocale.t["V+B3FH"], { guideURL: closure_5 });
+  items[2] = callback(Text.Text, obj);
   items[3] = callback(SoundboardVolume, {});
   const obj2 = { spacing: 24, children: null };
   items[4] = isMobileOverlaySupported() && callback(UserSettingsVoiceOverlay, {});
   items[5] = callback(VoiceProcessingOptions, {});
-  items[6] = callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true });
+  items[6] = callback(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true });
   obj2[1] = items;
-  obj[1] = closure_7(Stack /* Stack */.Stack, obj2);
+  obj[1] = closure_7(Stack.Stack, obj2);
   return callback(View, obj);
 };
 export const UserSettingsTableRowGroup = function UserSettingsTableRowGroup(arg0) {
   const merged = Object.assign(arg0);
-  return callback(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, {});
+  return callback(TableRowGroupTitle.TableRowGroup, {});
 };

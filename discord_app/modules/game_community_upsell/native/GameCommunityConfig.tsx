@@ -17,5 +17,5 @@ export const getGameIdsForDetectedGames = function getGameIdsForDetectedGames(re
     [tmp, ] = arg0;
     return table[tmp];
   });
-  return mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+  return mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
 };

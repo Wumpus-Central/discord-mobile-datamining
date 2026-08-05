@@ -42,5 +42,5 @@ export default function ExpressionPickerCategories(arg0) {
   const items1 = [tmp5Result, children];
   obj[1] = items1;
   obj[1] = closure_5(View, obj);
-  return closure_4(Portal /* Portal */.Portal, obj);
+  return closure_4(Portal.Portal, obj);
 };

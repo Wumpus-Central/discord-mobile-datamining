@@ -34,7 +34,7 @@ const memoResult = importAllResult.memo((arg0) => {
   const merged1 = Object.assign(merged);
   obj = { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children };
   obj.children = jsx(isBlurDisabled, { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children });
-  return jsx(PressableBase /* PressableBase */.PressableOpacity, { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children });
+  return jsx(PressableBase.PressableOpacity, { style: tmp2.blur, blurAmount: 0.2, blurStyle: "default", blurTheme: "dark", children });
 });
 const result = require("createCacheKey").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayerControlButton.tsx");
 

@@ -7,11 +7,11 @@ const prototype = function BlockedDomainStore() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["isBlockedDomain"] = function isBlockedDomain(arg0) {
-  let obj = isBlockedDomain /* isBlockedDomain */;
+  let obj = isBlockedDomain;
   let isBlockedDomainResult = null;
   if (obj.isLibdiscoreInitialized()) {
-    isBlockedDomainResult = isBlockedDomain /* isBlockedDomain */.isBlockedDomain(arg0);
-    const tmpResult = isBlockedDomain /* isBlockedDomain */;
+    isBlockedDomainResult = isBlockedDomain.isBlockedDomain(arg0);
+    const tmpResult = isBlockedDomain;
   }
   if (tmp5) {
     obj = { blocked_domain: null };

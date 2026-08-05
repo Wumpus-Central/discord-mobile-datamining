@@ -32,9 +32,9 @@ function handleConnectionStateUpdated(connectionState) {
   connectionState = connectionState.connectionState;
   dispatcher.dispatch({ type: "GPLAY_UPDATE_CONNECTION_STATE", connectionState });
   if (connectionState === constants.CONNECTED) {
-    const userCountry = getPlanIdForProduct /* getPlanIdForProduct */.loadUserCountry();
+    const userCountry = getPlanIdForProduct.loadUserCountry();
     userCountry.finally(() => callback(table[17]).loadSkus());
-    const obj2 = getPlanIdForProduct /* getPlanIdForProduct */;
+    const obj2 = getPlanIdForProduct;
   }
 }
 function handlePurchaseStateUpdated(arg0) {

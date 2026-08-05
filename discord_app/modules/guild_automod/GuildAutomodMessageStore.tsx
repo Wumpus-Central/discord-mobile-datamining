@@ -14,13 +14,13 @@ let error;
 const require = arg1;
 function handleMessageSendFailedAutomod(messageData) {
   messageData = messageData.messageData;
-  let obj = items /* items */;
+  let obj = items;
   const failedMessageId = obj.getFailedMessageId(messageData);
   obj = { id: failedMessageId, isBlockedEdit: null, messageData: null, errorMessage: null };
-  obj[1] = items /* items */.isMessageDataEdit(messageData);
+  obj[1] = items.isMessageDataEdit(messageData);
   obj[2] = messageData;
-  const obj3 = items /* items */;
-  obj[3] = getAutomodErrorMessageFromErrorResponse /* getAutomodErrorMessageFromErrorResponse */.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
+  const obj3 = items;
+  obj[3] = getAutomodErrorMessageFromErrorResponse.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
   closure_8[failedMessageId] = obj;
   closure_9 = closure_9 + 1;
   return true;
@@ -134,10 +134,10 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(require("dispatche
     } else if (message.type !== constants2.AUTO_MODERATION_ACTION) {
       return false;
     } else {
-      const messageRecord = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(message);
-      const obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
+      const messageRecord = createMinimalMessageRecord.createMessageRecord(message);
+      const obj = createMinimalMessageRecord;
       const tmp = require;
-      let result = getDecisionOutcomeFromMessage /* getDecisionOutcomeFromMessage */.isAutomodMessageRecord(messageRecord);
+      let result = getDecisionOutcomeFromMessage.isAutomodMessageRecord(messageRecord);
       if (result) {
         let flag = tmp(6876).isAutomodNotification(messageRecord);
         if (flag) {

@@ -21,7 +21,7 @@ obj[1] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(obj);
 const memoResult = require("noop").memo(function EmojiPickerCategoriesBackdrop() {
   const tmp = callback();
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isAndroid()) {
     obj = { style: null };
     const items = [, ];

@@ -7,18 +7,18 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.cUMdH0);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.cUMdH0);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue: function useAutomaticGainControlSettingValue() {
     const items = [_detectH265HardwareDecode];
-    return initialize /* initialize */.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());
+    return initialize.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());
   },
   onValueChange: require("handleAutomaticGainControlChange").handleAutomaticGainControlChange,
   useDescription: function useAutomaticGainControlSettingDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["6EjbvA"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["6EjbvA"]);
   }
 };
 createToggle = createToggle.createToggle(createToggle);

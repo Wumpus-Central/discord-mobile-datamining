@@ -10,7 +10,7 @@ function batchChannelUpdate(outer1_0) {
     }
     let obj = dispatcher;
     obj.dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = Endpoints.GUILD_CHANNELS(outer1_0);
     obj[1] = arg1;
@@ -25,7 +25,7 @@ function batchRoleUpdate(outer1_0) {
     }
     let obj = dispatcher;
     obj.dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = Endpoints.GUILD_ROLES(outer1_0);
     obj[1] = arg1;

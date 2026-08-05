@@ -133,18 +133,18 @@ let closure_10 = createCacheKey.createStyles({ stretch: { alignSelf: "stretch" }
 let closure_12 = { onPress: handleCreateJoinGuildPress };
 const memoResult = require("set").memo(function GuildsBarCreateJoinButton() {
   const tmp = useIsMobileVisualRefreshExperimentEnabled("GuildsBarCreateJoinButton");
-  let obj = UnreadIndicator /* UnreadIndicator */;
+  let obj = UnreadIndicator;
   obj = { style: callback2().stretch, children: null };
   const tmp2 = callback2();
   obj = { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2010, label: null, expandedChildren: null, children: false };
   obj[5] = closure_12;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[6] = intl.string(getSystemLocale /* getSystemLocale */.t.l5WIbf);
-  obj[7] = jsx(HomeDrawerAddServerRowExpandedChildren /* HomeDrawerAddServerRowExpandedChildren */.HomeDrawerAddServerRowExpandedChildren, {});
+  const intl = getSystemLocale.intl;
+  obj[6] = intl.string(getSystemLocale.t.l5WIbf);
+  obj[7] = jsx(HomeDrawerAddServerRowExpandedChildren.HomeDrawerAddServerRowExpandedChildren, {});
   const obj1 = { size: "md", color: null };
   obj1[1] = Themes.colors.MOBILE_GUILDBAR_ICON_DEFAULT;
-  obj[8] = jsx(CirclePlusIcon /* CirclePlusIcon */.CirclePlusIcon, { size: "md", color: null });
+  obj[8] = jsx(CirclePlusIcon.CirclePlusIcon, { size: "md", color: null });
   obj[1] = jsx(UnreadIndicator, { selected: false, circle: !tmp, unread: false, styles: obj.useGuildsBarAnimatedWrapperStyles(), overState: "y", config: 2010, label: null, expandedChildren: null, children: false });
   return <View selected={false} circle={!tmp} unread={false} styles={obj.useGuildsBarAnimatedWrapperStyles()} overState="y" config={2010} label={null} expandedChildren={null}>{false}</View>;
 });

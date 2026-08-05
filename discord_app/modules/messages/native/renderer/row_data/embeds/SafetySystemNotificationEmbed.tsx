@@ -21,7 +21,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
           type = first1.type;
         }
         if (type === MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION) {
-          let obj = parseMessageEmbedForProps /* parseMessageEmbedForProps */;
+          let obj = parseMessageEmbedForProps;
           const parseMessageForPropsResult = obj.parseMessageForProps(message);
           if (null != parseMessageForPropsResult) {
             let tmp9;

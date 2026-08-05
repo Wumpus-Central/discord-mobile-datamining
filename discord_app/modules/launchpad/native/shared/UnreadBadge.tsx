@@ -17,7 +17,7 @@ const memoResult = require("noop").memo(function UnreadBadge(arg0) {
   let unread;
   ({ unread, resolvedUnreadSetting, muted } = arg0);
   const tmp4 = getLayoutStyle();
-  getFontScale /* getFontScale */;
+  getFontScale;
   let tmp9Result = null;
   if (unread) {
     let obj = { style: null, children: null };
@@ -29,7 +29,7 @@ const memoResult = require("noop").memo(function UnreadBadge(arg0) {
     obj[0] = items;
     obj = { classic: true, size: null, badgeStyle: null };
     const _Math = Math;
-    obj[1] = DEFAULT_BADGE_SIZE /* DEFAULT_BADGE_SIZE */.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
+    obj[1] = DEFAULT_BADGE_SIZE.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
       let num2 = MUTED_OPACITY_CONTENT;
     } else {

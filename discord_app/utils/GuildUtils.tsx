@@ -13,7 +13,7 @@ function getGuildNameSuggestion(truncateUsername) {
   if (null != name) {
     str = "";
     if (0 !== name.length) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
+      const intl = getSystemLocale.intl;
       truncateUsername = undefined;
       if (truncateUsername != null) {
         truncateUsername = truncateUsername.truncateUsername;
@@ -24,7 +24,7 @@ function getGuildNameSuggestion(truncateUsername) {
       }
       obj = { username: null };
       obj[0] = substr;
-      str = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.Y6Qfju, obj);
+      str = intl.formatToPlainString(getSystemLocale.t.Y6Qfju, obj);
     }
   }
   return str;

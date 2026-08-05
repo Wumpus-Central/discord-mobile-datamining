@@ -18,23 +18,23 @@ export const getConsoleConnectingText = function getConsoleConnectingText(stateF
   }
   if (type === PlatformTypes.XBOX) {
     if (arg2) {
-      const intl4 = getSystemLocale /* getSystemLocale */.intl;
-      let str2 = intl4.format(getSystemLocale /* getSystemLocale */.t["ynEs/Y"], {});
+      const intl4 = getSystemLocale.intl;
+      let str2 = intl4.format(getSystemLocale.t["ynEs/Y"], {});
     } else {
       str2 = "Xbox";
       if (tmp4) {
-        const intl3 = getSystemLocale /* getSystemLocale */.intl;
-        str2 = intl3.string(getSystemLocale /* getSystemLocale */.t.UjA4HX);
+        const intl3 = getSystemLocale.intl;
+        str2 = intl3.string(getSystemLocale.t.UjA4HX);
       }
     }
   } else if (arg2) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    let str = intl2.format(getSystemLocale /* getSystemLocale */.t.TZ17Bg, {});
+    const intl2 = getSystemLocale.intl;
+    let str = intl2.format(getSystemLocale.t.TZ17Bg, {});
   } else {
     str = "PS5";
     if (tmp4) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      str = intl.string(getSystemLocale /* getSystemLocale */.t.QCw1oW);
+      const intl = getSystemLocale.intl;
+      str = intl.string(getSystemLocale.t.QCw1oW);
     }
   }
 };

@@ -6,11 +6,11 @@ import { SettingsQuestPreviewScreen } from "../../quests/native/SettingsQuestPre
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.BDUDau);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.BDUDau);
   },
   usePredicate() {
-    return useQuests /* useQuests */.useIsPreviewerOnAnyQuest();
+    return useQuests.useIsPreviewerOnAnyQuest();
   },
   parent: null,
   IconComponent: require("QuestsIcon").QuestsIcon,
@@ -19,7 +19,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.QUEST_PREVIEW_TOOL_2,
   getComponent() {
-    return SettingsQuestPreviewScreen /* SettingsQuestPreviewScreen */.default;
+    return SettingsQuestPreviewScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);

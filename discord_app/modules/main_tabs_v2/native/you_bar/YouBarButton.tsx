@@ -125,7 +125,7 @@ const memoResult = importAllResult.memo(function YouBarButton(arg0) {
   obj[4] = onPress;
   obj[5] = onLongPress;
   obj[6] = closure_5;
-  obj[0] = closure_7(IconButton /* IconButton */.IconButton, obj);
+  obj[0] = closure_7(IconButton.IconButton, obj);
   return closure_7(YouBarButtonContainer, obj);
 });
 let result = require("CONNECTION_BANNER_HEIGHT").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarButton.tsx");

@@ -16,18 +16,18 @@ function getBotLabel(BOT) {
   if (BotTagTypes.SYSTEM_DM !== BOT) {
     if (tmp2.OFFICIAL !== BOT) {
       if (tmp2.SERVER === BOT) {
-        const intl2 = getSystemLocale /* getSystemLocale */.intl;
-        let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.PuJGuM);
+        const intl2 = getSystemLocale.intl;
+        let stringResult = intl2.string(getSystemLocale.t.PuJGuM);
       } else {
         const BOT2 = tmp2.BOT;
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["9RNkeF"]);
+        const intl = getSystemLocale.intl;
+        stringResult = intl.string(getSystemLocale.t["9RNkeF"]);
       }
     }
     return stringResult;
   }
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t.lKQ7Wt);
+  const intl3 = getSystemLocale.intl;
+  stringResult = intl3.string(getSystemLocale.t.lKQ7Wt);
 }
 class BotTag {
   constructor(arg0) {

@@ -21,7 +21,7 @@ function useIsMobileQuestDockRenderedBase(deliveredQuest) {
   const tmp2 = useIsWindowLarge();
   const items = [initializeState];
   let userStatus;
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(callback(table[11]).QuestContent.QUEST_BAR_MOBILE), []);
+  const stateFromStores = initialize.useStateFromStores(items, () => null != questPreviewOverride.getQuestPreviewOverride(callback(table[11]).QuestContent.QUEST_BAR_MOBILE), []);
   if (deliveredQuest != null) {
     userStatus = deliveredQuest.userStatus;
   }
@@ -39,8 +39,8 @@ function useIsMobileQuestDockRenderedBase(deliveredQuest) {
   }
   tmp3Result = tmp3(10374);
   const isQuestExpired = tmp3Result.useIsQuestExpired(deliveredQuest);
-  const obj = initialize /* initialize */;
-  const isEligibleForQuests = getIsEligibleForQuests /* getIsEligibleForQuests */.getIsEligibleForQuests();
+  const obj = initialize;
+  const isEligibleForQuests = getIsEligibleForQuests.getIsEligibleForQuests();
   if (stateFromStores) {
     if (!tmp8) {
       let tmp11 = null != deliveredQuest && !tmp2;

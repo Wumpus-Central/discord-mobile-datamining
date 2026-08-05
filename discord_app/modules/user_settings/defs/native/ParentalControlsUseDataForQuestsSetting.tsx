@@ -8,18 +8,18 @@ import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
 const require = arg1;
 createToggle = {
   useTitle: function useDataForQuestsSettingTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.ZhaNu8);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: function useDataToSupportQuestsSettingValue() {
     const selectedTeenId = store.getSelectedTeenId();
-    const ParentalControlledDropsOptedOut = result /* result */.ParentalControlledDropsOptedOut;
+    const ParentalControlledDropsOptedOut = result.ParentalControlledDropsOptedOut;
     return !ParentalControlledDropsOptedOut.useControlledSetting(selectedTeenId);
   },
   onValueChange: function onDataToSupportQuestsSettingValueChange(arg0) {
     const selectedTeenId = store.getSelectedTeenId();
-    const ParentalControlledDropsOptedOut = result /* result */.ParentalControlledDropsOptedOut;
+    const ParentalControlledDropsOptedOut = result.ParentalControlledDropsOptedOut;
     const result = ParentalControlledDropsOptedOut.updateControlledSetting(selectedTeenId, !arg0);
   },
   unsearchable: true

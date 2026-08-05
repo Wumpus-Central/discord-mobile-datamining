@@ -10,14 +10,14 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoModal.tsx");
 
 export default function PasskeyUpsellPromoModal(arg0) {
-  let obj = getScreens /* getScreens */;
+  let obj = getScreens;
   obj = { name: WebAuthnScreens.NAME, params: null };
   obj = {};
   const screens = obj.getScreens({ isModal: true });
   const merged = Object.assign(arg0);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj.name = intl.string(getSystemLocale /* getSystemLocale */.t["8H5RmH"]);
+  const intl = getSystemLocale.intl;
+  obj.name = intl.string(getSystemLocale.t["8H5RmH"]);
   obj[1] = obj;
   const initialRouteStack = [obj];
-  return jsx(Modal /* Modal */.Modal, { screens, initialRouteStack });
+  return jsx(Modal.Modal, { screens, initialRouteStack });
 };

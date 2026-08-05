@@ -13,7 +13,7 @@ encodeProperties = {
   waitFor: items,
   getFingerprint: importDefaultResult.getFingerprint,
   getSessionId() {
-    const session = trackHeartbeat /* trackHeartbeat */.getSession();
+    const session = trackHeartbeat.getSession();
     return session.then((uuid) => {
       let sessionId;
       if (uuid != null) {
@@ -23,32 +23,32 @@ encodeProperties = {
     });
   },
   getLaunchSignature() {
-    return expandEventProperties /* expandEventProperties */.launchSignature;
+    return expandEventProperties.launchSignature;
   },
   scheduleWhenIdle: require("setOriginWindow").requestSafeIdleCallback,
   sendUnloadRequest: require("sendUnloadRequest").sendUnloadRequest
 };
 encodeProperties = {
   CONNECTION_OPEN(arg0) {
-    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return encodeProperties.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   OVERLAY_INITIALIZE(arg0) {
-    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return encodeProperties.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   CURRENT_USER_UPDATE(arg0) {
-    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return encodeProperties.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   CONNECTION_CLOSED() {
-    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleConnectionClosed();
+    return encodeProperties.AnalyticsActionHandlers.handleConnectionClosed();
   },
   FINGERPRINT() {
-    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleFingerprint();
+    return encodeProperties.AnalyticsActionHandlers.handleFingerprint();
   },
   TRACK(arg0) {
-    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleTrack(arg0);
+    return encodeProperties.AnalyticsActionHandlers.handleTrack(arg0);
   },
   SET_ANALYTICS_TOKEN(arg0) {
-    return encodeProperties /* encodeProperties */.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
+    return encodeProperties.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
   }
 };
 items = [importDefaultResult];

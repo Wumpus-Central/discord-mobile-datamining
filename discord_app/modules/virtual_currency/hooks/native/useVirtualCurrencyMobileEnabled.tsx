@@ -4,11 +4,11 @@ const result = require("set").fileFinishedImporting("modules/virtual_currency/ho
 
 export const isVirtualCurrencyEnabled = function isVirtualCurrencyEnabled() {
   const obj = { enabled: null };
-  obj[0] = !isMetaQuest /* isMetaQuest */.isMetaQuest();
+  obj[0] = !isMetaQuest.isMetaQuest();
   return obj;
 };
 export const useVirtualCurrencyMobileEnabled = function useVirtualCurrencyMobileEnabled() {
   const obj = { enabled: null };
-  obj[0] = !isMetaQuest /* isMetaQuest */.isMetaQuest();
+  obj[0] = !isMetaQuest.isMetaQuest();
   return obj;
 };

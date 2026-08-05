@@ -19,13 +19,13 @@ function resolveGoreSettingWithDefaults(isFriend) {
     flag = false;
   }
   if (null != setting) {
-    if (setting !== create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) {
+    if (setting !== create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) {
       return setting;
     }
   }
   currentUser = currentUser.getCurrentUser();
   let ExplicitContentRedaction = dependencyMap;
-  if (obj.isSettingTeenByDefault(SettingsDefaultFeature /* SettingsDefaultFeature */.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
+  if (obj.isSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
     if (isDm === undefined) {
       isDm = false;
     }
@@ -92,17 +92,17 @@ export const resolveGoreSettingWithDefaultsForTeen = function resolveGoreSetting
   }
   if (flag) {
     if (flag2) {
-      let BLUR = create /* create */.ExplicitContentRedaction.BLUR;
+      let BLUR = create.ExplicitContentRedaction.BLUR;
     }
     return BLUR;
   }
-  const ExplicitContentRedaction = create /* create */.ExplicitContentRedaction;
+  const ExplicitContentRedaction = create.ExplicitContentRedaction;
   BLUR = flag ? ExplicitContentRedaction.BLOCK : ExplicitContentRedaction.BLUR;
 };
 export const getGoreContentSettingOrDefault = function getGoreContentSettingOrDefault(arg0) {
   let setting = arg0;
   if (arg0 == null) {
-    const GoreContentSettings = explicitContentFromProto /* explicitContentFromProto */.GoreContentSettings;
+    const GoreContentSettings = explicitContentFromProto.GoreContentSettings;
     setting = GoreContentSettings.getSetting();
   }
   let goreContentGuilds;
@@ -123,7 +123,7 @@ export const getGoreContentSettingOrDefault = function getGoreContentSettingOrDe
   return obj;
 };
 export const updateGoreContentSetting = function updateGoreContentSetting(arg0) {
-  const GoreContentSettings = explicitContentFromProto /* explicitContentFromProto */.GoreContentSettings;
+  const GoreContentSettings = explicitContentFromProto.GoreContentSettings;
   const setting = GoreContentSettings.getSetting();
   let goreContentGuilds;
   if (setting != null) {
@@ -140,7 +140,7 @@ export const updateGoreContentSetting = function updateGoreContentSetting(arg0) 
     goreContentFriendDm = setting.goreContentFriendDm;
   }
   obj[2] = resolveGoreSettingWithDefaults({ setting: goreContentFriendDm, isDm: true, isFriend: true });
-  const GoreContentSettings2 = explicitContentFromProto /* explicitContentFromProto */.GoreContentSettings;
+  const GoreContentSettings2 = explicitContentFromProto.GoreContentSettings;
   obj = {};
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);

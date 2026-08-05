@@ -27,24 +27,24 @@ function handleInviteData(invite) {
   }
   let new_member = invite.invite.new_member;
   if (new_member) {
-    let hasFlagResult = hasFlag /* hasFlag */.hasFlag(num, set /* set */.GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = hasFlag.hasFlag(num, set.GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
       hasFlagResult = tmp3(1384).hasFlag(num, tmp3(7695).GuildInviteFlags.IS_APPLICATION_BYPASS);
       const tmp3Result = tmp3(1384);
     }
     new_member = !hasFlagResult;
-    const obj = hasFlag /* hasFlag */;
+    const obj = hasFlag;
   }
   if (new_member) {
     new_member = null != guild;
   }
   if (new_member) {
-    new_member = inviteGuildHasPendingMemberDisabledVerification /* inviteGuildHasPendingMemberDisabledVerification */.inviteGuildHasPendingMemberDisabledVerification(guild);
-    const obj3 = inviteGuildHasPendingMemberDisabledVerification /* inviteGuildHasPendingMemberDisabledVerification */;
+    new_member = inviteGuildHasPendingMemberDisabledVerification.inviteGuildHasPendingMemberDisabledVerification(guild);
+    const obj3 = inviteGuildHasPendingMemberDisabledVerification;
   }
   if (new_member) {
-    const result = inviteGuildHasPendingMemberDisabledVerification /* inviteGuildHasPendingMemberDisabledVerification */.openVerificationModalOrTransitionToApplication(guild.id);
-    const obj4 = inviteGuildHasPendingMemberDisabledVerification /* inviteGuildHasPendingMemberDisabledVerification */;
+    const result = inviteGuildHasPendingMemberDisabledVerification.openVerificationModalOrTransitionToApplication(guild.id);
+    const obj4 = inviteGuildHasPendingMemberDisabledVerification;
   }
 }
 let prototype = function GuildVerificationManager() {

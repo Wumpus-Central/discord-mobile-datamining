@@ -51,7 +51,7 @@ prototype["inTestModeForEmbeddedApplication"] = function inTestModeForEmbeddedAp
   return tmp;
 };
 prototype["shouldDisplayTestMode"] = function shouldDisplayTestMode(applicationId) {
-  const DeveloperMode = explicitContentFromProto /* explicitContentFromProto */.DeveloperMode;
+  const DeveloperMode = explicitContentFromProto.DeveloperMode;
   let setting = DeveloperMode.getSetting();
   if (setting) {
     const self = this;

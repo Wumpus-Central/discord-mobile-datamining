@@ -20,10 +20,10 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
     inline = false;
   }
   scrimBase = scrimBase.scrimBase;
-  let obj = getGradientColorByPercentage /* getGradientColorByPercentage */;
-  const gradientValue = obj.useGradientValue(getGradientColorByPercentage /* getGradientColorByPercentage */.GradientPercentage.END);
-  const token = map /* map */.useToken(Themes.colors.BACKGROUND_BASE_LOWER);
-  const obj2 = map /* map */;
+  let obj = getGradientColorByPercentage;
+  const gradientValue = obj.useGradientValue(getGradientColorByPercentage.GradientPercentage.END);
+  const token = map.useToken(Themes.colors.BACKGROUND_BASE_LOWER);
+  const obj2 = map;
   const tmp4 = importDefault;
   if (gradientHeight == null) {
     gradientHeight = obj3.useToken(Themes.modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT);
@@ -57,6 +57,6 @@ export const ChatInputScrimGradient = function ChatInputScrimGradient(scrimBase)
 };
 export const useChatInputFloatingOverlayStyle = function useChatInputFloatingOverlayStyle() {
   const obj = { marginTop: null, overflow: "visible" };
-  obj[0] = -map /* map */.useToken(Themes.modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2;
+  obj[0] = -map.useToken(Themes.modules.mobile.CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT) / 2;
   return obj;
 };

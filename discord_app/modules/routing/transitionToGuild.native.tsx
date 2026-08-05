@@ -7,12 +7,12 @@ import { transitionTo } from "router_utils.tsx";
 let result = require("LayoutAnimation").fileFinishedImporting("modules/routing/transitionToGuild.native.tsx");
 
 export const transitionToGuild = function transitionToGuild(id) {
-  let obj = getChannelIdForGuildTransition /* getChannelIdForGuildTransition */;
+  let obj = getChannelIdForGuildTransition;
   const channelIdForGuildTransition = obj.getChannelIdForGuildTransition(id);
-  const result = LayoutAnimation /* LayoutAnimation */.DeprecatedLayoutAnimation({ duration: 0, create: "call", update: "backgroundColor", delete: "y" });
-  const obj2 = LayoutAnimation /* LayoutAnimation */;
+  const result = LayoutAnimation.DeprecatedLayoutAnimation({ duration: 0, create: "call", update: "backgroundColor", delete: "y" });
+  const obj2 = LayoutAnimation;
   obj = { navigationReplace: true };
-  const obj3 = transitionTo /* transitionTo */;
+  const obj3 = transitionTo;
   const merged = Object.assign(arg1);
   obj3.transitionTo(Routes.CHANNEL(id, channelIdForGuildTransition), obj);
 };

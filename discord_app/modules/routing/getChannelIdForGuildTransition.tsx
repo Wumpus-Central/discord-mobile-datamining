@@ -41,7 +41,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
     if (!obj.canSeeOnboardingHome(id)) {
       return id;
     }
-    obj = useCanSeeOnboardingHome /* useCanSeeOnboardingHome */;
+    obj = useCanSeeOnboardingHome;
   }
   if (channelId === StaticChannelRoute.GUILD_SPACE) {
     if (obj4.canUseGuildSpace(guild.getGuild(id), "getChannelIdForGuildTransition")) {
@@ -53,7 +53,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
       if (obj2.canSeeGameShop(id)) {
         return channelId;
       }
-      obj2 = getPrice /* getPrice */;
+      obj2 = getPrice;
     }
     channel = channel.getChannel(channelId);
     if (null == channel) {

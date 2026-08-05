@@ -90,7 +90,7 @@ const memoResult = require("noop").memo(function YouBarBackground(barWidth) {
   let isLargeAvatar;
   barWidth = barWidth.barWidth;
   ({ hasNameplate, isLargeAvatar, avatarSize } = barWidth);
-  let obj = map /* map */;
+  let obj = map;
   let token = obj.useToken(Themes.colors.MOBILE_FLOATINGBAR_BACKGROUND);
   if (hasNameplate) {
     token = obj2.useToken(Themes.colors.MOBILE_FLOATINGBAR_BACKGROUND_NAMEPLATE);

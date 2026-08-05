@@ -55,7 +55,7 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
     if (null !== pendingProfileEffect) {
       obj = { skuId: null, type: null };
       obj[0] = pendingProfileEffect.skuId;
-      obj[1] = CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT;
+      obj[1] = CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT;
       found.push(obj);
       arr3 = found;
     }
@@ -83,7 +83,7 @@ export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpda
     const pendingAvatar = outer1_0.pendingAvatar;
     if (null === pendingAvatar) {
       obj.avatar = null;
-    } else if (pendingAvatar.assetOrigin === AssetOriginTypes /* AssetOriginTypes */.AssetOriginTypes.ARCHIVED_ASSET) {
+    } else if (pendingAvatar.assetOrigin === AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
       obj.avatarId = pendingAvatar.originalAsset.id;
     } else {
       ({ imageUri: obj.avatar, description: obj.avatarDescription, originalMd5: obj.avatarOriginalMd5 } = pendingAvatar);
@@ -103,7 +103,7 @@ export const getGuildMemberChangesForUpdateRequest = function getGuildMemberChan
     pendingAvatar = pendingAvatar.pendingAvatar;
     if (null === pendingAvatar) {
       obj.avatar = null;
-    } else if (pendingAvatar.assetOrigin === AssetOriginTypes /* AssetOriginTypes */.AssetOriginTypes.ARCHIVED_ASSET) {
+    } else if (pendingAvatar.assetOrigin === AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
       obj.avatarId = pendingAvatar.originalAsset.id;
     } else {
       ({ imageUri: obj.avatar, description: obj.avatarDescription, originalMd5: obj.avatarOriginalMd5 } = pendingAvatar);

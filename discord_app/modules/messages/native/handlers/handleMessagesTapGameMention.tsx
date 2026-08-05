@@ -6,6 +6,6 @@ const result = require("set").fileFinishedImporting("modules/messages/native/han
 export const handleMessagesTapGameMention = function handleMessagesTapGameMention(gameId) {
   gameId = gameId.gameId;
   let obj = GameProfileActionCreators.native;
-  obj = { gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: GameProfileEmbedAction /* GameProfileEmbedAction */.GameProfileSources.GameMention };
+  obj = { gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: GameProfileEmbedAction.GameProfileSources.GameMention };
   obj.openGameProfileModal(obj);
 };

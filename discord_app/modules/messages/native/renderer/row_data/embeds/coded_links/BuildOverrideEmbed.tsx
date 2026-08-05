@@ -55,10 +55,10 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
             if (tmpResultResult.valid) {
               obj = {};
               const merged1 = Object.assign(baseColors);
-              const intl3 = getSystemLocale /* getSystemLocale */.intl;
-              obj.headerText = intl3.string(getSystemLocale /* getSystemLocale */.t.Wj3LW4).toLocaleUpperCase();
+              const intl3 = getSystemLocale.intl;
+              obj.headerText = intl3.string(getSystemLocale.t.Wj3LW4).toLocaleUpperCase();
               obj.headerColor = colors.headerColor;
-              const intl4 = getSystemLocale /* getSystemLocale */.intl;
+              const intl4 = getSystemLocale.intl;
               const override = buildOverride.override;
               let type;
               if (override != null) {
@@ -98,7 +98,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
               obj.embedCanBeTapped = true;
               obj.canBeAccepted = true;
               obj.type = InviteTypes.GUILD;
-              const stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t.Wj3LW4);
+              const stringResult = intl3.string(getSystemLocale.t.Wj3LW4);
             }
           }
         }
@@ -106,10 +106,10 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
     }
     const obj1 = {};
     const merged2 = Object.assign(baseColors);
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj1.headerText = intl.string(getSystemLocale /* getSystemLocale */.t.d34xi4).toLocaleUpperCase();
-    const stringResult2 = intl.string(getSystemLocale /* getSystemLocale */.t.d34xi4);
-    obj1.titleColor = processColorOrThrow /* processColorOrThrow */.processColorOrThrow(tmp(712).unsafe_rawColors.RED_400);
+    const intl = getSystemLocale.intl;
+    obj1.headerText = intl.string(getSystemLocale.t.d34xi4).toLocaleUpperCase();
+    const stringResult2 = intl.string(getSystemLocale.t.d34xi4);
+    obj1.titleColor = processColorOrThrow.processColorOrThrow(tmp(712).unsafe_rawColors.RED_400);
     if (tmpResultResult.valid) {
       const intl2 = tmp20(1236).intl;
       let reason = intl2.string(tmp20(1236).t.ODXApH);
@@ -123,7 +123,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
       subtitleColor = colors.subtitleColor;
     }
     obj1.subtitleColor = subtitleColor;
-    const obj4 = processColorOrThrow /* processColorOrThrow */;
+    const obj4 = processColorOrThrow;
     if (tmp20Result.isThemeDark(closure_2)) {
       tmpResult = tmp(11119);
     } else {

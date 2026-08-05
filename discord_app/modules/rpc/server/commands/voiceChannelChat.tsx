@@ -13,7 +13,7 @@ let obj = {
     return obj.keys(obj);
   },
   handler(args) {
-    let obj = toggleVoiceChannelChat /* toggleVoiceChannelChat */;
+    let obj = toggleVoiceChannelChat;
     const result = obj.toggleVoiceChannelChat(args.args.open);
     if (null == result) {
       obj = { errorCode: null };

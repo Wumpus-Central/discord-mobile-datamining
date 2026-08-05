@@ -5,10 +5,10 @@ import { isFeatureAgeGated } from "../../regional_feature_config/RegionalFeature
 const result = require("SettingsDefaultFeature").fileFinishedImporting("modules/message_request/hooks/useIsMessageRequestRestrictedViewer.tsx");
 
 export const useIsMessageRequestRestrictedViewer = function useIsMessageRequestRestrictedViewer(ChatInputGuardMessageRequest) {
-  let obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  let obj = useAgeVerificationRunner;
   const isExplicitlyVerifiedAdult = obj.useIsExplicitlyVerifiedAdult();
-  const isSettingTeenByDefault = isFeatureAgeGated /* isFeatureAgeGated */.useIsSettingTeenByDefault(SettingsDefaultFeature /* SettingsDefaultFeature */.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS);
-  const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
+  const isSettingTeenByDefault = isFeatureAgeGated.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.MESSAGE_REQUEST_RESTRICTIONS);
+  const obj2 = isFeatureAgeGated;
   obj = { location: ChatInputGuardMessageRequest };
   let enabled = !isExplicitlyVerifiedAdult;
   if (!isExplicitlyVerifiedAdult) {

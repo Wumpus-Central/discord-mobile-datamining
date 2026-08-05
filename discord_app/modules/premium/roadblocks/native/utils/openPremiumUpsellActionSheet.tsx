@@ -7,6 +7,6 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/premiu
 export default function openPremiumUpsellActionSheet(featureName, subfeatureName) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { featureName, subfeatureName };
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(8182, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
+  obj.openLazy(asyncRequireImpl(8182, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
 };
 export const PREMIUM_UPSELL_ACTION_SHEET_KEY = "PremiumUpsellActionSheetKey";

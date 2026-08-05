@@ -246,8 +246,8 @@ function _loadGuildFilter(arg0) {
   let tmp2;
   [tmp, tmp2] = arg0;
   let tmp5 = null;
-  if (null != isInRange /* isInRange */.GUILD_FILTERS[tmp]) {
-    const GUILD_FILTERS = isInRange /* isInRange */.GUILD_FILTERS;
+  if (null != isInRange.GUILD_FILTERS[tmp]) {
+    const GUILD_FILTERS = isInRange.GUILD_FILTERS;
     tmp5 = GUILD_FILTERS[tmp](tmp2);
   }
   return tmp5;
@@ -651,7 +651,7 @@ function handleFetchFailure() {
   let c16 = true;
 }
 function handleLogout(isSwitchingAccount) {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   Storage.remove(c11);
   if (!isSwitchingAccount.isSwitchingAccount) {
     const Storage2 = tmp(595).Storage;
@@ -674,11 +674,11 @@ function handleLogin() {
   let c16 = false;
   let closure_17 = {};
   let closure_22 = {};
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   Storage.remove(c11);
 }
 function loadLocalOverrides() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   let obj = Storage.get(exerimentOverrides);
   if (obj == null) {
     obj = {};
@@ -762,10 +762,10 @@ function loadLocalOverrides() {
 function saveExperimentOverrides() {
   try {
     let tmp4 = dependencyMap;
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const result = Storage.set(userExperimentOverrides, closure_24);
     try {
-      const Storage2 = Storage /* Storage */.Storage;
+      const Storage2 = Storage.Storage;
       const result1 = Storage2.set(guildExperimentOverrides, closure_25);
     } catch (tmp20) {
       tmp6.error("Error saving guild experiment overrides, unsaved data will be lost", tmp20);
@@ -781,7 +781,7 @@ function saveExperimentOverrides() {
 }
 function saveTrackedExposureExperiments(closure_17) {
   try {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const obj = { v: 1, e: null };
     obj[1] = closure_17;
     const result = Storage.set(c11, obj);
@@ -899,7 +899,7 @@ class ExperimentStore extends tmp3 {
 }
 const prototype = ExperimentStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const value = Storage.get(c11);
   if (null != value) {
     if (1 === value.v) {
@@ -1221,7 +1221,7 @@ prototype["getSerializedState"] = function getSerializedState() {
     }
   }
   obj = { hasLoadedExperiments: c16, trackedExposureExperiments: closure_17, loadedUserExperiments: closure_21, loadedGuildExperiments: obj, userExperimentOverrides: closure_24, guildExperimentOverrides: closure_25, cookieOverrides: null, assignmentSource: null, assignmentSessionId: null, assignmentFingerprint: null };
-  obj[6] = Version /* Version */.getBuildOverrideExperiments();
+  obj[6] = Version.getBuildOverrideExperiments();
   obj[7] = closure_20.source;
   obj[8] = closure_20.sessionId;
   obj[9] = closure_20.fingerprint;

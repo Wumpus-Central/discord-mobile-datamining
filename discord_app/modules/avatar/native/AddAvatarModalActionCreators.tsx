@@ -20,16 +20,16 @@ export const handlePressNext = function handlePressNext(pendingImage, first, fn)
     const obj3 = expandEventProperties;
     obj = { avatar: null, avatar_description: null };
     ({ imageUri: obj6[0], description: obj6[1] } = pendingImage);
-    const result = saveProfileAndAccountRequest /* saveProfileAndAccountRequest */.saveProfileAndAccountRequest(obj);
-    const obj5 = saveProfileAndAccountRequest /* saveProfileAndAccountRequest */;
+    const result = saveProfileAndAccountRequest.saveProfileAndAccountRequest(obj);
+    const obj5 = saveProfileAndAccountRequest;
   }
   if (null != fn) {
     fn();
   } else {
     obj = ModalActionCreators;
     obj.popWithKey(ADD_AVATAR_MODAL_KEY);
-    _startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */.nextOnboardingStep({ skip: false });
-    const obj2 = _startContactSyncForDiscoverability /* _startContactSyncForDiscoverability */;
+    _startContactSyncForDiscoverability.nextOnboardingStep({ skip: false });
+    const obj2 = _startContactSyncForDiscoverability;
   }
 };
 export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
@@ -62,5 +62,5 @@ export const showSkipAvatarModal = function showSkipAvatarModal(arg0) {
   set.show(obj);
 };
 export const openAddAvatarModal = function openAddAvatarModal() {
-  ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(16379, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
+  ModalActionCreators.pushLazy(asyncRequireImpl(16379, dependencyMap.paths), {}, ADD_AVATAR_MODAL_KEY);
 };

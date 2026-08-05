@@ -21,7 +21,7 @@ export default function InviteSelectActionSheet(arg0) {
   ({ options, onChange: require } = arg0);
   ({ title, value } = arg0);
   let obj = { contentStyles: createCacheKey().content, header: null, children: null };
-  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title });
+  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title });
   obj = {
     value,
     onChange(arg0) {
@@ -32,7 +32,7 @@ export default function InviteSelectActionSheet(arg0) {
     children: null
   };
   obj[3] = options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value));
-  obj[2] = jsx(context /* context */.TableRadioGroup, {
+  obj[2] = jsx(context.TableRadioGroup, {
     value,
     onChange(arg0) {
       callback(arg0);
@@ -41,7 +41,7 @@ export default function InviteSelectActionSheet(arg0) {
     hasIcons: false,
     children: null
   });
-  return jsx(Background /* Background */.BottomSheet, {
+  return jsx(Background.BottomSheet, {
     value,
     onChange(arg0) {
       callback(arg0);

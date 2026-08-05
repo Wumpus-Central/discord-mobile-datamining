@@ -20,10 +20,10 @@ export default function MemberVerificationAlertUpdate(onClose) {
   const tmp = callback3();
   let obj = {};
   const merged = Object.assign(onClose);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj.confirmText = intl.string(getSystemLocale /* getSystemLocale */.t.b8siyY);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj.cancelText = intl2.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
+  const intl = getSystemLocale.intl;
+  obj.confirmText = intl.string(getSystemLocale.t.b8siyY);
+  const intl2 = getSystemLocale.intl;
+  obj.cancelText = intl2.string(getSystemLocale.t["ETE/oC"]);
   obj.onConfirm = function onConfirm() {
     return callback(table[7]).openURL(constants.IOS);
   };
@@ -31,13 +31,13 @@ export default function MemberVerificationAlertUpdate(onClose) {
   obj = { source: registerAsset, style: tmp.headerImage };
   const items = [callback(Image, obj), , ];
   obj = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl3.string(getSystemLocale /* getSystemLocale */.t.kkjNHU);
-  items[1] = callback(Text /* Text */.Text, obj);
+  const intl3 = getSystemLocale.intl;
+  obj[3] = intl3.string(getSystemLocale.t.kkjNHU);
+  items[1] = callback(Text.Text, obj);
   const obj1 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.gnkqzQ);
-  items[2] = callback(Text /* Text */.Text, obj1);
+  const intl4 = getSystemLocale.intl;
+  obj1[3] = intl4.string(getSystemLocale.t.gnkqzQ);
+  items[2] = callback(Text.Text, obj1);
   obj.children = items;
   return callback2(componentDidMount, obj);
 };

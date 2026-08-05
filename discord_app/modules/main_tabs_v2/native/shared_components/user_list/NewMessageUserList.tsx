@@ -75,7 +75,7 @@ function matchGroupDM(id, trimmed1) {
   if ("" === trimmed1) {
     return 0;
   } else {
-    const channelName = computeChannelName /* computeChannelName */.computeChannelName(id, mergeGuildAvatar, upsertRelationship);
+    const channelName = computeChannelName.computeChannelName(id, mergeGuildAvatar, upsertRelationship);
     const toLocaleLowerCaseResult = channelName.toLocaleLowerCase();
     let num = 3;
     if (!toLocaleLowerCaseResult.startsWith(trimmed1)) {

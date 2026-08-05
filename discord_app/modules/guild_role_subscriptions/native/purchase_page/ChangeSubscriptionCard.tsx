@@ -14,7 +14,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function emphasisHook(children) {
-  return callback2(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-default", children });
+  return callback2(Text.Text, { variant: "text-sm/medium", color: "text-default", children });
 }
 ({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
 createCacheKey = { container: null };

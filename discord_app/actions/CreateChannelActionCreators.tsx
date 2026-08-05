@@ -143,7 +143,7 @@ export default {
     obj = { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, type, topic };
     obj[3] = {
-      event: encodeProperties /* encodeProperties */.NetworkActionNames.CHANNEL_CREATE,
+      event: encodeProperties.NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = callback(table[6]);
         let id;
@@ -166,7 +166,7 @@ export default {
       }
     };
     const obj1 = {
-      event: encodeProperties /* encodeProperties */.NetworkActionNames.CHANNEL_CREATE,
+      event: encodeProperties.NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = callback(table[6]);
         let id;
@@ -188,7 +188,7 @@ export default {
         return obj.exact(obj);
       }
     };
-    obj[4] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[4] = sendRequest.rejectWithMigratedError();
     return obj.post(obj);
   }
 };

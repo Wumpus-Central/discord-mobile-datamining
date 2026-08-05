@@ -132,9 +132,9 @@ class SessionAdManager extends tmp3 {
 }
 const prototype = SessionAdManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  this.focusedOrForegrounded = isForegrounded /* isForegrounded */.isForegrounded();
+  this.focusedOrForegrounded = isForegrounded.isForegrounded();
   importDefaultResult.addChangeListener(this.handleAuthenticationChange);
-  const obj = isForegrounded /* isForegrounded */;
+  const obj = isForegrounded;
   const subscription = dispatcher.subscribe("WINDOW_FOCUS", this.handleWindowFocus);
   const obj2 = dispatcher;
   const subscription1 = dispatcher.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate);

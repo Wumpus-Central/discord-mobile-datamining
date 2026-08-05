@@ -435,7 +435,7 @@ export const fetchReferralEligibleUsers = function fetchReferralEligibleUsers(cl
 export const fetchReferralsRemaining = function fetchReferralsRemaining() {
   let obj = dispatcher;
   obj.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" });
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: constants.GET_REFERRALS_REMAINING, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
   return value.then((body) => {

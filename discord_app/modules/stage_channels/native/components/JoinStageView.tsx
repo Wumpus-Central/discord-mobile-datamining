@@ -13,14 +13,14 @@ const result = require("useStageParticipants").fileFinishedImporting("modules/st
 
 export default function JoinStageView(channel) {
   channel = channel.channel;
-  let obj = useStageParticipants /* useStageParticipants */;
-  const stageParticipants = obj.useStageParticipants(channel.id, sortKey /* sortKey */.StageChannelParticipantNamedIndex.SPEAKER);
+  let obj = useStageParticipants;
+  const stageParticipants = obj.useStageParticipants(channel.id, sortKey.StageChannelParticipantNamedIndex.SPEAKER);
   const found = stageParticipants.filter((type) => type.type === callback(table[3]).StageChannelParticipantTypes.VOICE);
   obj = { title: null, body: null, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.WZOeQv);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.WZOeQv);
   const tmp2 = styles;
-  obj[1] = fillChunk /* fillChunk */.getParticipantNamesText(channel, found);
-  obj[2] = jsx(AgeVerificationSpeakerActionSheet /* AgeVerificationSpeakerActionSheet */.JoinStagePrompt, { channel });
+  obj[1] = fillChunk.getParticipantNamesText(channel, found);
+  obj[2] = jsx(AgeVerificationSpeakerActionSheet.JoinStagePrompt, { channel });
   return <tmp2 title={null} body={null}>{null}</tmp2>;
 };

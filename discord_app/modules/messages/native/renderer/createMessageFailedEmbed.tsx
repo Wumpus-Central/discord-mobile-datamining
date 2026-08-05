@@ -16,20 +16,20 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
     if (useAttachmentUploadPreview.useAttachmentUploadPreview) {
       let obj = { type: null, messageSendError: null, failureState: null, disableBackgroundColor: true, bodyTextColor: null, iconURL: null };
       obj[0] = MessageEmbedTypes.TEXT;
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.lBLP4u);
+      const intl3 = getSystemLocale.intl;
+      obj[1] = intl3.string(getSystemLocale.t.lBLP4u);
       obj[2] = MessageFailureState.UNSPECIFIED;
       obj[4] = colors.failedMessageBodyTextColor;
-      colors = frozen /* frozen */.getAssetUriForEmbed;
+      colors = frozen.getAssetUriForEmbed;
       obj[5] = colors(registerAsset);
-      const tmp14 = frozen /* frozen */;
+      const tmp14 = frozen;
     } else {
       obj = { type: null, numAttachments: null, failureState: null, attachmentsSize: null, bodyTextColor: null };
       obj[0] = MessageEmbedTypes.TEXT;
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      const intl2 = getSystemLocale.intl;
       const obj1 = { count: null };
       obj1[0] = uploaderFile.attachmentsCount;
-      obj[1] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.D0noUt, obj1);
+      obj[1] = intl2.formatToPlainString(getSystemLocale.t.D0noUt, obj1);
       obj[2] = MessageFailureState.UPLOAD_FAILED;
       let str = "";
       if (0 !== uploaderFile.currentSize) {
@@ -44,8 +44,8 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
   } else {
     obj = { type: null, messageSendError: null, failureState: null, disableBackgroundColor: true, bodyTextColor: null };
     obj[0] = MessageEmbedTypes.TEXT;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.lBLP4u);
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.lBLP4u);
     obj[2] = MessageFailureState.UNSPECIFIED;
     obj[4] = colors.failedMessageBodyTextColor;
     return obj;
@@ -53,6 +53,6 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
 };
 export const createAutomodBlockedMessageEmbed = function createAutomodBlockedMessageEmbed(errorMessage) {
   const obj = { type: MessageEmbedTypes.TEXT, messageSendError: errorMessage.errorMessage, failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE, disableBackgroundColor: true, bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor, iconURL: null };
-  obj[5] = frozen /* frozen */.getAssetUriForEmbed(registerAsset);
+  obj[5] = frozen.getAssetUriForEmbed(registerAsset);
   return obj;
 };

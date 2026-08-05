@@ -12,7 +12,7 @@ export default function useNavigationTransitionEnded() {
   const require = tmp2;
   const tmp3 = useAppLauncherNavigation();
   const dependencyMap = tmp3;
-  route = Link /* Link */.useRoute();
+  route = Link.useRoute();
   const items = [tmp3, route, tmp[1]];
   const effect = React.useEffect(() => tmp3.addListener("transitionEnd", () => {
     state = state.getState();

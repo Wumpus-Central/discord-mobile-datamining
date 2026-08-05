@@ -86,9 +86,9 @@ function _shouldSkipContactSyncStep() {
   return applyArgumentsResult;
 }
 function lastStepComplete(STEP_GUILD_TEMPLATE) {
-  trackNUFStep /* trackNUFStep */.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
-  const obj = trackNUFStep /* trackNUFStep */;
-  if (obj2.isModalOpen(NEW_USER_MODAL_KEY /* NEW_USER_MODAL_KEY */.NEW_USER_MODAL_KEY)) {
+  trackNUFStep.trackNUFStep(STEP_GUILD_TEMPLATE, "NUF Complete");
+  const obj = trackNUFStep;
+  if (obj2.isModalOpen(NEW_USER_MODAL_KEY.NEW_USER_MODAL_KEY)) {
     ModalActionCreators.popWithKey(tmp(16392).NEW_USER_MODAL_KEY);
     const obj3 = ModalActionCreators;
   }

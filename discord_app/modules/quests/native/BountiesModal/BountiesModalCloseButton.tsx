@@ -18,12 +18,12 @@ const result = require("createCacheKey").fileFinishedImporting("modules/quests/n
 
 export default function BountiesModalCloseButton(onPress) {
   let obj = { accessibilityLabel: null, accessibilityRole: "button", hitSlop: 12, onPress: null, style: null, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.cpT0Cq);
   obj[3] = onPress.onPress;
   obj[4] = callback().closeButton;
   obj = { size: "sm", color: null };
   obj[1] = Themes.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
-  obj[5] = jsx(XSmallIcon /* XSmallIcon */.XSmallIcon, { size: "sm", color: null });
-  return jsx(PressableBase /* PressableBase */.PressableOpacity, { size: "sm", color: null });
+  obj[5] = jsx(XSmallIcon.XSmallIcon, { size: "sm", color: null });
+  return jsx(PressableBase.PressableOpacity, { size: "sm", color: null });
 };

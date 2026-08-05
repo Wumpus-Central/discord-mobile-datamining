@@ -20,7 +20,7 @@ export default {
     });
   },
   changeCallRegion(id, region) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: Endpoints.CALL(id), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { region };
     HTTP.patch(obj);

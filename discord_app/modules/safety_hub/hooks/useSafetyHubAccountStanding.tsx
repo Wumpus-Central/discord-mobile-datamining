@@ -7,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/us
 
 export const useSafetyHubAccountStanding = function useSafetyHubAccountStanding() {
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
-  return initialize /* initialize */.useStateFromStores(items, () => accountStanding.getAccountStanding());
+  return initialize.useStateFromStores(items, () => accountStanding.getAccountStanding());
 };

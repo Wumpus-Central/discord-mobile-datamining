@@ -79,6 +79,6 @@ export default {
   },
   useIsCaptchaModalOpen() {
     const items = [setContent];
-    return initialize /* initialize */.useStateFromStores(items, () => key.getKey() === closure_4);
+    return initialize.useStateFromStores(items, () => key.getKey() === closure_4);
   }
 };

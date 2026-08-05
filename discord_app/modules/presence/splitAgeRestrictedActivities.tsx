@@ -4,7 +4,7 @@ import { apexExperiment } from "ContentClassificationPresenceFilterExperiment.ts
 const result = require("set").fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
 
 export default function splitAgeRestrictedActivities(arg0, arg1) {
-  const ContentClassificationPresenceFilterExperiment = apexExperiment /* apexExperiment */.ContentClassificationPresenceFilterExperiment;
+  const ContentClassificationPresenceFilterExperiment = apexExperiment.ContentClassificationPresenceFilterExperiment;
   if (ContentClassificationPresenceFilterExperiment.getConfig({ location: "presence_filtering" }).enabled) {
     const items = [];
     const items1 = [];
@@ -14,7 +14,7 @@ export default function splitAgeRestrictedActivities(arg0, arg1) {
       let tmp5 = nextResult;
       let tmp6 = require;
       let tmp7 = dependencyMap;
-      let obj2 = isAgeRestrictedClassificationReference /* isAgeRestrictedClassificationReference */;
+      let obj2 = isAgeRestrictedClassificationReference;
       if (obj2.isAgeRestrictedClassificationReference(nextResult.content_classification)) {
         let tmp10 = nextResult;
         let arr = items1.push(tmp5);

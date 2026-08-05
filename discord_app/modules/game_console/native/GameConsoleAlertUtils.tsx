@@ -17,7 +17,7 @@ let result = require("XBOX_URL_BASE").fileFinishedImporting("modules/game_consol
 export default {
   maybeShowPTTAlert(XBOX) {
     if (mode.getMode() === constants.PUSH_TO_TALK) {
-      if (!obj2.UNSAFE_isDismissibleContentDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT)) {
+      if (!obj2.UNSAFE_isDismissibleContentDismissed(DismissibleContent.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT)) {
         let obj = {};
         let intl = tmp10(1236).intl;
         obj[constants2.XBOX] = intl.string(tmp10(1236).t.bVZ7vy);
@@ -43,7 +43,7 @@ export default {
         }
         return resolved;
       }
-      obj2 = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
+      obj2 = UNSAFE_isDismissibleContentDismissed;
     }
     return Promise.resolve();
   },

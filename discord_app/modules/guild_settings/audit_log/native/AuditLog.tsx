@@ -22,13 +22,13 @@ let map1;
 let unpackModuleId;
 let require = arg1;
 function ApplicationHook(applicationId) {
-  let obj = useGetOrFetchApplications /* useGetOrFetchApplications */;
+  let obj = useGetOrFetchApplications;
   const getOrFetchApplication = obj.useGetOrFetchApplication(applicationId.applicationId);
   let tmp4 = null;
   if (null != getOrFetchApplication) {
     obj = { variant: "text-md/normal", color: "text-default", children: null };
     obj[2] = getOrFetchApplication.name;
-    tmp4 = callback(Text /* Text */.Text, obj);
+    tmp4 = callback(Text.Text, obj);
   }
   return tmp4;
 }
@@ -489,7 +489,7 @@ prototype["render"] = function render() {
     obj = { style: null, children: null };
     obj[0] = tmp.timestamp;
     obj[1] = calendarResult;
-    let tmp8 = callback(Button /* Button */.LegacyText, obj);
+    let tmp8 = callback(Button.LegacyText, obj);
     let tmp9 = require;
     let tmp10 = require;
   } else {
@@ -497,7 +497,7 @@ prototype["render"] = function render() {
     obj[0] = tmp.timestamp;
     const items = [calendarResult, "\u2014", calendarResult1];
     obj[1] = items;
-    tmp8 = callback2(Button /* Button */.LegacyText, obj);
+    tmp8 = callback2(Button.LegacyText, obj);
     tmp9 = require;
     tmp10 = require;
   }

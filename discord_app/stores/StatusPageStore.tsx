@@ -11,7 +11,7 @@ class MaintenanceStore extends Store {
 }
 const prototype = MaintenanceStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   let closure_5 = Storage.get(MaintenanceStore);
 };
 prototype["getIncident"] = function getIncident() {
@@ -62,7 +62,7 @@ const maintenanceStore = new MaintenanceStore(require("dispatcher"), {
       return false;
     } else {
       const id = _null.id;
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       const result = Storage.set(MaintenanceStore, id);
     }
   }

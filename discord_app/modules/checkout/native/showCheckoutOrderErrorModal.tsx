@@ -110,7 +110,7 @@ export const showRetryConfirmModal = function showRetryConfirmModal(dismissable)
   let onCloseCallback;
   ({ key, onCloseCallback } = dismissable);
   const merged = Object.assign(dismissable, Object.create(null));
-  let obj = useAlertStore /* useAlertStore */;
+  let obj = useAlertStore;
   obj = {};
   const merged1 = Object.assign(merged);
   obj = { dismissable: dismissable.dismissable };

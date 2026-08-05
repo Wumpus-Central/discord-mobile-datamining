@@ -11,7 +11,7 @@ function getFirstInstallTimeMillis(arg0) {
   if ("authed" === arg0.from) {
     str = "InstallTimeAuthed";
   }
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const value = Storage.get(str);
   if (null != value) {
     if (value > 0) {
@@ -56,8 +56,8 @@ export const getFirstInstallTimeElapsed = function getFirstInstallTimeElapsed(un
     const diff = Date.now() - tmp;
     let result = diff;
     if (null != unit) {
-      result = sleep /* sleep */.convertMinutesToGivenTimeUnit(diff / sleep /* sleep */.MS_PER_MINUTE, unit);
-      const obj = sleep /* sleep */;
+      result = sleep.convertMinutesToGivenTimeUnit(diff / sleep.MS_PER_MINUTE, unit);
+      const obj = sleep;
     }
     return result;
   }

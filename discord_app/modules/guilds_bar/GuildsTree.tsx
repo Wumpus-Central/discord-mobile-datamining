@@ -156,7 +156,7 @@ prototype["replaceNode"] = function replaceNode(node, cloneNodeResult) {
   return self;
 };
 prototype["cloneNode"] = function cloneNode(node) {
-  return apply /* apply */.clone(node);
+  return apply.clone(node);
 };
 prototype["convertToFolder"] = function convertToFolder(node) {
   const self = this;

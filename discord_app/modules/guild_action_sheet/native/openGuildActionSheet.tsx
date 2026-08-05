@@ -13,7 +13,7 @@ export default function openGuildActionSheet(id) {
   if (arg1 === undefined) {
     flag = true;
   }
-  let obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+  let obj = getFavoritesAwareGuildName;
   if (!obj.isFavoritesGuildId(id.id)) {
     let obj1 = expandEventProperties;
     obj = { type: "Guild Profile", guild_id: null };

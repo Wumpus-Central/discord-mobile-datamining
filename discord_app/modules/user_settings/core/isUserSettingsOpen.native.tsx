@@ -5,7 +5,7 @@ import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.nativ
 
 const require = arg1;
 function isUserSettingsOpen() {
-  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
   let tmp2 = !tmp;
   if (!tmp) {

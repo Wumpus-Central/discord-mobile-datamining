@@ -13,7 +13,7 @@ export const getArtForPath = function getArtForPath(arg0) {
   if (null != arg0) {
     tmp = null;
     if (obj.test(arg0)) {
-      tmp = registerAsset /* registerAsset */;
+      tmp = registerAsset;
     }
     obj = /^\/developers/;
   }

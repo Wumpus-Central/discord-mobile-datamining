@@ -13,7 +13,7 @@ const require = arg1;
 function CoachmarkImg(badge) {
   badge = badge.badge;
   const tmp = callback2();
-  let obj = useMobileTenureBadgeImages /* useMobileTenureBadgeImages */;
+  let obj = useMobileTenureBadgeImages;
   let id;
   if (badge != null) {
     id = badge.id;

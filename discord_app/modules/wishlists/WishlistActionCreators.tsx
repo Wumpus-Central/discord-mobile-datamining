@@ -27,14 +27,14 @@ function extraWishlistParams() {
     if (tmpResult.isIOS()) {
       obj.payment_gateway = constants.APPLE;
     }
-    tmpResult = PlatformTypes /* PlatformTypes */;
+    tmpResult = PlatformTypes;
   }
   return obj;
 }
 function maybeDispatchAdditionalActions(wishlist_items) {
   wishlist_items = wishlist_items.wishlist_items;
   const mapped = wishlist_items.map((sku) => sku.sku);
-  const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
   let obj = dispatcher;
   obj.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: found });
   const storefront_pricing = wishlist_items.storefront_pricing;
@@ -44,9 +44,9 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     obj[1] = found.map((id) => id.id);
     obj[1] = obj;
     const tmp3Result = dispatcher;
-    obj[2] = useSKUPrice /* useSKUPrice */.transformStorefrontPricesServer(storefront_pricing);
+    obj[2] = useSKUPrice.transformStorefrontPricesServer(storefront_pricing);
     tmp3Result.dispatch(obj);
-    const tmpResult = useSKUPrice /* useSKUPrice */;
+    const tmpResult = useSKUPrice;
   }
 }
 ({ AnalyticEvents: c10, Endpoints: unpackModuleId, PaymentGateways: closure_12 } = ME);

@@ -291,8 +291,8 @@ function handleMessageSendFailedAutomod(arg0) {
   let messageData;
   let require;
   ({ type: require, messageData } = arg0);
-  const failedMessageId = items /* items */.getFailedMessageId(messageData);
-  const obj = items /* items */;
+  const failedMessageId = items.getFailedMessageId(messageData);
+  const obj = items;
   const tmp3 = importDefault;
   const orCreate = mergeMessage.getOrCreate(messageData.message.channelId);
   if (orCreate.has(failedMessageId)) {
@@ -496,7 +496,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
         continue;
       } else {
         let tmp = require;
-        let _default = _handleConnectionOpen /* _handleConnectionOpen */.default;
+        let _default = _handleConnectionOpen.default;
         let isConnectedResult = _default.isConnected();
         if (!value.cached) {
           if (isConnectedResult) {
@@ -724,7 +724,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     const orCreate = mergeMessage.getOrCreate(channelId);
     const obj = mergeMessage;
     const tmp3 = require;
-    const isConnectedResult = _handleConnectionOpen /* _handleConnectionOpen */.default.isConnected();
+    const isConnectedResult = _handleConnectionOpen.default.isConnected();
     if (isPushNotification.isPushNotification) {
       if (tmp3Result.isIOSPushNotificationRawPayloadFixExperimentEnabled()) {
         (function addPushNotificationMessageIfNotCached(channelId, message, isConnectedResult) {
@@ -853,7 +853,7 @@ const messageStore = new MessageStore(require("dispatcher"), {
     const value = mergeMessage.get(messageId.channelId);
     if (null != value) {
       if (value.has(messageId)) {
-        const updateResult = value.update(messageId, redactionSettingToRenderedString /* redactionSettingToRenderedString */.handleExplicitMediaScanTimeoutForMessage);
+        const updateResult = value.update(messageId, redactionSettingToRenderedString.handleExplicitMediaScanTimeoutForMessage);
         mergeMessage.commit(updateResult);
       }
     }

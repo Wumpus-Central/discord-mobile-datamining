@@ -12,7 +12,7 @@ export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
   let userId;
   let userKey;
   ({ style, userId, userKey } = arg0);
-  let obj = useSecureFramesUserVerifiedKeysCount /* useSecureFramesUserVerifiedKeysCount */;
+  let obj = useSecureFramesUserVerifiedKeysCount;
   const secureFramesUserVerifiedKeysCount = obj.useSecureFramesUserVerifiedKeysCount({ userId, keyToOmit: userKey });
   let tmp5 = null;
   if (0 !== secureFramesUserVerifiedKeysCount) {

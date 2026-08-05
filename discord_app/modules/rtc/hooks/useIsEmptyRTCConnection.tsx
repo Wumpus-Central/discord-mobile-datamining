@@ -30,7 +30,7 @@ export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEm
 };
 export const useIsCallRTCConnectionEmpty = function useIsCallRTCConnectionEmpty() {
   const items = [createRTCConnection, fetchFingerprint];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     userIds = userIds.getUserIds();
     let tmp = null == userIds;
     if (!tmp) {

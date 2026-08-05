@@ -149,8 +149,8 @@ let closure_16 = importAllResult.memo(() => {
     activeOpacity: 0.5,
     children: null
   };
-  obj[4] = callback(StaffBadgeIcon /* StaffBadgeIcon */.StaffBadgeIcon, { size: "md", color: "white" });
-  return callback(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback(StaffBadgeIcon.StaffBadgeIcon, { size: "md", color: "white" });
+  return callback(PressableBase.PressableOpacity, obj);
 });
 let result = require("STORAGE_KEY_LOG_DISPATCHES").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 

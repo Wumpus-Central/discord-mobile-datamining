@@ -36,7 +36,7 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     let obj = getPremiumPlanItem;
     tmp2 = sku_id === obj.getSkuIdForPremiumType(premiumType);
   }
-  getPremiumPlanItem /* getPremiumPlanItem */;
+  getPremiumPlanItem;
   let tmp10 = null != discountOffer;
   if (tmp10) {
     const discount = discountOffer.discount;
@@ -49,10 +49,10 @@ export default function PremiumPlanActionSheetHeader(arg0) {
   }
   obj = { style: tmp.header, colors: null, start: null, end: null, accessible: true, accessibilityRole: "header", accessibilityLabel: null, children: null };
   obj[1] = getPremiumGradientColor(premiumType);
-  obj[2] = keys /* keys */.HorizontalGradient.START;
-  obj[3] = keys /* keys */.HorizontalGradient.END;
+  obj[2] = keys.HorizontalGradient.START;
+  obj[3] = keys.HorizontalGradient.END;
   const tmp14 = LinearGradient;
-  obj[6] = getPremiumPlanItem /* getPremiumPlanItem */.getPremiumTypeDisplayName(premiumType);
+  obj[6] = getPremiumPlanItem.getPremiumTypeDisplayName(premiumType);
   if (TIER_0.TIER_0 === premiumType) {
     let tmp13Result = tmp13(6806);
   } else {

@@ -8,13 +8,13 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.R5nQkS);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.R5nQkS);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: require("explicitContentFromProto").AnimateStickers.useSetting,
   onValueChange: function onAnimateStickerSettingValueChange(arg0) {
-    const AnimateStickers = explicitContentFromProto /* explicitContentFromProto */.AnimateStickers;
+    const AnimateStickers = explicitContentFromProto.AnimateStickers;
     AnimateStickers.updateSetting(Number(arg0));
   },
   useOptions: function useAnimateStickerSettingOptions() {

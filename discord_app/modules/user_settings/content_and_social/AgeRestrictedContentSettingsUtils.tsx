@@ -29,13 +29,13 @@ export const resolveNsfwTogglesWithDefaults = function resolveNsfwTogglesWithDef
   return tmp3;
 };
 export const useViewNsfwCommandsOrDefault = function useViewNsfwCommandsOrDefault() {
-  const ViewNsfwCommands = explicitContentFromProto /* explicitContentFromProto */.ViewNsfwCommands;
+  const ViewNsfwCommands = explicitContentFromProto.ViewNsfwCommands;
   let flag = ViewNsfwCommands.useSetting();
-  const isAgeVerified = useAgeVerificationRunner /* useAgeVerificationRunner */.useIsAgeVerified();
-  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
-  const nSFWAllowed = useNSFWAllowed /* useNSFWAllowed */.useNSFWAllowed();
-  const obj2 = useNSFWAllowed /* useNSFWAllowed */;
-  const tmp3 = isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
+  const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
+  const obj = useAgeVerificationRunner;
+  const nSFWAllowed = useNSFWAllowed.useNSFWAllowed();
+  const obj2 = useNSFWAllowed;
+  const tmp3 = isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
   let tmp4 = !tmp3;
   if (!tmp3) {
     let tmp5 = false !== nSFWAllowed;
@@ -50,13 +50,13 @@ export const useViewNsfwCommandsOrDefault = function useViewNsfwCommandsOrDefaul
   return tmp4;
 };
 export const useViewNsfwGuildsOrDefault = function useViewNsfwGuildsOrDefault() {
-  const ViewNsfwGuilds = explicitContentFromProto /* explicitContentFromProto */.ViewNsfwGuilds;
+  const ViewNsfwGuilds = explicitContentFromProto.ViewNsfwGuilds;
   let flag = ViewNsfwGuilds.useSetting();
-  const isAgeVerified = useAgeVerificationRunner /* useAgeVerificationRunner */.useIsAgeVerified();
-  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
-  const nSFWAllowed = useNSFWAllowed /* useNSFWAllowed */.useNSFWAllowed();
-  const obj2 = useNSFWAllowed /* useNSFWAllowed */;
-  const tmp3 = isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
+  const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
+  const obj = useAgeVerificationRunner;
+  const nSFWAllowed = useNSFWAllowed.useNSFWAllowed();
+  const obj2 = useNSFWAllowed;
+  const tmp3 = isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE) && !isAgeVerified;
   let tmp4 = !tmp3;
   if (!tmp3) {
     let tmp5 = false !== nSFWAllowed;
@@ -71,12 +71,12 @@ export const useViewNsfwGuildsOrDefault = function useViewNsfwGuildsOrDefault() 
   return tmp4;
 };
 export const getViewNsfwCommandsOrDefault = function getViewNsfwCommandsOrDefault() {
-  const ViewNsfwCommands = explicitContentFromProto /* explicitContentFromProto */.ViewNsfwCommands;
+  const ViewNsfwCommands = explicitContentFromProto.ViewNsfwCommands;
   let flag = ViewNsfwCommands.getSetting();
-  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  const obj = useAgeVerificationRunner;
   const currentUser = authStore.getCurrentUser();
-  const isAgeVerifiedResult = useAgeVerificationRunner /* useAgeVerificationRunner */.isAgeVerified();
-  let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
+  const isAgeVerifiedResult = useAgeVerificationRunner.isAgeVerified();
+  let isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE);
   if (currentUser != null) {
     const nsfwAllowed = currentUser.nsfwAllowed;
   }
@@ -97,12 +97,12 @@ export const getViewNsfwCommandsOrDefault = function getViewNsfwCommandsOrDefaul
   return tmp4;
 };
 export const getViewNsfwGuildsOrDefault = function getViewNsfwGuildsOrDefault() {
-  const ViewNsfwGuilds = explicitContentFromProto /* explicitContentFromProto */.ViewNsfwGuilds;
+  const ViewNsfwGuilds = explicitContentFromProto.ViewNsfwGuilds;
   let flag = ViewNsfwGuilds.getSetting();
-  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  const obj = useAgeVerificationRunner;
   const currentUser = authStore.getCurrentUser();
-  const isAgeVerifiedResult = useAgeVerificationRunner /* useAgeVerificationRunner */.isAgeVerified();
-  let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
+  const isAgeVerifiedResult = useAgeVerificationRunner.isAgeVerified();
+  let isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE);
   if (currentUser != null) {
     const nsfwAllowed = currentUser.nsfwAllowed;
   }

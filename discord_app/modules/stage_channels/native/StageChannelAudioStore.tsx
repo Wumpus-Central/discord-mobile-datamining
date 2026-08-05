@@ -10,7 +10,7 @@ import { RouteTypes } from "../../voice_calls/VoiceCallTypes.tsx";
 function handleAudioRouteChanged() {
   if (c8) {
     currentRouteType = currentRouteType.getCurrentRouteType();
-    let flag2 = currentRouteType !== RouteTypes /* RouteTypes */.RouteTypes.UNKNOWN;
+    let flag2 = currentRouteType !== RouteTypes.RouteTypes.UNKNOWN;
     if (flag2) {
       if (currentRouteType !== tmp3(9072).RouteTypes.SPEAKER) {
         if (currentRouteType !== tmp3(9072).RouteTypes.BLUETOOTH) {

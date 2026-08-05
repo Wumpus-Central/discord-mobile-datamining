@@ -33,12 +33,12 @@ function ReactionNotificationBody(arg0) {
   let text;
   ({ secondaryText, messagePreview } = arg0);
   ({ text, hasMessageContent } = arg0);
-  let obj = extractMetadataFromNotification /* extractMetadataFromNotification */;
+  let obj = extractMetadataFromNotification;
   const messagePreviewTextVariant = obj.getMessagePreviewTextVariant();
   const tmp = createCacheKey();
   ({ gradientColors, gradientStyles } = useTruncatedGradientColors());
   obj = { variant: messagePreviewTextVariant, color: "text-default", style: tmp.italic, children: text };
-  const children = [callback(Text /* Text */.Text, obj), , ];
+  const children = [callback(Text.Text, obj), , ];
   let tmp8Result = null;
   if (null != secondaryText) {
     obj = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp: null, children: null };
@@ -299,7 +299,7 @@ function ReactorNotificationIcon(notification) {
     if (channel.isGroupDM()) {
       let obj = { channel: null, size: null };
       obj[0] = channel;
-      obj[1] = Button /* Button */.AvatarSizes.NORMAL;
+      obj[1] = Button.AvatarSizes.NORMAL;
       let tmp8Result = callback(FacepileGroupDMAvatar, obj);
       const tmp15 = FacepileGroupDMAvatar;
     }
@@ -313,14 +313,14 @@ function ReactorNotificationIcon(notification) {
       id = guild.id;
     }
     obj[1] = id;
-    obj[2] = Button /* Button */.AvatarSizes.NORMAL;
-    tmp8Result = callback(Button /* Button */.Avatar, obj);
+    obj[2] = Button.AvatarSizes.NORMAL;
+    tmp8Result = callback(Button.Avatar, obj);
     const tmp8 = callback;
     const tmp9 = require;
   } else {
     obj = { guild: null, size: null, style: null };
     obj[0] = guild;
-    obj[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.NORMAL;
+    obj[1] = GuildIconSizes.GuildIconSizes.NORMAL;
     obj[2] = tmp.guildIcon;
     tmp8Result = callback(GuildIconSizes, obj);
     const tmp5 = GuildIconSizes;

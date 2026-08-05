@@ -75,7 +75,7 @@ function getParticipantIndex(arg0) {
   if (tmp3) {
     items.push(obj.ALL_REQUESTED_TO_SPEAK);
   }
-  if (rtsState === useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK) {
+  if (rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK) {
     items.push(obj.REQUESTED_TO_SPEAK_ONLY);
   }
   if (speaker) {
@@ -163,7 +163,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       obj[3] = getComparator(voiceStateForChannel, nick);
       obj[4] = voiceStateForChannel;
       const obj3 = getNickname;
-      obj[5] = getHighestHoistedRole /* getHighestHoistedRole */.getHighestHoistedRole(self.guildId, userId);
+      obj[5] = getHighestHoistedRole.getHighestHoistedRole(self.guildId, userId);
       obj[6] = speaker.isSpeaker(userId, self.channelId);
       obj[7] = member1;
       obj[8] = upsertRelationship.isBlocked(user.id);
@@ -297,5 +297,5 @@ export default StageChannelParticipants;
 export const StageChannelParticipantNamedIndex = obj;
 export const StageChannelParticipantTypes = obj;
 export const isRequestedToSpeakAll = function isRequestedToSpeakAll(rtsState) {
-  return rtsState === useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  return rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK || rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 };

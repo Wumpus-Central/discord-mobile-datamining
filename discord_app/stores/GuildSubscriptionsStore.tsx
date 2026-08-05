@@ -132,7 +132,7 @@ function handleChannelSelect(arg0) {
     }
     dependencyMap.subscribeToGuild(tmp4);
     flag = false;
-    obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+    obj = getFavoritesAwareGuildName;
   }
   return flag;
 }
@@ -352,7 +352,7 @@ const guildSubscriptionsStore = new GuildSubscriptionsStore(require("dispatcher"
         }
       }
       tmp3.subscribeToGuild(tmp2);
-      obj3 = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+      obj3 = getFavoritesAwareGuildName;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -398,8 +398,8 @@ const guildSubscriptionsStore = new GuildSubscriptionsStore(require("dispatcher"
         guildId = parent_id.getGuildId();
         let isFavoritesGuildIdResult = guildId !== guildId;
         if (isFavoritesGuildIdResult) {
-          isFavoritesGuildIdResult = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-          const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+          isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(guildId);
+          const obj = getFavoritesAwareGuildName;
         }
         if (isFavoritesGuildIdResult) {
           tmp3.subscribeToGuild(guildId);
@@ -616,7 +616,7 @@ let obj = {
         }
       }
       tmp3.subscribeToGuild(tmp2);
-      obj3 = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+      obj3 = getFavoritesAwareGuildName;
     }
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -662,8 +662,8 @@ let obj = {
         guildId = parent_id.getGuildId();
         let isFavoritesGuildIdResult = guildId !== guildId;
         if (isFavoritesGuildIdResult) {
-          isFavoritesGuildIdResult = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(guildId);
-          const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+          isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(guildId);
+          const obj = getFavoritesAwareGuildName;
         }
         if (isFavoritesGuildIdResult) {
           tmp3.subscribeToGuild(guildId);

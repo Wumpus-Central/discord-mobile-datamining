@@ -14,7 +14,7 @@ const require = arg1;
 let closure_7 = createCacheKey.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
 const memoResult = require("noop").memo(function LaunchPadMembers() {
   const tmp = callback();
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [handleConnectionOpen, ensureGuildLoaded];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     currentlySelectedChannelId = currentlySelectedChannelId.getCurrentlySelectedChannelId();

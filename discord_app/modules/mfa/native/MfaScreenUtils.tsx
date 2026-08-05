@@ -5,7 +5,7 @@ import { NAV_BAR_HEIGHT } from "../../../design/components/Navigator/native/Navi
 
 let obj = { useScreenStyles: null };
 obj[0] = createCacheKey.createStyles((arg0) => {
-  const NAV_BAR_HEIGHT = NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT;
+  const NAV_BAR_HEIGHT = NAV_BAR_HEIGHT.NAV_BAR_HEIGHT;
   if (arg0) {
     let diff = NAV_BAR_HEIGHT;
   } else {

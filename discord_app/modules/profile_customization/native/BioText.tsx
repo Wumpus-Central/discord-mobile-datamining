@@ -24,7 +24,7 @@ function LinkButton(arg0) {
       callback(698).track(constants.CHANGE_LOG_CTA_CLICKED, obj);
     },
     style: tmp.link,
-    children: callback(Text /* Text */.Text, obj)
+    children: callback(Text.Text, obj)
   };
   obj = { variant: "text-md/normal", color: "text-link", lineClamp, style: tmp.link, children: items };
   items = ["\n", text];

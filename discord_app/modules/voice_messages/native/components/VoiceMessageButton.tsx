@@ -44,13 +44,13 @@ function VoiceMessageRecordingCancelledToastIcon() {
   let obj = { style: callback().icon, "aria-hidden": true, children: null };
   obj = { color: null, size: "xs" };
   obj[0] = Themes.colors.WHITE;
-  obj[2] = jsx(XSmallBoldIcon /* XSmallBoldIcon */.XSmallBoldIcon, { color: null, size: "xs" });
+  obj[2] = jsx(XSmallBoldIcon.XSmallBoldIcon, { color: null, size: "xs" });
   return <closure_6 color={null} size="xs" />;
 }
 function triggerHapticGuarded() {
   if (state.getState().showRecordingOverlay) {
-    _startAudioRecording /* _startAudioRecording */.triggerHaptic();
-    const obj = _startAudioRecording /* _startAudioRecording */;
+    _startAudioRecording.triggerHaptic();
+    const obj = _startAudioRecording;
   }
 }
 let c5 = importAllResult;

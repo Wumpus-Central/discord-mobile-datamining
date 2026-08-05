@@ -38,7 +38,7 @@ prototype["getCachedConfig"] = function getCachedConfig() {
     } else {
       self.cachedConfig = undefined;
     }
-    obj = isBlockedDomain /* isBlockedDomain */;
+    obj = isBlockedDomain;
     tmp = require;
   }
   return self.cachedConfig;
@@ -250,8 +250,8 @@ export const clearLibdiscoreExperimentCache = function clearLibdiscoreExperiment
   if (obj.isLibdiscoreInitialized()) {
     tmp6.info("Clearing libdiscore experiment cache and disabling sync");
     let c7 = true;
-    const experimentCacher = isBlockedDomain /* isBlockedDomain */.getExperimentCacher();
+    const experimentCacher = isBlockedDomain.getExperimentCacher();
     experimentCacher.clearCache();
-    const tmpResult = isBlockedDomain /* isBlockedDomain */;
+    const tmpResult = isBlockedDomain;
   }
 };

@@ -9,41 +9,41 @@ import { handleAutomaticGainControlChange } from "../../voice/native/UserSetting
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.t8Qhib);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.t8Qhib);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue() {
-    return handleAutomaticGainControlChange /* handleAutomaticGainControlChange */.useSelectedNoiseSuppressionOption();
+    return handleAutomaticGainControlChange.useSelectedNoiseSuppressionOption();
   },
   onValueChange: function onNoiseSuppressionKrispValueSettingChange(arg0) {
-    const result = handleAutomaticGainControlChange /* handleAutomaticGainControlChange */.handleNoiseSuppressionChange(arg0);
+    const result = handleAutomaticGainControlChange.handleNoiseSuppressionChange(arg0);
   },
   useOptions: function useNoiseSuppressionKrispSettingOptions() {
-    let obj = getNoiseCancellationDeferredToSystem /* getNoiseCancellationDeferredToSystem */;
+    let obj = getNoiseCancellationDeferredToSystem;
     const noiseCancellationDeferredToSystem = obj.useNoiseCancellationDeferredToSystem();
-    obj = { value: handleAutomaticGainControlChange /* handleAutomaticGainControlChange */.NoiseSuppressionOpt.KRISP, label: null, disabled: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.rdoNzt);
+    obj = { value: handleAutomaticGainControlChange.NoiseSuppressionOpt.KRISP, label: null, disabled: null };
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.rdoNzt);
     obj[2] = noiseCancellationDeferredToSystem;
     const items = [obj, , ];
-    obj = { value: handleAutomaticGainControlChange /* handleAutomaticGainControlChange */.NoiseSuppressionOpt.STANDARD, disabled: noiseCancellationDeferredToSystem, label: null };
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.qXeYHw);
+    obj = { value: handleAutomaticGainControlChange.NoiseSuppressionOpt.STANDARD, disabled: noiseCancellationDeferredToSystem, label: null };
+    const intl2 = getSystemLocale.intl;
+    obj[2] = intl2.string(getSystemLocale.t.qXeYHw);
     items[1] = obj;
-    const obj1 = { value: handleAutomaticGainControlChange /* handleAutomaticGainControlChange */.NoiseSuppressionOpt.NONE, disabled: noiseCancellationDeferredToSystem, label: null };
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    obj1[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.wkYAlz);
+    const obj1 = { value: handleAutomaticGainControlChange.NoiseSuppressionOpt.NONE, disabled: noiseCancellationDeferredToSystem, label: null };
+    const intl3 = getSystemLocale.intl;
+    obj1[2] = intl3.string(getSystemLocale.t.wkYAlz);
     items[2] = obj1;
     return items;
   },
   usePredicate: function useHasNoiseSuppressionKrispSetting() {
     const items = [_detectH265HardwareDecode];
-    return initialize /* initialize */.useStateFromStores(items, () => noiseCancellationSupported.isNoiseCancellationSupported());
+    return initialize.useStateFromStores(items, () => noiseCancellationSupported.isNoiseCancellationSupported());
   },
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.hmfkCi)];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t.hmfkCi)];
     return items;
   }
 };

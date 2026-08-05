@@ -15,8 +15,8 @@ export const get1PShopApplicationIdForSKU = function get1PShopApplicationIdForSK
   return skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM ? closure_6 : closure_2;
 };
 export const dismissOrbsOnboardingExperience = function dismissOrbsOnboardingExperience() {
-  let obj = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
-  if (!obj.UNSAFE_isDismissibleContentDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL)) {
+  let obj = UNSAFE_isDismissibleContentDismissed;
+  if (!obj.UNSAFE_isDismissibleContentDismissed(DismissibleContent.DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL)) {
     let tmpResult = tmp(4101);
     obj = { dismissAction: null, groupName: null };
     obj[0] = constants2.INDIRECT_ACTION;

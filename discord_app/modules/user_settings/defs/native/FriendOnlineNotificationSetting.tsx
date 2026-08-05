@@ -5,34 +5,34 @@ import { apexExperiment } from "../../../notifications/friend_online/FriendOnlin
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["uvIi/4"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["uvIi/4"]);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.E6O06k);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.E6O06k);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableFriendOnlineNotifications.useSetting,
   onValueChange: require("onFriendOnlineNotificationSettingsChanged").onFriendOnlineNotificationSettingsChanged,
   usePredicate: function useExperiment() {
-    return apexExperiment /* apexExperiment */.useFriendOnlineNotificationExperiment("tabsV2Settings").showSettingsToggle;
+    return apexExperiment.useFriendOnlineNotificationExperiment("tabsV2Settings").showSettingsToggle;
   }
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["uvIi/4"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["uvIi/4"]);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.E6O06k);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.E6O06k);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableFriendOnlineNotifications.useSetting,
   onValueChange: require("onFriendOnlineNotificationSettingsChanged").onFriendOnlineNotificationSettingsChanged,
   usePredicate: function useExperiment() {
-    return apexExperiment /* apexExperiment */.useFriendOnlineNotificationExperiment("tabsV2Settings").showSettingsToggle;
+    return apexExperiment.useFriendOnlineNotificationExperiment("tabsV2Settings").showSettingsToggle;
   }
 };
 const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/FriendOnlineNotificationSetting.tsx");

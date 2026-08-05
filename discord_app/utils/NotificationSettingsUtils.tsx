@@ -167,8 +167,8 @@ export const trackGuildNotificationSettingsUpdate = function trackGuildNotificat
   }
   const isMutedResult = store2.isMuted(guild_id);
   const tmp10 = num2 ^ num;
-  const obj4 = hasFlag /* hasFlag */;
-  const removeFlagsResult = hasFlag /* hasFlag */.removeFlags(tmp10, constants4.OPT_IN_CHANNELS_OFF, constants4.OPT_IN_CHANNELS_ON);
+  const obj4 = hasFlag;
+  const removeFlagsResult = hasFlag.removeFlags(tmp10, constants4.OPT_IN_CHANNELS_OFF, constants4.OPT_IN_CHANNELS_ON);
   obj = {};
   const merged = Object.assign(computeResult1);
   const merged1 = Object.assign(store.getStats(guild_id));

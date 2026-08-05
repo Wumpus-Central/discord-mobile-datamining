@@ -44,9 +44,9 @@ const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
     ({ text: arr[0], buttonFont: arr[1] } = tmp);
     items[2] = textStyle;
     obj[0] = items;
-    obj[3] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
+    obj[3] = MINIMUM_HIT_AREA.BUTTON_DEFAULT_MAX_FONT_SIZE_MULTIPLIER;
     obj[4] = text;
-    let tmp2 = callback(Text /* Text */.Text, obj);
+    let tmp2 = callback(Text.Text, obj);
   } else if (null != IconComponent) {
     obj = { size: null };
     obj[0] = IconComponentSize;
@@ -82,7 +82,7 @@ const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
   obj1[10] = disabled;
   const items2 = [tmp2, icon];
   obj1[11] = items2;
-  return closure_5(PressableBase /* PressableBase */.PressableOpacity, obj1);
+  return closure_5(PressableBase.PressableOpacity, obj1);
 });
 const result = require("jsxProd").fileFinishedImporting("design/components/Navigator/native/HeaderActionButton.native.tsx");
 

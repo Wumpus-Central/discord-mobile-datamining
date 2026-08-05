@@ -37,7 +37,7 @@ export default function MultiSelect(arg0) {
           checked: tmp in closure_1
         }, tmp);
       });
-      obj[1] = jsx(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: null });
+      obj[1] = jsx(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: null });
       return <View hasIcons={false}>{null}</View>;
     }
   }

@@ -5,6 +5,6 @@ const result = require("set").fileFinishedImporting("modules/auth/native/useWide
 
 export default function useWideAuthView() {
   const tmp = useIsWindowLarge();
-  const obj = isMetaQuest /* isMetaQuest */;
-  return isMetaQuest /* isMetaQuest */.isMetaQuest() || tmp;
+  const obj = isMetaQuest;
+  return isMetaQuest.isMetaQuest() || tmp;
 };

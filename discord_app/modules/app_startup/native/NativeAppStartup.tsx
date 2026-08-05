@@ -1089,7 +1089,7 @@ function _initHeadlessTask() {
   return applyArgumentsResult;
 }
 function initializeTokenStorage() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   if (null == Storage.get(closure_17)) {
     if (tmpResult.isAndroid()) {
       let token = enforcing.getConstants().token;

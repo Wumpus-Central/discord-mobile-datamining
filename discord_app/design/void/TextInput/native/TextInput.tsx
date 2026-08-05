@@ -20,11 +20,11 @@ let closure_6 = createCacheKey.createStyles(obj);
 const forwardRefResult = require("noop").forwardRef((style, ref) => {
   const merged = Object.assign(style, Object.create(null));
   const tmp2 = callback();
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   const theme = obj.useThemeContext().theme;
-  const obj2 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const obj2 = AccessibilityAnnouncer;
   const unsafe_rawColors = Themes.unsafe_rawColors;
-  const tmp6 = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
+  const tmp6 = AccessibilityAnnouncer.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_100 : unsafe_rawColors.PRIMARY_500;
   obj = { ref, style: items, keyboardAppearance: null, placeholderTextColor: null, selectionColor: null };
   items = [tmp2.input, style.style];
   let tmp3Result = tmp3(4131);

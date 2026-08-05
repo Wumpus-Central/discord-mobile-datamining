@@ -11,7 +11,7 @@ let require = arg1;
 let c4 = importDefaultResult;
 initialize = {
   getQueryId(c0) {
-    return QueryIds.GAME_AUTOCOMPLETE(GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH /* GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH */.normalizeGameAutocompleteQuery(c0));
+    return QueryIds.GAME_AUTOCOMPLETE(GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH.normalizeGameAutocompleteQuery(c0));
   },
   get(arg0) {
     let results = importDefaultResult.getResults(arg0);
@@ -21,7 +21,7 @@ initialize = {
     return results;
   },
   load(arg0) {
-    return _fetchGameAutocomplete /* _fetchGameAutocomplete */.fetchGameAutocomplete(arg0);
+    return _fetchGameAutocomplete.fetchGameAutocomplete(arg0);
   },
   getIsLoading(arg0) {
     return importDefaultResult.isFetching(arg0);
@@ -61,7 +61,7 @@ export const useDebouncedGameAutocomplete = function useDebouncedGameAutocomplet
   let tmp3;
   let tmp7;
   let tmp8;
-  let obj = GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH /* GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH */;
+  let obj = GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH;
   const result = obj.normalizeGameAutocompleteQuery(c0);
   require = result;
   let dependencyMap;

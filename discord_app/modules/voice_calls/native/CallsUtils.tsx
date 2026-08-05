@@ -137,93 +137,93 @@ export const handleToggleSelfMute = function handleToggleSelfMute() {
 export const showSuppressedAlert = function showSuppressedAlert() {
   let obj = AlertActionCreators;
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.FJSZVM);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.etJjgW);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.FJSZVM);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.etJjgW);
   obj.show(obj);
 };
 export const showServerMuteAlert = function showServerMuteAlert() {
   let obj = AlertActionCreators;
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["+JQCa/"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.hsNm7d);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["+JQCa/"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.hsNm7d);
   obj.show(obj);
 };
 export const showServerDeafenAlert = function showServerDeafenAlert() {
   let obj = AlertActionCreators;
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.QZ7WSS);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.Tl9JpL);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.QZ7WSS);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.Tl9JpL);
   obj.show(obj);
 };
 export const showCameraDisabledAlert = function showCameraDisabledAlert() {
   let obj = AlertActionCreators;
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.OYzPcW);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.oBH7Y2);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.OYzPcW);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.oBH7Y2);
   obj.show(obj);
 };
 export const showScreenshareDisabledAlert = function showScreenshareDisabledAlert() {
   let obj = AlertActionCreators;
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["/x4knx"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.PpfzUE);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["/x4knx"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.PpfzUE);
   obj.show(obj);
 };
 export const showMinOSScreenshareRequirementAlert = function showMinOSScreenshareRequirementAlert() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  let obj = mapped /* mapped */;
-  const errorInfo = obj.getErrorInfo(mapped /* mapped */.AVError.SCREENSHARE_OS_NOT_SUPPORTED);
+  const intl = getSystemLocale.intl;
+  let obj = mapped;
+  const errorInfo = obj.getErrorInfo(mapped.AVError.SCREENSHARE_OS_NOT_SUPPORTED);
   let errorCode;
   if (errorInfo != null) {
     errorCode = errorInfo.errorCode;
   }
-  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.ejOT95, { errorCode });
+  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.ejOT95, { errorCode });
   obj = { title: null, body: null, hideActionSheet: false };
   const intl2 = tmp(1236).intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.oblMYa);
+  obj[0] = intl2.string(getSystemLocale.t.oblMYa);
   const intl3 = tmp(1236).intl;
-  obj[1] = "" + intl3.string(getSystemLocale /* getSystemLocale */.t.Wnhd3q) + "\n\n" + formatToPlainStringResult;
+  obj[1] = "" + intl3.string(getSystemLocale.t.Wnhd3q) + "\n\n" + formatToPlainStringResult;
   AlertActionCreators.show(obj);
 };
 export const showTabletRequirementAlert = function showTabletRequirementAlert() {
   let obj = AlertActionCreators;
   obj = { title: null, body: null, hideActionSheet: false };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["1N0dxa"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.qqDFVb);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["1N0dxa"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.qqDFVb);
   obj.show(obj);
 };
 export const handleDisconnect = function handleDisconnect(channel) {
   const result = importAll(1844).dismissGlobalKeyboard();
   const obj = importAll(1844);
-  const result1 = openChannelCallModal /* openChannelCallModal */.dismissVoiceChannelScreens(channel, () => {
+  const result1 = openChannelCallModal.dismissVoiceChannelScreens(channel, () => {
     const voiceChannel = callback(table[20]).selectVoiceChannel(null);
   });
 };
 export const audioDeviceToIconMap = obj;
 export const getAudioDeviceToDisplayText = function getAudioDeviceToDisplayText(deviceType) {
   const obj = { EARPIECE: null, BLUETOOTH_HEADSET: null, WIRED_HEADSET: null, SPEAKERPHONE: null, INVALID: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.Ouoi6E);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.i6eV3z);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.Dluojr);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.snEhlu);
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl5.string(getSystemLocale /* getSystemLocale */.t.kCBL6t);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.Ouoi6E);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.i6eV3z);
+  const intl3 = getSystemLocale.intl;
+  obj[2] = intl3.string(getSystemLocale.t.Dluojr);
+  const intl4 = getSystemLocale.intl;
+  obj[3] = intl4.string(getSystemLocale.t.snEhlu);
+  const intl5 = getSystemLocale.intl;
+  obj[4] = intl5.string(getSystemLocale.t.kCBL6t);
   if (deviceType.deviceType === constants.TYPE_BLE_HEADSET) {
     const intl6 = tmp(1236).intl;
     let stringResult = intl6.string(tmp(1236).t.BtXSp9);
@@ -234,7 +234,7 @@ export const getAudioDeviceToDisplayText = function getAudioDeviceToDisplayText(
 };
 export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
   const items = [nativeEventEmitter];
-  return initialize /* initialize */.useStateFromStoresObject(items, () => {
+  return initialize.useStateFromStoresObject(items, () => {
     activeAudioDevice = activeAudioDevice.getActiveAudioDevice();
     const obj = { isAudioRouteEnabled: true, toggleAudio: callback(table[27]).showAudioOutputSelector, routeSource: null };
     let simpleDeviceType;
@@ -291,13 +291,13 @@ export const useMaskedSpeakerStates = set.isAndroid() ? (() => {
   return obj;
 });
 export const useImmediateMaskedSpeakerStates = () => {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [handleAudioRouteChanged];
   const stateFromStores = obj.useStateFromStores(items, () => currentRouteType.getCurrentRouteType());
   const tmp4 = useIsVideoMode();
   require = tmp4;
-  let tmp5 = stateFromStores === RouteTypes /* RouteTypes */.RouteTypes.SPEAKER;
-  const tmp6 = stateFromStores === RouteTypes /* RouteTypes */.RouteTypes.BLUETOOTH;
+  let tmp5 = stateFromStores === RouteTypes.RouteTypes.SPEAKER;
+  const tmp6 = stateFromStores === RouteTypes.RouteTypes.BLUETOOTH;
   if (!tmp5) {
     tmp5 = tmp6;
   }

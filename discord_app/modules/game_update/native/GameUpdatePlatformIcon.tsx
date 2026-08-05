@@ -14,7 +14,7 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
     size = "xs";
   }
   color = color.color;
-  if (PlatformType /* PlatformType */.PlatformType.DESKTOP === platform) {
+  if (PlatformType.PlatformType.DESKTOP === platform) {
     let obj = { size: null, color: null };
     obj[0] = size;
     obj[1] = color;

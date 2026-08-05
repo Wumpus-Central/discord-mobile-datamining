@@ -20,14 +20,14 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
     flag = false;
   }
   if (null != setting) {
-    if (setting !== create /* create */.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) {
+    if (setting !== create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION) {
       return setting;
     }
   }
   const currentUser = authStore.getCurrentUser();
   let ExplicitContentRedaction = dependencyMap;
-  const obj = isFeatureAgeGated /* isFeatureAgeGated */;
-  if (obj.isSettingTeenByDefault(SettingsDefaultFeature /* SettingsDefaultFeature */.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
+  const obj = isFeatureAgeGated;
+  if (obj.isSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
     if (isDm === undefined) {
       isDm = false;
     }
@@ -159,7 +159,7 @@ export const resolveSettingWithDefaultsForTeen = function resolveSettingWithDefa
 export const getExplicitContentSettingOrDefault = function getExplicitContentSettingOrDefault(arg0) {
   let setting = arg0;
   if (arg0 == null) {
-    const ExplicitContentSettings = explicitContentFromProto /* explicitContentFromProto */.ExplicitContentSettings;
+    const ExplicitContentSettings = explicitContentFromProto.ExplicitContentSettings;
     setting = ExplicitContentSettings.getSetting();
   }
   let prop;
@@ -180,7 +180,7 @@ export const getExplicitContentSettingOrDefault = function getExplicitContentSet
   return obj;
 };
 export const updateExplicitContentSetting = function updateExplicitContentSetting(arg0) {
-  const ExplicitContentSettings = explicitContentFromProto /* explicitContentFromProto */.ExplicitContentSettings;
+  const ExplicitContentSettings = explicitContentFromProto.ExplicitContentSettings;
   const setting = ExplicitContentSettings.getSetting();
   let prop;
   if (setting != null) {
@@ -197,7 +197,7 @@ export const updateExplicitContentSetting = function updateExplicitContentSettin
     prop2 = setting.explicitContentFriendDm;
   }
   obj[2] = resolveExplicitContentSettingWithDefaults({ setting: prop2, isDm: true, isFriend: true });
-  const ExplicitContentSettings2 = explicitContentFromProto /* explicitContentFromProto */.ExplicitContentSettings;
+  const ExplicitContentSettings2 = explicitContentFromProto.ExplicitContentSettings;
   obj = {};
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);
@@ -207,7 +207,7 @@ export const shouldRedactMessageMediaForForum = function shouldRedactMessageMedi
   if (null == authStore.getCurrentUser()) {
     return false;
   } else {
-    const ExplicitContentSettings = explicitContentFromProto /* explicitContentFromProto */.ExplicitContentSettings;
+    const ExplicitContentSettings = explicitContentFromProto.ExplicitContentSettings;
     const setting = ExplicitContentSettings.getSetting();
     let prop;
     if (setting != null) {
@@ -230,6 +230,6 @@ export const shouldRedactMessageMediaForForum = function shouldRedactMessageMedi
     obj = { setting: null, isDm: true, isFriend: true };
     obj[0] = prop2;
     resolveExplicitContentSettingWithDefaults(obj);
-    return getShouldObscureForSetting /* getShouldObscureForSetting */.getShouldObscureForSetting(tmp10Result);
+    return getShouldObscureForSetting.getShouldObscureForSetting(tmp10Result);
   }
 };

@@ -14,7 +14,7 @@ initialize = {
       return null;
     } else {
       if (importDefaultResult1.hasNoData(gameId)) {
-        let NO_DATA = initialize /* initialize */.NO_DATA;
+        let NO_DATA = initialize.NO_DATA;
       } else {
         NO_DATA = obj.getGame(gameId);
         if (NO_DATA == null) {

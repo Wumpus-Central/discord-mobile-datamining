@@ -11,8 +11,8 @@ export const canViewPotentiallyNSFWChannel = function canViewPotentiallyNSFWChan
   const channel = store.getChannel(channel_id);
   let tmp3 = null != currentUser && null != channel;
   if (tmp3) {
-    tmp3 = !shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.isChannelContentGated(channel);
-    const obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+    tmp3 = !shouldShowAgeGateForVoiceChannel.isChannelContentGated(channel);
+    const obj = shouldShowAgeGateForVoiceChannel;
   }
   return tmp3;
 };

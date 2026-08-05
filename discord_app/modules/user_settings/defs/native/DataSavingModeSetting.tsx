@@ -9,18 +9,18 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.ix8XIj);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.ix8XIj);
   },
   parent: require("MobileSetting").MobileSetting.CHAT,
   useValue: function useDataSavingModeSettingValue() {
     const items = [CHANNEL_SIDEBAR_WIDTH];
-    return initialize /* initialize */.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
+    return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   },
   onValueChange: function onDataSavingModeSettingValueChange(arg0) {
-    let obj = UserSettingsText /* UserSettingsText */;
+    let obj = UserSettingsText;
     obj = { videoUploadQuality: CHANNEL_SIDEBAR_WIDTH.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
-    const ViewImageDescriptions = explicitContentFromProto /* explicitContentFromProto */.ViewImageDescriptions;
+    const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
     obj[1] = ViewImageDescriptions.getSetting();
     obj[2] = CHANNEL_SIDEBAR_WIDTH.lowQualityImageMode;
     obj[3] = arg0;

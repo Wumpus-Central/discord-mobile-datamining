@@ -14,7 +14,7 @@ class IdGenerator {
 IdGenerator.prototype["generate"] = function generate(arg0) {
   const obj = Integer(arg0);
   this._sequenceNumber = +this._sequenceNumber + 1;
-  const str = new Buffer /* Buffer */.Buffer(24);
+  const str = new Buffer.Buffer(24);
   str.writeInt32LE(obj.mod(4294967296).toJSNumber() | 0, 0, true);
   const modResult = obj.mod(4294967296);
   const tmp2 = +this._sequenceNumber | 0;

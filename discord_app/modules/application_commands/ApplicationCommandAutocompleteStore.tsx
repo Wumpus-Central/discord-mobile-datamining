@@ -375,7 +375,7 @@ set = {
         }
         let obj = { duration_ms: null, error: true };
         obj[0] = num;
-        collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
+        collectGuildAnalyticsMetadata.trackWithMetadata(AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, obj);
         map2.delete(nonce);
         const channelId = value.channelId;
         if (!map1.has(channelId)) {

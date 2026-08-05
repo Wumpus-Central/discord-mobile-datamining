@@ -29,7 +29,7 @@ Object.defineProperty(prototype, "safetyCheck", {
 });
 Object.defineProperty(prototype, "channelSetup", {
   get: function channelSetup() {
-    return getChannelSetupSource /* getChannelSetupSource */.getChannelSetupSource(this.theme);
+    return getChannelSetupSource.getChannelSetupSource(this.theme);
   },
   set: undefined
 });
@@ -46,7 +46,7 @@ Object.defineProperty(prototype, "finishingTouches", {
 });
 Object.defineProperty(prototype, "close", {
   get: function close() {
-    return registerAsset /* registerAsset */;
+    return registerAsset;
   },
   set: undefined
 });

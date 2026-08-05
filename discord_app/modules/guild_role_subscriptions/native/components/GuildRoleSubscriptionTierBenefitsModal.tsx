@@ -51,7 +51,7 @@ function AddBenefitButton(disabled) {
   obj[0] = registerAsset;
   const items1 = [callback(preload, obj), ];
   obj = { style: tmp.addBenefitLabel, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label };
-  items1[1] = callback(Text /* Text */.Text, obj);
+  items1[1] = callback(Text.Text, obj);
   obj[5] = items1;
   return tmp2(tmp5, obj);
 }
@@ -505,10 +505,10 @@ let result = require("get ActivityIndicator").fileFinishedImporting("modules/gui
 export { GuildRoleSubscriptionTierBenefitsTab };
 export const GuildRoleSubscriptionTierChannelBenefitsModal = function GuildRoleSubscriptionTierChannelBenefitsModal(arg0) {
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["0eV/GY"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.iMSIWp);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["0eV/GY"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.iMSIWp);
   obj[3] = constants.INTANGIBLE_BENEFITS;
   const merged = Object.assign(arg0);
   obj.scrollable = false;
@@ -517,10 +517,10 @@ export const GuildRoleSubscriptionTierChannelBenefitsModal = function GuildRoleS
 };
 export const GuildRoleSubscriptionTierIntangibleBenefitsModal = function GuildRoleSubscriptionTierIntangibleBenefitsModal(arg0) {
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["+h9nJG"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.oGS4tC);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["+h9nJG"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.oGS4tC);
   obj[3] = constants.DESIGN;
   const merged = Object.assign(arg0);
   obj.scrollable = false;

@@ -32,7 +32,7 @@ function getFirstGuildIncidentId(guildId) {
         let tmp19 = require;
         let tmp20 = dependencyMap;
         let tmp21 = dependencyMap;
-        let obj7 = DATE_CONFIG /* DATE_CONFIG */;
+        let obj7 = DATE_CONFIG;
         let tmp22 = tmp17;
         if (obj7.hasDetectedActivity(tmp18)) {
           let tmp8 = tmp20;
@@ -188,8 +188,8 @@ export const shouldShowRaidInAppNotification = function shouldShowRaidInAppNotif
   }
   let isUnderLockdownResult = null != guildIncident;
   if (isUnderLockdownResult) {
-    isUnderLockdownResult = DATE_CONFIG /* DATE_CONFIG */.isUnderLockdown(guildIncident);
-    const obj2 = DATE_CONFIG /* DATE_CONFIG */;
+    isUnderLockdownResult = DATE_CONFIG.isUnderLockdown(guildIncident);
+    const obj2 = DATE_CONFIG;
   }
   const show = null != guildId && !isUnderLockdownResult && !(null != tmp2 && tmp2.disableRaidAlertNag);
   return { show, guildId };

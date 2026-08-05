@@ -150,11 +150,11 @@ export const useDueInString = function useDueInString(arg0) {
     return { string: "", isOverdue: false };
   } else {
     if (type === obj.LONG) {
-      let H4gnX9 = getSystemLocale /* getSystemLocale */.t.TjNWNF;
+      let H4gnX9 = getSystemLocale.t.TjNWNF;
       let tmp = require;
     } else {
       tmp = require;
-      H4gnX9 = getSystemLocale /* getSystemLocale */.t.H4gnX9;
+      H4gnX9 = getSystemLocale.t.H4gnX9;
     }
     if (type === tmp8.LONG) {
       Uq7Y_7 = tmp(1236).t.haia16;

@@ -19,7 +19,7 @@ class AppStoreOverlayTelemetryManager extends tmp2 {
 }
 AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
   state = state.state;
-  const isAndroidResult = set /* set */.isAndroid();
+  const isAndroidResult = set.isAndroid();
   if (isAndroidResult) {
     return !isAndroidResult;
   } else {

@@ -5,8 +5,8 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.LRmNAl);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.LRmNAl);
   },
   parent: null,
   IconComponent: require("CircleInformationIcon").CircleInformationIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CHANGE_LOG,
   getComponent() {
-    return ChangeLogScreen /* ChangeLogScreen */.ChangeLogScreen;
+    return ChangeLogScreen.ChangeLogScreen;
   }
 };
 const route = createToggle.createRoute(obj);

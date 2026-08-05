@@ -56,10 +56,10 @@ class ToastEmoji {
 }
 function ToastText(emoji) {
   let obj = { variant: "text-sm/normal", style: createCacheKey().toastText, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { emojiName: emoji.emoji.name };
-  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t.nKY0Fl, obj);
-  return jsx(Text /* Text */.Text, { emojiName: emoji.emoji.name });
+  obj[2] = intl.format(getSystemLocale.t.nKY0Fl, obj);
+  return jsx(Text.Text, { emojiName: emoji.emoji.name });
 }
 createCacheKey = { toastEmoji: null, toastEmojiCustom: null, toastEmojiText: null, toastText: null };
 createCacheKey = { marginLeft: require("Themes").space.PX_8, marginVertical: require("Themes").space.PX_8 };

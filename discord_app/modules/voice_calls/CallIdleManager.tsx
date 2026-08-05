@@ -33,8 +33,8 @@ function disconnect() {
   if (flag) {
     const currentClientVoiceChannelId1 = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null);
     if (null != currentClientVoiceChannelId1) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      trackInvite.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.XYof5G, { number: 3 }));
+      const intl = getSystemLocale.intl;
+      trackInvite.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(getSystemLocale.t.XYof5G, { number: 3 }));
       const obj3 = trackInvite;
       const voiceChannel = SelectedChannelActionCreators.selectVoiceChannel(null);
       const obj4 = SelectedChannelActionCreators;
@@ -45,7 +45,7 @@ let c7 = 180000;
 let prototype = function CallIdleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   const require = applyArgumentsResult;
-  const timeout = new start /* start */.Timeout();
+  const timeout = new start.Timeout();
   applyArgumentsResult.idleTimeout = timeout;
   applyArgumentsResult.handleConnectionClosed = function handleConnectionClosed() {
     const idleTimeout = applyArgumentsResult.idleTimeout;

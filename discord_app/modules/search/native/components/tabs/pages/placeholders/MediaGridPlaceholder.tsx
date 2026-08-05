@@ -30,7 +30,7 @@ export default function MediaGridPlaceholderItem(arg0) {
   let containerStyle;
   let size;
   ({ size, containerStyle } = arg0);
-  let obj = useFullscreenPlaceholderCount /* useFullscreenPlaceholderCount */;
+  let obj = useFullscreenPlaceholderCount;
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   obj = { style: items, pointerEvents: "none", children: null };
   items = [containerStyle, placeholderAnimatedStyle];
@@ -50,7 +50,7 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
   memo = memo.useMemo(() => outer1_0(_undefined[9]).range(0, numRows * outer1_5), items);
   const items1 = [memo];
   memo1 = memo.useMemo(() => outer1_0(_undefined[9]).chunk(memo, outer1_5), items1);
-  let obj = useFullscreenPlaceholderCount /* useFullscreenPlaceholderCount */;
+  let obj = useFullscreenPlaceholderCount;
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(visible.visible);
   obj = { style: items2, pointerEvents: "none", children: null };
   items2 = [, , ];
@@ -59,15 +59,15 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
   obj = { style: tmp.section, children: null };
   const obj1 = { style: tmp.sectionItem, children: null };
   const obj2 = { style: tmp.sectionText, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj2[5] = intl.string(getSystemLocale /* getSystemLocale */.t.LBYpDH);
-  obj1[1] = callback(Text /* Text */.Text, obj2);
+  const intl = getSystemLocale.intl;
+  obj2[5] = intl.string(getSystemLocale.t.LBYpDH);
+  obj1[1] = callback(Text.Text, obj2);
   const items3 = [callback(memo1, obj1), ];
   const obj3 = { style: tmp.sectionItem, children: null };
   const obj4 = { variant: "text-sm/semibold", color: "text-brand", style: tmp.sectionText, children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.LFTAUp);
-  obj3[1] = callback(Text /* Text */.Text, obj4);
+  const intl2 = getSystemLocale.intl;
+  obj4[3] = intl2.string(getSystemLocale.t.LFTAUp);
+  obj3[1] = callback(Text.Text, obj4);
   items3[1] = callback(memo1, obj3);
   obj[1] = items3;
   const items4 = [

@@ -67,7 +67,7 @@ const View = get_ActivityIndicator.View;
 let closure_13 = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"];
 function animationEntering(value) {
   const obj = { opacity: null };
-  obj[0] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(value, SUBTLE_SPRING /* SUBTLE_SPRING */.springStandard);
+  obj[0] = CONFIG_NEVER_ANIMATE.withSpring(value, SUBTLE_SPRING.springStandard);
   return obj;
 }
 let obj = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, springStandard: require("SUBTLE_SPRING").springStandard };
@@ -109,7 +109,7 @@ let closure_17 = createCacheKey.createStyles(obj1);
 let closure_18 = { code: "function SettingsAppearanceChannelListPreviewNitroUpsellTsx4(){const{theme,ThemeTypes,StyleSheet,withSpring,springStandard}=this.__closure;const opacity=theme.theme===ThemeTypes.LIGHT?0.5:1;return{...StyleSheet.absoluteFillObject,opacity:withSpring(opacity,springStandard)};}" };
 const obj3 = { height: require("Themes").space.PX_16, width: require("Themes").space.PX_16 };
 const memoResult = importAllResult.memo(function SettingsAppearanceChannelListPreviewNitroUpsell(visible) {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const callback = importAllResult.useCallback((arg0, style) => {

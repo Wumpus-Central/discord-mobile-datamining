@@ -8,21 +8,21 @@ import { handleAutomaticGainControlChange } from "../../voice/native/UserSetting
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.t8Qhib);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.t8Qhib);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue: function useNoiseSuppressionSettingValue() {
     const items = [_detectH265HardwareDecode];
-    return initialize /* initialize */.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
+    return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
   },
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
-    const NoiseSuppressionOpt = handleAutomaticGainControlChange /* handleAutomaticGainControlChange */.NoiseSuppressionOpt;
-    const result = handleAutomaticGainControlChange /* handleAutomaticGainControlChange */.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
+    const NoiseSuppressionOpt = handleAutomaticGainControlChange.NoiseSuppressionOpt;
+    const result = handleAutomaticGainControlChange.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
   },
   usePredicate: function useHasNoiseSuppressionSetting() {
     const items = [_detectH265HardwareDecode];
-    return initialize /* initialize */.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
+    return initialize.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
   }
 };
 createToggle = createToggle.createToggle(createToggle);

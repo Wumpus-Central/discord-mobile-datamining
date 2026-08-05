@@ -23,7 +23,7 @@ export default function FamilyCenterAvatarPair(otherUser) {
   otherUser = otherUser.otherUser;
   ({ iconSrc, iconStyles } = otherUser);
   const tmp = createCacheKey();
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let tmp5 = null;

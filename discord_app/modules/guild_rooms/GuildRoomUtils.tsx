@@ -1,7 +1,7 @@
 // discord_app/modules/guild_rooms/GuildRoomUtils.tsx
 import { GuildRoomObjectTypes } from "GuildRoomTypes.tsx";
 function serverGuildRoomObjectToClient(object_type) {
-  if (object_type.object_type === GuildRoomObjectTypes /* GuildRoomObjectTypes */.GuildRoomObjectTypes.PLANT) {
+  if (object_type.object_type === GuildRoomObjectTypes.GuildRoomObjectTypes.PLANT) {
     let obj = { objectType: null };
     obj[0] = tmp(12930).GuildRoomObjectTypes.PLANT;
     obj = { objectId: null, createdBy: null, updatedAt: null, updatedBy: null };

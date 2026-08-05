@@ -113,18 +113,18 @@ export default function GuildMFAWarning() {
   obj[1] = registerAsset;
   const items = [callback2(Image, obj), ];
   obj = { variant: "text-xs/medium", color: "text-default", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const items1 = [intl.string(getSystemLocale /* getSystemLocale */.t.ZIf8Ag), ];
+  const intl = getSystemLocale.intl;
+  const items1 = [intl.string(getSystemLocale.t.ZIf8Ag), ];
   const obj1 = { style: tmp.MFAWarningLink, children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  const items2 = [" ", intl2.string(getSystemLocale /* getSystemLocale */.t.hvVgAZ)];
+  const intl2 = getSystemLocale.intl;
+  const items2 = [" ", intl2.string(getSystemLocale.t.hvVgAZ)];
   obj1[1] = items2;
-  items1[1] = callback3(Button /* Button */.LegacyText, obj1);
+  items1[1] = callback3(Button.LegacyText, obj1);
   obj[2] = items1;
-  items[1] = callback3(Text /* Text */.Text, obj);
+  items[1] = callback3(Text.Text, obj);
   obj[3] = items;
-  return callback3(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return callback3(PressableBase.PressableOpacity, obj);
 };
 export const getScaledGuildMFAWarningHeight = function getScaledGuildMFAWarningHeight(fontScale) {
-  return 83 + 5 * map /* map */.scaleTextLineHeight("text-xs/medium", fontScale) + 10 + 10;
+  return 83 + 5 * map.scaleTextLineHeight("text-xs/medium", fontScale) + 10 + 10;
 };

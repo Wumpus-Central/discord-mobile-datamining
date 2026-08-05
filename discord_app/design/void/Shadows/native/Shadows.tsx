@@ -11,7 +11,7 @@ export const generateBoxShadowStyle = (arg0) => {
   let xOffset;
   let yOffset;
   ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } = arg0);
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isAndroid()) {
     obj = { elevation: null, shadowColor: null };
     obj[0] = elevation;

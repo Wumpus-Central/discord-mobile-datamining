@@ -21,12 +21,12 @@ function Header(arg0) {
   const tmp = createCacheKey();
   let obj = { top: true, style: tmp.headerContainer, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items = [callback(Text /* Text */.Text, obj), , ];
+  const items = [callback(Text.Text, obj), , ];
   obj = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   items[2] = callback(FormSeparator, { style: tmp.separator });
   obj[2] = items;
-  return callback2(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 function Footer(arg0) {
   let canProceedToNextStep;
@@ -35,12 +35,12 @@ function Footer(arg0) {
   let submitting;
   ({ canProceedToNextStep, nextStep, onProceed, submitting } = arg0);
   if (null == nextStep) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["4cAsqe"]);
+    const intl2 = getSystemLocale.intl;
+    let stringResult = intl2.string(getSystemLocale.t["4cAsqe"]);
     let tmp5 = require;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["bm6P5/"]);
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t["bm6P5/"]);
     tmp5 = require;
   }
   let obj = { style: null, children: null };

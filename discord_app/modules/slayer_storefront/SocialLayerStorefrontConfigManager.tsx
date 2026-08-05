@@ -13,7 +13,7 @@ class SocialLayerStorefrontConfigManager extends tmp2 {
   }
 }
 SocialLayerStorefrontConfigManager.prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
-  const socialLayerStorefrontConfig = _fetchSocialLayerStorefront /* _fetchSocialLayerStorefront */.fetchSocialLayerStorefrontConfig();
+  const socialLayerStorefrontConfig = _fetchSocialLayerStorefront.fetchSocialLayerStorefrontConfig();
 };
 const socialLayerStorefrontConfigManager = new SocialLayerStorefrontConfigManager();
 const result = require("set").fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx");

@@ -9,7 +9,7 @@ import { messagesProxy } from "FamilyCenter.messages.js";
 let c5;
 let closure_6;
 function getCollectibleTypeName(type) {
-  if (CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
+  if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = tmp(1236).intl;
     return intl5.string(messagesProxy.obi47v);
   } else if (tmp(1901).CollectiblesItemType.PROFILE_EFFECT === type) {
@@ -41,7 +41,7 @@ export const getAvatarDecorationPreviewUrl = function getAvatarDecorationPreview
     const first = product.items[0];
     let avatarDecorationURL = null;
     if (isAvatarDecorationRecord(first)) {
-      let obj = getAvatarURL /* getAvatarURL */;
+      let obj = getAvatarURL;
       obj = { avatarDecoration: null, size: 40, canAnimate: true };
       obj = { asset: null };
       obj[0] = first.asset;

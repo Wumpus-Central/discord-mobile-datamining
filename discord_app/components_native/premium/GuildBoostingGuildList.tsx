@@ -87,7 +87,7 @@ export default function GuildBoostingGuildList(guildCount) {
   if (guildCount === undefined) {
     guildCount = closure_7;
   }
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [insertUnsortedGuilds];
   const stateFromStores = obj.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
   obj = { style: guildCount.style, children: null };

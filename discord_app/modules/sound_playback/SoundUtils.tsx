@@ -29,7 +29,7 @@ export const createSoundForPack = function createSoundForPack(call_calling, soun
   if (DEFAULT === undefined) {
     DEFAULT = SoundOutputChannel.DEFAULT;
   }
-  const mobileAudioSound = new _createSound /* _createSound */.MobileAudioSound(tmp3, call_calling, num, DEFAULT, false);
+  const mobileAudioSound = new _createSound.MobileAudioSound(tmp3, call_calling, num, DEFAULT, false);
   return mobileAudioSound;
 };
 export const createSound = function createSound(stage_waiting, soundboard_sound, arg2) {
@@ -45,7 +45,7 @@ export const createSound = function createSound(stage_waiting, soundboard_sound,
   if (arg4 === undefined) {
     flag = false;
   }
-  const mobileAudioSound = new _createSound /* _createSound */.MobileAudioSound(stage_waiting, soundboard_sound, num, DEFAULT, flag);
+  const mobileAudioSound = new _createSound.MobileAudioSound(stage_waiting, soundboard_sound, num, DEFAULT, flag);
   return mobileAudioSound;
 };
 export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChannel) {

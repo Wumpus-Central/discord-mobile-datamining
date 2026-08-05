@@ -65,7 +65,7 @@ prototype["getRewardsForSkuId"] = function getRewardsForSkuId(id) {
   if (null != id) {
     if (null != dependencyMap[id]) {
       const mapped = tmp2.rewardResultIds.map((arg0) => table[arg0]);
-      return mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+      return mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
     }
   }
 };

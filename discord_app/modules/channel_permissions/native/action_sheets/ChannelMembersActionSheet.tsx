@@ -39,10 +39,10 @@ export default function ChannelMembersActionSheet(arg0) {
   let c5;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [ensureGuildLoaded];
   stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(closure_0));
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items1 = [createGuildRecordFromRust, createGuildRoleRecordFromRust];
   const items2 = [stateFromStores];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => {
@@ -61,7 +61,7 @@ export default function ChannelMembersActionSheet(arg0) {
     return obj;
   }, items2);
   ({ guild, sortedGuildRoles } = stateFromStoresObject);
-  let obj2 = initialize /* initialize */;
+  let obj2 = initialize;
   const items3 = [c5];
   const items4 = [stateFromStores];
   const stateFromStoresArray = obj2.useStateFromStoresArray(items3, () => {
@@ -71,7 +71,7 @@ export default function ChannelMembersActionSheet(arg0) {
     }
     return _undefined2.getMemberIds(guildId);
   }, items4);
-  let obj3 = useNavigation /* useNavigation */;
+  let obj3 = useNavigation;
   ensureGuildLoaded = obj3.useNavigation();
   if (null != stateFromStores) {
     if (null != guild) {

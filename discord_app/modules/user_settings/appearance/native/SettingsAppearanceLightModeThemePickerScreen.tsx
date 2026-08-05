@@ -10,7 +10,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/a
 
 export default function SettingsAppearanceLightModeThemePickerScreen() {
   const obj = { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.NoFvjZ);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.NoFvjZ);
   return jsx(ThemeTypes, { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null });
 };

@@ -20,7 +20,7 @@ function useFavoritesAccess(FavoritesGuildChannelList) {
   if (FavoritesGuildChannelList === undefined) {
     str = "useFavoritesAccess";
   }
-  let obj = useFavoritesGuildConfig /* useFavoritesGuildConfig */;
+  let obj = useFavoritesGuildConfig;
   const favoritesGuildConfig = obj.useFavoritesGuildConfig({ location: str });
   ({ enabled, isFreemium } = favoritesGuildConfig);
   let tmp4 = undefined !== isFreemium;
@@ -28,8 +28,8 @@ function useFavoritesAccess(FavoritesGuildChannelList) {
     tmp4 = isFreemium;
   }
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmpResult = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const tmpResult = initialize;
   const isPremiumExactlyResult = isPremiumAtLeast.isPremiumExactly(stateFromStores, PremiumTypes.TIER_2);
   let tmp7 = enabled;
   if (enabled) {
@@ -62,7 +62,7 @@ export { useFavoritesAccess };
 export const getFavoritesAccess = function getFavoritesAccess() {
   let enabled;
   let isFreemium;
-  let obj = useFavoritesGuildConfig /* useFavoritesGuildConfig */;
+  let obj = useFavoritesGuildConfig;
   const favoritesGuildConfig = obj.getFavoritesGuildConfig({ location: "getFavoritesAccess" });
   ({ enabled, isFreemium } = favoritesGuildConfig);
   let tmp4 = undefined !== isFreemium;
@@ -91,13 +91,13 @@ export const getFavoritesAccess = function getFavoritesAccess() {
   } else {
     num = 0;
     if (tmp4) {
-      num = FREE_FAVORITE_LIMIT /* FREE_FAVORITE_LIMIT */.FREE_FAVORITE_LIMIT;
+      num = FREE_FAVORITE_LIMIT.FREE_FAVORITE_LIMIT;
     }
   }
 };
 export const useFavorites = function useFavorites() {
   const items = [initializeFromUserSettings];
-  return initialize /* initialize */.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
+  return initialize.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
 };
 export const useFavorite = function useFavorite(arg0) {
   const _require = arg0;
@@ -106,8 +106,8 @@ export const useFavorite = function useFavorite(arg0) {
 };
 export const useFavoritedChannelIds = function useFavoritedChannelIds() {
   const items = [initializeFromUserSettings];
-  const stateFromStoresObject = initialize /* initialize */.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
-  const obj = initialize /* initialize */;
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => favoriteChannels.getFavoriteChannels());
+  const obj = initialize;
   return DISCORD_EPOCH.keys(stateFromStoresObject);
 };
 export const getFavoritesCategories = function getFavoritesCategories(favoriteChannels) {
@@ -156,7 +156,7 @@ export const getFavoritesCategories = function getFavoritesCategories(favoriteCh
 };
 export const useFavoritesCategories = function useFavoritesCategories() {
   let items = [initializeFromUserSettings];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     let nickname;
     let obj = favoriteChannels;
     favoriteChannels = favoriteChannels.getFavoriteChannels();
@@ -206,9 +206,9 @@ export const useFavoritesCategories = function useFavoritesCategories() {
 };
 export const useIsFavoritesGuildSelected = function useIsFavoritesGuildSelected() {
   const items = [handleConnectionOpen];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => guildId.getGuildId());
-  const obj = initialize /* initialize */;
-  return getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(stateFromStores);
+  const stateFromStores = initialize.useStateFromStores(items, () => guildId.getGuildId());
+  const obj = initialize;
+  return getFavoritesAwareGuildName.isFavoritesGuildId(stateFromStores);
 };
 export const useFavoritesAwareChannel = function useFavoritesAwareChannel(arg0, FavoritesGuildChannelList) {
   let tmp = arg0;

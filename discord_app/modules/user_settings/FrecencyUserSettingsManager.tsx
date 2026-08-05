@@ -190,8 +190,8 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       timeout = setTimeout(() => outer1_21(c0), closure_15);
     }
   };
-  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
-  const beforeSendCallbacks = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
+  const beforeSendCallbacks = updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   obj = {
     hasChanges() {
       let hasPendingUsageResult = closure_8.hasPendingUsage();
@@ -213,8 +213,8 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   };
-  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
-  const beforeSendCallbacks1 = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
+  const beforeSendCallbacks1 = updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   obj = {
     hasChanges() {
       let hasPendingUsageResult = getEmojiToGroupId.hasPendingUsage();
@@ -240,9 +240,9 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   };
-  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
-  const beforeSendCallbacks2 = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
-  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
+  updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push(obj);
+  const beforeSendCallbacks2 = updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
     hasChanges() {
       let hasPendingUsageResult = handleSoundCreateOrUpdate.hasPendingUsage();
       if (hasPendingUsageResult) {
@@ -263,7 +263,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   });
-  const beforeSendCallbacks3 = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  const beforeSendCallbacks3 = updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   const obj1 = {
     hasChanges() {
       let hasPendingUsageResult = handleSoundCreateOrUpdate.hasPendingUsage();
@@ -285,7 +285,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   };
-  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
+  updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
     hasChanges() {
       let hasPendingUsageResult = handleUserSettingsProtoStoreChange.hasPendingUsage();
       if (hasPendingUsageResult) {
@@ -306,7 +306,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   });
-  const beforeSendCallbacks4 = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  const beforeSendCallbacks4 = updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   let obj2 = {
     hasChanges() {
       let hasPendingUsageResult = handleUserSettingsProtoStoreChange.hasPendingUsage();
@@ -328,7 +328,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   };
-  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
+  updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
     hasChanges() {
       let hasPendingUsageResult = closure_5.hasPendingUsage();
       if (hasPendingUsageResult) {
@@ -349,7 +349,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   });
-  const beforeSendCallbacks5 = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
+  const beforeSendCallbacks5 = updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks;
   const obj3 = {
     hasChanges() {
       let hasPendingUsageResult = closure_5.hasPendingUsage();
@@ -371,7 +371,7 @@ FrecencyUserSettingsManager.prototype["_initialize"] = function _initialize() {
       }
     }
   };
-  updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
+  updateUserGuildSettings.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
     hasChanges() {
       let hasPendingUsageResult = handleChannelSelect.hasPendingUsage();
       if (hasPendingUsageResult) {

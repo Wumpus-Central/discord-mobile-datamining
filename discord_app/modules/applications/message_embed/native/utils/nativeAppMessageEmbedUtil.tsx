@@ -31,7 +31,7 @@ export const getAppGradientColors = function getAppGradientColors(id2) {
       tmp6(8045).maybeFetchColors(id2);
       return tmp;
     }
-    obj5 = hasFetchedColors /* hasFetchedColors */;
+    obj5 = hasFetchedColors;
   }
 };
 export const getAppIconSrc = function getAppIconSrc(id, icon, bot) {

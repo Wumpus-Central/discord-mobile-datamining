@@ -15,7 +15,7 @@ let closure_6;
 let error;
 let metroImportAll;
 function getPermissionOptions(id) {
-  let obj = isGuildEligibleForStageChannels /* isGuildEligibleForStageChannels */;
+  let obj = isGuildEligibleForStageChannels;
   const result = obj.isGuildEligibleForStageChannels(id);
   const guild = store.getGuild(id);
   let result1 = null != guild;
@@ -30,13 +30,13 @@ function getPermissionOptions(id) {
   const intl = tmp(1236).intl;
   const obj1 = { keybind: null };
   const intl2 = tmp(1236).intl;
-  obj1[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.DkSwJ2);
-  obj[0] = intl.format(getSystemLocale /* getSystemLocale */.t.ZuzwPz, obj1);
+  obj1[0] = intl2.string(getSystemLocale.t.DkSwJ2);
+  obj[0] = intl.format(getSystemLocale.t.ZuzwPz, obj1);
   const intl3 = tmp(1236).intl;
   const obj2 = { helpCenterArticle: null };
-  const tmpResult1 = experiment /* experiment */;
+  const tmpResult1 = experiment;
   obj2[0] = combined.getArticleURL(constants.SOUNDBOARD);
-  obj[1] = intl3.format(getSystemLocale /* getSystemLocale */.t.fVE8y8, obj2);
+  obj[1] = intl3.format(getSystemLocale.t.fVE8y8, obj2);
   obj[2] = result;
   obj[5] = result1;
   obj[6] = soundmojiRenderingExperiment;

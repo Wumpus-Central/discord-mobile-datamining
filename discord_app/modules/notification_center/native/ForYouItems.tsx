@@ -35,7 +35,7 @@ const require = arg1;
 function ForYouFooter(loading) {
   let tmp = null;
   if (loading.loading) {
-    tmp = callback(ForYouMentionPlaceholder /* ForYouMentionPlaceholder */.ForYouMentionPlaceholder, {});
+    tmp = callback(ForYouMentionPlaceholder.ForYouMentionPlaceholder, {});
   }
   return tmp;
 }
@@ -58,7 +58,7 @@ function Callout(arg0) {
   }
   obj1[2] = num;
   obj1[3] = parser(item.callout);
-  items[1] = callback(Text /* Text */.Text, obj1);
+  items[1] = callback(Text.Text, obj1);
   obj[2] = items;
   return closure_22(closure_7, obj);
 }

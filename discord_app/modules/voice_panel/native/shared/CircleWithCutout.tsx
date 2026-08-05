@@ -37,9 +37,9 @@ const memoResult = require("noop").memo(function CircleWithCutout(arg0) {
     const result1 = badgeRadius * num;
   }
   const result2 = 2 * result;
-  let obj = CircleWithCutout /* CircleWithCutout */;
+  let obj = CircleWithCutout;
   const cutoutCenterX = obj.getCutoutCenterX(result, cutoutPositionInDegrees);
-  let obj1 = CircleWithCutout /* CircleWithCutout */;
+  let obj1 = CircleWithCutout;
   const cutoutCenterY = obj1.getCutoutCenterY(result, cutoutPositionInDegrees);
   if (alignBadgeEdgeWithCircleEdge) {
     alignBadgeEdgeWithCircleEdge = null != result1;
@@ -55,17 +55,17 @@ const memoResult = require("noop").memo(function CircleWithCutout(arg0) {
   items = [obj];
   obj1 = { children: null };
   const obj2 = { id: "mask", children: null };
-  const items1 = [callback(inlineStyles /* inlineStyles */.Rect, { width: result2, height: result2, fill: "white" }), callback(inlineStyles /* inlineStyles */.Circle, { cx: diff, cy: tmp8, r: cutoutRadius * num, fill: "black" })];
+  const items1 = [callback(inlineStyles.Rect, { width: result2, height: result2, fill: "white" }), callback(inlineStyles.Circle, { cx: diff, cy: tmp8, r: cutoutRadius * num, fill: "black" })];
   obj2[1] = items1;
-  obj1[0] = callback2(inlineStyles /* inlineStyles */.Mask, obj2);
-  const items2 = [callback(inlineStyles /* inlineStyles */.Defs, obj1), ];
+  obj1[0] = callback2(inlineStyles.Mask, obj2);
+  const items2 = [callback(inlineStyles.Defs, obj1), ];
   const obj4 = { cx: result, cy: result, r: result, fill, mask: null };
   let str;
   if (enableCutout) {
     str = "url(#mask)";
   }
   obj4[4] = str;
-  items2[1] = callback(inlineStyles /* inlineStyles */.Circle, obj4);
+  items2[1] = callback(inlineStyles.Circle, obj4);
   obj[3] = items2;
   return callback2(inlineStyles, obj);
 });

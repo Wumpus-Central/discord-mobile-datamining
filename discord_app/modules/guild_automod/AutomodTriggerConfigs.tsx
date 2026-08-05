@@ -15,8 +15,8 @@ let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha"
 obj = {};
 obj = {
   getDefaultRuleName() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.ffR2cM);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.ffR2cM);
   },
   type: AutomodTriggerType.SPAM_LINK,
   eventType: AutomodEventType.MESSAGE_SEND,
@@ -33,8 +33,8 @@ obj[6] = new Set();
 obj[AutomodTriggerType.SPAM_LINK] = obj;
 const obj1 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.ffR2cM);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.ffR2cM);
   },
   type: AutomodTriggerType.KEYWORD,
   eventType: AutomodEventType.MESSAGE_SEND,
@@ -55,8 +55,8 @@ obj1[6] = new Set(items1);
 obj[AutomodTriggerType.KEYWORD] = obj1;
 const obj2 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["puF/Os"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["puF/Os"]);
   },
   type: AutomodTriggerType.ML_SPAM,
   eventType: AutomodEventType.MESSAGE_SEND,
@@ -77,8 +77,8 @@ obj2[6] = new Set(items3);
 obj[AutomodTriggerType.ML_SPAM] = obj2;
 const obj3 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.LnGhZv);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.LnGhZv);
   },
   type: AutomodTriggerType.DEFAULT_KEYWORD_LIST,
   eventType: AutomodEventType.MESSAGE_SEND,
@@ -99,8 +99,8 @@ obj3[6] = new Set(items5);
 obj[AutomodTriggerType.DEFAULT_KEYWORD_LIST] = obj3;
 const obj4 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.pX7i6n);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.pX7i6n);
   },
   type: AutomodTriggerType.MENTION_SPAM,
   eventType: AutomodEventType.MESSAGE_SEND,
@@ -121,8 +121,8 @@ obj4[6] = new Set(items7);
 obj[AutomodTriggerType.MENTION_SPAM] = obj4;
 const obj5 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.q1L2v8);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.q1L2v8);
   },
   type: AutomodTriggerType.USER_PROFILE,
   eventType: AutomodEventType.GUILD_MEMBER_JOIN_OR_UPDATE,
@@ -143,8 +143,8 @@ obj5[6] = new Set(items9);
 obj[AutomodTriggerType.USER_PROFILE] = obj5;
 const obj6 = {
   getDefaultRuleName() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.ZQr92M);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.ZQr92M);
   },
   type: AutomodTriggerType.SERVER_POLICY,
   eventType: AutomodEventType.MESSAGE_SEND,
@@ -237,7 +237,7 @@ export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) 
   }, items);
 };
 export const getDefaultTriggerMetadataForTriggerType = function getDefaultTriggerMetadataForTriggerType(arg0, arg1) {
-  isInMentionRaidExperiment /* isInMentionRaidExperiment */;
+  isInMentionRaidExperiment;
   if (AutomodTriggerType.DEFAULT_KEYWORD_LIST === arg0) {
     let obj = { allowList: null, presets: null };
     obj[0] = [];

@@ -23,7 +23,7 @@ const memoResult = require("noop").memo(function YouBarICYMIButton(hasNameplate)
     str = "white";
   }
   obj[2] = str;
-  obj[1] = jsx(FlashIcon /* FlashIcon */.FlashIcon, { size: "custom", style: tmp.icon, color: null });
+  obj[1] = jsx(FlashIcon.FlashIcon, { size: "custom", style: tmp.icon, color: null });
   obj[2] = useICYMITabBadge().showDot;
   obj[3] = tmp.badge;
   obj[4] = function onPress() {
@@ -36,7 +36,7 @@ const memoResult = require("noop").memo(function YouBarICYMIButton(hasNameplate)
     }
   };
   const intl = tmp5(1236).intl;
-  obj[5] = intl.string(getSystemLocale /* getSystemLocale */.t["jnXV/V"]);
+  obj[5] = intl.string(getSystemLocale.t["jnXV/V"]);
   return jsx(YouBarButtonIcon, { size: "custom", style: tmp.icon, color: null });
 });
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarICYMIButton.tsx");

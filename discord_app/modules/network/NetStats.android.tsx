@@ -415,7 +415,7 @@ const subscription2 = require("dispatcher").subscribe("MESSAGE_SEND_FAILED", (ar
 let result = require("_handleConnectionOpen").fileFinishedImporting("modules/network/NetStats.android.tsx");
 
 export const isSlowNetwork = function isSlowNetwork() {
-  let tmp = obj.type === configure /* configure */.NetInfoStateType.cellular;
+  let tmp = obj.type === configure.NetInfoStateType.cellular;
   if (tmp) {
     let isNetworkRoaming = null != closure_10.signalStrengthLevel;
     if (isNetworkRoaming) {

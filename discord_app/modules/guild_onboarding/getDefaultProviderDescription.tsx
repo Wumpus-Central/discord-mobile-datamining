@@ -6,10 +6,10 @@ const result = require("set").fileFinishedImporting("modules/guild_onboarding/ge
 
 export default function getDefaultProviderDescription(arg0) {
   if (PlatformTypes.TWITCH === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t["D/wRWb"]);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t["D/wRWb"]);
   } else if (tmp.YOUTUBE === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.TC0upt);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.TC0upt);
   }
 };

@@ -38,7 +38,7 @@ export const parseLayerFilename = function parseLayerFilename(c7) {
       const substr = arr2.slice(2);
       if (obj14.test(tmp19)) {
         if (set.has(tmp20)) {
-          if (tmp20 === ProfileFrameLayerType /* ProfileFrameLayerType */.ProfileFrameLayerType.BORDER) {
+          if (tmp20 === ProfileFrameLayerType.ProfileFrameLayerType.BORDER) {
             if (substr.length > 0) {
               if (set1.has(substr[0])) {
                 let obj = { parsed: null, errorType: null };

@@ -9,5 +9,5 @@ const result = require("initialize").fileFinishedImporting("modules/parent_tools
 
 export default function useIsInRestrictedHours() {
   const items = [mergeGuildAvatar, freshTeenActivityWithMap];
-  return initialize /* initialize */.useStateFromStores(items, scheduleUpcomingWarning /* scheduleUpcomingWarning */.getCurrentRestrictedHoursState);
+  return initialize.useStateFromStores(items, scheduleUpcomingWarning.getCurrentRestrictedHoursState);
 };

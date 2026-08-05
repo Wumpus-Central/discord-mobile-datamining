@@ -5,6 +5,6 @@ const result = require("set").fileFinishedImporting("modules/gif_picker/GifProvi
 export const GIF_PROVIDER = "klipy";
 export const GIF_PROVIDER_EMBED_NAME = "Klipy";
 export const getSearchPlaceholder = function getSearchPlaceholder() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t.T1Frnm);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t.T1Frnm);
 };

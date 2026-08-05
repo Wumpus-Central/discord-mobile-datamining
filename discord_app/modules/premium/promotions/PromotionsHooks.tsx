@@ -167,7 +167,7 @@ export const useUnseenOutboundPromotions = function useUnseenOutboundPromotions(
 export const useBogoPromotion = function useBogoPromotion() {
   const obj = { promotion: null };
   const items = [createEmptyPromotionsByType];
-  obj[0] = initialize /* initialize */.useStateFromStores(items, () => bogoPromotion.bogoPromotion);
+  obj[0] = initialize.useStateFromStores(items, () => bogoPromotion.bogoPromotion);
   return obj;
 };
 export const useIsInPromotion = function useIsInPromotion(arg0) {
@@ -180,5 +180,5 @@ export const useHasActiveBogoPromotion = function useHasActiveBogoPromotion() {
     const result = callback(table[8]).maybeFetchActivePromotions();
   }, []);
   const items = [createEmptyPromotionsByType];
-  return initialize /* initialize */.useStateFromStores(items, () => null != activeBogoRewardPromotion.getActiveBogoRewardPromotion());
+  return initialize.useStateFromStores(items, () => null != activeBogoRewardPromotion.getActiveBogoRewardPromotion());
 };

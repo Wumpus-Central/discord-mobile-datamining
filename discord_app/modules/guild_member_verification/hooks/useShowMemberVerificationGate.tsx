@@ -34,8 +34,8 @@ function shouldShowMembershipVerificationGate(guildId, items) {
       flag = flag2;
     }
     if (flag) {
-      flag = isValidFormResponse /* isValidFormResponse */.guildHasVerificationGate(guild);
-      const obj4 = isValidFormResponse /* isValidFormResponse */;
+      flag = isValidFormResponse.guildHasVerificationGate(guild);
+      const obj4 = isValidFormResponse;
     }
     return flag;
   }

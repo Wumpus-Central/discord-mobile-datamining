@@ -9,7 +9,7 @@ const result = require("sendRequest").fileFinishedImporting("modules/harvester/D
 export const getDataHarvestStatus = function getDataHarvestStatus() {
   let obj = dispatcher;
   obj.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_START" });
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
   return value.then((body) => {
@@ -23,7 +23,7 @@ export const getDataHarvestStatus = function getDataHarvestStatus() {
   });
 };
 export const requestDataHarvest = function requestDataHarvest(mapped) {
-  const harvest = saveProfileAndAccountRequest /* saveProfileAndAccountRequest */.requestHarvest(mapped);
+  const harvest = saveProfileAndAccountRequest.requestHarvest(mapped);
   return harvest.then((body) => {
     if (tmp) {
       let obj = callback(table[1]);

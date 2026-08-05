@@ -30,7 +30,7 @@ prototype["getState"] = function getState() {
 };
 prototype["getTemp"] = function getTemp() {
   const obj = { x: null };
-  const StatusExpiresAtSetting = explicitContentFromProto /* explicitContentFromProto */.StatusExpiresAtSetting;
+  const StatusExpiresAtSetting = explicitContentFromProto.StatusExpiresAtSetting;
   obj[0] = StatusExpiresAtSetting.getSetting();
   return obj;
 };
@@ -39,7 +39,7 @@ HabitualDNDStore.persistKey = "habitualDND";
 const habitualDNDStore = new HabitualDNDStore(require("dispatcher"), {
   POST_CONNECTION_OPEN: function handleConnect() {
     if (status.getStatus() === StatusTypes.DND) {
-      const StatusExpiresAtSetting = explicitContentFromProto /* explicitContentFromProto */.StatusExpiresAtSetting;
+      const StatusExpiresAtSetting = explicitContentFromProto.StatusExpiresAtSetting;
       if ("0" === StatusExpiresAtSetting.getSetting()) {
         const _Date = Date;
         arr = arr.push(Date.now());

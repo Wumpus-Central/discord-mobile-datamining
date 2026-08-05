@@ -8,8 +8,8 @@ import { getCustomThemesName } from "MobileThemesUtils.tsx";
 
 let require = arg1;
 function getGuildThemeName() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t.CFzDOG);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t.CFzDOG);
 }
 const result = require("isSyncedModeThemesEnabled").fileFinishedImporting("modules/client_themes/native/useColorThemeBackground.tsx");
 
@@ -17,13 +17,13 @@ export default function useColorThemeBackground() {
   const tmp = stateFromStores(4135)();
   const require = tmp;
   let items = [handleThemeChange];
-  stateFromStores = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => theme.theme);
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  stateFromStores = defaultAreStatesEqual.useStateFromStores(items, () => theme.theme);
+  let obj = defaultAreStatesEqual;
   const items1 = [isSyncedModeThemesEnabled];
-  const stateFromStores1 = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items1, () => gradientPreset.gradientPreset);
-  const obj2 = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => gradientPreset.gradientPreset);
+  const obj2 = defaultAreStatesEqual;
   const items2 = [tmp, stateFromStores];
-  const customBackgroundGradient = getCustomThemesName /* getCustomThemesName */.useCustomBackgroundGradient();
+  const customBackgroundGradient = getCustomThemesName.useCustomBackgroundGradient();
   let memo = React.useMemo(() => {
     let colors;
     let tmp3 = null;

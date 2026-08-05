@@ -6,7 +6,7 @@ const result = require("GlobeEarthIcon").fileFinishedImporting("modules/game_pro
 
 export default function getGameProfileWebsiteData(category) {
   category = category.category;
-  if (ThirdPartyGameApplicationWebsiteCategory /* ThirdPartyGameApplicationWebsiteCategory */.ThirdPartyGameApplicationWebsiteCategory.OFFICIAL === category) {
+  if (ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.OFFICIAL === category) {
     let obj = { icon: null, action: null, title: null, url: null };
     obj = { size: "md", color: null };
     obj[1] = arg1;

@@ -34,7 +34,7 @@ export default function ForumPostList(arg0) {
   ({ firstMessage, hasUnreads, thread } = arg0);
   ({ messageContent, firstMessageLoaded, isNew, media, isEmbed, isLocalDeviceMedia, parentChannel, senderModifier } = arg0);
   const tmp = callback3();
-  let obj = useAvailableTags /* useAvailableTags */;
+  let obj = useAvailableTags;
   const tmp4 = callback(obj.useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   const hasFlagResult = thread.hasFlag(ChannelFlags.PINNED);
@@ -57,7 +57,7 @@ export default function ForumPostList(arg0) {
       obj1[0] = first;
       obj1[1] = tmp4[1];
       obj1[2] = hasUnreads;
-      tmp13 = callback2(ForumPostAppliedTagPills /* ForumPostAppliedTagPills */.ForumPostAppliedTagPills, obj1);
+      tmp13 = callback2(ForumPostAppliedTagPills.ForumPostAppliedTagPills, obj1);
     }
     items[1] = tmp13;
     obj[1] = items;

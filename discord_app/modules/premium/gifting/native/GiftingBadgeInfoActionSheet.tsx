@@ -40,10 +40,10 @@ const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedI
 export default function GiftingBadgeInfoActionSheet() {
   const tmp = createCacheKey();
   const require = tmp;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   let items = [map];
   const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(tmp(8708).BadgeId.GIFTING));
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items1 = [maybeApplyNoTextColorForLightCustomTheme];
   const importDefault = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   const effect = React.useEffect(() => {
@@ -57,13 +57,13 @@ export default function GiftingBadgeInfoActionSheet() {
   obj[0] = items2;
   obj1 = { style: tmp.headerContainer, children: null };
   let obj2 = { style: tmp.title, variant: "heading-xl/semibold", color: "text-strong", accessibilityRole: "header", children: null };
-  let intl = getSystemLocale /* getSystemLocale */.intl;
+  let intl = getSystemLocale.intl;
   obj2[4] = intl.string(messagesProxy["0MB2C6"]);
-  const items3 = [callback(Text /* Text */.Text, obj2), ];
+  const items3 = [callback(Text.Text, obj2), ];
   let obj3 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   obj3[3] = intl2.string(messagesProxy.k9sNVH);
-  items3[1] = callback(Text /* Text */.Text, obj3);
+  items3[1] = callback(Text.Text, obj3);
   obj1[1] = items3;
   const items4 = [callback2(View, obj1), ];
   const obj4 = { style: tmp.tierCards, children: null };
@@ -119,5 +119,5 @@ export default function GiftingBadgeInfoActionSheet() {
   items4[1] = callback(View, obj4);
   obj[1] = items4;
   obj5[2] = callback2(View, obj);
-  return callback(Background /* Background */.BottomSheet, obj5);
+  return callback(Background.BottomSheet, obj5);
 };

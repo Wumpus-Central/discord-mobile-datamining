@@ -35,7 +35,7 @@ export const withFallbacks = function withFallbacks(extendedMemoryLru, arg1) {
   if (extendedMemoryLru.totalLength >= arg1) {
     return extendedMemoryLru;
   } else {
-    extendedMemoryLru = new totalLength /* totalLength */.ExtendedMemoryLru(extendedMemoryLru.primaryCapacity, extendedMemoryLru.extendedCapacity);
+    extendedMemoryLru = new totalLength.ExtendedMemoryLru(extendedMemoryLru.primaryCapacity, extendedMemoryLru.extendedCapacity);
     const diff = arg1 - extendedMemoryLru.totalLength;
     guildFolders = guildFolders.getGuildFolders();
     const iter = guildFolders[Symbol.iterator]();
@@ -57,14 +57,14 @@ export const withFallbacks = function withFallbacks(extendedMemoryLru, arg1) {
           if (isReadableChannelResult) {
             let tmp13 = require;
             let tmp14 = dependencyMap;
-            let obj3 = isReadableChannel /* isReadableChannel */;
+            let obj3 = isReadableChannel;
             let tmp15 = item10025;
             isReadableChannelResult = obj3.isReadableChannel(tmp10);
           }
           if (isReadableChannelResult) {
             let tmp16 = require;
             let tmp17 = dependencyMap;
-            let obj4 = LIMITED_GUILD_MEMBER_THRESHOLD /* LIMITED_GUILD_MEMBER_THRESHOLD */;
+            let obj4 = LIMITED_GUILD_MEMBER_THRESHOLD;
             let tmp18 = item10025;
             isReadableChannelResult = !obj4.isLimitedChannel(tmp10);
           }

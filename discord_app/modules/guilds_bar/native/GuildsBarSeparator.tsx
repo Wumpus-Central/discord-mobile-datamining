@@ -34,7 +34,7 @@ let closure_4 = createCacheKey.createStyles((maxWidth) => {
 });
 let closure_5 = { code: "function GuildsBarSeparatorTsx1(){const{withSpring,guildItemSize,panelX,HOME_DRAWER_FLING_PHYSICS}=this.__closure;return{maxWidth:withSpring(Math.max(guildItemSize,panelX.get()+guildItemSize),HOME_DRAWER_FLING_PHYSICS)};}" };
 const memoResult = require("noop").memo(function GuildsBarSeparator() {
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp2 = importDefault;
   const tmp4 = callback(token);

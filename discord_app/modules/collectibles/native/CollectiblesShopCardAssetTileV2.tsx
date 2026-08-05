@@ -28,13 +28,13 @@ let metroImportAll;
 const require = arg1;
 function PurchasedAssetOverlay() {
   const tmp = callback3();
-  obj = { style: tmp.overlayContainer, children: callback2(CheckmarkLargeBoldIcon /* CheckmarkLargeBoldIcon */.CheckmarkLargeBoldIcon, obj) };
+  obj = { style: tmp.overlayContainer, children: callback2(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, obj) };
   obj = { size: "lg", style: tmp.overlayIcon };
   return callback2(closure_5, obj);
 }
 function DisabledAssetOverlay() {
   const tmp = callback3();
-  obj = { style: tmp.overlayContainer, children: callback2(LockIcon /* LockIcon */.LockIcon, obj) };
+  obj = { style: tmp.overlayContainer, children: callback2(LockIcon.LockIcon, obj) };
   obj = { size: "lg", style: tmp.overlayIcon };
   return callback2(closure_5, obj);
 }
@@ -48,9 +48,9 @@ function ProductPreview(arg0) {
   ({ product, isPurchased } = arg0);
   ({ isDisabled, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth } = arg0);
   const tmp = callback3();
-  let obj = getProductOrbPrice /* getProductOrbPrice */;
+  let obj = getProductOrbPrice;
   const productType = obj.getProductType(product);
-  if (productType !== CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.PROFILE_EFFECT) {
+  if (productType !== CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT) {
     if (productType !== tmp2(1901).CollectiblesItemType.PROFILE_FRAME) {
       let str = "75%";
     }
@@ -166,11 +166,11 @@ function AssetTileInternal(solidBackground) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = hexToRgba /* hexToRgba */;
+  let obj = hexToRgba;
   const tmp = callback3();
-  const obj2 = hexToRgba /* hexToRgba */;
+  const obj2 = hexToRgba;
   let num = 0.8;
-  const token = map /* map */.useToken(Themes.colors.BACKGROUND_BASE_LOW);
+  const token = map.useToken(Themes.colors.BACKGROUND_BASE_LOW);
   if (flag) {
     num = 1;
   }
@@ -215,10 +215,10 @@ const memoResult = importAllResult.memo(function AssetTileV2(arg0) {
   let solidBackground;
   ({ product, isPurchased, isDisabled } = arg0);
   ({ solidBackground, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth } = arg0);
-  let obj = useDefaultVariantIndex /* useDefaultVariantIndex */;
+  let obj = useDefaultVariantIndex;
   const defaultVariantIndex = obj.useDefaultVariantIndex(product);
   obj = { solidBackground, children: null };
-  obj = { product: getProductOrbPrice /* getProductOrbPrice */.getSelectedProduct(product, defaultVariantIndex), isPurchased, isDisabled, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth };
+  obj = { product: getProductOrbPrice.getSelectedProduct(product, defaultVariantIndex), isPurchased, isDisabled, disableBundleStaticBackground, muteBundleStaticBackground, cardWidth };
   const items = [callback2(ProductPreview, obj), , ];
   let tmp4Result = isPurchased;
   if (isPurchased) {

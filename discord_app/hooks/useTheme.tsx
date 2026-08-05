@@ -3,14 +3,14 @@ import { ThemeTypes } from "ME";
 import { AccessibilityAnnouncer } from "../design/shared.tsx";
 
 function useTheme() {
-  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.useThemeContext().theme;
+  return AccessibilityAnnouncer.useThemeContext().theme;
 }
 const result = require("set").fileFinishedImporting("hooks/useTheme.tsx");
 
 export default useTheme;
 export { useTheme };
 export const useThemeIndex = function useThemeIndex() {
-  const theme = AccessibilityAnnouncer /* AccessibilityAnnouncer */.useThemeContext().theme;
+  const theme = AccessibilityAnnouncer.useThemeContext().theme;
   let num = 0;
   if (ThemeTypes.DARK !== theme) {
     if (ThemeTypes.LIGHT === theme) {

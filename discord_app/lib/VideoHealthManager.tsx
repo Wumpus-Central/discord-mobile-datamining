@@ -164,13 +164,13 @@ prototype["reenableVideo"] = function reenableVideo(arr) {
   if (flag) {
     const logger = self.logger;
     const _HermesInternal = HermesInternal;
-    logger.info("reenableVideo called for user " + arr + " - time = " + sleep /* sleep */.now());
+    logger.info("reenableVideo called for user " + arr + " - time = " + sleep.now());
     const result = self.stateCleanupBeforeEnable(arr);
     self.currentVideoAutoToggleState[arr] = VideoToggleState.AUTO_PROBING;
     self.probingUserId = arr;
     dispatchAutoDisableVideo(arr, VideoToggleState.AUTO_PROBING);
     flag = true;
-    const obj = sleep /* sleep */;
+    const obj = sleep;
   }
   return flag;
 };

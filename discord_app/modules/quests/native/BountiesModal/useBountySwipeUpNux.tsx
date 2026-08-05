@@ -8,9 +8,9 @@ const result = require("FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY").fileFinishedIm
 
 export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
   let isEligible = location.isEligible;
-  const BountiesVerticalScrollExperiment = apexExperiment /* apexExperiment */.BountiesVerticalScrollExperiment;
+  const BountiesVerticalScrollExperiment = apexExperiment.BountiesVerticalScrollExperiment;
   const tmp3 = "none" === BountiesVerticalScrollExperiment.useConfig({ location: location.location }).scrollAffordanceVariant;
-  let obj = FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY /* FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY */;
+  let obj = FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY;
   const first = callback(obj.useForceBountiesSwipeUpNux(), 1)[0];
   if (isEligible) {
     if (tmp3) {

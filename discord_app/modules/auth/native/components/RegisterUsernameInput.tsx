@@ -28,7 +28,7 @@ function UsernameStatusMessage(arg0) {
   if (usernameStatus != null) {
     type = usernameStatus.type;
   }
-  if (type === NameValidationState /* NameValidationState */.NameValidationState.ERROR) {
+  if (type === NameValidationState.NameValidationState.ERROR) {
     let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
     obj = { size: "xs", color: null };
     obj[1] = Themes.colors.TEXT_FEEDBACK_CRITICAL;

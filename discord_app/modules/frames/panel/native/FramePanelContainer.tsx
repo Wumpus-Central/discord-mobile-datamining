@@ -8,7 +8,7 @@ import { renderActivityOrPIP } from "FramePanelUI.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function FramePanelContainer() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [map];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => null != connectedFrame.getConnectedFrame())) {

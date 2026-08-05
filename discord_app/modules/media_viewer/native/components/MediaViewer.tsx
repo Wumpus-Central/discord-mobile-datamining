@@ -359,5 +359,5 @@ export default importAllResult.memo((arg0) => {
   obj = {};
   const merged = Object.assign(arg0);
   obj[0] = callback(MediaViewer, obj);
-  return callback(MediaViewerDimensionsProvider /* MediaViewerDimensionsProvider */.MediaViewerDimensionsProvider, obj);
+  return callback(MediaViewerDimensionsProvider.MediaViewerDimensionsProvider, obj);
 });

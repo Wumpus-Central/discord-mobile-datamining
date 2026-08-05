@@ -75,7 +75,7 @@ prototype["getUnpublishedForSKU"] = function getUnpublishedForSKU(skuId) {
   } else {
     const _Array = Array;
     const mapped = Array.from(tmp).map((arg0) => table[arg0]);
-    items = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    items = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
     const arr = Array.from(tmp);
   }
   return items;

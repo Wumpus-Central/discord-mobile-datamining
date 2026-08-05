@@ -26,7 +26,7 @@ function WidgetRenderer(isFirstWidget) {
   let userId;
   let widget;
   ({ userId, widget, cardStyle } = isFirstWidget);
-  if (widget instanceof toSubmission /* toSubmission */.ApplicationWidget) {
+  if (widget instanceof toSubmission.ApplicationWidget) {
     let obj = { userId: null, widget: null, cardStyle: null, isFirstWidget: null };
     obj[0] = userId;
     obj[1] = widget;

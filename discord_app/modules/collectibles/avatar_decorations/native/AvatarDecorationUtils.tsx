@@ -8,7 +8,7 @@ let result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/
 
 export const getDecorationSizeForAvatarSize = function getDecorationSizeForAvatarSize(NORMAL) {
   if (typeof NORMAL !== "number") {
-    let result = Button /* Button */.AVATAR_SIZE_MAP[NORMAL] * closure_3;
+    let result = Button.AVATAR_SIZE_MAP[NORMAL] * closure_3;
   } else {
     result = NORMAL * closure_3;
   }
@@ -51,5 +51,5 @@ export const openAvatarDecorationActionSheet = function openAvatarDecorationActi
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
   const obj = ACTION_SHEET_HEIGHT_HALF;
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(8070, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(8070, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 };

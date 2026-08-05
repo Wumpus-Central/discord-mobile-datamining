@@ -7,7 +7,7 @@ import { clientLaunchId } from "clientLaunchId.tsx";
 import { encodeProperties } from "encodeProperties.tsx";
 
 function getOS() {
-  const _default = enforcing /* enforcing */.default;
+  const _default = enforcing.default;
   let isMetaQuestResult;
   if (_default != null) {
     isMetaQuestResult = _default.isMetaQuest();
@@ -21,8 +21,8 @@ function getOS() {
 function getDevice() {
   const tmp3 = require("../../../../_runtime/00017_get_ActivityIndicator.js") /* get ActivityIndicator */ /* get ActivityIndicator */;
   if ("android" === tmp3.Platform.OS) {
-    let device = enforcing /* enforcing */.default.getConstants().device;
-    const _default = enforcing /* enforcing */.default;
+    let device = enforcing.default.getConstants().device;
+    const _default = enforcing.default;
   } else {
     device = tmp3.NativeModules.DCDDeviceManager.device;
   }
@@ -52,7 +52,7 @@ function getDeviceProperties() {
   })();
   obj.device = getDevice();
   obj.system_locale = getSystemLocale();
-  obj.has_client_mods = usesClientMods /* usesClientMods */.usesClientMods();
+  obj.has_client_mods = usesClientMods.usesClientMods();
   try {
     const tmp2Result = tmp2(17);
     if ("android" === tmp2Result.Platform.OS) {
@@ -207,7 +207,7 @@ function extendSuperProperties(arg0) {
   const obj = {};
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);
-  let closure_4 = encodeProperties /* encodeProperties */.encodeProperties(obj);
+  let closure_4 = encodeProperties.encodeProperties(obj);
 }
 let result = extendSuperProperties((function getContextualSuperProperties() {
   const obj = { client_build_number: parseInt("6151", 10) };
@@ -225,8 +225,8 @@ let result = extendSuperProperties((function getContextualSuperProperties() {
     obj.native_build_number = buildNumber;
   }
   obj.client_event_source = null;
-  obj.has_client_mods = usesClientMods /* usesClientMods */.usesClientMods();
-  obj.client_launch_id = clientLaunchId /* clientLaunchId */.clientLaunchId;
+  obj.has_client_mods = usesClientMods.usesClientMods();
+  obj.client_launch_id = clientLaunchId.clientLaunchId;
   return obj;
 })());
 let result1 = require("clientLaunchId").fileFinishedImporting("../discord_common/js/packages/analytics-utils/getSuperProperties.tsx");

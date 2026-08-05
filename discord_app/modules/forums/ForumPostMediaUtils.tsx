@@ -19,7 +19,7 @@ function isMediaAttachment(filename) {
   let flag = false;
   if (null != filename) {
     ({ height, width } = filename);
-    let tmp3 = urlMatchesFileExtension /* urlMatchesFileExtension */.isImageFile(filename.filename) && null != height;
+    let tmp3 = urlMatchesFileExtension.isImageFile(filename.filename) && null != height;
     if (tmp3) {
       tmp3 = height > 0;
     }
@@ -30,15 +30,15 @@ function isMediaAttachment(filename) {
       tmp3 = width > 0;
     }
     flag = tmp3;
-    const obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
+    const obj = urlMatchesFileExtension;
   }
   if (!flag) {
     let tmp4 = null != filename;
     if (tmp4) {
       let isVideoFileResult = null != filename;
       if (isVideoFileResult) {
-        isVideoFileResult = urlMatchesFileExtension /* urlMatchesFileExtension */.isVideoFile(filename.filename);
-        const obj2 = urlMatchesFileExtension /* urlMatchesFileExtension */;
+        isVideoFileResult = urlMatchesFileExtension.isVideoFile(filename.filename);
+        const obj2 = urlMatchesFileExtension;
       }
       if (isVideoFileResult) {
         isVideoFileResult = null != filename.proxy_url;
@@ -52,7 +52,7 @@ function isMediaAttachment(filename) {
 function getForumPostMedia(attachments, InlineAttachmentMedia) {
   let setting = InlineAttachmentMedia;
   if (InlineAttachmentMedia === undefined) {
-    InlineAttachmentMedia = explicitContentFromProto /* explicitContentFromProto */.InlineAttachmentMedia;
+    InlineAttachmentMedia = explicitContentFromProto.InlineAttachmentMedia;
     setting = InlineAttachmentMedia.getSetting();
   }
   if (setting) {
@@ -136,7 +136,7 @@ function getForumPostMedia(attachments, InlineAttachmentMedia) {
           }
           return null;
         });
-        let found1 = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+        let found1 = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
       }
       return found1;
     }
@@ -226,9 +226,9 @@ function useForumPostEmbeds(embeds, flag) {
   }
 }
 function useForumPostMediaProperties(firstResult, flag) {
-  const InlineAttachmentMedia = explicitContentFromProto /* explicitContentFromProto */.InlineAttachmentMedia;
+  const InlineAttachmentMedia = explicitContentFromProto.InlineAttachmentMedia;
   const items = [...getForumPostMedia(firstResult, InlineAttachmentMedia.useSetting()), ...useForumPostEmbeds(firstResult, flag)];
-  const InlineEmbedMedia = explicitContentFromProto /* explicitContentFromProto */.InlineEmbedMedia;
+  const InlineEmbedMedia = explicitContentFromProto.InlineEmbedMedia;
   if (null == firstResult) {
     let items1 = [];
   } else {
@@ -439,7 +439,7 @@ export const isValidImageAttachment = function isValidImageAttachment(filename) 
     return false;
   } else {
     ({ height, width } = filename);
-    let tmp3 = urlMatchesFileExtension /* urlMatchesFileExtension */.isImageFile(filename.filename) && null != height;
+    let tmp3 = urlMatchesFileExtension.isImageFile(filename.filename) && null != height;
     if (tmp3) {
       tmp3 = height > 0;
     }
@@ -457,8 +457,8 @@ export const isValidVideoAttachment = function isValidVideoAttachment(filename) 
   if (tmp) {
     let isVideoFileResult = null != filename;
     if (isVideoFileResult) {
-      isVideoFileResult = urlMatchesFileExtension /* urlMatchesFileExtension */.isVideoFile(filename.filename);
-      const obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
+      isVideoFileResult = urlMatchesFileExtension.isVideoFile(filename.filename);
+      const obj = urlMatchesFileExtension;
     }
     if (isVideoFileResult) {
       isVideoFileResult = null != filename.proxy_url;
@@ -471,7 +471,7 @@ export { isMediaAttachment };
 export const ForumPostMediaTypes = obj;
 export { getForumPostMedia };
 export const useForumPostComponentsMedia = function useForumPostComponentsMedia(components) {
-  const InlineEmbedMedia = explicitContentFromProto /* explicitContentFromProto */.InlineEmbedMedia;
+  const InlineEmbedMedia = explicitContentFromProto.InlineEmbedMedia;
   if (null == components) {
     return [];
   } else {
@@ -689,9 +689,9 @@ export const useForumPostMediaThumbnail = function useForumPostMediaThumbnail(fi
 };
 export { useForumPostMediaProperties };
 export const useFindFirstMediaProperties = function useFindFirstMediaProperties(firstMessage, hasSpoilerEmbeds) {
-  const InlineAttachmentMedia = explicitContentFromProto /* explicitContentFromProto */.InlineAttachmentMedia;
+  const InlineAttachmentMedia = explicitContentFromProto.InlineAttachmentMedia;
   const tmp3 = getForumPostMedia(firstMessage, InlineAttachmentMedia.useSetting());
-  const InlineEmbedMedia = explicitContentFromProto /* explicitContentFromProto */.InlineEmbedMedia;
+  const InlineEmbedMedia = explicitContentFromProto.InlineEmbedMedia;
   if (null == firstMessage) {
     let items = [];
   } else {
@@ -889,9 +889,9 @@ export const useFindFirstMediaProperties = function useFindFirstMediaProperties(
   return first;
 };
 export const useFirstMediaIsEmbed = function useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds) {
-  const InlineAttachmentMedia = explicitContentFromProto /* explicitContentFromProto */.InlineAttachmentMedia;
+  const InlineAttachmentMedia = explicitContentFromProto.InlineAttachmentMedia;
   const tmp3 = getForumPostMedia(firstMessage, InlineAttachmentMedia.useSetting());
-  const InlineEmbedMedia = explicitContentFromProto /* explicitContentFromProto */.InlineEmbedMedia;
+  const InlineEmbedMedia = explicitContentFromProto.InlineEmbedMedia;
   if (null == firstMessage) {
     let items = [];
   } else {

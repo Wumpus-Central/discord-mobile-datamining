@@ -15,8 +15,8 @@ const require = arg1;
 const result = createCacheKey.experimental_createToken((theme) => {
   let str = "rgba(201,210,240,0.6)";
   if (obj.isThemeDark(theme.theme)) {
-    str = hexToRgba /* hexToRgba */.hexWithOpacity(Themes.unsafe_rawColors.WHITE, 0.1);
-    const tmpResult = hexToRgba /* hexToRgba */;
+    str = hexToRgba.hexWithOpacity(Themes.unsafe_rawColors.WHITE, 0.1);
+    const tmpResult = hexToRgba;
   }
   return str;
 });
@@ -31,17 +31,17 @@ export default function createCommonMessage(reactions) {
   const tmp = createCacheKey(theme);
   const obj = { id: message.id, channelId: message.channel_id, type: message.type, mentioned: message.mentioned, timestamp: null, timestampColor: null, dark: null, highlightColor: null, reactions: null, swipeToReplyIconUrl: null, swipeToEditIconUrl: null, accessibilityActions: null };
   channel = channel.getChannel(message.channel_id);
-  obj[4] = resetCache /* resetCache */.calendarFormat(message.timestamp, true);
+  obj[4] = resetCache.calendarFormat(message.timestamp, true);
   obj[5] = tmp.timestampColor;
-  const obj2 = resetCache /* resetCache */;
-  obj[6] = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme);
+  const obj2 = resetCache;
+  obj[6] = AccessibilityAnnouncer.isThemeDark(theme);
   obj[7] = tmp.highlightColor;
   obj[8] = reactions.reactions;
-  const obj3 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
-  obj[9] = frozen /* frozen */.getAssetUriForEmbed(registerAsset);
-  const obj4 = frozen /* frozen */;
-  obj[10] = frozen /* frozen */.getAssetUriForEmbed(registerAsset);
-  const obj5 = frozen /* frozen */;
-  obj[11] = MessageAccessibilityAction /* MessageAccessibilityAction */.createMessageAccessibilityActions(message, channel);
+  const obj3 = AccessibilityAnnouncer;
+  obj[9] = frozen.getAssetUriForEmbed(registerAsset);
+  const obj4 = frozen;
+  obj[10] = frozen.getAssetUriForEmbed(registerAsset);
+  const obj5 = frozen;
+  obj[11] = MessageAccessibilityAction.createMessageAccessibilityActions(message, channel);
   return obj;
 };

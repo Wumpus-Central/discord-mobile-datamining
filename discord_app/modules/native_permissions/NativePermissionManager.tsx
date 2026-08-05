@@ -10,7 +10,7 @@ class NativePermissionManager extends tmp2 {
 }
 const prototype = NativePermissionManager.prototype;
 prototype["isEnabled"] = function isEnabled() {
-  let isDesktopResult = set /* set */.isDesktop();
+  let isDesktopResult = set.isDesktop();
   if (isDesktopResult) {
     isDesktopResult = tmp(500).isMac();
     const tmpResult = tmp(500);
@@ -35,8 +35,8 @@ prototype["_terminate"] = function _terminate() {
 };
 prototype["handleAudioSetMode"] = function handleAudioSetMode(mode) {
   if (mode.mode === InputModes.PUSH_TO_TALK) {
-    const permission = NativePermissionsRequestOptions /* NativePermissionsRequestOptions */.default.requestPermission(NativePermissionTypes.INPUT_MONITORING);
-    const _default = NativePermissionsRequestOptions /* NativePermissionsRequestOptions */.default;
+    const permission = NativePermissionsRequestOptions.default.requestPermission(NativePermissionTypes.INPUT_MONITORING);
+    const _default = NativePermissionsRequestOptions.default;
   }
 };
 const nativePermissionManager = new NativePermissionManager();

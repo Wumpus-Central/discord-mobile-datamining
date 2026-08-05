@@ -356,7 +356,7 @@ let result = require("noop").fileFinishedImporting("design/components/Coachmark/
 
 export { Coachmark };
 export const CoachmarkContainer = function CoachmarkContainer(experimental_withBlurBackground) {
-  let obj = ManaContext /* ManaContext */;
+  let obj = ManaContext;
   let str = "dark";
   if (!experimental_withBlurBackground.experimental_withBlurBackground) {
     str = obj.useThemeContext().theme;
@@ -365,5 +365,5 @@ export const CoachmarkContainer = function CoachmarkContainer(experimental_withB
   obj = {};
   const merged = Object.assign(experimental_withBlurBackground);
   obj[1] = callback2(Coachmark, obj);
-  return callback2(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+  return callback2(ManaContext.ThemeContextProvider, obj);
 };

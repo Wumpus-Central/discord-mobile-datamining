@@ -11,7 +11,7 @@ let c4;
 let c5;
 const require = arg1;
 function handleUserSettingsProtoStoreChange() {
-  const LastReceivedChangelogId = explicitContentFromProto /* explicitContentFromProto */.LastReceivedChangelogId;
+  const LastReceivedChangelogId = explicitContentFromProto.LastReceivedChangelogId;
   const setting = LastReceivedChangelogId.getSetting();
 }
 ({ AssetType: c4, ChangelogLoadState: c5 } = CHANGELOG_MODAL_KEY);
@@ -33,7 +33,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, () => true);
   const items1 = [handleConnectionClosedOrResumed];
   this.syncWith(items1, handleUserSettingsProtoStoreChange);
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const value = Storage.get(lastChangeLogDate);
   if (null != value) {
     try {
@@ -153,7 +153,7 @@ const changelogStore = new ChangelogStore(require("dispatcher"), {
   CHANGE_LOG_MARK_SEEN: function handleDismiss(changelogDate) {
     changelogDate = changelogDate.changelogDate;
     const date = new Date(changelogDate);
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const result = Storage.set(lastChangeLogDate, changelogDate);
   }
 });

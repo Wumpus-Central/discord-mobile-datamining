@@ -30,8 +30,8 @@ export const getSearchQueryUserIds = function getSearchQueryUserIds(items) {
   obj = store2;
 };
 export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  if (intl.string(getSystemLocale /* getSystemLocale */.t.nrpA5E) === text) {
+  const intl = getSystemLocale.intl;
+  if (intl.string(getSystemLocale.t.nrpA5E) === text) {
     return ForwardingIcon;
   } else {
     const intl3 = tmp(1236).intl;
@@ -76,8 +76,8 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
   }
 };
 export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeIcon(text) {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  if (intl.string(getSystemLocale /* getSystemLocale */.t.tPZo4p) === text) {
+  const intl = getSystemLocale.intl;
+  if (intl.string(getSystemLocale.t.tPZo4p) === text) {
     return tmp(11136).UserIcon;
   } else {
     const intl3 = tmp(1236).intl;
@@ -92,7 +92,7 @@ export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeI
   }
 };
 export const toSearchListUserItem = function toSearchListUserItem(items, user, callback2) {
-  let obj = SearchTokenTypes /* SearchTokenTypes */;
+  let obj = SearchTokenTypes;
   const guildIdFromSearchContext = obj.getGuildIdFromSearchContext(items);
   if (null == user) {
     return null;

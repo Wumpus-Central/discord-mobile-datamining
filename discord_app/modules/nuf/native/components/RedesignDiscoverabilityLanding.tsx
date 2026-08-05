@@ -39,28 +39,28 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
   obj = { flexGrow: 2, paddingTop: null, paddingBottom: null, paddingHorizontal: null };
-  obj[1] = NAV_BAR_HEIGHT /* NAV_BAR_HEIGHT */.NAV_BAR_HEIGHT + 32;
+  obj[1] = NAV_BAR_HEIGHT.NAV_BAR_HEIGHT + 32;
   obj[2] = useSafeAreaInsets().bottom + 16;
   obj[3] = Themes.space.PX_16;
   obj[2] = obj;
   obj = { style: tmp.topContainer };
   const items = [callback(closure_3, obj), , , , , , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[4] = intl.string(getSystemLocale /* getSystemLocale */.t.n8nw6j);
-  items[1] = callback(Text /* Text */.Text, obj1);
+  const intl = getSystemLocale.intl;
+  obj1[4] = intl.string(getSystemLocale.t.n8nw6j);
+  items[1] = callback(Text.Text, obj1);
   const obj2 = { variant: "text-sm/medium", color: "text-default", style: tmp.subtitle, children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.KMW0kP);
-  items[2] = callback(Text /* Text */.Text, obj2);
+  const intl2 = getSystemLocale.intl;
+  obj2[3] = intl2.string(getSystemLocale.t.KMW0kP);
+  items[2] = callback(Text.Text, obj2);
   const obj3 = { resizeMode: "contain", style: tmp.image, source: null };
   obj3[2] = registerAsset;
   items[3] = callback(preload, obj3);
   const obj4 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  const items1 = [intl3.string(getSystemLocale /* getSystemLocale */.t.ci12MJ), " ", ];
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  items1[2] = intl4.format(getSystemLocale /* getSystemLocale */.t.VcSQ4n, {
+  const intl3 = getSystemLocale.intl;
+  const items1 = [intl3.string(getSystemLocale.t.ci12MJ), " ", ];
+  const intl4 = getSystemLocale.intl;
+  items1[2] = intl4.format(getSystemLocale.t.VcSQ4n, {
     learnMoreHook(arg0, arg1) {
       const obj = { onPress: null, variant: "text-sm/medium", color: "text-link", children: null };
       obj[0] = callback(11947).handleOpenLearnMoreLink;
@@ -69,13 +69,13 @@ export default function RedesignDiscoverabilityLanding(onNext) {
     }
   });
   obj4[3] = items1;
-  items[4] = callback2(Text /* Text */.Text, obj4);
+  items[4] = callback2(Text.Text, obj4);
   items[5] = callback(closure_3, { style: tmp.growContainer });
   const obj7 = { variant: "primary", size: "lg", text: null, onPress: null };
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
-  obj7[2] = intl5.string(getSystemLocale /* getSystemLocale */.t.gHPk3I);
+  const intl5 = getSystemLocale.intl;
+  obj7[2] = intl5.string(getSystemLocale.t.gHPk3I);
   obj7[3] = onNext.onNext;
-  items[6] = callback(Button /* Button */.Button, obj7);
+  items[6] = callback(Button.Button, obj7);
   obj[3] = items;
   return callback2(closure_4, obj);
 };

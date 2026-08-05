@@ -19,7 +19,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function DemoModal() {
-  let obj = NavigationStack /* NavigationStack */;
+  let obj = NavigationStack;
   const navigatorScreens = obj.useNavigatorScreens(() => {
     let obj = {};
     obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
@@ -134,10 +134,10 @@ function DemoModal() {
     return obj;
   }, []);
   obj = { screens: navigatorScreens, initialRouteName: constants.START };
-  return callback2(Modal /* Modal */.Modal, obj);
+  return callback2(Modal.Modal, obj);
 }
 function DemoStepModal() {
-  let obj = NavigationStack /* NavigationStack */;
+  let obj = NavigationStack;
   const navigatorScreens = obj.useNavigatorScreens(() => {
     let obj = {};
     obj = { headerLeft: null, headerRight: null, headerTitle: null, render: null };
@@ -257,7 +257,7 @@ function DemoStepModal() {
     return items;
   }, []);
   obj = { screens: navigatorScreens, steps: memo, initialRouteName: constants.START };
-  return callback2(StepModal /* StepModal */.StepModal, obj);
+  return callback2(StepModal.StepModal, obj);
 }
 function DemoScreen(arg0) {
   let action;
@@ -283,9 +283,9 @@ function DemoScreen(arg0) {
     tmp5 = callback2(closure_5, obj);
   }
   obj = { children: null };
-  const items = [tmp5, callback2(Text /* Text */.Text, { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: title }), children];
+  const items = [tmp5, callback2(Text.Text, { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: title }), children];
   obj[0] = items;
-  children = [closure_8(ModalContent /* ModalContent */.ModalContent, obj), ];
+  children = [closure_8(ModalContent.ModalContent, obj), ];
   if (footer == null) {
     let tmp8Result = null != disclaimer;
     if (tmp8Result) {
@@ -315,7 +315,7 @@ function DemoScreen(arg0) {
     footer = tmp2(tmp3(11246).ModalFooter, obj5);
   }
   children[1] = footer;
-  return closure_8(ModalScreen /* ModalScreen */.ModalScreen, { children });
+  return closure_8(ModalScreen.ModalScreen, { children });
 }
 function SwitchesScreen(onAction) {
   let arr2;
@@ -381,7 +381,7 @@ export default function UserSettingsDesignSystemModal() {
   let obj = { children: null };
   obj = { style: createCacheKey().container, children: null };
   obj = { onPress: openDemoModal, text: "Show Modal" };
-  const items = [callback2(Button /* Button */.Button, obj), callback2(Button /* Button */.Button, { onPress: openDemoStepModal, text: "Show Stepped Modal" })];
+  const items = [callback2(Button.Button, obj), callback2(Button.Button, { onPress: openDemoStepModal, text: "Show Stepped Modal" })];
   obj[1] = items;
   obj[0] = callback3(closure_5, obj);
   return callback2(closure_6, obj);

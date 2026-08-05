@@ -360,7 +360,7 @@ prototype["merge"] = function merge(topic) {
 prototype["computeLurkerPermissionsAllowList"] = function computeLurkerPermissionsAllowList() {
   if (this.isGuildStageVoice()) {
     if (_public.isPublic(this.id)) {
-      return Permissions /* Permissions */.LURKER_STAGE_CHANNEL_PERMISSIONS_ALLOWLIST;
+      return Permissions.LURKER_STAGE_CHANNEL_PERMISSIONS_ALLOWLIST;
     }
   }
 };
@@ -541,11 +541,11 @@ prototype["getApplicationId"] = function getApplicationId() {
 };
 prototype["getDefaultSortOrder"] = function getDefaultSortOrder() {
   if (this.isGameInvitesChannel()) {
-    let LATEST_ACTIVITY = set /* set */.ThreadSortOrder.CREATION_DATE;
+    let LATEST_ACTIVITY = set.ThreadSortOrder.CREATION_DATE;
   } else {
     LATEST_ACTIVITY = this.defaultSortOrder;
     if (LATEST_ACTIVITY == null) {
-      LATEST_ACTIVITY = set /* set */.ThreadSortOrder.LATEST_ACTIVITY;
+      LATEST_ACTIVITY = set.ThreadSortOrder.LATEST_ACTIVITY;
     }
   }
   return LATEST_ACTIVITY;
@@ -555,20 +555,20 @@ prototype["getDefaultLayout"] = function getDefaultLayout() {
   if (!this.isMediaChannel()) {
     if (!self.isGameInvitesChannel()) {
       if (null != self.defaultForumLayout) {
-        if (self.defaultForumLayout !== set /* set */.ForumLayout.DEFAULT) {
+        if (self.defaultForumLayout !== set.ForumLayout.DEFAULT) {
           let GRID = self.defaultForumLayout;
         }
       }
-      GRID = set /* set */.ForumLayout.LIST;
+      GRID = set.ForumLayout.LIST;
     }
     return GRID;
   }
-  GRID = set /* set */.ForumLayout.GRID;
+  GRID = set.ForumLayout.GRID;
 };
 prototype["getDefaultTagSetting"] = function getDefaultTagSetting() {
   let MATCH_SOME = this.defaultTagSetting;
   if (MATCH_SOME == null) {
-    MATCH_SOME = set /* set */.ThreadSearchTagSetting.MATCH_SOME;
+    MATCH_SOME = set.ThreadSearchTagSetting.MATCH_SOME;
   }
   return MATCH_SOME;
 };
@@ -598,7 +598,7 @@ Object.defineProperty(prototype, "accessPermissions", {
   set: undefined
 });
 prototype["hasFlag"] = function hasFlag(arg0) {
-  return hasFlag /* hasFlag */.hasFlag(this.flags, arg0);
+  return hasFlag.hasFlag(this.flags, arg0);
 };
 Object.defineProperty(prototype, "isHDStreamSplashed", {
   get: function isHDStreamSplashed() {
@@ -1134,7 +1134,7 @@ PrivateChannelRecord["fromServer"] = function fromServer(application_id) {
     DM = ChannelTypes.DM;
   }
   reduced[18] = DM;
-  return exact /* exact */.dangerouslyCast(reduced, PrivateChannelRecord);
+  return exact.dangerouslyCast(reduced, PrivateChannelRecord);
 };
 prototype2["isSystemDM"] = function isSystemDM() {
   const first = this.rawRecipients[0];
@@ -1255,7 +1255,7 @@ prototype3["fromServer"] = function fromServer(applied_tags) {
   }
   obj[20] = PUBLIC_THREAD;
   ({ user_limit: obj[21], video_quality_mode: obj[22], last_non_message_activity_timestamp: obj[23] } = applied_tags);
-  return exact /* exact */.dangerouslyCast(obj, prototype3);
+  return exact.dangerouslyCast(obj, prototype3);
 };
 let closure_29 = { [ChannelTypes.DM]: PrivateChannelRecord.fromServer, [ChannelTypes.GROUP_DM]: PrivateChannelRecord.fromServer, [ChannelTypes.GUILD_TEXT]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_VOICE]: GuildVocalChannelRecord.fromServer, [ChannelTypes.GUILD_STAGE_VOICE]: GuildVocalChannelRecord.fromServer, [ChannelTypes.GUILD_CATEGORY]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_ANNOUNCEMENT]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_STORE]: GuildTextualChannelRecord.fromServer, [ChannelTypes.ANNOUNCEMENT_THREAD]: prototype3.fromServer, [ChannelTypes.PUBLIC_THREAD]: prototype3.fromServer, [ChannelTypes.PRIVATE_THREAD]: prototype3.fromServer, [ChannelTypes.MEDIA_THREAD]: prototype3.fromServer, [ChannelTypes.GUILD_DIRECTORY]: GuildTextualChannelRecord.fromServer, [ChannelTypes.GUILD_FORUM]: ForumChannelRecord.fromServer, [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord.fromServer };
 let closure_30 = { [ChannelTypes.DM]: DMChannelRecord, [ChannelTypes.GROUP_DM]: GroupDMChannelRecord, [ChannelTypes.GUILD_TEXT]: GuildTextChannelRecord, [ChannelTypes.GUILD_VOICE]: GuildVoiceChannelRecord, [ChannelTypes.GUILD_STAGE_VOICE]: GuildStageVoiceChannelRecord, [ChannelTypes.GUILD_CATEGORY]: GuildCategoryChannelRecord, [ChannelTypes.GUILD_ANNOUNCEMENT]: GuildAnnouncementChannelRecord, [ChannelTypes.GUILD_STORE]: GuildStoreChannelRecord, [ChannelTypes.ANNOUNCEMENT_THREAD]: prototype3, [ChannelTypes.PUBLIC_THREAD]: prototype3, [ChannelTypes.PRIVATE_THREAD]: prototype3, [ChannelTypes.MEDIA_THREAD]: prototype3, [ChannelTypes.GUILD_DIRECTORY]: GuildDirectoryChannelRecord, [ChannelTypes.GUILD_FORUM]: ForumChannelRecord, [ChannelTypes.GUILD_MEDIA]: ForumChannelRecord };
@@ -1396,6 +1396,6 @@ export const castChannelRecord = function castChannelRecord(type) {
   if (tmp3 == null) {
     tmp3 = UnknownChannelRecord;
   }
-  return exact /* exact */.dangerouslyCast(type, tmp3);
+  return exact.dangerouslyCast(type, tmp3);
 };
 export { createChannelRecord };

@@ -144,7 +144,7 @@ function LinkManageButtons(arg0) {
   ({ canEdit, isPrivate, channel: require } = arg0);
   ({ canManageRoles, theme } = arg0);
   const tmp = createCacheKey();
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.TEXT_LINK, theme);
   obj = { style: tmp.ctaContainer, children: null };
   if (isPrivate) {
@@ -204,10 +204,10 @@ function ThreadOwner(arg0) {
   let guildId;
   let require;
   ({ userId: require, guildId } = arg0);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [closure_24];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_24.getUser(closure_0));
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items1 = [trackCommunicationDisabled];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
     let member = null;
@@ -216,7 +216,7 @@ function ThreadOwner(arg0) {
     }
     return member;
   });
-  let obj2 = initialize /* initialize */;
+  let obj2 = initialize;
   const items2 = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => roleStyle.roleStyle);
   let str;
@@ -941,11 +941,11 @@ function ChatBeginningRowButton(style) {
   let obj = { style: style.style, children: null };
   ({ title, subtitle, IconComponent, iconVariant, onPress, trailing } = style);
   obj = { onPress, icon: null, label: null, subLabel: null, trailing: null };
-  obj[1] = callback2(RowButtonWrapper /* RowButtonWrapper */.RowButton.Icon, { IconComponent, variant: iconVariant });
+  obj[1] = callback2(RowButtonWrapper.RowButton.Icon, { IconComponent, variant: iconVariant });
   obj[2] = title;
   obj[3] = subtitle;
   obj[4] = trailing;
-  obj[1] = callback2(RowButtonWrapper /* RowButtonWrapper */.RowButton, obj);
+  obj[1] = callback2(RowButtonWrapper.RowButton, obj);
   return callback2(closure_7, obj);
 }
 function ChatBeginningRowGroupDM(channel) {

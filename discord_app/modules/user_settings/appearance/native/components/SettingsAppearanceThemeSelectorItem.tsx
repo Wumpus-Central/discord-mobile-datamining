@@ -26,7 +26,7 @@ function GradientThemeBackground(arg0) {
   let isThemeLocked;
   let item;
   ({ item, isThemeLocked } = arg0);
-  let obj = isThemeLight /* isThemeLight */;
+  let obj = isThemeLight;
   const isThemeDarkResult = obj.isThemeDark(item.theme);
   const tmp4 = callback2(isThemeDarkResult);
   const items = [tmp4.themeSelectorGradientBackground, ];
@@ -47,7 +47,7 @@ function GradientThemeBackground(arg0) {
     const obj3 = { source: null, style: null };
     obj3[0] = registerAsset;
     obj3[1] = tmp4.lock;
-    isThemeLocked = tmp7(Button /* Button */.Icon, obj3);
+    isThemeLocked = tmp7(Button.Icon, obj3);
   }
   items1[1] = isThemeLocked;
   obj[1] = items1;
@@ -55,7 +55,7 @@ function GradientThemeBackground(arg0) {
 }
 function DefaultThemeBackground(item) {
   item = item.item;
-  defaultAreStatesEqual /* defaultAreStatesEqual */;
+  defaultAreStatesEqual;
   let obj = handleThemeChange;
   [][0] = handleThemeChange;
   if ("system" === item.theme) {
@@ -69,7 +69,7 @@ function DefaultThemeBackground(item) {
   const token1 = tmpResult.useToken(Themes.colors.BORDER_STRONG, theme);
   obj = { style: null, children: null };
   obj = { width: "100%", height: "100%", backgroundColor: token, borderColor: token1, borderWidth: 1, borderRadius: null };
-  const token2 = map /* map */.useToken(Themes.colors.ICON_STRONG, theme);
+  const token2 = map.useToken(Themes.colors.ICON_STRONG, theme);
   obj[5] = Themes.radii.sm;
   obj[0] = obj;
   let tmp9Result = null;
@@ -88,7 +88,7 @@ function CustomThemeBackground(arg0) {
   let isThemeLocked;
   let item;
   ({ item, isThemeLocked } = arg0);
-  let obj = isThemeLight /* isThemeLight */;
+  let obj = isThemeLight;
   const isThemeDarkResult = obj.isThemeDark(item.theme);
   const tmp4 = callback2(isThemeDarkResult);
   const items = [tmp4.themeSelectorGradientBackground, ];
@@ -104,7 +104,7 @@ function CustomThemeBackground(arg0) {
   obj1[0] = obj2;
   obj1[2] = isThemeDarkResult ? closure_10 : closure_11;
   obj1[3] = item;
-  const items1 = [closure_6(getMixedGradientColor /* getMixedGradientColor */.CustomThemedGradient, obj1), ];
+  const items1 = [closure_6(getMixedGradientColor.CustomThemedGradient, obj1), ];
   if (isThemeLocked) {
     const obj3 = { source: null, style: null };
     obj3[0] = registerAsset;
@@ -153,9 +153,9 @@ export default function ThemeSelectorItem(onPress) {
   ({ themePreset, isPreview, isSelected, isNew } = onPress);
   const tmp = createCacheKey();
   if (isPreview) {
-    isPreview = themePreset.type !== ClientThemeType /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME;
+    isPreview = themePreset.type !== ClientThemeType.ClientThemeType.STANDARD_BACKGROUND_THEME;
   }
-  if (themePreset.type === ClientThemeType /* ClientThemeType */.ClientThemeType.STANDARD_BACKGROUND_THEME) {
+  if (themePreset.type === ClientThemeType.ClientThemeType.STANDARD_BACKGROUND_THEME) {
     let obj = { item: null };
     obj[0] = themePreset;
     let tmp8 = callback(DefaultThemeBackground, obj);
@@ -173,7 +173,7 @@ export default function ThemeSelectorItem(onPress) {
     tmp8 = callback(GradientThemeBackground, obj);
     tmp9 = callback;
   }
-  const radioA11yNative = useCheckboxA11yNative /* useCheckboxA11yNative */.useRadioA11yNative({ selected: isSelected, disabled: isPreview });
+  const radioA11yNative = useCheckboxA11yNative.useRadioA11yNative({ selected: isSelected, disabled: isPreview });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const obj1 = { style: tmp.themeSelectorItemContainer, androidRippleConfig: tmp.rippleColor, onPress: onPress.onPress, accessibilityRole, accessibilityLabel: null, accessibilityState: null, accessibilityHint: null, children: null };
   obj1[4] = themePreset.getName();
@@ -197,5 +197,5 @@ export default function ThemeSelectorItem(onPress) {
   items[1] = isNew;
   obj2[1] = items;
   obj1[7] = closure_7(View, obj2);
-  return tmp9(PressableBase /* PressableBase */.PressableOpacity, obj1);
+  return tmp9(PressableBase.PressableOpacity, obj1);
 };

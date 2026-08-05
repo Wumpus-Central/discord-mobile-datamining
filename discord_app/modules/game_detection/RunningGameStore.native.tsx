@@ -129,7 +129,7 @@ export const getRawOverlayGameStatus = function getRawOverlayGameStatus() {
   if (arg1 === undefined) {
     const items = [gameFromServer, setLibraryApplications, handleLoadMessages];
   }
-  return { source: DevToolsFocusedPidsTrackMode /* DevToolsFocusedPidsTrackMode */.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: DevToolsFocusedPidsTrackMode /* DevToolsFocusedPidsTrackMode */.OverlayMethod.Disabled, reason: "Dummy implementation" };
+  return { source: DevToolsFocusedPidsTrackMode.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: DevToolsFocusedPidsTrackMode.OverlayMethod.Disabled, reason: "Dummy implementation" };
 };
 export function isDetectionEnabled() {
   return false;

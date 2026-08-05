@@ -237,7 +237,7 @@ export default function MediaShareActionSheet(source) {
     ({ action: obj[1], label: obj[2] } = IconComponent);
     return callback2(callback(5648).ActionSheetRow, obj, arg1);
   });
-  obj[0] = jsx(ActionSheetRowIcon /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: null });
-  return jsx(ActionSheet /* ActionSheet */.ActionSheet, { hasIcons: true, children: null });
+  obj[0] = jsx(ActionSheetRowIcon.ActionSheetRow.Group, { hasIcons: true, children: null });
+  return jsx(ActionSheet.ActionSheet, { hasIcons: true, children: null });
 };
 export { useMediaShareActions };

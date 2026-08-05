@@ -20,11 +20,11 @@ function ChatViewStickyHeaderAccountSafetyWarnings(arg0) {
   let channelId;
   let senderId;
   ({ channelId, senderId } = arg0);
-  let obj = useStrangerDangerWarning /* useStrangerDangerWarning */;
+  let obj = useStrangerDangerWarning;
   const strangerDangerWarning = obj.useStrangerDangerWarning(channelId);
-  let obj1 = useInappropriateConversationBannerForChannel /* useInappropriateConversationBannerForChannel */;
+  let obj1 = useInappropriateConversationBannerForChannel;
   const inappropriateConversationBannerForChannel = obj1.useInappropriateConversationBannerForChannel(channelId, LOCATION_CONTEXT_MOBILE);
-  const likelyAtoWarning = useLikelyAtoWarning /* useLikelyAtoWarning */.useLikelyAtoWarning(channelId);
+  const likelyAtoWarning = useLikelyAtoWarning.useLikelyAtoWarning(channelId);
   if (null != likelyAtoWarning) {
     obj = { channelId: null, warningId: null, senderId: null };
     obj[0] = channelId;

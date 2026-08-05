@@ -415,13 +415,13 @@ let closure_27 = importAllResult.memo(() => {
   return closure_21(youBarHorizontalMargin(4146).View, obj);
 });
 const memoResult = importAllResult.memo(function YouBarThemed() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [isSyncedModeThemesEnabled];
   const stateFromStores = obj.useStateFromStores(items, () => gradientPreset.gradientPreset);
   obj = { gradient: stateFromStores, children: null };
   const items1 = [callback(YouBarFloatingShade, {}), callback(closure_27, {}), callback(ConnectionBannerIcon, {})];
   obj[1] = items1;
-  return callback2(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+  return callback2(ManaContext.ThemeContextProvider, obj);
 });
 let result = require("noop").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBar.tsx");
 

@@ -11,7 +11,7 @@ let result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/
 
 export default {
   openDmSettingsUpsellModal(guildId) {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const value = Storage.get(closure_3);
     const timestamp = Date.now();
     if (null != value) {
@@ -20,7 +20,7 @@ export default {
         const tmpResult = tmp(16281);
       }
     }
-    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(16280, dependencyMap.paths), "dm_settings_upsell_modal", { guildId });
+    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(16280, dependencyMap.paths), "dm_settings_upsell_modal", { guildId });
     const Storage2 = tmp(595).Storage;
     const result = Storage2.set(closure_3, timestamp);
   }

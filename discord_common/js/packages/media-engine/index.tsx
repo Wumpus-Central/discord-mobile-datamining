@@ -34,12 +34,12 @@ export const determineMediaEngine = function determineMediaEngine() {
 };
 export const initializeMediaEngine = function initializeMediaEngine(BaseConnectionEvent) {
   if (constants.NATIVE === BaseConnectionEvent) {
-    let _default = destroy /* destroy */.default;
+    let _default = destroy.default;
   } else {
     if (tmp.WEBRTC !== BaseConnectionEvent) {
       const DUMMY = tmp.DUMMY;
     }
-    _default = Video /* Video */.default;
+    _default = Video.default;
   }
   _default = new _default();
   return _default;

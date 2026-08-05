@@ -442,7 +442,7 @@ function trackCrash(event, hint, arg2) {
     const _Date2 = Date;
     result = Date.now();
   }
-  const obj3 = transitionTo /* transitionTo */;
+  const obj3 = transitionTo;
   const track = expandEventProperties.track;
   if (tmp4) {
     extra = event.extra;

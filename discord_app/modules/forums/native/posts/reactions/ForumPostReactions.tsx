@@ -154,7 +154,7 @@ export const MostCommonForumPostReaction = function MostCommonForumPostReaction(
   ({ parentChannel, firstMessage, locationAnalyticsObject } = thread);
   const tmp = callback2();
   ({ disableReactionCreates, disableReactionUpdates } = useReactionPermissions(thread));
-  let obj = useLoadForumUnreadCounts /* useLoadForumUnreadCounts */;
+  let obj = useLoadForumUnreadCounts;
   const first = obj.useSomeForumPostReactions({ parentChannel, message: firstMessage }).reactions[0];
   if (null != first) {
     if (!disableReactionUpdates) {
@@ -164,7 +164,7 @@ export const MostCommonForumPostReaction = function MostCommonForumPostReaction(
         obj[1] = thread;
         obj[2] = first;
         obj[3] = locationAnalyticsObject;
-        let tmp7 = callback(BurstReactionButton /* BurstReactionButton */.ForumPostReactionButton, obj);
+        let tmp7 = callback(BurstReactionButton.ForumPostReactionButton, obj);
       } else {
         tmp7 = null;
       }

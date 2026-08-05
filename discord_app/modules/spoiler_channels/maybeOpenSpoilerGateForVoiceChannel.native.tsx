@@ -12,16 +12,16 @@ export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGate
   channel = channel.getChannel(id);
   let tmp2 = null == channel;
   if (!tmp2) {
-    let obj = isChannelSpoilerGated /* isChannelSpoilerGated */;
+    let obj = isChannelSpoilerGated;
     tmp2 = !obj.shouldShowSpoilerGateForChannelId(id);
   }
   let flag = !tmp2;
   if (!tmp2) {
     obj = { channelId: null };
     obj[0] = channel.id;
-    useAlertStore /* useAlertStore */.openAlert(VoicePanelSpoilerAlert /* VoicePanelSpoilerAlert */.VOICE_PANEL_SPOILER_KEY, jsx(VoicePanelSpoilerAlert, { channelId: null }));
+    useAlertStore.openAlert(VoicePanelSpoilerAlert.VOICE_PANEL_SPOILER_KEY, jsx(VoicePanelSpoilerAlert, { channelId: null }));
     flag = true;
-    const obj2 = useAlertStore /* useAlertStore */;
+    const obj2 = useAlertStore;
   }
   return flag;
 };

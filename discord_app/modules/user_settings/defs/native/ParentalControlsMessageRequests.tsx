@@ -12,19 +12,19 @@ import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["3o2ojh"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["3o2ojh"]);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy["7aYkh1"]);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
-    const defaultGuildsRestricted = useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useDefaultGuildsRestricted();
-    const obj = useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */;
-    const selectedTeenId = useSelectedTeen /* useSelectedTeen */.useSelectedTeenId();
-    const ParentalControlledDefaultMessageRequestRestricted = result /* result */.ParentalControlledDefaultMessageRequestRestricted;
+    const defaultGuildsRestricted = useParentalControlledExplicitContentSettings.useDefaultGuildsRestricted();
+    const obj = useParentalControlledExplicitContentSettings;
+    const selectedTeenId = useSelectedTeen.useSelectedTeenId();
+    const ParentalControlledDefaultMessageRequestRestricted = result.ParentalControlledDefaultMessageRequestRestricted;
     let tmp3 = !defaultGuildsRestricted;
     if (!defaultGuildsRestricted) {
       tmp3 = !ParentalControlledDefaultMessageRequestRestricted.useControlledSetting(selectedTeenId);
@@ -32,13 +32,13 @@ createToggle = {
     return tmp3;
   },
   useIsDisabled() {
-    return useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useDefaultGuildsRestricted();
+    return useParentalControlledExplicitContentSettings.useDefaultGuildsRestricted();
   },
   onValueChange: function onAllowMessageRequestsFromServerMembersValueChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
       if (!arg0) {
-        let obj = shouldAgeVerifyForDMDefaultOff /* shouldAgeVerifyForDMDefaultOff */;
+        let obj = shouldAgeVerifyForDMDefaultOff;
         if (obj.shouldAgeVerifyForDMDefaultOff()) {
           obj = { entryPoint: null };
           obj[0] = tmp2(7722).AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS;
@@ -47,7 +47,7 @@ createToggle = {
         }
         tmp2 = require;
       }
-      const ParentalControlledDefaultMessageRequestRestricted = result /* result */.ParentalControlledDefaultMessageRequestRestricted;
+      const ParentalControlledDefaultMessageRequestRestricted = result.ParentalControlledDefaultMessageRequestRestricted;
       const result1 = ParentalControlledDefaultMessageRequestRestricted.updateControlledSetting(selectedTeenId, !arg0);
     }
   },

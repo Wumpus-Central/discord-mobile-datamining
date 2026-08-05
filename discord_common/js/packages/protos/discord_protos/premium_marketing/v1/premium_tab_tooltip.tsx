@@ -73,7 +73,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (3 === tmp5) {
         let tmp32 = require;
         let tmp33 = dependencyMap;
-        let ThemeAwareAsset = create /* create */.ThemeAwareAsset;
+        let ThemeAwareAsset = create.ThemeAwareAsset;
         let tmp34 = ThemeAwareAsset;
         let tmp35 = pos;
         let tmp36 = readUnknownField;
@@ -81,7 +81,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (4 === tmp5) {
         let tmp27 = require;
         let tmp28 = dependencyMap;
-        let LocalizedString2 = create /* create */.LocalizedString;
+        let LocalizedString2 = create.LocalizedString;
         let tmp29 = LocalizedString2;
         let tmp30 = pos;
         let tmp31 = readUnknownField;
@@ -89,7 +89,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
       } else if (5 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let LocalizedString = create /* create */.LocalizedString;
+        let LocalizedString = create.LocalizedString;
         let tmp24 = LocalizedString;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -140,19 +140,19 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, wri
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
   }
   if (header.asset) {
-    const ThemeAwareAsset = create /* create */.ThemeAwareAsset;
+    const ThemeAwareAsset = create.ThemeAwareAsset;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.headerLocalized) {
-    const LocalizedString = create /* create */.LocalizedString;
+    const LocalizedString = create.LocalizedString;
     const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
     const joined1 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(4, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.bodyLocalized) {
-    const LocalizedString2 = create /* create */.LocalizedString;
+    const LocalizedString2 = create.LocalizedString;
     const tagResult4 = tag.tag(5, 01307__.WireType.LengthDelimited);
     const joined2 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(5, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

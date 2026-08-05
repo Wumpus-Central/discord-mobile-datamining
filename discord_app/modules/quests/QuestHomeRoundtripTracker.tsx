@@ -23,7 +23,7 @@ prototype["sendMetric"] = function sendMetric(timeout, duration) {
   obj.track(AnalyticEvents.QUEST_HOME_ROUNDTRIP, obj);
   if (Math.random() <= 0.1) {
     obj = { name: null, tags: null };
-    obj[0] = set /* set */.MetricEvents.QUEST_HOME_ROUNDTRIP;
+    obj[0] = set.MetricEvents.QUEST_HOME_ROUNDTRIP;
     const _HermesInternal = HermesInternal;
     const items = ["includes_bounties:" + arg2, ];
     const _HermesInternal2 = HermesInternal;

@@ -8,17 +8,17 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.wtk08S);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.wtk08S);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableVoiceActivityNotifications.useSetting,
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.rngMNx);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.rngMNx);
   },
   onValueChange(voice_activity_notifications) {
-    const EnableVoiceActivityNotifications = explicitContentFromProto /* explicitContentFromProto */.EnableVoiceActivityNotifications;
+    const EnableVoiceActivityNotifications = explicitContentFromProto.EnableVoiceActivityNotifications;
     EnableVoiceActivityNotifications.updateSetting(voice_activity_notifications);
     let obj = expandEventProperties;
     obj = { update_type: constants.ACCOUNT, voice_activity_notifications };
@@ -27,17 +27,17 @@ const toggle = createToggle.createToggle({
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.wtk08S);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.wtk08S);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableVoiceActivityNotifications.useSetting,
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.rngMNx);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.rngMNx);
   },
   onValueChange(voice_activity_notifications) {
-    const EnableVoiceActivityNotifications = explicitContentFromProto /* explicitContentFromProto */.EnableVoiceActivityNotifications;
+    const EnableVoiceActivityNotifications = explicitContentFromProto.EnableVoiceActivityNotifications;
     EnableVoiceActivityNotifications.updateSetting(voice_activity_notifications);
     let obj = expandEventProperties;
     obj = { update_type: constants.ACCOUNT, voice_activity_notifications };

@@ -214,7 +214,7 @@ prototype["setLocale"] = function setLocale(_requestedLocale) {
   }
 };
 prototype["setUpdateRules"] = function setUpdateRules(arg0) {
-  format /* format */.setUpdateRules(arg0);
+  format.setUpdateRules(arg0);
 };
 prototype["getLanguages"] = function getLanguages() {
   return this._languages;

@@ -66,7 +66,7 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
   let tmp = createCacheKey();
   let Text = require;
   let tmp8Result = dependencyMap;
-  let obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  let obj = useAgeVerificationRunner;
   const isVerifiedTeen = obj.useIsVerifiedTeen();
   if (onConfirmPress.noBackground) {
     obj = { style: null, children: null };
@@ -127,7 +127,7 @@ export default function StageChannelAgeVerificationNoticeForEvent(divider) {
   divider = divider.divider;
   ({ noBackground, onConfirmPress, style } = divider);
   const tmp = createCacheKey();
-  let obj = useIsStageSpeakingDisabledForCurrentUser /* useIsStageSpeakingDisabledForCurrentUser */;
+  let obj = useIsStageSpeakingDisabledForCurrentUser;
   if (obj.useShouldShowAgeVerificationForEvent()) {
     const _Array = Array;
     if (Array.isArray(divider)) {

@@ -21042,7 +21042,7 @@ function findChildComponent(type, componentId) {
 }
 function getComponentChildren(type) {
   type = type.type;
-  if (PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.ACTION_ROW === type) {
+  if (PermissionOverwriteType.ComponentType.ACTION_ROW === type) {
     return type.components;
   } else if (tmp(1906).ComponentType.SECTION === type) {
     const items = [];
@@ -21575,7 +21575,7 @@ export const getLayoutComponentErrorText = function getLayoutComponentErrorText(
   }
   let fitPBS = dependencyMap;
   let componentId = null;
-  if (interactionType === PermissionOverwriteType /* PermissionOverwriteType */.InteractionTypes.MESSAGE_COMPONENT) {
+  if (interactionType === PermissionOverwriteType.InteractionTypes.MESSAGE_COMPONENT) {
     let state;
     if (interaction != null) {
       state = interaction.state;
@@ -21624,8 +21624,8 @@ export const getLayoutComponentErrorText = function getLayoutComponentErrorText(
 export const getSelectPlaceholder = function getSelectPlaceholder(placeholder) {
   placeholder = placeholder.placeholder;
   if (placeholder == null) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    placeholder = intl.string(getSystemLocale /* getSystemLocale */.t.Otr6W2);
+    const intl = getSystemLocale.intl;
+    placeholder = intl.string(getSystemLocale.t.Otr6W2);
   }
   return placeholder;
 };
@@ -21659,7 +21659,7 @@ export const getFirstInteractionComponentMedia = function getFirstInteractionCom
     let tmp3 = nextResult;
     let tmp4 = require;
     let tmp5 = dependencyMap;
-    if (nextResult.type === PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.MEDIA_GALLERY) {
+    if (nextResult.type === PermissionOverwriteType.ComponentType.MEDIA_GALLERY) {
       let tmp12 = nextResult;
       let first = tmp3.items[0];
       let tmp14 = first;
@@ -21759,8 +21759,8 @@ export const makeComponentUploadId = function makeComponentUploadId(closure_2) {
     randomUUIDResult = randomUUID();
   }
   if (randomUUIDResult == null) {
-    randomUUIDResult = v1 /* v1 */.v4();
-    const obj2 = v1 /* v1 */;
+    randomUUIDResult = v1.v4();
+    const obj2 = v1;
   }
   obj[2] = randomUUIDResult;
   return JSON.stringify(obj);
@@ -21791,50 +21791,50 @@ export const deserializeComponentUploadId = function deserializeComponentUploadI
 export const getFileUploadComponentSubtitle = function getFileUploadComponentSubtitle(minValues, maxValues, types, formatSizeResult) {
   if (null != types) {
     if (minValues <= 1) {
-      const intl4 = getSystemLocale /* getSystemLocale */.intl;
+      const intl4 = getSystemLocale.intl;
       let obj = { maxValues: null, types: null, maxSize: null };
       obj[0] = maxValues;
       obj[1] = types;
       obj[2] = formatSizeResult;
-      intl4.format(getSystemLocale /* getSystemLocale */.t.QLrHJG, obj);
+      intl4.format(getSystemLocale.t.QLrHJG, obj);
     }
     if (minValues === maxValues) {
-      const intl6 = getSystemLocale /* getSystemLocale */.intl;
+      const intl6 = getSystemLocale.intl;
       obj = { minValues: null, types: null, maxSize: null };
       obj[0] = minValues;
       obj[1] = types;
       obj[2] = formatSizeResult;
-      let formatResult1 = intl6.format(getSystemLocale /* getSystemLocale */.t.Xp4xMV, obj);
+      let formatResult1 = intl6.format(getSystemLocale.t.Xp4xMV, obj);
     } else {
-      const intl5 = getSystemLocale /* getSystemLocale */.intl;
+      const intl5 = getSystemLocale.intl;
       const obj1 = { minValues: null, maxValues: null, types: null, maxSize: null };
       obj1[0] = minValues;
       obj1[1] = maxValues;
       obj1[2] = types;
       obj1[3] = formatSizeResult;
-      formatResult1 = intl5.format(getSystemLocale /* getSystemLocale */.t["05AyNA"], obj1);
+      formatResult1 = intl5.format(getSystemLocale.t["05AyNA"], obj1);
     }
   } else if (minValues > 1) {
     if (minValues === maxValues) {
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      const intl3 = getSystemLocale.intl;
       const obj2 = { minValues: null, maxSize: null };
       obj2[0] = minValues;
       obj2[1] = formatSizeResult;
-      let formatResult2 = intl3.format(getSystemLocale /* getSystemLocale */.t.SAr31z, obj2);
+      let formatResult2 = intl3.format(getSystemLocale.t.SAr31z, obj2);
     } else {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      const intl2 = getSystemLocale.intl;
       const obj3 = { minValues: null, maxValues: null, maxSize: null };
       obj3[0] = minValues;
       obj3[1] = maxValues;
       obj3[2] = formatSizeResult;
-      formatResult2 = intl2.format(getSystemLocale /* getSystemLocale */.t["ZG+3Ck"], obj3);
+      formatResult2 = intl2.format(getSystemLocale.t["ZG+3Ck"], obj3);
     }
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { maxValues: null, maxSize: null };
     obj[0] = maxValues;
     obj[1] = formatSizeResult;
-    return intl.format(getSystemLocale /* getSystemLocale */.t.tyxwW1, obj);
+    return intl.format(getSystemLocale.t.tyxwW1, obj);
   }
 };
 export const transformComponents = function transformComponents(arr) {

@@ -44,7 +44,7 @@ SelectivelySyncedUserSettingsStore.displayName = "SelectivelySyncedUserSettingsS
 SelectivelySyncedUserSettingsStore.persistKey = "SelectivelySyncedUserSettingsStore";
 const items = [
   () => {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     let obj = Storage.get("UserSettingsSync");
     if (obj == null) {
       obj = {};

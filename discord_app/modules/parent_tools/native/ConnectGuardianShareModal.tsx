@@ -100,7 +100,7 @@ export default function ConnectGuardianShareModal() {
     return obj;
   }, []);
   let obj = { initialRouteName: "CONNECT_GUARDIAN_SHARE", screens: memo, headerBackTitle: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
-  return callback(Modal /* Modal */.Modal, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
+  return callback(Modal.Modal, obj);
 };

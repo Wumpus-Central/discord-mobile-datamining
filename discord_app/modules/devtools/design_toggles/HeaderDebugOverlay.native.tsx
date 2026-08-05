@@ -49,7 +49,7 @@ export default function useHeaderDebugOverlay(arg0, arg1) {
     obj1[0] = items2;
     const obj2 = { variant: "text-xs/bold", color: "text-overlay-light", children: null };
     obj2[2] = tmp6;
-    obj1[1] = callback(Text /* Text */.Text, obj2);
+    obj1[1] = callback(Text.Text, obj2);
     obj[1] = callback(View, obj1);
     items1[1] = callback(View, obj);
     obj[0] = items1;

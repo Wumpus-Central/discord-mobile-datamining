@@ -18,7 +18,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/
 export default function WidgetPreview(widget) {
   widget = widget.widget;
   const tmp = createCacheKey();
-  let obj = items /* items */;
+  let obj = items;
   let tmp5 = null;
   if (obj.isGameWidget(widget)) {
     tmp5 = null;

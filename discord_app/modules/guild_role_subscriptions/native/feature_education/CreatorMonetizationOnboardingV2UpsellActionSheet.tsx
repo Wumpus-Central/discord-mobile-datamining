@@ -33,13 +33,13 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
   };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t["v+Jm6X"]);
-  const items = [callback(Text /* Text */.Text, obj), , , , ];
+  const intl = getSystemLocale.intl;
+  obj[4] = intl.string(getSystemLocale.t["v+Jm6X"]);
+  const items = [callback(Text.Text, obj), , , , ];
   const obj1 = { style: tmp.description, accessibilityRole: "text", variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.kUUFbG);
-  items[1] = callback(Text /* Text */.Text, obj1);
+  const intl2 = getSystemLocale.intl;
+  obj1[4] = intl2.string(getSystemLocale.t.kUUFbG);
+  items[1] = callback(Text.Text, obj1);
   const obj2 = { style: tmp.image, resizeMode: "contain", source: null };
   obj2[2] = registerAsset;
   items[2] = callback(preload, obj2);
@@ -50,9 +50,9 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
     },
     text: null
   };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj3[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.OgQQbG);
-  items[3] = callback(Button /* Button */.Button, obj3);
+  const intl3 = getSystemLocale.intl;
+  obj3[1] = intl3.string(getSystemLocale.t.OgQQbG);
+  items[3] = callback(Button.Button, obj3);
   const obj4 = { style: tmp.dismissButton, children: null };
   const obj5 = {
     onPress() {
@@ -61,11 +61,11 @@ export default function CreatorMonetizationOnboardingV2UpsellActionSheet(arg0) {
     text: null,
     variant: "secondary"
   };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj5[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.WAI6xu);
-  obj4[1] = callback(Button /* Button */.Button, obj5);
+  const intl4 = getSystemLocale.intl;
+  obj5[1] = intl4.string(getSystemLocale.t.WAI6xu);
+  obj4[1] = callback(Button.Button, obj5);
   items[4] = callback(View, obj4);
   obj[1] = items;
   obj[2] = callback2(View, obj);
-  return callback(Background /* Background */.BottomSheet, obj);
+  return callback(Background.BottomSheet, obj);
 };

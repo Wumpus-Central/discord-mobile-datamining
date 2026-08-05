@@ -20,10 +20,10 @@ export default function CommandListSortActionSheet(sortOrder) {
   obj = { leading: null, title: null };
   obj = { size: "sm", color: null };
   obj[1] = Themes.colors.TEXT_DEFAULT;
-  obj[0] = jsx(ArrowsUpDownIcon /* ArrowsUpDownIcon */.ArrowsUpDownIcon, { size: "sm", color: null });
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.yeYaHf);
-  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { size: "sm", color: null });
+  obj[0] = jsx(ArrowsUpDownIcon.ArrowsUpDownIcon, { size: "sm", color: null });
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.yeYaHf);
+  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { size: "sm", color: null });
   const obj1 = {
     hasIcons: false,
     value: sortOrder.sortOrder,
@@ -34,20 +34,20 @@ export default function CommandListSortActionSheet(sortOrder) {
     children: null
   };
   const obj2 = { label: null, value: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.SzxiqK);
+  const intl2 = getSystemLocale.intl;
+  obj2[0] = intl2.string(getSystemLocale.t.SzxiqK);
   obj2[1] = CommandListSortOrder.POPULAR;
   const items = [obj2, ];
   const obj3 = { label: null, value: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj3[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.m8xsti);
+  const intl3 = getSystemLocale.intl;
+  obj3[0] = intl3.string(getSystemLocale.t.m8xsti);
   obj3[1] = CommandListSortOrder.ALPHABETICAL;
   items[1] = obj3;
   obj1[3] = items.map((label) => {
     const value = label.value;
     return callback3(callback(table[9]).TableRadioRow, { label: label.label, value }, value);
   });
-  obj[2] = jsx(context /* context */.TableRadioGroup, {
+  obj[2] = jsx(context.TableRadioGroup, {
     hasIcons: false,
     value: sortOrder.sortOrder,
     onChange(arg0) {
@@ -56,5 +56,5 @@ export default function CommandListSortActionSheet(sortOrder) {
     },
     children: null
   });
-  return jsx(Background /* Background */.BottomSheet, { size: "sm", color: null });
+  return jsx(Background.BottomSheet, { size: "sm", color: null });
 };

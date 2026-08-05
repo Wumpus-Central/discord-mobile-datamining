@@ -14,7 +14,7 @@ inject.inject({
 
   },
   getVoiceEngine() {
-    return logger /* logger */.default;
+    return logger.default;
   },
   getOpenH264LibraryPath() {
 

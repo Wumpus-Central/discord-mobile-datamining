@@ -20,12 +20,12 @@ const memoResult = require("noop").memo(function GuildRoleSubscriptionsChannelHe
   let obj = { style: callback3().header, children: null };
   obj = { source: null, size: null, disableColor: true };
   obj[0] = registerAsset;
-  obj[1] = Button /* Button */.Icon.Sizes.MEDIUM;
-  const items = [callback(Button /* Button */.Icon, obj), ];
+  obj[1] = Button.Icon.Sizes.MEDIUM;
+  const items = [callback(Button.Icon, obj), ];
   obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["KzCF/6"]);
-  items[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["KzCF/6"]);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 });

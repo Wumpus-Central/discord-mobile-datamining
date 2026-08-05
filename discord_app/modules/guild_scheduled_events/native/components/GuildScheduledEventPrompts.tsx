@@ -20,7 +20,7 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
   let require;
   ({ guild: require, channel } = isLive);
   const tmp = createCacheKey();
-  let obj = canManageResource /* canManageResource */;
+  let obj = canManageResource;
   let tmp4 = null;
   if (obj.useManageResourcePermissions(channel).canCreateGuildEvent) {
     obj = { style: null, onPress: null, iconSource: null, iconStyle: null, iconContainerStyle: null, completed: null, title: null, subtitle: null };

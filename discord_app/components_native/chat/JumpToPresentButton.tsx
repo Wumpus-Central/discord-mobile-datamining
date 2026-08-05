@@ -19,7 +19,7 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { bottom: "100%", marginBottom: require("Themes").modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING, pointerEvents: "box-none" };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_10 = set.isIOS() ? (() => null) : ((arg0) => {
-  let obj = map /* map */;
+  let obj = map;
   obj = { bottom: null };
   const token = obj.useToken(Themes.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
   obj[0] = callback2(arg0) + token;

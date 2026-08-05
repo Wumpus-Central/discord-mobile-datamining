@@ -5,10 +5,10 @@ import { NativeModules } from "../../../links/native/BrowserManager.tsx";
 
 function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;
-  let obj = NativeModules /* NativeModules */;
+  let obj = NativeModules;
   const items = [];
   const browserManagerIsChromeInstalled = obj.useBrowserManagerIsChromeInstalled();
-  let obj1 = NativeModules /* NativeModules */;
+  let obj1 = NativeModules;
   if (obj1.useBrowserManagerSupportsInAppBrowser()) {
     obj = { label: null, value: null };
     const intl = tmp(1236).intl;
@@ -46,29 +46,29 @@ function useWebBrowserSettingOptions() {
 }
 const radio = createToggle.createRadio({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["C+DkPu"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["C+DkPu"]);
   },
   parent: require("MobileSetting").MobileSetting.WEB_BROWSER,
   useValue: function useWebBrowserSettingValue() {
-    return NativeModules /* NativeModules */.useBrowserManagerSelectedBrowser();
+    return NativeModules.useBrowserManagerSelectedBrowser();
   },
   onValueChange: function onWebBrowserSettingValueChange(arg0) {
-    const result = NativeModules /* NativeModules */.browserManagerSelectBrowser(Number(arg0));
+    const result = NativeModules.browserManagerSelectBrowser(Number(arg0));
   },
   useOptions: useWebBrowserSettingOptions
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["C+DkPu"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["C+DkPu"]);
   },
   parent: require("MobileSetting").MobileSetting.WEB_BROWSER,
   useValue: function useWebBrowserSettingValue() {
-    return NativeModules /* NativeModules */.useBrowserManagerSelectedBrowser();
+    return NativeModules.useBrowserManagerSelectedBrowser();
   },
   onValueChange: function onWebBrowserSettingValueChange(arg0) {
-    const result = NativeModules /* NativeModules */.browserManagerSelectBrowser(Number(arg0));
+    const result = NativeModules.browserManagerSelectBrowser(Number(arg0));
   },
   useOptions: useWebBrowserSettingOptions
 };

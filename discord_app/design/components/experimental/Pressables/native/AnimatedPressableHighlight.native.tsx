@@ -55,7 +55,7 @@ export const AnimatedPressableHighlight = set.isAndroid() ? (function AnimatedPr
   }, items)} />;
 }) : (function AnimatedPressableHighlightiOS(children) {
   const merged = Object.assign(children, Object.create(null));
-  let obj = SPRING_CONFIG /* SPRING_CONFIG */;
+  let obj = SPRING_CONFIG;
   const iOSPressEffects = obj.useIOSPressEffects(4);
   obj = { accessibilityRole: "button", onPressIn: iOSPressEffects.onPressIn, onPressOut: iOSPressEffects.onPressOut };
   const merged1 = Object.assign(merged);

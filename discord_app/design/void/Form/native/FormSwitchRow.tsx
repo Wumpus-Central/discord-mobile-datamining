@@ -99,13 +99,13 @@ let closure_8 = createCacheKey.createStyles({ trailing: { flex: 1, flexDirection
 const result = require("get ActivityIndicator").fileFinishedImporting("design/void/Form/native/FormSwitchRow.tsx");
 
 export default function FormSwitchRowContainer(DEPRECATED_style) {
-  if (React.useContext(context /* context */.RedesignCompatContext)) {
+  if (React.useContext(context.RedesignCompatContext)) {
     let obj = { style: null, children: null };
     obj[0] = DEPRECATED_style.DEPRECATED_style;
     obj = { value: null, onValueChange: null };
     ({ value: obj3[0], onValueChange: obj3[1] } = DEPRECATED_style);
     const merged = Object.assign(DEPRECATED_style);
-    obj[1] = tmp3(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj);
+    obj[1] = tmp3(TableSwitchRow.TableSwitchRow, obj);
     let tmp3Result = tmp3(View, obj);
   } else {
     obj = {};

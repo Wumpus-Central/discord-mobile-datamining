@@ -18,19 +18,19 @@ function getBannerText(currentUser) {
     return null;
   } else if (null == currentUser.email) {
     let obj = { title: null, button: null };
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t["/yqgqs"]);
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl4.string(getSystemLocale /* getSystemLocale */.t.ydw5nX);
+    const intl3 = getSystemLocale.intl;
+    obj[0] = intl3.string(getSystemLocale.t["/yqgqs"]);
+    const intl4 = getSystemLocale.intl;
+    obj[1] = intl4.string(getSystemLocale.t.ydw5nX);
     let tmp3 = obj;
   } else {
     tmp3 = null;
     if (!currentUser.verified) {
       obj = { title: null, button: null };
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["3sWbf3"]);
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["13ofGu"]);
+      const intl = getSystemLocale.intl;
+      obj[0] = intl.string(getSystemLocale.t["3sWbf3"]);
+      const intl2 = getSystemLocale.intl;
+      obj[1] = intl2.string(getSystemLocale.t["13ofGu"]);
       tmp3 = obj;
     }
   }
@@ -47,7 +47,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/user_settings/a
 
 export default function UserSettingsAccountUnverifiedHeader() {
   const tmp = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const tmp4 = getBannerText(obj.useStateFromStores(items, () => currentUser.getCurrentUser()));
   let tmp5 = null;

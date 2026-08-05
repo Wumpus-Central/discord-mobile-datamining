@@ -11,17 +11,17 @@ const require = arg1;
 const name = require("useIsMobileVisualRefreshExperimentEnabled").MobileVisualRefreshExperiment.definition.name;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.s3amTp);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.s3amTp);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["6e1ir2"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["6e1ir2"]);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate: function useIsInDTesterExperimentVariant() {
     const items = [initialize, fetchFingerprint];
-    return initialize /* initialize */.useStateFromStores(items, () => {
+    return initialize.useStateFromStores(items, () => {
       serverAssignment = serverAssignment.getServerAssignment("user", id.getId(), closure_5);
       let tmp2 = null != serverAssignment;
       if (tmp2) {
@@ -31,7 +31,7 @@ createToggle = {
     });
   },
   useValue: function useIsRefreshEnabled() {
-    const MobileVisualRefreshExperiment = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.MobileVisualRefreshExperiment;
+    const MobileVisualRefreshExperiment = useIsMobileVisualRefreshExperimentEnabled.MobileVisualRefreshExperiment;
     return MobileVisualRefreshExperiment.useConfig({ location: "SettingsAppearance" }).enabled;
   },
   onValueChange: function onToggleRefresh(arg0) {

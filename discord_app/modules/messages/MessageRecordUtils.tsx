@@ -105,7 +105,7 @@ function createMessageRecord(message, message) {
       user = new closure_7(message.author);
     }
   }
-  let obj2 = useNullableMessageAuthor /* useNullableMessageAuthor */;
+  let obj2 = useNullableMessageAuthor;
   obj = { channel_id: message.channel_id, author: user };
   const messageAuthor = obj2.getMessageAuthor(obj);
   if (message != null) {
@@ -183,7 +183,7 @@ function createMessageRecord(message, message) {
   obj.mentioned = tmp9Result.isMentioned(obj1);
   tmp9Result = tmp9(4519);
   const isGiftCodeEmbedResult = tmp9Result.isGiftCodeEmbed(message);
-  const findGiftCodes = _resolveGiftCode /* _resolveGiftCode */.findGiftCodes;
+  const findGiftCodes = _resolveGiftCode.findGiftCodes;
   if (isGiftCodeEmbedResult) {
     let url;
     if (message != null) {
@@ -505,7 +505,7 @@ export const updateMessageRecord = function updateMessageRecord(message, message
   }
 };
 export const canEditMessageWithStickers = function canEditMessageWithStickers(content) {
-  let tmp = 0 === getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */.getMessageStickers(content).length;
+  let tmp = 0 === getStickerExtensionFromFormatType.getMessageStickers(content).length;
   if (!tmp) {
     tmp = "" !== content.content;
   }

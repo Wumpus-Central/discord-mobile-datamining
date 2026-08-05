@@ -204,8 +204,8 @@ export const resolveApplicationCommandOption = function resolveApplicationComman
   const tmp = resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention);
   let voidToOptionValueResult = null;
   if (null != tmp) {
-    voidToOptionValueResult = createEmptyState /* createEmptyState */.voidToOptionValue(tmp);
-    const obj = createEmptyState /* createEmptyState */;
+    voidToOptionValueResult = createEmptyState.voidToOptionValue(tmp);
+    const obj = createEmptyState;
   }
   return voidToOptionValueResult;
 };

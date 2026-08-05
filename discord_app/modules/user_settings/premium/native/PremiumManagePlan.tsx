@@ -504,16 +504,16 @@ function FractionalPremiumCredits(durationText) {
   const items = [showPremiumFeaturesCard, ];
   obj = { style: tmp3.extraInfoContainer, children: null };
   const obj1 = { variant: "eyebrow", color: "text-default", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[2] = intl.string(getSystemLocale /* getSystemLocale */.t.Obre8v);
-  const items1 = [callback3(Text /* Text */.Text, obj1), , ];
+  const intl = getSystemLocale.intl;
+  obj1[2] = intl.string(getSystemLocale.t.Obre8v);
+  const items1 = [callback3(Text.Text, obj1), , ];
   const obj2 = { variant: "text-md/semibold", color: "text-default", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   const obj3 = { helpCenterLink: null };
   let tmpResult = tmp(1945);
   obj3[0] = tmpResult.getArticleURL(constants.FRACTIONAL_PREMIUM_ABOUT);
-  obj2[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.AYGoBn, obj3);
-  items1[1] = callback3(Text /* Text */.Text, obj2);
+  obj2[2] = intl2.format(getSystemLocale.t.AYGoBn, obj3);
+  items1[1] = callback3(Text.Text, obj2);
   const obj4 = { style: tmp3.fpRowStart, start: true, end: false, variant: "primary", children: null };
   const obj5 = { style: tmp3.fpRowIcon, children: null };
   const obj6 = { style: null, start: null, end: null, colors: null, children: null };
@@ -529,16 +529,16 @@ function FractionalPremiumCredits(durationText) {
   const obj9 = { color: null, source: null, size: null };
   obj9[0] = Themes.unsafe_rawColors.WHITE;
   obj9[1] = registerAsset;
-  obj9[2] = Button /* Button */.IconSizes.LARGE;
-  obj8[0] = callback3(Button /* Button */.Icon, obj9);
+  obj9[2] = Button.IconSizes.LARGE;
+  obj8[0] = callback3(Button.Icon, obj9);
   obj6[4] = callback3(closure_8, obj8);
   obj5[1] = callback3(tmpResult, obj6);
   const items3 = [callback3(closure_8, obj5), ];
   const obj10 = { style: tmp3.fpRowContent, children: null };
   const obj11 = { variant: "text-sm/semibold", style: tmp3.fpUnitsTitle, children: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj11[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.DFMPWS);
-  const items4 = [callback3(Text /* Text */.Text, obj11), ];
+  const intl3 = getSystemLocale.intl;
+  obj11[2] = intl3.string(getSystemLocale.t.DFMPWS);
+  const items4 = [callback3(Text.Text, obj11), ];
   if (hasUnactivatedUnits) {
     if (fractionalPremiumInfo.fractionalState === constants3.NONE) {
       const obj12 = { variant: "text-sm/medium", children: null };
@@ -549,7 +549,7 @@ function FractionalPremiumCredits(durationText) {
     obj10[1] = items4;
     items3[1] = tmp4(tmp5, obj10);
     obj4[4] = items3;
-    const items5 = [tmp4(PressableCard /* PressableCard */.Card, obj4), , ];
+    const items5 = [tmp4(PressableCard.Card, obj4), , ];
     const obj13 = { style: null, children: null };
     obj13[0] = tmp3.dividerContainer;
     const obj14 = { style: null };
@@ -619,7 +619,7 @@ function FractionalPremiumCredits(durationText) {
   }
   const obj27 = { variant: "text-sm/medium", style: tmp3.fpUnitsStatusText, children: null };
   const intl4 = tmp9(1236).intl;
-  obj27[2] = intl4.string(getSystemLocale /* getSystemLocale */.t["B66Z+f"]);
+  obj27[2] = intl4.string(getSystemLocale.t["B66Z+f"]);
   tmp8Result = tmp8(tmp9(4281).Text, obj27);
 }
 ({ Image: closure_6, ImageBackground: error, View: metroImportAll, ScrollView: c9, ActivityIndicator: c10 } = get_ActivityIndicator);
@@ -688,7 +688,7 @@ let closure_35 = createCacheKey.createStyles((arg0) => {
   if (arg0) {
     let DIVIDER_BACKGROUND = tmp2(712).colors.BORDER_SUBTLE;
   } else {
-    DIVIDER_BACKGROUND = result /* result */.DIVIDER_BACKGROUND;
+    DIVIDER_BACKGROUND = result.DIVIDER_BACKGROUND;
   }
   obj11[1] = DIVIDER_BACKGROUND;
   obj[22] = obj11;

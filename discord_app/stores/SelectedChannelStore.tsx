@@ -171,7 +171,7 @@ function navigateAwayFromChannel(id, guild_id, parent_id) {
     flag = true;
   }
   if (flag) {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
     obj[0] = closure_6;
     obj[1] = c8;
@@ -182,7 +182,7 @@ function navigateAwayFromChannel(id, guild_id, parent_id) {
     const values = apply(dependencyMap).values();
     const obj2 = apply(dependencyMap);
     const combined = values.concat(apply.values(closure_27));
-    const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
     const obj4 = apply;
     const uniqResult = found.uniq();
     obj[6] = found.uniq().filter((arg0) => {
@@ -233,7 +233,7 @@ prototype["initialize"] = function initialize() {
   let closure_8;
   let closure_9;
   let mostRecentSelectedTextChannelIds;
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   let value = Storage.get(SelectedChannelStore);
   if (value == null) {
     const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null };
@@ -504,7 +504,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
         dependencyMap[String(guildId)] = channelId;
         const StringResult = String(guildId);
       }
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
       obj[0] = channelId;
       obj[1] = closure_8;
@@ -515,7 +515,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
       const values = apply(dependencyMap).values();
       const obj3 = apply(dependencyMap);
       const combined = values.concat(apply.values(dependencyMap3));
-      const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+      const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
       const obj5 = apply;
       const uniqResult = found.uniq();
       obj[6] = found.uniq().filter((arg0) => {
@@ -612,7 +612,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
           }
         }
       }
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
       obj[0] = closure_6;
       obj[1] = closure_8;
@@ -623,7 +623,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
       const values = apply(dependencyMap).values();
       const obj3 = apply(dependencyMap);
       const combined = values.concat(apply.values(dependencyMap3));
-      const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+      const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
       const obj5 = apply;
       const uniqResult = found.uniq();
       obj[6] = found.uniq().filter((arg0) => {
@@ -663,7 +663,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
     } else {
       delete tmp[tmp2];
       delete tmp[tmp2];
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       const obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
       obj[0] = closure_6;
       obj[1] = c8;
@@ -674,7 +674,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
       const values = apply(dependencyMap).values();
       const obj2 = apply(dependencyMap);
       const combined = values.concat(apply.values(closure_27));
-      const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+      const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
       const obj4 = apply;
       const uniqResult = found.uniq();
       obj[6] = found.uniq().filter((arg0) => {
@@ -719,12 +719,12 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
         const tmp6 = dependencyMap;
       }
     }
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const obj = { selectedChannelId: closure_6, selectedVoiceChannelId: channelId, lastChannelFollowingDestination: closure_7, lastConnectedTime: closure_9, selectedChannelIds: dependencyMap, mostRecentSelectedTextChannelIds: closure_27, knownThreadIds: null };
     const values = apply(dependencyMap).values();
     const obj2 = apply(dependencyMap);
     const combined = values.concat(apply.values(closure_27));
-    const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
     const obj4 = apply;
     const uniqResult = found.uniq();
     obj[6] = found.uniq().filter((arg0) => {
@@ -902,7 +902,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
       obj = { channelId: null, guildId: null };
       obj[0] = channelId;
       obj[1] = channelId.guildId;
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       obj = { selectedChannelId: null, selectedVoiceChannelId: null, lastChannelFollowingDestination: null, lastConnectedTime: null, selectedChannelIds: null, mostRecentSelectedTextChannelIds: null, knownThreadIds: null };
       obj[0] = closure_6;
       obj[1] = closure_8;
@@ -913,7 +913,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
       const values = apply(closure_25).values();
       const obj3 = apply(closure_25);
       const combined = values.concat(apply.values(closure_27));
-      const found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+      const found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
       const obj5 = apply;
       const uniqResult = found.uniq();
       obj[6] = found.uniq().filter((arg0) => {
@@ -950,7 +950,7 @@ const selectedChannelStore = new SelectedChannelStore(require("dispatcher"), {
     let closure_27 = {};
     let closure_7 = {};
     let c8 = null;
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     Storage.remove(SelectedChannelStore);
   }
 });

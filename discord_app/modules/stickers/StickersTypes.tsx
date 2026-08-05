@@ -8,10 +8,10 @@ export const StickerFormat = require("MetaStickerType").StickerFormat;
 export const MetaStickerType = require("MetaStickerType").MetaStickerType;
 export const StickerExtensions = { PNG: "png", APNG: "png", LOTTIE: "json", WEBP: "webp", GIF: "gif" };
 export const isAnimatedSticker = function isAnimatedSticker(arg0) {
-  return arg0 !== MetaStickerType /* MetaStickerType */.StickerFormat.PNG;
+  return arg0 !== MetaStickerType.StickerFormat.PNG;
 };
 export const isCustomSticker = function isCustomSticker(arg0) {
-  return arg0 !== MetaStickerType /* MetaStickerType */.MetaStickerType.STANDARD;
+  return arg0 !== MetaStickerType.MetaStickerType.STANDARD;
 };
 export const StickerGridItemTypes = { STICKER: 0, [0]: "STICKER", CREATE_STICKER: 1, [1]: "CREATE_STICKER" };
 export const StickerCategoryTypes = { PACK: "PACK", FAVORITE: "FAVORITE", RECENT: "RECENT", SEARCH_RESULTS: "SEARCH_RESULTS", SEARCH_SUGGESTIONS: "SEARCH_SUGGESTIONS", GUILD: "GUILD", EMPTY_GUILD_UPSELL: "EMPTY_GUILD_UPSELL", CREATE_STICKER: "CREATE_STICKER" };

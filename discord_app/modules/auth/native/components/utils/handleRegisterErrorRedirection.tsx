@@ -13,18 +13,18 @@ function getRedirectStepForErrorKey(arg0) {
   if ("email" !== arg0) {
     if ("phoneToken" !== arg0) {
       if ("global_name" === arg0) {
-        return keys /* keys */.AuthStates.REGISTER_DISPLAY_NAME;
+        return keys.AuthStates.REGISTER_DISPLAY_NAME;
       } else {
         if ("username" !== arg0) {
           if ("password" !== arg0) {
             return null;
           }
         }
-        return keys /* keys */.AuthStates.REGISTER_ACCOUNT_INFORMATION;
+        return keys.AuthStates.REGISTER_ACCOUNT_INFORMATION;
       }
     }
   }
-  return keys /* keys */.AuthStates.REGISTER_IDENTITY;
+  return keys.AuthStates.REGISTER_IDENTITY;
 }
 ({ RegisterTransitionSteps: c3, RegistrationTransitionActionTypes: c4, authStateToRegisterTransitionStep: c5 } = RegistrationTransitionActionTypes);
 let closure_7 = { [keys.AuthStates.REGISTER_IDENTITY]: ["email", "phoneToken"], [keys.AuthStates.REGISTER_DISPLAY_NAME]: ["global_name"], [keys.AuthStates.REGISTER_ACCOUNT_INFORMATION]: ["username", "password"] };
@@ -34,7 +34,7 @@ export default function handleRegisterErrorRedirection(navigate, arg1, code) {
   if (null == getError("date_of_birth", code)) {
     const _Number = Number;
     if (Number(code.code) !== AbortCodes.UNDER_MINIMUM_AGE) {
-      const registrationSteps = headerTitle /* headerTitle */.getRegistrationSteps();
+      const registrationSteps = headerTitle.getRegistrationSteps();
       const obj8 = registrationSteps[Symbol.iterator]();
       while (obj8 !== undefined) {
         let tmp6 = table;
@@ -66,7 +66,7 @@ export default function handleRegisterErrorRedirection(navigate, arg1, code) {
               let items1 = [tmp14, ];
               let tmp23 = require;
               let tmp24 = tmp11;
-              let obj3 = trackRegTransition /* trackRegTransition */;
+              let obj3 = trackRegTransition;
               items1[1] = obj3.getCommonErrorDetails(arg2.error_code);
               obj[2] = items1;
               let tmp25 = arg1(obj);
@@ -85,13 +85,13 @@ export default function handleRegisterErrorRedirection(navigate, arg1, code) {
         obj = { step: null, actionType: null, details: null };
         obj[0] = arg3;
         obj[1] = constants2.RESPONSE_ERROR;
-        const items2 = [trackRegTransition /* trackRegTransition */.getCommonErrorDetails(code.error_code)];
+        const items2 = [trackRegTransition.getCommonErrorDetails(code.error_code)];
         obj[2] = items2;
         arg1(obj);
-        const obj5 = trackRegTransition /* trackRegTransition */;
+        const obj5 = trackRegTransition;
       }
     }
   }
   arg1({ step: constants.AGE_GATE_UNDERAGE, actionType: constants2.VIEWED });
-  navigate.push(keys /* keys */.AuthStates.AGE_GATE_UNDERAGE, { fromRegister: true, disableSwipe: true });
+  navigate.push(keys.AuthStates.AGE_GATE_UNDERAGE, { fromRegister: true, disableSwipe: true });
 };

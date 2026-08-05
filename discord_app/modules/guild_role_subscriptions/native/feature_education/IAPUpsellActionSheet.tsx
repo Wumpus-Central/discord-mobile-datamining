@@ -15,12 +15,12 @@ export default function IAPUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed } = arg0);
   const obj = { imageSource: null, header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
   obj[0] = markAsDismissed(15250);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.rBw4cE);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.mKHibc);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl3.string(getSystemLocale /* getSystemLocale */.t.RzWDqY);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.rBw4cE);
+  const intl2 = getSystemLocale.intl;
+  obj[2] = intl2.string(getSystemLocale.t.mKHibc);
+  const intl3 = getSystemLocale.intl;
+  obj[3] = intl3.string(getSystemLocale.t.RzWDqY);
   obj[4] = function onCTAPress() {
     outer1_0(outer1_2[8]).transitionTo(outer1_3.CHANNEL(closure_0, outer1_4.ROLE_SUBSCRIPTIONS));
     markAsDismissed(outer1_5.UNKNOWN);

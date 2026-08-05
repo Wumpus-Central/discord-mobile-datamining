@@ -180,11 +180,11 @@ obj = {
         num3 = 1;
       }
       if (num3 < 1) {
-        result = interpolate /* interpolate */.transformColorForReducedSaturation(result, category, num3);
-        const obj6 = interpolate /* interpolate */;
+        result = interpolate.transformColorForReducedSaturation(result, category, num3);
+        const obj6 = interpolate;
       }
       if (1 !== num2) {
-        const obj7 = interpolate /* interpolate */;
+        const obj7 = interpolate;
         result = obj7.transformColorContrast(result, category, tmp, num2);
       }
       if (1 === opacity) {
@@ -269,10 +269,10 @@ obj = {
     }
   },
   adjustColorSaturation(result, saturation, generic) {
-    return interpolate /* interpolate */.transformColorForReducedSaturation(result, generic, saturation);
+    return interpolate.transformColorForReducedSaturation(result, generic, saturation);
   },
   adjustColorContrast(result, contrast, category, theme) {
-    return interpolate /* interpolate */.transformColorContrast(result, category, theme, contrast);
+    return interpolate.transformColorContrast(result, category, theme, contrast);
   }
 };
 let result = require("_private").fileFinishedImporting("../discord_common/js/packages/tokens/native.tsx");

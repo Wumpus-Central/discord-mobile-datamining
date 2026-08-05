@@ -93,7 +93,7 @@ export default function UserSummaryItem(users) {
               if (flag === undefined) {
                 flag = false;
               }
-              const avatarURL = users.getAvatarURL(guildId, Button /* Button */.AVATAR_SIZE_MAP[avatarSize], flag);
+              const avatarURL = users.getAvatarURL(guildId, Button.AVATAR_SIZE_MAP[avatarSize], flag);
               let avatar;
               if (guildId != null) {
                 avatar = tmp3.avatar;

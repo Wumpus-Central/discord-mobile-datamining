@@ -32,7 +32,7 @@ function MediaMosaicVideo(source) {
   source = source.source;
   ({ height, width, autoplay, style } = source);
   const tmp = callback4();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [filterStaffGuild];
   let isGIFV = obj.useStateFromStores(items, () => filterStaffGuild.videosMuted());
   let uri = source.videoURI;
@@ -250,7 +250,7 @@ function OneImageRow(widthOverride) {
   let source;
   widthOverride = widthOverride.widthOverride;
   ({ source, handlePressMedia } = widthOverride);
-  const context = React.useContext(context /* context */.ICYMIContext);
+  const context = React.useContext(context.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -308,7 +308,7 @@ function TwoImagesRow(arg0) {
   ({ sources, handlePressMedia: require, end, widthOverride } = arg0);
   let obj;
   const tmp = callback4();
-  const context = React.useContext(context /* context */.ICYMIContext);
+  const context = React.useContext(context.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -338,7 +338,7 @@ function ThreeImages(arg0) {
   let widthOverride;
   ({ sources, handlePressMedia, widthOverride } = arg0);
   const tmp = callback4();
-  const context = React.useContext(context /* context */.ICYMIContext);
+  const context = React.useContext(context.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {
@@ -365,7 +365,7 @@ function FourImages(arg0) {
   let widthOverride;
   ({ sources, handlePressMedia, widthOverride } = arg0);
   const tmp = callback4();
-  const context = React.useContext(context /* context */.ICYMIContext);
+  const context = React.useContext(context.ICYMIContext);
   if (null == widthOverride) {
     let width;
     if (context != null) {

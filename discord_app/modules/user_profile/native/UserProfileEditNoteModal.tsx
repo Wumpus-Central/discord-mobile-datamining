@@ -20,7 +20,7 @@ export default function UserProfileEditNoteModal(arg0) {
       dependencyMap();
     }
   }
-  let obj = PlatformTypes /* PlatformTypes */;
+  let obj = PlatformTypes;
   obj = { initialRouteName: "root", headerStatusBarHeight: num, headerStyle: null, screens: null };
   let tmp2Result = tmp2(501);
   obj = undefined;
@@ -31,7 +31,7 @@ export default function UserProfileEditNoteModal(arg0) {
   const obj1 = { root: null };
   const obj2 = { title: null, headerTitle: null, headerLeft: null, render: null };
   let intl = tmp2(1236).intl;
-  obj2[0] = intl.string(getSystemLocale /* getSystemLocale */.t.sHHsOM);
+  obj2[0] = intl.string(getSystemLocale.t.sHHsOM);
   obj2[1] = function headerTitle() {
     const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
     const intl = callback(1236).intl;
@@ -45,5 +45,5 @@ export default function UserProfileEditNoteModal(arg0) {
   };
   obj1[0] = obj2;
   obj[3] = obj1;
-  return handleClose(NavigationStack /* NavigationStack */.Navigator, obj);
+  return handleClose(NavigationStack.Navigator, obj);
 };

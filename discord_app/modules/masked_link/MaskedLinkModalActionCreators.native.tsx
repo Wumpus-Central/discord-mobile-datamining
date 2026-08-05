@@ -15,6 +15,6 @@ export default {
     onCancel = onCancel.onCancel;
     ({ url, trustUrl, onConfirm, isProtocol } = onCancel);
     const lazyResult = React.lazy(() => callback(paths[3])(paths[2], paths.paths));
-    useAlertStore /* useAlertStore */.openAlert("masked-link", <lazyResult url={url} trustUrl={trustUrl} onConfirm={onConfirm} onCancel={onCancel} isProtocol={isProtocol} />, onCancel);
+    useAlertStore.openAlert("masked-link", <lazyResult url={url} trustUrl={trustUrl} onConfirm={onConfirm} onCancel={onCancel} isProtocol={isProtocol} />, onCancel);
   }
 };

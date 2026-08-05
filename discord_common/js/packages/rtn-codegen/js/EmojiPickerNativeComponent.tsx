@@ -9,15 +9,15 @@ const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onStick
 obj[2] = obj;
 obj = {
   refreshEmojis(current) {
-    renderElement /* renderElement */.dispatchCommand(current, "refreshEmojis", []);
+    renderElement.dispatchCommand(current, "refreshEmojis", []);
   },
   scrollingEnabled(current, arg1) {
     const items = [arg1];
-    renderElement /* renderElement */.dispatchCommand(current, "scrollingEnabled", items);
+    renderElement.dispatchCommand(current, "scrollingEnabled", items);
   },
   scrollToHeaderIndex(arg0, arg1, arg2) {
     const items = [arg1, arg2];
-    renderElement /* renderElement */.dispatchCommand(arg0, "scrollToHeaderIndex", items);
+    renderElement.dispatchCommand(arg0, "scrollToHeaderIndex", items);
   }
 };
 const value = setRuntimeConfigProvider.get("EmojiPickerView", () => obj);

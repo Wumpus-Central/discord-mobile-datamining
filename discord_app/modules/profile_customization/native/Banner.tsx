@@ -27,7 +27,7 @@ export default function ProfileBanner(bannerHeight) {
   }
   const tmp = callback();
   let obj = { backgroundColor: null, height: null };
-  obj[0] = int2hslRaw /* int2hslRaw */.int2hex(backgroundColor);
+  obj[0] = int2hslRaw.int2hex(backgroundColor);
   obj[1] = bannerHeight + bannerSafeArea;
   obj = { style: items, children: null };
   items = [tmp.root, obj, style];

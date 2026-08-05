@@ -36,7 +36,7 @@ function ActivityActionOverlay(arg0) {
   ({ action, context } = arg0);
   ({ applicationId, activityItem, launchingComponentId } = arg0);
   ({ id, name } = activityItem.application);
-  if (useActivityAction /* useActivityAction */.ActivityAction.JOIN !== action) {
+  if (useActivityAction.ActivityAction.JOIN !== action) {
     if (tmp4(11356).ActivityAction.LEAVE !== action) {
       return null;
     }
@@ -81,10 +81,10 @@ function ParticipantsText(arg0) {
   ({ participantsContainer: arr2[0], overlayBubble: arr2[1] } = tmp);
   obj = { source: null, size: null, color: "white" };
   obj[0] = registerAsset;
-  obj[1] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
-  const items1 = [callback(Button /* Button */.Icon, obj), ];
+  obj[1] = Button.Icon.Sizes.EXTRA_SMALL;
+  const items1 = [callback(Button.Icon, obj), ];
   const obj1 = { lineClamp: 1, style: tmp.participantsText, variant: "text-xxs/medium", color: "text-overlay-light", children: null };
-  if (action === useActivityAction /* useActivityAction */.ActivityAction.START) {
+  if (action === useActivityAction.ActivityAction.START) {
     let num2 = activityItem.application.maxParticipants;
     if (num2 == null) {
       num2 = 0;
@@ -102,7 +102,7 @@ function ParticipantsText(arg0) {
     }
   }
   obj1[4] = itemSubtitleForMaxPlayersShort;
-  items1[1] = callback(Text /* Text */.Text, obj1);
+  items1[1] = callback(Text.Text, obj1);
   obj[1] = items1;
   return closure_7(set, obj);
 }
@@ -157,7 +157,7 @@ export default function ActivityShelfItem(arg0) {
   obj[6] = result;
   obj[7] = ["embedded_cover"];
   obj[8] = id;
-  obj[9] = ApplicationCommandSectionType /* ApplicationCommandSectionType */.CommandOrigin.VOICE_UI;
+  obj[9] = ApplicationCommandSectionType.CommandOrigin.VOICE_UI;
   const tmp7 = useActivityAction;
   ({ activityAction, imageBackground, onActivityItemSelected: onActivityItemSelected2, labelType } = useActivityAction(obj));
   obj = { applicationId: activityItem.application.id, size: result, names: ["embedded_background"] };
@@ -168,9 +168,9 @@ export default function ActivityShelfItem(arg0) {
     tmp11 = !items.includes(activityAction);
   }
   const tmp7Result = useActivityAction(obj);
-  const isTestModeForApplication = isTestModeForApplication /* isTestModeForApplication */.useIsTestModeForApplication(activityItem.application.id);
+  const isTestModeForApplication = isTestModeForApplication.useIsTestModeForApplication(activityItem.application.id);
   obj = { activeOpacity: 0.7, onPress: onActivityItemSelected2, disabled: null, androidRippleConfig: null, style: null, children: null };
-  obj[2] = activityAction === useActivityAction /* useActivityAction */.ActivityAction.LEAVE;
+  obj[2] = activityAction === useActivityAction.ActivityAction.LEAVE;
   obj[3] = ANDROID_FOREGROUND_RIPPLE;
   const items1 = [tmp.container, { width, height }];
   obj[4] = items1;
@@ -178,7 +178,7 @@ export default function ActivityShelfItem(arg0) {
   let tmp3Result = tmp3(5663);
   const obj2 = { accessibilityLabel: activityItem.application.name, imageBackground: null, aspectRatio: null };
   tmp3Result = tmp3(16091);
-  if (activityAction === useActivityAction /* useActivityAction */.ActivityAction.START) {
+  if (activityAction === useActivityAction.ActivityAction.START) {
     tmp10 = imageBackground;
   }
   obj2[1] = tmp10;
@@ -209,7 +209,7 @@ export default function ActivityShelfItem(arg0) {
     }
   }
   items3[2] = tmp15Result;
-  const items4 = [closure_7(ManaContext /* ManaContext */.ThemeContextProvider, { theme: "dark", children: items3 }), ];
+  const items4 = [closure_7(ManaContext.ThemeContextProvider, { theme: "dark", children: items3 }), ];
   let tmp15Result1 = activityAction === tmp8(11356).ActivityAction.START;
   if (tmp15Result1) {
     const obj7 = { action: null, channelId: null, guildId: null, activityItem: null };
@@ -230,5 +230,5 @@ export default function ActivityShelfItem(arg0) {
   }
   items4[1] = tmp15Result1;
   obj[5] = items4;
-  return closure_7(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return closure_7(PressableBase.PressableOpacity, obj);
 };

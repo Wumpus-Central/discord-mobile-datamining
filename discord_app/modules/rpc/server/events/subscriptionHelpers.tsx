@@ -73,27 +73,27 @@ export const getInitialSubscriptionPayload = function getInitialSubscriptionPayl
     }
     return tmp30;
   } else if (tmp.THERMAL_STATE_UPDATE === participantFromServer) {
-    const thermalState = useThermalState /* useThermalState */.getThermalState();
+    const thermalState = useThermalState.getThermalState();
     let tmp23 = null;
-    if (thermalState !== useThermalState /* useThermalState */.ThermalStates.UNHANDLED) {
+    if (thermalState !== useThermalState.ThermalStates.UNHANDLED) {
       let obj2 = { thermal_state: null };
       obj2[0] = thermalState;
       tmp23 = obj2;
     }
     return tmp23;
   } else if (tmp.ORIENTATION_UPDATE === participantFromServer) {
-    let obj3 = getIsScreenLandscape /* getIsScreenLandscape */;
+    let obj3 = getIsScreenLandscape;
     obj3 = { screen_orientation: null };
     obj3[0] = obj3.getIsScreenLandscape() ? closure_7.LANDSCAPE : closure_7.PORTRAIT;
     return obj3;
   } else if (tmp.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE === participantFromServer) {
-    obj2 = activityInstanceConnectedParticipants /* activityInstanceConnectedParticipants */;
+    obj2 = activityInstanceConnectedParticipants;
     return obj2.activityInstanceConnectedParticipants();
   } else if (tmp.QUEST_ENROLLMENT_STATUS_UPDATE === participantFromServer) {
     const quest_id = c3.quest_id;
     if (quest_id) {
       quest = quest.getQuest(quest_id);
-      obj = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+      obj = getApplicationIdsByTaskTypes;
       const activityApplicationId = obj.getActivityApplicationId(quest);
       let tmp11 = null;
       if (null != quest) {

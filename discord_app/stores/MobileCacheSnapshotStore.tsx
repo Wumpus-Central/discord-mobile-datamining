@@ -42,15 +42,15 @@ Object.defineProperty(prototype, "persistKey", {
   set: undefined
 });
 prototype["clear"] = function clear() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   Storage.remove(this.persistKey);
 };
 prototype["save"] = function save() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set(this.persistKey, this.takeSnapshot());
 };
 prototype["readSnapshot"] = function readSnapshot(LATEST_SNAPSHOT_VERSION) {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const value = Storage.get(this.persistKey);
   let data = null;
   if (null != value) {

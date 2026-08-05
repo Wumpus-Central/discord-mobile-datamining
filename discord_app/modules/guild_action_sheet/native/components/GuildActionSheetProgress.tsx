@@ -20,7 +20,7 @@ export default function GuildActionSheetProgress(guild) {
   let dismissed;
   guild = guild.guild;
   const tmp = createCacheKey();
-  let obj = useIOSCompletionStates /* useIOSCompletionStates */;
+  let obj = useIOSCompletionStates;
   const iOSCompletionStates = obj.useIOSCompletionStates(guild);
   ({ completed, dismissed } = iOSCompletionStates);
   let tmp5 = null;
@@ -35,7 +35,7 @@ export default function GuildActionSheetProgress(guild) {
         obj[0] = guild;
         obj[1] = tmp.title;
         obj[1] = jsx(GuildProgressOverviewView, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
-        tmp5 = jsx(PressableCard /* PressableCard */.Card, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
+        tmp5 = jsx(PressableCard.Card, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
       }
     }
   }

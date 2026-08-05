@@ -46,8 +46,8 @@ function EditButton(disabled) {
   let obj = { accessibilityRole: "button", accessibilityLabel, onPress, disabled: flag, style: createCacheKey().editButton, children: null };
   obj = { size: "xs", color: null };
   obj[1] = Themes.colors.WHITE;
-  obj[5] = callback(PencilIcon /* PencilIcon */.PencilIcon, obj);
-  return callback(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[5] = callback(PencilIcon.PencilIcon, obj);
+  return callback(PressableBase.PressableOpacity, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { position: "relative" }, editButton: null, previewButton: null };

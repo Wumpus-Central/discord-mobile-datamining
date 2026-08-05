@@ -22,7 +22,7 @@ obj = { tts: obj, me: obj, tableflip: obj1, unflip: obj2, shrug: obj3, nick: obj
 obj = {
   action() {
     const obj = { tts: null };
-    const EnableTTSCommand = explicitContentFromProto /* explicitContentFromProto */.EnableTTSCommand;
+    const EnableTTSCommand = explicitContentFromProto.EnableTTSCommand;
     obj[0] = EnableTTSCommand.getSetting();
     return obj;
   }
@@ -46,8 +46,8 @@ obj5[1] = function action(str, channel) {
           const trimmed = str.trim();
           const byName = disambiguatedEmojiContext.getByName(trimmed.slice(2, -1));
           if (null != byName) {
-            const obj3 = checkReactionResponse /* checkReactionResponse */;
-            obj3.addReaction(channel.id, lastResult.id, MAX_REACTIONS /* MAX_REACTIONS */.toReactionEmoji(byName));
+            const obj3 = checkReactionResponse;
+            obj3.addReaction(channel.id, lastResult.id, MAX_REACTIONS.toReactionEmoji(byName));
             return { content: "" };
           }
         }

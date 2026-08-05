@@ -24,7 +24,7 @@ function getUserMaxFileSize(currentUser) {
       if (obj.isPremium(currentUser)) {
         fileSize = table[currentUser.premiumType].fileSize;
       }
-      obj = isPremiumAtLeast /* isPremiumAtLeast */;
+      obj = isPremiumAtLeast;
     }
     fileSize = closure_3;
   }

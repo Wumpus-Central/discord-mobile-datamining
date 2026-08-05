@@ -18,7 +18,7 @@ const result = require("getUncachedChannelPermissions").fileFinishedImporting("m
 
 export const createStageRaiseHandSystemMessage = function createStageRaiseHandSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+  let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   let canResult = getUncachedChannelPermissions.can(constants4.MUTE_MEMBERS, channel.getChannel(message.channel_id));
   participant = participant.getParticipant(message.channel_id, message.author.id);
@@ -50,10 +50,10 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
   const intl = tmp(1236).intl;
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null };
   obj[1] = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
-  obj[0] = intl.formatToParts(getSystemLocale /* getSystemLocale */.t.M87x7Y, obj);
+  obj[0] = intl.formatToParts(getSystemLocale.t.M87x7Y, obj);
   obj[1] = canResult;
   const intl2 = tmp(1236).intl;
-  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.f0T7hI);
+  obj[2] = intl2.string(getSystemLocale.t.f0T7hI);
   let tmp10;
   if (message.hasFlag(constants2.EPHEMERAL)) {
     if (message.type === constants3.STAGE_RAISE_HAND) {

@@ -18,10 +18,10 @@ let metroImportAll;
 const require = arg1;
 function PrivacyPolicyDescription(style) {
   let obj = { style: style.style, variant: "text-xs/medium", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY };
-  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t["KI+BSb"], obj);
-  return callback(Text /* Text */.Text, obj);
+  obj[3] = intl.format(getSystemLocale.t["KI+BSb"], obj);
+  return callback(Text.Text, obj);
 }
 function PrivacyPolicyCheckbox(onToggleConsent) {
   let asCheckbox;
@@ -31,11 +31,11 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
     asCheckbox = false;
   }
   const tmp = callback3();
-  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: consent });
   obj = { style: asCheckbox ? tmp.checkbox : tmp.radio, accessibilityState: checkboxA11yNative.accessibilityState, accessibilityRole: checkboxA11yNative.accessibilityRole, accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
   const intl = tmp2(1236).intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.Y7Kgvf);
+  obj[3] = intl.string(getSystemLocale.t.Y7Kgvf);
   obj[4] = onToggleConsent.onToggleConsent;
   obj[5] = { top: 11, bottom: 11, left: 11 };
   if (asCheckbox) {
@@ -52,8 +52,8 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
   const items = [tmp7Result, ];
   const obj2 = { variant: "text-xs/medium", color: "text-muted", style: tmp.checkboxLabel, children: null };
   const intl2 = tmp2(1236).intl;
-  obj2[3] = intl2.format(getSystemLocale /* getSystemLocale */.t.qMDAP0, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
-  items[1] = tmp9(Text /* Text */.Text, obj2);
+  obj2[3] = intl2.format(getSystemLocale.t.qMDAP0, { termsURL: MarketingURLs.TERMS, privacyURL: MarketingURLs.PRIVACY });
+  items[1] = tmp9(Text.Text, obj2);
   obj[6] = items;
   return closure_9(closure_4, obj);
 }

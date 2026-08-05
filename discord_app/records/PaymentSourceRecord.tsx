@@ -514,7 +514,7 @@ PaymentSourceRecord["createFromServer"] = function createFromServer(billing_addr
           }
           const tmp11 = prototype2;
         } else {
-          obj4 = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+          obj4 = isDiscordFrontendDevelopment;
           obj4.assertNever(billing_address);
         }
       }
@@ -918,7 +918,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
             return tmp16;
           }
         } else {
-          isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(type);
+          isDiscordFrontendDevelopment.assertNever(type);
         }
       }
     }
@@ -950,7 +950,7 @@ PaymentSourceRecord["createFromSerialized"] = function createFromSerialized(type
   }
 };
 prototype["hasFlag"] = function hasFlag(arg0) {
-  return hasFlag /* hasFlag */.hasFlag(this.flags, arg0);
+  return hasFlag.hasFlag(this.flags, arg0);
 };
 Object.defineProperty(prototype, "paymentMethodCountry", {
   get: function paymentMethodCountry() {

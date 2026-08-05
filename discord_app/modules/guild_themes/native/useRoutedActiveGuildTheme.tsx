@@ -32,7 +32,7 @@ function getGuildIdFromNavigationState(routes) {
   }
 }
 function getActiveGuildThemeGuildIdSnapshot() {
-  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();
@@ -84,7 +84,7 @@ function getActiveGuildThemeGuildIdSnapshot() {
         if (rootState != null) {
           routes = rootState.routes;
           if (routes != null) {
-            const mapped = routes.map(navigationToRootTabHelper /* navigationToRootTabHelper */.coerceMainRoute);
+            const mapped = routes.map(navigationToRootTabHelper.coerceMainRoute);
             found = mapped.find((arg0) => null != arg0);
           }
         }
@@ -175,5 +175,5 @@ export default function useRoutedActiveGuildTheme() {
     tmp4 = tmp7;
   }
   const tmp3 = callback(React.useState(getActiveGuildThemeGuildIdSnapshot), 2);
-  return resolveSavedActiveGuildTheme /* resolveSavedActiveGuildTheme */.useActiveGuildThemeForGuildId(tmp4);
+  return resolveSavedActiveGuildTheme.useActiveGuildThemeForGuildId(tmp4);
 };

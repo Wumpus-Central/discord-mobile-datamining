@@ -5,8 +5,8 @@ import { onPress } from "../../connections/native/ConnectionsSettingScreen.tsx";
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["3fe7U5"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["3fe7U5"]);
   },
   parent: null,
   IconComponent: require("PuzzlePieceIcon").PuzzlePieceIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CONNECTIONS,
   getComponent() {
-    return onPress /* onPress */.default;
+    return onPress.default;
   }
 };
 const route = createToggle.createRoute(obj);

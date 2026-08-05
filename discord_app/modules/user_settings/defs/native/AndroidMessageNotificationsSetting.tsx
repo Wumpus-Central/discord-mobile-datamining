@@ -15,7 +15,7 @@ function useAndroidMessageNotificationsSettingValue() {
 }
 function useHasAndroidMessageNotificationsSetting() {
   const tmp = callback();
-  let isAndroidResult = set /* set */.isAndroid();
+  let isAndroidResult = set.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != tmp;
   }
@@ -24,8 +24,8 @@ function useHasAndroidMessageNotificationsSetting() {
 ({ useAndroidMessageNotificationsEnabled: obj1, setAndroidMessageNotificationsEnabled } = _initializeAndroidNotificationSettingsStore);
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["zViLy+"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["zViLy+"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: useAndroidMessageNotificationsSettingValue,
@@ -34,8 +34,8 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["zViLy+"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["zViLy+"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: useAndroidMessageNotificationsSettingValue,

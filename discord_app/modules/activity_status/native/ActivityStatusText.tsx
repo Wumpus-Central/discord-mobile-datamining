@@ -21,5 +21,5 @@ export default function ActivityStatusText(variant) {
   items = [callback().text, style];
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(Text /* Text */.Text, { variant: str, color: "text-muted", style: items, lineClamp: 1 });
+  return jsx(Text.Text, { variant: str, color: "text-muted", style: items, lineClamp: 1 });
 };

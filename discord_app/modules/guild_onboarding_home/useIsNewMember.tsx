@@ -56,7 +56,7 @@ export const getIsNewMember = function getIsNewMember(closure_0) {
         if (num == null) {
           num = 0;
         }
-        const hasFlagResult = hasFlag /* hasFlag */.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
+        const hasFlagResult = hasFlag.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
         let tmp8 = !hasFlagResult;
         if (!hasFlagResult) {
           const _Date = Date;
@@ -65,7 +65,7 @@ export const getIsNewMember = function getIsNewMember(closure_0) {
           tmp8 = diff < set.Millis.WEEK;
         }
         tmp3 = tmp8;
-        const obj3 = hasFlag /* hasFlag */;
+        const obj3 = hasFlag;
       }
       flag = tmp3;
     }

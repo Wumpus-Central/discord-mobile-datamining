@@ -104,11 +104,11 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     }
     return content;
   };
-  let obj = SearchTokenTypes /* SearchTokenTypes */;
-  const tokenizeQueryResult = SearchTokenTypes /* SearchTokenTypes */.tokenizeQuery(searchQueryString);
-  const searchQueryFromTokens = SearchTokenTypes /* SearchTokenTypes */.getSearchQueryFromTokens(tokenizeQueryResult);
-  const obj2 = SearchTokenTypes /* SearchTokenTypes */;
-  const str = SearchTokenTypes /* SearchTokenTypes */.getQueryContentString(searchQueryFromTokens);
+  let obj = SearchTokenTypes;
+  const tokenizeQueryResult = SearchTokenTypes.tokenizeQuery(searchQueryString);
+  const searchQueryFromTokens = SearchTokenTypes.getSearchQueryFromTokens(tokenizeQueryResult);
+  const obj2 = SearchTokenTypes;
+  const str = SearchTokenTypes.getQueryContentString(searchQueryFromTokens);
   let str2;
   if (str != null) {
     str2 = str.trim();

@@ -123,7 +123,7 @@ function Integration(integration) {
 function RowSwitch(label) {
   const merged = Object.assign(label, Object.create(null));
   const merged1 = Object.assign(merged);
-  return callback3(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, { label: label.label });
+  return callback3(TableSwitchRow.TableSwitchRow, { label: label.label });
 }
 let c5 = importAllResult;
 ({ FRIEND_SYNC_PLATFORM_TYPES: c9, ACTIVITY_PLATFORM_TYPES: c10, PlatformTypes: unpackModuleId, HelpdeskArticles: closure_12, Fonts } = ME);
@@ -459,18 +459,18 @@ prototype["renderUpsell"] = function renderUpsell() {
   if (account.twoWayLink) {
     return null;
   } else if (account.type === constants.XBOX) {
-    let tmp2 = callback3(XboxTwoWayLinkUpsell /* XboxTwoWayLinkUpsell */.XboxTwoWayLinkUpsell, {});
+    let tmp2 = callback3(XboxTwoWayLinkUpsell.XboxTwoWayLinkUpsell, {});
   } else {
     tmp2 = null;
     if (account.type === tmp.PLAYSTATION) {
-      tmp2 = callback3(PlayStationTwoWayLinkUpsell /* PlayStationTwoWayLinkUpsell */.PlayStationTwoWayLinkUpsell, {});
+      tmp2 = callback3(PlayStationTwoWayLinkUpsell.PlayStationTwoWayLinkUpsell, {});
     }
   }
 };
 prototype["renderVisibilityCheckRow"] = function renderVisibilityCheckRow() {
   const obj = { label: null, value: null, onValueChange: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.f7yOAX);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.f7yOAX);
   obj[1] = this.state.isVisible;
   obj[2] = this.handleVisibilityChange;
   return callback3(RowSwitch, obj);
@@ -490,8 +490,8 @@ prototype["renderMetadataVisibilityCheckRow"] = function renderMetadataVisibilit
   } else {
     obj = { label: null, value: null, disabled: null, onValueChange: null };
     ({ isMetadataVisible, isVisible } = self.state);
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.FYKGsL);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.FYKGsL);
     obj[1] = isMetadataVisible;
     obj[2] = !isVisible;
     obj[3] = self.handleMetadataVisibilityChange;
@@ -661,8 +661,8 @@ prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
   let tmp2 = null;
   if (set.has(obj.get(this.props.account.type).type)) {
     obj = { label: null, value: null, onValueChange: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["+KCMSi"]);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t["+KCMSi"]);
     obj[1] = this.state.friendSync;
     obj[2] = this.handleFriendSyncChange;
     tmp2 = callback3(RowSwitch, obj);
@@ -675,10 +675,10 @@ prototype["renderActivityCheckRow"] = function renderActivityCheckRow() {
   let tmp3 = null;
   if (set2.has(value.type)) {
     obj = { label: null, value: null, onValueChange: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { platform: null };
     obj[0] = value.name;
-    obj[0] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["6u6J0q"], obj);
+    obj[0] = intl.formatToPlainString(getSystemLocale.t["6u6J0q"], obj);
     obj[1] = this.state.showActivity;
     obj[2] = this.handleShowActivityChange;
     tmp3 = callback3(RowSwitch, obj);
@@ -700,9 +700,9 @@ prototype["renderIntegrationsRow"] = function renderIntegrationsRow() {
       obj[0] = { paddingHorizontal: 16, paddingVertical: 8 };
       const obj1 = { style: null, variant: "eyebrow", color: "mobile-text-heading-primary", children: null };
       obj1[0] = tmp.integrationCategoryLabel;
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t.fOe3fZ);
-      const items1 = [callback3(Text /* Text */.Text, obj1), ];
+      const intl = getSystemLocale.intl;
+      obj1[3] = intl.string(getSystemLocale.t.fOe3fZ);
+      const items1 = [callback3(Text.Text, obj1), ];
       const integrations = account.integrations;
       items1[1] = integrations.map((id) => callback(closure_17, { integration: id }, id.id));
       obj[1] = items1;
@@ -726,7 +726,7 @@ prototype["render"] = function render() {
     migrationExperimentEnabled = migrationData.getMigrationExperimentEnabled("User Settings Connections Mobile");
   }
   if (migrationExperimentEnabled) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { platformName: null };
     obj[0] = account.name;
     let name = intl.format(tmp2(2835).Glhokn, obj);
@@ -734,22 +734,22 @@ prototype["render"] = function render() {
     name = account.name;
   }
   obj = { accessible: true, accessibilityLabel: value.name, style: tmp.platformIcon, size: null, source: null, disableColor: true };
-  obj[3] = Button /* Button */.Icon.Sizes.LARGE;
-  let obj3 = getAvatarURL /* getAvatarURL */;
-  let obj4 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  obj[3] = Button.Icon.Sizes.LARGE;
+  let obj3 = getAvatarURL;
+  let obj4 = AccessibilityAnnouncer;
   const icon = value.icon;
   obj[4] = obj3.makeSource(obj4.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
-  let tmp7Result = tmp7(Button /* Button */.Icon, obj);
+  let tmp7Result = tmp7(Button.Icon, obj);
   const obj1 = { spacing: 8, direction: "horizontal", align: "center", children: null };
   const obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
   const intl2 = tmp8(1236).intl;
-  obj2[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["DT39A+"]);
+  obj2[1] = intl2.string(getSystemLocale.t["DT39A+"]);
   obj2[2] = self.handleDisconnect;
   obj2[3] = { top: 5, left: 5, bottom: 5, right: 5 };
   obj3 = { style: tmp.deleteConnectionIcon, source: null };
   obj3[1] = registerAsset;
-  obj2[4] = closure_14(Button /* Button */.Icon, obj3);
-  obj1[3] = closure_14(PressableBase /* PressableBase */.PressableOpacity, obj2);
+  obj2[4] = closure_14(Button.Icon, obj3);
+  obj1[3] = closure_14(PressableBase.PressableOpacity, obj2);
   tmp7Result = tmp7(tmp8(4693).Stack, obj1);
   const result = self.renderIntegrationsRow();
   const result1 = self.renderFriendSyncCheckRow();
@@ -759,12 +759,12 @@ prototype["render"] = function render() {
   const obj5 = { style: tmp.connectedAccountItem, children: null };
   const obj6 = { style: tmp.connectedAccountTopContainer, children: null };
   const result4 = self.renderVisibilityCheckRow();
-  obj6[1] = closure_14(TableRowInner /* TableRowInner */.TableRow, { label: name, icon: tmp7Result, trailing: tmp7Result });
+  obj6[1] = closure_14(TableRowInner.TableRow, { label: name, icon: tmp7Result, trailing: tmp7Result });
   const items = [closure_14(View, obj6), ];
   const obj7 = { style: tmp.connectedAccountContentContainer, children: null };
   const items1 = [self.renderUpsell(), self.renderMetadata(), , ];
   const items2 = [result4, result3, result2, result1];
-  items1[2] = callback4(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, { hasIcons: false, children: items2 });
+  items1[2] = callback4(TableRowGroupTitle.TableRowGroup, { hasIcons: false, children: items2 });
   items1[3] = result;
   obj7[1] = items1;
   items[1] = callback4(View, obj7);

@@ -34,5 +34,5 @@ export const serializeError = function serializeError(arg0) {
     const _String = String;
     error1 = new Error(String(error));
   }
-  return JSON.stringify(BAGGAGE_HEADER_NAME /* BAGGAGE_HEADER_NAME */.normalizeToSize(error1));
+  return JSON.stringify(BAGGAGE_HEADER_NAME.normalizeToSize(error1));
 };

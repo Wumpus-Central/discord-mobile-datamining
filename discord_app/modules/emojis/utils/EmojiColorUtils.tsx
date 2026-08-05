@@ -20,7 +20,7 @@ function buildPlatformedThemedEmojiColorPalette(shouldProcessMobileColors) {
   if (null != colors) {
     palette = null;
     if (colors.length >= 1) {
-      let obj = hexToRgba /* hexToRgba */;
+      let obj = hexToRgba;
       const findColorByHsvResult = obj.findColorByHsv(colors);
       let obj1 = hslToRgb;
       const parseStringResult = obj1.parseString(findColorByHsvResult);

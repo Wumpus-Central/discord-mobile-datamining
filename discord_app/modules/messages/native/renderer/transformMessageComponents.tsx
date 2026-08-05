@@ -576,7 +576,7 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
             }
             tmpResult = tmp(4472);
           }
-          obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
+          obj = urlMatchesFileExtension;
         }
         const size = {};
         const merged = Object.assign(file);
@@ -605,7 +605,7 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
       }
     }
   }
-  VISUAL_PLACEHOLDER = MediaGalleryItemType /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
+  VISUAL_PLACEHOLDER = MediaGalleryItemType.MediaGalleryItemType.VISUAL_PLACEHOLDER;
   tmp4 = require;
 }
 let closure_3 = ["checkpointData"];
@@ -641,10 +641,10 @@ export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) 
             }
             tmpResult = tmp(4472);
           }
-          obj = urlMatchesFileExtension /* urlMatchesFileExtension */;
+          obj = urlMatchesFileExtension;
         }
       }
     }
   }
-  return MediaGalleryItemType /* MediaGalleryItemType */.MediaGalleryItemType.VISUAL_PLACEHOLDER;
+  return MediaGalleryItemType.MediaGalleryItemType.VISUAL_PLACEHOLDER;
 };

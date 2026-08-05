@@ -23,7 +23,7 @@ prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
   return closure_4;
 };
 prototype["getMaxTotalAttachmentSize"] = function getMaxTotalAttachmentSize() {
-  return items /* items */.MAX_TOTAL_ATTACHMENT_SIZE;
+  return items.MAX_TOTAL_ATTACHMENT_SIZE;
 };
 Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   get: function shouldReactNativeCompressUploads() {

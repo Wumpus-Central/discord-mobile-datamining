@@ -3,24 +3,24 @@ import { LIBDISCORE_JSI } from "../../mobile/js/index.tsx";
 let result = require("_initLibdiscore").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 
 export const isBlockedDomain = function isBlockedDomain(arg0) {
-  const BlockedDomainsStore = LIBDISCORE_JSI /* LIBDISCORE_JSI */.BlockedDomainsStore;
+  const BlockedDomainsStore = LIBDISCORE_JSI.BlockedDomainsStore;
   return BlockedDomainsStore.isBlockedDomain(arg0);
 };
 export const startFetchingBlockedDomains = function startFetchingBlockedDomains(arg0) {
-  const BlockedDomainsStore = LIBDISCORE_JSI /* LIBDISCORE_JSI */.BlockedDomainsStore;
+  const BlockedDomainsStore = LIBDISCORE_JSI.BlockedDomainsStore;
   const result = BlockedDomainsStore.startFetchingBlockedDomains(arg0);
 };
 export const consumeLogs = function consumeLogs() {
-  return LIBDISCORE_JSI /* LIBDISCORE_JSI */.consumeLogs();
+  return LIBDISCORE_JSI.consumeLogs();
 };
 export function isUnsupportedBrowser() {
   return false;
 }
 export const getExperimentCacher = function getExperimentCacher() {
-  return LIBDISCORE_JSI /* LIBDISCORE_JSI */.ExperimentCacher;
+  return LIBDISCORE_JSI.ExperimentCacher;
 };
 export const getHttpClientAPI = function getHttpClientAPI() {
-  return LIBDISCORE_JSI /* LIBDISCORE_JSI */.getHttpClientAPI();
+  return LIBDISCORE_JSI.getHttpClientAPI();
 };
 export const rustMultiply = require("LIBDISCORE_JSI").rustMultiply;
 export const crash = require("LIBDISCORE_JSI").crash;

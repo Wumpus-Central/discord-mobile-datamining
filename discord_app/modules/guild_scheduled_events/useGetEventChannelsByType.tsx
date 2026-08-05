@@ -28,7 +28,7 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
       let obj2 = channel;
       let tmp4 = require;
       let tmp5 = dependencyMap;
-      let obj3 = canManageResource /* canManageResource */;
+      let obj3 = canManageResource;
       let manageResourcePermissions = obj3.getManageResourcePermissions(channel);
       let canManageAllEvents = manageResourcePermissions.canCreateGuildEvent;
       if (!canManageAllEvents) {

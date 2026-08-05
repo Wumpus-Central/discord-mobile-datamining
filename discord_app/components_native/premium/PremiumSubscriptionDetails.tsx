@@ -676,7 +676,7 @@ export default function PremiumSubscriptionDetails(subscription) {
   subscription = subscription.subscription;
   ({ style, onClickManagePremiumGuild } = subscription);
   const tmp = callback5();
-  let obj = createSubscriptionInvoicePreview /* createSubscriptionInvoicePreview */;
+  let obj = createSubscriptionInvoicePreview;
   obj = { subscriptionId: subscription.id, renewal: true, analyticsLocations: context().analyticsLocations, analyticsLocation: QUICK_SWITCHER.PREMIUM_SUBSCRIPTION_DETAILS };
   const first = callback(obj.useFetchSubscriptionInvoicePreview(obj), 1)[0];
   let tmp7Result = null;
@@ -744,7 +744,7 @@ export const onCancelClick = function onCancelClick(subscription, analyticsLocat
 };
 export const handleManageSubscription = function handleManageSubscription(subscription, registerAsset, analyticsLocations) {
   if (subscription.status === constants3.ACCOUNT_HOLD) {
-    let obj = getPremiumPlanItem /* getPremiumPlanItem */;
+    let obj = getPremiumPlanItem;
     closure_8.openURL(obj.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"));
   } else {
     const hasActiveTrial = subscription.hasActiveTrial;
@@ -761,8 +761,8 @@ export const handleManageSubscription = function handleManageSubscription(subscr
       prop = tmp9(6780).excludeNitroOnlyPlansForActiveTrial;
     }
     obj[4] = prop;
-    const result = launchPremiumPlanSelect /* launchPremiumPlanSelect */.launchPremiumPlanSelect(obj);
-    const obj2 = launchPremiumPlanSelect /* launchPremiumPlanSelect */;
+    const result = launchPremiumPlanSelect.launchPremiumPlanSelect(obj);
+    const obj2 = launchPremiumPlanSelect;
     tmp9 = require;
   }
 };

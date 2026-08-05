@@ -44,10 +44,10 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   const tmp2 = first(React.useState(false), 2);
   first = tmp2[0];
   React = tmp2[1];
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getUser(recipientId.getRecipientId()));
-  let obj1 = useMessageRequestActions /* useMessageRequestActions */;
+  let obj1 = useMessageRequestActions;
   obj = {
     user: stateFromStores,
     onError() {
@@ -71,26 +71,26 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
     children: null
   };
   obj1 = { title: null, trailing: null, backgroundColor: null };
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[0] = intl.string(getSystemLocale /* getSystemLocale */.t["9ty6yc"]);
-  obj1[1] = callback(ActionSheetCloseButton /* ActionSheetCloseButton */.ActionSheetCloseButton, {
+  let intl = getSystemLocale.intl;
+  obj1[0] = intl.string(getSystemLocale.t["9ty6yc"]);
+  obj1[1] = callback(ActionSheetCloseButton.ActionSheetCloseButton, {
     onPress() {
       outer1_1(outer1_2[12]).hideActionSheet();
       dependencyMap();
     }
   });
   obj1[2] = tmp.header;
-  const items1 = [callback(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj1), ];
+  const items1 = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj1), ];
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.switch, label: null, value: null, switchProps: null, onValueChange: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.ZhGpNQ);
+  const intl2 = getSystemLocale.intl;
+  obj4[1] = intl2.string(getSystemLocale.t.ZhGpNQ);
   obj4[2] = first;
   obj4[3] = { renderIosBackground: true };
   obj4[4] = function onValueChange(arg0) {
     return callback2(arg0);
   };
-  const items2 = [callback(Form /* Form */.FormSwitchRow, obj4), ];
+  const items2 = [callback(Form.FormSwitchRow, obj4), ];
   const obj5 = { style: tmp.buttonContainer, children: null };
   const obj6 = {
     size: "md",
@@ -102,8 +102,8 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
     disabled: null,
     loading: null
   };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj6[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.olZgw5);
+  const intl3 = getSystemLocale.intl;
+  obj6[2] = intl3.string(getSystemLocale.t.olZgw5);
   let isUserProfileLoading = isAcceptLoading;
   if (!isAcceptLoading) {
     isUserProfileLoading = messageRequestActions.isUserProfileLoading;
@@ -116,10 +116,10 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
     isAcceptLoading = isOptimisticAccepted;
   }
   obj6[4] = isAcceptLoading;
-  obj5[1] = callback(Button /* Button */.Button, obj6);
+  obj5[1] = callback(Button.Button, obj6);
   items2[1] = callback(c5, obj5);
   obj3[1] = items2;
   items1[1] = closure_8(c5, obj3);
   obj[1] = items1;
-  return closure_8(Background /* Background */.BottomSheet, obj);
+  return closure_8(Background.BottomSheet, obj);
 };

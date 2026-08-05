@@ -11,10 +11,10 @@ function getFormatFromUrl(src) {
     const formatted = uRL.pathname.toLowerCase();
     if (!formatted.endsWith(".mp4")) {
       if (!formatted.endsWith(".webm")) {
-        return create /* create */.GIFType.IMAGE;
+        return create.GIFType.IMAGE;
       }
     }
-    return create /* create */.GIFType.VIDEO;
+    return create.GIFType.VIDEO;
   } catch (err) {
   }
 }
@@ -93,8 +93,8 @@ const gIFPickerViewStore = new GIFPickerViewStore(require("dispatcher"), {
     if (null != trendingCategories.trendingGIFPreview) {
       let obj = { type: null, name: null, src: null, format: null };
       obj[0] = GIFPickerResultTypes.TRENDING_GIFS;
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.H6zNFz);
+      const intl = getSystemLocale.intl;
+      obj[1] = intl.string(getSystemLocale.t.H6zNFz);
       obj[2] = trendingCategories.trendingGIFPreview.src;
       obj[3] = getFormatFromUrl(trendingCategories.trendingGIFPreview.src);
       const items = [obj];

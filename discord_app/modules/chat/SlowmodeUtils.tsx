@@ -21,8 +21,8 @@ export const useCanBypassSlowmode = function useCanBypassSlowmode(channel) {
 };
 export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode) {
   if (canBypassSlowmode) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t["8+NidX"]);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t["8+NidX"]);
   } else if (stateFromStores >= set.Millis.HOUR) {
     let tmp2Result = tmp2(3867);
     const durationResult = tmp2Result.duration(stateFromStores);
@@ -41,8 +41,8 @@ export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateF
     const _HermesInternal2 = HermesInternal;
     return "" + durationResult1.minutes() + ":" + combined2.padStart(2, "0");
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Icu3bf);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Icu3bf);
   }
 };
 export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitPerUser) {
@@ -58,8 +58,8 @@ export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitP
     const rounded1 = Math.floor(diff / tmp(687).Seconds.MINUTE);
     const diff1 = rateLimitPerUser - rounded * tmp(687).Seconds.HOUR;
     const diff2 = diff1 - rounded1 * tmp(687).Seconds.MINUTE;
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    const t3 = getSystemLocale /* getSystemLocale */.t;
+    const intl3 = getSystemLocale.intl;
+    const t3 = getSystemLocale.t;
     let obj = { hours: null, minutes: null, seconds: null };
     obj[0] = rounded;
     obj[1] = rounded1;
@@ -68,15 +68,15 @@ export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitP
   } else if (rateLimitPerUser >= 60) {
     const _Math = Math;
     const rounded2 = Math.floor(rateLimitPerUser / 60);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    const t2 = getSystemLocale /* getSystemLocale */.t;
+    const intl2 = getSystemLocale.intl;
+    const t2 = getSystemLocale.t;
     obj = { minutes: null, seconds: null };
     obj[0] = rounded2;
     obj[1] = rateLimitPerUser - 60 * rounded2;
     return intl2.formatToPlainString(flag ? t2.DARKYm : t2.sY3wlG, obj);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const intl = getSystemLocale.intl;
+    const t = getSystemLocale.t;
     obj = { seconds: null };
     obj[0] = rateLimitPerUser;
     return intl.formatToPlainString(flag ? t["9yE8Ga"] : t.IWntYg, obj);

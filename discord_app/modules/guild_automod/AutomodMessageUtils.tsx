@@ -149,7 +149,7 @@ function getQuarantineEventFromMessage(embeds) {
   return null != tmp2 ? tmp2 : undefined;
 }
 function _getUserProfileRuleHeaderText(arg0, arg1, arg2) {
-  if (AutomodQuarantineUserActionMessageEmbedKeys /* AutomodQuarantineUserActionMessageEmbedKeys */.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_PROFILE_UPDATE === arg1) {
+  if (AutomodQuarantineUserActionMessageEmbedKeys.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_PROFILE_UPDATE === arg1) {
     if (tmp(6879).AutomodBlockProfileUpdateMessageEmbedKeys.NICKNAME_UPDATE === arg0) {
       const intl6 = tmp(1236).intl;
       let stringResult = intl6.string(tmp(1236).t.t98DPb);
@@ -838,7 +838,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel)
   }
 };
 export const getQuarantineReasonString = function getQuarantineReasonString(quarantineType) {
-  if (AutomodQuarantineUserMessageEmbedKeys /* AutomodQuarantineUserMessageEmbedKeys */.AutomodQuarantineUserMessageEmbedKeys.NICKNAME === quarantineType) {
+  if (AutomodQuarantineUserMessageEmbedKeys.AutomodQuarantineUserMessageEmbedKeys.NICKNAME === quarantineType) {
     const intl5 = tmp(1236).intl;
     return intl5.string(tmp(1236).t["fkBQa/"]);
   } else if (tmp(6883).AutomodQuarantineUserMessageEmbedKeys.USERNAME === quarantineType) {
@@ -1100,9 +1100,9 @@ export const useAutomodAlertActions = function useAutomodAlertActions(message) {
 };
 export const getRaidAlertResolveCTAText = function getRaidAlertResolveCTAText(resolvedReason) {
   if (null == resolvedReason) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    return intl5.string(getSystemLocale /* getSystemLocale */.t.Gh3A0O);
-  } else if (Feedback /* Feedback */.RaidResolutionType.LEGITIMATE_ACTIVITY === resolvedReason) {
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t.Gh3A0O);
+  } else if (Feedback.RaidResolutionType.LEGITIMATE_ACTIVITY === resolvedReason) {
     const intl4 = tmp3(1236).intl;
     return intl4.string(tmp3(1236).t["riQ+HH"]);
   } else if (tmp3(6886).RaidResolutionType.DM_SPAM === resolvedReason) {

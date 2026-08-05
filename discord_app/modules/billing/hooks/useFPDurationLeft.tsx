@@ -65,26 +65,26 @@ const result = require("resetCache").fileFinishedImporting("modules/billing/hook
 export default function useFPDurationLeft(toDate) {
   if (obj.SHORT_TIME_LEFT === arg1) {
     obj = { days: null, hours: null, minutes: null };
-    obj[0] = getSystemLocale /* getSystemLocale */.t["/wnvqA"];
-    obj[1] = getSystemLocale /* getSystemLocale */.t.Jsq0XN;
-    obj[2] = getSystemLocale /* getSystemLocale */.t["SBd+Bs"];
+    obj[0] = getSystemLocale.t["/wnvqA"];
+    obj[1] = getSystemLocale.t.Jsq0XN;
+    obj[2] = getSystemLocale.t["SBd+Bs"];
   } else if (tmp.LONG_TIME_LEFT === arg1) {
     obj = { days: null, hours: null, minutes: null };
-    obj[0] = getSystemLocale /* getSystemLocale */.t.UD5nn5;
-    obj[1] = getSystemLocale /* getSystemLocale */.t.Hg8Fee;
-    obj[2] = getSystemLocale /* getSystemLocale */.t.XSbQZZ;
+    obj[0] = getSystemLocale.t.UD5nn5;
+    obj[1] = getSystemLocale.t.Hg8Fee;
+    obj[2] = getSystemLocale.t.XSbQZZ;
   } else {
     if (tmp.ENDS_IN === arg1) {
       const obj1 = { days: null, hours: null, minutes: null };
-      obj1[0] = getSystemLocale /* getSystemLocale */.t.rLqNad;
-      obj1[1] = getSystemLocale /* getSystemLocale */.t.d1LvCA;
-      obj1[2] = getSystemLocale /* getSystemLocale */.t.Z2LX7K;
+      obj1[0] = getSystemLocale.t.rLqNad;
+      obj1[1] = getSystemLocale.t.d1LvCA;
+      obj1[2] = getSystemLocale.t.Z2LX7K;
     } else if (tmp.CREDITS_ENDS_IN !== arg1) {
       if (tmp.SHORT_TIME === arg1) {
         obj = { days: null, hours: null, minutes: null };
-        obj[0] = getSystemLocale /* getSystemLocale */.t.fYmirx;
-        obj[1] = getSystemLocale /* getSystemLocale */.t["C3RO+g"];
-        obj[2] = getSystemLocale /* getSystemLocale */.t.r77oHc;
+        obj[0] = getSystemLocale.t.fYmirx;
+        obj[1] = getSystemLocale.t["C3RO+g"];
+        obj[2] = getSystemLocale.t.r77oHc;
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
@@ -93,9 +93,9 @@ export default function useFPDurationLeft(toDate) {
       }
     }
     const obj2 = { days: null, hours: null, minutes: null };
-    obj2[0] = getSystemLocale /* getSystemLocale */.t.xQ3zuN;
-    obj2[1] = getSystemLocale /* getSystemLocale */.t.SFU7QN;
-    obj2[2] = getSystemLocale /* getSystemLocale */.t.Y4FNdL;
+    obj2[0] = getSystemLocale.t.xQ3zuN;
+    obj2[1] = getSystemLocale.t.SFU7QN;
+    obj2[2] = getSystemLocale.t.Y4FNdL;
   }
   roundFPCountdownUnits(useCountdown(toDate.toDate(), 60000));
 };

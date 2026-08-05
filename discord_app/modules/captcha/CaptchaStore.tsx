@@ -52,7 +52,7 @@ export const flushCaptchaServeVolume = function flushCaptchaServeVolume() {
     let obj = set;
     obj = { name: null, tags: null };
     let tmp10 = require;
-    obj[0] = set /* set */.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION;
+    obj[0] = set.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION;
     let _HermesInternal = HermesInternal;
     let items = ["user_flow:" + tmp6];
     obj[1] = items;
@@ -60,5 +60,5 @@ export const flushCaptchaServeVolume = function flushCaptchaServeVolume() {
     continue;
   }
   tmp2 = entries[Symbol.iterator]();
-  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState({ captchaServeVolume: {} }));
+  batchUpdates.batchUpdates(() => state.setState({ captchaServeVolume: {} }));
 };

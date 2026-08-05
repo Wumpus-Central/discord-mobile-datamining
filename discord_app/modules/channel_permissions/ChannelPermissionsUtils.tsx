@@ -49,8 +49,8 @@ function sortRoles(guildId, id) {
   if (num2 !== num) {
     let diff = num2 - num;
   } else {
-    diff = compareGuildRoles /* compareGuildRoles */.compareGuildRoles(guildId, id);
-    const obj = compareGuildRoles /* compareGuildRoles */;
+    diff = compareGuildRoles.compareGuildRoles(guildId, id);
+    const obj = compareGuildRoles;
   }
   return diff;
 }
@@ -92,8 +92,8 @@ export { sortRoles };
 export const getNoRolesRow = function getNoRolesRow() {
   let stringResult = arg0;
   if (arg0 === undefined) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["gnsna/"]);
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t["gnsna/"]);
   }
   const items = [{ rowType: RowType.EMPTY_STATE, colorString: closure_13, name: stringResult, disabled: true, id: "EMPTY_STATE" }];
   return items;
@@ -527,44 +527,44 @@ export const getExistingMembersRows = function getExistingMembersRows(memberIds,
 };
 export const getRowTypeLabel = function getRowTypeLabel(rowType) {
   if (RowType.ROLE === rowType) {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
-    return intl6.string(getSystemLocale /* getSystemLocale */.t.ZxoFOG);
+    const intl6 = getSystemLocale.intl;
+    return intl6.string(getSystemLocale.t.ZxoFOG);
   } else if (tmp.OWNER === rowType) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    return intl5.string(getSystemLocale /* getSystemLocale */.t.NWhYJg);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t.NWhYJg);
   } else if (tmp.ADMINISTRATOR === rowType) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t["dwlcc+"]);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t["dwlcc+"]);
   } else if (tmp.MEMBER === rowType) {
     let stringResult = null;
     if (arg1) {
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t.UAJxZi);
+      const intl3 = getSystemLocale.intl;
+      stringResult = intl3.string(getSystemLocale.t.UAJxZi);
     }
     return stringResult;
   } else if (tmp.USER === rowType) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.KD6OJJ);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.KD6OJJ);
   } else if (tmp.GUILD === rowType) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["5qyruI"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["5qyruI"]);
   } else if (tmp.EMPTY_STATE === rowType) {
     return null;
   }
 };
 export const getRemoveTooltipHint = function getRemoveTooltipHint(arg0) {
   if (RowType.ROLE === arg0) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t["Gzc/a8"]);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t["Gzc/a8"]);
   } else if (tmp.OWNER === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.icuNBM);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.icuNBM);
   } else if (tmp.ADMINISTRATOR === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.eTmN5a);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.eTmN5a);
   } else if (tmp.MEMBER === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["Gzc/a8"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Gzc/a8"]);
   } else {
     const EMPTY_STATE = tmp.EMPTY_STATE;
     return null;
@@ -605,7 +605,7 @@ export const toggleChannelEveryonePermission = function toggleChannelEveryonePer
     const tmp5Result = tmp5(506);
   }
   const obj4 = importAll(506);
-  _updatePermission /* _updatePermission */.updatePermission(guild_id, obj.id, obj.allow, obj.deny);
+  _updatePermission.updatePermission(guild_id, obj.id, obj.allow, obj.deny);
 };
 export const grantUserChannelAccess = function grantUserChannelAccess(outer1_0, accessPermissions) {
   let allow;
@@ -615,16 +615,16 @@ export const grantUserChannelAccess = function grantUserChannelAccess(outer1_0, 
     if (null == outer1_0.permissionOverwrites[currentUser.id]) {
       let obj = { id: null, type: null, allow: null, deny: null };
       obj[0] = currentUser.id;
-      obj[1] = PermissionOverwriteType /* PermissionOverwriteType */.PermissionOverwriteType.MEMBER;
+      obj[1] = PermissionOverwriteType.PermissionOverwriteType.MEMBER;
       obj[2] = importAll(506).add(importAll(3918).NONE, accessPermissions);
       obj[3] = importAll(3918).NONE;
       const obj4 = importAll(506);
       const items = [obj];
-      return _updatePermission /* _updatePermission */.savePermissionUpdates(outer1_0.id, items, true);
+      return _updatePermission.savePermissionUpdates(outer1_0.id, items, true);
     } else {
       ({ allow, deny } = tmp4);
       obj = importAll(506);
-      const obj2 = _updatePermission /* _updatePermission */;
+      const obj2 = _updatePermission;
       return obj2.updatePermission(outer1_0, tmp4.id, obj.add(allow, accessPermissions), deny);
     }
   }
@@ -686,18 +686,18 @@ export const getPrivateChannelHintText = function getPrivateChannelHintText(firs
   if (constants2.GUILD_TEXT !== first1) {
     if (tmp.GUILD_ANNOUNCEMENT !== first1) {
       if (tmp.GUILD_VOICE === first1) {
-        const intl2 = getSystemLocale /* getSystemLocale */.intl;
-        return intl2.format(getSystemLocale /* getSystemLocale */.t.iZAMty, {});
+        const intl2 = getSystemLocale.intl;
+        return intl2.format(getSystemLocale.t.iZAMty, {});
       } else if (tmp.GUILD_CATEGORY === first1) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        return intl.format(getSystemLocale /* getSystemLocale */.t.PhnARV, {});
+        const intl = getSystemLocale.intl;
+        return intl.format(getSystemLocale.t.PhnARV, {});
       } else {
         return null;
       }
     }
   }
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  return intl3.format(getSystemLocale /* getSystemLocale */.t.ZDtA0T, {});
+  const intl3 = getSystemLocale.intl;
+  return intl3.format(getSystemLocale.t.ZDtA0T, {});
 };
 export const extractPermissionOverwrites = function extractPermissionOverwrites(arg0, arg1) {
   let closure_0 = arg1;

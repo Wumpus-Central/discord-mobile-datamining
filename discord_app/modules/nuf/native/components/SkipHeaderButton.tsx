@@ -17,8 +17,8 @@ export default function SkipHeaderButton(label) {
   const tmp = createCacheKey();
   label = label.label;
   if (label == null) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    label = intl.string(getSystemLocale /* getSystemLocale */.t["5Wxrcd"]);
+    const intl = getSystemLocale.intl;
+    label = intl.string(getSystemLocale.t["5Wxrcd"]);
   }
   const obj = {};
   const merged = Object.assign(label);
@@ -31,5 +31,5 @@ export default function SkipHeaderButton(label) {
   obj.labelStyle = items;
   obj.label = label;
   obj.accessibilityLabel = label;
-  return jsx(GenericHeaderTitle /* GenericHeaderTitle */.HeaderTextButton, {});
+  return jsx(GenericHeaderTitle.HeaderTextButton, {});
 };

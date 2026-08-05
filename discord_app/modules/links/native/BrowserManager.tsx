@@ -12,7 +12,7 @@ let c4;
 ({ AppState: c3, NativeEventEmitter: c4, NativeModules } = get_ActivityIndicator);
 let BrowserManager = NativeModules.BrowserManager;
 let closure_7 = keys.create(() => {
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isAndroid()) {
     let isChromeInstalled = enforcing.getConstants().isChromeInstalled;
     const obj2 = enforcing;
@@ -75,7 +75,7 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
   if (CHROME === undefined) {
     selectedBrowser = store.getState().selectedBrowser;
   }
-  if (selectedBrowser !== keys /* keys */.WebBrowserType.SAFARI) {
+  if (selectedBrowser !== keys.WebBrowserType.SAFARI) {
     if (selectedBrowser !== tmp2(691).WebBrowserType.CHROME) {
       if (selectedBrowser === tmp2(691).WebBrowserType.IN_APP) {
         let tmp2Result = tmp2(500);
@@ -146,7 +146,7 @@ export const browserManagerOpenUrl = function browserManagerOpenUrl(closure_0, C
   return Promise.resolve();
 };
 export const browserManagerSelectBrowser = function browserManagerSelectBrowser(selectedBrowser) {
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isAndroid()) {
     if (tmp(691).WebBrowserType.SAFARI === selectedBrowser) {
       const browser = enforcing.selectBrowser(tmp(4252).BrowserType.SAFARI);

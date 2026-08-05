@@ -49,20 +49,20 @@ export default {
   },
   getButtonTitle(arg0) {
     if (VerificationTypes.EMAIL === arg0) {
-      const intl5 = getSystemLocale /* getSystemLocale */.intl;
-      return intl5.string(getSystemLocale /* getSystemLocale */.t["1MPz27"]);
+      const intl5 = getSystemLocale.intl;
+      return intl5.string(getSystemLocale.t["1MPz27"]);
     } else if (tmp.PHONE === arg0) {
-      const intl4 = getSystemLocale /* getSystemLocale */.intl;
-      return intl4.string(getSystemLocale /* getSystemLocale */.t.mjJeco);
+      const intl4 = getSystemLocale.intl;
+      return intl4.string(getSystemLocale.t.mjJeco);
     } else if (tmp.REVERIFY_EMAIL === arg0) {
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      return intl3.string(getSystemLocale /* getSystemLocale */.t.nmdPFX);
+      const intl3 = getSystemLocale.intl;
+      return intl3.string(getSystemLocale.t.nmdPFX);
     } else if (tmp.REVERIFY_PHONE === arg0) {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      return intl2.string(getSystemLocale /* getSystemLocale */.t.of2125);
+      const intl2 = getSystemLocale.intl;
+      return intl2.string(getSystemLocale.t.of2125);
     } else {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["oF6+Ww"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["oF6+Ww"]);
     }
   },
   areVerificationTypesEqual(arg0, arg1) {

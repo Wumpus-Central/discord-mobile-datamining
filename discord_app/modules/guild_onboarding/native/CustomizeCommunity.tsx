@@ -61,10 +61,10 @@ function PromptTitle(item) {
   if (item.required) {
     obj = { variant: "text-md/bold", color: "text-feedback-critical", children: null };
     obj[2] = [" ", "*"];
-    tmp3Result = tmp3(Text /* Text */.Text, obj);
+    tmp3Result = tmp3(Text.Text, obj);
   }
   items[1] = tmp3Result;
-  obj[1] = closure_17(Text /* Text */.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: items });
+  obj[1] = closure_17(Text.Heading, { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: items });
   return closure_16(closure_4, obj);
 }
 function PromptHelpText(arg0) {

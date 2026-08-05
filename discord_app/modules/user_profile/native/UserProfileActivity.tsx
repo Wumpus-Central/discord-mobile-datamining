@@ -43,7 +43,7 @@ function ActivityCardText(children) {
       const obj = {};
       const merged1 = Object.assign(merged);
       obj.children = trimmed;
-      tmp3 = callback(Text /* Text */.Text, obj);
+      tmp3 = callback(Text.Text, obj);
     }
   }
   return tmp3;

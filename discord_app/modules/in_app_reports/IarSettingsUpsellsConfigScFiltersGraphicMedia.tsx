@@ -4,16 +4,16 @@ import { getSystemLocale } from "../../intl/index.native.tsx";
 import { resolveGoreSettingWithDefaults } from "../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
 let obj = {
   getTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.RVX1zT);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.RVX1zT);
   },
   getDisabledTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.SYkEBi);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.SYkEBi);
   },
   getDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.aqlmp8);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.aqlmp8);
   },
   eligibleReportSubtypes: null,
   onApply: null,
@@ -25,17 +25,17 @@ obj[4] = function onApply() {
   let goreContentFriendDm;
   let goreContentGuilds;
   let goreContentNonFriendDm;
-  let obj = resolveGoreSettingWithDefaults /* resolveGoreSettingWithDefaults */;
-  const goreContentSettingOrDefault = resolveGoreSettingWithDefaults /* resolveGoreSettingWithDefaults */.getGoreContentSettingOrDefault();
+  let obj = resolveGoreSettingWithDefaults;
+  const goreContentSettingOrDefault = resolveGoreSettingWithDefaults.getGoreContentSettingOrDefault();
   obj = {};
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
-  if (goreContentGuilds === create /* create */.ExplicitContentRedaction.SHOW) {
+  if (goreContentGuilds === create.ExplicitContentRedaction.SHOW) {
     obj.goreContentGuilds = tmp(1306).ExplicitContentRedaction.BLUR;
   }
-  if (goreContentFriendDm === create /* create */.ExplicitContentRedaction.SHOW) {
+  if (goreContentFriendDm === create.ExplicitContentRedaction.SHOW) {
     obj.goreContentFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
   }
-  if (goreContentNonFriendDm === create /* create */.ExplicitContentRedaction.SHOW) {
+  if (goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW) {
     obj.goreContentNonFriendDm = tmp(1306).ExplicitContentRedaction.BLUR;
   }
   return obj.updateGoreContentSetting(obj);
@@ -44,10 +44,10 @@ obj[5] = function predicate() {
   let goreContentFriendDm;
   let goreContentGuilds;
   let goreContentNonFriendDm;
-  const goreContentSettingOrDefault = resolveGoreSettingWithDefaults /* resolveGoreSettingWithDefaults */.getGoreContentSettingOrDefault();
+  const goreContentSettingOrDefault = resolveGoreSettingWithDefaults.getGoreContentSettingOrDefault();
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
-  const obj = resolveGoreSettingWithDefaults /* resolveGoreSettingWithDefaults */;
-  return goreContentGuilds === create /* create */.ExplicitContentRedaction.SHOW || goreContentFriendDm === create /* create */.ExplicitContentRedaction.SHOW || goreContentNonFriendDm === create /* create */.ExplicitContentRedaction.SHOW;
+  const obj = resolveGoreSettingWithDefaults;
+  return goreContentGuilds === create.ExplicitContentRedaction.SHOW || goreContentFriendDm === create.ExplicitContentRedaction.SHOW || goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW;
 };
 const result = require("getSystemLocale").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");
 

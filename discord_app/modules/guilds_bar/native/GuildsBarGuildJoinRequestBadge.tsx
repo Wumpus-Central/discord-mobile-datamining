@@ -22,7 +22,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/guilds_bar/nati
 export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   joinRequestState = joinRequestState.joinRequestState;
   const tmp = createCacheKey();
-  if (MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
+  if (MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
     let tmp4 = registerAsset;
   } else if (tmp2(4105).GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
     tmp4 = registerAsset;

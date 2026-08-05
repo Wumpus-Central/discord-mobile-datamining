@@ -27,12 +27,12 @@ export const canViewMobileServerTag = function canViewMobileServerTag(id) {
   const guild = store.getGuild(id);
   let enabled = null != guild;
   if (enabled) {
-    let obj = guildHasTag /* guildHasTag */;
+    let obj = guildHasTag;
     enabled = obj.guildSupportsTags(guild);
   }
   if (enabled) {
-    enabled = guildHasTag /* guildHasTag */.guildHasTag(guild);
-    const obj2 = guildHasTag /* guildHasTag */;
+    enabled = guildHasTag.guildHasTag(guild);
+    const obj2 = guildHasTag;
   }
   if (enabled) {
     obj = { location: null };

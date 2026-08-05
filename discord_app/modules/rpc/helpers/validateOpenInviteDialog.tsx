@@ -45,7 +45,7 @@ export const validateOpenInviteDialog = function validateOpenInviteDialog() {
           tmp2 = new tmp2(obj, "No invite permissions for " + obj6.id);
           throw tmp2;
         }
-        obj7 = canViewInviteModal /* canViewInviteModal */;
+        obj7 = canViewInviteModal;
       }
     }
   }

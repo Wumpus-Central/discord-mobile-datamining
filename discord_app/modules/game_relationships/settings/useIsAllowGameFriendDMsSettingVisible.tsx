@@ -7,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/game_relationships/
 
 export const useIsAllowGameFriendDMsSettingVisible = function useIsAllowGameFriendDMsSettingVisible() {
   const items = [recountRelationshipTypes];
-  return initialize /* initialize */.useStateFromStores(items, () => gameRelationshipCount.getGameRelationshipCount() > 0);
+  return initialize.useStateFromStores(items, () => gameRelationshipCount.getGameRelationshipCount() > 0);
 };

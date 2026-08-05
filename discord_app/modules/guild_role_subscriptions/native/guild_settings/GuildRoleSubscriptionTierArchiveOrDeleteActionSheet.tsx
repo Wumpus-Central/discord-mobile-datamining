@@ -44,15 +44,15 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
   ({ headerText, buttonText, descriptionText, handleArchiveOrDelete, archiving } = tmp4);
   let obj = { style: tmp.container, children: null };
   obj = { contentContainerStyle: { paddingBottom: useSafeAreaInsets().bottom }, children: null };
-  const items = [callback(Text /* Text */.Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: headerText }), callback(Button /* Button */.Spacer, { size: 12 }), callback(Text /* Text */.Text, { variant: "text-sm/normal", color: "text-default", children: descriptionText }), callback(Button /* Button */.Spacer, { size: 24 }), , , ];
+  const items = [callback(Text.Text, { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: headerText }), callback(Button.Spacer, { size: 12 }), callback(Text.Text, { variant: "text-sm/normal", color: "text-default", children: descriptionText }), callback(Button.Spacer, { size: 24 }), , , ];
   obj = { text: buttonText, variant: "destructive", grow: true, onPress: handleArchiveOrDelete, disabled: null };
   if (!deleting) {
     deleting = archiving;
   }
   const obj1 = { backdropOpacity: 0.8, children: null };
   obj[4] = deleting;
-  items[4] = callback(Button /* Button */.Button, obj);
-  items[5] = callback(Button /* Button */.Spacer, { size: 24 });
+  items[4] = callback(Button.Button, obj);
+  items[5] = callback(Button.Spacer, { size: 24 });
   const obj2 = {
     onPress() {
       return callback(table[13]).hideActionSheet();
@@ -63,11 +63,11 @@ export default function GuildRoleSubscriptionTierArchiveOrDeleteActionSheet(grou
   };
   const obj3 = { variant: "text-sm/semibold", color: "interactive-text-active", children: null };
   const intl = tmp6(1236).intl;
-  obj3[2] = intl.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
-  obj2[3] = callback(Text /* Text */.Text, obj3);
+  obj3[2] = intl.string(getSystemLocale.t["ETE/oC"]);
+  obj2[3] = callback(Text.Text, obj3);
   items[6] = callback(closure_3, obj2);
   obj[1] = items;
-  obj[1] = closure_6(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, obj);
+  obj[1] = closure_6(BottomSheetModal.BottomSheetScrollView, obj);
   obj1[1] = callback(closure_4, obj);
-  return callback(Background /* Background */.BottomSheet, obj1);
+  return callback(Background.BottomSheet, obj1);
 };

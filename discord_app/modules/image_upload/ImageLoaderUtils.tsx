@@ -84,8 +84,8 @@ function getSrcWithWidthAndHeight(quality) {
       obj[1] = targetHeight;
       obj[2] = closure_6;
       obj[3] = closure_6;
-      const obj3 = fit /* fit */;
-      ({ width, height } = fit /* fit */.fit(obj));
+      const obj3 = fit;
+      ({ width, height } = fit.fit(obj));
       if (width !== sourceWidth) {
         if ((function isAttachmentLadderEnabled(arg0) {
           try {

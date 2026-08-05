@@ -25,7 +25,7 @@ export const PileOverflow = function PileOverflow(size) {
   let value;
   size = size.size;
   ({ borderRadius, value } = size);
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   const items1 = [createCacheKey().container, ];
@@ -42,8 +42,8 @@ export const PileOverflow = function PileOverflow(size) {
     str = "text-md/semibold";
   }
   const obj1 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: str, children: null };
-  const items2 = ["+", shortenAndLocalizeNumber /* shortenAndLocalizeNumber */.humanizeValue(value, stateFromStores)];
+  const items2 = ["+", shortenAndLocalizeNumber.humanizeValue(value, stateFromStores)];
   obj1[3] = items2;
-  obj[1] = closure_4(Text /* Text */.Text, obj1);
+  obj[1] = closure_4(Text.Text, obj1);
   return closure_5(View, obj);
 };

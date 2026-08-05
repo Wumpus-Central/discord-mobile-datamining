@@ -24,9 +24,9 @@ export default function ViewAllRow(title) {
   obj = { style: callback().expandCTALabelContainer, children: null };
   const obj1 = { color: "text-brand", variant: "text-md/semibold", children: null };
   const intl2 = tmp3(1236).intl;
-  obj1[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.gVw57p, {});
-  obj[1] = jsx(Text /* Text */.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
+  obj1[2] = intl2.format(getSystemLocale.t.gVw57p, {});
+  obj[1] = jsx(Text.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
   obj[1] = <View style={callback().expandCTALabelContainer}>{null}</View>;
   obj[2] = title.onPress;
-  return jsx(TableRowInner /* TableRowInner */.TableRow, { style: callback().expandCTALabelContainer, children: null });
+  return jsx(TableRowInner.TableRow, { style: callback().expandCTALabelContainer, children: null });
 };

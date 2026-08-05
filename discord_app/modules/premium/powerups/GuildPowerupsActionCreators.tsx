@@ -146,10 +146,10 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
   });
 };
 export const enablePowerupForGuild = function enablePowerupForGuild(arg0, arg1) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   return HTTP.post({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
 };
 export const disablePowerupForGuild = function disablePowerupForGuild(arg0, arg1) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   return HTTP.del({ url: Endpoints.GUILD_POWERUP_TOGGLE(arg0, arg1), rejectWithError: true });
 };

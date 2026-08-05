@@ -31,7 +31,7 @@ function ActionSheetSelector(arg0) {
   let obj = { header: null, children: null };
   obj = { title: "Select Action Sheet", subtitle: null };
   obj[1] = "" + items.length + " options";
-  obj[0] = callback2(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  obj[0] = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
   obj = { style: null, children: null };
   obj[0] = { paddingHorizontal: onSelect(712).space.PX_12 };
   const obj2 = { hasIcons: true, children: null };
@@ -52,9 +52,9 @@ function ActionSheetSelector(arg0) {
     obj[6] = arg1 === outer1_10.length - 1;
     return outer1_7(outer1_0(5315).TableRow, obj, type.type);
   });
-  obj[1] = callback2(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj2);
+  obj[1] = callback2(TableRowGroupTitle.TableRowGroup, obj2);
   obj[1] = callback2(closure_5, obj);
-  return callback2(Background /* Background */.BottomSheet, obj);
+  return callback2(Background.BottomSheet, obj);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);
@@ -85,7 +85,7 @@ let items = [
     label: "Inappropriate Conversation",
     description: "Shows safety warning for inappropriate conversations",
     show() {
-      return ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(14938, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
+      return ModalActionCreators.pushLazy(asyncRequireImpl(14938, dependencyMap.paths), { warningId: "test-warning-123", warningType: "inappropriate_conversation", senderId: "123456789", channelId: "987654321" }, "INAPPROPRIATE_CONVERSATION_TAKEOVER_MODAL");
     }
   }
 ];

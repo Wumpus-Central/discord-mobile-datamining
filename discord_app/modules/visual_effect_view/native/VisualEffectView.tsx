@@ -37,9 +37,9 @@ export default require("noop").forwardRef(function VisualEffectView(blurAmount) 
   }
   const merged = Object.assign(blurAmount, Object.create(null));
   ({ blurAmountOverride, blurTintRgbaOverride, blurEffectNameOverride } = callback());
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.LEGACY_BLUR_FALLBACK_DEFAULT, blurTheme);
-  let obj1 = map /* map */;
+  let obj1 = map;
   let token1 = obj1.useToken(Themes.colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN, blurTheme);
   if ("default" === blurStyle) {
     token1 = token;
@@ -141,7 +141,7 @@ export const isBlurDisabled = function isBlurDisabled(merged) {
     let tmp4 = null == tmp;
     if (!tmp4) {
       if (android_softwareBlurDisabled) {
-        android_softwareBlurDisabled = !MODERN_ANDROID_BLURRING_AVAILABLE /* MODERN_ANDROID_BLURRING_AVAILABLE */.MODERN_ANDROID_BLURRING_AVAILABLE;
+        android_softwareBlurDisabled = !MODERN_ANDROID_BLURRING_AVAILABLE.MODERN_ANDROID_BLURRING_AVAILABLE;
       }
       tmp4 = true === android_softwareBlurDisabled;
     }

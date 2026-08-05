@@ -675,7 +675,7 @@ prototype["getStreamAnalyticsProperties"] = function getStreamAnalyticsPropertie
   ({ streamRegion, streamApplication, streamSourceType, actionContext } = analyticsContext);
   ({ ownerId, guildId } = streamContext);
   region = region.getRegion(hostname.getHostname());
-  let obj = removeExecutablePathPrefix /* removeExecutablePathPrefix */;
+  let obj = removeExecutablePathPrefix;
   const runningGameAnalytics = obj.getRunningGameAnalytics(streamApplication);
   obj = { channel_id: this.channelId, rtc_connection_id: this.getRTCConnectionId(), media_session_id: this.getMediaSessionId(), parent_media_session_id: this.parentMediaSessionId, sender_user_id: ownerId, context: MediaEngineContextTypes.STREAM, guild_id: guildId, stream_region: streamRegion, stream_source_type: streamSourceType, guild_region: region, participant_type: null, share_application_name: null, share_application_id: null, share_application_executable: null, share_application_distributor: null, share_application_distributor_game_id: null, share_application_game_metadata: null, video_layout: null, client_event_source: null, voice_backend_version: null, rtc_worker_backend_version: null };
   ({ gameName, gameId, exe, distributor, sku, gameMetadata } = runningGameAnalytics);
@@ -837,7 +837,7 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(arg0) {
 };
 prototype["getExtraConnectionOptions"] = function getExtraConnectionOptions() {
   const obj = { streamUserId: null };
-  obj[0] = isStreamKey /* isStreamKey */.decodeStreamKey(this.streamKey).ownerId;
+  obj[0] = isStreamKey.decodeStreamKey(this.streamKey).ownerId;
   return obj;
 };
 prototype["getMediaStreamKey"] = function getMediaStreamKey() {

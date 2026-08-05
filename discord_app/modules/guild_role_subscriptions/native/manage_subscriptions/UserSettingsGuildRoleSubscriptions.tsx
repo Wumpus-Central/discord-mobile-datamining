@@ -20,13 +20,13 @@ function GuildRoleSubscriptionsSectionHeader() {
   const tmp = callback3();
   let obj = { style: tmp.sectionHeader, children: null };
   obj = { variant: "eyebrow", color: "text-default", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["KzCF/6"]);
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["KzCF/6"]);
+  const items = [callback(Text.Text, obj), ];
   obj = { style: tmp.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["Y+ucR7"]);
-  items[1] = callback(Text /* Text */.Text, obj);
+  const intl2 = getSystemLocale.intl;
+  obj[3] = intl2.string(getSystemLocale.t["Y+ucR7"]);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(closure_3, obj);
 }
@@ -38,7 +38,7 @@ function renderSectionHeader(section) {
   return tmp;
 }
 function ItemSeparator() {
-  return callback(Button /* Button */.Spacer, { size: 8 });
+  return callback(Button.Spacer, { size: 8 });
 }
 ({ View: c3, SectionList: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -50,7 +50,7 @@ export default function UserSettingsGuildRoleSubscriptions() {
   const tmp = callback3();
   useRestorePurchases({ forceRestore: true });
   const tmp5 = useActiveGuildSubscriptions({ ensureFresh: true });
-  let obj = useFetchListingsForGuild /* useFetchListingsForGuild */;
+  let obj = useFetchListingsForGuild;
   if (obj.useFetchListingsForSubscriptions(tmp5).loading) {
     let tmp6Result = tmp6(LoadingIndicator, {});
   } else {

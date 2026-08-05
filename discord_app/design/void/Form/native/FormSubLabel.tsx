@@ -16,5 +16,5 @@ export default function FormSubLabel(color) {
   if (color === undefined) {
     color = "text-subtle";
   }
-  return jsx(Text /* Text */.Text, { color, variant: "text-xs/normal", lineClamp, style, accessible, children });
+  return jsx(Text.Text, { color, variant: "text-xs/normal", lineClamp, style, accessible, children });
 };

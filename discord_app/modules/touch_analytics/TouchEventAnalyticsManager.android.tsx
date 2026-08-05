@@ -13,8 +13,8 @@ function updateEnabledState() {
   }
   let result = true === isStaffResult;
   if (!result) {
-    result = apexExperiment /* apexExperiment */.isZoomedExperimentEnabled();
-    const obj2 = apexExperiment /* apexExperiment */;
+    result = apexExperiment.isZoomedExperimentEnabled();
+    const obj2 = apexExperiment;
   }
   if (result) {
     if (!c4) {

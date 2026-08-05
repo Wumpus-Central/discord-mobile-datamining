@@ -35,5 +35,5 @@ export default function ForumPostMessageContent(senderModifier) {
   const items = [style, tmp.text];
   obj[4] = items;
   obj[5] = content;
-  return jsx(Text /* Text */.Text, { variant, color: null, lineClamp: null, ellipsizeMode: "tail", style: null, children: null });
+  return jsx(Text.Text, { variant, color: null, lineClamp: null, ellipsizeMode: "tail", style: null, children: null });
 };

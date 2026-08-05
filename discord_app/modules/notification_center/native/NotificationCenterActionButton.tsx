@@ -14,7 +14,7 @@ export default function NotificationCenterActionButton() {
   obj[3] = function onPress() {
     return callback2(paths[4]).openLazy(callback(paths[6])(paths[5], paths.paths), "NotificationCenterActionSheet");
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t["UKOtz+"]);
-  return jsx(IconButton /* IconButton */.IconButton, { variant: "tertiary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 2 });
+  const intl = getSystemLocale.intl;
+  obj[4] = intl.string(getSystemLocale.t["UKOtz+"]);
+  return jsx(IconButton.IconButton, { variant: "tertiary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 2 });
 };

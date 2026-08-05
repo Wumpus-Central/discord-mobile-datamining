@@ -33,12 +33,12 @@ const memoResult = importAllResult.memo((user) => {
   if (globalName == null) {
     username = user.username;
   }
-  const children = [closure_7(Text /* Text */.Text, { variant: "text-md/semibold", children: username }), ];
+  const children = [closure_7(Text.Text, { variant: "text-md/semibold", children: username }), ];
   let tmp5Result = null != globalName;
   if (tmp5Result) {
     obj = { variant: "text-xs/medium", children: null };
     obj[1] = user.username;
-    tmp5Result = tmp5(Text /* Text */.Text, obj);
+    tmp5Result = tmp5(Text.Text, obj);
   }
   children[1] = tmp5Result;
   return closure_8(closure_5, { children });

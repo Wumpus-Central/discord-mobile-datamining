@@ -12,20 +12,20 @@ const result = require("getAlertModalItemKey").fileFinishedImporting("modules/av
 
 export default function RedesignSkipAvatarUploadAlertModal(onConfirm) {
   let obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.DnKHuV);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["1EPySE"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.DnKHuV);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t["1EPySE"]);
   obj = { children: null };
   obj = { onPress: onConfirm.onConfirm, text: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.nhJ8OC);
-  const items = [callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj, "confirm"), ];
+  const intl3 = getSystemLocale.intl;
+  obj[1] = intl3.string(getSystemLocale.t.nhJ8OC);
+  const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
   const obj1 = { variant: "secondary", text: null };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[1] = intl4.string(getSystemLocale /* getSystemLocale */.t["7eZ3ji"]);
-  items[1] = callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj1, "add-profile-picture");
+  const intl4 = getSystemLocale.intl;
+  obj1[1] = intl4.string(getSystemLocale.t["7eZ3ji"]);
+  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "add-profile-picture");
   obj[0] = items;
-  obj[2] = callback2(getAlertModalItemKey /* getAlertModalItemKey */.AlertActions, obj);
-  return callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, obj);
+  obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
+  return callback(getAlertModalItemKey.AlertModal, obj);
 };

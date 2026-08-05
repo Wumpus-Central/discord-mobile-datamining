@@ -12,13 +12,13 @@ function parseServerPackSticker(id) {
 }
 function deriveStickerMetadata(name, name2) {
   const items = [];
-  let obj = { type: StickerFormat /* StickerFormat */.StickerMetadataTypes.STICKER_NAME, value: null };
+  let obj = { type: StickerFormat.StickerMetadataTypes.STICKER_NAME, value: null };
   const trimmed = name.name.trim();
   obj[1] = trimmed.toLocaleLowerCase();
   items.push(obj);
   if (null != name2) {
     obj = { type: null, value: null };
-    obj[0] = StickerFormat /* StickerFormat */.StickerMetadataTypes.PACK_NAME;
+    obj[0] = StickerFormat.StickerMetadataTypes.PACK_NAME;
     obj[1] = name2.name;
     items.push(obj);
   }

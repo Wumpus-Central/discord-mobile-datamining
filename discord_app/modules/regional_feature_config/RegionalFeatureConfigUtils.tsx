@@ -26,14 +26,14 @@ export const hasAgeGatedFeatures = function hasAgeGatedFeatures() {
 };
 export const useHasAgeGatedFeatures = function useHasAgeGatedFeatures() {
   const items = [getRegionalFeatureConfig];
-  return initialize /* initialize */.useStateFromStores(items, () => getRegionalFeatureConfig.hasAgeGatedFeatures());
+  return initialize.useStateFromStores(items, () => getRegionalFeatureConfig.hasAgeGatedFeatures());
 };
 export const hasTeenDefaults = function hasTeenDefaults() {
   return getRegionalFeatureConfig.hasTeenDefaults();
 };
 export const useHasTeenDefaults = function useHasTeenDefaults() {
   const items = [getRegionalFeatureConfig];
-  return initialize /* initialize */.useStateFromStores(items, () => getRegionalFeatureConfig.hasTeenDefaults());
+  return initialize.useStateFromStores(items, () => getRegionalFeatureConfig.hasTeenDefaults());
 };
 export const shouldCollectAppStoreSignal = function shouldCollectAppStoreSignal() {
   return getRegionalFeatureConfig.shouldCollectAppStoreSignal();

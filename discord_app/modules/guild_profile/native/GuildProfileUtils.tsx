@@ -46,8 +46,8 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
     if (null == guildIconURL) {
       return null;
     } else {
-      hasFetchedColors /* hasFetchedColors */.maybeFetchColors(guildIconURL);
-      const useColorStore = hasFetchedColors /* hasFetchedColors */.useColorStore;
+      hasFetchedColors.maybeFetchColors(guildIconURL);
+      const useColorStore = hasFetchedColors.useColorStore;
       const tmp13 = useColorStore.getState().palette[guildIconURL];
       let first;
       if (tmp13 != null) {
@@ -75,7 +75,7 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
       } else {
         return null;
       }
-      const obj7 = hasFetchedColors /* hasFetchedColors */;
+      const obj7 = hasFetchedColors;
     }
     const obj5 = getAvatarURL;
   }

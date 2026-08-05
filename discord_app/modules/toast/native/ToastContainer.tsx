@@ -158,7 +158,7 @@ function getItemKey(key) {
   return key.key;
 }
 function wrapChildren(children) {
-  return jsx(Button /* Button */.NonExpandingOverlayView, { children });
+  return jsx(Button.NonExpandingOverlayView, { children });
 }
 let c3 = importAllResult;
 let obj = { container: null };

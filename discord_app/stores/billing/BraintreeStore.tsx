@@ -21,7 +21,7 @@ if (set.isDesktop()) {
       const error = new Error("popupBridgeState is unset");
       throw error;
     } else {
-      const aPIBaseURL = sendRequest /* sendRequest */.getAPIBaseURL();
+      const aPIBaseURL = sendRequest.getAPIBaseURL();
       return aPIBaseURL + closure_4.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(constants.BRAINTREE, closure_2);
     }
   };

@@ -10,7 +10,7 @@ export default function trackVideoToggle(toggled_user_id, video_toggle_reason) {
   let backoffTimeSec;
   let fpsThreshold;
   let windowLength;
-  const defaultConfig = calculateFps /* calculateFps */.VideoHealthManager.defaultConfig;
+  const defaultConfig = calculateFps.VideoHealthManager.defaultConfig;
   const featureEnabled = defaultConfig.featureEnabled;
   ({ windowLength, allowedPoorFpsRatio, fpsThreshold, backoffTimeSec } = defaultConfig);
   let obj = expandEventProperties;

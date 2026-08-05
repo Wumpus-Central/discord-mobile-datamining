@@ -11,7 +11,7 @@ import { Separator } from "../purchase_page/GuildRoleSubscriptionPurchasePage.ts
 
 const require = arg1;
 function serverNameHook(children) {
-  return jsx(Text /* Text */.Text, { variant: "heading-lg/extrabold", color: "interactive-text-active", children });
+  return jsx(Text.Text, { variant: "heading-lg/extrabold", color: "interactive-text-active", children });
 }
 class RoleSubscriptionsUnavailableNotice {
   constructor(arg0) {
@@ -37,7 +37,7 @@ function PurchasePage(arg0) {
   }
   obj = { guildId, refetchOnMount: null == gatedChannelId, countryCode: country, dontFetchWhileTrue: null == country, children: null };
   obj[4] = jsx(Separator, { guildId, gatedChannelId });
-  return jsx(useGroupListingsFetchContext /* useGroupListingsFetchContext */.GroupListingsFetchContextProvider, { guildId, refetchOnMount: null == gatedChannelId, countryCode: country, dontFetchWhileTrue: null == country, children: null });
+  return jsx(useGroupListingsFetchContext.GroupListingsFetchContextProvider, { guildId, refetchOnMount: null == gatedChannelId, countryCode: country, dontFetchWhileTrue: null == country, children: null });
 }
 const result = require("initialize").fileFinishedImporting("modules/guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsOverview.tsx");
 

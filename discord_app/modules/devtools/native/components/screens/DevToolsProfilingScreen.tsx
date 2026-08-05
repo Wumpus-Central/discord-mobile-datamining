@@ -35,7 +35,7 @@ export default function DevToolsProfilingScreen() {
   }, []);
   const tmp3 = createCacheKey();
   const dependencyMap = tmp3;
-  let obj = addValue /* addValue */;
+  let obj = addValue;
   componentRenderStats = obj.getComponentRenderStats();
   obj = { style: tmp3.container, children: null };
   const tmp = componentRenderStats(React.useState(false), 2);
@@ -88,8 +88,8 @@ export default function DevToolsProfilingScreen() {
     tmp8Result = tmp8(tmp4(5649).TableRowGroup, obj3);
   }
   const obj7 = { spacing: 16, children: null };
-  const items2 = [tmp8Result, closure_5(DevToolsProfilingUseStateFromStores /* DevToolsProfilingUseStateFromStores */.DevToolsProfilingUseStateFromStores, {})];
+  const items2 = [tmp8Result, closure_5(DevToolsProfilingUseStateFromStores.DevToolsProfilingUseStateFromStores, {})];
   obj7[1] = items2;
-  obj[1] = closure_7(Stack /* Stack */.Stack, obj7);
+  obj[1] = closure_7(Stack.Stack, obj7);
   return closure_5(closure_4, obj);
 };

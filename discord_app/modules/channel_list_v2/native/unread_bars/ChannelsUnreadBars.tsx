@@ -21,8 +21,8 @@ let closure_14;
 let map1;
 const require = arg1;
 function shouldSkipSection(diff1) {
-  if (computeSubtitle /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES !== diff1) {
-    if (computeSubtitle /* computeSubtitle */.SECTION_INDEX_GUILD_ACTIONS !== diff1) {
+  if (computeSubtitle.SECTION_INDEX_CHANNEL_NOTICES !== diff1) {
+    if (computeSubtitle.SECTION_INDEX_GUILD_ACTIONS !== diff1) {
       return false;
     }
   }
@@ -108,7 +108,7 @@ function findNearestUnreadItem(containerSize, id) {
     return closure_17;
   } else {
     const scrollPosValue = containerSize.scrollPosValue;
-    const result = getScaledChannelRowHeight(getFontScale /* getFontScale */.getFontScale()) / 2;
+    const result = getScaledChannelRowHeight(getFontScale.getFontScale()) / 2;
     const value = scrollPosValue.get();
     const item2 = containerSize.getSectionItemFromPosition(arg2 + value + result).item;
     let layoutStart;
@@ -130,7 +130,7 @@ function findNearestUnreadItem(containerSize, id) {
         let tmp71 = require;
         let tmp72 = dependencyMap;
         let tmp73 = dependencyMap;
-        if (tmp12.type === renderDefaultEmpty /* renderDefaultEmpty */.FastListItemTypes.ITEM) {
+        if (tmp12.type === renderDefaultEmpty.FastListItemTypes.ITEM) {
           let tmp16 = item10031;
           if (tmp12.layoutStart > tmp8) {
             let tmp29 = obj;
@@ -263,7 +263,7 @@ function findNearestUnreadItem(containerSize, id) {
       }
       continue;
     }
-    const obj6 = getFontScale /* getFontScale */;
+    const obj6 = getFontScale;
   }
 }
 let c4 = importAllResult;

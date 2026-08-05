@@ -13,7 +13,7 @@ const require = arg1;
 function ThreadListSection(title) {
   const obj = { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null };
   obj[4] = title.title.toUpperCase();
-  return jsx(Text /* Text */.Text, { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null });
+  return jsx(Text.Text, { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null });
 }
 function renderItem(item) {
   item = item.item;

@@ -18,7 +18,7 @@ export default {
       expandEventProperties.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_ATTEMPTED);
       const obj = expandEventProperties;
     }
-    ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(8263, dependencyMap.paths), { isChangeEmail: flag }, EMAIL_VERIFICATION_MODAL_KEY);
+    ModalActionCreators.pushLazy(asyncRequireImpl(8263, dependencyMap.paths), { isChangeEmail: flag }, EMAIL_VERIFICATION_MODAL_KEY);
   },
   close() {
     dispatcher.wait(() => {

@@ -22,17 +22,17 @@ function CutoutGuildIconWithUserCustom(guild) {
   obj = { cutouts: null, children: null };
   obj = { shape: null, x: 18, y: 18, size: 24 };
   const tmp = callback3();
-  obj[0] = SolidCutout /* SolidCutout */.CutoutShape.Circle;
+  obj[0] = SolidCutout.CutoutShape.Circle;
   const items = [obj];
   obj[0] = items;
   const obj1 = { guild, size: null };
   const tmp2 = SolidCutout;
-  obj1[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.SMALL_32;
+  obj1[1] = GuildIconSizes.GuildIconSizes.SMALL_32;
   obj[1] = callback(GuildIconSizes, obj1);
   const items1 = [callback(tmp2, obj), ];
   const obj2 = { animate: true, style: tmp.authorAvatar, guildId: guild.id, user: guild.author, size: null };
-  obj2[4] = Button /* Button */.AvatarSizes.XSMALL_20;
-  items1[1] = callback(Button /* Button */.Avatar, obj2);
+  obj2[4] = Button.AvatarSizes.XSMALL_20;
+  items1[1] = callback(Button.Avatar, obj2);
   obj[1] = items1;
   return callback2(View, obj);
 }

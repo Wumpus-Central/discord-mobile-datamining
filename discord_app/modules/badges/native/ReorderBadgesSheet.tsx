@@ -10,11 +10,11 @@ const result = require("Background").fileFinishedImporting("modules/badges/nativ
 
 export default function ReorderBadgesSheet() {
   let obj = { dismissAccessibilityLabel: null, header: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.opzPIQ);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.opzPIQ);
   obj = { title: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.opzPIQ);
-  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null });
-  return jsx(Background /* Background */.BottomSheet, { title: null });
+  const intl2 = getSystemLocale.intl;
+  obj[0] = intl2.string(getSystemLocale.t.opzPIQ);
+  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: null });
+  return jsx(Background.BottomSheet, { title: null });
 };

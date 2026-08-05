@@ -6,7 +6,7 @@ import { loadJsonAsset } from "../../modules/asset_json/native/AssetJsonUtils.ts
 
 const loader = module_1274.createLoader({
   () => {
-    const jsonAsset = loadJsonAsset /* loadJsonAsset */.loadJsonAsset(registerAsset /* registerAsset */);
+    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset);
     return jsonAsset.then((arg0) => ({ default: arg0 }));
   }
 }, "en-US");

@@ -11,7 +11,7 @@ const result = require("_detectH265HardwareDecode").fileFinishedImporting("modul
 
 export default function useIsVideoMode() {
   const items = [ensureGuildLoaded, handleConnectionOpen, _detectH265HardwareDecode, updateVoiceState, reset];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
     let tmp2 = null != channel;
     if (tmp2) {

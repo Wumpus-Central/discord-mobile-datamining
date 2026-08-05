@@ -46,7 +46,7 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
   if (null != experimentServerAssignment) {
     if (null != system) {
       const system2 = system.system;
-      if (trackExposureToExperiment /* trackExposureToExperiment */.ExperimentSystem.LEGACY === system2) {
+      if (trackExposureToExperiment.ExperimentSystem.LEGACY === system2) {
         return getFirstEligibleUserExperiment.getExperimentBucketName(experimentServerAssignment.bucket);
       } else if (tmp4(4207).ExperimentSystem.APEX === system2) {
         const _HermesInternal = HermesInternal;
@@ -61,6 +61,6 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
   return null;
 };
 export const getExperimentBuckets = function getExperimentBuckets(experiment) {
-  const experimentVariantsForDevTools = getExperimentVariantsForDevTools /* getExperimentVariantsForDevTools */.getExperimentVariantsForDevTools(experiment);
+  const experimentVariantsForDevTools = getExperimentVariantsForDevTools.getExperimentVariantsForDevTools(experiment);
   return experimentVariantsForDevTools.map((id) => ({ id: id.id, label: id.label, value: id.id }));
 };

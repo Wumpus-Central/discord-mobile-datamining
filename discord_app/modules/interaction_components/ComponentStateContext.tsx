@@ -15,7 +15,7 @@ import { ActionComponentState } from "InteractionComponentTypes.tsx";
 const require = arg1;
 function isInteractionComponent(type) {
   type = type.type;
-  if (PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.BUTTON === type) {
+  if (PermissionOverwriteType.ComponentType.BUTTON === type) {
     return type.style !== tmp(1906).ButtonStyle.LINK;
   } else {
     if (tmp(1906).ComponentType.STRING_SELECT !== type) {
@@ -40,7 +40,7 @@ function getActionComponentState(interaction, id, shouldDisableInteractiveCompon
   if (shouldDisableInteractiveComponents === undefined) {
     flag = false;
   }
-  let LOADING = ActionComponentState /* ActionComponentState */.ActionComponentState.NORMAL;
+  let LOADING = ActionComponentState.ActionComponentState.NORMAL;
   let tmp3 = null != interaction;
   if (tmp3) {
     tmp3 = interaction.state !== tmp(4510).InteractionState.FAILED;

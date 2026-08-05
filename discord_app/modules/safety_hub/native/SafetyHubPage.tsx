@@ -17,7 +17,7 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function AutomatedUnderageAppealStatus() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
   const stateFromStores = obj.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus());
   if (AgeCheckStatus.SUCCESS === stateFromStores) {

@@ -27,7 +27,7 @@ function categorizeTopAffinityFriendAnniversaries() {
   let set1;
   let flag;
   flag = false;
-  const result = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS /* FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS */.categorizeFriendAnniversariesByAffinity(closure_11, (userId) => {
+  const result = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS.categorizeFriendAnniversariesByAffinity(closure_11, (userId) => {
     const userAffinity = recomputeAffinities.getUserAffinity(userId);
     let dmProbability;
     if (userAffinity != null) {
@@ -42,7 +42,7 @@ function updateFriendAnniversaries() {
   if (null == c15) {
     resetFriendAnniversaries();
     if (hasConsented.hasConsented(Consents.PERSONALIZATION)) {
-      const EnableFriendAnniversaryNotifications = explicitContentFromProto /* explicitContentFromProto */.EnableFriendAnniversaryNotifications;
+      const EnableFriendAnniversaryNotifications = explicitContentFromProto.EnableFriendAnniversaryNotifications;
       if (EnableFriendAnniversaryNotifications.getSetting()) {
         const friendIDs = store.getFriendIDs();
         const iter = friendIDs[Symbol.iterator]();
@@ -69,7 +69,7 @@ function updateFriendAnniversaries() {
                   let tmp31 = dependencyMap;
                   let tmp28 = date;
                   let tmp29 = date;
-                  let obj = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS /* FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS */;
+                  let obj = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS;
                   if (obj.isFriendAnniversary(date)) {
                     let tmp32 = arr;
                     let tmp33 = arr;
@@ -94,7 +94,7 @@ function updateFriendAnniversaries() {
           } else {
             resetFriendAnniversaries();
           }
-          obj4 = getFriendAnniversaryGateConfig /* getFriendAnniversaryGateConfig */;
+          obj4 = getFriendAnniversaryGateConfig;
         }
         obj3 = arr;
       }
@@ -195,7 +195,7 @@ prototype["initialize"] = function initialize(friendsTabBadgeLastDismissedTime) 
     const _Date = Date;
     timestamp = Date.now();
   }
-  closure_10.messageGiftIntentLastShownMap = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS /* FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS */.pruneTimestampMap(closure_10.messageGiftIntentLastShownMap, timestamp, 1209600000);
+  closure_10.messageGiftIntentLastShownMap = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS.pruneTimestampMap(closure_10.messageGiftIntentLastShownMap, timestamp, 1209600000);
 };
 prototype["getState"] = function getState() {
   return closure_10;
@@ -212,8 +212,8 @@ prototype["canShowFriendsTabBadge"] = function canShowFriendsTabBadge() {
 prototype["getFriendAnniversaryYears"] = function getFriendAnniversaryYears(arg0) {
   let num = 0;
   if (null != table[arg0]) {
-    num = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS /* FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS */.yearsSince(tmp.friendsSince);
-    const obj = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS /* FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS */;
+    num = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS.yearsSince(tmp.friendsSince);
+    const obj = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS;
   }
   return num;
 };
@@ -395,7 +395,7 @@ const premiumGiftingIntentStore = new PremiumGiftingIntentStore(require("dispatc
       continue;
     }
     nextResult = iter.next();
-    closure_10.messageGiftIntentLastShownMap = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS /* FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS */.pruneTimestampMap(obj, getCurrentTime(), 1296000000);
+    closure_10.messageGiftIntentLastShownMap = FRIEND_ANNIVERSARY_ELIGIBILITY_WINDOW_DAYS.pruneTimestampMap(obj, getCurrentTime(), 1296000000);
     closure_10.lastKnownGiftIntentDismissedAtMs = settingsTimestampMs.settingsTimestampMs;
   },
   DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: function handleDevToolResetFriendsListGiftIntentsShown() {

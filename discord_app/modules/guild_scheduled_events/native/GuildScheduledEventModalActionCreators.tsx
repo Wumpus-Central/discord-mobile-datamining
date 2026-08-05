@@ -49,7 +49,7 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
     obj[0] = guildEvent;
     obj[1] = recurrenceId;
     obj[2] = handleClose;
-    ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(8884, dependencyMap.paths), obj, closure_13);
+    ModalActionCreators.pushLazy(asyncRequireImpl(8884, dependencyMap.paths), obj, closure_13);
     const obj4 = ModalActionCreators;
   } else {
     obj = ACTION_SHEET_HEIGHT_HALF;
@@ -59,7 +59,7 @@ function openCreateOrEditGuildEventModal(guild, arg1) {
     obj[1] = tmp;
     obj[2] = guildEvent;
     obj[3] = handleClose;
-    ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(8905, dependencyMap.paths), obj, closure_13);
+    ModalActionCreators.pushLazy(asyncRequireImpl(8905, dependencyMap.paths), obj, closure_13);
     const obj2 = ModalActionCreators;
   }
 }
@@ -155,7 +155,7 @@ export { openCreateOrEditGuildEventModal };
 export const openGuildEventListActionSheet = function openGuildEventListActionSheet(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { guild: closure_0 };
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(8958, dependencyMap.paths), closure_14, obj);
+  obj.openLazy(asyncRequireImpl(8958, dependencyMap.paths), closure_14, obj);
 };
 export const closeGuildEventListActionSheet = function closeGuildEventListActionSheet() {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet(closure_14);
@@ -164,10 +164,10 @@ export const openStartGuildEventModal = function openStartGuildEventModal(event,
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj.hideAllActionSheets();
   obj = { event, recurrenceId: nextRecurrenceIdInEvent, onCloseActionSheet };
-  ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(8974, dependencyMap.paths), obj, closure_15);
+  ModalActionCreators.pushLazy(asyncRequireImpl(8974, dependencyMap.paths), obj, closure_15);
 };
 export const openDeleteGuildEventActionSheet = function openDeleteGuildEventActionSheet(eventId, guildId, recurrenceId) {
-  let obj = useAlertStore /* useAlertStore */;
+  let obj = useAlertStore;
   obj = { eventId, guildId, recurrenceId };
   obj.openAlert("DeleteEventAlert", jsx(React.lazy(() => callback(paths[14])(paths[19], paths.paths)), { eventId, guildId, recurrenceId }));
 };
@@ -255,7 +255,7 @@ export const openShareEvent = function openShareEvent(event, arg1) {
     channel = defaultChannel.getDefaultChannel(event.guild_id);
   }
   if (null != channel) {
-    const result = canEveryoneRoleViewEvent /* canEveryoneRoleViewEvent */.isGuildEventInvitable(event);
+    const result = canEveryoneRoleViewEvent.isGuildEventInvitable(event);
     if (result) {
       const guild = store.getGuild(event.guild_id);
       let vanityURLCode;
@@ -290,12 +290,12 @@ export const openShareEvent = function openShareEvent(event, arg1) {
         const tmp7Result2 = tmp7(3985);
       }
     }
-    const obj3 = canEveryoneRoleViewEvent /* canEveryoneRoleViewEvent */;
+    const obj3 = canEveryoneRoleViewEvent;
   } else {
     obj = dispatcher;
     const obj1 = { key: "ERROR_OCCURRED_TRY_AGAIN", content: null, icon: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj1[1] = intl.string(getSystemLocale /* getSystemLocale */.t.fEptJP);
+    const intl = getSystemLocale.intl;
+    obj1[1] = intl.string(getSystemLocale.t.fEptJP);
     obj1[2] = registerAsset;
     obj.open(obj1);
   }

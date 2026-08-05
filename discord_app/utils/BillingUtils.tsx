@@ -116,7 +116,7 @@ export const captureBillingException = function captureBillingException(error, t
   obj.captureException(error, obj);
 };
 export const isExpectedHttpClientError = function isExpectedHttpClientError(onSignFailure) {
-  let tmp2 = onSignFailure instanceof sendRequest /* sendRequest */.HTTPResponseError;
+  let tmp2 = onSignFailure instanceof sendRequest.HTTPResponseError;
   if (tmp2) {
     tmp2 = onSignFailure.status >= 400;
   }

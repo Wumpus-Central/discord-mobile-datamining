@@ -294,7 +294,7 @@ class FocusedControlsBottomDrawer {
       if (!tmp) {
         num = -derivedValue.get();
       }
-      const result = first1.set(CONFIG_NEVER_ANIMATE_TIMING /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming(num, obj3));
+      const result = first1.set(CONFIG_NEVER_ANIMATE_TIMING.withTiming(num, obj3));
       if (tmp) {
         outer2_9();
         callback();

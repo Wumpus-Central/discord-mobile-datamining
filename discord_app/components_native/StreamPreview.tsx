@@ -109,7 +109,7 @@ StreamPreview.prototype["render"] = function render() {
       obj1[1] = items1;
       const items2 = [callback2(closure_4, obj1), tmp4];
       obj[6] = items2;
-      return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
+      return callback2(PressableBase.PressableOpacity, obj);
     }
   }
   let renderFallbackResult1;
@@ -122,9 +122,9 @@ StreamPreview.contextType = require("ManaContext").ThemeContext;
 StreamPreview.defaultProps = {
   renderFallback: function defaultRenderFallback(arg0, theme) {
     const obj = { theme, caption: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const string = intl.string;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (arg0) {
       let stringResult = string(t.NQ7H8V);
     } else {
@@ -145,7 +145,7 @@ export default function ConnectedStreamPreview(stream) {
   let previewUrl;
   ({ guildId, channelId, ownerId } = stream.stream);
   ({ previewUrl, isLoading } = useFetchStreamPreview(guildId, channelId, ownerId));
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [handleThemeChange];
   obj = {};
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);

@@ -10,9 +10,9 @@ export const createPurchaseNotificationSystemMessage = function createPurchaseNo
     type = purchaseNotification.type;
   }
   let guildProductPurchaseSystemMessage = null;
-  if (type === PermissionOverwriteType /* PermissionOverwriteType */.PurchaseNotificationType.GUILD_PRODUCT) {
-    guildProductPurchaseSystemMessage = createGuildProductPurchaseSystemMessage /* createGuildProductPurchaseSystemMessage */.createGuildProductPurchaseSystemMessage(message);
-    const tmp2Result = createGuildProductPurchaseSystemMessage /* createGuildProductPurchaseSystemMessage */;
+  if (type === PermissionOverwriteType.PurchaseNotificationType.GUILD_PRODUCT) {
+    guildProductPurchaseSystemMessage = createGuildProductPurchaseSystemMessage.createGuildProductPurchaseSystemMessage(message);
+    const tmp2Result = createGuildProductPurchaseSystemMessage;
   }
   return guildProductPurchaseSystemMessage;
 };

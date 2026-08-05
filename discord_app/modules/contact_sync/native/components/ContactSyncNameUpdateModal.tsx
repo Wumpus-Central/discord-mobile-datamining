@@ -123,5 +123,5 @@ obj1[ContactSyncScenes.NAME_INPUT] = obj2;
 const result = require("noop").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameUpdateModal.tsx");
 
 export default function ContactSyncNameUpdateModal() {
-  return jsx(NavigationStack /* NavigationStack */.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj1 });
+  return jsx(NavigationStack.Navigator, { initialRouteName: ContactSyncScenes.NAME_INPUT, screens: obj1 });
 };

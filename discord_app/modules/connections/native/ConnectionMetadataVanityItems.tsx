@@ -22,8 +22,8 @@ function PaypalVanityTag(style) {
   const tmp = createCacheKey();
   const obj = { style: items, label: null, textStyle: null };
   items = [tmp.paypalVerifiedTag, style.style];
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.IhXLyx);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.IhXLyx);
   obj[2] = tmp.paypalVerifiedTagText;
   return callback(VanityTag, obj, constants.PAYPAL_VERIFIED);
 }
@@ -33,7 +33,7 @@ function VanityMetric(label) {
   let style;
   label = label.label;
   ({ count, style, percent } = label);
-  let obj = shortenAndLocalizeNumber /* shortenAndLocalizeNumber */;
+  let obj = shortenAndLocalizeNumber;
   let str = "";
   const result = obj.shortenAndLocalizeNumber(count);
   if (percent) {
@@ -54,7 +54,7 @@ function VanityMetric(label) {
   }
   style = [createCacheKey().connectedAccountVanityMetadata, ];
   style[1] = style;
-  return callback(Text /* Text */.Text, { variant: "text-xs/normal", color: "text-muted", style, children });
+  return callback(Text.Text, { variant: "text-xs/normal", color: "text-muted", style, children });
 }
 function VanityItem(style) {
   let imageAlt;
@@ -68,7 +68,7 @@ function VanityItem(style) {
   ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataItem: arr[1] } = tmp);
   items[2] = style;
   obj = { source: imageSrc, accessibilityLabel: imageAlt, style: tmp.connectedAccountVanityMetadataItemIcon, disableColor: true };
-  const items1 = [callback(Button /* Button */.Icon, obj), callback(Text /* Text */.Text, { variant: "text-xs/normal", color: "text-muted", style, children: label })];
+  const items1 = [callback(Button.Icon, obj), callback(Text.Text, { variant: "text-xs/normal", color: "text-muted", style, children: label })];
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -81,7 +81,7 @@ function VanityTag(arg0) {
   const items = [, , ];
   ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataTag: arr[1] } = tmp);
   items[2] = style;
-  return callback(View, { style: items, children: callback(Text /* Text */.Text, { variant: "text-xs/normal", color: "text-muted", style: textStyle, children: label }) });
+  return callback(View, { style: items, children: callback(Text.Text, { variant: "text-xs/normal", color: "text-muted", style: textStyle, children: label }) });
 }
 function VanityDate(arg0) {
   let date;
@@ -91,13 +91,13 @@ function VanityDate(arg0) {
   ({ date, label, locale, style } = arg0);
   let obj = { variant: "text-xs/normal", color: "text-muted", style: items, children: null };
   items = [createCacheKey().connectedAccountVanityMetadata, style];
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { value: null, name: null };
   const tmp = createCacheKey();
-  obj[0] = officialApplicationIds /* officialApplicationIds */.getCreatedAtDate(date, locale);
+  obj[0] = officialApplicationIds.getCreatedAtDate(date, locale);
   obj[1] = label;
-  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.HLoinF, obj);
-  return callback(Text /* Text */.Text, obj);
+  obj[3] = intl.format(getSystemLocale.t.HLoinF, obj);
+  return callback(Text.Text, obj);
 }
 ({ MetadataFields: c4, MetadataItemTypes: c5 } = OperatorTypes);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -122,21 +122,21 @@ export const generateRedditMetadataItems = function generateRedditMetadataItems(
     let obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult;
-    obj[2] = getSystemLocale /* getSystemLocale */.t.SbCNox;
+    obj[2] = getSystemLocale.t.SbCNox;
     items.push(callback(VanityMetric, obj, tmp2.REDDIT_TOTAL_KARMA));
   }
   if ("1" === metadata[constants.REDDIT_GOLD]) {
     obj = { style: null, label: null };
     obj[0] = tmp;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["06rDHU"]);
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t["06rDHU"]);
     items.push(callback(VanityTag, obj, tmp2.REDDIT_GOLD));
   }
   if ("1" === metadata[constants.REDDIT_MOD]) {
     obj = { style: null, label: null };
     obj[0] = tmp;
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.oWM95M);
+    const intl2 = getSystemLocale.intl;
+    obj[1] = intl2.string(getSystemLocale.t.oWM95M);
     items.push(callback(VanityTag, obj, tmp2.REDDIT_MOD));
   }
   return items;
@@ -157,14 +157,14 @@ export const generateTwitterMetadataItems = function generateTwitterMetadataItem
     let obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult;
-    obj[2] = getSystemLocale /* getSystemLocale */.t.llwqqe;
+    obj[2] = getSystemLocale.t.llwqqe;
     items.push(callback(VanityMetric, obj, tmp2.TWITTER_STATUSES_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult1;
-    obj[2] = getSystemLocale /* getSystemLocale */.t.LMNOUQ;
+    obj[2] = getSystemLocale.t.LMNOUQ;
     items.push(callback(VanityMetric, obj, tmp2.TWITTER_FOLLOWERS_COUNT));
   }
   return items;
@@ -185,14 +185,14 @@ export const generateBlueskyMetadataItems = function generateBlueskyMetadataItem
     let obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult;
-    obj[2] = getSystemLocale /* getSystemLocale */.t.thA2ir;
+    obj[2] = getSystemLocale.t.thA2ir;
     items.push(callback(VanityMetric, obj, tmp2.BLUESKY_STATUSES_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult1;
-    obj[2] = getSystemLocale /* getSystemLocale */.t.RQath2;
+    obj[2] = getSystemLocale.t.RQath2;
     items.push(callback(VanityMetric, obj, tmp2.BLUESKY_FOLLOWERS_COUNT));
   }
   return items;
@@ -218,31 +218,31 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     let obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult;
-    obj[2] = getSystemLocale /* getSystemLocale */.t["ppXMu/"];
+    obj[2] = getSystemLocale.t["ppXMu/"];
     items.push(callback(VanityMetric, obj, tmp2.STEAM_GAME_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: null, label: null, imageSrc: null, imageAlt: null };
     obj[0] = tmp;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { count: null };
     obj[0] = NumberResult1;
-    obj[1] = intl.format(getSystemLocale /* getSystemLocale */.t.Y88M5x, obj);
+    obj[1] = intl.format(getSystemLocale.t.Y88M5x, obj);
     obj[2] = registerAsset;
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.HKUEZo);
+    const intl2 = getSystemLocale.intl;
+    obj[3] = intl2.string(getSystemLocale.t.HKUEZo);
     items.push(callback(VanityItem, obj, tmp2.STEAM_ITEM_COUNT_DOTA2));
   }
   if (NumberResult2 > -1) {
     const obj1 = { style: null, label: null, imageSrc: null, imageAlt: null };
     obj1[0] = tmp;
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     const obj2 = { count: null };
     obj2[0] = NumberResult2;
-    obj1[1] = intl3.format(getSystemLocale /* getSystemLocale */.t.Y88M5x, obj2);
+    obj1[1] = intl3.format(getSystemLocale.t.Y88M5x, obj2);
     obj1[2] = registerAsset;
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    obj1[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.C8p1Sh);
+    const intl4 = getSystemLocale.intl;
+    obj1[3] = intl4.string(getSystemLocale.t.C8p1Sh);
     items.push(callback(VanityItem, obj1, tmp2.STEAM_ITEM_COUNT_TF2));
   }
   return items;
@@ -267,14 +267,14 @@ export const generateEbayMetadataItems = function generateEbayMetadataItems(meta
     let obj = { style: null, count: null, label: null, percent: true };
     obj[0] = tmp;
     obj[1] = NumberResult;
-    obj[2] = getSystemLocale /* getSystemLocale */.t.YmL22d;
+    obj[2] = getSystemLocale.t.YmL22d;
     items.push(callback(VanityMetric, obj, tmp2.EBAY_POSITIVE_FEEDBACK_PERCENTAGE));
   }
   if ("1" === metadata[constants.EBAY_TOP_RATED_SELLER]) {
     obj = { style: null, label: null };
     obj[0] = tmp;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.TEEYwa);
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.TEEYwa);
     items.push(callback(VanityTag, obj, tmp2.EBAY_TOP_RATED_SELLER));
   }
   return items;
@@ -300,28 +300,28 @@ export const generateTikTokMetadataItems = function generateTikTokMetadataItems(
     let obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult;
-    obj[2] = getSystemLocale /* getSystemLocale */.t["Mpm/Bc"];
+    obj[2] = getSystemLocale.t["Mpm/Bc"];
     items.push(callback(VanityMetric, obj, tmp2.TIKTOK_FOLLOWER_COUNT));
   }
   if (NumberResult1 > -1) {
     obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult1;
-    obj[2] = getSystemLocale /* getSystemLocale */.t.ftf12v;
+    obj[2] = getSystemLocale.t.ftf12v;
     items.push(callback(VanityMetric, obj, tmp2.TIKTOK_FOLLOWING_COUNT));
   }
   if (NumberResult2 > -1) {
     obj = { style: null, count: null, label: null };
     obj[0] = tmp;
     obj[1] = NumberResult2;
-    obj[2] = getSystemLocale /* getSystemLocale */.t.Qwhe5j;
+    obj[2] = getSystemLocale.t.Qwhe5j;
     items.push(callback(VanityMetric, obj, tmp2.TIKTOK_LIKES_COUNT));
   }
   if ("1" === metadata[constants.TIKTOK_VERIFIED]) {
     const obj1 = { style: null, label: null };
     obj1[0] = tmp;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj1[1] = intl.string(getSystemLocale /* getSystemLocale */.t.QHHwRR);
+    const intl = getSystemLocale.intl;
+    obj1[1] = intl.string(getSystemLocale.t.QHHwRR);
     items.push(callback(VanityTag, obj1, tmp2.TIKTOK_VERIFIED));
   }
   return items;

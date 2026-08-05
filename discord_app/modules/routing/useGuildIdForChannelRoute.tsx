@@ -9,7 +9,7 @@ const result = require("ME").fileFinishedImporting("modules/routing/useGuildIdFo
 
 export default function useGuildIdForChannelRoute(getGuildId) {
   const items = [handleConnectionOpen];
-  let stateFromStores = initialize /* initialize */.useStateFromStores(items, () => guildId.getGuildId());
+  let stateFromStores = initialize.useStateFromStores(items, () => guildId.getGuildId());
   if (null == stateFromStores) {
     stateFromStores = getGuildId.getGuildId();
   }

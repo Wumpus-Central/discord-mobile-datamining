@@ -40,13 +40,13 @@ function ClearAllHistory(searchContext) {
 }
 function ViewAll(onJumpToMedia) {
   let obj = { onPress: onJumpToMedia.onJumpToMedia, accessibilityRole: "button", unstable_pressDelay: 130, accessibilityLabel: null, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.Ofpgwh);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.Ofpgwh);
   obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.Ofpgwh);
-  obj[4] = jsx(Text /* Text */.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(PressableBase /* PressableBase */.PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  const intl2 = getSystemLocale.intl;
+  obj[2] = intl2.string(getSystemLocale.t.Ofpgwh);
+  obj[4] = jsx(Text.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(PressableBase.PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
 let c5 = importAllResult;
 ({ EMPTY_SEARCH_QUERY_STRING: c10, MESSAGE_PLACEHOLDER_ITEM_SIZE: unpackModuleId, SearchListItemTypes: closure_12, SearchTabs: map1 } = MessageEmbedTypes);

@@ -95,10 +95,10 @@ export default {
     })();
   },
   prune(c0, days, include_roles) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: Endpoints.GUILD_PRUNE(c0), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { days, compute_prune_count: false, include_roles };
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   }
 };

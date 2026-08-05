@@ -41,7 +41,7 @@ function SettingsUpsellsTableRow(arg0) {
     },
     icon: null
   };
-  obj[5] = callback2(SettingsIcon /* SettingsIcon */.SettingsIcon, {});
+  obj[5] = callback2(SettingsIcon.SettingsIcon, {});
   return callback2(InAppReportsUpsellsTableRow, obj);
 }
 ({ AnalyticEvents: error, UserSettingsSections: metroImportAll } = ME);

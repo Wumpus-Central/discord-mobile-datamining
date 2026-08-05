@@ -30,10 +30,10 @@ export const inviteGuildHasPendingMemberDisabledVerification = function inviteGu
 export const openVerificationModalOrTransitionToApplication = function openVerificationModalOrTransitionToApplication(id) {
   request = request.getRequest(id);
   if (null != request) {
-    if (request.applicationStatus !== MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.STARTED) {
-      transitionTo /* transitionTo */.transitionTo(closure_4.GUILD_MEMBER_VERIFICATION(id));
-      const tmp2Result = transitionTo /* transitionTo */;
+    if (request.applicationStatus !== MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.STARTED) {
+      transitionTo.transitionTo(closure_4.GUILD_MEMBER_VERIFICATION(id));
+      const tmp2Result = transitionTo;
     }
   }
-  const result = openMemberVerificationModal /* openMemberVerificationModal */.openMemberVerificationModal(id);
+  const result = openMemberVerificationModal.openMemberVerificationModal(id);
 };

@@ -13,7 +13,7 @@ const prototype = BuildOverrideStore.prototype;
 prototype["getCurrentBuildOverride"] = function getCurrentBuildOverride() {
   if (Resolving === obj.NotResolved) {
     Resolving = obj.Resolving;
-    obj = Version /* Version */;
+    obj = Version;
     const buildOverride = obj.getBuildOverride();
     buildOverride.then((overrides) => {
       let obj = callback(table[1]);

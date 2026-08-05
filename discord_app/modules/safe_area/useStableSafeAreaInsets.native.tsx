@@ -44,14 +44,14 @@ export default function useStableSafeAreaInsets() {
 };
 export const getStableSafeAreaInsets = function getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY) {
   if (DEFAULT_APP_ENTRY_KEY === undefined) {
-    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
   }
   if (obj.isAndroid()) {
     let stableSafeAreaInsets = enforcing.getStableSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
     const obj3 = enforcing;
   } else {
-    stableSafeAreaInsets = useSafeAreaInsets /* useSafeAreaInsets */.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
-    const tmp3Result = useSafeAreaInsets /* useSafeAreaInsets */;
+    stableSafeAreaInsets = useSafeAreaInsets.getSafeAreaInsets(DEFAULT_APP_ENTRY_KEY);
+    const tmp3Result = useSafeAreaInsets;
   }
   return stableSafeAreaInsets;
 };

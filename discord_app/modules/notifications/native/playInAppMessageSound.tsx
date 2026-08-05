@@ -24,7 +24,7 @@ export const playInAppMessageSound = function playInAppMessageSound(notification
         tmp3 = message1;
       }
     }
-    obj2 = isMetaQuest /* isMetaQuest */;
+    obj2 = isMetaQuest;
     tmp8 = require;
   }
 };

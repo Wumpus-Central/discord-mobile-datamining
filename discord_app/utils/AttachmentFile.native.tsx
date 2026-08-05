@@ -230,10 +230,10 @@ export const cancelGetAttachmentFile = function cancelGetAttachmentFile(found) {
 export const fileIsInAppDir = function fileIsInAppDir(uri) {
   const replaced = uri.replace(/^file:\/\//, "");
   try {
-    let startsWithResult = "" !== openImagePickerUnhandled /* openImagePickerUnhandled */.getAppDir();
+    let startsWithResult = "" !== openImagePickerUnhandled.getAppDir();
     if (startsWithResult) {
-      startsWithResult = replaced.startsWith(openImagePickerUnhandled /* openImagePickerUnhandled */.getAppDir());
-      const tmpResult = openImagePickerUnhandled /* openImagePickerUnhandled */;
+      startsWithResult = replaced.startsWith(openImagePickerUnhandled.getAppDir());
+      const tmpResult = openImagePickerUnhandled;
     }
     return startsWithResult;
   } catch (tmp4) {

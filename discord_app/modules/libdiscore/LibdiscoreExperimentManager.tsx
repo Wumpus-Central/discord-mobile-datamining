@@ -7,7 +7,7 @@ import { items } from "libdiscoreExperiments.tsx";
 
 const require = arg1;
 function experimentStoreUpdateHandler() {
-  let obj = isBlockedDomain /* isBlockedDomain */;
+  let obj = isBlockedDomain;
   if (obj.isLibdiscoreInitialized()) {
     if (!tmpResult.isExperimentSyncDisabled()) {
       obj = {};
@@ -21,10 +21,10 @@ function experimentStoreUpdateHandler() {
         tmp7 = shallowEqual(obj, obj);
       }
       if (!tmp7) {
-        const experimentCacher = isBlockedDomain /* isBlockedDomain */.getExperimentCacher();
+        const experimentCacher = isBlockedDomain.getExperimentCacher();
         const _JSON = JSON;
         experimentCacher.flushToCache(JSON.stringify(obj));
-        const obj4 = isBlockedDomain /* isBlockedDomain */;
+        const obj4 = isBlockedDomain;
       }
     }
     tmpResult = tmp(1866);
@@ -42,7 +42,7 @@ class LibdiscoreExperimentManager extends tmp2 {
 }
 const prototype = LibdiscoreExperimentManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const prop = items /* items */.ALL_LIBDISCORE_EXPERIMENTS;
+  const prop = items.ALL_LIBDISCORE_EXPERIMENTS;
   const item = prop.forEach((id) => {
     let obj = callback(table[4]);
     obj = { kind: "user", name: id.id, defaultConfig: { treatmentId: -1 }, variations: null };

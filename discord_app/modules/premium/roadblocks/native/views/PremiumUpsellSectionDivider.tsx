@@ -56,13 +56,13 @@ export default function PremiumUpsellSectionDivider(arg0) {
   ({ useTier0UpsellContent, position } = arg0);
   let lock = callback2(position);
   let obj = { style: lock.container, children: null };
-  obj = { style: lock.gradient, children: callback(PremiumUpsellGradientBackground /* PremiumUpsellGradientBackground */.PremiumUpsellGradientBackground, { useTier0UpsellContent }) };
+  obj = { style: lock.gradient, children: callback(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, { useTier0UpsellContent }) };
   let LockIcon = require;
   let WHITE = dependencyMap;
   const items = [callback(closure_4, obj), , ];
   obj = { style: lock.divider, start: null, end: null, colors: null };
-  obj[1] = keys /* keys */.HorizontalGradient.START;
-  obj[2] = keys /* keys */.HorizontalGradient.END;
+  obj[1] = keys.HorizontalGradient.START;
+  obj[2] = keys.HorizontalGradient.END;
   if (true === useTier0UpsellContent) {
     let PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_0;
     let tmp6 = Gradients;

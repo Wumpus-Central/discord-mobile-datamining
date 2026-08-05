@@ -12,7 +12,7 @@ import { b64ToProto } from "UserSettingsUtils.tsx";
 
 const require = arg1;
 function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULTIACCOUNT_TOOLTIP) {
-  const HotspotStore = HotspotStore /* HotspotStore */.HotspotStore;
+  const HotspotStore = HotspotStore.HotspotStore;
   let hasHiddenHotspotResult = HotspotStore.hasHiddenHotspot(ACTIVITY_BEB_TUTORIAL);
   if (hasHiddenHotspotResult) {
     if (null == userContent.userContent) {
@@ -42,10 +42,10 @@ let items = [
       if (null != inbox.inbox) {
         return false;
       } else {
-        const InboxSettings = create /* create */.InboxSettings;
+        const InboxSettings = create.InboxSettings;
         const obj = InboxSettings.create();
         inbox.inbox = obj;
-        const Storage3 = Storage /* Storage */.Storage;
+        const Storage3 = Storage.Storage;
         let flag2 = false;
         if (Storage3.get("seenInboxTutorial", false)) {
           obj.viewedTutorial = true;
@@ -77,7 +77,7 @@ let items = [
                 } else {
                   let tmp10 = require;
                   let tmp11 = dependencyMap;
-                  let obj2 = b64ToProto /* b64ToProto */;
+                  let obj2 = b64ToProto;
                   let str4 = channel.guild_id;
                   if (str4 == null) {
                     str4 = "0";
@@ -108,11 +108,11 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("seenInboxTutorial");
-      const Storage2 = Storage /* Storage */.Storage;
+      const Storage2 = Storage.Storage;
       Storage2.remove("recentsButtonTab2");
-      const Storage3 = Storage /* Storage */.Storage;
+      const Storage3 = Storage.Storage;
       Storage3.remove("unread-messages-collapsed-channels");
     }
   },
@@ -138,11 +138,11 @@ let items = [
         let flag = false;
         if (tmp2) {
           if (null == textAndImages.textAndImages) {
-            const TextAndImagesSettings = create /* create */.TextAndImagesSettings;
+            const TextAndImagesSettings = create.TextAndImagesSettings;
             textAndImages.textAndImages = TextAndImagesSettings.create();
           }
           if (null == textAndImages.textAndImages.diversitySurrogate) {
-            const StringValue = defineProperty /* defineProperty */.StringValue;
+            const StringValue = defineProperty.StringValue;
             textAndImages.textAndImages.diversitySurrogate = StringValue.create();
           }
           textAndImages.textAndImages.diversitySurrogate.value = state.diversitySurrogate;
@@ -158,7 +158,7 @@ let items = [
   {
     version: 4,
     run(userContent) {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       let hasHiddenHotspotResult = true === Storage.get("HAS_SEEN_HUB_UPSELL");
       if (!hasHiddenHotspotResult) {
         const HotspotStore = tmp(5744).HotspotStore;
@@ -188,7 +188,7 @@ let items = [
       return flag;
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("HAS_SEEN_HUB_UPSELL");
     }
   },
@@ -197,41 +197,41 @@ let items = [
     run(textAndImages) {
       textAndImages = textAndImages.textAndImages;
       if (textAndImages == null) {
-        const TextAndImagesSettings = create /* create */.TextAndImagesSettings;
+        const TextAndImagesSettings = create.TextAndImagesSettings;
         textAndImages = TextAndImagesSettings.create();
       }
       textAndImages.textAndImages = textAndImages;
       let notifications = textAndImages.notifications;
       if (notifications == null) {
-        const NotificationSettings = create /* create */.NotificationSettings;
+        const NotificationSettings = create.NotificationSettings;
         notifications = NotificationSettings.create();
       }
       textAndImages.notifications = notifications;
       let privacy = textAndImages.privacy;
       if (privacy == null) {
-        const PrivacySettings = create /* create */.PrivacySettings;
+        const PrivacySettings = create.PrivacySettings;
         privacy = PrivacySettings.create();
       }
       textAndImages.privacy = privacy;
       let voiceAndVideo = textAndImages.voiceAndVideo;
       if (voiceAndVideo == null) {
-        const VoiceAndVideoSettings = create /* create */.VoiceAndVideoSettings;
+        const VoiceAndVideoSettings = create.VoiceAndVideoSettings;
         voiceAndVideo = VoiceAndVideoSettings.create();
       }
       textAndImages.voiceAndVideo = voiceAndVideo;
       let gameLibrary = textAndImages.gameLibrary;
       if (gameLibrary == null) {
-        const GameLibrarySettings = create /* create */.GameLibrarySettings;
+        const GameLibrarySettings = create.GameLibrarySettings;
         gameLibrary = GameLibrarySettings.create();
       }
       textAndImages.gameLibrary = gameLibrary;
       let debug = textAndImages.debug;
       if (debug == null) {
-        const DebugSettings = create /* create */.DebugSettings;
+        const DebugSettings = create.DebugSettings;
         debug = DebugSettings.create();
       }
       textAndImages.debug = debug;
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       let obj = Storage.get("UserSettingsStore");
       if (obj == null) {
         obj = {};
@@ -345,7 +345,7 @@ let items = [
   {
     version: 7,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore /* HotspotStore */.HotspotLocations.APPLICATION_COMMAND_TOOLTIP, DismissibleContent /* DismissibleContent */.DismissibleContent.APPLICATION_COMMAND_TOOLTIP);
+      return migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.APPLICATION_COMMAND_TOOLTIP, DismissibleContent.DismissibleContent.APPLICATION_COMMAND_TOOLTIP);
     },
     cleanup() {
 
@@ -354,7 +354,7 @@ let items = [
   {
     version: 8,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore /* HotspotStore */.HotspotLocations.CHANNEL_BANNER_MEMBER_LIST_NOTICE, DismissibleContent /* DismissibleContent */.DismissibleContent.CHANNELINFO_CHANNELBANNER_NOTICE);
+      return migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.CHANNEL_BANNER_MEMBER_LIST_NOTICE, DismissibleContent.DismissibleContent.CHANNELINFO_CHANNELBANNER_NOTICE);
     },
     cleanup() {
 
@@ -363,12 +363,12 @@ let items = [
   {
     version: 9,
     run(userContent) {
-      const HotspotStore = HotspotStore /* HotspotStore */.HotspotStore;
-      if (HotspotStore.hasHiddenHotspot(HotspotStore /* HotspotStore */.HotspotLocations.MULTI_ACCOUNT_TOOLTIP)) {
+      const HotspotStore = HotspotStore.HotspotStore;
+      if (HotspotStore.hasHiddenHotspot(HotspotStore.HotspotLocations.MULTI_ACCOUNT_TOOLTIP)) {
         const Storage = tmp(595).Storage;
         const result = Storage.set(closure_5, "true");
       }
-      return migrateHotspotLocation(userContent, HotspotStore /* HotspotStore */.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, DismissibleContent /* DismissibleContent */.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP);
+      return migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, DismissibleContent.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP);
     },
     cleanup() {
 
@@ -377,8 +377,8 @@ let items = [
   {
     version: 10,
     run(userContent) {
-      let flag = migrateHotspotLocation(userContent, HotspotStore /* HotspotStore */.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, DismissibleContent /* DismissibleContent */.DismissibleContent.CHANNEL_NOTICE_HUBLINK);
-      const Storage = Storage /* Storage */.Storage;
+      let flag = migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, DismissibleContent.DismissibleContent.CHANNEL_NOTICE_HUBLINK);
+      const Storage = Storage.Storage;
       let obj = Storage.get("channelNotices");
       if (obj == null) {
         obj = {};
@@ -458,7 +458,7 @@ let items = [
       return flag;
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("channelNotices");
     }
   },
@@ -466,10 +466,10 @@ let items = [
     version: 11,
     run(userContent) {
       let flag = false;
-      if (migrateHotspotLocation(userContent, HotspotStore /* HotspotStore */.HotspotLocations.GUILD_EVENT_UPSELL, DismissibleContent /* DismissibleContent */.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)) {
+      if (migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.GUILD_EVENT_UPSELL, DismissibleContent.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)) {
         flag = true;
       }
-      if (migrateHotspotLocation(userContent, HotspotStore /* HotspotStore */.HotspotLocations.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, DismissibleContent /* DismissibleContent */.DismissibleContent.GUILD_HEADER_ANIMATED_GUILD_BANNER)) {
+      if (migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, DismissibleContent.DismissibleContent.GUILD_HEADER_ANIMATED_GUILD_BANNER)) {
         flag = true;
       }
       return flag;
@@ -481,7 +481,7 @@ let items = [
   {
     version: 12,
     run(userContent) {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       let value = Storage.get("hideNag");
       if (value) {
         const NAGBAR_NOTICE_DOWNLOAD = tmp(1358).DismissibleContent.NAGBAR_NOTICE_DOWNLOAD;
@@ -560,18 +560,18 @@ let items = [
       return flag2;
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("hideNag");
-      const Storage2 = Storage /* Storage */.Storage;
+      const Storage2 = Storage.Storage;
       Storage2.remove("hideConnectSpotify");
-      const Storage3 = Storage /* Storage */.Storage;
+      const Storage3 = Storage.Storage;
       Storage3.remove("hideConnectPlayStation");
     }
   },
   {
     version: 13,
     run(userContent) {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       let value = Storage.get("hidePremiumPromo");
       if (value) {
         const NAGBAR_NOTICE_PREMIUM_PROMO = tmp(1358).DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO;
@@ -650,18 +650,18 @@ let items = [
       return flag2;
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("hidePremiumPromo");
-      const Storage2 = Storage /* Storage */.Storage;
+      const Storage2 = Storage.Storage;
       Storage2.remove("hidePremiumTier2TrialEnding");
-      const Storage3 = Storage /* Storage */.Storage;
+      const Storage3 = Storage.Storage;
       Storage3.remove("hidePremiumReactivateNotice");
     }
   },
   {
     version: 14,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore /* HotspotStore */.HotspotLocations.ACTIVITY_BEB_TUTORIAL, DismissibleContent /* DismissibleContent */.DismissibleContent.ACTIVITIES_TUTORIAL_COACH_MARK);
+      return migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.ACTIVITY_BEB_TUTORIAL, DismissibleContent.DismissibleContent.ACTIVITIES_TUTORIAL_COACH_MARK);
     },
     cleanup() {
 
@@ -670,7 +670,7 @@ let items = [
   {
     version: 15,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore /* HotspotStore */.HotspotLocations.NOW_PLAYING_CONSENT_CARD, DismissibleContent /* DismissibleContent */.DismissibleContent.NOW_PLAYING_CONSENT_CARD);
+      return migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.NOW_PLAYING_CONSENT_CARD, DismissibleContent.DismissibleContent.NOW_PLAYING_CONSENT_CARD);
     },
     cleanup() {
 
@@ -679,7 +679,7 @@ let items = [
   {
     version: 16,
     run(userContent) {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       const value = Storage.get("PromotionsPersistedStore");
       if (null == value) {
         return false;
@@ -719,13 +719,13 @@ let items = [
         let flag = null != expressionSuggestionsEnabled;
         if (flag) {
           if (null == textAndImages.textAndImages) {
-            const TextAndImagesSettings = create /* create */.TextAndImagesSettings;
+            const TextAndImagesSettings = create.TextAndImagesSettings;
             textAndImages.textAndImages = TextAndImagesSettings.create();
           }
           flag = null == textAndImages.textAndImages.expressionSuggestionsEnabled;
         }
         if (flag) {
-          const BoolValue = defineProperty /* defineProperty */.BoolValue;
+          const BoolValue = defineProperty.BoolValue;
           const obj = { value: null };
           obj[0] = expressionSuggestionsEnabled;
           textAndImages.textAndImages.expressionSuggestionsEnabled = BoolValue.create(obj);
@@ -735,7 +735,7 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("ExpressionSuggestionsPersistedStore");
     }
   },
@@ -743,10 +743,10 @@ let items = [
     version: 18,
     run(userContent) {
       let flag = false;
-      if (migrateHotspotLocation(userContent, HotspotStore /* HotspotStore */.HotspotLocations.GUILD_DELETE_FEEDBACK, DismissibleContent /* DismissibleContent */.DismissibleContent.GUILD_DELETE_FEEDBACK)) {
+      if (migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.GUILD_DELETE_FEEDBACK, DismissibleContent.DismissibleContent.GUILD_DELETE_FEEDBACK)) {
         flag = true;
       }
-      if (migrateHotspotLocation(userContent, HotspotStore /* HotspotStore */.HotspotLocations.GUILD_LEAVE_FEEDBACK, DismissibleContent /* DismissibleContent */.DismissibleContent.GUILD_LEAVE_FEEDBACK)) {
+      if (migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.GUILD_LEAVE_FEEDBACK, DismissibleContent.DismissibleContent.GUILD_LEAVE_FEEDBACK)) {
         flag = true;
       }
       return flag;
@@ -758,7 +758,7 @@ let items = [
   {
     version: 19,
     run(userContent) {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       let flag = Storage.get("forumHelperCardStorageKey");
       if (flag == null) {
         flag = false;
@@ -787,14 +787,14 @@ let items = [
       return flag2;
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("forumHelperCardStorageKey");
     }
   },
   {
     version: 20,
     run(userContent) {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       const value = Storage.get("lastChangeLogId");
       if (null == value) {
         return false;
@@ -823,7 +823,7 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       Storage.remove("lastChangeLogId");
     }
   },
@@ -835,9 +835,9 @@ let items = [
       if (appearance != null) {
         uiDensity = appearance.uiDensity;
       }
-      let flag = uiDensity === create /* create */.UIDensity.COMPACT;
+      let flag = uiDensity === create.UIDensity.COMPACT;
       if (flag) {
-        appearance.appearance.uiDensity = create /* create */.UIDensity.DEFAULT;
+        appearance.appearance.uiDensity = create.UIDensity.DEFAULT;
         flag = true;
       }
       return flag;

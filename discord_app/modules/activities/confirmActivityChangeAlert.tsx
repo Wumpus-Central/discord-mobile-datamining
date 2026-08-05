@@ -11,19 +11,19 @@ const result = require("computeChannelName").fileFinishedImporting("modules/acti
 export default function confirmActivityChangeModal(name, channel) {
   let str = "";
   if (null != channel) {
-    let obj = computeChannelName /* computeChannelName */;
+    let obj = computeChannelName;
     str = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
   }
   obj = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.XkIWkk);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["cY+Oob"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.XkIWkk);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t["ETE/oC"]);
+  const intl3 = getSystemLocale.intl;
+  obj[2] = intl3.string(getSystemLocale.t["cY+Oob"]);
   obj[3] = arg2;
   obj[4] = arg3;
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  const intl4 = getSystemLocale.intl;
   name = undefined;
   if (name != null) {
     name = name.name;
@@ -39,6 +39,6 @@ export default function confirmActivityChangeModal(name, channel) {
     str = intl6.string(tmp6(1236).t.OGUjmt);
   }
   obj[1] = str;
-  obj[5] = intl4.format(getSystemLocale /* getSystemLocale */.t["5/Xort"], obj);
+  obj[5] = intl4.format(getSystemLocale.t["5/Xort"], obj);
   obj2.show(obj);
 };

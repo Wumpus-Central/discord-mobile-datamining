@@ -2,20 +2,20 @@
 import { getSystemLocale } from "../../intl/index.native.tsx";
 const obj = {
   afk_channel_id() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.KuYcnU);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.KuYcnU);
   },
   public_updates_channel_id() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.vAyDGU);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.vAyDGU);
   },
   safety_alerts_channel_id() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.sMkYE8);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.sMkYE8);
   },
   system_channel_id() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.NASFnq);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.NASFnq);
   }
 };
 const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");

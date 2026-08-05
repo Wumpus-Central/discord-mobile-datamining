@@ -109,7 +109,7 @@ export default function DevToolsComponentsTestingScreen() {
   const tmp = createCacheKey();
   let obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
   obj = { spacing: 16, children: null };
-  const items = [callback(Text /* Text */.Text, { variant: "text-md/normal", children: "Test screen for embedding native components in RN" }), , ];
+  const items = [callback(Text.Text, { variant: "text-md/normal", children: "Test screen for embedding native components in RN" }), , ];
   obj = { modal: null, children: null };
   const obj1 = { customId: modal, channelId: null, components: null };
   obj1[1] = channelId.getChannelId();
@@ -119,18 +119,18 @@ export default function DevToolsComponentsTestingScreen() {
   const items1 = [callback(TextDisplayComponent, {}), , , , , ];
   const obj2 = {};
   const tmp2 = TextDisplayComponent;
-  items1[1] = callback(Select, { title: "String Select", type: PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.STRING_SELECT });
-  const obj3 = { title: "String Select", type: PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.STRING_SELECT };
-  items1[2] = callback(Select, { title: "User Select", type: PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.USER_SELECT });
-  const obj4 = { title: "User Select", type: PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.USER_SELECT };
-  items1[3] = callback(Select, { title: "Role Select", type: PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.ROLE_SELECT });
-  const obj5 = { title: "Role Select", type: PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.ROLE_SELECT };
-  items1[4] = callback(Select, { title: "Mentionable Select", type: PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.MENTIONABLE_SELECT });
-  const obj6 = { title: "Mentionable Select", type: PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.MENTIONABLE_SELECT };
-  items1[5] = callback(Select, { title: "Channel Select", type: PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.CHANNEL_SELECT });
+  items1[1] = callback(Select, { title: "String Select", type: PermissionOverwriteType.ComponentType.STRING_SELECT });
+  const obj3 = { title: "String Select", type: PermissionOverwriteType.ComponentType.STRING_SELECT };
+  items1[2] = callback(Select, { title: "User Select", type: PermissionOverwriteType.ComponentType.USER_SELECT });
+  const obj4 = { title: "User Select", type: PermissionOverwriteType.ComponentType.USER_SELECT };
+  items1[3] = callback(Select, { title: "Role Select", type: PermissionOverwriteType.ComponentType.ROLE_SELECT });
+  const obj5 = { title: "Role Select", type: PermissionOverwriteType.ComponentType.ROLE_SELECT };
+  items1[4] = callback(Select, { title: "Mentionable Select", type: PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT });
+  const obj6 = { title: "Mentionable Select", type: PermissionOverwriteType.ComponentType.MENTIONABLE_SELECT };
+  items1[5] = callback(Select, { title: "Channel Select", type: PermissionOverwriteType.ComponentType.CHANNEL_SELECT });
   obj[1] = items1;
-  items[1] = callback2(isInteractionComponent /* isInteractionComponent */.ComponentStateContextProvider, obj);
-  items[2] = callback(Button /* Button */.Button, {
+  items[1] = callback2(isInteractionComponent.ComponentStateContextProvider, obj);
+  items[2] = callback(Button.Button, {
     onPress() {
       let obj = callback(table[17]);
       obj = { type: "CLEAR_INTERACTION_MODAL_STATE", customId: closure_13 };
@@ -139,6 +139,6 @@ export default function DevToolsComponentsTestingScreen() {
     text: "Reset Modal State"
   });
   obj[1] = items;
-  obj[2] = callback2(Stack /* Stack */.Stack, obj);
+  obj[2] = callback2(Stack.Stack, obj);
   return callback(ScrollView, obj);
 };

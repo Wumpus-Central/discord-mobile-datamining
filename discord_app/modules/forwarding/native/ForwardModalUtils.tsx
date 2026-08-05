@@ -23,9 +23,9 @@ export const openForwardModal = function openForwardModal(arg0) {
     initialSelectedDestinations = [];
   }
   ({ forwardOptions, customSendHandler } = arg0);
-  trackForwardStart /* trackForwardStart */.trackForwardStart(message.channel_id, message.id, source);
-  const obj = trackForwardStart /* trackForwardStart */;
-  showSearchableDestinationListModal(asyncRequireImpl /* asyncRequireImpl */(10153, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
+  trackForwardStart.trackForwardStart(message.channel_id, message.id, source);
+  const obj = trackForwardStart;
+  showSearchableDestinationListModal(asyncRequireImpl(10153, dependencyMap.paths), { message, initialSelectedDestinations, forwardOptions, source, customSendHandler }, c5);
 };
 export const closeForwardModal = function closeForwardModal() {
   ModalActionCreators.popWithKey(c5);
@@ -36,5 +36,5 @@ export const showForwardFailedAlertModal = function showForwardFailedAlertModal(
   let message;
   ({ message, failedDestinations, forwardOptions } = arg0);
   const lazyResult = React.lazy(() => callback(paths[5])(paths[7], paths.paths));
-  useAlertStore /* useAlertStore */.openAlert("forward-failed-alert-modal", <lazyResult message={message} failedDestinations={failedDestinations} forwardOptions={forwardOptions} />);
+  useAlertStore.openAlert("forward-failed-alert-modal", <lazyResult message={message} failedDestinations={failedDestinations} forwardOptions={forwardOptions} />);
 };

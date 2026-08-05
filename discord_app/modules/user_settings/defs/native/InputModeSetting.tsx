@@ -7,8 +7,8 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["pS+K2L"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["pS+K2L"]);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useTrailing: function useInputModeSettingTrailing() {
@@ -24,8 +24,8 @@ createToggle = {
   },
   onPress: require("handleInputModePress").handleInputModePress,
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.nuFtHH)];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t.nuFtHH)];
     return items;
   }
 };

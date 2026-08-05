@@ -539,7 +539,7 @@ prototype["unsubscribe"] = function unsubscribe() {
 };
 prototype["fetch"] = function fetch(toLocaleLowerCase) {
   const self = this;
-  let obj = cleanString /* cleanString */;
+  let obj = cleanString;
   const cleanStringResult = obj.cleanString(toLocaleLowerCase);
   if ("" === cleanStringResult) {
     const userSearchContext2 = self.userSearchContext;
@@ -664,7 +664,7 @@ prototype["updateUser"] = function updateUser(id) {
         const indexMap = self.indexMap;
         return indexMap.delete(id);
       }
-      obj = cleanString /* cleanString */;
+      obj = cleanString;
     }
     const value = self.getItem(id);
     if (null == value) {
@@ -685,7 +685,7 @@ prototype["getItem"] = function getItem(closure_0) {
     return null;
   } else {
     const self = this;
-    names = cleanString /* cleanString */.getNames(user);
+    names = cleanString.getNames(user);
     ({ nick, names } = names);
     let obj = { user: null, names: null, affinity: null, firstMatch: null };
     obj[0] = user;
@@ -699,9 +699,9 @@ prototype["getItem"] = function getItem(closure_0) {
       nick = isMatch(names, self.currentQuery, { contains: true });
     }
     obj[3] = nick;
-    const obj4 = cleanString /* cleanString */;
+    const obj4 = cleanString;
     const tmp12 = require;
-    const relationshipType = cleanString /* cleanString */.getRelationshipType(user.id);
+    const relationshipType = cleanString.getRelationshipType(user.id);
     if (relationshipType !== RelationshipTypes.FRIEND) {
       const gameFriendsForUser = authStore.getGameFriendsForUser(closure_0);
       if (gameFriendsForUser.length > 0) {

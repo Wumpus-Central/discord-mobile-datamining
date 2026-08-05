@@ -33,10 +33,10 @@ function ExpandedControlItemIcon(iconSource) {
     return null;
   } else {
     let obj = { size: null, source: null, style: null, disableColor: true };
-    obj[0] = Button /* Button */.Icon.Sizes.MEDIUM;
+    obj[0] = Button.Icon.Sizes.MEDIUM;
     obj[1] = iconSource;
     obj[2] = tmp.formTintColor;
-    const tmp10 = callback(Button /* Button */.Icon, obj);
+    const tmp10 = callback(Button.Icon, obj);
     let tmp6 = tmp10;
     if (iconSource.showIconSparkle) {
       obj = { children: null };
@@ -79,15 +79,15 @@ function ExpandedControlItem(iconSource) {
     obj[2] = switchValue;
     obj[3] = disabled;
     obj[4] = onSwitchValueChange;
-    trailing = callback(Form /* Form */.FormSwitch, obj);
+    trailing = callback(Form.FormSwitch, obj);
   }
   obj = { disabled, leading: null, label: null, onPress: null, trailing: null };
   obj[1] = callback(ExpandedControlItemIcon, { iconSource: iconSource.iconSource, showIconSparkle });
   obj = { text: label, style: createCacheKey().formColor };
-  obj[2] = callback(Form /* Form */.FormLabel, obj);
+  obj[2] = callback(Form.FormLabel, obj);
   obj[3] = onPress;
   obj[4] = trailing;
-  return callback(Form /* Form */.FormRow, obj);
+  return callback(Form.FormRow, obj);
 }
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = jsxProd);
@@ -104,7 +104,7 @@ let result = require("reset").fileFinishedImporting("modules/video_calls/native/
 export const StreamVolumeItem = function StreamVolumeItem() {
   let effectiveVolume;
   let handleVolumeChange;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [reset, fetchFingerprint];
   const stateFromStores = obj.useStateFromStores(items, () => {
     lastActiveStream = lastActiveStream.getLastActiveStream();
@@ -126,10 +126,10 @@ export const StreamVolumeItem = function StreamVolumeItem() {
   ({ effectiveVolume, handleVolumeChange } = useMuteAwareLocalVolume(ownerId, MediaEngineContextTypes.STREAM));
   obj = { text: null, style: null };
   const intl = tmp2(1236).intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.pEAl4b);
+  obj[0] = intl.string(getSystemLocale.t.pEAl4b);
   const items1 = [tmp.formColor, { marginBottom: 16 }];
   obj[1] = items1;
-  const items2 = [callback(Form /* Form */.FormLabel, obj), ];
+  const items2 = [callback(Form.FormLabel, obj), ];
   const tmp6Result = useMuteAwareLocalVolume(ownerId, MediaEngineContextTypes.STREAM);
   const tmp5Result = VolumeSlider;
   let fn;
@@ -151,7 +151,7 @@ export const AudioRouteButton = function AudioRouteButton(arg0) {
   let importDefault;
   let require;
   ({ channelId: require, isConnectedToVoiceChannel: importDefault } = arg0);
-  let obj = _handleToggleVideo /* _handleToggleVideo */;
+  let obj = _handleToggleVideo;
   obj = {
     onPress() {
       const result = outer1_0(outer1_2[18]).showAudioOutputSelector(closure_0, closure_1);
@@ -159,8 +159,8 @@ export const AudioRouteButton = function AudioRouteButton(arg0) {
     iconSource: obj.useMaskedSpeakerStates().routeSource,
     label: null
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["A/Ly/2"]);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["A/Ly/2"]);
   return callback(ExpandedControlItem, obj);
 };
 export const ScreenshareButton = function ScreenshareButton(arg0) {
@@ -181,10 +181,10 @@ export const DeafenButton = function DeafenButton(disabled) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = NOOP /* NOOP */;
+  let obj = NOOP;
   const deafHandler = obj.createDeafHandler(useDeafStates(disabled.channel));
   obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10796 : 10797), label: null };
   const intl = tmp4(1236).intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.wjcRFX);
+  obj[3] = intl.string(getSystemLocale.t.wjcRFX);
   return callback(ExpandedControlItem, obj);
 };

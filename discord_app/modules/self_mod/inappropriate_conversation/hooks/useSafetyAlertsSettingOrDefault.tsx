@@ -10,7 +10,7 @@ const result = require("initialize").fileFinishedImporting("modules/self_mod/ina
 export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOrDefault() {
   currentUser = currentUser.getCurrentUser();
   const items = [handleConnectionClosedOrResumed];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     const privacy = settings.settings.privacy;
     let flag;
     if (privacy != null) {
@@ -23,9 +23,9 @@ export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOr
     }
     return flag;
   });
-  const obj2 = initialize /* initialize */;
-  let userIsTeen = useUserIsTeen /* useUserIsTeen */.useUserIsTeen();
-  const obj3 = useUserIsTeen /* useUserIsTeen */;
+  const obj2 = initialize;
+  let userIsTeen = useUserIsTeen.useUserIsTeen();
+  const obj3 = useUserIsTeen;
   let tmp3 = !userIsTeen;
   if (userIsTeen) {
     tmp3 = !obj4.useIsEligibleForInappropriateConversationDefaultOn({ location: "useSafetyAlertsSettingOrDefault" });

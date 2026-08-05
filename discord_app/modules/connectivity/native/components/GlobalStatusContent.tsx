@@ -34,7 +34,7 @@ export default function ConnectivityGlobalStatusContent() {
   const tmp = createCacheKey();
   const tmp4 = useVoiceStateForRemoteSession();
   const require = tmp4;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [createRTCConnection, createGuildRecordFromRust, ensureGuildLoaded, handleUpdate];
   const items1 = [tmp4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {

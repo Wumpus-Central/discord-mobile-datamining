@@ -70,14 +70,14 @@ export const setStoredContacts = function setStoredContacts(arg0) {
   });
 };
 export const deleteStoredContacts = function deleteStoredContacts() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   let str = Storage.get(V2_DCD_CONTACTS_STORAGE_KEY);
   if (str == null) {
     str = "";
   }
   const Storage2 = tmp(595).Storage;
   Storage2.remove(V2_DCD_CONTACTS_STORAGE_KEY);
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     state.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -89,9 +89,9 @@ export const deleteStoredContacts = function deleteStoredContacts() {
 };
 export const useContactSyncStore = obj;
 export const dismissUpsellCTA = function dismissUpsellCTA() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set(ContactSyncUpsellCTADismissed, true);
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     state.setState((arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
@@ -101,9 +101,9 @@ export const dismissUpsellCTA = function dismissUpsellCTA() {
   });
 };
 export const dismissDMListCTA = function dismissDMListCTA() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set(ContactSyncDMListCTADismissed, true);
-  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState((arg0) => {
+  batchUpdates.batchUpdates(() => state.setState((arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
     obj.dmListCTADismissed = true;
@@ -111,17 +111,17 @@ export const dismissDMListCTA = function dismissDMListCTA() {
   }));
 };
 export const setDMListCTAFirstSeenDate = function setDMListCTAFirstSeenDate() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   if (!Storage.get(contact_sync_dm_list_cta_first_seen_date)) {
-    const Storage2 = Storage /* Storage */.Storage;
+    const Storage2 = Storage.Storage;
     const _Date = Date;
     const result = Storage2.set(contact_sync_dm_list_cta_first_seen_date, Date.now());
   }
 };
 export const clearDismissState = function clearDismissState() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   Storage.remove(ContactSyncUpsellCTADismissed);
-  const Storage2 = Storage /* Storage */.Storage;
+  const Storage2 = Storage.Storage;
   Storage2.remove(ContactSyncDMListCTADismissed);
   obj.setState((arg0) => {
     const obj = {};

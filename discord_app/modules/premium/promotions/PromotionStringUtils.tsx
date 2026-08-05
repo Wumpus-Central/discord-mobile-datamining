@@ -16,14 +16,14 @@ const result = require("initialize").fileFinishedImporting("modules/premium/prom
 export const useFormatStringWithCommonPremiumParams = function useFormatStringWithCommonPremiumParams(body) {
   let str = "...";
   const items = [addSubscriptionPlan];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => loadedForSKU.isLoadedForSKU(TIER_2.TIER_2));
+  const stateFromStores = initialize.useStateFromStores(items, () => loadedForSKU.isLoadedForSKU(TIER_2.TIER_2));
   if (-1 !== body.indexOf("{price}")) {
     if (stateFromStores) {
       try {
         const defaultPrice = getPremiumPlanItem.getDefaultPrice(PREMIUM_MONTH_TIER_2.PREMIUM_MONTH_TIER_2);
         const obj2 = getPremiumPlanItem;
-        str = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(defaultPrice.amount, defaultPrice.currency);
-        const tmpResult = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+        str = formatSingleCurrencyPrice.formatPrice(defaultPrice.amount, defaultPrice.currency);
+        const tmpResult = formatSingleCurrencyPrice;
       } catch (err) {
       }
     }
@@ -58,7 +58,7 @@ export const getHelpArticleLinkProps = function getHelpArticleLinkProps(helpArti
       obj[1] = linkText;
       return obj;
     }
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    linkText = intl.string(getSystemLocale /* getSystemLocale */.t["sBp+u0"]);
+    const intl = getSystemLocale.intl;
+    linkText = intl.string(getSystemLocale.t["sBp+u0"]);
   }
 };

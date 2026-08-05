@@ -13,8 +13,8 @@ export default function SubscriptionGatedChannelIcon(arg0) {
   ({ locked, isInMainTabsExperiment } = arg0);
   const obj = { source: null, size: null, disableColor: null };
   obj[0] = registerAsset;
-  const Sizes = Button /* Button */.Icon.Sizes;
+  const Sizes = Button.Icon.Sizes;
   obj[1] = isInMainTabsExperiment ? Sizes.EXTRA_SMALL_10 : Sizes.SMALL;
   obj[2] = false !== locked;
-  return jsx(Button /* Button */.Icon, { source: null, size: null, disableColor: null });
+  return jsx(Button.Icon, { source: null, size: null, disableColor: null });
 };

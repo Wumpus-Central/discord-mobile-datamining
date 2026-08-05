@@ -396,7 +396,7 @@ export default {
     })();
   },
   fetchForStatusNotification(arg0) {
-    let obj = generateHydrationId /* generateHydrationId */;
+    let obj = generateHydrationId;
     if (obj.icymiEnabled("fetchInitialStatus")) {
       obj = { type: "LOAD_ICYMI_FROM_NOTIFICATION", customStatusItem: null };
       obj[1] = arg0;

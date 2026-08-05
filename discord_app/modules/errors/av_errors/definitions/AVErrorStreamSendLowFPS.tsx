@@ -18,7 +18,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
         if (0 === obj.getViewerIds(currentUserActiveStream).length) {
           return null;
         } else {
-          const encodeStreamKeyResult = isStreamKey /* isStreamKey */.encodeStreamKey(currentUserActiveStream);
+          const encodeStreamKeyResult = isStreamKey.encodeStreamKey(currentUserActiveStream);
           rTCConnection = rTCConnection.getRTCConnection(encodeStreamKeyResult);
           if (null == rTCConnection) {
             return null;
@@ -71,7 +71,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
               }
             }
           }
-          const obj8 = isStreamKey /* isStreamKey */;
+          const obj8 = isStreamKey;
           obj9 = rTCConnection;
         }
       }

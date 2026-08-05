@@ -12,9 +12,9 @@ const require = arg1;
 const result = require("getSettings").fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
 
 export const useParentalControlledExplicitContentSettings = function useParentalControlledExplicitContentSettings() {
-  let obj = useSelectedTeen /* useSelectedTeen */;
+  let obj = useSelectedTeen;
   const selectedTeen = obj.useSelectedTeen();
-  const ParentalControlledExplicitContent = result /* result */.ParentalControlledExplicitContent;
+  const ParentalControlledExplicitContent = result.ParentalControlledExplicitContent;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -57,9 +57,9 @@ export const useParentalControlledExplicitContentSettings = function useParental
 export const useParentalControlledGoreContentSettings = function useParentalControlledGoreContentSettings() {
   let goreContentFriendDm;
   let goreContentNonFriendDm;
-  let obj = useSelectedTeen /* useSelectedTeen */;
+  let obj = useSelectedTeen;
   const selectedTeen = obj.useSelectedTeen();
-  const ParentalControlledGoreContent = result /* result */.ParentalControlledGoreContent;
+  const ParentalControlledGoreContent = result.ParentalControlledGoreContent;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -89,14 +89,14 @@ export const useParentalControlledGoreContentSettings = function useParentalCont
   }
 };
 export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() {
-  const selectedTeen = useSelectedTeen /* useSelectedTeen */.useSelectedTeen();
-  const ParentalControlledDefaultGuildsRestricted = result /* result */.ParentalControlledDefaultGuildsRestricted;
+  const selectedTeen = useSelectedTeen.useSelectedTeen();
+  const ParentalControlledDefaultGuildsRestricted = result.ParentalControlledDefaultGuildsRestricted;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
   }
   const controlledSetting = ParentalControlledDefaultGuildsRestricted.useControlledSetting(id);
-  const ParentalControlledDefaultGuildsRestrictedV2 = result /* result */.ParentalControlledDefaultGuildsRestrictedV2;
+  const ParentalControlledDefaultGuildsRestrictedV2 = result.ParentalControlledDefaultGuildsRestrictedV2;
   let id1;
   if (selectedTeen != null) {
     id1 = selectedTeen.id;
@@ -121,7 +121,7 @@ export const useAllowFriendsFromMutualGuildsOnlyForTeen = function useAllowFrien
   return memo.mutualGuilds && !memo.all;
 };
 export const useIsParentallyControlled = function useIsParentallyControlled() {
-  return useUserIdsForLinkStatus /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
+  return useUserIdsForLinkStatus.useHasActiveParentLinks();
 };
 export const useParentalControlledConsent = function useParentalControlledConsent(PERSONALIZATION) {
   let _require = PERSONALIZATION;

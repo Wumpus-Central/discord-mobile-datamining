@@ -36,7 +36,7 @@ function handleChannelSelect(channelId) {
             blockedUserWarningDismissed = num2 > Date.now() - closure_11;
           }
           if (!blockedUserWarningDismissed) {
-            let obj = showGdmBlockedUserModal /* showGdmBlockedUserModal */;
+            let obj = showGdmBlockedUserModal;
             obj = { channelId: null, blockedUserIds: null, ignoredUserIds: null };
             obj[0] = channelId;
             obj[1] = found;
@@ -50,7 +50,7 @@ function handleChannelSelect(channelId) {
   }
 }
 function handleAppStateChanged(state) {
-  if (state.state === keys /* keys */.AppStates.ACTIVE) {
+  if (state.state === keys.AppStates.ACTIVE) {
     const channelId = store2.getChannelId();
     if (null != channelId) {
       const blockedUsersForVoiceChannel = authStore.getBlockedUsersForVoiceChannel(channelId);
@@ -86,8 +86,8 @@ function handleAppStateChanged(state) {
           if (!everyResult) {
             const items1 = [];
             HermesBuiltin.arraySpread(ignoredUsersForVoiceChannel, HermesBuiltin.arraySpread(blockedUsersForVoiceChannel, 0));
-            const result = showVoiceChannelBlockedUserWarning /* showVoiceChannelBlockedUserWarning */.showVoiceChannelBlockedUserWarning(channelId, items1[0]);
-            const tmpResult = showVoiceChannelBlockedUserWarning /* showVoiceChannelBlockedUserWarning */;
+            const result = showVoiceChannelBlockedUserWarning.showVoiceChannelBlockedUserWarning(channelId, items1[0]);
+            const tmpResult = showVoiceChannelBlockedUserWarning;
           }
         }
       }
@@ -129,8 +129,8 @@ SharedSpacesWarningManager.prototype["handleBlockedOrIgnoredUserVoiceChannelJoin
         tmp6 = num2 > Date.now() - closure_12;
       }
       if (!tmp6) {
-        const result = showVoiceChannelBlockedUserWarning /* showVoiceChannelBlockedUserWarning */.showVoiceChannelBlockedUserWarning(channelId, id);
-        const obj = showVoiceChannelBlockedUserWarning /* showVoiceChannelBlockedUserWarning */;
+        const result = showVoiceChannelBlockedUserWarning.showVoiceChannelBlockedUserWarning(channelId, id);
+        const obj = showVoiceChannelBlockedUserWarning;
       }
     }
   }

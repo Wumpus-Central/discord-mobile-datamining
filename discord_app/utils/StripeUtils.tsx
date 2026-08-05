@@ -13,12 +13,12 @@ function getStripe() {
   if (null != closure_2) {
     let resolved = Promise.resolve(closure_2);
   } else {
-    const stripe = _typeof /* _typeof */.loadStripe(constants.STRIPE.KEY);
+    const stripe = _typeof.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((arg0) => {
       let closure_2 = arg0;
       return arg0;
     });
-    const obj = _typeof /* _typeof */;
+    const obj = _typeof;
   }
   return resolved;
 }
@@ -409,7 +409,7 @@ export const getStripeElementLocale = function getStripeElementLocale(arg0) {
 };
 export const useStripeLocale = function useStripeLocale() {
   const items = [_getSystemLocale];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     locale = locale.locale;
     let tmp = table[locale];
     if (tmp == null) {

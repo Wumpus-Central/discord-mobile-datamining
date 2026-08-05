@@ -52,7 +52,7 @@ export const useSetInitialVerificationEffect = function useSetInitialVerificatio
 };
 export const useUserVerificationState = function useUserVerificationState() {
   const items = [mergeGuildAvatar];
-  return initialize /* initialize */.useStateFromStoresObject(items, () => {
+  return initialize.useStateFromStoresObject(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {

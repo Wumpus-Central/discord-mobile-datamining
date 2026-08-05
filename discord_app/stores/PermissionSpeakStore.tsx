@@ -14,7 +14,7 @@ class PermissionSpeakStore extends Store {
 const prototype = PermissionSpeakStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ensureGuildLoaded, createGuildRecordFromRust);
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   c9 = Storage.get(hideSuppressWarning) || c9;
 };
 prototype["isAFKChannel"] = function isAFKChannel() {
@@ -79,7 +79,7 @@ const permissionSpeakStore = new PermissionSpeakStore(require("dispatcher"), {
     let c8 = true;
     if (forever.forever) {
       let c9 = true;
-      const Storage = Storage /* Storage */.Storage;
+      const Storage = Storage.Storage;
       const result = Storage.set(hideSuppressWarning, c9);
     }
   }

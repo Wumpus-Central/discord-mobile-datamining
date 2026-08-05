@@ -33,7 +33,7 @@ function getEmojiUnavailableReason(intention) {
     }
   }
   intention = intention.intention;
-  let tmp5 = emoji.type === EmojiTypes /* EmojiTypes */.EmojiTypes.GUILD;
+  let tmp5 = emoji.type === EmojiTypes.EmojiTypes.GUILD;
   if (!tmp5) {
     tmp5 = null != emoji.guildId;
   }
@@ -189,7 +189,7 @@ export default {
   isInternalEmojiForGuildId(type) {
     let tmp = null != type && null != arg1;
     if (tmp) {
-      const tmp4 = type.type === EmojiTypes /* EmojiTypes */.EmojiTypes.GUILD || null != type.guildId;
+      const tmp4 = type.type === EmojiTypes.EmojiTypes.GUILD || null != type.guildId;
       let tmp5 = !tmp4;
       if (tmp4) {
         tmp5 = arg1 === type.guildId;
@@ -200,7 +200,7 @@ export default {
   },
   getEmojiUnavailableReason,
   isCustomEmoji(emoji) {
-    let tmp = emoji.type === EmojiTypes /* EmojiTypes */.EmojiTypes.GUILD;
+    let tmp = emoji.type === EmojiTypes.EmojiTypes.GUILD;
     if (!tmp) {
       tmp = null != emoji.guildId;
     }
@@ -317,7 +317,7 @@ export default {
     return size.size > 2097152;
   },
   isDataTooBig(arg0) {
-    return fit /* fit */.dataUriFileSize(arg0) > closure_9;
+    return fit.dataUriFileSize(arg0) > closure_9;
   }
 };
 export const countEmoji = function countEmoji(arr) {

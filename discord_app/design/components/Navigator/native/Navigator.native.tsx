@@ -226,7 +226,7 @@ function WrappedNavigationStack(arg0) {
   ({ initialRouteName, onStateChange } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   let navigationContainerRef;
-  let obj = Link /* Link */;
+  let obj = Link;
   navigationContainerRef = obj.createNavigationContainerRef();
   const first = callback(React.useState(() => {
     let tmp2;
@@ -238,7 +238,7 @@ function WrappedNavigationStack(arg0) {
     return tmp2;
   }), 1)[0];
   const tmp4 = navigationContainerRef(4221)();
-  navigationTheme = useNavigationTheme /* useNavigationTheme */.useNavigationTheme(tmp4);
+  navigationTheme = useNavigationTheme.useNavigationTheme(tmp4);
   obj = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, independent: true, children: null };
   obj[1] = navigationTheme;
   if (null == initialRouteState) {
@@ -257,7 +257,7 @@ function WrappedNavigationStack(arg0) {
   obj = { initialRouteName };
   const merged1 = Object.assign(merged);
   obj[6] = <NavigationStack initialRouteName={initialRouteName} />;
-  return jsx(Link /* Link */.NavigationContainer, { initialRouteName });
+  return jsx(Link.NavigationContainer, { initialRouteName });
 }
 ({ StyleSheet, View: c5 } = get_ActivityIndicator);
 createCacheKey = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };

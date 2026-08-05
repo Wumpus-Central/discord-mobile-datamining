@@ -35,16 +35,16 @@ export const GuildEventTopic = function GuildEventTopic(arg0) {
   ({ topic, onChange } = arg0);
   let obj = { style: callback3().formGroupSmall, children: null };
   obj = { label: null, accessibilityLabel: null, placeholder: null, onChange: null, value: null, maxLength: null, autoFocus: true, isClearable: true };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["0HbEQ6"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["0HbEQ6"]);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["6/yars"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["0HbEQ6"]);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t["0HbEQ6"]);
+  const intl3 = getSystemLocale.intl;
+  obj[2] = intl3.string(getSystemLocale.t["6/yars"]);
   obj[3] = onChange;
   obj[4] = topic;
   obj[5] = closure_9;
-  obj[1] = callback(TextInput /* TextInput */.TextInput, obj);
+  obj[1] = callback(TextInput.TextInput, obj);
   return callback(View, obj);
 };
 export const GuildEventLocation = function GuildEventLocation(arg0) {
@@ -54,15 +54,15 @@ export const GuildEventLocation = function GuildEventLocation(arg0) {
   ({ location: _location, onChange, onFocus } = arg0);
   let obj = { style: callback3().formGroupLarge, children: null };
   obj = { label: null, placeholder: null, value: null, maxLength: null, onChange: null, onFocus: null, isClearable: true };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.yx785A);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.mkCMia);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.yx785A);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.mkCMia);
   obj[2] = _location;
   obj[3] = closure_8;
   obj[4] = onChange;
   obj[5] = onFocus;
-  obj[1] = callback(TextInput /* TextInput */.TextInput, obj);
+  obj[1] = callback(TextInput.TextInput, obj);
   return callback(View, obj);
 };
 export const GuildEventRecurrence = function GuildEventRecurrence(startDate) {
@@ -129,26 +129,26 @@ export const GuildEventEntityTypeSelection = function GuildEventEntityTypeSelect
   let onChange;
   ({ guild, disabled } = arg0);
   ({ entityType, onChange } = arg0);
-  let obj = useChannelsUserCanStartStageIn /* useChannelsUserCanStartStageIn */;
+  let obj = useChannelsUserCanStartStageIn;
   obj = { name: null, value: null, description: null, icon: null, IconComponent: null, disabled: null };
   const channelsUserCanStartStageIn = obj.useChannelsUserCanStartStageIn(guild);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.BVZqJl);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.BVZqJl);
   obj[1] = constants.VOICE;
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t["EV//4f"]);
+  const intl2 = getSystemLocale.intl;
+  obj[2] = intl2.string(getSystemLocale.t["EV//4f"]);
   obj[3] = registerAsset;
-  obj[4] = VoiceNormalIcon /* VoiceNormalIcon */.VoiceNormalIcon;
+  obj[4] = VoiceNormalIcon.VoiceNormalIcon;
   obj[5] = disabled;
   const items = [obj, ];
   obj = { name: null, value: null, description: null, icon: null, IconComponent: null, disabled: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.w7ipbz);
+  const intl3 = getSystemLocale.intl;
+  obj[0] = intl3.string(getSystemLocale.t.w7ipbz);
   obj[1] = constants.EXTERNAL;
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl4.string(getSystemLocale /* getSystemLocale */.t.DYxrHm);
+  const intl4 = getSystemLocale.intl;
+  obj[2] = intl4.string(getSystemLocale.t.DYxrHm);
   obj[3] = registerAsset;
-  obj[4] = LocationIcon /* LocationIcon */.LocationIcon;
+  obj[4] = LocationIcon.LocationIcon;
   obj[5] = disabled;
   items[1] = obj;
   const features = guild.features;
@@ -177,7 +177,7 @@ export const GuildEventEntityTypeSelection = function GuildEventEntityTypeSelect
     obj[4] = disabled;
     return callback2(callback(table[24]).TableRadioRow, obj, name);
   });
-  return callback(context /* context */.TableRadioGroup, obj2);
+  return callback(context.TableRadioGroup, obj2);
 };
 export const GuildEventDescription = function GuildEventDescription(onFocus) {
   let description;
@@ -264,9 +264,9 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
       obj[3] = toDateResult;
       obj[4] = maximumDate.toDate();
       obj[6] = openLazyResult;
-      openLazyResult = obj2.openLazy(asyncRequireImpl /* asyncRequireImpl */(8897, dependencyMap.paths), "DatePicker", obj);
+      openLazyResult = obj2.openLazy(asyncRequireImpl(8897, dependencyMap.paths), "DatePicker", obj);
       obj5 = outer1_3;
-      const tmp8 = asyncRequireImpl /* asyncRequireImpl */(8897, dependencyMap.paths);
+      const tmp8 = asyncRequireImpl(8897, dependencyMap.paths);
     }
   };
   obj3[3] = disabled;
@@ -308,9 +308,9 @@ export const GuildEventDatetime = function GuildEventDatetime(dateLabel) {
       obj[3] = toDateResult;
       obj[4] = maximumDate.toDate();
       obj[6] = openLazyResult;
-      openLazyResult = obj2.openLazy(asyncRequireImpl /* asyncRequireImpl */(8897, dependencyMap.paths), "DatePicker", obj);
+      openLazyResult = obj2.openLazy(asyncRequireImpl(8897, dependencyMap.paths), "DatePicker", obj);
       obj5 = outer1_3;
-      const tmp8 = asyncRequireImpl /* asyncRequireImpl */(8897, dependencyMap.paths);
+      const tmp8 = asyncRequireImpl(8897, dependencyMap.paths);
     }
   };
   obj6[3] = disabled;

@@ -16,8 +16,8 @@ TopEmojisDataManager.prototype["handleInteraction"] = function handleInteraction
   const items = [EmojiInteractionPoint.EmojiButtonMouseEntered];
   if (items.includes(interaction.interaction)) {
     guildId = guildId.getGuildId();
-    const result = maybeFetchTopEmojisByGuild /* maybeFetchTopEmojisByGuild */.maybeFetchTopEmojisByGuild(guildId);
-    const obj = maybeFetchTopEmojisByGuild /* maybeFetchTopEmojisByGuild */;
+    const result = maybeFetchTopEmojisByGuild.maybeFetchTopEmojisByGuild(guildId);
+    const obj = maybeFetchTopEmojisByGuild;
   }
 };
 const topEmojisDataManager = new TopEmojisDataManager();

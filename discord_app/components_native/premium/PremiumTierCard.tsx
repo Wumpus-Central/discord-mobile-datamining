@@ -34,11 +34,11 @@ export default function _default(children) {
   const tmp = createCacheKey();
   const tmp4 = useIsMobileVisualRefreshExperimentEnabled("PremiumTierCard");
   let obj = { style: tmp.header, start: null, end: null, colors: null, children: null };
-  obj[1] = keys /* keys */.HorizontalGradient.START;
-  obj[2] = keys /* keys */.HorizontalGradient.END;
+  obj[1] = keys.HorizontalGradient.START;
+  obj[2] = keys.HorizontalGradient.END;
   obj[3] = getPremiumGradientColor(premiumType);
   obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, source: null };
-  let obj2 = getPremiumPlanItem /* getPremiumPlanItem */;
+  let obj2 = getPremiumPlanItem;
   obj[1] = obj2.getPremiumTypeDisplayName(premiumType);
   if (PremiumTypes.TIER_0 === premiumType) {
     let textLogoTier2 = tmp.textLogoTier0;
@@ -91,7 +91,7 @@ export default function _default(children) {
     obj2 = { variant: "surface-high", style: null, children: null };
     obj2[1] = style;
     obj2[2] = tmp5Result;
-    let tmp7Result = tmp7(PressableCard /* PressableCard */.Card, obj2);
+    let tmp7Result = tmp7(PressableCard.Card, obj2);
   } else {
     const obj3 = { style: null, children: null };
     obj3[0] = style;

@@ -197,9 +197,9 @@ function CloseButton() {
   obj[1] = function onPress() {
     return callback(table[22]).pop();
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
-  return callback2(HeaderActionButton /* HeaderActionButton */.HeaderActionButton, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
+  return callback2(HeaderActionButton.HeaderActionButton, obj);
 }
 ({ Pressable: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
@@ -210,7 +210,7 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
   obj[0] = obj;
   obj[1] = { marginTop: "auto" };
   obj = { flexDirection: "row", justifyContent: "center", alignItems: "center", marginBottom: Themes.space.PX_32 };
-  let obj3 = PlatformTypes /* PlatformTypes */;
+  let obj3 = PlatformTypes;
   if (obj3.isIOS()) {
     if (arg0) {
       const obj1 = { shadowColor: "rgb(144, 144, 251)", shadowOffset: null, shadowOpacity: 0.6, shadowRadius: 85 };
@@ -272,7 +272,7 @@ let closure_14 = createCacheKey.createStyles((arg0) => {
       obj[10] = { flexDirection: "column", width: "100%", marginTop: "auto" };
       return obj;
     }
-    tmp3Result = PlatformTypes /* PlatformTypes */;
+    tmp3Result = PlatformTypes;
   }
 });
 let result = require("noop").fileFinishedImporting("modules/quests/native/QuestActivityUnenrolledModal.tsx");

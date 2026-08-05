@@ -32,7 +32,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
   if (null == interval) {
     return null;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const format = intl.format;
     if (!isTrial) {
       if (isDiscounted) {
@@ -64,14 +64,14 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       obj1[2] = formatResult;
       jsx(tmp10(4281).Text, { style: null, variant: "text-xxs/medium", children: null });
     }
-    const tmp3Result1 = set /* set */;
+    const tmp3Result1 = set;
     t = tmp3(1236).t;
-    const isAndroidResult1 = set /* set */.isAndroid();
+    const isAndroidResult1 = set.isAndroid();
     t = { paidURL: null, interval: null, cancelURL: null };
     t[0] = constants2.PAID_TERMS;
-    const tmp14 = set /* set */.isAndroid() ? t.tINI9V : t.ZWXtAj;
-    t[1] = getPremiumPlanItem /* getPremiumPlanItem */.getIntervalStringAsNoun(item.interval);
-    const tmp3Result2 = getPremiumPlanItem /* getPremiumPlanItem */;
+    const tmp14 = set.isAndroid() ? t.tINI9V : t.ZWXtAj;
+    t[1] = getPremiumPlanItem.getIntervalStringAsNoun(item.interval);
+    const tmp3Result2 = getPremiumPlanItem;
     item = combined.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
     t[2] = item;
     format(tmp14, t);

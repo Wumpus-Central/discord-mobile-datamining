@@ -13,7 +13,7 @@ const memoResult = require("noop").memo((arg0) => {
   ({ screen, route } = arg0);
   const customNavbar = screen.customNavbar;
   ({ navigation, viewStyle } = arg0);
-  const designConfig = designConfig /* designConfig */.designConfig;
+  const designConfig = designConfig.designConfig;
   const trackNavigatorScreenImpression = designConfig.useTrackNavigatorScreenImpression(screen, route);
   let customNavbarResult = null;
   if (null != customNavbar) {
@@ -22,7 +22,7 @@ const memoResult = require("noop").memo((arg0) => {
   const obj = { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null };
   const items = [customNavbarResult, screen.render(route.params, navigation)];
   obj[3] = items;
-  return jsxs(PostponeRender /* PostponeRender */.PostponeRender, { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null });
+  return jsxs(PostponeRender.PostponeRender, { postpone: screen.postponeRender, ignoreKeyboard: screen.ignoreKeyboard, viewStyle, children: null });
 });
 const result = require("designConfig").fileFinishedImporting("design/components/Navigator/native/NavigatorScreen.native.tsx");
 

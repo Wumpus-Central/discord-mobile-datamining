@@ -238,30 +238,30 @@ function HTTPProofScreen(children) {
   let callback;
   let React;
   const tmp = createCacheKey();
-  let obj = useNavigation /* useNavigation */;
+  let obj = useNavigation;
   dependencyMap = obj.useNavigation();
   [tmp5, c3] = callback(React.useState(null), 2);
   const tmp4 = callback(React.useState(null), 2);
   [tmp7, c4] = callback(React.useState(false), 2);
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { variant: "text-md/normal", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.p4ql7y);
-  const items = [callback2(Text /* Text */.Text, obj), , , , ];
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.p4ql7y);
+  const items = [callback2(Text.Text, obj), , , , ];
   const obj1 = { style: tmp.dns, children: null };
   const obj2 = { variant: "text-md/normal", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.GL3q7k);
-  const items1 = [callback2(Text /* Text */.Text, obj2), , , ];
+  const intl2 = getSystemLocale.intl;
+  obj2[1] = intl2.string(getSystemLocale.t.GL3q7k);
+  const items1 = [callback2(Text.Text, obj2), , , ];
   const obj3 = { variant: "text-md/normal", selectable: true, style: tmp.code, children: null };
-  let obj6 = EXAMPLE_DOMAIN /* EXAMPLE_DOMAIN */;
+  let obj6 = EXAMPLE_DOMAIN;
   obj3[3] = obj6.getHttpName(domain);
-  items1[1] = callback2(Text /* Text */.Text, obj3);
+  items1[1] = callback2(Text.Text, obj3);
   const obj4 = { variant: "text-md/normal", children: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.PVLriT);
-  items1[2] = callback2(Text /* Text */.Text, obj4);
-  items1[3] = callback2(Text /* Text */.Text, { variant: "text-md/normal", selectable: true, style: tmp.code, children: children.proof });
+  const intl3 = getSystemLocale.intl;
+  obj4[1] = intl3.string(getSystemLocale.t.PVLriT);
+  items1[2] = callback2(Text.Text, obj4);
+  items1[3] = callback2(Text.Text, { variant: "text-md/normal", selectable: true, style: tmp.code, children: children.proof });
   obj1[1] = items1;
   items[1] = callback3(View, obj1);
   let tmp9Result = null != tmp5;
@@ -275,7 +275,7 @@ function HTTPProofScreen(children) {
   const obj7 = { style: tmp.button, children: null };
   const obj8 = { loading: tmp7, text: null, onPress: null };
   const intl4 = tmp2(1236).intl;
-  obj8[1] = intl4.string(getSystemLocale /* getSystemLocale */.t["13ofGu"]);
+  obj8[1] = intl4.string(getSystemLocale.t["13ofGu"]);
   obj8[2] = function onPress() {
     _undefined2(true);
     _undefined(null);
@@ -321,19 +321,19 @@ function HTTPProofScreen(children) {
       callback2(false);
     });
   };
-  obj7[1] = callback2(Button /* Button */.Button, obj8);
+  obj7[1] = callback2(Button.Button, obj8);
   items[3] = callback2(View, obj7);
   const obj9 = { style: tmp.button, children: null };
   const obj10 = { variant: "secondary", text: null, onPress: null };
   const intl5 = tmp2(1236).intl;
-  obj10[1] = intl5.string(getSystemLocale /* getSystemLocale */.t.RhJMVQ);
+  obj10[1] = intl5.string(getSystemLocale.t.RhJMVQ);
   obj10[2] = function onPress() {
 
   };
-  obj9[1] = callback2(Button /* Button */.Button, obj10);
+  obj9[1] = callback2(Button.Button, obj10);
   items[4] = callback2(View, obj9);
   obj[2] = items;
-  return callback3(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback3(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 ({ Endpoints: closure_6, PlatformTypes: error } = ME);
 ({ jsx: metroImportAll, jsxs: c9 } = jsxProd);

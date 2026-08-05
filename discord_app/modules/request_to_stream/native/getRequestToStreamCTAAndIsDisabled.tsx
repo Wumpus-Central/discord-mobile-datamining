@@ -11,13 +11,13 @@ const require = arg1;
 const result = require("canFulfillStreamRequest").fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");
 
 export default function getRequestToStreamCTAAndIsDisabled(id) {
-  const tmp3 = callback(canFulfillStreamRequest /* canFulfillStreamRequest */.canFulfillStreamRequest(id, true), 2);
+  const tmp3 = callback(canFulfillStreamRequest.canFulfillStreamRequest(id, true), 2);
   id = id.getId();
-  const obj = canFulfillStreamRequest /* canFulfillStreamRequest */;
+  const obj = canFulfillStreamRequest;
   const obj2 = DISCORD_EPOCH;
-  const sum = DISCORD_EPOCH.extractTimestamp(id.id) + result /* result */.EMBED_LIFETIME;
+  const sum = DISCORD_EPOCH.extractTimestamp(id.id) + result.EMBED_LIFETIME;
   const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(id.id);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const stringResult = intl.string(messagesProxy["5+172e"]);
   if (tmp9) {
     const intl6 = tmp(1236).intl;

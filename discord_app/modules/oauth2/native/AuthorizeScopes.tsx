@@ -15,9 +15,9 @@ function Scope(arg0) {
   let text;
   ({ text, error, isFake } = arg0);
   const tmp = callback2();
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (isFake) {
     let stringResult = string(t.OX8EMU);
     let tmp6 = tmp2;

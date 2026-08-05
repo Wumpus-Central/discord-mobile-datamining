@@ -9,8 +9,8 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 let require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.i19n5L);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.i19n5L);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useProps: function useFontScaleSliderProps() {

@@ -11,7 +11,7 @@ const result = require("ME").fileFinishedImporting("modules/messages/native/rend
 
 export const createUserJoinSystemMessage = function createUserJoinSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+  let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   channel = channel.getChannel(message.getChannelId());
   let guildId;
@@ -41,7 +41,7 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
   obj[0] = intl.formatToParts(systemMessageUserJoinMobile, obj);
   obj[1] = transformStickerResult;
   const intl2 = tmp(1236).intl;
-  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t["7Tj6HT"]);
+  obj[2] = intl2.string(getSystemLocale.t["7Tj6HT"]);
   const merged = Object.assign(tmp4(7882)(roleStyle));
   return obj;
 };

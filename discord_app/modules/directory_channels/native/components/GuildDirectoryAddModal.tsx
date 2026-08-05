@@ -94,5 +94,5 @@ export default function GuildDirectoryAddModal(arg0) {
 };
 export const GuildDirectoryAddModalScreen = function GuildDirectoryAddModalScreen(children) {
   const tmp = createCacheKey();
-  return jsx(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, { top: true, style: createCacheKey().safeArea, children: children.children });
+  return jsx(SafeAreaPaddingView.SafeAreaPaddingView, { top: true, style: createCacheKey().safeArea, children: children.children });
 };

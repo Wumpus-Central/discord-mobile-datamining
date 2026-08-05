@@ -22,8 +22,8 @@ export const ForYouReadSectionHeader = function ForYouReadSectionHeader() {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.textHeader, variant: "text-sm/semibold", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.hftC1K);
-  obj[1] = jsx(Text /* Text */.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.hftC1K);
+  obj[1] = jsx(Text.Text, { style: tmp.textHeader, variant: "text-sm/semibold", children: null });
   return <closure_2 style={tmp.textHeader} variant="text-sm/semibold">{null}</closure_2>;
 };

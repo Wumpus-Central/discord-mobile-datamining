@@ -235,7 +235,7 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       NONE = tmp11;
     }
   } else {
-    let obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
+    let obj = fromGuildPropertiesWithAdditionalFields;
     if (obj.isGuildRecord(context)) {
       const id = context.id;
       let NONE2 = dependencyMap[id];
@@ -635,7 +635,7 @@ const permissionStore = new PermissionStore(require("dispatcher"), {
     return flag;
   },
   THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(guildId) {
-    let flag = doesThreadMembersActionAffectMe /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(guildId);
+    let flag = doesThreadMembersActionAffectMe.doesThreadMembersActionAffectMe(guildId);
     if (flag) {
       guildId = guildId.guildId;
       flag = true;

@@ -8,13 +8,13 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["99tBAC"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["99tBAC"]);
   },
   parent: require("MobileSetting").MobileSetting.CHAT,
   useValue: function useSaveCameraUploadsToDeviceValue() {
     const items = [CHANNEL_SIDEBAR_WIDTH];
-    return initialize /* initialize */.useStateFromStores(items, () => obj.saveCameraUploadsToDevice);
+    return initialize.useStateFromStores(items, () => obj.saveCameraUploadsToDevice);
   },
   onValueChange: function onSaveCameraUploadsToDeviceValueChange(saveCameraUploadsToDevice) {
     let obj = saveGuildFolders;

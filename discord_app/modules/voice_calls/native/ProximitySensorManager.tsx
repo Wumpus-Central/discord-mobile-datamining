@@ -14,9 +14,9 @@ function handleChange() {
   currentRouteType = currentRouteType.getCurrentRouteType();
   const tmp3 = null != currentEmbeddedActivity.getCurrentEmbeddedActivity();
   const isConnectedResult = connected.isConnected();
-  let tmp8 = currentRouteType === RouteTypes /* RouteTypes */.RouteTypes.RECEIVER && isConnectedResult;
+  let tmp8 = currentRouteType === RouteTypes.RouteTypes.RECEIVER && isConnectedResult;
   if (tmp8) {
-    let isIOSResult = set /* set */.isIOS();
+    let isIOSResult = set.isIOS();
     if (!isIOSResult) {
       let tmp10 = !tmp3;
       if (!tmp3) {
@@ -25,7 +25,7 @@ function handleChange() {
       isIOSResult = tmp10;
     }
     tmp8 = isIOSResult;
-    const tmp6Result = set /* set */;
+    const tmp6Result = set;
   }
   const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
 }

@@ -37,11 +37,11 @@ function StartEventHeader(children) {
   const tmp = createCacheKey();
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.headerPrivacyLevel, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["q+fFJv"]);
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["q+fFJv"]);
+  const items = [callback(Text.Text, obj), ];
   obj = { style: tmp.headerTitle, variant: "text-md/medium", color: "text-default", children: children.event.name };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

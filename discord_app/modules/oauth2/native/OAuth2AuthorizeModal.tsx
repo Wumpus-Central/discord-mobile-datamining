@@ -88,12 +88,12 @@ export default function OAuth2AuthorizeModal(arg0) {
     tmp11Result = tmp11(tmp5(5270).XSmallIcon, obj4);
   }
   obj2[3] = tmp11Result;
-  const items2 = [closure_5(PressableBase /* PressableBase */.PressableOpacity, obj2), , ];
+  const items2 = [closure_5(PressableBase.PressableOpacity, obj2), , ];
   const obj5 = { style: tmp.title, children: null };
   const obj6 = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
   const intl3 = tmp5(1236).intl;
-  obj6[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["y+/PE9"]);
-  obj5[1] = closure_5(Text /* Text */.Text, obj6);
+  obj6[2] = intl3.string(getSystemLocale.t["y+/PE9"]);
+  obj5[1] = closure_5(Text.Text, obj6);
   items2[1] = closure_5(View, obj5);
   const items3 = [tmp.titleContainerBorder, animatedStyle];
   items2[2] = closure_5(sharedValue(4146).View, { style: items3 });
@@ -105,7 +105,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   obj8.onScroll = callback;
   obj8.centerContent = true;
   obj7[2] = closure_5(sharedValue(10855), obj8);
-  items4[1] = closure_5(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj7);
+  items4[1] = closure_5(SafeAreaPaddingView.SafeAreaPaddingView, obj7);
   obj[1] = items4;
   return closure_6(View, obj);
 };

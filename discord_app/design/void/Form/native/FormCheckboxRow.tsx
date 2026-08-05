@@ -15,7 +15,7 @@ export default function FormCheckboxRow(selected) {
   let accessibilityState;
   selected = selected.selected;
   const merged = Object.assign(selected, Object.create(null));
-  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: selected });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   obj = {};

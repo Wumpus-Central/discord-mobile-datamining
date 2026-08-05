@@ -12,10 +12,10 @@ export const TwoWayLinkStepHeader = function TwoWayLinkStepHeader(arg0) {
   let idx;
   let total;
   ({ idx, total } = arg0);
-  let obj = styles /* styles */;
+  let obj = styles;
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
   obj = { variant: "text-xs/bold", color: "text-default", style: twoWayLinkStyles.stepHeader, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.fHz6eR, { number: idx, total });
-  return jsx(Text /* Text */.Text, { variant: "text-xs/bold", color: "text-default", style: twoWayLinkStyles.stepHeader, children: null });
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.format(getSystemLocale.t.fHz6eR, { number: idx, total });
+  return jsx(Text.Text, { variant: "text-xs/bold", color: "text-default", style: twoWayLinkStyles.stepHeader, children: null });
 };

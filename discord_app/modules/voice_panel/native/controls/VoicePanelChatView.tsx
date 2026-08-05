@@ -44,19 +44,19 @@ const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
   }, []);
   if (tmp3) {
     let obj = { accessibilityLabel: null, icon: null, onPress: null };
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["5MstTl"]);
+    const intl2 = getSystemLocale.intl;
+    obj[0] = intl2.string(getSystemLocale.t["5MstTl"]);
     obj[1] = tmp(4240);
     obj[2] = callback;
     let tmp5Result = tmp5(tmp(11553), obj);
     const tmpResult = tmp(11553);
   } else {
     obj = { accessibilityLabel: null, icon: null, onPress: null, variant: "primary-overlay" };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["5MstTl"]);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t["5MstTl"]);
     obj[1] = tmp(4240);
     obj[2] = callback;
-    tmp5Result = tmp5(IconButton /* IconButton */.IconButton, obj);
+    tmp5Result = tmp5(IconButton.IconButton, obj);
   }
   return tmp5Result;
 });

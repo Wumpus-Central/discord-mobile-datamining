@@ -84,8 +84,8 @@ export const getComboPercentage = function getComboPercentage(value) {
 export const getComboStyles = function getComboStyles(arg0) {
   if (1 === arg0) {
     let obj = { color: null };
-    obj[0] = unsafe_getRawColor /* unsafe_getRawColor */.unsafe_getRawColor("BRAND_500");
-    const obj10 = unsafe_getRawColor /* unsafe_getRawColor */;
+    obj[0] = unsafe_getRawColor.unsafe_getRawColor("BRAND_500");
+    const obj10 = unsafe_getRawColor;
   } else {
     if (2 !== arg0) {
       if (3 !== arg0) {
@@ -93,25 +93,25 @@ export const getComboStyles = function getComboStyles(arg0) {
           if (5 !== arg0) {
             if (6 === arg0) {
               obj = { color: null, square: true };
-              obj[0] = unsafe_getRawColor /* unsafe_getRawColor */.unsafe_getRawColor("RED_400");
-              const obj4 = unsafe_getRawColor /* unsafe_getRawColor */;
+              obj[0] = unsafe_getRawColor.unsafe_getRawColor("RED_400");
+              const obj4 = unsafe_getRawColor;
             } else {
               obj = { color: null, flair: true };
-              let obj1 = unsafe_getRawColor /* unsafe_getRawColor */;
+              let obj1 = unsafe_getRawColor;
               obj[0] = obj1.unsafe_getRawColor("ORANGE_345");
             }
           }
         }
         obj1 = { color: null, square: true };
-        obj1[0] = unsafe_getRawColor /* unsafe_getRawColor */.unsafe_getRawColor("YELLOW_300");
+        obj1[0] = unsafe_getRawColor.unsafe_getRawColor("YELLOW_300");
         obj = obj1;
-        const obj6 = unsafe_getRawColor /* unsafe_getRawColor */;
+        const obj6 = unsafe_getRawColor;
       }
     }
     const obj2 = { color: null };
-    obj2[0] = unsafe_getRawColor /* unsafe_getRawColor */.unsafe_getRawColor("GREEN_360");
+    obj2[0] = unsafe_getRawColor.unsafe_getRawColor("GREEN_360");
     obj = obj2;
-    const obj8 = unsafe_getRawColor /* unsafe_getRawColor */;
+    const obj8 = unsafe_getRawColor;
   }
   return obj;
 };

@@ -49,8 +49,8 @@ export const onRouteSettingOnPress = function onRouteSettingOnPress(arg0) {
   }
 };
 export const getSettingTitle = function getSettingTitle(closure_0) {
-  const cachedSettingTitle = map /* map */.getCachedSettingTitle(closure_0);
-  const obj = map /* map */;
+  const cachedSettingTitle = map.getCachedSettingTitle(closure_0);
+  const obj = map;
   00038__(null != cachedSettingTitle, "Setting " + closure_0 + " is missing a title.");
   return cachedSettingTitle;
 };

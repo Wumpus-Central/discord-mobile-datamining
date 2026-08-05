@@ -26,11 +26,11 @@ function FailedGroupDMRow(channel) {
   let obj = { style: tmp.row, children: null };
   obj = { size: null, channel: null };
   const tmp2 = computeChannelName(channel);
-  obj[0] = Button /* Button */.AvatarSizes.REFRESH_MEDIUM_32;
+  obj[0] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   obj[1] = channel;
   const items = [callback(FacepileGroupDMAvatar, obj), ];
   obj = { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: tmp2 };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -178,6 +178,6 @@ export default function DestinationFailedAlertModal(arg0) {
     obj3[1] = intl.string(tmp3(1236).t.BddRzS);
     tmp2Result = tmp2(tmp3(4628).AlertActionButton, obj3, "confirm");
   }
-  obj[3] = callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertActions, { children: tmp2Result });
-  return callback(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, obj);
+  obj[3] = callback(getAlertModalItemKey.AlertActions, { children: tmp2Result });
+  return callback(getAlertModalItemKey.AlertModal, obj);
 };

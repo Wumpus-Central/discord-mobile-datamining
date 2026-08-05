@@ -41,19 +41,19 @@ export default function Header(accountScopes) {
   obj = { style: tmp.header, children: null };
   const obj1 = { style: tmp.headerIcons, children: null };
   const obj2 = { source: applicationIconSource, size: null };
-  obj2[1] = Button /* Button */.AvatarSizes.XLARGE;
-  const items = [callback(Button /* Button */.Avatar, obj2), , ];
+  obj2[1] = Button.AvatarSizes.XLARGE;
+  const items = [callback(Button.Avatar, obj2), , ];
   const obj3 = { style: tmp.ellipseGroup, children: null };
   const items1 = [callback(View, { style: tmp.ellipse }), callback(View, { style: tmp.ellipse }), callback(View, { style: tmp.ellipse })];
   obj3[1] = items1;
   items[1] = callback2(View, obj3);
   const obj7 = { source: userAvatarSource, size: null };
-  obj7[1] = Button /* Button */.AvatarSizes.XLARGE;
-  items[2] = callback(Button /* Button */.Avatar, obj7);
+  obj7[1] = Button.AvatarSizes.XLARGE;
+  items[2] = callback(Button.Avatar, obj7);
   obj1[1] = items;
   const items2 = [callback2(View, obj1), , ];
   const obj8 = { style: tmp.applicationNameWrapper, children: null };
-  const items3 = [callback(Text /* Text */.Text, { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: application.name }), ];
+  const items3 = [callback(Text.Text, { variant: "text-lg/bold", color: "mobile-text-heading-primary", children: application.name }), ];
   let tmp8Result = null;
   if (null != bot) {
     const obj10 = { style: null, verified: null };
@@ -77,7 +77,7 @@ export default function Header(accountScopes) {
     const intl = tmp9(1236).intl;
     stringResult = intl.string(tmp9(1236).t["X+Fdpo"]);
   }
-  items2[2] = callback(Text /* Text */.Text, { variant: "heading-md/normal", color: "text-default", children: stringResult });
+  items2[2] = callback(Text.Text, { variant: "heading-md/normal", color: "text-default", children: stringResult });
   obj[1] = items2;
   return callback2(View, obj);
 };

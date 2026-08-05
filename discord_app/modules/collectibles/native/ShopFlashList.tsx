@@ -11,10 +11,10 @@ import { INITIAL_SCROLL_DELAY_MS } from "hooks/useScrollToInitialIndexOnce.tsx";
 const require = arg1;
 function ShopEmptyState() {
   const obj = { style: { marginTop: 42 }, Illustration: null, body: null };
-  obj[1] = getNoResultsSource /* getNoResultsSource */.NoResults;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.eAn6z2);
-  return jsx(Button /* Button */.EmptyState, { style: { marginTop: 42 }, Illustration: null, body: null });
+  obj[1] = getNoResultsSource.NoResults;
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.eAn6z2);
+  return jsx(Button.EmptyState, { style: { marginTop: 42 }, Illustration: null, body: null });
 }
 createCacheKey = { contentContainer: null };
 createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
@@ -29,7 +29,7 @@ export default function ShopFlashList(initialScrollIndex) {
   initialScrollIndex = initialScrollIndex.initialScrollIndex;
   ({ data, renderItem, getItemType } = initialScrollIndex);
   const ref = React.useRef(null);
-  let obj = INITIAL_SCROLL_DELAY_MS /* INITIAL_SCROLL_DELAY_MS */;
+  let obj = INITIAL_SCROLL_DELAY_MS;
   let tmp5 = null != initialScrollIndex;
   if (tmp5) {
     tmp5 = initialScrollIndex > 0;
@@ -37,5 +37,5 @@ export default function ShopFlashList(initialScrollIndex) {
   obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: tmp3(14729).INITIAL_SCROLL_DELAY_MS };
   const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce(obj);
   obj = { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: createCacheKey().contentContainer };
-  return jsx(noop /* noop */.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: createCacheKey().contentContainer });
+  return jsx(noop.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: createCacheKey().contentContainer });
 };

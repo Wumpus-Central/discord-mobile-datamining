@@ -508,7 +508,7 @@ const context5 = importAllResult.createContext(null);
 let closure_22 = { code: "function AlertModalNativeTsx1(){const{withAlertModalSpring,sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withAlertModalSpring(sharedVisible.get(),function(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}})};}" };
 let closure_24 = { code: "function AlertModalNativeTsx2(){const{sharedVisible,sharedTransitionState,TransitionStates,runOnJS,cleanUp,windowHeight,ALERT_MODAL_MARGIN,safeAreaTop,safeAreaBottom,withAlertModalSpring,sharedIndex,sharedTopHeight,useReducedMotion}=this.__closure;var _CARD_OFFSETS$sharedI;function onComplete(finished){if(finished===true&&sharedVisible.get()===0&&sharedTransitionState.get()===TransitionStates.YEETED){runOnJS(cleanUp)();}}const CARD_OFFSETS=[0,-20,-34];const maxHeight=windowHeight-ALERT_MODAL_MARGIN*2-Math.max(safeAreaTop,safeAreaBottom)*2;return{position:'absolute',opacity:withAlertModalSpring(sharedVisible.get(),onComplete),zIndex:10-sharedIndex.get(),height:sharedIndex.get()>0?sharedTopHeight.get():'auto',maxHeight:maxHeight,transform:useReducedMotion?[]:[{scale:withAlertModalSpring(sharedVisible.get()===1?1-sharedIndex.get()*0.1:0.7)},{translateY:withAlertModalSpring(sharedVisible.get()===1?(_CARD_OFFSETS$sharedI=CARD_OFFSETS[sharedIndex.get()])!==null&&_CARD_OFFSETS$sharedI!==void 0?_CARD_OFFSETS$sharedI:sharedVisible.get()*-12:50-sharedIndex.get()*50)}]};}" };
 function withAlertModalSpring(value, fn2) {
-  return CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(value, createCacheKey, "animate-always", fn2);
+  return CONFIG_NEVER_ANIMATE.withSpring(value, createCacheKey, "animate-always", fn2);
 }
 let obj2 = { withSpring: null, MODAL_SPRING: null };
 obj2[0] = require("CONFIG_NEVER_ANIMATE").withSpring;
@@ -602,15 +602,15 @@ export const showConfirmModal = function showConfirmModal(arg0) {
   ({ key, cancelText } = arg0);
   ({ title, content, confirmText } = arg0);
   if (cancelText === undefined) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    cancelText = intl.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
+    const intl = getSystemLocale.intl;
+    cancelText = intl.string(getSystemLocale.t["ETE/oC"]);
   }
   ({ variant, extraContent } = arg0);
   if (variant === undefined) {
     variant = "destructive";
   }
   ({ onConfirm, onCancel, onCloseCallback, dismissable } = arg0);
-  let obj = useAlertStore /* useAlertStore */;
+  let obj = useAlertStore;
   obj = { title, content, extraContent, actions: null };
   obj = { children: null };
   const items = [callback4(AlertActionButton, { variant, text: confirmText, onPress: onConfirm }), callback4(AlertActionButton, { variant: "secondary", text: cancelText, onPress: onCancel })];

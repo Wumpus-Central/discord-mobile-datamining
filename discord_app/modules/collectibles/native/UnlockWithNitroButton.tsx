@@ -21,7 +21,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   }
   ({ onTrackPress: require, text } = shouldShrink);
   let importDefault;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [map, updateProduct];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let isPurchasingProductResult = null != isClaiming.isClaiming;
@@ -53,7 +53,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     str = "sm";
   }
   obj[4] = str;
-  obj[6] = jsx(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, { size: "sm", color: "white" });
+  obj[6] = jsx(NitroWheelIcon.NitroWheelIcon, { size: "sm", color: "white" });
   obj[7] = function onPress() {
     if (closure_0 != null) {
       tmp(outer1_5.UNLOCK_WITH_NITRO);
@@ -61,5 +61,5 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     callback2();
   };
   obj[8] = stateFromStores;
-  return jsx(CollapsingText /* CollapsingText */.BaseTextButton, { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null });
+  return jsx(CollapsingText.BaseTextButton, { textElement: tmp4Result, text: null, accessibilityLabel: null, variant: "primary", size: null, grow: true, icon: null, onPress: null, disabled: null });
 };

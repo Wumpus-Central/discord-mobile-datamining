@@ -36,7 +36,7 @@ let closure_6;
 const require = arg1;
 function SettingsButton() {
   let obj = { accessibilityLabel: "button", variant: "tertiary", size: "sm", icon: null, onPress: null };
-  obj[3] = callback(FiltersHorizontalIcon /* FiltersHorizontalIcon */.FiltersHorizontalIcon, { size: "sm" });
+  obj[3] = callback(FiltersHorizontalIcon.FiltersHorizontalIcon, { size: "sm" });
   obj[4] = function onPress() {
     callback2(paths[16]).itemInteracted("filters_button", "filters_button", "press_info_button");
     const obj = callback2(paths[16]);
@@ -44,11 +44,11 @@ function SettingsButton() {
     const obj2 = callback2(paths[16]);
     callback2(paths[17]).openLazy(callback(paths[19])(paths[18], paths.paths), "ICYMISettingsActionSheet", {});
   };
-  return callback(IconButton /* IconButton */.IconButton, obj);
+  return callback(IconButton.IconButton, obj);
 }
 function InfoButton() {
   let obj = { accessibilityLabel: "button", variant: "tertiary", size: "sm", icon: null, onPress: null };
-  obj[3] = callback(CircleInformationIcon /* CircleInformationIcon */.CircleInformationIcon, { size: "sm" });
+  obj[3] = callback(CircleInformationIcon.CircleInformationIcon, { size: "sm" });
   obj[4] = function onPress() {
     callback2(8835).itemInteracted("info_button", "info_button", "press_info_button");
     const obj = callback2(8835);
@@ -56,7 +56,7 @@ function InfoButton() {
     const obj2 = callback2(8835);
     callback(15454).pushICYMIInfoModal({ extendedOnboarding: true });
   };
-  return callback(IconButton /* IconButton */.IconButton, obj);
+  return callback(IconButton.IconButton, obj);
 }
 function ICYMIHeaderTextWrapper() {
   const tmp = callback3();
@@ -78,7 +78,7 @@ function ICYMIHeaderTextWrapper() {
   });
 }
 function handleEndReached() {
-  generateHydrationId /* generateHydrationId */.hydrateNextPage();
+  generateHydrationId.hydrateNextPage();
 }
 function ICYMI(inNestedNavigator) {
   let data;
@@ -371,8 +371,8 @@ let closure_22 = importAllResult.memo((inNestedNavigator) => {
   obj = { top: !tmp2, style: tmp.header, children: null };
   obj = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj1 = { dark: null, light: null };
-  obj1[0] = getGradientColorByPercentage /* getGradientColorByPercentage */.OverlayOpacity.LEVEL_7;
-  obj1[1] = getGradientColorByPercentage /* getGradientColorByPercentage */.OverlayOpacity.LEVEL_8;
+  obj1[0] = getGradientColorByPercentage.OverlayOpacity.LEVEL_7;
+  obj1[1] = getGradientColorByPercentage.OverlayOpacity.LEVEL_8;
   obj[4] = obj1;
   const items = [callback(getMixedGradientColor, obj), , ];
   const obj2 = { style: tmp.headerTitle, children: null };
@@ -393,7 +393,7 @@ let closure_22 = importAllResult.memo((inNestedNavigator) => {
       obj5[0] = tmp.headerBorder;
       items[2] = tmp4(tmp6, obj5);
       obj[2] = items;
-      return tmp3(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+      return tmp3(SafeAreaPaddingView.SafeAreaPaddingView, obj);
     }
   }
   const obj6 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };

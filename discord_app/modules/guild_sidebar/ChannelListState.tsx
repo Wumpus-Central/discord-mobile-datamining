@@ -50,7 +50,7 @@ function computeSubtitle(type) {
     } else {
       if (arg2) {
         if (arg1) {
-          let obj1 = hasStream /* hasStream */;
+          let obj1 = hasStream;
           if (obj1.hasStream(tmp19)) {
             return { type: "go-live" };
           }
@@ -73,7 +73,7 @@ function computeSubtitle(type) {
         }
         return name;
       });
-      const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+      const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
       let tmp16 = null;
       if (found.length > 0) {
         obj1 = { type: "embedded-activities", name: null };

@@ -90,7 +90,7 @@ export const ForLaterCardHeader = function ForLaterCardHeader(channel) {
   const items = [callback(HeaderIcon, { channel }), , , ];
   let tmp4Result = null;
   if (!channel.isPrivate()) {
-    tmp4Result = tmp4(ChevronSmallRightIcon /* ChevronSmallRightIcon */.ChevronSmallRightIcon, { size: "xxs" });
+    tmp4Result = tmp4(ChevronSmallRightIcon.ChevronSmallRightIcon, { size: "xxs" });
   }
   items[1] = tmp4Result;
   items[2] = callback(ChannelName, { channel });

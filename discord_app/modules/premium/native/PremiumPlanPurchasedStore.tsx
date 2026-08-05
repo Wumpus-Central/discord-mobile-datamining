@@ -19,7 +19,7 @@ export const setInitiatedPurchaseFromNewFlow = function setInitiatedPurchaseFrom
   let importDefault;
   let require;
   ({ productId: require, onPaymentSuccess: importDefault, onPaymentDismiss: dependencyMap } = arg0);
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     outer1_6.setState({ productId: closure_0, initiatedPurchaseFromNewFlow: true, onPaymentSuccess: closure_1, onPaymentDismiss: closure_2 });
   });
 };
@@ -27,11 +27,11 @@ export const setPaymentSuccess = function setPaymentSuccess() {
   if (keys.getState().initiatedPurchaseFromNewFlow) {
     const state = keys.getState();
     const onPaymentSuccess = state.onPaymentSuccess;
-    batchUpdates /* batchUpdates */.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
+    batchUpdates.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
     if (onPaymentSuccess != null) {
       onPaymentSuccess(state.productId);
     }
-    const obj2 = batchUpdates /* batchUpdates */;
+    const obj2 = batchUpdates;
   }
 };
 export const setMobileWebRedirectCheckoutStatus = function setMobileWebRedirectCheckoutStatus(arg0) {
@@ -63,8 +63,8 @@ export const handleMobileWebCheckoutStatus = function handleMobileWebCheckoutSta
 };
 export const showOldPaymentFlowSuccess = function showOldPaymentFlowSuccess(arg0) {
   if (keys.getState().initiatedPurchaseFromNewFlow) {
-    batchUpdates /* batchUpdates */.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
-    const obj = batchUpdates /* batchUpdates */;
+    batchUpdates.batchUpdates(() => state.setState({ isPaymentSuccess: true }));
+    const obj = batchUpdates;
   } else {
     arg0();
   }
@@ -80,7 +80,7 @@ export const reset = function reset() {
     obj[1] = tmp3;
     onPaymentDismiss(obj);
   }
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     let str = null;
     if (null != closure_0) {
       str = null;

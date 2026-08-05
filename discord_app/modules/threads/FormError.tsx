@@ -6,8 +6,8 @@ const result = require("set").fileFinishedImporting("modules/threads/FormError.t
 
 export const FormSubmitErrorType = obj;
 export const makeEmptyTitleError = function makeEmptyTitleError() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.uXA573);
+  const intl = getSystemLocale.intl;
+  let stringResult = intl.string(getSystemLocale.t.uXA573);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -16,8 +16,8 @@ export const makeEmptyTitleError = function makeEmptyTitleError() {
   return obj;
 };
 export const makeEmptyMessageError = function makeEmptyMessageError() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.kesTVT);
+  const intl = getSystemLocale.intl;
+  let stringResult = intl.string(getSystemLocale.t.kesTVT);
   obj = { type: obj.EmptyContent, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -26,8 +26,8 @@ export const makeEmptyMessageError = function makeEmptyMessageError() {
   return obj;
 };
 export const makeApiNameRequiredError = function makeApiNameRequiredError() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.uXA573);
+  const intl = getSystemLocale.intl;
+  let stringResult = intl.string(getSystemLocale.t.uXA573);
   obj = { type: obj.ApiValidation, message: null };
   if (stringResult == null) {
     stringResult = null;
@@ -36,7 +36,7 @@ export const makeApiNameRequiredError = function makeApiNameRequiredError() {
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  let obj = getAutomodErrorMessageFromErrorResponse /* getAutomodErrorMessageFromErrorResponse */;
+  let obj = getAutomodErrorMessageFromErrorResponse;
   id = undefined;
   if (id != null) {
     id = id.id;

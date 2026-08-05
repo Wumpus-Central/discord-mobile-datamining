@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_SHEETS,
   getComponent() {
-    return DemoActionSheet /* DemoActionSheet */.default;
+    return DemoActionSheet.default;
   }
 };
 const route = createToggle.createRoute(obj);

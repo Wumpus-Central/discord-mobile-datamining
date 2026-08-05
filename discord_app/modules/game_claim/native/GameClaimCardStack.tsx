@@ -48,7 +48,7 @@ export default function GameClaimCardStack(uri) {
   obj = { style: tmp.gameImage, source: { uri: uri.imageSrc }, resizeMode: "cover" };
   const items = [callback(closure_3, obj), ];
   const obj1 = { style: tmp.addCard, children: null };
-  obj1[1] = callback(closure_3, { style: tmp.addIconWrapper, children: callback(PlusSmallIcon /* PlusSmallIcon */.PlusSmallIcon, { size: "sm", color: "text-brand" }) });
+  obj1[1] = callback(closure_3, { style: tmp.addIconWrapper, children: callback(PlusSmallIcon.PlusSmallIcon, { size: "sm", color: "text-brand" }) });
   items[1] = callback(closure_3, obj1);
   obj[1] = items;
   return callback2(closure_3, obj);

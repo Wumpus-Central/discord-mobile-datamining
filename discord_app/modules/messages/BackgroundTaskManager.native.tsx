@@ -10,7 +10,7 @@ const require = arg1;
 function startBackgroundTask(arg0) {
   let content;
   let title;
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isAndroid()) {
     if (null == arg0) {
       const promise = new Promise((arg0) => arg0(closure_5));
@@ -42,7 +42,7 @@ function endBackgroundTask(c7) {
       const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
       DCDBackgroundTaskManager.endBackgroundTask(c7);
     }
-    obj = set /* set */;
+    obj = set;
   }
 }
 function backgroundify(arg0, arg1) {

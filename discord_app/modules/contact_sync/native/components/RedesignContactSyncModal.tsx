@@ -34,12 +34,12 @@ function headerLeft() {
 }
 function OnboardingTrailingLanding() {
   let obj = { style: createCacheKey().landingTrailing, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { learnMoreUrl: null };
   const tmp = createCacheKey();
-  obj[0] = _uploadContacts /* _uploadContacts */.getOpenLearnMoreUrl();
-  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t["84S6+Z"], obj);
-  return callback4(Text /* Text */.Text, obj);
+  obj[0] = _uploadContacts.getOpenLearnMoreUrl();
+  obj[3] = intl.format(getSystemLocale.t["84S6+Z"], obj);
+  return callback4(Text.Text, obj);
 }
 function OnboardingTrailing(isOnboarding) {
   if (isOnboarding.isOnboarding) {

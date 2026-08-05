@@ -17,10 +17,10 @@ class VADPermission extends Component {
 }
 VADPermission.prototype["render"] = function render() {
   const obj = { title: null, body: null, onConfirm: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.NYklhr);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.EJ26Oh);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.NYklhr);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.EJ26Oh);
   obj[2] = this.close;
   return jsx(componentDidMount, { title: null, body: null, onConfirm: null });
 };

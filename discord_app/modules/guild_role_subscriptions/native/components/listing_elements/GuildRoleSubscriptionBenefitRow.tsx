@@ -20,7 +20,7 @@ function BenefitRow(description) {
   ({ emojiId, guildId, title } = description);
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  const items = [callback(EmojiIcon, { guildId, id: emojiId, size: 22, fontSize: 18 }), callback(Button /* Button */.Spacer, { size: 16 }), ];
+  const items = [callback(EmojiIcon, { guildId, id: emojiId, size: 22, fontSize: 18 }), callback(Button.Spacer, { size: 16 }), ];
   obj = { style: tmp.textContainer, children: null };
   const items1 = [title, ];
   let tmp4Result = null;
@@ -28,7 +28,7 @@ function BenefitRow(description) {
     obj = { style: null, variant: "text-sm/normal", color: "interactive-text-default", children: null };
     obj[0] = tmp.description;
     obj[3] = description;
-    tmp4Result = callback(Text /* Text */.Text, obj);
+    tmp4Result = callback(Text.Text, obj);
   }
   items1[1] = tmp4Result;
   obj[1] = items1;
@@ -88,7 +88,7 @@ export const IntangibleBenefitRow = function IntangibleBenefitRow(benefit) {
       str = obj.convertSurrogateToName(benefit.emoji_name, false);
     }
   }
-  obj = { emojiId: str, guildId: benefit.guildId, title: tmp(Text /* Text */.Text, obj), description: benefit.description };
+  obj = { emojiId: str, guildId: benefit.guildId, title: tmp(Text.Text, obj), description: benefit.description };
   obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: benefit.name };
   return closure_5(BenefitRow, obj);
 };

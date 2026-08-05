@@ -5,8 +5,8 @@ import { VideoUploadQualityNitroUpsell } from "../../chat/native/SettingsChatScr
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["/VQax8"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/VQax8"]);
   },
   parent: null,
   IconComponent: require("ImageTextIcon").ImageTextIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.TEXT,
   getComponent() {
-    return VideoUploadQualityNitroUpsell /* VideoUploadQualityNitroUpsell */.default;
+    return VideoUploadQualityNitroUpsell.default;
   }
 };
 const route = createToggle.createRoute(obj);

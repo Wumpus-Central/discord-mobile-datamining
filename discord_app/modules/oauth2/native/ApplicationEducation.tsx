@@ -24,7 +24,7 @@ function ApplicationEducationEntry(children) {
   }
   const items = [iconComponentResult, ];
   obj = { variant: "text-md/normal", style: tmp.entryText, children: children.text };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return closure_6(View, obj);
 }
@@ -41,7 +41,7 @@ export default function ApplicationEducation(arg0) {
   ({ application, accountScopes } = arg0);
   const items = [];
   const tmp3 = useIsSocialLayerParentApplication(application);
-  if (accountScopes.includes(set /* set */.OAuth2Scopes.SDK_SOCIAL_LAYER)) {
+  if (accountScopes.includes(set.OAuth2Scopes.SDK_SOCIAL_LAYER)) {
     const intl5 = tmp4(1236).intl;
     if (tmp3) {
       let obj = { applicationName: null };

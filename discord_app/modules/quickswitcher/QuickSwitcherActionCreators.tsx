@@ -34,7 +34,7 @@ function trackClose(QUICKSWITCHER_CLOSED, type) {
   ({ results, queryMode, query } = props);
   const guildId = store2.getGuildId();
   const channelId = store.getChannelId(guildId);
-  const obj2 = sortByMatchScore /* sortByMatchScore */;
+  const obj2 = sortByMatchScore;
   const tmp6 = results[obj2.findNextSelectedResult(obj2, require(undefined, 7230) /* sortByMatchScore */.FindResultDirections.DOWN, -1, results)];
   const isEmailResult = set.isEmail(query);
   const obj3 = set;
@@ -351,7 +351,7 @@ export const switchToResult = function switchToResult(record) {
   trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, record);
   ({ type, record } = record);
   obj = { page: constants2.QUICK_SWITCHER };
-  if (sortByMatchScore /* sortByMatchScore */.AutocompleterResultTypes.GUILD === type) {
+  if (sortByMatchScore.AutocompleterResultTypes.GUILD === type) {
     let tmp5Result = tmp5(5866);
     tmp5Result.transitionToGuild(record.id, { navigationReplace: true });
   } else if (tmp5(7230).AutocompleterResultTypes.TEXT_CHANNEL === type) {

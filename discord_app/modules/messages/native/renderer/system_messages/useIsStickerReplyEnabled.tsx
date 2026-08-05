@@ -19,7 +19,7 @@ export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnable
     }
     tmp2 = isPending;
   }
-  const isReadOnlyThread = useCanUnarchiveThread /* useCanUnarchiveThread */.computeIsReadOnlyThread(channel);
+  const isReadOnlyThread = useCanUnarchiveThread.computeIsReadOnlyThread(channel);
   let canResult = getUncachedChannelPermissions.can(Permissions.SEND_MESSAGES, channel);
   if (canResult) {
     canResult = !isReadOnlyThread;

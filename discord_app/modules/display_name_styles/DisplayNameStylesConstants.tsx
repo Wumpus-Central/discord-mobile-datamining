@@ -21,7 +21,7 @@ export const DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS = 0.72;
 export const MIN_PRISM_GRADIENT_WIDTH = 38;
 export const DISPLAY_NAME_STYLES_PRISM_PRESETS = items6;
 export const getColorPresetsForEffect = function getColorPresetsForEffect(arg0) {
-  if (DisplayNameEffect /* DisplayNameEffect */.DisplayNameEffect.GUMMY === arg0) {
+  if (DisplayNameEffect.DisplayNameEffect.GUMMY === arg0) {
     return items5;
   } else if (tmp(1887).DisplayNameEffect.PRISM === arg0) {
     return items6;

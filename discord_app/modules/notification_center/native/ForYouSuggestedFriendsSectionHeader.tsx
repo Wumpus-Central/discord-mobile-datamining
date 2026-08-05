@@ -27,8 +27,8 @@ export default function ForYouSuggestedFriendsSectionHeader(showDivider) {
   let obj = { style: items, children: null };
   items[1] = noDivider;
   obj = { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["1uAmCw"]);
-  obj[1] = jsx(Text /* Text */.Text, { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null });
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["1uAmCw"]);
+  obj[1] = jsx(Text.Text, { style: tmp.text, color: "text-muted", variant: "text-sm/semibold", children: null });
   return <View style={tmp.text} color="text-muted" variant="text-sm/semibold">{null}</View>;
 };

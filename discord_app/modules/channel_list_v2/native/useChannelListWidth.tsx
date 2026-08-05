@@ -7,11 +7,11 @@ import { sum } from "../../screen/native/drawer/useDrawerWidth.tsx";
 const result = require("map").fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
 
 export default function useChannelListWidth() {
-  const drawerWidth = sum /* sum */.useDrawerWidth();
-  const obj = sum /* sum */;
-  const token = map /* map */.useToken(Themes.modules.mobile.CHANNEL_DRAWER_SPACING);
+  const drawerWidth = sum.useDrawerWidth();
+  const obj = sum;
+  const token = map.useToken(Themes.modules.mobile.CHANNEL_DRAWER_SPACING);
   let num = 0;
-  const diff = drawerWidth - keys /* keys */.DM_WIDTH;
+  const diff = drawerWidth - keys.DM_WIDTH;
   if (useChatLayout().isChatBesideChannelList) {
     num = token;
   }

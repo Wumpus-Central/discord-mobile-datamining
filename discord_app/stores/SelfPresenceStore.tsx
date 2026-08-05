@@ -102,7 +102,7 @@ function shouldShowActivity(flags) {
       return result1;
     }
   }
-  obj = hasFlag /* hasFlag */;
+  obj = hasFlag;
 }
 function handleUpdate() {
   let num = idleSince.getIdleSince();
@@ -118,7 +118,7 @@ function handleUpdate() {
     IDLE = INVISIBLE;
     ONLINE = INVISIBLE;
   } else {
-    const StatusSetting = explicitContentFromProto /* explicitContentFromProto */.StatusSetting;
+    const StatusSetting = explicitContentFromProto.StatusSetting;
     ONLINE = StatusSetting.getSetting();
     if (ONLINE === StatusTypes.UNKNOWN) {
       ONLINE = StatusTypes.ONLINE;

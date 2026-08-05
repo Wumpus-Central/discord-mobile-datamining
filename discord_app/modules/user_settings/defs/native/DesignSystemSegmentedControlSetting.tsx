@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_SEGMENTED_CONTROL,
   getComponent() {
-    return UserSettingsDesignSystemSegmentedControl /* UserSettingsDesignSystemSegmentedControl */.default;
+    return UserSettingsDesignSystemSegmentedControl.default;
   }
 };
 const route = createToggle.createRoute(obj);

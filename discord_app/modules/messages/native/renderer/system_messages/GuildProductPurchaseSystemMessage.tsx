@@ -33,11 +33,11 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
     if (channel != null) {
       const guildId = channel.getGuildId();
     }
-    let obj1 = useNullableMessageAuthor /* useNullableMessageAuthor */;
+    let obj1 = useNullableMessageAuthor;
     const guildMemberAvatar = obj1.getMessageAuthor(message).guildMemberAvatar;
-    let obj2 = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+    let obj2 = getMessageAuthorWithProcessedColor;
     const messageAuthorWithProcessedColor = obj2.getMessageAuthorWithProcessedColor(message);
-    ensureAvatarSource /* ensureAvatarSource */;
+    ensureAvatarSource;
     if (null != guildMemberAvatar) {
       if (null != guildId) {
         let tmp5Result = tmp5(1416);

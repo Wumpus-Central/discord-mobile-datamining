@@ -15,8 +15,8 @@ export const CONFIG_GUILD_FOLDER_SCALEXY = obj;
 export const DeprecatedLayoutAnimation = function DeprecatedLayoutAnimation(duration) {
   let useReducedMotion = maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = set /* set */.isAndroid();
-    const obj = set /* set */;
+    useReducedMotion = set.isAndroid();
+    const obj = set;
   }
   if (!useReducedMotion) {
     if (null != duration) {
@@ -32,7 +32,7 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
     flag = false;
   }
   if (flag) {
-    let obj = set /* set */;
+    let obj = set;
     if (!obj.isAndroid()) {
       obj = { duration: null };
       obj[0] = keyboardDuration;
@@ -42,8 +42,8 @@ export const DeprecatedLayoutAnimationKeyboard = function DeprecatedLayoutAnimat
   obj = { duration: keyboardDuration, update: obj1 };
   let useReducedMotion = maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
   if (!useReducedMotion) {
-    useReducedMotion = set /* set */.isAndroid();
-    const obj6 = set /* set */;
+    useReducedMotion = set.isAndroid();
+    const obj6 = set;
   }
   if (!useReducedMotion) {
     LayoutAnimation.configureNext(obj);

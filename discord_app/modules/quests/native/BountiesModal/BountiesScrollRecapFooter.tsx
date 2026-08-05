@@ -35,23 +35,23 @@ const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedI
 export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbAmount) {
   orbAmount = orbAmount.orbAmount;
   const tmp = callback3();
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.d6Rrn6);
+  const intl = getSystemLocale.intl;
+  const stringResult = intl.string(getSystemLocale.t.d6Rrn6);
   let obj = { style: tmp.container, pointerEvents: "none", accessible: true, accessibilityRole: "text", accessibilityLabel: "" + stringResult + ", +" + orbAmount, children: null };
   obj = { variant: "text-xs/bold", color: "text-brand", style: tmp.headerLabel, accessible: false, children: stringResult };
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const items = [callback(Text.Text, obj), ];
   obj = { style: tmp.orbRow, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
-  const items1 = [callback(OrbsIcon /* OrbsIcon */.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false }), ];
+  const items1 = [callback(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false }), ];
   const obj1 = { variant: "display-sm", color: "text-strong", accessible: false, style: tmp.orbAmount, children: null };
   obj1[4] = "+" + orbAmount;
-  items1[1] = callback(Text /* Text */.Text, obj1);
+  items1[1] = callback(Text.Text, obj1);
   obj[3] = items1;
   items[1] = callback2(View, obj);
   obj[5] = items;
   return callback2(View, obj);
 };
 export const BountiesScrollRecapFooterGradient = function BountiesScrollRecapFooterGradient() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   obj = { style: callback3().rive, children: null };
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
@@ -59,6 +59,6 @@ export const BountiesScrollRecapFooterGradient = function BountiesScrollRecapFoo
   if (stateFromStores) {
     str = "halt";
   }
-  obj[1] = closure_5(ManaContext /* ManaContext */.BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
+  obj[1] = closure_5(ManaContext.BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
   return closure_5(View, obj);
 };

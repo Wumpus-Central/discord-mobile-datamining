@@ -23,12 +23,12 @@ function GuildPowerupsRecentActivityRow(row) {
   row = row.row;
   ({ boost, phase, sortKey } = row);
   const tmp = callback3();
-  let obj = useMaybeGetSortedBoosts /* useMaybeGetSortedBoosts */;
+  let obj = useMaybeGetSortedBoosts;
   const getBoostUserConfig = obj.useGetBoostUserConfig(boost);
   ({ roleColor, roleColorStrings, username } = getBoostUserConfig);
-  let obj1 = resetCache /* resetCache */;
+  let obj1 = resetCache;
   const date = new Date(sortKey);
-  let obj2 = initialize /* initialize */;
+  let obj2 = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj2.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
@@ -117,9 +117,9 @@ export default function GuildPowerupsRecentActivitySection(guildId) {
     let obj = { style: null, children: null };
     obj[0] = tmp.sectionContainer;
     obj = { variant: "heading-lg/semibold", color: "text-subtle", children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.yM9Krm);
-    const items = [callback(Text /* Text */.Text, obj), ];
+    const intl = getSystemLocale.intl;
+    obj[2] = intl.string(getSystemLocale.t.yM9Krm);
+    const items = [callback(Text.Text, obj), ];
     obj = { style: null, children: null };
     obj[0] = tmp.boostContainer;
     obj[1] = arr.map((boost) => callback(closure_8, { row: boost }, "boost-" + boost.boost.id));

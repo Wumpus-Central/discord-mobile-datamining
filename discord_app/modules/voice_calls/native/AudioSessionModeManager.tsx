@@ -38,7 +38,7 @@ function handleAVAudioSessionMode() {
           VIDEO = AVAudioSessionMode.LISTEN;
           obj2 = tmp9;
         }
-        obj = handleVoiceChannelSelect /* handleVoiceChannelSelect */;
+        obj = handleVoiceChannelSelect;
       }
     }
     VIDEO = VoiceEngine.AVAudioSessionMode.VIDEO;

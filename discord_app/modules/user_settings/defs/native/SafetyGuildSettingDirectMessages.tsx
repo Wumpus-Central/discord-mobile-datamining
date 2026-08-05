@@ -18,10 +18,10 @@ const require = arg1;
 ({ getSelectedGuildId: c4, useUserSafetySettingsSelectedGuildStore: c5 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
 createToggle = {
   useTitle() {
-    const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly /* useAllowFriendsFromMutualGuildsOnly */.useAllowFriendsFromMutualGuildsOnly();
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
+    const intl = getSystemLocale.intl;
     const string = intl.string;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (allowFriendsFromMutualGuildsOnly) {
       let stringResult = string(t.PMsfcH);
     } else {
@@ -30,7 +30,7 @@ createToggle = {
     return stringResult;
   },
   useDescription() {
-    const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly /* useAllowFriendsFromMutualGuildsOnly */.useAllowFriendsFromMutualGuildsOnly();
+    const allowFriendsFromMutualGuildsOnly = useAllowFriendsFromMutualGuildsOnly.useAllowFriendsFromMutualGuildsOnly();
     if (callback2().selectedGuildId === closure_6) {
       const intl2 = tmp(1236).intl;
       const string2 = intl2.string;
@@ -56,8 +56,8 @@ createToggle = {
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = callback2().selectedGuildId;
-    const obj = useDefaultGuildsRestricted /* useDefaultGuildsRestricted */;
-    const RestrictedGuildIds = explicitContentFromProto /* explicitContentFromProto */.RestrictedGuildIds;
+    const obj = useDefaultGuildsRestricted;
+    const RestrictedGuildIds = explicitContentFromProto.RestrictedGuildIds;
     const setting = RestrictedGuildIds.useSetting();
     let tmp2 = !setting.includes(selectedGuildId);
     if (selectedGuildId === closure_6) {
@@ -111,7 +111,7 @@ createToggle = {
     }
   },
   useIsDisabled() {
-    let isParentallyControlled = useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    let isParentallyControlled = useParentalControlledExplicitContentSettings.useIsParentallyControlled();
     if (isParentallyControlled) {
       isParentallyControlled = tmp2 === closure_6;
     }

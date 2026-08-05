@@ -34,7 +34,7 @@ const items = [
               obj[1] = result.toLocaleString();
               obj[0] = intl.formatToPlainString(_2YaiQ1, obj);
               const intl2 = tmp6(1236).intl;
-              obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.mVyrtu);
+              obj[1] = intl2.string(getSystemLocale.t.mVyrtu);
               return obj;
             } else {
               return false;
@@ -54,8 +54,8 @@ const items = [
       let isMatch = TOKEN_REGEX.test(arg0);
       if (isMatch) {
         const obj = { body: null };
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.sTwS1a);
+        const intl = getSystemLocale.intl;
+        obj[0] = intl.string(getSystemLocale.t.sTwS1a);
         isMatch = obj;
       }
       return isMatch;

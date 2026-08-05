@@ -19,7 +19,7 @@ let c3;
 let c4;
 ({ processColor: c3, Image: c4 } = get_ActivityIndicator);
 let closure_11 = apply.memoize((arg0) => {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   const unsafe_rawColors = Themes.unsafe_rawColors;
   obj = { defaultUsernameColor: null };
   const isThemeDarkResult = obj.isThemeDark(arg0);
@@ -47,7 +47,7 @@ export const createAutoModerationActionSystemMessage = function createAutoModera
   ({ message, theme, roleStyle } = message);
   const defaultUsernameColor = callback2(theme).defaultUsernameColor;
   const tmp = require;
-  let obj = getDecisionOutcomeFromMessage /* getDecisionOutcomeFromMessage */;
+  let obj = getDecisionOutcomeFromMessage;
   if (obj.isAutomodMessageRecord(message)) {
     let tmpResult = tmp(6876);
     const result = tmpResult.extractAutomodMessageFields(message);

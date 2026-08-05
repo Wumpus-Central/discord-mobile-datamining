@@ -5,8 +5,8 @@ import { isFeatureAgeGated } from "../../regional_feature_config/RegionalFeature
 const result = require("useAgeVerificationRunner").fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");
 
 export const shouldAgeVerifyForDMDefaultOff = function shouldAgeVerifyForDMDefaultOff() {
-  const obj = isFeatureAgeGated /* isFeatureAgeGated */;
-  const isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.DM_PRIVACY_SETTINGS);
-  const obj2 = useAgeVerificationRunner /* useAgeVerificationRunner */;
-  return useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect() && isFeatureAgeGatedResult;
+  const obj = isFeatureAgeGated;
+  const isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.DM_PRIVACY_SETTINGS);
+  const obj2 = useAgeVerificationRunner;
+  return useAgeVerificationRunner.shouldShowTiggerPawtect() && isFeatureAgeGatedResult;
 };

@@ -29,7 +29,7 @@ export default function TextElement(element) {
         obj = { style: null, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
         obj[0] = tmp.header;
         obj[3] = header;
-        tmp7 = callback(Text /* Text */.Text, obj);
+        tmp7 = callback(Text.Text, obj);
       }
       const items = [tmp7, ];
       let tmp10 = null != body;
@@ -37,7 +37,7 @@ export default function TextElement(element) {
         const obj1 = { style: null, variant: "text-md/medium", children: null };
         obj1[0] = tmp.body;
         obj1[2] = ref.current(body);
-        tmp10 = callback(Text /* Text */.Text, obj1);
+        tmp10 = callback(Text.Text, obj1);
       }
       items[1] = tmp10;
       obj[1] = items;

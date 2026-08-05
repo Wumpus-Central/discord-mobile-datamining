@@ -164,14 +164,14 @@ function startOnboarding(guildId) {
 function _trackOnboardingDirectJoin(guildId) {
   let obj = expandEventProperties;
   obj = {};
-  const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
+  const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   obj.step = c16;
   obj.required = true;
   obj.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj);
-  const obj3 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+  const obj3 = collectGuildAnalyticsMetadata;
   obj = {};
   const obj4 = expandEventProperties;
-  const merged1 = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
+  const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   obj.step = c16;
   obj.skipped = false;
   obj.is_final_step = true;
@@ -185,7 +185,7 @@ const result = require("trackCommunicationDisabled").fileFinishedImporting("modu
 export const loadOnboardingPrompts = function loadOnboardingPrompts(guildId) {
   let obj = expandEventProperties;
   obj = {};
-  const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(guildId));
+  const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   obj.has_new_prompts = false;
   obj.number_of_prompts = 0;
   obj.track(constants.GUILD_ONBOARDING_LOADED, obj);

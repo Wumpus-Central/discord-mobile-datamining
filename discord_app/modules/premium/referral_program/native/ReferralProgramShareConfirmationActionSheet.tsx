@@ -87,12 +87,12 @@ export default function ReferralProgramShareConfirmationActionSheet(trialCreatio
   const tmp = callback3();
   let arr = Array.from(trialCreationResult.values());
   if (0 === arr.filter((arg0) => arg0 === trialCreationResult(table[6]).CreateReferralStatus.SUCCESS).length) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["7VBEue"]);
+    const intl2 = getSystemLocale.intl;
+    let stringResult = intl2.string(getSystemLocale.t["7VBEue"]);
     let tmp5 = require;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.tKCltd);
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t.tKCltd);
     tmp5 = require;
   }
   const intl3 = tmp5(1236).intl;

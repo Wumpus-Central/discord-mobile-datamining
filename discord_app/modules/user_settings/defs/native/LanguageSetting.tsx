@@ -8,8 +8,8 @@ import { handleLanguageChange } from "../../language_and_time/native/UserSetting
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.IHMsPn);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.IHMsPn);
   },
   parent: null,
   IconComponent: require("LanguageIcon").LanguageIcon,
@@ -32,7 +32,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.LANGUAGE,
   getComponent() {
-    return handleLanguageChange /* handleLanguageChange */.default;
+    return handleLanguageChange.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

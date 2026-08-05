@@ -23,20 +23,20 @@ export const captureMobileWebRedirectCheckoutSentryError = function captureMobil
   obj.captureException(error, obj);
 };
 export const isMobileWebRedirectCheckoutEnabled = function isMobileWebRedirectCheckoutEnabled() {
-  return isMetaQuest /* isMetaQuest */.isMetaQuest();
+  return isMetaQuest.isMetaQuest();
 };
 export const getCustomCheckoutFlowForAnalytics = function getCustomCheckoutFlowForAnalytics() {
-  return isMetaQuest /* isMetaQuest */.isMetaQuest() ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
+  return isMetaQuest.isMetaQuest() ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
 };
 export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
   let deep_link_type;
   let flow_type;
   let pathname;
   let search;
-  const _location = _extends /* _extends */.useLocation();
+  const _location = _extends.useLocation();
   ({ pathname, search } = _location);
-  const obj = _extends /* _extends */;
-  const parsed = keysSorter /* keysSorter */.parse(search);
+  const obj = _extends;
+  const parsed = keysSorter.parse(search);
   ({ deep_link_type, flow_type } = parsed);
   if (!pathname.startsWith(constants.BILLING_MANAGE_SUBSCRIPTION)) {
     if (deep_link_type === constants2.MOBILE_WEB_REDIRECT_CHECKOUT) {
@@ -49,7 +49,7 @@ export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
 export const getCustomCheckoutFlow = function getCustomCheckoutFlow() {
   let deep_link_type;
   let flow_type;
-  const parsed = keysSorter /* keysSorter */.parse(window.location.search);
+  const parsed = keysSorter.parse(window.location.search);
   ({ deep_link_type, flow_type } = parsed);
   if (!pathname.startsWith(constants.BILLING_MANAGE_SUBSCRIPTION)) {
     if (deep_link_type === constants2.MOBILE_WEB_REDIRECT_CHECKOUT) {

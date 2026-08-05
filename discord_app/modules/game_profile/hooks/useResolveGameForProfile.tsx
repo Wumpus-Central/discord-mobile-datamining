@@ -8,7 +8,7 @@ export default function useResolveGameForProfile(arg0) {
   let applicationId;
   let gameId;
   ({ applicationId, gameId } = arg0);
-  let obj = useGetOrFetchApplications /* useGetOrFetchApplications */;
+  let obj = useGetOrFetchApplications;
   let tmp3;
   if (null == gameId) {
     tmp3 = applicationId;
@@ -35,7 +35,7 @@ export default function useResolveGameForProfile(arg0) {
   if (isRobloxSubgameGameResult) {
     ROBLOX_GAME_ID = tmp(4456).ROBLOX_GAME_ID;
   }
-  const game = importDefaultResult1 /* importDefaultResult1 */.useGame(ROBLOX_GAME_ID);
+  const game = importDefaultResult1.useGame(ROBLOX_GAME_ID);
   let data = game.data;
   if (isRobloxSubgameGameResult) {
     obj = { gameId: null, gameRecord: null, isLoading: null };

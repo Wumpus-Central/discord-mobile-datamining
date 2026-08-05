@@ -368,7 +368,7 @@ export const preloadReadyPayloadData = function preloadReadyPayloadData() {
   } else {
     committedVersions = Promise.resolve({});
   }
-  obj2 = isCacheEnabled /* isCacheEnabled */;
+  obj2 = isCacheEnabled;
   if (tmp4Result.isCacheEnabled()) {
     tmpResult = tmp(1927);
     let guildIds = tmpResult.getGuildIds();

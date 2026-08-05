@@ -7,7 +7,7 @@ import { isBlurDisabled } from "VisualEffectView.tsx";
 
 const require = arg1;
 const forwardRefResult = require("noop").forwardRef(function VisualEffectViewThemed(arg0, ref) {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   let str = "dark";
   if (obj.isThemeLight(tmp3)) {
     str = "light";

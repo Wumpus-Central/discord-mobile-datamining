@@ -66,8 +66,8 @@ export const getRunningGameAnalytics = function getRunningGameAnalytics(streamAp
     obj[4] = sku;
     let subgameMetadata;
     if (null != streamApplication) {
-      subgameMetadata = _openRobloxURLWithRootPlaceId /* _openRobloxURLWithRootPlaceId */.getSubgameMetadata(streamApplication);
-      const obj4 = _openRobloxURLWithRootPlaceId /* _openRobloxURLWithRootPlaceId */;
+      subgameMetadata = _openRobloxURLWithRootPlaceId.getSubgameMetadata(streamApplication);
+      const obj4 = _openRobloxURLWithRootPlaceId;
     }
     obj[5] = subgameMetadata;
     obj[6] = str;

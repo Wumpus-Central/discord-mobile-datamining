@@ -32,7 +32,7 @@ function openRewardClaimBottomSheet(arg0) {
   let questId;
   let sourceQuestContent;
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(11084, dependencyMap.paths), closure_6, { questId, questContent, questContentPosition, sourceQuestContent });
+  return ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11084, dependencyMap.paths), closure_6, { questId, questContent, questContentPosition, sourceQuestContent });
 }
 function viewReward(quest) {
   let onSuccess;
@@ -42,7 +42,7 @@ function viewReward(quest) {
   let sourceQuestContent;
   quest = quest.quest;
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
-  let obj = _getDefaultRewardName /* _getDefaultRewardName */;
+  let obj = _getDefaultRewardName;
   if (obj.hasQuestRewardCode(quest.config)) {
     obj = { questId: null, questContent: null, questContentPosition: null, sourceQuestContent: null };
     obj[0] = quest.id;
@@ -330,7 +330,7 @@ function _handleRewardClaimThenView() {
 let result = require("zustandStore").fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
-  return ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(11082, dependencyMap.paths), closure_7, { questId: questId.questId });
+  return ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(11082, dependencyMap.paths), closure_7, { questId: questId.questId });
 };
 export { viewReward };
 export const handleRewardClaimThenView = function handleRewardClaimThenView(arg0) {
@@ -475,7 +475,7 @@ export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = isSponsoredPlayQuest /* isSponsoredPlayQuest */;
+  let obj = isSponsoredPlayQuest;
   if (obj.canLaunchActivity(quest)) {
     const features = quest.config.features;
     if (features.includes(constants.MOBILE_ACTIVITY_QUEST)) {
@@ -503,28 +503,28 @@ export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
   }
 };
 export const showQuestUnavailableAlert = function showQuestUnavailableAlert() {
-  let obj = useAlertStore /* useAlertStore */;
+  let obj = useAlertStore;
   obj = { title: null, content: null, actions: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.Lhpq2P);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.iyF4WB);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.Lhpq2P);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.iyF4WB);
   obj = { children: null };
   const obj1 = { text: null, onPress: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.H0vjGc);
-  obj1[1] = _manuallyStartConsoleQuest /* _manuallyStartConsoleQuest */.fetchCurrentQuests;
-  const items = [callback2(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj1), ];
+  const intl3 = getSystemLocale.intl;
+  obj1[0] = intl3.string(getSystemLocale.t.H0vjGc);
+  obj1[1] = _manuallyStartConsoleQuest.fetchCurrentQuests;
+  const items = [callback2(getAlertModalItemKey.AlertActionButton, obj1), ];
   const obj2 = { text: null, variant: "secondary" };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[0] = intl4.string(getSystemLocale /* getSystemLocale */.t["6XS10x"]);
-  items[1] = callback2(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, obj2);
+  const intl4 = getSystemLocale.intl;
+  obj2[0] = intl4.string(getSystemLocale.t["6XS10x"]);
+  items[1] = callback2(getAlertModalItemKey.AlertActionButton, obj2);
   obj[0] = items;
   obj[2] = callback3(closure_11, obj);
-  obj.openAlert("quest-unavailable", callback2(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, obj));
+  obj.openAlert("quest-unavailable", callback2(getAlertModalItemKey.AlertModal, obj));
 };
 export const dismissOverlayScreens = function dismissOverlayScreens() {
-  let obj = getRootNavigationRef /* getRootNavigationRef */;
+  let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -538,7 +538,7 @@ export const dismissOverlayScreens = function dismissOverlayScreens() {
         return tmp;
       });
       if (found.length < rootState.routes.length) {
-        const CommonActions = Link /* Link */.CommonActions;
+        const CommonActions = Link.CommonActions;
         obj = {};
         const merged = Object.assign(rootState);
         obj.routes = found;

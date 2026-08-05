@@ -35,7 +35,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   ({ item, size, avatarSource } = arg0);
   ({ animate, threeTierBundle } = arg0);
   const tmp = callback(size);
-  00038__(item.type === CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION, "Item must be Avatar Decoration");
+  00038__(item.type === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION, "Item must be Avatar Decoration");
   const items = [tmp.avatar, ];
   let solidAvatar = null != avatarSource;
   if (!solidAvatar) {

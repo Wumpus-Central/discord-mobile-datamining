@@ -106,7 +106,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
         obj[1] = stringResult;
       }
     }
-    obj17 = unpackStageChannelParty /* unpackStageChannelParty */;
+    obj17 = unpackStageChannelParty;
   }
   return obj8;
 }
@@ -206,7 +206,7 @@ function useTrackActivityDefaultIcon(arg0) {
   }, items1);
 }
 function useRichImageForActivity(activity, activityApplication) {
-  useGetOrFetchApplications /* useGetOrFetchApplications */;
+  useGetOrFetchApplications;
   if (activity != null) {
     const application_id = activity.application_id;
   }
@@ -325,13 +325,13 @@ export const getApplicationImage = function getApplicationImage(getIconURL) {
     let obj = { src: null, alt: null };
     obj[0] = iconURL;
     if (null == name) {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["2B/phM"]);
+      const intl2 = getSystemLocale.intl;
+      let stringResult = intl2.string(getSystemLocale.t["2B/phM"]);
     } else {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
+      const intl = getSystemLocale.intl;
       obj = { applicationName: null };
       obj[0] = name;
-      stringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.tiKyYg, obj);
+      stringResult = intl.formatToPlainString(getSystemLocale.t.tiKyYg, obj);
     }
     obj[1] = stringResult;
     return obj;
@@ -358,7 +358,7 @@ export const useImageForContentEntry = function useImageForContentEntry(tracking
   if (obj != null) {
     canonicalGameId = obj.getCanonicalGameId();
   }
-  let obj1 = importDefaultResult1 /* importDefaultResult1 */;
+  let obj1 = importDefaultResult1;
   const data = obj1.useGame(canonicalGameId).data;
   if (data != null) {
     const coverURL = data.getCoverURL();

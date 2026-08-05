@@ -30,7 +30,7 @@ function Header(arg0) {
   let platform;
   ({ platform, integration, applicationId } = arg0);
   ({ onRemove, locked } = arg0);
-  let obj = request /* request */;
+  let obj = request;
   let application;
   if (integration != null) {
     application = integration.application;
@@ -97,15 +97,15 @@ function Header(arg0) {
   if (name1 == null) {
     name1 = name;
   }
-  obj2[1] = intl.format(getSystemLocale /* getSystemLocale */.t.Nj0a3j, { platformName: name1 });
+  obj2[1] = intl.format(getSystemLocale.t.Nj0a3j, { platformName: name1 });
   const obj3 = { "aria-label": null, onPress: null, disabled: null, children: null };
   const intl2 = tmp3(1236).intl;
-  obj3[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.N86XcP);
+  obj3[0] = intl2.string(getSystemLocale.t.N86XcP);
   obj3[1] = onRemove;
   obj3[2] = locked;
-  obj3[3] = callback2(XSmallIcon /* XSmallIcon */.XSmallIcon, {});
-  obj2[2] = callback2(PressableBase /* PressableBase */.PressableOpacity, obj3);
-  return callback2(TableRowInner /* TableRowInner */.TableRow, obj2);
+  obj3[3] = callback2(XSmallIcon.XSmallIcon, {});
+  obj2[2] = callback2(PressableBase.PressableOpacity, obj3);
+  return callback2(TableRowInner.TableRow, obj2);
 }
 function BooleanConfigRule(metadataField) {
   let _slicedToArray;
@@ -360,10 +360,10 @@ function BlueskyMetadataRules(arg0) {
   let obj = getPlatformUserUrl;
   const value = obj.get(PlatformTypes.BLUESKY);
   obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
-  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t["/w/EYk"], metadataField: closure_7.BLUESKY_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.BLUESKY_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked }), ];
-  const obj1 = { fieldTextHook: getSystemLocale /* getSystemLocale */.t["/w/EYk"], metadataField: closure_7.BLUESKY_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.BLUESKY_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked };
-  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t["5I4mVS"], metadataField: closure_7.BLUESKY_STATUSES_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.BLUESKY_STATUSES_COUNT), platform: value, onConfigurationChange, locked });
+  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
+  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.BLUESKY_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.BLUESKY_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked }), ];
+  const obj1 = { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.BLUESKY_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.BLUESKY_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked };
+  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["5I4mVS"], metadataField: closure_7.BLUESKY_STATUSES_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.BLUESKY_STATUSES_COUNT), platform: value, onConfigurationChange, locked });
   obj[0] = items;
   return callback3(closure_14, obj);
 }
@@ -375,12 +375,12 @@ function SteamMetadataRules(arg0) {
   let obj = getPlatformUserUrl;
   const value = obj.get(PlatformTypes.STEAM);
   obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
-  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t.zVJxqj, metadataField: closure_7.STEAM_GAME_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_GAME_COUNT), platform: value, onConfigurationChange, locked }), , ];
-  const obj1 = { fieldTextHook: getSystemLocale /* getSystemLocale */.t.zVJxqj, metadataField: closure_7.STEAM_GAME_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_GAME_COUNT), platform: value, onConfigurationChange, locked };
-  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t["ZCNdD/"], metadataField: closure_7.STEAM_ITEM_COUNT_DOTA2, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_ITEM_COUNT_DOTA2), platform: value, onConfigurationChange, locked });
-  const obj2 = { fieldTextHook: getSystemLocale /* getSystemLocale */.t["ZCNdD/"], metadataField: closure_7.STEAM_ITEM_COUNT_DOTA2, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_ITEM_COUNT_DOTA2), platform: value, onConfigurationChange, locked };
-  items[3] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t["MCHnK+"], metadataField: closure_7.STEAM_ITEM_COUNT_TF2, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_ITEM_COUNT_TF2), platform: value, onConfigurationChange, locked });
+  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
+  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.zVJxqj, metadataField: closure_7.STEAM_GAME_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_GAME_COUNT), platform: value, onConfigurationChange, locked }), , ];
+  const obj1 = { fieldTextHook: getSystemLocale.t.zVJxqj, metadataField: closure_7.STEAM_GAME_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_GAME_COUNT), platform: value, onConfigurationChange, locked };
+  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["ZCNdD/"], metadataField: closure_7.STEAM_ITEM_COUNT_DOTA2, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_ITEM_COUNT_DOTA2), platform: value, onConfigurationChange, locked });
+  const obj2 = { fieldTextHook: getSystemLocale.t["ZCNdD/"], metadataField: closure_7.STEAM_ITEM_COUNT_DOTA2, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_ITEM_COUNT_DOTA2), platform: value, onConfigurationChange, locked };
+  items[3] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["MCHnK+"], metadataField: closure_7.STEAM_ITEM_COUNT_TF2, existingPendingConfiguration: configMetadataMap.get(closure_7.STEAM_ITEM_COUNT_TF2), platform: value, onConfigurationChange, locked });
   obj[0] = items;
   return callback3(closure_14, obj);
 }
@@ -392,13 +392,13 @@ function TwitterMetadataRules(arg0) {
   let obj = getPlatformUserUrl;
   const value = obj.get(PlatformTypes.TWITTER);
   obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
-  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t["/w/EYk"], metadataField: closure_7.TWITTER_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TWITTER_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked }), , ];
-  const obj1 = { fieldTextHook: getSystemLocale /* getSystemLocale */.t["/w/EYk"], metadataField: closure_7.TWITTER_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TWITTER_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked };
-  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t["+NFH7k"], metadataField: closure_7.TWITTER_STATUSES_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TWITTER_STATUSES_COUNT), platform: value, onConfigurationChange, locked });
+  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
+  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.TWITTER_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TWITTER_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked }), , ];
+  const obj1 = { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.TWITTER_FOLLOWERS_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TWITTER_FOLLOWERS_COUNT), platform: value, onConfigurationChange, locked };
+  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["+NFH7k"], metadataField: closure_7.TWITTER_STATUSES_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TWITTER_STATUSES_COUNT), platform: value, onConfigurationChange, locked });
   const obj3 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj3[0] = intl.string(getSystemLocale /* getSystemLocale */.t.E2iT8K);
+  const intl = getSystemLocale.intl;
+  obj3[0] = intl.string(getSystemLocale.t.E2iT8K);
   obj3[1] = closure_7.TWITTER_VERIFIED;
   obj3[2] = configMetadataMap.get(closure_7.TWITTER_VERIFIED);
   obj3[3] = value;
@@ -416,11 +416,11 @@ function RedditMetadataRules(arg0) {
   let obj = getPlatformUserUrl;
   const value = obj.get(PlatformTypes.REDDIT);
   obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
-  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t.TLgZhv, metadataField: closure_7.REDDIT_TOTAL_KARMA, existingPendingConfiguration: configMetadataMap.get(closure_7.REDDIT_TOTAL_KARMA), platform: value, onConfigurationChange, locked }), , ];
+  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
+  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.TLgZhv, metadataField: closure_7.REDDIT_TOTAL_KARMA, existingPendingConfiguration: configMetadataMap.get(closure_7.REDDIT_TOTAL_KARMA), platform: value, onConfigurationChange, locked }), , ];
   const obj2 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj2[0] = intl.string(getSystemLocale /* getSystemLocale */.t["0cKdka"]);
+  const intl = getSystemLocale.intl;
+  obj2[0] = intl.string(getSystemLocale.t["0cKdka"]);
   obj2[1] = closure_7.REDDIT_MOD;
   obj2[2] = configMetadataMap.get(closure_7.REDDIT_MOD);
   obj2[3] = value;
@@ -428,8 +428,8 @@ function RedditMetadataRules(arg0) {
   obj2[5] = locked;
   items[2] = callback2(BooleanConfigRule, obj2);
   const obj3 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj3[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.kCAN58);
+  const intl2 = getSystemLocale.intl;
+  obj3[0] = intl2.string(getSystemLocale.t.kCAN58);
   obj3[1] = closure_7.REDDIT_GOLD;
   obj3[2] = configMetadataMap.get(closure_7.REDDIT_GOLD);
   obj3[3] = value;
@@ -447,11 +447,11 @@ function PaypalMetadataRules(arg0) {
   let obj = getPlatformUserUrl;
   const value = obj.get(PlatformTypes.PAYPAL);
   obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
+  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
   const items = [callback2(NumericalConfigRule, obj), ];
   const obj1 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[0] = intl.string(getSystemLocale /* getSystemLocale */.t["0JyE8I"]);
+  const intl = getSystemLocale.intl;
+  obj1[0] = intl.string(getSystemLocale.t["0JyE8I"]);
   obj1[1] = closure_7.PAYPAL_VERIFIED;
   obj1[2] = configMetadataMap.get(closure_7.PAYPAL_VERIFIED);
   obj1[3] = value;
@@ -469,15 +469,15 @@ function EbayMetadataRules(arg0) {
   let obj = getPlatformUserUrl;
   const value = obj.get(PlatformTypes.EBAY);
   obj = { children: null };
-  obj = { fieldTextHook: getSystemLocale /* getSystemLocale */.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
-  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t.oTFOe5, metadataField: closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE), platform: value, onConfigurationChange, locked }), , , ];
-  const obj1 = { fieldTextHook: getSystemLocale /* getSystemLocale */.t.oTFOe5, metadataField: closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE), platform: value, onConfigurationChange, locked };
-  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t["v5a2+Q"], metadataField: closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked });
-  const obj2 = { fieldTextHook: getSystemLocale /* getSystemLocale */.t["v5a2+Q"], metadataField: closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked };
-  items[3] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t.yYbR2r, metadataField: closure_7.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked, operator: constants.LESS_THAN });
+  obj = { fieldTextHook: getSystemLocale.t["REyUZ/"], metadataField: closure_7.CREATED_AT, existingPendingConfiguration: configMetadataMap.get(closure_7.CREATED_AT), platform: value, onConfigurationChange, locked };
+  const items = [callback2(NumericalConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.oTFOe5, metadataField: closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE), platform: value, onConfigurationChange, locked }), , , ];
+  const obj1 = { fieldTextHook: getSystemLocale.t.oTFOe5, metadataField: closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_POSITIVE_FEEDBACK_PERCENTAGE), platform: value, onConfigurationChange, locked };
+  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["v5a2+Q"], metadataField: closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked });
+  const obj2 = { fieldTextHook: getSystemLocale.t["v5a2+Q"], metadataField: closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_UNIQUE_POSITIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked };
+  items[3] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.yYbR2r, metadataField: closure_7.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.EBAY_UNIQUE_NEGATIVE_FEEDBACK_COUNT), platform: value, onConfigurationChange, locked, operator: constants.LESS_THAN });
   const obj4 = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj4[0] = intl.string(getSystemLocale /* getSystemLocale */.t["39wASN"]);
+  const intl = getSystemLocale.intl;
+  obj4[0] = intl.string(getSystemLocale.t["39wASN"]);
   obj4[1] = closure_7.EBAY_TOP_RATED_SELLER;
   obj4[2] = configMetadataMap.get(closure_7.EBAY_TOP_RATED_SELLER);
   obj4[3] = value;
@@ -496,18 +496,18 @@ function TikTokMetadataRules(arg0) {
   const value = obj.get(PlatformTypes.TIKTOK);
   obj = { children: null };
   obj = { fieldText: null, metadataField: null, existingPendingConfiguration: null, platform: null, onConfigurationChange: null, locked: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.E2iT8K);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.E2iT8K);
   obj[1] = closure_7.TIKTOK_VERIFIED;
   obj[2] = configMetadataMap.get(closure_7.TIKTOK_VERIFIED);
   obj[3] = value;
   obj[4] = onConfigurationChange;
   obj[5] = locked;
-  const items = [callback2(BooleanConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t["/w/EYk"], metadataField: closure_7.TIKTOK_FOLLOWER_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWER_COUNT), platform: value, onConfigurationChange, locked }), , ];
-  const obj1 = { fieldTextHook: getSystemLocale /* getSystemLocale */.t["/w/EYk"], metadataField: closure_7.TIKTOK_FOLLOWER_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWER_COUNT), platform: value, onConfigurationChange, locked };
-  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t.JHEsYw, metadataField: closure_7.TIKTOK_FOLLOWING_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWING_COUNT), platform: value, onConfigurationChange, locked });
-  const obj2 = { fieldTextHook: getSystemLocale /* getSystemLocale */.t.JHEsYw, metadataField: closure_7.TIKTOK_FOLLOWING_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWING_COUNT), platform: value, onConfigurationChange, locked };
-  items[3] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale /* getSystemLocale */.t.tEFCYA, metadataField: closure_7.TIKTOK_LIKES_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_LIKES_COUNT), platform: value, onConfigurationChange, locked });
+  const items = [callback2(BooleanConfigRule, obj), callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.TIKTOK_FOLLOWER_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWER_COUNT), platform: value, onConfigurationChange, locked }), , ];
+  const obj1 = { fieldTextHook: getSystemLocale.t["/w/EYk"], metadataField: closure_7.TIKTOK_FOLLOWER_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWER_COUNT), platform: value, onConfigurationChange, locked };
+  items[2] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.JHEsYw, metadataField: closure_7.TIKTOK_FOLLOWING_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWING_COUNT), platform: value, onConfigurationChange, locked });
+  const obj2 = { fieldTextHook: getSystemLocale.t.JHEsYw, metadataField: closure_7.TIKTOK_FOLLOWING_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_FOLLOWING_COUNT), platform: value, onConfigurationChange, locked };
+  items[3] = callback2(NumericalConfigRule, { fieldTextHook: getSystemLocale.t.tEFCYA, metadataField: closure_7.TIKTOK_LIKES_COUNT, existingPendingConfiguration: configMetadataMap.get(closure_7.TIKTOK_LIKES_COUNT), platform: value, onConfigurationChange, locked });
   obj[0] = items;
   return callback3(closure_14, obj);
 }

@@ -28,7 +28,7 @@ let closure_12 = createCacheKey.createStyles((color) => {
   const sum3 = dependencyMap[require(undefined, 1887) /* DisplayNameEffect */.DisplayNameEffect.POP] + 0.04 * arg1;
   const result1 = Math.floor(sum2 / 2) / value;
   let obj = { color: Themes.colors.WHITE, textShadowColor: color, textShadowRadius: sum, textShadowOffset: { width: 0, height: 0 } };
-  let obj1 = PlatformTypes /* PlatformTypes */;
+  let obj1 = PlatformTypes;
   if (obj1.isIOS()) {
     obj = { top: null, left: null, padding: null, marginVertical: null, marginLeft: null, marginRight: null };
     const result2 = -sum1 / 2;
@@ -66,7 +66,7 @@ let closure_12 = createCacheKey.createStyles((color) => {
   obj2[3] = num3;
   obj1[1] = obj2;
   const obj3 = { color, position: "absolute" };
-  tmp4Result1 = PlatformTypes /* PlatformTypes */;
+  tmp4Result1 = PlatformTypes;
   if (tmp4Result2.isIosFabric()) {
     const obj4 = { top: null };
     obj4[0] = 1.2 + result;
@@ -80,7 +80,7 @@ let closure_12 = createCacheKey.createStyles((color) => {
   }
   const merged1 = Object.assign(obj5);
   obj1[2] = obj3;
-  tmp4Result2 = isFabric /* isFabric */;
+  tmp4Result2 = isFabric;
   obj1[3] = { color: Themes.colors.WHITE };
   const obj8 = { color: Themes.colors.WHITE, top: null, left: null, marginRight: null };
   const obj7 = { color: Themes.colors.WHITE };
@@ -89,15 +89,15 @@ let closure_12 = createCacheKey.createStyles((color) => {
     num6 = -sum2 / 2;
   }
   obj8[1] = num6;
-  tmp4Result3 = PlatformTypes /* PlatformTypes */;
+  tmp4Result3 = PlatformTypes;
   if (tmp4Result4.isIOS()) {
     let result3 = -sum2 / 2;
   } else {
     result3 = -result1;
   }
   obj8[2] = result3;
-  tmp4Result4 = PlatformTypes /* PlatformTypes */;
-  obj8[3] = PlatformTypes /* PlatformTypes */.isIOS() ? -sum2 : -result1;
+  tmp4Result4 = PlatformTypes;
+  obj8[3] = PlatformTypes.isIOS() ? -sum2 : -result1;
   obj1[4] = obj8;
   return obj1;
 });

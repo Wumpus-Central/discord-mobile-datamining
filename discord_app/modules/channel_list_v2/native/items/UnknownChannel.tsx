@@ -13,8 +13,8 @@ const require = arg1;
 function handlePress() {
   let obj = dispatcher;
   obj = { key: "UNKNOWN_CHANNEL_UPDATE_DISCORD", content: null, icon: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["/ZjyYE"]);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["/ZjyYE"]);
   obj[2] = registerAsset;
   obj.open(obj);
 }

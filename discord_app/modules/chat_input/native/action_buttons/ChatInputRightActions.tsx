@@ -25,12 +25,12 @@ function LeftSlot(state) {
   let wrapperStyle;
   state = state.state;
   ({ cleanup, channel, onPress, slotWidth, wrapperStyle } = state);
-  let obj = { visible: state !== wrapChildrenDefault /* wrapChildrenDefault */.TransitionStates.YEETED, initiallyVisible: state !== wrapChildrenDefault /* wrapChildrenDefault */.TransitionStates.ENTERED, enterDelayMs: closure_6, onExitComplete: cleanup };
+  let obj = { visible: state !== wrapChildrenDefault.TransitionStates.YEETED, initiallyVisible: state !== wrapChildrenDefault.TransitionStates.ENTERED, enterDelayMs: closure_6, onExitComplete: cleanup };
   ({ animatedStyle, isInteractive } = useChatInputFloatingBounce(obj));
   obj = { style: items };
   items = [wrapperStyle, { width: slotWidth }, animatedStyle];
   const tmp = useChatInputFloatingBounce(obj);
-  const merged = Object.assign(FadeTransitionItem /* FadeTransitionItem */.interactivityProps(isInteractive));
+  const merged = Object.assign(FadeTransitionItem.interactivityProps(isInteractive));
   obj.children = callback2(renderChatInputActionButtonGiftAndThread, { canStartThreads: false, channel, onPress, styleButton: "ct", shouldShowThread: "Instance" });
   return callback2(ReanimatedRexport.View, obj);
 }

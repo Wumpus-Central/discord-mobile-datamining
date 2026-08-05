@@ -26,7 +26,7 @@ export const getReactionEmojiName = function getReactionEmojiName(emoji) {
   return result;
 };
 export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayName(me, count, emoji, arg3) {
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (arg3) {
     if (me) {
       Z_l_qu = t.i9DXqM;
@@ -72,12 +72,12 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
   }
 };
 export const isMeReaction = function isMeReaction(me, me_burst, arg2) {
-  let tmp3 = arg2 === ReactionTypes /* ReactionTypes */.ReactionTypes.BURST;
+  let tmp3 = arg2 === ReactionTypes.ReactionTypes.BURST;
   if (tmp3) {
     tmp3 = true === me_burst;
   }
   if (!tmp3) {
-    let tmp5 = arg2 === ReactionTypes /* ReactionTypes */.ReactionTypes.NORMAL;
+    let tmp5 = arg2 === ReactionTypes.ReactionTypes.NORMAL;
     if (tmp5) {
       tmp5 = true === me;
     }
@@ -148,7 +148,7 @@ export const shouldApplyReaction = function shouldApplyReaction(optimistic) {
   return !optimistic;
 };
 export const updateReactionNotificationsSetting = function updateReactionNotificationsSetting(NumberResult, setting) {
-  const ReactionNotifications = explicitContentFromProto /* explicitContentFromProto */.ReactionNotifications;
+  const ReactionNotifications = explicitContentFromProto.ReactionNotifications;
   ReactionNotifications.updateSetting(NumberResult);
   let obj = expandEventProperties;
   obj = { update_type: constants3.ACCOUNT, reaction_notifications: NumberResult, reaction_notifications_old: setting };

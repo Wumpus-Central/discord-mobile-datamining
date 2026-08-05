@@ -26,5 +26,5 @@ const result = require("enforcing").fileFinishedImporting("modules/system_date_f
 
 export const makeFormatter = __DiscordCreateDateFormatter;
 export const supportsSystemDateFormatter = function supportsSystemDateFormatter() {
-  return set /* set */.isIOS();
+  return set.isIOS();
 };

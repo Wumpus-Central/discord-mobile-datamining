@@ -19,7 +19,7 @@ const prototype = MaskedLinkStore.prototype;
 prototype["initialize"] = function initialize() {
   let trustedDomains;
   let trustedProtocols;
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   let obj = Storage.get(MaskedLinkStore);
   if (obj == null) {
     obj = {};
@@ -52,7 +52,7 @@ prototype["initialize"] = function initialize() {
   }
 };
 prototype["isTrustedDomain"] = function isTrustedDomain(arg0) {
-  const hostname = getHostname /* getHostname */.getHostname(arg0);
+  const hostname = getHostname.getHostname(arg0);
   let flag = true;
   if (window.GLOBAL_ENV.INVITE_HOST !== hostname) {
     const _window2 = window;
@@ -83,13 +83,13 @@ prototype["isTrustedDomain"] = function isTrustedDomain(arg0) {
   return flag;
 };
 prototype["isTrustedProtocol"] = function isTrustedProtocol(url) {
-  return set1.has(getHostname /* getHostname */.getProtocol(url));
+  return set1.has(getHostname.getProtocol(url));
 };
 MaskedLinkStore.displayName = "MaskedLinkStore";
 const maskedLinkStore = new MaskedLinkStore(require("dispatcher"), {
   MASKED_LINK_ADD_TRUSTED_DOMAIN: function handleAddTrustedDomain(url) {
     url = url.url;
-    let obj = getHostname /* getHostname */;
+    let obj = getHostname;
     const hostname = obj.getHostname(url);
     let flag = true;
     if (window.GLOBAL_ENV.INVITE_HOST !== hostname) {
@@ -131,7 +131,7 @@ const maskedLinkStore = new MaskedLinkStore(require("dispatcher"), {
   },
   MASKED_LINK_ADD_TRUSTED_PROTOCOL: function handleAddTrustedProtocol(url) {
     url = url.url;
-    let obj = getHostname /* getHostname */;
+    let obj = getHostname;
     if (set1.has(obj.getProtocol(url))) {
       return false;
     } else {

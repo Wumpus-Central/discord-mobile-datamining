@@ -22,20 +22,20 @@ function formatVoiceActivityTitle(stateFromStoresArray, guildId) {
   } else if (1 === length) {
     return getNickname.getName(guildId, null, stateFromStoresArray[0]);
   } else if (2 === length) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     let obj = { user1: null, user2: null };
     obj[0] = getNickname.getName(guildId, null, stateFromStoresArray[0]);
     const obj2 = getNickname;
     obj[1] = getNickname.getName(guildId, null, stateFromStoresArray[1]);
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["4SM/RX"], obj);
+    return intl.formatToPlainString(getSystemLocale.t["4SM/RX"], obj);
   } else {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     obj = { user1: null, user2: null, extras: null };
     obj[0] = getNickname.getName(guildId, null, stateFromStoresArray[0]);
     const obj6 = getNickname;
     obj[1] = getNickname.getName(guildId, null, stateFromStoresArray[1]);
     obj[2] = stateFromStoresArray.length - 2;
-    return intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.pjxkCI, obj);
+    return intl2.formatToPlainString(getSystemLocale.t.pjxkCI, obj);
   }
 }
 let c3 = importAllResult;

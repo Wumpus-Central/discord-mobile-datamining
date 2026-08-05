@@ -10,11 +10,11 @@ obj[2] = obj;
 obj = {
   scrollToLocation(arg0, arg1, arg2, arg3, arg4) {
     const items = [arg1, arg2, arg3, arg4];
-    renderElement /* renderElement */.dispatchCommand(arg0, "scrollToLocation", items);
+    renderElement.dispatchCommand(arg0, "scrollToLocation", items);
   },
   scrollToTop(arg0, arg1) {
     const items = [arg1];
-    renderElement /* renderElement */.dispatchCommand(arg0, "scrollToTop", items);
+    renderElement.dispatchCommand(arg0, "scrollToTop", items);
   }
 };
 const value = setRuntimeConfigProvider.get("FastestList", () => obj);

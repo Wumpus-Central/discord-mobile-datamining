@@ -32,22 +32,22 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
     }
     const user1 = user.getUser(id);
     if (null == user1) {
-      let obj4 = canViewInteractionInfo /* canViewInteractionInfo */;
+      let obj4 = canViewInteractionInfo;
       const result = obj4.isPrimaryEntryPointCommandMessage(message);
-      let obj5 = useNullableMessageAuthor /* useNullableMessageAuthor */;
+      let obj5 = useNullableMessageAuthor;
       const userAuthor = obj5.getUserAuthor(message.interaction.user, channel);
       const colorString = userAuthor.colorString;
       const displayName = message.interaction.displayName;
       const internal = Themes.internal;
       const semanticColor = internal.resolveSemanticColor(theme, Themes.colors.MENTION_BACKGROUND);
-      let obj6 = buildCommand /* buildCommand */;
+      let obj6 = buildCommand;
       const initialInteractionMetadata = obj6.getInitialInteractionMetadata(message);
       let type;
       if (initialInteractionMetadata != null) {
         type = initialInteractionMetadata.type;
       }
       let tmp25 = null;
-      if (type === PermissionOverwriteType /* PermissionOverwriteType */.InteractionTypes.APPLICATION_COMMAND) {
+      if (type === PermissionOverwriteType.InteractionTypes.APPLICATION_COMMAND) {
         tmp25 = null;
         if (null != initialInteractionMetadata.target_user) {
           tmp25 = new createdAt(initialInteractionMetadata.target_user);
@@ -88,7 +88,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         id1 = tmp25.id;
       }
       let processColorStringsResult = null;
-      const result2 = processColorStrings /* processColorStrings */.isNativeMessageEligibleForEnhancedRoleColors(guildId, id1);
+      const result2 = processColorStrings.isNativeMessageEligibleForEnhancedRoleColors(guildId, id1);
       if (result1) {
         processColorStringsResult = tmp17(7880).processColorStrings(userAuthor.colorStrings);
         const tmp17Result2 = tmp17(7880);
@@ -100,8 +100,8 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       }
       let obj = { username: null, usernameOnClick: null };
       const tmp15 = message.type === MessageTypes.CHAT_INPUT_COMMAND || message.type === tmp14.INTERACTION_PREMIUM_UPSELL;
-      const tmp17Result1 = processColorStrings /* processColorStrings */;
-      obj[0] = useNullableMessageAuthor /* useNullableMessageAuthor */.getUserAuthor(message.interaction.user, channel).nick;
+      const tmp17Result1 = processColorStrings;
+      obj[0] = useNullableMessageAuthor.getUserAuthor(message.interaction.user, channel).nick;
       obj = { name: "usernameOnClick", action: "bindUserMenu", userId: null, messageChannelId: null, linkColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null };
       obj[2] = id;
       obj[3] = message.channel_id;
@@ -203,20 +203,20 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         const tmp17Result7 = tmp17(4513);
         const tmp67 = colorString2;
       }
-      const tmp17Result4 = useNullableMessageAuthor /* useNullableMessageAuthor */;
+      const tmp17Result4 = useNullableMessageAuthor;
       const tmp50 = colorString;
     } else {
       if (channel == null) {
         channel = channel.getChannel(message.getChannelId());
       }
       let obj11 = dependencyMap;
-      obj2 = useNullableMessageAuthor /* useNullableMessageAuthor */;
+      obj2 = useNullableMessageAuthor;
       const guildMemberAvatar = obj2.getUserAuthor(user1, channel).guildMemberAvatar;
       let guildId1;
       if (channel != null) {
         guildId1 = channel.getGuildId();
       }
-      ensureAvatarSource /* ensureAvatarSource */;
+      ensureAvatarSource;
       if (null == guildMemberAvatar) {
         let avatarSource = user1.getAvatarSource(undefined);
         const uri = tmp11(avatarSource).uri;

@@ -8,7 +8,7 @@ const result = require("useAudienceRequestToSpeakState").fileFinishedImporting("
 
 export default function useCanCurrentUserSpeakInChannel(arg0) {
   const items = [fetchFingerprint];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => id.getId());
-  const obj = initialize /* initialize */;
-  return useAudienceRequestToSpeakState(stateFromStores, arg0) === useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.RequestToSpeakStates.ON_STAGE;
+  const stateFromStores = initialize.useStateFromStores(items, () => id.getId());
+  const obj = initialize;
+  return useAudienceRequestToSpeakState(stateFromStores, arg0) === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE;
 };

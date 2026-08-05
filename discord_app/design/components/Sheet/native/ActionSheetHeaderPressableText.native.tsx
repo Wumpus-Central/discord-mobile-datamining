@@ -22,6 +22,6 @@ export const ActionSheetHeaderPressableText = function ActionSheetHeaderPressabl
     tmp5 = accessibilityLabel;
   }
   obj[3] = tmp5;
-  obj[4] = jsx(Text /* Text */.Text, { variant: str, color: "text-brand", children: label });
-  return jsx(PressableBase /* PressableBase */.PressableOpacity, { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null });
+  obj[4] = jsx(Text.Text, { variant: str, color: "text-brand", children: label });
+  return jsx(PressableBase.PressableOpacity, { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null });
 };

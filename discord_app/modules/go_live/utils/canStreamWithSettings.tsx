@@ -10,7 +10,7 @@ const result = require("canUseStreamSetting").fileFinishedImporting("modules/go_
 
 export default function canStreamWithSettings(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg0 === constants.PRESET_AUTO) {
-    return getGoLiveAutoQualityExperimentConfig /* getGoLiveAutoQualityExperimentConfig */.getGoLiveAutoQualityExperimentConfig({ location: "canStreamWithSettings" }).allowAutoQuality;
+    return getGoLiveAutoQualityExperimentConfig.getGoLiveAutoQualityExperimentConfig({ location: "canStreamWithSettings" }).allowAutoQuality;
   } else {
     const iter = dependencyMap[Symbol.iterator]();
     const nextResult = iter.next();

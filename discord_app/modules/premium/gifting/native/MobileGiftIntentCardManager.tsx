@@ -17,7 +17,7 @@ class MobileGiftIntentCardManager extends tmp3 {
 }
 const prototype = MobileGiftIntentCardManager.prototype;
 prototype["isChannelEligible"] = function isChannelEligible(channel) {
-  return channel.type === set /* set */.ChannelTypes.DM;
+  return channel.type === set.ChannelTypes.DM;
 };
 prototype["maybeSendCard"] = function maybeSendCard(id, closure_0) {
   let self = this;
@@ -82,8 +82,8 @@ prototype["sendCardInSelectedChannelIfEligible"] = function sendCardInSelectedCh
 };
 prototype["maybeFetchUserAffinities"] = function maybeFetchUserAffinities() {
   if (obj.getConfig({ location: "MobileGiftIntentCardManager" }).enabled) {
-    const userAffinitiesV2 = fetchUserAffinitiesV2 /* fetchUserAffinitiesV2 */.fetchUserAffinitiesV2();
-    const obj2 = fetchUserAffinitiesV2 /* fetchUserAffinitiesV2 */;
+    const userAffinitiesV2 = fetchUserAffinitiesV2.fetchUserAffinitiesV2();
+    const obj2 = fetchUserAffinitiesV2;
   }
 };
 prototype["onChannelSelect"] = function onChannelSelect(channelId) {

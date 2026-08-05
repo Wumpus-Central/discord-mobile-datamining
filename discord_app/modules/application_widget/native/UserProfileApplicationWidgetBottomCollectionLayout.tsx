@@ -19,11 +19,11 @@ function CollectionItem(arg0) {
   if (componentConfig != null) {
     image = componentConfig.fields.image;
   }
-  const items = [resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */.ResolvedValueType.MEDIA];
+  const items = [resolvedValuesFromUserApplicationIdentityProfile.ResolvedValueType.MEDIA];
   const fieldValue = resolveFieldValue(image, items);
-  let obj = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj = resolvedValuesFromUserApplicationIdentityProfile;
   const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(componentConfig, "name", resolveFieldValue);
-  let obj1 = resolvedValuesFromUserApplicationIdentityProfile /* resolvedValuesFromUserApplicationIdentityProfile */;
+  let obj1 = resolvedValuesFromUserApplicationIdentityProfile;
   const singleStringOrSkeleton1 = obj1.resolveSingleStringOrSkeleton(componentConfig, "description", resolveFieldValue);
   obj = { style: tmp.item, children: null };
   if (null != fieldValue) {

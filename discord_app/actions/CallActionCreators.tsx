@@ -82,7 +82,7 @@ export default {
   ring(channelId, items, gdm_invite) {
     channel = channel.getChannel(channelId);
     if (null != channel) {
-      let obj = useCanRingToGuildVoiceChannel /* useCanRingToGuildVoiceChannel */;
+      let obj = useCanRingToGuildVoiceChannel;
       const CALLABLE = constants.CALLABLE;
       const result = obj.canRingUsersInChannel(channel);
       if (result) {
@@ -112,7 +112,7 @@ export default {
     }
   },
   stopRinging(channelId, items) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_6.CALL_STOP_RINGING(channelId), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { recipients: items };
     return HTTP.post(obj);

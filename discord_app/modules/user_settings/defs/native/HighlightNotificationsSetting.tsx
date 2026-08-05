@@ -8,17 +8,17 @@ import { Row } from "../../notifications/native/UserSettingsHighlightNotificatio
 const require = arg1;
 function useHighlightNotifications() {
   const items = [createGuildRecordFromRust];
-  return initialize /* initialize */.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
+  return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.o8Bypv);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.o8Bypv);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["Vw/Xn8"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Vw/Xn8"]);
   },
   usePredicate: useHighlightNotifications,
   screen: createToggle
@@ -26,7 +26,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
   getComponent() {
-    return Row /* Row */.default;
+    return Row.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

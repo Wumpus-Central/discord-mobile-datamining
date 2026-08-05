@@ -1088,7 +1088,7 @@ const channelStore = new ChannelStore(require("dispatcher"), {
         let tmp4 = setChannel;
         let tmp5 = require;
         let tmp6 = dependencyMap;
-        let obj = deserializeChannels /* deserializeChannels */;
+        let obj = deserializeChannels;
         let tmp7 = callback5;
         let tmp8 = setChannel(obj.deserializeChannel(callback5(item10021)));
         continue;
@@ -1304,7 +1304,7 @@ const channelStore = new ChannelStore(require("dispatcher"), {
       let tmp3 = setChannel;
       let tmp4 = require;
       let tmp5 = dependencyMap;
-      let obj = deserializeChannels /* deserializeChannels */;
+      let obj = deserializeChannels;
       let tmp6 = callback5;
       let tmp7 = setChannel(obj.deserializeChannel(callback5(tmp2)));
       continue;

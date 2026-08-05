@@ -49,12 +49,12 @@ function canReactToMessageInternal(state, getGuildId, items) {
     canResult = state.type !== constants3.THREAD_STARTER_MESSAGE;
   }
   if (canResult) {
-    canResult = !hasFlag /* hasFlag */.hasFlag(state.flags, constants4.EPHEMERAL);
-    const obj5 = hasFlag /* hasFlag */;
+    canResult = !hasFlag.hasFlag(state.flags, constants4.EPHEMERAL);
+    const obj5 = hasFlag;
   }
   if (canResult) {
-    canResult = !isCommunicationDisabled /* isCommunicationDisabled */.isMemberCommunicationDisabled(member);
-    const obj6 = isCommunicationDisabled /* isCommunicationDisabled */;
+    canResult = !isCommunicationDisabled.isMemberCommunicationDisabled(member);
+    const obj6 = isCommunicationDisabled;
   }
   return canResult;
 }

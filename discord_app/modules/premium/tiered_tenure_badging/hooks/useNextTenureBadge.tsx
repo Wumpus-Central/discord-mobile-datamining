@@ -8,7 +8,7 @@ let obj1;
 const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useNextTenureBadge.tsx");
 
 export const useNextTenureBadge = function useNextTenureBadge() {
-  const tieredTenureBadgeData = usePremiumSince /* usePremiumSince */.useTieredTenureBadgeData();
+  const tieredTenureBadgeData = usePremiumSince.useTieredTenureBadgeData();
   if (null == tieredTenureBadgeData) {
     return null;
   } else if (tieredTenureBadgeData.status === tmp(9428).TieredTenureBadgeStatus.UPCOMING) {
@@ -24,6 +24,6 @@ export const useNextTenureBadge = function useNextTenureBadge() {
     }
     return tmp7;
   }
-  const obj = usePremiumSince /* usePremiumSince */;
+  const obj = usePremiumSince;
   tmp = require;
 };

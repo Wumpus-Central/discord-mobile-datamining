@@ -70,7 +70,7 @@ function AnimatedLabelIcon(icon) {
   icon = icon.icon;
   const tmp3 = callback2(useIsMobileVisualRefreshExperimentEnabled("VoicePanelCardFloatingControls"));
   const type = icon.type;
-  if (useVoicePanelCardUserStateIcons /* useVoicePanelCardUserStateIcons */.VoicePanelCardUserStateIconType.STREAM_ICON === type) {
+  if (useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.STREAM_ICON === type) {
     let obj = { voicePlatform: null };
     obj[0] = icon.voicePlatform;
     return callback(StreamIcon, obj);
@@ -395,7 +395,7 @@ let closure_37 = importAllResult.memo((controlsHidden) => {
 let closure_38 = importAllResult.memo((controlsHidden) => {
   const obj = { theme: ThemeTypes.LIGHT, children: null };
   obj[1] = callback(closure_37, { controlsHidden: controlsHidden.controlsHidden });
-  return callback(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+  return callback(ManaContext.ThemeContextProvider, obj);
 });
 let closure_39 = { code: "function VoicePanelCardFloatingControlsTsx10(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}" };
 let closure_40 = { code: "function VoicePanelCardFloatingControlsTsx11(){const{isPillHidden}=this.__closure;return isPillHidden.get();}" };

@@ -21,8 +21,8 @@ let require = arg1;
 ({ useChannelDetailsStore: error, getIsChannelDetailsSearchActive: metroImportAll } = useChannelDetailsStore);
 function log() {
   if (questLogger == null) {
-    questLogger = getQuestLogger /* getQuestLogger */.getQuestLogger({ location: "QuestMobileEmbedVisibilityManager" });
-    const obj = getQuestLogger /* getQuestLogger */;
+    questLogger = getQuestLogger.getQuestLogger({ location: "QuestMobileEmbedVisibilityManager" });
+    const obj = getQuestLogger;
   }
 }
 class QuestMobileEmbedVisibilityManager extends tmp3 {

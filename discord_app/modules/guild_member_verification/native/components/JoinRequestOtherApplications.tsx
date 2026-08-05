@@ -15,7 +15,7 @@ let metroImportAll;
 const require = arg1;
 function ApplicationStatusIcon(status) {
   status = status.status;
-  if (MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.GuildJoinRequestApplicationStatuses.APPROVED === status) {
+  if (MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED === status) {
     let obj = { size: "sm", color: null, secondaryColor: null };
     obj[1] = Themes.colors.STATUS_POSITIVE_BACKGROUND;
     obj[2] = Themes.colors.STATUS_POSITIVE_TEXT;

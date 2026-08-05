@@ -22,10 +22,10 @@ function BlockedUsersList(userIds) {
   context;
   if (0 === userIds.length) {
     let obj = { Illustration: null, body: null };
-    obj[0] = getBlockedSource /* getBlockedSource */.Blocked;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.nnsFif);
-    let tmp7 = callback(Button /* Button */.EmptyState, obj);
+    obj[0] = getBlockedSource.Blocked;
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.nnsFif);
+    let tmp7 = callback(Button.EmptyState, obj);
   } else {
     obj = { value: null, children: null };
     obj[0] = tmp4;
@@ -34,19 +34,19 @@ function BlockedUsersList(userIds) {
     const obj1 = { children: null };
     const obj2 = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
     obj2[0] = tmp.sectionLabelStyle;
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj3 = { numberOfBlockedUsers: null };
     obj3[0] = userIds.length;
-    obj2[3] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["c+JVEB"], obj3);
-    const items = [callback(Text /* Text */.Text, obj2), ];
+    obj2[3] = intl2.formatToPlainString(getSystemLocale.t["c+JVEB"], obj3);
+    const items = [callback(Text.Text, obj2), ];
     const obj4 = { hasIcons: true, children: null };
     obj4[1] = userIds.map((userId) => callback2(callback(table[14]), { userId }, userId));
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    items[1] = callback(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj4, intl3.string(getSystemLocale /* getSystemLocale */.t.PFOUKW));
+    const intl3 = getSystemLocale.intl;
+    items[1] = callback(TableRowGroupTitle.TableRowGroup, obj4, intl3.string(getSystemLocale.t.PFOUKW));
     obj1[0] = items;
     obj[2] = callback2(ScrollView, obj1);
-    obj[1] = callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
-    tmp7 = callback(context /* context */.AnalyticsLocationProvider, obj);
+    obj[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+    tmp7 = callback(context.AnalyticsLocationProvider, obj);
   }
   return tmp7;
 }
@@ -60,7 +60,7 @@ let obj1 = { marginTop: require("Themes").space.PX_12, marginBottom: require("Th
 const result = require("upsertRelationship").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx");
 
 export default function ConnectedBlockedUsersList() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [upsertRelationship];
   obj = { userIds: obj.useStateFromStoresArray(items, () => blockedIDs.getBlockedIDs()) };
   return callback(BlockedUsersList, obj);

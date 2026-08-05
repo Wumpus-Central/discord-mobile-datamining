@@ -17,10 +17,10 @@ export default function GuildBadgeV2(arg0) {
   let size;
   ({ guild, size } = arg0);
   if (size === undefined) {
-    size = Button /* Button */.Icon.Sizes.MEDIUM;
+    size = Button.Icon.Sizes.MEDIUM;
   }
   const merged = Object.assign(arg0, Object.create(null));
-  AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  AccessibilityAnnouncer;
   if (null == guild) {
     return null;
   } else {
@@ -39,11 +39,11 @@ export default function GuildBadgeV2(arg0) {
   tmp4 = callback();
 };
 export const hasGuildBadge = function hasGuildBadge(fromGuildProfileResult) {
-  const guildTraits = GuildVisibility /* GuildVisibility */.getGuildTraits(fromGuildProfileResult);
-  const obj = GuildVisibility /* GuildVisibility */;
+  const guildTraits = GuildVisibility.getGuildTraits(fromGuildProfileResult);
+  const obj = GuildVisibility;
   const tmp = require;
-  const badgeCategory = BadgeCategory /* BadgeCategory */.getBadgeCategory(guildTraits);
-  const tmp5 = badgeVariants /* badgeVariants */.badgeVariants[badgeCategory];
+  const badgeCategory = BadgeCategory.getBadgeCategory(guildTraits);
+  const tmp5 = badgeVariants.badgeVariants[badgeCategory];
   let tmp6 = null != tmp5;
   if (tmp6) {
     tmp6 = null != tmp(9181).resolveImageSource(tmp5, guildTraits, arg1);

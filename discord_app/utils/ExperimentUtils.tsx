@@ -75,7 +75,7 @@ export default {
     const tmp = getFirstEligibleUserExperiment(arg0);
     if (null != tmp) {
       const tmp3 = callback(tmp, 2);
-      const result = trackExposureToExperiment /* trackExposureToExperiment */.trackExposureToExperiment(tmp3[0], tmp4);
+      const result = trackExposureToExperiment.trackExposureToExperiment(tmp3[0], tmp4);
       return tmp3[1];
     }
   },

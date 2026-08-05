@@ -25,19 +25,19 @@ const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/
 export default function UserPreview(user) {
   user = user.user;
   const tmp = createCacheKey();
-  let obj = hexToRgba /* hexToRgba */;
+  let obj = hexToRgba;
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const hexWithOpacityResult = obj.hexWithOpacity(tmp.borderColor.color, 0.08);
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.Rsth7z).toUpperCase();
-  const items = [callback(Text /* Text */.Text, obj), ];
+  obj[3] = intl.string(getSystemLocale.t.Rsth7z).toUpperCase();
+  const items = [callback(Text.Text, obj), ];
   const obj1 = { style: items1, children: null };
   items1 = [tmp.userContainer, { borderColor: hexWithOpacityResult }];
   const obj2 = { size: null, user: null, guildId: "disabled" };
-  obj2[0] = Button /* Button */.AvatarSizes.LARGE_48;
+  obj2[0] = Button.AvatarSizes.LARGE_48;
   obj2[1] = user;
-  const items2 = [callback(Button /* Button */.Avatar, obj2), ];
+  const items2 = [callback(Button.Avatar, obj2), ];
   const obj3 = { style: tmp.userProfileInfo, children: null };
   let tmp7Result = null != user.globalName;
   if (tmp7Result) {
@@ -45,7 +45,7 @@ export default function UserPreview(user) {
     obj4[2] = user.globalName;
     tmp7Result = tmp7(tmp2(4281).Text, obj4);
   }
-  const items3 = [tmp7Result, callback(Text /* Text */.Text, { color: "text-default", variant: "text-sm/normal", children: user.username })];
+  const items3 = [tmp7Result, callback(Text.Text, { color: "text-default", variant: "text-sm/normal", children: user.username })];
   obj3[1] = items3;
   items2[1] = closure_4(View, obj3);
   obj1[1] = items2;

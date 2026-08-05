@@ -81,19 +81,19 @@ function BadgeWithTooltip(tooltipPosition) {
 }
 function StaticBadge() {
   const tmp3 = createCacheKey();
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   const isThemeDarkResult = obj.isThemeDark(useTheme());
   let str = "text-overlay-light";
   if (isThemeDarkResult) {
     str = "control-overlay-primary-text-default";
   }
   const intl = tmp4(1236).intl;
-  const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["1m6qcO"]);
+  const stringResult = intl.string(getSystemLocale.t["1m6qcO"]);
   obj = { accessibilityLabel: stringResult, style: items, children: null };
   items = [tmp3.pillBase, isThemeDarkResult ? tmp3.pillDark : tmp3.pillLight];
-  const items1 = [callback2(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, { size: "xs", color: str }), ];
+  const items1 = [callback2(NitroWheelIcon.NitroWheelIcon, { size: "xs", color: str }), ];
   obj = { variant: "text-sm/bold", color: str, style: tmp3.text, children: stringResult };
-  items1[1] = callback2(Text /* Text */.Text, obj);
+  items1[1] = callback2(Text.Text, obj);
   obj[2] = items1;
   return callback3(closure_6, obj);
 }
@@ -113,7 +113,7 @@ export default function _default(tooltipPosition) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let obj = useCanPurchaseFrames /* useCanPurchaseFrames */;
+  let obj = useCanPurchaseFrames;
   if (!obj.useIsProfileFramesEarlyAccessPhase(tooltipPosition.location)) {
     return null;
   } else if (flag2) {
@@ -127,6 +127,6 @@ export default function _default(tooltipPosition) {
     const obj1 = { tooltipPosition: null };
     obj1[0] = str;
     obj[1] = tmp3(BadgeWithTooltip, obj1);
-    tmp3Result = tmp3(Layer /* Layer */.LayerScope, obj);
+    tmp3Result = tmp3(Layer.LayerScope, obj);
   }
 };

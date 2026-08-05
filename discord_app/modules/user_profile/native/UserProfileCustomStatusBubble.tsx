@@ -27,7 +27,7 @@ function EmojiImage(id) {
   if (animated === undefined) {
     animated = false;
   }
-  const AnimateEmoji = explicitContentFromProto /* explicitContentFromProto */.AnimateEmoji;
+  const AnimateEmoji = explicitContentFromProto.AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
   let obj = { style: items, source: null, resizeMode: "contain" };
   items = [{ height: size, width: size }, id.style];
@@ -105,9 +105,9 @@ function TextStatusContent(arg0) {
     }
     const items2 = [tmp7Result, text];
     obj[5] = items2;
-    return closure_10(Text /* Text */.Text, obj);
+    return closure_10(Text.Text, obj);
   } else {
-    obj1 = set /* set */;
+    obj1 = set;
     obj1.isAndroid() ? { fontFamily: "ggsans-NormalItalic, NotoSans-NormalItalic" } : { fontStyle: "italic" };
   }
 }
@@ -115,7 +115,7 @@ function EmojiOnlyStatusContent(arg0) {
   let emoji;
   let size;
   ({ emoji, size } = arg0);
-  const AnimateEmoji = explicitContentFromProto /* explicitContentFromProto */.AnimateEmoji;
+  const AnimateEmoji = explicitContentFromProto.AnimateEmoji;
   let id;
   const setting = AnimateEmoji.useSetting();
   if (emoji != null) {

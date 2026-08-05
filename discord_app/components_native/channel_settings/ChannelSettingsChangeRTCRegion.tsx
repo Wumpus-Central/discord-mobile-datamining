@@ -84,7 +84,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
   });
 };
 prototype["renderRegion"] = function renderRegion(label) {
-  return jsx(TableRadioRow /* TableRadioRow */.TableRadioRow, { label: label.name, value: label.id }, label.id);
+  return jsx(TableRadioRow.TableRadioRow, { label: label.name, value: label.id }, label.id);
 };
 prototype["renderRegions"] = function renderRegions() {
   const self = this;
@@ -102,7 +102,7 @@ prototype["renderRegions"] = function renderRegions() {
 prototype["render"] = function render() {
   const obj = { style: createCacheKey(this.context).form, children: null };
   obj[1] = this.renderRegions();
-  return jsx(Form /* Form */.Form, { style: createCacheKey(this.context).form, children: null });
+  return jsx(Form.Form, { style: createCacheKey(this.context).form, children: null });
 };
 ChannelSettingsChangeRTCRegion.contextType = require("ManaContext").ThemeContext;
 const result = require("ensureGuildLoaded").fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeRTCRegion.tsx");

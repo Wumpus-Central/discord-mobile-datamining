@@ -29,9 +29,9 @@ export default function SubscriptionRenewalMutationsNotice(arg0) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.icon };
-  const items = [callback(Button /* Button */.WarningCircle, obj), ];
+  const items = [callback(Button.WarningCircle, obj), ];
   obj = { style: tmp.text, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   if (!subscription.hasExternalPlanChange) {
     if (!isNoneSubscription(renewalMutations.planId)) {
       let displayName = getPremiumPlanItem.getDisplayName(renewalMutations.planId);
@@ -41,9 +41,9 @@ export default function SubscriptionRenewalMutationsNotice(arg0) {
     obj1[0] = displayName;
     obj1[1] = subscription.currentPeriodEnd;
     obj[1] = intl.format(tmp7, obj1);
-    items[1] = callback(Button /* Button */.LegacyText, obj);
+    items[1] = callback(Button.LegacyText, obj);
     obj[1] = items;
     return closure_6(View, obj);
   }
-  displayName = getPremiumPlanItem /* getPremiumPlanItem */.getExternalPlanDisplayName(renewalMutations);
+  displayName = getPremiumPlanItem.getExternalPlanDisplayName(renewalMutations);
 };

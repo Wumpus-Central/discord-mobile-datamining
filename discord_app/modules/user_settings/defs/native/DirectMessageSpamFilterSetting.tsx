@@ -7,8 +7,8 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.tiCXaH);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.tiCXaH);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useOptions: function useDmSpamFilterSettingOptions() {
@@ -19,14 +19,14 @@ createToggle = {
   },
   useValue: require("useDerivedDmSpamFilterSettingValue").useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
-    const DmSpamFilterV2 = explicitContentFromProto /* explicitContentFromProto */.DmSpamFilterV2;
+    const DmSpamFilterV2 = explicitContentFromProto.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));
   },
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.H9XOl3), ];
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    items[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.k4W40P);
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t.H9XOl3), ];
+    const intl2 = getSystemLocale.intl;
+    items[1] = intl2.string(getSystemLocale.t.k4W40P);
     return items;
   }
 };

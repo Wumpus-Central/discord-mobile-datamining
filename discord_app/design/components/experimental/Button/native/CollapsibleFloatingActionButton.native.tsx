@@ -56,7 +56,7 @@ export const CollapsibleFloatingActionButton = function CollapsibleFloatingActio
   let text;
   ({ icon, positionBottom, positionRight, text, state } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = styles /* styles */;
+  let obj = styles;
   let obj1 = validElement;
   const styles = obj.useStyles();
   let cloneElementResult = icon;

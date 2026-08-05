@@ -15,8 +15,8 @@ function ActionSheetHeader(handleSubmit) {
   let handleCancel;
   let title;
   ({ title, handleCancel } = handleSubmit);
-  let obj = set /* set */;
-  const BottomSheetTitleHeader = RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader;
+  let obj = set;
+  const BottomSheetTitleHeader = RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader;
   if (isAndroidResult) {
     obj = { title: null, trailing: null };
     obj[0] = title;
@@ -106,7 +106,7 @@ function ActionSheetFooter(arg0) {
   let handleSubmit;
   ({ handleCancel, handleSubmit, canSubmit } = arg0);
   const tmp = callback3();
-  let obj = set /* set */;
+  let obj = set;
   let tmp4 = null;
   if (obj.isAndroid()) {
     obj = { style: null, children: null };

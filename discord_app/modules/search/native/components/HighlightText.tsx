@@ -16,5 +16,5 @@ const result = require("jsxProd").fileFinishedImporting("modules/search/native/c
 
 export default function HighlightText(children) {
   const tmp = createCacheKey();
-  return jsx(Button /* Button */.LegacyText, { style: createCacheKey().text, children: children.children });
+  return jsx(Button.LegacyText, { style: createCacheKey().text, children: children.children });
 };

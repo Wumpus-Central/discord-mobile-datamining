@@ -4,13 +4,13 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/ge
 
 export default function getItemSubtitleForMaxPlayers(arg0) {
   if (arg0 > 0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj = { count: null };
     obj[0] = arg0;
-    let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["p/YmkR"], obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t["p/YmkR"], obj);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    formatToPlainStringResult = intl.string(getSystemLocale /* getSystemLocale */.t.s1vQIL);
+    const intl = getSystemLocale.intl;
+    formatToPlainStringResult = intl.string(getSystemLocale.t.s1vQIL);
   }
   return formatToPlainStringResult;
 };
@@ -19,8 +19,8 @@ export const getItemSubtitleForMaxPlayersShort = function getItemSubtitleForMaxP
     const _HermesInternal = HermesInternal;
     let combined = "1 - " + arg0;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    combined = intl.string(getSystemLocale /* getSystemLocale */.t.zMNEiF);
+    const intl = getSystemLocale.intl;
+    combined = intl.string(getSystemLocale.t.zMNEiF);
   }
   return combined;
 };
@@ -29,8 +29,8 @@ export const getItemSubtitleForMaxPlayersShorter = function getItemSubtitleForMa
     const _HermesInternal = HermesInternal;
     let combined = "1-" + arg0;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    combined = intl.string(getSystemLocale /* getSystemLocale */.t.zMNEiF);
+    const intl = getSystemLocale.intl;
+    combined = intl.string(getSystemLocale.t.zMNEiF);
   }
   return combined;
 };

@@ -155,7 +155,7 @@ export const useShowStageMusicMuteButton = function useShowStageMusicMuteButton(
 };
 export const shouldShowStageMusicMuteButton = function shouldShowStageMusicMuteButton(id) {
   let tmp = store2.getVoiceChannelId() === id;
-  mutableParticipants = mutableParticipants.getMutableParticipants(id, sortKey /* sortKey */.StageChannelParticipantNamedIndex.SPEAKER);
+  mutableParticipants = mutableParticipants.getMutableParticipants(id, sortKey.StageChannelParticipantNamedIndex.SPEAKER);
   if (tmp) {
     tmp = null == handleStageInstanceCreateOrUpdate.getStageInstanceByChannel(id);
   }

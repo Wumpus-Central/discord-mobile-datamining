@@ -2222,7 +2222,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
   }, items);
 };
 export const useForegroundColor = function useForegroundColor(variant) {
-  return map /* map */.useToken(createCacheKey[variant]);
+  return map.useToken(createCacheKey[variant]);
 };
 export const useButtonColorStyles = styleProperties;
 export const useButtonTextColorStyles = function useButtonTextColorStyles(style) {

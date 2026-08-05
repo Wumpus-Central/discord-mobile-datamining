@@ -7,7 +7,7 @@ import { useRefreshSavedMessages } from "useRefreshSavedMessages.tsx";
 
 const require = arg1;
 function getSavedMessagesForType(arg0) {
-  if (SavedMessageSortTypes /* SavedMessageSortTypes */.SavedMessageSortTypes.BOOKMARK === arg0) {
+  if (SavedMessageSortTypes.SavedMessageSortTypes.BOOKMARK === arg0) {
     return store.getMessageBookmarks();
   } else if (tmp(8192).SavedMessageSortTypes.REMINDER === arg0) {
     return store.getMessageReminders();

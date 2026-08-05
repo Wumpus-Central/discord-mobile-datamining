@@ -58,7 +58,7 @@ function NotificationWrapper(notification) {
   } else if (tmp.BUG_REPORTER === type) {
     const obj2 = { notification: null };
     obj2[0] = notification;
-    return callback(BugReporterNotification /* BugReporterNotification */.BugReporterNotification, obj2);
+    return callback(BugReporterNotification.BugReporterNotification, obj2);
   } else if (tmp.ALERT === type) {
     const obj3 = { notification: null };
     obj3[0] = notification;
@@ -94,7 +94,7 @@ function DetachedNotificationContent(notification) {
   if (notification.type === constants.MESSAGE) {
     const obj = { notification: null };
     obj[0] = notification;
-    tmp = callback(MessageNotificationDetachedContent /* MessageNotificationDetachedContent */.MessageNotificationDetachedContent, obj);
+    tmp = callback(MessageNotificationDetachedContent.MessageNotificationDetachedContent, obj);
   }
   return tmp;
 }

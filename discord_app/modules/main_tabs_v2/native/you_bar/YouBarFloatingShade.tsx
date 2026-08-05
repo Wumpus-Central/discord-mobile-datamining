@@ -20,7 +20,7 @@ let closure_10 = createCacheKey.createStyles({ container: { position: "absolute"
 let closure_11 = { code: "function YouBarFloatingShadeTsx1(){const{gradientHeight,drawerWidth}=this.__closure;return{height:gradientHeight,opacity:1,width:drawerWidth};}" };
 const memoResult = require("noop").memo(function YouBarFloatingShade() {
   const tmp = callback3();
-  let obj = useYouBarTotalHeight /* useYouBarTotalHeight */;
+  let obj = useYouBarTotalHeight;
   const youBarTotalHeight = obj.useYouBarTotalHeight();
   const sum = youBarTotalHeight + closure_5;
   require = sum;
@@ -38,11 +38,11 @@ const memoResult = require("noop").memo(function YouBarFloatingShade() {
   const animatedStyle = tmp2Result.useAnimatedStyle(fn);
   tmp2Result = tmp2(4096);
   const gradientValue = tmp2Result.useGradientValue(tmp2(4096).GradientPercentage.END);
-  const token = map /* map */.useToken(tmp6(712).colors.BACKGROUND_BASE_LOWER);
-  const tmp2Result1 = map /* map */;
+  const token = map.useToken(tmp6(712).colors.BACKGROUND_BASE_LOWER);
+  const tmp2Result1 = map;
   const items = [isSyncedModeThemesEnabled];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => gradientPreset.gradientPreset);
-  const tmp2Result2 = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
+  const tmp2Result2 = initialize;
   let token1 = null;
   if (null != stateFromStores) {
     token1 = tmp2Result3.useToken(tmp6(712).colors.MOBILE_FLOATINGBAR_BACKGROUND_SCRIM);
@@ -53,13 +53,13 @@ const memoResult = require("noop").memo(function YouBarFloatingShade() {
       token1 = gradientValue;
     }
   }
-  tmp2Result3 = map /* map */;
-  let str = int2hslRaw /* int2hslRaw */.hex2rgb(token1, 1);
+  tmp2Result3 = map;
+  let str = int2hslRaw.hex2rgb(token1, 1);
   if (str == null) {
     str = "transparent";
   }
-  const tmp2Result4 = int2hslRaw /* int2hslRaw */;
-  let str2 = int2hslRaw /* int2hslRaw */.hex2rgb(token1, 0);
+  const tmp2Result4 = int2hslRaw;
+  let str2 = int2hslRaw.hex2rgb(token1, 0);
   if (str2 == null) {
     str2 = "transparent";
   }

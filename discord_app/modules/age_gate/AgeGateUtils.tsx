@@ -18,9 +18,9 @@ import { openAgeGateModal } from "AgeGateModalActionCreators.tsx";
 let GuildNSFWContentLevel;
 let c9;
 function shouldShowAgeGateForVoiceChannel(channelId) {
-  const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
-  let tmp4 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+  const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
+  const obj = useAgeVerificationRunner;
+  let tmp4 = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
   if (tmp4) {
     const currentUser = authStore.getCurrentUser();
     let flag = false;
@@ -53,9 +53,9 @@ function isChannelContentGated(channel, arg1) {
     if (currentUser != null) {
       const nsfwAllowed = currentUser.nsfwAllowed;
     }
-    const obj = isFeatureAgeGated /* isFeatureAgeGated */;
-    const isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
-    let result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
+    const obj = isFeatureAgeGated;
+    const isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES);
+    let result = useAgeVerificationRunner.shouldShowTiggerPawtect();
     if (didAgreeResult) {
       didAgreeResult = false !== nsfwAllowed;
     }
@@ -174,14 +174,14 @@ export const guildNeedsAgeGate = function guildNeedsAgeGate(nsfwLevel) {
   return items.includes(nsfwLevel.nsfwLevel);
 };
 export const shouldAgeVerifyForAgeGate = function shouldAgeVerifyForAgeGate() {
-  const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-  const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
-  const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
-  return isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+  const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
+  const obj = useAgeVerificationRunner;
+  const obj2 = isFeatureAgeGated;
+  return isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
 };
 export const useShouldAgeVerifyForAgeGate = function useShouldAgeVerifyForAgeGate() {
-  let isFeatureAgeGated = isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
-  const obj = isFeatureAgeGated /* isFeatureAgeGated */;
+  let isFeatureAgeGated = isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES);
+  const obj = isFeatureAgeGated;
   if (isFeatureAgeGated) {
     isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
   }
@@ -189,11 +189,11 @@ export const useShouldAgeVerifyForAgeGate = function useShouldAgeVerifyForAgeGat
 };
 export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentForGuild(stateFromStores) {
   let NSFW_CHANNEL_AGE_VERIFY = dependencyMap;
-  let obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  let obj = useAgeVerificationRunner;
   const isAgeVerified = obj.useIsAgeVerified();
   const tmp3 = isGuildNSFW(stateFromStores);
   const items = [mergeGuildAvatar];
-  stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
+  stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {
@@ -201,9 +201,9 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
     }
     return false === nsfwAllowed;
   });
-  const obj2 = initialize /* initialize */;
-  const isFeatureAgeGated = isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
-  const obj3 = isFeatureAgeGated /* isFeatureAgeGated */;
+  const obj2 = initialize;
+  const isFeatureAgeGated = isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES);
+  const obj3 = isFeatureAgeGated;
   let shouldShowTiggerPawtect = isFeatureAgeGated;
   if (isFeatureAgeGated) {
     shouldShowTiggerPawtect = obj4.useShouldShowTiggerPawtect();
@@ -266,16 +266,16 @@ export const useAgeGateVerifyContentForGuild = function useAgeGateVerifyContentF
   }
 };
 export const useAgeGateVerifyContent = function useAgeGateVerifyContent(source) {
-  let obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  let obj = useAgeVerificationRunner;
   const isAgeVerified = obj.useIsAgeVerified();
-  let obj1 = isFeatureAgeGated /* isFeatureAgeGated */;
-  const isFeatureAgeGated = obj1.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES);
-  let obj2 = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  let obj1 = isFeatureAgeGated;
+  const isFeatureAgeGated = obj1.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES);
+  let obj2 = useAgeVerificationRunner;
   let shouldShowTiggerPawtect = isFeatureAgeGated;
   if (isFeatureAgeGated) {
     shouldShowTiggerPawtect = obj2.useShouldShowTiggerPawtect();
   }
-  initialize /* initialize */;
+  initialize;
   [][0] = mergeGuildAvatar;
   if (source !== AgeGateSource.JOIN_LARGE_GUILD_UNDERAGE) {
     if (source !== tmp6.ACCESS_LARGE_GUILD_UNDERAGE) {
@@ -387,23 +387,23 @@ export const shouldShowAgeGateForCurrentUser = function shouldShowAgeGateForCurr
   if (null == currentUser) {
     return false;
   } else {
-    const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-    const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
-    const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
-    const tmp5 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    return true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
+    const obj = useAgeVerificationRunner;
+    const obj2 = isFeatureAgeGated;
+    const tmp5 = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    return true !== currentUser.nsfwAllowed || isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
   }
 };
 export const shouldShowAgeGateForGuildContentLevel = function shouldShowAgeGateForGuildContentLevel(arg0) {
   const currentUser = authStore.getCurrentUser();
   let flag = false;
   if (null != currentUser) {
-    const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-    const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
-    const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
-    const tmp5 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
+    const obj = useAgeVerificationRunner;
+    const obj2 = isFeatureAgeGated;
+    const tmp5 = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
   }
   if (flag) {
     if (null != arg0) {
@@ -421,12 +421,12 @@ export const shouldShowAgeGateForChannelId = function shouldShowAgeGateForChanne
   const currentUser = authStore.getCurrentUser();
   let flag = false;
   if (null != currentUser) {
-    const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-    const obj = useAgeVerificationRunner /* useAgeVerificationRunner */;
-    const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
-    const tmp5 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
+    const obj = useAgeVerificationRunner;
+    const obj2 = isFeatureAgeGated;
+    const tmp5 = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
   }
   let tmp7 = !flag;
   if (flag) {
@@ -442,9 +442,9 @@ export { shouldShowAgeGateForVoiceChannel };
 export const maybeOpenAgeGateForVoiceChannel = function maybeOpenAgeGateForVoiceChannel(id) {
   let flag = shouldShowAgeGateForVoiceChannel(id);
   if (flag) {
-    openAgeGateModal /* openAgeGateModal */.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL);
+    openAgeGateModal.openAgeGateModal(AgeGateSource.NSFW_VOICE_CHANNEL);
     flag = true;
-    const obj = openAgeGateModal /* openAgeGateModal */;
+    const obj = openAgeGateModal;
   }
   return flag;
 };
@@ -452,12 +452,12 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
   const currentUser = authStore.getCurrentUser();
   let flag = false;
   if (null != currentUser) {
-    const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-    const obj2 = useAgeVerificationRunner /* useAgeVerificationRunner */;
-    const obj3 = isFeatureAgeGated /* isFeatureAgeGated */;
-    const tmp5 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
-    const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
+    const obj2 = useAgeVerificationRunner;
+    const obj3 = isFeatureAgeGated;
+    const tmp5 = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    flag = true !== currentUser.nsfwAllowed || isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
+    const tmp6 = true !== currentUser.nsfwAllowed || isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result;
   }
   let flag3 = false;
   if (flag) {
@@ -476,8 +476,8 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
     if (null == NSFW_SERVER) {
       NSFW_SERVER = AgeGateSource.NSFW_SERVER;
     }
-    openAgeGateModal /* openAgeGateModal */.openAgeGateModal(NSFW_SERVER);
-    const obj7 = openAgeGateModal /* openAgeGateModal */;
+    openAgeGateModal.openAgeGateModal(NSFW_SERVER);
+    const obj7 = openAgeGateModal;
   } else {
     const currentUser1 = obj.getCurrentUser();
     let tmp13 = null != currentUser1 && null == currentUser1.nsfwAllowed;
@@ -485,12 +485,12 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
       const currentUser2 = obj.getCurrentUser();
       let flag4 = false;
       if (null != currentUser2) {
-        const result1 = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-        const obj4 = useAgeVerificationRunner /* useAgeVerificationRunner */;
-        const obj5 = isFeatureAgeGated /* isFeatureAgeGated */;
-        const tmp18 = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result1;
-        flag4 = true !== currentUser2.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result1;
-        const tmp19 = true !== currentUser2.nsfwAllowed || isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.AGE_GATED_SPACES) && result1;
+        const result1 = useAgeVerificationRunner.shouldShowTiggerPawtect();
+        const obj4 = useAgeVerificationRunner;
+        const obj5 = isFeatureAgeGated;
+        const tmp18 = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1;
+        flag4 = true !== currentUser2.nsfwAllowed || isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1;
+        const tmp19 = true !== currentUser2.nsfwAllowed || isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.AGE_GATED_SPACES) && result1;
       }
       let tmp21 = !flag4;
       if (flag4) {
@@ -507,8 +507,8 @@ export const maybeShowAgeGate = function maybeShowAgeGate(guildId, channelId, JO
       if (NSFW_SERVER == null) {
         NSFW_CHANNEL = AgeGateSource.NSFW_CHANNEL;
       }
-      openAgeGateModal /* openAgeGateModal */.openAgeGateModal(NSFW_CHANNEL);
-      const obj6 = openAgeGateModal /* openAgeGateModal */;
+      openAgeGateModal.openAgeGateModal(NSFW_CHANNEL);
+      const obj6 = openAgeGateModal;
     }
   }
 };
@@ -528,7 +528,7 @@ export const isChannelAgeVerificationGated = function isChannelAgeVerificationGa
     return false;
   } else {
     let tmp4 = null != isNSFW;
-    const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
+    const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
     if (tmp4) {
       let isNSFWResult = isNSFW.isNSFW();
       if (!isNSFWResult) {
@@ -579,16 +579,16 @@ export const isCurrentUserMissingDateOfBirth = function isCurrentUserMissingDate
   return null != currentUser && null == currentUser.nsfwAllowed;
 };
 export const shouldAgeVerifyForSettingsToggles = function shouldAgeVerifyForSettingsToggles() {
-  let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
-  const obj = isFeatureAgeGated /* isFeatureAgeGated */;
+  let isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE);
+  const obj = isFeatureAgeGated;
   if (isFeatureAgeGatedResult) {
     isFeatureAgeGatedResult = obj2.shouldShowTiggerPawtect();
   }
   return isFeatureAgeGatedResult;
 };
 export const useShouldAgeVerifyForSettingsToggles = function useShouldAgeVerifyForSettingsToggles() {
-  let isFeatureAgeGated = isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.COMMANDS_TOGGLE);
-  const obj = isFeatureAgeGated /* isFeatureAgeGated */;
+  let isFeatureAgeGated = isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.COMMANDS_TOGGLE);
+  const obj = isFeatureAgeGated;
   if (isFeatureAgeGated) {
     isFeatureAgeGated = obj2.useShouldShowTiggerPawtect();
   }

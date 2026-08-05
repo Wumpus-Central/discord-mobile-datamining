@@ -10,8 +10,8 @@ import { useSyncedModeThemeName } from "useSyncedModeThemeName.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.NoFvjZ);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.NoFvjZ);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
@@ -23,14 +23,14 @@ createToggle = {
     return stateFromStores;
   },
   useTrailing() {
-    return useSyncedModeThemeName /* useSyncedModeThemeName */.useSyncedModeThemeName(SystemTheme.LIGHT);
+    return useSyncedModeThemeName.useSyncedModeThemeName(SystemTheme.LIGHT);
   },
   screen: createToggle
 };
 createToggle = {
   route: require("ME").UserSettingsSections.APPEARANCE_LIGHT_MODE_THEME_PICKER,
   getComponent() {
-    return SettingsAppearanceLightModeThemePickerScreen /* SettingsAppearanceLightModeThemePickerScreen */.default;
+    return SettingsAppearanceLightModeThemePickerScreen.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

@@ -259,9 +259,9 @@ export default function InAppReportModal(arg0) {
       let obj = { screens: null, initialRouteStack: null, headerBackTitle: null };
       obj[0] = screens;
       obj[1] = initialStack;
-      let intl = getSystemLocale /* getSystemLocale */.intl;
-      obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
-      tmp9 = jsx(NavigationStack /* NavigationStack */.Navigator, { screens: null, initialRouteStack: null, headerBackTitle: null });
+      let intl = getSystemLocale.intl;
+      obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
+      tmp9 = jsx(NavigationStack.Navigator, { screens: null, initialRouteStack: null, headerBackTitle: null });
     }
   }
   return tmp9;

@@ -160,7 +160,7 @@ export default function FamilyCenterActivityRow(action) {
   let skuId;
   let subscriptionPlanId;
   action = action.action;
-  let obj = getEmptyActivityFormatter /* getEmptyActivityFormatter */;
+  let obj = getEmptyActivityFormatter;
   if (!obj.isUserAction(action)) {
     let tmpResult = tmp(6961);
     if (!tmpResult.isGuildAction(action)) {
@@ -216,5 +216,5 @@ export default function FamilyCenterActivityRow(action) {
     }
     tmpResult3 = tmp(6961);
   }
-  tmpResult2 = getEmptyActivityFormatter /* getEmptyActivityFormatter */;
+  tmpResult2 = getEmptyActivityFormatter;
 };

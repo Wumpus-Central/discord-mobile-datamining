@@ -721,7 +721,7 @@ export const addImagesFromPicker = function addImagesFromPicker(id, items, IMAGE
 };
 export const addAttachmentForCommand = function addAttachmentForCommand(channelId, onSelectFiles, result1, outer1_1, IMAGE_PICKER) {
   const option = outer1_1.option;
-  let obj = openImagePickerUnhandled /* openImagePickerUnhandled */;
+  let obj = openImagePickerUnhandled;
   const filename = obj.getFileFromUploadItem(result1).filename;
   if (outer1_1.target === constants.COMMAND) {
     const current = onSelectFiles.current;
@@ -935,7 +935,7 @@ export const handleViewAllDialog = function handleViewAllDialog(arg0) {
       }
     });
   }
-  obj = set /* set */;
+  obj = set;
   const tmp = require;
   resolved = NativePermissionsRequestOptions.requestPermission(NativePermissionTypes.PHOTOS);
 };
@@ -1011,10 +1011,10 @@ export const handleSelectThread = function handleSelectThread(channel, chatInput
       const current2 = chatInput.current;
       current2.blur();
     }
-    obj3 = set /* set */;
+    obj3 = set;
     const tmp6 = require;
-    const result = navigateToThreadCreation /* navigateToThreadCreation */.navigateToThreadCreation(channel, "Plus Button");
-    const tmp6Result = navigateToThreadCreation /* navigateToThreadCreation */;
+    const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Plus Button");
+    const tmp6Result = navigateToThreadCreation;
   }
 };
 export { handleAttachFile };
@@ -1024,7 +1024,7 @@ export const mediaNodeToUploadItem = function mediaNodeToUploadItem(item) {
   if (uri == null) {
     uri = image.uri;
   }
-  let obj = { id: uri, origin: cancel /* cancel */.UploadOrigin.IMAGE_PICKER, uri: image.uri, originalUri: image.uri, mimeType: image.mimeType, width: image.width, height: image.height, filename: image.filename, playableDuration: image.playableDuration, platform: cancel /* cancel */.UploadPlatform.REACT_NATIVE };
+  let obj = { id: uri, origin: cancel.UploadOrigin.IMAGE_PICKER, uri: image.uri, originalUri: image.uri, mimeType: image.mimeType, width: image.width, height: image.height, filename: image.filename, playableDuration: image.playableDuration, platform: cancel.UploadPlatform.REACT_NATIVE };
   let tmp = null != arg1;
   if (tmp) {
     obj = { createdUsingInAppCamera: null };
@@ -1052,7 +1052,7 @@ export const cropResultToUploadItem = function cropResultToUploadItem(path) {
   obj[2] = combined;
   ({ mime: obj[3], width: obj[4], height: obj[5] } = path);
   obj[6] = arr;
-  obj[7] = cancel /* cancel */.UploadPlatform.REACT_NATIVE;
+  obj[7] = cancel.UploadPlatform.REACT_NATIVE;
   return obj;
 };
 export { handleSelectKeyboardItem };

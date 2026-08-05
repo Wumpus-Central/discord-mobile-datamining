@@ -11,8 +11,8 @@ import { _fetchWebAuthnConditionalChallenge } from "../../../webauthn/WebAuthnAc
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.y7SXYX);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.y7SXYX);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   usePreNavigationAction: function useAccountCanUseWebAuthnView() {
@@ -39,11 +39,11 @@ createToggle = {
   },
   useTrailing: function useAccountSecurityKeysSettingTrailing() {
     if (!hasFetchedCredentials.hasFetchedCredentials()) {
-      const webAuthnCredentials = _fetchWebAuthnConditionalChallenge /* _fetchWebAuthnConditionalChallenge */.fetchWebAuthnCredentials();
-      let obj = _fetchWebAuthnConditionalChallenge /* _fetchWebAuthnConditionalChallenge */;
+      const webAuthnCredentials = _fetchWebAuthnConditionalChallenge.fetchWebAuthnCredentials();
+      let obj = _fetchWebAuthnConditionalChallenge;
     }
     const items = [hasFetchedCredentials];
-    return initialize /* initialize */.useStateFromStores(items, () => {
+    return initialize.useStateFromStores(items, () => {
       const intl = callback(1236).intl;
       const obj = { count: null };
       obj[0] = credentials.getCredentials().length;
@@ -56,7 +56,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.WEBAUTHN_VIEW,
   getComponent() {
-    return UserSettingsWebAuthn /* UserSettingsWebAuthn */.default;
+    return UserSettingsWebAuthn.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

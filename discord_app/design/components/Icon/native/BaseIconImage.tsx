@@ -19,7 +19,7 @@ export const BaseIconImage = function BaseIconImage(source) {
   }
   const color = source.color;
   ({ resizeMode, style, accessible, accessibilityLabel } = source);
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(color);
   if (null != token) {
     obj = { tintColor: null };

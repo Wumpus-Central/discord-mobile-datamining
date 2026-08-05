@@ -19,7 +19,7 @@ export const getConstants = function getConstants() {
     const InfoDictionaryManager = NativeModules.InfoDictionaryManager;
     return InfoDictionaryManager.getConstants();
   }
-  obj = set /* set */;
+  obj = set;
 };
 export const getBuildNumberLabel = function getBuildNumberLabel() {
   const items = ["0", "123456", "1234567890"];

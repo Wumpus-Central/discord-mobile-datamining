@@ -8,8 +8,8 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["ms+Tme"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["ms+Tme"]);
   },
   parent: require("MobileSetting").MobileSetting.CONNECTED_GAMES,
   useOptions: function useInGameDMsSettingOptions() {
@@ -30,20 +30,20 @@ createToggle = {
     }, []);
   },
   useValue: function useInGameDMsSettingValue() {
-    const SlayerSDKReceiveDMsInGame = explicitContentFromProto /* explicitContentFromProto */.SlayerSDKReceiveDMsInGame;
+    const SlayerSDKReceiveDMsInGame = explicitContentFromProto.SlayerSDKReceiveDMsInGame;
     let SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL = SlayerSDKReceiveDMsInGame.useSetting();
-    if (SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL === create /* create */.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET) {
-      SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL = create /* create */.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL;
+    if (SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL === create.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET) {
+      SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL = create.SlayerSDKReceiveInGameDMs.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL;
     }
     return SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL;
   },
   onValueChange: function onInGameDMsSettingValueChange(arg0) {
-    const SlayerSDKReceiveDMsInGame = explicitContentFromProto /* explicitContentFromProto */.SlayerSDKReceiveDMsInGame;
+    const SlayerSDKReceiveDMsInGame = explicitContentFromProto.SlayerSDKReceiveDMsInGame;
     SlayerSDKReceiveDMsInGame.updateSetting(Number(arg0));
   },
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.XpBObB)];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t.XpBObB)];
     return items;
   }
 };

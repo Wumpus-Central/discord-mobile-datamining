@@ -31,7 +31,7 @@ function renderCard(kind, fullWidth) {
     }
   }
   obj = { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant };
-  return jsx(HappeningNowCardPlaceholder /* HappeningNowCardPlaceholder */.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
+  return jsx(HappeningNowCardPlaceholder.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
 }
 function keyExtractor(voiceState) {
   let kind;
@@ -60,7 +60,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj = { ref };
   const merged = Object.assign(arg0);
   obj[1] = <closure_5 ref={arg1} />;
-  return jsx(Directions /* Directions */.GestureDetector, { ref });
+  return jsx(Directions.GestureDetector, { ref });
 });
 forwardRefResult.displayName = "HappeningNowScrollView";
 const NativeResult = Gesture.Native();

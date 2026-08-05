@@ -7,7 +7,7 @@ export const RegistrationTransitionActionTypes = { VIEWED: "viewed", SUBMITTED: 
 export const RegistrationSteps = { IDENTITY: "identity", DISPLAY_NAME: "display_name", ACCOUNT_INFORMATION: "account_information", FULL: "full", AGE_GATE: "age_gate", INVITE: "invite", SMS_VERIFY: "sms_verify" };
 export const RegisterTransitionSteps = obj;
 export const authStateToRegisterTransitionStep = function authStateToRegisterTransitionStep(arg0) {
-  if (keys /* keys */.AuthStates.REGISTER_IDENTITY === arg0) {
+  if (keys.AuthStates.REGISTER_IDENTITY === arg0) {
     return obj.ACCOUNT_IDENTITY;
   } else if (tmp(691).AuthStates.REGISTER_DISPLAY_NAME === arg0) {
     return obj.ACCOUNT_DISPLAY_NAME;

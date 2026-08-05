@@ -312,10 +312,10 @@ prototype["_getEmbeddedActivities"] = function _getEmbeddedActivities() {
   if (null != selfEmbeddedActivityForChannel) {
     const items = [];
     items[HermesBuiltin.arraySpread(embeddedActivitiesForChannelIncludingHidden, 0)] = selfEmbeddedActivityForChannel;
-    uniqByResult = apply /* apply */.uniqBy(items, (compositeInstanceId) => compositeInstanceId.compositeInstanceId);
-    const obj = apply /* apply */;
+    uniqByResult = apply.uniqBy(items, (compositeInstanceId) => compositeInstanceId.compositeInstanceId);
+    const obj = apply;
   }
-  const ContentClassificationEmbeddedActivityFilterExperiment = apexExperiment /* apexExperiment */.ContentClassificationEmbeddedActivityFilterExperiment;
+  const ContentClassificationEmbeddedActivityFilterExperiment = apexExperiment.ContentClassificationEmbeddedActivityFilterExperiment;
   const currentUser = authStore2.getCurrentUser();
   let nsfwAllowed;
   if (currentUser != null) {
@@ -404,7 +404,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       obj.id = user.id;
       obj.voiceState = voiceStateForChannel;
       obj.voicePlatform = voicePlatformForChannel;
-      let obj1 = useIsSpeaking /* useIsSpeaking */;
+      let obj1 = useIsSpeaking;
       obj = { userId: null, checkIsMuted: true };
       obj[0] = userId;
       obj.speaking = obj1.getIsSpeaking(obj);
@@ -418,12 +418,12 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       obj.userNick = getNickname.getName(guildId, self.channelId, user);
       const obj4 = getNickname;
       const tmp8 = require;
-      obj.userAvatarDecoration = useAvatarDecoration /* useAvatarDecoration */.getAvatarDecoration(user, guildId);
+      obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, guildId);
       obj.localVideoDisabled = localVideoDisabled.isLocalVideoDisabled(user.id);
       const poppedOutParticipants = self.poppedOutParticipants;
       obj.isPoppedOut = poppedOutParticipants.has(user.id);
       items.push(obj);
-      const tmp8Result = useAvatarDecoration /* useAvatarDecoration */;
+      const tmp8Result = useAvatarDecoration;
     }
     let streamForUser = authStore.getStreamForUser(userId, guildId);
     if (streamForUser == null) {
@@ -431,9 +431,9 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
     }
     if (null != streamForUser) {
       if (streamForUser.channelId === self.channelId) {
-        const encodeStreamKeyResult = isStreamKey /* isStreamKey */.encodeStreamKey(streamForUser);
+        const encodeStreamKeyResult = isStreamKey.encodeStreamKey(streamForUser);
         const participant = self.getParticipant(encodeStreamKeyResult);
-        const obj12 = isStreamKey /* isStreamKey */;
+        const obj12 = isStreamKey;
         let type;
         if (participant != null) {
           type = participant.type;

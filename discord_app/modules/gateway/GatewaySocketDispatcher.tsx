@@ -331,26 +331,26 @@ prototype["dispatchOne"] = function dispatchOne(arg0) {
   if (this.socket.connectionState !== CLOSED.RESUMING) {
     tmp2(12822).flush(type, data);
     if ("READY" === type) {
-      const readyPayloadByteSizeAnalytics = prettyPrintTrace_ /* prettyPrintTrace_ */.getReadyPayloadByteSizeAnalytics(data);
+      const readyPayloadByteSizeAnalytics = prettyPrintTrace_.getReadyPayloadByteSizeAnalytics(data);
       const dispatchHandler = self.getDispatchHandler(type);
       if (dispatchHandler != null) {
         dispatchHandler.dispatch(data, type, preloadedData);
       }
-      const tmp11Result = prettyPrintTrace_ /* prettyPrintTrace_ */;
+      const tmp11Result = prettyPrintTrace_;
       const result = tmp11Result.logReadyPayloadReceived(self.socket, data, nowResult, compressionAnalytics, readyPayloadByteSizeAnalytics);
-      const obj6 = prettyPrintTrace_ /* prettyPrintTrace_ */;
+      const obj6 = prettyPrintTrace_;
       const tmp11 = require;
     } else if ("RESUMED" === type) {
       const dispatchHandler1 = self.getDispatchHandler(type);
       if (dispatchHandler1 != null) {
         dispatchHandler1.dispatch(data, type, preloadedData);
       }
-      prettyPrintTrace_ /* prettyPrintTrace_ */.logResumeAnalytics(self.resumeAnalytics);
+      prettyPrintTrace_.logResumeAnalytics(self.resumeAnalytics);
       const socket = self.socket;
       const result1 = socket.handleResumeDispatched();
-      const obj4 = prettyPrintTrace_ /* prettyPrintTrace_ */;
-      self.resumeAnalytics = prettyPrintTrace_ /* prettyPrintTrace_ */.createResumeAnalytics();
-      const obj5 = prettyPrintTrace_ /* prettyPrintTrace_ */;
+      const obj4 = prettyPrintTrace_;
+      self.resumeAnalytics = prettyPrintTrace_.createResumeAnalytics();
+      const obj5 = prettyPrintTrace_;
     } else {
       const dispatchHandler2 = self.getDispatchHandler(type);
       if (dispatchHandler2 != null) {

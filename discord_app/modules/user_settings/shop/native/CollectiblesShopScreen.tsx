@@ -11,12 +11,12 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("modules/user_settings/shop/native/CollectiblesShopScreen.tsx");
 
 export default function CollectiblesShopScreen() {
-  let obj = useSettingNavigationRoute /* useSettingNavigationRoute */;
+  let obj = useSettingNavigationRoute;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
-  const shopOrientationLock = useShopOrientationLock /* useShopOrientationLock */.useShopOrientationLock();
-  const obj2 = useShopOrientationLock /* useShopOrientationLock */;
+  const shopOrientationLock = useShopOrientationLock.useShopOrientationLock();
+  const obj2 = useShopOrientationLock;
   const tmp = require;
-  const giftCardMobileConsumptionHalfsheet = useGiftCardMobileConsumptionHalfsheet /* useGiftCardMobileConsumptionHalfsheet */.useGiftCardMobileConsumptionHalfsheet();
+  const giftCardMobileConsumptionHalfsheet = useGiftCardMobileConsumptionHalfsheet.useGiftCardMobileConsumptionHalfsheet();
   const params = settingNavigationRoute.params;
   let screen;
   if (params != null) {

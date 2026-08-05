@@ -8,7 +8,7 @@ const result = require("set").fileFinishedImporting("modules/icymi/useICYMITabBa
 export default function useICYMITabBadge() {
   const obj = { value: 0, showDot: null };
   const items = [filterStaffGuild];
-  obj[1] = initialize /* initialize */.useStateFromStores(items, () => filterStaffGuild.hasNewContent(), []);
+  obj[1] = initialize.useStateFromStores(items, () => filterStaffGuild.hasNewContent(), []);
   return obj;
 };
 export const icymiTabBadgeShown = function icymiTabBadgeShown() {

@@ -170,7 +170,7 @@ class VoiceEngineStreamingManager extends tmp6 {
 }
 const prototype = VoiceEngineStreamingManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const voiceEngine = inject /* inject */.getVoiceEngine();
+  const voiceEngine = inject.getVoiceEngine();
   let result = voiceEngine.setBroadcastRequestCallback(() => {
     logger.log("Broadcast Requested");
     callback2(38)(null != voiceEngine, "Voice Engine should be initialized in callback");
@@ -230,12 +230,12 @@ prototype["_initialize"] = function _initialize() {
     obj[0] = intl.string(callback(1236).t.iYQlwv);
     const result = obj.presentLocalNotification(obj);
   });
-  let obj = inject /* inject */;
+  let obj = inject;
   // GetOwnPrivateBySym (0x65)
   const subscription = dispatcher.subscribe("VOICE_CHANNEL_SELECT", importDefault);
 };
 prototype["_terminate"] = function _terminate() {
-  const voiceEngine = inject /* inject */.getVoiceEngine();
+  const voiceEngine = inject.getVoiceEngine();
   if (null != voiceEngine) {
     const result = voiceEngine.setBroadcastRequestCallback(closure_10);
     const result1 = voiceEngine.setBroadcastFinishedCallback(closure_10);
@@ -244,7 +244,7 @@ prototype["_terminate"] = function _terminate() {
   }
   timeout.stop();
   timeout1.stop();
-  const obj = inject /* inject */;
+  const obj = inject;
   // GetOwnPrivateBySym (0x65)
   dispatcher.unsubscribe("VOICE_CHANNEL_SELECT", this);
 };

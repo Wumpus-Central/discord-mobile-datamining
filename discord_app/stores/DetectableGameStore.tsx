@@ -52,7 +52,7 @@ function addGameIdToNameCache(id, item10026) {
 function addDetectableGame(id) {
   let name;
   let tmp = id;
-  if (id instanceof GameTheme /* GameTheme */.DetectableGameRecord) {
+  if (id instanceof GameTheme.DetectableGameRecord) {
     tmp = convertGameRecordToGame(id);
     const tmp2 = convertGameRecordToGame;
   }
@@ -140,7 +140,7 @@ prototype["initialize"] = function initialize(detectableGamesEtag) {
   }
 };
 prototype["getState"] = function getState() {
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isDesktop()) {
     obj = { detectableGamesEtag: null, detectableGames: null, blocklistEtag: null, blocklistExecutables: null, blocklistPatterns: null };
     obj[0] = c12;
@@ -553,7 +553,7 @@ prototype["shouldReport"] = function shouldReport(name) {
     if (tmp3) {
       tmp3 = null != obj[name.name];
     }
-    const ShowCurrentGame = explicitContentFromProto /* explicitContentFromProto */.ShowCurrentGame;
+    const ShowCurrentGame = explicitContentFromProto.ShowCurrentGame;
     let setting = ShowCurrentGame.getSetting();
     if (setting) {
       setting = !c13;
@@ -569,7 +569,7 @@ prototype["shouldReport"] = function shouldReport(name) {
 };
 prototype["markGameReported"] = function markGameReported(arg0) {
   obj[arg0] = true;
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set(GameStoreReportedGames, obj);
 };
 DetectableGameStore.displayName = "GameStore";
@@ -605,7 +605,7 @@ let items = [
   },
   (arg0) => {
     let tmp = arg0;
-    let obj = set /* set */;
+    let obj = set;
     if (!obj.isDesktop()) {
       obj = { detectableGamesEtag: "", detectableGames: null };
       obj[1] = [];

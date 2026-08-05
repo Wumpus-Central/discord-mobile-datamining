@@ -30,9 +30,9 @@ function getAnalyticsConfig(type) {
     return obj3;
   } else if (tmp.VOICE_INVITE_EMBED === type) {
     const obj5 = { event: null, properties: null };
-    obj5[0] = encodeProperties /* encodeProperties */.ImpressionNames.VOICE_INVITE_EMBED;
+    obj5[0] = encodeProperties.ImpressionNames.VOICE_INVITE_EMBED;
     const obj6 = { impression_type: null, invite_code: null, invite_guild_id: null, invite_channel_id: null, invite_instance_id: null, has_active_stream: null, location_stack: null };
-    obj6[0] = encodeProperties /* encodeProperties */.ImpressionTypes.VIEW;
+    obj6[0] = encodeProperties.ImpressionTypes.VIEW;
     ({ inviteCode: obj3[1], inviteGuildId: obj3[2], inviteChannelId: obj3[3], inviteInstanceId: obj3[4], hasActiveStream: obj3[5], treatmentRendered } = type);
     const INVITE_EMBED = QUICK_SWITCHER.INVITE_EMBED;
     if (treatmentRendered) {
@@ -45,7 +45,7 @@ function getAnalyticsConfig(type) {
     obj5[1] = obj6;
     return obj5;
   } else {
-    obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+    obj = isDiscordFrontendDevelopment;
     return obj.assertNever(type);
   }
 }

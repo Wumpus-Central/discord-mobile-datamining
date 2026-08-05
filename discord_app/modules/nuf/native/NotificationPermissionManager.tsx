@@ -878,8 +878,8 @@ prototype["handleMessageCreateForNudge"] = function handleMessageCreateForNudge(
               isMutedResult = closure_8.isChannelMuted(guildId, channel.id);
             }
             if (!isMutedResult) {
-              const result = getOrRefreshPushSyncToken /* getOrRefreshPushSyncToken */.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.CHANNEL_BANNER);
-              const obj = getOrRefreshPushSyncToken /* getOrRefreshPushSyncToken */;
+              const result = getOrRefreshPushSyncToken.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.CHANNEL_BANNER);
+              const obj = getOrRefreshPushSyncToken;
             }
           }
         }
@@ -899,8 +899,8 @@ prototype["handleReactionAddForNudge"] = function handleReactionAddForNudge(opti
           isMutedResult = closure_8.isChannelMuted(guildId, channel.id);
         }
         if (!isMutedResult) {
-          const result = getOrRefreshPushSyncToken /* getOrRefreshPushSyncToken */.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.POST_REACTION_BANNER);
-          const obj = getOrRefreshPushSyncToken /* getOrRefreshPushSyncToken */;
+          const result = getOrRefreshPushSyncToken.setPushNotificationPermissionEligibleForPrompt(PermissionPromptType.POST_REACTION_BANNER);
+          const obj = getOrRefreshPushSyncToken;
         }
       }
     }

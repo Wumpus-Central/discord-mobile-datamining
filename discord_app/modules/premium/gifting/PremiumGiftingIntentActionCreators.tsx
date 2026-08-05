@@ -61,12 +61,12 @@ export const logMessageGiftIntentShown = function logMessageGiftIntentShown(reci
   }
   obj[2] = dmProbability;
   obj2.track(constants.GIFT_INTENT_DISMISSED, obj);
-  let result = apexExperiment /* apexExperiment */.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
+  let result = apexExperiment.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
   if (result) {
     result = FRIEND_ANNIVERSARY !== GiftIntentType.UNSPECIFIED;
   }
   if (result) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
     obj1[0] = constants2.GIFT_INTENTS_DISMISS;
     obj2 = { intent_type: null, target_id: null };
@@ -98,7 +98,7 @@ export const logGiftIntentMessageDismissed = function logGiftIntentMessageDismis
     }
     obj[2] = dmProbability;
     expandEventProperties.track(constants.GIFT_INTENT_DISMISSED, obj);
-    obj = apexExperiment /* apexExperiment */;
+    obj = apexExperiment;
     let result = obj.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
     if (result) {
       result = giftIntentType !== GiftIntentType.UNSPECIFIED;
@@ -137,12 +137,12 @@ export const logGiftIntentFlowPurchasedGift = function logGiftIntentFlowPurchase
   }
   obj[2] = dmProbability;
   obj2.track(constants.GIFT_INTENT_DISMISSED, obj);
-  let result = apexExperiment /* apexExperiment */.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
+  let result = apexExperiment.isFriendshipAnniversaryBackendPersistenceEnabled("dismissGiftIntent");
   if (result) {
     result = FRIEND_ANNIVERSARY !== GiftIntentType.UNSPECIFIED;
   }
   if (result) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
     obj1[0] = constants2.GIFT_INTENTS_DISMISS;
     obj2 = { intent_type: null, target_id: null };

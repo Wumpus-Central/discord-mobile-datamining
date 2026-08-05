@@ -68,7 +68,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
   first = tmp[0];
   closure_9 = tmp[1];
   const tmp3 = createCacheKey();
-  let obj = useAnimationDelayedAutoFocus /* useAnimationDelayedAutoFocus */;
+  let obj = useAnimationDelayedAutoFocus;
   const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, onPress);
   obj = { onPress, style: null, children: null };
   const items = [tmp3.container, , ];
@@ -84,6 +84,6 @@ export default function AppLauncherAutocompleteOption(arg0) {
     str = first.displayName;
   }
   obj[2] = str;
-  obj[2] = jsx(Text /* Text */.Text, { variant: "text-md/normal", style: tmp3.inputText, children: null });
-  return jsx(PressableBase /* PressableBase */.PressableOpacity, { variant: "text-md/normal", style: tmp3.inputText, children: null });
+  obj[2] = jsx(Text.Text, { variant: "text-md/normal", style: tmp3.inputText, children: null });
+  return jsx(PressableBase.PressableOpacity, { variant: "text-md/normal", style: tmp3.inputText, children: null });
 };

@@ -14,14 +14,14 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
     }
     let obj = onConfirm(4624);
     obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.pvRCSu);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.DRi46S);
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["6GQDFu"]);
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.DmDzZB);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.pvRCSu);
+    const intl2 = getSystemLocale.intl;
+    obj[1] = intl2.string(getSystemLocale.t.DRi46S);
+    const intl3 = getSystemLocale.intl;
+    obj[2] = intl3.string(getSystemLocale.t["6GQDFu"]);
+    const intl4 = getSystemLocale.intl;
+    obj[3] = intl4.string(getSystemLocale.t.DmDzZB);
     obj[4] = function onConfirm() {
       callback();
       onConfirm();
@@ -41,14 +41,14 @@ export const showDiscardChangesAlert = function showDiscardChangesAlert(arg0) {
   ({ onConfirm, onCancel } = arg0);
   let obj = AlertActionCreators;
   obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.pvRCSu);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.DRi46S);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t["6GQDFu"]);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.DmDzZB);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.pvRCSu);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.DRi46S);
+  const intl3 = getSystemLocale.intl;
+  obj[2] = intl3.string(getSystemLocale.t["6GQDFu"]);
+  const intl4 = getSystemLocale.intl;
+  obj[3] = intl4.string(getSystemLocale.t.DmDzZB);
   obj[4] = onConfirm;
   obj[5] = onCancel;
   return obj.show(obj);

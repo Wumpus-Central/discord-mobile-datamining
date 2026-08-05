@@ -107,7 +107,7 @@ export const getFirstRouteFor = function getFirstRouteFor(getSections) {
       return constants.MEMBER_SAFETY;
     }
   }
-  let SECTION_INDEX_UNCATEGORIZED_CHANNELS = computeSubtitle /* computeSubtitle */.SECTION_INDEX_UNCATEGORIZED_CHANNELS;
+  let SECTION_INDEX_UNCATEGORIZED_CHANNELS = computeSubtitle.SECTION_INDEX_UNCATEGORIZED_CHANNELS;
   if (SECTION_INDEX_UNCATEGORIZED_CHANNELS < getSections.voiceChannelsSectionNumber) {
     while (true) {
       let tmp6 = SECTION_INDEX_UNCATEGORIZED_CHANNELS;
@@ -132,10 +132,10 @@ export const clearRecentChannels = function clearRecentChannels(closure_0, closu
   if (arg2 === undefined) {
     tmp = null;
   }
-  _bulkClearRecents /* _bulkClearRecents */.bulkClearRecents(closure_0, closure_1);
-  const obj = _bulkClearRecents /* _bulkClearRecents */;
+  _bulkClearRecents.bulkClearRecents(closure_0, closure_1);
+  const obj = _bulkClearRecents;
   const tmp2 = require;
-  ack /* ack */.bulkAck(closure_1.map((channelId) => ({ channelId, readStateType: constants.CHANNEL, messageId: generateOldThreadCutoff.lastMessageId(channelId) })));
+  ack.bulkAck(closure_1.map((channelId) => ({ channelId, readStateType: constants.CHANNEL, messageId: generateOldThreadCutoff.lastMessageId(channelId) })));
   if (null != tmp) {
     tmp2(1222).transitionTo(closure_9.CHANNEL(closure_0, tmp));
     const tmp2Result = tmp2(1222);
@@ -221,7 +221,7 @@ export const useChannelBrowserChannelCount = function useChannelBrowserChannelCo
   }
 };
 export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   let obj = DISCORD_EPOCH;
   let lastMessageIdResult = generateOldThreadCutoff.lastMessageId(id);
   if (lastMessageIdResult == null) {
@@ -230,5 +230,5 @@ export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
   obj = { timeAgo: null };
   const tmp = t;
   obj[0] = t(obj.extractTimestamp(lastMessageIdResult)).fromNow();
-  return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["8N0BHR"], obj);
+  return intl.formatToPlainString(getSystemLocale.t["8N0BHR"], obj);
 };

@@ -51,7 +51,7 @@ function ExplicitMediaFalsePositivePreviewAttachment(attachment) {
 function ExplicitMediaFalsePositivePreview(url) {
   url = url.url;
   const tmp = createCacheKey();
-  let obj = openImagePickerUnhandled /* openImagePickerUnhandled */;
+  let obj = openImagePickerUnhandled;
   obj = { style: items, children: null };
   items = [, ];
   ({ mediaContainer: arr[0], elevationShadow: arr[1] } = tmp);
@@ -97,14 +97,14 @@ let result = require("jsxProd").fileFinishedImporting("modules/explicit_media_re
 export const handleSuccess = function handleSuccess(arg0) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj.hideActionSheet(arg0);
-  obj = { key: "explicit_media_report_false_positive_success", icon: registerAsset, IconComponent: ShieldIcon /* ShieldIcon */.ShieldIcon, iconColor: "text-brand", content: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.gFsTKu);
+  obj = { key: "explicit_media_report_false_positive_success", icon: registerAsset, IconComponent: ShieldIcon.ShieldIcon, iconColor: "text-brand", content: null };
+  const intl = getSystemLocale.intl;
+  obj[4] = intl.string(getSystemLocale.t.gFsTKu);
   dispatcher.open(obj);
 };
 export const handleError = function handleError() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  presentAddedFriendToast /* presentAddedFriendToast */.presentError(intl.string(getSystemLocale /* getSystemLocale */.t.R0RpRX));
+  const intl = getSystemLocale.intl;
+  presentAddedFriendToast.presentError(intl.string(getSystemLocale.t.R0RpRX));
 };
 export const ExplicitMediaFalsePositiveActionSheet = function ExplicitMediaFalsePositiveActionSheet(channelId) {
   let attachmentPreview;

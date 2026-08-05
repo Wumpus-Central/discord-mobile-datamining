@@ -2038,8 +2038,8 @@ defineSimpleDispatch(["ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_D
 });
 defineSimpleDispatch(["USER_PAYMENT_SOURCES_UPDATE"], () => {
   if (obj.isUserSettingsOpen()) {
-    const paymentSources = _deletePaymentSource /* _deletePaymentSource */.fetchPaymentSources();
-    const tmpResult = _deletePaymentSource /* _deletePaymentSource */;
+    const paymentSources = _deletePaymentSource.fetchPaymentSources();
+    const tmpResult = _deletePaymentSource;
     const subscriptionPlansBySKUs = importAll(5786).fetchSubscriptionPlansBySKUs(fetchedSKUIDs.getFetchedSKUIDs());
     const obj3 = importAll(5786);
   }
@@ -2064,7 +2064,7 @@ defineSimpleDispatch(["WISHLIST_ITEM_PURCHASED"], (recipientId) => {
   });
 });
 defineSimpleDispatch(["USER_BADGE_STATE_UPDATE"], (badge_id) => {
-  const badge = urlUserId /* urlUserId */.fetchBadge(badge_id.badge_id);
+  const badge = urlUserId.fetchBadge(badge_id.badge_id);
 });
 defineSimpleDispatch(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (subscription_id) => {
   const obj = { type: "GUILD_BOOST_SLOT_CREATE", guildBoostSlot: createFromServer.createFromServer(subscription_id, store2.getSubscriptionById(subscription_id.subscription_id)) };

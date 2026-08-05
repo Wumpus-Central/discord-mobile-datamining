@@ -29,7 +29,7 @@ export const useDisabledWhenAutoclippingOff = function useDisabledWhenAutoclippi
   if (enableRedesign2) {
     enableRedesign2 = !obj.useIsClipsEnabled();
   }
-  obj = isClipsEnabled /* isClipsEnabled */;
+  obj = isClipsEnabled;
   const tmp = require;
   const items = [_migrateDefaultStorage];
   if (!enableRedesign2) {

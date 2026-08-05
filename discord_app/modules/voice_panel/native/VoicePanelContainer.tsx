@@ -35,8 +35,8 @@ function renderVoicePanel(arg0, channelId, transitionState, transitionCleanUp) {
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function VoicePanelContainer() {
-  const tmp = callback((channels) => Array.from(channels.channels), isIterable /* isIterable */.shallow);
-  return jsx(wrapChildrenDefault /* wrapChildrenDefault */.TransitionGroup, { items: callback((channels) => Array.from(channels.channels), isIterable /* isIterable */.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
+  const tmp = callback((channels) => Array.from(channels.channels), isIterable.shallow);
+  return jsx(wrapChildrenDefault.TransitionGroup, { items: callback((channels) => Array.from(channels.channels), isIterable.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
 });
 const result = require("withEqualityFn").fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
 

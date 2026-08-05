@@ -6,7 +6,7 @@ import { OverlappingSchedulesWarning } from "../../../parent_tools/native/Schedu
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy["w/ISB8"]);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME,
   getComponent() {
-    return OverlappingSchedulesWarning /* OverlappingSchedulesWarning */.default;
+    return OverlappingSchedulesWarning.default;
   }
 };
 const route = createToggle.createRoute(obj);

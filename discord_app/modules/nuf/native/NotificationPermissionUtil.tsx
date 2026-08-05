@@ -298,11 +298,11 @@ export const enableProvisionalPushNotification = function enableProvisionalPushN
 export const useCanSeePushNotificationNudge = function useCanSeePushNotificationNudge() {
   let require;
   let tmp4;
-  const isTeenInStrictCountry = set /* set */.useIsTeenInStrictCountry();
-  const obj = set /* set */;
+  const isTeenInStrictCountry = set.useIsTeenInStrictCountry();
+  const obj = set;
   const items = [set];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => state.authorizationStatus);
-  const obj2 = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => state.authorizationStatus);
+  const obj2 = initialize;
   [tmp4, require] = callback(React.useState(false), 2);
   const effect = React.useEffect(() => {
     const NativePermissionManager = outer1_6.NativePermissionManager;
@@ -331,12 +331,12 @@ export const useCanSeePushNotificationNudge = function useCanSeePushNotification
 export const useShouldShowPushNotificationNudgeByPromptType = function useShouldShowPushNotificationNudgeByPromptType(CHANNEL_BANNER) {
   let require;
   let tmp7;
-  const isTeenInStrictCountry = set /* set */.useIsTeenInStrictCountry();
-  let obj = set /* set */;
+  const isTeenInStrictCountry = set.useIsTeenInStrictCountry();
+  let obj = set;
   const tmp = require;
   const items = [set];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => state.authorizationStatus);
-  const obj2 = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => state.authorizationStatus);
+  const obj2 = initialize;
   const tmp4 = set;
   [tmp7, require] = callback(React.useState(false), 2);
   const effect = React.useEffect(() => {

@@ -39,7 +39,7 @@ export default function getChannelA11yLabel(mentionCount) {
     flag = false;
   }
   const voiceChannelStartTime = mentionCount.voiceChannelStartTime;
-  let obj = computeChannelName /* computeChannelName */;
+  let obj = computeChannelName;
   const channelName = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
   if (isRoleRequired(channel)) {
     const intl = tmp(1236).intl;
@@ -214,13 +214,13 @@ export default function getChannelA11yLabel(mentionCount) {
 };
 export const getStatusLabel = function getStatusLabel(status) {
   if (constants2.ONLINE === status) {
-    return nameFromUser /* nameFromUser */.humanizeStatus(tmp.ONLINE);
+    return nameFromUser.humanizeStatus(tmp.ONLINE);
   } else if (tmp.IDLE === status) {
-    return nameFromUser /* nameFromUser */.humanizeStatus(tmp.IDLE);
+    return nameFromUser.humanizeStatus(tmp.IDLE);
   } else if (tmp.DND === status) {
-    return nameFromUser /* nameFromUser */.humanizeStatus(tmp.DND);
+    return nameFromUser.humanizeStatus(tmp.DND);
   } else if (tmp.INVISIBLE === status) {
-    return nameFromUser /* nameFromUser */.humanizeStatus(tmp.INVISIBLE);
+    return nameFromUser.humanizeStatus(tmp.INVISIBLE);
   } else {
     return "";
   }
@@ -232,12 +232,12 @@ export const getChannelA11yHint = function getChannelA11yHint(userStatus) {
   const items = [];
   ({ channel, muted } = userStatus);
   if (userStatus.isFavorite) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    items.push(intl.string(getSystemLocale /* getSystemLocale */.t.cCPjSK));
+    const intl = getSystemLocale.intl;
+    items.push(intl.string(getSystemLocale.t.cCPjSK));
   }
   if (true === muted) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    items.push(intl2.string(getSystemLocale /* getSystemLocale */.t.C4zCMb));
+    const intl2 = getSystemLocale.intl;
+    items.push(intl2.string(getSystemLocale.t.C4zCMb));
     return items.join(", ");
   } else {
     if (channel.type === constants.DM) {
@@ -245,21 +245,21 @@ export const getChannelA11yHint = function getChannelA11yHint(userStatus) {
         let ONLINE = constants2;
         if (constants2.ONLINE === userStatus) {
           ONLINE = ONLINE.ONLINE;
-          let str = nameFromUser /* nameFromUser */.humanizeStatus(ONLINE);
-          const obj3 = nameFromUser /* nameFromUser */;
+          let str = nameFromUser.humanizeStatus(ONLINE);
+          const obj3 = nameFromUser;
         } else {
           if (ONLINE.IDLE === userStatus) {
-            str = nameFromUser /* nameFromUser */.humanizeStatus(ONLINE.IDLE);
-            const obj2 = nameFromUser /* nameFromUser */;
+            str = nameFromUser.humanizeStatus(ONLINE.IDLE);
+            const obj2 = nameFromUser;
           } else if (ONLINE.DND !== userStatus) {
             str = "";
             if (ONLINE.INVISIBLE === userStatus) {
-              str = nameFromUser /* nameFromUser */.humanizeStatus(ONLINE.INVISIBLE);
-              const obj4 = nameFromUser /* nameFromUser */;
+              str = nameFromUser.humanizeStatus(ONLINE.INVISIBLE);
+              const obj4 = nameFromUser;
             }
           }
-          str = nameFromUser /* nameFromUser */.humanizeStatus(ONLINE.DND);
-          const obj = nameFromUser /* nameFromUser */;
+          str = nameFromUser.humanizeStatus(ONLINE.DND);
+          const obj = nameFromUser;
         }
         items.push(str);
       }

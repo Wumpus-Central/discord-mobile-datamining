@@ -424,7 +424,7 @@ class MobileVoiceOverlayManager {
 const prototype = MobileVoiceOverlayManager.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  let obj = isFabric /* isFabric */;
+  let obj = isFabric;
   if (!tmp2) {
     if (typeof NativeCallableInterface !== "function") {
       HermesBuiltin.throwTypeError();

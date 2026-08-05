@@ -8,20 +8,20 @@ export const extractColorStringsFromServerColors = function extractColorStringsF
   if (0 === colors.primary_color) {
     let int2hexResult = DEFAULT_ROLE_COLOR_HEX;
   } else {
-    let obj = int2hslRaw /* int2hslRaw */;
+    let obj = int2hslRaw;
     int2hexResult = obj.int2hex(colors.primary_color);
   }
   obj = { primaryColor: int2hexResult, secondaryColor: null, tertiaryColor: null };
   let int2hexResult1 = null;
   if (null != colors.secondary_color) {
-    int2hexResult1 = int2hslRaw /* int2hslRaw */.int2hex(colors.secondary_color);
-    const obj3 = int2hslRaw /* int2hslRaw */;
+    int2hexResult1 = int2hslRaw.int2hex(colors.secondary_color);
+    const obj3 = int2hslRaw;
   }
   obj[1] = int2hexResult1;
   let int2hexResult2 = null;
   if (null != colors.tertiary_color) {
-    int2hexResult2 = int2hslRaw /* int2hslRaw */.int2hex(colors.tertiary_color);
-    const obj4 = int2hslRaw /* int2hslRaw */;
+    int2hexResult2 = int2hslRaw.int2hex(colors.tertiary_color);
+    const obj4 = int2hslRaw;
   }
   obj[2] = int2hexResult2;
   return obj;

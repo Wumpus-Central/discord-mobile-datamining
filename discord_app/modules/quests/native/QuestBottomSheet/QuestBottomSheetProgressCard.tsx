@@ -271,7 +271,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
 export const QuestBottomSheetProgressCardInGameTask = function QuestBottomSheetProgressCardInGameTask(quest) {
   quest = quest.quest;
   const tmp = createCacheKey();
-  let obj = useQuests /* useQuests */;
+  let obj = useQuests;
   const thirdPartyTaskDetails = obj.useThirdPartyTaskDetails(quest);
   obj = { style: tmp.card, border: "subtle", children: null };
   obj = { style: tmp.content, children: null };
@@ -286,5 +286,5 @@ export const QuestBottomSheetProgressCardInGameTask = function QuestBottomSheetP
   obj1[2] = num;
   obj[1] = closure_7(QUEST_PROGRESS_DIAMETER_BY_SIZE, obj1);
   obj[2] = closure_7(closure_4, obj);
-  return closure_7(PressableCard /* PressableCard */.Card, obj);
+  return closure_7(PressableCard.Card, obj);
 };

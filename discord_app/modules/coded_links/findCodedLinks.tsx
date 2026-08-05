@@ -206,7 +206,7 @@ function getPathsFromURL(target) {
 }
 function parseURLSafely(url) {
   try {
-    return Url /* Url */.parse(url);
+    return Url.parse(url);
   } catch (err) {
     return null;
   }

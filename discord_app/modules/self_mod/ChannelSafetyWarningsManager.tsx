@@ -38,7 +38,7 @@ function handleChannelSelect(channelId) {
     } else {
       return false;
     }
-    obj6 = InappropriateConversationExperiment /* InappropriateConversationExperiment */;
+    obj6 = InappropriateConversationExperiment;
   }
 }
 function handleChannelUpdates(channels) {

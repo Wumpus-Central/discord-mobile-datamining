@@ -17,13 +17,13 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   let inputStyle;
   let state;
   let trailing;
-  let obj = useInputStyles /* useInputStyles */;
+  let obj = useInputStyles;
   obj = { size: size.size, isRound: size.isRound };
   const inputStyles = obj.useInputStyles(obj);
-  let obj2 = useTextFieldState /* useTextFieldState */;
+  let obj2 = useTextFieldState;
   const textField = obj2.useTextField(size, ref);
   ({ inputProps, innerRef, state } = textField);
-  let obj3 = useInputClearButton /* useInputClearButton */;
+  let obj3 = useInputClearButton;
   const inputClearButtonConfig = obj3.useInputClearButtonConfig(size, state);
   let tmp6;
   if (null != inputClearButtonConfig) {
@@ -62,7 +62,7 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   obj3.leading = tmp8;
   obj3.trailing = trailing;
   obj3.inputStyle = inputStyle;
-  return jsx(BaseTextField /* BaseTextField */.BaseTextField, {});
+  return jsx(BaseTextField.BaseTextField, {});
 });
 const result = require("jsxProd").fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
 

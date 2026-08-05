@@ -30,7 +30,7 @@ let metroImportAll;
 const require = arg1;
 function AutocompleteLabel(text) {
   const tmp = createCacheKey();
-  return callback(Form /* Form */.FormRow.Label, { style: createCacheKey().leading, text: text.text });
+  return callback(Form.FormRow.Label, { style: createCacheKey().leading, text: text.text });
 }
 ({ ChannelTypes: metroImportAll, Fonts } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -117,8 +117,8 @@ const obj9 = {
       tmp2Result = tmp2(AutocompleteLabel, obj1);
     }
     obj[2] = tmp2Result;
-    obj[3] = closure_9(TableRowTrailingText /* TableRowTrailingText */.TableRowTrailingText, { text: description });
-    return closure_9(TableRowInner /* TableRowInner */.TableRow, obj);
+    obj[3] = closure_9(TableRowTrailingText.TableRowTrailingText, { text: description });
+    return closure_9(TableRowInner.TableRow, obj);
   },
   Role(colorString) {
     let name;
@@ -136,14 +136,14 @@ const obj9 = {
     }
     obj = { style: items, text: "@" + name };
     items[1] = tmp5;
-    obj[2] = closure_9(Form /* Form */.FormRow.Label, obj);
+    obj[2] = closure_9(Form.FormRow.Label, obj);
     let str = "";
     if (showDescription) {
       const intl = tmp3(1236).intl;
       str = intl.string(tmp3(1236).t.HrUmDH);
     }
-    obj[3] = closure_9(TableRowTrailingText /* TableRowTrailingText */.TableRowTrailingText, { text: str });
-    return closure_9(TableRowInner /* TableRowInner */.TableRow, obj);
+    obj[3] = closure_9(TableRowTrailingText.TableRowTrailingText, { text: str });
+    return closure_9(TableRowInner.TableRow, obj);
   },
   Channel(onPress) {
     let category;
@@ -153,12 +153,12 @@ const obj9 = {
     if (channel.type === constants.GUILD_CATEGORY) {
       let channelIconWithGuild = registerAsset;
     } else {
-      let obj = getChannelIcon /* getChannelIcon */;
+      let obj = getChannelIcon;
       channelIconWithGuild = obj.getChannelIconWithGuild(channel, tmp2);
     }
     obj = { source: channelIconWithGuild, style: tmp.autocompleteIcon };
-    const tmp9 = callback(Button /* Button */.Icon, obj);
-    const channelName = computeChannelName /* computeChannelName */.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
+    const tmp9 = callback(Button.Icon, obj);
+    const channelName = computeChannelName.computeChannelName(channel, mergeGuildAvatar, upsertRelationship);
     obj = { onPress: onPress.onPress, accessibilityRole: "menuitem", leading: tmp9, label: null, trailing: null };
     obj[3] = callback(AutocompleteLabel, { text: channelName });
     const obj1 = { style: tmp.trailing, variant: "text-sm/medium", color: "text-muted", children: null };
@@ -167,8 +167,8 @@ const obj9 = {
       name = category.name;
     }
     obj1[3] = name;
-    obj[4] = callback(Text /* Text */.Text, obj1);
-    return callback(Form /* Form */.FormRow, obj);
+    obj[4] = callback(Text.Text, obj1);
+    return callback(Form.FormRow, obj);
   },
   Emoji(url) {
     let name;
@@ -194,13 +194,13 @@ const obj9 = {
       ({ emoji: arr[0], emojiText: arr[1] } = tmp);
       obj[0] = items1;
       obj[2] = surrogates;
-      tmp5 = callback(Button /* Button */.LegacyText, obj);
+      tmp5 = callback(Button.LegacyText, obj);
     }
     const obj1 = { onPress, accessibilityRole: "menuitem", leading: tmp5, label: null };
     const obj2 = { text: null };
     obj2[0] = ":" + name + ":";
     obj1[3] = tmp2(AutocompleteLabel, obj2);
-    return tmp2(Form /* Form */.FormRow, obj1);
+    return tmp2(Form.FormRow, obj1);
   },
   EmojiPremiumUpsell(arg0) {
     let onPress;
@@ -208,7 +208,7 @@ const obj9 = {
     ({ results, onPress } = arg0);
     const obj = { onPress, accessibilityRole: "menuitem", label: null };
     obj[2] = callback(ChannelAutocompleteEmojiUpsell, { results });
-    return callback(Form /* Form */.FormRow, obj);
+    return callback(Form.FormRow, obj);
   },
   Choice(arg0) {
     let choice;
@@ -217,7 +217,7 @@ const obj9 = {
     let obj = { onPress, accessibilityRole: "menuitem", label: null };
     obj = { text: choice.displayName };
     obj[2] = callback(AutocompleteLabel, obj);
-    return callback(Form /* Form */.FormRow, obj);
+    return callback(Form.FormRow, obj);
   },
   ChoiceLoading() {
     const tmp = createCacheKey();
@@ -227,7 +227,7 @@ const obj9 = {
     const items = [tmp.commandChoiceLoadingItem, { width: memo }];
     obj[1] = callback(View, { style: items });
     obj[1] = callback(View, obj);
-    return callback(Form /* Form */.FormRow, obj);
+    return callback(Form.FormRow, obj);
   },
   Sticker(arg0) {
     let isInteracting;
@@ -235,22 +235,22 @@ const obj9 = {
     let onPress;
     let sticker;
     ({ sticker, onPress, onLongPress, isInteracting } = arg0);
-    let obj = useStickerPackCategories /* useStickerPackCategories */;
+    let obj = useStickerPackCategories;
     const shouldAnimateSticker = obj.useShouldAnimateSticker(isInteracting);
     obj = { accessibilityRole: "menuitem", style: createCacheKey().stickerContainer, onPress, onLongPress, pointerEvents: "box-only", children: null };
     obj[5] = callback(Sticker, { sticker, size: 40, animated: shouldAnimateSticker });
-    return callback(PressableBase /* PressableBase */.PressableOpacity, obj);
+    return callback(PressableBase.PressableOpacity, obj);
   },
   Label(text) {
     const obj = { label: null };
     obj[0] = callback(AutocompleteLabel, { text: text.label });
-    return callback(Form /* Form */.FormRow, obj);
+    return callback(Form.FormRow, obj);
   },
   Game(game) {
     game = game.game;
     const tmp = createCacheKey();
     const tmp4 = getGameMediaRefURL(game.id, game.icon, { size: 32 });
-    let obj = isNullOrEmpty /* isNullOrEmpty */;
+    let obj = isNullOrEmpty;
     if (obj.isNullOrEmpty(tmp4)) {
       obj = { size: "sm", style: null };
       obj[1] = tmp.gameIcon;
@@ -267,7 +267,7 @@ const obj9 = {
     }
     const obj2 = { onPress: game.onPress, accessibilityRole: "menuitem", leading: tmp6Result, label: null };
     obj2[3] = tmp8(AutocompleteLabel, { text: game.name });
-    return tmp8(Form /* Form */.FormRow, obj2);
+    return tmp8(Form.FormRow, obj2);
   }
 };
 const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/autocompleter/native/Autocomplete.tsx");

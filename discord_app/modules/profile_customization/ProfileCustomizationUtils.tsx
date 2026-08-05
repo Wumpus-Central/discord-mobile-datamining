@@ -132,7 +132,7 @@ export const useUserProfileEffect = function useUserProfileEffect(arg0) {
   let require;
   ({ user: require, guildId: dependencyMap } = arg0);
   const items = [createUserWidgetFromServer];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     if (null == closure_1) {
       const userProfile = outer1_4.getUserProfile(user.id);
       let profileEffect;
@@ -153,7 +153,7 @@ export const useUserProfileFrame = function useUserProfileFrame(arg0) {
   let require;
   ({ user: require, guildId: dependencyMap } = arg0);
   const items = [createUserWidgetFromServer];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     if (null == closure_1) {
       const userProfile = outer1_4.getUserProfile(user.id);
       let profileFrame;
@@ -267,16 +267,16 @@ export const showRemoveBanner = function showRemoveBanner(arg0, banner) {
 };
 export const announcePendingAvatarChange = function announcePendingAvatarChange(set) {
   if ("set" === set) {
-    const AccessibilityAnnouncer3 = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    AccessibilityAnnouncer3.announce(intl3.string(getSystemLocale /* getSystemLocale */.t.dyU5c5));
+    const AccessibilityAnnouncer3 = AccessibilityAnnouncer.AccessibilityAnnouncer;
+    const intl3 = getSystemLocale.intl;
+    AccessibilityAnnouncer3.announce(intl3.string(getSystemLocale.t.dyU5c5));
   } else if ("remove" === set) {
-    const AccessibilityAnnouncer2 = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    AccessibilityAnnouncer2.announce(intl2.string(getSystemLocale /* getSystemLocale */.t["f1+oNk"]));
+    const AccessibilityAnnouncer2 = AccessibilityAnnouncer.AccessibilityAnnouncer;
+    const intl2 = getSystemLocale.intl;
+    AccessibilityAnnouncer2.announce(intl2.string(getSystemLocale.t["f1+oNk"]));
   } else {
-    const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    AccessibilityAnnouncer.announce(intl.string(getSystemLocale /* getSystemLocale */.t["/b5nqj"]));
+    const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
+    const intl = getSystemLocale.intl;
+    AccessibilityAnnouncer.announce(intl.string(getSystemLocale.t["/b5nqj"]));
   }
 };

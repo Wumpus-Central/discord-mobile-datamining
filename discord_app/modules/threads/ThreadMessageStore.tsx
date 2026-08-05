@@ -325,8 +325,8 @@ prototype["getMostRecentMessage"] = function getMostRecentMessage(id) {
     if (tmp3) {
       let message = store2.getMessage(id, tmp.mostRecentRawMessage.id);
       if (message == null) {
-        message = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(tmp.mostRecentRawMessage);
-        const obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
+        message = createMinimalMessageRecord.createMessageRecord(tmp.mostRecentRawMessage);
+        const obj = createMinimalMessageRecord;
       }
       tmp.mostRecentMessage = message;
       tmp.mostRecentRawMessage = null;
@@ -541,12 +541,12 @@ const threadMessageStore = new ThreadMessageStore(require("dispatcher"), {
           }
           dependencyMap2[tmp.parentId] = num + 1;
           if (null != tmp.mostRecentMessage) {
-            tmp.mostRecentMessage = createMinimalMessageRecord /* createMinimalMessageRecord */.updateMessageRecord(tmp.mostRecentMessage, message);
-            const obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
+            tmp.mostRecentMessage = createMinimalMessageRecord.updateMessageRecord(tmp.mostRecentMessage, message);
+            const obj = createMinimalMessageRecord;
           }
           if (null != tmp.mostRecentRawMessage) {
-            tmp.mostRecentRawMessage = createMinimalMessageRecord /* createMinimalMessageRecord */.updateServerMessage(tmp.mostRecentRawMessage, message);
-            const obj2 = createMinimalMessageRecord /* createMinimalMessageRecord */;
+            tmp.mostRecentRawMessage = createMinimalMessageRecord.updateServerMessage(tmp.mostRecentRawMessage, message);
+            const obj2 = createMinimalMessageRecord;
           }
         }
       }

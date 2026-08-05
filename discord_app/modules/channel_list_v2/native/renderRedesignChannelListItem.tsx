@@ -50,7 +50,7 @@ let obj3 = { marginHorizontal: 16, marginTop: require("Themes").space.PX_8 };
 let result = require("getActiveStageChannelIds").fileFinishedImporting("modules/channel_list_v2/native/renderRedesignChannelListItem.tsx");
 
 export const getFastListRecyclerKey = function getFastListRecyclerKey(guildChannels, arg1, arg2, arg3) {
-  if (arg1 === renderDefaultEmpty /* renderDefaultEmpty */.FastListItemTypes.ITEM) {
+  if (arg1 === renderDefaultEmpty.FastListItemTypes.ITEM) {
     if (null != arg3) {
       if (tmp(6896).SECTION_INDEX_CHANNEL_NOTICES === arg2) {
         const channelNoticeSection = guildChannels.getChannelNoticeSection();
@@ -80,14 +80,14 @@ export const getFastListRecyclerKey = function getFastListRecyclerKey(guildChann
 export const renderChannelListSectionHeader = function renderChannelListSectionHeader(guildChannels, section, recentlyActiveChannelsEnabled, arg3, categoryStyles, c8) {
   if (guildChannels.favoritesSectionNumber === section) {
     let obj = { name: null, withMarginTop: null, styles: null, isRefreshEnabled: null };
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t.mlPMCy);
+    const intl2 = getSystemLocale.intl;
+    obj[0] = intl2.string(getSystemLocale.t.mlPMCy);
     obj[1] = arg3;
     obj[2] = categoryStyles;
     obj[3] = c8;
-    return CategoryChannel /* CategoryChannel */.renderCategoryItem(obj);
+    return CategoryChannel.renderCategoryItem(obj);
   } else if (guildChannels.recentsSectionNumber === section) {
-    const tmp22 = CategoryChannel /* CategoryChannel */;
+    const tmp22 = CategoryChannel;
     if (recentlyActiveChannelsEnabled) {
       obj = { guildId: null, withMarginTop: null };
       obj[0] = guildChannels.id;
@@ -128,10 +128,10 @@ export const renderChannelListSectionHeader = function renderChannelListSectionH
     const items = [tmp11, ];
     let renderCategoryItemResult = null;
     if (flag) {
-      let obj3 = CategoryChannel /* CategoryChannel */;
+      let obj3 = CategoryChannel;
       const obj2 = { name: null, styles: null, isRefreshEnabled: null };
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      obj2[0] = intl.string(getSystemLocale /* getSystemLocale */.t["V/u9Dy"]);
+      const intl = getSystemLocale.intl;
+      obj2[0] = intl.string(getSystemLocale.t["V/u9Dy"]);
       obj2[1] = categoryStyles;
       obj2[2] = c8;
       renderCategoryItemResult = obj3.renderCategoryItem(obj2);
@@ -141,7 +141,7 @@ export const renderChannelListSectionHeader = function renderChannelListSectionH
     obj3[0] = items;
     return closure_19(View, obj3);
   } else {
-    obj = isFavoritesSection /* isFavoritesSection */;
+    obj = isFavoritesSection;
     if (obj.isNamedCategorySection(section)) {
       const namedCategoryFromSection = guildChannels.getNamedCategoryFromSection(section);
       let tmp5 = null;
@@ -180,7 +180,7 @@ export const getChannelListSectionHeaderSize = function getChannelListSectionHea
         }
         let num4 = 0;
         if (flag2) {
-          num4 = Divider /* Divider */.DIVIDER_HEIGHT;
+          num4 = Divider.DIVIDER_HEIGHT;
         }
         let sum = num4;
         if (flag) {
@@ -208,9 +208,9 @@ export const renderChannelListSectionFooter = function renderChannelListSectionF
     let obj = { guildId: null, channels: null };
     obj[0] = guildChannels.id;
     obj[1] = result;
-    tmp = callback4(CategoryChannel /* CategoryChannel */.RedesignVoiceUserSummary, obj);
+    tmp = callback4(CategoryChannel.RedesignVoiceUserSummary, obj);
   }
-  if (computeSubtitle /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === section) {
+  if (computeSubtitle.SECTION_INDEX_CHANNEL_NOTICES === section) {
     return null;
   } else if (tmp5(6896).SECTION_INDEX_GUILD_ACTIONS === section) {
     let tmp19 = null;
@@ -268,7 +268,7 @@ export const renderChannelListSectionFooter = function renderChannelListSectionF
   }
 };
 export const getChannelListSectionHasFooterDivider = function getChannelListSectionHasFooterDivider(guildChannels, arg1, c8) {
-  if (computeSubtitle /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === arg1) {
+  if (computeSubtitle.SECTION_INDEX_CHANNEL_NOTICES === arg1) {
     return false;
   } else if (tmp(6896).SECTION_INDEX_GUILD_ACTIONS === arg1) {
     let tmp3 = c8;
@@ -302,9 +302,9 @@ export const getChannelListSectionFooterSize = function getChannelListSectionFoo
   let showAllVoiceChannelsButtonLastShownChannelActive;
   let num = 0;
   if (null != result) {
-    num = VOICE_USER_SUMMARY_HEIGHT /* VOICE_USER_SUMMARY_HEIGHT */.VOICE_USER_SUMMARY_HEIGHT;
+    num = VOICE_USER_SUMMARY_HEIGHT.VOICE_USER_SUMMARY_HEIGHT;
   }
-  if (computeSubtitle /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === section) {
+  if (computeSubtitle.SECTION_INDEX_CHANNEL_NOTICES === section) {
     return 0;
   } else if (tmp3(6896).SECTION_INDEX_GUILD_ACTIONS === section) {
     let num4 = 0;
@@ -610,7 +610,7 @@ export const getChannelListItemSize = function getChannelListItemSize(arg0) {
   let voiceStates;
   ({ guildChannels, section, row, fontScale, voiceStates } = arg0);
   ({ liveChannelNoticeHeight, listViewportHeight, isRefreshEnabled } = arg0);
-  if (computeSubtitle /* computeSubtitle */.SECTION_INDEX_CHANNEL_NOTICES === section) {
+  if (computeSubtitle.SECTION_INDEX_CHANNEL_NOTICES === section) {
     const channelNoticeSection = guildChannels.getChannelNoticeSection();
     row = channelNoticeSection.getRow(row);
     let num6 = 0;
@@ -779,7 +779,7 @@ export const calculateVoiceSummary = function calculateVoiceSummary(arg0) {
   let voiceStates;
   ({ guildChannels, section } = arg0);
   ({ optInChannelsEnabled, voiceStates, selectedChannelId, selectedVoiceChannelId } = arg0);
-  let obj = isFavoritesSection /* isFavoritesSection */;
+  let obj = isFavoritesSection;
   if (!obj.isVoiceChannelsSection(section, guildChannels)) {
     if (section < tmp(6896).SECTION_INDEX_FIRST_NAMED_CATEGORY) {
       return null;

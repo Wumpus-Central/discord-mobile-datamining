@@ -9,7 +9,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/EmptyServerSettingsEmoji.tsx");
 
 export const getEmptyServerSettingsEmojiSource = function getEmptyServerSettingsEmojiSource(theme) {
-  let obj = getIllustrationSource /* getIllustrationSource */;
+  let obj = getIllustrationSource;
   obj = {
     dark() {
       return callback(16525);
@@ -24,7 +24,7 @@ export const getEmptyServerSettingsEmojiSource = function getEmptyServerSettings
   return obj.getIllustrationSource(theme, obj);
 };
 export const useEmptyServerSettingsEmojiSource = function useEmptyServerSettingsEmojiSource() {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
       return callback(16525);
@@ -36,10 +36,10 @@ export const useEmptyServerSettingsEmojiSource = function useEmptyServerSettings
       return callback(16527);
     }
   };
-  return getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const EmptyServerSettingsEmoji = function EmptyServerSettingsEmoji(arg0) {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   obj = {
     dark() {
       return callback(16525);
@@ -52,7 +52,7 @@ export const EmptyServerSettingsEmoji = function EmptyServerSettingsEmoji(arg0) 
     }
   };
   obj = {};
-  const illustrationSource = getIllustrationSource /* getIllustrationSource */.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

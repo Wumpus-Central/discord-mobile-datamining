@@ -26,13 +26,13 @@ function GuildTemplatesHeader() {
   const tmp = createCacheKey();
   let obj = { style: tmp.headerContainer, children: null };
   obj = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t["5HZu07"]);
-  const items = [callback3(Text /* Text */.Text, obj), ];
+  const intl = getSystemLocale.intl;
+  obj[4] = intl.string(getSystemLocale.t["5HZu07"]);
+  const items = [callback3(Text.Text, obj), ];
   obj = { style: tmp.headerDescription, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["/k/L/j"]);
-  items[1] = callback3(Text /* Text */.Text, obj);
+  const intl2 = getSystemLocale.intl;
+  obj[3] = intl2.string(getSystemLocale.t["/k/L/j"]);
+  items[1] = callback3(Text.Text, obj);
   obj[1] = items;
   return callback4(closure_5, obj);
 }

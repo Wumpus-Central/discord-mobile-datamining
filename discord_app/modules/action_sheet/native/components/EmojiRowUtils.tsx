@@ -23,8 +23,8 @@ export const shouldShowEmojiRow = function shouldShowEmojiRow(closure_8, message
     tmp = message.type !== constants3.THREAD_STARTER_MESSAGE;
   }
   if (tmp) {
-    tmp = !hasFlag /* hasFlag */.hasFlag(message.flags, constants.EPHEMERAL);
-    const obj = hasFlag /* hasFlag */;
+    tmp = !hasFlag.hasFlag(message.flags, constants.EPHEMERAL);
+    const obj = hasFlag;
   }
   return tmp;
 };

@@ -281,7 +281,7 @@ function RoomMembersSection(title) {
     }
     return items;
   })();
-  return callback(VoiceBadges /* VoiceBadges */.VoicePanelFormSection, obj);
+  return callback(VoiceBadges.VoicePanelFormSection, obj);
 }
 function RoomMembers(members) {
   let blockedMembers;
@@ -535,9 +535,9 @@ let closure_28 = importAllResult.memo((hasMembers) => {
     obj[0] = tmp.channelInfoWrapper;
     obj = { variant: "text-sm/medium", color: "text-default", style: null, children: null };
     obj[2] = tmp.subheading;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.sS2J0G);
-    obj[1] = callback(Text /* Text */.Text, obj);
+    const intl = getSystemLocale.intl;
+    obj[3] = intl.string(getSystemLocale.t.sS2J0G);
+    obj[1] = callback(Text.Text, obj);
     tmp2 = callback(set, obj);
     const tmp6 = set;
   }
@@ -553,14 +553,14 @@ let closure_32 = importAllResult.memo((blockedUserIds) => {
   let obj = { name: null, properties: null };
   const tmp = callback2();
   const tmp2 = importDefault;
-  obj[0] = encodeProperties /* encodeProperties */.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING;
+  obj[0] = encodeProperties.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING;
   obj = { channel_id: channelId, blocked_user_ids: Array.from(blockedUserIds), warning_surface: constants2.PRE_JOIN_SHEET };
   obj[1] = obj;
   trackImpression(obj);
   const size = ignoredUserIds.size;
   const size2 = blockedUserIds.size;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.CjrALd);
+  const intl = getSystemLocale.intl;
+  const stringResult = intl.string(getSystemLocale.t.CjrALd);
   if (size2 > 0) {
     if (size > 0) {
       const intl4 = tmp5(1236).intl;

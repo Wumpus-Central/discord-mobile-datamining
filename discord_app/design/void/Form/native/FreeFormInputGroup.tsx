@@ -37,7 +37,7 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
   const tmp2 = callback2();
   let isAndroidResult = enableAndroidSanitizedInputWorkaround;
   if (enableAndroidSanitizedInputWorkaround) {
-    let obj = set /* set */;
+    let obj = set;
     isAndroidResult = obj.isAndroid();
   }
   if (!isAndroidResult) {
@@ -46,10 +46,10 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
   if (!enableAndroidSanitizedInputWorkaround) {
     let str = keyboardType;
   } else {
-    let obj1 = set /* set */;
+    let obj1 = set;
     str = "visible-password";
   }
-  const context = importAllResult.useContext(context /* context */.RedesignCompatContext);
+  const context = importAllResult.useContext(context.RedesignCompatContext);
   const id = importAllResult.useId();
   if (context) {
     ({ placeholder, onChangeText, clearButtonVisibility } = merged);

@@ -17,7 +17,7 @@ function init(channelId, location, subsection) {
   obj.dispatch(obj);
 }
 function open(arg0, arg1, arg2) {
-  let obj = getRootNavigationRef /* getRootNavigationRef */;
+  let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -424,14 +424,14 @@ function _deleteChannel() {
   return applyArgumentsResult;
 }
 function updateVoiceChannelStatus(arg0, status) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: closure_6.UPDATE_VOICE_CHANNEL_STATUS(arg0), body: obj, rejectWithError: null };
   obj = { status };
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest.rejectWithMigratedError();
   return HTTP.put(obj);
 }
 function removeLinkedLobby(outer1_0) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   return HTTP.del({ url: closure_6.CHANNEL_LINKED_LOBBY(outer1_0), rejectWithError: true });
 }
 ({ Endpoints: closure_6, Layers, ChannelSettingsSections: error } = ME);

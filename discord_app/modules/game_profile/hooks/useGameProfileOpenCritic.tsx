@@ -7,7 +7,7 @@ import { OpenCriticTier } from "../../../../discord_common/js/shared/shared-cons
 const result = require("metadata").fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
 
 export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
-  if (OpenCriticTier /* OpenCriticTier */.OpenCriticTier.MIGHTY === tier) {
+  if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
     const intl4 = tmp(1236).intl;
     return intl4.string(tmp(1236).t.aZej2g);
   } else if (tmp(9239).OpenCriticTier.STRONG === tier) {
@@ -22,7 +22,7 @@ export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
   }
 };
 export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
-  if (OpenCriticTier /* OpenCriticTier */.OpenCriticTier.MIGHTY === tier) {
+  if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
     return metadata;
   } else if (tmp(9239).OpenCriticTier.STRONG === tier) {
     return metadata;
@@ -34,7 +34,7 @@ export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
 };
 export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRatingColor(tier) {
   let foregroundColor = "#fc430a";
-  if (OpenCriticTier /* OpenCriticTier */.OpenCriticTier.MIGHTY !== tier) {
+  if (OpenCriticTier.OpenCriticTier.MIGHTY !== tier) {
     foregroundColor = "#9e00b4";
     if (tmp(9239).OpenCriticTier.STRONG !== tier) {
       foregroundColor = "#4aa1ce";

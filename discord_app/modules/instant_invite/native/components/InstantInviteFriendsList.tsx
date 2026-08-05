@@ -21,12 +21,12 @@ function FriendsEmptyComponent() {
   const tmp = createCacheKey();
   let obj = { children: null };
   obj = { title: null, body: null, titleStyle: null, bodyStyle: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.dz4UlO);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.MBQBI7);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.dz4UlO);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.MBQBI7);
   ({ emptyTitle: obj2[2], emptyBody: obj2[3] } = tmp);
-  const items = [callback(Button /* Button */.RefreshEmptyState, obj), ];
+  const items = [callback(Button.RefreshEmptyState, obj), ];
   obj = {
     onPress() {
       let obj = callback2(4253);
@@ -43,15 +43,15 @@ function FriendsEmptyComponent() {
     hitSlop: null,
     children: null
   };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.a7FVbE);
+  const intl3 = getSystemLocale.intl;
+  obj[2] = intl3.string(getSystemLocale.t.a7FVbE);
   obj[3] = { top: 8, left: 8, bottom: 8, right: 8 };
   const obj1 = { style: items1, variant: "text-sm/semibold", color: "text-link", children: null };
   items1 = [tmp.goToFriendsLink];
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[3] = intl4.string(getSystemLocale /* getSystemLocale */.t.a7FVbE);
-  obj[4] = callback(Text /* Text */.Text, obj1);
-  items[1] = callback(PressableBase /* PressableBase */.PressableOpacity, obj);
+  const intl4 = getSystemLocale.intl;
+  obj1[3] = intl4.string(getSystemLocale.t.a7FVbE);
+  obj[4] = callback(Text.Text, obj1);
+  items[1] = callback(PressableBase.PressableOpacity, obj);
   obj[0] = items;
   return callback2(closure_5, obj);
 }

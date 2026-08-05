@@ -33,7 +33,7 @@ function ChannelContentComponent(arg0) {
   ({ subtitle, resolvedUnreadSetting, locked, lastMessageTimestampString, channel, layout, mentionCount, mentionBadge, isSubscriptionGated } = arg0);
   ({ name, unread, muted, connected, needSubscriptionToAccess } = arg0);
   const tmp = createCacheKey();
-  let obj = getLayoutStyles /* getLayoutStyles */;
+  let obj = getLayoutStyles;
   let tmp10Result = null != channel;
   const layoutStyles = obj.getLayoutStyles(layout);
   if (tmp10Result) {

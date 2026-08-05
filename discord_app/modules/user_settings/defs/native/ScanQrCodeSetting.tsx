@@ -8,8 +8,8 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 apply = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.RC0kJz);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.RC0kJz);
   },
   parent: null,
   IconComponent: require("QrCodeIcon").QrCodeIcon,

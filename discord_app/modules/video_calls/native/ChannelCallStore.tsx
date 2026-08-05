@@ -55,8 +55,8 @@ export const resetFocus = function resetFocus() {
       callback(table[8]).batchUpdates(() => state.setState({ focus: false }));
     });
   } else {
-    batchUpdates /* batchUpdates */.batchUpdates(() => state.setState({ focus: true }));
-    const obj = batchUpdates /* batchUpdates */;
+    batchUpdates.batchUpdates(() => state.setState({ focus: true }));
+    const obj = batchUpdates;
   }
 };
 export const clearFocusTimer = function clearFocusTimer() {
@@ -97,12 +97,12 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
   if (currentEmbeddedActivity != null) {
     applicationId = currentEmbeddedActivity.applicationId;
   }
-  obj = useIsConnectedToVoiceChannel /* useIsConnectedToVoiceChannel */;
+  obj = useIsConnectedToVoiceChannel;
   const tmp7 = require;
   const tmp8 = applicationId;
   const items = [tmp8];
   const items1 = [applicationId];
-  stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
+  stateFromStores = initialize.useStateFromStores(items, () => {
     if (null != applicationId) {
       let UNLOCKED2 = applicationId.getOrientationLockStateForApp(tmp);
       if (UNLOCKED2 == null) {
@@ -153,6 +153,6 @@ export const useChannelCallOrientationHandlers = function useChannelCallOrientat
 };
 export const resetChannelCallStore = function resetChannelCallStore() {
   timeout.stop();
-  batchUpdates /* batchUpdates */.batchUpdates(() => state.setState(closure_9));
+  batchUpdates.batchUpdates(() => state.setState(closure_9));
 };
 export const useChannelCallStore = obj2;

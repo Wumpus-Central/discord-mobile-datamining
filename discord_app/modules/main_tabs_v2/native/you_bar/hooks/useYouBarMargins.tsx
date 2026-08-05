@@ -21,7 +21,7 @@ export const useYouBarHorizontalMargin = function useYouBarHorizontalMargin() {
 };
 export const useYouBarBottomMargin = function useYouBarBottomMargin() {
   const bottom = useSafeAreaInsets().bottom;
-  map /* map */;
+  map;
   if (tmp2) {
     const _Math2 = Math;
     let bound = Math.max(tmp5, bottom);
@@ -30,7 +30,7 @@ export const useYouBarBottomMargin = function useYouBarBottomMargin() {
       if (tmp3Result.isIOS()) {
         bound = closure_3;
       }
-      tmp3Result = PlatformTypes /* PlatformTypes */;
+      tmp3Result = PlatformTypes;
     }
     const _Math = Math;
     bound = Math.max(closure_5, bottom);

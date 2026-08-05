@@ -7,7 +7,7 @@ const result = require("asyncRequireImpl").fileFinishedImporting("modules/guilds
 export const showGuildsBarFolderModal = function showGuildsBarFolderModal(closure_0) {
   let obj = ModalActionCreators;
   obj = { folderId: closure_0 };
-  obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(15285, dependencyMap.paths), obj, GUILD_FOLDER_SETTINGS_MODAL_KEY);
+  obj.pushLazy(asyncRequireImpl(15285, dependencyMap.paths), obj, GUILD_FOLDER_SETTINGS_MODAL_KEY);
 };
 export const hideGuildsBarFolderModal = function hideGuildsBarFolderModal() {
   ModalActionCreators.popWithKey(GUILD_FOLDER_SETTINGS_MODAL_KEY);

@@ -5,8 +5,8 @@ import { SettingsAdvancedScreen } from "../../advanced/native/SettingsAdvancedSc
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["8/udY0"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["8/udY0"]);
   },
   parent: null,
   IconComponent: require("SettingsIcon").SettingsIcon,

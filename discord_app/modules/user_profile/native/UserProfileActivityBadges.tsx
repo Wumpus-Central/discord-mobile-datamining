@@ -20,7 +20,7 @@ const result = require("ME").fileFinishedImporting("modules/user_profile/native/
 export const TimestampBadge = function TimestampBadge(activity) {
   activity = activity.activity;
   const tmp = callback3();
-  let obj = useTimestampTickedNow /* useTimestampTickedNow */;
+  let obj = useTimestampTickedNow;
   const timestamps = activity.timestamps;
   let start;
   if (timestamps != null) {
@@ -88,7 +88,7 @@ export const PartyBadge = function PartyBadge(activity) {
   activity = activity.activity;
   if (!isEmbeddedActivity(activity)) {
     if (null != activity.party) {
-      const richGameStateBadgeText = calculateTimestampDurations /* calculateTimestampDurations */.getRichGameStateBadgeText(activity.state, activity.party);
+      const richGameStateBadgeText = calculateTimestampDurations.getRichGameStateBadgeText(activity.state, activity.party);
       let tmp8 = null;
       if (null != richGameStateBadgeText) {
         let obj = { style: null, children: null };
@@ -108,7 +108,7 @@ export const PartyBadge = function PartyBadge(activity) {
   return null;
 };
 export const EpisodeBadge = function EpisodeBadge(activity) {
-  let obj = calculateTimestampDurations /* calculateTimestampDurations */;
+  let obj = calculateTimestampDurations;
   const assets = activity.activity.assets;
   let large_text;
   if (assets != null) {

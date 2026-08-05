@@ -19,9 +19,9 @@ let closure_5 = createCacheKey.createStyles((arg0) => {
 const result = require("jsxProd").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumSoundboardFeatureUpsell.tsx");
 
 export default function PremiumSoundboardFeatureUpsell(shouldShow) {
-  let obj = { style: callback(keys /* keys */.EXPRESSION_FOOTER_HEIGHT + useSafeAreaInsets().bottom).container, children: null };
+  let obj = { style: callback(keys.EXPRESSION_FOOTER_HEIGHT + useSafeAreaInsets().bottom).container, children: null };
   obj = { shouldShow: shouldShow.shouldShow, featureName: null };
-  obj[1] = EntitlementFeatureNames /* EntitlementFeatureNames */.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
+  obj[1] = EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE;
   obj[1] = jsx(PremiumFeatureUpsellPill, { shouldShow: shouldShow.shouldShow, featureName: null });
   return <View shouldShow={arg0.shouldShow} featureName={null} />;
 };

@@ -15,18 +15,18 @@ let metroImportAll;
 const require = arg1;
 function _transformClientActionToApiAction(type) {
   const obj = { type: type.type, metadata: null };
-  obj[1] = _transformMetadataToCamelCase /* _transformMetadataToCamelCase */._transformMetadataToSnakeCase(type.metadata);
+  obj[1] = _transformMetadataToCamelCase._transformMetadataToSnakeCase(type.metadata);
   return obj;
 }
 function _transformClientRuleToApiRule(id) {
-  let obj = _transformMetadataToCamelCase /* _transformMetadataToCamelCase */;
+  let obj = _transformMetadataToCamelCase;
   const result = obj._transformMetadataToSnakeCase(id.triggerMetadata);
   if (null != result) {
     delete tmp2[tmp];
   }
   obj = { id: id.id, name: id.name, guild_id: id.guildId, event_type: id.eventType, trigger_type: id.triggerType, trigger_metadata: result, actions: null, enabled: null, creator_id: null, position: null, exempt_channels: null, exempt_roles: null };
   const actions = id.actions;
-  const found = actions.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = actions.filter(isDiscordFrontendDevelopment.isNotNullish);
   obj[6] = found.map(_transformClientActionToApiAction);
   ({ enabled: obj2[7], creatorId: obj2[8], position: obj2[9] } = id);
   let exemptChannels = id.exemptChannels;
@@ -43,7 +43,7 @@ function _transformClientRuleToApiRule(id) {
 }
 function _transformApiActionToClientAction(type) {
   const obj = { type: type.type, metadata: null };
-  obj[1] = _transformMetadataToCamelCase /* _transformMetadataToCamelCase */._transformMetadataToCamelCase(type.metadata);
+  obj[1] = _transformMetadataToCamelCase._transformMetadataToCamelCase(type.metadata);
   return obj;
 }
 function _transformApiRuletoClientRule(id) {
@@ -54,16 +54,16 @@ function _transformApiRuletoClientRule(id) {
     id = obj.fromTimestamp(Date.now());
   }
   obj = { id, name: id.name, guildId: id.guild_id, eventType: id.event_type, triggerType: id.trigger_type, triggerMetadata: null, actions: null, enabled: null, creatorId: null, position: null, exemptChannels: null, exemptRoles: null };
-  obj[5] = _transformMetadataToCamelCase /* _transformMetadataToCamelCase */._transformMetadataToCamelCase(id.trigger_metadata);
+  obj[5] = _transformMetadataToCamelCase._transformMetadataToCamelCase(id.trigger_metadata);
   const actions = id.actions;
-  const found = actions.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = actions.filter(isDiscordFrontendDevelopment.isNotNullish);
   obj[6] = found.map(_transformApiActionToClientAction);
   ({ enabled: obj2[7], creator_id: obj2[8], position: obj2[9] } = id);
   let exempt_channels = id.exempt_channels;
   if (exempt_channels == null) {
     exempt_channels = [];
   }
-  const obj3 = _transformMetadataToCamelCase /* _transformMetadataToCamelCase */;
+  const obj3 = _transformMetadataToCamelCase;
   obj[10] = new Set(exempt_channels);
   let exempt_roles = id.exempt_roles;
   if (exempt_roles == null) {

@@ -17,7 +17,7 @@ function renderSuccessIcon() {
   const obj = { size: "sm", color: null, secondaryColor: null };
   obj[1] = Themes.colors.STATUS_POSITIVE;
   obj[2] = Themes.colors.WHITE;
-  return callback(CircleCheckIcon /* CircleCheckIcon */.CircleCheckIcon, obj);
+  return callback(CircleCheckIcon.CircleCheckIcon, obj);
 }
 function StoreGuildIcon(guildId) {
   guildId = guildId.guildId;

@@ -47,8 +47,8 @@ function DevToolsContentSortButtons(arg0) {
   }
   items[1] = start;
   obj[2] = items;
-  obj[5] = closure_10(ArrowSmallUpIcon /* ArrowSmallUpIcon */.ArrowSmallUpIcon, {});
-  const items1 = [closure_10(PressableBase /* PressableBase */.PressableOpacity, obj), ];
+  obj[5] = closure_10(ArrowSmallUpIcon.ArrowSmallUpIcon, {});
+  const items1 = [closure_10(PressableBase.PressableOpacity, obj), ];
   obj = {
     onPress() {
       const result = outer1_0(outer1_2[14]).triggerHapticFeedback(outer1_0(outer1_2[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
@@ -67,8 +67,8 @@ function DevToolsContentSortButtons(arg0) {
   }
   items2[1] = end;
   obj[2] = items2;
-  obj[5] = closure_10(ArrowSmallDownIcon /* ArrowSmallDownIcon */.ArrowSmallDownIcon, {});
-  items1[1] = closure_10(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[5] = closure_10(ArrowSmallDownIcon.ArrowSmallDownIcon, {});
+  items1[1] = closure_10(PressableBase.PressableOpacity, obj);
   obj[1] = items1;
   return closure_11(closure_5, obj);
 }
@@ -88,9 +88,9 @@ const memoResult = importAllResult.memo((arg0) => {
   let value;
   ({ label, value } = arg0);
   const obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
-  const items = [label, callback2(Text /* Text */.Text, { variant: "text-xs/semibold", children: value })];
+  const items = [label, callback2(Text.Text, { variant: "text-xs/semibold", children: value })];
   obj[2] = items;
-  return callback3(Text /* Text */.Text, obj);
+  return callback3(Text.Text, obj);
 });
 const obj2 = { backgroundColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, width: require("Themes").space.PX_32, height: require("Themes").space.PX_32, borderRadius: require("Themes").radii.round, justifyContent: "center", alignItems: "center" };
 const memoResult1 = importAllResult.memo(function DevToolsContent(arg0) {

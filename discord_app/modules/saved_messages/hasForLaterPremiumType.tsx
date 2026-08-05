@@ -9,9 +9,9 @@ const result = require("isPremiumAtLeast").fileFinishedImporting("modules/saved_
 
 export default function hasForLaterPremiumType() {
   currentUser = currentUser.getCurrentUser();
-  return isPremiumAtLeast /* isPremiumAtLeast */.isPremium(currentUser, PremiumTypes.TIER_2);
+  return isPremiumAtLeast.isPremium(currentUser, PremiumTypes.TIER_2);
 };
 export const useHasForLaterPremiumType = function useHasForLaterPremiumType() {
   const items = [mergeGuildAvatar];
-  return initialize /* initialize */.useStateFromStores(items, () => callback(table[2]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2));
+  return initialize.useStateFromStores(items, () => callback(table[2]).isPremium(currentUser.getCurrentUser(), TIER_2.TIER_2));
 };

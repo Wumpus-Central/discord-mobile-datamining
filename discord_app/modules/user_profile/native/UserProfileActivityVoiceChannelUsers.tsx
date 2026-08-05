@@ -46,8 +46,8 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
   ({ channel: require, onPressUser: importDefault } = arg0);
   ({ users, onBack } = arg0);
   let obj = { title: null, onBack: null, scrollable: true, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["3xHUJ+"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["3xHUJ+"]);
   obj[1] = onBack;
   obj = {
     data: users,
@@ -67,7 +67,7 @@ export default function UserProfileActivityVoiceChannelUsers(arg0) {
       }, item.id);
     }
   };
-  obj[3] = jsx(UserProfileStackedActionSheet /* UserProfileStackedActionSheet */.UserProfileStackedActionSheetList, {
+  obj[3] = jsx(UserProfileStackedActionSheet.UserProfileStackedActionSheetList, {
     data: users,
     keyExtractor(id) {
       return id.id;

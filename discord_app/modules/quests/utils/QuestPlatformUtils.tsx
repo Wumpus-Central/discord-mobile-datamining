@@ -21,7 +21,7 @@ function supportedConsoles(quest) {
   for (const item10013 of keys) {
     let tmp2 = require;
     let tmp3 = dependencyMap;
-    if (set /* set */.FirstPartyQuestTaskTypes.PLAY_ON_XBOX === item10013) {
+    if (set.FirstPartyQuestTaskTypes.PLAY_ON_XBOX === item10013) {
       let tmp6 = constants2;
       let arr = items.push(constants2.XBOX);
     } else if (tmp2(5135).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION === item10013) {
@@ -74,7 +74,7 @@ function getDirectAppStoreLinkFromCta(cta) {
   combined1 = combined2;
 }
 function getInlineStoreParamsFromCta(cta) {
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isAndroid()) {
     const android = cta.android;
     let androidAppId;
@@ -111,7 +111,7 @@ function getInlineStoreParamsFromCta(cta) {
 let result = require("getApplicationIdsByTaskTypes").fileFinishedImporting("modules/quests/utils/QuestPlatformUtils.tsx");
 
 export const supportedTaskPlatforms = function supportedTaskPlatforms(closure_0) {
-  let obj = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+  let obj = getApplicationIdsByTaskTypes;
   obj = { quest: closure_0 };
   let hasPlayOnDesktopTaskResult = obj.hasPlayOnDesktopTask(obj);
   if (!hasPlayOnDesktopTaskResult) {
@@ -125,7 +125,7 @@ export const supportedTaskPlatforms = function supportedTaskPlatforms(closure_0)
     hasPlayOnDesktopTaskResult = tmpResult.hasAchievementInGameTask(closure_0);
   }
   const items = [];
-  const tmpResult1 = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+  const tmpResult1 = getApplicationIdsByTaskTypes;
   if (hasPlayOnDesktopTaskResult) {
     items.push(QuestTaskPlatform.DESKTOP);
   }
@@ -136,8 +136,8 @@ export const supportedTaskPlatforms = function supportedTaskPlatforms(closure_0)
 };
 export { supportedConsoles };
 export const isQuestSupportedOnWeb = function isQuestSupportedOnWeb(userStatus) {
-  let hasWatchVideoTasksResult = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */.hasWatchVideoTasks(userStatus);
-  const obj = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+  let hasWatchVideoTasksResult = getApplicationIdsByTaskTypes.hasWatchVideoTasks(userStatus);
+  const obj = getApplicationIdsByTaskTypes;
   if (!hasWatchVideoTasksResult) {
     hasWatchVideoTasksResult = obj2.hasPlayActivityTask(userStatus);
   }
@@ -154,8 +154,8 @@ export const getPlatformTypeForHintMessage = function getPlatformTypeForHintMess
 };
 export const openAuthorizationConnectionModal = function openAuthorizationConnectionModal(platformType, ctaContent) {
   const quest = platformType.quest;
-  let obj = apexExperiment /* apexExperiment */;
-  if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment /* apexExperiment */.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")) {
+  let obj = apexExperiment;
+  if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")) {
     let tmpResult = tmp(9435);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
     obj[0] = tmp(9439).AdUserActionType.CLICK_INTERNAL;
@@ -181,9 +181,9 @@ export const getExpiredCredentialsHintMessage = function getExpiredCredentialsHi
     PLAYSTATION = constants2.PLAYSTATION;
   }
   if (PLAYSTATION === tmp.XBOX) {
-    let iDiwby = getSystemLocale /* getSystemLocale */.t["mytEv+"];
+    let iDiwby = getSystemLocale.t["mytEv+"];
   } else {
-    iDiwby = getSystemLocale /* getSystemLocale */.t.iDiwby;
+    iDiwby = getSystemLocale.t.iDiwby;
   }
   return iDiwby;
 };
@@ -384,8 +384,8 @@ export const openAdGameLinkDirectly = function openAdGameLinkDirectly(adContentI
 };
 export const openConsoleConnectionSettings = function openConsoleConnectionSettings(quest, arg1) {
   quest = quest.quest;
-  let obj = apexExperiment /* apexExperiment */;
-  if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment /* apexExperiment */.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")) {
+  let obj = apexExperiment;
+  if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")) {
     let tmpResult = tmp(9435);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null };
     obj[0] = tmp(9439).AdUserActionType.CLICK_INTERNAL;
@@ -400,12 +400,12 @@ export const openConsoleConnectionSettings = function openConsoleConnectionSetti
     ({ content: obj3[1], position: obj3[2], ctaContent: obj3[3], impressionId: obj3[4], sourceQuestContent: obj3[5] } = arg1);
     const result = tmpResult.trackQuestContentClicked(obj);
   }
-  openUserSettings /* openUserSettings */.openUserSettings({ screen: constants3.CONNECTIONS });
+  openUserSettings.openUserSettings({ screen: constants3.CONNECTIONS });
 };
 export const openAddConsoleConnectionModal = function openAddConsoleConnectionModal(quest, arg1) {
   quest = quest.quest;
-  let obj = apexExperiment /* apexExperiment */;
-  if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment /* apexExperiment */.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")) {
+  let obj = apexExperiment;
+  if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")) {
     let tmpResult = tmp(9435);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null, questContentRowIndex: null };
     obj[0] = tmp(9439).AdUserActionType.CLICK_INTERNAL;
@@ -438,8 +438,8 @@ export const openAddConsoleConnectionModal = function openAddConsoleConnectionMo
 };
 export const openSingleConsoleConnectionModal = function openSingleConsoleConnectionModal(quest, arg1, platformType) {
   quest = quest.quest;
-  let obj = apexExperiment /* apexExperiment */;
-  if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment /* apexExperiment */.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")) {
+  let obj = apexExperiment;
+  if (obj.shouldMigrateToAdAnalyticsInterface(apexExperiment.AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")) {
     let tmpResult = tmp(9435);
     obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null, questContentPosition: null, questContentRowIndex: null };
     obj[0] = tmp(9439).AdUserActionType.CLICK_INTERNAL;

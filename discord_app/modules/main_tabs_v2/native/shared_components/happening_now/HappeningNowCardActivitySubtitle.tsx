@@ -44,7 +44,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     }
     const obj = { lineClamp: 1, children: null };
     obj[1] = tmp3;
-    return jsx(HAPPENING_NOW_CARD_MARGIN_RIGHT /* HAPPENING_NOW_CARD_MARGIN_RIGHT */.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
+    return jsx(HAPPENING_NOW_CARD_MARGIN_RIGHT.HappeningNowCardSubtitle, { lineClamp: 1, children: null });
   }
   if (null != activity.stream) {
     if (null != activity) {
@@ -52,8 +52,8 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
         let name3 = activity.name;
       }
     }
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    name3 = intl.string(getSystemLocale /* getSystemLocale */.t.eXan7B);
+    const intl = getSystemLocale.intl;
+    name3 = intl.string(getSystemLocale.t.eXan7B);
   } else {
     let name;
     if (activity != null) {

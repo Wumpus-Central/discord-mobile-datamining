@@ -5,9 +5,9 @@ import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx"
 let result = require("module_10384").fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
 export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {
-  let obj = trackHeartbeat /* trackHeartbeat */;
+  let obj = trackHeartbeat;
   const activeSessionUnsafe = obj.getActiveSessionUnsafe();
-  const superProperties = encodeProperties /* encodeProperties */.getSuperProperties();
+  const superProperties = encodeProperties.getSuperProperties();
   let uuid;
   if (activeSessionUnsafe != null) {
     uuid = activeSessionUnsafe.uuid;
@@ -20,7 +20,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   if (uuid !== prop) {
     obj.client_heartbeat_session_id = uuid;
   }
-  const obj2 = encodeProperties /* encodeProperties */;
+  const obj2 = encodeProperties;
   const tmp = require;
   const state = DiscordAppState.native.getState();
   let client_app_state;

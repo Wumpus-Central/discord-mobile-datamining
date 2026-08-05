@@ -19,7 +19,7 @@ export default function GuildPowerupsImage(style) {
   }
   style = style.style;
   const tmp = callback();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [maybeApplyNoTextColorForLightCustomTheme];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (obj2.isAndroid()) {

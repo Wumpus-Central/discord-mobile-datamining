@@ -13,7 +13,7 @@ export default function useKeyboardType() {
 export const getKeyboardContextForType = function getKeyboardContextForType(arg0) {
   let DEFAULT_APP_ENTRY_KEY = arg1;
   if (arg1 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
   }
   return computeEntryState.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardContexts[arg0];
 };
@@ -25,14 +25,14 @@ export const useKeyboardContextForType = function useKeyboardContextForType(SYST
 export const getKeyboardType = function getKeyboardType(arg0) {
   let DEFAULT_APP_ENTRY_KEY = arg0;
   if (arg0 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
   }
   return computeEntryState.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardType;
 };
 export const getKeyboardTypePrevious = function getKeyboardTypePrevious() {
   let DEFAULT_APP_ENTRY_KEY = arg0;
   if (arg0 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
   }
   return computeEntryState.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardTypePrevious;
 };

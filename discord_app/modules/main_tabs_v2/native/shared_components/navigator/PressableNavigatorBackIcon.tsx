@@ -19,7 +19,7 @@ let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles((arg0) => {
   let obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
-  obj = { position: "absolute", minWidth: Button /* Button */.BADGE_SIZE, height: Button /* Button */.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
+  obj = { position: "absolute", minWidth: Button.BADGE_SIZE, height: Button.BADGE_SIZE, top: 10, left: 8, flexShrink: 0, flexGrow: 1, zIndex: 100 };
   obj[0] = obj;
   obj = { backgroundColor: Themes.colors.PANEL_BG };
   obj[1] = obj;

@@ -226,7 +226,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (2 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let Timestamp = now /* now */.Timestamp;
+        let Timestamp = now.Timestamp;
         let tmp24 = Timestamp;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -273,7 +273,7 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(disclosureType,
     const tagResult = tag.tag(1, 01307__.WireType.Varint);
   }
   if (disclosureType.ackedAt) {
-    const Timestamp = now /* now */.Timestamp;
+    const Timestamp = now.Timestamp;
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
     const joined = Timestamp.internalBinaryWrite(disclosureType.ackedAt, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Timestamp.internalBinaryWrite(disclosureType.ackedAt, tag.tag(2, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

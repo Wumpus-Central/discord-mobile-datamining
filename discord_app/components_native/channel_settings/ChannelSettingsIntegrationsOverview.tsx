@@ -59,9 +59,9 @@ export default function ConnectedChannelSettingsIntegrationsOverview(arg0) {
   let require;
   ({ channelId: require, canManageWebhooks, canUnlinkLobby } = arg0);
   let importDefault;
-  let obj = useNavigation /* useNavigation */;
+  let obj = useNavigation;
   importDefault = obj.useNavigation();
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_3.getChannel(closure_0));
   let tmp6Result = null;

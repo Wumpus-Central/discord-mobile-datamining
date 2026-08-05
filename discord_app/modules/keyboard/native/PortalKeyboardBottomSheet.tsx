@@ -21,13 +21,13 @@ function PortalKeyboardBottomSheetHeader(arg0) {
   let style;
   ({ style, handleCollapse } = arg0);
   const tmp = callback2();
-  let obj = SCREEN_READER_ENABLED_GETTER /* SCREEN_READER_ENABLED_GETTER */;
+  let obj = SCREEN_READER_ENABLED_GETTER;
   const items = [tmp.headerContainer, , ];
   let prop;
   if (obj.useIsScreenReaderEnabled()) {
     prop = tmp.headerContainerScreenReaderEnabled;
   }
-  obj = { style: items, children: tmp4(TwinButtons /* TwinButtons */.ActionSheetDragHandle, { onPress: handleCollapse }) };
+  obj = { style: items, children: tmp4(TwinButtons.ActionSheetDragHandle, { onPress: handleCollapse }) };
   items[1] = prop;
   items[2] = style;
   return closure_7(closure_5, obj);

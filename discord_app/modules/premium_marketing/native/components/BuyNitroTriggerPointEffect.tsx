@@ -4,6 +4,6 @@ import { useCommonTriggerPoint } from "../../../experiments/trigger_points/useCo
 const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroTriggerPointEffect.tsx");
 
 export const BuyNitroTriggerPointEffect = function BuyNitroTriggerPointEffect() {
-  const commonTriggerPoint = useCommonTriggerPoint /* useCommonTriggerPoint */.useCommonTriggerPoint(commonTriggerPointConfiguration /* commonTriggerPointConfiguration */.OpenNitroTriggerPoint);
+  const commonTriggerPoint = useCommonTriggerPoint.useCommonTriggerPoint(commonTriggerPointConfiguration.OpenNitroTriggerPoint);
   return null;
 };

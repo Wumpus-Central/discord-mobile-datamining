@@ -230,7 +230,7 @@ prototype["renderCategories"] = function renderCategories() {
   if (mapped.length > 0) {
     const obj = { hasIcons: false, children: null };
     obj[1] = mapped;
-    tmp4 = callback3(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+    tmp4 = callback3(TableRowGroupTitle.TableRowGroup, obj);
   }
   return tmp4;
 };

@@ -18,7 +18,7 @@ export default function useWindowSizeClassifier() {
 };
 export const WindowSizeClassifier = obj;
 export const getWindowSizeClassifier = function getWindowSizeClassifier() {
-  const obj = useBaseAppContainerDimensions /* useBaseAppContainerDimensions */;
+  const obj = useBaseAppContainerDimensions;
   const width = obj.getBaseAppContainerDimensions().width;
   if (width <= 360) {
     let XLARGE = obj.SMALL;

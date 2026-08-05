@@ -21,7 +21,7 @@ function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
       return key;
     }
   }
-  const BACKTICK_CODES = normalizeKey /* normalizeKey */.BACKTICK_CODES;
+  const BACKTICK_CODES = normalizeKey.BACKTICK_CODES;
   if (BACKTICK_CODES.has(keyCode)) {
     let tmp2Result = tmp2(13072);
     const layoutMap = tmp2Result.getLayoutMap();
@@ -139,7 +139,7 @@ function keyToCode(toLocaleLowerCase) {
       if (null != tmp17) {
         return tmp17;
       } else {
-        const keyboardEventShapeFromKey = normalizeKey /* normalizeKey */.getKeyboardEventShapeFromKey(toLocaleLowerCase);
+        const keyboardEventShapeFromKey = normalizeKey.getKeyboardEventShapeFromKey(toLocaleLowerCase);
         let keyCode = null;
         if (null != keyboardEventShapeFromKey) {
           keyCode = keyboardEventShapeFromKey.keyCode;
@@ -158,7 +158,7 @@ function keyToCode(toLocaleLowerCase) {
           MACOS2 = tmp8Result.isWindows() ? tmp10.WINDOWS : tmp10.BROWSER;
         }
       }
-      obj4 = set /* set */;
+      obj4 = set;
     }
   } else {
     if (obj.isLinux()) {
@@ -172,7 +172,7 @@ function keyToCode(toLocaleLowerCase) {
         MACOS = tmpResult.isWindows() ? tmp3.WINDOWS : tmp3.BROWSER;
       }
     }
-    obj = set /* set */;
+    obj = set;
   }
 }
 function getKeyConversionForBrowser(str) {
@@ -280,7 +280,7 @@ function codeToKey(items1) {
   if (null != tmp4) {
     return getCodeToKeyLanguageCorrection(tmp2, tmp4, tmp3);
   } else {
-    const keyboardEventShapeFromKeycode = normalizeKey /* normalizeKey */.getKeyboardEventShapeFromKeycode(tmp2);
+    const keyboardEventShapeFromKeycode = normalizeKey.getKeyboardEventShapeFromKeycode(tmp2);
     let tmp8 = null;
     if (null != keyboardEventShapeFromKeycode) {
       tmp8 = getCodeToKeyLanguageCorrection(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp3);
@@ -313,7 +313,7 @@ export const getRawCodeFromKey = function getRawCodeFromKey(arg0) {
         MACOS = tmpResult.isWindows() ? tmp3.WINDOWS : tmp3.BROWSER;
       }
     }
-    obj = set /* set */;
+    obj = set;
   }
 };
 export { getCodeToKeyLanguageCorrection };
@@ -543,7 +543,7 @@ export const toString = function toString(arr) {
       obj4 = callback(500);
     }
   });
-  const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+  const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
   if (flag) {
     const appVersion = global.navigator.appVersion;
     let mapped1 = found;

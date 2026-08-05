@@ -30,11 +30,11 @@ export const ExclusiveBadge = function ExclusiveBadge() {
   let obj = { style: tmp.exclusiveBadge, children: null };
   obj = { size: "xs", color: null };
   obj[1] = Themes.colors.WHITE;
-  const items = [callback(ClydeIcon /* ClydeIcon */.ClydeIcon, obj), ];
+  const items = [callback(ClydeIcon.ClydeIcon, obj), ];
   obj = { variant: "text-xs/bold", color: "text-overlay-light", style: tmp.exclusiveBadgeText, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.RiDMFz);
-  items[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.RiDMFz);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

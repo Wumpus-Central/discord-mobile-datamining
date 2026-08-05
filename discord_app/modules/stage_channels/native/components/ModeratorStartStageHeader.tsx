@@ -22,7 +22,7 @@ const memoResult = require("noop").memo((channel) => {
     speaker = tmp3.speaker;
   }
   let obj = { style: callback2().header, pointerEvents: "box-none", children: null };
-  const items = [callback(HideStageChannelCallIcon /* HideStageChannelCallIcon */.HideStageChannelCallIcon, { channel }), callback(HideStageChannelCallIcon /* HideStageChannelCallIcon */.StageChannelCallHeader, { channel }), , ];
+  const items = [callback(HideStageChannelCallIcon.HideStageChannelCallIcon, { channel }), callback(HideStageChannelCallIcon.StageChannelCallHeader, { channel }), , ];
   if (speaker) {
     obj = { channelId: null };
     obj[0] = channel.id;
@@ -30,7 +30,7 @@ const memoResult = require("noop").memo((channel) => {
   }
   items[2] = speaker;
   obj = { channelId: channel.id };
-  items[3] = callback(HideStageChannelCallIcon /* HideStageChannelCallIcon */.StageInviteButton, obj);
+  items[3] = callback(HideStageChannelCallIcon.StageInviteButton, obj);
   obj[2] = items;
   return closure_5(View, obj);
 });

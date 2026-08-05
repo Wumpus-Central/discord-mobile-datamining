@@ -298,7 +298,7 @@ prototype["parseRangeHeader"] = function parseRangeHeader(str) {
   return tmp2;
 };
 prototype["retryOpts"] = function retryOpts() {
-  if (this.item.platform === cancel /* cancel */.UploadPlatform.REACT_NATIVE) {
+  if (this.item.platform === cancel.UploadPlatform.REACT_NATIVE) {
     let obj = { timeout: null, backoff: null, retries: 12 };
     obj[0] = set.Millis.HOUR;
     let tmp8 = fails;
@@ -315,7 +315,7 @@ prototype["retryOpts"] = function retryOpts() {
 };
 prototype["createAttachmentUrlRetryOpts"] = function createAttachmentUrlRetryOpts() {
   const self = this;
-  if (this.item.platform === cancel /* cancel */.UploadPlatform.REACT_NATIVE) {
+  if (this.item.platform === cancel.UploadPlatform.REACT_NATIVE) {
     let obj = { timeout: null, backoff: null, retries: 8 };
     obj = { response: null, deadline: null };
     obj[0] = 30 * set.Millis.SECOND;
@@ -334,7 +334,7 @@ prototype["createAttachmentUrlRetryOpts"] = function createAttachmentUrlRetryOpt
 prototype["supportsResume"] = function supportsResume() {
   let _libdiscoreEnabled = this._libdiscoreEnabled;
   if (!_libdiscoreEnabled) {
-    _libdiscoreEnabled = this.item.platform !== cancel /* cancel */.UploadPlatform.REACT_NATIVE;
+    _libdiscoreEnabled = this.item.platform !== cancel.UploadPlatform.REACT_NATIVE;
   }
   return _libdiscoreEnabled;
 };

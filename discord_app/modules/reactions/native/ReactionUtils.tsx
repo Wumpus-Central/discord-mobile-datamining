@@ -30,12 +30,12 @@ let result = require("handleConnectionOpen").fileFinishedImporting("modules/reac
 export const handleOutOfSuperReactions = function handleOutOfSuperReactions(arg0) {
   const currentUser = authStore.getCurrentUser();
   if (null != currentUser) {
-    let obj = getPremiumPlanItem /* getPremiumPlanItem */;
+    let obj = getPremiumPlanItem;
     let openLazyResult;
     if (!obj.isPremium(currentUser)) {
       obj = { onDismiss: null };
       obj[0] = arg0;
-      openLazyResult = ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(8424, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
+      openLazyResult = ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(8424, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
       const obj2 = ACTION_SHEET_HEIGHT_HALF;
     }
     return openLazyResult;
@@ -156,14 +156,14 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
     obj1[2] = isPoll.emoji;
     const obj6 = ACTION_SHEET_HEIGHT_HALF;
     const merged2 = Object.assign(merged);
-    obj6.openLazy(asyncRequireImpl /* asyncRequireImpl */(8702, dependencyMap.paths), "MessageReactions", obj1);
+    obj6.openLazy(asyncRequireImpl(8702, dependencyMap.paths), "MessageReactions", obj1);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
 };
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { messageId: id2, channelId: id, emoji };
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(12439, dependencyMap.paths), "MessagePreviewReactions", obj);
+  obj.openLazy(asyncRequireImpl(12439, dependencyMap.paths), "MessagePreviewReactions", obj);
 };
 export const ADD_REACTION_ICONS = obj;
 export const ADD_REACTION_ICON_COMPONENTS = obj;

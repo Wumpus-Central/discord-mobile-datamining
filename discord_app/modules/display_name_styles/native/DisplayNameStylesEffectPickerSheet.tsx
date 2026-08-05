@@ -25,13 +25,13 @@ function EffectTile(arg0) {
   ({ effectId, selected, showNewDot } = arg0);
   ({ userId, onClick } = arg0);
   const tmp = createCacheKey();
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  let OpWJ3f = DISPLAY_NAME_STYLES_EFFECT_NAMES /* DISPLAY_NAME_STYLES_EFFECT_NAMES */.DISPLAY_NAME_STYLES_EFFECT_NAMES[effectId];
+  const intl = getSystemLocale.intl;
+  let OpWJ3f = DISPLAY_NAME_STYLES_EFFECT_NAMES.DISPLAY_NAME_STYLES_EFFECT_NAMES[effectId];
   if (OpWJ3f == null) {
     OpWJ3f = messagesProxy.OpWJ3f;
   }
   const stringResult = intl.string(OpWJ3f);
-  const displayNameStylesEffectConfig = DISPLAY_NAME_STYLES_EFFECT_NAMES /* DISPLAY_NAME_STYLES_EFFECT_NAMES */.useDisplayNameStylesEffectConfig(effectId);
+  const displayNameStylesEffectConfig = DISPLAY_NAME_STYLES_EFFECT_NAMES.useDisplayNameStylesEffectConfig(effectId);
   let hasItem = FLYWHEEL_EFFECTS.includes(effectId);
   let obj = { onPress: onClick, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, children: null };
   let combined = stringResult;
@@ -50,9 +50,9 @@ function EffectTile(arg0) {
   items[1] = selected;
   const obj1 = { userId, userName: stringResult, effectDisplayType: null, pendingDisplayNameStyles: null, style: null, variant: "text-md/semibold" };
   const tmp12 = closure_9;
-  const tmp2Result = DISPLAY_NAME_STYLES_EFFECT_NAMES /* DISPLAY_NAME_STYLES_EFFECT_NAMES */;
+  const tmp2Result = DISPLAY_NAME_STYLES_EFFECT_NAMES;
   const tmp9 = closure_6;
-  obj1[2] = DisplayNameStyleColorPreset /* DisplayNameStyleColorPreset */.EffectDisplayType.STATIC;
+  obj1[2] = DisplayNameStyleColorPreset.EffectDisplayType.STATIC;
   obj1[3] = displayNameStylesEffectConfig.previewStyles;
   obj1[4] = tmp.effectName;
   const items1 = [closure_8(AVERAGE_FONT_WIDTH_RATIO, obj1), , ];

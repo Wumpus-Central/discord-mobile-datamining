@@ -35,13 +35,13 @@ function NavigationBar(guild) {
     ({ contentContainer: arr[0], contentTopSpacing: arr[1] } = tmp);
     obj[0] = items;
     obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.cpT0Cq);
     obj[2] = closeModal;
     obj = { source: null };
     obj[0] = registerAsset;
-    obj[3] = callback2(Button /* Button */.Icon, obj);
-    obj[1] = callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
+    obj[3] = callback2(Button.Icon, obj);
+    obj[1] = callback2(PressableBase.PressableOpacity, obj);
     tmp2 = callback2(closure_7, obj);
   }
   return tmp2;
@@ -53,7 +53,7 @@ function HeaderIcon(guild) {
   } else {
     const obj = { style: null, size: null, guild: null };
     obj[0] = tmp.guildIcon;
-    obj[1] = GuildIconSizes /* GuildIconSizes */.GuildIconSizes.LARGE;
+    obj[1] = GuildIconSizes.GuildIconSizes.LARGE;
     obj[2] = guild;
     tmp7 = callback2(GuildIconSizes, obj);
     const tmp5 = GuildIconSizes;

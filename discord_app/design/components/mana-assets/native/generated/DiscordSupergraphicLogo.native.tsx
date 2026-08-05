@@ -28,7 +28,7 @@ export const DiscordSupergraphicLogo = function DiscordSupergraphicLogo(color) {
   if (num3 === undefined) {
     num3 = 1;
   }
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(ICON_STRONG);
   if (null != token) {
     obj = { tintColor: null };

@@ -59,7 +59,7 @@ function isGuildEventInvitable(guildEvent) {
     }
     const guild = obj3.getGuild(guildEvent.guild_id);
     const stageInstanceByChannel = obj4.getStageInstanceByChannel(channel_id);
-    const obj5 = canViewInviteModal /* canViewInviteModal */;
+    const obj5 = canViewInviteModal;
     let canViewInviteModalResult = obj5.canViewInviteModal(getUncachedChannelPermissions, guild, defaultChannel, stageInstanceByChannel);
     if (canViewInviteModalResult) {
       let tmp17 = null != defaultChannel;

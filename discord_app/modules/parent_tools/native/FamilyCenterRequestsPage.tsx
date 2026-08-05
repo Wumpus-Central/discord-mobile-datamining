@@ -26,11 +26,11 @@ let closure_6;
 let metroImportAll;
 const require = arg1;
 function FamilyCenterMaxConnectionsBlurb() {
-  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
+  let obj = useUserIdsForLinkStatus;
   const hasMaxConnections = obj.useHasMaxConnections();
   const tmp = createCacheKey();
   const tmp5 = importDefault;
-  useAgeSpecificText /* useAgeSpecificText */;
+  useAgeSpecificText;
   const intl = tmp2(1236).intl;
   intl.formatToPlainString(tmp5(2285)["1/PzIj"], { maxConnections: useIsInAdultAgeGroup() ? closure_5 : closure_6 });
   const intl2 = tmp2(1236).intl;
@@ -47,9 +47,9 @@ function FamilyCenterMaxConnectionsBlurb() {
 }
 function FamilyCenterHelpLineInfo() {
   const tmp = callback3();
-  let obj = set /* set */;
+  let obj = set;
   const shouldShowHelplineLink = obj.useShouldShowHelplineLink();
-  set /* set */;
+  set;
   if (shouldShowHelplineLink) {
     const intl2 = tmp2(1236).intl;
     let formatResult = intl2.format(messagesProxy["KOwsf/"], { helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line" });
@@ -106,6 +106,6 @@ export default function FamilyCenterRequestsPage() {
   const items = [callback(FamilyCenterParentalConsentNotice, {}), callback(FamilyCenterLinkingBannerParentContent, {}), callback(FamilyCenterAcceptedLinkRow, {}), callback(FamilyCenterPendingLinkRow, {}), callback(FamilyCenterMaxConnectionsBlurb, {}), callback(FamilyCenterHelpLineInfo, {})];
   obj[1] = items;
   obj[1] = callback2(closure_3, obj);
-  obj[1] = callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  obj[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
   return callback(closure_4, obj);
 };

@@ -21,6 +21,6 @@ export const TableRowArrow = function TableRowArrow() {
   const tmp3 = useIsMobileVisualRefreshExperimentEnabled("TableRowArrow");
   const tmp5 = jsx;
   obj[2] = tmp(tmp3 ? 5323 : 5324);
-  obj[3] = IconSizes /* IconSizes */.IconSizes.CUSTOM;
+  obj[3] = IconSizes.IconSizes.CUSTOM;
   return tmp5(IconSizes, obj);
 };

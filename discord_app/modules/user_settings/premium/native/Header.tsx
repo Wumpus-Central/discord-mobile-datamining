@@ -23,8 +23,8 @@ export default function Header(style) {
   const tmp4 = useTheme();
   const tmp5 = closure_5;
   const tmp6 = View;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.lpNrPu);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.lpNrPu);
   const tmp8 = preload;
   if (obj3.isThemeDark(tmp4)) {
     let tmp2Result = tmp2(7671);
@@ -35,8 +35,8 @@ export default function Header(style) {
   const items1 = [closure_4(tmp8, obj), ];
   obj = { style: tmp.headerText, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl2 = tmp9(1236).intl;
-  obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.SD5MJW);
-  items1[1] = closure_4(Text /* Text */.Text, obj);
+  obj[3] = intl2.string(getSystemLocale.t.SD5MJW);
+  items1[1] = closure_4(Text.Text, obj);
   obj[1] = items1;
   return tmp5(tmp6, obj);
 };

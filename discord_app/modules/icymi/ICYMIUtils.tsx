@@ -414,9 +414,9 @@ let result = require("createChannelRecord").fileFinishedImporting("modules/icymi
 export { generateHydrationId };
 export const ICYMICustomScore = obj;
 export const isGuildItem = function isGuildItem(type) {
-  let tmp3 = type.type === MessageEmbedTypes /* MessageEmbedTypes */.ICYMIItemTypes.MESSAGE;
+  let tmp3 = type.type === MessageEmbedTypes.ICYMIItemTypes.MESSAGE;
   if (!tmp3) {
-    tmp3 = type.type === MessageEmbedTypes /* MessageEmbedTypes */.ICYMIItemTypes.GUILD_EVENT;
+    tmp3 = type.type === MessageEmbedTypes.ICYMIItemTypes.GUILD_EVENT;
   }
   return tmp3;
 };
@@ -465,7 +465,7 @@ export const hydrateNextPage = function hydrateNextPage() {
 export const createGravityMessageFromServer = function createGravityMessageFromServer(message, arg1) {
   const obj = {};
   const merged = Object.assign(arg1);
-  obj.message = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(message.message);
+  obj.message = createMinimalMessageRecord.createMessageRecord(message.message);
   let fromServerResult;
   if (null != message.thread_channel) {
     fromServerResult = ThreadChannelRecord.fromServer(message.thread_channel, message.guild_id);
@@ -533,11 +533,11 @@ export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
   }, items1);
 };
 export const icymiEnabled = function icymiEnabled(customScores) {
-  return apexExperiment /* apexExperiment */.getICYMIEnabled(customScores);
+  return apexExperiment.getICYMIEnabled(customScores);
 };
 export const customStatusToContentInventoryEntry = function customStatusToContentInventoryEntry(data) {
-  let obj = { id: data.id, type: MessageEmbedTypes /* MessageEmbedTypes */.ICYMIItemTypes.CUSTOM_STATUS, activity: null, score: null, score_components: null };
-  obj = { id: data.id, author_id: data.data.user_id, author_type: ContentInventoryAuthorType /* ContentInventoryAuthorType */.ContentInventoryAuthorType.USER, traits: [], participants: [], content_type: ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.CUSTOM_STATUS, extra: null };
+  let obj = { id: data.id, type: MessageEmbedTypes.ICYMIItemTypes.CUSTOM_STATUS, activity: null, score: null, score_components: null };
+  obj = { id: data.id, author_id: data.data.user_id, author_type: ContentInventoryAuthorType.ContentInventoryAuthorType.USER, traits: [], participants: [], content_type: ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS, extra: null };
   let str = data.data.text;
   if (str == null) {
     str = "";
@@ -688,7 +688,7 @@ export const itemToType = function itemToType(item) {
       return "guild_event";
     } else if ("contentInventory" === kind) {
       let str8 = "hotwheels_gaming_activity";
-      if (item.data.content.content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.CUSTOM_STATUS) {
+      if (item.data.content.content_type === ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS) {
         str8 = "hotwheels_custom_status";
       }
       return str8;
@@ -705,9 +705,9 @@ export const itemToType = function itemToType(item) {
 };
 export const determineContentType = function determineContentType(channel, message) {
   if (channel.type === constants.GUILD_ANNOUNCEMENT) {
-    return MessageEmbedTypes /* MessageEmbedTypes */.ContentType.ANNOUNCEMENT;
+    return MessageEmbedTypes.ContentType.ANNOUNCEMENT;
   } else if (channel.type === tmp.GUILD_FORUM) {
-    return MessageEmbedTypes /* MessageEmbedTypes */.ContentType.FORUM_POST;
+    return MessageEmbedTypes.ContentType.FORUM_POST;
   } else {
     if (null != message.reactions) {
       const reactions = message.reactions;
@@ -728,7 +728,7 @@ export const determineContentType = function determineContentType(channel, messa
       });
       if (0 !== mapped.length) {
         if (mapped.reduce((arg0, arg1) => arg0 + arg1) > 10) {
-          return MessageEmbedTypes /* MessageEmbedTypes */.ContentType.POPULAR_MESSAGE;
+          return MessageEmbedTypes.ContentType.POPULAR_MESSAGE;
         }
       }
     }
@@ -743,12 +743,12 @@ export const determineContentType = function determineContentType(channel, messa
         IMAGE = result ? ContentType2.VIDEO : ContentType2.FILE;
         const tmp6Result = tmp6(8216);
       }
-      obj = isMediaAttachment /* isMediaAttachment */;
+      obj = isMediaAttachment;
     } else {
       if (message.embeds.length > 0) {
-        let INTERESTING = MessageEmbedTypes /* MessageEmbedTypes */.ContentType.LINK;
+        let INTERESTING = MessageEmbedTypes.ContentType.LINK;
       } else {
-        INTERESTING = MessageEmbedTypes /* MessageEmbedTypes */.ContentType.INTERESTING;
+        INTERESTING = MessageEmbedTypes.ContentType.INTERESTING;
       }
       return INTERESTING;
     }
@@ -759,7 +759,7 @@ export const contentTypeToText = function contentTypeToText(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  if (MessageEmbedTypes /* MessageEmbedTypes */.ContentType.POPULAR_MESSAGE === arg0) {
+  if (MessageEmbedTypes.ContentType.POPULAR_MESSAGE === arg0) {
     const intl10 = tmp(1236).intl;
     return intl10.string(tmp(1236).t["H/2+cl"]);
   } else if (tmp(7224).ContentType.IMAGE === arg0) {

@@ -40,7 +40,7 @@ export const getExperimentServerAssignment = function getExperimentServerAssignm
   [obj, obj2] = callback(tmp, 2);
   if (null == name) {
     return null;
-  } else if (name.system === trackExposureToExperiment /* trackExposureToExperiment */.ExperimentSystem.LEGACY) {
+  } else if (name.system === trackExposureToExperiment.ExperimentSystem.LEGACY) {
     name = name.name;
     let loadedUserExperiment = obj.getLoadedUserExperiment(name);
   } else {

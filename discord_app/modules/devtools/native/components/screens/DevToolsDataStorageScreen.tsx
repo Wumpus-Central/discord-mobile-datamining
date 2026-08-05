@@ -40,7 +40,7 @@ obj[0] = obj;
 createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, verticalAlign: "middle", flexDirection: "row", alignItems: "center", flex: 1 };
 obj[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = importAllResult.memo(() => jsx(TableRowInner /* TableRowInner */.TableRow, {
+let closure_10 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
   label: "Disable Database",
   start: true,
   onPress() {
@@ -53,7 +53,7 @@ let closure_10 = importAllResult.memo(() => jsx(TableRowInner /* TableRowInner *
   }
 }));
 let closure_11 = importAllResult.memo(() => {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [databaseName, fetchFingerprint];
   const stateFromStores = obj.useStateFromStores(items, () => callback(table[12]).database(id.getId()));
   let str = "No active database.";
@@ -67,9 +67,9 @@ let closure_11 = importAllResult.memo(() => {
     combined = "Handle: " + stateFromStores.handle;
   }
   obj[3] = combined;
-  return jsx(TableRowInner /* TableRowInner */.TableRow, { label: str, start: true, end: true, subLabel: null });
+  return jsx(TableRowInner.TableRow, { label: str, start: true, end: true, subLabel: null });
 });
-let closure_12 = importAllResult.memo(() => jsx(TableRowInner /* TableRowInner */.TableRow, {
+let closure_12 = importAllResult.memo(() => jsx(TableRowInner.TableRow, {
   label: "Disable + Remove Database",
   onPress() {
     const result = callback(1923).replaceDisableAllDatabases("via UserSettingsDatabaseControls");

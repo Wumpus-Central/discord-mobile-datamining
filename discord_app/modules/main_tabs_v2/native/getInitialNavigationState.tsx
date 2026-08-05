@@ -21,7 +21,7 @@ function getInitialGuildState(closure_6, channelId, flag, flag2) {
   if (channelId == null) {
     channelId = channelId.getChannelId(closure_6);
   }
-  let obj = useChatLayout /* useChatLayout */;
+  let obj = useChatLayout;
   const isChatLockedOpen = obj.getChatLayout().isChatLockedOpen;
   if (flag) {
     if (null != channelId) {
@@ -70,15 +70,15 @@ function computeInitialNavigationStateWithoutLogging() {
   let channelId;
   let guildId;
   if (null != token.getToken()) {
-    let obj1 = transitionTo /* transitionTo */;
+    let obj1 = transitionTo;
     const _location = obj1.getHistory().location;
-    let obj2 = matchPath /* matchPath */;
+    let obj2 = matchPath;
     let obj = { path: null };
-    const RouteParam = RouteParam /* RouteParam */.RouteParam;
-    const RouteParam2 = RouteParam /* RouteParam */.RouteParam;
+    const RouteParam = RouteParam.RouteParam;
+    const RouteParam2 = RouteParam.RouteParam;
     obj[0] = closure_7.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
     const matchPathResult = obj2.matchPath(_location.pathname, obj);
-    const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment /* MobileHomeDrawerExperiment */.MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment.MobileHomeDrawerExperiment;
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
       obj = { path: null };

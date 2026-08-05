@@ -26,13 +26,13 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   const tmp3 = constants;
   str = str.toString();
   if (type === constants.GUILD_CATEGORY) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.uV83yi);
+    const intl2 = getSystemLocale.intl;
+    let stringResult = intl2.string(getSystemLocale.t.uV83yi);
     let tmp8 = require;
     let tmp10 = require;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["W/A4Qp"]);
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t["W/A4Qp"]);
     tmp8 = require;
     tmp10 = require;
   }

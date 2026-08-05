@@ -49,36 +49,36 @@ export default function GuildRaidResolveActionSheet(arg0) {
   const tmp2 = callback(React.useState([]), 2);
   [c5, c6] = callback(React.useState(), 2);
   let obj = { text: null, value: null };
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.yeaXw5);
-  obj[1] = Feedback /* Feedback */.RaidResolutionType.LEGITIMATE_ACTIVITY;
+  let intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.yeaXw5);
+  obj[1] = Feedback.RaidResolutionType.LEGITIMATE_ACTIVITY;
   let items = [obj, , , ];
   obj = { text: null, value: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["o++3B8"]);
-  obj[1] = Feedback /* Feedback */.RaidResolutionType.DM_SPAM;
+  const intl2 = getSystemLocale.intl;
+  obj[0] = intl2.string(getSystemLocale.t["o++3B8"]);
+  obj[1] = Feedback.RaidResolutionType.DM_SPAM;
   items[1] = obj;
   obj = { text: null, value: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.UfHAwZ);
-  obj[1] = Feedback /* Feedback */.RaidResolutionType.JOIN_RAID;
+  const intl3 = getSystemLocale.intl;
+  obj[0] = intl3.string(getSystemLocale.t.UfHAwZ);
+  obj[1] = Feedback.RaidResolutionType.JOIN_RAID;
   items[2] = obj;
   let obj1 = { text: null, value: null };
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[0] = intl4.string(getSystemLocale /* getSystemLocale */.t.K3UWeR);
-  obj1[1] = Feedback /* Feedback */.RaidResolutionType.OTHER;
+  const intl4 = getSystemLocale.intl;
+  obj1[0] = intl4.string(getSystemLocale.t.K3UWeR);
+  obj1[1] = Feedback.RaidResolutionType.OTHER;
   items[3] = obj1;
   let obj2 = { children: null };
   let obj3 = { style: tmp.container, children: null };
   const tmp3 = callback(React.useState(), 2);
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
-  const intl5 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[3] = intl5.string(getSystemLocale /* getSystemLocale */.t["1zmw/H"]);
-  const items1 = [callback2(Text /* Text */.Text, obj4), , , , ];
+  const intl5 = getSystemLocale.intl;
+  obj4[3] = intl5.string(getSystemLocale.t["1zmw/H"]);
+  const items1 = [callback2(Text.Text, obj4), , , , ];
   let obj5 = { style: tmp.subtitle, variant: "text-sm/normal", color: "text-default", children: null };
-  const intl6 = getSystemLocale /* getSystemLocale */.intl;
-  obj5[3] = intl6.string(getSystemLocale /* getSystemLocale */.t.nF79oO);
-  items1[1] = callback2(Text /* Text */.Text, obj5);
+  const intl6 = getSystemLocale.intl;
+  obj5[3] = intl6.string(getSystemLocale.t.nF79oO);
+  items1[1] = callback2(Text.Text, obj5);
   items1[2] = items.map((value) => {
     value = value.value;
     let closure_0 = value;
@@ -135,9 +135,9 @@ export default function GuildRaidResolveActionSheet(arg0) {
     text: null,
     size: "md"
   };
-  const intl7 = getSystemLocale /* getSystemLocale */.intl;
-  obj6[1] = intl7.string(getSystemLocale /* getSystemLocale */.t.Gh3A0O);
-  items1[3] = callback2(Button /* Button */.Button, obj6);
+  const intl7 = getSystemLocale.intl;
+  obj6[1] = intl7.string(getSystemLocale.t.Gh3A0O);
+  items1[3] = callback2(Button.Button, obj6);
   const obj7 = {
     onPress: function handleClose() {
       callback(_undefined[10]).hideActionSheet("GuildRaidResolveActionSheet");
@@ -146,10 +146,10 @@ export default function GuildRaidResolveActionSheet(arg0) {
     variant: "secondary",
     size: "md"
   };
-  const intl8 = getSystemLocale /* getSystemLocale */.intl;
-  obj7[1] = intl8.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
-  items1[4] = callback2(Button /* Button */.Button, obj7);
+  const intl8 = getSystemLocale.intl;
+  obj7[1] = intl8.string(getSystemLocale.t["ETE/oC"]);
+  items1[4] = callback2(Button.Button, obj7);
   obj3[1] = items1;
   obj2[0] = callback3(KeyboardAwareView, obj3);
-  return callback2(ActionSheet /* ActionSheet */.ActionSheet, obj2);
+  return callback2(ActionSheet.ActionSheet, obj2);
 };

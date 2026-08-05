@@ -19,8 +19,8 @@ export const ForYouRecentActivitySectionHeader = function ForYouRecentActivitySe
   const tmp = createCacheKey();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.textHeader, color: "text-muted", variant: "text-sm/semibold", accessibilityRole: "header", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.yM9Krm);
-  obj[1] = jsx(Text /* Text */.Text, { style: tmp.textHeader, color: "text-muted", variant: "text-sm/semibold", accessibilityRole: "header", children: null });
+  const intl = getSystemLocale.intl;
+  obj[4] = intl.string(getSystemLocale.t.yM9Krm);
+  obj[1] = jsx(Text.Text, { style: tmp.textHeader, color: "text-muted", variant: "text-sm/semibold", accessibilityRole: "header", children: null });
   return <View style={tmp.textHeader} color="text-muted" variant="text-sm/semibold" accessibilityRole="header">{null}</View>;
 };

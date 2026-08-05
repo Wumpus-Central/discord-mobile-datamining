@@ -15,7 +15,7 @@ export const openShopGiftModal = function openShopGiftModal(arg0) {
   ({ navigationParams, skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin } = arg0);
   let obj = ModalActionCreators;
   obj = { skuId, analyticsLocations, lockedRecipientUser, onGiftModalDismiss, giftingOrigin };
-  obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(9495, dependencyMap.paths), obj, c3, navigationParams);
+  obj.pushLazy(asyncRequireImpl(9495, dependencyMap.paths), obj, c3, navigationParams);
 };
 export const closeShopGiftModal = function closeShopGiftModal() {
   ModalActionCreators.popWithKey(c3);

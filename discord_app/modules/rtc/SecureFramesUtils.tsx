@@ -565,14 +565,14 @@ export const addVerification = function addVerification(userId, userKey, isOther
     const secureFramesTransientKey = obj.createSecureFramesTransientKey(userId, userKey);
   }
   obj = { channelId, userId, analyticsLocation: DEEP_LINK };
-  const result = trackRTCPanelViewed /* trackRTCPanelViewed */.trackE2EEUserVerified(obj);
+  const result = trackRTCPanelViewed.trackE2EEUserVerified(obj);
 };
 export const deleteVerification = function deleteVerification(userId, arg1, isOtherUserKeyPersistent) {
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const obj2 = set /* set */;
-    const serializeKeyResult = set /* set */.serializeKey(uint8Array);
+    const obj2 = set;
+    const serializeKeyResult = set.serializeKey(uint8Array);
     const result = savePersistentCodesEnabled.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
     const obj3 = savePersistentCodesEnabled;
   } else {
@@ -619,50 +619,50 @@ export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUser
   if (diffResult > 12 * set.Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * tmp(687).Seconds.DAYS_30));
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    const intl7 = getSystemLocale.intl;
     obj = { count: null };
     obj[0] = rounded;
-    return intl7.formatToPlainString(getSystemLocale /* getSystemLocale */.t.F1wqkD, obj);
+    return intl7.formatToPlainString(getSystemLocale.t.F1wqkD, obj);
   } else if (diffResult > tmp(687).Seconds.DAYS_30) {
     const _Math5 = Math;
     const rounded1 = Math.round(diffResult / tmp(687).Seconds.DAYS_30);
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    const intl6 = getSystemLocale.intl;
     obj = { count: null };
     obj[0] = rounded1;
-    return intl6.formatToPlainString(getSystemLocale /* getSystemLocale */.t["iT+b+2"], obj);
+    return intl6.formatToPlainString(getSystemLocale.t["iT+b+2"], obj);
   } else if (diffResult > 7 * tmp(687).Seconds.DAY) {
     const _Math4 = Math;
     const rounded2 = Math.round(diffResult / (7 * tmp(687).Seconds.DAY));
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    const intl5 = getSystemLocale.intl;
     const obj1 = { count: null };
     obj1[0] = rounded2;
-    return intl5.formatToPlainString(getSystemLocale /* getSystemLocale */.t.dLurKZ, obj1);
+    return intl5.formatToPlainString(getSystemLocale.t.dLurKZ, obj1);
   } else if (diffResult > tmp(687).Seconds.DAY) {
     const _Math3 = Math;
     const rounded3 = Math.round(diffResult / tmp(687).Seconds.DAY);
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    const intl4 = getSystemLocale.intl;
     const obj2 = { count: null };
     obj2[0] = rounded3;
-    return intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.LE8a2H, obj2);
+    return intl4.formatToPlainString(getSystemLocale.t.LE8a2H, obj2);
   } else if (diffResult > tmp(687).Seconds.HOUR) {
     const _Math2 = Math;
     const rounded4 = Math.round(diffResult / tmp(687).Seconds.HOUR);
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     const obj3 = { count: null };
     obj3[0] = rounded4;
-    return intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.KULxVS, obj3);
+    return intl3.formatToPlainString(getSystemLocale.t.KULxVS, obj3);
   } else if (diffResult > tmp(687).Seconds.MINUTE) {
     const _Math = Math;
     const rounded5 = Math.round(diffResult / tmp(687).Seconds.MINUTE);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj4 = { count: null };
     obj4[0] = rounded5;
-    return intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.ws6rWq, obj4);
+    return intl2.formatToPlainString(getSystemLocale.t.ws6rWq, obj4);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj5 = { count: null };
     obj5[0] = diffResult;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["/w0Qpw"], obj5);
+    return intl.formatToPlainString(getSystemLocale.t["/w0Qpw"], obj5);
   }
   const tmp3 = t(timestamp);
 };
@@ -671,58 +671,58 @@ export const getUserVerificationDeeplink = function getUserVerificationDeeplink(
 };
 export const getUserVerifyStateText = function getUserVerifyStateText(memo, name) {
   if (constants.OTHER_USER_DISCONNECTED === memo) {
-    const intl13 = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl13.string(getSystemLocale /* getSystemLocale */.t.ZBHDM9), ];
-    const intl14 = getSystemLocale /* getSystemLocale */.intl;
+    const intl13 = getSystemLocale.intl;
+    const items = [intl13.string(getSystemLocale.t.ZBHDM9), ];
+    const intl14 = getSystemLocale.intl;
     let obj = { username: null };
     obj[0] = name;
-    items[1] = intl14.format(getSystemLocale /* getSystemLocale */.t["+rIdOd"], obj);
+    items[1] = intl14.format(getSystemLocale.t["+rIdOd"], obj);
     return items;
   } else if (tmp.CURRENT_USER_DISCONNECTED === memo) {
-    const intl11 = getSystemLocale /* getSystemLocale */.intl;
-    const items1 = [intl11.string(getSystemLocale /* getSystemLocale */.t["5ICxE6"]), ];
-    const intl12 = getSystemLocale /* getSystemLocale */.intl;
-    items1[1] = intl12.string(getSystemLocale /* getSystemLocale */.t["v1eXp/"]);
+    const intl11 = getSystemLocale.intl;
+    const items1 = [intl11.string(getSystemLocale.t["5ICxE6"]), ];
+    const intl12 = getSystemLocale.intl;
+    items1[1] = intl12.string(getSystemLocale.t["v1eXp/"]);
     return items1;
   } else if (tmp.UNABLE_TO_VERIFY === memo) {
-    const intl9 = getSystemLocale /* getSystemLocale */.intl;
-    const items2 = [intl9.string(getSystemLocale /* getSystemLocale */.t["+no/a7"]), ];
-    const intl10 = getSystemLocale /* getSystemLocale */.intl;
+    const intl9 = getSystemLocale.intl;
+    const items2 = [intl9.string(getSystemLocale.t["+no/a7"]), ];
+    const intl10 = getSystemLocale.intl;
     obj = { username: null };
     obj[0] = name;
-    items2[1] = intl10.format(getSystemLocale /* getSystemLocale */.t.Mft7iJ, obj);
+    items2[1] = intl10.format(getSystemLocale.t.Mft7iJ, obj);
     return items2;
   } else if (tmp.FINGERPRINT_MISMATCH === memo) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
-    const items3 = [intl7.string(getSystemLocale /* getSystemLocale */.t.HTJ76H), ];
-    const intl8 = getSystemLocale /* getSystemLocale */.intl;
+    const intl7 = getSystemLocale.intl;
+    const items3 = [intl7.string(getSystemLocale.t.HTJ76H), ];
+    const intl8 = getSystemLocale.intl;
     const obj1 = { username: null };
     obj1[0] = name;
-    items3[1] = intl8.format(getSystemLocale /* getSystemLocale */.t.tc6aAc, obj1);
+    items3[1] = intl8.format(getSystemLocale.t.tc6aAc, obj1);
     return items3;
   } else if (tmp.OTHER_USER_ALREADY_VERIFIED === memo) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    const items4 = [intl5.string(getSystemLocale /* getSystemLocale */.t["9lw+J+"]), ];
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    const intl5 = getSystemLocale.intl;
+    const items4 = [intl5.string(getSystemLocale.t["9lw+J+"]), ];
+    const intl6 = getSystemLocale.intl;
     const obj2 = { username: null };
     obj2[0] = name;
-    items4[1] = intl6.format(getSystemLocale /* getSystemLocale */.t.TvBS1w, obj2);
+    items4[1] = intl6.format(getSystemLocale.t.TvBS1w, obj2);
     return items4;
   } else if (tmp.MATCH === memo) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    const items5 = [intl3.string(getSystemLocale /* getSystemLocale */.t["xyE+Dn"]), ];
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
+    const items5 = [intl3.string(getSystemLocale.t["xyE+Dn"]), ];
+    const intl4 = getSystemLocale.intl;
     const obj3 = { username: null };
     obj3[0] = name;
-    items5[1] = intl4.format(getSystemLocale /* getSystemLocale */.t.znsPl5, obj3);
+    items5[1] = intl4.format(getSystemLocale.t.znsPl5, obj3);
     return items5;
   } else if (tmp.OTHER_USER_INCONSISTENT_KEYS === memo) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items6 = [intl.string(getSystemLocale /* getSystemLocale */.t.im1uUi), ];
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
+    const items6 = [intl.string(getSystemLocale.t.im1uUi), ];
+    const intl2 = getSystemLocale.intl;
     obj = { username: null };
     obj[0] = name;
-    items6[1] = intl2.format(getSystemLocale /* getSystemLocale */.t.WY6IKb, obj);
+    items6[1] = intl2.format(getSystemLocale.t.WY6IKb, obj);
     return items6;
   }
 };
@@ -733,17 +733,17 @@ export const getUserVerificationFooterText = function getUserVerificationFooterT
   ({ isCurrentUserKeyPersistent, isOtherUserKeyPersistent, otherUserNickname } = arg0);
   if (isCurrentUserKeyPersistent) {
     if (isOtherUserKeyPersistent) {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      const intl2 = getSystemLocale.intl;
       let obj = { helpArticle: null };
       obj[0] = combined.getArticleURL(constants3.END_TO_END_ENCRYPTION);
-      let formatResult = intl2.format(getSystemLocale /* getSystemLocale */.t["FJN+kh"], obj);
+      let formatResult = intl2.format(getSystemLocale.t["FJN+kh"], obj);
       const obj8 = combined;
     }
     return formatResult;
   }
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const format = intl.format;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (isCurrentUserKeyPersistent) {
     obj = { username: null, helpArticle: null };
     obj[0] = otherUserNickname;
@@ -790,14 +790,14 @@ export const showSecureFramesKeyInconsistentAlert = function showSecureFramesKey
   let nickname;
   let userId;
   ({ userId, channelId, nickname } = arg0);
-  let obj = trackRTCPanelViewed /* trackRTCPanelViewed */;
+  let obj = trackRTCPanelViewed;
   obj = { userId, channelId, keyVersion: closure_12, reason: constants.OTHER_USER_INCONSISTENT_KEYS };
   const result = obj.trackE2EEUserVerificationFailed(obj);
   obj = { title: null, body: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.mznLyR);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.format(getSystemLocale /* getSystemLocale */.t.WY6IKb, { username: nickname });
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.mznLyR);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.format(getSystemLocale.t.WY6IKb, { username: nickname });
   set.show(obj);
 };
 export const validateSecureFramesKeyConsistent = function validateSecureFramesKeyConsistent(guildId) {
@@ -809,7 +809,7 @@ export const validateSecureFramesKeyConsistent = function validateSecureFramesKe
     const user = authStore.getUser(userId);
     let obj = getNickname;
     const name = obj.getName(guildId.guildId, channelId, user);
-    let obj1 = trackRTCPanelViewed /* trackRTCPanelViewed */;
+    let obj1 = trackRTCPanelViewed;
     obj = { userId: null, channelId: null, keyVersion: null, reason: null };
     obj[0] = userId;
     obj[1] = channelId;
@@ -817,12 +817,12 @@ export const validateSecureFramesKeyConsistent = function validateSecureFramesKe
     obj[3] = constants.OTHER_USER_INCONSISTENT_KEYS;
     const result = obj1.trackE2EEUserVerificationFailed(obj);
     obj = { title: null, body: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.mznLyR);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.mznLyR);
+    const intl2 = getSystemLocale.intl;
     obj1 = { username: null };
     obj1[0] = name;
-    obj[1] = intl2.format(getSystemLocale /* getSystemLocale */.t.WY6IKb, obj1);
+    obj[1] = intl2.format(getSystemLocale.t.WY6IKb, obj1);
     set.show(obj);
     return false;
   } else {

@@ -608,7 +608,7 @@ function getAppDir() {
   } else {
     return "/private" + closure_6.DCDFileManager.DocumentsDirPath.replace(/Documents$/, "");
   }
-  obj = set /* set */;
+  obj = set;
 }
 function getFileInfo(closure_0, closure_1) {
   let allowOptimization;
@@ -625,7 +625,7 @@ function getFileInfo(closure_0, closure_1) {
   if (closure_1 === undefined) {
     str = "";
   }
-  if (item.platform !== cancel /* cancel */.UploadPlatform.REACT_NATIVE) {
+  if (item.platform !== cancel.UploadPlatform.REACT_NATIVE) {
     const _Error = Error;
     const error = new Error("Try to get file info for unsupported upload item");
     throw error;
@@ -892,17 +892,17 @@ function _shouldConvertToPNG() {
   return applyArgumentsResult;
 }
 function isVideo(uri, overrideType) {
-  let obj = items /* items */;
+  let obj = items;
   obj = { uri, overrideType };
   return obj.getFile(obj).isVideo;
 }
 function isImage(uri, overrideType) {
-  let obj = items /* items */;
+  let obj = items;
   obj = { uri, overrideType };
   return obj.getFile(obj).isImage;
 }
 function getType(uri) {
-  let obj = items /* items */;
+  let obj = items;
   obj = { uri };
   return obj.getFile(obj).type;
 }
@@ -917,20 +917,20 @@ function convertVideo(videoMetadata) {
   let result1;
   let obj;
   let c7;
-  const VideoQualityTarget = toString /* toString */.VideoQualityTarget;
+  const VideoQualityTarget = toString.VideoQualityTarget;
   const result = VideoQualityTarget.fromCompressionQuality(videoQualitySetting);
-  obj = toString /* toString */;
-  result1 = obj.canSkipVideoTranscode(result, videoMetadata, videoMetadata.fileSize, getUploadFileSizeSum /* getUploadFileSizeSum */.maxFileSize());
-  let obj2 = getUploadFileSizeSum /* getUploadFileSizeSum */;
-  const result2 = toString /* toString */.calculateTargetDimensions(videoMetadata, result.targetResolution);
-  let obj3 = toString /* toString */;
+  obj = toString;
+  result1 = obj.canSkipVideoTranscode(result, videoMetadata, videoMetadata.fileSize, getUploadFileSizeSum.maxFileSize());
+  let obj2 = getUploadFileSizeSum;
+  const result2 = toString.calculateTargetDimensions(videoMetadata, result.targetResolution);
+  let obj3 = toString;
   obj = {};
-  const result3 = toString /* toString */.calculateOptimalBitrate(videoMetadata, result, toString /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG.bitrateFloor);
-  const merged = Object.assign(toString /* toString */.DEFAULT_VIDEO_ENCODING_CONFIG);
+  const result3 = toString.calculateOptimalBitrate(videoMetadata, result, toString.DEFAULT_VIDEO_ENCODING_CONFIG.bitrateFloor);
+  const merged = Object.assign(toString.DEFAULT_VIDEO_ENCODING_CONFIG);
   obj.videoQuality = result;
   ({ width: obj5.targetWidth, height: obj5.targetHeight } = result2);
   obj.targetBitrate = result3;
-  let obj4 = toString /* toString */;
+  let obj4 = toString;
   if (obj6.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() > 34) {
       let _Math = Math;
@@ -2495,8 +2495,8 @@ function getCaptionLabel(type, isVideo, item) {
   if (isVideo) {
     let str3 = "VIDEO";
     if (null != item.playableDuration) {
-      str3 = getTimeFormat /* getTimeFormat */.getTimeFormat(item.playableDuration);
-      const obj = getTimeFormat /* getTimeFormat */;
+      str3 = getTimeFormat.getTimeFormat(item.playableDuration);
+      const obj = getTimeFormat;
     }
     let str2 = str3;
   } else {
@@ -3088,7 +3088,7 @@ export const getFileSize = function getFileSize(uri) {
   if (obj.isIOS()) {
     replaced = uri.replace(/file:\/\//, "");
   }
-  obj = set /* set */;
+  obj = set;
   const tmp = require;
   if (tmpResult.isAndroid()) {
     if (null == enforcing) {
@@ -3108,7 +3108,7 @@ export { getFileInfo };
 export const shouldConvertToJPG = require("isPhotoKitAsset").shouldConvertToJPG;
 export const shouldForceConvertToJPG = require("isPhotoKitAsset").shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
-  let isAndroidResult = set /* set */.isAndroid();
+  let isAndroidResult = set.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != str.match(/^content:\/\/.+$/i);
   }
@@ -3123,7 +3123,7 @@ export { isHEVCEncodingSupported };
 export { checkVideoEncodingSupport };
 export { calculateImageQualityMetrics };
 export const getFileFromUploadItem = function getFileFromUploadItem(result1) {
-  let obj = items /* items */;
+  let obj = items;
   obj = { uri: result1.uri, overrideFilename: result1.filename, overrideType: result1.mimeType };
   return obj.getFile(obj);
 };

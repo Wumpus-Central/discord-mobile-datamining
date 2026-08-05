@@ -19,7 +19,7 @@ function RestrictedHoursLogoutBlockingLayer(visible) {
   if (visible.visible) {
     const obj = { style: null, pointerEvents: "auto", accessibilityLiveRegion: "polite", children: null };
     obj[0] = tmp.logoutBlockingLayer;
-    obj[3] = callback2(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, { size: "large" });
+    obj[3] = callback2(ActivityIndicator.ActivityIndicator, { size: "large" });
     tmp2 = callback2(closure_5, obj);
   }
   return tmp2;

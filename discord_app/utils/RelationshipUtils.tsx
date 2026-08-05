@@ -7,9 +7,9 @@ import { getAvatarURL } from "AvatarUtils.tsx";
 const result = require("getAvatarURL").fileFinishedImporting("utils/RelationshipUtils.tsx");
 
 export const showPendingNotification = function showPendingNotification(user) {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   let obj = NotificationActionCreators;
-  const stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["t3+Af3"]);
+  const stringResult = intl.string(getSystemLocale.t["t3+Af3"]);
   obj = {
     omitViewTracking: true,
     omitClickTracking: true,

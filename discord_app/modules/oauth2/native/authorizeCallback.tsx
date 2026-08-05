@@ -37,7 +37,7 @@ export default function authorizeCallback(arg0) {
             let obj = { application: null, guild: null };
             obj[0] = tmp;
             obj[1] = tmp2;
-            tmp8Result.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10890, tmp9.paths), obj, closure_3);
+            tmp8Result.pushLazy(asyncRequireImpl(10890, tmp9.paths), obj, closure_3);
           } else if (null != pathname.match(closure_6)) {
             if (!canceled) {
               let str;
@@ -61,27 +61,27 @@ export default function authorizeCallback(arg0) {
               }
               obj = { error: null };
               obj[0] = str;
-              tmp8Result1.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10435, tmp9.paths), obj, closure_4);
-              const tmp17 = asyncRequireImpl /* asyncRequireImpl */(10435, tmp9.paths);
+              tmp8Result1.pushLazy(asyncRequireImpl(10435, tmp9.paths), obj, closure_4);
+              const tmp17 = asyncRequireImpl(10435, tmp9.paths);
             }
           }
         }
       }
     }
     if (wasDeepLink) {
-      const browserManagerSelectedBrowser = NativeModules /* NativeModules */.getBrowserManagerSelectedBrowser();
-      wasDeepLink = browserManagerSelectedBrowser === keys /* keys */.WebBrowserType.IN_APP;
-      const obj5 = NativeModules /* NativeModules */;
+      const browserManagerSelectedBrowser = NativeModules.getBrowserManagerSelectedBrowser();
+      wasDeepLink = browserManagerSelectedBrowser === keys.WebBrowserType.IN_APP;
+      const obj5 = NativeModules;
     }
     const obj2 = isDiscordProxiedAssetUrl;
     let SAFARI;
     if (wasDeepLink) {
-      SAFARI = keys /* keys */.WebBrowserType.SAFARI;
+      SAFARI = keys.WebBrowserType.SAFARI;
     }
     Linking.openURL(_location, SAFARI);
     const tmp8Result2 = Linking;
   } else if (!canceled) {
     obj = ModalActionCreators;
-    obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10435, dependencyMap.paths), undefined, closure_4);
+    obj.pushLazy(asyncRequireImpl(10435, dependencyMap.paths), undefined, closure_4);
   }
 };

@@ -35,9 +35,9 @@ export default require("noop").memo(function MediaModalSpoilerOverlay(source) {
   ({ style, index } = source);
   let items2 = callback2();
   let stringResult = dependencyMap;
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.SPOILER_HIDDEN_BACKGROUND);
-  let obj1 = useMediaItemSpoilerState /* useMediaItemSpoilerState */;
+  let obj1 = useMediaItemSpoilerState;
   if (!tmp5[0]) {
     return null;
   } else {

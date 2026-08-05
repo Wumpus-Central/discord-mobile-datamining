@@ -24,9 +24,9 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
       guildId = channel.getGuildId();
     }
     guild = guild.getGuild(guildId);
-    let obj = useNullableMessageAuthor /* useNullableMessageAuthor */;
+    let obj = useNullableMessageAuthor;
     const guildMemberAvatar = obj.getMessageAuthor(message).guildMemberAvatar;
-    let obj1 = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+    let obj1 = getMessageAuthorWithProcessedColor;
     const messageAuthorWithProcessedColor = obj1.getMessageAuthorWithProcessedColor(message);
     if (null != guildId) {
       if (null != channel) {
@@ -42,7 +42,7 @@ export const createRoleSubscriptionPurchaseSystemMessage = function createRoleSu
         }
       }
     }
-    ensureAvatarSource /* ensureAvatarSource */;
+    ensureAvatarSource;
     if (null != guildMemberAvatar) {
       if (null != guildId) {
         obj = { userId: null, avatar: null, guildId: null };

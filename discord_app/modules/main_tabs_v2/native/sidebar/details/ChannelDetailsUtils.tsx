@@ -9,7 +9,7 @@ export const getChannelDetailsButtons = function getChannelDetailsButtons(channe
   if (stateFromStores === undefined) {
     flag = false;
   }
-  if (channel.type === set /* set */.ChannelTypes.GUILD_DIRECTORY) {
+  if (channel.type === set.ChannelTypes.GUILD_DIRECTORY) {
     let items = [];
   } else {
     items = [, , ];

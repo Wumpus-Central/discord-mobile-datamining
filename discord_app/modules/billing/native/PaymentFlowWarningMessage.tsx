@@ -24,9 +24,9 @@ export default function PaymentFlowWarningMessage(children) {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.icon, color: null, width: 16, height: 16 };
   obj[1] = Themes.unsafe_rawColors.YELLOW_300;
-  const items = [callback(Button /* Button */.WarningCircle, obj), ];
+  const items = [callback(Button.WarningCircle, obj), ];
   obj = { variant: "text-sm/medium", style: tmp.text, children: children.message };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 };

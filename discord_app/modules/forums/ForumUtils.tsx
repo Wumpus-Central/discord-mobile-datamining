@@ -9,9 +9,9 @@ import { getSystemLocale } from "../../intl/index.native.tsx";
 
 const require = arg1;
 function getCreationDefaultFormatter() {
-  const obj = { minutes: getSystemLocale /* getSystemLocale */.t.nFt9ck, hours: getSystemLocale /* getSystemLocale */.t.jzCewe, days: getSystemLocale /* getSystemLocale */.t.U4I0sw, month: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["nBNJ/L"]);
+  const obj = { minutes: getSystemLocale.t.nFt9ck, hours: getSystemLocale.t.jzCewe, days: getSystemLocale.t.U4I0sw, month: null };
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["nBNJ/L"]);
   return obj;
 }
 const result = require("generateOldThreadCutoff").fileFinishedImporting("modules/forums/ForumUtils.tsx");
@@ -78,7 +78,7 @@ export const getForumPostReadStatesById = function getForumPostReadStatesById(ar
 };
 export const getForumTimestampFormatter = function getForumTimestampFormatter(closure_1, DURATION_AGO) {
   if (DURATION_AGO === ForumTimestampFormats.POSTED_DURATION_AGO) {
-    if (closure_1 === set /* set */.ThreadSortOrder.CREATION_DATE) {
+    if (closure_1 === set.ThreadSortOrder.CREATION_DATE) {
       return getCreationDefaultFormatter;
     }
   }

@@ -21,8 +21,8 @@ export default function getParticipantTitle(guild_id, type, name) {
     if (user != null) {
       id = user.id;
     }
-    const result = useIsGuestOrLurker /* useIsGuestOrLurker */.isGuestOrLurkerInGuild(guild_id.guild_id, id);
-    const obj2 = useIsGuestOrLurker /* useIsGuestOrLurker */;
+    const result = useIsGuestOrLurker.isGuestOrLurkerInGuild(guild_id.guild_id, id);
+    const obj2 = useIsGuestOrLurker;
     let str = "";
     const name1 = getNickname.getName(guild_id.getGuildId(), guild_id.id, type.user);
     if (result) {

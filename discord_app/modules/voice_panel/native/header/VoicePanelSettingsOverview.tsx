@@ -119,16 +119,16 @@ function ShareActivityLogsButton() {
   }, []);
   let obj = { onPress: callback, icon: null, label: null, trailing: null };
   obj = { IconComponent: null, source: null };
-  obj[0] = WrenchIcon /* WrenchIcon */.WrenchIcon;
+  obj[0] = WrenchIcon.WrenchIcon;
   obj[1] = registerAsset;
-  obj[1] = callback(TableRowIcon /* TableRowIcon */.TableRowIcon, obj);
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.iQzQs3);
-  obj[3] = callback(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
-  return callback(TableRowInner /* TableRowInner */.TableRow, obj);
+  obj[1] = callback(TableRowIcon.TableRowIcon, obj);
+  let intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.iQzQs3);
+  obj[3] = callback(TableRowArrow.TableRowArrow, {});
+  return callback(TableRowInner.TableRow, obj);
 }
 function ActivityDebugToggle() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [initialize];
   const stateFromStores = obj.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
   const callback = importAllResult.useCallback((visible) => {
@@ -138,16 +138,16 @@ function ActivityDebugToggle() {
   }, []);
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
   obj = { IconComponent: null, source: null };
-  obj[0] = WrenchIcon /* WrenchIcon */.WrenchIcon;
+  obj[0] = WrenchIcon.WrenchIcon;
   obj[1] = registerAsset;
-  obj[0] = callback(TableRowIcon /* TableRowIcon */.TableRowIcon, obj);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["qv5/SP"]);
+  obj[0] = callback(TableRowIcon.TableRowIcon, obj);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["qv5/SP"]);
   obj[2] = stateFromStores;
   obj[3] = callback;
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl2.string(getSystemLocale /* getSystemLocale */.t["qv5/SP"]);
-  return callback(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj);
+  const intl2 = getSystemLocale.intl;
+  obj[4] = intl2.string(getSystemLocale.t["qv5/SP"]);
+  return callback(TableSwitchRow.TableSwitchRow, obj);
 }
 let c3 = importAllResult;
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = ME);

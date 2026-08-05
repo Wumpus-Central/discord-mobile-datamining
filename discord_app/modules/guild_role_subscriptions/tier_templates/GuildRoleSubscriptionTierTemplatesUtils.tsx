@@ -391,14 +391,14 @@ export const getTemplateTierCreationAnalyticsContext = function getTemplateTierC
   }
 };
 export const isEligibleForNewBadge = function isEligibleForNewBadge(features) {
-  let result = computeGuildRoleSubscriptionSettingsVisibility /* computeGuildRoleSubscriptionSettingsVisibility */.canManageGuildRoleSubscriptions(features);
+  let result = computeGuildRoleSubscriptionSettingsVisibility.canManageGuildRoleSubscriptions(features);
   if (result) {
     features = features.features;
     result = features.has(GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
   }
   if (result) {
-    result = GuildFeatures /* GuildFeatures */.isGuildEligibleForTierTemplates(features.id);
-    const tmpResult = GuildFeatures /* GuildFeatures */;
+    result = GuildFeatures.isGuildEligibleForTierTemplates(features.id);
+    const tmpResult = GuildFeatures;
   }
   return result;
 };

@@ -10,5 +10,5 @@ export const setThemeFlag = function setThemeFlag(arg0, MOBILE_DARK_GRADIENT_THE
   return arg0 | MOBILE_DARK_GRADIENT_THEME_ENABLED;
 };
 export const useThemeFlag = function useThemeFlag(arg0) {
-  return (json /* json */.useThemeContext().flags & arg0) === arg0;
+  return (json.useThemeContext().flags & arg0) === arg0;
 };

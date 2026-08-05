@@ -179,7 +179,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   }
   let tmp = callback2();
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({}));
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   [tmp7, c3] = first(undefined.useState(false), 2);
@@ -272,7 +272,7 @@ let result = require("noop").fileFinishedImporting("modules/user_settings/accoun
 
 export default forwardRefResult;
 export const UserSettingsConfirmPasswordWrapped = function UserSettingsConfirmPasswordWrapped() {
-  let obj = useSettingNavigationRoute /* useSettingNavigationRoute */;
+  let obj = useSettingNavigationRoute;
   obj = {};
   const merged = Object.assign(obj.useSettingNavigationRoute().params);
   return callback(closure_13, obj);

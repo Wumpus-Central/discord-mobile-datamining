@@ -8,7 +8,7 @@ let closure_2 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-
 const result = require("set").fileFinishedImporting("modules/media_engine/BrowserInvertedWantsExperiment.tsx");
 
 export const getBrowserInvertedWantsConfig = function getBrowserInvertedWantsConfig(arg0) {
-  let config = PlatformTypes /* PlatformTypes */;
+  let config = PlatformTypes;
   if (config.isDesktop()) {
     config = { invertWants: false };
   } else {

@@ -113,7 +113,7 @@ function openBuildInstallerUrl(install) {
     } else {
       const openURLExternally = Linking.default.openURLExternally;
       if (obj.isIOS()) {
-        openURLExternally(str.toString(), keys /* keys */.WebBrowserType.SAFARI);
+        openURLExternally(str.toString(), keys.WebBrowserType.SAFARI);
       } else {
         openURLExternally(str.toString());
       }

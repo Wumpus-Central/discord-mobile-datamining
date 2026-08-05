@@ -124,9 +124,9 @@ function resolveMessageGiftCodes(message, arg1) {
       return false;
     }
   }
-  let obj = _resolveGiftCode /* _resolveGiftCode */;
-  const isGiftCodeEmbedResult = _resolveGiftCode /* _resolveGiftCode */.isGiftCodeEmbed(message);
-  const findGiftCodes = _resolveGiftCode /* _resolveGiftCode */.findGiftCodes;
+  let obj = _resolveGiftCode;
+  const isGiftCodeEmbedResult = _resolveGiftCode.isGiftCodeEmbed(message);
+  const findGiftCodes = _resolveGiftCode.findGiftCodes;
   if (isGiftCodeEmbedResult) {
     let embeds;
     if (message != null) {
@@ -249,10 +249,10 @@ prototype["getIsAccepting"] = function getIsAccepting(code) {
   return closure_10.includes(code);
 };
 prototype["getUserGiftCodesFetchingForSKUAndPlan"] = function getUserGiftCodesFetchingForSKUAndPlan(skuId, subscriptionPlanId) {
-  return set.has(_resolveGiftCode /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId));
+  return set.has(_resolveGiftCode.makeComboId(skuId, subscriptionPlanId));
 };
 prototype["getUserGiftCodesLoadedAtForSKUAndPlan"] = function getUserGiftCodesLoadedAtForSKUAndPlan(skuId, subscriptionPlanId) {
-  const obj = _resolveGiftCode /* _resolveGiftCode */;
+  const obj = _resolveGiftCode;
   return table2[obj.makeComboId(obj, skuId, subscriptionPlanId)];
 };
 prototype["getResolvingCodes"] = function getResolvingCodes() {
@@ -357,7 +357,7 @@ const giftCodeStore = new GiftCodeStore(require("dispatcher"), {
     let skuId;
     let subscriptionPlanId;
     ({ skuId, subscriptionPlanId } = arg0);
-    set.add(_resolveGiftCode /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId));
+    set.add(_resolveGiftCode.makeComboId(skuId, subscriptionPlanId));
   },
   GIFT_CODES_FETCH_SUCCESS: function handleGiftCodesFetchSuccess(giftCodes) {
     let skuId;
@@ -365,7 +365,7 @@ const giftCodeStore = new GiftCodeStore(require("dispatcher"), {
     giftCodes = giftCodes.giftCodes;
     ({ skuId, subscriptionPlanId } = giftCodes);
     const item = giftCodes.forEach(updateGiftCode);
-    const comboId = _resolveGiftCode /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId);
+    const comboId = _resolveGiftCode.makeComboId(skuId, subscriptionPlanId);
     closure_13[comboId] = Date.now();
     set.delete(comboId);
   },
@@ -373,7 +373,7 @@ const giftCodeStore = new GiftCodeStore(require("dispatcher"), {
     let skuId;
     let subscriptionPlanId;
     ({ skuId, subscriptionPlanId } = arg0);
-    set.delete(_resolveGiftCode /* _resolveGiftCode */.makeComboId(skuId, subscriptionPlanId));
+    set.delete(_resolveGiftCode.makeComboId(skuId, subscriptionPlanId));
   },
   MESSAGE_CREATE: handleMessage,
   MESSAGE_UPDATE: handleMessage,

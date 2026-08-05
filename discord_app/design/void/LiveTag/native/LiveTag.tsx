@@ -32,8 +32,8 @@ export default function LiveTag(arg0) {
   items = [tmp.tag, style];
   obj = { variant: "text-xs/bold", style: items1, lineClamp: 1, allowFontScaling, children: null };
   items1 = [tmp.tagText, textStyle];
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.dI3q4h).toUpperCase();
-  obj[1] = jsx(Text /* Text */.Text, { variant: "text-xs/bold", style: items1, lineClamp: 1, allowFontScaling, children: null });
+  const intl = getSystemLocale.intl;
+  obj[4] = intl.string(getSystemLocale.t.dI3q4h).toUpperCase();
+  obj[1] = jsx(Text.Text, { variant: "text-xs/bold", style: items1, lineClamp: 1, allowFontScaling, children: null });
   return <View variant="text-xs/bold" style={items1} lineClamp={1} allowFontScaling={allowFontScaling}>{null}</View>;
 };

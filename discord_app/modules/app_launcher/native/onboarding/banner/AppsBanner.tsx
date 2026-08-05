@@ -17,7 +17,7 @@ export default function AppsBaner() {
   obj = { style: tmp.rocketIcon };
   obj = { image: <View style={tmp.rocketIcon} />, text: null };
   const tmp2 = <View image={<View style={tmp.rocketIcon} />} text={null} />;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.sjRwMJ);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.sjRwMJ);
   return jsx(BannerBase, { image: <View style={tmp.rocketIcon} />, text: null });
 };

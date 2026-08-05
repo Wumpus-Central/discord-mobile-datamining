@@ -19,9 +19,9 @@ const require = arg1;
 function Placeholder() {
   const tmp = useIsMobileVisualRefreshExperimentEnabled("AppLauncherRecents-native");
   const tmp2 = createCacheKey();
-  let obj = usePlaceholderWidth /* usePlaceholderWidth */;
+  let obj = usePlaceholderWidth;
   const placeholderWidth = obj.usePlaceholderWidth(20, 90);
-  let obj1 = usePlaceholderWidth /* usePlaceholderWidth */;
+  let obj1 = usePlaceholderWidth;
   const items = [tmp2.commandContainer, ];
   let rowShadow = !tmp;
   const placeholderWidth1 = obj1.usePlaceholderWidth(20, 70);

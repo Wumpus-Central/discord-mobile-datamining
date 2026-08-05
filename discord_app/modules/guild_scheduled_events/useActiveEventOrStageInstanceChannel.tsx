@@ -7,7 +7,7 @@ const require = arg1;
 const result = require("useLiveStageChannels").fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");
 
 export const useActiveEventOrStageInstanceChannel = function useActiveEventOrStageInstanceChannel(id) {
-  let firstActiveEventChannel = useGuildEvents /* useGuildEvents */.useFirstActiveEventChannel(id);
+  let firstActiveEventChannel = useGuildEvents.useFirstActiveEventChannel(id);
   const first = useLiveStageChannels(id)[0];
   if (first != null) {
     id = first.id;

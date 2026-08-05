@@ -23,12 +23,12 @@ function EditCollectiblesPreviewDescription(arg0) {
   ({ user, purchase } = arg0);
   let stringResult = dependencyMap;
   ({ product, nitroJoinCTA, nitroUpgradeCTA } = arg0);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   let obj1 = getPremiumPlanItem;
   const canUseCollectiblesResult = obj1.canUseCollectibles(user);
-  let obj2 = getItemRecordsFromPurchases /* getItemRecordsFromPurchases */;
+  let obj2 = getItemRecordsFromPurchases;
   let result = obj2.isPremiumCollectiblesProduct(product);
   if (!result) {
     let tmpResult = tmp(6922);
@@ -153,7 +153,7 @@ export default function EditCollectiblesPreviewDetails(previewSkuId) {
       }
       obj = { variant: "text-md/bold", color: "text-default", children: null };
       obj[2] = name;
-      const items = [closure_5(Text /* Text */.Text, obj), ];
+      const items = [closure_5(Text.Text, obj), ];
       obj = { user: null, product: null, purchase: null, nitroJoinCTA: null, nitroUpgradeCTA: null };
       obj[0] = user;
       obj[1] = product;

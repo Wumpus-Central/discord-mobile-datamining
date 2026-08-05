@@ -18,10 +18,10 @@ function TermsFieldListItem(arg0) {
   let obj = { style: tmp.termsRow, children: null };
   obj = { style: tmp.termsRowNumber, variant: "text-sm/medium", color: "text-muted", children: null };
   obj[3] = "" + rowNumber + ".";
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const items = [callback(Text.Text, obj), ];
   obj = { style: tmp.termsRowContent, variant: "text-md/medium", children: null };
   obj[2] = require("../../../../markup/MarkupUtils.tsx") /* get defaultRules */.parseGuildVerificationFormRule(rule, true, { channelId: rulesChannelId });
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

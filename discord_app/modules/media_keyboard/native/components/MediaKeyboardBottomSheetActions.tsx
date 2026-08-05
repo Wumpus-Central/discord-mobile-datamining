@@ -26,7 +26,7 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2, arg3) => {
   obj.top = undefined;
   obj[0] = obj;
   obj = { paddingVertical: Themes.space.PX_8, marginHorizontal: Themes.modules.mobile.MEDIA_KEYBOARD_BAR_MARGIN_HORIZONTAL, marginBottom: null, borderRadius: null, backgroundColor: null, paddingHorizontal: null, borderWidth: null };
-  let obj3 = set /* set */;
+  let obj3 = set;
   if (obj3.isIOS()) {
     PX_24 = tmp3(712).space.PX_24;
   }

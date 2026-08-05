@@ -28,8 +28,8 @@ function getNickname(id, arg1, id) {
 }
 function getName(id, arg1, id) {
   if (null == id) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.sKdZ6U);
+    const intl = getSystemLocale.intl;
+    let stringResult = intl.string(getSystemLocale.t.sKdZ6U);
   } else {
     stringResult = null;
     if (null != id) {

@@ -10,9 +10,9 @@ export default function openCustomKeyboard(secondaryTextFieldRef) {
   let require;
   ({ channelId: require, chatInputRef: importDefault, chatInputNativeRef: dependencyMap, keyboardParams } = secondaryTextFieldRef);
   secondaryTextFieldRef = secondaryTextFieldRef.secondaryTextFieldRef;
-  computeEntryState /* computeEntryState */.setKeyboardType(keyboardParams);
-  let obj = computeEntryState /* computeEntryState */;
-  runAfterInteractions /* runAfterInteractions */.runAfterInteractions(() => {
+  computeEntryState.setKeyboardType(keyboardParams);
+  let obj = computeEntryState;
+  runAfterInteractions.runAfterInteractions(() => {
     const current = ref.current;
     current.blur();
     if (secondaryTextFieldRef != null) {

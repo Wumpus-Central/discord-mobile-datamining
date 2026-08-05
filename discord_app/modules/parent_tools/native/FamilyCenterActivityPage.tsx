@@ -25,7 +25,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/na
 
 export default function FamilyCenterActivityPage() {
   const tmp = createCacheKey();
-  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
+  let obj = useUserIdsForLinkStatus;
   obj = { style: tmp.scrollView, children: null };
   const activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = { style: tmp.container, children: null };
@@ -44,6 +44,6 @@ export default function FamilyCenterActivityPage() {
   }
   items[1] = tmp3Result;
   obj[1] = items;
-  obj[1] = callback(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, { bottom: true, children: closure_7(closure_3, obj) });
+  obj[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, children: closure_7(closure_3, obj) });
   return callback(closure_4, obj);
 };

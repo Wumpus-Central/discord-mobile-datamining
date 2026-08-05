@@ -31,10 +31,10 @@ function PromptHeader(currentPrompt) {
   const tmp = createCacheKey();
   let obj = { style: tmp.promptHeader, children: null };
   obj = { style: tmp.countText, variant: "text-sm/medium", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { currentQuestion: currentPromptIndex + 1, questionCount: numberOfPrompts };
-  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.isV0NW, obj);
-  const items = [callback2(Text /* Text */.Text, obj), ];
+  obj[3] = intl.format(getSystemLocale.t.isV0NW, obj);
+  const items = [callback2(Text.Text, obj), ];
   let required;
   if (currentPrompt != null) {
     required = currentPrompt.required;
@@ -55,7 +55,7 @@ function PromptHeader(currentPrompt) {
   const obj4 = { children: null };
   items[1] = tmp2Result;
   obj[1] = items;
-  const items2 = [closure_16(closure_6, obj), callback2(Text /* Text */.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: currentPrompt.title })];
+  const items2 = [closure_16(closure_6, obj), callback2(Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: currentPrompt.title })];
   obj4[0] = items2;
   return closure_16(closure_17, obj4);
 }
@@ -180,7 +180,7 @@ function PromptFooter(onPress) {
   return closure_16(closure_6, obj);
 }
 function formattedNameHighlight(children) {
-  return callback2(Text /* Text */.Text, { variant: "text-xs/medium", color: "mobile-text-heading-primary", children }, arg1);
+  return callback2(Text.Text, { variant: "text-xs/medium", color: "mobile-text-heading-primary", children }, arg1);
 }
 function DropdownOption(option) {
   option = option.option;

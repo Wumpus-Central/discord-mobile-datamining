@@ -18,9 +18,9 @@ class Suppressed extends Component {
   }
 }
 Suppressed.prototype["render"] = function render() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (isAFKChannelResult) {
     let stringResult = string(t.KuYcnU);
     const intl3 = tmp2(1236).intl;

@@ -27,7 +27,7 @@ export default function VoicePanelDrawerToggleButton(arg0) {
   let wrapperSpecs;
   ({ props, openTab, wrapperSpecs } = arg0);
   const tmp = createCacheKey();
-  let obj = useVoicePanelButtonStyles /* useVoicePanelButtonStyles */;
+  let obj = useVoicePanelButtonStyles;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
   ({ isDrawerOpen, handlePress, accessibilityLabel } = useDrawerToggle(openTab));
   obj = { onPress: handlePress, props, accessibilityLabel, children: null };

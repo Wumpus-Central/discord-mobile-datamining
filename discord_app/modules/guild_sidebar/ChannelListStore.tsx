@@ -198,9 +198,9 @@ const channelListStore = new ChannelListStore(require("dispatcher"), {
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
     instance = instance.instance;
-    const embeddedActivityLocationGuildId = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationGuildId(instance.location);
-    const obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
-    return tmp2.updateSubtitles(embeddedActivityLocationGuildId, getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(instance.location));
+    const embeddedActivityLocationGuildId = getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationGuildId(instance.location);
+    const obj = getEmbeddedActivityLocationChannelId;
+    return tmp2.updateSubtitles(embeddedActivityLocationGuildId, getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationChannelId(instance.location));
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function handleEmbeddedActivityLaunchStart() {
     tmp2.updateSubtitles();
@@ -434,9 +434,9 @@ let obj = {
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
     instance = instance.instance;
-    const embeddedActivityLocationGuildId = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationGuildId(instance.location);
-    const obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
-    return tmp2.updateSubtitles(embeddedActivityLocationGuildId, getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(instance.location));
+    const embeddedActivityLocationGuildId = getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationGuildId(instance.location);
+    const obj = getEmbeddedActivityLocationChannelId;
+    return tmp2.updateSubtitles(embeddedActivityLocationGuildId, getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationChannelId(instance.location));
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function handleEmbeddedActivityLaunchStart() {
     tmp2.updateSubtitles();

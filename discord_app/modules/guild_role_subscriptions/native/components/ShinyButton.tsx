@@ -44,5 +44,5 @@ export default function ShinyButton(style) {
   }
   obj[4] = tmp3Result;
   const merged1 = Object.assign(merged);
-  return jsx(CollapsingText /* CollapsingText */.BaseTextButton, { onPress, pillStyle: items, loading, disabled, icon: null });
+  return jsx(CollapsingText.BaseTextButton, { onPress, pillStyle: items, loading, disabled, icon: null });
 };

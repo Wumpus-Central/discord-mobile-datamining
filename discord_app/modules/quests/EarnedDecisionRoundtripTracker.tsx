@@ -14,7 +14,7 @@ function trackRoundtrip(apiResponseTimestamp) {
     if (null != apiResponseTimestamp.apiResponseTimestamp) {
       diff = apiResponseTimestamp.apiResponseTimestamp - apiResponseTimestamp.initialSendTimestamp;
     }
-    let obj = receiveNetworkInfoformation /* receiveNetworkInfoformation */;
+    let obj = receiveNetworkInfoformation;
     const signalStrength = obj.getSignalStrength();
     obj = {};
     const merged = Object.assign(getDeviceMetadata());
@@ -31,9 +31,9 @@ function trackRoundtrip(apiResponseTimestamp) {
     ({ callerSource: obj3.caller_source, requestId: obj3.request_id, fetchedAt: obj3.fetched_at } = apiResponseTimestamp);
     const obj2 = expandEventProperties;
     const tmp2 = require;
-    obj.is_foregrounded = isForegrounded /* isForegrounded */.isForegrounded();
+    obj.is_foregrounded = isForegrounded.isForegrounded();
     obj2.track(AnalyticEvents.EARNED_DECISION_ROUNDTRIP, obj);
-    const tmp2Result = isForegrounded /* isForegrounded */;
+    const tmp2Result = isForegrounded;
   }
 }
 class EarnedDecisionRoundtripTracker {

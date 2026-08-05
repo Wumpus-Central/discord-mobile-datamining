@@ -5,8 +5,8 @@ import { AccountEditPassword } from "../../account/native/AccountEditPassword.ts
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["CIGa+7"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["CIGa+7"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   screen: obj

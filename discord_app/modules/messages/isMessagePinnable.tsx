@@ -24,8 +24,8 @@ export default function isMessagePinnable(arg0, isSystemDM) {
     isActiveChannelOrUnarchivableThread = isPrivateResult;
   }
   if (isActiveChannelOrUnarchivableThread) {
-    isActiveChannelOrUnarchivableThread = useCanUnarchiveThread /* useCanUnarchiveThread */.getIsActiveChannelOrUnarchivableThread(isSystemDM);
-    const obj2 = useCanUnarchiveThread /* useCanUnarchiveThread */;
+    isActiveChannelOrUnarchivableThread = useCanUnarchiveThread.getIsActiveChannelOrUnarchivableThread(isSystemDM);
+    const obj2 = useCanUnarchiveThread;
   }
   if (isActiveChannelOrUnarchivableThread) {
     isActiveChannelOrUnarchivableThread = isSystemDM.type !== constants.GUILD_VOICE;

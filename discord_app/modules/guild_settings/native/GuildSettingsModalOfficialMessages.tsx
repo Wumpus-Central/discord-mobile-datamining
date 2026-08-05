@@ -43,7 +43,7 @@ function MessagePreview(theme) {
   if (maybeApplyNoTextColorForLightCustomTheme.desaturateUserColors) {
     num = maybeApplyNoTextColorForLightCustomTheme.saturation;
   }
-  let obj = useCanManageGuildOfficialMessages /* useCanManageGuildOfficialMessages */;
+  let obj = useCanManageGuildOfficialMessages;
   const accessibleGuildOfficialTextColor = obj.getAccessibleGuildOfficialTextColor(selectedColor, semanticColor, num);
   let obj2 = tmp3(689)(selectedColor);
   const hexResult = accessibleGuildOfficialTextColor.hex();
@@ -55,21 +55,21 @@ function MessagePreview(theme) {
   items1 = [tmp.chatContainerInner, { backgroundColor: obj2.alpha(closure_10).hex() }];
   const obj1 = { source: null };
   obj1[0] = registerAsset;
-  const items2 = [callback(Button /* Button */.Avatar, obj1), ];
+  const items2 = [callback(Button.Avatar, obj1), ];
   obj2 = { style: tmp.chatContent, children: null };
   const obj3 = { style: tmp.chatHeader, children: null };
   const obj4 = { animated: true, style: animatedStyles.textStrong, variant: "text-md/semibold", lineClamp: 1, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj4[4] = intl.string(getSystemLocale /* getSystemLocale */.t.cqpybK);
-  const items3 = [callback(Text /* Text */.Text, obj4), ];
+  const intl = getSystemLocale.intl;
+  obj4[4] = intl.string(getSystemLocale.t.cqpybK);
+  const items3 = [callback(Text.Text, obj4), ];
   const items4 = [tmp.chatTimestamp, animatedStyles.textMuted];
-  items3[1] = callback(Text /* Text */.Text, { animated: true, variant: "text-xs/medium", style: items4, children: memo });
+  items3[1] = callback(Text.Text, { animated: true, variant: "text-xs/medium", style: items4, children: memo });
   obj3[1] = items3;
   const items5 = [callback2(closure_5, obj3), ];
   const obj5 = { animated: true, variant: "text-md/normal", style: { color: hexResult }, children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj5[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.Mi9Kbe);
-  items5[1] = callback(Text /* Text */.Text, obj5);
+  const intl2 = getSystemLocale.intl;
+  obj5[3] = intl2.string(getSystemLocale.t.Mi9Kbe);
+  items5[1] = callback(Text.Text, obj5);
   obj2[1] = items5;
   items2[1] = callback2(closure_5, obj2);
   obj[1] = items2;

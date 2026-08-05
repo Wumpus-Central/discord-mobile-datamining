@@ -10,10 +10,10 @@ import { AccessibilityAnnouncer } from "../../design/shared.tsx";
 
 const require = arg1;
 const memoizeResult = apply.memoize((arg0) => {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
-  obj = { base: "#ffffff", contrastRatio: AccessibilityAnnouncer /* AccessibilityAnnouncer */.WCAGContrastRatios.HighContrastText };
+  let obj = AccessibilityAnnouncer;
+  obj = { base: "#ffffff", contrastRatio: AccessibilityAnnouncer.WCAGContrastRatios.HighContrastText };
   const contrastingColor = obj.getContrastingColor(arg0, obj);
-  return int2hslRaw /* int2hslRaw */.hex2int(contrastingColor);
+  return int2hslRaw.hex2int(contrastingColor);
 }, (arg0) => arg0);
 const memoizeResult1 = apply.memoize((hex2intResult) => {
   let tmp = arg2;
@@ -26,7 +26,7 @@ const memoizeResult1 = apply.memoize((hex2intResult) => {
       } else {
         LIGHT = ThemeTypes.LIGHT;
       }
-      obj = int2hslRaw /* int2hslRaw */;
+      obj = int2hslRaw;
     }
   }
   const obj2 = n;
@@ -34,11 +34,11 @@ const memoizeResult1 = apply.memoize((hex2intResult) => {
   const mixResult = obj2.mix(n(hex2intResult), n(arg1), 0.5, "lab");
   const result = Math.round(100 * mixResult.get("hsl.l")) / 100;
   if (tmp !== ThemeTypes.LIGHT) {
-    let clampResult = apply /* apply */.clamp(result, 0, 0.1);
-    const obj5 = apply /* apply */;
+    let clampResult = apply.clamp(result, 0, 0.1);
+    const obj5 = apply;
   } else {
-    clampResult = apply /* apply */.clamp(result, 0.8, 1);
-    const obj4 = apply /* apply */;
+    clampResult = apply.clamp(result, 0.8, 1);
+    const obj4 = apply;
   }
   const tmp10 = n(hex2intResult);
   const result1 = tmp8(689)(mixResult).set("hsl.l", clampResult);
@@ -55,7 +55,7 @@ export const getProfileTheme = function getProfileTheme(first) {
     } else {
       LIGHT = ThemeTypes.LIGHT;
     }
-    obj = int2hslRaw /* int2hslRaw */;
+    obj = int2hslRaw;
   }
 };
 export const getValueInColorGradientByPercentage = function getValueInColorGradientByPercentage(items, items1, arg2) {
@@ -103,9 +103,9 @@ export const calculateGradientSplitColors = function calculateGradientSplitColor
   if (0 === arg2) {
     return [];
   } else {
-    const int2rgbArrayResult = int2hslRaw /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
-    const obj = int2hslRaw /* int2hslRaw */;
-    const int2rgbArrayResult1 = int2hslRaw /* int2hslRaw */.int2rgbArray(modalV2BackgroundColor);
+    const int2rgbArrayResult = int2hslRaw.int2rgbArray(modalV2BackgroundColor);
+    const obj = int2hslRaw;
+    const int2rgbArrayResult1 = int2hslRaw.int2rgbArray(modalV2BackgroundColor);
     const result = 100 * arg3 / arg2 / 100;
     const diff = 1 - result;
     const _Math = Math;
@@ -134,27 +134,27 @@ export const getUserProfileGradientContainerColors = function getUserProfileGrad
   if (typeof closure_2 === "string") {
     let int2rgbaResult = int2rgbaResult1;
     if (null != result) {
-      int2rgbaResult = int2hslRaw /* int2hslRaw */.int2rgba(result, 1);
-      const obj3 = int2hslRaw /* int2hslRaw */;
+      int2rgbaResult = int2hslRaw.int2rgba(result, 1);
+      const obj3 = int2hslRaw;
     }
     const items = [int2rgbaResult, ];
     if (null != result1) {
-      int2rgbaResult1 = int2hslRaw /* int2hslRaw */.int2rgba(result1, 1);
-      const obj4 = int2hslRaw /* int2hslRaw */;
+      int2rgbaResult1 = int2hslRaw.int2rgba(result1, 1);
+      const obj4 = int2hslRaw;
     }
     items[1] = int2rgbaResult1;
     let items1 = items;
   } else {
     if (null != result) {
-      let int2rgbaResult2 = int2hslRaw /* int2hslRaw */.int2rgba(result, 1);
-      const obj = int2hslRaw /* int2hslRaw */;
+      let int2rgbaResult2 = int2hslRaw.int2rgba(result, 1);
+      const obj = int2hslRaw;
     } else {
       int2rgbaResult2 = int2rgbaResult1[0];
     }
     items1 = [int2rgbaResult2, ];
     if (null != result1) {
-      let int2rgbaResult3 = int2hslRaw /* int2hslRaw */.int2rgba(result1, 1);
-      const obj2 = int2hslRaw /* int2hslRaw */;
+      let int2rgbaResult3 = int2hslRaw.int2rgba(result1, 1);
+      const obj2 = int2hslRaw;
     } else {
       int2rgbaResult3 = int2rgbaResult1[1];
     }

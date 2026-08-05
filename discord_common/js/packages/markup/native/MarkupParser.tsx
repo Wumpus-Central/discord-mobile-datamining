@@ -16,10 +16,10 @@ function saferParse(arg0, arg1, inline) {
   `;
     }
     const tmp8 = arg0(text, inline);
-    const flattenAstResult = collectAst /* collectAst */.flattenAst(inline, tmp8);
-    const obj = collectAst /* collectAst */;
-    const obj2 = collectAst /* collectAst */;
-    ({ hasBailedAst, ast } = collectAst /* collectAst */.constrainAst(flattenAstResult));
+    const flattenAstResult = collectAst.flattenAst(inline, tmp8);
+    const obj = collectAst;
+    const obj2 = collectAst;
+    ({ hasBailedAst, ast } = collectAst.constrainAst(flattenAstResult));
     if (tmp6) {
       ast = tmp6(ast, inline.inline, hasBailedAst);
     }

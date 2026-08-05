@@ -7,7 +7,7 @@ const require = arg1;
 const result = require("databaseName").fileFinishedImporting("modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx");
 
 export default function useNativeAndroidEmojiPickerEnabled() {
-  let isAndroidResult = set /* set */.isAndroid();
+  let isAndroidResult = set.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != databaseName.database(id.getId());
     const obj2 = databaseName;

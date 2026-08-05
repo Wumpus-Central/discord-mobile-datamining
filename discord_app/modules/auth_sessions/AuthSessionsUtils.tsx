@@ -34,8 +34,8 @@ export const useAuthSessions = function useAuthSessions() {
 export const formatDate = function formatDate(arg0) {
   const timestamp = Date.now();
   if ((timestamp - arg0.valueOf()) / 1000 / 60 / 60 < 1) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.TXCmfL);
+    const intl = getSystemLocale.intl;
+    let stringResult = intl.string(getSystemLocale.t.TXCmfL);
   } else {
     stringResult = t(arg0).fromNow();
     const obj = t(arg0);

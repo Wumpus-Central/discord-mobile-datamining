@@ -91,7 +91,7 @@ function useOnActivityItemSelected(arg0) {
   let tmp = useActivityAction({ context, applicationId: str, fetchesApplication });
   analyticsLocations = context(5610)().analyticsLocations;
   closure_14 = context(10628)();
-  obj = canLaunchFrame /* canLaunchFrame */;
+  obj = canLaunchFrame;
   closure_15 = obj.canLaunchFrame(application);
   if (null == application) {
     return () => {
@@ -436,7 +436,7 @@ export const getStaffReleasePhase = function getStaffReleasePhase(application) {
   if (!obj.hasApplicationFlag(application, ApplicationFlags.EMBEDDED_RELEASED)) {
     let tmpResult = tmp(7510);
   }
-  obj = getApplicationFlags /* getApplicationFlags */;
+  obj = getApplicationFlags;
   const tmp3 = ApplicationFlags;
   tmpResult = tmp(500);
   const str = arg1.client_platform_config[getPlatform(undefined, tmpResult.getOS(tmpResult))].release_phase;

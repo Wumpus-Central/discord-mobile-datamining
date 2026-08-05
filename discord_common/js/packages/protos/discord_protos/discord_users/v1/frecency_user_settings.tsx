@@ -158,7 +158,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos) {
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, writeUnknownFields) {
   if (versions.versions) {
-    const Versions = create /* create */.Versions;
+    const Versions = create.Versions;
     const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
     const joined = Versions.internalBinaryWrite(versions.versions, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Versions.internalBinaryWrite(versions.versions, tag.tag(1, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

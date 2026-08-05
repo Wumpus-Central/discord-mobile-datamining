@@ -69,7 +69,7 @@ function InProgressScreen(arg0) {
   obj = { style: tmp.progressWrapper, children: callback4(GiftingBadgeProgressBar, { progress, currentTier, nextTier, iconSize: 48, title: progressBarTitle }) };
   const items = [callback4(View, obj), ];
   const obj1 = { style: tmp.messageSection, children: null };
-  const items1 = [callback4(Text /* Text */.Text, { variant: "heading-xxl/bold", style: tmp.centerText, children: title }), callback4(Text /* Text */.Text, { variant: "text-md/medium", color: "text-subtle", style: tmp.centerText, children: description })];
+  const items1 = [callback4(Text.Text, { variant: "heading-xxl/bold", style: tmp.centerText, children: title }), callback4(Text.Text, { variant: "text-md/medium", color: "text-subtle", style: tmp.centerText, children: description })];
   obj1[1] = items1;
   items[1] = callback5(View, obj1);
   obj[1] = items;
@@ -105,13 +105,13 @@ function LevelUpScreen(arg0) {
   const items1 = [closure_10(GiftingBadgeLevelUpProgress, { progress: simulatedProgress, currentTier, newTier, style: tmp3.levelUpProgress }), ];
   const obj4 = { style: tmp3.messageSection, children: null };
   const obj5 = { variant: "heading-xxl/bold", style: tmp3.centerText, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   let str = newTier.name;
   if (str == null) {
     str = "";
   }
   obj5[2] = intl.format(messagesProxy.k8MmO8, { tierName: str });
-  const items2 = [closure_10(Text /* Text */.Text, obj5), ];
+  const items2 = [closure_10(Text.Text, obj5), ];
   tmp7Result = null != nextTier && null != giftsToNextTier;
   if (tmp7Result) {
     tmp7Result = giftsToNextTier > 0;
@@ -170,7 +170,7 @@ export default function GiftBadgePostPurchase(arg0) {
     obj = { dismissAction: constants.INDIRECT_ACTION };
     const result = obj.UNSAFE_markDismissibleContentAsDismissed(callback(1358).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK, obj);
   }, []);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [map];
   const stateFromStores = obj.useStateFromStores(items, () => {
     badgeById = badgeById.getBadgeById(callback(8708).BadgeId.GIFTING);

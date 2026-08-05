@@ -142,7 +142,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
     }
     return num15;
   } else {
-    const isQuestExpiredResult = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */.isQuestExpired(id);
+    const isQuestExpiredResult = getQuestDeliveryDataForPlacement.isQuestExpired(id);
     const userStatus12 = id.userStatus;
     let claimedAt;
     if (userStatus12 != null) {
@@ -322,7 +322,7 @@ function defaultSortFn(id, id2, questHomeHero, get) {
       num5 = num10;
       const tmp50Result4 = tmp50(7103);
     }
-    const obj9 = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */;
+    const obj9 = getQuestDeliveryDataForPlacement;
     const tmp19 = null != completedAt2;
     const tmp30 = null != completedAt3;
   }
@@ -381,9 +381,9 @@ function expiringSoonSortFn(config, config2) {
 }
 function doesQuestPassTaskFilter(quest) {
   if (constants4.VIDEO === arg1) {
-    return getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */.hasWatchVideoTasks(quest);
+    return getApplicationIdsByTaskTypes.hasWatchVideoTasks(quest);
   } else if (tmp.PLAY === arg1) {
-    let obj = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+    let obj = getApplicationIdsByTaskTypes;
     obj = { quest: null };
     obj[0] = quest;
     let hasPlayOnDesktopTaskResult = obj.hasPlayOnDesktopTask(obj);
@@ -412,14 +412,14 @@ function doesQuestPassTaskFilter(quest) {
 }
 function doesQuestPassRewardFilter(config) {
   if (constants5.VIRTUAL_CURRENCY === arg1) {
-    return _getDefaultRewardName /* _getDefaultRewardName */.hasVirtualCurrencyReward(config.config);
+    return _getDefaultRewardName.hasVirtualCurrencyReward(config.config);
   } else if (tmp.COLLECTIBLE === arg1) {
-    return _getDefaultRewardName /* _getDefaultRewardName */.hasCollectiblesQuestReward(config.config);
+    return _getDefaultRewardName.hasCollectiblesQuestReward(config.config);
   } else if (tmp.IN_GAME === arg1) {
-    let hasInGameQuestRewardResult = _getDefaultRewardName /* _getDefaultRewardName */.hasInGameQuestReward(config.config);
+    let hasInGameQuestRewardResult = _getDefaultRewardName.hasInGameQuestReward(config.config);
     if (!hasInGameQuestRewardResult) {
-      hasInGameQuestRewardResult = _getDefaultRewardName /* _getDefaultRewardName */.hasQuestRewardCode(config.config);
-      const tmp2Result = _getDefaultRewardName /* _getDefaultRewardName */;
+      hasInGameQuestRewardResult = _getDefaultRewardName.hasQuestRewardCode(config.config);
+      const tmp2Result = _getDefaultRewardName;
     }
     return hasInGameQuestRewardResult;
   } else {
@@ -444,7 +444,7 @@ function sortQuests(arr) {
     if (0 !== filters.length) {
       let found = arr;
       if (0 !== filters.length) {
-        require = apply /* apply */.groupBy(filters, "group");
+        require = apply.groupBy(filters, "group");
         found = arr.filter((arg0) => {
           let closure_0 = arg0;
           const entries = Object.entries(closure_0);
@@ -461,7 +461,7 @@ function sortQuests(arr) {
             return 0 === arr.length || arr.some((arg0) => tmp2(closure_0, arg0.filter));
           });
         });
-        let obj2 = apply /* apply */;
+        let obj2 = apply;
       }
       obj = found;
     }
@@ -610,10 +610,10 @@ function useAllQuests(quests, sortMethod) {
   }, items5);
 }
 function isQuestHiddenFromQuestHome(userStatus) {
-  let isQuestExpiredResult = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */.isQuestExpired(userStatus);
+  let isQuestExpiredResult = getQuestDeliveryDataForPlacement.isQuestExpired(userStatus);
   if (isQuestExpiredResult) {
-    isQuestExpiredResult = !getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */.hasUnclaimedReward(userStatus.userStatus);
-    const tmpResult = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */;
+    isQuestExpiredResult = !getQuestDeliveryDataForPlacement.hasUnclaimedReward(userStatus.userStatus);
+    const tmpResult = getQuestDeliveryDataForPlacement;
   }
   return isQuestExpiredResult;
 }
@@ -925,7 +925,7 @@ export const useClaimedQuests = function useClaimedQuests() {
 };
 export const useExpiredQuestsMap = function useExpiredQuestsMap() {
   const items = [initializeState];
-  return initialize /* initialize */.useStateFromStores(items, () => expiredQuestsMap.getExpiredQuestsMap());
+  return initialize.useStateFromStores(items, () => expiredQuestsMap.getExpiredQuestsMap());
 };
 export const useShouldShowBonusOrbsUX = function useShouldShowBonusOrbsUX(quest, questOrbMultiplierEligibility) {
   const _require = quest;
@@ -1229,11 +1229,11 @@ export const useQuestForMemberListSocialEntryPoint = function useQuestForMemberL
   return tmp4;
 };
 export const useQuestCollectibles = function useQuestCollectibles(config) {
-  const hasQuestCollectibles = _getDefaultRewardName /* _getDefaultRewardName */.hasCollectiblesQuestReward(config);
-  const obj = _getDefaultRewardName /* _getDefaultRewardName */;
-  const defaultReward = getContextualEntrypointHeading /* getContextualEntrypointHeading */.getDefaultReward(config);
-  const obj2 = getContextualEntrypointHeading /* getContextualEntrypointHeading */;
-  const isFetching = useFetchCollectiblesProduct /* useFetchCollectiblesProduct */.useFetchCollectiblesProduct(defaultReward.skuId);
+  const hasQuestCollectibles = _getDefaultRewardName.hasCollectiblesQuestReward(config);
+  const obj = _getDefaultRewardName;
+  const defaultReward = getContextualEntrypointHeading.getDefaultReward(config);
+  const obj2 = getContextualEntrypointHeading;
+  const isFetching = useFetchCollectiblesProduct.useFetchCollectiblesProduct(defaultReward.skuId);
   const product = isFetching.product;
   let avatarDecoration;
   if (product != null) {
@@ -1759,7 +1759,7 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
 };
 export const useQuest = function useQuest(arg0) {
   const items = [initializeState];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => quests.quests);
+  const stateFromStores = initialize.useStateFromStores(items, () => quests.quests);
   let value = stateFromStores.get(arg0);
   if (value == null) {
     value = null;
@@ -1854,20 +1854,20 @@ export const useCosponsoredLogotypeAsset = function useCosponsoredLogotypeAsset(
   }, items2);
 };
 export const useClaimedCollectibleRewardMessage = function useClaimedCollectibleRewardMessage(config) {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = _getDefaultRewardName /* _getDefaultRewardName */;
+  let obj1 = _getDefaultRewardName;
   const defaultRewardName = obj1.getDefaultRewardName(config, stateFromStores);
-  let obj2 = _getDefaultRewardName /* _getDefaultRewardName */;
+  let obj2 = _getDefaultRewardName;
   const collectibleQuestRewardDuration = obj2.getCollectibleQuestRewardDuration(config);
-  let obj3 = _getDefaultRewardName /* _getDefaultRewardName */;
+  let obj3 = _getDefaultRewardName;
   const collectibleQuestRewardExtendableExpirationDate = obj3.getCollectibleQuestRewardExtendableExpirationDate(config);
-  let obj4 = _getDefaultRewardName /* _getDefaultRewardName */;
+  let obj4 = _getDefaultRewardName;
   const result = obj4.isCollectibleQuestRewardPermanentWithPremiumSubscription(config);
-  const result1 = _getDefaultRewardName /* _getDefaultRewardName */.isCollectibleQuestRewardPremiumExtendable(config);
-  const obj6 = _getDefaultRewardName /* _getDefaultRewardName */;
-  const isPremiumResult = getPremiumPlanItem /* getPremiumPlanItem */.isPremium(stateFromStores, PremiumTypes.TIER_2);
+  const result1 = _getDefaultRewardName.isCollectibleQuestRewardPremiumExtendable(config);
+  const obj6 = _getDefaultRewardName;
+  const isPremiumResult = getPremiumPlanItem.isPremium(stateFromStores, PremiumTypes.TIER_2);
   if (null == collectibleQuestRewardDuration) {
     const intl2 = tmp(1236).intl;
     obj = { decorationName: null };
@@ -1912,7 +1912,7 @@ export const useClaimedCollectibleRewardMessage = function useClaimedCollectible
   }
 };
 export const useLaunchInGameActivityQuest = function useLaunchInGameActivityQuest(quest) {
-  let obj = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+  let obj = getApplicationIdsByTaskTypes;
   obj = { launchInGameActivity: null };
   const activityApplicationId = obj.getActivityApplicationId(quest);
   obj[0] = useRefocusOrLaunchActivity({ applicationId: activityApplicationId });
@@ -1920,7 +1920,7 @@ export const useLaunchInGameActivityQuest = function useLaunchInGameActivityQues
 };
 export const useIsPreviewerOnAnyQuest = function useIsPreviewerOnAnyQuest() {
   const items = [initializeState];
-  const stateFromStoresArray = initialize /* initialize */.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => {
     quests = quests.quests;
     const items = [...quests.values()];
     return items;
@@ -1929,7 +1929,7 @@ export const useIsPreviewerOnAnyQuest = function useIsPreviewerOnAnyQuest() {
 };
 export const useShouldShowPreviewToolTab = function useShouldShowPreviewToolTab() {
   let items = [initializeState];
-  const stateFromStoresArray = initialize /* initialize */.useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = initialize.useStateFromStoresArray(items, () => {
     quests = quests.quests;
     const items = [...quests.values()];
     return items;
@@ -1943,8 +1943,8 @@ export const useShouldShowQuestsActivityPanelItem = function useShouldShowQuests
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    isDismissedResult = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */.isDismissed(userStatus.userStatus, QuestsVisibleMessagesChangedSource /* QuestsVisibleMessagesChangedSource */.QuestContent.ACTIVITY_PANEL);
-    const obj = getQuestDeliveryDataForPlacement /* getQuestDeliveryDataForPlacement */;
+    isDismissedResult = getQuestDeliveryDataForPlacement.isDismissed(userStatus.userStatus, QuestsVisibleMessagesChangedSource.QuestContent.ACTIVITY_PANEL);
+    const obj = getQuestDeliveryDataForPlacement;
   }
   let tmp5 = userStatus;
   if (userStatus == null) {
@@ -1954,7 +1954,7 @@ export const useShouldShowQuestsActivityPanelItem = function useShouldShowQuests
   const items = [initializeState];
   const items1 = [tmp5];
   let claimedAt;
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     let isQuestExpiredResult = null != closure_0;
     if (isQuestExpiredResult) {
       isQuestExpiredResult = outer1_12.isQuestExpired(tmp.id);
@@ -1967,12 +1967,12 @@ export const useShouldShowQuestsActivityPanelItem = function useShouldShowQuests
       claimedAt = userStatus.claimedAt;
     }
   }
-  const obj2 = initialize /* initialize */;
+  const obj2 = initialize;
   const tmp11 = null != claimedAt;
   const tmp6 = require;
   const tmp8 = initializeState;
   const items2 = [tmp8];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items2, () => null != obj.questEnrollmentBlockedUntil, []);
+  const stateFromStores1 = initialize.useStateFromStores(items2, () => null != obj.questEnrollmentBlockedUntil, []);
   if (!isDismissedResult) {
     isDismissedResult = stateFromStores;
   }
@@ -2276,7 +2276,7 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties(loca
 };
 export const useQuestHomeBounties = function useQuestHomeBounties() {
   const items = [closure_10];
-  return initialize /* initialize */.useStateFromStoresObject(items, () => ({ questHomeBounties: closure_10.questHomeBounties, isFetching: closure_10.isFetchingQuestHomeBounties }));
+  return initialize.useStateFromStoresObject(items, () => ({ questHomeBounties: closure_10.questHomeBounties, isFetching: closure_10.isFetchingQuestHomeBounties }));
 };
 export const useQuestBarImpressionSurvey = function useQuestBarImpressionSurvey(questCreative) {
   const _require = questCreative;

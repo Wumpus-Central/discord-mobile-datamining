@@ -26,7 +26,7 @@ function PrivateChannelSubtitle(channel) {
   let obj = { style: tmp.subtitleWrapper, children: null };
   obj = { useAllAloneText: false, channel, voiceState: state, style: tmp.subtitle };
   const items = [callback(OngoingCallStatusLabel, obj), , ];
-  let tmp6Result = state === id /* id */.CallStates.CONNECTED;
+  let tmp6Result = state === id.CallStates.CONNECTED;
   if (tmp6Result) {
     obj = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: " - " };
     obj[0] = tmp.subtitle;
@@ -154,8 +154,8 @@ function AddMemberButton(onPress) {
   const obj = { onPress: onPress.onPress, iconSource: null, iconStyle: null, accessibilityLabel: null };
   obj[1] = registerAsset;
   obj[2] = createCacheKey().icons;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["6Qgrev"]);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["6Qgrev"]);
   return callback(IconButton, obj);
 }
 class IconButton {

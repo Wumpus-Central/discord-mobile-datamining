@@ -28,7 +28,7 @@ export const getSystemKeyboardHeight = function getSystemKeyboardHeight(arg0) {
   }
   let DEFAULT_APP_ENTRY_KEY = tmp.appEntryKey;
   if (DEFAULT_APP_ENTRY_KEY === undefined) {
-    DEFAULT_APP_ENTRY_KEY = context /* context */.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
   }
   const tmp4 = computeEntryState.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY];
   return flag ? tmp4.keyboardHeightExcludingSafeAreaInsets : tmp4.keyboardHeight;

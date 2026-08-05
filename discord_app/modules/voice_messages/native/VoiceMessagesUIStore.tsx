@@ -66,24 +66,24 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
   });
 };
 export const showVoiceMessagesTooltip = function showVoiceMessagesTooltip() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     state.setState({ showVoiceMessagesTooltip: true });
   });
 };
 export const hideVoiceMessagesTooltip = function hideVoiceMessagesTooltip() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     state.setState({ showVoiceMessagesTooltip: false });
   });
 };
 export const resetVoiceMessageState = function resetVoiceMessageState() {
-  const obj = batchUpdates /* batchUpdates */;
+  const obj = batchUpdates;
   obj.batchUpdates(() => {
     state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "displayName" });
   });
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    const result = currWaveHeight.set(CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(0));
-    const tmpResult = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
+    const result = currWaveHeight.set(CONFIG_NEVER_ANIMATE.withSpring(0));
+    const tmpResult = CONFIG_NEVER_ANIMATE;
   }
 };
 export const setSavedVoiceMessageUploadData = function setSavedVoiceMessageUploadData(arg0) {

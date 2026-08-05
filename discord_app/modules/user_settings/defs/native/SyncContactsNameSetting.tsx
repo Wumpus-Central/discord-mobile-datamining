@@ -9,34 +9,34 @@ import { _uploadContacts } from "../../../contact_sync/native/ContactSyncUtils.t
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.nAsWKy);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.nAsWKy);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
     expandEventProperties.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventProperties;
-    ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(13995, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreators.pushLazy(asyncRequireImpl(13995, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
-    return null != _uploadContacts /* _uploadContacts */.useContactSyncAccount();
+    return null != _uploadContacts.useContactSyncAccount();
   }
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.nAsWKy);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.nAsWKy);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   onPress: function onContactSyncNamePress() {
     expandEventProperties.track(AnalyticEvents.OPEN_MODAL, { type: "Change Name", location: { page: "User Settings" } });
     const obj = expandEventProperties;
-    ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(13995, dependencyMap.paths), "Contact Sync Name Update Modal");
+    ModalActionCreators.pushLazy(asyncRequireImpl(13995, dependencyMap.paths), "Contact Sync Name Update Modal");
   },
   withArrow: true,
   usePredicate: function useHasContactSyncAccount() {
-    return null != _uploadContacts /* _uploadContacts */.useContactSyncAccount();
+    return null != _uploadContacts.useContactSyncAccount();
   }
 };
 const result = require("expandEventProperties").fileFinishedImporting("modules/user_settings/defs/native/SyncContactsNameSetting.tsx");

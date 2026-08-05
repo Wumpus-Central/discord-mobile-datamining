@@ -18,8 +18,8 @@ export const PremiumUpsellGradientBackground = function PremiumUpsellGradientBac
   const obj = { style: createCacheKey().gradient, start: null, end: null, colors: null };
   const tmp = createCacheKey();
   const tmp2 = jsx;
-  obj[1] = keys /* keys */.HorizontalGradient.START;
-  obj[2] = keys /* keys */.HorizontalGradient.END;
+  obj[1] = keys.HorizontalGradient.START;
+  obj[2] = keys.HorizontalGradient.END;
   if (true === useTier0UpsellContent.useTier0UpsellContent) {
     let PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_0;
   } else {

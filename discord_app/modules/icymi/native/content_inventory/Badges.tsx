@@ -30,9 +30,9 @@ class ActiveTimestamp {
 }
 function ContentTimestamp(entry) {
   entry = entry.entry;
-  let obj = calculateTimestampDurations /* calculateTimestampDurations */;
+  let obj = calculateTimestampDurations;
   const tmp = createCacheKey();
-  initialize /* initialize */;
+  initialize;
   [][0] = _getSystemLocale;
   if (isEntryActiveResult) {
     obj = { entry: null };
@@ -57,7 +57,7 @@ function BaseBadge(arg0) {
   obj = { style: tmp.icon, color: iconColor };
   const items = [callback(Icon, obj), ];
   obj = { variant: "text-sm/medium", style: tmp.text, children: text };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -74,7 +74,7 @@ export { ActiveTimestamp };
 export const GameTimestampBadge = function GameTimestampBadge(entry) {
   entry = entry.entry;
   const tmp = createCacheKey();
-  let obj = calculateTimestampDurations /* calculateTimestampDurations */;
+  let obj = calculateTimestampDurations;
   const colors = Themes.colors;
   obj = { style: tmp.badgeContainer, children: null };
   const isEntryActiveResult = obj.isEntryActive(entry);
@@ -86,7 +86,7 @@ export const GameTimestampBadge = function GameTimestampBadge(entry) {
 };
 export const MarathonBadge = function MarathonBadge(entry) {
   entry = entry.entry;
-  let obj = calculateTimestampDurations /* calculateTimestampDurations */;
+  let obj = calculateTimestampDurations;
   if (obj.isEntryMarathon(entry)) {
     let tmpResult = tmp(8048);
     const colors = Themes.colors;
@@ -107,7 +107,7 @@ export const MarathonBadge = function MarathonBadge(entry) {
   }
 };
 export const NewGameBadge = function NewGameBadge(entry) {
-  let obj = calculateTimestampDurations /* calculateTimestampDurations */;
+  let obj = calculateTimestampDurations;
   let tmp3 = null;
   if (obj.isEntryNew(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
@@ -120,7 +120,7 @@ export const NewGameBadge = function NewGameBadge(entry) {
   return tmp3;
 };
 export const StreakBadge = function StreakBadge(entry) {
-  let obj = calculateTimestampDurations /* calculateTimestampDurations */;
+  let obj = calculateTimestampDurations;
   const streakCount = obj.getStreakCount(entry.entry);
   let tmp4 = null;
   if (null != streakCount) {
@@ -139,7 +139,7 @@ export const StreakBadge = function StreakBadge(entry) {
   return tmp4;
 };
 export const TrendingBadge = function TrendingBadge(entry) {
-  let obj = calculateTimestampDurations /* calculateTimestampDurations */;
+  let obj = calculateTimestampDurations;
   const trendingType = obj.getTrendingType(entry.entry);
   let tmp4 = null;
   if (null != trendingType) {
@@ -156,7 +156,7 @@ export const TrendingBadge = function TrendingBadge(entry) {
   return tmp4;
 };
 export const ResurrectedBadge = function ResurrectedBadge(entry) {
-  let obj = calculateTimestampDurations /* calculateTimestampDurations */;
+  let obj = calculateTimestampDurations;
   let tmp3 = null;
   if (null != obj.getResurrectedEntryLastPlayTime(entry.entry)) {
     obj = { Icon: null, text: null, iconColor: null };
@@ -169,7 +169,7 @@ export const ResurrectedBadge = function ResurrectedBadge(entry) {
   return tmp3;
 };
 export const TopGameBadge = function TopGameBadge(entry) {
-  let obj = calculateTimestampDurations /* calculateTimestampDurations */;
+  let obj = calculateTimestampDurations;
   const entryDuration = obj.getEntryDuration(entry.entry);
   if (null == entryDuration) {
     return null;
@@ -195,7 +195,7 @@ export const CustomStatusTimestampBadge = function CustomStatusTimestampBadge(en
   let obj = { style: tmp.badgeContainer, children: null };
   obj = { style: tmp.icon, color: null };
   obj[1] = Themes.colors.INTERACTIVE_TEXT_DEFAULT;
-  const items = [callback(TimerIcon /* TimerIcon */.TimerIcon, obj), callback(ContentTimestamp, { entry: entry.entry })];
+  const items = [callback(TimerIcon.TimerIcon, obj), callback(ContentTimestamp, { entry: entry.entry })];
   obj[1] = items;
   return callback2(View, obj);
 };

@@ -30,12 +30,12 @@ const require = arg1;
 function SeeMoreFooter(openInviteSheet) {
   let obj = { icon: null, onPress: null, label: null, end: true };
   obj = { style: createCacheKey().friendIcon, children: null };
-  obj[1] = callback(GroupIcon /* GroupIcon */.GroupIcon, { size: "sm" });
+  obj[1] = callback(GroupIcon.GroupIcon, { size: "sm" });
   obj[0] = callback(closure_6, obj);
   obj[1] = openInviteSheet.openInviteSheet;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.zrLIIz);
-  return callback(TableRowInner /* TableRowInner */.TableRow, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.zrLIIz);
+  return callback(TableRowInner.TableRow, obj);
 }
 function GuildInviteSuggestionRows(openInviteSheet) {
   let require;

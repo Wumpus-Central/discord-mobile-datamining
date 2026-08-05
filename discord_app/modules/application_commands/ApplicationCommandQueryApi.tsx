@@ -166,7 +166,7 @@ export const getCachedApplicationSection = function getCachedApplicationSection(
 export const getCachedResults = function getCachedResults(type, CHAT, query) {
   let obj = { commandTypes: items, text: query };
   items = [CHAT];
-  obj = { scoreMethod: ScoreMethod /* ScoreMethod */.ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
+  obj = { scoreMethod: ScoreMethod.ScoreMethod.COMMAND_OR_APPLICATION, allowFetch: false };
   query = authStore.query(type, obj, obj);
   obj = { commands: query.commands, sections: query.descriptors };
   return obj;
@@ -338,7 +338,7 @@ export const executeQuery = function executeQuery(type, commandTypes, placeholde
     obj[0] = tmp3;
     let tmp4 = require;
     let tmp5 = dependencyMap;
-    obj[1] = ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandInputType.PLACEHOLDER;
+    obj[1] = ApplicationCommandSectionType.ApplicationCommandInputType.PLACEHOLDER;
     let _HermesInternal = HermesInternal;
     obj[2] = "placeholder-" + num3;
     let tmp6 = obj;
@@ -356,7 +356,7 @@ export const executeQuery = function executeQuery(type, commandTypes, placeholde
   if (loading) {
     tmp14 = descriptors;
     if (0 === descriptors.length) {
-      const items2 = [getOptionValue /* getOptionValue */.BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN]];
+      const items2 = [getOptionValue.BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN]];
       tmp14 = items2;
     }
   }

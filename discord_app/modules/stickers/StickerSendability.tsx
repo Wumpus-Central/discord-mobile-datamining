@@ -47,7 +47,7 @@ function getStickerSendability(stickerById, trackCommunicationDisabled, channel)
       }
       return obj.NONSENDABLE;
     }
-    obj5 = getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */;
+    obj5 = getStickerExtensionFromFormatType;
   }
 }
 let obj = { SENDABLE: 0, [0]: "SENDABLE", SENDABLE_WITH_PREMIUM: 1, [1]: "SENDABLE_WITH_PREMIUM", NONSENDABLE: 2, [2]: "NONSENDABLE", SENDABLE_WITH_BOOSTED_GUILD: 3, [3]: "SENDABLE_WITH_BOOSTED_GUILD" };

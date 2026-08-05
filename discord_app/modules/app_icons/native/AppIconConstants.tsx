@@ -103,9 +103,9 @@ let closure_4 = [];
 const result = require("getSystemLocale").fileFinishedImporting("modules/app_icons/native/AppIconConstants.tsx");
 
 export const getDefaultIcon = function getDefaultIcon() {
-  const obj = { id: FreemiumAppIconIds /* FreemiumAppIconIds */.FreemiumAppIconIds.DEFAULT, iconSource: registerAsset, name: null, isPremium: false };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.ANxkLy);
+  const obj = { id: FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT, iconSource: registerAsset, name: null, isPremium: false };
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.ANxkLy);
   return obj;
 };
 export const isIconExpired = function isIconExpired(expiresAt) {
@@ -137,9 +137,9 @@ export const getLimitedAlternateIcons = function getLimitedAlternateIcons() {
   });
 };
 export const getIcons = function getIcons() {
-  const obj = { id: FreemiumAppIconIds /* FreemiumAppIconIds */.FreemiumAppIconIds.DEFAULT, iconSource: registerAsset, name: null, isPremium: false };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.ANxkLy);
+  const obj = { id: FreemiumAppIconIds.FreemiumAppIconIds.DEFAULT, iconSource: registerAsset, name: null, isPremium: false };
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t.ANxkLy);
   items = [
     obj,
     ...items.filter((expiresAt) => {

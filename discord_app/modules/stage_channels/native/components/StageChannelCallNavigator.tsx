@@ -116,11 +116,11 @@ function JoinStageOverlay(channel) {
 function StagePromptWrapper(channel) {
   const obj = { children: null };
   obj[0] = callback2(StagePromptInner, { channel: channel.channel });
-  return callback2(RootThemeContextProvider /* RootThemeContextProvider */.DisableCustomTheme, obj);
+  return callback2(RootThemeContextProvider.DisableCustomTheme, obj);
 }
 function StagePromptInner(channel) {
   const tmp = createCacheKey();
-  return callback2(AgeVerificationSpeakerActionSheet /* AgeVerificationSpeakerActionSheet */.AnimatedStartStagePrompt, { channel: channel.channel, style: createCacheKey().startStagePrompt });
+  return callback2(AgeVerificationSpeakerActionSheet.AnimatedStartStagePrompt, { channel: channel.channel, style: createCacheKey().startStagePrompt });
 }
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = jsxProd);

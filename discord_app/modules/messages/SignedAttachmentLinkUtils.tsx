@@ -279,7 +279,7 @@ let result = set.fileFinishedImporting("modules/messages/SignedAttachmentLinkUti
 
 export { isAttachmentUrl };
 export const isExternalProxiedAttachmentUrl = function isExternalProxiedAttachmentUrl(toURLSafeResult) {
-  return isImageProxyURL /* isImageProxyURL */.isImageProxyURL(toURLSafeResult);
+  return isImageProxyURL.isImageProxyURL(toURLSafeResult);
 };
 export const removeSignedUrlParameters = function removeSignedUrlParameters(toURLSafeResult) {
   toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(toURLSafeResult);

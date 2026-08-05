@@ -13,7 +13,7 @@ export const useConnectionBannerHeight = function useConnectionBannerHeight() {
   let timeoutMs;
   const config = apexExperiment.useConfig({ location: "useConnectionBannerHeight" });
   ({ timeoutMs, hidden } = config);
-  initialize /* initialize */;
+  initialize;
   [][0] = updateState;
   let num = 0;
   if (null != timeoutMs) {

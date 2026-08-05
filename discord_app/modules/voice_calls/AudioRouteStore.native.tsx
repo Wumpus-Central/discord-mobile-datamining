@@ -14,20 +14,20 @@ function handleAudioRouteChanged(arr) {
   if (null != arr) {
     if ("" !== arr) {
       if (arr.includes("Bluetooth")) {
-        let UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.BLUETOOTH;
+        let UNKNOWN = RouteTypes.RouteTypes.BLUETOOTH;
       } else if (arr.includes("Speaker")) {
-        UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.SPEAKER;
+        UNKNOWN = RouteTypes.RouteTypes.SPEAKER;
       } else if (arr.includes("Receiver")) {
-        UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.RECEIVER;
+        UNKNOWN = RouteTypes.RouteTypes.RECEIVER;
       } else {
         const hasItem = arr.includes("Headphones");
-        const RouteTypes = RouteTypes /* RouteTypes */.RouteTypes;
+        const RouteTypes = RouteTypes.RouteTypes;
         UNKNOWN = hasItem ? RouteTypes.WIRED : RouteTypes.UNKNOWN;
       }
     }
     c6 = tmp;
   }
-  UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.UNKNOWN;
+  UNKNOWN = RouteTypes.RouteTypes.UNKNOWN;
 }
 const NativeModules = get_ActivityIndicator.NativeModules;
 let UNKNOWN = require("RouteTypes").RouteTypes.UNKNOWN;
@@ -54,7 +54,7 @@ const audioRouteStoreClass = new AudioRouteStoreClass(require("dispatcher"), {
     if (null === _null) {
       if (isConnectedResult) {
         let _catch = dependencyMap;
-        let UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.UNKNOWN;
+        let UNKNOWN = RouteTypes.RouteTypes.UNKNOWN;
         let addListenerResult;
         if (nativeEventEmitter != tmp3) {
           addListenerResult = obj.addListener("audio-route-changed", (routeType) => {
@@ -77,7 +77,7 @@ const audioRouteStoreClass = new AudioRouteStoreClass(require("dispatcher"), {
         }
         obj = nativeEventEmitter;
         const tmp11 = require;
-        tmp11Result = set /* set */;
+        tmp11Result = set;
         const nextPromise = currentRoute1.then((routeType) => {
           callback(routeType.routeType, routeType.multipleRoutesAvailable);
         });
@@ -109,7 +109,7 @@ const audioRouteStoreClass = new AudioRouteStoreClass(require("dispatcher"), {
       if (AudioRoutePicker != tmp3) {
         AudioRoutePicker.resetPortOverride();
       }
-      UNKNOWN = RouteTypes /* RouteTypes */.RouteTypes.UNKNOWN;
+      UNKNOWN = RouteTypes.RouteTypes.UNKNOWN;
       _null.remove();
       _null = tmp3;
     }

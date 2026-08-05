@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_BACKDROP,
   getComponent() {
-    return BackdropCard /* BackdropCard */.default;
+    return BackdropCard.default;
   }
 };
 const route = createToggle.createRoute(obj);

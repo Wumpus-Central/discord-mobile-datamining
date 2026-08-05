@@ -73,7 +73,7 @@ export default function useVideoControls(arg0, portal) {
 };
 export const useVideoStateStore = keys;
 export const initVideoStateStore = function initVideoStateStore() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     state.setState({ controls: "ct", paused: "Array" });
   });
 };
@@ -85,7 +85,7 @@ export const setMuted = function setMuted(arg0) {
   });
 };
 export const toggleMuted = function toggleMuted() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     const useMediaPlayerMutedStore = callback(table[6]).useMediaPlayerMutedStore;
     useMediaPlayerMutedStore.setState((isMuted) => ({ isMuted: !isMuted.isMuted }));
   });

@@ -22,7 +22,7 @@ const require = arg1;
 let result = require("handleThemeChange").fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
 export const handleSaveTheme = function handleSaveTheme(found, analyticsLocations, isSynced) {
-  if (found.type === ClientThemeType /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+  if (found.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
     let obj = expandEventProperties;
     obj = { feature_name: null, theme_name: null, is_persisted: null, is_synced: null, location_stack: null };
     obj[0] = constants3.CLIENT_THEME;
@@ -80,7 +80,7 @@ export const handleSaveTheme = function handleSaveTheme(found, analyticsLocation
 };
 export const handleSaveSyncedModeTheme = function handleSaveSyncedModeTheme(theme, systemTheme, analyticsLocations) {
   if ("system" !== theme.theme) {
-    if (theme.type === ClientThemeType /* ClientThemeType */.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
+    if (theme.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
       let obj = expandEventProperties;
       obj = { feature_name: null, theme_name: null, is_persisted: null, is_synced: null, location_stack: null };
       obj[0] = constants3.CLIENT_THEME;
@@ -153,7 +153,7 @@ export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, c
 };
 export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme() {
   const theme = syncedClientTheme.theme;
-  let obj = isThemeLight /* isThemeLight */;
+  let obj = isThemeLight;
   const tmp4 = obj.isThemeDark(theme) ? closure_6.DARK : closure_6.LIGHT;
   customTheme = customTheme.getCustomTheme();
   gradientPreset = gradientPreset.gradientPreset;
@@ -178,14 +178,14 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme() {
     const tmpResult2 = tmp(4127);
   }
   const obj2 = saveGuildFolders;
-  setSystemTheme /* setSystemTheme */.setUseSystemTheme(constants.ON);
-  const tmpResult3 = setSystemTheme /* setSystemTheme */;
-  const result5 = setSystemTheme /* setSystemTheme */.setSameAsDeviceThemeEnabled(true);
+  setSystemTheme.setUseSystemTheme(constants.ON);
+  const tmpResult3 = setSystemTheme;
+  const result5 = setSystemTheme.setSameAsDeviceThemeEnabled(true);
 };
 export const disableSameAsDeviceTheme = function disableSameAsDeviceTheme() {
-  setSystemTheme /* setSystemTheme */.setUseSystemTheme(constants.OFF);
-  const obj = setSystemTheme /* setSystemTheme */;
-  const result = setSystemTheme /* setSystemTheme */.clearSyncedClientThemes();
+  setSystemTheme.setUseSystemTheme(constants.OFF);
+  const obj = setSystemTheme;
+  const result = setSystemTheme.clearSyncedClientThemes();
 };
 export const trackClientThemeUpdated = function trackClientThemeUpdated(arg0) {
   let analyticsLocations;

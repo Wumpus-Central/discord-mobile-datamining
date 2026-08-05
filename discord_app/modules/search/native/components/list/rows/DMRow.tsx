@@ -28,9 +28,9 @@ function FriendPresence(user) {
   ({ type, animate, guildId } = user);
   if (type === constants.PENDING_INCOMING) {
     let obj = { lineClamp: 1, variant: "text-sm/medium", color: "text-default", children: null };
-    obj[3] = nameFromUser /* nameFromUser */.getUserTag(user);
-    let tmp5 = callback(Text /* Text */.Text, obj);
-    const obj3 = nameFromUser /* nameFromUser */;
+    obj[3] = nameFromUser.getUserTag(user);
+    let tmp5 = callback(Text.Text, obj);
+    const obj3 = nameFromUser;
   } else {
     obj = { userId: null, guildId: null, iconStyle: null, textStyle: null, emojiSize: 16, animate: null };
     obj[0] = user.id;

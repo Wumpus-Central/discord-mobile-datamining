@@ -17,7 +17,7 @@ export const useTrackOpenPopout = (emojiId) => {
   let require;
   ({ currentGuildId, popoutData: require, nonce: importDefault, demoMode: dependencyMap } = emojiId);
   let current;
-  let merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectChannelAnalyticsMetadata(channel.getChannel(channelId.getChannelId(currentGuildId))));
+  let merged = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel.getChannel(channelId.getChannelId(currentGuildId))));
   current = current.useRef({ guild_id: currentGuildId, emoji_id: emojiId.emojiId }).current;
   useMountLayoutEffect(() => {
     let obj = outer1_0(outer1_2[7]);

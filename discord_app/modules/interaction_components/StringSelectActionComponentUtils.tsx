@@ -11,7 +11,7 @@ export const getInitialStringSelectOptions = function getInitialStringSelectOpti
   if (interactionComponentState != null) {
     type = interactionComponentState.type;
   }
-  if (type === PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.STRING_SELECT) {
+  if (type === PermissionOverwriteType.ComponentType.STRING_SELECT) {
     let mapped = interactionComponentState.values;
   } else {
     const options = selectionActionComponent.options;

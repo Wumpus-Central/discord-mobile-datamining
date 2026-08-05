@@ -30,7 +30,7 @@ export default function ShareScreenFooter(arg0) {
   if (disabled === undefined) {
     disabled = false;
   }
-  let obj = useShareChatInputActions /* useShareChatInputActions */;
+  let obj = useShareChatInputActions;
   const shareChatInputActions = obj.useShareChatInputActions(setText, undefined, appEntryKey);
   ({ textInputRef, isInputFocused, handleSelectionChange, handleMessageFocus, handleMessageBlur, handlePressEmoji } = shareChatInputActions);
   obj = { preview, sendButton: null, chatInput: null, avoidKeyboard: null };
@@ -46,7 +46,7 @@ export default function ShareScreenFooter(arg0) {
   }
   obj[4] = tmp7;
   obj[5] = isSending;
-  obj[1] = jsx(Button /* Button */.Button, { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });
+  obj[1] = jsx(Button.Button, { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });
   obj[2] = jsx(ShareChatInput, { inputRef: textInputRef, text, onChange: setText, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend, disabled });
   obj[3] = isInputFocused;
   return jsx(ShareFooterLayout, { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });

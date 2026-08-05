@@ -45,9 +45,9 @@ export const resolveImageSource = function resolveImageSource(premiumImageSource
   imageSource = premiumImageSource.imageSource;
 };
 export const getGuildBadgeImageSource = function getGuildBadgeImageSource(guild, closure_2) {
-  const obj = GuildVisibility /* GuildVisibility */;
+  const obj = GuildVisibility;
   const guildTraits = obj.getGuildTraits(guild);
-  const obj2 = BadgeCategory /* BadgeCategory */;
+  const obj2 = BadgeCategory;
   const tmp4 = obj[obj2.getBadgeCategory(obj2, guildTraits)];
   if (null == tmp4) {
     return null;
@@ -59,7 +59,7 @@ export const getGuildBadgeImageSource = function getGuildBadgeImageSource(guild,
         }
       }
       premiumImageSource = tmp4.imageSource;
-      tmpResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+      tmpResult = AccessibilityAnnouncer;
     }
     premiumImageSource = tmp4.premiumImageSource;
   }

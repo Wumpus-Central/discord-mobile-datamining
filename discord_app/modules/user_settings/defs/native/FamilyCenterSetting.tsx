@@ -12,15 +12,15 @@ import { FamilyCenterLoading } from "../../family_center/native/UserSettingsFami
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.RZqaJn);
   },
   parent: null,
   IconComponent: require("GroupIcon").GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
-    let obj = useIsParentalConsentBannerActive /* useIsParentalConsentBannerActive */;
+    let obj = useIsParentalConsentBannerActive;
     const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-    const parentalConsentWarning = useParentalConsentWarning /* useParentalConsentWarning */.useParentalConsentWarning();
+    const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
     let daysRemaining;
     if (parentalConsentWarning != null) {
       daysRemaining = parentalConsentWarning.daysRemaining;
@@ -49,7 +49,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER,
   getComponent() {
-    return FamilyCenterLoading /* FamilyCenterLoading */.default;
+    return FamilyCenterLoading.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

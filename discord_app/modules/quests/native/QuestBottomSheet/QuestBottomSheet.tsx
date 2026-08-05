@@ -438,7 +438,7 @@ function MicrophoneUnit(arg0) {
   let quest;
   ({ quest, errorHints } = arg0);
   const tmp = callback3();
-  let obj = useQuests /* useQuests */;
+  let obj = useQuests;
   let num;
   if (errorHints != null) {
     num = errorHints.length;
@@ -479,7 +479,7 @@ function MicrophoneUnit(arg0) {
     obj[1] = items2;
     return closure_11(View, obj);
   }
-  const tmp2Result = isSponsoredPlayQuest /* isSponsoredPlayQuest */;
+  const tmp2Result = isSponsoredPlayQuest;
   const intl = tmp2(1236).intl;
   if (isSponsoredPlayQuestResult) {
     let stringResult = intl.string(tmp2(1236).t.bUyEZZ);

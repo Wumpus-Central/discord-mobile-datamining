@@ -36,20 +36,20 @@ function ViewDebugLogsActionSheetRow(icon) {
 function ViewDebugLogsActionSheet() {
   let obj = { header: null, children: null };
   obj = { title: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.BUOCPi);
-  obj[0] = callback(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.BUOCPi);
+  obj[0] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
   obj = { icon: null, title: null, screenKey: "debugLogs", render: null };
-  obj[0] = callback(WrenchIcon /* WrenchIcon */.WrenchIcon, {});
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.XpPGhL);
+  obj[0] = callback(WrenchIcon.WrenchIcon, {});
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.XpPGhL);
   obj[3] = function render() {
     return callback2(callback(14644), {});
   };
   const items = [callback(ViewDebugLogsActionSheetRow, obj), , ];
-  const obj1 = { icon: callback(ClockIcon /* ClockIcon */.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.b0nJvk);
+  const obj1 = { icon: callback(ClockIcon.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
+  const intl3 = getSystemLocale.intl;
+  obj1[1] = intl3.string(getSystemLocale.t.b0nJvk);
   obj1[3] = function render() {
     return callback2(closure_3, { children: callback2(callback(14647), {}) });
   };
@@ -66,15 +66,15 @@ function ViewDebugLogsActionSheet() {
     tmpResult = tmp(ViewDebugLogsActionSheetRow, obj2);
   }
   items[2] = tmpResult;
-  obj[1] = closure_6(ActionSheetRowIcon /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: true, children: items });
-  return callback(ActionSheet /* ActionSheet */.ActionSheet, obj);
+  obj[1] = closure_6(ActionSheetRowIcon.ActionSheetRow.Group, { hasIcons: true, children: items });
+  return callback(ActionSheet.ActionSheet, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 ViewDebugLogsActionSheet = "ViewDebugLogsActionSheet";
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.BUOCPi);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.BUOCPi);
   },
   parent: null,
   IconComponent: require("ChannelListMagnifyingGlassIcon").ChannelListMagnifyingGlassIcon,
@@ -89,8 +89,8 @@ const pressable = createToggle.createPressable({
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.BUOCPi);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.BUOCPi);
   },
   parent: null,
   IconComponent: require("ChannelListMagnifyingGlassIcon").ChannelListMagnifyingGlassIcon,

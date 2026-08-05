@@ -123,7 +123,7 @@ export default function AddFriendNicknameModal(arg0) {
   let tmp = createCacheKey();
   let obj = callback1;
   [c2, c3] = callback(callback1.useState(false), 2);
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items = [upsertRelationship];
   const stateFromStores = obj1.useStateFromStores(items, () => outer1_7.getNickname(closure_0));
   let tmp6 = stateFromStores;
@@ -136,7 +136,7 @@ export default function AddFriendNicknameModal(arg0) {
   }, []);
   const tmp2 = callback(callback1.useState(false), 2);
   const items1 = [closure_8];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => outer1_8.getUser(closure_0));
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => outer1_8.getUser(closure_0));
   if (null == stateFromStores) {
     const intl2 = tmp3(1236).intl;
     let stringResult = intl2.string(tmp3(1236).t.BGYkaH);
@@ -154,11 +154,11 @@ export default function AddFriendNicknameModal(arg0) {
   }, items2);
   obj = { style: tmp.container, children: null };
   obj = { children: null };
-  const tmp3Result = initialize /* initialize */;
+  const tmp3Result = initialize;
   obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
   const tmp11 = showUserProfile(5733);
   const intl3 = tmp3(1236).intl;
-  obj1[0] = intl3.string(getSystemLocale /* getSystemLocale */.t["R3BPH+"]);
+  obj1[0] = intl3.string(getSystemLocale.t["R3BPH+"]);
   obj1[1] = function handleSubmit() {
     const self = this;
     const apply = _handleSubmit.apply;
@@ -170,19 +170,19 @@ export default function AddFriendNicknameModal(arg0) {
     return applyArgumentsResult;
   };
   const intl4 = tmp3(1236).intl;
-  obj1[2] = intl4.string(getSystemLocale /* getSystemLocale */.t["ETE/oC"]);
+  obj1[2] = intl4.string(getSystemLocale.t["ETE/oC"]);
   obj1[3] = callback1;
-  const items3 = [callback2(Text /* Text */.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult }), , ];
+  const items3 = [callback2(Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult }), , ];
   const obj3 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl5 = tmp3(1236).intl;
-  obj3[3] = intl5.string(getSystemLocale /* getSystemLocale */.t["NdQ+lP"]);
-  items3[1] = callback2(Text /* Text */.Text, obj3);
+  obj3[3] = intl5.string(getSystemLocale.t["NdQ+lP"]);
+  items3[1] = callback2(Text.Text, obj3);
   const obj4 = { onChange: callback, autoFocus: true, placeholder: null, defaultValue: null, maxLength: 32, isClearable: true };
   const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: stringResult };
   const tmp12 = showUserProfile(4713);
   obj4[2] = showUserProfile(4124).getName(stateFromStores1);
   obj4[3] = stateFromStores;
-  items3[2] = callback2(TextField /* TextField */.TextField, obj4);
+  items3[2] = callback2(TextField.TextField, obj4);
   obj1[4] = items3;
   obj[0] = callback3(tmp12, obj1);
   obj[1] = callback2(tmp11, obj);

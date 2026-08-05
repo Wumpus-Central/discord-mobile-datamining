@@ -468,17 +468,17 @@ function useQuestsInstructionsToWinReward(arg0) {
   let quest;
   let withoutMarkdown;
   ({ quest, gameProfileSource, withoutMarkdown } = arg0);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const thirdPartyTaskDetails = useQuests /* useQuests */.useThirdPartyTaskDetails(quest);
-  const obj2 = useQuests /* useQuests */;
+  const thirdPartyTaskDetails = useQuests.useThirdPartyTaskDetails(quest);
+  const obj2 = useQuests;
   const tmp = undefined !== withoutMarkdown && withoutMarkdown;
   const tmp2 = require;
-  const inGameQuestConnectState = useInGameQuestConnectState /* useInGameQuestConnectState */.useInGameQuestConnectState(quest);
-  const obj3 = useInGameQuestConnectState /* useInGameQuestConnectState */;
-  const result = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */.hasAchievementInGameTask(quest);
-  const obj5 = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+  const inGameQuestConnectState = useInGameQuestConnectState.useInGameQuestConnectState(quest);
+  const obj3 = useInGameQuestConnectState;
+  const result = getApplicationIdsByTaskTypes.hasAchievementInGameTask(quest);
+  const obj5 = getApplicationIdsByTaskTypes;
   if (result) {
     let inGameApplicationId = obj5.getInGameApplicationId(quest);
   } else {
@@ -488,7 +488,7 @@ function useQuestsInstructionsToWinReward(arg0) {
     }
   }
   obj = { applicationId: inGameApplicationId, location: constants.QUEST_INSTRUCTIONS, source: null };
-  const obj4 = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+  const obj4 = getApplicationIdsByTaskTypes;
   if (gameProfileSource == null) {
     gameProfileSource = tmp2(9200).GameProfileSources.QuestHome;
   }
@@ -508,16 +508,16 @@ let closure_15 = { PLAY: 0, [0]: "PLAY", STREAM: 1, [1]: "STREAM", WATCH_VIDEO: 
 let result = require("noop").fileFinishedImporting("modules/quests/hooks/QuestCopyHooks.tsx");
 
 export const useQuestInstructionTitle = function useQuestInstructionTitle(config, arg1, questContent, sourceQuestContent) {
-  let obj = useQuests /* useQuests */;
+  let obj = useQuests;
   const targetMinutes = obj.useQuestTaskDetails(config).targetMinutes;
-  let obj1 = useQuests /* useQuests */;
+  let obj1 = useQuests;
   const thirdPartyTaskDetails = obj1.useThirdPartyTaskDetails(config);
-  let obj2 = useQuests /* useQuests */;
+  let obj2 = useQuests;
   obj = { quest: config, questContent, sourceQuestContent };
   const connectedConsoleLinkOnClick = obj2.useConnectedConsoleLinkOnClick(obj);
-  let obj4 = isSponsoredPlayQuest /* isSponsoredPlayQuest */;
+  let obj4 = isSponsoredPlayQuest;
   const isSponsoredPlayQuestResult = obj4.isSponsoredPlayQuest(config);
-  let obj5 = getApplicationIdsByTaskTypes /* getApplicationIdsByTaskTypes */;
+  let obj5 = getApplicationIdsByTaskTypes;
   if (obj5.isConsoleQuest(config)) {
     let tmpResult = tmp(7103);
     obj = { quest: null };
@@ -624,7 +624,7 @@ export const getQuestsInstructionsToWinReward = function getQuestsInstructionsTo
 export { useQuestsInstructionsToWinReward };
 export const useQuestDescription = function useQuestDescription(quest, sourceQuestContent, QUEST_HOME_MOBILE, QuestHome) {
   let obj = { quest, taskDetails: null, location: null, sourceQuestContent: null, popoutTargetElementRef: null, gameProfileSource: null };
-  obj[1] = useQuests /* useQuests */.useQuestTaskDetails(quest);
+  obj[1] = useQuests.useQuestTaskDetails(quest);
   obj[2] = QUEST_HOME_MOBILE;
   obj[3] = sourceQuestContent;
   obj[4] = arg4;
@@ -635,7 +635,7 @@ export const useQuestDescription = function useQuestDescription(quest, sourceQue
   if (userStatus != null) {
     claimedAt = userStatus.claimedAt;
   }
-  useQuests /* useQuests */;
+  useQuests;
   const userStatus2 = quest.userStatus;
   if (userStatus2 != null) {
     claimedAt = userStatus2.claimedAt;
@@ -660,13 +660,13 @@ export const useQuestBarSubtitle = function useQuestBarSubtitle(arg0) {
   let sourceQuestContent;
   ({ quest, hasAlreadyLinked, onClickGameTitle } = arg0);
   ({ isExpanded, sourceQuestContent, activeScreen, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed } = arg0);
-  let obj = useQuests /* useQuests */;
+  let obj = useQuests;
   const questFormattedDate = obj.useQuestFormattedDate(quest.config.rewardsConfig.rewardsExpireAt);
-  let obj1 = useQuests /* useQuests */;
+  let obj1 = useQuests;
   const questTaskDetails = obj1.useQuestTaskDetails(quest);
-  let obj2 = useQuests /* useQuests */;
+  let obj2 = useQuests;
   const thirdPartyTaskDetails = obj2.useThirdPartyTaskDetails(quest);
-  let obj3 = initialize /* initialize */;
+  let obj3 = initialize;
   const items = [mergeGuildAvatar];
   const userStatus = quest.userStatus;
   let completedAt;
@@ -682,7 +682,7 @@ export const useQuestBarSubtitle = function useQuestBarSubtitle(arg0) {
   let tmpResult = tmp(10374);
   obj = { quest, location: constants.QUESTS_BAR, taskDetails: questTaskDetails, sourceQuestContent, popoutTargetElementRef, onGameSheetOpened, onGameSheetClosed, gameProfileSource: null };
   const isQuestProgressing = tmpResult.useIsQuestProgressing(quest);
-  obj[7] = GameProfileEmbedAction /* GameProfileEmbedAction */.GameProfileSources.QuestBar;
+  obj[7] = GameProfileEmbedAction.GameProfileSources.QuestBar;
   if (tmp8) {
     const intl9 = tmp(1236).intl;
     obj = { expirationDate: null };
@@ -765,13 +765,13 @@ export const useQuestBarSubtitle = function useQuestBarSubtitle(arg0) {
   tmp8 = null != completedAt;
 };
 export const useQuestBarTitle = function useQuestBarTitle(questCreative) {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  const questTaskDetails = useQuests /* useQuests */.useQuestTaskDetails(questCreative);
-  const obj2 = useQuests /* useQuests */;
-  const obj3 = useQuests /* useQuests */;
-  const thirdPartyTaskDetails = useQuests /* useQuests */.useThirdPartyTaskDetails(questCreative);
+  const questTaskDetails = useQuests.useQuestTaskDetails(questCreative);
+  const obj2 = useQuests;
+  const obj3 = useQuests;
+  const thirdPartyTaskDetails = useQuests.useThirdPartyTaskDetails(questCreative);
   const userStatus = questCreative.userStatus;
   let completedAt;
   if (userStatus != null) {
@@ -829,7 +829,7 @@ export const useQuestBarTitle = function useQuestBarTitle(questCreative) {
     }
     return stringResult;
   }
-  const obj4 = useQuests /* useQuests */;
+  const obj4 = useQuests;
 };
 export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLabel) {
   let application;
@@ -962,7 +962,7 @@ export const getRewardCodeRedemptionInstructions = function getRewardCodeRedempt
   let quest;
   let rewardCode;
   ({ quest, rewardCode } = arg0);
-  let obj = _getDefaultRewardName /* _getDefaultRewardName */;
+  let obj = _getDefaultRewardName;
   let platform;
   const result = obj.isTieredRewardCodeQuest({ quest });
   if (rewardCode != null) {

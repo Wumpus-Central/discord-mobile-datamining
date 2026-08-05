@@ -60,7 +60,7 @@ function LimitAndDurationInfo(channel) {
   return tmp6Result;
 }
 function DurationInfo(channel) {
-  let obj = useStartTime /* useStartTime */;
+  let obj = useStartTime;
   const startTime = obj.useStartTime(channel.channel);
   let tmp5 = null;
   if (null != startTime) {
@@ -69,7 +69,7 @@ function DurationInfo(channel) {
     obj[0] = startTime;
     obj[0] = obj;
     obj[1] = tmp.activeTimestamp;
-    tmp5 = jsx(ActiveTimestamp /* ActiveTimestamp */.ActiveTimestamp, { start: null });
+    tmp5 = jsx(ActiveTimestamp.ActiveTimestamp, { start: null });
   }
   return tmp5;
 }

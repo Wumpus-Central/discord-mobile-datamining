@@ -3,5 +3,5 @@ import { openClearAllIncomingRequestsConfirmationModal } from "native/ClearAllIn
 const result = require("set").fileFinishedImporting("modules/people/ClearAllIncomingRequestsConfirmationModal.tsx");
 
 export default function openClearAllIncomingRequestsConfirmationModal(arg0) {
-  openClearAllIncomingRequestsConfirmationModal /* openClearAllIncomingRequestsConfirmationModal */.default(arg0);
+  openClearAllIncomingRequestsConfirmationModal.default(arg0);
 };

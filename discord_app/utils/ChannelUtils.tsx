@@ -68,7 +68,7 @@ export const denyChannelAccessForNonPaidUsers = function denyChannelAccessForNon
     let obj = importAll(506);
     obj = { id: null, type: null, allow: null, deny: null };
     obj[0] = arg0;
-    obj[1] = PermissionOverwriteType /* PermissionOverwriteType */.PermissionOverwriteType.ROLE;
+    obj[1] = PermissionOverwriteType.PermissionOverwriteType.ROLE;
     obj[2] = importAll(3918).NONE;
     obj[3] = obj.add(importAll(3918).NONE, constants.CONNECT);
     return obj;
@@ -122,13 +122,13 @@ export const permissionOverwritesForRoles = function permissionOverwritesForRole
   return items;
 };
 export const permissionOverwriteForUser = function permissionOverwriteForUser(id, channelType) {
-  return allowChannelAccess(id, channelType, PermissionOverwriteType /* PermissionOverwriteType */.PermissionOverwriteType.MEMBER);
+  return allowChannelAccess(id, channelType, PermissionOverwriteType.PermissionOverwriteType.MEMBER);
 };
 export const permissionOverwriteForRole = function permissionOverwriteForRole(id, channelType) {
-  return allowChannelAccess(id, channelType, PermissionOverwriteType /* PermissionOverwriteType */.PermissionOverwriteType.ROLE);
+  return allowChannelAccess(id, channelType, PermissionOverwriteType.PermissionOverwriteType.ROLE);
 };
 export const permissionOverwritesForAnnouncement = function permissionOverwritesForAnnouncement(id) {
-  const items = [{ id, type: PermissionOverwriteType /* PermissionOverwriteType */.PermissionOverwriteType.ROLE, deny: constants.SEND_MESSAGES, allow: importAll(3918).NONE }];
+  const items = [{ id, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, deny: constants.SEND_MESSAGES, allow: importAll(3918).NONE }];
   return items;
 };
 export const isChannelFull = function isChannelFull(channel, outer1_11, handleConnectionOpen) {
@@ -156,8 +156,8 @@ export const isChannelFull = function isChannelFull(channel, outer1_11, handleCo
     if (tmp8) {
       let hasVideoResult = outer1_11.hasVideo(channel.id);
       if (!hasVideoResult) {
-        hasVideoResult = hasStream /* hasStream */.hasStream(voiceStatesForChannel);
-        const obj2 = hasStream /* hasStream */;
+        hasVideoResult = hasStream.hasStream(voiceStatesForChannel);
+        const obj2 = hasStream;
       }
       tmp8 = hasVideoResult;
     }
@@ -279,9 +279,9 @@ export const isAnyVoiceStateStage = function isAnyVoiceStateStage(channels, stat
           for (const item10017 of tmp10) {
             let tmp4 = require;
             let tmp5 = dependencyMap;
-            let obj3 = useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */;
+            let obj3 = useAudienceRequestToSpeakState;
             let audienceRequestToSpeakState = obj3.getAudienceRequestToSpeakState(item10017.voiceState);
-            if (audienceRequestToSpeakState === useAudienceRequestToSpeakState /* useAudienceRequestToSpeakState */.RequestToSpeakStates.ON_STAGE) {
+            if (audienceRequestToSpeakState === useAudienceRequestToSpeakState.RequestToSpeakStates.ON_STAGE) {
               let tmp7 = obj2;
               obj2.return();
               let tmp8 = iter;
@@ -300,35 +300,35 @@ export const isAnyVoiceStateStage = function isAnyVoiceStateStage(channels, stat
 export const channelTypeString = function channelTypeString(channel) {
   const type = channel.type;
   if (ChannelTypes.DM === type) {
-    const intl10 = getSystemLocale /* getSystemLocale */.intl;
-    return intl10.string(getSystemLocale /* getSystemLocale */.t.jN2DfZ);
+    const intl10 = getSystemLocale.intl;
+    return intl10.string(getSystemLocale.t.jN2DfZ);
   } else if (tmp.GROUP_DM === type) {
-    const intl9 = getSystemLocale /* getSystemLocale */.intl;
-    return intl9.string(getSystemLocale /* getSystemLocale */.t["e5y+gm"]);
+    const intl9 = getSystemLocale.intl;
+    return intl9.string(getSystemLocale.t["e5y+gm"]);
   } else if (tmp.GUILD_TEXT === type) {
-    const intl8 = getSystemLocale /* getSystemLocale */.intl;
-    return intl8.string(getSystemLocale /* getSystemLocale */.t.Pnajj0);
+    const intl8 = getSystemLocale.intl;
+    return intl8.string(getSystemLocale.t.Pnajj0);
   } else if (tmp.GUILD_FORUM === type) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
-    return intl7.string(getSystemLocale /* getSystemLocale */.t.GbryDd);
+    const intl7 = getSystemLocale.intl;
+    return intl7.string(getSystemLocale.t.GbryDd);
   } else if (tmp.GUILD_MEDIA === type) {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
-    return intl6.string(getSystemLocale /* getSystemLocale */.t.seKITE);
+    const intl6 = getSystemLocale.intl;
+    return intl6.string(getSystemLocale.t.seKITE);
   } else if (tmp.GUILD_VOICE === type) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    return intl5.string(getSystemLocale /* getSystemLocale */.t.BVZqJl);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t.BVZqJl);
   } else if (tmp.GUILD_STAGE_VOICE === type) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t.EErMzA);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.EErMzA);
   } else if (tmp.GUILD_ANNOUNCEMENT === type) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.l1dkSD);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.l1dkSD);
   } else if (tmp.GUILD_STORE === type) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t["P1/Erq"]);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t["P1/Erq"]);
   } else if (tmp.GUILD_CATEGORY === type) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.vHCZwr);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.vHCZwr);
   } else {
     return null;
   }
@@ -372,12 +372,12 @@ export const getPrivateChannelUserTagsString = function getPrivateChannelUserTag
           }
           return name;
         });
-        const intl = getSystemLocale /* getSystemLocale */.intl;
+        const intl = getSystemLocale.intl;
         let obj = { users: null, user1: null, user2: null, extras: null };
         obj[0] = items.length;
         [obj[1], obj[2]] = mapped;
         obj[3] = items.length - mapped.length;
-        return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.BXG0Eh, obj);
+        return intl.formatToPlainString(getSystemLocale.t.BXG0Eh, obj);
       }
     }
   }

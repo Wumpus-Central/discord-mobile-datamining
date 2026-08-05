@@ -22,22 +22,22 @@ const require = arg1;
 function MemberPreviews(role) {
   role = role.role;
   const tmp = createCacheKey();
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.BACKGROUND_BASE_LOW, Themes.themes.DARK);
-  const token1 = map /* map */.useToken(Themes.colors.BACKGROUND_BASE_LOW, Themes.themes.LIGHT);
-  const obj2 = map /* map */;
-  const token2 = map /* map */.useToken(Themes.colors.TEXT_DEFAULT, Themes.themes.DARK);
-  const obj3 = map /* map */;
+  const token1 = map.useToken(Themes.colors.BACKGROUND_BASE_LOW, Themes.themes.LIGHT);
+  const obj2 = map;
+  const token2 = map.useToken(Themes.colors.TEXT_DEFAULT, Themes.themes.DARK);
+  const obj3 = map;
   obj = { style: tmp.memberPreviews, children: null };
-  const token3 = map /* map */.useToken(Themes.colors.TEXT_DEFAULT, Themes.themes.LIGHT);
+  const token3 = map.useToken(Themes.colors.TEXT_DEFAULT, Themes.themes.LIGHT);
   const items = [, , ];
   ({ member: arr[0], memberLight: arr[1] } = tmp);
   items[2] = { backgroundColor: token1 };
-  const items1 = [callback2(GuildRoleSubscriptionMemberPreview /* GuildRoleSubscriptionMemberPreview */.GuildRoleSubscriptionMemberPreview, { style: items, textStyle: { color: token3 }, role }), ];
+  const items1 = [callback2(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, { style: items, textStyle: { color: token3 }, role }), ];
   const items2 = [, , ];
   ({ member: arr3[0], memberDark: arr3[1] } = tmp);
   items2[2] = { backgroundColor: token };
-  items1[1] = callback2(GuildRoleSubscriptionMemberPreview /* GuildRoleSubscriptionMemberPreview */.GuildRoleSubscriptionMemberPreview, { style: items2, textStyle: { color: token2 }, role });
+  items1[1] = callback2(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, { style: items2, textStyle: { color: token2 }, role });
   obj[1] = items1;
   return callback3(View, obj);
 }
@@ -111,10 +111,10 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/g
 
 export default function GuildRoleSubscriptionTierDesignModal(arg0) {
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.AbcgTx);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.YAUjGn);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.AbcgTx);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.YAUjGn);
   obj[3] = constants.CONFIRMATION;
   const merged = Object.assign(arg0);
   obj.children = callback2(Content, {});

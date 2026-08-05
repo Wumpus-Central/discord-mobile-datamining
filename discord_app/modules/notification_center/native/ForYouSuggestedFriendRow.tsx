@@ -19,9 +19,9 @@ const require = arg1;
 ({ AnalyticEvents: error, RelationshipTypes: metroImportAll } = ME);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((layout) => {
-  let obj = getLayoutStyles /* getLayoutStyles */;
+  let obj = getLayoutStyles;
   const layoutStyles = obj.getLayoutStyles(layout);
-  let obj1 = getLayoutStyles /* getLayoutStyles */;
+  let obj1 = getLayoutStyles;
   const sizeStyle = obj1.makeSizeStyle(layoutStyles.icon.wrapper.size);
   obj = { rowActive: null, pressable: null, textContainer: null, nameText: null, avatar: null };
   obj = { backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED };

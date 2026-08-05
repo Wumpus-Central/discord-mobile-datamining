@@ -8,12 +8,12 @@ let useInAppMessageSoundsEnabled;
 ({ setInAppMessageSoundsEnabled, useInAppMessageSoundsEnabled } = isInAppMessageSoundsEnabled);
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.jLCRyj);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.jLCRyj);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["wls+Ax"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["wls+Ax"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: useInAppMessageSoundsEnabled,
@@ -22,12 +22,12 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.jLCRyj);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.jLCRyj);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["wls+Ax"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["wls+Ax"]);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: useInAppMessageSoundsEnabled,

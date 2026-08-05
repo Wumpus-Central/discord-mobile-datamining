@@ -19,7 +19,7 @@ function AttachmentPreviewAppLauncher(arg0) {
   const tmp = createCacheKey();
   ({ width, height } = tmp.selectedImage);
   const obj = { uri, isImage, isVideo, width, height, style: tmp.selectedImage, defaultPreview: null };
-  obj[6] = jsx(FileIcon /* FileIcon */.FileIcon, { size: "sm" });
+  obj[6] = jsx(FileIcon.FileIcon, { size: "sm" });
   return jsx(AttachmentIcon, { uri, isImage, isVideo, width, height, style: tmp.selectedImage, defaultPreview: null });
 }
 createCacheKey = { imageIconWrapper: null, selectedImage: null };

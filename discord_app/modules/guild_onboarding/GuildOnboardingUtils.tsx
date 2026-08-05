@@ -19,7 +19,7 @@ const require = arg1;
 function isChattableChannel(guild_id) {
   let tmp = null != guild_id;
   if (tmp) {
-    const canChannelBeDefaultResult = useCanChannelBeDefault /* useCanChannelBeDefault */.canChannelBeDefault(guild_id.guild_id, guild_id.id);
+    const canChannelBeDefaultResult = useCanChannelBeDefault.canChannelBeDefault(guild_id.guild_id, guild_id.id);
     if (!canChannelBeDefaultResult) {
       tmp = canChannelBeDefaultResult;
     } else {
@@ -34,7 +34,7 @@ function isChattableChannel(guild_id) {
       }
       const tmp7 = importAll(3918);
     }
-    const obj = useCanChannelBeDefault /* useCanChannelBeDefault */;
+    const obj = useCanChannelBeDefault;
   }
   return tmp;
 }
@@ -58,7 +58,7 @@ function getFlattenedDefaultChannels(closure_0, arr, arg2, fn) {
     let obj = channel;
     let tmp = require;
     let tmp2 = dependencyMap;
-    let obj2 = useCanChannelBeDefault /* useCanChannelBeDefault */;
+    let obj2 = useCanChannelBeDefault;
     if (obj2.canChannelBeDefault(channel.guild_id, channel.id)) {
       let tmp3 = channel;
       if (!arr.includes(obj.id)) {
@@ -286,7 +286,7 @@ export const isChattableChannelId = function isChattableChannelId(arg0) {
   channel = channel.getChannel(arg0);
   let tmp = null != channel;
   if (tmp) {
-    const canChannelBeDefaultResult = useCanChannelBeDefault /* useCanChannelBeDefault */.canChannelBeDefault(channel.guild_id, channel.id);
+    const canChannelBeDefaultResult = useCanChannelBeDefault.canChannelBeDefault(channel.guild_id, channel.id);
     if (!canChannelBeDefaultResult) {
       tmp = canChannelBeDefaultResult;
     } else {
@@ -301,7 +301,7 @@ export const isChattableChannelId = function isChattableChannelId(arg0) {
       }
       const tmp7 = importAll(3918);
     }
-    const obj2 = useCanChannelBeDefault /* useCanChannelBeDefault */;
+    const obj2 = useCanChannelBeDefault;
   }
   return tmp;
 };
@@ -488,12 +488,12 @@ export const useChattableDefaultChannels = function useChattableDefaultChannels(
 export const getSelectedRoleIds = function getSelectedRoleIds(selectedOptions) {
   const mapped = selectedOptions.map((roleIds) => roleIds.roleIds);
   const flatResult = mapped.flat();
-  return new Set(mapped.flat().filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish));
+  return new Set(mapped.flat().filter(isDiscordFrontendDevelopment.isNotNullish));
 };
 export const getSelectedChannelIds = function getSelectedChannelIds(selectedOptions) {
   const mapped = selectedOptions.map((channelIds) => channelIds.channelIds);
   const flatResult = mapped.flat();
-  return new Set(mapped.flat().filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish));
+  return new Set(mapped.flat().filter(isDiscordFrontendDevelopment.isNotNullish));
 };
 export const getProviderConnectionState = function getProviderConnectionState(connections) {
   const found = connections.filter((connection_type) => {

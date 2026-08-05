@@ -4,9 +4,9 @@ import { experiment } from "../experiments/ServerThemeExperiment.tsx";
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useIsServerThemeAvailableForGuild.tsx");
 
 export default function useIsServerThemeAvailableForGuild(guildId, GuildThemeNuxTrigger) {
-  const serverThemeEnabled = experiment /* experiment */.useServerThemeEnabled(guildId, GuildThemeNuxTrigger);
-  const obj = experiment /* experiment */;
+  const serverThemeEnabled = experiment.useServerThemeEnabled(guildId, GuildThemeNuxTrigger);
+  const obj = experiment;
   const tmp = require;
   const tmp3 = guildId;
-  return null != resolveSavedActiveGuildTheme /* resolveSavedActiveGuildTheme */.useEnabledGuildThemeForGuildId(guildId, GuildThemeNuxTrigger);
+  return null != resolveSavedActiveGuildTheme.useEnabledGuildThemeForGuildId(guildId, GuildThemeNuxTrigger);
 };

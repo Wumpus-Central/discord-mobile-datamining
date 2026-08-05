@@ -9,14 +9,14 @@ import { messagesProxy } from "../../../display_name_styles/intl/DisplayNameStyl
 const require = arg1;
 function useValue() {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  return initialize /* initialize */.useStateFromStores(items, () => obj.displayNameStylesEnabled);
+  return initialize.useStateFromStores(items, () => obj.displayNameStylesEnabled);
 }
 function onValueChange(enabled) {
-  const result = setFontSize /* setFontSize */.setDisplayNameStylesEnabled(enabled);
+  const result = setFontSize.setDisplayNameStylesEnabled(enabled);
 }
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy["2gFUEw"]);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,

@@ -17,7 +17,7 @@ export const getBenefitKey = function getBenefitKey(id) {
 };
 export const formatPlanInterval = function formatPlanInterval(first2) {
   const interval = first2.interval;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   if (SubscriptionIntervalTypes.DAY === interval) {
     let cuSp8Q = tmp(1236).t["3rUmPQ"];
   } else if (tmp3.MONTH === interval) {
@@ -33,27 +33,27 @@ export const formatPlanIntervalDuration = function formatPlanIntervalDuration(in
   if (SubscriptionIntervalTypes.DAY === interval) {
     if (interval_count > 0) {
       if (interval_count % 7 === 0) {
-        const intl4 = getSystemLocale /* getSystemLocale */.intl;
+        const intl4 = getSystemLocale.intl;
         let obj = { weeks: null };
         obj[0] = interval_count / 7;
-        let formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iVZYyl, obj);
+        let formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale.t.iVZYyl, obj);
       }
       return formatToPlainStringResult;
     }
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     obj = { days: null };
     obj[0] = interval_count;
-    formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.jzH70Z, obj);
+    formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t.jzH70Z, obj);
   } else if (tmp.MONTH === interval) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj1 = { months: null };
     obj1[0] = interval_count;
-    return intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.erUSmA, obj1);
+    return intl2.formatToPlainString(getSystemLocale.t.erUSmA, obj1);
   } else if (tmp.YEAR === interval) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { years: null };
     obj[0] = interval_count;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.IfYQVC, obj);
+    return intl.formatToPlainString(getSystemLocale.t.IfYQVC, obj);
   }
 };
 export const isChannelBenefit = function isChannelBenefit(ref_type) {

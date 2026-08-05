@@ -32,10 +32,10 @@ export default function GuildActionSheetDirectory(arg0) {
   obj = { scrollsToTop: false, style: tmp.container, contentContainerStyle: { paddingBottom: useSafeAreaInsets().bottom }, children: null };
   const items = [callback(CommunityPill, { guild }), ];
   obj = { style: tmp.actions, children: null };
-  const items1 = [callback(HideMutedChannelsOption /* HideMutedChannelsOption */.GuildActionSheetDirectoryActions, { guild }), callback(HideMutedChannelsOption /* HideMutedChannelsOption */.GuildDeveloperOptionAction, { guild })];
+  const items1 = [callback(HideMutedChannelsOption.GuildActionSheetDirectoryActions, { guild }), callback(HideMutedChannelsOption.GuildDeveloperOptionAction, { guild })];
   obj[1] = items1;
   items[1] = callback2(View, obj);
   obj[3] = items;
-  obj[2] = callback2(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, obj);
-  return callback(Background /* Background */.BottomSheet, obj);
+  obj[2] = callback2(BottomSheetModal.BottomSheetScrollView, obj);
+  return callback(Background.BottomSheet, obj);
 };

@@ -140,7 +140,7 @@ const privateChannelSortStore = new PrivateChannelSortStore(require("dispatcher"
     channel = channel.channel;
     let tmp = isPrivate(channel.type);
     if (tmp) {
-      const tmp4 = channel.id !== FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID /* FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID */.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+      const tmp4 = channel.id !== FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
       if (tmp4) {
         const result = secondaryIndexMap.set(channel.id, makeSortedChannel(channel));
       }

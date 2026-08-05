@@ -64,7 +64,7 @@ export const isAppUserInstallable = function isAppUserInstallable(integrationTyp
     tmp = null != integrationTypesConfig;
   }
   if (tmp) {
-    tmp = ApplicationIntegrationType /* ApplicationIntegrationType */.ApplicationIntegrationType.USER_INSTALL in integrationTypesConfig;
+    tmp = ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL in integrationTypesConfig;
   }
   return tmp;
 };
@@ -75,7 +75,7 @@ export const shouldInstallApplicationOnDemand = function shouldInstallApplicatio
   ({ applicationId, channel, commandIntegrationTypes } = arg0);
   let tmp = null != commandIntegrationTypes;
   if (tmp) {
-    tmp = !commandIntegrationTypes.includes(ApplicationIntegrationType /* ApplicationIntegrationType */.ApplicationIntegrationType.USER_INSTALL);
+    tmp = !commandIntegrationTypes.includes(ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL);
   }
   let tmp4 = !tmp;
   if (!tmp) {

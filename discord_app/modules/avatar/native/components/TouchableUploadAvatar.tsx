@@ -48,8 +48,8 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     obj[0] = tmp.avatarContainer;
     obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
     obj[0] = onSelectAvatar.onSelectAvatar;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["70lEQe"]);
+    const intl = getSystemLocale.intl;
+    obj[2] = intl.string(getSystemLocale.t["70lEQe"]);
     obj = { style: null, children: null };
     obj[0] = tmp.avatarWrapper;
     const obj1 = { resizeMode: "contain", style: null, source: null };
@@ -59,14 +59,14 @@ export default function TouchableUploadAvatar(onSelectAvatar) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.uploadAvatarWrapper;
     const obj3 = { size: null, source: null, style: null };
-    obj3[0] = Button /* Button */.Icon.Sizes.MEDIUM;
+    obj3[0] = Button.Icon.Sizes.MEDIUM;
     obj3[1] = registerAsset;
     obj3[2] = tmp.uploadAvatarIcon;
-    obj2[1] = callback(Button /* Button */.Icon, obj3);
+    obj2[1] = callback(Button.Icon, obj3);
     items[1] = callback(View, obj2);
     obj[1] = items;
     obj[3] = callback2(View, obj);
-    obj[1] = callback(PressableBase /* PressableBase */.PressableOpacity, obj);
+    obj[1] = callback(PressableBase.PressableOpacity, obj);
     return callback(View, obj);
   }
   defaultLogoStyle = tmp.defaultLogoStyle;

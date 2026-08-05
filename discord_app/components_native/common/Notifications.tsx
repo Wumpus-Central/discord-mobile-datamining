@@ -9,7 +9,7 @@ const require = arg1;
 const result = require("jsxProd").fileFinishedImporting("components_native/common/Notifications.tsx");
 
 export default function Notifications() {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [handleAlertMessage];
   const stateFromStores = obj.useStateFromStores(items, () => currentNotification.getCurrentNotification());
   let tmp3 = null;

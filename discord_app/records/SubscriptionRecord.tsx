@@ -234,14 +234,14 @@ Object.defineProperty(prototype, "isOnPlatformMatchingExternalPaymentGateway", {
   get: function isOnPlatformMatchingExternalPaymentGateway() {
     let isPurchasedViaApple = this.isPurchasedViaApple;
     if (isPurchasedViaApple) {
-      isPurchasedViaApple = set /* set */.isIOS();
-      const obj = set /* set */;
+      isPurchasedViaApple = set.isIOS();
+      const obj = set;
     }
     if (!isPurchasedViaApple) {
       let isPurchasedViaGoogle = this.isPurchasedViaGoogle;
       if (isPurchasedViaGoogle) {
-        isPurchasedViaGoogle = isPremiumGiftingSupported /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
-        const obj2 = isPremiumGiftingSupported /* isPremiumGiftingSupported */;
+        isPurchasedViaGoogle = isPremiumGiftingSupported.isGooglePlayBillingSupported();
+        const obj2 = isPremiumGiftingSupported;
       }
       isPurchasedViaApple = isPurchasedViaGoogle;
     }

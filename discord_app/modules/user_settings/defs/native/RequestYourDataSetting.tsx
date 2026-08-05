@@ -16,10 +16,10 @@ let UserSettingsSections;
 let c5;
 function useIsHarvestRequestDisabled() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize;
   const tmp = require;
-  let harvestDisabledResult = callback((isRequesting) => isRequesting.isRequesting, isIterable /* isIterable */.shallow);
+  let harvestDisabledResult = callback((isRequesting) => isRequesting.isRequesting, isIterable.shallow);
   let tmp6 = null == stateFromStores;
   if (!tmp6) {
     if (!harvestDisabledResult) {
@@ -34,19 +34,19 @@ function useIsHarvestRequestDisabled() {
 let closure_7 = identity.createWithEqualityFn(() => ({ isRequesting: false, harvestRequest: null }));
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.XAHCgJ);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.XAHCgJ);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   useTrailing: function useHarvestRequestSettingTrailing() {
     let tmp = null;
-    if (callback((isRequesting) => isRequesting.isRequesting, isIterable /* isIterable */.shallow)) {
+    if (callback((isRequesting) => isRequesting.isRequesting, isIterable.shallow)) {
       tmp = <ActivityIndicator />;
     }
     return tmp;
   },
   useDescription: function useRequestYourDataSettingDescription() {
-    const tmp3 = callback((harvestRequest) => harvestRequest.harvestRequest, isIterable /* isIterable */.shallow);
+    const tmp3 = callback((harvestRequest) => harvestRequest.harvestRequest, isIterable.shallow);
     currentUser = currentUser.getCurrentUser();
     if (null == currentUser) {
       return null;
@@ -70,10 +70,10 @@ obj = {
   useIsDisabled: useIsHarvestRequestDisabled,
   usePreNavigationAction() {
     const items = [mergeGuildAvatar];
-    const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-    const obj = initialize /* initialize */;
+    const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+    const obj = initialize;
     const tmp = require;
-    let harvestDisabledResult = callback((isRequesting) => isRequesting.isRequesting, isIterable /* isIterable */.shallow);
+    let harvestDisabledResult = callback((isRequesting) => isRequesting.isRequesting, isIterable.shallow);
     let tmp6 = null == stateFromStores;
     if (!tmp6) {
       if (!harvestDisabledResult) {
@@ -105,7 +105,7 @@ const result = require("MobileSetting").fileFinishedImporting("modules/user_sett
 
 export default route;
 export const fetchHarvestStatus = function fetchHarvestStatus() {
-  const harvestStatus = saveProfileAndAccountRequest /* saveProfileAndAccountRequest */.getHarvestStatus();
+  const harvestStatus = saveProfileAndAccountRequest.getHarvestStatus();
   harvestStatus.then((arg0) => {
     const callback = arg0;
     callback(705).batchUpdates(() => {

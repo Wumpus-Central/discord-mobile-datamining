@@ -8,9 +8,9 @@ export default function transformStickers(message) {
   let require;
   ({ animateStickersSetting: require, isUserInteracting: dependencyMap } = message);
   let closure_2;
-  closure_2 = apexExperiment /* apexExperiment */.shouldSkipAccessibilityLabels();
-  let obj = apexExperiment /* apexExperiment */;
-  const messageStickers = getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */.getMessageStickers(message.message);
+  closure_2 = apexExperiment.shouldSkipAccessibilityLabels();
+  let obj = apexExperiment;
+  const messageStickers = getStickerExtensionFromFormatType.getMessageStickers(message.message);
   return messageStickers.map((id) => {
     let obj = outer1_0(outer1_1[1]);
     const shouldAnimateStickerResult = obj.shouldAnimateSticker(closure_0, closure_1);

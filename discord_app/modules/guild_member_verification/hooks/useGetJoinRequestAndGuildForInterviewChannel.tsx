@@ -23,7 +23,7 @@ export default function useGetJoinRequestAndGuildForInterviewChannel(id) {
   callback = castResult;
   let obj = first(11);
   const items = [updateSubmittedGuildJoinRequestTotal, handleGatewayJoinRequestUpdate, joinRequestGuild, getUncachedChannelPermissions];
-  const stateFromStoresObject = initialize /* initialize */.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     const request = outer1_7.getRequest(_slicedToArray);
     if (null == request) {
       return { joinRequest: null, isModmin: false, guild: null };

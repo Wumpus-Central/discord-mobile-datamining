@@ -36,7 +36,7 @@ export const isActivityFocused = function isActivityFocused(channelId) {
   const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   let tmp3 = null != selectedParticipant && null != currentEmbeddedActivity;
   if (tmp3) {
-    let obj = sortKey /* sortKey */;
+    let obj = sortKey;
     obj = { applicationId: null, instanceId: null };
     obj[0] = currentEmbeddedActivity.applicationId;
     let compositeInstanceId;

@@ -18,7 +18,7 @@ function SearchListSectionLabel(label) {
   if (typeof label === "string") {
     obj = { title: null };
     obj[0] = label;
-    tmpResult = tmp(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroupTitle, obj);
+    tmpResult = tmp(TableRowGroupTitle.TableRowGroupTitle, obj);
   }
   obj[1] = tmpResult;
   return <View style={callback().spacer}>{null}</View>;
@@ -29,7 +29,7 @@ function SearchListSectionSubLabel(subLabel) {
   if (typeof subLabel === "string") {
     obj = { variant: "text-xs/normal", color: "text-muted", children: null };
     obj[2] = subLabel;
-    let tmpResult = tmp(Text /* Text */.Text, obj);
+    let tmpResult = tmp(Text.Text, obj);
   } else {
     const _Array = Array;
     tmpResult = subLabel;
@@ -64,11 +64,11 @@ function renderItem(item) {
     obj[0] = item.label;
     return <SearchListSectionSubLabel subLabel={null} />;
   } else if (tmp.SETTING_SEARCH_RESULT === type) {
-    return GuildSelectDefaultIcon /* GuildSelectDefaultIcon */.renderSettingSearchResultItem(item);
+    return GuildSelectDefaultIcon.renderSettingSearchResultItem(item);
   } else if (tmp.SECTION_ROW === type) {
-    return GuildSelectDefaultIcon /* GuildSelectDefaultIcon */.renderSettingItem(item);
+    return GuildSelectDefaultIcon.renderSettingItem(item);
   } else if (tmp.SECTION_ROW_PLACEHOLDER === type) {
-    obj = GuildSelectDefaultIcon /* GuildSelectDefaultIcon */;
+    obj = GuildSelectDefaultIcon;
     return obj.renderSettingSearchResultPlaceholderItem(item);
   }
 }

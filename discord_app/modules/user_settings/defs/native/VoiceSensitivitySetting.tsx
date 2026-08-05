@@ -10,8 +10,8 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 let closure_6 = createCacheKey.createStyles({ slider: { marginTop: 8 } });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["sqUm+k"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["sqUm+k"]);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
@@ -39,15 +39,15 @@ let obj = {
     }} />;
   },
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.nuFtHH)];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t.nuFtHH)];
     return items;
   }
 };
 const createStaticResult = createToggle.createStatic({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["sqUm+k"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["sqUm+k"]);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
@@ -75,8 +75,8 @@ const createStaticResult = createToggle.createStatic({
     }} />;
   },
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.nuFtHH)];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t.nuFtHH)];
     return items;
   }
 });

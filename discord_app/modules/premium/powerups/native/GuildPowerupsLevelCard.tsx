@@ -61,7 +61,7 @@ function GuildLevelPowerupHeader(arg0) {
     const colors = Themes.colors;
     const obj2 = { size: "xs", color: null };
     obj2[1] = active ? colors.WHITE : colors.TEXT_MUTED;
-    obj1[1] = closure_10(BoostGemIcon /* BoostGemIcon */.BoostGemIcon, obj2);
+    obj1[1] = closure_10(BoostGemIcon.BoostGemIcon, obj2);
     items2[2] = closure_10(View, obj1);
     obj[1] = items2;
     return closure_11(View, obj);

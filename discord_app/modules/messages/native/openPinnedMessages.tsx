@@ -5,7 +5,7 @@ import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.nativ
 const result = require("set").fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");
 
 export default function openPinnedMessages(arg0, arg1) {
-  let obj = getRootNavigationRef /* getRootNavigationRef */;
+  let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (tmp) {
     obj = { initialRouteName: null, channelId: null, source: null };

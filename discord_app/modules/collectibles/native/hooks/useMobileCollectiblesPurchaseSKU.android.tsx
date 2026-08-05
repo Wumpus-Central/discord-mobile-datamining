@@ -10,12 +10,12 @@ const result = require("hasAtLeastOneGPlaySynced").fileFinishedImporting("module
 export default function useMobileCollectiblesPurchaseSKU(product) {
   product = product.product;
   const merged = Object.assign(product, Object.create(null));
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const collectibleGoogleSkuId = hasAtLeastOneGPlaySynced /* hasAtLeastOneGPlaySynced */.getCollectibleGoogleSkuId(product, stateFromStores);
+  const collectibleGoogleSkuId = hasAtLeastOneGPlaySynced.getCollectibleGoogleSkuId(product, stateFromStores);
   obj = {};
-  const obj2 = hasAtLeastOneGPlaySynced /* hasAtLeastOneGPlaySynced */;
+  const obj2 = hasAtLeastOneGPlaySynced;
   const merged1 = Object.assign(merged);
   obj.skuId = product.skuId;
   obj.platformSkuId = collectibleGoogleSkuId;

@@ -54,8 +54,8 @@ function canSeeChannelSummaries(channel, flag, arg2) {
           if (tmp15) {
             let isFavoritesGuildIdResult = id === closure_4;
             if (!isFavoritesGuildIdResult) {
-              isFavoritesGuildIdResult = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(id);
-              const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+              isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(id);
+              const obj = getFavoritesAwareGuildName;
             }
             tmp15 = isFavoritesGuildIdResult;
           }
@@ -102,8 +102,8 @@ export const canGuildUseConversationSummaries = function canGuildUseConversation
     if (tmp2) {
       let isFavoritesGuildIdResult = id === closure_4;
       if (!isFavoritesGuildIdResult) {
-        isFavoritesGuildIdResult = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */.isFavoritesGuildId(id);
-        const obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+        isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(id);
+        const obj = getFavoritesAwareGuildName;
       }
       tmp2 = isFavoritesGuildIdResult;
     }

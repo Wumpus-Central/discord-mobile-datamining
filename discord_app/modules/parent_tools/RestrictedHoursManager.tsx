@@ -18,7 +18,7 @@ function scheduleUpcomingWarning() {
     timeout = null;
   }
   const date = new Date();
-  let obj = apexExperiment /* apexExperiment */;
+  let obj = apexExperiment;
   let tmp7 = null;
   if (obj.getIsFamilyCenterV3Enabled({ location: "RestrictedHoursManager" })) {
     tmp7 = null;
@@ -92,7 +92,7 @@ function checkAndUpdateModal() {
     obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: null };
     obj[1] = c6;
     obj.dispatch(obj);
-    const obj3 = closeRestrictedHoursModal /* closeRestrictedHoursModal */;
+    const obj3 = closeRestrictedHoursModal;
     if (c6) {
       const result1 = obj3.openRestrictedHoursModal();
     } else {
@@ -121,7 +121,7 @@ function handleScheduleUpdate() {
     obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: null };
     obj[1] = c6;
     obj.dispatch(obj);
-    const obj3 = closeRestrictedHoursModal /* closeRestrictedHoursModal */;
+    const obj3 = closeRestrictedHoursModal;
     if (c6) {
       const result1 = obj3.openRestrictedHoursModal();
     } else {
@@ -155,8 +155,8 @@ prototype["_initialize"] = function _initialize() {
   obj = { type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: closure_6 };
   obj.dispatch(obj);
   if (closure_6) {
-    const result = closeRestrictedHoursModal /* closeRestrictedHoursModal */.openRestrictedHoursModal();
-    const obj3 = closeRestrictedHoursModal /* closeRestrictedHoursModal */;
+    const result = closeRestrictedHoursModal.openRestrictedHoursModal();
+    const obj3 = closeRestrictedHoursModal;
   }
   const interval = setInterval(checkAndUpdateModal, 60000);
   scheduleUpcomingWarning();
@@ -173,7 +173,7 @@ prototype["_terminate"] = function _terminate() {
     c8 = null;
   }
   let c9 = null;
-  const result = closeRestrictedHoursModal /* closeRestrictedHoursModal */.closeRestrictedHoursModal();
+  const result = closeRestrictedHoursModal.closeRestrictedHoursModal();
   let c6 = false;
 };
 const restrictedHoursManager = new RestrictedHoursManager();

@@ -6,16 +6,16 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.UVl5Hz);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.UVl5Hz);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
-    const HideFriendRequestNotes = explicitContentFromProto /* explicitContentFromProto */.HideFriendRequestNotes;
+    const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
     return !HideFriendRequestNotes.useSetting();
   },
   onValueChange(arg0) {
-    const HideFriendRequestNotes = explicitContentFromProto /* explicitContentFromProto */.HideFriendRequestNotes;
+    const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
     return HideFriendRequestNotes.updateSetting(!arg0);
   },
   usePredicate() {
@@ -24,16 +24,16 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.UVl5Hz);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.UVl5Hz);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
-    const HideFriendRequestNotes = explicitContentFromProto /* explicitContentFromProto */.HideFriendRequestNotes;
+    const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
     return !HideFriendRequestNotes.useSetting();
   },
   onValueChange(arg0) {
-    const HideFriendRequestNotes = explicitContentFromProto /* explicitContentFromProto */.HideFriendRequestNotes;
+    const HideFriendRequestNotes = explicitContentFromProto.HideFriendRequestNotes;
     return HideFriendRequestNotes.updateSetting(!arg0);
   },
   usePredicate() {

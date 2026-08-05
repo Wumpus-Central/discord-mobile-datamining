@@ -40,7 +40,7 @@ const memoResult = importAllResult.memo((arg0) => {
   let require;
   ({ guild, markAsDismissed: require } = arg0);
   const tmp = callback4();
-  let obj = fetchUnclaimedGames /* fetchUnclaimedGames */;
+  let obj = fetchUnclaimedGames;
   let first = obj.useUnclaimedGameIdsForGuild(guild.id)[0];
   if (first == null) {
     first = null;
@@ -48,7 +48,7 @@ const memoResult = importAllResult.memo((arg0) => {
   const intl = tmp2(1236).intl;
   const tmp5 = importDefault;
   const tmp6 = useGameNameAndCoverImage;
-  const coverImageUrl = useGameNameAndCoverImage(first, intl.string(getSystemLocale /* getSystemLocale */.t.VQq92a)).coverImageUrl;
+  const coverImageUrl = useGameNameAndCoverImage(first, intl.string(getSystemLocale.t.VQq92a)).coverImageUrl;
   if (null == coverImageUrl) {
     return null;
   } else {
@@ -151,7 +151,7 @@ const memoResult = importAllResult.memo((arg0) => {
     obj[2] = items;
     return callback3(tmp2(5317).Card, obj);
   }
-  const tmp6Result = useGameNameAndCoverImage(first, intl.string(getSystemLocale /* getSystemLocale */.t.VQq92a));
+  const tmp6Result = useGameNameAndCoverImage(first, intl.string(getSystemLocale.t.VQq92a));
 });
 let result = require("get ActivityIndicator").fileFinishedImporting("modules/game_claim/native/GameClaimCoachmark.tsx");
 
@@ -160,11 +160,11 @@ export const GAME_CLAIM_NOTICE_MARGIN_TOP = PX_8;
 export const GAME_CLAIM_NOTICE_MARGIN_BOTTOM = PX_82;
 export const getScaledGameClaimNoticeHeight = function getScaledGameClaimNoticeHeight(fontScale) {
   const sum = PX_8 + closure_12;
-  const sum1 = sum + importDefaultResult1 /* importDefaultResult1 */.CARD_STACK_HEIGHT;
-  const sum2 = sum1 + map /* map */.scaleTextLineHeight("text-md/medium", fontScale);
+  const sum1 = sum + importDefaultResult1.CARD_STACK_HEIGHT;
+  const sum2 = sum1 + map.scaleTextLineHeight("text-md/medium", fontScale);
   const sum3 = sum2 + Themes.space.PX_4;
-  const obj = map /* map */;
-  const result = 2 * map /* map */.scaleTextLineHeight("text-sm/normal", fontScale);
+  const obj = map;
+  const result = 2 * map.scaleTextLineHeight("text-sm/normal", fontScale);
   const sum4 = sum3 + result + Themes.space.PX_8;
-  return sum4 + MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT + PX_82;
+  return sum4 + MINIMUM_HIT_AREA.SMALL_BUTTON_HEIGHT + PX_82;
 };

@@ -66,17 +66,17 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
   ({ guildId, role } = arg0);
   const tmp3 = callback2(useTheme());
   dependencyMap = tmp3;
-  let obj = useHasEnhancedRoleColors /* useHasEnhancedRoleColors */;
+  let obj = useHasEnhancedRoleColors;
   hasEnhancedRoleColorsForRole = obj.useHasEnhancedRoleColorsForRole(guildId, role);
-  let obj1 = useGuildSettingsRoleExampleMessage /* useGuildSettingsRoleExampleMessage */;
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  closure_4 = obj1.useGuildSettingsRoleExampleMessage(intl.string(getSystemLocale /* getSystemLocale */.t.Mi9Kbe));
+  let obj1 = useGuildSettingsRoleExampleMessage;
+  let intl = getSystemLocale.intl;
+  closure_4 = obj1.useGuildSettingsRoleExampleMessage(intl.string(getSystemLocale.t.Mi9Kbe));
   c5 = new setOptions();
   obj = { header: null, children: null };
   obj = { title: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["9wVJRB"]);
-  obj[0] = callback(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  const intl2 = getSystemLocale.intl;
+  obj[0] = intl2.string(getSystemLocale.t["9wVJRB"]);
+  obj[0] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
   obj1 = { style: tmp3.container, children: null };
   const tmp6 = new setOptions();
   let items = [
@@ -163,5 +163,5 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
   items[1] = tmp8Result;
   obj1[1] = items;
   obj[1] = closure_10(closure_4, obj1);
-  return callback(Background /* Background */.BottomSheet, obj);
+  return callback(Background.BottomSheet, obj);
 };

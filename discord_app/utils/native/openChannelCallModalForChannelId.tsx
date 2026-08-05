@@ -14,12 +14,12 @@ export default function openChannelCallModalForChannelId(arg0, arg1) {
       isGuildStageVoiceResult = channel.isGuildStageVoice();
     }
     if (isGuildStageVoiceResult) {
-      isGuildStageVoiceResult = false === connectToStage /* connectToStage */.connectToStage(channel);
-      const obj2 = connectToStage /* connectToStage */;
+      isGuildStageVoiceResult = false === connectToStage.connectToStage(channel);
+      const obj2 = connectToStage;
     }
     if (!isGuildStageVoiceResult) {
-      openChannelCallModal /* openChannelCallModal */.openChannelCallModal(channel);
-      const obj3 = openChannelCallModal /* openChannelCallModal */;
+      openChannelCallModal.openChannelCallModal(channel);
+      const obj3 = openChannelCallModal;
     }
   }
 };

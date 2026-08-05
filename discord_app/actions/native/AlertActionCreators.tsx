@@ -35,8 +35,8 @@ export default {
   close() {
     if (null != c6) {
       c6 = null;
-      useAlertStore /* useAlertStore */.dismissAlert(tmp);
-      const obj = useAlertStore /* useAlertStore */;
+      useAlertStore.dismissAlert(tmp);
+      const obj = useAlertStore;
     }
     dispatcher.dispatch({ type: "ALERT_CLOSE" });
   },

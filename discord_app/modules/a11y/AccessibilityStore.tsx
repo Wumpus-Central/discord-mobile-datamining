@@ -23,7 +23,7 @@ function maybeApplyNoTextColorForLightCustomTheme() {
       tmp3 = theme.theme !== ThemeTypes.LIGHT;
     }
     if (!tmp3) {
-      const ClientThemeSettings = explicitContentFromProto /* explicitContentFromProto */.ClientThemeSettings;
+      const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
       const setting = ClientThemeSettings.getSetting();
       let tmp10 = null != setting.backgroundGradientPresetId;
       if (!tmp10) {
@@ -202,7 +202,7 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
     if (null != obj.messageGroupSpacing) {
       let messageGroupSpacing = obj.messageGroupSpacing;
     } else {
-      const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
+      const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
       messageGroupSpacing = MessageDisplayCompact.getSetting() ? closure_10 : closure_11;
     }
     return messageGroupSpacing;
@@ -211,14 +211,14 @@ Object.defineProperty(prototype, "messageGroupSpacing", {
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingIncreased", {
   get: function isMessageGroupSpacingIncreased() {
-    const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
+    const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
     return this.messageGroupSpacing > (MessageDisplayCompact.getSetting() ? closure_10 : closure_11);
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMessageGroupSpacingDecreased", {
   get: function isMessageGroupSpacingDecreased() {
-    const MessageDisplayCompact = explicitContentFromProto /* explicitContentFromProto */.MessageDisplayCompact;
+    const MessageDisplayCompact = explicitContentFromProto.MessageDisplayCompact;
     return this.messageGroupSpacing < (MessageDisplayCompact.getSetting() ? closure_10 : closure_11);
   },
   set: undefined
@@ -380,7 +380,7 @@ AccessibilityStore.displayName = "AccessibilityStore";
 AccessibilityStore.persistKey = "AccessibilityStore";
 let items = [
   () => {
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     const fontScale = Storage.get("a11yFontScale") || 100;
     const Storage2 = tmp(595).Storage;
     let zoom = Storage2.get("a11yZoom");
@@ -445,7 +445,7 @@ let items = [
   (saturation) => {
     const obj = {};
     const merged = Object.assign(saturation);
-    obj.alwaysShowLinkDecorations = saturation.saturation <= AccessibilityAnnouncer /* AccessibilityAnnouncer */.LOW_SATURATION_THRESHOLD;
+    obj.alwaysShowLinkDecorations = saturation.saturation <= AccessibilityAnnouncer.LOW_SATURATION_THRESHOLD;
     return obj;
   },
   (arg0) => {

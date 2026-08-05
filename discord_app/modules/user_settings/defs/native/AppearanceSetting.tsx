@@ -16,11 +16,11 @@ function useAppearanceSettingTrailing() {
   const tmp3 = useTheme();
   const tmp4 = useIsMobileVisualRefreshExperimentEnabled("AppearanceSettingTrailing");
   const items = [isSyncedModeThemesEnabled];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => gradientPreset.gradientPreset);
-  const obj = initialize /* initialize */;
-  const themeName = getThemeForColor /* getThemeForColor */.getThemeName(tmp3, tmp4);
-  const obj2 = getThemeForColor /* getThemeForColor */;
-  const activeThemeType = useActiveThemeType /* useActiveThemeType */.useActiveThemeType();
+  const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
+  const obj = initialize;
+  const themeName = getThemeForColor.getThemeName(tmp3, tmp4);
+  const obj2 = getThemeForColor;
+  const activeThemeType = useActiveThemeType.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
     const intl2 = tmp5(1236).intl;
     return intl2.string(tmp(2483).KSBBpC);
@@ -42,12 +42,12 @@ function useAppearanceSettingTrailing() {
   } else {
     return tmp9.DEFAULT === activeThemeType ? themeName : undefined;
   }
-  const obj3 = useActiveThemeType /* useActiveThemeType */;
+  const obj3 = useActiveThemeType;
 }
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["iHH+ky"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["iHH+ky"]);
   },
   parent: null,
   IconComponent: require("PaintPaletteIcon").PaintPaletteIcon,

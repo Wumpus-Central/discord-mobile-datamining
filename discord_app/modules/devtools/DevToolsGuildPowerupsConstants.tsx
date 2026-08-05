@@ -11,7 +11,7 @@ export const GUILD_DCS = items1;
 export const SERVER_TAG_GUILD_DCS = items2;
 export const VANITY_URL_POWERUP_DCS = items3;
 export const getGuildDCString = function getGuildDCString(arg0) {
-  if (DismissibleContent /* DismissibleContent */.DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK === arg0) {
+  if (DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK === arg0) {
     return "GUILD_POWERUP_LEVEL_1_COACHMARK";
   } else if (tmp(1358).DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK === arg0) {
     return "GUILD_POWERUP_LEVEL_2_COACHMARK";
@@ -29,7 +29,7 @@ export const getGuildDCString = function getGuildDCString(arg0) {
   }
 };
 export const getUserDCString = function getUserDCString(arg0) {
-  let StringResult = DismissibleContent /* DismissibleContent */.DismissibleContent[arg0];
+  let StringResult = DismissibleContent.DismissibleContent[arg0];
   if (StringResult == null) {
     const _String = String;
     StringResult = String(arg0);

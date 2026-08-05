@@ -131,20 +131,20 @@ function WatchTaskButton(arg0) {
   let sourceQuestContent;
   let taskDetails;
   ({ questId, sourceQuestContent, taskDetails } = arg0);
-  let obj = useWatchTaskPressHandler /* useWatchTaskPressHandler */;
+  let obj = useWatchTaskPressHandler;
   obj = { grow: true, size: "lg", onPress: obj.useWatchTaskPressHandler({ questId, sourceQuestContent }), text: null };
   const watchTaskPressHandler = obj.useWatchTaskPressHandler({ questId, sourceQuestContent });
-  obj[3] = formatWatchRemainingDurationShort /* formatWatchRemainingDurationShort */.getVideoQuestWatchCtaText(taskDetails);
-  return callback2(Button /* Button */.Button, obj);
+  obj[3] = formatWatchRemainingDurationShort.getVideoQuestWatchCtaText(taskDetails);
+  return callback2(Button.Button, obj);
 }
 function NextButton(arg0) {
   let disabled;
   let onPress;
   ({ onPress, disabled } = arg0);
   const obj = { grow: true, size: "lg", onPress, disabled, text: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.a9OfTN);
-  return callback2(Button /* Button */.Button, obj);
+  const intl = getSystemLocale.intl;
+  obj[4] = intl.string(getSystemLocale.t.a9OfTN);
+  return callback2(Button.Button, obj);
 }
 function DefibButton(arg0) {
   let dependencyMap;
@@ -156,11 +156,11 @@ function DefibButton(arg0) {
   let apexExperiment;
   let useWatchTaskPressHandler;
   ({ loading, disabled } = arg0);
-  let obj = useTrackQuestEventWithImpression /* useTrackQuestEventWithImpression */;
+  let obj = useTrackQuestEventWithImpression;
   apexExperiment = obj.useTrackQuestContentClickedWithImpression();
-  useWatchTaskPressHandler = useAdContentImpressionTrackerProps /* useAdContentImpressionTrackerProps */.useQuestImpressionId();
+  useWatchTaskPressHandler = useAdContentImpressionTrackerProps.useQuestImpressionId();
   obj = { grow: true, size: "lg", variant: "secondary", loading, disabled, icon: null, iconPosition: "end", onPress: null, text: null };
-  obj[5] = callback2(RefreshIcon /* RefreshIcon */.RefreshIcon, {});
+  obj[5] = callback2(RefreshIcon.RefreshIcon, {});
   obj[7] = function onPress(arg0) {
     let obj = outer1_0(outer1_2[32]);
     if (obj.shouldMigrateToAdAnalyticsInterface(outer1_0(outer1_2[32]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_footer")) {
@@ -186,9 +186,9 @@ function DefibButton(arg0) {
       tmp11(arg0);
     }
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[8] = intl.string(getSystemLocale /* getSystemLocale */.t.nPThNb);
-  return callback2(Button /* Button */.Button, obj);
+  const intl = getSystemLocale.intl;
+  obj[8] = intl.string(getSystemLocale.t.nPThNb);
+  return callback2(Button.Button, obj);
 }
 function ClaimButton(arg0) {
   let dependencyMap;
@@ -200,9 +200,9 @@ function ClaimButton(arg0) {
   let apexExperiment;
   let useWatchTaskPressHandler;
   ({ disabled, loading } = arg0);
-  let obj = useTrackQuestEventWithImpression /* useTrackQuestEventWithImpression */;
+  let obj = useTrackQuestEventWithImpression;
   apexExperiment = obj.useTrackQuestContentClickedWithImpression();
-  useWatchTaskPressHandler = useAdContentImpressionTrackerProps /* useAdContentImpressionTrackerProps */.useQuestImpressionId();
+  useWatchTaskPressHandler = useAdContentImpressionTrackerProps.useQuestImpressionId();
   obj = {
     grow: true,
     size: "lg",
@@ -233,9 +233,9 @@ function ClaimButton(arg0) {
     },
     text: null
   };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[5] = intl.string(getSystemLocale /* getSystemLocale */.t.cfY4PE);
-  return callback2(Button /* Button */.Button, obj);
+  const intl = getSystemLocale.intl;
+  obj[5] = intl.string(getSystemLocale.t.cfY4PE);
+  return callback2(Button.Button, obj);
 }
 function AnimatedFooter(arg0) {
   let backButton;

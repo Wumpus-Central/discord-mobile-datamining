@@ -5,13 +5,13 @@ import { GIF_PROVIDER } from "../modules/gif_picker/GifProvider.tsx";
 const result = require("set").fileFinishedImporting("utils/GIFPickerUtils.tsx");
 
 export const isKlipyProvider = function isKlipyProvider(arg0) {
-  return arg0 === GIF_PROVIDER /* GIF_PROVIDER */.GIF_PROVIDER_EMBED_NAME;
+  return arg0 === GIF_PROVIDER.GIF_PROVIDER_EMBED_NAME;
 };
 export const shouldUseAnimatedWebPThumbnail = function shouldUseAnimatedWebPThumbnail(arg0) {
-  return arg0 === GIF_PROVIDER /* GIF_PROVIDER */.GIF_PROVIDER_EMBED_NAME;
+  return arg0 === GIF_PROVIDER.GIF_PROVIDER_EMBED_NAME;
 };
 export const getGIFThumbnailForFavorite = function getGIFThumbnailForFavorite(providerName) {
-  if (providerName.providerName === GIF_PROVIDER /* GIF_PROVIDER */.GIF_PROVIDER_EMBED_NAME) {
+  if (providerName.providerName === GIF_PROVIDER.GIF_PROVIDER_EMBED_NAME) {
     const thumbnail = providerName.thumbnail;
     if (null != thumbnail) {
       let uri = thumbnail.proxyURL;

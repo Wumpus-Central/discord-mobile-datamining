@@ -652,7 +652,7 @@ let closure_5 = {
             }
             let tmp41 = null;
             if (null != tmp37) {
-              const tmp44 = Opcode /* Opcode */.Opcode[tmp37];
+              const tmp44 = Opcode.Opcode[tmp37];
               let tmp45 = null;
               if (typeof tmp44 === "string") {
                 tmp45 = tmp44;
@@ -741,7 +741,7 @@ let closure_5 = {
           }
           let tmp26 = null;
           if (null != tmp22) {
-            const tmp29 = noop /* noop */.RTCSocketOpcode[tmp22];
+            const tmp29 = noop.RTCSocketOpcode[tmp22];
             let tmp30 = null;
             if (typeof tmp29 === "string") {
               tmp30 = tmp29;

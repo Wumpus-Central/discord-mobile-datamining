@@ -12,21 +12,21 @@ export const getHigherContrastColor = function getHigherContrastColor(background
   [tmp2, tmp3] = callback(backgroundColor.colors, 2);
   let hex2intResult = backgroundColor;
   if (typeof backgroundColor === "string") {
-    hex2intResult = int2hslRaw /* int2hslRaw */.hex2int(backgroundColor);
-    const obj3 = int2hslRaw /* int2hslRaw */;
+    hex2intResult = int2hslRaw.hex2int(backgroundColor);
+    const obj3 = int2hslRaw;
   }
   let hex2intResult1 = tmp2;
   if (typeof tmp2 === "string") {
-    hex2intResult1 = int2hslRaw /* int2hslRaw */.hex2int(tmp2);
-    const obj4 = int2hslRaw /* int2hslRaw */;
+    hex2intResult1 = int2hslRaw.hex2int(tmp2);
+    const obj4 = int2hslRaw;
   }
   let hex2intResult2 = tmp3;
   if (typeof tmp3 === "string") {
-    hex2intResult2 = int2hslRaw /* int2hslRaw */.hex2int(tmp3);
-    const obj5 = int2hslRaw /* int2hslRaw */;
+    hex2intResult2 = int2hslRaw.hex2int(tmp3);
+    const obj5 = int2hslRaw;
   }
   const tmp = callback(backgroundColor.colors, 2);
-  const contrast = int2hslRaw /* int2hslRaw */.getContrast(hex2intResult, hex2intResult1);
-  const obj = int2hslRaw /* int2hslRaw */;
+  const contrast = int2hslRaw.getContrast(hex2intResult, hex2intResult1);
+  const obj = int2hslRaw;
   return tmp3;
 };

@@ -17,10 +17,10 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/checkpo
 export const getVoiceDurationString = function getVoiceDurationString(totalVoiceMinutes) {
   let time;
   let unit;
-  let obj = sleep /* sleep */;
+  let obj = sleep;
   const timeAndUnit = obj.getTimeAndUnit(totalVoiceMinutes, items);
   ({ time, unit } = timeAndUnit);
-  const abbreviatedFormatter = getDurationString /* getDurationString */.getAbbreviatedFormatter();
+  const abbreviatedFormatter = getDurationString.getAbbreviatedFormatter();
   if (null == time) {
     const intl3 = tmp(1236).intl;
     return intl3.formatToPlainString(abbreviatedFormatter.minutes, { minutes: 0 });
@@ -40,7 +40,7 @@ export const getVoiceDurationString = function getVoiceDurationString(totalVoice
     }
     return formatToPlainStringResult;
   }
-  const obj2 = getDurationString /* getDurationString */;
+  const obj2 = getDurationString;
 };
 export const getCardAssetUrl = function getCardAssetUrl(cardId) {
   if (0 === cardId) {

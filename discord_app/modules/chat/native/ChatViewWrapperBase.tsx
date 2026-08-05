@@ -15,6 +15,6 @@ export default function ChatViewWrapperBase(arg0) {
   let style;
   ({ channelId, children, stickyHeader, style } = arg0);
   const obj = { children: null };
-  obj[0] = jsx(StickyWrapper /* StickyWrapper */.StickyWrapper, { header: stickyHeader, style, pointerEvents: useChatViewPointerEventsAndroid(channelId), children });
-  return jsx(Layer /* Layer */.LayerScope, { children: null });
+  obj[0] = jsx(StickyWrapper.StickyWrapper, { header: stickyHeader, style, pointerEvents: useChatViewPointerEventsAndroid(channelId), children });
+  return jsx(Layer.LayerScope, { children: null });
 };

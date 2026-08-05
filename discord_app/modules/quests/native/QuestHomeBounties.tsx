@@ -19,7 +19,7 @@ const require = arg1;
 function EmptyState(reason) {
   reason = reason.reason;
   const tmp = callback4();
-  let obj = useTrackQuestEventWithImpression /* useTrackQuestEventWithImpression */;
+  let obj = useTrackQuestEventWithImpression;
   const bountyCarouselEmptyStateAnalytics = obj.useBountyCarouselEmptyStateAnalytics(reason);
   if (reason === constants.COMPLETED) {
     const intl2 = tmp2(1236).intl;
@@ -34,9 +34,9 @@ function EmptyState(reason) {
     ReqPds = tmp2(1236).t.ReqPds;
   }
   obj = { style: tmp.emptyState, children: null };
-  const items = [callback2(AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */.BountiesPosterIllocon, { size: 32 }), ];
+  const items = [callback2(AccountAgeTier10LargeBadge.BountiesPosterIllocon, { size: 32 }), ];
   obj = { style: tmp.emptyStateText, children: null };
-  const items1 = [callback2(Text /* Text */.Text, { variant: "text-sm/semibold", color: "text-default", children: stringResult }), ];
+  const items1 = [callback2(Text.Text, { variant: "text-sm/semibold", color: "text-default", children: stringResult }), ];
   const obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl3 = tmp2(1236).intl;
   obj1[2] = intl3.format(ReqPds, {
@@ -44,7 +44,7 @@ function EmptyState(reason) {
       callback(table[14])();
     }
   });
-  items1[1] = callback2(Text /* Text */.Text, obj1);
+  items1[1] = callback2(Text.Text, obj1);
   obj[1] = items1;
   items[1] = callback3(View, obj);
   obj[1] = items;

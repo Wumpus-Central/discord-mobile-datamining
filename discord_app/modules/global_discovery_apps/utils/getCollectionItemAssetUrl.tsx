@@ -16,13 +16,13 @@ export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0
   if (containerWidth === undefined) {
     containerWidth = 1024;
   }
-  let obj = handleImageLoad /* handleImageLoad */;
-  let str = obj.getBestMediaProxySize(containerWidth * handleImageLoad /* handleImageLoad */.getDevicePixelRatio());
+  let obj = handleImageLoad;
+  let str = obj.getBestMediaProxySize(containerWidth * handleImageLoad.getDevicePixelRatio());
   obj = { size: str.toString() };
-  const obj2 = handleImageLoad /* handleImageLoad */;
+  const obj2 = handleImageLoad;
   str = new URLSearchParams(obj).toString();
   let str3 = "png";
-  if (getAvatarURL /* getAvatarURL */.SUPPORTS_WEBP) {
+  if (getAvatarURL.SUPPORTS_WEBP) {
     str3 = "webp";
   }
   if (null != closure_4) {

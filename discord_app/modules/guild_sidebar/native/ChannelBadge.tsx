@@ -21,7 +21,7 @@ export default function ChannelBadge(arg0) {
   ({ mentionCount, postsWithUnreadsCount, muted } = arg0);
   ({ isMentionLowImportance, isNewChannel } = arg0);
   const tmp = callback();
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   if (null != mentionCount) {

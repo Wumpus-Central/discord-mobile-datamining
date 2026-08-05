@@ -31,7 +31,7 @@ function fetchSurveyIfNeeded() {
   }
   if (!tmp) {
     c18 = true;
-    obj = overrideSurvey /* overrideSurvey */;
+    obj = overrideSurvey;
     obj.surveyFetch(obj.surveyOverride, true);
   }
 }
@@ -220,7 +220,7 @@ function setSurvey(survey) {
   if (!c14) {
     tmp6 = c15;
   }
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const value = Storage.get(closure_11);
   let tmp9 = null == value;
   if (!tmp9) {
@@ -695,7 +695,7 @@ obj = {
       const hiddenSurveys = obj.hiddenSurveys;
       delete tmp[tmp2];
     }
-    obj = overrideSurvey /* overrideSurvey */;
+    obj = overrideSurvey;
     obj.surveyFetch(obj.surveyOverride, true);
   },
   PUSH_NOTIFICATION_CLICK: function handlePushNotificationClick() {

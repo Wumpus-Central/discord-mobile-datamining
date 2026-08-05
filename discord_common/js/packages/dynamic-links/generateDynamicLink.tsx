@@ -81,7 +81,7 @@ export default function generateDynamicLink(arg0, arg1) {
   return sum1;
 };
 export const generateAttemptId = function generateAttemptId() {
-  return v1 /* v1 */.v4();
+  return v1.v4();
 };
 export const parseDynamicLink = function parseDynamicLink(str) {
   if (str.startsWith(c6)) {

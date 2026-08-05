@@ -56,8 +56,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
   let tmp10;
   if (showRedDot) {
     const obj2 = { text: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj2[0] = intl.string(getSystemLocale /* getSystemLocale */.t.y2b7CA);
+    const intl = getSystemLocale.intl;
+    obj2[0] = intl.string(getSystemLocale.t.y2b7CA);
     tmp10 = obj2;
   }
   const obj3 = { ref, style: tmp.container, accessibilityRole: "button", accessibilityLabel, accessibilityValue: tmp10, onPress, hitSlop: null, children: null };
@@ -68,9 +68,9 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
     label = accessibilityLabel;
   }
   obj4[4] = label;
-  items1[1] = callback(Text /* Text */.Text, obj4);
+  items1[1] = callback(Text.Text, obj4);
   obj3[7] = items1;
-  return callback2(TwinButtons /* TwinButtons */.PressableScale, obj3);
+  return callback2(TwinButtons.PressableScale, obj3);
 }));
 const result1 = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx");
 

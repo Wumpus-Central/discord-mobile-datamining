@@ -53,7 +53,7 @@ function getChannelIcon(channel, ignoreTraits) {
   }
   ({ isRulesChannel, locked } = obj);
   const items = [createGuildRecordFromRust, mergeGuildAvatar, trackCommunicationDisabled];
-  const result = shouldShowMembershipVerificationGate /* shouldShowMembershipVerificationGate */.shouldShowMembershipVerificationGate(channel.guild_id, items);
+  const result = shouldShowMembershipVerificationGate.shouldShowMembershipVerificationGate(channel.guild_id, items);
   if (channel.isForumPost()) {
     return registerAsset;
   } else {
@@ -329,7 +329,7 @@ function getChannelIcon(channel, ignoreTraits) {
       return tmp80;
     }
   }
-  const obj2 = shouldShowMembershipVerificationGate /* shouldShowMembershipVerificationGate */;
+  const obj2 = shouldShowMembershipVerificationGate;
 }
 function getChannelIconComponent(channel, ignoreTraits) {
   let isRulesChannel;
@@ -340,7 +340,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
   }
   ({ isRulesChannel, locked } = obj);
   const items = [createGuildRecordFromRust, mergeGuildAvatar, trackCommunicationDisabled];
-  const result = shouldShowMembershipVerificationGate /* shouldShowMembershipVerificationGate */.shouldShowMembershipVerificationGate(channel.guild_id, items);
+  const result = shouldShowMembershipVerificationGate.shouldShowMembershipVerificationGate(channel.guild_id, items);
   if (channel.isForumPost()) {
     return tmp(4781).ChatIcon;
   } else {
@@ -608,7 +608,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
       return tmp(4783).ThreadIcon;
     }
   }
-  const obj2 = shouldShowMembershipVerificationGate /* shouldShowMembershipVerificationGate */;
+  const obj2 = shouldShowMembershipVerificationGate;
 }
 let result = require("mergeGuildAvatar").fileFinishedImporting("utils/native/ChannelUtils.tsx");
 
@@ -1594,25 +1594,25 @@ export const getSimpleChannelIconComponent = function getSimpleChannelIconCompon
     if (tmp.ANNOUNCEMENT_THREAD !== type) {
       if (tmp.PUBLIC_THREAD !== type) {
         if (tmp.GUILD_CATEGORY === type) {
-          return FolderIcon /* FolderIcon */.FolderIcon;
+          return FolderIcon.FolderIcon;
         } else if (tmp.GUILD_TEXT === type) {
-          return TextIcon /* TextIcon */.TextIcon;
+          return TextIcon.TextIcon;
         } else if (tmp.GUILD_FORUM === type) {
-          return ForumIcon /* ForumIcon */.ForumIcon;
+          return ForumIcon.ForumIcon;
         } else if (tmp.GUILD_MEDIA === type) {
-          return ImageIcon /* ImageIcon */.ImageIcon;
+          return ImageIcon.ImageIcon;
         } else if (tmp.GROUP_DM === type) {
-          return GroupIcon /* GroupIcon */.GroupIcon;
+          return GroupIcon.GroupIcon;
         } else if (tmp.DM === type) {
-          return AtIcon /* AtIcon */.AtIcon;
+          return AtIcon.AtIcon;
         } else if (tmp.GUILD_ANNOUNCEMENT === type) {
-          return AnnouncementsIcon /* AnnouncementsIcon */.AnnouncementsIcon;
+          return AnnouncementsIcon.AnnouncementsIcon;
         } else if (tmp.GUILD_STAGE_VOICE === type) {
-          return StageIcon /* StageIcon */.StageIcon;
+          return StageIcon.StageIcon;
         } else if (tmp.GUILD_VOICE === type) {
-          return VoiceNormalIcon /* VoiceNormalIcon */.VoiceNormalIcon;
+          return VoiceNormalIcon.VoiceNormalIcon;
         } else if (tmp.GUILD_DIRECTORY === type) {
-          return HubIcon /* HubIcon */.HubIcon;
+          return HubIcon.HubIcon;
         } else {
           return null;
         }

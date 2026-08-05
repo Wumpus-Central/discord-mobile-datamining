@@ -4,10 +4,10 @@ const result = require("set").fileFinishedImporting("modules/activities/utils/ge
 
 export default function getPlatform(arg0) {
   if ("android" === arg0) {
-    return PermissionOverwriteType /* PermissionOverwriteType */.EmbeddedActivitySupportedPlatforms.ANDROID;
+    return PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.ANDROID;
   } else if ("ios" === arg0) {
-    return PermissionOverwriteType /* PermissionOverwriteType */.EmbeddedActivitySupportedPlatforms.IOS;
+    return PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.IOS;
   } else {
-    return PermissionOverwriteType /* PermissionOverwriteType */.EmbeddedActivitySupportedPlatforms.WEB;
+    return PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.WEB;
   }
 };

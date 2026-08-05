@@ -76,7 +76,7 @@ const memoResult = require("noop").memo(function CollectiblesItemMiniPreview(arg
     obj4[1] = callback2(View, obj5);
     return callback(View, obj4);
   } else if (isNameplateRecord(item)) {
-    obj = getNameplateData /* getNameplateData */;
+    obj = getNameplateData;
     const obj9 = { style: null, children: null };
     const items2 = [items, tmp.nameplateTile];
     obj9[0] = items2;

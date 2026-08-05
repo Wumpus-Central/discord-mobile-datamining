@@ -34,7 +34,7 @@ export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
   let radius;
   ({ radius, cornerRadius, color } = arg0);
   ({ foreground, borderless } = arg0);
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isAndroid()) {
     if (null != color) {
       const sum = "" + color.toString() + cornerRadius + radius + tmp5;
@@ -55,8 +55,8 @@ export const getThemedRippleConfig = function getThemedRippleConfig(arg0) {
       }
       obj3 = map;
     } else {
-      AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(theme.theme) ? semanticColor1 : semanticColor;
-      const tmpResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+      AccessibilityAnnouncer.isThemeLight(theme.theme) ? semanticColor1 : semanticColor;
+      const tmpResult = AccessibilityAnnouncer;
     }
   } else {
     return closure_6;

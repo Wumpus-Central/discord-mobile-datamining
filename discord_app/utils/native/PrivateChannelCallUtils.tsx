@@ -27,7 +27,7 @@ let map1;
 let unpackModuleId;
 const require = arg1;
 function openChannelCallModal(channel) {
-  let obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+  let obj = shouldShowAgeGateForVoiceChannel;
   if (!obj.maybeOpenAgeGateForVoiceChannel(channel.id)) {
     const result = ChannelRTCActionCreators.rebuildRTCActiveChannels();
     const obj2 = ChannelRTCActionCreators;
@@ -163,16 +163,16 @@ export const isVoiceChannelModalKey = function isVoiceChannelModalKey(openModalK
 export { openChannelCallModal };
 export const maybeShowAgeGateModal = function maybeShowAgeGateModal(width) {
   if (obj.shouldShowAgeGateForChannelId(width)) {
-    runAfterInteractions /* runAfterInteractions */.runAfterInteractions(() => {
+    runAfterInteractions.runAfterInteractions(() => {
       callback(table[20]).openAgeGateModal(constants.NSFW_VOICE_CHANNEL);
     }, 150);
-    const tmpResult = runAfterInteractions /* runAfterInteractions */;
+    const tmpResult = runAfterInteractions;
   }
 };
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(12937, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
+  obj.openLazy(asyncRequireImpl(12937, dependencyMap.paths), "" + c17 + "-" + closure_0.id, obj);
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(closure_0) {
   ACTION_SHEET_HEIGHT_HALF.hideActionSheet("" + c17 + "-" + closure_0.id);
@@ -606,14 +606,14 @@ export const navigateToVoiceChannel = function navigateToVoiceChannel(channel, L
   if (channel.isPrivate()) {
     openChannelCallModal(channel);
   } else if (channel.isGuildStageVoice()) {
-    openStageChannelSettings /* openStageChannelSettings */.openStageChannel(channel);
-    const obj2 = openStageChannelSettings /* openStageChannelSettings */;
+    openStageChannelSettings.openStageChannel(channel);
+    const obj2 = openStageChannelSettings;
   } else {
     const _HermesInternal = HermesInternal;
     const combined = "" + c17 + "-" + channel.id;
     if (!obj.isModalOpen(combined)) {
       openChannelCallModal(channel);
     }
-    obj = navigationToRootTabHelper /* navigationToRootTabHelper */;
+    obj = navigationToRootTabHelper;
   }
 };

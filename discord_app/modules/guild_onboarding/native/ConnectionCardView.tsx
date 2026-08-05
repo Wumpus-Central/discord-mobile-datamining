@@ -40,7 +40,7 @@ export default function ConnectionCardView(description) {
   obj = { style: tmp.icon, children: icon };
   const items = [callback(closure_2, obj), ];
   const obj1 = { style: tmp.textContent, children: null };
-  const items1 = [callback(Text /* Text */.Text, { variant: "text-md/medium", color: "text-strong", children: displayName }), ];
+  const items1 = [callback(Text.Text, { variant: "text-md/medium", color: "text-strong", children: displayName }), ];
   let tmp4Result = null != description;
   if (tmp4Result) {
     tmp4Result = description.length > 0;

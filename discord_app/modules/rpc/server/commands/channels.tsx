@@ -43,7 +43,7 @@ obj[1] = function handler(args) {
   } else {
     if (channel.isPrivate()) {
       const scopes = socket.authorization.scopes;
-      if (!scopes.includes(set /* set */.OAuth2Scopes.RPC)) {
+      if (!scopes.includes(set.OAuth2Scopes.RPC)) {
         if (!scopes.includes(tmp(8824).OAuth2Scopes.DM_CHANNELS_READ)) {
           obj = { errorCode: null };
           obj[0] = constants2.INVALID_PERMISSIONS;
@@ -53,8 +53,8 @@ obj[1] = function handler(args) {
       }
       tmp = require;
     }
-    const obj3 = recurseReplaceContentTree /* recurseReplaceContentTree */;
-    return obj3.transformChannel(channel, recurseReplaceContentTree /* recurseReplaceContentTree */.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes));
+    const obj3 = recurseReplaceContentTree;
+    return obj3.transformChannel(channel, recurseReplaceContentTree.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes));
   }
 };
 obj[RPCCommands.GET_CHANNEL] = obj;
@@ -247,9 +247,9 @@ obj5[1] = function handler(socket) {
   }
   let transformChannelResult = null;
   if (null != channel) {
-    const obj = recurseReplaceContentTree /* recurseReplaceContentTree */;
-    transformChannelResult = obj.transformChannel(channel, recurseReplaceContentTree /* recurseReplaceContentTree */.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes));
-    const obj2 = recurseReplaceContentTree /* recurseReplaceContentTree */;
+    const obj = recurseReplaceContentTree;
+    transformChannelResult = obj.transformChannel(channel, recurseReplaceContentTree.hasMessageReadPermission(channel, socket.application.id, socket.authorization.scopes));
+    const obj2 = recurseReplaceContentTree;
   }
   return transformChannelResult;
 };

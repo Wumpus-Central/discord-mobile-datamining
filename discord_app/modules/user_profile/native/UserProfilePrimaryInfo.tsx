@@ -479,7 +479,7 @@ function GuildTag(style) {
     showToastOnPress = false;
   }
   const tmp = createCacheKey();
-  let obj = guildHasTag /* guildHasTag */;
+  let obj = guildHasTag;
   let primaryGuild;
   if (user != null) {
     primaryGuild = user.primaryGuild;

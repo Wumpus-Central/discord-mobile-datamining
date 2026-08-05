@@ -61,7 +61,7 @@ function getName(username) {
 }
 function useName(username) {
   const items = [initialize];
-  let stateFromStores = initialize /* initialize */.useStateFromStores(items, () => obj.hidePersonalInformation);
+  let stateFromStores = initialize.useStateFromStores(items, () => obj.hidePersonalInformation);
   if (null != username) {
     const obj2 = nameFromUser(username);
     if (stateFromStores) {
@@ -83,7 +83,7 @@ function useName(username) {
     }
     return combined;
   }
-  const obj = initialize /* initialize */;
+  const obj = initialize;
 }
 function getGlobalName(user) {
   if (null != user) {
@@ -169,9 +169,9 @@ function humanizeStatus(DND, arg1) {
   const isMobile = obj.isMobile;
   const isVR = obj.isVR;
   if (constants.ONLINE === DND) {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    const intl6 = getSystemLocale.intl;
     const string = intl6.string;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (tmp2) {
       let stringResult = string(t.SWnU0R);
     } else if (tmp) {
@@ -181,20 +181,20 @@ function humanizeStatus(DND, arg1) {
     }
     return stringResult;
   } else if (tmp3.OFFLINE === DND) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    return intl5.string(getSystemLocale /* getSystemLocale */.t.Vv0abJ);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t.Vv0abJ);
   } else if (tmp3.IDLE === DND) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t.qWbtVU);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.qWbtVU);
   } else if (tmp3.DND === DND) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.jaNpQH);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.jaNpQH);
   } else if (tmp3.INVISIBLE === DND) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.bg24HO);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.bg24HO);
   } else if (tmp3.STREAMING === DND) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.XKYej5);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.XKYej5);
   } else {
     const UNKNOWN = tmp3.UNKNOWN;
     return null;
@@ -204,8 +204,8 @@ function humanizeStatus(DND, arg1) {
 }
 function presentUserTag(username, identifiable, arg2) {
   if (null == username) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.sKdZ6U);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.sKdZ6U);
   } else {
     username = username.username;
     let tmp = null != username;
@@ -264,7 +264,7 @@ function useUserTag(user) {
   const merged = Object.assign(closure_8);
   const merged1 = Object.assign(arg1);
   const items = [initialize];
-  return presentUserTag(user, {}, initialize /* initialize */.useStateFromStores(items, () => obj.hidePersonalInformation));
+  return presentUserTag(user, {}, initialize.useStateFromStores(items, () => obj.hidePersonalInformation));
 }
 function useDirectMessageRecipient(arg0) {
   const _require = arg0;

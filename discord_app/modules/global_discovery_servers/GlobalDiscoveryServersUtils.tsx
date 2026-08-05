@@ -133,50 +133,50 @@ const result = require("map").fileFinishedImporting("modules/global_discovery_se
 
 export const getGlobalDiscoveryServersTabTitle = function getGlobalDiscoveryServersTabTitle(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
-    return intl7.string(getSystemLocale /* getSystemLocale */.t["RU+DCe"]);
+    const intl7 = getSystemLocale.intl;
+    return intl7.string(getSystemLocale.t["RU+DCe"]);
   } else if (tmp.GAMING === arg0) {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
-    return intl6.string(getSystemLocale /* getSystemLocale */.t["CD/USA"]);
+    const intl6 = getSystemLocale.intl;
+    return intl6.string(getSystemLocale.t["CD/USA"]);
   } else if (tmp.MUSIC === arg0) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    return intl5.string(getSystemLocale /* getSystemLocale */.t["nt9PL+"]);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t["nt9PL+"]);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t.gSbmdt);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.gSbmdt);
   } else if (tmp.TECH === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t["0A0By5"]);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t["0A0By5"]);
   } else if (tmp.EDUCATION === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.Gy9woq);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.Gy9woq);
   } else if (tmp.HUBS === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["q469/Z"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["q469/Z"]);
   }
 };
 export const getGlobalDiscoveryServersBannerTitle = function getGlobalDiscoveryServersBannerTitle(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
-    return intl7.string(getSystemLocale /* getSystemLocale */.t.OlDfzP);
+    const intl7 = getSystemLocale.intl;
+    return intl7.string(getSystemLocale.t.OlDfzP);
   } else if (tmp.GAMING === arg0) {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
-    return intl6.string(getSystemLocale /* getSystemLocale */.t["CD/USA"]);
+    const intl6 = getSystemLocale.intl;
+    return intl6.string(getSystemLocale.t["CD/USA"]);
   } else if (tmp.MUSIC === arg0) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    return intl5.string(getSystemLocale /* getSystemLocale */.t["nt9PL+"]);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t["nt9PL+"]);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t.gSbmdt);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.gSbmdt);
   } else if (tmp.TECH === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t["0A0By5"]);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t["0A0By5"]);
   } else if (tmp.EDUCATION === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.Gy9woq);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.Gy9woq);
   } else if (tmp.HUBS === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.X5xPlb);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.X5xPlb);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -186,26 +186,26 @@ export const getGlobalDiscoveryServersBannerTitle = function getGlobalDiscoveryS
 };
 export const getGlobalDiscoveryServersBannerDescription = function getGlobalDiscoveryServersBannerDescription(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
-    return intl7.string(getSystemLocale /* getSystemLocale */.t.SdMhrk);
+    const intl7 = getSystemLocale.intl;
+    return intl7.string(getSystemLocale.t.SdMhrk);
   } else if (tmp.GAMING === arg0) {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
-    return intl6.string(getSystemLocale /* getSystemLocale */.t.AAJ5ov);
+    const intl6 = getSystemLocale.intl;
+    return intl6.string(getSystemLocale.t.AAJ5ov);
   } else if (tmp.MUSIC === arg0) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    return intl5.string(getSystemLocale /* getSystemLocale */.t["SOio+D"]);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t["SOio+D"]);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t.R09vf0);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.R09vf0);
   } else if (tmp.TECH === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.Ew4d56);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.Ew4d56);
   } else if (tmp.EDUCATION === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.sasIWU);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.sasIWU);
   } else if (tmp.HUBS === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["F/IQCI"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["F/IQCI"]);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -215,23 +215,23 @@ export const getGlobalDiscoveryServersBannerDescription = function getGlobalDisc
 };
 export const getGlobalDiscoveryServersTabSectionTitle = function getGlobalDiscoveryServersTabSectionTitle(arg0) {
   if (constants.FEATURED === arg0) {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
-    return intl6.string(getSystemLocale /* getSystemLocale */.t.crt84X);
+    const intl6 = getSystemLocale.intl;
+    return intl6.string(getSystemLocale.t.crt84X);
   } else if (tmp.GAMING === arg0) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    return intl5.string(getSystemLocale /* getSystemLocale */.t.fWbIpf);
+    const intl5 = getSystemLocale.intl;
+    return intl5.string(getSystemLocale.t.fWbIpf);
   } else if (tmp.MUSIC === arg0) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t.nfgDzz);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.nfgDzz);
   } else if (tmp.ENTERTAINMENT === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.k1CYxv);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.k1CYxv);
   } else if (tmp.TECH === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t["4dawps"]);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t["4dawps"]);
   } else if (tmp.EDUCATION === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.uexPgT);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.uexPgT);
   } else {
     return null;
   }
@@ -252,7 +252,7 @@ export const getCategoryIdFromServerTab = function getCategoryIdFromServerTab(ar
   } else if (tmp.HUBS === arg0) {
     return closure_13;
   } else {
-    isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(arg0);
+    isDiscordFrontendDevelopment.assertNever(arg0);
   }
 };
 export const isStaleFeaturedGuilds = function isStaleFeaturedGuilds(outer1_2) {
@@ -325,6 +325,6 @@ export const handleTabPressPrefetch = function handleTabPressPrefetch() {
   }
 };
 export const makeAnalyticsID = function makeAnalyticsID() {
-  const obj = v1 /* v1 */;
-  return v1 /* v1 */.v4().replace(/-/g, "");
+  const obj = v1;
+  return v1.v4().replace(/-/g, "");
 };

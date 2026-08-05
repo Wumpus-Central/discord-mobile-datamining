@@ -387,7 +387,7 @@ function shouldAutomaticallyAck(value, arg1) {
           if (null != messages) {
             if (messages.ready) {
               if (!messages.loadingMore) {
-                const result = getFocusedChannelId /* getFocusedChannelId */.isChannelFocusedForReadStateAck(value.channelId, arg1);
+                const result = getFocusedChannelId.isChannelFocusedForReadStateAck(value.channelId, arg1);
                 const currentUser9 = obj.getCurrentUser();
                 if (result) {
                   let hasAnyStaffLevelResult9;
@@ -410,7 +410,7 @@ function shouldAutomaticallyAck(value, arg1) {
                     flag6 = false;
                   }
                 }
-                const obj10 = getFocusedChannelId /* getFocusedChannelId */;
+                const obj10 = getFocusedChannelId;
               }
               return flag6;
             }
@@ -1766,7 +1766,7 @@ prototype2["canBeUnread"] = function canBeUnread() {
     }
     return self.canTrackUnreads();
   }
-  obj = filterOutMessageRequestsAndSpam /* filterOutMessageRequestsAndSpam */;
+  obj = filterOutMessageRequestsAndSpam;
   tmp = require;
 };
 prototype2["canHaveMentions"] = function canHaveMentions() {
@@ -1776,7 +1776,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
     let tmp3 = !tmp2;
     if (!(self._isThread && !self._isJoinedThread)) {
       const items = [processChannel, closure_12];
-      const result = filterOutMessageRequestsAndSpam /* filterOutMessageRequestsAndSpam */.isMessageRequestOrSpamRequest(self.channelId, items);
+      const result = filterOutMessageRequestsAndSpam.isMessageRequestOrSpamRequest(self.channelId, items);
       let tmp9 = !result;
       if (!result) {
         let result1 = tmp4(6903).isOptInEnabledForGuild(self._guildId);
@@ -1791,7 +1791,7 @@ prototype2["canHaveMentions"] = function canHaveMentions() {
         const tmp4Result = tmp4(6903);
       }
       tmp3 = tmp9;
-      const obj = filterOutMessageRequestsAndSpam /* filterOutMessageRequestsAndSpam */;
+      const obj = filterOutMessageRequestsAndSpam;
       tmp4 = require;
     }
     tmp = tmp3;
@@ -2023,7 +2023,7 @@ prototype2["ack"] = function ack(immediate) {
   }
 };
 prototype2["takeSnapshot"] = function takeSnapshot() {
-  const _default = updateGuildUnreadSentinel /* updateGuildUnreadSentinel */.default;
+  const _default = updateGuildUnreadSentinel.default;
   const guildId = this.guildId;
   const obj = { unread: this.hasUnread(), mentionCount: this.mentionCount, guildUnread: null, guildMentionCount: null, takenAt: null };
   let hasUnreadResult = null;
@@ -2224,7 +2224,7 @@ prototype2["delete"] = function delete() {
     flag = self._persisted;
   }
   if (flag) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = closure_39.CHANNEL_ACK(self.channelId);
     obj = { version: 2, read_state_type: null };
@@ -2461,7 +2461,7 @@ prototype2["syncThreadSettings"] = function syncThreadSettings() {
 prototype2["recordLastViewedTime"] = function recordLastViewedTime() {
   const self = this;
   const timestamp = Date.now();
-  const diff = timestamp - DISCORD_EPOCH /* DISCORD_EPOCH */.DISCORD_EPOCH;
+  const diff = timestamp - DISCORD_EPOCH.DISCORD_EPOCH;
   const rounded = Math.ceil(diff / set.Millis.DAY);
   if (rounded !== this.lastViewed) {
     self.lastViewed = rounded;
@@ -2484,7 +2484,7 @@ class ReadStateStoreClass extends Store {
 const prototype3 = ReadStateStoreClass.prototype;
 prototype3["initialize"] = function initialize() {
   const items = [percentageScrolled, mergeGuildAvatar, createGuildRecordFromRust, handleConnectionOpen, ensureGuildLoaded, closure_32, reinjectEphemerals, getUncachedChannelPermissions, getParticipants, handleThreadCreateOrUpdate, storeThread, handlePermissionsChange, scheduledEventSort, closure_8, isSubscriptionGated, updateUserGuildSettingsInternal, map, _validate, processChannel, handleConnectionClosedOrResumed, closure_12];
-  items.push(getState /* getState */.default);
+  items.push(getState.default);
   this.waitFor(handleThreadCreateOrUpdate, fetchFingerprint, getParticipants, handlePermissionsChange, ensureGuildLoaded, percentageScrolled, participantFromServer, isSubscriptionGated, handleConnectionOpen, scheduledEventSort, createGuildRecordFromRust, checkIdleAFK, storeThread, reinjectEphemerals, _validate, getUncachedChannelPermissions, upsertRelationship, closure_32, updateUserGuildSettingsInternal, handleConnectionClosedOrResumed, mergeGuildAvatar, map);
   const items1 = [handlePermissionsChange];
   this.syncWith(items1, handleChannelSectionStoreUpdate);
@@ -2804,7 +2804,7 @@ obj = {
         let combined = items.concat(modified_messages);
         let tmp2 = require;
         let tmp3 = dependencyMap;
-        let found = combined.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+        let found = combined.filter(isDiscordFrontendDevelopment.isNotNullish);
         let tmp5 = found;
         let tmp6 = found;
         for (const item10026 of found) {
@@ -3123,7 +3123,7 @@ obj = {
       }
     }
     const mapped = messages.map((thread) => thread.thread);
-    const found = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
     const item = found.forEach((type) => {
       let last_pin_timestamp;
       if (callback2(type.type)) {
@@ -3174,7 +3174,7 @@ obj = {
     } else {
       return false;
     }
-    obj = isIOSPushNotificationRawPayloadFixExperimentEnabled /* isIOSPushNotificationRawPayloadFixExperimentEnabled */;
+    obj = isIOSPushNotificationRawPayloadFixExperimentEnabled;
   },
   MESSAGE_CREATE: function handleIncomingMessage(isPushNotification) {
     let channelId;
@@ -3220,7 +3220,7 @@ obj = {
         }
       }
     }
-    let obj6 = getRootNavigationRef /* getRootNavigationRef */;
+    let obj6 = getRootNavigationRef;
     const rootNavigationRef = obj6.getRootNavigationRef();
     let isReadyResult;
     if (rootNavigationRef != null) {
@@ -3715,7 +3715,7 @@ obj = {
     return value.syncThreadSettings();
   },
   THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(id) {
-    let result = doesThreadMembersActionAffectMe /* doesThreadMembersActionAffectMe */.doesThreadMembersActionAffectMe(id);
+    let result = doesThreadMembersActionAffectMe.doesThreadMembersActionAffectMe(id);
     if (result) {
       const value = ReadState.get(id.id);
       result = value.syncThreadSettings();

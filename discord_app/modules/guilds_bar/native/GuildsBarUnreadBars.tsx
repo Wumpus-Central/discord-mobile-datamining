@@ -126,7 +126,7 @@ function findFirstOrLastMentionedItem(scrollPosValue) {
       let tmp40 = nextResult;
       let tmp41 = require;
       let tmp42 = dependencyMap;
-      if (tmp4.type === renderDefaultEmpty /* renderDefaultEmpty */.FastListItemTypes.ITEM) {
+      if (tmp4.type === renderDefaultEmpty.FastListItemTypes.ITEM) {
         let tmp6 = nextResult;
         if (tmp4.layoutStart > diff) {
           let tmp30 = iter;

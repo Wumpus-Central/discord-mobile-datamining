@@ -20,7 +20,7 @@ export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
     if (hasConsented.hasConsented(constants.PERSONALIZATION)) {
       let obj = dispatcher;
       obj.dispatch({ type: "LOAD_USER_AFFINITIES_V2" });
-      const HTTP = sendRequest /* sendRequest */.HTTP;
+      const HTTP = sendRequest.HTTP;
       obj = { url: null, retries: null, oldFormErrors: true, rejectWithError: false };
       obj[0] = USER_AFFINITIES_V2.USER_AFFINITIES_V2;
       let num = 0;

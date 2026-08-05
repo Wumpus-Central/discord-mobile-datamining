@@ -504,7 +504,7 @@ export const useGuildsBarAnimatedWrapperStyles = function useGuildsBarAnimatedWr
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const token = map /* map */.useToken(Themes.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const token = map.useToken(Themes.modules.mobile.GUILD_BAR_ITEM_SIZE);
   return callback4(flag, flag2, token, callback());
 };
 export { UnreadIndicator };

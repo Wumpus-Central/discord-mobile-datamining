@@ -12,7 +12,7 @@ const memoResult = require("noop").memo((arg0) => {
   let primaryColor;
   let secondaryColor;
   ({ primaryColor, secondaryColor, fallbackBackground, containerStyle, children } = arg0);
-  const colors = useUserProfileGradientColors /* useUserProfileGradientColors */.useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground);
+  const colors = useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground);
   return jsx(LinearGradient, { colors, style, children });
 });
 const result = require("useUserProfileGradientColors").fileFinishedImporting("modules/user_profile/native/UserProfileGradientContainer.tsx");

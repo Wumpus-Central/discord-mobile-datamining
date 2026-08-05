@@ -110,19 +110,19 @@ prototype["start"] = function start() {
   const timestampProducer = this.timestampProducer;
   this.streamStart = timestampProducer.now();
   const connection = this.connection;
-  connection.on(BaseConnectionEvent /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.on(BaseConnectionEvent.BaseConnectionEvent.Stats, this.sampleStats);
 };
 prototype["setOutboundSsrc"] = function setOutboundSsrc(ssrc) {
   const self = this;
   if (null == this.outboundStats[ssrc]) {
-    const outboundStats = new parseEncoder /* parseEncoder */.OutboundStats(self.timestampProducer);
+    const outboundStats = new parseEncoder.OutboundStats(self.timestampProducer);
     self.outboundStats[ssrc] = outboundStats;
   }
 };
 prototype["getOrCreateInboundStats"] = function getOrCreateInboundStats(userId) {
   const self = this;
   if (null == this.inboundStats[userId]) {
-    const inboundStats = new parseEncoder /* parseEncoder */.InboundStats(self.timestampProducer);
+    const inboundStats = new parseEncoder.InboundStats(self.timestampProducer);
     self.inboundStats[userId] = inboundStats;
   }
   return self.inboundStats[userId];
@@ -132,11 +132,11 @@ prototype["updateCallUserIdsCount"] = function updateCallUserIdsCount(size) {
 };
 prototype["setInboundUser"] = function setInboundUser(userId, videoSsrc) {
   const orCreateInboundStats = this.getOrCreateInboundStats(userId);
-  orCreateInboundStats.setVideoStopped(0 === videoSsrc, parseEncoder /* parseEncoder */.VideoStoppedReasons.SenderStopped);
+  orCreateInboundStats.setVideoStopped(0 === videoSsrc, parseEncoder.VideoStoppedReasons.SenderStopped);
 };
 prototype["setUserVideoDisabled"] = function setUserVideoDisabled(userId, arg1) {
   const orCreateInboundStats = this.getOrCreateInboundStats(userId);
-  orCreateInboundStats.setVideoStopped(arg1, parseEncoder /* parseEncoder */.VideoStoppedReasons.ClientSideDisableVideo);
+  orCreateInboundStats.setVideoStopped(arg1, parseEncoder.VideoStoppedReasons.ClientSideDisableVideo);
   let tmp2 = !arg1;
   if (!arg1) {
     tmp2 = orCreateInboundStats.statsWindow.length > 0;
@@ -178,7 +178,7 @@ prototype["resume"] = function resume() {
 };
 prototype["stop"] = function stop() {
   const connection = this.connection;
-  connection.off(BaseConnectionEvent /* BaseConnectionEvent */.BaseConnectionEvent.Stats, this.sampleStats);
+  connection.off(BaseConnectionEvent.BaseConnectionEvent.Stats, this.sampleStats);
   const timestampProducer = this.timestampProducer;
   this.streamEnd = timestampProducer.now();
   this.removeAllListeners();
@@ -270,7 +270,7 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
       }
       let obj = { codec_asymmetric_session: null, codec_h264_decode_duration_sec: null, codec_h265_decode_duration_sec: null, codec_vp8_decode_duration_sec: null, codec_vp9_decode_duration_sec: null, codec_av1_decode_duration_sec: null, codec_unknown_decode_duration_sec: null };
       obj[0] = tmp;
-      let num = value.get(parseEncoder /* parseEncoder */.CodecTypes.H264);
+      let num = value.get(parseEncoder.CodecTypes.H264);
       if (num == null) {
         num = 0;
       }
@@ -310,7 +310,7 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
     map = encoderUsageStats.get(items.sort()[0]);
   }
   obj = { codec_asymmetric_session: tmp, codec_h264_encode_duration_sec: null, codec_h265_encode_duration_sec: null, codec_vp8_encode_duration_sec: null, codec_vp9_encode_duration_sec: null, codec_av1_encode_duration_sec: null, codec_unknown_encode_duration_sec: null };
-  let num8 = map.get(parseEncoder /* parseEncoder */.CodecTypes.H264);
+  let num8 = map.get(parseEncoder.CodecTypes.H264);
   if (num8 == null) {
     num8 = 0;
   }
@@ -1307,7 +1307,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
       num67 = 0;
     }
     const diff1 = num66 - num67;
-    if (aggregationDuration instanceof parseEncoder /* parseEncoder */.OutboundStats) {
+    if (aggregationDuration instanceof parseEncoder.OutboundStats) {
       obj.sender_freeze_count = freezeCount;
       obj.sender_total_freezes_duration = totalFreezesDuration;
       obj.sender_total_frames_duration = totalFramesDuration;

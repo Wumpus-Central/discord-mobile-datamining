@@ -37,7 +37,7 @@ function GuildProfileTraitView(trait) {
   obj = { emoji: trait.emoji };
   const items = [callback(TraitEmoji, obj), ];
   obj = { variant: "text-sm/medium", color: "text-default", children: trait.label };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

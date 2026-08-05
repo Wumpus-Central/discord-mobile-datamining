@@ -6,7 +6,7 @@ export const isLinkTrusted = function isLinkTrusted(target) {
   if (null == target.target) {
     return tmp;
   } else {
-    isLinkTrusted /* isLinkTrusted */;
+    isLinkTrusted;
     if (null == target.title) {
       let title = tmp2(7904).astToString(target.content);
       tmp5(tmp6, title);

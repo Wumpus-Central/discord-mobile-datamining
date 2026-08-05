@@ -300,7 +300,7 @@ export default {
           tmp3 = channel;
           const obj3 = SelectedChannelActionCreators;
         }
-        obj2 = getRootNavigationRef /* getRootNavigationRef */;
+        obj2 = getRootNavigationRef;
         tmp6 = require;
       }
     }
@@ -456,13 +456,13 @@ export default {
     obj = { id, guild_id: "Array", parent_id: "isArray" };
     tmpResult.dispatch({ type: "CHANNEL_DELETE", channel: obj, silent: flag2 });
     if (flag) {
-      transitionTo /* transitionTo */.transitionTo(constants2.FRIENDS);
-      const obj5 = transitionTo /* transitionTo */;
+      transitionTo.transitionTo(constants2.FRIENDS);
+      const obj5 = transitionTo;
     }
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj1 = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    obj1[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj7 = sendRequest /* sendRequest */;
+    obj1[3] = sendRequest.rejectWithMigratedError();
+    const obj7 = sendRequest;
     const delResult = HTTP.del(obj1);
     return HTTP.del(obj1).then(() => {
       const AccessibilityAnnouncer = callback(4131).AccessibilityAnnouncer;
@@ -475,7 +475,7 @@ export default {
     });
   },
   bulkLeaveGroupDMs(channel_ids) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_11.USER_CHANNELS_BULK_LEAVE, body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { channel_ids };
     return HTTP.post(obj);
@@ -557,11 +557,11 @@ export default {
     });
   },
   removeRecipient(arg0, arg1) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     return HTTP.del({ url: closure_11.CHANNEL_RECIPIENT(arg0, arg1), oldFormErrors: true, rejectWithError: true });
   },
   setDMOwner(arg0, owner) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_11.CHANNEL(arg0), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { owner };
     return HTTP.patch(obj);
@@ -901,7 +901,7 @@ export default {
     })();
   },
   convertToGuild(arg0) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     return HTTP.post({ url: closure_11.CHANNEL_CONVERT(arg0), oldFormErrors: true, rejectWithError: true });
   },
   preload(arg0, channelId) {

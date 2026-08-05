@@ -58,8 +58,8 @@ function OtherConnectionsCard(count) {
   let obj = { onPress: callback, style: callback3().card, border: "strong", children: null };
   obj = { variant: "text-md/medium", color: "interactive-text-default", children: null };
   obj[2] = "+" + count.count;
-  obj[3] = callback(Text /* Text */.Text, obj);
-  return callback(PressableCard /* PressableCard */.Card, obj);
+  obj[3] = callback(Text.Text, obj);
+  return callback(PressableCard.Card, obj);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles(() => {

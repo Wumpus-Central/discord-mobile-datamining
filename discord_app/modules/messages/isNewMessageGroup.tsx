@@ -48,7 +48,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                 }
                 let tmp15 = !tmp14;
                 if (tmp14) {
-                  const isSameDayResult = resetCache /* resetCache */.isSameDay(content.timestamp, type.timestamp);
+                  const isSameDayResult = resetCache.isSameDay(content.timestamp, type.timestamp);
                   let tmp18 = !isSameDayResult;
                   if (isSameDayResult) {
                     const isWithinIntervalResult = tmp16(3955).isWithinInterval(content.timestamp, type.timestamp, closure_6);
@@ -102,7 +102,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
                     const tmp16Result = tmp16(3955);
                   }
                   tmp15 = tmp18;
-                  const obj2 = resetCache /* resetCache */;
+                  const obj2 = resetCache;
                   tmp16 = require;
                 }
                 tmp11 = tmp15;

@@ -286,8 +286,8 @@ export default function GuildSettingsModalEmoji(contentContainerStyle) {
 };
 export const computeSectionItem = function computeSectionItem(intl, length, arg2) {
   const bound = Math.max(arg2 - length, 0);
-  intl = getSystemLocale /* getSystemLocale */.intl;
-  const key = "" + intl + " - " + intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.sgL8sI, { count: bound }).toUpperCase();
+  intl = getSystemLocale.intl;
+  const key = "" + intl + " - " + intl.formatToPlainString(getSystemLocale.t.sgL8sI, { count: bound }).toUpperCase();
   return { type: "SECTION", key, section: key };
 };
 export { computeEmojiItem };

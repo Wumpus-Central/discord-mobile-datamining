@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TEXT,
   getComponent() {
-    return UserSettingsDesignSystemText /* UserSettingsDesignSystemText */.default;
+    return UserSettingsDesignSystemText.default;
   }
 };
 const route = createToggle.createRoute(obj);

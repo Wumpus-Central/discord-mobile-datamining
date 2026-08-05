@@ -7,5 +7,5 @@ const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/us
 
 export const useSafetyHubInitialized = function useSafetyHubInitialized() {
   const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
-  return initialize /* initialize */.useStateFromStores(items, () => initialized.isInitialized());
+  return initialize.useStateFromStores(items, () => initialized.isInitialized());
 };

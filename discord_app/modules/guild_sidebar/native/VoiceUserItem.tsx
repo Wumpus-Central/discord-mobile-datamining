@@ -58,7 +58,7 @@ const memoResult = importAllResult.memo(function VoiceUserItem(arg0) {
   ({ member: require, user: importDefault, guildId: dependencyMap, disabled, platform, ringing } = arg0);
   ({ collapsed, stream, serverMute, serverDeaf, mute, deaf, localMute, video, isInEmbeddedActivity, voicePlatform } = arg0);
   const tmp = callback2();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => !stateFromStores.useReducedMotion);
   ReanimatedRexport;
@@ -84,7 +84,7 @@ const memoResult = importAllResult.memo(function VoiceUserItem(arg0) {
       return { opacity: 1 };
     }
   };
-  obj = { ringing, shouldAnimate: stateFromStores, PULSE_ENDING_OPACITY: 0.4, withRepeat: ReanimatedRexport.withRepeat, withSequence: ReanimatedRexport.withSequence, withDelay: ReanimatedRexport.withDelay, INNER_PULSE_DELAY: 100, withTiming: CONFIG_NEVER_ANIMATE_TIMING /* CONFIG_NEVER_ANIMATE_TIMING */.withTiming, PULSE_DURATION: 250, Easing: ReanimatedRexport.Easing, PULSE_STARTING_OPACITY: 0.1, FADE_DURATION: 500 };
+  obj = { ringing, shouldAnimate: stateFromStores, PULSE_ENDING_OPACITY: 0.4, withRepeat: ReanimatedRexport.withRepeat, withSequence: ReanimatedRexport.withSequence, withDelay: ReanimatedRexport.withDelay, INNER_PULSE_DELAY: 100, withTiming: CONFIG_NEVER_ANIMATE_TIMING.withTiming, PULSE_DURATION: 250, Easing: ReanimatedRexport.Easing, PULSE_STARTING_OPACITY: 0.1, FADE_DURATION: 500 };
   fn.__closure = obj;
   fn.__workletHash = 9430639809025;
   fn.__initData = closure_11;
@@ -206,6 +206,6 @@ const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedI
 
 export default memoResult;
 export const getVoiceUserHeight = function getVoiceUserHeight(fontScale) {
-  const obj = map /* map */;
-  return Math.max(map /* map */.scaleTextLineHeight(c7, fontScale), Button /* Button */.AVATAR_SIZE_MAP[XSMALL_20]) + 10;
+  const obj = map;
+  return Math.max(map.scaleTextLineHeight(c7, fontScale), Button.AVATAR_SIZE_MAP[XSMALL_20]) + 10;
 };

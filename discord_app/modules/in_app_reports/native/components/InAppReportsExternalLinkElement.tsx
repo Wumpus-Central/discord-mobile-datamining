@@ -42,10 +42,10 @@ export default function ExternalLinksElement(elements) {
         if (!someResult) {
           obj = { style: null, variant: "heading-deprecated-12/extrabold", color: "text-default", accessibilityRole: "header", children: null };
           obj[0] = tmp.headerText;
-          const intl = getSystemLocale /* getSystemLocale */.intl;
-          obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.hvVgAZ).toUpperCase();
-          tmp5 = callback(Text /* Text */.Text, obj);
-          const str = intl.string(getSystemLocale /* getSystemLocale */.t.hvVgAZ);
+          const intl = getSystemLocale.intl;
+          obj[4] = intl.string(getSystemLocale.t.hvVgAZ).toUpperCase();
+          tmp5 = callback(Text.Text, obj);
+          const str = intl.string(getSystemLocale.t.hvVgAZ);
         }
         const items = [tmp5, elements.map((data) => callback(closure_7, { data: data.data }, "external-link-" + arg1))];
         obj[1] = items;

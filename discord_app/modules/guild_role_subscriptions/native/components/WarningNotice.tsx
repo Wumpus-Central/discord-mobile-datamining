@@ -45,7 +45,7 @@ export default function WarningNotice(arg0) {
   const items1 = [callback(preload, obj), ];
   const items2 = [, ];
   ({ message: arr3[0], textYellow: arr3[1] } = tmp);
-  items1[1] = callback(Text /* Text */.Text, { style: items2, variant: "text-sm/medium", color: "interactive-text-active", children: notice });
+  items1[1] = callback(Text.Text, { style: items2, variant: "text-sm/medium", color: "interactive-text-active", children: notice });
   obj[1] = items1;
   const items3 = [callback2(View, obj), ];
   let tmp4Result = null != onClick && null != ctaLabel;
@@ -57,7 +57,7 @@ export default function WarningNotice(arg0) {
     obj2[1] = disabled;
     obj2[2] = submitting;
     obj2[3] = ctaLabel;
-    obj1[1] = tmp4(Button /* Button */.Button, obj2);
+    obj1[1] = tmp4(Button.Button, obj2);
     tmp4Result = tmp4(tmp3, obj1);
   }
   items3[1] = tmp4Result;

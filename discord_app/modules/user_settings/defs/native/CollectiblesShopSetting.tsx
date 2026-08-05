@@ -5,8 +5,8 @@ import { CollectiblesShopScreen } from "../../shop/native/CollectiblesShopScreen
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.pWG4ze);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.pWG4ze);
   },
   parent: null,
   IconComponent: require("ShopIcon").ShopIcon,
@@ -26,7 +26,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.COLLECTIBLES_SHOP,
   getComponent() {
-    return CollectiblesShopScreen /* CollectiblesShopScreen */.default;
+    return CollectiblesShopScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);

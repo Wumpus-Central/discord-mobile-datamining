@@ -23,34 +23,34 @@ let require = arg1;
 function getMediaIcon(closure_3) {
   if (closure_3.activeEvent) {
     let obj = { icon: null, source: null };
-    obj[0] = CalendarIcon /* CalendarIcon */.CalendarIcon;
+    obj[0] = CalendarIcon.CalendarIcon;
     obj[1] = registerAsset;
     let tmp6 = obj;
   } else if (tmp4) {
     obj = { icon: null, source: null };
-    obj[0] = StageIcon /* StageIcon */.StageIcon;
+    obj[0] = StageIcon.StageIcon;
     obj[1] = registerAsset;
     tmp6 = obj;
   } else if (tmp3) {
     const obj1 = { icon: null, source: null };
-    obj1[0] = ScreenIcon /* ScreenIcon */.ScreenIcon;
+    obj1[0] = ScreenIcon.ScreenIcon;
     obj1[1] = registerAsset;
     tmp6 = obj1;
   } else if (tmp2) {
     const obj2 = { icon: null, source: null };
-    obj2[0] = VideoIcon /* VideoIcon */.VideoIcon;
+    obj2[0] = VideoIcon.VideoIcon;
     obj2[1] = registerAsset;
     tmp6 = obj2;
   } else if (tmp) {
     const obj3 = { icon: null, source: null };
-    obj3[0] = VoiceNormalIcon /* VoiceNormalIcon */.VoiceNormalIcon;
+    obj3[0] = VoiceNormalIcon.VoiceNormalIcon;
     obj3[1] = registerAsset;
     tmp6 = obj3;
   } else {
     tmp6 = null;
     if (tmp5) {
       obj = { icon: null, source: null };
-      obj[0] = AppsIcon /* AppsIcon */.AppsIcon;
+      obj[0] = AppsIcon.AppsIcon;
       obj[1] = registerAsset;
       tmp6 = obj;
     }
@@ -75,7 +75,7 @@ const memoResult = importAllResult.memo((arg0) => {
   ({ IconComponent, isCurrentUserConnected } = arg0);
   ({ style, source } = arg0);
   let activityIcon = callback();
-  let obj = map /* map */;
+  let obj = map;
   let WHITE = obj.useToken(Themes.colors.ICON_DEFAULT);
   obj = { style: items, children: null };
   items = [activityIcon.activityWrapper, style];

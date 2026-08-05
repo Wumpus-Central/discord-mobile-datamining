@@ -118,7 +118,7 @@ Object.defineProperty(prototype, "gameWidgets", {
     const widgets = this._userProfile.widgets;
     let found;
     if (widgets != null) {
-      found = widgets.filter(items /* items */.isGameWidget);
+      found = widgets.filter(items.isGameWidget);
     }
     return found;
   },
@@ -252,12 +252,12 @@ prototype["getBannerURL"] = function getBannerURL(arg0) {
       ({ userId: obj4[0], guildId: obj4[1], banner: obj4[2] } = self);
       obj[3] = canAnimate;
       obj[4] = size;
-      let guildMemberBannerURL = getAvatarURL /* getAvatarURL */.getGuildMemberBannerURL(obj);
-      const obj3 = getAvatarURL /* getAvatarURL */;
+      let guildMemberBannerURL = getAvatarURL.getGuildMemberBannerURL(obj);
+      const obj3 = getAvatarURL;
     }
     return guildMemberBannerURL;
   }
-  obj = getAvatarURL /* getAvatarURL */;
+  obj = getAvatarURL;
   obj = { id: self.userId, banner: self.banner, canAnimate, size };
   guildMemberBannerURL = obj.getUserBannerURL(obj);
 };
@@ -279,8 +279,8 @@ prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, arg1, a
         obj[1] = self;
         obj[2] = arg1;
         obj[3] = num;
-        userBannerURL = getAvatarURL /* getAvatarURL */.getUserBannerURL(obj);
-        const obj2 = getAvatarURL /* getAvatarURL */;
+        userBannerURL = getAvatarURL.getUserBannerURL(obj);
+        const obj2 = getAvatarURL;
       }
       let bannerURL = userBannerURL;
     } else {
@@ -292,7 +292,7 @@ prototype["getPreviewBanner"] = function getPreviewBanner(pendingBanner, arg1, a
   }
 };
 prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
-  let obj = useAvatarsWithGuilds /* useAvatarsWithGuilds */;
+  let obj = useAvatarsWithGuilds;
   obj = { pendingValue: pendingBio, userValue: this._userProfile.bio, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let bio;
@@ -304,7 +304,7 @@ prototype["getPreviewBio"] = function getPreviewBio(pendingBio) {
   return obj.getProfilePreviewValue(obj);
 };
 prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingValue) {
-  let obj = useAvatarsWithGuilds /* useAvatarsWithGuilds */;
+  let obj = useAvatarsWithGuilds;
   obj = { pendingValue, userValue: this._userProfile.pronouns, guildValue: null, guildId: null };
   const _guildMemberProfile = this._guildMemberProfile;
   let pronouns;

@@ -13,7 +13,7 @@ export const isShoppableCollectibleSku = function isShoppableCollectibleSku(stat
         sourceType = collectibles.sourceType;
       }
     }
-    tmp = sourceType === CollectiblesSKUSourceType /* CollectiblesSKUSourceType */.CollectiblesSKUSourceType.SHOP;
+    tmp = sourceType === CollectiblesSKUSourceType.CollectiblesSKUSourceType.SHOP;
   }
   return tmp;
 };

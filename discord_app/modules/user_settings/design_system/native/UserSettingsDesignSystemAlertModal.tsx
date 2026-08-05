@@ -65,12 +65,12 @@ function DemoModal() {
     }
   }), []);
   let obj = { title: "Are you sure?", content: "This will clear 3 incoming friend requests. The users who sent them won\u2019t be informed.", actions: null };
-  const items = [jsx(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, { variant: "destructive", onPress: callback, text: "Clear" }, "clear"), jsx(getAlertModalItemKey /* getAlertModalItemKey */.AlertActionButton, { variant: "secondary", onPress: callback, text: "Cancel" }, "cancel")];
+  const items = [jsx(getAlertModalItemKey.AlertActionButton, { variant: "destructive", onPress: callback, text: "Clear" }, "clear"), jsx(getAlertModalItemKey.AlertActionButton, { variant: "secondary", onPress: callback, text: "Cancel" }, "cancel")];
   obj[2] = items;
-  return jsx(getAlertModalItemKey /* getAlertModalItemKey */.AlertModal, { title: "Are you sure?", content: "This will clear 3 incoming friend requests. The users who sent them won\u2019t be informed.", actions: null });
+  return jsx(getAlertModalItemKey.AlertModal, { title: "Are you sure?", content: "This will clear 3 incoming friend requests. The users who sent them won\u2019t be informed.", actions: null });
 }
 function openDemoModal() {
-  useAlertStore /* useAlertStore */.openAlert("demo-1", <DemoModal />);
+  useAlertStore.openAlert("demo-1", <DemoModal />);
 }
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 let closure_9 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
@@ -78,7 +78,7 @@ const result = require("get ActivityIndicator").fileFinishedImporting("modules/u
 
 export default function UserSettingsDesignSystemAlertModal() {
   let obj = { children: null };
-  obj = { style: callback2().container, children: jsx(Button /* Button */.Button, { children: null }) };
+  obj = { style: callback2().container, children: jsx(Button.Button, { children: null }) };
   obj = { onPress: openDemoModal, text: "Show Alert" };
   obj[0] = <closure_4 onPress={openDemoModal} text="Show Alert" />;
   return <closure_5 onPress={openDemoModal} text="Show Alert" />;

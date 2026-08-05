@@ -22,7 +22,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
   messages2 = messages2.messages;
   const lastResult1 = messages2.last();
   currentUser = currentUser.getCurrentUser();
-  const ANIMATED = GuildThemeSourcePreference /* GuildThemeSourcePreference */.JumpType.ANIMATED;
+  const ANIMATED = GuildThemeSourcePreference.JumpType.ANIMATED;
   let tmp7 = tmp6;
   ({ jumpSequenceId, focusTargetId } = messages);
   if (messages.initialScrollSequenceId === messages2.initialScrollSequenceId) {
@@ -93,7 +93,7 @@ export default function getMessageJumpData(messages, isAtBottom, messages2) {
     }
   }
   const tmp4 = require;
-  const tmp4Result = set /* set */;
+  const tmp4Result = set;
   flag = false;
   tmp12 = ANIMATED;
   tmp13 = null;
@@ -114,7 +114,7 @@ export const useMessageJumpAndroidKeyboardHeight = function useMessageJumpAndroi
     const tmpResult = tmp(1847);
   }
   const obj = React;
-  obj2 = set /* set */;
+  obj2 = set;
   tmp = require;
   [tmp4, require] = callback(React.useState(num), 2);
   const effect = obj.useEffect(() => outer1_5((keyboardHeight) => {

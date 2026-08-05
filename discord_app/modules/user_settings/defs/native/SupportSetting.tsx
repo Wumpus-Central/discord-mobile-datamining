@@ -4,8 +4,8 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const pressable = createToggle.createPressable({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["Yl/Riu"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Yl/Riu"]);
   },
   parent: null,
   IconComponent: require("CircleQuestionIcon").CircleQuestionIcon,
@@ -14,8 +14,8 @@ const pressable = createToggle.createPressable({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["Yl/Riu"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Yl/Riu"]);
   },
   parent: null,
   IconComponent: require("CircleQuestionIcon").CircleQuestionIcon,

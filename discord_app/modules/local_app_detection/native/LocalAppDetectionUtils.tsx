@@ -9,11 +9,11 @@ let c5;
 let closure_6;
 const require = arg1;
 function isGameCommunityUpsellMultiExperimentEnabled() {
-  const GameCommunityUpsellMultiExperiment = GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT /* GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT */.GameCommunityUpsellMultiExperiment;
+  const GameCommunityUpsellMultiExperiment = GAME_COMMUNITY_UPSELL_MULTI_EXPERIMENT.GameCommunityUpsellMultiExperiment;
   return GameCommunityUpsellMultiExperiment.getConfig({ location: "LocalAppDetectionUtils" }).enabled;
 }
 function getDetectableApp(arg0) {
-  if (DetectableAppNames /* DetectableAppNames */.DetectableAppNames.ROBLOX === arg0) {
+  if (DetectableAppNames.DetectableAppNames.ROBLOX === arg0) {
     return { androidScheme: "roblox", iosScheme: "roblox" };
   } else if (tmp(12878).DetectableAppNames.MINECRAFT === arg0) {
     let obj = { androidScheme: "minecraft", iosScheme: "minecraft", predicate: null };

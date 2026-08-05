@@ -125,7 +125,7 @@ function ReactionTab(arg0) {
   let selected;
   ({ reaction, selected } = arg0);
   const tmp = callback4();
-  let obj = useEmojiColorPalette /* useEmojiColorPalette */;
+  let obj = useEmojiColorPalette;
   let burst_colors = reaction.burst_colors;
   if (burst_colors == null) {
     burst_colors = [];
@@ -198,7 +198,7 @@ function ReactionTab(arg0) {
     tmp19 = tmp7;
   }
   items5[2] = tmp19;
-  items4[1] = callback2(Text /* Text */.Text, { variant: "text-md/bold", style: items5, children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count });
+  items4[1] = callback2(Text.Text, { variant: "text-md/bold", style: items5, children: reaction.burst_count > 0 ? reaction.burst_count : reaction.count });
   obj2[4] = items4;
   let name = emoji.id;
   if (name == null) {
@@ -436,18 +436,18 @@ export { useReactors };
 export { useReactorsOnScrollNative };
 export const MessageReactionsEmpty = function MessageReactionsEmpty() {
   const tmp = callback4();
-  let obj = getNoResultsSource /* getNoResultsSource */;
+  let obj = getNoResultsSource;
   const tmp2 = useSafeAreaInsets();
   obj = { scrollable: true, startHeight: 338 + tmp2.bottom, children: null };
   obj = { style: tmp.containerEmpty, children: null };
   const obj1 = { source: obj.useNoResultsSource(), title: null, body: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[1] = intl.string(getSystemLocale /* getSystemLocale */.t.HmPOrp);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[2] = intl2.string(getSystemLocale /* getSystemLocale */.t["pTJ5J/"]);
-  obj[1] = callback2(Button /* Button */.RefreshEmptyState, obj1);
-  obj[2] = callback2(BottomSheetModal /* BottomSheetModal */.BottomSheetView, obj);
-  return callback2(Background /* Background */.BottomSheet, obj);
+  const intl = getSystemLocale.intl;
+  obj1[1] = intl.string(getSystemLocale.t.HmPOrp);
+  const intl2 = getSystemLocale.intl;
+  obj1[2] = intl2.string(getSystemLocale.t["pTJ5J/"]);
+  obj[1] = callback2(Button.RefreshEmptyState, obj1);
+  obj[2] = callback2(BottomSheetModal.BottomSheetView, obj);
+  return callback2(Background.BottomSheet, obj);
 };
 export const MessageReactionsContent = function MessageReactionsContent(channelId) {
   let disableManage;

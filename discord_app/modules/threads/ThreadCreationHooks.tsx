@@ -568,7 +568,7 @@ let result = require("noop").fileFinishedImporting("modules/threads/ThreadCreati
 
 export const PrivateThreadMode = obj;
 export const usePrivateThreadMode = function usePrivateThreadMode(parentChannel) {
-  const obj = useCanUnarchiveThread /* useCanUnarchiveThread */;
+  const obj = useCanUnarchiveThread;
   const canStartPublicThread = obj.useCanStartPublicThread(parentChannel);
   if (!obj2.useCanStartPrivateThread(parentChannel)) {
     return tmp2.Disabled;

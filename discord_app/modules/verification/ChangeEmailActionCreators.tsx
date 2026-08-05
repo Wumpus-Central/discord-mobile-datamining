@@ -43,7 +43,7 @@ export const sendConfirmationCode = function sendConfirmationCode() {
   }
   let obj = TrackedHTTPUtils;
   obj = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
-  obj = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
+  obj = { event: encodeProperties.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
   obj[1] = obj;
   return obj.put(obj);
 };

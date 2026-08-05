@@ -20,9 +20,9 @@ export const convertComboId = function convertComboId(str) {
   return { applicationId: tmp[0], branchId: tmp[1] };
 };
 export const shouldShareApplicationActivity = function shouldShareApplicationActivity(application_id, closure_7) {
-  const ShowCurrentGame = explicitContentFromProto /* explicitContentFromProto */.ShowCurrentGame;
+  const ShowCurrentGame = explicitContentFromProto.ShowCurrentGame;
   if (ShowCurrentGame.getSetting()) {
-    const StatusSetting = explicitContentFromProto /* explicitContentFromProto */.StatusSetting;
+    const StatusSetting = explicitContentFromProto.StatusSetting;
     if (StatusSetting.getSetting() !== constants3.INVISIBLE) {
       const activeLibraryApplication = closure_7.getActiveLibraryApplication(application_id);
       let tmp7 = null == activeLibraryApplication;

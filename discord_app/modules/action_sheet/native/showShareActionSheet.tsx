@@ -8,7 +8,7 @@ if (PlatformTypes.isAndroid()) {
     let _location;
     let app;
     ({ app, location: _location } = arg0);
-    const result = trackAppClickInNativeShareSheet /* trackAppClickInNativeShareSheet */.trackAppClickInNativeShareSheet(app, _location);
+    const result = trackAppClickInNativeShareSheet.trackAppClickInNativeShareSheet(app, _location);
   });
 }
 let result = require("enforcing").fileFinishedImporting("modules/action_sheet/native/showShareActionSheet.tsx");

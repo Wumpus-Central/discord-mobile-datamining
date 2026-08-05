@@ -276,7 +276,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
   }
   if (id.createdAt) {
-    const Timestamp = now /* now */.Timestamp;
+    const Timestamp = now.Timestamp;
     const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
     const joined = Timestamp.internalBinaryWrite(id.createdAt, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Timestamp.internalBinaryWrite(id.createdAt, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -290,7 +290,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     const tagResult4 = tag.tag(5, 01307__.WireType.Varint);
   }
   if (id.editedAt) {
-    const Timestamp2 = now /* now */.Timestamp;
+    const Timestamp2 = now.Timestamp;
     const tagResult5 = tag.tag(6, 01307__.WireType.LengthDelimited);
     const joined1 = Timestamp2.internalBinaryWrite(id.editedAt, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = Timestamp2.internalBinaryWrite(id.editedAt, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -308,13 +308,13 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     const tagResult8 = tag.tag(9, 01307__.WireType.LengthDelimited);
   }
   if (id.hypothesis) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult9 = tag.tag(10, 01307__.WireType.LengthDelimited);
     const joined2 = StringValue.internalBinaryWrite(id.hypothesis, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = StringValue.internalBinaryWrite(id.hypothesis, tag.tag(10, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (id.techSpecLink) {
-    const StringValue2 = defineProperty /* defineProperty */.StringValue;
+    const StringValue2 = defineProperty.StringValue;
     const tagResult10 = tag.tag(11, 01307__.WireType.LengthDelimited);
     const joined3 = StringValue2.internalBinaryWrite(id.techSpecLink, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = StringValue2.internalBinaryWrite(id.techSpecLink, tag.tag(11, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -349,7 +349,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     do {
       let tmp47 = require;
       let tmp48 = dependencyMap;
-      let Rule = defineProperty /* defineProperty */.Rule;
+      let Rule = defineProperty.Rule;
       let tagResult15 = tag.tag(16, 01307__.WireType.LengthDelimited);
       let internalBinaryWriteResult5 = Rule.internalBinaryWrite(id.rules[num16], tagResult15.fork(), writeUnknownFields);
       let joined5 = internalBinaryWriteResult5.join();
@@ -395,7 +395,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
     const tagResult22 = tag.tag(23, 01307__.WireType.Varint);
   }
   if (id.dynamicConfigSizeLimitOverride) {
-    const Int32Value = defineProperty /* defineProperty */.Int32Value;
+    const Int32Value = defineProperty.Int32Value;
     const tagResult23 = tag.tag(46, 01307__.WireType.LengthDelimited);
     const joined7 = Int32Value.internalBinaryWrite(id.dynamicConfigSizeLimitOverride, tag.tag(46, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult6 = Int32Value.internalBinaryWrite(id.dynamicConfigSizeLimitOverride, tag.tag(46, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -448,7 +448,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (id.expectedEndDate) {
     joined10 = require;
     joined10 = dependencyMap;
-    const Timestamp3 = now /* now */.Timestamp;
+    const Timestamp3 = now.Timestamp;
     const tagResult31 = tag.tag(31, 01307__.WireType.LengthDelimited);
     joined10 = Timestamp3.internalBinaryWrite(id.expectedEndDate, tag.tag(31, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult8 = Timestamp3.internalBinaryWrite(id.expectedEndDate, tag.tag(31, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -468,7 +468,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (id.archiveAt) {
     joined10 = require;
     joined10 = dependencyMap;
-    const Timestamp4 = now /* now */.Timestamp;
+    const Timestamp4 = now.Timestamp;
     const tagResult34 = tag.tag(33, 01307__.WireType.LengthDelimited);
     joined10 = Timestamp4.internalBinaryWrite(id.archiveAt, tag.tag(33, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult9 = Timestamp4.internalBinaryWrite(id.archiveAt, tag.tag(33, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -476,7 +476,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUn
   if (id.guildExperimentVersion) {
     joined10 = require;
     joined10 = dependencyMap;
-    const Int32Value2 = defineProperty /* defineProperty */.Int32Value;
+    const Int32Value2 = defineProperty.Int32Value;
     const tagResult35 = tag.tag(35, 01307__.WireType.LengthDelimited);
     joined10 = Int32Value2.internalBinaryWrite(id.guildExperimentVersion, tag.tag(35, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult10 = Int32Value2.internalBinaryWrite(id.guildExperimentVersion, tag.tag(35, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -760,7 +760,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (6 === tmp5) {
         let tmp22 = require;
         let tmp23 = dependencyMap;
-        let StringValue = defineProperty /* defineProperty */.StringValue;
+        let StringValue = defineProperty.StringValue;
         let tmp24 = StringValue;
         let tmp25 = pos;
         let tmp26 = readUnknownField;
@@ -836,7 +836,7 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeU
     const tagResult4 = tag.tag(5, 01307__.WireType.Varint);
   }
   if (id.configuration) {
-    const StringValue = defineProperty /* defineProperty */.StringValue;
+    const StringValue = defineProperty.StringValue;
     const tagResult5 = tag.tag(6, 01307__.WireType.LengthDelimited);
     const joined1 = StringValue.internalBinaryWrite(id.configuration, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = StringValue.internalBinaryWrite(id.configuration, tag.tag(6, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);

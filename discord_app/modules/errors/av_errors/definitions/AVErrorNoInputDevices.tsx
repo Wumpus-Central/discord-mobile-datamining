@@ -28,8 +28,8 @@ export const AVErrorNoInputDevicesDefinition = {
         if (null != mediaSessionId.getMediaSessionId()) {
           if (!isGuildStageVoiceResult) {
             const obj = { type: null };
-            obj[0] = mapped /* mapped */.AVError.NO_INPUT_DEVICES;
-            const merged = Object.assign(getVoiceChannelErrorContext /* getVoiceChannelErrorContext */.getVoiceChannelErrorContext());
+            obj[0] = mapped.AVError.NO_INPUT_DEVICES;
+            const merged = Object.assign(getVoiceChannelErrorContext.getVoiceChannelErrorContext());
             const items = [obj];
             return items;
           }

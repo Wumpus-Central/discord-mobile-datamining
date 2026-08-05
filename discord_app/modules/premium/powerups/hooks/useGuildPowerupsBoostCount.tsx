@@ -72,7 +72,7 @@ export const getGuildPowerupsBoostCount = function getGuildPowerupsBoostCount(id
   if (total == null) {
     total = 0;
   }
-  let obj = experiment /* experiment */;
+  let obj = experiment;
   const gameServerEnabled = obj.getGameServerEnabled(id, "GuildPowerupsBoostCount");
   const stateForGuild = stateForGuild2.getStateForGuild(id);
   let appliedBoosts;

@@ -60,7 +60,7 @@ const audioManagerStore = new AudioManagerStore(require("dispatcher"), {
         const result = enforcing.setCommunicationModeOn(true);
         let tmp8 = enforcing !== enforcing;
         if (tmp8) {
-          tmp8 = enforcing.simpleDeviceType !== enforcing /* enforcing */.AudioDeviceType.INVALID;
+          tmp8 = enforcing.simpleDeviceType !== enforcing.AudioDeviceType.INVALID;
         }
         if (tmp8) {
           let tmp4Result = tmp4(12);

@@ -8,11 +8,11 @@ const result = require("module_38").fileFinishedImporting("modules/collectibles/
 
 export const useCurrentUser = function useCurrentUser() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   00038__(null != stateFromStores, "user has to be signed in before accessing shop");
   return stateFromStores;
 };
 export const useCurrentUserIfAvailable = function useCurrentUserIfAvailable() {
   const items = [mergeGuildAvatar];
-  return initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  return initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
 };

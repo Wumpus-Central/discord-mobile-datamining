@@ -12,12 +12,12 @@ let c3;
 let c4;
 const require = arg1;
 function HeaderWithBorder(arg0) {
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.colors.BORDER_SUBTLE);
   obj = {};
   const merged = Object.assign(arg0);
-  const obj2 = GenericHeaderTitle /* GenericHeaderTitle */;
-  obj.shouldHandleSafeArea = set /* set */.isAndroid();
+  const obj2 = GenericHeaderTitle;
+  obj.shouldHandleSafeArea = set.isAndroid();
   obj.style = { borderColor: token };
   return obj2.renderHeader(obj);
 }
@@ -94,7 +94,7 @@ export const openConversationNavigator = function openConversationNavigator(arg0
   let channelId;
   let guildId;
   ({ channelId, guildId } = arg0);
-  let obj = getRootNavigationRef /* getRootNavigationRef */;
+  let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (tmp) {
     obj = { channelId: null, guildId: null };

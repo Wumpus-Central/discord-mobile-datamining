@@ -1205,7 +1205,7 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
   if (arg2 === undefined) {
     flag = false;
   }
-  let obj = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */;
+  let obj = CONFIG_NEVER_ANIMATE;
   let str = "animate-always";
   let str2 = "animate-always";
   if (flag) {
@@ -1228,7 +1228,7 @@ function layoutTransitionFunction(originX, SUBTLE_SPRING) {
     str = "animate-never";
   }
   obj = { animations: null, initialValues: null };
-  obj[3] = CONFIG_NEVER_ANIMATE /* CONFIG_NEVER_ANIMATE */.withSpring(originX.targetHeight, SUBTLE_SPRING, str);
+  obj[3] = CONFIG_NEVER_ANIMATE.withSpring(originX.targetHeight, SUBTLE_SPRING, str);
   obj[0] = obj;
   obj[1] = { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight };
   return obj;

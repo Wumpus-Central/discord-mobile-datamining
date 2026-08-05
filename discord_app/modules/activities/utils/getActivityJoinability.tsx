@@ -53,13 +53,13 @@ export default function getActivityJoinability(arg0) {
           obj[3] = tmp2;
           obj[4] = tmp;
           const tmp45 = getEmbeddedActivityJoinability;
-          obj[5] = useIsActivitiesEnabledForCurrentPlatform /* useIsActivitiesEnabledForCurrentPlatform */.getIsActivitiesEnabledForCurrentPlatform();
+          obj[5] = useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
           obj[6] = ChannelStore;
           obj[7] = VoiceStateStore;
           obj[8] = tmp3;
           obj[9] = GuildStore;
-          const obj8 = useIsActivitiesEnabledForCurrentPlatform /* useIsActivitiesEnabledForCurrentPlatform */;
-          if (tmp45Result === getEmbeddedActivityJoinability /* getEmbeddedActivityJoinability */.EmbeddedActivityJoinability.CAN_JOIN) {
+          const obj8 = useIsActivitiesEnabledForCurrentPlatform;
+          if (tmp45Result === getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN) {
             let CANNOT_JOIN2 = obj.CAN_JOIN;
           } else {
             CANNOT_JOIN2 = obj.CANNOT_JOIN;
@@ -76,12 +76,12 @@ export default function getActivityJoinability(arg0) {
       }
       if (!isEmbedded) {
         if (isActivityJoinableOnCurrentPlatform(activity)) {
-          const obj2 = set /* set */;
+          const obj2 = set;
         }
         return obj.CANNOT_JOIN;
       }
-      const partySize = getPartySize /* getPartySize */.getPartySize(activity);
-      const obj3 = getPartySize /* getPartySize */;
+      const partySize = getPartySize.getPartySize(activity);
+      const obj3 = getPartySize;
       const tmp27 = require;
       if (obj4.hasPartySize(partySize)) {
         if (!tmp27Result.isPartyFull(partySize)) {
@@ -136,7 +136,7 @@ export default function getActivityJoinability(arg0) {
     const tmp8Result = getCurrentUserPresenceActivity(tmp4, tmp5, application_id1);
     let isInParty = null != tmp8Result;
     if (isInParty) {
-      obj = getIsInParty /* getIsInParty */;
+      obj = getIsInParty;
       isInParty = obj.getIsInParty(tmp8Result, activity);
     }
     const tmp8 = getCurrentUserPresenceActivity;

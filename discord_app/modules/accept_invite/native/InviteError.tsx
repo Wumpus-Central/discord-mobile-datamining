@@ -29,14 +29,14 @@ function InviteErrorBase(invite) {
   let require;
   ({ onPressClose: require, inviteError } = invite);
   const tmp = createCacheKey();
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
   const tmp4Result = importDefault(obj.isThemeDark(useTheme()) ? 11989 : 11990);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
   }
-  const descriptiveInviteError = getDescriptiveInviteError /* getDescriptiveInviteError */.getDescriptiveInviteError(code);
+  const descriptiveInviteError = getDescriptiveInviteError.getDescriptiveInviteError(code);
   if (invite.invite.state === constants3.BANNED) {
     const intl2 = tmp2(1236).intl;
     let stringResult = intl2.string(tmp2(1236).t["GzD/aa"]);
@@ -66,13 +66,13 @@ function InviteErrorBase(invite) {
   function handlePressClose() {
     callback();
   }
-  items[1] = callback(Text /* Text */.Text, obj);
-  items[2] = callback(Text /* Text */.Text, { style: tmp.expiredBody, variant: "text-sm/medium", color: "text-default", children: stringResult });
+  items[1] = callback(Text.Text, obj);
+  items[2] = callback(Text.Text, { style: tmp.expiredBody, variant: "text-sm/medium", color: "text-default", children: stringResult });
   const obj3 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl4 = tmp2(1236).intl;
-  obj3[2] = intl4.string(getSystemLocale /* getSystemLocale */.t.wcqOoF);
+  obj3[2] = intl4.string(getSystemLocale.t.wcqOoF);
   obj3[3] = handlePressClose;
-  items[3] = callback(Button /* Button */.Button, obj3);
+  items[3] = callback(Button.Button, obj3);
   obj1[0] = items;
   return closure_10(closure_9, obj1);
 }

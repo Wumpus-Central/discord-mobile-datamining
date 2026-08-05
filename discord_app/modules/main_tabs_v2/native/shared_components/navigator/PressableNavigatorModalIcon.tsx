@@ -25,7 +25,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj = { isModal: true, children: tmp(GenericHeaderTitle /* GenericHeaderTitle */.HeaderIconButton, obj) };
+  obj = { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) };
   obj[2] = stringResult;
-  return jsx(PressableNavigatorButtonWrapper, { isModal: true, children: tmp(GenericHeaderTitle /* GenericHeaderTitle */.HeaderIconButton, obj) });
+  return jsx(PressableNavigatorButtonWrapper, { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) });
 };

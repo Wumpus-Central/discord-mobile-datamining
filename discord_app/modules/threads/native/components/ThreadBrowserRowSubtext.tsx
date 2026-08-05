@@ -101,7 +101,7 @@ function SubstringRow(arg0) {
     obj[0] = tmp.timestamp;
     obj[1] = accessibilityLabel;
     obj[4] = ` ${timestamp}`;
-    obj[1] = callback(Text /* Text */.Text, obj);
+    obj[1] = callback(Text.Text, obj);
     let tmp6 = callback(View, obj);
   } else {
     obj = { style: null, children: null };
@@ -115,7 +115,7 @@ function SubstringRow(arg0) {
     obj2[1] = accessibilityLabel;
     const _HermesInternal = HermesInternal;
     obj2[4] = "" + timestamp;
-    items[2] = callback(Text /* Text */.Text, obj2);
+    items[2] = callback(Text.Text, obj2);
     obj[1] = items;
     tmp6 = callback2(View, obj);
   }

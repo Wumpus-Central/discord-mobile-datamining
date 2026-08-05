@@ -16,7 +16,7 @@ let c4 = result;
 const result1 = set.fileFinishedImporting("components_native/common/MessageLoadingSpinner.tsx");
 
 export default function MessageLoadingSpinner(color) {
-  let obj = map /* map */;
+  let obj = map;
   color = color.color;
   if (color == null) {
     color = obj.useToken(Themes.colors.BACKGROUND_BRAND);
@@ -30,7 +30,7 @@ export default function MessageLoadingSpinner(color) {
     obj = { animating: null };
     obj[0] = color.animate;
     const merged1 = Object.assign(color);
-    tmp8 = jsx(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, { animating: null });
+    tmp8 = jsx(ActivityIndicator.ActivityIndicator, { animating: null });
   }
   return tmp8;
 };

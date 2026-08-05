@@ -9,6 +9,6 @@ export const showSafetyToast = function showSafetyToast(arg0) {
   let text;
   ({ id, text } = arg0);
   let obj = dispatcher;
-  obj = { key: id, icon: registerAsset, IconComponent: ShieldIcon /* ShieldIcon */.ShieldIcon, iconColor: "text-brand", content: text };
+  obj = { key: id, icon: registerAsset, IconComponent: ShieldIcon.ShieldIcon, iconColor: "text-brand", content: text };
   obj.open(obj);
 };

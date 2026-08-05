@@ -22,9 +22,9 @@ let closure_5 = createCacheKey.createStyles((arg0) => {
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/typing_indicators/TypingIndicator.tsx");
 
 export const TypingIndicator = function TypingIndicator(style) {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   const tmp2 = callback(obj.isThemeLight(useTheme()));
-  obj = { style: items, children: jsx(Button /* Button */.Ellipsis, obj) };
+  obj = { style: items, children: jsx(Button.Ellipsis, obj) };
   items = [tmp2.ellipsisWrapper, style.style];
   obj = { style: items1, dotStyle: tmp2.ellipsisDot, disableScale: true };
   items1 = [tmp2.ellipsis];

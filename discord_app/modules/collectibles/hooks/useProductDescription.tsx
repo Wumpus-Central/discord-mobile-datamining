@@ -9,7 +9,7 @@ function getBundleDescription(bundledProducts) {
     flag = false;
   }
   if (flag) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    const intl5 = getSystemLocale.intl;
     bundledProducts = bundledProducts.bundledProducts;
     let length;
     if (bundledProducts != null) {
@@ -17,7 +17,7 @@ function getBundleDescription(bundledProducts) {
     }
     let obj = { num: null };
     obj[0] = length;
-    return intl5.formatToPlainString(getSystemLocale /* getSystemLocale */.t["/0Yndu"], obj);
+    return intl5.formatToPlainString(getSystemLocale.t["/0Yndu"], obj);
   } else {
     let bundledProducts1 = bundledProducts.bundledProducts;
     if (bundledProducts1 == null) {
@@ -32,7 +32,7 @@ function getBundleDescription(bundledProducts) {
       let tmp6 = require;
       let tmp7 = dependencyMap;
       let tmp8 = dependencyMap;
-      if (CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
+      if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
         let tmp13 = tmp5;
         let tmp14 = tmp7;
         let intl2 = tmp6(1236).intl;
@@ -71,16 +71,16 @@ function getBundleDescription(bundledProducts) {
     const join = items.join;
     if (flag2) {
       const replaced = join(", ").replace(/, ([^,]*)$/, " & $1");
-      const intl4 = getSystemLocale /* getSystemLocale */.intl;
+      const intl4 = getSystemLocale.intl;
       const obj2 = { joinedItems: null };
       obj2[0] = replaced;
-      return intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.Ofrqj6, obj2);
+      return intl4.formatToPlainString(getSystemLocale.t.Ofrqj6, obj2);
     } else {
       const joined = join(" & ");
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      const intl3 = getSystemLocale.intl;
       const obj3 = { joinedItems: null };
       obj3[0] = joined;
-      return intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.Ofrqj6, obj3);
+      return intl3.formatToPlainString(getSystemLocale.t.Ofrqj6, obj3);
     }
   }
 }

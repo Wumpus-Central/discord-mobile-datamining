@@ -10,8 +10,8 @@ const require = arg1;
 const result = require("upsertRelationship").fileFinishedImporting("modules/main_tabs_v2/UserSearchUtils.tsx");
 
 export const cleanString = function cleanString(toLocaleLowerCase) {
-  const obj = isNullOrEmpty /* isNullOrEmpty */;
-  return isNullOrEmpty /* isNullOrEmpty */.stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
+  const obj = isNullOrEmpty;
+  return isNullOrEmpty.stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
 };
 export const getRelationshipType = function getRelationshipType(id) {
   const relationshipType = store.getRelationshipType(id);

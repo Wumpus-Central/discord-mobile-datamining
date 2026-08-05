@@ -7,7 +7,7 @@ import { finishMFACheck } from "../../../../../discord_common/js/shared/MFA.tsx"
 
 const require = arg1;
 function isValidClipboardCode(arg0) {
-  let isMatch = arg0.length === finishMFACheck /* finishMFACheck */.TOTP_CODE_LENGTH;
+  let isMatch = arg0.length === finishMFACheck.TOTP_CODE_LENGTH;
   if (isMatch) {
     isMatch = /^\d+$/.test(arg0);
     const obj = /^\d+$/;

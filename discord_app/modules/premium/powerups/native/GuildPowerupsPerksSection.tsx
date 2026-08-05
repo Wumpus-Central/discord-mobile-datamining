@@ -23,9 +23,9 @@ export default function GuildPowerupPerksSection(arg0) {
   let obj = { children: null };
   obj = { title: null, description: null };
   const tmp = callback3();
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj[0] = intl.string(messagesProxy.TV3Vm8);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(messagesProxy.STx9hp);
   const items = [callback(GuildPowerupsSectionHeader, obj), ];
   obj = {

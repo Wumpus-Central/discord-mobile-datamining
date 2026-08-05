@@ -8,7 +8,7 @@ const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/u
 
 export const useIs2FAEnabled = function useIs2FAEnabled() {
   const items = [mergeGuildAvatar];
-  return defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return defaultAreStatesEqual.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -22,11 +22,11 @@ export const useIs2FAEnabled = function useIs2FAEnabled() {
 };
 export const useIsTOTPEnabled = function useIsTOTPEnabled() {
   const items = [fetchFingerprint];
-  return defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => fetchFingerprint.hasTOTPEnabled());
+  return defaultAreStatesEqual.useStateFromStores(items, () => fetchFingerprint.hasTOTPEnabled());
 };
 export const useIsUserVerified = function useIsUserVerified() {
   const items = [mergeGuildAvatar];
-  return defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return defaultAreStatesEqual.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {

@@ -9,7 +9,7 @@ const result = require("initialize").fileFinishedImporting("modules/guild_themes
 
 export default function useGuildThemeNuxTrigger(arg0) {
   const items = [setContent];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     key = key.getKey();
     return key === callback(paths[3]).GUILD_THEME_NUX_ACTION_SHEET_KEY;
   });

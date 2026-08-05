@@ -3,7 +3,7 @@ import { Link } from "../../../../_runtime/01481_Link.js";
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
 
 export default function useGuildsRouteGuildId() {
-  const params = Link /* Link */.useRoute().params;
+  const params = Link.useRoute().params;
   let guildId;
   if (params != null) {
     guildId = params.guildId;
@@ -11,7 +11,7 @@ export default function useGuildsRouteGuildId() {
   return guildId;
 };
 export const useGuildsRouteGuildAndChannelId = function useGuildsRouteGuildAndChannelId() {
-  const route = Link /* Link */.useRoute();
+  const route = Link.useRoute();
   let guildId;
   if (route != null) {
     const params = route.params;

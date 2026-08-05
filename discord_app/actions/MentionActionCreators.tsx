@@ -57,7 +57,7 @@ export default {
     });
   },
   deleteRecentMention(id) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     let obj = { url: closure_3.MENTIONS_MESSAGE_ID(id), retries: 2, oldFormErrors: true, rejectWithError: true };
     HTTP.del(obj);
     obj = { type: "RECENT_MENTION_DELETE", id };

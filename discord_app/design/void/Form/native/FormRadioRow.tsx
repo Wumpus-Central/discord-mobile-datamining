@@ -23,8 +23,8 @@ export default function FormRadioRow(arg0) {
   ({ leading, onPress } = arg0);
   ({ value, style } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  const context = React.useContext(context /* context */.RedesignCompatContext);
-  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
+  const context = React.useContext(context.RedesignCompatContext);
+  let obj = useCheckboxA11yNative;
   const radioA11yNative = obj.useRadioA11yNative({ selected });
   if (context) {
     obj = { icon: null, value: null, legacyCompat_selected: null, legacyCompat_onPress: null };
@@ -33,7 +33,7 @@ export default function FormRadioRow(arg0) {
     obj[2] = selected;
     obj[3] = onPress;
     const merged1 = Object.assign(merged);
-    let tmp8Result = tmp8(TableRadioRow /* TableRadioRow */.TableRadioRow, obj);
+    let tmp8Result = tmp8(TableRadioRow.TableRadioRow, obj);
   } else {
     obj = {};
     const merged2 = Object.assign(merged);

@@ -197,14 +197,14 @@ prototype["renderMuteSection"] = function renderMuteSection() {
   const channel = props.channel;
   const muted = this.state.muted;
   let MuteSettingType = dependencyMap;
-  let obj = computeChannelName /* computeChannelName */;
+  let obj = computeChannelName;
   const channelName = obj.computeChannelName(channel, mergeGuildAvatar, upsertRelationship, true);
   obj = { description: null, hasIcons: false, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["6yI+JS"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["6yI+JS"]);
+  const intl2 = getSystemLocale.intl;
   const format = intl2.format;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (muted) {
     obj = { name: null };
     obj[0] = channelName;
@@ -214,8 +214,8 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     obj1[0] = channelName;
     formatResult = format(t.byjuJm, obj1);
   }
-  obj[2] = closure_16(TableRowInner /* TableRowInner */.TableRow, { label: formatResult, onPress: this.handleToggleMuteChannel, arrow: !muted });
-  const items = [closure_16(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj), ];
+  obj[2] = closure_16(TableRowInner.TableRow, { label: formatResult, onPress: this.handleToggleMuteChannel, arrow: !muted });
+  const items = [closure_16(TableRowGroupTitle.TableRowGroup, obj), ];
   if (!muted) {
     const obj3 = { children: null };
     items[1] = null;
@@ -242,8 +242,8 @@ prototype["renderForumSettings"] = function renderForumSettings() {
   ({ channel: require, newForumThreadsCreated } = props);
   let guildMuted = this.state.muted;
   const obj = { label: null, value: null, disabled: null, onValueChange: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.Rkgjph);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.Rkgjph);
   obj[1] = newForumThreadsCreated;
   if (!guildMuted) {
     guildMuted = props.guildMuted;
@@ -252,7 +252,7 @@ prototype["renderForumSettings"] = function renderForumSettings() {
   obj[3] = function onValueChange() {
     const result = newForumThreadsCreated(outer1_2[14]).setForumThreadsCreated(closure_0, !newForumThreadsCreated);
   };
-  return closure_16(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj);
+  return closure_16(TableSwitchRow.TableSwitchRow, obj);
 };
 prototype["renderNotificationSettings"] = function renderNotificationSettings() {
   let channel;
@@ -264,13 +264,13 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
   const state = this.state;
   let muted = state.muted;
   if (null != channel.parent_id) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.wlrV1c);
+    const intl2 = getSystemLocale.intl;
+    let stringResult = intl2.string(getSystemLocale.t.wlrV1c);
     let tmp5 = require;
     let tmp7 = require;
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["1Wn2M4"]);
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t["1Wn2M4"]);
     tmp5 = require;
     tmp7 = require;
   }
@@ -398,22 +398,22 @@ prototype["render"] = function render() {
   if (null != channel) {
     if (guildMuted) {
       let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl = getSystemLocale /* getSystemLocale */.intl;
+      const intl = getSystemLocale.intl;
       obj = { mutedHook: null };
       obj[0] = function mutedHook(children) {
         return callback2(callback(4281).Text, { variant: "text-sm/medium", color: "text-feedback-critical", children }, arg1);
       };
-      obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t.O34r15, obj);
-      let tmp5 = callback2(Text /* Text */.Text, obj);
+      obj[2] = intl.format(getSystemLocale.t.O34r15, obj);
+      let tmp5 = callback2(Text.Text, obj);
     } else if (guildMessageNotifications === constants2.NO_MESSAGES) {
       obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      const intl3 = getSystemLocale.intl;
       const obj1 = { notificationHook: null };
       obj1[0] = function notificationHook(children) {
         return callback2(callback(4281).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
       };
-      obj[2] = intl3.format(getSystemLocale /* getSystemLocale */.t.nRwUIL, obj1);
-      tmp5 = callback2(Text /* Text */.Text, obj);
+      obj[2] = intl3.format(getSystemLocale.t.nRwUIL, obj1);
+      tmp5 = callback2(Text.Text, obj);
     }
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.screenContainer;
@@ -436,8 +436,8 @@ prototype["render"] = function render() {
     items[2] = tmp9Result;
     items[3] = tmp5;
     obj3[2] = items;
-    obj2[1] = closure_18(Stack /* Stack */.Stack, obj3);
-    tmp9Result = tmp9(Form /* Form */.Form, obj2);
+    obj2[1] = closure_18(Stack.Stack, obj3);
+    tmp9Result = tmp9(Form.Form, obj2);
     const tmp12 = closure_18;
   }
   return tmp9Result;

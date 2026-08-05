@@ -31,7 +31,7 @@ function Row(arg0) {
     disabled = false;
   }
   const tmp = createCacheKey();
-  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative;
   const radioA11yNative = obj.useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   obj = { style: tmp.row, accessibilityRole, accessibilityState, disabled: null, onPress: null, children: null };
@@ -42,17 +42,17 @@ function Row(arg0) {
   obj[3] = tmp7;
   obj[4] = onPress;
   obj = { size: null, source: null };
-  obj[0] = Button /* Button */.Icon.Sizes.MEDIUM;
+  obj[0] = Button.Icon.Sizes.MEDIUM;
   obj[1] = icon;
-  const items = [callback(Button /* Button */.Icon, obj), , ];
+  const items = [callback(Button.Icon, obj), , ];
   const items1 = [tmp.rowLabel, ];
   let rowLabelSelected = selected;
   if (selected) {
     rowLabelSelected = tmp.rowLabelSelected;
   }
   items1[1] = rowLabelSelected;
-  items[1] = callback(Button /* Button */.LegacyText, { style: items1, numberOfLines: 1, ellipsizeMode: "tail", children: label });
-  items[2] = callback(Button /* Button */.RadioIndicator, { style: tmp.rowIndicator, active: selected });
+  items[1] = callback(Button.LegacyText, { style: items1, numberOfLines: 1, ellipsizeMode: "tail", children: label });
+  items[2] = callback(Button.RadioIndicator, { style: tmp.rowIndicator, active: selected });
   obj[5] = items;
   return closure_6(render, obj);
 }
@@ -87,8 +87,8 @@ export default function AllChannelsSwitch(style) {
   let obj = { style: items, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
   items = [tmp.container, style.style];
   obj = { icon: registerAsset, label: null, selected: null, onPress: null, disabled: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["vs2T+B"]);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["vs2T+B"]);
   obj[2] = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
   obj[3] = function onPress() {
     return callback(outer1_4.SOME_CHANNELS_ACCESS);
@@ -98,8 +98,8 @@ export default function AllChannelsSwitch(style) {
   obj = { style: tmp.separator };
   items1[1] = callback(View, obj);
   const obj1 = { icon: registerAsset, label: null, selected: null, onPress: null, disabled: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.l4Tr7X);
+  const intl2 = getSystemLocale.intl;
+  obj1[1] = intl2.string(getSystemLocale.t.l4Tr7X);
   obj1[2] = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;
   obj1[3] = function onPress() {
     return callback(outer1_4.ALL_CHANNELS_ACCESS);

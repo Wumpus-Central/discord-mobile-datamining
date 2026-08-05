@@ -70,9 +70,9 @@ export default function GiftingBadgeLevelUpProgress(style) {
   const items3 = [closure_6(View, obj), ];
   const obj5 = { style: tmp.labels, children: null };
   const obj6 = { variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj6[2] = intl.format(messagesProxy.iIpfQe, { count: progress, threshold: tmp2 });
-  obj5[1] = callback2(Text /* Text */.Text, obj6);
+  obj5[1] = callback2(Text.Text, obj6);
   items3[1] = callback2(View, obj5);
   obj[1] = items3;
   return closure_6(View, obj);

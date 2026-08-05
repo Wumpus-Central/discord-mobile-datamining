@@ -7,12 +7,12 @@ const require = arg1;
 let result = require("useAgeVerificationRunner").fileFinishedImporting("modules/messages/native/renderer/row_data/CtaButton.tsx");
 
 export const createCtaButton = function createCtaButton(id, channel_id, arg2) {
-  let obj = CtaButtonType /* CtaButtonType */;
+  let obj = CtaButtonType;
   const ctaButtonType = obj.getCtaButtonType(id, channel_id);
-  let obj1 = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  let obj1 = useAgeVerificationRunner;
   const isAgeVerifiedResult = obj1.isAgeVerified();
-  const result = useAgeVerificationRunner /* useAgeVerificationRunner */.shouldShowTiggerPawtect();
-  if (CtaButtonType /* CtaButtonType */.CtaButtonType.MARK_AS_FALSE_POSITIVE === ctaButtonType) {
+  const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
+  if (CtaButtonType.CtaButtonType.MARK_AS_FALSE_POSITIVE === ctaButtonType) {
     obj = { text: null, textColor: null, backgroundColor: null, callback: null };
     const intl3 = tmp(1236).intl;
     obj[0] = intl3.string(tmp(1236).t["4q1Elf"]);
@@ -49,5 +49,5 @@ export const createCtaButton = function createCtaButton(id, channel_id, arg2) {
     obj1[3] = tmp(11228).CtaButtonType.CONNECT_TO_TEEN;
     return obj1;
   }
-  const obj3 = useAgeVerificationRunner /* useAgeVerificationRunner */;
+  const obj3 = useAgeVerificationRunner;
 };

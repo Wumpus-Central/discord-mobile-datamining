@@ -7,10 +7,10 @@ import { usePremiumTrialOffer } from "../hooks/usePremiumTrialOffer.android.tsx"
 let result = require("UNSAFE_isDismissibleContentDismissed").fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
 
 export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShouldShowPremiumTrialUserSettingsAvatarBadge() {
-  const premiumTrialOffer = usePremiumTrialOffer /* usePremiumTrialOffer */.usePremiumTrialOffer();
-  const obj = usePremiumTrialOffer /* usePremiumTrialOffer */;
+  const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
+  const obj = usePremiumTrialOffer;
   let tmp3 = null != premiumTrialOffer;
-  const result = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent /* DismissibleContent */.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
+  const result = UNSAFE_isDismissibleContentDismissed.useIsDismissibleContentDismissed_UNSAFE(DismissibleContent.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE);
   if (tmp3) {
     let expires_at;
     if (premiumTrialOffer != null) {
@@ -24,7 +24,7 @@ export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShou
   return tmp3;
 };
 export const usePremiumTrialOfferPremiumType = function usePremiumTrialOfferPremiumType() {
-  const premiumTrialOffer = usePremiumTrialOffer /* usePremiumTrialOffer */.usePremiumTrialOffer();
+  const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
   let sku_id;
   if (premiumTrialOffer != null) {
     const subscription_trial = premiumTrialOffer.subscription_trial;
@@ -35,7 +35,7 @@ export const usePremiumTrialOfferPremiumType = function usePremiumTrialOfferPrem
   return table[sku_id];
 };
 export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_profile_premium_upsell_card) {
-  let obj = usePremiumTrialOffer /* usePremiumTrialOffer */;
+  let obj = usePremiumTrialOffer;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
   let subscription_trial;
   if (premiumTrialOffer != null) {

@@ -39959,7 +39959,7 @@ export const checkForSimpleEmbedMessage = function checkForSimpleEmbedMessage(ar
           if (obj.isEmbedInline(first1)) {
             items = [];
           }
-          obj = getEffectiveVideoProvider /* getEffectiveVideoProvider */;
+          obj = getEffectiveVideoProvider;
         }
       } else {
         items = arg0;

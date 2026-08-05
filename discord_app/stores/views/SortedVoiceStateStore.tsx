@@ -26,7 +26,7 @@ function getVoiceStatesForGuild(guildId) {
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new version.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -358,7 +358,7 @@ prototype2["initialize"] = function initialize() {
   this.syncWith(items2, handleFavoriteChannelAppeared);
 };
 prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
-  let obj = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+  let obj = getFavoritesAwareGuildName;
   if (obj.isFavoritesGuildId(guildId)) {
     let voiceStates = (function getFavoritesVoiceStates() {
       if (null != result) {
@@ -458,7 +458,7 @@ prototype2["getVoiceStates"] = function getVoiceStates(guildId) {
       const _Set = Set;
       const set = new Set();
       obj[0] = set;
-      const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
+      const secondaryIndexMap = new version.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
         if (null != channelId) {
           const items = [channelId];
@@ -495,7 +495,7 @@ prototype2["getVoiceStatesForChannel"] = function getVoiceStatesForChannel(getGu
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new version.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -526,7 +526,7 @@ prototype2["getVoiceStatesForChannelAlt"] = function getVoiceStatesForChannelAlt
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new version.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -560,7 +560,7 @@ prototype2["countVoiceStatesForChannel"] = function countVoiceStatesForChannel(a
       const _Set = Set;
       const set = new Set();
       obj[0] = set;
-      const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
+      const secondaryIndexMap = new version.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
         if (null != channelId) {
           const items = [channelId];
@@ -594,7 +594,7 @@ prototype2["getVoiceStateVersion"] = function getVoiceStateVersion(arg0) {
     const _Set = Set;
     const set = new Set();
     obj[0] = set;
-    const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
+    const secondaryIndexMap = new version.SecondaryIndexMap((voiceState) => {
       const channelId = voiceState.voiceState.channelId;
       if (null != channelId) {
         const items = [channelId];
@@ -675,7 +675,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
         const _Set = Set;
         const set = new Set();
         obj[0] = set;
-        const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
+        const secondaryIndexMap = new version.SecondaryIndexMap((voiceState) => {
           const channelId = voiceState.voiceState.channelId;
           if (null != channelId) {
             const items = [channelId];
@@ -739,7 +739,7 @@ const sortedVoiceStateStore = new SortedVoiceStateStore(require("dispatcher"), {
       const _Set = Set;
       const set = new Set();
       obj[0] = set;
-      const secondaryIndexMap = new version /* version */.SecondaryIndexMap((voiceState) => {
+      const secondaryIndexMap = new version.SecondaryIndexMap((voiceState) => {
         const channelId = voiceState.voiceState.channelId;
         if (null != channelId) {
           const items = [channelId];

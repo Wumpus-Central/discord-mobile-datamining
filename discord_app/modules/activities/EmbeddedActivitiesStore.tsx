@@ -336,7 +336,7 @@ prototype["clear"] = function clear() {
 };
 prototype["getItems"] = function getItems(arg0) {
   const self = this;
-  const ContentClassificationEmbeddedActivityFilterExperiment = apexExperiment /* apexExperiment */.ContentClassificationEmbeddedActivityFilterExperiment;
+  const ContentClassificationEmbeddedActivityFilterExperiment = apexExperiment.ContentClassificationEmbeddedActivityFilterExperiment;
   if (ContentClassificationEmbeddedActivityFilterExperiment.getConfig({ location: "embedded_activity_store" }).enabled) {
     if ("all" !== arg0) {
       if ("visible" === arg0) {
@@ -579,7 +579,7 @@ prototype2["getLayoutModeForApp"] = function getLayoutModeForApp(id) {
 };
 prototype2["getConnectedActivityChannelId"] = function getConnectedActivityChannelId() {
   if (null != c29) {
-    return getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(c29);
+    return getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationChannelId(c29);
   }
 };
 prototype2["getConnectedActivityLocation"] = function getConnectedActivityLocation() {
@@ -704,7 +704,7 @@ const items2 = [
     shouldShowNewActivityIndicator.surfacesToShowNewActivityIndicator = new Set();
     if (shouldShowNewActivityIndicator.shouldShowNewActivityIndicator) {
       const surfacesToShowNewActivityIndicator = shouldShowNewActivityIndicator.surfacesToShowNewActivityIndicator;
-      surfacesToShowNewActivityIndicator.add(PermissionOverwriteType /* PermissionOverwriteType */.EmbeddedActivitySurfaces.VOICE_LAUNCHER);
+      surfacesToShowNewActivityIndicator.add(PermissionOverwriteType.EmbeddedActivitySurfaces.VOICE_LAUNCHER);
     }
     delete tmp2[tmp];
     const merged = Object.assign(shouldShowNewActivityIndicator);
@@ -801,7 +801,7 @@ obj = {
     let launchParams;
     ({ componentId, commandOrigin, launchParams, inviterUserId } = applicationId);
     const result = map4.set("" + applicationId.applicationId + ":" + applicationId.channelId, { isLaunching: true, componentId, inviterUserId, launchParams });
-    if (commandOrigin === ApplicationCommandSectionType /* ApplicationCommandSectionType */.CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON) {
+    if (commandOrigin === ApplicationCommandSectionType.CommandOrigin.APP_DMS_ENTRY_POINT_COMMAND_BUTTON) {
       let RESIZABLE = FocusedActivityLayouts.NO_CHAT;
     } else {
       RESIZABLE = FocusedActivityLayouts.RESIZABLE;
@@ -1010,7 +1010,7 @@ obj = {
   },
   CHANNEL_SELECT: function handleChannelSelect(arg0) {
     if (null != c29) {
-      const embeddedActivityLocationChannelId = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */.getEmbeddedActivityLocationChannelId(c29);
+      const embeddedActivityLocationChannelId = getEmbeddedActivityLocationChannelId.getEmbeddedActivityLocationChannelId(c29);
       let tmp6 = null != embeddedActivityLocationChannelId && embeddedActivityLocationChannelId !== tmp;
       if (tmp6) {
         tmp6 = PIP === ActivityPanelModes.PANEL;
@@ -1018,7 +1018,7 @@ obj = {
       if (tmp6) {
         PIP = ActivityPanelModes.PIP;
       }
-      const obj = getEmbeddedActivityLocationChannelId /* getEmbeddedActivityLocationChannelId */;
+      const obj = getEmbeddedActivityLocationChannelId;
     }
   },
   POPOUT_WINDOW_CLOSE: function handlePopoutWindowClose(key) {

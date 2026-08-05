@@ -27,13 +27,13 @@ export default function ItemDetailsActionSheet(arg0) {
   let importDefault;
   let require;
   ({ guildId: require, channelId: importDefault, id: dependencyMap } = arg0);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [ensureGuildLoaded];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getChannel(closure_1));
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items1 = [createGuildRecordFromRust];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_5.getGuild(closure_0));
-  let obj2 = initialize /* initialize */;
+  let obj2 = initialize;
   const items2 = [filterStaffGuild];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => {
     let dehydratedItem = null;
@@ -115,5 +115,5 @@ export default function ItemDetailsActionSheet(arg0) {
   }
   items3[2] = tmp16Result;
   obj2[3] = items3;
-  return closure_9(ActionSheet /* ActionSheet */.ActionSheet, obj2);
+  return closure_9(ActionSheet.ActionSheet, obj2);
 };

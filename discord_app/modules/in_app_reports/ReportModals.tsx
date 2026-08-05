@@ -102,52 +102,52 @@ let result = require("hasFlag").fileFinishedImporting("modules/in_app_reports/Re
 export const showReportModalForGuild = function showReportModalForGuild(guild) {
   let obj = { guild_id: guild.id };
   let obj1 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.ReportNames.GUILD };
+  obj = { report_type: ReportNames.ReportNames.GUILD };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames /* ReportNames */.ReportNames.GUILD, record: guild };
+  obj = { name: ReportNames.ReportNames.GUILD, record: guild };
   obj1 = { onSubmit: arg1 };
-  _showReportModal /* _showReportModal */.showReportModal(obj, {}, obj1);
+  _showReportModal.showReportModal(obj, {}, obj1);
 };
 export const showReportModalForGuildDirectoryEntry = function showReportModalForGuildDirectoryEntry(entry) {
   let obj = { channel_id: entry.channelId, guild_id: entry.guildId };
   let obj1 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.ReportNames.GUILD_DIRECTORY_ENTRY };
+  obj = { report_type: ReportNames.ReportNames.GUILD_DIRECTORY_ENTRY };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames /* ReportNames */.ReportNames.GUILD_DIRECTORY_ENTRY, record: entry };
+  obj = { name: ReportNames.ReportNames.GUILD_DIRECTORY_ENTRY, record: entry };
   obj1 = { onSubmit: arg1 };
-  _showReportModal /* _showReportModal */.showReportModal(obj, {}, obj1);
+  _showReportModal.showReportModal(obj, {}, obj1);
 };
 export const showReportModalForMessage = function showReportModalForMessage(message, mobile_media_message_preview_action_sheet) {
   let obj = { message_id: message.id, channel_id: message.channel_id };
   let obj1 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.ReportNames.MESSAGE };
+  obj = { report_type: ReportNames.ReportNames.MESSAGE };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames /* ReportNames */.ReportNames.MESSAGE, record: message };
+  obj = { name: ReportNames.ReportNames.MESSAGE, record: message };
   obj1 = { onSubmit: arg2 };
-  _showReportModal /* _showReportModal */.showReportModal(obj, {}, obj1);
+  _showReportModal.showReportModal(obj, {}, obj1);
 };
 export const showStaffTestReportModalForMessage = function showStaffTestReportModalForMessage(id, arg1, onSubmit) {
   let obj = { message_id: id.id, channel_id: id.channel_id };
   let obj1 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.ReportNames.MESSAGE };
+  obj = { report_type: ReportNames.ReportNames.MESSAGE };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames /* ReportNames */.ReportNames.MESSAGE, record: id };
+  obj = { name: ReportNames.ReportNames.MESSAGE, record: id };
   obj1 = { onSubmit };
-  _showReportModal /* _showReportModal */.showReportModal(obj, { variant: "staff" }, obj1);
+  _showReportModal.showReportModal(obj, { variant: "staff" }, obj1);
 };
 export const showStaffTestReportModalForGuild = function showStaffTestReportModalForGuild(guild_id, arg1, onSubmit) {
   let obj = { guild_id: guild_id.id };
   let obj1 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.ReportNames.GUILD };
+  obj = { report_type: ReportNames.ReportNames.GUILD };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames /* ReportNames */.ReportNames.GUILD, record: guild_id };
+  obj = { name: ReportNames.ReportNames.GUILD, record: guild_id };
   obj1 = { onSubmit };
-  _showReportModal /* _showReportModal */.showReportModal(obj, { variant: "staff" }, obj1);
+  _showReportModal.showReportModal(obj, { variant: "staff" }, obj1);
 };
 export const showReportModalForStageChannel = function showReportModalForStageChannel(channel) {
   stageInstanceByChannel = stageInstanceByChannel.getStageInstanceByChannel(channel.id);
@@ -156,16 +156,16 @@ export const showReportModalForStageChannel = function showReportModalForStageCh
     ({ id: obj[0], channel_id: obj[1], guild_id: obj[2] } = stageInstanceByChannel);
     let obj1 = collectGuildAnalyticsMetadata;
     obj = { report_type: null };
-    obj[0] = ReportNames /* ReportNames */.ReportNames.STAGE_CHANNEL;
+    obj[0] = ReportNames.ReportNames.STAGE_CHANNEL;
     const merged = Object.assign(obj);
     obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
     obj = { name: null, record: null };
-    obj[0] = ReportNames /* ReportNames */.ReportNames.STAGE_CHANNEL;
+    obj[0] = ReportNames.ReportNames.STAGE_CHANNEL;
     obj[1] = stageInstanceByChannel;
     obj1 = { onSubmit: null };
     obj1[0] = arg1;
-    _showReportModal /* _showReportModal */.showReportModal(obj, {}, obj1);
-    const obj4 = _showReportModal /* _showReportModal */;
+    _showReportModal.showReportModal(obj, {}, obj1);
+    const obj4 = _showReportModal;
   }
 };
 export const showReportModalForGuildScheduledEvent = function showReportModalForGuildScheduledEvent(closure_0) {
@@ -173,22 +173,22 @@ export const showReportModalForGuildScheduledEvent = function showReportModalFor
   const channel_id = closure_0.channel_id;
   obj[2] = channel_id;
   let obj1 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.ReportNames.GUILD_SCHEDULED_EVENT };
+  obj = { report_type: ReportNames.ReportNames.GUILD_SCHEDULED_EVENT };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
   obj = { name: tmp(7831).ReportNames.GUILD_SCHEDULED_EVENT, record: closure_0 };
   obj1 = { onSubmit: arg1 };
-  _showReportModal /* _showReportModal */.showReportModal(obj, {}, obj1);
+  _showReportModal.showReportModal(obj, {}, obj1);
 };
 export const showReportModalForFirstDM = function showReportModalForFirstDM(id, onSubmit) {
   let obj = { message_id: id.id, channel_id: id.channel_id };
   let obj1 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.ReportNames.FIRST_DM };
+  obj = { report_type: ReportNames.ReportNames.FIRST_DM };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames /* ReportNames */.ReportNames.FIRST_DM, record: id };
+  obj = { name: ReportNames.ReportNames.FIRST_DM, record: id };
   obj1 = { onSubmit, isEligibleForFeedback: false };
-  _showReportModal /* _showReportModal */.showReportModal(obj, {}, obj1);
+  _showReportModal.showReportModal(obj, {}, obj1);
 };
 export const submitHamReportForFirstDM = function submitHamReportForFirstDM(closure_1) {
   const self = this;
@@ -203,62 +203,62 @@ export const submitHamReportForFirstDM = function submitHamReportForFirstDM(clos
 export const showReportModalForUser = function showReportModalForUser(closure_0, closure_1, closure_2, ReportNames) {
   let obj = { reported_user_id: closure_0.id };
   let obj1 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.ReportNames.USER };
+  obj = { report_type: ReportNames.ReportNames.USER };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames /* ReportNames */.ReportNames.USER, record: closure_0, contextualGuildId: closure_1 };
+  obj = { name: ReportNames.ReportNames.USER, record: closure_0, contextualGuildId: closure_1 };
   obj1 = { onSubmit: closure_2, appContext: ReportNames };
-  _showReportModal /* _showReportModal */.showReportModal(obj, {}, obj1);
+  _showReportModal.showReportModal(obj, {}, obj1);
 };
 export const showStaffTestReportModalForUser = function showStaffTestReportModalForUser(id, contextualGuildId, onSubmit, appContext) {
   let obj = { reported_user_id: id.id };
   let obj1 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.ReportNames.USER };
+  obj = { report_type: ReportNames.ReportNames.USER };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames /* ReportNames */.ReportNames.USER, record: id, contextualGuildId };
+  obj = { name: ReportNames.ReportNames.USER, record: id, contextualGuildId };
   obj1 = { onSubmit, isEligibleForFeedback: false, appContext };
-  _showReportModal /* _showReportModal */.showReportModal(obj, { variant: "staff" }, obj1);
+  _showReportModal.showReportModal(obj, { variant: "staff" }, obj1);
 };
 export const showUnauthenticatedReportModalForUser = function showUnauthenticatedReportModalForUser(emailToken, onClose) {
   const tmp = new createdAt({});
   let obj = { reported_user_id: tmp.id };
   let obj1 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.UnauthenticatedReportNames.USER };
+  obj = { report_type: ReportNames.UnauthenticatedReportNames.USER };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames /* ReportNames */.UnauthenticatedReportNames.USER, record: tmp };
+  obj = { name: ReportNames.UnauthenticatedReportNames.USER, record: tmp };
   obj1 = { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken };
-  _showReportModal /* _showReportModal */.showReportModal(obj, {}, obj1);
+  _showReportModal.showReportModal(obj, {}, obj1);
 };
 export const showUnauthenticatedReportModalForGuild = function showUnauthenticatedReportModalForGuild(emailToken, onClose) {
-  let obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
+  let obj = fromGuildPropertiesWithAdditionalFields;
   const result = obj.dangerouslyConstructGuildRecordFromUntypedObject({});
   obj = { guild_id: result.id };
   let obj2 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.UnauthenticatedReportNames.GUILD };
+  obj = { report_type: ReportNames.UnauthenticatedReportNames.GUILD };
   const merged = Object.assign(obj);
   obj2.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  const obj5 = _showReportModal /* _showReportModal */;
+  const obj5 = _showReportModal;
   obj2 = { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken };
-  obj5.showReportModal({ name: ReportNames /* ReportNames */.UnauthenticatedReportNames.GUILD, record: result }, {}, obj2);
+  obj5.showReportModal({ name: ReportNames.UnauthenticatedReportNames.GUILD, record: result }, {}, obj2);
 };
 export const showUnauthenticatedReportModalForTida = function showUnauthenticatedReportModalForTida(emailToken, onClose) {
   let obj = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.UnauthenticatedReportNames.MEDIA_TAKEDOWN };
+  obj = { report_type: ReportNames.UnauthenticatedReportNames.MEDIA_TAKEDOWN };
   const merged = Object.assign({});
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames /* ReportNames */.UnauthenticatedReportNames.MEDIA_TAKEDOWN };
-  _showReportModal /* _showReportModal */.showReportModal(obj, {}, { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken });
+  obj = { name: ReportNames.UnauthenticatedReportNames.MEDIA_TAKEDOWN };
+  _showReportModal.showReportModal(obj, {}, { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken });
 };
 export const showUnauthenticatedReportModalForMessage = function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   let obj = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.UnauthenticatedReportNames.MESSAGE };
+  obj = { report_type: ReportNames.UnauthenticatedReportNames.MESSAGE };
   const merged = Object.assign({ message_id: "body", channel_id: "useStateFromStores" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
   const tmp = new hasFlag({});
-  obj = { name: ReportNames /* ReportNames */.UnauthenticatedReportNames.MESSAGE, record: tmp };
-  _showReportModal /* _showReportModal */.showReportModal(obj, {}, { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken });
+  obj = { name: ReportNames.UnauthenticatedReportNames.MESSAGE, record: tmp };
+  _showReportModal.showReportModal(obj, {}, { onClose, isEligibleForFeedback: false, isAuthenticated: false, emailToken });
 };
 export const submitReportForInappropriateConversationSafetyAlert = function submitReportForInappropriateConversationSafetyAlert(outer1_5, arg1, arg2) {
   const self = this;
@@ -273,16 +273,16 @@ export const submitReportForInappropriateConversationSafetyAlert = function subm
 export const showReportModalForInappropriateConversationSafetyAlert = function showReportModalForInappropriateConversationSafetyAlert(createdAt) {
   let obj = { message_id: createdAt.id, channel_id: createdAt.channel_id };
   let obj1 = collectGuildAnalyticsMetadata;
-  obj = { report_type: ReportNames /* ReportNames */.ReportNames.MESSAGE };
+  obj = { report_type: ReportNames.ReportNames.MESSAGE };
   const merged = Object.assign(obj);
   obj1.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
-  obj = { name: ReportNames /* ReportNames */.ReportNames.MESSAGE, record: createdAt };
+  obj = { name: ReportNames.ReportNames.MESSAGE, record: createdAt };
   obj1 = { onSubmit: arg1 };
-  _showReportModal /* _showReportModal */.showReportModal(obj, { variant: "safety_alerts_v1" }, obj1);
+  _showReportModal.showReportModal(obj, { variant: "safety_alerts_v1" }, obj1);
 };
 export const showReportModalForWidget = function showReportModalForWidget(closure_0, closure_1) {
-  let obj = _showReportModal /* _showReportModal */;
-  obj = { name: ReportNames /* ReportNames */.ReportNames.WIDGET, widget_id: null, user_id: null, widget: null };
+  let obj = _showReportModal;
+  obj = { name: ReportNames.ReportNames.WIDGET, widget_id: null, user_id: null, widget: null };
   let str = closure_1.id;
   if (str == null) {
     str = "";
@@ -308,14 +308,14 @@ export const showReportModalForApp = function showReportModalForApp(arg0) {
   obj = { application_id: application.id, guild_id: contextualGuildId, channel_id: contextualChannelId };
   const obj4 = collectGuildAnalyticsMetadata;
   const merged = Object.assign(obj);
-  obj4.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: ReportNames /* ReportNames */.ReportNames.APPLICATION });
-  const obj1 = { report_type: ReportNames /* ReportNames */.ReportNames.APPLICATION };
-  const obj6 = _showReportModal /* _showReportModal */;
-  obj6.showReportModal({ name: ReportNames /* ReportNames */.ReportNames.APPLICATION, record: application, contextualGuildId, contextualChannelId, entrypoint }, {}, { onSubmit, appContext });
+  obj4.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: ReportNames.ReportNames.APPLICATION });
+  const obj1 = { report_type: ReportNames.ReportNames.APPLICATION };
+  const obj6 = _showReportModal;
+  obj6.showReportModal({ name: ReportNames.ReportNames.APPLICATION, record: application, contextualGuildId, contextualChannelId, entrypoint }, {}, { onSubmit, appContext });
 };
 export const showReportToModMessageModal = function showReportToModMessageModal(message) {
-  let obj = _showReportModal /* _showReportModal */;
-  obj = { name: ReportNames /* ReportNames */.ModeratorReportNames.MESSAGE, record: message };
+  let obj = _showReportModal;
+  obj = { name: ReportNames.ModeratorReportNames.MESSAGE, record: message };
   obj = { onSubmit: arg1, isEligibleForFeedback: false };
   obj.showReportModal(obj, {}, obj);
 };

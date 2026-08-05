@@ -9,7 +9,7 @@ let result = require("explicitContentFromProto").fileFinishedImporting("modules/
 export default function getVolumeForSound(arg0, USER) {
   let tmp = USER;
   if (USER === undefined) {
-    const SoundboardSettings = explicitContentFromProto /* explicitContentFromProto */.SoundboardSettings;
+    const SoundboardSettings = explicitContentFromProto.SoundboardSettings;
     const setting = SoundboardSettings.getSetting();
     let num;
     if (setting != null) {
@@ -20,7 +20,7 @@ export default function getVolumeForSound(arg0, USER) {
     }
     tmp = num;
   }
-  const result = perceptualToAmplitude /* perceptualToAmplitude */.amplitudeToPerceptual(tmp) / 100;
+  const result = perceptualToAmplitude.amplitudeToPerceptual(tmp) / 100;
   return Math.min(arg0 * result * Math.min(outputVolume.getOutputVolume() / 100, 1), 1);
 };
 export const getPerceptualSoundboardVolume = function getPerceptualSoundboardVolume(USER) {
@@ -28,5 +28,5 @@ export const getPerceptualSoundboardVolume = function getPerceptualSoundboardVol
   if (USER == null) {
     num = 100;
   }
-  return perceptualToAmplitude /* perceptualToAmplitude */.amplitudeToPerceptual(num) / 100;
+  return perceptualToAmplitude.amplitudeToPerceptual(num) / 100;
 };

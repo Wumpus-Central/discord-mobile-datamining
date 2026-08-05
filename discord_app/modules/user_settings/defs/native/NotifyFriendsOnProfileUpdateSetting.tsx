@@ -5,11 +5,11 @@ import { messagesProxy } from "../../../notifications/profile_updates/sender/Not
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.F3llsQ);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy["6goWcz"]);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
@@ -18,11 +18,11 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.F3llsQ);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy["6goWcz"]);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,

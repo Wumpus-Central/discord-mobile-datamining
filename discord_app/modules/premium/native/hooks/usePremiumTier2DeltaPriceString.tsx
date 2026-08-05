@@ -11,7 +11,7 @@ function getViewerProductId(subscription) {
     return null;
   } else {
     try {
-      return getPremiumBundledItemsFromProductId /* getPremiumBundledItemsFromProductId */.getProductIdFromSubscription(subscription, false);
+      return getPremiumBundledItemsFromProductId.getProductIdFromSubscription(subscription, false);
     } catch (err) {
       return tmp;
     }

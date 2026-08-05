@@ -6,10 +6,10 @@ import { getAccessibilityLabelFormatter } from "../ThreadUtils.tsx";
 let result = require("getRootNavigationRef").fileFinishedImporting("modules/threads/native/showThreadBrowserModal.tsx");
 
 export default function showThreadBrowserModal(id) {
-  let obj = getAccessibilityLabelFormatter /* getAccessibilityLabelFormatter */;
+  let obj = getAccessibilityLabelFormatter;
   const result = obj.trackThreadBrowserOpened();
-  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
-  const obj2 = getRootNavigationRef /* getRootNavigationRef */;
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+  const obj2 = getRootNavigationRef;
   if (tmp2) {
     obj = { channelId: null, initialRouteName: null };
     obj[0] = id.id;

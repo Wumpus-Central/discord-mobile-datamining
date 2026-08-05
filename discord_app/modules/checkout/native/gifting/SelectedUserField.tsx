@@ -59,7 +59,7 @@ export default function SelectedUserField(onPress) {
     const stringResult1 = intl.string(tmp4(1236).t.xFn72s);
   }
   obj[3] = combined;
-  const items1 = [closure_5(MagnifyingGlassIcon /* MagnifyingGlassIcon */.MagnifyingGlassIcon, { style: tmp.searchIcon, size: "xs", color: "interactive-text-default" }), ];
+  const items1 = [closure_5(MagnifyingGlassIcon.MagnifyingGlassIcon, { style: tmp.searchIcon, size: "xs", color: "interactive-text-default" }), ];
   if (null != selectedUser) {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.userPill;
@@ -101,6 +101,6 @@ export default function SelectedUserField(onPress) {
   }
   items3[1] = tmp2Result;
   obj[1] = items3;
-  obj[1] = closure_5(useInputStyles /* useInputStyles */.InputFieldContainer, { children: closure_6(closure_4, obj) });
+  obj[1] = closure_5(useInputStyles.InputFieldContainer, { children: closure_6(closure_4, obj) });
   return closure_5(closure_4, obj);
 };

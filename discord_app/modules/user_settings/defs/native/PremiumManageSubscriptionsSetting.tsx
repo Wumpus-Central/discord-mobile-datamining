@@ -8,8 +8,8 @@ import { PremiumPlanSelectSettingScreen } from "../../premium/native/PremiumMana
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["z5YcJ+"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["z5YcJ+"]);
   },
   parent: null,
   IconComponent: require("SubscriptionIcon").SubscriptionIcon,
@@ -25,8 +25,8 @@ createToggle = {
     }, []);
   },
   usePredicate: function useShowManageSubscriptionsSetting() {
-    let hasPremiumSubscriptionToDisplay = getPremiumPlanItem /* getPremiumPlanItem */.useHasPremiumSubscriptionToDisplay();
-    const obj = getPremiumPlanItem /* getPremiumPlanItem */;
+    let hasPremiumSubscriptionToDisplay = getPremiumPlanItem.useHasPremiumSubscriptionToDisplay();
+    const obj = getPremiumPlanItem;
     if (hasPremiumSubscriptionToDisplay) {
       hasPremiumSubscriptionToDisplay = obj2.useMobileNitroManageSubscriptionsSettingsExperiment({ location: "useShowManageSubscriptionsSetting" });
     }
@@ -37,7 +37,7 @@ createToggle = {
 createToggle = {
   route: require("ME").UserSettingsSections.PREMIUM_MANAGE_PLAN,
   getComponent() {
-    return PremiumPlanSelectSettingScreen /* PremiumPlanSelectSettingScreen */.default;
+    return PremiumPlanSelectSettingScreen.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

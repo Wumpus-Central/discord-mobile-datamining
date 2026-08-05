@@ -107,7 +107,7 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
   obj[16] = allowed_countries;
   let BLOCKLIST = id.country_list_mode;
   if (BLOCKLIST == null) {
-    BLOCKLIST = CountryListMode /* CountryListMode */.CountryListMode.BLOCKLIST;
+    BLOCKLIST = CountryListMode.CountryListMode.BLOCKLIST;
   }
   obj[17] = BLOCKLIST;
   ({ promotion_type: obj[18], partner_id } = id);
@@ -167,13 +167,13 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
 };
 Object.defineProperty(prototype, "isBogo", {
   get: function isBogo() {
-    return this.promotionType === CountryListMode /* CountryListMode */.PromotionTypes.BOGO;
+    return this.promotionType === CountryListMode.PromotionTypes.BOGO;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "isMarketingMoment", {
   get: function isMarketingMoment() {
-    return this.promotionType === CountryListMode /* CountryListMode */.PromotionTypes.MARKETING_MOMENT;
+    return this.promotionType === CountryListMode.PromotionTypes.MARKETING_MOMENT;
   },
   set: undefined
 });
@@ -184,11 +184,11 @@ Object.defineProperty(prototype, "hasBogoReward", {
   set: undefined
 });
 prototype["hasFlag"] = function hasFlag(arg0) {
-  return hasFlag /* hasFlag */.hasFlag(this.flags, arg0);
+  return hasFlag.hasFlag(this.flags, arg0);
 };
 prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
   const self = this;
-  if (this.countryListMode === CountryListMode /* CountryListMode */.CountryListMode.ALLOWLIST) {
+  if (this.countryListMode === CountryListMode.CountryListMode.ALLOWLIST) {
     const allowedCountries = self.allowedCountries;
     return !allowedCountries.includes(arg0);
   } else {

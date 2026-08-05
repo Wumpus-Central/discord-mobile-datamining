@@ -9,10 +9,10 @@ import { setFontSize } from "../../../a11y/AccessibilityActionCreators.tsx";
 const require = arg1;
 function useRoleColorSettingValue() {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  return initialize /* initialize */.useStateFromStores(items, () => roleStyle.roleStyle);
+  return initialize.useStateFromStores(items, () => roleStyle.roleStyle);
 }
 function onRoleColorSettingValueChange(roleStyle) {
-  setFontSize /* setFontSize */.setRoleStyle(roleStyle);
+  setFontSize.setRoleStyle(roleStyle);
 }
 function useRoleColorSettingOptions() {
   return React.useMemo(() => {
@@ -33,8 +33,8 @@ function useRoleColorSettingOptions() {
 }
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.uSOPWm);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.uSOPWm);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: useRoleColorSettingValue,

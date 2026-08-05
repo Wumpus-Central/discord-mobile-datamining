@@ -8,24 +8,24 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 const items = [
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["EgWTY+"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["EgWTY+"]);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.umBn5f);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.umBn5f);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.dG1wD1);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.dG1wD1);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.SesI4S);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.SesI4S);
   },
   () => {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.RnMLvl);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.RnMLvl);
   }
 ];
 createCacheKey = { icon: null };

@@ -44,7 +44,7 @@ export default function PublishModal(channelId) {
     obj[0] = tmp.alertContainer;
     obj = { style: null, children: null };
     obj[0] = tmp.alertBodyText;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     if (tmp7) {
       let num2;
       if (first != null) {
@@ -61,7 +61,7 @@ export default function PublishModal(channelId) {
       obj[1] = intl.string(tmp11(1236).t["8FpqOs"]);
       tmp12 = obj;
     }
-    obj[1] = jsx(Button /* Button */.LegacyText, tmp12);
+    obj[1] = jsx(Button.LegacyText, tmp12);
     return <closure_4 style={null}>{null}</closure_4>;
   }
 };

@@ -352,7 +352,7 @@ function FamilyCenterPrereqLoading(arg0) {
   let require;
   ({ userId: require, linkCode: importDefault } = arg0);
   let dependencyMap;
-  let obj = useNavigation /* useNavigation */;
+  let obj = useNavigation;
   dependencyMap = obj.useNavigation();
   const effect = React.useEffect(() => {
     function _runPrereq() {
@@ -447,9 +447,9 @@ function FamilyCenterPrereqLoading(arg0) {
   }, []);
   obj = { children: null };
   obj = { style: callback5().container, children: null };
-  obj[1] = callback(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, {});
+  obj[1] = callback(ActivityIndicator.ActivityIndicator, {});
   obj[0] = callback(closure_6, obj);
-  return callback(ModalScreen /* ModalScreen */.ModalScreen, obj);
+  return callback(ModalScreen.ModalScreen, obj);
 }
 function FamilyCenterPrereqScreen(primaryButton) {
   let description;
@@ -460,14 +460,14 @@ function FamilyCenterPrereqScreen(primaryButton) {
   let obj = { children: null };
   obj = { style: tmp.content, children: null };
   obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: title };
-  const items = [callback(Text /* Text */.Text, obj), callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: description })];
+  const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: description })];
   obj[1] = items;
   const items1 = [callback2(closure_6, obj), ];
   const obj2 = { children: null };
-  obj2[0] = callback(Button /* Button */.Button, { text: primaryButton.text, onPress: primaryButton.onPress });
-  items1[1] = callback(ModalFooter /* ModalFooter */.ModalFooter, obj2);
+  obj2[0] = callback(Button.Button, { text: primaryButton.text, onPress: primaryButton.onPress });
+  items1[1] = callback(ModalFooter.ModalFooter, obj2);
   obj[0] = items1;
-  return callback2(ModalScreen /* ModalScreen */.ModalScreen, obj);
+  return callback2(ModalScreen.ModalScreen, obj);
 }
 function FamilyCenterConfirmAgeScreen(teenIdentity) {
   teenIdentity = teenIdentity.teenIdentity;
@@ -603,13 +603,13 @@ function FamilyCenterVerifyingScreen() {
 }
 function FamilyCenterPrereqInvalidCodeScreen() {
   let obj = { title: null, description: null, primaryButton: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj[0] = intl.string(messagesProxy.ewSb6o);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(messagesProxy.jcUN2F);
   obj = { text: null, onPress: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl3.string(getSystemLocale /* getSystemLocale */.t.WAI6xu);
+  const intl3 = getSystemLocale.intl;
+  obj[0] = intl3.string(getSystemLocale.t.WAI6xu);
   obj[1] = ModalActionCreators.pop;
   obj[2] = obj;
   return callback(FamilyCenterPrereqScreen, obj);

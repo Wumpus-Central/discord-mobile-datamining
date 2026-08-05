@@ -26,7 +26,7 @@ prototype["initialize"] = function initialize() {
 prototype["getStartTime"] = function getStartTime(guild_id) {
   if (null != guild_id) {
     if (null != guild_id.guild_id) {
-      if (guild_id.type === set /* set */.ChannelTypes.GUILD_VOICE) {
+      if (guild_id.type === set.ChannelTypes.GUILD_VOICE) {
         let tmp5;
         if (dependencyMap[guild_id.guild_id] != null) {
           tmp5 = tmp4[guild_id.id];

@@ -6,7 +6,7 @@ import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionShe
 
 const require = arg1;
 function onPress() {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(14107, dependencyMap.paths), "AddConnection");
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14107, dependencyMap.paths), "AddConnection");
 }
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {

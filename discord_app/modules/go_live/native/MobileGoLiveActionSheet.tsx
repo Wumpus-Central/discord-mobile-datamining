@@ -325,8 +325,8 @@ export default memoResult;
 export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(closure_1) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { impressionName: null, impressionProperties: null };
-  obj[0] = encodeProperties /* encodeProperties */.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
+  obj[0] = encodeProperties.ImpressionNames.MOBILE_GO_LIVE_ACTION_SHEET;
   obj = { location_stack: closure_1 };
   obj[1] = obj;
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(10720, dependencyMap.paths), MobileGoLiveActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(10720, dependencyMap.paths), MobileGoLiveActionSheet, obj);
 };

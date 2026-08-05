@@ -7,18 +7,18 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["9CSZJm"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["9CSZJm"]);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue: function useAndroidMobileOverlaySettingValue() {
     const items = [getUserAgnosticState];
-    return initialize /* initialize */.useStateFromStores(items, () => enabled.getEnabled());
+    return initialize.useStateFromStores(items, () => enabled.getEnabled());
   },
   onValueChange: require("dispatcher").setEnabled,
   useDescription: function useAndroidMobileOverlaySettingDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Wfoivk);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Wfoivk);
   },
   usePredicate: require("getUserAgnosticState").isMobileOverlaySupported
 };

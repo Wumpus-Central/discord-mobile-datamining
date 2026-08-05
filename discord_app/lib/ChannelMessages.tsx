@@ -41,7 +41,7 @@ function mergeMessage(self, id) {
     }
     return messageRecord;
   }
-  messageRecord = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(id);
+  messageRecord = createMinimalMessageRecord.createMessageRecord(id);
 }
 ({ MAX_MESSAGES_PER_CHANNEL: c4, MAX_LOADED_MESSAGES: c5, MAX_MESSAGE_CACHE_SIZE: closure_6, TRUNCATED_MESSAGE_VIEW_SIZE: error, MessageStates: metroImportAll } = ME);
 let c9 = new require("apply")("ChannelMessages");
@@ -275,7 +275,7 @@ ChannelMessages["getOrCreate"] = function getOrCreate(channelId) {
       HermesBuiltin.throwTypeError();
     }
     let obj = Object.create(tmp.prototype);
-    obj[2] = GuildThemeSourcePreference /* GuildThemeSourcePreference */.JumpType.ANIMATED;
+    obj[2] = GuildThemeSourcePreference.JumpType.ANIMATED;
     obj[21] = [];
     if (typeof MessageCache !== "function") {
       HermesBuiltin.throwTypeError();
@@ -327,7 +327,7 @@ prototype2["mutate"] = function mutate(obj, flag) {
     HermesBuiltin.throwTypeError();
   }
   obj = Object.create(ChannelMessages.prototype);
-  obj[2] = GuildThemeSourcePreference /* GuildThemeSourcePreference */.JumpType.ANIMATED;
+  obj[2] = GuildThemeSourcePreference.JumpType.ANIMATED;
   obj[21] = [];
   if (typeof MessageCache !== "function") {
     HermesBuiltin.throwTypeError();
@@ -1201,7 +1201,7 @@ prototype2["receivePushNotification"] = function receivePushNotification(closure
   } else if (null != self.get(closure_1.id, true)) {
     return self;
   } else {
-    let obj = isIOSPushNotificationRawPayloadFixExperimentEnabled /* isIOSPushNotificationRawPayloadFixExperimentEnabled */;
+    let obj = isIOSPushNotificationRawPayloadFixExperimentEnabled;
     const result = obj.isIOSPushNotificationRawPayloadFixExperimentEnabled();
     let tmp5 = !result;
     if (result) {
@@ -1325,7 +1325,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = GuildThemeSourcePreference /* GuildThemeSourcePreference */.JumpType.ANIMATED;
+        jumpType = GuildThemeSourcePreference.JumpType.ANIMATED;
       }
       obj = { ready: true, loadingMore: false, jumpType: null, jumpFlash: null, jumped: null, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpSequenceId: null, jumpReturnTargetId: null, onJumpComplete: null, hasMoreBefore: null, hasMoreAfter: null, cached: null, hasFetched: null, error: false, initialScrollSequenceId: null, suppressRowAnimationSequenceId: null };
       obj[2] = jumpType;

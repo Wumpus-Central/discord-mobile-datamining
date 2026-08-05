@@ -9,7 +9,7 @@ const result = require("ME").fileFinishedImporting("modules/auth/LoginHandoffSou
 export const LoginHandoffSource = obj;
 export const getLoginHandoffSourceFromRedirectTo = function getLoginHandoffSourceFromRedirectTo(closure_0) {
   const str = decodeURIComponent(closure_0);
-  const obj = ME /* ME */;
+  const obj = ME;
   const tryParseChannelPathResult = obj.tryParseChannelPath(str);
   if (null != tryParseChannelPathResult) {
     if (tryParseChannelPathResult.channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {

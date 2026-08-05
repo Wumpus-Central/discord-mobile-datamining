@@ -6,7 +6,7 @@ const require = arg1;
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
 
 export default function useGetGuildPowerupBannerImage(animatedImageUrl) {
-  initialize /* initialize */;
+  initialize;
   [][0] = maybeApplyNoTextColorForLightCustomTheme;
   if (null != animatedImageUrl) {
     if (!tmp2) {

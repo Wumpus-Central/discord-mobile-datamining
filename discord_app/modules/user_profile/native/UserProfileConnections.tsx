@@ -39,7 +39,7 @@ function VerifiedIcon(arg0) {
   }
   const tmp = callback3();
   let obj = { size: REFRESH_SMALL_16, style: tmp.verifiedIcon };
-  let obj1 = map /* map */;
+  let obj1 = map;
   let PLATFORM_TWITTER = obj1.useToken(Themes.colors.MOBILE_TEXT_HEADING_PRIMARY, theme);
   if (isTwitterVerifiedAccount) {
     PLATFORM_TWITTER = tmp4(712).unsafe_rawColors.PLATFORM_TWITTER;
@@ -633,7 +633,7 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
   const tmp = callback3();
   const tmp4 = useIsMobileVisualRefreshExperimentEnabled("UserProfileConnections");
   const arr = useUserProfileApplicationRoleConnections(userId);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [initialize];
   if (!obj.useStateFromStores(items, () => obj.hidePersonalInformation)) {
     if (0 !== arr.length) {

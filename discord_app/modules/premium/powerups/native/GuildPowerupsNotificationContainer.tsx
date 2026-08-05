@@ -10,7 +10,7 @@ import { useGuildPowerupTier3OverrideConfig } from "../hooks/useGuildPowerupTier
 let c4;
 let c5;
 function Tier3OverrideNotice(children) {
-  return callback(View, { style: callback2().staffContainer, children: callback(Text /* Text */.Text, { variant: "text-sm/medium", children: children.text }) });
+  return callback(View, { style: callback2().staffContainer, children: callback(Text.Text, { variant: "text-sm/medium", children: children.text }) });
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { container: null, staffContainer: null };
@@ -29,9 +29,9 @@ export default function GuildPowerupsNotificationContainer(guildId) {
     let obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { variant: "eyebrow", color: "text-subtle", children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj[2] = intl.string(tmp2(2317)["3FRirU"]);
-    const items = [callback(Text /* Text */.Text, obj), , ];
+    const items = [callback(Text.Text, obj), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
       obj = { text: null };

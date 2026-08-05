@@ -43,10 +43,10 @@ const obj3 = {
 items[2] = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !useAgeVerificationRunner /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = useAgeVerificationRunner /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !useAgeVerificationRunner.isAgeVerified();
+      const tmpResult = useAgeVerificationRunner;
     }
     return isFeatureAgeGatedResult;
   },
@@ -56,10 +56,10 @@ obj1[0] = items;
 const obj4 = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !useAgeVerificationRunner /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = useAgeVerificationRunner /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !useAgeVerificationRunner.isAgeVerified();
+      const tmpResult = useAgeVerificationRunner;
     }
     return isFeatureAgeGatedResult;
   },
@@ -70,10 +70,10 @@ const obj5 = { order: 100, predicate: require("getEmptyActivityFormatter").isPar
 items1[1] = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !useAgeVerificationRunner /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = useAgeVerificationRunner /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !useAgeVerificationRunner.isAgeVerified();
+      const tmpResult = useAgeVerificationRunner;
     }
     return isFeatureAgeGatedResult;
   },
@@ -83,10 +83,10 @@ obj1[1] = items1;
 const obj6 = {
   order: 200,
   predicate() {
-    let isFeatureAgeGatedResult = isFeatureAgeGated /* isFeatureAgeGated */.isFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+    let isFeatureAgeGatedResult = isFeatureAgeGated.isFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.REACTIVE_CHECK);
     if (isFeatureAgeGatedResult) {
-      isFeatureAgeGatedResult = !useAgeVerificationRunner /* useAgeVerificationRunner */.isAgeVerified();
-      const tmpResult = useAgeVerificationRunner /* useAgeVerificationRunner */;
+      isFeatureAgeGatedResult = !useAgeVerificationRunner.isAgeVerified();
+      const tmpResult = useAgeVerificationRunner;
     }
     return isFeatureAgeGatedResult;
   },

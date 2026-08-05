@@ -6,7 +6,7 @@ import { isAgeRestrictedContentClassification } from "../content_classification/
 let result = require("getSystemLocale").fileFinishedImporting("modules/oauth2/Utils.tsx");
 
 export const getApplicationDetailsText = function getApplicationDetailsText(application) {
-  let obj = useIsSocialLayerParentApplication /* useIsSocialLayerParentApplication */;
+  let obj = useIsSocialLayerParentApplication;
   const isSocialLayerParentApplication = obj.getIsSocialLayerParentApplication(application);
   if (null != application.privacy_policy_url) {
     if (null != application.terms_of_service_url) {
@@ -44,8 +44,8 @@ export const getApplicationDetailsText = function getApplicationDetailsText(appl
 export const isContentClassificationRestricted = function isContentClassificationRestricted(content_classification, closure_32) {
   let result = null != content_classification;
   if (result) {
-    result = isAgeRestrictedContentClassification /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(content_classification);
-    const obj = isAgeRestrictedContentClassification /* isAgeRestrictedContentClassification */;
+    result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(content_classification);
+    const obj = isAgeRestrictedContentClassification;
   }
   if (result) {
     result = false === closure_32;

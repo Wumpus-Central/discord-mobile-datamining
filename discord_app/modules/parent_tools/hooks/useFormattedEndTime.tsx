@@ -7,7 +7,7 @@ const result = require("initialize").fileFinishedImporting("modules/parent_tools
 
 export default function useFormattedEndTime() {
   const items = [mergeGuildAvatar];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nextEndTime;
     if (currentUser != null) {

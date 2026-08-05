@@ -15,7 +15,7 @@ export default function getChatInputPositionStyle() {
     if (obj2.isIOS()) {
       tmp = obj;
     }
-    obj2 = set /* set */;
+    obj2 = set;
   }
   return tmp;
 };

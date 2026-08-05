@@ -15,7 +15,7 @@ const memoResult = require("noop").memo((arg0) => {
   let trailing;
   ({ title, trailing } = arg0);
   const obj = { style: callback3().section, children: null };
-  const items = [callback(Text /* Text */.Text, { maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: title }), trailing];
+  const items = [callback(Text.Text, { maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: title }), trailing];
   obj[1] = items;
   return callback2(View, obj);
 });

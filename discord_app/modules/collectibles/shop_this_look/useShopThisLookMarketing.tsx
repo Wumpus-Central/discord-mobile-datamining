@@ -8,11 +8,11 @@ const require = arg1;
 const result = require("useSelectedDismissibleContent").fileFinishedImporting("modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx");
 
 export const useShopThisLookMarketing = function useShopThisLookMarketing(id, guildId, isShopThisLookMobileEnabled) {
-  let obj = useEquippedCollectibleSkuIds /* useEquippedCollectibleSkuIds */;
-  useSelectedDismissibleContent /* useSelectedDismissibleContent */;
+  let obj = useEquippedCollectibleSkuIds;
+  useSelectedDismissibleContent;
   if (isShopThisLookMobileEnabled) {
     if (tmp3) {
-      const items = [DismissibleContent /* DismissibleContent */.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
+      const items = [DismissibleContent.DismissibleContent.SHOP_THIS_LOOK_WEB_MARKETING];
     }
     const tmp8 = callback(tmp5([], undefined, true), 2);
     obj = { isVisible: null, markAsDismissed: null };

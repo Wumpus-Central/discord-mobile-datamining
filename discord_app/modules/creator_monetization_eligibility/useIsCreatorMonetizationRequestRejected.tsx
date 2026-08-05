@@ -33,36 +33,36 @@ export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
         const rounded = Math.round((parsed - timestamp) / 60000);
         let num2 = 43200;
         if (rounded >= 43200) {
-          const intl5 = getSystemLocale /* getSystemLocale */.intl;
+          const intl5 = getSystemLocale.intl;
           obj = { months: null };
           const _Math5 = roundResult.Math;
           num2 = rounded / num2;
           roundResult = _Math5.round(num2);
           obj[0] = roundResult;
-          let formatToPlainStringResult = intl5.formatToPlainString(getSystemLocale /* getSystemLocale */.t.kridzK, obj);
+          let formatToPlainStringResult = intl5.formatToPlainString(getSystemLocale.t.kridzK, obj);
         } else if (rounded >= 10080) {
-          const intl4 = getSystemLocale /* getSystemLocale */.intl;
+          const intl4 = getSystemLocale.intl;
           obj = { weeks: null };
           const _Math4 = Math;
           obj[0] = Math.round(rounded / 10080);
-          formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.EmoBD2, obj);
+          formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale.t.EmoBD2, obj);
         } else if (rounded >= 1440) {
-          const intl3 = getSystemLocale /* getSystemLocale */.intl;
+          const intl3 = getSystemLocale.intl;
           const obj1 = { days: null };
           const _Math3 = Math;
           obj1[0] = Math.round(rounded / 1440);
-          formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t["k2UNz+"], obj1);
+          formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t["k2UNz+"], obj1);
         } else if (rounded >= 60) {
-          const intl2 = getSystemLocale /* getSystemLocale */.intl;
+          const intl2 = getSystemLocale.intl;
           const obj2 = { hours: null };
           const _Math2 = Math;
           obj2[0] = Math.round(rounded / 60);
-          formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.xCjYxK, obj2);
+          formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t.xCjYxK, obj2);
         } else {
-          const intl = getSystemLocale /* getSystemLocale */.intl;
+          const intl = getSystemLocale.intl;
           const obj3 = { minutes: null };
           obj3[0] = rounded;
-          formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.iXLF9W, obj3);
+          formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.iXLF9W, obj3);
         }
       }
     }

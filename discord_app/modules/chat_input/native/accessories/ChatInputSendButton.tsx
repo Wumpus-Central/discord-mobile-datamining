@@ -53,9 +53,9 @@ let closure_12 = importAllResult.memo((type) => {
   let withBounce;
   type = type.type;
   ({ onSendMessage, sendEnabled, isOnCooldown, channelId, state, cleanup, withBounce } = type);
-  let obj = map /* map */;
+  let obj = map;
   const token = obj.useToken(Themes.modules.mobile.CHAT_INPUT_SEND_BUTTON_WIDTH);
-  let obj1 = map /* map */;
+  let obj1 = map;
   let num = 0;
   if (type === constants.BUTTON_SEND_VOICE_MESSAGE || type === constants.BUTTON_SEND_VOICE_MESSAGE_DISABLED) {
     num = closure_8;

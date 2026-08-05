@@ -220,8 +220,8 @@ prototype["render"] = function render() {
       let tmp3Result = tmp3(tmp4, obj);
       if (tmp) {
         if (accessibilityLabel == null) {
-          const intl = getSystemLocale /* getSystemLocale */.intl;
-          accessibilityLabel = intl.string(getSystemLocale /* getSystemLocale */.t.OIDkcp);
+          const intl = getSystemLocale.intl;
+          accessibilityLabel = intl.string(getSystemLocale.t.OIDkcp);
         }
         obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
         obj[1] = accessibilityLabel;

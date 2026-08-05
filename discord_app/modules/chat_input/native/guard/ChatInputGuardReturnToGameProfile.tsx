@@ -20,19 +20,19 @@ const memoResult = require("noop").memo(function ChatInputGuardReturnToGameProfi
   if (null != pendingGameProfileReturn.pendingGameProfileReturn.gameIconUrl) {
     let obj = { style: null, source: null };
     obj[0] = tmp.icon;
-    let obj1 = getAvatarURL /* getAvatarURL */;
+    let obj1 = getAvatarURL;
     obj[1] = obj1.makeSource(pendingGameProfileReturn.gameIconUrl);
     tmp2Result = tmp2(Image, obj);
   }
   obj = { type: "simple-action", icon: tmp2Result, message: null, actionLabel: null, actionIcon: null, actionOnPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { gameName: pendingGameProfileReturn.gameName };
-  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t.HRHaSF, obj);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl2.string(getSystemLocale /* getSystemLocale */.t.DjifDP);
+  obj[2] = intl.format(getSystemLocale.t.HRHaSF, obj);
+  const intl2 = getSystemLocale.intl;
+  obj[3] = intl2.string(getSystemLocale.t.DjifDP);
   obj1 = { color: null };
   obj1[0] = tmp3(712).colors.WHITE;
-  obj[4] = jsx(ArrowSmallLeftIcon /* ArrowSmallLeftIcon */.ArrowSmallLeftIcon, { color: null });
+  obj[4] = jsx(ArrowSmallLeftIcon.ArrowSmallLeftIcon, { color: null });
   obj[5] = pendingGameProfileReturn.pendingGameProfileReturn.onReturnToGameProfile;
   return jsx(ChatInputGuard, { gameName: pendingGameProfileReturn.gameName });
 });

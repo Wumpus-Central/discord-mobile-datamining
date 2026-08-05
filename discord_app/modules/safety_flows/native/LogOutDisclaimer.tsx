@@ -10,19 +10,19 @@ const result = require("Text").fileFinishedImporting("modules/safety_flows/nativ
 export default function LogOutDisclaimer() {
   let obj = { children: null };
   obj = { variant: "text-xs/medium", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }
   };
   obj[1] = intl.format(messagesProxy["0DHxym"], obj);
-  obj[0] = jsx(Text /* Text */.Text, {
+  obj[0] = jsx(Text.Text, {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }
   });
-  return jsx(ModalDisclaimer /* ModalDisclaimer */.ModalDisclaimer, {
+  return jsx(ModalDisclaimer.ModalDisclaimer, {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }

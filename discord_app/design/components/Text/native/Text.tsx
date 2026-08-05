@@ -104,16 +104,16 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
     color = "text-default";
   }
   if (flag2) {
-    let NativeText = NativeText /* NativeText */.NativeText;
+    let NativeText = NativeText.NativeText;
   } else {
     NativeText = flag ? closure_5 : Text;
   }
-  let obj = useTypographyVariantRemap /* useTypographyVariantRemap */;
+  let obj = useTypographyVariantRemap;
   const typographyVariantRemap = obj.useTypographyVariantRemap(variant, false);
   const tmp2 = closure_12;
   const tmp2Result = closure_12(color, tabularNumbers);
   const items = [dependencyMap[typographyVariantRemap], tmp2Result.text, , ];
-  const manaTextMigrationHighlight = useManaTextMigrationHighlight /* useManaTextMigrationHighlight */.useManaTextMigrationHighlight(dependencyMap[typographyVariantRemap], style);
+  const manaTextMigrationHighlight = useManaTextMigrationHighlight.useManaTextMigrationHighlight(dependencyMap[typographyVariantRemap], style);
   if (includeFontPadding) {
     obj = { includeFontPadding: null };
     obj[0] = includeFontPadding;
@@ -137,7 +137,7 @@ const forwardRefResult = importAllResult.forwardRef((animated) => {
   return <NativeText style={null} numberOfLines={null} ellipsizeMode={null} allowFontScaling ref={null} />;
 });
 const forwardRefResult1 = importAllResult.forwardRef((variant, ref) => {
-  let obj = useTypographyVariantRemap /* useTypographyVariantRemap */;
+  let obj = useTypographyVariantRemap;
   obj = { ref };
   const typographyVariantRemap = obj.useTypographyVariantRemap(variant.variant, true);
   const merged = Object.assign(variant);

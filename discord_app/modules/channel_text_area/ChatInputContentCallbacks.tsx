@@ -30,9 +30,9 @@ export const tryUpdateSubscriptionForHereMention = function tryUpdateSubscriptio
     if (!tmp5) {
       let flag = -1 !== arr.indexOf(c6);
       if (flag) {
-        subscribeMembers /* subscribeMembers */.subscribeChannel(guild_id, id, reset /* reset */.DEFAULT_RANGES);
+        subscribeMembers.subscribeChannel(guild_id, id, reset.DEFAULT_RANGES);
         flag = true;
-        const obj = subscribeMembers /* subscribeMembers */;
+        const obj = subscribeMembers;
       }
       tmp7 = flag;
     }

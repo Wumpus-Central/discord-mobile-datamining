@@ -10,7 +10,7 @@ export const useTrackNavigatorScreenImpression = function useTrackNavigatorScree
     impressionPropertiesResult = impressionProperties(params.params);
   }
   const obj = { type: null, name: null, properties: null };
-  obj[0] = encodeProperties /* encodeProperties */.ImpressionTypes.PAGE;
+  obj[0] = encodeProperties.ImpressionTypes.PAGE;
   obj[1] = impressionProperties.impressionName;
   obj[2] = impressionPropertiesResult;
   trackImpression(obj);

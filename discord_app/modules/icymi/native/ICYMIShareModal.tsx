@@ -349,12 +349,12 @@ let result = require("noop").fileFinishedImporting("modules/icymi/native/ICYMISh
 export default ICYMIShareModal;
 export const GuildEventShareModal = function GuildEventShareModal(event) {
   event = event.event;
-  let obj = SHARE_EVENT_DETAILS_LINK /* SHARE_EVENT_DETAILS_LINK */;
+  let obj = SHARE_EVENT_DETAILS_LINK;
   obj = { guildId: event.guild_id, guildEventId: event.id };
   obj = { title: null, originDestinationId: null, linkText: null };
   const result = obj.SHARE_EVENT_DETAILS_LINK(obj);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["7TVSLK"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["7TVSLK"]);
   let tmp4;
   if (null != event.channel_id) {
     const obj1 = { type: "channel", id: null };

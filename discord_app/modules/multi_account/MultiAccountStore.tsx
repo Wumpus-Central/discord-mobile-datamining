@@ -133,7 +133,7 @@ obj = {
     let from;
     let to;
     ({ from, to } = arg0);
-    closure_8 = calculatePositionDeltas /* calculatePositionDeltas */.moveItemFromTo(closure_8, from, to);
+    closure_8 = calculatePositionDeltas.moveItemFromTo(closure_8, from, to);
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate(user) {
     user = user.user;

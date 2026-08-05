@@ -13,16 +13,16 @@ function fileTypesFormattedStringHelper(arr, locale) {
       const listFormat = new Intl.ListFormat(locale, { type: "disjunction" });
       const items = [];
       if (arr.includes("image")) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        items.push(intl.string(getSystemLocale /* getSystemLocale */.t["0r2WwT"]));
+        const intl = getSystemLocale.intl;
+        items.push(intl.string(getSystemLocale.t["0r2WwT"]));
       }
       if (arr.includes("video")) {
-        const intl2 = getSystemLocale /* getSystemLocale */.intl;
-        items.push(intl2.string(getSystemLocale /* getSystemLocale */.t["al+5qH"]));
+        const intl2 = getSystemLocale.intl;
+        items.push(intl2.string(getSystemLocale.t["al+5qH"]));
       }
       if (arr.includes("audio")) {
-        const intl3 = getSystemLocale /* getSystemLocale */.intl;
-        items.push(intl3.string(getSystemLocale /* getSystemLocale */.t.Kzll3E));
+        const intl3 = getSystemLocale.intl;
+        items.push(intl3.string(getSystemLocale.t.Kzll3E));
       }
       const push = items.push;
       const found = arr.filter((str) => str.startsWith("."));

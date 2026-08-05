@@ -9,14 +9,14 @@ const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onLoad:
 obj[2] = obj;
 obj = {
   play(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "play", []);
+    renderElement.dispatchCommand(arg0, "play", []);
   },
   pause(arg0) {
-    renderElement /* renderElement */.dispatchCommand(arg0, "pause", []);
+    renderElement.dispatchCommand(arg0, "pause", []);
   },
   seek(arg0, arg1) {
     const items = [arg1];
-    renderElement /* renderElement */.dispatchCommand(arg0, "seek", items);
+    renderElement.dispatchCommand(arg0, "seek", items);
   }
 };
 const value = setRuntimeConfigProvider.get("APNGDecorationView", () => obj);

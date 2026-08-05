@@ -77,7 +77,7 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
   ({ content, muted, layout } = fontScale);
   ({ guildId, channelId } = fontScale);
   if (layout === undefined) {
-    layout = ChannelListLayoutTypes /* ChannelListLayoutTypes */.ChannelListLayoutTypes.COMPACT;
+    layout = ChannelListLayoutTypes.ChannelListLayoutTypes.COMPACT;
   }
   ({ color, disableAnimatedEmoji, postProcessor } = fontScale);
   if (disableAnimatedEmoji === undefined) {

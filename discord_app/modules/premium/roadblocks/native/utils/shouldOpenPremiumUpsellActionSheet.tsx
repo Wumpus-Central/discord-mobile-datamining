@@ -5,7 +5,7 @@ const result = require("EntitlementFeatureNames").fileFinishedImporting("modules
 
 export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {
   initialUpsellKey = initialUpsellKey.initialUpsellKey;
-  if (keys /* keys */.UpsellTypes.UPLOAD === initialUpsellKey) {
+  if (keys.UpsellTypes.UPLOAD === initialUpsellKey) {
     openPremiumUpsellActionSheet(tmp(8184).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE);
     return true;
   } else if (tmp(691).UpsellTypes.GLOBAL_EMOJI === initialUpsellKey) {

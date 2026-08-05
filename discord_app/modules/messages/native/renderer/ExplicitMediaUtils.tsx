@@ -11,7 +11,7 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   let enabledContentHarmTypeFlags;
   let shouldObscureSpoiler;
   ({ attachment, shouldObscureSpoiler, enabledContentHarmTypeFlags } = shouldAgeVerify);
-  let obj = hasFlag /* hasFlag */;
+  let obj = hasFlag;
   let num = attachment.flags;
   if (num == null) {
     num = 0;
@@ -36,7 +36,7 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   const mediaObscuredReasonFromBitmask = tmpResult.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
   tmpResult = tmp(5818);
   let isVerifiedTeenResult = tmp5;
-  const obj1 = { type: ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment, media: obj };
+  const obj1 = { type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj };
   if (mediaObscuredReasonFromBitmask.length > 0) {
     isVerifiedTeenResult = tmp(4500).isVerifiedTeen();
     const tmpResult1 = tmp(4500);
@@ -63,7 +63,7 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
     str = intl2.string(tmp(1236).t.SpxcUR);
   }
   obj2[3] = str;
-  obj2[4] = tmpResult.isMediaScanPending({ type: ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.Attachment, media: obj }, enabledContentHarmTypeFlags);
+  obj2[4] = tmpResult.isMediaScanPending({ type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj }, enabledContentHarmTypeFlags);
   shouldAgeVerify = tmp5;
   if (mediaObscuredReasonFromBitmask.length > 0) {
     shouldAgeVerify = shouldAgeVerify.shouldAgeVerify;
@@ -83,8 +83,8 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
   let type;
   ({ type, mediaItem, isSpoilered, isAuthorBot, enabledContentHarmTypeFlags } = arg0);
   ({ shouldObscureSpoiler, shouldAgeVerify } = arg0);
-  let obj = getEligibleHarmTypesConfigsForContext /* getEligibleHarmTypesConfigsForContext */;
-  obj = { type: ContentHarmTypeChannel /* ContentHarmTypeChannel */.ObscuredMediaTypes.GenericMedia, media: mediaItem };
+  let obj = getEligibleHarmTypesConfigsForContext;
+  obj = { type: ContentHarmTypeChannel.ObscuredMediaTypes.GenericMedia, media: mediaItem };
   let isMediaScanPendingResult = !isAuthorBot;
   const mediaObscuredReasonFromBitmask = obj.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
   if (!isAuthorBot) {

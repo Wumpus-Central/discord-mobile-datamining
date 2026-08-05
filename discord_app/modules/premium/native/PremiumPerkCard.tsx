@@ -86,8 +86,8 @@ export default function PremiumPerkCard(variant) {
   ({ description, bodyComponent, headerComponent, imageSrc, imageStyle, buttonOnPress, cta } = variant);
   ({ style, title, titleStyle } = variant);
   if (cta === undefined) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    cta = intl.string(getSystemLocale /* getSystemLocale */.t.jVcuVY);
+    const intl = getSystemLocale.intl;
+    cta = intl.string(getSystemLocale.t.jVcuVY);
   }
   let WIDE = variant.variant;
   if (WIDE === undefined) {
@@ -96,7 +96,7 @@ export default function PremiumPerkCard(variant) {
   ({ imageOverlayText, pillText } = variant);
   const tmp4 = callback3(WIDE);
   const NARROW = obj.NARROW;
-  getFontScale /* getFontScale */;
+  getFontScale;
   if (null != imageSrc) {
     if (null != imageOverlayText) {
       obj = { style: null, children: null };
@@ -189,7 +189,7 @@ export const PerkCardTypes = { CUSTOM_PROFILE: "customProfile", CLIENT_THEMES: "
 export const PerkCardVariant = obj;
 export const PERK_CARD_SIZES = frozen;
 export const usePerkCardHeight = function usePerkCardHeight(NARROW) {
-  return getFontScale /* getFontScale */.useFontScale() > 1 ? frozen[NARROW].scaledFontHeight : frozen[NARROW].height;
+  return getFontScale.useFontScale() > 1 ? frozen[NARROW].scaledFontHeight : frozen[NARROW].height;
 };
 export const usePremiumPerkCard = function usePremiumPerkCard() {
   let obj = subscriptionPlansLoaded(12597);

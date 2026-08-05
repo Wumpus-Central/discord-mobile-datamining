@@ -7,7 +7,7 @@ import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/notifications/summary_reminder/SummaryReminderNotificationUtils.tsx");
 
 export const onSummaryReminderNotificationSettingsChanged = function onSummaryReminderNotificationSettingsChanged(summary_reminder_notifications) {
-  const EnableSummaryReminderNotifications = explicitContentFromProto /* explicitContentFromProto */.EnableSummaryReminderNotifications;
+  const EnableSummaryReminderNotifications = explicitContentFromProto.EnableSummaryReminderNotifications;
   EnableSummaryReminderNotifications.updateSetting(summary_reminder_notifications);
   let obj = expandEventProperties;
   obj = { update_type: constants.ACCOUNT, summary_reminder_notifications };

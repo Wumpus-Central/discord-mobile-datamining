@@ -160,7 +160,7 @@ class SpotifyAlbum extends PureComponent3 {
   }
 }
 SpotifyAlbum.prototype["render"] = function render() {
-  return callback(Button /* Button */.LegacyText, { onPress: this.handleOpenSpotifyAlbum, suppressHighlighting: true, children: this.props.text });
+  return callback(Button.LegacyText, { onPress: this.handleOpenSpotifyAlbum, suppressHighlighting: true, children: this.props.text });
 };
 let result = require("WEB_OPEN").fileFinishedImporting("modules/now_playing/native/UserActivitySpotify.tsx");
 
@@ -169,7 +169,7 @@ export const canOpenSpotifyUrl = function canOpenSpotifyUrl() {
 };
 export const attributeInstall = function attributeInstall() {
   let obj = importAll(1578);
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: closure_7.INSTALL_ATTRIBUTION(obj.getConstants().Identifier), rejectWithError: true };
   const value = HTTP.get(obj);
 };

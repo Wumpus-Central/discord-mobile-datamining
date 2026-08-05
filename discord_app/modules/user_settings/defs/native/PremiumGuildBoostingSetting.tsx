@@ -5,8 +5,8 @@ import { componentDidMount } from "../../premium/native/UserSettingsPremiumGuild
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["+CbP2v"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["+CbP2v"]);
   },
   parent: null,
   IconComponent: require("BoostGemIcon").BoostGemIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.GUILD_BOOSTING,
   getComponent() {
-    return componentDidMount /* componentDidMount */.default;
+    return componentDidMount.default;
   }
 };
 const route = createToggle.createRoute(obj);

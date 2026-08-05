@@ -10,10 +10,10 @@ const result = require("experiment").fileFinishedImporting("modules/premium/powe
 
 export default function useShouldShowGuildThemeMemberCoachmark(guildId) {
   const tmp = useHasAllocateBoostPermission(guildId);
-  let serverThemeEnabled = experiment /* experiment */.useServerThemeEnabled(guildId, "useShouldShowGuildThemeMemberCoachmark");
-  const obj = experiment /* experiment */;
-  const serverThemeUserEnabled = apexExperiment /* apexExperiment */.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");
-  const obj2 = apexExperiment /* apexExperiment */;
+  let serverThemeEnabled = experiment.useServerThemeEnabled(guildId, "useShouldShowGuildThemeMemberCoachmark");
+  const obj = experiment;
+  const serverThemeUserEnabled = apexExperiment.useServerThemeUserEnabled("useShouldShowGuildThemeMemberCoachmark");
+  const obj2 = apexExperiment;
   const tmp4 = useIsGuildThemePerkEnabled(guildId);
   const isLoading = useGuildAppliedBoostCount(guildId).isLoading;
   let tmp7 = !isLoading;

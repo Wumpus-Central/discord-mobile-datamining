@@ -58,7 +58,7 @@ function canFetch(GLOBAL_FEED) {
       } else {
         return false;
       }
-      obj = apexExperiment /* apexExperiment */;
+      obj = apexExperiment;
     }
     return true;
   }
@@ -104,7 +104,7 @@ function scheduleNextFetch() {
               flag = false;
             }
           }
-          obj9 = apexExperiment /* apexExperiment */;
+          obj9 = apexExperiment;
         }
       } else {
         flag = false;
@@ -339,7 +339,7 @@ function handleSpotifyNewTrack(connectionId) {
   }
 }
 function handleFetchGameProfileFeed() {
-  fetchInventory({ feedId: ContentInventoryFeedKey.GLOBAL_FEED, feature: ContentInventoryFeature /* ContentInventoryFeature */.ContentInventoryFeature.GAME_PROFILE });
+  fetchInventory({ feedId: ContentInventoryFeedKey.GLOBAL_FEED, feature: ContentInventoryFeature.ContentInventoryFeature.GAME_PROFILE });
 }
 let closure_11 = 2 * require("set").Millis.MINUTE;
 const GLOBAL_FEED = ContentInventoryFeedKey.GLOBAL_FEED;

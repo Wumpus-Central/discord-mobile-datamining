@@ -20,7 +20,7 @@ export const trackAppClickInNativeShareSheet = function trackAppClickInNativeSha
 export const getMediaShareParams = function getMediaShareParams(source) {
   let contentType;
   let videoURI;
-  let obj = apexExperiment /* apexExperiment */;
+  let obj = apexExperiment;
   if (obj.getMobileMediaViewerShareExperimentEnabled("shareMediaSource")) {
     if (true !== source.disableDownload) {
       if (null != source.shareURI) {
@@ -80,5 +80,5 @@ export const getMediaShareParams = function getMediaShareParams(source) {
   return { mediaFallbackUrl };
 };
 export const resolveShareFileExtension = function resolveShareFileExtension(closure_0, contentType) {
-  return decideFileExtension /* decideFileExtension */.decideFileExtension(closure_0, contentType, true);
+  return decideFileExtension.decideFileExtension(closure_0, contentType, true);
 };

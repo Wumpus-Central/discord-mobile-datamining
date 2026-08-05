@@ -11,13 +11,13 @@ import { ChangePhoneReason } from "../../../phone/PhoneActionCreators.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.dEYpSt);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.dEYpSt);
   },
   parent: require("MobileSetting").MobileSetting.ACCOUNT,
   useTrailing: function useAccountPhoneSettingTrailing() {
     const items = [mergeGuildAvatar];
-    return initialize /* initialize */.useStateFromStores(items, () => {
+    return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let phone;
       if (currentUser != null) {
@@ -29,8 +29,8 @@ createToggle = {
   onPress: function onAccountPhoneSettingPress() {
     let obj = ModalActionCreators;
     obj = { allowDeletePhone: true, reason: null };
-    obj[1] = ChangePhoneReason /* ChangePhoneReason */.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl /* asyncRequireImpl */(8327, dependencyMap.paths), obj, closure_4);
+    obj[1] = ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE;
+    obj.pushLazy(asyncRequireImpl(8327, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };

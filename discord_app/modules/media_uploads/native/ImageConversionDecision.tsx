@@ -23,7 +23,7 @@ export const isHeicUTI = function isHeicUTI(str) {
   }
 };
 export const shouldForceConvertToJPG = function shouldForceConvertToJPG(closure_0, outer1_1, outer1_10) {
-  let isIOSResult = set /* set */.isIOS();
+  let isIOSResult = set.isIOS();
   if (isIOSResult) {
     let flag = false;
     if (null != outer1_10) {
@@ -126,5 +126,5 @@ export const shouldConvertToJPG = function shouldConvertToJPG(closure_0, outer1_
   } else {
     return false;
   }
-  obj = set /* set */;
+  obj = set;
 };

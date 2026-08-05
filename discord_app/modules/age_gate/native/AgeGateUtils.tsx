@@ -29,7 +29,7 @@ export const isNSFWInvite = function isNSFWInvite(guild) {
   return set.has(nsfw_level);
 };
 export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
-  let obj = set /* set */;
+  let obj = set;
   if (obj.isIOS()) {
     let nsfw_level;
     if (invite != null) {
@@ -103,6 +103,6 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
   } else {
     return false;
   }
-  obj = set /* set */;
+  obj = set;
   tmp = require;
 };

@@ -49,11 +49,11 @@ Storage.asyncGet(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, (arg0
 let result = require("Storage").fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
 
 export const useCommunicationDisabledNoticeStore = function useCommunicationDisabledNoticeStore(arg0) {
-  const tmp = callback(identity /* identity */.useStoreWithEqualityFn(closure_4, (arg0) => {
+  const tmp = callback(identity.useStoreWithEqualityFn(closure_4, (arg0) => {
     const items = [, ];
     ({ notificationDismissedInGuilds: arr[0], dismissNotification: arr[1] } = arg0);
     return items;
-  }, isIterable /* isIterable */.shallow), 2);
+  }, isIterable.shallow), 2);
   const first = tmp[0];
   let items = [!first.has(arg0), tmp[1]];
   return items;

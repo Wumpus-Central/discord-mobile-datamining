@@ -23,7 +23,7 @@ function NonInlineConsoleConnection(arg0) {
     obj.onPress = closure_0;
     return outer1_6(outer1_8, obj, type.type);
   });
-  return callback(TableRowGroupTitle /* TableRowGroupTitle */.TableRowGroup, obj);
+  return callback(TableRowGroupTitle.TableRowGroup, obj);
 }
 function ConsoleRow(onPress) {
   onPress = onPress.onPress;

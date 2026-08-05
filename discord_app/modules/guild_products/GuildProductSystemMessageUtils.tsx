@@ -9,6 +9,6 @@ export const getGuildProductPurchaseSystemMessageContentMobile = function getGui
   if (usernameHook === undefined) {
     usernameHook = NOOP;
   }
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.formatToParts(getSystemLocale /* getSystemLocale */.t["w4iXs+"], { username: username.username, usernameHook, productName: username.productName });
+  const intl = getSystemLocale.intl;
+  return intl.formatToParts(getSystemLocale.t["w4iXs+"], { username: username.username, usernameHook, productName: username.productName });
 };

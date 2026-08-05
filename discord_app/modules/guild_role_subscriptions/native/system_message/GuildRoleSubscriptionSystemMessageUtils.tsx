@@ -11,8 +11,8 @@ export const handleRoleSubscriptionPurchaseSystemMessageCtaClicked = function ha
   obj = { channel: messageChannel, message, shouldMention: true, showMentionToggle: true };
   obj.sendGreetMessage(messageChannel.id, stickerId, trackInvite.getSendMessageOptionsForReply(obj));
   const obj2 = trackInvite;
-  const roleSubscriptionPurchaseSystemMessageEventProperties = identityHook /* identityHook */.getRoleSubscriptionPurchaseSystemMessageEventProperties(messageChannel, message);
-  const obj4 = identityHook /* identityHook */;
+  const roleSubscriptionPurchaseSystemMessageEventProperties = identityHook.getRoleSubscriptionPurchaseSystemMessageEventProperties(messageChannel, message);
+  const obj4 = identityHook;
   obj = {};
   const merged = Object.assign(roleSubscriptionPurchaseSystemMessageEventProperties);
   obj.sticker_id = stickerId;

@@ -26,7 +26,7 @@ class PasskeyUpsellManager extends tmp2 {
 const prototype = PasskeyUpsellManager.prototype;
 prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
   if (c8) {
-    if (_crypto /* _crypto */.hasWebAuthn) {
+    if (_crypto.hasWebAuthn) {
       if (loginStatus.getLoginStatus() === LoginStates.NONE) {
         if (obj.attemptedPasswordLogin()) {
           let tmpResult = tmp(4101);
@@ -63,9 +63,9 @@ prototype["handleLogout"] = function handleLogout() {
   let c8 = false;
 };
 prototype["markDismissed"] = function markDismissed(USER_DISMISS) {
-  let obj = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
+  let obj = UNSAFE_isDismissibleContentDismissed;
   obj = { dismissAction: USER_DISMISS, forceTrack: true };
-  return obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.PASSWORDLESS_UPSELL, obj);
+  return obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.PASSWORDLESS_UPSELL, obj);
 };
 const passkeyUpsellManager = new PasskeyUpsellManager();
 let result = require("hasFetchedCredentials").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellManager.tsx");

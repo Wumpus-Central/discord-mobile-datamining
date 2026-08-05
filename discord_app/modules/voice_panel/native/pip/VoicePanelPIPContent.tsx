@@ -49,7 +49,7 @@ function VideoStream(streamId) {
   return callback(setHasActiveVideoOutputSink(10614), obj);
 }
 function markContentReady() {
-  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch.dispatch(constants2.VOICE_PANEL_PIP_CONTENT_READY);
 }
 function InnerStroke(style) {

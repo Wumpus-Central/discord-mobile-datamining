@@ -34,7 +34,7 @@ function BaseBenefitRow(isInteractive) {
   if (tmp4Result) {
     obj = { source: null };
     obj[0] = registerAsset;
-    tmp4Result = callback(Button /* Button */.Icon, obj);
+    tmp4Result = callback(Button.Icon, obj);
   }
   items[2] = tmp4Result;
   obj[1] = items;
@@ -51,7 +51,7 @@ function DescriptiveBenefitRow(benefit) {
     const obj = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
     obj[0] = tmp.benefitDescription;
     obj[3] = benefit.description;
-    tmp2 = callback(Text /* Text */.Text, obj);
+    tmp2 = callback(Text.Text, obj);
   }
   let emoji = benefit.emoji_id;
   if (emoji == null) {
@@ -73,7 +73,7 @@ function ChannelBenefitRow(benefit) {
   benefit = benefit.benefit;
   ({ guildId, isInteractive } = benefit);
   const tmp = callback3();
-  let obj = getUsedTemplateChannelsForGuild /* getUsedTemplateChannelsForGuild */;
+  let obj = getUsedTemplateChannelsForGuild;
   const channelWithTemplateFallback = obj.useChannelWithTemplateFallback(benefit.ref_id);
   let channelIcon = null;
   if (null != channelWithTemplateFallback) {
@@ -109,7 +109,7 @@ function ChannelBenefitRow(benefit) {
 }
 function IntangibleBenefitRow(benefit) {
   benefit = benefit.benefit;
-  obj = { benefit, guildId: benefit.guildId, isInteractive: benefit.isInteractive, children: callback(Text /* Text */.Text, obj) };
+  obj = { benefit, guildId: benefit.guildId, isInteractive: benefit.isInteractive, children: callback(Text.Text, obj) };
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: benefit.name };
   return callback(DescriptiveBenefitRow, obj);
 }
@@ -121,10 +121,10 @@ function EmojiBenefitRow(benefit) {
   const tmp = callback3();
   let obj = { emoji: benefit.id, guildId, contentStyle: tmp.emojiRow, isInteractive, children: null };
   obj = { style: tmp.emojiColons, variant: "text-md/medium", color: "text-muted", children: ":" };
-  const items = [callback(Text /* Text */.Text, obj), , ];
+  const items = [callback(Text.Text, obj), , ];
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: benefit.name };
-  items[1] = callback(Text /* Text */.Text, obj);
-  items[2] = callback(Text /* Text */.Text, { style: tmp.emojiColons, variant: "text-md/medium", color: "text-muted", children: ":" });
+  items[1] = callback(Text.Text, obj);
+  items[2] = callback(Text.Text, { style: tmp.emojiColons, variant: "text-md/medium", color: "text-muted", children: ":" });
   obj[4] = items;
   return callback2(BaseBenefitRow, obj);
 }

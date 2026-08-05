@@ -225,7 +225,7 @@ export default function CaptchaTestModal() {
     return obj;
   }, items);
   let obj = { screens: memo, initialRouteName: constants.TEST_CAPTCHA, headerBackTitle: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
-  return callback(NavigationStack /* NavigationStack */.Navigator, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["13/7kX"]);
+  return callback(NavigationStack.Navigator, obj);
 };

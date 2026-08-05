@@ -28,7 +28,7 @@ function Text(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.style = callback3().text;
-  return callback(Button /* Button */.LegacyText, obj);
+  return callback(Button.LegacyText, obj);
 }
 function Section(arg0) {
   let children;
@@ -186,7 +186,7 @@ let closure_23 = importAllResult.memo((userId) => {
 });
 let closure_25 = {
   [MediaEngineContextTypes.DEFAULT]: function DefaultContextInfo() {
-    let obj = initialize /* initialize */;
+    let obj = initialize;
     const items = [createRTCConnection];
     obj = {
       obj: obj.useStateFromStoresObject(items, () => {
@@ -239,11 +239,11 @@ export default function RTCDebugOverlay(arg0) {
   const items2 = [callback2(closure_6, obj), ];
   obj = { style: tmp.buttonClose, children: null };
   const obj1 = { text: null, onPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[0] = intl.string(getSystemLocale /* getSystemLocale */.t.cpT0Cq);
+  const intl = getSystemLocale.intl;
+  obj1[0] = intl.string(getSystemLocale.t.cpT0Cq);
   obj1[1] = onClose;
-  obj[1] = callback(Button /* Button */.Button, obj1);
+  obj[1] = callback(Button.Button, obj1);
   items2[1] = callback(closure_5, obj);
   obj[5] = items2;
-  return callback2(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 };

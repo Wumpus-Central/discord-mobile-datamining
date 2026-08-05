@@ -21,7 +21,7 @@ let metroImportAll;
 const require = arg1;
 function EmojiItemLockedOverlay() {
   const tmp = callback2();
-  obj = { style: tmp.lockContainer, children: callback(LockIcon /* LockIcon */.LockIcon, obj) };
+  obj = { style: tmp.lockContainer, children: callback(LockIcon.LockIcon, obj) };
   obj = { style: tmp.lock };
   return callback(closure_3, obj);
 }
@@ -259,7 +259,7 @@ let result = set.fileFinishedImporting("modules/emoji_picker/native/components/E
 export const EmojiPickerListRow = importAllResult.memo((nativeRow) => {
   nativeRow = nativeRow.nativeRow;
   if (nativeRow === undefined) {
-    let obj = set /* set */;
+    let obj = set;
     nativeRow = obj.isAndroid();
   }
   const merged = Object.assign(nativeRow, Object.create(null));

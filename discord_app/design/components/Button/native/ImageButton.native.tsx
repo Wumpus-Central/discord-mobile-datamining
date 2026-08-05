@@ -15,14 +15,14 @@ let c3 = importAllResult;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2) => {
-  let MEDIUM_BUTTON_PADDING = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.LARGE_BUTTON_PADDING;
+  let MEDIUM_BUTTON_PADDING = MINIMUM_HIT_AREA.LARGE_BUTTON_PADDING;
   if ("sm" === arg0) {
     MEDIUM_BUTTON_PADDING = tmp(4699).SMALL_BUTTON_PADDING;
   } else if ("md" === arg0) {
     MEDIUM_BUTTON_PADDING = tmp(4699).MEDIUM_BUTTON_PADDING;
   }
   const sum = arg1 + 2 * MEDIUM_BUTTON_PADDING;
-  const buttonBorderRadius = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.getButtonBorderRadius(arg0);
+  const buttonBorderRadius = MINIMUM_HIT_AREA.getButtonBorderRadius(arg0);
   let obj = { paddingBottom: Themes.space.PX_4, gap: Themes.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
   let num = 0;
   if (arg2) {
@@ -30,11 +30,11 @@ let closure_8 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   }
   obj = { labelPressable: obj, pill: null, imageWrapper: null, image: null, imageDim: null };
   obj[4] = num;
-  const tmpResult = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */;
-  obj[1] = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.BUTTON_BORDER_WIDTH, outlineColor: Themes.colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
+  const tmpResult = MINIMUM_HIT_AREA;
+  obj[1] = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: MINIMUM_HIT_AREA.BUTTON_BORDER_WIDTH, outlineColor: Themes.colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
   obj[2] = { width: sum, height: sum, position: "relative" };
   obj[3] = { width: sum, height: sum };
-  const obj1 = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.BUTTON_BORDER_WIDTH, outlineColor: Themes.colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
+  const obj1 = { paddingHorizontal: 0, paddingVertical: 0, minHeight: sum, minWidth: sum, borderRadius: buttonBorderRadius, borderWidth: 0, outlineWidth: MINIMUM_HIT_AREA.BUTTON_BORDER_WIDTH, outlineColor: Themes.colors.CONTROL_SECONDARY_BORDER_DEFAULT, outlineStyle: "solid" };
   obj[4] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, backgroundColor: Themes.colors.REDESIGN_IMAGE_BUTTON_PRESSED_BACKGROUND, borderRadius: buttonBorderRadius };
   return obj;
 });

@@ -15,7 +15,7 @@ import { MemberVerificationModal } from "MemberVerificationModal.tsx";
 
 const require = arg1;
 function Loading() {
-  return <View style={createCacheKey().flexLoading}>{jsx(ActivityIndicator /* ActivityIndicator */.ActivityIndicator, {})}</View>;
+  return <View style={createCacheKey().flexLoading}>{jsx(ActivityIndicator.ActivityIndicator, {})}</View>;
 }
 function MemberVerificationRouteView(arg0) {
   const merged = Object.assign(arg0);

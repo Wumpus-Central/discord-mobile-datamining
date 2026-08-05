@@ -30,5 +30,5 @@ export default function ScrollBenchmark(subLabel) {
     start = tmp.stop;
   }
   obj[4] = start;
-  return jsx(TableRowInner /* TableRowInner */.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
+  return jsx(TableRowInner.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
 };

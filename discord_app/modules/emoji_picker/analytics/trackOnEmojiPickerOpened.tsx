@@ -63,13 +63,13 @@ function trackOnEmojiPickerOpened(arg0) {
   if (channel != null) {
     guildId2 = channel.getGuildId();
   }
-  const topAndNewlyAddedEmojis = useTopAndNewlyAddedEmojis /* useTopAndNewlyAddedEmojis */.getTopAndNewlyAddedEmojis({ guildId: guildId2, pickerIntention: intention });
+  const topAndNewlyAddedEmojis = useTopAndNewlyAddedEmojis.getTopAndNewlyAddedEmojis({ guildId: guildId2, pickerIntention: intention });
   ({ topEmojis, newlyAddedEmojis } = topAndNewlyAddedEmojis);
-  const obj4 = useTopAndNewlyAddedEmojis /* useTopAndNewlyAddedEmojis */;
+  const obj4 = useTopAndNewlyAddedEmojis;
   const tmp6 = require;
-  const emojiHotrail = useEmojiHotrail /* useEmojiHotrail */.getEmojiHotrail({ topEmojis, newlyAddedEmojis, rowSize });
+  const emojiHotrail = useEmojiHotrail.getEmojiHotrail({ topEmojis, newlyAddedEmojis, rowSize });
   ({ visibleTopEmojis, visibleNewlyAddedEmojis } = emojiHotrail);
-  const tmp6Result = useEmojiHotrail /* useEmojiHotrail */;
+  const tmp6Result = useEmojiHotrail;
   if (intention === EmojiIntention.REACTION) {
     let EXPRESSION_PICKER_OPENED = AnalyticEvents.REACTION_PICKER_OPENED;
   } else {

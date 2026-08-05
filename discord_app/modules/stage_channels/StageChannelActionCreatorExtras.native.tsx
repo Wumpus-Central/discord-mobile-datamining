@@ -19,7 +19,7 @@ const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("module
 export const openStageChannelSettings = function openStageChannelSettings(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(7700, dependencyMap.paths), closure_5, obj);
+  obj.openLazy(asyncRequireImpl(7700, dependencyMap.paths), closure_5, obj);
 };
 export function openEndGuildEventConfirmationModal() {
 
@@ -27,26 +27,26 @@ export function openEndGuildEventConfirmationModal() {
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(channelId) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channelId };
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(7774, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(asyncRequireImpl(7774, dependencyMap.paths), closure_4, obj);
 };
 export const openStageBlockedUsersSheet = function openStageBlockedUsersSheet(channel, onAccept) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel, onAccept };
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(7815, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(asyncRequireImpl(7815, dependencyMap.paths), closure_6, obj);
 };
 export const openStageSettingsSheet = function openStageSettingsSheet(closure_0, closure_1) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channelId: closure_0, onOpenRTCDebugOverlay: closure_1 };
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(7822, dependencyMap.paths), closure_7, obj);
+  obj.openLazy(asyncRequireImpl(7822, dependencyMap.paths), closure_7, obj);
 };
 export const openEndStageModal = function openEndStageModal(closure_0) {
   let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { channel: closure_0 };
-  obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(12567, dependencyMap.paths), closure_8, obj);
+  obj.openLazy(asyncRequireImpl(12567, dependencyMap.paths), closure_8, obj);
 };
 export const openStageChannel = function openStageChannel(outer1_0) {
   if (outer1_0.isGuildStageVoice()) {
-    let obj = useIsStageVoicePanelEnabled /* useIsStageVoicePanelEnabled */;
+    let obj = useIsStageVoicePanelEnabled;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
       let tmpResult = tmp(4494);
       tmpResult.openGuildVoiceModal(outer1_0);
@@ -68,17 +68,17 @@ export const showPlatformUserProfile = function showPlatformUserProfile(arg0) {
   showUserProfileActionSheet(obj);
 };
 export const shouldShowBlockedUsers = function shouldShowBlockedUsers(id) {
-  const stageBlockedUsersCount = useStageBlockedUsersCount /* useStageBlockedUsersCount */.getStageBlockedUsersCount(id);
-  const obj = useStageBlockedUsersCount /* useStageBlockedUsersCount */;
-  const obj2 = useStageBlockedUsersCount /* useStageBlockedUsersCount */;
-  return stageBlockedUsersCount > 0 || useStageBlockedUsersCount /* useStageBlockedUsersCount */.getStageIgnoredUsersCount(id) > 0;
+  const stageBlockedUsersCount = useStageBlockedUsersCount.getStageBlockedUsersCount(id);
+  const obj = useStageBlockedUsersCount;
+  const obj2 = useStageBlockedUsersCount;
+  return stageBlockedUsersCount > 0 || useStageBlockedUsersCount.getStageIgnoredUsersCount(id) > 0;
 };
 export const navigateToStage = function navigateToStage(id) {
   if (arg1 !== id.id) {
     setIsOnStartStageScreen(true);
   }
   if (id.isGuildStageVoice()) {
-    let obj = useIsStageVoicePanelEnabled /* useIsStageVoicePanelEnabled */;
+    let obj = useIsStageVoicePanelEnabled;
     if (obj.isStageVoicePanelEnabled("stage_channel_action_creator_extras")) {
       let tmp3Result = tmp3(4494);
       tmp3Result.openGuildVoiceModal(id);

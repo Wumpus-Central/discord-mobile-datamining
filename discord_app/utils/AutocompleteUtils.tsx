@@ -135,7 +135,7 @@ function queryMemberList(arg0) {
   const users = authStore2.getUsers();
   guildId = guildId.getGuildId();
   const toLocaleLowerCaseResult = query.toLocaleLowerCase();
-  let obj = isNullOrEmpty /* isNullOrEmpty */;
+  let obj = isNullOrEmpty;
   const normalizeResult = obj.normalize(toLocaleLowerCaseResult);
   const items = [];
   const items1 = [];
@@ -177,9 +177,9 @@ function queryMemberList(arg0) {
           let username = tmp9.username;
           let str3 = username.toLocaleLowerCase();
           let tmp16 = require;
-          let obj5 = isNullOrEmpty /* isNullOrEmpty */;
+          let obj5 = isNullOrEmpty;
           let str4 = obj5.stripDiacritics(str3);
-          let obj6 = isNullOrEmpty /* isNullOrEmpty */;
+          let obj6 = isNullOrEmpty;
           let str5 = obj6.normalize(str4);
           if (null == str) {
             let items2 = [null, null];
@@ -386,7 +386,7 @@ function queryMemberList(arg0) {
   return combined;
 }
 function getPriorityForStickerMetadataType(arg0) {
-  if (StickerFormat /* StickerFormat */.StickerMetadataTypes.STICKER_NAME === arg0) {
+  if (StickerFormat.StickerMetadataTypes.STICKER_NAME === arg0) {
     return 11;
   } else if (tmp(4951).StickerMetadataTypes.CORRELATED_EMOJI === arg0) {
     return 6;
@@ -602,7 +602,7 @@ areArraysShallowlyEqual = {
     const obj = { query: limit.query, members: null, limit: null, filter: null };
     const friendIDs = store6.getFriendIDs();
     const mapped = friendIDs.map((arg0) => user.getUser(arg0));
-    obj[1] = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    obj[1] = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
     obj[2] = num;
     obj[3] = limit.filter;
     return queryMemberList(obj);
@@ -615,7 +615,7 @@ areArraysShallowlyEqual = {
     const obj = { query: limit.query, members: null, limit: null, filter: null };
     const dMUserIds = authStore.getDMUserIds();
     const mapped = dMUserIds.map((arg0) => user.getUser(arg0));
-    obj[1] = mapped.filter(isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.isNotNullish);
+    obj[1] = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
     obj[2] = num;
     obj[3] = limit.filter;
     return queryMemberList(obj);
@@ -1128,10 +1128,10 @@ areArraysShallowlyEqual = {
     if (boosters === undefined) {
       boosters = {};
     }
-    const obj2 = isNullOrEmpty /* isNullOrEmpty */;
-    const stripDiacriticsResult = obj2.stripDiacritics(isNullOrEmpty /* isNullOrEmpty */.normalize(query.toLocaleLowerCase()));
+    const obj2 = isNullOrEmpty;
+    const stripDiacriticsResult = obj2.stripDiacritics(isNullOrEmpty.normalize(query.toLocaleLowerCase()));
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    const obj3 = isNullOrEmpty /* isNullOrEmpty */;
+    const obj3 = isNullOrEmpty;
     const regExp = new RegExp("^" + set.escape(stripDiacriticsResult), "i");
     obj[0] = regExp;
     const obj5 = set;
@@ -1152,14 +1152,14 @@ areArraysShallowlyEqual = {
         if (filter(tmp6)) {
           let tmp8 = require;
           let tmp9 = dependencyMap;
-          let obj9 = computeChannelName /* computeChannelName */;
+          let obj9 = computeChannelName;
           let tmp10 = nextResult;
           let tmp11 = authStore2;
           let tmp12 = store6;
           let channelName = obj9.computeChannelName(tmp6, authStore2, store6);
           let toLocaleLowerCaseResult = channelName.toLocaleLowerCase();
-          let obj11 = isNullOrEmpty /* isNullOrEmpty */;
-          let obj12 = isNullOrEmpty /* isNullOrEmpty */;
+          let obj11 = isNullOrEmpty;
+          let obj12 = isNullOrEmpty;
           let stripDiacriticsResult1 = obj11.stripDiacritics(obj12.normalize(toLocaleLowerCaseResult));
           let tmp16 = getMatchValue;
           let tmp15 = stripDiacriticsResult1;
@@ -1209,8 +1209,8 @@ areArraysShallowlyEqual = {
           for (const item10133 of items1) {
             let tmp37 = require;
             let tmp38 = dependencyMap;
-            let obj13 = isNullOrEmpty /* isNullOrEmpty */;
-            let obj14 = isNullOrEmpty /* isNullOrEmpty */;
+            let obj13 = isNullOrEmpty;
+            let obj14 = isNullOrEmpty;
             let _Math = Math;
             let tmp39 = getMatchValue;
             let bound = Math.min(5, getMatchValue(obj13.stripDiacritics(obj14.normalize(item10133.toLocaleLowerCase())), obj, flag));
@@ -1233,7 +1233,7 @@ areArraysShallowlyEqual = {
             obj[2] = calculateScore(tmp17, boosters[tmp6.id]);
             let tmp48 = require;
             let tmp49 = dependencyMap;
-            let obj16 = computeChannelName /* computeChannelName */;
+            let obj16 = computeChannelName;
             let tmp50 = authStore2;
             let tmp51 = store6;
             obj[3] = obj16.computeChannelName(tmp6, authStore2, store6);
@@ -1329,36 +1329,36 @@ areArraysShallowlyEqual = {
     obj[1] = regExp1;
     obj[2] = toLocaleLowerCaseResult;
     obj = {};
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.pWG4ze)];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t.pWG4ze)];
     obj[constants.SHOP] = items;
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    const items1 = [intl2.string(getSystemLocale /* getSystemLocale */.t.ElYQFS), , ];
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    items1[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.pWG4ze);
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    items1[2] = intl4.string(getSystemLocale /* getSystemLocale */.t.EBYkzk);
+    const intl2 = getSystemLocale.intl;
+    const items1 = [intl2.string(getSystemLocale.t.ElYQFS), , ];
+    const intl3 = getSystemLocale.intl;
+    items1[1] = intl3.string(getSystemLocale.t.pWG4ze);
+    const intl4 = getSystemLocale.intl;
+    items1[2] = intl4.string(getSystemLocale.t.EBYkzk);
     obj[constants.SHOP_ORBS_TAB] = items1;
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
-    const items2 = [intl5.string(getSystemLocale /* getSystemLocale */.t.ElYQFS), , ];
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
-    items2[1] = intl6.string(getSystemLocale /* getSystemLocale */.t["v/R2aC"]);
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
-    items2[2] = intl7.string(getSystemLocale /* getSystemLocale */.t.qQR4tn);
+    const intl5 = getSystemLocale.intl;
+    const items2 = [intl5.string(getSystemLocale.t.ElYQFS), , ];
+    const intl6 = getSystemLocale.intl;
+    items2[1] = intl6.string(getSystemLocale.t["v/R2aC"]);
+    const intl7 = getSystemLocale.intl;
+    items2[2] = intl7.string(getSystemLocale.t.qQR4tn);
     obj[constants.QUEST_ORBS] = items2;
-    const intl8 = getSystemLocale /* getSystemLocale */.intl;
-    const items3 = [intl8.string(getSystemLocale /* getSystemLocale */.t.Ipxkog)];
+    const intl8 = getSystemLocale.intl;
+    const items3 = [intl8.string(getSystemLocale.t.Ipxkog)];
     obj[constants.NITRO_HOME] = items3;
-    const intl9 = getSystemLocale /* getSystemLocale */.intl;
-    const items4 = [intl9.string(getSystemLocale /* getSystemLocale */.t.JALI2K)];
+    const intl9 = getSystemLocale.intl;
+    const items4 = [intl9.string(getSystemLocale.t.JALI2K)];
     obj[constants.QUEST_HOME] = items4;
-    const intl10 = getSystemLocale /* getSystemLocale */.intl;
-    const items5 = [intl10.string(getSystemLocale /* getSystemLocale */.t.PHjkRE), ];
-    const intl11 = getSystemLocale /* getSystemLocale */.intl;
-    items5[1] = intl11.string(getSystemLocale /* getSystemLocale */.t.AKcFUj);
+    const intl10 = getSystemLocale.intl;
+    const items5 = [intl10.string(getSystemLocale.t.PHjkRE), ];
+    const intl11 = getSystemLocale.intl;
+    items5[1] = intl11.string(getSystemLocale.t.AKcFUj);
     obj[constants.APPS_HOME] = items5;
-    const intl12 = getSystemLocale /* getSystemLocale */.intl;
-    const items6 = [intl12.string(getSystemLocale /* getSystemLocale */.t["3D5yo/"])];
+    const intl12 = getSystemLocale.intl;
+    const items6 = [intl12.string(getSystemLocale.t["3D5yo/"])];
     obj[constants.SETTINGS] = items6;
     const items7 = [];
     for (const key10167 in obj) {
@@ -1919,31 +1919,31 @@ areArraysShallowlyEqual = {
     const regExp1 = new RegExp(obj2.escape(toLocaleLowerCaseResult), "i");
     obj[1] = regExp1;
     obj[2] = toLocaleLowerCaseResult;
-    let canSeeOnboardingHomeResult = useCanSeeOnboardingHome /* useCanSeeOnboardingHome */.canSeeOnboardingHome(guild.id);
+    let canSeeOnboardingHomeResult = useCanSeeOnboardingHome.canSeeOnboardingHome(guild.id);
     if (canSeeOnboardingHomeResult) {
       const features = guild.features;
       canSeeOnboardingHomeResult = !features.has(constants2.HUB);
     }
     const features2 = guild.features;
     const hasItem = features2.has(constants2.COMMUNITY);
-    const obj4 = useCanSeeOnboardingHome /* useCanSeeOnboardingHome */;
+    const obj4 = useCanSeeOnboardingHome;
     const tmp8 = constants2;
-    let result = useGuildOnboardingAvailable /* useGuildOnboardingAvailable */.isGuildOnboardingAvailable(guild);
+    let result = useGuildOnboardingAvailable.isGuildOnboardingAvailable(guild);
     if (result) {
       const features3 = guild.features;
       result = features3.has(tmp8.COMMUNITY);
     }
     obj = { id: StaticChannelId.SERVER_GUIDE, name: null };
     const intl = tmp5(1236).intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.VbpLyU);
+    obj[1] = intl.string(getSystemLocale.t.VbpLyU);
     const items = [obj, , ];
     obj = { id: StaticChannelId.CHANNEL_BROWSER, name: null };
     const intl2 = tmp5(1236).intl;
-    obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.et6wav);
+    obj[1] = intl2.string(getSystemLocale.t.et6wav);
     items[1] = obj;
     obj1 = { id: StaticChannelId.CUSTOMIZE_COMMUNITY, name: null };
     const intl3 = tmp5(1236).intl;
-    obj1[1] = intl3.string(getSystemLocale /* getSystemLocale */.t.h9mGOP);
+    obj1[1] = intl3.string(getSystemLocale.t.h9mGOP);
     items[2] = obj1;
     const items1 = [];
     const iter = items[Symbol.iterator]();
@@ -2077,7 +2077,7 @@ areArraysShallowlyEqual = {
     if (maxCount === undefined) {
       maxCount = closure_42;
     }
-    const FrecencyUserSettingsActionCreators = updateUserGuildSettings /* updateUserGuildSettings */.FrecencyUserSettingsActionCreators;
+    const FrecencyUserSettingsActionCreators = updateUserGuildSettings.FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     return { emojis: getEmojiToGroupId.searchWithoutFetchingLatest({ channel, query, count: maxCount, intention, matchComparator: matchComparator.matchComparator }) };
   },

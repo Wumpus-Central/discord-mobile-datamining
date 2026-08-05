@@ -30,8 +30,8 @@ function handleLoadThreadsSuccess(arg0) {
 function storeFirstMessage(channel_id, nextResult) {
   let messageRecord = null;
   if (null != nextResult) {
-    messageRecord = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(nextResult);
-    const obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
+    messageRecord = createMinimalMessageRecord.createMessageRecord(nextResult);
+    const obj = createMinimalMessageRecord;
   }
   closure_5[channel_id] = { loaded: true, firstMessage: messageRecord };
 }
@@ -102,8 +102,8 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
         const message = isPushNotification.message;
         let messageRecord = null;
         if (null != message) {
-          messageRecord = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(message);
-          const obj2 = createMinimalMessageRecord /* createMinimalMessageRecord */;
+          messageRecord = createMinimalMessageRecord.createMessageRecord(message);
+          const obj2 = createMinimalMessageRecord;
         }
         obj = { loaded: true, firstMessage: null };
         obj[1] = messageRecord;
@@ -126,9 +126,9 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
           const result = DISCORD_EPOCH.castMessageIdAsChannelId(message.message.id);
           const merged = Object.assign(tmp12);
           const tmp10Result = DISCORD_EPOCH;
-          obj.firstMessage = createMinimalMessageRecord /* createMinimalMessageRecord */.updateMessageRecord(tmp12.firstMessage, message.message);
+          obj.firstMessage = createMinimalMessageRecord.updateMessageRecord(tmp12.firstMessage, message.message);
           dependencyMap[result] = obj;
-          const obj3 = createMinimalMessageRecord /* createMinimalMessageRecord */;
+          const obj3 = createMinimalMessageRecord;
         }
         tmp8 = tmp;
       }
@@ -226,7 +226,7 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
       if (null != first_message) {
         let tmp = require;
         let tmp2 = dependencyMap;
-        let obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
+        let obj = createMinimalMessageRecord;
         messageRecord = obj.createMessageRecord(first_message);
       }
       let tmp4 = closure_5;
@@ -249,9 +249,9 @@ const forumPostMessagesStore = new ForumPostMessagesStore(require("dispatcher"),
     }
     if (tmp2) {
       obj = { loaded: true, firstMessage: null };
-      obj[1] = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(tmp);
+      obj[1] = createMinimalMessageRecord.createMessageRecord(tmp);
       closure_5[channelId] = obj;
-      const obj3 = createMinimalMessageRecord /* createMinimalMessageRecord */;
+      const obj3 = createMinimalMessageRecord;
     }
   }
 });

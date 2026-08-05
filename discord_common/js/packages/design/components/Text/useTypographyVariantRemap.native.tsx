@@ -4,7 +4,7 @@ import { remapTypographyVariant } from "typographyVariantRemap.tsx";
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
 
 export const useTypographyVariantRemap = function useTypographyVariantRemap(variant, arg1) {
-  const experiments = context /* context */.useManaContext().experiments;
+  const experiments = context.useManaContext().experiments;
   let enabledExperiments;
   if (experiments != null) {
     enabledExperiments = experiments.enabledExperiments;
@@ -12,7 +12,7 @@ export const useTypographyVariantRemap = function useTypographyVariantRemap(vari
   if (enabledExperiments == null) {
     enabledExperiments = [];
   }
-  const obj = context /* context */;
+  const obj = context;
   const tmp = require;
-  return remapTypographyVariant /* remapTypographyVariant */.remapTypographyVariant(enabledExperiments, variant, arg1);
+  return remapTypographyVariant.remapTypographyVariant(enabledExperiments, variant, arg1);
 };

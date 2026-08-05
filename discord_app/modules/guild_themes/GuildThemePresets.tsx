@@ -81,8 +81,8 @@ export const getSingleColorGuildThemeGradientColors = function getSingleColorGui
   return items;
 };
 export const getRandomSingleColorGuildTheme = function getRandomSingleColorGuildTheme() {
-  const diff = items /* items */.COLOR_PALETTE.length - 1;
-  const tmp2 = items /* items */.COLOR_PALETTE[Math.floor(Math, Math.random(Math) * (diff + 1))];
+  const diff = items.COLOR_PALETTE.length - 1;
+  const tmp2 = items.COLOR_PALETTE[Math.floor(Math, Math.random(Math) * (diff + 1))];
   const obj = { color: null, baseMix: null };
   const bound = Math.min(45, Math.round(100 * n(tmp2).get("hsl.l")));
   const obj2 = n(tmp2);

@@ -286,10 +286,10 @@ SectionEditAction.prototype["render"] = function render() {
   ({ style, onPress } = this.props);
   let obj = { accessibilityRole: "button", onPress, children: null };
   obj = { style, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.bt75uw);
-  obj[2] = callback(Button /* Button */.LegacyText, obj);
-  return callback(PressableBase /* PressableBase */.PressableOpacity, obj);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.bt75uw);
+  obj[2] = callback(Button.LegacyText, obj);
+  return callback(PressableBase.PressableOpacity, obj);
 };
 SectionEditAction.contextType = require("ManaContext").ThemeContext;
 const PureComponent3 = importAllResult.PureComponent;
@@ -698,7 +698,7 @@ prototype["render"] = function render() {
   return tmp3(tmp4, obj);
 };
 prototype["handleChannelPress"] = function handleChannelPress(arg0) {
-  init /* init */.open(arg0);
+  init.open(arg0);
 };
 prototype["handleSortStop"] = function handleSortStop() {
   dispatcher.stopReordering();
@@ -713,29 +713,29 @@ export default function GuildSettingsModalChannelsConnected(arg0) {
   ({ guildId: require, contentContainerStyle } = arg0);
   let stateFromStores5;
   let dependencyMap;
-  let obj = useNavigation /* useNavigation */;
+  let obj = useNavigation;
   const navigation = obj.useNavigation();
   let items = [createGuildRecordFromRust];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => outer1_8.getGuild(closure_0));
-  const obj2 = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => outer1_8.getGuild(closure_0));
+  const obj2 = initialize;
   const items1 = [sortCategoryList];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => sortCategoryList.channels);
-  const obj3 = initialize /* initialize */;
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => sortCategoryList.channels);
+  const obj3 = initialize;
   const items2 = [mergeGuildAvatar];
-  const stateFromStores2 = initialize /* initialize */.useStateFromStores(items2, () => {
+  const stateFromStores2 = initialize.useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();
     contentContainerStyle(_undefined[42])(null != currentUser, "GuildSettingsModalChannelsConnected: currentUser cannot be undefined");
     return currentUser;
   });
-  const obj4 = initialize /* initialize */;
+  const obj4 = initialize;
   const items3 = [sortCategoryList];
-  const stateFromStores3 = initialize /* initialize */.useStateFromStores(items3, () => sortCategoryList.channelList);
-  const obj5 = initialize /* initialize */;
+  const stateFromStores3 = initialize.useStateFromStores(items3, () => sortCategoryList.channelList);
+  const obj5 = initialize;
   const items4 = [sortCategoryList];
-  const stateFromStores4 = initialize /* initialize */.useStateFromStores(items4, () => sortCategoryList.order);
-  const obj6 = initialize /* initialize */;
+  const stateFromStores4 = initialize.useStateFromStores(items4, () => sortCategoryList.order);
+  const obj6 = initialize;
   const items5 = [sortCategoryList];
-  stateFromStores5 = initialize /* initialize */.useStateFromStores(items5, () => sortCategoryList.sortingType);
+  stateFromStores5 = initialize.useStateFromStores(items5, () => sortCategoryList.sortingType);
   const tmp8 = contentContainerStyle(1581)();
   dependencyMap = tmp8;
   const items6 = [contentContainerStyle, tmp8.bottom, stateFromStores5];
@@ -751,7 +751,7 @@ export default function GuildSettingsModalChannelsConnected(arg0) {
     }
     return tmp;
   }, items6);
-  getFontScale /* getFontScale */;
+  getFontScale;
   let tmp12 = null;
   if (null != stateFromStores4) {
     tmp12 = null;

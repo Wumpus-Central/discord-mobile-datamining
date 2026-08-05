@@ -405,7 +405,7 @@ const memoResult1 = importAllResult.memo((channel) => {
   let channelAction;
   let completed;
   channel = channel.channel;
-  let obj = useMemberActionsForChannel /* useMemberActionsForChannel */;
+  let obj = useMemberActionsForChannel;
   const memberActionsForChannel = obj.useMemberActionsForChannel(channel.guild_id, channel);
   ({ channelAction, completed } = memberActionsForChannel);
   let channelId;
@@ -413,11 +413,11 @@ const memoResult1 = importAllResult.memo((channel) => {
     channelId = channelAction.channelId;
   }
   let actionType;
-  const nextMemberAction = useMemberActionsForChannel /* useMemberActionsForChannel */.useNextMemberAction(channel.guild_id, channelId);
+  const nextMemberAction = useMemberActionsForChannel.useNextMemberAction(channel.guild_id, channelId);
   if (channelAction != null) {
     actionType = channelAction.actionType;
   }
-  if (actionType !== newMemberActionFromServer /* newMemberActionFromServer */.NewMemberActionTypes.VIEW) {
+  if (actionType !== newMemberActionFromServer.NewMemberActionTypes.VIEW) {
     obj = { channel: null };
     obj[0] = channel;
     let tmp7 = callback(closure_21, obj);

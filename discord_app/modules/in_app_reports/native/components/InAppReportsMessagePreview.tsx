@@ -25,12 +25,12 @@ const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/
 
 export default function MessagePreview(message) {
   const tmp = createCacheKey();
-  let obj = hexToRgba /* hexToRgba */;
+  let obj = hexToRgba;
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.iouM3a);
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.iouM3a);
+  const items = [callback(Text.Text, obj), ];
   const hexWithOpacityResult = obj.hexWithOpacity(tmp.borderColor.color, 0.08);
   const items1 = [tmp.chatItemContainer, { borderColor: hexWithOpacityResult }];
   items[1] = callback(View, { style: items1, children: callback(DCDChatItem, obj2) });

@@ -21,7 +21,7 @@ export const getUpdatedOptions = function getUpdatedOptions(extra) {
   }
   const obj2 = {};
   const merged2 = Object.assign(obj1);
-  obj2.lastFewActions = add /* add */.serialize();
+  obj2.lastFewActions = add.serialize();
   const merged3 = Object.assign(obj2);
   obj.extra = obj;
   return obj;

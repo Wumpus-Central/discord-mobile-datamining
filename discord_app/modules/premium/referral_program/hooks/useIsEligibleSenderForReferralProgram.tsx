@@ -11,8 +11,8 @@ export const useIsEligibleSenderForReferralProgram = function useIsEligibleSende
   if (result === undefined) {
     flag = false;
   }
-  const maybeFetchReferralsRemaining = useMaybeFetchReferralsRemaining /* useMaybeFetchReferralsRemaining */.useMaybeFetchReferralsRemaining(flag);
-  const obj = useMaybeFetchReferralsRemaining /* useMaybeFetchReferralsRemaining */;
+  const maybeFetchReferralsRemaining = useMaybeFetchReferralsRemaining.useMaybeFetchReferralsRemaining(flag);
+  const obj = useMaybeFetchReferralsRemaining;
   const items = [emitChanges];
-  return initialize /* initialize */.useStateFromStores(items, () => isEligibleToSendReferrals.getIsEligibleToSendReferrals());
+  return initialize.useStateFromStores(items, () => isEligibleToSendReferrals.getIsEligibleToSendReferrals());
 };

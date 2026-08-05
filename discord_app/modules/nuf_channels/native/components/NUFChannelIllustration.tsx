@@ -121,12 +121,12 @@ export default function NUFChannelIllustration() {
   items3[4] = callback(closure_5, { style: tmp.cardBackground });
   const obj6 = { style: tmp.card, shadow: "low", border: "subtle", children: null };
   const obj7 = { style: tmp.header, children: null };
-  const items7 = [callback(TextIcon /* TextIcon */.TextIcon, { size: "sm" }), ];
+  const items7 = [callback(TextIcon.TextIcon, { size: "sm" }), ];
   const obj8 = { variant: "text-md/bold", allowFontScaling: false, children: null };
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  const items8 = [" ", intl.string(getSystemLocale /* getSystemLocale */.t.aLOLry)];
+  let intl = getSystemLocale.intl;
+  const items8 = [" ", intl.string(getSystemLocale.t.aLOLry)];
   obj8[2] = items8;
-  items7[1] = callback2(Text /* Text */.Text, obj8);
+  items7[1] = callback2(Text.Text, obj8);
   obj7[1] = items7;
   const items9 = [callback2(closure_5, obj7), ];
   const obj9 = { style: tmp.content, children: null };
@@ -145,7 +145,7 @@ export default function NUFChannelIllustration() {
   obj9[1] = callback(first(4146).View, obj10);
   items9[1] = callback(closure_5, obj9);
   obj6[3] = items9;
-  items3[5] = callback2(PressableCard /* PressableCard */.Card, obj6);
+  items3[5] = callback2(PressableCard.Card, obj6);
   obj[1] = items3;
   return callback2(closure_5, obj);
 };

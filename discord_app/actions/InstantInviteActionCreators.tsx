@@ -94,13 +94,13 @@ function generateAcceptInviteOptions(target_type) {
   if (num == null) {
     num = 0;
   }
-  obj.isGuestInvite = hasFlag /* hasFlag */.hasFlag(num, set /* set */.GuildInviteFlags.IS_GUEST_INVITE);
-  const obj2 = hasFlag /* hasFlag */;
+  obj.isGuestInvite = hasFlag.hasFlag(num, set.GuildInviteFlags.IS_GUEST_INVITE);
+  const obj2 = hasFlag;
   let num2 = target_type.flags;
   if (num2 == null) {
     num2 = 0;
   }
-  obj.isApplicationBypassInvite = hasFlag /* hasFlag */.hasFlag(num2, set /* set */.GuildInviteFlags.IS_APPLICATION_BYPASS);
+  obj.isApplicationBypassInvite = hasFlag.hasFlag(num2, set.GuildInviteFlags.IS_APPLICATION_BYPASS);
   const inviter = target_type.inviter;
   let id3;
   if (inviter != null) {
@@ -971,7 +971,7 @@ export default {
   createFriendInvite(trackedActionData, location) {
     let obj = trackedActionData;
     dispatcher.dispatch({ type: "FRIEND_INVITE_CREATE_REQUEST" });
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_24.FRIEND_INVITES, body: null, context: null, rejectWithError: null };
     if (trackedActionData == null) {
       obj = {};
@@ -980,8 +980,8 @@ export default {
     obj[2] = { location };
     const obj2 = dispatcher;
     const tmp3 = require;
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const tmp3Result = sendRequest /* sendRequest */;
+    obj[3] = sendRequest.rejectWithMigratedError();
+    const tmp3Result = sendRequest;
     return HTTP.post(obj).then((body) => {
       body = body.body;
       callback(709).dispatch({ type: "FRIEND_INVITE_CREATE_SUCCESS", invite: body });
@@ -996,19 +996,19 @@ export default {
   revokeFriendInvites() {
     let obj = dispatcher;
     obj.dispatch({ type: "FRIEND_INVITE_REVOKE_REQUEST" });
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: closure_24.FRIEND_INVITES, context: obj, rejectWithError: null };
     obj = { location: location };
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
-    const obj4 = sendRequest /* sendRequest */;
+    obj[2] = sendRequest.rejectWithMigratedError();
+    const obj4 = sendRequest;
     return HTTP.del(obj).then((invites) => {
       callback(table[39]).dispatch({ type: "FRIEND_INVITE_REVOKE_SUCCESS", invites: invites.body });
     });
   },
   revokeFriendInvite(arg0) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     const obj = { url: closure_24.INVITE(arg0), rejectWithError: null };
-    obj[1] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[1] = sendRequest.rejectWithMigratedError();
     return HTTP.del(obj);
   },
   fetchFriendMembers(arg0) {
@@ -2391,7 +2391,7 @@ export default {
     }
   },
   openNativeAppModal(inviteKey) {
-    let obj = readSnowflake /* readSnowflake */;
+    let obj = readSnowflake;
     const result = obj.parseExtraDataFromInviteKey(inviteKey);
     obj = { installationId: store.getInstallationForTracking(), targetChannelId: result.targetChannelId, targetMessageId: result.targetMessageId, guildScheduledEventId: result.guildScheduledEventId };
     CodedLinkActionCreators.openNativeAppModal(result.baseCode, constants.INVITE_BROWSER, obj);
@@ -2403,7 +2403,7 @@ export default {
     }
     let transitionTo = obj.transitionTo;
     if (undefined === transitionTo) {
-      transitionTo = transitionTo /* transitionTo */.transitionTo;
+      transitionTo = transitionTo.transitionTo;
     }
     obj = { baseCode: baseCode.code, targetChannelId: null, targetMessageId: null, guildScheduledEventId: null };
     const target_channel_id = baseCode.target_channel_id;
@@ -2416,12 +2416,12 @@ export default {
       id = guild_scheduled_event.id;
     }
     obj[3] = id;
-    const inviteKeyFromExtraData = readSnowflake /* readSnowflake */.generateInviteKeyFromExtraData(obj);
+    const inviteKeyFromExtraData = readSnowflake.generateInviteKeyFromExtraData(obj);
     obj = { search: null };
     const result = closure_26.APP_WITH_INVITE_AND_GUILD_ONBOARDING(baseCode.code);
-    const obj2 = readSnowflake /* readSnowflake */;
+    const obj2 = readSnowflake;
     const tmp3 = require;
-    obj[0] = readSnowflake /* readSnowflake */.getInviteKeySearchSuffix(inviteKeyFromExtraData);
+    obj[0] = readSnowflake.getInviteKeySearchSuffix(inviteKeyFromExtraData);
     transitionTo(result, obj);
   },
   openApp(code, arg1, fingerprint, username) {

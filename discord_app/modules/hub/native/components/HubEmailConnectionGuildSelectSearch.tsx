@@ -26,9 +26,9 @@ function EmptyState() {
   obj = { style: tmp.emptyStateImage, source: registerAsset };
   const items = [callback2(closure_7, obj), ];
   obj = { style: tmp.emptyStateTitle, variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["6HXiuE"]);
-  items[1] = callback2(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["6HXiuE"]);
+  items[1] = callback2(Text.Text, obj);
   obj[1] = items;
   return callback3(closure_6, obj);
 }
@@ -64,7 +64,7 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   let anyErrorMessage;
   const tmp = createCacheKey();
   dependencyMap = tmp;
-  let obj = useNavigation /* useNavigation */;
+  let obj = useNavigation;
   closure_3 = obj.useNavigation();
   const tmp4 = callback(React.useState(""), 2);
   callback = tmp4[0];
@@ -85,13 +85,13 @@ export default function HubEmailConnectionGuildSelectSearch(arg0) {
   const tmp6 = callback(React.useState(false), 2);
   const tmp8 = importDefault;
   const intl = tmp2(1236).intl;
-  obj1[0] = intl.string(getSystemLocale /* getSystemLocale */.t.nL2wKD);
+  obj1[0] = intl.string(getSystemLocale.t.nL2wKD);
   obj1[1] = tmp4[1];
   obj1[2] = function onClose() {
 
   };
   obj[1] = callback2(SearchBarNav, obj1);
-  const items = [callback2(HeaderBackImage /* HeaderBackImage */.FauxHeader, obj), ];
+  const items = [callback2(HeaderBackImage.FauxHeader, obj), ];
   obj2 = {
     keyboardShouldPersistTaps: "always",
     data: found,

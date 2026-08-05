@@ -62,7 +62,7 @@ export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachmen
     let num = constants5.IS_SPOILER;
   } else {
     num = 0;
-    const tmpResult = urlMatchesFileExtension /* urlMatchesFileExtension */;
+    const tmpResult = urlMatchesFileExtension;
   }
   return num;
 };
@@ -74,8 +74,8 @@ export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_l
   if (constants2.LEARN_MORE_LINK === arg0) {
     let str2 = learn_more_link;
     let obj = { text: null, type: null, key: null };
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl2.string(getSystemLocale /* getSystemLocale */.t["8/GdRB"]);
+    const intl2 = getSystemLocale.intl;
+    obj[0] = intl2.string(getSystemLocale.t["8/GdRB"]);
     obj[1] = tmp.LEARN_MORE_LINK;
     if (learn_more_link == null) {
       str2 = "";
@@ -85,8 +85,8 @@ export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_l
   } else if (tmp.POLICY_VIOLATION_DETAIL === arg0) {
     let str = classification_id;
     obj = { text: null, type: null, key: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.QsqdXC);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.QsqdXC);
     obj[1] = tmp.POLICY_VIOLATION_DETAIL;
     if (classification_id == null) {
       str = "";
@@ -96,7 +96,7 @@ export const mapCtaToNativeData = function mapCtaToNativeData(arg0, learn_more_l
   }
 };
 export const isFlaggedContentEmpty = function isFlaggedContentEmpty(first) {
-  let tmp = first.type !== ContentIdType /* ContentIdType */.ContentIdType.MESSAGE;
+  let tmp = first.type !== ContentIdType.ContentIdType.MESSAGE;
   if (!tmp) {
     let tmp2 = "" === first.content;
     if (tmp2) {
@@ -108,14 +108,14 @@ export const isFlaggedContentEmpty = function isFlaggedContentEmpty(first) {
 };
 export const getAppealSignalDisplayText = function getAppealSignalDisplayText(signal) {
   const obj = {};
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[constants.DIDNT_VIOLATE_POLICY] = intl.string(getSystemLocale /* getSystemLocale */.t.mZffAi);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[constants.TOO_STRICT_UNFAIR] = intl2.string(getSystemLocale /* getSystemLocale */.t.wgZVAn);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[constants.DONT_AGREE_PENALTY] = intl3.string(getSystemLocale /* getSystemLocale */.t.eu8G4k);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
-  obj[constants.SOMETHING_ELSE] = intl4.string(getSystemLocale /* getSystemLocale */.t.XU3s6r);
+  const intl = getSystemLocale.intl;
+  obj[constants.DIDNT_VIOLATE_POLICY] = intl.string(getSystemLocale.t.mZffAi);
+  const intl2 = getSystemLocale.intl;
+  obj[constants.TOO_STRICT_UNFAIR] = intl2.string(getSystemLocale.t.wgZVAn);
+  const intl3 = getSystemLocale.intl;
+  obj[constants.DONT_AGREE_PENALTY] = intl3.string(getSystemLocale.t.eu8G4k);
+  const intl4 = getSystemLocale.intl;
+  obj[constants.SOMETHING_ELSE] = intl4.string(getSystemLocale.t.XU3s6r);
   return obj[signal];
 };
 export const capitalizeText = function capitalizeText(description) {
@@ -140,11 +140,11 @@ export const isGuildClassification = function isGuildClassification(stateFromSto
 };
 export const getRequestReviewErrorFromCode = function getRequestReviewErrorFromCode(code) {
   if (code === constants4.DSA_APPEAL_REQUEST_DEFLECTION) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["0qyXXH"]);
+    const intl2 = getSystemLocale.intl;
+    let stringResult = intl2.string(getSystemLocale.t["0qyXXH"]);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.aPmsx3);
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t.aPmsx3);
   }
   return stringResult;
 };
@@ -164,7 +164,7 @@ export const getClassificationExpiration = function getClassificationExpiration(
 };
 export const useIsSuspendedUser = function useIsSuspendedUser() {
   const items = [fetchFingerprint];
-  return null != initialize /* initialize */.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
+  return null != initialize.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
 };
 export const isCurrentUserSuspended = function isCurrentUserSuspended() {
   return null != suspendedUserToken.getSuspendedUserToken();

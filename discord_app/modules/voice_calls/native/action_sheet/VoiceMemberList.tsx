@@ -31,14 +31,14 @@ let metroImportAll;
 const require = arg1;
 function ItemSeparator() {
   const tmp = callback4();
-  return callback2(Form /* Form */.FormDivider, { style: callback4().rowFormDivider });
+  return callback2(Form.FormDivider, { style: callback4().rowFormDivider });
 }
 function VoiceMemberListSectionHeader(title) {
   const tmp = callback4();
   let obj = { style: tmp.sectionContainer, children: null };
   obj = { style: tmp.sectionTitle, variant: "text-xs/bold", color: "text-default", children: null };
   obj[3] = title.title.toUpperCase();
-  obj[1] = callback2(Text /* Text */.Text, obj);
+  obj[1] = callback2(Text.Text, obj);
   return callback2(closure_8, obj);
 }
 function renderSectionHeader(section) {

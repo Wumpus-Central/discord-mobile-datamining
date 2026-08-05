@@ -32,7 +32,7 @@ export const RowGroup = function RowGroup(children) {
     obj = { direction: "horizontal", spacing: 4, children: null };
     const items = [tmp7, trailing];
     obj[2] = items;
-    tmp2Result = tmp2(Stack /* Stack */.Stack, obj);
+    tmp2Result = tmp2(Stack.Stack, obj);
     tmp5 = require;
   }
   const items1 = [tmp2Result, callback(View, { style: tmp.content, children: children.children })];

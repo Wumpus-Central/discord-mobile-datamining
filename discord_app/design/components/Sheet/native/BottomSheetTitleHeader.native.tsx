@@ -120,7 +120,7 @@ function Title(arg0) {
   }
   const tmp = callback4();
   const merged = Object.assign(arg0);
-  return callback2(Text /* Text */.Text, { variant: str, color: "mobile-text-heading-primary", accessibilityRole: "header", style: callback4().title });
+  return callback2(Text.Text, { variant: str, color: "mobile-text-heading-primary", accessibilityRole: "header", style: callback4().title });
 }
 function Subtitle(children) {
   const tmp3 = useIsMobileVisualRefreshExperimentEnabled("BottomSheetTitleHeader");
@@ -133,7 +133,7 @@ function Subtitle(children) {
     str2 = "text-sm/medium";
   }
   const tmp = callback4();
-  return callback2(Text /* Text */.Text, { variant: str2, color: str, lineClamp: 1, style: callback4().subtitle, children: children.children });
+  return callback2(Text.Text, { variant: str2, color: str, lineClamp: 1, style: callback4().subtitle, children: children.children });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles(() => {

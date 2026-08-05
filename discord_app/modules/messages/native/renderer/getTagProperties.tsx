@@ -18,7 +18,7 @@ export default function getTagProperties(arg0) {
   ({ channel, colors } = arg0);
   const author = message.author;
   const isVerifiedBotResult = author.isVerifiedBot();
-  let obj = isPublicSystemMessage /* isPublicSystemMessage */;
+  let obj = isPublicSystemMessage;
   if (!obj.isPublicSystemMessage(message)) {
     if (!isSystemDM) {
       if (isCrosspost(message)) {

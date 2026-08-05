@@ -38,7 +38,7 @@ export const ChannelContainer = function ChannelContainer(children) {
   let dependencyMap;
   let React;
   let c4;
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [handleConnectionOpen, ensureGuildLoaded];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const voiceChannelId = outer1_7.getVoiceChannelId();

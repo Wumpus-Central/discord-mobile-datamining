@@ -25,7 +25,7 @@ function Tag(arg0) {
   let obj = { style: tmp.tag, accessible: true, accessibilityLabel, children: null };
   const items = [icon, ];
   obj = { variant: "text-sm/normal", style: tmp.tagText, children: tagName };
-  items[1] = callback3(Text /* Text */.Text, obj);
+  items[1] = callback3(Text.Text, obj);
   obj[3] = items;
   return callback4(View, obj);
 }

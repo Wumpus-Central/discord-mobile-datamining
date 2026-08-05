@@ -25,6 +25,6 @@ export const getDeviceCountry = function getDeviceCountry() {
     }
     return formatted;
   }
-  obj = set /* set */;
+  obj = set;
   tmp = require;
 };

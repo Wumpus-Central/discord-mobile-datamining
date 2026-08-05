@@ -373,7 +373,7 @@ function buildSubCommands(arg0) {
     const items = [buildCommand(obj)];
     return items;
   } else {
-    if (command.type !== PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.SUB_COMMAND) {
+    if (command.type !== PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND) {
       if (command.type !== tmp(1906).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
         obj = { rootCommand: null, command: null, applicationId: null, subCommandPath: null, useKeyedPermissions: null };
         obj[0] = rootCommand;
@@ -409,7 +409,7 @@ function buildSubCommands(arg0) {
       obj1[0] = found[num3].name;
       let tmp8 = require;
       let tmp9 = dependencyMap;
-      obj1[1] = PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.SUB_COMMAND_GROUP;
+      obj1[1] = PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND_GROUP;
       let name = found[num3].name_localized;
       if (name == null) {
         name = found[num3].name;
@@ -444,7 +444,7 @@ function buildSubCommands(arg0) {
       obj3[0] = found1[num4].name;
       let tmp18 = require;
       let tmp19 = dependencyMap;
-      obj3[1] = PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.SUB_COMMAND;
+      obj3[1] = PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND;
       let name2 = found1[num4].name_localized;
       if (name2 == null) {
         name2 = found1[num4].name;
@@ -468,7 +468,7 @@ function buildSubCommands(arg0) {
   }
 }
 function hasAccessGivenPerms(selfMember, id, commandLevelPermissions) {
-  const obj = commandPermissions /* commandPermissions */;
+  const obj = commandPermissions;
   const tmp = commandLevelPermissions[obj.toPermissionKey(obj, selfMember.userId, require(undefined, 6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.USER)];
   if (null != tmp) {
     return tmp.permission;
@@ -479,7 +479,7 @@ function hasAccessGivenPerms(selfMember, id, commandLevelPermissions) {
     while (obj4 !== undefined) {
       let tmp5 = require;
       let tmp6 = dependencyMap;
-      let obj2 = commandPermissions /* commandPermissions */;
+      let obj2 = commandPermissions;
       let tmp7 = commandLevelPermissions[obj2.toPermissionKey(obj2, tmp3, require(undefined, 6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE)];
       if (null != tmp7) {
         flag = true;
@@ -495,7 +495,7 @@ function hasAccessGivenPerms(selfMember, id, commandLevelPermissions) {
     if (flag) {
       return false;
     } else {
-      const obj3 = commandPermissions /* commandPermissions */;
+      const obj3 = commandPermissions;
       const tmp14 = commandLevelPermissions[obj3.toPermissionKey(obj3, id, require(undefined, 6891) /* ApplicationCommandSectionType */.ApplicationCommandPermissionType.ROLE)];
       let permission = null;
       if (null != tmp14) {
@@ -556,7 +556,7 @@ export const getMatchingGroupCommands = function getMatchingGroupCommands(contex
   return items.slice(0, arg3);
 };
 export const getApplicationCommandOptionQueryOptions = function getApplicationCommandOptionQueryOptions(option) {
-  let tmp3 = option.type === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.USER;
+  let tmp3 = option.type === PermissionOverwriteType.ApplicationCommandOptionType.USER;
   if (!tmp3) {
     tmp3 = option.type === tmp(1906).ApplicationCommandOptionType.MENTIONABLE;
   }
@@ -564,7 +564,7 @@ export const getApplicationCommandOptionQueryOptions = function getApplicationCo
   if (!tmp4) {
     tmp4 = option.type === tmp(1906).ApplicationCommandOptionType.MENTIONABLE;
   }
-  const tmp5 = option.type === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.STRING;
+  const tmp5 = option.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING;
   let tmp6 = tmp5;
   if (!tmp5) {
     tmp6 = tmp4;
@@ -572,7 +572,7 @@ export const getApplicationCommandOptionQueryOptions = function getApplicationCo
   const obj = { canMentionEveryone: tmp6, canMentionHere: tmp5, canMentionChannels: null, canMentionUsers: null, canMentionRoles: null, canMentionAnyGuildUser: null, canMentionNonMentionableRoles: null, canMentionOtherGlobals: null };
   let tmp7 = tmp5;
   if (!tmp5) {
-    tmp7 = option.type === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.CHANNEL;
+    tmp7 = option.type === PermissionOverwriteType.ApplicationCommandOptionType.CHANNEL;
   }
   obj[2] = tmp7;
   let tmp8 = tmp5;
@@ -657,7 +657,7 @@ export const hasAccess = function hasAccess(arg0) {
   return true;
 };
 export const getCommandAttachmentDraftType = function getCommandAttachmentDraftType(closure_10) {
-  if (ApplicationCommandSectionType /* ApplicationCommandSectionType */.CommandOrigin.CHAT === closure_10) {
+  if (ApplicationCommandSectionType.CommandOrigin.CHAT === closure_10) {
     return DraftType.SlashCommand;
   } else {
     return DraftType.ApplicationLauncherCommand;
@@ -666,18 +666,18 @@ export const getCommandAttachmentDraftType = function getCommandAttachmentDraftT
 export const getCommandTriggerSection = function getCommandTriggerSection(closure_3) {
   if (null != closure_3) {
     if (closure_3.id === constants.BUILT_IN) {
-      let APP = ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandTriggerSections.BUILT_IN;
+      let APP = ApplicationCommandSectionType.ApplicationCommandTriggerSections.BUILT_IN;
     } else if (closure_3.id === tmp.FRECENCY) {
-      APP = ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandTriggerSections.FRECENCY;
+      APP = ApplicationCommandSectionType.ApplicationCommandTriggerSections.FRECENCY;
     } else {
-      APP = ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandTriggerSections.APP;
+      APP = ApplicationCommandSectionType.ApplicationCommandTriggerSections.APP;
     }
     return APP;
   }
 };
 export const getApplicationCommandSection = function getApplicationCommandSection(application, arg1, arg2) {
   let name = arg2;
-  const obj = { type: ApplicationCommandSectionType /* ApplicationCommandSectionType */.ApplicationCommandSectionType.APPLICATION, id: application.id, name: null, icon: null, application: null, isUserApp: null };
+  const obj = { type: ApplicationCommandSectionType.ApplicationCommandSectionType.APPLICATION, id: application.id, name: null, icon: null, application: null, isUserApp: null };
   if (arg2 == null) {
     let username;
     if (application != null) {
@@ -737,7 +737,7 @@ export const trackCommandSelected = function trackCommandSelected(command) {
   let triggerSection;
   command = command.command;
   ({ location: _location, triggerSection, queryLength, sectionName, query, searchResultsPosition, source } = command);
-  let obj = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+  let obj = collectGuildAnalyticsMetadata;
   const rootCommand = command.rootCommand;
   let id;
   if (rootCommand != null) {

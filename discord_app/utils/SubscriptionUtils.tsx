@@ -47,14 +47,14 @@ export const subscriptionCanSwitchImmediately = function subscriptionCanSwitchIm
   if (null == currentSubscriptionPlanIdForGroup) {
     obj = { message: "Current subscription has no plan in group", extraSentryInformation: null };
     obj[1] = obj;
-    const checkoutError = new prototype /* prototype */.CheckoutError(obj);
+    const checkoutError = new prototype.CheckoutError(obj);
     throw checkoutError;
   } else {
     if (currentSubscriptionPlanIdForGroup === closure_8.PREMIUM_YEAR_TIER_1) {
       if (newPlanId === closure_8.PREMIUM_MONTH_TIER_2) {
         obj = { message: "Unexpected plan switch", extraSentryInformation: null };
         obj[1] = obj;
-        const checkoutError1 = new prototype /* prototype */.CheckoutError(obj);
+        const checkoutError1 = new prototype.CheckoutError(obj);
         throw checkoutError1;
       }
     }
@@ -71,14 +71,14 @@ export const subscriptionCanDowngrade = function subscriptionCanDowngrade(getCur
     if (null == currentSubscriptionPlanIdForGroup) {
       obj = { message: "Current subscription has no plan in group", extraSentryInformation: null };
       obj[1] = obj;
-      const checkoutError = new prototype /* prototype */.CheckoutError(obj);
+      const checkoutError = new prototype.CheckoutError(obj);
       throw checkoutError;
     } else {
       if (currentSubscriptionPlanIdForGroup === closure_8.PREMIUM_YEAR_TIER_1) {
         if (arg1 === closure_8.PREMIUM_MONTH_TIER_2) {
           obj = { message: "Unexpected plan switch", extraSentryInformation: null };
           obj[1] = obj;
-          const checkoutError1 = new prototype /* prototype */.CheckoutError(obj);
+          const checkoutError1 = new prototype.CheckoutError(obj);
           throw checkoutError1;
         }
       }
@@ -98,12 +98,12 @@ export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(su
     const tmp12 = require;
     const tmp8 = 00038__;
     const tmp9 = null != table[subscriptionPlanId];
-    const result = getPremiumPlanItem /* getPremiumPlanItem */.castPremiumSubscriptionAsSkuId(tmp5.skuId);
+    const result = getPremiumPlanItem.castPremiumSubscriptionAsSkuId(tmp5.skuId);
     if (!addSubscriptionPlan.isFetchingForSKU(result)) {
       const subscriptionPlansForSKU = tmp12(5786).fetchSubscriptionPlansForSKU(result, closure_1);
       const tmp12Result = tmp12(5786);
     }
-    const obj3 = getPremiumPlanItem /* getPremiumPlanItem */;
+    const obj3 = getPremiumPlanItem;
   }
   return value;
 };
@@ -145,7 +145,7 @@ export const useGetOrFetchSubscriptionPlan = function useGetOrFetchSubscriptionP
   return first;
 };
 export const getSubscriptionPauseDurations = function getSubscriptionPauseDurations(status) {
-  const keys = Object.keys(PauseDuration /* PauseDuration */.PauseDuration);
+  const keys = Object.keys(PauseDuration.PauseDuration);
   const found = keys.filter((arg0) => isNaN(Number(arg0)));
   if (status.status !== constants.PAUSED) {
     let obj = { durations: null, currentDaysPaused: 0 };
@@ -161,7 +161,7 @@ export const getSubscriptionPauseDurations = function getSubscriptionPauseDurati
       let tmp12 = dependencyMap;
       let tmp13 = dependencyMap;
       let tmp10 = item10042;
-      if (PauseDuration /* PauseDuration */.PauseDuration[item10042] > rounded) {
+      if (PauseDuration.PauseDuration[item10042] > rounded) {
         let tmp14 = item10042;
         let arr = items.push(tmp10);
       }

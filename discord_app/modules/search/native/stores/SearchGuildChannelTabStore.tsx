@@ -22,9 +22,9 @@ class GuildChannelSearchManager {
 const prototype = GuildChannelSearchManager.prototype;
 prototype["search"] = function search(query, guildId) {
   const self = this;
-  let obj = NOOP /* NOOP */;
+  let obj = NOOP;
   const boosterMap = obj.getBoosterMap(AutocompleterResultTypes.TEXT_CHANNEL);
-  let obj1 = NOOP /* NOOP */;
+  let obj1 = NOOP;
   obj = {
     query,
     guildId,
@@ -50,8 +50,8 @@ prototype["search"] = function search(query, guildId) {
   const obj6 = NOOP;
   this.voiceChannels = NOOP.queryChannels(obj1).map((channel) => ({ channel: channel.record }));
   const queryChannelsResult1 = NOOP.queryChannels(obj1);
-  const obj8 = apply /* apply */;
-  const mapped = apply /* apply */.chain(queryChannelsResult).map((channel) => {
+  const obj8 = apply;
+  const mapped = apply.chain(queryChannelsResult).map((channel) => {
     const obj = { channel: channel.record, lastMessageId: null };
     let lastMessageId = generateOldThreadCutoff.lastMessageId(channel.record.id);
     if (lastMessageId == null) {
@@ -60,7 +60,7 @@ prototype["search"] = function search(query, guildId) {
     obj[1] = lastMessageId;
     return obj;
   });
-  const chainResult = apply /* apply */.chain(queryChannelsResult);
+  const chainResult = apply.chain(queryChannelsResult);
   this.textChannels = mapped.sort((lastMessageId, lastMessageId2) => callback(table[5]).compare(lastMessageId2.lastMessageId, lastMessageId.lastMessageId)).value();
   if (query.length > 0) {
     self.count = self.textChannels.length + self.voiceChannels.length;

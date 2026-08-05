@@ -5,8 +5,8 @@ import { ProfileCustomizationSubsection } from "../../profiles/native/ProfileCus
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.LYju5J);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.LYju5J);
   },
   parent: null,
   unsearchable: true,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
-    return ProfileCustomizationSubsection /* ProfileCustomizationSubsection */.default;
+    return ProfileCustomizationSubsection.default;
   }
 };
 const route = createToggle.createRoute(obj);

@@ -12,7 +12,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.DESIGN_SYSTEM_FORM_PRIMITIVES,
   getComponent() {
-    return Radio /* Radio */.default;
+    return Radio.default;
   }
 };
 const route = createToggle.createRoute(obj);

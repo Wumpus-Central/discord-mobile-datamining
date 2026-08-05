@@ -21,8 +21,8 @@ function MediaKeyboardBackground(arg0) {
   let style;
   ({ pointerEvents, style } = arg0);
   const obj = { pointerEvents, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: null, style: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.XONG6A);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.XONG6A);
   const items = [style, callback3().background];
   obj[4] = items;
   return callback2(View, obj);

@@ -76,7 +76,7 @@ function trackInvite(channelId) {
   }
   id = id.getId();
   invite = invite.getInvite(inviteKey);
-  let obj = readSnowflake /* readSnowflake */;
+  let obj = readSnowflake;
   const result = obj.parseExtraDataFromInviteKey(inviteKey);
   let result1 = null != invite;
   if (result1) {
@@ -223,8 +223,8 @@ RemoteFetch.prototype["markComplete"] = function markComplete() {
 let obj = {
   messageName: "SLOWMODE_RATE_LIMITED",
   messageGetter(rateLimitPerUser) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.IWntYg, { seconds: rateLimitPerUser.rateLimitPerUser });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.IWntYg, { seconds: rateLimitPerUser.rateLimitPerUser });
   }
 };
 obj = {
@@ -239,25 +239,25 @@ obj = {
     if (rawRecipients.isDM()) {
       if (1 === rawRecipients.length) {
         if (rawRecipients.some((bot) => bot.bot)) {
-          const intl2 = getSystemLocale /* getSystemLocale */.intl;
+          const intl2 = getSystemLocale.intl;
           obj = { helpUrl: null };
           obj[0] = articleURL;
-          let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.SkGL7l, obj);
+          let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t.SkGL7l, obj);
         }
         return formatToPlainStringResult;
       }
     }
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.llTkqr, { helpUrl: articleURL });
+    const intl = getSystemLocale.intl;
+    formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.llTkqr, { helpUrl: articleURL });
   }
 };
 obj = {
   messageName: "INVALID_MESSAGE_SEND_USER",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj = { helpUrl: null };
     obj[0] = combined.getArticleURL(constants7.DM_COULD_NOT_BE_DELIVERED);
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.SkGL7l, obj);
+    return intl.formatToPlainString(getSystemLocale.t.SkGL7l, obj);
   }
 };
 let closure_54 = {
@@ -269,99 +269,99 @@ let closure_54 = {
     messageGetter(isForumLikeChannel) {
       if (!isForumLikeChannel.isForumLikeChannel()) {
         if (!isForumLikeChannel.isForumPost()) {
-          const intl = getSystemLocale /* getSystemLocale */.intl;
-          let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["5EMPA7"]);
+          const intl = getSystemLocale.intl;
+          let stringResult = intl.string(getSystemLocale.t["5EMPA7"]);
         }
         return stringResult;
       }
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["/jUd2+"]);
+      const intl2 = getSystemLocale.intl;
+      stringResult = intl2.string(getSystemLocale.t["/jUd2+"]);
     }
   },
   [AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS]: {
     messageName: "TOO_MANY_ANNOUNCEMENT_THREADS",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["aY+lLC"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["aY+lLC"]);
     }
   },
   [AbortCodes.HARMFUL_LINK_MESSAGE_BLOCKED]: {
     messageName: "HARMFUL_LINK_MESSAGE_BLOCKED",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zSG3Qy, { helpUrl: constants8.HARMFUL_LINKS });
+      const intl = getSystemLocale.intl;
+      return intl.formatToPlainString(getSystemLocale.t.zSG3Qy, { helpUrl: constants8.HARMFUL_LINKS });
     }
   },
   [AbortCodes.HARMFUL_URL_BLOCKED]: {
     messageName: "HARMFUL_URL_BLOCKED",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.WxX2Fd);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.WxX2Fd);
     }
   },
   [AbortCodes.EMAIL_VERIFICATION_REQUIRED]: {
     messageName: "BOT_REQUIRES_EMAIL_VERIFICATION",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.k1Cjqr);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.k1Cjqr);
     }
   },
   [AbortCodes.GUILD_MESSAGE_UPDATE_RATE_LIMIT_EXCEEDED]: {
     messageName: "GUILD_MESSAGE_UPDATE_RATE_LIMIT_EXCEEDED",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.Z5SUuv);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.Z5SUuv);
     }
   },
   [AbortCodes.RATE_LIMIT_DM_OPEN]: {
     messageName: "BOT_DM_RATE_LIMITED",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.E8nbNb);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.E8nbNb);
     }
   },
   [AbortCodes.SEND_MESSAGE_TEMPORARILY_DISABLED]: {
     messageName: "BOT_DM_SEND_MESSAGE_TEMPORARILY_DISABLED",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.aRUbah);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.aRUbah);
     }
   },
   [AbortCodes.INVALID_MESSAGE_SEND_GAME_FRIEND_DM]: {
     messageName: "BOT_DM_SEND_MESSAGE_INVALID_FOR_GAME_FRIEND",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["/meGhR"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["/meGhR"]);
     }
   },
   [AbortCodes.INVALID_MESSAGE_SEND_PROVISIONAL_ACCOUNT_OFFLINE]: {
     messageName: "BOT_DM_SEND_MESSAGE_INVALID_OFFLINE_PROVISIONAL_ACCOUNT",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.Oc1Zjw);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.Oc1Zjw);
     }
   },
   [AbortCodes.TOTAL_ATTACHMENT_SIZE_TOO_LARGE]: {
     messageName: "TOTAL_ATTACHMENT_SIZE_TOO_LARGE",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
+      const intl = getSystemLocale.intl;
       const obj = { maxSizeMb: null };
-      obj[0] = items /* items */.MAX_TOTAL_ATTACHMENT_SIZE_MB;
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.DYFPg2, obj);
+      obj[0] = items.MAX_TOTAL_ATTACHMENT_SIZE_MB;
+      return intl.formatToPlainString(getSystemLocale.t.DYFPg2, obj);
     }
   },
   [AbortCodes.CLOUD_UPLOAD_NOT_FOUND]: {
     messageName: "CLOUD_UPLOAD_NOT_FOUND",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.bQldfH);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.bQldfH);
     }
   },
   [AbortCodes.INVALID_PERMISSIONS]: {
     messageName: "INVALID_PERMISSIONS",
     messageGetter() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.zl4Weq);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.zl4Weq);
     }
   }
 };
@@ -386,7 +386,7 @@ let obj14 = {
       obj.trackWithMetadata(constants.AUTOMATED_MESSAGE_RECEIVED, obj);
     }
     obj = { messageId: nonce, channelId: id, content: intl, loggingName: messageName };
-    obj14.receiveMessage(id, createMessage /* createMessage */.createBotMessage(obj));
+    obj14.receiveMessage(id, createMessage.createBotMessage(obj));
   },
   sendNitroSystemMessage(channelId, content, nonce) {
     obj = { channelId, nonce, type: constants6.NITRO_NOTIFICATION, content, flags: closure_33.EPHEMERAL, author: obj };
@@ -424,13 +424,13 @@ let obj14 = {
       if (null != obj) {
         obj14.sendBotMessage(c0, obj.messageGetter(channel), obj.messageName);
       } else {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
+        const intl = getSystemLocale.intl;
         obj = { helpUrl: null };
         obj[0] = combined.getArticleURL(constants7.DM_COULD_NOT_BE_DELIVERED);
         const _HermesInternal = HermesInternal;
         const obj3 = combined;
-        obj14.sendBotMessage(c0, intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.SkGL7l, obj), "SEND_FAILED (" + num + ")");
-        const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.SkGL7l, obj);
+        obj14.sendBotMessage(c0, intl.formatToPlainString(getSystemLocale.t.SkGL7l, obj), "SEND_FAILED (" + num + ")");
+        const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.SkGL7l, obj);
       }
     }
   },
@@ -442,8 +442,8 @@ let obj14 = {
       let obj = { isDM: null, isGDM: null };
       obj[0] = channel.isDM();
       obj[1] = channel.isGroupDM();
-      const match = t /* t */.match(obj);
-      const str = t /* t */;
+      const match = t.match(obj);
+      const str = t;
       const withResult = match.with({ isDM: true }, () => {
         const obj = { message: null, messageName: "BOT_DM_EXPLICIT_CONTENT" };
         const intl = callback(1236).intl;
@@ -493,15 +493,15 @@ let obj14 = {
         obj[0] = intl.string(callback(1236).t.i4AbAS);
         return obj;
       });
-      const nonce = snowflakeSequence /* snowflakeSequence */.createNonce();
+      const nonce = snowflakeSequence.createNonce();
       obj14.sendBotMessage(c0, message, messageName, nonce);
-      const obj8 = snowflakeSequence /* snowflakeSequence */;
+      const obj8 = snowflakeSequence;
       obj = { action: null, messageId: null, channelId: null, context: null };
-      obj[0] = redactionSettingToRenderedString /* redactionSettingToRenderedString */.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT;
+      obj[0] = redactionSettingToRenderedString.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLYDE_MESSAGE_SENT;
       obj[1] = nonce;
       obj[2] = c0;
       obj[3] = EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED;
-      const result = redactionSettingToRenderedString /* redactionSettingToRenderedString */.trackMediaRedactionAction(obj);
+      const result = redactionSettingToRenderedString.trackMediaRedactionAction(obj);
       let tmp = null != attachments;
       if (tmp) {
         tmp = attachments.length > 0;
@@ -514,7 +514,7 @@ let obj14 = {
         obj1[3] = attachments;
         obj1.dispatch(obj1);
       }
-      const obj9 = redactionSettingToRenderedString /* redactionSettingToRenderedString */;
+      const obj9 = redactionSettingToRenderedString;
     }
   },
   truncateMessages(channelId, truncateBottom, truncateTop) {
@@ -1482,8 +1482,8 @@ let obj14 = {
     if (invalidEmojis.some((animated) => animated.animated)) {
       let obj = getPremiumPlanItem;
       if (!obj.canUseAnimatedEmojis(currentUser)) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["V5/GgC"]);
+        const intl = getSystemLocale.intl;
+        let stringResult = intl.string(getSystemLocale.t["V5/GgC"]);
         let str = "INVALID_ANIMATED_EMOJI_BODY";
       }
       obj = { errorMessage: null, errorMessageName: null };
@@ -1491,8 +1491,8 @@ let obj14 = {
       obj[1] = str;
       return obj;
     }
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["Q87rI/"]);
+    const intl2 = getSystemLocale.intl;
+    stringResult = intl2.string(getSystemLocale.t["Q87rI/"]);
     str = "INVALID_EXTERNAL_EMOJI_BODY";
   },
   _sendMessage(arg0, arg1, arg2) {
@@ -2501,7 +2501,7 @@ let obj14 = {
     obj.dispatch(obj);
   },
   startEditMessageRecord(id, flags, source) {
-    let obj = hasFlag /* hasFlag */;
+    let obj = hasFlag;
     if (obj.hasFlag(flags.flags, closure_33.IS_COMPONENTS_V2)) {
       const components = flags.components;
       const found = components.filter((type) => type.type === callback(table[79]).ComponentType.TEXT_DISPLAY);
@@ -2989,7 +2989,7 @@ let obj14 = {
       obj[1] = loggingName.author.username;
       obj.trackWithMetadata(constants.AUTOMATED_MESSAGE_DISMISSED, obj);
     }
-    const result = fetchAndReconcileGiftIntentDismissals /* fetchAndReconcileGiftIntentDismissals */.logGiftIntentMessageDismissed(loggingName.channel_id, loggingName.id);
+    const result = fetchAndReconcileGiftIntentDismissals.logGiftIntentMessageDismissed(loggingName.channel_id, loggingName.id);
     this.deleteMessage(loggingName.channel_id, loggingName.id, true);
   },
   revealMessage(id, messageId) {
@@ -3099,99 +3099,99 @@ let obj1 = {
   messageGetter(isForumLikeChannel) {
     if (!isForumLikeChannel.isForumLikeChannel()) {
       if (!isForumLikeChannel.isForumPost()) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        let stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["5EMPA7"]);
+        const intl = getSystemLocale.intl;
+        let stringResult = intl.string(getSystemLocale.t["5EMPA7"]);
       }
       return stringResult;
     }
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t["/jUd2+"]);
+    const intl2 = getSystemLocale.intl;
+    stringResult = intl2.string(getSystemLocale.t["/jUd2+"]);
   }
 };
 let obj10 = {
   messageName: "BOT_DM_SEND_MESSAGE_INVALID_OFFLINE_PROVISIONAL_ACCOUNT",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Oc1Zjw);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Oc1Zjw);
   }
 };
 let obj11 = {
   messageName: "TOTAL_ATTACHMENT_SIZE_TOO_LARGE",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj = { maxSizeMb: null };
-    obj[0] = items /* items */.MAX_TOTAL_ATTACHMENT_SIZE_MB;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.DYFPg2, obj);
+    obj[0] = items.MAX_TOTAL_ATTACHMENT_SIZE_MB;
+    return intl.formatToPlainString(getSystemLocale.t.DYFPg2, obj);
   }
 };
 let obj12 = {
   messageName: "CLOUD_UPLOAD_NOT_FOUND",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.bQldfH);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.bQldfH);
   }
 };
 let obj13 = {
   messageName: "INVALID_PERMISSIONS",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.zl4Weq);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.zl4Weq);
   }
 };
 let obj2 = {
   messageName: "TOO_MANY_ANNOUNCEMENT_THREADS",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["aY+lLC"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["aY+lLC"]);
   }
 };
 let obj3 = {
   messageName: "HARMFUL_LINK_MESSAGE_BLOCKED",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zSG3Qy, { helpUrl: constants8.HARMFUL_LINKS });
+    const intl = getSystemLocale.intl;
+    return intl.formatToPlainString(getSystemLocale.t.zSG3Qy, { helpUrl: constants8.HARMFUL_LINKS });
   }
 };
 let obj4 = {
   messageName: "HARMFUL_URL_BLOCKED",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.WxX2Fd);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.WxX2Fd);
   }
 };
 let obj5 = {
   messageName: "BOT_REQUIRES_EMAIL_VERIFICATION",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.k1Cjqr);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.k1Cjqr);
   }
 };
 let obj6 = {
   messageName: "GUILD_MESSAGE_UPDATE_RATE_LIMIT_EXCEEDED",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Z5SUuv);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Z5SUuv);
   }
 };
 let obj7 = {
   messageName: "BOT_DM_RATE_LIMITED",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.E8nbNb);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.E8nbNb);
   }
 };
 let obj8 = {
   messageName: "BOT_DM_SEND_MESSAGE_TEMPORARILY_DISABLED",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.aRUbah);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.aRUbah);
   }
 };
 let obj9 = {
   messageName: "BOT_DM_SEND_MESSAGE_INVALID_FOR_GAME_FRIEND",
   messageGetter() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["/meGhR"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["/meGhR"]);
   }
 };
 const tmp6 = new require("updateSubmittedGuildJoinRequestTotal")("MessageQueue");

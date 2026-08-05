@@ -6,7 +6,7 @@ import { FamilyCenterParentalControlsSettings } from "../../family_center/native
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(messagesProxy.ahKIJO);
   },
   parent: require("MobileSetting").MobileSetting.FAMILY_CENTER,
@@ -16,7 +16,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS,
   getComponent() {
-    return FamilyCenterParentalControlsSettings /* FamilyCenterParentalControlsSettings */.default;
+    return FamilyCenterParentalControlsSettings.default;
   }
 };
 const route = createToggle.createRoute(obj);

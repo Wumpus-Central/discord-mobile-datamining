@@ -7,18 +7,18 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const require = arg1;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
-  let obj = UserSettingsText /* UserSettingsText */;
+  let obj = UserSettingsText;
   obj = { videoUploadQuality: CHANNEL_SIDEBAR_WIDTH.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: CHANNEL_SIDEBAR_WIDTH.lowQualityImageMode, dataSavingMode: CHANNEL_SIDEBAR_WIDTH.dataSavingMode };
   obj.setImageDescriptions(obj);
 }
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["w8j+yW"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["w8j+yW"]);
   },
   parent: require("MobileSetting").MobileSetting.CHAT,
   useValue: function useImageDescriptionSettingValue() {
-    const ViewImageDescriptions = explicitContentFromProto /* explicitContentFromProto */.ViewImageDescriptions;
+    const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
     return ViewImageDescriptions.useSetting();
   },
   onValueChange: onImageDescriptionSettingValueChange

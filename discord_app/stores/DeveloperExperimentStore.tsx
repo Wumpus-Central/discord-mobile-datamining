@@ -13,7 +13,7 @@ if (!tmp2) {
   tmp2 = window.GLOBAL_ENV.RELEASE_CHANNEL === Environments.STAGING;
 }
 function init() {
-  let closure_5 = validatePremiumType /* validatePremiumType */.isStaffEnv(authStore.getCurrentUser());
+  let closure_5 = validatePremiumType.isStaffEnv(authStore.getCurrentUser());
 }
 let c5 = tmp2;
 class DeveloperExperimentStore extends Store {

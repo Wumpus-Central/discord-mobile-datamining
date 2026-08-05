@@ -23,5 +23,5 @@ export const Caption = function Caption(arg0) {
   const tmp = callback();
   const items = [tmp.labelContainer, style];
   const items1 = [tmp.captionText, textStyle];
-  return <View style={items}>{jsx(Button /* Button */.LegacyText, { style: items1, children: label })}</View>;
+  return <View style={items}>{jsx(Button.LegacyText, { style: items1, children: label })}</View>;
 };

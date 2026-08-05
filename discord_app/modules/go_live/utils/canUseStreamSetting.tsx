@@ -25,8 +25,8 @@ export default function canUseStreamSetting(quality, user) {
     if (null != quality.guildPremiumTier) {
       let result = flag;
       if (!flag) {
-        result = getGuildTierFromGuild /* getGuildTierFromGuild */.isGuildBoostedAtLeast(arg2, quality.guildPremiumTier);
-        const obj3 = getGuildTierFromGuild /* getGuildTierFromGuild */;
+        result = getGuildTierFromGuild.isGuildBoostedAtLeast(arg2, quality.guildPremiumTier);
+        const obj3 = getGuildTierFromGuild;
       }
       tmp7 = result;
     }

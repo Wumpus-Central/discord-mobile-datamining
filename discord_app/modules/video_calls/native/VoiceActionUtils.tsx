@@ -19,23 +19,23 @@ export const createMuteHandler = function createMuteHandler(muteStates, stateFro
   if (flag) {
     let onPress = NOOP;
   } else {
-    onPress = _handleToggleVideo /* _handleToggleVideo */.handleToggleSelfMute;
+    onPress = _handleToggleVideo.handleToggleSelfMute;
   }
   if (muteStates.suppress) {
-    onPress = _handleToggleVideo /* _handleToggleVideo */.showSuppressedAlert;
+    onPress = _handleToggleVideo.showSuppressedAlert;
     dominantMuteState = tmp.SUPPRESS;
   }
   if (muteStates.mute) {
-    onPress = _handleToggleVideo /* _handleToggleVideo */.showServerMuteAlert;
+    onPress = _handleToggleVideo.showServerMuteAlert;
     dominantMuteState = tmp.SERVER_MUTE;
   }
   const mute = muteStates.selfMute || muteStates.mute || muteStates.suppress;
   return { mute, onPress, dominantMuteState };
 };
 export const createDeafHandler = function createDeafHandler(deafStates) {
-  let onPress = _handleToggleVideo /* _handleToggleVideo */.handleToggleSelfDeaf;
+  let onPress = _handleToggleVideo.handleToggleSelfDeaf;
   if (deafStates.deaf) {
-    onPress = _handleToggleVideo /* _handleToggleVideo */.showServerDeafenAlert;
+    onPress = _handleToggleVideo.showServerDeafenAlert;
   }
   const deaf = deafStates.selfDeaf || deafStates.deaf;
   return { deaf, onPress };

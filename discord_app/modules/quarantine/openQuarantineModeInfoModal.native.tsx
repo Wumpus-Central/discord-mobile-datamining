@@ -10,7 +10,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/quarantine/open
 
 export default function openQuarantineModeInfoModal() {
   Keyboard.dismiss();
-  let obj = getBestActiveInput /* getBestActiveInput */;
+  let obj = getBestActiveInput;
   const bestActiveInput = obj.getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();

@@ -9,8 +9,8 @@ let result = require("map").fileFinishedImporting("modules/collectibles/hooks/us
 
 export const useBadBundleFilter = function useBadBundleFilter() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  const stateFromStores = defaultAreStatesEqual.useStateFromStores(items, () => currentUser.getCurrentUser());
+  let obj = defaultAreStatesEqual;
   const canUseShopDiscountsResult = getPremiumPlanItem.canUseShopDiscounts(stateFromStores);
   require = canUseShopDiscountsResult;
   const items1 = [canUseShopDiscountsResult];

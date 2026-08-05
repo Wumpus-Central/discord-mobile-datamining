@@ -92,7 +92,7 @@ function _computeCategories(arg0) {
       } else {
         let tmp26 = require;
         let tmp27 = dependencyMap;
-        obj6 = GuildNSFWContentLevel /* GuildNSFWContentLevel */;
+        obj6 = GuildNSFWContentLevel;
         let tmp28 = guild;
         if (obj6.shouldNSFWGateGuild(guild.id)) {
           let obj7 = { type: null, label: null, footer: null, emojis: null, isSectionNitroLocked: null };
@@ -238,7 +238,7 @@ function _computeSearchResults(emojis) {
   const obj1 = { type: constants3.EMOJI, emojis: substr1, emojisDisabled: set1, label: null, footer: null };
   const set = new Set();
   const tmp2 = pushCategory;
-  obj1[3] = initializeSearch /* initializeSearch */.getStringForEmojiCategory(constants.PREMIUM_UPSELL);
+  obj1[3] = initializeSearch.getStringForEmojiCategory(constants.PREMIUM_UPSELL);
   obj1[4] = constants2.PREMIUM_UPSELL;
   obj[1] = obj1;
   obj[2] = rowSize;

@@ -16,7 +16,7 @@ function renderTooltipItem(arg0, enterExitAnimatedStyles) {
     obj = {};
     const merged = Object.assign(arg0);
     obj.enterExitAnimatedStyles = enterExitAnimatedStyles;
-    tmpResult = tmp(Coachmark /* Coachmark */.CoachmarkContainer, obj);
+    tmpResult = tmp(Coachmark.CoachmarkContainer, obj);
   }
   obj[2] = tmpResult;
   return jsx(ReanimatedRexport.View, { style: items, pointerEvents: "box-none", children: null });

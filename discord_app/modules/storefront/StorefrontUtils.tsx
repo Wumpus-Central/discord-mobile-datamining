@@ -218,26 +218,26 @@ function formatSKUPrice(arg0, arg1) {
   ({ normalPrice, discountedPrice, discountPercent, userPrice } = arg0);
   let formatPriceResult = null;
   if (null != normalPrice) {
-    let obj = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+    let obj = formatSingleCurrencyPrice;
     formatPriceResult = obj.formatPrice(normalPrice.amount, normalPrice.currency);
   }
   obj = { normalPrice: formatPriceResult, discountedPrice: null, discountPercent: null, userPrice: null };
   let formatPriceResult1 = null;
   if (null != discountedPrice) {
-    formatPriceResult1 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(discountedPrice.amount, discountedPrice.currency);
-    const obj3 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+    formatPriceResult1 = formatSingleCurrencyPrice.formatPrice(discountedPrice.amount, discountedPrice.currency);
+    const obj3 = formatSingleCurrencyPrice;
   }
   obj[1] = formatPriceResult1;
   let formatPercentResult = null;
   if (null != discountPercent) {
-    formatPercentResult = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPercent(arg1, -discountPercent / 100);
-    const obj4 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+    formatPercentResult = formatSingleCurrencyPrice.formatPercent(arg1, -discountPercent / 100);
+    const obj4 = formatSingleCurrencyPrice;
   }
   obj[2] = formatPercentResult;
   let formatPriceResult2 = null;
   if (null != userPrice) {
-    formatPriceResult2 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(userPrice.amount, userPrice.currency);
-    const obj5 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+    formatPriceResult2 = formatSingleCurrencyPrice.formatPrice(userPrice.amount, userPrice.currency);
+    const obj5 = formatSingleCurrencyPrice;
   }
   obj[3] = formatPriceResult2;
   return obj;
@@ -261,13 +261,13 @@ export const transformStorefrontPricesServer = function transformStorefrontPrice
 };
 export const transformPriceSetAssignmentToStorefrontPurchaseType = function transformPriceSetAssignmentToStorefrontPurchaseType(arg0) {
   if (null == arg0) {
-    return StorefrontPromotionRewardType /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
+    return StorefrontPromotionRewardType.StorefrontPurchaseType.SELF_PURCHASE;
   } else if (constants.DEFAULT === arg0) {
-    return StorefrontPromotionRewardType /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
+    return StorefrontPromotionRewardType.StorefrontPurchaseType.SELF_PURCHASE;
   } else if (tmp9.GIFT === arg0) {
-    return StorefrontPromotionRewardType /* StorefrontPromotionRewardType */.StorefrontPurchaseType.GIFT;
+    return StorefrontPromotionRewardType.StorefrontPurchaseType.GIFT;
   } else {
-    return StorefrontPromotionRewardType /* StorefrontPromotionRewardType */.StorefrontPurchaseType.SELF_PURCHASE;
+    return StorefrontPromotionRewardType.StorefrontPurchaseType.SELF_PURCHASE;
   }
 };
 export const isSlayerSkuAvailableOnThisPlatform = function isSlayerSkuAvailableOnThisPlatform(sku) {
@@ -307,7 +307,7 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   const require = tmp2;
   let stateFromStores;
   const items = [_getSystemLocale];
-  stateFromStores = initialize /* initialize */.useStateFromStores(items, () => locale.locale);
+  stateFromStores = initialize.useStateFromStores(items, () => locale.locale);
   const items1 = [tmp2, stateFromStores];
   return React.useMemo(() => outer1_14(closure_0, stateFromStores), items1);
 };

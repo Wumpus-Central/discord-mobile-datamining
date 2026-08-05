@@ -46,11 +46,11 @@ function GestureWrapper(children) {
 }
 function handleNavigationOnReady() {
   enqueue.flush();
-  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch.dispatch(constants.NAVIGATOR_READY);
-  const routingInstrumentation = _maybeBackfillMissingBreadcrumbsFromTelemetryRing /* _maybeBackfillMissingBreadcrumbsFromTelemetryRing */.routingInstrumentation;
+  const routingInstrumentation = _maybeBackfillMissingBreadcrumbsFromTelemetryRing.routingInstrumentation;
   const obj = enqueue;
-  const result = routingInstrumentation.registerNavigationContainer(getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef());
+  const result = routingInstrumentation.registerNavigationContainer(getRootNavigationRef.getRootNavigationRef());
   callback();
 }
 function AppNavigationContainer(children) {
@@ -137,8 +137,8 @@ function AppNavigationContainer(children) {
 }
 function ShareNavigationContainer(children) {
   const tmp = useTheme();
-  const theme = useNavigationTheme /* useNavigationTheme */.useNavigationTheme(tmp);
-  return callback2(Link /* Link */.NavigationContainer, { theme, children: children.children });
+  const theme = useNavigationTheme.useNavigationTheme(tmp);
+  return callback2(Link.NavigationContainer, { theme, children: children.children });
 }
 function AppNavigationContainerOrEmpty(arg0) {
   let appEntryKey;
@@ -153,7 +153,7 @@ function AppNavigationContainerOrEmpty(arg0) {
     obj[0] = children;
     return callback2(ShareNavigationContainer, obj);
   } else {
-    obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+    obj = isDiscordFrontendDevelopment;
     return obj.assertNever(appEntryKey);
   }
 }

@@ -25,9 +25,9 @@ function BulletIcon(source) {
   const tmp = createCacheKey();
   let obj = { style: tmp.headerBulletIconContainer, children: null };
   obj = { source: source.source, size: null, style: null };
-  obj[1] = Button /* Button */.Icon.Sizes.MEDIUM;
+  obj[1] = Button.Icon.Sizes.MEDIUM;
   obj[2] = tmp.headerBulletIconComponent;
-  obj[1] = callback(Button /* Button */.Icon, obj);
+  obj[1] = callback(Button.Icon, obj);
   return callback(View, obj);
 }
 ({ jsx: error, jsxs: metroImportAll } = jsxProd);

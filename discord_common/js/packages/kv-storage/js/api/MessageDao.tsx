@@ -32,7 +32,7 @@ prototype["withoutLogging"] = function withoutLogging() {
   const obj = Object.create(MessageDao.prototype);
   obj.originalPrefix = originalPrefix;
   const items = [originalPrefix];
-  const table = new fromDatabaseTransaction /* fromDatabaseTransaction */.Table(items, this.table.tableId, this.table.database, false);
+  const table = new fromDatabaseTransaction.Table(items, this.table.tableId, this.table.database, false);
   obj.table = table;
   return obj;
 };
@@ -44,7 +44,7 @@ prototype["get"] = function get(arg0, arg1, str) {
 prototype["getLatest"] = function getLatest(arg0, arg1, limit) {
   const table = this.table;
   const items = [arg0, arg1];
-  return table.getMany(items, { ordering: TableId /* TableId */.Ordering.Descending, limit });
+  return table.getMany(items, { ordering: TableId.Ordering.Descending, limit });
 };
 prototype["getRange"] = function getRange(arg0, arg1, str, str2) {
   const table = this.table;
@@ -59,7 +59,7 @@ prototype["getMostRecents"] = function getMostRecents(outer1_0) {
 prototype["put"] = function put(arg0, arg1, data) {
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = TableId /* TableId */.ConflictOptions.Replace;
+    Replace = TableId.ConflictOptions.Replace;
   }
   const table = this.table;
   const id = data.id;
@@ -140,7 +140,7 @@ MessageDaoTransaction["fromTableTransaction"] = function fromTableTransaction(tr
   return obj;
 };
 MessageDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new fromDatabaseTransaction /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
+  const tableTransaction = new fromDatabaseTransaction.TableTransaction(prefix, tableId, transaction);
   if (typeof MessageDaoTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -151,7 +151,7 @@ MessageDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransact
 prototype2["put"] = function put(arg0, arg1, data) {
   let Replace = arg3;
   if (arg3 === undefined) {
-    Replace = TableId /* TableId */.ConflictOptions.Replace;
+    Replace = TableId.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
   const id = data.id;

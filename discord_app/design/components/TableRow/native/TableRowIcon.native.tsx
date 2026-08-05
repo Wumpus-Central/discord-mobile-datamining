@@ -226,9 +226,9 @@ export const TableRowIcon = function TableRowIcon(arg0) {
       let translucent = tmp.default;
       const color = translucent.color;
       if ("default" === variant) {
-        let REFRESH_SMALL_16 = IconSizes /* IconSizes */.IconSizes.MEDIUM;
+        let REFRESH_SMALL_16 = IconSizes.IconSizes.MEDIUM;
       } else {
-        REFRESH_SMALL_16 = IconSizes /* IconSizes */.IconSizes.REFRESH_SMALL_16;
+        REFRESH_SMALL_16 = IconSizes.IconSizes.REFRESH_SMALL_16;
       }
       let str3 = "md";
       if ("default" !== variant) {

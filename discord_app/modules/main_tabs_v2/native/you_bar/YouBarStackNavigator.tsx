@@ -20,10 +20,10 @@ function getGuildsComponent() {
   return Guilds.default;
 }
 function getNotificationsComponent() {
-  return goBack /* goBack */.ThemedNotifications;
+  return goBack.ThemedNotifications;
 }
 function getICYMIComponent() {
-  return ICYMINavigator /* ICYMINavigator */.default;
+  return ICYMINavigator.default;
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);

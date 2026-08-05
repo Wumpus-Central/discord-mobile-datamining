@@ -35,10 +35,10 @@ export default function ConnectedChannelSettingsInstantInvites() {
   const callback = memo.useCallback((arg0) => {
 
   }, items);
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items1 = [memo1];
   dependencyMap = obj1.useStateFromStores(items1, () => memo1.getChannel());
-  let obj2 = initialize /* initialize */;
+  let obj2 = initialize;
   const items2 = [memo1];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => memo1.getInvites());
   invites = stateFromStoresObject.invites;
@@ -69,7 +69,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items3);
   const tmp3 = invites(memo.useState(undefined), 2);
   const items4 = [ensureGuildLoaded];
-  const stateFromStoresArray = initialize /* initialize */.useStateFromStoresArray(items4, () => {
+  const stateFromStoresArray = initialize.useStateFromStoresArray(items4, () => {
     if (null != closure_2) {
       const sortedLinkedChannelsForGuild = outer1_7.getSortedLinkedChannelsForGuild(tmp.guild_id);
       let found = sortedLinkedChannelsForGuild.filter((id) => id.id === id.id);

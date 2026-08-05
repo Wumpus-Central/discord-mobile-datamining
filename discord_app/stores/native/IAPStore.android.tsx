@@ -11,8 +11,8 @@ function updateProduct(currencyCode) {
   const result = currencyCode.price / 100;
   if ("BG" === c14) {
     if (formatted === CurrencyCodes.EUR) {
-      let formatDualPriceForBGResult = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatDualPriceForBG(result, { convertToMajorUnits: false });
-      const obj2 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+      let formatDualPriceForBGResult = formatSingleCurrencyPrice.formatDualPriceForBG(result, { convertToMajorUnits: false });
+      const obj2 = formatSingleCurrencyPrice;
     }
     let obj = {};
     const merged = Object.assign(currencyCode);
@@ -21,7 +21,7 @@ function updateProduct(currencyCode) {
     obj.priceString = formatDualPriceForBGResult;
     return obj;
   }
-  obj = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+  obj = formatSingleCurrencyPrice;
   formatDualPriceForBGResult = obj.formatSingleCurrencyPrice(result, formatted, { convertToMajorUnits: false });
 }
 function skusLoaded(arg0) {
@@ -64,8 +64,8 @@ function skusLoaded(arg0) {
       let c13 = false;
     }
   } catch (tmp7) {
-    let result = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */.captureBillingException(tmp7);
-    const obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+    let result = _createGatewayCheckoutContext.captureBillingException(tmp7);
+    const obj = _createGatewayCheckoutContext;
   }
 }
 GPlayConnectionState = GPlayConnectionState.GPlayConnectionState;

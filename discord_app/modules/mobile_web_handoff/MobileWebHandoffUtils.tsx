@@ -92,7 +92,7 @@ const result = require("v1").fileFinishedImporting("modules/mobile_web_handoff/M
 
 export default {
   generateNonce() {
-    return v1 /* v1 */.v4();
+    return v1.v4();
   },
   createHandoffToken(closure_0) {
     const self = this;

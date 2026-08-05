@@ -27,13 +27,13 @@ let closure_7 = createCacheKey.createStyles((height) => {
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemHappeningNow.tsx");
 
 export default require("noop").memo(function MessagesItemHappeningNow(listRef) {
-  let obj = map /* map */;
+  let obj = map;
   obj = { backgroundColor: null, children: null };
   obj = { style: callback(closure_4 + obj.useToken(Themes.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: null };
   obj[2] = jsx(renderCard, { cards: set, listRef: listRef.listRef });
   obj[1] = <View style={callback(closure_4 + obj.useToken(Themes.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container} collapsable={false}>{null}</View>;
-  return jsx(useCutoutBackgroundColor /* useCutoutBackgroundColor */.CutoutBackgroundProvider, { style: callback(closure_4 + obj.useToken(Themes.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: null });
+  return jsx(useCutoutBackgroundColor.CutoutBackgroundProvider, { style: callback(closure_4 + obj.useToken(Themes.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: null });
 });
 export const getMessagesItemHappeningNowHeight = function getMessagesItemHappeningNowHeight(closure_0) {
-  return useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(Themes.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM, closure_0) + closure_4;
+  return useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(Themes.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM, closure_0) + closure_4;
 };

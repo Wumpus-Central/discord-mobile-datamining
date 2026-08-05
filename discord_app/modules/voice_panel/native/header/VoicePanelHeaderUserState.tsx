@@ -15,7 +15,7 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   if (participant != null) {
     type = participant.type;
   }
-  let obj = areStableParticipantsEqual /* areStableParticipantsEqual */;
+  let obj = areStableParticipantsEqual;
   let id;
   if (obj.isStableParticipantWithUser(participant)) {
     id = participant.user.id;
@@ -30,7 +30,7 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
     let tmp11 = require;
     let tmp12 = dependencyMap;
     let tmp13 = dependencyMap;
-    if (nextResult.type === useVoicePanelCardUserStateIcons /* useVoicePanelCardUserStateIcons */.VoicePanelCardUserStateIconType.USER_VIDEO_ICON) {
+    if (nextResult.type === useVoicePanelCardUserStateIcons.VoicePanelCardUserStateIconType.USER_VIDEO_ICON) {
       let tmp29 = jsx;
       let tmp30 = jsx;
       let tmp31 = tmp10;

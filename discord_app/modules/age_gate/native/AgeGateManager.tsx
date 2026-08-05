@@ -27,7 +27,7 @@ const prototype = AgeGateManager.prototype;
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   const guildId = store.getGuildId();
   channelId = channelId.getChannelId();
-  shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guildId, channelId);
+  shouldShowAgeGateForVoiceChannel.maybeShowAgeGate(guildId, channelId);
 };
 prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
   let channelId;
@@ -43,8 +43,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
     tmp2 = type !== constants.GUILD_VOICE;
   }
   if (tmp2) {
-    shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guildId, channelId);
-    const obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+    shouldShowAgeGateForVoiceChannel.maybeShowAgeGate(guildId, channelId);
+    const obj = shouldShowAgeGateForVoiceChannel;
   }
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(source) {
@@ -73,8 +73,8 @@ prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
     tmp2 = guild.owner_configured_content_level === constants2.AGE_RESTRICTED;
   }
   if (tmp2) {
-    shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */.maybeShowAgeGate(guild.id, null);
-    const obj = shouldShowAgeGateForVoiceChannel /* shouldShowAgeGateForVoiceChannel */;
+    shouldShowAgeGateForVoiceChannel.maybeShowAgeGate(guild.id, null);
+    const obj = shouldShowAgeGateForVoiceChannel;
   }
 };
 const ageGateManager = new AgeGateManager();

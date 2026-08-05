@@ -36,21 +36,21 @@ function HeaderSection(arg0) {
     obj[0] = tmp.warningContainer;
     obj = { color: null, size: "sm" };
     obj[0] = Themes.colors.STATUS_WARNING;
-    const items = [callback(CircleErrorIcon /* CircleErrorIcon */.CircleErrorIcon, obj), ];
+    const items = [callback(CircleErrorIcon.CircleErrorIcon, obj), ];
     obj = { variant: "text-xs/medium", style: null, children: null };
     obj[1] = tmp.warningText;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["2aFeef"]);
-    items[1] = callback(Text /* Text */.Text, obj);
+    const intl = getSystemLocale.intl;
+    obj[2] = intl.string(getSystemLocale.t["2aFeef"]);
+    items[1] = callback(Text.Text, obj);
     obj[1] = items;
     tmp2Result = tmp2(View, obj);
   }
   const items1 = [tmp2Result, ];
   const obj1 = { style: tmp.headerTitleContainer, children: null };
   const obj2 = { variant: "text-md/semibold", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.nMir27);
-  const items2 = [callback(Text /* Text */.Text, obj2), ];
+  const intl2 = getSystemLocale.intl;
+  obj2[1] = intl2.string(getSystemLocale.t.nMir27);
+  const items2 = [callback(Text.Text, obj2), ];
   let tmp13Result;
   if (hasConnections) {
     const obj3 = { hitSlop: 8, onPress: null, disabled: null, children: null };
@@ -71,10 +71,10 @@ function HeaderSection(arg0) {
   const intl4 = tmp10(1236).intl;
   const obj8 = { helpdeskArticleUrl: null };
   obj8[0] = combined.getArticleURL(HelpdeskArticles.CONNECTION_DETAILS_ADMIN);
-  obj7[1] = intl4.format(getSystemLocale /* getSystemLocale */.t.q5f7tK, obj8);
-  items3[1] = callback(Text /* Text */.Text, obj7);
+  obj7[1] = intl4.format(getSystemLocale.t.q5f7tK, obj8);
+  items3[1] = callback(Text.Text, obj7);
   obj6[0] = items3;
-  items1[1] = closure_11(Stack /* Stack */.Stack, obj6);
+  items1[1] = closure_11(Stack.Stack, obj6);
   obj5[0] = items1;
   return closure_11(closure_12, obj5);
 }
@@ -224,9 +224,9 @@ function AddConnectionButton(locked) {
   let require;
   ({ handleConnectionTapped: require, excludedConnections: importDefault, excludedApplications: dependencyMap, roleId: Header, integrations: View, gameApplicationIds: getRoleMemberCount } = locked);
   let obj = { text: null, variant: "secondary", icon: null, disabled: null, onPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["OSvW5+"]);
-  obj[2] = callback(CirclePlusIcon /* CirclePlusIcon */.CirclePlusIcon, { size: "sm" });
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["OSvW5+"]);
+  obj[2] = callback(CirclePlusIcon.CirclePlusIcon, { size: "sm" });
   obj[3] = locked.locked;
   obj[4] = function onPress() {
     let obj = outer1_1(outer1_2[22]);
@@ -254,7 +254,7 @@ function AddConnectionButton(locked) {
     };
     obj.openLazy(outer1_0(outer1_2[24])(outer1_2[23], outer1_2.paths), combined, obj);
   };
-  return callback(Button /* Button */.Button, obj);
+  return callback(Button.Button, obj);
 }
 ({ GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: metroImportAll, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: c9 } = OperatorTypes);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);

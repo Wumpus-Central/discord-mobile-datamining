@@ -17,16 +17,16 @@ export default function MutedUntilText(arg0) {
   if (null != muteConfig) {
     if (null != muteConfig.end_time) {
       if (obj.SERVER === type) {
-        let N2NXMd = getSystemLocale /* getSystemLocale */.t.MQfdK9;
+        let N2NXMd = getSystemLocale.t.MQfdK9;
         let tmp15 = require;
       } else if (tmp12.CHANNEL === type) {
-        N2NXMd = getSystemLocale /* getSystemLocale */.t["N/kd49"];
+        N2NXMd = getSystemLocale.t["N/kd49"];
         tmp15 = require;
       } else if (tmp12.DM === type) {
-        N2NXMd = getSystemLocale /* getSystemLocale */.t.c4aY0P;
+        N2NXMd = getSystemLocale.t.c4aY0P;
         tmp15 = require;
       } else if (tmp12.CATEGORY === type) {
-        N2NXMd = getSystemLocale /* getSystemLocale */.t.N2NXMd;
+        N2NXMd = getSystemLocale.t.N2NXMd;
         tmp15 = require;
       } else {
         return null;
@@ -46,21 +46,21 @@ export default function MutedUntilText(arg0) {
     }
   }
   if (obj.SERVER === type) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl4.string(getSystemLocale /* getSystemLocale */.t["/b/DU7"]);
+    const intl4 = getSystemLocale.intl;
+    let stringResult = intl4.string(getSystemLocale.t["/b/DU7"]);
     let tmp3 = require;
   } else if (tmp2.CHANNEL === type) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t.utURT8);
+    const intl3 = getSystemLocale.intl;
+    stringResult = intl3.string(getSystemLocale.t.utURT8);
     tmp3 = require;
   } else if (tmp2.DM === type) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.jxF9er);
+    const intl2 = getSystemLocale.intl;
+    stringResult = intl2.string(getSystemLocale.t.jxF9er);
     tmp3 = require;
   } else if (tmp2.CATEGORY === type) {
     tmp3 = require;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t["6+wqqt"]);
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t["6+wqqt"]);
   } else {
     return null;
   }

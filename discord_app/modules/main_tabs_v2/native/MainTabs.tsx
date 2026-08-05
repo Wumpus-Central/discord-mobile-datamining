@@ -16,7 +16,7 @@ const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { flex: 1 } });
 const memoResult = require("noop").memo(function MainTabs() {
-  let obj = useActiveThemeType /* useActiveThemeType */;
+  let obj = useActiveThemeType;
   const isCustomThemeActive = obj.useIsCustomThemeActive();
   const tmp = getGuildThemeName();
   const rect = useSafeAreaInsets();
@@ -25,7 +25,7 @@ const memoResult = require("noop").memo(function MainTabs() {
   obj = { gradient: tmp, children: null };
   const items1 = [callback(getMixedGradientColor, { absolute: true, mix: isCustomThemeActive }), callback(MainTabsNavigatorPanel, {})];
   obj[1] = items1;
-  obj[1] = callback2(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+  obj[1] = callback2(ManaContext.ThemeContextProvider, obj);
   return callback(View, obj);
 });
 const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/MainTabs.tsx");

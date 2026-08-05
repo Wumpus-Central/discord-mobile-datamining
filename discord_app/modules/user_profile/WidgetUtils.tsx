@@ -93,7 +93,7 @@ export const getWidgetTitle = function getWidgetTitle(widget) {
 export const getGameWidgetSubtitle = function getGameWidgetSubtitle(games, showEditingControls) {
   if (showEditingControls.showEditingControls) {
     if (games.games.length > 0) {
-      if (1 === GAME_WIDGET_LIMITS_BY_TYPE /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_LIMITS_BY_TYPE[games.type]) {
+      if (1 === GAME_WIDGET_LIMITS_BY_TYPE.GAME_WIDGET_LIMITS_BY_TYPE[games.type]) {
         const intl2 = tmp(1236).intl;
         let stringResult = intl2.string(tmp(1236).t.wiXdEa);
       } else {
@@ -114,8 +114,8 @@ export const widgetSupportsTags = function widgetSupportsTags(arg0) {
 };
 export const widgetMaxGames = function widgetMaxGames(arg0) {
   let num = 0;
-  if (arg0 in GAME_WIDGET_LIMITS_BY_TYPE /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_LIMITS_BY_TYPE) {
-    num = GAME_WIDGET_LIMITS_BY_TYPE /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_LIMITS_BY_TYPE[arg0];
+  if (arg0 in GAME_WIDGET_LIMITS_BY_TYPE.GAME_WIDGET_LIMITS_BY_TYPE) {
+    num = GAME_WIDGET_LIMITS_BY_TYPE.GAME_WIDGET_LIMITS_BY_TYPE[arg0];
   }
   return num;
 };
@@ -236,7 +236,7 @@ export const addPendingClipToClipsGalleryWidget = function addPendingClipToClips
   if (clips == null) {
     clips = [];
   }
-  if (clips.length < USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH /* USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH */.USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH) {
+  if (clips.length < USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH.USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH) {
     let id;
     if (found != null) {
       id = found.id;
@@ -246,7 +246,7 @@ export const addPendingClipToClipsGalleryWidget = function addPendingClipToClips
     const items = [];
     items[HermesBuiltin.arraySpread(clips, 0)] = arg0;
     obj[1] = items;
-    const clipsGalleryWidget = new convertClip /* convertClip */.ClipsGalleryWidget(obj);
+    const clipsGalleryWidget = new convertClip.ClipsGalleryWidget(obj);
     WidgetActionCreators.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
     const obj3 = WidgetActionCreators;
   }
@@ -277,8 +277,8 @@ export const updatePersonalWidget = function updatePersonalWidget(arg0) {
     found = null;
   }
   if (found == null) {
-    found = isFieldEmpty /* isFieldEmpty */.createDefaultPersonalWidget();
-    const obj2 = isFieldEmpty /* isFieldEmpty */;
+    found = isFieldEmpty.createDefaultPersonalWidget();
+    const obj2 = isFieldEmpty;
   }
   obj = initialize;
   const tmp = replaceWidgetInList;
@@ -504,7 +504,7 @@ export const reorderGamesInWidget = function reorderGamesInWidget(widgetType) {
                 const obj = {};
                 const merged = Object.assign(tmp);
                 obj.games = items;
-                const baseGameWidget = new items /* items */.BaseGameWidget(obj);
+                const baseGameWidget = new items.BaseGameWidget(obj);
                 const tmp19 = replaceWidgetInList(baseGameWidget);
                 WidgetActionCreators.setPendingWidgets(tmp19);
                 const obj2 = WidgetActionCreators;
@@ -534,8 +534,8 @@ export const removePendingGameFromWidget = function removePendingGameFromWidget(
 export const isGameLimitReached = function isGameLimitReached(type) {
   type = type.type;
   let num = 0;
-  if (type in GAME_WIDGET_LIMITS_BY_TYPE /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_LIMITS_BY_TYPE) {
-    num = GAME_WIDGET_LIMITS_BY_TYPE /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_LIMITS_BY_TYPE[type];
+  if (type in GAME_WIDGET_LIMITS_BY_TYPE.GAME_WIDGET_LIMITS_BY_TYPE) {
+    num = GAME_WIDGET_LIMITS_BY_TYPE.GAME_WIDGET_LIMITS_BY_TYPE[type];
   }
   return type.games.length >= num;
 };
@@ -627,10 +627,10 @@ export const areWidgetGamesEqual = function areWidgetGamesEqual(games, games2, t
   });
 };
 export const isGameAllowedInGameWidgets = function isGameAllowedInGameWidgets(contentClassification) {
-  const result = isAgeRestrictedContentClassification /* isAgeRestrictedContentClassification */.isAgeRestrictedContentClassification(contentClassification.contentClassification);
+  const result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(contentClassification.contentClassification);
   let tmp4 = !result;
   if (!result) {
-    const GAME_WIDGET_BANNED_APPLICATION_IDS = GAME_WIDGET_LIMITS_BY_TYPE /* GAME_WIDGET_LIMITS_BY_TYPE */.GAME_WIDGET_BANNED_APPLICATION_IDS;
+    const GAME_WIDGET_BANNED_APPLICATION_IDS = GAME_WIDGET_LIMITS_BY_TYPE.GAME_WIDGET_BANNED_APPLICATION_IDS;
     tmp4 = !GAME_WIDGET_BANNED_APPLICATION_IDS.has(contentClassification.id);
   }
   return tmp4;

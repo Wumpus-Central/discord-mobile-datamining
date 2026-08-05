@@ -201,16 +201,16 @@ function updateHasFriends() {
   }
 }
 function sortUserList(user, user2) {
-  const obj = isNullOrEmpty /* isNullOrEmpty */;
+  const obj = isNullOrEmpty;
   const name = nameFromUser.getName(user.user);
   const obj2 = nameFromUser;
   const stripDiacriticsResult = obj.stripDiacritics(name.toLocaleLowerCase());
-  const obj5 = isNullOrEmpty /* isNullOrEmpty */;
+  const obj5 = isNullOrEmpty;
   const name1 = nameFromUser.getName(user2.user);
   return stripDiacriticsResult.localeCompare(obj5.stripDiacritics(name1.toLocaleLowerCase()));
 }
 function getMutualGuildsWithCurrentUser(id, set) {
-  const RestrictedGuildIds = explicitContentFromProto /* explicitContentFromProto */.RestrictedGuildIds;
+  const RestrictedGuildIds = explicitContentFromProto.RestrictedGuildIds;
   const setting = RestrictedGuildIds.getSetting();
   const items = [];
   const iter = set[Symbol.iterator]();
@@ -241,7 +241,7 @@ function parseUserResults(results) {
   if (c15) {
     if ("" !== c16) {
       const currentUser = authStore.getCurrentUser();
-      const frictionlessGDMsEnabled = getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
+      const frictionlessGDMsEnabled = getFrictionlessGDMsEnabled.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
       let set = null;
       if (frictionlessGDMsEnabled) {
         const _Set = Set;
@@ -249,7 +249,7 @@ function parseUserResults(results) {
       }
       const items = [];
       const iter = results[Symbol.iterator]();
-      const obj4 = getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */;
+      const obj4 = getFrictionlessGDMsEnabled;
       while (iter !== undefined) {
         ({ id, comparator } = nextResult);
         if (null == currentUser) {
@@ -360,8 +360,8 @@ function handleActionSheetDismiss(key) {
 function performQueryOnAffinityChange() {
   let tmp = !c15;
   if (c15) {
-    tmp = !getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
-    const obj = getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */;
+    tmp = !getFrictionlessGDMsEnabled.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
+    const obj = getFrictionlessGDMsEnabled;
   }
   let tmp4 = !tmp;
   if (!tmp) {
@@ -419,8 +419,8 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
   GUILD_MEMBERS_CHUNK_BATCH: function handleGuildMembersChunkBatch() {
     let tmp = !c15;
     if (c15) {
-      tmp = !getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
-      const obj = getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */;
+      tmp = !getFrictionlessGDMsEnabled.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
+      const obj = getFrictionlessGDMsEnabled;
     }
     let tmp4 = !tmp;
     if (!tmp) {
@@ -436,8 +436,8 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
   GUILD_MEMBERS_REQUEST: function handleGuildMembersRequest(query) {
     let tmp = !c15;
     if (c15) {
-      tmp = !getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
-      const obj = getFrictionlessGDMsEnabled /* getFrictionlessGDMsEnabled */;
+      tmp = !getFrictionlessGDMsEnabled.getFrictionlessGDMsEnabled("PrivateChannelRecipientsInviteStore");
+      const obj = getFrictionlessGDMsEnabled;
     }
     let tmp4 = !tmp;
     if (!tmp) {

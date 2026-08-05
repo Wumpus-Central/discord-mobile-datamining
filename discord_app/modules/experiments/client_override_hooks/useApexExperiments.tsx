@@ -8,7 +8,7 @@ let c3;
 let c4;
 const require = arg1;
 function makeClientVariant(id) {
-  return { id, label: "Variant " + id, shortLabel: "Variant " + id, type: create /* create */.Variation_Type.UNSPECIFIED };
+  return { id, label: "Variant " + id, shortLabel: "Variant " + id, type: create.Variation_Type.UNSPECIFIED };
 }
 function mergeApexExperiments(experimentsMetadata, registeredExperiments) {
   let _slicedToArray;

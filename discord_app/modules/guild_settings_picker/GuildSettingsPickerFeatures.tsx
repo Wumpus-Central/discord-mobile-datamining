@@ -9,29 +9,29 @@ const require = arg1;
 let obj = { "server-subscriptions-onboarding": require("module_13145"), "server-subscriptions-create-tier-from-template": require("module_13146") };
 let closure_6 = {
   title() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.V42OaH);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.V42OaH);
   },
   description() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["7dJ16X"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["7dJ16X"]);
   },
   selectGuildCta() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.LhlgY9);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.LhlgY9);
   },
   createGuildDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.anOisx);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.anOisx);
   },
   createGuildCta() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.B44MTm);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.B44MTm);
   },
   canCreateGuild: true,
   useIsGuildSupported() {
     const items = [getUncachedChannelPermissions];
-    return initialize /* initialize */.useStateFromStores(items, () => (guild) => getUncachedChannelPermissions.canAccessGuildSettings(guild), [], initialize /* initialize */.statesWillNeverBeEqual);
+    return initialize.useStateFromStores(items, () => (guild) => getUncachedChannelPermissions.canAccessGuildSettings(guild), [], initialize.statesWillNeverBeEqual);
   }
 };
 const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx");

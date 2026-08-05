@@ -77,11 +77,11 @@ export default function WishlistItemCardBase(username) {
   }
   const accessibilityHidden = username.accessibilityHidden;
   const tmp = createCacheKey();
-  let obj = ManaContext /* ManaContext */;
+  let obj = ManaContext;
   const themeContext = obj.useThemeContext();
   ({ primaryColor, theme, secondaryColor } = themeContext);
-  let obj1 = useUserProfileColors /* useUserProfileColors */;
-  let obj2 = map /* map */;
+  let obj1 = useUserProfileColors;
+  let obj2 = map;
   let containerBackground = obj2.useToken(Themes.colors.BG_SURFACE_RAISED);
   if (null != primaryColor) {
     containerBackground = obj1.useUserProfileColors({ theme, primaryColor, secondaryColor }).containerBackground;
@@ -96,7 +96,7 @@ export default function WishlistItemCardBase(username) {
   }
   items[2] = obj;
   const intl = tmp2(1236).intl;
-  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.p3RmJF, { username: username.recipientName });
+  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.p3RmJF, { username: username.recipientName });
   const items1 = [accessibilityLabel, , ];
   let stringResult = null;
   if (flag) {
@@ -116,7 +116,7 @@ export default function WishlistItemCardBase(username) {
   obj2 = { color: null, size: "custom", style: null };
   obj2[0] = Themes.colors.WHITE;
   obj2[2] = { width: 40, height: 40 };
-  obj1[4] = callback(CheckmarkLargeBoldIcon /* CheckmarkLargeBoldIcon */.CheckmarkLargeBoldIcon, obj2);
+  obj1[4] = callback(CheckmarkLargeBoldIcon.CheckmarkLargeBoldIcon, obj2);
   const items2 = [tmp.previewWrap, ];
   let ownedCard = flag;
   if (flag) {

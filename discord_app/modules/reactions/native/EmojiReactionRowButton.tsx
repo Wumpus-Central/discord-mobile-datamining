@@ -38,24 +38,24 @@ export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
   let styles;
   let str = iconSize.iconSize;
   ({ onPress, styles } = iconSize);
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   const tmp = callback(iconSize.emojiContainerSize);
-  const obj2 = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const obj2 = AccessibilityAnnouncer;
   const unsafe_rawColors = Themes.unsafe_rawColors;
-  const isThemeLightResult = AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme);
+  const isThemeLightResult = AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme);
   obj = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 4, onPress: null, style: null, children: null };
   const intl = tmp2(1236).intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.lfIHs4);
+  obj[2] = intl.string(getSystemLocale.t.lfIHs4);
   obj[4] = onPress;
   const items = [tmp.emojiContainer, styles];
   obj[5] = items;
-  obj = { color: AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null };
+  obj = { color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null };
   if (str == null) {
     str = "md";
   }
   obj[1] = str;
-  obj[6] = jsx(ReactionIcon /* ReactionIcon */.ReactionIcon, { color: AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
-  return jsx(PressableBase /* PressableBase */.PressableOpacity, { color: AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
+  obj[6] = jsx(ReactionIcon.ReactionIcon, { color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
+  return jsx(PressableBase.PressableOpacity, { color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
 };
 export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiContainerSize) {
   let animated;
@@ -71,19 +71,19 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
   const tmp = callback(emojiContainerSize.emojiContainerSize);
   const memo = React.useMemo(() => ({ foreground: true }), []);
   obj = { androidRippleConfig: memo, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, disabled: null, hitSlop: 4, onPress: null, style: null, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   let name;
   if (animated != null) {
     name = animated.name;
   }
-  obj[3] = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["/iYSo6"], { emojiName: name });
+  obj[3] = intl.formatToPlainString(getSystemLocale.t["/iYSo6"], { emojiName: name });
   obj[4] = null == animated;
   obj[6] = onPress;
   const items = [tmp.emojiContainer, styles];
   obj[7] = items;
   if (null == animated) {
     obj[8] = null;
-    return tmp4(PressableBase /* PressableBase */.PressableOpacity, obj);
+    return tmp4(PressableBase.PressableOpacity, obj);
   } else {
     obj = { textEmojiStyle: null, fastImageStyle: null, name: null, src: null };
     ({ emojiText: obj3[0], emojiImage: obj3[1] } = tmp2);
@@ -112,6 +112,6 @@ export const getEmojiKey = function getEmojiKey(type, arg1) {
   if (null == type) {
     return arg1;
   } else {
-    type.type === EmojiTypes /* EmojiTypes */.EmojiTypes.UNICODE ? type.surrogates : type.id;
+    type.type === EmojiTypes.EmojiTypes.UNICODE ? type.surrogates : type.id;
   }
 };

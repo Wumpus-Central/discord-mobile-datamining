@@ -30,7 +30,7 @@ let closure_10 = createCacheKey.createStyles(() => {
   obj[5] = { marginHorizontal: Themes.space.PX_4, alignItems: "center", flexDirection: "row", flexWrap: "wrap", flex: 1 };
   obj[6] = { flexWrap: "nowrap" };
   const obj3 = { flex: 1, minHeight: Themes.space.PX_24, minWidth: Themes.space.PX_48, color: Themes.colors.TEXT_DEFAULT };
-  const merged = Object.assign(Text /* Text */.TextStyleSheet["text-sm/medium"]);
+  const merged = Object.assign(Text.TextStyleSheet["text-sm/medium"]);
   obj3.paddingVertical = 0;
   obj3.marginVertical = 2;
   obj[7] = obj3;

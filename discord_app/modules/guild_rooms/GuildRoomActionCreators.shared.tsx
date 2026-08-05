@@ -715,8 +715,8 @@ export const guildRoomDisconnect = function guildRoomDisconnect(guildId, channel
     obj = { guildId: null, channelId: null };
     obj[0] = guildId;
     obj[1] = channelId;
-    const result = trackGuildRoomObjectInteracted /* trackGuildRoomObjectInteracted */.trackGuildRoomUserDisconnected(obj);
-    const obj3 = trackGuildRoomObjectInteracted /* trackGuildRoomObjectInteracted */;
+    const result = trackGuildRoomObjectInteracted.trackGuildRoomUserDisconnected(obj);
+    const obj3 = trackGuildRoomObjectInteracted;
   }
 };
 export const guildRoomLocalDisconnect = function guildRoomLocalDisconnect(userId, oldChannelId) {

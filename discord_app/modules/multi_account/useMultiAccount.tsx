@@ -10,7 +10,7 @@ let result = require("initialize").fileFinishedImporting("modules/multi_account/
 
 export const useMultiAccountUsers = function useMultiAccountUsers() {
   let items = [initialize, mergeGuildAvatar];
-  const stateFromStoresObject = initialize /* initialize */.useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     let obj = users;
     users = users.getUsers();
     currentUser = currentUser.getCurrentUser();

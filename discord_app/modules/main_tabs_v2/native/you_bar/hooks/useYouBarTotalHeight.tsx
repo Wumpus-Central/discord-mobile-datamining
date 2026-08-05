@@ -10,7 +10,7 @@ export const useYouBarTotalHeight = function useYouBarTotalHeight(arg0) {
   if (arg0 === undefined) {
     num = 0;
   }
-  const youBarBottomMargin = useYouBarHorizontalMargin /* useYouBarHorizontalMargin */.useYouBarBottomMargin();
-  const obj = useYouBarHorizontalMargin /* useYouBarHorizontalMargin */;
-  return youBarBottomMargin + YOU_BAR_HEIGHT + useConnectionBannerHeight /* useConnectionBannerHeight */.useConnectionBannerHeight() + num;
+  const youBarBottomMargin = useYouBarHorizontalMargin.useYouBarBottomMargin();
+  const obj = useYouBarHorizontalMargin;
+  return youBarBottomMargin + YOU_BAR_HEIGHT + useConnectionBannerHeight.useConnectionBannerHeight() + num;
 };

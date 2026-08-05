@@ -33,7 +33,7 @@ function WarningLabel(children) {
   obj = { size: "xs", color: null, style: null };
   obj[1] = Themes.colors.TEXT_MUTED;
   obj[2] = tmp.warningIcon;
-  const items = [callback(CircleInformationIcon /* CircleInformationIcon */.CircleInformationIcon, obj), callback(Text /* Text */.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
+  const items = [callback(CircleInformationIcon.CircleInformationIcon, obj), callback(Text.Text, { color: "text-default", variant: "text-sm/medium", children: children.text })];
   obj[1] = items;
   return callback2(closure_5, obj);
 }
@@ -54,9 +54,9 @@ function AuthorizedAppTwoWay(application) {
 }
 function ParentApp(application) {
   let obj = { text: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj = { applicationName: application.application.name };
-  obj[0] = intl.format(getSystemLocale /* getSystemLocale */.t.j4B7EW, obj);
+  obj[0] = intl.format(getSystemLocale.t.j4B7EW, obj);
   return callback(WarningLabel, obj);
 }
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);

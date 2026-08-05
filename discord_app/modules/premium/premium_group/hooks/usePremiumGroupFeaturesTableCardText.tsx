@@ -12,12 +12,12 @@ const require = arg1;
 const result = require("getSystemLocale").fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
 
 export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
-  let obj = { useCachedData: true, fetch: arg0 === create /* create */.PremiumSubscriptionGroupRole.MEMBER };
+  let obj = { useCachedData: true, fetch: arg0 === create.PremiumSubscriptionGroupRole.MEMBER };
   const tmp4 = usePremiumGroupPrimaryName(obj);
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items = [reset];
   const stateFromStores = obj1.useStateFromStores(items, () => premiumGroupSubscription.getPremiumGroupSubscription());
-  if (arg0 === create /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED) {
+  if (arg0 === create.PremiumSubscriptionGroupRole.UNSPECIFIED) {
     return null;
   } else {
     if (arg0 === tmp(1892).PremiumSubscriptionGroupRole.PRIMARY) {

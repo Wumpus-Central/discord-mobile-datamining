@@ -8,7 +8,7 @@ const result = require("initialize").fileFinishedImporting("modules/activities/p
 
 export const useIsActivityPanelFullscreen = function useIsActivityPanelFullscreen() {
   const items = [participantFromServer];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     const embeddedActivityLocationChannelId = callback(table[3]).getEmbeddedActivityLocationChannelId(store.getConnectedActivityLocation());
     let tmp3 = store.getActivityPanelMode() === constants.PANEL;
     if (tmp3) {

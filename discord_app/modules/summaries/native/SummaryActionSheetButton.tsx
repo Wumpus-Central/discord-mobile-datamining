@@ -31,8 +31,8 @@ export const SummaryActionSheetButton = function SummaryActionSheetButton(label)
   obj = { style: items, children: null };
   items = [tmp.iconBox];
   obj = { style: tmp.icon, source: iconSource };
-  obj[1] = callback(Button /* Button */.Icon, obj);
-  const items1 = [callback(View, obj), callback(Text /* Text */.Text, { style: tmp.name, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: label })];
+  obj[1] = callback(Button.Icon, obj);
+  const items1 = [callback(View, obj), callback(Text.Text, { style: tmp.name, variant: "text-xs/medium", color: "interactive-text-default", lineClamp: 1, children: label })];
   obj[4] = items1;
-  return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return callback2(PressableBase.PressableOpacity, obj);
 };

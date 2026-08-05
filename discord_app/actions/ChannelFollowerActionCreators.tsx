@@ -9,10 +9,10 @@ const result = require("sendRequest").fileFinishedImporting("actions/ChannelFoll
 
 export default {
   createChannelFollower(webhook_channel_id, closure_1) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: Endpoints.CHANNEL_FOLLOWERS(closure_1), body: obj, oldFormErrors: true, rejectWithError: null };
     obj = { webhook_channel_id };
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   fetchChannelFollowerStats(closure_0) {

@@ -16,7 +16,7 @@ import { useHasVideoPermission } from "../useHasVideoPermission.tsx";
 
 const require = arg1;
 function stopScreenshare() {
-  const voiceEngine = inject /* inject */.getVoiceEngine();
+  const voiceEngine = inject.getVoiceEngine();
   voiceEngine.stopBroadcast();
   const currentUserActiveStream = authStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
@@ -24,7 +24,7 @@ function stopScreenshare() {
     tmpResult = tmp(4348);
     tmpResult.stopStream(tmpResult.encodeStreamKey(currentUserActiveStream));
   }
-  const obj = inject /* inject */;
+  const obj = inject;
   trackDeviceChanged.setGoLiveSource(null);
 }
 function startStream() {
@@ -164,9 +164,9 @@ export default function useScreenshareUtils(arg0) {
 export const handleCloseScreenshare = function handleCloseScreenshare() {
   const currentUserActiveStream = authStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    const obj = watchStream /* watchStream */;
-    obj.stopStream(isStreamKey /* isStreamKey */.encodeStreamKey(currentUserActiveStream));
-    const obj2 = isStreamKey /* isStreamKey */;
+    const obj = watchStream;
+    obj.stopStream(isStreamKey.encodeStreamKey(currentUserActiveStream));
+    const obj2 = isStreamKey;
   }
   trackDeviceChanged.setGoLiveSource(null);
 };
@@ -219,7 +219,7 @@ export const getStreamPressHandler = function getStreamPressHandler(analyticsLoc
           return obj.showMobileGoLiveActionSheet(closure_1);
         }
       }
-      const S = _handleToggleVideo /* _handleToggleVideo */.showScreenshareDisabledAlert;
+      const S = _handleToggleVideo.showScreenshareDisabledAlert;
     }
   } else {
     class S {
@@ -238,8 +238,8 @@ export const getStreamPressHandler = function getStreamPressHandler(analyticsLoc
 export const tryStartScreenShare = function tryStartScreenShare(channel) {
   let videoPermission = DCDDeviceManager >= 12;
   if (videoPermission) {
-    videoPermission = useHasVideoPermission /* useHasVideoPermission */.getVideoPermission(channel);
-    const obj = useHasVideoPermission /* useHasVideoPermission */;
+    videoPermission = useHasVideoPermission.getVideoPermission(channel);
+    const obj = useHasVideoPermission;
   }
   if (videoPermission) {
     if ("android" === obj2.getVoiceEngine().platform) {
@@ -257,6 +257,6 @@ export const tryStartScreenShare = function tryStartScreenShare(channel) {
     } else {
       BroadcastUploadManager.showPicker();
     }
-    obj2 = inject /* inject */;
+    obj2 = inject;
   }
 };

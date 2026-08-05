@@ -34,37 +34,37 @@ function MessagesItemChannelContentIcon(selected) {
   if (blocked) {
     let obj = { source: null, size: null, style: null };
     obj[0] = registerAsset;
-    obj[1] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
+    obj[1] = Button.Icon.Sizes.EXTRA_SMALL;
     const items = [, ];
     ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
     obj[2] = items;
-    let tmp2 = callback(Button /* Button */.Icon, obj);
+    let tmp2 = callback(Button.Icon, obj);
   } else if (ignored) {
     obj = { source: null, size: null, style: null };
     obj[0] = registerAsset;
-    obj[1] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
+    obj[1] = Button.Icon.Sizes.EXTRA_SMALL;
     const items1 = [, ];
     ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
     obj[2] = items1;
-    tmp2 = callback(Button /* Button */.Icon, obj);
+    tmp2 = callback(Button.Icon, obj);
   } else if (muted) {
     const obj1 = { source: null, size: null, style: null };
     obj1[0] = registerAsset;
-    obj1[1] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
+    obj1[1] = Button.Icon.Sizes.EXTRA_SMALL;
     const items2 = [, ];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
     obj1[2] = items2;
-    tmp2 = callback(Button /* Button */.Icon, obj1);
+    tmp2 = callback(Button.Icon, obj1);
   } else {
     tmp2 = null;
     if (favorite) {
       obj = { source: null, size: null, style: null };
       obj[0] = registerAsset;
-      obj[1] = Button /* Button */.Icon.Sizes.EXTRA_SMALL;
+      obj[1] = Button.Icon.Sizes.EXTRA_SMALL;
       const items3 = [, ];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
       obj[2] = items3;
-      tmp2 = callback(Button /* Button */.Icon, obj);
+      tmp2 = callback(Button.Icon, obj);
     }
   }
   return tmp2;

@@ -34,9 +34,9 @@ export default function VoicePanelHeaderChatButton(channelId) {
   const tmp7 = set;
   obj = { color: null, size: "sm" };
   obj[0] = Themes.colors.WHITE;
-  obj[0] = callback(ChatIcon /* ChatIcon */.ChatIcon, obj);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["5KxXrK"]);
+  obj[0] = callback(ChatIcon.ChatIcon, obj);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["5KxXrK"]);
   obj[2] = callback;
   const children = [callback(VoicePanelIconButton, obj), ];
   let tmp8Result = null != tmp5;

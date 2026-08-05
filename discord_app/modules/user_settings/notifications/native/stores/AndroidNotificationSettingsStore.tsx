@@ -162,7 +162,7 @@ export const initializeAndroidNotificationSettingsStore = function initializeAnd
   return applyArgumentsResult;
 };
 export const useAndroidNotificationLightsEnabled = function useAndroidNotificationLightsEnabled() {
-  return callback2((isLightsEnabled) => isLightsEnabled.isLightsEnabled, isIterable /* isIterable */.shallow);
+  return callback2((isLightsEnabled) => isLightsEnabled.isLightsEnabled, isIterable.shallow);
 };
 export const setAndroidNotificationLightsEnabled = function setAndroidNotificationLightsEnabled(arg0) {
   const _require = arg0;
@@ -171,7 +171,7 @@ export const setAndroidNotificationLightsEnabled = function setAndroidNotificati
   NativeModules.setLightsEnabled(arg0);
 };
 export const useAndroidNotificationVibrationsEnabled = function useAndroidNotificationVibrationsEnabled() {
-  return callback2((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, isIterable /* isIterable */.shallow);
+  return callback2((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, isIterable.shallow);
 };
 export const setAndroidNotificationVibrationsEnabled = function setAndroidNotificationVibrationsEnabled(arg0) {
   const _require = arg0;
@@ -180,7 +180,7 @@ export const setAndroidNotificationVibrationsEnabled = function setAndroidNotifi
   NativeModules.setVibrationsEnabled(arg0);
 };
 export const useAndroidNotificationSoundsEnabled = function useAndroidNotificationSoundsEnabled() {
-  return callback2((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, isIterable /* isIterable */.shallow);
+  return callback2((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, isIterable.shallow);
 };
 export const setAndroidNotificationSoundsEnabled = function setAndroidNotificationSoundsEnabled(arg0) {
   const _require = arg0;
@@ -189,7 +189,7 @@ export const setAndroidNotificationSoundsEnabled = function setAndroidNotificati
   NativeModules.setSoundsEnabled(arg0);
 };
 export const useAndroidMessageNotificationsEnabled = function useAndroidMessageNotificationsEnabled() {
-  return callback2((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, isIterable /* isIterable */.shallow);
+  return callback2((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, isIterable.shallow);
 };
 export const setAndroidMessageNotificationsEnabled = function setAndroidMessageNotificationsEnabled(arg0) {
   const _require = arg0;

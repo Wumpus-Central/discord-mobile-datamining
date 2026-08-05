@@ -56,11 +56,11 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
     try {
       let obj = parse;
       const parsed = obj.parse(substr);
-      const firstQueryStringValue = getFirstQueryStringValue /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[event]);
-      const obj2 = getFirstQueryStringValue /* getFirstQueryStringValue */;
+      const firstQueryStringValue = getFirstQueryStringValue.getFirstQueryStringValue(parsed[event]);
+      const obj2 = getFirstQueryStringValue;
       const tmp10 = readSnowflake;
       const tmp6 = require;
-      const tmp12 = readSnowflake(getFirstQueryStringValue /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[channel]));
+      const tmp12 = readSnowflake(getFirstQueryStringValue.getFirstQueryStringValue(parsed[channel]));
       obj = { baseCode: null, guildScheduledEventId: null, targetChannelId: null, targetMessageId: null };
       obj[0] = inviteHostRemainingPath;
       obj[1] = firstQueryStringValue;
@@ -90,9 +90,9 @@ export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(
     const parsed = parse.parse(tmp3);
     const obj4 = parse;
     const tmp12 = require;
-    const firstQueryStringValue = getFirstQueryStringValue /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[event]);
-    const obj5 = getFirstQueryStringValue /* getFirstQueryStringValue */;
-    const firstQueryStringValue1 = getFirstQueryStringValue /* getFirstQueryStringValue */.getFirstQueryStringValue(parsed[channel]);
+    const firstQueryStringValue = getFirstQueryStringValue.getFirstQueryStringValue(parsed[event]);
+    const obj5 = getFirstQueryStringValue;
+    const firstQueryStringValue1 = getFirstQueryStringValue.getFirstQueryStringValue(parsed[channel]);
     let tmp4;
     if (typeof firstQueryStringValue1 === "string") {
       let tmp9Result = tmp9(11);

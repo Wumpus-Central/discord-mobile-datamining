@@ -38,7 +38,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
   if (str == null) {
     str = "";
   }
-  obj = { label: "Blur Amount " + str, leadingStyle: tmp.enabledSwitchStyle, leading: tmp7(FormSwitch /* FormSwitch */.FormSwitch, obj), subLabel: tmp7(first(14959), obj1), disabled: !tmp3 };
+  obj = { label: "Blur Amount " + str, leadingStyle: tmp.enabledSwitchStyle, leading: tmp7(FormSwitch.FormSwitch, obj), subLabel: tmp7(first(14959), obj1), disabled: !tmp3 };
   obj = {
     value: tmp3,
     onValueChange(arg0) {
@@ -52,7 +52,7 @@ const memoResult = importAllResult.memo(function VEVOOPropBlurAmount() {
   };
   const ref = importAllResult.useRef(first);
   const tmp8 = require;
-  return jsx(Form /* Form */.FormRow, {
+  return jsx(Form.FormRow, {
     value: tmp3,
     onValueChange(arg0) {
       callback(arg0);

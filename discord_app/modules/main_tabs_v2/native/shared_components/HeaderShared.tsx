@@ -337,6 +337,6 @@ export const HeaderIconButton = function HeaderIconButton(color) {
   if (tintColor == null) {
     tintColor = tmp.actionButtonIcon.tintColor;
   }
-  obj[4] = closure_6(Button /* Button */.Icon, { color: tintColor, source, resizeMode });
-  return closure_6(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[4] = closure_6(Button.Icon, { color: tintColor, source, resizeMode });
+  return closure_6(PressableBase.PressableOpacity, obj);
 };

@@ -12,8 +12,8 @@ const require = arg1;
 ({ AllFriendSourceFlags: c3, FriendSourceFlags: c4 } = ME);
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.mGr3CX);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.mGr3CX);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsEveryoneSettingValue() {
@@ -23,7 +23,7 @@ createToggle = {
     return React.useMemo(() => setting(outer1_1[4]).computeFlags(setting), items).all;
   },
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
-    const FriendSourceFlagsSetting = explicitContentFromProto /* explicitContentFromProto */.FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = explicitContentFromProto.FriendSourceFlagsSetting;
     if (arg0) {
       let tmp3 = tmp;
     } else {
@@ -32,7 +32,7 @@ createToggle = {
     FriendSourceFlagsSetting.updateSetting(tmp3);
   },
   useIsDisabled() {
-    return useParentalControlledExplicitContentSettings /* useParentalControlledExplicitContentSettings */.useIsParentallyControlled();
+    return useParentalControlledExplicitContentSettings.useIsParentallyControlled();
   }
 };
 createToggle = createToggle.createToggle(createToggle);

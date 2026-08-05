@@ -25,7 +25,7 @@ const result = require("jsxProd").fileFinishedImporting("modules/collectibles/na
 
 export default function OrbsBadgeCoachmark(badgeRef) {
   const merged = Object.assign(badgeRef, Object.create(null));
-  const coachmark = useCoachmark /* useCoachmark */.useCoachmark(badgeRef.badgeRef, merged);
+  const coachmark = useCoachmark.useCoachmark(badgeRef.badgeRef, merged);
   return null;
 };
 export const useOrbsBadgeCoachmark = function useOrbsBadgeCoachmark(disabled) {

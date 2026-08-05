@@ -187,10 +187,10 @@ export const BaseChannelIcon = function BaseChannelIcon(arg0) {
     } else {
       obj = { disableColor: null, size: null, style: null, source: null };
       obj[0] = disableColor;
-      obj[1] = Button /* Button */.Icon.Sizes.CUSTOM;
+      obj[1] = Button.Icon.Sizes.CUSTOM;
       obj[2] = items;
       obj[3] = source;
-      tmp12Result = callback(Button /* Button */.Icon, obj);
+      tmp12Result = callback(Button.Icon, obj);
     }
     return tmp12Result;
   } else {

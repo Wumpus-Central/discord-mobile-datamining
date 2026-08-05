@@ -19,11 +19,11 @@ const require = arg1;
 function handleClearCaches(type) {
   tmp3.log("Clearing cache store");
   let closure_16 = Date.now();
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   Storage.remove(closure_10);
-  const Storage2 = Storage /* Storage */.Storage;
+  const Storage2 = Storage.Storage;
   Storage2.remove(closure_11);
-  const Storage3 = Storage /* Storage */.Storage;
+  const Storage3 = Storage.Storage;
   Storage3.remove(closure_12);
   let c15 = "no-cache";
   if (tmp5) {
@@ -1388,11 +1388,11 @@ const cacheStoreClass = new CacheStoreClass(require("dispatcher"), {
     tmp3.verbose("Writing cache now");
     let closure_16 = Date.now();
     let c17 = true;
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     Storage.remove(closure_10);
-    const Storage2 = Storage /* Storage */.Storage;
+    const Storage2 = Storage.Storage;
     Storage2.remove(closure_12);
-    const Storage3 = Storage /* Storage */.Storage;
+    const Storage3 = Storage.Storage;
     Storage3.remove(closure_11);
   }
 });
@@ -1423,11 +1423,11 @@ let obj = {
     tmp3.verbose("Writing cache now");
     let closure_16 = Date.now();
     let c17 = true;
-    const Storage = Storage /* Storage */.Storage;
+    const Storage = Storage.Storage;
     Storage.remove(closure_10);
-    const Storage2 = Storage /* Storage */.Storage;
+    const Storage2 = Storage.Storage;
     Storage2.remove(closure_12);
-    const Storage3 = Storage /* Storage */.Storage;
+    const Storage3 = Storage.Storage;
     Storage3.remove(closure_11);
   }
 };

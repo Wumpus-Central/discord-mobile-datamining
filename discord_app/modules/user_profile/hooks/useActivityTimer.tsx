@@ -63,5 +63,5 @@ export const formatTimeForA11yLabel = function formatTimeForA11yLabel(arg0) {
   const rounded1 = Math.floor(arg0 / set.Seconds.MINUTE);
   const minutes = rounded1 % set.Seconds.MINUTE;
   const hours = Math.floor(arg0 / set.Seconds.HOUR);
-  return calculateTimestampDurations /* calculateTimestampDurations */.formatTimestampToA11yLabel({ hours, minutes, seconds });
+  return calculateTimestampDurations.formatTimestampToA11yLabel({ hours, minutes, seconds });
 };

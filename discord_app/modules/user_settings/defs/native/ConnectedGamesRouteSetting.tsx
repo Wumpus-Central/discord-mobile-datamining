@@ -5,8 +5,8 @@ import { ContentAndSocialSettings } from "../../content_and_social/native/Conten
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.YpCiMt);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.YpCiMt);
   },
   parent: require("MobileSetting").MobileSetting.CONTENT_AND_SOCIAL,
   IconComponent: require("FriendsIcon").FriendsIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CONTENT_AND_SOCIAL,
   getComponent() {
-    return ContentAndSocialSettings /* ContentAndSocialSettings */.ConnectedGamesPage;
+    return ContentAndSocialSettings.ConnectedGamesPage;
   }
 };
 const route = createToggle.createRoute(obj);

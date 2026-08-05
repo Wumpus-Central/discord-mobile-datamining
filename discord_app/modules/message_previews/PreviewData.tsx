@@ -58,8 +58,8 @@ prototype["messageRecord"] = function messageRecord(arg0) {
     tmp2 = value.message instanceof hasFlag;
   }
   if (!tmp2) {
-    value.message = createMinimalMessageRecord /* createMinimalMessageRecord */.createMessageRecord(value.message);
-    const obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
+    value.message = createMinimalMessageRecord.createMessageRecord(value.message);
+    const obj = createMinimalMessageRecord;
   }
   let message;
   if (value != null) {
@@ -126,7 +126,7 @@ prototype["update"] = function update(id) {
         }
       }
       if (id === id.id) {
-        let obj = createMinimalMessageRecord /* createMinimalMessageRecord */;
+        let obj = createMinimalMessageRecord;
         if (tmp3) {
           let updateMessageRecordResult = obj.updateMessageRecord(merged.message, id);
         } else {

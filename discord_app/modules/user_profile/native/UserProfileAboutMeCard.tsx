@@ -38,11 +38,11 @@ function Heading(children) {
     tmp = closure_14;
   }
   ({ headingVariant, headingSpacing } = tmp);
-  let variant = map /* map */.useToken(Themes.modules.mobile.USER_PROFILE_ABOUT_ME_HEADING_TEXT_STYLE);
+  let variant = map.useToken(Themes.modules.mobile.USER_PROFILE_ABOUT_ME_HEADING_TEXT_STYLE);
   if (variant == null) {
     variant = headingVariant;
   }
-  return closure_11(Text /* Text */.Text, { accessibilityRole: "header", variant, color: "user-profile-about-me-heading-text", style: { marginBottom }, children: children.children });
+  return closure_11(Text.Text, { accessibilityRole: "header", variant, color: "user-profile-about-me-heading-text", style: { marginBottom }, children: children.children });
 }
 function TextWithIcon(themeType) {
   let accessibilityLabel;
@@ -59,7 +59,7 @@ function TextWithIcon(themeType) {
   }
   const obj = { style: items, accessible: true, accessibilityLabel, children: null };
   items = [callback3().textWithIcon, { columnGap: tmp2.columnGap }];
-  const items1 = [icon, callback(Text /* Text */.Text, { variant: tmp2.textVariant, color: "text-default", children })];
+  const items1 = [icon, callback(Text.Text, { variant: tmp2.textVariant, color: "text-default", children })];
   obj[3] = items1;
   return callback2(View, obj);
 }
@@ -89,8 +89,8 @@ function Bio(arg0) {
       let obj = { children: null };
       obj = { themeType: null, children: null };
       obj[0] = themeType;
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.ZzAR2Y);
+      const intl = getSystemLocale.intl;
+      obj[1] = intl.string(getSystemLocale.t.ZzAR2Y);
       const items = [callback(Heading, obj), ];
       obj = { bio: null, userId: null, textVariant: null, lineClamp: null };
       obj[0] = previewBio;
@@ -200,7 +200,7 @@ function FriendsSinceDate(themeType) {
   if (tmp == null) {
     tmp = closure_14;
   }
-  let obj = useFriendsSinceDate /* useFriendsSinceDate */;
+  let obj = useFriendsSinceDate;
   const friendsSinceDate = obj.useFriendsSinceDate(themeType.userId);
   let tmp6 = null;
   if (null != friendsSinceDate) {
@@ -227,8 +227,8 @@ function PolicyLinks(arg0) {
   if (null != termsOfServiceUrl) {
     let obj = { themeType: null, children: null };
     obj[0] = themeType;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.l6DP2n);
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t.l6DP2n);
     const items = [callback(Heading, obj), ];
     obj = { style: null, children: null };
     obj[0] = tmp.policyLinks;
@@ -282,8 +282,8 @@ function PolicyLink(children) {
     },
     children: null
   };
-  obj[2] = callback(Text /* Text */.Text, { variant: tmp.textVariant, color: "text-link", children: children.label });
-  return callback(Button /* Button */.PressableOpacity, obj);
+  obj[2] = callback(Text.Text, { variant: tmp.textVariant, color: "text-link", children: children.label });
+  return callback(Button.PressableOpacity, obj);
 }
 function BotSlashCommands(channel) {
   let application;

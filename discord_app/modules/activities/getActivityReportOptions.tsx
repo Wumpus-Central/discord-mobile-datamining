@@ -10,9 +10,9 @@ export default function getActivityReportOptions(arg0) {
     flag = false;
   }
   let obj = { value: ActivityFeedbackReasons.FAILED_LOAD, label: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (arg0) {
     let stringResult = string(t.uaiF6B);
     let tmp6 = tmp2;

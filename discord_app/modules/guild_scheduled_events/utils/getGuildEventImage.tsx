@@ -11,11 +11,11 @@ export default function getGuildEventImageURL(image, size) {
     let result = size;
     if (null == size) {
       const _window = window;
-      result = window.screen.width * handleImageLoad /* handleImageLoad */.getDevicePixelRatio();
-      const obj = handleImageLoad /* handleImageLoad */;
+      result = window.screen.width * handleImageLoad.getDevicePixelRatio();
+      const obj = handleImageLoad;
     }
     const _window2 = window;
-    const bestMediaProxySize = handleImageLoad /* handleImageLoad */.getBestMediaProxySize(result);
+    const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(result);
     if (null != CDN_HOST) {
       const _HermesInternal = HermesInternal;
       let combined = "https://" + CDN_HOST + "/guild-events/" + image.id + "/" + image.image;

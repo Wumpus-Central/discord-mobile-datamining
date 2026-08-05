@@ -18,8 +18,8 @@ function handleRequestSuccess(body) {
 function handleRequestFailure(status) {
   if (status.status >= 500) {
     if (status.status <= 599) {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      let message = intl2.string(getSystemLocale /* getSystemLocale */.t.cvJdtg);
+      const intl2 = getSystemLocale.intl;
+      let message = intl2.string(getSystemLocale.t.cvJdtg);
     }
     const _Error = Error;
     const error = new Error(message);
@@ -32,15 +32,15 @@ function handleRequestFailure(status) {
       }
     }
   }
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  message = intl.string(getSystemLocale /* getSystemLocale */.t.cvJdtg);
+  const intl = getSystemLocale.intl;
+  message = intl.string(getSystemLocale.t.cvJdtg);
 }
 const result = require("getSystemLocale").fileFinishedImporting("actions/ConsentActionCreators.tsx");
 
 export const fetchConsents = function fetchConsents() {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   const obj = { url: Endpoints.SETTINGS_CONSENT, oldFormErrors: true, rejectWithError: null };
-  obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[2] = sendRequest.rejectWithMigratedError();
   const value = HTTP.get(obj);
   return value.then(handleRequestSuccess, (body) => {
     const error = new Error(body.body.message);
@@ -48,10 +48,10 @@ export const fetchConsents = function fetchConsents() {
   });
 };
 export const setConsents = function setConsents(items, items2) {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: Endpoints.SETTINGS_CONSENT, body: obj, oldFormErrors: true, rejectWithError: null };
   obj = { grant: items, revoke: items2 };
-  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
-  const obj3 = sendRequest /* sendRequest */;
+  obj[3] = sendRequest.rejectWithMigratedError();
+  const obj3 = sendRequest;
   return HTTP.post(obj).then(handleRequestSuccess, handleRequestFailure);
 };

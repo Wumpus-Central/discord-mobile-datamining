@@ -38,10 +38,10 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
   let cutouts;
   let unread;
   const tmp3 = useIsMobileVisualRefreshExperimentEnabled("GuildsBarFavorites");
-  let obj = UnreadIndicator /* UnreadIndicator */;
-  let obj1 = useFavoritesAccess /* useFavoritesAccess */;
+  let obj = UnreadIndicator;
+  let obj1 = useFavoritesAccess;
   const isFavoritesGuildSelected = obj1.useIsFavoritesGuildSelected();
-  let obj2 = initialize /* initialize */;
+  let obj2 = initialize;
   const items = [initializeFromUserSettings];
   const stateFromStores = obj2.useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
@@ -52,11 +52,11 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
   const tmp9 = useGuildsBarBottomRightBadge({ mentionCount: badge });
   const tmp11 = callback();
   const tmp12 = useCanShowFavoritesGuildCoachmark();
-  const favoritesIntroPopoverDismissibleContent = items1 /* items1 */.useFavoritesIntroPopoverDismissibleContent(tmp12);
+  const favoritesIntroPopoverDismissibleContent = items1.useFavoritesIntroPopoverDismissibleContent(tmp12);
   const shouldShowPopover = favoritesIntroPopoverDismissibleContent.shouldShowPopover;
   obj = { selected: isFavoritesGuildSelected, circle: null, unread: null, styles: null, cutouts: null, overState: "Boolean", config: -102.506, label: -34.1, externalChildren: null, expandedChildren: null, children: null };
   let tmp18 = !tmp3;
-  const obj4 = items1 /* items1 */;
+  const obj4 = items1;
   const tmp14 = closure_8;
   if (!tmp3) {
     tmp18 = !isFavoritesGuildSelected;
@@ -67,12 +67,12 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
   obj[4] = cutouts;
   obj[6] = closure_9;
   const intl = tmp4(1236).intl;
-  obj[7] = intl.string(getSystemLocale /* getSystemLocale */.t.wMWyci);
+  obj[7] = intl.string(getSystemLocale.t.wMWyci);
   obj[8] = badge2;
-  obj[9] = closure_7(HomeDrawerFavoritesRowExpandedChildren /* HomeDrawerFavoritesRowExpandedChildren */.HomeDrawerFavoritesRowExpandedChildren, {});
+  obj[9] = closure_7(HomeDrawerFavoritesRowExpandedChildren.HomeDrawerFavoritesRowExpandedChildren, {});
   const colors = tmp(712).colors;
   obj = { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj[10] = closure_7(StarIcon /* StarIcon */.StarIcon, obj);
+  obj[10] = closure_7(StarIcon.StarIcon, obj);
   const children = [closure_7(UnreadIndicator, obj), , ];
   obj1 = { ref, style: tmp11.anchor, pointerEvents: "none", collapsable: false };
   children[1] = closure_7(View, obj1);

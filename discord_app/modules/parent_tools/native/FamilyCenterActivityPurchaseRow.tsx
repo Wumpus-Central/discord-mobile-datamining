@@ -29,7 +29,7 @@ export default function FamilyCenterActivityPurchaseRow(arg0) {
   ({ total, currency } = arg0);
   const tmp = createCacheKey();
   let product = useCollectiblesData(skuId).product;
-  let obj = getCollectibleTypeName /* getCollectibleTypeName */;
+  let obj = getCollectibleTypeName;
   let tmp6 = product;
   if (product == null) {
     tmp6 = null;

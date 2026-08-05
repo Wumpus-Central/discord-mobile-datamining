@@ -62,26 +62,26 @@ function BoostPurchaseNitroBanner() {
   let obj = { align: "center", spacing: null, style: null, children: null };
   obj[1] = Themes.space.PX_12;
   obj[2] = tmp.nitroBanner;
-  const items = [callback3(AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */.TreasureChestBannerSpotIllustration, { width: 117, height: 93, accessible: false }), ];
+  const items = [callback3(AccountAgeTier10LargeBadge.TreasureChestBannerSpotIllustration, { width: 117, height: 93, accessible: false }), ];
   obj = { align: "center", spacing: null, children: null };
   obj[1] = Themes.space.PX_4;
   obj = { variant: "text-md/semibold", color: "text-default", style: tmp.nitroBannerText, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const obj1 = { discount: null };
   const obj2 = { variant: "text-md/semibold", color: "text-feedback-positive", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[2] = intl2.format(getSystemLocale /* getSystemLocale */.t.RmVM19, { percentageOff: closure_16 });
-  obj1[0] = callback3(Text /* Text */.Text, obj2, "discount");
-  obj[3] = intl.format(getSystemLocale /* getSystemLocale */.t.jbrHpT, obj1);
-  const items1 = [callback3(Text /* Text */.Text, obj), ];
+  const intl2 = getSystemLocale.intl;
+  obj2[2] = intl2.format(getSystemLocale.t.RmVM19, { percentageOff: closure_16 });
+  obj1[0] = callback3(Text.Text, obj2, "discount");
+  obj[3] = intl.format(getSystemLocale.t.jbrHpT, obj1);
+  const items1 = [callback3(Text.Text, obj), ];
   const obj4 = { variant: "text-sm/medium", color: "text-muted", style: tmp.nitroBannerText, children: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[3] = intl3.format(getSystemLocale /* getSystemLocale */.t.HYpETY, { boostCount: closure_17 });
-  items1[1] = callback3(Text /* Text */.Text, obj4);
+  const intl3 = getSystemLocale.intl;
+  obj4[3] = intl3.format(getSystemLocale.t.HYpETY, { boostCount: closure_17 });
+  items1[1] = callback3(Text.Text, obj4);
   obj[2] = items1;
-  items[1] = callback4(Stack /* Stack */.Stack, obj);
+  items[1] = callback4(Stack.Stack, obj);
   obj[3] = items;
-  return callback4(Stack /* Stack */.Stack, obj);
+  return callback4(Stack.Stack, obj);
 }
 function getPlanDescription(premiumTier) {
   let flag = arg1;
@@ -89,15 +89,15 @@ function getPlanDescription(premiumTier) {
     flag = false;
   }
   if (null == premiumTier.premiumTier) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     let obj = { numSubscriptions: null };
     obj[0] = premiumTier.numPremiumGuild;
-    let formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.gDsyB9, obj);
+    let formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.gDsyB9, obj);
   } else if (0 === premiumTier.numPremiumGuild) {
-    formatToPlainStringResult = getPremiumPlanItem /* getPremiumPlanItem */.getPremiumTypeDisplayName(premiumTier.premiumTier);
-    const obj3 = getPremiumPlanItem /* getPremiumPlanItem */;
+    formatToPlainStringResult = getPremiumPlanItem.getPremiumTypeDisplayName(premiumTier.premiumTier);
+    const obj3 = getPremiumPlanItem;
   } else {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const formatToPlainString = intl2.formatToPlainString;
     if (flag) {
       obj = { numSubscriptions: null };
@@ -124,18 +124,18 @@ function BoostDeltaPriceTrailing(arg0) {
   obj[2] = Themes.space.PX_4;
   obj = { size: "xs", color: null };
   obj[1] = Themes.colors.ICON_FEEDBACK_POSITIVE;
-  const items = [callback3(NitroWheelIcon /* NitroWheelIcon */.NitroWheelIcon, obj), ];
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const items = [callback3(NitroWheelIcon.NitroWheelIcon, obj), ];
+  const intl = getSystemLocale.intl;
   if (interval === constants.MONTH) {
     rS8FA_ = tmp2(1236).t.AbOLNu;
   } else {
     rS8FA_ = tmp2(1236).t["rS8FA+"];
   }
   obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-  obj[2] = intl.format(rS8FA_, { price: callback3(Text /* Text */.Text, { variant: "text-sm/semibold", color: "text-feedback-positive", children: price }, "price") });
-  items[1] = callback3(Text /* Text */.Text, obj);
+  obj[2] = intl.format(rS8FA_, { price: callback3(Text.Text, { variant: "text-sm/semibold", color: "text-feedback-positive", children: price }, "price") });
+  items[1] = callback3(Text.Text, obj);
   obj[3] = items;
-  return closure_33(Stack /* Stack */.Stack, obj);
+  return closure_33(Stack.Stack, obj);
 }
 function PlanRow(plan) {
   let importDefault;
@@ -581,7 +581,7 @@ function CurrentPlanRow(subscription) {
 }
 function PlanSectionHeader(children) {
   const tmp = callback5();
-  return callback3(Button /* Button */.LegacyText, { style: callback5().header, accessibilityRole: "header", children: children.string });
+  return callback3(Button.LegacyText, { style: callback5().header, accessibilityRole: "header", children: children.string });
 }
 function PlanSections(showCurrentPlan) {
   let analyticsLoadId;
@@ -806,8 +806,8 @@ items = [
   {
     id: "premium",
     getLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.A4BfLn);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.A4BfLn);
     },
     predicate(premiumTier) {
       let tmp = null != premiumTier.premiumTier;
@@ -820,8 +820,8 @@ items = [
   {
     id: "premium-and-premium-guild",
     getLabel(arg0) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      const t = getSystemLocale /* getSystemLocale */.t;
+      const intl = getSystemLocale.intl;
+      const t = getSystemLocale.t;
       return intl.string(arg0 ? t.rPoOQW : t.lyXyD0);
     },
     predicate(premiumTier) {
@@ -835,8 +835,8 @@ items = [
   {
     id: "premium-guild",
     getLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.rPoOQW);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.rPoOQW);
     },
     predicate(premiumTier) {
       let tmp = null == premiumTier.premiumTier;
@@ -1200,8 +1200,8 @@ let obj6 = { color: require("Themes").unsafe_rawColors.GUILD_BOOSTING_PINK };
 let obj7 = {
   id: "premium",
   getLabel() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.A4BfLn);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.A4BfLn);
   },
   predicate(premiumTier) {
     let tmp = null != premiumTier.premiumTier;

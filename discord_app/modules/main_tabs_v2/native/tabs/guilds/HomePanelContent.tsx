@@ -57,7 +57,7 @@ let closure_7 = createCacheKey.createStyles((width) => {
 let closure_8 = { code: "function HomePanelContentTsx1(){const{isGradientTheme,maxX,interpolateColor,panelSpringTranslateX,baseLowest,panelBg}=this.__closure;if(isGradientTheme||maxX<=0){return{backgroundColor:'transparent'};}return{backgroundColor:interpolateColor(panelSpringTranslateX.get(),[0,maxX],[baseLowest,panelBg])};}" };
 const memoResult = require("noop").memo(() => {
   const tmp = callback(DM_WIDTH);
-  let obj = context /* context */;
+  let obj = context;
   if (obj.useIsHomeDrawerEnabled()) {
     let tmp3Result = tmp3(HomeDrawerPanelContent, {});
   } else {

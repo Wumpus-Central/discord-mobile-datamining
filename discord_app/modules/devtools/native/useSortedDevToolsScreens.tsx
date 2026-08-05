@@ -98,5 +98,5 @@ export const updateSortOrder = function updateSortOrder(closure_0, down) {
     items[index + 1] = items[index];
   }
   tmp2 = getSortedDevToolsScreens()[Symbol.iterator]();
-  const result = updateDevToolsSettings /* updateDevToolsSettings */.updateDevToolsSettings({ sortedScreenKeys: items });
+  const result = updateDevToolsSettings.updateDevToolsSettings({ sortedScreenKeys: items });
 };

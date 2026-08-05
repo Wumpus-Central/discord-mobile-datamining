@@ -26,15 +26,15 @@ function OverlayMuteButton(arg0) {
   ({ isMuted, onToggleMute } = arg0);
   let obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, color: null, onPress: null, style: null, iconStyle: null };
   const tmp = callback3();
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.w4m945);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.w4m945);
   obj = { left: true, right: true, children: null };
   obj[2] = importDefault(isMuted ? 12146 : 10788);
   obj[3] = Themes.unsafe_rawColors.WHITE;
   obj[4] = onToggleMute;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
   obj[2] = closure_7(render, obj);
-  return closure_7(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 function OverlayObscureToggleButton(arg0) {
   let onToggleObscure;
@@ -42,15 +42,15 @@ function OverlayObscureToggleButton(arg0) {
   ({ spoilerActive, onToggleObscure } = arg0);
   let obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, color: null, onPress: null, style: null, iconStyle: null };
   const tmp = callback3();
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.UIsxUw);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.UIsxUw);
   obj = { left: true, right: true, children: null };
   obj[2] = importDefault(spoilerActive ? 12147 : 12148);
   obj[3] = Themes.unsafe_rawColors.WHITE;
   obj[4] = onToggleObscure;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
   obj[2] = closure_7(render, obj);
-  return closure_7(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  return closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 function MediaModalOverlay(getVideoControls) {
   let index;
@@ -113,12 +113,12 @@ let closure_13 = importAllResult.memo((arg0) => {
   ({ slider, onClose, syncer, source, obscure } = arg0);
   ({ overlayEnabled, disableDownload, disableMediaOverlayButton, disableMediaOverlayFooter, shareable, contextName, contextIcon, spoilerActive, toggleObscure } = arg0);
   const tmp = callback3();
-  let obj = useOverlayLayoutDriver /* useOverlayLayoutDriver */;
+  let obj = useOverlayLayoutDriver;
   const overlayLayoutDriver = obj.useOverlayLayoutDriver();
-  let obj1 = useOverlayLayoutDriver /* useOverlayLayoutDriver */;
+  let obj1 = useOverlayLayoutDriver;
   const footerLayoutAnimation = obj1.useFooterLayoutAnimation(overlayLayoutDriver);
   [tmp7, tmp8] = callback(importAllResult.useState(false), 2);
-  let obj2 = nativeEventEmitter /* nativeEventEmitter */;
+  let obj2 = nativeEventEmitter;
   const mediaPlayerMutedStore = obj2.useMediaPlayerMutedStore((isMuted) => isMuted.isMuted);
   if (null != slider) {
     obj = { bottom: true, left: true, right: true, style: null, children: null };
@@ -146,7 +146,7 @@ let closure_13 = importAllResult.memo((arg0) => {
   }
   tmp2Result = tmp2(8787);
   obj2 = { animationDriver: overlayLayoutDriver, disableDownload, disableMediaOverlayButton, source, shareable, contextName, contextIcon, onClose, channelId: source.channelId };
-  const items1 = [callback2(MediaModalOverlayHeader /* MediaModalOverlayHeader */.MediaModalOverlayHeader, obj2), ];
+  const items1 = [callback2(MediaModalOverlayHeader.MediaModalOverlayHeader, obj2), ];
   const obj3 = { style: items2, children: null };
   items2 = [tmp.portraitFooterButtons, footerLayoutAnimation];
   let tmp21Result = !tmp7;

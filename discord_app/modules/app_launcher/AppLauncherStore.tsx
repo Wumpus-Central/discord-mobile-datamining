@@ -4,23 +4,23 @@ import { AppLauncherEntrypoint } from "AppLauncherTypes.tsx";
 
 const require = arg1;
 function handleDismissWithDismissed() {
-  let DISMISSED = AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherCloseReason.DISMISSED;
+  let DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.DISMISSED;
   if (DISMISSED === undefined) {
     DISMISSED = tmp(9467).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
-  obj.entrypoint = AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEntrypoint.NONE;
+  obj.entrypoint = AppLauncherEntrypoint.AppLauncherEntrypoint.NONE;
   obj.closeReason = DISMISSED;
   obj.initialState = undefined;
   obj.activeChannelId = null;
 }
 function handleSetActiveCommand() {
-  let DISMISSED = AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherCloseReason.COMMAND;
+  let DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.COMMAND;
   if (DISMISSED === undefined) {
     DISMISSED = tmp(9467).AppLauncherCloseReason.DISMISSED;
   }
   obj.show = false;
-  obj.entrypoint = AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEntrypoint.NONE;
+  obj.entrypoint = AppLauncherEntrypoint.AppLauncherEntrypoint.NONE;
   obj.closeReason = DISMISSED;
   obj.initialState = undefined;
   obj.activeChannelId = null;
@@ -35,14 +35,14 @@ prototype["initialize"] = function initialize() {
 prototype["shouldShowPopup"] = function shouldShowPopup() {
   let show = obj.show;
   if (show) {
-    show = obj.entrypoint === AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEntrypoint.TEXT;
+    show = obj.entrypoint === AppLauncherEntrypoint.AppLauncherEntrypoint.TEXT;
   }
   return show;
 };
 prototype["shouldShowModal"] = function shouldShowModal() {
   let show = obj.show;
   if (show) {
-    show = obj.entrypoint === AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEntrypoint.VOICE;
+    show = obj.entrypoint === AppLauncherEntrypoint.AppLauncherEntrypoint.VOICE;
   }
   return show;
 };
@@ -79,7 +79,7 @@ obj = {
     obj.entrypoint = entrypoint;
     obj.lastShownEntrypoint = entrypoint;
     ({ activeViewType, initialState, activeChannelId } = entrypoint);
-    obj.closeReason = AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherCloseReason.DISMISSED;
+    obj.closeReason = AppLauncherEntrypoint.AppLauncherCloseReason.DISMISSED;
     obj.activeViewType = activeViewType;
     obj.activeChannelId = activeChannelId;
     obj.initialState = initialState;
@@ -88,10 +88,10 @@ obj = {
   APP_LAUNCHER_DISMISS: function handleDismiss(closeReason) {
     let DISMISSED = closeReason.closeReason;
     if (DISMISSED === undefined) {
-      DISMISSED = AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherCloseReason.DISMISSED;
+      DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.DISMISSED;
     }
     obj.show = false;
-    obj.entrypoint = AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEntrypoint.NONE;
+    obj.entrypoint = AppLauncherEntrypoint.AppLauncherEntrypoint.NONE;
     obj.closeReason = DISMISSED;
     obj.initialState = undefined;
     obj.activeChannelId = null;

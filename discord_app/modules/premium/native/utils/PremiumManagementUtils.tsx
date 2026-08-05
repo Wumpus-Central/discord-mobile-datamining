@@ -13,10 +13,10 @@ function defaultMobileWebNitroManagementFailureCallback(arg0) {
   tmp2.error("Failed to open mobile web Nitro Management page, error response: ", arg0);
   let obj = AlertActionCreators;
   obj = { title: null, body: null, hideActionSheet: true };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.NrBVjw);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["gD+grx"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.NrBVjw);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t["gD+grx"]);
   obj.show(obj);
 }
 let closure_6 = new require("timestamp")("PremiumManagementUtils");
@@ -123,7 +123,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
         } else {
           return null;
         }
-        obj7 = set /* set */;
+        obj7 = set;
       }
     }
     return null;

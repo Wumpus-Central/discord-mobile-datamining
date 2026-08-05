@@ -191,7 +191,7 @@ export const openSummaryDividerActionSheet = function openSummaryDividerActionSh
     const _HermesInternal = HermesInternal;
     obj = { summary: null };
     obj[0] = findSummaryResult;
-    obj.openLazy(asyncRequireImpl /* asyncRequireImpl */(11029, dependencyMap.paths), "SummaryDivider" + summaryId, obj);
-    const tmp5 = asyncRequireImpl /* asyncRequireImpl */(11029, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(11029, dependencyMap.paths), "SummaryDivider" + summaryId, obj);
+    const tmp5 = asyncRequireImpl(11029, dependencyMap.paths);
   }
 };

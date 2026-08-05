@@ -33,7 +33,7 @@ export default {
   },
   getSubmitRequestURL(arg0) {
     const formatted = _getSystemLocale.locale.toLowerCase();
-    const sum = combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(set /* set */.getPlatformName());
+    const sum = combined + "/hc/" + formatted + "/requests/new?platform=" + encodeURIComponent(set.getPlatformName());
     let sum1 = sum;
     if (null != arg0) {
       const _encodeURIComponent = encodeURIComponent;

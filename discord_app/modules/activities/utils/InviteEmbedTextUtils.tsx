@@ -11,9 +11,9 @@ function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {
     if (isPrivate.isPrivate()) {
       user = user.getUser(isPrivate.getRecipientId());
       if (null != user) {
-        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        const intl2 = getSystemLocale.intl;
         const formatToPlainString2 = intl2.formatToPlainString;
-        const t2 = getSystemLocale /* getSystemLocale */.t;
+        const t2 = getSystemLocale.t;
         if (arg4) {
           let obj = { username: null, appName: null };
           obj[0] = user.globalName;
@@ -28,9 +28,9 @@ function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {
         return formatToPlainString2Result;
       }
     }
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const formatToPlainString = intl.formatToPlainString;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (arg4) {
       const obj1 = { appName: null };
       obj1[0] = name_override;
@@ -42,9 +42,9 @@ function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {
     }
     return formatToPlainStringResult;
   } else {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     const formatToPlainString3 = intl3.formatToPlainString;
-    const t3 = getSystemLocale /* getSystemLocale */.t;
+    const t3 = getSystemLocale.t;
     if (arg4) {
       const obj3 = { username: null, appName: null };
       obj3[0] = author.author.globalName;
@@ -63,41 +63,41 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/activit
 
 export const getHeaderText = function getHeaderText(arg0, arg1, arg2) {
   if (ActivityActionTypes.LISTEN === arg1) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    const intl5 = getSystemLocale.intl;
     let obj = { name: null };
     obj[0] = arg0;
-    return intl5.formatToPlainString(getSystemLocale /* getSystemLocale */.t["/8czH4"], obj);
+    return intl5.formatToPlainString(getSystemLocale.t["/8czH4"], obj);
   } else if (tmp.WATCH === arg1) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    const intl4 = getSystemLocale.intl;
     obj = { name: null };
     obj[0] = arg0;
-    return intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.BBJXVk, obj);
+    return intl4.formatToPlainString(getSystemLocale.t.BBJXVk, obj);
   } else if (tmp.JOIN === arg1) {
     let stringResult;
     if (!arg2) {
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t.pkq6Vq);
+      const intl3 = getSystemLocale.intl;
+      stringResult = intl3.string(getSystemLocale.t.pkq6Vq);
     }
     return stringResult;
   } else if (tmp.STREAM_REQUEST === arg1) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     return intl2.string(messagesProxy.DKHhec);
   } else {
     const JOIN_REQUEST = tmp.JOIN_REQUEST;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Ckxb6j);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Ckxb6j);
   }
 };
 export const getRequestToStreamText = function getRequestToStreamText(author, guild_id, id) {
   if (author.author.id === id) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     let stringResult = intl2.string(messagesProxy["8B3U5O"]);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj = { username: null };
-    obj[0] = getNickname /* getNickname */.getName(guild_id.guild_id, guild_id.id, author.author);
+    obj[0] = getNickname.getName(guild_id.guild_id, guild_id.id, author.author);
     stringResult = intl.formatToPlainString(messagesProxy["d/qbC0"], obj);
-    const obj2 = getNickname /* getNickname */;
+    const obj2 = getNickname;
   }
   return stringResult;
 };
@@ -113,14 +113,14 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
       if (tmp2.JOIN !== type) {
         if (tmp2.STREAM_REQUEST === type) {
           if (activity.author.id === id1) {
-            const intl2 = getSystemLocale /* getSystemLocale */.intl;
+            const intl2 = getSystemLocale.intl;
             let stringResult = intl2.string(messagesProxy["8B3U5O"]);
           } else {
-            const intl = getSystemLocale /* getSystemLocale */.intl;
+            const intl = getSystemLocale.intl;
             const obj = { username: null };
-            obj[0] = getNickname /* getNickname */.getName(guild_id.guild_id, guild_id.id, activity.author);
+            obj[0] = getNickname.getName(guild_id.guild_id, guild_id.id, activity.author);
             stringResult = intl.formatToPlainString(messagesProxy["d/qbC0"], obj);
-            const obj2 = getNickname /* getNickname */;
+            const obj2 = getNickname;
           }
           return stringResult;
         } else {
@@ -130,8 +130,8 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
       }
     }
   }
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const intl3 = getSystemLocale.intl;
+  const t = getSystemLocale.t;
   return intl3.string(arg4 ? t.x1UXGR : t["Ek+51n"]);
 };
 export const getPartyText = function getPartyText(arg0) {
@@ -144,29 +144,29 @@ export const getPartyText = function getPartyText(arg0) {
   } else {
     if (activityActionType !== tmp.LISTEN) {
       if (maxPartySize > 0) {
-        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        const intl2 = getSystemLocale.intl;
         let obj = { partySize: null, maxPartySize: null };
         obj[0] = partySize;
         obj[1] = maxPartySize;
-        let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.gLu7NU, obj);
+        let formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t.gLu7NU, obj);
       } else {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
+        const intl = getSystemLocale.intl;
         obj = { partySize: null };
         obj[0] = partySize;
-        formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["65JnWC"], obj);
+        formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["65JnWC"], obj);
       }
     }
     if (maxPartySize > 0) {
-      const intl4 = getSystemLocale /* getSystemLocale */.intl;
+      const intl4 = getSystemLocale.intl;
       obj = { partySize: null, maxPartySize: null };
       obj[0] = partySize;
       obj[1] = maxPartySize;
-      let formatToPlainStringResult1 = intl4.formatToPlainString(getSystemLocale /* getSystemLocale */.t.Zogoou, obj);
+      let formatToPlainStringResult1 = intl4.formatToPlainString(getSystemLocale.t.Zogoou, obj);
     } else {
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      const intl3 = getSystemLocale.intl;
       const obj1 = { partySize: null };
       obj1[0] = partySize;
-      formatToPlainStringResult1 = intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.UGei0j, obj1);
+      formatToPlainStringResult1 = intl3.formatToPlainString(getSystemLocale.t.UGei0j, obj1);
     }
   }
 };

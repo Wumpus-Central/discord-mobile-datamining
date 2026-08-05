@@ -82,19 +82,19 @@ export const getPremiumRequirement = function getPremiumRequirement(arg0, arg1, 
 };
 export const getResolutionText = function getResolutionText(maxResolution) {
   if (maxResolution.type === ResolutionTypes.SOURCE) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.XjXqzh);
+    const intl2 = getSystemLocale.intl;
+    let stringResult = intl2.string(getSystemLocale.t.XjXqzh);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const obj = { resolution: null };
     obj[0] = maxResolution.height;
-    stringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.TEOC0I, obj);
+    stringResult = intl.formatToPlainString(getSystemLocale.t.TEOC0I, obj);
   }
   return stringResult;
 };
 export const getFPSText = function getFPSText(maxFrameRate) {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.Qb44XH, { fps: maxFrameRate });
+  const intl = getSystemLocale.intl;
+  return intl.formatToPlainString(getSystemLocale.t.Qb44XH, { fps: maxFrameRate });
 };
 export const getMaxQuality = function getMaxQuality(participant) {
   let tmp = null;

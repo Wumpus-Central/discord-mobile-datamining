@@ -27,7 +27,7 @@ export default function useHasVideoPermission(arg0) {
 export const getVideoPermission = function getVideoPermission(channel) {
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
-    const obj = canStreamInChannel /* canStreamInChannel */;
+    const obj = canStreamInChannel;
     isPrivateResult = obj.canStreamInChannel(channel, createGuildRecordFromRust, getUncachedChannelPermissions, false);
   }
   return isPrivateResult;

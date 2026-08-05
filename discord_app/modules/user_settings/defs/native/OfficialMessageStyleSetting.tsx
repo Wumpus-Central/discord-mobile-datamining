@@ -9,10 +9,10 @@ import { setFontSize } from "../../../a11y/AccessibilityActionCreators.tsx";
 const require = arg1;
 function useOfficialMessageStyleSettingValue() {
   const items = [maybeApplyNoTextColorForLightCustomTheme];
-  return initialize /* initialize */.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
+  return initialize.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
 }
 function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
-  const result = setFontSize /* setFontSize */.setOfficialMessageStyle(officialMessageStyle);
+  const result = setFontSize.setOfficialMessageStyle(officialMessageStyle);
 }
 function useOfficialMessageStyleSettingOptions() {
   return React.useMemo(() => {
@@ -37,8 +37,8 @@ function useOfficialMessageStyleSettingOptions() {
 }
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.nC2XBl);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.nC2XBl);
   },
   parent: require("MobileSetting").MobileSetting.ACCESSIBILITY,
   useValue: useOfficialMessageStyleSettingValue,

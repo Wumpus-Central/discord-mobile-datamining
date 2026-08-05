@@ -18,9 +18,9 @@ export const FractionalNitroCoinIllustration = function FractionalNitroCoinIllus
     resizeMode = "contain";
   }
   if (skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM_1_DAY) {
-    let NitroCoinStackSpotIllustration = AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */.NitroCoinSpotIllustration;
+    let NitroCoinStackSpotIllustration = AccountAgeTier10LargeBadge.NitroCoinSpotIllustration;
   } else {
-    NitroCoinStackSpotIllustration = AccountAgeTier10LargeBadge /* AccountAgeTier10LargeBadge */.NitroCoinStackSpotIllustration;
+    NitroCoinStackSpotIllustration = AccountAgeTier10LargeBadge.NitroCoinStackSpotIllustration;
   }
   return <NitroCoinStackSpotIllustration width={width} height={height} resizeMode={resizeMode} />;
 };

@@ -173,7 +173,7 @@ function useAgeVerificationRunner(onComplete) {
 }
 function useShouldCallReactiveCheck() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
@@ -210,7 +210,7 @@ function shouldCallReactiveCheck() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  let tmp5 = prop !== PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
+  let tmp5 = prop !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
   if (tmp5) {
     let prop1;
     if (currentUser != null) {
@@ -317,7 +317,7 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  let tmp5 = prop !== PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
+  let tmp5 = prop !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (tmp5) {
     const isFeatureAgeGatedResult = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5108).AgeGatedFeature.REACTIVE_CHECK);
     let tmp8 = !isFeatureAgeGatedResult;
@@ -330,9 +330,9 @@ export const shouldShowTiggerPawtect = function shouldShowTiggerPawtect() {
 };
 export const useShouldShowTiggerPawtect = function useShouldShowTiggerPawtect() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize /* initialize */;
-  let isFeatureAgeGated = isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize;
+  let isFeatureAgeGated = isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.REACTIVE_CHECK);
   if (isFeatureAgeGated) {
     let prop;
     if (stateFromStores != null) {
@@ -344,8 +344,8 @@ export const useShouldShowTiggerPawtect = function useShouldShowTiggerPawtect() 
   if (stateFromStores != null) {
     prop1 = stateFromStores.ageVerificationStatus;
   }
-  const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
-  return prop1 !== PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT && !isFeatureAgeGated;
+  const obj2 = isFeatureAgeGated;
+  return prop1 !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT && !isFeatureAgeGated;
 };
 export const isVerifiedTeen = function isVerifiedTeen() {
   const currentUser = authStore.getCurrentUser();
@@ -353,16 +353,16 @@ export const isVerifiedTeen = function isVerifiedTeen() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  return prop === PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN;
+  return prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN;
 };
 export const useIsVerifiedTeen = function useIsVerifiedTeen() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
   }
-  return prop === PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN;
+  return prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_TEEN;
 };
 export const isVerifiedAdult = function isVerifiedAdult() {
   const currentUser = authStore.getCurrentUser();
@@ -370,7 +370,7 @@ export const isVerifiedAdult = function isVerifiedAdult() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  let tmp5 = prop === PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
+  let tmp5 = prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
   if (!tmp5) {
     tmp5 = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5108).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1906).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
     const tmp7 = getRegionalFeatureConfig.isFeatureAgeGated(tmp3(5108).AgeGatedFeature.REACTIVE_CHECK) && prop === tmp3(1906).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
@@ -379,9 +379,9 @@ export const isVerifiedAdult = function isVerifiedAdult() {
 };
 export const useIsVerifiedAdult = function useIsVerifiedAdult() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize /* initialize */;
-  let isFeatureAgeGated = isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK);
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize;
+  let isFeatureAgeGated = isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.REACTIVE_CHECK);
   if (isFeatureAgeGated) {
     let prop;
     if (stateFromStores != null) {
@@ -393,17 +393,17 @@ export const useIsVerifiedAdult = function useIsVerifiedAdult() {
   if (stateFromStores != null) {
     prop1 = stateFromStores.ageVerificationStatus;
   }
-  const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
-  return prop1 === PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT || isFeatureAgeGated;
+  const obj2 = isFeatureAgeGated;
+  return prop1 === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT || isFeatureAgeGated;
 };
 export const useIsExplicitlyVerifiedAdult = function useIsExplicitlyVerifiedAdult() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
   }
-  return prop === PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
+  return prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.VERIFIED_ADULT;
 };
 export const isAssignedByDiscord = function isAssignedByDiscord() {
   const currentUser = authStore.getCurrentUser();
@@ -411,11 +411,11 @@ export const isAssignedByDiscord = function isAssignedByDiscord() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  return prop === PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
+  return prop === PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
 };
 export const useIsAssignedByDiscord = function useIsAssignedByDiscord() {
   const items = [mergeGuildAvatar];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let prop;
     if (currentUser != null) {
@@ -426,7 +426,7 @@ export const useIsAssignedByDiscord = function useIsAssignedByDiscord() {
 };
 export const useShowAssignedAgeGroupSettings = function useShowAssignedAgeGroupSettings() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let prop;
     if (currentUser != null) {
@@ -434,9 +434,9 @@ export const useShowAssignedAgeGroupSettings = function useShowAssignedAgeGroupS
     }
     return prop === callback(table[16]).AgeVerificationStatusUkAndAusOnly.INFERRED_ADULT;
   });
-  const obj = initialize /* initialize */;
-  const obj2 = isFeatureAgeGated /* isFeatureAgeGated */;
-  return isFeatureAgeGated /* isFeatureAgeGated */.useIsFeatureAgeGated(AgeGatedFeature /* AgeGatedFeature */.AgeGatedFeature.REACTIVE_CHECK) && stateFromStores;
+  const obj = initialize;
+  const obj2 = isFeatureAgeGated;
+  return isFeatureAgeGated.useIsFeatureAgeGated(AgeGatedFeature.AgeGatedFeature.REACTIVE_CHECK) && stateFromStores;
 };
 export const AgeVerificationSystemNotificationEmbedKeys = obj;
 export const AgeVerificationSystemNotificationCtaTypes = obj;
@@ -484,7 +484,7 @@ export const isAgeVerificationMessageWithConnectToTeenCta = function isAgeVerifi
               }
               let enabled = true === hasItem;
               if (enabled) {
-                const FamilyCenterConnectionPrereqExperiment = apexExperiment /* apexExperiment */.FamilyCenterConnectionPrereqExperiment;
+                const FamilyCenterConnectionPrereqExperiment = apexExperiment.FamilyCenterConnectionPrereqExperiment;
                 enabled = FamilyCenterConnectionPrereqExperiment.getConfig({ location: "isAgeVerificationMessageWithConnectToTeenCta" }).enabled;
               }
               return enabled;
@@ -502,19 +502,19 @@ export const isAgeVerified = function isAgeVerified() {
   if (currentUser != null) {
     prop = currentUser.ageVerificationStatus;
   }
-  let tmp5 = prop !== PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
+  let tmp5 = prop !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.UNVERIFIED;
   if (tmp5) {
     let prop1;
     if (currentUser != null) {
       prop1 = currentUser.ageVerificationStatus;
     }
-    tmp5 = prop1 !== PermissionOverwriteType /* PermissionOverwriteType */.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
+    tmp5 = prop1 !== PermissionOverwriteType.AgeVerificationStatusUkAndAusOnly.CLIENT_ONLY_PENDING;
   }
   return tmp5;
 };
 export const useIsAgeVerified = function useIsAgeVerified() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   let prop;
   if (stateFromStores != null) {
     prop = stateFromStores.ageVerificationStatus;
@@ -627,9 +627,9 @@ export const isFullscreenAgeVerificationEntryPoint = function isFullscreenAgeVer
 };
 export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetStartedTitle(entryPoint) {
   const hasItem = set.has(entryPoint);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (hasItem) {
     let stringResult = string(t.lSWVTM);
   } else {
@@ -643,19 +643,19 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
     flag = false;
   }
   if (set.has(entryPoint)) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult = intl4.string(getSystemLocale /* getSystemLocale */.t["S/xS/w"]);
+    const intl4 = getSystemLocale.intl;
+    let stringResult = intl4.string(getSystemLocale.t["S/xS/w"]);
   } else if (flag) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     stringResult = intl3.string(messagesProxy.h7qzoa);
   } else if (null != arg1) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj = { handleOnHelpUrlHook: null };
     obj[0] = arg1;
     stringResult = intl2.format(messagesProxy.RpMIT0, obj);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.HxS3oQ);
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t.HxS3oQ);
   }
   return stringResult;
 };

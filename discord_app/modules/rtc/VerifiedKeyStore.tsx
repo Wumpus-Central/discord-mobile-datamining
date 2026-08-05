@@ -21,7 +21,7 @@ prototype["getState"] = function getState() {
   return { users: closure_3 };
 };
 prototype["getKeyTrustedAt"] = function getKeyTrustedAt(arg0, uint8Array) {
-  const obj = set /* set */;
+  const obj = set;
   let tmp2;
   if (dependencyMap[arg0] != null) {
     tmp2 = tmp[obj.serializeKey(obj, uint8Array)];
@@ -50,8 +50,8 @@ const verifiedKeyStore = new VerifiedKeyStore(require("dispatcher"), {
     }
     dependencyMap[userId] = obj;
     const uint8Array = new Uint8Array(key);
-    const obj2 = set /* set */;
-    obj[set /* set */.serializeKey(uint8Array)] = Date.now();
+    const obj2 = set;
+    obj[set.serializeKey(uint8Array)] = Date.now();
   },
   SECURE_FRAMES_VERIFIED_KEY_DELETE: function handleSecureFramesVerifiedKeyDelete(arg0) {
     let tmp6 = null;

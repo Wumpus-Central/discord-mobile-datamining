@@ -219,9 +219,9 @@ export const useFetchStickerPack = function useFetchStickerPack(pack_id) {
   }, items1);
 };
 export const useShouldAnimateSticker = function useShouldAnimateSticker(isFocused) {
-  const AnimateStickers = explicitContentFromProto /* explicitContentFromProto */.AnimateStickers;
+  const AnimateStickers = explicitContentFromProto.AnimateStickers;
   const setting = AnimateStickers.useSetting();
-  return getStickerExtensionFromFormatType /* getStickerExtensionFromFormatType */.shouldAnimateSticker(setting, isFocused);
+  return getStickerExtensionFromFormatType.shouldAnimateSticker(setting, isFocused);
 };
 export const useStickersGrid = function useStickersGrid(collapsedStickersCategories) {
   collapsedStickersCategories = collapsedStickersCategories.collapsedStickersCategories;
@@ -402,7 +402,7 @@ export const useFetchStickerPacks = function useFetchStickerPacks() {
   }, []);
 };
 export const useFavoriteStickerIds = function useFavoriteStickerIds() {
-  const favoriteStickers = useFrecencySettings /* useFrecencySettings */.useFrecencySettings().favoriteStickers;
+  const favoriteStickers = useFrecencySettings.useFrecencySettings().favoriteStickers;
   let stickerIds;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -446,7 +446,7 @@ export const useFavoriteStickers = function useFavoriteStickers() {
   }, items1);
 };
 export const useLatestFrecentStickerIds = function useLatestFrecentStickerIds() {
-  const frecencySettings = useFrecencySettings /* useFrecencySettings */.useFrecencySettings();
+  const frecencySettings = useFrecencySettings.useFrecencySettings();
   let keys = closure_13;
   let stickers;
   if (frecencySettings != null) {

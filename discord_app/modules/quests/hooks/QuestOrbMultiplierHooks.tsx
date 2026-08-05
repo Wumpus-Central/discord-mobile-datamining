@@ -7,24 +7,24 @@ import { items } from "../utils/QuestOrbMultiplierUtils.tsx";
 const require = arg1;
 function getQuestOrbMultiplierEligibilityForUser(isFractionalPremiumWithNoStandardSub) {
   if (null == isFractionalPremiumWithNoStandardSub) {
-    let INELIGIBLE = items /* items */.QuestOrbMultiplierEligibilityType.INELIGIBLE;
+    let INELIGIBLE = items.QuestOrbMultiplierEligibilityType.INELIGIBLE;
   } else {
     let QuestOrbMultiplierEligibilityType2 = dependencyMap;
     if (obj2.canUseMoreQuestOrbs(isFractionalPremiumWithNoStandardSub)) {
-      const questOrbMultiplierSource = items /* items */.getQuestOrbMultiplierSource(isFractionalPremiumWithNoStandardSub);
-      if (questOrbMultiplierSource === items /* items */.QuestOrbMultiplierSource.CREPE) {
+      const questOrbMultiplierSource = items.getQuestOrbMultiplierSource(isFractionalPremiumWithNoStandardSub);
+      if (questOrbMultiplierSource === items.QuestOrbMultiplierSource.CREPE) {
         QuestOrbMultiplierEligibilityType2 = tmp3(10394).QuestOrbMultiplierEligibilityType;
         let NITRO = QuestOrbMultiplierEligibilityType2.CREPE;
       } else {
         NITRO = tmp3(10394).QuestOrbMultiplierEligibilityType.NITRO;
       }
-      const obj = items /* items */;
+      const obj = items;
     } else {
       let result;
       if (isFractionalPremiumWithNoStandardSub != null) {
         result = isFractionalPremiumWithNoStandardSub.isFractionalPremiumWithNoStandardSub();
       }
-      const QuestOrbMultiplierEligibilityType = items /* items */.QuestOrbMultiplierEligibilityType;
+      const QuestOrbMultiplierEligibilityType = items.QuestOrbMultiplierEligibilityType;
       INELIGIBLE = result ? QuestOrbMultiplierEligibilityType.INELIGIBLE : QuestOrbMultiplierEligibilityType.UPSELL;
     }
     obj2 = getPremiumPlanItem;
@@ -35,6 +35,6 @@ let result = require("items").fileFinishedImporting("modules/quests/hooks/QuestO
 
 export const useQuestOrbMultiplierEligibility = function useQuestOrbMultiplierEligibility() {
   const items = [mergeGuildAvatar];
-  return initialize /* initialize */.useStateFromStores(items, () => callback(currentUser.getCurrentUser()));
+  return initialize.useStateFromStores(items, () => callback(currentUser.getCurrentUser()));
 };
 export { getQuestOrbMultiplierEligibilityForUser };

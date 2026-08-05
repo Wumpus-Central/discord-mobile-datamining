@@ -63,13 +63,13 @@ function SettingSearchResultBreadcrumbs(breadcrumbs) {
   if (0 !== breadcrumbs.length) {
     const obj = { variant: "text-xs/medium", color: "text-muted", children: null };
     obj[2] = breadcrumbs.join(" \u2192 ");
-    tmp = callback3(Text /* Text */.Text, obj);
+    tmp = callback3(Text.Text, obj);
   }
   return tmp;
 }
 function SettingSearchResultIcon(IconComponent) {
   IconComponent = IconComponent.IconComponent;
-  map /* map */;
+  map;
   if (null == IconComponent) {
     let obj = { style: null };
     obj = { width: null };
@@ -79,7 +79,7 @@ function SettingSearchResultIcon(IconComponent) {
   } else {
     obj = { IconComponent: null };
     obj[0] = IconComponent;
-    tmp6 = callback3(TableRowInner /* TableRowInner */.TableRow.Icon, obj);
+    tmp6 = callback3(TableRowInner.TableRow.Icon, obj);
   }
   return tmp6;
 }
@@ -208,7 +208,7 @@ function SettingSearchResultPlaceholder(arg0) {
   obj[2] = callback3(View, { style: items });
   obj = { style: tmp.placeholderAvatar };
   obj[3] = callback3(View, obj);
-  return callback3(TableRowInner /* TableRowInner */.TableRow, obj);
+  return callback3(TableRowInner.TableRow, obj);
 }
 let closure_3 = ["onSlidingComplete", "step", "startIcon", "endIcon", "minimumValue", "maximumValue", "valueLabel", "defaultValue", "onValueChange"];
 let closure_4 = ["settingData"];
@@ -360,7 +360,7 @@ let closure_21 = importAllResult.memo((arg0) => {
   let withArrow;
   ({ useDescription, useIsDisabled, useTrailing, variant, start, end, IconComponent } = arg0);
   ({ setting, onPress, useTitle, withArrow } = arg0);
-  let obj = useHighlightSettingItem /* useHighlightSettingItem */;
+  let obj = useHighlightSettingItem;
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   let description;
   const title = useTitle();
@@ -399,7 +399,7 @@ let closure_21 = importAllResult.memo((arg0) => {
   obj[7] = tmp12;
   obj[8] = start;
   obj[9] = end;
-  const children = [closure_14(TableRowInner /* TableRowInner */.TableRow, obj), ];
+  const children = [closure_14(TableRowInner.TableRow, obj), ];
   if (highlightSettingItem) {
     const obj2 = { start: null, end: null };
     obj2[0] = start;
@@ -423,7 +423,7 @@ let closure_22 = importAllResult.memo((arg0) => {
   let variant;
   ({ useDescription, useIsDisabled, variant, start, end, IconComponent } = arg0);
   ({ setting, onValueChange, useTitle, useValue, hasIcon } = arg0);
-  let obj = useHighlightSettingItem /* useHighlightSettingItem */;
+  let obj = useHighlightSettingItem;
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   const title = useTitle();
   let description;
@@ -474,7 +474,7 @@ let closure_24 = importAllResult.memo((arg0) => {
   let useTitle;
   let useValue;
   ({ setting, useTitle, useValue, useOptions, onValueChange } = arg0);
-  let obj = useHighlightSettingItem /* useHighlightSettingItem */;
+  let obj = useHighlightSettingItem;
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   const title = useTitle();
   const value = useValue();
@@ -494,7 +494,7 @@ let closure_24 = importAllResult.memo((arg0) => {
     }
     return callback2(callback(table[24]).TableRadioRow, { value: combined, label: label.label, subLabel: label.subLabel, disabled: label.disabled }, label.value);
   });
-  const children = [callback3(context /* context */.TableRadioGroup, obj, combined), ];
+  const children = [callback3(context.TableRadioGroup, obj, combined), ];
   if (highlightSettingItem) {
     obj = { start: true, end: true, style: null };
     obj[2] = tmp.radioSettingHighlight;
@@ -585,7 +585,7 @@ let closure_26 = importAllResult.memo((arg0) => {
   let useValue;
   ({ useValue, start, end } = arg0);
   ({ setting, useTitle, onValueChange, maximum } = arg0);
-  let obj = useHighlightSettingItem /* useHighlightSettingItem */;
+  let obj = useHighlightSettingItem;
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   let value;
   const title = useTitle();
@@ -596,7 +596,7 @@ let closure_26 = importAllResult.memo((arg0) => {
   obj = { style: callback5().slider, children: null };
   obj[1] = callback3(VolumeSlider, { value, maxVolume: maximum, onValueChange });
   obj[3] = callback3(View, obj);
-  const children = [callback3(TableRowInner /* TableRowInner */.TableRow, obj), ];
+  const children = [callback3(TableRowInner.TableRow, obj), ];
   if (highlightSettingItem) {
     const obj1 = { start: null, end: null };
     obj1[0] = start;

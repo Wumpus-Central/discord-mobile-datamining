@@ -48,7 +48,7 @@ let closure_15 = importAllResult.memo((panelVariant) => {
   let obj = { onPress, style: tmp.actionCard, width: "medium", panelVariant: flag, children: null };
   obj = { style: tmp.actionCardImage, children: null };
   obj[1] = callback(closure_5, { source: imageSource });
-  const items = [callback(closure_4, obj), callback(Text /* Text */.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2, children: text })];
+  const items = [callback(closure_4, obj), callback(Text.Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2, children: text })];
   obj[4] = items;
   return callback2(HAPPENING_NOW_CARD_MARGIN_RIGHT, obj);
 });

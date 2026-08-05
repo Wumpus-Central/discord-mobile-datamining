@@ -20,7 +20,7 @@ const forwardRefResult = importAllResult.forwardRef((scaleAmountInPx, ref) => {
   const merged = Object.assign(scaleAmountInPx, Object.create(null));
   let obj = ReanimatedRexport;
   const sharedValue = obj.useSharedValue(0);
-  const buttonPressAnimationProps = styleProperties /* styleProperties */.useButtonPressAnimationProps(sharedValue, num, scaleAmountInPx.onLayout, onPressIn, onPressOut);
+  const buttonPressAnimationProps = styleProperties.useButtonPressAnimationProps(sharedValue, num, scaleAmountInPx.onLayout, onPressIn, onPressOut);
   obj = {};
   const merged1 = Object.assign(callback(buttonPressAnimationProps, closure_2));
   const merged2 = Object.assign(merged);

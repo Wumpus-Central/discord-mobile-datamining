@@ -11,26 +11,26 @@ import { useUserIdsForLinkStatus } from "../../../parent_tools/hooks/useUserLink
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.z6tZKH);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.z6tZKH);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.TummoQ);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.TummoQ);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue() {
     const items = [DesktopNotificationTypes];
-    return initialize /* initialize */.useStateFromStores(items, () => obj.screenDowntimeReminder);
+    return initialize.useStateFromStores(items, () => obj.screenDowntimeReminder);
   },
   onValueChange(screenDowntimeReminder) {
     return NotificationActionCreators.setScreenDowntimeReminder(screenDowntimeReminder);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = apexExperiment /* apexExperiment */.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
-    const obj = apexExperiment /* apexExperiment */;
+    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
+    const obj = apexExperiment;
     const tmp2 = useUserIsTeenAgeGroup();
-    const hasActiveParentLinks = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */.useHasActiveParentLinks();
+    const hasActiveParentLinks = useUserIdsForLinkStatus.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
     }

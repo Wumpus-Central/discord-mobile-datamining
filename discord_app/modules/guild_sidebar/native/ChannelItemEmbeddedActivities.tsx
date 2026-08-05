@@ -23,7 +23,7 @@ export default function ChannelItemEmbeddedActivities(muted) {
   let size;
   ({ embeddedApps, size } = muted);
   if (size === undefined) {
-    size = GameIcon /* GameIcon */.GameIconSizes.SIZE_24;
+    size = GameIcon.GameIconSizes.SIZE_24;
   }
   let modeMuted = muted.muted;
   const tmp3 = createCacheKey();
@@ -40,7 +40,7 @@ export default function ChannelItemEmbeddedActivities(muted) {
     return callback(GameIcon, obj);
   } else {
     const diff = embeddedApps.length - 1;
-    const tmp13 = GameIcon /* GameIcon */.GameIconImageSize[size];
+    const tmp13 = GameIcon.GameIconImageSize[size];
     obj = { style: null, children: null };
     obj[0] = tmp3.container;
     const obj1 = { game: null, size: null, style: null };
@@ -65,7 +65,7 @@ export default function ChannelItemEmbeddedActivities(muted) {
       obj4[0] = tmp3.overflow;
       const _HermesInternal = HermesInternal;
       obj4[2] = "+" + diff;
-      obj2[1] = tmp16(Text /* Text */.Text, obj4);
+      obj2[1] = tmp16(Text.Text, obj4);
       tmp16Result = tmp16(tmp15, obj2);
     }
     items[1] = tmp16Result;

@@ -14,11 +14,11 @@ function renderDefaultButton(ref) {
   const merged = Object.assign(callback(ref, closure_3));
   obj.icon = registerAsset;
   obj.variant = "secondary";
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj.accessibilityLabel = intl.string(getSystemLocale /* getSystemLocale */.t.CAgr1w);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj.accessibilityHint = intl2.string(getSystemLocale /* getSystemLocale */.t.hd0b7t);
-  return jsx(IconButton /* IconButton */.IconButton, { ref: ref.ref });
+  const intl = getSystemLocale.intl;
+  obj.accessibilityLabel = intl.string(getSystemLocale.t.CAgr1w);
+  const intl2 = getSystemLocale.intl;
+  obj.accessibilityHint = intl2.string(getSystemLocale.t.hd0b7t);
+  return jsx(IconButton.IconButton, { ref: ref.ref });
 }
 let closure_3 = ["ref"];
 let c5 = importAllResult;

@@ -31,7 +31,7 @@ export default function ForumPostGridHeader(arg0) {
     obj[0] = tmp.pinIcon;
     hasFlagResult = callback(ForumPostPinIcon, obj);
   }
-  const items = [hasFlagResult, callback(ForumPostUsername /* ForumPostUsername */.ForumPostAuthor, { thread, hasUnreads }), callback(ForumPostTimestamp, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO, textStyle: tmp.timestampText }), ];
+  const items = [hasFlagResult, callback(ForumPostUsername.ForumPostAuthor, { thread, hasUnreads }), callback(ForumPostTimestamp, { thread, hasUnreads, format: ForumTimestampFormats.POSTED_DURATION_AGO, textStyle: tmp.timestampText }), ];
   if (isNew) {
     isNew = tmp8(tmp10(11318), {});
   }

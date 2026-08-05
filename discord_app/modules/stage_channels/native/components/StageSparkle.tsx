@@ -61,7 +61,7 @@ export default function StageSparkle(theme) {
     obj = {};
     const merged1 = Object.assign(merged);
     obj[1] = callback(StageSparkleInner, obj);
-    let tmp7 = callback(ManaContext /* ManaContext */.ThemeContextProvider, obj);
+    let tmp7 = callback(ManaContext.ThemeContextProvider, obj);
   } else {
     obj = {};
     const merged2 = Object.assign(merged);

@@ -42,14 +42,14 @@ const forwardRefResult = require("noop").forwardRef((grow) => {
     obj.accessibilityLabel = "";
     obj.size = "lg";
     obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    const items = [callback(BaseIconButton /* BaseIconButton */.BaseIconButton, obj), ];
+    const items = [callback(BaseIconButton.BaseIconButton, obj), ];
     const obj1 = { style: null, variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier: null, children: null };
     obj1[0] = tmp2.label;
     obj1[3] = maxFontSizeMultiplier;
     obj1[4] = label;
-    items[1] = callback(Text /* Text */.Text, obj1);
+    items[1] = callback(Text.Text, obj1);
     obj.children = items;
-    let tmp9 = callback2(BaseButton /* BaseButton */.BaseButton, obj);
+    let tmp9 = callback2(BaseButton.BaseButton, obj);
   } else {
     obj = { ref: null };
     obj[0] = arg1;
@@ -57,7 +57,7 @@ const forwardRefResult = require("noop").forwardRef((grow) => {
     obj.accessibilityLabel = accessibilityLabel;
     obj.accessibilityHint = accessibilityHint;
     obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
-    tmp9 = callback(BaseIconButton /* BaseIconButton */.BaseIconButton, obj);
+    tmp9 = callback(BaseIconButton.BaseIconButton, obj);
   }
   return tmp9;
 });

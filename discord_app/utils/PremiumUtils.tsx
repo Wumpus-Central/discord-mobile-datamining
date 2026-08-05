@@ -215,7 +215,7 @@ function getPurchaseTypePrices(id, DEFAULT) {
   if (null == value) {
     const _Error3 = Error;
     const error = new Error("Plan not found");
-    let obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+    let obj = _createGatewayCheckoutContext;
     obj = { tags: null };
     obj = { planId: null, purchaseType: null };
     obj[0] = id;
@@ -262,7 +262,7 @@ function experimentalGetPrices(id, arg1) {
       globalThis.info("prices: " + arr);
       const _Error = Error;
       const error = new Error("Missing prices for payment source on subscription plan");
-      let obj1 = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+      let obj1 = _createGatewayCheckoutContext;
       obj = { extra: null, tags: null };
       obj = { paymentSourceId: null };
       obj[0] = paymentSourceId;
@@ -287,7 +287,7 @@ function experimentalGetPrices(id, arg1) {
     obj3[0] = tmp3.countryPrices.countryCode;
     obj3[1] = id;
     obj2[0] = obj3;
-    const result1 = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */.captureBillingException(error1, obj2);
+    const result1 = _createGatewayCheckoutContext.captureBillingException(error1, obj2);
     throw error1;
   } else {
     return tmp3.countryPrices.prices;
@@ -298,13 +298,13 @@ function getServerPriceFromClientPrice(amount) {
 }
 function getItemPlansTotalServerPrice(items, currency, id) {
   let obj = { currency, amount: 0, tax: 0, taxInclusive: false };
-  const baseSubscriptionItemForSubscriptionItems = getNonePlanIdForIntervalType /* getNonePlanIdForIntervalType */.getBaseSubscriptionItemForSubscriptionItems(items);
+  const baseSubscriptionItemForSubscriptionItems = getNonePlanIdForIntervalType.getBaseSubscriptionItemForSubscriptionItems(items);
   let premiumType;
   if (null != baseSubscriptionItemForSubscriptionItems) {
     premiumType = dependencyMap3[baseSubscriptionItemForSubscriptionItems.planId].premiumType;
   }
   let tmpResult = tmp(1897);
-  const obj2 = getNonePlanIdForIntervalType /* getNonePlanIdForIntervalType */;
+  const obj2 = getNonePlanIdForIntervalType;
   tmpResult = tmp(1897);
   const isPremiumAtLeastResult = tmpResult.isPremiumAtLeast(premiumType, closure_39.TIER_0);
   const iter = items[Symbol.iterator]();
@@ -356,7 +356,7 @@ function getInterval(basePlanId) {
   } else {
     const _Error = Error;
     const error = new Error("Unsupported plan");
-    obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+    obj = _createGatewayCheckoutContext;
     obj = { tags: null };
     const obj1 = { planId: null };
     obj1[0] = basePlanId;
@@ -382,18 +382,18 @@ function getIntervalString(interval, arg1) {
     if (!arg2) {
       if (constants7.MONTH === interval) {
         if (1 !== num) {
-          const intl3 = getSystemLocale /* getSystemLocale */.intl;
+          const intl3 = getSystemLocale.intl;
           let obj = { intervalCount: null };
           obj[0] = num;
-          let formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t["0UlZnH"], obj);
+          let formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t["0UlZnH"], obj);
         } else {
-          const intl2 = getSystemLocale /* getSystemLocale */.intl;
-          formatToPlainStringResult = intl2.string(getSystemLocale /* getSystemLocale */.t.DKzs96);
+          const intl2 = getSystemLocale.intl;
+          formatToPlainStringResult = intl2.string(getSystemLocale.t.DKzs96);
         }
         return formatToPlainStringResult;
       } else if (tmp3.YEAR === interval) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        return intl.string(getSystemLocale /* getSystemLocale */.t["/Q4HRN"]);
+        const intl = getSystemLocale.intl;
+        return intl.string(getSystemLocale.t["/Q4HRN"]);
       } else {
         const _Error = Error;
         const error = new Error("Unexpected interval");
@@ -402,7 +402,7 @@ function getIntervalString(interval, arg1) {
     }
   }
   if (constants7.MONTH === interval) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    const intl7 = getSystemLocale.intl;
     if (TIER_2 === closure_39.TIER_0) {
       let poEovT2 = tmp26(1236).t.NPKsLz;
     } else {
@@ -410,7 +410,7 @@ function getIntervalString(interval, arg1) {
     }
     obj = { timeInterval: null };
     const intl8 = tmp26(1236).intl;
-    obj[0] = intl8.string(getSystemLocale /* getSystemLocale */.t.FPybU7);
+    obj[0] = intl8.string(getSystemLocale.t.FPybU7);
     let formatToPlainStringResult1 = intl7.formatToPlainString(poEovT2, obj);
     if (!flag) {
       const intl9 = tmp26(1236).intl;
@@ -418,7 +418,7 @@ function getIntervalString(interval, arg1) {
     }
     return formatToPlainStringResult1;
   } else if (tmp16.YEAR === interval) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    const intl4 = getSystemLocale.intl;
     if (TIER_2 === closure_39.TIER_0) {
       let poEovT = tmp22(1236).t.NPKsLz;
     } else {
@@ -426,7 +426,7 @@ function getIntervalString(interval, arg1) {
     }
     obj = { timeInterval: null };
     const intl5 = tmp22(1236).intl;
-    obj[0] = intl5.string(getSystemLocale /* getSystemLocale */.t.tfqrhj);
+    obj[0] = intl5.string(getSystemLocale.t.tfqrhj);
     let formatToPlainStringResult2 = intl4.formatToPlainString(poEovT, obj);
     if (!flag) {
       const intl6 = tmp22(1236).intl;
@@ -441,11 +441,11 @@ function getIntervalString(interval, arg1) {
 }
 function getIntervalStringAsNoun(interval) {
   if (constants7.MONTH === interval) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.FPybU7);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.FPybU7);
   } else if (tmp.YEAR === interval) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.tfqrhj);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.tfqrhj);
   } else {
     const _Error = Error;
     const error = new Error("Unexpected interval");
@@ -458,7 +458,7 @@ function getPremiumType(planIdFromItems) {
   } else {
     const _Error = Error;
     const error = new Error("Unsupported plan");
-    let obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+    let obj = _createGatewayCheckoutContext;
     obj = { tags: null };
     obj = { planId: null };
     obj[0] = planIdFromItems;
@@ -477,7 +477,7 @@ function getDisplayName(arg0) {
     flag2 = false;
   }
   if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === arg0) {
-    const intl15 = getSystemLocale /* getSystemLocale */.intl;
+    const intl15 = getSystemLocale.intl;
     if (flag) {
       let obj = { duration: null };
       obj[0] = arg3;
@@ -493,7 +493,7 @@ function getDisplayName(arg0) {
     }
     return formatResult;
   } else if (tmp.PREMIUM_YEAR_TIER_0 === arg0) {
-    const intl14 = getSystemLocale /* getSystemLocale */.intl;
+    const intl14 = getSystemLocale.intl;
     if (flag) {
       obj = { duration: null };
       obj[0] = arg3;
@@ -509,9 +509,9 @@ function getDisplayName(arg0) {
     }
     return formatResult1;
   } else if (tmp.PREMIUM_MONTH_TIER_1 === arg0) {
-    const intl13 = getSystemLocale /* getSystemLocale */.intl;
+    const intl13 = getSystemLocale.intl;
     const string6 = intl13.string;
-    const t6 = getSystemLocale /* getSystemLocale */.t;
+    const t6 = getSystemLocale.t;
     if (flag2) {
       let string6Result = string6(t6["g/dH5g"]);
     } else {
@@ -519,9 +519,9 @@ function getDisplayName(arg0) {
     }
     return string6Result;
   } else if (tmp.PREMIUM_YEAR_TIER_1 === arg0) {
-    const intl12 = getSystemLocale /* getSystemLocale */.intl;
+    const intl12 = getSystemLocale.intl;
     const string5 = intl12.string;
-    const t5 = getSystemLocale /* getSystemLocale */.t;
+    const t5 = getSystemLocale.t;
     if (flag2) {
       let string5Result = string5(t5.pdZJaq);
     } else {
@@ -529,7 +529,7 @@ function getDisplayName(arg0) {
     }
     return string5Result;
   } else if (tmp.PREMIUM_MONTH_TIER_2 === arg0) {
-    const intl11 = getSystemLocale /* getSystemLocale */.intl;
+    const intl11 = getSystemLocale.intl;
     if (flag) {
       const obj1 = { duration: null };
       obj1[0] = arg3;
@@ -545,9 +545,9 @@ function getDisplayName(arg0) {
     }
     return formatResult2;
   } else if (tmp.PREMIUM_GROUP_MONTH === arg0) {
-    const intl10 = getSystemLocale /* getSystemLocale */.intl;
+    const intl10 = getSystemLocale.intl;
     if (flag2) {
-      let stringResult = intl10.string(getSystemLocale /* getSystemLocale */.t.SmVbHc);
+      let stringResult = intl10.string(getSystemLocale.t.SmVbHc);
     } else {
       const obj2 = { premiumGroupProductName: null };
       obj2[0] = callback();
@@ -555,7 +555,7 @@ function getDisplayName(arg0) {
     }
     return stringResult;
   } else if (tmp.PREMIUM_YEAR_TIER_2 === arg0) {
-    const intl9 = getSystemLocale /* getSystemLocale */.intl;
+    const intl9 = getSystemLocale.intl;
     if (flag) {
       const obj3 = { duration: null };
       obj3[0] = arg3;
@@ -571,15 +571,15 @@ function getDisplayName(arg0) {
     }
     return formatResult3;
   } else if (tmp.PREMIUM_3_MONTH_TIER_2 === arg0) {
-    const intl8 = getSystemLocale /* getSystemLocale */.intl;
-    return intl8.string(getSystemLocale /* getSystemLocale */.t.wCbINr);
+    const intl8 = getSystemLocale.intl;
+    return intl8.string(getSystemLocale.t.wCbINr);
   } else if (tmp.PREMIUM_6_MONTH_TIER_2 === arg0) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
-    return intl7.string(getSystemLocale /* getSystemLocale */.t["e3/ArU"]);
+    const intl7 = getSystemLocale.intl;
+    return intl7.string(getSystemLocale.t["e3/ArU"]);
   } else if (tmp.PREMIUM_MONTH_GUILD === arg0) {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    const intl6 = getSystemLocale.intl;
     const string2 = intl6.string;
-    const t2 = getSystemLocale /* getSystemLocale */.t;
+    const t2 = getSystemLocale.t;
     if (flag2) {
       let string2Result = string2(t2["6ZR3By"]);
     } else {
@@ -587,9 +587,9 @@ function getDisplayName(arg0) {
     }
     return string2Result;
   } else if (tmp.PREMIUM_YEAR_GUILD === arg0) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    const intl5 = getSystemLocale.intl;
     const string = intl5.string;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (flag2) {
       let stringResult1 = string(t.YDpAzZ);
     } else {
@@ -597,21 +597,21 @@ function getDisplayName(arg0) {
     }
     return stringResult1;
   } else if (tmp.PREMIUM_3_MONTH_GUILD === arg0) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
-    return intl4.string(getSystemLocale /* getSystemLocale */.t.EZHHB6);
+    const intl4 = getSystemLocale.intl;
+    return intl4.string(getSystemLocale.t.EZHHB6);
   } else if (tmp.PREMIUM_6_MONTH_GUILD === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.X2KDO2);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.X2KDO2);
   } else if (tmp.PREMIUM_MONTH_LEGACY === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.PD6k79);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.PD6k79);
   } else if (tmp.PREMIUM_YEAR_LEGACY === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.LtJgTC);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.LtJgTC);
   } else {
     const _Error = Error;
     const error = new Error("Unsupported plan");
-    obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+    obj = _createGatewayCheckoutContext;
     const obj4 = { tags: null };
     const obj5 = { planId: null };
     obj5[0] = arg0;
@@ -630,12 +630,12 @@ function getTierDisplayNameByPlanId(PREMIUM_MONTH_TIER_0) {
     tmp3 = table2[premiumType];
   }
   if (null != tmp3) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     return intl.string(tmp3);
   } else {
     const _Error = Error;
     const error = new Error("Unsupported plan");
-    let obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+    let obj = _createGatewayCheckoutContext;
     obj = { tags: null };
     obj = { planId: null };
     obj[0] = PREMIUM_MONTH_TIER_0;
@@ -1306,7 +1306,7 @@ function getBillingInformationString(status, subscriptionPeriodStart, first1, fl
       tmp6 = tmp;
     }
   }
-  const formatPrice = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice;
+  const formatPrice = formatSingleCurrencyPrice.formatPrice;
   if (flag) {
     const invoiceItems = tmp6.invoiceItems;
     const found = invoiceItems.filter((subscriptionPlanId) => set.has(subscriptionPlanId.subscriptionPlanId));
@@ -1626,13 +1626,13 @@ function getUnactivatedFractionalPremiumDurationString(unactivatedUnits) {
   if (reduced > 0) {
     if (unactivatedUnits.fractionalState === constants6.NONE) {
       const obj = { days: null, hours: null, minutes: null };
-      obj[0] = getSystemLocale /* getSystemLocale */.t.fYmirx;
-      obj[1] = getSystemLocale /* getSystemLocale */.t["C3RO+g"];
-      obj[2] = getSystemLocale /* getSystemLocale */.t.r77oHc;
-      const obj2 = roundFPCountdownUnits /* roundFPCountdownUnits */;
-      const result = obj2.roundFPCountdownUnits(resetCache /* resetCache */.diffAsUnits(0, reduced * set.Millis.HOUR));
-      const obj3 = resetCache /* resetCache */;
-      return resetCache /* resetCache */.unitsAsStrings(result, obj);
+      obj[0] = getSystemLocale.t.fYmirx;
+      obj[1] = getSystemLocale.t["C3RO+g"];
+      obj[2] = getSystemLocale.t.r77oHc;
+      const obj2 = roundFPCountdownUnits;
+      const result = obj2.roundFPCountdownUnits(resetCache.diffAsUnits(0, reduced * set.Millis.HOUR));
+      const obj3 = resetCache;
+      return resetCache.unitsAsStrings(result, obj);
     }
   }
   return "";
@@ -1648,16 +1648,16 @@ function getSwitchingPlansDisabledMessage(renewalMutations) {
   let stringResult = null;
   if (null == renewalMutations.renewalMutations) {
     if (null != renewalMutations.trialEndsAt) {
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      stringResult = intl3.string(getSystemLocale /* getSystemLocale */.t.a9Mdb3);
+      const intl3 = getSystemLocale.intl;
+      stringResult = intl3.string(getSystemLocale.t.a9Mdb3);
     }
     return stringResult;
   } else if (renewalMutations.renewalMutations.planId !== renewalMutations.planId) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    let stringResult1 = intl2.string(getSystemLocale /* getSystemLocale */.t["0rzJ4J"]);
+    const intl2 = getSystemLocale.intl;
+    let stringResult1 = intl2.string(getSystemLocale.t["0rzJ4J"]);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    stringResult1 = intl.string(getSystemLocale /* getSystemLocale */.t["9dLQ0/"]);
+    const intl = getSystemLocale.intl;
+    stringResult1 = intl.string(getSystemLocale.t["9dLQ0/"]);
   }
 }
 function getCoercedPremiumGuildSubscriptionStatus(subscription) {
@@ -1719,7 +1719,7 @@ function getFormattedPriceForPlan(id, arg1, arg2, flag) {
   } else {
     tmp5 = getDefaultPrice(id.id, false, flag);
   }
-  const formatPriceResult = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(tmp5.amount, tmp5.currency);
+  const formatPriceResult = formatSingleCurrencyPrice.formatPrice(tmp5.amount, tmp5.currency);
   let tmp10 = id.currency !== constants8.USD;
   if (tmp10) {
     tmp10 = true === arg2;
@@ -1801,7 +1801,7 @@ function getPremiumGuildIntervalPrice(planId, paymentSourceId, currency, user) {
     const obj1 = { planId: null };
     obj1[0] = planId;
     obj[0] = obj1;
-    const result = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */.captureBillingException(error, obj);
+    const result = _createGatewayCheckoutContext.captureBillingException(error, obj);
     throw error;
   } else {
     const forSkuAndInterval = obj2.getForSkuAndInterval(closure_38.GUILD, value.interval, value.intervalCount);
@@ -1812,11 +1812,11 @@ function getPremiumGuildIntervalPrice(planId, paymentSourceId, currency, user) {
       let obj3 = { planId: null };
       obj3[0] = planId;
       obj2[0] = obj3;
-      const result1 = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */.captureBillingException(error1, obj2);
+      const result1 = _createGatewayCheckoutContext.captureBillingException(error1, obj2);
       throw error1;
     } else {
       const id = forSkuAndInterval.id;
-      obj3 = isPremiumAtLeast /* isPremiumAtLeast */;
+      obj3 = isPremiumAtLeast;
       return getPrice(id, obj3.isPremium(user), false, obj);
     }
   }
@@ -1825,34 +1825,34 @@ function getBillingReviewSubheader(arg0, id) {
   id = id.id;
   if (null != arg0) {
     if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === id) {
-      const intl15 = getSystemLocale /* getSystemLocale */.intl;
-      return intl15.string(getSystemLocale /* getSystemLocale */.t["0ggVqN"]);
+      const intl15 = getSystemLocale.intl;
+      return intl15.string(getSystemLocale.t["0ggVqN"]);
     } else if (tmp.PREMIUM_YEAR_TIER_0 === id) {
-      const intl14 = getSystemLocale /* getSystemLocale */.intl;
-      return intl14.string(getSystemLocale /* getSystemLocale */.t["jm+ZQw"]);
+      const intl14 = getSystemLocale.intl;
+      return intl14.string(getSystemLocale.t["jm+ZQw"]);
     } else if (tmp.PREMIUM_MONTH_TIER_1 === id) {
-      const intl13 = getSystemLocale /* getSystemLocale */.intl;
-      return intl13.string(getSystemLocale /* getSystemLocale */.t.uph4Jx);
+      const intl13 = getSystemLocale.intl;
+      return intl13.string(getSystemLocale.t.uph4Jx);
     } else if (tmp.PREMIUM_YEAR_TIER_1 === id) {
-      const intl12 = getSystemLocale /* getSystemLocale */.intl;
-      return intl12.string(getSystemLocale /* getSystemLocale */.t["D/l7Yt"]);
+      const intl12 = getSystemLocale.intl;
+      return intl12.string(getSystemLocale.t["D/l7Yt"]);
     } else {
       if (tmp.PREMIUM_MONTH_TIER_2 !== id) {
         if (tmp.PREMIUM_GROUP_MONTH !== id) {
           if (tmp.PREMIUM_YEAR_TIER_2 === id) {
-            const intl10 = getSystemLocale /* getSystemLocale */.intl;
-            return intl10.string(getSystemLocale /* getSystemLocale */.t.G0mISV);
+            const intl10 = getSystemLocale.intl;
+            return intl10.string(getSystemLocale.t.G0mISV);
           }
         }
       }
-      const intl11 = getSystemLocale /* getSystemLocale */.intl;
-      return intl11.string(getSystemLocale /* getSystemLocale */.t["5l1MuV"]);
+      const intl11 = getSystemLocale.intl;
+      return intl11.string(getSystemLocale.t["5l1MuV"]);
     }
   }
   if (SubscriptionPlans.PREMIUM_MONTH_TIER_0 === id) {
-    const intl9 = getSystemLocale /* getSystemLocale */.intl;
+    const intl9 = getSystemLocale.intl;
     const string6 = intl9.string;
-    const t6 = getSystemLocale /* getSystemLocale */.t;
+    const t6 = getSystemLocale.t;
     if (arg2) {
       let string6Result = string6(t6.cRCCJ3);
     } else {
@@ -1860,9 +1860,9 @@ function getBillingReviewSubheader(arg0, id) {
     }
     return string6Result;
   } else if (tmp2.PREMIUM_YEAR_TIER_0 === id) {
-    const intl8 = getSystemLocale /* getSystemLocale */.intl;
+    const intl8 = getSystemLocale.intl;
     const string5 = intl8.string;
-    const t5 = getSystemLocale /* getSystemLocale */.t;
+    const t5 = getSystemLocale.t;
     if (arg2) {
       let string5Result = string5(t5.cRCCJ3);
     } else {
@@ -1870,9 +1870,9 @@ function getBillingReviewSubheader(arg0, id) {
     }
     return string5Result;
   } else if (tmp2.PREMIUM_MONTH_TIER_1 === id) {
-    const intl7 = getSystemLocale /* getSystemLocale */.intl;
+    const intl7 = getSystemLocale.intl;
     const string4 = intl7.string;
-    const t4 = getSystemLocale /* getSystemLocale */.t;
+    const t4 = getSystemLocale.t;
     if (arg2) {
       let string4Result = string4(t4.cRCCJ3);
     } else {
@@ -1880,9 +1880,9 @@ function getBillingReviewSubheader(arg0, id) {
     }
     return string4Result;
   } else if (tmp2.PREMIUM_YEAR_TIER_1 === id) {
-    const intl6 = getSystemLocale /* getSystemLocale */.intl;
+    const intl6 = getSystemLocale.intl;
     const string3 = intl6.string;
-    const t3 = getSystemLocale /* getSystemLocale */.t;
+    const t3 = getSystemLocale.t;
     if (arg2) {
       let string3Result = string3(t3.cRCCJ3);
     } else {
@@ -1890,9 +1890,9 @@ function getBillingReviewSubheader(arg0, id) {
     }
     return string3Result;
   } else if (tmp2.PREMIUM_MONTH_TIER_2 === id) {
-    const intl5 = getSystemLocale /* getSystemLocale */.intl;
+    const intl5 = getSystemLocale.intl;
     const string2 = intl5.string;
-    const t2 = getSystemLocale /* getSystemLocale */.t;
+    const t2 = getSystemLocale.t;
     if (arg2) {
       let string2Result = string2(t2.cRCCJ3);
     } else {
@@ -1900,14 +1900,14 @@ function getBillingReviewSubheader(arg0, id) {
     }
     return string2Result;
   } else if (tmp2.PREMIUM_GROUP_MONTH === id) {
-    const intl4 = getSystemLocale /* getSystemLocale */.intl;
+    const intl4 = getSystemLocale.intl;
     let obj = { premiumGroupProductName: null };
     obj[0] = callback();
     return intl4.formatToPlainString(messagesProxy.LwdrNi, obj);
   } else if (tmp2.PREMIUM_YEAR_TIER_2 === id) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     const string = intl3.string;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (arg2) {
       let stringResult = string(t.cRCCJ3);
     } else {
@@ -1927,7 +1927,7 @@ function getBillingReviewSubheader(arg0, id) {
                       if (tmp2.PREMIUM_6_MONTH_GUILD !== id) {
                         const _Error = Error;
                         const error = new Error("User is purchasing an unsupported plan");
-                        obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+                        obj = _createGatewayCheckoutContext;
                         obj = { tags: null };
                         const obj1 = { planId: null };
                         obj1[0] = id;
@@ -1942,14 +1942,14 @@ function getBillingReviewSubheader(arg0, id) {
             }
           }
         }
-        const intl = getSystemLocale /* getSystemLocale */.intl;
-        return intl.string(getSystemLocale /* getSystemLocale */.t.eUEeCt);
+        const intl = getSystemLocale.intl;
+        return intl.string(getSystemLocale.t.eUEeCt);
       }
     }
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const obj2 = { intervalCount: null };
     obj2[0] = id.intervalCount;
-    return intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.BCD4fT, obj2);
+    return intl2.formatToPlainString(getSystemLocale.t.BCD4fT, obj2);
   }
 }
 function getIntervalForInvoice(arg0) {
@@ -1972,7 +1972,7 @@ function formatTrialCtaIntervalDuration(intervalType) {
   if (num === undefined) {
     num = 1;
   }
-  let obj = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+  let obj = formatSingleCurrencyPrice;
   const formatPriceResult = obj.formatPrice(0, getDefaultCurrency(), { maximumFractionDigits: 0, minimumFractionDigits: 0 });
   if (constants7.DAY === MONTH) {
     if (num >= 7) {
@@ -2092,7 +2092,7 @@ function getPremiumSkuIdForSubscription(items) {
     if (null == dependencyMap3[planId]) {
       const _Error = Error;
       const error = new Error("Unsupported plan");
-      let obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+      let obj = _createGatewayCheckoutContext;
       obj = { tags: null };
       obj = { planId: null };
       obj[0] = planId;
@@ -2116,7 +2116,7 @@ function getPremiumTypeFromSubscription(subscription) {
       } else {
         const _Error = Error;
         const error = new Error("Unsupported plan");
-        let obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+        let obj = _createGatewayCheckoutContext;
         obj = { tags: null };
         obj = { planId: null };
         obj[0] = planId;
@@ -2138,7 +2138,7 @@ function isNewUser(createdAt) {
   return tmp;
 }
 function formatPriceString(amount) {
-  const obj = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+  const obj = formatSingleCurrencyPrice;
   if (constants7.MONTH === arg1) {
     const intl2 = tmp(1236).intl;
     let stringResult = intl2.string(tmp(1236).t.FPybU7);
@@ -2150,18 +2150,18 @@ function formatPriceString(amount) {
     const error = new Error("Unexpected interval");
     throw error;
   }
-  return "" + formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(amount.amount, amount.currency) + "/" + stringResult;
+  return "" + formatSingleCurrencyPrice.formatPrice(amount.amount, amount.currency) + "/" + stringResult;
 }
 function castPremiumSubscriptionAsSkuId(skuIdForPlan) {
   return skuIdForPlan;
 }
 function formatInterval(interval) {
   if (interval === constants7.YEAR) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.tfqrhj);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.tfqrhj);
   } else if (interval === tmp.MONTH) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.FPybU7);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.FPybU7);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -2397,13 +2397,13 @@ function getDaysSincePremium(arg0) {
     const date = new Date();
     const _Date2 = Date;
     const date1 = new Date(arg0);
-    num = Math.max(resetCache /* resetCache */.differenceInCalendarDays(date, date1), 0);
-    const obj = resetCache /* resetCache */;
+    num = Math.max(resetCache.differenceInCalendarDays(date, date1), 0);
+    const obj = resetCache;
   }
   return num;
 }
 function getDaysRemainingUntilSubscriptionCurrentPeriodEnds(currentPeriodEnd) {
-  const obj = resetCache /* resetCache */;
+  const obj = resetCache;
   const date = new Date(currentPeriodEnd.currentPeriodEnd);
   return Math.max(1, Math.ceil(obj.differenceInDays(date, new Date())));
 }
@@ -2456,7 +2456,7 @@ obj = {
     if (null == dependencyMap3[planId]) {
       const _Error = Error;
       const error = new Error("Unsupported plan");
-      let obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+      let obj = _createGatewayCheckoutContext;
       obj = { tags: null };
       obj = { planId: null };
       obj[0] = planId;
@@ -2486,7 +2486,7 @@ obj = {
     } else {
       const _Error = Error;
       const error = new Error("Unsupported plan");
-      let obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+      let obj = _createGatewayCheckoutContext;
       obj = { tags: null };
       obj = { planId: null };
       obj[0] = planId;
@@ -2572,86 +2572,86 @@ obj = {
   getDaysSincePremium,
   getDaysRemainingUntilSubscriptionCurrentPeriodEnds,
   canUseAnimatedEmojis(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.ANIMATED_EMOJIS, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.ANIMATED_EMOJIS, currentUser);
   },
   canUseEmojisEverywhere(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.EMOJIS_EVERYWHERE, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.EMOJIS_EVERYWHERE, currentUser);
   },
   canUseSoundboardEverywhere(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.SOUNDBOARD_EVERYWHERE, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.SOUNDBOARD_EVERYWHERE, currentUser);
   },
   canUseCustomCallSounds(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.CUSTOM_CALL_SOUNDS, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.CUSTOM_CALL_SOUNDS, currentUser);
   },
   canUploadLargeFiles(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.UPLOAD_LARGE_FILES, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.UPLOAD_LARGE_FILES, currentUser);
   },
   canUseBadges(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.PROFILE_BADGES, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.PROFILE_BADGES, currentUser);
   },
   canUseHighVideoUploadQuality(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.INCREASED_VIDEO_UPLOAD_QUALITY, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.INCREASED_VIDEO_UPLOAD_QUALITY, currentUser);
   },
   canEditDiscriminator(stateFromStores) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.CUSTOM_DISCRIMINATOR, stateFromStores);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.CUSTOM_DISCRIMINATOR, stateFromStores);
   },
   hasBoostDiscount(stateFromStores) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.BOOST_DISCOUNT, stateFromStores);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.BOOST_DISCOUNT, stateFromStores);
   },
   canUseAnimatedAvatar(c3) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.ANIMATED_AVATAR, c3);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.ANIMATED_AVATAR, c3);
   },
   canInstallPremiumApplications(isPremiumWithFractionalPremiumOnly) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.INSTALL_PREMIUM_APPLICATIONS, isPremiumWithFractionalPremiumOnly);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.INSTALL_PREMIUM_APPLICATIONS, isPremiumWithFractionalPremiumOnly);
   },
   canUseIncreasedMessageLength(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.INCREASED_MESSAGE_LENGTH, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.INCREASED_MESSAGE_LENGTH, currentUser);
   },
   canUseIncreasedGuildCap(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.INCREASED_GUILD_LIMIT, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.INCREASED_GUILD_LIMIT, currentUser);
   },
   canRedeemPremiumPerks(isPremiumWithFractionalPremiumOnly) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.REDEEM_PREMIUM_PERKS, isPremiumWithFractionalPremiumOnly);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.REDEEM_PREMIUM_PERKS, isPremiumWithFractionalPremiumOnly);
   },
   canUsePremiumProfileCustomization(isPremiumWithFractionalPremiumOnly) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.PROFILE_PREMIUM_FEATURES, isPremiumWithFractionalPremiumOnly);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.PROFILE_PREMIUM_FEATURES, isPremiumWithFractionalPremiumOnly);
   },
   canUsePremiumAppIcons(c0) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.APP_ICONS, c0);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.APP_ICONS, c0);
   },
   canUsePremiumGuildMemberProfile(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.PREMIUM_GUILD_MEMBER_PROFILE, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.PREMIUM_GUILD_MEMBER_PROFILE, currentUser);
   },
   canUseClientThemes(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.CLIENT_THEMES, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.CLIENT_THEMES, currentUser);
   },
   canStreamQuality(HIGH, user) {
     if (HIGH === obj.HIGH) {
-      let canUserUseResult = ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.STREAM_HIGH_QUALITY, user);
-      const obj2 = ProductCatalogFeature /* ProductCatalogFeature */;
+      let canUserUseResult = ProductCatalogFeature.canUserUse(ProductCatalogFeature.STREAM_HIGH_QUALITY, user);
+      const obj2 = ProductCatalogFeature;
     } else {
-      obj = ProductCatalogFeature /* ProductCatalogFeature */;
-      canUserUseResult = obj.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.STREAM_MID_QUALITY, user);
+      obj = ProductCatalogFeature;
+      canUserUseResult = obj.canUserUse(ProductCatalogFeature.STREAM_MID_QUALITY, user);
     }
     return canUserUseResult;
   },
   canUseQuestOrbMultiplier(perks) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.QUEST_ORB_MULTIPLIER, perks);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.QUEST_ORB_MULTIPLIER, perks);
   },
   hasFreeBoosts(stateFromStores) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.FREE_BOOSTS, stateFromStores);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.FREE_BOOSTS, stateFromStores);
   },
   canUseCustomStickersEverywhere(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.STICKERS_EVERYWHERE, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.STICKERS_EVERYWHERE, currentUser);
   },
   canUseCustomBackgrounds(currentUser) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.VIDEO_FILTER_ASSETS, currentUser);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.VIDEO_FILTER_ASSETS, currentUser);
   },
   canUseCollectibles(user) {
-    return ProductCatalogFeature /* ProductCatalogFeature */.canUserUse(ProductCatalogFeature /* ProductCatalogFeature */.COLLECTIBLES, user);
+    return ProductCatalogFeature.canUserUse(ProductCatalogFeature.COLLECTIBLES, user);
   },
   canUseMonthlyOrbs(stateFromStores) {
-    let hasPerkResult = apexExperiment /* apexExperiment */.getIsCrepeEnabled("canUseMonthlyOrbs");
+    let hasPerkResult = apexExperiment.getIsCrepeEnabled("canUseMonthlyOrbs");
     if (hasPerkResult) {
       let perks;
       if (stateFromStores != null) {
@@ -2663,7 +2663,7 @@ obj = {
     return hasPerkResult;
   },
   canUseShopDiscounts(currentUser) {
-    let isCrepeEnabled = apexExperiment /* apexExperiment */.getIsCrepeEnabled("canUseShopDiscounts");
+    let isCrepeEnabled = apexExperiment.getIsCrepeEnabled("canUseShopDiscounts");
     if (isCrepeEnabled) {
       let tmpResult = tmp(1890);
       let perks;
@@ -2679,7 +2679,7 @@ obj = {
     return isCrepeEnabled;
   },
   canUseMoreQuestOrbs(perks) {
-    let isCrepeEnabled = apexExperiment /* apexExperiment */.getIsCrepeEnabled("canUseMoreQuestOrbs");
+    let isCrepeEnabled = apexExperiment.getIsCrepeEnabled("canUseMoreQuestOrbs");
     if (isCrepeEnabled) {
       let tmpResult = tmp(1890);
       perks = undefined;
@@ -2900,11 +2900,11 @@ export const getSubscriptionWithNewPlansTotalServerPrice = function getSubscript
 export { getInterval };
 export const getDiscountIntervalString = function getDiscountIntervalString(arg0) {
   if (constants5.MONTH === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.FPybU7);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.FPybU7);
   } else if (tmp.YEAR === arg0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.tfqrhj);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.tfqrhj);
   } else {
     if (tmp.DAY !== arg0) {
       const WEEK = tmp.WEEK;
@@ -2920,18 +2920,18 @@ export { getPremiumType };
 export { getDisplayName };
 export const getDisplayNameFromSku = function getDisplayNameFromSku(sku_id1) {
   if (closure_38.TIER_0 === sku_id1) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t["t9uG/o"]);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t["t9uG/o"]);
   } else if (tmp.TIER_1 === sku_id1) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.FSOz78);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.FSOz78);
   } else if (tmp.TIER_2 === sku_id1) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.lG6a5x);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.lG6a5x);
   } else {
     const _Error = Error;
     const error = new Error("Unsupported sku");
-    let obj = _createGatewayCheckoutContext /* _createGatewayCheckoutContext */;
+    let obj = _createGatewayCheckoutContext;
     obj = { tags: null };
     obj = { skuId: null };
     obj[0] = sku_id1;
@@ -2949,20 +2949,20 @@ export const getPremiumTypeDisplayName = function getPremiumTypeDisplayName(TIER
   if (closure_39.TIER_0 === TIER_0) {
     let str2 = "Basic";
     if (!flag) {
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
-      str2 = intl3.string(getSystemLocale /* getSystemLocale */.t["t9uG/o"]);
+      const intl3 = getSystemLocale.intl;
+      str2 = intl3.string(getSystemLocale.t["t9uG/o"]);
     }
     return str2;
   } else if (tmp.TIER_1 === TIER_0) {
     let str = "Classic";
     if (!flag) {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
-      str = intl2.string(getSystemLocale /* getSystemLocale */.t.FSOz78);
+      const intl2 = getSystemLocale.intl;
+      str = intl2.string(getSystemLocale.t.FSOz78);
     }
     return str;
   } else if (tmp.TIER_2 === TIER_0) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.lG6a5x);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.lG6a5x);
   }
 };
 export const getPlanDescriptionFromInvoice = function getPlanDescriptionFromInvoice(hasDiscountApplied) {
@@ -2997,9 +2997,9 @@ export const getPlanDescriptionFromInvoice = function getPlanDescriptionFromInvo
   } else {
     amount = result.amount;
   }
-  const obj3 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+  const obj3 = formatSingleCurrencyPrice;
   const tmp4 = getPlanDescription;
-  obj[2] = obj3.formatRate(formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(amount, renewalInvoicePreview.currency), value.interval, value.intervalCount);
+  obj[2] = obj3.formatRate(formatSingleCurrencyPrice.formatPrice(amount, renewalInvoicePreview.currency), value.interval, value.intervalCount);
   obj[3] = includePremiumGuilds;
   obj[4] = flag;
   obj[5] = activeDiscountInfo;
@@ -3026,7 +3026,7 @@ export const getExternalPlanDisplayName = function getExternalPlanDisplayName(re
     planId = found.planId;
   }
   if (planId === SubscriptionPlans.PREMIUM_MONTH_GUILD) {
-    let Pi5yMJ = getSystemLocale /* getSystemLocale */.t.Pi5yMJ;
+    let Pi5yMJ = getSystemLocale.t.Pi5yMJ;
   } else {
     let planId1;
     if (found != null) {
@@ -3035,7 +3035,7 @@ export const getExternalPlanDisplayName = function getExternalPlanDisplayName(re
     Pi5yMJ = null;
   }
   if (null != Pi5yMJ) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     let quantity;
     if (found != null) {
       quantity = found.quantity;
@@ -3046,11 +3046,11 @@ export const getExternalPlanDisplayName = function getExternalPlanDisplayName(re
   }
   if (null != tmp) {
     if (null != formatToPlainStringResult) {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      const intl2 = getSystemLocale.intl;
       obj = { premiumDescription: null, premiumGuildDescription: null };
       obj[0] = tmp;
       obj[1] = formatToPlainStringResult;
-      return intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.FN5T9r, obj);
+      return intl2.formatToPlainString(getSystemLocale.t.FN5T9r, obj);
     }
   }
   if (null != tmp) {
@@ -3224,7 +3224,7 @@ export const getPremiumGuildHeaderDescription = function getPremiumGuildHeaderDe
       }
       let formatPriceResult;
       if (null != amount) {
-        let obj = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+        let obj = formatSingleCurrencyPrice;
         formatPriceResult = obj.formatPrice(amount, subscription.currency);
       }
       tmp10 = formatPriceResult;
@@ -3233,7 +3233,7 @@ export const getPremiumGuildHeaderDescription = function getPremiumGuildHeaderDe
   }
   let str = "";
   if (null != tmp10) {
-    let obj1 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+    let obj1 = formatSingleCurrencyPrice;
     str = obj1.formatRate(tmp10, value.interval, value.intervalCount);
   }
   let flag3;
@@ -3252,9 +3252,9 @@ export const getPremiumGuildHeaderDescription = function getPremiumGuildHeaderDe
     flag3 = true;
   }
   if (isPremiumGuildSubscriptionCanceled(subscription)) {
-    const intl8 = getSystemLocale /* getSystemLocale */.intl;
+    const intl8 = getSystemLocale.intl;
     const format3 = intl8.format;
-    const t4 = getSystemLocale /* getSystemLocale */.t;
+    const t4 = getSystemLocale.t;
     if (tmp21) {
       obj = { quantity: null };
       obj[0] = tmp5;
@@ -3274,9 +3274,9 @@ export const getPremiumGuildHeaderDescription = function getPremiumGuildHeaderDe
   } else {
     const status = subscription.status;
     if (constants4.ACCOUNT_HOLD === status) {
-      const intl7 = getSystemLocale /* getSystemLocale */.intl;
+      const intl7 = getSystemLocale.intl;
       const format2 = intl7.format;
-      const t3 = getSystemLocale /* getSystemLocale */.t;
+      const t3 = getSystemLocale.t;
       if (tmp21) {
         const obj2 = { quantity: null, boostQuantity: null };
         obj2[0] = tmp5;
@@ -3301,17 +3301,17 @@ export const getPremiumGuildHeaderDescription = function getPremiumGuildHeaderDe
         if (tmp24.PAUSED !== status) {
           if (tmp24.PAST_DUE === status) {
             if (subscription.isBoostOnly) {
-              const intl4 = getSystemLocale /* getSystemLocale */.intl;
+              const intl4 = getSystemLocale.intl;
               const obj5 = { endDate: null, onClick: null };
-              let obj8 = resetCache /* resetCache */;
+              let obj8 = resetCache;
               obj5[0] = obj8.dateFormat(getBillingGracePeriodDaysAndExpiresDate(subscription).expiresDate, "LL");
               obj5[1] = function onClick() {
                 callback(table[21])("https://support.discord.com/hc/articles/23082866222871");
               };
-              return intl4.format(getSystemLocale /* getSystemLocale */.t["d+0vwo"], obj5);
+              return intl4.format(getSystemLocale.t["d+0vwo"], obj5);
             }
           }
-          const tmp26 = getSystemLocale /* getSystemLocale */;
+          const tmp26 = getSystemLocale;
           if (tmp9) {
             if (tmp21) {
               const intl3 = tmp26.intl;
@@ -3360,22 +3360,22 @@ export const getPremiumGuildHeaderDescription = function getPremiumGuildHeaderDe
       }
       if (null != fractionalPremiumInfo) {
         if (!fractionalPremiumInfo.isFractionalPremiumActive) {
-          const intl5 = getSystemLocale /* getSystemLocale */.intl;
-          let stringResult = intl5.string(getSystemLocale /* getSystemLocale */.t.CduWAm);
+          const intl5 = getSystemLocale.intl;
+          let stringResult = intl5.string(getSystemLocale.t.CduWAm);
         }
         return stringResult;
       }
-      const intl6 = getSystemLocale /* getSystemLocale */.intl;
+      const intl6 = getSystemLocale.intl;
       const obj11 = { quantity: null };
       obj11[0] = tmp5;
-      stringResult = intl6.format(getSystemLocale /* getSystemLocale */.t["5iud9s"], obj11);
+      stringResult = intl6.format(getSystemLocale.t["5iud9s"], obj11);
     }
   }
 };
 export { getFormattedPriceForPlan };
 export const getFormattedRateForPlan = function getFormattedRateForPlan(interval) {
   const tmp = getFormattedPriceForPlan(interval, arg1, arg2);
-  return formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatRate(tmp, interval.interval, interval.intervalCount);
+  return formatSingleCurrencyPrice.formatRate(tmp, interval.interval, interval.intervalCount);
 };
 export { getPlanIdFromInvoice };
 export { getStatusFromInvoice };
@@ -3392,8 +3392,8 @@ export const getFormattedPlanPriceFromInvoice = function getFormattedPlanPriceFr
   } else {
     amount = result.amount;
   }
-  const obj2 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
-  return obj2.formatRate(formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(amount, findInvoiceItemByPlanId.currency), id.interval, id.intervalCount);
+  const obj2 = formatSingleCurrencyPrice;
+  return obj2.formatRate(formatSingleCurrencyPrice.formatPrice(amount, findInvoiceItemByPlanId.currency), id.interval, id.intervalCount);
 };
 export { getPremiumGuildIntervalPrice };
 export { getBillingReviewSubheader };
@@ -3416,9 +3416,9 @@ export const formatTrialOfferIntervalDuration = function formatTrialOfferInterva
     let num2 = 7;
     if (num >= 7) {
       if (num % num2 === 0) {
-        const intl4 = getSystemLocale /* getSystemLocale */.intl;
+        const intl4 = getSystemLocale.intl;
         const formatToPlainString4 = intl4.formatToPlainString;
-        let t = getSystemLocale /* getSystemLocale */.t;
+        let t = getSystemLocale.t;
         if (flag) {
           t = { weeks: null };
           num2 = num / num2;
@@ -3431,9 +3431,9 @@ export const formatTrialOfferIntervalDuration = function formatTrialOfferInterva
         }
       }
     }
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     const formatToPlainString3 = intl3.formatToPlainString;
-    const t3 = getSystemLocale /* getSystemLocale */.t;
+    const t3 = getSystemLocale.t;
     if (flag) {
       obj = { days: null };
       obj[0] = num;
@@ -3445,9 +3445,9 @@ export const formatTrialOfferIntervalDuration = function formatTrialOfferInterva
     }
     return formatToPlainString3Result;
   } else if (tmp2.MONTH === MONTH) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const formatToPlainString2 = intl2.formatToPlainString;
-    const t2 = getSystemLocale /* getSystemLocale */.t;
+    const t2 = getSystemLocale.t;
     if (flag) {
       const obj2 = { months: null };
       obj2[0] = num;
@@ -3459,9 +3459,9 @@ export const formatTrialOfferIntervalDuration = function formatTrialOfferInterva
     }
     return formatToPlainString2Result;
   } else if (tmp2.YEAR === MONTH) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const formatToPlainString = intl.formatToPlainString;
-    t = getSystemLocale /* getSystemLocale */.t;
+    t = getSystemLocale.t;
     if (flag) {
       const obj4 = { years: null };
       obj4[0] = num;
@@ -3508,9 +3508,9 @@ export const formatIntervalDuration = function formatIntervalDuration(intervalTy
     let num2 = 7;
     if (num >= 7) {
       if (num % num2 === 0) {
-        const intl4 = getSystemLocale /* getSystemLocale */.intl;
+        const intl4 = getSystemLocale.intl;
         const formatToPlainString4 = intl4.formatToPlainString;
-        let t = getSystemLocale /* getSystemLocale */.t;
+        let t = getSystemLocale.t;
         if (flag) {
           t = { weeks: null };
           num2 = num / num2;
@@ -3523,9 +3523,9 @@ export const formatIntervalDuration = function formatIntervalDuration(intervalTy
         }
       }
     }
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     const formatToPlainString3 = intl3.formatToPlainString;
-    const t3 = getSystemLocale /* getSystemLocale */.t;
+    const t3 = getSystemLocale.t;
     if (flag) {
       obj = { days: null };
       obj[0] = num;
@@ -3537,9 +3537,9 @@ export const formatIntervalDuration = function formatIntervalDuration(intervalTy
     }
     return formatToPlainString3Result;
   } else if (tmp2.MONTH === MONTH) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const formatToPlainString2 = intl2.formatToPlainString;
-    const t2 = getSystemLocale /* getSystemLocale */.t;
+    const t2 = getSystemLocale.t;
     if (flag) {
       const obj2 = { months: null };
       obj2[0] = num;
@@ -3551,9 +3551,9 @@ export const formatIntervalDuration = function formatIntervalDuration(intervalTy
     }
     return formatToPlainString2Result;
   } else if (tmp2.YEAR === MONTH) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const formatToPlainString = intl.formatToPlainString;
-    t = getSystemLocale /* getSystemLocale */.t;
+    t = getSystemLocale.t;
     if (flag) {
       const obj4 = { years: null };
       obj4[0] = num;
@@ -3588,7 +3588,7 @@ export const getExternalSubscriptionMethodUrl = function getExternalSubscription
   return constants9[PAYMENT_SOURCE_MANAGEMENT];
 };
 export const hasPremiumSubscriptionToDisplay = function hasPremiumSubscriptionToDisplay(currentUser, premiumTypeSubscription) {
-  let isPremiumResult = isPremiumAtLeast /* isPremiumAtLeast */.isPremium(currentUser);
+  let isPremiumResult = isPremiumAtLeast.isPremium(currentUser);
   if (!isPremiumResult) {
     let status;
     if (premiumTypeSubscription != null) {
@@ -3601,12 +3601,12 @@ export const hasPremiumSubscriptionToDisplay = function hasPremiumSubscriptionTo
 };
 export const useHasPremiumSubscriptionToDisplay = function useHasPremiumSubscriptionToDisplay() {
   const items = [reset];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  const obj = initialize /* initialize */;
+  const stateFromStores = initialize.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
+  const obj = initialize;
   const items1 = [mergeGuildAvatar];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => currentUser.getCurrentUser());
-  const obj2 = initialize /* initialize */;
-  let isPremiumResult = isPremiumAtLeast /* isPremiumAtLeast */.isPremium(stateFromStores1);
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());
+  const obj2 = initialize;
+  let isPremiumResult = isPremiumAtLeast.isPremium(stateFromStores1);
   if (!isPremiumResult) {
     let status;
     if (stateFromStores != null) {
@@ -3700,7 +3700,7 @@ export const getMaxFileSizeForPremiumType = function getMaxFileSizeForPremiumTyp
     obj = { useSpace: true };
   }
   obj = { useKibibytes: true, useSpace: obj.useSpace };
-  return formatSize /* formatSize */.formatSize(table3[TIER_0].fileSize / 1024, obj);
+  return formatSize.formatSize(table3[TIER_0].fileSize / 1024, obj);
 };
 export { getGuildBoostPlanItem };
 export { isBoostOnlySubscription };
@@ -3751,9 +3751,9 @@ export const isPremium = require("isPremiumAtLeast").isPremium;
 export const isPremiumExactly = require("isPremiumAtLeast").isPremiumExactly;
 export const useHasTier2Premium = function useHasTier2Premium() {
   const items = [mergeGuildAvatar];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize /* initialize */;
-  return isPremiumAtLeast /* isPremiumAtLeast */.isPremiumExactly(stateFromStores, closure_39.TIER_2);
+  const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
+  const obj = initialize;
+  return isPremiumAtLeast.isPremiumExactly(stateFromStores, closure_39.TIER_2);
 };
 export const getOfferNoticeThreshold = function getOfferNoticeThreshold(trial_id) {
   let tmp2 = null != trial_id;

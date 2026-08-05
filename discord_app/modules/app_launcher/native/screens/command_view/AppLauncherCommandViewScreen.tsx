@@ -1349,45 +1349,45 @@ function LoadingState() {
 }
 function NotFoundState(onPress) {
   const tmp = createCacheKey();
-  let obj = handleApplicationSelected /* handleApplicationSelected */;
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEmptyStateType.COMMAND_NOT_FOUND);
+  let obj = handleApplicationSelected;
+  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(AppLauncherEntrypoint.AppLauncherEmptyStateType.COMMAND_NOT_FOUND);
   obj = { style: tmp.emptyStateContainer, children: null };
   obj = { style: tmp.emptyState, lightSource: null, darkSource: null, title: null, body: null, children: null };
   obj[1] = registerAsset;
   obj[2] = registerAsset;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t["pX/qb9"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[4] = intl2.string(getSystemLocale /* getSystemLocale */.t.exOQVY);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t["pX/qb9"]);
+  const intl2 = getSystemLocale.intl;
+  obj[4] = intl2.string(getSystemLocale.t.exOQVY);
   const obj1 = { shrink: true, size: "sm", variant: "secondary", onPress: onPress.onPressBack, pillStyle: tmp.failureStateButtonPill, style: tmp.failureStateButtonWrapper, text: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[6] = intl3.string(getSystemLocale /* getSystemLocale */.t["/g10LC"]);
-  obj[5] = callback5(CollapsingText /* CollapsingText */.BaseTextButton, obj1);
-  obj[1] = callback5(Button /* Button */.EmptyState, obj);
+  const intl3 = getSystemLocale.intl;
+  obj1[6] = intl3.string(getSystemLocale.t["/g10LC"]);
+  obj[5] = callback5(CollapsingText.BaseTextButton, obj1);
+  obj[1] = callback5(Button.EmptyState, obj);
   return callback5(closure_7, obj);
 }
 function NoPermsState(command) {
   command = command.command;
   const tmp = createCacheKey();
-  let obj = handleApplicationSelected /* handleApplicationSelected */;
-  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(AppLauncherEntrypoint /* AppLauncherEntrypoint */.AppLauncherEmptyStateType.COMMAND_NO_PERMISSIONS);
+  let obj = handleApplicationSelected;
+  const logAppLauncherEmptyStateView = obj.useLogAppLauncherEmptyStateView(AppLauncherEntrypoint.AppLauncherEmptyStateType.COMMAND_NO_PERMISSIONS);
   obj = { style: tmp.emptyStateContainer, children: null };
   obj = { style: tmp.commandNameContainer, children: null };
-  const items = [callback5(Text /* Text */.Text, { variant: "heading-lg/bold", color: "text-default", children: command.displayName }), callback5(Text /* Text */.Text, { variant: "heading-sm/medium", color: "text-default", children: command.displayDescription })];
+  const items = [callback5(Text.Text, { variant: "heading-lg/bold", color: "text-default", children: command.displayName }), callback5(Text.Text, { variant: "heading-sm/medium", color: "text-default", children: command.displayDescription })];
   obj[1] = items;
   const items1 = [callback6(closure_7, obj), ];
   const obj3 = { style: tmp.emptyState, lightSource: null, darkSource: null, title: null, body: null, children: null };
   obj3[1] = registerAsset;
   obj3[2] = registerAsset;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj3[3] = intl.string(getSystemLocale /* getSystemLocale */.t.TzufcR);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj3[4] = intl2.string(getSystemLocale /* getSystemLocale */.t["I/O+A1"]);
+  const intl = getSystemLocale.intl;
+  obj3[3] = intl.string(getSystemLocale.t.TzufcR);
+  const intl2 = getSystemLocale.intl;
+  obj3[4] = intl2.string(getSystemLocale.t["I/O+A1"]);
   const obj4 = { shrink: true, size: "sm", variant: "secondary", onPress: command.onPressBack, pillStyle: tmp.failureStateButtonPill, style: tmp.failureStateButtonWrapper, text: null };
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj4[6] = intl3.string(getSystemLocale /* getSystemLocale */.t["/g10LC"]);
-  obj3[5] = callback5(CollapsingText /* CollapsingText */.BaseTextButton, obj4);
-  items1[1] = callback5(Button /* Button */.EmptyState, obj3);
+  const intl3 = getSystemLocale.intl;
+  obj4[6] = intl3.string(getSystemLocale.t["/g10LC"]);
+  obj3[5] = callback5(CollapsingText.BaseTextButton, obj4);
+  items1[1] = callback5(Button.EmptyState, obj3);
   obj[1] = items1;
   return callback6(closure_7, obj);
 }

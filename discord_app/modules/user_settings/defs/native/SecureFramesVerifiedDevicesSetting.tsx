@@ -5,8 +5,8 @@ import { VerificationListItem } from "../../privacy_and_safety/native/SettingsSe
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["5b3FNI"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["5b3FNI"]);
   },
   parent: require("MobileSetting").MobileSetting.DATA_AND_PRIVACY,
   unsearchable: true,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES,
   getComponent() {
-    return VerificationListItem /* VerificationListItem */.default;
+    return VerificationListItem.default;
   }
 };
 const route = createToggle.createRoute(obj);

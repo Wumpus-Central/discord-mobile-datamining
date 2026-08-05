@@ -11,8 +11,8 @@ const require = arg1;
 ({ InputModes: c3, UserSettingsSections } = ME);
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.K3lovD);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.K3lovD);
   },
   parent: null,
   IconComponent: require("MicrophoneIcon").MicrophoneIcon,
@@ -29,15 +29,15 @@ createToggle = {
   },
   screen: createToggle,
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t.nuFtHH)];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t.nuFtHH)];
     return items;
   }
 };
 createToggle = {
   route: UserSettingsSections.VOICE,
   getComponent() {
-    return KrispLogo /* KrispLogo */.default;
+    return KrispLogo.default;
   }
 };
 createToggle = createToggle.createRoute(createToggle);

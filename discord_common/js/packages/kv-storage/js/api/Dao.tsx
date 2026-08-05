@@ -32,7 +32,7 @@ prototype["withoutLogging"] = function withoutLogging() {
   const obj = Object.create(Dao.prototype);
   obj.originalPrefix = originalPrefix;
   const items = [originalPrefix];
-  const table = new fromDatabaseTransaction /* fromDatabaseTransaction */.Table(items, this.table.tableId, this.table.database, false);
+  const table = new fromDatabaseTransaction.Table(items, this.table.tableId, this.table.database, false);
   obj.table = table;
   return obj;
 };
@@ -71,7 +71,7 @@ prototype["getParentId"] = function getParentId(arg0) {
 prototype["put"] = function put(arg0, data) {
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = TableId /* TableId */.ConflictOptions.Replace;
+    Replace = TableId.ConflictOptions.Replace;
   }
   const table = this.table;
   const items = [arg0];
@@ -128,7 +128,7 @@ class DaoTransaction {
 }
 const prototype2 = DaoTransaction.prototype;
 DaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new fromDatabaseTransaction /* fromDatabaseTransaction */.TableTransaction(prefix, tableId, transaction);
+  const tableTransaction = new fromDatabaseTransaction.TableTransaction(prefix, tableId, transaction);
   if (typeof DaoTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -139,7 +139,7 @@ DaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(pre
 prototype2["put"] = function put(arg0, data) {
   let Replace = arg2;
   if (arg2 === undefined) {
-    Replace = TableId /* TableId */.ConflictOptions.Replace;
+    Replace = TableId.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
   const items = [arg0];

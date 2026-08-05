@@ -38,8 +38,8 @@ const result = require("reset").fileFinishedImporting("modules/messages/native/r
 export const createResolvingGuildInvite = function createResolvingGuildInvite(closure_2) {
   const tmp = getEmbedThemeColors(closure_2);
   const obj = { headerText: null, resolvingGradientEnd: null, resolvingGradientStart: null, type: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["N/g9Z4"]).toUpperCase();
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["N/g9Z4"]).toUpperCase();
   ({ resolvingGradientEnd: obj[1], resolvingGradientStart: obj[2] } = tmp.colors);
   obj[3] = constants5.GUILD;
   const merged = Object.assign(tmp.baseColors);
@@ -49,9 +49,9 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   const tmp3 = getEmbedThemeColors(closure_2);
   let obj = {};
   const merged = Object.assign(tmp3.baseColors);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   const string = intl.string;
-  const t = getSystemLocale /* getSystemLocale */.t;
+  const t = getSystemLocale.t;
   if (arg1) {
     let str = string(t.C89OLE);
     let tmp6 = tmp5;
@@ -99,7 +99,7 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
 export const createDisabledGuildInvite = function createDisabledGuildInvite(invite, closure_2) {
   const tmp3 = getEmbedThemeColors(closure_2);
   if (null != invite.guild) {
-    let obj = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
+    let obj = fromGuildPropertiesWithAdditionalFields;
     let fromInviteGuildResult = obj.fromInviteGuild(invite.guild);
   } else {
     let channel = invite.channel;
@@ -121,12 +121,12 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   obj = {};
   const merged = Object.assign(tmp3.baseColors);
   obj.extendedType = CodedLinkExtendedType.GUILD_INVITE_DISABLED;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj.headerText = intl.string(getSystemLocale /* getSystemLocale */.t["Hyx2F/"]).toUpperCase();
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj.titleText = intl2.string(getSystemLocale /* getSystemLocale */.t.tQ4AnN);
-  const str = intl.string(getSystemLocale /* getSystemLocale */.t["Hyx2F/"]);
-  obj.titleColor = processColorOrThrow /* processColorOrThrow */.processColorOrThrow(Themes.unsafe_rawColors.RED_345);
+  const intl = getSystemLocale.intl;
+  obj.headerText = intl.string(getSystemLocale.t["Hyx2F/"]).toUpperCase();
+  const intl2 = getSystemLocale.intl;
+  obj.titleText = intl2.string(getSystemLocale.t.tQ4AnN);
+  const str = intl.string(getSystemLocale.t["Hyx2F/"]);
+  obj.titleColor = processColorOrThrow.processColorOrThrow(Themes.unsafe_rawColors.RED_345);
   let name;
   if (fromInviteGuildResult != null) {
     name = fromInviteGuildResult.name;
@@ -137,15 +137,15 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   }
   obj.guildName = name;
   const intl4 = tmp14(1236).intl;
-  obj.subtitle = intl4.string(getSystemLocale /* getSystemLocale */.t["x+XpjL"]);
+  obj.subtitle = intl4.string(getSystemLocale.t["x+XpjL"]);
   const intl5 = tmp14(1236).intl;
-  obj.helpCenterArticleLabel = intl5.string(getSystemLocale /* getSystemLocale */.t["4FlZqw"]);
-  const obj3 = processColorOrThrow /* processColorOrThrow */;
+  obj.helpCenterArticleLabel = intl5.string(getSystemLocale.t["4FlZqw"]);
+  const obj3 = processColorOrThrow;
   obj.helpCenterArticleURL = combined.getArticleURL(constants.INVITE_DISABLED);
   obj.guildIcon = tmp11;
   const tmp16 = tmp11;
   const tmpResult = combined;
-  obj.thumbnailUrl = frozen /* frozen */.getAssetUriForEmbed(registerAsset);
+  obj.thumbnailUrl = frozen.getAssetUriForEmbed(registerAsset);
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -164,7 +164,7 @@ export const createErroredGuildInvite = function createErroredGuildInvite(code, 
   let colors;
   ({ colors, baseColors } = getEmbedThemeColors(closure_2));
   inviteError = inviteError.getInviteError(code);
-  let obj = getDescriptiveInviteError /* getDescriptiveInviteError */;
+  let obj = getDescriptiveInviteError;
   code = undefined;
   if (inviteError != null) {
     code = inviteError.code;
@@ -249,11 +249,11 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
   }
   let flag2 = true;
   if (tmp8) {
-    let obj1 = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
+    let obj1 = fromGuildPropertiesWithAdditionalFields;
     guild = obj1.fromInviteGuild(invite.guild);
     flag2 = false;
   }
-  let obj2 = getHeaderTextForInvite /* getHeaderTextForInvite */;
+  let obj2 = getHeaderTextForInvite;
   let obj = { isVoiceChannel: tmp7, isOwnInvite, isHubGuild: null, isStream: null, isStage: null, isGuest: null };
   let flag3;
   if (guild != null) {
@@ -271,7 +271,7 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
   if (num == null) {
     num = 0;
   }
-  obj[5] = tmp10Result.hasFlag(num, set /* set */.GuildInviteFlags.IS_GUEST_INVITE);
+  obj[5] = tmp10Result.hasFlag(num, set.GuildInviteFlags.IS_GUEST_INVITE);
   const str = obj2.getHeaderTextForInvite(obj);
   if (guild != null) {
     let name = guild.name;

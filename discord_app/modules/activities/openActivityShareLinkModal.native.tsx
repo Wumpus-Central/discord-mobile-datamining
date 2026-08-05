@@ -13,10 +13,10 @@ export const openActivityShareLinkModal = function openActivityShareLinkModal(ar
   let message;
   let onShare;
   ({ applicationId, customId, linkId, message, onShare } = arg0);
-  let obj = getBestActiveInput /* getBestActiveInput */;
+  let obj = getBestActiveInput;
   obj.dismissKeyboard();
   obj = { applicationId, customId, linkId, message, onShare };
-  ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(13658, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
+  ModalActionCreators.pushLazy(asyncRequireImpl(13658, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, { presentation: "modal" });
 };
 export const closeActivityShareLinkModal = function closeActivityShareLinkModal() {
   ModalActionCreators.popWithKey(ACTIVITY_SHARE_LINK_MODAL);

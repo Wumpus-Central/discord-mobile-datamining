@@ -25,7 +25,7 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
   } else {
     if (!stateFromStores.hasAnyStaffLevel()) {
       if (stateFromStores.hasFlag(constants.PARTNER)) {
-        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        const intl2 = getSystemLocale.intl;
         const string2 = intl2.string;
         if (flag) {
           let string2Result = string2(_9UucjT);
@@ -33,7 +33,7 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
           string2Result = string2(_9UucjT.Sq6Q1u);
         }
       } else if (null == stateFromStores.email) {
-        const intl = getSystemLocale /* getSystemLocale */.intl;
+        const intl = getSystemLocale.intl;
         const string = intl.string;
         if (flag) {
           let stringResult = string(_9VWpT9);
@@ -42,9 +42,9 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
         }
       }
     }
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     const string3 = intl3.string;
-    let YJGvuD = getSystemLocale /* getSystemLocale */.t;
+    let YJGvuD = getSystemLocale.t;
     if (flag) {
       YJGvuD = YJGvuD.YJGvuD;
       let string3Result = string3(YJGvuD);
@@ -55,14 +55,14 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
 };
 export const useIsMFAEnabled = function useIsMFAEnabled() {
   const items = [mergeGuildAvatar];
-  return defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return defaultAreStatesEqual.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     return null != currentUser && currentUser.mfaEnabled;
   });
 };
 export const MFAAvailability = obj;
 export const useMFAAvailability = function useMFAAvailability() {
-  const obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  const obj = defaultAreStatesEqual;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -72,7 +72,7 @@ export const useMFAAvailability = function useMFAAvailability() {
     }
     return verified;
   });
-  if (_crypto /* _crypto */.hasCrypto) {
+  if (_crypto.hasCrypto) {
     if (false === stateFromStores) {
       let AVAILABLE = obj.UNAVAILABLE_UNVERIFIED;
     } else {

@@ -6,15 +6,15 @@ import { Themes } from "../../../../../discord_common/js/packages/tokens/native.
 import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
 
 const result = createCacheKey.experimental_createToken((theme) => {
-  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const obj = AccessibilityAnnouncer;
   const unsafe_rawColors = Themes.unsafe_rawColors;
-  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_630;
+  return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.PRIMARY_300 : unsafe_rawColors.PRIMARY_630;
 });
 let obj = { textColor: null, linkColor: null, timestampColor: null, highlightColor: null, unsupportedColor: null, embedProviderColor: null, embedBorderLeftColor: null, embedBodyTextColor: null, embedHeaderTextColor: null, opTagTextColor: null, opTagBackgroundColor: null, failedMessageBodyTextColor: null, automodBlockedBodyTextColor: null, aiBotTagColor: null, editedColor: null, defaultUsernameColor: null, feedbackColor: null, reportFpTextColor: null, reportFpBackgroundColor: null, retryTextColor: null, retryBackgroundColor: null, clipTagBackgroundColor: null, clipTagTextColor: null };
 const result1 = createCacheKey.experimental_createToken((theme) => {
-  const obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  const obj = AccessibilityAnnouncer;
   const unsafe_rawColors = Themes.unsafe_rawColors;
-  return AccessibilityAnnouncer /* AccessibilityAnnouncer */.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_260 : unsafe_rawColors.BRAND_200;
+  return AccessibilityAnnouncer.isThemeDark(theme.theme) ? unsafe_rawColors.BRAND_260 : unsafe_rawColors.BRAND_200;
 });
 obj[0] = require("Themes").colors.TEXT_STRONG;
 obj[1] = require("Themes").colors.TEXT_LINK;

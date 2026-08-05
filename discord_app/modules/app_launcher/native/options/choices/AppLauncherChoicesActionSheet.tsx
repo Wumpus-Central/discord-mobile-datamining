@@ -12,7 +12,7 @@ let metroImportAll;
 const require = arg1;
 function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.create(null));
-  const tmp3 = noop /* noop */;
+  const tmp3 = noop;
   if (scrollable.scrollable) {
     let obj = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);

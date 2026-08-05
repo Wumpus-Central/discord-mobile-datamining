@@ -201,7 +201,7 @@ function UserDCSwitchRow(dc) {
   obj[0] = callback3(dc);
   obj[1] = isDismissed;
   obj[2] = handleToggleDismissState;
-  return callback4(TableSwitchRow /* TableSwitchRow */.TableSwitchRow, obj);
+  return callback4(TableSwitchRow.TableSwitchRow, obj);
 }
 function GuildDCSwitchRow(dc) {
   dc = dc.dc;

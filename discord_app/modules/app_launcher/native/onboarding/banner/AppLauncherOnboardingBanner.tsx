@@ -13,7 +13,7 @@ export default function AppLauncherOnboardingBanner(arg0) {
   let context;
   let visibleContent;
   ({ context, visibleContent } = arg0);
-  if (DismissibleContent /* DismissibleContent */.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
+  if (DismissibleContent.DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER === visibleContent) {
     let obj = { context: null };
     obj[0] = context;
     return jsx(ActivitiesBanner, { context: null });

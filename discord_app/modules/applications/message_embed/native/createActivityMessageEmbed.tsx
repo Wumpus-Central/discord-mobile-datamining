@@ -9,7 +9,7 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
   let theme;
   app = app.app;
   ({ theme, embedUrl, message, params } = app);
-  let obj = createAppMessageEmbed /* createAppMessageEmbed */;
+  let obj = createAppMessageEmbed;
   const appMessageEmbed = obj.createAppMessageEmbed({ theme, embedUrl, message, app });
   if (null == appMessageEmbed) {
     return null;

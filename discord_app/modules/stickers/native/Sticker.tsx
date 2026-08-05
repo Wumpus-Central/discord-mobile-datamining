@@ -28,7 +28,7 @@ export default function Sticker(opaque) {
   if (flag) {
     num = 1;
   }
-  if (sticker.format_type === StickerFormat /* StickerFormat */.StickerFormat.LOTTIE) {
+  if (sticker.format_type === StickerFormat.StickerFormat.LOTTIE) {
     let tmpResult = tmp(4619);
     let str = tmpResult.getStickerAssetUrl(sticker);
   } else if (sticker.format_type === tmp(4951).StickerFormat.APNG) {
@@ -48,8 +48,8 @@ export default function Sticker(opaque) {
     str = "";
   }
   const intl = tmp(1236).intl;
-  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.rk6pOw, { stickerName: sticker.name });
-  if (sticker.format_type === StickerFormat /* StickerFormat */.StickerFormat.LOTTIE) {
+  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.rk6pOw, { stickerName: sticker.name });
+  if (sticker.format_type === StickerFormat.StickerFormat.LOTTIE) {
     const obj2 = { url: null, asset: null, width: null, height: null, opacity: null, renderMode: null, accessibilityLabel: null };
     obj2[0] = str;
     let str4 = sticker.id;
@@ -107,7 +107,7 @@ export default function Sticker(opaque) {
   const obj1 = { stickerName: sticker.name };
 };
 export const getStickerAssetUrl = function getStickerAssetUrl(sticker, closure_7, first) {
-  if (sticker.format_type === StickerFormat /* StickerFormat */.StickerFormat.LOTTIE) {
+  if (sticker.format_type === StickerFormat.StickerFormat.LOTTIE) {
     let tmpResult = tmp(4619);
     let str = tmpResult.getStickerAssetUrl(sticker);
   } else if (sticker.format_type === tmp(4951).StickerFormat.APNG) {

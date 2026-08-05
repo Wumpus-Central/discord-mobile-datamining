@@ -23,12 +23,12 @@ const require = arg1;
 function JoinCallButton() {
   const obj = { size: "sm", color: null };
   obj[1] = Themes.unsafe_rawColors.GREEN_360;
-  return jsx(PhoneCallIcon /* PhoneCallIcon */.PhoneCallIcon, { size: "sm", color: null });
+  return jsx(PhoneCallIcon.PhoneCallIcon, { size: "sm", color: null });
 }
 function EndCallButton() {
   const obj = { size: "sm", color: null };
   obj[1] = Themes.unsafe_rawColors.RED_400;
-  return jsx(PhoneHangUpIcon /* PhoneHangUpIcon */.PhoneHangUpIcon, { size: "sm", color: null });
+  return jsx(PhoneHangUpIcon.PhoneHangUpIcon, { size: "sm", color: null });
 }
 function ChannelActionButtons(channel) {
   channel = channel.channel;

@@ -37,21 +37,21 @@ export default function PresenceActivityStatus(hideText) {
     }
   }
   if (isEmbeddedActivity(activity)) {
-    let AppsIcon = AppsIcon /* AppsIcon */.AppsIcon;
+    let AppsIcon = AppsIcon.AppsIcon;
   } else if (activity.type === ActivityTypes.PLAYING) {
-    AppsIcon = GameControllerIcon /* GameControllerIcon */.GameControllerIcon;
+    AppsIcon = GameControllerIcon.GameControllerIcon;
   } else if (activity.type === tmp3.LISTENING) {
-    AppsIcon = MusicIcon /* MusicIcon */.MusicIcon;
+    AppsIcon = MusicIcon.MusicIcon;
   } else {
     if (activity.type !== tmp3.WATCHING) {
       if (activity.type !== tmp3.STREAMING) {
         AppsIcon = null;
         if (activity.type === tmp3.COMPETING) {
-          AppsIcon = GameControllerIcon /* GameControllerIcon */.GameControllerIcon;
+          AppsIcon = GameControllerIcon.GameControllerIcon;
         }
       }
     }
-    AppsIcon = TvIcon /* TvIcon */.TvIcon;
+    AppsIcon = TvIcon.TvIcon;
   }
   let tmp12 = !hideIcon;
   if (!hideIcon) {

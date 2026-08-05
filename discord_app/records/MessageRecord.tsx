@@ -86,7 +86,7 @@ class MinimalMessageRecord extends tmp2 {
   }
 }
 MinimalMessageRecord.prototype["hasFlag"] = function hasFlag(arg0) {
-  return hasFlag /* hasFlag */.hasFlag(this.flags, arg0);
+  return hasFlag.hasFlag(this.flags, arg0);
 };
 class MessageRecord extends MinimalMessageRecord {
   constructor(arg0) {
@@ -539,7 +539,7 @@ prototype["canDeleteOwnMessage"] = function canDeleteOwnMessage(id1) {
       tmp2 = 1 === Object.keys(prop).length;
     }
     if (tmp2) {
-      tmp2 = ApplicationIntegrationType /* ApplicationIntegrationType */.ApplicationIntegrationType.USER_INSTALL in prop;
+      tmp2 = ApplicationIntegrationType.ApplicationIntegrationType.USER_INSTALL in prop;
     }
     return tmp2;
   }
@@ -583,5 +583,5 @@ export const ModeratorReport = function ModeratorReport(arg0) {
 }.prototype;
 export const MessageSnapshotRecord = prototype2;
 export const isMessageComponentsV2 = function isMessageComponentsV2(contentMessage) {
-  return hasFlag /* hasFlag */.hasFlag(contentMessage.flags, IS_COMPONENTS_V2.IS_COMPONENTS_V2);
+  return hasFlag.hasFlag(contentMessage.flags, IS_COMPONENTS_V2.IS_COMPONENTS_V2);
 };

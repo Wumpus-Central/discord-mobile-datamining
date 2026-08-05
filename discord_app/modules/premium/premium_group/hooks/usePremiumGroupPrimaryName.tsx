@@ -36,8 +36,8 @@ export default function usePremiumGroupPrimaryName() {
     if (premiumGroupMembers != null) {
       primary1 = premiumGroupMembers.primary;
     }
-    nameFromUserResult = nameFromUser /* nameFromUser */.nameFromUser(primary1);
-    const obj2 = nameFromUser /* nameFromUser */;
+    nameFromUserResult = nameFromUser.nameFromUser(primary1);
+    const obj2 = nameFromUser;
   }
   return nameFromUserResult;
 };

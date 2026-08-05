@@ -16,7 +16,7 @@ import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 
 const require = arg1;
 function handlePushedModal(key) {
-  let obj = getRootNavigationRef /* getRootNavigationRef */;
+  let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     obj = { name: "modal", key: null, params: null };
@@ -28,7 +28,7 @@ function handlePushedModal(key) {
   }
 }
 function handlePoppedModal() {
-  navigationToRootTabHelper /* navigationToRootTabHelper */.popModal();
+  navigationToRootTabHelper.popModal();
 }
 function pushFirstOpenModal(arg0, arg1) {
   const iter = arg0[Symbol.iterator]();
@@ -92,13 +92,13 @@ let closure_15 = {
       result = null != token.getToken();
     }
     if (result) {
-      result = !isEligibleForSafetyFlowsExperiment /* isEligibleForSafetyFlowsExperiment */.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
-      const obj2 = isEligibleForSafetyFlowsExperiment /* isEligibleForSafetyFlowsExperiment */;
+      result = !isEligibleForSafetyFlowsExperiment.isEligibleForSafetyFlowsExperiment({ location: "modal-manager-verification" });
+      const obj2 = isEligibleForSafetyFlowsExperiment;
     }
     return result;
   },
   getComponent() {
-    return PhoneThenEmailInterstitial /* PhoneThenEmailInterstitial */.default;
+    return PhoneThenEmailInterstitial.default;
   }
 };
 const USER_REQUIRED_ACTION_UPDATE = "USER_REQUIRED_ACTION_UPDATE";
@@ -114,7 +114,7 @@ let closure_17 = {
     return action === UserRequiredActions.AGREEMENTS;
   },
   getComponent() {
-    return handleTouch /* handleTouch */.default;
+    return handleTouch.default;
   }
 };
 let prototype = function DeprecatedModalManager() {

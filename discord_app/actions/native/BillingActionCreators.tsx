@@ -66,7 +66,7 @@ function applyAppleReceipt(arg0) {
   let obj = MurmurHashV3;
   const v3Result = obj.v3(first);
   const require = v3Result;
-  let Storage = Storage /* Storage */.Storage;
+  let Storage = Storage.Storage;
   if (!skipDupCheck) {
     if (Storage.get(localAppleReceiptHash) === v3Result) {
       let resolved = Promise.resolve(null);
@@ -92,7 +92,7 @@ function applyAppleReceipt(arg0) {
     tmp2(698).track(constants.GIFT_INFO_OPTIONS_MISSING, obj);
     const tmp2Result = tmp2(698);
   }
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: constants2.BILLING_APPLY_APPLE_RECEIPT, body: { encoded_receipt: encodedReceipt, entitlement_sku_id: entitlementSkuId, presentment_currency: presentmentCurrency, presentment_amount: presentmentAmount, app_store_region: appStoreRegion, gift_info_options: giftInfoOptions, is_gift: isGift, source, jws_representations: jwsRepresentations, order_id: orderId }, retries, oldFormErrors: true, rejectWithError: true };
   const postResult = HTTP.post(obj);
   tmp2 = importDefault;
@@ -156,9 +156,9 @@ function handlePurchaseException(code) {
     flag = true;
   }
   if (!set.has(code.code)) {
-    let obj = isSpendingLimitError /* isSpendingLimitError */;
+    let obj = isSpendingLimitError;
     let billingError = code;
-    if (!(code instanceof V6OrEarlierAPIError /* V6OrEarlierAPIError */.BillingError)) {
+    if (!(code instanceof V6OrEarlierAPIError.BillingError)) {
       billingError = new tmp(4184).BillingError(code);
     }
     if (obj.isSpendingLimitError(billingError)) {
@@ -240,14 +240,14 @@ function canMakeIAPRequest() {
   const isBusyResult = busy.isBusy();
   let tmp2 = !isBusyResult;
   if (!isBusyResult) {
-    const isPaymentsBlocked = useBlockedPaymentsConfig /* useBlockedPaymentsConfig */.getIsPaymentsBlocked();
+    const isPaymentsBlocked = useBlockedPaymentsConfig.getIsPaymentsBlocked();
     let flag = !isPaymentsBlocked;
     if (isPaymentsBlocked) {
       openBlockedPaymentsCountryActionSheet();
       flag = false;
     }
     tmp2 = flag;
-    const obj = useBlockedPaymentsConfig /* useBlockedPaymentsConfig */;
+    const obj = useBlockedPaymentsConfig;
   }
   return tmp2;
 }
@@ -655,7 +655,7 @@ function _updateAppleSubscription() {
   return applyArgumentsResult;
 }
 function determineProductId(arg0) {
-  if (APBRequestOperations /* APBRequestOperations */.APBRequestOperations.CREATE !== arg0) {
+  if (APBRequestOperations.APBRequestOperations.CREATE !== arg0) {
     if (tmp(7504).APBRequestOperations.CANCEL !== arg0) {
       if (tmp(7504).APBRequestOperations.RESUBSCRIBE !== arg0) {
         if (tmp(7504).APBRequestOperations.REACTIVATE !== arg0) {
@@ -683,7 +683,7 @@ function determineProductId(arg0) {
       }
     }
   }
-  return SubscriptionPlans /* SubscriptionPlans */.ProductIds.GENERIC_SUBSCRIPTION;
+  return SubscriptionPlans.ProductIds.GENERIC_SUBSCRIPTION;
 }
 function _cancelGenericSubscription() {
   const self = this;

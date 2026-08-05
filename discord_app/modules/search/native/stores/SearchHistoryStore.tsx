@@ -83,7 +83,7 @@ prototype2["initialize"] = function initialize(searchHistories) {
     searchHistories = searchHistories.searchHistories;
   }
   if (null != searchHistories) {
-    let closure_4 = apply /* apply */.mapValues(searchHistories, (arg0) => {
+    let closure_4 = apply.mapValues(searchHistories, (arg0) => {
       if (typeof closure_3 !== "function") {
         HermesBuiltin.throwTypeError();
       }
@@ -92,7 +92,7 @@ prototype2["initialize"] = function initialize(searchHistories) {
       obj.deserialize(arg0);
       return obj;
     });
-    let obj = apply /* apply */;
+    let obj = apply;
   }
 };
 prototype2["getSearchHistory"] = function getSearchHistory(handleChange) {

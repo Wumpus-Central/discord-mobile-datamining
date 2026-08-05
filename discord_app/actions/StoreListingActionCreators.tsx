@@ -28,28 +28,28 @@ export const fetchStoreListingsForApplications = function fetchStoreListingsForA
   if (0 === found.length) {
     let resolved = Promise.resolve();
   } else {
-    let obj = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
+    let obj = _httpGetWithCountryCodeQuery;
     obj = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
     obj[0] = Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATIONS;
     obj = { application_ids: null };
     obj[0] = found;
     obj[1] = obj;
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest.rejectWithMigratedError();
     const result = obj.httpGetWithCountryCodeQuery(obj);
     resolved = result.then((body) => {
       let obj = callback(table[6]);
       obj = { type: "STORE_LISTINGS_FETCH_SUCCESS", storeListings: body.body };
       obj.dispatch(obj);
     });
-    const obj4 = sendRequest /* sendRequest */;
+    const obj4 = sendRequest;
   }
   return resolved;
 };
 export const fetchAllStoreListingsForApplication = function fetchAllStoreListingsForApplication(closure_1) {
-  let obj = _httpGetWithCountryCodeQuery /* _httpGetWithCountryCodeQuery */;
+  let obj = _httpGetWithCountryCodeQuery;
   obj = { url: Endpoints.STORE_PUBLISHED_LISTINGS_SKUS, query: obj, oldFormErrors: true, rejectWithError: null };
   obj = { application_id: closure_1 };
-  obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+  obj[3] = sendRequest.rejectWithMigratedError();
   const result = obj.httpGetWithCountryCodeQuery(obj);
   return result.then((body) => {
     let obj = callback(table[6]);

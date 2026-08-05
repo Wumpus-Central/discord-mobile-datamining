@@ -20,16 +20,16 @@ const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/na
 
 export default function FamilyCenterActivityTotal(displayType) {
   displayType = displayType.displayType;
-  let obj = useActionsForDisplayType /* useActionsForDisplayType */;
+  let obj = useActionsForDisplayType;
   const actionTotalsForDisplayType = obj.useActionTotalsForDisplayType(displayType);
   const tmp = createCacheKey();
-  let num = useActionsForDisplayType /* useActionsForDisplayType */.useFormattedTotalForDisplayType(displayType);
+  let num = useActionsForDisplayType.useFormattedTotalForDisplayType(displayType);
   let str = "text-muted";
   if (actionTotalsForDisplayType > 0) {
     str = "text-brand";
   }
-  const obj2 = useActionsForDisplayType /* useActionsForDisplayType */;
-  const activityTypeTextConfigs = getEmptyActivityFormatter /* getEmptyActivityFormatter */.getActivityTypeTextConfigs();
+  const obj2 = useActionsForDisplayType;
+  const activityTypeTextConfigs = getEmptyActivityFormatter.getActivityTypeTextConfigs();
   const value = activityTypeTextConfigs.get(displayType);
   let tooltipHeaderResult;
   if (value != null) {
@@ -41,7 +41,7 @@ export default function FamilyCenterActivityTotal(displayType) {
     num = 0;
   }
   obj[2] = num;
-  const items = [closure_3(Text /* Text */.Text, obj), closure_3(Text /* Text */.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
+  const items = [closure_3(Text.Text, obj), closure_3(Text.Text, { variant: "text-sm/semibold", children: tooltipHeaderResult })];
   obj[1] = items;
   return closure_4(View, obj);
 };

@@ -33,7 +33,7 @@ let obj = {
     return importDefaultResult.shouldShowWarning();
   },
   getComponent() {
-    return render /* render */.default;
+    return render.default;
   }
 };
 items = [importDefaultResult];
@@ -45,7 +45,7 @@ obj = {
     return importDefaultResult1.shouldShowWarning();
   },
   getComponent() {
-    return render /* render */.default;
+    return render.default;
   }
 };
 items2 = [importDefaultResult1];
@@ -58,7 +58,7 @@ items1[2] = {
     return null != importDefaultResult2.getCurrentSurvey();
   },
   getComponent() {
-    return MobileSurvey /* MobileSurvey */.default;
+    return MobileSurvey.default;
   }
 };
 let closure_15 = new require("getStores")(items1);
@@ -145,7 +145,7 @@ AlertWrapper.prototype["render"] = function render() {
   items2[1] = callback(RN.View, { style: { transform: items3 }, children: renderAlertResult });
   obj[1] = items2;
   obj[2] = callback2(KeyboardAwareView, obj);
-  return callback(Dialog /* Dialog */.Dialog, obj);
+  return callback(Dialog.Dialog, obj);
 };
 AlertWrapper.contextType = require("ManaContext").ThemeContext;
 let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "call", props: "format" });
@@ -156,7 +156,7 @@ let obj1 = {
     return null != importDefaultResult2.getCurrentSurvey();
   },
   getComponent() {
-    return MobileSurvey /* MobileSurvey */.default;
+    return MobileSurvey.default;
   }
 };
 const tmp7 = new require("getStores")(items1);

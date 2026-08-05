@@ -20,13 +20,13 @@ const memoResult = require("noop").memo((style) => {
   let theme;
   style = style.style;
   ({ gradientHeight, bannerHeight } = style);
-  let obj = ManaContext /* ManaContext */;
+  let obj = ManaContext;
   const themeContext = obj.useThemeContext();
   ({ primaryColor, secondaryColor, theme } = themeContext);
-  const gradientFallbackBackground = useUserProfileColors /* useUserProfileColors */.useUserProfileColors({ theme, primaryColor, secondaryColor }).gradientFallbackBackground;
-  const obj2 = useUserProfileColors /* useUserProfileColors */;
-  const obj3 = useUserProfileGradientColors /* useUserProfileGradientColors */;
-  const first = callback(useUserProfileGradientColors /* useUserProfileGradientColors */.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
+  const gradientFallbackBackground = useUserProfileColors.useUserProfileColors({ theme, primaryColor, secondaryColor }).gradientFallbackBackground;
+  const obj2 = useUserProfileColors;
+  const obj3 = useUserProfileGradientColors;
+  const first = callback(useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
   if (null != primaryColor) {
     if (null != secondaryColor) {
       const _Math = Math;

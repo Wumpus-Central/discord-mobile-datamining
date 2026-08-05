@@ -61,7 +61,7 @@ export default function transformSKUTenantMetadata(social_layer) {
       let tmp7;
       if (null != item) {
         const type = item.type;
-        if (CollectiblesItemType /* CollectiblesItemType */.CollectiblesItemType.AVATAR_DECORATION === type) {
+        if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
           const obj1 = { id: null, type: null, asset: null, assets: null, label: null };
           ({ id: obj7[0], type: obj7[1], asset: obj7[2], assets: assets2 } = item);
           let tmp13;

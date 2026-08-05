@@ -105,7 +105,7 @@ export const ModalStepIndicator = function ModalStepIndicator(arg0) {
       obj[1] = items;
       return <View style={null}>{null}</View>;
     } else {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
+      const intl = getSystemLocale.intl;
       const obj1 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: null, accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
       obj1[2] = intl.string(messagesProxy.KUwsC0);
       const obj2 = { min: 1, max: null, now: null };

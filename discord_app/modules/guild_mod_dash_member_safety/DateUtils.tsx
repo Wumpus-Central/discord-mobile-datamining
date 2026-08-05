@@ -2,10 +2,10 @@
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { getTimestampString } from "../threads/getTimestampString.tsx";
 function getJoinedAtDateFormatter() {
-  return { seconds: getSystemLocale /* getSystemLocale */.t["FsBhl/"], minutes: getSystemLocale /* getSystemLocale */.t["4d1mgT"], hours: getSystemLocale /* getSystemLocale */.t["2wkczD"], days: getSystemLocale /* getSystemLocale */.t["ocdS+f"], months: getSystemLocale /* getSystemLocale */.t["az14+h"], years: getSystemLocale /* getSystemLocale */.t["5Gk1ns"] };
+  return { seconds: getSystemLocale.t["FsBhl/"], minutes: getSystemLocale.t["4d1mgT"], hours: getSystemLocale.t["2wkczD"], days: getSystemLocale.t["ocdS+f"], months: getSystemLocale.t["az14+h"], years: getSystemLocale.t["5Gk1ns"] };
 }
 function getAccountAgeDateFormatter() {
-  return { hours: getSystemLocale /* getSystemLocale */.t.JZP2Rs, days: getSystemLocale /* getSystemLocale */.t["3moSHc"], months: getSystemLocale /* getSystemLocale */.t["0Ddwr1"], years: getSystemLocale /* getSystemLocale */.t.cR7lcs };
+  return { hours: getSystemLocale.t.JZP2Rs, days: getSystemLocale.t["3moSHc"], months: getSystemLocale.t["0Ddwr1"], years: getSystemLocale.t.cR7lcs };
 }
 const obj = { JOINED_AT: 0, [0]: "JOINED_AT", ACCOUNT_AGE: 1, [1]: "ACCOUNT_AGE" };
 const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/DateUtils.tsx");

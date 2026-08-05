@@ -12,9 +12,9 @@ function resetCache() {
   let closure_5 = Object.create(null);
 }
 function syncHourCycleToIntlConfig() {
-  const TimestampHourCycle = explicitContentFromProto /* explicitContentFromProto */.TimestampHourCycle;
+  const TimestampHourCycle = explicitContentFromProto.TimestampHourCycle;
   const setting = TimestampHourCycle.getSetting();
-  let result = setting !== create /* create */.TimestampHourCycle.AUTO;
+  let result = setting !== create.TimestampHourCycle.AUTO;
   if (result) {
     result = tmp4(3972).supportsSystemDateFormatter();
     const tmp4Result = tmp4(3972);
@@ -35,7 +35,7 @@ function syncHourCycleToIntlConfig() {
         let tmp17 = require;
         let tmp18 = dependencyMap;
         let tmp19 = dependencyMap;
-        if (setting === create /* create */.TimestampHourCycle.H12) {
+        if (setting === create.TimestampHourCycle.H12) {
           let tmp26 = nextResult;
           tmp13.hourCycle = "h12";
         }
@@ -45,7 +45,7 @@ function syncHourCycleToIntlConfig() {
         let tmp21 = require;
         let tmp22 = dependencyMap;
         let tmp23 = dependencyMap;
-        if (setting === create /* create */.TimestampHourCycle.H23) {
+        if (setting === create.TimestampHourCycle.H23) {
           let tmp25 = nextResult;
           tmp13.hourCycle = "h23";
         }
@@ -103,7 +103,7 @@ function dateFormat(date, LL, setting) {
   }
   obj = t;
   if (setting == null) {
-    const TimestampHourCycle = explicitContentFromProto /* explicitContentFromProto */.TimestampHourCycle;
+    const TimestampHourCycle = explicitContentFromProto.TimestampHourCycle;
     setting = TimestampHourCycle.getSetting();
   }
   const combined = "" + obj2.locale() + ":" + LL + ":" + setting;
@@ -298,17 +298,17 @@ export const diffAsUnits = function diffAsUnits(date, closure_0) {
 };
 export const unitsAsStrings = function unitsAsStrings(diffAsUnitsResult, days2) {
   if (diffAsUnitsResult.days > 0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
+    const intl3 = getSystemLocale.intl;
     let obj = { days: null, hours: null };
     ({ days: obj3[0], hours: obj3[1] } = diffAsUnitsResult);
     let formatToPlainStringResult = intl3.formatToPlainString(days2.days, obj);
   } else if (diffAsUnitsResult.hours > 0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     obj = { hours: null, minutes: null };
     ({ hours: obj2[0], minutes: obj2[1] } = diffAsUnitsResult);
     formatToPlainStringResult = intl2.formatToPlainString(days2.hours, obj);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { minutes: null };
     const _Math = Math;
     obj[0] = Math.max(1, diffAsUnitsResult.minutes);

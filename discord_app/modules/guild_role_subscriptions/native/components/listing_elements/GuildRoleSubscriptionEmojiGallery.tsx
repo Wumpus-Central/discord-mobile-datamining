@@ -24,6 +24,6 @@ export default function EmojiGallery(emojiIds) {
     obj[1] = outer1_4(outer1_0(outer1_2[4]).GappedList, obj);
     return outer1_4(outer1_3, obj, arg1);
   });
-  obj[0] = jsx(GappedList /* GappedList */.GappedList, { gap: 8, children: null });
+  obj[0] = jsx(GappedList.GappedList, { gap: 8, children: null });
   return <View gap={8}>{null}</View>;
 };

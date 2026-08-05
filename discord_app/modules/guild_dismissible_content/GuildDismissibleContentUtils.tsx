@@ -16,8 +16,8 @@ export const isContentDismissed = function isContentDismissed(GAME_SERVER_HOSTIN
   dismissedGuildContent = dismissedGuildContent.getDismissedGuildContent(closure_1);
   let hasBitResult = null != dismissedGuildContent;
   if (hasBitResult) {
-    hasBitResult = hasBit /* hasBit */.hasBit(dismissedGuildContent, GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK);
-    const obj = hasBit /* hasBit */;
+    hasBitResult = hasBit.hasBit(dismissedGuildContent, GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK);
+    const obj = hasBit;
   }
   return hasBitResult;
 };

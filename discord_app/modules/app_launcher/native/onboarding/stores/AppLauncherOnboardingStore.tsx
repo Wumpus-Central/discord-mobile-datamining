@@ -25,7 +25,7 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(require("dispa
     let commandOrigin;
     context = context.context;
     ({ command, commandOrigin } = context);
-    let tmp = commandOrigin !== ApplicationCommandSectionType /* ApplicationCommandSectionType */.CommandOrigin.APPLICATION_LAUNCHER;
+    let tmp = commandOrigin !== ApplicationCommandSectionType.CommandOrigin.APPLICATION_LAUNCHER;
     if (tmp) {
       tmp = null != context.channel;
     }
@@ -57,7 +57,7 @@ const appLauncherOnboardingStore = new AppLauncherOnboardingStore(require("dispa
             const extractTimestampResult = obj.extractTimestamp(message.id);
             const _Date = Date;
             const timestamp = Date.now();
-            if (timestamp <= extractTimestampResult + result /* result */.RECENT_MESSAGE_MS) {
+            if (timestamp <= extractTimestampResult + result.RECENT_MESSAGE_MS) {
               obj = { timeMs: null, guildId: null, channelId: null };
               obj[0] = extractTimestampResult;
               obj[1] = guildId;

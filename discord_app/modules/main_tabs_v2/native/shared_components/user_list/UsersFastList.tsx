@@ -16,14 +16,14 @@ function Placeholder(arg0) {
   let end;
   let start;
   ({ start, end } = arg0);
-  let obj = styles /* styles */;
+  let obj = styles;
   const fastestListTableRowPlaceholderStyles = obj.useFastestListTableRowPlaceholderStyles();
   obj = { end, start, label: null, icon: null, height: "100%" };
   const items = [fastestListTableRowPlaceholderStyles.placeholderUsername, callback(importAllResult.useState(() => ({ width: `${10 + 80 * Math.random() | 0}%` })), 1)[0]];
   obj[2] = callback2(View, { style: items });
   obj = { style: fastestListTableRowPlaceholderStyles.placeholderAvatar };
   obj[3] = callback2(View, obj);
-  return callback2(TableRowInner /* TableRowInner */.TableRow, obj);
+  return callback2(TableRowInner.TableRow, obj);
 }
 function PlaceholderSection() {
   return callback2(View, {});

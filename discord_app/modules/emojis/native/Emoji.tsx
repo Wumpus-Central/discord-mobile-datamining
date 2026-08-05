@@ -20,7 +20,7 @@ export default function Emoji(arg0) {
   let textEmojiStyle;
   ({ src, name } = arg0);
   ({ style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit } = arg0);
-  let obj = set /* set */;
+  let obj = set;
   let uRL = src;
   if (obj.isAndroid()) {
     uRL = src;

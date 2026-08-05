@@ -23,10 +23,10 @@ const memoResult = require("noop").memo(function GuildsBarMessages() {
   let badge;
   let cutouts;
   const tmp3 = useIsMobileVisualRefreshExperimentEnabled("GuildsBarMessages");
-  let obj = UnreadIndicator /* UnreadIndicator */;
+  let obj = UnreadIndicator;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const items = [handleConnectionOpen];
-  const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => {
+  const stateFromStores = initialize.useStateFromStores(items, () => {
     guildId = guildId.getGuildId();
     let tmp2 = null == guildId;
     if (!tmp2) {
@@ -34,7 +34,7 @@ const memoResult = require("noop").memo(function GuildsBarMessages() {
     }
     return tmp2;
   });
-  const obj2 = initialize /* initialize */;
+  const obj2 = initialize;
   ({ badge, cutouts } = useGuildsBarBottomRightBadge({ mentionCount: 0 }));
   const colors = Themes.colors;
   obj = { selected: stateFromStores, circle: null, unread: false, styles: null, cutouts: null, config: null, overState: "y", label: "STORE_LISTING_FETCH_SUCCESS", externalChildren: null, expandedChildren: null, children: 0 };
@@ -49,10 +49,10 @@ const memoResult = require("noop").memo(function GuildsBarMessages() {
   obj[4] = cutouts;
   obj[5] = closure_6;
   const intl = tmp4(1236).intl;
-  obj[7] = intl.string(getSystemLocale /* getSystemLocale */.t.YUU0RF);
+  obj[7] = intl.string(getSystemLocale.t.YUU0RF);
   obj[8] = badge;
   obj[9] = jsx(HomeDrawerDMsRow, {});
-  obj[10] = jsx(ChatIcon /* ChatIcon */.ChatIcon, { color: tmp8 });
+  obj[10] = jsx(ChatIcon.ChatIcon, { color: tmp8 });
   return jsx(UnreadIndicator, { selected: stateFromStores, circle: null, unread: false, styles: null, cutouts: null, config: null, overState: "y", label: "STORE_LISTING_FETCH_SUCCESS", externalChildren: null, expandedChildren: null, children: 0 });
 });
 const result = require("ME").fileFinishedImporting("modules/guilds_bar/native/GuildsBarMessages.tsx");

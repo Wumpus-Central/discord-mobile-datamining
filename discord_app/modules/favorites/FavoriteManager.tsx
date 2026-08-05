@@ -4,24 +4,24 @@ import { getNextPositionFromChannels } from "FavoritesActionCreators.tsx";
 
 const require = arg1;
 function handleChannelDelete(channel) {
-  const result = getNextPositionFromChannels /* getNextPositionFromChannels */.removeFavoriteChannel(channel.channel.id, { trackAnalytics: false });
+  const result = getNextPositionFromChannels.removeFavoriteChannel(channel.channel.id, { trackAnalytics: false });
 }
 function handleCategoryCollapse(id) {
-  const result = getNextPositionFromChannels /* getNextPositionFromChannels */.setFavoriteCategoryCollapsed(id.id, true);
+  const result = getNextPositionFromChannels.setFavoriteCategoryCollapsed(id.id, true);
 }
 function handleCategoryExpand(id) {
-  const result = getNextPositionFromChannels /* getNextPositionFromChannels */.setFavoriteCategoryCollapsed(id.id, false);
+  const result = getNextPositionFromChannels.setFavoriteCategoryCollapsed(id.id, false);
 }
 function handleCategoryCollapseAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
-    const result = getNextPositionFromChannels /* getNextPositionFromChannels */.setAllFavoriteCategoriesCollapsed(true);
-    const tmpResult = getNextPositionFromChannels /* getNextPositionFromChannels */;
+    const result = getNextPositionFromChannels.setAllFavoriteCategoriesCollapsed(true);
+    const tmpResult = getNextPositionFromChannels;
   }
 }
 function handleCategoryExpandAll(guildId) {
   if (obj.isFavoritesGuildId(guildId.guildId)) {
-    const result = getNextPositionFromChannels /* getNextPositionFromChannels */.setAllFavoriteCategoriesCollapsed(false);
-    const tmpResult = getNextPositionFromChannels /* getNextPositionFromChannels */;
+    const result = getNextPositionFromChannels.setAllFavoriteCategoriesCollapsed(false);
+    const tmpResult = getNextPositionFromChannels;
   }
 }
 let prototype = function FavoriteManager() {

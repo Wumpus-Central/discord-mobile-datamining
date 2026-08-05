@@ -14,8 +14,8 @@ export default function TrackSectionHeader(viewed) {
   viewed = viewed.viewed;
   ({ sectionName, numItems, numVisibleItems, children } = viewed);
   let obj = { type: null, name: null, properties: null };
-  obj[0] = encodeProperties /* encodeProperties */.ImpressionTypes.VIEW;
-  obj[1] = encodeProperties /* encodeProperties */.ImpressionNames.APP_LAUNCHER_SECTION;
+  obj[0] = encodeProperties.ImpressionTypes.VIEW;
+  obj[1] = encodeProperties.ImpressionNames.APP_LAUNCHER_SECTION;
   obj = { section_name: sectionName, num_items: numItems, num_visible_items: numVisibleItems, source: handleDismissWithDismissed.entrypoint() };
   obj[2] = obj;
   obj = { disableTrack: !viewed };

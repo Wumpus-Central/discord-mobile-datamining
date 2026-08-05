@@ -4,19 +4,19 @@ import { isMetaQuest } from "MetaQuestUtils.android.tsx";
 const result = require("set").fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
 
 export const isPremiumGiftingSupported = function isPremiumGiftingSupported() {
-  return !isMetaQuest /* isMetaQuest */.isMetaQuest();
+  return !isMetaQuest.isMetaQuest();
 };
 export const isGooglePlayBillingSupported = function isGooglePlayBillingSupported() {
-  let isAndroidResult = set /* set */.isAndroid();
+  let isAndroidResult = set.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = !isMetaQuest /* isMetaQuest */.isMetaQuest();
-    const tmpResult = isMetaQuest /* isMetaQuest */;
+    isAndroidResult = !isMetaQuest.isMetaQuest();
+    const tmpResult = isMetaQuest;
   }
   return isAndroidResult;
 };
 export const isCollectibleGiftingSupported = function isCollectibleGiftingSupported() {
-  return !isMetaQuest /* isMetaQuest */.isMetaQuest();
+  return !isMetaQuest.isMetaQuest();
 };
 export const isSocialLayerStorefrontGiftingSupported = function isSocialLayerStorefrontGiftingSupported() {
-  return !isMetaQuest /* isMetaQuest */.isMetaQuest();
+  return !isMetaQuest.isMetaQuest();
 };

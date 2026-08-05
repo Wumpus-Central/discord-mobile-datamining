@@ -5,10 +5,10 @@ import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
 import { useKeyboardType } from "../../keyboard/native/useKeyboardType.tsx";
 
 function handleBackPress() {
-  let obj = updateContextMenuState /* updateContextMenuState */;
+  let obj = updateContextMenuState;
   obj.hideContextMenu();
-  const keyboardType = useKeyboardType /* useKeyboardType */.getKeyboardType();
-  let flag = keyboardType !== KeyboardTypes /* KeyboardTypes */.KeyboardTypes.SYSTEM;
+  const keyboardType = useKeyboardType.getKeyboardType();
+  let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
     obj = { type: null };
     obj[0] = tmp(1579).KeyboardTypes.SYSTEM;

@@ -65,11 +65,11 @@ export default function ReportProblem(arg0) {
   });
   let obj = { scrollable: true, header: null, children: null };
   obj = { title: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.XuqqwI);
-  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, { title: null });
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.XuqqwI);
+  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: null });
   obj = { style: tmp.container, children: null };
-  obj[1] = jsx(ActionSheetRowIcon /* ActionSheetRowIcon */.ActionSheetRow.Group, { hasIcons: false, children: mapped });
-  obj[2] = jsx(BottomSheetModal /* BottomSheetModal */.BottomSheetScrollView, { style: tmp.container, children: null });
-  return jsx(ActionSheet /* ActionSheet */.ActionSheet, { style: tmp.container, children: null });
+  obj[1] = jsx(ActionSheetRowIcon.ActionSheetRow.Group, { hasIcons: false, children: mapped });
+  obj[2] = jsx(BottomSheetModal.BottomSheetScrollView, { style: tmp.container, children: null });
+  return jsx(ActionSheet.ActionSheet, { style: tmp.container, children: null });
 };

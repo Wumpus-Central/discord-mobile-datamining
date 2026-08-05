@@ -81,7 +81,7 @@ function ClassificationActionsTaken(arg0) {
   let actions;
   let classificationExpiration;
   ({ actions, classificationExpiration } = arg0);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [_getSystemLocale];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   const tmp4 = createCacheKey();
@@ -147,13 +147,13 @@ function ClassificationGuidance(arg0) {
   ({ tosLink, communityGuidelinesLink, classificationTypeText, policyExplainerLink, appealComponent } = arg0);
   let obj = { style: createCacheKey().sectionContainer, children: null };
   obj = { variant: "eyebrow", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["977iei"]);
-  const items = [callback(Text /* Text */.Text, obj), , , ];
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["977iei"]);
+  const items = [callback(Text.Text, obj), , , ];
   obj = { variant: "text-sm/normal", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.format(getSystemLocale /* getSystemLocale */.t["1Z/+aA"], { tosLink, communityGuidelinesLink });
-  items[1] = callback(Text /* Text */.Text, obj);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.format(getSystemLocale.t["1Z/+aA"], { tosLink, communityGuidelinesLink });
+  items[1] = callback(Text.Text, obj);
   items[2] = callback(ClassificationPolicyCard, { classificationTypeText, policyExplainerLink });
   items[3] = appealComponent;
   obj[1] = items;
@@ -188,9 +188,9 @@ function ClassificationPolicyCard(classificationDescription) {
 }
 function AppealStatus() {
   const obj = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t["I2H0/E"]);
-  return callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.string(getSystemLocale.t["I2H0/E"]);
+  return callback(Text.Text, obj);
 }
 function LetUsKnow(arg0) {
   const _require = arg0;
@@ -219,10 +219,10 @@ function AppealFooter(hasBeenAppealed) {
 function ClassificationDetailFooter(onClose) {
   let obj = { style: createCacheKey().redirectButtonWrapper, children: null };
   obj = { size: "md", text: null, onPress: null, grow: true };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.elrEjL);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.elrEjL);
   obj[2] = onClose.onClose;
-  obj[1] = callback(Button /* Button */.Button, obj);
+  obj[1] = callback(Button.Button, obj);
   return callback(closure_4, obj);
 }
 ({ View: c4, ActivityIndicator: c5, ScrollView: closure_6 } = get_ActivityIndicator);

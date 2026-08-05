@@ -25,27 +25,27 @@ function MainAreaCanUpload(arg0) {
   let types;
   ({ minValues, maxValues } = arg0);
   ({ openFilePicker, types, maxSizeBytes } = arg0);
-  let obj = formatSize /* formatSize */;
+  let obj = formatSize;
   obj = { onPress: openFilePicker, icon: null, label: null, subLabel: null, start: true, end: true, arrow: true };
   obj = { IconComponent: null };
-  obj[0] = FileUpIcon /* FileUpIcon */.FileUpIcon;
-  obj[1] = callback(TableRowInner /* TableRowInner */.TableRow.Icon, obj);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl.format(getSystemLocale /* getSystemLocale */.t["/2JwTv"], { maxValues });
-  const formatSizeResult = obj.formatSize(maxSizeBytes / formatSize /* formatSize */.BYTE_IN_KB, { useKibibytes: true, useSpace: true });
-  obj[3] = flattenComponents /* flattenComponents */.getFileUploadComponentSubtitle(minValues, maxValues, types, formatSizeResult);
-  return callback(TableRowInner /* TableRowInner */.TableRow, obj);
+  obj[0] = FileUpIcon.FileUpIcon;
+  obj[1] = callback(TableRowInner.TableRow.Icon, obj);
+  const intl = getSystemLocale.intl;
+  obj[2] = intl.format(getSystemLocale.t["/2JwTv"], { maxValues });
+  const formatSizeResult = obj.formatSize(maxSizeBytes / formatSize.BYTE_IN_KB, { useKibibytes: true, useSpace: true });
+  obj[3] = flattenComponents.getFileUploadComponentSubtitle(minValues, maxValues, types, formatSizeResult);
+  return callback(TableRowInner.TableRow, obj);
 }
 function MainAreaLimitReached() {
   let obj = { icon: null, label: null, subLabel: null, disabled: true, start: true, end: true };
   obj = { IconComponent: null };
-  obj[0] = CircleCheckIcon /* CircleCheckIcon */.CircleCheckIcon;
-  obj[0] = callback(TableRowInner /* TableRowInner */.TableRow.Icon, obj);
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["0PhgpK"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.HYg2Hn);
-  return callback(TableRowInner /* TableRowInner */.TableRow, obj);
+  obj[0] = CircleCheckIcon.CircleCheckIcon;
+  obj[0] = callback(TableRowInner.TableRow.Icon, obj);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["0PhgpK"]);
+  const intl2 = getSystemLocale.intl;
+  obj[2] = intl2.string(getSystemLocale.t.HYg2Hn);
+  return callback(TableRowInner.TableRow, obj);
 }
 function File(upload) {
   upload = upload.upload;

@@ -97,9 +97,9 @@ function PlaceholderCommandRow(isFirstRow) {
     flag2 = false;
   }
   const tmp = callback3();
-  let obj = usePlaceholderWidth /* usePlaceholderWidth */;
+  let obj = usePlaceholderWidth;
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  let obj1 = usePlaceholderWidth /* usePlaceholderWidth */;
+  let obj1 = usePlaceholderWidth;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
   obj = { icon: null, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
   obj = { style: tmp.loadingCommandAppIcon };
@@ -119,7 +119,7 @@ function PlaceholderCommandRow(isFirstRow) {
   obj[6] = function onPress() {
 
   };
-  return callback2(TableRowInner /* TableRowInner */.TableRow, obj);
+  return callback2(TableRowInner.TableRow, obj);
 }
 function keyExtractor(type) {
   if (type.type === obj.PLACERHOLDER) {

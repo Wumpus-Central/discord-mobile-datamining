@@ -27,7 +27,7 @@ function transformFavoriteGifUrl(url) {
     } else {
       const tmp14Result = tmp14(9661);
     }
-    obj6 = shouldRefreshAttachmentUrl /* shouldRefreshAttachmentUrl */;
+    obj6 = shouldRefreshAttachmentUrl;
     tmp14 = require;
   }
   if (regex.test(arg1)) {

@@ -29,9 +29,9 @@ export default function ClassificationEvidence(flaggedContent) {
     let obj = { style: null, children: null };
     obj[0] = tmp.sectionContainer;
     obj = { variant: "eyebrow", color: "text-default", children: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.s64CMg);
-    const items = [callback(Text /* Text */.Text, obj), ];
+    const intl = getSystemLocale.intl;
+    obj[2] = intl.string(getSystemLocale.t.s64CMg);
+    const items = [callback(Text.Text, obj), ];
     obj = { style: null, children: null };
     const items1 = [, ];
     ({ flaggedContent: arr3[0], cardShadow: arr3[1] } = tmp);

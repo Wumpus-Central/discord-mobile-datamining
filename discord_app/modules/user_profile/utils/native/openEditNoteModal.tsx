@@ -4,5 +4,5 @@ import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx
 const result = require("asyncRequireImpl").fileFinishedImporting("modules/user_profile/utils/native/openEditNoteModal.tsx");
 
 export default function openEditNoteModal(closure_0) {
-  ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(12244, dependencyMap.paths), closure_0, undefined, { presentation: "modal" });
+  ModalActionCreators.pushLazy(asyncRequireImpl(12244, dependencyMap.paths), closure_0, undefined, { presentation: "modal" });
 };

@@ -25,10 +25,10 @@ export default function NavigateForwardButton(arg0) {
   const tmp = createCacheKey();
   let obj = { style: tmp.container, onPress, children: null };
   obj = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text };
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const items = [callback(Text.Text, obj), ];
   obj = { source: null };
   obj[0] = registerAsset;
-  items[1] = callback(Button /* Button */.Icon, obj);
+  items[1] = callback(Button.Icon, obj);
   obj[2] = items;
-  return callback2(PressableBase /* PressableBase */.PressableHighlight, obj);
+  return callback2(PressableBase.PressableHighlight, obj);
 };

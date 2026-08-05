@@ -620,7 +620,7 @@ let closure_26 = importAllResult.forwardRef(function FooterButton(arg0, ref) {
   const obj = { accessibilityRole: "button", style: callback4().footerButton };
   const merged = Object.assign(arg0);
   obj.ref = ref;
-  return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return callback2(PressableBase.PressableOpacity, obj);
 });
 const alphaResult3 = require("n")(require("Themes").unsafe_rawColors.PLUM_23).alpha(0.4);
 const memoResult = importAllResult.memo(function VideoQuestModalContentInProgress(arg0) {

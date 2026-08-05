@@ -21,9 +21,9 @@ PremiumUnverifiedWarning.prototype["render"] = function render() {
     const obj = { style: null, children: null };
     const items = [tmp.warning, tmp2];
     obj[0] = items;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["0LgOKH"]);
-    tmp3 = jsx(Button /* Button */.LegacyText, { style: null, children: null });
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t["0LgOKH"]);
+    tmp3 = jsx(Button.LegacyText, { style: null, children: null });
   }
   return tmp3;
 };

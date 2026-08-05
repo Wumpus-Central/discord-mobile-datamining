@@ -68,10 +68,10 @@ function ParticipantIcon(participant) {
   if (null != tmp3) {
     const obj = { source: null, size: null, color: null, style: null };
     obj[0] = tmp3;
-    obj[1] = Button /* Button */.Icon.Sizes.REFRESH_SMALL_16;
+    obj[1] = Button.Icon.Sizes.REFRESH_SMALL_16;
     obj[2] = Themes.unsafe_rawColors.WHITE;
     obj[3] = tmp.titleIcon;
-    tmp14 = callback(Button /* Button */.Icon, obj);
+    tmp14 = callback(Button.Icon, obj);
   }
   return tmp14;
 }

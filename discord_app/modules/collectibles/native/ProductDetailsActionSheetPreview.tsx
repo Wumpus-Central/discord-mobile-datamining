@@ -24,7 +24,7 @@ function BundleProductPreview(onActiveItemTypeChange) {
   let product;
   let width;
   ({ product, width, handlePreviewPress, onTrackPress, onActiveItemChange } = onActiveItemTypeChange);
-  let obj = useCollectiblesMobileFlexibleBundlesExperiment /* useCollectiblesMobileFlexibleBundlesExperiment */;
+  let obj = useCollectiblesMobileFlexibleBundlesExperiment;
   if (obj.useCollectiblesMobileFlexibleBundlesExperiment("ProductDetailsActionSheetPreview").enabled) {
     obj = { product: null, width: null, handlePreviewPress: null, onTrackPress: null, onActiveItemChange: null };
     obj[0] = product;

@@ -26,7 +26,7 @@ function listKey(channelId, sortOrder, tagFilter, tagSetting) {
   }
 }
 function getSortValue(id) {
-  if (arg1 === set /* set */.ThreadSortOrder.LATEST_ACTIVITY) {
+  if (arg1 === set.ThreadSortOrder.LATEST_ACTIVITY) {
     id = generateOldThreadCutoff.lastMessageId(id.id);
   } else {
     id = id.id;
@@ -346,8 +346,8 @@ const archivedThreadsStore = new ArchivedThreadsStore(require("dispatcher"), {
           const _Array2 = Array;
           obj[4] = Array.from(tagFilter.tagFilter);
           obj[5] = tagFilter.sortOrder;
-          const result = trackForumChannelSeenBatch /* trackForumChannelSeenBatch */.trackForumMorePostsLoaded(obj);
-          const obj3 = trackForumChannelSeenBatch /* trackForumChannelSeenBatch */;
+          const result = trackForumChannelSeenBatch.trackForumMorePostsLoaded(obj);
+          const obj3 = trackForumChannelSeenBatch;
         }
         resortListState(value);
         value.hasMore = tagFilter.hasMore;

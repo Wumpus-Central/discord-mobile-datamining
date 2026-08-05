@@ -8,13 +8,13 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.BbESsg);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.BbESsg);
   },
   parent: require("MobileSetting").MobileSetting.VOICE,
   useValue: function useAdvancedVoiceActivitySettingValue() {
     const items = [_detectH265HardwareDecode];
-    return initialize /* initialize */.useStateFromStores(items, () => modeOptions.getModeOptions().vadUseKrisp);
+    return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().vadUseKrisp);
   },
   onValueChange: function onAdvancedVoiceActivitySettingValueChange(vadUseKrisp) {
     mode = mode.getMode();
@@ -23,12 +23,12 @@ createToggle = {
     obj.setMode(mode, obj);
   },
   useDescription: function useAdvancedVoiceActivitySettingDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.LoOB1F);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.LoOB1F);
   },
   usePredicate: function useHasAdvancedVoiceActivitySetting() {
     const items = [_detectH265HardwareDecode];
-    return initialize /* initialize */.useStateFromStores(items, () => advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported());
+    return initialize.useStateFromStores(items, () => advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported());
   }
 };
 createToggle = createToggle.createToggle(createToggle);

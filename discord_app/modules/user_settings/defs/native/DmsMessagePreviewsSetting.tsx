@@ -8,15 +8,15 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.OAOUoQ);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.OAOUoQ);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: function useDMsMessagePreviewsValue() {
-    return useMessagePreview /* useMessagePreview */.useMessagePreviewSetting();
+    return useMessagePreview.useMessagePreviewSetting();
   },
   onValueChange: function onDMsMessagePreviewsValueChange(arg0) {
-    const MessagePreviewSetting = explicitContentFromProto /* explicitContentFromProto */.MessagePreviewSetting;
+    const MessagePreviewSetting = explicitContentFromProto.MessagePreviewSetting;
     MessagePreviewSetting.updateSetting(arg0);
   },
   useOptions: function useDMsMessagePreviewsOptions() {

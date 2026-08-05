@@ -1036,7 +1036,7 @@ export default function BountiesModalContentScroll(arg0) {
   let sourceQuestContent;
   ({ bountyId, sourceQuestContent } = arg0);
   const obj = { theme: null, children: null };
-  obj[0] = items /* items */.ThemeTypes.DARKER;
+  obj[0] = items.ThemeTypes.DARKER;
   obj[1] = callback2(BountiesModalContentScrollInner, { initialBountyId: bountyId, sourceQuestContent });
-  return callback2(ThemeContextProvider /* ThemeContextProvider */.ThemeContextProvider, obj);
+  return callback2(ThemeContextProvider.ThemeContextProvider, obj);
 };

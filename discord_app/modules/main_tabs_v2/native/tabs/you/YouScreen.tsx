@@ -37,7 +37,7 @@ let closure_6;
 let map1;
 const require = arg1;
 function handleBackButtonPress() {
-  const navigation = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const navigation = getRootNavigationRef.getRootNavigationRef();
   if (null != navigation) {
     if (navigation.canGoBack()) {
       navigation.goBack();
@@ -47,7 +47,7 @@ function handleBackButtonPress() {
   }
 }
 function BackButton(paddingTop) {
-  let obj = defaultAreStatesEqual /* defaultAreStatesEqual */;
+  let obj = defaultAreStatesEqual;
   const items = [updateGuildUnreadSentinel];
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   if (stateFromStores > 0) {
@@ -61,8 +61,8 @@ function BackButton(paddingTop) {
   }
   obj = { style: items1, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult, onPress: handleBackButtonPress, children: null };
   items1 = [callback4().backButton, { top: paddingTop.paddingTop }];
-  obj[4] = callback2(IconWithBadge /* IconWithBadge */.CloseIconWithBadgeOnSide, { count: stateFromStores });
-  return callback2(PressableBase /* PressableBase */.PressableOpacity, obj);
+  obj[4] = callback2(IconWithBadge.CloseIconWithBadgeOnSide, { count: stateFromStores });
+  return callback2(PressableBase.PressableOpacity, obj);
 }
 function UnconnectedYouScreen(arg0) {
   let bannerAnimatedStyle;
@@ -571,7 +571,7 @@ function UnconnectedYouScreen(arg0) {
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YOU_SCREEN_ID);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
 let closure_23 = createCacheKey.createStyles((marginTop) => {
-  let obj = PlatformTypes /* PlatformTypes */;
+  let obj = PlatformTypes;
   let xl;
   if (obj.isIOS()) {
     xl = Themes.radii.xl;
@@ -596,7 +596,7 @@ let closure_23 = createCacheKey.createStyles((marginTop) => {
   const obj2 = { overflow: "hidden" };
   const obj3 = { flex: 1 };
   const tmp = require;
-  tmpResult = PlatformTypes /* PlatformTypes */;
+  tmpResult = PlatformTypes;
   const tmp10 = n;
   const tmp10Result = n(Themes.unsafe_rawColors.WHITE);
   obj4[5] = n(Themes.unsafe_rawColors.WHITE).alpha(0.9).css();

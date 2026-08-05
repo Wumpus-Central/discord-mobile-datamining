@@ -31,13 +31,13 @@ function DeleteButton(onDelete) {
   items = [styles().textInput, tmp.deleteButton];
   obj = { style: tmp.deleteIcon, color: null, size: "custom" };
   obj[1] = Themes.unsafe_rawColors.RED_400;
-  const items1 = [callback2(TrashIcon /* TrashIcon */.TrashIcon, obj), ];
+  const items1 = [callback2(TrashIcon.TrashIcon, obj), ];
   obj = { style: tmp.deleteLabel, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.p4Bh7f);
-  items1[1] = callback2(Button /* Button */.LegacyText, obj);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.p4Bh7f);
+  items1[1] = callback2(Button.LegacyText, obj);
   obj[3] = items1;
-  return callback3(PressableBase /* PressableBase */.PressableOpacity, obj);
+  return callback3(PressableBase.PressableOpacity, obj);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ GuildRoleSubscriptionBenefitTypes: c10, MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: unpackModuleId, MAX_SUBSCRIPTION_BENEFIT_NAME_LENGTH: closure_12 } = MAX_SUBSCRIPTION_TIERS);

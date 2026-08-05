@@ -64,7 +64,7 @@ export default function ClipView(cutouts) {
   cutouts = cutouts.cutouts;
   ({ children, style } = cutouts);
   const merged = Object.assign(cutouts, Object.create(null));
-  let obj = useCutoutBackgroundColor /* useCutoutBackgroundColor */;
+  let obj = useCutoutBackgroundColor;
   const cutoutBackgroundColor = obj.useCutoutBackgroundColor();
   let tmp4 = null;
   let tmp5 = cutouts;

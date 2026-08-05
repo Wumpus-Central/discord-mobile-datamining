@@ -23,7 +23,7 @@ const result = require("MessageEmbedTypes").fileFinishedImporting("modules/searc
 
 export default function FormRowPlaceholderItem(style) {
   const tmp = createCacheKey();
-  let obj = useFullscreenPlaceholderCount /* useFullscreenPlaceholderCount */;
+  let obj = useFullscreenPlaceholderCount;
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
   obj = { style: items, pointerEvents: "none", children: null };
   items = [placeholderAnimatedStyle, tmp.itemContainer, style.style];

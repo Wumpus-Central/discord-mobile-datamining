@@ -42,5 +42,5 @@ export default function PollDurationActionSheet(arg0) {
   ({ selectedDuration, onChange } = arg0);
   const obj = { children: null };
   obj[0] = <PollDurationRadioGroup selectedDuration={selectedDuration} onChange={onChange} />;
-  return jsx(ActionSheet /* ActionSheet */.ActionSheet, { children: null });
+  return jsx(ActionSheet.ActionSheet, { children: null });
 };

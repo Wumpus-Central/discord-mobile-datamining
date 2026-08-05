@@ -18,7 +18,7 @@ let items = [obj, , , , ];
 obj = {
   Badge: require("ActiveTimestamp").StreakBadge,
   predicate(entry) {
-    let num = calculateTimestampDurations /* calculateTimestampDurations */.getStreakCount(entry);
+    let num = calculateTimestampDurations.getStreakCount(entry);
     if (num == null) {
       num = 0;
     }
@@ -29,10 +29,10 @@ items[1] = obj;
 obj = {
   Badge: require("ActiveTimestamp").TrendingBadge,
   predicate(entry) {
-    const trendingType = calculateTimestampDurations /* calculateTimestampDurations */.getTrendingType(entry);
-    const obj = calculateTimestampDurations /* calculateTimestampDurations */;
+    const trendingType = calculateTimestampDurations.getTrendingType(entry);
+    const obj = calculateTimestampDurations;
     const tmp = require;
-    return null != trendingType && trendingType !== TrendingType /* TrendingType */.TrendingType.TRENDING_TYPE_UNSPECIFIED;
+    return null != trendingType && trendingType !== TrendingType.TrendingType.TRENDING_TYPE_UNSPECIFIED;
   }
 };
 items[2] = obj;
@@ -51,7 +51,7 @@ let obj1 = {
 items[4] = {
   Badge: require("ActiveTimestamp").MarathonBadge,
   predicate(entry) {
-    return true === calculateTimestampDurations /* calculateTimestampDurations */.isEntryMarathon(entry);
+    return true === calculateTimestampDurations.isEntryMarathon(entry);
   }
 };
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
@@ -70,7 +70,7 @@ let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
 let obj2 = {
   Badge: require("ActiveTimestamp").MarathonBadge,
   predicate(entry) {
-    return true === calculateTimestampDurations /* calculateTimestampDurations */.isEntryMarathon(entry);
+    return true === calculateTimestampDurations.isEntryMarathon(entry);
   }
 };
 const result = require("mergeGuildAvatar").fileFinishedImporting("modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx");

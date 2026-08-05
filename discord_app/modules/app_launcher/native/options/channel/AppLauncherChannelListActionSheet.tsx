@@ -51,11 +51,11 @@ function ChannelListItem(arg0) {
   ({ channel, index } = arg0);
   ({ totalCount, onPress } = arg0);
   const obj = { onPress, label: null, icon: null, start: null, end: null };
-  obj[1] = callback(Text /* Text */.Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: computeChannelName(channel) });
+  obj[1] = callback(Text.Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: computeChannelName(channel) });
   obj[2] = callback(ChannelIcon, { channel });
   obj[3] = 0 === index;
   obj[4] = index === totalCount - 1;
-  return callback(TableRowInner /* TableRowInner */.TableRow, obj, channel.id);
+  return callback(TableRowInner.TableRow, obj, channel.id);
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const AppLauncherChannelListActionSheet = "AppLauncherChannelListActionSheet";

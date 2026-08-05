@@ -38,26 +38,26 @@ prototype["generate"] = function generate(rowType) {
     if (tmp2.IGNORED_GROUP !== rowType) {
       if (tmp2.SUSPENDED_USER_GROUP !== rowType) {
         if (tmp2.MESSAGE === rowType) {
-          return generateMessageRowData /* generateMessageRowData */.generateMessageRowData(rowType, self.options, theme);
+          return generateMessageRowData.generateMessageRowData(rowType, self.options, theme);
         } else {
           if (constants2.DAY !== rowType) {
             if (tmp12.UNREAD !== rowType) {
               if (tmp12.SUMMARY !== rowType) {
                 if (constants3.LOAD_BEFORE !== rowType) {
                   if (constants3.LOAD_AFTER !== rowType) {
-                    isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(rowType);
+                    isDiscordFrontendDevelopment.assertNever(rowType);
                   }
                 }
-                return generateLoadingRowData /* generateLoadingRowData */.generateLoadingRowData(rowType, theme);
+                return generateLoadingRowData.generateLoadingRowData(rowType, theme);
               }
             }
           }
-          return generateSeparatorRowData /* generateSeparatorRowData */.generateSeparatorRowData(rowType, theme);
+          return generateSeparatorRowData.generateSeparatorRowData(rowType, theme);
         }
       }
     }
   }
-  return generateBlockedGroupRowData /* generateBlockedGroupRowData */.generateBlockedGroupRowData(rowType, theme, self);
+  return generateBlockedGroupRowData.generateBlockedGroupRowData(rowType, theme, self);
 };
 const result = require("UserOption").fileFinishedImporting("modules/messages/native/renderer/RowGenerator.tsx");
 

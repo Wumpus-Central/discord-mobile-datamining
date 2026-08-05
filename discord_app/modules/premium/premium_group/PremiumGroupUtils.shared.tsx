@@ -19,17 +19,17 @@ export const getPriceString = function getPriceString(hasAnyPremiumGroup) {
         if (null == value) {
           return null;
         } else {
-          const price = getPremiumPlanItem /* getPremiumPlanItem */.getPrice(planIdFromItems);
-          const obj2 = getPremiumPlanItem /* getPremiumPlanItem */;
+          const price = getPremiumPlanItem.getPrice(planIdFromItems);
+          const obj2 = getPremiumPlanItem;
           const tmp2 = require;
-          const formatPriceResult = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */.formatPrice(price.amount, price.currency);
+          const formatPriceResult = formatSingleCurrencyPrice.formatPrice(price.amount, price.currency);
           if (tmp) {
             ({ interval, intervalCount } = value);
             return tmp2(5764).formatRate(formatPriceResult, interval, intervalCount);
           } else {
             return formatPriceResult;
           }
-          const obj3 = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+          const obj3 = formatSingleCurrencyPrice;
         }
       }
     }

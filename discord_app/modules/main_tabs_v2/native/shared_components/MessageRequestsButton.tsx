@@ -44,10 +44,10 @@ export default function MessageRequestsButton(alternateVariant) {
     flag = false;
   }
   const merged = Object.assign(alternateVariant, Object.create(null));
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [processChannel];
   let str = obj.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items1 = [closure_6];
   if (0 === str) {
     if (0 === obj1.useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount())) {

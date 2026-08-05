@@ -31,12 +31,12 @@ export const TableSwitchRow = function TableSwitchRow(value) {
   const variant = value.variant;
   const merged = Object.assign(value, Object.create(null));
   let callback;
-  let obj = set /* set */;
+  let obj = set;
   const tmp2 = callback2();
-  let obj1 = getNodeText /* getNodeText */;
+  let obj1 = getNodeText;
   const nodeText = obj1.getNodeText(label);
   const isAndroidResult = obj.isAndroid();
-  const nodeText1 = getNodeText /* getNodeText */.getNodeText(subLabel);
+  const nodeText1 = getNodeText.getNodeText(subLabel);
   const tmp8 = callback(React.useState(value), 2);
   callback = tmp8[1];
   const items = [value];
@@ -100,6 +100,6 @@ export const TableSwitchRow = function TableSwitchRow(value) {
       }
     });
   };
-  obj.trailing = closure_5(FormSwitch /* FormSwitch */.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled });
-  return closure_5(TableRowInner /* TableRowInner */.TableRow, obj);
+  obj.trailing = closure_5(FormSwitch.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled });
+  return closure_5(TableRowInner.TableRow, obj);
 };

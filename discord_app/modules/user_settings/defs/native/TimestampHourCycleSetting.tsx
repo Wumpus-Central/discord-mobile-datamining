@@ -7,13 +7,13 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.dyamEI);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.dyamEI);
   },
   parent: require("MobileSetting").MobileSetting.APPEARANCE,
   useValue: require("explicitContentFromProto").TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
-    const TimestampHourCycle = explicitContentFromProto /* explicitContentFromProto */.TimestampHourCycle;
+    const TimestampHourCycle = explicitContentFromProto.TimestampHourCycle;
     TimestampHourCycle.updateSetting(Number(arg0));
   },
   useOptions: function useDMsMessagePreviewsOptions() {

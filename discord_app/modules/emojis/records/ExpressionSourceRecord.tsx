@@ -139,7 +139,7 @@ ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiI
 };
 ExpressionSourceGuildRecord["_mapCommon"] = function _mapCommon(id) {
   const obj = { id: id.id, name: id.name, icon: id.icon, description: id.description, features: null };
-  obj[4] = areSetsEqual /* areSetsEqual */.toSetInplace(id.features);
+  obj[4] = areSetsEqual.toSetInplace(id.features);
   return obj;
 };
 ExpressionSourceGuildRecord["createFromGuildRecord"] = function createFromGuildRecord(joinedEmojiSourceGuildRecord) {
@@ -205,7 +205,7 @@ ExpressionSourceGuildRecord["createFromGuildType"] = function createFromGuildTyp
     } else {
       fromGuildRecord = obj.createFromDiscoverableGuild(guild);
     }
-    obj2 = fromGuildPropertiesWithAdditionalFields /* fromGuildPropertiesWithAdditionalFields */;
+    obj2 = fromGuildPropertiesWithAdditionalFields;
   }
 };
 let prototype2;

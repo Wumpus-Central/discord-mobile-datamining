@@ -190,14 +190,14 @@ class PremiumSKUPreview {
 }
 let closure_8 = createCacheKey.createStyles((width, height) => {
   let obj = { container: { width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }, scaler: null, bundleContainer: null, socialLayerStorefrontContainer: null, profileFrameContainer: null, premiumRiveContainer: null };
-  obj = { width: SourceIcon /* SourceIcon */.DEFAULT_ITEM_SIZE, height: SourceIcon /* SourceIcon */.DEFAULT_ITEM_SIZE, justifyContent: "center", alignItems: "center", transform: null };
-  obj = { scaleX: width / SourceIcon /* SourceIcon */.DEFAULT_ITEM_SIZE };
-  const items = [obj, { scaleY: height / SourceIcon /* SourceIcon */.DEFAULT_ITEM_SIZE }];
+  obj = { width: SourceIcon.DEFAULT_ITEM_SIZE, height: SourceIcon.DEFAULT_ITEM_SIZE, justifyContent: "center", alignItems: "center", transform: null };
+  obj = { scaleX: width / SourceIcon.DEFAULT_ITEM_SIZE };
+  const items = [obj, { scaleY: height / SourceIcon.DEFAULT_ITEM_SIZE }];
   obj[4] = items;
   obj[1] = obj;
   obj[2] = { paddingTop: 20 };
   obj[3] = { width, height };
-  const obj1 = { scaleY: height / SourceIcon /* SourceIcon */.DEFAULT_ITEM_SIZE };
+  const obj1 = { scaleY: height / SourceIcon.DEFAULT_ITEM_SIZE };
   obj[4] = { padding: Themes.space.PX_8 };
   obj[5] = { width, height };
   return obj;
@@ -210,7 +210,7 @@ export default function SKUPreview(arg0) {
   let sku;
   ({ sku, size } = arg0);
   if (size === undefined) {
-    size = SourceIcon /* SourceIcon */.DEFAULT_ITEM_SIZE;
+    size = SourceIcon.DEFAULT_ITEM_SIZE;
   }
   const productLine = sku.productLine;
   if (SKUProductLines.COLLECTIBLES === productLine) {
@@ -232,7 +232,7 @@ export default function SKUPreview(arg0) {
       if (tmp3.BOOST !== productLine) {
         if (tmp3.GUILD_ROLE !== productLine) {
           if (tmp3.GUILD_PRODUCT !== productLine) {
-            obj = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+            obj = isDiscordFrontendDevelopment;
             obj.assertNever(sku.productLine);
           }
         }

@@ -65,7 +65,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   }
   let importDefault;
   const tmp = createCacheKey();
-  let obj = map /* map */;
+  let obj = map;
   importDefault = false;
   const Children = React.Children;
   const token = obj.useToken(Themes.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
@@ -117,5 +117,5 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   }
   items[3] = tmp6Result1;
   obj[1] = items;
-  return closure_5(context /* context */.TableRowGroupContext.Provider, { value: true, children: closure_7(View, obj) });
+  return closure_5(context.TableRowGroupContext.Provider, { value: true, children: closure_7(View, obj) });
 };

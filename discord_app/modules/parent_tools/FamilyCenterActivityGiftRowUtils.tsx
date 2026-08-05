@@ -9,7 +9,7 @@ export const getGiftRowDisplayInfo = function getGiftRowDisplayInfo(giftInfo) {
   return { skuId: giftInfo.sku_id, subscriptionPlanId: giftInfo.subscription_plan_id, price: giftInfo.price, gifterUserId: giftInfo.gifter_user_id, claimed: giftInfo.claimed, offeredAt: giftInfo.offered_at, claimedAt: giftInfo.claimed_at };
 };
 export const formatGiftDate = function formatGiftDate(claimedAt) {
-  const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale /* getSystemLocale */.intl.currentLocale, { month: "short", day: "numeric" });
+  const dateTimeFormat = new Intl.DateTimeFormat(getSystemLocale.intl.currentLocale, { month: "short", day: "numeric" });
   return dateTimeFormat.format(03510__.parseISO(claimedAt));
 };
 export const getGiftSubtext = function getGiftSubtext(claimed) {
@@ -20,19 +20,19 @@ export const getGiftSubtext = function getGiftSubtext(claimed) {
   ({ price, gifterName, offeredAt, claimedAt } = claimed);
   let formatPriceResult = null;
   if (null != price) {
-    let obj = formatSingleCurrencyPrice /* formatSingleCurrencyPrice */;
+    let obj = formatSingleCurrencyPrice;
     formatPriceResult = obj.formatPrice(price.amount, price.currency);
   }
   if (null != formatPriceResult) {
     if (null != gifterName) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
+      const intl = getSystemLocale.intl;
       obj = { price: null, username: null };
       obj[0] = formatPriceResult;
       obj[1] = gifterName;
       let formatToPlainStringResult = intl.formatToPlainString(messagesProxy["o44n/1"], obj);
     }
     const items = [formatToPlainStringResult, ];
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     const formatToPlainString = intl2.formatToPlainString;
     const tmp11 = messagesProxy;
     if (claimed.claimed) {

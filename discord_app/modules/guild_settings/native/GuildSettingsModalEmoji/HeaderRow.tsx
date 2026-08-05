@@ -313,7 +313,7 @@ export const ConnectedHeaderRow = function ConnectedHeaderRow(arg0) {
     HermesBuiltin.throwTypeError();
   } else {
     const merged = Object.assign(arg0, undefined);
-    let obj = initialize /* initialize */;
+    let obj = initialize;
     const items = [initialize];
     obj = { isUploading: null };
     obj[0] = obj.useStateFromStores(items, () => uploadingEmoji.isUploadingEmoji());

@@ -9,7 +9,7 @@ const require = arg1;
 let result = require("withEqualityFn").fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
 
 export const isVoicePanelEnabled = function isVoicePanelEnabled(channel2) {
-  const result = useIsStageVoicePanelEnabled /* useIsStageVoicePanelEnabled */.isStageVoicePanelEnabled("voice_panel_utils");
+  const result = useIsStageVoicePanelEnabled.isStageVoicePanelEnabled("voice_panel_utils");
   let tmp2 = !result;
   if (!result) {
     let isGuildStageVoiceResult;
@@ -22,7 +22,7 @@ export const isVoicePanelEnabled = function isVoicePanelEnabled(channel2) {
 };
 export const useIsVoicePanelShowing = function useIsVoicePanelShowing() {
   const items = [ensureGuildLoaded, createRTCConnection];
-  return defaultAreStatesEqual /* defaultAreStatesEqual */.useStateFromStores(items, () => {
+  return defaultAreStatesEqual.useStateFromStores(items, () => {
     channel = channel.getChannel(channelId.getChannelId());
     let tmp = null != channel;
     if (tmp) {

@@ -155,7 +155,7 @@ export default {
     obj.dispatch(obj);
   },
   createForumTag(name, channelId) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     let obj = { url: closure_5.FORUM_TAGS(channelId), body: null, rejectWithError: null };
     obj = { name: name.name, emoji_id: name.emojiId, emoji_name: null, moderated: null };
     let emojiName;
@@ -165,7 +165,7 @@ export default {
     obj[2] = emojiName;
     obj[3] = name.moderated;
     obj[1] = obj;
-    obj[2] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[2] = sendRequest.rejectWithMigratedError();
     return HTTP.post(obj);
   },
   updateForumTag(id, channelId) {
@@ -219,19 +219,19 @@ export default {
     obj.dispatch(obj);
   },
   markPostAsSeen(arg0, feedItemId, timestampMillis) {
-    const obj = markAnalyticsFeedItemSeen /* markAnalyticsFeedItemSeen */;
-    const result = obj.markAnalyticsFeedItemSeen(prototype /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const obj = markAnalyticsFeedItemSeen;
+    const result = obj.markAnalyticsFeedItemSeen(prototype.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
   },
   markPostAsUnseen(arg0, feedItemId, timestampMillis) {
-    const obj = markAnalyticsFeedItemSeen /* markAnalyticsFeedItemSeen */;
-    const result = obj.markAnalyticsFeedItemUnseen(prototype /* prototype */.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
+    const obj = markAnalyticsFeedItemSeen;
+    const result = obj.markAnalyticsFeedItemUnseen(prototype.getForumPostSeenManagerId(arg0), feedItemId, timestampMillis);
   },
   flushSeenItems(arg0, IMMEDIATE_WITH_COOLDOWN) {
     if (IMMEDIATE_WITH_COOLDOWN === undefined) {
-      IMMEDIATE_WITH_COOLDOWN = maybeMarkSeen /* maybeMarkSeen */.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
+      IMMEDIATE_WITH_COOLDOWN = maybeMarkSeen.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
     }
-    const obj = markAnalyticsFeedItemSeen /* markAnalyticsFeedItemSeen */;
-    const result = obj.flushAnalyticsFeedItems(prototype /* prototype */.getForumPostSeenManagerId(arg0), IMMEDIATE_WITH_COOLDOWN);
+    const obj = markAnalyticsFeedItemSeen;
+    const result = obj.flushAnalyticsFeedItems(prototype.getForumPostSeenManagerId(arg0), IMMEDIATE_WITH_COOLDOWN);
   },
   searchForumPosts(guild_id, id, outer1_5, c1, c2) {
     let closure_0 = guild_id;

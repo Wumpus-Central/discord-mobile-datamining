@@ -25,8 +25,8 @@ function fromServer(guildId, id) {
   ({ mentionable: obj[4], position: obj[5], color: obj[6] } = id);
   let int2hexResult = null;
   if (0 !== id.color) {
-    int2hexResult = int2hslRaw /* int2hslRaw */.int2hex(id.color);
-    const obj3 = int2hslRaw /* int2hslRaw */;
+    int2hexResult = int2hslRaw.int2hex(id.color);
+    const obj3 = int2hslRaw;
   }
   obj[7] = int2hexResult;
   let colors = id.colors;
@@ -36,8 +36,8 @@ function fromServer(guildId, id) {
   obj[8] = colors;
   let result = null;
   if (null != id.colors) {
-    result = extractColorStringsFromServerColors /* extractColorStringsFromServerColors */.extractColorStringsFromServerColors(id.colors);
-    const obj4 = extractColorStringsFromServerColors /* extractColorStringsFromServerColors */;
+    result = extractColorStringsFromServerColors.extractColorStringsFromServerColors(id.colors);
+    const obj4 = extractColorStringsFromServerColors;
   }
   obj[9] = result;
   ({ hoist: obj[10], managed } = id);
@@ -73,8 +73,8 @@ function fromSerialized(guildId, id) {
   if (null != id.color) {
     int2hexResult = null;
     if (0 !== id.color) {
-      int2hexResult = int2hslRaw /* int2hslRaw */.int2hex(id.color);
-      const obj3 = int2hslRaw /* int2hslRaw */;
+      int2hexResult = int2hslRaw.int2hex(id.color);
+      const obj3 = int2hslRaw;
     }
   }
   obj[7] = int2hexResult;
@@ -85,8 +85,8 @@ function fromSerialized(guildId, id) {
   obj[8] = colors;
   let result = null;
   if (null != id.colors) {
-    result = extractColorStringsFromServerColors /* extractColorStringsFromServerColors */.extractColorStringsFromServerColors(id.colors);
-    const obj4 = extractColorStringsFromServerColors /* extractColorStringsFromServerColors */;
+    result = extractColorStringsFromServerColors.extractColorStringsFromServerColors(id.colors);
+    const obj4 = extractColorStringsFromServerColors;
   }
   obj[9] = result;
   ({ hoist: obj[10], managed } = id);

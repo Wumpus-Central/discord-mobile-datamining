@@ -12,7 +12,7 @@ export const combineKey = function combineKey(prefix, key) {
     items1[HermesBuiltin.arraySpread(prefix, 0)] = key;
   }
   if (items1.length >= 1) {
-    if (items1.length <= TableId /* TableId */.MAXIMUM_KEY_BITS) {
+    if (items1.length <= TableId.MAXIMUM_KEY_BITS) {
       return items1;
     }
   }
@@ -28,7 +28,7 @@ export const combineKeyPrefix = function combineKeyPrefix(prefix, items) {
     items1 = [];
     items1[HermesBuiltin.arraySpread(prefix, 0)] = items;
   }
-  if (items1.length <= TableId /* TableId */.MAXIMUM_KEY_BITS) {
+  if (items1.length <= TableId.MAXIMUM_KEY_BITS) {
     return items1;
   } else {
     const _Error = Error;

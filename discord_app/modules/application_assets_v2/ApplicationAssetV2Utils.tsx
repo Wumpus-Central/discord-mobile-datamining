@@ -13,14 +13,14 @@ export const getApplicationAssetUrl = function getApplicationAssetUrl(closure_1,
   } else {
     const _URL = URL;
     const _HermesInternal = HermesInternal;
-    str5 = new URL("" + sendRequest /* sendRequest */.getAPIBaseURL() + "/applications/" + closure_1 + "/app-assets/" + asset_id.asset_id + ".webp");
-    const obj = sendRequest /* sendRequest */;
+    str5 = new URL("" + sendRequest.getAPIBaseURL() + "/applications/" + closure_1 + "/app-assets/" + asset_id.asset_id + ".webp");
+    const obj = sendRequest;
   }
   if (null != width) {
     const searchParams = str5.searchParams;
-    const obj2 = handleImageLoad /* handleImageLoad */;
-    const result = searchParams.set("size", handleImageLoad /* handleImageLoad */.getBestMediaProxySize(width).toString());
-    const str11 = handleImageLoad /* handleImageLoad */.getBestMediaProxySize(width);
+    const obj2 = handleImageLoad;
+    const result = searchParams.set("size", handleImageLoad.getBestMediaProxySize(width).toString());
+    const str11 = handleImageLoad.getBestMediaProxySize(width);
   }
   if (asset_id.metadata.is_animated) {
     const searchParams2 = str5.searchParams;

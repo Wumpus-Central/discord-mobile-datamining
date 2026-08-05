@@ -37,7 +37,7 @@ function NewCaption(arg0) {
   obj = { source: null, style: null };
   obj[0] = registerAsset;
   obj[1] = tmp.icon;
-  const items1 = [callback(Button /* Button */.Icon, obj), callback(Text /* Text */.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
+  const items1 = [callback(Button.Icon, obj), callback(Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
   obj[1] = items1;
   return callback2(closure_4, obj);
 }
@@ -440,13 +440,13 @@ const memoResult = importAllResult.memo((arg0) => {
   ({ handleCameraPress, handleAttachPress, handleViewAllPhotosPress } = arg0);
   closure_11 = (useWindowDimensions().width - (24 + 4 * (numPerRow - 1))) / numPerRow;
   obj = { camera: null, allphotos: null, attach: null };
-  obj = { text: getSystemLocale /* getSystemLocale */.t.uje3P9, onPress: handleCameraPress, Icon: CameraIcon /* CameraIcon */.CameraIcon };
+  obj = { text: getSystemLocale.t.uje3P9, onPress: handleCameraPress, Icon: CameraIcon.CameraIcon };
   obj[0] = obj;
-  obj = { text: getSystemLocale /* getSystemLocale */.t.Zmm6dN, onPress: handleViewAllPhotosPress, Icon: ImageIcon /* ImageIcon */.ImageIcon };
+  obj = { text: getSystemLocale.t.Zmm6dN, onPress: handleViewAllPhotosPress, Icon: ImageIcon.ImageIcon };
   obj[1] = obj;
   const tmp = obj();
-  obj[2] = { text: getSystemLocale /* getSystemLocale */.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon /* AttachmentIcon */.AttachmentIcon };
-  let obj1 = { text: getSystemLocale /* getSystemLocale */.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon /* AttachmentIcon */.AttachmentIcon };
+  obj[2] = { text: getSystemLocale.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
+  let obj1 = { text: getSystemLocale.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
   return callback(closure_4, {
     style: tmp.container,
     children: items.map((type) => {

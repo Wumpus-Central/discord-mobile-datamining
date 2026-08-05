@@ -35,5 +35,5 @@ export default function InAppReportsUpsellsTableRow(disabled) {
   obj[3] = icon;
   obj[4] = disabled;
   obj[5] = variant;
-  return jsx(TableRowInner /* TableRowInner */.TableRow, { label: tmp2, subLabel: null, onPress: null, icon: null, disabled: null, variant: null });
+  return jsx(TableRowInner.TableRow, { label: tmp2, subLabel: null, onPress: null, icon: null, disabled: null, variant: null });
 };

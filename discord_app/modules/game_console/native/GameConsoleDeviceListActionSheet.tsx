@@ -34,9 +34,9 @@ function TransferFooter(arg0) {
   obj[1] = transferring;
   obj[2] = onPress;
   const intl = tmp3(1236).intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.FYi3ry);
-  obj[2] = closure_12(Button /* Button */.Button, obj);
-  return closure_12(SafeAreaPaddingView /* SafeAreaPaddingView */.SafeAreaPaddingView, obj);
+  obj[3] = intl.string(getSystemLocale.t.FYi3ry);
+  obj[2] = closure_12(Button.Button, obj);
+  return closure_12(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 function DeviceOption(children) {
   const tmp = createCacheKey();
@@ -44,7 +44,7 @@ function DeviceOption(children) {
   obj = { style: tmp.deviceIcon, source: registerAsset };
   const items = [callback(closure_8, obj), ];
   obj = { style: tmp.deviceText, color: "mobile-text-heading-primary", variant: "text-md/bold", children: children.name };
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(closure_7, obj);
 }
@@ -54,13 +54,13 @@ function EmptyState() {
   obj = { source: registerAsset, style: tmp.emptyArt };
   const items = [callback(closure_8, obj), , ];
   obj = { style: tmp.emptyHeader, variant: "heading-md/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.OkJf1e);
-  items[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.OkJf1e);
+  items[1] = callback(Text.Text, obj);
   const obj1 = { style: tmp.emptyBody, variant: "text-md/normal", color: "text-default", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["of/l5Z"]);
-  items[2] = callback(Text /* Text */.Text, obj1);
+  const intl2 = getSystemLocale.intl;
+  obj1[3] = intl2.string(getSystemLocale.t["of/l5Z"]);
+  items[2] = callback(Text.Text, obj1);
   obj[1] = items;
   return callback2(closure_7, obj);
 }

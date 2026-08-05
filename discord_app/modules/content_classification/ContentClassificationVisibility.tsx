@@ -11,12 +11,12 @@ let result = require("AgeRestrictionStatus").fileFinishedImporting("modules/cont
 export const ContentClassificationVisibility = obj;
 export const getContentClassificationVisibility = function getContentClassificationVisibility(contentClassification, channel, nsfwAllowed) {
   if (null != contentClassification) {
-    let obj = contentClassificationToAgeRestrictionConclusion /* contentClassificationToAgeRestrictionConclusion */;
+    let obj = contentClassificationToAgeRestrictionConclusion;
     obj = { type: null, data: null };
-    obj[0] = contentClassificationToAgeRestrictionConclusion /* contentClassificationToAgeRestrictionConclusion */.ContentClassificationVariant.MINIMAL;
+    obj[0] = contentClassificationToAgeRestrictionConclusion.ContentClassificationVariant.MINIMAL;
     obj[1] = contentClassification;
     const result = obj.contentClassificationToAgeRestriction(obj);
-    if (result === AgeRestrictionStatus /* AgeRestrictionStatus */.AgeRestrictionStatus.ADULT) {
+    if (result === AgeRestrictionStatus.AgeRestrictionStatus.ADULT) {
       if (true !== nsfwAllowed) {
         let DISPLAY = obj.BLOCK_UNDERAGE;
       } else {
@@ -33,7 +33,7 @@ export const getContentClassificationVisibility = function getContentClassificat
   DISPLAY = obj.DISPLAY;
 };
 export const useContentClassificationVisibility = function useContentClassificationVisibility(arg0, isPrivate) {
-  initialize /* initialize */;
+  initialize;
   [][0] = mergeGuildAvatar;
   if (null != arg0) {
     const obj = { type: null, data: null };

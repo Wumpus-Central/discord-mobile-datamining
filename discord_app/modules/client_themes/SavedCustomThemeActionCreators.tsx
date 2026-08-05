@@ -11,7 +11,7 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
   if (!fetching.isFetching()) {
     let obj = dispatcher;
     obj.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_START" });
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: null, oldFormErrors: true, rejectWithError: true };
     obj[0] = Endpoints.USERS_ME_CUSTOM_THEMES;
     const value = HTTP.get(obj);

@@ -26,7 +26,7 @@ export default function ScreenAlignedThemedGradient(arg0) {
   let offsetX;
   let offsetY;
   ({ offsetX, offsetY } = arg0);
-  let obj = useActiveThemeType /* useActiveThemeType */;
+  let obj = useActiveThemeType;
   const isClientThemeOrCustomThemeActive = obj.useIsClientThemeOrCustomThemeActive();
   obj = { pointerEvents: "none", style: callback(offsetX, offsetY).container, children: jsx(getMixedGradientColor, { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive }) };
   return <closure_4 pointerEvents="none" style={callback(offsetX, offsetY).container}>{jsx(getMixedGradientColor, { absolute: true, tall: true, wide: true, mix: isClientThemeOrCustomThemeActive })}</closure_4>;

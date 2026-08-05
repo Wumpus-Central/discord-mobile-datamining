@@ -6,7 +6,7 @@ const result = require("set").fileFinishedImporting("modules/private_channel_rec
 
 export default {
   updatePrivateChannelRecipientFlags(id, setFlagResult) {
-    const HTTP = sendRequest /* sendRequest */.HTTP;
+    const HTTP = sendRequest.HTTP;
     obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(id), body: obj, rejectWithError: false };
     obj = { flags: setFlagResult };
     return HTTP.patch(obj);

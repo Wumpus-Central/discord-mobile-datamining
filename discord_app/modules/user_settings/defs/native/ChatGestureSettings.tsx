@@ -9,22 +9,22 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 let c3;
 let c4;
 function useSwipeToReplySettingValue() {
-  const SwipeRightToLeftModeSetting = explicitContentFromProto /* explicitContentFromProto */.SwipeRightToLeftModeSetting;
+  const SwipeRightToLeftModeSetting = explicitContentFromProto.SwipeRightToLeftModeSetting;
   let SWIPE_RIGHT_TO_LEFT_REPLY = SwipeRightToLeftModeSetting.useSetting();
-  if (SWIPE_RIGHT_TO_LEFT_REPLY === create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_UNSET) {
-    SWIPE_RIGHT_TO_LEFT_REPLY = create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY;
+  if (SWIPE_RIGHT_TO_LEFT_REPLY === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_UNSET) {
+    SWIPE_RIGHT_TO_LEFT_REPLY = create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY;
   }
   return SWIPE_RIGHT_TO_LEFT_REPLY;
 }
 ({ AnalyticEvents: c3, AnalyticsSections: c4 } = ME);
 const radio = createToggle.createRadio({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["Jf0C/c"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Jf0C/c"]);
   },
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t["9BGJ1m"])];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t["9BGJ1m"])];
     return items;
   },
   parent: require("MobileSetting").MobileSetting.SWIPE_RIGHT_TO_LEFT,
@@ -32,34 +32,34 @@ const radio = createToggle.createRadio({
   onValueChange: function onSwipeToReplyValueChange(arg0) {
     const NumberResult = Number(arg0);
     let obj = expandEventProperties;
-    obj = { enabled: NumberResult === create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, location: obj };
+    obj = { enabled: NumberResult === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, location: obj };
     obj = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
     obj.track(constants.USER_SETTINGS_SWIPE_TO_REPLY_TOGGLE, obj);
-    const SwipeRightToLeftModeSetting = explicitContentFromProto /* explicitContentFromProto */.SwipeRightToLeftModeSetting;
+    const SwipeRightToLeftModeSetting = explicitContentFromProto.SwipeRightToLeftModeSetting;
     SwipeRightToLeftModeSetting.updateSetting(NumberResult);
   },
   useOptions: function useHasSwipeToReplySettingOptions() {
-    let obj = { value: create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS, label: null, subLabel: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["6eXLcJ"]);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.ohhhDK);
+    let obj = { value: create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS, label: null, subLabel: null };
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t["6eXLcJ"]);
+    const intl2 = getSystemLocale.intl;
+    obj[2] = intl2.string(getSystemLocale.t.ohhhDK);
     const items = [obj, ];
-    obj = { value: create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t["3tYNDS"]);
+    obj = { value: create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
+    const intl3 = getSystemLocale.intl;
+    obj[1] = intl3.string(getSystemLocale.t["3tYNDS"]);
     items[1] = obj;
     return items;
   }
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["Jf0C/c"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["Jf0C/c"]);
   },
   useSearchTerms() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    const items = [intl.string(getSystemLocale /* getSystemLocale */.t["9BGJ1m"])];
+    const intl = getSystemLocale.intl;
+    const items = [intl.string(getSystemLocale.t["9BGJ1m"])];
     return items;
   },
   parent: require("MobileSetting").MobileSetting.SWIPE_RIGHT_TO_LEFT,
@@ -67,22 +67,22 @@ let obj = {
   onValueChange: function onSwipeToReplyValueChange(arg0) {
     const NumberResult = Number(arg0);
     let obj = expandEventProperties;
-    obj = { enabled: NumberResult === create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, location: obj };
+    obj = { enabled: NumberResult === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, location: obj };
     obj = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
     obj.track(constants.USER_SETTINGS_SWIPE_TO_REPLY_TOGGLE, obj);
-    const SwipeRightToLeftModeSetting = explicitContentFromProto /* explicitContentFromProto */.SwipeRightToLeftModeSetting;
+    const SwipeRightToLeftModeSetting = explicitContentFromProto.SwipeRightToLeftModeSetting;
     SwipeRightToLeftModeSetting.updateSetting(NumberResult);
   },
   useOptions: function useHasSwipeToReplySettingOptions() {
-    let obj = { value: create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS, label: null, subLabel: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["6eXLcJ"]);
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    obj[2] = intl2.string(getSystemLocale /* getSystemLocale */.t.ohhhDK);
+    let obj = { value: create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_CHANNEL_DETAILS, label: null, subLabel: null };
+    const intl = getSystemLocale.intl;
+    obj[1] = intl.string(getSystemLocale.t["6eXLcJ"]);
+    const intl2 = getSystemLocale.intl;
+    obj[2] = intl2.string(getSystemLocale.t.ohhhDK);
     const items = [obj, ];
-    obj = { value: create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    obj[1] = intl3.string(getSystemLocale /* getSystemLocale */.t["3tYNDS"]);
+    obj = { value: create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, label: null };
+    const intl3 = getSystemLocale.intl;
+    obj[1] = intl3.string(getSystemLocale.t["3tYNDS"]);
     items[1] = obj;
     return items;
   }
@@ -92,10 +92,10 @@ const result = require("create").fileFinishedImporting("modules/user_settings/de
 export default radio;
 export { useSwipeToReplySettingValue };
 export const getSwipeToReplySettingValue = function getSwipeToReplySettingValue() {
-  const SwipeRightToLeftModeSetting = explicitContentFromProto /* explicitContentFromProto */.SwipeRightToLeftModeSetting;
+  const SwipeRightToLeftModeSetting = explicitContentFromProto.SwipeRightToLeftModeSetting;
   let SWIPE_RIGHT_TO_LEFT_REPLY = SwipeRightToLeftModeSetting.getSetting();
-  if (SWIPE_RIGHT_TO_LEFT_REPLY === create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_UNSET) {
-    SWIPE_RIGHT_TO_LEFT_REPLY = create /* create */.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY;
+  if (SWIPE_RIGHT_TO_LEFT_REPLY === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_UNSET) {
+    SWIPE_RIGHT_TO_LEFT_REPLY = create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY;
   }
   return SWIPE_RIGHT_TO_LEFT_REPLY;
 };

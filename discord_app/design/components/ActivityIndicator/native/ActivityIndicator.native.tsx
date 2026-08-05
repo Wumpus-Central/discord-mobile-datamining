@@ -16,7 +16,7 @@ export const ActivityIndicator = function ActivityIndicator(size) {
     flag = true;
   }
   const merged = Object.assign(size, Object.create(null));
-  let obj = map /* map */;
+  let obj = map;
   let color = merged.color;
   if (color == null) {
     color = obj.useToken(Themes.colors.BACKGROUND_BRAND);

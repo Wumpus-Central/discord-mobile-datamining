@@ -23,10 +23,10 @@ export default function LimitedTimeBadge(unpublishedAt) {
   let days;
   let hours;
   const tmp = createCacheKey();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [handleThemeChange];
   const stateFromStores = obj.useStateFromStores(items, () => callback(table[9]).isThemeDark(theme.theme));
-  let obj1 = initialize /* initialize */;
+  let obj1 = initialize;
   const items1 = [_getSystemLocale];
   const items2 = ["en-US", "en-GB"];
   const hasItem = items2.includes(obj1.useStateFromStores(items1, () => locale.locale));

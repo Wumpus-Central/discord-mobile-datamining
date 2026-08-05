@@ -57,11 +57,11 @@ function MemberRow(arg0) {
   let userId;
   ({ disabled, checked } = arg0);
   ({ start, end, guildId, userId, onPress } = arg0);
-  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked, disabled });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
   obj = { start, end, guildId, userId, onPress, disabled, trailing: null, accessibilityRole: null, accessibilityState: null };
-  obj[6] = callback2(FormCheckbox /* FormCheckbox */.FormCheckbox, { checked });
+  obj[6] = callback2(FormCheckbox.FormCheckbox, { checked });
   obj[7] = accessibilityRole;
   obj[8] = accessibilityState;
   return callback2(memoResult1, obj);

@@ -8,7 +8,7 @@ const result = require("getSystemLocale").fileFinishedImporting("modules/message
 
 export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor /* getMessageAuthorWithProcessedColor */;
+  let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), pinsOnClick: obj };
   obj = { action: "bindOpenPins", messageChannelId: message.channel_id, medium: true };
@@ -33,8 +33,8 @@ export const createChannelPinnedMessageSystemMessage = function createChannelPin
   const items = [...accessibilityActions];
   const obj3 = { label: null, name: null };
   const intl3 = tmp(1236).intl;
-  obj3[0] = intl3.string(getSystemLocale /* getSystemLocale */.t["mp1N/2"]);
-  obj3[1] = MessageAccessibilityAction /* MessageAccessibilityAction */.MessageAccessibilityAction.OPEN_PINS;
+  obj3[0] = intl3.string(getSystemLocale.t["mp1N/2"]);
+  obj3[1] = MessageAccessibilityAction.MessageAccessibilityAction.OPEN_PINS;
   items.push(obj3);
   if (null != messageReference) {
     const obj4 = { label: null, name: null };

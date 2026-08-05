@@ -31,7 +31,7 @@ export default function ApplicationIconAndName(textVariant) {
     str = "";
   }
   obj[2] = { uri: str };
-  const items = [closure_3(Button /* Button */.Icon, obj, application.id), ];
+  const items = [closure_3(Button.Icon, obj, application.id), ];
   obj = { variant: textVariant.textVariant, children: null };
   let str2 = "";
   if (useComma) {
@@ -39,7 +39,7 @@ export default function ApplicationIconAndName(textVariant) {
   }
   obj = { children: null };
   obj[1] = "" + application.name + str2;
-  items[1] = closure_3(Text /* Text */.Text, obj);
+  items[1] = closure_3(Text.Text, obj);
   obj[0] = items;
   return closure_5(closure_4, obj);
 };

@@ -4,12 +4,12 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["yq/aPt"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["yq/aPt"]);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Amy1fz);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Amy1fz);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableFriendGamingActivityNotifications.useSetting,
@@ -17,12 +17,12 @@ const toggle = createToggle.createToggle({
 });
 const obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["yq/aPt"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["yq/aPt"]);
   },
   useDescription() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.Amy1fz);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.Amy1fz);
   },
   parent: require("MobileSetting").MobileSetting.NOTIFICATIONS,
   useValue: require("explicitContentFromProto").EnableFriendGamingActivityNotifications.useSetting,

@@ -48,8 +48,8 @@ function computeBasicPollChatData(message) {
     let str = "";
     if (message.state === MessageStates.SENT) {
       if (formattedExpirationLabel == null) {
-        formattedExpirationLabel = formatExpirationLabel /* formatExpirationLabel */.formatExpirationLabel(poll.expiry);
-        const obj2 = formatExpirationLabel /* formatExpirationLabel */;
+        formattedExpirationLabel = formatExpirationLabel.formatExpirationLabel(poll.expiry);
+        const obj2 = formatExpirationLabel;
       }
       str = formattedExpirationLabel;
     }
@@ -120,13 +120,13 @@ function computeBasicPollChatData(message) {
     if (null != guildId) {
       selfMember = selfMember.getSelfMember(guildId);
     }
-    const result = GuildMemberFlags /* GuildMemberFlags */.hasAutomodQuarantinedProfile(selfMember);
-    const obj4 = GuildMemberFlags /* GuildMemberFlags */;
+    const result = GuildMemberFlags.hasAutomodQuarantinedProfile(selfMember);
+    const obj4 = GuildMemberFlags;
     obj = { poll: null, canTapAnswers: null, canRemoveVote: null, canShowVoteCounts: null, canSubmitVote: null, expirationLabel: null, hasSelectedAnswer: null, hasVoted: null, hasVoteRecorded: null, isEditingVote: null, isExpired: null, isInteractive: null, isSent: null, reactions: null, selectedAnswerIds: null, submitting: null, tapShouldOpenVotersModal: null, showResults: null };
     obj[0] = poll;
     obj[1] = tmp19;
     let tmp30 = tmp16;
-    const result1 = isCommunicationDisabled /* isCommunicationDisabled */.isMemberCommunicationDisabled(selfMember);
+    const result1 = isCommunicationDisabled.isMemberCommunicationDisabled(selfMember);
     if (tmp16) {
       tmp30 = tmp2;
     }

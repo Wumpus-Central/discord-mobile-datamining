@@ -42,6 +42,6 @@ const tmp5 = (() => {
 const result = require("subscribeToSafeAreaInsets").fileFinishedImporting("modules/safe_area/useSafeAreaInsetsSharedValue.native.tsx");
 
 export default function useSafeAreaInsetsSharedValue() {
-  const obj = context /* context */;
+  const obj = context;
   return obj[obj.useAppEntryKey(obj)];
 };

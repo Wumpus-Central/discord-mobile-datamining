@@ -27,12 +27,12 @@ const require = arg1;
 function ChannelButtonIcons() {
   let obj = { style: callback3().channelButtons, children: null };
   obj = { size: "xs", accessibilityLabel: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.VHXh8a);
-  const items = [callback(ShieldLockIcon /* ShieldLockIcon */.ShieldLockIcon, obj), ];
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.VHXh8a);
+  const items = [callback(ShieldLockIcon.ShieldLockIcon, obj), ];
   obj = { source: null };
   obj[0] = registerAsset;
-  items[1] = callback(CollapsingText /* CollapsingText */.BaseTextButton.Icon, obj);
+  items[1] = callback(CollapsingText.BaseTextButton.Icon, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
@@ -71,14 +71,14 @@ function StreamButton(arg0) {
   let obj = getNickname;
   const name = obj.useName(guildId, channelId, participant.user);
   obj = { accessibilityRole: "button", accessibilityHint: null, accessibilityLabel: null, text: null, icon: null, iconPosition: "start", onPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["Y2b7+e"]);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.I0mOAs, { username: name });
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["Y2b7+e"]);
+  const intl2 = getSystemLocale.intl;
+  obj[2] = intl2.formatToPlainString(getSystemLocale.t.I0mOAs, { username: name });
   obj[3] = name;
   obj[4] = registerAsset;
   obj[6] = onPress;
-  return callback(TwinButtons /* TwinButtons */.HeaderButton, obj);
+  return callback(TwinButtons.HeaderButton, obj);
 }
 function ActivityButton(participant) {
   participant = participant.participant;
@@ -113,10 +113,10 @@ function UserButton(participant) {
   let obj = getNickname;
   const name = obj.useName(guildId, channelId, participant.user);
   const tmp = callback3();
-  const voicePanelHeaderUserStateIcons = useVoicePanelHeaderUserStateIcons /* useVoicePanelHeaderUserStateIcons */.useVoicePanelHeaderUserStateIcons(participant, guildId, tmp.userIcons);
+  const voicePanelHeaderUserStateIcons = useVoicePanelHeaderUserStateIcons.useVoicePanelHeaderUserStateIcons(participant, guildId, tmp.userIcons);
   obj = { accessibilityRole: "button", accessibilityHint: null, icon: null, iconPosition: null, text: null, onPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t["Y2b7+e"]);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t["Y2b7+e"]);
   obj[2] = voicePanelHeaderUserStateIcons;
   let str;
   if (null != voicePanelHeaderUserStateIcons) {
@@ -125,7 +125,7 @@ function UserButton(participant) {
   obj[3] = str;
   obj[4] = name;
   obj[5] = participant.onPress;
-  return closure_9(TwinButtons /* TwinButtons */.HeaderButton, obj);
+  return closure_9(TwinButtons.HeaderButton, obj);
 }
 function StageButton(channelId) {
   channelId = channelId.channelId;

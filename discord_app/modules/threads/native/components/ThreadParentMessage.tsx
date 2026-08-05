@@ -18,7 +18,7 @@ export const ThreadChannelStarterMessage = function ThreadChannelStarterMessage(
   let importDefault;
   let require;
   ({ guildId: require, messageId: importDefault, channelId: dependencyMap } = arg0);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [processMessage];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_3.getMessage(closure_2, closure_1));
   let state;
@@ -35,7 +35,7 @@ export const ThreadChannelStarterMessage = function ThreadChannelStarterMessage(
     obj[0] = obj;
     obj[1] = stateFromStores.message;
     obj[2] = jsx(DCDChatItem, { rowGenerator: null, message: null });
-    tmp5 = jsx(PressableBase /* PressableBase */.PressableOpacity, { rowGenerator: null, message: null });
+    tmp5 = jsx(PressableBase.PressableOpacity, { rowGenerator: null, message: null });
   }
   return tmp5;
 };
@@ -43,7 +43,7 @@ export const ThreadCreationStarterMessage = function ThreadCreationStarterMessag
   let importDefault;
   let require;
   ({ messageId: require, channelId: importDefault } = arg0);
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [reinjectEphemerals];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getMessage(closure_1, closure_0));
   let tmp3 = null;

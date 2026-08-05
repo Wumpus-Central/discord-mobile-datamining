@@ -11,8 +11,8 @@ import { set } from "../../../../utils/PlatformUtils.tsx";
 const require = arg1;
 createToggle = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.s9h22P);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.s9h22P);
   },
   parent: null,
   IconComponent: require("NitroWheelIcon").NitroWheelIcon,
@@ -60,11 +60,11 @@ createToggle = {
   withArrow: true,
   usePredicate: function useHasPremiumRestoreSubscriptionSetting() {
     const items = [mergeGuildAvatar];
-    const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => currentUser.getCurrentUser());
+    const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
     let tmp4 = null != stateFromStores && stateFromStores.verified;
     if (tmp4) {
-      tmp4 = !set /* set */.isAndroid();
-      const tmpResult = set /* set */;
+      tmp4 = !set.isAndroid();
+      const tmpResult = set;
     }
     return tmp4;
   }

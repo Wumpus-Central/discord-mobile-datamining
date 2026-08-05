@@ -41,10 +41,10 @@ prototype["handleConnectionClose"] = function handleConnectionClose() {
   return false;
 };
 prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
-  const obj = set /* set */;
+  const obj = set;
   const tmp = require;
-  const AppStates = keys /* keys */.AppStates;
-  let isConnectedResult = (set /* set */.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
+  const AppStates = keys.AppStates;
+  let isConnectedResult = (set.isAndroid() ? AppStates.BACKGROUND : AppStates.INACTIVE) === state.state;
   if (isConnectedResult) {
     isConnectedResult = connected.isConnected();
   }
@@ -59,8 +59,8 @@ prototype["handleWindowFocus"] = function handleWindowFocus(focused) {
     const _Date = Date;
     if (Date.now() - lastWriteTime.lastWriteTime > closure_6) {
       tmp2.verbose("Writing cache from window unfocus");
-      _writeCaches /* _writeCaches */.writeCaches();
-      const obj = _writeCaches /* _writeCaches */;
+      _writeCaches.writeCaches();
+      const obj = _writeCaches;
     } else {
       tmp2.verbose("Not writing cache from window unfocus");
     }

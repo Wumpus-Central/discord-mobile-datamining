@@ -39,7 +39,7 @@ function Footer(eligibleToReceivePremiumRewards) {
   const callback2 = React.useCallback(() => {
     callback2(4253).hideActionSheet();
   }, []);
-  const Button = Button /* Button */.Button;
+  const Button = Button.Button;
   if (eligibleToReceivePremiumRewards.eligibleToReceivePremiumRewards) {
     obj = { size: "lg", text: null, variant: "primary", onPress: null };
     const intl3 = tmp10(1236).intl;
@@ -77,15 +77,15 @@ function SheetContent(arg0) {
   ({ title, body, eligibleToReceivePremiumRewards } = arg0);
   const tmp = createCacheKey();
   let obj = { children: null };
-  const items = [callback(ActionSheetHeaderBar /* ActionSheetHeaderBar */.ActionSheetHeaderBar, { variant: "floating" }), ];
+  const items = [callback(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating" }), ];
   obj = { style: items1, children: null };
   items1 = [tmp.container, { marginBottom: useSafeAreaInsets().bottom }];
   obj = { style: tmp.contentContainer, children: null };
-  const items2 = [callback(View, { style: tmp.riveContainer, children: callback(ManaContext /* ManaContext */.NitroQuestOrbsMultiplierRive, {}) }), , , ];
+  const items2 = [callback(View, { style: tmp.riveContainer, children: callback(ManaContext.NitroQuestOrbsMultiplierRive, {}) }), , , ];
   const items3 = [, ];
   ({ text: arr4[0], title: arr4[1] } = tmp);
-  items2[1] = callback(Text /* Text */.Text, { style: items3, variant: "display-md", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title });
-  items2[2] = callback(Text /* Text */.Text, { style: tmp.text, variant: "text-sm/normal", children: body });
+  items2[1] = callback(Text.Text, { style: items3, variant: "display-md", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title });
+  items2[2] = callback(Text.Text, { style: tmp.text, variant: "text-sm/normal", children: body });
   items2[3] = callback(Footer, { eligibleToReceivePremiumRewards });
   obj[1] = items2;
   obj[1] = callback2(View, obj);

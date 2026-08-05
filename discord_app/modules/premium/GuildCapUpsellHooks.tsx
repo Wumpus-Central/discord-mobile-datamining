@@ -11,16 +11,16 @@ let result = require("ME").fileFinishedImporting("modules/premium/GuildCapUpsell
 
 export const useShouldShowInlineGuildCapUpsell = function useShouldShowInlineGuildCapUpsell() {
   const items = [createGuildRecordFromRust];
-  let stateFromStores = initialize /* initialize */.useStateFromStores(items, () => guildCount.getGuildCount() >= 95);
-  const obj = initialize /* initialize */;
-  const items1 = [HotspotStore /* HotspotStore */.HotspotStore];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => {
+  let stateFromStores = initialize.useStateFromStores(items, () => guildCount.getGuildCount() >= 95);
+  const obj = initialize;
+  const items1 = [HotspotStore.HotspotStore];
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => {
     const HotspotStore = callback(5744).HotspotStore;
     return HotspotStore.hasHotspot(callback(5744).HotspotLocations.GUILD_CAP_INLINE_UPSELL);
   });
-  const obj2 = initialize /* initialize */;
+  const obj2 = initialize;
   const items2 = [mergeGuildAvatar];
-  const stateFromStoresObject = initialize /* initialize */.useStateFromStoresObject(items2, () => !callback2(3931).isPremium(currentUser.getCurrentUser()));
+  const stateFromStoresObject = initialize.useStateFromStoresObject(items2, () => !callback2(3931).isPremium(currentUser.getCurrentUser()));
   if (stateFromStores) {
     stateFromStores = stateFromStores1;
   }
@@ -30,7 +30,7 @@ export const useShouldShowInlineGuildCapUpsell = function useShouldShowInlineGui
   return stateFromStores;
 };
 export const hideInlineGuildCapUpsell = function hideInlineGuildCapUpsell() {
-  HotspotStore /* HotspotStore */.hideHotspot(HotspotStore /* HotspotStore */.HotspotLocations.GUILD_CAP_INLINE_UPSELL);
+  HotspotStore.hideHotspot(HotspotStore.HotspotLocations.GUILD_CAP_INLINE_UPSELL);
 };
 export const hasIncreasedGuildCap = function hasIncreasedGuildCap(currentUser) {
   let result = getPremiumPlanItem.canUseIncreasedGuildCap(currentUser);

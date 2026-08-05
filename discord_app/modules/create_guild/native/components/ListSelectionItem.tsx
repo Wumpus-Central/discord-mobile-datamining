@@ -13,5 +13,5 @@ export default function ListSelectionItem(arg0) {
   ({ Icon, message, onPress } = arg0);
   const obj = { onPress, label: message, icon: null };
   obj[2] = <Icon size={24} />;
-  return jsx(TableRowInner /* TableRowInner */.TableRow, { onPress, label: message, icon: null });
+  return jsx(TableRowInner.TableRow, { onPress, label: message, icon: null });
 };

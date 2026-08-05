@@ -77,7 +77,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(require("dispatc
           return items;
         }));
       }
-      obj = apply /* apply */;
+      obj = apply;
     }
     let c8 = true;
     let c4 = false;
@@ -106,7 +106,7 @@ const collectiblesPurchaseStore = new CollectiblesPurchaseStore(require("dispatc
             return items;
           }));
         }
-        obj = apply /* apply */;
+        obj = apply;
       }
       let c5;
       let c7;

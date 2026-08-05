@@ -12,7 +12,7 @@ const result = require("getPremiumPlanItem").fileFinishedImporting("modules/mess
 
 export default function useMessageMaxLength() {
   const items = [mergeGuildAvatar];
-  return initialize /* initialize */.useStateFromStores(items, () => callback(table[2]).canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5);
+  return initialize.useStateFromStores(items, () => callback(table[2]).canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5);
 };
 export const getMaxMessageLength = function getMaxMessageLength() {
   return getPremiumPlanItem.canUseIncreasedMessageLength(currentUser.getCurrentUser()) ? closure_4 : closure_5;

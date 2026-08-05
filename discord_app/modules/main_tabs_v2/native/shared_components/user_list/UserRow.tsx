@@ -31,7 +31,7 @@ function UserRowSubLabel(arg0) {
   ({ user, type, applicationId: require } = arg0);
   ({ animate, isGameRelationship, guildId } = arg0);
   let gameIcon = callback2();
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [addApplication];
   const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getApplication(closure_0));
   if (type !== constants.PENDING_INCOMING) {

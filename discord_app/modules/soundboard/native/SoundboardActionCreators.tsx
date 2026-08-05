@@ -12,9 +12,9 @@ export const showSoundboardSoundPickerActionSheet = function showSoundboardSound
   let analyticsSource;
   let channel;
   ({ channel, analyticsSource } = arg0);
-  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.TOGGLE_CALL_CONTROL_DRAWER);
-  const result = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent /* DismissibleContent */.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
-  const obj = UNSAFE_isDismissibleContentDismissed /* UNSAFE_isDismissibleContentDismissed */;
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl /* asyncRequireImpl */(16007, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource });
+  const result = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
+  const obj = UNSAFE_isDismissibleContentDismissed;
+  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(16007, dependencyMap.paths), "SoundboardSoundPickerActionSheet", { channel, analyticsSource });
 };

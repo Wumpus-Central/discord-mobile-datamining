@@ -25,7 +25,7 @@ function BaseIdentityVerificationField(icon) {
   }
   const items = [tmp4, , ];
   const items1 = [tmp.label];
-  items[1] = callback(Text /* Text */.Text, { style: items1, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label });
+  items[1] = callback(Text.Text, { style: items1, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label });
   obj = { style: null, children: null };
   if (passesVerification) {
     obj[0] = tmp.verifiedContainer;
@@ -59,7 +59,7 @@ export default function IdentityVerificationField(arg0) {
   let passesVerification;
   let platform;
   ({ platform, passesVerification } = arg0);
-  if (MAX_RESULTS_PER_PAGE /* MAX_RESULTS_PER_PAGE */.UserVerificationFieldPlatforms.EMAIL === platform) {
+  if (MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL === platform) {
     const intl3 = tmp(1236).intl;
     const string2 = intl3.string;
     let INsLgA = tmp(1236).t;

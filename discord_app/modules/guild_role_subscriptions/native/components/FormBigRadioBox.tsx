@@ -43,7 +43,7 @@ export default function FormBigRadioBox(arg0) {
     disabled = false;
   }
   const tmp = createCacheKey();
-  let obj = useCheckboxA11yNative /* useCheckboxA11yNative */;
+  let obj = useCheckboxA11yNative;
   const radioA11yNative = obj.useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   const items = [tmp.container, , , ];
@@ -65,7 +65,7 @@ export default function FormBigRadioBox(arg0) {
   }
   obj[3] = tmp7;
   obj = { style: tmp.indicator, active: selected };
-  const items1 = [callback(Button /* Button */.RadioIndicator, obj), , , ];
+  const items1 = [callback(Button.RadioIndicator, obj), , , ];
   const items2 = [tmp.iconContainer, ];
   if (selected) {
     selected = tmp.iconContainerSelected;
@@ -74,9 +74,9 @@ export default function FormBigRadioBox(arg0) {
   const tmp6 = render;
   const tmp9 = View;
   items2[1] = selected;
-  items1[1] = callback(tmp9, { style: items2, children: callback(Button /* Button */.Icon, { source: icon }) });
-  items1[2] = callback(Text /* Text */.Text, { style: tmp.title, accessibilityRole: "header", variant: "text-md/semibold", color: "interactive-text-default", children: title });
-  items1[3] = callback(Text /* Text */.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: description });
+  items1[1] = callback(tmp9, { style: items2, children: callback(Button.Icon, { source: icon }) });
+  items1[2] = callback(Text.Text, { style: tmp.title, accessibilityRole: "header", variant: "text-md/semibold", color: "interactive-text-default", children: title });
+  items1[3] = callback(Text.Text, { variant: "text-sm/medium", color: "interactive-text-default", children: description });
   obj[4] = items1;
   return tmp5(tmp6, obj);
 };

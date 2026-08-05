@@ -98,5 +98,5 @@ export const sortHappeningNowCards = function sortHappeningNowCards(result) {
       return flag;
     }
   ];
-  return apply /* apply */.orderBy(result, items, ["asc", "asc"]);
+  return apply.orderBy(result, items, ["asc", "asc"]);
 };

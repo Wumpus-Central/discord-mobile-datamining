@@ -10,7 +10,7 @@ import { ChatInputGuard } from "ChatInputGuard.tsx";
 const require = arg1;
 const memoResult = require("noop").memo(function CommunicationDisabledNoticeForGuild(guildMember) {
   guildMember = guildMember.guildMember;
-  let obj = useCommunicationDisabledCountdownCleanup /* useCommunicationDisabledCountdownCleanup */;
+  let obj = useCommunicationDisabledCountdownCleanup;
   const communicationDisabledCountdownCleanup = obj.useCommunicationDisabledCountdownCleanup(guildMember);
   const communicationDisabledUntil = guildMember.communicationDisabledUntil;
   if (null == communicationDisabledUntil) {
@@ -21,12 +21,12 @@ const memoResult = require("noop").memo(function CommunicationDisabledNoticeForG
     date = new Date(communicationDisabledUntil);
   }
   obj = { type: "simple-action", icon: null, message: null, subtext: null, countdown: null };
-  obj[1] = jsx(ClockWarningIcon /* ClockWarningIcon */.ClockWarningIcon, {});
+  obj[1] = jsx(ClockWarningIcon.ClockWarningIcon, {});
   const intl = tmp(1236).intl;
-  obj[2] = intl.string(getSystemLocale /* getSystemLocale */.t.VSpdzK);
+  obj[2] = intl.string(getSystemLocale.t.VSpdzK);
   const intl2 = tmp(1236).intl;
   obj = { link: closure_3 };
-  obj[3] = intl2.format(getSystemLocale /* getSystemLocale */.t["4ZwD5G"], obj);
+  obj[3] = intl2.format(getSystemLocale.t["4ZwD5G"], obj);
   obj[4] = date;
   return jsx(ChatInputGuard, { link: closure_3 });
 });

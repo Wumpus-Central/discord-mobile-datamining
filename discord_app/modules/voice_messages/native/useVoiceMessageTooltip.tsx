@@ -43,7 +43,7 @@ export default function useVoiceMessageTooltip() {
       };
     }
   }, items1);
-  let obj = useTooltip /* useTooltip */;
+  let obj = useTooltip;
   const tooltip = obj.useTooltip(ref, memo);
   obj = { tooltipTargetRef: ref, showVoiceMessagesTooltip: closure_5 };
   return obj;

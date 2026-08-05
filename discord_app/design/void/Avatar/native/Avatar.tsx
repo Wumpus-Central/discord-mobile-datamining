@@ -15,7 +15,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function getStatusSize(arg0) {
-  if (StaticNativeCutoutAvatarImage /* StaticNativeCutoutAvatarImage */.AvatarSizes.XXSMALL !== arg0) {
+  if (StaticNativeCutoutAvatarImage.AvatarSizes.XXSMALL !== arg0) {
     if (tmp(12215).AvatarSizes.XSMALL !== arg0) {
       if (tmp(12215).AvatarSizes.XSMALL_20 !== arg0) {
         if (tmp(12215).AvatarSizes.SMALL !== arg0) {
@@ -61,11 +61,11 @@ let closure_10 = createCacheKey.createStyles((NORMAL) => {
   obj = { width: 24, height: 24, justifyContent: "center", alignItems: "center", backgroundColor: Themes.unsafe_rawColors.RED_400, borderRadius: Themes.radii.md, right: 0, bottom: 0 };
   obj[3] = obj;
   const obj1 = { position: "absolute", top: null, left: null };
-  const decorationSizeForAvatarSize = getDecorationSizeForAvatarSize /* getDecorationSizeForAvatarSize */.getDecorationSizeForAvatarSize(NORMAL);
-  obj1[1] = -(decorationSizeForAvatarSize - StaticNativeCutoutAvatarImage /* StaticNativeCutoutAvatarImage */.styles[NORMAL].width) / 2;
-  const obj5 = getDecorationSizeForAvatarSize /* getDecorationSizeForAvatarSize */;
-  const decorationSizeForAvatarSize1 = getDecorationSizeForAvatarSize /* getDecorationSizeForAvatarSize */.getDecorationSizeForAvatarSize(NORMAL);
-  obj1[2] = -(decorationSizeForAvatarSize1 - StaticNativeCutoutAvatarImage /* StaticNativeCutoutAvatarImage */.styles[NORMAL].width) / 2;
+  const decorationSizeForAvatarSize = getDecorationSizeForAvatarSize.getDecorationSizeForAvatarSize(NORMAL);
+  obj1[1] = -(decorationSizeForAvatarSize - StaticNativeCutoutAvatarImage.styles[NORMAL].width) / 2;
+  const obj5 = getDecorationSizeForAvatarSize;
+  const decorationSizeForAvatarSize1 = getDecorationSizeForAvatarSize.getDecorationSizeForAvatarSize(NORMAL);
+  obj1[2] = -(decorationSizeForAvatarSize1 - StaticNativeCutoutAvatarImage.styles[NORMAL].width) / 2;
   obj[4] = obj1;
   obj[5] = { position: "relative" };
   return obj;

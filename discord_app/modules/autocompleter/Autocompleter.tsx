@@ -16,8 +16,8 @@ import { getTransformedUser } from "UserSearchManager.tsx";
 const require = arg1;
 function getAutocompleterBoosterMap(USER, options) {
   if (options.frecencyBoosters) {
-    let boosterMap = NOOP /* NOOP */.getBoosterMap(USER);
-    const obj2 = NOOP /* NOOP */;
+    let boosterMap = NOOP.getBoosterMap(USER);
+    const obj2 = NOOP;
   } else {
     boosterMap = {};
   }
@@ -400,8 +400,8 @@ prototype["queryVoiceChannels"] = function queryVoiceChannels(closure_1, _limit)
   if (this._include(AutocompleterResultTypes.VOICE_CHANNEL)) {
     ({ allowSnowflake, voiceChannelGuildFilter } = self.options);
     if (self.options.frecencyBoosters) {
-      let boosterMap = NOOP /* NOOP */.getBoosterMap(tmp);
-      const obj2 = NOOP /* NOOP */;
+      let boosterMap = NOOP.getBoosterMap(tmp);
+      const obj2 = NOOP;
     } else {
       boosterMap = {};
     }
@@ -582,7 +582,7 @@ prototype["queryGameProfiles"] = function queryGameProfiles(query, _limit) {
 };
 prototype["refreshGameProfiles"] = function refreshGameProfiles() {
   const self = this;
-  const isNullOrEmptyResult = isNullOrEmpty /* isNullOrEmpty */.isNullOrEmpty(this.query.trim());
+  const isNullOrEmptyResult = isNullOrEmpty.isNullOrEmpty(this.query.trim());
   let _includeResult = !isNullOrEmptyResult;
   if (!isNullOrEmptyResult) {
     _includeResult = self._include(AutocompleterResultTypes.GAME_PROFILE);
@@ -596,13 +596,13 @@ prototype["queryLink"] = function queryLink(query, _refetchForSingleCategoryLimi
   let hostname;
   let pathname;
   if (this._include(AutocompleterResultTypes.LINK)) {
-    let obj = getPathsFromURL /* getPathsFromURL */;
+    let obj = getPathsFromURL;
     const findCodedLinkResult = obj.findCodedLink(query);
     let type;
     if (findCodedLinkResult != null) {
       type = findCodedLinkResult.type;
     }
-    if (type === CodedLinkType /* CodedLinkType */.CodedLinkType.INVITE) {
+    if (type === CodedLinkType.CodedLinkType.INVITE) {
       obj = { type: null, record: null, score: null };
       obj[0] = tmp.LINK;
       obj[1] = fromPath.fromInviteCode(findCodedLinkResult.code);

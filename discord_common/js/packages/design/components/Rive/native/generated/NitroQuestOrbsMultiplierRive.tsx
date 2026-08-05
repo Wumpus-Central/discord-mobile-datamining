@@ -16,7 +16,7 @@ let closure_9 = {
     let playIfNeeded;
     let reducedMotionEnabled;
     ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
     return null;
   },
   Shards_All_Nitro: function ShardsAllNitroBindings(arg0) {
@@ -24,7 +24,7 @@ let closure_9 = {
     let playIfNeeded;
     let reducedMotionEnabled;
     ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
     return null;
   },
   "Orb Mid Shine": function OrbMidShineBindings(arg0) {
@@ -32,7 +32,7 @@ let closure_9 = {
     let playIfNeeded;
     let reducedMotionEnabled;
     ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
     return null;
   },
   Torbs_Shine: function TorbsShineBindings(arg0) {
@@ -40,7 +40,7 @@ let closure_9 = {
     let playIfNeeded;
     let reducedMotionEnabled;
     ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
-    const booleanBinding = BaseRive /* BaseRive */.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
+    const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled, undefined, playIfNeeded);
     return null;
   }
 };
@@ -87,7 +87,7 @@ const forwardRefResult = importAllResult.forwardRef(function NitroQuestOrbsMulti
   obj = { ref };
   const merged = Object.assign(fallback);
   obj[1] = <closure_10 ref={arg1} />;
-  return jsx(getDerivedStateFromError /* getDerivedStateFromError */.RiveErrorBoundary, { ref });
+  return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
 const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/NitroQuestOrbsMultiplierRive.tsx");
 

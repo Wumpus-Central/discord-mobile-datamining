@@ -5,18 +5,18 @@ import { explicitContentFromProto } from "../../UserSettings.tsx";
 
 const toggle = createToggle.createToggle({
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["4qhAjx"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["4qhAjx"]);
   },
   parent: require("MobileSetting").MobileSetting.CHAT,
   useValue() {
-    const DoubleTapReactionEmoji = explicitContentFromProto /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
     return !DoubleTapReactionEmoji.useSetting().disableDoubleTap;
   },
   onValueChange(disableDoubleTap) {
-    const DoubleTapReactionEmoji = explicitContentFromProto /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
-    const DoubleTapReactionEmoji2 = explicitContentFromProto /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji2 = explicitContentFromProto.DoubleTapReactionEmoji;
     const obj = { disableDoubleTap: !disableDoubleTap, emojiId: null, emojiName: null, animated: null };
     let emojiId;
     if (setting != null) {
@@ -38,18 +38,18 @@ const toggle = createToggle.createToggle({
 });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["4qhAjx"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["4qhAjx"]);
   },
   parent: require("MobileSetting").MobileSetting.CHAT,
   useValue() {
-    const DoubleTapReactionEmoji = explicitContentFromProto /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
     return !DoubleTapReactionEmoji.useSetting().disableDoubleTap;
   },
   onValueChange(disableDoubleTap) {
-    const DoubleTapReactionEmoji = explicitContentFromProto /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
-    const DoubleTapReactionEmoji2 = explicitContentFromProto /* explicitContentFromProto */.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji2 = explicitContentFromProto.DoubleTapReactionEmoji;
     const obj = { disableDoubleTap: !disableDoubleTap, emojiId: null, emojiName: null, animated: null };
     let emojiId;
     if (setting != null) {

@@ -205,7 +205,7 @@ function mapMessageComponentLocalStateForAPI(type) {
     return null;
   } else {
     type = type.type;
-    if (PermissionOverwriteType /* PermissionOverwriteType */.ComponentType.TEXT_INPUT !== type) {
+    if (PermissionOverwriteType.ComponentType.TEXT_INPUT !== type) {
       if (tmp(1906).ComponentType.FILE_UPLOAD !== type) {
         if (tmp(1906).ComponentType.RADIO_GROUP !== type) {
           if (tmp(1906).ComponentType.CHECKBOX_GROUP !== type) {
@@ -239,8 +239,8 @@ function mapMessageComponentLocalStateForAPI(type) {
 function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId) {
   if (!ok.ok) {
     if (ok.hasErr) {
-      _fetchMessageInteractionData /* _fetchMessageInteractionData */.setFailed(nonce);
-      const obj10 = _fetchMessageInteractionData /* _fetchMessageInteractionData */;
+      _fetchMessageInteractionData.setFailed(nonce);
+      const obj10 = _fetchMessageInteractionData;
     } else {
       if (ok.status >= 400) {
         if (ok.status < 500) {
@@ -248,7 +248,7 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
             let tmp9 = guildId;
             if (ok.body.code === constants.INVALID_FORM_BODY) {
               if (ok.body.errors) {
-                const firstSkemaError = getFirstSkemaFieldError /* getFirstSkemaFieldError */.getFirstSkemaError(ok.body.errors);
+                const firstSkemaError = getFirstSkemaFieldError.getFirstSkemaError(ok.body.errors);
                 let tmp28 = null == firstSkemaError;
                 if (!tmp28) {
                   let tmp29 = "INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" !== firstSkemaError.code;
@@ -268,13 +268,13 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
                   dispatcher.dispatch(obj);
                   const obj7 = dispatcher;
                 }
-                const obj6 = getFirstSkemaFieldError /* getFirstSkemaFieldError */;
+                const obj6 = getFirstSkemaFieldError;
                 const tmp24 = require;
                 let message;
                 if (firstSkemaError != null) {
                   message = firstSkemaError.message;
                 }
-                _fetchMessageInteractionData /* _fetchMessageInteractionData */.setFailed(nonce, undefined, message);
+                _fetchMessageInteractionData.setFailed(nonce, undefined, message);
               }
             }
             if (ok.body.code === constants.UNKNOWN_INTEGRATION) {
@@ -288,17 +288,17 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
               obj[3] = tmp20;
               dispatcher.dispatch(obj);
               const obj3 = dispatcher;
-              _fetchMessageInteractionData /* _fetchMessageInteractionData */.setFailed(nonce, undefined, ok.body.message);
-              const obj5 = _fetchMessageInteractionData /* _fetchMessageInteractionData */;
+              _fetchMessageInteractionData.setFailed(nonce, undefined, ok.body.message);
+              const obj5 = _fetchMessageInteractionData;
             } else {
-              const obj2 = _fetchMessageInteractionData /* _fetchMessageInteractionData */;
+              const obj2 = _fetchMessageInteractionData;
               obj2.setFailed(nonce, ok.body.code, ok.body.message, ok.status);
             }
             return tmp16;
           }
         }
       }
-      obj = _fetchMessageInteractionData /* _fetchMessageInteractionData */;
+      obj = _fetchMessageInteractionData;
       const body = ok.body;
       let code;
       if (body != null) {
@@ -360,7 +360,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
       if (state2 != null) {
         interactionType = state2.data.interactionType;
       }
-      const tmp21 = interactionType === PermissionOverwriteType /* PermissionOverwriteType */.InteractionTypes.APPLICATION_COMMAND;
+      const tmp21 = interactionType === PermissionOverwriteType.InteractionTypes.APPLICATION_COMMAND;
       const isCommandTypeResult = state.isCommandType();
       if (!tmp21) {
         if (isCommandTypeResult) {
@@ -428,7 +428,7 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
   let items = options;
   if (1 === length) {
     let tmp4 = options;
-    if (options[0].type === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+    if (options[0].type === PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
       while (true) {
         let options1 = tmp4[0].options;
         let length1;
@@ -444,7 +444,7 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
           let tmp8 = dependencyMap;
           let tmp9 = dependencyMap;
           tmp4 = options1;
-          if (options1[0].type === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+          if (options1[0].type === PermissionOverwriteType.ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
             continue;
           } else {
             let tmp10 = tmp6;
@@ -474,7 +474,7 @@ export const canRetryInteractionData = function canRetryInteractionData(interact
     let tmp13 = require;
     let tmp14 = dependencyMap;
     let tmp15 = dependencyMap;
-    if (item10042.type === PermissionOverwriteType /* PermissionOverwriteType */.ApplicationCommandOptionType.ATTACHMENT) {
+    if (item10042.type === PermissionOverwriteType.ApplicationCommandOptionType.ATTACHMENT) {
       let tmp16 = obj;
       obj.return();
       let flag = false;

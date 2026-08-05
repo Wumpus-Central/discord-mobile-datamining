@@ -27,7 +27,7 @@ export default function EmptyState(Illustration) {
   let children;
   let title;
   const tmp = createCacheKey();
-  AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  AccessibilityAnnouncer;
   if (null != Illustration.Illustration) {
     let obj = { accessible: false, importantForAccessibility: "no", accessibilityRole: "none", resizeMode: "contain", style: null };
     const items = [tmp.emptyImage, Illustration.imageStyle];

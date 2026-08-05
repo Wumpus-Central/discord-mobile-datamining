@@ -1454,12 +1454,12 @@ function _payInvoiceManually() {
 function handlePaymentConfirmation(body, paymentSource) {
   if (null != paymentSource) {
     if (set.has(paymentSource.type)) {
-      const adyenPaymentConfirmationHandler = new performRedirect /* performRedirect */.AdyenPaymentConfirmationHandler(paymentSource, body);
+      const adyenPaymentConfirmationHandler = new performRedirect.AdyenPaymentConfirmationHandler(paymentSource, body);
       let confirmPaymentResult = adyenPaymentConfirmationHandler.confirmPayment();
     }
     return confirmPaymentResult;
   }
-  confirmPaymentResult = new performRedirect /* performRedirect */.StripePaymentConfirmationHandler(paymentSource, body).confirmPayment();
+  confirmPaymentResult = new performRedirect.StripePaymentConfirmationHandler(paymentSource, body).confirmPayment();
 }
 function _redirectedPaymentSucceeded() {
   const self = this;
@@ -2588,7 +2588,7 @@ export const cancelSubscription = function cancelSubscription(id, c4) {
 export const deleteRenewalMutation = function deleteRenewalMutation(items) {
   let obj = { items: items.items };
   obj = { amount: 0, currency: items.currency };
-  return updateSubscription(items, obj, obj, getPremiumPlanItem /* getPremiumPlanItem */.getItemPlansTotalServerPrice(items.items, items.currency, items.paymentSourceId), arg1);
+  return updateSubscription(items, obj, obj, getPremiumPlanItem.getItemPlansTotalServerPrice(items.items, items.currency, items.paymentSourceId), arg1);
 };
 export { updateSubscription };
 export const resubscribeToSubscription = function resubscribeToSubscription(currency, outer1_6, id) {
@@ -2600,10 +2600,10 @@ export const resubscribeToSubscription = function resubscribeToSubscription(curr
   if (id != null) {
     id = id.id;
   }
-  return updateSubscription(currency, obj, obj, getPremiumPlanItem /* getPremiumPlanItem */.getItemPlansTotalServerPrice(items, currency, id), outer1_6, arg4);
+  return updateSubscription(currency, obj, obj, getPremiumPlanItem.getItemPlansTotalServerPrice(items, currency, id), outer1_6, arg4);
 };
 export const upgradeSubscription = function upgradeSubscription(renewalMutations, basePlanId, arg2, itemPlansTotalServerPrice) {
-  let obj = getPremiumPlanItem /* getPremiumPlanItem */;
+  let obj = getPremiumPlanItem;
   obj = { status: constants.ACTIVE, items: obj.getItemsWithUpsertedPremiumPlanId(renewalMutations, basePlanId) };
   return updateSubscription(renewalMutations, obj, arg2, itemPlansTotalServerPrice, arg4, arg5);
 };
@@ -2668,13 +2668,13 @@ export const fetchIpCountryCode = function fetchIpCountryCode() {
   return applyArgumentsResult;
 };
 export const fetchPaymentSourceCreationContext = function fetchPaymentSourceCreationContext() {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   return HTTP.get({ url: closure_10.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: true, rejectWithError: false });
 };
 export const clearAndFetchPaymentSourceCreationContext = function clearAndFetchPaymentSourceCreationContext() {
   let obj = dispatcher;
   obj.dispatch({ type: "PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_START" });
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: closure_10.BILLING_PAYMENT_SOURCE_CREATION_CONTEXT, oldFormErrors: true, rejectWithError: false };
   const value = HTTP.get(obj);
   value.then((body) => {

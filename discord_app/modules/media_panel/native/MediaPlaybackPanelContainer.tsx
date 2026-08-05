@@ -7,7 +7,7 @@ import { MediaPlaybackPanelUI } from "MediaPlaybackPanelUI.tsx";
 
 const require = arg1;
 const memoResult = require("noop").memo(function MediaPlaybackPanelContainer() {
-  let obj = _initialize /* _initialize */;
+  let obj = _initialize;
   let tmp2 = null;
   if (obj.useMediaPlayerManagerStore(obj2.useShallow((showPip) => {
     let activeMediaPlayerSource;

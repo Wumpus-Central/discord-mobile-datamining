@@ -504,7 +504,7 @@ prototype["render"] = function render() {
     obj[0] = tmp.rowLabel;
     obj = { variant: "text-sm/medium", children: null };
     obj[1] = nameFromUser.getUserTag(user);
-    const items = [callback3(Text /* Text */.Text, obj), ];
+    const items = [callback3(Text.Text, obj), ];
     let tmp18Result = null;
     if (user.bot) {
       obj = { verified: null };

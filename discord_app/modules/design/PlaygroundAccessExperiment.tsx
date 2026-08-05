@@ -17,7 +17,7 @@ export const getPlaygroundAccessExperiment = function getPlaygroundAccessExperim
   return apexExperiment.getConfig({ location }).enabled;
 };
 export const useHasPlaygroundAccess = function useHasPlaygroundAccess(location) {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let isStaffResult;

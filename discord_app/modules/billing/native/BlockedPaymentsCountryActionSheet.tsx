@@ -10,5 +10,5 @@ const result = require("Background").fileFinishedImporting("modules/billing/nati
 export default function BlockedPaymentsCountryActionSheet() {
   const obj = { children: null };
   obj[0] = jsx(BlockedPaymentsCountryDisplay, {});
-  return jsx(Background /* Background */.BottomSheet, { children: null });
+  return jsx(Background.BottomSheet, { children: null });
 };

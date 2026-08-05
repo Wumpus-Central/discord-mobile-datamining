@@ -25,9 +25,9 @@ function NitroAcquiredHeader(skuId) {
   const items = [callback(preload, obj), ];
   obj = { style: tmp.fractionNitroIcon, children: null };
   const obj1 = { skuId: skuId.skuId, width: null, height: null };
-  obj1[1] = FRACTIONAL_NITRO_COIN_SIZE /* FRACTIONAL_NITRO_COIN_SIZE */.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET;
-  obj1[2] = FRACTIONAL_NITRO_COIN_SIZE /* FRACTIONAL_NITRO_COIN_SIZE */.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET;
-  obj[1] = callback(FRACTIONAL_NITRO_COIN_SIZE /* FRACTIONAL_NITRO_COIN_SIZE */.FractionalNitroCoinIllustration, obj1);
+  obj1[1] = FRACTIONAL_NITRO_COIN_SIZE.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET;
+  obj1[2] = FRACTIONAL_NITRO_COIN_SIZE.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET;
+  obj[1] = callback(FRACTIONAL_NITRO_COIN_SIZE.FractionalNitroCoinIllustration, obj1);
   items[1] = callback(closure_5, obj);
   obj[1] = items;
   return callback2(closure_5, obj);

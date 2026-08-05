@@ -17,7 +17,7 @@ let c9;
 const require = arg1;
 function RestrictedAccountRedirect() {
   let obj = { label: null, labelHook: null, noticeType: null };
-  obj[0] = getSystemLocale /* getSystemLocale */.t.zqv4nV;
+  obj[0] = getSystemLocale.t.zqv4nV;
   obj[1] = function labelHook() {
     let obj = callback(table[11]);
     obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
@@ -33,14 +33,14 @@ obj = { paddingTop: require("Themes").space.PX_24, gap: require("Themes").space.
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
-  let obj = initialize /* initialize */;
+  let obj = initialize;
   const items = [mergeGuildAvatar];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = handleOpenEmailVerification /* handleOpenEmailVerification */;
+  let obj1 = handleOpenEmailVerification;
   const bannerText = obj1.getBannerText(stateFromStores);
   const tmp = callback2();
   const items1 = [upsertRelationship];
-  const stateFromStores1 = initialize /* initialize */.useStateFromStores(items1, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().length > 0);
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().length > 0);
   const callback = importAllResult.useCallback(() => {
     callback(table[14]).open();
   }, []);

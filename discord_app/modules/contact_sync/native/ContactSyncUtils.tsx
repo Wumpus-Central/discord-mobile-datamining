@@ -88,7 +88,7 @@ export const ContactSyncPermissionDenied = error;
 export const ContactSyncFailedUserHasNoPhone = error1;
 export const ContactImageFetchFailed = error2;
 export const isContactSyncAvailable = function isContactSyncAvailable() {
-  let isIOSResult = PlatformTypes /* PlatformTypes */.isIOS();
+  let isIOSResult = PlatformTypes.isIOS();
   if (!isIOSResult) {
     const DCDContactSyncManager = NativeModules.DCDContactSyncManager;
     let flag;
@@ -103,7 +103,7 @@ export const isContactSyncAvailable = function isContactSyncAvailable() {
   return isIOSResult;
 };
 export const checkContactPermissions = function checkContactPermissions() {
-  let isIOSResult = PlatformTypes /* PlatformTypes */.isIOS();
+  let isIOSResult = PlatformTypes.isIOS();
   if (!isIOSResult) {
     const DCDContactSyncManager = NativeModules.DCDContactSyncManager;
     let flag;
@@ -137,19 +137,19 @@ export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
   let obj = TrackedHTTPUtils;
   obj = { url: closure_12.USER_BULK_RELATIONSHIPS, body: obj, trackedActionData: null, rejectWithError: false };
   obj = { user_ids, token: bulkAddToken };
-  obj[2] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
-  const obj1 = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
+  obj[2] = { event: encodeProperties.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
+  const obj1 = { event: encodeProperties.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
   return obj.post(obj).then((body) => body.body);
 };
 export const adminDeleteContactSync = function adminDeleteContactSync() {
   callback2();
   callback3();
-  let obj = _requestAndSyncContacts /* _requestAndSyncContacts */;
+  let obj = _requestAndSyncContacts;
   const result = obj.removeLastUserContactsUpload();
-  const ContactSyncEnabled = explicitContentFromProto /* explicitContentFromProto */.ContactSyncEnabled;
+  const ContactSyncEnabled = explicitContentFromProto.ContactSyncEnabled;
   ContactSyncEnabled.updateSetting(false);
   obj = { url: closure_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
-  obj = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_CONNECTIONS_UPDATE };
+  obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   obj[2] = obj;
   return TrackedHTTPUtils.delete(obj);
 };
@@ -216,21 +216,21 @@ export const getStoredContacts = function getStoredContacts() {
 };
 export const useContactSyncAccount = function useContactSyncAccount() {
   const items = [set];
-  return initialize /* initialize */.useStateFromStores(items, () => localAccount.getLocalAccount(constants.CONTACTS));
+  return initialize.useStateFromStores(items, () => localAccount.getLocalAccount(constants.CONTACTS));
 };
 export const useContactSyncEnabled = function useContactSyncEnabled() {
   const items = [set];
-  return initialize /* initialize */.useStateFromStores(items, () => {
+  return initialize.useStateFromStores(items, () => {
     localAccount = localAccount.getLocalAccount(constants.CONTACTS);
     return null != localAccount && localAccount.friendSync && localAccount.type === constants.CONTACTS;
   });
 };
 export const useContactSyncUserIsDiscoverable = function useContactSyncUserIsDiscoverable() {
-  const FriendDiscoverySettings = explicitContentFromProto /* explicitContentFromProto */.FriendDiscoverySettings;
+  const FriendDiscoverySettings = explicitContentFromProto.FriendDiscoverySettings;
   const setting = FriendDiscoverySettings.useSetting();
-  let obj = hasFlag /* hasFlag */;
+  let obj = hasFlag;
   let hasFlagResult = obj.hasFlag(setting, constants3.FIND_BY_PHONE);
-  const hasFlagResult1 = hasFlag /* hasFlag */.hasFlag(setting, constants3.FIND_BY_EMAIL);
+  const hasFlagResult1 = hasFlag.hasFlag(setting, constants3.FIND_BY_EMAIL);
   obj = { phone: hasFlagResult, email: hasFlagResult1, any: null };
   if (!hasFlagResult) {
     hasFlagResult = hasFlagResult1;

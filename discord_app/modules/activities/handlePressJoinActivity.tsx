@@ -15,7 +15,7 @@ function handlePressJoinActivity(arg0) {
   let embeddedActivityJoinability;
   let handleCanJoin;
   ({ embeddedActivityJoinability, handleCanJoin } = arg0);
-  if (getEmbeddedActivityJoinability /* getEmbeddedActivityJoinability */.EmbeddedActivityJoinability.CAN_JOIN === embeddedActivityJoinability) {
+  if (getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN === embeddedActivityJoinability) {
     if (handleCanJoin != null) {
       handleCanJoin();
     }

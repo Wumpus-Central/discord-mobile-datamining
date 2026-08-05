@@ -15,7 +15,7 @@ import { apexExperiment } from "RequestReviewNoTTIExperiment.tsx";
 
 const require = arg1;
 function showReviewRequestModal() {
-  const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
   if (tmp3) {
     let tmpResult = tmp(4136);
@@ -37,7 +37,7 @@ function showReviewRequestModal() {
       }
     }
   }
-  const obj = getRootNavigationRef /* getRootNavigationRef */;
+  const obj = getRootNavigationRef;
   expandEventProperties.track(AnalyticEvents.REVIEW_REQUEST_DEFERRED, { is_keyboard_open: keyboardIsOpen, is_in_voice: tmp5, is_viewing_chat: tmp3 });
   if (-1 !== timeout) {
     const _clearTimeout = clearTimeout;
@@ -76,7 +76,7 @@ let c11 = -1;
 class RequestReviewStore extends Store {
 }
 RequestReviewStore.prototype["initialize"] = function initialize() {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   let obj = Storage.get(RequestReviewStore);
   if (obj == null) {
     obj = { revision: 0 };
@@ -87,8 +87,8 @@ RequestReviewStore.displayName = "RequestReviewStore";
 const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
-    let obj = getFirstInstallTimeMillis /* getFirstInstallTimeMillis */;
-    obj = { from: "authed", unit: sleep /* sleep */.TimeUnits.DAYS };
+    let obj = getFirstInstallTimeMillis;
+    obj = { from: "authed", unit: sleep.TimeUnits.DAYS };
     let tmp3 = obj.getFirstInstallTimeElapsed(obj) >= 10;
     const someResult = guilds.some((member_count) => member_count.member_count >= 5);
     if (revision.revision < 1) {
@@ -138,7 +138,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = apexExperiment /* apexExperiment */.RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = apexExperiment.RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp6 = c10;
     if (c10) {
@@ -153,7 +153,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
     }
     if (tmp6) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, sleep /* sleep */.MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, sleep.MS_PER_MINUTE);
     }
   },
   CONNECTION_CLOSED: handleConnectionClosedOrInterrupted,
@@ -165,7 +165,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       clearTimeout(timeout);
       timeout = -1;
     }
-    const RequestReviewNoTTIExperiment = apexExperiment /* apexExperiment */.RequestReviewNoTTIExperiment;
+    const RequestReviewNoTTIExperiment = apexExperiment.RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
     let tmp6 = c10;
     if (c10) {
@@ -180,11 +180,11 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
     }
     if (tmp6) {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(showReviewRequestModal, sleep /* sleep */.MS_PER_MINUTE);
+      timeout = setTimeout(showReviewRequestModal, sleep.MS_PER_MINUTE);
     }
   },
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
-    if (state.state === keys /* keys */.AppStates.ACTIVE) {
+    if (state.state === keys.AppStates.ACTIVE) {
       if (-1 !== timeout) {
         const _clearTimeout = clearTimeout;
         clearTimeout(timeout);

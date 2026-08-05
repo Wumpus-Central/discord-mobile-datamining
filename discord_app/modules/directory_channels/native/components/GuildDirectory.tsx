@@ -41,7 +41,7 @@ function keyExtractor(type) {
   if (type != null) {
     type = type.type;
   }
-  if (type === RowType /* RowType */.RowType.ENTRY) {
+  if (type === RowType.RowType.ENTRY) {
     let guildId = type.entry.guildId;
   } else {
     let type1;
@@ -59,7 +59,7 @@ function renderItem(item) {
   if (item != null) {
     type = item.type;
   }
-  if (RowType /* RowType */.RowType.HEADER === type) {
+  if (RowType.RowType.HEADER === type) {
     let obj = { children: null };
     obj[0] = item.header;
     return callback(GuildDirectoryHeaderRowItem, obj);
@@ -74,7 +74,7 @@ function renderItem(item) {
 }
 function GuildDirectoryHeaderRowItem(children) {
   const tmp = callback3();
-  return callback(Text /* Text */.Text, { style: callback3().categorySectionText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.children });
+  return callback(Text.Text, { style: callback3().categorySectionText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.children });
 }
 function GuildDirectoryHeader(guild) {
   guild = guild.guild;
@@ -83,26 +83,26 @@ function GuildDirectoryHeader(guild) {
   let obj = { style: tmp.headerWrapper, children: null };
   obj = { source: null, style: null };
   const hasItem = features.has(constants.HUB);
-  obj[0] = registerAsset /* registerAsset */;
+  obj[0] = registerAsset;
   obj[1] = tmp.backgroundImage;
   const items = [callback(closure_6, obj), ];
   obj = { style: tmp.textWrapper, children: null };
   const obj1 = { style: tmp.headerTitle, variant: "heading-xl/extrabold", color: "text-overlay-light", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj1[3] = intl.string(getSystemLocale /* getSystemLocale */.t.IT7qoC);
-  const items1 = [callback(Text /* Text */.Text, obj1), , , ];
+  const intl = getSystemLocale.intl;
+  obj1[3] = intl.string(getSystemLocale.t.IT7qoC);
+  const items1 = [callback(Text.Text, obj1), , , ];
   const obj2 = { style: items2, variant: "text-sm/medium", color: "text-overlay-light", children: null };
   items2 = [tmp.headerDescription];
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[3] = intl2.string(getSystemLocale /* getSystemLocale */.t["5PoYts"]);
-  items1[1] = callback(Text /* Text */.Text, obj2);
+  const intl2 = getSystemLocale.intl;
+  obj2[3] = intl2.string(getSystemLocale.t["5PoYts"]);
+  items1[1] = callback(Text.Text, obj2);
   const obj3 = { variant: "primary-overlay", icon: null, text: null, onPress: null };
-  obj3[1] = callback(MagnifyingGlassIcon /* MagnifyingGlassIcon */.MagnifyingGlassIcon, { size: "sm", color: "text-strong" });
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj3[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.nL2wKD);
+  obj3[1] = callback(MagnifyingGlassIcon.MagnifyingGlassIcon, { size: "sm", color: "text-strong" });
+  const intl3 = getSystemLocale.intl;
+  obj3[2] = intl3.string(getSystemLocale.t.nL2wKD);
   obj3[3] = guild.onPressSearch;
-  items1[2] = callback(Button /* Button */.Button, obj3);
-  items1[3] = callback(TTIFirstContentfulPaint /* TTIFirstContentfulPaint */.TTIFirstContentfulPaint, { label: "hub_directory" });
+  items1[2] = callback(Button.Button, obj3);
+  items1[3] = callback(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "hub_directory" });
   obj[1] = items1;
   items[1] = callback2(closure_5, obj);
   obj[1] = items;
@@ -121,7 +121,7 @@ function GuildDirectoryFooter(hideFooter) {
   let require;
   ({ guild: require, channel } = hideFooter);
   const tmp = callback3();
-  let obj = useCanManageGuildDirectoryEntry /* useCanManageGuildDirectoryEntry */;
+  let obj = useCanManageGuildDirectoryEntry;
   let tmp4 = null;
   if (obj.useCanCreateOrAddGuildInDirectory(channel)) {
     tmp4 = null;

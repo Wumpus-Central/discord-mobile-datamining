@@ -30,12 +30,12 @@ const memoResult = importAllResult.memo(() => {
   let obj = { style: tmp.nsfwContainer, children: null };
   obj = { source: null, size: null };
   obj[0] = registerAsset;
-  obj[1] = Button /* Button */.Icon.Sizes.SMALL;
-  const items = [callback(Button /* Button */.Icon, obj), ];
+  obj[1] = Button.Icon.Sizes.SMALL;
+  const items = [callback(Button.Icon, obj), ];
   obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.SLzV5z);
-  items[1] = callback(Text /* Text */.Text, obj);
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.SLzV5z);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 });
@@ -47,14 +47,14 @@ const memoResult1 = importAllResult.memo((useTier0UpsellContent) => {
   if (isSectionNitroLocked) {
     obj = { useTier0UpsellContent: null };
     obj[0] = useTier0UpsellContent.useTier0UpsellContent;
-    isSectionNitroLocked = callback(PremiumUpsellGradientBackground /* PremiumUpsellGradientBackground */.PremiumUpsellGradientBackground, obj);
+    isSectionNitroLocked = callback(PremiumUpsellGradientBackground.PremiumUpsellGradientBackground, obj);
   }
   const items = [isSectionNitroLocked, ];
   let tmp6 = null;
   if ("" !== label) {
     obj = { lineClamp: 1, color: "interactive-text-default", variant: "heading-sm/semibold", children: null };
     obj[3] = label;
-    tmp6 = callback(Text /* Text */.Text, obj);
+    tmp6 = callback(Text.Text, obj);
   }
   items[1] = tmp6;
   obj[1] = items;

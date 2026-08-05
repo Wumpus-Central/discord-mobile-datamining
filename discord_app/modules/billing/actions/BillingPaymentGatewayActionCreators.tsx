@@ -42,10 +42,10 @@ function dispatchPaymentElementsConfirmationError(error, flag, stringResult) {
     flag = true;
   }
   if (stringResult === undefined) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    stringResult = intl.string(getSystemLocale /* getSystemLocale */.t.khEaRI);
+    const intl = getSystemLocale.intl;
+    stringResult = intl.string(getSystemLocale.t.khEaRI);
   }
-  let obj = _validatePaymentSourceBillingAddress /* _validatePaymentSourceBillingAddress */;
+  let obj = _validatePaymentSourceBillingAddress;
   obj = { tags: { source: "payment_elements" } };
   return obj.dispatchConfirmationError(error, flag, stringResult, obj);
 }
@@ -1470,10 +1470,10 @@ export const createPaymentRequestPaymentSource = function createPaymentRequestPa
     billingAddressInfo = result.billingAddressInfo;
   }
   obj = { analyticsLocation };
-  return _validatePaymentSourceBillingAddress /* _validatePaymentSourceBillingAddress */.createPaymentSource(constants.STRIPE, result.token, billingAddressInfo, obj);
+  return _validatePaymentSourceBillingAddress.createPaymentSource(constants.STRIPE, result.token, billingAddressInfo, obj);
 };
 export const createBraintreePaymentSource = function createBraintreePaymentSource(id, closure_2, analyticsLocation) {
-  let obj = _validatePaymentSourceBillingAddress /* _validatePaymentSourceBillingAddress */;
+  let obj = _validatePaymentSourceBillingAddress;
   obj = { analyticsLocation };
   return obj.createPaymentSource(constants.BRAINTREE, id, closure_2, obj);
 };

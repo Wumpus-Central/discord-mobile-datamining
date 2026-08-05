@@ -32,7 +32,7 @@ function SoundCategoryItem(style) {
   }
   const tmp = callback3();
   const type = category.categoryInfo.type;
-  if (SoundButtonOverlay /* SoundButtonOverlay */.SoundboardSoundGridSectionType.GUILD === type) {
+  if (SoundButtonOverlay.SoundboardSoundGridSectionType.GUILD === type) {
     const guild = category.categoryInfo.guild;
     let name = guild.name;
     let obj = { guild: null, style: null };
@@ -105,7 +105,7 @@ function SoundCategoryItem(style) {
   items1[1] = locked;
   obj1[1] = items1;
   obj[3] = closure_11(closure_5, obj1);
-  return callback(PressableBase /* PressableBase */.PressableOpacity, obj, name);
+  return callback(PressableBase.PressableOpacity, obj, name);
 }
 function getItemLayout(arg0, index) {
   return { length: closure_9, offset: closure_9 * index, index };

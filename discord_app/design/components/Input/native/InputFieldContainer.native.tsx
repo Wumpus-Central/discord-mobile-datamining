@@ -38,7 +38,7 @@ function useInputStyles(size) {
   } else if ("lg" === str) {
     INPUT_FIELD_RADIUS_LG = Themes.modules.mobile.INPUT_FIELD_RADIUS_LG;
   }
-  let token = map /* map */.useToken(INPUT_FIELD_RADIUS_LG);
+  let token = map.useToken(INPUT_FIELD_RADIUS_LG);
   let tmpResult = tmp(3989);
   if (flag) {
     token = tmpResult.useToken(Themes.modules.mobile.INPUT_FIELD_ROUND_RADIUS);
@@ -52,8 +52,8 @@ function useInputStyles(size) {
     INPUT_FIELD_TEXT_STYLE_LG = tmp7(712).modules.mobile.INPUT_FIELD_TEXT_STYLE_LG;
   }
   const token1 = tmpResult.useToken(INPUT_FIELD_TEXT_STYLE_LG);
-  const obj = map /* map */;
-  return callback3(str, flag2, flag3, token, token1, map /* map */.useToken(Themes.modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
+  const obj = map;
+  return callback3(str, flag2, flag3, token, token1, map.useToken(Themes.modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
 }
 ({ Platform, StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
@@ -79,7 +79,7 @@ let closure_9 = createCacheKey.createStyles(() => {
   if (arg4 === undefined) {
     str2 = "text-md/medium";
   }
-  let obj = { sm: InputHeights /* InputHeights */.InputHeights.SM, md: InputHeights /* InputHeights */.InputHeights.MD, lg: InputHeights /* InputHeights */.InputHeights.LG };
+  let obj = { sm: InputHeights.InputHeights.SM, md: InputHeights.InputHeights.MD, lg: InputHeights.InputHeights.LG };
   obj = { sm: Themes.space.PX_8, md: Themes.space.PX_12, lg: Themes.space.PX_16 };
   obj = { sm: Themes.space.PX_4, md: Themes.space.PX_8, lg: Themes.space.PX_8 };
   const obj1 = { sm: null, md: null, lg: null };

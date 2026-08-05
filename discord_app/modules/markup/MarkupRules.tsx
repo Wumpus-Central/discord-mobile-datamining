@@ -40,7 +40,7 @@ let closure_12;
 let unpackModuleId;
 const require = arg1;
 function parseLink(arg0) {
-  let obj = validateContentTypes /* validateContentTypes */;
+  let obj = validateContentTypes;
   const punycodeLinkResult = obj.punycodeLink(arg0[1]);
   if (null == punycodeLinkResult) {
     obj = { type: "text", content: null };
@@ -75,19 +75,19 @@ function hydrateRoleMention(arg0, guildId) {
   }
   if (null == role) {
     let obj = { type: "text", content: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const _HermesInternal3 = HermesInternal;
-    obj[1] = "@" + intl.string(getSystemLocale /* getSystemLocale */.t["YV4F/n"]);
+    obj[1] = "@" + intl.string(getSystemLocale.t["YV4F/n"]);
     return obj;
   } else {
     let id;
     if (guild != null) {
       id = guild.id;
     }
-    let hasEnhancedRoleColorsForRole = useHasEnhancedRoleColors /* useHasEnhancedRoleColors */.getHasEnhancedRoleColorsForRole(id, role);
+    let hasEnhancedRoleColorsForRole = useHasEnhancedRoleColors.getHasEnhancedRoleColorsForRole(id, role);
     if (hasEnhancedRoleColorsForRole) {
-      hasEnhancedRoleColorsForRole = !extractColorStringsFromServerColors /* extractColorStringsFromServerColors */.getIsDefaultErc(role);
-      const tmp19Result = extractColorStringsFromServerColors /* extractColorStringsFromServerColors */;
+      hasEnhancedRoleColorsForRole = !extractColorStringsFromServerColors.getIsDefaultErc(role);
+      const tmp19Result = extractColorStringsFromServerColors;
     }
     obj = { type: "mention", channelId: null, guildId: null, roleId: null, roleColor: null, roleColors: null, roleName: null, color: null, colorString: null, content: null };
     obj[1] = guildId.channelId;
@@ -164,9 +164,9 @@ function hydrateUserMention(everyoneOrHere, channelId) {
   if (isMatch) {
     combined = fullMatch;
     if (channelId.unknownUserMentionPlaceholder) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
+      const intl = getSystemLocale.intl;
       const _HermesInternal = HermesInternal;
-      combined = "@" + intl.string(getSystemLocale /* getSystemLocale */.t.sKdZ6U);
+      combined = "@" + intl.string(getSystemLocale.t.sKdZ6U);
     }
   }
   const obj = { type: "mention", userId: id, channelId: channelId.channelId, viewingChannelId: channelId.viewingChannelId, guildId: null, parsedUserId: null, roleName: null, content: null };
@@ -200,9 +200,9 @@ function hydrateGameMention(gameId, channelId) {
     if (null == value) {
       if (null == detectableGame) {
         let obj = { type: "text", content: null };
-        const intl2 = getSystemLocale /* getSystemLocale */.intl;
+        const intl2 = getSystemLocale.intl;
         const _HermesInternal = HermesInternal;
-        obj[1] = "@" + intl2.string(getSystemLocale /* getSystemLocale */.t["11pdXZ"]);
+        obj[1] = "@" + intl2.string(getSystemLocale.t["11pdXZ"]);
         return obj;
       }
     }
@@ -219,8 +219,8 @@ function hydrateGameMention(gameId, channelId) {
     name = name1;
   }
   if (name == null) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    name = intl.string(getSystemLocale /* getSystemLocale */.t["11pdXZ"]);
+    const intl = getSystemLocale.intl;
+    name = intl.string(getSystemLocale.t["11pdXZ"]);
   }
   let icon;
   if (value != null) {
@@ -765,7 +765,7 @@ obj[28] = {
   order: require("textRegexp").order,
   requiredFirstCharacters: ["<"],
   match(arg0) {
-    const soundmojiRawFormatRegex = getSoundmojiASTFromString /* getSoundmojiASTFromString */.soundmojiRawFormatRegex;
+    const soundmojiRawFormatRegex = getSoundmojiASTFromString.soundmojiRawFormatRegex;
     return soundmojiRawFormatRegex.exec(arg0);
   },
   parse(arg0, arg1, arg2) {
@@ -776,7 +776,7 @@ const obj15 = {
   order: require("textRegexp").order,
   requiredFirstCharacters: ["<"],
   match(arg0) {
-    const soundmojiRawFormatRegex = getSoundmojiASTFromString /* getSoundmojiASTFromString */.soundmojiRawFormatRegex;
+    const soundmojiRawFormatRegex = getSoundmojiASTFromString.soundmojiRawFormatRegex;
     return soundmojiRawFormatRegex.exec(arg0);
   },
   parse(arg0, arg1, arg2) {
@@ -807,7 +807,7 @@ obj[30] = {
   order: require("textRegexp").order - 1,
   requiredFirstCharacters: ["<"],
   match(arg0) {
-    const TIMESTAMP_REGEX = TIMESTAMP_FORMATS /* TIMESTAMP_FORMATS */.TIMESTAMP_REGEX;
+    const TIMESTAMP_REGEX = TIMESTAMP_FORMATS.TIMESTAMP_REGEX;
     return TIMESTAMP_REGEX.exec(arg0);
   },
   parse(arg0) {
@@ -815,7 +815,7 @@ obj[30] = {
     let tmp2;
     let tmp3;
     [tmp, tmp2, tmp3] = arg0;
-    let obj = TIMESTAMP_FORMATS /* TIMESTAMP_FORMATS */;
+    let obj = TIMESTAMP_FORMATS;
     let parseTimestampResult = obj.parseTimestamp(tmp2, tmp3);
     if (null == parseTimestampResult) {
       obj = { type: "text", content: null };
@@ -832,7 +832,7 @@ const obj17 = {
   order: require("textRegexp").order - 1,
   requiredFirstCharacters: ["<"],
   match(arg0) {
-    const TIMESTAMP_REGEX = TIMESTAMP_FORMATS /* TIMESTAMP_FORMATS */.TIMESTAMP_REGEX;
+    const TIMESTAMP_REGEX = TIMESTAMP_FORMATS.TIMESTAMP_REGEX;
     return TIMESTAMP_REGEX.exec(arg0);
   },
   parse(arg0) {
@@ -840,7 +840,7 @@ const obj17 = {
     let tmp2;
     let tmp3;
     [tmp, tmp2, tmp3] = arg0;
-    let obj = TIMESTAMP_FORMATS /* TIMESTAMP_FORMATS */;
+    let obj = TIMESTAMP_FORMATS;
     let parseTimestampResult = obj.parseTimestamp(tmp2, tmp3);
     if (null == parseTimestampResult) {
       obj = { type: "text", content: null };
@@ -883,9 +883,9 @@ obj[33] = {
   },
   parse(arg0, arg1, guildId) {
     const tmp = callback(arg0, 3);
-    let obj = staticRouteToTranslation /* staticRouteToTranslation */;
+    let obj = staticRouteToTranslation;
     const result = obj.staticRouteToTranslation(tmp2);
-    let obj1 = staticRouteToTranslation /* staticRouteToTranslation */;
+    let obj1 = staticRouteToTranslation;
     if (null != guildId.guildId) {
       let guild = store2.getGuild(guildId.guildId);
     } else {
@@ -952,9 +952,9 @@ const obj20 = {
   },
   parse(arg0, arg1, guildId) {
     const tmp = callback(arg0, 3);
-    let obj = staticRouteToTranslation /* staticRouteToTranslation */;
+    let obj = staticRouteToTranslation;
     const result = obj.staticRouteToTranslation(tmp2);
-    let obj1 = staticRouteToTranslation /* staticRouteToTranslation */;
+    let obj1 = staticRouteToTranslation;
     if (null != guildId.guildId) {
       let guild = store2.getGuild(guildId.guildId);
     } else {

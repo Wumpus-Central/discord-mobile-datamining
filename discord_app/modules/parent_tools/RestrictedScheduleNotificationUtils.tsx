@@ -252,17 +252,17 @@ export const diffSchedules = function diffSchedules(arr, toScheduleSnapshotResul
   let set = new Set(items1);
 };
 export const getRestrictedScheduleNotificationTitle = function getRestrictedScheduleNotificationTitle(kind) {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   return intl.string(obj[kind]);
 };
 export const getRestrictedScheduleNotificationSubtitle = function getRestrictedScheduleNotificationSubtitle(rule) {
   let result = null;
   if (null != rule) {
-    result = setsEqual /* setsEqual */.formatRestrictedScheduleInAppSubtitle(rule);
-    const obj = setsEqual /* setsEqual */;
+    result = setsEqual.formatRestrictedScheduleInAppSubtitle(rule);
+    const obj = setsEqual;
   }
   if (result == null) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     result = intl.string(messagesProxy["8OlpoY"]);
   }
   return result;

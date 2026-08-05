@@ -29,10 +29,10 @@ function handleUserSettingsProtoEnqueueUpdate(settings) {
   let type;
   ({ proto, type } = settings.settings);
   ({ delaySeconds, jitter } = settings);
-  updateUserGuildSettings /* updateUserGuildSettings */.UserSettingsActionCreatorsByType[type].markDirty(proto, { delaySeconds, jitter });
+  updateUserGuildSettings.UserSettingsActionCreatorsByType[type].markDirty(proto, { delaySeconds, jitter });
 }
 function handleUserSettingsProtoLoadIfNecessary(arg0) {
-  const ifNecessary = updateUserGuildSettings /* updateUserGuildSettings */.UserSettingsActionCreatorsByType[arg0.settingsType].loadIfNecessary();
+  const ifNecessary = updateUserGuildSettings.UserSettingsActionCreatorsByType[arg0.settingsType].loadIfNecessary();
 }
 function handleAppStateUpdate(state) {
   state = state.state;
@@ -41,7 +41,7 @@ function handleAppStateUpdate(state) {
     tmp = "background" !== state;
   }
   if (!tmp) {
-    const item = apply.forEach(updateUserGuildSettings /* updateUserGuildSettings */.UserSettingsActionCreatorsByType, (persistChanges) => {
+    const item = apply.forEach(updateUserGuildSettings.UserSettingsActionCreatorsByType, (persistChanges) => {
       fullState = fullState.getFullState();
       if (null != fullState[Number(undefined, arg1)].editInfo.timeout) {
         persistChanges.persistChanges();

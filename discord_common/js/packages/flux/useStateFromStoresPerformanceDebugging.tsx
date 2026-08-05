@@ -118,7 +118,7 @@ export function getUseStateFromStoresExecutionWindowThresholdMs() {
 }
 export const setUseStateFromStoresExecutionWindowThresholdMs = function setUseStateFromStoresExecutionWindowThresholdMs(arg0) {
   let closure_4 = arg0;
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set("useStateFromStoresExecutionWindowThresholdMs", arg0);
   clearInterval(interval);
   if (c8) {
@@ -135,7 +135,7 @@ export function getUseStateFromStoresExecutionTimeWarningThresholdMs() {
 }
 export const setUseStateFromStoresExecutionTimeWarningThresholdMs = function setUseStateFromStoresExecutionTimeWarningThresholdMs(arg0) {
   let closure_5 = arg0;
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set("useStateFromStoresExecutionTimeWarningThresholdMs", arg0);
 };
 export function getUseStateFromStoresExecutionCountWarningThreshold() {
@@ -147,12 +147,12 @@ export function getUseStateFromStoresExecutionCountWarningThreshold() {
 }
 export const setUseStateFromStoresExecutionCountWarningThreshold = function setUseStateFromStoresExecutionCountWarningThreshold(arg0) {
   let closure_6 = arg0;
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set("useStateFromStoresExecutionCountWarningThreshold", arg0);
 };
 export const setUseStateFromStoresSpecificHookFilter = function setUseStateFromStoresSpecificHookFilter(first1) {
   let closure_7 = first1;
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set("useStateFromStoresSpecificHookFilter", first1);
 };
 export function getUseStateFromStoresSpecificHookFilter() {
@@ -171,7 +171,7 @@ export function getUseStateFromStoresDebuggingEnabled() {
 }
 export const setUseStateFromStoresDebuggingEnabled = function setUseStateFromStoresDebuggingEnabled(first) {
   let closure_8 = first;
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   const result = Storage.set("useStateFromStoresDebuggingEnabled", first);
   if (closure_8) {
     const _setInterval = setInterval;

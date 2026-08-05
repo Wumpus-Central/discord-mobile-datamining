@@ -24,7 +24,7 @@ export const setPauseDms = function setPauseDms(arg0) {
   _batchUpdates.batchUpdates(() => outer1_3.setState({ pauseDms: closure_0 }));
 };
 export const resetGuildIncidentsActionSheetStore = function resetGuildIncidentsActionSheetStore() {
-  batchUpdates /* batchUpdates */.batchUpdates(() => {
+  batchUpdates.batchUpdates(() => {
     state.setState({ time: closure_2, pauseInvites: true, pauseDms: true, hasTimeChanges: false });
   });
 };

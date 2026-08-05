@@ -33,7 +33,7 @@ let closure_15 = createCacheKey.createStyles(() => {
   obj[0] = obj;
   obj = { position: "absolute", top: Themes.space.PX_8, left: Themes.space.PX_8, flexDirection: "row", alignItems: "center", gap: Themes.space.PX_8 };
   obj[1] = obj;
-  obj[2] = { position: "absolute", bottom: 0, height: BountiesModalProgress /* BountiesModalProgress */.PROGRESS_BAR_HEIGHT, left: lg, right: lg };
+  obj[2] = { position: "absolute", bottom: 0, height: BountiesModalProgress.PROGRESS_BAR_HEIGHT, left: lg, right: lg };
   const obj2 = {};
   const merged1 = Object.assign(closure_6.absoluteFillObject);
   obj2.backgroundColor = "#000000";

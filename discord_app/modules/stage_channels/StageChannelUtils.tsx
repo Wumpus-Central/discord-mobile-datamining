@@ -13,12 +13,12 @@ const result = require("MAX_STAGE_TOPIC_LENGTH").fileFinishedImporting("modules/
 
 export const fillChunk = function fillChunk(arg0, arg1, arg2) {
   let tmp = arg2;
-  const obj = apply /* apply */;
+  const obj = apply;
   if (arg2 == null) {
     tmp = arg1;
   }
   require = tmp;
-  return apply /* apply */.chunk(arg0, arg1).reduce((arg0, arg1) => {
+  return apply.chunk(arg0, arg1).reduce((arg0, arg1) => {
     if (closure_0 <= arg1.length) {
       const items = [];
       items[HermesBuiltin.arraySpread(arg0, 0)] = arg1;
@@ -49,16 +49,16 @@ export const summarizeUsernamesParticipating = function summarizeUsernamesPartic
     }
   }
   if (null == first) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     obj = { count: null };
     obj[0] = length;
-    intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.chmM9N, obj);
+    intl2.formatToPlainString(getSystemLocale.t.chmM9N, obj);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { name: null, count: null };
     obj[0] = name;
     obj[1] = length - 1;
-    intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.GhkJ21, obj);
+    intl.formatToPlainString(getSystemLocale.t.GhkJ21, obj);
   }
 };
 export const summarizeUsernamesParticipatingWithSpeakerNickname = function summarizeUsernamesParticipatingWithSpeakerNickname(arg0, arg1, arg2) {
@@ -72,25 +72,25 @@ export const summarizeUsernamesParticipatingWithSpeakerNickname = function summa
     }
   }
   if (null == arg1) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
+    const intl2 = getSystemLocale.intl;
     let obj = { count: null };
     obj[0] = length;
-    intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t.chmM9N, obj);
+    intl2.formatToPlainString(getSystemLocale.t.chmM9N, obj);
   } else {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     obj = { name: null, count: null };
     obj[0] = arg1;
     obj[1] = length - 1;
-    intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.GhkJ21, obj);
+    intl.formatToPlainString(getSystemLocale.t.GhkJ21, obj);
   }
 };
 export const getRemoveModeratorTooltipHint = function getRemoveModeratorTooltipHint(arg0, arg1) {
   if (RowType.OWNER === arg0) {
-    const intl3 = getSystemLocale /* getSystemLocale */.intl;
-    return intl3.string(getSystemLocale /* getSystemLocale */.t.icuNBM);
+    const intl3 = getSystemLocale.intl;
+    return intl3.string(getSystemLocale.t.icuNBM);
   } else if (tmp.ADMINISTRATOR === arg0) {
-    const intl2 = getSystemLocale /* getSystemLocale */.intl;
-    return intl2.string(getSystemLocale /* getSystemLocale */.t.eTmN5a);
+    const intl2 = getSystemLocale.intl;
+    return intl2.string(getSystemLocale.t.eTmN5a);
   } else {
     if (tmp.MEMBER !== arg0) {
       if (tmp.ROLE !== arg0) {
@@ -101,9 +101,9 @@ export const getRemoveModeratorTooltipHint = function getRemoveModeratorTooltipH
         }
       }
     }
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const intl = getSystemLocale.intl;
     const string = intl.string;
-    const t = getSystemLocale /* getSystemLocale */.t;
+    const t = getSystemLocale.t;
     if (arg1) {
       let stringResult = string(t.Hw3XWx);
     } else {

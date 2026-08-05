@@ -4,28 +4,28 @@ import { resetCache } from "../../utils/DateUtils.tsx";
 import { set } from "../../utils/Durations.tsx";
 let obj = {
   t(date) {
-    return resetCache /* resetCache */.dateFormat(date, "LT");
+    return resetCache.dateFormat(date, "LT");
   },
   T(date) {
-    return resetCache /* resetCache */.dateFormat(date, "LTS");
+    return resetCache.dateFormat(date, "LTS");
   },
   d(date) {
-    return resetCache /* resetCache */.dateFormat(date, "L");
+    return resetCache.dateFormat(date, "L");
   },
   D(date) {
-    return resetCache /* resetCache */.dateFormat(date, "LL");
+    return resetCache.dateFormat(date, "LL");
   },
   f(date) {
-    return resetCache /* resetCache */.dateFormat(date, "LLL");
+    return resetCache.dateFormat(date, "LLL");
   },
   F(date) {
-    return resetCache /* resetCache */.dateFormat(date, "LLLL");
+    return resetCache.dateFormat(date, "LLLL");
   },
   s(date) {
-    return resetCache /* resetCache */.dateFormat(date, "L LT");
+    return resetCache.dateFormat(date, "L LT");
   },
   S(date) {
-    return resetCache /* resetCache */.dateFormat(date, "L LTS");
+    return resetCache.dateFormat(date, "L LTS");
   },
   R(toDate) {
     const result = t.relativeTimeThreshold("s");

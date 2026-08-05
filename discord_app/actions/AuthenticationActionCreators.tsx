@@ -40,7 +40,7 @@ function handleLogout(arg0, ME) {
     throw error;
   });
   if (null != DEFAULT_LOGGED_OUT) {
-    const rootNavigationRef = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+    const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
       tmp2(4490).popAll();
       obj = { index: 0, routes: null };
@@ -54,7 +54,7 @@ function handleLogout(arg0, ME) {
       tmp11(1222).transitionTo(DEFAULT_LOGGED_OUT, obj1);
       const tmp11Result = tmp11(1222);
     }
-    const obj8 = getRootNavigationRef /* getRootNavigationRef */;
+    const obj8 = getRootNavigationRef;
     tmp11 = require;
   }
 }
@@ -226,8 +226,8 @@ obj = {
     }
     obj[4] = loginInstanceId;
     obj[1] = obj;
-    obj[4] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_LOGIN_MFA };
-    const obj1 = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_LOGIN_MFA };
+    obj[4] = { event: encodeProperties.NetworkActionNames.USER_LOGIN_MFA };
+    const obj1 = { event: encodeProperties.NetworkActionNames.USER_LOGIN_MFA };
     const postResult = obj.post(obj);
     return obj.post(obj).then((body) => {
       if (closure_0) {
@@ -743,22 +743,22 @@ obj = {
     let obj = TrackedHTTPUtils;
     obj = { url: closure_9.AUTHORIZE_PAYMENT, body: obj, trackedActionData: null, rejectWithError: true };
     obj = { token };
-    obj[2] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.AUTHORIZE_PAYMENT };
+    obj[2] = { event: encodeProperties.NetworkActionNames.AUTHORIZE_PAYMENT };
     return obj.post(obj);
   },
   authorizeIPAddress(closure_0) {
     let obj = TrackedHTTPUtils;
     obj = { url: closure_9.AUTHORIZE_IP, body: obj, trackedActionData: null, rejectWithError: true };
     obj = { token: closure_0 };
-    obj[2] = { event: encodeProperties /* encodeProperties */.NetworkActionNames.AUTHORIZE_IP };
+    obj[2] = { event: encodeProperties.NetworkActionNames.AUTHORIZE_IP };
     return obj.post(obj);
   },
   verifyResend() {
     let obj = TrackedHTTPUtils;
     obj = { url: closure_9.VERIFY_RESEND, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    obj = { event: encodeProperties /* encodeProperties */.NetworkActionNames.USER_VERIFY_RESEND };
+    obj = { event: encodeProperties.NetworkActionNames.USER_VERIFY_RESEND };
     obj[2] = obj;
-    obj[3] = sendRequest /* sendRequest */.rejectWithMigratedError();
+    obj[3] = sendRequest.rejectWithMigratedError();
     return obj.post(obj);
   },
   resetPassword(arg0, arg1, arg2) {
@@ -1055,7 +1055,7 @@ obj = {
       timeout = setTimeout(() => {
         callback(709).dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: true });
       }, 5000);
-      const HTTP = sendRequest /* sendRequest */.HTTP;
+      const HTTP = sendRequest.HTTP;
       let obj = { url: null, retries: 2, oldFormErrors: true, rejectWithError: true };
       obj[0] = closure_9.AUTH_LOCATION_METADATA;
       const value = HTTP.get(obj);

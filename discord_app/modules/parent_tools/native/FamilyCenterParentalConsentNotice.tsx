@@ -17,9 +17,9 @@ const result = require("createCacheKey").fileFinishedImporting("modules/parent_t
 export default function FamilyCenterParentalConsentNotice() {
   const tmp = createCacheKey();
   const require = tmp;
-  let obj = useIsParentalConsentBannerActive /* useIsParentalConsentBannerActive */;
+  let obj = useIsParentalConsentBannerActive;
   const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
-  let obj1 = useParentalConsentWarning /* useParentalConsentWarning */;
+  let obj1 = useParentalConsentWarning;
   const parentalConsentWarning = obj1.useParentalConsentWarning();
   let daysRemaining;
   if (parentalConsentWarning != null) {

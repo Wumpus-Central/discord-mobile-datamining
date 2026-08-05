@@ -41,10 +41,10 @@ export default function Divider(outer) {
     flag2 = false;
   }
   const tmp2 = callback(useIsMobileVisualRefreshExperimentEnabled("FormDivider"));
-  let obj = ManaContext /* ManaContext */;
+  let obj = ManaContext;
   const themeContext = obj.useThemeContext();
   ({ theme, primaryColor } = themeContext);
-  const profileThemeValues = useProfileThemeValues /* useProfileThemeValues */.useProfileThemeValues(theme);
+  const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme);
   let tmp7 = null;
   if (tmp6) {
     obj = { backgroundColor: null };
@@ -53,7 +53,7 @@ export default function Divider(outer) {
     const tmp3Result = tmp3(4129);
   }
   let tmp10Result = null;
-  if (!React.useContext(context /* context */.RedesignCompatContext)) {
+  if (!React.useContext(context.RedesignCompatContext)) {
     const items = [flag ? tmp2.dividerOuter : tmp2.divider, , , ];
     if (flag2) {
       flag2 = tmp2.dividerHasIcon;

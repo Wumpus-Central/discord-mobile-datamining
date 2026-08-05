@@ -5,8 +5,8 @@ import { ClipsSettingsScreen } from "../../clips/native/SettingsClipsScreen.tsx"
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.z2jK6X);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.z2jK6X);
   },
   parent: null,
   IconComponent: require("ClipsIcon").ClipsIcon,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.CLIPS,
   getComponent() {
-    return ClipsSettingsScreen /* ClipsSettingsScreen */.default;
+    return ClipsSettingsScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);

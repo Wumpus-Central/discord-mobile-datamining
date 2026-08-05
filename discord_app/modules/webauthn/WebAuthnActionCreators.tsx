@@ -313,7 +313,7 @@ export const fetchWebAuthnPasswordlessChallenge = function fetchWebAuthnPassword
   return applyArgumentsResult;
 };
 export const fetchWebAuthnCredentials = function fetchWebAuthnCredentials() {
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   const value = HTTP.get({ url: Endpoints.MFA_WEBAUTHN_CREDENTIALS, rejectWithError: true });
   value.then((body) => {
     if (null != body.body) {

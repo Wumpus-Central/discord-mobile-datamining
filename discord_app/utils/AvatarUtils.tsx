@@ -96,9 +96,9 @@ function getAvatarURL(canAnimate) {
       } else {
         let obj = {};
         if (null != size) {
-          obj = handleImageLoad /* handleImageLoad */;
-          obj.size = obj.getBestMediaProxySize(size * handleImageLoad /* handleImageLoad */.getDevicePixelRatio());
-          const obj2 = handleImageLoad /* handleImageLoad */;
+          obj = handleImageLoad;
+          obj.size = obj.getBestMediaProxySize(size * handleImageLoad.getDevicePixelRatio());
+          const obj2 = handleImageLoad;
         }
         if (null != keepAspectRatio) {
           obj.keep_aspect_ratio = keepAspectRatio;
@@ -145,7 +145,7 @@ function getDefaultAvatarURL(id, discriminator, isProvisional, closure_2) {
       return arr[0];
     }
   }
-  const parseIntegerResult = shortenAndLocalizeNumber /* shortenAndLocalizeNumber */.parseInteger(discriminator, 0);
+  const parseIntegerResult = shortenAndLocalizeNumber.parseInteger(discriminator, 0);
   if (parseIntegerResult > 0) {
     let first = arr[parseIntegerResult % 5];
   } else if (null != id) {
@@ -203,7 +203,7 @@ function getUserAvatarURL(user, flag, closure_2, format, SUPPORTS_WEBP) {
     obj[7] = tmp3;
     let first = getAvatarURL(obj);
   } else {
-    first = ensureAvatarSource /* ensureAvatarSource */.default.BOT_AVATARS[avatar];
+    first = ensureAvatarSource.default.BOT_AVATARS[avatar];
     if (!first) {
       if (null == avatar) {
         if ("0000" === discriminator) {
@@ -269,8 +269,8 @@ function getGuildMemberAvatarURLSimple(size) {
     tmp11 = str;
   }
   const obj = { size: null };
-  const obj2 = handleImageLoad /* handleImageLoad */;
-  obj[0] = obj2.getBestMediaProxySize(size * handleImageLoad /* handleImageLoad */.getDevicePixelRatio());
+  const obj2 = handleImageLoad;
+  obj[0] = obj2.getBestMediaProxySize(size * handleImageLoad.getDevicePixelRatio());
   let tmp20 = "webp" === tmp11 && canAnimate;
   if (tmp20) {
     let startsWithResult1 = null != avatar;
@@ -282,7 +282,7 @@ function getGuildMemberAvatarURLSimple(size) {
   if (tmp20) {
     obj.animated = true;
   }
-  const obj3 = handleImageLoad /* handleImageLoad */;
+  const obj3 = handleImageLoad;
   return combined + "?" + parse.stringify(obj);
 }
 function getGuildBannerURL(fromInviteGuildResult, flag) {
@@ -295,9 +295,9 @@ function getGuildBannerURL(fromInviteGuildResult, flag) {
   if (null == banner) {
     return null;
   } else {
-    const obj3 = handleImageLoad /* handleImageLoad */;
+    const obj3 = handleImageLoad;
     let str = "jpg";
-    const bestMediaProxySize = obj3.getBestMediaProxySize(360 * handleImageLoad /* handleImageLoad */.getDevicePixelRatio());
+    const bestMediaProxySize = obj3.getBestMediaProxySize(360 * handleImageLoad.getDevicePixelRatio());
     if (closure_11) {
       str = "webp";
     }
@@ -342,7 +342,7 @@ function getGuildBannerURL(fromInviteGuildResult, flag) {
     if (tmp11) {
       obj.animated = true;
     }
-    const obj4 = handleImageLoad /* handleImageLoad */;
+    const obj4 = handleImageLoad;
     tmp17 = closure_11;
     const _HermesInternal2 = HermesInternal;
     return combined + "?" + parse.stringify(obj);
@@ -403,7 +403,7 @@ function getApplicationIconURL(guildMember) {
         obj[7] = tmp3;
         let first = getAvatarURL(obj);
       } else {
-        first = ensureAvatarSource /* ensureAvatarSource */.default.BOT_AVATARS[avatar];
+        first = ensureAvatarSource.default.BOT_AVATARS[avatar];
         if (!first) {
           if (null == avatar) {
             if ("0000" === discriminator) {
@@ -452,7 +452,7 @@ function getApplicationIconURL(guildMember) {
         obj1[7] = tmp11;
         let first1 = getAvatarURL(obj1);
       } else {
-        first1 = ensureAvatarSource /* ensureAvatarSource */.default.BOT_AVATARS[avatar2];
+        first1 = ensureAvatarSource.default.BOT_AVATARS[avatar2];
         if (!first1) {
           if (null == avatar2) {
             if ("0000" === discriminator2) {
@@ -485,7 +485,7 @@ function getChannelIconURL(arg0) {
     obj[2] = size;
     let DEFAULT_CHANNEL_ICON = getApplicationIconURL(obj);
     if (DEFAULT_CHANNEL_ICON == null) {
-      DEFAULT_CHANNEL_ICON = ensureAvatarSource /* ensureAvatarSource */.default.DEFAULT_CHANNEL_ICON;
+      DEFAULT_CHANNEL_ICON = ensureAvatarSource.default.DEFAULT_CHANNEL_ICON;
     }
     let tmp5 = DEFAULT_CHANNEL_ICON;
   } else {
@@ -497,7 +497,7 @@ function getChannelIconURL(arg0) {
     tmp5 = getAvatarURL(obj);
     if (tmp5 == null) {
       obj = DISCORD_EPOCH;
-      tmp5 = ensureAvatarSource /* ensureAvatarSource */.default.DEFAULT_GROUP_DM_AVATARS[obj.extractTimestamp(id) % require(undefined, 1419) /* ensureAvatarSource */.default.DEFAULT_GROUP_DM_AVATARS.length];
+      tmp5 = ensureAvatarSource.default.DEFAULT_GROUP_DM_AVATARS[obj.extractTimestamp(id) % require(undefined, 1419) /* ensureAvatarSource */.default.DEFAULT_GROUP_DM_AVATARS.length];
       const extractTimestampResult = obj.extractTimestamp(id);
     }
   }
@@ -505,8 +505,8 @@ function getChannelIconURL(arg0) {
 }
 function _getAssetHash(bannerURL) {
   try {
-    const obj = Url /* Url */;
-    const parts = Url /* Url */.parse(bannerURL).pathname.split("/");
+    const obj = Url;
+    const parts = Url.parse(bannerURL).pathname.split("/");
     return parts.pop();
   } catch (err) {
     return null;
@@ -541,10 +541,10 @@ function getEmojiURL(size) {
         str4 = "&animated=true";
       }
     }
-    const obj = handleImageLoad /* handleImageLoad */;
+    const obj = handleImageLoad;
     const tmp5 = require;
     const _HermesInternal = HermesInternal;
-    const combined = "size=" + obj.getBestMediaProxySize(size.size * handleImageLoad /* handleImageLoad */.getDevicePixelRatio(), set);
+    const combined = "size=" + obj.getBestMediaProxySize(size.size * handleImageLoad.getDevicePixelRatio(), set);
     try {
       const enabled = tmp5(1850).getForceSdrEmojisStickersConfig({ location: "getEmojiURL" }).enabled;
       let str6 = "";
@@ -571,7 +571,7 @@ function getEmojiURL(size) {
       }
     } catch (err) {
     }
-    const obj2 = handleImageLoad /* handleImageLoad */;
+    const obj2 = handleImageLoad;
   } else if (animated) {
     let str2 = "gif";
     if (tmp2) {
@@ -669,8 +669,8 @@ function getUserBannerURL(arg0) {
       combined = sum + closure_3.USER_BANNER(id, banner, str2);
     }
     const obj = { size: null };
-    const obj2 = handleImageLoad /* handleImageLoad */;
-    obj[0] = obj2.getBestMediaProxySize(tmp * handleImageLoad /* handleImageLoad */.getDevicePixelRatio());
+    const obj2 = handleImageLoad;
+    obj[0] = obj2.getBestMediaProxySize(tmp * handleImageLoad.getDevicePixelRatio());
     let tmp14 = "webp" === str2 && canAnimate;
     if (tmp14) {
       let startsWithResult1 = null != banner;
@@ -682,7 +682,7 @@ function getUserBannerURL(arg0) {
     if (tmp14) {
       obj.animated = true;
     }
-    const obj3 = handleImageLoad /* handleImageLoad */;
+    const obj3 = handleImageLoad;
     const _HermesInternal2 = HermesInternal;
     return combined + "?" + parse.stringify(obj);
   }
@@ -748,7 +748,7 @@ function getAvatarDecorationURL(canAnimate) {
         return tmp;
       }
     }
-    obj4 = parseAvatarDecorationData /* parseAvatarDecorationData */;
+    obj4 = parseAvatarDecorationData;
   }
   return null;
 }
@@ -786,8 +786,8 @@ function getGuildMemberBannerURL(arg0) {
         combined = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + GUILD_MEMBER_BANNERResult;
       }
       const obj = { size: null };
-      const obj2 = handleImageLoad /* handleImageLoad */;
-      obj[0] = obj2.getBestMediaProxySize(tmp * handleImageLoad /* handleImageLoad */.getDevicePixelRatio());
+      const obj2 = handleImageLoad;
+      obj[0] = obj2.getBestMediaProxySize(tmp * handleImageLoad.getDevicePixelRatio());
       let tmp16 = "webp" === str2 && canAnimate;
       if (tmp16) {
         let startsWithResult1 = null != banner;
@@ -799,7 +799,7 @@ function getGuildMemberBannerURL(arg0) {
       if (tmp16) {
         obj.animated = true;
       }
-      const obj3 = handleImageLoad /* handleImageLoad */;
+      const obj3 = handleImageLoad;
       const _HermesInternal2 = HermesInternal;
       return combined + "?" + parse.stringify(obj);
     }
@@ -903,11 +903,11 @@ function getGuildSplashURL(arg0) {
   } else {
     if (null == size) {
       const _window = window;
-      size = window.screen.width * handleImageLoad /* handleImageLoad */.getDevicePixelRatio();
-      const obj = handleImageLoad /* handleImageLoad */;
+      size = window.screen.width * handleImageLoad.getDevicePixelRatio();
+      const obj = handleImageLoad;
     }
     const _window2 = window;
-    const bestMediaProxySize = handleImageLoad /* handleImageLoad */.getBestMediaProxySize(size);
+    const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(size);
     if (null != CDN_HOST) {
       const _HermesInternal = HermesInternal;
       let combined = "https://" + CDN_HOST + "/splashes/" + id + "/" + splash + ".jpg";
@@ -928,9 +928,9 @@ function getGuildHomeHeaderURL(arg0) {
   if (null == homeHeader) {
     return null;
   } else {
-    const obj = handleImageLoad /* handleImageLoad */;
+    const obj = handleImageLoad;
     const _window2 = window;
-    const bestMediaProxySize = obj.getBestMediaProxySize(1096 * handleImageLoad /* handleImageLoad */.getDevicePixelRatio());
+    const bestMediaProxySize = obj.getBestMediaProxySize(1096 * handleImageLoad.getDevicePixelRatio());
     if (null != CDN_HOST) {
       const _HermesInternal = HermesInternal;
       let combined = "https://" + CDN_HOST + "/home-headers/" + id + "/" + homeHeader + ".png";
@@ -954,11 +954,11 @@ function getGuildDiscoverySplashURL(arg0) {
   } else {
     if (null == size) {
       const _window = window;
-      size = window.screen.width * handleImageLoad /* handleImageLoad */.getDevicePixelRatio();
-      const obj = handleImageLoad /* handleImageLoad */;
+      size = window.screen.width * handleImageLoad.getDevicePixelRatio();
+      const obj = handleImageLoad;
     }
     const _window2 = window;
-    const bestMediaProxySize = handleImageLoad /* handleImageLoad */.getBestMediaProxySize(size);
+    const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(size);
     if (null != CDN_HOST) {
       const _HermesInternal = HermesInternal;
       let combined = "https://" + CDN_HOST + "/discovery-splashes/" + id + "/" + splash + ".jpg";
@@ -1061,12 +1061,12 @@ export default {
     } else {
       if (null == size) {
         const _window = window;
-        obj = handleImageLoad /* handleImageLoad */;
+        obj = handleImageLoad;
         size = window.screen.width * obj.getDevicePixelRatio();
       }
       let combined1 = globalThis;
       const _window2 = window;
-      const bestMediaProxySize = handleImageLoad /* handleImageLoad */.getBestMediaProxySize(size);
+      const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(size);
       if (null != CDN_HOST) {
         let combined = "https://" + CDN_HOST + "/splashes/" + id + "/" + splash + ".jpg";
       } else {
@@ -1077,7 +1077,7 @@ export default {
       }
       combined1 = "?size=" + bestMediaProxySize;
       const sum1 = combined + combined1;
-      const obj2 = handleImageLoad /* handleImageLoad */;
+      const obj2 = handleImageLoad;
     }
   },
   getGuildDiscoverySplashURL,
@@ -1097,12 +1097,12 @@ export default {
     } else {
       if (null == size) {
         const _window = window;
-        obj = handleImageLoad /* handleImageLoad */;
+        obj = handleImageLoad;
         size = window.screen.width * obj.getDevicePixelRatio();
       }
       let combined1 = globalThis;
       const _window2 = window;
-      const bestMediaProxySize = handleImageLoad /* handleImageLoad */.getBestMediaProxySize(size);
+      const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(size);
       if (null != CDN_HOST) {
         let combined = "https://" + CDN_HOST + "/discovery-splashes/" + id + "/" + splash + ".jpg";
       } else {
@@ -1113,7 +1113,7 @@ export default {
       }
       combined1 = "?size=" + bestMediaProxySize;
       const sum1 = combined + combined1;
-      const obj2 = handleImageLoad /* handleImageLoad */;
+      const obj2 = handleImageLoad;
     }
   },
   getGuildBannerURL,
@@ -1224,10 +1224,10 @@ export default {
       }
       return tmp12;
     } else {
-      obj = handleImageLoad /* handleImageLoad */;
+      obj = handleImageLoad;
       let combined1 = globalThis;
       const _window = window;
-      const bestMediaProxySize = obj.getBestMediaProxySize(1096 * handleImageLoad /* handleImageLoad */.getDevicePixelRatio());
+      const bestMediaProxySize = obj.getBestMediaProxySize(1096 * handleImageLoad.getDevicePixelRatio());
       if (null != CDN_HOST) {
         let combined = "https://" + CDN_HOST + "/home-headers/" + id + "/" + homeHeader + ".png";
       } else {
@@ -1238,7 +1238,7 @@ export default {
       }
       combined1 = "?size=" + bestMediaProxySize;
       const sum1 = combined + combined1;
-      const obj2 = handleImageLoad /* handleImageLoad */;
+      const obj2 = handleImageLoad;
     }
   },
   getChannelIconSource(arg0) {
@@ -1266,7 +1266,7 @@ export default {
   makeSource,
   getAnimatableSourceWithFallback(flag, arg1) {
     const tmp = arg1(flag);
-    let obj = set /* set */;
+    let obj = set;
     if (obj.isAndroid()) {
       if (flag) {
         if (typeof tmp !== "number") {

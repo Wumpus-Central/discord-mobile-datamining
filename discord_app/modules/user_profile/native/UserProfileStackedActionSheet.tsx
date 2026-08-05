@@ -47,7 +47,7 @@ export default function UserProfileStackedActionSheet(onBack) {
     obj[3] = tmp4(tmp5(5242).ArrowLargeLeftIcon, { size: "md" });
     tmp4Result = tmp4(tmp5(4812).PressableOpacity, obj);
   }
-  const items1 = [tmp4Result, closure_4(Text /* Text */.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
+  const items1 = [tmp4Result, closure_4(Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: title }), ];
   if (tmp4Result) {
     const obj1 = { style: null };
     obj1[0] = tmp2.headerSpacer;
@@ -57,7 +57,7 @@ export default function UserProfileStackedActionSheet(onBack) {
   obj[1] = items1;
   obj.header = closure_5(View, obj);
   obj.children = children;
-  return closure_4(Background /* Background */.BottomSheet, obj);
+  return closure_4(Background.BottomSheet, obj);
 };
 export const UserProfileStackedActionSheetList = function UserProfileStackedActionSheetList(data) {
   data = data.data;

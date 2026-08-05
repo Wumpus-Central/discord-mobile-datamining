@@ -18,14 +18,14 @@ export const SOCIAL_LAYER_STOREFRONT_GIFT_PURCHASE_SUCCESS_MODAL_KEY = "social-l
 export const openSocialLayerStorefrontUnsupportedOnMobileAlert = function openSocialLayerStorefrontUnsupportedOnMobileAlert() {
   let obj = AlertActionCreators;
   obj = { title: null, body: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj[0] = intl.string(messagesProxy.XjhkM5);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(messagesProxy.NBFa62);
   obj.show(obj);
 };
 export const openSocialLayerStorefrontProductDetailsModal = function openSocialLayerStorefrontProductDetailsModal(closure_0) {
-  let obj = apexExperiment /* apexExperiment */;
+  let obj = apexExperiment;
   if (obj.getIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "social_layer_storefront_product_details_modal" })) {
     const socialLayerStorefrontConfig = tmp(7678).fetchSocialLayerStorefrontConfig();
     const obj5 = ModalActionCreators;
@@ -46,7 +46,7 @@ export const closeSocialLayerStorefrontProductDetailsModal = function closeSocia
 };
 export const openSocialLayerStorefrontGiftModal = function openSocialLayerStorefrontGiftModal(closure_0) {
   if (obj.getIsEligibleForSocialLayerStorefrontMobilePurchasing({ location: "social_layer_storefront_gift_modal" })) {
-    ModalActionCreators.pushLazy(asyncRequireImpl /* asyncRequireImpl */(10014, dependencyMap.paths), closure_0, c5);
+    ModalActionCreators.pushLazy(asyncRequireImpl(10014, dependencyMap.paths), closure_0, c5);
     const obj2 = ModalActionCreators;
   }
 };

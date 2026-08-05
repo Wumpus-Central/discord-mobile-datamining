@@ -24,7 +24,7 @@ let closure_8 = require("noop").memo((perk) => {
   let selectedTier;
   perk = perk.perk;
   ({ selectedTier, selectedProductId, analyticsLocations, applicationId, onPaymentSuccess, onPaymentDismiss } = perk);
-  let obj = PremiumTypes /* PremiumTypes */;
+  let obj = PremiumTypes;
   const buyNitroPlanSelection = obj.useBuyNitroPlanSelection({ tier: selectedTier, productId: selectedProductId });
   const detail = perk.detail;
   let tmp6Result = null;
@@ -69,7 +69,7 @@ let closure_8 = require("noop").memo((perk) => {
 const result = require("jsxProd").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx");
 
 export const openBuyNitroPerkDetails = function openBuyNitroPerkDetails(perk, arg1) {
-  let obj = ACTION_SHEET_HEIGHT_HALF /* ACTION_SHEET_HEIGHT_HALF */;
+  let obj = ACTION_SHEET_HEIGHT_HALF;
   obj = { content: null, key: null };
   obj = { perk };
   const merged = Object.assign(arg1);

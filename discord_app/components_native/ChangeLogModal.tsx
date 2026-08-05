@@ -363,7 +363,7 @@ export default function ChangelogModal() {
     obj[0] = obj;
     return obj;
   }, []);
-  return callback(NavigationStack /* NavigationStack */.Navigator, { screens, initialRouteName: "CHANGELOG" });
+  return callback(NavigationStack.Navigator, { screens, initialRouteName: "CHANGELOG" });
 };
 export { ListItem };
 export { ChangeLogScreen };

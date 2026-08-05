@@ -27,7 +27,7 @@ export const transformToRowGeneratedContentInventoryEntryComponent = function tr
   const contentInventoryEntry = component.component.contentInventoryEntry;
   const message = component.message;
   const content_type = contentInventoryEntry.content_type;
-  if (ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+  if (ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME !== content_type) {
     if (tmp(8044).ContentInventoryEntryType.TOP_GAME !== content_type) {
       if (tmp(8044).ContentInventoryEntryType.WATCHED_MEDIA === content_type) {
         let tmpResult = tmp(8051);

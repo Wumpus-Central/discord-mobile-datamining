@@ -22,7 +22,7 @@ prototype["initialize"] = function initialize() {
     flag = false;
   }
   const obj = { debug: flag, disableCookies: true, respectDoNotTrack: true, data: null };
-  const MuxIntegration = mapDiscordToMuxMetadata /* mapDiscordToMuxMetadata */.MuxIntegration;
+  const MuxIntegration = mapDiscordToMuxMetadata.MuxIntegration;
   obj[3] = MuxIntegration.mapDiscordToMuxMetadata(self.config, self.sessionId);
   if (null != self.hlsInstance) {
     obj.hlsjs = self.hlsInstance;

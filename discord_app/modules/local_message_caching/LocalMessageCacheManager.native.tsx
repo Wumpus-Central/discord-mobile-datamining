@@ -43,7 +43,7 @@ function messageTimestampIsInInterval(arg0, arg1) {
   if (null != arg0) {
     const tmp4 = t();
     const tmp5 = t(arg0);
-    return resetCache /* resetCache */.isWithinInterval(tmp4, tmp5, arg1);
+    return resetCache.isWithinInterval(tmp4, tmp5, arg1);
   } else {
     return false;
   }
@@ -331,7 +331,7 @@ const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessage
 let closure_13 = 5 * require("set").Millis.MINUTE;
 let closure_14 = 14 * require("set").Millis.DAY;
 function _getMessages(outer1_2) {
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   let obj = Storage.get(LocalMessageCacheManagerMessageCacheKey);
   if (null == obj) {
     obj = {};
@@ -355,7 +355,7 @@ function _writeMessage(arg0, id) {
   if (typeof _getMessages !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const Storage = Storage /* Storage */.Storage;
+  const Storage = Storage.Storage;
   obj = Storage.get(LocalMessageCacheManagerMessageCacheKey);
   if (null == obj) {
     obj = {};
@@ -373,7 +373,7 @@ function _writeMessage(arg0, id) {
   } else {
     delete tmp[tmp2];
   }
-  const Storage2 = Storage /* Storage */.Storage;
+  const Storage2 = Storage.Storage;
   const result = Storage2.set(LocalMessageCacheManagerMessageCacheKey, obj);
   return obj;
 }

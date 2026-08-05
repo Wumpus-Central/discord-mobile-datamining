@@ -20,13 +20,13 @@ function SettingsAgeGroupHeader() {
     obj.openUrl(callback(1945).getArticleURL(constants.TIGGER_PAWTECT_LEARN_MORE));
   }, []);
   obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  const intl = getSystemLocale.intl;
   obj[2] = intl.string(messagesProxy.PY4MA0);
-  const items = [callback(Text /* Text */.Text, obj), ];
+  const items = [callback(Text.Text, obj), ];
   obj = { variant: "text-sm/normal", color: "text-default", children: null };
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   obj[2] = intl2.format(messagesProxy["1DN29p"], { handleOnHelpUrlHook: callback });
-  items[1] = callback(Text /* Text */.Text, obj);
+  items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }

@@ -17,7 +17,7 @@ prototype["getMatchingOutboxEntry"] = function getMatchingOutboxEntry(activity) 
   const value = map.get(activity.userId);
   if (null != value) {
     if (null != activity) {
-      return isMatchingListeningActivity /* isMatchingListeningActivity */.findMatchingEntry(value.entries, activity);
+      return isMatchingListeningActivity.findMatchingEntry(value.entries, activity);
     }
   }
 };

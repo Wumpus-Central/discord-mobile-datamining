@@ -7,27 +7,27 @@ export const isPlayedGameEntry = function isPlayedGameEntry(content_type) {
   if (content_type != null) {
     content_type = content_type.content_type;
   }
-  return content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.PLAYED_GAME;
+  return content_type === ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME;
 };
 export const isTopGameEntry = function isTopGameEntry(content_type) {
   content_type = undefined;
   if (content_type != null) {
     content_type = content_type.content_type;
   }
-  return content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.TOP_GAME;
+  return content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME;
 };
 export const isGamingLikeEntry = function isGamingLikeEntry(content) {
   let content_type;
   if (content != null) {
     content_type = content.content_type;
   }
-  let tmp4 = content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.PLAYED_GAME;
+  let tmp4 = content_type === ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME;
   if (!tmp4) {
     let content_type1;
     if (content != null) {
       content_type1 = content.content_type;
     }
-    tmp4 = content_type1 === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.TOP_GAME;
+    tmp4 = content_type1 === ContentInventoryEntryType.ContentInventoryEntryType.TOP_GAME;
   }
   return tmp4;
 };
@@ -51,27 +51,27 @@ export const isListenedSessionEntry = function isListenedSessionEntry(closure_0)
   if (closure_0 != null) {
     content_type = closure_0.content_type;
   }
-  return content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.LISTENED_SESSION;
+  return content_type === ContentInventoryEntryType.ContentInventoryEntryType.LISTENED_SESSION;
 };
 export const isTopArtistEntry = function isTopArtistEntry(entry) {
   let content_type;
   if (entry != null) {
     content_type = entry.content_type;
   }
-  return content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.TOP_ARTIST;
+  return content_type === ContentInventoryEntryType.ContentInventoryEntryType.TOP_ARTIST;
 };
 export const isListeningLikeEntry = function isListeningLikeEntry(content_type) {
   content_type = undefined;
   if (content_type != null) {
     content_type = content_type.content_type;
   }
-  let tmp4 = content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.LISTENED_SESSION;
+  let tmp4 = content_type === ContentInventoryEntryType.ContentInventoryEntryType.LISTENED_SESSION;
   if (!tmp4) {
     let content_type1;
     if (content_type != null) {
       content_type1 = content_type.content_type;
     }
-    tmp4 = content_type1 === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.TOP_ARTIST;
+    tmp4 = content_type1 === ContentInventoryEntryType.ContentInventoryEntryType.TOP_ARTIST;
   }
   return tmp4;
 };
@@ -80,14 +80,14 @@ export const isWatchedMediaEntry = function isWatchedMediaEntry(entry) {
   if (entry != null) {
     content_type = entry.content_type;
   }
-  return content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.WATCHED_MEDIA;
+  return content_type === ContentInventoryEntryType.ContentInventoryEntryType.WATCHED_MEDIA;
 };
 export const isXboxEntry = function isXboxEntry(content_type) {
   content_type = undefined;
   if (content_type != null) {
     content_type = content_type.content_type;
   }
-  let tmp4 = content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.PLAYED_GAME;
+  let tmp4 = content_type === ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME;
   if (!tmp4) {
     let content_type1;
     if (content_type != null) {
@@ -106,7 +106,7 @@ export const isPlaystationEntry = function isPlaystationEntry(content_type) {
   if (content_type != null) {
     content_type = content_type.content_type;
   }
-  let tmp4 = content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.PLAYED_GAME;
+  let tmp4 = content_type === ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME;
   if (!tmp4) {
     let content_type1;
     if (content_type != null) {
@@ -125,7 +125,7 @@ export const isConsoleEntry = function isConsoleEntry(content_type) {
   if (content_type != null) {
     content_type = content_type.content_type;
   }
-  let tmp4 = content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.PLAYED_GAME;
+  let tmp4 = content_type === ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME;
   if (!tmp4) {
     let content_type1;
     if (content_type != null) {
@@ -163,14 +163,14 @@ export const isLaunchedActivityEntry = function isLaunchedActivityEntry(content_
   if (content_type != null) {
     content_type = content_type.content_type;
   }
-  return content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.LAUNCHED_ACTIVITY;
+  return content_type === ContentInventoryEntryType.ContentInventoryEntryType.LAUNCHED_ACTIVITY;
 };
 export const isRecentActivityEntry = function isRecentActivityEntry(length) {
   let content_type;
   if (length != null) {
     content_type = length.content_type;
   }
-  let tmp4 = content_type === ContentInventoryEntryType /* ContentInventoryEntryType */.ContentInventoryEntryType.PLAYED_GAME;
+  let tmp4 = content_type === ContentInventoryEntryType.ContentInventoryEntryType.PLAYED_GAME;
   if (!tmp4) {
     let content_type1;
     if (length != null) {

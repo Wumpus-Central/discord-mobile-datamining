@@ -8,11 +8,11 @@ let closure_4 = 12 * require("set").Millis.HOUR;
 const result = require("useInappropriateConversationSafetyToolsWarningForChannel").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx");
 
 export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButtonTooltipForChannel(channelId) {
-  const inappropriateConversationSafetyToolsWarningForChannel = useInappropriateConversationSafetyToolsWarningForChannel /* useInappropriateConversationSafetyToolsWarningForChannel */.useInappropriateConversationSafetyToolsWarningForChannel(channelId);
-  const obj = useInappropriateConversationSafetyToolsWarningForChannel /* useInappropriateConversationSafetyToolsWarningForChannel */;
+  const inappropriateConversationSafetyToolsWarningForChannel = useInappropriateConversationSafetyToolsWarningForChannel.useInappropriateConversationSafetyToolsWarningForChannel(channelId);
+  const obj = useInappropriateConversationSafetyToolsWarningForChannel;
   const tmp = require;
-  const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel /* useInappropriateConversationWarningsForChannel */.useInappropriateConversationWarningsForChannel(channelId);
-  const obj2 = useInappropriateConversationWarningsForChannel /* useInappropriateConversationWarningsForChannel */;
+  const inappropriateConversationWarningsForChannel = useInappropriateConversationWarningsForChannel.useInappropriateConversationWarningsForChannel(channelId);
+  const obj2 = useInappropriateConversationWarningsForChannel;
   if (null != inappropriateConversationSafetyToolsWarningForChannel) {
     if (!obj3.useShouldShowInitialSafetyToolsButtonTooltip(channelId)) {
       if (!tmpResult.shouldShowTakeoverForWarnings(inappropriateConversationWarningsForChannel)) {

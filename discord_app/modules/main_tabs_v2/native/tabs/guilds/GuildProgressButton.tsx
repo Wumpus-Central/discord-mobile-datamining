@@ -44,9 +44,9 @@ export default function GuildProgressButton(guild) {
   return jsx(guild(7780).RowButton, { source: null });
 };
 export const getScaledGuildProgressButtonHeight = function getScaledGuildProgressButtonHeight(fontScale, isRefreshEnabled) {
-  const refreshToken = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */.resolveRefreshToken(Themes.modules.mobile.TABLE_ROW_PADDING, isRefreshEnabled);
-  const obj = useIsMobileVisualRefreshExperimentEnabled /* useIsMobileVisualRefreshExperimentEnabled */;
-  const sum = refreshToken + map /* map */.scaleTextLineHeight("text-md/semibold", fontScale);
-  const obj2 = map /* map */;
-  return sum + 2 * map /* map */.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
+  const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(Themes.modules.mobile.TABLE_ROW_PADDING, isRefreshEnabled);
+  const obj = useIsMobileVisualRefreshExperimentEnabled;
+  const sum = refreshToken + map.scaleTextLineHeight("text-md/semibold", fontScale);
+  const obj2 = map;
+  return sum + 2 * map.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
 };

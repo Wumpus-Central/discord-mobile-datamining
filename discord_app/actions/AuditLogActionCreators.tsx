@@ -35,7 +35,7 @@ function makeRequest(arg0, arg1) {
   if (null != targetId) {
     obj.target_id = targetId;
   }
-  const HTTP = sendRequest /* sendRequest */.HTTP;
+  const HTTP = sendRequest.HTTP;
   obj = { url: closure_4.GUILD_AUDIT_LOG(arg0), query: obj, oldFormErrors: true, rejectWithError: true };
   return HTTP.get(obj);
 }

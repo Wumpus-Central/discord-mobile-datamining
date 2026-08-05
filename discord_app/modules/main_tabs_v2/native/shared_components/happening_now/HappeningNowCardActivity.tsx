@@ -201,7 +201,7 @@ function StageStreamAvatars(stage) {
   let audienceCount;
   let audienceFriends;
   stage = stage.stage;
-  let obj = useLiveStageData /* useLiveStageData */;
+  let obj = useLiveStageData;
   const liveStageData = obj.useLiveStageData(stage);
   obj = { style: callback2().avatarStackContainer, children: null };
   ({ audienceCount, audienceFriends } = liveStageData);
@@ -211,8 +211,8 @@ function StageStreamAvatars(stage) {
   obj[0] = items;
   obj[1] = stage.guild_id;
   obj[2] = audienceCount + 1;
-  obj[4] = Button /* Button */.AvatarSizes.SIZE_16;
-  obj[1] = callback(HappeningNowAvatarStack /* HappeningNowAvatarStack */.HappeningNowAvatarStack, obj);
+  obj[4] = Button.AvatarSizes.SIZE_16;
+  obj[1] = callback(HappeningNowAvatarStack.HappeningNowAvatarStack, obj);
   return callback(closure_4, obj);
 }
 let c3 = importAllResult;

@@ -7,7 +7,7 @@ import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 const result = require("explicitContentFromProto").fileFinishedImporting("modules/notifications/profile_updates/ProfileUpdatesNotificationUtils.tsx");
 
 export const onProfileUpdatesNotificationSettingsChanged = function onProfileUpdatesNotificationSettingsChanged(profile_updates_notifications) {
-  const EnableProfileUpdatesNotifications = explicitContentFromProto /* explicitContentFromProto */.EnableProfileUpdatesNotifications;
+  const EnableProfileUpdatesNotifications = explicitContentFromProto.EnableProfileUpdatesNotifications;
   EnableProfileUpdatesNotifications.updateSetting(profile_updates_notifications);
   let obj = expandEventProperties;
   obj = { update_type: constants.ACCOUNT, profile_updates_notifications };

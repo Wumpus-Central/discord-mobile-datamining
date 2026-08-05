@@ -118,17 +118,17 @@ export const LeftBackIconWithBadge = function LeftBackIconWithBadge(includeNotif
   if (flag === undefined) {
     flag = false;
   }
-  return callback(IconWithBadge, { includeNotificationsCount: flag, Icon: ArrowLargeLeftIcon /* ArrowLargeLeftIcon */.ArrowLargeLeftIcon });
+  return callback(IconWithBadge, { includeNotificationsCount: flag, Icon: ArrowLargeLeftIcon.ArrowLargeLeftIcon });
 };
 export const CloseIconWithBadgeOnSide = function CloseIconWithBadgeOnSide(count) {
   count = count.count;
   let obj = { style: createCacheKey().iconWithBadge, children: null };
-  const items = [callback(XLargeIcon /* XLargeIcon */.XLargeIcon, { size: "sm", color: "white" }), ];
+  const items = [callback(XLargeIcon.XLargeIcon, { size: "sm", color: "white" }), ];
   let tmp3Result = null;
   if (count > 0) {
     obj = { value: null };
     obj[0] = count;
-    tmp3Result = callback(Button /* Button */.Badge, obj);
+    tmp3Result = callback(Button.Badge, obj);
   }
   items[1] = tmp3Result;
   obj[1] = items;

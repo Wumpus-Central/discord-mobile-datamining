@@ -14,7 +14,7 @@ function rebuildUnreads() {
   if (found.length > 20) {
     found.length = 20;
   }
-  const result = areArraysShallowlyEqual /* areArraysShallowlyEqual */.areArraysShallowlyEqual(found, found);
+  const result = areArraysShallowlyEqual.areArraysShallowlyEqual(found, found);
   let flag = !result;
   if (!result) {
     const _Set = Set;
@@ -29,7 +29,7 @@ function handleConnectionOpen() {
   if (found.length > 20) {
     found.length = 20;
   }
-  const result = areArraysShallowlyEqual /* areArraysShallowlyEqual */.areArraysShallowlyEqual(found, found);
+  const result = areArraysShallowlyEqual.areArraysShallowlyEqual(found, found);
   let flag = !result;
   if (!result) {
     const _Set = Set;
@@ -51,7 +51,7 @@ function handleGenericUpdate(channelId) {
     if (found.length > 20) {
       found.length = 20;
     }
-    const result = areArraysShallowlyEqual /* areArraysShallowlyEqual */.areArraysShallowlyEqual(found, found);
+    const result = areArraysShallowlyEqual.areArraysShallowlyEqual(found, found);
     let flag = !result;
     if (!result) {
       const _Set = Set;
@@ -59,7 +59,7 @@ function handleGenericUpdate(channelId) {
       flag = true;
     }
     tmp4 = flag;
-    const obj = areArraysShallowlyEqual /* areArraysShallowlyEqual */;
+    const obj = areArraysShallowlyEqual;
   }
   return tmp4;
 }
@@ -93,7 +93,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("d
       if (found.length > 20) {
         found.length = 20;
       }
-      const result = areArraysShallowlyEqual /* areArraysShallowlyEqual */.areArraysShallowlyEqual(found, found);
+      const result = areArraysShallowlyEqual.areArraysShallowlyEqual(found, found);
       let flag = !result;
       if (!result) {
         const _Set = Set;
@@ -101,7 +101,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("d
         flag = true;
       }
       tmp4 = flag;
-      const obj = areArraysShallowlyEqual /* areArraysShallowlyEqual */;
+      const obj = areArraysShallowlyEqual;
     }
     return tmp4;
   },
@@ -113,7 +113,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("d
       if (found.length > 20) {
         found.length = 20;
       }
-      const result = areArraysShallowlyEqual /* areArraysShallowlyEqual */.areArraysShallowlyEqual(found, found);
+      const result = areArraysShallowlyEqual.areArraysShallowlyEqual(found, found);
       let flag = !result;
       if (!result) {
         const _Set = Set;
@@ -121,7 +121,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("d
         flag = true;
       }
       hasItem = flag;
-      const obj = areArraysShallowlyEqual /* areArraysShallowlyEqual */;
+      const obj = areArraysShallowlyEqual;
     }
     return hasItem;
   },
@@ -138,7 +138,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("d
       if (found.length > 20) {
         found.length = 20;
       }
-      const result = areArraysShallowlyEqual /* areArraysShallowlyEqual */.areArraysShallowlyEqual(found, found);
+      const result = areArraysShallowlyEqual.areArraysShallowlyEqual(found, found);
       let flag = !result;
       if (!result) {
         const _Set = Set;
@@ -146,7 +146,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("d
         flag = true;
       }
       tmp4 = flag;
-      const obj = areArraysShallowlyEqual /* areArraysShallowlyEqual */;
+      const obj = areArraysShallowlyEqual;
     }
     return tmp4;
   },
@@ -163,7 +163,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("d
       if (found.length > 20) {
         found.length = 20;
       }
-      const result = areArraysShallowlyEqual /* areArraysShallowlyEqual */.areArraysShallowlyEqual(found, found);
+      const result = areArraysShallowlyEqual.areArraysShallowlyEqual(found, found);
       let flag = !result;
       if (!result) {
         const _Set = Set;
@@ -171,7 +171,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("d
         flag = true;
       }
       tmp4 = flag;
-      const obj = areArraysShallowlyEqual /* areArraysShallowlyEqual */;
+      const obj = areArraysShallowlyEqual;
     }
     return tmp4;
   },

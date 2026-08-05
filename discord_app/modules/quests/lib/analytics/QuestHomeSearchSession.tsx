@@ -9,12 +9,12 @@ export const getOrCreateQuestHomeSearchSession = function getOrCreateQuestHomeSe
   if (null == obj) {
     obj = { searchSession: null, isNew: true };
     obj = { uuid: null, createdAtTimestamp: null, lastUsedTimestamp: null, version: null };
-    obj[0] = v1 /* v1 */.v4();
+    obj[0] = v1.v4();
     obj[1] = timestamp;
     obj[2] = timestamp;
-    obj[3] = result /* result */.CLIENT_SESSION_STORAGE_VERSION;
+    obj[3] = result.CLIENT_SESSION_STORAGE_VERSION;
     obj[0] = obj;
-    const obj4 = v1 /* v1 */;
+    const obj4 = v1;
   } else {
     obj.lastUsedTimestamp = timestamp;
     obj = { searchSession: null, isNew: false };

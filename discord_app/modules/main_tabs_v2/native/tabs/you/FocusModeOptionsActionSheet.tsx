@@ -10,59 +10,59 @@ const require = arg1;
 let obj = {
   duration: 30 * require("set").Millis.MINUTE,
   label() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.RxJGbL);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.RxJGbL);
   }
 };
 let items = [obj, , , , , ];
 obj = {
   duration: require("set").Millis.HOUR,
   label() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.UMWBZr);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.UMWBZr);
   }
 };
 items[1] = obj;
 obj = {
   duration: 3 * require("set").Millis.HOUR,
   label() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.QmYWtu);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.QmYWtu);
   }
 };
 items[2] = obj;
 items[3] = {
   duration: 8 * require("set").Millis.HOUR,
   label() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.EpAXPC);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.EpAXPC);
   }
 };
 obj1 = {
   duration: 8 * require("set").Millis.HOUR,
   label() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.EpAXPC);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.EpAXPC);
   }
 };
 items[4] = {
   duration: require("set").Millis.DAY,
   label() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["755t4q"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["755t4q"]);
   }
 };
 const obj3 = { duration: "Array", label: 0 };
 obj3[1] = function label() {
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  return intl.string(getSystemLocale /* getSystemLocale */.t["46dqJY"]);
+  const intl = getSystemLocale.intl;
+  return intl.string(getSystemLocale.t["46dqJY"]);
 };
 items[5] = obj3;
 const obj2 = {
   duration: require("set").Millis.DAY,
   label() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["755t4q"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["755t4q"]);
   }
 };
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/FocusModeOptionsActionSheet.tsx");

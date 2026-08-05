@@ -65,9 +65,9 @@ function Header(arg0) {
     if (!isPaymentSuccess) {
       const obj = { style: null, variant: "text-md/semibold", color: "text-default", accessibilityRole: "header", children: null };
       obj[0] = tmp.headerText;
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      obj[4] = intl.string(getSystemLocale /* getSystemLocale */.t.vLz3Zs);
-      return callback3(Text /* Text */.Text, obj);
+      const intl = getSystemLocale.intl;
+      obj[4] = intl.string(getSystemLocale.t.vLz3Zs);
+      return callback3(Text.Text, obj);
     }
   }
   if (isPaymentSuccess) {
@@ -125,7 +125,7 @@ function PlanOptionBadgeComponent(backgroundColorType) {
   }
   obj[2] = str2;
   obj[3] = backgroundColorType.text;
-  obj[1] = closure_35(Text /* Text */.Text, obj);
+  obj[1] = closure_35(Text.Text, obj);
   return closure_35(closure_8, obj);
 }
 function PlanOption(premiumItem) {
@@ -416,10 +416,10 @@ function PremiumPlanSelectionActionSheetCTA(isPaymentSuccess) {
   ({ onStartPayment: require, shouldUseMobileWebRedirectCheckout } = isPaymentSuccess);
   if (isPaymentSuccess.isPaymentSuccess) {
     let obj = { text: null, size: "md", grow: true, onPress: null };
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.WAI6xu);
+    const intl = getSystemLocale.intl;
+    obj[0] = intl.string(getSystemLocale.t.WAI6xu);
     obj[3] = tmp;
-    return callback3(Button /* Button */.Button, obj);
+    return callback3(Button.Button, obj);
   } else {
     const tmp5 = shouldUseMobileWebRedirectCheckout ? { size: "lg", variant: "primary" } : { size: "md", variant: "active" };
     obj = { text: null };
@@ -431,7 +431,7 @@ function PremiumPlanSelectionActionSheetCTA(isPaymentSuccess) {
     };
     obj.loading = tmp4;
     obj.disabled = tmp3;
-    return callback3(Button /* Button */.Button, obj);
+    return callback3(Button.Button, obj);
   }
 }
 function PremiumPlanSelectionActionSheet(premiumItems) {

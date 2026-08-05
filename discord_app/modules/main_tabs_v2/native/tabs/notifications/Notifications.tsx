@@ -15,7 +15,7 @@ let error;
 let metroImportAll;
 const require = arg1;
 function goBack() {
-  const navigation = getRootNavigationRef /* getRootNavigationRef */.getRootNavigationRef();
+  const navigation = getRootNavigationRef.getRootNavigationRef();
   if (null != navigation) {
     if (navigation.canGoBack()) {
       navigation.goBack();

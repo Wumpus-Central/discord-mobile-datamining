@@ -8,7 +8,7 @@ let closure_4 = [];
 const result = require("set").fileFinishedImporting("modules/polls/chat/usePollMessageContextItemTypes.tsx");
 
 export default function usePollMessageContextItemTypes(poll) {
-  const obj = initialize /* initialize */;
+  const obj = initialize;
   const items = [fetchFingerprint];
   poll = poll.poll;
   const stateFromStores = obj.useStateFromStores(items, () => id.getId());

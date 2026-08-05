@@ -7,20 +7,20 @@ import { getSystemLocale } from "../../intl/index.native.tsx";
 function handleRelationshipAdd(relationship) {
   relationship = relationship.relationship;
   if (!tmp) {
-    const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-    const intl = getSystemLocale /* getSystemLocale */.intl;
+    const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
+    const intl = getSystemLocale.intl;
     const obj = { username: null };
     obj[0] = relationship.user.username;
-    AccessibilityAnnouncer.announce(intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.zH0kC7, obj));
+    AccessibilityAnnouncer.announce(intl.formatToPlainString(getSystemLocale.t.zH0kC7, obj));
     const result = importAll(16428).showPendingNotification(relationship.user);
     const obj2 = importAll(16428);
   }
 }
 function handleFriendRequestAccepted(user) {
   user = user.user;
-  const AccessibilityAnnouncer = AccessibilityAnnouncer /* AccessibilityAnnouncer */.AccessibilityAnnouncer;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  AccessibilityAnnouncer.announce(intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t["/+7xky"], { username: user.username }));
+  const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
+  const intl = getSystemLocale.intl;
+  AccessibilityAnnouncer.announce(intl.formatToPlainString(getSystemLocale.t["/+7xky"], { username: user.username }));
   const result = importAll(16428).showAcceptedNotification(user);
 }
 let prototype = function RelationshipManager() {

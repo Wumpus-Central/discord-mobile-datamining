@@ -26,7 +26,7 @@ export default function useBackHandlerSkipPhoneScreens(arg0, arg1) {
   });
 };
 export const useBackHandlerMinimizeApp = function useBackHandlerMinimizeApp() {
-  useNavigatorBackPressHandler /* useNavigatorBackPressHandler */.useNavigatorBackPressHandler(() => {
+  useNavigatorBackPressHandler.useNavigatorBackPressHandler(() => {
     MinimizeApp = MinimizeApp.MinimizeApp;
     MinimizeApp.minimizeApp();
     return true;

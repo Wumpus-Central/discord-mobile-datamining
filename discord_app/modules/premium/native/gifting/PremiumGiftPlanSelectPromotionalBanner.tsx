@@ -35,9 +35,9 @@ const memoResult = require("noop").memo(function PremiumGiftPlanSelectPromotiona
   ({ claimableRewards, isSelected, onLayout } = giftPlanSelectionCardBannerComponent);
   const tmp = callback2();
   const gradient = giftPlanSelectionCardBannerComponent.gradient;
-  let obj = useThemeAndReducedMotionAwareAssetUrl /* useThemeAndReducedMotionAwareAssetUrl */;
+  let obj = useThemeAndReducedMotionAwareAssetUrl;
   const themeAndReducedMotionAwareAssetUrl = obj.useThemeAndReducedMotionAwareAssetUrl(giftPlanSelectionCardBannerComponent.mobileBannerAsset);
-  let obj1 = useThemeAndReducedMotionAwareAssetUrl /* useThemeAndReducedMotionAwareAssetUrl */;
+  let obj1 = useThemeAndReducedMotionAwareAssetUrl;
   const themeAndReducedMotionAwareAssetUrl1 = obj1.useThemeAndReducedMotionAwareAssetUrl(giftPlanSelectionCardBannerComponent.avatarAsset, true);
   obj = { style: tmp.gradient, useAngle: true, angle: null, angleCenter: null, colors: null, onLayout: null, children: null };
   let num;
@@ -71,17 +71,17 @@ const memoResult = require("noop").memo(function PremiumGiftPlanSelectPromotiona
   const obj2 = { style: tmp.content, children: null };
   const obj3 = { style: tmp.heading, variant: "text-md/bold", color: "text-overlay-light", children: null };
   const intl = tmp2(1236).intl;
-  obj3[3] = intl.string(getSystemLocale /* getSystemLocale */.t.OEtqpm);
-  const items1 = [callback(Text /* Text */.Text, obj3), ];
+  obj3[3] = intl.string(getSystemLocale.t.OEtqpm);
+  const items1 = [callback(Text.Text, obj3), ];
   const obj4 = { style: tmp.subheading, variant: "text-md/medium", color: "text-overlay-light", children: null };
   const intl2 = tmp2(1236).intl;
-  obj4[3] = intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["2h5M+X"], { availableCount: claimableRewards.length });
-  items1[1] = callback(Text /* Text */.Text, obj4);
+  obj4[3] = intl2.formatToPlainString(getSystemLocale.t["2h5M+X"], { availableCount: claimableRewards.length });
+  items1[1] = callback(Text.Text, obj4);
   obj2[1] = items1;
   items[1] = closure_5(View, obj2);
   let tmp12Result = null != themeAndReducedMotionAwareAssetUrl1;
   if (tmp12Result) {
-    let logoLargeTilted = giftPlanSelectionCardBannerComponent.assetVariant === create /* create */.GiftPlanSelectionCardBanner_AssetVariant.LARGE_TILTED;
+    let logoLargeTilted = giftPlanSelectionCardBannerComponent.assetVariant === create.GiftPlanSelectionCardBanner_AssetVariant.LARGE_TILTED;
     const items2 = [tmp.logoContainer, ];
     let logoContainerLargeTilted = logoLargeTilted;
     if (logoLargeTilted) {

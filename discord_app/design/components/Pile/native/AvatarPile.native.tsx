@@ -22,10 +22,10 @@ export const AvatarPile = function AvatarPile(arg0) {
   const Children = React.Children;
   ({ size, names } = arg0);
   const countResult = Children.count(children);
-  const tmp4 = StaticNativeCutoutAvatarImage /* StaticNativeCutoutAvatarImage */.AVATAR_SIZE_MAP[size];
+  const tmp4 = StaticNativeCutoutAvatarImage.AVATAR_SIZE_MAP[size];
   let obj = { "aria-label": null, shape: null, size: null, gap: null, depthX: 0.4, children: null };
-  obj[0] = getListSummaryLabel /* getListSummaryLabel */.getListSummaryLabel(names, totalCount);
-  obj[1] = SolidCutout /* SolidCutout */.CutoutShape.Circle;
+  obj[0] = getListSummaryLabel.getListSummaryLabel(names, totalCount);
+  obj[1] = SolidCutout.CutoutShape.Circle;
   obj[2] = tmp4;
   let num = 3;
   if (tmp4 <= 40) {
@@ -39,9 +39,9 @@ export const AvatarPile = function AvatarPile(arg0) {
     obj[0] = tmp4;
     obj[1] = tmp4 / 2;
     obj[2] = totalCount - countResult;
-    tmp6 = callback(map /* map */.PileOverflow, obj);
+    tmp6 = callback(map.PileOverflow, obj);
   }
   items[1] = tmp6;
   obj[5] = items;
-  return closure_4(Pile /* Pile */.Pile, obj);
+  return closure_4(Pile.Pile, obj);
 };

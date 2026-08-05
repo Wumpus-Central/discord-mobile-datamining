@@ -32,14 +32,14 @@ function handleCacheActionPress(key) {
 function CacheActionsActionSheet() {
   let obj = { header: null, children: null };
   obj = { title: null };
-  let intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t.ZVZVwR);
-  obj[0] = callback2(RedesignBottomSheetTitleHeaderBase /* RedesignBottomSheetTitleHeaderBase */.BottomSheetTitleHeader, obj);
+  let intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t.ZVZVwR);
+  obj[0] = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
   obj = { hasIcons: true, children: null };
   let obj1 = { icon: null, label: null, onPress: null };
-  obj1[0] = callback2(FileUpIcon /* FileUpIcon */.FileUpIcon, {});
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj1[1] = intl2.string(getSystemLocale /* getSystemLocale */.t["/GUaXh"]);
+  obj1[0] = callback2(FileUpIcon.FileUpIcon, {});
+  const intl2 = getSystemLocale.intl;
+  obj1[1] = intl2.string(getSystemLocale.t["/GUaXh"]);
   obj1[2] = callback(function*() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
@@ -95,11 +95,11 @@ function CacheActionsActionSheet() {
       }
     }
   });
-  const items = [callback2(ActionSheetRowIcon /* ActionSheetRowIcon */.ActionSheetRow, obj1), ];
+  const items = [callback2(ActionSheetRowIcon.ActionSheetRow, obj1), ];
   let obj2 = { variant: "danger", icon: null, label: null, onPress: null };
-  obj2[1] = callback2(FileWarningIcon /* FileWarningIcon */.FileWarningIcon, { color: "text-feedback-critical" });
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj2[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.tgwiMO);
+  obj2[1] = callback2(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" });
+  const intl3 = getSystemLocale.intl;
+  obj2[2] = intl3.string(getSystemLocale.t.tgwiMO);
   obj2[3] = function onPress() {
     let obj = callback(14650);
     obj.clearCaches();
@@ -116,17 +116,17 @@ function CacheActionsActionSheet() {
     const obj2 = callback2(3986);
     callback2(4253).hideActionSheet(closure_7);
   };
-  items[1] = callback2(ActionSheetRowIcon /* ActionSheetRowIcon */.ActionSheetRow, obj2);
+  items[1] = callback2(ActionSheetRowIcon.ActionSheetRow, obj2);
   obj[1] = items;
-  obj[1] = callback3(ActionSheetRowIcon /* ActionSheetRowIcon */.ActionSheetRow.Group, obj);
-  return callback2(ActionSheet /* ActionSheet */.ActionSheet, obj);
+  obj[1] = callback3(ActionSheetRowIcon.ActionSheetRow.Group, obj);
+  return callback2(ActionSheet.ActionSheet, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
 createToggle = {
   useTitle: function useCacheActionsTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.ZVZVwR);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.ZVZVwR);
   },
   parent: null,
   IconComponent: require("FileWarningIcon").FileWarningIcon,
@@ -137,9 +137,9 @@ createToggle = {
   },
   usePredicate: function useCacheActionsPredicate() {
     const items = [_handleConnectionOpen];
-    const stateFromStores = initialize /* initialize */.useStateFromStores(items, () => connected.isConnected());
-    const DeveloperMode = explicitContentFromProto /* explicitContentFromProto */.DeveloperMode;
-    const obj = initialize /* initialize */;
+    const stateFromStores = initialize.useStateFromStores(items, () => connected.isConnected());
+    const DeveloperMode = explicitContentFromProto.DeveloperMode;
+    const obj = initialize;
     return DeveloperMode.useSetting() && stateFromStores;
   },
   withArrow: true

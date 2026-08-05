@@ -139,5 +139,5 @@ let result = require("explicitContentFromProto").fileFinishedImporting("modules/
 
 export default function SearchTabsTransitionGroup(state) {
   const items = [state.state];
-  return jsx(wrapChildrenDefault /* wrapChildrenDefault */.TransitionGroup, { items, getItemKey, renderItem });
+  return jsx(wrapChildrenDefault.TransitionGroup, { items, getItemKey, renderItem });
 };

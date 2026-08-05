@@ -12,7 +12,7 @@ export default function RowCheckmark(selected) {
   if (selected.selected) {
     const obj = { color: null };
     obj[0] = Themes.unsafe_rawColors.BRAND_500;
-    tmp = jsx(CheckmarkSmallIcon /* CheckmarkSmallIcon */.CheckmarkSmallIcon, { color: null });
+    tmp = jsx(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: null });
   }
   return tmp;
 };

@@ -29,10 +29,10 @@ export default function longPressMessageHandleReply(arg0) {
     obj[0] = message.id;
     ({ id: obj11[1], guild_id: obj11[2] } = channel);
     const obj10 = expandEventProperties;
-    obj[4] = handleEdit /* handleEdit */.getContextBarCancelReason("edit", actionSource);
+    obj[4] = handleEdit.getContextBarCancelReason("edit", actionSource);
     obj[5] = null != currentUser && currentUser.id === editingMessage.author.id;
     obj10.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
-    const obj12 = handleEdit /* handleEdit */;
+    const obj12 = handleEdit;
   }
   obj = trackInvite;
   obj.endEditMessage(channel.id);
@@ -52,7 +52,7 @@ export default function longPressMessageHandleReply(arg0) {
           }
           obj[5] = tmp18;
           tmp3Result.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
-          createPendingReply /* createPendingReply */.deletePendingReply(channel.id);
+          createPendingReply.deletePendingReply(channel.id);
           let text;
           if (chatInputRef != null) {
             const current = chatInputRef.current;
@@ -68,17 +68,17 @@ export default function longPressMessageHandleReply(arg0) {
               }
             }
           }
-          const obj9 = createPendingReply /* createPendingReply */;
+          const obj9 = createPendingReply;
         }
       }
     }
   }
   tmp3Result = tmp3(698);
-  const merged = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectGuildAnalyticsMetadata(channel.guild_id));
+  const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(channel.guild_id));
   const obj1 = { source: actionSource };
-  const obj4 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+  const obj4 = collectGuildAnalyticsMetadata;
   const tmp7 = require;
-  const merged1 = Object.assign(collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */.collectChannelAnalyticsMetadata(channel));
+  const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel));
   tmp3Result.track(AnalyticEvents.REPLY_MESSAGE_STARTED, obj1);
   const currentUser2 = authStore.getCurrentUser();
   const isDMResult = channel.isDM();
@@ -89,7 +89,7 @@ export default function longPressMessageHandleReply(arg0) {
   if (tmp13) {
     tmp13 = message.author.id !== currentUser2.id;
   }
-  const obj5 = collectGuildAnalyticsMetadata /* collectGuildAnalyticsMetadata */;
+  const obj5 = collectGuildAnalyticsMetadata;
   const pendingReply1 = tmp7(10131).createPendingReply({ message, channel, shouldMention: tmp13, source: actionSource });
   if (chatInputRef != null) {
     const current3 = chatInputRef.current;

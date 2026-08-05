@@ -35,8 +35,8 @@ export const getVoiceFidelityCaps = function getVoiceFidelityCaps(location, kris
     } else {
       flag = false;
       if ("none" !== condition) {
-        isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */.assertNever(condition);
-        const obj2 = isDiscordFrontendDevelopment /* isDiscordFrontendDevelopment */;
+        isDiscordFrontendDevelopment.assertNever(condition);
+        const obj2 = isDiscordFrontendDevelopment;
       }
     }
     if (flag) {

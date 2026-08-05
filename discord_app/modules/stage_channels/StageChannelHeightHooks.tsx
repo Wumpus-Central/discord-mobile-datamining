@@ -4,8 +4,8 @@ const result = require("set").fileFinishedImporting("modules/stage_channels/Stag
 
 export const CALL_ACTION_BAR_HEIGHT = 112;
 export const useGetStageRTCPanelHeight = function useGetStageRTCPanelHeight(stateFromStores) {
-  const stageBlockedUsersCount = useStageBlockedUsersCount /* useStageBlockedUsersCount */.useStageBlockedUsersCount(stateFromStores);
-  useStageBlockedUsersCount /* useStageBlockedUsersCount */;
+  const stageBlockedUsersCount = useStageBlockedUsersCount.useStageBlockedUsersCount(stateFromStores);
+  useStageBlockedUsersCount;
   if (stageBlockedUsersCount > 0) {
     let num = 88;
   } else {
@@ -14,8 +14,8 @@ export const useGetStageRTCPanelHeight = function useGetStageRTCPanelHeight(stat
   return num;
 };
 export const useGetActionBarHeight = function useGetActionBarHeight(id) {
-  const stageBlockedUsersCount = useStageBlockedUsersCount /* useStageBlockedUsersCount */.useStageBlockedUsersCount(id);
-  useStageBlockedUsersCount /* useStageBlockedUsersCount */;
+  const stageBlockedUsersCount = useStageBlockedUsersCount.useStageBlockedUsersCount(id);
+  useStageBlockedUsersCount;
   if (stageBlockedUsersCount > 0) {
     let num = 132;
   } else {

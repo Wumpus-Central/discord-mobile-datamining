@@ -45,9 +45,9 @@ function handleUserSettingsProtoUpdate(settings) {
     tmp.editInfo = createEmptyEditInfo();
   }
   if (settings.partial) {
-    tmp.proto = b64ToProto /* b64ToProto */.mergeTopLevelFields(tmp.ProtoClass, tmp.proto, proto);
+    tmp.proto = b64ToProto.mergeTopLevelFields(tmp.ProtoClass, tmp.proto, proto);
     00038__(typeof tmp.proto !== "string", "UserSettingsProto cannot be a string");
-    const obj = b64ToProto /* b64ToProto */;
+    const obj = b64ToProto;
   } else {
     tmp.proto = proto;
     00038__(typeof tmp.proto !== "string", "UserSettingsProto cannot be a string");
@@ -203,7 +203,7 @@ prototype["getGuildRecentsDismissedAt"] = function getGuildRecentsDismissedAt(_g
     }
     let num = 0;
     if (null != prop) {
-      const Timestamp = now /* now */.Timestamp;
+      const Timestamp = now.Timestamp;
       num = Timestamp.toDate(prop).getTime();
       const toDateResult = Timestamp.toDate(prop);
     }
@@ -259,13 +259,13 @@ prototype["getDefaultGuildThemePreference"] = function getDefaultGuildThemePrefe
     prop = appearance.defaultGuildThemePreference;
   }
   if (prop == null) {
-    prop = create /* create */.GuildThemeSourcePreference.UNSPECIFIED;
+    prop = create.GuildThemeSourcePreference.UNSPECIFIED;
   }
   return prop;
 };
 prototype["getGuildThemeSourcePreferenceOverride"] = function getGuildThemeSourcePreferenceOverride(arg0) {
   if (null == arg0) {
-    let UNSPECIFIED = create /* create */.GuildThemeSourcePreference.UNSPECIFIED;
+    let UNSPECIFIED = create.GuildThemeSourcePreference.UNSPECIFIED;
   } else {
     const self = this;
     const guilds = this.settings.guilds;
@@ -279,14 +279,14 @@ prototype["getGuildThemeSourcePreferenceOverride"] = function getGuildThemeSourc
       }
     }
     if (UNSPECIFIED == null) {
-      UNSPECIFIED = create /* create */.GuildThemeSourcePreference.UNSPECIFIED;
+      UNSPECIFIED = create.GuildThemeSourcePreference.UNSPECIFIED;
     }
   }
   return UNSPECIFIED;
 };
 prototype["resolveGuildThemeSourcePreference"] = function resolveGuildThemeSourcePreference(arg0) {
   const guildThemeSourcePreferenceOverride = this.getGuildThemeSourcePreferenceOverride(arg0);
-  return resolveDefaultGuildThemePreference /* resolveDefaultGuildThemePreference */.resolveGuildThemeSourcePreference(guildThemeSourcePreferenceOverride, this.getDefaultGuildThemePreference());
+  return resolveDefaultGuildThemePreference.resolveGuildThemeSourcePreference(guildThemeSourcePreferenceOverride, this.getDefaultGuildThemePreference());
 };
 UserSettingsProtoStore.displayName = "UserSettingsProtoStore";
 UserSettingsProtoStore.persistKey = "UserSettingsProtoStore-Cache";
@@ -352,7 +352,7 @@ obj = {
       obj.proto = userSettingsProto;
       00038__(typeof obj.proto !== "string", "UserSettingsProto cannot be a string");
     }
-    obj = b64ToProto /* b64ToProto */;
+    obj = b64ToProto;
     ({ isDirty, proto, cleanupFuncs } = obj.runMigrations(obj.proto, MAX_FAVORITES[UserSettingsTypes.PRELOADED_USER_SETTINGS]));
     if (isDirty) {
       if (null != tmp6.editInfo.timeout) {
@@ -397,7 +397,7 @@ obj = {
   CONNECTION_CLOSED: handleConnectionClosedOrResumed,
   CONNECTION_RESUMED: handleConnectionClosedOrResumed,
   OVERLAY_INITIALIZE: function handleOverlayInitialize(userSettingsProto) {
-    const obj = b64ToProto /* b64ToProto */;
+    const obj = b64ToProto;
     obj.proto = obj.b64ToPreloadedUserSettingsProto(userSettingsProto.userSettingsProto);
     00038__(typeof obj.proto !== "string", "UserSettingsProto cannot be a string");
   },

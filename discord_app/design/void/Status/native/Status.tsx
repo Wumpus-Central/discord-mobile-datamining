@@ -27,7 +27,7 @@ let closure_13 = createCacheKey.createStyles({ statusIcon: { width: "100%", heig
 let closure_14 = createCacheKey.createStyles((items) => {
   let dotSize;
   let height;
-  let obj = getAnimatedTypingTranslateX /* getAnimatedTypingTranslateX */;
+  let obj = getAnimatedTypingTranslateX;
   const statusTypingDimensions = obj.getStatusTypingDimensions(items);
   ({ height, dotSize } = statusTypingDimensions);
   if (StatusTypes.ONLINE === arg1) {

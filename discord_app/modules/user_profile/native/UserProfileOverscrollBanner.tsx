@@ -30,7 +30,7 @@ export default function UserProfileOverscrollBanner(arg0) {
   const items1 = [callback(UserProfileBanner, obj), ];
   const tmp3 = callback;
   const tmp4 = UserProfileBanner;
-  let tmp3Result = set /* set */.isIOS() && showBlur;
+  let tmp3Result = set.isIOS() && showBlur;
   if (tmp3Result) {
     const obj1 = { animatedProps: null, style: null };
     obj1[0] = blurAnimatedProps;

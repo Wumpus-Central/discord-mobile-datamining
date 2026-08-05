@@ -14,14 +14,14 @@ export default function ContextMenuSubmenuActionSheetHeader(onBack) {
   let fn = onBack.onBack;
   let obj = { style: callback().headerContainer, children: null };
   obj = { label: null, onPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[0] = intl.string(getSystemLocale /* getSystemLocale */.t["13/7kX"]);
+  const intl = getSystemLocale.intl;
+  obj[0] = intl.string(getSystemLocale.t["13/7kX"]);
   if (fn == null) {
     fn = () => {
 
     };
   }
   obj[1] = fn;
-  obj[1] = jsx(ActionSheetHeaderPressableText /* ActionSheetHeaderPressableText */.ActionSheetHeaderPressableText, { label: null, onPress: null });
+  obj[1] = jsx(ActionSheetHeaderPressableText.ActionSheetHeaderPressableText, { label: null, onPress: null });
   return <View label={null} onPress={null} />;
 };

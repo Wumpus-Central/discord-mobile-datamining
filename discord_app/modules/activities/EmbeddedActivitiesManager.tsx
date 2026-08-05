@@ -31,7 +31,7 @@ function getShelfItemTrackingProperties(activity) {
   if (activity != null) {
     activity = activity.activity;
     if (activity != null) {
-      const obj = set /* set */;
+      const obj = set;
       releasePhase = activity.client_platform_config[getPlatform(undefined, obj.getOS(obj))].release_phase;
       const tmp4 = getPlatform;
     }
@@ -1176,9 +1176,9 @@ class EmbeddedActivitiesManager extends tmp3 {
 const prototype = EmbeddedActivitiesManager.prototype;
 prototype["_initialize"] = function _initialize() {
   handleConnectionOpen.addChangeListener(this.handleSelectedChannelUpdate);
-  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
   const subscription = ComponentDispatch.subscribe(constants2.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease);
-  const ComponentDispatch2 = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch2 = ComponentDispatcher.ComponentDispatch;
   const subscription1 = ComponentDispatch2.subscribe(constants2.OPEN_EMBEDDED_ACTIVITY, handleOpenEmbeddedActivity);
   const subscription2 = dispatcher.subscribe("EMBEDDED_ACTIVITY_LAUNCH_START", handleActivityLaunchStart);
   const obj = dispatcher;
@@ -1212,9 +1212,9 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["_terminate"] = function _terminate() {
   handleConnectionOpen.removeChangeListener(this.handleSelectedChannelUpdate);
-  const ComponentDispatch = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch.unsubscribe(constants2.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease);
-  const ComponentDispatch2 = ComponentDispatcher /* ComponentDispatcher */.ComponentDispatch;
+  const ComponentDispatch2 = ComponentDispatcher.ComponentDispatch;
   ComponentDispatch2.unsubscribe(constants2.OPEN_EMBEDDED_ACTIVITY, handleOpenEmbeddedActivity);
   dispatcher.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_START", handleActivityLaunchStart);
   const obj = dispatcher;
@@ -1435,7 +1435,7 @@ export const trackFrameSessionEnd = function trackFrameSessionEnd(applicationId)
         const activity = tmp13.activity;
         if (activity != null) {
           let tmp11Result = tmp11(10522);
-          const obj2 = set /* set */;
+          const obj2 = set;
           release_phase = activity.client_platform_config[tmp11Result(undefined, obj2.getOS(obj2))].release_phase;
         }
       }

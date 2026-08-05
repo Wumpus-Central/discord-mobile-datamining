@@ -45,14 +45,14 @@ function EmptyStateNoQuestsAvailable() {
 function EmptyStateFiltered(onClearFilters) {
   let obj = { action: null, title: null, subtitle: null };
   obj = { variant: "secondary", text: null, onPress: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl.string(getSystemLocale /* getSystemLocale */.t.urZl31);
+  const intl = getSystemLocale.intl;
+  obj[1] = intl.string(getSystemLocale.t.urZl31);
   obj[2] = onClearFilters.onClearFilters;
-  obj[0] = callback2(Button /* Button */.Button, obj);
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
-  obj[1] = intl2.string(getSystemLocale /* getSystemLocale */.t.PBfFnx);
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
-  obj[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.nwdKFC);
+  obj[0] = callback2(Button.Button, obj);
+  const intl2 = getSystemLocale.intl;
+  obj[1] = intl2.string(getSystemLocale.t.PBfFnx);
+  const intl3 = getSystemLocale.intl;
+  obj[2] = intl3.string(getSystemLocale.t.nwdKFC);
   return callback2(QuestHomeEmptyState, obj);
 }
 function HeaderPreviewButton() {
@@ -62,7 +62,7 @@ function HeaderPreviewButton() {
     obj = { screen: QUEST_PREVIEW_TOOL_2.QUEST_PREVIEW_TOOL_2 };
     callback(5925).openUserSettings(obj);
   }, []);
-  let obj = useQuests /* useQuests */;
+  let obj = useQuests;
   let tmp5 = null;
   if (obj.useShouldShowPreviewToolTab()) {
     obj = { style: null, children: null };
@@ -82,7 +82,7 @@ function HeaderWithBounties(arg0) {
   let showOrbShopPlaceholderCarousel;
   ({ orbShopProducts, obtainableOrbRewards, showOrbShopPlaceholderCarousel } = arg0);
   const tmp = callback3();
-  let obj = useBountiesExperience /* useBountiesExperience */;
+  let obj = useBountiesExperience;
   const verticalScrollEnabled = obj.useBountiesExperience(QuestsExperimentLocations.QUEST_HOME_MOBILE).verticalScrollEnabled;
   const items = [callback2(HeaderPreviewButton, {}), , , ];
   let tmp4Result = !verticalScrollEnabled;
@@ -114,8 +114,8 @@ function HeaderWithBounties(arg0) {
   ({ sectionHeader: arr4[0], sectionHeaderWithTag: arr4[1] } = tmp);
   const obj5 = { variant: "text-lg/semibold", color: "text-strong", children: null };
   const intl3 = tmp2(1236).intl;
-  obj5[2] = intl3.string(getSystemLocale /* getSystemLocale */.t.JALI2K);
-  obj4[1] = callback2(Text /* Text */.Text, obj5);
+  obj5[2] = intl3.string(getSystemLocale.t.JALI2K);
+  obj4[1] = callback2(Text.Text, obj5);
   items[3] = callback2(closure_5, obj4);
   obj3[0] = items;
   return closure_15(closure_16, obj3);

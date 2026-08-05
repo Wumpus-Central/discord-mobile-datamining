@@ -5,8 +5,8 @@ import { AuthorizedAppPermissionsScreen } from "../../authorized_apps/native/Aut
 
 obj = {
   useTitle() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.xrmhRX);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.xrmhRX);
   },
   parent: require("MobileSetting").MobileSetting.AUTHORIZED_APP,
   unsearchable: true,
@@ -15,7 +15,7 @@ obj = {
 obj = {
   route: require("ME").UserSettingsSections.AUTHORIZED_APP_PERMISSIONS,
   getComponent() {
-    return AuthorizedAppPermissionsScreen /* AuthorizedAppPermissionsScreen */.default;
+    return AuthorizedAppPermissionsScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);

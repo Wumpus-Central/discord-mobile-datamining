@@ -11,8 +11,8 @@ const result = require("HomeDrawerSharedItem").fileFinishedImporting("modules/ho
 export const HomeDrawerFavoritesRowExpandedChildren = function HomeDrawerFavoritesRowExpandedChildren() {
   let obj = { title: null, subtitle: null };
   obj = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[3] = intl.string(getSystemLocale /* getSystemLocale */.t.wMWyci);
-  obj[0] = jsx(Text /* Text */.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
-  return jsx(HomeDrawerSharedItem /* HomeDrawerSharedItem */.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
+  const intl = getSystemLocale.intl;
+  obj[3] = intl.string(getSystemLocale.t.wMWyci);
+  obj[0] = jsx(Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
+  return jsx(HomeDrawerSharedItem.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
 };

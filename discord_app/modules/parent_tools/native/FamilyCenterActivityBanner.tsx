@@ -17,7 +17,7 @@ let c5;
 let closure_6;
 const require = arg1;
 function FamilyCenterActivityBannerButton() {
-  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
+  let obj = useUserIdsForLinkStatus;
   const hasActiveLinks = obj.useHasActiveLinks();
   const tmp5 = useIsInAdultAgeGroup();
   const tmp = callback();
@@ -53,18 +53,18 @@ const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/na
 
 export default function FamilyCenterActivityBanner() {
   const tmp4 = createCacheKey();
-  let obj = useUserIdsForLinkStatus /* useUserIdsForLinkStatus */;
+  let obj = useUserIdsForLinkStatus;
   const hasMaxConnections = obj.useHasMaxConnections();
-  let obj1 = useAgeSpecificText /* useAgeSpecificText */;
-  const intl = getSystemLocale /* getSystemLocale */.intl;
+  let obj1 = useAgeSpecificText;
+  const intl = getSystemLocale.intl;
   const tmp = importDefault;
   const tmp3 = useIsInAdultAgeGroup();
-  const intl2 = getSystemLocale /* getSystemLocale */.intl;
+  const intl2 = getSystemLocale.intl;
   const ageSpecificText = obj1.useAgeSpecificText(intl.string(messagesProxy["T7GyW+"]), intl2.string(messagesProxy.goKE2b));
-  let obj2 = useAgeSpecificText /* useAgeSpecificText */;
-  const intl3 = getSystemLocale /* getSystemLocale */.intl;
+  let obj2 = useAgeSpecificText;
+  const intl3 = getSystemLocale.intl;
   const stringResult = intl.string(messagesProxy["T7GyW+"]);
-  const intl4 = getSystemLocale /* getSystemLocale */.intl;
+  const intl4 = getSystemLocale.intl;
   obj = { style: tmp4.container, children: null };
   obj = { source: null, style: null };
   const ageSpecificText1 = obj2.useAgeSpecificText(intl3.format(messagesProxy.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }), intl4.format(messagesProxy.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }));
@@ -72,9 +72,9 @@ export default function FamilyCenterActivityBanner() {
   obj[1] = tmp4.art;
   const items = [closure_5(closure_4, obj), , , ];
   obj1 = { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText };
-  items[1] = closure_5(Text /* Text */.Text, obj1);
+  items[1] = closure_5(Text.Text, obj1);
   obj2 = { style: tmp4.description, variant: "text-sm/medium", color: "text-muted", children: ageSpecificText1 };
-  items[2] = closure_5(Text /* Text */.Text, obj2);
+  items[2] = closure_5(Text.Text, obj2);
   let tmp13Result = null;
   if (!hasMaxConnections) {
     tmp13Result = tmp13(FamilyCenterActivityBannerButton, {});

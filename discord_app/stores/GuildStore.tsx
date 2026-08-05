@@ -15,7 +15,7 @@ let metroImportAll;
 function createGuildRecordFromRust(features) {
   const obj = {};
   const merged = Object.assign(features);
-  obj.features = areSetsEqual /* areSetsEqual */.toSetInplace(features.features);
+  obj.features = areSetsEqual.toSetInplace(features.features);
   let date = null;
   if (null != features.joinedAt) {
     const _Date = Date;

@@ -17,7 +17,7 @@ let items = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -
 let result = require("DisplayNameEffect").fileFinishedImporting("modules/display_name_styles/DisplayNameStylesUtils.tsx");
 
 export const getEffectColorCount = function getEffectColorCount(effectId) {
-  if (DisplayNameEffect /* DisplayNameEffect */.DisplayNameEffect.GRADIENT === effectId) {
+  if (DisplayNameEffect.DisplayNameEffect.GRADIENT === effectId) {
     return 2;
   } else if (tmp(1887).DisplayNameEffect.GUMMY === effectId) {
     return 4;
@@ -81,8 +81,8 @@ export const rebuildGummySourceColor = function rebuildGummySourceColor(selected
   } else {
     const tmp10 = importDefault;
     const tmp12 = n;
-    const obj5 = int2hslRaw /* int2hslRaw */;
-    const tmp15 = callback(tmp12(int2hslRaw /* int2hslRaw */.int2hex(first)).hsl(), 3);
+    const obj5 = int2hslRaw;
+    const tmp15 = callback(tmp12(int2hslRaw.int2hex(first)).hsl(), 3);
     const first1 = tmp15[0];
     const _Number = Number;
     let num = 0;
@@ -91,7 +91,7 @@ export const rebuildGummySourceColor = function rebuildGummySourceColor(selected
     }
     const items = [num, tmp15[1], tmp15[2]];
     const result = (callback(items, 1)[0] - items[0].hueShift) % 360;
-    const tmp12Result = tmp12(int2hslRaw /* int2hslRaw */.int2hex(first));
+    const tmp12Result = tmp12(int2hslRaw.int2hex(first));
     const tmp14 = callback;
     const tmp10Result = tmp10(689);
     return tmp10(689).hsl((result + 360) % 360, closure_5, closure_4).num();
@@ -122,12 +122,12 @@ export const applyFlywheelViewingFallback = function applyFlywheelViewingFallbac
   if (!isDisplayNameStylesFlywheelViewersEnabled) {
     if (null != fontId) {
       if (closure_7.includes(fontId.fontId)) {
-        fontId = DisplayNameFont /* DisplayNameFont */.DisplayNameFont.DEFAULT;
+        fontId = DisplayNameFont.DisplayNameFont.DEFAULT;
       } else {
         fontId = fontId.fontId;
       }
       if (closure_6.includes(fontId.effectId)) {
-        let effectId = DisplayNameEffect /* DisplayNameEffect */.DisplayNameEffect.SOLID;
+        let effectId = DisplayNameEffect.DisplayNameEffect.SOLID;
       } else {
         effectId = fontId.effectId;
       }

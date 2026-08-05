@@ -7,7 +7,7 @@ import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
 import { processColorOrThrow } from "../RowGeneratorStyleSheet.tsx";
 
 let closure_5 = apply.memoize((arg0) => {
-  let obj = AccessibilityAnnouncer /* AccessibilityAnnouncer */;
+  let obj = AccessibilityAnnouncer;
   let str = "#DBE0E4";
   if (obj.isThemeDark(arg0)) {
     str = Themes.unsafe_rawColors.PRIMARY_700;
@@ -25,11 +25,11 @@ let closure_5 = apply.memoize((arg0) => {
     GREY1 = UNSAFE_Colors.GREY1;
   }
   obj = { borderColor: null, backgroundColor: null, color: null };
-  obj[0] = processColorOrThrow /* processColorOrThrow */.processColorOrThrow(str);
-  const tmpResult2 = processColorOrThrow /* processColorOrThrow */;
-  obj[1] = processColorOrThrow /* processColorOrThrow */.processColorOrThrow(str2);
-  const tmpResult3 = processColorOrThrow /* processColorOrThrow */;
-  obj[2] = processColorOrThrow /* processColorOrThrow */.processColorOrThrow(GREY1);
+  obj[0] = processColorOrThrow.processColorOrThrow(str);
+  const tmpResult2 = processColorOrThrow;
+  obj[1] = processColorOrThrow.processColorOrThrow(str2);
+  const tmpResult3 = processColorOrThrow;
+  obj[2] = processColorOrThrow.processColorOrThrow(GREY1);
   return obj;
 });
 const result = require("apply").fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");

@@ -76,8 +76,8 @@ function BounceTransitionItem(state) {
   state = state.state;
   ({ cleanup, bounceEnterDelayMs, children } = state);
   let obj = { visible: null, initiallyVisible: null, enterDelayMs: null, onExitComplete: null, interactiveDuringEnter: true };
-  obj[0] = state !== wrapChildrenDefault /* wrapChildrenDefault */.TransitionStates.YEETED;
-  obj[1] = state !== wrapChildrenDefault /* wrapChildrenDefault */.TransitionStates.ENTERED;
+  obj[0] = state !== wrapChildrenDefault.TransitionStates.YEETED;
+  obj[1] = state !== wrapChildrenDefault.TransitionStates.ENTERED;
   obj[2] = bounceEnterDelayMs;
   obj[3] = cleanup;
   const tmp = useChatInputFloatingBounce;

@@ -139,7 +139,7 @@ export const canSeeOnboardingHome = function canSeeOnboardingHome(id) {
           return hasItem1;
         }
       }
-      obj3 = getFavoritesAwareGuildName /* getFavoritesAwareGuildName */;
+      obj3 = getFavoritesAwareGuildName;
       tmp14 = require;
     }
     return false;

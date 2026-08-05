@@ -6,5 +6,5 @@ let result = require("set").fileFinishedImporting("modules/collectibles/native/u
 export const useAvatarDecorationPreviewSizes = function useAvatarDecorationPreviewSizes() {
   const size = useWindowDimensions();
   const result = 2 * Math.min(size.width, size.height) / 3;
-  return { avatarDecorationSize: result, avatarSize: result * AvatarDecorationSampleV2 /* AvatarDecorationSampleV2 */.avatarPlaceholderSizeRatio };
+  return { avatarDecorationSize: result, avatarSize: result * AvatarDecorationSampleV2.avatarPlaceholderSizeRatio };
 };

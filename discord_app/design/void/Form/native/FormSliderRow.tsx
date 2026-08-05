@@ -20,7 +20,7 @@ export default function FormSliderRow(arg0) {
   let trailing;
   ({ label, trailing } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  const context = React.useContext(context /* context */.RedesignCompatContext);
+  const context = React.useContext(context.RedesignCompatContext);
   const tmp5 = callback2();
   if (context) {
     let obj = { children: null };

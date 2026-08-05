@@ -56,26 +56,26 @@ export const getIncidentAlertType = function getIncidentAlertType(guildIncident)
       tmp = t(guildIncident.raidDetectedAt).add(closure_3, "hours") > t();
       const addResult = t(guildIncident.raidDetectedAt).add(closure_3, "hours");
     }
-    const GuildIncidentAlertTypes = GuildIncidentActionSources /* GuildIncidentActionSources */.GuildIncidentAlertTypes;
+    const GuildIncidentAlertTypes = GuildIncidentActionSources.GuildIncidentAlertTypes;
   }
 };
 export const getEnabledInterventions = function getEnabledInterventions(pauseInvites, pauseDms) {
   const items = [];
   if (pauseInvites) {
-    items.push(GuildIncidentActionSources /* GuildIncidentActionSources */.GuildIncidentActionTypes.INVITES_DISABLED);
+    items.push(GuildIncidentActionSources.GuildIncidentActionTypes.INVITES_DISABLED);
   }
   if (pauseDms) {
-    items.push(GuildIncidentActionSources /* GuildIncidentActionSources */.GuildIncidentActionTypes.DMS_DISABLED);
+    items.push(GuildIncidentActionSources.GuildIncidentActionTypes.DMS_DISABLED);
   }
   return items;
 };
 export const getDisabledInterventions = function getDisabledInterventions(pauseInvites, pauseDms) {
   const items = [];
   if (!pauseInvites) {
-    items.push(GuildIncidentActionSources /* GuildIncidentActionSources */.GuildIncidentActionTypes.INVITES_DISABLED);
+    items.push(GuildIncidentActionSources.GuildIncidentActionTypes.INVITES_DISABLED);
   }
   if (!pauseDms) {
-    items.push(GuildIncidentActionSources /* GuildIncidentActionSources */.GuildIncidentActionTypes.DMS_DISABLED);
+    items.push(GuildIncidentActionSources.GuildIncidentActionTypes.DMS_DISABLED);
   }
   return items;
 };
@@ -156,29 +156,29 @@ export const getSecurityActionDetailsString = function getSecurityActionDetailsS
       tmp = tmp28;
     }
     if (tmp === true) {
-      const intl3 = getSystemLocale /* getSystemLocale */.intl;
+      const intl3 = getSystemLocale.intl;
       let obj = { guildName: null, time: null };
       obj[0] = arg1;
       const _Date3 = Date;
       const date = new Date(invitesDisabledUntil);
-      obj[1] = date.toLocaleString(getSystemLocale /* getSystemLocale */.intl.currentLocale, obj);
-      return intl3.formatToPlainString(getSystemLocale /* getSystemLocale */.t.hCZitf, obj);
+      obj[1] = date.toLocaleString(getSystemLocale.intl.currentLocale, obj);
+      return intl3.formatToPlainString(getSystemLocale.t.hCZitf, obj);
     } else if (tmp27 === true) {
-      const intl2 = getSystemLocale /* getSystemLocale */.intl;
+      const intl2 = getSystemLocale.intl;
       obj = { guildName: null, time: null };
       obj[0] = arg1;
       const _Date2 = Date;
       const date1 = new Date(invitesDisabledUntil);
-      obj[1] = date1.toLocaleString(getSystemLocale /* getSystemLocale */.intl.currentLocale, obj);
-      return intl2.formatToPlainString(getSystemLocale /* getSystemLocale */.t["HNKxf+"], obj);
+      obj[1] = date1.toLocaleString(getSystemLocale.intl.currentLocale, obj);
+      return intl2.formatToPlainString(getSystemLocale.t["HNKxf+"], obj);
     } else if (tmp28 === true) {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
+      const intl = getSystemLocale.intl;
       obj = { guildName: null, time: null };
       obj[0] = arg1;
       const _Date = Date;
       const date2 = new Date(invitesDisabledUntil);
-      obj[1] = date2.toLocaleString(getSystemLocale /* getSystemLocale */.intl.currentLocale, obj);
-      return intl.formatToPlainString(getSystemLocale /* getSystemLocale */.t.M3iSyL, obj);
+      obj[1] = date2.toLocaleString(getSystemLocale.intl.currentLocale, obj);
+      return intl.formatToPlainString(getSystemLocale.t.M3iSyL, obj);
     } else {
       return "";
     }

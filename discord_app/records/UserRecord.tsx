@@ -317,7 +317,7 @@ prototype["getAvatarURL"] = function getAvatarURL(arg0, closure_2, flag, SUPPORT
     flag = false;
   }
   if (SUPPORTS_WEBP === undefined) {
-    SUPPORTS_WEBP = getAvatarURL /* getAvatarURL */.SUPPORTS_WEBP;
+    SUPPORTS_WEBP = getAvatarURL.SUPPORTS_WEBP;
   }
   const self = this;
   let tmp3;
@@ -408,10 +408,10 @@ Object.defineProperty(prototype, "tag", {
   set: undefined
 });
 prototype["hasPurchasedFlag"] = function hasPurchasedFlag(PREMIUM_TIER_2) {
-  return hasFlag /* hasFlag */.hasFlag(this.purchasedFlags, PREMIUM_TIER_2);
+  return hasFlag.hasFlag(this.purchasedFlags, PREMIUM_TIER_2);
 };
 prototype["hasPremiumUsageFlag"] = function hasPremiumUsageFlag(arg0) {
-  return hasFlag /* hasFlag */.hasFlag(this.premiumUsageFlags, arg0);
+  return hasFlag.hasFlag(this.premiumUsageFlags, arg0);
 };
 prototype["hasHadSKU"] = function hasHadSKU(arg0) {
   let hasPurchasedFlagResult = null != tmp;
@@ -452,7 +452,7 @@ prototype["hadPremiumSubscription"] = function hadPremiumSubscription() {
     tmp = null;
   }
   const self = this;
-  const isPremiumResult = isPremiumAtLeast /* isPremiumAtLeast */.isPremium(this);
+  const isPremiumResult = isPremiumAtLeast.isPremium(this);
   let hasHadPremiumResult = !isPremiumResult;
   if (!isPremiumResult) {
     hasHadPremiumResult = self.hasHadPremium(tmp);
@@ -471,44 +471,44 @@ prototype["hasFreePremium"] = function hasFreePremium() {
   return isStaffResult;
 };
 prototype["isOnReverseTrial"] = function isOnReverseTrial() {
-  let isPremiumResult = isPremiumAtLeast /* isPremiumAtLeast */.isPremium(this);
+  let isPremiumResult = isPremiumAtLeast.isPremium(this);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === create /* create */.PremiumSource.REVERSE_TRIAL;
+    isPremiumResult = premiumSource === create.PremiumSource.REVERSE_TRIAL;
   }
   return isPremiumResult;
 };
 prototype["isPremiumWithPremiumGroup"] = function isPremiumWithPremiumGroup() {
-  let isPremiumResult = isPremiumAtLeast /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = isPremiumAtLeast.isPremium(this, closure_9.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === create /* create */.PremiumSource.SUBSCRIPTION_GROUP;
+    isPremiumResult = premiumSource === create.PremiumSource.SUBSCRIPTION_GROUP;
   }
   return isPremiumResult;
 };
 prototype["hasPaidTier2Subscription"] = function hasPaidTier2Subscription() {
-  let isPremiumResult = isPremiumAtLeast /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = isPremiumAtLeast.isPremium(this, closure_9.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let prop;
     if (premiumState != null) {
       prop = premiumState.premiumSubscriptionType;
     }
-    isPremiumResult = prop === create /* create */.PremiumSubscriptionType.TIER_2;
+    isPremiumResult = prop === create.PremiumSubscriptionType.TIER_2;
   }
   return isPremiumResult;
 };
 prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFractionalPremiumOnly() {
   const self = this;
-  let isPremiumResult = isPremiumAtLeast /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = isPremiumAtLeast.isPremium(this, closure_9.TIER_2);
   if (isPremiumResult) {
     const premiumState = self.premiumState;
     let prop;
@@ -538,7 +538,7 @@ prototype["isPremiumWithFractionalPremiumOnly"] = function isPremiumWithFraction
 };
 prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremiumWithNoStandardSub() {
   const self = this;
-  let isPremiumResult = isPremiumAtLeast /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = isPremiumAtLeast.isPremium(this, closure_9.TIER_2);
   if (isPremiumResult) {
     const premiumState = self.premiumState;
     let premiumSource;
@@ -553,14 +553,14 @@ prototype["isFractionalPremiumWithNoStandardSub"] = function isFractionalPremium
   return isPremiumResult;
 };
 prototype["isFractionalPremium"] = function isFractionalPremium() {
-  let isPremiumResult = isPremiumAtLeast /* isPremiumAtLeast */.isPremium(this, closure_9.TIER_2);
+  let isPremiumResult = isPremiumAtLeast.isPremium(this, closure_9.TIER_2);
   if (isPremiumResult) {
     const premiumState = this.premiumState;
     let premiumSource;
     if (premiumState != null) {
       premiumSource = premiumState.premiumSource;
     }
-    isPremiumResult = premiumSource === create /* create */.PremiumSource.FRACTIONAL_NITRO;
+    isPremiumResult = premiumSource === create.PremiumSource.FRACTIONAL_NITRO;
   }
   return isPremiumResult;
 };
@@ -611,14 +611,14 @@ prototype["hasUniqueUsername"] = function hasUniqueUsername() {
 prototype["isPremiumGroupMember"] = function isPremiumGroupMember() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === create /* create */.PremiumSubscriptionGroupRole.MEMBER;
+    result = this.premiumGroupRole === create.PremiumSubscriptionGroupRole.MEMBER;
   }
   return result;
 };
 prototype["isPremiumGroupPrimary"] = function isPremiumGroupPrimary() {
   let result = this.isPremiumWithPremiumGroup();
   if (result) {
-    result = this.premiumGroupRole === create /* create */.PremiumSubscriptionGroupRole.PRIMARY;
+    result = this.premiumGroupRole === create.PremiumSubscriptionGroupRole.PRIMARY;
   }
   return result;
 };
@@ -637,7 +637,7 @@ Object.defineProperty(prototype, "avatarDecoration", {
 Object.defineProperty(prototype, "avatarDecoration", {
   get: undefined,
   set: function avatarDecoration(avatar_decoration_data) {
-    this.avatarDecorationData = parseAvatarDecorationData /* parseAvatarDecorationData */.parseAvatarDecorationData(avatar_decoration_data);
+    this.avatarDecorationData = parseAvatarDecorationData.parseAvatarDecorationData(avatar_decoration_data);
   }
 });
 Object.defineProperty(prototype, "nameplate", {
@@ -647,7 +647,7 @@ Object.defineProperty(prototype, "nameplate", {
     if (collectibles != null) {
       nameplate = collectibles.nameplate;
     }
-    return getNameplateData /* getNameplateData */.getNameplateData(nameplate);
+    return getNameplateData.getNameplateData(nameplate);
   },
   set: undefined
 });
@@ -659,7 +659,7 @@ Object.defineProperty(prototype, "premiumGroupRole", {
       prop = premiumState.premiumSubscriptionGroupRole;
     }
     if (prop == null) {
-      prop = create /* create */.PremiumSubscriptionGroupRole.UNSPECIFIED;
+      prop = create.PremiumSubscriptionGroupRole.UNSPECIFIED;
     }
     return prop;
   },

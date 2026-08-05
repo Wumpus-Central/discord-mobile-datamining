@@ -34,17 +34,17 @@ function PillWrapper(expressivePressState) {
   }
   expressivePressState = expressivePressState.expressivePressState;
   ({ expressiveRiveRef, size } = expressivePressState);
-  let obj = styleProperties /* styleProperties */;
+  let obj = styleProperties;
   const buttonPillStyles = obj.useButtonPillStyles(variant, expressivePressState.pressed);
-  let obj1 = styleProperties /* styleProperties */;
+  let obj1 = styleProperties;
   const gradientPillStyles = obj1.useGradientPillStyles(variant);
-  let obj2 = ManaContext /* ManaContext */;
+  let obj2 = ManaContext;
   const tmp5 = callback3(variant, size);
-  let obj3 = map /* map */;
+  let obj3 = map;
   let items = [obj3.useToken(Themes.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT), , ];
-  let obj4 = map /* map */;
+  let obj4 = map;
   items[1] = obj4.useToken(Themes.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2);
-  let obj5 = map /* map */;
+  let obj5 = map;
   items[2] = obj5.useToken(Themes.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PINK_FOR_GRADIENT);
   const items1 = [Themes.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS, Themes.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS_2, Themes.unsafe_rawColors.PREMIUM_TIER_0_BLUE_FOR_GRADIENTS];
   let tmp7 = null;
@@ -303,31 +303,31 @@ const buttonPadding3 = MINIMUM_HIT_AREA.getButtonPadding(require("MINIMUM_HIT_AR
 let closure_14 = createCacheKey.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     let obj = { minHeight: null, minWidth: null, paddingHorizontal: null, paddingVertical: null };
-    obj[0] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT;
-    obj[1] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HEIGHT;
-    obj[2] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.SMALL_BUTTON_HORIZONTAL_PADDING;
+    obj[0] = MINIMUM_HIT_AREA.SMALL_BUTTON_HEIGHT;
+    obj[1] = MINIMUM_HIT_AREA.SMALL_BUTTON_HEIGHT;
+    obj[2] = MINIMUM_HIT_AREA.SMALL_BUTTON_HORIZONTAL_PADDING;
     obj[3] = closure_11;
   } else if ("md" === arg1) {
     obj = { minHeight: null, minWidth: null, paddingHorizontal: null, paddingVertical: null };
-    obj[0] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.MEDIUM_BUTTON_HEIGHT;
-    obj[1] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.MEDIUM_BUTTON_HEIGHT;
-    obj[2] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.MEDIUM_BUTTON_HORIZONTAL_PADDING;
+    obj[0] = MINIMUM_HIT_AREA.MEDIUM_BUTTON_HEIGHT;
+    obj[1] = MINIMUM_HIT_AREA.MEDIUM_BUTTON_HEIGHT;
+    obj[2] = MINIMUM_HIT_AREA.MEDIUM_BUTTON_HORIZONTAL_PADDING;
     obj[3] = closure_12;
   } else {
     obj = {};
     if ("lg" === arg1) {
       const obj1 = { minHeight: null, minWidth: null, paddingHorizontal: null, paddingVertical: null };
-      obj1[0] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.LARGE_BUTTON_HEIGHT;
-      obj1[1] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.LARGE_BUTTON_HEIGHT;
-      obj1[2] = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.LARGE_BUTTON_HORIZONTAL_PADDING;
+      obj1[0] = MINIMUM_HIT_AREA.LARGE_BUTTON_HEIGHT;
+      obj1[1] = MINIMUM_HIT_AREA.LARGE_BUTTON_HEIGHT;
+      obj1[2] = MINIMUM_HIT_AREA.LARGE_BUTTON_HORIZONTAL_PADDING;
       obj1[3] = closure_13;
       obj = obj1;
     }
   }
-  let obj3 = MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */;
+  let obj3 = MINIMUM_HIT_AREA;
   const buttonBorderRadius = obj3.getButtonBorderRadius(arg1);
   const obj2 = { pill: null, expressivePill: null, expressiveRiveFill: null, childContainer: null, ellipsis: null };
-  obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", borderWidth: MINIMUM_HIT_AREA /* MINIMUM_HIT_AREA */.BUTTON_BORDER_WIDTH, borderRadius: buttonBorderRadius };
+  obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "center", overflow: "hidden", borderWidth: MINIMUM_HIT_AREA.BUTTON_BORDER_WIDTH, borderRadius: buttonBorderRadius };
   const merged = Object.assign(obj);
   obj2[0] = obj3;
   obj2[1] = { overflow: "hidden", borderRadius: buttonBorderRadius };

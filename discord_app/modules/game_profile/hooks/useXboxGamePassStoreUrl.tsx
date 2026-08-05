@@ -23,8 +23,8 @@ export default function useXboxGamePassStoreUrl(thirdPartySkus) {
     }
     let xboxGamePassStoreUrl = null;
     if (null != id) {
-      xboxGamePassStoreUrl = XBOX_DISCORD_OCID /* XBOX_DISCORD_OCID */.buildXboxGamePassStoreUrl(found.id);
-      let obj = XBOX_DISCORD_OCID /* XBOX_DISCORD_OCID */;
+      xboxGamePassStoreUrl = XBOX_DISCORD_OCID.buildXboxGamePassStoreUrl(found.id);
+      let obj = XBOX_DISCORD_OCID;
     }
     return xboxGamePassStoreUrl;
   }

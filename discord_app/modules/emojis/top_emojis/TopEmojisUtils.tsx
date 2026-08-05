@@ -18,8 +18,8 @@ export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(gu
         }
       }
       if (!isFetching.getIsFetching(guildId)) {
-        const topEmojis = fetchTopEmojis /* fetchTopEmojis */.fetchTopEmojis(guildId);
-        const obj = fetchTopEmojis /* fetchTopEmojis */;
+        const topEmojis = fetchTopEmojis.fetchTopEmojis(guildId);
+        const obj = fetchTopEmojis;
       }
     }
   }

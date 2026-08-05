@@ -19,7 +19,7 @@ let error;
 let require = arg1;
 function FormControlText(children) {
   const tmp = createCacheKey();
-  return callback2(Text /* Text */.Text, { variant: "text-sm/medium", color: "text-default", style: createCacheKey().formControlText, children: children.text });
+  return callback2(Text.Text, { variant: "text-sm/medium", color: "text-default", style: createCacheKey().formControlText, children: children.text });
 }
 function FormControlSubtext(text) {
   text = text.text;
@@ -28,7 +28,7 @@ function FormControlSubtext(text) {
     const obj = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };
     obj[2] = tmp.formControlText;
     obj[3] = text;
-    tmp2 = callback2(Text /* Text */.Text, obj);
+    tmp2 = callback2(Text.Text, obj);
   }
   return tmp2;
 }
@@ -69,8 +69,8 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   const tmp = createCacheKey();
   let obj = { label, labelTrailing, children: null };
   obj = { onPress, style: tmp.button, accessibilityRole: "button", accessibilityLabel: label, accessibilityValue, accessibilityHint: null, accessibilityState: null, disabled: null, children: null };
-  const intl = getSystemLocale /* getSystemLocale */.intl;
-  obj[5] = intl.string(getSystemLocale /* getSystemLocale */.t["4lAcxv"]);
+  const intl = getSystemLocale.intl;
+  obj[5] = intl.string(getSystemLocale.t["4lAcxv"]);
   obj[6] = { disabled, busy: flag };
   obj[7] = disabled;
   const items = [leading, , , ];
@@ -95,12 +95,12 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   items[2] = trailing;
   tmp2Result = !flag2;
   if (!flag2) {
-    tmp2Result = tmp2(TableRowArrow /* TableRowArrow */.TableRowArrow, {});
+    tmp2Result = tmp2(TableRowArrow.TableRowArrow, {});
   }
   items[3] = tmp2Result;
   obj[8] = items;
-  obj[2] = closure_7(PressableBase /* PressableBase */.PressableHighlight, obj);
-  return closure_6(Input /* Input */.Input, obj);
+  obj[2] = closure_7(PressableBase.PressableHighlight, obj);
+  return closure_6(Input.Input, obj);
 };
 export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0) {
   let accessibilityHint;
@@ -118,7 +118,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
     disabled = false;
   }
   let callback;
-  let obj = set /* set */;
+  let obj = set;
   const isAndroidResult = obj.isAndroid();
   const tmp5 = callback(React.useState(value), 2);
   callback = tmp5[1];
@@ -168,8 +168,8 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
   obj[5] = accessibilityHint;
   obj[6] = { disabled, checked: tmp5[0] };
   obj[7] = disabled;
-  const items1 = [closure_6(FormControlText, { text: subLabel }), closure_6(FormSwitch /* FormSwitch */.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled })];
+  const items1 = [closure_6(FormControlText, { text: subLabel }), closure_6(FormSwitch.FormSwitch, { "aria-hidden": true, value, onValueChange: handleOnPress, disabled })];
   obj[8] = items1;
   obj[1] = closure_7(PressableHighlight, obj);
-  return closure_6(Input /* Input */.Input, obj);
+  return closure_6(Input.Input, obj);
 };

@@ -28,8 +28,8 @@ let closure_17 = createCacheKey.createStyles({ container: { height: "100%" }, co
 let items = [
   {
     renderLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t["2p07FR"]);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t["2p07FR"]);
     },
     id: "edit-user-profile",
     renderPage(autoFocusElement) {
@@ -39,8 +39,8 @@ let items = [
   },
   {
     renderLabel() {
-      const intl = getSystemLocale /* getSystemLocale */.intl;
-      return intl.string(getSystemLocale /* getSystemLocale */.t.kPHroX);
+      const intl = getSystemLocale.intl;
+      return intl.string(getSystemLocale.t.kPHroX);
     },
     id: "edit-user-profiles-guilds",
     renderPage() {
@@ -237,8 +237,8 @@ const memoResult = importAllResult.memo(() => {
 });
 let obj = {
   renderLabel() {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t["2p07FR"]);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t["2p07FR"]);
   },
   id: "edit-user-profile",
   renderPage(autoFocusElement) {

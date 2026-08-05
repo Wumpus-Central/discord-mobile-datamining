@@ -11,7 +11,7 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
   let navigationReplace;
   let openChannel;
   pathname = pathname.pathname;
-  let obj = getRootNavigationRef /* getRootNavigationRef */;
+  let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {

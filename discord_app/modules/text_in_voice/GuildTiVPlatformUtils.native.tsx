@@ -4,11 +4,11 @@ const result = require("set").fileFinishedImporting("modules/text_in_voice/Guild
 
 export default {
   getTextInVoiceSendMessageChannelPermissionText(sendMessagesDisabled) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.WQ6zpT);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.WQ6zpT);
   },
   getTextInVoiceReadMessageHistoryChannelPermissionText(prop) {
-    const intl = getSystemLocale /* getSystemLocale */.intl;
-    return intl.string(getSystemLocale /* getSystemLocale */.t.cuMfH0);
+    const intl = getSystemLocale.intl;
+    return intl.string(getSystemLocale.t.cuMfH0);
   }
 };
